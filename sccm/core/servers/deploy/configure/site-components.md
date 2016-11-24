@@ -85,7 +85,7 @@ En cada sitio de System Center Configuration Manager, puede configurar component
 
 2.  En la pestaña **Inicio** , en el grupo **Configuración** , haga clic en **Configurar componentes de sitio** y, a continuación, en el componente de sitio que desea configurar.  
 
-##  <a name="a-namebkmkservicemgra-use-the-configuration-manager-service-manager-to-manage-site-components"></a><a name="BKMK_ServiceMgr"></a> Usar Configuration Manager Service Manager para administrar componentes del sitio  
+##  <a name="a-namebkmkservicemgra-use-the-configuration-manager-service-manager-to-manage-site-components"></a><a name="BKMK_ServiceMgr"></a> Usar el Administrador de servicios de Configuration Manager para administrar componentes del sitio  
 Puede usar Configuration Manager Service Manager para controlar los servicios de Configuration Manager y para ver el estado de los servicios de Configuration Manager o el subproceso de trabajo (denominados de forma conjunta componentes de Configuration Manager):  
 
 -   Los componentes de Configuration Manager pueden ejecutarse en cualquier sistema de sitio.  
