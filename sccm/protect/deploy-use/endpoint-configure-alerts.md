@@ -1,0 +1,103 @@
+---
+title: Configurar alertas de Endpoint Protection | System Center Configuration Manager
+description: Aprenda a configurar alertas de Endpoint Protection en Microsoft System Center 2012 Configuration Manager.
+ms.custom: na
+ms.date: 10/06/2016
+ms.prod: configuration-manager
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+- configmgr-other
+ms.tgt_pltfrm: na
+ms.topic: get-started-article
+ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
+caps.latest.revision: 21
+author: NathBarn
+ms.author: nathbarn
+manager: angrobe
+translationtype: Human Translation
+ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
+ms.openlocfilehash: 38abfd1823972f8fea9966d74ae7c00a48baeb8b
+
+
+---
+
+#  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Configurar alertas de Endpoint Protection en Configuration Manager
+
+*Se aplica a: System Center Configuration Manager (rama actual)*
+
+ Puede configurar alertas de Endpoint Protection en Microsoft System Center Configuration Manager para enviar notificaciones a los usuarios administrativos cuando se producen eventos específicos, como una infección de malware en su jerarquía. Las notificaciones se muestran en el panel de Endpoint Protection en la consola de Configuration Manager, en el nodo **Alertas** del área de trabajo **Supervisión**. También se pueden enviar por correo electrónico a los usuarios especificados.
+
+ Use los siguientes pasos y procedimientos adicionales de este tema para configurar las alertas de Endpoint Protection en Configuration Manager.
+
+> [!IMPORTANT]
+>  Debe tener el permiso **Aplicar seguridad** para que las recopilaciones configuren las alertas de Endpoint Protection.
+
+## <a name="steps-to-configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Pasos para configurar alertas de Endpoint Protection en Configuration Manager
+
+1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.
+
+2.  En el área de trabajo **Activos y compatibilidad** , haga clic en **Recopilaciones de dispositivos**.
+
+3.  En la lista **Recopilaciones de dispositivos** , seleccione la recopilación para la que quiere configurar las alertas y luego, en la pestaña **Inicio** del grupo **Propiedades** , haga clic en **Propiedades**.
+
+    > [!NOTE]
+    >  No puede configurar alertas para recopilaciones de usuario.
+
+4.  En la pestaña **Alertas** del cuadro de diálogo **Propiedades de** *<Nombre de recopilación\>*, seleccione **Ver esta recopilación en el panel de Endpoint Protection** si quiere ver los detalles de las operaciones de antimalware realizadas para esta recopilación en el área de trabajo **Supervisión** de la consola de Configuration Manager.
+
+    > [!NOTE]
+    >  Esta opción no está disponible para la recopilación **Todos los sistemas** .
+
+5.  En la pestaña **Alertas** del cuadro de diálogo **Propiedades de** *<Nombre de recopilación\>*, haga clic en **Agregar**.
+
+6.  En el cuadro de diálogo **Agregar nuevas alertas de recopilación**, en la sección **Generate an alert when these conditions apply** (Generar una alerta si se cumplen estas condiciones), seleccione las alertas que quiere que Configuration Manager genere cuando se produzcan los eventos de Endpoint Protection especificados y después haga clic en **Aceptar**.
+
+7.  En la lista **Condiciones** de la pestaña **Alertas**, seleccione cada alerta de Endpoint Protection y luego especifique la información siguiente:
+
+    -   **Nombre de alerta**: acepte el nombre predeterminado o escriba un nombre nuevo para la alerta.
+
+    -   **Gravedad de alerta**: en la lista, seleccione el nivel de alerta que se va a mostrar en la consola de Configuration Manager.
+
+8.  En función de la alerta que seleccione, especifique la siguiente información adicional:
+
+    -   **Detección de malware**: esta alerta se genera si se detecta malware en cualquier equipo de la recopilación que se supervisa. **Umbral de detección de malware**: especifica los niveles de detección de malware en los que se genera esta alerta.
+
+        -   **Alta: todas las detecciones**: la alerta se genera cuando se detecta cualquier malware en uno o varios equipos de la recopilación especificada, independientemente de la acción que lleva a cabo el cliente de Endpoint Protection.
+
+        -   **Media: detectada, pendiente de acción**: la alerta se genera cuando se detecta malware en uno o varios equipos de la recopilación especificada y es necesario quitarlo manualmente.
+
+        -   **Baja: detectada, todavía activa**: la alerta se genera cuando se detecta malware en uno o varios equipos de la recopilación especificada y aún está activo.
+
+    -   **Ataque de malware**: esta alerta se genera si se detecta el malware especificado en un porcentaje específico de equipos de la recopilación que se supervisa.
+
+        -   **Porcentaje de equipos con malware detectado**: la alerta se genera cuando el porcentaje de equipos con malware detectado en la recopilación supera el porcentaje que indique. Especifique un porcentaje entre **1** y **99**.
+
+            > [!NOTE]
+            >  El valor de porcentaje se basa en el número de equipos de la recopilación, pero excluye los equipos que no tienen instalado un cliente de Configuration Manager. Incluye equipos que aún no tienen instalado el cliente de Endpoint Protection.
+
+    -   **Detección reiterada de malware**: esta alerta se genera si se detecta malware específico más veces que las especificadas durante un determinado número de horas en los equipos de la recopilación que se supervisa. Especifique la siguiente información para configurar la alerta:
+
+        -   **Número de veces que se ha detectado malware** : la alerta se genera cuando se detecta el mismo malware en los equipos de la recopilación más veces que las establecidas. Especifique un número entre **2** y **32**.
+
+        -   **Intervalo de detección (horas)** : indique el intervalo de detección (en horas) en que se debe producir el número de detecciones de malware. Especifique un número entre **1** y **168**.
+
+    -   **Detección de varios programas de malware**: esta alerta se genera si se detectan más tipos de malware que el número de tipos especificado durante un determinado número de horas en los equipos de la recopilación que se supervisa. Especifique la siguiente información para configurar la alerta:
+
+        -   **Varios tipos de malware detectado:** la alerta se genera cuando el número establecido de tipos de software malintencionado se detecta en los equipos de la recopilación. Especifique un número entre **2** y **32**.
+
+        -   **Intervalo de detección (horas)** : indique el intervalo de detección (en horas) en que se debe producir el número de detecciones de malware. Especifique un número entre **1** y **168**.
+
+9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades de** *<Nombre de recopilación\>*.  
+
+> [!div class="button"]
+[Paso siguiente >](endpoint-definition-updates.md)
+
+> [!div class="button"]
+[Atrás >](endpoint-protection-site-role.md)
+
+
+
+<!--HONumber=Nov16_HO1-->
+
+
