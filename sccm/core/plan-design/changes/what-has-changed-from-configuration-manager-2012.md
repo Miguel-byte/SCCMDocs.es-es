@@ -70,7 +70,7 @@ Este rol de sistema de sitio admite el modo de funcionamiento tanto en línea co
 
  Para obtener más información, consulte [Usage data levels and settings](../../../core/servers/deploy/install/setup-reference.md#bkmk_usage) (Configuración y niveles de datos de uso).  
 
-##  <a name="a-namebkmkamta-support-for-intel-active-management-technology-amt"></a><a name="bkmk_AMT"></a> Compatibilidad con la Tecnología de administración activa (AMT) Intel  
+##  <a name="a-namebkmkamta-support-for-intel-active-management-technology-amt"></a><a name="bkmk_AMT"></a> Compatibilidad para la Tecnología de administración activa (AMT) Intel  
  Con System Center Configuration Manager, se ha quitado la compatibilidad nativa con equipos basados en AMT desde la consola de Configuration Manager.  
 
 -   Los equipos basados en AMT siguen estando totalmente administrados cuando se usa el [complemento Intel SCS para Microsoft System Center Configuration Manager](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html).  

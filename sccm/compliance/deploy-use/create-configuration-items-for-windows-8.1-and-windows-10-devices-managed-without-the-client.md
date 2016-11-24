@@ -52,13 +52,13 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 
 10. Para cada grupo de configuración, también puede elegir la gravedad que se notificará (en los informes de Configuration Manager) cuando se encuentre que un elemento de configuración no es compatible entre las siguientes:  
 
-    -   **Ninguno**: los dispositivos que no cumplan esta regla de compatibilidad no notificarán ninguna gravedad de error.  
+    -   **Ninguno**: los dispositivos que no cumplan esta regla de cumplimiento no notificarán ninguna gravedad de error.  
 
-    -   **Información**: los dispositivos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Información**.  
+    -   **Información**: los dispositivos que no cumplan esta regla de cumplimiento notificarán una gravedad de error de **Información**.  
 
-    -   **Advertencia**: los dispositivos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Advertencia**.  
+    -   **Advertencia**: los dispositivos que no cumplan esta regla de cumplimiento notificarán una gravedad de error de **Advertencia**.  
 
-    -   **Crítico**: los dispositivos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Crítico**.  
+    -   **Crítico**: los dispositivos que no cumplan esta regla de cumplimiento notificarán una gravedad de error de **Crítico**.  
 
     -   **Crítico con evento**: los dispositivos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Crítico**. Este nivel de gravedad también se registra como evento de Windows en el registro de eventos de la aplicación.  
 

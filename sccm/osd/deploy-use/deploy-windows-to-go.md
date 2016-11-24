@@ -110,7 +110,7 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
 
     -   **Comentario**: escriba una descripción única del uso del medio.  
 
-    -   **Archivo multimedia**: especifique el nombre y la ruta de acceso de los archivos de salida. El asistente escribe los archivos de salida en esta ubicación. Por ejemplo: **\\\nombreDeServidor\carpeta\archivoDeSalida.wim**  
+    -   **Archivo multimedia**: especifique el nombre y la ruta de acceso de los archivos de salida. El asistente escribe los archivos de salida en esta ubicación. Por ejemplo: **\\\nombre de servidor\carpeta\archivo de salida.iso**  
 
 7.  En la página **Seguridad** , especifique la información siguiente y, a continuación, haga clic en **Siguiente**.  
 

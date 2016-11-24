@@ -44,7 +44,7 @@ Cree recopilaciones en System Center Configuration Manager para representar agru
 
  Para obtener información sobre la creación de recopilaciones para equipos que ejecutan Linux y UNIX, consulte [How to manage clients for Linux and UNIX servers in System Center Configuration Manager](../../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md) (Cómo administrar clientes para servidores Linux y UNIX en System Center Configuration Manager).  
 
-##  <a name="a-namebkmk1a-to-create-a-device-collection"></a><a name="BKMK_1"></a> Para crear una recopilación de dispositivos  
+##  <a name="a-namebkmk1a-to-create-a-device-collection"></a><a name="BKMK_1"></a> Cómo crear una recopilación de dispositivos  
 
 1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
 
@@ -137,7 +137,7 @@ Cree recopilaciones en System Center Configuration Manager para representar agru
 > [!NOTE]  
 >  Debe actualizar o volver a cargar la consola de Configuration Manager para ver los miembros de la recopilación. Sin embargo, los miembros no aparecerán en la recopilación hasta después de la primera actualización programada o hasta que seleccione manualmente **Actualizar pertenencia** de la recopilación. Según la complejidad de la regla de recopilación y el número de entradas de la base de datos de Configuration Manager, pueden pasar unos minutos hasta que se complete una actualización de recopilación.  
 
-##  <a name="a-namebkmk2a-to-create-a-user-collection"></a><a name="BKMK_2"></a> Para crear una recopilación de usuarios  
+##  <a name="a-namebkmk2a-to-create-a-user-collection"></a><a name="BKMK_2"></a> Cómo crear una recopilación de usuarios  
 
 1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
 
@@ -226,7 +226,7 @@ Cree recopilaciones en System Center Configuration Manager para representar agru
 > [!NOTE]  
 >  Debe actualizar o volver a cargar la consola de Configuration Manager para ver los miembros de la recopilación. Sin embargo, los miembros no aparecerán en la recopilación hasta después de la primera actualización programada o hasta que seleccione manualmente **Actualizar pertenencia** de la recopilación. Según la complejidad de la regla de recopilación y el número de entradas de la base de datos de Configuration Manager, pueden pasar unos minutos hasta que se complete una actualización de recopilación.  
 
-##  <a name="a-namebkmk3a-to-import-a-collection"></a><a name="BKMK_3"></a> Para importar una recopilación  
+##  <a name="a-namebkmk3a-to-import-a-collection"></a><a name="BKMK_3"></a> Cómo importar una conexión  
 
 1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
 

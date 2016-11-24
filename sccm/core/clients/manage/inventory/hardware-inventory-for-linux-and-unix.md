@@ -92,7 +92,7 @@ El cliente de System Center Configuration Manager para Linux y UNIX admite el in
 
  Las acciones del inventario de hardware se especifican en el archivo de registro de cliente, **scxcm.log**.  
 
-##  <a name="a-namebkmkcustomhinvforlinuxa-how-to-use-open-management-infrastructure-to-create-custom-hardware-inventory"></a><a name="BKMK_CustomHINVforLinux"></a> Cómo usar Open Management Infrastructure para crear un inventario de hardware personalizado  
+##  <a name="a-namebkmkcustomhinvforlinuxa-how-to-use-open-management-infrastructure-to-create-custom-hardware-inventory"></a><a name="BKMK_CustomHINVforLinux"></a> Cómo utilizar Open Management Infrastructure para crear un inventario de hardware personalizado  
  El cliente para Linux y UNIX admite el inventario de hardware personalizado que puede crear utilizando Open Management Infrastructure (OMI). Para ello, siga los pasos a continuación:  
 
 1.  Cree un proveedor de inventario personalizado mediante el origen OMI.  
@@ -101,7 +101,7 @@ El cliente de System Center Configuration Manager para Linux y UNIX admite el in
 
 3.  Habilitar Configuration Manager para admitir el nuevo proveedor  
 
-###  <a name="a-namebkmklinuxprovidera-create-a-custom-hardware-inventory-provider-for-linux-and-unix-computers"></a><a name="BKMK_LinuxProvider"></a> Crear un proveedor de inventario de hardware personalizado para equipos UNIX y Linux:  
+###  <a name="a-namebkmklinuxprovidera-create-a-custom-hardware-inventory-provider-for-linux-and-unix-computers"></a><a name="BKMK_LinuxProvider"></a> Cree un proveedor de  inventario de hardware personalizado para equipos UNIX y Linux:  
  Para crear un proveedor de inventario de hardware personalizado para el cliente de Configuration Manager para Linux y UNIX, use **OMI Source - v.1.0.6** y siga las instrucciones de la Guía de introducción de OMI. Este proceso incluye la creación de un archivo Managed Object Format (MOF) que define el esquema del nuevo proveedor. Después, importe el archivo MOF en Configuration Manager para habilitar la compatibilidad de la nueva clase de inventario personalizado.  
 
  Tanto OMI Source - v.1.0.6 como la Guía de introducción de OMI están disponibles para descargar desde el sitio web de [The Open Group](http://go.microsoft.com/fwlink/p/?LinkId=262317) . Puede encontrar estas descargas en la pestaña **Documentos** en la siguiente página web en el sitio web de OpenGroup.org: [Open Management Infrastructure (OMI)](http://go.microsoft.com/fwlink/p/?LinkId=286805).  

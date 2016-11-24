@@ -47,7 +47,7 @@ Las implementaciones de medios de arranque en System Center Configuration Manage
 -   **Sólo medios y PXE (ocultos)**  
 
 ## <a name="create-the-bootable-media"></a>Crear medios de arranque  
- Puede especificar si el medio de arranque es una unidad flash USB o un conjunto de CD/DVD. El equipo que iniciará el medio debe admitir la opción que elija como unidad de arranque. Para obtener más información, consulte [Create bootable media](create-bootable-media.md) (Crear medios de arranque).  
+ Puede especificar si el medio de arranque es una unidad flash USB o un conjunto de CD/DVD. El equipo que iniciará el medio debe admitir la opción que elija como unidad de arranque. Para obtener más información, consulte [Crear medios de arranque](create-bootable-media.md).  
 
 ##  <a name="a-namebkmkdeploya-install-the-operating-system-from-bootable-media"></a><a name="BKMK_Deploy"></a> Instalar el sistema operativo desde un medio de arranque  
  Inserte el medio de arranque en una unidad de arranque en el equipo y luego vuelva a encenderlo para instalar el sistema operativo.  

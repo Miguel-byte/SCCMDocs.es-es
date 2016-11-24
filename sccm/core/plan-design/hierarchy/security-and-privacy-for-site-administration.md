@@ -27,7 +27,7 @@ ms.openlocfilehash: be8002edb48506286e18b1fb8c09f92f46ff0e10
 
 Este tema contiene información sobre la seguridad y privacidad de la jerarquía y los sitios de System Center Configuration Manager.
 
-##  <a name="a-namebkmksecuritysitesa-security-best-practices-for-site-administration"></a><a name="BKMK_Security_Sites"></a> Procedimientos recomendados de seguridad para la administración de sitios  
+##  <a name="a-namebkmksecuritysitesa-security-best-practices-for-site-administration"></a><a name="BKMK_Security_Sites"></a> Prácticas recomendadas de seguridad para la administración de sitios  
  Use los siguientes procedimientos recomendados de seguridad para proteger los sitios y la jerarquía de System Center Configuration Manager.  
 
  **Ejecute el programa de instalación solamente desde un origen de confianza y asegure el canal de comunicación entre el medio de instalación y el servidor de sitio.**  
@@ -175,7 +175,7 @@ Para obtener más información sobre las diferentes tecnologías de Wake on LAN,
 
 Siempre que sea posible, utilice un servidor de correo electrónico compatible con el acceso autenticado y utilice la cuenta de equipo del servidor de sitio para la autenticación. Si debe especificar una cuenta de usuario para la autenticación, utilice una cuenta que tenga los privilegios mínimos.  
 
-##  <a name="a-namebkmksecuritysiteservera-security-best-practices-for-the-site-server"></a><a name="BKMK_Security_SiteServer"></a> Procedimientos recomendados de seguridad para el servidor de sitio  
+##  <a name="a-namebkmksecuritysiteservera-security-best-practices-for-the-site-server"></a><a name="BKMK_Security_SiteServer"></a> Prácticas recomendadas de seguridad para el servidor de sitio  
  Use los siguientes procedimientos recomendados de seguridad para proteger el servidor de sitio de Configuration Manager.  
 
  **Instale Configuration Manager en un servidor miembro en lugar de en un controlador de dominio.**  
@@ -192,7 +192,7 @@ Siempre que sea posible, utilice un servidor de correo electrónico compatible c
 
  Para obtener más información, consulte [Install a secondary site](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_secondary) (Instalar un sitio secundario) en el tema [Use the Setup Wizard to install sites](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md) (Uso del asistente para instalación para instalar sitios).  
 
-##  <a name="a-namebkmksecuritysqlservera-security-best-practices-for-sql-server"></a><a name="BKMK_Security_SQLServer"></a> Procedimientos recomendados de seguridad para SQL Server  
+##  <a name="a-namebkmksecuritysqlservera-security-best-practices-for-sql-server"></a><a name="BKMK_Security_SQLServer"></a> Prácticas recomendadas de seguridad para SQL Server  
  Configuration Manager usa SQL Server como base de datos back-end. Si la base de datos se ve comprometida, los atacantes podrían omitir Configuration Manager y obtener acceso a SQL Server directamente para lanzar sus ataques a través de Configuration Manager. Tenga en cuenta que los ataques contra SQL Server son de muy alto riesgo y deben mitigarse de forma adecuada.  
 
  Use los siguientes procedimientos recomendados de seguridad para proteger SQL Server para Configuration Manager.  
@@ -223,7 +223,7 @@ Identifique y siga las prácticas recomendadas para su versión de SQL Server. E
 
 -   Si instala SQL Server mediante una cuenta de usuario de dominio, asegúrese de que la cuenta de equipo del servidor de sitio está configurada para un nombre de entidad de seguridad de servicio (SPN) publicado en Servicios de dominio de Active Directory. Sin el SPN, se producirá un error en la autenticación Kerberos y se producirá un error en la instalación de Configuration Manager.  
 
-##  <a name="a-namebkmksecurityiisa-security-best-practices-for-site-systems-that-run-iis"></a><a name="BKMK_Security_IIS"></a> Procedimientos recomendados de seguridad para sistemas de sitio que ejecutan IIS  
+##  <a name="a-namebkmksecurityiisa-security-best-practices-for-site-systems-that-run-iis"></a><a name="BKMK_Security_IIS"></a> Prácticas recomendadas de seguridad para sistemas de sitio que ejecutan IIS  
 Varios roles de sistema de sitio en Configuration Manager requieren IIS. Si se protege IIS, Configuration Manager puede funcionar correctamente y se reduce el riesgo de que se produzcan ataques de seguridad. Cuando resulte práctico, minimice el número de servidores que requieren IIS. Por ejemplo, ejecute sólo el número de puntos de administración que requiera para su base de clientes, teniendo en cuenta la alta disponibilidad y el aislamiento de red para la administración de cliente basada en Internet.  
 
  Utilice las siguientes prácticas recomendadas de seguridad para proteger los sistemas de sitio que ejecutan IIS.  
@@ -289,7 +289,7 @@ Por ejemplo, los directorios virtuales que se deben quitar de un punto de distri
 
 Identifique y siga las prácticas recomendadas para su versión del servidor IIS. En cambio, debe tener en cuenta cualquier requisito que Configuration Manager tenga en cuanto a los roles de sistema de sitio específicos. Para obtener más información, consulte [Site and site system prerequisites](../../../core/plan-design/configs/site-and-site-system-prerequisites.md) (Requisitos previos de sitio y sistema de sitio).  
 
-##  <a name="a-namebkmksecuritymanagementpointa-security-best-practices-for-the-management-point"></a><a name="BKMK_Security_ManagementPoint"></a> Procedimientos recomendados de seguridad para el punto de administración  
+##  <a name="a-namebkmksecuritymanagementpointa-security-best-practices-for-the-management-point"></a><a name="BKMK_Security_ManagementPoint"></a> Prácticas recomendadas de seguridad para el punto de administración  
  Los puntos de administración son la interfaz principal entre los dispositivos y Configuration Manager. Tenga en cuenta que los ataques contra el punto de administración y el servidor en el que se ejecuta son de muy alto riesgo y deben mitigarse de forma adecuada. Aplique todas las prácticas recomendadas de seguridad adecuadas y compruebe si se detecta actividad inusual.  
 
  Use los siguientes procedimientos recomendados de seguridad para proteger un punto de administración de Configuration Manager.  
@@ -300,7 +300,7 @@ Identifique y siga las prácticas recomendadas para su versión del servidor IIS
 
  Si migra desde una versión anterior a System Center Configuration Manager, migre el software cliente del punto de administración a System Center Configuration Manager lo antes posible.  
 
-##  <a name="a-namebkmksecurityfspa-security-best-practices-for-the-fallback-status-point"></a><a name="BKMK_Security_FSP"></a> Procedimientos recomendados de seguridad para el punto de estado de reserva  
+##  <a name="a-namebkmksecurityfspa-security-best-practices-for-the-fallback-status-point"></a><a name="BKMK_Security_FSP"></a> Prácticas recomendadas de seguridad para el punto de estado de reserva  
  Use los siguientes procedimientos recomendados de seguridad si instala un punto de estado de reserva en Configuration Manager.  
 
  Para obtener más información sobre las consideraciones de seguridad al instalar un punto de estado de reserva, consulte [Determine Whether You Require a Fallback Status Point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#BKMK_Determine_FSP) (Determinar si necesita un punto de estado de reserva).  

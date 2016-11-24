@@ -51,7 +51,7 @@ Con Configuration Manager e Intune, puede habilitar la inscripción BYOD ("Bring
 
     1.  En un explorador, vaya al [portal de certificados push de Apple](http://go.microsoft.com/fwlink/?LinkId=269844) e inicie sesión con su identificador de Apple de empresa. Este ID de Apple debe utilizarse en el futuro para renovar el certificado APNs.  
 
-    2.  Complete el asistente usando el archivo de solicitud de firma de certificado (.csr). Descargue el certificado de APNs y guarde el archivo .pem localmente. Este archivo de certificado de APNs (.pem) se usa para establecer una relación de confianza entre Apple Push Notification Service y la entidad de administración de dispositivos móviles de Intune.  
+    2.  Complete el asistente usando el archivo de solicitud de firma de certificado (.csr). Descargue el certificado de APNs y guarde el archivo .pem localmente. Este archivo de certificado de APNs (.pem) se usa para establecer una relación de confianza entre el servidor de notificaciones push de Apple y la entidad de administración de dispositivos móviles de Intune.  
 
 4.  **Habilite la inscripción y cargue el certificado de APNs** : para habilitar la inscripción de iOS, cargue el certificado de APNs.  
 

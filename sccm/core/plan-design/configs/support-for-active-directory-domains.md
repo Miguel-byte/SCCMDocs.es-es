@@ -50,7 +50,7 @@ Debe desinstalar el rol de sistema de sitio (incluido el sitio si es un servidor
 
 -   Windows Server 2012  
 
--   Windows Server 2012 R2  
+-   Windows Server 2012 R2  
 
 ##  <a name="a-namebkmkdisjointa-disjoint-namespace"></a><a name="bkmk_Disjoint"></a> Espacio de nombres no contiguo  
 Configuration Manager admite la instalación de clientes y sistemas de sitio en un dominio que tiene un espacio de nombres no contiguo.  

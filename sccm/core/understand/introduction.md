@@ -84,9 +84,9 @@ Configuration Manager también usa:
 
  Puede instalar la consola de Configuration Manager en equipos adicionales, restringir el acceso y limitar lo que los usuarios administrativos pueden ver en la consola con la administración basada en roles de Configuration Manager.  
 
- Para obtener más información, consulte [Install System Center Configuration Manager consoles (Instalación de consolas de System Center Configuration Manager)](../../core/servers/deploy/install/install-consoles.md).
+ Para obtener más información, consulte [Instalar las consolas de System Center Configuration Manager](../../core/servers/deploy/install/install-consoles.md).
 
-##  <a name="a-namebkmkapplicationcataloga-the-application-catalog-software-center-and-the-company-portal"></a><a name="BKMK_ApplicationCatalog"></a> El catálogo de aplicaciones, el centro de software y el portal de empresa  
+##  <a name="a-namebkmkapplicationcataloga-the-application-catalog-software-center-and-the-company-portal"></a><a name="BKMK_ApplicationCatalog"></a> Catálogo de aplicaciones, Centro de software y portal de la compañía  
  El **Catálogo de aplicaciones** es un sitio web donde los usuarios pueden buscar y solicitar software para sus equipos con Windows. Para utilizar el catálogo de aplicaciones, debe instalar el punto de servicio web del catálogo de aplicaciones y el punto de sitio web del catálogo de aplicaciones para el sitio.  
 
  El **Centro de software** es una aplicación que se instala si el cliente de Configuration Manager está instalado en equipos con Windows. Los usuarios ejecutan esta aplicación para solicitar software y administrar el software que tienen implementado mediante el uso de Configuration Manager. El Centro de software permite a los usuarios realizar lo siguiente:  
@@ -114,7 +114,7 @@ Configuration Manager también usa:
 
  En todos los escenarios, Adán es el administrador principal de Configuration Manager.  
 
-###  <a name="a-namebkmkscenarioempowera-example-scenario-empower-users-by-ensuring-access-to-applications-from-any-device"></a><a name="BKMK_ScenarioEmpower"></a> Escenario de ejemplo: capacitar a los usuarios garantizando el acceso a aplicaciones desde cualquier dispositivo  
+###  <a name="a-namebkmkscenarioempowera-example-scenario-empower-users-by-ensuring-access-to-applications-from-any-device"></a><a name="BKMK_ScenarioEmpower"></a> Escenario de ejemplo: Capacitar a los usuarios garantizando el acceso a aplicaciones desde cualquier dispositivo  
  Trey Research desea garantizar que los empleados tienen acceso a las aplicaciones que necesitan y de la forma más eficaz posible. Adán asigna estos requisitos de la empresa a los escenarios siguientes:  
 
 |Requisito|Estado de administración de cliente actual|Estado de administración de cliente futuro|  
@@ -142,7 +142,7 @@ Configuration Manager también usa:
 
  Estos pasos de configuración y resultados permiten a Trey Research capacitar completamente a sus empleados al garantizarles el acceso a las aplicaciones desde cualquier dispositivo.  
 
-###  <a name="a-namebkmkscenariounifya-example-scenario-unify-compliance-management-for-devices"></a><a name="BKMK_ScenarioUnify"></a> Escenario de ejemplo: unificar la administración de cumplimiento para dispositivos  
+###  <a name="a-namebkmkscenariounifya-example-scenario-unify-compliance-management-for-devices"></a><a name="BKMK_ScenarioUnify"></a> Escenario de ejemplo: Unificar la administración de cumplimiento para dispositivos  
  Trey Research desea una solución de administración de clientes unificada que garantice que sus equipos ejecutan software antivirus que se mantiene actualizado automáticamente. Es decir:  
 
 -   El Firewall de Windows está habilitado.  
@@ -182,7 +182,7 @@ Configuration Manager también usa:
 
  Estos pasos de configuración y resultados hacen que Trey Research unifique correctamente la administración de cumplimiento para dispositivos.  
 
-###  <a name="a-namebkmkscenariosimplifya-example-scenario-simplify-client-management-for-devices"></a><a name="BKMK_ScenarioSimplify"></a> Escenario de ejemplo: simplificar la administración de clientes para dispositivos  
+###  <a name="a-namebkmkscenariosimplifya-example-scenario-simplify-client-management-for-devices"></a><a name="BKMK_ScenarioSimplify"></a> Escenario de ejemplo: Simplificar la administración de clientes para dispositivos  
  Trey Research quiere que todos los equipos nuevos instalen automáticamente la imagen del equipo base de la empresa que ejecuta Windows 7. Una vez instalada la imagen del sistema operativo en estos equipos, se deben administrar y supervisar para cualquier software adicional que instalen los usuarios. Los equipos que almacenan información altamente confidencial requieren directivas de administración más restrictivas que los demás equipos. Por ejemplo, los ingenieros del departamento de soporte técnico no deben conectarse a ellos de forma remota, debe utilizarse la entrada de PIN de BitLocker para los reinicios y solo los administradores locales pueden instalar software.  
 
  Adán asigna estos requisitos de la empresa a los escenarios siguientes:  

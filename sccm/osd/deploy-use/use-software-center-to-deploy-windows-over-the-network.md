@@ -36,7 +36,7 @@ La secuencia de tareas para instalar un sistema operativo en System Center Confi
 ## <a name="configure-deployment-settings"></a>Configurar la implementación  
  Cuando quiera que la implementación del sistema operativo esté disponible en el Centro de software, debe configurar la implementación para que el sistema operativo esté disponible para los clientes de Configuration Manager. Puede configurar esto en la página **Configuración de implementación** del Asistente para implementar Software o en la pestaña **Configuración de implementación** en las propiedades de la implementación.  Para la configuración **Estar disponible para** , configure **Solo clientes de Configuration Manager** o **PXE, medios y clientes de Configuration Manager**. Después de implementar el sistema operativo, se mostrará en el Centro de software para los miembros de la recopilación de destino.  
 
-##  <a name="a-namebkmkdeploya-deploy-the-task-sequence-to-computers"></a><a name="BKMK_Deploy"></a> Implementar la secuencia de tareas en los equipos  
+##  <a name="a-namebkmkdeploya-deploy-the-task-sequence-to-computers"></a><a name="BKMK_Deploy"></a> Implemente la secuencia de tareas en los equipos.  
  Implemente el sistema operativo en una recopilación de destino. Para obtener más información, vea [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS). Al implementar sistemas operativos para el Centro de software, puede configurar si la implementación es necesaria o está disponible.  
 
 -   **Implementación necesaria**: las implementaciones necesarias harán que el sistema operativo esté disponible en el Centro de software, pero se iniciará automáticamente según la programación de asignación configurada.  

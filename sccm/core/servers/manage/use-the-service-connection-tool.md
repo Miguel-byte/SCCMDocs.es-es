@@ -144,7 +144,7 @@ También necesitará copiar la carpeta ServiceConnectionTool con todo su conteni
 
 9. Abra la consola de Configuration Manager y vaya a **Administración** >**Cloud Services** > **Actualizaciones y mantenimiento**. Ahora están disponibles para instalar las actualizaciones que se han importado. Para obtener más información sobre la instalación de actualizaciones, consulte [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) (Instalación de actualizaciones en la consola para System Center Configuration Manager).  
 
-## <a name="a-namebkmkcmda-command-line-options"></a><a name="bkmk_cmd"></a> Opciones de línea de comandos  
+## <a name="a-namebkmkcmda-command-line-options"></a><a name="bkmk_cmd"></a> opciones de línea de comandos  
  Para ver la información de ayuda para la herramienta de punto de conexión de servicio, abra el símbolo del sistema para la carpeta que contiene la herramienta y ejecute el comando:  **serviceconnectiontool.exe**.  
 
 |Opciones de línea de comandos|Detalles|  

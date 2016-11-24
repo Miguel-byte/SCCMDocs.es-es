@@ -36,7 +36,7 @@ Los medios preconfigurados contienen la imagen de arranque que se utiliza para i
 
  Cuando el equipo se inicia por primera vez después de la aplicación del medio preconfigurado, el equipo arranca en Windows PE y se conecta a un punto de administración para encontrar la secuencia de tareas que completa el proceso de implementación de sistema operativo. Puede especificar las aplicaciones, los paquetes y los paquetes de controladores que quiere incluir como parte de los medios preconfigurados. Al implementar una secuencia de tareas que usa un medio preconfigurado, el asistente comprueba en primer lugar la presencia de contenido válido en la memoria caché local de la secuencia de tareas y, si el contenido no se encuentra o se ha revisado, el asistente lo descarga del punto de distribución.  
 
-##  <a name="a-namebkmkcreateprestagedmediaa-how-to-create-prestaged-media"></a><a name="BKMK_CreatePrestagedMedia"></a> Cómo crear medios preconfigurados  
+##  <a name="a-namebkmkcreateprestagedmediaa-how-to-create-prestaged-media"></a><a name="BKMK_CreatePrestagedMedia"></a> Creación de medios preconfigurados  
  Antes de crear medios preconfigurados con el Asistente para crear medio de secuencia de tareas, asegúrese de que se cumplen las condiciones siguientes:  
 
 |Tarea|Descripción|  

@@ -53,17 +53,17 @@ ms.openlocfilehash: 8d676d31d519b7b6099c878d94b4c81f1c972887
 
 10. Para cada grupo de configuración, también puede elegir la gravedad que se notificará (en los informes de Configuration Manager) cuando se encuentre que un elemento de configuración no es compatible entre las siguientes:  
 
-    -   **Ninguno**: los dispositivos que no cumplan esta regla de compatibilidad no notificarán ninguna gravedad de error.  
+    -   **Ninguno**: los dispositivos que no cumplan esta regla de cumplimiento no notificarán ninguna gravedad de error.  
 
-    -   **Información**: los dispositivos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Información**.  
+    -   **Información**: los dispositivos que no cumplan esta regla de cumplimiento notificarán una gravedad de error de **Información**.  
 
-    -   **Advertencia**: los dispositivos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Advertencia**.  
+    -   **Advertencia**: los dispositivos que no cumplan esta regla de cumplimiento notificarán una gravedad de error de **Advertencia**.  
 
-    -   **Crítico**: los dispositivos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Crítico**.  
+    -   **Crítico**: los dispositivos que no cumplan esta regla de cumplimiento notificarán una gravedad de error de **Crítico**.  
 
-    -   **Crítico con evento**: los dispositivos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Crítico**.   
+    -   **Crítico con evento**: los dispositivos que no cumplan esta regla de cumplimiento notificarán una gravedad de error de **Crítico**.   
 
-11. En la página **Aplicabilidad de plataforma**, revise cualquier configuración que no sea compatible con las plataformas admitidas que ha seleccionado anteriormente. Puede regresar y eliminar esta configuración o puede continuar.  
+11. En la página **Aplicabilidad de plataforma**, revise cualquier configuración que no sea compatible con las plataformas admitidas que seleccionó anteriormente. Puede regresar y eliminar esta configuración o puede continuar.  
 
     > [!TIP]  
     >  No se evalúa el cumplimiento de la configuración no admitida.  

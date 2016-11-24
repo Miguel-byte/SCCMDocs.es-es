@@ -26,7 +26,7 @@ ms.openlocfilehash: 83066e1f0e3c6536649e9b74ca13562c9d817619
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Los perfiles de correo electrónico funcionan con Microsoft Intune para permitir que pueda aprovisionar dispositivos con perfiles de correo electrónico y restricciones mediante Exchange ActiveSync. Así, los usuarios pueden acceder al correo electrónico corporativo desde sus dispositivos con solo realizar una mínima configuración por su parte.  
+Los perfiles de correo electrónico funcionan con Microsoft Intune para permitirle aprovisionar dispositivos con perfiles de correo electrónico y restricciones mediante Exchange ActiveSync. Así, los usuarios pueden acceder al correo electrónico corporativo desde sus dispositivos con solo realizar una mínima configuración por su parte.  
 
  Puede configurar los siguientes tipos de dispositivo con los perfiles de correo electrónico:  
 

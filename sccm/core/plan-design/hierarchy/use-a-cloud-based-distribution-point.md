@@ -91,7 +91,7 @@ Un punto de distribución basado en la nube tiene las siguientes limitaciones:
 
 -   Los clientes deben poder acceder a Internet para utilizar el punto de distribución basado en la nube.  
 
-##  <a name="a-namebkmkclouddpcosta-cost-of-using-cloud-based-distribution"></a><a name="BKMK_CloudDPCost"></a> Costo del uso de la distribución basada en la nube  
+##  <a name="a-namebkmkclouddpcosta-cost-of-using-cloud-based-distribution"></a><a name="BKMK_CloudDPCost"></a> Costo de la utilización la distribución basada en la nube  
  Cuando use un punto de distribución basado en la nube, planee el costo del almacenamiento de datos y las transferencias de descarga que realizan los clientes de Configuration Manager.  
 
  Configuration Manager incluye opciones para ayudar a controlar los costos y supervisar el acceso a datos:  

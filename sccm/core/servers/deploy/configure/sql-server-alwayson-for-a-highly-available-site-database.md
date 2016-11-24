@@ -78,7 +78,7 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
     - **permitir cualquier conexión de solo lectura**
 
 
-##  <a name="a-namebkmkbnra-changes-for-backup-and-recovery-when-you-use-a-sql-server-alwayson-availability-group"></a><a name="bkmk_BnR"></a> Cambios en Copia de seguridad y recuperación cuando se usa un grupo de disponibilidad AlwaysOn de SQL Server  
+##  <a name="a-namebkmkbnra-changes-for-backup-and-recovery-when-you-use-a-sql-server-alwayson-availability-group"></a><a name="bkmk_BnR"></a> Cambios en Copia de seguridad y recuperación cuando se utiliza un grupo de disponibilidad AlwaysOn de SQL Server  
  **Copia de seguridad:**  
 
  Al ejecutar una base de datos de sitio en un grupo de disponibilidad, debe seguir ejecutando la tarea de mantenimiento del servidor del **sitio de copia de seguridad** integrada para realizar una copia de seguridad de los archivos y las configuraciones comunes de Configuration Manager, pero planee no usar los archivos .MDF o .LDF creados por esa copia de seguridad. Prevea en su lugar realizar copias de seguridad directas de la base de datos de sitio mediante SQL Server.  
