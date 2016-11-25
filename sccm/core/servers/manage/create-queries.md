@@ -101,7 +101,7 @@ Consulte las siguientes secciones de este tema para crear o importar consultas e
 
 4.  Revise la información sobre la consulta que quiere importar y, a continuación, complete el asistente. La nueva consulta se muestra en el nodo **Consultas** en el área de trabajo **Supervisión** .  
 
-##  <a name="a-namebkmkexamplea-example-wql-queries"></a><a name="BKMK_Example"></a> Consultas de WQL de ejemplo  
+##  <a name="a-namebkmkexamplea-example-wql-queries"></a><a name="BKMK_Example"></a> Example WQL queries  
  Esta sección contiene consultas de WMI de ejemplo que puede usar en su jerarquía o modificarlas para otros fines. Para usar estas consultas, haga clic en **Mostrar idioma de consulta** del cuadro de diálogo **Propiedades de instrucción de consulta** y, a continuación, copie y pegue la consulta en el campo **Instrucción de consulta** .  
 
 > [!TIP]  

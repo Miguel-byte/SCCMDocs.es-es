@@ -466,7 +466,7 @@ Para admitir la notificación de cliente con una réplica de base de datos para 
 > [!NOTE]  
 >  Después de restaurar una base de datos de sitio configurada para réplicas de base de datos, para poder utilizar las réplicas de base de datos debe volver a configurar cada réplica de base de datos y volver a crear tanto las publicaciones como las suscripciones.  
 
-###  <a name="a-namebkmkuninstalldbreplicaa-uninstall-a-database-replica"></a><a name="BKMK_UninstallDbReplica"></a> Desinstalar una réplica de base de datos  
+###  <a name="a-namebkmkuninstalldbreplicaa-uninstall-a-database-replica"></a><a name="BKMK_UninstallDbReplica"></a> Desinstalación de una réplica de base de datos  
  Al utilizar una réplica de base de datos para un punto de administración, debe desinstalar la réplica de base de datos durante un período de tiempo y, a continuación, volver a configurarla para utilizarla. Por ejemplo, debe quitar las réplicas de base de datos antes de actualizar un sitio de Configuration Manager a un nuevo Service Pack. Una vez completada la actualización del sitio, puede restaurar la réplica de base de datos para poder utilizarla.  
 
  Utilice los pasos siguientes para desinstalar una réplica de base de datos.  

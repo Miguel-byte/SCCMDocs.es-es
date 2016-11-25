@@ -28,7 +28,7 @@ ms.openlocfilehash: 1abd28aa4ce4f946f6328f8f7924b5f5a81e640c
 System Center Configuration Manager usa la **replicación basada en archivos** y la **replicación de base de datos** para transferir distintos tipos de información entre sitios.  Los puntos de este tema pueden ayudarle a entender cómo Configuration Manager mueve datos entre sitios y cómo se puede administrar la transferencia de datos a través de la red.  
 
 
-##  <a name="a-namebkmkfileroutea-file-based-replication"></a><a name="bkmk_fileroute"></a> Replicación basada en archivos  
+##  <a name="a-namebkmkfileroutea-file-based-replication"></a><a name="bkmk_fileroute"></a> File-based replication  
  Configuration Manager usa la replicación basada en archivos para transferir datos basados en archivos entre sitios de la jerarquía. Estos datos incluyen contenido, como aplicaciones y paquetes, que desea implementar en puntos de distribución de sitios secundarios, así como registros de datos de detección no procesados que se transfieren a sitios principales donde se procesan.  
 
  La comunicación entre sitios basada en archivos usa el protocolo **Bloque de mensajes del servidor** (SMB) a través del puerto **TCP/IP 445**. Puede especificar configuraciones que incluyan la limitación de ancho de banda y el modo por pulsos para controlar el volumen de datos transferidos a través de la red, y programas para controlar cuándo enviar datos a través de la red.  
@@ -72,7 +72,7 @@ Para administrar una ruta de replicación de archivos, en el área de trabajo **
 
 Para administrar el remitente para un sitio, expanda el nodo **Configuración de sitio** del área de trabajo **Administración** , seleccione **Sitios** y, a continuación, haga clic en **Propiedades** del sitio que desea administrar. Haga clic en la pestaña **Remitente** para cambiar la configuración del remitente.  
 
-##  <a name="a-namebkmkdbrepa-database-replication"></a><a name="bkmk_dbrep"></a> Replicación de base de datos  
+##  <a name="a-namebkmkdbrepa-database-replication"></a><a name="bkmk_dbrep"></a> Database replication  
 La replicación de base de datos de Configuration Manager usa SQL Server para transferir datos y combinar cambios realizados en una base de datos de sitio con la información almacenada en la base de datos de otros sitios de la jerarquía.  
 
 -   Esto permite que todos los sitios compartan la misma información.  

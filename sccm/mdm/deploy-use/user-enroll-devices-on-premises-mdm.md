@@ -71,7 +71,7 @@ En las tareas siguientes se explica cómo inscribir equipos y dispositivos y com
 
 5.  En la siguiente pantalla, escriba su dirección de correo electrónico y contraseña laborales y luego, haga clic en **Iniciar de sesión**. Después de unos minutos, se inscribirá el dispositivo. Haga clic en **Listo**.  
 
-##  <a name="a-namebkmkverifya-verify-device-enrollment"></a><a name="bkmk_verify"></a> Comprobar la inscripción del dispositivo  
+##  <a name="a-namebkmkverifya-verify-device-enrollment"></a><a name="bkmk_verify"></a> Comprobar inscripción de dispositivo  
  Puede comprobar que los dispositivos están inscritos correctamente en la consola de Configuration Manager.  
 
 1.  Inicie la consola de Configuration Manager.  

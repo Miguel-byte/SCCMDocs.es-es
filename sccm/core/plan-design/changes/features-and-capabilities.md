@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: be7638f006b0eac9e58add7e3926532ba7921e8e
+ms.sourcegitcommit: fc40912a3da034ac0e3f84c72593aa4a9df8d057
+ms.openlocfilehash: c558148104b6338e4038bf690491c88e76dfdcaf
 
 
 ---
@@ -60,7 +60,7 @@ A continuación se indican las funcionalidades de administración principales de
 
  Puede usar Configuration Manager para administrar a través de Internet los dispositivos iOS, Android (Samsung KNOX incluido), Windows Phone y Windows mediante el servicio de Microsoft Intune.
 
- Aunque use el servicio de Intune, las tareas de administración se completan mediante el uso del rol de sistema de sitio del punto de conexión de servicio, disponible a través de la consola de Configuration Manager. Consulte [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/plan-design/hybrid-mobile-device-management.md) (Administración híbrida de dispositivos móviles (MDM) con System Center Configuration Manager y Microsoft Intune).  
+ Aunque use el servicio de Intune, las tareas de administración se completan mediante el uso del rol de sistema de sitio del punto de conexión de servicio, disponible a través de la consola de Configuration Manager. Consulte [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md) (Administración híbrida de dispositivos móviles (MDM) con System Center Configuration Manager y Microsoft Intune).  
 
  **Administración local de dispositivos móviles**  
 
