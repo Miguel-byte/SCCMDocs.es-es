@@ -37,7 +37,7 @@ En este tema, se indican las etapas de System Center Configuration Manager para 
 
  Use las secciones siguientes para implementar sistemas operativos a través de la red mediante una secuencia de tareas.  
 
-##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> Planear  
+##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> Plan  
 
 -   **Revisar las limitaciones de la secuencia de tareas para actualizar un sistema operativo**  
 
@@ -53,7 +53,7 @@ En este tema, se indican las etapas de System Center Configuration Manager para 
 
         -   Implementar un cambio fundamental en el equipo, como la partición del disco, cambiar una arquitectura de x86 a x64, implementar UEFI o modificar el idioma del sistema operativo base.  
 
-        -   Tiene requisitos personalizados, como el uso de una imagen base personalizada, el uso de cifrado de disco de <sup>terceros</sup> o requerir operaciones de WinPE sin conexión.  
+        -   Tiene requisitos personalizados, como el uso de una imagen base personalizada, el uso de cifrado de disco de terceros<sup></sup> o requerir operaciones de WinPE sin conexión.  
 
 -   **Planear e implementar los requisitos de infraestructura**  
 
