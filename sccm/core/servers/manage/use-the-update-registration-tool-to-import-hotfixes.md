@@ -69,7 +69,7 @@ Si instala una versión de un origen externo y el nombre de archivo de la actual
 
      Una vez registrada la actualización, podrá cerrar la herramienta de registro de actualizaciones.  
 
-3.  Abra la consola de Configuration Manager y vaya a **Administración** > **Servicios en la nube** > **Actualizaciones y mantenimiento**(Iniciar proceso de detección de actualizaciones inmediatamente). Ahora están disponibles para instalar las revisiones que se han importado. Para obtener más información sobre la instalación de actualizaciones, consulte [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) (Instalación de actualizaciones en la consola para System Center Configuration Manager).  
+3.  Abra la consola de Configuration Manager y vaya a AdministraciónServicios en la nubeActualizaciones y mantenimiento(Iniciar proceso de detección de actualizaciones inmediatamente). Ahora están disponibles para instalar las revisiones que se han importado. Para obtener más información sobre la instalación de actualizaciones, consulte [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) (Instalación de actualizaciones en la consola para System Center Configuration Manager).  
 
 
 

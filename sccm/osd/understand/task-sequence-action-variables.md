@@ -176,7 +176,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDMigrateTimeZone<br /><br /> (entrada)|Especifica si se migra la zona horaria del equipo.<br /><br /> Valores válidos:<br /><br /> **"true"** (valor predeterminado)<br /><br /> **"false"**<br /><br /> Si el valor es "true", la variable OSDTimeZone se establece en la zona horaria del equipo.|  
 |OSDTimeZone<br /><br /> (salida)|Se establece con la zona horaria del equipo. El valor se establece solo si la variable OSDMigrateTimeZone se establece en "true".|  
 
-###  <a name="a-namebkmkconnecttonetworkfoldera-connect-to-network-folder-task-sequence-action-variables"></a><a name="BKMK_ConnecttoNetworkFolder"></a> Variables de acción de la secuencia de tareas Conectar a carpeta de red  
+###  <a name="a-namebkmkconnecttonetworkfoldera-connect-to-network-folder-task-sequence-action-variables"></a><a name="BKMK_ConnecttoNetworkFolder"></a> Variables de acción de la secuencia de tareas Conectarse a carpetas compartidas  
  Las variables de esta acción especifican información sobre una carpeta de una red, como la cuenta utilizada y la contraseña para conectarse a la carpeta de red, la letra de unidad de la carpeta y la ruta de acceso a la carpeta. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Conectar a carpeta de red](task-sequence-steps.md#BKMK_ConnectToNetworkFolder).  
 
 #### <a name="details"></a>Detalles  
@@ -229,7 +229,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |----------------------------------------|-----------------|  
 |SMSInstallUpdateTarget<br /><br /> (entrada)|Especifica si se deben instalar todas las actualizaciones o solo las obligatorias.<br /><br /> Valores válidos:<br /><br /> **"All"**<br /><br /> **"Mandatory"**|  
 
-###  <a name="a-namebkmkjoindomainworkgroupa-join-domain-or-workgroup-task-sequence-action-variables"></a><a name="BKMK_JoinDomainWorkgroup"></a> Variables de acción de secuencia de tareas Unirse a dominio o grupo de trabajo  
+###  <a name="a-namebkmkjoindomainworkgroupa-join-domain-or-workgroup-task-sequence-action-variables"></a><a name="BKMK_JoinDomainWorkgroup"></a> Variables de acción de secuencia de tareas de unión a un dominio o un grupo de trabajo  
  Las variables de esta acción especifican la información necesaria para unir el equipo de destino a un grupo de trabajo o un dominio de Windows. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Unirse a dominio o grupo de trabajo](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup).  
 
 #### <a name="details"></a>Detalles  
