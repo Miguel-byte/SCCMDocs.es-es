@@ -1,0 +1,54 @@
+---
+title: Requisitos previos de los perfiles de certificado | System Center Configuration Manager
+description: "Obtenga información sobre los perfiles de certificado de System Center Configuration Manager y sus dependencias externas y dependencias dentro del producto."
+ms.custom: na
+ms.date: 10/06/2016
+ms.prod: configuration-manager
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+- configmgr-other
+ms.tgt_pltfrm: na
+ms.topic: get-started-article
+ms.assetid: 0317fd02-3721-4634-b18b-7c976a4e92bf
+caps.latest.revision: 9
+author: Nbigman
+ms.author: nbigman
+manager: angrobe
+translationtype: Human Translation
+ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
+ms.openlocfilehash: ba42385eb31fffd9f74b35108e71a1ae5a9c71f7
+
+
+---
+# <a name="prerequisites-for-certificate-profiles-in-system-center-configuration-manager"></a>Requisitos previos de perfiles de certificado en System Center Configuration Manager
+
+*Se aplica a: System Center Configuration Manager (rama actual)*
+
+
+Los perfiles de certificado de System Center Configuration Manager tienen dependencias externas y dependencias dentro del producto.  
+
+## <a name="dependencies-external-to-configuration-manager"></a>Dependencias externas a Configuration Manager  
+
+|Dependencia|Más información|  
+|----------------|----------------------|  
+|Una entidad de certificación (CA) emisora empresarial que ejecuta Servicios de certificados de Active Directory (AD CS).<br /><br /> Para revocar certificados, la cuenta de equipo del servidor de sitio en la parte superior de la jerarquía exige derechos de *Emitir y administrar certificados* para cada plantilla de certificado que utiliza un perfil de certificado en Configuration Manager. Como alternativa, conceda permisos de administrador de certificados para otorgar permisos en todas las plantillas de certificado utilizadas por esa entidad de certificación.<br /><br /> Se admiten las solicitudes de certificado de aprobación del administrador. Las plantillas de certificado que se usan para emitir certificados deben configurarse como **Proporcionado por el solicitante** para el sujeto del certificado a fin de que System Center Configuration Manager pueda suministrar este valor automáticamente.|Para más información sobre los Servicios de certificados de Active Directory, consulte la documentación de Windows Server.<br /><br /> Para Windows Server 2012: [Información general de Servicios de certificados de Active Directory](http://go.microsoft.com/fwlink/p/?LinkId=286744)<br /><br /> Para Windows Server 2008: [Servicios de certificados de Active Directory en Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)|  
+|Debe ejecutar el rol Servicio de inscripción de dispositivos de red para Servicios de certificados de Active Directory en Windows Server 2012 R2.<br /><br /> Además:<br /><br /> No se admiten números de puerto que no sean TCP 443 (para HTTPS) o TCP 80 (para HTTP) para la comunicación entre el cliente y el Servicio de inscripción de dispositivos de red.<br /><br /> El servidor que ejecuta el Servicio de inscripción de dispositivos de red debe estar en un servidor distinto al de la CA emisora.|System Center Configuration Manager se comunica con el Servicio de inscripción de dispositivos de red en Windows Server 2012 R2 para generar y comprobar las solicitudes del Protocolo de inscripción de certificados simple (SCEP).<br /><br /> Si se van a emitir certificados a usuarios o dispositivos que se conectan desde Internet, como dispositivos móviles administrados por Microsoft Intune, los dispositivos deben poder acceder al servidor que ejecuta el Servicio de inscripción de dispositivos de red desde Internet. Por ejemplo, puede instalar el servidor en una red perimetral (también conocida como subred filtrada, zona desmilitarizada o DMZ).<br /><br /> Si hay un firewall entre el servidor que ejecuta el Servicio de inscripción de dispositivos de red y la CA emisora, debe configurar el firewall para que permita el tráfico de comunicación (DCOM) entre los dos servidores. Este requisito de firewall también se aplica al servidor que ejecuta el servidor de sitio de System Center Configuration Manager y a la CA emisora, para que System Center Configuration Manager pueda revocar certificados.<br /><br /> Si el Servicio de inscripción de dispositivos de red se configura para requerir SSL (es un procedimiento de seguridad recomendado), asegúrese de que los dispositivos que se conectan puedan acceder a la lista de revocación de certificados (CRL) para validar el certificado del servidor.<br /><br /> Para obtener más información sobre el Servicio de inscripción de dispositivos de red en Windows Server 2012 R2, consulte [Using a Policy Module with the Network Device Enrollment Service (Utilitzación de un módulo de directivas con el Servicio de inscripción de dispositivos de red)](http://go.microsoft.com/fwlink/p/?LinkId=328657).|  
+|Si la CA emisora ejecuta Windows Server 2008 R2, el servidor requiere una revisión para las solicitudes de renovación de SCEP.|Si la revisión no está instalada en el equipo de la CA emisora, instálela. Para más información, vea el artículo [2483564: La solicitud de renovación de un certificado SCEP produce un error en Windows Server 2008 R2 si el certificado se administra mediante NDES](http://go.microsoft.com/fwlink/?LinkId=311945) en Microsoft Knowledge Base.|  
+|Un certificado de autenticación de cliente PKI y un certificado de CA raíz exportado.|Este certificado autentica el servidor que ejecuta el Servicio de inscripción de dispositivos de red en System Center Configuration Manager.<br /><br /> Para obtener más información, consulte [Requisitos de certificados PKI para System Center Configuration Manager](../../core/plan-design/network/pki-certificate-requirements.md).|  
+|Sistemas operativos admitidos de dispositivo.|Puede implementar perfiles de certificado en dispositivos que ejecutan los sistemas operativos iOS, Windows 8.1, Windows RT 8.1, Windows 10 y Android.|  
+
+## <a name="configuration-manager-dependencies"></a>Dependencias de Configuration Manager  
+
+|Dependencia|Más información|  
+|----------------|----------------------|  
+|Rol de sistema de sitio de punto de registro de certificado|Para poder usar perfiles de certificado, debe instalar el rol de sistema de sitio de punto de registro de certificado. Este rol se comunica con la base de datos de System Center Configuration Manager, con el servidor de sitio de System Center Configuration Manager y con el módulo de directivas de System Center Configuration Manager.<br /><br /> Para obtener más información sobre los requisitos del sistema para este rol de sistema de sitio y sobre dónde instalarlo en la jerarquía, consulte la sección **Site System Requirements** (Requisitos del sistema de sitio) en el tema [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md) (Configuraciones admitidas para System Center Configuration Manager).<br /><br /> Tenga en cuenta que el punto de registro de certificados no debe instalarse en el mismo servidor que ejecuta el Servicio de inscripción de dispositivos de red.|  
+|Módulo de directivas de System Center Configuration Manager que se instala en el servidor que ejecuta el servicio del rol Servicio de inscripción de dispositivos de red para Servicios de certificados de Active Directory|Para implementar perfiles de certificado, debe instalar el módulo de directivas de System Center Configuration Manager. Encontrará este módulo de directivas en el medio de instalación de System Center Configuration Manager.|  
+|Datos de detección|System Center Configuration Manager suministra los valores de nombre alternativo del sujeto y de sujeto de certificado, que se recuperan de la información que se recopila en la detección:<br /><br /> Para certificados de usuarios: detección de usuarios de Active Directory.<br /><br /> Para certificados de equipos: detección de sistemas de Active Directory y detección de redes|  
+|Permisos de seguridad para administrar perfiles de certificado|Debe tener los siguientes permisos de seguridad para administrar la configuración de acceso de recursos de empresa, como perfiles de certificado, perfiles de Wi-Fi y perfiles de VPN:<br /><br /> Para ver y administrar alertas e informes de perfiles de certificado: **Crear**, **Eliminar**, **Modificar**, **Modificar informe**, **Leer**y **Ejecutar informe** para el objeto **Alertas** .<br /><br /> Para crear y administrar perfiles de certificado: **Directiva de autor**, **Modificar informe**, **Leer** y **Ejecutar informe** para el objeto **Perfil de certificado** .<br /><br /> Para administrar implementaciones de perfiles de Wi-Fi, certificados y VPN: **Implementar directivas de configuración**, **Modificar alerta de estado de cliente**, **Leer**y **Leer recurso** para el objeto **Recopilación** .<br /><br /> Para administrar todas las directivas de configuración: **Crear**, **Eliminar**, **Modificar**, **Leer** y **Establecer ámbito de seguridad** para el objeto **Directiva de configuración** .<br /><br /> Para ejecutar consultas relacionadas con los perfiles de certificado: permiso **Leer** para el objeto **Consulta** .<br /><br /> Para consultar información de los perfiles de certificado en la consola de System Center Configuration Manager: permiso **Leer** para el objeto **Sitio**.<br /><br /> Para ver los mensajes de estado de los perfiles de certificado: permiso **Leer** para el objeto **Mensajes de estado** .<br /><br /> Para crear y administrar el perfil de certificado de la entidad de certificación de confianza: **Directiva de autor**, **Modificar informe**, **Leer** y **Ejecutar informe** para el objeto **Perfil de certificado de CA de confianza** .<br /><br /> Para crear y administrar perfiles de VPN: **Directiva de autor**, **Modificar informe**, **Leer** y **Ejecutar informe** para el objeto **Perfil de VPN** .<br /><br /> Para crear y administrar perfiles de Wi-Fi: **Directiva de autor**, **Modificar informe**, **Leer** y **Ejecutar informe** para el objeto **Perfil de Wi-Fi** .<br /><br /> El rol de seguridad **Administrador de acceso de recursos de la compañía** incluye estos permisos necesarios para administrar los perfiles de certificado en System Center Configuration Manager. Para obtener más información, consulte la sección **Configurar la administración basada en roles** del tema [Configurar la seguridad en System Center Configuration Manager](../../core/plan-design/security/configure-security.md).|  
+
+
+
+<!--HONumber=Nov16_HO1-->
+
+
