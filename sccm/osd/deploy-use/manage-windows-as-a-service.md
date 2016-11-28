@@ -219,7 +219,7 @@ Los planes de mantenimiento solo usan la clasificación de actualizaciones de so
 
  Cuando complete al asistente, se ejecutará el plan de mantenimiento. Este agregará las actualizaciones que cumplan los criterios especificados a un grupo de actualizaciones de software, descargará estas actualizaciones en la biblioteca de contenido del servidor de sitio, las distribuirá a los puntos de distribución configurados y, después, implementará el grupo de actualizaciones de software en clientes de la recopilación de destino.  
 
-##  <a name="a-namebkmkmodifyservicingplana-modify-a-servicing-plan"></a><a name="BKMK_ModifyServicingPlan"></a> Modificación de un plan de mantenimiento  
+##  <a name="a-namebkmkmodifyservicingplana-modify-a-servicing-plan"></a><a name="BKMK_ModifyServicingPlan"></a> Modificar un plan de mantenimiento  
  Después de crear un plan de mantenimiento básico desde el panel de mantenimiento de Windows 10 o si necesita cambiar la configuración de un plan de mantenimiento existente, puede hacerlo a través de las propiedades del plan de mantenimiento. Use el siguiente procedimiento para modificar las propiedades de un plan de mantenimiento.  
 
 #### <a name="to-modify-the-properties-of-a-servicing-plan"></a>Para modificar las propiedades de un plan de mantenimiento  
