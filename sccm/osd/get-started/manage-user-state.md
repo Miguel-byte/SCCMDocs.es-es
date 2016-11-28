@@ -37,7 +37,7 @@ Puede usar secuencias de tareas de System Center Configuration Manager para capt
  Use las secciones siguientes para obtener ayuda para la captura y la restauración de datos de usuario:
 
 
-##  <a name="a-namebkmkstoringuserdataa-store-user-state-data"></a><a name="BKMK_StoringUserData"></a> Almacenamiento de datos de estado de usuario  
+##  <a name="a-namebkmkstoringuserdataa-store-user-state-data"></a><a name="BKMK_StoringUserData"></a> Almacenar datos de estado de usuario  
  Al capturar el estado de usuario, puede almacenar los datos de estado de usuario en el equipo de destino o en un punto de migración de estado. Para almacenar el estado de usuario en un punto de migración de estado de usuario, debe usar un servidor de sistema de sitio de Configuration Manager que hospede el rol de sistema de sitio de punto de migración de estado. Para almacenar el estado de usuario en el equipo de destino, debe configurar la secuencia de tareas para almacenar los datos localmente mediante vínculos.  
 
 > [!NOTE]  
@@ -54,7 +54,7 @@ Puede usar secuencias de tareas de System Center Configuration Manager para capt
 
 -   Puede especificar vínculos físicos que pueden utilizarse para restaurar los datos del usuario a su ubicación original. En este escenario, los datos de estado de usuario permanecen en la unidad cuando se quita el sistema operativo antiguo. A continuación, una vez implementado el sistema operativo, la secuencia de tareas de **restauración** usa los vínculos físicos para restaurar los datos de estado de usuario a su ubicación original.  
 
-###  <a name="a-namebkmkuserdatasmpa-store-user-data-on-a-state-migration-point"></a><a name="BKMK_UserDataSMP"></a> Almacenamiento de datos de usuario en un punto de migración de estado  
+###  <a name="a-namebkmkuserdatasmpa-store-user-data-on-a-state-migration-point"></a><a name="BKMK_UserDataSMP"></a> Almacenar datos de usuario en un punto de migración de estado  
  Para almacenar los datos de estado de usuario en un punto de migración de estado, debe realizar lo siguiente:  
 
 1.  [Configure a state migration point](#BKMK_StateMigrationPoint) para almacenar los datos de estado de usuario.  
@@ -71,7 +71,7 @@ Puede usar secuencias de tareas de System Center Configuration Manager para capt
 
     -   [Liberar almacén de estado	](../understand/task-sequence-steps.md#BKMK_ReleaseStateStore) para notificar al punto de migración de estado que la acción de captura o restauración se completó.  
 
-###  <a name="a-namebkmkuserdatadestinationa-store-user-data-locally"></a><a name="BKMK_UserDataDestination"></a> Almacenamiento local de datos de usuario  
+###  <a name="a-namebkmkuserdatadestinationa-store-user-data-locally"></a><a name="BKMK_UserDataDestination"></a> Almacenar datos de usuario localmente  
  Para almacenar los datos de estado de usuario localmente, debe hacer lo siguiente:  
 
 -   [Cree una secuencia de tareas para capturar y restaurar el estado del usuario](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md). En concreto, debe agregar las siguientes etapas de secuencia de tareas para capturar los datos de usuario de un equipo y restaurarlos en un equipo mediante vínculos físicos:  
@@ -83,7 +83,7 @@ Puede usar secuencias de tareas de System Center Configuration Manager para capt
         > [!NOTE]  
         >  Los datos de estado de usuario que hacen referencia a los vínculos físicos permanecen en el equipo después de que la secuencia de tareas elimina el sistema operativo anterior. Se trata de los datos que se utilizan para restaurar el estado de usuario cuando se implementa el nuevo sistema operativo.  
 
-##  <a name="a-namebkmkstatemigrationpointa-configure-a-state-migration-point"></a><a name="BKMK_StateMigrationPoint"></a> Configuración de un punto de migración de estado  
+##  <a name="a-namebkmkstatemigrationpointa-configure-a-state-migration-point"></a><a name="BKMK_StateMigrationPoint"></a> Configure a state migration point  
  El punto de migración de estado almacena los datos de estado de usuario que se capturan en un equipo y se restauran en otro. Sin embargo, cuando se captura la configuración de usuario para la implementación de sistema operativo en el mismo equipo, como una implementación en la que se actualice el sistema operativo en el equipo de destino, puede almacenar los datos en el mismo equipo mediante vínculos físicos o en un punto de migración de estado. En algunas implementaciones, al crear el almacén de estado, Configuration Manager crea automáticamente una asociación entre el almacén de estado y el equipo de destino. Puede utilizar los métodos siguientes para configurar un punto de migración de estado para almacenar los datos de estado de usuario:  
 
 -   Use el **Asistente para crear servidor de sistema de sitio** para crear un nuevo servidor de sistema de sitio para el punto de migración de estado.  
@@ -104,7 +104,7 @@ Puede usar secuencias de tareas de System Center Configuration Manager para capt
 
  Para obtener más información sobre el punto de migración de estado y las etapas para configurarlo, consulte [State migration point](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints) (Punto de migración de estado).  
 
-##  <a name="a-namebkmkcomputerassociationa-create-a-computer-association"></a><a name="BKMK_ComputerAssociation"></a> Creación de una asociación de equipos  
+##  <a name="a-namebkmkcomputerassociationa-create-a-computer-association"></a><a name="BKMK_ComputerAssociation"></a> Create a computer association  
  Cree una asociación de equipos para definir una relación entre un equipo de origen y un equipo de destino cuando instale un sistema operativo en hardware nuevo y quiera capturar y restaurar la configuración de datos de usuario. El equipo de origen es un equipo existente administrado por Configuration Manager. Cuando se implementa el nuevo sistema operativo en el equipo de destino, el equipo de origen contiene el estado de usuario que se migra al equipo de destino.  
 
 > [!NOTE]  
@@ -128,7 +128,7 @@ Puede usar secuencias de tareas de System Center Configuration Manager para capt
 
     -   **Capturar y restaurar cuentas de usuario especificadas**: esta opción de configuración permite capturar y restaurar únicamente las cuentas que se especifiquen. No es posible crear varias asociaciones con el mismo equipo de origen cuando se selecciona esta opción.  
 
-##  <a name="a-namebkmkmigrationfailsa-restore-user-state-data-when-an-operating-system-deployment-fails"></a><a name="BKMK_MigrationFails"></a> Restauración de datos de estado de usuario si se produce un error de implementación de sistema operativo  
+##  <a name="a-namebkmkmigrationfailsa-restore-user-state-data-when-an-operating-system-deployment-fails"></a><a name="BKMK_MigrationFails"></a> Restaurar datos de estado de usuario si se produce un error de implementación de sistema operativo  
  Si se produce un error de implementación de sistema operativo, use la característica LoadState de USMT 10.0 para recuperar los datos de estado de usuario que se capturaron durante el proceso de implementación. Se incluyen los datos que se almacenan en un punto de migración de estado o los datos que se guardan localmente en el equipo de destino. Para obtener más información acerca de esta característica de USMT, consulte [Sintaxis de LoadState](https://technet.microsoft.com/library/mt299188\(v=vs.85\).aspx).  
 
 

@@ -20,9 +20,9 @@ ms.openlocfilehash: be845d9f6ad2f92a0235cdb7410654e229448e1b
 
 ---
 
-#  <a name="a-namebkmkmanualdeploya-manually-deploy-software-updates"></a><a name="BKMK_ManualDeploy"></a> Implementación manual de actualizaciones de software  
+#  <a name="a-namebkmkmanualdeploya-manually-deploy-software-updates"></a><a name="BKMK_ManualDeploy"></a> Implementar actualizaciones de software manualmente  
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
  Una implementación de actualizaciones de software manual es el proceso de selección de actualizaciones de software desde la consola de Configuration Manager e inicio manual del proceso de implementación. También, se pueden agregar actualizaciones de software seleccionadas a un grupo de actualización para, a continuación, implementar manualmente el grupo de actualización. La implementación manual se suele usar para actualizar los dispositivos cliente con las actualizaciones de software necesarias para, posteriormente, crear reglas de implementación automática (ADR) que administren las implementaciones de actualizaciones de software mensuales. También se utiliza un método manual para implementar actualizaciones de software fuera de banda. Si necesita ayuda para determinar qué método de implementación es el adecuado para usted, vea [Deploy software updates](deploy-software-updates.md) (Implementación de actualizaciones de software).
 
@@ -312,7 +312,7 @@ ms.openlocfilehash: be845d9f6ad2f92a0235cdb7410654e229448e1b
  Una vez completado el asistente, Configuration Manager descarga las actualizaciones de software en la biblioteca de contenido del servidor del sitio, distribuye las actualizaciones a los puntos de distribución configurados y, a continuación, implementa el grupo de actualizaciones de software en los clientes de la recopilación de destino. Para obtener más información sobre el proceso de implementación, consulte [Proceso de implementación de actualizaciones de software](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 
 ## <a name="next-steps"></a>Pasos siguientes
-[Monitor software updates](monitor-software-updates.md) (Supervisión de actualizaciones de software)
+[Supervisar actualizaciones de software](monitor-software-updates.md)
 
 
 
