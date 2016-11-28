@@ -115,7 +115,7 @@ Use secuencias de tareas de System Center Configuration Manager para instalar au
 
  Ahora puede implementar la secuencia de tareas en una recopilación de equipos.  Para obtener más información, vea [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
 
-##  <a name="a-namebkmkinstallexistingosimagetsexamplea-example-task-sequence-to-install-an-existing-operating-system-image"></a><a name="BKMK_InstallExistingOSImageTSExample"></a> Ejemplo de secuencia de tareas para instalar una imagen de sistema operativo existente  
+##  <a name="a-namebkmkinstallexistingosimagetsexamplea-example-task-sequence-to-install-an-existing-operating-system-image"></a><a name="BKMK_InstallExistingOSImageTSExample"></a> Ejemplo de secuencia de tareas para instalar la imagen de sistema operativo existente  
  Use la tabla siguiente como guía para crear una secuencia de tareas que implemente un sistema operativo mediante una imagen de sistema operativo existente. La tabla le ayudará a decidir la secuencia general de los pasos de la secuencia de tareas y cómo organizar y estructurar los pasos de la secuencia de tareas en grupos lógicos. La secuencia de tareas que cree puede variar desde este ejemplo y puede contener más o menos pasos de secuencia de tareas y grupos.  
 
 > [!IMPORTANT]  

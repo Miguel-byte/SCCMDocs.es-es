@@ -89,7 +89,7 @@ La administración de energía de System Center Configuration Manager le permite
 
 10. Haga clic en **Aceptar** para cerrar el cuadro de diálogo *<Nombre de la colección>\>***Configuración** y aplicar el plan de energía.  
 
-##  <a name="a-namebkmkplansa-available-power-management-plan-settings"></a><a name="BKMK_Plans"></a> Opciones de plan de administración de energía disponibles  
+##  <a name="a-namebkmkplansa-available-power-management-plan-settings"></a><a name="BKMK_Plans"></a> Available power management plan settings  
  En la tabla siguiente se muestran las opciones de administración de energía disponibles en Configuration Manager. Puede definir configuraciones diferentes para cuando el equipo está conectado o funciona con batería. Según la versión de Windows que use, puede que algunas opciones no sean configurables.  
 
 > [!NOTE]  

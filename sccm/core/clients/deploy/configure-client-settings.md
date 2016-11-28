@@ -29,7 +29,7 @@ Todas las opciones de cliente de System Center Configuration Manager se administ
 > [!NOTE]  
 >  También puede utilizar elementos de configuración a fin de administrar los clientes para evaluar, seguir y corregir la compatibilidad de la configuración de los dispositivos. Para más información, vea [Ensure device compliance with System Center Configuration Manager (Garantizar el cumplimiento de dispositivos con System Center Configuration Manager)](../../../compliance/understand/ensure-device-compliance.md).  
 
-##  <a name="a-namebkmkdefaultclientsettingsa-how-to-configure-the-default-client-settings"></a><a name="BKMK_DefaultClientSettings"></a> Cómo configurar las opciones predeterminadas del cliente  
+##  <a name="a-namebkmkdefaultclientsettingsa-how-to-configure-the-default-client-settings"></a><a name="BKMK_DefaultClientSettings"></a> Configurar las opciones predeterminadas del cliente  
 
  Utilice el siguiente procedimiento para configurar las opciones predeterminadas del cliente para todos los clientes de la jerarquía.  
 
@@ -47,7 +47,7 @@ Todas las opciones de cliente de System Center Configuration Manager se administ
 
  Los equipos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Initiate Policy Retrieval for a Configuration Manager Client (Iniciar la recuperación de directivas para un cliente de Configuration Manager)](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) en [How to manage clients in System Center Configuration Manager (Cómo administrar clientes en System Center Configuration Manager)](../../../core/clients/manage/manage-clients.md).  
 
-##  <a name="a-namebkmkcustomclientsettingsa-how-to-create-and-deploy-custom-client-settings"></a><a name="BKMK_CustomClientSettings"></a> Cómo crear e implementar la configuración de cliente predeterminada  
+##  <a name="a-namebkmkcustomclientsettingsa-how-to-create-and-deploy-custom-client-settings"></a><a name="BKMK_CustomClientSettings"></a> Crear e implementar la configuración de cliente predeterminada  
  Utilice el siguiente procedimiento para configurar e implementar la configuración personalizada para una recopilación seleccionada de usuarios o dispositivos. La implementación de esta configuración personalizada reemplaza la configuración de cliente personalizada.  
 
 > [!NOTE]  
@@ -81,7 +81,7 @@ Todas las opciones de cliente de System Center Configuration Manager se administ
 
  Los equipos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Initiate Policy Retrieval for a Configuration Manager Client (Iniciar la recuperación de directivas para un cliente de Configuration Manager)](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) en [How to manage clients in System Center Configuration Manager (Cómo administrar clientes en System Center Configuration Manager)](../../../core/clients/manage/manage-clients.md).  
 
-##  <a name="a-namebkmkresultantclientsettingsa-how-to-view-resultant-client-settings"></a><a name="BKMK_ResultantClientSettings"></a> Cómo visualizar la configuración de cliente resultante  
+##  <a name="a-namebkmkresultantclientsettingsa-how-to-view-resultant-client-settings"></a><a name="BKMK_ResultantClientSettings"></a> Visualizar la configuración de cliente resultante  
  Cuando se han implementado varias configuraciones de cliente en el mismo dispositivo, usuario o grupo de usuarios, el establecimiento de prioridades y la combinación de configuraciones pueden resultar complejos. Utilice el procedimiento siguiente para ver la configuración de cliente resultante calculada.  
 
 #### <a name="to-view-the-resultant-client-settings"></a>Para ver la configuración de cliente resultante  

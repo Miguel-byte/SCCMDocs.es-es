@@ -28,7 +28,7 @@ ms.openlocfilehash: 12ea958e18a291a1b88e342b204e633d3bdf869f
 
 Cuando use una secuencia de tareas para implementar un sistema operativo en un equipo en System Center Configuration Manager, el equipo instala la imagen de sistema operativo que especifique en la secuencia de tareas. Para personalizar la imagen de sistema operativo de modo que incluya ciertos controladores, aplicaciones, actualizaciones de software, etc., utilice una secuencia de tareas de generación y captura para generar un equipo de referencia y, a continuación, capturar la imagen del sistema operativo de ese equipo de referencia. Si ya tiene un equipo de referencia disponible para capturar, puede crear una secuencia de tareas personalizada para capturar el sistema operativo. Utilice las siguientes secciones para capturar un sistema operativo personalizado.  
 
-##  <a name="a-namebkmkbuildcapturetsa-use-a-task-sequence-to-build-and-capture-a-reference-computer"></a><a name="BKMK_BuildCaptureTS"></a> Usar una secuencia de tareas para compilar y capturar un equipo de referencia  
+##  <a name="a-namebkmkbuildcapturetsa-use-a-task-sequence-to-build-and-capture-a-reference-computer"></a><a name="BKMK_BuildCaptureTS"></a> Utilizar una secuencia de tareas para generar y capturar un equipo de referencia  
  La secuencia de tareas de compilación y captura particiona y aplica formato al equipo de referencia, instala el sistema operativo, así como el cliente de Configuration Manager, las aplicaciones y las actualizaciones de software y, luego, captura el sistema operativo del equipo de referencia. Los paquetes asociados a la secuencia de tareas, como las aplicaciones, deben estar disponibles en los puntos de distribución antes de crear la secuencia de tareas de generación y captura.  
 
 ###  <a name="a-namebkmkcreatepackagesa-prepare-for-operating-system-deployments"></a><a name="BKMK_CreatePackages"></a> Prepararse para la implementación de sistemas operativos  
@@ -48,7 +48,7 @@ Cuando use una secuencia de tareas para implementar un sistema operativo en un e
 
     -   Las [aplicaciones](../../apps/deploy-use/create-applications.md) deben agregarse a la consola de Configuration Manager.  
 
-###  <a name="a-namebkmkcreatebuildcapturetsa-create-a-build-and-capture-task-sequence"></a><a name="BKMK_CreateBuildCaptureTS"></a> Crear una secuencia de tareas de compilación y captura  
+###  <a name="a-namebkmkcreatebuildcapturetsa-create-a-build-and-capture-task-sequence"></a><a name="BKMK_CreateBuildCaptureTS"></a> Crear una secuencia de tareas de generación y captura  
  Utilice el siguiente procedimiento para usar una secuencia de tareas para generar un equipo de referencia y capturar el sistema operativo.  
 
 #### <a name="to-create-a-task-sequence-that-builds-and-captures-an-operating-system-image"></a>Para crear una secuencia de tareas que cree y capture una imagen de sistema operativo  
@@ -192,7 +192,7 @@ Cuando use una secuencia de tareas para implementar un sistema operativo en un e
 
 -   Si el equipo de referencia no es un cliente de Configuration Manager o si quiere ejecutar manualmente la secuencia de tareas en el equipo de referencia, ejecute el **Asistente para crear medio de secuencia de tareas** para crear un medio de arranque. Para más información sobre cómo crear un medio de arranque, vea [Create bootable media (Crear medios de arranque)](create-bootable-media.md).  
 
-##  <a name="a-namebkmkbuildandcapturetsexamplea-task-sequence-example-to-build-and-capture-an-operating-system-image"></a><a name="BKMK_BuildandCaptureTSExample"></a> Ejemplo de secuencia de tareas para compilar y capturar una imagen de sistema operativo  
+##  <a name="a-namebkmkbuildandcapturetsexamplea-task-sequence-example-to-build-and-capture-an-operating-system-image"></a><a name="BKMK_BuildandCaptureTSExample"></a> Ejemplo de secuencia de tareas para generar y capturar una imagen de sistema operativo  
  Utilice la tabla siguiente como guía para crear una secuencia de tareas que genere y capture una imagen de sistema operativo. La tabla le ayudará a decidir la secuencia general de los pasos de la secuencia de tareas y cómo organizar y estructurar los pasos de la secuencia de tareas en grupos lógicos. La secuencia de tareas que cree puede ser diferente a la de este ejemplo y puede contener más o menos pasos y grupos de secuencias de tareas.  
 
 > [!IMPORTANT]  

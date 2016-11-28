@@ -54,7 +54,7 @@ Este tema contiene información sobre la seguridad y privacidad del control remo
 
      No se envían mensajes de auditoría si se copian los archivos binarios para el control remoto en lugar de instalar la consola de Configuration Manager y, luego, ejecutar el control remoto en el símbolo del sistema.  
 
-##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-remote-control"></a><a name="BKMK_Privacy_HardwareInventory"></a> Información de privacidad del control remoto  
+##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-remote-control"></a><a name="BKMK_Privacy_HardwareInventory"></a> Información de privacidad para el control remoto  
  El control remoto le permite ver las sesiones activas en los equipos cliente de Configuration Manager y le ofrece la posibilidad de consultar toda la información almacenada en estos equipos. De forma predeterminada, no está habilitado el control remoto.  
 
  Aunque puede configurar el control remoto para proporcionar un aviso notorio y obtener el consentimiento de un usuario antes de iniciar una sesión de control remoto, también puede supervisar a los usuarios sin su permiso o conocimiento. Puede configurar el nivel de acceso como solo vista para que no se pueda cambiar nada en el control remoto o como control total. La cuenta del administrador de conexión se muestra en la sesión de control remoto, para ayudar a los usuarios a identificar quién se conecta a su equipo.  

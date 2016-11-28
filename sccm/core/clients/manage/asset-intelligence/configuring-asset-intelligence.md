@@ -45,7 +45,7 @@ Para usar Asset Intelligence en System Center Configuration Manager con el fin d
 ## <a name="supplemental-procedures-for-configuring-asset-intelligence"></a>Procedimientos adicionales para la configuración de Asset Intelligence  
  Utilice la información siguiente en los pasos de la tabla anterior.  
 
-###  <a name="a-namebkmkenableassetintelligencea-enable-asset-intelligence-hardware-inventory-reporting-classes"></a><a name="BKMK_EnableAssetIntelligence"></a> Habilitar las clases de informes de inventario de hardware de Asset Intelligence  
+###  <a name="a-namebkmkenableassetintelligencea-enable-asset-intelligence-hardware-inventory-reporting-classes"></a><a name="BKMK_EnableAssetIntelligence"></a> Enable Asset Intelligence hardware inventory reporting classes  
  Para habilitar Asset Intelligence en sitios de Configuration Manager, debe habilitar una o varias clases de informes de inventario de hardware de Asset Intelligence. Puede habilitar las clases en la página principal de **Asset Intelligence** , o bien en el área de trabajo **Administración** , en el nodo **Configuración de cliente** , en las propiedades de configuración de cliente. Utilice uno de los procedimientos siguientes para habilitar las clases de informes de inventario de hardware de Asset Intelligence.  
 
 ##### <a name="to-enable-asset-intelligence-hardware-inventory-reporting-classes-from-the-asset-intelligence-home-page"></a>Cómo habilitar las clases de informes de inventario de hardware de Asset Intelligence desde la página principal de Asset Intelligence  
@@ -85,7 +85,7 @@ Para usar Asset Intelligence en System Center Configuration Manager con el fin d
 
 7.  Haga clic en **Aceptar** para habilitar las clases de informes de inventario de hardware de Asset Intelligence seleccionadas.  
 
-###  <a name="a-namebkmkinstallassetintelligencesynchronizationpointa-install-an-asset-intelligence-synchronization-point"></a><a name="BKMK_InstallAssetIntelligenceSynchronizationPoint"></a> Instalar un punto de sincronización de Asset Intelligence  
+###  <a name="a-namebkmkinstallassetintelligencesynchronizationpointa-install-an-asset-intelligence-synchronization-point"></a><a name="BKMK_InstallAssetIntelligenceSynchronizationPoint"></a> Install an Asset Intelligence Synchronization Point  
  Utilice el siguiente procedimiento para instalar un rol de sistema de sitio de punto de sincronización de Asset Intelligence.  
 
 ##### <a name="to-install-an-asset-intelligence-synchronization-point-site-system-role"></a>Cómo instalar un rol de sistema de sitio de punto de sincronización de Asset Intelligence  
@@ -124,7 +124,7 @@ Para usar Asset Intelligence en System Center Configuration Manager con el fin d
 
 10. En la página **Resumen** del Asistente de nuevo rol de sitio, revise la configuración especificada para asegurarse de que es correcta antes de continuar. Para realizar cambios en cualquier configuración, haga clic en **Anterior** hasta que regrese a la página adecuada, realice los cambios y vuelva a la página **Resumen** .  
 
-###  <a name="a-namebkmkenablesuccesslogoneventsa-enable-auditing-of-success-logon-events"></a><a name="BKMK_EnableSuccessLogonEvents"></a> Habilitar la auditoría de eventos de inicio de sesión correctos  
+###  <a name="a-namebkmkenablesuccesslogoneventsa-enable-auditing-of-success-logon-events"></a><a name="BKMK_EnableSuccessLogonEvents"></a> Enable auditing of success logon events  
  Utilice el procedimiento siguiente para configurar la configuración de inicio de sesión de la directiva de seguridad de equipo a fin de habilitar la auditoría de eventos de inicio de sesión correctos.  
 
 ##### <a name="to-enable-success-logon-event-logging-by-using-a-local-security-policy"></a>Cómo habilitar el registro de eventos de inicio de sesión correctos mediante una directiva de seguridad local  
@@ -143,7 +143,7 @@ Para usar Asset Intelligence en System Center Configuration Manager con el fin d
 
 3.  En el panel de resultados, haga doble clic en **Auditar eventos de inicio de sesión**, asegúrese de que la casilla **Correcto** está seleccionada y luego haga clic en **Aceptar**.  
 
-###  <a name="a-namebkmkimportsoftwarelicenseinformationa-import-software-license-information"></a><a name="BKMK_ImportSoftwareLicenseInformation"></a> Importar información de licencia de software  
+###  <a name="a-namebkmkimportsoftwarelicenseinformationa-import-software-license-information"></a><a name="BKMK_ImportSoftwareLicenseInformation"></a> Import software license information  
  En las secciones siguientes se explican los procedimientos necesarios para importar información de licencias de software general y de Microsoft en la base de datos de sitio de Configuration Manager mediante el Asistente para importar licencias de software. Cuando se importa información de licencia de software en la base de datos del sitio a partir de archivos de declaración de licencias, la cuenta de equipo del servidor de sitio requiere permisos de **Control total** del sistema de archivos NTFS del recurso compartido de archivos que se usa para importar información de licencia de software.  
 
 > [!IMPORTANT]  
@@ -169,7 +169,7 @@ Para usar Asset Intelligence en System Center Configuration Manager con el fin d
 
 6.  En la página **Resumen** , revise la información que ha especificado para asegurarse de que es correcta antes de continuar. Para realizar cambios, haga clic en **Anterior** para volver a la página **Importar** .  
 
-###  <a name="a-namebkmkcreategenerallicensestatementa-create-a-general-license-statement-information-file-for-import"></a><a name="BKMK_CreateGeneralLicenseStatement"></a> Crear un archivo de información de declaración de licencia general para importación  
+###  <a name="a-namebkmkcreategenerallicensestatementa-create-a-general-license-statement-information-file-for-import"></a><a name="BKMK_CreateGeneralLicenseStatement"></a> Create a general license statement information file for import  
  Una declaración de licencia general también se puede importar en el catálogo Asset Intelligence mediante un archivo de importación de licencia creado manualmente con un formato de archivo delimitado por comas (.csv).  
 
 > [!NOTE]  
@@ -226,7 +226,7 @@ Para usar Asset Intelligence en System Center Configuration Manager con el fin d
 |SupportExpirationDate|Valor de fecha en el siguiente formato: MM/DD/AAAA|No|Fecha de finalización del soporte técnico adquirido|  
 |Comentarios|Hasta 255 caracteres|No|Comentarios opcionales|  
 
-###  <a name="a-namebkmkconfiguremaintenancetasksa-configure-asset-intelligence-maintenance-tasks"></a><a name="BKMK_ConfigureMaintenanceTasks"></a> Configurar tareas de mantenimiento de Asset Intelligence  
+###  <a name="a-namebkmkconfiguremaintenancetasksa-configure-asset-intelligence-maintenance-tasks"></a><a name="BKMK_ConfigureMaintenanceTasks"></a> Configure Asset Intelligence maintenance tasks  
  Las tareas de mantenimiento siguientes están disponibles para Asset Intelligence.  
 
 -   **Comprobar título de la aplicación con información de inventario**: esta tarea de mantenimiento comprueba que el título de software notificado en el inventario de software sea conforme con el título de software del catálogo Asset Intelligence. De forma predeterminada, esta tarea está habilitada y programada para ejecutarse el sábado después de las 12:00 a. m. y antes de las 5:00 a. m. Esta tarea de mantenimiento solo está disponible en el sitio de nivel superior de la jerarquía de Configuration Manager.  

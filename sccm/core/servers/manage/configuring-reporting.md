@@ -31,7 +31,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
 -   [Introduction to reporting in System Center Configuration Manager (Introducción a la generación de informes en System Center Configuration Manager)](../../../core/servers/manage/introduction-to-reporting.md)  
 
--   [Planning for reporting in System Center Configuration Manager (Planeación de la generación de informes en System Center Configuration Manager)](../../../core/servers/manage/planning-for-reporting.md)  
+-   [Planeación de informes en System Center Configuration Manager](../../../core/servers/manage/planning-for-reporting.md)  
 
 ##  <a name="a-namebkmksqlreportingservicesa-sql-server-reporting-services"></a><a name="BKMK_SQLReportingServices"></a> SQL Server Reporting Services  
  SQL Server Reporting Services es una plataforma de informes basada en servidor que proporciona exhaustivas funciones de informes para una amplia variedad de orígenes de datos. El punto de servicios de informes de Configuration Manager se comunica con SQL Server Reporting Services para copiar informes de Configuration Manager en una carpeta de informes especificada, para configurar Reporting Services y la seguridad de Reporting Services. Reporting Services se conecta con la base de datos del sitio de Configuration Manager para recuperar datos que se devuelven cuando se ejecutan informes.  
@@ -59,7 +59,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
 7.  Haga clic en **Salir** para cerrar el Administrador de configuración de Reporting Services.  
 
-##  <a name="a-namebkmkreportbuilder3a-configure-reporting-to-use-report-builder-30"></a><a name="BKMK_ReportBuilder3"></a> Configurar la generación de informes para usar Generador de informes 3.0  
+##  <a name="a-namebkmkreportbuilder3a-configure-reporting-to-use-report-builder-30"></a><a name="BKMK_ReportBuilder3"></a> Configuración de informes para usar el Generador de informes 3.0  
 
 #### <a name="to-change-the-report-builder-manifest-name-to-report-builder-30"></a>Para cambiar el nombre de manifiesto de Report Builder a Report Builder 3.0  
 
@@ -179,7 +179,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
 -   **Administradores de informes de Configuration Manager**: los usuarios a los que se les asigna este rol de seguridad pueden realizar todas las tareas relacionadas con la generación de informes en Configuration Manager.  
 
-##  <a name="a-namebkmkverifyreportingservicespointinstallationa-verify-the-reporting-services-point-installation"></a><a name="BKMK_VerifyReportingServicesPointInstallation"></a> Comprobar la instalación del punto de servicios de informes  
+##  <a name="a-namebkmkverifyreportingservicespointinstallationa-verify-the-reporting-services-point-installation"></a><a name="BKMK_VerifyReportingServicesPointInstallation"></a> Comprobación de la instalación del punto de Reporting Services  
  Tras agregar el rol de sitio de punto de servicios de informes, puede comprobar la instalación mediante la visualización de entradas del archivo de registro y mensajes de estado específicos. Utilice el siguiente procedimiento para comprobar que la instalación del punto de servicios de informes se realizó correctamente.  
 
 > [!WARNING]  
@@ -203,7 +203,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
 7.  Abra Srsrp.log y lea el archivo de registro a partir de la hora en la que se instaló correctamente el punto de servicios de informes. Compruebe que se crearon las carpetas de informes, se implementaron los informes, y se confirmó la directiva de seguridad en todas las carpetas. Busque **Se comprobó correctamente que el servicio SRS es correcto en el servidor** después de la última línea de las confirmaciones de la directiva de seguridad.  
 
-##  <a name="a-namebkmkcertificatea-configure-a-self-signed-certificate-for-configuration-manager-console-computers"></a><a name="BKMK_Certificate"></a> Configurar un certificado autofirmado para los equipos de la consola de Configuration Manager  
+##  <a name="a-namebkmkcertificatea-configure-a-self-signed-certificate-for-configuration-manager-console-computers"></a><a name="BKMK_Certificate"></a> Configuración de un certificado autofirmado para los equipos de la consola de Configuration Manager  
  Existen muchas opciones para crear informes de SQL Server Reporting Services. Cuando se crean o editan informes en la consola de Configuration Manager, Configuration Manager abre el Generador de informes para usarlo como entorno de creación. Independientemente de cómo cree los informes de Configuration Manager, un certificado autofirmado es necesario para la autenticación del servidor en el servidor de base de datos del sitio. Configuration Manager instala automáticamente el certificado en el servidor de sitio y los equipos con el proveedor de SMS instalado. Por lo tanto, puede crear o modificar informes desde la consola de Configuration Manager cuando esta se ejecuta desde uno de estos equipos. Pero cuando sea crean o modifican informes desde una consola de Configuration Manager que está instalada en un equipo distinto, debe exportar el certificado del servidor del sitio y, luego, agregarlo al almacén de certificados **Personas de confianza** en el equipo que ejecuta la consola de Configuration Manager.  
 
 > [!NOTE]  
@@ -243,7 +243,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
     5.  Haga clic en **Finalizar** para cerrar el asistente y finalizar la configuración del certificado en el equipo.  
 
-##  <a name="a-namebkmkmodifyreportingservicespointa-modify-reporting-services-point-settings"></a><a name="BKMK_ModifyReportingServicesPoint"></a> Modificar la configuración del punto de servicios de informes  
+##  <a name="a-namebkmkmodifyreportingservicespointa-modify-reporting-services-point-settings"></a><a name="BKMK_ModifyReportingServicesPoint"></a> Modificación de la configuración del punto de servicios de informes  
  Una vez instalado el punto de servicios de informes, puede modificar la conexión de base de datos del sitio y la configuración de autenticación en las propiedades del punto de servicios de informes. Utilice el siguiente procedimiento para modificar la configuración del punto de servicios de informes.  
 
 #### <a name="to-modify-reporting-services-point-settings"></a>Para modificar la configuración del punto de servicios de informes  
@@ -280,7 +280,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 ## <a name="upgrading-sql-server"></a>Actualización de SQL Server  
  Tras actualizar SQL Server, y el servicio SQL Server Reporting Services que se usa como el origen de datos de un punto de servicios de informes, podría experimentar errores al ejecutar o editar informes desde la consola de Configuration Manager. Para que la generación de informes funcione correctamente en la consola de Configuration Manager, debe eliminar el rol de sistema de sitio de punto de servicios de informes para el sitio y volver a instalarlo. Sin embargo, tras la actualización puede continuar con la ejecución y edición de informes desde un explorador de Internet.  
 
-##  <a name="a-namebkmkconfigurereportoptionsa-configure-report-options"></a><a name="BKMK_ConfigureReportOptions"></a> Configurar opciones de informes  
+##  <a name="a-namebkmkconfigurereportoptionsa-configure-report-options"></a><a name="BKMK_ConfigureReportOptions"></a> Configuración de las opciones de informes  
  Use las opciones de informes de un sitio de Configuration Manager para seleccionar el punto de servicios de informes predeterminado que se usa para administrar los informes. Aunque puede haber más de un punto de servicios de informes en un sitio, solo el servidor de informes predeterminado seleccionado en Opciones de informes se utiliza para administrar los informes. Utilice el siguiente procedimiento para configurar las opciones de informes para su sitio.  
 
 #### <a name="to-configure-report-options"></a>Para configurar las opciones de informes  

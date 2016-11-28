@@ -31,7 +31,7 @@ Este tema contiene información sobre seguridad y privacidad de la administraci�
 
 -   [Seguridad y privacidad de las actualizaciones de software en System Center Configuration Manager](/sccm/sum/plan-design/security-and-privacy-for-software-updates)  
 
--   [Seguridad y privacidad para implementación de sistemas operativos en System Center Configuration Manager](../../../osd/plan-design/security-and-privacy-for-operating-system-deployment.md)  
+-   [Seguridad y privacidad para implementación de sistema operativo en System Center Configuration Manager](../../../osd/plan-design/security-and-privacy-for-operating-system-deployment.md)  
 
 ##  <a name="a-namebkmksecuritycontentmanagementa-security-best-practices-for-content-management"></a><a name="BKMK_Security_ContentManagement"></a> Prácticas recomendadas de seguridad para la administración de contenido  
  Utilice las siguientes prácticas recomendadas de seguridad para la administración de contenido:  

@@ -58,7 +58,7 @@ System Center Configuration Manager ofrece diferentes soluciones para la adminis
 
  Puede usar las soluciones de administración de dispositivos por sí solas o en combinación con otras. Por ejemplo, puede usar el enfoque de administración basada en cliente para la administración de los equipos y los servidores de la organización y, además, usar la administración basada en Intune para los dispositivos móviles. Al combinar los enfoques de esta manera, puede cubrir todas las necesidades de administración del dispositivo y controlarlo todo desde la consola de Configuration Manager.  
 
-##  <a name="a-namebkmkcomp1a-compare-device-management-solutions-based-on-supported-mobile-device-platforms"></a><a name="bkmk_comp1"></a> Comparar soluciones de administración de dispositivos según las plataformas de dispositivos móviles compatibles  
+##  <a name="a-namebkmkcomp1a-compare-device-management-solutions-based-on-supported-mobile-device-platforms"></a><a name="bkmk_comp1"></a> Comparar soluciones de administración de dispositivos basadas en plataformas de dispositivos móviles compatibles  
 
 |Plataforma|Con el cliente de Configuration Manager|Configuration Manager con Microsoft Intune (híbrida)|Administración local de dispositivos móviles|Configuration Manager con Exchange|  
 |--------------|-------------------------------------------|-------------------------------------------------------------------|-------------------------------|-----------------------------------------|  
@@ -76,7 +76,7 @@ System Center Configuration Manager ofrece diferentes soluciones para la adminis
 
  Para obtener una lista completa de las plataformas compatibles, vea [Supported operating systems for clients and devices for System Center Configuration Manager (Sistemas operativos compatibles con clientes y dispositivos para System Center Configuration Manager)](configs\supported-operating-systems-for-clients-and-devices.md).
 
-##  <a name="a-namebkmkcomp2a-compare-mobile-device-management-solutions-based-on-management-functionality"></a><a name="bkmk_comp2"></a> Comparar soluciones de administración de dispositivos móviles según la funcionalidad de administración  
+##  <a name="a-namebkmkcomp2a-compare-mobile-device-management-solutions-based-on-management-functionality"></a><a name="bkmk_comp2"></a> Comparar soluciones de administración de dispositivos móviles basadas en la funcionalidad de administración  
 
 |Funcionalidad de administración|Con el cliente de Configuration Manager|Configuration Manager con Microsoft Intune (híbrida)|Administración local de dispositivos móviles|Configuration Manager con Exchange|  
 |------------------------------|-------------------------------------------|-------------------------------------------------------------------|-------------------------------|-----------------------------------------|  

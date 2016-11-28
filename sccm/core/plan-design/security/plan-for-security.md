@@ -31,7 +31,7 @@ Use la información de este tema para ayudarle a planear la seguridad en System 
    Para obtener información adicional sobre Cómo Configuration Manager usa los certificados y los controles criptográficos, consulte [Referencia técnica de controles criptográficos de System Center Configuration Manager](../../../protect/deploy-use/cryptographic-controls-technical-reference.md).  
 
 
-##  <a name="a-namebkmkplanningforcertificatesa-planning-for-certificates-self-signed-and-pki"></a><a name="BKMK_PlanningForCertificates"></a> Planeamiento de certificados (autofirmados y PKI)  
+##  <a name="a-namebkmkplanningforcertificatesa-planning-for-certificates-self-signed-and-pki"></a><a name="BKMK_PlanningForCertificates"></a> Planificación de certificados (autofirmados y PKI)  
  Configuration Manager usa una combinación de certificados autofirmados y certificados de infraestructura de clave pública (PKI).  
 
  Por motivos de seguridad, se recomienda utilizar certificados PKI siempre que sea posible. Para obtener más información sobre los requisitos de certificados PKI, consulte [Requisitos de certificados PKI para System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md). Cuando Configuration Manager solicita los certificados PKI, como por ejemplo durante la inscripción de dispositivos móviles y el aprovisionamiento de AMT, debe usar Servicios de dominio de Active Directory y una entidad de certificación empresarial. En todos los demás casos, los certificados PKI se deben implementar y administrar independientemente de Configuration Manager.  
@@ -67,7 +67,7 @@ Utilice el siguiente procedimiento para instalar clientes junto con una copia de
 
 3.  Instale el cliente mediante el uso de la propiedad de Client.msi **SMSSIGNCERT=***&lt;ruta completa y nombre de archivo\>* con CCMSetup.exe.  
 
-###  <a name="a-namebkmkplanningforcrlsa-planning-for-pki-certificate-revocation"></a><a name="BKMK_PlanningForCRLs"></a> Planeamiento de la revocación de certificados PKI  
+###  <a name="a-namebkmkplanningforcrlsa-planning-for-pki-certificate-revocation"></a><a name="BKMK_PlanningForCRLs"></a> Planificación de la revocación de certificados PKI  
 Cuando use certificados PKI con Configuration Manager, planifique si y cómo los clientes y servidores usarán una lista de revocación de certificados (CRL) para comprobar el certificado en el equipo que se conecta. La lista de revocación de certificados (CRL) es un archivo creado y firmado por una entidad de certificación (CA) que contiene una lista de certificados emitidos y revocados. Los certificados pueden ser revocados por un administrador de CA, por ejemplo, si se sabe o se sospecha que un certificado emitido está comprometido.  
 
 > [!IMPORTANT]  
@@ -85,7 +85,7 @@ Consulte con los administradores de PKI antes de decidir si los clientes de Conf
 
 -   La necesidad de comprobar la CRL para cada conexión a un sistema de sitio configurado para el uso de un certificado PKI tiene mayor importancia que la necesidad de conexiones más rápidas y un procesamiento eficaz en el cliente, y tiene asimismo mayor importancia que el riesgo de que los clientes no se puedan conectar a los servidores si no pueden encontrar la CRL.  
 
-###  <a name="a-namebkmkplanningforrootcasa-planning-for-the-pki-trusted-root-certificates-and-the-certificate-issuers-list"></a><a name="BKMK_PlanningForRootCAs"></a> Planeamiento de los certificados raíz de confianza PKI y la lista de emisores de certificados  
+###  <a name="a-namebkmkplanningforrootcasa-planning-for-the-pki-trusted-root-certificates-and-the-certificate-issuers-list"></a><a name="BKMK_PlanningForRootCAs"></a> Planificación de los certificados raíz de confianza PKI y la lista de emisores de certificados  
 Si los sistemas de sitio de IIS utilizan certificados de cliente PKI para la autenticación de cliente a través de HTTP o para la autenticación de cliente y el cifrado a través de HTTPS, podría ser necesario importar los certificados CA raíz como una propiedad de sitio. Los dos escenarios son los siguientes:  
 
 -   Se implementan los sistemas operativos mediante el uso de Configuration Manager y los puntos de administración solo aceptan conexiones de cliente HTTPS.  
@@ -107,7 +107,7 @@ Estos certificados de CA raíz importados y el certificado de CA raíz de cada p
 
 Independientemente de la configuración del sitio, también podría tener que importar un certificado de CA raíz al inscribir dispositivos móviles o equipos Mac y al realizar el aprovisionamiento de equipos basados en Intel AMT para redes inalámbricas.  
 
-###  <a name="a-namebkmkplanningforclientcertificateselectiona-planning-for-pki-client-certificate-selection"></a><a name="BKMK_PlanningForClientCertificateSelection"></a> Planeamiento de la selección de certificados de cliente PKI  
+###  <a name="a-namebkmkplanningforclientcertificateselectiona-planning-for-pki-client-certificate-selection"></a><a name="BKMK_PlanningForClientCertificateSelection"></a> Planning for PKI client certificate selection  
  Si los sistemas de sitio de IIS usan certificados de cliente PKI para la autenticación de cliente a través de HTTP o para la autenticación de cliente y el cifrado a través de HTTPS, planifique cómo seleccionarán los clientes basados en Windows el certificado que se debe usar para Configuration Manager.  
 
 > [!NOTE]  
@@ -181,7 +181,7 @@ Para facilitar la identificación de un certificado de cliente PKI exclusivo, ta
 
 Para obtener más información sobre cómo configurar las opciones de los certificados de cliente, consulte la sección [Configurar certificados PKI de cliente](../../../core/plan-design/security/configure-security.md#BKMK_ConfigureClientPKI) en el tema [Configurar la seguridad en System Center Configuration Manager](../../../core/plan-design/security/configure-security.md).  
 
-###  <a name="a-namebkmkplanningforpkitransitiona-planning-a-transition-strategy-for-pki-certificates-and-internet-based-client-management"></a><a name="BKMK_PlanningForPKITransition"></a> Planeamiento de una estrategia de transición para certificados PKI y administración de cliente basada en Internet  
+###  <a name="a-namebkmkplanningforpkitransitiona-planning-a-transition-strategy-for-pki-certificates-and-internet-based-client-management"></a><a name="BKMK_PlanningForPKITransition"></a> Planeación de una estrategia de transición para certificados PKI y administración de cliente basada en Internet  
 Las opciones de configuración flexible de Configuration Manager permiten llevar a cabo una transición gradual en los clientes y el sitio hacia el uso de los certificados PKI para proteger los extremos de cliente. Los certificados PKI proporcionan mayor seguridad y permiten administrar los clientes cuando están en Internet.  
 
 Debido al número de opciones de configuración de Configuration Manager, no existe una única manera de llevar a cabo la transición de un sitio para que todos los clientes usen conexiones HTTPS. Sin embargo, puede seguir estos pasos como guía:  
@@ -229,7 +229,7 @@ Debido al número de opciones de configuración de Configuration Manager, no exi
 
  Si sigue este plan para introducir gradualmente los certificados PKI, primero para la autenticación solo a través de HTTP y luego para la autenticación y el cifrado a través de HTTPS, se reducirá el riesgo de que los clientes dejen de estar administrados. Además, se beneficiará de la máxima seguridad que Configuration Manager admite.  
 
-##  <a name="a-namebkmkplanningforrtka-planning-for-the-trusted-root-key"></a><a name="BKMK_PlanningForRTK"></a> Planeamiento de la clave raíz confiable  
+##  <a name="a-namebkmkplanningforrtka-planning-for-the-trusted-root-key"></a><a name="BKMK_PlanningForRTK"></a> Planeación de la clave raíz confiable  
 La clave raíz confiable de Configuration Manager permite que los clientes de Configuration Manager comprueben que los sistemas de sitio pertenecen a su jerarquía. Cada servidor de sitio genera una clave de intercambio de sitio para comunicarse con otros sitios. La clave de intercambio de sitio del sitio de nivel superior de la jerarquía se denomina clave raíz confiable.  
 
 La función de la clave raíz confiable en Configuration Manager es similar a la de un certificado raíz en una infraestructura de clave pública, ya que cualquier elemento firmado por la clave privada de la clave raíz confiable se considerará confiable en los niveles inferiores de la jerarquía. Por ejemplo, al firmar el certificado de punto de administración con la clave privada del par de claves raíz confiables, y al poner a disposición de los clientes una copia de la clave pública del par de claves raíz confiables, los clientes pueden distinguir entre los puntos de administración que están en su jerarquía y los puntos de administración que no están en su jerarquía. Los clientes utilizan WMI para almacenar una copia de la clave raíz confiable en el espacio de nombres **root\ccm\locationservices**.  
@@ -301,7 +301,7 @@ Puede quitar la clave raíz confiable de un cliente mediante la propiedad de Cli
 
 9. En el cuadro de diálogo **Editor de objetos de TrustedRootKey=@**, en la sección **Propiedades**, desplácese hacia abajo hasta **TrustedRootKey CIM_STRING**. La cadena de la columna de la derecha es la clave raíz confiable. Compruebe que coincide con el valor de **SMSPublicRootKey** del archivo *&lt;directorio de Configuration Manager\>***\bin\mobileclient.tcf**.  
 
-##  <a name="a-namebkmkplanningforsigningencryptiona-planning-for-signing-and-encryption"></a><a name="BKMK_PlanningForSigningEncryption"></a> Planeamiento de la firma y el cifrado  
+##  <a name="a-namebkmkplanningforsigningencryptiona-planning-for-signing-and-encryption"></a><a name="BKMK_PlanningForSigningEncryption"></a> Planeación de la firma y el cifrado  
  Cuando se utilizan certificados PKI para todas las comunicaciones de cliente, no es necesario planear la firma y el cifrado para proteger la comunicación de datos de cliente. Sin embargo, si configura sistemas de sitio que ejecutan IIS para permitir las conexiones de cliente HTTP, debe decidir cómo proteger la comunicación de cliente del sitio.  
 
  Para proteger los datos que los clientes envían a los puntos de administración, puede requerir la firma de los datos. Además, puede requerir que todos los datos firmados de los clientes que utilizan HTTP se firmen mediante el algoritmo SHA-256. Aunque se trata de una configuración más segura, no habilite esta opción a menos que todos los clientes admitan SHA-256. Muchos sistemas operativos admiten de forma nativa SHA-256, pero los sistemas operativos anteriores pueden necesitar una actualización o revisión. Por ejemplo, los equipos que ejecutan Windows Server 2003 SP2 deben instalar una revisión a la que se hace referencia en el [artículo de Knowledge Base 938397](http://go.microsoft.com/fwlink/p/?LinkId=226666).  
@@ -310,7 +310,7 @@ Puede quitar la clave raíz confiable de un cliente mediante la propiedad de Cli
 
  Para obtener más información sobre cómo configurar las opciones de firma y cifrado, consulte la sección [Configurar la firma y el cifrado](../../../core/plan-design/security/configure-security.md#BKMK_ConfigureSigningEncryption) en el tema [Configurar la seguridad en System Center Configuration Manager](../../../core/plan-design/security/configure-security.md).  
 
-##  <a name="a-namebkmkplanningforrbaa-planning-for-role-based-administration"></a><a name="BKMK_PlanningForRBA"></a> Planeamiento de la administración basada en roles  
+##  <a name="a-namebkmkplanningforrbaa-planning-for-role-based-administration"></a><a name="BKMK_PlanningForRBA"></a> Planificación de la administración basada en roles  
  Para obtener esta información, consulte [Fundamentals of role-based administration for System Center Configuration Manager (Aspectos básicos de la administración basada en roles para System Center Configuration Manager)](../../../core/understand/fundamentals-of-role-based-administration.md).  
 
 

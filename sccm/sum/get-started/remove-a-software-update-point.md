@@ -19,7 +19,7 @@ ms.openlocfilehash: e95e3fc2aafde2d947f08d32e2b2130a313e7328
 
 
 ---
-#  <a name="a-namebkmkremovesupa-remove-the-software-update-point-site-system-role"></a><a name="BKMK_RemoveSUP"></a> Quitar el rol de sistema de sitio del punto de actualización de software  
+#  <a name="a-namebkmkremovesupa-remove-the-software-update-point-site-system-role"></a><a name="BKMK_RemoveSUP"></a> Quitar el rol de sistema de sitio de punto de actualización de software  
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 

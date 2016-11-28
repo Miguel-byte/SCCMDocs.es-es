@@ -101,13 +101,13 @@ Los siguientes vínculos llevan a las secciones correspondientes del tema [Confi
 
 -   [Create custom security roles (Crear roles de seguridad personalizados)](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole)  
 
--   [Configure security roles (Configurar roles de seguridad)](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecRole)  
+-   [Configurar roles de seguridad](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecRole)  
 
--   [Configure security scopes for an object (Configurar ámbitos de seguridad para un objeto)](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope)  
+-   [Configurar ámbitos de seguridad para un objeto](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope)  
 
--   [Configure collections to manage security (Configurar colecciones para administrar la seguridad)](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigColl)  
+-   [Configurar recopilaciones para administrar la seguridad](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigColl)  
 
--   [Create a new administrative user (Crear un nuevo usuario administrativo)](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_Create_AdminUser)  
+-   [Crear un nuevo usuario administrativo](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_Create_AdminUser)  
 
 -   [Modify the administrative scope of an administrative user (Modificar el ámbito administrativo de un usuario administrativo)](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ModAdminUser)  
 

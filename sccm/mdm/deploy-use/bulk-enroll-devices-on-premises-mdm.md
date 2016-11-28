@@ -103,7 +103,7 @@ En las tareas siguientes se explica cómo inscribir equipos y dispositivos en ma
 
 8.  Confirme la configuración del perfil de inscripción y haga clic en **Siguiente**. Haga clic en **Cerrar** para salir del asistente.  
 
-##  <a name="a-namebkmkcreateppkga-create-an-enrollment-package-ppkg-file"></a><a name="bkmk_createPpkg"></a> Crear un archivo de paquete de inscripción (ppkg)  
+##  <a name="a-namebkmkcreateppkga-create-an-enrollment-package-ppkg-file"></a><a name="bkmk_createPpkg"></a> Crear un archivo de paquete de inscripción (.ppkg)  
  El paquete de inscripción es el archivo que se usa para la inscripción en masa en la administración local de dispositivos móviles.  Este archivo debe crearse con Configuration Manager. Puede crear tipos similares de paquetes con el Diseñador de imágenes y configuraciones de Windows (ICD), pero solo los paquetes que se creen en Configuration Manager podrán usarse para inscribir dispositivos en la administración local de dispositivos móviles de principio a fin. Los paquetes creados con Windows ICD solo pueden proporcionar el nombre principal de usuario (UPN) necesario para la inscripción, pero no ejecutar el proceso de inscripción real.  
 
  El proceso para crear el paquete de inscripción requiere Windows Assessment and Deployment Kit (ADK) para Windows 10.  En el servidor que ejecuta la consola de Configuration Manager, asegúrese de tener instalada la versión 1511 de Windows ADK. Para más información, consulte la sección sobre ADK de la página de [descarga de kits y herramientas para Windows 10](https://msdn.microsoft.com/windows/hardware/dn913721.aspx)  
@@ -124,7 +124,7 @@ En las tareas siguientes se explica cómo inscribir equipos y dispositivos en ma
 
 4.  Haga clic en **Aceptar**.  
 
-##  <a name="a-namebkmkgetppkga-use-the-package-to-bulk-enroll-a-device"></a><a name="bkmk_getPpkg"></a> Usar el paquete para la inscripción en masa de un dispositivo  
+##  <a name="a-namebkmkgetppkga-use-the-package-to-bulk-enroll-a-device"></a><a name="bkmk_getPpkg"></a> Use el paquete para la inscripción masiva de un dispositivo  
  Puede usar el paquete para inscribir dispositivos antes o después de aprovisionar el dispositivo a través del proceso de experiencia inmediata (OOBE).   El paquete de inscripción también se puede incluir como parte del paquete de aprovisionamiento de un fabricante de equipos originales (OEM).  
 
  El paquete debe entregarse físicamente al dispositivo para usarlo para la inscripción masiva. Puede entregar el paquete de inscripción al dispositivo de varias maneras según sus necesidades, incluidas las siguientes:  

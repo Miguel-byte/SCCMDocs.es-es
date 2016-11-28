@@ -35,7 +35,7 @@ Cada sitio de System Center Configuration Manager que se instala incluye un serv
 
  Si configura el servidor de sistema de sitio con un servidor proxy para su uso por los roles de sistema de sitio, consulte [Roles de sistema de sitio que pueden utilizar un servidor proxy](#bkmk_proxy)  
 
-##  <a name="a-namebkmkplanrolesa-site-system-roles"></a><a name="bkmk_planroles"></a> Roles de sistema de sitio  
+##  <a name="a-namebkmkplanrolesa-site-system-roles"></a><a name="bkmk_planroles"></a> Site system roles  
  Los roles de sistema de sitio se instalan en un equipo para proporcionar a este funcionalidades adicionales. Algunos ejemplos son:  
 
 -   Puntos de administración adicionales para que el sitio pueda admitir más dispositivos, hasta alcanzar la capacidad máxima de sitios  
@@ -113,7 +113,7 @@ Después de que se instala un sitio, puede mover la ubicación de algunos roles 
 
 -   **Punto de Validador de mantenimiento del sistema**: este rol de sistema de sitio ya no se usa con System Center Configuration Manager, aunque permanece visible en la consola de Configuration Manager.  
 
-##  <a name="a-namebkmkproxya-site-system-roles-that-can-use-a-proxy-server"></a><a name="bkmk_proxy"></a> Roles de sistema de sitio que pueden usar un servidor proxy  
+##  <a name="a-namebkmkproxya-site-system-roles-that-can-use-a-proxy-server"></a><a name="bkmk_proxy"></a> Roles de sistema de sitio que pueden utilizar un servidor proxy  
  Algunos roles de sistema de sitio de Configuration Manager requieren conexiones a Internet y usarán un servidor proxy cuando se configure uno para el servidor de sistema de sitio que hospeda el rol. Normalmente, esta conexión se realiza en el contexto del **sistema** del equipo donde está instalado el rol de sistema de sitio y no puede utilizar una configuración del servidor proxy para las cuentas de usuario habituales. Cuando se requiera un servidor proxy para realizar una conexión a Internet, debe configurar el equipo para ello.  
 
 -   Puede configurar un servidor proxy al instalar un rol de sistema de sitio.  
