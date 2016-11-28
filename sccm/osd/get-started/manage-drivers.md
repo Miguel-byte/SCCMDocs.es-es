@@ -187,7 +187,7 @@ System Center Configuration Manager proporciona un catálogo de controladores qu
 
      Haga clic en **Aceptar**.  
 
-###  <a name="a-namebkmkmanagedriversbootimagea-manage-device-drivers-in-a-boot-image"></a><a name="BKMK_ManageDriversBootImage"></a> Administración de controladores de dispositivos en una imagen de arranque  
+###  <a name="a-namebkmkmanagedriversbootimagea-manage-device-drivers-in-a-boot-image"></a><a name="BKMK_ManageDriversBootImage"></a> Administrar controladores de dispositivos en una imagen de arranque  
  Puede agregar a imágenes de arranque los controladores de dispositivos de Windows que se han importado en el catálogo de controladores. Use las siguientes directrices al agregar controladores de dispositivos a una imagen de arranque:  
 
 -   Solo agregue controladores de dispositivos de adaptadores de red y almacenamiento a las imágenes de arranque: habitualmente no se requieren otros tipos de controladores. La incorporación de controladores que no son necesarios aumenta el tamaño de la imagen de arranque innecesariamente.  
@@ -247,9 +247,9 @@ System Center Configuration Manager proporciona un catálogo de controladores qu
 
 -   [Aplicar paquete de controladores](../understand/task-sequence-steps.md#BKMK_ApplyDriverPackage): esta etapa le permite poner todos los controladores de dispositivos en un determinado paquete de controladores a disposición del programa de instalación de Windows. El programa de instalación de Windows busca los controladores de dispositivos necesarios en los paquetes de controladores especificados. Al crear medios independientes, debe usar esta etapa para instalar controladores de dispositivos.  
 
- Al usar estos pasos de la secuencia de tareas, también puede especificar cómo se instalan los controladores de dispositivos en el equipo en el que se implementa el sistema operativo. Para obtener más información, vea [Manage task sequences to automate tasks](../deploy-use/manage-task-sequences-to-automate-tasks.md) (Administración de secuencias de tareas para automatizar tareas).  
+ Al usar estos pasos de la secuencia de tareas, también puede especificar cómo se instalan los controladores de dispositivos en el equipo en el que se implementa el sistema operativo. Para obtener más información, consulte [Manage task sequences to automate tasks](../deploy-use/manage-task-sequences-to-automate-tasks.md) (Administrar secuencias de tareas para automatizar tareas).  
 
-##  <a name="a-namebkmkinstallingdevicediriverstsa-use-task-sequences-to-install-device-drivers-on-computers"></a><a name="BKMK_InstallingDeviceDiriversTS"></a> Uso de secuencias de tareas para instalar controladores de dispositivos en equipos  
+##  <a name="a-namebkmkinstallingdevicediriverstsa-use-task-sequences-to-install-device-drivers-on-computers"></a><a name="BKMK_InstallingDeviceDiriversTS"></a> Usar secuencias de tareas para instalar controladores de dispositivos en equipos  
  Utilice el procedimiento siguiente para instalar controladores de dispositivos como parte de la implementación de sistema operativo.  
 
 #### <a name="use-a-task-sequence-to-install-device-drivers"></a>Usar una secuencia de tareas para instalar controladores de dispositivos  

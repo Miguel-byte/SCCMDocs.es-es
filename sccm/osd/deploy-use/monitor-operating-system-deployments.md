@@ -54,7 +54,7 @@ Para ayudarle a supervisar los objetos de implementación de sistema operativo, 
 ##  <a name="a-namebkmktsreportsa-operating-system-deployment-reports"></a><a name="BKMK_TSReports"></a> Informes de implementación de sistema operativo  
  Hay muchos informes de implementación de sistema operativo predefinidos disponibles. Se organizan en diferentes categorías y se pueden usar para proporcionar información específica sobre migración de estado e implementaciones de secuencias de tareas. Además de utilizar los informes preconfigurados, también puede crear informes de actualizaciones de software personalizados según las necesidades de la empresa. Para obtener más información, vea [Operaciones y mantenimiento de informes](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
 
-##  <a name="a-namebkmkmonitorcontenta-monitor-content"></a><a name="BKMK_MonitorContent"></a> Supervisión de contenido  
+##  <a name="a-namebkmkmonitorcontenta-monitor-content"></a><a name="BKMK_MonitorContent"></a> Supervisar contenido  
  Puede supervisar el contenido en la consola de Configuration Manager para consultar el estado de todos los tipos de paquetes en relación con los puntos de distribución asociados. Esto puede incluir el estado de validación del contenido del paquete, el estado del contenido asignado a un grupo de puntos de distribución específico, el estado del contenido asignado a un punto de distribución y el estado de las características opcionales de cada punto de distribución (validación de contenido, PXE y multidifusión).  
 
 ###  <a name="a-namebkmkcontentstatusa-content-status-monitoring"></a><a name="BKMK_ContentStatus"></a> Supervisión del estado del contenido  
@@ -83,7 +83,7 @@ Para ayudarle a supervisar los objetos de implementación de sistema operativo, 
 
 4.  En la pestaña **Inicio** , haga clic en **Ver estado**. Se mostrará información detallada del estado del grupo de puntos de distribución.  
 
-###  <a name="a-namebkmkdpconfigstatusa-distribution-point-configuration-status"></a><a name="BKMK_DPConfigStatus"></a> Estado de configuración de punto de distribución  
+###  <a name="a-namebkmkdpconfigstatusa-distribution-point-configuration-status"></a><a name="BKMK_DPConfigStatus"></a> Estado de configuración de los puntos de distribución  
  El nodo **Estado de configuración de punto de distribución** en el área de trabajo **Supervisión** proporciona información acerca del punto de distribución. Puede revisar los atributos que están habilitados para el punto de distribución, como PXE, multidifusión y validación de contenido. También puede ver información detallada del estado del punto de distribución. Utilice el procedimiento siguiente para ver el estado de configuración del punto de distribución.  
 
 #### <a name="to-monitor-distribution-point-configuration-status"></a>Para supervisar el estado de configuración de punto de distribución  

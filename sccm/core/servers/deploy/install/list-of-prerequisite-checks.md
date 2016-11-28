@@ -30,7 +30,7 @@ En las secciones siguientes se detallan las comprobaciones de requisitos previos
 
  Para obtener más información sobre el Comprobador de requisitos previos, consulte [Comprobador de requisitos previos ](prerequisite-checker.md).  
 
-##  <a name="a-namebkmksecuritya-prerequisite-checks-for-security-rights"></a><a name="BKMK_Security"></a>Comprobaciones de requisitos previos para los derechos de seguridad  
+##  <a name="a-namebkmksecuritya-prerequisite-checks-for-security-rights"></a><a name="BKMK_Security"></a> Comprobaciones de requisitos previos para los derechos de seguridad  
  A continuación se enumeran las comprobaciones de requisitos previos que el Comprobador de requisitos previos realiza para los derechos de seguridad.  
 
  **Derechos de administrador en el sitio de administración central**: comprueba que la cuenta de usuario que ejecuta el programa de instalación de Configuration Manager tiene derechos de **administrador** local en el equipo del sitio de administración central.  

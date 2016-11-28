@@ -33,7 +33,7 @@ Después de implementar los perfiles de certificado de System Center Configurati
 
 -   [Ver los resultados de compatibilidad mediante informes](#BKMK_Reports)  
 
-##  <a name="a-namebkmkconsolea-how-to-view-compliance-results-in-the-configuration-manager-console"></a><a name="BKMK_console"></a> Visualización de los resultados de compatibilidad en la consola de Configuration Manager  
+##  <a name="a-namebkmkconsolea-how-to-view-compliance-results-in-the-configuration-manager-console"></a><a name="BKMK_console"></a> Ver los resultados de compatibilidad en la consola de Configuration Manager  
  Use este procedimiento para ver los detalles sobre el cumplimiento de los perfiles de certificado implementados en la consola de System Center Configuration Manager.  
 
 > [!NOTE]  
@@ -80,7 +80,7 @@ Después de implementar los perfiles de certificado de System Center Configurati
     |0x00000040|Se ha omitido la información de estado. Esto puede ocurrir si una entidad de certificación HYPERLINK "http://msdn.microsoft.com/en-us/windows/ms721572" \l "_security_certification_authority_gly" no es válida o no se ha seleccionado para la supervisión.|  
     |0x00000100|Se ha denegado la inscripción.|  
 
-##  <a name="a-namebkmkreportsa-how-to-view-compliance-results-by-using-reports"></a><a name="BKMK_Reports"></a> Visualización de los resultados de compatibilidad mediante informes
+##  <a name="a-namebkmkreportsa-how-to-view-compliance-results-by-using-reports"></a><a name="BKMK_Reports"></a> Ver los resultados de compatibilidad mediante informes
 
  La configuración de cumplimiento en System Center Configuration Manager incluye informes integrados que se pueden utilizar para supervisar la información de perfiles de certificado. Estos informes tienen la categoría de informe de **Administración de compatibilidad y configuración**.  
 

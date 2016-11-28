@@ -47,7 +47,7 @@ La versión 1511 de System Center Configuration Manager recopila tres niveles de
 > [!IMPORTANT]  
 >  Configuration Manager no recopila códigos de sitio o nombres de sitios, direcciones IP, nombres de usuario o equipo, direcciones físicas o direcciones de correo electrónico en los niveles Básico o Mejorado. Cualquier recopilación de esta información en el nivel Completo no es para ninguna finalidad (potencialmente se incluye en la información avanzada de diagnóstico como archivos de registro o instantáneas de memoria) y Microsoft no la usará para identificarle, ponerse en contacto con usted ni con fines publicitarios.  
 
-##  <a name="a-namebkmkchangea-how-to-change-the-level"></a><a name="bkmk_change"></a> Cambio de nivel  
+##  <a name="a-namebkmkchangea-how-to-change-the-level"></a><a name="bkmk_change"></a> Cómo cambiar el nivel  
  Los administradores con un ámbito administrativo basado en roles que incluye los permisos **Modificar** en la clase de objeto **Sitio** pueden cambiar el nivel de datos recopilados en la configuración de datos de diagnóstico y uso de la consola de Configuration Manager.  
 
 ##  <a name="a-namebkmklevel1a-level-1---basic"></a><a name="bkmk_level1"></a> Nivel 1: Básico  

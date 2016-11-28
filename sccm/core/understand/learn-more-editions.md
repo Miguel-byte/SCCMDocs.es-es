@@ -29,7 +29,7 @@ ms.openlocfilehash: 726c10fc536f9612bdf46090ef653388a5cfc969
 Con este tema obtendrá información acerca de los requisitos de licencia para las opciones de instalación disponibles con la versión de octubre de 2016 de System Center Configuration Manager 1606, que incluyen la versión de Rama actual 1606, la Rama de mantenimiento a largo plazo (LSTB) y la instalación de evaluación de la Rama actual versión 1606.
 
 **Introducción a las licencias:**   
-Los clientes con Software Assurance (SA) activo en licencias de System Center Configuration Manager o con derechos de suscripción equivalentes a 1 de octubre de 2016, tienen derechos para usar la versión 1606 de octubre de 2016 de System Center Configuration Manager. Los clientes con derechos para System Center Configuration Manager el 1 de octubre de 2016 o después de esta fecha encontrarán dos opciones de licencia tras la instalación: la Rama actual y la Rama de mantenimiento a largo plazo (LTSB).
+Los clientes con Software Assurance (SA) activo en licencias de System Center Configuration Manager o con derechos de suscripción equivalentes a 1 de octubre de 2016, tienen derechos para usar la versión 1606 de octubre de 2016 de System Center Configuration Manager. Los clientes con derechos para System Center Configuration Manager en o después del 1 de octubre de 2016 encontrarán dos opciones de licencia tras la instalación: la rama actual y la rama de mantenimiento a largo plazo (LTSB).
 
 
 **Detalles de las licencias:**  

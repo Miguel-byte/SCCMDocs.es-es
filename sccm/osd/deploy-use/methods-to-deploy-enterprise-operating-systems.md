@@ -31,7 +31,7 @@ Hay distintos métodos que puede utilizar para implementar un sistema operativo 
 
 -   [Use Software Center to deploy Windows over the network](use-software-center-to-deploy-windows-over-the-network.md) (Uso de Centro de software para implementar Windows a través de la red)  
 
--   [Use bootable media to deploy Windows over the network](use-bootable-media-to-deploy-windows-over-the-network.md) (Uso de medios de arranque para implementar Windows a través de la red)  
+-   [Usar medios de arranque para implementar Windows a través de la red](use-bootable-media-to-deploy-windows-over-the-network.md)  
 
 -   [Use multicast to deploy Windows over the network](use-multicast-to-deploy-windows-over-the-network.md) (Uso de multidifusión para implementar Windows a través de la red)  
 

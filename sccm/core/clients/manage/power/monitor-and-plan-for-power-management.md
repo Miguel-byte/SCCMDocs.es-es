@@ -114,7 +114,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |-----------------|-------------|  
 |**Detalles del equipo**|Haga clic en el vínculo **Haga clic para obtener información detallada** para ver las capacidades de energía, la configuración de energía y los planes de energía aplicados para el equipo seleccionado.|  
 
-###  <a name="a-namebkmkactivitydetailsa-computer-activity-details-report"></a><a name="BKMK_Activity_Details"></a> Informe Detalles de actividad de equipo  
+###  <a name="a-namebkmkactivitydetailsa-computer-activity-details-report"></a><a name="BKMK_Activity_Details"></a> Computer Activity Details report  
  El informe **Detalles de actividad de equipo** muestra una lista de los equipos activos o inactivos con sus capacidades de suspensión y activación. El [Computer Activity Report](#BKMK_Activity) llama a este informe y no está diseñado para que el administrador del sitio lo ejecute directamente.  
 
  Use los parámetros siguientes para configurar este informe.  
@@ -508,7 +508,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |-----------------|-------------|  
 |**Detalles del equipo**|Haga clic en el vínculo **Haga clic para obtener información detallada** para ver las capacidades de energía, la configuración de energía y los planes de energía aplicados para el equipo seleccionado.<br /><br /> Para obtener más información, consulte [Computer Details Report](#BKMK_Computer_Details) en este tema.|  
 
-###  <a name="a-namebkmkinsomniaa-insomnia-report"></a><a name="BKMK_Insomnia"></a> Informe de insomnio  
+###  <a name="a-namebkmkinsomniaa-insomnia-report"></a><a name="BKMK_Insomnia"></a> Insomnia report  
  El **Informe de insomnio** muestra una lista de las causas comunes que impidieron que los equipos entraran en modo de suspensión o hibernación y el número de equipos afectados por cada causa durante un período de tiempo especificado. Hay varias causas que pueden impedir que un equipo entre en suspensión o hibernación, como un proceso que se ejecuta en el equipo, una sesión abierta de Escritorio remoto o que el equipo no tenga la capacidad de suspensión o hibernación. En este informe, puede abrir el informe **Detalles de insomnio de equipo** que muestra una lista de los equipos que no están en modo de suspensión o hibernación afectados por cada causa.  
 
  El informe de insomnio de energía muestra los equipos como **Sin capacidad de suspensión** cuando no tienen la capacidad de suspensión y han estado encendidos durante todo el intervalo de informe especificado. El informe muestra los equipos como **Sin capacidad de hibernación** cuando no tienen la capacidad de hibernación y han estado encendidos durante todo el intervalo de informe especificado.  
@@ -598,7 +598,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |-----------------|-------------|  
 |**Detalles de configuración de energía**|Haga clic en el número de equipos en la columna **Equipos** para ver una lista de todos los equipos que usan la configuración de energía de esa fila.<br /><br /> Para obtener más información, consulte [Power Settings Details Report](#BKMK_Settings_Details) en este tema.|  
 
-###  <a name="a-namebkmksettingsdetailsa-power-settings-details-report"></a><a name="BKMK_Settings_Details"></a> Informe Detalles de configuración de energía  
+###  <a name="a-namebkmksettingsdetailsa-power-settings-details-report"></a><a name="BKMK_Settings_Details"></a> Power Settings Details report  
  El informe **Detalles de configuración de energía** muestra información adicional sobre los equipos seleccionados en el informe **Configuración de energía** . El informe **Configuración de energía** llama a este informe y no está diseñado para que el administrador del sitio lo ejecute directamente.  
 
 #### <a name="required-report-parameters"></a>Parámetros de informe necesarios  

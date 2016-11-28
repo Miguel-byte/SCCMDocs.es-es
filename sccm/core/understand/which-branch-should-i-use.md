@@ -86,10 +86,10 @@ La LTSB se basa en la versión de la Rama actual 1606 y tiene las siguientes lim
 - La LTSB tiene soporte técnico durante 10 años con actualizaciones de seguridad críticas después de su disponibilidad general (octubre de 2016), una vez transcurrido este período, el soporte para esta rama expira.  Para obtener más información acerca del ciclo de vida de soporte técnico, consulte [Directiva de ciclos de vida de Microsoft](https://support.microsoft.com/en-us/lifecycle).
 - Admite una lista limitada de conjuntos de sistemas operativos de servidor y cliente y tecnologías relacionadas, como versiones de SQL Server.  Para obtener más información acerca de lo que admite esta rama, consulte [Supported Configurations for the Long-Term Servicing Branch](supported-configurations-for-ltsb.md) (Configuraciones compatibles para la Rama de mantenimiento a largo plazo).
 - No recibe las actualizaciones para las nuevas características.
-- No se admite la incorporación de una suscripción a Microsoft Intune, lo cual impide el uso de:
+- No admite la adición de una suscripción a Microsoft Intune, que impide el uso de:
   - Intune en una configuración de MDM híbrida
  - MDM local
--   No admite el uso del panel de mantenimiento de Windows 10, los planes de mantenimiento y no admite la Rama actual de Windows 10 (CB) y la Rama actual para empresas (CBB).
+-   No admite el uso del panel de mantenimiento de Windows 10, los planes de mantenimiento y no admite la rama actual de Windows 10 (CB) y la rama actual para empresas (CBB).
 - No admite las versiones futuras de Windows 10 LTSB y Windows Server
 -   No admite Asset Intelligence
 -   No admite los puntos de distribución basados en la nube

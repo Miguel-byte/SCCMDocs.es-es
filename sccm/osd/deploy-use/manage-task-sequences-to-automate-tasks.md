@@ -29,7 +29,7 @@ Utilice secuencias de tareas para automatizar los pasos en su entorno de System 
 
  Consulte las siguientes secciones para administrar secuencias de tareas:
 
-##  <a name="a-namebkmkcreatetasksequencea-create-task-sequences"></a><a name="BKMK_CreateTaskSequence"></a> Creación de secuencias de tareas  
+##  <a name="a-namebkmkcreatetasksequencea-create-task-sequences"></a><a name="BKMK_CreateTaskSequence"></a> Crear secuencias de tareas  
  Cree secuencias de tareas con el Asistente para crear secuencia de tareas. Este asistente puede crear los siguientes tipos de secuencias de tareas:  
 
 |Tipo de secuencia de tareas|Más información|  
@@ -41,7 +41,7 @@ Utilice secuencias de tareas para automatizar los pasos en su entorno de System 
 |[Secuencia de tareas para administrar discos duros virtuales](use-a-task-sequence-to-manage-virtual-hard-disks.md)|Este tipo de secuencia de tareas contiene las etapas para crear un VHD, que incluye la instalación de un sistema operativo y aplicaciones, que puede publicar en System Center Virtual Machine Manager (VMM) desde la consola de Configuration Manager.|  
 |[Secuencia de tareas personalizada](create-a-custom-task-sequence.md)|Este tipo de secuencia de tareas no agrega ninguna etapa a la secuencia de tareas. Debe editar la secuencia de tareas y agregar etapas a la secuencia de tareas después de crearla.|  
 
-##  <a name="a-namebkmkmodifytasksequencea-edit-a-task-sequence"></a><a name="BKMK_ModifyTaskSequence"></a> Edición de una secuencia de tareas  
+##  <a name="a-namebkmkmodifytasksequencea-edit-a-task-sequence"></a><a name="BKMK_ModifyTaskSequence"></a> Editar una secuencia de tareas  
  Para modificar una secuencia de tareas, agregue o quite pasos de la secuencia de tareas, agregue o quite grupos de secuencias de tareas, o cambie el orden de los pasos. Utilice el siguiente procedimiento para modificar una secuencia de tareas existente.  
 
 > [!IMPORTANT]  
@@ -97,7 +97,7 @@ Utilice secuencias de tareas para automatizar los pasos en su entorno de System 
 
  Puede preconfigurar el contenido al que se hace referencia en la secuencia de tareas. Configuration Manager crea un archivo de contenido preconfigurado comprimido que contiene los archivos, las dependencias asociadas y los metadatos asociados del contenido que se selecciona. A continuación, puede importar manualmente el contenido en un servidor de sitio, un sitio secundario o un punto de distribución. Para más información sobre cómo preconfigurar archivos de contenido, consulte [Preconfigurar el contenido](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content).  
 
-##  <a name="a-namebkmkdeploytsa-deploy-a-task-sequence"></a><a name="BKMK_DeployTS"></a> Implementación de una secuencia de tareas  
+##  <a name="a-namebkmkdeploytsa-deploy-a-task-sequence"></a><a name="BKMK_DeployTS"></a> Implementar una secuencia de tareas  
  Utilice el siguiente procedimiento para implementar una secuencia de tareas en los equipos de una recopilación.  
 
 > [!WARNING]  
@@ -295,7 +295,7 @@ Utilice secuencias de tareas para automatizar los pasos en su entorno de System 
 
  Después de importar la secuencia de tareas, edítela para especificar las contraseñas que se encontraban en la secuencia de tareas original. Por motivos de seguridad, no se exportan las contraseñas.  
 
-##  <a name="a-namebkmkcreatetsvariablesa-create-task-sequence-variables-for-computers-and-collections"></a><a name="BKMK_CreateTSVariables"></a> Creación de variables de secuencia de tareas para equipos y recopilaciones  
+##  <a name="a-namebkmkcreatetsvariablesa-create-task-sequence-variables-for-computers-and-collections"></a><a name="BKMK_CreateTSVariables"></a> Crear variables de secuencia de tareas para equipos y recopilaciones  
  Puede definir variables de secuencia de tareas personalizadas para equipos y recopilaciones. Las variables que se definen para un determinado equipo se conocen como variables de secuencia de tareas por equipo. Las variables definidas para una determinada recopilación se conocen como variables de secuencia de tareas por recopilación. Si hay un conflicto, las variables por equipo tienen prioridad sobre las variables por recopilación. Por lo tanto, las variables de secuencia de tareas asignadas a un determinado equipo tienen automáticamente más prioridad que las variables asignadas a la recopilación que contiene al equipo.  
 
  Por ejemplo, si hay una variable asignada a la recopilación ABC y hay una variable con el mismo nombre asignada al equipo XYZ, que forma parte de la recopilación ABC, la variable asignada al equipo XYZ tiene una prioridad más alta que la variable asignada a la recopilación ABC.  
