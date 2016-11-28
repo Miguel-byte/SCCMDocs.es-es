@@ -45,19 +45,19 @@ En este tema se indican las etapas generales de System Center Configuration Mana
 
      Las imágenes de arranque inician un equipo en un entorno de Windows PE (un sistema operativo mínimo con componentes y servicios limitados) que puede instalar un sistema operativo completo de Windows en el equipo. Al implementar sistemas operativos, debe seleccionar una imagen de arranque para el uso y la distribución de la imagen en un punto de distribución. Para preparar la imagen de arranque, use lo siguiente:  
 
-    -   Para obtener más información sobre las imágenes de arranque, consulte [Manage boot images](../get-started/manage-boot-images.md) (Administrar imágenes de arranque).  
+    -   Para obtener más información sobre las imágenes de arranque, consulte [Manage boot images (Administrar imágenes de arranque)](../get-started/manage-boot-images.md).  
 
-    -   Para obtener más información sobre la personalización de una imagen de arranque, consulte [Customize boot images](../get-started/customize-boot-images.md) (Personalizar imágenes de arranque).  
+    -   Para obtener más información sobre la personalización de una imagen de arranque, consulte [Customize boot images (Personalizar imágenes de arranque)](../get-started/customize-boot-images.md).  
 
-    -   Distribuya la imagen de arranque a puntos de distribución. Para obtener más información, consulte [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content) (Distribución del contenido).  
+    -   Distribuya la imagen de arranque a puntos de distribución. Para obtener más información, consulte [Distribute content (Distribución del contenido)](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
 
 2.  **Preparar una imagen de sistema operativo**  
 
      La imagen del sistema operativo contiene los archivos necesarios para instalar el sistema operativo en el equipo de destino. Use lo siguiente para preparar la imagen del sistema operativo:  
 
-    -   Para obtener más información sobre cómo crear una imagen de sistema operativo, consulte [Manage operating system images](../get-started/manage-operating-system-images.md) (Administrar imágenes de sistema operativo).  
+    -   Para obtener más información sobre cómo crear una imagen de sistema operativo, consulte [Manage operating system images (Administrar imágenes de sistema operativo)](../get-started/manage-operating-system-images.md).  
 
-    -   Distribuya la imagen del sistema operativo a los puntos de distribución. Para obtener más información, consulte [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content) (Distribución del contenido).  
+    -   Distribuya la imagen del sistema operativo a los puntos de distribución. Para obtener más información, consulte [Distribute content (Distribución del contenido)](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
 
 3.  **Crear una secuencia de tareas para implementar sistemas operativos a través de la red**  
 
