@@ -37,7 +37,7 @@ Hay varias cosas que debe hacer en Configuration Manager para poder implementar 
 
 -   [Administrar el estado de usuario](manage-user-state.md)  
 
--   [Preparar implementaciones en equipos desconocidos](prepare-for-unknown-computer-deployments.md)  
+-   [Preparación para implementaciones en equipos desconocidos](prepare-for-unknown-computer-deployments.md)  
 
 -   [Asociar usuarios a un equipo de destino](associate-users-with-a-destination-computer.md)  
 

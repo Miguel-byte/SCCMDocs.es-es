@@ -142,7 +142,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
     > [!TIP]  
     >  Cuando se produce un error en la tarea de mantenimiento de copia de seguridad, reinicie la tarea de copia de seguridad. Para ello, detenga y reinicie el servicio SMS_SITE_BACKUP.  
 
-###  <a name="a-namebkmkdpmbackupa-using-data-protection-manager-to-back-up-your-site-database"></a><a name="BKMK_DPMBackup"></a> Uso de Data Protection Manager para realizar copias de seguridad de la base de datos de sitio  
+###  <a name="a-namebkmkdpmbackupa-using-data-protection-manager-to-back-up-your-site-database"></a><a name="BKMK_DPMBackup"></a> Uso de Data Protection Manager para realizar copias de seguridad de la base de datos del sitio  
  Puede usar System Center 2012 Data Protection Manager (DPM) para hacer una copia de seguridad de la base de datos del sitio. Debe crear un nuevo grupo de protección en DPM para el equipo de la base de datos del sitio. En la página **Seleccionar miembros del grupo** del asistente Crear nuevo grupo de protección, seleccione el servicio SMS Writer de la lista de orígenes de datos y, a continuación, seleccione la base de datos del sitio como un miembro apropiado. Para obtener más información acerca del uso de DPM para realizar una copia de seguridad de la base de datos del sitio, consulte la [Data Protection Manager Documentation Library (Biblioteca de documentación de Data Protection Manager)](http://go.microsoft.com/fwlink/?LinkId=272772) en TechNet.  
 
 > [!IMPORTANT]  

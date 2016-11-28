@@ -33,7 +33,7 @@ Para implementar sistemas operativos en System Center Configuration Manager, pri
 
  Es importante disponer de suficientes puntos de distribución para admitir la implementación de sistemas operativos en los equipos. También es importante planear la selección de ubicación de dichos puntos de distribución en la jerarquía. Encontrará la mayor parte de esta información de planeación en [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md) (Administración del contenido y de la infraestructura de contenido). Sin embargo, existen algunas consideraciones adicionales de planeación para puntos de distribución específicos de implementación de sistema operativo.  
 
-###  <a name="a-namebkmkadditionalplanninga-additional-planning-considerations-for-distribution-points"></a><a name="BKMK_AdditionalPlanning"></a> Consideraciones de planeación adicionales para los puntos de distribución  
+###  <a name="a-namebkmkadditionalplanninga-additional-planning-considerations-for-distribution-points"></a><a name="BKMK_AdditionalPlanning"></a> Consideraciones de planeación adicionales para puntos de distribución  
  A continuación se detallan aspectos de planeación adicionales que deben tenerse en cuenta para los puntos de distribución:  
 
 -   **¿Cómo puedo impedir las implementaciones de sistema de operativo no deseadas?**  

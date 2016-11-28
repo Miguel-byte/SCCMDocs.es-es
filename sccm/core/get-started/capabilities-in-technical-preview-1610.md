@@ -26,7 +26,7 @@ ms.openlocfilehash: 865b5078282bf240aa6a2aef5cb2662f2471fb71
 
 
 
-En este artículo se presentan las características disponibles en Technical Preview para System Center Configuration Manager, versión 1610. Puede instalar esta versión para actualizar y agregar nuevas capacidades al sitio de Technical Preview de Configuration Manager.      Antes de instalar esta versión de Technical Preview, lea el tema de introducción [Technical Preview for System Center Configuration Manager (Technical Preview para System Center Configuration Manager)](../../core/get-started/technical-preview.md) para familiarizarse con los requisitos y las limitaciones generales para usar una Technical Preview y para saber cómo actualizar entre versiones y cómo proporcionar comentarios sobre las características de una Technical Preview.    
+En este artículo se presentan las características disponibles en Technical Preview para System Center Configuration Manager, versión 1610. Puede instalar esta versión para actualizar y agregar nuevas capacidades al sitio de Technical Preview de Configuration Manager.      Antes de instalar esta versión de Technical Preview, lea el tema de introducción [Technical Preview for System Center Configuration Manager (Technical Preview para System Center Configuration Manager)](../../core/get-started/technical-preview.md) para familiarizarse con los requisitos y las limitaciones generales de una Technical Preview y para saber cómo actualizar entre versiones y cómo proporcionar comentarios sobre las características de una Technical Preview.    
 
 
 **Estas son las nuevas características que puede probar con esta versión.**  

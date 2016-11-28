@@ -133,7 +133,7 @@ Use las siguientes secciones para administrar Almacenamiento en caché del mismo
 
      Esta variable marca la conservación del contenido de la secuencia de tareas en la memoria caché del cliente de Configuration Manager después de la implementación. Esta acción es diferente a usar SMSTSPersisContent, que solo conserva el contenido el tiempo que dure la secuencia de tareas y usa la memoria caché de la secuencia de tareas, no la memoria caché del cliente de Configuration Manager.  
 
- Para obtener más información, consulte [Task sequence built-in variables](../understand/task-sequence-built-in-variables.md) (Variables integradas de la secuencia de tareas).  
+ Para obtener más información, consulte [Variables integradas de la secuencia de tareas](../understand/task-sequence-built-in-variables.md).  
 
 ###  <a name="a-namebkmkpeercachevalidatea-validate-the-success-of-using-windows-pe-peer-cache"></a><a name="BKMK_PeerCacheValidate"></a> Validar el éxito del uso de Almacenamiento en caché del mismo nivel en Windows PE  
  Después de usar Almacenamiento en caché del mismo nivel en Windows PE para implementar e instalar una secuencia de tareas, puede confirmar que ese almacenamiento en caché del mismo nivel se empleó correctamente en el proceso observando el **smsts.log** en el cliente que ejecutó la secuencia de tareas.  

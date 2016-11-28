@@ -217,7 +217,7 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
  Una vez completado el asistente, se ejecutará la ADR. Ésta agregará las actualizaciones de software que cumplen los criterios especificados en un grupo de actualizaciones de software, descargará estas actualizaciones en la biblioteca de contenido del servidor de sitio, las distribuirá a los puntos de distribución configurados y, a continuación, implementará el grupo de actualizaciones de software en clientes en la recopilación de destino.  
 
 ##  <a name="a-namebkmkadddeploymenttoadra-add-a-new-deployment-to-an-existing-adr"></a><a name="BKMK_AddDeploymentToADR"></a> Agregar una nueva implementación a una ADR existente  
- Después de crear una ADR, puede agregar implementaciones adicionales a la regla. Esto puede ayudarle a administrar la complejidad de la implementación de varias actualizaciones en diferentes recopilaciones. Cada nueva implementación ofrece todas las funcionalidades y la experiencia completa de supervisión de la implementación.  
+ Después de crear una ADR, puede agregar distribuciones adicionales a la regla. Esto puede ayudarle a administrar la complejidad de la implementación de varias actualizaciones en diferentes recopilaciones. Cada nueva implementación ofrece todas las funcionalidades y la experiencia completa de supervisión de la implementación.  
 
 #### <a name="to-add-a-new-deployment-to-an-existing-adr"></a>Para agregar una nueva implementación a una ADR existente  
 

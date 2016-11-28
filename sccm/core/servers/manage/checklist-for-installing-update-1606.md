@@ -62,7 +62,7 @@ Cuando el servidor de sitio instala la actualización, los roles de sistema de s
 
 -   Punto de conexión de servicio  
 
-Esta instalación puede poner el servidor del sistema de sitio en un estado pendiente de reinicio y notificar errores en el visor de estado de componentes de Configuration Manager. Además, las aplicaciones .NET del servidor pueden presentar errores aleatorios hasta que se reinicia el servidor.  
+Esta instalación puede poner el servidor de sistema de sitio en un estado pendiente de reinicio y notificar errores en el visor de estado de componentes de Configuration Manager. Además, las aplicaciones .NET del servidor pueden presentar errores aleatorios hasta que se reinicia el servidor.  
 
  Para más información, vea [Site and site system prerequisites (Requisitos previos del sitio y el sistema de sitio)](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)  
 

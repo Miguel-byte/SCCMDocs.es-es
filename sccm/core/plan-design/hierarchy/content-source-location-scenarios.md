@@ -1,0 +1,254 @@
+---
+title: "Ubicación de orígenes de contenido | System Center Configuration Manager"
+description: "Conozca la configuración de System Center Configuration Manager que permite a los clientes buscar contenido en una red lenta."
+ms.custom: na
+ms.date: 10/06/2016
+ms.reviewer: na
+ms.suite: na
+ms.prod: configuration-manager
+ms.technology:
+- configmgr-other
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 70b5cbc0-64ba-49bd-8b34-fb4c09b2b95b
+caps.latest.revision: 3
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
+translationtype: Human Translation
+ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
+ms.openlocfilehash: 667010fedb37770d4105fc30f098a231292969fd
+
+---
+# <a name="content-source-location-scenarios-in-system-center-configuration-manager"></a>Escenarios de ubicación de orígenes de contenido en System Center Configuration Manager
+
+*Se aplica a: System Center Configuration Manager (rama actual)*
+
+System Center Configuration Manager admite varias opciones que se combinan para definir cómo y dónde encuentran contenido los clientes cuando están en una red lenta. Las combinaciones posibles afectan a la ubicación de contenido que usan los clientes además de a si pueden usar correctamente una ubicación de reserva cuando no está disponible un origen de contenido preferido.  
+
+
+
+**Las siguientes tres opciones definen el comportamiento cuando los clientes solicitan contenido:**
+
+-  **Permitir ubicación de origen de reserva para contenido** (habilitado o no habilitado): se trata de una opción que se puede habilitar en la pestaña Grupos de límites de un punto de distribución.  Esto permite al cliente usar un punto de distribución configurado como ubicación de reserva cuando el contenido no está disponible en un punto de distribución preferido.  
+
+ - **Comportamiento de implementación de la velocidad de conexión de red**: cada implementación se configura con uno de los siguientes comportamientos que se usarán cuando la conexión al punto de distribución es lenta:  
+
+    -   **Descargar contenido desde el punto de distribución y ejecutar localmente**  
+
+    -   **No descargar contenido**: esta opción solo se usa cuando un cliente emplea una ubicación de reserva para obtener contenido  
+
+    La velocidad de conexión para un punto de distribución está configurada en la pestaña Referencias del grupo de límites y es específica de ese grupo de límites.  
+
+ -  **Distribución de paquetes a petición** (a los puntos de distribución preferidos): esta opción está habilitada cuando se selecciona la opción **Distribuir el contenido de este paquete en puntos de distribución preferidos** en la pestaña Configuración de distribución de las propiedades de un paquete o de las aplicaciones. Cuando se habilita, esta opción indica a Configuration Manager que copie automáticamente el contenido a un punto de distribución preferido que aún no tiene el contenido después de que un cliente solicita ese contenido desde ese punto de distribución.  
+
+
+ **Los siguientes requisitos se aplican a todos los escenarios:**
+
+
+-   El contenido está disponible en un punto de distribución de reserva.  
+
+-   Los puntos de distribución están en línea y se puede acceder a ellos.  
+
+
+## <a name="scenario-1"></a>Escenario 1  
+ Se aplica con la siguiente configuración:  
+
+-   **El contenido está disponible en un punto de distribución preferido**  
+
+-   **Permitir reserva**: no habilitado  
+
+-   **Comportamiento de implementación para una red lenta**: cualquier configuración  
+
+
+**Detalles:** (la configuración para distribución de paquetes a petición no es relevante en este escenario)  
+
+1.  El cliente envía una solicitud de contenido al punto de administración.  
+
+2.  El punto de administración devuelve al cliente una lista de ubicación del contenido con los puntos de distribución preferidos que tienen ese contenido.  
+
+3.  El cliente descarga el contenido desde un punto de distribución preferido de la lista.  
+
+## <a name="scenario-2"></a>Escenario 2  
+ Con la configuración siguiente:  
+
+-   **El contenido está disponible en un punto de distribución preferido**  
+
+-   **Permitir reserva**: habilitado  
+
+-   **Comportamiento de implementación para una red lenta**: no descargar contenido  
+
+
+**Detalles:** (la configuración para distribución de paquetes a petición no es relevante en este escenario)  
+
+1.  El cliente envía una solicitud de contenido al punto de administración. El cliente incluye una marca con la solicitud que indica que se permiten puntos de distribución de reserva.  
+
+2.  El punto de administración devuelve al cliente una lista de ubicación del contenido con los puntos de distribución preferidos y los puntos de distribución de reserva que tienen ese contenido.  
+
+3.  El cliente descarga el contenido desde un punto de distribución preferido de la lista.  
+
+## <a name="scenario-3"></a>Escenario 3  
+ Con la configuración siguiente:  
+
+-   **El contenido está disponible en un punto de distribución preferido**  
+
+-   **Permitir reserva**: habilitado  
+
+-   **Comportamiento de implementación para una red lenta**: descargar e instalar contenido  
+
+
+**Detalles:** (la configuración para distribución de paquetes a petición no es relevante en este escenario)  
+
+1.  El cliente envía una solicitud de contenido al punto de administración. El cliente incluye una marca con la solicitud que indica que se permiten puntos de distribución de reserva.  
+
+2.  El punto de administración devuelve al cliente una lista de ubicación del contenido con los puntos de distribución preferidos y los puntos de distribución de reserva que tienen ese contenido.  
+
+3.  El cliente descarga el contenido desde un punto de distribución preferido de la lista.  
+
+## <a name="scenario-4"></a>Escenario 4  
+ Con la configuración siguiente:  
+
+-   **El contenido no está disponible en un punto de distribución preferido**  
+
+-   **Distribuir el contenido de este paquete en puntos de distribución preferidos** no está habilitado  
+
+-   **Permitir reserva**: no habilitado  
+
+-   **Comportamiento de implementación para una red lenta**: cualquier configuración  
+
+
+**Detalles:**  
+
+1.  El cliente envía una solicitud de contenido al punto de administración.  
+
+2.  Se devuelve al cliente una lista de la ubicación del contenido desde el punto de administración con los puntos de distribución preferidos que tienen el contenido. No hay ningún punto de distribución preferido en la lista.  
+
+3.  Se produce un error en el cliente con el mensaje **El contenido no está disponible** y entra en modo de reintento. Cada hora, se inicia una nueva solicitud de contenido.  
+
+## <a name="scenario-5"></a>Escenario 5  
+ Con la configuración siguiente:  
+
+-   **El contenido no está disponible en un punto de distribución preferido**  
+
+-   **Distribuir el contenido de este paquete en puntos de distribución preferidos** no está habilitado  
+
+-   **Permitir reserva**: habilitado  
+
+-   **Comportamiento de implementación para una red lenta**: no descargar contenido  
+
+
+**Detalles:**  
+
+1.  El cliente envía una solicitud de contenido al punto de administración. El cliente incluye una marca con la solicitud que indica que se permiten puntos de distribución de reserva.  
+
+2.  Se devuelve al cliente una lista de la ubicación del contenido desde el punto de administración con los puntos de distribución preferidos y los puntos de distribución de reserva que tienen el contenido. No hay puntos de distribución preferidos que tienen el contenido, pero al menos un punto de distribución de reserva tiene el contenido.  
+
+3.  No se descarga el contenido porque la propiedad de implementación para cuando el cliente usa un punto de distribución de reserva está establecida en **No descargar contenido** (que se usa cuando los clientes permiten la reserva para obtener el contenido). Se produce un error en el cliente con el mensaje **El contenido no está disponible** y entra en modo de reintento. El cliente realiza una solicitud de contenido nueva cada hora.  
+
+## <a name="scenario-6"></a>Escenario 6  
+ Con la configuración siguiente:  
+
+-   **El contenido no está disponible en un punto de distribución preferido**  
+
+-   **Distribuir el contenido de este paquete en puntos de distribución preferidos** no está habilitado  
+
+-   **Permitir reserva**: habilitado  
+
+-   **Comportamiento de implementación para una red lenta**: descargar e instalar contenido  
+
+
+**Detalles:**  
+
+1.  El cliente envía una solicitud de contenido al punto de administración. El cliente incluye una marca con la solicitud que indica que se habilitan los puntos de distribución de reserva.  
+
+2.  Se devuelve al cliente una lista de la ubicación del contenido desde el punto de administración con los puntos de distribución preferidos y los puntos de distribución de reserva que tienen el contenido. No hay puntos de distribución preferidos que tienen el contenido, pero al menos un punto de distribución de reserva tiene el contenido.  
+
+3.  Se descarga el contenido desde un punto de distribución de reserva de la lista porque la propiedad de implementación si el cliente usa un punto de distribución de reserva está configurada como **Descargar e instalar el contenido**.  
+
+## <a name="scenario-7"></a>Escenario 7  
+ Con la configuración siguiente:  
+
+-   **El contenido no está disponible en un punto de distribución preferido**  
+
+-   **Distribuir el contenido de este paquete en puntos de distribución preferidos** está habilitado  
+
+-   **Permitir reserva**: no habilitado  
+
+-   **Comportamiento de implementación para una red lenta**: cualquier configuración  
+
+
+**Detalles:**  
+
+1.  El cliente envía una solicitud de contenido al punto de administración.  
+
+2.  Se devuelve al cliente una lista de la ubicación del contenido desde el punto de administración con los puntos de distribución preferidos que tienen el contenido. No hay puntos de distribución preferidos con el contenido.  
+
+3.  Se produce un error en el cliente con el mensaje **El contenido no está disponible** y entra en modo de reintento. Cada hora se realiza una nueva solicitud de contenido.  
+
+4.  El punto de administración crea un desencadenador para el administrador de distribución para distribuir el contenido a todos los puntos de distribución preferidos para el cliente que realizó la solicitud de contenido.  
+
+5.  El administrador de distribución distribuye el contenido a todos los puntos de distribución preferidos. En la mayoría de los casos, el contenido se distribuye correctamente a los puntos de distribución preferidos en una hora.  
+
+6.  El cliente inicia una nueva solicitud de contenido al punto de administración.  
+
+7.  Se devuelve al cliente una lista de la ubicación del contenido desde el punto de administración con los puntos de distribución preferidos que tienen el contenido. El cliente descarga el contenido desde un punto de distribución preferido de la lista.  
+
+## <a name="scenario-8"></a>Escenario 8  
+ Con la configuración siguiente:  
+
+-   **El contenido no está disponible en un punto de distribución preferido**  
+
+-   **Distribuir el contenido de este paquete en puntos de distribución preferidos** está habilitado  
+
+-   **Permitir reserva**: habilitado  
+
+-   **Comportamiento de implementación para una red lenta**: no descargar contenido  
+
+
+**Detalles:**  
+
+1.  El cliente envía una solicitud de contenido al punto de administración. El cliente incluye una marca con la solicitud que indica que se permiten puntos de distribución de reserva.  
+
+2.  Se devuelve al cliente una lista de la ubicación del contenido desde el punto de administración con los puntos de distribución preferidos y los puntos de distribución de reserva que tienen el contenido. No hay puntos de distribución preferidos que tienen el contenido, pero al menos un punto de distribución de reserva tiene el contenido.  
+
+3.  No se descarga el contenido porque la propiedad de implementación si el cliente usa un punto de distribución de reserva está configurada como **No descargar**. Se produce un error en el cliente con el mensaje **El contenido no está disponible** y entra en modo de reintento. El cliente realiza una solicitud de contenido nueva cada hora.  
+
+4.  El punto de administración crea un desencadenador para el administrador de distribución para distribuir el contenido a todos los puntos de distribución preferidos para el cliente que realizó la solicitud de contenido.  
+
+5.  El administrador de distribución distribuye el contenido a todos los puntos de distribución preferidos. En la mayoría de los casos, el contenido se distribuye correctamente a los puntos de distribución preferidos en una hora.  
+
+6.  El cliente inicia una nueva solicitud de contenido al punto de administración.  
+
+7.  Se devuelve al cliente una lista de la ubicación del contenido desde el punto de administración con los puntos de distribución preferidos que tienen el contenido.  
+
+8.  El cliente descarga el contenido desde un punto de distribución preferido de la lista.  
+
+## <a name="scenario-9"></a>Escenario 9  
+ Con la configuración siguiente:  
+
+-   **El contenido no está disponible en un punto de distribución preferido**  
+
+-   **Distribuir el contenido de este paquete en puntos de distribución preferidos** está habilitado  
+
+-   **Permitir reserva**: habilitado  
+
+-   **Comportamiento de implementación para una red lenta**: descargar e instalar contenido  
+
+
+**Detalles:**  
+
+1.  El cliente envía una solicitud de contenido al punto de administración. El cliente incluye una marca con la solicitud que indica que se permiten puntos de distribución de reserva.  
+
+2.  Se devuelve al cliente una lista de la ubicación del contenido desde el punto de administración con los puntos de distribución preferidos y los puntos de distribución de reserva que tienen el contenido. No hay puntos de distribución preferidos que tienen el contenido, pero al menos un punto de distribución de reserva tiene el contenido.  
+
+3.  Se descarga el contenido desde un punto de distribución de reserva de la lista porque la propiedad de implementación si el cliente usa un punto de distribución de reserva está configurada como **Descargar e instalar el contenido**. Esta configuración de implementación permite que un cliente que debe usar una ubicación de contenido de reserva obtenga el contenido de esa ubicación.  
+
+4.  El punto de administración crea un desencadenador para el administrador de distribución para distribuir el contenido a todos los puntos de distribución preferidos para el cliente que realizó la solicitud de contenido.  
+
+5.  El administrador de distribución distribuye el contenido a todos los puntos de distribución preferidos, lo que permite a los clientes adicionales obtener el contenido sin utilizar un punto de distribución de reserva.  
+
+
+
+<!--HONumber=Nov16_HO1-->
+
+
