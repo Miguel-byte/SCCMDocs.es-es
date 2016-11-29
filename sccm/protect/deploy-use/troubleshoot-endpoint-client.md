@@ -236,7 +236,7 @@ Si tiene problemas con Windows Defender o Endpoint Protection, póngase en conta
  **Síntoma**  
 
  Recibirá un mensaje que le notifica que â€œ**Windows Defender o**  
- **Endpoint Protection no está supervisando el equipo porque se detuvo el servicio del programa. Debe reiniciarlo ahora**â€.  
+ **Endpoint Protection no está supervisando el equipo porque se detuvo el servicio del programa. Debe reiniciarlo ahora**.  
 
  **Solución**  
 
@@ -244,7 +244,7 @@ Si tiene problemas con Windows Defender o Endpoint Protection, póngase en conta
 
 -   Cierre todas las aplicaciones y reinicie el equipo.  
 
-### <a name="step-2-make-sure-the-windows-defender-orbr-endpoint-protection-service-is-set-to-automatic-and-is-started"></a>Paso 2: asegurarse de que el servicio â€œWindows Defender" o<br />      "Endpoint Protectionâ€ esté establecido en automático y se haya iniciado  
+### <a name="step-2-make-sure-the-windows-defender-orbr-endpoint-protection-service-is-set-to-automatic-and-is-started"></a>Paso 2: asegurarse de que el servicio â€œWindows Defender" o<br />      "Endpoint Protection" esté establecido en automático y se ha iniciado  
 
 1.  Haga clic en **Inicio** , busque **services.msc**y luego presione **Entrar**.  
 

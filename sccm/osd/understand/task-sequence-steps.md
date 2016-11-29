@@ -1096,7 +1096,7 @@ Se introdujo en Configuration Manager versión 1606 una nueva variable de secuen
  **Descripción**  
  Información detallada adicional sobre la acción realizada en este paso.  
 
-##  <a name="a-namebkmkpreparewindowsforcapturea-prepare-windows-for-capture"></a><a name="BKMK_PrepareWindowsforCapture"></a> Preparar Windows para la captura  
+##  <a name="a-namebkmkpreparewindowsforcapturea-prepare-windows-for-capture"></a><a name="BKMK_PrepareWindowsforCapture"></a> Prepare Windows for Capture  
  Use el paso de secuencia de tareas **Preparar Windows para la captura** para especificar las opciones de Sysprep que se usarán al capturar una imagen de sistema operativo en el equipo de referencia. Esta acción de secuencia de tareas ejecuta Sysprep y, a continuación, reinicia el equipo en la imagen de arranque de Windows PE especificada para la secuencia de tareas. Para que esta acción se complete correctamente, el equipo de referencia no debe estar unido a un dominio.  
 
  Este paso solo se ejecuta en un sistema operativo estándar, no en Windows PE. Para obtener información sobre las variables de secuencia de tareas para esta acción, consulte [Variables de acción de la secuencia de tareas Preparar Windows para la captura](task-sequence-action-variables.md#BKMK_PrepareWindowsCapture).  
@@ -1392,7 +1392,7 @@ Se introdujo en Configuration Manager versión 1606 una nueva variable de secuen
 > [!IMPORTANT]  
 >  Si una acción de secuencia de tareas **Ejecutar línea de comandos** que especifica una cuenta de usuario se ejecuta en Windows PE, se producirá un error en la acción porque Windows PE no puede unirse a un dominio. El error se registrará en el archivo smsts.log.  
 
-##  <a name="a-namebkmkrunpowershellscripta-run-powershell-script"></a><a name="BKMK_RunPowerShellScript"></a> Ejecutar script PowerShell  
+##  <a name="a-namebkmkrunpowershellscripta-run-powershell-script"></a><a name="BKMK_RunPowerShellScript"></a> Ejecutar script de PowerShell  
  Use el paso de secuencia de tareas **Ejecutar script PowerShell** para ejecutar un script de PowerShell especificado.  
 
  Este paso puede ejecutarse en un sistema operativo estándar o en Windows PE. Para ejecutar este paso en Windows PE, PowerShell debe estar habilitado en la imagen de arranque. Puede habilitar Windows PowerShell (WinPE-PowerShell) desde la pestaña **Componentes opcionales** de las propiedades de la imagen de arranque. Para obtener más información sobre cómo modificar una imagen de arranque, consulte [Administrar imágenes de arranque](../get-started/manage-boot-images.md).  
@@ -1515,7 +1515,7 @@ Se introdujo en Configuration Manager versión 1606 una nueva variable de secuen
 > [!IMPORTANT]  
 >  Al importar una secuencia de tareas con el paso “Establecer variables dinámicas”, y **Valor secreto** está seleccionado para el valor de la variable, el valor se quita al importar la secuencia de tareas. Como resultado, debe volver a escribir el valor de la variable dinámica después de importar la secuencia de tareas.  
 
-##  <a name="a-namebkmksettasksequencevariablea-set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a> Configurar variable de secuencia de tareas  
+##  <a name="a-namebkmksettasksequencevariablea-set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a> Establecer variable de secuencia de tareas  
  Use el paso de secuencia de tareas **Configurar variable de secuencia de tareas** para establecer el valor de una variable que se utiliza con la secuencia de tareas.  
 
  Este paso puede ejecutarse en un sistema operativo estándar o en Windows PE. Las variables de secuencia de tareas son leídas por acciones de secuencia de tareas y especifican el comportamiento de esas acciones. Para obtener más información sobre las variables de secuencia de tareas específicas, consulte [Variables de acción de secuencias de tareas](task-sequence-action-variables.md).  

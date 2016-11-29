@@ -83,7 +83,7 @@ Cada versión de Configuration Manager admite una determinada versión de Window
     > [!NOTE]
     >  Para obtener más información sobre DISM, consulte el tema [DISM - Deployment Image Servicing and Management Technical Reference (Referencia técnica de Administración y mantenimiento de imágenes de implementación - DISM)](http://technet.microsoft.com/library/hh824821.aspx) en la biblioteca de documentación de TechNet de Windows 8.1 y Windows 8.
 
-5.  Después de montar la imagen de arranque, use DISM para agregar componentes opcionales a la imagen de arranque. En Windows PE 5, los componentes opcionales de 64 bits se encuentran en <*ruta de instalación*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs.  
+5.  Después de montar la imagen de arranque, use DISM para agregar componentes opcionales a la imagen de arranque. En Windows PE 5, los componentes opcionales de 64 bits se encuentran en <*ruta de instalación*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs.  
 
     > [!NOTE]
     >  En este procedimiento se utiliza la siguiente ubicación para los componentes opcionales: C:\Archivos de programa (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs. La ruta de acceso que se utiliza puede variar según las opciones de instalación y la versión que elija para Windows ADK.  

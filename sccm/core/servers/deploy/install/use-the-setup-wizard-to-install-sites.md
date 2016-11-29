@@ -76,7 +76,7 @@ Si va a instalar un sitio de administración central como parte de un escenario 
     - A partir de la versión de octubre de 2016 de los medios de línea de base de la versión 1606 para System Center Configuration Manager, puede especificar la fecha de expiración de su contrato de Software Assurance. En esta página puede especificar la **fecha de expiración de Software Assurance** de su contrato de licencia como un cómodo recordatorio de esa fecha. Si no la especifica durante la instalación, puede especificarla más tarde desde la consola de Configuration Manager.
 
       >  [!NOTE]   
-      >  Microsoft no valida la fecha de expiración que especifique y no la usará para la validación de la licencia,  pero usted puede usarla como un recordatorio de la fecha de expiración. Esto es útil porque Configuration Manager busca periódicamente nuevas actualizaciones de software que se ofrecen en línea, y el estado de su licencia de Software Assurance debe ser actual para que pueda usar estas actualizaciones adicionales.    
+      >  Microsoft no valida la fecha de expiración que especifique y no la usará para la validación de la licencia,  pero usted puede usarla como un recordatorio de la fecha de expiración. Esto es útil porque Configuration Manager busca de forma periódica nuevas actualizaciones de software que se ofrecen en línea y el estado de su licencia de Software Assurance debe ser actual para que pueda usar estas actualizaciones adicionales.    
 
       Para obtener más información, consulte [Licensing and branches for System Center Configuration Manager](/sccm/core/understand/learn-more-editions) (Licencias y ramas para System Center Configuration Manager).
 

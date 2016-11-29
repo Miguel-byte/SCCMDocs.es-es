@@ -26,7 +26,7 @@ ms.openlocfilehash: d1eb920dfed3be06837c2cd4635b61e3964cf0e5
 
 Este tema contiene información sobre seguridad y privacidad de las actualizaciones de software en System Center Configuration Manager.  
 
-##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-software-updates"></a><a name="BKMK_Security_HardwareInventory"></a> Procedimientos recomendados de seguridad para las actualizaciones de software  
+##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-software-updates"></a><a name="BKMK_Security_HardwareInventory"></a> Recomendaciones de seguridad para las actualizaciones de software  
  Use las recomendaciones de seguridad siguientes al implementar actualizaciones de software en los clientes:  
 
 -   No cambie los permisos predeterminados de los paquetes de actualización de software.  

@@ -357,7 +357,7 @@ Para la instalación y la administración de clientes para equipos Mac en System
 >   
 >  La información recopilada por CmDiagnostics se agrega a un archivo ZIP que se guarda en el escritorio del equipo con el nombre cmdiag-*<nombre de host\>***-***<fecha y hora\>*.zip.  
 
-####  <a name="a-namebkmkenrollr2a-to-enroll-the-client-by-using-the-mac-computer-enrollment-wizard"></a><a name="BKMK_EnrollR2"></a> Para inscribir el cliente mediante el Asistente para inscripción de equipos Mac  
+####  <a name="a-namebkmkenrollr2a-to-enroll-the-client-by-using-the-mac-computer-enrollment-wizard"></a><a name="BKMK_EnrollR2"></a> To enroll the client by using the Mac Computer Enrollment Wizard  
 
 1.  Cuando la instalación del cliente finaliza, se abre el Asistente para inscripción de equipos. Haga clic en **Siguiente** para continuar más allá de la página de bienvenida.  
 
@@ -383,7 +383,7 @@ Para la instalación y la administración de clientes para equipos Mac en System
 
 3.  Haga clic en **Siguiente** para continuar y, a continuación, complete el asistente.  
 
-##  <a name="a-nameuninstallmacclienta-uninstalling-the-mac-client"></a><a name="uninstallMacClient"></a> Desinstalar el cliente Mac  
+##  <a name="a-nameuninstallmacclienta-uninstalling-the-mac-client"></a><a name="uninstallMacClient"></a> Uninstalling the Mac client  
  Si desea desinstalar al cliente Mac, utilice el script CMUninstall que incluido con los archivos de cliente Mac que se descargaron a través de Internet. Utilice el procedimiento siguiente para desinstalar al cliente de Configuration Manager de los equipos Mac.  
 
 #### <a name="to-uninstall-the-mac-client"></a>Para desinstalar el cliente Mac  
@@ -399,14 +399,14 @@ Para la instalación y la administración de clientes para equipos Mac en System
 
 3.  Si es necesario, revoque o elimine manualmente el certificado de autenticación de cliente usado por Configuration Manager. CMUnistall no quita ni revoca este certificado.  
 
-##  <a name="a-namebkmkrenewa-renewing-the-mac-client-certificate"></a><a name="BKMK_Renew"></a> Renovar el certificado de cliente Mac  
+##  <a name="a-namebkmkrenewa-renewing-the-mac-client-certificate"></a><a name="BKMK_Renew"></a> Renewing the Mac client certificate  
  Utilice uno de los métodos siguientes para renovar el certificado de cliente Mac:  
 
 -   [Renewing the Mac client certificate by using the Renew Certificate Wizard](#BKMK_UI)  
 
 -   [Renewing the Mac client certificate manually](#BKMK_Man)  
 
-###  <a name="a-namebkmkuia-renewing-the-mac-client-certificate-by-using-the-renew-certificate-wizard"></a><a name="BKMK_UI"></a> Renovar el certificado de cliente Mac mediante el Asistente para renovación de certificados  
+###  <a name="a-namebkmkuia-renewing-the-mac-client-certificate-by-using-the-renew-certificate-wizard"></a><a name="BKMK_UI"></a> Renewing the Mac client certificate by using the Renew Certificate Wizard  
  Use el procedimiento siguiente para configurar y usar el Asistente para renovación de certificados en Configuration Manager.  
 
 ##### <a name="to-renew-the-mac-client-certificate-by-using-the-renew-certificate-wizard"></a>Para renovar el certificado de cliente Mac mediante el Asistente para renovar certificado  
@@ -447,7 +447,7 @@ Para la instalación y la administración de clientes para equipos Mac en System
     > [!NOTE]  
     >  Si el asistente no se inicia, o si cierra el asistente involuntariamente, haga clic en **Renovar** en la página de preferencias de **Configuration Manager** para iniciarlo.  
 
-###  <a name="a-namebkmkmana-renewing-the-mac-client-certificate-manually"></a><a name="BKMK_Man"></a> Renovar manualmente el certificado de cliente Mac  
+###  <a name="a-namebkmkmana-renewing-the-mac-client-certificate-manually"></a><a name="BKMK_Man"></a> Renewing the Mac client certificate manually  
  El período de validez normal de un certificado de cliente de Mac es 1 año Configuration Manager no renueva automáticamente el certificado de usuario que solicita durante la inscripción, por lo que deberá realizar el siguiente procedimiento para renovarlo manualmente.  
 
 > [!IMPORTANT]  
@@ -543,7 +543,7 @@ Para la instalación y la administración de clientes para equipos Mac en System
 
 17. Reinicie el equipo Mac.  
 
-##  <a name="a-namebkmkmanualcertifcateinstallationa-use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager"></a><a name="BKMK_ManualCertifcateInstallation"></a> Usar una solicitud de certificado y un método de instalación independiente de Configuration Manager  
+##  <a name="a-namebkmkmanualcertifcateinstallationa-use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager"></a><a name="BKMK_ManualCertifcateInstallation"></a> Use a certificate request and installation method that is independent from Configuration Manager  
  Cuando no use la inscripción de Configuration Manager, sino que solicite e instale el certificado de cliente independientemente de Configuration Manager, los pasos de configuración son ligeramente distintos:  
 
 1.  Realice los pasos 1, 2, 4, 6 (opcional) y 8.  

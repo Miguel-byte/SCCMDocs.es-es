@@ -39,7 +39,7 @@ Las implementaciones de sistema operativo iniciadas por el entorno PXE en System
 
  Complete las etapas de uno de los escenarios de implementación de sistema operativo y luego use las secciones siguientes para prepararse para las implementaciones iniciadas por PXE.  
 
-##  <a name="a-namebkmkconfigurea-configure-at-least-one-distribution-point-to-accept-pxe-requests"></a><a name="BKMK_Configure"></a> Configurar al menos un punto de distribución para aceptar solicitudes del entorno PXE  
+##  <a name="a-namebkmkconfigurea-configure-at-least-one-distribution-point-to-accept-pxe-requests"></a><a name="BKMK_Configure"></a> Configure al menos un punto de distribución para aceptar solicitudes PXE  
  Para implementar sistemas operativos en clientes de Configuration Manager que realizan solicitudes de arranque del entorno PXE, debe usar uno o más puntos de distribución configurados para responder a las solicitudes de arranque del entorno PXE.  Para conocer los pasos para habilitar el entorno PXE en un punto de distribución, consulte [Configuring distribution points to accept PXE requests](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint) (Configuración de puntos de distribución para aceptar solicitudes del entorno PXE).  
 
 ## <a name="prepare-a-pxe-enabled-boot-image"></a>Preparar una imagen de arranque habilitada para PXE  
@@ -47,9 +47,9 @@ Las implementaciones de sistema operativo iniciadas por el entorno PXE en System
 
 -   Para habilitar PXE en una imagen de arranque, seleccione  **Implementar esta imagen de arranque desde el punto de distribución habilitado con PXE** en la pestaña **Origen de datos** de las propiedades de la imagen de arranque.  
 
--   Si cambia las propiedades de la imagen de arranque, vuelva a distribuir dicha imagen a los puntos de distribución. Para obtener más información, consulte [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content) (Distribuir contenido).  
+-   Si cambia las propiedades de la imagen de arranque, vuelva a distribuir dicha imagen a los puntos de distribución. Para obtener más información, consulte [Distribute content (Distribución del contenido)](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
 
-##  <a name="a-namebkmkpxeexclusionlista-create-an-exclusion-list-for-pxe-deployments"></a><a name="BKMK_PXEExclusionList"></a> Crear una lista de exclusión para las implementaciones del entorno PXE  
+##  <a name="a-namebkmkpxeexclusionlista-create-an-exclusion-list-for-pxe-deployments"></a><a name="BKMK_PXEExclusionList"></a> Crear una lista de exclusión para las implementaciones de PXE  
  Si usa PXE para implementar sistemas operativos, puede crear una lista de exclusión en cada punto de distribución para omitir las solicitudes de arranque PXE de los equipos que están incluidos en la lista de exclusión. La lista de exclusión contiene las direcciones MAC de los equipos que quiere que el punto de distribución ignore. Estos equipos no recibirán las secuencias de tareas de implementación que Configuration Manager usa para la implementación del entorno PXE.  
 
  Utilice los siguientes pasos para crear la lista de exclusión de PXE.  
@@ -71,7 +71,7 @@ Las implementaciones de sistema operativo iniciadas por el entorno PXE en System
 
      No es necesario reiniciar el servidor después de realizar este cambio en el Registro.  
 
-##  <a name="a-namebkmkramdisktftparamdisk-tftp-block-size-and-window-size"></a><a name="BKMK_RamDiskTFTP"></a>Tamaño de bloque de TFTP de RamDisk y tamaño de ventana  
+##  <a name="a-namebkmkramdisktftparamdisk-tftp-block-size-and-window-size"></a><a name="BKMK_RamDiskTFTP"></a> Tamaño de bloque de TFTP de RamDisk y tamaño de ventana  
 Puede personalizar el tamaño de bloque de TFTP de RamDisk y, a partir de Configuration Manager versión 1606, el tamaño de ventana de los puntos de distribución habilitados con el entorno PXE. El hecho de haber personalizado su red podría provocar que se produjera un error de tiempo de espera en la descarga de la imagen de arranque porque el tamaño del bloque o la ventana es demasiado grande. La personalización tanto del tamaño del bloque como del de la ventana de TFTP de RamDisk le permiten optimizar el tráfico de TFTP al utilizar PXE para cumplir los requisitos de red específicos. Debe probar la configuración personalizada en su entorno para determinar lo que es más eficaz. Para obtener más información, consulte [Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP) (Personalización del tamaño de bloque de TFTP de RamDisk y el tamaño de la ventana de puntos de distribución habilitados con el entorno PXE).
 
 ## <a name="configure-deployment-settings"></a>Configurar la implementación  

@@ -130,7 +130,7 @@ Para obtener información sobre cuándo se deben preconfigurar los archivos de c
 
 Consulte las siguientes secciones para preconfigurar el contenido.  
 
-###  <a name="a-namebkmkcreateprestagedcontentfilea-step-1-create-a-prestaged-content-file"></a><a name="BKMK_CreatePrestagedContentFile"></a> Paso 1: crear un archivo de contenido preconfigurado  
+###  <a name="a-namebkmkcreateprestagedcontentfilea-step-1-create-a-prestaged-content-file"></a><a name="BKMK_CreatePrestagedContentFile"></a> Paso 1: Crear un archivo de contenido preconfigurado  
  Se puede crear un archivo de contenido preconfigurado comprimido que contenga los archivos y los metadatos asociados del contenido que se selecciona en la consola de Configuration Manager. Utilice el procedimiento siguiente para crear un archivo de contenido preconfigurado.  
 
 ##### <a name="to-create-a-prestaged-content-file"></a>Para crear un archivo de contenido preconfigurado  
@@ -176,7 +176,7 @@ Consulte las siguientes secciones para preconfigurar el contenido.
 
 11. En la página **Finalización** , compruebe que el archivo de contenido preconfigurado se creó correctamente y, a continuación, haga clic en **Cerrar**.  
 
-###  <a name="a-namebkmkassigncontenttodistributionpointa-step-2-assign-the-content-to-distribution-points"></a><a name="BKMK_AssignContentToDistributionPoint"></a> Paso 2: asignar el contenido a los puntos de distribución  
+###  <a name="a-namebkmkassigncontenttodistributionpointa-step-2-assign-the-content-to-distribution-points"></a><a name="BKMK_AssignContentToDistributionPoint"></a> Paso 2: Asignar el contenido a los puntos de distribución  
  Una vez preconfigurado el archivo de contenido, asigne el contenido a los puntos de distribución.  
 
 > [!NOTE]  
@@ -238,7 +238,7 @@ Consulte las siguientes secciones para preconfigurar el contenido.
 
 9. La página **Confirmación** muestra si el contenido se asignó correctamente o no a los puntos de distribución. Para supervisar la distribución de contenido, consulte [Monitor content you have distributed with System Center Configuration Manager](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md) (Supervisar el contenido distribuido con System Center Configuration Manager).  
 
-###  <a name="a-namebkmkexportcontentfromprestagedcontentfilea-step-3-extract-the-content-from-the-prestaged-content-file"></a><a name="BKMK_ExportContentFromPrestagedContentFile"></a> Paso 3: extraer el contenido del archivo de contenido preconfigurado  
+###  <a name="a-namebkmkexportcontentfromprestagedcontentfilea-step-3-extract-the-content-from-the-prestaged-content-file"></a><a name="BKMK_ExportContentFromPrestagedContentFile"></a> Paso 3: Extraer el contenido del archivo de contenido preconfigurado  
  Después de crear el archivo de contenido preconfigurado y asignar el contenido a puntos de distribución, puede extraer los archivos de contenido en la biblioteca de contenido de un servidor de sitio o punto de distribución. Normalmente, se copió el archivo de contenido preconfigurado en una unidad portátil, como una unidad USB, o se grabó el contenido en un medio, como un DVD, y está disponible en la ubicación del servidor de sitio o punto de distribución que necesita el contenido.  
 
  Utilice el siguiente procedimiento para exportar manualmente los archivos de contenido desde el archivo de contenido preconfigurado mediante la herramienta de línea de comandos de extraer contenido.  
@@ -279,7 +279,7 @@ Consulte las siguientes secciones para preconfigurar el contenido.
     >   
     > Configuration Manager no distribuye automáticamente la versión 2 del paquete en el punto de distribución. Debe crear un nuevo archivo de contenido preconfigurado que contenga la versión del nuevo archivo y, a continuación, extraer el contenido, actualizar el punto de distribución para distribuir los archivos cambiados o redistribuir todos los archivos en el paquete.  
 
-###  <a name="a-namebkmkdpsiteservera-how-to-prestage-content-on-a-distribution-point-on-a-site-server"></a><a name="bkmk_dpsiteserver"></a> Cómo preconfigurar el contenido en un punto de distribución de un servidor de sitio  
+###  <a name="a-namebkmkdpsiteservera-how-to-prestage-content-on-a-distribution-point-on-a-site-server"></a><a name="bkmk_dpsiteserver"></a> Preconfiguración del contenido en un punto de distribución de un servidor de sitio  
  Al instalar un punto de distribución en un servidor de sitio, debe usar el procedimiento siguiente para preconfigurar correctamente el contenido. Esto se debe a que los archivos de contenido ya están en la biblioteca de contenido.  
 
  Si el punto de distribución no está habilitado para contenido preconfigurado o no está ubicado en un servidor de sitio, consulte la sección [Usar contenido preconfigurado](#bkmk_prestage) de este tema.  

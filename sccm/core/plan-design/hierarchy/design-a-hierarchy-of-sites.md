@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d22f29ad5c5d193e387bd172899902cc1604c8a0
+ms.sourcegitcommit: 783fb4d61aab83ad64b9cec332e90d6c9de59f47
+ms.openlocfilehash: b1ed3011356a794b7b0913a1c8f189230d8957b2
 
 
 ---
@@ -28,11 +28,14 @@ ms.openlocfilehash: d22f29ad5c5d193e387bd172899902cc1604c8a0
 
 Antes de instalar el primer sitio de una nueva jerarquía de System Center Configuration Manager, debe comprender las topologías disponibles para Configuration Manager, los tipos de sitios disponibles y sus relaciones entre sí y el ámbito de administración que proporciona cada tipo de sitio. Posteriormente, después de considerar las opciones de administración de contenido que pueden reducir el número de sitios que debe instalar, puede planear una topología que satisfaga de forma eficaz sus necesidades de negocio actuales y que más tarde se pueda expandir para administrar el crecimiento futuro.  
 
+> [!NOTE]
+> Al planear una nueva instalación de Configuration Manager, tenga en cuenta las [notas de la versión]( /sccm/core/servers/deploy/install/release-notes) que detallan los problemas actuales en las versiones activas. Las notas de la versión se aplican a todas las ramas de Configuration Manager.  Sin embargo, cuando use [Technical Preview Branch]( /sccm/core/get-started/technical-preview), encontrará problemas que afectan solamente a esa rama en la documentación de cada versión de Technical Preview.  
+
 ##  <a name="a-namebkmktopologya-hierarchy-topology"></a><a name="bkmk_topology"></a> Topología de la jerarquía  
  Las topologías de las jerarquías van desde un único sitio principal independiente hasta un grupo de sitios principales y secundarios conectados con un sitio de administración central en el sitio de nivel superior (capa superior) de la jerarquía.    
 En general, el impulsor clave del tipo y del número de sitios que use en una jerarquía es el número y tipo de dispositivos que debe admitir:  
 
- **Sitio primario independiente:** use un sitio primario independiente si este puede admitir la administración de todos los dispositivos y usuarios (consulte [Sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers) [Números de tamaño y escala]). Esta también es la topología adecuada cuando las diferentes ubicaciones geográficas de sus empresas pueden atenderse correctamente mediante un solo sitio principal.  Para ayudar a administrar el tráfico de red puede usar puntos de administración preferidos y una infraestructura de contenido planeada cuidadosamente (consulte [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md) (Conceptos básicos de la administración de contenido en System Center Configuration Manager)).  
+ **Sitio primario independiente:** use un sitio primario independiente si este puede admitir la administración de todos los dispositivos y usuarios (consulte [Sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers) [Números de tamaño y escala]). Esta también es la topología adecuada cuando las diferentes ubicaciones geográficas de su empresa pueden atenderse correctamente mediante un solo sitio principal.  Para ayudar a administrar el tráfico de red puede usar puntos de administración preferidos y una infraestructura de contenido planeada cuidadosamente (consulte [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md) (Conceptos básicos de la administración de contenido en System Center Configuration Manager)).  
 
  Entre las ventajas de esta topología cabe destacar:  
 
@@ -45,7 +48,7 @@ En general, el impulsor clave del tipo y del número de sitios que use en una je
 -   Esta opción no es permanente y puede expandir una jerarquía primaria independiente hacia una jerarquía más grande con un sitio de administración central. Esto le permite instalar nuevos sitios primarios para expandir la escala de la implementación.  
 
 
-**Sitio de administración central con uno o más sitios principales secundarios:** use esta topología cuando necesite más de un sitio principal para admitir la administración de todos los dispositivos y usuarios.  Entre las ventajas de esta topología cabe destacar:  
+**Sitio de administración central con uno o más sitios principales secundarios:** Use esta topología cuando necesite más de un sitio principal para admitir la administración de todos los dispositivos y usuarios.  Entre las ventajas de esta topología cabe destacar:  
 
 -   Necesario cuando necesita utilizar más de un solo sitio primario.  
 
@@ -115,11 +118,11 @@ En general, el impulsor clave del tipo y del número de sitios que use en una je
 
 -   No necesita un punto local de conectividad para un usuario administrativo.  
 
--   Tiene que administrar la transferencia de contenido de implementación a los sitios situados más abajo en la jerarquía.  
+-   Debe administrar la transferencia de contenido de implementación a los sitios situados más abajo en la jerarquía.  
 
--   Tiene que administrar la información de cliente que se envía a sitios situados más arriba en la jerarquía.  
+-   Debe administrar la información de cliente que se envía a sitios situados más arriba en la jerarquía.  
 
- Si no desea instalar un sitio secundario y tiene clientes en ubicaciones remotas, considere la posibilidad de usar Windows BranchCache o instalar puntos de distribución habilitados para control de ancho de banda y programación. También puede usar estas opciones de administración de contenido con o sin sitios secundarios, también pueden ayudarle a reducir el número de sitios y servidores que tiene que instalar. Para obtener información sobre las opciones de administración de contenido en Configuration Manager, consulte [Determine when to use content management options](#BKMK_ChooseSecondaryorDP) (Determinar cuándo usar las opciones de administración de contenido).  
+ Si no desea instalar un sitio secundario y tiene clientes en ubicaciones remotas, considere la posibilidad de usar Windows BranchCache o instalar puntos de distribución habilitados para control de ancho de banda y programación. También puede usar estas opciones de administración de contenido con o sin sitios secundarios, y pueden ayudarle a reducir el número de sitios y servidores que debe instalar. Para obtener información sobre las opciones de administración de contenido en Configuration Manager, consulte [Determinar si se debe instalar un sitio o usar opciones de administración de contenido](#BKMK_ChooseSecondaryorDP).  
 
 
 **La siguiente información puede ayudarle a decidir cuándo instalar un sitio secundario:**  

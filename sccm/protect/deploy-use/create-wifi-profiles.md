@@ -52,7 +52,7 @@ Use perfiles de Wi-Fi en System Center Configuration Manager para implementar la
 > [!IMPORTANT]  
 >  Para implementar perfiles en dispositivos Android, iOS, Windows Phone y Windows 8.1 o posterior inscritos, estos dispositivos deben inscribirse en Microsoft Intune. Para obtener información sobre cómo inscribir dispositivos, consulte [Enroll devices for management in Intune](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune) (Inscribir dispositivos para la administración en Intune).  
 
- Cuando se crea un perfil de Wi-Fi, puede incluir una amplia gama de opciones de seguridad. Estas incluyen certificados para la validación de servidor y la autenticación de cliente que se aprovisionaron mediante perfiles de certificado de Configuration Manager. Para obtener más información sobre los perfiles de certificado, consulte [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md) (Perfiles de certificado en System Center Configuration Manager).  
+ Cuando se crea un perfil de Wi-Fi, puede incluir una amplia gama de opciones de seguridad. Estas incluyen certificados para la validación de servidor y la autenticación de cliente que se han aprovisionado mediante perfiles de certificado de Configuration Manager. Para obtener más información sobre los perfiles de certificado, consulte [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md) (Perfiles de certificado en System Center Configuration Manager).  
 
 ## <a name="steps-to-create-a-wi-fi-profile"></a>Pasos para crear un perfil de Wi-Fi  
  Utilice los pasos siguientes para crear un perfil de Wi-Fi mediante el **Asistente para crear perfil de Wi-Fi**.  
@@ -73,7 +73,7 @@ Use perfiles de Wi-Fi en System Center Configuration Manager para implementar la
 
 -   [Paso 8: Completar el asistente](#BKMK_Step8)  
 
-##  <a name="a-namebkmkstep1a-step-1-start-the-create-wi-fi-profile-wizard"></a><a name="BKMK_Step1"></a> Paso 1: iniciar el Asistente para crear perfil de Wi-Fi  
+##  <a name="a-namebkmkstep1a-step-1-start-the-create-wi-fi-profile-wizard"></a><a name="BKMK_Step1"></a> Paso 1: Iniciar el Asistente para crear perfil de Wi-Fi  
 
 1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
 
@@ -81,7 +81,7 @@ Use perfiles de Wi-Fi en System Center Configuration Manager para implementar la
 
 3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear perfil de Wi-Fi**.  
 
-##  <a name="a-namebkmkstep2a-step-2-provide-general-information-about-the-wi-fi-profile"></a><a name="BKMK_Step2"></a> Paso 2: proporcionar información general sobre el perfil de Wi-Fi  
+##  <a name="a-namebkmkstep2a-step-2-provide-general-information-about-the-wi-fi-profile"></a><a name="BKMK_Step2"></a> Paso 2: Proporcionar información general sobre el perfil de Wi-Fi  
 
 1.  En la página **General** del Asistente para crear perfil de Wi-Fi, escriba un nombre único y una descripción para el perfil de Wi-Fi. Puede utilizar un máximo de 256 caracteres.  
 
@@ -103,7 +103,7 @@ Use perfiles de Wi-Fi en System Center Configuration Manager para implementar la
 
     -   **Crítico con evento**: los equipos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Crítico** en los informes de Configuration Manager. Este nivel de gravedad también se registra como evento de Windows en el registro de eventos de la aplicación.  
 
-##  <a name="a-namebkmkstep3a-step-3-provide-information-about-the-wireless-network"></a><a name="BKMK_Step3"></a> Paso 3: proporcionar información sobre la red inalámbrica  
+##  <a name="a-namebkmkstep3a-step-3-provide-information-about-the-wireless-network"></a><a name="BKMK_Step3"></a> Paso 3: Proporcionar información sobre la red inalámbrica  
 
 1.  En la página **perfil de Wi-Fi** del Asistente para crear perfil de Wi-Fi, especifique el nombre descriptivo para la conexión a Internet inalámbrica con un máximo de 32 caracteres. Este es el nombre que los dispositivos mostrarán como nombre de red.  
 
@@ -119,7 +119,7 @@ Use perfiles de Wi-Fi en System Center Configuration Manager para implementar la
 
 5.  Si quiere permitir que los dispositivos se conecten a la red cuando no esté visible en la lista de redes (porque está oculta y no se difunde su nombre), seleccione **Conectarse cuando la red no esté difundiendo su nombre (SSID)**,  
 
-##  <a name="a-namebkmkstep4a-step-4-configure-security-for-the-wi-fi-profile"></a><a name="BKMK_Step4"></a> Paso 4: configurar la seguridad para el perfil de Wi-Fi  
+##  <a name="a-namebkmkstep4a-step-4-configure-security-for-the-wi-fi-profile"></a><a name="BKMK_Step4"></a> Paso 4: Configurar la seguridad para el perfil de Wi-Fi  
 
 > [!IMPORTANT]  
 >  Si va a crear un perfil de Wi-Fi para la Administración de dispositivos móviles local, la rama actual de Configuration Manager solo admite las siguientes configuraciones de seguridad de Wi-Fi:  
@@ -160,24 +160,24 @@ Use perfiles de Wi-Fi en System Center Configuration Manager para implementar la
 -   **Seleccionar un certificado de cliente para autenticación de cliente**: si el servidor o dispositivo de red requiere un certificado de cliente para autenticar el dispositivo que se conecta, seleccione el perfil de certificado que contiene el certificado de autenticación del cliente.  
 
 > [!NOTE]  
->  Antes de poder seleccionar el certificado raíz y el certificado de cliente, primero debe configurarlos e implementarlos como un perfil de certificado. Para obtener más información sobre los perfiles de certificado, consulte [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md) (Perfiles de certificado en System Center Configuration Manager).  
+>  Antes de poder seleccionar el certificado raíz y el certificado de cliente, primero debe configurarlos e implementarlos como un perfil de certificado. Para obtener más información sobre los perfiles de certificado, consulte [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md) (Perfiles de certificado en Configuration Manager).  
 
-##  <a name="a-namebkmkstep5a-step-5-configure-advanced-settings-for-the-wi-fi-profile"></a><a name="BKMK_Step5"></a> Paso 5: configurar opciones avanzadas del perfil de Wi-Fi  
+##  <a name="a-namebkmkstep5a-step-5-configure-advanced-settings-for-the-wi-fi-profile"></a><a name="BKMK_Step5"></a> Paso 5: Configurar opciones avanzadas del perfil de Wi-Fi  
  En la página **Configuración avanzada** del Asistente para crear perfil de Wi-Fi, especifique opciones avanzadas del perfil de Wi-Fi, como el modo de autenticación, las opciones de inicio de sesión único y la compatibilidad con FIPS (Estándar federal de procesamiento de información). Para obtener más información, consulte la documentación de Windows.  
 
 > [!NOTE]  
 >  Es posible que la configuración avanzada no esté disponible o que pueda variar según las opciones seleccionadas en la página **Configuración de seguridad** del asistente.  
 
-##  <a name="a-namebkmkstep6a-step-6-configure-proxy-settings-for-the-wi-fi-profile"></a><a name="BKMK_Step6"></a> Paso 6: configurar el proxy para el perfil de Wi-Fi  
+##  <a name="a-namebkmkstep6a-step-6-configure-proxy-settings-for-the-wi-fi-profile"></a><a name="BKMK_Step6"></a> Paso 6: Configurar el proxy para el perfil de Wi-Fi  
 
 1.  En la página **Configuración de proxy** del Asistente para crear perfil de Wi-Fi, active la casilla **Configurar proxy para este perfil de Wi-Fi** si su red inalámbrica usa un servidor proxy.  
 
 2.  Especifique los detalles sobre el servidor proxy y su configuración. Para obtener más información, consulte la documentación de Windows Server.  
 
-##  <a name="a-namebkmkstep7a-step-7-configure-supported-platforms-for-the-wi-fi-profile"></a><a name="BKMK_Step7"></a> Paso 7: configurar las plataformas admitidas para el perfil de Wi-Fi  
+##  <a name="a-namebkmkstep7a-step-7-configure-supported-platforms-for-the-wi-fi-profile"></a><a name="BKMK_Step7"></a> Paso 7: Configurar las plataformas admitidas para el perfil de Wi-Fi  
  En la página **Plataformas admitidas** del Asistente para crear perfil de Wi-Fi, seleccione los sistemas operativos en los que desea instalar el perfil de Wi-Fi. O bien, haga clic en **Seleccionar todo** para instalar el perfil de Wi-Fi en todos los sistemas operativos disponibles.  
 
-##  <a name="a-namebkmkstep8a-step-8-complete-the-wizard"></a><a name="BKMK_Step8"></a> Paso 8: completar el asistente  
+##  <a name="a-namebkmkstep8a-step-8-complete-the-wizard"></a><a name="BKMK_Step8"></a> Paso 8: Completar el asistente  
  En la página **Resumen** del asistente, revise las acciones que el asistente realizará y, a continuación, complete el asistente. El nuevo perfil de Wi-Fi se muestra en el nodo **Perfiles de Wi-Fi** en el área de trabajo **Activos y compatibilidad** .  
 
  Para obtener más información sobre cómo implementar el perfil de Wi-Fi, consulte [How to deploy Wi-Fi profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md) (Cómo implementar perfiles de Wi-Fi en System Center Configuration Manager).  

@@ -101,7 +101,7 @@ El asistente también crea implementaciones que puede utilizar para instalar las
 |&lt;Tipo de actualización\>|Estos son los tipos de actualizaciones de Configuration Manager. El asistente crea una carpeta independiente para cada tipo de actualización incluida en la agrupación de actualizaciones. Los nombres de carpeta representan los tipos de actualización. Incluyen los siguientes:<br /><br /> **Servidor**: incluye actualizaciones de los servidores de sitio, servidores de base de datos de sitio y equipos que ejecutan el proveedor de SMS.<br /><br /> **Cliente**: incluye actualizaciones del cliente de Configuration Manager.<br /><br /> **AdminConsole**: incluye actualizaciones de la consola de Configuration Manager.<br /><br /> Además de los tipos de actualización anteriores, el asistente crea una carpeta denominada **SCUP**. Esta carpeta no representa un tipo de actualización, sino que contiene el archivo .cab para Updates Publisher.|  
 |&lt;Plataforma\>|Se trata de una carpeta específica de la plataforma. Contiene archivos de actualización que son específicos de un tipo de procesador.  Estas carpetas incluyen:<br /><br />- x64<br /><br /> - I386|  
 
-##  <a name="a-namebkmkinstalla-how-to-install-updates"></a><a name="bkmk_Install"></a> Cómo instalar las actualizaciones  
+##  <a name="a-namebkmkinstalla-how-to-install-updates"></a><a name="bkmk_Install"></a> Instalación de actualizaciones  
  Para poder instalar las actualizaciones, primero debe instalar la agrupación de actualizaciones en un servidor de sitio. Cuando instala una agrupación de actualizaciones, inicia un asistente de instalación para dicha actualización. Este asistente hace lo siguiente:  
 
 -   Extrae los archivos de actualización.  
@@ -127,7 +127,7 @@ Una vez que la agrupación de actualizaciones esté instalada en un servidor de 
 
  Use la información de las secciones siguientes para instalar actualizaciones en cada uno de los componentes de Configuration Manager.  
 
-###  <a name="a-namebkmkserversa-update-servers"></a><a name="bkmk_servers"></a> Actualizar servidores  
+###  <a name="a-namebkmkserversa-update-servers"></a><a name="bkmk_servers"></a> Actualización de servidores  
  Las actualizaciones de servidores pueden incluir actualizaciones de los **sitios**, la **site database**y los equipos que ejecutan una instancia del **proveedor de SMS**:  
 
 ####  <a name="a-namebkmksitea-update-a-site"></a><a name="bkmk_site"></a> Actualizar un sitio  
@@ -200,7 +200,7 @@ Si el equipo que está actualizando ejecuta el cliente de Configuration Manager:
 
 Por ejemplo, puede usar la siguiente línea de comandos para actualizar una consola de Configuration Manager. Esta línea de comandos ejecuta MSIEXEC en el equipo y hace referencia al archivo .msp que la agrupación de actualizaciones extrajo en el servidor de sitio: **msiexec.exe /p \\\\&lt;NombreDelServidor\>\SMS_&lt;CódigoDelSitio\>\Revisión\\&lt;Número de KB\>\AdminConsole\\&lt;Plataforma\>\\&lt;msp\> /L\*v &lt;archivoDeRegistro\>REINSTALLMODE=mous REINSTALL=ALL**.  
 
-##  <a name="a-namebkmkdeploya-deploy-updates-for-configuration-manager"></a><a name="BKMK_Deploy"></a> Implementar actualizaciones de Configuration Manager  
+##  <a name="a-namebkmkdeploya-deploy-updates-for-configuration-manager"></a><a name="BKMK_Deploy"></a> Implementación de actualizaciones de Configuration Manager  
  Después de instalar la agrupación de actualizaciones en un servidor de sitio, puede usar uno de los tres métodos siguientes para implementar actualizaciones en otros equipos.  
 
 ###  <a name="a-namebkmkdeployscupa-use-updates-publisher-2011-to-install-updates"></a><a name="BKMK_DeploySCUP"></a> Usar Updates Publisher 2011 para instalar actualizaciones  
