@@ -36,7 +36,7 @@ En este artículo se presentan las características disponibles en Technical Pre
 
 **Estas son las nuevas características que puede probar con esta versión.**  
 
-## <a name="a-namedmpcategorya-automatically-categorize-devices-into-collections"></a><a name="dmp_category"></a> Clasificar automáticamente los dispositivos en colecciones
+## <a name="a-namedmpcategorya-automatically-categorize-devices-into-collections"></a><a name="dmp_category"></a> Clasificar automáticamente dispositivos en recopilaciones
 Puede crear categorías de dispositivos, que se pueden usar para colocar automáticamente los dispositivos en colecciones de dispositivos cuando se usa Configuration Manager con Microsoft Intune. Después, cuando los usuarios inscriben un dispositivo en Intune, tienen que elegir una categoría de dispositivos. Además, puede cambiar la categoría de un dispositivo desde la consola de Configuration Manager.
 
 **Importante:** Esta capacidad funciona con la versión de **junio de 2016** de Microsoft Intune. Asegúrese de haber actualizado a esta versión antes de probar estos procedimientos.
@@ -59,7 +59,7 @@ Cuando asocia una colección a una categoría de dispositivos, todos los disposi
 2.  Seleccione un dispositivo de la lista **Dispositivos** y, luego, en la pestaña **Inicio**, en el grupo **Dispositivo**, haga clic en **Cambiar categoría**.
 3.  En el cuadro de diálogo **Editar categoría de dispositivos**, elija la categoría que se va a aplicar a este dispositivo y haga clic en **Aceptar**.
 
-## <a name="a-namedmpgracea-enforcement-grace-period-for-required-application-and-software-update-deployments"></a><a name="dmp_grace"></a> Período de gracia de cumplimiento para implementaciones de actualizaciones de software y aplicaciones obligatorias
+## <a name="a-namedmpgracea-enforcement-grace-period-for-required-application-and-software-update-deployments"></a><a name="dmp_grace"></a> Período de gracia de cumplimiento para implementaciones de actualizaciones de software y aplicaciones requeridas
 
 En algunos casos, es posible que quiera dar más tiempo a los usuarios para instalar las implementaciones de aplicaciones o las actualizaciones de software necesarias más allá de los plazos que estableció. Normalmente esto es necesario cuando un equipo ha estado apagado durante un largo período de tiempo y tiene que instalar muchas implementaciones de aplicaciones o actualizaciones.
 Por ejemplo, si un usuario final acaba de volver de vacaciones, es posible que tenga que esperar bastante mientras se instalan las implementaciones de aplicaciones vencidas.
@@ -76,7 +76,7 @@ Todas las implementaciones que tienen activada esta casilla y que están destina
 Si configura un período de gracia de cumplimiento y activa la casilla de verificación, una vez que se llegue a la fecha límite de instalación de la aplicación, esta se instalará en la primera ventana que no sea de empresa configurada por el usuario hasta ese período de gracia. No obstante, el usuario puede abrir el Centro de software e instalar la aplicación en cualquier momento que quiera. Una vez que expira el período de gracia, el cumplimiento vuelve al comportamiento normal para implementaciones vencidas.
 Se han agregado opciones similares al asistente para la implementación de actualizaciones de software, al asistente para reglas de implementación automática y a las páginas de propiedades.
 
-##  <a name="a-namedmpdevgausing-configuration-manager-as-a-managed-installer-with-device-guard"></a><a name="dmp_devg"></a>Uso de Configuration Manager como instalador administrado con Device Guard
+##  <a name="a-namedmpdevgausing-configuration-manager-as-a-managed-installer-with-device-guard"></a><a name="dmp_devg"></a> Uso de Configuration Manager como un instalador administrado con protección de dispositivos
 
 Device Guard es una característica de Windows 10 que emplea características de hardware y software para controlar de forma estricta lo que se puede ejecutar en el dispositivo.
 
@@ -112,7 +112,7 @@ Lectura adicional:
 
 Para más información sobre cómo preparar el sitio e inscribir dispositivos para la administración local de dispositivos móviles, vea [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager (Administrar dispositivos móviles con la infraestructura local en System Center Configuration Manager)](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
-## <a name="a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet"></a><a name="cloud_proxy"></a>Servicio de proxy en la nube para administrar clientes en Internet
+## <a name="a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet"></a><a name="cloud_proxy"></a> Servicio de proxy en la nube para administrar clientes en Internet
 
 El servicio de proxy en la nube ofrece una manera sencilla de administrar clientes de Configuration Manager en Internet. El servicio, que se implementa en Microsoft Azure y exige una suscripción de Azure, se conecta a la infraestructura local de Configuration Manager con un nuevo rol denominado punto de conexión del proxy en la nube. Una vez implementado y configurado por completo, los clientes podrán acceder a los roles de sistema de sitio locales de Configuration Manager independientemente de si están conectados a la red interna privada o a Internet.
 
@@ -217,7 +217,7 @@ Una vez configurados por completo el servicio y los roles, los clientes internos
 
 Una vez que los clientes tengan la nueva información de ubicación del servicio de proxy en la nube, vuelva a comprobar el estado de los clientes que ya no estén en la red privada interna pero que tengan acceso a Internet. También puede supervisar el tráfico en el servicio de proxy en la nube si va a **Administración > Servicios de nube > Servicio de proxy en la nube**, selecciona el servicio en el panel de lista y ve la información de tráfico en el panel de detalles.   
 
-## <a name="a-namemanageo365amanage-the-office-365-client-agent-in-configuration-manager"></a><a name="manage_o365"></a>Administrar el agente cliente de Office 365 en Configuration Manager  
+## <a name="a-namemanageo365amanage-the-office-365-client-agent-in-configuration-manager"></a><a name="manage_o365"></a> Administrar al agente cliente de Office 365 en Configuration Manager  
 
 A partir de Technical Preview 1606, puede usar una configuración del agente cliente de Configuration Manager, en lugar de la directiva de grupo, para permitir que los clientes de Office 365 reciban actualizaciones de Configuration Manager. Después de configurar esta opción e implementar las actualizaciones de Office 365, el agente cliente de Configuration Manager se comunica con el de Office 365 para descargar las actualizaciones de Office 365 desde un punto de distribución e instalarlas. Configuration Manager también realiza un inventario de la configuración del agente cliente.
 
@@ -227,9 +227,9 @@ Para más información, vea [Manage Office 365 ProPlus updates (Administrar las 
 1.  En la consola de Configuration Manager, haga clic en **Administración** > **Información general** > **Configuración de cliente**.
 1. Abra la configuración de dispositivo adecuada para habilitar el agente cliente. Para más información sobre las configuraciones de cliente personalizada y predeterminada, vea [Cómo establecer la configuración del cliente en Configuration Manager](../../core/clients/deploy/configure-client-settings.md).
 2. Haga clic en **Actualizaciones de software** y seleccione **Sí** para el valor **Habilitar administración del Agente cliente de Office 365**.
-## <a name="a-nameosdpreservedriveletterathe-osdpreservedriveletter-task-sequence-variable-has-been-deprecated"></a><a name="osdpreservedriveletter"></a>La variable de secuencia de tareas OSDPreserveDriveLetter ha dejado de usarse
+## <a name="a-nameosdpreservedriveletterathe-osdpreservedriveletter-task-sequence-variable-has-been-deprecated"></a><a name="osdpreservedriveletter"></a> La variable de secuencia de tareas OSDPreserveDriveLetter ha dejado de usarse
 La variable de secuencia de tareas OSDPreserveDriveLetter determina si la secuencia de tareas usará o no la letra de unidad capturada en el archivo WIM de imagen de sistema operativo al aplicar esa imagen a un equipo de destino. En Technical Preview 1606, esta variable de secuencia de tareas deja de usarse. Ahora, durante una implementación del sistema operativo, el programa de instalación de Windows determina, de forma predeterminada, cuál es la mejor letra de unidad (normalmente C:). Si quiere especificar otra unidad, puede cambiar la ubicación en el paso de secuencia de tareas Aplicar el sistema operativo. Vaya al valor **Seleccione la ubicación en la que desea aplicar este sistema operativo**, seleccione **Letra de unidad lógica específica** y elija la unidad que quiere usar. Debe haber una unidad asignada con la letra que elija en el equipo de destino.
-## <a name="a-nameupdatesandservicingachanges-for-the-updates-and-servicing-node"></a><a name="updatesandservicing"></a>Cambios en el nodo Actualizaciones y mantenimiento
+## <a name="a-nameupdatesandservicingachanges-for-the-updates-and-servicing-node"></a><a name="updatesandservicing"></a> Cambios en el nodo de actualizaciones y mantenimiento
 Con Technical Preview 1606 se han presentado varios cambios que se aplican a Actualizaciones y mantenimiento en la consola de Configuration Manager:
 - **Cambio de nombre de nodo:**
 

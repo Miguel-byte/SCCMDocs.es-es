@@ -147,7 +147,7 @@ Para instalar un sitio que usa un grupo de disponibilidad de SQL Server:
 
 3.  Después de proporcionar esta información, complete la instalación con el proceso y las configuraciones normales.  
 
-##  <a name="a-namebkmkclusterserverupdatesa-service-a-server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a> Dar servicio a un clúster de servidores  
+##  <a name="a-namebkmkclusterserverupdatesa-service-a-server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a> Servicio de un clúster de servidores  
 Ahora puede crear una recopilación que contenga los servidores de un clúster y, a continuación, configurar las opciones del clúster que se usarán al implementar actualizaciones en el clúster. Puede controlar el porcentaje de los servidores que están en línea en cualquier momento, así como configurar scripts de PowerShell anteriores y posteriores a la implementación para ejecutar acciones personalizadas.  
 
 **Problemas conocidos de esta versión:**  

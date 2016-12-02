@@ -274,7 +274,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 
  Si el programa seleccionado no se ejecuta en un cliente, la secuencia de tareas tampoco se ejecuta.  
 
-##  <a name="a-namebkmktsmaintenancewindowa-use-a-maintenance-window-to-specify-when-a-task-sequence-can-run"></a><a name="BKMK_TSMaintenanceWindow"></a> Uso de una ventana de mantenimiento para especificar cuándo se puede ejecutar una tarea  
+##  <a name="a-namebkmktsmaintenancewindowa-use-a-maintenance-window-to-specify-when-a-task-sequence-can-run"></a><a name="BKMK_TSMaintenanceWindow"></a> Uso de una ventana de mantenimiento para especificar cuñando se puede ejecutar una tarea  
  Puede especificar en qué momento se puede ejecutar la secuencia de tareas mediante la definición de una ventana de mantenimiento para la recopilación que contiene los equipos de destino. Las ventanas de mantenimiento se configuran con fecha de inicio, hora de inicio y de finalización, y un patrón de periodicidad. Además, cuando establece la programación de la ventana de mantenimiento, puede especificar que la ventana de mantenimiento se aplique solo a las secuencias de tareas. Para obtener más información, consulte [How to Use Maintenance Windows in Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md) (Uso de ventanas de mantenimiento en Configuration Manager).  
 
 > [!IMPORTANT]  
@@ -288,7 +288,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
     > [!NOTE]  
     >  La cuenta de acceso de red nunca se utiliza como contexto de seguridad para ejecutar programas, instalar aplicaciones, instalar actualizaciones o ejecutar secuencias de tareas. Sin embargo, la cuenta de acceso de red se emplea para el acceso a los recursos asociados en la red.  
 
--   Si usa una imagen de arranque para iniciar una implementación de sistema operativo, Configuration Manager usa el entorno de Windows PE, que no es un sistema operativo completo. El entorno de Windows PE utiliza un nombre aleatorio, generado automáticamente, que no pertenece a ningún dominio. Si no configura la cuenta de acceso de red correctamente, el equipo podría no tener los permisos necesarios para acceder a los paquetes de Configuration Manager para completar la secuencia de tareas.  
+-   Si usa una imagen de arranque para iniciar una implementación de sistema operativo, Configuration Manager usa el entorno de Windows PE, que no es un sistema operativo completo. El entorno de Windows PE utiliza un nombre aleatorio, generado automáticamente, que no pertenece a ningún dominio. Si no configura la cuenta de acceso de red correctamente, el equipo podría no tener los permisos necesarios para acceder a los paquetes de Configuration Manager para completar la secuencia de tareas.  
 
 ##  <a name="a-namebkmktscreatemediaa-create-media-for-task-sequences"></a><a name="BKMK_TSCreateMedia"></a> Creación de medios para secuencias de tareas  
  Puede escribir secuencias de tareas y sus archivos y dependencias relacionados para diferentes tipos de medios. Esto incluye escribir en medios extraíbles como un conjunto de DVD o CD, o usar una unidad flash USB para medios de arranque, independientes o de captura, o escribir en un archivo Windows Imaging Format (WIM) para medios preconfigurados.  
@@ -301,7 +301,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 
 -   **Medio independiente**. Los medios independientes contienen la secuencia de tareas y todos los objetos asociados necesarios para ejecutar la secuencia de tareas. Las secuencias de tareas de medios independientes pueden ejecutarse cuando Configuration Manager tiene conectividad limitada a la red, o cuando no tiene conectividad. Los medios independientes pueden ejecutarse de las siguientes maneras:  
 
-    -   Si el equipo de destino no ha arrancado, se usa la imagen de Windows PE asociada a la secuencia de tareas desde el medio independiente, y se inicia la secuencia de tareas.  
+    -   Si el equipo de destino no ha arrancado, se usa la imagen de Windows PE asociada a la secuencia de tareas desde el medio independiente, y se inicia la secuencia de tareas.  
 
     -   Los medios independientes pueden iniciarse manualmente si un usuario está conectado a la red e inicia la instalación.  
 

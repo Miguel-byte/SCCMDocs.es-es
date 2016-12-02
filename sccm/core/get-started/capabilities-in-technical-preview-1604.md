@@ -106,7 +106,7 @@ En este artículo se presentan las características disponibles en Technical Pre
 > [!NOTE]  
 >  Esta opción solo está disponible en los sitios que tienen varios puntos de actualización de software.  
 
-##  <a name="a-namebkmkpeercachea-client-settings-to-manage-client-cache-settings-and-client-peer-cache"></a><a name="bkmk_peercache"></a> Configuración de cliente para administrar la configuración de caché de cliente y la caché del mismo nivel de cliente  
+##  <a name="a-namebkmkpeercachea-client-settings-to-manage-client-cache-settings-and-client-peer-cache"></a><a name="bkmk_peercache"></a> Configuración de cliente para administrar la Configuración de caché de cliente y la Caché del mismo nivel de clientes  
  La versión 1604 de Technical Preview introduce dos nuevas opciones de configuración para el cliente del dispositivo que repercuten en el uso de la caché del cliente. Las dos se pueden utilizar individualmente, pero se configuran en la misma hoja de propiedades de la configuración del cliente y se combinan para ayudarle a administrar la implementación de contenido para clientes en ubicaciones remotas.  
 
 -   La primera es la **caché del mismo nivel de cliente**, una solución integrada de Configuration Manager para que los clientes compartan contenido con otros clientes directamente desde su caché local. Para que los clientes de la Caché del mismo nivel compartan contenido, estos deben pertenecer al mismo grupo de límites. La caché del mismo nivel no reemplaza el uso de otras soluciones como BranchCache, sino que funciona en paralelo para ofrecerle más opciones que amplíen las tradicionales soluciones de implementación de contenido (como los puntos de distribución).  
@@ -156,7 +156,7 @@ Passport permite usar un gesto de usuario al iniciar sesión en lugar de una con
 
 Cuando un usuario crea un PIN de Passport, Windows envía una notificación que escucha Configuration Manager.  De este modo, Configuration Manager puede conocer rápidamente qué usuarios han creado un PIN de Passport. Configuration Manager puede entonces emitir nuevos certificados a esos usuarios si Passport se usa como proveedor de almacenamiento de claves en un perfil de certificado.  
 
-##  <a name="a-namebkmkonpremdhaa-on-premises-device-health-attestation"></a><a name="bkmk_onpremdha"></a> Atestación de estado de dispositivo local  
+##  <a name="a-namebkmkonpremdhaa-on-premises-device-health-attestation"></a><a name="bkmk_onpremdha"></a> Atestación de estado del dispositivo local  
  Ahora es posible configurar la atestación de estado para dispositivos con Windows 10 a fin de establecer comunicación mediante la infraestructura local.  Los administradores pueden especificar si la notificación se realiza a través de la nube o de recursos locales.  Si se selecciona **local** para la notificación de atestación de estado, se puede especificar un URI para el servicio. Esto permite a los equipos cliente sin acceso a Internet habilitar y administrar dispositivos con la atestación de estado.  
 
 #### <a name="enable-health-attestation-for-on-premises-devices"></a>Habilitación de la atestación de estado para dispositivos locales  
@@ -167,7 +167,7 @@ Cuando un usuario crea un PIN de Passport, Windows envía una notificación que 
 
 Para probarlo, configure el servicio de atestación de estado local mediante la configuración del agente de cliente.  
 
-##  <a name="a-namebkmksmarta-smartlock-setting-for-android-devices"></a><a name="BKMK_Smart"></a> Configuración de Smart Lock para dispositivos Android  
+##  <a name="a-namebkmksmarta-smartlock-setting-for-android-devices"></a><a name="BKMK_Smart"></a> Configuración de SmartLock para dispositivos Android  
  Se ha agregado un nuevo valor, **Permitir Smart Lock y otros agentes de confianza**, al elemento de configuración **Android y Samsung KNOX** que le permite controlar la característica Smart Lock en dispositivos Android compatibles. Esta funcionalidad del teléfono, conocida también en ocasiones como agentes de confianza, le permite deshabilitar u omitir la contraseña de la pantalla de bloqueo del dispositivo si el dispositivo está en una ubicación de confianza, como cuando se conecta a un dispositivo Bluetooth específico o cuando está cerca de una etiqueta NFC. Puede utilizar esta opción para impedir que los usuarios finales configuren SmartLock.  
 
 

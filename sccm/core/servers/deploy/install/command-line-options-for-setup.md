@@ -765,7 +765,7 @@ Utilice los siguientes datos para instalar un sitio de administración central m
 
          80 = omitir recuperación de base de datos.  
 
-    -   **Detalles:** especifica cómo recupera el programa de instalación la base de datos de sitio en SQL Server.  
+    -   **Detalles:** especifica cómo recupera el programa de instalación la base de datos de sitio en SQL Server.  
 
 -   **Nombre de clave:** ReferenceSite  
 
@@ -1029,7 +1029,7 @@ Utilice los siguientes datos para instalar un sitio de administración central m
 
          80 = omitir recuperación de base de datos.  
 
-    -   **Detalles:** especifica cómo recupera el programa de instalación la base de datos de sitio en SQL Server.  
+    -   **Detalles:** especifica cómo recupera el programa de instalación la base de datos de sitio en SQL Server.  
 
 -   **Nombre de clave:** SiteServerBackupLocation  
 

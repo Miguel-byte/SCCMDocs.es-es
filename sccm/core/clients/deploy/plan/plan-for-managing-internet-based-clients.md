@@ -71,7 +71,7 @@ La administración de cliente basada en Internet le permite administrar clientes
 -   Punto de actualización de software  
 
  **Sobre los sistemas de sitio con conexión a Internet:**   
-Aunque no es necesario tener una relación de confianza entre el bosque de un cliente y el de un servidor de sistema de sitio, cuando el bosque que contiene un sistema de sitio con conexión a Internet confía en el bosque que contiene las cuentas de usuario, esta configuración admite directivas basadas en usuario para los dispositivos en Internet si se habilita la configuración de cliente de **directiva de cliente ****Habilitar solicitudes de directiva de usuario de clientes de Internet**.  
+Aunque no es necesario tener una relación de confianza entre el bosque de un cliente y el de un servidor de sistema de sitio, cuando el bosque que contiene un sistema de sitio con conexión a Internet confía en el bosque que contiene las cuentas de usuario, esta configuración admite directivas basadas en usuario para los dispositivos en Internet si se habilita la configuración de cliente de **directiva de cliente** **Habilitar solicitudes de directiva de usuario de clientes de Internet**.  
 
  Por ejemplo, las configuraciones siguientes ilustran cuándo la administración de cliente basada en Internet es compatible con las directivas de usuario para dispositivos de Internet:  
 

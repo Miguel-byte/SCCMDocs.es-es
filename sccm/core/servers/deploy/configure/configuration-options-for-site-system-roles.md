@@ -54,7 +54,7 @@ La mayoría de las opciones de configuración de los roles de sistema de sitio d
 
  Para ver un ejemplo de implementación del certificado de servidor y obtener información sobre cómo configurarlo en IIS, vea la sección *Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS* del tema [Ejemplo paso a paso de implementación de los certificados PKI para Configuration Manager: Entidad de certificación de Windows Server 2008](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
-##  <a name="a-namebkmkcertificateregistrationpointa-certificate-registration-point"></a><a name="BKMK_CertificateRegistrationPoint"></a> Punto de registro de certificados  
+##  <a name="a-namebkmkcertificateregistrationpointa-certificate-registration-point"></a><a name="BKMK_CertificateRegistrationPoint"></a> Punto de registro de certificado  
  Para más información sobre cómo configurar el punto de registro de certificados, vea [Introducción a perfiles de certificado](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
 
 ##  <a name="a-namebkmkdistributionpointa-distribution-point"></a><a name="BKMK_Distribution_Point"></a> Punto de distribución  

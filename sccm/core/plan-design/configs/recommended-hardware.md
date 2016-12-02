@@ -44,7 +44,7 @@ Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas
 
 ###  <a name="a-namebkmkscalesiteservera-site-servers"></a><a name="bkmk_ScaleSiteServer"></a> Servidores de sitio  
 
-|Sitio primario independiente|Núcleos de CPU|GB de memoria|Asignación de % memoria para SQL Server|  
+|Sitio primario independiente|Núcleos de CPU|GB de memoria|Asignación de % memoria para SQL Server|  
 |-------------------------------|---------------|---------------|----------------------------------------|  
 |Servidor de sitio primario independiente con el rol de sitio de base de datos en el mismo servidor<sup>1</sup>|16|96|80|  
 |Servidor de sitio primario independiente con una base de datos de sitio remoto|8|16|-|  
@@ -57,7 +57,7 @@ Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas
 |Servidor de bases de datos remoto para un sitio primario secundario|16|64|90|  
 |Servidor de sitio secundario|8|16|-|  
 
- <sup>1</sup> Si el servidor de sitio y SQL Server están instalados en el mismo equipo, la implementación admite los [números de tamaño y escala](/sccm/core/plan-design/configs/size-and-scale-numbers) máximos para sitios y clientes, aunque esta configuración puede limitar las [opciones de alta disponibilidad para System Center Configuration Manager](/sccm/protect/understand/high-availability-options), como el uso de un clúster de SQL Server.  Además, debido a los mayores requisitos de E/S necesarios para admitir SQL Server y el servidor de sitio de Configuration Manager cuando ambos se ejecutan en el mismo equipo, los clientes con implementaciones de mayor tamaño deben considerar el uso de una configuración con una máquina de SQL Server remota.  
+ <sup>1</sup> Si el servidor de sitio y SQL Server están instalados en el mismo equipo, la implementación admite los [números de tamaño y escala](/sccm/core/plan-design/configs/size-and-scale-numbers) máximos para sitios y clientes. aunque esta configuración puede limitar las [opciones de alta disponibilidad para System Center Configuration Manager](/sccm/protect/understand/high-availability-options), como el uso de un clúster de SQL Server.  Además, debido a los mayores requisitos de E/S necesarios para admitir SQL Server y el servidor de sitio de Configuration Manager cuando ambos se ejecutan en el mismo equipo, los clientes con implementaciones de mayor tamaño deben considerar el uso de una configuración con una máquina de SQL Server remota.  
 
 ###  <a name="a-namebkmkremotesitesystema-remote-site-system-servers"></a><a name="bkmk_RemoteSiteSystem"></a> Servidores del sistema de sitio remoto  
  Las instrucciones siguientes están destinadas para equipos que tienen un solo rol de sistema de sitio. Planee realizar ajustes al instalar varios roles de sistema de sitio en el mismo equipo.  

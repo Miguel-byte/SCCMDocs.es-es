@@ -113,7 +113,7 @@ Antes de implementar el contenido en System Center Configuration Manager, tómes
 -   La cuenta debe tener permisos de **Lectura** para la base de datos del sitio.  
 
 Por ejemplo, si el centro de datos tiene una red perimetral en un bosque que no sea ni el servidor del sitio ni la base de datos del sitio, puede utilizar esta cuenta para leer información de multidifusión desde la base de datos del sitio.  
-Si crea esta cuenta, créela como una cuenta local con derechos reducidos en el equipo que ejecuta Microsoft SQL Server.  
+Si crea esta cuenta, créela como una cuenta local con derechos reducidos en el equipo que ejecuta Microsoft SQL Server.  
 
 > [!IMPORTANT]  
 >  No conceda a esta cuenta derechos de inicio de sesión interactivo.  

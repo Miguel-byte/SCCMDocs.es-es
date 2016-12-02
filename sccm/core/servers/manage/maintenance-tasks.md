@@ -101,7 +101,7 @@ Algunas tareas no hay que realizarlas durante el mantenimiento diario o semanal,
 
 -   Compruebe el estado general del sitio.  
 
-###  <a name="a-namebkmkusemtsa-maintain-the-operational-health-of-your-site-database"></a><a name="BKMK_UseMTs"></a> Mantenimiento del estado operativo de la base de datos.  
+###  <a name="a-namebkmkusemtsa-maintain-the-operational-health-of-your-site-database"></a><a name="BKMK_UseMTs"></a> Mantenimiento del estado operativo de la base de datos  
  Mientras el sitio y la jerarquía de Configuration Manager ejecutan las tareas que el usuario programa y configura, los componentes de sitio agregan continuamente datos a la base de datos de Configuration Manager. A medida que aumenta la cantidad de datos, disminuye el rendimiento de la base de datos y el espacio de almacenamiento libre de la base de datos. Puede configurar las tareas de mantenimiento de sitio para quitar los datos antiguos que ya no necesita.  
 
  Configuration Manager proporciona tareas de mantenimiento predefinidas que puede usar para mantener el estado de la base de datos de Configuration Manager. De forma predeterminada, no todas las tareas de mantenimiento están disponibles en cada sitio; algunas están habilitadas y otras no, y todas ellas admiten una programación que puede configurar para cuando se ejecuten.  

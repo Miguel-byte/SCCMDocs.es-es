@@ -66,7 +66,7 @@ En la versión Technical Preview 1601, hemos agregado compatibilidad con las sig
 
 -   **Compatibilidad de acceso condicional para equipos administrados por System Center Configuration Manager**  
 
-     Ahora puede establecer directivas de acceso condicional para equipos administrados por System Center Configuration Manager, lo que requiere que los equipos sean conformes a la directiva de cumplimiento con el fin de obtener acceso a los servicios Exchange Online y SharePoint Online.  Con esta nueva característica, también puede registrar equipos en Azure AD a través de la directiva de cumplimiento, así como supervisar y notificar sobre el registro en Azure AD.  
+     Ahora puede establecer directivas de acceso condicional para equipos administrados por System Center Configuration Manager, lo que requiere que los equipos sean conformes a la directiva de cumplimiento con el fin de obtener acceso a los servicios Exchange Online y SharePoint Online.  Con esta nueva característica, también puede registrar equipos en Azure AD a través de la directiva de cumplimiento, así como supervisar y notificar sobre el registro en Azure AD.  
 
     > [!NOTE]  
     >  Windows 10 aún no admite el acceso condicional.  
@@ -81,7 +81,7 @@ En la versión Technical Preview 1601, hemos agregado compatibilidad con las sig
 
     Para usar esta opción, debe crear una directiva de cumplimiento en Configuration Manager con las reglas específicas que se describen a continuación y establecer una directiva de acceso condicional en la consola de Intune.  Además, para asegurarse de que se permita el acceso únicamente a los equipos compatibles, debe establecer el requisito de equipo Windows en la opción **Los dispositivos deben ser compatibles**. A continuación se detallan las reglas de directiva de cumplimiento que se aplican a los equipos administrados por System Center Configuration Manager.  
 
-    -   **Requiere registro en Azure Active Directory:** esta regla comprueba si el dispositivo del usuario está unido al área de trabajo en Azure AD y, si no, se registra automáticamente en Azure AD. El registro automático solo se admite en Windows 8.1. Para equipos con Windows 7, implemente un archivo MSI para realizar el registro automático. Para más información, vea [aquí](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   **Requiere registro en Azure Active Directory:** esta regla comprueba si el dispositivo del usuario está unido al área de trabajo en Azure AD y, si no, se registra automáticamente en Azure AD. El registro automático solo se admite en Windows 8.1. Para equipos con Windows 7, implemente un archivo MSI para realizar el registro automático. Para más información, vea [aquí](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
 
     -   **Se han instalado todas las actualizaciones necesarias con una caducidad superior a X días:** esta regla comprueba si el dispositivo del usuario tiene todas las actualizaciones necesarias (especificadas en la regla **Actualizaciones automáticas requeridas**) dentro de la fecha límite y el período de gracia especificados e instala automáticamente cualquier actualización necesaria pendiente.  
 
@@ -125,8 +125,8 @@ En la versión Technical Preview 1601, hemos agregado compatibilidad con las sig
 
      Para usar esta opción, vaya a la página **General** del **Asistente de configuración de directivas de acceso condicional** de Exchange local.  
 
-##  <a name="a-namebkmkclientstatusa-client-online-status"></a><a name="bkmk_clientStatus"></a> Estado de conexión de cliente  
-A partir de Technical Preview 1601, se puede identificar de un vistazo si un cliente está o no conectado en la consola de Configuration Manager. Con iconos y columnas actualizados en las listas de dispositivos de la consola, puede evaluar el estado de los clientes en el entorno para identificar las áreas problemáticas y otros inconvenientes que podrían requerir su atención.  
+##  <a name="a-namebkmkclientstatusa-client-online-status"></a><a name="bkmk_clientStatus"></a> Estado de conexión de clientes  
+A partir de Technical Preview 1601, se puede identificar de un vistazo si un cliente está o no conectado en la consola de Configuration Manager. Con iconos y columnas actualizados en las listas de dispositivos de la consola, puede evaluar el estado de los clientes en el entorno para identificar las áreas problemáticas y otros inconvenientes que podrían requerir su atención.  
 
 Un cliente está en línea si en ese momento está conectado a un rol de sistema de sitio del punto de administración de Configuration Manager. Siempre que el punto de administración reciba mensajes de tipo ping provenientes del cliente, su estado será en línea. Si la administración no recibe un mensaje durante un período de cinco minutos, el estado del cliente cambia a sin conexión.  
 
@@ -166,7 +166,7 @@ Un cliente está en línea si en ese momento está conectado a un rol de sistema
 
  Configuration Manager ahora ayuda a administrar las aplicaciones adquiridas a través de este tipo de programa al importar la información de licencia desde la tienda de aplicaciones y realizar el seguimiento de la cantidad de licencias que se han usado.  
 
- Para obtener detalles, vea [Manage apps you purchased through a volume-purchase program with Configuration Manager (Administrar aplicaciones compradas a través de un programa de compras por volumen con Configuration Manager)](https://technet.microsoft.com/library/mt627954.aspx).  
+ Para obtener detalles, vea [Manage apps you purchased through a volume-purchase program with Configuration Manager (Administrar aplicaciones compradas a través de un programa de compras por volumen con Configuration Manager)](https://technet.microsoft.com/library/mt627954.aspx).  
 
 ### <a name="ios---app-configuration-for-applicationsbr-hybrid"></a>iOS: configuración de aplicaciones para aplicaciones<br />híbridas  
  Algunas aplicaciones de iOS admiten la configuración previa de, por ejemplo, un servidor o una base de datos a los que debe conectarse la aplicación. Configuration Manager ahora admite la implementación de directivas de configuración de aplicación en el dispositivo, lo que permite que el usuario use la aplicación de inmediato sin necesidad de conocer esta información. Los desarrolladores deben habilitar esta característica en sus aplicaciones.  
@@ -197,15 +197,15 @@ Un cliente está en línea si en ese momento está conectado a un rol de sistema
 ##  <a name="a-namebkmkcompliance1601a-improvements-to-compliance-settings"></a><a name="bkmk_compliance1601"></a> Mejoras en la configuración de cumplimiento  
  En la versión Technical Preview 1601, hemos agregado compatibilidad con las siguientes características:  
 
-### <a name="microsoft-edge-browser-settings"></a>Configuración del explorador Microsoft Edge  
- Se han agregado nuevas opciones para el explorador Microsoft Edge al elemento de configuración de **Windows 8.1 y Windows 10** (se aplican a dispositivos de Windows 10 únicamente).  
+### <a name="microsoft-edge-browser-settings"></a>Configuración del explorador Microsoft Edge  
+ Se han agregado nuevas opciones para el explorador Microsoft Edge al elemento de configuración de **Windows 8.1 y Windows 10** (se aplican a dispositivos de Windows 10 únicamente).  
 
  Para ver las nuevas opciones, elija **Microsoft Edge** en la página **Configuración del dispositivo** del elemento de configuración en el asistente **Crear elemento de configuración**.  
 
  Para más información, vea [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client (Cómo crear elementos de configuración para dispositivos de Windows 8.1 y Windows 10 administrados sin el cliente de System Center Configuration Manager)](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
 
-### <a name="compliance-settings-for-windows-10-team-devices"></a>Configuración de cumplimiento para dispositivos Windows 10 Team  
- Use la nueva configuración de cumplimiento para configurar dispositivos que ejecutan Windows 10 Team, como los dispositivos Surface Hub.  
+### <a name="compliance-settings-for-windows-10-team-devices"></a>Configuración de cumplimiento para dispositivos Windows 10 Team  
+ Use la nueva configuración de cumplimiento para configurar dispositivos que ejecutan Windows 10 Team, como los dispositivos Surface Hub.  
 
  Para ver las nuevas opciones, elija **Windows 10 Team** en la página **Configuración del dispositivo** del elemento de configuración en el asistente **Crear elemento de configuración**.  
 

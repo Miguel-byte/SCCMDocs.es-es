@@ -134,7 +134,7 @@ Para más información sobre cómo configurar este método de detección, vea [C
 > [!TIP]  
 >  Además de la información de esta sección, vea [Características comunes de la detección de grupos, sistemas y usuarios de Active Directory](#bkmk_shared).  
 
-Use este método de detección para buscar en las ubicaciones especificadas de Active Directory Domain Services (AD DS) recursos informáticos que se puedan usar para crear colecciones y consultas. También puede instalar el cliente de Configuration Manager en un dispositivo detectado mediante la instalación de inserción de cliente.  
+Use este método de detección para buscar en las ubicaciones especificadas de Active Directory Domain Services (AD DS) recursos informáticos que se puedan usar para crear colecciones y consultas. También puede instalar el cliente de Configuration Manager en un dispositivo detectado mediante la instalación de inserción de cliente.  
 
 De forma predeterminada, este método detecta información básica sobre el equipo, incluido lo siguiente:  
 
@@ -158,7 +158,7 @@ Las acciones de detección de sistemas de Active Directory se registran en el ar
 
 Para más información sobre cómo configurar este método de detección, vea [Configurar métodos de detección para System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
 
-##  <a name="a-namebkmkaboutusera-active-directory-user-discovery"></a><a name="bkmk_aboutUser"></a> Detección de usuarios de Active Directory  
+##  <a name="a-namebkmkaboutusera-active-directory-user-discovery"></a><a name="bkmk_aboutUser"></a> Detección de usuario de Active Directory  
 **Configurable:** Sí  
 
 **Habilitado de forma predeterminada:** No  
@@ -172,7 +172,7 @@ Para más información sobre cómo configurar este método de detección, vea [C
 > [!TIP]  
 >  Además de la información de esta sección, vea [Características comunes de la detección de grupos, sistemas y usuarios de Active Directory](#bkmk_shared).  
 
-Use este método de detección para buscar en Active Directory Domain Services (AD DS) e identificar cuentas de usuario y atributos asociados.  De forma predeterminada, este método detecta información básica sobre la cuenta de usuario, incluido lo siguiente:  
+Use este método de detección para buscar en Active Directory Domain Services (AD DS) e identificar cuentas de usuario y atributos asociados.  De forma predeterminada, este método detecta información básica sobre la cuenta de usuario, incluido lo siguiente:  
 
 -   Nombre de usuario  
 
@@ -367,9 +367,9 @@ En el diagrama siguiente se muestra qué encuentra la detección de redes de sol
 
  Al ejecutar una detección de redes de solo topología desde el servidor 1 con un salto de enrutador, se detecta lo siguiente:  
 
--   Enrutador 1 y subred 10.1.10.0 (encontrados con cero saltos).  
+-   Enrutador 1 y subred 10.1.10.0 (encontrados con cero saltos).  
 
--   Subredes 10.1.20.0 y 10.1.30.0, subred A y enrutador 2 (encontrados en el primer salto).  
+-   Subredes 10.1.20.0 y 10.1.30.0, subred A y enrutador 2 (encontrados en el primer salto).  
 
 > [!WARNING]  
 >  Cada incremento del número de saltos de enrutador puede aumentar significativamente el número de recursos detectables y el ancho de banda de red que consume la detección de redes.  
@@ -459,7 +459,7 @@ Para usar esta opción:
 
 -   Los equipos deben estar configurados para actualizar el atributo **lastLogonTimeStamp** en Active Directory Domain Services.  
 
--   El nivel funcional de dominio de Active Directory debe estar establecido en Windows Server 2003 o posterior.  
+-   El nivel funcional de dominio de Active Directory debe estar establecido en Windows Server 2003 o posterior.  
 
 Al configurar el tiempo después del último inicio de sesión que quiere usar para esta configuración, tenga en cuenta el intervalo para la replicación entre controladores de dominio.  
 

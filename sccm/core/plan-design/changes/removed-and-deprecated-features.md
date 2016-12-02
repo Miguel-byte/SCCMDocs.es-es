@@ -65,7 +65,7 @@ En este tema se describen las características, los productos y los sistemas ope
 |Windows XP|7/10/2015|√|  
 |Windows XP Embedded|7/10/2015|El soporte técnico termina con la primera actualización publicada después del 31/12/2016|  
 |Windows Server 2003|7/10/2015|√|  
-|Windows Server 2003 R2|7/10/2015|√|  
+|Windows Server 2003 R2|7/10/2015|√|  
 |Windows Vista|7/10/2015|√|  
 |Mac OS X  10.6 - 10.8|7/10/2015|√|  
 |Windows Mobile 6.0 - 6.5|7/10/2015|√|  

@@ -177,7 +177,7 @@ Si necesita ayuda con cualquiera de estas opciones, abra [Administrar la configu
 - **Permitir a Cortana**
 - **Permitir notificaciones del centro de actividades**
 
-### <a name="new-settings-for-windows-10-team-devices"></a>Nuevas opciones para dispositivos Windows 10 Team
+### <a name="new-settings-for-windows-10-team-devices"></a>Nuevas opciones para dispositivos Windows 10 Team
 
 #### <a name="device-settings"></a>Configuración del dispositivo
 
@@ -187,7 +187,7 @@ Si necesita ayuda con cualquiera de estas opciones, abra [Administrar la configu
 - **URL de imagen de fondo de pantalla de bloqueo**
 
 
-### <a name="new-settings-for-windows-81-devices"></a>Nuevas opciones para dispositivos Windows 8.1
+### <a name="new-settings-for-windows-81-devices"></a>Nuevas opciones para dispositivos Windows 8.1
 
 #### <a name="applicability-settings"></a>Configuración de la aplicación
 
@@ -319,7 +319,7 @@ Con esta configuración:
 Mediante la configuración de los distintos grupos vecinos para que estén disponibles en momentos diferentes, se controla cuándo se agregan puntos de distribución concretos como ubicación de origen de contenido y cuándo, o si, el cliente usa la reserva del grupo de límites de sitio predeterminado como una red de seguridad para el contenido que no está disponible desde cualquier otra ubicación.
 
 
-### <a name="a-namebkmkupdateaupdate-existing-boundary-groups-to-the-new-model"></a><a name="bkmk_update"></a>Actualizar grupos de límites existentes al nuevo modelo
+### <a name="a-namebkmkupdateaupdate-existing-boundary-groups-to-the-new-model"></a><a name="bkmk_update"></a> Actualizar grupos de límites existentes al nuevo modelo
 Al instalar la versión 1609 y actualizar el sitio, se realizan automáticamente las siguientes configuraciones. Su objetivo es garantizar que el comportamiento de reserva actual siga estando disponible hasta que configure nuevos grupos de límites y relaciones.  
 -   Se agregan puntos de distribución sin proteger en un sitio al grupo de límites
 *Default-Site-Boundary-Group\<sitecode>* de ese sitio.
@@ -392,7 +392,7 @@ Si decide no implementar el paquete en el asistente, vaya al paso 9.
 >[!NOTE]
 >Después de implementar las aplicaciones de Office 365, puede crear reglas de implementación automática para mantener esas aplicaciones. Para crear una ADR para aplicaciones de Office 365, haga clic en **Crear una ADR** y seleccione **Cliente de Office 365** al elegir el producto. Para más información, vea [Implementar actualizaciones de software automáticamente](/sccm/sum/deploy-use/automatically-deploy-software-updates).
 
-## <a name="a-namebkmkueficonversionaimprovements-for-bios-to-uefi-conversion"></a><a name="BKMK_UEFIConversion"></a>Mejoras en BIOS para la conversión UEFI
+## <a name="a-namebkmkueficonversionaimprovements-for-bios-to-uefi-conversion"></a><a name="BKMK_UEFIConversion"></a> Mejoras en BIOS para la conversión UEFI
 Ahora puede personalizar una secuencia de tareas de implementación de sistema operativo con una nueva variable, TSUEFIDrive, para que el paso Reiniciar el equipo prepare una partición FAT32 en la unidad de disco duro para la transición a UEFI. En el procedimiento siguiente se proporciona un ejemplo de cómo crear pasos de secuencia de tareas para preparar la unidad de disco duro para la conversión de BIOS en UEFI.
 
 #### <a name="to-prepare-the-fat32-partition-for-the-conversion-to-uefi"></a>Para preparar la partición FAT32 para la conversión a UEFI:

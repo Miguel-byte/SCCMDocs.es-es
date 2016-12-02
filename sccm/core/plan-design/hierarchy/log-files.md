@@ -417,7 +417,7 @@ El cliente de Configuration Manager para equipos Mac registra información en lo
 ##  <a name="a-namebkmkfunctionlogsa-log-files-for-configuration-manager-functionality"></a><a name="BKMK_FunctionLogs"></a> Archivos de registro para las funcionalidades de Configuration Manager  
  En las secciones siguientes se muestran archivos de registro relacionados con las funciones de Configuration Manager.  
 
-###  <a name="a-namebkmkappmanageloga-application-management"></a><a name="BKMK_AppManageLog"></a> Administración de aplicaciones:  
+###  <a name="a-namebkmkappmanageloga-application-management"></a><a name="BKMK_AppManageLog"></a> Administración de aplicaciones  
  En la tabla siguiente se incluyen los archivos de registro que contienen información relacionada con la administración de aplicaciones.  
 
 |Nombre del registro|Descripción|Equipo con el archivo de registro|  

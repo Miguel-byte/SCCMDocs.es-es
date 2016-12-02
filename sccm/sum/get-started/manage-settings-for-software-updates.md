@@ -20,9 +20,9 @@ ms.openlocfilehash: 4d7ffc12a3626f35a4481a3dcaed40abc0bbdac0
 
 ---
 
-#  <a name="a-namebkmkmanagesusettingsa-manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a> Administración de la configuración de las actualizaciones de software  
+#  <a name="a-namebkmkmanagesusettingsa-manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a> Administrar la configuración de las actualizaciones de software  
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 Después de sincronizar las actualizaciones de software en Configuration Manager, configure y compruebe la configuración en las secciones siguientes.
 
@@ -36,7 +36,7 @@ Para obtener información sobre cómo especificar la configuración de cliente, 
 
 Para obtener más información sobre la configuración de cliente, vea [Acerca de la configuración de cliente](../../core/clients/deploy/about-client-settings.md).  
 
-##  <a name="a-namebkmkgrouppolicya-group-policy-settings-for-software-updates"></a><a name="BKMK_GroupPolicy"></a> Configuración de directiva de grupo para las actualizaciones de software  
+##  <a name="a-namebkmkgrouppolicya-group-policy-settings-for-software-updates"></a><a name="BKMK_GroupPolicy"></a> Configuración de directiva de grupo para actualizaciones de software  
 Hay configuraciones de directiva de grupo específicas empleadas por el Agente de Windows Update (WUA) en equipos cliente para conectarse a WSUS que se ejecuta en el punto de actualización de software. Esta configuración de directiva de grupo también se usa para analizar correctamente la compatibilidad de las actualizaciones de software y actualizar automáticamente las actualizaciones de software y el WUA.
 
 ### <a name="specify-intranet-microsoft-update-service-location-local-policy"></a>Directiva local que especifica la ubicación del servicio Microsoft Update en la intranet  
@@ -65,7 +65,7 @@ Utilice el procedimiento siguiente para abrir las propiedades de la actualizaci�
    > [!NOTE]  
    >  En el nodo **Todas las actualizaciones de software**, Configuration Manager solo muestra las actualizaciones de software con una clasificación de **Crítico** y **Seguridad** publicadas en los últimos 30 días.  
 
-###  <a name="a-namebkmksoftwareupdatesinformationa-review-software-updates-information"></a><a name="BKMK_SoftwareUpdatesInformation"></a> Revisión de la información de las actualizaciones de software  
+###  <a name="a-namebkmksoftwareupdatesinformationa-review-software-updates-information"></a><a name="BKMK_SoftwareUpdatesInformation"></a> Revisar la información de la actualización de software  
 En las propiedades de la actualización de software, puede revisar información detallada acerca de una actualización de software. No se muestra la información detallada cuando seleccione más de una actualización de software. Las secciones siguientes describen la información que está disponible para una actualización de software seleccionada.  
 
 ####  <a name="a-namebkmksoftwareupdatedetailsa-software-update-details"></a><a name="BKMK_SoftwareUpdateDetails"></a> Detalles de la actualización de software  
@@ -108,10 +108,10 @@ En la pestaña **Información de sustitución** , puede ver la siguiente informa
 
 - **Esta actualización sustituye a las siguientes actualizaciones**: especifica las actualizaciones de software que sustituye esta actualización de software, lo cual significa que esta actualización de software es más reciente. En la mayoría de los casos, se implementará esta actualización de software para reemplazar las actualizaciones de software sustituidas. Las actualizaciones de software que se muestran en la lista contienen hipervínculos a páginas web que proporcionan más información acerca de las actualizaciones de software. Si esta actualización no sustituye a ninguna otra, aparecerá **Ninguno** .  
 
-###  <a name="a-namebkmksoftwareupdatessettingsa-configure-software-updates-settings"></a><a name="BKMK_SoftwareUpdatesSettings"></a> Configuración de opciones de las actualizaciones de software  
+###  <a name="a-namebkmksoftwareupdatessettingsa-configure-software-updates-settings"></a><a name="BKMK_SoftwareUpdatesSettings"></a> Configurar opciones de actualización de software  
 En las propiedades, se pueden configurar las opciones de actualización de software de una o varias actualizaciones de software. La mayoría de las opciones de actualización de software sólo se pueden configurar en el sitio de administración central o en el sitio primario independiente. La información de las siguientes secciones le permitirá configurar las opciones de las actualizaciones de software.  
 
-####  <a name="a-namebkmksetmaxruntimea-set-maximum-run-time"></a><a name="BKMK_SetMaxRunTime"></a> Establecimiento del tiempo máximo de ejecución  
+####  <a name="a-namebkmksetmaxruntimea-set-maximum-run-time"></a><a name="BKMK_SetMaxRunTime"></a> Establecer el tiempo máximo de ejecución  
 En la pestaña **Duración máxima de la ejecución** , establezca el período de tiempo máximo que se asigna a una actualización de software para completarse en equipos cliente. Si la actualización supera el valor de este período máximo, Configuration Manager crea un mensaje de estado y detiene la supervisión de la implementación para la instalación de actualizaciones de software. Esta opción sólo se puede configurar en un sitio primario independiente o en el sitio de administración central.  
 
 Configuration Manager también utiliza esta opción para determinar si la instalación de las actualizaciones de software se van a iniciar dentro de una ventana de mantenimiento configurada. Si este período máximo de tiempo es mayor que el tiempo restante disponible en la ventana de mantenimiento, la instalación de actualizaciones de software se pospone hasta el inicio de la siguiente ventana de mantenimiento. Si se van a instalar varias actualizaciones de software en un equipo cliente con una ventana de mantenimiento configurada (período de tiempo), las actualizaciones de software irán instalando desde la que tiene la duración de ejecución más baja hasta la más alta. Antes de instalar cada actualización de software, el cliente comprueba que la ventana de mantenimiento disponible proporcionará tiempo suficiente para instalar la actualización de software. Una vez iniciada la instalación de una actualización de software, su proceso de instalación continuará aunque su duración sea más prolongada que la ventana de mantenimiento. Para obtener más información sobre las ventanas de mantenimiento, consulte [How to use maintenance windows in System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md) (Uso de ventanas de mantenimiento en System Center Configuration Manager).  
@@ -123,7 +123,7 @@ En la pestaña **Duración máxima de la ejecución** , puede ver y configurar l
 > [!IMPORTANT]  
 >  Asegúrese de establecer un valor de duración máxima de la ejecución que sea menor que la duración de la ventana de mantenimiento. De lo contrario, la instalación de la actualización de software no se iniciará.  
 
-####  <a name="a-namebkmksetcustomseveritya-set-custom-severity"></a><a name="BKMK_SetCustomSeverity"></a> Establecimiento de gravedad personalizada  
+####  <a name="a-namebkmksetcustomseveritya-set-custom-severity"></a><a name="BKMK_SetCustomSeverity"></a> Establecer gravedad personalizada  
 En las propiedades de una actualización de software, puede utilizar la pestaña **Gravedad personalizada** para configurar los valores de gravedad personalizada de las actualizaciones de software. Esto puede ser necesario si los valores de gravedad predefinidos no satisfacen sus necesidades. Los valores personalizados se incluyen en la columna **Gravedad personalizada** de la consola de Configuration Manager. Puede ordenar las actualizaciones de software por los valores de gravedad personalizada definidos, y también puede crear consultas e informes que puedan filtrar en estos valores. Esta opción sólo se puede configurar en un sitio de administración central o un sitio primario independiente.  
 
 Puede configurar las siguientes opciones en la pestaña **Gravedad personalizada** .  

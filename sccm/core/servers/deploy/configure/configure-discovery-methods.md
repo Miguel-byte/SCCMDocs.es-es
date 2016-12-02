@@ -44,7 +44,7 @@ Puede configurar métodos de detección para que se ejecuten en un sitio de Syst
 4.  Haga clic en **Aceptar** para guardar la configuración.  
 
 
-##  <a name="a-namebkmkconfigadforestdisca-configure-active-directory-forest-discovery"></a><a name="BKMK_ConfigADForestDisc"></a> Configurar la detección de bosques de Active Directory  
+##  <a name="a-namebkmkconfigadforestdisca-configure-active-directory-forest-discovery"></a><a name="BKMK_ConfigADForestDisc"></a> Configuración de la detección de bosques de Active Directory  
  Para completar la configuración de la detección de bosques de Active Directory, debe realizar configuraciones en dos ubicaciones:  
 
 -   En el nodo **Métodos de detección** , puede habilitar este método de detección, definir una programación de sondeo y seleccionar si la detección crea automáticamente límites para las subredes y los sitios de Active Directory que detecta.  
@@ -89,7 +89,7 @@ Puede configurar métodos de detección para que se ejecuten en un sitio de Syst
 
 4.  Cuando termine la configuración de este bosque para utilizarlo con la detección de bosques de Active Directory, haga clic en **OK** para guardar la configuración.  
 
-##  <a name="a-namebkmkconfigaddiscgenerala-configure-active-directory-discovery-for-computers-users-or-groups"></a><a name="BKMK_ConfigADDiscGeneral"></a> Configurar la detección de Active Directory para equipos, usuarios o grupos  
+##  <a name="a-namebkmkconfigaddiscgenerala-configure-active-directory-discovery-for-computers-users-or-groups"></a><a name="BKMK_ConfigADDiscGeneral"></a> Configuración de la detección de Active Directory para equipos, usuarios o grupos  
  Utilice la información de las secciones siguientes para configurar la detección de equipos, usuarios o grupos con alguno de los siguientes métodos de detección:  
 
 -   Detección de grupos de Active Directory  
@@ -201,7 +201,7 @@ Puede configurar métodos de detección para que se ejecuten en un sitio de Syst
 
 8.  Cuando haya terminado de configurar la detección de usuarios de Active Directory para este sitio, haga clic en **Aceptar** para guardar la configuración.  
 
-##  <a name="a-namebkmkconfighbdisca-configure-heartbeat-discovery"></a><a name="BKMK_ConfigHBDisc"></a> Configurar la detección de latidos  
+##  <a name="a-namebkmkconfighbdisca-configure-heartbeat-discovery"></a><a name="BKMK_ConfigHBDisc"></a> Configuración de la detección de latidos  
  De forma predeterminada, la detección de latidos se habilita al instalar un sitio primario de Configuration Manager. Como resultado, solo tiene que configurar la programación de la frecuencia con que los clientes envían el registro de datos de detección (DDR) de latidos a un punto de administración cuando no quiera usar el valor predeterminado de cada siete días.  
 
 > [!NOTE]  
@@ -217,7 +217,7 @@ Puede configurar métodos de detección para que se ejecuten en un sitio de Syst
 
 4.  Configure la frecuencia con la que los clientes envían registros de datos de detección (DDR) de latidos y, a continuación, haga clic en **Aceptar** para guardar la configuración.  
 
-##  <a name="a-namebkmkconfignetworkdisca-configure-network-discovery"></a><a name="BKMK_ConfigNetworkDisc"></a> Configurar la detección de redes  
+##  <a name="a-namebkmkconfignetworkdisca-configure-network-discovery"></a><a name="BKMK_ConfigNetworkDisc"></a> Configuración de la detección de redes  
  Utilice la información de las secciones siguientes, que le facilitará la configuración de la detección de redes.  
 
 ###  <a name="a-namebkmkaboutconfignetworkdisca-about-configuring-network-discovery"></a><a name="BKMK_AboutConfigNetworkDisc"></a> Acerca de la configuración de la detección de redes  
@@ -235,14 +235,14 @@ Para más información, vea la sección [Acerca de la detección de redes](../..
 
  Por ejemplo, puede detectar todos los dispositivos SNMP que utilicen un nombre de comunidad SNMP específico. Además, para la misma ejecución de la detección, puede deshabilitar la detección en una subred específica. Cuando se ejecuta la detección, la detección de redes no detecta los dispositivos SNMP con el nombre de comunidad especificado en la subred que se ha deshabilitado.  
 
-####  <a name="a-namebkmkdeterminenettopologya-determine-your-network-topology"></a><a name="BKMK_DetermineNetTopology"></a> Determinar la topología de red  
+####  <a name="a-namebkmkdeterminenettopologya-determine-your-network-topology"></a><a name="BKMK_DetermineNetTopology"></a> Determinación de la topología de red  
  Puede utilizar una detección solo de topología para asignar unidades de red. Este tipo de detección no detecta posibles clientes. La detección de redes solo de topología se basa en SNMP.  
 
  Al asignar la topología de red, debe configurar el **Número máximo de saltos** en la pestaña **SNMP** del cuadro de diálogo **Propiedades de detección de redes** . Unos pocos saltos pueden ayudarle a controlar el ancho de banda de red que se utiliza cuando se ejecuta la detección. Conforme aumenta el número de elementos detectados en su red, puede incrementar el número de saltos para obtener una mejor comprensión de la topología de red.  
 
  Una vez que ha comprendido su topología de red, puede configurar propiedades adicionales para Detección de redes con el fin de detectar clientes potenciales y sus sistemas operativos mientras usa las configuraciones disponibles para limitar los segmentos de red que Detección de redes puede encontrar.  
 
-####  <a name="a-namebkmklimitbysubneta-limit-searches-by-using-subnets"></a><a name="BKMK_LimitBySubnet"></a> Limitar búsquedas mediante el uso de subredes  
+####  <a name="a-namebkmklimitbysubneta-limit-searches-by-using-subnets"></a><a name="BKMK_LimitBySubnet"></a> Limitación de búsquedas mediante el uso de subredes  
  Puede configurar Detección de redes para buscar subredes específicas durante la ejecución de la detección. De forma predeterminada, Detección de redes busca la subred del servidor que ejecuta la detección. Las subredes adicionales que se pueden configurar y habilitar solo se aplican a las opciones de búsqueda de Protocolo simple de administración de redes (SNMP) y Protocolo de configuración dinámica de host (DHCP). Cuando Detección de redes busca dominios, no está limitada por las configuraciones para subredes.  
 
  Si especifica una o más subredes en la pestaña **Subredes** del cuadro de diálogo **Propiedades de detección de redes** , solo se buscarán las subredes marcadas como **Habilitada** .  
@@ -255,7 +255,7 @@ Para más información, vea la sección [Acerca de la detección de redes](../..
 
 -   Las consultas basadas en dominio pueden detectar recursos ubicados en la subred  
 
-####  <a name="a-namebkmksearchbydomaina-search-a-specific-domain"></a><a name="BKMK_SearchByDomain"></a> Buscar en un dominio específico  
+####  <a name="a-namebkmksearchbydomaina-search-a-specific-domain"></a><a name="BKMK_SearchByDomain"></a> Búsqueda en un dominio específico  
  Puede configurar Detección de redes para buscar un dominio específico o un conjunto de dominios durante la ejecución de la detección. De forma predeterminada, Detección de redes busca el dominio local del servidor que ejecuta la detección.  
 
  Si especifica uno o más dominios en la pestaña **Dominios** del cuadro de diálogo **Propiedades de detección de redes** , solo se buscarán los dominios marcados como **Habilitado** .  
@@ -268,7 +268,7 @@ Para más información, vea la sección [Acerca de la detección de redes](../..
 
 -   Los servidores DHCP pueden responder todavía con una lista de recursos ubicados en el dominio  
 
-####  <a name="a-namebkmklimitbysnmpnamea-limit-searches-by-using-snmp-community-names"></a><a name="BKMK_LimitBySNMPname"></a> Limitar búsquedas mediante el uso de nombres de comunidad SNMP  
+####  <a name="a-namebkmklimitbysnmpnamea-limit-searches-by-using-snmp-community-names"></a><a name="BKMK_LimitBySNMPname"></a> Limitación de búsquedas mediante el uso de nombres de comunidad SNMP  
  Configure Detección de redes para buscar una comunidad SNMP específica o un conjunto de comunidades durante la ejecución de la detección. De forma predeterminada, el nombre de comunidad configurado para su uso es **public** .  
 
  Detección de redes utiliza nombres de comunidad para tener acceso a los enrutadores que son dispositivos SNMP. Un enrutador puede proporcionar Detección de redes con información acerca de otros enrutadores y subredes que están vinculados al primer enrutador.  
@@ -281,7 +281,7 @@ Para más información, vea la sección [Acerca de la detección de redes](../..
 > [!NOTE]  
 >  Además de utilizar el nombre de comunidad SNMP, puede especificar la dirección IP o el nombre que se puede resolver de un dispositivo SNMP específico. Puede configurar la dirección IP o el nombre que se puede resolver para un dispositivo específico en la pestaña **Dispositivos SNMP** del cuadro de diálogo **Propiedades de detección de redes** .  
 
-####  <a name="a-namebkmksearchbydhcpa-search-a-specific-dhcp-server"></a><a name="BKMK_SearchByDHCP"></a> Buscar en un servidor DHCP específico  
+####  <a name="a-namebkmksearchbydhcpa-search-a-specific-dhcp-server"></a><a name="BKMK_SearchByDHCP"></a> Búsqueda en un servidor DHCP específico  
  Puede configurar Detección de redes para utilizar un servidor DHCP específico o varios servidores para detectar clientes DHCP durante la ejecución de la detección.  
 
  Detección de redes busca todos los servidores DHCP especificados en la pestaña **DHCP** del cuadro de diálogo **Propiedades de detección de redes** . Si al servidor que está ejecutando la detección le ha concedido la dirección IP un servidor DHCP, puede configurar la detección para buscar ese servidor DHCP. Para ello, active la casilla **Incluir el servidor DHCP configurado para que el servidor de sitio lo utilice** .  

@@ -24,7 +24,7 @@ ms.openlocfilehash: 1d97e7646adbb02a03b33b5efc56c1658364956e
 
 *Se aplica a: System Center Configuration Manager (Technical Preview)*
 
-En este artículo se presentan las características disponibles en Technical Preview para System Center Configuration Manager, versión 1512. Puede instalar esta versión para actualizar y agregar nuevas capacidades al sitio de Technical Preview de Configuration Manager. Antes de instalar esta versión de Technical Preview, lea el tema de introducción [Technical Preview for System Center Configuration Manager (Technical Preview para System Center Configuration Manager)](technical-preview.md) para familiarizarse con los requisitos y las limitaciones generales para usar una Technical Preview y para saber cómo actualizar entre versiones y cómo proporcionar comentarios sobre las características de una Technical Preview.  
+En este artículo se presentan las características disponibles en Technical Preview para System Center Configuration Manager, versión 1512. Puede instalar esta versión para actualizar y agregar nuevas capacidades al sitio de Technical Preview de Configuration Manager. Antes de instalar esta versión de Technical Preview, lea el tema de introducción [Technical Preview for System Center Configuration Manager (Technical Preview para System Center Configuration Manager)](technical-preview.md) para familiarizarse con los requisitos y las limitaciones generales de una Technical Preview y para saber cómo actualizar entre versiones y cómo proporcionar comentarios sobre las características de una Technical Preview.  
 
  Estas son las nuevas características que puede probar con esta versión.  
 
@@ -43,7 +43,7 @@ La consola también muestra las principales opciones de configuración de atesta
 
 Para obtener una vista previa de la atestación de estado del dispositivo, en la consola de Configuration Manager, vaya al área de trabajo **Supervisión**, haga clic en el nodo **Seguridad** y luego en **Atestación de estado**.  
 
-##  <a name="a-namebkmkviewtermsa-in-console-monitoring-for-terms-and-conditions"></a><a name="bkmk_viewterms"></a> Supervisión en la consola de los términos y condiciones  
+##  <a name="a-namebkmkviewtermsa-in-console-monitoring-for-terms-and-conditions"></a><a name="bkmk_viewterms"></a> Supervisión en la consola para los términos y condiciones  
 A partir de Technical Preview 1512, al integrar Configuration Manager con Microsoft Intune, puede usar la consola de Configuration Manager para ver qué usuarios han aceptado los términos y condiciones configurados por el departamento de TI, así como los que no lo han hecho.  
 
 **Para ver información de resumen:**  
@@ -56,7 +56,7 @@ A partir de Technical Preview 1512, al integrar Configuration Manager con Micros
 
 2.  En la parte inferior de la consola, seleccione la pestaña **Implementaciones**, seleccione la implementación y luego haga clic en **Ver estado**.  
 
-##  <a name="a-namebkmkeppolicya-improvements-to-endpoint-protection-policy-settings"></a><a name="bkmk_EPpolicy"></a> Mejoras en la configuración de directivas de Endpoint Protection  
+##  <a name="a-namebkmkeppolicya-improvements-to-endpoint-protection-policy-settings"></a><a name="bkmk_EPpolicy"></a> Mejoras para la configuración de directivas de Endpoint Protection  
 En 1512 Technical Preview, hemos agregado la siguiente nueva configuración de directiva antimalware de Endpoint Protection:  
 
 -   Protección en tiempo real: **Bloquear aplicaciones potencialmente no deseadas en la descarga y antes de la instalación**  

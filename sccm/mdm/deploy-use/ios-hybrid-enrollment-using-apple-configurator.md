@@ -28,7 +28,7 @@ ms.openlocfilehash: 19f4880d6e7ba3da2e4bcfe725c1c806ee3b3334
 Las compañías que compran dispositivos iOS destinados para su uso por los empleados pueden administrarlos mediante Microsoft Intune. Ya puede preinscribir dispositivos iOS conectándolos por USB a un equipo Mac que ejecuta Apple Configurator. Antes de la inscripción, debe preparar un perfil de dispositivo inscrito en empresa de Intune en la consola de administración de Intune y exportarlo al equipo Mac. El proceso de inscripción restaurará el dispositivo a su configuración de fábrica; así pues, siga el proceso del Asistente de configuración para configurar el dispositivo. El siguiente procedimiento está recomendado para dispositivos iOS dedicados que tendrán un único usuario que emplea el dispositivo para tener acceso al correo electrónico de la empresa y a recursos corporativos, como aplicaciones y datos.  
 
 ##  <a name="a-namebkmksaea-apple-configurator-enrollment-via-setup-assistant"></a><a name="BKMK_SAE"></a> Inscripción de Apple Configurator mediante el Asistente de configuración  
- Mediante Apple Configurator, puede restablecer los valores de fábrica de los dispositivos iOS y prepararlos para la instalación por el nuevo usuario del dispositivo.  Este método requiere que se conecte el dispositivo iOS a un equipo Mac a través de una conexión USB para configurar la inscripción corporativa. Además, el método supone que se está usando Apple Configurator 2.0.  
+ Mediante Apple Configurator, puede restablecer los valores de fábrica de los dispositivos iOS y prepararlos para la instalación por el nuevo usuario del dispositivo.  Este método requiere que se conecte el dispositivo iOS a un equipo Mac a través de una conexión USB para configurar la inscripción corporativa. Además, el método supone que se está usando Apple Configurator 2.0.  
 
  **Requisitos previos**  
 
@@ -64,7 +64,7 @@ Las compañías que compran dispositivos iOS destinados para su uso por los empl
 2.  **Incorporación de dispositivos de iOS para su inscripción con el Asistente para configuración**   
     En la consola de Configuration Manager, en el área de trabajo **Activos y compatibilidad**, expanda **Introducción**, expanda **Todos los dispositivos propiedad de la empresa**, expanda **iOS** y haga clic en **Información del dispositivo**. A continuación, haga clic en **Agregar dispositivos**. Puede agregar dispositivos de dos maneras:  
 
-    - Puede **cargar un archivo CSV que contiene números de serie**: cree una lista de valores separados por comas (.csv) con dos columnas sin encabezado, limitada a 5000 dispositivos o 5 MB por archivo csv. Para cada fila, la primera celda es el número de serie del dispositivo y la segunda celda son los detalles del dispositivo (opcional).
+    - Puede **cargar un archivo CSV que contiene números de serie**: cree una lista de valores separados por comas (.csv) con dos columnas sin encabezado, limitada a 5000 dispositivos o 5 MB por archivo csv. Para cada fila, la primera celda es el número de serie del dispositivo y la segunda celda son los detalles del dispositivo (opcional).
 
   Este archivo .csv, cuando se ve en un editor de texto, aparece como:  
 

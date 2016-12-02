@@ -115,7 +115,7 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
 4.  En el Generador de informes, modifique la configuración del informe según corresponda y, a continuación, haga clic en **Guardar** para guardar el informe en el servidor de informes.  
 
-###  <a name="a-namebkmkcreatemodelbasedreporta-create-a-model-based-report"></a><a name="BKMK_CreateModelBasedReport"></a> Creación de un informe basado en modelo  
+###  <a name="a-namebkmkcreatemodelbasedreporta-create-a-model-based-report"></a><a name="BKMK_CreateModelBasedReport"></a> Creación de un informe\-basado en modelo  
  Un informe basado en modelo le permite seleccionar de forma interactiva los elementos que desea incluir en el informe. Para más información sobre la creación de modelos de informes, vea [Creación de modelos de informes personalizados para System Center Configuration Manager en SQL Server Reporting Services](creating-custom-report-models-in-sql-server-reporting-services.md).  
 
 > [!IMPORTANT]  
@@ -157,7 +157,7 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
 10. Haga clic en **Guardar** para guardar el informe en el servidor de informes. Puede ejecutar y modificar el nuevo informe en el nodo **Informes** en el área de trabajo **Supervisión** .  
 
-###  <a name="a-namebkmkcreatesqlbasedreporta-create-a-sql-based-report"></a><a name="BKMK_CreateSQLBasedReport"></a> Creación de un informe basado en SQL  
+###  <a name="a-namebkmkcreatesqlbasedreporta-create-a-sql-based-report"></a><a name="BKMK_CreateSQLBasedReport"></a> Creación de un informe\-basado en SQL  
  Un informe basado en SQL le permite recuperar los datos basados en una instrucción SQL del informe.  
 
 > [!IMPORTANT]  

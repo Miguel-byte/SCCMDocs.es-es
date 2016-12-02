@@ -29,7 +29,7 @@ En este artículo se presentan las características disponibles en Technical Pre
 
 **Estas son las nuevas características que puede probar con esta versión.**  
 
-## <a name="a-namedmpeditionaimprovements-to-the-windows-10-edition-upgrade-policy"></a><a name="dmp_edition"></a>Mejoras en la directiva de actualización de la edición de Windows 10
+## <a name="a-namedmpeditionaimprovements-to-the-windows-10-edition-upgrade-policy"></a><a name="dmp_edition"></a> Mejoras en la directiva de actualización de la edición de Windows 10
 
 En esta versión se han realizado las siguientes mejoras de esta directiva:
 

@@ -35,7 +35,7 @@ ms.openlocfilehash: 92a08908f284abb02ce8000122b0839c474616d7
 
 Para obtener más información acerca de cómo configurar la programación y limitación de un punto de distribución remoto, consulte [Install and configure distribution points for System Center Configuration Manager](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points) (Instalación y configuración de puntos de distribución para System Center Configuration Manager).  
 
-##  <a name="a-namebkmkprestagingcontentaprestaged-content"></a><a name="BKMK_PrestagingContent"></a>Contenido preconfigurado  
+##  <a name="a-namebkmkprestagingcontentaprestaged-content"></a><a name="BKMK_PrestagingContent"></a> Contenido preconfigurado  
  Puede preconfigurar el contenido para agregar archivos de contenido a la biblioteca de contenido de un servidor de sitio o un punto de distribución antes de distribuir el contenido.  
 
 -   Los archivos de contenido no se transfieren a través de la red cuando se distribuye el contenido porque ya figuran en la biblioteca de contenido.  
@@ -56,7 +56,7 @@ Opcionalmente puede configurar el punto de distribución como **preconfigurado**
 
 -   Usar siempre el proceso de distribución de contenido estándar para el contenido del paquete.  
 
-###  <a name="a-namebkmkdeterminetoprestagecontentadetermine-whether-to-prestage-content"></a><a name="BKMK_DetermineToPrestageContent"></a>Determinación de si se debe preconfigurar el contenido  
+###  <a name="a-namebkmkdeterminetoprestagecontentadetermine-whether-to-prestage-content"></a><a name="BKMK_DetermineToPrestageContent"></a> Determinación de si se debe preconfigurar el contenido  
  Considere la preconfiguración de contenido para aplicaciones y paquetes en los escenarios siguientes:  
 
 -   **Ancho de banda de red limitado desde el servidor del sitio al punto de distribución**: si la programación y la limitación pueden resultar insuficientes para distribuir contenido a través de la red a un punto de distribución remoto, considere la posibilidad de preconfigurar el contenido en el punto de distribución. Los puntos de distribución tienen la configuración **Habilitar este punto de distribución para contenido preconfigurado** que se puede configurar en las propiedades del punto de distribución. Cuando se habilita esta opción, el punto de distribución se identifica como un punto de distribución preconfigurado, y puede elegir cómo administrar el contenido en una instalación por paquete.  

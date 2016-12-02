@@ -35,7 +35,7 @@ La actualización 1606 para System Center Configuration Manager es una actualiza
 
 
 
-## <a name="a-nameupdatesandservicingaupdates-and-servicing"></a><a name="updatesandservicing"></a>Actualizaciones y mantenimiento
+## <a name="a-nameupdatesandservicingaupdates-and-servicing"></a><a name="updatesandservicing"></a> Actualizaciones y mantenimiento
 
 ### <a name="changes-for-the-updates-and-servicing-node"></a>Cambios en el nodo de actualizaciones y mantenimiento
 A continuación se presentan cambios en las actualizaciones y el mantenimiento de la consola de Configuration Manager:
@@ -84,7 +84,7 @@ Una vez instalada la actualización 1606, al instalar a continuación una actual
 ## <a name="a-nameaccessibilitya-accessibility"></a><a name="accessibility"></a> Accesibilidad
 A partir de la versión 1606, para navegar entre los distintos nodos de un área de trabajo, puede escribir la primera letra del nombre de un nodo. Cada presión en una tecla mueve el cursor al siguiente nodo que empieza con esa letra y, cuando se usa un lector de pantalla, el lector lee el nombre de ese nodo. Para obtener más información acerca de las opciones de accesibilidad, consulte [Accessibility features in System Center Configuration Manager](../../../core/understand/accessibility-features.md) (Características de accesibilidad de System Center Configuration Manager).
 
-## <a name="a-nameadministrationaadministration"></a><a name="administration"></a>Administración
+## <a name="a-nameadministrationaadministration"></a><a name="administration"></a> Administración
 A continuación se presentan cambios en la administración de la consola de Configuration Manager:
 ### <a name="oms-connector"></a>Conector de OMS
 
@@ -210,7 +210,7 @@ Para obtener más detalles, consulte [How to automatically categorize devices in
 
 ### <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>Declaración previa de dispositivos con números de serie iOS o IMEI
 
-Ahora puede identificar dispositivos propiedad de la empresa importando sus números de identidad internacional de equipo móvil (IMEI) o los números de serie de iOS. Puede cargar un archivo de valores separados por comas (CSV) que incluya los números de serie de los dispositivos y otros detalles o escribir la información de los dispositivos de forma manual. La información importada definirá la **propiedad** de los dispositivos que se inscriban como **corporativos** en las listas de dispositivos. Se sigue necesitando una licencia de Intune para cada usuario que acceda al servicio.
+Puede identificar los dispositivos corporativos si importa sus números de identidad internacional de equipo móvil (IMEI) o los números de serie de iOS. Puede cargar un archivo de valores separados por comas (.csv) que incluya los números IMEI de los dispositivos o escribir la información de los dispositivos de forma manual. La información importada establecerá la **propiedad** de los dispositivos que se inscriban como "**Corporativo**" en las listas de dispositivos. Se sigue necesitando una licencia de Intune para cada usuario que acceda al servicio.
 
 Para obtener más información, consulte [Predeclare devices with IMEI or iOS serial numbers](../../../mdm/deploy-use/predeclare-devices-with-hardware-id.md) (Declaración previa de dispositivos con IMEI o números de serie de iOS).
 
