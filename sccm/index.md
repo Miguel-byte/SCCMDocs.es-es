@@ -6,7 +6,7 @@ layout: HubPage
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.topic: hubpage
 ms.prod: configuration-manager
 ms.technology:
@@ -15,8 +15,8 @@ ms.suite: ems
 ms.assetid: a89ecd55-fe24-4f40-86c4-8a91dd683a1c
 toc_rel: /sccm/toc.json
 translationtype: Human Translation
-ms.sourcegitcommit: 06506ef41638c2c518b02b3b13ab3453fe5de5af
-ms.openlocfilehash: 2ed99aa90915903056ee43074e0d19a1e018b9a4
+ms.sourcegitcommit: a10fb140adfc1109a49760d601b5fca3d93d4b39
+ms.openlocfilehash: 690b516b6be4380b566649adacfafcc8f920373c
 
 ---
 # <a name="system-center-configuration-manager-documentation"></a>Documentación de System Center Configuration Manager
@@ -35,7 +35,7 @@ ms.openlocfilehash: 2ed99aa90915903056ee43074e0d19a1e018b9a4
         <ul class="column column-half">
           <li><a href="/sccm/core/understand/introduction">Introducción a Configuration Manager</a></li>
           <li><a href="/sccm/core/get-started/evaluate-with-lab-environment">Evalúe System Center Configuration Manager mediante la creación de su propio entorno de laboratorio</a></li>
-          <li><a href="/sccm/core/plan-design/changes/whats-new-in-version-1606">Novedades de la versión 1606 de System Center Configuration Manager</a></li>
+          <li><a href="/sccm/core/plan-design/changes/whats-new-in-version-1610">Novedades de la versión 1610 de System Center Configuration Manager</a></li>
         </ul>
         <ul class="column column-half">
           <li><a href="/sccm/core/plan-design/changes/features-and-capabilities">Características y funcionalidades de System Center Configuration Manager</a></li>
@@ -288,6 +288,43 @@ ms.openlocfilehash: 2ed99aa90915903056ee43074e0d19a1e018b9a4
               </ul>
             </section>
           </li>
+
+
+<li class="journey-step">
+            <header class="journey-step-header row">
+              <a href="/sccm/develop/core/misc/system-center-configuration-manager-sdk">
+                <div class="title column-third">
+                  <span class="step-number">8</span>
+                  <p>Automatización y desarrollo de Configuration Manager</p>
+                </div>
+                <p class="description column-two-thirds">Obtenga información sobre cómo automatizar y extender Configuration Manager.</p>
+              </a>
+            </header>
+            <section class="journey-step-elements content">
+              <ul class="row">
+                <li class="column-third">
+                  <a href="/sccm/develop/core/understand/configuration-manager-programming-fundamentals">
+                    <h3>Fundamentos de programación de Configuration Manager</h3>
+                    <p>Obtenga información sobre las técnicas de programación fundamentales que le ayudarán a programar Configuration Manager correctamente.</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="/sccm/develop/reference/configuration-manager-reference">
+                    <h3>Referencia de Configuration Manager</h3>
+                    <p>Proporciona información detallada sobre la biblioteca administrada Proveedor de SMS, el esquema de clase de Configuration Manager, el lenguaje de consulta de WMI extendido (WQL), los valores y calificadores con nombre y las bibliotecas de consola de Configuration Manager.</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="https://docs.microsoft.com/powershell/sccm/configurationmanager/vlatest/configurationmanager">
+                    <h3>Cmdlets de Configuration Manager</h3>
+                    <p>Proporciona los archivos de ayuda en línea de los cmdlets de Configuration Manager, que incluyen información detallada sobre cada cmdlet y ejemplos que muestran cómo usarlo.</p>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </li>
+
+
       </section>
     </div>
     <div class="section-border">
@@ -317,6 +354,6 @@ ms.openlocfilehash: 2ed99aa90915903056ee43074e0d19a1e018b9a4
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 
