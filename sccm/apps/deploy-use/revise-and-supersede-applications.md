@@ -1,6 +1,6 @@
 ---
-title: Revisar y sustituir aplicaciones | System Center Configuration Manager
-description: Trabaje con las versiones de aplicaciones de System Center Configuration Manager y sustituya las aplicaciones.
+title: Revisar y sustituir aplicaciones | Microsoft Docs
+description: Aprenda a trabajar con las versiones de aplicaciones de System Center Configuration Manager y sustituya las aplicaciones.
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,14 +17,14 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ae6440375d6e801ac9c3932872ec1367d9c601a8
+ms.sourcegitcommit: a04ac74df97741f49d7aae7b599bb60d5725a592
+ms.openlocfilehash: 28bea9210c9c58dabbb00a995e78cfedd1738291
 
 
 ---
-# <a name="how-to-revise-and-supersede-applications-in-system-center-configuration-manager"></a>Cómo revisar y sustituir aplicaciones en System Center Configuration Manager
+# <a name="revise-and-supersede-applications-in-system-center-configuration-manager"></a>Revisar y sustituir aplicaciones en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En este tema aprenderá a trabajar con versiones de aplicaciones de System Center Configuration Manager y a sustituir aplicaciones por una versión nueva.  
 
@@ -33,13 +33,13 @@ En este tema aprenderá a trabajar con versiones de aplicaciones de System Cente
 
 ### <a name="to-display-an-application-revision-history"></a>Para mostrar un historial de revisiones de aplicación  
 
-1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software** > **Administración de aplicaciones** > **Aplicaciones** y, luego, haga clic en la aplicación que desee.  
+1.  En la consola de Configuration Manager, elija **Biblioteca de software** > **Administración de aplicaciones** > **Aplicaciones** y, luego, elija la aplicación que desee.  
 
-3.  En la pestaña **Inicio** , en el grupo **Aplicación** , haga clic en **Historial de revisiones** para abrir el cuadro de diálogo **Historial de revisiones de la aplicación** .  
+3.  En la pestaña **Inicio** , en el grupo **Aplicación**, elija **Historial de revisiones** para abrir el cuadro de diálogo **Historial de revisiones de la aplicación** .  
 
 ### <a name="to-view-an-application-revision"></a>Para ver una revisión de aplicación  
 
-1.  En el cuadro de diálogo **Historial de revisiones de la aplicación** , seleccione una revisión de aplicación y, a continuación, haga clic en **Ver**.  
+1.  En el cuadro de diálogo **Historial de revisiones de la aplicación** , seleccione una revisión de aplicación y, a continuación, elija **Ver**.  
 
 2.  En el cuadro de diálogo **Propiedades** , examine las propiedades de la aplicación seleccionada.  
 
@@ -50,21 +50,21 @@ En este tema aprenderá a trabajar con versiones de aplicaciones de System Cente
 
 ### <a name="to-restore-an-application-revision"></a>Para restaurar una revisión de aplicación  
 
-1.  En el cuadro de diálogo **Historial de revisiones de la aplicación** , seleccione una revisión de aplicación y, a continuación, haga clic en **Restaurar**.  
+1.  En el cuadro de diálogo **Historial de revisiones de la aplicación** , seleccione una revisión de aplicación y, a continuación, elija **Restaurar**.  
 
-2.  En el cuadro de diálogo **Confirmar restauración de revisión** , haga clic en **Sí** para restaurar la revisión de aplicación seleccionada.  
+2.  En el cuadro de diálogo **Confirmar restauración de revisión**, elija **Sí** para restaurar la revisión de aplicación seleccionada.  
 
 ### <a name="to-delete-an-application-revision"></a>Para eliminar una revisión de aplicación  
 
-1.  En el cuadro de diálogo **Historial de revisiones de la aplicación** , seleccione una revisión de aplicación y, a continuación, haga clic en **Eliminar**.  
+1.  En el cuadro de diálogo **Historial de revisiones de la aplicación** , seleccione una revisión de aplicación y, a continuación, elija **Eliminar**.  
 
-2.  En el cuadro de diálogo **Eliminar revisión de aplicación** , haga clic en **Sí**.  
+2.  En el cuadro de diálogo **Eliminar revisión de aplicación**, elija **Sí**.  
 
 > [!IMPORTANT]  
->  Sólo se puede eliminar la revisión de aplicación actual si se retiró la aplicación y no contiene referencias.  
+>  Solo se puede eliminar la revisión de aplicación actual si se retiró la aplicación y no contiene referencias.  
 
 ##  <a name="application-supersedence"></a>Sustitución de la aplicación  
- La administración de aplicaciones de Configuration Manager le permite actualizar o sustituir aplicaciones existentes mediante una relación de sustitución. Al sustituir una aplicación, puede especificar un nuevo tipo de implementación para reemplazar el tipo de implementación de la aplicación sustituida y también configurar si se debe actualizar o desinstalar la aplicación sustituida antes de instalar la aplicación de sustitución.  
+ La administración de aplicaciones de Configuration Manager le permite actualizar o sustituir aplicaciones existentes mediante una relación de sustitución. Al sustituir una aplicación, puede especificar un nuevo tipo de implementación para reemplazar el tipo de implementación de la aplicación sustituida y también decidir si se debe actualizar o desinstalar la aplicación sustituida antes de instalar la aplicación de sustitución.  
 
 > [!IMPORTANT]  
 >  Cuando se selecciona la opción de desinstalar el tipo de implementación sustituida, no puede sustituirse un tipo de implementación por un tipo de implementación que se haya implementado en un tipo de recopilación diferente.  Por ejemplo, un tipo de implementación que se implementó en una recopilación de dispositivos no puede sustituirse por un tipo de implementación que se implementó en una recopilación de usuarios si se selecciona la opción de desinstalar el tipo de implementación sustituido.  
@@ -76,8 +76,8 @@ En este tema aprenderá a trabajar con versiones de aplicaciones de System Cente
 
 -   Si desea cambiar a otra aplicación (con un identificador de aplicación diferente), active **Desinstalar**. Deberá quitar la versión reemplazada de la aplicación.  
 
-### <a name="superseding-dependent-applications"></a>Reemplazar aplicaciones dependientes  
- En este ejemplo, la **aplicación principal** hace referencia a la aplicación que implementa que contiene las dependencias.  
+### <a name="supersede-dependent-applications"></a>Reemplazar aplicaciones dependientes  
+ En este ejemplo, la **aplicación principal** hace referencia a la aplicación que implementa que tiene las dependencias.  
 
  Puede crear una relación de sustitución que actualice la aplicación dependiente a una versión nueva.  
 
@@ -97,41 +97,41 @@ En este tema aprenderá a trabajar con versiones de aplicaciones de System Cente
 
 -   En el caso de las nuevas instalaciones de la aplicación principal, cuando hay varias dependencias, el orden de dependencia determina qué versión de la aplicación dependiente se instala.  
 
-### <a name="specify-a-supersedence-relationship"></a>Especificar una relación de sustitución  
+### <a name="to-specify-a-supersedence-relationship"></a>Para especificar una relación de sustitución  
 
-1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software** > **Administración de aplicaciones** > **Aplicaciones** y, luego, haga clic en la aplicación que sustituirá a otra aplicación.  
+1.  En la consola de Configuration Manager, elija **Biblioteca de software** > **Administración de aplicaciones** > **Aplicaciones** y, luego, elija la aplicación que reemplace a otra aplicación.  
 
-3.  En la pestaña **Inicio**, en el grupo **Propiedades**, haga clic en **Propiedades** para abrir el cuadro de diálogo **Propiedades** de la aplicación.  
+3.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades** para abrir el cuadro de diálogo **Propiedades** de la aplicación.  
 
-4.  En la pestaña **Sustitución** del cuadro de diálogo **Propiedades** de *<nombre de la aplicación\>*, haga clic en **Agregar**.  
+4.  En la pestaña **Sustitución** del cuadro de diálogo **Propiedades** de *<nombre de aplicación\>*, elija **Agregar**.  
 
 5.  En el cuadro de diálogo **Especificar relación de sustitución** , haga clic en **Examinar**.  
 
-6.  En el cuadro de diálogo **Elija la aplicación** , seleccione la aplicación que desea sustituir y, a continuación, haga clic en **Aceptar**.  
+6.  En el cuadro de diálogo **Elija la aplicación**, elija la aplicación que desea sustituir y, a continuación, elija **Aceptar**.  
 
 7.  En el cuadro de diálogo **Especificar relación de sustitución** , seleccione el tipo de implementación que reemplazará el tipo de implementación de la aplicación sustituida.  
 
     > [!NOTE]  
     >  De forma predeterminada, el nuevo tipo de implementación no desinstala el tipo de implementación de la aplicación sustituida. Este escenario normalmente se utiliza cuando se desea implementar una actualización en una aplicación existente. Seleccione **Desinstalar** para quitar el tipo de implementación existente antes de que se instale el nuevo tipo de implementación. Si decide actualizar una aplicación, asegúrese de probar esto primero en un entorno de laboratorio.  
 
-8.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Especificar relación de sustitución** .  
+8.  Elija **Aceptar** para cerrar el cuadro de diálogo **Especificar relación de sustitución** .  
 
-9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades** de *<nombre de aplicación\>*.  
+9. Elija **Aceptar** para cerrar el cuadro de diálogo **Propiedades** de *<nombre de aplicación\>*.  
 
 ### <a name="to-display-applications-that-supersede-the-current-application"></a>Para mostrar las aplicaciones que sustituyen a la aplicación actual  
 
-1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
+1.  En la consola de Configuration Manager, elija **Biblioteca de software**.  
 
-2.  En el área de trabajo **Biblioteca de software** , expanda **Administración de aplicaciones**, haga clic en **Aplicaciones**y, a continuación, haga clic en la aplicación que desee.  
+2.  En el área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones**, elija **Aplicaciones** y, a continuación, elija la aplicación que desee.  
 
-3.  En la pestaña **Inicio**, en el grupo **Propiedades**, haga clic en **Propiedades** para abrir el cuadro de diálogo **Propiedades** de *<nombre de la aplicación\>*.  
+3.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades** para abrir el cuadro de diálogo **Propiedades** de *<nombre de aplicación\>*.  
 
-4.  En la pestaña **Referencias** del cuadro de diálogo **Propiedades** de *<nombre de la aplicación\>*, seleccione **Aplicaciones que sustituyen a esta aplicación** en la lista desplegable **Tipo de relación**.  
+4.  En la pestaña **Referencias** del cuadro de diálogo **Propiedades** de *<nombre de aplicación>\>*, elija **Aplicaciones que sustituyen a esta aplicación** en la lista desplegable **Tipo de relación**.  
 
-5.  Revise la lista de aplicaciones que sustituyen la aplicación seleccionada y luego haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades** de *<nombre de la aplicación\>*.  
+5.  Revise la lista de aplicaciones que sustituyen a la aplicación seleccionada y, a continuación, elija **Aceptar** para cerrar el cuadro de diálogo **Propiedades** de *<nombre de aplicación>\>* **.  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 
