@@ -1,5 +1,5 @@
 ---
-title: "Protección contra amenazas avanzada de Windows Defender | System Center Configuration Manager"
+title: "Protección contra amenazas avanzada de Windows Defender | Microsoft Docs"
 description: "Aprenda a administrar y supervisar Protección contra amenazas avanzada de Windows Defender, un nuevo servicio que ayuda a las empresas a responder a los ataques avanzados."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: a4ad2d93ecd994fff00dab33084a734252cac651
+ms.sourcegitcommit: 299fada2b6587ace44e635c4f26cc7a482d44843
+ms.openlocfilehash: 880ea4fcb0730f0e9adbc9f142262f241f5df9dc
 
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Protección contra amenazas avanzada de Windows Defender
@@ -38,9 +38,9 @@ Protección contra amenazas avanzada de Windows Defender es un servicio en el [C
 
  1.  Inicie sesión en el [servicio en línea Protección contra amenazas avanzada de Windows Defender](https://securitycenter.windows.com/).   
 
- 2.  Haga clic en el elemento de menú **Incorporación de cliente**.  
+ 2.  Haga clic en el elemento de menú **Administración de puntos de conexión**.  
 
- 3.  Seleccione **System Center Configuration Manager** y haga clic en **Descargar paquete**.  
+ 3.  Seleccione **System Center Configuration Manager (rama actual), versión 1606** y haga clic en **Descargar paquete**.  
 
  4.  Descargue el archivo comprimido (.zip) y extraiga el contenido.
 
@@ -86,7 +86,34 @@ Protección contra amenazas avanzada de Windows Defender es un servicio en el [C
         -   **No incorporado**: se aplicó la directiva, pero el agente no ha notificado la incorporación de la directiva  
 
 
+## <a name="how-to-create-and-deploy-an-offboarding-configuration-file"></a>Creación e implementación de un archivo de configuración de retirada  
 
-<!--HONumber=Nov16_HO1-->
+1.  Inicie sesión en el [servicio en línea Protección contra amenazas avanzada de Windows Defender](https://securitycenter.windows.com/).   
+
+2.  Haga clic en el elemento de menú **Administración de puntos de conexión**.  
+
+3.  Seleccione **System Center Configuration Manager (rama actual), versión 1606** y haga clic en **Retirada de punto de conexión**.  
+
+4.  Descargue el archivo comprimido (.zip) y extraiga el contenido. Los archivos de retirada son válidos durante 30 días.
+
+5.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Endpoint Protection** > **Directivas de Windows Defender ATP** y haga clic en **Crear directiva de Windows Defender ATP**. Se abre el Asistente para crear directiva de Protección contra amenazas avanzada de Windows Defender.  
+
+6.  Escriba el **Nombre** y la **Descripción** de la directiva de Protección contra amenazas avanzada de Windows Defender y seleccione **Retirada**. Haga clic en **Siguiente**.  
+
+7.  **Vaya** al archivo de configuración proporcionado por el inquilino del servicio en la nube de Protección contra amenazas avanzada de Windows Defender de la organización. Haga clic en **Siguiente**.  
+
+8.  Revise el resumen y finalice el asistente.  
+
+9.  Ahora puede hacer clic en **Implementar** para implementar la directiva de Windows Defender ATP en equipos cliente administrados.  
+
+> [!IMPORTANT]
+> El archivo de configuración de Protección contra amenazas avanzada de Windows Defender contiene información confidencial que debe mantenerse segura.
+
+[Protección contra amenazas avanzada de Windows Defender](https://technet.microsoft.com/itpro/windows/keep-secure/windows-defender-advanced-threat-protection)
+[Solución de problemas de incorporación de Protección contra amenazas avanzada de Windows Defender](https://technet.microsoft.com/itpro/windows/keep-secure/troubleshoot-onboarding-windows-defender-advanced-threat-protection)
+
+
+
+<!--HONumber=Dec16_HO1-->
 
 

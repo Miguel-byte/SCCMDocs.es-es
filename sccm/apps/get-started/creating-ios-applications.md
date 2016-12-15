@@ -1,5 +1,5 @@
 ---
-title: Crear aplicaciones iOS | System Center Configuration Manager
+title: Crear aplicaciones de iOS | Microsoft Docs
 description: Consulte las consideraciones que debe tener en cuenta al crear e implementar aplicaciones para dispositivos iOS.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,16 +16,16 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4c3845635846cae183e81d0ddb9c8222dabd8929
+ms.sourcegitcommit: e9e34359f4412ba07b9fb49f871a1eb2d36cecf8
+ms.openlocfilehash: eb2d1245932d71bd10fd63d95a155eae7d128836
 
 
 ---
 # <a name="create-ios-applications-with-system-center-configuration-manager"></a>Crear aplicaciones iOS con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Además de los otros requisitos y procedimientos de System Center Configuration Manager para crear una aplicación, también debe tener en cuenta las consideraciones siguientes al crear e implementar aplicaciones para dispositivos iOS.  
+Tenga en cuenta las siguientes consideraciones cuando cree e implemente aplicaciones para dispositivos iOS.  
 
 ## <a name="general-considerations"></a>Consideraciones generales  
  Configuration Manager admite la implementación de los siguientes tipos de aplicaciones:  
@@ -38,13 +38,13 @@ Además de los otros requisitos y procedimientos de System Center Configuration 
 
 |Tipo de dispositivo|Acciones admitidas|  
 |-----------------|-----------------------|  
-|iOS|Disponible, Requerido (aunque el usuario debe dar su consentimiento para la instalación), Desinstalar|  
+|iOS|**Disponible**, **Necesario**. El usuario debe dar su consentimiento para la instalación y desinstalación.
 
 > [!IMPORTANT]  
->  Actualmente, los usuarios finales no pueden instalar aplicaciones corporativas desde la aplicación Portal de empresa de Microsoft Intune para iOS. Esto se debe a las restricciones establecidas para aplicaciones que se publican en la App Store de iOS (consulte la sección 2 de App Store Review Guidelines [Instrucciones de revisión para App Store]). Los usuarios pueden instalar aplicaciones corporativas (incluidas las aplicaciones administradas de App Store y los paquetes de aplicaciones de línea de negocio) si examinan el portal web de Intune desde su dispositivo (portal.manage.microsoft.com). Para obtener más información sobre las funciones de administración de dispositivos móviles que se habilitan con la aplicación Portal de empresa de Microsoft Intune, consulte [Enrolled device management capabilities in Microsoft Intune](https://technet.microsoft.com/library/dn600287.aspx) (Funciones de administración de dispositivos inscritos en Microsoft Intune).  
+>  Actualmente, los usuarios finales no pueden instalar aplicaciones corporativas desde la aplicación Portal de empresa de Microsoft Intune para iOS. Esto se debe a las restricciones establecidas para aplicaciones que se publican en la App Store de iOS (consulte la sección 2 de App Store Review Guidelines [Instrucciones de revisión para App Store]). Los usuarios pueden instalar aplicaciones corporativas (incluidas las aplicaciones administradas de App Store y los paquetes de aplicaciones de línea de negocio) si examinan el portal web de Intune desde su dispositivo (portal.manage.microsoft.com). Para más información acerca de las funciones de administración de dispositivos móviles que se habilitan con la aplicación Portal de empresa de Microsoft Intune, vea [Funciones de administración de dispositivos inscritos en Microsoft Intune](https://technet.microsoft.com/library/dn600287.aspx).  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: "Administración de paquetes de actualización de sistema operativo | Configuration Manager"
+title: "Administrar paquetes de actualización de sistema operativo | Microsoft Docs"
 description: "Aprenda a administrar paquetes de actualización de sistema operativo en System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 226e283b5d9a04d2a9e0f3ce6894a82a3683d972
+ms.sourcegitcommit: 3f44505c977b511223a083a960f871371c0ff133
+ms.openlocfilehash: 5fef04f26b12bced073332fd1f7b4e7c7bd7d398
 
 
 ---
@@ -63,7 +63,7 @@ Un paquete de actualización de System Center Configuration Manager contiene los
  Las imágenes de sistema operativo se distribuyen a los puntos de distribución de la misma forma que se distribuye otro tipo de contenido. En la mayoría de los casos, debe distribuir la imagen de sistema operativo a un punto de distribución, como mínimo, antes de implementar el sistema operativo. Para conocer los pasos de distribución de una imagen de sistema operativo, vea [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content) (Distribuir contenido).  
 
 ##  <a name="a-namebkmkosupgradepkgapplyupdatesa-apply-software-updates-to-an-operating-system-upgrade-package"></a><a name="BKMK_OSUpgradePkgApplyUpdates"></a> Aplicación de las actualizaciones de software a un paquete de actualización del sistema operativo  
- A partir de Configuration Manager versión 1602, puede aplicar actualizaciones de software nuevas a la imagen de sistema operativo en el paquete de actualización del sistema operativo. Por supuesto, antes de aplicar las actualizaciones de software a un paquete de actualización debe contar con la infraestructura de actualizaciones de software y haber sincronizado correctamente dichas actualizaciones. Para obtener más información, consulte [Deploy software updates](../../sum/deploy-use/deploy-software-updates.md) (Implementación de actualizaciones de software).  
+ A partir de Configuration Manager versión 1602, puede aplicar actualizaciones de software nuevas a la imagen de sistema operativo en el paquete de actualización del sistema operativo. Por supuesto, antes de aplicar las actualizaciones de software a un paquete de actualización debe contar con la infraestructura de actualizaciones de software, haber sincronizado correctamente dichas actualizaciones y haber descargado las actualizaciones de software en la biblioteca de contenido en el servidor del sitio. Para obtener más información, consulte [Deploy software updates](../../sum/deploy-use/deploy-software-updates.md) (Implementación de actualizaciones de software).  
 
  Puede aplicar las actualizaciones de software que sean aplicables a un paquete de actualización según una programación especificada. En función de la programación que especifique, Configuration Manager aplica las actualizaciones de software que seleccione al paquete de actualización del sistema operativo y, opcionalmente, distribuye el paquete actualizado de actualizaciones a los puntos de distribución. La información sobre el paquete de actualización del sistema operativo se almacena en la base de datos del sitio, incluidas las actualizaciones de software que se aplicaron en el momento de la importación. Las actualizaciones de software que se hayan aplicado al paquete de actualización desde que se agregó inicialmente también se almacenan en la base de datos del sitio. Cuando inicia el asistente para aplicar actualizaciones de software al paquete de actualización del sistema operativo, el asistente recupera una lista de actualizaciones de software aplicables aún no aplicadas al paquete de actualización para seleccionar la deseada. Configuration Manager copia las actualizaciones de software de la biblioteca de contenido que se encuentra en el servidor de sitio y las aplica al paquete de actualización del sistema operativo.  
 
@@ -95,6 +95,6 @@ Un paquete de actualización de System Center Configuration Manager contiene los
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

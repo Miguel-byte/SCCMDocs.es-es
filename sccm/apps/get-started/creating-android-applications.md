@@ -1,5 +1,5 @@
 ---
-title: Crear aplicaciones Android | System Center Configuration Manager
+title: Crear aplicaciones de Android | Microsoft Docs
 description: Consulte las consideraciones que debe tener en cuenta al crear e implementar aplicaciones para dispositivos Android.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,15 +16,15 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: b600217338e2f0fb3b077036c59aaea13f76c0d6
+ms.sourcegitcommit: 6a28028faa5ecd7c3d3d4c055481c10467189b38
+ms.openlocfilehash: 5819613172d7ddf88133e802507e8e92c149a885
 
 ---
 # <a name="create-android-applications-with-system-center-configuration-manager"></a>Crear aplicaciones Android con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Además de los otros requisitos y procedimientos de System Center Configuration Manager para crear una aplicación, también debe tener en cuenta las consideraciones siguientes al crear e implementar aplicaciones para dispositivos Android.  
+Tenga en cuenta las siguientes consideraciones cuando cree e implemente aplicaciones para dispositivos Android.  
 
 ## <a name="general-considerations"></a>Consideraciones generales
 
@@ -38,10 +38,10 @@ Se admiten las siguientes acciones de implementación:
 
 |Tipo de dispositivo|Acciones admitidas|
 |-|-|
-|Android|**Disponible**, **Requerido** (aunque el usuario debe dar su consentimiento para la instalación), **Desinstalar** (también se requiere el consentimiento).|
+|Android|**Disponible**, **Necesario**. El usuario debe dar su consentimiento para la instalación y desinstalación.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

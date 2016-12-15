@@ -1,11 +1,11 @@
 ---
-title: "Implementar actualizaciones de software automáticamente | Configuration Manager"
+title: "Implementar actualizaciones de software automáticamente | Microsoft Docs"
 description: "Implemente actualizaciones de software automáticamente al agregar nuevas actualizaciones de software a un grupo de actualizaciones asociado a una implementación activa, o bien mediante el empleo de reglas de ADR."
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 133f29aa3f515054b23ba70f1a1dfd3eedaa56c8
+ms.sourcegitcommit: 78524abd4c45f0b7402d6f1e85afc60bb72ab0ee
+ms.openlocfilehash: 34b0819957ffcc3711ee354a5b821d78fa7445cb
 
 ---
 
@@ -94,7 +94,7 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
 
     -   **Configuración de términos de licencia**: especifique si quiere implementar automáticamente las actualizaciones de software con los términos de licencia asociados. Algunas actualizaciones de software incluyen términos de licencia, como, por ejemplo, un Service Pack. Cuando se implementan automáticamente actualizaciones de software, no se muestran los términos de licencia, y no se da la opción de aceptarlos. Puede elegir implementar automáticamente todas las actualizaciones de software independientemente de si tienen términos de licencia asociados, o sólo implementar las actualizaciones de software que no tengan términos de licencia asociados.  
 
-        > [!WARNING]  
+        > [!NOTE]  
         >  Para revisar los términos de licencia de una actualización de software, seleccione la actualización de software en el nodo **Todas las actualizaciones de software** del área de trabajo **Biblioteca de software** y, a continuación, en la pestaña **Inicio** , en el grupo **Actualizar** , haga clic en **Revisar la licencia**.  
         >   
         >  Para buscar actualizaciones de software con términos de licencia asociados, agregue la columna **Términos de licencia** al panel de resultados del nodo **Todas las actualizaciones de software** y, a continuación, haga clic en el encabezado de la columna para ordenar por actualizaciones de software con términos de licencia.  
@@ -103,6 +103,9 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
 
     > [!IMPORTANT]  
     >  El límite para las actualizaciones de software en la regla de implementación automática es de 1000 actualizaciones de software. Para asegurarse de que los criterios especificados en esta página recuperan menos de 1000 actualizaciones de software, considere configurar los mismos criterios en el nodo **Todas las actualizaciones de software** en el área de trabajo **Biblioteca de software** .  
+
+    > [!NOTE]
+    > A partir de la versión 1610 de Configuration Manager puede filtrar en el tamaño de contenido para las actualizaciones de software en reglas de implementación automática. Por ejemplo, puede establecer el filtro **Tamaño del contenido (KB)** en **< 2048** para descargar solo las actualizaciones de software que tengan menos de 2 MB. Con este filtro evita que las actualizaciones de software de gran tamaño se descarguen automáticamente con el fin de ofrecer un mantenimiento simplificado de nivel inferior de Windows cuando el ancho de banda de red es limitado. Para más información, vea [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems (Configuration Manager y mantenimiento simplificado de Windows en sistemas operativos de nivel inferior)](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).
 
 6.  En la página Programación de evaluación, especifique si quiere habilitar la regla de implementación automática para que se ejecute en función de una programación. Si la habilita, haga clic en **Personalizar** para configurar la programación periódica.  
 
@@ -137,13 +140,13 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
         > [!NOTE]  
         >  La hora de la fecha límite de instalación real es la hora de la fecha límite más una cantidad aleatoria de tiempo de hasta dos horas. Se minimiza, así, el efecto negativo que podría producirse si todos los equipos cliente de la recopilación de destino instalan las actualizaciones de software de la implementación a la misma hora.  
         >   
-        >  Puede establecer la opción **Deshabilitar selección aleatoria de fecha límite** de la configuración de cliente **Agente de equipo** para deshabilitar el retraso de la selección aleatoria de instalación para las actualizaciones de software requeridas. Para más información, vea [Agente de equipo](../../core/clients/deploy/about-client-settings.md#a-namebkmkcomputeragentdevicesettingsa-computer-agent).  
+        >  Puede establecer la opción **Deshabilitar selección aleatoria de fecha límite** de la configuración de cliente **Agente de equipo** para deshabilitar el retraso de la selección aleatoria de instalación para las actualizaciones de software requeridas. Para más información, vea [Agente de equipo](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 8. En la página Experiencia del usuario, configure las siguientes opciones:  
 
     -   **Notificaciones de usuario**: especifique si quiere mostrar una notificación de las actualizaciones de software en el Centro de software del equipo cliente según las **Horas de disponibilidad del software** y si quiere mostrar las notificaciones de usuario en los equipos cliente.  
 
-    -   **Comportamiento de la fecha límite**: especifique el comportamiento que tiene lugar cuando se alcanza la fecha límite para la implementación de actualizaciones de software. Especifique si desea instalar las actualizaciones de software de la implementación. Especifique también si el sistema se debe reiniciar tras la instalación de las actualizaciones de software independientemente de lo establecido en una ventana de mantenimiento. Para más información sobre las ventanas de mantenimiento, vea [Cómo utilizar las ventanas de mantenimiento](../../core/clients/manage/collections/use-maintenance-windows.md).  
+    -   **Comportamiento de la fecha límite**: especifique el comportamiento que tiene lugar cuando se alcanza la fecha límite para la implementación de actualizaciones de software. Especifique si desea instalar las actualizaciones de software de la implementación. Especifique también si el sistema se debe reiniciar tras la instalación de las actualizaciones de software independientemente de lo establecido en una ventana de mantenimiento. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
     -   **Comportamiento de reinicio de dispositivo**: especifique si se debe suprimir el reinicio del sistema necesario para completar la instalación de actualizaciones de software en servidores y estaciones de trabajo.  
 
@@ -155,9 +158,11 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
         > [!NOTE]  
         >  Cuando implemente una actualización de software en un dispositivo de Windows Embedded, asegúrese de que el dispositivo es miembro de una recopilación que tenga una ventana de mantenimiento configurada.  
 
+    - **Comportamiento de reevaluación de implementación de actualizaciones de software tras el reinicio**: a partir de la versión 1606 de Configuration Manager, seleccione esta opción para configurar implementaciones de actualizaciones de software para que los clientes ejecuten un examen de cumplimiento de actualizaciones de software inmediatamente después de que un cliente instale las actualizaciones de software y se reinicie. Esto permite al cliente comprobar las actualizaciones de software adicionales que entran en vigor después de que el cliente reinicie e instalarlas (para cumplir así los requisitos) durante la misma ventana de mantenimiento.
+
 9. En la página Alertas, configure cómo generarán Configuration Manager y System Center Operations Manager las alertas para esta implementación.  
 
-    > [!WARNING]  
+    > [!NOTE]  
     >  Puede revisar las alertas de las actualizaciones de software recientes en el área de trabajo **Biblioteca de software** del nodo **Actualizaciones de software** .  
 
 10. En la página Configuración de descarga, configure las siguientes opciones:  
@@ -209,7 +214,7 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
 
 15. En la página Resumen, revise la configuración. Para guardar la configuración en una plantilla de implementación, haga clic en **Guardar como plantilla**, escriba un nombre, seleccione la configuración que va a incluir en la plantilla y, a continuación, haga clic en **Guardar**. Para cambiar una configuración, haga clic en la página correspondiente del asistente y cámbiela.  
 
-    > [!WARNING]  
+    > [!NOTE]  
     >  El nombre de plantilla puede incluir caracteres ASCII alfanumérico, **\\** (barra diagonal inversa) y **‘** (comillas tipográficas).  
 
 16. Haga clic en **Siguiente** crear la regla de implementación automática (ADR).  
@@ -269,13 +274,13 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
         > [!NOTE]  
         >  La hora de la fecha límite de instalación real es la hora de la fecha límite más una cantidad aleatoria de tiempo de hasta dos horas. Se minimiza, así, el efecto negativo que podría producirse si todos los equipos cliente de la recopilación de destino instalan las actualizaciones de software de la implementación a la misma hora.  
         >   
-        >  Puede establecer la opción **Deshabilitar selección aleatoria de fecha límite** de la configuración de cliente **Agente de equipo** para deshabilitar el retraso de la selección aleatoria de instalación para las actualizaciones de software requeridas. Para más información, vea [Agente de equipo](../../core/clients/deploy/about-client-settings.md#a-namebkmkcomputeragentdevicesettingsa-computer-agent).  
+        >  Puede establecer la opción **Deshabilitar selección aleatoria de fecha límite** de la configuración de cliente **Agente de equipo** para deshabilitar el retraso de la selección aleatoria de instalación para las actualizaciones de software requeridas. Para más información, vea [Agente de equipo](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 6.  En la página Experiencia del usuario, configure las siguientes opciones:  
 
     -   **Notificaciones de usuario**: especifique si quiere mostrar una notificación de las actualizaciones de software en el Centro de software del equipo cliente según las **Horas de disponibilidad del software** y si quiere mostrar las notificaciones de usuario en los equipos cliente.  
 
-    -   **Comportamiento de la fecha límite**: especifique el comportamiento que tiene lugar cuando se alcanza la fecha límite para la implementación de actualizaciones de software. Especifique si desea instalar las actualizaciones de software de la implementación. Especifique también si el sistema se debe reiniciar tras la instalación de las actualizaciones de software independientemente de lo establecido en una ventana de mantenimiento. Para más información sobre las ventanas de mantenimiento, vea [Cómo utilizar las ventanas de mantenimiento](../../core/clients/manage/collections/use-maintenance-windows.md).  
+    -   **Comportamiento de la fecha límite**: especifique el comportamiento que tiene lugar cuando se alcanza la fecha límite para la implementación de actualizaciones de software. Especifique si desea instalar las actualizaciones de software de la implementación. Especifique también si el sistema se debe reiniciar tras la instalación de las actualizaciones de software independientemente de lo establecido en una ventana de mantenimiento. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
     -   **Comportamiento de reinicio de dispositivo**: especifique si se debe suprimir el reinicio del sistema necesario para completar la instalación de actualizaciones de software en servidores y estaciones de trabajo.  
 
@@ -314,6 +319,6 @@ Para más información sobre el proceso de implementación, vea [Software update
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

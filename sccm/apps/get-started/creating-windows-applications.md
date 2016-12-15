@@ -1,5 +1,5 @@
 ---
-title: Crear aplicaciones de Windows | System Center Configuration Manager
+title: Crear aplicaciones de Windows | Microsoft Docs
 description: Consulte las consideraciones que debe tener en cuenta al crear e implementar aplicaciones para dispositivos Windows.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f776e624c7fff5f52b573e5066a6e7d20396ce91
+ms.sourcegitcommit: 557888d1f1f899e3198c430bbe5ccdd44178f824
+ms.openlocfilehash: 9c80cc42f9ce6775067a89a9f5a63c1bf4a0c7ca
 
 ---
 # <a name="create-windows-applications-with-system-center-configuration-manager"></a>Crear aplicaciones de Windows con System Center Configuration Manager
@@ -27,9 +27,9 @@ ms.openlocfilehash: f776e624c7fff5f52b573e5066a6e7d20396ce91
 Además de los otros requisitos y procedimientos de System Center Configuration Manager para crear una aplicación, también debe tener en cuenta las consideraciones siguientes al crear e implementar aplicaciones para dispositivos Windows.  
 
 ## <a name="general-considerations"></a>Consideraciones generales  
- Configuration Manager admite la implementación de los siguientes tipos de aplicaciones:  
+ Configuration Manager admite la implementación de los siguientes tipos de archivo de aplicaciones:  
 
-|Tipo de dispositivo|Archivos compatibles|  
+|Tipo de dispositivo|Tipos de archivo compatibles|  
 |-----------------|---------------------|  
 |Windows RT y Windows RT 8.1|*.appx, \*.appxbundle|  
 |Windows 8.1 y posterior inscrito como dispositivo móvil|*.appx, \*.appxbundle|  
@@ -38,11 +38,11 @@ Además de los otros requisitos y procedimientos de System Center Configuration 
 
 |Tipo de dispositivo|Acciones admitidas|  
 |-----------------|-----------------------|  
-|Windows 8.1 y posterior|Disponible, necesario. Desinstalar|  
-|Windows RT|Disponible, necesario, desinstalar|  
+|Windows 8.1 y posterior|disponible, necesario, desinstalar|  
+|Windows RT|disponible, necesario, desinstalar|  
 
 ## <a name="support-for-universal-windows-platform-uwp-apps"></a>Compatibilidad de las aplicaciones de la Plataforma universal de Windows (UWP)  
- Los dispositivos de Windows 10 no necesitan una clave de instalación de prueba para instalar las aplicaciones de línea de negocio. Sin embargo, la clave del Registro **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps** debe tener un valor de 1 para habilitar la instalación de prueba.  
+ Los dispositivos de Windows 10 no necesitan una clave de instalación de prueba para instalar las aplicaciones de línea de negocio. Sin embargo, para habilitar la instalación de prueba, la clave del Registro **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps** debe tener un valor de 1.  
 
  Si esta clave del Registro no está configurada, Configuration Manager establecerá automáticamente este valor en **1** la primera vez que implemente una aplicación en el dispositivo. Si estableció este valor en **0**, Configuration Manager no podrá cambiar automáticamente el valor y se producirá un error en la implementación de las aplicaciones de línea de negocio.  
 
@@ -69,6 +69,6 @@ Además de los otros requisitos y procedimientos de System Center Configuration 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

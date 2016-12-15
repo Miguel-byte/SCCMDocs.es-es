@@ -1,8 +1,8 @@
 ---
-title: "Características en desuso | System Center Configuration Manager"
+title: Funciones obsoletas | Microsoft Docs
 description: "Obtenga información sobre las características, los productos y los sistemas operativos que ya no admite System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 0f1e1070fd5b56b1abf22159e9f95b3b4bd8a8c6
+ms.sourcegitcommit: c899b4beaa2aae4eb609291dca0e23f3c266627a
+ms.openlocfilehash: 294166af3d5c6062e3508249c767779876b23931
 
 
 ---
@@ -30,27 +30,39 @@ En este tema se describen las características, los productos y los sistemas ope
 
  Esta información está sujeta a cambios en versiones futuras y puede no incluir todas las características, los productos o sistemas operativos en desuso.  
 
-## <a name="deprecated-features-products-and-operating-systems"></a>Características, productos y sistemas operativos en desuso  
- Los productos y los sistemas operativos de Microsoft que se muestran como en desuso se encuentran en soporte extendido o bien alcanzaron el final de su ciclo de vida. Los productos y los sistemas operativos de Microsoft que se muestran como en desuso se siguen probando con las versiones actuales de Configuration Manager hasta que superan su ciclo de vida de soporte técnico de Microsoft.  Para obtener más información, consulte el sitio web [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle) .  
+## <a name="how-to-use-this-information"></a>Cómo usar esta información  
+Cuando una función o un sistema operativo aparece por primera vez como obsoleto, se programa para que se quite la compatibilidad para el uso con Configuration Manager en una versión futura de Configuration Manager. Esta información se proporciona para ayudarle a planear alternativas al uso de dicha función o sistema operativo.  Cuando se publique la primera versión de Configuration Manager en la que se ha quitado la compatibilidad, los detalles de este tema se actualizarán para indicar que la versión específica.  
 
- **Características en desuso:**  
+Cuando se quita la compatibilidad con una función o un sistema operativo, el sistema operativo o la función sigue siendo compatible cuando se utiliza una versión anterior de Configuration Manager, siempre y cuando dicha versión de Configuration Manager siga siendo compatible. Sin embargo, cuando se utiliza una versión de Configuration Manager publicada después de la fecha o la versión indicada, esa versión de Configuration Manager no ofrece compatibilidad.
+
+**Por ejemplo:** si se programó una función para quitar la compatibilidad con la primera actualización publicada después de septiembre de 2016, esto implicaría que la compatibilidad para esa función dejaría de estar incluida en la actualización 1610, que se publicó en octubre de 2016.
+-  Con la actualización 1610, la función ya no es compatible.
+-  Este contenido se actualizaría para indicar que la compatibilidad se quitó con la versión 1610.
+Sin embargo, si sigue usando una versión anterior que admite la función, como la versión 1602 o 1606, puede seguir usando la función hasta que la versión que usa deje de ser compatible.
+
+Para obtener más información, vea:
+ - Sitio web de la [Directiva del Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle)
+ - [Compatibilidad con versiones de la rama actual de Configuration Manager](/sccm/core/servers/manage/current-branch-versions-supported)
+
+**Características en desuso:**  
 
 
 |**Característica**|**Primer anuncio del desuso**|**Soporte eliminado**|  
 |-|-|-|  
-|Protección de acceso a redes (NAP): como aparece en System Center 2012 Configuration Manager|7/10/2015|√|  
-|Administración fuera de banda: como aparece en System Center 2012 Configuration Manager|10/16/2015|√|  
+|Protección de acceso a redes (NAP): como aparece en System Center 2012 Configuration Manager|7/10/2015|Versión 1511|  
+|Administración fuera de banda: como aparece en System Center 2012 Configuration Manager|10/16/2015|Versión 1511|
+|Secuencias de tareas: <br /> - Convertir el disco en dinámico <br /> - Instalar herramientas de implementación |18/11/2016|La compatibilidad con estas secuencias de tareas finaliza con la primera actualización publicada después del 1 de junio de 2017|  
 
  **Sistemas operativos de servidor en desuso:**  
 
- |**Sistemas operativos**|**Primer anuncio del desuso**|**Soporte eliminado**|  
+ |**Sistemas operativos**|**Primer anuncio del desuso**|**Soporte eliminado** |  
 |-|-|-|  
-|Windows Server 2008|7/10/2015|La compatibilidad termina con la primera actualización publicada después del 31/12/2016 (véase la nota 1)|  
-|Windows Server 2008 R2|7/10/2015|La compatibilidad termina con la primera actualización publicada después del 31/12/2016 (véase la nota 2)|  
+|Windows Server 2008|7/10/2015|La compatibilidad termina con la primera actualización publicada después del 31/12/2016 *(véase la nota 1)*|  
+|Windows Server 2008 R2|7/10/2015|La compatibilidad termina con la primera actualización publicada después del 31/12/2016 *(véase la nota 2)*|  
 
--   Nota 1: Una vez finalizado el soporte técnico, este sistema operativo ya no se admitirá para servidores de sitio o la mayoría de los roles de sistema de sitio. No obstante, seguirá admitiendo el rol de sistema de sitio de punto de distribución (incluido el punto de distribución de extracción) hasta que se anuncie que esta compatibilidad está en desuso o expire el período extendido de soporte técnico de este sistema operativo.  
+-   *Nota 1*: Una vez finalizado el soporte técnico, este sistema operativo ya no se admitirá para servidores de sitio o la mayoría de los roles de sistema de sitio. No obstante, seguirá admitiendo el rol de sistema de sitio de punto de distribución (incluido el punto de distribución de extracción) hasta que se anuncie que esta compatibilidad está en desuso o expire el período extendido de soporte técnico de este sistema operativo.  
 
--   Nota 2: Una vez finalizado el soporte técnico, este sistema operativo ya no se admitirá para servidores de sitio o la mayoría de los roles de sistema de sitio. No obstante, sí se admitirá para el punto de migración de estado y el rol de sistema de sitio (incluidos los puntos de distribución de extracción, así como para PXE y multidifusión) hasta que se anuncie el fin de esta compatibilidad y finalice el período de soporte extendido del sistema operativo.  A partir de la versión 1602, puede actualizar in situ el sistema operativo de un servidor de sitio de Windows Server 2008 R2 a Windows Server 2012 R2.  
+-   *Nota 2*: Una vez finalizado el soporte técnico, este sistema operativo ya no se admitirá para servidores de sitio o la mayoría de los roles de sistema de sitio. No obstante, sí se admitirá para el punto de migración de estado y el rol de sistema de sitio (incluidos los puntos de distribución de extracción, así como para PXE y multidifusión) hasta que se anuncie el fin de esta compatibilidad y finalice el período de soporte extendido del sistema operativo.  A partir de la versión 1602, puede actualizar in situ el sistema operativo de un servidor de sitio de Windows Server 2008 R2 a Windows Server 2012 R2.  
 
      Para obtener más información sobre la actualización local de un sistema operativo de servidores de sitio, consulte la sección [In-place upgrade the operating system of site servers that run Windows Server 2008 R2](../../../core/plan-design/changes/whats-new-in-version-1602.md#bkmk_UpgradeOS) (Actualización local del sistema operativo de los servidores del sitio que ejecutan Windows Server 2008 R2) del tema [What's changed in System Center Configuration Manager](../../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md) (Cambios introducidos en System Center Configuration Manager).
 
@@ -62,22 +74,22 @@ En este tema se describen las características, los productos y los sistemas ope
 
 |**Sistemas operativos**|**Primer anuncio del desuso**|**Soporte eliminado**|  
 |-|-|-|  
-|Windows XP|7/10/2015|√|  
+|Windows XP|7/10/2015|Versión 1511|  
 |Windows XP Embedded|7/10/2015|El soporte técnico termina con la primera actualización publicada después del 31/12/2016|  
-|Windows Server 2003|7/10/2015|√|  
-|Windows Server 2003 R2|7/10/2015|√|  
-|Windows Vista|7/10/2015|√|  
-|Mac OS X  10.6 - 10.8|7/10/2015|√|  
-|Windows Mobile 6.0 - 6.5|7/10/2015|√|  
-|Nokia Symbian Belle|7/10/2015|√|  
-|Windows CE 5.0 - 6.0|7/10/2015|√|  
+|Windows Server 2003|7/10/2015|Versión 1511|  
+|Windows Server 2003 R2|7/10/2015|Versión 1511|  
+|Windows Vista|7/10/2015|Versión 1511|  
+|Mac OS X  10.6 - 10.8|7/10/2015|Versión 1511|  
+|Windows Mobile 6.0 - 6.5|7/10/2015|Versión 1511|  
+|Nokia Symbian Belle|7/10/2015|Versión 1511|  
+|Windows CE 5.0 - 6.0|7/10/2015|Versión 1511|  
 
 
  **Soporte en desuso para versiones de SQL Server como base de datos de sitio:**  
 
 |**Versiones de SQL Server**|**Primer anuncio del desuso**|**Soporte eliminado**|   
 |-|-|-|  
-|SQL Server 2008|7/10/2015|√|  
+|SQL Server 2008|7/10/2015|Versión 1511|  
 |SQL Server 2008 R2|7/10/2015|El soporte técnico termina con la primera actualización publicada después del 31/12/2016|  
 
 ## <a name="features-removed-in-system-center-configuration-manager"></a>Características eliminadas en System Center Configuration Manager  
@@ -99,6 +111,6 @@ En este tema se describen las características, los productos y los sistemas ope
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

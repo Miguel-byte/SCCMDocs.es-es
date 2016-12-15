@@ -1,5 +1,5 @@
 ---
-title: Planificar roles del sistema de sitio | System Center Configuration Manager
+title: Planear roles del sistema de sitio | Microsoft Docs
 description: "Tenga en cuenta los servidores y roles de sistema de sitio cuando planifique la jerarquía de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 5f8d051a92cd74938f1a5235b37f02ebe0ff542c
+ms.sourcegitcommit: 2b00cfcec0959716d69a1605018f33d30287fee9
+ms.openlocfilehash: a2e57aac01fff3c28b4acfcf58bcd786bd3e62c4
 
 
 ---
@@ -72,6 +72,8 @@ Después de que se instala un sitio, puede mover la ubicación de algunos roles 
 -   **Punto de registro de certificado** : un rol de sistema de sitio que se comunica con un servidor que ejecuta el Servicio de inscripción de dispositivos de red para administrar solicitudes de certificado de dispositivo que usan el Protocolo de inscripción de certificados simple (SCEP).  Este rol solo se admite en los sitios primarios y el sitio de administración central.   Aunque un único punto de registro de certificado puede proporcionar funcionalidad a toda una jerarquía, para ayudar a equilibrar la carga de las solicitudes de certificado puede instalar varias instancias de este rol en un sitio y en varios sitios de la misma jerarquía. Cuando existen varias instancias en una jerarquía, los clientes se asignan aleatoriamente a uno de los puntos de registro de certificado.  
 
      Cada punto de registro de certificado requiere acceso a una instancia independiente del Servicio de inscripción de dispositivos de red. No se pueden configurar dos o más puntos de registro de certificado para que utilicen el mismo Servicio de inscripción de dispositivos de red. Además, el punto de registro de certificados no debe instalarse en el mismo servidor que ejecuta el Servicio de inscripción de dispositivos de red.  
+
+- **Punto del conector de puerta de enlace de administración en la nube**: un rol de sistema de sitio para comunicarse con la [puerta de enlace de administración en la nube](/sccm/core/clients/manage/setup-cloud-management-gateway). 
 
 -   **Punto de distribución** : un rol de sistema de sitio que contiene archivos de origen para que descarguen los clientes, tales como imágenes de arranque, paquetes de software, actualizaciones de software, imágenes del sistema operativo y contenido de la aplicación. De forma predeterminada, este rol se instala en el equipo del servidor de sitio de nuevos sitios primarios y secundarios cuando se instala el sitio, pero no se admite en un sitio de administración central.  Se pueden instalar varias instancias de este rol en un sitio admitido y en varios sitios de la misma jerarquía.  Para obtener más información, consulte [Conceptos básicos de la administración de contenido en System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md), y [Administración del contenido y de la infraestructura de contenido para System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
@@ -150,6 +152,6 @@ Los siguientes son roles de sistema de sitio que pueden utilizar un servidor pro
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

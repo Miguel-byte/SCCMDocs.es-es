@@ -1,12 +1,12 @@
 ---
 
-title: Planear las actualizaciones de software | System Center Configuration Manager
+title: Planear las actualizaciones de software | Microsoft Docs
 description: "Es imprescindible planear la infraestructura de punto de actualización de software antes de usar las actualizaciones de software en un entorno de producción de System Center Configuration Manager."
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 69f2c9c3c098013679e12d8578a780130adb94be
+ms.sourcegitcommit: b1c68b233097ef3a744dd25b3fb919660f0b2244
+ms.openlocfilehash: 16415fb54a2cf91747990c94ffea0076effe525b
 
 
 ---
@@ -34,8 +34,16 @@ Antes de usar las actualizaciones de software en un entorno de producción de Sy
 
 -   El punto de actualización de software puede admitir hasta 25 000 clientes cuando WSUS se ejecuta en el equipo del punto de actualización de software y este punto coexiste con otro rol de sistema de sitio.  
 
--   El punto de actualización de software puede admitir hasta 150 000 clientes cuando el equipo remoto cumple los requisitos de WSUS para admitir este número de clientes.   
-    De manera predeterminada, Configuration Manager no admite la configuración de puntos de actualización de software como clústeres de NLB. En cambio, puede usar el SDK de Configuration Manager para configurar hasta cuatro puntos de actualización de software en un clúster de NLB.  
+-   El punto de actualización de software puede admitir a hasta 150 000 clientes cuando el equipo remoto cumple los requisitos de WSUS, WSUS se utiliza con Configuration Manager y configura lo siguiente:
+
+    Grupos de aplicaciones de IIS:
+    - Aumente la longitud de cola de WsusPool a 2000
+    - Cuadriplique el límite de memoria privada de WsusPool o defínalo en 0 (ilimitado)      
+
+    Para más información acerca de los requisitos de hardware para el punto de actualización de software, vea [Requisitos del punto de actualización de software](/sccm/core/plan-design/configs/recommended-hardware#a-namebkmkscalesiesystemsa-site-systems).
+
+-   De manera predeterminada, Configuration Manager no admite la configuración de puntos de actualización de software como clústeres de NLB. En cambio, puede usar el SDK de Configuration Manager para configurar hasta cuatro puntos de actualización de software en un clúster de NLB.  
+
 
 ### <a name="capacity-planning-for-software-updates-objects"></a>Planeación de la capacidad para los objetos de actualizaciones de software  
  Utilice la siguiente información de capacidad para planear los objetos de actualizaciones de software.  
@@ -300,6 +308,6 @@ Cuando haya planificado las actualizaciones de software, consulte [Preparación 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

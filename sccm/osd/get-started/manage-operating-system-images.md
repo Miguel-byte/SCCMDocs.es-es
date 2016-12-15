@@ -1,8 +1,8 @@
 ---
-title: "Administración de imágenes de sistema operativo | Configuration Manager"
+title: "Administrar imágenes de sistema operativo | Microsoft Docs"
 description: "En Configuration Manager, obtenga información sobre los métodos que puede usar para administrar las imágenes del sistema operativo que se almacenan en archivos de Windows Imaging (WIM)."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 3c0801afa6a967faabf186f70685b701ba2a95d8
+ms.sourcegitcommit: 03722ff4f480cd26842e395fe1f7ec8359e2b33e
+ms.openlocfilehash: 6953c3834ca303b949f22436010a87b3da9688dc
 
 
 ---
@@ -85,7 +85,7 @@ Si quiere conocer los pasos necesarios para crear una imagen personalizada del s
  Las imágenes de sistema operativo se distribuyen a los puntos de distribución de la misma forma que se distribuye otro tipo de contenido. En la mayoría de los casos, debe distribuir la imagen de sistema operativo a un punto de distribución, como mínimo, antes de implementar el sistema operativo. Para conocer los pasos de distribución de una imagen de sistema operativo, vea [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content) (Distribuir contenido).  
 
 ##  <a name="a-namebkmkosimagesapplyupdatesa-apply-software-updates-to-an-operating-system-image"></a><a name="BKMK_OSImagesApplyUpdates"></a> Aplicación de actualizaciones de software a una imagen de sistema operativo  
- Periódicamente, se publican nuevas actualizaciones de software que son aplicables al sistema operativo contenido en la imagen de sistema operativo. Por supuesto, antes de aplicar las actualizaciones de software a una imagen debe contar con la infraestructura de actualizaciones de software y haber sincronizado correctamente dichas actualizaciones. Para obtener más información, consulte [Deploy software updates](../../sum/deploy-use/deploy-software-updates.md) (Implementación de actualizaciones de software).  
+ Periódicamente, se publican nuevas actualizaciones de software que son aplicables al sistema operativo contenido en la imagen de sistema operativo. Por supuesto, antes de aplicar las actualizaciones de software a una imagen debe contar con la infraestructura de actualizaciones de software, haber sincronizado correctamente dichas actualizaciones y haber descargado las actualizaciones de software en la biblioteca de contenido en el servidor del sitio. Para obtener más información, consulte [Deploy software updates](../../sum/deploy-use/deploy-software-updates.md) (Implementación de actualizaciones de software).  
 
  Puede aplicar las actualizaciones de software que sean aplicables a una imagen según una programación especificada. En función de la programación que especifique, Configuration Manager aplica las actualizaciones de software que seleccione a la imagen del sistema operativo y, a continuación, opcionalmente, distribuye la imagen actualizada a los puntos de distribución. La información sobre la imagen de sistema operativo se almacena en la base de datos del sitio, incluyendo las actualizaciones de software que se aplicaron en el momento de la importación. Las actualizaciones de software que se hayan aplicado a la imagen desde que se agregó inicialmente también se almacenan en la base de datos del sitio. Cuando inicia el asistente para aplicar actualizaciones de software a la imagen de sistema operativo, el asistente recupera una lista de actualizaciones de software aplicables aún no aplicadas a la imagen para que usted seleccione las que desea. Configuration Manager copia las actualizaciones de software de la biblioteca de contenido que se encuentra en el servidor de sitio y las aplica a la imagen de sistema operativo.  
 
@@ -142,6 +142,6 @@ Si quiere conocer los pasos necesarios para crear una imagen personalizada del s
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

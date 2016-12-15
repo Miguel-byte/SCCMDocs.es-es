@@ -1,12 +1,12 @@
 ---
 
-title: "Implementación de actualizaciones de software manualmente | Configuration Manager"
+title: Implementar actualizaciones de software manualmente | Microsoft Docs
 description: "Para implementar actualizaciones manualmente, seleccione actualizaciones en la consola de Configuration Manager e impleméntelas manualmente, o agregue actualizaciones a un grupo de actualizaciones e implemente el grupo."
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: be845d9f6ad2f92a0235cdb7410654e229448e1b
+ms.sourcegitcommit: 78524abd4c45f0b7402d6f1e85afc60bb72ab0ee
+ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
 
 ---
@@ -228,29 +228,31 @@ ms.openlocfilehash: be845d9f6ad2f92a0235cdb7410654e229448e1b
         > [!NOTE]  
         >  La hora real de la fecha límite de instalación es la hora que se configure más una cantidad aleatoria de tiempo de hasta 2 horas. Se minimiza, así, el efecto negativo que podría producirse si todos los equipos cliente de la recopilación de destino instalan las actualizaciones de software de la implementación a la misma hora.  
         >   
-        >  Puede establecer la opción **Deshabilitar selección aleatoria de fecha límite** de la configuración de cliente **Agente de equipo** para deshabilitar el retraso de la selección aleatoria de instalación para las actualizaciones de software requeridas. Para obtener más información, vea [Agente de equipo](../../core/clients/deploy/about-client-settings.md#a-namebkmkcomputeragentdevicesettingsa-computer-agent).  
+        >  Puede establecer la opción **Deshabilitar selección aleatoria de fecha límite** de la configuración de cliente **Agente de equipo** para deshabilitar el retraso de la selección aleatoria de instalación para las actualizaciones de software requeridas. Para obtener más información, vea [Agente de equipo](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 8.  En la página Experiencia del usuario, configure las siguientes opciones:  
 
     -   **Notificaciones de usuario**: especifique si quiere mostrar una notificación de las actualizaciones de software en el Centro de software del equipo cliente según las **Horas de disponibilidad del software** y si quiere mostrar las notificaciones de usuario en los equipos cliente. Si **Tipo de implementación** está establecido en **Disponible** en la página Configuración de implementación, no se puede seleccionar **Ocultar en el Centro de software y ocultar todas las notificaciones**.  
 
-    -   **Comportamiento de la fecha límite**: especifique el comportamiento que tiene lugar cuando se alcanza la fecha límite para la implementación de actualizaciones de software. Especifique si desea instalar las actualizaciones de software de la implementación. Especifique también si el sistema se debe reiniciar tras la instalación de las actualizaciones de software independientemente de lo establecido en una ventana de mantenimiento. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](../../core/clients/manage/collections/use-maintenance-windows.md).  
+    -   **Comportamiento de la fecha límite**: *solo disponible cuando **Tipo de implementación** * está establecido en **Requerido** * en la página Configuración de implementación.*   
+    especifique el comportamiento que tiene lugar cuando se alcanza la fecha límite para la implementación de actualizaciones de software. Especifique si desea instalar las actualizaciones de software de la implementación. Especifique también si el sistema se debe reiniciar tras la instalación de las actualizaciones de software independientemente de lo establecido en una ventana de mantenimiento. Para más información sobre las ventanas de mantenimiento, vea [Cómo utilizar las ventanas de mantenimiento](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
-    -   **Comportamiento de reinicio de dispositivo**: especifique si se debe suprimir el reinicio del sistema necesario para completar la instalación de actualizaciones de software en servidores y estaciones de trabajo.  
+    -   **Comportamiento de reinicio de dispositivo**: *solo disponible cuando **Tipo de implementación** * está establecido en **Requerido** * en la página Configuración de implementación.*    
+    especifique si se debe suprimir el reinicio del sistema necesario para completar la instalación de actualizaciones de software en servidores y estaciones de trabajo.  
 
         > [!IMPORTANT]  
-        >  Suprimir los reinicios de sistema puede ser útil en entornos de servidor o si no desea que los equipos que instalan las actualizaciones de software se reinicien de manera predeterminada. Sin embargo, esta opción puede dejar a los equipos en un estado poco seguro; por su lado, forzar el reinicio permite asegurar que la instalación de actualizaciones de software se completa inmediatamente. .  
+        >  Suprimir los reinicios de sistema puede ser útil en entornos de servidor o si no desea que los equipos que instalan las actualizaciones de software se reinicien de manera predeterminada. Sin embargo, esta opción puede dejar a los equipos en un estado poco seguro; por su lado, forzar el reinicio permite asegurar que la instalación de actualizaciones de software se completa inmediatamente.
 
     -   **Tratamiento de filtros de escritura para dispositivos de Windows Embedded**: cuando implemente actualizaciones de software en dispositivos de Windows Embedded habilitados para filtro de escritura, puede especificar que las actualizaciones de software se instalen en la superposición temporal y, o bien confirmar los cambios más tarde, o bien confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento. Al confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento, es necesario reiniciar. Los cambios se conservan en el dispositivo.  
 
         > [!NOTE]  
         >  Cuando implemente una actualización de software en un dispositivo de Windows Embedded, asegúrese de que el dispositivo es miembro de una recopilación que tenga una ventana de mantenimiento configurada.  
 
-     Las opciones **Comportamiento de la fecha límite** y **Comportamiento de reinicio de dispositivo** sólo se pueden configurar si **Tipo de implementación** está establecido en **Requerido** en la página Configuración de implementación.  
+    - **Comportamiento de reevaluación de implementación de actualizaciones de software tras el reinicio**: a partir de la versión 1606 de Configuration Manager, seleccione esta opción para configurar implementaciones de actualizaciones de software para que los clientes ejecuten un examen de cumplimiento de actualizaciones de software inmediatamente después de que un cliente instale las actualizaciones de software y se reinicie. Esto permite al cliente comprobar las actualizaciones de software adicionales que entran en vigor después de que el cliente reinicie e instalarlas (para cumplir así los requisitos) durante la misma ventana de mantenimiento.
 
 9. En la página Alertas, configure cómo generarán Configuration Manager y System Center Operations Manager las alertas para esta implementación. Sólo se pueden configurar alertas si **Tipo de implementación** está establecido en **Requerido** en la página Configuración de implementación.  
 
-    > [!WARNING]  
+    > [!NOTE]  
     >  Puede revisar las alertas de las actualizaciones de software recientes en el área de trabajo **Biblioteca de software** del nodo **Actualizaciones de software** .  
 
 10. En la página Configuración de descarga, configure las siguientes opciones:  
@@ -316,6 +318,6 @@ ms.openlocfilehash: be845d9f6ad2f92a0235cdb7410654e229448e1b
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

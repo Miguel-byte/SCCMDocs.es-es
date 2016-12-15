@@ -1,11 +1,11 @@
 ---
-title: Dar servicio a un grupo de servidores | Configuration Manager
+title: Servicio de un grupo de servidores | Documentos de Microsoft
 description: La consola de System Center Configuration Manager proporciona alertas y estados para supervisar la compatibilidad y las actualizaciones.
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: da7a5f1d075eb1fcd7c56b713401bb0f985fa487
+ms.sourcegitcommit: 78524abd4c45f0b7402d6f1e85afc60bb72ab0ee
+ms.openlocfilehash: b89cec7cebb5342da32ec8e11a049edad12f1231
 
 
 ---
@@ -47,8 +47,11 @@ El grupo de servidores se configura en las propiedades de una recopilación de d
 
 5.  Especifique si quiere usar un script anterior a la implementación (purga de nodo) o posterior a la implementación (reanudación de nodo).  
 
+    > [!WARNING]
+    > Los scripts personalizados no están firmados por Microsoft. Es su responsabilidad para mantener la integridad de estos scripts.
+
     > [!TIP]  
-    >Los siguientes son ejemplos que puede usar en las pruebas para los scripts anteriores a la implementación y posteriores a la implementación que escriben la hora actual en un archivo de texto:  
+    > Los siguientes son ejemplos que puede usar en las pruebas para los scripts anteriores a la implementación y posteriores a la implementación que escriben la hora actual en un archivo de texto:  
     >   
     >  **Anterior a la implementación**  
     >   
@@ -85,6 +88,6 @@ Si un equipo no puede liberar un bloqueo de implementación, puede liberar de fo
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: "Administración de Windows como servicio | Configuration Manager"
+title: "Administración de Windows como servicio | Microsoft Docs"
 description: "Hay características en System Center Configuration Manager que le permiten ver el estado de Windows como servicio en su entorno para mantenerlo actualizado."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 0ed06bb30d1277afa71d1eb2d045ea0ebc87912a
+ms.sourcegitcommit: 3f44505c977b511223a083a960f871371c0ff133
+ms.openlocfilehash: 1885968006ef5be1f507e94e0d33918174b1af12
 
 
 ---
@@ -134,14 +134,15 @@ Los planes de mantenimiento solo usan la clasificación de actualizaciones de so
 
     -   **Especificar el estado de disponibilidad de Windows al que debe aplicarse este plan de mantenimiento**: (seleccione una de las siguientes opciones)  
 
-        -   **Release Ready (Rama actual)**:  
+        -   **Release Ready (Rama actual)**: en el modelo de servicio de CB, las actualizaciones de las funciones están disponibles en cuanto Microsoft las vaya lanzando.
 
-        -   **Business Ready (Rama actual para empresas)**:  
+        -   **Business Ready (Rama actual para empresas)**: la rama de servicio de CBB se usa normalmente para una amplia distribución. Los clientes de Windows 10 en la rama de servicio de CBB reciben la misma compilación de Windows 10 que los de la rama de servicio de CB posteriormente.
 
-    -   **Cantidad de días después de que Microsoft publique una nueva actualización que quiere esperar antes de la implementación en su entorno**:  
+    -   **Cantidad de días después de que Microsoft publique una nueva actualización que quiere esperar antes de la implementación en su entorno**: Configuration Manager realiza la evaluación de si incluir una actualización en la implementación si la fecha actual es posterior a la fecha de publicación más el número de días que configura para esta opción.
 
     -   Antes de la versión 1602 de Configuration Manager, haga clic en **Vista previa** para ver las actualizaciones de Windows 10 asociadas con el estado de disponibilidad.  
 
+    Para obtener más información, vea [Ramas de mantenimiento](https://technet.microsoft.com/itpro/windows/manage/waas-overview#servicing-branches).
 7.  A partir de la versión 1602 de Configuration Manager, en la página Actualizaciones, configure los criterios de búsqueda para filtrar las actualizaciones que se agregarán al plan de servicio. Solo se agregarán a la implementación asociada las actualizaciones que cumplan con los criterios especificados.  
 
      Haga clic en **Vista previa** para ver las actualizaciones que cumplen los criterios especificados.  
@@ -168,7 +169,7 @@ Los planes de mantenimiento solo usan la clasificación de actualizaciones de so
         > [!NOTE]  
         >  La hora de la fecha límite de instalación real es la hora de la fecha límite más una cantidad aleatoria de tiempo de hasta dos horas. Se minimiza, así, el efecto negativo que podría producirse si todos los equipos cliente de la recopilación de destino instalan las actualizaciones de software de la implementación a la misma hora.  
         >   
-        >  Puede establecer la opción **Deshabilitar selección aleatoria de fecha límite** de la configuración de cliente **Agente de equipo** para deshabilitar el retraso de la selección aleatoria de instalación para las actualizaciones necesarias. Para obtener más información, vea [Agente de equipo](../../core/clients/deploy/about-client-settings.md#BKMK_ComputerAgentDeviceSettings).  
+        >  Puede establecer la opción **Deshabilitar selección aleatoria de fecha límite** de la configuración de cliente **Agente de equipo** para deshabilitar el retraso de la selección aleatoria de instalación para las actualizaciones necesarias. Para obtener más información, vea [Agente de equipo](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 9. En la página Experiencia del usuario, configure las siguientes opciones:  
 
@@ -220,7 +221,12 @@ Los planes de mantenimiento solo usan la clasificación de actualizaciones de so
  Cuando complete al asistente, se ejecutará el plan de mantenimiento. Este agregará las actualizaciones que cumplan los criterios especificados a un grupo de actualizaciones de software, descargará estas actualizaciones en la biblioteca de contenido del servidor de sitio, las distribuirá a los puntos de distribución configurados y, después, implementará el grupo de actualizaciones de software en clientes de la recopilación de destino.  
 
 ##  <a name="a-namebkmkmodifyservicingplana-modify-a-servicing-plan"></a><a name="BKMK_ModifyServicingPlan"></a> Modificar un plan de mantenimiento  
- Después de crear un plan de mantenimiento básico desde el panel de mantenimiento de Windows 10 o si necesita cambiar la configuración de un plan de mantenimiento existente, puede hacerlo a través de las propiedades del plan de mantenimiento. Use el siguiente procedimiento para modificar las propiedades de un plan de mantenimiento.  
+Después de crear un plan de mantenimiento básico desde el panel de mantenimiento de Windows 10 o si necesita cambiar la configuración de un plan de mantenimiento existente, puede hacerlo a través de las propiedades del plan de mantenimiento.
+
+> [!NOTE]
+> Puede configurar las opciones en las propiedades para el plan de mantenimiento que no están disponibles en el asistente al crear el plan de mantenimiento. El asistente utiliza una configuración predeterminada para la configuración para lo siguiente: configuración de descarga, configuración de implementación y alertas.  
+
+Use el siguiente procedimiento para modificar las propiedades de un plan de mantenimiento.  
 
 #### <a name="to-modify-the-properties-of-a-servicing-plan"></a>Para modificar las propiedades de un plan de mantenimiento  
 
@@ -228,10 +234,34 @@ Los planes de mantenimiento solo usan la clasificación de actualizaciones de so
 
 2.  En el área de trabajo Biblioteca de software, expanda **Mantenimiento de Windows 10**, haga clic en **Planes de mantenimiento**y, después, seleccione el plan de mantenimiento que quiere modificar.  
 
-3.  En la pestaña **Inicio** , haga clic en **Propiedades** para abrir las propiedades del plan de mantenimiento seleccionado.  
+3.  En la pestaña **Inicio** , haga clic en **Propiedades** para abrir las propiedades del plan de mantenimiento seleccionado.
+
+    Las siguientes opciones están disponibles en las propiedades del plan de mantenimiento que no estaban configuradas en el asistente:
+
+    - En la pestaña Configuración de implementación, configure las siguientes opciones:  
+
+        -   **Tipo de implementación**: especifique el tipo de implementación para la implementación de actualizaciones de software. Seleccione **Requerido** para crear una implementación de actualización de software obligatoria en la que las actualizaciones de software se instalan automáticamente en los clientes antes de una fecha límite configurada. Seleccione **Disponible** para crear una implementación de actualización de software que esté disponible para que los usuarios la instalen desde el Centro de software.  
+
+            > [!IMPORTANT]  
+            >  Una vez creada la implementación de actualización de software, no podrá cambiar el tipo de implementación.  
+
+            > [!NOTE]  
+            >  Un grupo de actualizaciones de software implementado como **Requerido** se descargará en segundo plano y se respetará la configuración de BITS, si ha configurado.  
+            > Sin embargo, los grupos de actualizaciones de software implementados como **Disponible** se descargarán en primer plano y omitirán la configuración de BITS.  
+
+        -   **Usar Wake-on-LAN para activar clientes para las implementaciones requeridas**: especifique si quiere habilitar Wake on LAN en la fecha límite para enviar paquetes de reactivación a equipos que requieran una o varias actualizaciones de software en la implementación. Los equipos que estén en modo de suspensión en la fecha límite de instalación se activarán para que se pueda iniciar la instalación de las actualizaciones de software. Los clientes que están en modo de suspensión pero no requieren actualizaciones de software de la implementación no se iniciarán. De forma predeterminada, esta opción no está habilitada. Sólo está disponible cuando **Tipo de implementación** está establecido en **Requerido**.  
+
+            > [!WARNING]  
+            >  Para poder utilizar esta opción, los equipos y las redes deben configurarse para Wake on LAN.  
+
+        -   **Nivel de detalle**: especifique el nivel de detalle de los mensajes de estado que notifican los equipos cliente.  
+
+    - Configuración de descarga
+
+    - Alertas
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

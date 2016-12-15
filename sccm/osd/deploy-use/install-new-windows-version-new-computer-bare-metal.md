@@ -1,8 +1,8 @@
 ---
-title: "Instalar una nueva versión de Windows en un equipo nuevo (sin sistema operativo) con System Center Configuration Manager"
+title: "Instalar una nueva versión de Windows en un equipo nuevo (sin sistema operativo) con System Center Configuration Manager  | Microsoft Docs"
 description: Siga estos pasos en System Center Configuration Manager para instalar un sistema operativo en un equipo nuevo mediante PXE, OEM o un medio independiente.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c672595a06a45bec840f17743636ef6f502af49f
+ms.sourcegitcommit: 06ade037c580d64503e6b8b5c3bf31004ab0650b
+ms.openlocfilehash: 93b3d99e7391feefc3d706f15f0fe8f8df3b75ac
 
 
 ---
@@ -29,11 +29,11 @@ En este tema se indican los pasos generales de System Center Configuration Manag
 
  Use las secciones siguientes para actualizar un equipo existente con una nueva versión de Windows.  
 
-##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> Planear  
+##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> Plan  
 
 -   **Planear e implementar los requisitos de infraestructura**  
 
-     Hay varios requisitos de infraestructura que deben cumplirse antes de implementar sistemas operativos, como Windows ADK, los Servicios de implementación de Windows (WDS), las configuraciones compatibles de disco duro, etc. Para obtener más información, consulte [Infrastructure requirements for operating system deployment (Requisitos de infraestructura para la implementación de sistema operativo)](../plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
+     Hay varios requisitos de infraestructura que deben cumplirse antes de implementar sistemas operativos, como Windows ADK, los Servicios de implementación de Windows (WDS), las configuraciones compatibles de disco duro, etc. Para obtener más información, consulte [Infrastructure requirements for operating system deployment](../plan-design/infrastructure-requirements-for-operating-system-deployment.md) (Requisitos de infraestructura para la implementación de sistema operativo).
 
 ##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a> Configurar  
 
@@ -57,7 +57,7 @@ En este tema se indican los pasos generales de System Center Configuration Manag
 
 3.  **Crear una secuencia de tareas para implementar sistemas operativos a través de la red**  
 
-     Use una secuencia de tareas para automatizar la instalación del sistema operativo a través de la red. Siga los pasos de [Create a task sequence to install an operating system (Crear una secuencia de tareas para instalar un sistema operativo)](create-a-task-sequence-to-install-an-operating-system.md) para crear la secuencia de tareas para implementar el sistema operativo. Según el método de implementación que elija, puede haber consideraciones adicionales para la secuencia de tareas.  
+     Use una secuencia de tareas para automatizar la instalación del sistema operativo a través de la red. Siga los pasos de [Crear una secuencia de tareas para instalar un sistema operativo](create-a-task-sequence-to-install-an-operating-system.md). Según el método de implementación que elija, puede haber consideraciones adicionales para la secuencia de tareas.  
 
 ##  <a name="a-namebkmkdeploya-deploy"></a><a name="BKMK_Deploy"></a> Implementar  
 
@@ -81,6 +81,6 @@ En este tema se indican los pasos generales de System Center Configuration Manag
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

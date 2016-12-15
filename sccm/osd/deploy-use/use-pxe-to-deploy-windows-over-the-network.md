@@ -1,8 +1,8 @@
 ---
-title: "Usar el entorno PXE para implementar Windows a través de la red | Configuration Manager"
+title: "Uso de PXE para implementar Windows a través de la red | Microsoft Docs"
 description: "Use las implementaciones de sistema operativo iniciadas por el entorno PXE para actualizar el sistema operativo de un equipo o instalar una nueva versión de Windows en un equipo nuevo."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4bb62f7479fafac6b57d42cd048fd5bcec29b0e9
+ms.sourcegitcommit: 3f44505c977b511223a083a960f871371c0ff133
+ms.openlocfilehash: b22cdbd42693078caa47f41182ce73ea881c3515
 
 
 ---
@@ -98,6 +98,8 @@ Puede personalizar el tamaño de bloque de TFTP de RamDisk y, a partir de Config
 ##  <a name="how-is-the-boot-image-selected-for-clients-booting-with-pxe"></a>¿Cómo se selecciona la imagen de arranque para los clientes que arrancan con el entorno PXE?
 Cuando un cliente arranca con el entorno PXE, Configuration Manager ofrece al cliente una imagen de arranque. A partir de Configuration Manager versión 1606, Configuration Manager usa una imagen de arranque con una coincidencia de arquitectura exacta, si está disponible. Si no hay disponible una imagen de arranque con la arquitectura exacta, Configuration Manager usa una imagen de arranque con una arquitectura compatible. En la lista siguiente se proporciona información sobre cómo se selecciona una imagen de arranque para los clientes que arrancan con el entorno PXE.
 1. Configuration Manager busca en la base de datos de sitio un registro del sistema que coincida con la dirección MAC o SMBIOS del cliente que está intentando arrancar.
+    > [!NOTE]
+    > Si un equipo que se asigna a un sitio se arranca en PXE para un sitio de diferente, las directivas no son visibles para el equipo. Por ejemplo, si un cliente ya está asignado al sitio A, el punto de administración y punto de distribución en el sitio B no podrán acceder a las directivas de sitio A y el cliente no arrancará correctamente PXE.
 2. Configuration Manager busca secuencias de tareas que estén implementadas en el registro del sistema que se encontró en el paso 1.
 3. En la lista de las secuencias de tareas que se encontraron en el paso 2, Configuration Manager busca una imagen de arranque que coincida con la arquitectura del cliente que está intentando arrancar. Si se encuentra una imagen de arranque con la misma arquitectura, se usa esa imagen.
 
@@ -105,6 +107,6 @@ Cuando un cliente arranca con el entorno PXE, Configuration Manager ofrece al cl
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 
