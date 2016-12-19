@@ -128,10 +128,10 @@ En este tema aprenderá a trabajar con versiones de aplicaciones de System Cente
 
 4.  En la pestaña **Referencias** del cuadro de diálogo **Propiedades** de *<nombre de aplicación>\>*, elija **Aplicaciones que sustituyen a esta aplicación** en la lista desplegable **Tipo de relación**.  
 
-5.  Revise la lista de aplicaciones que sustituyen a la aplicación seleccionada y, a continuación, elija **Aceptar** para cerrar el cuadro de diálogo **Propiedades** de *<nombre de aplicación>\>* **.  
+5.  Revise la lista de aplicaciones que sustituyen a la aplicación seleccionada y, a continuación, elija **Aceptar** para cerrar el cuadro de diálogo **Propiedades** de *<nombre de aplicación>\>* .  
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
