@@ -86,6 +86,6 @@ Puede probar una nueva versión de cliente de Configuration Manager en una colec
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

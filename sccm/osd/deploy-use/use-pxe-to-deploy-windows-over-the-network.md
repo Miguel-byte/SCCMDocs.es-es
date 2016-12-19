@@ -107,6 +107,6 @@ Cuando un cliente arranca con el entorno PXE, Configuration Manager ofrece al cl
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 
