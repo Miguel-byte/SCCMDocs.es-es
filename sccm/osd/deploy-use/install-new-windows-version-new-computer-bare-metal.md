@@ -81,6 +81,6 @@ En este tema se indican los pasos generales de System Center Configuration Manag
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

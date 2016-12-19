@@ -67,6 +67,6 @@ Estos son algunos ejemplos de uso de la colección:
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

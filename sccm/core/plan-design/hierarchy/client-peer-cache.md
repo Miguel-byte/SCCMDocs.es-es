@@ -65,6 +65,6 @@ En cada equipo habilitado para la caché del mismo nivel, si el Firewall de Wind
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

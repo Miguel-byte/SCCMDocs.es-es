@@ -142,6 +142,6 @@ Si quiere conocer los pasos necesarios para crear una imagen personalizada del s
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

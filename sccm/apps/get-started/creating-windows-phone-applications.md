@@ -56,6 +56,6 @@ Además de los otros requisitos y procedimientos de System Center Configuration 
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

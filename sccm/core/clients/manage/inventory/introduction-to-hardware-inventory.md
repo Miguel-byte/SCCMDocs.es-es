@@ -58,6 +58,6 @@ Use el inventario de hardware en System Center Configuration Manager para recopi
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
