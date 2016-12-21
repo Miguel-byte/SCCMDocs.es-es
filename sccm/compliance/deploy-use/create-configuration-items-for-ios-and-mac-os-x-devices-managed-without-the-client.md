@@ -1,8 +1,8 @@
 ---
-title: "Crear elementos de configuración para dispositivos iOS y Mac OS X administrados sin el cliente de System Center Configuration Manager | System Center Configuration Manager"
+title: "Crear elementos de configuración para dispositivos iOS y Mac OS X administrados sin el cliente de System Center Configuration Manager | Microsoft Docs"
 description: "Use el elemento de configuración de iOS y Mac OS X de System Center Configuration Manager para administrar la configuración de los dispositivos iOS y Mac OS X."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/14/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 34fb20b0d793d4b508d4cfc3b45c76a407ff4299
+ms.sourcegitcommit: d023df79e0bcb7d5583224802976a5059c4ee753
+ms.openlocfilehash: ea4024aaa07d40781663725127d64388055c6501
 
 
 ---
@@ -80,8 +80,11 @@ Use el elemento de configuración de **iOS y Mac OS X** de System Center Configu
 |**Longitud de contraseña mínima (caracteres)**|La longitud mínima de la contraseña.|  
 |**Caducidad de la contraseña en días**|El número de días antes de que se deba cambiar una contraseña.|  
 |**Número de contraseñas recordadas**|Impide que se vuelvan a usar contraseñas ya utilizadas.|  
-|**Número de intentos de inicio de sesión incorrectos antes de que se borre el dispositivo**|Borra el dispositivo si hay un error en este número de intentos de inicio de sesión.<br>(Solo iOS)|  
-|**Complejidad de la contraseña**|Elija si se puede especificar un PIN como "1234" o si se debe proporcionar una contraseña segura.|  
+|**Número de intentos de inicio de sesión incorrectos antes de que se borre el dispositivo**|Borra el dispositivo si hay un error en este número de intentos de inicio de sesión.<br>(Solo iOS)| 
+|**Tiempo de inactividad antes de que se bloquee el dispositivo**|Especifica el número de minutos de inactividad antes de que el dispositivo se bloquee automáticamente.|
+|**Complejidad de la contraseña**|Elija si se puede especificar un PIN como "1234" o si se debe proporcionar una contraseña segura.|
+|**Permitir contraseñas sencillas**|Especifica que se pueden usar contraseñas simples, como "0000" y "1234".|
+|**Desbloquear mediante huella digital**|Permite desbloquea el dispositivo mediante el uso de una huella digital.|
 
 ###  <a name="device"></a>Dispositivo  
  Esta configuración se aplica a dispositivos iOS y Mac OS X.  
@@ -112,7 +115,7 @@ Use el elemento de configuración de **iOS y Mac OS X** de System Center Configu
 
 |Nombre de la configuración|Detalles|  
 |------------------|-------------|  
-|**Explorador predeterminado**|El usuario puede cambiar el explorador de Internet predeterminado.|  
+|**Permitir explorador web**|El usuario puede usar el explorador web predeterminado del dispositivo.|  
 |**Autorrellenar**|El usuario puede cambiar la configuración de Autocompletar en el explorador.|  
 |**Active scripting**|El explorador puede ejecutar scripts, como scripts de ActiveX.|  
 |**Bloqueador de elementos emergentes**|Habilita o deshabilita el bloqueador de elementos emergentes del explorador.|  
@@ -168,8 +171,7 @@ Use el elemento de configuración de **iOS y Mac OS X** de System Center Configu
 |**Permitir bloqueo de activación (solo modo supervisado)**|Utilice esta opción para habilitar el bloqueo de activación de iOS en los dispositivos iOS **supervisados** que administra. Para obtener más información sobre el bloqueo de activación, consulte [Manage iOS Activation Lock](../../mdm/deploy-use/manage-ios-activation-lock.md) (Administración del bloqueo de activación de iOS).
 |**Centro de control de pantalla de bloqueo**|Controla si se puede tener acceso a la aplicación de centro de control cuando el dispositivo está bloqueado.|  
 |**Vista de notificación de pantalla de bloqueo**|Controla si se pueden ver notificaciones cuando el dispositivo está bloqueado.|  
-|**Vista Hoy de pantalla de bloqueo**|Controla si se puede ver la vista Hoy cuando el dispositivo está bloqueado.|  
-|**Desbloquear mediante huella digital**|Permite el uso del sensor de huellas digitales para desbloquear el dispositivo.|  
+|**Vista Hoy de pantalla de bloqueo**|Controla si se puede ver la vista Hoy cuando el dispositivo está bloqueado.|   
 
 ###  <a name="data-protection"></a>Protección de datos  
  Esta configuración se aplica solo a los dispositivos iOS.  
@@ -247,7 +249,7 @@ Use el elemento de configuración de **iOS y Mac OS X** de System Center Configu
 
     -   **Importar**: importa la lista de las aplicaciones que ha especificado en un archivo de valores separados por comas. Use el formato, el nombre de la aplicación, el editor y el identificador de paquete de la aplicación en el archivo.  
 
-2.  Cuando haya terminado haga clic en **Siguiente**.  
+2.  Cuando haya terminado haga clic en **Siguiente**. Los elementos de configuración que contienen ajustes de aplicaciones conformes y no conformes se deben implementar en las colecciones de usuarios.
 
  Puede utilizar una de las siguientes aplicaciones compatibles y no compatibles de supervisión de informes:  
 
@@ -368,6 +370,6 @@ Use el elemento de configuración de **iOS y Mac OS X** de System Center Configu
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

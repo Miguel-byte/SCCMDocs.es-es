@@ -1,8 +1,8 @@
 ---
-title: "Supervisión de Endpoint Protection | System Center Configuration Manager"
+title: "Supervisión de Endpoint Protection | Microsoft Docs"
 description: "Obtenga información acerca de cómo supervisar Endpoint Protection en la jerarquía de System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fb5b247ae3fc031cd0beea21b03a45affe3add68
+ms.sourcegitcommit: 9fcbc0bb9c8ccd4265381ca4db7a363c8ae3b54a
+ms.openlocfilehash: 590d95f82a30167dcc0d5191feaa39ecab2b3136
 
 
 ---
@@ -25,13 +25,13 @@ ms.openlocfilehash: fb5b247ae3fc031cd0beea21b03a45affe3add68
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Puede supervisar Endpoint Protection en su jerarquía de System Center 2012 Configuration Manager por medio del nodo **Estado de Endpoint Protection	** del área de trabajo **Supervisión**, el nodo **Endpoint Protection** del área de trabajo **Activos y compatibilidad** y el uso de informes.  
+Puede supervisar Endpoint Protection en la jerarquía de Microsoft System Center Configuration Manager por medio del nodo **Estado de Endpoint Protection** en **Seguridad** del área de trabajo **Supervisión**, del nodo **Endpoint Protection** del área de trabajo **Activos y compatibilidad** y del uso de informes.  
 
 ##  <a name="a-namebkmk1a-how-to-monitor-endpoint-protection-by-using-the-endpoint-protection-status-node"></a><a name="BKMK_1"></a> Supervisión de Endpoint Protection mediante el nodo de estado de Endpoint Protection  
 
 1.  En la consola de Configuration Manager, haga clic en **Supervisión**.  
 
-2.  En el área de trabajo **Supervisión**, haga clic en **Estado de Endpoint Protection**.  
+2.  En el área de trabajo **Supervisión**, expanda **Seguridad** y, luego, haga clic en **Estado de Endpoint Protection**.  
 
 3.  En el **colección** seleccione la colección para la que desea ver información de estado.  
 
@@ -84,6 +84,6 @@ Puede supervisar Endpoint Protection en su jerarquía de System Center 2012 Conf
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

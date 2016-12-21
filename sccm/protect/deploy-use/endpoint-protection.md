@@ -1,8 +1,8 @@
 ---
-title: Endpoint Protection | System Center Configuration Manager
+title: Endpoint Protection | Microsoft Docs
 description: "Obtenga información sobre cómo administrar las directivas antimalware y la seguridad del Firewall de Windows para equipos cliente de su jerarquía de Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 30ac6f2ec03a4c0d50de700f9ce77f9e50eaf1e0
+ms.sourcegitcommit: 9fcbc0bb9c8ccd4265381ca4db7a363c8ae3b54a
+ms.openlocfilehash: 59313bd6f76433782a79ab3ee9d6240f767fbd76
 
 
 ---
@@ -32,9 +32,9 @@ Endpoint Protection en System Center Configuration Manager permite administrar l
 
  Si usa Endpoint Protection con Configuration Manager, disfrutará de las siguientes ventajas:  
 
--   Configurar directivas antimalware, la configuración del Firewall de Windows y administrar la Protección contra amenazas avanzada de Windows Defender en grupos de equipos seleccionados.  
+-   Configuración de directivas antimalware, configuración del Firewall de Windows y administración de la protección contra amenazas avanzada de Windows Defender en grupos de equipos seleccionados  
 
--   Usar las actualizaciones de software de Configuration Manager para descargar los archivos de definición de antimalware más recientes a fin de mantener actualizados los equipos cliente.  
+-   Uso de las actualizaciones de software de Configuration Manager para descargar los archivos de definición de antimalware más recientes a fin de mantener actualizados los equipos cliente  
 
 -   Envíe notificaciones de correo electrónico, use la supervisión en la consola y vea informes para mantener a los usuarios administrativos informados cuando se detecte malware en los equipos cliente.  
 
@@ -59,7 +59,7 @@ Los equipos Windows 10 no requieren ningún cliente adicional para la administra
 
 
 ## <a name="managing-malware-with-endpoint-protection"></a>Administración de malware con Endpoint Protection  
- Endpoint Protection en Configuration Manager permite crear directivas antimalware que contengan opciones de configuración de cliente de Endpoint Protection. Después, puede implementar estas directivas antimalware en los equipos cliente y supervisarlos en el nodo **Estado de Endpoint Protection** en el área de trabajo **Supervisión** o mediante informes de Configuration Manager.  
+ Endpoint Protection en Configuration Manager permite crear directivas antimalware que contengan opciones de configuración de cliente de Endpoint Protection. Después puede implementar estas directivas antimalware en los equipos cliente y supervisarlos en el nodo **Estado de Endpoint Protection** en **Seguridad** del área de trabajo **Supervisión**, o bien mediante informes de Configuration Manager.  
 
  Información adicional:  
 
@@ -112,6 +112,6 @@ A partir de la versión 1606 de Configuration Manager (rama actual), Endpoint Pr
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

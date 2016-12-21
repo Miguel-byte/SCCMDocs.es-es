@@ -2,7 +2,7 @@
 title: "Planear y configurar la administración de aplicaciones| Microsoft Docs"
 description: "Implemente y configure las dependencias necesarias para la implementación de aplicaciones en System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/06/2016
+ms.date: 12/13/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f1aaaf1c4fba8613b82d2c7a344a4dab572449a6
-ms.openlocfilehash: e9179a16d6fef73c7e50c3cf1dbfdc41623d1d15
+ms.sourcegitcommit: 7634d5326265d7947a01e5b83374f65911e33aeb
+ms.openlocfilehash: 3ab905192c091cb5ad013c8e0c8590597fb0422a
 
 
 ---
@@ -65,7 +65,11 @@ Use la información de este artículo como ayuda para implementar las dependenci
  Sin importar la versión que decida usar, el centro de software se instala automáticamente al instalar el cliente de Configuration Manager en equipos con Windows.  
 
     > [!TIP]  
-    >  La versión del centro de software que ven los usuarios se basa en la configuración del cliente de Configuration Manager. Esto le ofrece la flexibilidad para controlar qué versión se usa según la configuración de cliente personalizada que implemente en la colección.  
+    >  La versión del centro de software que ven los usuarios se basa en la configuración del cliente de Configuration Manager. Esto le ofrece la flexibilidad para controlar qué versión se usa según la configuración de cliente personalizada que implemente en la colección. 
+
+    > [!IMPORTANT]
+    > En los próximos meses, quitaremos la versión anterior del Centro de software y ya no podrá usarlo.
+    > Es posible configurar los clientes para usar el nuevo centro de software mediante la habilitación de la opción de cliente **Agente de equipo** > **Usar el nuevo Centro de software**. 
 
 ## <a name="steps-to-install-and-configure-the-application-catalog-and-software-center"></a>Pasos para instalar y configurar el catálogo de aplicaciones y el centro de software  
 
@@ -130,7 +134,7 @@ Use la información de este artículo como ayuda para implementar las dependenci
     Para más información, busque los archivos de registro **awebsvcMSI.log** y **portlwebMSI.log**.  
 
 ###  <a name="step-4-configure-the-client-settings-for-the-application-catalog-and-software-center"></a>Paso 4: Configurar las opciones de cliente para el catálogo de aplicaciones y el Centro de software  
- Este procedimiento configura las opciones de cliente predeterminadas para el catálogo de aplicaciones y el Centro de software que se aplicarán a todos los dispositivos de la jerarquía. Si desea que esta configuración solo se aplique a determinados dispositivos, cree una configuración de cliente personalizada e impleméntela en una colección que tenga los dispositivos que tendrán las opciones de configuración específicas. Para más información acerca de cómo crear una configuración de dispositivo personalizada, vea la sección [Cómo crear e implementar la configuración de cliente personalizada](../../core/clients/deploy/configure-client-settings.md#BKMK_CustomClientSettings) del artículo [Cómo especificar la configuración de cliente en System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).  
+ Este procedimiento configura las opciones de cliente predeterminadas para el catálogo de aplicaciones y el Centro de software que se aplicarán a todos los dispositivos de la jerarquía. Si desea que esta configuración solo se aplique a determinados dispositivos, cree una configuración de cliente personalizada e impleméntela en una colección que tenga los dispositivos que tendrán las opciones de configuración específicas. Para más información acerca de cómo crear una configuración de dispositivo personalizada, vea la sección [Cómo crear e implementar la configuración de cliente personalizada](../../core/clients/deploy/configure-client-settings.md#create-and-deploy-custom-client-settings) del artículo [Cómo especificar la configuración de cliente en System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).  
 
 1.  En la consola de Configuration Manager, elija **Administración** > **Configuración de cliente** > **Configuración de cliente predeterminada**.  
 
@@ -224,6 +228,6 @@ La personalización de marca del Centro de software se aplica conforme a las sig
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

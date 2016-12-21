@@ -1,8 +1,8 @@
 ---
-title: "Crear elementos de configuración para dispositivos Windows 8.1 y Windows 10 administrados sin el cliente de System Center Configuration Manager | System Center Configuration Manager"
+title: "Crear elementos de configuración para dispositivos de Windows 8.1 y Windows 10 administrados sin el cliente de System Center Configuration Manager | Microsoft Docs"
 description: "Use el elemento de configuración de Windows 10 de System Center Configuration Manager para administrar la configuración de los equipos con Windows 10."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/08/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 84914426016c049de9bdf797b02bf0cc15301a71
-ms.openlocfilehash: 1691fe56b9c6fb6aa6889a4451985a1bf6c2e1b5
+ms.sourcegitcommit: 8f6e6fd1d2a9a6352c9191ea7e2a1f9c6f6e2199
+ms.openlocfilehash: 7efde8dda724d71775313290b13a6aad2f9a7d6c
 
 
 ---
@@ -74,8 +74,7 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 ##  <a name="windows-81-and-windows-10-configuration-item-settings-reference"></a>Referencia a configuración de elemento de configuración de Windows 8.1 y Windows 10  
 
 ### <a name="password"></a>Contraseña  
- Esta configuración es solo para dispositivos con Windows 10, y versiones posteriores.  
-
+ 
 |Configuración|Detalles|  
 |-------------|-------------|  
 |**Requerir configuración de contraseña en dispositivos**|Se requiere una contraseña en dispositivos compatibles.|  
@@ -84,26 +83,27 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 |**Número de contraseñas recordadas**|Impide que se vuelvan a usar contraseñas ya utilizadas.|  
 |**Número de intentos de inicio de sesión incorrectos antes de que se borre el dispositivo**|Borra el dispositivo si hay un error en este número de intentos de inicio de sesión.|  
 |**Tiempo de inactividad antes de que se bloquee el dispositivo**|Especifique la cantidad de tiempo que un dispositivo puede estar inactivo (sin intervención del usuario) antes de bloquearse.|  
-|**Complejidad de la contraseña**|Elija si se puede especificar un PIN como "1234" o si se debe proporcionar una contraseña segura.|  
-|**Complejidad de la contraseña** - **Número de conjuntos de caracteres complejos necesarios en la contraseña**|Si ha seleccionado una contraseña **segura**, use esta opción para configurar el número de conjuntos de caracteres complejos necesarios. Para una contraseña segura, se debe establecer en al menos **3**, lo que significa que se requieren tanto números como letras. Seleccione **4** si quiere exigir una contraseña que, además, requiera caracteres especiales como **($%**.|
-|**Enviar NIP de recuperación de contraseña a Exchange Server**|Establézcalo en **Habilitado** o **Deshabilitado**.|  
+|**Complejidad de la contraseña**|Elija si se puede especificar un PIN como "1234" o si se debe proporcionar una contraseña segura.<br>(Solo Windows 10)|  
+|**Complejidad de la contraseña** - **Número de conjuntos de caracteres complejos necesarios en la contraseña**|Si ha seleccionado una contraseña **segura**, use esta opción para configurar el número de conjuntos de caracteres complejos necesarios. Para una contraseña segura, se debe establecer en al menos **3**, lo que significa que se requieren tanto números como letras. Seleccione **4** si quiere exigir una contraseña que, además, requiera caracteres especiales como **($%**.<br>(Solo Windows 10)|
+|**Enviar NIP de recuperación de contraseña a Exchange Server**|Establézcalo en **Habilitado** o **Deshabilitado**.<br>(Solo Windows 10)|  
 
 ###  <a name="device"></a>Dispositivo  
 
 |Nombre de la configuración|Detalles|  
 |------------------|-------------|  
-|**Captura de pantalla**|Permite obtener una captura de pantalla del dispositivo.<br /><br /> (Solo Windows 10)|  
-|**Envío de datos de diagnóstico (Windows 8.1 y versiones anteriores)**|Permite el envío de archivos de registro de aplicación.<br /><br /> (Solo Windows 8.1)|  
-|**Envío de datos de diagnóstico (Windows 10)**|Permite el envío de archivos de registro de aplicación.|  
-|**Geolocalización**|Permite que el dispositivo use información de servicios de ubicación.<br /><br /> (Solo Windows 10)|  
-|**Copiar y pegar**|Usa la función de copiar y pegar para transferir datos entre aplicaciones.<br /><br /> (Solo Windows 10)|  
+|**Captura de pantalla**|Permite obtener una captura de pantalla del dispositivo.<br> (Solo Windows 10)|  
+|**Envío de datos de diagnóstico**|Permite el envío de archivos de registro de aplicación.<br>(Solo Windows 8.1)|  
+|**Envío de datos de diagnóstico (Windows 10)**|Permite el envío de archivos de registro de aplicación.<br>(Solo Windows 10)|  
+|**Geolocalización**|Permite que el dispositivo use información de servicios de ubicación.<br>(Solo Windows 10)|  
+|**Copiar y pegar**|Usa la función de copiar y pegar para transferir datos entre aplicaciones.<br>(Solo Windows 10)|
+|**Restablecimiento de la configuración de fábrica**|Controla si el usuario puede restablecer la configuración de fábrica del dispositivo.|
 |**Bluetooth**|Permite el uso de la capacidad Bluetooth de los dispositivos.|  
-|**Modo visible de Bluetooth**|Permite que otros dispositivos Bluetooth puedan detectar el dispositivo.<br /><br /> (Solo Windows 10)|  
-|**Anuncios de Bluetooth**|Permitir el uso de anuncios de Bluetooth.<br /><br /> (Solo Windows 10)|  
-|**Grabación de voz**|Permite el uso de las características de grabación de voz del dispositivo.<br /><br /> (Solo Windows 10)|  
+|**Modo visible de Bluetooth**|Permite que otros dispositivos Bluetooth puedan detectar el dispositivo.<br>(Solo Windows 10)|  
+|**Anuncios de Bluetooth**|Permitir el uso de anuncios de Bluetooth.<br> (Solo Windows 10)|  
+|**Grabación de voz**|Permite el uso de las características de grabación de voz del dispositivo.<br>(Solo Windows 10)| 
+|**Cortana**|Habilite o deshabilite el asistente de voz de Cortana.| 
 
 ### <a name="email-management"></a>Administración de correo electrónico  
- Esta configuración es solo para dispositivos con Windows 8.1 y Windows 10.  
 
 |Configuración|Detalles|  
 |-------------|-------------|  
@@ -127,11 +127,10 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 |**Compras desde la aplicación**|Permite a los usuarios realizar compras desde la aplicación.|  
 
 ### <a name="browser"></a>Explorador  
- Esta configuración es solo para dispositivos con Windows 8.1 y Windows 10.  
 
 |Configuración|Detalles|  
 |-------------|-------------|  
-|**Permitir explorador web**|Permitir el uso del explorador web en el dispositivo.|  
+|**Permitir explorador web**|Permitir el uso del explorador web en el dispositivo.<br>(Solo Windows 10)|  
 |**Autorrellenar**|El usuario puede cambiar la configuración de Autocompletar en el explorador.|  
 |**Active scripting**|El explorador puede ejecutar scripts, como scripts de ActiveX.|  
 |**Complementos**|El usuario puede agregar complementos en Internet Explorer.|  
@@ -140,7 +139,7 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 |**Advertencia de fraude**|Habilita o deshabilita las advertencias de posibles sitios web fraudulentos.|  
 
 ###  <a name="internet-explorer"></a>Internet Explorer  
- Esta configuración es solo para dispositivos con Windows 8.1 y Windows 10.  
+ Esta configuración es solo para dispositivos con Windows 8.1.  
 
 |Nombre de la configuración|Detalles|  
 |------------------|-------------|  
@@ -154,32 +153,80 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 |**Ir a un sitio de intranet por una entrada de una sola palabra**|Habilita o deshabilita la opción que permite a Internet Explorer ir automáticamente a un sitio de intranet si se escribe un nombre de sitio válido sin un HTTP anterior:|  
 |**Opción de menú del modo de empresa**|Permite a los usuarios activar y desactivar el modo de empresa desde el menú **Herramientas** de Internet Explorer.|  
 |**Ubicación del informe de registro (URL)**|Especifique una dirección URL donde se registrarán los sitios web visitados cuando el modo de empresa esté activo.|  
-|**Ubicación de la lista de sitios de Modo de empresa (URL)**|Especifique la ubicación de la lista de sitios web que van a usar el modo de empresa cuando esté activo.|  
+|**Ubicación de la lista de sitios de Modo de empresa (URL)**|Especifique la ubicación de la lista de sitios web que van a usar el modo de empresa cuando esté activo.| 
+
+### <a name="microsoft-edge"></a>Microsoft Edge  
+ Esta configuración es para dispositivos con Windows 10, y versiones posteriores.  
+
+|Nombre de la configuración|Detalles|  
+|------------------|-------------|  
+|**Permitir sugerencias de búsqueda en la barra de direcciones**|Permite que el motor de búsqueda sugiera sitios a medida que se escriben frases de búsqueda.|  
+|**Permitir enviar tráfico de intranet a Internet Explorer**|Permite que los usuarios abran sitios web de intranet en Internet Explorer.|  
+|**Permitir no rastrear**|La opción de no realizar seguimiento informa a los sitios web de que no desea que realicen un seguimiento de su visita a un sitio.|  
+|**Habilitar SmartScreen**|Utilizar SmartScreen para comprobar que los archivos que los usuarios descargan no contienen código malintencionado.|  
+|**Permitir elementos emergentes**|Permitir o deshabilitar elementos emergentes del explorador.|  
+|**Permitir cookies**|Permitir o deshabilitar las cookies.|  
+|**Permitir autorrelleno**|Permitir el uso de la característica Autorrellenar del explorador de Edge.|  
+|**Permitir administrador de contraseñas**|Permitir el uso de la característica Administrador de contraseñas del explorador de Edge.|  
+|**Ubicación de la lista de sitios del modo de empresa**|Especifica dónde se encuentra la lista de sitios web que se abrirá en modo de empresa. Los usuarios no pueden editar esta lista.|  
+
+### <a name="windows-defender"></a>Windows Defender
+
+ Esta configuración es para dispositivos con la actualización de noviembre (1511) de Windows 10 y versiones posteriores.  
+
+|Nombre de la configuración|Detalles|  
+|------------------|-------------| 
+|**Permitir supervisión en tiempo real**|Habilita la detección de malware, spyware y otro tipo de software no deseado en tiempo real.|
+|**Permitir supervisión del comportamiento**|Permite a Defender comprobar determinados patrones conocidos de actividad sospechosa en los dispositivos.|
+|**Habilitar Sistema de inspección de redes**|El Sistema de inspección de redes (NIS) ayuda a proteger los dispositivos contra vulnerabilidades basadas en la red mediante el uso de firmas de vulnerabilidades conocidas desde Microsoft Endpoint Protection Center a fin de detectar y bloquear el tráfico malintencionado.|
+|**Examinar todas las descargas**|Controla si Defender examina todos los archivos descargados desde Internet.|
+|**Permitir análisis de scripts**|Permite que Defender analice los scripts que se usan en Internet Explorer.|
+|**Supervisar la actividad de archivos y programas**|Habilite esta opción para permitir que Defender supervise la actividad de archivos y programas en los dispositivos.|
+|**Archivos supervisados**|Si habilitó **Supervisar la actividad de archivos y programas**, puede seleccionar si supervisar los archivos entrantes, los archivos salientes o todos los archivos.|
+|**Días de seguimiento de malware resuelto**|Permite que Defender continúe haciendo seguimiento del malware resuelto durante la cantidad de días que se especifique; de ese modo, puede comprobar manualmente los dispositivos que anteriormente estaban afectados. Si establecer el número de días en 0, el malware permanece en la carpeta Cuarentena y no se quita de manera automática.|
+|**Permitir acceso a IU de cliente**|Controla si la interfaz de usuario de Windows Defender se oculta a los usuarios finales. Cuando esta configuración se modifique, surtirá efecto la próxima vez que se reinicie el equipo del usuario final.|
+|**Programar un examen del sistema**|Le permite programar un examen del sistema completo o rápido para que se ejecute de manera habitual el día y a la hora que seleccione.|
+|**Programar un examen diario rápido**|Le permite programar un examen rápido para que se ejecute diariamente a la hora que seleccione.|
+|**Limitar el uso de la CPU durante un examen**|Le permite limitar la cantidad de CPU que pueden usar los exámenes (de **1** a **100**)|
+|**Examinar archivos de almacenamiento**|Permite que Defender examine archivos de almacenamiento, como archivos .zip o .cab.|
+|**Examinar mensajes de correo electrónico**|Permite que Defender examine los mensajes de correo electrónico en cuanto llegan al dispositivo.|
+|**Examinar unidades extraíbles**|Permite que Defender examine unidades extraíbles, como sticks USB.|
+|**Examinar unidades asignadas**|Permite que Defender examine los archivos de una unidad de red asignada.<br>Si los archivos de la unidad son de solo lectura, Defender no podrá quitar ningún malware que encuentre en ellos.|
+|**Examinar archivos abiertos desde carpetas compartidas de red**|Permite que Defender examine archivos de unidades de red compartidas (por ejemplo, a las que se obtiene acceso desde una ruta de acceso UNC).<br>Si los archivos de la unidad son de solo lectura, Defender no podrá quitar ningún malware que encuentre en ellos.|
+|**Intervalo de actualización de firmas**|Especifique el intervalo en función del cual Defender comprobará si hay nuevos archivos de firmas.|
+|**Permitir la protección de la nube**|Permita o bloquee a Microsoft Active Protection Service de recibir información sobre la actividad de malware de los dispositivos que administra. Esta información se usa para mejorar el servicio en el futuro.|
+|**Pedir a los usuarios el envío de muestras**|Controla si los archivos que podrían requerir que Microsoft los analice en mayor profundidad a fin de determinar si son malintencionados se envían directamente a Microsoft.|
+|**Detección de aplicaciones potencialmente no deseadas**|Esta configuración se puede usar para proteger a los dispositivos de escritorio de Windows inscritos ante la ejecución de software que Windows Defender clasifica como potencialmente no deseado. Puede protegerse de la ejecución de estas aplicaciones o usar el modo de auditoría para informar cuando se instala una aplicación potencialmente no deseada.|
+|**Exclusiones de archivos y carpetas**|Agregue uno o varios archivos y carpetas, como C:\RutaDeAcceso o %Archivosdeprogramas%\RutaDeAcceso\nombredearchivo.exe a la lista de exclusiones. Estos archivos y carpetas no se incluirán en ningún examen en tiempo real ni programado.|
+|**Exclusiones de extensiones de archivo**|Agregue una o varias extensiones de archivo, como jpg o txt, a la lista de exclusiones. Los archivos con estas extensiones no se incluirán en ningún examen en tiempo real ni programado.|
+|**Exclusiones de proceso**|Agregue uno o más procesos del tipo .exe, .com o .src a la lista de exclusiones. Estos procesos no se incluirán en ningún examen en tiempo real ni programado.|
+
+ 
 
 ###  <a name="cloud"></a>Nube  
- Esta configuración es solo para dispositivos con Windows 8.1 y Windows 10.  
 
 |Nombre de la configuración|Detalles|  
 |------------------|-------------|  
 |**Sincronización de la configuración**|Permite la sincronización de configuraciones entre diferentes dispositivos.|  
 |**Sincronización de credenciales**|Permite la sincronización de credenciales entre diferentes dispositivos.|  
-|**Cuenta Microsoft**|Permite el uso de una cuenta Microsoft en el dispositivo.|  
+|**Cuenta Microsoft**|Permite el uso de una cuenta Microsoft en el dispositivo.<br>(Solo Windows 10)|  
 |**Sincronización de configuraciones a través de conexión de uso medido**|Permite la sincronización de configuraciones cuando se mide la conexión a Internet.|  
 
 ###  <a name="security"></a>Seguridad  
 
 |Nombre de la configuración|Detalles|  
 |------------------|-------------|  
-|**Instalación de archivos sin firmar**|Permite la carga de archivos sin firmar.<br /><br /> (Solo Windows 10)|  
-|**Aplicaciones sin firmar**|Permite la carga de aplicaciones sin firmar.<br /><br /> (Solo Windows 10)|  
-|**Mensajería SMS y MMS**|Permite mensajería SMS y MMS desde el dispositivo.<br /><br /> (Solo Windows 10)|  
-|**Almacenamiento extraíble**|Permite el uso de almacenamiento extraíble, como una tarjeta SD en el dispositivo.<br /><br /> (Solo Windows 10)|  
-|**Cámara**|Permite el uso de la cámara del dispositivo.<br /><br /> (Solo Windows 10)|  
-|**Transmisión de datos en proximidad (NFC)**|Permite la comunicación mediante el uso de NFC en el dispositivo.<br /><br /> (Solo Windows 10)|  
-|**Modo antirrobo**|Controla si el modo antirrobo de Windows 10 está habilitado.<br /><br /> (Solo Windows 10)|  
-|**Archivo de perfil**|Aprovisiona un perfil de VPN para dispositivos Windows RT.<br /><br /> (Solo Windows 8.1)|  
-|**Nombre de perfil**|Aprovisiona un perfil de VPN para dispositivos Windows RT.<br /><br /> (Solo Windows 8.1)|  
-|**Perfil para todos los usuarios**|Aprovisiona un perfil de VPN para dispositivos Windows RT.<br /><br /> (Solo Windows 8.1)|  
+|**Instalación de archivos sin firmar**|Permite la carga de archivos sin firmar.<br>(Solo Windows 10)|  
+|**Aplicaciones sin firmar**|Permite la carga de aplicaciones sin firmar.<br>(Solo Windows 10)|  
+|**Mensajería SMS y MMS**|Permite mensajería SMS y MMS desde el dispositivo.<br>(Solo Windows 10)|  
+|**Almacenamiento extraíble**|Permite el uso de almacenamiento extraíble, como una tarjeta SD en el dispositivo.<br> (Solo Windows 10)|  
+|**Cámara**|Permite el uso de la cámara del dispositivo.<br>(Solo Windows 10)|  
+|**Transmisión de datos en proximidad (NFC)**|Permite la comunicación mediante el uso de NFC en el dispositivo.<br> (Solo Windows 10)|  
+|**Modo antirrobo**|Controla si el modo antirrobo de Windows 10 está habilitado.<br>(Solo Windows 10)|
+|**Permitir conexión USB**|Controla si los dispositivos pueden obtener acceso a dispositivos de almacenamiento externos a través de una conexión USB.<br>(Solo Windows 10)|  
+|**Archivo de perfil**|Aprovisiona un perfil de VPN para dispositivos Windows RT.<br>(Solo Windows 8)|  
+|**Nombre de perfil**|Aprovisiona un perfil de VPN para dispositivos Windows RT.<br>(Solo Windows 8)|  
+|**Perfil para todos los usuarios**|Aprovisiona un perfil de VPN para dispositivos Windows RT.<br>(Solo Windows 8)|  
 
 ###  <a name="peak-synchronization"></a>Sincronización durante horas punta  
  Esta configuración es solo para dispositivos con Windows 10, y versiones posteriores.  
@@ -194,21 +241,23 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 
 |Nombre de la configuración|Detalles|  
 |------------------|-------------|  
-|**Administración de dispositivos en movilidad**|Permite que Configuration Manager administre el dispositivo cuando está en itinerancia.<br /><br /> (Solo Windows 10)|  
-|**Descarga de software en movilidad**|Permite la descarga de software y aplicaciones cuando se está en movilidad.<br /><br /> (Solo Windows 10)|  
-|**Descarga de correo electrónico en movilidad**|Permite descargas de correo electrónico en movilidad.<br /><br /> (Solo Windows 10)|  
-|**Itinerancia de datos**|Permite movilidad entre redes al obtener acceso a datos.|  
+|**Administración de dispositivos en movilidad**|Permite que Configuration Manager administre el dispositivo cuando está en itinerancia.<br>(Solo Windows 10)|  
+|**Descarga de software en movilidad**|Permite la descarga de software y aplicaciones cuando se está en movilidad.<br>(Solo Windows 10)|  
+|**Descarga de correo electrónico en movilidad**|Permite descargas de correo electrónico en movilidad.<br>(Solo Windows 10)|  
+|**Itinerancia de datos**|Permite movilidad entre redes al obtener acceso a datos.| 
+|**VPN sobre móvil**|Controla si el dispositivo puede obtener acceso a conexiones VPN cuando se conecta a una red móvil.<br>(Solo Windows 10)|
+|**Itinerancia de VPN sobre móvil**|Controla si el dispositivo puede obtener acceso a conexiones VPN durante la itinerancia en una red móvil.<br>(Solo Windows 10)| 
 
 ###  <a name="encryption"></a>Cifrado  
 
 |Nombre de la configuración|Detalles|  
 |------------------|-------------|  
-|**Cifrado de tarjeta de almacenamiento**|Se requieren las tarjetas de almacenamiento utilizadas con el dispositivo que se va a cifrar.<br /><br /> (Solo Windows 10)|  
+|**Cifrado de tarjeta de almacenamiento**|Se requieren las tarjetas de almacenamiento utilizadas con el dispositivo que se va a cifrar.<br>(Solo Windows 10)|  
 |**Cifrado de archivo en el dispositivo**|Requiere el cifrado de los archivos en el dispositivo.|  
-|**Requerir firma de correo electrónico**|Requiere que los mensajes de correo electrónico se firmen antes de enviarlos.|  
-|**Algoritmo de firma**|Seleccione el algoritmo de firma para los mensajes de correo electrónico firmados.|  
-|**Requerir cifrado de correo electrónico**|Requiere que los mensajes de correo electrónico se cifren antes de enviarlos.|  
-|**Algoritmo de cifrado**|Seleccione el algoritmo para cifrar los mensajes de correo electrónico.|  
+|**Requerir firma de correo electrónico**|Requiere que los mensajes de correo electrónico se firmen antes de enviarlos.<br>(Solo Windows 10)|  
+|**Algoritmo de firma**|Seleccione el algoritmo de firma para los mensajes de correo electrónico firmados.<br>(Solo Windows 10)|  
+|**Requerir cifrado de correo electrónico**|Requiere que los mensajes de correo electrónico se cifren antes de enviarlos.<br>(Solo Windows 10)|  
+|**Algoritmo de cifrado**|Seleccione el algoritmo para cifrar los mensajes de correo electrónico.<br>(Solo Windows 10)|  
 
 ###  <a name="wireless-communications"></a>Comunicaciones inalámbricas  
  Esta configuración es solo para dispositivos con Windows 10, y versiones posteriores.  
@@ -218,8 +267,8 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 |**Conexión de red inalámbrica**|Habilita o deshabilita la capacidad Wi-Fi de los dispositivos.|  
 |**Tethering Wi-Fi**|Permite que los usuarios usen sus dispositivos como una zona con cobertura inalámbrica móvil.|  
 |**Descargar datos con Wi-Fi cuando sea posible**|Configurar esta opción para utilizar la conexión Wi-Fi en el dispositivo cuando sea posible.|  
-|**Informes de zonas Wi-Fi**||  
-|**Configuración manual de Wi-Fi**||  
+|**Informes de zonas Wi-Fi**|Envía información sobre las conexiones Wi-Fi para ayudar al usuario a detectar conexiones cercanas.|  
+|**Configuración manual de Wi-Fi**|Controla si el usuario puede configurar sus propias conexiones Wi-Fi o si solo puede usar conexiones configuradas por un perfil de Wi-Fi.|  
 
 #### <a name="to-configure-a-wireless-network-connection"></a>Para configurar una conexión de red inalámbrica  
 
@@ -227,19 +276,18 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 
 2.  En el cuadro de diálogo **Conexión de red inalámbrica** , especifique la siguiente información sobre la conexión inalámbrica que se aprovisionará en dispositivos móviles:  
 
-    |Configuración|Más información|  
-    |-------------|----------------------|  
-    |**Nombre de red (SSID)**|Escribir el nombre de la red Wi-Fi.|  
-    |**Conexión de red**|Elija **Internet** o **Trabajo**.|  
-    |**Autenticación**|Elija el método de autenticación para la conexión inalámbrica desde:<br>- **Abierto**<br>-                             **Compartido**<br>- **WPA**<br>- **WPA-PSK**<br>- **WPA2**<br>- **WPA2-PSK**|  
-    |**Cifrado de datos**|Elija el método de cifrado utilizado por esta conexión. Los valores que puede seleccionar variarán según el método de **autenticación** seleccionado:<br>- **Deshabilitado**<br>- **WEP**<br>- **TKIP**<br>- **AES**|  
-    |**Índice de clave**|Seleccione un índice de clave de **1** a **4** que se usará cuando el valor de la opción **Cifrado de datos** sea **WEP**.|  
-    |**Esta red se conecta a Internet**|Seleccione esta opción si desea proporcionar la configuración de proxy que permita que los dispositivos móviles en una conexión inalámbrica se conecten a Internet.|  
-    |**Configuración de servidor proxy**|Para las opciones **Servidor** y **Puerto** , especifique los valores **HTTP**, **WAP** y **Sockets**que correspondan.|  
-    |**Habilitar acceso a la red 802.1X**|Seleccione esta opción si desea proteger la conexión mediante la especificación de un tipo de EAP.|  
-    |**Tipo de EAP**|Elija el tipo de EAP que va a usar en:<br>- **PEAP**<br>- **Tarjeta inteligente o certificado**|  
-
-3.  Cuando haya terminado, haga clic en **Aceptar**.  
+|Configuración|Más información|  
+|-------------|----------------------|  
+|**Nombre de red (SSID)**|Escribir el nombre de la red Wi-Fi.|  
+|**Conexión de red**|Elija **Internet** o **Trabajo**.|  
+|**Autenticación**|Elija el método de autenticación para la conexión inalámbrica desde:<br>- **Abierto**<br>-                             **Compartido**<br>- **WPA**<br>- **WPA-PSK**<br>- **WPA2**<br>- **WPA2-PSK**|  
+|**Cifrado de datos**|Elija el método de cifrado utilizado por esta conexión. Los valores que puede seleccionar variarán según el método de **autenticación** seleccionado:<br>- **Deshabilitado**<br>- **WEP**<br>- **TKIP**<br>- **AES**|  
+|**Índice de clave**|Seleccione un índice de clave de **1** a **4** que se usará cuando el valor de la opción **Cifrado de datos** sea **WEP**.|  
+|**Esta red se conecta a Internet**|Seleccione esta opción si desea proporcionar la configuración de proxy que permita que los dispositivos móviles en una conexión inalámbrica se conecten a Internet.|  
+|**Configuración de servidor proxy**|Para las opciones **Servidor** y **Puerto** , especifique los valores **HTTP**, **WAP** y **Sockets**que correspondan.|  
+|**Habilitar acceso a la red 802.1X**|Seleccione esta opción si desea proteger la conexión mediante la especificación de un tipo de EAP.|  
+|**Tipo de EAP**|Elija el tipo de EAP que va a usar en:<br>- **PEAP**<br>- **Tarjeta inteligente o certificado**|  
+ 
 
 ### <a name="certificates"></a>Certificados  
  Permite importar certificados para instalar en dispositivos móviles.  
@@ -281,17 +329,18 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 |Configuración|Detalles|  
 |-------------|-------------|  
 |**Control de cuentas de usuario**|Habilita o deshabilita el Control de cuentas de usuario de Windows en el dispositivo.|  
-|**Firewall de red**|Habilita o deshabilita el Firewall de Windows.<br /><br /> (Solo Windows 8.1)|  
+|**Firewall de red**|Habilita o deshabilita el Firewall de Windows.<br>(Solo Windows 8.1)|  
 |**Actualizaciones (Windows 8.1 y versiones anteriores)**|Elija cómo se descargarán las actualizaciones de software de Windows en los equipos. Por ejemplo, puede descargar actualizaciones automáticamente, pero permita que el usuario elija cuándo instalarlas.|  
 |**Clasificación mínima de actualizaciones**|Elija la clasificación mínima de las actualizaciones que se van a descargar en los equipos con Windows: **Ninguna**, **Importante**o **Recomendada**.|  
-|**Actualizaciones (Windows 10)**|Elija cómo se descargarán las actualizaciones de software de Windows en los equipos. Por ejemplo, puede descargar actualizaciones automáticamente, pero permita que el usuario elija cuándo instalarlas.<br /><br /> (Solo Windows 10)|  
-|**Día de instalación**|Elija el día en que se instalarán las actualizaciones.<br /><br /> (Solo Windows 10)|  
-|**Hora de instalación**|Elija la hora en que se instalarán las actualizaciones.<br /><br /> (Solo Windows 10)|  
+|**Actualizaciones (Windows 10)**|Elija cómo se descargarán las actualizaciones de software de Windows en los equipos. Por ejemplo, puede descargar actualizaciones automáticamente, pero permita que el usuario elija cuándo instalarlas.<br>(Solo Windows 10)|  
+|**Día de instalación**|Elija el día en que se instalarán las actualizaciones.<br>(Solo Windows 10)|  
+|**Hora de instalación**|Elija la hora en que se instalarán las actualizaciones.<br>(Solo Windows 10)|  
 |**SmartScreen**|Habilita o deshabilita Windows SmartScreen.|  
 |**Protección antivirus**|Seleccione esta opción para asegurarse de que el software antivirus está instalado en el dispositivo.|  
 |**Las firmas de protección antivirus están actualizadas**|Seleccione esta opción para asegurarse de que los archivos de firmas del antivirus están actualizados.|  
-|**Características de versión preliminar**|Permite a Microsoft implementar características y configuraciones de la versión preliminar en el dispositivo.<br /><br /> (Solo Windows 10)|  
-|**Instalación manual del certificado raíz**|(Solo Windows 10)|  
+|**Características de versión preliminar**|Permite a Microsoft implementar características y configuraciones de la versión preliminar en el dispositivo.<br>(Solo Windows 10)|  
+|**Instalación manual del certificado raíz**|(Solo Windows 10)|
+|**Permitir cancelar suscripción manualmente**|Permite al usuario eliminar manualmente la cuenta del área de trabajo desde el dispositivo.<br>(Solo Windows 10)|
 
 ###  <a name="windows-server-work-folders"></a>Carpetas de trabajo de Windows Server  
  Esta configuración es solo para dispositivos con Windows 8.1 y Windows 10.  
@@ -299,6 +348,30 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 |Nombre de la configuración|Detalles|  
 |------------------|-------------|  
 |**Dirección URL de carpetas de trabajo**|Configura la ubicación de una carpeta de trabajo de Windows Server a la que los usuarios pueden conectarse desde su dispositivo.|  
+
+### <a name="windows-10-team"></a>Windows 10 Team  
+ Esta configuración es solo para dispositivos con Windows 10 Team.  
+
+|Nombre de la configuración|Detalles|  
+|------------------|-------------|  
+|**Permitir que la pantalla se active automáticamente cuando los sensores detecten a alguien en la habitación**|Permite que el dispositivo se active automáticamente cuando su sensor detecta alguien en la sala.|  
+|**PIN necesario para proyección inalámbrica**|Especifica si debe escribir un PIN para poder usar las capacidades de proyección inalámbrica del dispositivo.|  
+|**Ventana de mantenimiento**|Configura la ventana cuando las actualizaciones tienen lugar en el dispositivo. Puede configurar la hora de inicio de la ventana y la duración (de 1 a 5 horas).| 
+|**Azure Operational Insights**|Azure Operational Insights , parte del conjunto de aplicaciones de Microsoft Operations Manager recopila, almacena y analiza datos de archivos de registro de los dispositivos de Windows 10 Team.<br>Para conectarse a Azure Operational Insights, debe especificar un **identificador del área de trabajo** y una **clave del área de trabajo**.|
+|**Proyección inalámbrica de Miracast**|Habilite esta opción si desea permitir que el dispositivo Windows 10 Team use dispositivos compatibles con Miracast para el proyecto.<br>Si habilita esta opción, en **Elegir canal de Miracast**, seleccione el canal de Miracast que se usa para el contenido del proyecto.|
+|**Información de reunión mostrada en pantalla de inicio de sesión**|Si habilita esta opción, puede elegir la información que se mostrará en el icono **Reuniones** de la pantalla de inicio de sesión. Puede:<br>- **Mostrar solo el organizador y la hora**<br>- **Mostrar el organizador, la hora y el asunto (asunto oculto para reuniones privadas)**|
+|**URL de imagen de fondo de pantalla de bloqueo**|Habilite esta opción para mostrar un fondo personalizado en la pantalla de **inicio de sesión** de los dispositivos Windows 10 Team desde la dirección URL que especifique.<br>La imagen debe tener el formato PNG y la dirección URL debe comenzar con **https://**.| 
+
+### <a name="windows-information-protection"></a>Windows Information Protection
+ Esta configuración es solo para dispositivos con Windows 10.
+
+Con el aumento de los dispositivos propiedad de los empleados en la empresa, también aumenta el riesgo de pérdidas de datos accidentales a través de aplicaciones y servicios, como el correo electrónico, las redes sociales y la nube pública, que están fuera del control de la empresa. Por ejemplo, cuando un empleado envía imágenes de su último proyecto de ingeniería desde su cuenta de correo electrónico personal, copia y pega información de producto en un tweet o guarda un informe de ventas en curso para su almacenamiento en nube pública.
+
+Windows Information Protection (WIP) ayuda a protegerse contra esta pérdida potencial de datos sin interferir en la experiencia de empleado. WIP también ayuda a proteger los datos y aplicaciones de la empresa de pérdidas accidentales de datos en dispositivos tanto propiedad de la empresa como personales que los empleados llevan al trabajo sin necesidad de realizar cambios en su entorno ni en otras aplicaciones.
+
+ Los elementos de configuración de WIP de Configuration Manager administran la lista de aplicaciones protegidas por WIP, las ubicaciones de red de la empresa, el nivel de protección y la configuración de cifrado.
+
+Para obtener información sobre cómo configurar Windows Information Protection con Configuration Manager, consulte [Protege los datos de tu empresa con Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
 
 ### <a name="allowed-and-blocked-apps-windows-phone-only"></a>Aplicaciones permitidas y bloqueadas (solo Windows Phone).  
  Permite especificar una lista de aplicaciones administradas por Intune compatibles o no compatibles en su empresa. Windows Phone puede permitir o bloquear la instalación de estas aplicaciones.  
@@ -309,51 +382,18 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 
 1.  En la página **Lista de aplicaciones permitidas o bloqueadas**, especifique la siguiente información:  
 
-    |Configuración|Más información|  
-    |-------------|----------------------|  
-    |**Lista de aplicaciones bloqueadas**|Seleccione esta opción si desea especificar una lista de aplicaciones que los usuarios no pueden instalar.|  
-    |**Lista de aplicaciones permitidas**|Seleccione esta opción si desea especificar una lista de aplicaciones que los usuarios pueden instalar. Se bloqueará la instalación de las demás aplicaciones.|  
-    |**Agregar**|Agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección, opcionalmente el editor de la aplicación y la dirección URL de la aplicación en la tienda de aplicaciones.<br /><br /> Para especificar la dirección URL, en la Tienda Windows, busque la aplicación que desea usar.<br /><br /> Abra la página de la aplicación y copie la dirección URL en el Portapapeles. Ya puede usarla como dirección URL en una la lista de aplicaciones permitidas o bloqueadas.<br /><br /> **Ejemplo:** busque la aplicación **Skype** en la tienda. La dirección URL que utilice será **http://www.windowsphone.com/es-es/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
-    |**Editarar**|Permite editar el nombre, el editor y la dirección URL de la aplicación seleccionada.|  
-    |**Quitar**|Elimina la aplicación seleccionada de la lista.|  
-    |**Importarar**|Importa la lista de las aplicaciones que ha especificado en un archivo de valores separados por comas. Utilice el formato, nombre de la aplicación, editor, dirección URL de la aplicación en el archivo.|  
-
-### <a name="windows-10-team"></a>Windows 10 Team  
- Esta configuración es solo para dispositivos con Windows 10 Team.  
-
-|Nombre de la configuración|Detalles|  
-|------------------|-------------|  
-|**Permitir que la pantalla se active automáticamente cuando los sensores detecten a alguien en la habitación**|Permite que el dispositivo se active automáticamente cuando su sensor detecta alguien en la sala.|  
-|**PIN necesario para proyección inalámbrica**|Especifica si debe escribir un PIN para poder usar las capacidades de proyección inalámbrica del dispositivo.|  
-|**Ventana de mantenimiento**|Configura la ventana cuando las actualizaciones tienen lugar en el dispositivo. Puede configurar la hora de inicio de la ventana y la duración (de 1 a 5 horas).|  
-
-### <a name="microsoft-edge"></a>Microsoft Edge  
- Esta configuración es para dispositivos con Windows 10, y versiones posteriores.  
-
-|Nombre de la configuración|Detalles|  
-|------------------|-------------|  
-|**Permitir sugerencias de búsqueda en la barra de direcciones**|Permite que el motor de búsqueda sugiera sitios a medida que se escriben frases de búsqueda.|  
-|**Permitir enviar tráfico de intranet a Internet Explorer**||  
-|**Permitir no rastrear**|La opción de no realizar seguimiento informa a los sitios web de que no desea que realicen un seguimiento de su visita a un sitio.|  
-|**Habilitar SmartScreen**|Utilizar SmartScreen para comprobar que los archivos que los usuarios descargan no contienen código malintencionado.|  
-|**Permitir elementos emergentes**|Permitir o deshabilitar elementos emergentes del explorador.|  
-|**Permitir cookies**|Permitir o deshabilitar las cookies.|  
-|**Permitir autorrelleno**|Permitir el uso de la característica Autorrellenar del explorador de Edge.|  
-|**Permitir administrador de contraseñas**|Permitir el uso de la característica Administrador de contraseñas del explorador de Edge.|  
-|**Ubicación de la lista de sitios del modo de empresa**|Especifica dónde se encuentra la lista de sitios web que se abrirá en modo de empresa. Los usuarios no pueden editar esta lista.|  
-
-### <a name="windows-information-protection-formerly-enterprise-data-protection"></a>Windows Information Protection (anteriormente Protección de datos de empresa)
-
-Con el aumento de los dispositivos propiedad de los empleados en la empresa, también aumenta el riesgo de pérdidas de datos accidentales a través de aplicaciones y servicios, como el correo electrónico, las redes sociales y la nube pública, que están fuera del control de la empresa. Por ejemplo, cuando un empleado envía imágenes de su último proyecto de ingeniería desde su cuenta de correo electrónico personal, copia y pega información de producto en un tweet o guarda un informe de ventas en curso para su almacenamiento en nube pública.
-
-Windows Information Protection (WIP) ayuda a protegerse contra esta pérdida potencial de datos sin interferir en la experiencia de empleado. WIP también ayuda a proteger los datos y aplicaciones de la empresa de pérdidas accidentales de datos en dispositivos tanto propiedad de la empresa como personales que los empleados llevan al trabajo sin necesidad de realizar cambios en su entorno ni en otras aplicaciones.
-
- Los elementos de configuración de WIP de Configuration Manager administran la lista de aplicaciones protegidas por WIP, las ubicaciones de red de la empresa, el nivel de protección y la configuración de cifrado.
-
-Para obtener información sobre cómo configurar la protección de datos de empresa con Configuration Manager, consulte [Protege los datos de tu empresa con Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
+|Configuración|Más información|  
+|-------------|----------------------|  
+|**Lista de aplicaciones bloqueadas**|Seleccione esta opción si desea especificar una lista de aplicaciones que los usuarios no pueden instalar.|  
+|**Lista de aplicaciones permitidas**|Seleccione esta opción si desea especificar una lista de aplicaciones que los usuarios pueden instalar. Se bloqueará la instalación de las demás aplicaciones.|  
+|**Agregar**|Agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección, opcionalmente el editor de la aplicación y la dirección URL de la aplicación en la tienda de aplicaciones.<br /><br /> Para especificar la dirección URL, en la Tienda Windows, busque la aplicación que desea usar.<br /><br /> Abra la página de la aplicación y copie la dirección URL en el Portapapeles. Ya puede usarla como dirección URL en una la lista de aplicaciones permitidas o bloqueadas.<br /><br /> **Ejemplo:** busque la aplicación **Skype** en la tienda. La dirección URL que utilice será **http://www.windowsphone.com/es-es/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
+|**Editarar**|Permite editar el nombre, el editor y la dirección URL de la aplicación seleccionada.|  
+|**Quitar**|Elimina la aplicación seleccionada de la lista.|  
+|**Importarar**|Importa la lista de las aplicaciones que ha especificado en un archivo de valores separados por comas. Utilice el formato, nombre de la aplicación, editor, dirección URL de la aplicación en el archivo.|  
 
 
 
-<!--HONumber=Nov16_HO1-->
+
+<!--HONumber=Dec16_HO3-->
 
 

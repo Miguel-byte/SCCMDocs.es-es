@@ -2,7 +2,7 @@
 title: Configurar el control remoto | Documentos de Microsoft
 description: Configure el control remoto en System Center Configuration Manager.
 ms.custom: na
-ms.date: 12/06/2016
+ms.date: 12/12/2016
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 88828e68bc4aff216e83807ea8288c7d42c60cbd
-ms.openlocfilehash: cbfa9dc6cb37518c0a561700272cc882b0041350
+ms.sourcegitcommit: 809c7938968b4a6efce6ef37fe7b7baf2c9dd3e7
+ms.openlocfilehash: 6741c6aa11a8a7c868bff36916afe4d066b9924d
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: cbfa9dc6cb37518c0a561700272cc882b0041350
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
- En este procedimiento se describe cómo definir la configuración predeterminada de cliente para el control remoto y se aplica a todos los equipos de la jerarquía. Si quiere que esta configuración solo se aplique a algunos equipos, cree una configuración de cliente de dispositivo personalizada y asígnela a una recopilación que contenga los equipos en los que quiere usar una sesión de control remoto. Para más información, vea [Cómo establecer la configuración del cliente en Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md). 
+ En este procedimiento se describe cómo definir la configuración predeterminada de cliente para el control remoto. Esta configuración se aplica a todos los equipos de la jerarquía. Si quiere que esta configuración solo se aplique a algunos equipos, asigne una configuración de cliente de dispositivo personalizada a una colección que contenga esos equipos. Para más información, vea [Cómo establecer la configuración del cliente en Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md). 
 
 Para usar Asistencia remota o Escritorio remoto, debe estar instalado y configurado en el equipo que ejecuta la consola de Configuration Manager. Para obtener más información sobre cómo instalar y configurar la Asistencia remota o el Escritorio remoto, consulte la documentación de Windows.  
 
@@ -44,8 +44,17 @@ Para usar Asistencia remota o Escritorio remoto, debe estar instalado y configur
 
  Los equipos cliente se configuran con estas opciones la próxima vez que descargan directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [How to manage clients in System Center Configuration Manager (Cómo administrar clientes en System Center Configuration Manager)](../../../../core/clients/manage/manage-clients.md).  
 
+#### <a name="enable-keyboard-translation"></a>Habilitar traducción del teclado
+
+De manera predeterminada, Configuration Manager transmite la posición de la tecla desde la ubicación del lector a la ubicación del colaborador. Esto puede ser problemático para las configuraciones de teclado que difieren entre lector y colaborador. Por ejemplo, un lector con un teclado inglés escribiría una “A”, pero el teclado francés del colaborador proporcionaría una “Q”. Ahora tiene la opción de configurar el control remoto para que sea el propio carácter el que se transmita desde el teclado del lector al del colaborador y para que sea lo que el lector intenta escribir lo que llegue al colaborador.
+
+Para activar la traducción de teclado, en **Control remoto de Configuration Manager**, elija **Acción** y, luego, **Habilitar traducción del teclado** para transmitir la posición de las teclas.
+
+> [!NOTE]
+>
+> Las teclas especiales, como ~!#@$%,, no se traducirán correctamente.
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

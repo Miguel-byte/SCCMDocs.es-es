@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c899b4beaa2aae4eb609291dca0e23f3c266627a
-ms.openlocfilehash: 294166af3d5c6062e3508249c767779876b23931
+ms.sourcegitcommit: ffebee1e85008611a9841dc849bea735d15a88c6
+ms.openlocfilehash: 888b6de9fd2b70e8b4f58e32cca7cf5e615d1dca
 
 
 ---
@@ -51,7 +51,8 @@ Para obtener más información, vea:
 |-|-|-|  
 |Protección de acceso a redes (NAP): como aparece en System Center 2012 Configuration Manager|7/10/2015|Versión 1511|  
 |Administración fuera de banda: como aparece en System Center 2012 Configuration Manager|10/16/2015|Versión 1511|
-|Secuencias de tareas: <br /> - Convertir el disco en dinámico <br /> - Instalar herramientas de implementación |18/11/2016|La compatibilidad con estas secuencias de tareas finaliza con la primera actualización publicada después del 1 de junio de 2017|  
+|Secuencias de tareas: <br /> - Convertir el disco en dinámico <br /> - Instalar herramientas de implementación |18/11/2016|La compatibilidad con estas secuencias de tareas finaliza con la primera actualización publicada después del 1 de junio de 2017|
+|El nuevo Centro de software tiene un aspecto novedoso y moderno. Además, las aplicaciones que solo se hubiesen mostrado en el catálogo de aplicaciones que depende de Silverlight (aplicaciones disponibles para el usuario) ahora se muestran en la pestaña **Aplicaciones** del Centro de software. Todavía se puede acceder al catálogo de aplicaciones mediante el vínculo de la pestaña **Estado de la instalación** del centro de software.<br><br>En los próximos meses, quitaremos la versión anterior del Centro de software y ya no podrá usarlo.<br><br>Es posible configurar los clientes para usar el nuevo centro de software mediante la habilitación de la opción de cliente **Agente de equipo** > **Usar el nuevo Centro de software**.<br><br>Para más información sobre el Centro de software, consulte [Planear y configurar la administración de aplicaciones en System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management).|12/13/2016|Se anunciará| 
 
  **Sistemas operativos de servidor en desuso:**  
 
@@ -111,6 +112,6 @@ Para obtener más información, vea:
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

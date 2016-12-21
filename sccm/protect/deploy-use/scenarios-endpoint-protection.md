@@ -1,8 +1,8 @@
 ---
-title: 'Escenario: Endpoint Protection protege los equipos frente al malware | System Center Configuration Manager'
+title: 'Escenario: Endpoint Protection protege los equipos frente al malware | Microsoft Docs'
 description: "Obtenga información sobre cómo implementar Endpoint Protection en Configuration Manager para proteger los equipos frente a los ataques de malware."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,8 +15,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d4506bbbe3533d6d9c2353f99658352ad1671a2f
+ms.sourcegitcommit: 9fcbc0bb9c8ccd4265381ca4db7a363c8ae3b54a
+ms.openlocfilehash: 2cdc57b766b18a6fdf21ec8748172c12b11b08db
 
 
 ---
@@ -72,12 +72,12 @@ Este tema proporciona un escenario de ejemplo sobre la implementación de Endpoi
 |Juan usa el Asistente para crear directivas de Firewall de Windows para crear una directiva mediante la configuración de los siguientes valores para el perfil de dominio:<br /><br /> 1) **Habilitar Firewall de Windows**: **Sí**<br /><br /> 2)<br />                    **Notificar al usuario cuando Firewall de Windows bloquea un nuevo programa**: **Sí**|Consulte [How to create and deploy Windows Firewall policies for Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/create-windows-firewall-policies.md) (Crear e implementar directivas de Firewall de Windows para Endpoint Protection).|  
 |Juan implementa la nueva directiva de firewall en la recopilación **Todos los equipos protegidos por Endpoint Protection** que creó anteriormente.|Consulte “To deploy a Windows Firewall policy” (Para implementar una directiva de Firewall de Windows) en el tema [How to create and deploy Windows Firewall policies for Endpoint Protection in System Center Configuration Manager](create-windows-firewall-policies.md) (Crear e implementar directivas de Firewall de Windows para Endpoint Protection).|  
 |Juan usa las tareas de administración disponibles para que Endpoint Protection administre las directivas antimalware y de Firewall de Windows, efectúe análisis de equipos a petición cuando sea necesario, obligue a los equipos a descargar las últimas definiciones y especifique otras acciones que se deban llevar a cabo cuando se detecte malware.|Consulte [How to manage antimalware policies and firewall settings for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-firewall.md) (Administrar las directivas antimalware y la configuración de firewall para Endpoint Protection en System Center Configuration Manager).|  
-|Juan usa los métodos siguientes para supervisar el estado de Endpoint Protection y las acciones que lleva a cabo Endpoint Protection:<br /><br /> 1) Mediante el uso del nodo **Estado de System Center 2012 Endpoint Protection** del área de trabajo **Supervisión**.<br /><br /> 2) Mediante el uso del nodo **Endpoint Protection** del área de trabajo **Activos y compatibilidad**.<br /><br /> 3) Mediante los informes integrados de Configuration Manager.|Consulte [How to monitor Endpoint Protection in System Center Configuration Manager](monitor-endpoint-protection.md) (Cómo supervisar Endpoint Protection en System Center Configuration Manager).|  
+|Juan usa los métodos siguientes para supervisar el estado de Endpoint Protection y las acciones que lleva a cabo Endpoint Protection:<br /><br /> 1) Mediante el uso del nodo **Estado de Endpoint Protection** en **Seguridad** del área de trabajo **Supervisión**.<br /><br /> 2) Mediante el uso del nodo **Endpoint Protection** del área de trabajo **Activos y compatibilidad**.<br /><br /> 3) Mediante los informes integrados de Configuration Manager.|Consulte [How to monitor Endpoint Protection in System Center Configuration Manager](monitor-endpoint-protection.md) (Cómo supervisar Endpoint Protection en System Center Configuration Manager).|  
 
  Juan notifica la implementación correcta de Endpoint Protection a su administrador y confirma que ahora los equipos de Woodgrove Bank están protegidos contra antimalware, según los requisitos empresariales que se le asignaron.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

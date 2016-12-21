@@ -1,6 +1,6 @@
 ---
 
-title: "Introducción a las actualizaciones de software | Configuration Manager"
+title: "Introducción a las actualizaciones de software | Microsoft Docs"
 description: "Descubra los conceptos básicos de las actualizaciones de software en System Center Configuration Manager."
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e41f91b9f796cb6a1a8eb2a500c7f615e07d60ac
+ms.sourcegitcommit: d8cace9edd58e8fa438dbb43e54e57cd0dc55d2b
+ms.openlocfilehash: 2904b904bbaf155f016f55fbd36af80308a42d76
 
 
 
@@ -29,10 +29,10 @@ Las actualizaciones de software en System Center Configuration Manager proporcio
 Para ver un escenario de ejemplo que muestra cómo podría implementar actualizaciones de software en su entorno, consulte [Example scenario to deploy security software updates](../deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md) (Escenario de ejemplo para implementar actualizaciones de software de seguridad).  
 
 ##  <a name="a-namebkmksynchronizationa-software-updates-synchronization"></a><a name="BKMK_Synchronization"></a> Sincronización de las actualizaciones de software  
- La sincronización de las actualizaciones de software en Configuration Manager emplea Microsoft Update para recuperar los metadatos de actualizaciones de software. El sitio de nivel superior (sitio de administración central o sitio primario independiente) se sincroniza con Microsoft Update según una programación o cuando el usuario inicia la sincronización de forma manual desde la consola de Configuration Manager. Cuando Configuration Manager finaliza la sincronización de las actualizaciones de software en el sitio de nivel superior, la sincronización de actualizaciones de software comienza en los sitios secundarios que haya. Cuando se completa la sincronización en cada uno de los sitios, primarios o secundarios, se crea una directiva de todo el sitio que proporciona a los equipos cliente la ubicación de los puntos de actualización de software.  
+ La sincronización de las actualizaciones de software en Configuration Manager se conecta a Microsoft Update para recuperar los metadatos de actualizaciones de software. El sitio de nivel superior (sitio de administración central o sitio primario independiente) se sincroniza con Microsoft Update según una programación o cuando el usuario inicia la sincronización de forma manual desde la consola de Configuration Manager. Cuando Configuration Manager finaliza la sincronización de las actualizaciones de software en el sitio de nivel superior, la sincronización de actualizaciones de software comienza en los sitios secundarios que haya. Cuando se completa la sincronización en cada uno de los sitios, primarios o secundarios, se crea una directiva de todo el sitio que proporciona a los equipos cliente la ubicación de los puntos de actualización de software.  
 
 > [!NOTE]  
->  Las actualizaciones de software están habilitadas de forma predeterminada en la configuración de cliente. No obstante, si estable la opción de configuración de cliente **Habilitar actualizaciones de software en clientes** en **No** para deshabilitar las actualizaciones de software en una recopilación o en la configuración predeterminada, la ubicación de los puntos de actualización de software no se envía a los clientes asociados. Para obtener detalles, consulte la [configuración de cliente de las actualizaciones de software](../../core/clients/deploy/about-client-settings.md#BKMK_SoftwareUpdatesDeviceSetting).  
+>  Las actualizaciones de software están habilitadas de forma predeterminada en la configuración de cliente. No obstante, si estable la opción de configuración de cliente **Habilitar actualizaciones de software en clientes** en **No** para deshabilitar las actualizaciones de software en una recopilación o en la configuración predeterminada, la ubicación de los puntos de actualización de software no se envía a los clientes asociados. Para obtener detalles, consulte la [configuración de cliente de las actualizaciones de software](../../core/clients/deploy/about-client-settings.md#software-updates).  
 
  Una vez que el cliente recibe la directiva, el cliente inicia un análisis para comprobar el cumplimiento de las actualizaciones de software y escribe la información en Instrumental de administración de Windows (WMI). Luego, la información de cumplimiento se envía al punto de administración que, a continuación, envía la información al servidor de sitio. Para más información sobre la evaluación de cumplimiento, consulte la sección [Software updates compliance assessment](#BKMK_SUMCompliance) en este tema.  
 
@@ -132,11 +132,11 @@ Para ver un escenario de ejemplo que muestra cómo podría implementar actualiza
 
  Con inclusión de la programación de exámenes, el examen de cumplimiento de las actualizaciones de software se puede iniciar de las siguientes maneras:  
 
--   **Programación de exámenes de las actualizaciones de software**: el examen de cumplimiento de las actualizaciones de software se inicia según la programación de exámenes configurada en las opciones del Agente cliente de actualizaciones de software. Para obtener más información sobre cómo configurar el cliente de actualizaciones de software, consulte la [configuración de cliente de las actualizaciones de software](../../core/clients/deploy/about-client-settings.md#BKMK_SoftwareUpdatesDeviceSetting).  
+-   **Programación de exámenes de las actualizaciones de software**: el examen de cumplimiento de las actualizaciones de software se inicia según la programación de exámenes configurada en las opciones del Agente cliente de actualizaciones de software. Para obtener más información sobre cómo configurar el cliente de actualizaciones de software, consulte la [configuración de cliente de las actualizaciones de software](../../core/clients/deploy/about-client-settings.md#software-updates).  
 
 -   **Acción de Propiedades de Configuration Manager**: el usuario puede iniciar la acción **Ciclo de detecciones de actualizaciones de software** o **Ciclo de evaluación de implementación de actualizaciones de software** en la pestaña **Acción** del cuadro de diálogo **Propiedades de Configuration Manager** en el equipo cliente.  
 
--   **Programación de reevaluación de implementación**: la evaluación de la implementación y el examen de cumplimiento de las actualizaciones de software se inician según la programación de reevaluación de implementación configurada en las opciones del Agente cliente de actualizaciones de software. Para obtener más información sobre el cliente de actualizaciones de software, consulte la [configuración de cliente de las actualizaciones de software](../../core/clients/deploy/about-client-settings.md#BKMK_SoftwareUpdatesDeviceSetting).  
+-   **Programación de reevaluación de implementación**: la evaluación de la implementación y el examen de cumplimiento de las actualizaciones de software se inician según la programación de reevaluación de implementación configurada en las opciones del Agente cliente de actualizaciones de software. Para obtener más información sobre el cliente de actualizaciones de software, consulte la [configuración de cliente de las actualizaciones de software](../../core/clients/deploy/about-client-settings.md#software-updates).  
 
 -   **Antes de descargar los archivos de actualización**: cuando un equipo cliente recibe una directiva de asignación para una nueva implementación necesaria, el Agente cliente de actualizaciones de software descarga los archivos de actualización de software en la memoria caché del cliente local. Antes de descargar los archivos de actualización de software, el agente cliente inicia un examen para comprobar que la actualización de software sigue siendo necesaria.  
 
@@ -285,6 +285,6 @@ Para ver un escenario de ejemplo que muestra cómo podría implementar actualiza
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
