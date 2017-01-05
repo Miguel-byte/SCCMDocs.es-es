@@ -2,7 +2,7 @@
 title: Configurar el control remoto | Documentos de Microsoft
 description: Configure el control remoto en System Center Configuration Manager.
 ms.custom: na
-ms.date: 12/12/2016
+ms.date: 12/26/2016
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 809c7938968b4a6efce6ef37fe7b7baf2c9dd3e7
-ms.openlocfilehash: 6741c6aa11a8a7c868bff36916afe4d066b9924d
+ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
+ms.openlocfilehash: 20c28a625adb69f239b9c0e7673e57dd39e8d561
 
 
 ---
@@ -55,6 +55,21 @@ Para activar la traducción de teclado, en **Control remoto de Configuration Man
 > Las teclas especiales, como ~!#@$%,, no se traducirán correctamente.
 
 
-<!--HONumber=Dec16_HO3-->
+## <a name="keyboard-shortcuts-for-the-remote-control-viewer"></a>Métodos abreviados de teclado del visor de control remoto
+
+|Método abreviado de teclado|Descripción|  
+|-----------------------|-----------------|  
+|Alt+Re Pág|Cambia entre programas de izquierda a derecha.|  
+|Alt+Av Pág|Cambia entre programas de derecha a izquierda.|  
+|Alt+Insertar|Recorre en iteración los programas en ejecución en el orden en que se abrieron.|  
+|Alt+Inicio|Muestra el menú **Inicio** .|  
+|Ctrl+Alt+Fin|Muestra el cuadro de diálogo de seguridad de Windows (Ctrl+Alt+Supr).|  
+|Alt+Supr|Muestra el menú de Windows.|  
+|Ctrl+Alt+Signo menos (en el teclado numérico)|Copia la ventana activa del equipo local en el Portapapeles del equipo remoto.|  
+|Ctrl+Alt+Signo más (en el teclado numérico)|Copia el área completa de la ventana del equipo local en el Portapapeles del equipo remoto.|  
+
+
+
+<!--HONumber=Dec16_HO5-->
 
 
