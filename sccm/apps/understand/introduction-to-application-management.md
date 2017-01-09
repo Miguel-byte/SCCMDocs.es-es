@@ -2,7 +2,7 @@
 title: "Introducción a la administración de aplicaciones | Microsoft Docs"
 description: "Obtenga la información básica que necesitará para administrar e implementar las aplicaciones de System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,8 +18,8 @@ manager: angrobe
 experimental: true
 experiment_id: rob-table-161101
 translationtype: Human Translation
-ms.sourcegitcommit: aa985dcb947803f7bc6d770f80a89a2fe6750681
-ms.openlocfilehash: 4be1fdaeeba2859389ea87b49b8e5891a28d052c
+ms.sourcegitcommit: 5aef08865b232ff2dacec6906098bebf4e42e6b1
+ms.openlocfilehash: 699adb5fac0c625c321db011af6989cc4c0778ec
 
 
 ---
@@ -56,12 +56,12 @@ En este tema, aprenderá los conceptos básicos que necesita saber antes de empe
  Configuration Manager le permite implementar los siguientes tipos de aplicaciones:  
 
 - Windows Installer (archivo *.msi)
-- Paquete de aplicación de Windows (*.appx, \*.appxbundle)
+- Paquete de aplicación de Windows (*.appx, *.appxbundle)
 - Paquete de aplicación de Windows (en la Tienda Windows)
 - Microsoft Application Virtualization 4
 - Microsoft Application Virtualization 5
 - Archivo .CAB de Windows Mobile
-- Mac OS X  
+- macOS  
 
 
 Además, al administrar dispositivos a través de la administración de dispositivos locales de Microsoft Intune o Configuration Manager, puede administrar estos tipos de aplicación adicionales:
@@ -113,6 +113,6 @@ Además, al administrar dispositivos a través de la administración de disposit
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

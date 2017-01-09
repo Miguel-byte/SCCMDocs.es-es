@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 099e0001c01713224988e5b49d02cb358e3015d6
-ms.openlocfilehash: f4f0a8e8b1b5aae2586cc885734f405f7e7f9ff5
+ms.sourcegitcommit: f6a6aad6859cf962f6f94fa5385a1dbfae6c7ff2
+ms.openlocfilehash: bea86f7fce6af913339ba0d1b56822ad761af48f
 
 
 ---
@@ -30,34 +30,32 @@ System Center Configuration Manager (también conocido como ConfgMgr o SCCM) ofr
 
 
 ##  <a name="overview-of-device-management-solutions"></a>Información general sobre las soluciones de administración de dispositivos  
- A esta sección de información general la siguen dos tablas en las que se comparan las soluciones de administración, una [en función de las plataformas de dispositivos móviles compatibles](#compare-device-management-solutions-based-on-supported-mobile-device-platforms) y la otra [según la funcionalidad de administración](#compare-mobile-device-management-solutions-based-on-management-functionality).
-  
+ En este artículo se describen cuatro soluciones de administración de dispositivos: la aplicación cliente de Configuration Manager, la infraestructura local de Configuration Manager, Microsoft Intune y Exchange. El artículo finaliza con dos tablas en las que se comparan las soluciones de administración, una según las [plataformas de dispositivos móviles compatibles](#compare-device-management-solutions-based-on-supported-mobile-device-platforms) y la otra según la [funcionalidad de administración](#compare-mobile-device-management-solutions-based-on-management-functionality).
 
--   **Administración de dispositivos con el cliente de Configuration Manager**  
 
-     Esta opción, que necesita la instalación de la aplicación cliente de Configuration Manager en los dispositivos, es la que proporciona más características y funcionalidad para administrar equipos, servidores y otros dispositivos en el entorno.   
+###  <a name="manage-devices-with-the-configuration-manager-client"></a>Administrar dispositivos con el cliente de Configuration Manager  
 
-     Para más información, consulte [Métodos de instalación de cliente en System Center Configuration Manager](/sccm/core/client/deploy/plan/client-installation-methods).  
+Esta opción, que necesita la instalación de la aplicación cliente de Configuration Manager en los dispositivos, es la que proporciona más características para administrar equipos, servidores y otros dispositivos en el entorno. Para más información, consulte [Métodos de instalación de cliente en System Center Configuration Manager](/sccm/core/client/deploy/plan/client-installation-methods).  
 
--   **Administración de dispositivos móviles con la infraestructura local de Configuration Manager**  
+###  <a name="manage-devices-with-on-premises-configuration-manager-infrastructure"></a>Administrar dispositivos con la infraestructura local de Configuration Manager  
 
-     Esta opción usa las funcionalidades de administración de dispositivos integradas en los sistemas operativos de algunas plataformas de dispositivos. Aunque no incluye tantas características como la administración basada en cliente, la administración local de dispositivos móviles proporciona un enfoque más ligero para la administración, que usa recursos de Configuration Manager locales para conectarse a los dispositivos y administrarlos. La administración \-local de dispositivos móviles solo se admite de momento en equipos y dispositivos móviles de Windows 10.  
+Esta opción usa las funcionalidades de administración de dispositivos integradas en los sistemas operativos de algunas plataformas de dispositivos. Aunque no incluye tantas características como la administración basada en cliente, la administración local de dispositivos móviles proporciona un enfoque más ligero para la administración, mediante recursos locales de Configuration Manager para conectarse a los dispositivos y administrarlos. Tenga en cuenta que esta opción solo se admite actualmente para equipos de Windows 10 y dispositivos de Windows 10 Mobile.  
 
-     Para más información sobre esta solución, vea [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager (Administrar dispositivos móviles con la infraestructura local de System Center Configuration Manager)](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
+Para obtener más información, consulte este artículo sobre cómo [administrar dispositivos móviles con la infraestructura local en System Center Configuration Manager](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
--   **Administración de dispositivos móviles con Microsoft Intune (híbrida)**  
+###  <a name="manage-devices-with-microsoft-intune-hybrid"></a>Administrar dispositivos con Microsoft Intune (híbrido)  
 
-     Esta opción usa Microsoft Intune para inscribir y administrar dispositivos en lugar de emplear los recursos locales de Configuration Manager. Aunque Intune administra los dispositivos, se puede tener acceso a las tareas de administración en la consola de Configuration Manager. Esta opción es compatible con todos los sistemas operativos principales de dispositivos móviles, incluidos Windows 10 Mobile, Windows Phone, iOS, Mac OS X y Android. También proporciona administración de equipos de Windows 8.1 y Windows 10 en su organización.  
+Esta opción usa Microsoft Intune para inscribir y administrar dispositivos, en lugar de emplear los recursos locales de Configuration Manager. Aunque Intune administra los dispositivos, se puede tener acceso a las tareas de administración en la consola de Configuration Manager. Esta opción es compatible con todos los sistemas operativos principales de dispositivos móviles, incluidos Windows 10 Mobile, Windows Phone, iOS, Mac OS X y Android. También proporciona administración de equipos de Windows 8.1 y Windows 10 en su organización.  
 
-     Para más información sobre esta solución, vea [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune (Administración híbrida de dispositivos móviles (MDM) con System Center Configuration Manager y Microsoft Intune)](../../mdm/understand/hybrid-mobile-device-management.md).  
+Para obtener más información, consulte [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../mdm/understand/hybrid-mobile-device-management.md) (Administración híbrida de dispositivos móviles [MDM] con System Center Configuration Manager y Microsoft Intune)  
 
--   **Administración de dispositivos móviles con Exchange**  
+###  <a name="manage-devices-with-microsoft-exchange"></a>Administrar dispositivos con Microsoft Exchange  
 
-     Esta opción usa el conector de Exchange Server para conectar varios servidores de Exchange a Configuration Manager y centraliza la administración de los dispositivos que se pueden conectar a Exchange ActiveSync. Puede configurar las características de administración de dispositivos móviles de Exchange, como la eliminación remota de datos del dispositivo móvil y el control de configuración para varios servidores de Exchange, desde la consola de Configuration Manager.  
+Esta opción usa el conector de Exchange Server para conectar varios servidores de Exchange con Configuration Manager. De este modo se centraliza la administración de los dispositivos que pueden conectarse a Exchange ActiveSync. Puede configurar las características de administración de dispositivos móviles de Exchange, como la eliminación remota de datos del dispositivo móvil y el control de configuración para varios servidores de Exchange, desde la consola de Configuration Manager.  
 
-     Para más información sobre esta solución, vea [Manage mobile devices with System Center Configuration Manager and Exchange (Administrar dispositivos móviles con System Center Configuration Manager y Exchange)](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)  
+Para más información, consulte [Administrar dispositivos móviles mediante System Center Configuration Manager y Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
 
- Puede usar las soluciones de administración de dispositivos por sí solas o en combinación con otras. Por ejemplo, puede usar el enfoque de administración basada en cliente para administrar los equipos y los servidores de la organización y, además, usar Intune para administrar los dispositivos móviles. Al combinar los enfoques de esta manera, puede cubrir todas las necesidades de administración del dispositivo desde la consola de Configuration Manager.  
+Puede usar las soluciones de administración de dispositivos por sí solas o en combinación con otras. Por ejemplo, puede usar el enfoque de administración basada en cliente para administrar los equipos y los servidores de la organización y, además, usar Intune para administrar los dispositivos móviles. Al combinar los enfoques de esta manera, puede cubrir todas las necesidades de administración del dispositivo desde la consola de Configuration Manager.  
 
 ## <a name="compare-device-management-solutions-based-on-supported-mobile-device-platforms"></a>Comparar soluciones de administración de dispositivos basadas en plataformas de dispositivos móviles compatibles  
 
@@ -81,7 +79,7 @@ System Center Configuration Manager (también conocido como ConfgMgr o SCCM) ofr
 
 |Funcionalidad de administración|Con el cliente de Configuration Manager|Configuration Manager con Microsoft Intune (híbrida)|Administración local de dispositivos móviles|Configuration Manager con Exchange|  
 |------------------------------|-------------------------------------------|-------------------------------------------------------------------|-------------------------------|-----------------------------------------|  
-|Seguridad de infraestructura de clave pública (PKI) entre el dispositivo móvil y Configuration Manager mediante la autenticación mutua y SSL para cifrar las transferencias de datos|Sí|Sí|Sí||  
+|Seguridad de infraestructura de clave pública (PKI) entre el dispositivo móvil y Configuration Manager (usa la autenticación mutua y SSL para cifrar las transferencias de datos)|Sí|Sí|Sí||  
 |Instalación de cliente|Sí||||  
 |Soporte técnico a través de Internet|Sí||||  
 |Detección|Sí|||Sí|  
@@ -98,6 +96,6 @@ System Center Configuration Manager (también conocido como ConfgMgr o SCCM) ofr
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

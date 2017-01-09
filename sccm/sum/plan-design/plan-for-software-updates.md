@@ -6,7 +6,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 01/04/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 translationtype: Human Translation
-ms.sourcegitcommit: b1c68b233097ef3a744dd25b3fb919660f0b2244
-ms.openlocfilehash: 16415fb54a2cf91747990c94ffea0076effe525b
+ms.sourcegitcommit: 46c8004afee4b18d5c7a2fcc5dac0f7d0d1f823c
+ms.openlocfilehash: 8a5efdce88127c71547c4f5ef85660a2983aa577
 
 
 ---
@@ -82,7 +82,7 @@ Antes de usar las actualizaciones de software en un entorno de producción de Sy
 
 2.  El cliente lo reintenta un mínimo de cuatro veces en intervalos de 30 minutos. Después del cuarto error, y tras esperar otros dos minutos, el cliente pasará al siguiente punto de actualización de software de la lista de puntos de actualización de software.  
 
-3.  Después de una exploración correcta, el cliente se conectará con el punto de actualización de software.  
+3.  El cliente se somete al mismo proceso en el nuevo punto de actualización de software. Después de un examen correcto, el cliente se conectará con el nuevo punto de actualización de software.
 
  En la lista siguiente se ofrece información adicional que puede tener en cuenta en los escenarios de cambio y reintento de puntos de actualización de software:  
 
@@ -91,6 +91,13 @@ Antes de usar las actualizaciones de software en un entorno de producción de Sy
 -   Si está habilitada la administración del cliente basada en Internet, y hay varios puntos de actualización de software que están configurados para aceptar la comunicación de clientes en Internet, el proceso de cambio seguirá el proceso de reintento estándar descrito en el escenario anterior.  
 
 -   Si se inició el proceso de exploración pero el cliente se desconectó antes de completarse la exploración, no se considera un error, y no cuenta como uno de los cuatro reintentos.  
+
+Si Configuration Manager recibe alguno de los siguientes códigos de error del Agente de Windows Update, hará que el cliente vuelva a intentar la conexión:  
+
+2149842970, 2147954429, 2149859352, 2149859362, 2149859338, 2149859344, 2147954430, 2147747475, 2149842974, 2149859342, 2149859372, 2149859341, 2149904388, 2149859371, 2149859367, 2149859366, 2149859364, 2149859363, 2149859361, 2149859360, 2149859359, 2149859358, 2149859357, 2149859356, 2149859354, 2149859353, 2149859350, 2149859349, 2149859340, 2149859339, 2149859332, 2149859333, 2149859334, 2149859337, 2149859336, 2149859335
+
+Para buscar el significado de un código de error, debe convertir el código de error decimal en hexadecimal y, después, buscar el valor hexadecimal en un sitio como la wiki [Windows Update Agent - Error Codes](https://social.technet.microsoft.com/wiki/contents/articles/15260.windows-update-agent-error-codes.aspx) (Códigos de error del Agente de Windows Update).
+
 
 ###  <a name="a-namebkmkmanuallyswitchsupsamanually-switch-clients-to-a-new-software-update-point"></a><a name="BKMK_ManuallySwitchSUPs"></a> Cambio manual de clientes a un nuevo punto de actualización de software
 A partir de la versión 1606 de Configuración Manager, puede habilitar la opción para que los clientes de Configuration Manager cambien a un nuevo punto de actualización de software cuando hay problemas con el punto de actualización de software activo. Esta opción genera cambios solo cuando un cliente recibe varios puntos de actualización de software desde un punto de administración.  
@@ -308,6 +315,6 @@ Cuando haya planificado las actualizaciones de software, consulte [Preparación 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

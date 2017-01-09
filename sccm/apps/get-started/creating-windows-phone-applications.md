@@ -2,7 +2,7 @@
 title: Crear aplicaciones de Windows Phone | Microsoft Docs
 description: Consulte las consideraciones que debe tener en cuenta al crear e implementar aplicaciones para dispositivos de Windows Phone.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 557888d1f1f899e3198c430bbe5ccdd44178f824
-ms.openlocfilehash: 5cd1ba42afd13e98565d24d1ec8a3ee209e8532c
+ms.sourcegitcommit: 5aef08865b232ff2dacec6906098bebf4e42e6b1
+ms.openlocfilehash: c230212d72e1c00856d6869414f2db927b1b79ad
 
 
 ---
@@ -33,13 +33,14 @@ Además de los otros requisitos y procedimientos de System Center Configuration 
 |Tipo de dispositivo|Tipos de archivo compatibles|  
 |-----------------|---------------------|  
 |Windows Phone 8|.xap|  
-|Windows Phone 8,1|.xap, .appx, .appxbundle|  
+|Windows Phone 8,1|.xap, .appx, .appxbundle|
+|Windows 10 Mobile|.xap, .appx, .appxbundle|
 
  Se admiten las siguientes acciones de implementación:  
 
 |Tipo de dispositivo|Acciones admitidas|  
 |-----------------|-----------------------|  
-|Windows Phone 8 y Windows Phone 8.1|Disponible, necesario, desinstalar|  
+|Windows Phone 8, Windows Phone 8.1 y Windows 10 Mobile|Disponible, necesario, desinstalar|  
 
 ## <a name="steps-to-deploy-the-latest-windows-phone-company-portal-app-with-supersedence"></a>Pasos para implementar la aplicación de portal de empresa de Windows Phone más reciente con sustitución  
  En la tabla siguiente se proporciona información, pasos y detalles para la creación e implementación de la aplicación del portal de la compañía de Windows Phone 8 más reciente.  
@@ -56,6 +57,6 @@ Además de los otros requisitos y procedimientos de System Center Configuration 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

@@ -2,7 +2,7 @@
 title: "Administración de Windows como servicio | Microsoft Docs"
 description: "Hay características en System Center Configuration Manager que le permiten ver el estado de Windows como servicio en su entorno para mantenerlo actualizado."
 ms.custom: na
-ms.date: 12/07/2016
+ms.date: 12/21/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3f44505c977b511223a083a960f871371c0ff133
-ms.openlocfilehash: 1885968006ef5be1f507e94e0d33918174b1af12
+ms.sourcegitcommit: 66cd6d099acdd9db2bc913a69993aaf5e17237fe
+ms.openlocfilehash: 79e13074db18a617c7e3fceedaa143dbece90a3d
 
 
 ---
@@ -238,30 +238,45 @@ Use el siguiente procedimiento para modificar las propiedades de un plan de mant
 
     Las siguientes opciones están disponibles en las propiedades del plan de mantenimiento que no estaban configuradas en el asistente:
 
-    - En la pestaña Configuración de implementación, configure las siguientes opciones:  
+    **Configuración de implementación**: en la pestaña Configuración de implementación, configure las siguientes opciones:  
 
-        -   **Tipo de implementación**: especifique el tipo de implementación para la implementación de actualizaciones de software. Seleccione **Requerido** para crear una implementación de actualización de software obligatoria en la que las actualizaciones de software se instalan automáticamente en los clientes antes de una fecha límite configurada. Seleccione **Disponible** para crear una implementación de actualización de software que esté disponible para que los usuarios la instalen desde el Centro de software.  
+    -   **Tipo de implementación**: especifique el tipo de implementación para la implementación de actualizaciones de software. Seleccione **Requerido** para crear una implementación de actualización de software obligatoria en la que las actualizaciones de software se instalan automáticamente en los clientes antes de una fecha límite configurada. Seleccione **Disponible** para crear una implementación de actualización de software que esté disponible para que los usuarios la instalen desde el Centro de software.  
 
-            > [!IMPORTANT]  
-            >  Una vez creada la implementación de actualización de software, no podrá cambiar el tipo de implementación.  
+        > [!IMPORTANT]  
+        >  Una vez creada la implementación de actualización de software, no podrá cambiar el tipo de implementación.  
 
-            > [!NOTE]  
-            >  Un grupo de actualizaciones de software implementado como **Requerido** se descargará en segundo plano y se respetará la configuración de BITS, si ha configurado.  
-            > Sin embargo, los grupos de actualizaciones de software implementados como **Disponible** se descargarán en primer plano y omitirán la configuración de BITS.  
+        > [!NOTE]  
+        >  Un grupo de actualizaciones de software implementado como **Requerido** se descargará en segundo plano y se respetará la configuración de BITS, si ha configurado.  
+        > Sin embargo, los grupos de actualizaciones de software implementados como **Disponible** se descargarán en primer plano y omitirán la configuración de BITS.  
 
-        -   **Usar Wake-on-LAN para activar clientes para las implementaciones requeridas**: especifique si quiere habilitar Wake on LAN en la fecha límite para enviar paquetes de reactivación a equipos que requieran una o varias actualizaciones de software en la implementación. Los equipos que estén en modo de suspensión en la fecha límite de instalación se activarán para que se pueda iniciar la instalación de las actualizaciones de software. Los clientes que están en modo de suspensión pero no requieren actualizaciones de software de la implementación no se iniciarán. De forma predeterminada, esta opción no está habilitada. Sólo está disponible cuando **Tipo de implementación** está establecido en **Requerido**.  
+    -   **Usar Wake-on-LAN para activar clientes para las implementaciones requeridas**: especifique si quiere habilitar Wake on LAN en la fecha límite para enviar paquetes de reactivación a equipos que requieran una o varias actualizaciones de software en la implementación. Los equipos que estén en modo de suspensión en la fecha límite de instalación se activarán para que se pueda iniciar la instalación de las actualizaciones de software. Los clientes que están en modo de suspensión pero no requieren actualizaciones de software de la implementación no se iniciarán. De forma predeterminada, esta opción no está habilitada. Sólo está disponible cuando **Tipo de implementación** está establecido en **Requerido**.  
 
-            > [!WARNING]  
-            >  Para poder utilizar esta opción, los equipos y las redes deben configurarse para Wake on LAN.  
+        > [!WARNING]  
+        >  Para poder utilizar esta opción, los equipos y las redes deben configurarse para Wake on LAN.  
 
-        -   **Nivel de detalle**: especifique el nivel de detalle de los mensajes de estado que notifican los equipos cliente.  
+    -   **Nivel de detalle**: especifique el nivel de detalle de los mensajes de estado que notifican los equipos cliente.  
 
-    - Configuración de descarga
+   **Configuración de descarga**: en la pestaña Configuración de descarga, configure las siguientes opciones:  
 
-    - Alertas
+    -   Especifique si el cliente descargará e instalará las actualizaciones de software cuando esté conectado a una red lenta o si utiliza una ubicación de contenido de reserva.  
+
+    -   Especifique si el cliente debe descargar e instalar las actualizaciones de software desde un punto de distribución de reserva cuando el contenido de las actualizaciones de software no está disponible en un punto de distribución preferido.  
+
+    -   **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**: especifique si quiere habilitar el uso de BranchCache para las descargas de contenido. Para obtener más información sobre BranchCache, consulte [Conceptos básicos de la administración de contenido](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
+
+    -   Especifique si los clientes deben descargar las actualizaciones de software desde Microsoft Update si las actualizaciones no están disponibles en los puntos de distribución.
+    > [!IMPORTANT]
+    > No use esta configuración para las actualizaciones del Servicio de actualización de Windows 10. Se producirá un error cuando Configuration Manager (al menos hasta la versión 1610) intente descargar las actualizaciones del Servicio de actualización de Windows 10 desde Microsoft Update.
+
+    -   Especifique si desea permitir que los clientes descarguen después de la fecha límite de instalación cuando utilizan una conexión a Internet de uso medido. En ocasiones, los proveedores de acceso a Internet cobran según la cantidad de datos que envía y recibe cuando se utiliza una conexión a Internet de uso medido.   
+
+    **Alertas**: en la pestaña Alertas, configure cómo generarán Configuration Manager y System Center Operations Manager las alertas para esta implementación. Sólo se pueden configurar alertas si **Tipo de implementación** está establecido en **Requerido** en la página Configuración de implementación.  
+
+    > [!NOTE]  
+    >  Puede revisar las alertas de las actualizaciones de software recientes en el área de trabajo **Biblioteca de software** del nodo **Actualizaciones de software** .  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO4-->
 
 

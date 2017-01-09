@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8195abd403d94a96d193289ea6e6bf8880d06078
-ms.openlocfilehash: aaa9a80a8429ab315a25862a78d6eb8733fd2e89
+ms.sourcegitcommit: 4a8d98addcd463eb82d8b7100b44254a10d21992
+ms.openlocfilehash: b5f7ad01f7a32d69d0c75b3c80a053f3c020c036
 
 
 ---
@@ -40,7 +40,9 @@ El punto de conexión de servicio de System Center Configuration Manager es un r
 
     -   Identificar las actualizaciones de Configuration Manager que se aplican a la versión de Configuration Manager actualmente en uso  
 
-     Vea [Usage data levels and settings (Niveles de datos de uso y configuración)](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
+  Para obtener información sobre los datos que recopila cada nivel y sobre cómo cambiar el nivel de recopilación después de que se instale el rol, consulte [Diagnósticos y datos de uso](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data) y, después, siga el vínculo de la versión de Configuration Manager que use.  
+
+    Para obtener más información, consulte [Configuración y niveles de datos de uso](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
 
 -   **Descargar las actualizaciones que se aplican a la infraestructura de Configuration Manager**: solo estarán disponibles las actualizaciones apropiadas para la infraestructura, según los datos de uso que se carguen.  
 
@@ -117,6 +119,6 @@ Después de la ejecución de la configuración, o bien si reinstala el rol de si
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

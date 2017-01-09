@@ -2,7 +2,7 @@
 title: "Introducción de colecciones | Microsoft Docs"
 description: "Obtenga una introducción para usar las recopilaciones en System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/05/2016
+ms.date: 01/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 08a509cacb711ed6d1ae188d5512a026a12417f2
-ms.openlocfilehash: 8a228a55c198df08701f28123696e35cc73fd98c
+ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
+ms.openlocfilehash: fd4c6fd85d12592b3d4f57a48cf6da6c7a668615
 
 
 ---
@@ -25,13 +25,13 @@ ms.openlocfilehash: 8a228a55c198df08701f28123696e35cc73fd98c
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Las colecciones en System Center Configuration Manager (también conocido como ConfigMgr y SCCM) le ayudan a organizar recursos en unidades administrables. Puede crear colecciones para satisfacer las necesidades de administración del cliente y para realizar operaciones en varios recursos a la vez. 
+Las recopilaciones le ayudan a organizar los recursos en unidades administrables. Puede crear colecciones para satisfacer las necesidades de administración del cliente y para realizar operaciones en varios recursos a la vez. 
 
-La mayoría de las tareas de administración se basan en el uso de una o más recopilaciones o requieren el uso de una o más de ellas. Aunque puede utilizar la recopilación integrada de Todos los sistemas, utilizarla para tareas de administración no es una práctica recomendada. Cree sus propias colecciones personalizadas para identificar más específicamente los dispositivos o usuarios para una tarea.  
+La mayoría de las tareas de administración se basan en el uso de una o más recopilaciones o requieren el uso de una o más de ellas. Aunque puede utilizar la recopilación integrada de Todos los sistemas, utilizarla para tareas de administración no es una práctica recomendada. Cree recopilaciones personalizadas para identificar más específicamente los dispositivos o usuarios para una tarea.  
 
  Las recopilaciones integradas y personalizadas aparecen en los nodos **Recopilaciones de usuarios** y **Recopilaciones de dispositivos** en el área de trabajo **Activos y compatibilidad** en la consola de Configuration Manager.  
 
- Las recopilaciones que ha visto recientemente aparecen en el nodo **Usuarios** y en el nodo **Dispositivos** en el área de trabajo **Activos y compatibilidad** en la consola de Configuration Manager.  
+ Las recopilaciones que ha visto recientemente aparecen en el nodo **Usuarios** y en el nodo **Dispositivos** en el área de trabajo **Activos y compatibilidad**.  
 
 Estos son algunos ejemplos de uso de la colección:  
 
@@ -67,6 +67,6 @@ Estos son algunos ejemplos de uso de la colección:
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 
