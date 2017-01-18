@@ -1,5 +1,5 @@
 ---
-title: "Diagrama de flujo: actualizar la replicación | System Center Configuration Manager"
+title: "Diagrama de flujo: replicación de actualización | Microsoft Docs"
 description: "Vea el proceso mediante el que una actualización en la consola que selecciona para que se instale replica a sitios adicionales."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 754a336335116e915a86e9e94393642e87d91f8a
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: cefde9fa6894e39715257f0453ccfe160a55919e
 
 ---
 # <a name="flowchart---update-replication-for-system-center-configuration-manager"></a>Diagrama de flujo: actualizar la replicación para System Center Configuration Manager.
@@ -30,6 +30,6 @@ Estos flujos de datos muestran el proceso mediante el que una actualización en 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

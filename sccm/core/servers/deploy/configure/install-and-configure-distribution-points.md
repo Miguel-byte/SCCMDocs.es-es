@@ -1,5 +1,5 @@
 ---
-title: "Administrar puntos de distribución | System Center Configuration Manager"
+title: "Administrar puntos de distribución | Microsoft Docs"
 description: "Hospede el contenido (archivos y software) que implementa en dispositivos y usuarios mediante el uso de los puntos de distribución. Aquí se muestra cómo instalarlos y configurarlos."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: dedfcc77cb94ede1abfd65e22f9d3d116b9ed68e
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 8684bf1231ff9d663717b4c9874dac98d50e3647
 
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>Instalación y configuración de puntos de distribución de System Center Configuration Manager
@@ -26,7 +26,7 @@ ms.openlocfilehash: dedfcc77cb94ede1abfd65e22f9d3d116b9ed68e
 
 Instale puntos de distribución de System Center Configuration Manager para hospedar el contenido (archivos y software) que implementa en dispositivos y usuarios. También puede crear grupos de puntos de distribución que simplifican la manera en que administra los puntos de distribución, y cómo distribuye el contenido en puntos de distribución.  
 
- Cuando **instala un nuevo punto de distribución** (mediante el asistente de instalación) o **administra las propiedades de un punto de distribución existente** (editando las propiedades del punto de distribución), tiene la oportunidad de configurar la mayoría de la configuración del punto de distribución. En cambio, existen algunas opciones de configuración que solo están disponibles al instalar o editar, pero no en ambas:  
+ Cuando **instala un nuevo punto de distribución** (mediante el asistente de instalación) o **administra las propiedades de un punto de distribución existente** (editando las propiedades del punto de distribución), puede configurar la mayoría de los valores del punto de distribución. En cambio, existen algunas opciones de configuración que solo están disponibles al instalar o editar, pero no en ambas:  
 
 -   **Opciones que solo están disponibles cuando se instala un punto de distribución:**  
 
@@ -330,9 +330,11 @@ Para ver los resultados del proceso de validación de contenido, en el área de 
 >  Aunque la programación de la validación de contenido se especifica mediante la hora local del equipo, la programación se muestra en la consola de Configuration Manager mediante UTC.  
 
 ### <a name="boundary-group"></a>Grupo de límites  
-Administre los grupos de límites a los que se asigna este punto de distribución. Puede asociar grupos de límites a un punto de distribución. Durante la distribución de contenido, los clientes deben estar en un grupo de límites que esté asociado con el punto de distribución para utilizarlo como una ubicación de origen para el contenido. Puede activar la casilla **Permitir a los clientes utilizar este sistema del sitio como ubicación de origen de reserva para contenido** para permitir a los clientes que están fuera de estos grupos de límites que reserven y usen el punto de distribución como una ubicación de origen para el contenido cuando no estén disponibles otros puntos de distribución.  
+Administre los grupos de límites a los que se asigna este punto de distribución. Puede asociar grupos de límites a un punto de distribución. Durante la distribución de contenido, los clientes deben estar en un grupo de límites que esté asociado con el punto de distribución para utilizarlo como una ubicación de origen para el contenido.
+Además:
+- Antes de la versión 1610, puede activar la casilla **Allow clients to use this site system as a fallback source location for content** (Permitir a los clientes usar este sistema de sitio como ubicación de origen de reserva para contenido) para permitir a los clientes que están fuera de estos grupos de límites que reserven y usen el punto de distribución como una ubicación de origen para el contenido cuando no estén disponibles otros puntos de distribución. Para obtener más información sobre los grupos de límites, consulte [Boundary groups for versions 1511, 1602, and 1606](/sccm/core/servers/deploy/configur/boundary-groups-for-1511-1602-and-1606) (Grupos de límites para las versiones 1511, 1602 y 1606). Para obtener más información sobre los puntos de distribución preferidos, consulte [Conceptos básicos de la administración de contenido en System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).
+- Con la versión 1610 o posterior, puede configurar el grupo de límites *Relaciones*, que define cuándo y en qué grupos de límites puede reservar el cliente para buscar contenido. Para obtener más información, consulte [Boundary groups](/sccm/core/servers/deploy/configur/define-site-boundaries-and-boundary-groups#boundary-groups) (Grupos de límites).
 
-Para obtener más información sobre los puntos de distribución preferidos, consulte [Fundamental concepts for content management in System Center Configuration Manager (Conceptos básicos de la administración de contenido en System Center Configuration Manager)](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
 ### <a name="schedule"></a>Programa  
 
@@ -377,6 +379,6 @@ Especifique si desea configurar límites de velocidad para controlar el ancho de
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

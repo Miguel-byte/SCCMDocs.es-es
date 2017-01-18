@@ -1,5 +1,5 @@
 ---
-title: Configurar el inventario de hardware | System Center Configuration Manager
+title: Configurar el inventario de hardware | Microsoft Docs
 description: "Configure el inventario de hardware de todos los clientes o de una colección en System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 41bf42228e41785a05359c08e8dfedae48d50e30
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: f39714e53e1b38c162e2c0418356d223432fdd87
 
 
 ---
@@ -51,7 +51,7 @@ Use los pasos siguientes para configurar el inventario de hardware de System Cen
 
     -   **Programación de inventario de hardware**: especifique el intervalo en el que los clientes recopilan el inventario de hardware. Use el valor predeterminado de **7 días** o haga clic en **Programar** para configurar un intervalo personalizado.  
 
-7.  Configure el resto de opciones de cliente que necesite. Para obtener una lista de las opciones de cliente del inventario de hardware que puede configurar, vea la sección [Inventario de software](../../../../core/clients/deploy/about-client-settings.md#BKMK_HardwareInventoryDeviceSettings) del tema [Acerca de la configuración de cliente en Configuration Manager](../../../../core/clients/deploy/about-client-settings.md).  
+7.  Configure el resto de opciones de cliente que necesite. Para obtener una lista de las opciones de cliente del inventario de hardware que puede configurar, vea la sección [Inventario de software](../../../../core/clients/deploy/about-client-settings.md#hardware-inventory) del tema [Acerca de la configuración de cliente en Configuration Manager](../../../../core/clients/deploy/about-client-settings.md).  
 
 8.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Configuración predeterminada** .  
 
@@ -59,6 +59,6 @@ Use los pasos siguientes para configurar el inventario de hardware de System Cen
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

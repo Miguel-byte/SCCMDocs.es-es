@@ -1,5 +1,5 @@
 ---
-title: Interoperabilidad entre versiones | System Center Configuration Manager
+title: Interoperabilidad entre versiones de Configuration Manager | Microsoft Docs
 description: "Obtenga información sobre cómo evitar conflictos entre varias jerarquías de System Center Configuration Manager en la misma red."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: db0bf04b73050cb42f8230227c8db6ebfb3c6987
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 32182f06a90d768c40e29ed8a8e89cb45114bd15
 
 
 ---
@@ -61,12 +61,12 @@ Es posible instalar y usar variar jerarquías independientes de System Center Co
 
  Para evitar que los clientes se asignen de forma no intencionada al sitio incorrecto cuando dos jerarquías tienen límites que se superponen, configure los parámetros de instalación de cliente de Configuration Manager para asignar los clientes a un sitio específico.  
 
-##  <a name="a-namebkmkmixeda-configuration-manager-limitations-in-a-mixed-version-hierarchy"></a><a name="bkmk_mixed"></a> Limitaciones de Configuration Manager en una jerarquía de versión mixta  
+##  <a name="a-namebkmkmixeda-configuration-manager-limitations--in-a-mixed-version-hierarchy"></a><a name="bkmk_mixed"></a> Limitaciones de Configuration Manager en una jerarquía de versión mixta  
  Durante el proceso de actualización de un sitio de System Center Configuration Manager, habrá ocasiones en que sitios diferentes tendrán distintas versiones.  Por ejemplo, puede actualizar un sitio de administración central a una nueva versión, pero debido a las ventanas de mantenimiento de sitio, uno o más sitios primarios podrían no actualizarse hasta una fecha y hora posterior.  
 
  Si varios sitios de una misma jerarquía ejecutan versiones diferentes, determinadas funciones no estarán disponibles. Esto puede afectar al modo en que administra objetos de Configuration Manager en la consola de Configuration Manager y a las funcionalidades disponibles para los clientes. Normalmente, la funcionalidad de la versión más actual de Service Pack de Configuration Manager no es accesible en sitios o para clientes que ejecutan una versión anterior del Service Pack.  
 
-### <a name="limitations-when-upgrading-configuration-manager"></a>Limitaciones al actualizar Configuration Manager  
+### <a name="limitations-when-upgrading--configuration-manager"></a>Limitaciones al actualizar Configuration Manager  
 
 |Objeto|Detalles|  
 |------------|-------------|  
@@ -85,6 +85,6 @@ Es posible instalar y usar variar jerarquías independientes de System Center Co
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

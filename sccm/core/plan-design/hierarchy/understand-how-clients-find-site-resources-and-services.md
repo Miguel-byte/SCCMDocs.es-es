@@ -1,5 +1,5 @@
 ---
-title: Buscar recursos de sitio | System Center Configuration Manager
+title: Buscar recursos de sitio | Microsoft Docs
 description: "Comprenda cómo y cuándo los clientes de System Center Configuration Manager usan la ubicación del servicio para buscar recursos de sitio."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5d718d0f9b8c6121f3124a8ade7507c61b7313f2
-ms.openlocfilehash: cad4ebd3f8fa275d7d2cad9b2b87c32b971c580d
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: b006896091901fab7b141f99f4c95eb22ea61b82
 
 
 ---
@@ -176,7 +176,6 @@ Para publicar puntos de administración en DNS, deben cumplirse las dos condicio
 **Cuando los servidores DNS admiten actualizaciones automáticas**, puede configurar Configuration Manager para publicar de forma automática puntos de administración en la intranet en DNS, o bien puede publicar de forma manual estos registros en DNS. Cuando los puntos de administración se publican en DNS, el número de puerto y FQDN de la intranet se publican en el registro de ubicación de servicio (SRV). La publicación en DNS en un sitio se configura en las propiedades de componente de punto de administración del sitio en cuestión. Para obtener más información, consulte [Componentes de sitio para System Center Configuration Manager](../../../core/servers/deploy/configure/site-components.md).  
 
 **Cuando Zona DNS se establece en "Sólo seguras" para Actualizaciones dinámicas**, solo el primer punto de administración para publicar en DNS puede hacerlo correctamente con los permisos predeterminados.
-- Puede agregar cada servidor que hospeda un punto de administración al grupo DnsAdmins para garantizar que aquellos puntos de administración tienen permisos para modificar sus registros.  
 - Si solo un punto de administración puede publicar y modificar correctamente su registro DNS, siempre y cuando ese servidor de puntos de administración permanezca en buen estado, los clientes pueden obtener la lista completa de MP desde ese punto de administración y luego encontrar su punto de administración preferido.
 
 
@@ -251,6 +250,6 @@ Si no desea que los clientes encuentren un punto de administración HTTP en WINS
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

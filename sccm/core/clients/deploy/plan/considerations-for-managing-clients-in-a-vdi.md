@@ -1,5 +1,5 @@
 ---
-title: "Administración de clientes de infraestructura de escritorio virtual (VDI) | System Center Configuration Manager "
+title: "Administración de clientes de infraestructura de escritorio virtual (VDI) | Microsoft Docs "
 description: Administre clientes de System Center Configuration Manager en una infraestructura de escritorio virtual (VDI).
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,16 +13,16 @@ ms.topic: get-started-article
 ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 2f9014a592de07ae8f36d23ce939fc1de776cd76
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 58251f6a4eebac4cba9f3d51f8d0aaad068c3ab8
 
 
 ---
-# <a name="considerations-for-managing-system-center-configuration-manager-clients-in-a-virtual-desktop-infrastructure-vdi"></a>Consideraciones para la administración de clientes de System Center Configuration Manager en una infraestructura de escritorio virtual (VDI)
+# <a name="considerations-for-managing-system-center-configuration-manager-clients--in-a-virtual-desktop-infrastructure-vdi"></a>Consideraciones para la administración de clientes de System Center Configuration Manager en una infraestructura de escritorio virtual (VDI)
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
@@ -51,6 +51,6 @@ System Center Configuration Manager admite la instalación del cliente de Config
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

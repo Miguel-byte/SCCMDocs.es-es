@@ -1,5 +1,5 @@
 ---
-title: Configurar Wake on LAN | System Center Configuration Manager
+title: Configurar Wake on LAN | Microsoft Docs
 description: "Seleccione la configuración de Wake on LAN en System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 caps.latest.revision: 7
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: b8274f9da1ec82aebf43115236f2409995a0052b
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 09f8bc7ee04ff64934030f825a791bc043341963
 
 ---
 # <a name="how-to-configure-wake-on-lan-in-system-center-configuration-manager"></a>Cómo configurar Wake on LAN en System Center Configuration Manager
@@ -47,7 +47,7 @@ Un equipo que recibe la configuración de cliente de proxy de reactivación es p
 1. En la consola de Configuration Manager, vaya a **Administración > Configuración de cliente**.
 2. Haga clic en **Configuración de cliente predeterminada** y luego en **Propiedades**.
 3. Seleccione **Administración de energía** y luego elija **Sí** para **Habilitar proxy de reactivación**.
-4. Revise y, si es necesario, configure las demás opciones del proxy de reactivación. Para más información sobre esta configuración, vea [Power management settings (Configuración de administración de energía)](../../../core/clients/deploy/about-client-settings.md#BKMK_PowMgmtDeviceSettings).
+4. Revise y, si es necesario, configure las demás opciones del proxy de reactivación. Para más información sobre esta configuración, vea [Power management settings (Configuración de administración de energía)](../../../core/clients/deploy/about-client-settings.md#power-management).
 5. Haga clic en **Aceptar** para cerrar el cuadro de diálogo y, luego, haga clic en **Aceptar** para cerrar el cuadro de diálogo Configuración de cliente predeterminada.
 
 Puede utilizar los siguientes informes de Wake On LAN para supervisar la instalación y la configuración del proxy de reactivación:
@@ -60,6 +60,6 @@ Puede utilizar los siguientes informes de Wake On LAN para supervisar la instala
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

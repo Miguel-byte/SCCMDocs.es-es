@@ -1,5 +1,5 @@
 ---
-title: Actualizaciones | System Center Configuration Manager
+title: Actualizaciones | Microsoft Docs
 description: "Obtenga información sobre un método de servicio en la consola denominado **Actualizaciones y mantenimiento** que facilita la ubicación e instalación de las actualizaciones recomendadas."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: cfb523c6198e4ac2782de6fa8a8654050a283ca7
-ms.openlocfilehash: 7684c4b9a2a12ed7b9ddcddffe1125b3d47daa36
+ms.sourcegitcommit: 6e964f015d5f007311f46f51126b31e181abd0ec
+ms.openlocfilehash: e7b19b6e1f4720c0bdc69ef7f78366fd5d3414d0
 
 
 ---
@@ -38,6 +38,8 @@ System Center Configuration Manager usa un método de servicio en la consola den
 
 -   [Uso del instalador de revisiones para instalar actualizaciones para System Center Configuration Manager](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)  
 
+> [!TIP]  
+> Si usa la rama de Technical Preview, consulte [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview) (Technical Preview para System Center Configuration Manager) para obtener información adicional específica de esa rama.
 
 ##  <a name="a-namebkmkbaselinesa-baseline-and-update-versions"></a><a name="bkmk_Baselines"></a> Versiones de línea de base y versiones de actualización  
  La versión inicial de la rama actual de System Center Configuration Manager es la versión 1511. Se trata de una versión de línea de base:  
@@ -72,12 +74,13 @@ Las siguientes versiones de Configuration Manager están disponibles como línea
 |**1602**<br /><br /> 5.00.8355.1000|3/11/2016|No|Sí|
 |**1606**<br /><br /> 5.00.8412.1000|22/7/2016|No|Sí|
 |**1606** con el paquete acumulativo de revisiones 1606 (KB3186654) </br></br>5.00.8412.1307 *(Nota 1)* |12/10/2016|Sí|No|
+|**1610**<br /><br /> 5.00.8458.1000|18/11/2016|No|Sí|
 *(Nota 1)* Este medio de línea base 1606 está disponible como parte de Microsoft System Center 2016 o de una versión de System Center Configuration Manager (rama actual y rama de mantenimiento a largo plazo 1606).
 
 Para comprobar la versión del sitio de Configuration Manager, vaya a **Acerca de System Center Configuration Manager** en la esquina superior izquierda de la consola, donde aparece la nueva versión del sitio y la consola.  
 
 ##  <a name="a-namebkmkinconsolea-in-console-updates-and-servicing"></a><a name="bkmk_inconsole"></a> Actualizaciones y servicio en la consola  
- Cuando usa una instalación lista para producción de System Center Configuration Manager, a la que también se conoce como la rama actual, la mayoría de las actualizaciones que se instalan están disponibles con el canal Actualizaciones y mantenimiento. Este método identifica, descarga y pone a disposición las actualizaciones que se aplican a la versión y la configuración actual de la infraestructura e incluye solo las actualizaciones que Microsoft recomienda para todos los clientes.   
+ Cuando usa una instalación lista para producción de System Center Configuration Manager, a la que también se conoce como rama actual, la mayoría de las actualizaciones que se instalan están disponibles con el canal Actualizaciones y mantenimiento. Este método identifica, descarga y pone a disposición las actualizaciones que se aplican a la versión y la configuración actual de la infraestructura e incluye solo las actualizaciones que Microsoft recomienda para todos los clientes.   
  Entre ellos, se incluye:  
 
 -   Versiones nuevas, como la versión 1602.  
@@ -130,16 +133,16 @@ Habitualmente, obtiene información sobre las revisiones fuera de banda desde lo
 
 Estas revisiones se instalan manualmente, mediante uno de estos dos métodos:  
 
--   **Herramienta de registro de actualizaciones:** esta herramienta importa de forma manual la revisión a la consola de Configuration Manager donde luego puede instalar la actualización como lo haría con las actualizaciones en la consola que se detectan de forma automática. Este método se usa para las actualizaciones que usan la siguiente estructura de nombre de archivo: **.update.exe**.  El nombre de archivo completo de este tipo de revisión es similar al siguiente: **&lt;Producto\>-&lt;versión del producto\>-&lt;identificador del artículo de KB\>-ConfigMgr.Update.exe**  
+-   **Herramienta de registro de actualizaciones:** esta herramienta importa de forma manual la revisión a la consola de Configuration Manager donde luego puede instalar la actualización como lo haría con las actualizaciones en la consola que se detectan de forma automática. Este método se usa para las actualizaciones que usan la siguiente estructura de nombre de archivo: **.update.exe**.  El nombre de archivo completo de este tipo de revisión es similar al siguiente: **&lt;Producto\>-&lt;versión del producto\>-&lt;identificador del artículo de KB\>-ConfigMgr.Update.exe**.  
 
-     Para obtener más información, consulte [Uso de la herramienta de registro de actualizaciones para importar revisiones en System Center Configuration Manager](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md).  
+     Para obtener más información, consulte [Use the Update Registration Tool to import hotfixes to System Center Configuration Manager](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md) (Uso de la herramienta de registro de actualizaciones para importar revisiones en System Center Configuration Manager).  
 
--   **Instalador de revisiones:** esta herramienta se usa para instalar manualmente una revisión que no se puede instalar con el método en la consola. Este método se usa para las revisiones que usan la siguiente estructura de nombre de archivo: **&lt;Producto\>-&lt;versión del producto\>-&lt;identificador del artículo de KB\>-&lt;plataforma\>-&lt;idioma\>.exe**  
+-   **Instalador de revisiones:** esta herramienta se usa para instalar manualmente una revisión que no se puede instalar con el método en la consola. Este método se usa para las revisiones que usan la siguiente estructura de nombre de archivo: **&lt;Producto\>-&lt;versión del producto\>-&lt;identificador del artículo de KB\>-&lt;plataforma\>-&lt;idioma\>.exe**.
 
-     Para obtener más información, consulte [Uso del instalador de revisiones para instalar actualizaciones para System Center Configuration Manager](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md).  
+     Para obtener más información, consulte [Use the Hotfix Installer to install updates for System Center Configuration Manager](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md) (Uso del instalador de revisiones para instalar actualizaciones para System Center Configuration Manager).
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
