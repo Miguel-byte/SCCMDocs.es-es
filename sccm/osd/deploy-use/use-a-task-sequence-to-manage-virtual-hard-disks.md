@@ -1,5 +1,5 @@
 ---
-title: Usar una secuencia de tareas para administrar discos duros virtuales | Configuration Manager
+title: Usar una secuencia de tareas para administrar discos duros virtuales | Microsoft Docs
 description: Puede crear y modificar un VHD, agregar aplicaciones y actualizaciones de software, y publicar el VHD en System Center Virtual Machine Manager (VMM) desde Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e0ba309d8efc34cccce6acc4c59f0c4d218a617a
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: f77af4b8fcb193ed44511c0e5eea7290f55dbbf8
 
 
 ---
@@ -331,6 +331,6 @@ En System Center Configuration Manager, puede administrar discos duros virtuales
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

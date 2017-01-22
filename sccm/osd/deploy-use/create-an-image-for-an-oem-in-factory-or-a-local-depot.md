@@ -1,5 +1,5 @@
 ---
-title: "Crear una imagen para un OEM en fábrica o en un almacén local | Configuration Manager"
+title: "Crear una imagen para un OEM en fábrica o en un almacén local | Microsoft Docs"
 description: "Use implementaciones de medios preconfigurados para reducir el tráfico de red mientras implementa un sistema operativo en un equipo que no esté aprovisionado por completo."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d604577fdb9af7c7789840ea6281c371e35c46b0
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 07aba04fb1b845e389a5f75b115d536136c1569c
 
 
 ---
@@ -58,6 +58,6 @@ Este método de implementación puede reducir el tráfico de red porque la image
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Instalar un sitio con el medio de línea base 1606 | System Center Configuration Manager"
+title: "Instalar un sitio con el medio de línea base 1606 | Microsoft Docs"
 description: "Obtenga información sobre cómo usar el medio de línea base 1606 para instalar o actualizar sitios de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/12/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5e97fbcdc21022e98b4cbdb198273dfe544a561f
-ms.openlocfilehash: 3df46a00f2208ffa687c8c99ce610266e206eef0
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: a80095fb3b227653126a028ab4ab8f4e2dbd612b
 
 
 ---
@@ -83,7 +83,7 @@ Por ejemplo, para instalar una edición de rama actual con licencia, usará:
   **Nombre de clave: SABranchOptions**
    -    **SSActive = 1**
    - **CurrentBranch = 1**
- 
+
 
 > [!IMPORTANT]  
 > **SABranchOptions** solo funciona con el programa de instalación desde el medio de línea base. No se aplica cuando ejecuta el programa de instalación desde la carpeta CD.Latest de un sitio que ha instalado previamente mediante el medio de línea base de la versión 1606.
@@ -148,6 +148,6 @@ Use el programa de instalación de Configuration Manager de la carpeta CD.Latest
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

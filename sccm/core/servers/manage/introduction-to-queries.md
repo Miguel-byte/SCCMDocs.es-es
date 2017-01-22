@@ -1,5 +1,5 @@
 ---
-title: "Introducción a las consultas | System Center Configuration Manager"
+title: "Introducción a las consultas | Microsoft Docs"
 description: "Cree y ejecute consultas para buscar objetos en una jerarquía de System Center Configuration Manager que coincidan con los criterios de consulta."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 054f3cc5ba7963231df93ed0ceb973d20b2e8f8e
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: f84d518670c0ece3c08c890d2293335518f7f8e9
 
 
 ---
@@ -41,6 +41,6 @@ Puede crear y ejecutar consultas para buscar objetos en una jerarquía de System
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

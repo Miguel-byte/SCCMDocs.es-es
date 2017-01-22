@@ -1,5 +1,5 @@
 ---
-title: SQL Server AlwaysOn | System Center Configuration Manager
+title: SQL Server AlwaysOn | Microsoft Docs
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -15,8 +15,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 9d4d0c741418af29edc586a5d629fc61f86da426
 
 
 ---
@@ -152,15 +152,7 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
 
      Consulte [Ver o cambiar el modelo de recuperación de una base de datos (SQL Server)](https://msdn.microsoft.com/library/ms189272\(v=sql.120\).aspx) en la documentación de SQL Server. (Los grupos de disponibilidad solo admiten COMPLETA).  
 
-3.  Use SQL Server para crear una copia de seguridad completa de la base de datos de sitio y, a continuación:  
-
-    -   Si el servidor de la base de datos de sitio actual no será miembro del grupo de disponibilidad o no se utilizará como réplica principal inicial del grupo de disponibilidad, restaure una copia de la base de datos de sitio en el servidor que hospedará la réplica principal del grupo.  
-
-    -   Si el servidor de la base de datos de sitio actual será miembro del grupo de disponibilidad, planee el uso de este servidor como miembro de la réplica principal del grupo de disponibilidad. Cuando lo haga, no tendrá que restaurar una copia de la base de datos de sitio a este u otro servidor.  
-
-    Para obtener información sobre cómo completar este paso, consulte [Crear una copia de seguridad completa de base de datos (SQL Server)](https://msdn.microsoft.com/library/ms187510\(v=sql.120\).aspx) y [Restaurar una copia de seguridad de base de datos (SQL Server Management Studio)](https://msdn.microsoft.com/library/ms177429\(v=sql.120\).aspx)en la documentación de SQL Server.  
-
-4.  En el servidor que hospedará la réplica principal del grupo, use el **Asistente para nuevo grupo de disponibilidad** para crear el grupo de disponibilidad. En el asistente:  
+3.  En el servidor que hospedará la réplica principal del grupo, use el **Asistente para nuevo grupo de disponibilidad** para crear el grupo de disponibilidad. En el asistente:  
 
     -   En la página **Seleccionar base de datos**, seleccione la base de datos para el sitio de Configuration Manager  
 
@@ -174,15 +166,15 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
 
     Para más información, consulte [Usar el Asistente para grupo de disponibilidad (SQL Server Management Studio)](https://msdn.microsoft.com/library/hh403415\(v=sql.120\).aspx) en la documentación de SQL Server.  
 
-5.  Una vez configurado el grupo de disponibilidad, configure la base de datos de sitio en la réplica principal con la propiedad **TRUSTWORTHY** y **habilite la integración CLR**. Para obtener información acerca de cómo realizar estas configuraciones, consulte [Propiedad de base de datos TRUSTWORTHY](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx) y  [Habilitar la integración CLR](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx) en la documentación de SQL Server.  
+4.  Una vez configurado el grupo de disponibilidad, configure la base de datos de sitio en la réplica principal con la propiedad **TRUSTWORTHY** y **habilite la integración CLR**. Para obtener información acerca de cómo realizar estas configuraciones, consulte [Propiedad de base de datos TRUSTWORTHY](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx) y  [Habilitar la integración CLR](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx) en la documentación de SQL Server.  
 
-6.  Realice las acciones siguientes para configurar cada réplica secundaria en el grupo de disponibilidad:  
+5.  Realice las acciones siguientes para configurar cada réplica secundaria en el grupo de disponibilidad:  
 
     1.  Realice una conmutación por error manual de la réplica principal actual en una réplica secundaria. Consulte [Realizar una conmutación por error manual planeada de un grupo de disponibilidad (SQL Server)](https://msdn.microsoft.com/library/hh231018\(v=sql.120\).aspx) en la documentación de SQL Server.  
 
     2.  Configure la base de datos en la nueva réplica principal con la propiedad **TRUSTWORTHY** y **habilite la integración CLR**.  
 
-7.  Una vez que todas las réplicas hayan ascendido a réplicas principales y se hayan configurado las bases de datos, el grupo de disponibilidad estará listo para su uso con Configuration Manager.  
+6.  Una vez que todas las réplicas hayan ascendido a réplicas principales y se hayan configurado las bases de datos, el grupo de disponibilidad estará listo para su uso con Configuration Manager.  
 
 
 
@@ -220,15 +212,13 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
 
 2.  Detenga el sitio de Configuration Manager al ejecutar **Preinst.exe /stopsite**. Consulte [Herramienta de mantenimiento de jerarquía (Preinst.exe) para System Center Configuration Manager](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md).  
 
-3.  Use SQL Server para crear una copia de seguridad de la base de datos de sitio de la réplica principal y, a continuación, restaure esa copia en el nuevo servidor de réplica secundaria. Consulte [Crear una copia de seguridad completa de base de datos (SQL Server)](https://msdn.microsoft.com/library/ms187510\(v=sql.120\).aspx) y [Restaurar una copia de seguridad de base de datos (SQL Server Management Studio)](https://msdn.microsoft.com/library/ms177429\(v=sql.120\).aspx) en la biblioteca de documentación de SQL Server.  
-
-4.  Configure cada réplica secundaria. Realice las siguientes acciones para cada réplica secundaria del grupo de disponibilidad:  
+3.  Configure cada réplica secundaria. Realice las siguientes acciones para cada réplica secundaria del grupo de disponibilidad:  
 
     1.  Realice una conmutación por error manual de la réplica principal en la nueva réplica secundaria. Consulte [Realizar una conmutación por error manual planeada de un grupo de disponibilidad (SQL Server)](https://msdn.microsoft.com/library/hh231018\(v=sql.120\).aspx) en la documentación de SQL Server.  
 
     2.  Configure la base de datos en el nuevo servidor para que sea de confianza y habilite la integración CLR. Consulte [Propiedad de base de datos TRUSTWORTHY](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx) y  [Habilitar la integración CLR](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx)en la documentación de SQL Server.  
 
-5.  Reinicie el sitio iniciando los servicios Administrador de componentes de sitio (**sitecomp**) y **SMS_Executive** .  
+4.  Reinicie el sitio iniciando los servicios Administrador de componentes de sitio (**sitecomp**) y **SMS_Executive** .  
 
 #### <a name="to-remove-a-replica-member-from-the-availability-group"></a>Para quitar un miembro de la réplica del grupo de disponibilidad  
 
@@ -270,6 +260,6 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

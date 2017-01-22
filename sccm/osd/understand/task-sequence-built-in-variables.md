@@ -1,5 +1,5 @@
 ---
-title: Variables integradas de secuencia de tareas | Configuration Manager
+title: Variables integradas de secuencias de tareas | Microsoft Docs
 description: "Las variables integradas de secuencia de tareas proporcionan información sobre el entorno en que se ejecuta la secuencia de tareas y están disponibles durante la secuencia de tareas completa."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4b1014bc9a5c17dd571e69e7f5bfdae060a3eb55
+ms.sourcegitcommit: c9fb0fa46058c773eec6ac23999357d35d9f970f
+ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 4b1014bc9a5c17dd571e69e7f5bfdae060a3eb55
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
 
- System Center Configuration Manager proporciona las variables integradas de secuencias de tareas. Las variables integradas proporcionan información sobre el entorno donde se ejecuta la secuencia de tareas, y sus valores están disponibles en la secuencia de tareas completa. Las variables integradas se suelen inicializar antes de que se ejecuten los pasos de la secuencia de tareas. Por ejemplo, la variable integrada **_SMSTSLogPath** es una variable de entorno que especifica la ruta de acceso que los componentes de Configuration Manager usan para escribir archivos de registro mientras la secuencia de tareas se ejecuta. Cualquier paso de la secuencia de tareas puede tener acceso a esta variable de entorno. Sin embargo, algunas variables (como _SMSTSCurrentActionName) se evalúan antes de cada paso. Los valores de las variables integradas son normalmente de solo lectura. Los valores son de solo lectura en el caso de las variables integradas con un nombre que comienza por un carácter de subrayado.  
+ System Center Configuration Manager proporciona las variables integradas de secuencias de tareas. Las variables integradas proporcionan información sobre el entorno donde se ejecuta la secuencia de tareas, y sus valores están disponibles en la secuencia de tareas completa. Las variables integradas se suelen inicializar antes de que se ejecuten los pasos de la secuencia de tareas. Por ejemplo, la variable integrada **_SMSTSLogPath** es una variable de entorno que especifica la ruta de acceso que los componentes de Configuration Manager usan para escribir archivos de registro mientras la secuencia de tareas se ejecuta. Cualquier paso de la secuencia de tareas puede tener acceso a esta variable de entorno. En cambio, algunas variables (como &#95;SMSTSCurrentActionName) se evalúan antes de cada paso. Los valores de las variables integradas son normalmente de solo lectura. Los valores son de solo lectura en el caso de las variables integradas con un nombre que comienza por un carácter de subrayado.  
 
 ## <a name="task-sequence-built-in-variable-list"></a>Lista de variables integradas de tarea secuencia  
  En la siguiente lista, se describen las variables integradas que están disponibles en Configuration Manager:  
@@ -67,9 +67,11 @@ ms.openlocfilehash: 4b1014bc9a5c17dd571e69e7f5bfdae060a3eb55
 |_SMSTSUseSSL|Especifica si la secuencia de tareas usa SSL para comunicarse con el punto de administración de Configuration Manager. Si el sitio se ejecuta en modo nativo, el valor se establece en **true**.|  
 |_SMSTSWTG|Especifica si el equipo se ejecuta como un dispositivo Windows To Go.|  
 |OSDPreserveDriveLetter|A partir de la versión 1606 de Configuration Manager, esta variable de secuencia de tareas deja de usarse. Durante la implementación del sistema operativo, el programa de instalación de Windows determina, de forma predeterminada, cuál es la mejor letra de unidad (normalmente C:). <br /><br />En las versiones anteriores, la variable OSDPreverveDriveLetter determina si la secuencia de tareas usará o no la letra de unidad capturada en el archivo WIM de imagen de sistema operativo al aplicar esa imagen a un equipo de destino. Puede establecer el valor de esta variable en **False** para usar la ubicación que especifique en el ajuste **Destino** del paso de la secuencia de tareas **Aplicar el sistema operativo** . Para obtener más información, consulte [Aplicar imagen de sistema operativo](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage).|  
+|OSDSetupAdditionalUpgradeOptions|A partir de Configuration Manager versión 1602, puede usar esta variable para especificar opciones adicionales para la actualización de la instalación de Windows.
 |SMSTSAssignmentsDownloadInterval|Use esta variable para especificar el número de segundos de espera antes de que el cliente intente descargar la directiva desde el último intento (en el que no se devolvió ninguna directiva). El cliente esperará **0** segundos de forma predeterminada antes de volver a intentarlo.<br /><br /> Puede establecer esta variable mediante un comando de preinicio desde un medio o PXE.|  
 |SMSTSAssignmentsDownloadRetry|Use esta variable para especificar el número de veces que un cliente intentará descargar la directiva después de que no se encontraran directivas en el primer intento. El cliente lo volverá a intentar **0** veces de forma predeterminada.<br /><br /> Puede establecer esta variable mediante un comando de preinicio desde un medio o PXE.|  
 |SMSTSAssignUsersMode|Especifica el modo en que una secuencia de tareas asocia usuarios con el equipo de destino. La variable se establece en uno de los siguientes valores.<br /><br /> Auto: la secuencia de tareas crea una relación entre los usuarios especificados y el equipo de destino cuando se implementa el sistema operativo en el equipo de destino.<br />Pending: la secuencia de tareas crea una relación entre los usuarios especificados y el equipo de destino, pero espera la aprobación del usuario administrativo antes de establecer la relación.<br />Disabled: la secuencia de tareas no asocia usuarios al equipo de destino cuando se implementa el sistema operativo.|  
+|SMSTSDownloadAbortCode|Esta variable contiene el valor del código de anulación para el descargador de programas externos (especificado en la variable SMSTSDownloadProgram). Si el programa devuelve un código de error igual al valor de la variable SMSTSDownloadAbortCode, se produce un error en la descarga de contenido y no se intenta ningún otro método de descarga.
 |SMSTSDownloadProgram|Use esta variable para especificar un proveedor de contenido alternativo, un programa descargador que se use para descargar contenido en lugar del descargador de Configuration Manager predeterminado, para la secuencia de tareas. Como parte del proceso de descarga de contenido, la secuencia de tareas comprueba si la variable especifica algún programa de descarga. En caso afirmativo, la secuencia de tareas ejecuta el programa para realizar la descarga.|  
 |SMSTSDownloadRetryCount|Use esta variable para especificar el número de veces que Configuration Manager intenta descargar contenido desde un punto de distribución. El cliente lo volverá a intentar **2** veces de forma predeterminada.|  
 |SMSTSDownloadRetryDelay|Use esta variable para especificar el número de segundos que espera Configuration Manager antes de volver a intentar descargar contenido desde un punto de distribución. El cliente esperará **15** segundos de forma predeterminada antes de volver a intentarlo.|  
@@ -80,7 +82,7 @@ ms.openlocfilehash: 4b1014bc9a5c17dd571e69e7f5bfdae060a3eb55
 |SMSTSMPListRequestTimeout|Use esta variable para especificar la cantidad de milisegundos que espera una secuencia de tareas antes de volver a intentar instalar una aplicación después de no poder recuperar la lista de puntos de administración de los servicios de ubicación. La secuencia de tareas espera 60.000 milisegundos (60 segundos) de forma predeterminada antes de reintentar el paso, y realiza un máximo de tres reintentos. Esta variable solo es aplicable a los pasos de secuencia de tareas Instalar aplicación e Instalar actualizaciones de software.|  
 |SMSTSMPListRequestTimeoutEnabled|Use esta variable para permitir solicitudes MPList repetidas para actualizar el cliente si este no está en la intranet. <br />De forma predeterminada, esta variable se establece en True. Cuando los clientes no están en Internet, puede establecer esta variable en False para evitar retrasos innecesarios. Esta variable solo es aplicable a los pasos de secuencia de tareas de instalación de actualizaciones de aplicaciones y de software.|  
 |SMSTSPeerDownload|Use esta variable para habilitar que el cliente use el almacenamiento en caché del mismo nivel en Windows PE.<br /><br /> Ejemplo:<br /><br /> SMSTSPeerDownload  = **TRUE** habilita esta funcionalidad.|  
-|SMSTSPeerRequestPort|Utilice esta variable para que el almacenamiento en caché de Windows PE especifique un puerto de red personalizado que se utilizará para la difusión inicial cuando no se utilicen los puertos predeterminados configurados en la configuración de cliente (8003 y 8004).|  
+|SMSTSPeerRequestPort|Use esta variable para que el almacenamiento en caché del mismo nivel de Windows PE especifique un puerto de red personalizado que se usará para la difusión inicial cuando no se usen los puertos predeterminados configurados en la configuración de cliente (8004).|  
 |SMSTSPersistContent|Utilice esta variable para conservar temporalmente contenido en la memoria caché de la secuencia de tareas.|  
 |SMSTSPostAction|Especifica un comando que se ejecuta una vez completada la secuencia de tareas. Por ejemplo, puede usar esta variable para especificar un script que permite escribir filtros en los dispositivos incrustados después de la secuencia de tareas implemente un sistema operativo en el dispositivo.|  
 |SMSTSPreferredAdvertID|Fuerza la ejecución de una determinada implementación de destino en el equipo de destino. Esto se puede establecer a través de un comando de preinicio desde un medio o PXE. Si esta variable se establece, la secuencia de tareas invalida todas las implementaciones necesarias.|  
@@ -95,6 +97,6 @@ ms.openlocfilehash: 4b1014bc9a5c17dd571e69e7f5bfdae060a3eb55
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

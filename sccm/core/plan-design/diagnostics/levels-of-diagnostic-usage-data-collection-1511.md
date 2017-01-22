@@ -1,5 +1,5 @@
 ---
-title: "Datos de diagnóstico para 1511 | System Center Configuration Manager"
+title: "Datos de diagnóstico para la versión 1511 | Microsoft Docs"
 description: "Obtenga información acerca de los niveles de datos de diagnóstico y uso que se recopilan en la versión 1511 de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -34,8 +34,8 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 3488efcd6638b538f05fae52dfd8918423a32b58
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: fa3c2f9c9bdc1f095b450babd675db4a160992d9
 
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1511-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de uso para diagnóstico para la versión 1511 de System Center Configuration Manager.
@@ -48,7 +48,10 @@ La versión 1511 de System Center Configuration Manager recopila tres niveles de
 >  Configuration Manager no recopila códigos de sitio o nombres de sitios, direcciones IP, nombres de usuario o equipo, direcciones físicas o direcciones de correo electrónico en los niveles Básico o Mejorado. Cualquier recopilación de esta información en el nivel Completo no es para ninguna finalidad (potencialmente se incluye en la información avanzada de diagnóstico como archivos de registro o instantáneas de memoria) y Microsoft no la usará para identificarle, ponerse en contacto con usted ni con fines publicitarios.  
 
 ##  <a name="a-namebkmkchangea-how-to-change-the-level"></a><a name="bkmk_change"></a> Cómo cambiar el nivel  
- Los administradores con un ámbito administrativo basado en roles que incluye los permisos **Modificar** en la clase de objeto **Sitio** pueden cambiar el nivel de datos recopilados en la configuración de datos de diagnóstico y uso de la consola de Configuration Manager.  
+ Los administradores con un ámbito administrativo basado en roles que incluye los permisos **Modificar** en la clase de objeto **Sitio** pueden cambiar el nivel de datos recopilados en la configuración de datos de diagnóstico y uso de la consola de Configuration Manager.
+
+ Para ello, en la consola, vaya a la pestaña Backstage (la pestaña superior izquierda con la flecha desplegable) y seleccione **Datos de uso**. Después, seleccione el nivel de datos que quiere usar.  
+
 
 ##  <a name="a-namebkmklevel1a-level-1---basic"></a><a name="bkmk_level1"></a> Nivel 1: Básico  
  El nivel Básico incluye datos sobre la jerarquía y es necesario para ayudar a mejorar su experiencia de instalación o actualización, así como para determinar qué actualizaciones de Configuration Manager son aplicables a la jerarquía.  
@@ -278,6 +281,6 @@ A partir de System Center Configuration Manager versión 1511, este nivel incluy
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Administrar implementaciones de alto riesgo | System Center Configuration Manager
+title: Administrar implementaciones de alto riesgo | Microsoft Docs
 description: "Obtenga información sobre cómo configurar el sitio en System Center Configuration Manager para advertir a los administradores si crean una implementación de alto riesgo."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e265c2de8a1d29863d430e0e2b693c69ff4bda10
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 8b5564f39f07a67a3c9278379ed59ca415603d21
 
 
 ---
@@ -62,6 +62,6 @@ Con System Center Configuration Manager, puede configurar un sitio de modo que a
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

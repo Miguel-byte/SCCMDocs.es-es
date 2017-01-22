@@ -1,5 +1,5 @@
 ---
-title: Servidores de sistema de sitio compatibles | System Center Configuration Manager
+title: Servidores de sistema de sitio admitidos | Microsoft Docs
 description: "Obtenga información sobre qué versiones de Windows puede usar para hospedar un sitio o rol de sistema de sitio de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,12 +16,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 00d5d8d9ce90b2da79485250d25f943ca1c4547b
+ms.sourcegitcommit: d23b98b362fb016c53974f851c48fa7200d2b2e3
+ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
 
 ---
-# <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>Sistemas operativos compatibles con servidores de sistema de sitio de System Center Configuration Manager
+# <a name="supported-operating-systems-for-system-center-configuration-manager--site-system-servers"></a>Sistemas operativos compatibles con servidores de sistema de sitio de System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
@@ -36,7 +36,7 @@ Utilice la información de este tema con la información de los siguientes artí
 
 
 
-## <a name="windows-server-2016---standard-datacenter"></a>Windows Server 2016: Standard, Datacenter
+## <a name="windows-server-2016-----standard-datacenter"></a>Windows Server 2016: Standard, Datacenter
 Windows Server 2016 se admite a partir de la versión 1606 de Configuration Manager con el paquete acumulativo de revisiones de KB3186654 (o la versión de línea base de 1606 que se ha publicado en octubre de 2016).
 
 **Servidores de sitio:**  
@@ -68,6 +68,8 @@ Windows Server 2016 se admite a partir de la versión 1606 de Configuration Mana
 -   Punto de proxy de inscripción  
 
 -   Punto de estado de reserva  
+
+-   Punto de administración
 
 -   Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.  
 
@@ -114,6 +116,8 @@ Windows Server 2016 se admite a partir de la versión 1606 de Configuration Mana
 
 -   Punto de estado de reserva  
 
+-   Punto de administración
+
 -   Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.  
 
 -   Punto de conexión de servicio  
@@ -159,6 +163,8 @@ Windows Server 2016 se admite a partir de la versión 1606 de Configuration Mana
 
 -   Punto de estado de reserva  
 
+-   Punto de administración
+
 -   Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.  
 
 -   Punto de conexión de servicio  
@@ -173,8 +179,8 @@ Windows Server 2016 se admite a partir de la versión 1606 de Configuration Mana
 
 -   Punto de migración de estado  
 
-## <a name="windows-server-2008-r2-with-sp1-x64---standard-enterprise-datacenter"></a>Windows Server 2008 R2 con SP1 (x64): Standard, Enterprise, Datacenter  
- Windows Server 2008 R2 goza ahora de soporte extendido, y ya no está dentro del soporte estándar, tal y como se detalla en el  [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle). Para obtener más información sobre la compatibilidad futura de estos sistemas operativos como servidores de sistema de sitio con Configuration Manager, consulte [Características eliminadas y en desuso de System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
+## <a name="windows-server-2008-r2-with-sp1-x64-----standard-enterprise-datacenter"></a>Windows Server 2008 R2 con SP1 (x64): Standard, Enterprise, Datacenter  
+ Windows Server 2008 R2 goza ahora de soporte extendido y ya no está dentro del soporte estándar, tal y como se detalla en el [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle). Para obtener más información sobre la compatibilidad futura de estos sistemas operativos como servidores de sistema de sitio con Configuration Manager, consulte [Características eliminadas y en desuso de System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
 **Servidores de sitio:**  
 
@@ -206,6 +212,8 @@ Windows Server 2016 se admite a partir de la versión 1606 de Configuration Mana
 
 -   Punto de estado de reserva  
 
+-   Punto de administración
+
 -   Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.  
 
 -   Punto de conexión de servicio  
@@ -221,7 +229,7 @@ Windows Server 2016 se admite a partir de la versión 1606 de Configuration Mana
 -   Punto de migración de estado  
 
 ## <a name="windows-server-2008-with-sp2-x86-x64---standard-enterprise-datacenter"></a>Windows Server 2008 con SP2 (x86, x64): Standard, Enterprise, Datacenter  
- Windows Server 2008 goza ahora de soporte extendido, y ya no está dentro del soporte estándar, tal y como se detalla en el  [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle). Para obtener más información sobre la compatibilidad futura de estos sistemas operativos como servidores de sistema de sitio con Configuration Manager, consulte [Características eliminadas y en desuso de System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
+ Windows Server 2008 goza ahora de soporte extendido y ya no está dentro del soporte estándar, tal y como se detalla en el [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle). Para obtener más información sobre la compatibilidad futura de estos sistemas operativos como servidores de sistema de sitio con Configuration Manager, consulte [Características eliminadas y en desuso de System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
 **Servidores de sitio:**  
 
@@ -256,6 +264,8 @@ Windows Server 2016 se admite a partir de la versión 1606 de Configuration Mana
 -   Punto de proxy de inscripción  
 
 -   Punto de estado de reserva  
+
+-   Punto de administración
 
 -   Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.  
 
@@ -331,6 +341,6 @@ Windows Server 2016 se admite a partir de la versión 1606 de Configuration Mana
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

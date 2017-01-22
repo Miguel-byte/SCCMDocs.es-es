@@ -1,5 +1,5 @@
 ---
-title: Tareas comunes para administrar el cumplimiento en dispositivos con el cliente de System Center Configuration Manager | System Center Configuration Manager
+title: Tareas comunes para administrar el cumplimiento en dispositivos con el cliente de System Center Configuration Manager | Microsoft Docs
 description: "Obtenga información sobre la configuración de cumplimiento de System Center Configuration Manager al repasar algunos escenarios comunes."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 9be045df8433463d01d6cfca9271f230b5bf991d
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: feadb8b5b75832e914dfe62bd2d486e5bac1458d
 
 
 ---
@@ -113,6 +113,6 @@ Los escenarios de este tema ofrecen una introducción al uso de la configuració
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

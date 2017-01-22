@@ -1,8 +1,8 @@
 ---
-title: "Administración de clientes | System Center Configuration Manager"
+title: Administrar clientes | Microsoft Docs
 description: Aprenda a administrar clientes en System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 caps.latest.revision: 17
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 67a814330123a1615a0663872bf4af64e5b81a84
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: dfdb5a95b672d3858d094750625cb5f6ef50700d
 
 
 ---
@@ -140,7 +140,7 @@ Cuando un cliente de System Center Configuration Manager se instala y se asigna 
 
          Cuando se envía una solicitud de borrado, suele producirse un retraso hasta que el dispositivo móvil recibe el comando de borrado:  
 
-        -   Si el dispositivo móvil está inscrito por Configuration Manager o Windows Intune, el cliente recibe el comando de borrado cuando descarga a continuación su directiva de cliente.  
+        -   Si el dispositivo móvil está inscrito por Configuration Manager o Windows Intune, el cliente recibe el comando de borrado cuando descarga a continuación su directiva de cliente.  
 
         -   Si el dispositivo móvil está administrado por el conector de Exchange Server, el dispositivo móvil recibe el comando de borrado cuando se sincroniza después con Exchange.  
 
@@ -160,7 +160,7 @@ Cuando un cliente de System Center Configuration Manager se instala y se asigna 
 
         Para ver el valor de propiedad en la lista de dispositivos, puede que necesite agregar la columna a la vista haciendo clic en cualquier encabezado de columna y elegir **Propietario del dispositivo**.
 
-         Para obtener más información, consulte [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/plan-design/hybrid-mobile-device-management.md) (Administración híbrida de dispositivos móviles [MDM] con System Center Configuration Manager y Microsoft Intune)  
+         Para obtener más información, consulte [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md) (Administración híbrida de dispositivos móviles [MDM] con System Center Configuration Manager y Microsoft Intune)  
 
 ##  <a name="a-namebkmkmanagingclientsdevicecollectionsnodea-manage-clients-from-the-device-collections-node"></a><a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Administrar clientes desde el nodo Recopilaciones de dispositivos  
  Use el siguiente procedimiento y la tabla para administrar dispositivos en una recopilación desde el nodo **Recopilaciones de dispositivos** en el área de trabajo **Activos y compatibilidad** .  
@@ -239,7 +239,7 @@ Ejecute el comando CCMSetup.exe desde la ubicación de origen de instalación y 
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > Para la versión 1606, use la configuración de tamaño de caché disponible en **Configuración de cliente** en la consola de Configuration Manager en lugar de SMSCACHESIZE. Para obtener más información consulte [Client Cache Settings](../../../core/clients/deploy/about-client-settings.md#Client-Cache-Settings) (Configuración de caché de cliente).
+        > Para la versión 1606, use la configuración de tamaño de caché disponible en **Configuración de cliente** en la consola de Configuration Manager en lugar de SMSCACHESIZE. Para obtener más información consulte [Client Cache Settings](../../../core/clients/deploy/about-client-settings.md#client-cache-settings) (Configuración de caché de cliente).
 
 Para obtener más información sobre cómo utilizar estas propiedades de línea de comandos para CCMSetup.exe, consulte [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md) (Acerca de las propiedades de instalación de clientes en System Center Configuration Manager).  
 
@@ -264,7 +264,7 @@ Para obtener más información sobre cómo utilizar estas propiedades de línea 
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > Para la versión 1606, use la configuración de tamaño de caché disponible en **Configuración de cliente** en la consola de Configuration Manager en lugar de SMSCACHESIZE. Para obtener más información consulte [Client Cache Settings](../../../core/clients/deploy/about-client-settings.md#Client-Cache-Settings) (Configuración de caché de cliente).
+        > Para la versión 1606, use la configuración de tamaño de caché disponible en **Configuración de cliente** en la consola de Configuration Manager en lugar de SMSCACHESIZE. Para obtener más información consulte [Client Cache Settings](../../../core/clients/deploy/about-client-settings.md#client-cache-settings) (Configuración de caché de cliente).
 
        Para obtener más información sobre cómo utilizar estas propiedades de línea de comandos para CCMSetup.exe, consulte [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md) (Acerca de las propiedades de instalación de clientes en System Center Configuration Manager).  
 
@@ -323,6 +323,7 @@ A partir de la versión 1606, puede ajustar el tamaño de la carpeta de caché d
 
  Si Configuration Manager puede resolver un conflicto mediante la autenticación de Windows de la cuenta del equipo, o un certificado PKI de un origen de confianza, el conflicto se resolverá automáticamente. Sin embargo, si Configuration Manager no puede resolver el conflicto, utilizará una configuración de jerarquía que, bien combina automáticamente los registros cuando detecta identificadores de hardware duplicados (configuración predeterminada), o bien permite al usuario decidir cuando combinar, bloquear o crear registros de cliente nuevos. Si decide administrar los registros duplicados manualmente, tendrá que resolver, también manualmente, los registros en conflicto mediante la consola de Configuration Manager.  
 
+
 #### <a name="to-change-the-hierarchy-setting-for-managing-conflicting-records"></a>Para cambiar la configuración de la jerarquía a fin de administrar los registros en conflicto  
 
 1.  En la consola de Configuration Manager, haga clic en **Administración**.  
@@ -351,6 +352,18 @@ A partir de la versión 1606, puede ajustar el tamaño de la carpeta de caché d
     -   **Nuevo** para crear un nuevo registro de cliente en conflicto.  
 
     -   **Bloquear** para crear un nuevo registro de cliente en conflicto, pero se marca como bloqueado.  
+
+## <a name="manage-duplicate-hardware-identifiers"></a>Administrar identificadores de hardware duplicados
+A partir de la versión 1610 de Configuration Manager, puede proporcionar una lista de identificadores de hardware que Configuration Manager omitirá en el registro de clientes y el arranque PXE. Esto ayuda a resolver dos problemas comunes.
+
+1. Muchos dispositivos nuevos, como Surface Pro 3, no incluyen un puerto Ethernet integrado. Generalmente se usa un adaptador de USB a Ethernet a fin de establecer una conexión con cable para la implementación del sistema operativo, pero suele tratarse de adaptadores compartidos debido a su costo y su facilidad de uso general. Dado que la dirección MAC de este adaptador se usa para identificar el dispositivo, resulta problemático reutilizar el adaptador sin no se llevan a cabo acciones de administrador adicionales entre cada implementación. Ahora, en la versión 1610 de Rama actual de Configuration Manager, puede excluir la dirección MAC de este adaptador para que se puede reutilizar fácilmente en este escenario.
+2. A pesar de que se supone que el identificador de SMBIOS es un identificador de hardware único, algunos dispositivos de hardware especiales se crean con identificadores duplicados. Aunque esto no es tan común como el anterior escenario de adaptador de USB a Ethernet, también se puede usar la lista de identificadores de hardware para solucionar este problema.
+
+#### <a name="to-add-hardware-identifiers-for-configuration-manager-to-ignore"></a>Para agregar identificadores de hardware a fin de que Configuration Manager los omita  
+1. En la consola de Configuration Manager, vaya a **Administración** > **Información general** > **Configuración del sitio** > **Sitios**.
+2. En la pestaña **Inicio** , en el grupo **Sitios** , haga clic en **Configuración de jerarquía**.
+3. Vaya a la pestaña **Aprobación de cliente y registros conflictivos**.
+4. Haga clic en **Agregar** en la sección **Identificadores de hardware duplicados** para agregar nuevos identificadores de hardware.
 
 ##  <a name="a-namebkmkpolicyretrievala-initiate-policy-retrieval-for-a-configuration-manager-client"></a><a name="BKMK_PolicyRetrieval"></a> Iniciar la recuperación de directivas para un cliente de Configuration Manager  
  Un cliente de Configuration Manager en Windows descarga su directiva de cliente en una programación que se configura como una configuración de cliente. Sin embargo, pueden darse casos en que desee iniciar la recuperación de directiva ad-hoc desde el cliente como, por ejemplo, en un escenario de solución de problemas o al realizar pruebas.  
@@ -440,6 +453,6 @@ A partir de la versión 1606, puede ajustar el tamaño de la carpeta de caché d
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

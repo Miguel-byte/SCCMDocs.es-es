@@ -1,5 +1,5 @@
 ---
-title: "Uso de datos de diagnóstico | System Center Configuration Manager"
+title: "Uso de datos de diagnóstico | Microsoft Docs"
 description: "Obtenga información sobre cómo Microsoft usa los datos de uso y diagnóstico que System Center Configuration Manager recopila."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 68e2a6b5baeaf9ab9e74e771bbc3d755d1388779
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: aa0ee7544e348025a80d32b4a816de6dbec31d7f
 
 
 ---
@@ -56,6 +56,6 @@ Microsoft utiliza los datos disponibles para mejorar el producto. Estos son algu
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

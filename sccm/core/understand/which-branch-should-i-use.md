@@ -1,5 +1,5 @@
 ---
-title: "Selección de rama | System Center Configuration Manager"
+title: "Qué rama debo usar | Microsoft Docs"
 description: "Obtenga información acerca de las diferencias entre las ramas disponibles de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/12/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bbaaf9ed876f7693ea831be7c787dba904197a62
-ms.openlocfilehash: 3957e854e980246c410f7de27caed9d66fc4829f
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 153caaead350479441d1a94ccaed1b9f3f6c5ffe
 
 
 ---
@@ -74,7 +74,12 @@ La LTSB no recibe las actualizaciones en la consola que ofrecen nuevas caracter�
 Para instalar la LTSB como un sitio nuevo o como una actualización desde un sitio de Configuration Manager 2012 admitido, utilice los [medios de línea base](/sccm/core/servers/manage/updates#baseline-and-update-versions) de la versión 1606 que recibe en formato DVD con System Center 2016 o la versión de System Center Configuration Manager (Rama actual y Rama de mantenimiento a largo plazo 1606). Puede utilizar los medios de línea base para instalar un nuevo sitio que ejecuta la versión 1606 de la Rama actual o un nuevo sitio que ejecuta la Rama de mantenimiento a largo plazo.
 
 > [!TIP]  
-> Para obtener información acerca de System Center 2016, consulte la [documentación de System Center 2016](https://technet.microsoft.com/system-center-docs/System-Center-2016). Esta documentación también especifica el proceso de obtención de System Center 2016, que requiere un contrato de licencia de Microsoft o derechos similares.  También puede obtener una evaluación de System Center 2016 en el sitio [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview).
+> Para obtener información acerca de System Center 2016, consulte la [documentación de System Center 2016](https://technet.microsoft.com/system-center-docs/system-center). Esta documentación también especifica el proceso de obtención de System Center 2016, que requiere un contrato de licencia de Microsoft o derechos similares.
+
+> Para buscar la versión 1606 de System Center Configuration Manager en el Centro de servicios de licencias por volumen (VLSC), vaya a la pestaña **Downloads and Keys (Descargas y claves)** del VLSC ((https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), busque en *system center config* y, después, seleccione **System Center Config Mgr (rama actual y LTSB 1606)**.
+
+>
+ También puede obtener una evaluación de System Center 2016 en el sitio [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview).
 
 **Características de la LTSB:**
 -   Recibe actualizaciones en la consola que ofrecen las revisiones de seguridad importantes.
@@ -137,6 +142,6 @@ Para más información, consulte [Technical Preview for System Center Configurat
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

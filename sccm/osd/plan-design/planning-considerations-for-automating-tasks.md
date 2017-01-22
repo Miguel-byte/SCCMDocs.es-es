@@ -1,5 +1,5 @@
 ---
-title: "Planeamiento de consideraciones para la automatización de tareas | Configuration Manager"
+title: "Planeación de consideraciones para la automatización de tareas | Microsoft Docs"
 description: Planee antes de automatizar tareas en System Center Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a439d847adb129a341b33be8e1a1674c72184e77
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 830f715b688cc9929a179da94eba9c81de8db11a
 
 
 ---
@@ -183,7 +183,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 > [!TIP]  
 >  La secuencia de tareas escribe el identificador de paquete y el comando de preinicio, incluidos los valores de las variables de secuencia de tareas, en el archivo de registro CreateTSMedia.log en el equipo que ejecuta la consola de Configuration Manager. Puede revisar este archivo de registro para comprobar el valor de las variables de secuencia de tareas.  
 
-##  <a name="a-namebkmktscreatea-create-a-task-sequence"></a><a name="BKMK_TSCreate"></a> Creación de una secuencia de tareas  
+##  <a name="a-namebkmktscreatea-create-a--task-sequence"></a><a name="BKMK_TSCreate"></a> Creación de una secuencia de tareas  
  Las secuencias de tareas se crean mediante el Asistente para crear secuencia de tareas. El asistente puede crear secuencias de tareas integradas que realizan tareas específicas o secuencias de tareas personalizadas que pueden realizar muchas tareas diferentes.  
 
  Por ejemplo, es posible crear secuencias de tareas que permiten generar y capturar una imagen del sistema operativo de un equipo de referencia, instalar la imagen de un sistema operativo existente en un equipo de destino o crear una secuencia de tareas personalizada que realiza una tarea personalizada. Las secuencias de tareas personalizadas se pueden usar para realizar implementaciones de sistema operativo especializadas.  
@@ -288,7 +288,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
     > [!NOTE]  
     >  La cuenta de acceso de red nunca se utiliza como contexto de seguridad para ejecutar programas, instalar aplicaciones, instalar actualizaciones o ejecutar secuencias de tareas. Sin embargo, la cuenta de acceso de red se emplea para el acceso a los recursos asociados en la red.  
 
--   Si usa una imagen de arranque para iniciar una implementación de sistema operativo, Configuration Manager usa el entorno de Windows PE, que no es un sistema operativo completo. El entorno de Windows PE utiliza un nombre aleatorio, generado automáticamente, que no pertenece a ningún dominio. Si no configura la cuenta de acceso de red correctamente, el equipo podría no tener los permisos necesarios para acceder a los paquetes de Configuration Manager para completar la secuencia de tareas.  
+-   Si usa una imagen de arranque para iniciar una implementación de sistema operativo, Configuration Manager usa el entorno de Windows PE, que no es un sistema operativo completo. El entorno de Windows PE utiliza un nombre aleatorio, generado automáticamente, que no pertenece a ningún dominio. Si no configura la cuenta de acceso de red correctamente, el equipo podría no tener los permisos necesarios para acceder a los paquetes de Configuration Manager para completar la secuencia de tareas.  
 
 ##  <a name="a-namebkmktscreatemediaa-create-media-for-task-sequences"></a><a name="BKMK_TSCreateMedia"></a> Creación de medios para secuencias de tareas  
  Puede escribir secuencias de tareas y sus archivos y dependencias relacionados para diferentes tipos de medios. Esto incluye escribir en medios extraíbles como un conjunto de DVD o CD, o usar una unidad flash USB para medios de arranque, independientes o de captura, o escribir en un archivo Windows Imaging Format (WIM) para medios preconfigurados.  
@@ -301,7 +301,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 
 -   **Medio independiente**. Los medios independientes contienen la secuencia de tareas y todos los objetos asociados necesarios para ejecutar la secuencia de tareas. Las secuencias de tareas de medios independientes pueden ejecutarse cuando Configuration Manager tiene conectividad limitada a la red, o cuando no tiene conectividad. Los medios independientes pueden ejecutarse de las siguientes maneras:  
 
-    -   Si el equipo de destino no ha arrancado, se usa la imagen de Windows PE asociada a la secuencia de tareas desde el medio independiente, y se inicia la secuencia de tareas.  
+    -   Si el equipo de destino no ha arrancado, se usa la imagen de Windows PE asociada a la secuencia de tareas desde el medio independiente, y se inicia la secuencia de tareas.  
 
     -   Los medios independientes pueden iniciarse manualmente si un usuario está conectado a la red e inicia la instalación.  
 
@@ -326,6 +326,6 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

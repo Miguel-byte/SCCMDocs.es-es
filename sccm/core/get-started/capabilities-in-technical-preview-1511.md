@@ -1,5 +1,5 @@
 ---
-title: Capacidades de Technical Preview 1511 para System Center Configuration Manager
+title: Capacidades de Technical Preview 1511 para System Center Configuration Manager | Microsoft Docs
 description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1511."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4616ba44485e4c528297441f1cf99e25add2dcf3
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 8ef43a2f10a7ef1cbb101f6737c606c72ccdce4f
 
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1511 para System Center Configuration Manager
@@ -147,7 +147,7 @@ Para instalar un sitio que usa un grupo de disponibilidad de SQL Server:
 
 3.  Después de proporcionar esta información, complete la instalación con el proceso y las configuraciones normales.  
 
-##  <a name="a-namebkmkclusterserverupdatesa-service-a-server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a> Servicio de un clúster de servidores  
+##  <a name="a-namebkmkclusterserverupdatesa-service-a--server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a> Servicio de un clúster de servidores  
 Ahora puede crear una recopilación que contenga los servidores de un clúster y, a continuación, configurar las opciones del clúster que se usarán al implementar actualizaciones en el clúster. Puede controlar el porcentaje de los servidores que están en línea en cualquier momento, así como configurar scripts de PowerShell anteriores y posteriores a la implementación para ejecutar acciones personalizadas.  
 
 **Problemas conocidos de esta versión:**  
@@ -208,6 +208,6 @@ Intente realizar la siguiente tarea y después use la información de comentario
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

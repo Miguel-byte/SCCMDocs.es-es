@@ -1,5 +1,5 @@
 ---
-title: Crear informes personalizados | System Center Configuration Manager
+title: Crear informes personalizados | Microsoft Docs
 description: "Defina modelos de informe para satisfacer sus requisitos empresariales y, después, impleméntelos en Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4b286fbca3c71b14e0b82ff421132408df7c6e8b
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
 
 
 ---
@@ -425,6 +425,6 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

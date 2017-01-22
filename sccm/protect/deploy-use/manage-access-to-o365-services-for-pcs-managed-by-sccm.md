@@ -1,8 +1,8 @@
 ---
-title: "Administración del acceso a servicios de O365 para equipos administrados | System Center Configuration Manager"
+title: Administrar el acceso a servicios de O365 para equipos administrados | Microsoft Docs
 description: Aprenda a configurar el acceso condicional para equipos administrados por System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ccdb424a-b603-4ccc-af36-558924248022
 caps.latest.revision: 15
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
+ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
+ms.openlocfilehash: da5fcd65d7af8d73aa23f4a7d96cd8fc6e48f9dc
 
 
 ---
@@ -30,9 +30,9 @@ ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
  A partir de la versión 1602 de Configuration Manager, puede configurar el acceso condicional para equipos administrados por System Center Configuration Manager.  
 
 > [!IMPORTANT]  
->  Se trata de una característica en versión preliminar de las actualizaciones 1602 y 1606. Se incluyen características de versión preliminar en el producto para la realización de las primeras pruebas en un entorno de producción, pero no se debe considerar que ya estén listas para él. Para más información, consulte [Use pre-release features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease) (Uso de características de la versión preliminar a partir de las actualizaciones).
+>  Se trata de una característica de versión preliminar disponible en las actualizaciones 1602, 1606 y 1610. Se incluyen características de versión preliminar en el producto para la realización de las primeras pruebas en un entorno de producción, pero no se debe considerar que ya estén listas para él. Para más información, consulte [Use pre-release features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease) (Uso de características de la versión preliminar a partir de las actualizaciones).
 > - Después de instalar la actualización 1602, el tipo de característica aparece como publicado, aunque se trate de una versión preliminar.
-> - Si actualiza de la versión 1602 a la 1606, el tipo de característica se muestra como publicado aunque se mantenga en versión preliminar.
+> - Si actualiza de la versión 1602 a la 1606, el tipo de característica se muestra como liberado aunque se conserve la versión preliminar.
 > - Si actualiza de la versión 1511 directamente a la versión 1606, el tipo de característica se muestra como versión preliminar.
 
  Si desea obtener información sobre cómo configurar el acceso condicional para dispositivos inscritos y administrados por Intune o equipos que están unidos a un dominio y cuya compatibilidad no se evalúa, consulte [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md) (Administración del acceso a servicios en System Center Configuration Manager).  
@@ -84,7 +84,7 @@ ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
 
 -   **Requerir cifrado de unidad BitLocker**: se trata de una comprobación para ver si la unidad principal (por ejemplo, C:\\\) del dispositivo está cifrada con BitLocker. Si el cifrado BitLocker no está habilitado en el dispositivo primario, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
 
--   **Requerir antimalware**: se trata de una comprobación para ver si el software antimalware (System Center Endpoint Protection o Windows Defender solamente) está habilitado y en ejecución. Si no está habilitado, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
+-   **Requerir antimalware:** se trata de una comprobación para ver si el software antimalware (System Center Endpoint Protection o Windows Defender solamente) está habilitado y en ejecución. Si no está habilitado, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
 
 ### <a name="step-2-evaluate-the-effect-of-conditional-access"></a>Paso 2. Evaluar el impacto del acceso condicional  
  Ejecute el informe de compatibilidad de acceso condicional. Se puede encontrar en la sección Supervisión, en Informes > Administración de compatibilidad y configuración. Esto muestra el estado de cumplimiento para todos los dispositivos.  Se bloqueará el acceso de los dispositivos registrados como no compatibles a Exchange Online y SharePoint Online.  
@@ -96,16 +96,16 @@ ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
 
  Grupos de usuarios de seguridad de Active Directory Estos grupos de usuarios se deben sincronizar con Azure Active Directory. Estos grupos se pueden configurar también en el Centro de administración de Office 365 o en el Portal de cuentas de Intune.  
 
- Se pueden especificar dos tipos de grupo en cada directiva:  
+ Se pueden especificar dos tipos de grupo en cada directiva. :  
 
--   **Grupos destinatarios**: grupos de usuarios a los que se aplica la directiva  
+-   **Grupos destinatarios**: grupos de usuarios a los que se aplica la directiva. Debe usarse el mismo grupo para la directiva de cumplimiento y de acceso condicional.  
 
 -   **Grupos exentos**: grupos de usuarios que están exentos de la directiva (opcional)  
     Si un usuario pertenece a ambos, estará exento de la directiva.  
 
      Solo se evalúan los grupos que son destinatarios de la directiva de acceso condicional.  
 
-### <a name="step-3-create-a-conditional-access-policy-for-exchange-online-and-sharepoint-online"></a>Paso 3.  Crear una directiva de acceso condicional para Exchange Online y SharePoint Online  
+### <a name="step-3--create-a-conditional-access-policy-for-exchange-online-and-sharepoint-online"></a>Paso 3.  Crear una directiva de acceso condicional para Exchange Online y SharePoint Online  
 
 1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
 
@@ -126,7 +126,7 @@ ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
 6.  En **Grupos de destino**, haga clic en **Modificar** para seleccionar los grupos de seguridad de Azure Active Directory a los que se aplicará la directiva.  
 
     > [!NOTE]  
-    >  A los grupos de usuarios a los que se aplican las directivas de acceso condicional también se les debe aplicar la directiva de cumplimiento.  
+    >  Debe usarse el mismo grupo de usuarios de seguridad para implementar la directiva de cumplimiento y el grupo de destino de la directiva de acceso condicional.  
 
      En **Grupos exentos**, opcionalmente, haga clic en **Modificar** para seleccionar los grupos de seguridad de Azure Active Directory que se van a excluir de la directiva.  
 
@@ -148,6 +148,6 @@ ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

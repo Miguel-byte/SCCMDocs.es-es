@@ -1,5 +1,5 @@
 ---
-title: Preparar implementaciones en equipos desconocidos | Configuration Manager
+title: "Preparación para implementaciones en equipos desconocidos | Microsoft Docs"
 description: "Obtenga información sobre cómo implementar sistemas operativos en equipos que no están administrados por Configuration Manager en el entorno de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1228dc7ebee2f17da9a7ade5641ef73e1891bba9
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 445e76950f0605da917f3d0e7e71557d969e3c2d
 
 
 ---
@@ -87,6 +87,6 @@ Emplee la información de este tema para implementar sistemas operativos en equi
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

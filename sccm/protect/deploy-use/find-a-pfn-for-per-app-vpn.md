@@ -1,5 +1,5 @@
 ---
-title: "Buscar un nombre de familia de paquete (PFN) para VPN por aplicación | System Center Configuration Manager"
+title: "Buscar un nombre de familia de paquete (PFN) para VPN por aplicación | Microsoft Docs"
 description: "Obtenga información sobre las dos maneras de buscar un nombre de familia de paquete para poder configurar una VPN por aplicación."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: bad09d52a962ea5dccf55e4e2e485a17d934055a
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: ce50645155ecb14a82d8b982aa69c0f87dd15fbf
 
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn"></a>Buscar un nombre de familia de paquete (PFN) para VPN por aplicación
@@ -89,6 +89,6 @@ En Edge, se muestra la información que le interesa. En Internet Explorer, debe 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

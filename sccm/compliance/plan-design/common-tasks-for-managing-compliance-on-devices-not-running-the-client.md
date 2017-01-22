@@ -1,5 +1,5 @@
 ---
-title: Tareas comunes para administrar el cumplimiento en dispositivos sin el cliente de System Center Configuration Manager | System Center Configuration Manager
+title: Tareas comunes para administrar el cumplimiento en dispositivos que no ejecutan el cliente de System Center Configuration Manager | Microsoft Docs
 description: "Obtenga información sobre la configuración de cumplimiento de System Center Configuration Manager al repasar algunos escenarios comunes."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f69250fbe51ea8902a0446a613d66be390ea7434
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: e24ef149e2a2648c9a7acaedfaa8f0b5bb173ab3
 
 
 ---
@@ -101,7 +101,7 @@ Estos escenarios ofrecen una introducción al uso de la configuración de cumpli
 
  Ahora puede usar la información del tema [Tareas comunes para crear e implementar líneas de base de configuración con System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) como ayuda para implementar la configuración que ha creado en los dispositivos.  
 
-## <a name="scenarios-for-android-and-samsung-knox-devices-managed-without-the-configuration-manager-client"></a>Escenarios para dispositivos Android y Samsung KNOX administrados sin el cliente de Configuration Manager  
+## <a name="scenarios-for-android-and-samsung-knox-standard-devices-managed-without-the-configuration-manager-client"></a>Escenarios para dispositivos Android y Samsung KNOX Standard administrados sin el cliente de Configuration Manager  
 
 ### <a name="scenario-require-a-password-on-all-android-5-devices"></a>Escenario: requerir una contraseña en todos los dispositivos Android 5  
  En este escenario, creará un elemento de configuración para dispositivos Android 5 que solo requerirá a los usuarios que configuren una contraseña de seis caracteres como mínimo en sus dispositivos. Además, si un usuario escribe una contraseña incorrecta cinco veces, se borra el dispositivo.  
@@ -126,7 +126,6 @@ Estos escenarios ofrecen una introducción al uso de la configuración de cumpli
 
 
 
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

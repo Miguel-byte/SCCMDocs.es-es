@@ -1,5 +1,5 @@
 ---
-title: Instalar consolas | System Center Configuration Manager
+title: Instalar consolas | Microsoft Docs
 description: "Obtenga información sobre la instalación de las consolas de Configuration Manager para conectarse a un sitio de administración central o a un sitio primario."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1483e35a397667a340605c0454c1835ec6067d9e
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: e3bc8341b384be975098d1b9d7824ef117a47ccb
 
 ---
 # <a name="install-system-center-configuration-manager-consoles"></a>Instalar las consolas de System Center Configuration Manager
@@ -99,6 +99,6 @@ Los usuarios administrativos usan la consola de System Center Configuration Mana
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

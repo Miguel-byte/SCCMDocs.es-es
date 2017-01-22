@@ -1,5 +1,5 @@
 ---
-title: Crear una secuencia de tareas para capturar y restaurar el estado de usuario | Configuration Manager
+title: Crear una secuencia de tareas para capturar y restaurar el estado de usuario | Microsoft Docs
 description: "Use secuencias de tareas de System Center Configuration Manager para capturar y restaurar los datos de estado de usuario en escenarios de implementación de sistema operativo."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4b3a3bf206dc273eabf88c680ca00688b6183115
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: fdfbdd1acb1190ca7de9cff2b4b7f916d8dc1272
 
 
 ---
@@ -172,6 +172,6 @@ Puede usar secuencias de tareas de System Center Configuration Manager para capt
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

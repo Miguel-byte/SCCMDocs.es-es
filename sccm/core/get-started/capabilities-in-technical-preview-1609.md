@@ -1,5 +1,5 @@
 ---
-title: Capacidades de Technical Preview 1609 para System Center Configuration Manager
+title: Capacidades de Technical Preview 1609 para System Center Configuration Manager | Microsoft Docs
 description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1609."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: cc9c04409a6eb040ac49ca6eeeab5f65c4517d17
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 4ab022eda3367c79dbe698b6dab7017cb25b5e3a
 
 ---
 # <a name="capabilities-in-technical-preview-1609-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1609 para System Center Configuration Manager
@@ -177,7 +177,7 @@ Si necesita ayuda con cualquiera de estas opciones, abra [Administrar la configu
 - **Permitir a Cortana**
 - **Permitir notificaciones del centro de actividades**
 
-### <a name="new-settings-for-windows-10-team-devices"></a>Nuevas opciones para dispositivos Windows 10 Team
+### <a name="new-settings-for-windows-10-team-devices"></a>Nuevas opciones para dispositivos Windows 10 Team
 
 #### <a name="device-settings"></a>Configuración del dispositivo
 
@@ -187,7 +187,7 @@ Si necesita ayuda con cualquiera de estas opciones, abra [Administrar la configu
 - **URL de imagen de fondo de pantalla de bloqueo**
 
 
-### <a name="new-settings-for-windows-81-devices"></a>Nuevas opciones para dispositivos Windows 8.1
+### <a name="new-settings-for-windows-81-devices"></a>Nuevas opciones para dispositivos Windows 8.1
 
 #### <a name="applicability-settings"></a>Configuración de la aplicación
 
@@ -458,6 +458,6 @@ Complete las secciones siguientes en orden:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

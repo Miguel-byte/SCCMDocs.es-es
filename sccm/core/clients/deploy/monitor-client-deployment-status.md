@@ -1,5 +1,5 @@
 ---
-title: "Supervisión del estado de implementación de cliente | System Center Configuration Manager"
+title: "Supervisar el estado de implementación de cliente | Microsoft Docs"
 description: "Supervise el estado de implementación de cliente en System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: 20a573b3-53cb-4ed5-bae1-7542f533ed20
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 495c95b6add90619881291a551f394511d9eb36d
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 3bc82535955d937e5620ef2963ccc29bfd0124e3
 
 
 ---
@@ -33,9 +33,7 @@ La implementación de clientes en el sitio lleva tiempo y algunas instalaciones 
 
  En el área de trabajo **Supervisión** de la consola, puede supervisar los siguientes estados para las implementaciones de cliente que tienen lugar dentro de una recopilación especificada:  
 
--   No iniciado   
-
--   Conforme  
+-   conforme  
 
 -   En curso  
 
@@ -60,7 +58,7 @@ La implementación de clientes en el sitio lleva tiempo y algunas instalaciones 
  Para obtener más información sobre las implementaciones de cliente de preproducción, consulte [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md) (Prueba de las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager).
 
  > [!NOTE]
- > El estado de implementación en equipos que hospedan los roles de sistema de sitio en una recopilación de preproducción puede aparecer registrado como **No iniciado** incluso cuando el cliente se ha implementado correctamente. Cuando se promueve el cliente a la producción, el estado de implementación se registrará correctamente.   
+ > El estado de implementación en equipos que hospedan los roles de sistema de sitio en una recopilación de preproducción puede aparecer registrado como **No compatible** incluso cuando el cliente se ha implementado correctamente. Cuando se promueve el cliente a la producción, el estado de implementación se registrará correctamente.   
 
  Para supervisar el estado de los clientes implementados, consulte [Supervisar clientes en System Center Configuration Manager](../../../core/clients/manage/monitor-clients.md).  
 
@@ -68,6 +66,6 @@ La implementación de clientes en el sitio lleva tiempo y algunas instalaciones 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

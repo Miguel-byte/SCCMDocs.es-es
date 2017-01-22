@@ -1,6 +1,6 @@
 ---
 
-title: Procedimientos recomendados para actualizaciones de software | Configuration Manager
+title: Procedimientos recomendados para las actualizaciones de software | Microsoft Docs
 description: Use estos procedimientos recomendados para las actualizaciones de software en System Center Configuration Manager.
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 3ccf88231edc22af329bf88ab8c053523646c50d
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: ea365491dd334980693375fbb7730653af9cd8e4
 
 
 
@@ -60,6 +60,6 @@ En este tema, se incluyen procedimientos recomendados para las actualizaciones d
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

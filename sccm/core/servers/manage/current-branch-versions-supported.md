@@ -1,5 +1,5 @@
 ---
-title: Versiones de la rama actual | System Center Configuration Manager
+title: Versiones de rama actual | Microsoft Docs
 description: "Revise el historial de versiones de System Center Configuration Manager y obtenga información sobre las fases del servicio ofrecido."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 2308e1f8bde4a93329dfe6ce96d781fcac1b495a
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: fecbdfa9ad99ca36f419cdda19a14b58f9f2b316
 
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>Compatibilidad con versiones de la rama actual de System Center Configuration Manager
@@ -44,9 +44,12 @@ Ilustración 1. Ejemplo de soporte técnico de servicio de la rama actual.
 |1511|12/8/2015|8/12/2016|  
 |1602|3/11/2016|11/3/2017|
 |1606|22/7/2016|22/7/2017|
+|1610|18/11/2016|18/11/2017|
+
+Para obtener información sobre los números de versión y la disponibilidad como una actualización en la consola o una línea base, consulte [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions).
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

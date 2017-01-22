@@ -1,6 +1,6 @@
 ---
 
-title: "Integración con Windows Update for Business en Windows 10 | Configuration Manager"
+title: "Integración con Windows Update for Business en Windows 10 | Microsoft Docs"
 description: "Use Windows Update for Business para mantener actualizados los dispositivos basados en Windows 10 de su organización para los dispositivos conectados al servicio de Windows Update."
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c4c6e50d0e1a34653226369cffdc0bde905398fc
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 8bdbacd54632475ac69a0d0a9a34b2567c3daa13
 
 
 ---
@@ -45,7 +45,7 @@ Windows Update for Business (WUfB) le permite mantener los dispositivos basados 
 
 -   La implementación del cliente completo de Configuration Manager que usa la infraestructura de actualizaciones de software no funcionará para los clientes que están conectados a WUfB para recibir actualizaciones.  
 
-## <a name="identify-clients-that-use-wufb-for-windows-10-updates"></a>Identificar a los clientes que utilizan WUfB para actualizaciones de Windows 10  
+## <a name="identify-clients-that-use--wufb-for-windows-10-updates"></a>Identificar a los clientes que utilizan WUfB para actualizaciones de Windows 10  
  Utilice el procedimiento siguiente para identificar a los clientes que utilizan WUfB para obtener las actualizaciones de Windows 10, configurar estos clientes para que dejen de usar WSUS para obtener actualizaciones e implementar una configuración de agente cliente para deshabilitar el flujo de trabajo de las actualizaciones de software para estos clientes.  
 
  **Requisitos previos**  
@@ -69,6 +69,6 @@ Windows Update for Business (WUfB) le permite mantener los dispositivos basados 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

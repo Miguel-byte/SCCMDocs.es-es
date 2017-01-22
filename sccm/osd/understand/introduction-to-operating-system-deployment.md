@@ -1,5 +1,5 @@
 ---
-title: "Introducción a la implementación del sistema operativo | Configuration Manager"
+title: "Introducción a la implementación de sistema operativo | Microsoft Docs"
 description: Comprenda los conceptos antes de implementar sistemas operativos en su entorno de Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ece68bd30e31595226f154fd1148b0ee55feceaf
+ms.sourcegitcommit: 55a9f1caedcfa810e9a97e43626e4cf5fdbcfa0d
+ms.openlocfilehash: 2baa6b7dbd66ab41bc9b67e8f43c313be233153c
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: ece68bd30e31595226f154fd1148b0ee55feceaf
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Puede usar Configuration Manager para implementar sistemas operativos de varias maneras diferentes. Use la información de esta sección para comprender cómo implementar sistemas operativos y automatizar tareas.
+Puede usar Configuration Manager para implementar sistemas operativos de varias maneras diferentes. Use la información de esta sección para comprender cómo implementar sistemas operativos y automatizar tareas. 
 
 ##  <a name="a-namebkmkosdeploymentprocessa-the-operating-system-deployment-process"></a><a name="BKMK_OSDeploymentProcess"></a> El proceso de implementación de sistema operativo  
  Configuration Manager proporciona varios métodos que puede usar para implementar un sistema operativo. Independientemente del método de implementación que use, existen varias acciones que se deben llevar a cabo:  
@@ -81,7 +81,7 @@ Puede usar Configuration Manager para implementar sistemas operativos de varias 
 ##  <a name="a-namebkmkbootimagesa-boot-images"></a><a name="BKMK_BootImages"></a> Imágenes de arranque  
  Una imagen de arranque de Configuration Manager es una imagen de Windows PE (WinPE) que se usa durante la implementación del sistema operativo. Las imágenes de arranque se usan para iniciar un equipo en WinPE, que es un sistema operativo mínimo con componentes y servicios limitados que prepara el equipo de destino para la instalación de Windows. Configuration Manager proporciona dos imágenes de arranque: una compatible con las plataformas x86 y otra compatible con las plataformas x64. Se consideran imágenes de arranque predeterminadas. Las imágenes de arranque que crea y agrega a Configuration Manager se consideran imágenes personalizadas. Las imágenes de arranque predeterminadas se pueden reemplazar automáticamente al actualizar Configuration Manager. Para obtener más información sobre las imágenes de arranque, consulte [Administrar imágenes de arranque](../get-started/manage-boot-images.md).  
 
-##  <a name="a-namebkmkosimagesa-operating-system-images"></a><a name="BKMK_OSImages"></a> Imágenes de sistema operativo  
+##  <a name="a-namebkmkosimagesa-operating--system-images"></a><a name="BKMK_OSImages"></a> Imágenes de sistema operativo  
  Las imágenes de sistema operativo de Configuration Manager se almacenan en el archivo de formato de archivo Windows Imaging (WIM) y representan una recopilación comprimida de carpetas y archivos de referencia que se necesitan para instalar y configurar correctamente un sistema operativo en un equipo. Para todos los escenarios de implementación de sistema operativo, debe seleccionar una imagen de sistema operativo. Puede usar la imagen de sistema operativo predeterminada o crearla desde un equipo de referencia que configure. Para obtener más información, consulte [Administrar imágenes de sistema operativo](../get-started/manage-operating-system-images.md).  
 
 ##  <a name="a-namebkmkosupgradepackagesa-operating-system-upgrade-packages"></a><a name="BKMK_OSUpgradePackages"></a> Paquetes de actualización del sistema operativo  
@@ -135,6 +135,6 @@ Puede usar Configuration Manager para implementar sistemas operativos de varias 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

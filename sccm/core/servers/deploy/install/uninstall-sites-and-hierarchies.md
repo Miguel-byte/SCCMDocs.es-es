@@ -1,5 +1,5 @@
 ---
-title: Desinstalar sitios | System Center Configuration Manager
+title: Desinstalar sitios | Microsoft Docs
 description: "Use estos detalles como guía cuando deba desinstalar un sitio de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: db203f6b8b76df28b2cd03f5ebd931c520294ba6
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: f41e70c98c4b2ede575debb868978afa3dad1abc
 
 
 ---
@@ -173,6 +173,6 @@ Utilice el procedimiento siguiente para desinstalar un sitio primario.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

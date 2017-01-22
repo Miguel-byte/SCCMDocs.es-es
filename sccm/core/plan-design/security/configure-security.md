@@ -1,5 +1,5 @@
 ---
-title: Configurar la seguridad en System Center Configuration Manager
+title: Configurar la seguridad en System Center Configuration Manager | Microsoft Docs
 description: Configure las opciones relacionadas con la seguridad de System Center Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 2e43979e1c5cdf9559b8a9f11c8f8de4008ae406
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: c486c196335174290a925ca59fe42b806d50889d
 
 
 ---
@@ -138,6 +138,6 @@ Use el procedimiento siguiente para ver qué cuentas están configuradas para la
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

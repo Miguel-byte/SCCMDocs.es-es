@@ -1,5 +1,5 @@
 ---
-title: "Supervisión de la migración | System Center Configuration Manager"
+title: "Supervisar la replicación | Microsoft Docs"
 description: "Aprenda a supervisar la infraestructura y las operaciones en Configuration Manager mediante el área de trabajo Supervisión de la consola."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 92ded1197d1dcdd6e5f3a8917718e6232b18bce4
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 132803a1aa9aad5c5462686bd656688418e47d07
 
 
 ---
@@ -55,7 +55,7 @@ Para minimizar el riesgo de un error del sitio, si las tareas de supervisión re
 
 
 
-##  <a name="a-namebkmkmonintormgmttasksa-monitor-common-management-tasks-for-configuration-manager"></a><a name="BKMK_MonintorMgmtTasks"></a> Supervisar tareas de administración comunes para Configuration Manager  
+##  <a name="a-namebkmkmonintormgmttasksa-monitor--common-management-tasks-for-configuration-manager"></a><a name="BKMK_MonintorMgmtTasks"></a> Supervisar tareas de administración comunes para Configuration Manager  
  Configuration Manager proporciona supervisión integrada desde la propia consola de Configuration Manager. Puede supervisar muchas tareas, entre otras, las relacionadas con actualizaciones de software, administración de energía e implementación de contenido en toda la jerarquía.  
 
  Use la información siguiente para obtener ayuda en la supervisión de tareas comunes de Configuration Manager:  
@@ -245,6 +245,6 @@ Las acciones de investigación y corrección que se realizan correcta e incorrec
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Tareas comunes para crear e implementar líneas de base de configuración con System Center Configuration Manager | System Center Configuration Manager"
+title: "Tareas comunes para crear e implementar líneas de base de configuración con System Center Configuration Manager | Microsoft Docs"
 description: "Aprenda a crear e implementar líneas base de configuración de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 0d66240408dcd65576954ffb27395d3f05f5a41e
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: 8e1736d6a523ae864be9e8dbfcfdbc2ac93dfdf9
 
 
 ---
@@ -93,6 +93,6 @@ En el procedimiento siguiente, aprenderá a agregar este elemento de configuraci
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

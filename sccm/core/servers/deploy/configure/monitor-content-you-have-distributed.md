@@ -1,5 +1,5 @@
 ---
-title: "Implementación de contenido | System Center Configuration Manager"
+title: Supervisar contenido | Microsoft Docs
 description: Aprenda a supervisar contenido distribuido mediante la consola de Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 402c06ed92bbfe509206d3e7800e41e90c5d3a38
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 9a5d2c3a3c6bdca05b5b00fa4d746c437a56ef89
 
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>Supervisión del contenido que se ha distribuido con System Center Configuration Manager
@@ -27,13 +27,9 @@ ms.openlocfilehash: 402c06ed92bbfe509206d3e7800e41e90c5d3a38
 Utilice la consola de System Center Configuration Manager para supervisar el contenido distribuido, incluyendo:  
 
 -   El estado de todos los tipos de paquetes en relación con los puntos de distribución asociados  
-
 -   El estado de validación del contenido de un paquete  
-
 -   El estado del contenido asignado a un grupo específico de puntos de distribución  
-
 -   El estado del contenido asignado a un punto de distribución  
-
 -   El estado de las características opcionales de cada punto de distribución (validación de contenido, PXE y multidifusión).  
 
 > [!NOTE]  
@@ -43,37 +39,27 @@ Utilice la consola de System Center Configuration Manager para supervisar el con
  El nodo **Estado de contenido** en el área de trabajo **Supervisión** proporciona información acerca de los paquetes de contenido. En la consola de Configuration Manager, puede revisar información como la siguiente:  
 
 -   El nombre del paquete  
-
 -   Tipo  
-
 -   El número de puntos de distribución a los que se envió un paquete  
-
 -   La tasa de compatibilidad  
-
 -   Cuándo se creó el paquete  
-
 -   Identificador de paquete  
-
 -   La versión de origen  
 
 También encontrará información detallada del estado de cualquier paquete, así como el estado de distribución del paquete, incluido lo siguiente:  
 
 -   El número de errores  
-
 -   Las distribuciones pendientes  
-
 -   El número de instalaciones  
 
 También puede administrar las distribuciones que siguen en curso en un punto de distribución o que no pudieron distribuir correctamente el contenido a un punto de distribución:  
 
 -   La opción aplicable para cancelar o redistribuir contenido está disponible cuando ve el mensaje de estado de implementación de un trabajo de distribución en un punto de distribución en el panel **Detalles de activos** de la ficha **En curso** o de la ficha **Error** el nodo **Estado de contenido** .  
-
 -   Adicionalmente los detalles del trabajo muestran el porcentaje del trabajo que se ha completado cuando ve los detalles de un trabajo en la ficha **En curso** y el número de reintentos para un trabajo así como el tiempo que falta para el siguiente reintento cuando ve los detalles de un trabajo que está disponible en la ficha **Error** .  
 
 Al cancelar una implementación que no está completa, se detiene el trabajo de distribución para transferir ese contenido:  
 
 -   A continuación el estado de la implementación se actualiza para indicar el error de la distribución y la cancelación por una acción del usuario.  
-
 -   Este nuevo estado aparece en la ficha **Error** .  
 
 > [!TIP]  
@@ -124,23 +110,16 @@ Utilice los procedimientos siguientes para ver el estado del contenido y adminis
 El nodo **Estado de grupo de puntos de distribución** en el área de trabajo **Supervisión** proporciona información acerca de los grupos de puntos de distribución. Puede revisar información como la siguiente:  
 
 -   El nombre del grupo de puntos de distribución  
-
 -   Descripción  
-
 -   El número de puntos de distribución que pertenecen al grupo de puntos de distribución  
-
 -   El número de paquetes que se asignaron al grupo  
-
 -   Estado del grupo de puntos de distribución  
-
 -   La tasa de compatibilidad  
 
 También puede ver información de estado detallada, incluido lo siguiente:  
 
 -   Errores del grupo de puntos de distribución  
-
 -   El número de distribuciones que están en curso  
-
 -   El número de distribuciones que son correctas  
 
 #### <a name="to-monitor-distribution-point-group-status"></a>Para supervisar el estado del grupo de puntos de distribución  
@@ -171,8 +150,18 @@ Utilice el procedimiento siguiente para ver el estado de configuración del punt
 
 4.  En el panel de resultados, haga clic en la pestaña **Detalles** . Se mostrará información de estado del punto de distribución.  
 
+## <a name="client-data-sources-dashboard"></a>Panel de orígenes de datos de cliente
+A partir de la versión 1610, puede usar el panel **Orígenes de datos de cliente** para entender el uso del [Almacenamiento en caché del mismo nivel](/sccm/core/plan-design/hierarchy/client-peer-cache) en su entorno. Este panel no está visible en la consola hasta que los clientes descargan el contenido con el Almacenamiento en caché del mismo nivel y notifican esa información de nuevo al sitio. Con el intervalo de informes, esto puede tardar hasta 24 horas.
+
+> [!TIP]  
+> Con la versión 1610, el panel de orígenes de datos de cliente y la caché del mismo nivel son funciones de la versión preliminar. Para habilitarlos, vea [Uso de características de la versión preliminar a partir de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+
+En la consola, vaya a **Supervisión** > **Estado de cliente** > **Orígenes de datos de cliente**. Aquí puede seleccionar un período de tiempo que se aplicará al panel. A continuación, en la pantalla, puede seleccionar el grupo de límites o el paquete para el que desea ver información. Al ver la información, puede mantener el puntero sobre la superficie para ver más detalles sobre los distintos orígenes de contenido o directiva.  
+
+También puede usar un nuevo informe, **Orígenes de datos de cliente - Resumen**, para ver un resumen de los orígenes de datos de cliente de cada grupo de límites.
 
 
-<!--HONumber=Nov16_HO1-->
+
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Planeamiento de permisos de plantilla de certificado |System Center Configuration Manager
+title: Planeamiento de permisos de plantilla de certificado | Microsoft Docs
 description: "Obtenga información sobre cómo planear los permisos que necesita para configurar las plantillas de certificado que usa System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 38f4176d40bffd20b9e3076213957765dfb0c7f3
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 3c3725678561c32fce316ed1209ac8fe73a0eed1
 
 
 ---
@@ -36,7 +36,7 @@ La información siguiente le ayuda a planear la configuración de permisos de pl
 
 -   Lectura para la cuenta que ejecuta la consola de System Center Configuration Manager  
 
- Para obtener más información sobre estos permisos de seguridad, consulte [Paso 1: Instalar y configurar el Servicio de inscripción de dispositivos de red y dependencias](../deploy-use/certificate-infrastructure.md#BKMK_Step1).  
+ Para obtener más información sobre estos permisos de seguridad, consulte [Paso 1: Instalar y configurar el Servicio de inscripción de dispositivos de red y dependencias](../deploy-use/certificate-infrastructure.md#step-1-install-and-configure-the-network-device-enrollment-service-and-dependencies).  
 
  Cuando se usa esta configuración predeterminada, los usuarios y los dispositivos no pueden solicitar directamente certificados de las plantillas de certificado. El Servicio de inscripción de dispositivos de red debe iniciar todas las solicitudes. Esta restricción es sumamente importante, ya que las plantillas de certificado deben configurarse con **Proporcionado por el solicitante** para el sujeto del certificado, lo que implica un riesgo de suplantación si un usuario no autorizado o un dispositivo comprometido solicitan un certificado. En la configuración predeterminada, el Servicio de inscripción de dispositivos de red debe iniciar la solicitud. Sin embargo, el riesgo de suplantación continúa si el servicio que ejecuta el Servicio de inscripción de dispositivos de red se ve comprometido. Para evitar este riesgo, siga todas las recomendaciones de seguridad para el Servicio de inscripción de dispositivos de red y el equipo que ejecuta este servicio de rol.  
 
@@ -65,6 +65,6 @@ La información siguiente le ayuda a planear la configuración de permisos de pl
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

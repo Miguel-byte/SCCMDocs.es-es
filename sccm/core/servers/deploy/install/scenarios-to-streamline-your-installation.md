@@ -1,5 +1,5 @@
 ---
-title: "Escenarios de instalación | System Center Configuration Manager"
+title: "Escenarios de instalación | Microsoft Docs"
 description: "Aprenda técnicas para instalar una nueva jerarquía de Configuration Manager mientras efectúa una actualización."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 90a802cbdfd6d0acd60ec462ffbf2a08c012eaeb
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 8333f9280f609c761ba5368b801d273f9a11ebb5
 
 
 ---
@@ -148,6 +148,6 @@ En este escenario de ejemplo actualizará la infraestructura de Microsoft System
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

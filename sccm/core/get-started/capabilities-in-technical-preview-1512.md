@@ -1,5 +1,5 @@
 ---
-title: Capacidades de Technical Preview 1512 para System Center Configuration Manager
+title: Capacidades de Technical Preview 1512 para System Center Configuration Manager | Microsoft Docs
 description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1512."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1d97e7646adbb02a03b33b5efc56c1658364956e
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: ea6cb27fc229854ba7c1c39bb735ed9b9a88bb61
 
 ---
 # <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1512 para System Center Configuration Manager
@@ -83,9 +83,9 @@ En 1512 Technical Preview, hemos agregado la siguiente nueva configuración de d
 
          Por ejemplo, a continuación se muestra la configuración de Windows Defender en Windows 10 establecida por el administrador como habilitada, y el usuario no tiene permiso para modificarla:  
 
-         ![TechRef &#95; WinDefender](../../core/get-started/media/TechRef_WinDefender.png "TechRef_WinDefender")  
+         ![TechRef&#95;WinDefender](../../core/get-started/media/TechRef_WinDefender.png "TechRef_WinDefender")  
 
-    Además, la opción existente **Excluir archivos y carpetas** de la sección “Configuración de exclusión” de la directiva antimalware de Endpoint Protection se ha mejorado para permitir exclusiones del dispositivo. Por ejemplo, ahora puede especificar lo siguiente como una exclusión: **\device\mvfs** (para el sistema de archivos de varias versiones). La directiva no valida la ruta de acceso del dispositivo; se proporciona la directiva de Endpoint Protection al motor de antimalware en el cliente que debe ser capaz de interpretar la cadena del dispositivo.  
+    Además, la configuración **Excluir archivos y carpetas** existente en la sección "Configuración de exclusión" de la directiva antimalware de Endpoint Protection se ha mejorado para permitir exclusiones del dispositivo. Por ejemplo, ahora puede especificar lo siguiente como una exclusión: **\device\mvfs** (para el sistema de archivos de varias versiones). La directiva no valida la ruta de acceso del dispositivo; se proporciona la directiva de Endpoint Protection al motor de antimalware en el cliente que debe ser capaz de interpretar la cadena del dispositivo.  
 
 **Requisitos previos para usar las directivas de Endpoint Protection:**  
 
@@ -93,6 +93,6 @@ Antes de usar las directivas de Endpoint Protection, debe instalar y administrar
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

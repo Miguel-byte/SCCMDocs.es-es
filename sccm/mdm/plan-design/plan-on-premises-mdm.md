@@ -1,5 +1,5 @@
 ---
-title: Planificar la MDM local | System Center Configuration Manager
+title: Planear MDM local | Microsoft Docs
 description: "Planee la administración de dispositivos móviles local para administrar dispositivos en System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 6bc3bf68d098fec7b6ac976d8e7ee7a7d71fab6a
+ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
+ms.openlocfilehash: cc5b04dc41b13993fca35f202437b71e96bc9cdd
 
 
 ---
@@ -34,13 +34,13 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
  > [!NOTE]  
 >  La rama actual de Configuration Manager admite la inscripción en la administración de dispositivos móviles local para dispositivos con los sistemas operativos siguientes:  
 >   
->  -   Windows 10 Enterprise  
+>  -   Windows 10 Enterprise  
 > -   Windows 10 Pro  
 > -   Windows 10 Team \(a partir de la versión 1602 de Configuration Manager\)  
 > -   Windows 10 Mobile  
-> -   Windows 10 Mobile Enterprise   
+> -   Windows 10 Mobile Enterprise   
 
-##  <a name="a-namebkmkintunea-use-of-the-microsoft-intune-subscription"></a><a name="bkmk_intune"></a> Uso de la suscripción a Microsoft Intune  
+##  <a name="a-namebkmkintunea-use-of-the--microsoft-intune-subscription"></a><a name="bkmk_intune"></a> Uso de la suscripción a Microsoft Intune  
  Necesitará una suscripción a Microsoft Intune para empezar a usar la administración de dispositivos móviles local. La suscripción solo es necesaria para realizar el seguimiento de las licencias de los dispositivos y no se usa para administrar ni almacenar la información de administración de los dispositivos. La totalidad de la administración se controla en la empresa de la organización a través de la infraestructura local de Configuration Manager.  
 
 > [!IMPORTANT]  
@@ -122,6 +122,6 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

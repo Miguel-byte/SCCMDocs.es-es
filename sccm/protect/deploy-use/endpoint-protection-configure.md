@@ -1,5 +1,5 @@
 ---
-title: Configurar Endpoint Protection | System Center Configuration Manager
+title: Configurar Endpoint Protection | Microsoft Docs
 description: "Obtenga información sobre cómo configurar Configuration Manager para actualizar y distribuir definiciones de malware de Windows Defender."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c13ea976057a4267eb6ed0d5c5852b165de868cb
+ms.sourcegitcommit: 180d05d3493f8c4288ad4bf640da15bd599c2072
+ms.openlocfilehash: 783d8352e3e1f06af3a5d8534b4fa811f36fdc17
 
 
 ---
@@ -39,14 +39,14 @@ Para poder usar Endpoint Protection para administrar la seguridad y el malware e
 
 |Pasos|Detalles|  
 |-----------|-------------|  
-|**Paso 1:** crear un rol de sistema de sitio de punto de Endpoint Protection.|El rol de sistema de sitio de punto de Endpoint Protection debe estar instalado para poder usar Endpoint Protection. Se debe instalar en un solo servidor de sistema de sitio y en la parte superior de la jerarquía en un sitio de administración central o un sitio primario independiente. Consulte [Step 1: Create an Endpoint Protection Point Site System Role](../../protect/deploy-use/configure-endpoint-protection.md#BKMK_Step1) (Paso 1: crear un rol de sistema de sitio de punto de Endpoint Protection) en este tema.|  
-|**Paso 2:** configurar alertas de Endpoint Protection.|Las alertas informan al administrador si se han producido eventos específicos, como una infección de malware. Las alertas se muestran en el nodo **Alertas** del área de trabajo **Supervisión** o, de forma alternativa, pueden enviarse por correo electrónico a los usuarios especificados. Consulte [Step 2: Configure Alerts for Endpoint Protection](../../protect/deploy-use/configure-endpoint-protection.md#BKMK_EPalerts) (Paso 2: configurar alertas de Endpoint Protection).|  
-|**Paso 3:** configurar orígenes de actualizaciones de definiciones para clientes de Endpoint Protection.|Es posible configurar Endpoint Protection para que use diversos orígenes para la descarga de actualizaciones de definiciones. Consulte [Step 3: Configure Definition Updates for Endpoint Protection](../../protect/deploy-use/configure-endpoint-protection.md#BKMK_EPdefs) (Paso 3: configurar actualizaciones de definiciones para Endpoint Protection).|  
+|**Paso 1:** crear un rol de sistema de sitio de punto de Endpoint Protection.|El rol de sistema de sitio de punto de Endpoint Protection debe estar instalado para poder usar Endpoint Protection. Se debe instalar en un solo servidor de sistema de sitio y en la parte superior de la jerarquía en un sitio de administración central o un sitio primario independiente. Consulte [Paso 1: crear un rol de sistema de sitio de punto de Endpoint Protection](../../protect/deploy-use/configure-endpoint-protection.md).|  
+|**Paso 2:** configurar alertas de Endpoint Protection.|Las alertas informan al administrador si se han producido eventos específicos, como una infección de malware. Las alertas se muestran en el nodo **Alertas** del área de trabajo **Supervisión** o, de forma alternativa, pueden enviarse por correo electrónico a los usuarios especificados. Consulte [Step 2: Configure Alerts for Endpoint Protection](../../protect/deploy-use/configure-endpoint-protection.md) (Paso 2: configurar alertas de Endpoint Protection).|  
+|**Paso 3:** configurar orígenes de actualizaciones de definiciones para clientes de Endpoint Protection.|Es posible configurar Endpoint Protection para que use diversos orígenes para la descarga de actualizaciones de definiciones. Consulte [Step 3: Configure Definition Updates for Endpoint Protection](../../protect/deploy-use/configure-endpoint-protection.md) (Paso 3: configurar actualizaciones de definiciones para Endpoint Protection).|  
 |**Paso 4** : configurar la directiva antimalware predeterminada y crear directivas antimalware personalizadas.|La directiva antimalware predeterminada se aplica si está instalado el cliente de Endpoint Protection. Toda directiva personalizada que haya implementado se aplica de forma predeterminada, en los 60 minutos posteriores a la implementación del cliente. Asegúrese de que ha configurado las directivas antimalware antes de implementar el cliente de Endpoint Protection. Consulte [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/endpoint-antimalware-policies.md) (Crear e implementar directivas antimalware para Endpoint Protection en System Center Configuration Manager).|  
-|**Paso 5** : configurar opciones de cliente personalizadas para Endpoint Protection.|Use las opciones de cliente personalizadas con el fin de configurar las opciones de Endpoint Protection para las recopilaciones de equipos de la jerarquía.<br /><br /> Nota: No configure las opciones de cliente personalizadas de Endpoint Protection a menos que esté seguro de que quiere aplicarlas a todos los equipos de la jerarquía. Consulte [Step 5: Configure Custom Client Settings for Endpoint Protection](../../protect/deploy-use/configure-endpoint-protection.md#BKMK_EPclient) (Paso 5: configurar opciones de cliente personalizadas para Endpoint Protection) en este tema.|  
+|**Paso 5** : configurar opciones de cliente personalizadas para Endpoint Protection.|Use las opciones de cliente personalizadas con el fin de configurar las opciones de Endpoint Protection para las recopilaciones de equipos de la jerarquía.<br /><br /> Nota: No configure las opciones de cliente personalizadas de Endpoint Protection a menos que esté seguro de que quiere aplicarlas a todos los equipos de la jerarquía. Consulte [Paso 5: configurar las opciones de cliente personalizadas de Endpoint Protection](../../protect/deploy-use/configure-endpoint-protection.md).|  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

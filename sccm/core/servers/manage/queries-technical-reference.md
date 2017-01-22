@@ -1,5 +1,5 @@
 ---
-title: "Referencia técnica de consultas | System Center Configuration Manager"
+title: "Referencia técnica de consultas | Microsoft Docs"
 description: "Consulte una lista de temas que le ayudarán a usar las consultas para recuperar información sobre los recursos del sitio."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 807737933ce3ff0452d5b728796c77ab1448b6b2
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 479a7e902ff19b8ec501ff01c8e56565fd69f51b
 
 
 ---                     
@@ -38,6 +38,6 @@ Las consultas de System Center Configuration Manager devuelven información de l
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Implementar Windows to Go con System Center Configuration Manager.
+title: Implementar Windows to Go con System Center Configuration Manager | Microsoft Docs
 description: "Aprenda a aprovisionar Windows To Go en System Center Configuration Manager para crear un área de trabajo de Windows To Go que se arranque desde una unidad externa."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 104355185c5bbb4c15f3b9cc80cf8fa0e529cf6d
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: a8b1a42c43438553cfbb62328bed933378bb344c
 
 
 ---
@@ -450,7 +450,9 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
 
     -   **Cuando no haya disponible ningún punto de distribución local, usar un punto de distribución remoto**: especifique si los clientes pueden usar puntos de distribución en redes lentas y poco confiables para descargar el contenido necesario para la secuencia de tareas.  
 
-    -   **Permitir a los clientes usar una ubicación de origen de reserva para el contenido**: especifique si desea permitir a los clientes usar un punto de distribución no preferido de reserva como ubicación de origen para el contenido cuando el contenido no está disponible en un punto de distribución preferido.  
+    -   **Permitir a los clientes usar una ubicación de origen de reserva para el contenido**:
+        - *Antes de la versión 1610*, se puede activar la casilla Permitir ubicación de origen de reserva para contenido para permitir a los clientes que están fuera de estos grupos de límites que reviertan y usen el punto de distribución como ubicación de origen para el contenido cuando no estén disponibles otros puntos de distribución.
+        - *A partir de la versión 1610*, ya no se puede configurar **Permitir ubicación de origen de reserva para contenido**.  En su lugar, se deben configurar relaciones entre grupos de límites que determinen cuándo puede un cliente empezar a buscar grupos de límites adicionales para una ubicación de origen de contenido válida. 
 
 11. Complete el asistente.  
 
@@ -468,6 +470,6 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

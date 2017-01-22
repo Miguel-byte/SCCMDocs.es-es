@@ -1,5 +1,5 @@
 ---
-title: Crear aplicaciones para equipos Mac | System Center Configuration Manager
+title: Crear aplicaciones de equipos Mac | Microsoft Docs
 description: Consulte las consideraciones que debe tener en cuenta al crear e implementar aplicaciones para equipos Mac.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 98b36c58506bcb82fe82f842b8c3ed9dbd2a75d1
+ms.sourcegitcommit: 8dcf9f310a4ea8e2f43f2fe79e5e3cfa2c8aeb61
+ms.openlocfilehash: c2feffad39a20519fd86ca9348b0855a51e05aa9
 
 
 ---
@@ -32,7 +32,7 @@ Además de los otros requisitos y procedimientos de System Center Configuration 
 
 ## <a name="general-considerations"></a>Consideraciones generales  
  Puede usar System Center Configuration Manager para implementar aplicaciones en equipos Mac que ejecutan el cliente Mac de Configuration Manager. Los pasos para implementar software en equipos Mac son similares a las que se utilizan para implementar software en equipos Windows. Pero, antes de crear e implementar aplicaciones para equipos Mac administrados por Configuration Manager, debe tener en cuenta lo siguiente:  
-  
+
 -   Antes de implementar paquetes de aplicaciones Mac en equipos Mac, debe usar la herramienta **CMAppUtil** en un equipo Mac para convertir estas aplicaciones en un formato que Configuration Manager pueda leer.  
 
 -   Configuration Manager no es compatible con la implementación de aplicaciones Mac en usuarios. Estas implementaciones deben estar en un dispositivo. Además, para las implementaciones de aplicaciones Mac, Configuration Manager no es compatible con la opción **Implementar previamente el software en el dispositivo primario del usuario** de la página **Configuración de implementación** del Asistente para implementar software.  
@@ -71,9 +71,9 @@ Además de los otros requisitos y procedimientos de System Center Configuration 
 -   Paquete de instalador de Mac OSX (.pkg)  
 
 -   Aplicación de Mac OSX (.app)  
-  
+
 Después de recopilar la información de la aplicación, **CMAppUtil** crea un archivo con la extensión **.cmmac**. Este archivo contiene los archivos de instalación del software Mac e información sobre los métodos de detección que se pueden usar para evaluar si la aplicación ya está instalada. **CMAppUtil** también puede procesar archivos de **.dmg** con varias aplicaciones Mac y crear diferentes tipos de implementación para cada aplicación.  
-  
+
 1.  Copie el paquete de instalación de software Mac en la carpeta del equipo Mac en la que extrajo el contenido del archivo **macclient.dmg** que descargó del Centro de descarga de Microsoft.  
 
 2.  En el mismo equipo Mac, abra una ventana de terminal y desplácese hasta la carpeta en la que extrajo el contenido del archivo **macclient.dmg** .  
@@ -106,9 +106,9 @@ Después de recopilar la información de la aplicación, **CMAppUtil** crea un a
 ###  <a name="create-a-configuration-manager-application-that-contains-the-mac-software"></a>Crear una aplicación de Configuration Manager que contenga el software Mac  
 
 Use el procedimiento siguiente para ayudarle a crear una aplicación para equipos Mac administrados por Configuration Manager.  
-  
+
 1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software** > **Administración de aplicaciones** > **Aplicaciones**.  
-  
+
 3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear aplicación**.  
 
 4.  En la página **General** del Asistente para crear aplicaciones, seleccione **Detectar automáticamente la información sobre esta aplicación a partir de archivos de instalación**.  
@@ -141,9 +141,9 @@ Use el procedimiento siguiente para ayudarle a crear una aplicación para equipo
 
 > [!NOTE]  
 >  Si importó automáticamente información sobre la aplicación en el Asistente para crear aplicaciones, es posible que ya se haya creado un tipo de implementación para la aplicación.  
-  
+
 1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software** > **Administración de aplicaciones** > **Aplicaciones**.  
-  
+
 3.  Seleccione una aplicación y, a continuación, en la pestaña **Inicio** , en el grupo **Aplicación** , haga clic en **Crear tipo de implementación** para crear un nuevo tipo de implementación para esta aplicación.  
 
     > [!NOTE]  
@@ -207,9 +207,9 @@ Use el procedimiento siguiente para ayudarle a crear una aplicación para equipo
 
 > [!NOTE]  
 >  Puede crear una recopilación que contenga sólo los equipos Mac. Para ello, cree una recopilación que use una regla de consulta y use la consulta WQL de ejemplo del tema [How to create queries](../../core/servers/manage/create-queries.md) (Cómo crear consultas).  
-  
+
  Para obtener más información, consulte [Deploy applications](../../apps/deploy-use/deploy-applications.md) (Implementar aplicaciones).  
-  
+
 ###  <a name="step-5-monitor-the-deployment-of-the-mac-application"></a>Paso 5: Supervisar la implementación de la aplicación de Mac  
  Puede utilizar el mismo proceso para supervisar las implementaciones de aplicaciones en equipos Mac que utilizaría para las implementaciones de aplicaciones en equipos Windows.  
 
@@ -217,6 +217,6 @@ Use el procedimiento siguiente para ayudarle a crear una aplicación para equipo
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

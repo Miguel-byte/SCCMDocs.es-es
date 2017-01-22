@@ -1,8 +1,8 @@
 ---
-title: Proteger la infraestructura de datos y del sitio | System Center Configuration Manager
+title: Proteger los datos y la infraestructura del sitio | Microsoft Docs
 description: "Obtenga información sobre cómo proteger los recursos de su organización de la exposición o de los ataques malintencionados con System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 366a3626e2ab4894bbb515176890d508761b6561
+ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
+ms.openlocfilehash: c80750358d64cf87f8a3ce3a4c4f4030a9dfd742
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 366a3626e2ab4894bbb515176890d508761b6561
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
 
-Seguramente quiere que los usuarios puedan obtener acceso seguro a los recursos de su organización, para que la infraestructura y los datos estén protegidos contra la exposición o los ataques malintencionados. La información de estos temas describe cómo permitir ese tipo de acceso y cómo contribuir a proteger los recursos de la organización.  
+Seguramente quiere que los usuarios puedan obtener acceso seguro a los recursos de su organización, para que la infraestructura y los datos estén protegidos contra la exposición o los ataques malintencionados. La información de estos temas describe cómo usar System Center Configuration Manager (también conocido como ConfigMgr o SCCM) para permitir ese tipo de acceso y cómo contribuir a proteger los recursos de la organización.  
 
 -   Puede minimizar los esfuerzos de los usuarios para conectarse a recursos corporativos mediante la conectividad VPN con perfiles de VPN. Obtenga más información en [VPN profiles in System Center Configuration Manager](../deploy-use/vpn-profiles.md) (Perfiles de VPN en System Center Configuration Manager).  
 
@@ -44,6 +44,6 @@ Seguramente quiere que los usuarios puedan obtener acceso seguro a los recursos 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

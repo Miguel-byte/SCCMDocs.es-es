@@ -1,5 +1,5 @@
 ---
-title: "Métodos para implementar sistemas operativos de empresa | Configuration Manager"
+title: "Métodos para implementar sistemas operativos de empresa | Microsoft Docs"
 description: "Obtenga información acerca de los métodos que puede usar para implementar sistemas operativos de empresa en su entorno de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 40f6f414ff0a2687f250f101acbae775a777bf8a
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 6cec9275009ac19ad65a03792c1bc4d0c528ea4c
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: 40f6f414ff0a2687f250f101acbae775a777bf8a
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Hay distintos métodos que puede utilizar para implementar un sistema operativo en su entorno de System Center Configuration Manager. 
+Hay distintos métodos que puede utilizar para implementar un sistema operativo en su entorno de System Center Configuration Manager.
 
 -   [Use PXE to deploy Windows over the network](use-pxe-to-deploy-windows-over-the-network.md) (Uso de PXE para implementar Windows a través de la red)  
 
@@ -43,6 +43,6 @@ Hay distintos métodos que puede utilizar para implementar un sistema operativo 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

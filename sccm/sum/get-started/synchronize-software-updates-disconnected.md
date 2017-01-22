@@ -1,6 +1,6 @@
 ---
 
-title: "Sincronizar actualizaciones de software desde un punto de actualización de software desconectado | Configuration Manager"
+title: "Sincronizar actualizaciones de software desde un punto de actualización de software desconectado | Microsoft Docs"
 description: "Siga estos procedimientos para comprobar que la sincronización de actualizaciones de software se ha realizado correctamente en los metadatos del servidor de exportación, de las actualizaciones de exportación y actualizaciones de importación."
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f821433d017f2e14f874eca359df0f38e896ab69
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 73a54ddb896bfa7fb770e02d188a262230762c7f
 
 
 
@@ -111,6 +111,6 @@ Después de sincronizar las actualizaciones de software con los criterios que ne
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

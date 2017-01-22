@@ -1,5 +1,5 @@
 ---
-title: Actualizar la infraestructura local | System Center Configuration Manager
+title: Actualizar la infraestructura local | Microsoft Docs
 description: "Obtenga información sobre cómo actualizar la infraestructura, como SQL Server y el sistema operativo de sitio de los sistemas de sitio."
 ms.custom: na
 ms.date: 10/28/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c8115fba0722fc902e60ce201d8a9914036c1245
-ms.openlocfilehash: 1239bf81991bb233a9640606bb47f598a70d5e50
+ms.sourcegitcommit: 8b4c80aa092369ec251757d82a1b4bb2863aa96a
+ms.openlocfilehash: f3742dcb930444bab7eb02374fd77ebd0e455734
 
 
 ---
@@ -78,7 +78,7 @@ Después de actualizar el servidor de sitio o un servidor que hospeda una instan
 3. Expanda el árbol por debajo de la raíz, seleccione el nodo **SMS** y luego haga clic en **Seguridad**.  Asegúrese de que el grupo **Administradores de SMS** tiene los permisos siguientes:
   -     Habilitar cuenta
   -     Llamada remota habilitada
-4. Después, en la pestaña **Seguridad**, bajo el nodo SMS, seleccione el nodo **site_<sitecode>** y después haga clic en **Seguridad**. Asegúrese de que el grupo de **administradores de SMS** tiene el permiso siguiente:
+4. Después, en la pestaña **Seguridad**, bajo el nodo SMS, seleccione el nodo **site_&lt;CódigoDeSitio>** y, después, haga clic en **Seguridad**. Asegúrese de que el grupo de **administradores de SMS** tiene el permiso siguiente:
   -   Ejecutar métodos
   -   Escritura de proveedor
   -   Habilitar cuenta
@@ -176,6 +176,19 @@ Al actualizar la versión de SQL Server que hospeda la base de datos de sitio, d
  2. Actualice los sitios secundarios antes de actualizar un sitio primario principal de un sitio secundario.
  3. Actualice los sitios primarios principales en último lugar. Esto incluye tanto los sitios primarios secundarios que dependen de un sitio de administración central como los sitios primarios independientes que están en el sitio de nivel superior de una jerarquía.
 
+**Nivel de estimación de cardinalidad de SQL Server y la base de datos del sitio:**   
+Cuando una base de datos del sitio se actualiza de una versión anterior de SQL Server, la base de datos conserva su nivel existente de estimación de cardinalidad (CE) de SQL si se encuentra en el mínimo permitido para esa instancia de SQL Server. La actualización de SQL Server con una base de datos en un nivel de compatibilidad inferior al nivel permitido establece automáticamente la base de datos en el nivel de compatibilidad más bajo que permite SQL.
+
+En la tabla siguiente se identifican los niveles de compatibilidad recomendados para las bases de datos del sitio de Configuration Manager:
+
+|Versión de SQL Server | Niveles de compatibilidad admitidos |Nivel recomendado|
+|----------------|--------------------|--------|
+| SQL Server 2016| 130, 120, 110, 100 | 130|
+| SQL Server 2014| 120, 110, 100      | 110|
+
+Para identificar el nivel de compatibilidad de CE de SQL Server en uso para la base de datos del sitio, ejecute la siguiente consulta SQL en el servidor de base de datos del sitio: **SELECT name, compatibility_level FROM sys.databases**.
+
+ Para obtener más información sobre los niveles de compatibilidad de CE de SQL y cómo establecerlos, consulte [Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)](https://msdn.microsoft.com/library/bb510680.aspx).
 
 
 **Para obtener más información sobre SQL Server, consulte la documentación de SQL Server en TechNet:**  
@@ -196,6 +209,6 @@ Al actualizar la versión de SQL Server que hospeda la base de datos de sitio, d
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

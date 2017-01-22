@@ -1,5 +1,5 @@
 ---
-title: "Declaración de privacidad de System Center Configuration Manager: biblioteca de cmdlets de Configuration Manager"
+title: "Declaración de privacidad de System Center Configuration Manager: información adicional | Microsoft Docs"
 description: "Conozca cómo Microsoft recopila y usa datos de una implementación de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -36,8 +36,8 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: bcac4e2b6f8377a27417cb2519814ad9e74ee542
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 613b7dbf81de84129e113468d554d8430cbc3182
 
 ---
 # <a name="additional-information-about-privacy-for-system-center-configuration-manager"></a>Más información sobre la privacidad de System Center Configuration Manager
@@ -97,7 +97,7 @@ Microsoft Cloud Protection Service no recopila intencionadamente información pe
 
 Encontrará más detalles relacionados con los datos recopilados en la documentación del producto en [http://go.microsoft.com/fwlink/?LinkId=823547](http://go.microsoft.com/fwlink/?LinkId=823547).
 
-## <a name="site-hierarchy-geographical-view-with-bing-maps"></a>Jerarquía del sitio – vista geográfica con Bing Maps
+## <a name="site-hierarchy--geographical-view-with-bing-maps"></a>Jerarquía del sitio – vista geográfica con Bing Maps
 La vista geográfica de la jerarquía del sitio le permite ver la topología del servidor físico de Configuration Manager mediante mapas proporcionados por Microsoft Bing Maps. Para habilitar esta característica, se envía información de ubicación proporcionada por usted desde su servidor al servicio web de Bing Maps.
 
 Microsoft utiliza la información para hacer funcionar y mejorar Microsoft Bing Maps y otros sitios y servicios de Microsoft. Para más información, vea la Declaración de privacidad de Microsoft en http://go.microsoft.com/fwlink/?LinkId=823548.
@@ -114,6 +114,6 @@ Esta característica no está configurada de forma predeterminada. Los administr
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

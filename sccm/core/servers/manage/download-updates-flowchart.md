@@ -1,5 +1,5 @@
 ---
-title: 'Diagrama de flujo: descargar actualizaciones | System Center Configuration Manager'
+title: 'Diagrama de flujo: descargar actualizaciones | Microsoft Docs'
 description: "Vea el proceso por el cual un sitio con un punto de conexión de servicio en línea descarga las actualizaciones en consola."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 96872f92c8c8e76467740a8bb269c172f47be641
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: cd2ef0f0d694937b760d514c2a6a24973810a2b2
 
 
 ---
@@ -31,6 +31,6 @@ Este flujo de datos muestra el proceso por el cual un sitio con un punto de cone
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

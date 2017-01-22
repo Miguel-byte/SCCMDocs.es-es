@@ -1,5 +1,5 @@
 ---
-title: Iconos usados para las actualizaciones de software | Configuration Manager
+title: Iconos que se usan para las actualizaciones de software | Microsoft Docs
 description: "La consola de Configuration Manager contiene iconos que indican un estado del grupo de actualizaciones de software o actualización sincronizada."
 keywords: 
 author: dougeby
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 48b0296809400805bdba9e6ebd163a0c39b37968
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 04c5ccc53263b2672096b564695a636bfb28d952
 
 
 ---
@@ -28,7 +28,7 @@ Las actualizaciones de software sincronizadas se muestran en la consola de Confi
  Las actualizaciones de software sincronizadas se representan mediante uno de los siguientes iconos.  
 
 ### <a name="normal-icon"></a>Icono de normal  
- ![icono](../media/Normal.jpg "Normal icon") El icono de la flecha verde representa una actualización de software normal.  
+ ![icono](../media/Normal.jpg "Icono de normal") El icono con la flecha verde representa una actualización de software normal.  
 
  **Descripción:**  
 
@@ -39,7 +39,7 @@ Las actualizaciones de software sincronizadas se muestran en la consola de Confi
  No existe ninguna preocupación operativa.  
 
 ### <a name="expired-icon"></a>Icono de expirado  
- ![icono](../media/Expired.jpg "Expired icon") El icono con la X de color negro representa una actualización de software expirada. Para identificar actualizaciones de software expiradas, también puede consultar la columna **Expirado** de la actualización de software cuando se muestre en la consola de Configuration Manager.  
+ ![icono](../media/Expired.jpg "Icono de expirado") El icono con la X de color negro representa una actualización de software expirada. Para identificar actualizaciones de software expiradas, también puede consultar la columna **Expirado** de la actualización de software cuando se muestre en la consola de Configuration Manager.  
 
  **Descripción:**  
 
@@ -50,7 +50,7 @@ Las actualizaciones de software sincronizadas se muestran en la consola de Confi
  No existe ninguna preocupación operativa.
 
 ### <a name="superseded-icon"></a>Icono de sustituido  
- ![icono](../media/Superseded.jpg "Superseded icon") El icono con una estrella amarilla representa una actualización de software sustituida. Para identificar actualizaciones de software sustituidas, también puede consultar la columna **Se sustituyó** de la actualización de software cuando se muestre en la consola de Configuration Manager.  
+ ![icono](../media/Superseded.jpg "Icono de sustituido") El icono con una estrella amarilla representa una actualización de software sustituida. Para identificar actualizaciones de software sustituidas, también puede consultar la columna **Se sustituyó** de la actualización de software cuando se muestre en la consola de Configuration Manager.  
 
  **Descripción:**  
 
@@ -69,7 +69,7 @@ Las actualizaciones de software sincronizadas se muestran en la consola de Confi
  Cuando sea posible, implemente la actualización de software de sustitución en los equipos cliente en lugar de la actualización de software sustituida. Puede mostrar una lista de las actualizaciones de software que sustituyen a la actualización de software en la ficha **Información de sustitución** de las propiedades de actualización de software.  
 
 ### <a name="invalid-icon"></a>Icono de no válido  
- ![icono](../media/Invalid.jpg "Invalid icon") El icono con la X de color rojo representa una actualización de software no válida.  
+ ![icono](../media/Invalid.jpg "Icono de no válido") El icono con la X de color rojo representa una actualización de software no válida.  
 
  **Descripción:**  
 
@@ -84,7 +84,7 @@ Las actualizaciones de software sincronizadas se muestran en la consola de Confi
  Si falta el contenido de una actualización de software, los clientes no pueden instalar la actualización de software hasta que el contenido esté disponible en un punto de distribución. Puede redistribuir el contenido a los puntos de distribución mediante la acción **Redistribuir** . Si falta el contenido de una actualización de software en una implementación creada en un sitio primario, la actualización de software se debe replicar o redistribuir al sitio secundario. Para obtener más información sobre la redistribución de contenido, consulte [Manage the content you have distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage) (Administrar el contenido que ha distribuido).  
 
 ### <a name="metadata-only-icon"></a>Icono de solo metadatos
- ![icono](../media/MetadataOnly.png "Metadata-only icon") El icono de la flecha azul representa una actualización de software de solo metadatos.
+ ![icono](../media/MetadataOnly.png "Icono de solo metadatos") El icono con la flecha azul representa una actualización de software de solo metadatos.
 
  **Descripción:**  
 
@@ -98,28 +98,28 @@ Las actualizaciones de software sincronizadas se muestran en la consola de Confi
  Los grupos de actualizaciones de software se representan mediante uno de los siguientes iconos.  
 
 ### <a name="normal-icon"></a>Icono de normal  
- ![icono](../media/Normal.jpg "Normal icon") El icono de la flecha verde representa un grupo de actualizaciones de software que contiene solo actualizaciones de software normales.  
+ ![icono](../media/Normal.jpg "Icono de normal") El icono con la flecha verde representa un grupo de actualizaciones de software que contiene solo actualizaciones de software normales.  
 
  **Preocupaciones operativas:**  
 
  No existe ninguna preocupación operativa.  
 
 ### <a name="expired-icon"></a>Icono de expirado  
- ![icono](../media/Expired.jpg "Expired icon") El icono de la X negra representa un grupo de actualizaciones de software que contiene una o varias actualizaciones de software expiradas.  
+ ![icono](../media/Expired.jpg "Icono de expirado") El icono con la X negra representa un grupo de actualizaciones de software que contiene una o varias actualizaciones de software expiradas.  
 
  **Preocupaciones operativas:**  
 
  Quite o reemplace las actualizaciones de software expiradas del grupo de actualizaciones de software cuando sea posible.  
 
 ### <a name="superseded-icon"></a>Icono de sustituido  
- ![icono](../media/Superseded.jpg "Superseded icon") El icono de la estrella amarilla representa un grupo de actualizaciones de software que contiene una o varias actualizaciones de software sustituidas.  
+ ![icono](../media/Superseded.jpg "Icono de sustituido") El icono con la estrella amarilla representa un grupo de actualizaciones de software que contiene una o varias actualizaciones de software sustituidas.  
 
  **Preocupaciones operativas:**  
 
  Reemplace la actualización de software sustituida en el grupo de actualizaciones de software por la actualización de software de sustitución cuando sea posible.  
 
 ### <a name="invalid-icon"></a>Icono de no válido  
- ![icono](../media/Invalid.jpg "Invalid icon") El icono de la X roja representa un grupo de actualizaciones de software que contiene una o varias actualizaciones de software no válidas.  
+ ![icono](../media/Invalid.jpg "Icono de no válido") El icono con la X roja representa un grupo de actualizaciones de software que contiene una o varias actualizaciones de software no válidas.  
 
  **Preocupaciones operativas:**  
 
@@ -127,6 +127,6 @@ Las actualizaciones de software sincronizadas se muestran en la consola de Confi
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

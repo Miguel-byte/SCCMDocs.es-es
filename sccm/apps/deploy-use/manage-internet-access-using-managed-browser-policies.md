@@ -1,5 +1,5 @@
 ---
-title: "Administración del acceso a Internet mediante directivas de explorador administrado | System Center Configuration Manager"
+title: Administrar el acceso a Internet mediante directivas de explorador administrado | Microsoft Docs
 description: Implemente Intune Managed Browser para administrar y restringir el acceso a Internet.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e5efee7b94f5c61a610fd9f9fa278c992f9c64b8
+ms.sourcegitcommit: dcdaec52c9eafba3f7ce569f0dabb98921b4dc0a
+ms.openlocfilehash: f870a98fa9e839df16d0ca9deb96a18128f35ba6
 
 
 ---
@@ -26,10 +26,10 @@ ms.openlocfilehash: e5efee7b94f5c61a610fd9f9fa278c992f9c64b8
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-En System Center Configuration Manager, puede implementar Intune Managed Browser, una aplicación de exploración web, y asociar la aplicación con una directiva de explorador administrado. La directiva de explorador administrado configura una lista de sitios permitidos o una lista de sitios bloqueados que restringe los sitios web que pueden visitar los usuarios del explorador administrado.  
-  
- Dado que esta aplicación es una aplicación administrada, también puede aplicar las directivas de administración de aplicaciones móviles a la aplicación, tales como controlar el uso de cortar, copiar y pegar, impedir las capturas de pantalla y garantizar que los vínculos a contenido donde los usuarios pueden hacer clic solo se abran en aplicaciones administradas. Para obtener más información, consulte [Protect apps using mobile application management policies](../../apps/deploy-use/protect-apps-using-mam-policies.md) (Protección de aplicaciones mediante directivas de administración de aplicaciones locales).  
-  
+En System Center Configuration Manager, puede implementar Intune Managed Browser (una aplicación de exploración web) y asociar la aplicación con una directiva de explorador administrado. La directiva de explorador administrado configura una lista de permitidos o una lista de bloqueados que restringe los sitios web a los que pueden ir los usuarios del explorador administrado.  
+
+ Dado que esta aplicación es una aplicación administrada, también puede aplicarle directivas de administración de aplicaciones móviles, como controlar el uso de cortar, copiar y pegar. Esto impide las capturas de pantalla y también garantiza que los vínculos a contenido solo se abran en otras aplicaciones administradas. Para obtener más información, consulte [Protect apps using mobile application management policies](../../apps/deploy-use/protect-apps-using-mam-policies.md) (Protección de aplicaciones mediante directivas de administración de aplicaciones locales).  
+
 > [!IMPORTANT]  
 >  Si los usuarios instalan el explorador administrado ellos mismos, las directivas especificadas no lo administrarán. Para asegurarse de que el explorador se administra mediante Configuration Manager, estos deben desinstalar la aplicación para que se la pueda implementar como una aplicación administrada.  
 
@@ -41,52 +41,52 @@ En System Center Configuration Manager, puede implementar Intune Managed Browser
 
 > [!NOTE]  
 >  Para obtener más información sobre la aplicación Intune Managed Browser y descargarla, consulte [iTunes](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) para iOS y [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en) para Android.  
-  
+
 ## <a name="create-a-managed-browser-policy"></a>Crear una directiva de explorador administrado  
 
-1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software** > **Administración de aplicaciones** > **Directivas de administración de aplicaciones**.  
+1.  En la consola de Configuration Manager, seleccione **Biblioteca de software** > **Administración de aplicaciones** > **Directivas de administración de aplicaciones**.  
 
-3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear directiva de administración de aplicaciones**.  
+3.  En la pestaña **Inicio**, en el grupo **Crear**, seleccione **Crear directiva de administración de aplicaciones**.  
 
-4.  En la página **General** , escriba el nombre y la descripción de la directiva y haga clic en **Siguiente**.  
+4.  En la página **General**, escriba el nombre y la descripción de la directiva y seleccione **Siguiente**.  
 
-5.  En la página **Tipo de directiva** , seleccione la plataforma, seleccione **Explorador administrado** para el tipo de directiva y haga clic en **Siguiente**.  
+5.  En la página **Tipo de directiva**, seleccione la plataforma, elija **Explorador administrado** para el tipo de directiva y seleccione **Siguiente**.  
 
      En la página **Explorador administrado** , seleccione una de las siguientes opciones:  
 
-    -   **Permitir al explorador administrado abrir únicamente las direcciones URL de la lista siguiente** : especifique una lista de direcciones URL que el explorador administrado podrá abrir.  
+    -   **Permitir al explorador administrado abrir únicamente las direcciones URL de la lista siguiente**: especifique una lista de direcciones URL que el explorador administrado podrá abrir.  
 
-    -   **Bloquear el explorador administrado para que no pueda abrir las direcciones URL de la lista siguiente** : especifique una lista de direcciones URL que el explorador administrado no podrá abrir.  
+    -   **Bloquear el explorador administrado para que no pueda abrir las direcciones URL de la lista siguiente**: especifique una lista de direcciones URL que el explorador administrado no podrá abrir.  
 
     > [!NOTE]  
     >  No puede incluir direcciones URL permitidas y bloqueadas en la misma directiva de explorador administrado.  
 
-     Para obtener más información sobre los formatos de dirección URL que se pueden especificar, vea **Formato de dirección URL para las direcciones URL permitidas y bloqueadas** en este tema.  
+     Para obtener más información sobre los formatos de dirección URL que se pueden especificar, consulte Formato de dirección URL para las direcciones URL permitidas y bloqueadas en este artículo.  
 
     > [!NOTE]  
-    >  El tipo de directiva **General** permite modificar la funcionalidad de las aplicaciones que implementa para que se ajusten a los requisitos de cumplimiento y las directivas de seguridad de su empresa. Por ejemplo, puede restringir las operaciones de cortar, copiar y pegar en una aplicación restringida. Para obtener más información sobre el tipo de directiva general, consulte [Protect apps using mobile application management policies](../../apps/deploy-use/protect-apps-using-mam-policies.md) (Protección de aplicaciones mediante directivas de administración de aplicaciones locales).  
+    >  El tipo de directiva General permite cambiar la funcionalidad de las aplicaciones que implementa para que se ajusten a los requisitos de cumplimiento y las directivas de seguridad de su empresa. Por ejemplo, puede restringir las operaciones de cortar, copiar y pegar en una aplicación restringida. Para obtener más información sobre el tipo de directiva general, consulte [Proteger aplicaciones mediante directivas de administración de aplicaciones móviles](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
 
-6.  Complete el asistente.  
+6.  Finalice el asistente.  
 
- La directiva nueva se muestra en el nodo **Directivas de administración de aplicaciones** del área de trabajo **Biblioteca de software** .  
+La directiva nueva se muestra en el nodo **Directivas de administración de aplicaciones** del área de trabajo **Biblioteca de software** .  
 
 ## <a name="create-a-software-deployment-for-the-managed-browser-app"></a>Crear una implementación de software para la aplicación de explorador administrado  
  Después de crear la directiva de explorador administrado, puede crear un tipo de implementación de software para la aplicación de explorador administrado. Debe asociar una directiva general y una directiva de explorador administrado para la aplicación de explorador administrado.  
-  
+
  Para obtener más información, consulte [Create applications](../../apps/deploy-use/create-applications.md) (Creación de aplicaciones).  
-  
+
 ## <a name="security-and-privacy-for-the-managed-browser"></a>Seguridad y privacidad del explorador administrado  
 
--   En dispositivos iOS, no se pueden abrir los sitios web que visitan los usuarios y que tienen un certificado expirado o que no es de confianza.  
+-   En dispositivos iOS, no se pueden abrir los sitios web que tienen un certificado expirado o que no es de confianza.  
 
--   El explorador administrado no usa la configuración que realizan los usuarios para el explorador integrado en sus dispositivos. Esto se debe a que el explorador administrado no tiene acceso a esta configuración.  
+-   El explorador administrado no usa la configuración que realizan los usuarios para el explorador integrado en sus dispositivos. El explorador administrado no tiene acceso a esta configuración.  
 
--   Si configura las opciones **Requerir PIN sencillo para el acceso** o **Requerir credenciales corporativas para el acceso** en una directiva de administración de aplicaciones móviles asociada con el explorador administrado, cuando un usuario haga clic en el vínculo de ayuda en la página autenticación, podrá examinar los sitios de Internet independientemente de si se agregaron a una lista de bloqueados en la directiva de explorador administrado.  
+-   Si configura las opciones **Requerir PIN sencillo para el acceso** o **Requerir credenciales corporativas para el acceso** en una directiva de administración de aplicaciones móviles asociada con el explorador administrado, un usuario puede hacer clic en Ayuda en la página de autenticación e ir a cualquier sitio, incluso a uno que se haya agregado a una lista de bloqueados en la directiva de explorador administrado.  
 
 -   El explorador administrado solo puede bloquear el acceso a sitios cuando se accede a estos directamente. No puede bloquear el acceso cuando se usan servicios intermedios (por ejemplo, un servicio de traducción) para acceder al sitio.  
 
 ## <a name="reference-information"></a>Información de referencia  
-  
+
 ###  <a name="url-format-for-allowed-and-blocked-urls"></a>Formato de dirección URL para las direcciones URL permitidas y bloqueadas  
 
 Utilice la siguiente información para conocer los formatos permitidos y los caracteres comodín que puede usar al especificar direcciones URL en las listas de permitidos y bloqueados.  
@@ -140,7 +140,7 @@ Utilice la siguiente información para conocer los formatos permitidos y los car
 
 > [!NOTE]  
 >  *.microsoft.com siempre se permite.  
-  
+
 ### <a name="how-conflicts-between-the-allow-and-block-list-are-resolved"></a>Cómo se resuelven los conflictos entre las listas de permitidos y bloqueados  
  Si se implementan varias directivas de explorador administrado en un dispositivo y la configuración presenta conflictos, tanto el modo (permitir o bloquear) como las listas de direcciones URL se evalúan para detectar conflictos. En caso de conflicto, se aplica el comportamiento siguiente:  
 
@@ -154,6 +154,6 @@ Utilice la siguiente información para conocer los formatos permitidos y los car
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

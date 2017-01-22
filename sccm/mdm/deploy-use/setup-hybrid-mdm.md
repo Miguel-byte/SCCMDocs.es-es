@@ -1,5 +1,5 @@
 ---
-title: "Configurar la MDM híbrida | System Center Configuration Manager y Microsoft Intune"
+title: "Configurar la MDM híbrida | Microsoft Docs"
 description: "Configure la inscripción de dispositivos híbridos con Configuration Manager e Intune."
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 caps.latest.revision: 34
 caps.handback.revision: 0
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 44c0947fcb7abdc4369fe0b4f47409b49d068861
+ms.sourcegitcommit: 48b91e88f78752cf7c05162b701ea2ca2f401de3
+ms.openlocfilehash: 85df3df19f01f8ed6f5240851c47afce01a92880
 
 ---
 
@@ -173,6 +173,7 @@ Una vez creada la suscripción, puede instalar el rol de sistema de sitio del pu
   - [Configuración de inscripción de Windows](#windows-enrollment-setup): configure DNS y habilite la inscripción para dispositivos Windows Phone, Windows 10 Mobile y PC Windows
   - Android: los dispositivos Android no requieren ningún paso adicional para habilitar la inscripción
 
+Una vez habilitada la administración de MDM, puede especificar el número de dispositivos que puede inscribir a cada usuario, con un máximo de 15 dispositivos por usuario.
 
 ### <a name="ios-and-mac-enrollment-setup"></a>Configuración de inscripción de iOS y Mac
   Los pasos siguientes habilitan la administración de dispositivos de Apple al cargar un certificado de inserción de MDM de Apple en el servicio Intune.
@@ -245,7 +246,7 @@ Los **elementos de configuración** le permiten administrar la configuración (p
 - [Dispositivos Windows 10 y Windows 8.1](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)
 - [Dispositivos Windows Phone](/sccm/compliance/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client)
 - [Dispositivos iOS y Mac](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)
-- [Dispositivos Android y Samsung KNOX](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)
+- [Dispositivos Android y Samsung KNOX Standard](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)
 
 Se pueden implementar **aplicaciones** en dispositivos administrados:
 - [Aplicaciones de iOS](/sccm/apps/get-started/creating-ios-applications)
@@ -273,30 +274,38 @@ Ha completado la configuración híbrida. Se pueden inscribir dispositivos en Co
 - Dispositivos propiedad del usuario (BYOD): [informar a los usuarios sobre cómo inscribir sus dispositivos](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune) (la guía de inscripción es la misma para los dispositivos administrados por Intune e híbridos)
 - Dispositivos propiedad de la empresa (COD): la [inscripción de dispositivos propiedad de la empresa](enroll-company-owned-devices.md) proporciona directrices sobre las diferentes formas específicas de la plataforma de inscribir dispositivos propiedad de la empresa.
 
-### <a name="managing-intune-subscriptions-associated-with-configuration-manager"></a>Administración de suscripciones de Intune asociadas con Configuration Manager
- Si agrega una suscripción de Microsoft Intune (una suscripción de prueba o suscripción de pago) a Configuration Manager y luego necesita cambiar a otra suscripción de Intune, debe eliminar tanto la **suscripción a Microsoft Intune** como el **punto de conexión de servicio** desde la consola de Configuration Manager antes de poder agregar una nueva suscripción.
+## <a name="managing-intune-subscriptions-associated-with-configuration-manager"></a>Administración de suscripciones de Intune asociadas con Configuration Manager
 
-#### <a name="how-to-delete-an-intune-subscription-from-configuration-manager"></a>Cómo eliminar una suscripción a Intune en Configuration Manager
+Si agrega una suscripción de Microsoft Intune (una suscripción de prueba o suscripción de pago) a Configuration Manager y luego necesita cambiar a otra suscripción de Intune, debe eliminar tanto la **suscripción a Microsoft Intune** como el **punto de conexión de servicio** desde la consola de Configuration Manager antes de poder agregar una nueva suscripción.
 
-1.  En la consola de Configuration Manager, haga clic en **Administración**.
+### <a name="how-to-delete-an-intune-subscription-from-configuration-manager"></a>Cómo eliminar una suscripción a Intune en Configuration Manager
 
-2.  En el área de trabajo **Administración**, expanda **Introducción**, vaya a **Servicios en la nube** y haga clic en **Suscripciones a Microsoft Intune**.
+> [!IMPORTANT]
+>  Al eliminar la suscripción se elimina todo el contenido, incluidas las inscripciones de usuario, las directivas y las implementaciones de aplicaciones configuradas para dispositivos administrados por la suscripción a Intune.
 
-3.  Haga clic con el botón derecho en **Suscripción a Microsoft Intune** y luego haga clic en **Eliminar**. La **Suscripción a Microsoft Intune**.
+1.  En la consola de Configuration Manager, vaya a **Administración** > **General** > **Cloud Services** > **Suscripciones a Microsoft Intune**.
 
-    > [!IMPORTANT]
-    >  Se perderá todo el contenido, incluidas las inscripciones de usuario, las directivas y las implementaciones de aplicaciones configuradas para la suscripción de evaluación de Intune.
+2.  Haga clic con el botón derecho en la **Suscripción a Microsoft Intune** que se muestra y, luego, haga clic en **Eliminar**.
 
-4.  En el área de trabajo **Administración**, expanda **Introducción**, vaya a **Configuración del sitio** y seleccione **Servidores y roles del sistema de sitios**.
-
-5.  Seleccione el servidor que hospeda el rol **Punto de conexión de servicio**.
-
-6.  En la lista **Roles del sistema de sitio**, seleccione **Punto de conexión de servicio** y haga clic en **Quitar rol** en la cinta de opciones. Confirme que desea quitar el rol. Se elimina el punto de conexión de servicio.
-
-7.  Ahora puede crear un nuevo punto de conexión de servicio, agregar una nueva suscripción de Intune a Configuration Manager y establecer Configuration Manager como la entidad de MDM.
+3.   En el asistente, haga clic en **Remove Microsoft Intune Subscription from Configuration Manager** (Quitar suscripción a Microsoft Intune de Configuration Manager), en **Siguiente** y, después, otra vez en **Siguiente** para quitar la suscripción.
 
 
+### <a name="how-to-remove-the-service-connection-point-role"></a>Cómo quitar el rol de punto de conexión de servicio
 
-<!--HONumber=Nov16_HO1-->
+1.  Vaya a **Administración** > **General** > **Configuración de sitio** > **Servidores y roles de sistema de sitio**.
+
+2.  Seleccione el servidor que hospeda el rol **Punto de conexión de servicio**.
+
+3.  En la lista **Roles del sistema de sitio**, seleccione **Punto de conexión de servicio** y haga clic en **Quitar rol** en la cinta de opciones. Confirme que desea quitar el rol. Se elimina el punto de conexión de servicio.
+
+Ahora puede crear un nuevo punto de conexión de servicio, agregar una nueva suscripción de Intune a Configuration Manager y establecer Configuration Manager como la entidad de MDM.
+
+### <a name="how-to-change-mdm-authority-to-intune"></a>Cómo cambiar la entidad de MDM a Intune
+
+A partir de la versión 1610, puede para cambiar la entidad de MDM de Configuration Manager a Intune. Próximamente habrá disponible información sobre esta característica.
+
+
+
+<!--HONumber=Dec16_HO3-->
 
 

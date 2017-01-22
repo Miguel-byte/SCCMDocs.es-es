@@ -1,8 +1,8 @@
 ---
-title: Requisitos de certificados PKI | System Center Configuration Manager
+title: Requisitos de certificados PKI | Microsoft Docs
 description: "Encuentre los requisitos de certificados PKI que podría necesitar para System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fbc85f65e4ad952d40161e6f6282bb6c0796662b
+ms.sourcegitcommit: db0642e95bbd7e704d2052aa1e0f5c27cd7bf568
+ms.openlocfilehash: 00c3c355fc43eff18b86112b0b9272cbcdf38e85
 
 
 ---
@@ -32,7 +32,7 @@ En las tablas siguientes se enumeran los certificados de infraestructura de clav
 -   Para Windows Server 2008: [Servicios de certificados de Active Directory en Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
 
 > [!IMPORTANT]  
->  Windows dejará de confiar en los certificados firmados con SHA-1 a partir del 1 de enero de 2017.  Se recomienda emitir nuevos certificados de autenticación de cliente y servidor firmados con SHA-2.  
+>  Windows dejará de confiar en los certificados firmados con SHA-1 a partir del 1 de enero de 2017.  Se recomienda emitir nuevos certificados de autenticación de cliente y servidor firmados con SHA-2 (lo que incluye SHA-256).  
 >   
 >  Para obtener más información sobre este cambio y las posibles actualizaciones hasta la fecha límite, siga esta entrada de blog: [Windows Enforcement of Authenticode Code Signing and Timestamping (Cumplimiento de la firma de código y la marca de tiempo con Authenticode de Windows](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-authenticode-code-signing-and-timestamping.aspx)  
 
@@ -86,6 +86,6 @@ En las tablas siguientes se enumeran los certificados de infraestructura de clav
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

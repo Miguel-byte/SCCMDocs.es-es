@@ -1,5 +1,5 @@
 ---
-title: "Opciones de línea de comandos de instalación | System Center Configuration Manager"
+title: "Opciones de instalación por línea de comandos | Microsoft Docs"
 description: "Use la información de este artículo para configurar scripts o instalar System Center Configuration Manager desde una línea de comandos."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7d1f55786a42650395fcb66ee4917434feecb630
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: f2b5a1dfa654a30e03bce2b56100bc876358c9fe
 
 ---
 # <a name="command-line-options-for-setup-for-system-center-configuration-manager"></a>Opciones de línea de comandos para la instalación para System Center Configuration Manager
@@ -765,7 +765,7 @@ Utilice los siguientes datos para instalar un sitio de administración central m
 
          80 = omitir recuperación de base de datos.  
 
-    -   **Detalles:** especifica cómo recupera el programa de instalación la base de datos de sitio en SQL Server.  
+    -   **Detalles:** especifica cómo recupera el programa de instalación la base de datos de sitio en SQL Server.  
 
 -   **Nombre de clave:** ReferenceSite  
 
@@ -1029,7 +1029,7 @@ Utilice los siguientes datos para instalar un sitio de administración central m
 
          80 = omitir recuperación de base de datos.  
 
-    -   **Detalles:** especifica cómo recupera el programa de instalación la base de datos de sitio en SQL Server.  
+    -   **Detalles:** especifica cómo recupera el programa de instalación la base de datos de sitio en SQL Server.  
 
 -   **Nombre de clave:** SiteServerBackupLocation  
 
@@ -1260,6 +1260,6 @@ Utilice los siguientes datos para instalar un sitio de administración central m
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Privacidad y seguridad de los perfiles de Wi-Fi y VPN | System Center Configuration Manager
+title: Seguridad y privacidad de perfiles de VPN y Wi-Fi | Microsoft Docs
 description: "Obtenga información sobre los procedimientos recomendados de seguridad para administrar perfiles de Wi-Fi y VPN de dispositivos en System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/19/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 32dff36aa8027b0563b999e7fe6ef41d0eb79020
-ms.openlocfilehash: b9d70018708ab5932a3032134b03aef236ef9fda
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: fb168e3af33648e06c2c6be77ddd7d0c1f65d95d
 
 
 ---
@@ -29,7 +29,7 @@ ms.openlocfilehash: b9d70018708ab5932a3032134b03aef236ef9fda
 
 Este tema contiene información sobre la seguridad y privacidad de los perfiles de Wi-Fi y VPN en System Center Configuration Manager.  
 
-##  <a name="a-namebkmksecurityremoteconnectionsa-security-best-practices-for-wi-fi-and-vpn-profiles"></a><a name="BKMK_Security_RemoteConnections"></a> Procedimientos recomendados de seguridad para perfiles de Wi-Fi y VPN  
+##  <a name="a-namebkmksecurityremoteconnectionsa-security-best-practices-for-wi-fi--and-vpn-profiles"></a><a name="BKMK_Security_RemoteConnections"></a> Procedimientos recomendados de seguridad para perfiles de Wi-Fi y VPN  
  Use los siguientes procedimientos recomendados de seguridad al administrar perfiles de Wi-Fi y VPN para dispositivos.  
 
 |Práctica recomendada de seguridad|Más información|  
@@ -45,6 +45,6 @@ Este tema contiene información sobre la seguridad y privacidad de los perfiles 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Preparar la instalación de sitios | System Center Configuration Manager"
+title: "Preparar la instalación de sitios | Microsoft Docs"
 description: "Lea esta información para ahorrar tiempo durante la instalación de varios sitios y así evitar errores."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 6f240f1da4561c05bee974b78f43bfcdba591df6
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 0534d1eb587cb01f35d811d72ddfe6ceb07e5b7c
 
 ---
 # <a name="prepare-to-install-system-center-configuration-manager-sites"></a>Preparar la instalación de sitios de System Center Configuration Manager
@@ -73,7 +73,7 @@ Use la consola de Configuration Manager para instalar un sitio secundario debajo
 
 
 
-## <a name="a-namebkmktasksa-common-tasks-to-complete-before-starting-an-install"></a><a name="bkmk_tasks"></a> Tareas comunes por efectuar antes de iniciar una instalación
+## <a name="a-namebkmktasksa--common-tasks-to-complete-before-starting-an-install"></a><a name="bkmk_tasks"></a> Tareas comunes por efectuar antes de iniciar una instalación
 -   Analice la topología de la jerarquía que se usará para la implementación    
      (consulte [Design a hierarchy of sites for System Center Configuration Manager](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md) (Diseñar una jerarquía de sitios para System Center Configuration Manager))  
 
@@ -90,7 +90,7 @@ Use la consola de Configuration Manager para instalar un sitio secundario debajo
 
 
 
-## <a name="a-namebkmksitecodesa-about-site-names-and-site-codes"></a><a name="bkmk_sitecodes"></a> Acerca de los nombres de sitio y los códigos de sitio
+## <a name="a-namebkmksitecodesa--about-site-names-and-site-codes"></a><a name="bkmk_sitecodes"></a> Acerca de los nombres de sitio y los códigos de sitio
 Para identificar y administrar los sitios en una jerarquía de Configuration Manager se usan códigos y nombres de sitio. En la consola de Configuration Manager, el código y el nombre de sitio se muestran con el formato &lt;código de sitio\> - &lt;nombre de sitio\>. Los códigos de sitio que use en su jerarquía deben ser únicos. Si el esquema de Active Directory se extiende para Configuration Manager y los sitios publican datos, los códigos de sitio que se usan en un bosque de Active Directory deben ser únicos incluso si se usan en otra jerarquía de Configuration Manager o si se han usado en instalaciones previas de Configuration Manager. Asegúrese de planear cuidadosamente sus códigos y nombres de sitio antes de implementar su jerarquía.
 
 ### <a name="specify-a-site-code-and-site-name"></a>Especificar un nombre y un código de sitio
@@ -126,7 +126,7 @@ Antes de instalar sitios, debe comprender las siguientes limitaciones que se apl
     -   Configuration Manager no admite mover un sitio primario secundario fuera de una jerarquía para crear un sitio primario independiente o para adjuntarlo a otra jerarquía. En su lugar, desinstale el sitio principal secundario y, luego, vuelva a instalarlo como un nuevo sitio primario independiente o como sitio secundario del sitio de administración central de otra jerarquía.  
 
 
-## <a name="a-namebkmkoptionalstepsa-optional-steps-to-run-before-starting-setup"></a><a name="bkmk_optionalsteps"></a> Pasos opcionales para ejecutar antes de iniciar el programa de instalación
+## <a name="a-namebkmkoptionalstepsa--optional-steps-to-run-before-starting-setup"></a><a name="bkmk_optionalsteps"></a> Pasos opcionales para ejecutar antes de iniciar el programa de instalación
 **Puede ejecutar manualmente el [descargador del programa de instalación](../../../../core/servers/deploy/install/setup-downloader.md)** para descargar los archivos de instalación actualizados de Configuration Manager.
 
 Si el equipo en el que se ejecutará el programa de instalación no está conectado a Internet, o bien si tiene previsto instalar varios servidores de sitio, le recomendamos que use el descargador del programa de instalación para descargar las actualizaciones necesarias para los archivos de instalación:
@@ -148,6 +148,6 @@ Si el equipo en el que se ejecutará el programa de instalación no está conect
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

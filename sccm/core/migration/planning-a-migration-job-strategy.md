@@ -1,5 +1,5 @@
 ---
-title: "Planeamiento del trabajo de migración | System Center Configuration Manager"
+title: "Planeamiento del trabajo de migración | Microsoft Docs"
 description: "Use trabajos de migración para configurar los datos que quiera migrar al entorno de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -18,8 +18,8 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 21e00064a8ecad3dd1c24b7f02bd0a8a8c36924f
+ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
+ms.openlocfilehash: 4e1ad4e8a043d1a6ede5dc88ca6b6c703f46e9da
 
 
 ---
@@ -226,7 +226,7 @@ Use trabajos de migración para configurar los datos específicos que quiera mig
 ### <a name="data-selection"></a>Selección de datos  
  Cuando cree un trabajo de migración de recopilación, debe seleccionar una o más recopilaciones. Después de seleccionar las recopilaciones, el Asistente para crear trabajo de migración muestra los objetos asociados a las recopilaciones. De forma predeterminada, se migran todos los objetos asociados a las recopilaciones seleccionadas, pero puede borrar los objetos que no desee migrar con ese trabajo. Cuando borra un objeto que tiene objetos dependientes, también se borran esos objetos dependientes. Todos los objetos borrados se agregan a una lista de exclusión. Los objetos que aparecen en una lista de exclusión se quitan de la selección automática en futuros trabajos de migración. Debe editar manualmente la lista de exclusión para quitar los objetos que desee que se seleccionen automáticamente para la migración en los trabajos de migración que se creen en el futuro.  
 
-### <a name="site-ownership-for-migrated-content"></a>Propiedad del sitio para el contenido migrado  
+### <a name="site-ownership-for--migrated-content"></a>Propiedad del sitio para el contenido migrado  
  Cuando migra contenido para las implementaciones, debe asignar el objeto de contenido a un sitio en la jerarquía de destino. Este sitio, a continuación, se convierte en el propietario de ese contenido en la jerarquía de destino. Aunque el sitio de nivel superior de su jerarquía de destino es el sitio que migra realmente los metadatos del contenido, es el sitio asignado que accede a los archivos de origen originales del contenido en la red.  
 
  Para minimizar el ancho de banda de red que se utiliza durante la migración, considere la posibilidad de transferir propiedad del contenido al sitio más cercano disponible. Dado que la información sobre el contenido se comparte de forma global en System Center Configuration Manager, estará disponible en cada sitio.  
@@ -322,6 +322,6 @@ Use trabajos de migración para configurar los datos específicos que quiera mig
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

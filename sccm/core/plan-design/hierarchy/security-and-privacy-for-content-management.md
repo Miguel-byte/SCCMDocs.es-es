@@ -1,5 +1,5 @@
 ---
-title: "Privacidad y seguridad de la administración de contenido | System Center Configuration Manager"
+title: "Seguridad y privacidad de la administración de contenido | Microsoft Docs"
 description: "Optimice la seguridad y la privacidad de la administración de contenido de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fcc3c74e50a4cdac9337178f5fcfe710f0fa17a5
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 44c45bf87d27da23da5e1dc7b047cbacc6d9903e
 
 
 ---
@@ -96,6 +96,6 @@ Al planear la administración de contenido, tenga en cuenta lo siguiente:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

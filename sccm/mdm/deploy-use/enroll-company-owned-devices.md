@@ -1,5 +1,5 @@
 ---
-title: "Inscribir dispositivos de empresa para implementaciones híbridas con Configuration Manager"
+title: "Inscribir dispositivos propiedad de la empresa para implementaciones híbridas con Configuration Manager | Microsoft Docs"
 description: "Obtenga información sobre los diferentes métodos para inscribir dispositivos de empresa para implementaciones híbridas con Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2754ce6-1460-4ddd-9050-2cc87e7964f4
 caps.latest.revision: 13
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 91f1d0d775236fe4cb6675b1017161520a281df5
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 490b89f8174667d232a2ca3729d36ead8fc4d46c
 
 
 ---
@@ -47,10 +47,10 @@ Los dispositivos de empresa (COD) o de la organización se pueden incorporar a l
 Puede identificar los dispositivos corporativos si importa sus números de identidad internacional de equipo móvil (IMEI) o los números de serie de iOS. Puede cargar un archivo de valores separados por comas (.csv) que incluya los números IMEI de los dispositivos o escribir la información de los dispositivos de forma manual.  Consulte [Predeclare devices with hardware ID numbers](../../mdm/deploy-use/predeclare-devices-with-hardware-id.md) (Predeclarar dispositivos con números de Id. de hardware).
 
 ## <a name="see-also"></a>Véase también  
- [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../mdm/plan-design/hybrid-mobile-device-management.md) (Administración híbrida de dispositivos móviles (MDM) con System Center Configuration Manager y Microsoft Intune)
+ [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management) (Administración híbrida de dispositivos móviles (MDM) con System Center Configuration Manager y Microsoft Intune)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Administración de secuencias de tareas para automatizar tareas | Configuration Manager"
+title: Administrar secuencias de tareas para automatizar tareas | Microsoft Docs
 description: Puede crear, editar, implementar, importar y exportar secuencias de tareas para administrarlas en su entorno de System Center Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 04e4e8193d427289a3b84a14efe18511bf5c9731
+ms.sourcegitcommit: d04d28bbd5116a841c0872cf3f9ca18783dddc78
+ms.openlocfilehash: 417b31fa1feb6d0f674f14ef9e5c7cebd7013916
 
 
 ---
@@ -237,6 +237,8 @@ Utilice secuencias de tareas para automatizar los pasos en su entorno de System 
 
 -   Las contraseñas almacenadas en la secuencia de tareas no se exportan. Si exporta e importa una secuencia de tareas que contiene contraseñas, debe editar la secuencia de tareas importada y especificar las contraseñas de nuevo. Procure especificar contraseñas para las acciones [Unirse a dominio o grupo de trabajo](../understand/task-sequence-steps.md#BKMK_JoinDomainorWorkgroup), [Conectar a carpeta de red](../understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder) y [Ejecutar línea de comandos](../understand/task-sequence-steps.md#BKMK_RunCommandLine).  
 
+- Cuando exporta una secuencia de tareas con el paso **Establecer variables dinámicas**, no se exporta ningún valor para las variables que se configuran con la opción **Valor secreto**. Debe volver a escribir los valores de estas variables después de importar la secuencia de tareas.
+
 -   Como práctica recomendada, si tiene varios sitios primarios, importe las secuencias de tareas en el sitio de administración central.  
 
  Utilice los siguientes procedimientos para exportar e importar una secuencia de tareas.  
@@ -367,6 +369,6 @@ Utilice secuencias de tareas para automatizar los pasos en su entorno de System 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

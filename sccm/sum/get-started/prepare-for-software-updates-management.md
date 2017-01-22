@@ -1,6 +1,6 @@
 ---
 
-title: "Preparar la administración de actualizaciones de software | Configuration Manager"
+title: "Preparar la administración de actualizaciones de software | Microsoft Docs"
 description: "Para preparar la administración de actualizaciones, lleve a cabo estas tareas para mostrar los datos de la evaluación de compatibilidad en la consola de System Center Configuration Manager."
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 01907900-e28b-4cd7-9479-42906416707b
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 54da71905de83133012c124dbc25283258141d6c
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 5c34bd1ea108dffda10c30281fb9c97ba38ae1ae
 
 
 ---
@@ -40,6 +40,6 @@ Después de sincronizar las actualizaciones de software, compruebe la configurac
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

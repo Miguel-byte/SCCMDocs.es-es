@@ -1,5 +1,5 @@
 ---
-title: "Administración del ancho de banda de red para el contenido | System Center Configuration Manager"
+title: "Administración del ancho de banda de red para el contenido | Microsoft Docs"
 description: "Configure la programación, el límite y el contenido preconfigurado para System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 92a08908f284abb02ce8000122b0839c474616d7
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 14ce376f385ec19d224e8b1a2918eed5379a64e5
 
 
 ---
@@ -76,6 +76,6 @@ Opcionalmente puede configurar el punto de distribución como **preconfigurado**
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

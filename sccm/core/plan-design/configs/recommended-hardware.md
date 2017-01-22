@@ -1,5 +1,5 @@
 ---
-title: Hardware recomendado | System Center Configuration Manager
+title: Hardware recomendado | Microsoft Docs
 description: "Obtenga recomendaciones de hardware que le ayudarán a ampliar su entorno de System Center Configuration Manager más allá de una implementación básica."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d5aa39a9551cc872631895bb1664de5a35531854
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 3155c877a14f99e054cfa7ca4afaa73bae3f8cac
 
 
 ---
@@ -44,7 +44,7 @@ Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas
 
 ###  <a name="a-namebkmkscalesiteservera-site-servers"></a><a name="bkmk_ScaleSiteServer"></a> Servidores de sitio  
 
-|Sitio primario independiente|Núcleos de CPU|GB de memoria|Asignación de % memoria para SQL Server|  
+|Sitio primario independiente|Núcleos de CPU|GB de memoria|Asignación de % memoria para SQL Server|  
 |-------------------------------|---------------|---------------|----------------------------------------|  
 |Servidor de sitio primario independiente con el rol de sitio de base de datos en el mismo servidor<sup>1</sup>|16|96|80|  
 |Servidor de sitio primario independiente con una base de datos de sitio remoto|8|16|-|  
@@ -185,6 +185,6 @@ Puede instalar PowerShell antes o después de que se instale la consola de Confi
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

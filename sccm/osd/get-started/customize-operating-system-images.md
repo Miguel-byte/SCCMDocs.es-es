@@ -1,5 +1,5 @@
 ---
-title: "Personalizar imágenes de sistema operativo | Configuration Manager"
+title: "Personalizar imágenes de sistema operativo | Microsoft Docs"
 description: "Use secuencias de tareas de captura y compilación, la configuración manual o una combinación de ambas para personalizar una imagen de sistema operativo."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e7e0ecf394297799c2a3d0c14e719182b403e1e8
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: c183fbde6de29ccd7c78ae066d305f0e99e37bda
 
 
 ---
@@ -28,7 +28,7 @@ ms.openlocfilehash: e7e0ecf394297799c2a3d0c14e719182b403e1e8
 
 Las imágenes de sistema operativo de System Center Configuration Manager son archivos WIM y representan una recopilación comprimida de archivos de referencia y carpetas necesarios para instalar y configurar correctamente un sistema operativo en un equipo. Una imagen de sistema operativo personalizada se compila y captura mediante un equipo de referencia que se configura con todos los archivos de sistema operativo, los archivos auxiliares, las actualizaciones de software, las herramientas y las aplicaciones de software necesarios. La medida en que configure el equipo de referencia manualmente depende de usted. Puede automatizar completamente la configuración del equipo de referencia mediante el uso de una secuencia de tareas de compilación y captura, puede configurar manualmente algunos aspectos del equipo de referencia y automatizar luego el resto mediante secuencias de tareas, o puede configurar manualmente el equipo de referencia sin usar secuencias de tareas. Use las siguientes secciones para personalizar un sistema operativo.
 
-##  <a name="a-namebkmkpreparereferencecomputera-prepare-for-the-reference-computer"></a><a name="BKMK_PrepareReferenceComputer"></a> Preparar el equipo de referencia  
+##  <a name="a-namebkmkpreparereferencecomputera-prepare-for-the--reference-computer"></a><a name="BKMK_PrepareReferenceComputer"></a> Preparar el equipo de referencia  
  Existen algunas consideraciones a tener en cuenta antes de capturar una imagen de sistema operativo desde un equipo de referencia.  
 
 ###  <a name="a-namebkmkrefcomputerdecidea-decide-between-an-automated-or-manual-configuration"></a><a name="BKMK_RefComputerDecide"></a> Decidir entre una configuración automatizada o manual  
@@ -140,6 +140,6 @@ Las imágenes de sistema operativo de System Center Configuration Manager son ar
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

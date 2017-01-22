@@ -1,5 +1,5 @@
 ---
-title: "Notas de la versión | System Center Configuration Manager"
+title: "Notas de la versión | Microsoft Docs"
 description: "Consulte estas notas relativas a problemas urgentes que aún no se han corregido en el producto o no se han tratado en un artículo de Microsoft Knowledge Base."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 0b6c49f3c5e817f1dbd40b40c78d89c4a018e0f1
+ms.sourcegitcommit: ea723a6694feb2c9584b35498aa9c3519383f08d
+ms.openlocfilehash: a9dc046a54c15d9d299664cd1f2a149383f53489
 
 
 ---
@@ -35,16 +35,31 @@ Con System Center Configuration Manager, las notas de la versión del producto s
 
 ## <a name="setup-and-upgrade"></a>Instalación y actualización  
 
+### <a name="when-installing-a-long-term-service-branch-site-using-version-1606-a-current-branch-site-is-installed"></a>Al instalar un sitio de Rama de mantenimiento a largo plazo mediante la versión 1606, se instala un sitio de Rama actual
+Al usar el medio de línea base de la versión 1606 incluido en la versión de octubre de 2016 para instalar un sitio de Rama de mantenimiento a largo plazo (LTSB), el programa de instalación instala en su lugar un sitio de Rama actual. Esto ocurre porque no está seleccionada la opción para instalar un punto de conexión de servicio con la instalación del sitio.
+
+ - Aunque no es necesario un punto de conexión de servicio, se debe seleccionar que se instale durante la instalación de un sitio de LTSB.
+
+Una vez completada la instalación, puede desinstalar el punto de conexión de servicio.  Pero debe tener un punto de conexión de servicio en modo sin conexión o en línea para enviar datos de telemetría y obtener actualizaciones de seguridad de los sitios de Rama actual y LTSB.
+
+Si su sitio se instaló como un sitio de Rama actual pero quería instalar la LTSB, puede desinstalarlo y volver a instalarlo. También puede llamar a [Ayuda y soporte de Microsoft](http://go.microsoft.com/fwlink/?LinkId=243064) para obtener ayuda.  
+
+Para confirmar qué rama está instalada, en la consola, vaya a **Administración** > **Configuración de sitio** > **Sitios** y abra **Configuración de jerarquía**. La opción para convertir el sitio a un sitio de Rama actual solo está disponible cuando el sitio ejecuta la LTSB.  
+
+**Solución alternativa:**  ninguna.   
 
 
-### <a name="the-sql-server-backup-model-in-use-by-configuration-manager-can-change-from-full-to-simple"></a>El modelo de copia de seguridad de SQL Server que se usa en Configuration Manager puede cambiar de completo a simple  
+
+
+
+### <a name="the--sql-server-backup-model-in-use-by-configuration-manager-can-change-from-full-to-simple"></a>El modelo de copia de seguridad de SQL Server que se usa en Configuration Manager puede cambiar de completo a simple  
  Al actualizar a System Center Configuration Manager versión 1511, el modelo de copia de seguridad de SQL Server que usa Configuration Manager puede cambiar de completo a simple.  
 
 -   Si usa una tarea de copia de seguridad de SQL Server personalizada con el modelo de copia de seguridad completa (en lugar de la tarea de copia de seguridad integrada para Configuration Manager), la actualización puede cambiar su modelo de copia de seguridad de completa a sencilla.  
 
 **Solución**: después de actualizar a la versión 1511, revise la configuración de SQL Server y restáurela por completo si es necesario.  
 
-### <a name="when-you-add-a-service-window-to-a-new-site-server-service-windows-that-were-configured-for-another-site-server-are-deleted"></a>Al agregar una ventana de servicio a un nuevo servidor de sitio, se eliminan las ventanas de servicio que se habían configurado para otro servidor de sitio  
+### <a name="when-you-add-a-service-window-to-a-new-site-server-service-windows-that-were---configured-for-another-site-server-are-deleted"></a>Al agregar una ventana de servicio a un nuevo servidor de sitio, se eliminan las ventanas de servicio que se habían configurado para otro servidor de sitio  
  Al usar ventanas de servicio con System Center Configuration Manager versión 1511, solo se pueden configurar ventanas de servicio para un único servidor de sitio en una jerarquía. Si después de configurar ventanas de servicio en un servidor, configura una ventana de servicio en un segundo servidor de sitio, las ventanas de servicio del primero se eliminan de forma silenciosa, sin ningún error ni advertencia.  
 
 **Solución alternativa**: instale la revisión que se describe en el [artículo 3142341 de Microsoft Knowledge Base](http://support.microsoft.com/kb/3142341). Este problema también se resuelve al instalar la actualización 1602 de System Center Configuration Manager.  
@@ -120,6 +135,32 @@ Al ejecutar el programa de instalación desde la carpeta CD.Latest creada para l
 **Solución alternativa:** use uno de los siguientes métodos:
  - Durante la instalación, descargue los archivos de redistribución más recientes de Microsoft, en lugar de usar los que se incluyen en la carpeta CD.Latest.
  - Elimine manualmente la carpeta *cd.latest\redist\languagepack\zhh* y, luego, vuelva a ejecutar la instalación.
+
+### <a name="service-connection-tool-throws-an-exception-when-sql-server-is-remote-or-when-shared-memory-is-disabled"></a>La herramienta de conexión de servicio produce una excepción cuando SQL Server está instalado en una ubicación remota o cuando la memoria compartida está deshabilitada
+A partir de la versión 1606, la herramienta de conexión de servicio genera una excepción cuando se cumple una de las siguientes condiciones:  
+ -  La base de datos del sitio está instalada en una ubicación remota con respecto al equipo que hospeda el punto de conexión de servicio y usa un puerto no estándar (un puerto distinto de 1433).
+ -  La base de datos del sitio está en el mismo servidor que el punto de conexión de servicio, pero la **memoria compartida** del protocolo de SQL está deshabilitada.
+
+La excepción es similar a la siguiente:
+ - *Excepción no controlada: System.Data.SqlClient.SqlException: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (proveedor: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server) --*
+
+**Solución alternativa**: mientras usa la herramienta, debe modificar el registro del servidor que hospeda el punto de conexión de servicio para que incluya información sobre el puerto de SQL Server:
+
+   1.   Antes de usar la herramienta, edite la siguiente clave del Registro y agregue el número del puerto que está en uso con el nombre de SQL Server:
+    - Clave: HKLM\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\
+      - Valor: &lt;nombre de SQL Server>
+    - Agregue: **,&lt;PUERTO>**
+
+    Por ejemplo, para agregar el puerto *15001* a un servidor denominado *testserver.test.net*, la clave resultante sería la siguiente: ***HKLM\Software\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\testserver.test.net,15001***
+
+   2.   Después de agregar el puerto al registro, la herramienta debería funcionar con normalidad.  
+
+   3.   Una vez que haya acabado de usar la herramienta, cambie la clave del Registro al valor original para los pasos **-import** y **-connect**.  
+
+
+
+
+
 
 ## <a name="backup-and-recovery"></a>Copia de seguridad y recuperación
 ### <a name="pre-production-client-is-not-available-after-a-site-restore"></a>El cliente de preproducción no está disponible después de una restauración del sitio
@@ -250,6 +291,6 @@ Este problema afecta al acceso condicional de System Center Configuration Manage
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

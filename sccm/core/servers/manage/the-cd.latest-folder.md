@@ -1,5 +1,5 @@
 ---
-title: La carpeta CD.Latest | System Center Configuration Manager
+title: Carpeta CD.Latest | Microsoft Docs
 description: "Obtenga información sobre el nuevo proceso de actualización que proporciona actualizaciones al producto desde la consola de Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fc63227aa4345fb58e7efc15abd55071fb33e5d5
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: dcf56f6b82f89e81d636ea920f36133e245cbb1e
 
 
 ---
@@ -28,6 +28,8 @@ ms.openlocfilehash: fc63227aa4345fb58e7efc15abd55071fb33e5d5
 System Center Configuration Manager introduce un nuevo proceso de actualización que proporciona actualizaciones al producto desde la consola de Configuration Manager. Para admitir este nuevo método de actualización de Configuration Manager, se crea una nueva carpeta denominada **CD.Latest** que contiene una copia de los archivos de instalación de Configuration Manager de la versión actualizada de su sitio.  
 
 A partir de la actualización 1606, la carpeta CD.Latest contiene una carpeta denominada **Redist** , que contiene los archivos redistribuibles que configura las descargas y los usos. Estos archivos coinciden con la versión de los archivos de Configuration Manager que se encuentran en la carpeta CD.Latest. Al ejecutar el programa de instalación desde una carpeta CD.Latest más reciente, debe utilizar los archivos que coincidan con esa versión del programa de instalación. Para ello puede dirigir el programa de instalación para descargar los archivos nuevos y actuales de Microsoft o dirigir el programa de instalación para utilizar los archivos desde la carpeta Redist incluida en la carpeta CD.Latest.
+
+En cambio, el medio de línea base, como la versión de línea base 1606 que se ha publicado en octubre de 2016, no incluye una carpeta Redist. No se creará la carpeta Redist hasta que se instale una actualización en la consola. Mientras tanto, use la carpeta Redist que ha usado al instalar sitios desde el medio de línea base.  
 
 > [!TIP]
 > Si aún no ha instalado la versión 1606, debe asegurarse de que los archivos de redistribución que usa están actualizados. Si no ha descargado los archivos de redistribución recientemente, permita que el programa de instalación lo haga desde Microsoft.   
@@ -61,6 +63,6 @@ Los archivos de origen de la carpeta CD.Latest se admiten para lo siguiente:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

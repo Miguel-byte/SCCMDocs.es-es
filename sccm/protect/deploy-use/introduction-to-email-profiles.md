@@ -1,5 +1,5 @@
 ---
-title: "Introducción a los perfiles de correo electrónico | System Center Configuration Manager"
+title: "Introducción a los perfiles de correo electrónico | Microsoft Docs"
 description: "Obtenga información sobre cómo usar perfiles de correo electrónico para permitir que los usuarios tengan acceso al correo electrónico corporativo en sus dispositivos con una configuración mínima."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 83066e1f0e3c6536649e9b74ca13562c9d817619
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: b936a0914f8811f755cbb6983fefc063fbc4f97c
 
 
 ---
@@ -38,10 +38,10 @@ Los perfiles de correo electrónico funcionan con Microsoft Intune para permitir
 
 -   Dispositivos iPhone que ejecutan iOS 5, iOS 6, iOS 7 e iOS 8  
 
--   Dispositivos iPad que ejecutan iOS 5, iOS 6, iOS 7 e iOS 8  
+-   Dispositivos IPad con iOS 5, iOS 6, iOS 7 e iOS 8  
 
 > [!IMPORTANT]  
->  Para implementar perfiles en dispositivos iOS, Android Samsung KNOX, Windows Phone, Windows 8.1 o Windows 10, estos dispositivos se deben inscribir en Intune. Para obtener información sobre cómo inscribir dispositivos, consulte [Administrar dispositivos móviles con Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
+>  Para implementar perfiles en dispositivos iOS, Android Samsung KNOX Standard, Windows Phone, Windows 8.1 o Windows 10, estos dispositivos se deben inscribir en Intune. Para obtener información sobre cómo inscribir dispositivos, consulte [Administrar dispositivos móviles con Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
 
  Además de configurar una cuenta de correo electrónico en el dispositivo, también puede configurar las opciones de sincronización de contactos, calendarios y tareas.  
 
@@ -49,6 +49,6 @@ Los perfiles de correo electrónico funcionan con Microsoft Intune para permitir
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

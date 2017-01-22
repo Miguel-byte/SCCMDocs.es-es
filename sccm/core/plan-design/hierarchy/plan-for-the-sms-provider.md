@@ -1,5 +1,5 @@
 ---
-title: Planificar el proveedor de SMS | System Center Configuration Manager
+title: Planear el proveedor de SMS | Microsoft Docs
 description: "Obtenga información sobre cómo el proveedor de SMS le ayuda a administrar System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: bdf7b9b4ab9e9da25bf32891381f61c94ef28285
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 9b766575739246e05d5affbfeade3c31de95ef98
 
 
 ---
@@ -201,6 +201,6 @@ La instalación de Windows ADK puede requerir hasta 650 MB de espacio libre en d
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

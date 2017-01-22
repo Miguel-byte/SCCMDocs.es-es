@@ -1,5 +1,5 @@
 ---
-title: "Preparar el almacenamiento en caché del mismo nivel de Windows PE para reducir el tráfico WAN | Configuration Manager"
+title: "Preparar el almacenamiento en caché del mismo nivel de Windows PE para reducir el tráfico WAN | Microsoft Docs"
 description: "Almacenamiento en caché del mismo nivel de Windows PE funciona en Windows PE para obtener contenido de un elemento local de mismo nivel y minimizar el tráfico WAN cuando no hay ningún punto de distribución local."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: dc21868f99e17070b25c8b490e86477227a96c8e
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 814c6133a30b1116d05aaeafddb0dfb7fe2a390e
 
 
 ---
@@ -52,17 +52,17 @@ Use las siguientes secciones para administrar Almacenamiento en caché del mismo
 
 -   Actualizaciones de software  
 
-##  <a name="a-namebkmkpeercacheworka-how-does-windows-pe-peer-cache-work"></a><a name="BKMK_PeerCacheWork"></a> ¿Cómo funciona Almacenamiento en caché del mismo nivel en Windows PE?  
+##  <a name="a-namebkmkpeercacheworka-how-does--windows-pe-peer-cache-work"></a><a name="BKMK_PeerCacheWork"></a> ¿Cómo funciona Almacenamiento en caché del mismo nivel en Windows PE?  
  Considere un escenario con una sucursal que no tiene ningún punto de distribución, pero sí varios clientes habilitados para usar Almacenamiento en caché del mismo nivel en Windows PE. Implemente la secuencia de tareas configurada para usar el almacenamiento en caché del mismo nivel en varios clientes configurados como parte del origen del almacenamiento en caché del mismo nivel. El primer cliente que ejecuta la secuencia de tareas emite una solicitud para un elemento del mismo nivel con el contenido. Si no encuentra uno, obtiene el contenido desde un punto de distribución a través de la WAN. El cliente instala la nueva imagen y, a continuación, almacena el contenido en su caché de cliente de Configuration Manager, por lo que puede funcionar como origen de caché del mismo nivel para otros clientes. Cuando el cliente siguiente ejecuta la secuencia de tareas, emite una solicitud en la subred para un origen de caché del mismo nivel. El primer cliente responde y pone a disposición su contenido almacenado en caché.  
 
-##  <a name="a-namebkmkpeercachedeterminea-determine-what-clients-will-be-part-of-the-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheDetermine"></a> Determinar qué clientes formarán parte del origen de Almacenamiento en caché del mismo nivel en Windows PE  
+##  <a name="a-namebkmkpeercachedeterminea-determine-what--clients-will-be-part-of-the-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheDetermine"></a> Determinar qué clientes formarán parte del origen de Almacenamiento en caché del mismo nivel en Windows PE  
  Para ayudarle a determinar qué equipos seleccionar como origen de Almacenamiento en caché del mismo nivel en Windows PE, hay varios aspectos que debe considerar:  
 
 -   El origen del Almacenamiento en caché del mismo nivel en Windows PE debe ser un equipo de escritorio que siempre esté encendido y disponible para los clientes de Almacenamiento en caché del mismo nivel.  
 
 -   El Almacenamiento en caché del mismo nivel tiene un tamaño de caché de cliente suficiente para almacenar las imágenes.  
 
-##  <a name="a-namebkmkpeercacherequirementsa-requirements-for-a-client-to-use-a-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheRequirements"></a> Requisitos para que un cliente use un origen de Almacenamiento en caché del mismo nivel en Windows PE  
+##  <a name="a-namebkmkpeercacherequirementsa-requirements-for-a-client-to-use-a--windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheRequirements"></a> Requisitos para que un cliente use un origen de Almacenamiento en caché del mismo nivel en Windows PE  
  Para que los clientes usen un origen de Almacenamiento en caché del mismo nivel en Windows PE, deben cumplir los siguientes requisitos:  
 
 -   El cliente de Configuration Manager debe poder comunicarse a través de los siguientes puertos de la red:  
@@ -144,6 +144,6 @@ Use las siguientes secciones para administrar Almacenamiento en caché del mismo
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

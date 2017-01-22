@@ -1,5 +1,5 @@
 ---
-title: Componentes de sitio | System Center Configuration Manager
+title: Componentes de sitio | Microsoft Docs
 description: "Obtenga información sobre cómo configurar componentes de sitio para modificar el comportamiento de los roles de sistema de sitio y los informes de estado de sitio."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a0c2ff2ad2f76e7e769d49674ccf4d3efe6b4f3e
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: e22ffc898dc93f702f13417878aa6050d4cdd4ec
 
 
 ---
@@ -117,6 +117,6 @@ Un servicio de Configuration Manager se ejecuta cuando tiene asignada una tarea 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

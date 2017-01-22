@@ -1,5 +1,5 @@
 ---
-title: "Planeamiento de la interoperabilidad de la implementación de sistema operativo | System Center Configuration Manager"
+title: "Planeamiento de la interoperabilidad de la implementación de sistema operativo | Microsoft Docs"
 description: "Comprenda los problemas de interoperabilidad cuando diferentes sitios de System Center Configuration Manager en una sola jerarquía usan versiones diferentes."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1bcd81122c04b4f754326300365ff2c13ce7759d
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 50a4b75b8c8c1cb6f7a8e696abad285f99080fcd
 
 
 ---
@@ -74,6 +74,6 @@ Si en una misma jerarquía hay varios sitios de System Center Configuration Mana
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

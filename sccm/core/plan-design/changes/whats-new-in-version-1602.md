@@ -1,5 +1,5 @@
 ---
-title: Novedades de 1602 | System Center Configuration Manager
+title: "Novedades de la versión 1602 | Microsoft Docs"
 description: "Obtenga detalles sobre los cambios y las nuevas funciones introducidas en la versión 1602 de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 0803a13bb58f0d02803c34e6a3cb20f5e6ba60b7
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 4d7b93c95730edde3af254e813c72df279c7285d
 
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>Novedades de la versión 1602 de System Center Configuration Manager
@@ -114,10 +114,10 @@ Encontrará estas aplicaciones en el nodo **Aplicaciones** de la consola de Conf
 
  Para obtener más información, consulte [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md) (Creación de elementos de configuración para dispositivos de Windows 8.1 y Windows 10 administrados sin el cliente de System Center Configuration Manager).  
 
-### <a name="kiosk-mode-settings-for-android-samsung-knox-devices"></a>Configuración del modo quiosco para dispositivos Samsung KNOX con Android  
- El modo de quiosco permite bloquear un dispositivo para permitir que solo funcionen determinadas características. Por ejemplo, puede permitir que un dispositivo ejecute solo una aplicación administrada que especifique, o puede deshabilitar los botones de volumen de un dispositivo. Esta configuración podría utilizarse para un modelo de demostración de un dispositivo o para un dispositivo que está dedicado a realizar solo una función, como un dispositivo de punto de venta. En Configuration Manager, ahora puede especificar la configuración del modo quiosco para dispositivos Samsung KNOX.  
+### <a name="kiosk-mode-settings-for-android-samsung-knox-standard-devices"></a>Configuración de pantalla completa para dispositivos Android Samsung KNOX Standard  
+ El modo de quiosco permite bloquear un dispositivo para permitir que solo funcionen determinadas características. Por ejemplo, puede permitir que un dispositivo ejecute solo una aplicación administrada que especifique, o puede deshabilitar los botones de volumen de un dispositivo. Esta configuración podría utilizarse para un modelo de demostración de un dispositivo o para un dispositivo que está dedicado a realizar solo una función, como un dispositivo de punto de venta. En Configuration Manager, ahora puede especificar la configuración de pantalla completa para dispositivos Samsung KNOX Standard.  
 
- Para obtener más información, consulte [Cómo crear elementos de configuración para dispositivos Android y Samsung KNOX administrados sin el cliente de System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).  
+ Para obtener más información, consulte [Crear elementos de configuración para dispositivos Android y Samsung KNOX Standard administrados sin el cliente de System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).  
 
 ## <a name="conditional-access"></a>Acceso condicional  
 
@@ -225,6 +225,6 @@ Configuration Manager puede solicitar el estado de bloqueo de activación de los
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

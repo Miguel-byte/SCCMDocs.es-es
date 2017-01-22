@@ -1,5 +1,5 @@
 ---
-title: Novedades de 1606 | System Center Configuration Manager
+title: "Novedades de la versión 1606 | Microsoft Docs"
 description: "Obtenga detalles sobre los cambios y las nuevas funciones introducidas en la versión 1606 de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/09/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fbce476b8a9b91a88354fb4abfadfd2526ca5e8
-ms.openlocfilehash: 8de28e112a2d7faf1d8aca9b7214498e9a65f919
+ms.sourcegitcommit: f6e34e39d267f3bba26d6aa6a912eb4ba4aa3ab2
+ms.openlocfilehash: 16d10bdf1ddd810800e776c33f3f059899b7f92b
 
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>Novedades de la versión 1606 de System Center Configuration Manager
@@ -164,11 +164,11 @@ Para obtener más información, consulte [Prepare site system roles for operatin
 ## <a name="compliance-settings"></a>Configuración de cumplimiento
 
 ### <a name="smart-lock-setting-for-android-devices"></a>Configuración de Smart Lock para dispositivos Android
-Se ha agregado una nueva opción de configuración, **Permitir Smart Lock y otros agentes de confianza**, al elemento de configuración de Android y Samsung KNOX.
+Se ha agregado una nueva opción de configuración, **Permitir Smart Lock y otros agentes de confianza**, al elemento de configuración de Android y Samsung KNOX Standard.
 
 Esta opción le permite controlar la característica Smart Lock en dispositivos Android compatibles. Esta funcionalidad del teléfono, conocida también en ocasiones como agentes de confianza, le permite deshabilitar u omitir la contraseña de la pantalla de bloqueo del dispositivo si el dispositivo está en una ubicación de confianza, como cuando se conecta a un dispositivo Bluetooth específico o cuando está cerca de una etiqueta NFC. Esta opción se puede usar para impedir que los usuarios finales configuren Smart Lock.
 
-Para obtener más información, consulte [Cómo crear elementos de configuración para dispositivos Android y Samsung KNOX administrados sin el cliente de System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).
+Para obtener más información, consulte [Crear elementos de configuración para dispositivos Android y Samsung KNOX Standard administrados sin el cliente de System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).
 
 ## <a name="device-configuration-and-protection"></a>Configuración y protección de dispositivos
 
@@ -218,13 +218,13 @@ Para obtener más información, consulte [Predeclare devices with IMEI or iOS se
 
 Ahora puede habilitar la supervisión de servicios de Atestación de estado para equipos con Windows 10 usando solo infraestructura local para que los equipos sin acceso a Internet puedan notificar la Atestación de estado de dispositivo (DHA).
 
-Para obtener más información, consulte [Health attestation for System Center Configuration Manager](../../../core/servers/manage/health-attestation.md#How-to-enable-Health-Attestation-service-communication-on-Configuration-Manager-client-computers) (Atestación de estado para System Center Configuration Manager).  
+Para obtener más información, consulte [Health attestation for System Center Configuration Manager](../../../core/servers/manage/health-attestation.md#how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers) (Atestación de estado para System Center Configuration Manager).  
 
 ## <a name="remote-control"></a>Control remoto
 Permita a los usuarios finales que acepten o rechacen las transferencias de archivos antes de transferir el contenido desde el portapapeles compartido en una sesión de control remoto. Los usuarios finales solo tendrán que conceder permisos una vez por sesión, y la persona que ve no podrá concederse permiso a sí misma para continuar con la transferencia de archivos. Puede encontrar este nuevo valor en el área de trabajo **Administración**; para ello, vaya después a **Configuración de cliente** y abra el panel **Herramientas remotas** en **Configuración predeterminada**.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

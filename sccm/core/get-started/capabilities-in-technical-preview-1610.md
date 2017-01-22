@@ -1,5 +1,5 @@
 ---
-title: Capacidades de Technical Preview 1610 para System Center Configuration Manager
+title: Capacidades de Technical Preview 1610 para System Center Configuration Manager | Microsoft Docs
 description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1610."
 ms.custom: na
 ms.date: 10/21/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c9fe6961a63495d08a3e58e3ddf46c5d316e2613
-ms.openlocfilehash: 865b5078282bf240aa6a2aef5cb2662f2471fb71
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 6ffcb33e94f942fc9400457d3f16b65e12332956
 
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1610 para System Center Configuration Manager
@@ -82,7 +82,6 @@ Para configurar las exclusiones de la actualización automática:
 > [!NOTE]
 > Aunque la interfaz de usuario indica que no se actualizarán los clientes mediante ningún método, hay dos que se pueden usar para invalidar esta configuración. Se pueden usar la instalación de inserción de cliente y la instalación de cliente manual para invalidar esta configuración. Para obtener más detalles, vea la siguiente sección.
 
-
 ### <a name="how-to-upgrade-a-client-that-is-in-an-excluded-collection"></a>Cómo actualizar un cliente que está en una colección excluida
 Siempre que una colección está configurada para ser excluida, sus miembros solo pueden actualizar el software de cliente mediante uno de dos métodos que invalidan la exclusión:
  - **Instalación de inserción de cliente**: se puede usar la instalación de inserción de cliente para actualizar un cliente que está en una colección excluida. Se permite porque se considera la intención del administrador y permite actualizar los clientes sin quitar toda la colección de la exclusión.       
@@ -92,12 +91,80 @@ Siempre que una colección está configurada para ser excluida, sus miembros sol
 
 Para más información sobre los métodos de instalación de clientes, vea [How to deploy clients to Windows computers in System Center Configuration Manager (Implementar clientes en equipos Windows con System Center Configuration Manager)](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
 
+## <a name="windows-defender-configuration-settings"></a>Opciones de configuración de Windows Defender
+
+Ahora puede establecer la configuración de cliente de Windows Defender en equipos Windows 10 inscritos en Intune mediante elementos de configuración de la consola de Configuration Manager.
+
+Concretamente, puede configurar las siguientes opciones de Windows Defender:
+- Permitir supervisión en tiempo real
+- Permitir supervisión del comportamiento
+- Habilitar Sistema de inspección de red
+- Examinar todas las descargas
+- Permitir análisis de scripts
+- Supervisar la actividad de archivos y programas
+  - Archivos supervisados
+- Días de seguimiento de malware resuelto
+- Permitir acceso a IU de cliente
+- Programar un examen del sistema
+  - Día programado
+  - Hora programada
+- Programar un examen rápido diario
+  - Hora programada
+- Limitar el uso de la CPU % durante un examen. Analizar archivos
+- Analizar mensajes de correo electrónico
+- Analizar unidades extraíbles
+- Analizar unidades asignadas
+- Analizar archivos abiertos desde recursos compartidos de red
+- Intervalo de actualización de firmas
+- Permitir la protección de la nube
+- Solicitar muestras a los usuarios
+- Detección de aplicaciones potencialmente no deseadas
+- Carpetas o archivos excluidos
+- Extensiones de archivo excluidas
+- Procesos excluidos
+
+> [!NOTE]
+> Estas opciones de configuración solo pueden configurarse en equipos cliente que ejecutan la actualización de noviembre (1511) de Windows 10 y versiones anteriores.
+
+### <a name="try-it-out"></a>Haga la prueba
+
+1.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Configuración de cumplimiento** > **Elementos de configuración** y cree un nuevo **Elemento de configuración**.
+2.  Escriba un nombre, seleccione **Windows 8.1 y Windows 10** en **Settings for devices managed without the Configuration Manager client (Configuración de dispositivos administrados sin el cliente de Configuration Manager)** y haga clic en **Siguiente**.
+3.  Asegúrese de que **Todo Windows 10 (64 bits)** y **Todo Windows 10 (32 bits)** están seleccionados en la página **Plataformas admitidas** y, después, haga clic en **Siguiente**.
+4.  Seleccione el grupo de configuración **Windows Defender** y, después, haga clic en **Siguiente**.
+5.  Configure la configuración deseada en esta página y, después, haga clic en **Siguiente**.
+6.  Complete el asistente.
+7.  Agregue este elemento de configuración a una línea base de configuración e implemente esta línea base en equipos que ejecutan la actualización de noviembre (1511) de Windows 10 o versiones anteriores.
+
+> [!NOTE]
+> Recuerde marcar la casilla **Corregir configuraciones no compatibles** al implementar la línea base de configuración.
+
+## <a name="request-policy-sync-from-administrator-console"></a>Solicitar la sincronización de directivas desde la consola de administrador
+
+Ahora puede solicitar una sincronización de directivas para un dispositivo móvil desde la consola de Configuration Manager, en lugar de solicitar una sincronización desde el propio dispositivo. La información del estado de la solicitud de sincronización está disponible como una columna nueva en las vistas del dispositivo, denominada **Remote Sync State (Estado de la sincronización remota)**. El estado también aparece en la sección **Datos de detección** del cuadro de diálogo **Propiedades** de cada dispositivo móvil.
+
+### <a name="try-it-out"></a>Haga la prueba
+
+1.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > Dispositivos.
+2.  En el menú **Acciones de dispositivo remoto**, seleccione **Send Sync Request (Enviar solicitud de sincronización)**.
+
+La sincronización puede tardar de cinco a diez minutos. Cualquier cambio en la directiva se sincroniza con el dispositivo. Puede realizar un seguimiento del estado de la solicitud de sincronización en la columna **Remote Sync State (Estado de la sincronización remota)** de la vista **Dispositivos** o en el cuadro de diálogo **Propiedades** del dispositivo.
+
+## <a name="additional-security-role-support"></a>Compatibilidad adicional del rol de seguridad
+
+Además del rol de Administrador total, los siguientes roles de seguridad integrados ahora tienen acceso completo a los elementos en el nodo **Todos los dispositivos corporativos**, incluidos los **Dispositivos declarados con anterioridad**, los **Perfiles de inscripción de iOS** y los **Perfiles de inscripción de Windows**: •   **Administrador de activos** •   **Administrador de acceso de recursos de la compañía**
+
+Aún se concede acceso de solo lectura a estas áreas de la consola de Configuration Manager para el rol **Analista de solo lectura**.
+
+## <a name="conditional-access-for-windows-10-vpn-profiles"></a>Acceso condicional para perfiles de VPN de Windows 10
+
+Ahora puede requerir que los dispositivos Windows 10 inscritos en Azure Active Directory sean compatibles para disponer de acceso a la VPN a través de perfiles de VPN de Windows 10 creados en la consola de Configuration Manager. Esto es posible a través de la nueva casilla **Habilitar acceso condicional para esta conexión VPN** en la página **Método de autenticación** del Asistente para perfiles de VPN y propiedades de perfil de VPN para perfiles de VPN de Windows 10. También puede especificar un certificado independiente para la autenticación de inicio de sesión único si habilita el acceso condicional para el perfil.
 
 ## <a name="see-also"></a>Véase también
 [Technical Preview for System Center Configuration Manager (Technical Preview para System Center Configuration Manager)](../../core/get-started/technical-preview.md)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

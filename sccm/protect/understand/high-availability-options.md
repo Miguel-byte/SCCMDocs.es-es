@@ -1,5 +1,5 @@
 ---
-title: Alta disponibilidad | System Center Configuration Manager
+title: Alta disponibilidad | Microsoft Docs
 description: "Obtenga información sobre cómo implementar System Center Configuration Manager mediante el uso de opciones que mantienen un alto nivel de servicio disponible."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7d8dff8779fbf146a57f753dee9f98488fa5fa61
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: d3e9afb90cdc85bc7299626b642c52be659e3bdf
 
 ---
 # <a name="high-availability-options-for-system-center-configuration-manager"></a>Opciones de alta disponibilidad para System Center Configuration Manager
@@ -153,7 +153,7 @@ Opciones que admiten la alta disponibilidad:
 
  Cada rol de sistema de sitio de catálogo de aplicaciones proporciona la misma información que las otras instancias del rol de sistema de sitio independientemente de la ubicación del rol de servidor de sitio en la jerarquía. Por lo tanto, si un cliente realiza una solicitud del catálogo de aplicaciones y ha configurado la opción de cliente de dispositivo Punto de sitios web del catálogo de aplicaciones predeterminado como Detectar automáticamente, el cliente puede ser dirigido a una instancia disponible. Se da preferencia a los servidores locales de sistema de sitio de catálogo de aplicaciones, en función de la ubicación de red actual del cliente.  
 
- Para obtener más información sobre esta configuración de cliente y el funcionamiento de la detección automática, consulte la sección [Agente de equipo](../../core/clients/deploy/about-client-settings.md#BKMK_ComputerAgentDeviceSettings) del tema [About client settings in System Center Configuration Manager (Sobre la configuración de cliente en System Center Configuration Manager)](../../core/clients/deploy/about-client-settings.md).  
+ Para obtener más información sobre esta configuración de cliente y el funcionamiento de la detección automática, consulte la sección [Agente de equipo](../../core/clients/deploy/about-client-settings.md#computer-agent) del tema [About client settings in System Center Configuration Manager (Sobre la configuración de cliente en System Center Configuration Manager)](../../core/clients/deploy/about-client-settings.md).  
 
 ##  <a name="a-namebkmkclienta-high-availability-for-clients"></a><a name="bkmk_client"></a> Alta disponibilidad para clientes  
  **Las operaciones de cliente son autónomas:**  
@@ -264,6 +264,6 @@ Opciones que admiten la alta disponibilidad:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Importar datos de configuración | System Center Configuration Manager"
+title: "Importar datos de configuración | Microsoft Docs"
 description: "Importe datos de configuración si se encuentran en formato de archivo contenedor y se ajustan al esquema de Lenguaje de modelado de servicios compatible."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 2058238b9834521008c4a077a61645dcfcbb40d5
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: 60d0642618a3074fc50a848f1189f4d6559ca916
 
 
 ---
@@ -62,6 +62,6 @@ Los datos de configuración importados se muestran en el nodo **Configuración d
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

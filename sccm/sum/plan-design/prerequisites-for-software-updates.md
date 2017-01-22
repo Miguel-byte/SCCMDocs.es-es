@@ -1,5 +1,5 @@
 ---
-title: Requisitos previos para las actualizaciones de software | Configuration Manager
+title: Requisitos previos para las actualizaciones de software | Microsoft Docs
 description: "Obtenga información sobre los requisitos previos para las actualizaciones de software en System Center Configuration Manager."
 keywords: 
 author: dougeby
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fe56129c09b8936ba59181add86acb239111fea7
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 179f076f228daa5adf612275a822cd379b0ce1e3
 
 
 ---
@@ -78,7 +78,7 @@ En este tema aparecen los requisitos previos para las actualizaciones de softwar
 
 -   La sección [Configuración de cliente para las actualizaciones de software](../get-started/manage-settings-for-software-updates.md#a-namebkmkclientsettingsa-client-settings-for-software-updates)  
 
--   El tema sobre la [configuración de cliente para las actualizaciones de software](../../core/clients/deploy/about-client-settings.md#a-namebkmksoftwareupdatesdevicesettinga-software-updates)  
+-   El tema sobre la [configuración de cliente para las actualizaciones de software](../../core/clients/deploy/about-client-settings.md#software-updates)  
 
 ### <a name="reporting-services-point"></a>Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.  
  El rol de sistema de sitio de punto de servicios de informes puede mostrar informes de las actualizaciones de software. Este rol es opcional pero se recomienda. Para obtener más información sobre cómo crear un punto de servicios de informes, consulte [Configuring reporting](../../core/servers/manage/configuring-reporting.md) (Configurar los informes).  
@@ -114,6 +114,6 @@ En este tema aparecen los requisitos previos para las actualizaciones de softwar
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

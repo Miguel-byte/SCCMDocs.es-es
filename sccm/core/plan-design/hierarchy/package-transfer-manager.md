@@ -1,5 +1,5 @@
 ---
-title: Administrador de transferencia de paquetes | System Center Configuration Manager
+title: Administrador de transferencia de paquetes | Microsoft Docs
 description: "Descubra cómo el administrador de transferencia de paquetes de System Center Configuration Manager transfiere el contenido desde un servidor de sitio a los puntos de distribución remotos."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e77925ce15f20afe463860a22bf670108bbee344
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 6e61c56b9d1111287bf5a9f22832f6b1ca8146b7
 
 ---
 # <a name="package-transfer-manager-in-system-center-configuration-manager"></a>Administrador de transferencia de paquetes en System Center Configuration Manager
@@ -90,6 +90,6 @@ La información siguiente describe cómo el administrador de transferencia de pa
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

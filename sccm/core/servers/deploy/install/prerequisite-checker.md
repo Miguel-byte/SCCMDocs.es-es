@@ -1,5 +1,5 @@
 ---
-title: Comprobador de requisitos previos | System Center Configuration Manager
+title: Comprobador de requisitos previos | Microsoft Docs
 description: "Obtenga información sobre cómo usar el comprobador de requisitos previos para identificar y corregir problemas que bloquearían un sitio real o la instalación del rol de sistema de sitio."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4c2322ed0805b5f087409ec487ebec9d7c4f10d5
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: f30d7a451f47a3ab1efe6f7ac9c3e0151b8cda96
 
 ---
 # <a name="prerequisite-checker-for-system-center-configuration-manager"></a>Comprobador de requisitos previos para System Center Configuration Manager
@@ -91,7 +91,7 @@ Para obtener más información sobre las comprobaciones que lleva a cabo el Comp
 
 2.  Escriba  **prereqchk.exe /LOCAL** para iniciar el Comprobador de requisitos previos y ejecutar todas las comprobaciones de requisitos previos en el servidor.  
 
-## <a name="run-prerequisite-checker-from-a-command-prompt-for-specified-options"></a>Ejecute el Comprobador de requisitos previos desde el símbolo del sistema para todas las opciones especificadas  
+## <a name="run-prerequisite-checker-from-a-command-prompt--for-specified-options"></a>Ejecute el Comprobador de requisitos previos desde el símbolo del sistema para todas las opciones especificadas  
 
 1.  Abra una ventana del símbolo del sistema y cambie los directorios a una de las siguientes ubicaciones:  
 
@@ -216,6 +216,6 @@ Para obtener más información sobre las comprobaciones que lleva a cabo el Comp
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Protección de datos mediante eliminación remota, bloqueo o restablecimiento de código de acceso mediante System Center Configuration Manager"
+title: "Protección de datos mediante eliminación remota, bloqueo o restablecimiento de código de acceso mediante System Center Configuration Manager | Microsoft Docs"
 description: "Proteja los datos de su dispositivo mediante eliminación completa, eliminación selectiva, bloqueo remoto o restablecimiento del código de acceso mediante System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 49a2220616bb6c6734643885bf969245e4c67c77
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: d3dd55b496a124c478f1cf2880a096e2fbdd9145
 
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-using-system-center-configuration-manager"></a>Protección de datos mediante eliminación remota, bloqueo o restablecimiento de código de acceso mediante System Center Configuration Manager
@@ -65,9 +65,9 @@ Configuration Manager proporciona capacidades de eliminación selectiva, elimina
 |Agente de administración|Se quitará el perfil de administración.|  
 |Perfiles de correo electrónico|Para los perfiles de correo electrónico aprovisionados por Intune, se quitan la cuenta de correo electrónico y el correo electrónico.|  
 
- **Android y Android Samsung KNOX**  
+ **Android y Android Samsung KNOX Standard**  
 
-|Contenido borrado al retirar un dispositivo|Android|Samsung KNOX|  
+|Contenido borrado al retirar un dispositivo|Android|Samsung KNOX Standard|  
 |--------------------------------------------|-------------|------------------|  
 |Aplicaciones y datos asociados de la compañía que se instalaron mediante Configuration Manager y Intune.|Se mantendrán instalados los datos y las aplicaciones.|Las aplicaciones se desinstalarán.|  
 |Perfiles de VPN y Wi-Fi|Quitado.|Quitado.|  
@@ -243,10 +243,10 @@ Configuration Manager proporciona capacidades de eliminación selectiva, elimina
 
 ## <a name="see-also"></a>Véase también  
  [Borrado selectivo de Windows para la administración de datos del dispositivo](http://technet.microsoft.com/library/dn486874.aspx)   
- [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../mdm/plan-design/hybrid-mobile-device-management.md) (Administración híbrida de dispositivos móviles [MDM] con System Center Configuration Manager y Microsoft Intune)
+ [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../mdm/understand/hybrid-mobile-device-management.md) (Administración híbrida de dispositivos móviles [MDM] con System Center Configuration Manager y Microsoft Intune)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

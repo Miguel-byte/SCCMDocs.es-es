@@ -1,5 +1,5 @@
 ---
-title: Usar servicios en la nube | System Center Configuration Manager
+title: Usar servicios en la nube | Microsoft Docs
 description: Aprovisione recursos en la nube para System Center Configuration Manager a fin de complementar la infraestructura local.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 72e01c23ab597ad5a446492c3dc371aa50b9d949
-ms.openlocfilehash: 9440123f6f13e19723657e7b4d5627f3a349a3b4
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 539ad555b85b7517507c21718dab0b79fdf4dfb8
 
 
 ---
@@ -106,6 +106,6 @@ Estas funcionalidades adicionales no requieren una suscripción a Azure ni confi
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

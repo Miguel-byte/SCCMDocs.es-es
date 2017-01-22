@@ -1,5 +1,5 @@
 ---
-title: Esquema de Active Directory | System Center Configuration Manager
+title: "Publicación y el esquema de Active Directory | Microsoft Docs"
 description: Extienda el esquema de Active Directory para System Center Configuration Manager a fin de simplificar el proceso de implementar y configurar clientes.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,14 +17,14 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d4cdaa646265b2d05ec93aeaefaf3a6e7a2c269f
+ms.sourcegitcommit: 2083a2ca7a199771f26981cdbe04e4e2ef6e8958
+ms.openlocfilehash: 3bd18e2de76d886b275c80d0dce3b824f2598008
 
 
 ---
-# <a name="extend-the-active-directory-schema-for-system-center-configuration-manager"></a>Extender el esquema de Active Directory para System Center Configuration Manager
+# <a name="prepare-active-directory-for-site-publishing"></a>Preparar Active Directory para la publicación de sitios
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Si extiende el esquema de Active Directory para System Center Configuration Manager, introduce estructuras nuevas en Active Directory que los sitios de Configuration Manager usan para publicar información clave en una ubicación segura donde los clientes pueden acceder fácilmente a ella.  
 
@@ -70,7 +70,7 @@ Haga lo siguiente a fin de extender el esquema para Configuration Manager:
 
 3.  Para comprobar que la extensión del esquema se realizó correctamente, revise el archivo de registro creado por la línea de comandos usada en el paso anterior.  
 
-## <a name="step-2-create-the-system-management-container-and-grant-sites-permissions-to-the-container"></a>Paso 2.  Crear el contenedor System Management y conceder permisos de sitios al contenedor  
+## <a name="step-2--create-the-system-management-container-and-grant-sites-permissions-to-the-container"></a>Paso 2.  Crear el contenedor System Management y conceder permisos de sitios al contenedor  
  Después de extender el esquema, debe crear un contenedor denominado **System Management** en Active Directory Domain Services (AD DS):  
 
 -   Debe crear este contenedor una vez en cada dominio que tenga un sitio primario o secundario que vaya a publicar datos en Active Directory.  
@@ -114,6 +114,6 @@ Haga lo siguiente a fin de extender el esquema para Configuration Manager:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

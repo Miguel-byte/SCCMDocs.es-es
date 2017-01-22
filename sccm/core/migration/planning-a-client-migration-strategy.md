@@ -1,5 +1,5 @@
 ---
-title: "Planificar la migración de clientes | System Center Configuration Manager"
+title: "Planear la migración de clientes | Microsoft Docs"
 description: "Obtenga información sobre las tareas de migración de clientes de una jerarquía de origen a una jerarquía de destino de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 6044f9b8116687fca80deeea87abd4652f773db0
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 11da338af9d7dd4d6f9c5fc1c6c62e277139f852
 
 
 ---
@@ -43,7 +43,7 @@ Para migrar clientes de la jerarquía de origen a una jerarquía de destino de S
 -   **Una jerarquía de origen de System Center 2012 Configuration Manager o versiones posteriores:** cuando se migran clientes entre jerarquías con la misma versión del producto, el software cliente no cambia ni se actualiza. En su lugar, el cliente se reasignará desde la jerarquía de origen a un sitio en la jerarquía de destino.  
 
     > [!NOTE]  
-    >  Si no se admite la migración de la versión del producto de una jerarquía a la jerarquía de destino, actualice todos los sitios y los clientes de la jerarquía de origen a una versión del producto admitida. Después de actualizar la jerarquía de origen a una versión admitida del producto, puede realizar la migración entre jerarquías. Para obtener más información, consulte la sección [Versiones de Configuration Manager admitidas para la migración](../../core/migration/prerequisites-for-migration.md#BKMK_supportedmigrationversions) del tema [Requisitos previos para la migración en System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
+    >  Si no se admite la migración de la versión del producto de una jerarquía a la jerarquía de destino, actualice todos los sitios y los clientes de la jerarquía de origen a una versión del producto admitida. Después de actualizar la jerarquía de origen a una versión admitida del producto, puede realizar la migración entre jerarquías. Para obtener más información, consulte la sección [Versiones de Configuration Manager admitidas para la migración](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions) del tema [Requisitos previos para la migración en System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
 
 Utilice la siguiente información para planear la migración de clientes:  
 
@@ -98,13 +98,13 @@ Cuando se migra un cliente, no se mantiene la información que se almacena en el
 
 Además, es posible que tenga que volver a instalar algunas aplicaciones.  
 
-##  <a name="a-nameplanningforinventorydatamigrationa-plan-for-inventory-and-compliance-data-during-migration"></a><a name="Planning_for_Inventory_data_migration"></a> Planear los datos de cumplimiento y de inventario durante la migración  
+##  <a name="a-nameplanningforinventorydatamigrationa-plan-for--inventory-and-compliance-data-during-migration"></a><a name="Planning_for_Inventory_data_migration"></a> Planear los datos de cumplimiento y de inventario durante la migración  
 No se guardan los datos de cumplimiento de normas ni el inventario de cliente al migrar un cliente a la jerarquía de destino. En su lugar, esta información se vuelve a crear en la jerarquía de destino cuando un cliente envía primero su información a su sitio asignado. Para ayudar a reducir los requisitos de ancho de banda de red y el procesamiento de servidor resultantes, es mejor que migre un número pequeño de clientes en fases en lugar de migrar una gran cantidad de clientes de una sola vez.  
 
  Además, no puede migrar las personalizaciones del inventario de hardware de una jerarquía de origen. Debe introducirlas en la jerarquía de destino independientemente de la migración. Para obtener más información sobre cómo ampliar el inventario de hardware, consulte [Cómo configurar el inventario de hardware en System Center Configuration Manager](../../core/clients/manage/inventory/configure-hardware-inventory.md).  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

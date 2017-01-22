@@ -1,5 +1,5 @@
 ---
-title: Descargar actualizaciones de software | Configuration Manager
+title: Descargar actualizaciones de software | Microsoft Docs
 description: "Use el Asistente para descargar actualizaciones de software para descargar actualizaciones de software desde el área de trabajo de la biblioteca de software."
 keywords: 
 author: dougeby
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: da6fbef50d79ece398d0f6b3a8d364263bd133cb
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 181a6cdf0f8a697f9e44ba7f94950c3ed2dce395
 
 
 
@@ -120,6 +120,6 @@ Utilice el procedimiento siguiente para descargar actualizaciones de software me
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

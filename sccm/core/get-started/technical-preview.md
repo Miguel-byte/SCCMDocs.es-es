@@ -1,8 +1,8 @@
 ---
-title: Technical Preview para System Center Configuration Manager
+title: Technical Preview para System Center Configuration Manager | Microsoft Docs
 description: "Obtenga información sobre la versión Technical Preview que le permite probar nuevas funcionalidades y capacidades de System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/16/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 39a9cde3bd955c84f301d25258b413fecaa4393b
-ms.openlocfilehash: 2aa78c20c919d04401f663063860df06c5262048
+ms.sourcegitcommit: 4b1b925a50d08d90e4e1250967e19c0bc5aac4d3
+ms.openlocfilehash: faef3537eed740a6177f00991615c978659e06c7
 
 
 ---
@@ -134,39 +134,55 @@ ms.openlocfilehash: 2aa78c20c919d04401f663063860df06c5262048
 
  |Capacidad|Versión de Technical Preview|Versión de rama actual|  
  |----------------|---------------------|--------------------|
- |Filtrar por tamaño del contenido en las reglas de implementación automática|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#filter-by-content-size-in-automatic-deployment-rules)|![Sin agregar](media/Red_X.gif)|
- |Funcionalidad mejorada para los cuadros de diálogo de software obligatorios|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#improved-functionality-for-required-software-dialogs)|![Sin agregar](media/Red_X.gif)|
- |Rechazar solicitudes de aplicación aprobadas previamente|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#deny-previously-approved-application-requests)|![Sin agregar](media/Red_X.gif)|
- |Excluir a clientes de la actualización automática|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#exclude-clients-from-automatic-upgrade)|![Sin agregar](media/Red_X.gif)|
+ |Acceso a datos del punto de conexión de OData |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|![Sin agregar](media/Red_X.gif)|
+ |Punto del servicio de almacenamiento de datos |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#the-data-warehouse-service-point)|![Sin agregar](media/Red_X.gif)|
+ |Herramienta de limpieza de la biblioteca de contenido |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#content-library-cleanup-tool)|![Sin agregar](media/Red_X.gif)|
+ |Mejoras de búsqueda en consola |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#improvements-for-in-console-search)|![Sin agregar](media/Red_X.gif)|
+ |Impedir la instalación de una aplicación si se está ejecutando un programa específico|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#prevent-installation-of-an-application-if-a-specified-program-is-running)|![Sin agregar](media/Red_X.gif)|
+ |Nueva notificación de Windows Hello para empresas para los usuarios finales|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#new-windows-hello-for-business-notification-for-end-users)|![Sin agregar](media/Red_X.gif)|
+ |Compatibilidad con la Tienda Windows para empresas en Configuration Manager|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#windows-store-for-business-support-in-configuration-manager)|![Sin agregar](media/Red_X.gif)|
+ |Volver a la página anterior cuando se produce un error en una secuencia de tareas|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#return-to-previous-page-when-a-task-sequence-fails)|![Sin agregar](media/Red_X.gif)|
+ |Compatibilidad con archivos de instalación rápida de actualizaciones de Windows 10|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#express-installation-files-support-for-windows-10-updates)|![Sin agregar](media/Red_X.gif)|
+ |Incorporación de Azure Active Directory|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#azure-active-directory-onboarding)|![Sin agregar](media/Red_X.gif)|
+|Cambiar para configurar la autenticación multifactor para la inscripción de dispositivos|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#change-to-configuring-multi-factor-authentication-for-device-enrollment)|![Sin agregar](media/Red_X.gif)|
+|Almacenar en la caché previa contenido para las implementaciones y las secuencias de tareas |[Tech Preview 1611](capabilities-in-technical-preview-1611.md#pre-cache-content-for-available-deployments-and-task-sequences)|![Sin agregar](media/Red_X.gif)|
+ |Opciones de configuración de Windows Defender|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#windows-defender-configuration-settings)|[Versión 1610](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)|
+ |Solicitar la sincronización de directivas desde la consola de administrador|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#request-policy-sync-from-administrator-console)|[Versión 1610](/sccm/mdm/deploy-use/sync-intune-device)|
+ |Compatibilidad adicional con el rol de seguridad para el nodo Todos los dispositivos corporativos|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#additional-security-role-support)|[Versión 1610](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management#new-hybrid-features-in-november-2016)|
+ |Acceso condicional para perfiles de VPN de Windows 10|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#conditional-access-for-windows-10-vpn-profiles)|[Versión 1610](/sccm/protect/deploy-use/create-vpn-profiles#configure-the-authentication-method-for-the-vpn-profile)|
+ |Filtrar por tamaño del contenido en las reglas de implementación automática|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#filter-by-content-size-in-automatic-deployment-rules)|[Versión 1610](/sccm/core/plan-design/changes/whats-new-in-version-1610#filter-by-content-size-in-automatic-deployment-rules) |
+ |Funcionalidad mejorada para los cuadros de diálogo de software obligatorios|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#improved-functionality-for-required-software-dialogs)|[Versión 1610](/sccm/apps/deploy-use/deploy-applications)|
+ |Rechazar solicitudes de aplicación aprobadas previamente|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#deny-previously-approved-application-requests)|[Versión 1610](/sccm/apps/deploy-use/deploy-applications)|
+ |Excluir a clientes de la actualización automática|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#exclude-clients-from-automatic-upgrade)|[Versión 1610](/sccm/core/clients/manage/upgrade/exclude-clients-windows)|
  |Mejoras de Endpoint Protection|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#improvements-to-endpoint-protection)|![Sin agregar](media/Red_X.gif)|
  |Mayor número de dispositivos inscritos|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#increased-number-of-enrolled-devices)|![Sin agregar](media/Red_X.gif)|
- |Opciones adicionales del DEP de Apple|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#additional-apple-dep-settings)|![Sin agregar](media/Red_X.gif)|
- |Mejoras en la integración de la Tienda Windows para empresas con Configuration Manager|[Tech Preview 1609](capabilities-in-technical-preview-1609.md)|![Sin agregar](media/Red_X.gif)|
- |Nueva configuración de cumplimiento para elementos de configuración|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#new-compliance-settings-for-configuration-items)|![Sin agregar](media/Red_X.gif)|
- |Integración con Upgrade Analytics|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#integration-with-upgrade-analytics)|![Sin agregar](media/Red_X.gif)|
+ |Opciones adicionales del DEP de Apple|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#additional-apple-dep-settings)|[Versión 1610](/sccm/mdm/deploy-use/ios-device-enrollment-program-for-hybrid)|
+ |Mejoras en la integración de la Tienda Windows para empresas con Configuration Manager|[Tech Preview 1609](capabilities-in-technical-preview-1609.md)|[Versión 1610](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)|
+ |Nueva configuración de cumplimiento para elementos de configuración|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#new-compliance-settings-for-configuration-items)|[Versión 1610](/sccm/compliance/deploy-use/create-configuration-items)|
+ |Integración con Upgrade Analytics|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#integration-with-upgrade-analytics)|[Versión 1610](/sccm/core/clients/manage/upgrade/upgrade-analytics)|
  |Tipos de conexión nativos para perfiles híbridos de VPN de Windows 10|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#native-connection-types-for-windows-10-vpn-hybrid-profiles)|![Sin agregar](media/Red_X.gif)|
- |Mejoras en los grupos de límites|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#improvements-for-boundary-groups)|![Sin agregar](media/Red_X.gif)|
- |Panel de administración del cliente de Office 365|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#office-365-client-management-dashboard)|![Sin agregar](media/Red_X.gif)|
- |Implementar aplicaciones de Office 365 en clientes|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#ceploy-office-365-apps-to-clients)|![Sin agregar](media/Red_X.gif)|
- |Mejoras en la conversión de BIOS a UEFI|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#improvements-for-bios-to-uefi-conversion)|![Sin agregar](media/Red_X.gif)|
- |Gráficos de cumplimiento de Intune|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#intune-compliance-charts)|![Sin agregar](media/Red_X.gif)|
- |Mejoras en el paso Preparar cliente de Configuration Manager para la captura de la secuencia de tareas|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-the-prepare-configmgr-client-for-capture-task-sequence-step)|![Sin agregar](media/Red_X.gif)|
- |Mejoras en el Centro de software|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-software-center)|![Sin agregar](media/Red_X.gif)|
+ |Mejoras en los grupos de límites|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#improvements-for-boundary-groups)|[Versión 1610](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#BKMK_BoundaryGroups)|
+ |Panel de administración de clientes de Office 365|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#office-365-client-management-dashboard)|[Versión 1610](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard)|
+ |Implementar aplicaciones de Office 365 en clientes|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#deploy-office-365-apps-to-clients)|![Sin agregar](media/Red_X.gif)|
+ |Mejoras en la conversión de BIOS a UEFI|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#BKMK_UEFIConversion)|[Versión 1610](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion)|
+ |Gráficos de cumplimiento de Intune|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#intune-compliance-charts)|[Versión 1610](/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)|
+ |Mejoras en el paso Preparar cliente de Configuration Manager para la captura de la secuencia de tareas|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-the-prepare-configmgr-client-for-capture-task-sequence-step)|[Versión 1610](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture)|
+ |Mejoras en el Centro de software|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-software-center)|[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610#general-improvements-to-software-center)|
  |Mejoras en Asset Intelligence|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence)|![Sin agregar](media/Red_X.gif)|
  |Traducción de teclado de control remoto|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#remote-control-keyboard-translation)|![Sin agregar](media/Red_X.gif)|
- |Mejoras en la directiva de actualización de la edición de Windows 10|[Tech Preview 1607](capabilities-in-technical-preview-1607.md#dmp_edition)|![Sin agregar](media/Red_X.gif)|
- |Cuadros de diálogo personalizables de personalización de marca del Centro de software|[Tech Preview 1607](capabilities-in-technical-preview-1607.md#customizable-branding-for-software-denter-dialogs)|![Sin agregar](media/Red_X.gif)|  
+ |Mejoras en la directiva de actualización de la edición de Windows 10|[Tech Preview 1607](capabilities-in-technical-preview-1607.md#dmp_edition)|[Versión 1610](/sccm/compliance/deploy-use/upgrade-windows-version)|
+ |Cuadros de diálogo personalizables de personalización de marca del Centro de software|[Tech Preview 1607](capabilities-in-technical-preview-1607.md#customizable-branding-for-software-center-dialogs)|![Sin agregar](media/Red_X.gif)|  
  |Varios puntos de administración de dispositivos para la administración local de dispositivos móviles|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#dmp_onprem)|[Versión 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#on-premises-mobile-device-management)|
  |Clasificar automáticamente dispositivos en recopilaciones|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#dmp_category)|[Versión 1606](/sccm/core/clients/manage/collections/automatically-categorize-devices-into-collections) |
- |Período de gracia de cumplimiento para implementaciones de actualizaciones de software y aplicaciones requeridas|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#dmp_grace)|![Sin agregar](media/Red_X.gif)|
+ |Período de gracia de cumplimiento para implementaciones de actualizaciones de software y aplicaciones requeridas|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#dmp_grace)|[Versión 1610](/sccm/apps/deploy-use/deploy-applications)|
  |Uso de Configuration Manager como un instalador administrado con protección de dispositivos|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#dmp_devg)|![Sin agregar](media/Red_X.gif)|
- |Servicio de proxy en la nube|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#cloud_proxy) | ![Sin agregar](media/Red_X.gif)|  
+ |Puerta de enlace de administración en la nube (anteriormente Servicio de proxy en la nube)|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#cloud_proxy) | [Versión 1610](/sccm/core/clients/manage/plan-cloud-management-gateway)|  
  |Administrar al agente cliente de Office 365 en Configuration Manager|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#manage_o365) |[Versión 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#software-updates)|  
  |La variable de secuencia de tareas OSDPreserveDriveLetter ha dejado de usarse|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#osdpreservedriveletter) |[Versión 1606](/sccm/osd/understand/task-sequence-built-in-variables) |
  |Cambios en el nodo de actualizaciones y mantenimiento|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#updatesandservicing)|[Versión 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#updates-and-servicing) |
  |VPN por aplicación para dispositivos Windows 10|[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_PerAppVPN)|[Versión 1606](/sccm/protect/deploy-use/create-vpn-profiles)|  
  |Mejoras en la secuencia de tareas Instalar actualizaciones de software|[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_InstallSU)|[Versión 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#operating-system-deployment)|  
- |Mejoras en el paso Preparar cliente de Configuration Manager para la captura de la secuencia de tareas |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_PrepareConfigMgrClient)|![Sin agregar](media/Red_X.gif) |
+ |Mejoras en el paso Preparar cliente de Configuration Manager para la captura de la secuencia de tareas |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_PrepareConfigMgrClient)|[Versión 1610](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture) |
  |Período de gracia para las implementaciones de aplicaciones necesarias |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_Grace)|![Sin agregar](media/Red_X.gif)|  
  |Nueva experiencia para acciones del dispositivo remoto |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_Remote)|[Versión 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#device-configuration-and-protection)|  
  |Tienda Windows para aplicaciones empresariales |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_WSFB)|[Versión 1606](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)|  
@@ -182,7 +198,7 @@ ms.openlocfilehash: 2aa78c20c919d04401f663063860df06c5262048
  |Administración de aplicaciones adquiridas por volumen de la Tienda Windows para empresas| [Tech Preview 1604](capabilities-in-technical-preview-1604.md#BKMK_WindowsVPP)|[Versión 1606](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)|  
  |Mejoras en la administración de Microsoft Passport for Work|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#BKMK_PFW)|[Versión 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#device-configuration-and-protection)|  
  |Opción de cambio a un nuevo punto de actualización de software para clientes|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_switchsup)|[Versión 1606](/sccm/sum/plan-design/plan-for-software-updates#BKMK_ManuallySwitchSUPs)|  
- |Configuración de cliente para administrar la Configuración de caché de cliente y la Caché del mismo nivel de clientes |[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_peercache)|[Versión 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#administration)|  
+ |Configuración de cliente para administrar la Configuración de caché de cliente y la Caché del mismo nivel de clientes |[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_peercache)|Configuración de cliente: [versión 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#administration)<br/>Almacenamiento en caché del mismo nivel: [versión 1610](/sccm/core/plan-design/hierarchy/client-peer-cache)|  
  |Compatibilidad con Passport for Work como KSP |[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_passport)|[Versión 1606](/sccm/protect/deploy-use/create-certificate-profiles)|  
  |Atestación de estado del dispositivo local|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_onpremdha)|[Versión 1606](/sccm/core/servers/manage/health-attestation)|  
  |Configuración de SmartLock para dispositivos Android|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#BKMK_Smart)|[Versión 1606](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-and-samsung-knox-configuration-item-settings-reference)|  
@@ -209,6 +225,6 @@ ms.openlocfilehash: 2aa78c20c919d04401f663063860df06c5262048
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Usar medios de arranque para implementar Windows a través de la red | Configuration Manager"
+title: "Usar medios de arranque para implementar Windows a través de la red | Microsoft Docs"
 description: Use implementaciones de medios de arranque en System Center Configuration Manager para implementar el sistema operativo al iniciar el equipo de destino.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f5bdba0f609f51b988dbfdc0b0c8b204405f834a
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: beb730efbe4d9bae7c4c97f4e587c8919bd79049
 
 
 ---
@@ -49,11 +49,11 @@ Las implementaciones de medios de arranque en System Center Configuration Manage
 ## <a name="create-the-bootable-media"></a>Crear medios de arranque  
  Puede especificar si el medio de arranque es una unidad flash USB o un conjunto de CD/DVD. El equipo que iniciará el medio debe admitir la opción que elija como unidad de arranque. Para obtener más información, consulte [Crear medios de arranque](create-bootable-media.md).  
 
-##  <a name="a-namebkmkdeploya-install-the-operating-system-from-bootable-media"></a><a name="BKMK_Deploy"></a> Instalar el sistema operativo desde un medio de arranque  
+##  <a name="a-namebkmkdeploya-install-the-operating-system-from--bootable-media"></a><a name="BKMK_Deploy"></a> Instalar el sistema operativo desde un medio de arranque  
  Inserte el medio de arranque en una unidad de arranque en el equipo y luego vuelva a encenderlo para instalar el sistema operativo.  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

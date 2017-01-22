@@ -1,5 +1,5 @@
 ---
-title: "Preparación de la implementación del sistema operativo | Configuration Manager"
+title: "Prepararse para la implementación de sistema operativo | Microsoft Docs"
 description: "Lea estos artículos para obtener información sobre los pasos que debe seguir en Configuration Manager para preparar la implementación del sistema operativo."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7717b01f73f0403e24d8d192c09a5038a5733981
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: dcc35f39b6ece8b466fc3770c6b9f304180eb42a
 
 
 ---
@@ -43,6 +43,6 @@ Hay varias cosas que debe hacer en Configuration Manager para poder implementar 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

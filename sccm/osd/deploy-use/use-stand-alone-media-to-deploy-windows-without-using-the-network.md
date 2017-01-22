@@ -1,5 +1,5 @@
 ---
-title: Usar medios independientes para implementar Windows sin usar la red | Configuration Manager
+title: Usar medios independientes para implementar Windows sin usar la red | Microsoft Docs
 description: "Use medios independientes en Configuration Manager para implementar sistemas operativos cuando el ancho de banda sea limitado o como una opción a la actualización o la instalación de equipos."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f09359b2c565f259ddd0dab01812bafcaecff60a
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 30ae794381c6894e11b21a8167d0af60463c5279
 
 
 ---
@@ -82,6 +82,6 @@ Puede usar medios independientes en los siguientes escenarios de implementación
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

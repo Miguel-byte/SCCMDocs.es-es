@@ -1,12 +1,12 @@
 ---
 
-title: Supervisar actualizaciones de software | Configuration Manager
+title: Supervisar actualizaciones de software | Microsoft Docs
 description: La consola de System Center Configuration Manager proporciona alertas y estados para supervisar la compatibilidad y las actualizaciones.
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 11/10/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fe41807cebf87f4e6bab47e41db0ffe7cc83c5d1
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 956ef263a1c178b5ab5926705859f4b2d0ae5bc7
 
 ---
 # <a name="monitor-software-updates-in-system-center-configuration-manager"></a>Supervisar actualizaciones de software en System Center Configuration Manager
@@ -23,6 +23,9 @@ ms.openlocfilehash: fe41807cebf87f4e6bab47e41db0ffe7cc83c5d1
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
 System Center Configuration Manager ofrece muchas maneras de ayudarle a supervisar los objetos, procesos e información de compatibilidad de las actualizaciones de software. Use las secciones siguientes para supervisar las actualizaciones de software.
+
+## <a name="software-updates-dashboard"></a>Panel de actualizaciones de software
+A partir de Configuration Manager versión 1610, puede usar el panel de actualizaciones de software para ver el estado de cumplimiento actual de los dispositivos de la organización y analizar rápidamente los datos para ver los dispositivos que están en riesgo. Para ver el panel, vaya a **Supervisión** > **Introducción** > **Seguridad** > **Software Updates Dashboard** (Panel de actualizaciones de software).   
 
 ##  <a name="a-namebkmksualertsa-alerts-for-software-updates"></a><a name="BKMK_SUAlerts"></a> Alertas de actualizaciones de software  
  Puede configurar alertas de actualizaciones de software a fin de notificar a los usuarios administrativos cuándo los niveles de compatibilidad de las implementaciones de actualizaciones de software están por debajo del porcentaje configurado. Puede configurar alertas para las implementaciones de actualizaciones de software en las siguientes ubicaciones:  
@@ -98,6 +101,6 @@ Después de configurar las opciones de alertas, si se producen las condiciones e
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

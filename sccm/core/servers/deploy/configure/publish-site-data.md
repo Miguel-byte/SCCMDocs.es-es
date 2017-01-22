@@ -1,5 +1,5 @@
 ---
-title: Publicar datos del sitio | System Center Configuration Manager
+title: Publicar datos del sitio | Microsoft Docs
 description: "Obtenga información sobre cómo publicar sitios de Configuration Manager en Servicios de dominio de Active Directory."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: cda87a3bdcbba342f111b68af75369ca14744441
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: eb44c1c8c908e9cac17dc6d3011a3111eeb949b1
 
 
 ---
@@ -76,6 +76,6 @@ Para obtener más información sobre cómo pueden buscar los clientes un punto d
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

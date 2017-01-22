@@ -1,5 +1,5 @@
 ---
-title: Capacidades de Technical Preview 1607 para System Center Configuration Manager
+title: Capacidades de Technical Preview 1607 para System Center Configuration Manager | Microsoft Docs
 description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1607."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: e3cbc1adc6dc20a9e67adf76472aef0c6cf54ae0
-ms.openlocfilehash: 4d2a9f9b32b898bfe549f2613689c8dbfd22e339
+ms.sourcegitcommit: f6e34e39d267f3bba26d6aa6a912eb4ba4aa3ab2
+ms.openlocfilehash: 1f91cda68204346913bee382a8bbf52b5a58e227
 
 ---
 # <a name="capabilities-in-technical-preview-1607-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1607 para System Center Configuration Manager
@@ -57,7 +57,7 @@ La personalización de marca del Centro de software se aplica conforme a las sig
 
 1. Si no está instalado el rol de servidor de sitio del punto de sitios web del catálogo de aplicaciones, el Centro de software mostrará el nombre de organización especificado en el cliente **Agente de equipo** que establece el **Nombre de organización mostrado en el Centro de software**. Para obtener instrucciones, vea [Cómo establecer la configuración del cliente](../../core/clients/deploy/configure-client-settings.md).
 
-2. Si está instalado el rol de servidor de sitio del punto de sitios web del catálogo de aplicaciones, el Centro de software mostrará el nombre de la organización y el color especificados en las propiedades del rol de servidor de sitio del punto de sitios web del catálogo de aplicaciones. Para más información, vea [Configuration options for Application Catalog website point (Opciones de configuración del punto de sitios web del catálogo de aplicaciones)](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#Application-Catalog-website-point).
+2. Si está instalado el rol de servidor de sitio del punto de sitios web del catálogo de aplicaciones, el Centro de software mostrará el nombre de la organización y el color especificados en las propiedades del rol de servidor de sitio del punto de sitios web del catálogo de aplicaciones. Para más información, vea [Configuration options for Application Catalog website point (Opciones de configuración del punto de sitios web del catálogo de aplicaciones)](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#BKMK_ApplicationCatalog_Website).
 
 3. Si una suscripción de Microsoft Intune está configurada y conectada al entorno de Configuration Manager, el Centro de software mostrará el nombre de la organización, el color y el logotipo de la empresa especificados en las propiedades de la suscripción de Intune. Para más información, vea [Configuring the Microsoft Intune subscription (Configuración de la suscripción de Microsoft Intune)](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription).
 
@@ -79,6 +79,6 @@ Para más información sobre este problema, vea el [Blog del equipo de soporte t
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

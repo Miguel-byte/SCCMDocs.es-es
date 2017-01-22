@@ -1,5 +1,5 @@
 ---
-title: Cuentas de acceso al contenido | System Center Configuration Manager
+title: Cuentas para acceder al contenido | Microsoft Docs
 description: "Obtenga información acerca de las cuentas donde los clientes obtienen acceso a contenido de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c7d5dc2767621ac2e494d24af07ca20513d6d63f
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 4bf8dbd007f2ff122d1447ffcb2a963579034033
 
 ---
 # <a name="manage-accounts-to-access-content-in-system-center-configuration-manager"></a>Administración de cuentas para acceder al contenido en System Center Configuration Manager
@@ -113,13 +113,13 @@ Antes de implementar el contenido en System Center Configuration Manager, tómes
 -   La cuenta debe tener permisos de **Lectura** para la base de datos del sitio.  
 
 Por ejemplo, si el centro de datos tiene una red perimetral en un bosque que no sea ni el servidor del sitio ni la base de datos del sitio, puede utilizar esta cuenta para leer información de multidifusión desde la base de datos del sitio.  
-Si crea esta cuenta, créela como una cuenta local con derechos reducidos en el equipo que ejecuta Microsoft SQL Server.  
+Si crea esta cuenta, créela como una cuenta local con derechos reducidos en el equipo que ejecuta Microsoft SQL Server.  
 
 > [!IMPORTANT]  
 >  No conceda a esta cuenta derechos de inicio de sesión interactivo.  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

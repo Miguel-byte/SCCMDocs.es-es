@@ -1,5 +1,5 @@
 ---
-title: Terms and Conditions in System Center Configuration Manager
+title: "Términos y condiciones en System Center Configuration Manager | Microsoft Docs"
 description: "Implemente términos y condiciones en grupos de usuarios en System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
 caps.latest.revision: 9
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a7b99bed3186ab8ff817ef5f420d7a55d60b1c14
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 2f8b14bef14d82584fd2bf6cdd05018bdd463ce4
 
 
 ---
@@ -89,7 +89,7 @@ Puede implementar los términos y condiciones de System Center Configuration Man
 
      En la pantalla de estado de la implementación, puede seleccionar las pestañas de estado para ver los usuarios con ese estado. Puede hacer clic en **Ejecutar resumen** para actualizar los datos en toda la jerarquía. Haga clic en **Actualizar** para actualizar datos en la consola.  
 
-## <a name="to-view-a-terms-and-conditions-report"></a>Para ver un informe de términos y condiciones  
+## <a name="to-view--a-terms-and-conditions-report"></a>Para ver un informe de términos y condiciones  
 
 1.  En la consola de Configuration Manager, vaya **Supervisión** > **Información general** > **Creación de informes** > **Informe**.  
 
@@ -122,6 +122,6 @@ Puede implementar los términos y condiciones de System Center Configuration Man
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

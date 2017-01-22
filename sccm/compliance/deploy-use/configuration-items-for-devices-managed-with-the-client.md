@@ -1,5 +1,5 @@
 ---
-title: "Elementos de configuración para dispositivos administrados con el cliente de System Center Configuration Manager | System Center Configuration Manager"
+title: "Elementos de configuración para dispositivos administrados con el cliente de System Center Configuration Manager | Microsoft Docs"
 description: Aprenda a configurar dispositivos Windows y Mac administrados con el cliente de System Center Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4d8947fc9708c8c6d05a4507ef67501efade91d5
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: 683f1103bae7dcd3c7450f2b42ac7b3969c376e3
 
 
 ---
@@ -36,6 +36,6 @@ En este tema se indican los tipos de elementos de configuración de System Cente
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

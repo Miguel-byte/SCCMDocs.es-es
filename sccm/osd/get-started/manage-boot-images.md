@@ -1,5 +1,5 @@
 ---
-title: "Administración de las imágenes de arranque | Configuration Manager"
+title: "Administrar imágenes de arranque | Microsoft Docs"
 description: "En Configuration Manager, aprenda a administrar las imágenes de arranque de Windows PE que se usan durante una implementación de sistema operativo."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 43b87f7fd9d710cb4e7784dc34b4a8b14585b247
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 8c41c39a7f984be2612ae882d3bc08d92278dba6
 
 
 ---
@@ -251,6 +251,6 @@ Una imagen de arranque de Configuration Manager es una imagen de [Windows PE (Wi
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

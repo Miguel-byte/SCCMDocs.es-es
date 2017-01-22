@@ -1,5 +1,5 @@
 ---
-title: "Más información sobre licencias y bifurcaciones | System Center Configuration Manager"
+title: "Más información sobre licencias y ramas | Microsoft Docs"
 description: "Con este tema obtendrá información acerca de los requisitos de licencia para las opciones de instalación disponibles con la versión de octubre de 2016 de System Center Configuration Manager, que incluyen la versión de Rama actual 1606, la Rama de mantenimiento a largo plazo (LSTB) y la instalación de evaluación de la Rama actual."
 ms.custom: na
 ms.date: 10/12/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 473d4f9a39898ff5a664013f91ab95e58cd6d161
-ms.openlocfilehash: 726c10fc536f9612bdf46090ef653388a5cfc969
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: d51a602de9e0cf85d80c74c034613002682e52ea
 
 ---
 
@@ -116,6 +116,6 @@ Utilice los siguientes vínculos para obtener más información acerca de los de
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

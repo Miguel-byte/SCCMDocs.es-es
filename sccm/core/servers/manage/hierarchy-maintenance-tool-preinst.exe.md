@@ -1,5 +1,5 @@
 ---
-title: "Herramienta de mantenimiento de jerarquía | System Center Configuration Manager"
+title: "Herramienta de mantenimiento de jerarquía | Microsoft Docs"
 description: "Comprenda lo que realiza la herramienta de mantenimiento de jerarquía y por qué podría usarla. Incluye referencia de las opciones de línea de comandos."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e9c386d3f45e29de4ddfcfd3807eb96e3544a3b2
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: f3ddeaadfb1418aeeaacdca47768600c86b59083
 
 
 ---
@@ -127,6 +127,6 @@ Puede utilizar la herramienta de mantenimiento de jerarquía para exportar las c
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Alertas y el sistema de estado | System Center Configuration Manager
+title: Alertas y el sistema de estado | Microsoft Docs
 description: "Configure alertas y use el sistema de estado para mantenerse informado del estado de la implementación de Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: dda2e3af6ae14a949af5c70f300f8c7c6772e1a8
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: ed692bdea055775890535d2666f09ba5f5c7c4e1
 
 
 ---
@@ -204,7 +204,7 @@ Dado que el sistema de estado mantiene configuraciones independientes para cada 
 |Configurar suscripciones de correo electrónico para las alertas|Consulte la sección [Management tasks for alerts](#BKMK_Manage) en este tema.|  
 |Supervisar alertas|Consulte la sección [Supervisar alertas](#BKMK_MonitorAlerts)|  
 
-###  <a name="a-namebkmkmanagea-management-tasks-for-alerts"></a><a name="BKMK_Manage"></a> Tareas de administración de alertas  
+###  <a name="a-namebkmkmanagea-management-tasks-for-alerts"></a><a name="BKMK_Manage"></a> Management tasks for alerts  
 
 ##### <a name="to-manage-general-alerts"></a>Para administrar alertas generales  
 
@@ -313,6 +313,6 @@ Dado que el sistema de estado mantiene configuraciones independientes para cada 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

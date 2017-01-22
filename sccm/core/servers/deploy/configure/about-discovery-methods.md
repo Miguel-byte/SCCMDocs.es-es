@@ -1,5 +1,5 @@
 ---
-title: "Métodos de detección | System Center Configuration Manager"
+title: "Métodos de detección | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -15,8 +15,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 8bb71e477bb9a265b3485bd3ef8232f6e9933a37
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 223ebc3009b33c43818636a9e19b9b482619550b
 
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>Acerca de los métodos de detección para System Center Configuration Manager
@@ -134,7 +134,7 @@ Para más información sobre cómo configurar este método de detección, vea [C
 > [!TIP]  
 >  Además de la información de esta sección, vea [Características comunes de la detección de grupos, sistemas y usuarios de Active Directory](#bkmk_shared).  
 
-Use este método de detección para buscar en las ubicaciones especificadas de Active Directory Domain Services (AD DS) recursos informáticos que se puedan usar para crear colecciones y consultas. También puede instalar el cliente de Configuration Manager en un dispositivo detectado mediante la instalación de inserción de cliente.  
+Use este método de detección para buscar en las ubicaciones especificadas de Active Directory Domain Services (AD DS) recursos informáticos que se puedan usar para crear colecciones y consultas. También puede instalar el cliente de Configuration Manager en un dispositivo detectado mediante la instalación de inserción de cliente.  
 
 De forma predeterminada, este método detecta información básica sobre el equipo, incluido lo siguiente:  
 
@@ -172,7 +172,7 @@ Para más información sobre cómo configurar este método de detección, vea [C
 > [!TIP]  
 >  Además de la información de esta sección, vea [Características comunes de la detección de grupos, sistemas y usuarios de Active Directory](#bkmk_shared).  
 
-Use este método de detección para buscar en Active Directory Domain Services (AD DS) e identificar cuentas de usuario y atributos asociados.  De forma predeterminada, este método detecta información básica sobre la cuenta de usuario, incluido lo siguiente:  
+Use este método de detección para buscar en Active Directory Domain Services (AD DS) e identificar cuentas de usuario y atributos asociados.  De forma predeterminada, este método detecta información básica sobre la cuenta de usuario, incluido lo siguiente:  
 
 -   Nombre de usuario  
 
@@ -367,9 +367,9 @@ En el diagrama siguiente se muestra qué encuentra la detección de redes de sol
 
  Al ejecutar una detección de redes de solo topología desde el servidor 1 con un salto de enrutador, se detecta lo siguiente:  
 
--   Enrutador 1 y subred 10.1.10.0 (encontrados con cero saltos).  
+-   Enrutador 1 y subred 10.1.10.0 (encontrados con cero saltos).  
 
--   Subredes 10.1.20.0 y 10.1.30.0, subred A y enrutador 2 (encontrados en el primer salto).  
+-   Subredes 10.1.20.0 y 10.1.30.0, subred A y enrutador 2 (encontrados en el primer salto).  
 
 > [!WARNING]  
 >  Cada incremento del número de saltos de enrutador puede aumentar significativamente el número de recursos detectables y el ancho de banda de red que consume la detección de redes.  
@@ -459,7 +459,7 @@ Para usar esta opción:
 
 -   Los equipos deben estar configurados para actualizar el atributo **lastLogonTimeStamp** en Active Directory Domain Services.  
 
--   El nivel funcional de dominio de Active Directory debe estar establecido en Windows Server 2003 o posterior.  
+-   El nivel funcional de dominio de Active Directory debe estar establecido en Windows Server 2003 o posterior.  
 
 Al configurar el tiempo después del último inicio de sesión que quiere usar para esta configuración, tenga en cuenta el intervalo para la replicación entre controladores de dominio.  
 
@@ -501,6 +501,6 @@ Puede ver y configurar la lista de atributos personalizados en la pestaña **Atr
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

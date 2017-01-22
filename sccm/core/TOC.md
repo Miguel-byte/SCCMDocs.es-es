@@ -87,7 +87,8 @@
 ##   [Evaluar Configuration Manager en un laboratorio](get-started/evaluate-with-lab-environment.md)
 ###  [Configurar el laboratorio](get-started/set-up-your-lab.md)
 
-##   [Technical Preview](get-started/technical-preview.md)
+##   [Technical Preview](get-started/technical-preview.md) 
+###  [Capacidades en 1612](get-started/capabilities-in-technical-preview-1612.md)
 ###  [Capacidades en 1611](get-started/capabilities-in-technical-preview-1611.md)
 ###  [Capacidades en 1610](get-started/capabilities-in-technical-preview-1610.md)
 ###  [Capacidades en 1609](get-started/capabilities-in-technical-preview-1609.md)
@@ -300,6 +301,6 @@
 ###  [Actualizar análisis](clients/manage/upgrade/upgrade-analytics.md)
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

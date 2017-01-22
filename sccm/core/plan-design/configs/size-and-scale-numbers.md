@@ -1,5 +1,5 @@
 ---
-title: "Tamaño y escala | System Center Configuration Manager"
+title: "Tamaño y escala | Microsoft Docs"
 description: "Identifique el número de roles de sistema de sitio y sitios que necesitará para admitir los dispositivos en su entorno de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: aeeb902fad7444534cafa7f9cb984ce8764471b0
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 453d934d693d58e98cf800988dff702400daaf95
 
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Números de tamaño y escala de System Center Configuration Manager
@@ -190,6 +190,6 @@ Cada punto de administración puede admitir el siguiente número de dispositivos
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

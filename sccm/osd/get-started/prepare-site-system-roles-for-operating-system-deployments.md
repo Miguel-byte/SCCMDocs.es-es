@@ -1,5 +1,5 @@
 ---
-title: Preparar los roles de sistema de sitio para las implementaciones de sistema operativo | Configuration Manager
+title: "Preparar los roles de sistema de sitio para la implementación de sistemas operativos | Microsoft Docs"
 description: Configure los roles de sistema de sitio antes de implementar sistemas operativos en System Center Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a9e682c855d5e1fb26f772b2af5066280e01851f
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 1069a18eecbc5f53b74ad89e166e6f2c7b180693
 
 
 ---
@@ -222,6 +222,6 @@ Debe probar la configuración personalizada en su entorno para determinar lo que
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Supervisar la migración | System Center Configuration Manager"
+title: "Supervisar la migración | Microsoft Docs"
 description: "Obtenga información sobre cómo usar la consola de Configuration Manager para supervisar el progreso y la finalización correcta de los trabajos de migración."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f8b577366cd2438aed21759e18f034642ceae5e3
+ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
+ms.openlocfilehash: 896807ec2c4be2835094a27add59d4cc09e93add
 
 
 ---
@@ -42,6 +42,6 @@ Con System Center Configuration Manager, puede supervisar la migración en la co
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

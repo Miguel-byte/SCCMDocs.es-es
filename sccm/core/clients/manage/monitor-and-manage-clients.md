@@ -1,8 +1,8 @@
 ---
-title: "Supervisión de clientes | System Center Configuration Manager"
+title: Supervisar clientes | Microsoft Docs
 description: Aprenda a supervisar y administrar clientes en System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 110b65b3-2202-466f-bb5d-e5ee282506fc
 caps.latest.revision: 5
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ea3358696496e761463b5da45e275dfc7f1ebd1d
+ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
+ms.openlocfilehash: dbdc74cc2f94553745eb50aeadf6d33a54064c6b
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: ea3358696496e761463b5da45e275dfc7f1ebd1d
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-System Center Configuration Manager proporciona diversos métodos para supervisar y administrar el software de cliente una vez que se haya implementado en equipos y dispositivos de la organización.  Puede supervisar los clientes para comprobar su estado y, en algunos casos, Configuration Manager puede realizar la corrección automática según el problema detectado. La consola de Configuration Manager también ofrece métodos para administrar clientes de dispositivos individuales o recopilaciones de dispositivos.  
+System Center Configuration Manager (también conocido como ConfigMgr o SCCM) proporciona diversos métodos para supervisar y administrar el software de cliente una vez que se haya implementado en equipos y dispositivos de la organización.  Puede supervisar los clientes para comprobar su estado y, en algunos casos, Configuration Manager puede realizar la corrección automática según el problema detectado. La consola de Configuration Manager también ofrece métodos para administrar clientes de dispositivos individuales o recopilaciones de dispositivos.  
 
  Con la información de los siguientes temas, aprenda a supervisar y administrar los clientes y obtenga detalles adicionales para la supervisión y la administración de clientes de servidores Linux y UNIX:  
 
@@ -39,6 +39,6 @@ System Center Configuration Manager proporciona diversos métodos para supervisa
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

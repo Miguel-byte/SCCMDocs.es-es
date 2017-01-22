@@ -1,5 +1,5 @@
 ---
-title: "Características y funcionalidades | System Center Configuration Manager"
+title: "Características y funcionalidades | Microsoft Docs"
 description: "Obtenga información sobre las funcionalidades de administración principales de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc40912a3da034ac0e3f84c72593aa4a9df8d057
-ms.openlocfilehash: c558148104b6338e4038bf690491c88e76dfdcaf
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 851029368d97312ef2766505f933eac72d6950e5
 
 
 ---
@@ -58,7 +58,7 @@ A continuación se indican las funcionalidades de administración principales de
 
 **Administración de dispositivos móviles con Microsoft Intune**  
 
- Puede usar Configuration Manager para administrar a través de Internet los dispositivos iOS, Android (Samsung KNOX incluido), Windows Phone y Windows mediante el servicio de Microsoft Intune.
+ Puede usar Configuration Manager para administrar a través de Internet los dispositivos iOS, Android (Samsung KNOX Standard incluido), Windows Phone y Windows mediante el servicio de Microsoft Intune.
 
  Aunque use el servicio de Intune, las tareas de administración se completan mediante el uso del rol de sistema de sitio del punto de conexión de servicio, disponible a través de la consola de Configuration Manager. Consulte [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md) (Administración híbrida de dispositivos móviles (MDM) con System Center Configuration Manager y Microsoft Intune).  
 
@@ -104,6 +104,6 @@ A continuación se indican las funcionalidades de administración principales de
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

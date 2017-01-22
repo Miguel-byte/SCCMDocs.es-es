@@ -1,8 +1,8 @@
 ---
-title: "Cómo crear perfiles de VPN en System Center Configuration Manager"
+title: "Cómo crear perfiles de VPN en System Center Configuration Manager | Microsoft Docs"
 description: Aprenda a crear perfiles de VPN en System Center Configuration Manager.
-ms.custom: na
-ms.date: 10/28/2016
+ms.custom: 
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
 caps.latest.revision: 15
+author: nbigman
 caps.handback.revision: 0
 ms.author: nbigman
 ms.manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a65de5feae2ff44f938ce8b7e3c8d23d560bb180
-ms.openlocfilehash: bcea8676c163a8aba1bc7f3364fde52375f52429
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: f674aa5502e4b3b45d0eda119419863892d72cff
 
 
 ---
@@ -29,7 +30,7 @@ ms.openlocfilehash: bcea8676c163a8aba1bc7f3364fde52375f52429
 > [!NOTE]  
 >
 > - Para obtener información sobre los tipos de conexión disponibles para las diferentes plataformas de dispositivos, consulte [VPN profiles in System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md) (Perfiles de VPN en System Center Configuration Manager).  
-> - En el caso de conexiones VPN de terceros, distribuya la aplicación VPN antes de implementar el perfil de VPN. Si no implementa la aplicación, se les pedirá a los usuarios que lo hagan cuando intenten conectarse a la VPN. Para aprender a implementar aplicaciones, consulte [Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications) (Cómo implementar aplicaciones con System Center Configuration Manager).
+> - En el caso de conexiones VPN de terceros, distribuya la aplicación VPN antes de implementar el perfil de VPN. Si no implementa la aplicación, se les pedirá a los usuarios que lo hagan cuando intenten conectarse a la VPN. Para aprender a implementar aplicaciones, consulte [Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md) (Cómo implementar aplicaciones con System Center Configuration Manager).
 
 ### <a name="start-the-create-vpn-profile-wizard"></a>Iniciar el Asistente para crear perfil de VPN  
 
@@ -131,11 +132,19 @@ ms.openlocfilehash: bcea8676c163a8aba1bc7f3364fde52375f52429
             >  
             >  Los dispositivos que ejecutan iOS solo admiten RSA SecurID y MSCHAP v2 como métodos de autenticación cuando el tipo de conexión es PPTP. Para evitar errores, implemente un perfil de VPN PPTP independiente en los dispositivos que ejecutan iOS.  
 
-               - Los valores **Acceso condicional** y **Dominio principal de Protección de datos de empresa**, que solo se admiten cuando se usa Configuration Manager sin Intune, a los que puede acceder si selecciona **Avanzadas**. Para más información sobre Protección de datos de empresa, consulte [Crear una directiva de Windows Information Protection (WIP) con Microsoft Intune](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune).
-        
-        ![Configurar el acceso condicional para VPN](../media/vpn-conditional-access.png)
+        - **Acceso condicional**
+            - Pulse **Habilitar acceso condicional para esta conexión VPN** para asegurarse de que los dispositivos que se conectan a la VPN se prueban para el cumplimiento del acceso condicional antes de la conexión. Las directivas de cumplimiento se describen en [Device compliance policies in System Center Configuration Manager (Directivas de cumplimiento de dispositivos en System Center Configuration Manager)](https://docs.microsoft.com/en-us/sccm/protect/deploy-use/device-compliance-policies.md).
+            - Pulse **Habilitar inicio de sesión único (SSO) con certificado alternativo** para elegir un certificado diferente al certificado de autenticación de VPN para el cumplimiento del dispositivo. Si elige esta opción, proporcione el **EKU** (lista separada por comas) y el **Hash del emisor** para el certificado correcto que el cliente de VPN debe buscar.
 
-        -   Para algunos métodos de autenticación, puede hacer clic en **Configurar** para abrir el cuadro de diálogo de propiedades de Windows (si la versión de Windows en la que ejecuta la consola de System Center Configuration Manager es compatible con este método de autenticación), donde puede configurar las propiedades del método de autenticación.  
+         - **Windows Information Protection**: proporcione la identidad corporativa administrada por la empresa, que normalmente es el dominio principal de la organización, por ejemplo, *contoso.com*. Puede especificar varios dominios que sean propiedad de la organización separándolos con el carácter "|". Por ejemplo, *contoso.com|newcontoso.com*.   
+            Para obtener más información sobre Windows Information Protection, consulte [Crear una directiva de Windows Information Protection (WIP) con Microsoft Intune](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune).   
+
+         ![Configurar el acceso condicional para VPN](../media/vpn-conditional-access.png)
+
+
+        > [!NOTE]  
+        >
+        >Para algunos métodos de autenticación, puede hacer clic en **Configurar** para abrir el cuadro de diálogo de propiedades de Windows (si la versión de Windows en la que ejecuta la consola de System Center Configuration Manager es compatible con este método de autenticación), donde puede configurar las propiedades del método de autenticación.  
 
 ### <a name="configure-proxy-settings-for-the-vpn-profile"></a>Establecer la configuración de proxy del perfil de VPN  
 
@@ -194,12 +203,12 @@ En la página **Plataformas admitidas** del **Asistente para crear perfil de VPN
 
 ### <a name="next-steps"></a>Pasos siguientes
 
-- En el caso de conexiones VPN de terceros, distribuya la aplicación VPN antes de implementar el perfil de VPN. Si no implementa la aplicación, se les pedirá a los usuarios que lo hagan cuando intenten conectarse a la VPN. Para aprender a implementar aplicaciones, consulte [Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications) (Cómo implementar aplicaciones con System Center Configuration Manager).
+- En el caso de conexiones VPN de terceros, distribuya la aplicación VPN antes de implementar el perfil de VPN. Si no implementa la aplicación, se les pedirá a los usuarios que lo hagan cuando intenten conectarse a la VPN. Para aprender a implementar aplicaciones, consulte [Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md) (Cómo implementar aplicaciones con System Center Configuration Manager).
 
 - Implemente el perfil de VPN tal como se describe en [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md) (Cómo implementar perfiles en System Center Configuration Manager).  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Instalar la evaluación de actualización | System Center Configuration Manager"
+title: "Actualizar instalaciones de evaluación | Microsoft Docs"
 description: "Obtenga información sobre cómo actualizar una instalación de evaluación a una instalación completa de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 0ad15c0caddeb3c200b8c663631d2993a338c7c8
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 66dc01b7d1eeed5ad8262c60164460b669301aaf
 
 ---
 # <a name="upgrade-an-evaluation-install-of-system-center-configuration-manager-to-a-full-install"></a>Actualizar una instalación de evaluación de System Center Configuration Manager a una instalación completa
@@ -64,6 +64,6 @@ Ya que los sitios secundarios no se tratan como instalaciones de evaluación, no
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

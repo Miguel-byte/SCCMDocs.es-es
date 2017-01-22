@@ -1,5 +1,5 @@
 ---
-title: Capacidades de Technical Preview 1605 para System Center Configuration Manager
+title: Capacidades de Technical Preview 1605 para System Center Configuration Manager | Microsoft Docs
 description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1605."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 0137d6e2c69480d6de88fbf8fa3450d1699007e5
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 06741d03e208c6f5c8093130780dcdc8f0fcfbf7
 
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1605 para System Center Configuration Manager
@@ -106,7 +106,7 @@ Acciones comunes como **Retirar/borrar**, **Restablecer contraseña**, **Bloqueo
 
     2.  Haga clic en **Agregar una aplicación que mi organización está desarrollando**.  
 
-    3.  Escriba un nombre para la aplicación, seleccione **Aplicación web y/o** **API web** y haga clic en la flecha **Siguiente**.  
+    3.  Escriba un nombre para la aplicación, seleccione **Aplicación web** y/o **API web** y haga clic en la flecha **Siguiente**.  
 
     4.  Escriba la misma dirección URL para **URL de inicio de sesión** y **URI de id. de aplicación**. La dirección URL puede ser cualquiera (no es necesario que se resuelva en una dirección real). Por ejemplo, puede escribir **https://&lt;suDominio>/sccm**.  
 
@@ -273,7 +273,7 @@ En esta Technical Preview, si el Portal de empresa está abierto durante más de
 
 -   La pestaña **Aplicaciones** se ha dividido en tres pestañas independientes para **Actualizaciones**, **Sistemas operativos** (que antes se encontraban en la lista **Filtros**) y **Aplicaciones**.  
 
-##  <a name="a-namebkmkservergroupsa-service-a-server-group"></a><a name="BKMK_ServerGroups"></a> Dar servicio a un grupo de servidores  
+##  <a name="a-namebkmkservergroupsa-service-a--server-group"></a><a name="BKMK_ServerGroups"></a> Dar servicio a un grupo de servidores  
  Technical Preview para System Center Configuration Manager, versión 1511, incluía la capacidad de crear una colección en la que todos los dispositivos formaban un grupo de servidores. Después se podían configurar las opciones del grupo de servidores para usarlas al implementar actualizaciones de software para el grupo de servidores, controlar el porcentaje de equipos que se actualizaba en un momento dado y configurar scripts de PowerShell anteriores y posteriores a la implementación para ejecutar acciones personalizadas.  
 
  Technical Preview para System Center Configuration Manager, versión 1605, agrega la capacidad de actualizar los equipos del grupo de servidores en un orden especificado por el usuario, agrega supervisión mejorada para ver el estado de los equipos del grupo de servidores y proporciona la capacidad de borrar los bloqueos de implementación, que resulta útil cuando los clientes no han podido instalar las actualizaciones de software y evitan que otros clientes instalen las suyas.  
@@ -371,7 +371,7 @@ En esta Technical Preview, si el Portal de empresa está abierto durante más de
 
 ##### <a name="onboard-devices-for-windows-defender-atp"></a>Dispositivos incorporados para Windows Defender ATP  
 
-1.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Endpoint Protection** > **Directivas de Windows Defender ATP** y haga clic en **Crear directiva de Windows Defender ATP**. Se abre el Asistente para crear directiva de Windows Defender ATP.  
+1.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Endpoint Protection** > **Directivas de Windows Defender ATP** y haga clic en **Crear directiva de Windows Defender ATP**. Se abre el Asistente para crear directiva de Protección contra amenazas avanzada de Windows Defender.  
 
 2.  Escriba el **Nombre** y la **Descripción** de la directiva de Windows Defender ATP y seleccione **Incorporación**. Haga clic en Siguiente.  
 
@@ -389,9 +389,9 @@ En esta Technical Preview, si el Portal de empresa está abierto durante más de
 
 6.  Ahora puede hacer clic en **Implementar** para implementar la directiva de Windows Defender ATP en equipos cliente administrados.  
 
-##### <a name="monitor-windows-defender-atp"></a>Supervisar Windows Defender ATP  
+##### <a name="monitor-windows-defender-atp"></a>Supervisión de Protección contra amenazas avanzada de Windows Defender  
 
-1.  En la consola de Configuration Manager, vaya a **Supervisión** > **Información general** > **Seguridad** y luego haga clic en **Windows Defender ATP**.  
+1.  En la consola de Configuration Manager, vaya a **Supervisión** > **Información general** > **Seguridad** y luego haga clic en **Protección contra amenazas avanzada de Windows Defender**.  
 
 2.  Revise el panel de Protección contra amenazas avanzada de Windows Defender.  
 
@@ -472,6 +472,6 @@ En esta Technical Preview, si el Portal de empresa está abierto durante más de
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

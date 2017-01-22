@@ -1,6 +1,6 @@
 ---
 
-title: Inscribir dispositivos en masa | MDM local | System Center Configuration Manager
+title: "Inscripción masiva de dispositivos | Microsoft Docs | MDM local"
 description: "Inscriba dispositivos en masa de forma automática con la administración local de dispositivos móviles en System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -18,8 +18,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 92f30335c412fb1ddf790de7218bb4b704562298
+ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
+ms.openlocfilehash: ef68a9f998ea6ff9628e01f6ac622711de68375d
 
 
 ---
@@ -168,6 +168,6 @@ En las tareas siguientes se explica cómo inscribir equipos y dispositivos en ma
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

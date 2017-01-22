@@ -1,5 +1,5 @@
 ---
-title: "Crear perfiles de correo electrónico de Exchange ActiveSync | System Center Configuration Manager"
+title: "Crear perfiles de correo electrónico de Exchange ActiveSync | Microsoft Docs"
 description: "Obtenga información sobre cómo crear y configurar perfiles de correo electrónico en System Center Configuration Manager que funcionen con Microsoft Intune."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 613ed15742322e2eb90eec3c9f493e3b1755d93a
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 3ff5d53464c61e0dc1836d032bcb3815bae05d1f
 
 
 ---
@@ -39,10 +39,10 @@ Los perfiles de correo electrónico funcionan con Microsoft Intune para permitir
 
 -   Dispositivos iPhone que ejecutan iOS 5, iOS 6, iOS 7 e iOS 8  
 
--   Dispositivos iPad que ejecutan iOS 5, iOS 6, iOS 7 e iOS 8  
+-   Dispositivos IPad con iOS 5, iOS 6, iOS 7 e iOS 8  
 
 > [!IMPORTANT]  
->  Para implementar perfiles en dispositivos iOS, Android Samsung KNOX, Windows Phone, Windows 8.1 o Windows 10, estos dispositivos se deben inscribir en Intune. Para obtener información sobre cómo inscribir dispositivos, consulte [Administrar dispositivos móviles con Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
+>  Para implementar perfiles en dispositivos iOS, Android Samsung KNOX Standard, Windows Phone, Windows 8.1 o Windows 10, estos dispositivos se deben inscribir en Intune. Para obtener información sobre cómo inscribir dispositivos, consulte [Administrar dispositivos móviles con Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
 
  Además de configurar una cuenta de correo electrónico en el dispositivo, también puede configurar las opciones de sincronización de contactos, calendarios y tareas.  
 
@@ -57,7 +57,7 @@ Iniciar el Asistente para crear perfiles de correo electrónico de Exchange Acti
 
 2.  En el área de trabajo **Activos y compatibilidad** , expanda **Configuración de cumplimiento**y **Acceso a los recursos de la compañía**y, a continuación, haga clic en **Perfiles de correo electrónico**.  
 
-3.  En el grupo **Crear** de la pestaña **Inicio** , haga clic en **Crear perfil de Exchange ActiveSync**. 
+3.  En el grupo **Crear** de la pestaña **Inicio** , haga clic en **Crear perfil de Exchange ActiveSync**.
 
 4.  Siga las instrucciones del asistente.   
 
@@ -173,7 +173,7 @@ Iniciar el Asistente para crear perfiles de correo electrónico de Exchange Acti
         -   **Tareas**  
 
 ###  <a name="specify-supported-platforms-for-the-exchange-activesync-email-profile"></a>especificar las plataformas admitidas para el perfil de correo electrónico de Exchange ActiveSync.  
- 
+
 1.  En la página **Plataformas admitidas** del Asistente para crear perfiles de correo electrónico de Exchange ActiveSync, seleccione los sistemas operativos en los que se va a instalar el perfil de correo electrónico o haga clic en **Seleccionar todo** para instalarlo en todos los sistemas operativos disponibles.  
 
 2.  Complete el asistente.
@@ -182,6 +182,6 @@ Para obtener más información sobre cómo implementar perfiles de correo electr
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

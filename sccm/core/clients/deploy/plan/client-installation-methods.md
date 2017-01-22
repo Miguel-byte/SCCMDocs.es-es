@@ -1,8 +1,8 @@
 ---
-title: "Métodos de instalación de cliente | System Center Configuration Manager"
+title: "Métodos de instalación de clientes | Microsoft Docs"
 description: "Conozca los métodos de instalación de cliente para System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,22 +13,20 @@ ms.topic: get-started-article
 ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 169e7871bc1fbc83964ecb17e277d64ce4fd472c
+ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
+ms.openlocfilehash: a7d5a04cf34c49246f768f9a4757c5da3b4db31a
 
 
 ---
 # <a name="client-installation-methods-in-system-center-configuration-manager"></a>Métodos de instalación de cliente en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Puede usar varios métodos para instalar el software cliente de System Center Configuration Manager en dispositivos Windows, servidores UNIX/Linux y equipos Mac de su empresa. Puede utilizar la combinación de estos métodos que mejor se adapte a sus requisitos.  
-
- La siguientes secciones presentan las ventajas y desventajas de cada método de instalación de cliente para ayudarle a determinar el método que funcionará mejor en su organización.  
+Puede usar diferentes métodos para instalar el software cliente de Configuration Manager (también conocido como ConfigMgr o SCCM). Puede usar un método o una combinación de ellos. En este tema puede obtener información sobre cada método para saber cuál de ellos funcionará mejor en su organización.  
 
 ## <a name="client-push-installation"></a>Instalación de inserción de cliente  
 
@@ -150,6 +148,6 @@ Puede usar varios métodos para instalar el software cliente de System Center Co
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

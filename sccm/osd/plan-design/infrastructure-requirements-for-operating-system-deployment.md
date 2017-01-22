@@ -1,5 +1,5 @@
 ---
-title: "Requisitos de infraestructura para la implementación de sistema operativo | Configuration Manager"
+title: "Requisitos de infraestructura para la implementación de sistema operativo | Microsoft Docs"
 description: "Asegúrese de que conoce las dependencias externas y las dependencias de producto antes de usar System Center 2012 Configuration Manager para la implementación de sistema operativo."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e78cc0d45127df521e362e4cd96b492ddc110a2a
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 77ac69cecab7aa460001a8d2800e61f20a8565ed
 
 
 ---
@@ -240,6 +240,6 @@ Debe instalar las siguientes revisiones de WSUS 4.0:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

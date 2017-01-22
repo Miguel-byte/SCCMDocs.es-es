@@ -1,5 +1,5 @@
 ---
-title: "Supervisión de perfiles de correo electrónico, Wi-Fi y VPN | System Center Configuration Manager"
+title: "Supervisión de perfiles de correo electrónico, Wi-Fi y VPN | Microsoft Docs"
 description: "Aprenda a supervisar el estado de compatibilidad de los perfiles de correo electrónico, Wi-Fi y VPN en System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 9ae359deaacb88804379622fa96e5fdb0e03b6bf
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 73d941633d270cf9628f8be14e1e56f3c78624b6
 
 
 ---
@@ -70,6 +70,6 @@ Después de implementar los perfiles de correo electrónico, Wi-Fi y VPN de Syst
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

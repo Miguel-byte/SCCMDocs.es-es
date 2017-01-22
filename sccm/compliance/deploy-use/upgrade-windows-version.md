@@ -1,8 +1,8 @@
 ---
-title: "Actualizar dispositivos Windows a una versión nueva | System Center Configuration Manager"
+title: "Actualizar dispositivos Windows a una versión reciente | Microsoft Docs"
 description: "Actualice dispositivos que ejecuten Windows 10 Escritorio, Windows 10 Mobile o Windows 10 Holographic a una edición más reciente de forma automática."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7ee088f6da266742e7836499a7f0e072bf446a62
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: f14dfb77be7b53e74d53e0c1fc7e7f1731952d40
 
 
 ---
@@ -35,12 +35,13 @@ La **directiva de actualización de edición** de System Center Configuration Ma
 - Windows 10 Holographic
 
 Las siguientes rutas de acceso de actualización son compatibles:
+
 - Desde Windows 10 Pro a Windows 10 Enterprise
 - Desde Windows 10 Home a Windows 10 Education
 - Desde Windows 10 Mobile a Windows 10 Mobile Enterprise
 - Desde Windows 10 Holographic Pro a Windows 10 Holographic Enterprise
 
-Los dispositivos se deben inscribir en Microsoft Intune. Actualmente, esta característica no es compatible con equipos que ejecuten el software cliente de Configuration Manager o equipos administrados por la MDM local.
+Los dispositivos deben estar inscritos en Microsoft Intune o ejecutar el software cliente de Configuration Manager. Esta directiva actualmente no es compatible con equipos administrados por MDM local.
 
 ## <a name="before-you-start"></a>Antes de empezar  
  Antes de empezar a actualizar dispositivos a la versión más reciente, necesitará uno de los elementos siguientes:  
@@ -78,7 +79,7 @@ Los dispositivos se deben inscribir en Microsoft Intune. Actualmente, esta carac
 
 6.  Complete el asistente.  
 
- La nueva directiva se muestra en el nodo **Actualización de la edición de Windows 10** del área de trabajo **Activos y compatibilidad** .  
+La nueva directiva se muestra en el nodo **Actualización de la edición de Windows 10** del área de trabajo **Activos y compatibilidad** .  
 
 ## <a name="deploy-the-edition-upgrade-policy"></a>Implementar la directiva de actualización de edición  
 
@@ -86,14 +87,14 @@ Los dispositivos se deben inscribir en Microsoft Intune. Actualmente, esta carac
 
 3.  Seleccione la directiva de actualización de la edición de Windows 10 que quiere implementar y después, en la pestaña **Inicio** , en el grupo **Implementación** , haga clic en **Implementar**.  
 
-4.  En el cuadro de diálogo **Implementar actualización de la edición de Windows 10** , seleccione la recopilación de usuarios o dispositivos en los que desea implementar la directiva y la programación con la que se evaluará la directiva y, a continuación, haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo **Deploy Windows 10 Edition Upgrade** (Implementar actualización de la edición de Windows 10), seleccione la recopilación en la que quiere implementar la directiva y la programación con la que se evaluará la directiva y, después, haga clic en **Aceptar**. En el caso de los equipos que se administran con el cliente de Configuration Manager, debe implementar la directiva en una recopilación de dispositivos. En el caso de los equipos inscritos con Intune, puede implementar la directiva en una recopilación de usuarios o dispositivos. 
 
- Puede supervisar las implementaciones que acaba de crear desde el nodo **Implementaciones** del área de trabajo **Supervisión** .  
+Puede supervisar las implementaciones que acaba de crear desde el nodo **Implementaciones** del área de trabajo **Supervisión** .  
 
- Una vez que la directiva alcance un equipo Windows de destino, se reiniciará durante las dos horas posteriores para aplicar la actualización. Asegúrese de informar a los usuarios a los que implemente la directiva, o prográmela para que se ejecute fuera del horario laboral de los usuarios.
+ Una vez que la directiva alcance un equipo Windows de destino y se evalúe, se reiniciará durante las dos horas posteriores para aplicar la actualización. Asegúrese de informar a los usuarios a los que implemente la directiva, o prográmela para que se ejecute fuera del horario laboral de los usuarios.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

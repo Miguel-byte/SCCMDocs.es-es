@@ -1,5 +1,5 @@
 ---
-title: "Creación de perfiles de certificado | System Center Configuration Manager"
+title: Supervisar perfiles de certificado | Microsoft Docs
 description: Aprenda a supervisar el estado de cumplimiento de los perfiles de certificado de System Center Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: bb72571596e77ce3069c1f6526fb3ba00fc9ecdc
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 34e1f57798a9745303dd6d03a8b4362c01c5efbb
 
 
 ---
@@ -91,6 +91,6 @@ Después de implementar los perfiles de certificado de System Center Configurati
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

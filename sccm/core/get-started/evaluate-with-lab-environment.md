@@ -1,5 +1,5 @@
 ---
-title: "Evalúe System Center Configuration Manager mediante la creación de su propio entorno de laboratorio"
+title: "Evalúe System Center Configuration Manager mediante la creación de su propio entorno de laboratorio | Microsoft Docs"
 description: "Cree un entorno de laboratorio para evaluar System Center Configuration Manager para usarlo en la organización."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 363e6a929b72e027d5fff7584905fb552dc695b0
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: e72acbe0a2f5592b5bdf9a3612db62bfb066fadf
 
 
 ---
@@ -64,12 +64,12 @@ Aprenda a crear un entorno de laboratorio para evaluar System Center Configurati
 
 -   Aprenda la importancia de los roles de seguridad en [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md) (Conceptos básicos de la administración basada en roles de System Center Configuration Manager).  
 
--   La lectura de [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_Concepts) (Conceptos de administración de contenido) puede ilustrarle sobre conceptos específicos relacionados con la administración de contenido.  
+-   La lectura de [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md) (Conceptos de administración de contenido) puede ilustrarle sobre conceptos específicos relacionados con la administración de contenido.  
 
 -   El tema [Understand how clients find site resources and services for System Center Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md) (Comprender cómo los clientes buscan servicios y recursos de sitio para System Center Configuration Manager) le ayudará a admitir correctamente las operaciones diarias de su implementación.  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

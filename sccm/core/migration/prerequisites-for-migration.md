@@ -1,5 +1,5 @@
 ---
-title: "Requisitos previos de la migración | System Center Configuration Manager"
+title: "Requisitos previos de la migración | Microsoft Docs"
 description: "Obtenga información sobre las versiones admitidas de Configuration Manager, los idiomas admitidos del sitio de origen y las configuraciones necesarias para llevar a cabo la migración."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1b310aeee487087e79c2d0fd6469f8f63b932045
+ms.sourcegitcommit: 6cbb790df47c9a87514b0233e2d0c12dd6f23ee9
+ms.openlocfilehash: 70e2531076abedc1381b6e3bccf15b5afe27b465
 
 
 ---
@@ -113,13 +113,6 @@ A continuación, se enumeran las configuraciones necesarias para el uso de migra
 
      Además, para compartir un punto de distribución de un sitio de origen de System Center 2012 Configuration Manager o System Center Configuration Manager, la **cuenta de sitio de origen** (que obtiene acceso al proveedor de SMS del servidor del sitio de origen) debe tener permisos de **modificación** en el objeto **Sitio** del sitio de origen. Este permiso se concede a la cuenta mediante la administración basada en roles. Para obtener información sobre cómo usar la administración basada en roles, consulte [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md) (Conceptos básicos de la administración basada en roles de System Center Configuration Manager).  
 
--   **Compartir puntos de distribución:**  
-
-     Para compartir correctamente cualquier punto de distribución de un sitio de origen, al menos un sitio primario o el sitio de administración central de la jerarquía de destino debe usar los mismos números de puerto para las solicitudes de cliente que el sitio de origen. Para obtener información sobre los puertos de solicitud de cliente, consulte [How to configure client communication ports in System Center Configuration Manager](../../core/clients/deploy/configure-client-communication-ports.md) (Configurar puertos de comunicación de cliente en System Center Configuration Manager).  
-
-     Para cada sitio de origen, solo se comparten los puntos de distribución que se instalan en los servidores del sistema de sitio que se configuran con un FQDN.  
-
-     Además, para compartir un punto de distribución de un sitio de origen de System Center 2012 Configuration Manager o System Center Configuration Manager, la **cuenta de sitio de origen** (que obtiene acceso al proveedor de SMS del servidor del sitio de origen) debe tener permisos de **modificación** en el objeto **Sitio** del sitio de origen. Este permiso se concede a la cuenta mediante la administración basada en roles. Para obtener información sobre cómo usar la administración basada en roles, consulte [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md) (Conceptos básicos de la administración basada en roles de System Center Configuration Manager).  
 
 -   **Actualizar o volver a asignar puntos de distribución:**  
 
@@ -133,6 +126,6 @@ A continuación, se enumeran las configuraciones necesarias para el uso de migra
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

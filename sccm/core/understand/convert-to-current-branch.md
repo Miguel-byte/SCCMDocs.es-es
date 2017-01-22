@@ -1,5 +1,5 @@
 ---
-title: Actualizar la rama de mantenimiento a largo plazo a la rama actual | System Center Configuration Manager
+title: Actualizar la Rama de mantenimiento a largo plazo a la Rama actual | Microsoft Docs
 description: Aprenda a convertir un sitio de rama de mantenimiento a largo plazo en un sitio de rama actual.
 ms.custom: na
 ms.date: 10/12/2016
@@ -16,15 +16,15 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 835469e78e83bb54c43e530303d27b0918c531e6
-ms.openlocfilehash: efccff6e2a0b1708d4124648da4e173d41663bd1
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 37fa8da8b4acc3f22c9c435206eedde58d2754f0
 
 ---
 
 
 # <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>Actualizar la rama de mantenimiento a largo plazo a la rama actual
 
-*Se aplica a: System Center Configuration Manager (rama de mantenimiento a largo plazo)* 
+*Se aplica a: System Center Configuration Manager (rama de mantenimiento a largo plazo)*
 
 Use este tema para aprender a actualizar (convertir) un sitio y la jerarquía que ejecuta la rama mantenimiento a largo plazo (LTSB) de Configuration Manager a la rama actual.
 
@@ -56,6 +56,6 @@ Una vez completado, el sitio se convierte a la rama actual y las capacidades y c
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Requisitos previos de la implementación de clientes de Windows | System Center Configuration Manager"
+title: "Requisitos previos de la implementación de clientes de Windows | Microsoft Docs"
 description: "Obtenga información sobre los requisitos previos para la implementación de clientes en equipos Windows con System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 caps.latest.revision: 16
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 03ae6de34742ed0030e42c13639ef853d6b2bedc
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: cbcffea0fe2b4c8a05d3a835ff1193b528e55762
 
 
 ---
@@ -58,7 +58,7 @@ La implementación de clientes de Configuration Manager en su entorno tiene las 
 |Microsoft Core XML Services (MSXML) versión 6.20.5002 o posterior|Necesario para admitir el procesamiento de documentos XML en Windows.|  
 |Compresión diferencial remota de Microsoft (RDC)|Necesario para optimizar la transmisión de datos a través de la red.|  
 |Microsoft Visual C++ 2013 Redistributable versión 12.0.21005.1|Necesario para admitir las operaciones de cliente. Cuando esta actualización se instala en los equipos cliente, podría ser necesario reiniciar para completar la instalación.|  
-|Microsoft Visual C++ 2005 Redistributable versión 8.0.50727.42|Necesario para admitir las operaciones de Microsoft SQL Server Compact.|  
+|Microsoft Visual C++ 2005 Redistributable versión 8.0.50727.42|Para la versión 1606 y anteriores, es necesario admitir las operaciones de Microsoft SQL Server Compact.|  
 |API de creación de imágenes de Windows 6.0.6001.18000|Necesarias para permitir que Configuration Manager administre archivos de imagen de Windows (.wim).|  
 |Microsoft Policy Platform 1.2.3514.0|Necesaria para permitir a los clientes evaluar la configuración de la conformidad.|  
 |Microsoft Silverlight 5.1.41212.0 (a partir de la versión 1602 de Configuration Manager)|Necesario para admitir la experiencia de usuario del sitio web del catálogo de aplicaciones.|  
@@ -238,6 +238,6 @@ La implementación de clientes de Configuration Manager en su entorno tiene las 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

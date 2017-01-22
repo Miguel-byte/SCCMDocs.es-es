@@ -1,5 +1,5 @@
 ---
-title: "Implementar perfiles de Wi-Fi, VPN, correo electrónico y certificado | System Center Configuration Manager"
+title: "Implementación de perfiles de Wi-Fi, VPN, correo electrónico y certificado | Microsoft Docs"
 description: "Obtenga información sobre cómo implementar perfiles de Wi-Fi, VPN, correo electrónico y certificado en System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7e13c52c135850b1f449cf91bc81425208d16551
+ms.sourcegitcommit: c2e3aef41e9a890d136039f85777ab07284e5c27
+ms.openlocfilehash: 70372d5df13034b48f3e43b766776442f1be5823
 
 ---
 # <a name="deploy-profiles-in-system-center-configuration-manager"></a>Implementar perfiles de VPN en System Center Configuration Manager
@@ -40,10 +40,10 @@ Para poder usar perfiles, deben estar implementados en una o varias recopilacion
 > -   [How to create certificate profiles in System Center Configuration Manager](create-certificate-profiles.md) (Cómo crear perfiles de certificado en System Center Configuration Manager)    
 
 > [!IMPORTANT]  
->  Cuando se quita una implementación de perfil de Wi-Fi, el perfil de Wi-Fi no se quita de los dispositivos cliente. Si desea quitar el perfil de los dispositivos, deberá hacerlo manualmente
+>  Si se quita una implementación de perfil de VPN, este no se quita de los dispositivos cliente. Si desea quitar el perfil de los dispositivos, deberá hacerlo manualmente
 >   
 
-## <a name="deploying-profiles"></a>Implementar perfiles  
+## <a name="deploying--profiles"></a>Implementar perfiles  
 
 
 1.  En la consola de System Center Configuration Manager, elija **Activos y compatibilidad**.  
@@ -75,6 +75,6 @@ Para poder usar perfiles, deben estar implementados en una o varias recopilacion
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

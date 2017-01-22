@@ -1,5 +1,5 @@
 ---
-title: "Configurar la administración de dispositivos híbrida de Android con System Center Configuration Manager y Microsoft Intune"
+title: "Configurar la administración híbrida de dispositivos Android con System Center Configuration Manager y Microsoft Intune | Microsoft Docs"
 description: "Prepárese para administrar dispositivos móviles Android con Configuration Manager e Intune."
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,20 +13,20 @@ ms.topic: get-started-article
 ms.assetid: c517fe34-0130-465b-a020-bdb555878778
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fa189e812a2e3104cb337ccf40c693621745ee53
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: ab892174643e7565ad9a74abc4f83f2f152669bd
 
 
 ---
 # <a name="set-up-android-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Configurar la administración de dispositivos híbrida de Android con System Center Configuration Manager y Microsoft Intune
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Para System Center Configuration Manager, los usuarios pueden descargar la aplicación de portal de empresa de Android mediante Google Play para inscribir dispositivos Android (incluido Samsung KNOX). La aplicación del portal de la compañía de Android le permite administrar la configuración de cumplimiento, borrar o eliminar dispositivos Android, implementar aplicaciones y recopilar el inventario de hardware y software. Si la aplicación del portal de la compañía de Android no está instalada en los dispositivos Android, no dispondrá de todas las características de administración como, por ejemplo, la configuración de cumplimiento y el inventario, pero podrá implementar aplicaciones en dispositivos Android.  
+Para System Center Configuration Manager, los usuarios pueden descargar la aplicación de portal de empresa de Android de Google Play para inscribir dispositivos Android (incluido Samsung KNOX Standard). La aplicación del portal de la compañía de Android le permite administrar la configuración de cumplimiento, borrar o eliminar dispositivos Android, implementar aplicaciones y recopilar el inventario de hardware y software. Si la aplicación del portal de la compañía de Android no está instalada en los dispositivos Android, no dispondrá de todas las características de administración como, por ejemplo, la configuración de cumplimiento y el inventario, pero podrá implementar aplicaciones en dispositivos Android.  
 
 ## <a name="prepare-to-manage-android-mobile-devices-with-configuration-manager-and-intune"></a>Prepararse para administrar dispositivos móviles Android con Configuration Manager e Intune  
  Los pasos siguientes permiten que Configuration Manager administre dispositivos Android.  
@@ -45,6 +45,6 @@ Para System Center Configuration Manager, los usuarios pueden descargar la aplic
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

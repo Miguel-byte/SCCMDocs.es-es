@@ -1,5 +1,5 @@
 ---
-title: Configuration Manager en Azure | System Center Configuration Manager
+title: Configuration Manager en Azure | Microsoft Docs
 description: "Información sobre el uso de Configuration Manager en un entorno de Azure."
 ms.custom: na
 ms.date: 10/21/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6d304ddb87b9c9abe37b5dc9cf4252580cbcf048
-ms.openlocfilehash: d8f8ea98c4383783c95e6425af29987bdee1429a
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 5866c1d9ad88e49b69fa0c863b1ef8748a8c8111
 
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager en Azure - Preguntas más frecuentes
@@ -80,7 +80,7 @@ También puede usarlos para los servidores de sitio de Configuration Manager. Po
 ### <a name="how-can-i-make-my-database-highly-available-can-i-use-azure-sql-database-or-do-i-have-to-use-microsoft-sql-server-in-a-vm"></a>¿Cómo puedo hacer que mi base de datos sea de alta disponibilidad? ¿Puedo usar Azure SQL Database? ¿O tengo que usar Microsoft SQL Server en una máquina virtual?
 Tiene que usar Microsoft SQL Server en una máquina virtual. Configuration Manager no admite Azure SQL Server de momento, si bien pueden usarse funciones como los grupos de disponibilidad AlwaysOn para SQL Server. Los [grupos de disponibilidad AlwaysOn](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database) se recomiendan y se admiten oficialmente a partir de la versión 1602 de Configuration Manager.
 
-### <a name="can-i-use-azure-load-balancers-with-site-system-roles-like-management-points-or-software-update-points"></a>¿Puedo usar equilibradores de carga de Azure con roles de sistema de sitio como los puntos de administración o los puntos de actualización de software?
+### <a name="can-i-use-azure-load-balancers-with-site-system-roles-like-management-points--or-software-update-points"></a>¿Puedo usar equilibradores de carga de Azure con roles de sistema de sitio como los puntos de administración o los puntos de actualización de software?
 Aunque no se ha probado Configuration Manager con los equilibradores de carga de Azure, si la funcionalidad es transparente para la aplicación, no debería tener efectos adversos sobre las operaciones normales.
 
 
@@ -114,6 +114,9 @@ En las tablas siguientes se indican los recuentos de disco iniciales sugeridos p
 |**Hasta 25 k**       | Servidor de sitio: F4S </br>Servidor de base de datos: DS12_V2 | Servidor de sitio: 1 x P30 </br>Servidor de base de datos: 2 x P30 |
 |**De 25 a 50 k**      | Servidor de sitio: F4S </br>Servidor de base de datos: DS13_V2 | Servidor de sitio: 1 x P30 </br>Servidor de base de datos: 2 x P30 |
 |**De 50 a 100 k**     | Servidor de sitio: F8S </br>Servidor de base de datos: DS14_V2 | Servidor de sitio: 2 x P30 </br>Servidor de base de datos: 3 x P30 |
+
+A continuación se muestra un ejemplo de la configuración de entre 50 000 y 100 000 clientes en DS14_V2 con tres discos P30 en un volumen seccionado con volúmenes lógicos independientes para los archivos de instalación y de base de datos de Configuration Manager:  ![Discos de VM](media/vm_disks.png)  
+
 
 
 ## <a name="user-experience"></a>Experiencia del usuario
@@ -177,6 +180,6 @@ Es difícil de decir, ya que cada entorno es diferente. Lo mejor es hacer el cá
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

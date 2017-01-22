@@ -1,8 +1,8 @@
 ---
-title: Pasos de la secuencia de tareas | Configuration Manager
+title: Pasos de la secuencia de tareas | Microsoft Docs
 description: "Obtenga información sobre los pasos de la secuencia de tareas que puede agregar a una secuencia de tareas de Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2a45cfb3e00d8078fbf45bdc8a2668b7dd0a62c6
-ms.openlocfilehash: 538cb9795586115ad8b52b44fb82b50a0abdbaa2
+ms.sourcegitcommit: 3f44505c977b511223a083a960f871371c0ff133
+ms.openlocfilehash: 6e324eb97c0e803d382371ace541a4b9f96e6ba3
 
 
 ---
@@ -153,7 +153,7 @@ Los siguientes pasos de secuencia de tareas se pueden agregar a una secuencia de
 
  El paso **Aplicar imagen de sistema operativo** realiza las siguientes acciones cuando se usa una imagen de sistema operativo.  
 
-1.  Elimina todo el contenido del volumen de destino excepto los archivos de la carpeta especificada por la variable de secuencia de tareas _SMSTSUserStatePath.  
+1.  Elimina todo el contenido del volumen de destino, excepto los archivos de la carpeta especificada por la variable de secuencia de tareas &#95;SMSTSUserStatePath.  
 
 2.  Extrae el contenido del archivo .wim especificado a la partición de destino especificada.  
 
@@ -169,7 +169,7 @@ Los siguientes pasos de secuencia de tareas se pueden agregar a una secuencia de
 
  El paso **Aplicar imagen de sistema operativo** realiza las siguientes acciones cuando se usa un paquete de instalación de sistema operativo.  
 
-1.  Elimina todo el contenido del volumen de destino excepto los archivos de la carpeta especificada por la variable de secuencia de tareas _SMSTSUserStatePath.  
+1.  Elimina todo el contenido del volumen de destino, excepto los archivos de la carpeta especificada por la variable de secuencia de tareas &#95;SMSTSUserStatePath.  
 
 2.  Prepara el archivo de respuesta:  
 
@@ -627,7 +627,7 @@ Este paso de secuencia de tareas solo se ejecuta en Windows PE, no en sistemas o
 
 -   Para descargar dinámicamente un paquete de controladores aplicables, use dos pasos **Descargar contenido de paquete** con condiciones para detectar el tipo de hardware adecuado para cada paquete de controlador. Configure todos los pasos **Descargar contenido de paquete** para que usen la misma variable, y use la variable para el valor **Staged content** en la sección de controladores en el paso **Actualizar sistema operativo** .  
 
- Este paso solo se ejecuta en un sistema operativo estándar, no en Windows PE.  
+Este paso se ejecuta en un sistema operativo estándar o en Windows PE. Pero en WinPE no se admite la opción de guardar el paquete en la caché de cliente de Configuration Manager.
 
 ### <a name="details"></a>Detalles  
  En la pestaña **Propiedades** de este paso, puede configurar las opciones descritas en esta sección.  
@@ -1062,8 +1062,12 @@ Se introdujo en Configuration Manager versión 1606 una nueva variable de secuen
 
  *Dominio\cuenta*  
 
-##  <a name="a-namebkmkprepareconfigmgrclientforcapturea-prepare-configmgr-client-for-capture"></a><a name="BKMK_PrepareConfigMgrClientforCapture"></a> Preparar el cliente de Configuration Manager para la captura  
- Use el paso **Preparar el cliente de Configuration Manager para la captura** para tomar el cliente de Configuration Manager en el equipo de referencia y prepararlo para la captura como parte del proceso de creación de imágenes mediante la realización de las tareas siguientes:  
+## <a name="a-namebkmkprepareconfigmgrclientforcapturea-prepare-configmgr-client-for-capture"></a><a name="BKMK_PrepareConfigMgrClientforCapture"></a> Preparar el cliente de Configuration Manager para la captura  
+Use el paso **Preparar el cliente de Configuration Manager para la captura** para quitar el cliente de Configuration Manager o para configurar el cliente en el equipo de referencia y prepararlo para la captura como parte del proceso de creación de imágenes.
+
+A partir de la versión 1610 de Configuration Manager, el paso Preparar el cliente de Configuration Manager quita por completo el cliente de Configuration Manager, en lugar de quitar solo la información de clave. Cuando la secuencia de tareas implementa la imagen capturada del sistema operativo, se instala un nuevo cliente de Configuration Manager cada vez.  
+
+Antes de la versión 1610 de Configuration Manager, este paso realiza las siguientes tareas:  
 
 -   Quita la sección de propiedades de configuración de cliente del archivo smscfg.ini en el directorio de Windows. Estas propiedades incluyen información específica del cliente, como el GUID de Configuration Manager y otros identificadores de cliente.  
 
@@ -1458,19 +1462,19 @@ Se introdujo en Configuration Manager versión 1606 una nueva variable de secuen
 
  La secuencia de tareas establece automáticamente las siguientes variables de la secuencia de tareas de solo lectura:  
 
--   _SMSTSMake  
+ -   &#95;SMSTSMake  
 
--   _SMSTSModel  
+ -   &#95;SMSTSModel  
 
--   _SMSTSMacAddresses  
+ -   &#95;SMSTSMacAddresses  
 
--   _SMSTSIPAddresses  
+ -   &#95;SMSTSIPAddresses  
 
--   _SMSTSSerialNumber  
+ -   &#95;SMSTSSerialNumber  
 
--   _SMSTSAssetTag  
+ -   &#95;SMSTSAssetTag  
 
--   _SMSTSUUID  
+ -   &#95;SMSTSUUID  
 
  Este paso puede ejecutarse en un sistema operativo estándar o en Windows PE. Para obtener más información sobre las variables de secuencia de tareas para esta acción, consulte [Variables de acción de secuencias de tareas](task-sequence-action-variables.md).  
 
@@ -1485,32 +1489,34 @@ Se introdujo en Configuration Manager versión 1606 una nueva variable de secuen
 
 -   Especificar las condiciones que deben cumplirse para que se ejecute el paso.  
 
- **Nombre**  
+**Nombre**  
  Nombre corto definido por el usuario para este paso de secuencia de tareas.  
 
- **Descripción**  
+**Descripción**  
  Información detallada adicional sobre la acción realizada en este paso.  
 
- **Variables y reglas dinámicas**  
+**Variables y reglas dinámicas**  
  Para establecer una variable dinámica que se use en la secuencia de tareas, puede agregar una regla y luego especificar un valor para cada variable que especifique para la regla, o agregar una o más variables para establecerlas sin agregar una regla. Al agregar una regla, puede elegir entre las siguientes categorías de regla:  
 
--   **Equipo**: use esta categoría de regla para evaluar los valores de la etiqueta de inventario, el UUID, el número de serie o la dirección mac. Puede establecer varios valores y, si cualquier valor es true, la regla se evaluará como true. Por ejemplo, la siguiente regla se evalúa en true si el número de serie es 5892087 independientemente de si la dirección MAC equivale a 26-78-13-5A-A4-22.  
+ -   **Equipo**: use esta categoría de regla para evaluar los valores de la etiqueta de inventario, el UUID, el número de serie o la dirección mac. Puede establecer varios valores y, si cualquier valor es true, la regla se evaluará como true. Por ejemplo, la siguiente regla se evalúa en true si el número de serie es 5892087 independientemente de si la dirección MAC equivale a 26-78-13-5A-A4-22.  
 
      `IF Serial Number = 5892087 OR MAC address = 26-78-13-5A-A4-22 THEN`  
 
 -   **Ubicación**: use esta categoría de regla para evaluar los valores de la puerta de enlace predeterminada.  
 
--   **Marca y modelo**: use esta categoría de regla para evaluar los valores de marca y modelo de un equipo. La marca y el modelo deben evaluarse como true para que la regla se evalúe como true.  
+-   **Marca y modelo**: use esta categoría de regla para evaluar los valores de marca y modelo de un equipo. La marca y el modelo deben evaluarse como true para que la regla se evalúe como true.   
+
+    A partir de la versión 1610 de Configuration Manager, puede especificar un asterisco (*****) y un signo de interrogación (**?**) como caracteres comodín, donde ***** coincide con varios caracteres y **?** coincide con un carácter simple. Por ejemplo, la cadena "DELL*900?" coincidirá con DELL-ABC-9001 y con DELL9009.
 
 -   **Variable de secuencia de tareas**: use esta categoría de regla para agregar una variable de secuencia de tareas, la condición y el valor que quiere evaluar. La regla se evalúa como true cuando el valor establecido para la variable cumple la condición especificada.  
 
- Puede especificar una o más variables que se establecerán para una regla que se evalúa como true o establecer variables sin usar una regla. Puede seleccionar entre las variables existentes o crear una variable personalizada.  
+Puede especificar una o más variables que se establecerán para una regla que se evalúa como true o establecer variables sin usar una regla. Puede seleccionar entre las variables existentes o crear una variable personalizada.  
 
--   **Variables de secuencia de tareas existentes**: use esta opción para seleccionar una o más variables en una lista de variables de secuencia de tareas existente. Las variables de matriz no están disponibles para seleccionar.  
+ -   **Variables de secuencia de tareas existentes**: use esta opción para seleccionar una o más variables en una lista de variables de secuencia de tareas existente. Las variables de matriz no están disponibles para seleccionar.  
 
--   **Variables de secuencia de tareas personalizadas**: use esta opción para definir una variable de secuencia de tareas personalizada. También puede especificar una variable de secuencia de tareas existente. Esto es útil para especificar una matriz de variables existente, como OSDAdapter, ya que las matrices de variables no están en la lista de variables de secuencia de tareas existentes.  
+ -   **Variables de secuencia de tareas personalizadas**: use esta opción para definir una variable de secuencia de tareas personalizada. También puede especificar una variable de secuencia de tareas existente. Esto es útil para especificar una matriz de variables existente, como OSDAdapter, ya que las matrices de variables no están en la lista de variables de secuencia de tareas existentes.  
 
- Después de seleccionar las variables de una regla, debe proporcionar un valor para cada variable. La variable se establece en el valor especificado cuando la regla se evalúa como true. Para cada variable, puede seleccionar **Valor secreto** para ocultar el valor de la variable. De forma predeterminada, algunas de las variables existentes ocultan valores, como la variable de secuencia de tareas de OSDCaptureAccountPassword.  
+Después de seleccionar las variables de una regla, debe proporcionar un valor para cada variable. La variable se establece en el valor especificado cuando la regla se evalúa como true. Para cada variable, puede seleccionar **Valor secreto** para ocultar el valor de la variable. De forma predeterminada, algunas de las variables existentes ocultan valores, como la variable de secuencia de tareas de OSDCaptureAccountPassword.  
 
 > [!IMPORTANT]  
 >  Al importar una secuencia de tareas con el paso “Establecer variables dinámicas”, y **Valor secreto** está seleccionado para el valor de la variable, el valor se quita al importar la secuencia de tareas. Como resultado, debe volver a escribir el valor de la variable dinámica después de importar la secuencia de tareas.  
@@ -1690,6 +1696,6 @@ Se introdujo en Configuration Manager versión 1606 una nueva variable de secuen
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

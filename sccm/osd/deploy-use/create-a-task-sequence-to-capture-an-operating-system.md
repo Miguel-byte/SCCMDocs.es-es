@@ -1,5 +1,5 @@
 ---
-title: Crear una secuencia de tareas para capturar un sistema operativo | Configuration Manager
+title: Crear una secuencia de tareas para capturar un sistema operativo | Microsoft Docs
 description: "Una secuencia de tareas de captura y compilación crea un equipo de referencia que puede incluir controladores concretos y actualizaciones de software junto con el sistema operativo."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 12ea958e18a291a1b88e342b204e633d3bdf869f
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: e9320e40b8e5031ffa3da5e5149c7da718cc87d5
 
 
 ---
@@ -235,6 +235,6 @@ Cuando use una secuencia de tareas para implementar un sistema operativo en un e
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

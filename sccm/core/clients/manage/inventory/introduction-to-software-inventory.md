@@ -1,5 +1,5 @@
 ---
-title: Inventario de software | System Center Configuration Manager
+title: Inventario de software | Microsoft Docs
 description: "Obtenga una introducción al inventario de software en System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 8d664616e222119f7821a70a7c8f9cdbfca38538
+ms.sourcegitcommit: a468ce93e9536fe3f6bf0fc191ff9764dd1c3343
+ms.openlocfilehash: 401ba6e37d740310d49ab9e96112ce576d7130e4
 
 
 ---
@@ -34,7 +34,7 @@ Use el inventario de software en System Center Configuration Manager para recopi
 
 -   Crear consultas que devuelvan dispositivos basados en los archivos que especifique que se encuentran en los dispositivos. Para obtener más información, consulte [Referencia técnica de consultas para System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md).  
 
--   Crear recopilaciones basadas en consultas que se basan en los archivos que especifique que se encuentran en los dispositivos. Las pertenencias a recopilación basadas en consultas se actualizan automáticamente según una programación. Puede usar recopilaciones de una serie de tareas como implementación de software. Para obtener más información, consulte [Referencia técnica de recopilaciones de System Center Configuration Manager](../../../../core/clients/manage/collections/collections-technical-reference.md).  
+-   Crear recopilaciones basadas en consultas que se basan en los archivos que especifique que se encuentran en los dispositivos. Las pertenencias a recopilación basadas en consultas se actualizan automáticamente según una programación. Puede usar recopilaciones de una serie de tareas como implementación de software. Para obtener más información, consulte [Introduction to collections in System Center Configuration Manager](../../../../core/clients/manage/collections/introduction-to-collections.md) (Introducción a las recopilaciones en System Center Configuration Manager).  
 
 -   Ejecutar informes que muestren detalles específicos sobre los archivos en dispositivos de su organización. Para obtener más información, consulte [Generación de informes en System Center Configuration Manager](../../../../core/servers/manage/reporting.md).  
 
@@ -54,6 +54,7 @@ Use el inventario de software en System Center Configuration Manager para recopi
 
 |Plataforma|Para dispositivos personales|Para dispositivos de la compañía|  
 |--------------|---------------------------------|--------------------------------|  
+|Windows 10 (sin el cliente de Configuration Manager)|Solo aplicaciones administradas|Solo aplicaciones administradas| 
 |Windows 8.1 (sin el cliente de Configuration Manager)|Solo aplicaciones administradas|Solo aplicaciones administradas|  
 |Windows Phone 8|Solo aplicaciones administradas|Solo aplicaciones administradas|  
 |Windows RT|Solo aplicaciones administradas|Solo aplicaciones administradas|  
@@ -62,6 +63,6 @@ Use el inventario de software en System Center Configuration Manager para recopi
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

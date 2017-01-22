@@ -1,5 +1,5 @@
 ---
-title: "Diseñar una jerarquía | System Center Configuration Manager"
+title: "Diseñar una jerarquía | Microsoft Docs"
 description: "Conozca las topologías disponibles y las opciones de administración de System Center Configuration Manager para poder planear la jerarquía del sitio."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 783fb4d61aab83ad64b9cec332e90d6c9de59f47
-ms.openlocfilehash: b1ed3011356a794b7b0913a1c8f189230d8957b2
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 000acfec2cd61cc2d69e1bbd555b10fc22a40318
 
 
 ---
@@ -173,7 +173,7 @@ En general, el impulsor clave del tipo y del número de sitios que use en una je
 
 -   [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md) (Planear la seguridad en System Center Configuration Manager)  
 
--   [Managing network bandwidth](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_bandwidth) (Administrar el ancho de banda de red) cuando se implementa contenido dentro de un sitio  
+-   [Managing network bandwidth](../../../core/plan-design/hierarchy/manage-network-bandwidth.md) (Administrar el ancho de banda de red) cuando se implementa contenido dentro de un sitio  
 
 
 **Tenga en cuenta las configuraciones que abarcan sitios y jerarquías:**  
@@ -188,6 +188,6 @@ En general, el impulsor clave del tipo y del número de sitios que use en una je
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

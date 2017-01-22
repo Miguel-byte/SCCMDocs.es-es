@@ -1,5 +1,5 @@
 ---
-title: "Administración de controladores | Configuration Manager"
+title: Administrar controladores | Microsoft Docs
 description: "Use el catálogo de controladores de Configuration Manager para importar controladores de dispositivos, controladores de grupo en paquetes y distribuir esos paquetes a puntos de distribución."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 82cddeb0f2f5210f8bf246b0c757e15815f78669
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 361a18b7da8249fc6cccc333f39313a52dd8ab88
 
 
 ---
@@ -198,7 +198,7 @@ System Center Configuration Manager proporciona un catálogo de controladores qu
 
  Use el siguiente procedimiento para agregar o quitar controladores de dispositivos en una imagen de arranque.  
 
-#### <a name="to-modify-the-device-drivers-associated-with-a-boot-image"></a>Para modificar los controladores de dispositivos asociados a una imagen de arranque  
+#### <a name="to-modify-the--device-drivers-associated-with-a-boot-image"></a>Para modificar los controladores de dispositivos asociados a una imagen de arranque  
 
 1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
 
@@ -278,6 +278,6 @@ System Center Configuration Manager proporciona un catálogo de controladores qu
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

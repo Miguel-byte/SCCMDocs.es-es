@@ -1,5 +1,5 @@
 ---
-title: "Lista de comprobación de administrador para la administración de energía | System Center Configuration Manager"
+title: "Lista de comprobación del administrador de la administración de energía | Microsoft Docs"
 description: "Use la lista de comprobación de administrador como ayuda para planear e implementar la administración de energía en System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 6d594334040a98c5f661b95b8a0b48a61d391b0c
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: e6a7a0b853be930b558cdd739b90285ebb8538e7
 
 
 ---
@@ -83,6 +83,6 @@ Esta lista de comprobación de administrador proporciona los pasos recomendados 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

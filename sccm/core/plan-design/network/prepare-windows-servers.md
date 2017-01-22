@@ -1,5 +1,5 @@
 ---
-title: Preparar los servidores de Windows | System Center Configuration Manager
+title: Preparar los servidores de Windows | Microsoft Docs
 description: "Asegúrese de que un equipo cumpla los requisitos previos para su uso como servidor de sitio o servidor del sistema de sitio de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f0a1cc32285fcb792c3f4cdec616668474708404
-ms.openlocfilehash: acf8a401f1ce67a4d8c905c0126c031b97484271
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: bd89f97f4252ddea2d1bf7ab329417477c77868d
 
 
 ---
@@ -42,11 +42,8 @@ Este artículo proporciona información general sobre los tipos de configuracion
 -   **.NET Framework**: que incluye  
 
     -   ASP.NET  
-
     -   Activación HTTP  
-
     -   Activación no HTTP  
-
     -   Servicios WCF  
 
     Los diferentes roles de sistema de sitio requieren diferentes versiones de .NET Framework.  
@@ -68,61 +65,37 @@ Este artículo proporciona información general sobre los tipos de configuracion
  -   **Servicio de inscripción de dispositivos de red** (en Servicios de certificados de Active Directory): este rol de Windows es un requisito previo para el uso de perfiles de certificado en Configuration Manager.  
 
  -   **Servidor web (IIS)**, que incluye:  
-
     -   Características HTTP comunes >  
-
         -   Redirección HTTP  
-
     -   Desarrollo de aplicaciones >  
-
         -   Extensibilidad de .NET  
-
         -   ASP.NET  
-
         -   Extensiones ISAPI  
-
         -   Filtros ISAPI  
-
     -   Herramientas de administración >  
-
         -   Compatibilidad con la administración de IIS 6  
-
         -   Compatibilidad con la metabase de IIS 6  
-
         -   Compatibilidad con WMI de IIS 6  
-
     -   Seguridad >  
-
         -   Filtrado de solicitudes  
-
         -   Autenticación de Windows  
 
  Los siguientes roles de sistema de sitio usan una o varias de las configuraciones de IIS mostradas:  
-
     -   Punto de servicio web del catálogo de aplicaciones  
-
     -   Punto de sitios web del catálogo de aplicaciones  
-
     -   Punto de distribución  
-
     -   Punto de inscripción  
-
     -   Punto de proxy de inscripción  
-
     -   Punto de estado de reserva  
-
     -   Punto de administración  
-
     -   Punto de actualización de software  
-
-    -   Punto de migración de estado  
+    -   Punto de migración de estado     
 
     La versión mínima de IIS requerida es la versión suministrada con el sistema operativo del servidor de sitio.  
 
     Además de estas configuraciones de IIS, quizás tenga que configurar [Filtrado de solicitudes IIS para puntos de distribución](#BKMK_IISFiltering).  
 
 -   **Servicios de implementación de Windows**: este rol se utiliza con la implementación del sistema operativo.  
-
 -   **Windows Server Update Services**: este rol es necesario para implementar actualizaciones de software.  
 
 ##  <a name="a-namebkmkiisfilteringa-iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a> Filtrado de solicitudes IIS para puntos de distribución  
@@ -133,11 +106,8 @@ Este artículo proporciona información general sobre los tipos de configuracion
  Además, Configuration Manager usa las siguientes extensiones de nombre de archivo para paquetes y aplicaciones. Asegúrese de que la configuración del filtrado de solicitudes no bloquea estas extensiones de archivo:  
 
 -   .PCK  
-
 -   .PKG  
-
 -   .STA  
-
 -   .TAR  
 
 Por ejemplo, puede tener archivos de origen para una implementación de software entre los que se incluye una carpeta llamada **bin**, o un archivo con la extensión de nombre de archivo **.mdb** .  
@@ -164,15 +134,15 @@ Por ejemplo, puede tener archivos de origen para una implementación de software
  - HEAD
  - PROPFIND
 
-**Puntos de distribución:** los puntos de distribución requieren que los verbos HTTP enumerados a continuación estén permitidos.
+**Puntos de distribución:** los puntos de distribución requieren que los verbos HTTP enumerados a continuación estén permitidos:
  - GET
  - HEAD
- - PROFIND
+ - PROPFIND
 
 Para obtener información sobre cómo configurar el filtrado de solicitudes, consulte [Configurar el filtrado de solicitudes en IIS](https://technet.microsoft.com/library/hh831621.aspx#Verbs) en TechNet u otra documentación parecida que se aplique a la versión de Windows Server que hospeda su punto de administración.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

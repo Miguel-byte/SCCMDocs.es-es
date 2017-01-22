@@ -1,5 +1,5 @@
 ---
-title: "Administración del acceso al correo electrónico | System Center Configuration Manager"
+title: "Administrar acceso al correo electrónico | Microsoft Docs"
 description: "Aprenda a usar el acceso condicional de System Center Configuration Manager para administrar el acceso al correo electrónico de Exchange."
 ms.custom: na
 ms.date: 10/04/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4544088a-4752-4e3a-aa0a-049f10d8f178
 caps.latest.revision: 24
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: c1797910f2b7ceda451c2ccb23f66a4b2bd4b6ff
+ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
+ms.openlocfilehash: 0bbe25598f38f9cf3c15375748fee09c43dfb928
 
 
 ---
@@ -37,7 +37,7 @@ Puede administrar el acceso a:
 
 Puede controlar el acceso a Exchange Online y Exchange local desde el cliente de correo electrónico integrada en las siguientes plataformas:  
 
--   Android 4.0 y versiones posterior, Samsung Knox Standard 4.0 y versiones posteriores  
+-   Android 4.0 y versiones posteriores, Samsung KNOX Standard 4.0 y versiones posteriores  
 
 -   iOS 7.1 y versiones posteriores  
 
@@ -91,7 +91,7 @@ Se bloquearán los exploradores no admitidos. Igualmente no se admiten las aplic
 
  Puede bloquear el acceso al correo electrónico de Exchange desde el cliente de correo electrónico de Exchange ActiveSync integrado en los dispositivos en las siguientes plataformas:  
 
--   Android 4.0 y versiones posterior, Samsung Knox Standard 4.0 y versiones posteriores  
+-   Android 4.0 y versiones posteriores, Samsung KNOX Standard 4.0 y versiones posteriores  
 
 -   iOS 7.1 y versiones posteriores  
 
@@ -363,6 +363,6 @@ Se bloquearán los exploradores no admitidos. Igualmente no se admiten las aplic
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

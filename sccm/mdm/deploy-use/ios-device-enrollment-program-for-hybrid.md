@@ -1,5 +1,5 @@
 ---
-title: "Inscripción del Programa de inscripción de dispositivos (DEP) iOS para implementaciones híbridas con Configuration Manager"
+title: "Inscripción del Programa de inscripción de dispositivos (DEP) iOS para implementaciones híbridas con Configuration Manager | Microsoft Docs"
 description: "Habilite la inscripción del Programa de inscripción de dispositivos (DEP) iOS para implementaciones híbridas en Configuration Manager con Intune."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 78d44adc-9b1c-4bc6-b72d-e93873916ea6
 caps.latest.revision: 9
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 730b0e6b0ad9eb0ee3bf58c9419920c3a28a27d1
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 0421589d928a88eee6f4629726fbd0171aba7436
 
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>Inscripción del Programa de inscripción de dispositivos (DEP) iOS para implementaciones híbridas con Configuration Manager
@@ -91,22 +91,18 @@ Las empresas pueden comprar dispositivos iOS mediante el Programa de inscripció
 
             -   **Deshabilitar**: permite el perfil de administración que se va a quitar del menú **Configuración**  
 
-            -   Habilitar: (requiere **Modo de preparación** = **Supervisado**) Deshabilita la configuración de iOS que podría permitir la eliminación del perfil de administración  
+            -   **Habilitar** (requiere **Modo de preparación** = **Supervisado**): deshabilita la configuración de iOS que podría permitir la eliminación del perfil de administración  
 
     3.  En la página **Asistente de configuración** , configure las opciones que personalizan el asistente de configuración de iOS, que se inicia al encender el dispositivo por primera vez y, a continuación, haga clic en **Siguiente**. Estas opciones incluyen:  
-
         -   **Código de acceso**: solicitar el código de acceso durante la activación. Siempre se requiere un código de acceso a no ser que el dispositivo vaya a protegerse o a tener el acceso controlado de alguna otra manera (es decir, el modo de quiosco restringe el dispositivo a una aplicación).  
-
         -   **Servicios de ubicación**: si está habilitado, el asistente de configuración solicita el servicio durante la activación  
-
         -   **Restaurar**: si está habilitado, el asistente de configuración solicita la copia de seguridad de iCloud durante la activación  
-
         -   **Id. de Apple**: se requiere un identificador de Apple para descargar las aplicaciones de iOS App Store, incluidas las instaladas mediante Intune. Si está habilitado, iOS solicitará a los usuarios un identificador de Apple cuando Intune intente instalar una aplicación sin un identificador.  
-
         -   **Términos y condiciones**: si está habilitado, el asistente de configuración solicita a los usuarios aceptar los términos y condiciones de Apple durante la activación  
-
+        -   **Touch ID**: si está habilitado, el asistente para la configuración solicita este servicio durante la activación
+        -   **Apple Pay**: si está habilitado, el asistente para la configuración solicita este servicio durante la activación
+        -   **Zoom**: si está habilitado, el asistente para la configuración solicita este servicio durante la activación
         -   **Siri**: si está habilitado, el asistente de configuración solicita este servicio durante la activación  
-
         -   **Enviar datos de diagnóstico a Apple**: si está habilitado, el asistente de configuración solicita este servicio durante la activación  
 
     4.  En la página **Administración adicional**, especifique si una conexión USB puede usarse para la configuración de administración adicional. Al seleccionar **Requerir certificado**, debe importar un certificado de administración de Apple Configurator que se usará para este perfil.  Establezca en **No permitir** para evitar la sincronización de archivos con iTunes o la administración mediante Apple Configurator. Microsoft le recomienda establecer en **No permitir**, exportar cualquier configuración adicional de Apple Configurator y, después, implementar como un perfil de configuración iOS personalizado en lugar de usar esta configuración para permitir la implementación manual con o sin un certificado.  
@@ -128,6 +124,6 @@ Las empresas pueden comprar dispositivos iOS mediante el Programa de inscripció
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

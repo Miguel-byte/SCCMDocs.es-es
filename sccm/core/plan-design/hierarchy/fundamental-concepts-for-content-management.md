@@ -1,5 +1,5 @@
 ---
-title: "Aspectos básicos de la administración de contenido | System Center Configuration Manager"
+title: "Aspectos básicos de la administración de contenido | Microsoft Docs"
 description: Use herramientas y opciones en System Center Configuration Manager para administrar el contenido que implemente.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 27342ef83d877c31f39bc232e3e19e37b78e62da
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 577d7e3acc27e3b50e22fc42d5db2f68d9cdde29
 
 
 ---
@@ -39,16 +39,16 @@ Estos son los conceptos básicos de la administración de contenido. Cuando un c
 
      Esta cuenta también la usan los puntos de distribución de extracción para obtener el contenido de un punto de distribución de origen en un bosque remoto.  
 
--   **Cuenta de acceso de paquete**: de manera predeterminada, el administrador de configuración concede acceso al contenido en un punto de distribución a los usuarios y los administradores de cuentas de acceso genéricas. Sin embargo, puede configurar permisos adicionales para restringir el acceso. Consulte &lt;Administración de cuentas para acceder al contenido de un paquete\>.  
+-   **Cuenta de acceso de paquete**: de manera predeterminada, el administrador de configuración concede acceso al contenido en un punto de distribución a los usuarios y los administradores de cuentas de acceso genéricas. Sin embargo, puede configurar permisos adicionales para restringir el acceso.   
 
 -   **Cuenta de conexión de multidifusión**: se usa para implementaciones de sistema operativo.  
 
-Para obtener más información sobre estas cuentas, consulte [Manage accounts to access content in System Center Configuration Manager (Administrar cuentas para tener acceso al contenido en System Center Configuration Manager)](../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md).
+Para obtener más información sobre estas cuentas, consulte [Administración de cuentas para acceder al contenido](../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md).
 
 ## <a name="bandwidth-throttling-and-scheduling"></a>Programación y límite de ancho de banda  
  La programación y el límite son opciones que le ayudan a controlar cuándo se distribuye el contenido de un servidor de sitio en puntos de distribución. Esto es similar a los controles de ancho de banda para la replicación basada en archivos de sitio a sitio, aunque no está directamente relacionado.  
 
- Para obtener más información, consulte [Manage network bandwidth (Administración del ancho de banda de red)](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
+ Para obtener más información, consulte [Administración del ancho de banda de red](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
 
 ## <a name="binary-differential-replication"></a>Replicación diferencial binaria  
  La replicación diferencial binaria (BDR) es un requisito previo de los puntos de distribución y se usa automáticamente para reducir el uso de ancho de banda cuando se distribuyen las actualizaciones de contenido que previamente se implementaron en otros sitios o en un punto de distribución remoto.  
@@ -75,14 +75,18 @@ Las aplicaciones siempre usan la replicación diferencial binaria. En el caso de
 
 -   De esta forma, los siguientes clientes de la misma subred no tienen que descargar contenido desde el punto de distribución, y el contenido se distribuye por varios clientes en las siguientes transferencias.  
 
+## <a name="peer-cache"></a>Almacenamiento en caché del mismo nivel
+A partir de la versión 1610, el almacenamiento en caché del mismo nivel de cliente le ayuda a administrar la implementación de contenido en los clientes en ubicaciones remotas. Caché del mismo nivel es una solución integrada de Configuration Manager para que los clientes compartan contenido con otros clientes directamente desde su caché local.
 
+Después de implementar la configuración de cliente que habilita el almacenamiento en caché del mismo nivel en una recopilación, los miembros de esa recopilación pueden actuar como origen de contenido del mismo nivel para otros clientes del mismo grupo de límites.
 
+Para obtener más información, consulte [Caché del mismo nivel para clientes de Configuration Manager](/sccm/core/plan-design/hierarchy/client-peer-cache).
 
 
 ## <a name="windows-pe-peer-cache"></a>Almacenamiento en caché del mismo nivel de Windows PE
 Al implementar un nuevo sistema operativo en System Center Configuration Manager, los equipos que ejecutan la secuencia de tareas pueden usar Almacenamiento en caché del mismo nivel de Windows PE para obtener contenido de un elemento local del mismo nivel (un origen de almacenamiento en caché del mismo nivel), en lugar de descargar el contenido de un punto de distribución. Esto ayuda a minimizar el tráfico de red de área extensa (WAN) en escenarios de sucursales donde no hay ningún punto de distribución local.
 
-Para obtener más información, consulte [Windows PE peer cache (Caché del mismo nivel de Windows PE)](../../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).
+Para obtener más información, consulte [Almacenamiento en caché del mismo nivel de Windows PE](../../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).
 
 
 ## <a name="client-locations"></a>Ubicaciones del cliente  
@@ -94,7 +98,7 @@ Para obtener más información, consulte [Windows PE peer cache (Caché del mism
 
     -   Use solo un punto de distribución basado en la nube para la reserva si no están disponibles los puntos de distribución locales  
 
--   **Internet** :  
+-   **Internet**:  
 
     -   Requiere que los puntos de distribución acepten HTTPS  
 
@@ -111,7 +115,7 @@ Para obtener más información, consulte [Windows PE peer cache (Caché del mism
 ## <a name="content-library"></a>Biblioteca de contenido  
  El almacén de instancia única del contenido que Configuration Manager usa para reducir el tamaño total del cuerpo combinado del contenido que distribuya.  
 
-Más información sobre la [biblioteca de contenido](../../../core/plan-design/hierarchy/the-content-library.md)
+Obtenga más información sobre la [biblioteca de contenido](../../../core/plan-design/hierarchy/the-content-library.md).
 
 
 ## <a name="distribution-point"></a>Punto de distribución  
@@ -119,9 +123,9 @@ Más información sobre la [biblioteca de contenido](../../../core/plan-design/h
 
  El punto de distribución básico (no especializado) suele denominarse punto de distribución estándar.  Hay dos variaciones en el punto de distribución estándar que reciben atención especial:  
 
--   **Punto de distribución de extracción**: variación de un punto de distribución en la que el punto de distribución obtiene contenido de otro punto de distribución (un punto de distribución de origen) de manera similar a la forma en que los clientes descargan contenido de los puntos de distribución. Los puntos de distribución de extracción pueden ayudarle a evitar los cuellos de botella en el ancho de banda de la red que se pueden producir cuando el servidor de sitio debe distribuir directamente el contenido a cada punto de distribución.  [Usar un punto de distribución de extracción con System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)  
+-   **Punto de distribución de extracción**: variación de un punto de distribución en la que el punto de distribución obtiene contenido de otro punto de distribución (un punto de distribución de origen) de manera similar a la forma en que los clientes descargan contenido de los puntos de distribución. Los puntos de distribución de extracción pueden ayudarle a evitar los cuellos de botella en el ancho de banda de la red que se pueden producir cuando el servidor de sitio debe distribuir directamente el contenido a cada punto de distribución.  Consulte [Usar un punto de distribución de extracción con System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).
 
--   **Punto de distribución basado en la nube**: una variación de un punto de distribución instalado en Microsoft Azure. [Usar un punto de distribución basado en la nube con System Center Configuration Manager](../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
+-   **Punto de distribución basado en la nube**: una variación de un punto de distribución instalado en Microsoft Azure. Consulte [Usar un punto de distribución basado en la nube con System Center Configuration Manager](../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md).  
 
 
 Los puntos de distribución estándar admiten diversas configuraciones y características, como el límite y la programación, PXE y multidifusión o contenido preconfigurado.  
@@ -137,7 +141,7 @@ Los puntos de distribución estándar admiten diversas configuraciones y caracte
 ## <a name="distribution-point-group"></a>Grupo de puntos de distribución  
  Agrupaciones lógicas de puntos de distribución que pueden simplificar la distribución de contenido.  
 
- Para obtener más información, consulte [Manage distribution point groups (Administración de grupos de puntos de distribución)](../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage).
+ Para obtener más información, consulte [Administrar grupos de puntos de distribución](../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage).
 
 ## <a name="distribution-point-priority"></a>Prioridad de puntos de distribución  
  El valor de prioridad del punto de distribución se basa en cuánto tiempo se tardó en transferir las implementaciones anteriores en ese punto de distribución.  
@@ -155,18 +159,29 @@ Los puntos de distribución estándar admiten diversas configuraciones y caracte
 >  Los puntos de distribución de extracción también usan el concepto de prioridad para ordenar la secuencia de los puntos de distribución de origen.  
 >   
 >  -   La prioridad de los puntos de distribución para las transferencias de contenido al punto de distribución es distinta de la prioridad que los puntos de distribución de extracción usan cuando buscan contenido en un punto de distribución de origen.  
-> -   Para obtener más información, consulte [Usar un punto de distribución de extracción con System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).  
+>  -   Para obtener más información, consulte [Usar un punto de distribución de extracción con System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).  
 
 
 ## <a name="fallback"></a>Reserva  
- La configuración de reserva está relacionada con el uso de los **puntos de distribución preferidos** y con la ubicación de origen de contenido que usan los clientes.  
+ A partir de la versión 1610, han cambiado algunos conceptos relacionados con la forma en que los clientes buscan un punto de distribución que tenga contenido, incluida la reserva. Use la información siguiente aplicada a su versión:
+
+**Versión 1610 y posteriores:**   
+Los clientes que no encuentran contenido en un punto de distribución asociado a su grupo de límites actual pueden usar como reserva ubicaciones de origen de contenido asociadas a grupos de límites vecinos. Para que se use como reserva, un grupo de límites vecino debe tener una relación definida con el grupo de límites actual del cliente. Esta relación incluye un tiempo configurado que debe transcurrir para que un cliente que no encuentra contenido localmente pueda incluir orígenes de contenido del grupo de límites vecino como parte de su búsqueda.
+
+Ya no se usa el concepto de puntos de distribución preferidos, y la opción para permitir el uso de ubicaciones de origen de reserva para el contenido ya no está disponible ni se aplica.
+
+Para obtener más información, consulte [Grupos de límites](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+
+
+**Versiones 1511, 1602 y 1606:**   
+La configuración de reserva está relacionada con el uso de los **puntos de distribución preferidos** y con la ubicación de origen de contenido que usan los clientes.
 
 -   De manera predeterminada, los clientes solo descargan contenido desde un punto de distribución preferido (uno que esté asociado a los grupos de límites del cliente).  
 
 -   Sin embargo, cuando se configura un punto de distribución con **Allow clients to use this site system as a fallback source location for content** (Permitir a los clientes usar este sistema de sitio como ubicación de origen de reserva para contenido), dicho punto solo se ofrece como origen de contenido válido a todos los clientes que no puedan obtener una implementación desde uno de sus puntos de distribución preferidos.  
 
 
-Para obtener información sobre los diferentes escenarios de reserva y ubicación de contenido, consulte [Content source location scenarios (Escenarios de ubicación de origen de contenido)](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).
+Para obtener información sobre los diferentes escenarios de reserva y ubicación de contenido, consulte [Escenarios de ubicación de orígenes de contenido](../../../core/plan-design/hierarchy/content-source-location-scenarios.md). Para obtener información sobre los grupos de límites, consulte [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606) (Grupos de límites para las versiones 1511, 1602 y 1606).
 
 ## <a name="network-bandwidth"></a>Ancho de banda de red  
  Para administrar la cantidad de ancho de banda de red usada al distribuir contenido, puede usar las siguientes opciones:  
@@ -175,19 +190,26 @@ Para obtener información sobre los diferentes escenarios de reserva y ubicació
 
 -   Usar programación y límite: configuraciones que ayudan a controlar el momento y la forma en que se distribuye el contenido a los puntos de distribución.  
 
-Para obtener más información, consulte [Manage network bandwidth (Administración del ancho de banda de red)](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
+Para obtener más información, consulte [Administración del ancho de banda de red](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
 
 ## <a name="network-connection-speed-to-content-source"></a>Velocidad de conexión de red con el origen de contenido  
+A partir de la versión 1610, han cambiado algunos conceptos relacionados con la forma en que los clientes buscan un punto de distribución que tenga contenido, incluida la velocidad de conexión de red con un origen de contenido. Use la información siguiente aplicada a su versión:
+
+**Versión 1610 y posteriores:**   
+Ya no se usan las velocidades de conexión de red que definen un punto de distribución como **rápido** o **lento**. En su lugar, se trata igual cada sistema de sitio asociado a un grupo de límites.
+
+Para obtener más información, consulte [Grupos de límites](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+
+
+**Versiones 1511, 1602 y 1606:**   
+
  Puede configurar la velocidad de conexión de red de cada punto de distribución en un grupo de límites:  
 
 -   Los clientes usan este valor al conectarse al punto de distribución.  
-
 -   De forma predeterminada, la velocidad de conexión de red se configura como **Rápida**, pero también se puede establecer como **Lenta**.  
-
 -   La **velocidad de conexión de red** y una configuración de implementación determinan si un cliente puede descargar contenido desde un punto de distribución cuando el cliente está en un grupo de límites asociado.  
 
-
-Para obtener información sobre los diferentes escenarios de reserva y ubicación de contenido, consulte [Content source location scenarios (Escenarios de ubicación de origen de contenido)](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
+Para obtener información sobre los diferentes escenarios de reserva y ubicación de contenido, consulte [Escenarios de ubicación de orígenes de contenido](../../../core/plan-design/hierarchy/content-source-location-scenarios.md). Para obtener información sobre los grupos de límites, consulte [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606) (Grupos de límites para las versiones 1511, 1602 y 1606).
 
 ## <a name="on-demand-content-distribution"></a>Distribución de contenido a petición  
  Se trata de una opción que puede establecer para aplicaciones y paquetes individuales (implementaciones) con el fin de habilitar la distribución de contenido a petición a puntos de distribución preferidos.  
@@ -198,34 +220,36 @@ Para obtener información sobre los diferentes escenarios de reserva y ubicació
 
 -   Aunque esto hace que Configuration Manager distribuya automáticamente el contenido a los puntos de distribución preferidos del cliente, este puede obtener el contenido desde otros puntos de distribución antes de que los puntos de distribución preferidos del cliente reciban la implementación. Cuando esto suceda, el contenido estará presente en ese punto de distribución para que lo use el próximo cliente que busque esa implementación.  
 
+Si usa la versión 1610 o una versión posterior, consulte [Grupos de límites](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+Si usa las versiones 1511, 1602 o 1606, consulte [Escenarios de ubicación de orígenes de contenido](../../../core/plan-design/hierarchy/content-source-location-scenarios.md) para obtener información sobre los diferentes escenarios de reserva y ubicación de contenido.  
 
-Para obtener información sobre los diferentes escenarios de reserva y ubicación de contenido, consulte [Content source location scenarios (Escenarios de ubicación de origen de contenido)](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
 
 
 ## <a name="package-transfer-manager"></a>Administrador de transferencia de paquetes  
  Componente del servidor de sitio que transfiere contenido a puntos de distribución de otros equipos.  
 
- Más información sobre el [administrador de transferencia de paquetes](../../../core/plan-design/hierarchy/package-transfer-manager.md).  
+ Obtenga más información sobre el [administrador de transferencia de paquetes](../../../core/plan-design/hierarchy/package-transfer-manager.md).  
 
 ## <a name="preferred-distribution-point"></a>Punto de distribución preferido  
- Puntos de distribución que están asociados a los grupos de límites actuales de un cliente.  
+ Un punto de distribución preferido incluye todos los puntos de distribución que están asociados a los grupos de límites actuales de un cliente.  
 
  Tiene la opción de asociar cada punto de distribución a uno o más grupos de límites:  
 
 -   Esta asociación ayuda al cliente a identificar puntos de distribución desde los que puede descargar el contenido.  
-
 -   De forma predeterminada, los clientes solo pueden descargar contenido desde un punto de distribución preferido.  
 
 
-Para obtener información sobre los diferentes escenarios de reserva y ubicación de contenido, consulte [Content source location scenarios (Escenarios de ubicación de origen de contenido)](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
+Para obtener más información:
+ - Si usa la versión 1610 o una versión posterior, consulte [Grupos de límites](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+ - Si usa las versiones 1511, 1602 o 1606, consulte [Escenarios de ubicación de orígenes de contenido](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).
 
 ## <a name="prestage-content"></a>Preconfigurar el contenido  
  Un proceso de transferencia de contenido a un punto de distribución sin depender de Configuration Manager para distribuir el contenido a través de la red.  
 
- Para obtener más información, consulte [Manage network bandwidth (Administración del ancho de banda de red)](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
+ Para obtener más información, consulte [Administración del ancho de banda de red](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

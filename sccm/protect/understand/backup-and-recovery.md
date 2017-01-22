@@ -1,5 +1,5 @@
 ---
-title: "Copia de seguridad y recuperación | System Center Configuration Manager"
+title: "Copia de seguridad y recuperación | Microsoft Docs"
 description: "Aprenda a realizar copias de seguridad de los sitios y a recuperarlos en caso de error o pérdida de datos en System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
 
 
 ---
@@ -114,9 +114,9 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
     -   **Unidades locales en el servidor de sitio y SQL Server**: especifica que los archivos de copia de seguridad del sitio se almacenan en la ruta de acceso especificada de la unidad local del servidor de sitio y que los archivos de copia de seguridad de la base de datos del sitio se almacenan en la ruta de acceso especificada de la unidad local del servidor de base de datos del sitio. Debe crear las carpetas locales antes de que se ejecute la tarea de copia de seguridad. La cuenta de equipo del servidor de sitio debe tener permisos de NTFS de **escritura** en la carpeta que se crea en el servidor de sitio. La cuenta de equipo del servidor de SQL Server debe tener permisos de NTFS de **escritura** en la carpeta que se crea en el servidor de la base de datos del sitio. Esta opción solo está disponible cuando la base de datos del sitio no esté instalada en el servidor de sitio.  
 
     > [!NOTE]  
-    >    - La opción de examinar el destino de la copia de seguridad solo está disponible cuando se especifica la ruta de acceso UNC del destino de la copia de seguridad.
+    >   - La opción de examinar el destino de la copia de seguridad solo está disponible cuando se especifica la ruta de acceso UNC del destino de la copia de seguridad.
 
-    >- El nombre de la carpeta o el nombre del recurso compartido que se utilizan para el destino de la copia de seguridad no pueden usar caracteres Unicode.  
+    > - El nombre de la carpeta o el nombre del recurso compartido que se utilizan para el destino de la copia de seguridad no pueden usar caracteres Unicode.  
 
 
 6.  Configure una programación para la tarea de copia de seguridad del sitio. Como práctica recomendada, considere la posibilidad de programar la copia de seguridad fuera del horario de trabajo activo. Si tiene una jerarquía, considere la posibilidad de una programación que se ejecute al menos dos veces por semana para asegurar la máxima retención de datos en caso de error en el sitio.  
@@ -190,7 +190,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
  Compruebe que incluye las ubicaciones de la biblioteca de contenido y del origen del paquete en la copia de seguridad del sistema de archivos del servidor de sitio.  
 
 #### <a name="back-up-custom-software-updates"></a>Copia de seguridad de actualizaciones de software personalizadas  
-     System Center Updates Publisher 2011 is a stand-alone tool that lets you publish custom software updates to Windows Server Update Services (WSUS), synchronize the software updates to Configuration Manager, assess software updates compliance, and deploy the custom software updates to clients. Updates Publisher uses a local database for its software update repository. When you use Updates Publisher to manage custom software updates, determine whether you have to include the Updates Publisher database in your backup plan. For more information about Updates Publisher, see [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=228726) in the System Center TechCenter Library.  
+ System Center Updates Publisher 2011 es una herramienta independiente que le permite publicar actualizaciones de software personalizadas en Windows Server Update Services (WSUS), sincronizar las actualizaciones de software con Configuration Manager, evaluar el cumplimiento de las actualizaciones de software e implementar las actualizaciones de software personalizadas en los clientes. Updates Publisher usa una base de datos local para el repositorio de actualizaciones de software. Si usa Updates Publisher para administrar las actualizaciones de software personalizadas, determine si tiene que incluir la base de datos de Updates Publisher en el plan de copias de seguridad. Para obtener más información acerca de Updates Publisher, consulte [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=228726) en la biblioteca de TechCenter de System Center.  
 
  Use el siguiente procedimiento para realizar una copia de seguridad de la base de datos de Updates Publisher.  
 
@@ -206,7 +206,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 ### <a name="user-state-migration-data"></a>Datos de migración de estado de usuario  
  Puede usar secuencias de tareas de Configuration Manager para capturar y restaurar los datos de estado de usuario en los escenarios de implementación de sistema operativo donde quiere conservar el estado de usuario del sistema operativo actual. Las carpetas donde se almacenan los datos de estado de usuario se enumeran en las propiedades del punto de migración de estado. La tarea de mantenimiento Copia de seguridad del servidor del sitio no incluye la copia de seguridad de los datos de migración de estado de usuario. Como parte del plan de copias de seguridad, debe realizar manualmente la copia de seguridad de las carpetas que especifique para almacenar los datos de migración de estado de usuario.   
 
-##### <a name="to-determine-the-folders-used-to-store-user-state-migration-data"></a>Para determinar las carpetas utilizadas para almacenar los datos de migración de estado de usuario  
+#### <a name="to-determine-the-folders-used-to-store-user-state-migration-data"></a>Para determinar las carpetas utilizadas para almacenar los datos de migración de estado de usuario  
 
 1.  En la consola de Configuration Manager, haga clic en **Administración**.  
 
@@ -384,7 +384,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Detalles** : recupera un sitio de administración central  
 
- **RecoveryOptions**  
+**RecoveryOptions**  
 
 -   **Nombre de clave** : ServerRecoveryOptions  
 
@@ -454,7 +454,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Detalles** : especifica la ruta de acceso al conjunto de copia de seguridad de base de datos de sitio. La clave **BackupLocation** es necesaria cuando configura un valor de **1** o **4** para la clave **ServerRecoveryOptions** , y configura un valor de **10** para la clave **DatabaseRecoveryOptions** .  
 
- **Opciones**  
+**Opciones**  
 
 -   **Nombre de clave** : ProductID  
 
@@ -549,7 +549,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Detalles** : especifica si se unirá al Programa para la mejora de la experiencia del usuario.  
 
- **SQLConfigOptions**  
+**SQLConfigOptions**  
 
 -   **Nombre de clave** : SQLServerName  
 
@@ -597,7 +597,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Detalles** : recupera un sitio primario.  
 
- **RecoveryOptions**  
+**RecoveryOptions**  
 
 -   **Nombre de clave** : ServerRecoveryOptions  
 
@@ -653,7 +653,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Detalles** : especifica la ruta de acceso al conjunto de copia de seguridad de base de datos de sitio. La clave **BackupLocation** es necesaria cuando configura un valor de **1** o **4** para la clave **ServerRecoveryOptions** , y configura un valor de **10** para la clave **DatabaseRecoveryOptions** .  
 
- **Opciones**  
+**Opciones**  
 
 -   **Nombre de clave** : ProductID  
 
@@ -748,7 +748,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Detalles** : especifica si se unirá al Programa para la mejora de la experiencia del usuario.  
 
- **SQLConfigOptions**  
+**SQLConfigOptions**  
 
 -   **Nombre de clave** : SQLServerName  
 
@@ -783,7 +783,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Detalles** : especifique el puerto de SQL Server Service Broker (SSB) usado por SQL Server. Normalmente, SSB está configurado para utilizar el puerto TCP 4022, pero se admiten otros puertos. Debe especificar el mismo puerto SSB que se utilizó antes de producirse el error.  
 
- **Jerarquía ExpansionOption**  
+**Jerarquía ExpansionOption**  
 
 -   **Nombre de clave** : CCARSiteServer  
 
@@ -839,7 +839,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
  Después de una recuperación del servidor de sitio, es preciso volver a escribir las claves de instalación de prueba de Windows especificadas para el sitio, ya que se restablecen durante la recuperación del sitio. Después de volver a escribir las claves de instalación de prueba, se restablece el contador de la columna **Activaciones usadas** de las claves de instalación de prueba de Windows en la consola de Configuration Manager. Por ejemplo, supongamos que antes del error del sitio, el valor del contador **Total de activaciones** era **100** y el de **Activaciones usadas** (el número de claves usadas por dispositivos) era **90**. Después de la recuperación del sitio, la columna **Total de activaciones** muestra **100**, pero la columna **Activaciones usadas** muestra, de forma incorrecta, **0**. Sin embargo, después de que 10 nuevos dispositivos utilicen una clave de instalación de prueba, no quedará ninguna clave de instalación de prueba y, por lo tanto, el siguiente dispositivo no podrá aplicar ninguna clave de instalación de prueba.  
 
 #### <a name="recreate-the-microsoft-intune-subscription"></a>Volver a crear la suscripción a Microsoft Intune  
- Si recupera un servidor de sitio de Configuration Manager después de volver a crear la imagen del equipo del servidor de sitio, la suscripción de Microsoft Intune no se restaurará. Debe volver a crear la suscripción después de recuperar el sitio. Para más información, vea [Configuring the Microsoft Intune subscription (Configuración de la suscripción de Microsoft Intune)](../../mdm/plan-design/hybrid-mobile-device-management.md#bkmk_witsub).  
+ Si recupera un servidor de sitio de Configuration Manager después de volver a crear la imagen del equipo del servidor de sitio, la suscripción de Microsoft Intune no se restaurará. Debe volver a crear la suscripción después de recuperar el sitio. Para más información, vea [Configuring the Microsoft Intune subscription (Configuración de la suscripción de Microsoft Intune)](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription).  
 
 #### <a name="configure-ssl-for-site-system-roles-that-use-iis"></a>Configuración de SSL para roles de sistema de sitio que usan IIS  
  Al recuperar sistemas de sitio que ejecutan IIS y que se habían configurado para HTTPS antes del error, debe volver a configurar IIS para utilizar el certificado de servidor web.  
@@ -913,6 +913,6 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

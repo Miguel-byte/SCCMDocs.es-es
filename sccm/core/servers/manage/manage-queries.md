@@ -1,5 +1,5 @@
 ---
-title: "Administración de consultas | System Center Configuration Manager"
+title: Administrar consultas | Microsoft Docs
 description: Aprenda a administrar sus consultas. Incluye una tabla de referencia detallada.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c3c9bce02a177e755bb259634a7feab381a41466
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 738dcf0b52f18b38b732bf8ca5d7a87369b1c468
 
 
 ---
@@ -47,6 +47,6 @@ Use la información de este tema como ayuda para administrar consultas en System
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

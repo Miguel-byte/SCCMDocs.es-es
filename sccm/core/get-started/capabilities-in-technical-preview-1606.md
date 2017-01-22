@@ -1,5 +1,5 @@
 ---
-title: Capacidades de Technical Preview 1606 para System Center Configuration Manager
+title: Capacidades de Technical Preview 1606 para System Center Configuration Manager | Microsoft Docs
 description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1606."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d1410b853e8f6b3bcb4d2cbfca735ba26c5c4d52
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 6bc3087768d8455a6ca6beb77a3afc8f313eb831
 
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1606 para System Center Configuration Manager
@@ -255,12 +255,12 @@ Con Technical Preview 1606 se han presentado varios cambios que se aplican a Act
 
     Cuando abra el nodo **Actualizaciones y mantenimiento**, ahora verá solo la actualización instalada más reciente y las nuevas actualizaciones disponibles para instalar. Para ver actualizaciones instaladas previamente, haga clic en el nuevo botón **Historial** que aparece en la cinta de opciones.  
 
--   **Ha cambiado el nombre de la opción de preproducción:**
+-   **Cambio de nombre de la opción de preproducción:**
 
     En el nodo Actualizaciones y mantenimiento, el botón denominado **Opciones de cliente** ahora se denomina **Promover el cliente de preproducción**.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

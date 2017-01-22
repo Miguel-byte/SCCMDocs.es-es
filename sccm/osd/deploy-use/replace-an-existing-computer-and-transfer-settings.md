@@ -1,5 +1,5 @@
 ---
-title: "Reemplazar un equipo existente y transferir la configuración | Configuration Manager"
+title: "Reemplazar un equipo existente y transferir la configuración | Microsoft Docs"
 description: "En Configuration Manager puede reemplazar un equipo existente por uno nuevo mediante varios métodos de implementación, como medios de arranque, la multidifusión o el Centro de software."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 82a2ebb830b872f8e6368be75b6d9beb1955ec27
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 243433980e1720fd468d52a4a61f2c3a8e3659b5
 
 
 ---
@@ -86,6 +86,6 @@ En este tema se indican las etapas generales de System Center Configuration Mana
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

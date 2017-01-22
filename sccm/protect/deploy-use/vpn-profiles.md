@@ -1,8 +1,8 @@
 ---
-title: Perfiles de VPN en System Center Configuration Manager | System Center Configuration Manager
+title: Perfiles de VPN en System Center Configuration Manager | Microsoft Docs
 description: "Obtenga información sobre cómo usar perfiles de VPN en System Center Configuration Manager para implementar la configuración de VPN en los usuarios de la organización."
 ms.custom: na
-ms.date: 10/10/2016
+ms.date: 11/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,17 +17,17 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fbce476b8a9b91a88354fb4abfadfd2526ca5e8
-ms.openlocfilehash: dda572392884c54b63af09a9fae79c1e73eb3d95
+ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
+ms.openlocfilehash: 0ff83aed4d5e19806a8c69f4b45e39a6156dee7e
 
 
 ---
 # <a name="vpn-profiles-in-system-center-configuration-manager"></a>Perfiles de VPN en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
-Use perfiles de VPN en System Center Configuration Manager para implementar la configuración de VPN en los usuarios de la organización. Mediante la implementación de esta configuración, se minimiza la intervención del usuario final necesaria para conectarse a los recursos de la red de la empresa.  
+Use perfiles de VPN en System Center Configuration Manager (también conocido como ConfigMgr o SCCM) para implementar la configuración de VPN en los usuarios de la organización. Mediante la implementación de esta configuración, se minimiza la intervención del usuario final necesaria para conectarse a los recursos de la red de la empresa.  
 
  Por ejemplo, quiere aprovisionar todos los dispositivos que ejecutan el sistema operativo iOS con la configuración necesaria para conectarse a un recurso compartido de archivos de la red corporativa. Puede crear un perfil de VPN que contiene la configuración necesaria para conectarse a la red corporativa y, después, implementar este perfil a todos los usuarios de la jerarquía que tienen dispositivos que ejecutan iOS. Los usuarios de dispositivos iOS verán la conexión VPN en la lista de redes disponibles y pueden conectarse a esta red con un esfuerzo mínimo.  
 
@@ -76,6 +76,6 @@ Use perfiles de VPN en System Center Configuration Manager para implementar la c
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

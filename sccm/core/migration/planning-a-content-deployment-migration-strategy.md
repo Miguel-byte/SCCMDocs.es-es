@@ -1,5 +1,5 @@
 ---
-title: Migrar contenido | System Center Configuration Manager
+title: Migrar contenido | Microsoft Docs
 description: "Use puntos de distribución para administrar contenido mientras migra datos a una jerarquía de destino de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: aa88f18247b49995bff4a4a6f5fd1e1ed70ca214
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: c96fa0995b5de87f50e1146b338058f26daeb624
 
 
 ---
@@ -188,8 +188,23 @@ Para identificar puntos de distribución aptos para su reasignación en la conso
 
  Para reasignar el punto de distribución, la jerarquía de destino utiliza la cuenta de acceso del sitio de origen que está configurada para recopilar datos del proveedor de SMS del sitio de origen. Para obtener información sobre los permisos necesarios y requisitos previos adicionales, consulte [Requisitos previos para la migración en System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
 
+## <a name="migrate-multiple-shared-distribution-points-at-the-same-time"></a>Migrar varios puntos de distribución compartidos al mismo tiempo
+A partir de la versión 1610, puede usar la opción **Reasignar punto de distribución** para que Configuration Manager procese en paralelo la reasignación de un máximo de 50 puntos de distribución compartidos al mismo tiempo. Esto incluye los puntos de distribución compartidos de sitios de origen compatibles que ejecutan:  
+- Configuration Manager 2007
+- System Center 2012 Configuration Manager
+- System Center 2012 R2 Configuration Manager
+- Sitio de Rama actual de System Center Configuration Manager
+
+Cuando se reasignan puntos de distribución, todos ellos deben poder actualizarse o reasignarse. El nombre de la acción y el proceso implicados, ya sea actualización o reasignación, depende de la versión de Configuration Manager que ejecute el sitio de origen. Pero tanto si se actualiza como si se reasigna, los resultados son los mismos: el punto de distribución se asigna a uno de los sitios de Rama actual con su contenido local.
+
+Antes de la versión 1610, Configuration Manager solo podía procesar un punto de distribución de cada vez. Ahora, puede reasignar tantos puntos de distribución como quiera, pero tenga en cuenta las observaciones siguientes:  
+- Aunque no es posible seleccionar varios puntos de distribución para su reasignación, cuando se ha puesto en cola más de uno, Configuration Manager los procesará en paralelo, en lugar de esperar a que se complete uno para iniciar el siguiente.  
+- De forma predeterminada, se procesa en paralelo un máximo de 50 puntos de distribución a la vez. Una vez completada la reasignación del primer punto de distribución, Configuration Manager empieza a procesar el número 51, y así sucesivamente.  
+- Cuando se usa el SDK de Configuration Manager, es posible modificar la propiedad **SharedDPImportThreadLimit** para ajustar el número de puntos de distribución reasignados que Configuration Manager puede procesar en paralelo.
+
+
 ##  <a name="a-nameaboutmigratingcontenta-content-ownership-when-migrating-content"></a><a name="About_Migrating_Content"></a> Propiedad del contenido durante la migración de contenido  
- Cuando migra contenido para las implementaciones, debe asignar el objeto de contenido a un sitio en la jerarquía de destino. Este sitio, a continuación, se convierte en el propietario de ese contenido en la jerarquía de destino. Aunque el sitio de nivel superior de su jerarquía de destino es el sitio que migra realmente los metadatos del contenido, es el sitio asignado que accede a los archivos de origen originales del contenido en la red.  
+ Cuando migra contenido para las implementaciones, debe asignar el objeto de contenido a un sitio en la jerarquía de destino. Este sitio, a continuación, se convierte en el propietario de ese contenido en la jerarquía de destino. Aunque el sitio de nivel superior de su jerarquía de destino es el sitio que migra los metadatos del contenido, es el sitio asignado el que accede a los archivos de origen originales del contenido en la red.  
 
  Para minimizar el ancho de banda de red usado al migrar contenido, considere la posibilidad de transferir la propiedad del contenido de un sitio en la jerarquía de destino cercano en la red a la ubicación del contenido en la jerarquía de origen. Dado que la información sobre el contenido en la jerarquía de destino se comparte de forma global, estará disponible en cada sitio.  
 
@@ -197,6 +212,6 @@ Para identificar puntos de distribución aptos para su reasignación en la conso
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

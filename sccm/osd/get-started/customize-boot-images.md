@@ -1,5 +1,5 @@
 ---
-title: "Personalizar imágenes de arranque | Configuration Manager"
+title: "Personalizar imágenes de arranque | Microsoft Docs"
 description: "Conozca diversas maneras de usar Configuration Manager o la herramienta de línea de comandos de Administración y mantenimiento de imágenes de implementación (DISM) para personalizar una imagen de arranque."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 5b78d68087bb5513723e1cc25291f7776d48f7b5
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 9312ad976986f97293d294c12161f78e5d6fee1e
 
 
 ---
@@ -83,7 +83,7 @@ Cada versión de Configuration Manager admite una determinada versión de Window
     > [!NOTE]
     >  Para obtener más información sobre DISM, consulte el tema [DISM - Deployment Image Servicing and Management Technical Reference (Referencia técnica de Administración y mantenimiento de imágenes de implementación - DISM)](http://technet.microsoft.com/library/hh824821.aspx) en la biblioteca de documentación de TechNet de Windows 8.1 y Windows 8.
 
-5.  Después de montar la imagen de arranque, use DISM para agregar componentes opcionales a la imagen de arranque. En Windows PE 5, los componentes opcionales de 64 bits se encuentran en <*ruta de instalación*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs.  
+5.  Después de montar la imagen de arranque, use DISM para agregar componentes opcionales a la imagen de arranque. En Windows PE 5, los componentes opcionales de 64 bits se encuentran en <*ruta de instalación*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs.  
 
     > [!NOTE]
     >  En este procedimiento se utiliza la siguiente ubicación para los componentes opcionales: C:\Archivos de programa (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs. La ruta de acceso que se utiliza puede variar según las opciones de instalación y la versión que elija para Windows ADK.  
@@ -303,6 +303,6 @@ Cada versión de Configuration Manager admite una determinada versión de Window
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

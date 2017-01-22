@@ -1,5 +1,5 @@
 ---
-title: "Descargador del programa de instalación | System Center Configuration Manager"
+title: "Descargador del programa de instalación | Microsoft Docs"
 description: "Lea sobre esta aplicación independiente diseñada para asegurar que la instalación del sitio usa las versiones actuales de los archivos de instalación principales."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 574e4d450126d2c4411292b6dd52e18049d296f6
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: cbe6ebfa80ff8253ec7ed5ad71852fb5cd7e7d91
 
 ---
 # <a name="setup-downloader-for-system-center-configuration-manager"></a>Descargador del programa de instalación de System Center Configuration Manager
@@ -98,6 +98,6 @@ Hay dos opciones para ejecutar el descargador del programa de instalación:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

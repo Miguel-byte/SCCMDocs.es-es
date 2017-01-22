@@ -1,8 +1,8 @@
 ---
-title: "Compatibilidad con la virtualización | System Center Configuration Manager"
+title: "Compatibilidad con la virtualización | Microsoft Docs"
 description: "Obtenga los requisitos para instalar los roles de sistema de sitio y el cliente de System Center Configuration Manager en un entorno de virtualización."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: be32ccee17bc4829888d42dfff3f2818f4fc2810
+ms.sourcegitcommit: 13df135828e383e666bfc11051011207245a774c
+ms.openlocfilehash: 1c00324d2e7cc9a082ba837b29879e3a778d0c54
 
 
 ---
@@ -59,11 +59,13 @@ Las máquinas virtuales no reciben ninguna consideración especial. Por ejemplo,
 
 Los mismos requisitos de System Center Configuration Manager para redes, configuraciones admitidas y requisitos de hardware que se aplican a la instalación de Configuration Manager local en su red corporativa física también se aplican a la instalación en Microsoft Azure.  
 
+Para obtener más información, consulte [Configuration Manager en Azure - Preguntas más frecuentes](/sccm/core/understand/configuration-manager-on-azure).
+
 > [!IMPORTANT]  
 >  Los sitios y clientes de Configuration Manager que se ejecutan en máquinas virtuales de Azure están sujetos a los mismos requisitos de licencia que las instalaciones locales.  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

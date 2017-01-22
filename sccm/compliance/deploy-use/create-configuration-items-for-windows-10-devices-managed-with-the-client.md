@@ -1,8 +1,8 @@
 ---
-title: "Cómo crear elementos de configuración para dispositivos Windows 10 administrados con el cliente de System Center Configuration Manager | System Center Configuration Manager"
+title: "Cómo crear elementos de configuración para dispositivos Windows 10 administrados con el cliente de System Center Configuration Manager | Microsoft Docs"
 description: "Use el elemento de configuración de Windows 10 de System Center Configuration Manager para administrar la configuración de los equipos con Windows 10 que administra el cliente de Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d5248e7262f758c2de2a1deaf42282d4e77e3e0c
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 2b24570aa2e9d9aa45584842011dcd49c6e5e8cc
 
 
 ---
@@ -125,7 +125,7 @@ Use el elemento de configuración de **Windows 10** de System Center Configurati
 |**Protección antivirus**|Requiere que el software antivirus esté instalado y configurado.|  
 |**Las firmas de protección antivirus están actualizadas**|Requiere que los archivos de firma para el software antivirus en el dispositivo estén actualizados.|  
 
-### <a name="windows-information-protection-formerly-enterprise-data-protection"></a>Windows Information Protection (anteriormente Protección de datos de empresa)
+### <a name="windows-information-protection"></a>Windows Information Protection
 
 Con el aumento de los dispositivos propiedad de los empleados en la empresa, también aumenta el riesgo de pérdidas de datos accidentales a través de aplicaciones y servicios, como el correo electrónico, las redes sociales y la nube pública, que están fuera del control de la empresa. Por ejemplo, cuando un empleado envía imágenes de su último proyecto de ingeniería desde su cuenta de correo electrónico personal, copia y pega información de producto en un tweet o guarda un informe de ventas en curso para su almacenamiento en nube pública.
 
@@ -137,6 +137,6 @@ Para obtener información sobre cómo configurar Windows Information Protection 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

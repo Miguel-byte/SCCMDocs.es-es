@@ -1,5 +1,5 @@
 ---
-title: "Configuración de la administración de energía | System Center Configuration Manager"
+title: "Configuración de la administración de energía | Microsoft Docs"
 description: "Configure la administración de energía en System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ca1277ba0c2be68a393da930769151e25e997210
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: e111ac2545dd9e0b96a50c10246bb75d286a737a
 
 
 ---
@@ -47,7 +47,7 @@ Para poder usar la administración de energía en System Center Configuration Ma
 
     -   **Permitir la administración de energía de dispositivos** : en la lista desplegable, seleccione **Verdadero** para habilitar la administración de energía.  
 
-7.  Configure las opciones de cliente que necesite. Para obtener una lista de las opciones de cliente de administración de energía que puede configurar, vea la sección [Administración de energía](../../../../core/clients/deploy/about-client-settings.md#BKMK_PowMgmtDeviceSettings) del tema [Acerca de la configuración de cliente en Configuration Manager](../../../../core/clients/deploy/about-client-settings.md).  
+7.  Configure las opciones de cliente que necesite. Para obtener una lista de las opciones de cliente de administración de energía que puede configurar, vea la sección [Administración de energía](../../../../core/clients/deploy/about-client-settings.md#power-management) del tema [Acerca de la configuración de cliente en Configuration Manager](../../../../core/clients/deploy/about-client-settings.md).  
 
 8.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Configuración de cliente predeterminada** .  
 
@@ -88,6 +88,6 @@ Para poder usar la administración de energía en System Center Configuration Ma
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

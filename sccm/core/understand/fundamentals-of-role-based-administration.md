@@ -1,5 +1,5 @@
 ---
-title: "Conceptos básicos de la administración basada en roles | System Center Configuration Manager"
+title: "Aspectos básicos de la administración basada en roles | Microsoft Docs"
 description: "Use la administración basada en roles para controlar el acceso administrativo a Configuration Manager y a los objetos que administra."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 3e70794144caa5a1993cc65089b1076476fc6106
+ms.sourcegitcommit: 6cf3ac76ea3fb9c9b093ed4927255102930bbe26
+ms.openlocfilehash: 5bdfe43c86d5b700c50b4d55d2f3bbb15bb504e9
 
 
 ---
@@ -78,7 +78,7 @@ Al diseñar e implementar la seguridad administrativa de Configuration Manager, 
 > [!TIP]  
 >  Puede ver la lista de los roles de seguridad integrados y los roles de seguridad personalizados que crea, y sus descripciones, en la consola de Configuration Manager. A tal efecto, en el área de trabajo **Administración** , expanda **Seguridad**y, a continuación, haga clic en **Roles de seguridad**.  
 
- Cada rol de seguridad tiene determinados permisos para distintos tipos de objetos. Por ejemplo, el rol de seguridad **Administrador de aplicaciones** tiene los siguientes permisos para las aplicaciones: **Aprobar**, **Crear**, **Eliminar**, **Modificar**, **Modificar carpetas**, **Mover objetos**, **Leer/Implementar**, **Establecer ámbito de seguridad**. No puede cambiar los permisos de los roles de seguridad integrados, pero puede copiar el rol, realizar cambios y, a continuación, guardar estos cambios como un nuevo rol de seguridad personalizado. También puede importar roles de seguridad que ha exportado desde otra jerarquía (por ejemplo, de una red de prueba). Revise los roles de seguridad y sus permisos para determinar si utilizará los roles de seguridad integrados o si debe crear sus propios roles de seguridad personalizados.  
+ Cada rol de seguridad tiene determinados permisos para distintos tipos de objetos. Por ejemplo, el rol de seguridad **MMM de aplicaciones** tiene los siguientes permisos para las aplicaciones: **Aprobar**, **Crear**, **Eliminar**, **Modificar**, **Modificar carpetas**, **Mover objetos**, **Leer/Implementar**, **Establecer ámbito de seguridad**. No puede cambiar los permisos de los roles de seguridad integrados, pero puede copiar el rol, realizar cambios y, a continuación, guardar estos cambios como un nuevo rol de seguridad personalizado. También puede importar roles de seguridad que ha exportado desde otra jerarquía (por ejemplo, de una red de prueba). Revise los roles de seguridad y sus permisos para determinar si utilizará los roles de seguridad integrados o si debe crear sus propios roles de seguridad personalizados.  
 
  **Los pasos siguientes le ayudan a planear los roles de seguridad:**  
 
@@ -212,6 +212,6 @@ Para obtener más información sobre cómo configurar ámbitos de seguridad para
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

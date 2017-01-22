@@ -1,8 +1,8 @@
 ---
-title: Crear e implementar una directiva de cumplimiento de dispositivos | System Center Configuration Manager
+title: Crear e implementar una directiva de cumplimiento de dispositivos | Microsoft Docs
 description: "Obtenga información sobre cómo crear e implementar directivas de cumplimiento de dispositivos en System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/15/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0cba232e-319f-4ae6-9ffa-4cd76c8bcb29
 caps.latest.revision: 
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: bb91f4a711699790bb01f48d32183cf1215b1952
+ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
+ms.openlocfilehash: 4cc7148be602367b579d63535a4938919bacf829
 
 ---
 
@@ -79,7 +79,7 @@ ms.openlocfilehash: bb91f4a711699790bb01f48d32183cf1215b1952
 
 ## <a name="monitor-the-compliance-policy"></a>Supervisar la directiva de cumplimiento
 
-#### <a name="to-view-compliance-results-in-the-configuration-manager-console"></a>Para ver los resultados de compatibilidad en la consola de Configuration Manager
+### <a name="to-view-compliance-results-in-the-configuration-manager-console"></a>Para ver los resultados de compatibilidad en la consola de Configuration Manager
 
 1.  En la consola de Configuration Manager, haga clic en **Supervisión**.
 
@@ -98,6 +98,14 @@ ms.openlocfilehash: bb91f4a711699790bb01f48d32183cf1215b1952
     -   **No compatible**: muestra una lista de todas las reglas no compatibles en la directiva en función del número de activos afectados. Puede hacer clic en una regla para crear un nodo temporal en el nodo **Usuarios** o **Dispositivos** en el área de trabajo **Activos y compatibilidad** , que contiene todos los usuarios o los dispositivos no compatibles con esta regla. Cuando se selecciona un usuario o dispositivo, el panel **Detalles del activo** muestra los usuarios o dispositivos afectados por el problema seleccionado. Haga doble clic en un usuario o dispositivo de la lista para mostrar información adicional sobre el problema.
 
     -   **Desconocido**: muestra una lista de todos los usuarios y dispositivos que no notificaron la compatibilidad de la implementación de directiva seleccionada y el estado de cliente actual de los dispositivos.
+
+### <a name="to-view-intune-compliance-policies-charts"></a>Para ver los gráficos de directivas de cumplimiento de Intune
+1. A partir de la versión 1610 de Configuration Manager, en la consola de Configuration Manager, haga clic en **Supervisión**.
+2. En el área de trabajo **Supervisión**, vaya a **Información general** > **Configuración de cumplimiento** >  **Directivas de cumplimiento**.
+3. Se muestran los gráficos siguientes:
+    - **Cumplimiento general de dispositivos**: muestra el cumplimiento general de los dispositivos de todas las directivas de cumplimiento.
+    - **Razones principales de no cumplimiento**: muestra las directivas principales por las que los dispositivos son no conformes.
+4. Haga clic en una sección del gráfico para explorar en profundidad una lista de los dispositivos de esa categoría.
 
 ### <a name="to-view-a-health-attestation-report"></a>Para ver un informe de atestación de estado
 
@@ -214,10 +222,8 @@ ms.openlocfilehash: bb91f4a711699790bb01f48d32183cf1215b1952
   **Compatible con:**
   * Windows 10 y Windows 10 Mobile
 
-  
 
 
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

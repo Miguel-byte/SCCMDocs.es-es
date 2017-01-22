@@ -1,5 +1,5 @@
 ---
-title: "Modificación de la infraestructura | System Center Configuration Manager"
+title: Modificar infraestructura | Microsoft Docs
 description: Aprenda a realizar cambios o adoptar medidas que afectan a la infraestructura de Configuration Manager que ha implementado.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fc58e77841baedd45649d676e98c736fa91e5bf2
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: fa9881e06abd410438fe5985151309c45f337802
 
 
 ---
@@ -172,6 +172,8 @@ Por ejemplo, considere un escenario donde se instala la consola de Configuration
 -   **Configurar acceso:** si mueve la base de datos del sitio a un nuevo equipo, agregue la cuenta de equipo del servidor de sitio al grupo **Administradores locales** del equipo que ejecuta SQL Server. Si utiliza un clúster de SQL Server para la base de datos del sitio, debe agregar la cuenta de equipo al grupo **Administradores locales** de cada equipo de de nodo de clúster de Windows Server.  
 
 -   **Habilitar integración con Common Language Runtime (CLR):**  si mueve la base de datos a una nueva instancia de SQL Server, o a un nuevo equipo de SQL Server, debe habilitar la integración con Common Language Runtime (CLR). Para habilitar CLR, use **SQL Server Management Studio** para conectarse a la instancia de SQL Server que hospeda la base de datos del sitio y ejecute el siguiente procedimiento almacenado como una consulta: **sp_configure 'clr enabled',1; reconfigure**.  
+-  **Asegurarse de que el nuevo servidor de SQL Server tiene acceso a la ubicación de copia de seguridad:** cuando use una ruta UNC para almacenar la copia de seguridad de base de datos de su sitio, después de mover la base de datos a un nuevo servidor, incluido el movimiento a un grupo de disponibilidad AlwaysOn de SQL Server o a un clúster de SQL Server, asegúrese de que la cuenta de equipo del nuevo servidor de SQL Server tiene permisos de **escritura** en la ubicación UNC.  
+
 
 > [!IMPORTANT]  
 >  Antes de mover una base de datos que tenga una o más réplicas de base de datos para puntos de administración, deberá quitar primero las réplicas de la base de datos. Después de completar el traslado de la base de datos, se pueden reconfigurar las réplicas de la base de datos. Para obtener más información, vea [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md) (Réplicas de bases de datos para puntos de administración de System Center Configuration Manager).  
@@ -369,6 +371,6 @@ Para obtener más información acerca de los idiomas de cliente y servidor que s
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

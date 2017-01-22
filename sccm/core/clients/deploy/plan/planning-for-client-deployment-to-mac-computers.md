@@ -1,5 +1,5 @@
 ---
-title: "Planeamiento de la implementación de cliente en equipos Mac | System Center Configuration Manager"
+title: "Planeación de la implementación del cliente en equipos Mac | Microsoft Docs"
 description: "Planee la implementación de cliente en equipos Mac en System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: 8d15ae3f-de42-461f-a907-c43873da22d2
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 216a2e2cf239fc86ed18d5692d39da170a4168d7
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: d8ccfee895f5fd3649fb4bef4a62fd790cce7ea8
 
 
 ---
@@ -112,6 +112,6 @@ Puede instalar el cliente de Configuration Manager en equipos Mac que ejecuten e
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

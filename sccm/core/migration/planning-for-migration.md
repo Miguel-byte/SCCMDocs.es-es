@@ -1,5 +1,5 @@
 ---
-title: "Planear la migración | System Center Configuration Manager"
+title: "Planear la migración | Microsoft Docs"
 description: "Obtenga información sobre sitios y jerarquías antes de migrar datos a una jerarquía de destino de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a80c7af58f88f76afd00771778411a4842a204c8
+ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
+ms.openlocfilehash: ccc9973c07da9eca4bfacfb3bc7d1228a976c78b
 
 
 ---
@@ -61,6 +61,6 @@ Antes de migrar datos a una jerarquía de destino de System Center Configuration
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

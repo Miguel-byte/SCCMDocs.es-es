@@ -1,5 +1,5 @@
 ---
-title: "Datos de diagnóstico para 1602 | System Center Configuration Manager"
+title: "Datos de diagnóstico para 1602 | Microsoft Docs"
 description: "Obtenga información acerca de los niveles de datos de diagnóstico y uso que se recopilan en la versión 1602 de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -34,8 +34,8 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: b38de0ef8886b34ffe091fbfcb185fc42ba66064
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 0f1be7aec8b15c4c61a325f2afb2caa2332cd31a
 
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1602-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de uso para diagnóstico para la versión 1602 de System Center Configuration Manager
@@ -51,6 +51,9 @@ Los cambios respecto de versiones anteriores se indican mediante la nota ***[Nue
 
 ##  <a name="a-namebkmkchangea-how-to-change-the-level"></a><a name="bkmk_change"></a> Cómo cambiar el nivel
  Los administradores con un ámbito administrativo basado en roles que incluye los permisos **Modificar** en la clase de objeto **Sitio** pueden cambiar el nivel de datos recopilados en la configuración de datos de diagnóstico y uso de la consola de Configuration Manager.
+
+
+  Para ello, en la consola, vaya a la pestaña Backstage (la pestaña superior izquierda con la flecha desplegable) y seleccione **Datos de uso**. Después, seleccione el nivel de datos que quiere usar.  
 
 ##  <a name="a-namebkmklevel1a-level-1---basic"></a><a name="bkmk_level1"></a> Nivel 1: Básico
  El nivel Básico incluye datos sobre la jerarquía y es necesario para ayudar a mejorar su experiencia de instalación o actualización, así como para determinar qué actualizaciones de Configuration Manager son aplicables a la jerarquía.
@@ -313,6 +316,6 @@ A partir de System Center Configuration Manager versión 1602, este nivel incluy
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

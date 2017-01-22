@@ -1,8 +1,8 @@
 ---
-title: Administrar un equipo de Windows de forma remota | System Center Configuration Manager
+title: Administrar un equipo Windows de forma remota | Microsoft Docs
 description: Administre un equipo cliente de Windows remoto mediante System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/16/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,38 +17,34 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 02c11420d3b05ad4eaae31d9413b66459751da70
-ms.openlocfilehash: 51a9b7269993bfa133382b88792ac94032824eed
+ms.sourcegitcommit: 08afca8b422474639cbdb860e555fe0da27361a4
+ms.openlocfilehash: dd794de867e1d0db47be9dc21a6d494087f76bc1
 
 
 ---
 # <a name="how-to-remotely-administer-a-windows-client-computer-by-using-system-center-configuration-manager"></a>Cómo administrar de forma remota un equipo cliente de Windows con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Use el procedimiento siguiente para administrar de forma remota un equipo en System Center Configuration Manager.  
-
- Antes de empezar a usar el control remoto, asegúrese de revisar la información de los siguientes temas:  
+Antes de empezar a usar el control remoto, asegúrese de revisar la información de los siguientes temas:  
 
 -   [Requisitos previos del control remoto en System Center Configuration Manager](../../../../core/clients/manage/remote-control/prerequisites-for-remote-control.md)  
 
 -   [Configuración del control remoto en System Center Configuration Manager](../../../../core/clients/manage/remote-control/configuring-remote-control.md)  
 
- Puede iniciar el visor de control remoto de Configuration Manager mediante uno de estos tres métodos:  
+A continuación se indican tres formas de iniciar el visor de control remoto:  
 
--   Con la consola de Configuration Manager.  
+-   En la consola de Configuration Manager.  
 
--   En el símbolo del sistema de Windows.  
+-   En un símbolo del sistema de Windows.  
 
--   En el menú **Inicio** de Windows en un equipo que ejecuta la consola de Configuration Manager desde el grupo de programas **Microsoft System Center 2012**.  
+-   En el menú **Inicio** de Windows en un equipo que ejecute la consola de Configuration Manager desde el grupo de programas **Microsoft System Center**.  
 
 ### <a name="to-remotely-administer-a-client-computer-from-the-configuration-manager-console"></a>Para administrar de forma remota un equipo cliente desde la consola de Configuration Manager  
 
-1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
+1.  En la consola de Configuration Manager, seleccione **Activos y compatibilidad** > **Dispositivos** o **Recopilaciones de dispositivos**.  
 
-2.  En el área de trabajo **Activos y compatibilidad** , haga clic en **Dispositivos** o en **Recopilaciones de dispositivos**.  
-
-3.  Seleccione el equipo que quiere administrar de forma remota y, a continuación, en la pestaña **Inicio** , en el grupo **Dispositivo** , haga clic en **Iniciar**y, a continuación, haga clic en **Control remoto**.  
+3.  Seleccione el equipo que quiere administrar de forma remota y, después, en la pestaña **Inicio**, en el grupo **Dispositivo**, seleccione **Iniciar** > **Control remoto**.  
 
     > [!IMPORTANT]  
     >  Si el permiso **Solicitar al usuario permiso de control remoto** de la configuración de cliente está establecido en **True**, la conexión no se inicia hasta que el usuario en el equipo remoto acepta la solicitud de control remoto. Para obtener más información, consulte [Configuración del control remoto en System Center Configuration Manager](../../../../core/clients/manage/remote-control/configuring-remote-control.md).  
@@ -56,7 +52,7 @@ Use el procedimiento siguiente para administrar de forma remota un equipo en Sys
 4.  Cuando se abra la ventana **Control remoto de Configuration Manager** , puede administrar de forma remota el equipo cliente. Use las opciones siguientes para configurar la conexión.  
 
     > [!NOTE]  
-    >  Si el equipo al que se conecta tiene varios monitores, la visualización de todos estos monitores se muestra en la ventana de control remoto.  
+    >  Si el equipo al que se conecta tiene varios monitores, la visualización de todos los monitores se muestra en la ventana de control remoto.  
 
     -   **Archivo - Conectar**: se establece una conexión con otro equipo. Esta opción no está disponible cuando está activa una sesión de control remoto.  
 
@@ -67,7 +63,7 @@ Use el procedimiento siguiente para administrar de forma remota un equipo en Sys
         > [!NOTE]  
         >  Cuando se desconecta una sesión de control remoto, se elimina el contenido del Portapapeles de Windows en el equipo que está visualizando.  
 
-    -   **Vista - Pantalla completa**: maximiza la ventana **Control remoto de Configuration Manager** para ocupar todo el espacio de visualización disponible.  
+    -   **Ver pantalla completa**: maximiza la ventana **Control remoto de Configuration Manager**.  
 
         > [!NOTE]  
         >  Para salir del modo de pantalla completa, presione Ctrl+Alt+Interrumpir.  
@@ -85,11 +81,9 @@ Use el procedimiento siguiente para administrar de forma remota un equipo en Sys
 
     -   **Acción - Bloquear teclado y mouse remotos**: bloquea el teclado y el mouse remotos para impedir que el usuario use el equipo remoto.  
 
-    -   **Ayuda - Acerca del Control remoto**: muestra información sobre la versión actual del visor de control remoto.  
+    -   **Ayuda - Acerca del control remoto**: muestra la versión actual del visor.  
 
 5.  Los usuarios del equipo remoto pueden ver más información sobre la sesión de control remoto al hacer clic en el icono **Control remoto** de Configuration Manager del área de notificación de Windows o en el icono de la barra de la sesión de control remoto.  
-
-6.  Cuando ya no necesite la sesión de control remoto, use uno de los métodos detallados anteriormente para finalizar la sesión de control remoto.  
 
 ### <a name="to-start-the-remote-control-viewer-from-the-windows-command-line"></a>Puede iniciar el visor de control remoto desde la línea de comandos de Windows.  
 
@@ -99,13 +93,13 @@ Use el procedimiento siguiente para administrar de forma remota un equipo en Sys
     >  CmRcViewer.exe admite las siguientes opciones de línea de comandos:  
     >   
     >  -   *<Dirección\>*: especifica el nombre NetBIOS, el nombre de dominio completo (FQDN) o la dirección IP del equipo cliente que al que quiere conectarse.  
-    > -   *<Nombre de servidor de sitio\>*: especifica el nombre del servidor de sitio de System Center 2012 Configuration Manager al que quiere enviar mensajes de estado relacionados con la sesión de control remoto.  
+    > -   *<Nombre de servidor de sitio\>*: especifica el nombre del servidor de sitio de System Center Configuration Manager al que quiere enviar mensajes de estado relacionados con la sesión de control remoto.  
     > -   **/?** - Muestra las opciones de línea de comandos para el visor de control remoto.  
     >   
     >  **Ejemplo: CmRcViewer.exe** *<Dirección\>* *<\\\Nombre de servidor de sitio>*  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,6 +1,6 @@
 ---
 
-title: Escenario de ejemplo para implementar y supervisar actualizaciones de software de seguridad | Configuration Manager
+title: Escenario de ejemplo para implementar y supervisar actualizaciones de software de seguridad | Microsoft Docs
 description: "Use este escenario de ejemplo sobre cómo usar las actualizaciones de software en Configuration Manager para implementar y supervisar actualizaciones de software de seguridad para versiones mensuales de Microsoft."
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 ms.service: 
 ms.assetid: c32f757a-02da-43f2-b055-5cfd097d8c43
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: cd03ddda0a39704a5715f7ed8d620daaefb57653
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 0e6e2b3a9455bb6eda437eb1325aaaadb3d83420
 
 
 
@@ -96,6 +96,6 @@ Juan finaliza correctamente la implementación mensual de actualizaciones de sof
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

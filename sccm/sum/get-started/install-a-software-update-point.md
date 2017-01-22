@@ -1,6 +1,6 @@
 ---
 
-title: "Instalar y configurar un punto de actualización de software | Configuration Manager"
+title: "Instalar y configurar un punto de actualización de software | Microsoft Docs"
 description: "Los sitios primarios requieren un punto de actualización de software en el sitio de administración central para la evaluación del cumplimiento de las actualizaciones de software y para implementar las actualizaciones de software en los clientes."
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 62a3b720abbc93460a782928e6cbdcb5d6f215aa
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 1d9911274fd76942131054231cdcc2bcebbd3fcb
 
 
 
@@ -154,6 +154,6 @@ Una vez que tenga los puntos de actualización de software instalados, vaya a [S
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
