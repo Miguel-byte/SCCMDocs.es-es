@@ -81,6 +81,6 @@
 9. En la página **Finalización**, compruebe que las actualizaciones de software se descargaron correctamente y, después, haga clic en **Cerrar**.  
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 
