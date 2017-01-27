@@ -1,5 +1,5 @@
 ---
-title: Inventario de hardware | Microsoft Docs
+title: Inventario de hardware en Configuration Manager | Microsoft Docs
 description: "Obtenga una introducción al inventario de hardware en System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/05/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 08a509cacb711ed6d1ae188d5512a026a12417f2
-ms.openlocfilehash: 61cd30696c28655e5c933a15f8e999293453107a
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: a543b945c4727540faa064c068b175ef63cb5a4b
 
 
 ---
@@ -58,6 +58,6 @@ Use el inventario de hardware en System Center Configuration Manager para recopi
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

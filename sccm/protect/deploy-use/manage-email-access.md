@@ -1,5 +1,5 @@
 ---
-title: "Administrar acceso al correo electrónico | Microsoft Docs"
+title: "Administrar el acceso al correo electrónico de Exchange con Configuration Manager | Microsoft Docs"
 description: "Aprenda a usar el acceso condicional de System Center Configuration Manager para administrar el acceso al correo electrónico de Exchange."
 ms.custom: na
 ms.date: 10/04/2016
@@ -16,14 +16,14 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
-ms.openlocfilehash: 0bbe25598f38f9cf3c15375748fee09c43dfb928
+ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
+ms.openlocfilehash: 26179c0c92773dc0b69be500c165a52e15afc6fd
 
 
 ---
-# <a name="manage-email-access-in-system-center-configuration-manager"></a>Administrar el acceso a correo electrónico en System Center Configuration Manager
+# <a name="manage-email-access"></a>Administrar acceso al correo electrónico 
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 Use el acceso condicional de System Center Configuration Manager para administrar el acceso al correo electrónico de Exchange según las condiciones que especifique.  
 
@@ -175,7 +175,7 @@ Se bloquearán los exploradores no admitidos. Igualmente no se admiten las aplic
 
  Las directivas de acceso condicional de Exchange Online utilizan el siguiente flujo para evaluar si se permitirá o bloqueará el acceso a los dispositivos.  
 
- ![ConditionalAccess8 &#45; 1](../media/ConditionalAccess8-1.png)  
+ ![ConditionalAccess8 &#45;&1;](../media/ConditionalAccess8-1.png)  
 
  Para acceder al correo electrónico, el dispositivo debe:  
 
@@ -297,7 +297,7 @@ Se bloquearán los exploradores no admitidos. Igualmente no se admiten las aplic
 ### <a name="for-exchange-on-premises-and-tenants-in-the-legacy-exchange-online-dedicated-environment"></a>Para Exchange local (y los inquilinos del entorno heredado de Exchange Online dedicado)  
  Las directivas de acceso condicional de Exchange local y los inquilinos del entorno heredado de Exchange Online dedicado utilizan el siguiente flujo para evaluar si se deben permitir o bloquear los dispositivos.  
 
- ![ConditionalAccess8 &#45; 2](../media/ConditionalAccess8-2.png)  
+ ![ConditionalAccess8 &#45;&2;](../media/ConditionalAccess8-2.png)  
 
 ##### <a name="to-enable-the-exchange-on-premises-policy"></a>Para habilitar la directiva de Exchange local  
 
@@ -363,6 +363,6 @@ Se bloquearán los exploradores no admitidos. Igualmente no se admiten las aplic
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

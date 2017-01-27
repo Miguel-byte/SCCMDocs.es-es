@@ -1,8 +1,8 @@
 ---
-title: Capacidades de Technical Preview 1610 para System Center Configuration Manager | Microsoft Docs
+title: Funciones de Technical Preview 1610 de Configuration Manager
 description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1610."
 ms.custom: na
-ms.date: 10/21/2016
+ms.date: 01/23/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
-ms.openlocfilehash: 6ffcb33e94f942fc9400457d3f16b65e12332956
+ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
+ms.openlocfilehash: 59633ce68e2bb2d722900215751f345d6d098721
 
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1610 para System Center Configuration Manager
@@ -165,6 +165,6 @@ Ahora puede requerir que los dispositivos Windows 10 inscritos en Azure Active D
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

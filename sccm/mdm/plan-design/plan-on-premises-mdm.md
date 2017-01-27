@@ -17,8 +17,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: cc5b04dc41b13993fca35f202437b71e96bc9cdd
+ms.sourcegitcommit: cec595d473ca2459e43a7fa1c70b7668a8a48986
+ms.openlocfilehash: d529a058968cf99dce77997844b33ff5dc7c0004
 
 
 ---
@@ -43,8 +43,8 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
 ##  <a name="a-namebkmkintunea-use-of-the--microsoft-intune-subscription"></a><a name="bkmk_intune"></a> Uso de la suscripción a Microsoft Intune  
  Necesitará una suscripción a Microsoft Intune para empezar a usar la administración de dispositivos móviles local. La suscripción solo es necesaria para realizar el seguimiento de las licencias de los dispositivos y no se usa para administrar ni almacenar la información de administración de los dispositivos. La totalidad de la administración se controla en la empresa de la organización a través de la infraestructura local de Configuration Manager.  
 
-> [!IMPORTANT]  
->  Configuration Manager no admite el uso de Microsoft Intune y la infraestructura de Configuration Manager local como entidades de administración al mismo tiempo. Por tanto, cuando configure la suscripción de Intune para la administración local, desactivará la administración de Intune.  
+ > [!NOTE]  
+ > A partir de la versión 1610, Configuration Manager admite la administración de dispositivos móviles mediante el uso de Microsoft Intune y la infraestructura de Configuration Manager local al mismo tiempo.   
 
  Si el sitio tiene dispositivos con conectividad a Internet, el servicio de Intune puede usarse para notificar a los dispositivos que busquen actualizaciones de directivas en el punto de administración de dispositivos. Este uso de Intune está estrictamente destinado para la notificación de dispositivos que solo son accesibles a través de Internet. Los dispositivos sin conexión a Internet (y con los que Intune no puede establecer una comunicación) se basan en el intervalo de sondeo configurado para conectarse con roles de sistema de sitio para las funciones de administración.  
 
@@ -122,6 +122,6 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

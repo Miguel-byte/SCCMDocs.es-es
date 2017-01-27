@@ -1,5 +1,5 @@
 ---
-title: 'Supervisar clientes |System Center Configuration Manager | Linux UNIX '
+title: Supervisar clientes Linux y UNIX en Configuration Manager | Microsoft Docs
 description: Superviser clientes en servidores de Linux y UNIX en System Center Configuration Manager.
 ms.custom: na
 ms.date: 11/23/2016
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 620c1caf50b4859afc8f32490ab7945df810aefd
-ms.openlocfilehash: b2b7c88784eed6fbee6ac1f6348d7d6991df1fbb
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: e9965373db17a752c8ae7fddb5f91fa1df912d49
 
 
 ---
@@ -38,7 +38,7 @@ La información de los servidores Linux y UNIX se puede ver en la consola de Sys
  En las siguientes secciones se describe cómo obtener estos detalles del Explorador de recursos y de los informes.  
 
 ##  <a name="a-namebkmkuseresourceexpforlnua-use-resource-explorer-to-view-inventory-for-linux-and-unix-servers"></a><a name="BKMK_UseResourceExpforLnU"></a> Usar el Explorador de recursos para ver el inventario de servidores Linux y UNIX  
- 
+
  Una vez que un cliente de Configuration Manager envía el inventario de hardware al sitio de Configuration Manager, se puede usar el Explorador de recursos para ver esta información. El cliente de Configuration Manager para Linux y UNIX no agrega nuevas clases ni vistas de inventario en el Explorador de recursos. Los datos del inventario de Linux y UNIX se asigna a las clases WMI existentes. Con el Explorador de recursos, es posible ver los detalles de inventario de los servidores Linux y UNIX en la clasificación basada en Windows.  
 
  Por ejemplo, puede recopilar la lista de todos los programas instalados de forma nativa que se encuentran en los servidores Linux y UNIX. Los ejemplos de programas instalados de forma nativa incluyen **.rpms** en Linux o **.pkgs** en Solaris. Después de que un cliente Linux o UNIX envía el inventario, se puede ver la lista de todos los programas de Linux o UNIX instalados de forma nativa mediante el Explorador de recursos en la consola de Configuration Manager.  
@@ -56,6 +56,6 @@ La información de los servidores Linux y UNIX se puede ver en la consola de Sys
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

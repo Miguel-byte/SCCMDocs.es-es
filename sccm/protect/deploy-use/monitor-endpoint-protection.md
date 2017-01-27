@@ -1,5 +1,5 @@
 ---
-title: "Supervisión de Endpoint Protection | Microsoft Docs"
+title: "Supervisión del estado de Endpoint Protection | Microsoft Docs"
 description: "Obtenga información acerca de cómo supervisar Endpoint Protection en la jerarquía de System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/9/2016
@@ -16,12 +16,12 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9fcbc0bb9c8ccd4265381ca4db7a363c8ae3b54a
-ms.openlocfilehash: 590d95f82a30167dcc0d5191feaa39ecab2b3136
+ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
+ms.openlocfilehash: 99e266e44f718d97c2a6e61e8e6816752751ed7b
 
 
 ---
-# <a name="how-to-monitor-endpoint-protection-in-system-center-configuration-manager"></a>Cómo supervisar Endpoint Protection en System Center Configuration Manager
+# <a name="how-to-monitor-endpoint-protection-status"></a>Cómo supervisar el estado de Endpoint Protection
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
@@ -84,6 +84,6 @@ Puede supervisar Endpoint Protection en la jerarquía de Microsoft System Center
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

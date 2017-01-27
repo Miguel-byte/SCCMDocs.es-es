@@ -2,7 +2,7 @@
 title: Technical Preview para System Center Configuration Manager | Microsoft Docs
 description: "Obtenga información sobre la versión Technical Preview que le permite probar nuevas funcionalidades y capacidades de System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 1/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4b1b925a50d08d90e4e1250967e19c0bc5aac4d3
-ms.openlocfilehash: faef3537eed740a6177f00991615c978659e06c7
+ms.sourcegitcommit: 8e4ccaf26b83896d12efcbd7ebd4bda4d4bf6675
+ms.openlocfilehash: d7d03c4494338a1d4583b6c82d3d5009b7785cfe
 
 
 ---
@@ -134,6 +134,12 @@ ms.openlocfilehash: faef3537eed740a6177f00991615c978659e06c7
 
  |Capacidad|Versión de Technical Preview|Versión de rama actual|  
  |----------------|---------------------|--------------------|
+ |Mejoras de los grupos de límites para puntos de actualización de software | [Tech Preview 1701](capabilities-in-technical-preview-1701.md#boundary-groups-improvements-for-software-update-points)    |![Sin agregar](media/Red_X.gif)  |
+ |El inventario de hardware recopila información de UEFI | [Tech Preview 1701](capabilities-in-technical-preview-1701.md#hardware-inventory-collects-uefi-information)|![Sin agregar](media/Red_X.gif)  |
+ |Mejoras en la implementación de sistema operativo| [Tech Preview 1701](capabilities-in-technical-preview-1701.md#improvements-to-operating-system-deployment)|![Sin agregar](media/Red_X.gif)  |
+ |Hospedar actualizaciones de software en puntos de distribución basados en la nube| [Tech Preview 1701](capabilities-in-technical-preview-1701.md#host-software-updates-on-cloud-based-distribution-points)|![Sin agregar](media/Red_X.gif) |
+ |Validar datos de atestación de estado de dispositivo mediante puntos de administración| [Tech Preview 1701](capabilities-in-technical-preview-1701.md#validate-device-health-attestation-data-via-management-points)|![Sin agregar](media/Red_X.gif) |
+ |Conector de OMS para la nube de Microsoft Azure Government |[Tech Preview 1701](capabilities-in-technical-preview-1701.md#use-the-oms-connector-for-microsoft-azure-government-cloud) |![Sin agregar](media/Red_X.gif) |
  |Acceso a datos del punto de conexión de OData |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|![Sin agregar](media/Red_X.gif)|
  |Punto del servicio de almacenamiento de datos |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#the-data-warehouse-service-point)|![Sin agregar](media/Red_X.gif)|
  |Herramienta de limpieza de la biblioteca de contenido |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#content-library-cleanup-tool)|![Sin agregar](media/Red_X.gif)|
@@ -225,6 +231,6 @@ ms.openlocfilehash: faef3537eed740a6177f00991615c978659e06c7
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

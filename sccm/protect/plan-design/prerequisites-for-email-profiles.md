@@ -1,5 +1,5 @@
 ---
-title: "Requisitos previos de los perfiles de correo electrónico| Microsoft Docs"
+title: "Requisitos previos de los perfiles de correo electrónico | Microsoft Docs"
 description: "Obtenga información sobre los perfiles de correo electrónico de System Center Configuration Manager y sus dependencias internas y externas al producto."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,12 +17,12 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: a41bec089897717a7e73e751d58275af9e0a5fa3
+ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
+ms.openlocfilehash: bdb7f78480f73bc4559c4ff49ecb7b047581780a
 
 
 ---
-# <a name="prerequisites-for-email-profiles-in-system-center-configuration-manager"></a>Requisitos previos de los perfiles de correo electrónico en System Center Configuration Manager
+# <a name="email-profile-prerequisites"></a>Requisitos previos de los perfiles de correo electrónico
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
@@ -43,6 +43,6 @@ Los perfiles de correo electrónico de System Center Configuration Manager tiene
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 
