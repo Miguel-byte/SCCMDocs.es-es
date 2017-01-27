@@ -1,5 +1,5 @@
 ---
-title: "Crear elementos de configuración para dispositivos Android y Samsung KNOX Standard administrados sin el cliente de System Center Configuration Manager | Microsoft Docs"
+title: "Crear elementos de configuración para Android y Samsung KNOX Standard en Configuration Manager | Microsoft Docs"
 description: "Use el elemento de configuración de Android y Samsung KNOX Standard de System Center Configuration Manager para administrar la configuración de los dispositivos."
 ms.custom: na
 ms.date: 12/14/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d023df79e0bcb7d5583224802976a5059c4ee753
-ms.openlocfilehash: c699c9c807f864fe161255522a8d694ab71d1a4e
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 12f5db5839fe66fb07d7055af45f8020abd43e24
 
 
 ---
@@ -109,7 +109,7 @@ Use el elemento de configuración de **Android y Samsung KNOX** de System Center
 
 ### <a name="browser"></a>Explorador
 |Configuración|Detalles|  
-|-------------|-------------| 
+|-------------|-------------|
 |**Permitir explorador web**|Especifica si se puede usar el explorador web predeterminado del dispositivo.|
 |**Autorrellenar**|Permite usar la función Autorrellenar del explorador web.|
 |**Active scripting**|Permite que el explorador web del dispositivo use Active scripting.|
@@ -135,9 +135,9 @@ Use el elemento de configuración de **Android y Samsung KNOX** de System Center
 |**Cámara**|Permite el uso de la cámara del dispositivo.<br /><br /> Se aplica a dispositivos Android y Samsung KNOX Standard.|  
 |**Transmisión de datos en proximidad (NFC)**|Permite operaciones que usan la transmisión de datos en proximidad (si es posible en el dispositivo).|
 |**YouTube**|Permite el uso de la aplicación de YouTube en el dispositivo.<br /><br /> Se aplica únicamente a dispositivos Samsung KNOX Standard.|  
-|**Desconectar**|Permite que el dispositivo se desconecte.<br /><br /> Se aplica únicamente a dispositivos Samsung KNOX Standard.| 
+|**Desconectar**|Permite que el dispositivo se desconecte.<br /><br /> Se aplica únicamente a dispositivos Samsung KNOX Standard.|
 
-### <a name="roaming"></a>Movilidad 
+### <a name="roaming"></a>Movilidad
 |Configuración|Detalles|  
 |-------------|-------------|
 |**Itinerancia de voz**|Permite la itinerancia de voz cuando el dispositivo está en una red de telefonía móvil.|
@@ -199,6 +199,6 @@ En la página **Configurar las opciones de pantalla completa para los dispositiv
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

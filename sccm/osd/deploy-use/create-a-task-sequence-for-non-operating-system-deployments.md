@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: ec146270ef39d48673ae6f3ca405b3f0bd7e8afa
+ms.sourcegitcommit: 6bb2bf0a029bc21e9420ac0ba782e8ea21291896
+ms.openlocfilehash: 692e8331f39f7c9ce78a6b710b8990760bf128c4
 
 
 ---
@@ -27,9 +27,9 @@ ms.openlocfilehash: ec146270ef39d48673ae6f3ca405b3f0bd7e8afa
 
 Las secuencias de tareas de System Center Configuration Manager se usan para automatizar distintas tareas del entorno. Estas tareas están diseñadas principalmente y probadas para implementar sistemas operativos.  Configuration Manager tiene muchas otras características que deben ser la tecnología principal para escenarios como la [instalación de aplicaciones](../../apps/understand/introduction-to-application-management.md), la [instalación de actualizaciones de software](../../sum/understand/software-updates-introduction.md), la [configuración](../../compliance/understand/ensure-device-compliance.md)o la automatización personalizada. Existen otras tecnologías de automatización de Microsoft System Center, como [Orchestrator](https://technet.microsoft.com/library/hh237242.aspx) y [Service Management Automation](https://technet.microsoft.com/library/dn469260.aspx) que también debe tener en cuenta.  
 
- La eficacia de las secuencias de tareas radica en su flexibilidad y en cómo puede usarlas para configurar el cliente, distribuir software, actualizar los controladores, editar los estados de usuario y realizar otras tareas independientes de la implementación de sistema operativo. Puede crear una secuencia de tareas personalizada para agregar cualquier número de tareas. Aunque se admite el uso básico de secuencias de tareas personalizadas para una implementación que no es de sistema operativo, no hay ninguna manera de probar todas las configuraciones posibles y la posibilidad de tener problemas aumenta a medida que se desarrollan secuencias de tareas más complejas.  
+La eficacia de las secuencias de tareas radica en su flexibilidad y en cómo puede usarlas para configurar el cliente, distribuir software, actualizar los controladores, editar los estados de usuario y realizar otras tareas independientes de la implementación de sistema operativo. Puede crear una secuencia de tareas personalizada para agregar cualquier número de tareas. Puede crear una secuencia de tareas personalizada para agregar cualquier número de tareas. En Configuration Manager se admite el uso de secuencias de tareas personalizadas para las implementaciones que no son de sistema operativo. Pero si una secuencia de tareas produce resultados incoherentes o no deseados, debe buscar formas de simplificar la operación. Para ello, puede seguir pasos más sencillos, dividir las acciones en varias secuencias de tareas o usar un método por fases para crear y probar la secuencia de tareas.
 
- Las siguientes etapas pueden usarse en una secuencia de tareas personalizada de implementación que no es de sistema operativo:  
+ Los siguientes pasos pueden usarse en una secuencia de tareas personalizada de implementación que no es de sistema operativo:  
 
 -   [Comprobar preparación](../understand/task-sequence-steps.md#BKMK_CheckReadiness)  
 
@@ -58,6 +58,6 @@ Las secuencias de tareas de System Center Configuration Manager se usan para aut
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

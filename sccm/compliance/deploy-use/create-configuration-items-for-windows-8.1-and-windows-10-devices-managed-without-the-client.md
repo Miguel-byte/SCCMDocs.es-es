@@ -1,5 +1,5 @@
 ---
-title: "Crear elementos de configuración para dispositivos de Windows 8.1 y Windows 10 administrados sin el cliente de System Center Configuration Manager | Microsoft Docs"
+title: "Crear elementos de configuración para dispositivos Windows 10 sin el cliente de Configuration Manager | Microsoft Docs"
 description: "Use el elemento de configuración de Windows 10 de System Center Configuration Manager para administrar la configuración de los equipos con Windows 10."
 ms.custom: na
 ms.date: 12/08/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8f6e6fd1d2a9a6352c9191ea7e2a1f9c6f6e2199
-ms.openlocfilehash: 7efde8dda724d71775313290b13a6aad2f9a7d6c
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 4c34ace72905b286c3582f09993bd897a87cce45
 
 
 ---
@@ -74,7 +74,7 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 ##  <a name="windows-81-and-windows-10-configuration-item-settings-reference"></a>Referencia a configuración de elemento de configuración de Windows 8.1 y Windows 10  
 
 ### <a name="password"></a>Contraseña  
- 
+
 |Configuración|Detalles|  
 |-------------|-------------|  
 |**Requerir configuración de contraseña en dispositivos**|Se requiere una contraseña en dispositivos compatibles.|  
@@ -100,8 +100,8 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 |**Bluetooth**|Permite el uso de la capacidad Bluetooth de los dispositivos.|  
 |**Modo visible de Bluetooth**|Permite que otros dispositivos Bluetooth puedan detectar el dispositivo.<br>(Solo Windows 10)|  
 |**Anuncios de Bluetooth**|Permitir el uso de anuncios de Bluetooth.<br> (Solo Windows 10)|  
-|**Grabación de voz**|Permite el uso de las características de grabación de voz del dispositivo.<br>(Solo Windows 10)| 
-|**Cortana**|Habilite o deshabilite el asistente de voz de Cortana.| 
+|**Grabación de voz**|Permite el uso de las características de grabación de voz del dispositivo.<br>(Solo Windows 10)|
+|**Cortana**|Habilite o deshabilite el asistente de voz de Cortana.|
 
 ### <a name="email-management"></a>Administración de correo electrónico  
 
@@ -153,7 +153,7 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 |**Ir a un sitio de intranet por una entrada de una sola palabra**|Habilita o deshabilita la opción que permite a Internet Explorer ir automáticamente a un sitio de intranet si se escribe un nombre de sitio válido sin un HTTP anterior:|  
 |**Opción de menú del modo de empresa**|Permite a los usuarios activar y desactivar el modo de empresa desde el menú **Herramientas** de Internet Explorer.|  
 |**Ubicación del informe de registro (URL)**|Especifique una dirección URL donde se registrarán los sitios web visitados cuando el modo de empresa esté activo.|  
-|**Ubicación de la lista de sitios de Modo de empresa (URL)**|Especifique la ubicación de la lista de sitios web que van a usar el modo de empresa cuando esté activo.| 
+|**Ubicación de la lista de sitios de Modo de empresa (URL)**|Especifique la ubicación de la lista de sitios web que van a usar el modo de empresa cuando esté activo.|
 
 ### <a name="microsoft-edge"></a>Microsoft Edge  
  Esta configuración es para dispositivos con Windows 10, y versiones posteriores.  
@@ -175,7 +175,7 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
  Esta configuración es para dispositivos con la actualización de noviembre (1511) de Windows 10 y versiones posteriores.  
 
 |Nombre de la configuración|Detalles|  
-|------------------|-------------| 
+|------------------|-------------|
 |**Permitir supervisión en tiempo real**|Habilita la detección de malware, spyware y otro tipo de software no deseado en tiempo real.|
 |**Permitir supervisión del comportamiento**|Permite a Defender comprobar determinados patrones conocidos de actividad sospechosa en los dispositivos.|
 |**Habilitar Sistema de inspección de redes**|El Sistema de inspección de redes (NIS) ayuda a proteger los dispositivos contra vulnerabilidades basadas en la red mediante el uso de firmas de vulnerabilidades conocidas desde Microsoft Endpoint Protection Center a fin de detectar y bloquear el tráfico malintencionado.|
@@ -201,7 +201,7 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 |**Exclusiones de extensiones de archivo**|Agregue una o varias extensiones de archivo, como jpg o txt, a la lista de exclusiones. Los archivos con estas extensiones no se incluirán en ningún examen en tiempo real ni programado.|
 |**Exclusiones de proceso**|Agregue uno o más procesos del tipo .exe, .com o .src a la lista de exclusiones. Estos procesos no se incluirán en ningún examen en tiempo real ni programado.|
 
- 
+
 
 ###  <a name="cloud"></a>Nube  
 
@@ -244,9 +244,9 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 |**Administración de dispositivos en movilidad**|Permite que Configuration Manager administre el dispositivo cuando está en itinerancia.<br>(Solo Windows 10)|  
 |**Descarga de software en movilidad**|Permite la descarga de software y aplicaciones cuando se está en movilidad.<br>(Solo Windows 10)|  
 |**Descarga de correo electrónico en movilidad**|Permite descargas de correo electrónico en movilidad.<br>(Solo Windows 10)|  
-|**Itinerancia de datos**|Permite movilidad entre redes al obtener acceso a datos.| 
+|**Itinerancia de datos**|Permite movilidad entre redes al obtener acceso a datos.|
 |**VPN sobre móvil**|Controla si el dispositivo puede obtener acceso a conexiones VPN cuando se conecta a una red móvil.<br>(Solo Windows 10)|
-|**Itinerancia de VPN sobre móvil**|Controla si el dispositivo puede obtener acceso a conexiones VPN durante la itinerancia en una red móvil.<br>(Solo Windows 10)| 
+|**Itinerancia de VPN sobre móvil**|Controla si el dispositivo puede obtener acceso a conexiones VPN durante la itinerancia en una red móvil.<br>(Solo Windows 10)|
 
 ###  <a name="encryption"></a>Cifrado  
 
@@ -287,7 +287,7 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 |**Configuración de servidor proxy**|Para las opciones **Servidor** y **Puerto** , especifique los valores **HTTP**, **WAP** y **Sockets**que correspondan.|  
 |**Habilitar acceso a la red 802.1X**|Seleccione esta opción si desea proteger la conexión mediante la especificación de un tipo de EAP.|  
 |**Tipo de EAP**|Elija el tipo de EAP que va a usar en:<br>- **PEAP**<br>- **Tarjeta inteligente o certificado**|  
- 
+
 
 ### <a name="certificates"></a>Certificados  
  Permite importar certificados para instalar en dispositivos móviles.  
@@ -356,11 +356,11 @@ Use el elemento de configuración de **Windows 8.1 y Windows 10** de System Cent
 |------------------|-------------|  
 |**Permitir que la pantalla se active automáticamente cuando los sensores detecten a alguien en la habitación**|Permite que el dispositivo se active automáticamente cuando su sensor detecta alguien en la sala.|  
 |**PIN necesario para proyección inalámbrica**|Especifica si debe escribir un PIN para poder usar las capacidades de proyección inalámbrica del dispositivo.|  
-|**Ventana de mantenimiento**|Configura la ventana cuando las actualizaciones tienen lugar en el dispositivo. Puede configurar la hora de inicio de la ventana y la duración (de 1 a 5 horas).| 
+|**Ventana de mantenimiento**|Configura la ventana cuando las actualizaciones tienen lugar en el dispositivo. Puede configurar la hora de inicio de la ventana y la duración (de 1 a 5 horas).|
 |**Azure Operational Insights**|Azure Operational Insights , parte del conjunto de aplicaciones de Microsoft Operations Manager recopila, almacena y analiza datos de archivos de registro de los dispositivos de Windows 10 Team.<br>Para conectarse a Azure Operational Insights, debe especificar un **identificador del área de trabajo** y una **clave del área de trabajo**.|
 |**Proyección inalámbrica de Miracast**|Habilite esta opción si desea permitir que el dispositivo Windows 10 Team use dispositivos compatibles con Miracast para el proyecto.<br>Si habilita esta opción, en **Elegir canal de Miracast**, seleccione el canal de Miracast que se usa para el contenido del proyecto.|
 |**Información de reunión mostrada en pantalla de inicio de sesión**|Si habilita esta opción, puede elegir la información que se mostrará en el icono **Reuniones** de la pantalla de inicio de sesión. Puede:<br>- **Mostrar solo el organizador y la hora**<br>- **Mostrar el organizador, la hora y el asunto (asunto oculto para reuniones privadas)**|
-|**URL de imagen de fondo de pantalla de bloqueo**|Habilite esta opción para mostrar un fondo personalizado en la pantalla de **inicio de sesión** de los dispositivos Windows 10 Team desde la dirección URL que especifique.<br>La imagen debe tener el formato PNG y la dirección URL debe comenzar con **https://**.| 
+|**URL de imagen de fondo de pantalla de bloqueo**|Habilite esta opción para mostrar un fondo personalizado en la pantalla de **inicio de sesión** de los dispositivos Windows 10 Team desde la dirección URL que especifique.<br>La imagen debe tener el formato PNG y la dirección URL debe comenzar con **https://**.|
 
 ### <a name="windows-information-protection"></a>Windows Information Protection
  Esta configuración es solo para dispositivos con Windows 10.
@@ -393,7 +393,6 @@ Para obtener información sobre cómo configurar Windows Information Protection 
 
 
 
-
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

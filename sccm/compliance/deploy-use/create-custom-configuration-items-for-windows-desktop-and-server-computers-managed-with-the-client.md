@@ -1,5 +1,5 @@
 ---
-title: "Crear elementos de configuración personalizados para equipos de escritorio y servidores de Windows administrados con el cliente de System Center Configuration Manager | Microsoft Docs"
+title: "Crear elementos de configuración para equipos Windows administrados por el cliente en Configuration Manager | Microsoft Docs"
 description: "Administre la configuración de equipos y servidores de Windows con un elemento de configuración de escritorios y servidores de Windows."
 ms.custom: na
 ms.date: 11/18/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: f5509d1ffb88bc128f7be6c74e6b65dc33605c9e
+ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
+ms.openlocfilehash: e55883471fde63036c91b315ed6db6dceb315207
 
 
 ---
@@ -359,6 +359,6 @@ En la página **Plataformas admitidas** del **Asistente para crear elemento de c
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

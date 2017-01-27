@@ -1,5 +1,5 @@
 ---
-title: "Crear elementos de configuración para dispositivos iOS y Mac OS X administrados sin el cliente de System Center Configuration Manager | Microsoft Docs"
+title: "Crear elementos de configuración para dispositivos iOS y Mac sin el cliente de Configuration Manager | Microsoft Docs"
 description: "Use el elemento de configuración de iOS y Mac OS X de System Center Configuration Manager para administrar la configuración de los dispositivos iOS y Mac OS X."
 ms.custom: na
 ms.date: 12/14/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d023df79e0bcb7d5583224802976a5059c4ee753
-ms.openlocfilehash: ea4024aaa07d40781663725127d64388055c6501
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 0614753a68e98675ccae99b792b03481f4ca7ab1
 
 
 ---
@@ -80,7 +80,7 @@ Use el elemento de configuración de **iOS y Mac OS X** de System Center Configu
 |**Longitud de contraseña mínima (caracteres)**|La longitud mínima de la contraseña.|  
 |**Caducidad de la contraseña en días**|El número de días antes de que se deba cambiar una contraseña.|  
 |**Número de contraseñas recordadas**|Impide que se vuelvan a usar contraseñas ya utilizadas.|  
-|**Número de intentos de inicio de sesión incorrectos antes de que se borre el dispositivo**|Borra el dispositivo si hay un error en este número de intentos de inicio de sesión.<br>(Solo iOS)| 
+|**Número de intentos de inicio de sesión incorrectos antes de que se borre el dispositivo**|Borra el dispositivo si hay un error en este número de intentos de inicio de sesión.<br>(Solo iOS)|
 |**Tiempo de inactividad antes de que se bloquee el dispositivo**|Especifica el número de minutos de inactividad antes de que el dispositivo se bloquee automáticamente.|
 |**Complejidad de la contraseña**|Elija si se puede especificar un PIN como "1234" o si se debe proporcionar una contraseña segura.|
 |**Permitir contraseñas sencillas**|Especifica que se pueden usar contraseñas simples, como "0000" y "1234".|
@@ -370,6 +370,6 @@ Use el elemento de configuración de **iOS y Mac OS X** de System Center Configu
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: Capacidades de Technical Preview 1604 para System Center Configuration Manager | Microsoft Docs
+title: Funciones de Technical Preview 1604 de Configuration Manager
 description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1604."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
-ms.openlocfilehash: 7358e310ad672a1a0ba4cbcb6b008506aaaa5d2b
+ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
+ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
 
 ---
 # <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1604 para System Center Configuration Manager
@@ -172,6 +172,6 @@ Para probarlo, configure el servicio de atestación de estado local mediante la 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

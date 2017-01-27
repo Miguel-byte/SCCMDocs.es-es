@@ -1,5 +1,5 @@
 ---
-title: Crear perfiles de Wi-Fi | Microsoft Docs
+title: "Cómo crear perfiles de Wi-Fi | Microsoft Docs"
 description: "Aprenda a usar perfiles de Wi-Fi en System Center Configuration Manager para implementar la configuración de red inalámbrica para los usuarios de su organización."
 ms.custom: na
 ms.date: 12/11/2016
@@ -17,14 +17,14 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 22a74f3b12fe4f4559b682a8fcb287863a7686af
-ms.openlocfilehash: 1262cb7d524fdce21f778e2179275bd177e9330f
+ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
+ms.openlocfilehash: 7d42ec89300d4eb6b02bafb3f83d341f8e3ca0c0
 
 
 ---
-# <a name="how-to-create-wi-fi-profiles-in-system-center-configuration-manager"></a>Cómo crear perfiles de Wi-Fi en System Center Configuration Manager
+# <a name="create-wi-fi-profiles"></a>Crear perfiles de Wi-Fi
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 Use perfiles de Wi-Fi en System Center Configuration Manager para implementar la configuración de red inalámbrica para los usuarios de su organización. Al implementar estas opciones, les resultará más fácil a los usuarios conectarse a la Wi-Fi.  
@@ -136,6 +136,6 @@ Use perfiles de Wi-Fi en System Center Configuration Manager para implementar la
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

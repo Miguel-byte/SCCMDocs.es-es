@@ -1,5 +1,5 @@
 ---
-title: "Cómo crear elementos de configuración para dispositivos Windows 10 administrados con el cliente de System Center Configuration Manager | Microsoft Docs"
+title: "Crear elementos de configuración para equipos Windows 10 administrados por el cliente en Configuration Manager | Microsoft Docs"
 description: "Use el elemento de configuración de Windows 10 de System Center Configuration Manager para administrar la configuración de los equipos con Windows 10 que administra el cliente de Configuration Manager."
 ms.custom: na
 ms.date: 11/18/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: 2b24570aa2e9d9aa45584842011dcd49c6e5e8cc
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 030cc33d98c81f3a6d5dff2d4c011e03fff12dc2
 
 
 ---
@@ -137,6 +137,6 @@ Para obtener información sobre cómo configurar Windows Information Protection 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 
