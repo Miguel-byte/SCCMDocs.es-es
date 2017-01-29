@@ -2,7 +2,7 @@
 title: Actualizaciones | Microsoft Docs
 description: "Obtenga información sobre un método de servicio en la consola denominado **Actualizaciones y mantenimiento** que facilita la ubicación e instalación de las actualizaciones recomendadas."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6e964f015d5f007311f46f51126b31e181abd0ec
-ms.openlocfilehash: e7b19b6e1f4720c0bdc69ef7f78366fd5d3414d0
+ms.sourcegitcommit: 5314bcb434b5b540f80cdfe32002df7b8fed6195
+ms.openlocfilehash: 52d5ad7a348e0489f43ac6cb46af930499ef6cf2
 
 
 ---
@@ -26,7 +26,11 @@ ms.openlocfilehash: e7b19b6e1f4720c0bdc69ef7f78366fd5d3414d0
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-System Center Configuration Manager usa un método de servicio en la consola denominado **Actualizaciones y mantenimiento** que facilita la ubicación de las actualizaciones recomendadas para la infraestructura de Configuration Manager y su posterior instalación. Este método de servicio en la consola se complementa con actualizaciones fuera de banda, como revisiones destinadas a los clientes que necesitan solucionar problemas que pueden ser específicos para su entorno.  
+System Center Configuration Manager usa un método de servicio en la consola denominado **Actualizaciones y mantenimiento** que facilita la búsqueda e instalación de las actualizaciones recomendadas para la infraestructura de Configuration Manager. Este método de servicio en la consola se complementa con actualizaciones fuera de banda, como revisiones destinadas a los clientes que necesitan solucionar problemas que pueden ser específicos para su entorno.  
+
+> [!TIP]
+> Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* ** e *instalar* se usan para describir tres conceptos independientes. Para obtener información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).
+
 
  **Los temas siguientes pueden ayudarle a obtener información sobre cómo encontrar e instalar los distintos tipos de actualizaciones para System Center Configuration Manager:**  
 
@@ -38,17 +42,18 @@ System Center Configuration Manager usa un método de servicio en la consola den
 
 -   [Uso del instalador de revisiones para instalar actualizaciones para System Center Configuration Manager](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)  
 
-> [!TIP]  
-> Si usa la rama de Technical Preview, consulte [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview) (Technical Preview para System Center Configuration Manager) para obtener información adicional específica de esa rama.
+
+Si usa la rama de Technical Preview, consulte [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview) (Technical Preview para System Center Configuration Manager) para obtener información adicional específica de esa rama.
+
 
 ##  <a name="a-namebkmkbaselinesa-baseline-and-update-versions"></a><a name="bkmk_Baselines"></a> Versiones de línea de base y versiones de actualización  
- La versión inicial de la rama actual de System Center Configuration Manager es la versión 1511. Se trata de una versión de línea de base:  
+ La versión inicial de la rama actual de System Center Configuration Manager era la versión 1511, que es una versión de línea base. La versión 1606 se ha publicado como una línea base posteriormente:  
 
 -   Use la versión de línea de base más reciente cuando instale un sitio nuevo en una jerarquía nueva.  
 
 -   Debe usar una versión de línea de base para actualizar desde System Center 2012 Configuration Manager.  
 
--   Las versiones de línea de base nuevas se lanzarán periódicamente. Cuando se usa una versión de línea de base más reciente para instalar una jerarquía nueva, se evita la instalación de la línea de base 1511 original seguida de una actualización de la infraestructura.  
+-   Las versiones de línea base adicionales se publicarán periódicamente. Al usar la última versión de línea base para instalar una nueva jerarquía, evita tener que instalar una versión obsoleta de Configuration Manager y luego una actualización de su infraestructura para actualizarla.  
 
 Una vez que instala una versión de línea de base, las versiones adicionales de Configuration Manager se encuentran disponibles como actualizaciones en la consola. Las actualizaciones en la consola actualizan la infraestructura a la versión más reciente de Configuration Manager.  
 
@@ -115,7 +120,7 @@ Cuando se instala una actualización en la consola:
 
 -   Ejecuta automáticamente una comprobación de los requisitos previos. También puede ejecutar esta comprobación antes de comenzar la instalación.  
 
--   Se instala en el sitio de administración central (si lo tiene) y en los sitios principales, de manera automática. Puede controlar cuándo cada servidor de sitio primario tiene permitido actualizar su infraestructura con [Ventanas de servicio para servidores de sitio](../../../core/servers/manage/install-in-console-updates.md#bkmk_ServiceWindow).  
+-   Se instala en el sitio de administración central (si lo tiene) y en los sitios principales, de manera automática. Puede controlar cuándo cada servidor de sitio primario tiene permitido actualizar su infraestructura con [Ventanas de servicio para servidores de sitio](../../../core/servers/manage/service-windows.md).  
 
 -   Una vez que un servidor de sitio se actualiza, se actualizan automáticamente todos los roles de sistema de sitio afectados (incluidas las instancias del proveedor de SMS). Las consolas de Configuration Manager también le piden al usuario de la consola que la actualice una vez que el sitio instala la actualización.  
 
@@ -143,6 +148,6 @@ Estas revisiones se instalan manualmente, mediante uno de estos dos métodos:
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

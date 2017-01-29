@@ -2,7 +2,7 @@
 title: "Lista de comprobación para la versión 1610 | System Center Configuration Manager"
 description: "Obtenga información sobre las acciones que se deben realizar antes de actualizar a la versión 1610 de System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 1/7/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,15 +16,15 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0c7d32a80559a4aa684ea1533cd36d0ef977fbfc
-ms.openlocfilehash: 25bffa256cbe70fb590eccb641c94f572f618ef3
+ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
+ms.openlocfilehash: 3ad5ca180759769bc22300eb406df4f606bfbd13
 
 ---
 # <a name="checklist-for-installing-update-1610-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1610 de System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Cuando usa la rama actual de System Center Configuration Manager, puede instalar la actualización en la consola para la versión 1610 para actualizar su jerarquía desde la versión 1606. Si su jerarquía ejecuta la versión 1511, 1602 o 1606, puede actualizar a la versión 1610. 
+Cuando usa la rama actual de System Center Configuration Manager, puede instalar la actualización en la consola para la versión 1610 para actualizar su jerarquía desde la versión 1606. Si su jerarquía ejecuta la versión 1511, 1602 o 1606, puede actualizar a la versión 1610.
 
 Para obtener la actualización de la versión 1610, debe usar un rol de sistema de sitio de punto de conexión del servicio en el sitio de nivel superior de su jerarquía. Esto puede realizarse en el modo en línea o sin conexión. Después de que su jerarquía descargue el paquete de actualización de Microsoft, lo encontrará en la consola en **Administración&gt;Información general&gt;Cloud Services&gt;Actualizaciones y mantenimiento**.
 
@@ -45,7 +45,7 @@ Para obtener más información sobre las versiones de la rama actual, consulte [
 **Sitios:**  
 La actualización 1610 solo puede instalarse en el sitio de nivel superior de la jerarquía. Esto significa que se inicie la instalación desde el sitio de administración central, si existe, o desde el sitio primario independiente. Después de que la actualización se instale en el sitio de nivel superior, los sitios secundarios tienen el siguiente comportamiento de actualización:
 
--   Los sitios primarios secundarios realizan la instalación de la actualización automáticamente después de que el sitio de administración central haya terminado de instalarla. Puede usar períodos para tareas administrativas para controlar el momento en que un sitio instala actualizaciones. Antes de la versión 1606, los períodos para tareas administrativas se denominaban ventanas de mantenimiento. Para más información, vea [Service Windows for site servers (Períodos para tareas administrativas para servidores de sitio)](https://docs.microsoft.com/en-us/sccm/core/servers/manage/install-in-console-updates#bkmk_ServiceWindow).
+-   Los sitios primarios secundarios realizan la instalación de la actualización automáticamente después de que el sitio de administración central haya terminado de instalarla. Puede usar períodos para tareas administrativas para controlar el momento en que un sitio instala actualizaciones. Antes de la versión 1606, los períodos para tareas administrativas se denominaban ventanas de mantenimiento. Para más información, vea [Ventanas de servicio para servidores de sitio](/sccm/core/servers/manage/service-windows).
 
 -   Una vez que el sitio principal primario termine de instalar la actualización, tendrá que actualizar manualmente los sitios secundarios desde la consola de Configuration Manager. No se admite la actualización automática de los servidores de sitio secundario.
 
@@ -138,12 +138,12 @@ Cuando instale una actualización que actualiza el cliente, puede probar esa nue
 
 Para aprovechar las ventajas de esta opción, antes de comenzar la instalación de la actualización, debe configurar el sitio para admitir las actualizaciones automáticas de preproducción.
 
-Para obtener más información, consulte [Actualizar clientes en System Center Configuration Manager](/sccm/core/clients/manage/upgrade/upgrade-clients) y [Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager](/sccm/core/clients/manage/upgrade/test-client-upgrades).
+Para obtener más información, vea [Actualizar clientes en System Center Configuration Manager](/sccm/core/clients/manage/upgrade/upgrade-clients) y [Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager](/sccm/core/clients/manage/upgrade/test-client-upgrades).
 
 **Planear usar períodos para tareas administrativas para controlar el momento en que los servidores de sitio instalan actualizaciones:**   
 Puede usar períodos para tareas administrativas para definir un período aplicable a un servidor de sitio primario durante el cual se pueden instalar las actualizaciones para ese sitio.
 
-Esto puede ayudarle a controlar el momento en que los sitios de la jerarquía instalan la actualización. Antes de la versión 1606, los períodos para tareas administrativas se denominaban ventanas de mantenimiento. Para más información, vea [Service Windows for site servers (Períodos para tareas administrativas para servidores de sitio)](/sccm/core/servers/manage/install-in-console-updates#bkmk_servicewindow).
+Esto puede ayudarle a controlar el momento en que los sitios de la jerarquía instalan la actualización. Antes de la versión 1606, los períodos para tareas administrativas se denominaban ventanas de mantenimiento. Para más información, vea [Ventanas de servicio para servidores de sitio](/sccm/core/servers/manage/service-windows).
 
 **Ejecutar el Comprobador de requisitos previos del programa de instalación:**   
 Cuando la actualización aparece en la consola como **Disponible**, puede ejecutar de manera independiente el Comprobador de requisitos previos antes de instalar la actualización. (Al instalar la actualización en el sitio, el Comprobador de requisitos previos vuelve a ejecutarse).
@@ -162,6 +162,6 @@ Se recomienda planear la instalación de la actualización fuera del horario com
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

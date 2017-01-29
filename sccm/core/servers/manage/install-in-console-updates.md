@@ -2,7 +2,7 @@
 title: Actualizaciones en la consola | Microsoft Docs
 description: System Center Configuration Manager se sincroniza con la nube de Microsoft para obtener las actualizaciones que puede instalar desde la consola.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
-ms.openlocfilehash: 1b7063d45c6dc9b42e5002f684043a8e846416a2
+ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
+ms.openlocfilehash: 00d9738a271ba47abcbf3c4b427a05910a0c2355
 
 
 ---
@@ -69,7 +69,7 @@ De forma predeterminada, **Paquetes de actualización** (SMS_CM_Updatepackages) 
     - Un usuario con este rol de seguridad y acceso al ámbito de seguridad **Predeterminado** puede ver e instalar actualizaciones, habilitar características durante la instalación y ver características después de la instalación, pero no puede habilitarlas.
 
 - **Analista de solo lectura** con permisos **Lectura** :
-  -  Un usuario con este rol de seguridad y acceso al ámbito **Predeterminado** puede ver las actualizaciones pero no instalarlas, y puede ver las características después de la instalación pero no puede habilitarlas.
+  -  Un usuario con este rol de seguridad y acceso al ámbito **Predeterminado** puede ver las actualizaciones, pero no instalarlas y puede ver las características después de la instalación, pero no puede habilitarlas.
 
 **Resumen de los permisos necesarios para la actualización y el mantenimiento:**   
   - Use una cuenta que tenga asignado un rol de seguridad que incluya la clase **Paquetes de actualización** con los permisos **Modificar** y **Lectura** .
@@ -162,7 +162,7 @@ Más adelante, cuando instale una actualización, tiene la opción de configurar
 
  Se recomienda planear la instalación de la actualización fuera del horario comercial habitual para cada sitio, ya que será el momento en que el proceso de instalación de la actualización y sus acciones para volver a instalar los componentes del sitio y los roles de sistema de sitio afectarán menos a las operaciones comerciales.  
 
--   Los sitios primarios secundarios inician la instalación de la actualización automáticamente después de que el sitio de administración central haya terminado de instalarla. Este es el proceso recomendado y predeterminado. En cambio, puede usar [Periodos para tareas administrativas para los servidores de sitio](#bkmk_ServiceWindow) para controlar el momento en que un sitio primario instala actualizaciones.  
+-   Los sitios primarios secundarios inician la instalación de la actualización automáticamente después de que el sitio de administración central haya terminado de instalarla. Este es el proceso recomendado y predeterminado. En cambio, puede usar [Ventanas de servicio para servidores de sitio](/sccm/core/servers/manage/service-windows) para controlar el momento en que un sitio primario instala actualizaciones.  
 
 -   Debe actualizar manualmente los sitios secundarios desde la consola de Configuration Manager después de que el sitio principal primario haya terminado de instalar la actualización. No se admite la actualización automática de los servidores de sitio secundario.  
 
@@ -186,7 +186,7 @@ Aparecerá el asistente para actualizaciones que muestra una lista de las áreas
 
 
 
--   Si se aplica una actualización al cliente de Configuration Manager, se le ofrecerá la opción de probar la actualización de cliente con un conjunto limitado de clientes. Para obtener más información, consulte [Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).  
+-   Si se aplica una actualización al cliente de Configuration Manager, se le ofrecerá la opción de probar la actualización de cliente con un conjunto limitado de clientes. Para obtener más información, vea [Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).  
 
 **2. Durante la instalación de la actualización**  
 Como parte de la instalación de la actualización, Configuration Manager:  
@@ -355,16 +355,6 @@ Si proporcionó consentimiento en un sitio primario independiente y, después, e
 
 
 
-
-##  <a name="a-namebkmkservicewindowa-service-windows-for-site-servers"></a><a name="bkmk_ServiceWindow"></a> ventanas de servicio para los servidores de sitio  
-En un servidor de sitio, puede configurar períodos para tareas administrativas para controlar cuándo se pueden aplicar actualizaciones de infraestructura para Configuration Manager en ese servidor de sitio.  Cada servidor de sitio admite varias ventanas, con la ventana permitida para la instalación de actualizaciones de infraestructura que están determinadas por una combinación de todas las ventanas configuradas para ese servidor de sitio.  
-
-**Cómo configurar una ventana de servicio:**  
-
-1.  En la consola de Configuration Manager, abra **Administración** > **Configuración del sitio** > **Sitios** y seleccione el servidor de sitio en el que quiere configurar un periodo para tareas administrativas.  
-
-2.  A continuación, modifique las **Propiedades** de los servidores de sitio y seleccione la pestaña **Ventana de servicio** , donde puede establecer una o varias ventanas de servicio para ese servidor de sitio.  
-
 ##  <a name="a-namebkmkfaqa-why-dont-i-see-certain-updates-in-my-console"></a><a name="bkmk_faq"></a> ¿Por qué no se ven determinadas características en la consola?  
  Si no encuentra una actualización específica o todas las actualizaciones en la consola después de una sincronización correcta con el servicio en la nube de Microsoft, esto podría deberse a que:  
 
@@ -378,6 +368,6 @@ En un servidor de sitio, puede configurar períodos para tareas administrativas 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

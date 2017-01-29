@@ -2,7 +2,7 @@
 title: "Administrar puntos de distribución | Microsoft Docs"
 description: "Hospede el contenido (archivos y software) que implementa en dispositivos y usuarios mediante el uso de los puntos de distribución. Aquí se muestra cómo instalarlos y configurarlos."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/9/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: 8684bf1231ff9d663717b4c9874dac98d50e3647
+ms.sourcegitcommit: cae118d2f28eea3bc47e344ca6f2ba8192f031c2
+ms.openlocfilehash: 160c3c94c822bc78e2d61b7a51d130b47f4c204e
 
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>Instalación y configuración de puntos de distribución de System Center Configuration Manager
@@ -175,6 +175,8 @@ En las secciones siguientes se describen las configuraciones que puede seleccion
 
     > [!NOTE]  
     >  Esta opción solo está disponible cuando se instala un punto de distribución nuevo.  
+
+- **Habilitar y configurar BranchCache para este punto de distribución:** seleccione esta opción para permitir que Configuration Manager configure Windows BranchCache en el servidor de punto de distribución.  Para obtener más información sobre el uso de Windows BranchCache con System Center Configuration Manager, vea [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#a-namebkmkbranchcachea-branchcache) en *Compatibilidad con las características y redes de Windows en System Center Configuration Manager*.
 
 -   **Configurar la manera en que los dispositivos cliente se comunican con el punto de distribución:** existen ventajas y desventajas para usar HTTP y HTTPS. Para obtener más información, consulte *Procedimientos recomendados de seguridad para la administración de contenido* en [Fundamental concepts for content management in System Center Configuration Manager (Conceptos básicos de la administración de contenido en System Center Configuration Manager)](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
@@ -379,6 +381,6 @@ Especifique si desea configurar límites de velocidad para controlar el ancho de
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

@@ -2,7 +2,7 @@
 title: "Lista de comprobación para la versión 1602 | Microsoft Docs"
 description: "Conozca los pasos necesarios previos a la actualización de la versión 1511 de System Center Configuration Manager a la versión 1602."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 78f8e9474afe208c5d91d27e8d2a202f4ed6154e
+ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
+ms.openlocfilehash: bac7ad8558186c6f451956297f3a791ae12176de
 
 
 ---
@@ -31,7 +31,7 @@ Antes de actualizar desde la versión 1511 a la 1602 de System Center Configurat
 
  La actualización 1602 solo puede instalarse en el sitio de primer nivel de la jerarquía. Esto significa que se inicie la instalación desde el sitio de administración central, si existe, o desde el sitio primario independiente.  
 
--   Los sitios primarios secundarios realizan la instalación de la actualización automáticamente después de que el sitio de administración central haya terminado de instalarla. Puede utilizar ventanas de mantenimiento para controlar el momento en que un sitio instala actualizaciones. A partir de la versión de la actualización 1602, las ventanas de mantenimiento pasan a denominarse períodos para tareas administrativas. Para más información, vea [Service Windows for site servers (Períodos para tareas administrativas para servidores de sitio)](../../../core/servers/manage/install-in-console-updates.md#bkmk_ServiceWindow).  
+-   Los sitios primarios secundarios realizan la instalación de la actualización automáticamente después de que el sitio de administración central haya terminado de instalarla. Puede utilizar ventanas de mantenimiento para controlar el momento en que un sitio instala actualizaciones. A partir de la versión de la actualización 1602, las ventanas de mantenimiento pasan a denominarse períodos para tareas administrativas. Para más información, vea [Ventanas de servicio para servidores de sitio](/sccm/core/servers/manage/service-windows).  
 
 -   Una vez que el sitio principal primario termine de instalar la actualización, tendrá que actualizar manualmente los sitios secundarios desde la consola de Configuration Manager. No se admite la actualización automática de los servidores de sitio secundario.  
 
@@ -114,12 +114,12 @@ No se puede ejecutar una actualización de prueba de base de datos en la base de
 
  **Plan piloto de cliente:** al instalar una actualización que actualiza el cliente, puede probar esa nueva actualización de cliente en preproducción antes de que implemente y actualice todos los clientes activos.   
  Para aprovechar las ventajas de esta opción, antes de comenzar la instalación de la actualización, debe configurar el sitio para admitir las actualizaciones automáticas de preproducción. Para más información, vea [Upgrade clients in System Center Configuration Manager (Actualizar clientes en System Center Configuration Manager)](../../../core/clients/manage/upgrade/upgrade-clients.md) y   
-[How to test client upgrades in a preproduction collection in System Center Configuration Manager (Cómo probar actualizaciones de cliente en una colección de preproducción en System Center Configuration Manager)](../../../core/clients/manage/upgrade/test-client-upgrades.md)  
+[Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md)  
 
  **Plan para utilizar las ventanas de mantenimiento**  
  **para controlar el momento en que los servidores de sitio instalan actualizaciones:** puede usar las ventanas de mantenimiento para definir un período aplicable a un servidor de sitio primario durante el cual se pueden instalar las actualizaciones para ese sitio.   
 Esto puede ayudarle a controlar el momento en que los sitios de la jerarquía instalan la actualización.   
-A partir de la versión de la actualización 1602, las ventanas de mantenimiento pasan a denominarse períodos para tareas administrativas. Para más información, vea [Service Windows for site servers (Períodos para tareas administrativas para servidores de sitio)](../../../core/servers/manage/install-in-console-updates.md#bkmk_ServiceWindow).  
+A partir de la versión de la actualización 1602, las ventanas de mantenimiento pasan a denominarse períodos para tareas administrativas. Para más información, vea [Ventanas de servicio para servidores de sitio](/sccm/core/servers/manage/service-windows).  
 
  **Ejecutar el Comprobador de requisitos previos del programa de instalación:**  antes de instalar la actualización 1602, puede ejecutar el Comprobador de requisitos previos con independencia de la instalación de la actualización. Al instalar la actualización en el sitio, el Comprobador de requisitos previos vuelve a ejecutarse.  
 Para más información, vea **Step 3: Run the prerequisite checker before installing an update (Paso 3: ejecutar el Comprobador de requisitos previos antes de instalar una actualización)** en el tema [Updates for System Center Configuration Manager (Actualizaciones para System Center Configuration Manager)](../../../core/servers/manage/updates.md).  
@@ -135,6 +135,6 @@ Para más información, vea **Step 3: Run the prerequisite checker before instal
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

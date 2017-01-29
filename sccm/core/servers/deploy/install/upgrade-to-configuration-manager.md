@@ -2,7 +2,7 @@
 title: Actualizar a System Center Configuration Manager | Microsoft Docs
 description: "Obtenga información sobre qué pasos seguir para ejecutar correctamente una actualización local desde un sitio y jerarquía que ejecutan System Center 2012 Configuration Manager."
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6cf3ac76ea3fb9c9b093ed4927255102930bbe26
-ms.openlocfilehash: d4e6a4c128ae077d2a3cb2883d80b6bf71b7f458
+ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
+ms.openlocfilehash: 27d18a7c5b13f488cafb36ace2e437fe6a50c598
 
 
 ---
@@ -29,6 +29,8 @@ Puede ejecutar una actualización local para actualizar a System Center Configur
 
  Antes de actualizar desde System Center 2012 Configuration Manager, debe preparar los sitios, lo que requiere quitar configuraciones específicas que pueden impedir la correcta actualización, y luego seguir la secuencia de actualización si existe más de un sitio implicado.  
 
+ > [!TIP]
+ > Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* ** e *instalar* se usan para describir tres conceptos independientes. Para obtener información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).
 
 ##  <a name="a-namebkmkpatha-in-place-upgrade-paths"></a><a name="bkmk_path"></a> Rutas de actualización local  
 **Actualizar a la versión 1606**  
@@ -386,6 +388,6 @@ Después de actualizar un sitio a un nuevo Service Pack, es posible que tenga qu
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 
