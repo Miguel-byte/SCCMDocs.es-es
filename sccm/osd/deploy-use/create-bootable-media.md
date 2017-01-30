@@ -1,8 +1,8 @@
 ---
-title: Crear medios de arranque | Microsoft Docs
+title: Crear medios de arranque en Configuration Manager | Microsoft Docs
 description: "Los medios de arranque de Configuration Manager facilitan instalar una nueva versión de Windows o reemplazar un equipo y transferir la configuración."
 ms.custom: na
-ms.date: 12/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 03722ff4f480cd26842e395fe1f7ec8359e2b33e
-ms.openlocfilehash: a7bdad82dc55b4c0fe7d892ef34cc6aa0dfbf476
+ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
+ms.openlocfilehash: 9032698fa12bf453041ea06bf330d3b4687c2a97
 
 
 ---
@@ -47,7 +47,7 @@ Los medios de arranque de Configuration Manager contienen la imagen de arranque,
 
  Utilice el procedimiento siguiente para crear medios de arranque.  
 
-#### <a name="to-create-bootable-media"></a>Para crear medios de arranque  
+### <a name="to-create-bootable-media"></a>Para crear medios de arranque  
 
 1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
 
@@ -146,11 +146,18 @@ Los medios de arranque de Configuration Manager contienen la imagen de arranque,
 
 10. Complete el asistente.  
 
+## <a name="create-bootable-media-on-a-usb-drive-from-a-network-share"></a>Crear medios de arranque en una unidad USB desde un recurso compartido de red
+La información de esta sección le ayuda a crear medios de arranque en una unidad flash USB, cuando la unidad flash no está conectada al equipo que ejecuta la consola de Configuration Manager. Para crear el medio de arranque en la unidad USB, puede crear medios de arranque de secuencia de tareas, montar la imagen ISO y transferir los archivos desde la imagen ISO a la unidad USB.
+
+1. [Crear el medio de arranque de secuencia de tareas](#to-create-task-boobable-media). En la página **Tipo de medio**, seleccione **Conjunto de CD/DVD**. El asistente escribe los archivos de salida en la ubicación que especifique. Por ejemplo: **\\\nombre de servidor\carpeta\archivo de salida.iso**.  
+2. Prepare la unidad USB extraíble. Debe ser una unidad de con formato, vacía y de arranque.
+3. Monte la imagen ISO desde la ubicación del recurso compartido y transfiera los archivos desde la imagen ISO a la unidad USB.
+
 ## <a name="next-steps"></a>Pasos siguientes  
 [Usar medios de arranque para implementar Windows a través de la red](use-bootable-media-to-deploy-windows-over-the-network.md)  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

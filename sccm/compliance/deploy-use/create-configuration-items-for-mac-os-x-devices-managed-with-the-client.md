@@ -1,8 +1,8 @@
 ---
-title: "Cómo crear elementos de configuración para dispositivos Mac OS X administrados con el cliente de System Center Configuration Manager | Microsoft Docs"
+title: "Crear elementos de configuración para equipos Mac administrados por el cliente en Configuration Manager | Microsoft Docs"
 description: "Use el elemento de configuración de Mac OS X de System Center Configuration Manager para administrar la configuración de los dispositivos Mac OS X."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 12/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: f3d08d7f8efb592383e1099850665a2e9f3b2b5f
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 60d147986425e7a3048d57b5b7412feab12efafd
 
 
 ---
@@ -54,7 +54,11 @@ Use el elemento de configuración de **Mac OS X (personalizado)** de System Cent
 
              Por ejemplo, si desea editar la configuración para el explorador Web Safari, podría usar **com.apple.Safari.plist**.  
 
-        -   **Clave** : especifique el nombre de la clave que se va a evaluar para el cumplimiento en equipos Mac. Use la siguiente sintaxis: */<diccionario\>/<nombreClave\>*.  
+        -   **Clave** : especifique el nombre de la clave que se va a evaluar para el cumplimiento en equipos Mac. Use la siguiente sintaxis:
+
+            ```
+            */<dictionary\>/<keyname\>*.  
+            ```     
 
             > [!IMPORTANT]  
             >  El nombre de clave distingue mayúsculas de minúsculas y no se evaluará si difiere del nombre de clave en el equipo Mac. Además, no podrá modificar el nombre de clave después de especificarlo. Si necesita modificar el nombre de clave, elimine y vuelva a crear la configuración.  
@@ -173,6 +177,6 @@ Si quiere agregar este elemento de configuración a una línea base de configura
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

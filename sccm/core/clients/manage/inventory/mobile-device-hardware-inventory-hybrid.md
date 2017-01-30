@@ -1,8 +1,8 @@
 ---
-title: "Configurar el inventario de hardware | Microsoft Docs | dispositivos móviles"
+title: "Configurar el inventario de dispositivos móviles en Configuration Manager | Microsoft Docs"
 description: "Configure el inventario de hardware para dispositivos móviles inscritos mediante Microsoft Intune y System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/26/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,18 +16,18 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 6db22a2ddce1afb471cf8b603c6d98f7f0acbc15
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: 13fd8d5e2ee6c2381129282aefa5e7b1aaf361eb
 
 
 ---
 # <a name="how-to-configure-hardware-inventory-for-mobile-devices-enrolled-by-microsoft-intune-and-system-center-configuration-manager"></a>Cómo configurar el inventario de hardware en dispositivos móviles inscritos mediante Microsoft Intune y System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
-En System Center Configuration Manager, puede recopilar el inventario de hardware en dispositivos Windows, Android e iOS mediante el conector de Microsoft Intune. Para obtener más información sobre cómo configurar el inventario de hardware, consulte [How to extend hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/extend-hardware-inventory.md) (Ampliación del inventario de hardware en System Center Configuration Manager).  
+En Configuration Manager, puede recopilar el inventario de hardware en dispositivos Windows, Android e iOS mediante el conector de Microsoft Intune. Para obtener más información sobre cómo configurar el inventario de hardware, consulte [How to extend hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/extend-hardware-inventory.md) (Ampliación del inventario de hardware en System Center Configuration Manager).  
 
- Para obtener información sobre cómo obtener los dispositivos inscritos con Microsoft Intune, consulte [Inscribir dispositivos para administrarlos en Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
+ Para más información sobre cómo inscribir dispositivos en Microsoft Intune, vea [Inscribir dispositivos para administrarlos en Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
 
 ## <a name="hardware-inventory-for-mobile-devices"></a>Inventario de hardware para dispositivos móviles  
  Las tablas siguientes enumeran las clases de inventario disponibles para el inventario de hardware en plataformas móviles utilizadas.  
@@ -141,6 +141,6 @@ En System Center Configuration Manager, puede recopilar el inventario de hardwar
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

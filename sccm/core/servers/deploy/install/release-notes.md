@@ -1,5 +1,5 @@
 ---
-title: "Notas de la versión | Microsoft Docs"
+title: "Notas de la versión en Configuration Manager | Microsoft Docs"
 description: "Consulte estas notas relativas a problemas urgentes que aún no se han corregido en el producto o no se han tratado en un artículo de Microsoft Knowledge Base."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: ea723a6694feb2c9584b35498aa9c3519383f08d
-ms.openlocfilehash: a9dc046a54c15d9d299664cd1f2a149383f53489
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: 9e853c8fda236125717c3912f6f3cb02d6dd1058
 
 
 ---
@@ -91,7 +91,7 @@ A partir de la actualización 1606, debe dar su consentimiento antes de poder ut
 
 La versión 1602 de System Center Configuration Manager introduce dos características de versión preliminar:  
 
--   Acceso condicional para equipos administrados por System Center Configuration Manager. Para obtener más información, consulte [Manage access to O365 services for PCs managed by System Center Configuration Manager](../../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md) (Administración del acceso a servicios de Office 365 para equipos administrados por System Center Configuration Manager).
+-   Acceso condicional para equipos administrados por System Center Configuration Manager. Para obtener más información, consulte [Manage access to O365 services for PCs managed by System Center Configuration Manager](../../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md) (Administración del acceso a servicios de Office&365; para equipos administrados por System Center Configuration Manager).
     - Después de instalar la actualización 1602, el tipo de característica aparece como liberado, aunque se trate de una versión preliminar.
     - Si actualiza de la versión 1602 a la 1606, el tipo de característica se muestra como liberado aunque se conserve la versión preliminar.
     - Si actualiza de la versión 1511 directamente a la versión 1606, el tipo de característica se muestra como versión preliminar.
@@ -247,6 +247,12 @@ De forma predeterminada, el asistente para Crear un plan de mantenimiento se eje
 **Solución alternativa**:    
 Después de crear un plan de mantenimiento, abra las propiedades, vaya a la pestaña **Programación de evaluación**, seleccione **Ejecutar la regla en una programación**, haga clic en **Personalizar** y cree una programación personalizada. Por ejemplo, puede hacer que el plan de mantenimiento se ejecute cada 60 días.  
 
+### <a name="when-a-high-risk-deployment-dialog-is-visible-to-a-user-subsequent-high-risk-dialogs-with-a-sooner-deadline-are-not-displayed"></a>Cuando un cuadro de diálogo de implementación de alto riesgo es visible para un usuario, no se muestran cuadros de diálogo de alto riesgo posteriores con una fecha límite anterior.
+Después de crear e implementar una implementación de tareas de alto riesgo para los usuarios, se muestra un cuadro de diálogo de alto riesgo al usuario. Si el usuario cierra el cuadro de diálogo, cree e implemente otra implementación de alto riesgo con una fecha límite anterior a la del primero, y el usuario no recibirá un cuadro de diálogo actualizado hasta que haya cerrado el cuadro de diálogo original. Las implementaciones seguirán ejecutándose en las fechas límite configuradas.
+
+**Solución alternativa**:  
+El usuario debe cerrar el cuadro de diálogo de la primera implementación de alto riesgo para ver el cuadro de diálogo de la siguiente implementación de alto riesgo.
+
 ## <a name="mobile-device-management"></a>Administración de dispositivos móviles  
 
 ### <a name="cannot-create-an-enrollment-profile-on-a-primary-site"></a>No se puede crear un perfil de inscripción de un sitio primario  
@@ -291,6 +297,6 @@ Este problema afecta al acceso condicional de System Center Configuration Manage
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

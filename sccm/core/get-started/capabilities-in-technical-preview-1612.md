@@ -1,8 +1,8 @@
 ---
-title: Capacidades de Technical Preview 1612 para System Center Configuration Manager | Microsoft Docs
+title: Funciones de Technical Preview 1612 de Configuration Manager
 description: "Obtenga información sobre las características disponibles en Technical Preview para System Center Configuration Manager, versión 1612."
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 15d442ba52b991ea7888d0113610fe4800424f8d
-ms.openlocfilehash: f0421efbc01443288d3591fa9748a8f71fef8a0d
+ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
+ms.openlocfilehash: cd970dacd29916c2de2db3dd5498b1949f5174e6
 
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1612 para System Center Configuration Manager
@@ -67,6 +67,7 @@ Además de instalar y configurar la base de datos de almacenamiento de datos, se
   - En una instancia con nombre o predeterminada
   - En un *clúster de SQL Server*. Aunque esta configuración debe funcionar, no se ha probado y el soporte técnico es la mejor opción.
   - Cuando se colocaliza con la base de datos del sitio o la base de datos del punto de servicios de informes. En cambio, recomendamos que se instale en un servidor independiente.  
+- La cuenta que se usa como *Cuenta de punto de Reporting Services* debe tener el permiso **db_datareader** para la base de datos del almacenamiento de datos.  
 - La base de datos no se admite en un *grupo de disponibilidad AlwaysOn de SQL Server*.
 
 ### <a name="install-the-data-warehouse"></a>Instalar el almacenamiento de datos
@@ -100,6 +101,8 @@ Página **Configuración de sincronización**:
   - **Intervalo de sincronización (minutos)**: especifique un valor en minutos. Después de que se alcance el intervalo, se iniciará una nueva sincronización. Se admite un intervalo de 60 a 1440 minutos (24 horas).
   - **Programación**: especifique los días que quiere que se ejecute la sincronización.
 
+**Acceso de punto de Reporting**:   
+Después de instalar el rol de almacenamiento de datos, asegúrese de que la cuenta que se usa como *Cuenta de punto de Reporting Services* tiene el permiso **db_datareader** para la base de datos del almacenamiento de datos.
 
 #### <a name="troubleshoot-installation-and-data-synchronization"></a>Solución de problemas de instalación y sincronización de datos
 Use los siguientes registros para investigar problemas con la instalación del punto de servicio de almacenamiento de datos o con la sincronización de datos:
@@ -240,7 +243,8 @@ Ahora puede volver a la página anterior cuando ejecuta una secuencia de tareas 
 Hemos agregado compatibilidad con archivos de instalación rápida en Configuration Manager para las actualizaciones de Windows 10. Cuando use una versión compatible con Windows 10, ahora puede usar la configuración de Configuration Manager para descargar solo la diferencia entre la actualización acumulativa de Windows 10 del mes actual y la actualización del mes anterior. En estos momentos en la rama actual de Configuration Manager, la actualización acumulativa completa de Windows 10 (incluidas todas las actualizaciones de los meses anteriores) se descarga cada mes. Usar los archivos de instalación rápida proporciona descargas más pequeñas y tiempos de instalación más rápidos en los clientes.
 
 > [!IMPORTANT]
-> Aunque la configuración para admitir el uso de los archivos de instalación rápida está disponible en Configuration Manager, esta característica solo se admite en la versión 1607 de Windows 10 con una actualización que se presentará a principios de 2017 y en versiones posteriores de Windows. La versión 1607 de Windows 10 sin la actualización y las versiones anteriores no admiten los archivos de instalación rápida.
+> Aunque la configuración para admitir el uso de los archivos de instalación rápida está disponible en Configuration Manager, esta característica solo se admite en la versión 1607 de Windows 10 con una actualización del Agente de Windows Update incluida en las actualizaciones publicadas el 10 de enero de 2017 (Patch Tuesday). Para obtener más información sobre estas actualizaciones, consulte el [artículo de soporte técnico 3213986](https://support.microsoft.com/help/4009938/january-10-2017-kb3213986-os-build-14393-693). Puede aprovechar las ventajas de los archivos de instalación rápida cuando se publique el siguiente conjunto de actualizaciones el 14 de febrero de 2017. La versión 1607 de Windows 10 sin la actualización y las versiones anteriores no admiten los archivos de instalación rápida.
+
 
 ### <a name="to-enable-the-download-of-express-installation-files-for-windows-10-updates-on-the-server"></a>Para habilitar la descarga de archivos de instalación rápida para las actualizaciones de Windows 10 en el servidor
 Para iniciar la sincronización de los metadatos de los archivos de instalación rápida de Windows 10, debe habilitarlos en las propiedades de punto de actualización de software.
@@ -313,6 +317,6 @@ Ahora que puede configurar Multi-Factor Authentication (MFA) para la inscripció
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

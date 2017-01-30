@@ -89,6 +89,7 @@
 ###  [Configurar el laboratorio](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capacidades en 1701](get-started/capabilities-in-technical-preview-1701.md)
 ###  [Capacidades en 1612](get-started/capabilities-in-technical-preview-1612.md)
 ###  [Capacidades en 1611](get-started/capabilities-in-technical-preview-1611.md)
 ###  [Capacidades en 1610](get-started/capabilities-in-technical-preview-1610.md)
@@ -305,6 +306,6 @@
 ###  [Actualizar análisis](clients/manage/upgrade/upgrade-analytics.md)
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO3-->
 
 

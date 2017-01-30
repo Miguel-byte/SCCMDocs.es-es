@@ -5,7 +5,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 11/10/2016
+ms.date: 01/04/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 translationtype: Human Translation
-ms.sourcegitcommit: 5415bfa0ac4af14891a9445cdeab6a4509fffc38
-ms.openlocfilehash: 630ccdf7b7f45a88586c9ab530c164985267bec9
+ms.sourcegitcommit: 6bb2bf0a029bc21e9420ac0ba782e8ea21291896
+ms.openlocfilehash: df9ad09c4ce0c2a18ee012cd3ace7b1a850df7b4
 
 ---
 
@@ -44,13 +44,25 @@ Para más información, vea [Información general de los canales de actualizaci�
 
 En la parte superior del panel, use la opción desplegable **Colección** para filtrar los datos del panel por miembros de una colección determinada.
 
+### <a name="display-data-in-the-office-365-client-management-dashboard"></a>Mostrar datos en el panel de administración de clientes de Office 365
+Los datos que se muestran en el panel de administración de clientes de Office 365 proceden de inventario de hardware. El inventario de hardware debe estar habilitado y debe seleccionar la clase de inventario de hardware **Configuración de Office 365 ProPlus** antes de que aparezcan en el panel de datos.
+#### <a name="to-display-data-in-the-office-365-client-management-dashboard"></a>Para mostrar datos en el panel de administración de clientes de Office 365
+1. Habilite el inventario de hardware, si aún no está habilitado. Para obtener más información, consulte [Configurar el inventario de hardware](\sccm\core\clients\manage\configure-hardware-inventory).
+2. En la consola de Configuration Manager, navegue a **Administración** > **Configuración de cliente** > **Configuración de cliente predeterminada**.  
+3. En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
+4. En el **configuración de cliente predeterminada** cuadro de diálogo, haga clic en **de inventario de Hardware**.  
+5. En el **configuración de dispositivo** lista, haga clic en **establecer clases**.  
+6. En el cuadro de diálogo **Clases de inventario de hardware**, seleccione **Configuración de Office 365 ProPlus**.  
+7.  Haga clic en **Aceptar** para guardar los cambios y cerrar la **clases de inventario de Hardware** cuadro de diálogo.  
+El panel de administración de cliente de Office 365 comenzará a mostrar los datos a medida que se informe del inventario de hardware.
+
 <!---
  On the upper-right side of the dashboard, click **Office 365 Installer** to start the Office 365 Client Installation Wizard to deploy Office 365 apps to clients. For details, see [Deploy Office 365 apps to clients](#deploy-office-365-apps-to-clients).
 - On the middle-right side of the dashboard, click **Create an ADR** to open the Automatic Deployment Rule Wizard to create a new automatic deployment rule (ADR). To create an ADR for Office 365 apps, select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
 - On the lower-right side of the dashboard, click **Create Client Agent Settings** to open Client Agent settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings).
 --->
 
-#### <a name="to-deploy-office-365-updates-with-configuration-manager"></a>Para implementar actualizaciones de Office 365 con Configuration Manager
+## <a name="deploy-office-365-updates-with-configuration-manager"></a>Implementar actualizaciones de Office 365 con Configuration Manager
 Siga estos pasos para implementar actualizaciones de Office 365 con Configuration Manager:
 
 1.  [Compruebe los requisitos](https://technet.microsoft.com/library/mt628083.aspx) para usar Configuration Manager para administrar las actualizaciones de cliente de Office 365 en la sección **Requisitos para usar Configuration Manager para administrar las actualizaciones de cliente de Office 365** del tema.  
@@ -69,11 +81,45 @@ Siga estos pasos para implementar actualizaciones de Office 365 con Configuratio
 
 4. [Implemente actualizaciones de Office 365](deploy-software-updates.md) en los clientes.  
 
+<!--  ## Add other languages for Office 365 update downloads
+Beginning in Configuration Manager version 1610, you can add support for Configuration Manager to download updates for any languages supported by Office 365 regardless of whether they are supported in Configuration Manager.
+
+### To add support to download updates for additional languages
+Use the following procedure on the central administration site, or stand-alone primary site, where the software update point site system role is installed.
+1. From a command prompt, type *wbemtest* as an administrative user to open the Windows Management Instrumentation Tester.
+2. Click **Connect**, and then type *root\sms\site_<siteCode>*.
+3. Click **Query**, and then run the following query:
+   *select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"*
+4. Double-click the object with the site code for the central administration site or stand-alone primary site.
+
+5. Browse the properties for View Embedded.
+3). Find the SMS_EmbeddedProperty instance with the PropertyName of "AdditionalUpdateLanguagesForO365"
+4). Set Value2 to be additional languages, e.g.:  pt-pt,af-za,nn-no, and save
+5). Right click to download an O365 update, choose languages from UI
+6). Verify that the language packs got downloaded including the UI specified ones plus the SDK specified ones. Admin can check the content package share specified to verify this.
+-->
+
+<!-- ## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
+To change the update channel after you enable Office 365 clients to receive updates from Configuration Manager, you must distribute a registry key value change to Office 365 clients using group policy. Change the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** registry key to use one of the following values:
+
+- Current Channel:  
+  **CDNBaseUrl** = http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60
+
+- Deferred Channel:  
+  **CDNBaseUrl** = http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114
+
+- First Release for Current Channel:  
+  **CDNBaseUrl** = http://officecdn.microsoft.com/pr/64256afe-f5d9-4f86-8936-8840a6a4f5be
+
+- First Release for Deferred Channel:  
+  **CDNBaseUrl** = http://officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf
+-->
+
 <!--- ## Next steps
 Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For details, see [Manage Office 365 apps](manage-office-365-apps.md). --->
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: Pasos de la secuencia de tareas | Microsoft Docs
+title: Pasos de la secuencia de tareas en Configuration Manager | Microsoft Docs
 description: "Obtenga información sobre los pasos de la secuencia de tareas que puede agregar a una secuencia de tareas de Configuration Manager."
 ms.custom: na
-ms.date: 12/07/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3f44505c977b511223a083a960f871371c0ff133
-ms.openlocfilehash: 6e324eb97c0e803d382371ace541a4b9f96e6ba3
+ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
+ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
 
 
 ---
@@ -1377,7 +1377,7 @@ Antes de la versión 1610 de Configuration Manager, este paso realiza las siguie
  Al especificar en la línea de comandos archivos o programas que aún no están presentes en el equipo de destino, seleccione esta opción para especificar el paquete de Configuration Manager que contiene los archivos adecuados. El paquete no requiere un programa. Esta opción no es necesaria si los archivos especificados existen en el equipo de destino.  
 
  **Tiempo de espera**  
- Especifica un valor que representa el tiempo que Configuration Manager permitirá la ejecución de la línea de comandos. Este valor puede estar comprendido entre 10 minutos y 999 minutos. El valor predeterminado es 15 minutos.  
+ Especifica un valor que representa el tiempo que Configuration Manager permitirá la ejecución de la línea de comandos. Este valor puede estar comprendido entre 1 minuto y 999 minutos. El valor predeterminado es 15 minutos.  
 
  Esta opción está deshabilitada de forma predeterminada.  
 
@@ -1696,6 +1696,6 @@ Después de seleccionar las variables de una regla, debe proporcionar un valor p
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 
