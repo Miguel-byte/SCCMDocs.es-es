@@ -2,7 +2,7 @@
 title: "Copia de seguridad y recuperación | Microsoft Docs"
 description: "Aprenda a realizar copias de seguridad de los sitios y a recuperarlos en caso de error o pérdida de datos en System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,48 +16,50 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
-
+ms.sourcegitcommit: 8d638d7e8f203ff2501a09918ab3424706d1261f
+ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
 ---
-# <a name="backup-and-recovery-for-system-center-configuration-manager"></a>Copia de seguridad y recuperación de System Center Configuration Manager
+
+# <a name="backup-and-recovery"></a>Copia de seguridad y recuperación 
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
 Prepare enfoques de copia de seguridad y recuperación para evitar la pérdida de datos. En los sitios de Configuration Manager, un enfoque de copia de seguridad y recuperación puede ayudar a recuperar sitios y jerarquías más rápidamente y con la mínima pérdida de datos. Las secciones de este tema pueden ayudarle a realizar copias de seguridad de los sitios y a recuperar un sitio en caso de error o pérdida de datos.  
 
--   [Hacer una copia de seguridad de un sitio de Configuration Manager](#BKMK_SiteBackup)  
 
-    -   [Tarea de mantenimiento de copia de seguridad](#BKMK_BackupMaintenanceTask)  
 
-    -   [Uso de Data Protection Manager para realizar copias de seguridad de la base de datos del sitio](#BKMK_DPMBackup)  
+- [Hacer una copia de seguridad de un sitio de Configuration Manager](#BKMK_SiteBackup)   
 
-    -   [Archivo de la instantánea de copia de seguridad](#BKMK_ArchivingBackupSnapshot)  
+  - [Tarea de mantenimiento de copia de seguridad](#BKMK_BackupMaintenanceTask)   
 
-    -   [Uso del archivo AfterBackup.bat](#BKMK_UsingAfterBackup)  
+  - [Uso de Data Protection Manager para realizar copias de seguridad de la base de datos del sitio](#BKMK_DPMBackup)   
 
-    -   [Tareas de copia de seguridad adicionales](#BKMK_SupplementalBackup)  
+  -  [Archivo de la instantánea de copia de seguridad](#BKMK_ArchivingBackupSnapshot)   
 
--   [Recuperar un sitio de Configuration Manager](#BKMK_RecoverSite)  
+  -  [Uso del archivo AfterBackup.bat](#BKMK_UsingAfterBackup)   
 
-    -   [Determinar las opciones de recuperación](#BKMK_DetermineRecoveryOptions)  
+  -  [Tareas de copia de seguridad adicionales](#BKMK_SupplementalBackup)   
 
-        -   [Opciones de recuperación de servidor de sitio](#BKMK_SiteServerRecoveryOptions)  
+-  [Recuperar un sitio de Configuration Manager](#BKMK_RecoverSite)   
 
-        -   [Opciones de recuperación de base de datos de sitio](#BKMK_SiteDatabaseRecoveryOption)  
+  -   [Determinar las opciones de recuperación](#BKMK_DetermineRecoveryOptions)   
 
-        -   [Período de retención de seguimiento de cambios de SQL Server](#bkmk_SQLretention)  
+         -   [Opciones de recuperación de servidor de sitio](#BKMK_SiteServerRecoveryOptions)   
 
-        -   [Proceso para reinicializar datos globales o del sitio](#bkmk_reinit)  
+         -   [Opciones de recuperación de base de datos de sitio](#BKMK_SiteDatabaseRecoveryOption)   
 
-        -   [Escenarios de recuperación de base de datos de sitio](#BKMK_SiteDBRecoveryScenarios)  
+         -   [Período de retención de seguimiento de cambios de SQL Server](#bkmk_SQLretention)   
 
-    -   [Claves de archivo de script de recuperación de sitio desatendida](#BKMK_UnattendedSiteRecoveryKeys)  
+         -   [Proceso para reinicializar datos globales o del sitio](#bkmk_reinit)   
 
-    -   [Tareas posteriores a la recuperación](#BKMK_PostRecovery)  
+         -   [Escenarios de recuperación de base de datos de sitio](#BKMK_SiteDBRecoveryScenarios)  
 
-    -   [Recuperar un sitio secundario](#BKMK_RecoverSecondarySite)  
+  -   [Claves de archivo de script de recuperación de sitio desatendida](#BKMK_UnattendedSiteRecoveryKeys)  
+
+  -   [Tareas posteriores a la recuperación](#BKMK_PostRecovery)  
+
+  -   [Recuperar un sitio secundario](#BKMK_RecoverSecondarySite)  
 
 -   [Servicio SMS Writer](#BKMK_SMSWriterService)  
 
@@ -214,16 +216,16 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
 3.  Seleccione el sistema de sitio que hospeda el rol de migración de estado y luego elija **Punto de migración de estado** en **Roles del sistema de sitio**.  
 
-4.  En la pestaña **Rol del sitio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
 
+4.  En la pestaña **Rol del sitio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
 5.  Las carpetas donde se almacenan los datos de migración de estado de usuario se enumeran en la sección **Detalles de la carpeta** de la pestaña **General** .  
 
-##  <a name="a-namebkmkrecoversitea-recover-a-configuration-manager-site"></a><a name="BKMK_RecoverSite"></a> Recuperar un sitio de Configuration Manager  
+
  Es necesario llevar a cabo una recuperación de sitio de Configuration Manager siempre que se produce un error en un sitio de Configuration Manager o se pierden datos de la base de datos de sitio. Reparar y volver a sincronizar datos son las tareas principales de una recuperación de sitio y son necesarias para evitar la interrupción de las operaciones.  
 
 > [!IMPORTANT]  
 >  Al recuperar la base de datos de un sitio:  
->   
+
 >  -   Debe usar la misma versión y edición de SQL Server. Por ejemplo, no se admite la restauración de una base de datos que se ejecutaba en SQL Server 2012 en SQL Server 2014. De igual forma, no se admite la restauración de una base de datos de sitio que se ejecutaba en SQL Server 2014 Standard Edition en SQL Server 2014 Enterprise Edition.  
 > -   SQL Server no debe estar establecido en el **modo de usuario único**.  
 > -   Asegúrese de que los archivos .mdf y .ldf sean válidos. Al recuperar un sitio, no se realiza ninguna comprobación del estado de los archivos que se están restaurando.  
@@ -233,7 +235,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
 > [!IMPORTANT]  
 >  Si ejecuta el programa de instalación de Configuration Manager desde el menú **Inicio** del servidor de sitio, la opción **Recuperar un sitio** no estará disponible.  
->   
+
 >  Si ha instalado alguna actualización desde la consola de Configuration Manager antes de hacer la copia de seguridad, no puede reinstalar correctamente el sitio mediante el programa de instalación desde medios de instalación o la ruta de instalación de Configuration Manager.  
 
 > [!NOTE]  
@@ -243,7 +245,6 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
  Debe tener en cuenta dos áreas principales para la recuperación del sitio de administración central y del servidor de sitio primario de Configuration Manager: el servidor de sitio y la base de datos de sitio. Consulte las siguientes secciones para poder determinar las opciones que debe seleccionar para el escenario de recuperación.  
 
 > [!NOTE]  
->  Si no se pudo realizar una recuperación de sitio anterior o si está intentando recuperar un sitio que no se desinstaló por completo, debe seleccionar **Desinstalar el sitio de Configuration Manager** en el programa de instalación para poder tener la opción de recuperar el sitio. Si el sitio con errores tiene sitios secundarios y tiene que desinstalarlo, debe eliminar manualmente la base de datos de sitio del sitio con errores para poder seleccionar la opción **Desinstalar el sitio de Configuration Manager**; de lo contrario, el proceso de desinstalación no se podrá realizar.  
 
 ####  <a name="a-namebkmksiteserverrecoveryoptionsa-site-server-recovery-options"></a><a name="BKMK_SiteServerRecoveryOptions"></a> Opciones de recuperación de servidor de sitio  
  Debe iniciar el programa de instalación a partir de una copia de la carpeta CD.Latest creada fuera de la carpeta de instalación de Configuration Manager. A continuación, seleccione la opción **Recuperar un sitio** . Cuando ejecuta el programa de instalación, cuenta con las siguientes opciones de recuperación para el servidor de sitio con errores:  
@@ -275,7 +276,11 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 -   **Omitir recuperación de base de datos**: use esta opción si no se produjo una pérdida de datos en el servidor de base de datos del sitio de Configuration Manager. Esta opción solo es válida si la base de datos del sitio no está en el mismo equipo que el servidor de sitio que está en proceso de recuperación.  
 
 ####  <a name="a-namebkmksqlretentiona-sql-server-change-tracking-retention-period"></a><a name="bkmk_SQLretention"></a> Período de retención de seguimiento de cambios de SQL Server  
- El seguimiento de cambios está habilitado para la base de datos del sitio en SQL Server. El seguimiento de cambios permite a Configuration Manager realizar consultas sobre los cambios que se realizaron en las tablas de base de datos a partir de un punto concreto en el tiempo. El período de retención especifica cuánto tiempo se conserva la información del seguimiento de cambios. De forma predeterminada, la base de datos del sitio está configurada para tener un período de retención de 5 días. Cuando se recupera una base de datos del sitio, el proceso de recuperación variará en función de si la copia de seguridad pertenece o no al período de retención. Por ejemplo, si se produce un error en el servidor de base de datos del sitio, y la última copia de seguridad se hizo hace 7 días, ésta no pertenecerá al período de retención.  
+ El seguimiento de cambios está habilitado para la base de datos del sitio en SQL Server. El seguimiento de cambios permite a Configuration Manager realizar consultas sobre los cambios que se realizaron en las tablas de base de datos a partir de un punto concreto en el tiempo. El período de retención especifica cuánto tiempo se conserva la información del seguimiento de cambios. De forma predeterminada, la base de datos del sitio está configurada para tener un período de retención de 5 días. Cuando se recupera una base de datos del sitio, el proceso de recuperación variará en función de si la copia de seguridad pertenece o no al período de retención. Por ejemplo, si se produce un error en el servidor de base de datos del sitio, y la última copia de seguridad se hizo hace 7 días, ésta no pertenecerá al período de retención.
+
+ Para obtener más información sobre los datos internos de seguimiento de cambios de SQL Server, consulte los siguientes blogs del equipo de SQL Server: [Change Tracking Cleanup - part 1](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1) (Limpieza de seguimiento de cambios - parte 1) y [Change Tracking Cleanup - part 2](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2) (Limpieza de seguimiento de cambios - parte 2).
+
+
 
 ####  <a name="a-namebkmkreinita-process-to-reinitialize-site-or-global-data"></a><a name="bkmk_reinit"></a> Proceso para reinicializar datos globales o del sitio  
  El proceso para reinicializar datos globales o del sitio reemplaza los datos existentes de la base de datos del sitio por datos de otra base de datos del sitio. Por ejemplo, si el sitio ABC reinicializa datos desde el sitio XYZ, se producen los siguientes pasos:  
@@ -839,7 +844,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
  Después de una recuperación del servidor de sitio, es preciso volver a escribir las claves de instalación de prueba de Windows especificadas para el sitio, ya que se restablecen durante la recuperación del sitio. Después de volver a escribir las claves de instalación de prueba, se restablece el contador de la columna **Activaciones usadas** de las claves de instalación de prueba de Windows en la consola de Configuration Manager. Por ejemplo, supongamos que antes del error del sitio, el valor del contador **Total de activaciones** era **100** y el de **Activaciones usadas** (el número de claves usadas por dispositivos) era **90**. Después de la recuperación del sitio, la columna **Total de activaciones** muestra **100**, pero la columna **Activaciones usadas** muestra, de forma incorrecta, **0**. Sin embargo, después de que 10 nuevos dispositivos utilicen una clave de instalación de prueba, no quedará ninguna clave de instalación de prueba y, por lo tanto, el siguiente dispositivo no podrá aplicar ninguna clave de instalación de prueba.  
 
 #### <a name="recreate-the-microsoft-intune-subscription"></a>Volver a crear la suscripción a Microsoft Intune  
- Si recupera un servidor de sitio de Configuration Manager después de volver a crear la imagen del equipo del servidor de sitio, la suscripción de Microsoft Intune no se restaurará. Debe volver a crear la suscripción después de recuperar el sitio. Para más información, vea [Configuring the Microsoft Intune subscription (Configuración de la suscripción de Microsoft Intune)](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription).  
+ Si recupera un servidor de sitio de Configuration Manager después de volver a crear la imagen del equipo del servidor de sitio, la suscripción de Microsoft Intune no se restaurará. Debe volver a conectar la suscripción después de recuperar el sitio.  No cree una nueva solicitud de APN. En su lugar, cargue el archivo .pem válido actual que se cargó la última vez que se configuró o se renovó la administración de iOS. Para más información, vea [Configuring the Microsoft Intune subscription (Configuración de la suscripción de Microsoft Intune)](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription).  
 
 #### <a name="configure-ssl-for-site-system-roles-that-use-iis"></a>Configuración de SSL para roles de sistema de sitio que usan IIS  
  Al recuperar sistemas de sitio que ejecutan IIS y que se habían configurado para HTTPS antes del error, debe volver a configurar IIS para utilizar el certificado de servidor web.  
@@ -913,6 +918,6 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 
