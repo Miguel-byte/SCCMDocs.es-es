@@ -1,8 +1,8 @@
 ---
-title: "Administración de Windows como servicio | Microsoft Docs"
-description: "Hay características en System Center Configuration Manager que le permiten ver el estado de Windows como servicio en su entorno para mantenerlo actualizado."
+title: "Administración de Windows como servicio en Configuration Manager | Microsoft Docs"
+description: "Vea el estado de Windows como servicio mediante Configuration Manager, cree planes de mantenimiento para formar anillos de implementación y vea alertas cuando el soporte técnico de los clientes de Windows 10 está a punto de finalizar."
 ms.custom: na
-ms.date: 12/21/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,17 +16,17 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 66cd6d099acdd9db2bc913a69993aaf5e17237fe
-ms.openlocfilehash: 79e13074db18a617c7e3fceedaa143dbece90a3d
+ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
+ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
 
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>Administración de Windows como servicio mediante System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 
- En System Center Configuration Manager, puede ver el estado de Windows como servicio en su entorno, crear planes de mantenimiento para anillos de implementación de formularios y asegurarse de que los sistemas de la Rama actual de Windows 10 se mantienen actualizados cuando aparecen nuevas compilaciones; asimismo, puede ver alertas cuando el servicio de soporte técnico de los clientes que poseen las compilaciones de Rama actual (CB) o de Rama actual para empresas (CBB) de Windows 10 está a punto de finalizar.  
+ En System Center Configuration Manager, puede ver el estado de Windows como servicio en su entorno, crear planes de mantenimiento para formar anillos de implementación y asegurarse de que los sistemas de la Rama actual de Windows 10 se mantienen actualizados cuando aparecen nuevas compilaciones. Además, puede ver alertas cuando el servicio de soporte técnico de los clientes que poseen las compilaciones de Rama actual (CB) o de Rama actual para empresas (CBB) de Windows 10 está a punto de finalizar.  
 
  Para más información acerca de opciones de mantenimiento de Windows 10, consulte  [Opciones de mantenimiento de Windows 10 para actualizaciones](https://technet.microsoft.com/library/mt598226\(v=vs.85\).aspx).  
 
@@ -277,6 +277,6 @@ Use el siguiente procedimiento para modificar las propiedades de un plan de mant
 
 
 
-<!--HONumber=Dec16_HO4-->
+<!--HONumber=Jan17_HO4-->
 
 

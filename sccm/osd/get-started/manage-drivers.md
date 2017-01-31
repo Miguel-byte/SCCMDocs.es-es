@@ -1,8 +1,8 @@
 ---
-title: Administrar controladores | Microsoft Docs
+title: Administrar controladores en Configuration Manager | Microsoft Docs
 description: "Use el catálogo de controladores de Configuration Manager para importar controladores de dispositivos, controladores de grupo en paquetes y distribuir esos paquetes a puntos de distribución."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 361a18b7da8249fc6cccc333f39313a52dd8ab88
+ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
+ms.openlocfilehash: 87ab9925717a307cbda3cea1f2e470ae012fa067
 
 
 ---
@@ -278,6 +278,6 @@ System Center Configuration Manager proporciona un catálogo de controladores qu
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 
