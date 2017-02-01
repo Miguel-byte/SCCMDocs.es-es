@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: ae750188b0258122d8561b163a5ecd85c4179f18
+ms.sourcegitcommit: 59e63cf223424f9930524e3ed3833c30dc9ca9a7
+ms.openlocfilehash: f43764acd13b0257481614fc79aebecac75542d7
 
 
 ---
@@ -50,21 +50,22 @@ La generación de informes en System Center Configuration Manager tiene dependen
 
 |Versión de SQL Server|Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.|  
 |------------------------|------------------------------|  
-|SQL Server 2008 SP2 con la actualización acumulativa 9 como mínimo<br /><br /> -   Estándar<br />-   Enterprise<br />-   Centro de datos|?|  
-|SQL Server 2008 SP3 con la actualización acumulativa 4 como mínimo<br /><br /> -   Estándar<br />-   Enterprise<br />-   Centro de datos|?|  
-|SQL Server 2008 R2 con SP1 y la actualización acumulativa 6 como mínimo<br /><br /> -   Estándar<br />-   Enterprise<br />-   Centro de datos|?|  
-|SQL Server 2008 R2 con SP2<br /><br /> -   Estándar<br />-   Enterprise<br />-   Centro de datos|?|  
+|SQL Server 2008 SP2 con la actualización acumulativa 9 como mínimo<br /><br /> -   Estándar<br />-   Enterprise<br />-   Centro de datos|Sí|  
+|SQL Server 2008 SP3 con la actualización acumulativa 4 como mínimo<br /><br /> -   Estándar<br />-   Enterprise<br />-   Centro de datos|Sí|  
+|SQL Server 2008 R2 con SP1 y la actualización acumulativa 6 como mínimo<br /><br /> -   Estándar<br />-   Enterprise<br />-   Centro de datos|Sí|  
+|SQL Server 2008 R2 con SP2<br /><br /> -   Estándar<br />-   Enterprise<br />-   Centro de datos|Sí|  
 |SQL Server Express 2008 R2 con SP1 y la actualización acumulativa 4 como mínimo|No compatible.|  
 |SQL Server Express 2008 R2 con SP2|No compatible.|  
-|SQL Server 2012 con la actualización acumulativa 2 como mínimo<br /><br /> -   Estándar<br />-   Enterprise|?|  
-|SQL Server 2012 con SP1 y ninguna actualización acumulativa mínima<br /><br /> -   Estándar<br />-   Enterprise|?|  
-|SQL Server 2014<br /><br /> -   Estándar<br />-   Enterprise|?|  
-
+|SQL Server 2012 con la actualización acumulativa 2 como mínimo<br /><br /> -   Estándar<br />-   Enterprise|Sí|  
+|SQL Server 2012 con SP1 y ninguna actualización acumulativa mínima<br /><br /> -   Estándar<br />-   Enterprise|Sí|  
+|SQL Server 2016<br /><br /> -   Estándar<br />-   Enterprise|Sí|
+|SQL Server 2016<br /><br /> -   Estándar<br />-   Enterprise|Sí|
+|SQL Server 2016 con SP1<br /><br /> -   Estándar<br />-   Enterprise|Sí|
 ## <a name="next-steps"></a>Pasos siguientes
 [Operaciones y mantenimiento de informes](operations-and-maintenance-for-reporting.md)
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

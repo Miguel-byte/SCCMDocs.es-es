@@ -2,7 +2,7 @@
 title: Supervisar contenido | Microsoft Docs
 description: Aprenda a supervisar contenido distribuido mediante la consola de Configuration Manager.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/4/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: 9a5d2c3a3c6bdca05b5b00fa4d746c437a56ef89
+ms.sourcegitcommit: 4d34a272a93100426cccd2308c5b3b0b0ae94a60
+ms.openlocfilehash: 60f30fd6477f1ee8755e50ceb9cc17d43ef8ea68
 
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>Supervisión del contenido que se ha distribuido con System Center Configuration Manager
@@ -156,12 +156,21 @@ A partir de la versión 1610, puede usar el panel **Orígenes de datos de client
 > [!TIP]  
 > Con la versión 1610, el panel de orígenes de datos de cliente y la caché del mismo nivel son funciones de la versión preliminar. Para habilitarlos, vea [Uso de características de la versión preliminar a partir de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
-En la consola, vaya a **Supervisión** > **Estado de cliente** > **Orígenes de datos de cliente**. Aquí puede seleccionar un período de tiempo que se aplicará al panel. A continuación, en la pantalla, puede seleccionar el grupo de límites o el paquete para el que desea ver información. Al ver la información, puede mantener el puntero sobre la superficie para ver más detalles sobre los distintos orígenes de contenido o directiva.  
+En la consola, vaya a **Supervisión** > **Estado de cliente** > **Orígenes de datos de cliente**. Aquí puede seleccionar un período de tiempo que se aplicará al panel. A continuación, en la pantalla, puede seleccionar el grupo de límites o el paquete para el que desea ver información. Al ver la información, puede mantener el puntero sobre la superficie para ver más detalles sobre los distintos orígenes de contenido o directiva.
+
+Detalles:  
+- **Orígenes de contenido de cliente**: muestra el origen desde el que los clientes obtuvieron el contenido.
+- **Puntos de distribución**: muestra el número de puntos de distribución que forman parte del grupo de límites seleccionado.
+- **Clientes que utilizan un punto de distribución**: del número de clientes que están en el grupo de límites seleccionado, muestra cuántos usaron un punto de distribución para obtener el contenido.
+- **Orígenes de almacenamiento en caché del mismo nivel**: para el grupo de límites seleccionado, muestra cuántos orígenes de almacenamiento caché del mismo nivel han informado del historial de descargas.
+- **Clientes que utilizan almacenamiento caché del mismo nivel**: del número de clientes que están en el grupo de límites seleccionado, muestra cuántos usaron un origen de almacenamiento caché del mismo nivel para obtener el contenido.
+
+
 
 También puede usar un nuevo informe, **Orígenes de datos de cliente - Resumen**, para ver un resumen de los orígenes de datos de cliente de cada grupo de límites.
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

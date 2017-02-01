@@ -2,7 +2,7 @@
 title: "Recopilación de datos de diagnóstico | Microsoft Docs"
 description: "Obtenga información sobre cómo System Center Configuration Manager recopila datos de uso y diagnóstico sobre sí mismo."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: f0a992139ad1bc516df2f6ea947509e3e4a77c54
+ms.sourcegitcommit: 24a233516058e645df2a43623855665b97b041b0
+ms.openlocfilehash: 9c0165212fe34f460be2ce870d0542b616f3bc4d
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: f0a992139ad1bc516df2f6ea947509e3e4a77c54
 
 Para recopilar los datos de uso y diagnóstico para System Center Configuration Manager, cada sitio primario ejecuta consultas de SQL Server con carácter semanal. En una jerarquía de varios sitio, los datos se replican en el sitio de administración central.  
 
-En el sitio de nivel superior de una jerarquía, el rol de sistema de sitio del punto de conexión de servicio envía esta información cuando busca actualizaciones. La forma en que se transfieren los datos depende del modo de punto de conexión de servicio:  
+En el sitio de nivel superior de una jerarquía, el rol de sistema de sitio del punto de conexión de servicio envía esta información cuando busca actualizaciones. El modo del punto de conexión de servicio determina cómo se transfieren los datos:  
 
 -   **En modo con conexión:** los datos de uso y diagnóstico se envían automáticamente una vez por semana, desde el punto de conexión de servicio al servicio en la nube.  
 
@@ -37,6 +37,6 @@ Para obtener más información, consulte [Acerca del punto de conexión de servi
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

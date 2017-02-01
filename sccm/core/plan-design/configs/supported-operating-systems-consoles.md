@@ -2,7 +2,7 @@
 title: Compatibilidad de la consola | Microsoft Docs
 description: "Obtenga información sobre qué sistemas operativos admite una consola de System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 1e00199e4c819bc4a12896db5d427efa986dc84e
+ms.sourcegitcommit: 4fdc8db6395b42468dd5f07012fa9767121960d6
+ms.openlocfilehash: 493fe98787591d44b2deb9a4474d38e54f4127e8
 
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-consoles"></a>Sistemas operativos compatibles con consolas de System Center Configuration Manager
@@ -47,6 +47,6 @@ ms.openlocfilehash: 1e00199e4c819bc4a12896db5d427efa986dc84e
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

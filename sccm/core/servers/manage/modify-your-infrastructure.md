@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: fa9881e06abd410438fe5985151309c45f337802
+ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
+ms.openlocfilehash: a5228c4984347be4b115bfa5563791fa2fb7319c
 
 
 ---
@@ -289,7 +289,7 @@ La cuenta que utiliza para realizar un restablecimiento de sitio debe tener los 
     -   **Sitio primario**: la cuenta que usa para ejecutar un restablecimiento de sitio en este sitio debe ser una cuenta de administrador local en el servidor de sitio primario y debe tener privilegios equivalentes a los del rol de seguridad de administración basada en roles **Administrador total** . Si el sitio primario está en una jerarquía con un sitio de administración central, esta cuenta también debe ser un administrador local en el servidor de sitio de administración central.  
 
 **Limitaciones para un restablecimiento del sitio**
-  - A partir de la versión 1602, no puede usar un restablecimiento del sitio para cambiar el paquete de idioma de servidor o cliente que instaló en los sitios siempre que la jerarquía esté configurada para admitir la [prueba de actualizaciones de cliente en una recopilación de preproducción](/sccm/core/clients/manage/upgrade/test-client-upgrades).
+  - A partir de la versión 1602, no puede usar un restablecimiento del sitio para cambiar el paquete de idioma de servidor o cliente que instaló en los sitios mientras la jerarquía esté configurada para admitir la [prueba de actualizaciones de cliente en una recopilación de preproducción](/sccm/core/clients/manage/upgrade/test-client-upgrades).
 
 #### <a name="to-perform-a-site-reset"></a>Para realizar un restablecimiento de sitio  
 
@@ -371,6 +371,6 @@ Para obtener más información acerca de los idiomas de cliente y servidor que s
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: Compatibilidad con los dominios de AD | Microsoft Docs
+title: Compatibilidad con los dominios de Active Directory | Microsoft Docs
 description: Obtenga los requisitos de pertenencia de un sistema de sitio de System Center Configuration Manager en un dominio de Active Directory.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,16 +17,16 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 2da3da29eb4dcd3886254c506bd29f38b3ef0ab5
+ms.sourcegitcommit: a3da133205506ba0463dd3207da5ceb5a5d1ab49
+ms.openlocfilehash: ea527a7767b33eaf495e78522364d8a7a47712ca
 
 
 ---
-# <a name="support-for-active-directory-domains-for-system-center-configuration-manager"></a>Compatibilidad con los dominios de Active Directory para System Center Configuration Manager
+# <a name="supported-active-directory-domains-for-system-center-configuration-manager"></a>Compatibilidad con los dominios de Active Directory para System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Todos los sistemas de sitio de System Center Configuration Manager deben ser miembros de un dominio de Windows Active Directory compatible. Los equipos cliente de Configuration Manager pueden ser miembros del dominio o miembros del grupo de trabajo.  
+Todos los sistemas de sitio de System Center Configuration Manager deben ser miembros de un dominio de Windows Server Active Directory compatible. Los equipos cliente de Configuration Manager pueden ser miembros del dominio o miembros del grupo de trabajo.  
 
  **Limitaciones y requisitos:**  
 
@@ -66,7 +66,7 @@ En la tabla siguiente se identifican los escenarios admitidos para un espacio de
 
  Para permitir que un equipo tenga acceso a controladores de dominio que están separados, debe cambiar el atributo de Active Directory de **msDS-AllowedDNSSuffixes** en el contenedor de objetos del dominio. Debe agregar los dos sufijos DNS al atributo.  
 
- Además, para asegurarse de que la lista de búsqueda de sufijos DNS contiene todos los espacios de nombres DNS que se implementan dentro de la organización, debe configurar la lista de búsqueda para cada equipo en el dominio que está separado. Incluya en la lista de espacios de nombres el sufijo DNS principal del controlador de dominio, el nombre de dominio DNS y los espacios de nombres adicionales para otros servidores con los que Configuration Manager puede interoperar. Puede usar la consola de Administración de directivas de grupo para configurar la **Lista de búsqueda de sufijos DNS** (Sistema de nombres de dominio).  
+ Además, para asegurarse de que la lista de búsqueda de sufijos DNS contiene todos los espacios de nombres DNS que se implementan dentro de la organización, debe configurar la lista de búsqueda para cada equipo en el dominio que está separado. Asegúrese de incluir lo siguiente en la lista de espacios de nombres: el sufijo DNS principal del controlador de dominio, el nombre de dominio DNS y los espacios de nombres adicionales para otros servidores con los que Configuration Manager es posible que interopere. Puede usar la consola de Administración de directivas de grupo para configurar la **Lista de búsqueda de sufijos DNS** (Sistema de nombres de dominio).  
 
 > [!IMPORTANT]  
 >  Al hacer referencia a un equipo en Configuration Manager, escriba el equipo con el sufijo DNS principal. Este sufijo debe coincidir con el nombre de dominio completo registrado como el atributo de **dnsHostName** en el dominio de Active Directory y el nombre de entidad de seguridad de servicio asociado con el sistema.  
@@ -74,14 +74,15 @@ En la tabla siguiente se identifican los escenarios admitidos para un espacio de
 ##  <a name="a-namebkmkslda-single-label-domains"></a><a name="bkmk_SLD"></a> Dominios de una sola etiqueta  
  Configuration Manager admite clientes y sistemas de sitio en un dominio de una sola etiqueta cuando se cumplen los criterios siguientes:  
 
--   El dominio de una sola etiqueta en los Servicios de dominio de Active Directory se debe configurar con un espacio de nombres DNS separado que tenga un dominio de nivel superior válido.  
+-   El dominio de una sola etiqueta en Active Directory Domain Services se debe configurar con un espacio de nombres DNS separado que tenga un dominio de nivel superior válido.  
 
-     **Por ejemplo:** el dominio de una sola etiqueta de Contoso está configurado para tener un espacio de nombres no contiguo en el DNS de contoso.com. Por tanto, al especificar el sufijo DNS en Configuration Manager para un equipo en el dominio Contoso, especifique Contoso.com y no Contoso.  
+     **Por ejemplo:** el dominio de una sola etiqueta de Contoso está configurado para tener un espacio de nombres no contiguo en el DNS de contoso.com. Por tanto, al especificar el sufijo DNS en Configuration Manager para un equipo en el dominio Contoso, especifique "Contoso.com" y no "Contoso".  
 
--   Las conexiones DCOM entre los servidores de sitio en el contexto del sistema deben ser correctas mediante el uso de la autenticación Kerberos.  
+-   Las conexiones de Modelo de objetos componentes distribuido (DCOM) entre los servidores de sitio en el contexto del sistema deben ser correctas mediante el uso de la autenticación Kerberos.  
+  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 
