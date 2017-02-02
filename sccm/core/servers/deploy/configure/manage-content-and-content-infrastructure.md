@@ -22,7 +22,7 @@ ms.openlocfilehash: 35247425252cb3724de2871d713f08469e72555a
 
 
 ---
-# <a name="manage-content-and-content-infrastructure-for-system-center-configuration-manager"></a>Manage content and content infrastructure for System Center Configuration Manager
+# <a name="manage-content-and-content-infrastructure-for-system-center-configuration-manager"></a>Administración del contenido y de la infraestructura de contenido para System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
