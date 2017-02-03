@@ -21,7 +21,7 @@ ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
 ms.openlocfilehash: ceeccab158cd23267ccd05cfbff82ef772f97fbc
 
 ---
-# <a name="hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune
+# <a name="hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>Administración híbrida de dispositivos móviles (MDM) con System Center Configuration Manager y Microsoft Intune
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
