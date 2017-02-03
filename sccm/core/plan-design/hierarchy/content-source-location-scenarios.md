@@ -2,7 +2,7 @@
 title: "Ubicación de origen de contenido | Microsoft Docs"
 description: "Conozca la configuración de System Center Configuration Manager que permite a los clientes buscar contenido en una red lenta."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,20 +16,20 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: b0f54daecfc3e958d3196f3f0b08606725d86c39
+ms.sourcegitcommit: 7f2fd3e550c7dc1b27996dc309b53f74e8c865e9
+ms.openlocfilehash: a823458dc3b891b1c32d1cb44a96e8cafd376ed5
 
 ---
 # <a name="content-source-location-scenarios-in-system-center-configuration-manager"></a>Escenarios de ubicación de orígenes de contenido en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
-Antes de la versión 1610, System Center Configuration Manager admite varias opciones que se combinan para definir cómo y dónde encuentran contenido los clientes cuando están en una red lenta. Las combinaciones posibles afectan a la ubicación de contenido que usan los clientes y a la posibilidad de usar correctamente una ubicación de reserva cuando no está disponible un origen de contenido preferido.  
+Antes de la versión 1610, System Center Configuration Manager admitía varias opciones que se combinaban para definir cómo y dónde encuentran contenido los clientes cuando están en una red lenta. Las combinaciones posibles afectan a la ubicación de contenido que usan los clientes y a la posibilidad de usar correctamente una ubicación de reserva cuando no está disponible un origen de contenido preferido.  
 
 > [!IMPORTANT]  
-> **Si los sitios ejecutan las versiones 1511, 1602 o 1606**, la información de este tema se aplica a la infraestructura. Consulte también [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606) (Grupos de límites para las versiones 1511, 1602 y 1606) para obtener información específica sobre los grupos de límites con estas versiones de Configuration Manager.
+> **Si los sitios ejecutan las versiones 1511, 1602 o 1606**, la información de este tema se aplica a la infraestructura. Vea también [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606) (Grupos de límites para las versiones 1511, 1602 y 1606) para obtener información específica sobre los grupos de límites con estas versiones de Configuration Manager.
 >
-> **Si los sitios ejecutan la versión 1610 o posterior**, use la información incluida en [Grupos de límites](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups) para comprender la forma en que los clientes encuentran puntos de distribución con contenido disponible.
+> **Si los sitios ejecutan la versión 1610 o posterior**, use la información incluida en [Definir los límites del sitio y los grupos de límites para System Center Configuration Manager](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups) para comprender la forma en que los clientes encuentran puntos de distribución con contenido disponible.
 
 
 
@@ -37,17 +37,17 @@ Antes de la versión 1610, System Center Configuration Manager admite varias opc
 
 **Las siguientes tres opciones definen el comportamiento cuando los clientes solicitan contenido:**
 
--  **Permitir ubicación de origen de reserva para contenido** (habilitado o no habilitado): se trata de una opción que se puede habilitar en la pestaña Grupos de límites de un punto de distribución.  Esto permite al cliente usar un punto de distribución configurado como ubicación de reserva cuando el contenido no está disponible en un punto de distribución preferido.  
+-  **Permitir ubicación de origen de reserva para contenido** (habilitado o no habilitado): se trata de una opción que se puede habilitar en la pestaña **Grupos de límites** de un punto de distribución. Esto permite al cliente usar un punto de distribución configurado como ubicación de reserva cuando el contenido no está disponible en un punto de distribución preferido.  
 
  - **Comportamiento de implementación de la velocidad de conexión de red**: cada implementación se configura con uno de los siguientes comportamientos que se usarán cuando la conexión al punto de distribución es lenta:  
 
     -   **Descargar contenido desde el punto de distribución y ejecutar localmente**  
 
-    -   **No descargar contenido**: esta opción solo se usa cuando un cliente emplea una ubicación de reserva para obtener contenido  
+    -   **No descargar contenido**: esta opción solo se usa cuando un cliente emplea una ubicación de reserva para obtener contenido.  
 
-    La velocidad de conexión para un punto de distribución está configurada en la pestaña Referencias del grupo de límites y es específica de ese grupo de límites.  
+    La velocidad de conexión para un punto de distribución está configurada en la pestaña **Referencias** del grupo de límites y es específica de ese grupo de límites.  
 
- -  **Distribución de paquetes a petición** (a los puntos de distribución preferidos): esta opción está habilitada cuando se selecciona la opción **Distribuir el contenido de este paquete en puntos de distribución preferidos** en la pestaña Configuración de distribución de las propiedades de un paquete o de las aplicaciones. Cuando se habilita, esta opción indica a Configuration Manager que copie automáticamente el contenido a un punto de distribución preferido que aún no tiene el contenido después de que un cliente solicita ese contenido desde ese punto de distribución.  
+ -  **Distribución de paquetes a petición** (a los puntos de distribución preferidos): esta opción está habilitada cuando se selecciona la opción **Distribuir el contenido de este paquete en puntos de distribución preferidos** en la pestaña **Configuración de distribución** de las propiedades de un paquete o de una aplicación. Cuando se habilita, esta opción indica a Configuration Manager que copie automáticamente el contenido a un punto de distribución preferido que aún no tiene el contenido después de que un cliente solicita ese contenido desde ese punto de distribución.  
 
 
  **Los siguientes requisitos se aplican a todos los escenarios:**
@@ -68,7 +68,7 @@ Antes de la versión 1610, System Center Configuration Manager admite varias opc
 -   **Comportamiento de implementación para una red lenta**: cualquier configuración  
 
 
-**Detalles:** (la configuración para distribución de paquetes a petición no es relevante en este escenario)  
+**Detalles:** (la configuración para distribución de paquetes a petición no es relevante en este escenario).  
 
 1.  El cliente envía una solicitud de contenido al punto de administración.  
 
@@ -86,7 +86,7 @@ Antes de la versión 1610, System Center Configuration Manager admite varias opc
 -   **Comportamiento de implementación para una red lenta**: no descargar contenido  
 
 
-**Detalles:** (la configuración para distribución de paquetes a petición no es relevante en este escenario)  
+**Detalles:** (la configuración para distribución de paquetes a petición no es relevante en este escenario).  
 
 1.  El cliente envía una solicitud de contenido al punto de administración. El cliente incluye una marca con la solicitud que indica que se permiten puntos de distribución de reserva.  
 
@@ -104,7 +104,7 @@ Antes de la versión 1610, System Center Configuration Manager admite varias opc
 -   **Comportamiento de implementación para una red lenta**: descargar e instalar contenido  
 
 
-**Detalles:** (la configuración para distribución de paquetes a petición no es relevante en este escenario)  
+**Detalles:** (la configuración para distribución de paquetes a petición no es relevante en este escenario).  
 
 1.  El cliente envía una solicitud de contenido al punto de administración. El cliente incluye una marca con la solicitud que indica que se permiten puntos de distribución de reserva.  
 
@@ -256,6 +256,6 @@ Antes de la versión 1610, System Center Configuration Manager admite varias opc
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

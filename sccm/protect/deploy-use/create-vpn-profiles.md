@@ -2,7 +2,7 @@
 title: "Cómo crear perfiles de VPN en System Center Configuration Manager | Microsoft Docs"
 description: Aprenda a crear perfiles de VPN en System Center Configuration Manager.
 ms.custom: 
-ms.date: 11/18/2016
+ms.date: 12/28/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ caps.handback.revision: 0
 ms.author: nbigman
 ms.manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: f674aa5502e4b3b45d0eda119419863892d72cff
+ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
+ms.openlocfilehash: 73b8d28deb6e2c57c92ead2f0fee4d7a2d92f5d4
 
 
 ---
@@ -26,86 +26,69 @@ ms.openlocfilehash: f674aa5502e4b3b45d0eda119419863892d72cff
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
+Los tipos de conexión disponibles para las diferentes plataformas de dispositivos se describen en [Perfiles de VPN en System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md).  
 
-> [!NOTE]  
->
-> - Para obtener información sobre los tipos de conexión disponibles para las diferentes plataformas de dispositivos, consulte [VPN profiles in System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md) (Perfiles de VPN en System Center Configuration Manager).  
-> - En el caso de conexiones VPN de terceros, distribuya la aplicación VPN antes de implementar el perfil de VPN. Si no implementa la aplicación, se les pedirá a los usuarios que lo hagan cuando intenten conectarse a la VPN. Para aprender a implementar aplicaciones, consulte [Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md) (Cómo implementar aplicaciones con System Center Configuration Manager).
+En el caso de conexiones VPN de terceros, distribuya la aplicación VPN antes de implementar el perfil de VPN. Si no implementa la aplicación, se les pedirá a los usuarios que lo hagan cuando intenten conectarse a la VPN. Para aprender a implementar aplicaciones, consulte [Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md) (Cómo implementar aplicaciones con System Center Configuration Manager).
 
-### <a name="start-the-create-vpn-profile-wizard"></a>Iniciar el Asistente para crear perfil de VPN  
+### <a name="create-a-vpn-profile"></a>Crear un perfil de VPN   
 
-1.  En la consola de System Center Configuration Manager, haga clic en **Activos y compatibilidad**.  
+1.  En la consola de Configuration Manager, pulse **Activos y compatibilidad** > **Configuración de cumplimiento** > **Acceso a los recursos de la compañía** > **Perfiles de VPN**.  
 
-2.  En el área de trabajo **Activos y compatibilidad** de la consola de System Center Configuration Manager, expanda **Configuración de cumplimiento**, expanda **Acceso a los recursos de la compañía** y, después, haga clic en **Perfiles de VPN**.  
+3.  En la pestaña **Inicio**, en el grupo **Crear**, pulse **Crear perfil de VPN**.  
 
-3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear perfil de VPN**.  
 
-### <a name="provide-general-information-about-the-vpn-profile"></a>Proporcionar información general sobre el perfil de VPN  
+1.  Complete la página **General**. y tenga en cuenta lo siguiente:  
 
-1.  En la página **General** del **Asistente para crear perfil de VPN**, especifique la información siguiente:  
+    - No use los caracteres \\/:*?<>&#124;, o el carácter de espacio en el nombre de perfil de VPN. Estos caracteres no se admiten en el perfil de VPN de Windows Server.  
 
-    -   **Nombre** : escriba un nombre único para el perfil de VPN (hasta 256 caracteres).  
+     -   Seleccione **Importar un elemento de perfil de VPN existente desde un archivo** para importar información de perfil de VPN que se ha exportado a un archivo XML (solo Windows 8.1 y Windows RT).  
 
-        > [!IMPORTANT]  
-        >  No use los caracteres \\/:*?<>&#124; ni el carácter espacio en el nombre del perfil de VPN, ya que no son compatibles con el perfil de VPN de Windows Server.  
+1.  En la página **Conexión**, especifique:  
 
-    -   **Descripción**: escriba una descripción para que le resulte más fácil encontrar el perfil en la consola de System Center Configuration Manager (hasta 256 caracteres).  
+    -   **Tipo de conexión**: elija el tipo de conexión VPN. Puede elegir entre los tipos de conexión de la tabla siguiente.  
 
-    -   **Import an existing VPN profile item from a file** (Importar un perfil de VPN existente de un archivo): seleccione esta opción para visualizar la página **Importar perfil de VPN**. En esta página puede importar información de perfil de VPN de los sistemas operativos que se ha exportado previamente a un archivo XML (solo sistemas operativos Windows 8.1 y Windows RT).  
-
-### <a name="provide-connection-information-for-the-vpn-profile"></a>Proporcionar información de conexión del perfil de VPN  
-
-1.  En la página **Conexión** del asistente, especifique la información siguiente:  
-
-    -   **tipo de conexión:** en la lista desplegable, seleccione el tipo de conexión de la conexión VPN. Puede elegir entre los tipos de conexión de la tabla siguiente, que muestra las plataformas compatibles.  
-
-        > [!IMPORTANT]  
-        >  Para poder usar los perfiles de VPN implementados en un dispositivo, debe instalar las aplicaciones VPN de terceros necesarias. Puede usar la información del tema [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md) (Cómo crear aplicaciones con System Center Configuration Manager) como ayuda para implementar la aplicación con System Center Configuration Manager.  
-
-    -   **Lista de servidores:** haga clic en **Agregar** para agregar un nuevo servidor que se usará para la conexión VPN. Según el tipo de conexión, puede agregar uno o varios servidores VPN y especificar el servidor predeterminado.  
+    -   **Lista de servidores**: agregue un nuevo servidor que se usará para la conexión VPN. Según el tipo de conexión, puede agregar uno o más servidores VPN y especificar el servidor predeterminado.  
 
         > [!NOTE]  
         >  Los dispositivos que ejecutan iOS no admiten el uso de varios servidores VPN. Si configura varios servidores VPN y, a continuación, implementa el perfil de VPN en un dispositivo iOS, solo se utilizará el servidor predeterminado.  
 
-     Es posible que se muestren más opciones en la tabla siguiente en función del tipo de conexión seleccionado. Consulte la documentación del servidor VPN para más información.  
+     En esta tabla se proporcionan opciones para los tipos de conexión. Consulte la documentación del servidor VPN para más información.  
 
     |Opción|Más información|Tipo de conexión|  
     |------------|----------------------|---------------------|  
-    |**Dominio Kerberos**|Especifique el nombre de dominio de autenticación que quiere usar. Un dominio de autenticación es una agrupación de recursos de autenticación usada por el tipo de conexión Pulse Secure.|Pulse Secure|  
-    |**Rol**|Especifique el nombre del rol de usuario que tiene acceso a esta conexión.|Pulse Secure|  
-    |**Dominio o grupo de inicio de sesión**|Especifique el nombre del grupo o dominio de inicio de sesión al que quiere conectarse.|Dell SonicWALL Mobile Connect|  
-    |**Huella digital**|Especifique una cadena, por ejemplo "Código de huella digital de Contoso" que se utilizará para comprobar que se puede confiar en el servidor VPN.<br /><br /> Una huella digital se puede:<br /><br /> - Enviar al cliente para que sepa que puede confiar en cualquier servidor que presente esa misma huella digital al conectarse.<br /><br /> - Si el dispositivo todavía no tiene la huella digital, pedirá al usuario que confíe en el servidor VPN al que se está conectando mientras muestra la huella digital (el usuario comprueba la huella digital manualmente y hace clic en Confiar para conectar).|VPN móvil de punto de comprobación|  
+    |**Dominio Kerberos**|El dominio kerberos de autenticación que quiere usar. Un dominio de autenticación es una agrupación de recursos de autenticación usada por el tipo de conexión Pulse Secure.|Pulse Secure|  
+    |**Rol**|El rol de usuario que tiene acceso a esta conexión.|Pulse Secure|  
+    |**Dominio o grupo de inicio de sesión**|El nombre del grupo o dominio de inicio de sesión al que quiere conectarse.|Dell SonicWALL Mobile Connect|  
+    |**Huella digital**|Una cadena, por ejemplo "Código de huella digital de Contoso", que se usará para comprobar que se puede confiar en el servidor VPN.<br /><br /> Una huella digital se puede:<br /><br /> - Enviar al cliente para que sepa que puede confiar en cualquier servidor que presente esa misma huella digital al conectarse.<br /><br /> - Si el dispositivo todavía no tiene la huella digital, pedirá al usuario que confíe en el servidor VPN al que se está conectando mientras muestra la huella digital (el usuario comprueba la huella digital manualmente y pulsa **Confiar** para conectar).|VPN móvil de punto de comprobación|  
     |**Enviar todo el tráfico de red a través de la conexión VPN**|Si no se selecciona esta opción, puede especificar rutas adicionales para la conexión (para los tipos de conexión **Microsoft SSL [SSTP]**, **Microsoft Automatic**, **IKEv2**, **PPTP** y **L2TP** ), lo que se conoce como túnel dividido o VPN.<br /><br /> Solo las conexiones con la red de la empresa se envían a través de un túnel VPN. El túnel de VPN no se utiliza al conectarse a recursos de Internet.|Todos|  
-    |**Sufijo DNS específico de la conexión**|Opcionalmente, especifique el sufijo del sistema de nombres de dominio (DNS) de la conexión.|- <br />                            Microsoft SSL [SSTP]<br /><br /> - Microsoft Automatic<br /><br /> - <br />                            IKEv2<br /><br /> - <br />                            PPTP<br /><br /> - <br />                            L2TP|  
-    |**Omitir VPN al conectarse a la red Wi-Fi de empresa**|Especifica que la conexión VPN no se utilizará cuando el dispositivo se conecte a la red Wi-Fi de la empresa.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - VPN móvil de punto de comprobación<br /><br /> - Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - IKEv2<br /><br /> - L2TP|  
-    |**Omitir VPN al conectarse a la red Wi-Fi doméstica**|Especifica que la conexión VPN no se utilizará cuando el dispositivo se conecte a la red Wi-Fi doméstica.|Todos|  
-    |**VPN por aplicación (iOS 7 y versiones posteriores, Mac OS X 10.9 y versiones posteriores)**|Seleccione esta opción si quiere asociar esta conexión VPN con una aplicación iOS para que la conexión se abra cuando se ejecute la aplicación. Puede asociar el perfil de VPN con una aplicación al implementarla.|- <br />                        Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - VPN móvil de punto de comprobación|  
-    |**XML personalizado (opcional)**|Permite especificar los comandos XML personalizados que configuran la conexión VPN.<br /><br /> Ejemplos:<br /><br /> Para **Pulse Secure**:<br /><br /> **<pulse-schema><isSingleSignOnCredential\>true</isSingleSignOnCredential\></pulse-schema>**<br /><br /> Para **CheckPoint Mobile VPN**:<br /><br /> **&lt;CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3" /\>**<br /><br /> Para **Dell SonicWALL Mobile Connect**:<br /><br /> **<MobileConnect\><Compression\>false</Compression\><debugLogging\>True</debugLogging\><packetCapture\>False</packetCapture\></MobileConnect\>**<br /><br /> Para **F5 Edge Client**:<br /><br /> **&lt;f5-vpn-conf&gt;&lt;single-sign-on-credential /&gt;&lt;/f5-vpn-conf&gt;**<br /><br /> Consulte la documentación de VPN de cada fabricante para más información sobre cómo escribir comandos XML personalizados.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - VPN móvil de punto de comprobación|  
+    |**Sufijo DNS específico de la conexión**|El sufijo del sistema de nombres de dominio (DNS) específico de la conexión para esta.|- <br />                            Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - <br />                            IKEv2<br /><br /> - <br />                            PPTP<br /><br /> - <br />                            L2TP|  
+    |**Omitir VPN al conectarse a la red Wi-Fi de empresa**|La conexión VPN no se usará cuando el dispositivo se conecte a la red Wi-Fi de la empresa.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - VPN móvil de punto de comprobación<br /><br /> - Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - IKEv2<br /><br /> - L2TP|  
+    |**Omitir VPN al conectarse a la red Wi-Fi doméstica**|La conexión VPN no se usará cuando el dispositivo se conecte a una red Wi-Fi doméstica.|Todos|  
+    |**VPN por aplicación (iOS 7 y versiones posteriores, Mac OS X 10.9 y versiones posteriores)**|Asocie esta conexión VPN con una aplicación iOS para que la conexión se abra cuando se ejecute la aplicación. Puede asociar el perfil de VPN con una aplicación al implementarla.|- <br />                        Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - VPN móvil de punto de comprobación|  
+    |**XML personalizado (opcional)**|Especifique los comandos XML personalizados que configuran la conexión VPN.<br /><br /> Ejemplos:<br /><br /> Para **Pulse Secure**:<br /><br /> **<pulse-schema><isSingleSignOnCredential\>true</isSingleSignOnCredential\></pulse-schema>**<br /><br /> Para **CheckPoint Mobile VPN**:<br /><br /> **&lt;CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3" /\>**<br /><br /> Para **Dell SonicWALL Mobile Connect**:<br /><br /> **<MobileConnect\><Compression\>false</Compression\><debugLogging\>True</debugLogging\><packetCapture\>False</packetCapture\></MobileConnect\>**<br /><br /> Para **F5 Edge Client**:<br /><br /> **&lt;f5-vpn-conf&gt;&lt;single-sign-on-credential /&gt;&lt;/f5-vpn-conf&gt;**<br /><br /> Consulte la documentación de VPN de cada fabricante para más información sobre cómo escribir comandos XML personalizados.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - VPN móvil de punto de comprobación|  
 
-####   <a name="windows-10-vpn-features-available-when-using-configuration-manager-with-intune"></a>Características de VPN de Windows 10 disponibles cuando se usa Configuration Manager con Intune  
-
-
-> [!NOTE]  
-> El nombre de un perfil de VPN que usa las características de VPN de Windows 10 no puede estar en formato Unicode ni incluir caracteres especiales.
+    ###   <a name="windows-10-vpn-features-available-when-using-configuration-manager-with-intune"></a>Características de VPN de Windows 10 disponibles cuando se usa Configuration Manager con Intune  
 
 
-|Opción|Más información|Tipo de conexión|  
-|------------|----------------------|---------------------|  
-|**Omitir VPN al conectarse a la red Wi-Fi de empresa**|Especifica que la conexión VPN no se utilizará cuando el dispositivo se conecte a la red Wi-Fi de la empresa. Escriba el nombre de red de confianza, que se utilizará para determinar si el dispositivo está conectado a la red de la empresa.|Todos|  
-|**Reglas de tráfico de red**|Defina qué protocolos, puertos locales y remotos e intervalos de direcciones se habilitarán para la conexión VPN.<br /><br /> **Nota:** Si no se crea ninguna regla de tráfico de red, se habilitan todos los protocolos, puertos e intervalos de direcciones. Una vez creada una regla, la conexión VPN solo usará los protocolos, puertos e intervalos de direcciones que especifique en esa regla o en reglas adicionales.|Todos|  
-|**Rutas**|Rutas que usará la conexión VPN. Tenga en cuenta que la creación de más de 60 rutas puede producir un error en la directiva. |Todos|  
-|**Servidores DNS**|Qué servidores DNS usa la conexión VPN una vez establecida la conexión.|Todos|  
-|**Aplicaciones que se conectan automáticamente a la VPN**|Puede agregar aplicaciones o importar una lista de aplicaciones que usarán automáticamente la conexión VPN. El tipo de aplicación determinará el identificador de la aplicación. Para una aplicación de escritorio, proporcione la ruta del archivo de la aplicación. Para una aplicación universal, proporcione el nombre de familia de paquete (PFN). Para obtener información sobre cómo buscar el PFN de una aplicación, consulte [Find a package family name for per-app VPN](../../protect/deploy-use/find-a-pfn-for-per-app-vpn.md) (Buscar un nombre de familia de paquete para VPN por aplicación). |Todos|
-
-> [!IMPORTANT]
-> Se recomienda que proteja todas las listas de aplicaciones asociadas que se compilan para su uso en la configuración de VPN por aplicación. Si un usuario no autorizado modifica la lista y usted la importa en la lista de aplicaciones de VPN por aplicación, podría autorizar el acceso a VPN a aplicaciones que no deberían tener acceso. Una forma de proteger las listas de aplicaciones consiste en usar una lista de control de acceso (ACL).
+    > [!NOTE]  
+    > El nombre de un perfil de VPN que usa las características de VPN de Windows 10 no puede estar en formato Unicode ni incluir caracteres especiales.
 
 
-### <a name="configure-the-authentication-method-for-the-vpn-profile"></a>Configurar el método de autenticación del perfil de VPN  
+    |Opción|Más información|Tipo de conexión|  
+    |------------|----------------------|---------------------|  
+    |**Omitir VPN al conectarse a la red Wi-Fi de empresa**|La conexión VPN no se usará cuando el dispositivo se conecte a la red Wi-Fi de la empresa. Escriba el nombre de red de confianza que se ha usado para determinar si el dispositivo está conectado a la red de la empresa.|Todos|  
+    |**Reglas de tráfico de red**|Defina qué protocolos, puertos locales y remotos e intervalos de direcciones se habilitarán para la conexión VPN.<br /><br /> **Nota:** Si no se crea ninguna regla de tráfico de red, se habilitan todos los protocolos, puertos e intervalos de direcciones. Una vez creada una regla, la conexión VPN solo usará los protocolos, puertos e intervalos de direcciones que especifique en esa regla o en reglas adicionales.|Todos|  
+    |**Rutas**|Rutas que usará la conexión VPN. Tenga en cuenta que la creación de más de 60 rutas puede producir un error en la directiva. |Todos|  
+    |**Servidores DNS**|Qué servidores DNS usa la conexión VPN una vez establecida la conexión.|Todos|  
+    |**Aplicaciones que se conectan automáticamente a la VPN**|Puede agregar aplicaciones o importar una lista de aplicaciones que usarán automáticamente la conexión VPN. El tipo de aplicación determinará el identificador de la aplicación. Para una aplicación de escritorio, proporcione la ruta del archivo de la aplicación. Para una aplicación universal, proporcione el nombre de familia de paquete (PFN). Para obtener información sobre cómo buscar el PFN de una aplicación, consulte [Find a package family name for per-app VPN](../../protect/deploy-use/find-a-pfn-for-per-app-vpn.md) (Buscar un nombre de familia de paquete para VPN por aplicación). |Todos|
 
-1.  En la página **Método de autenticación** del asistente, especifique la información siguiente:  
+    > [!IMPORTANT]
+    > Se recomienda que proteja todas las listas de aplicaciones asociadas que se compilan para su uso en la configuración de VPN por aplicación. Si un usuario no autorizado modifica la lista y usted la importa en la lista de aplicaciones de VPN por aplicación, podría autorizar el acceso a VPN a aplicaciones que no deberían tener acceso. Una forma de proteger las listas de aplicaciones consiste en usar una lista de control de acceso (ACL).
 
-    -   **Método de autenticación:** en la lista desplegable, seleccione el método de autenticación que la conexión VPN usará. Los elementos de la lista desplegable podrían variar en función del tipo de conexión seleccionado previamente. Los métodos de autenticación disponibles y los tipos de conexión admitidos se indican en la tabla siguiente.  
+
+1.  En la página **Método de autenticación** del asistente, especifique:  
+
+    -   **Método de autenticación:** seleccione el método de autenticación que usará la conexión VPN. Métodos disponibles dependiendo del tipo de conexión como se muestra en esta tabla.  
 
         |Método de autenticación|Tipos de conexión admitidos|  
         |---------------------------|--------------------------------|  
@@ -121,9 +104,9 @@ ms.openlocfilehash: f674aa5502e4b3b45d0eda119419863892d72cff
 
          En función de las opciones que seleccione, se le podría solicitar que especifique más información, como la siguiente:  
 
-        -   **Recordar las credenciales de usuario en cada inicio de sesión**: Seleccione esta opción para asegurarse de que se recuerdan las credenciales de usuario para que el usuario no tenga que escribirlas cada vez que se establezca una conexión.  
+        -   **Recordar las credenciales de usuario en cada inicio de sesión**: las credenciales de usuario se recuerdan, de manera que el usuario no tiene que escribirlas cada vez que se conecte.  
 
-        -   **Seleccionar un certificado de cliente para la autenticación de cliente** : seleccione el certificado SCEP de cliente que creó previamente y que se usará para autenticar la conexión VPN. Para obtener más información sobre cómo usar perfiles de certificado en System Center Configuration Manager, consulte [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md) (Perfiles de certificado en System Center Configuration Manager).  
+        -   **Seleccionar un certificado de cliente para la autenticación de cliente**: seleccione el [certificado SCEP](introduction-to-certificate-profiles.md) de cliente que ha creado previamente y que se usará para autenticar la conexión VPN.   
 
             > [!NOTE]  
             >  Para dispositivos iOS, el perfil SCEP que seleccione se incrustará en el perfil de VPN. Para otras plataformas, se agrega una regla de aplicabilidad para garantizar que el perfil de VPN no se instala si el certificado no está presente o no es conforme.  
@@ -144,40 +127,33 @@ ms.openlocfilehash: f674aa5502e4b3b45d0eda119419863892d72cff
 
         > [!NOTE]  
         >
-        >Para algunos métodos de autenticación, puede hacer clic en **Configurar** para abrir el cuadro de diálogo de propiedades de Windows (si la versión de Windows en la que ejecuta la consola de System Center Configuration Manager es compatible con este método de autenticación), donde puede configurar las propiedades del método de autenticación.  
-
-### <a name="configure-proxy-settings-for-the-vpn-profile"></a>Establecer la configuración de proxy del perfil de VPN  
-
-1.  En la página **Configuración de proxy** del **Asistente para crear perfil de VPN**, active la casilla **Configurar configuración de proxy para este perfil de VPN** si su conexión VPN usa un servidor proxy.  
-
-2.  Especifique los detalles sobre el servidor proxy y su configuración. Para obtener más información, consulte la documentación de Windows Server.  
-
-> [!NOTE]  
->  En los equipos Windows 8.1, el perfil de VPN no mostrará la información de proxy hasta que se conecte a la VPN con ese equipo.  
+        >Para algunos métodos de autenticación, puede hacer clic en **Configurar** para abrir el cuadro de diálogo de propiedades de Windows (si la versión de Windows en la que ejecuta la consola de Configuration Manager es compatible con este método de autenticación), donde puede configurar las propiedades del método de autenticación.  
 
 
-### <a name="configure-further-dns-settings-if-required"></a>Configurar opciones de DNS adicionales (si es necesario)  
- En la página **Configurar una conexión VPN automática** del asistente, puede configurar las opciones siguientes:  
+1.  En la página **Configuración de proxy** del **Asistente para crear perfil de VPN**, active la casilla **Configurar configuración de proxy para este perfil de VPN** si su conexión VPN usa un servidor proxy. Después, proporcione la información del servidor proxy. Para obtener más información, consulte la documentación de Windows Server.  
 
--   **Habilitar VPN a petición**: seleccione esta opción si quiere configurar opciones de DNS adicionales en esta página del asistente para dispositivos Windows Phone 8.1.
-
-> [!Note]  
-> Esta configuración solo se aplica a dispositivos Windows Phone 8.1 y solo se debe habilitar en los perfiles VPN que se van a implementar en dispositivos Windows Phone 8.1.
+    > [!NOTE]  
+    >  En los equipos Windows 8.1, el perfil de VPN no mostrará la información de proxy hasta que se conecte a la VPN con ese equipo.  
 
 
--   Lista de sufijos DNS (solo para dispositivos Windows Phone 8.1): configura los dominios que establecerán una conexión VPN. Para cada dominio que especifique, debe agregar el sufijo DNS, la dirección del servidor DNS y una de las siguientes acciones a petición:  
+2. Configurar opciones de DNS adicionales (si es necesario)  
+ En la página **Configurar una conexión VPN automática**, puede configurar las opciones siguientes:  
 
-    -   **No establecer nunca**: no se abre nunca una conexión VPN.  
+    -   **Habilitar VPN a petición** Use esta opción si quiere configurar opciones de DNS adicionales para dispositivos Windows Phone 8.1. Esta configuración solo se aplica a dispositivos Windows Phone 8.1 y solo se debe habilitar en los perfiles VPN que se van a implementar en dispositivos Windows Phone 8.1.
 
-    -   **Establecer si es necesario**: solo se abre una conexión VPN si el dispositivo necesita conectarse a recursos.  
+    -   Lista de sufijos DNS (solo dispositivos Windows Phone 8.1): configura los dominios que establecerán una conexión VPN. Para cada dominio que especifique, debe agregar el sufijo DNS, la dirección del servidor DNS y una de las siguientes acciones a petición:  
 
-    -   **Establecer siempre**: siempre se abre la conexión VPN.  
+        -   **No establecer nunca**: no se abre nunca una conexión VPN.  
 
--   **Combinar**: copia todos los sufijos DNS que configuró en la **Lista de redes de confianza**.  
+        -   **Establecer si es necesario**: solo se abre una conexión VPN si el dispositivo necesita conectarse a recursos.  
 
--   **Lista de redes de confianza** (solo para dispositivos Windows Phone 8.1): especifique un sufijo DNS en cada línea. Si el dispositivo se encuentra en una red de confianza, no se abrirá la conexión VPN.  
+        -   **Establecer siempre**: siempre se abre la conexión VPN.  
 
--   **Lista de búsqueda de sufijos** (solo para dispositivos Windows Phone 8.1): especifique un sufijo DNS en cada línea. Al conectarse a un sitio web mediante un nombre corto, se buscará cada sufijo DNS que especifique.  
+    -   **Combinar**: copia todos los sufijos DNS que configuró en la **Lista de redes de confianza**.  
+
+    -   **Lista de redes de confianza** (solo dispositivos Windows Phone 8.1): especifique un sufijo DNS en cada línea. Si el dispositivo se encuentra en una red de confianza, no se abrirá la conexión VPN.  
+
+    -   **Lista de búsqueda de sufijos** (solo dispositivos Windows Phone 8.1): especifique un sufijo DNS en cada línea. Al conectarse a un sitio web mediante un nombre corto, se buscará cada sufijo DNS.  
 
      Por ejemplo, especifica los sufijos DNS **domain1.contoso.com** y **domain2.contoso.com** y, después, visita la dirección URL **http://mywebsite**. Se buscarán las siguientes direcciones:  
 
@@ -185,21 +161,17 @@ ms.openlocfilehash: f674aa5502e4b3b45d0eda119419863892d72cff
 
     -   **http://mywebsite.domain2.contoso.com**  
 
-> [!NOTE]  
->  Solo para dispositivos Windows Phone 8.1  
->   
->  Si se selecciona la opción **Enviar todo el tráfico de red a través de la conexión VPN** y la conexión VPN usa el túnel completo, la conexión VPN se abrirá automáticamente para el primer perfil aprovisionado en el dispositivo. Si desea que otro perfil abra automáticamente una conexión, debe convertirlo en el perfil predeterminado del dispositivo.  
->   
->  Si no se selecciona la opción **Enviar todo el tráfico de red a través de la conexión VPN** y la conexión VPN usa el túnel dividido, puede abrirse automáticamente una conexión VPN si se configuran las rutas o un sufijo DNS específico de la conexión.  
+    > [!NOTE]  
+    >  Solo para dispositivos Windows Phone 8.1  
+    >   
+    >  Si se selecciona la opción **Enviar todo el tráfico de red a través de la conexión VPN** y la conexión VPN usa el túnel completo, la conexión VPN se abrirá automáticamente para el primer perfil aprovisionado en el dispositivo. Si desea que otro perfil abra automáticamente una conexión, debe convertirlo en el perfil predeterminado del dispositivo.  
+    >   
+    >  Si no se selecciona la opción **Enviar todo el tráfico de red a través de la conexión VPN** y la conexión VPN usa el túnel dividido, puede abrirse automáticamente una conexión VPN si se configuran las rutas o un sufijo DNS específico de la conexión.  
 
 
-### <a name="configure-supported-platforms-for-the-vpn-profile"></a>Configurar plataformas admitidas del perfil de VPN  
- Las plataformas admitidas son los sistemas operativos en los que se instalará el perfil de VPN.  
+1. En la página **Plataformas admitidas** del **Asistente para crear perfil de VPN**, seleccione los sistemas operativos en los que se instalará el perfil de VPN o haga clic en **Seleccionar todo** para instalar el perfil de VPN en todos los sistemas operativos disponibles.  
 
-En la página **Plataformas admitidas** del **Asistente para crear perfil de VPN**, seleccione los sistemas operativos en los que se instalará el perfil de VPN o haga clic en **Seleccionar todo** para instalar el perfil de VPN en todos los sistemas operativos disponibles.  
-
-### <a name="complete-the-wizard"></a>Completar el asistente  
- En la página **Resumen** del asistente, revise las acciones que se realizarán y, después, elija **Finalizar**. El nuevo perfil de VPN se muestra en el nodo **Perfiles de VPN** en el área de trabajo **Activos y compatibilidad** .  
+2. Complete el asistente. El nuevo perfil de VPN se muestra en el nodo **Perfiles de VPN** en el área de trabajo **Activos y compatibilidad** .  
 
 ### <a name="next-steps"></a>Pasos siguientes
 
@@ -209,6 +181,6 @@ En la página **Plataformas admitidas** del **Asistente para crear perfil de VPN
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

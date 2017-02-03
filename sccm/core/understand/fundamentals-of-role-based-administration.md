@@ -2,7 +2,7 @@
 title: "Aspectos básicos de la administración basada en roles | Microsoft Docs"
 description: "Use la administración basada en roles para controlar el acceso administrativo a Configuration Manager y a los objetos que administra."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6cf3ac76ea3fb9c9b093ed4927255102930bbe26
-ms.openlocfilehash: 5bdfe43c86d5b700c50b4d55d2f3bbb15bb504e9
+ms.sourcegitcommit: 8e0090bd671e2c566447579974a38474c2f898ea
+ms.openlocfilehash: 1ca51e256ea2f406f393e4b0d3634ea0f6f637bc
 
 
 ---
@@ -25,19 +25,19 @@ ms.openlocfilehash: 5bdfe43c86d5b700c50b4d55d2f3bbb15bb504e9
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Con System Center Configuration Manager se usa la administración basada en roles para proteger el acceso para administrar Configuration Manager, y los objetos que se administran como recopilaciones, implementaciones y sitios.   Una vez que comprenda los conceptos presentados en este tema, podrá [Configure role-based administration for System Center Configuration Manager (Configurar la administración basada en roles para System Center Configuration Manager)](../../core/servers/deploy/configure/configure-role-based-administration.md).  
+Con System Center Configuration Manager, usa la administración basada en roles para proteger el acceso que se necesita para administrar Configuration Manager. Además, protege el acceso a los objetos que administra, como las recopilaciones, implementaciones y sitios. Una vez que comprenda los conceptos presentados en este tema, podrá [Configure role-based administration for System Center Configuration Manager (Configurar la administración basada en roles para System Center Configuration Manager)](../../core/servers/deploy/configure/configure-role-based-administration.md).  
 
  El modelo de administración basada en roles define y administra de manera centralizada la configuración de acceso de seguridad de la totalidad de la jerarquía para todos los sitios y sus configuraciones, mediante lo siguiente:  
 
--   **Roles de seguridad** : se asignan a los usuarios administrativos para proporcionar a dichos usuarios (o grupos de usuarios) permisos de diferentes objetos de Configuration Manager, tales como los permisos para crear o cambiar la configuración de cliente.  
+-   Los *roles de seguridad* se asignan a los usuarios administrativos para proporcionar a dichos usuarios (o grupos de usuarios) permisos de diferentes objetos de Configuration Manager. Por ejemplo, permiso para crear o cambiar la configuración del cliente.  
 
--   **Ámbitos de seguridad** : agrupan instancias específicas de objetos que un usuario administrativo se encarga de administrar, por ejemplo, una aplicación que instala Microsoft Office 2010.  
+-   Los *ámbitos de seguridad* se usan para agrupar instancias específicas de objetos que un usuario administrativo se encarga de administrar, como una aplicación que instala Microsoft Office 2010.  
 
--   **Recopilaciones** : grupos de recursos de usuarios y de dispositivos que el usuario administrativo puede administrar.  
+-   Las *recopilaciones* se usan para especificar grupos de recursos de usuarios y de dispositivos que el usuario administrativo puede administrar.  
 
- La combinación de roles de seguridad, ámbitos de seguridad y recopilaciones permite segregar las asignaciones administrativas que satisfacen las necesidades de la organización y, juntos, definen el ámbito administrativo de un usuario (lo que el usuario puede ver y administrar en la implementación de Configuration Manager).  
+ Con la combinación de roles de seguridad, ámbitos de seguridad y recopilaciones, proporciona las asignaciones administrativas que cumplen los requisitos de su organización. Si se usan conjuntamente, definen el ámbito administrativo de un usuario, que es lo que el usuario puede ver y administrar en su implementación de Configuration Manager.  
 
-**La administración basada en roles proporciona las siguientes ventajas:**  
+## <a name="benefits-of-role-based-administration"></a>Ventajas de la administración basada en roles  
 
 -   Los sitios no se usan como límites administrativos.  
 
@@ -45,13 +45,13 @@ Con System Center Configuration Manager se usa la administración basada en role
 
 -   Todas las asignaciones de seguridad se replican y están disponibles en toda la jerarquía.  
 
--   Hay varios roles de seguridad integrados para asignar las tareas administrativas habituales y puede crear sus propios roles de seguridad personalizados para satisfacer sus requisitos empresariales.  
+-   Existen roles de seguridad integrados que se usan para asignar las tareas de administración habituales. Cree sus propios roles de seguridad personalizados para satisfacer sus requisitos empresariales específicos.  
 
--   Los usuarios administrativos solo ven los objetos para los que tienen permisos de administración.  
+-   Los usuarios administrativos solo ven los objetos que tienen permisos para administrar.  
 
 -   Puede auditar las acciones de seguridad administrativa.  
 
-Al diseñar e implementar la seguridad administrativa de Configuration Manager, se usa lo siguiente para crear un **ámbito administrativo** para un usuario administrativo:  
+Al diseñar e implementar la seguridad administrativa de Configuration Manager, se usa lo siguiente para crear un *ámbito administrativo* para un usuario administrativo:  
 
 -   [Roles de seguridad](#bkmk_Planroles)  
 
@@ -59,7 +59,8 @@ Al diseñar e implementar la seguridad administrativa de Configuration Manager, 
 
 -   [Ámbitos de seguridad](#bkmk_PlanScope)  
 
- El ámbito administrativo controla los objetos que un usuario administrativo puede ver en la consola de Configuration Manager y los permisos que el usuario tiene en dichos objetos. Las configuraciones de administración basada en roles se replican en cada sitio en la jerarquía como datos globales y, a continuación, se aplican a todas las conexiones administrativas.  
+
+ El ámbito administrativo controla los objetos que un usuario administrativo ve en la consola de Configuration Manager y controla los permisos que el usuario tiene en dichos objetos. Las configuraciones de administración basada en roles se replican en cada sitio en la jerarquía como datos globales y, a continuación, se aplican a todas las conexiones administrativas.  
 
 > [!IMPORTANT]  
 >  Los retrasos de replicación entre sitios pueden impedir que un sitio reciba los cambios de la administración basada en roles. Para obtener más información sobre cómo supervisar la replicación de base de datos entre sitios, consulte el tema [Transferencias de datos entre sitios en System Center Configuration Manager](../../core/servers/manage/data-transfers-between-sites.md).  
@@ -69,18 +70,20 @@ Al diseñar e implementar la seguridad administrativa de Configuration Manager, 
 
  Configuration Manager dispone de varios roles de seguridad integrados para admitir las agrupaciones habituales de tareas administrativas. Puede crear sus propios roles de seguridad para satisfacer sus requisitos empresariales. Ejemplos de roles de seguridad integrados:  
 
--   **Administrador total**: este rol de seguridad concede todos los permisos en Configuration Manager.  
+-   *Administrador total* concede todos los permisos en Configuration Manager.  
 
--   **Analista de activos**: este rol de seguridad permite a los usuarios administrativos ver los datos recopilados mediante Asset Intelligence, inventario de software, inventario de hardware y medición de software. Los usuarios administrativos pueden crear reglas de compatibilidad y categorías, familias y etiquetas de Asset Intelligence.  
+-   *Analista de activos* permite a los usuarios administrativos ver los datos recopilados mediante Asset Intelligence, inventario de software, inventario de hardware y medición de software. Los usuarios administrativos pueden crear reglas de compatibilidad y categorías, familias y etiquetas de Asset Intelligence.  
 
--   **Administrador de actualizaciones de software**: este rol de seguridad concede permisos para definir e implementar actualizaciones de software. Los usuarios administrativos asociados a este rol pueden crear recopilaciones, grupos de actualizaciones de software, implementaciones y plantillas, y habilitar actualizaciones de software para Protección de acceso a redes (NAP).  
+-   *Administrador de actualizaciones de software* concede permisos para definir e implementar actualizaciones de software. Los usuarios administrativos asociados a este rol pueden crear recopilaciones, grupos de actualizaciones de software, implementaciones y plantillas, y configurar actualizaciones de software para la Protección de acceso a redes (NAP).  
 
 > [!TIP]  
->  Puede ver la lista de los roles de seguridad integrados y los roles de seguridad personalizados que crea, y sus descripciones, en la consola de Configuration Manager. A tal efecto, en el área de trabajo **Administración** , expanda **Seguridad**y, a continuación, haga clic en **Roles de seguridad**.  
+>  Puede ver la lista de los roles de seguridad integrados y los roles de seguridad personalizados que crea, y sus descripciones, en la consola de Configuration Manager. Para ver los roles, en el área de trabajo **Administración**, expanda **Seguridad** y, después, seleccione **Roles de seguridad**.  
 
- Cada rol de seguridad tiene determinados permisos para distintos tipos de objetos. Por ejemplo, el rol de seguridad **MMM de aplicaciones** tiene los siguientes permisos para las aplicaciones: **Aprobar**, **Crear**, **Eliminar**, **Modificar**, **Modificar carpetas**, **Mover objetos**, **Leer/Implementar**, **Establecer ámbito de seguridad**. No puede cambiar los permisos de los roles de seguridad integrados, pero puede copiar el rol, realizar cambios y, a continuación, guardar estos cambios como un nuevo rol de seguridad personalizado. También puede importar roles de seguridad que ha exportado desde otra jerarquía (por ejemplo, de una red de prueba). Revise los roles de seguridad y sus permisos para determinar si utilizará los roles de seguridad integrados o si debe crear sus propios roles de seguridad personalizados.  
+ Cada rol de seguridad tiene determinados permisos para distintos tipos de objetos. Por ejemplo, el rol de seguridad *MMM de aplicaciones* tiene los siguientes permisos para las aplicaciones: Aprobar, Crear, Eliminar, Modificar, Modificar carpetas, Mover objetos, Leer/Implementar y Establecer ámbito de seguridad.
 
- **Los pasos siguientes le ayudan a planear los roles de seguridad:**  
+ No puede cambiar los permisos de los roles de seguridad integrados, pero puede copiar el rol, realizar cambios y, a continuación, guardar estos cambios como un nuevo rol de seguridad personalizado. También puede importar roles de seguridad que ha exportado desde otra jerarquía, por ejemplo, de una red de prueba. Revise los roles de seguridad y sus permisos para determinar si usará los roles de seguridad integrados o si debe crear sus propios roles de seguridad personalizados.  
+
+ ### <a name="to-help-you-plan-for-security-roles"></a>Para ayudarle a planear los roles de seguridad  
 
 1.  Identifique las tareas que los usuarios administrativos realizan en Configuration Manager. Estas tareas pueden estar relacionadas con uno o más grupos de tareas de administración, como la implementación de aplicaciones y paquetes, la implementación de sistemas operativos y configuraciones para el cumplimiento, la configuración de sitios y seguridad, la realización de auditorías, el control remoto de equipos y la recopilación de datos de inventario.  
 
@@ -110,11 +113,11 @@ Para obtener más información sobre cómo crear y configurar roles de seguridad
 Para obtener más información sobre cómo configurar recopilaciones para la administración basada en roles, consulte [Configurar recopilaciones para administrar la seguridad](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigColl) en el tema [Configure role-based administration for System Center Configuration Manager (Configurar la administración basada en roles para System Center Configuration Manager)](../../core/servers/deploy/configure/configure-role-based-administration.md) .  
 
 ##  <a name="a-namebkmkplanscopea-security-scopes"></a><a name="bkmk_PlanScope"></a> Ámbitos de seguridad  
- Use los ámbitos de seguridad para proporcionar acceso a objetos protegibles para los usuarios administrativos. Los ámbitos de seguridad son un conjunto de objetos protegibles asignados a usuarios administrativos como un grupo. Todos los objetos protegibles deben estar asignados a uno o más ámbitos de seguridad. Configuration Manager tiene dos ámbitos de seguridad integrados:  
+ Use los ámbitos de seguridad para proporcionar acceso a objetos protegibles para los usuarios administrativos. Un ámbito de seguridad es un conjunto de objetos protegibles asignados a usuarios administrativos como un grupo. Todos los objetos protegibles deben estar asignados a uno o más ámbitos de seguridad. Configuration Manager tiene dos ámbitos de seguridad integrados:  
 
--   **Todo**: este ámbito de seguridad integrado concede acceso a todos los ámbitos. No se pueden asignar objetos a este ámbito de seguridad.  
+-   El ámbito de seguridad integrado *Todo* concede acceso a todos los ámbitos. No se pueden asignar objetos a este ámbito de seguridad.  
 
--   **Predeterminado**: este ámbito de seguridad integrado se usa para todos los objetos de forma predeterminada. Cuando se instala inicialmente Configuration Manager, todos los objetos se asignan a este ámbito de seguridad.  
+-   El ámbito de seguridad integrado *Predeterminado* se usa para todos los objetos de manera predeterminada. Cuando se instala inicialmente Configuration Manager, todos los objetos se asignan a este ámbito de seguridad.  
 
 Si desea restringir los objetos que los usuarios administrativos pueden ver y administrar, debe crear y utilizar sus propios ámbitos de seguridad personalizados. Los ámbitos de seguridad no admiten estructuras jerárquicas y no se pueden anidar. Los ámbitos de seguridad pueden contener uno o varios tipos de objetos, como:  
 
@@ -206,12 +209,12 @@ Cree ámbitos de seguridad si tiene que limitar el acceso a instancias independi
 
 -   Un grupo de usuarios administrativos tiene que poder ver las aplicaciones de producción pero no tiene que poder ver aplicaciones de prueba. Cree un ámbito de seguridad para las aplicaciones de producción y otro para las aplicaciones de prueba.  
 
--   Los distintos usuarios administrativos requieren un determinado acceso a algunas instancias de un tipo de objeto. Por ejemplo, un grupo de usuarios administrativos requiere el permiso **Leer** en determinados grupos de actualizaciones de software, y otro grupo de usuarios administrativos requiere el permiso **Modificar** y **Eliminar** para otros grupos de actualizaciones de software. Cree distintos ámbitos de seguridad para estos grupos de actualizaciones de software.  
+-   Los distintos usuarios administrativos requieren un determinado acceso a algunas instancias de un tipo de objeto. Por ejemplo, un grupo de usuarios administrativos requiere el permiso de lectura en determinados grupos de actualizaciones de software, y otro grupo de usuarios administrativos requiere el permiso Modificar y Eliminar para otros grupos de actualizaciones de software. Cree distintos ámbitos de seguridad para estos grupos de actualizaciones de software.  
 
 Para obtener más información sobre cómo configurar ámbitos de seguridad para la administración basada en roles, consulte [Configurar ámbitos de seguridad para un objeto](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope) en el tema [Configure role-based administration for System Center Configuration Manager (Configurar la administración basada en roles para System Center Configuration Manager)](../../core/servers/deploy/configure/configure-role-based-administration.md).  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

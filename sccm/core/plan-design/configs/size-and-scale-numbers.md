@@ -1,8 +1,8 @@
 ---
 title: "Tamaño y escala | Microsoft Docs"
-description: "Identifique el número de roles de sistema de sitio y sitios que necesitará para admitir los dispositivos en su entorno de System Center Configuration Manager."
+description: "Identifique el número de roles de sistema de sitio y los sitios que necesitará para admitir los dispositivos en el entorno de System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 453d934d693d58e98cf800988dff702400daaf95
+ms.sourcegitcommit: f9c43e26758d5171a6ef56e827b4b054ebc8a5e5
+ms.openlocfilehash: c7ad33339e65e6e00e88f98d6e13baceb98dae77
 
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Números de tamaño y escala de System Center Configuration Manager
@@ -26,15 +26,16 @@ ms.openlocfilehash: 453d934d693d58e98cf800988dff702400daaf95
 
 
 
-Cada implementación de System Center Configuration Manager tendrá un número máximo de sitios, roles de sistema de sitio y dispositivos que podrá admitir. Estos números varían en función de la estructura de jerarquía (qué tipos y el número de sitios que usa) y los roles de sistema de sitio que implementa.  La información de los siguientes temas puede ayudarle a identificar el número de roles de sistema de sitio y sitios que necesitará para admitir los dispositivos que espera administrar con su entorno.
+Cada implementación de System Center Configuration Manager tendrá un número máximo de sitios, roles de sistema de sitio y dispositivos que podrá admitir. Estos números varían en función de la estructura de jerarquía (qué tipos y el número de sitios que usa) y los roles de sistema de sitio que implementa.  La información de las siguientes área puede ayudarle a identificar el número de roles de sistema de sitio y sitios que necesitará para admitir los dispositivos que espera administrar con su entorno.
 
-Utilice la información de este tema con la información de los siguientes artículos:
+Use la información de este tema junto con la información de los siguientes artículos:
 -   [Hardware recomendado](../../../core/plan-design/configs/recommended-hardware.md)
 -   [Sistemas operativos compatibles con servidores de sistema de sitio](../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)  
 -   [Supported operating systems for clients and devices](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md) (Sistemas operativos compatibles con clientes y dispositivos)
 -   [Requisitos previos de sitio y sistema de sitio](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)
 
-Los números de compatibilidad de este artículo se basan en el uso del hardware recomendado de Configuration Manager. Si no se usa el hardware recomendado, el rendimiento de los sistemas de sitio puede disminuir y podría no satisfacer los niveles de compatibilidad afirmados.
+
+Los siguientes números de soporte técnico se basan en el uso del hardware recomendado para Configuration Manager y la configuración predeterminada para todas las características disponibles de Configuration Manager. Cuando no use el hardware recomendado o use una configuración personalizada más agresiva (por ejemplo, ejecutar inventario de hardware o software con más frecuencia que los valores predeterminados de una vez cada siete días), el rendimiento de los sistemas de sitio puede disminuir y es posible que no se cumplan los niveles de compatibilidad indicados.
 
 ##  <a name="a-namebkmksitesystemscalea-site-types"></a><a name="bkmk_SiteSystemScale"></a> Tipos de sitio  
  **Sitio de administración central:**  
@@ -47,7 +48,7 @@ Los números de compatibilidad de este artículo se basan en el uso del hardware
 
 -   El número de sitios secundarios por cada sitio primario se basa en conexiones de red de área extensa (WAN) confiables y continuamente conectadas. Para las ubicaciones que tienen menos de 500 clientes, considere la posibilidad de un punto de distribución en lugar de un sitio secundario.  
 
- Para obtener información sobre los números de clientes y dispositivos que un sitio primario puede admitir, consulte [Número de clientes para sitios y jerarquías](#bkmk_clientnumbers) en este tema.  
+ Para más información sobre los números de clientes y dispositivos que un sitio primario puede admitir, vea [Número de clientes para sitios y jerarquías](#bkmk_clientnumbers) en este tema.  
 
 **Sitio secundario:**  
 
@@ -64,7 +65,7 @@ Los números de compatibilidad de este artículo se basan en el uso del hardware
 
     -   Para mejorar el rendimiento, planee admitir hasta 50.000 clientes por instancia.  
 
-    -   Cada instancia de este rol de sistema de sitio admite el número máximo de clientes compatibles con la jerarquía.  
+    -   Cada instancia de este rol de sistema de sitio admite el número máximo de clientes que son compatibles con la jerarquía.  
 
 ## <a name="a-namebkmkrolesa-site-system-roles"></a><a name="bkmk_roles"></a> Roles de sistema de sitio    
 
@@ -77,7 +78,7 @@ Los números de compatibilidad de este artículo se basan en el uso del hardware
 
     -   Para mejorar el rendimiento, planee admitir hasta 50.000 clientes por instancia.  
 
-    -   Cada instancia de este rol de sistema de sitio admite el número máximo de clientes compatibles con la jerarquía.  
+    -   Cada instancia de este rol de sistema de sitio admite el número máximo de clientes que son compatibles con la jerarquía.  
 
 **Punto de distribución:**  
 
@@ -85,7 +86,7 @@ Los números de compatibilidad de este artículo se basan en el uso del hardware
 
     -   Cada sitio primario y secundario admite hasta 250 puntos de distribución.  
 
-    -   Cada sitio primario y secundario admite hasta 2.000 puntos de distribución adicionales configurados como puntos de distribución de extracción. **Por ejemplo**, un único sitio primario admite 2250 puntos de distribución cuando 2000 de esos puntos de distribución se configuran como puntos de distribución de extracción.  
+    -   Cada sitio primario y secundario admite hasta 2000 puntos de distribución adicionales configurados como puntos de distribución de extracción. **Por ejemplo**, un único sitio primario admite 2250 puntos de distribución cuando 2000 de esos puntos de distribución se configuran como puntos de distribución de extracción.  
 
     -   Cada punto de distribución admite conexiones de hasta 4.000 clientes.  
 
@@ -98,7 +99,7 @@ Los números de compatibilidad de este artículo se basan en el uso del hardware
 > [!WARNING]  
 >  El número real de clientes que puede admitir un punto de distribución depende de la velocidad de la red y la configuración de hardware del equipo de punto de distribución.  
 >   
->  De forma similar, el número de puntos de distribución de extracción que puede admitir un punto de distribución de origen depende de la velocidad de la red y la configuración de hardware del equipo de punto de distribución de origen, pero también se ve afectado por la cantidad de contenido que se ha implementado. Esto es porque, a diferencia de los clientes que suelen tener acceso a contenido en distintos momentos durante el transcurso de una ventana de implementaciones, todos los puntos de distribución de extracción solicitan a a la vez el contenido, y pueden solicitar todo el contenido que haya disponible, en lugar del contenido que solo se aplica a ellos, como haría un cliente. Cuando se coloca demasiada carga de procesamiento en un punto de distribución de origen, se pueden producir retrasos inesperados al distribuir el contenido a los puntos de distribución previstos en el entorno.  
+>  El número de puntos de extracción que puede admitir un punto de distribución de origen depende también de la velocidad de la red y la configuración de hardware del equipo de punto de distribución de origen. Pero este número también se ve afectado por la cantidad de contenido que haya implementado. Esto es porque, a diferencia de los clientes que suelen tener acceso a contenido en distintos momentos durante el transcurso de una implementación, todos los puntos de distribución de extracción solicitan a la vez el contenido, y pueden solicitar todo el contenido disponible, no solo el contenido que se aplica a ellos, como haría un cliente. Cuando se coloca demasiada carga de procesamiento en un punto de distribución de origen, se pueden producir retrasos inesperados al distribuir el contenido a los puntos de distribución previstos en el entorno.  
 
 
 **Punto de estado de reserva:**  
@@ -114,82 +115,82 @@ Los números de compatibilidad de este artículo se basan en el uso del hardware
 
 -   Cada sitio secundario admite un solo punto de administración que se debe instalar en el servidor de sitio secundario.  
 
- Para obtener información sobre los números de clientes y dispositivos que un punto de administración puede admitir, consulte la sección [Puntos de administración](#bkmk_mp) de este tema.  
+ Para más información sobre los números de clientes y dispositivos que un punto de administración puede admitir, vea la sección [Puntos de administración](#bkmk_mp) de este tema.  
 
 **Punto de actualización de software:**  
 
 -   Un punto de actualización de software que está instalado en el servidor de sitio puede admitir hasta 25.000 clientes.  
 
--   Un punto de actualización de software remoto del servidor de sitio puede admitir hasta 150 000 clientes cuando el equipo remoto cumple los requisitos de WSUS para admitir este número.  
+-   Un punto de actualización de software remoto del servidor de sitio puede admitir hasta 150 000 clientes cuando el equipo remoto cumple los requisitos de Windows Server Update Services (WSUS) para admitir este número de clientes.  
 
--   De manera predeterminada, Configuration Manager no admite la configuración de puntos de actualización de software como clústeres de NLB. En cambio, puede usar el SDK de Configuration Manager para configurar hasta cuatro puntos de actualización de software en un clúster de NLB.  
+-   De manera predeterminada, Configuration Manager no admite la configuración de puntos de actualización de software como clústeres de Equilibrio de carga de red (NLB). En cambio, puede usar el SDK de Configuration Manager para configurar hasta cuatro puntos de actualización de software en un clúster de NLB.  
 
 ##  <a name="a-namebkmkclientnumbersa-client-numbers-for-sites-and-hierarchies"></a><a name="bkmk_clientnumbers"></a> Número de clientes para sitios y jerarquías  
- Utilice la siguiente información para determinar cuántos clientes, y de que tipo, se pueden admitir en un sitio o en una jerarquía.  
+ Use la siguiente información para determinar cuántos clientes, y de qué tipo, se pueden admitir en un sitio o en una jerarquía.  
 
 ###  <a name="a-namebkmkcasa-hierarchy-with-a-central-administration-site"></a><a name="bkmk_cas"></a> Jerarquía con un sitio de administración central  
 Un sitio de administración central admite un número total de dispositivos que incluye el número máximo de dispositivos indicados para los tres grupos siguientes:  
 
--   700 000 equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
+-   700&000; equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
 
 -   25 000 dispositivos que ejecutan Mac y Windows CE 7.0  
 
--   Uno de los siguientes, según el modo en que su implementación admita la administración de dispositivos móviles:  
+-   Uno de los siguientes, según el modo en que su implementación admita la administración de dispositivos móviles (MDM):  
 
-    -   100 000 dispositivos que se administran con MDM local  
+    -   100&000; dispositivos que administra mediante MDM local  
 
-    -   300 000 dispositivos basados en la nube  
+    -   300&000; dispositivos basados en la nube  
 
- Por ejemplo, en una jerarquía, de un total de 1.025.000 dispositivos, puede admitir 700.000 equipos de escritorio, hasta 25.000 clientes Mac y Windows CE 7.0 y hasta 300.000 dispositivos basados en la nube al integrar Microsoft Intune.  Si se admiten los dispositivos administrados por MDM local, el total de la jerarquía es de 825 000 dispositivos.  
+ Por ejemplo, en una jerarquía, de un total de 1.025.000 dispositivos, puede admitir 700 000 equipos de escritorio, hasta 25 000 Mac y Windows CE 7.0, y hasta 300 000 dispositivos basados en la nube al integrar Microsoft Intune. Si se admiten los dispositivos administrados por MDM local, el total de la jerarquía es de 825 000 dispositivos.  
 
 > [!IMPORTANT]  
->  En una jerarquía donde el sitio de administración central usa SQL Server Standard Edition, la jerarquía admite un máximo de 50 000 equipos de escritorio y dispositivos. La edición de SQL Server en uso en un sitio primario independiente no limita la capacidad de los sitios a admitir el número de clientes afirmado.  
+>  En una jerarquía donde el sitio de administración central usa SQL Server Standard Edition, la jerarquía admite un máximo de 50 000 equipos de escritorio y dispositivos. La edición de SQL Server que se usa en un sitio primario independiente no limita la capacidad del sitio para admitir el número de clientes indicado.  
 
 
 ###  <a name="a-namebkmkchipria-child-primary-site"></a><a name="bkmk_chipri"></a> Sitio primario secundario  
 Cada sitio primario secundario de una jerarquía con un sitio de administración central admite lo siguiente:  
 
--   150 000 clientes y dispositivos en total, sin limitarse a un grupo o tipo específico, siempre y cuando no se supere el número admitido para la jerarquía  
+-   150&000; clientes y dispositivos en total, sin limitarse a un grupo o tipo específico, siempre y cuando no se supere el número admitido para la jerarquía.  
 
-Por ejemplo, un sitio primario que admite 25.000 equipos que ejecutan Mac y Windows CE 7.0 (ya que es el límite en el caso de una jerarquía) puede admitir 125.000 equipos de escritorio adicionales, lo que aumenta el número total de dispositivos compatibles hasta el límite máximo de 150.000 admitido por los sitios primarios secundarios.
+Por ejemplo, un sitio primario que admite 25 000 equipos que ejecutan Mac y Windows CE 7.0 (dado que es el límite para una jerarquía) puede admitir 125 000 equipos de escritorio adicionales. Esto aumenta el número total de dispositivos compatibles hasta el límite máximo de 150 000 admitido por el sitio primario secundario.
 
 ###  <a name="a-namebkmkpria-stand-alone-primary-site"></a><a name="bkmk_pri"></a> Sitio primario independiente  
 Un sitio primario independiente admite el siguiente número de dispositivos:  
 
--   175 000 clientes y dispositivos en total, en esta proporción:  
+-   175&000; clientes y dispositivos en total, en esta proporción:  
 
-    -   150 000 equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
+    -   150&000; equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
 
-    -   25 000 dispositivos que ejecutan Mac y Windows CE 7.0  
+    -   25 000 dispositivos que ejecutan Mac y Windows CE 7.0
 
     -   Uno de los siguientes, según el modo en que su implementación admita la administración de dispositivos móviles:  
 
-        -   50 000 dispositivos administrados con MDM local  
+        -   50&000; dispositivos que administra mediante MDM local  
 
-        -   150 000 dispositivos basados en la nube  
+        -   150&000; dispositivos basados en la nube  
 
-Por ejemplo, un sitio primario independiente que admite 150 000 equipos de escritorio y 10 000 clientes Mac o Windows CE 7.0 puede solo tiene cabida para 15 000 dispositivos adicionales. Esos dispositivos pueden estar en la nube o administrase mediante MDM local.  
+Por ejemplo, un sitio primario independiente que admite 150 000 equipos de escritorio y 10 000 equipos Mac o Windows CE 7.0 solo puede admitir 15 000 dispositivos adicionales. Esos dispositivos pueden estar en la nube o administrase mediante MDM local.  
 
 ###  <a name="a-namebkmkseca-secondary-sites"></a><a name="bkmk_sec"></a> Sitios secundarios  
 Los sitios secundarios admiten lo siguiente:  
 
--   15 000 equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
+-   15&000; equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
 
 ###  <a name="a-namebkmkmpa-management-points"></a><a name="bkmk_mp"></a> Puntos de administración  
 Cada punto de administración puede admitir el siguiente número de dispositivos:  
 
--   25 000 clientes y dispositivos en total, en esta proporción:  
+-   25&000; clientes y dispositivos en total, en esta proporción:  
 
-    -   25 000 equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
+    -   25&000; equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
 
     -   Uno de los siguientes (no ambos):  
 
-        -   10 000 dispositivos administrados mediante MDM local  
+        -   10&000; dispositivos que administra mediante MDM local  
 
-        -   10 000 dispositivos que ejecutan Mac y Windows CE 7.0  
+        -   10 000 dispositivos que ejecutan clientes Mac y Windows CE 7.0
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

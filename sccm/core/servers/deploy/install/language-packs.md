@@ -1,8 +1,8 @@
 ---
 title: Paquetes de idioma | Microsoft Docs
-description: "Obtenga información sobre los idiomas admitidos que puede usar en System Center Configuration Manager."
+description: "Obtenga información sobre los idiomas admitidos que están disponibles en System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,21 +16,23 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 35d1008752a3275febef46b8817e97afdb91d580
+ms.sourcegitcommit: e7075eb675353be130fdcc867d9e4dd1009dab35
+ms.openlocfilehash: 47da3c531289ddf13d357bde8bbda85d79ed2803
 
 
 ---
 # <a name="language-packs-in-system-center-configuration-manager"></a>Paquetes de idioma en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 Este tema proporciona detalles técnicos sobre la compatibilidad de idiomas en System Center Configuration Manager.  
 
-##  <a name="a-namebkmksuplanguagepacksa-supported-operating-system-languages"></a><a name="BKMK_SupLanguagePacks"></a> Idiomas admitidos del sistema operativo  
- Puede instalar compatibilidad para los siguientes idiomas de pantalla mediante la instalación de **paquetes de idioma de servidor** o **paquetes de idioma de cliente** en un sitio de administración central y en sitios primarios. Los archivos de paquete de idioma se descargan al ejecutar el programa de instalación como parte de la descarga de los archivos de requisitos previos y redistribuible. También puede usar el [Descargador del programa de instalación](setup-downloader.md) para descargar estos archivos antes de ejecutar el programa de instalación. Durante la instalación de un sitio, deben seleccionarse los idiomas de cliente y servidor que se admitirán en el sitio de los archivos de paquete de idioma disponibles.  
+## <a name="a-namebkmksuplanguagepacksa-supported-operating-system-languages"></a><a name="BKMK_SupLanguagePacks"></a> Idiomas admitidos del sistema operativo  
+ Puede instalar compatibilidad para los idiomas de pantalla en las siguientes tablas mediante la instalación de **paquetes de idioma de servidor** o **paquetes de idioma de cliente** en un sitio de administración central y en sitios primarios. Seleccione los idiomas de cliente y servidor que se admitirán en un sitio de los archivos de paquete de idioma disponibles durante el proceso de instalación del sitio.
 
- Utilice la tabla siguiente para asignar un identificador de configuración regional al idioma que desee admitir en servidores o clientes. Para obtener más información sobre identificadores de configuración regional, consulte [Locale IDs Assigned by Microsoft (identificadores de configuración regional asignados por Microsoft)](http://go.microsoft.com/fwlink/p/?LinkId=252609) en la biblioteca en línea de MSDN.  
+ Los archivos de paquete de idioma se descargan cuando ejecuta el programa de instalación como parte de la descarga del archivo redistribuible y de requisitos previos. También puede usar el [Descargador del programa de instalación](setup-downloader.md) para descargar estos archivos antes de ejecutar el programa de instalación.   
+
+ Use la tabla siguiente para asignar un identificador de configuración regional al idioma que quiera admitir en servidores o equipos cliente. Para obtener más información sobre los identificadores de configuración regional, vea [Locale IDs assigned by Microsoft (Identificadores de configuración regional asignados por Microsoft)](http://go.microsoft.com/fwlink/p/?LinkId=252609).  
 
 ### <a name="server-languages"></a>Idiomas del servidor  
 
@@ -84,18 +86,18 @@ Este tema proporciona detalles técnicos sobre la compatibilidad de idiomas en S
 |Sueco|041d|SVE|  
 |Turco|041f|TRK|  
 
-### <a name="mobile-device-client-languages"></a>Idiomas de cliente de dispositivo móvil  
- Cuando se agrega compatibilidad con idiomas de dispositivo móvil, se incluyen todos los idiomas de cliente de dispositivo móvil. No puede seleccionar paquetes de idioma individuales para la compatibilidad con dispositivos móviles.  
+### <a name="mobile-device-client-languages"></a>Idiomas del cliente de dispositivos móviles  
+ Cuando agrega compatibilidad con idiomas de dispositivo móvil, se incluyen todos los idiomas de cliente de dispositivo móvil compatibles. No puede seleccionar paquetes de idioma individuales para la compatibilidad con dispositivos móviles.  
 
-### <a name="how-to-identify-installed-language-packs"></a>Identificación de los paquetes de idioma instalados  
-Puede identificar los paquetes de idioma instalados en un equipo que ejecuta el cliente de Configuration Manager mediante el identificador de configuración regional (LCID) de los paquetes de idioma instalados en el Registro del equipo. Esta información está disponible en la siguiente ubicación:  
+### <a name="identify-installed-language-packs"></a>Identificación de los paquetes de idioma instalados  
+Para identificar los paquetes de idioma instalados en un equipo que ejecuta el cliente de Configuration Manager, busque el identificador de configuración regional (LCID) de los paquetes de idioma instalados en el Registro del equipo. Esta información está disponible en:
 
--   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs**  
+ **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs**  
 
-Puede utilizar el inventario de hardware para recopilar esta información y, a continuación, generar un informe personalizado para ver la información de idioma. Para obtener más información sobre la recopilación de inventario de hardware personalizado, consulte [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md) (Configuración de inventario de hardware en System Center Configuration Manager). Para obtener más información sobre la creación de informes, consulte la sección [Administración de informes de Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md#BKMK_ManageReports) en el tema [Operaciones y mantenimiento de informes en Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
+Puede utilizar el inventario de hardware para recopilar esta información y, a continuación, generar un informe personalizado para ver la información de idioma. Para obtener más información sobre la recopilación de inventario de hardware personalizado, consulte [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md) (Configuración de inventario de hardware en System Center Configuration Manager). Para obtener información sobre la creación de informes, vea la sección [Administración de informes de Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md#BKMK_ManageReports) en el tema [Operaciones y mantenimiento de informes en System Center Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

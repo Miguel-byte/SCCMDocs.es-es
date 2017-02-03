@@ -2,7 +2,7 @@
 title: Cuentas para acceder al contenido | Microsoft Docs
 description: "Obtenga información acerca de las cuentas donde los clientes obtienen acceso a contenido de System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/4/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 4bf8dbd007f2ff122d1447ffcb2a963579034033
+ms.sourcegitcommit: 4d34a272a93100426cccd2308c5b3b0b0ae94a60
+ms.openlocfilehash: ee83aa6fdbd1a82384a4684055ed72620a3f474e
 
 ---
 # <a name="manage-accounts-to-access-content-in-system-center-configuration-manager"></a>Administración de cuentas para acceder al contenido en System Center Configuration Manager
@@ -30,7 +30,7 @@ Antes de implementar el contenido en System Center Configuration Manager, tómes
 
      Esta cuenta también la usan los puntos de distribución de extracción para obtener el contenido de un punto de distribución de origen en un bosque remoto.  
 
--   **Cuenta de acceso de paquete**: de forma predeterminada, Configuration Manager concede acceso al contenido en un punto de distribución a los usuarios y los administradores de cuentas de acceso genéricas. Sin embargo, puede configurar permisos adicionales para restringir el acceso.  
+-   **Cuenta de acceso de paquete**: de manera predeterminada, Configuration Manager concede acceso al contenido en un punto de distribución a las cuentas integradas denominadas **Usuarios** y **Administradores**. Puede configurar permisos adicionales para restringir el acceso.  
 
 -   **Cuenta de conexión de multidifusión** : se usa para implementaciones de sistema operativo.  
 
@@ -120,6 +120,6 @@ Si crea esta cuenta, créela como una cuenta local con derechos reducidos en el 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

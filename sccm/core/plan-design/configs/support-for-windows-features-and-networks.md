@@ -2,7 +2,7 @@
 title: "Compatibilidad con las características de Windows | Microsoft Docs"
 description: "Descubra qué características de redes y Windows admite System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 29e4f8a70b56b772a54ee858a392533780ccbaf9
+ms.sourcegitcommit: 086efdd180ba3de12f84cabfa6c2abca1fe57537
+ms.openlocfilehash: 3315098f271a5b365914772943094c33f63f25c4
 
 
 ---
@@ -30,17 +30,19 @@ Este tema identifica la compatibilidad de System Center Configuration Manager co
 
 
 ##  <a name="a-namebkmkbranchcachea-branchcache"></a><a name="bkmk_branchcache"></a> BranchCache  
-Windows BranchCache está integrado en Configuration Manager. Puede establecer la configuración de BranchCache en un tipo de implementación para aplicaciones, en la implementación de un paquete y para secuencias de tareas.  
+Windows BranchCache está integrado con Configuration Manager. Puede establecer la configuración de BranchCache en un tipo de implementación para aplicaciones, en la implementación de un paquete y para secuencias de tareas.  
 
 Cuando se cumplen todos los requisitos de BranchCache, esta característica permite a los clientes de ubicaciones remotas obtener el contenido de los clientes locales que tienen una memoria caché actual del contenido.  
 
-Por ejemplo, cuando el primer equipo cliente habilitado para BranchCache solicita contenido desde un punto de distribución que se configuró como un servidor de BranchCache, el equipo cliente descarga y almacena el contenido en la memoria caché. Este contenido está disponible entonces para los clientes de la misma subred que solicitan el mismo contenido. Estos clientes también almacenan el contenido en la memoria caché. De esta manera, los siguientes clientes de la misma subred no tienen que descargar contenido desde el punto de distribución, y el contenido se distribuye por varios clientes en las siguientes transferencias.  
+Por ejemplo, cuando el primer equipo cliente habilitado para BranchCache solicita contenido desde un punto de distribución que se configuró como un servidor de BranchCache, el equipo cliente descarga y almacena el contenido en la memoria caché. Después, este contenido estará disponible para los clientes en la misma subred que ha solicitado este contenido.
+
+Estos clientes también almacenan en caché el contenido. De esta manera, los siguientes clientes de la misma subred no tienen que descargar contenido desde el punto de distribución, y el contenido se distribuye por varios clientes en las siguientes transferencias.  
 
 **Para admitir BranchCache con Configuration Manager:**  
 
 -   Agregue la característica **Windows BranchCache** en el servidor del sistema de sitio que está configurado como punto de distribución.  
 
-    -   Los puntos de distribución en los servidores configurados para admitir BranchCache no requieren ninguna configuración adicional.  
+    -   Los puntos de distribución en los servidores que se configuran para admitir BranchCache no requieren ninguna configuración adicional.  
 
     -   No puede agregar Windows BranchCache a un punto de distribución basado en la nube, pero los puntos de distribución basados en la nube permiten que los clientes configurados para Windows BranchCache descarguen contenido.  
 
@@ -50,7 +52,7 @@ Por ejemplo, cuando el primer equipo cliente habilitado para BranchCache solicit
 
 -   La opción de sistema operativo de la configuración del cliente de BITS debe estar habilitada para admitir BranchCache.  
 
-**Los siguientes sistemas operativos de cliente son compatibles con Windows BranchCache:**  
+**Configuration Manager admite los siguientes sistemas operativos de cliente con Windows BranchCache:**  
 
 |Sistema operativo|Detalles sobre compatibilidad|  
 |----------------------|---------------------|  
@@ -82,20 +84,20 @@ Configuration Manager admite el uso de la desduplicación de datos con puntos de
 -   Windows Server 2012 R2  
 
 > [!IMPORTANT]  
->  No se puede marcar para la desduplicación de datos el volumen que hospeda archivos de origen del paquete. Esto se debe a que la desduplicación de datos usa puntos de repetición de análisis y Configuration Manager no admite el uso de una ubicación de origen de contenido con archivos almacenados en los puntos de repetición de análisis.  
+>  No se puede marcar para la desduplicación de datos el volumen que hospeda archivos de origen del paquete. Esto se debe a que la desduplicación de datos usa puntos de análisis y Configuration Manager no admite el uso de una ubicación de origen de contenido con archivos que se almacenan en los puntos de análisis.  
 
 Para obtener más información, consulte [Configuration Manager Distribution Points and Windows Server 2012 Data Deduplication](http://blogs.technet.com/b/configmgrteam/archive/2014/02/18/configuration-manager-distribution-points-and-windows-server-2012-data-deduplication.aspx) (Puntos de distribución de Configuration Manager y desduplicación de datos de Windows Server 2012) en el blog del equipo de Configuration Manager e [Introducción a la desduplicación de datos](http://technet.microsoft.com/library/hh831602.aspx) en la biblioteca de TechNet de Windows Server.  
 
 ##  <a name="a-namebkmkdaa-directaccess"></a><a name="bkmk_DA"></a> DirectAccess  
 Configuration Manager es compatible con la característica DirectAccess en Windows Server 2008 R2 para la comunicación entre clientes y servidores del sistema de sitio.  
 
--   Cuando se cumplen todos los requisitos de DirectAccess, mediante el uso de esta característica, los clientes de Configuration Manager en Internet pueden comunicarse con su sitio asignado como si estuvieran en la intranet.  
+-   Cuando se cumplen todos los requisitos de DirectAccess, DirectAccess habilita los clientes de Configuration Manager en Internet para comunicarse con su sitio asignado como si estuvieran en la intranet.  
 
 -   Para las acciones iniciadas por el servidor, como la instalación de inserción de cliente y el control remoto, el equipo iniciador (por ejemplo, el servidor de sitio) debe ejecutar IPv6 y este protocolo debe ser compatible con todos los dispositivos de red que intervengan.  
 
 Configuration Manager no admite lo siguiente en DirectAccess:  
 
--   Implementación de sistemas operativos  
+-   La implementación de sistemas operativos  
 
 -   Comunicación entre sitios de Configuration Manager  
 
@@ -120,7 +122,9 @@ Configuration Manager no admite lo siguiente en DirectAccess:
  La traducción de direcciones de red (NAT) no se admite en Configuration Manager, a menos que el sitio sea compatible con los clientes que están en Internet y el cliente detecte que está conectado a Internet. Para obtener más información sobre la administración de cliente basada en Internet, consulte [Planificar la administración de clientes basados en Internet en System Center Configuration Manager](../../../core/clients/deploy/plan/plan-for-managing-internet-based-clients.md).  
 
 ##  <a name="a-namebkmkstoragea-specialized-storage-technology"></a><a name="bkmk_storage"></a> Tecnología de almacenamiento especializado  
- Configuration Manager funciona con cualquier hardware que esté certificado en la lista de compatibilidad de hardware de Windows para la versión del sistema operativo en el que está instalado el componente de Configuration Manager. Los roles del servidor de sitio requieren sistemas de archivos NTFS para que se puedan establecer los permisos de archivos y directorios. Dado que Configuration Manager da por supuesto que tiene una propiedad completa de una unidad lógica, los sistemas de sitio que se ejecutan en equipos independientes no pueden compartir una partición lógica en ninguna tecnología de almacenamiento. Sin embargo, cada equipo puede usar una partición lógica separada en la misma partición física de un dispositivo de almacenamiento compartido.  
+ Configuration Manager funciona con cualquier hardware que esté certificado en la lista de compatibilidad de hardware de Windows para la versión del sistema operativo en el que está instalado el componente de Configuration Manager.
+
+Los roles del servidor de sitio requieren sistemas de archivos NTFS para que se puedan establecer los permisos de archivos y directorios. Dado que Configuration Manager da por supuesto que tiene una propiedad completa de una unidad lógica, los sistemas de sitio que se ejecutan en equipos independientes no pueden compartir una partición lógica en ninguna tecnología de almacenamiento. Sin embargo, cada equipo puede usar una partición lógica separada en la misma partición física de un dispositivo de almacenamiento compartido.  
 
  **Consideraciones sobre la compatibilidad:**  
 
@@ -134,6 +138,6 @@ Configuration Manager no admite lo siguiente en DirectAccess:
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

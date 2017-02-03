@@ -17,56 +17,40 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 34e1f57798a9745303dd6d03a8b4362c01c5efbb
+ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
+ms.openlocfilehash: 74a0a4274965891869caf838550cd9465b46fd51
 
 
 ---
 # <a name="how-to-monitor-certificate-profiles-in-system-center-configuration-manager"></a>Cómo supervisar perfiles de certificado en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 
-Después de implementar los perfiles de certificado de System Center Configuration Manager en los usuarios de la jerarquía, puede usar los procedimientos siguientes para supervisar el estado de compatibilidad del perfil de certificado:  
+##  <a name="view-compliance-results-in-the-configuration-manager-console"></a>Ver los resultados de cumplimiento en la consola de Configuration Manager  
 
--   [Ver los resultados de compatibilidad en la consola de Configuration Manager](#BKMK_console)  
+Para supervisar el cumplimiento del certificado SCEP, no use la consola. En su lugar, use los [informes](#view-compliance-results-by-using-reports). 
 
--   [Ver los resultados de compatibilidad mediante informes](#BKMK_Reports)  
+1.  En la consola de Configuration Manager, elija **Supervisión**>  **Implementaciones**.  
 
-##  <a name="a-namebkmkconsolea-how-to-view-compliance-results-in-the-configuration-manager-console"></a><a name="BKMK_console"></a> Ver los resultados de compatibilidad en la consola de Configuration Manager  
- Use este procedimiento para ver los detalles sobre el cumplimiento de los perfiles de certificado implementados en la consola de System Center Configuration Manager.  
+3.  Seleccione la implementación de perfil de certificado que le interese.  
 
-> [!NOTE]  
->  No use la consola de Configuration Manager para supervisar el cumplimiento del certificado SCEP. En su lugar, use los informes, tal como se describe en [How to View Compliance Results by Using Reports](#BKMK_Reports). En concreto, debe usar los informes de certificado que se encuentran en el nodo de informes **Acceso a los recursos de la compañía**.  
->   
->  -   Historial de certificados emitidos  
-> -   Lista de activos con certificados a punto de expirar  
-> -   Lista de activos por estado de emisión de certificado  
-
-#### <a name="to-view-compliance-results-in-the-configuration-manager-console"></a>Para ver los resultados de compatibilidad en la consola de Configuration Manager  
-
-1.  En la consola de System Center Configuration Manager, haga clic en **Supervisión**.  
-
-2.  En el área de trabajo **Supervisión** , haga clic en **Implementaciones**.  
-
-3.  En la lista **Implementaciones** , seleccione la implementación del perfil de certificado para el que desea revisar la información de compatibilidad.  
-
-4.  Puede revisar la información de resumen sobre la compatibilidad del perfil de certificado en la página principal. Para ver información más detallada, seleccione el perfil de certificado y, a continuación, en la pestaña **Inicio** , en el grupo **Implementación** , haga clic en **Ver estado** para abrir la página **Estado de implementación** .  
+4.  Revise la información de resumen de compatibilidad de certificado en la página principal. Para obtener información más detallada, seleccione el perfil de certificado y, después, en la pestaña **Inicio**, en el grupo **Implementación**, haga clic en **Ver estado** para abrir la página **Estado de implementación**.  
 
      La página **Estado de implementación** contiene las siguientes pestañas:  
 
-    -   **Compatible**: muestra la compatibilidad del perfil de certificado en función del número de recursos afectados. Puede hacer doble clic en una regla para crear un nodo temporal en el nodo **Usuarios** , en el área de trabajo **Activos y compatibilidad** . Este nodo contiene todos los usuarios que son compatibles con el perfil de certificado. El panel **Detalles del activo** muestra los usuarios que son compatibles con el perfil. Haga doble clic en un usuario de la lista para mostrar información adicional.  
+    -   **Compatible**: muestra la compatibilidad del perfil de certificado en función del número de recursos afectados. Puede hacer doble clic en una regla para crear un nodo temporal en el nodo **Usuarios** , en el área de trabajo **Activos y compatibilidad** . Este nodo contiene todos los usuarios que son compatibles con el perfil de certificado. El panel **Detalles del activo** muestra los usuarios que son compatibles con el perfil. Haga doble clic en un usuario en la lista para obtener más información.  
 
         > [!IMPORTANT]  
         >  Un perfil de certificado no se evalúa si no es aplicable en un dispositivo cliente. Sin embargo, se devuelve como compatible.  
 
-    -   **Error**: muestra una lista de todos los errores de la implementación de perfil de certificado seleccionada en función del número de recursos afectados. Puede hacer doble clic en una regla para crear un nodo temporal en el nodo **Usuarios** del área de trabajo **Activos y compatibilidad** . Este nodo contiene todos los usuarios que generaron errores con este perfil. Cuando se selecciona un usuario, el panel **Detalles del activo** muestra los usuarios afectados por el problema seleccionado. Haga doble clic en un usuario de la lista para mostrar información adicional sobre el problema.  
+    -   **Error**: muestra una lista de todos los errores de la implementación de perfil de certificado seleccionada en función del número de recursos afectados. Puede hacer doble clic en una regla para crear un nodo temporal en el nodo **Usuarios** del área de trabajo **Activos y compatibilidad** . Este nodo contiene todos los usuarios que generaron errores con este perfil. Cuando se selecciona un usuario, el panel **Detalles del activo** muestra los usuarios afectados por el problema seleccionado. Haga doble clic en un usuario en la lista para mostrar más información.  
 
     -   **No compatible**: muestra una lista de todas las reglas no compatibles en el perfil de certificado en función del número de recursos afectados. Puede hacer doble clic en una regla para crear un nodo temporal en el nodo **Usuarios** del área de trabajo **Activos y compatibilidad** . El nodo contiene todos los usuarios que no son compatibles con este perfil. Cuando se selecciona un usuario, el panel **Detalles del activo** muestra los usuarios afectados por el problema seleccionado. Haga doble clic en un usuario de la lista para mostrar información adicional sobre el problema.  
 
     -   **Desconocido**: muestra una lista de todos los usuarios que no han notificado la compatibilidad de la implementación de perfil de certificado seleccionada y el estado de cliente actual de los dispositivos.  
 
-5.  En la página **Estado de implementación** , puede revisar información detallada sobre la compatibilidad del perfil de certificado implementado. Se crea un nodo temporal en el nodo **Implementaciones** que le permite encontrar esta información rápidamente.  
+5.  En la página **Estado implementación**, puede revisar información detallada sobre la compatibilidad del perfil de certificado implementado. Se crea un nodo temporal en el nodo **Implementaciones** que le permite encontrar esta información rápidamente.  
 
      El estado de inscripción del certificado se muestra como un número. Utilice la tabla siguiente para determinar el significado de cada número:  
 
@@ -80,17 +64,25 @@ Después de implementar los perfiles de certificado de System Center Configurati
     |0x00000040|Se ha omitido la información de estado. Esto puede ocurrir si una entidad de certificación HYPERLINK "http://msdn.microsoft.com/en-us/windows/ms721572" \l "_security_certification_authority_gly" no es válida o no se ha seleccionado para la supervisión.|  
     |0x00000100|Se ha denegado la inscripción.|  
 
-##  <a name="a-namebkmkreportsa-how-to-view-compliance-results-by-using-reports"></a><a name="BKMK_Reports"></a> Ver los resultados de compatibilidad mediante informes
+##  <a name="view-compliance-results-by-using-reports"></a>Ver los resultados de compatibilidad mediante informes
 
  La configuración de cumplimiento en System Center Configuration Manager incluye informes integrados que se pueden utilizar para supervisar la información de perfiles de certificado. Estos informes tienen la categoría de informe de **Administración de compatibilidad y configuración**.  
 
 > [!IMPORTANT]  
 >  Debe usar un carácter comodín (%) para utilizar los parámetros **Filtro del dispositivo** y **Filtro de usuarios** en los informes de configuración de cumplimiento.  
 
+Para supervisar el cumplimiento del certificado SCEP, use los informes de certificado que se encuentran en el nodo de informes **Acceso a los recursos de la compañía**:  
+
+ -   Historial de certificados emitidos  
+ -   Lista de activos con certificados a punto de expirar  
+ -   Lista de activos por estado de emisión de certificado  
+
+
+
  Para obtener más información sobre cómo configurar la generación de informes en Configuration Manager, vea [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md) (Generación de informes en System Center Configuration Manager).  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

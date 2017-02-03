@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 3bc82535955d937e5620ef2963ccc29bfd0124e3
+ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
+ms.openlocfilehash: 0ca218e4276699dd9029308e1d8ac524563da7c5
 
 
 ---
@@ -55,7 +55,7 @@ La implementación de clientes en el sitio lleva tiempo y algunas instalaciones 
 
 -   Si quiere cambiar el ámbito del informe, haga clic en **Examinar...** y elija otra recopilación.  
 
- Para obtener más información sobre las implementaciones de cliente de preproducción, consulte [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md) (Prueba de las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager).
+ Para más información sobre las implementaciones de cliente de preproducción, vea [Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).
 
  > [!NOTE]
  > El estado de implementación en equipos que hospedan los roles de sistema de sitio en una recopilación de preproducción puede aparecer registrado como **No compatible** incluso cuando el cliente se ha implementado correctamente. Cuando se promueve el cliente a la producción, el estado de implementación se registrará correctamente.   
@@ -66,6 +66,6 @@ La implementación de clientes en el sitio lleva tiempo y algunas instalaciones 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

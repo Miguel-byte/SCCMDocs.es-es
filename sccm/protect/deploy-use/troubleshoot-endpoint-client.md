@@ -2,7 +2,7 @@
 title: "Solución de problemas del cliente de Windows Defender o Endpoint Protection | Microsoft Docs"
 description: "Obtenga información sobre cómo solucionar problemas con Windows Defender y Endpoint Protection."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: eda5eb85aada88b77166582bb116cc680b2c0631
+ms.sourcegitcommit: 1432568286605d29683416885d7aa522c649016e
+ms.openlocfilehash: fde190f141fb55462755119b533519d05af3f3c3
 
 
 ---
@@ -29,80 +29,14 @@ ms.openlocfilehash: eda5eb85aada88b77166582bb116cc680b2c0631
 
 Si tiene problemas con Windows Defender o Endpoint Protection, póngase en contacto con el administrador de seguridad para obtener soporte técnico. También puede intentar solucionar los problemas siguientes:  
 
+-   [Actualizar Windows Defender o Endpoint Protection](#update-windows-defender-or-endpoint-protection)  
+-   [Iniciar el servicio de Windows Defender o Endpoint Protection](#starting-windows-defender-or-endpoint-protection-service)  
+-   [Problemas de conexión de Internet](#internet-connection-issues)  
+-   [No se puede corregir una amenaza detectada](#detected-threat-cant-be-remediated)  
 -   [Instalar el cliente de Endpoint Protection](#install-the-endpoint-protection-client)  
 
--   [Actualizar Windows Defender o Endpoint Protection](#update-windows-defender-or-endpoint-protection)  
-
--   [Iniciar el servicio de Windows Defender o Endpoint Protection](#starting-windows-defender-or-endpoint-protection-service)  
-
--   [Problemas de conexión de Internet](#internet-connection-issues)  
-
--   [No se puede corregir una amenaza detectada](#detected-threat-cant-be-remediated)  
-
-##  <a name="install-the-endpoint-protection-client"></a>Instalar el cliente de Endpoint Protection  
-
-> [!NOTE]  
->  En equipos que ejecutan Windows 10, Windows Defender se instala con el sistema operativo.  
-
- **Síntomas**  
-
- La instalación no puede realizarse por una razón desconocida o recibe un mensaje de error con un código de error, como 0x80070643, 0X8007064A, 0x8004FF2E, 0x8004FF01, 0x8004FF07, 0x80070002, 0x8007064C, 0x8004FF00, 0x80070001, 0x80070656, 0x8004FF40, 0xC0000156, 0x8004FF41 0x8004FF0B, 0x8004FF11, 0x80240022, 0x8004FF04, 0x80070660, 0x800106B5, 0x80070715, 0x80070005, 0x8004EE00, 0x8007003, 0x800B0100, 0x8007064E o 0x8007007E.  
-
- Si se está ejecutando Windows XP Service Pack 2 (SP2) en el equipo, puede aparecer alguno de los siguientes mensajes de error:  
-
--   Falta un paquete acumulativo del administrador de filtros en el Asistente para instalación, necesario para completar la instalación.  
-
--   KB914882 Error de instalación, el programa de instalación no puede actualizar los archivos de Windows XP porque el idioma instalado en su sistema es diferente del idioma de actualización.  
-
- **Causa**  
-
- Endpoint Protection no se puede instalar en un equipo que ejecuta otros programas de seguridad. A veces, incluso aunque quite los demás programas de seguridad, no se desinstalan por completo. Para instalar Endpoint Protection, debe contar con una versión original del sistema operativo Windows.  
-
- **Solución**  
-
-> [!IMPORTANT]  
->  Mientras resuelve este problema, tendrá que reiniciar el equipo. Marque esta página (como Favorita) para que resulte más fácil encontrar este tema de nuevo, o imprímala para facilitar su posterior referencia.  
-
-### <a name="step-1-remove-any-existing-security-programs"></a>Paso 1: quitar cualquier programa de seguridad existente  
-
-1.  Desinstale completamente todo programa de seguridad de Internet existente.  
-
-2.  Reinicie su equipo.  
-
-3.  Instale Endpoint Protection de nuevo. Si así no se resuelve el problema continúe en el siguiente paso.  
-
-### <a name="step-2-ensure-that-the-windows-installer-service-is-running"></a>Paso 2: asegurarse de que el servicio Windows Installer está en ejecución  
-
-1.  Haga clic en **Inicio** , busque **services.msc**y luego presione **Entrar**.  
-
-2.  Haga clic con el botón secundario en **Windows Installer**y, a continuación, haga clic en **Iniciar**. Si **Iniciar** no está disponible y las opciones **Detener** y **Reiniciar** sí, esto indica que el servicio ya se ha iniciado.  
-
-3.  En la página **Servicios** , en el menú **Archivo** , haga clic en **Salir**.  
-
-4.  Haga clic en **Iniciar**. En el cuadro **Buscar programas y archivos** , escriba **símbolo del sistema**. Haga clic con el botón secundario en **Símbolo del sistema**y haga clic en **Ejecutar como administrador**.  
-
-5.  Escriba **MSIEXEC /REGSERVER**, y presione **Entrar**.  
-
-    > [!NOTE]  
-    >  No hay ninguna indicación de que este comando ha sido correcto o erróneo.  
-
-6.  Instale Endpoint Protection de nuevo. Si así no se resuelve el problema continúe en el siguiente paso.  
-
-### <a name="step-3-start-windows-in-selective-startup-mode"></a>Paso 3: iniciar Windows en el modo Inicio selectivo  
-
-1.  Haga clic en **Inicio** , busque **msconfig**y luego presione **Entrar**.  
-
-2.  En la pestaña **General** , haga clic en **Inicio selectivo**y desactive la casilla **Cargar elementos de inicio** .  
-
-3.  En la ficha **Servicios** , active la casilla **Ocultar todos los servicios de Microsoft** y, a continuación, desactive todas las casillas de los servicios que permanecen en la lista.  
-
-4.  Haga clic en **Aceptar**y, a continuación, haga clic en **Reiniciar** para reiniciar el equipo.  
-
-5.  Trate de instalar Endpoint Protection de nuevo.  
-
 ##  <a name="update-windows-defender-or-endpoint-protection"></a>Actualizar Windows Defender o Endpoint Protection  
- Windows Defender o  
-      Endpoint Protection funcionan de forma automática con Microsoft Update para garantizar que las definiciones de virus y spyware se mantengan actualizadas.  
+ Windows Defender o Endpoint Protection funciona automáticamente con Microsoft Update para garantizar que las definiciones de virus y spyware se mantengan actualizadas.  
 
  **Síntomas**  
 
@@ -156,15 +90,13 @@ Si tiene problemas con Windows Defender o Endpoint Protection, póngase en conta
 
 5.  Haga clic en **Aceptar**.  
 
-6.  Abra Windows Defender o  
-          Endpoint Protection. Haga clic en la ficha **Actualizar** y, a continuación, haga clic en **Actualizar**.  
+6.  Abrir Windows Defender o Endpoint Protection Haga clic en la ficha **Actualizar** y, a continuación, haga clic en **Actualizar**.  
 
 7.  Si el problema persiste, continúe con el paso siguiente.  
 
 ### <a name="step-3-ensure-that-the-date-and-time-are-set-correctly-on-your-computer"></a>Paso 3: asegurarse de que la fecha y la hora están establecidas correctamente en el equipo  
 
-1.  Abra Windows Defender o  
-          Endpoint Protection.  
+1.  Abrir Windows Defender o Endpoint Protection  
 
 2.  Si el mensaje de error recibido contiene el código 0x80072f8f, el problema se debe probablemente a una fecha incorrecta o al valor de tiempo en el equipo.  
 
@@ -206,9 +138,9 @@ Si tiene problemas con Windows Defender o Endpoint Protection, póngase en conta
 
      **Cd\\**  
 
-     **Cd program files\microsoft security essentials**  
+     **Cd program files\windows defender**  
 
-     **Mpcmdrun â€“removedefinitions â€“all**  
+     **Mpcmdrun -RemoveDefinitions -all**  
 
      **Salir**  
 
@@ -244,7 +176,7 @@ Si tiene problemas con Windows Defender o Endpoint Protection, póngase en conta
 
 -   Cierre todas las aplicaciones y reinicie el equipo.  
 
-### <a name="step-2-make-sure-the-windows-defender-orbr-------endpoint-protection-service-is-set-to-automatic-and-is-started"></a>Paso 2: asegurarse de que el servicio â€œWindows Defender" o<br />      "Endpoint Protection" esté establecido en automático y se ha iniciado  
+### <a name="step-2-make-sure-the-windows-defender-orbr-------endpoint-protection-service-is-set-to-automatic-and-is-started"></a>Paso 2: Asegurarse de que el servicio de "Windows Defender" o<br />      "Endpoint Protection" esté establecido en automático y se haya iniciado  
 
 1.  Haga clic en **Inicio** , busque **services.msc**y luego presione **Entrar**.  
 
@@ -318,6 +250,70 @@ Si tiene problemas con Windows Defender o Endpoint Protection, póngase en conta
 
 -   Si no está seguro del origen del archivo, una de las mejores soluciones es ejecutar un examen completo del equipo. Un examen completo puede tardar tiempo en completarse, pero permite que Windows Defender o Endpoint Protection busque el origen de la infección y la limpie.  
 
+##  <a name="install-the-endpoint-protection-client"></a>Instalar el cliente de Endpoint Protection  
+
+> [!NOTE]  
+>  En equipos que ejecutan Windows 10, Windows Defender se instala con el sistema operativo.  
+
+ **Síntomas**  
+
+ La instalación no puede realizarse por una razón desconocida o recibe un mensaje de error con un código de error, como 0x80070643, 0X8007064A, 0x8004FF2E, 0x8004FF01, 0x8004FF07, 0x80070002, 0x8007064C, 0x8004FF00, 0x80070001, 0x80070656, 0x8004FF40, 0xC0000156, 0x8004FF41 0x8004FF0B, 0x8004FF11, 0x80240022, 0x8004FF04, 0x80070660, 0x800106B5, 0x80070715, 0x80070005, 0x8004EE00, 0x8007003, 0x800B0100, 0x8007064E o 0x8007007E.  
+
+ Si se está ejecutando Windows XP Service Pack 2 (SP2) en el equipo, puede aparecer alguno de los siguientes mensajes de error:  
+
+-   Falta un paquete acumulativo del administrador de filtros en el Asistente para instalación, necesario para completar la instalación.  
+
+-   KB914882 Error de instalación, el programa de instalación no puede actualizar los archivos de Windows XP porque el idioma instalado en su sistema es diferente del idioma de actualización.  
+
+ **Causa**  
+
+ Endpoint Protection no se puede instalar en un equipo que ejecuta otros programas de seguridad. A veces, incluso aunque quite los demás programas de seguridad, no se desinstalan por completo. Para instalar Endpoint Protection, debe contar con una versión original del sistema operativo Windows.  
+
+ **Solución**  
+
+> [!IMPORTANT]  
+>  Mientras resuelve este problema, tendrá que reiniciar el equipo. Marque esta página (como Favorita) para que resulte más fácil encontrar este tema de nuevo, o imprímala para facilitar su posterior referencia.  
+
+### <a name="step-1-remove-any-existing-security-programs"></a>Paso 1: quitar cualquier programa de seguridad existente  
+**Solo Endpoint Protection**
+
+1.  Desinstale completamente todo programa de seguridad de Internet existente.  
+
+2.  Reinicie su equipo.  
+
+3.  Instale Endpoint Protection de nuevo. Si así no se resuelve el problema continúe en el siguiente paso.  
+
+### <a name="step-2-ensure-that-the-windows-installer-service-is-running"></a>Paso 2: asegurarse de que el servicio Windows Installer está en ejecución  
+
+1.  Haga clic en **Inicio** , busque **services.msc**y luego presione **Entrar**.  
+
+2.  Haga clic con el botón secundario en **Windows Installer**y, a continuación, haga clic en **Iniciar**. Si **Iniciar** no está disponible y las opciones **Detener** y **Reiniciar** sí, esto indica que el servicio ya se ha iniciado.  
+
+3.  En la página **Servicios** , en el menú **Archivo** , haga clic en **Salir**.  
+
+4.  Haga clic en **Inicio** y busque **Símbolo del sistema**. Haga clic con el botón secundario en **Símbolo del sistema**y haga clic en **Ejecutar como administrador**.  
+
+5.  Escriba **MSIEXEC /REGSERVER**, y presione **Entrar**.  
+
+    > [!NOTE]  
+    >  No hay ninguna indicación de que este comando ha sido correcto o erróneo.  
+
+6.  Instale Endpoint Protection de nuevo. Si así no se resuelve el problema continúe en el siguiente paso.  
+
+### <a name="step-3-start-windows-in-selective-startup-mode"></a>Paso 3: iniciar Windows en el modo Inicio selectivo  
+
+1.  Haga clic en **Inicio** , busque **msconfig**y luego presione **Entrar**.  
+
+2.  En la pestaña **General** , haga clic en **Inicio selectivo**y desactive la casilla **Cargar elementos de inicio** .  
+
+3.  En la ficha **Servicios** , active la casilla **Ocultar todos los servicios de Microsoft** y, a continuación, desactive todas las casillas de los servicios que permanecen en la lista.  
+
+4.  Haga clic en **Aceptar**y, a continuación, haga clic en **Reiniciar** para reiniciar el equipo.  
+
+5.  Trate de instalar Endpoint Protection de nuevo.  
+
+
+
 ### <a name="see-also"></a>Consulte también  
  [Preguntas más frecuentes sobre el cliente de Endpoint Protection](../../protect/deploy-use/endpoint-protection-client-faq.md)   
 
@@ -325,6 +321,6 @@ Si tiene problemas con Windows Defender o Endpoint Protection, póngase en conta
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

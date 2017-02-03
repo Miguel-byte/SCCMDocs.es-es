@@ -2,7 +2,7 @@
 title: "Planear la migración de clientes | Microsoft Docs"
 description: "Obtenga información sobre las tareas de migración de clientes de una jerarquía de origen a una jerarquía de destino de System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
-ms.openlocfilehash: 11da338af9d7dd4d6f9c5fc1c6c62e277139f852
+ms.sourcegitcommit: ac4576035fda943e38d960dd425d44b7a6ef6a01
+ms.openlocfilehash: b52ca4059dfeed08cabf1f75319da40d6499622f
 
 
 ---
-# <a name="planning-a-client-migration-strategy-in-system-center-configuration-manager"></a>Planear una estrategia de migración de clientes en System Center Configuration Manager
+# <a name="plan-a-client-migration-strategy-in-system-center-configuration-manager"></a>Planear una estrategia de migración de clientes en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
@@ -36,14 +36,14 @@ Para migrar clientes de la jerarquía de origen a una jerarquía de destino de S
 -   [Planear los datos de cumplimiento y de inventario durante la migración](#Planning_for_Inventory_data_migration)  
 
 ##  <a name="a-nameplanningforclientagentmigrationa-plan-to-migrate-clients-to-the-destination-hierarchy"></a><a name="Planning_for_Client_Agent_Migration"></a> Planear la migración de clientes a la jerarquía de destino  
- Cuando se migran clientes de una jerarquía de origen, se actualiza el software cliente en el equipo cliente para coincidir con la versión del producto de la jerarquía de destino:  
+ Cuando se migran clientes de una jerarquía de origen, se actualiza el software cliente en el equipo cliente para coincidir con la versión del producto de la jerarquía de destino.  
 
 -   **Una jerarquía de origen de Configuration Manager 2007:** cuando se migran clientes desde una jerarquía de origen que ejecute una versión compatible de Configuration Manager, el software cliente se actualiza a la versión de cliente para la jerarquía de destino.  
 
 -   **Una jerarquía de origen de System Center 2012 Configuration Manager o versiones posteriores:** cuando se migran clientes entre jerarquías con la misma versión del producto, el software cliente no cambia ni se actualiza. En su lugar, el cliente se reasignará desde la jerarquía de origen a un sitio en la jerarquía de destino.  
 
     > [!NOTE]  
-    >  Si no se admite la migración de la versión del producto de una jerarquía a la jerarquía de destino, actualice todos los sitios y los clientes de la jerarquía de origen a una versión del producto admitida. Después de actualizar la jerarquía de origen a una versión admitida del producto, puede realizar la migración entre jerarquías. Para obtener más información, consulte la sección [Versiones de Configuration Manager admitidas para la migración](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions) del tema [Requisitos previos para la migración en System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
+    >  Si no se admite la migración de la versión del producto de una jerarquía a la jerarquía de destino, actualice todos los sitios y los clientes de la jerarquía de origen a una versión del producto admitida. Después de actualizar la jerarquía de origen a una versión admitida del producto, puede realizar la migración entre jerarquías. Para más información, vea la sección [Versiones de Configuration Manager admitidas para la migración](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions) en [Requisitos previos para la migración en System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
 
 Utilice la siguiente información para planear la migración de clientes:  
 
@@ -51,15 +51,15 @@ Utilice la siguiente información para planear la migración de clientes:
 
 -   Asegúrese de que el dispositivo que ejecuta el software cliente en la jerarquía de origen cumple los requisitos mínimos de hardware y ejecuta un sistema operativo admitido por la versión de Configuration Manager en la jerarquía de destino.  
 
--   Antes de migrar un cliente, ejecute un trabajo de migración para migrar la información que utilizará el cliente en la jerarquía de destino.  
+-   Antes de migrar un cliente, ejecute un trabajo de migración para migrar la información que usará el cliente en la jerarquía de destino.  
 
--   Los clientes que se actualicen conservan su historial de ejecución de implementaciones para evitar que las implementaciones se vuelvan a ejecutar innecesariamente en la jerarquía de destino:  
+-   Los clientes que actualizan conservan su historial de ejecución para las implementaciones. Esto evita que las implementaciones se vuelvan a ejecutar innecesariamente en la jerarquía de destino.  
 
     -   Para los clientes de Configuration Manager 2007, se mantiene el historial de ejecución de anuncios.  
 
     -   Para los clientes de System Center 2012 Configuration Manager o System Center Configuration Manager se mantiene el historial de ejecución de implementaciones.  
 
--   Puede migrar clientes de los sitios de la jerarquía de origen en cualquier orden que elija. Sin embargo, considere la posibilidad de migrar un número limitado de clientes en fases, en lugar de grandes cantidades de clientes de una sola vez. Una migración por fases reduce los requisitos de ancho de banda de red y el procesamiento del servidor cuando cada cliente recién actualizado envía sus datos de cumplimiento y el inventario completo iniciales a su sitio asignado.  
+-   Puede migrar clientes de los sitios de la jerarquía de origen en cualquier orden que elija. Pero considere la posibilidad de migrar un número limitado de clientes en fases, en lugar de migrar grandes cantidades de clientes de una sola vez. Una migración por fases reduce los requisitos de ancho de banda de red y el procesamiento del servidor cuando cada cliente recién actualizado envía sus datos de cumplimiento y el inventario completo iniciales a su sitio asignado.  
 
 -   Al migrar clientes de Configuration Manager 2007 se desinstala el software cliente existente del equipo cliente y se instala el nuevo software cliente.  
 
@@ -105,6 +105,6 @@ No se guardan los datos de cumplimiento de normas ni el inventario de cliente al
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

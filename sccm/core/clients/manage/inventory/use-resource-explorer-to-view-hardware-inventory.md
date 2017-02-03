@@ -2,7 +2,7 @@
 title: Ver el inventario de hardware | Microsoft Docs | Explorador de recursos
 description: Use el Explorador de recursos para ver el inventario de hardware en System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 2cd138b3bbb437d84f0ff7c2aeef869518bd817d
+ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
+ms.openlocfilehash: 6265ee70b70a715862b1651d2f3760bef096ee8a
 
 
 ---
@@ -30,11 +30,11 @@ Use el Explorador de recursos en System Center Configuration Manager para ver in
 > [!NOTE]  
 >  Explorador de recursos no mostrará ningún inventario datos hasta que ha ejecutado un ciclo de inventario de hardware en el cliente se conectan a.  
 
- El Explorador de recursos de Configuration Manager contiene las siguientes secciones relacionadas con el inventario de hardware:  
+ El Explorador de recursos tiene las siguientes secciones relacionadas con el inventario de hardware:  
 
--   **Hardware**: contiene el inventario de hardware más reciente recopilado del dispositivo cliente de Configuration Manager especificado. Puede revisar el artículo de inventario **estado de la estación de trabajo** para detectar la hora y fecha cuando realizó un inventario de hardware por última vez el dispositivo.  
+-   **Hardware**: contiene el inventario de hardware más reciente recopilado del dispositivo cliente especificado.  **Estado de estación de trabajo** tiene la hora y la fecha en la que el dispositivo ha realizado por última vez un inventario de hardware.  
 
--   **Historial de hardware**: contiene un historial de elementos inventariados que han cambiado desde que se realizó el último inventario de hardware. Cada elemento de la lista contiene un nodo **Actual** y uno o más nodos *<fecha>\>*. Puede comparar la información del nodo actual a uno de los nodos históricos para detectar los elementos que han cambiado en el inventario de hardware de los equipos cliente.  
+-   **Historial de hardware**: contiene un historial de elementos inventariados que han cambiado desde que se realizó el último inventario de hardware. Cada elemento contiene un nodo **Actual** y uno o más nodos *<fecha\>*. Puede comparar la información del nodo actual con la de uno de los nodos históricos para detectar los elementos que han cambiado.  
 
     > [!NOTE]  
     >  Configuration Manager conserva el historial de inventario de hardware durante el número de días especificado en la tarea de mantenimiento de sitio **Eliminar historial de inventario antiguo**.  
@@ -44,18 +44,15 @@ Use el Explorador de recursos en System Center Configuration Manager para ver in
 
 ### <a name="how-to-run-resource-explorer-from-the-configuration-manager-console"></a>Ejecución del Explorador de recursos desde la consola de Configuration Manager  
 
-1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
+1.  En la consola de Configuration Manager, pulse **Activos y compatibilidad** > **Dispositivos**, o abra cualquier recopilación que muestre dispositivos.  
 
-2.  En el área de trabajo **Activos y compatibilidad** , haga clic en **Dispositivos** o abra cualquier recopilación que muestre dispositivos.  
+3.  Seleccione el equipo que contiene el inventario que quiere ver y, después, en la pestaña **Inicio** > grupo **Dispositivos**, pulse **Iniciar** >  **Explorador de recursos**.   
 
-3.  Haga clic en el equipo que contiene el inventario que quiere ver y, a continuación, en la pestaña **Inicio** , en el grupo **Dispositivos** , haga clic en **Iniciar** y, a continuación, haga clic en **Explorador de recursos**. El **Resource Explorer** se abrirá la ventana.  
-
-4.  Puede hacer clic con el botón derecho en cualquier elemento del panel derecho de la ventana **Explorador de recursos** y, a continuación, hacer clic en **Propiedades** para abrir el cuadro de diálogo **Propiedades** de *<nombre del elemento\>* que le ayudará a ver la información de inventario recopilada en un formato más legible.  
-
-5.  Cuando haya terminado, cierre la ventana **Explorador de recursos** .  
+4.  Haga clic con el botón derecho en cualquier elemento del panel derecho de la ventana **Explorador de recursos** y pulse **Propiedades** para abrir el cuadro de diálogo **Propiedades** de *<nombre del elemento\>* para ver la información de inventario recopilada en un formato más legible.  
 
 
 
-<!--HONumber=Dec16_HO3-->
+
+<!--HONumber=Jan17_HO1-->
 
 

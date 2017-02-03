@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 21eeba4d35f19930f26ed820295d6f142adae1ac
-ms.openlocfilehash: 6c63d63c5b5a7fc1406027dd9380ea799c1aa318
+ms.sourcegitcommit: d7265aec46474ba7fc317ddb5e20b91b7b134585
+ms.openlocfilehash: 36f6eb3fe48e904adf4d04450906fada9b477246
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Acerca de la configuración de cliente en System Center Configuration Manager
@@ -328,7 +328,11 @@ Muchas de las configuraciones del cliente se explican por sí solas. Aquí se de
     -   Los archivos NOIDMIF deben estar en la carpeta Windows\System32\CCM\Inventory\Noidmif.  
 
     > [!NOTE]  
-    >  Este valor solo está disponible en la configuración predeterminada del cliente.  
+    >  Este valor solo está disponible en la configuración predeterminada del cliente. 
+
+-   **Retraso aleatorio máximo**
+
+    La recopilación de información de hardware es aleatoria hasta dos horas, de manera que la operación no se realiza simultáneamente en todos los clientes. Puede establecer el retraso máximo para limitar el tiempo durante el que tiene lugar la operación.      
 
 ##  <a name="metered-internet-connections"></a>Conexiones a Internet de uso medido  
  Puede administrar la forma en que los equipos cliente de Windows 8 se comunican con los sitios de Configuration Manager cuando usan conexiones a Internet de uso medido. En ocasiones, los proveedores de acceso a Internet cobran según la cantidad de datos que envía y recibe cuando se utiliza una conexión a Internet de uso medido.  
@@ -640,6 +644,6 @@ Muchas de las configuraciones del cliente se explican por sí solas. Aquí se de
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

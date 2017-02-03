@@ -15,8 +15,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 54089ac8aa95154534d010bee8c7e2cbd70d1c7e
-ms.openlocfilehash: 30838ed3ad045f781a748f96c874bf543ea05462
+ms.sourcegitcommit: c92d88517b4e1d54add489a53cd34b0f23be0c4c
+ms.openlocfilehash: 04951b3ed50206941850ddcc893fcf9c9596f89f
 
 
 ---
@@ -28,7 +28,8 @@ En una secuencia de tareas existente para instalar un sistema operativo, agregue
 
 1. Cree un nuevo grupo de secuencia de tareas después de los pasos para capturar archivos y configuraciones y antes de los pasos para instalar el sistema operativo. Por ejemplo, cree un grupo después del grupo **Capturar archivos y configuraciones** denominado **BIOS a UEFI**.
 2. En la pestaña **Opciones** del nuevo grupo, agregue una nueva variable de secuencia de tareas como una condición donde **_SMSTSBootUEFI** **No es igual** a **true**. Esto evita que los pasos del grupo se ejecuten cuando un equipo ya está en modo UEFI.
-![Grupo BIOS a UEFI](../../core/get-started/media/BIOS-to-UEFI-group.png)
+
+   ![Grupo BIOS a UEFI](../../core/get-started/media/BIOS-to-UEFI-group.png)
 3. Debajo del nuevo grupo, agregue el paso de secuencia de tareas **Reiniciar el equipo**. En **Especifique qué desea ejecutar después del reinicio**, seleccione **La imagen de arranque asignada a esta secuencia de tareas** para iniciar el equipo en Windows PE.  
 4. En la pestaña **Opciones**, agregue una variable de secuencia de tareas como una condición donde **_SMSTSInWinPE es igual a false**. Esto evita que este paso se ejecute si el equipo ya está en Windows PE.
 
@@ -36,14 +37,16 @@ En una secuencia de tareas existente para instalar un sistema operativo, agregue
 5. Agregue un paso para iniciar la herramienta de OEM que va a convertir el firmware de BIOS a UEFI. Normalmente será un paso de secuencia de tareas **Ejecutar línea de comandos** con una línea de comandos para iniciar la herramienta de OEM.
 6.  Agregue el paso de secuencia de tareas Formatear y crear particiones en el disco que va a crear particiones en la unidad de disco duro y a aplicarle formato. En el paso, haga lo siguiente:
     1.  Cree la partición FAT32 que se convertirá en UEFI antes de instalar el sistema operativo. Elija **GPT** para **Tipo de disco**.
-    ![Paso Formatear y crear particiones en el disco](../../core/get-started/media/format-and-partition-disk.png)
+
+       ![Paso Formatear y crear particiones en el disco](../media/format-and-partition-disk.png)
     2.  Vaya a las propiedades de la partición FAT32. Escriba **TSUEFIDrive** en el campo **Variable**. Cuando la secuencia de tareas detecte esta variable, se preparará para la transición a UEFI antes de reiniciar el equipo.
-    ![Propiedades de la partición](../../core/get-started/media/partition-properties.png)
+
+       ![Propiedades de la partición](../../core/get-started/media/partition-properties.png)
     3. Cree una partición NTFS que el motor de secuencia de tareas use para guardar su estado y para almacenar archivos de registro.
-6.  Agregue el paso de secuencia de tareas **Reiniciar el equipo**. En **Especifique qué desea ejecutar después del reinicio**, seleccione **La imagen de arranque asignada a esta secuencia de tareas** para iniciar el equipo en Windows PE.  
+7.  Agregue el paso de secuencia de tareas **Reiniciar el equipo**. En **Especifique qué desea ejecutar después del reinicio**, seleccione **La imagen de arranque asignada a esta secuencia de tareas** para iniciar el equipo en Windows PE.  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

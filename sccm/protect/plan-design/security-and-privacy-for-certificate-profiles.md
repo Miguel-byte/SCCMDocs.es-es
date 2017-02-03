@@ -2,7 +2,7 @@
 title: Seguridad y privacidad de perfiles de certificado | Microsoft Docs
 description: "Obtenga información sobre los procedimientos recomendados de seguridad para administrar perfiles de certificado de usuarios y dispositivos en System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/28/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 8673ca3f556feda31aa29653461cd4fbed01409a
+ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
+ms.openlocfilehash: c51787ad3fa0bdb285017cfab1ca6931afba9ea6
 
 
 ---
@@ -26,9 +26,8 @@ ms.openlocfilehash: 8673ca3f556feda31aa29653461cd4fbed01409a
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Este tema contiene información sobre la seguridad y privacidad de los perfiles de certificado en System Center Configuration Manager.  
 
-##  <a name="a-namebkmksecurityremoteconnectionsa-security-best-practices-for-certificate-profiles"></a><a name="BKMK_Security_RemoteConnections"></a> Procedimientos recomendados de seguridad para perfiles de certificado  
+##  <a name="security-best-practices-for-certificate-profiles"></a>Recomendaciones de seguridad para perfiles de certificado  
  Siga las siguientes recomendaciones de seguridad al administrar perfiles de certificado para usuarios y dispositivos.  
 
 |Práctica recomendada de seguridad|Más información|  
@@ -36,12 +35,12 @@ Este tema contiene información sobre la seguridad y privacidad de los perfiles 
 |Identifique y siga todas las recomendaciones de seguridad para el Servicio de inscripción de dispositivos de red, como la configuración del sitio web de Servicio de inscripción de dispositivos de red en Internet Information Services (IIS) para que requiera SSL y omita certificados de cliente.|Consulte [Network Device Enrollment Service Guidance (Guía del Servicio de inscripción de dispositivos de red)](http://go.microsoft.com/fwlink/p/?LinkId=309016) en la biblioteca de Servicios de certificados de Active Directory de TechNet.|  
 |Al configurar los perfiles de certificado SCEP, elija las opciones más seguras que puedan admitir los dispositivos y la infraestructura.|Identifique, implemente y siga las recomendaciones de seguridad indicadas para los dispositivos y la infraestructura.|  
 |Especifique manualmente la afinidad de dispositivo del usuario en lugar de permitir a los usuarios identificar su dispositivo primario. Además, no habilite la configuración basada en el uso.|Si hace clic en **Permitir la inscripción de certificados solo en el dispositivo primario de los usuarios** en un perfil de certificado de SCEP, no considere la información recopilada de los usuarios ni del dispositivo como relevante. Si implementa perfiles de certificado de SCEP con esta configuración y un usuario administrativo confiable no especifica la afinidad de dispositivo de usuario, es posible que se conceda a usuarios no autorizados certificados de autenticación y privilegios elevados.<br /><br /> **Nota:** Si habilita la configuración basada en el uso, esta información se recopilará mediante mensajes de estado que no están protegidos por System Center Configuration Manager. Para mitigar esta amenaza, utilice la firma SMB o IPsec entre equipos cliente y el punto de administración.|  
-|No agregue permisos de lectura ni de inscripción para los usuarios a las plantillas de certificado ni configure el punto de Registro de certificado para omitir la comprobación de la plantilla de certificado.|Aunque System Center Configuration Manager admita la comprobación adicional si agrega los permisos de seguridad de Leer e Inscribir para los usuarios, y usted pueda configurar el punto de registro de certificados para que omita esta comprobación si no es posible la autenticación, no se recomienda ninguna de estas configuraciones. Para más información, vea [Planificación de permisos de plantilla de certificado para perfiles de certificado en System Center Configuration Manager](../../protect/plan-design/planning-for-certificate-template-permissions.md).|  
+|No agregue permisos de lectura ni de inscripción para los usuarios a las plantillas de certificado ni configure el punto de Registro de certificado para omitir la comprobación de la plantilla de certificado.|Aunque Configuration Manager admita la comprobación adicional si agrega los permisos de seguridad de Leer e Inscribir para los usuarios, y usted pueda configurar el punto de registro de certificados para que omita esta comprobación si no es posible la autenticación, no se recomienda ninguna de estas configuraciones. Para más información, vea [Planificación de permisos de plantilla de certificado para perfiles de certificado en System Center Configuration Manager](../../protect/plan-design/planning-for-certificate-template-permissions.md).|  
 
 ## <a name="privacy-information-for-certificate-profiles"></a>Información de privacidad de los perfiles de certificado  
  Puede utilizar perfiles de certificado para implementar certificados de cliente y de entidad de certificación (CA) raíz, y evaluar si dichos dispositivos son compatibles tras la aplicación de los perfiles. El punto de administración envía información de compatibilidad al servidor de sitio y System Center Configuration Manager almacena la información en la base de datos del sitio. La información de cumplimiento incluye propiedades del certificado como el nombre del firmante y la huella digital. La información se cifra cuando los dispositivos la envían al punto de administración, pero no se almacena en formato cifrado en la base de datos del sitio. La base de datos guarda la información hasta que la tarea de mantenimiento **Eliminar datos antiguos de administración de configuración** del sitio la elimina después de un intervalo predeterminado de 90 días. Puede configurar el intervalo de eliminación. La información de compatibilidad no se envía a Microsoft.  
 
- Los perfiles de certificado usan la información que recopila System Center Configuration Manager mediante la detección. Para obtener más información sobre la información de privacidad de la detección, consulte la sección **Privacy Information for Discovery** (Información de privacidad de la detección) del tema [Security and privacy for System Center Configuration Manager](../../core/plan-design/security/security-and-privacy.md) (Seguridad y privacidad de System Center Configuration Manager).  
+ Los perfiles de certificado usan la información que recopila Configuration Manager mediante la detección. Para obtener más información sobre la información de privacidad de la detección, consulte la sección **Privacy Information for Discovery** (Información de privacidad de la detección) del tema [Security and privacy for System Center Configuration Manager](../../core/plan-design/security/security-and-privacy.md) (Seguridad y privacidad de System Center Configuration Manager).  
 
 > [!NOTE]  
 >  Los certificados emitidos para usuarios o dispositivos pueden permitir el acceso a información confidencial.  
@@ -52,6 +51,6 @@ Este tema contiene información sobre la seguridad y privacidad de los perfiles 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

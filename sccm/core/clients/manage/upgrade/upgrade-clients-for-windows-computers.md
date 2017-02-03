@@ -2,7 +2,7 @@
 title: 'Actualizar clientes | Microsoft Docs | Windows '
 description: Actualice clientes en equipos Windows en System Center Configuration Manager.
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 01/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: 8a3028a562aa657ea39a0f5ff763311db6def00a
+ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
+ms.openlocfilehash: a35724a5b839b47904c46361709f248e432eff1e
 
 
 ---
@@ -80,7 +80,7 @@ Puede actualizar el cliente en equipos Windows mediante los métodos de instalac
 
 3.  En la pestaña **Inicio** , en el grupo **Sitios** , haga clic en **Configuración de jerarquía**.  
 
-4.  En la pestaña **Actualización de cliente** del cuadro de diálogo **Propiedades de configuración de jerarquía** , revise la versión y la fecha del cliente de producción y asegúrese de que sea la versión que quiere usar para actualizar equipos Windows.  Si no es la versión de cliente que esperaba ver, quizá sea necesario promover el cliente de preproducción a producción. Para obtener más información, consulte [Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager](../../../../core/clients/manage/upgrade/test-client-upgrades.md).  
+4.  En la pestaña **Actualización de cliente** del cuadro de diálogo **Propiedades de configuración de jerarquía** , revise la versión y la fecha del cliente de producción y asegúrese de que sea la versión que quiere usar para actualizar equipos Windows.  Si no es la versión de cliente que esperaba ver, quizá sea necesario promover el cliente de preproducción a producción. Para obtener más información, vea [Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager](../../../../core/clients/manage/upgrade/test-client-upgrades.md).  
 
 5.  Haga clic en **Actualizar todos los clientes en la jerarquía con un cliente de producción** y haga clic en **Aceptar** en el cuadro de diálogo de confirmación.  
 
@@ -101,6 +101,6 @@ Puede actualizar el cliente en equipos Windows mediante los métodos de instalac
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -2,7 +2,7 @@
 title: "Aspectos básicos de System Center Configuration Manager | Microsoft Docs"
 description: "Obtenga información sobre los conceptos básicos de System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,28 +17,28 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: b808e9089aabe3895892ecf3caf1610478361172
+ms.sourcegitcommit: 9725fd25dc6584005fb3c2c1538d00513c3945a5
+ms.openlocfilehash: 662ac092746f37c354e5accf288e3375c16b9c72
 
 ---
 # <a name="fundamentals-of-system-center-configuration-manager"></a>Aspectos básicos de System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Si no está familiarizado con System Center Configuration Manager, lea los temas fundamentales para obtener información sobre los conceptos básicos de Configuration Manager antes de ejecutar el programa de instalación para instalar su primer sitio. Si está familiarizado con Configuration Manager, puede profundizar en el tema, y se recomienda que comience por [What's new in System Center Configuration Manager (Novedades de System Center Configuration Manager)](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).  
+Si no está familiarizado con System Center Configuration Manager, lea los temas fundamentales para obtener información sobre los conceptos básicos de Configuration Manager antes de ejecutar el programa de instalación para instalar el primer sitio. Si está familiarizado con Configuration Manager, puede empezar directamente. Se recomienda que empiece con [Novedades de System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).  
 
  Para obtener información sobre los sistemas operativos y los entornos compatibles, los requisitos de hardware y la información de capacidad, consulte [Supported configurations for System Center Configuration Manager (Configuraciones compatibles con System Center Configuration Manager)](../../core/plan-design/configs/supported-configurations.md).  
 
  Al implementar Configuration Manager, implementa uno o varios sitios:  
 
--   **Si se implementan varios sitios**, los sitios establecen relaciones de elementos secundarios a elementos primarios que se denominan colectivamente jerarquía. La jerarquía permite administrar de forma centralizada un mayor número de sitios y dispositivos.  Los datos y la información fluyen de forma descendente por la jerarquía hasta llegar a los dispositivos que se administran. La información sobre dispositivos y los resultados de las solicitudes y las tareas de configuración fluyen de forma ascendente en la jerarquía.  
+-   **Si se implementan varios sitios**, los sitios establecen relaciones de elementos secundarios a elementos primarios que se denominan colectivamente jerarquía. Use una jerarquía para administrar de forma centralizada un mayor número de sitios y dispositivos.  Los datos y la información fluyen de forma descendente por la jerarquía hasta llegar a los dispositivos que administra. La información sobre dispositivos y los resultados de las solicitudes y las tareas de configuración fluyen de forma ascendente en la jerarquía.  
 
--   **Si se implementa un único sitio** , también se denomina jerarquía.  
+-   **Si se implementa un único sitio**, también se denomina jerarquía.  
 
  Algunas opciones y tareas de configuración se aplican a todos los sitios de una jerarquía, mientras que otras se aplican a sitios individuales.  
 
-
-**En los temas siguientes se explican los conceptos fundamentales de System Center Configuration Manager:**  
+## <a name="fundamental-concepts-for-system-center-configuration-manager"></a>Conceptos básicos de System Center Configuration Manager
+Vea los temas siguientes para obtener información acerca de los conceptos básicos de System Center Configuration Manager:  
 
 -   [Fundamentals of sites and hierarchies for System Center Configuration Manager (Aspectos básicos de sitios y jerarquías para System Center Configuration Manager)](../../core/understand/fundamentals-of-sites-and-hierarchies.md)  
 
@@ -50,6 +50,6 @@ Si no está familiarizado con System Center Configuration Manager, lea los temas
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

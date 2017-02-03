@@ -1,8 +1,8 @@
 ---
 title: "Declaración de privacidad de System Center Configuration Manager: biblioteca de cmdlets de Configuration Manager | Microsoft Docs"
-description: "Conozca cómo Microsoft recopila y usa datos relacionados con la biblioteca de cmdlets de System Center Configuration Manager."
+description: "Obtenga información sobre cómo Microsoft recopila y usa datos relacionados con la biblioteca de cmdlets de System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 767d0594eb871462df038997ea3b7e29615e05f7
-ms.openlocfilehash: 10d8e8948d66a6b9b74e16a02cfbfc4ced66596c
+ms.sourcegitcommit: 3d6799ad46e0fe69333aba0662f18c9153c17bda
+ms.openlocfilehash: 3936075555cc0bb370ea6e42c7e720b864d565f7
 
 
 ---
@@ -30,16 +30,16 @@ Esta declaración de privacidad cubre las características de la biblioteca de c
 
 ## <a name="usage-data"></a>Datos de uso  
  **Qué hace esta característica:**   
-la biblioteca de cmdlets de System Center Configuration Manager le permite administrar una jerarquía de Configuration Manager con scripts y cmdlets de Windows PowerShell. La biblioteca de cmdlets recopila información acerca de cómo usar los cmdlets incluidos en la biblioteca con el fin de identificar tendencias y patrones de uso.  La biblioteca de cmdlets también recopila los tipos y números de errores que se producen al usar los cmdlets.  
+la biblioteca de cmdlets de System Center Configuration Manager le permite administrar una jerarquía de Configuration Manager con scripts y cmdlets de Windows PowerShell. La biblioteca de cmdlets recopila información sobre cómo usar los cmdlets de la biblioteca para identificar tendencias y patrones de uso. La biblioteca de cmdlets también recopila los tipos y números de errores que se producen al usar los cmdlets.  
 
  **Información recopilada, procesada o transmitida:**   
-los datos de uso recopilados incluyen el inicio, detención y terminación de cmdlets; la ejecución de cmdlets desusados; y las métricas de actividad para operaciones del proveedor de SMS relacionadas con los cmdlets. Esta información no contiene datos que identifiquen personalmente al usuario.  La información de errores recopilada incluye errores devueltos por los cmdlets y los detalles de errores de los errores de excepción. Algunos informes de detalles de error podrían contener identificadores individuales, como un número de serie para un dispositivo que está conectado al equipo. La biblioteca de cmdlets filtra y anonimiza la información contenida en los informes de errores para quitar los identificadores individuales antes de transmitirlos a Microsoft.  
+Los datos de uso recopilados incluyen el inicio, detención y terminación de cmdlets, la ejecución de cmdlets desusados y las métricas de actividad para operaciones del proveedor de Systems Management Server (SMS) relacionadas con los cmdlets. Esta información no contiene datos que identifiquen personalmente al usuario.  La información de errores recopilada incluye errores devueltos por los cmdlets y los detalles de error de los errores de excepción. Es posible que algunos informes de detalles de error contengan identificadores individuales, como un número de serie para un dispositivo que está conectado al equipo. La biblioteca de cmdlets filtra y anonimiza la información de los informes de errores para quitar los identificadores individuales antes de transmitirlos a Microsoft.  
 
  **Uso de la información:**   
 usamos esta información para mejorar la calidad, la seguridad y la integridad de los productos y servicios que ofrecemos.  
 
- **Elección y control:**   
-esta característica de Datos de uso está habilitada de forma predeterminada. La biblioteca de cmdlets de System Center Configuration Manager incluye dos claves de registro para controlar esta funcionalidad.  
+ **Opción/control:**   
+esta característica de datos de uso está habilitada de forma predeterminada. La biblioteca de cmdlets de System Center Configuration Manager incluye dos claves del Registro que controlan esta característica.  
 
  Para dejar de participar totalmente tiene que establecer estos dos valores clave del registro, uno para cada uno de los proveedores de seguimiento de eventos para Windows (ETW):  
 
@@ -49,10 +49,10 @@ esta característica de Datos de uso está habilitada de forma predeterminada. L
 
  Los cambios a la configuración de datos de uso son específicos para el equipo en el que se realizan.  
 
- Para obtener más información acerca de cómo configurar Datos de uso (recopilación), consulte la [documentación de la biblioteca de cmdlets de System Center Configuration Manager](https://technet.microsoft.com/en-us/library/dn958404.aspx).   
+ Para más información sobre cómo configurar datos de uso (recopilación), vea la [documentación de la biblioteca de cmdlets de System Center Configuration Manager](https://technet.microsoft.com/en-us/library/dn958404.aspx).   
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

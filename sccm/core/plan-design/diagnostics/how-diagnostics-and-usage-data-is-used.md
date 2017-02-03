@@ -2,7 +2,7 @@
 title: "Uso de datos de diagnóstico | Microsoft Docs"
 description: "Obtenga información sobre cómo Microsoft usa los datos de uso y diagnóstico que System Center Configuration Manager recopila."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: aa0ee7544e348025a80d32b4a816de6dbec31d7f
+ms.sourcegitcommit: 24a233516058e645df2a43623855665b97b041b0
+ms.openlocfilehash: 9864f6ba7b9a2211c99b1a5d9ebd582e01ccfeb6
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: aa0ee7544e348025a80d32b4a816de6dbec31d7f
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Los datos de uso y diagnóstico recopilados para System Center Configuration Manager proporcionan información casi inmediata a Microsoft sobre cómo funciona (o no) el producto, y se usan para ajustar las actualizaciones futuras. También podemos ver datos de configuración que nos ayudan a diseñar y probar las configuraciones que están en producción. Por ejemplo:  
+Los datos de uso y diagnóstico recopilados por System Center Configuration Manager proporcionan información casi inmediata a Microsoft sobre cómo funciona el producto y se usa para ajustar las actualizaciones futuras. También podemos ver datos de configuración que nos ayudan a diseñar y probar las configuraciones que están en producción. Por ejemplo:  
 
 -   Las versiones de servidor de Windows que usan los servidores de sitio  
 
@@ -43,19 +43,19 @@ Reviste la misma importancia la forma en que no se usan los datos de uso y diagn
 
 -   Publicidad basada en los datos disponibles, como el uso de características o la ubicación geográfica (zona horaria)  
 
-##  <a name="a-namebkmkimprovea-examples-of-how-diagnostics-and-usage-data-is-improving-the-product"></a><a name="bkmk_improve"></a> Ejemplos de cómo los datos de uso y diagnóstico mejoran el producto  
-Microsoft utiliza los datos disponibles para mejorar el producto. Estos son algunos ejemplos de ello:  
+##  <a name="a-namebkmkimprovea-examples-of-how-diagnostics-and-usage-data-improves-the-product"></a><a name="bkmk_improve"></a> Ejemplos de cómo los datos de uso y diagnóstico mejoran el producto  
+Microsoft utiliza los datos disponibles para mejorar el producto. Estos son algunos ejemplos:  
 
 -   **Compatibilidad revisada con sistemas operativos de servidor anteriores:**  
 
-     La compatibilidad inicial que ofrecía la rama actual de System Center Configuration Manager incluía un límite en la escala de tiempo del soporte técnico para Windows Server 2008 R2. Después de examinar los datos de uso de los clientes que habían actualizado a la rama actual de Configuration Manager, se ha identificado la necesidad de revisar y extender esta escala de tiempo para dar soporte al gran número de clientes que aún usan este sistema operativo del servidor para hospedar servidores de sitio y roles de sistema de sitio.  
+     La compatibilidad inicial que ofrecía la rama actual de System Center Configuration Manager limitaba la escala de tiempo del soporte técnico para Windows Server 2008 R2. Después de examinar los datos de uso de los clientes que habían actualizado a la rama actual de Configuration Manager, se identificó la necesidad de revisar y extender esta escala de tiempo para dar soporte a los clientes que aún usan este sistema operativo del servidor para hospedar servidores de sitio y roles de sistema de sitio.  
 
 -   **Comprobaciones mejoradas de requisitos previos:**  
 
-     En función de los datos de uso, se han mejorado las comprobaciones de requisitos previos para instalar una actualización, a fin de quitar reglas obsoletas, incorporar casos adicionales y, en determinados casos, corregir algunos problemas automáticamente.  
+     En función de los datos de uso, se han mejorado las comprobaciones de requisitos previos para instalar una actualización, a fin de quitar reglas obsoletas, incorporar casos adicionales y, en casos adicionales, corregir algunos problemas de forma automática.  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

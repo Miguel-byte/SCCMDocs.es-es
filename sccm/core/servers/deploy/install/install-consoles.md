@@ -1,8 +1,8 @@
 ---
-title: Instalar consolas | Microsoft Docs
-description: "Obtenga información sobre la instalación de las consolas de Configuration Manager para conectarse a un sitio de administración central o a un sitio primario."
+title: Instalar consola | Microsoft Docs
+description: "Obtenga información sobre la instalación de la consola de Configuration Manager para conectarse a un sitio de administración central o a un sitio primario."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,81 +16,80 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: e3bc8341b384be975098d1b9d7824ef117a47ccb
+ms.sourcegitcommit: b6b47fd1f56780a40c96b5e228046b41fe3a9a47
+ms.openlocfilehash: 88ecbc48fd03ce988f04408d0378844cbed1de2b
 
 ---
-# <a name="install-system-center-configuration-manager-consoles"></a>Instalar las consolas de System Center Configuration Manager
+# <a name="install-the-system-center-configuration-manager-console"></a>Instalar la consola de System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-
-Los usuarios administrativos usan la consola de System Center Configuration Manager para administrar el entorno de Configuration Manager. Cada consola de Configuration Manager puede conectarse a un sitio de administración central o a un sitio primario. No puede conectar una consola de Configuration Manager a un sitio secundario.
-
+Los administradores usan la consola de System Center Configuration Manager para administrar el entorno de Configuration Manager. Cada consola de Configuration Manager puede conectarse a un sitio de administración central o a un sitio primario. No puede conectar una consola de Configuration Manager a un sitio secundario.
 
 > [!NOTE]  
->  Los objetos que se muestran para el usuario administrativo que ejecuta la consola dependen de los derechos que tenga asignados. Para obtener más información sobre la administración basada en roles, consulte [Fundamentals of role-based administration for System Center Configuration Manager (Aspectos básicos de la administración basada en roles de System Center Configuration Manager)](../../../../core/understand/fundamentals-of-role-based-administration.md).  
+>  Los objetos que ve un administrador que ejecuta la consola dependen de los permisos asignados a su cuenta de usuario. Para obtener más información sobre la administración basada en roles, consulte [Fundamentals of role-based administration for System Center Configuration Manager (Aspectos básicos de la administración basada en roles de System Center Configuration Manager)](../../../../core/understand/fundamentals-of-role-based-administration.md).  
 
- Puede instalar la consola de Configuration Manager durante la instalación del servidor de sitio en el Asistente para instalación, o ejecutar la aplicación independiente.  
+ Puede instalar la consola de Configuration Manager durante la instalación del servidor de sitio mediante el Asistente para instalación o puede ejecutar una aplicación de instalación independiente que use al Asistente para instalación.  
 
- Use el siguiente procedimiento para instalar una consola de Configuration Manager mediante una aplicación independiente.  
+ Use el siguiente procedimiento para instalar una consola de Configuration Manager mediante la aplicación independiente.  
 
-## <a name="to-install-a-configuration-manager-console"></a>Para instalar una consola de Configuration Manager  
+## <a name="to-install-the-configuration-manager-console-by-using-the-setup-wizard"></a>Para instalar la consola de Configuration Manager mediante el Asistente para instalación  
 
-1.  Compruebe que el usuario administrativo que ejecuta la aplicación de la consola de Configuration Manager tiene los siguientes derechos de seguridad administrativos:  
+1.  Compruebe que se cumplen estos requisitos:  
 
-    -   Derechos de**Administrador local** en el equipo en el que se ejecutará la consola.  
+    -  Tiene derechos de **Administrador local** en el equipo en el que se ejecutará la consola.  
 
-    -   Permiso de**Lectura** para la ubicación de los archivos de instalación de la consola de Configuration Manager.  
+    -   Tiene permisos de **Lectura** para la ubicación de los archivos de instalación de la consola de Configuration Manager.  
 
-2.  Examine una de las siguientes ubicaciones:  
+2.  Vaya a una de estas ubicaciones:  
 
-    -   Desde los medios de origen de Configuration Manager, vaya a **&lt;ConfigMgrSourceFiles\>\Smssetup\Bin\I386**.  
+    -   En el servidor de sitio, vaya a **<*ruta de instalación del servidor de sitio de Configuration Manager*> \Tools\ConsoleSetup**.  
 
-    -   En el servidor de sitio, vaya a **&lt;ConfigMgrSiteServerInstallationPath\>\Tools\ConsoleSetup**.  
+    -   Desde los medios de origen de Configuration Manager, vaya a **<*archivos de origen de Configuration Manager*>\Smssetup\Bin\I386**.  
 
     > [!TIP]  
-    >  Como procedimiento recomendado, inicie la instalación de la consola de Configuration Manager desde un servidor de sitio, en lugar de hacerlo desde los medios de instalación de System Center Configuration Manager. El método de instalación de servidor de sitio copia los archivos de instalación de la consola de Configuration Manager y los paquetes de idiomas admitidos para el sitio en la subcarpeta **Tools\ConsoleSetup**. Si instala la consola de Configuration Manager desde los medios de instalación, siempre se instalará la versión en inglés, independientemente de los idiomas admitidos en el servidor de sitio o la configuración de idioma del sistema operativo que se ejecuta en el equipo. Opcionalmente, puede copiar la carpeta **ConsoleSetup** en una ubicación alternativa para iniciar la instalación.  
+    >  Como procedimiento recomendado, inicie la instalación de la consola de Configuration Manager desde un servidor de sitio, en lugar de hacerlo desde los medios de instalación de System Center Configuration Manager. El método de instalación del servidor de sitio copia los archivos de instalación de la consola de Configuration Manager y los paquetes de idiomas admitidos para el sitio en la subcarpeta **Tools\ConsoleSetup**. Instalar la consola de Configuration Manager desde los medios de instalación siempre instalará la versión en inglés, independientemente de los idiomas admitidos en el servidor de sitio o la configuración de idioma del sistema operativo que se ejecuta en el equipo. Opcionalmente, puede copiar la carpeta **ConsoleSetup** en una ubicación alternativa para iniciar la instalación.
 
-3.  Haga doble clic en **consolesetup.exe**. Se abre el Asistente para instalación de la consola de Configuration Manager.  
+3.  Para abrir el Asistente para instalación de la consola de Configuration Manager, haga doble clic en **consolesetup.exe**.  
 
     > [!IMPORTANT]  
-    >  Instale siempre la consola de Configuration Manager mediante consolesetup.exe. Aunque la consola de Configuration Manager se puede instalar ejecutando AdminConsole.msi, este método no realiza comprobaciones de dependencia ni de requisitos previos, y la instalación podría no realizarse correctamente.  
+    >  Instale siempre la consola de Configuration Manager mediante consolesetup.exe. Aunque la consola de Configuration Manager se puede instalar ejecutando adminconsole.msi, este método no realiza comprobaciones de dependencia ni de requisitos previos, y es posible que la instalación no se realice correctamente.  
 
-4.  En la página inicial, haga clic en **Siguiente**.  
+4.  En el asistente, haga clic en **Siguiente**.  
 
-5.  En la página **Servidor de sitio**, especifique el nombre de dominio completo (FQDN) del servidor de sitio al que se conectará la consola de Configuration Manager.  
+5.  En la página **Servidor de sitio**, escriba el nombre de dominio completo (FQDN) del servidor de sitio al que se conectará la consola de Configuration Manager.  
 
-6.  En la página **Carpeta de instalación**, especifique la carpeta de instalación para la consola de Configuration Manager. La ruta de la carpeta no debe contener espacios finales ni caracteres Unicode.  
+6.  En la página **Carpeta de instalación**, escriba la carpeta de instalación para la consola de Configuration Manager. La ruta de la carpeta no debe contener espacios finales ni caracteres Unicode.  
 
-7.  En la página **Programa para la mejora de la experiencia del usuario** , elija si desea participar en dicho programa.  
+7.  En la página **Programa para la mejora de la experiencia del usuario**, elija si quiere participar en dicho programa.  
 
 8.  En la página **Listo para instalar**, haga clic en **Instalar** para instalar la consola de Configuration Manager.  
 
-## <a name="to-install-a-configuration-manager-console-from-a-command-prompt"></a>Para instalar una consola de Configuration Manager desde el símbolo del sistema  
+## <a name="to-install-the-configuration-manager-console-from-a-command-prompt"></a>Para instalar la consola de Configuration Manager desde el símbolo del sistema  
 
-1.  En el servidor desde el que instala la consola de Configuration Manager, abra una ventana del símbolo del sistema y examine una de las siguientes ubicaciones:  
+1.  En el servidor desde el que instala la consola de Configuration Manager, abra una ventana del símbolo del sistema y vaya a una de las siguientes ubicaciones:  
 
-    -   **&lt;ConfigMgrSiteServerInstallationPath\>\Tools\ConsoleSetup**  
+    -   **<*ruta de instalación del servidor de sitio de Configuration Manager*> \Tools\ConsoleSetup**  
 
-    -   **&lt;ConfigMgrInstallationMedia\>\SMSSETUP\BIN\I386**  
+    -   **<*medios de instalación de Configuration Manager*>\SMSSETUP\BIN\I386**  
 
     > [!TIP]  
-    >  Al instalar una consola de Configuration Manager desde el símbolo del sistema, siempre se instala la versión en inglés, independientemente de la configuración de idioma del sistema operativo que se ejecute en el equipo. Para instalar la consola de Configuration Manager en otro idioma, use el procedimiento anterior.  
+    >  Al instalar la consola de Configuration Manager desde el símbolo del sistema, siempre se instala la versión en inglés, independientemente de la configuración de idioma del sistema operativo que se ejecute en el equipo. Para instalar la consola de Configuration Manager en un idioma distinto del inglés, debe [instalar la consola de Configuration Manager mediante el Asistente para instalación](#to-install-the-configuration-manager-console-by-using-the-setup-wizard).  
 
-2.  Escriba **consolesetup.exe** y elija una de las siguientes opciones de la línea de comandos.  
+2.  En el símbolo del sistema, escriba **consolesetup.exe**. Elija una de las siguientes opciones de la línea de comandos.  
 
 |  .     | Descripción     |
   | :------------- | :------------- |
   |/q|Instala la consola de Configuration Manager desatendida. Las opciones **EnableSQM**, **TargetDir**y **DefaultSiteServerName** son obligatorias si usa esta opción.|  
   |/uninstall|Desinstala la consola de Configuration Manager. Primero debe especificar esta opción cuando la use con la opción **/q** .|  
-  |LangPackDir|Especifica la ruta de acceso a la carpeta que contiene los archivos de idioma. Puede usar el **Descargador del programa de instalación** para descargar los archivos de idioma. Si no utiliza esta opción, el programa de instalación busca la carpeta de idioma en la carpeta actual. Si no se encuentra la carpeta de idioma, el programa de instalación continúa con la instalación únicamente de la versión en inglés. Para obtener más información, consulte [Descargador del programa de instalación](/sccm/core/servers/deploy/install/setup-downloader).|  
+  |LangPackDir|Especifica la ruta de acceso a la carpeta que contiene los archivos de idioma. Puede usar el **Descargador del programa de instalación** para descargar los archivos de idioma. Si no utiliza esta opción, el programa de instalación busca la carpeta de idioma en la carpeta actual. Si no se encuentra la carpeta de idioma, el programa de instalación continúa con la instalación únicamente de la versión en inglés. Para obtener más información, consulte [Descargador del programa de instalación](setup-downloader.md).|  
   |TargetDir|Especifica la carpeta de instalación para instalar la consola de Configuration Manager. Esta opción es obligatoria si usa la opción **/q** .|  
-  |EnableSQM|Especifica si se va a participar en el Programa para la mejora de la experiencia del usuario (CEIP). Utilice un valor de 1 para participar en el Programa para la mejora de la experiencia del usuario, y un valor de 0 para no participar. Esta opción es obligatoria si usa la opción **/q** .|  
+  |EnableSQM|Especifica si se va a participar en el Programa para la mejora de la experiencia del usuario (CEIP). Use un valor de **1** para unirse al CEIP y un valor de **0** para no unirse al programa. Esta opción es obligatoria si usa la opción **/q** .|  
   |DefaultSiteServerName|Especifica el FQDN del servidor de sitio al que se conecta la consola cuando se abre. Esta opción es obligatoria si usa la opción **/q** .|  
 
 
-  **Ejemplos de uso:**  
+  **Ejemplos:**
+
   -  **consolesetup.exe /q TargetDir="D:\Program Files\ConfigMgr" EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com**  
 
   -  **consolesetup.exe /q LangPackDir=C:\Downloads\ConfigMgr TargetDir="D:\Program Files\ConfigMgr" Console EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com**  
@@ -99,6 +98,6 @@ Los usuarios administrativos usan la consola de System Center Configuration Mana
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

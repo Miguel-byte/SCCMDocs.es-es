@@ -1,7 +1,7 @@
 ---
 title: "Planear la puerta de enlace de administración en la nube | Microsoft Docs"
 description: 
-ms.date: 11/22/2016
+ms.date: 12/19/2016
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
@@ -10,8 +10,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1f8fbd8a16548ab2c34f5d3dac2b439f3908cea9
-ms.openlocfilehash: e6befef692518a5622250af1c71d517b435f9058
+ms.sourcegitcommit: 1df2d8bcd73633ac1d37cc3ef31343be9c5bc95d
+ms.openlocfilehash: 6e2895565e868eb80a8f4f4b46b8a28eb4961e28
 
 ---
 
@@ -19,11 +19,11 @@ ms.openlocfilehash: e6befef692518a5622250af1c71d517b435f9058
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-A partir de la versión 1610, la puerta de enlace de administración en la nube proporciona una manera sencilla de administrar clientes de Configuration Manager en Internet. El servicio de puerta de enlace de administración en la nube, que se implementa en Microsoft Azure y exige una suscripción de Azure, se conecta a la infraestructura local de Configuration Manager con un nuevo rol denominado punto de conexión de la puerta de enlace de administración en la nube. Una vez implementado y configurado por completo, los clientes podrán acceder a los roles de sistema de sitio locales de Configuration Manager independientemente de si están conectados a la red interna privada o a Internet.
+A partir de la versión 1610, la puerta de enlace de administración en la nube proporciona una manera sencilla de administrar clientes de Configuration Manager en Internet. El servicio de puerta de enlace de administración en la nube se implementa en Microsoft Azure y requiere una suscripción de Azure. Se conecta a la infraestructura de Configuration Manager local con un nuevo rol denominado punto de conexión de la puerta de enlace de administración en la nube. Una vez implementado y configurado, los clientes podrán tener acceso a los roles de sistema de sitio locales de Configuration Manager independientemente de si están conectados a la red interna privada o a Internet.
 
 Use la consola de Configuration Manager para implementar el servicio en Azure, agregar el rol de punto de conexión de la puerta de enlace de administración en la nube y configurar roles de sistema de sitio para permitir el tráfico de la puerta de enlace de administración en la nube. La puerta de enlace de administración en la nube de momento solo admite los roles de punto de administración y punto de actualización de software.
 
-Se necesitan certificados de cliente y de capa de sockets seguros (SSL) para autenticar los equipos y cifrar las comunicaciones entre los diferentes niveles del servicio. Los equipos cliente normalmente reciben un certificado de cliente mediante la aplicación de directivas de grupo. Para cifrar el tráfico entre los clientes y el servidor de sistema de sitio que hospeda los roles, tiene que crear un certificado SSL personalizado de la CA. Además de estos dos tipos de certificados, también debe configurar un certificado de administración en Azure que permita a Configuration Manager implementar el servicio de puerta de enlace de administración en la nube.
+Se necesitan certificados de cliente y de capa de sockets seguros (SSL) para autenticar los equipos y cifrar las comunicaciones entre los diferentes niveles del servicio. Los equipos cliente normalmente reciben un certificado de cliente mediante la aplicación de directivas de grupo. Para cifrar el tráfico entre los clientes y el servidor de sistema de sitio que hospeda los roles, tiene que crear un certificado SSL personalizado de la CA. También debe configurar un certificado de administración en Azure que permita a Configuration Manager implementar el servicio de puerta de enlace de administración en la nube.
 
 ## <a name="requirements-for-cloud-management-gateway"></a>Requisitos para la puerta de enlace de administración en la nube
 
@@ -35,36 +35,25 @@ Se necesitan certificados de cliente y de capa de sockets seguros (SSL) para aut
 
 -   Certificado de administración de Azure: se usa para autenticar Configuration Manager con Azure.
 
-## <a name="limitations-of-cloud-management-gateway"></a>Limitaciones de la puerta de enlace de administración en la nube
+## <a name="specifications-for-cloud-management-gateway"></a>Especificaciones para la puerta de enlace de administración en la nube
 
--   La puerta de enlace de administración en la nube solo admite los roles de punto de administración y punto de actualización de software.
-
+- Cada instancia de puerta de enlace de administración en la nube admite 4000 clientes.
+- Se recomienda que cree al menos dos instancias de puerta de enlace de administración en la nube para mejorar la disponibilidad.
+- La puerta de enlace de administración en la nube solo admite los roles de punto de administración y punto de actualización de software.
 -   En estos momentos, las siguientes características de Configuration Manager no son compatibles con la puerta de enlace de administración en la nube:
 
     -   Actualizaciones e implementaciones de cliente con la inserción de cliente
-
     -   Asignación automática de sitio
-
     -   Directivas de usuario
-
     -   Catálogo de aplicaciones (incluidas las solicitudes de aprobación de software)
-
     -   Implementación completa de sistema operativo (OSD)
-
     -   Consola de Configuration Manager
-
     -   Herramientas remotas
-
     -   Sitio web de generación de informes
-
     -   Wake on LAN
-
     -   Clientes Mac, Linux y UNIX
-
     -   Azure Resource Manager
-
     -   Almacenamiento en caché del mismo nivel
-
     -   Administración local de dispositivos móviles
 
 ## <a name="cost-of-cloud-management-gateway"></a>Costo de la puerta de enlace de administración en la nube

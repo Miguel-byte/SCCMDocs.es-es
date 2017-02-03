@@ -1,7 +1,7 @@
 ---
 title: SQL Server AlwaysOn | Microsoft Docs
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/4/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,8 +15,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 9d4d0c741418af29edc586a5d629fc61f86da426
+ms.sourcegitcommit: 4d34a272a93100426cccd2308c5b3b0b0ae94a60
+ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 
 
 ---
@@ -98,9 +98,12 @@ ms.openlocfilehash: 9d4d0c741418af29edc586a5d629fc61f86da426
 
  **Requisitos para grupos de disponibilidad AlwaysOn que usa con System Center Configuration Manager:**  
 
--   Cada nodo (o réplica) del grupo de disponibilidad debe ejecutar una versión de SQL Server compatible con System Center Configuration Manager  
+-  *Versión*: cada nodo (o réplica) del grupo de disponibilidad debe ejecutar una versión de SQL Server compatible con System Center Configuration Manager. Si SQL Server lo admite, distintos nodos del grupo de disponibilidad pueden ejecutar distintas versiones de SQL Server.   
 
--   El grupo de disponibilidad debe tener una réplica principal y tener hasta dos réplicas secundarias sincrónicas.  
+- *Edición*: debe usar una edición Enterprise de SQL Server.  SQL Server 2016 Standard Edition introduce los grupos de disponibilidad básica, que no son compatibles con Configuration Manager.
+
+
+-   El grupo de disponibilidad debe tener una réplica principal y puede tener hasta dos réplicas secundarias sincrónicas.  
 
 -  Después de agregar una base de datos a un grupo de disponibilidad, debe realizar una conmutación por error de la réplica principal a una secundaria (convirtiéndola en la nueva réplica principal) y configurar la base de datos con lo siguiente:
     - Habilitar Trustworthy: igual a True
@@ -131,7 +134,9 @@ ms.openlocfilehash: 9d4d0c741418af29edc586a5d629fc61f86da426
         >  System Center Configuration Manager admite el uso de las réplicas del grupo de disponibilidad cuando se establece en conmutación automática por error. En cambio, debe establecerse la conmutación por error manual al ejecutar el programa de instalación para especificar el uso de la base de datos de sitio en el grupo de disponibilidad y en el momento de instalar las actualizaciones de Configuration Manager (no solo las actualizaciones que se aplican a la base de datos de sitio).  
 
   **Limitaciones de los grupos de disponibilidad**
-   - Los grupos de disponibilidad solo son compatibles con la base de datos del sitio y no para la de actualización de software ni de informes.   
+   - No se admiten los grupos de disponibilidad básica (introducidos con SQL Server 2016 Standard Edition). Esto se debe a que los grupos de disponibilidad básica no admiten el acceso de lectura a réplicas secundarias, un requisito para su uso con Configuration Manager. Para más información, vea [Grupos de disponibilidad básica (grupos de disponibilidad AlwaysOn)](https://msdn.microsoft.com/en-us/library/mt614935.aspx).
+
+   - Los grupos de disponibilidad solo son compatibles con la base de datos del sitio y no con la de actualización de software ni la de informes.   
    - Al usar un grupo de disponibilidad debe configurar manualmente el punto de notificación para que use la réplica principal actual y no el agente de escucha del grupo de disponibilidad. Si la réplica principal conmuta por error a otra réplica, a continuación, debe volver a configurar el punto de notificación para que use la nueva réplica principal.  
    - Antes de instalar las actualizaciones, como en la versión 1606, asegúrese de que el grupo de disponibilidad está establecido para la conmutación por error manual. Después de que se actualice el sitio, puede restaurar la conmutación por error a automática.
 
@@ -260,6 +265,6 @@ ms.openlocfilehash: 9d4d0c741418af29edc586a5d629fc61f86da426
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 
