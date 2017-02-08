@@ -225,10 +225,16 @@ Para más información, vea [Manage Office 365 ProPlus updates (Administrar las 
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>Establecer la configuración del cliente de Configuration Manager para administrar el agente cliente de Office 365
 1.  En la consola de Configuration Manager, haga clic en **Administración** > **Información general** > **Configuración de cliente**.
-1. Abra la configuración de dispositivo adecuada para habilitar el agente cliente. Para más información sobre las configuraciones de cliente personalizada y predeterminada, vea [Cómo establecer la configuración del cliente en Configuration Manager](../../core/clients/deploy/configure-client-settings.md).
-2. Haga clic en **Actualizaciones de software** y seleccione **Sí** para el valor **Habilitar administración del Agente cliente de Office 365**.
+2. Abra la configuración de dispositivo adecuada para habilitar el agente cliente. Para más información sobre las configuraciones de cliente personalizada y predeterminada, vea [Cómo establecer la configuración del cliente en Configuration Manager](../../core/clients/deploy/configure-client-settings.md).
+3. Haga clic en **Actualizaciones de software** y seleccione **Sí** para el valor **Habilitar administración del Agente cliente de Office 365**.  
+
+
 ## <a name="a-nameosdpreservedriveletterathe-osdpreservedriveletter-task-sequence-variable-has-been-deprecated"></a><a name="osdpreservedriveletter"></a> La variable de secuencia de tareas OSDPreserveDriveLetter ha dejado de usarse
-La variable de secuencia de tareas OSDPreserveDriveLetter determina si la secuencia de tareas usará o no la letra de unidad capturada en el archivo WIM de imagen de sistema operativo al aplicar esa imagen a un equipo de destino. En Technical Preview 1606, esta variable de secuencia de tareas deja de usarse. Ahora, durante una implementación del sistema operativo, el programa de instalación de Windows determina, de forma predeterminada, cuál es la mejor letra de unidad (normalmente C:). Si quiere especificar otra unidad, puede cambiar la ubicación en el paso de secuencia de tareas Aplicar el sistema operativo. Vaya al valor **Seleccione la ubicación en la que desea aplicar este sistema operativo**, seleccione **Letra de unidad lógica específica** y elija la unidad que quiere usar. Debe haber una unidad asignada con la letra que elija en el equipo de destino.
+La variable de secuencia de tareas OSDPreserveDriveLetter determina si la secuencia de tareas usará o no la letra de unidad capturada en el archivo WIM de imagen de sistema operativo al aplicar esa imagen a un equipo de destino.
+- En Technical Preview 1606, esta variable de secuencia de tareas deja de usarse.
+
+Ahora, durante una implementación del sistema operativo, el programa de instalación de Windows determina, de forma predeterminada, cuál es la mejor letra de unidad (normalmente C:). Si quiere especificar otra unidad, puede cambiar la ubicación en el paso de secuencia de tareas Aplicar el sistema operativo. Vaya al valor **Seleccione la ubicación en la que desea aplicar este sistema operativo**, seleccione **Letra de unidad lógica específica** y elija la unidad que quiere usar. Debe haber una unidad asignada con la letra que elija en el equipo de destino. 
+
 ## <a name="a-nameupdatesandservicingachanges-for-the-updates-and-servicing-node"></a><a name="updatesandservicing"></a> Cambios en el nodo de actualizaciones y mantenimiento
 Con Technical Preview 1606 se han presentado varios cambios que se aplican a Actualizaciones y mantenimiento en la consola de Configuration Manager:
 - **Cambio de nombre de nodo:**
