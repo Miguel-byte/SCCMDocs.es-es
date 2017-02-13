@@ -32,13 +32,13 @@ Use el inventario de hardware en System Center Configuration Manager para recopi
 
  Puede usar varios métodos para ver los datos de inventario de hardware que Configuration Manager recopila. Estos incluyen:  
 
--   [Crear consultas que devuelven los dispositivos que se basan en una configuración de hardware específica.](../../../../core/servers/manage/queries-technical-reference.md).  
+-   [Crear consultas que devuelven los dispositivos que se basan en una configuración de hardware específica.](../../../../core/servers/manage/queries-technical-reference.md)  
 
--   [Crear recopilaciones basadas en consultas en función de una configuración de hardware específica.](../../../../core/clients/manage/collections/introduction-to-collections.md). Las pertenencias a recopilación basadas en consultas se actualizan automáticamente según una programación. Puede usar las recopilaciones para varias tareas, que incluyen la implementación de software. .  
+-   [Crear recopilaciones basadas en consultas en función de una configuración de hardware específica.](../../../../core/clients/manage/collections/introduction-to-collections.md) Las pertenencias a recopilación basadas en consultas se actualizan automáticamente según una programación. Puede usar las recopilaciones para varias tareas, que incluyen la implementación de software .  
 
--   [Ejecutar informes que muestran detalles específicos acerca de las configuraciones de hardware de su organización.](../../../../core/servers/manage/reporting.md).   
+-   [Ejecutar informes que muestran detalles específicos acerca de las configuraciones de hardware de su organización.](../../../../core/servers/manage/reporting.md)   
 
--   [Utilizar el Explorador de recursos](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md) para ver información detallada acerca de el inventario de hardware que se recopila de los dispositivos cliente..   
+-   [Utilizar el Explorador de recursos](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md) para ver información detallada acerca de el inventario de hardware que se recopila de los dispositivos cliente.   
 
  Cuando se ejecuta el inventario de hardware en un dispositivo cliente, los primeros datos de inventario que el cliente devuelve son siempre un inventario completo. La información de inventario posterior contiene solo la información de inventario diferencial. El servidor de sitio procesa la información de inventario diferencial en el orden en que se recibe. Si falta información diferencial para un cliente, el servidor de sitio rechaza la información diferencial adicional e indica al cliente que ejecute un ciclo de inventario completo.  
 
