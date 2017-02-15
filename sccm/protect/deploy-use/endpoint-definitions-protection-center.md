@@ -1,7 +1,7 @@
 ---
 title: Definiciones de malware de Endpoint Protection desde un recurso compartido de red | Microsoft Docs
 ms.custom: na
-ms.date: 10/05/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

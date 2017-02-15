@@ -2,7 +2,7 @@
 title: Definiciones de malware de Endpoint Protection | Microsoft Docs
 description: Aprenda a configurar las actualizaciones de software en Configuration Manager para entregar las actualizaciones de definiciones a los equipos cliente.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
