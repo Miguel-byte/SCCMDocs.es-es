@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8e4ccaf26b83896d12efcbd7ebd4bda4d4bf6675
-ms.openlocfilehash: d7d03c4494338a1d4583b6c82d3d5009b7785cfe
+ms.sourcegitcommit: 916c39133ec3796b9cff97c3c3bdb49dcbb6d7e7
+ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 
 
 ---
@@ -140,6 +140,7 @@ ms.openlocfilehash: d7d03c4494338a1d4583b6c82d3d5009b7785cfe
  |Hospedar actualizaciones de software en puntos de distribución basados en la nube| [Tech Preview 1701](capabilities-in-technical-preview-1701.md#host-software-updates-on-cloud-based-distribution-points)|![Sin agregar](media/Red_X.gif) |
  |Validar datos de atestación de estado de dispositivo mediante puntos de administración| [Tech Preview 1701](capabilities-in-technical-preview-1701.md#validate-device-health-attestation-data-via-management-points)|![Sin agregar](media/Red_X.gif) |
  |Conector de OMS para la nube de Microsoft Azure Government |[Tech Preview 1701](capabilities-in-technical-preview-1701.md#use-the-oms-connector-for-microsoft-azure-government-cloud) |![Sin agregar](media/Red_X.gif) |
+ |En los asistentes para creación ya no se pueden seleccionar como destino las versiones de iOS y Android. |[Tech Preview 1701](capabilities-in-technical-preview-1701.md#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm) |![Sin agregar](media/Red_X.gif) |
  |Acceso a datos del punto de conexión de OData |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|![Sin agregar](media/Red_X.gif)|
  |Punto del servicio de almacenamiento de datos |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#the-data-warehouse-service-point)|![Sin agregar](media/Red_X.gif)|
  |Herramienta de limpieza de la biblioteca de contenido |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#content-library-cleanup-tool)|![Sin agregar](media/Red_X.gif)|
@@ -231,6 +232,6 @@ ms.openlocfilehash: d7d03c4494338a1d4583b6c82d3d5009b7785cfe
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

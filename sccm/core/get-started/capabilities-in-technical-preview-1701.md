@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: 1452362c280fed871da81fa8f711a975493b98a0
+ms.sourcegitcommit: 34dded3a8caf8c2be0313bc012cbd8ad2a909fad
+ms.openlocfilehash: 20bcc1cd909eec13eaca0a6de66806bd496f729d
 
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>Funciones de Technical Preview 1701 para System Center Configuration Manager
@@ -135,6 +135,28 @@ Para ello, modifique un archivo de configuración de modo que apunte a la nube d
 2.  Después de guardar el archivo con los dos cambios, reinicie la consola de Configuration Manager en el mismo equipo y úsela para instalar el conector de OMS. Para instalar el conector, use la información incluida en [Sincronizar datos de Configuration Manager con Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)y seleccione el **Área de trabajo de Operations Management Suite** que se encuentra en la nube de Microsoft Azure Government.
 
 3.  Cuando se haya instalado el conector de OMS, la conexión a la nube de Government estará disponible al usar cualquier consola que se conecte al sitio.
+
+## <a name="android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm"></a>En los asistentes para creación de MDM híbrida ya no se pueden seleccionar como destino las versiones de iOS y Android.
+
+A partir de esta Technical Preview para la administración de dispositivos móviles (MDM) híbrida, ya no necesita especificar versiones concretas de iOS y Android al crear nuevas directivas y perfiles para dispositivos administrados por Intune. En su lugar, elija uno de los siguientes tipos de dispositivo:
+
+- Android
+- Samsung KNOX Standard 4.0 y superior
+- iPhone
+- iPad
+
+Este cambio afecta a los asistentes para crear los siguientes elementos:
+
+- Elementos de configuración
+- Directivas de cumplimiento
+- Perfiles de certificado
+- Perfiles de correo electrónico
+- Perfiles de VPN
+- Perfiles de Wi-Fi
+
+Con este cambio, las implementaciones híbridas pueden ofrecer compatibilidad con mayor rapidez para nuevas versiones de iOS y Android sin necesidad de una nueva versión o extensión de Configuration Manager. Una vez que una nueva versión es compatible con Intune independiente, los usuarios podrán actualizar sus dispositivos móviles a dicha versión.
+
+Para evitar problemas al actualizar desde versiones anteriores de Configuration Manager, las versiones de sistema operativo móvil siguen estando disponibles en las páginas de propiedades de estos elementos. Si aún necesita establecer como destino una versión concreta, puede crear el nuevo elemento y, después, especificar la versión de destino en la página de propiedades del elemento recién creado.
 
 
 
