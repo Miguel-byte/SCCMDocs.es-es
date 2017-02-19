@@ -2,7 +2,7 @@
 title: "Planear la migración | Microsoft Docs"
 description: "Obtenga información sobre sitios y jerarquías antes de migrar datos a una jerarquía de destino de System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,27 +17,27 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
-ms.openlocfilehash: ccc9973c07da9eca4bfacfb3bc7d1228a976c78b
+ms.sourcegitcommit: a2405bc04889bd6ae46069fe447228149bbaf468
+ms.openlocfilehash: fffef1e95e1dfa03971f140a6e5a7fff9bfe5e27
 
 
 ---
-# <a name="planning-for-migration-to-system-center-configuration-manager"></a>Planear la migración a System Center Configuration Manager
+# <a name="plan-for-migration-to-system-center-configuration-manager"></a>Planear la migración a System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Antes de migrar datos a una jerarquía de destino de System Center Configuration Manager, asegúrese de estar familiarizado con las jerarquías y los sitios de Configuration Manager. Para obtener más información sobre sitios y jerarquías, consulte [Fundamentals of System Center Configuration Manager (Conceptos básicos de System Center Configuration Manager)](../../core/understand/fundamentals.md).  
+Antes de migrar datos a una jerarquía de destino de System Center Configuration Manager, asegúrese de estar familiarizado con las jerarquías y los sitios de Configuration Manager. Para más información sobre sitios y jerarquías, vea [Aspectos básicos de System Center Configuration Manager](../../core/understand/fundamentals.md).  
 
- Primero debe instalar una jerarquía de System Center Configuration Manager que sea la jerarquía de destino para poder migrar datos desde una jerarquía de origen admitida.  
+ Debe instalar una jerarquía de System Center Configuration Manager que sea la jerarquía de destino para poder migrar datos desde una jerarquía de origen admitida.  
 
- Después de instalar la jerarquía de destino, configure las funciones y características de administración que desee utilizar en su jerarquía de destino antes de empezar a migrar los datos.  
+ Después de instalar la jerarquía de destino, configure las funciones y características de administración que quiera usar en la jerarquía de destino antes de empezar a migrar los datos.  
 
- Además, tendrá que planear la superposición entre la jerarquía de origen y la jerarquía de destino. Como ejemplo, suponga que la jerarquía de origen está configurada para utilizar los mismos límites o ubicaciones de red que la jerarquía de destino. A continuación, instala nuevos clientes en la jerarquía de destino y utiliza la asignación automática de sitios. En este escenario, debido a que un cliente de Configuration Manager recién instalado puede seleccionar un sitio de cualquier jerarquía al que unirse, el cliente podría asignarse incorrectamente a su jerarquía de origen. Por lo tanto, planifique la asignación de cada cliente nuevo en la jerarquía de destino a un sitio específico en dicha jerarquía en lugar de utilizar la asignación automática de sitios.  
+ Además, tendrá que planear la superposición entre la jerarquía de origen y la jerarquía de destino. Por ejemplo, podría configurar la jerarquía de origen para usar los mismos límites o ubicaciones de red que la jerarquía de destino. Luego podría instalar nuevos clientes en la jerarquía de destino y usar la asignación automática de sitios. En este escenario, debido a que un cliente de Configuration Manager recién instalado puede seleccionar un sitio de cualquier jerarquía al que unirse, el cliente podría asignarse incorrectamente a su jerarquía de origen. Por lo tanto, planee la asignación de cada cliente nuevo en la jerarquía de destino a un sitio específico en dicha jerarquía en lugar de usar la asignación automática de sitios.  
 
- Para obtener más información sobre las asignaciones de sitio, consulte la sección [Consideraciones sobre la asignación de sitio de cliente](../../core/plan-design/hierarchy/interoperability-between-different-versions.md#BKMK_SupConfigSiteAssignment) del tema [Interoperabilidad entre las diferentes versiones de System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md).  
+ Para más información sobre las asignaciones de sitio, vea [Consideraciones sobre la asignación de sitio de cliente](../../core/plan-design/hierarchy/interoperability-between-different-versions.md#BKMK_SupConfigSiteAssignment) en [Interoperabilidad entre diferentes versiones de System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md).  
 
-## <a name="planning-topics"></a>Temas de planeación  
- Use los temas siguientes para planear la migración de una jerarquía de origen a una jerarquía de destino de System Center Configuration Manager:  
+## <a name="plan-topics"></a>Temas para planear  
+ Use los temas siguientes para planear la migración de una jerarquía de origen a una jerarquía de destino de System Center Configuration Manager:
 
 -   [Requisitos previos para la migración en System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md)  
 
@@ -61,6 +61,6 @@ Antes de migrar datos a una jerarquía de destino de System Center Configuration
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

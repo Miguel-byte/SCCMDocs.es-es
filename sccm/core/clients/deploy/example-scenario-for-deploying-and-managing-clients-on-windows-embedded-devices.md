@@ -2,7 +2,7 @@
 title: 'Escenario de ejemplo: implementar clientes en Windows Embedded | Microsoft Docs'
 description: Vea un escenario de ejemplo para implementar y administrar clientes de System Center Configuration Manager en dispositivos Windows Embedded.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 7b5cd35b22b610902628142d9cc52b8f3d54069d
+ms.sourcegitcommit: a650ad8e7b1f9468dd04165a3e43a89387b5d696
+ms.openlocfilehash: b07af49e2fecf6cc41258c87794ca7952206bb8a
 
 
 ---
@@ -25,11 +25,11 @@ ms.openlocfilehash: 7b5cd35b22b610902628142d9cc52b8f3d54069d
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-En este escenario se muestra cómo administrar los dispositivos Windows Embedded con filtros de escritura habilitados mediante el uso de System Center Configuration Manager. Si los dispositivos insertados no admiten filtros de escritura, se comportan como clientes estándar de Configuration Manager y no es necesario realizar los pasos de este escenario que se requieren para administrar filtros de escritura.  
+En este escenario se muestra cómo administrar los dispositivos Windows Embedded con filtros de escritura habilitados con Configuration Manager. Si los dispositivos incrustados no admiten filtros de escritura, se comportan como clientes estándar de Configuration Manager y no se aplican estos procedimientos.  
 
- Coho Vineyard & Winery está abriendo un centro de informaciones y está interesado en quioscos que usan Windows Embedded para ejecutar presentaciones interactivas. El edificio del nuevo centro de informaciones no se encuentra cerca del departamento de TI, por lo que es importante que los quioscos puedan administrarse de forma remota. Además de instalar el software de presentación interactiva, estos dispositivos deben contar con software de protección contra malware actualizado para cumplir las directivas de seguridad de la empresa. Para garantizar que las presentaciones interactivas siempre estén disponibles para los visitantes, los quioscos deben ejecutarse los 7 días de la semana, sin tiempo de inactividad, mientras que el centro de informaciones está abierto.  
+Coho Vineyard & Winery está abriendo un centro de visitantes y necesita quioscos con Windows Embedded para ejecutar presentaciones interactivas. El edificio del nuevo centro de visitantes no se encuentra cerca del departamento de TI, por lo que los quioscos se tienen que administrar de forma remota. Además del software que ejecuta las presentaciones, estos dispositivos deben contar con software de protección contra malware actualizado para cumplir las directivas de seguridad de la empresa. Los quioscos deben ejecutarse 7 días a la semana, sin tiempo de inactividad mientras esté abierto el centro de visitantes.  
 
- Coho Vineyard & Winery ya ejecuta Configuration Manager para administrar dispositivos en su red. Configuration Manager está configurado para ejecutar Endpoint Protection e instalar actualizaciones de software y aplicaciones. Pero, debido a que el equipo de TI no administró antes los dispositivos de Windows Embedded, Julia, la administradora de Configuration Manager, usa una prueba piloto para administrar dos quioscos que se encuentran en el vestíbulo de la recepción de la empresa. Si la prueba piloto administra correctamente de forma remota estos dispositivos, se puede aprobar la orden de compra para los quioscos del centro de informaciones.  
+ Coho ya ejecuta Configuration Manager para administrar dispositivos en su red. Configuration Manager está configurado para ejecutar Endpoint Protection e instalar actualizaciones de software y aplicaciones. Pero, debido a que el equipo de TI no ha administrado nunca dispositivos de Windows Embedded, Julia, la administradora de Configuration Manager, usa una prueba piloto para administrar dos quioscos en el vestíbulo de recepción.   
 
  Para administrar estos dispositivos de Windows Embedded con filtros de escritura habilitados, Julia realiza los siguientes pasos para instalar el cliente de Configuration Manager, proteger el cliente mediante el uso de Endpoint Protection e instalar el software de presentación interactiva.  
 
@@ -70,7 +70,7 @@ En este escenario se muestra cómo administrar los dispositivos Windows Embedded
 
      Julia sabe que siempre se tarda un tiempo en instalar los clientes y enviar su estado al sitio, por lo que espera antes de confirmar que los clientes se instalan correctamente, se asignan al sitio y aparecen como clientes en la recopilación que creó para dispositivos de Windows Embedded.  
 
-     Como confirmación adicional, en los dispositivos de Windows Embedded, Julia comprueba las propiedades de Configuration Manager en el Panel de control y los compara con los equipos Windows estándar que administra el sitio. Por ejemplo, en la pestaña **Componentes** , el **Agente de inventario de hardware** muestra **Habilitado**, y en la pestaña **Acciones** hay 11 acciones disponibles, que incluyen **Ciclo de evaluación de implementación de aplicaciones** y **Ciclo de recopilación de datos de descubrimiento**.  
+     Como confirmación adicional, Julia comprueba las propiedades de Configuration Manager en el Panel de control de los dispositivos y las compara con los equipos Windows estándar que administra el sitio. Por ejemplo, en la pestaña **Componentes** , el **Agente de inventario de hardware** muestra **Habilitado**, y en la pestaña **Acciones** hay 11 acciones disponibles, que incluyen **Ciclo de evaluación de implementación de aplicaciones** y **Ciclo de recopilación de datos de descubrimiento**.  
 
      Segura de que los clientes se instalaron correctamente, se asignaron y reciben la directiva de cliente desde el punto de administración, Julia habilita manualmente los filtros de escritura conforme a las instrucciones del OEM.  
 
@@ -182,6 +182,6 @@ En este escenario se muestra cómo administrar los dispositivos Windows Embedded
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 
