@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8e0090bd671e2c566447579974a38474c2f898ea
-ms.openlocfilehash: 1ca51e256ea2f406f393e4b0d3634ea0f6f637bc
+ms.sourcegitcommit: a8cb3c9850b183eec156c37a181c04088b71805e
+ms.openlocfilehash: 40837306816639ff8cea8930fec75b05edc5164a
 
 
 ---
@@ -72,9 +72,9 @@ Al diseñar e implementar la seguridad administrativa de Configuration Manager, 
 
 -   *Administrador total* concede todos los permisos en Configuration Manager.  
 
--   *Analista de activos* permite a los usuarios administrativos ver los datos recopilados mediante Asset Intelligence, inventario de software, inventario de hardware y medición de software. Los usuarios administrativos pueden crear reglas de compatibilidad y categorías, familias y etiquetas de Asset Intelligence.  
+-   *Administrador de activos* concede permisos para administrar el punto de sincronización de Asset Intelligence, las clases de notificaciones, el inventario de software, el inventario de hardware y las reglas de disponibilidad.  
 
--   *Administrador de actualizaciones de software* concede permisos para definir e implementar actualizaciones de software. Los usuarios administrativos asociados a este rol pueden crear recopilaciones, grupos de actualizaciones de software, implementaciones y plantillas, y configurar actualizaciones de software para la Protección de acceso a redes (NAP).  
+-   *Administrador de actualizaciones de software* concede permisos para definir e implementar actualizaciones de software. Los usuarios administrativos asociados a este rol pueden crear recopilaciones, grupos de actualizaciones de software, implementaciones y plantillas.  
 
 > [!TIP]  
 >  Puede ver la lista de los roles de seguridad integrados y los roles de seguridad personalizados que crea, y sus descripciones, en la consola de Configuration Manager. Para ver los roles, en el área de trabajo **Administración**, expanda **Seguridad** y, después, seleccione **Roles de seguridad**.  
@@ -215,6 +215,6 @@ Para obtener más información sobre cómo configurar ámbitos de seguridad para
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO5-->
 
 

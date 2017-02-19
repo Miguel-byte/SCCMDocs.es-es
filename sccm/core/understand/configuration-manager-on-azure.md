@@ -2,7 +2,7 @@
 title: Configuration Manager en Azure | Microsoft Docs
 description: "Información sobre el uso de Configuration Manager en un entorno de Azure."
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/30/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6638d6e17d0eaeef731cce45e8cf5c827d6e0dfe
-ms.openlocfilehash: 4d953eedc7d5cceb8767dab8850cacb1e007194d
+ms.sourcegitcommit: 264e009952db34a6f4929ecb70dc6857117ce4fe
+ms.openlocfilehash: e8798adc0e479417c682450d181611284c148e6d
 
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager en Azure - Preguntas más frecuentes
@@ -92,7 +92,7 @@ El [tipo y tamaño de VM de Azure](https://azure.microsoft.com/documentation/art
 En general, la potencia informática (CPU y memoria) tiene que satisfacer el [hardware recomendado para System Center Configuration Manager](/sccm/core/plan-design/configs/recommended-hardware). Pero hay algunas diferencias entre el hardware informático normal y las máquinas virtuales de Azure, especialmente cuando se trata de los discos que usan estas máquinas.  El tamaño de las máquinas virtuales que use dependerá del tamaño del entorno, pero aquí tiene algunas recomendaciones:
 - Para implementaciones de producción de un tamaño considerable se recomiendan máquinas virtuales de Azure de clase “**S**”. Esto es porque pueden aprovechar los discos Premium Storage.  Las máquinas virtuales que no son de clase “S” usan almacenamiento de blobs y en general no satisfarán los requisitos de rendimiento necesarios para una experiencia de producción aceptable.
 - Para una escala mayor se deben usar varios discos Premium Storage, que se distribuirán en la consola de Windows Disk Management para una E/S máxima por segundo.  
-- Durante la implementación del sitio inicial se recomienda usar mejores discos premium o varios de ellos (por ejemplo, P30 en lugar de P20 y 2 x P30 en lugar de 1 x P30). Si más adelante el sitio necesita aumentar el tamaño de VM debido a la carga adicional, puede aprovechar la CPU y la memoria adicionales que proporciona un mayor tamaño de memoria virtual. También tendrá ya discos que pueden aprovechar el rendimiento adicional de E/S por segundo que ofrece el mayor tamaño de VM.
+- Durante la implementación del sitio inicial se recomienda usar mejores discos premium o varios de ellos (por ejemplo, P30 en lugar de P20 y 2 x P30 en un volumen seccionado en lugar de 1 x P30). Si más adelante el sitio necesita aumentar el tamaño de VM debido a la carga adicional, puede aprovechar la CPU y la memoria adicionales que proporciona un mayor tamaño de memoria virtual. También tendrá ya discos que pueden aprovechar el rendimiento adicional de E/S por segundo que ofrece el mayor tamaño de VM.
 
 
 
@@ -102,18 +102,18 @@ En las tablas siguientes se indican los recuentos de disco iniciales sugeridos p
 
 | Clientes de escritorio    |Tamaño de VM recomendado|Discos recomendados|
 |--------------------|-------------------|-----------------|
-|**Hasta 25 k**       |   DS4_V2          |2 x P30            |
-|**De 25 a 50 k**      |   DS13_V2         |2 x P30            |
-|**De 50 a 100 k**     |   DS14_V2         |3 x P30            |
+|**Hasta 25 k**       |   DS4_V2          |2xP30 (seccionado)  |
+|**De 25 a 50 k**      |   DS13_V2         |2xP30 (seccionado)  |
+|**De 50 a 100 k**     |   DS14_V2         |3xP30 (seccionado)  |
 
 
 **Base de datos de sitio remota**: sitio de administración central o primario con la base de datos de sitio en el servidor remoto:
 
 | Clientes de escritorio    |Tamaño de VM recomendado|Discos recomendados |
 |--------------------|-------------------|------------------|
-|**Hasta 25 k**       | Servidor de sitio: F4S </br>Servidor de base de datos: DS12_V2 | Servidor de sitio: 1 x P30 </br>Servidor de base de datos: 2 x P30 |
-|**De 25 a 50 k**      | Servidor de sitio: F4S </br>Servidor de base de datos: DS13_V2 | Servidor de sitio: 1 x P30 </br>Servidor de base de datos: 2 x P30 |
-|**De 50 a 100 k**     | Servidor de sitio: F8S </br>Servidor de base de datos: DS14_V2 | Servidor de sitio: 2 x P30 </br>Servidor de base de datos: 3 x P30 |
+|**Hasta 25 k**       | Servidor de sitio: F4S </br>Servidor de base de datos: DS12_V2 | Servidor de sitio: 1 x P30 </br>Servidor de base de datos: 2xP30 (seccionado)  |
+|**De 25 a 50 k**      | Servidor de sitio: F4S </br>Servidor de base de datos: DS13_V2 | Servidor de sitio: 1 x P30 </br>Servidor de base de datos: 2xP30 (seccionado)   |
+|**De 50 a 100 k**     | Servidor de sitio: F8S </br>Servidor de base de datos: DS14_V2 | Servidor de sitio: 2xP30 (seccionado)   </br>Servidor de base de datos: 3xP30 (seccionado)   |
 
 A continuación se muestra un ejemplo de la configuración de entre 50 000 y 100 000 clientes en DS14_V2 con tres discos P30 en un volumen seccionado con volúmenes lógicos independientes para los archivos de instalación y de base de datos de Configuration Manager:  ![Discos de VM](media/vm_disks.png)  
 
@@ -139,7 +139,7 @@ El enfoque para la administración de contenido es en gran medida igual que para
 
 
 ### <a name="while-i-am-ok-with-the-limitations-of-cloud-based-distribution-points-i-dont-want-to-put-my-management-point-into-a-dmz-even-though-that-is-needed-to-support-my-internet-based-clients-do-i-have-any-other-options"></a>Aunque no tengo problemas con las limitaciones de los puntos de distribución basados en la nube, no quiero colocar mi punto de administración en una red perimetral, aunque sea necesario para admitir a mis clientes basados en Internet. ¿Tengo alguna otra opción?
-Sí. Con la versión 1610 de Configuration Manager, hemos presentado la [puerta de enlace de administración en la nube](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) como una característica de versión preliminar. (Esta característica apareció por primera vez en la versión 1606 de Technical Preview como [Servicio de proxy en la nube](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)). 
+Sí. Con la versión 1610 de Configuration Manager, hemos presentado la [puerta de enlace de administración en la nube](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) como una característica de versión preliminar. (Esta característica apareció por primera vez en la versión 1606 de Technical Preview como [Servicio de proxy en la nube](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)).
 
 La **puerta de enlace de administración en la nube** proporciona una manera sencilla de administrar clientes de Configuration Manager en Internet. El servicio, que se implementa en Microsoft Azure y exige una suscripción de Azure, se conecta a la infraestructura local de Configuration Manager con un nuevo rol denominado punto de conexión de la puerta de enlace de administración en la nube. Una vez implementado y configurado, los clientes pueden acceder a los roles de sistema de sitio locales de Configuration Manager independientemente de si están conectados a la red interna privada o a Internet.
 
@@ -182,6 +182,6 @@ Es difícil de decir, ya que cada entorno es diferente. Lo mejor es hacer el cá
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO5-->
 
 

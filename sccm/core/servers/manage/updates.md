@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5314bcb434b5b540f80cdfe32002df7b8fed6195
-ms.openlocfilehash: 52d5ad7a348e0489f43ac6cb46af930499ef6cf2
+ms.sourcegitcommit: 816c6bd33e42b70bbafed0dea7624bc5a5421544
+ms.openlocfilehash: 55d4f1805937405c4101f5b814875818d2aa72c0
 
 
 ---
@@ -73,13 +73,13 @@ Algunas actualizaciones de Configuration Manager se encuentran disponibles tanto
 
 Las siguientes versiones de Configuration Manager están disponibles como línea de base, actualización, o ambas:  
 
-|Versión|Fecha de disponibilidad|Línea de base|Actualización en la consola|  
-|-------------|-----------------------|--------------|------------------------|  
-|**1511**<br /><br /> 5.00.8325.1000|12/8/2015|Sí|No|  
-|**1602**<br /><br /> 5.00.8355.1000|3/11/2016|No|Sí|
-|**1606**<br /><br /> 5.00.8412.1000|22/7/2016|No|Sí|
-|**1606** con el paquete acumulativo de revisiones 1606 (KB3186654) </br></br>5.00.8412.1307 *(Nota 1)* |12/10/2016|Sí|No|
-|**1610**<br /><br /> 5.00.8458.1000|18/11/2016|No|Sí|
+|Versión|Fecha de disponibilidad|[Fecha de finalización del soporte técnico](/sccm/core/servers/manage/current-branch-versions-supported) |Línea de base|Actualización en la consola|  
+|-------------|-----------|------------|--------------|------------------------|  
+| 1511 <br /><br /> 5.00.8325.1000|12/8/2015| 8/12/2016|Sí|No|  
+|[1602](/sccm/core/plan-design/changes/whats-new-in-version-1602)<br /><br /> 5.00.8355.1000|3/11/2016| 11/3/2017|No|Sí|
+|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|22/7/2016| 22/7/2017|No|Sí|
+|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) con el paquete acumulativo de revisiones 1606 (KB3186654) </br></br>5.00.8412.1307 *(Nota 1)* |12/10/2016| 22/7/2017|Sí|No|
+|[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|18/11/2016| 18/11/2017|No|Sí|
 *(Nota 1)* Este medio de línea base 1606 está disponible como parte de Microsoft System Center 2016 o de una versión de System Center Configuration Manager (rama actual y rama de mantenimiento a largo plazo 1606).
 
 Para comprobar la versión del sitio de Configuration Manager, vaya a **Acerca de System Center Configuration Manager** en la esquina superior izquierda de la consola, donde aparece la nueva versión del sitio y la consola.  
@@ -148,6 +148,6 @@ Estas revisiones se instalan manualmente, mediante uno de estos dos métodos:
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 
