@@ -2,7 +2,7 @@
 title: Actualizaciones en la consola | Microsoft Docs
 description: System Center Configuration Manager se sincroniza con la nube de Microsoft para obtener las actualizaciones que puede instalar desde la consola.
 ms.custom: na
-ms.date: 1/11/2017
+ms.date: 2/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
-ms.openlocfilehash: 00d9738a271ba47abcbf3c4b427a05910a0c2355
+ms.sourcegitcommit: 2f90f3204b3c31caaed1359e11451285b21eef50
+ms.openlocfilehash: b3a58503ea4d49825e93ea3a2e9bfedf975145e6
 
 
 ---
@@ -354,8 +354,9 @@ Si proporcionó consentimiento en un sitio primario independiente y, después, e
 |Acceso condicional para equipos administrados por System Center Configuration Manager | [Versión 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![Todavía no](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
 
 
+## <a name="known-issues"></a>Problemas conocidos
 
-##  <a name="a-namebkmkfaqa-why-dont-i-see-certain-updates-in-my-console"></a><a name="bkmk_faq"></a> ¿Por qué no se ven determinadas características en la consola?  
+###  <a name="a-namebkmkfaqa-why-dont-i-see-certain-updates-in-my-console"></a><a name="bkmk_faq"></a> ¿Por qué no se ven determinadas características en la consola?  
  Si no encuentra una actualización específica o todas las actualizaciones en la consola después de una sincronización correcta con el servicio en la nube de Microsoft, esto podría deberse a que:  
 
 -   La actualización requiere una configuración que no utiliza la infraestructura o la versión de producto actual no cumple un requisito previo para recibir la actualización.  
@@ -366,8 +367,21 @@ Si proporcionó consentimiento en un sitio primario independiente y, después, e
 
     Consulte [Permisos para administrar actualizaciones](../../../core/servers/manage/install-in-console-updates.md#permissions-to-view-and-manage-updates-and-features) en este tema para obtener información sobre los permisos necesarios para ver las actualizaciones y habilitar las características desde la consola.
 
+### <a name="why-do-i-see-two-updates-for-version-1610"></a>¿Por qué veo dos actualizaciones para la versión 1610?
+Al ver las actualizaciones en la consola, es posible que vea dos actualizaciones para instalar la versión 1610. Estas actualizaciones tienen fechas distintas. Esto ocurre si se cumple una de las condiciones siguientes:   
+-   Ha instalado una versión anterior (por ejemplo, 1606) después de que estuviera disponible la versión 1610.
+
+-   En su jerarquía se ejecuta la versión 1511 o 1602 y no ha podido descargar la versión 1606.
+
+Hay dos versiones de actualización para la versión 1610, ya que esta actualización se ha vuelto a publicar después de realizar algunos cambios secundarios en archivos binarios. Estos cambios no afectan al funcionamiento de Configuration Manager ni a la actualización.
+
+Si las dos actualizaciones están disponibles en la consola, le recomendamos que instale la actualización con la fecha más reciente. En cambio, como las dos actualizaciones ofrecen las mismas funciones, si ya ha instalado una de ellas, no es necesario que realice otra acción.
+-   Si anteriormente ha instalado la actualización anterior, no es necesario que instale la actualización con la fecha más reciente. En cambio, si instala la actualización más reciente después de instalar la primera actualización, se actualizarán esos archivos binarios, pero no se producirán otros cambios y tampoco es necesario que realice otras acciones.
+
+-   Si ha instalado anteriormente la versión más reciente y, después, instala la actualización con la fecha anterior, no es necesario que realice ninguna otra acción. Esto se debe a que los binarios más recientes que ya ha instalado no se sobrescribirán con los mismos binarios de la actualización original.
 
 
-<!--HONumber=Jan17_HO2-->
+
+<!--HONumber=Feb17_HO1-->
 
 

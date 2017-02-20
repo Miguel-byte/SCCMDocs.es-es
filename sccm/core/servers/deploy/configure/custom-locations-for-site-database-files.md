@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 3de4d4138c377c1a231947ece956ed6748dacd1f
+ms.sourcegitcommit: 5e5155aa8c03b7e0c200d083024c8fa386f97aa7
+ms.openlocfilehash: cfac2c03c1b71b40c68d8acd5fbd96c5e98caaa9
 
 ---
 # <a name="custom-locations-for-system-center-configuration-manager-site-database-files"></a>Ubicaciones personalizadas para archivos de base de datos del sitio de System Center Configuration Manager
@@ -29,22 +29,22 @@ ms.openlocfilehash: 3de4d4138c377c1a231947ece956ed6748dacd1f
 > [!NOTE]  
 >  La opción de especificar ubicaciones de archivos no predeterminadas no está disponible cuando se usa un clúster de SQL Server.  
 
- **Durante la instalación** de un nuevo sitio primario o un sitio de administración central, puede hacer lo siguiente:  
+ **Durante la configuración** de un nuevo sitio principal o un sitio de administración central, puede hacer lo siguiente:  
 
--   Especificar ubicaciones de archivo no predeterminadas para la base de datos del sitio: el programa de instalación de Configuration Manager crea después la base de datos del sitio mediante el uso de esas ubicaciones.  
+-   **Especificar ubicaciones de archivo no predeterminadas para la base de datos del sitio**: el programa de instalación de Configuration Manager crea después la base de datos del sitio mediante el uso de esas ubicaciones.  
 
--   Especificar el uso de una base de datos de SQL Server creada previamente que usa ubicaciones de archivo personalizadas: el programa de instalación de Configuration Manager usa dicha base de datos creada previamente y sus ubicaciones de archivo preconfiguradas.  
+-   **Especificar el uso de una base de datos de SQL Server creada previamente que usa ubicaciones de archivo personalizadas**: el programa de instalación de Configuration Manager usa dicha base de datos creada previamente y sus ubicaciones de archivo preconfiguradas.  
 
-**Después de la instalación** , puede cambiar la ubicación de los archivos de base de datos del sitio. Para ello, es necesario detener el sitio y editar la ubicación de los archivos en SQL Server:  
+**Después de la configuración**, puede cambiar la ubicación de los archivos de la base de datos del sitio. Para ello, es necesario detener el sitio y editar la ubicación de los archivos en SQL Server:  
 
 -   En el servidor de sitio de Configuration Manager, detenga el servicio **SMS_Executive**.  
 
--   Vea la documentación de la versión de SQL Server que use para obtener información sobre cómo mover una base de datos de usuario. Por ejemplo, si usa SQL Server 2014, vea [Mover bases de datos de usuario](https://technet.microsoft.com/library/ms345483\(v=sql.120\).aspx) en TechNet.  
+-   Use la documentación de su versión de SQL Server para obtener información sobre cómo mover una base de datos de usuario. Por ejemplo, si usa SQL Server 2014, vea [Mover bases de datos de usuario](https://technet.microsoft.com/library/ms345483\(v=sql.120\).aspx) en TechNet.  
 
--   Después de completar el desplazamiento de archivos de base de datos, reinicie el servicio SMS_Executive en el servidor de sitio de Configuration Manager.  
+-   Después de completar el movimiento de archivos de la base de datos, reinicie el servicio **SMS_Executive** en el servidor de sitio de Configuration Manager.  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

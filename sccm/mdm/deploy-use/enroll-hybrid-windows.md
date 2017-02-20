@@ -16,8 +16,8 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 808327495c66f4e6ad86ab144455014171a453b2
+ms.sourcegitcommit: 76cb0c41865859fd410a187435d73c6a23b0c57e
+ms.openlocfilehash: 7b53b094eeb1d59d052c63831eeab0e10edb5913
 
 
 ---
@@ -57,7 +57,7 @@ La inscripción automática permite a los usuarios inscribir en Intune PC Window
 
 5. Especifique las direcciones URL de Intune:
 
-  - **Dirección URL de inscripción de MDM**: use `https://enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc` para la dirección URL de inscripción de MDM.
+  - **Dirección URL de inscripción de MDM**: use el valor predeterminado.
   - **Dirección URL de términos de uso de MDM**: use el valor predeterminado. En esta dirección URL se muestran los términos de uso para los usuarios cuando realizan la inscripción de dispositivos.
   - **Dirección URL de cumplimiento de MDM**: use el valor predeterminado. Si se encuentra un dispositivo que no es compatible, se muestra el mensaje **Acceso denegado** con esta dirección URL. La dirección URL apunta a una página que ayuda a los usuarios a comprender por qué el dispositivo no es compatible con la directiva y cómo pueden conseguir que vuelva a serlo.
 
@@ -74,6 +74,8 @@ La inscripción automática permite a los usuarios inscribir en Intune PC Window
 
 ### <a name="create-dns-alias-for-device-enrollment"></a>Creación de un alias DNS para la inscripción de dispositivos  
  Un alias DNS (tipo de registro CNAME) facilita a los usuarios la inscripción de sus dispositivos, ya que rellena automáticamente el nombre del servidor durante la inscripción. Para crear un alias DNS (tipo de registro CNAME), tendrá que configurar un CNAME en los registros DNS de su empresa que redirija las solicitudes enviadas a una dirección URL del dominio de su empresa a servidores de servicios en la nube de Microsoft.  Por ejemplo, si el dominio de su empresa es contoso.com, debe crear un CNAME en DNS que redirija EnterpriseEnrollment.contoso.com a EnterpriseEnrollment-s.manage.microsoft.com.  
+
+ Aunque la creación de entradas DNS CNAME es opcional, los registros CNAME facilitan la inscripción para los usuarios. Si no se encuentra ningún registro CNAME de inscripción, se pedirá a los usuarios que escriban de forma manual el nombre del servidor MDM (enrollment.manage.microsoft.com).
 
 |Tipo|Nombre de host|Apunta a|  
 |----------|---------------|---------------|  
@@ -118,6 +120,6 @@ La inscripción automática permite a los usuarios inscribir en Intune PC Window
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

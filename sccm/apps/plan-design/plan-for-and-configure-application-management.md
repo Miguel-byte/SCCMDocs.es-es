@@ -2,7 +2,7 @@
 title: "Planear y configurar la administración de aplicaciones| Microsoft Docs"
 description: "Implemente y configure las dependencias necesarias para la implementación de aplicaciones en System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/13/2016
+ms.date: 02/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 7634d5326265d7947a01e5b83374f65911e33aeb
-ms.openlocfilehash: 3ab905192c091cb5ad013c8e0c8590597fb0422a
+ms.sourcegitcommit: 50c08d63e7220a47d21dcbdcd7abafba7c7f5f75
+ms.openlocfilehash: 4eca69f54ec0bca5f1f972d3814ceb87d4a30d67
 
 
 ---
@@ -33,7 +33,7 @@ Use la información de este artículo como ayuda para implementar las dependenci
 |------------------|----------------------|  
 |Se requiere Internet Information Services (IIS) en los servidores del sistema de sitio que ejecutan el punto de sitios web del catálogo de aplicaciones, el punto de servicio web del catálogo de aplicaciones, el punto de administración y el punto de distribución.|Para más información acerca de este requisito, vea [Configuraciones admitidas](../../core/plan-design/configs/supported-configurations.md).|  
 |Dispositivos móviles inscritos por Configuration Manager|Cuando realice la firma de código de aplicaciones para implementarlas en dispositivos móviles, no use un certificado generado mediante una plantilla de versión 3 (**Windows Server 2008, Enterprise Edition**). Esta plantilla de certificado crea un certificado que no es compatible con aplicaciones de Configuration Manager para dispositivos móviles.<br /><br /> Si usa Servicios de certificados de Active Directory para la firma de código de aplicaciones de dispositivos móviles, no use plantillas de certificado de versión 3.|  
-|Los clientes se deben configurar para auditar eventos de inicio de sesión si desea crear automáticamente afinidades de dispositivo del usuario.|Configuration Manager lee las dos opciones siguientes de la directiva de seguridad local en los equipos cliente para determinar las afinidades de dispositivo del usuario automáticas:<br /><br /><ul><li> **Auditar eventos de inicio de sesión de cuenta**</li><li>**Auditar eventos de inicio de sesión**</li></ul> Para crear automáticamente relaciones entre los usuarios y los dispositivos, asegúrese de que estas dos opciones están habilitadas en los equipos cliente. Puede usar la directiva de grupo de Windows para configurar estas opciones.|  
+|Los clientes se deben configurar para auditar eventos de inicio de sesión si desea crear automáticamente afinidades de dispositivo del usuario.|El cliente de Configuration Manager lee los eventos de inicio de sesión de tipo **Correcto** del registro de eventos de seguridad de los equipos para determinar afinidades de dispositivo del usuario automáticas.  Estos eventos se habilitan mediante las dos siguientes directivas de auditoría:<br>**Auditar eventos de inicio de sesión de cuenta**<br>**Auditar eventos de inicio de sesión**<br>Para crear automáticamente relaciones entre los usuarios y los dispositivos, asegúrese de que estas dos opciones están habilitadas en los equipos cliente. Puede usar la directiva de grupo de Windows para configurar estas opciones.|  
 
 ## <a name="configuration-manager-dependencies"></a>Dependencias de Configuration Manager   
 
@@ -79,7 +79,7 @@ Use la información de este artículo como ayuda para implementar las dependenci
 |Pasos|Detalles|Más información|  
 |-----------|-------------|----------------------|  
 |**Paso 1:** si va a utilizar conexiones HTTPS, asegúrese de haber implementado un certificado de servidor web en los servidores de sistema de sitio.|Implemente un certificado de servidor web en los servidores de sistema de sitio que ejecutarán el punto de sitios web del catálogo de aplicaciones y el punto de servicio web del catálogo de aplicaciones.<br /><br /> Además, si desea que los clientes usen el catálogo de aplicaciones desde Internet, implemente un certificado de servidor web en, al menos, un servidor de sistema de sitio de punto de administración y configúrelo para conexiones de cliente desde Internet.|Para más información acerca de los requisitos de certificado, vea [Requisitos de certificado PKI](../../core/plan-design/network/pki-certificate-requirements.md).|  
-|**Paso 2:** si va a utilizar un certificado de PKI de cliente para las conexiones a los puntos de administración, implemente un certificado de autenticación del cliente en los equipos cliente.|Si bien los clientes no tienen que usar un certificado de PKI de cliente para conectarse con el catálogo de aplicaciones, deben conectarse a un punto de administración antes de poder usar el catálogo de aplicaciones. Debe implementar un certificado de autenticación del cliente en los equipos cliente en los siguientes escenarios:<br /><br /><ul><li>Todos los puntos de administración de la intranet aceptan únicamente conexiones de cliente HTTPS.</li><li>Los clientes se conectarán al catálogo de aplicaciones desde Internet.</li></ul>|Para más información acerca de los requisitos de certificado, vea [Requisitos de certificado PKI](../../core/plan-design/network/pki-certificate-requirements.md).|  
+|**Paso 2:** si va a utilizar un certificado de PKI de cliente para las conexiones a los puntos de administración, implemente un certificado de autenticación del cliente en los equipos cliente.|Si bien los clientes no usan un certificado de PKI de cliente para conectarse con el catálogo de aplicaciones, deben conectarse a un punto de administración antes de poder usar el catálogo de aplicaciones. Debe implementar un certificado de autenticación del cliente en los equipos cliente en los siguientes escenarios:<br /><br /><ul><li>Todos los puntos de administración de la intranet aceptan únicamente conexiones de cliente HTTPS.</li><li>Los clientes se conectarán al catálogo de aplicaciones desde Internet.</li></ul>|Para más información acerca de los requisitos de certificado, vea [Requisitos de certificado PKI](../../core/plan-design/network/pki-certificate-requirements.md).|  
 |**Paso 3:** instale y configure el punto de servicio web del catálogo de aplicaciones y el sitio web del catálogo de aplicaciones.|Debe instalar ambos roles de sistema de sitio en el mismo sitio. No es necesario instalarlos en el mismo servidor de sistema de sitio ni en el mismo bosque de Active Directory. Sin embargo, el punto de servicio web del catálogo de aplicaciones debe estar en el mismo bosque que la base de datos del sitio.|Para más información acerca de el planeamiento para roles de sistema de sitio, vea [Planeamiento de servidores y roles de sistema de sitio](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).<br /><br /> Para configurar el punto de servicio web del catálogo de aplicaciones y el punto de sitios web del catálogo de aplicaciones, vea **Paso 3: Instalar y configurar los roles de sistema de sitio del catálogo de aplicaciones**.|  
 |**Paso 4:** configure las opciones de cliente para el catálogo de aplicaciones y el centro de software.|Configure las opciones de cliente predeterminadas si desea que todos los usuarios tengan la misma configuración. De lo contrario, configure opciones de cliente personalizadas para recopilaciones específicas.|Para más información acerca de la configuración de cliente, vea [Acerca de la configuración de cliente](../../core/clients/deploy/about-client-settings.md).<br /><br /> Para más información acerca de cómo configurar estas opciones de cliente, vea **Paso 4: Configurar las opciones de cliente para el catálogo de aplicaciones y el Centro de software**.|  
 |**Paso 5:** compruebe si funciona el catálogo de aplicaciones.|Puede usar el catálogo de aplicaciones directamente desde un explorador o desde el Centro de software.|Vea **Paso 5: comprobar si funciona el catálogo de aplicaciones**.|  
@@ -112,7 +112,7 @@ Use la información de este artículo como ayuda para implementar las dependenci
 
 1.  En la consola de Configuration Manager, elija **Administración** > **Configuración del sitio** > **Servidores y roles del sistema de sitios** y, después, seleccione el servidor que quiere usar para el catálogo de aplicaciones.  
 
-3.  En la pestaña **Inicio**, en el grupo **Crear**, elija **Agregar roles del sistema de sitio**.  
+3.  En la pestaña **Inicio**, en el grupo **Servidor**, seleccione **Agregar roles del sistema de sitio**.  
 
 4.  En la página **General**, especifique la configuración general del sistema de sitio y, a continuación, elija **Siguiente**.  
 
@@ -228,6 +228,6 @@ La personalización de marca del Centro de software se aplica conforme a las sig
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

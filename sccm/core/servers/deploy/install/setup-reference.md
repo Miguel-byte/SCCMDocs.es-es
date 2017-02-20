@@ -2,7 +2,7 @@
 title: "Referencia del programa de instalación | Microsoft Docs"
 description: "Consulte esta referencia para prepararse para instalar un sitio o jerarquía de Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: a1f13fcde27baf7d0245682292134f08c4f9f8e6
+ms.sourcegitcommit: fc9c8c1e6d57e886e5208d8b8968cb936c269a01
+ms.openlocfilehash: beddcdb0349af4d232cd75ae742f02074abc350d
 
 
 ---
@@ -25,80 +25,67 @@ ms.openlocfilehash: a1f13fcde27baf7d0245682292134f08c4f9f8e6
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-El programa de instalación de System Center Configuration Manager proporciona vínculos a varios temas que se detallan en las secciones siguientes. La información de las siguientes secciones puede ayudarle a preparar la instalación de un sitio o una jerarquía de Configuration Manager, así como a tomar algunas de las decisiones que serán necesarias durante la instalación:  
+El programa de instalación de System Center Configuration Manager ofrece vínculos a varios temas que se indican en las secciones siguientes. La información que encontrará aquí puede ayudarle a preparar la instalación de un sitio o jerarquía de Configuration Manager, así como ayudarle a preparar algunas de las decisiones que necesita tomar durante la instalación.  
 
 -   [Antes de comenzar](#bkmk_start)  
-
 -   [Evaluar la preparación del servidor](#bkmk_assess)  
-
 -   [Clientes para sistemas operativos adicionales](#bkmk_Addclients)  
-
 -   [Diagnósticos y datos de uso para System Center Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)  
 
 ##  <a name="a-namebkmkstarta-before-you-begin"></a><a name="bkmk_start"></a> Antes de comenzar  
- Antes de instalar nuevos sitios de Configuration Manager, asegúrese de revisar la siguiente información que puede ayudarle a preparar el terreno para lograr un diseño de implementación correcto:  
+Antes de instalar nuevos sitios de Configuration Manager, asegúrese de revisar la información siguiente, que puede resultarle útil para preparar correctamente un diseño de implementación:  
 
 -   [Aspectos básicos de System Center Configuration Manager](../../../../core/understand/fundamentals.md)  
-
 -   [Planear la infraestructura de System Center Configuration Manager](../../../plan-design/network/configure-firewalls-ports-domains.md)  
-
 -   [Preparar la instalación de sitios de System Center Configuration Manager](prepare-to-install-sites.md)  
 
 ##  <a name="a-namebkmkassessa-assess-server-readiness"></a><a name="bkmk_assess"></a> Evaluar la preparación del servidor  
- Antes de comenzar con la instalación de un nuevo sitio, asegúrese de que el servidor de sitio y los servidores remotos de sistema de sitio que planea usar para el sitio (por ejemplo, el servidor que hospede la base de datos del sitio) cumplen todos los requisitos previos de configuración. Los siguientes temas de la biblioteca de documentación pueden resultar de utilidad:  
+Antes de empezar la instalación de un nuevo sitio, asegúrese de que el servidor de sitio y los servidores del sistema de sitio remoto que quiera usar para el sitio (por ejemplo, el servidor que hospeda la base de datos del sitio) cumplan todos los requisitos previos de configuración. Estos temas de la biblioteca de documentación pueden resultarle útiles:  
 
 -   [Configuraciones admitidas para System Center Configuration Manager](../../../../core/plan-design/configs/supported-configurations.md)  
-
--   [Comprobador de requisitos previos](https://technet.microsoft.com/library/mt590813.aspx#bkmk_PreqChk)  
+-   [Comprobador de requisitos previos](prerequisite-checker.md)  
 
 ##  <a name="a-namebkmkaddclientsa-clients-for-additional-operating-systems"></a><a name="bkmk_Addclients"></a> Clientes para sistemas operativos adicionales  
- Puede descargar el software cliente de Configuration Manager desde el Centro de descarga de Microsoft para los sistemas operativos siguientes:  
+Puede descargar el software cliente de Configuration Manager desde el Centro de descarga de Microsoft para los siguientes sistemas operativos:  
 
 -   Mac (Apple)  
-
 -   UNIX  
-
 -   Linux  
 
-**Use los vínculos siguientes para descargar los clientes de la versión de Configuration Manager que usa:**  
+Use los vínculos siguientes para descargar los clientes de la versión de Configuration Manager que use:  
 
 -   [System Center Configuration Manager (rama actual)](http://www.microsoft.com/download/details.aspx?id=47719)  
-
 -   [System Center 2012 R2 Configuration Manager SP1 y System Center 2012 SP2 Configuration Manager SP2](http://go.microsoft.com/fwlink/?LinkID=626550)  
-
 -   [System Center 2012 R2 Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=316448)  
-
 -   [System Center 2012 Configuration Manager SP1](http://www.microsoft.com/en-pk/download/details.aspx?id=36212)  
 
 ##  <a name="a-namebkmkusagea-usage-data-levels-and-settings"></a><a name="bkmk_usage"></a> Configuración y niveles de datos de uso  
-Cuando se instala el primer sitio de System Center Configuration Manager, se instala y configura de forma automática un nuevo rol de sistema de sitio en el servidor de sitio, el **punto de conexión de servicio** con la configuración predeterminada siguiente:  
+Al instalar el primer sitio de System Center Configuration Manager, Configuration Manager instala y configura automáticamente un nuevo rol de sistema de sitio (el **punto de conexión de servicio**) en el servidor de sitio. El punto de conexión de servicio tiene esta configuración predeterminada:  
 
--   Modo**en línea** (también se admite un modo sin conexión).  
+-   Modo **con conexión** (también hay disponible un modo sin conexión)  
+-   Nivel **mejorado** de recopilación de datos (también hay disponibles otros dos niveles de recopilación de datos, básico y completo)  
 
--   Un nivel de recopilación de datos del tipo **Mejorado** (se admiten otros dos niveles de recopilación de datos, Básico y Completo).  
-
-Cuando esta rol está en línea, permite que Microsoft recopile automáticamente información de uso y diagnóstico a través de Internet. La información recopilada nos ayuda a realizar las siguientes tareas:  
+Cuando el rol de sistema de sitio del punto de conexión de servicio está con conexión, Microsoft puede recopilar automáticamente información de uso y diagnósticos por Internet. La información recopilada nos ayuda a realizar las siguientes tareas:  
 
 -   Identificar y solucionar problemas  
-
 -   Mejorar nuestros productos y servicios  
-
 -   Identificar las actualizaciones de Configuration Manager que se aplican a la versión de Configuration Manager actualmente en uso  
 
-Los tres niveles de recopilación de datos incluyen:  
+### <a name="levels-of-data-collection"></a>Niveles de recopilación de datos  
+En la recopilación de datos se incluyen estos tres niveles:
 
--   **Básico** incluye datos sobre la instalación y la actualización, como el número de sitios y qué características de Configuration Manager están habilitadas. No se enviará ninguna información personal que pueda identificarle.  
+-   En el nivel **básico** se incluyen datos sobre la instalación y la actualización, como el número de sitios y las características de Configuration Manager que están habilitadas. No se transmite información de identificación personal.  
 
--   **Mejorado** incluye los datos de la opción de configuración Básico y, además, transmite datos sobre la jerarquía, cómo se usa cada característica (frecuencia y duración) e información de diagnóstico mejorada, como el estado de la memoria del servidor cuando se produce un bloqueo del sistema o de una aplicación. No se enviará información de identificación personal.  
+-   En el nivel **mejorado** se incluyen los datos de la configuración del nivel básico y, además, se transmiten datos sobre la jerarquía, el uso de cada característica (en frecuencia y duración) e información de diagnóstico mejorada, como el estado de memoria del servidor si se produce un bloqueo del sistema o de una aplicación. No se transmite información de identificación personal.  
 
--   **Completo** incluye los datos de las opciones de configuración Básico y Mejorado y, además, envía información de diagnóstico avanzada, como archivos de sistema e instantáneas de la memoria. Esta opción puede incluir información de identificación personal, pero no la usaremos para identificarle o ponernos en contacto con usted ni para enviarle anuncios dirigidos.  
+-   En el nivel **completo** se incluyen los datos de la configuración de los niveles básico y mejorado y, además, se envía información de diagnóstico avanzada, como archivos del sistema e instantáneas de memoria. Con esta opción podría incluirse información de identificación personal, pero no usaremos esa información para identificarle o ponernos en contacto con usted, ni para enviarle publicidad.  
 
-Para obtener más información, incluida la divulgación de los detalles que se recopilan en cada nivel, consulte [Diagnósticos y datos de uso para System Center Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
+Para obtener más información, incluida la divulgación de los detalles recopilados por cada nivel, consulte [Diagnósticos y datos de uso para System Center Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
 [Declaración de privacidad de System Center Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=626527)
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

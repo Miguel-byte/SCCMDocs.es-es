@@ -2,7 +2,7 @@
 title: Administrar aplicaciones iOS compradas por volumen | Microsoft Docs
 description: Implemente, administre y supervise licencias para las aplicaciones que ha adquirido mediante el App Store de iOS.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/08/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: cd9edf61d151ac8334ace0bf668fa4c919d8c75b
+ms.sourcegitcommit: 191e01f6b8a1ef2b9e193abd62d7981e6c977c1d
+ms.openlocfilehash: fb771bc94f49f25cfe01ff67c88572c8f2b18909
 
 
 ---
@@ -91,7 +91,7 @@ Puede sincronizar por completo los datos mantenidos en Apple con Configuration M
 1.  En la consola de Configuration Manager, pulse **Biblioteca de software** > **Administración de aplicaciones** > **Información de licencia para las aplicaciones de la Tienda**.  
 
 3.  Seleccione la aplicación que quiere implementar y, después, en la pestaña **Inicio**, en el grupo **Crear**, pulse **Crear aplicación**.
-La aplicación de Configuration Manager que se crea contiene la aplicación de la Tienda Windows para empresas. Luego puede implementar y supervisar esta aplicación como lo haría con cualquier otra aplicación de Configuration Manager.
+La aplicación de Configuration Manager que se crea contiene la aplicación de iOS que ha adquirido. Luego puede implementar y supervisar esta aplicación como lo haría con cualquier otra aplicación de Configuration Manager.
 
     > [!IMPORTANT]  
     > Debe elegir un propósito de implementación del tipo **Requerido**. Actualmente no se admiten las instalaciones disponibles.
@@ -111,6 +111,6 @@ La aplicación de Configuration Manager que se crea contiene la aplicación de l
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

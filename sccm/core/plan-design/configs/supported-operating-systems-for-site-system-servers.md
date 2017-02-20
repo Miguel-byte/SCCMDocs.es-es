@@ -2,7 +2,7 @@
 title: Servidores de sistema de sitio admitidos | Microsoft Docs
 description: "Obtenga información sobre qué versiones de Windows puede usar para hospedar un sitio o rol de sistema de sitio de System Center Configuration Manager."
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 2/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bebbeebba76ab5cf0c517fcb00b7b6a516a08e3e
-ms.openlocfilehash: 12fe730d924979eec2ef55ea80a1fa90b7b47464
+ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
+ms.openlocfilehash: bb017e575e0318b73cc5ea4e27fd33b1e9c2a02a
 
 
 ---
@@ -37,7 +37,7 @@ Utilice la información de este tema con la información de los siguientes artí
 
 
 ## <a name="windows-server-2016-standard-and-datacenter"></a>Windows Server 2016: Standard y Datacenter
-Windows Server 2016 se admite a partir de la versión 1606 de Configuration Manager con el paquete acumulativo de revisiones de KB3186654 (o la versión de línea base de 1606 que se ha publicado en octubre de 2016).
+A partir de la versión 1606 con el paquete acumulativo de revisiones de KB3186654 (o la versión de línea base de 1606 publicada en octubre de 2016), el sistema operativo admite lo siguiente:
 
 **Servidores de sitio:**  
 
@@ -325,12 +325,12 @@ Windows Server 2016 se admite a partir de la versión 1606 de Configuration Mana
 
     -   Los puntos de distribución admiten varias configuraciones diferentes y cada uno tiene requisitos diferentes. En algunos casos, estas configuraciones admiten la instalación no solo en los servidores sino también en sistemas operativos de clientes. Para obtener más información sobre las opciones disponibles para los puntos de distribución, vea [Administración del contenido y de la infraestructura de contenido para System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-## <a name="the-server-core-installation-of-windows-server-2012"></a>La instalación Server Core de Windows Server 2012  
- Además de los sistemas operativos anteriores que se muestran, la instalación Server Core de Windows Server 2012 también se admite para su uso como un punto de distribución con las siguientes limitaciones:  
 
--   Solo se admite la versión de 64 bits.  
+## <a name="the-server-core-installation-of-windows-server-2016"></a>La instalación Server Core de Windows Server 2016
+A partir de la versión 1606 con el paquete acumulativo de revisiones de KB3186654 (o la versión de línea base de 1606 publicada en octubre de 2016), el sistema operativo puede usarse como punto de distribución, con las siguientes limitaciones:  
+  -   Solo se admite la versión de&64; bits.
+  -   Los puntos de distribución de este sistema operativo no son compatibles con PXE o Multidifusión.  
 
--   Los puntos de distribución de este sistema operativo no son compatibles con PXE o Multidifusión.
 
 ## <a name="the-server-core-installation-of-windows-server-2012-r2"></a>La instalación de Server Core de Windows Server 2012 R2  
  Además de los sistemas operativos anteriores que se muestran, la instalación Server Core de Windows Server 2012 R2 se admite para su uso como un punto de distribución con las siguientes limitaciones:  
@@ -339,8 +339,15 @@ Windows Server 2016 se admite a partir de la versión 1606 de Configuration Mana
 
 -   Los puntos de distribución de este sistema operativo no son compatibles con PXE o Multidifusión.  
 
+## <a name="the-server-core-installation-of-windows-server-2012"></a>La instalación Server Core de Windows Server 2012  
+ Además de los sistemas operativos anteriores que se muestran, la instalación Server Core de Windows Server 2012 también se admite para su uso como un punto de distribución con las siguientes limitaciones:  
+
+-   Solo se admite la versión de 64 bits.  
+
+-   Los puntos de distribución de este sistema operativo no son compatibles con PXE o Multidifusión.
 
 
-<!--HONumber=Jan17_HO1-->
+
+<!--HONumber=Feb17_HO1-->
 
 

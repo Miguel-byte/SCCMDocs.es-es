@@ -1,8 +1,8 @@
 ---
 title: "Actualizar Windows a la versión más reciente | Microsoft Docs"
-description: "Obtenga información sobre cómo usar medios independientes o el Centro de software de Configuration Manager para actualizar un sistema operativo de Windows 7 o una versión posterior a Windows 10."
+description: "Obtenga información sobre cómo usar Configuration Manager para actualizar un sistema operativo de Windows 7 o posteriores a Windows 10."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/06/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 147841212dbb85dd9d4ee7c8a79ca7869584fd99
+ms.sourcegitcommit: 288a4c649f371d9701fe7249449356aa222bf372
+ms.openlocfilehash: 35f04e237efffbdb12893f658950a99dc0b98b85
 
 
 ---
@@ -69,6 +69,9 @@ En este tema, se indican las etapas de System Center Configuration Manager para 
 
      Siga los pasos que aparecen en [Crear una secuencia de tareas para actualizar un sistema operativo](create-a-task-sequence-to-upgrade-an-operating-system.md) para automatizar la actualización del sistema operativo.  
 
+    > [IMPORTANTE] Al usar un medio independiente, necesita incluir una imagen de arranque en la secuencia de tareas para que esté disponible en el Asistente para medios de secuencia de tareas.
+
+
     > [!NOTE]  
     >  Normalmente, usará los pasos de [Crear una secuencia de tareas para actualizar un sistema operativo](create-a-task-sequence-to-upgrade-an-operating-system.md) para crear una secuencia de tareas para actualizar un sistema operativo a Windows 10. La secuencia de tareas incluye el paso Actualizar sistema operativo, así como pasos adicionales recomendados y grupos para controlar el proceso de actualización integral. En cambio, puede crear una secuencia de tareas personalizada y agregar el paso [Actualizar sistema operativo](../understand/task-sequence-steps.md#BKMK_UpgradeOS) de la secuencia de tareas para actualizar el sistema operativo. Esta es la única etapa necesaria para actualizar el sistema operativo a Windows 10. Si elige este método, agregue también el paso [Reiniciar equipo](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer) después del paso Actualizar sistema operativo para completar la actualización. Asegúrese de usar la opción **El sistema operativo predeterminado instalado actualmente** para reiniciar el equipo con el sistema operativo instalado y no con Windows PE.  
 
@@ -88,6 +91,6 @@ En este tema, se indican las etapas de System Center Configuration Manager para 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

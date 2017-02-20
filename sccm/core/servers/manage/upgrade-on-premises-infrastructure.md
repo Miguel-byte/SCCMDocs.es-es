@@ -2,7 +2,7 @@
 title: Actualizar la infraestructura local | Microsoft Docs
 description: "Obtenga información sobre cómo actualizar la infraestructura, como SQL Server y el sistema operativo de sitio de los sistemas de sitio."
 ms.custom: na
-ms.date: 10/28/2016
+ms.date: 2/2/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4a8d98addcd463eb82d8b7100b44254a10d21992
-ms.openlocfilehash: b79346968edf88443f8e30691aa4baec7b81699f
+ms.sourcegitcommit: 83c8492191f40fc4d582562268db0d58a0f9cdde
+ms.openlocfilehash: a5d8496d98bd7f202ffbe8859981e94457ffa5c4
 
 
 ---
@@ -32,7 +32,7 @@ Use la información de este tema para ayudarle a actualizar la infraestructura d
 
 - Si quiere actualizar la infraestructura de System Center Configuration Manager a una nueva versión, vea [Actualizaciones para System Center Configuration Manager](/sccm/core/servers/manage/updates).
 
-##  <a name="a-namebkmksupconfigupgradesitesrva-upgrade-site-operating-system-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a> Actualizar el sistema operativo de sitio de los sistemas de sitio  
+##  <a name="a-namebkmksupconfigupgradesitesrva-upgrade-the-operating-system-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a> Actualizar el sistema operativo de los sistemas de sitio  
  Configuration Manager admite la actualización local del sistema operativo de los servidores que hospedan un servidor de sitio y de los servidores remotos que hospedan cualquier rol de sistema de sitio en las situaciones siguientes:  
 
 -   Actualización local a un Service Pack posterior de Windows Server si el nivel de Service Pack resultante de Windows sigue siendo compatible con Configuration Manager.  
@@ -213,6 +213,6 @@ Para identificar el nivel de compatibilidad de CE de SQL Server en uso para la b
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 

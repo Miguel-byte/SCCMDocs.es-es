@@ -2,7 +2,7 @@
 title: "Actualizar instalaciones de evaluación | Microsoft Docs"
 description: "Obtenga información sobre cómo actualizar una instalación de evaluación a una instalación completa de System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,54 +16,45 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 66dc01b7d1eeed5ad8262c60164460b669301aaf
+ms.sourcegitcommit: d1bf0fdc3e735eb31492476fd46f008620150c0b
+ms.openlocfilehash: 8f951805c2fc25059965c15c94934c0f8546735c
 
 ---
-# <a name="upgrade-an-evaluation-install-of-system-center-configuration-manager-to-a-full-install"></a>Actualizar una instalación de evaluación de System Center Configuration Manager a una instalación completa
+# <a name="upgrade-an-evaluation-installation-of-system-center-configuration-manager-to-a-full-installation"></a>Actualizar una instalación de evaluación de System Center Configuration Manager a una instalación completa
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-
-
- Si ha instalado System Center Configuration Manager como versión de evaluación, después de 180 días, la consola de Configuration Manager pasará a ser de solo lectura hasta que active el producto desde la página **Mantenimiento del sitio** del programa de instalación. En cualquier momento, antes o después del período de 180 días, tiene la opción de actualizar una instalación de evaluación a una instalación completa.  
+Si ha instalado System Center Configuration Manager como versión de evaluación, después de 180 días la consola de Configuration Manager pasará a ser de solo lectura hasta que active el producto en la página **Mantenimiento del sitio** del programa de instalación. Puede actualizar una instalación de evaluación a una instalación completa en cualquier momento (antes o después del período de 180 días).  
 
 > [!NOTE]  
->  Si conecta una consola de Configuration Manager a una instalación de evaluación de Configuration Manager, en la barra de título de la consola se muestra el número de días que quedan para que expire la instalación de evaluación. El número de días no se actualiza automáticamente y solo se actualiza cuando se realiza una nueva conexión a un sitio.  
+>  Al conectar una consola de Configuration Manager a una instalación de evaluación de Configuration Manager, en la barra de título de la consola se mostrará el número de días que quedan hasta que expire la instalación de evaluación. El número de días no se actualiza automáticamente (solo se actualiza cuando se realiza una nueva conexión a un sitio).  
 
- **Puede actualizar los siguientes sitios que ejecutan una instalación de evaluación:**  
+ Puede actualizar los siguientes sitios que ejecutan una instalación de evaluación:  
 
 -   Sitio de administración central  
-
 -   Sitio primario  
 
 Ya que los sitios secundarios no se tratan como instalaciones de evaluación, no es necesario modificar un sitio secundario si su sitio primario principal se actualiza a una instalación completa.  
 
-**Requisitos previos para actualizar una edición de evaluación a una edición completa:**  
+Requisitos previos para actualizar una versión de evaluación a una versión con licencia:  
 
--   Debe poder usar un producto válido durante la actualización.  
+-   Necesita usar un producto válido durante la actualización.  
+-   La cuenta necesita tener permisos de **administrador** en el equipo donde se instalará el sitio.  
 
--   La cuenta debe tener permisos de **administrador** en el equipo en el que va a instalar el sitio.  
+### <a name="to-upgrade-an-evaluation-version-of-configuration-manager-to-a-licensed-version"></a>Para actualizar de una versión de evaluación de Configuration Manager a una versión con licencia  
 
-### <a name="to-upgrade-an-evaluation-edition-of-configuration-manager-to-a-licensed-edition"></a>Para actualizar de una edición de evaluación de Configuration Manager a una edición con licencia  
-
-1.  En el servidor de sitio, busque y ejecute **SETUP.exe** (programa de instalación de Configuration Manager) en la carpeta de instalación de Configuration Manager (**%path%\BIN\X64**).  Debe ejecutar la copia del programa de instalación que se encuentra en el servidor de sitio, en la carpeta de Configuration Manager, porque las opciones de mantenimiento del sitio no están disponibles si ejecuta el programa de instalación desde medios de instalación.  
-
-2.  En la página **Antes de empezar** , haga clic en **Siguiente**.  
-
-3.  En la página **Introducción** , seleccione **Realizar mantenimiento de sitio o restablecer este sitio**y, a continuación, haga clic en **Siguiente**.  
-
-4.  En la página **Mantenimiento del sitio** , seleccione **Actualizar la edición de evaluación a una edición con licencia**, escriba una clave de producto válida y después haga clic en **Siguiente**.  
-
-5.  En la página **Términos de licencia del software de Microsoft** , lea y acepte los términos de licencia y, a continuación, haga clic en **Siguiente**.  
-
-6.  En la página **Configuración** , haga clic en **Cerrar** para completar el asistente.  
+1.  En el servidor de sitio, busque y ejecute **Setup.exe** (programa de instalación de Configuration Manager) en la carpeta de instalación de Configuration Manager (**%path%\BIN\X64**). Debe ejecutar la copia del programa de instalación que se encuentra en el servidor de sitio, en la carpeta de Configuration Manager, porque las opciones de mantenimiento del sitio no están disponibles si ejecuta el programa de instalación desde medios de instalación.  
+2.  En la página **Antes de empezar**, seleccione **Siguiente**.  
+3.  En la página **Introducción**, seleccione **Realizar mantenimiento de sitio o restablecer este sitio** y, después, haga clic en **Siguiente**.  
+4.  En la página **Mantenimiento del sitio**, seleccione **Actualizar la edición de evaluación a una edición con licencia**, escriba una clave del producto válida y, después, haga clic en **Siguiente**.  
+5.  En la página **Términos de licencia del software de Microsoft**, lea y acepte los términos de licencia y, después, seleccione **Siguiente**.  
+6.  En la página **Configuración**, seleccione **Cerrar** para completar el asistente.  
 
     > [!NOTE]  
-    >  La barra de título de las consolas de Configuration Manager que permanecen conectadas al sitio que va a actualizar podría indicar que el sitio es aún una versión de evaluación, hasta que vuelva a conectar la consola al sitio.  
+    >  Es posible que en la barra de título de una consola de Configuration Manager que siga conectada al sitio actualizado se indique que el sitio aún es de una versión de evaluación, pero cambiará cuando vuelva a conectar la consola al sitio.  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

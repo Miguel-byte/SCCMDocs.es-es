@@ -2,7 +2,7 @@
 title: "Punto de conexión de servicio | Microsoft Docs"
 description: "Obtenga información sobre este rol de sistema de sitio de Configuration Manager y comprenda y planee sus diversos usos."
 ms.custom: na
-ms.date: 1/6/2017
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4409d32593e3ab22482b08335005bd2a278a7e35
-ms.openlocfilehash: 36f33e0ce898ccdd5fa25aa59b8cf032805769b9
+ms.sourcegitcommit: d3e6f011527f05b35e411af52d723f459aad66ca
+ms.openlocfilehash: 99b218f23ff8ad0fbac9dbdc28c46829e6800f85
 
 
 ---
@@ -26,64 +26,64 @@ ms.openlocfilehash: 36f33e0ce898ccdd5fa25aa59b8cf032805769b9
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-El punto de conexión de servicio de System Center Configuration Manager es un rol de sistema de sitio que realiza varias funciones importantes para la jerarquía. Antes de configurar el punto de conexión de servicio, es conveniente conocer y planear sus diversos usos que pueden afectar el modo de configuración de este rol de sistema de sitio:  
+El punto de conexión de servicio de System Center Configuration Manager es un rol de sistema de sitio que realiza varias funciones importantes para la jerarquía. Antes de configurar el punto de conexión de servicio, le recomendamos que comprenda y planee los diferentes usos que puedan afectar a la forma de configurar este rol de sistema de sitio:  
 
--   **Administrar dispositivos móviles con Microsoft Intune**: este rol reemplaza al conector de Windows Intune que se usaba en las versiones anteriores de Configuration Manager y se puede configurar con los detalles de la suscripción de Intune. Vea [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune (Administración híbrida de dispositivos móviles (MDM) con System Center Configuration Manager y Microsoft Intune)](../../../../mdm/understand/hybrid-mobile-device-management.md)  
+-   **Administrar dispositivos móviles con Microsoft Intune**: este rol reemplaza al conector de Windows Intune que se usaba en las versiones anteriores de Configuration Manager y se puede configurar con los detalles de la suscripción de Intune. Consulte [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../../mdm/understand/hybrid-mobile-device-management.md) (Administración híbrida de dispositivos móviles (MDM) con System Center Configuration Manager y Microsoft Intune).  
 
--   **Administrar dispositivos móviles con MDM local**: este rol proporciona compatibilidad con los dispositivos locales que administra que no se conectan a Internet. Vea [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager (Administrar dispositivos móviles con la infraestructura local en System Center Configuration Manager)](../../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)  
+-   **Administrar dispositivos móviles con MDM local**: este rol ofrece compatibilidad con los dispositivos locales que administra y que no se conectan a Internet. Consulte [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md) (Administrar dispositivos móviles con la infraestructura local en System Center Configuration Manager).  
 
--   **Cargar datos de uso de la infraestructura de Configuration Manager**: puede controlar el nivel o la cantidad de detalle que se carga. Los datos cargados nos ayudan a:  
+-   **Cargar datos de uso desde la infraestructura de Configuration Manager**: puede controlar el nivel o la cantidad de detalle que se sube. Los datos cargados nos ayudan a:  
 
     -   Identificar y solucionar problemas de forma proactiva  
 
     -   Mejorar nuestros productos y servicios  
 
-    -   Identificar las actualizaciones de Configuration Manager que se aplican a la versión de Configuration Manager actualmente en uso  
+    -   Identificar las actualizaciones de Configuration Manager válidas para la versión de Configuration Manager que use  
 
-  Para obtener información sobre los datos que recopila cada nivel y sobre cómo cambiar el nivel de recopilación después de que se instale el rol, consulte [Diagnósticos y datos de uso](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data) y, después, siga el vínculo de la versión de Configuration Manager que use.  
+  Para más información sobre los datos que recopila cada nivel y sobre cómo cambiar el nivel de recopilación después de instalar el rol, vea [Diagnósticos y datos de uso](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data) y, después, siga el vínculo de la versión de Configuration Manager que use.  
 
     Para obtener más información, consulte [Configuración y niveles de datos de uso](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
 
--   **Descargar las actualizaciones que se aplican a la infraestructura de Configuration Manager**: solo estarán disponibles las actualizaciones apropiadas para la infraestructura, según los datos de uso que se carguen.  
+-   **Descargar las actualizaciones válidas para la infraestructura de Configuration Manager**: solo estarán disponibles las actualizaciones apropiadas para la infraestructura, según los datos de uso que suba.  
 
  **Cada jerarquía admite una única instancia de este rol:**  
 
--   El rol de sistema de sitio solo puede instalarse en el sitio de nivel superior de la jerarquía (es decir, un sitio de administración central o el sitio primario independiente).  
+    -   El rol de sistema de sitio solo se puede instalar en el sitio de nivel superior de la jerarquía (es decir, un sitio de administración central o un sitio primario independiente).  
 
--   Si expande un sitio primario independiente a una jerarquía más grande, debe desinstalar este rol desde el sitio primario y luego puede instalar en el sitio de administración central.  
+    -   Si expande un sitio primario independiente a una jerarquía más grande, tendrá que desinstalar este rol desde el sitio primario para instalarlo en el sitio de administración central.  
 
 ##  <a name="a-namebkmkmodesa-modes-of-operation"></a><a name="bkmk_modes"></a> Modos de operación  
  El punto de conexión de servicio admite dos modos de funcionamiento:  
 
--   En el **modo en línea**, el punto de conexión de servicio comprueba automáticamente cada 24 horas si existen actualizaciones y, luego, descarga las nuevas actualizaciones disponibles para la infraestructura y la versión del producto actuales, de manera que estén disponibles en la consola de Configuration Manager.  
+-   En el **modo con conexión**, el punto de conexión de servicio comprueba automáticamente cada 24 horas si existen actualizaciones y, después, descarga las nuevas actualizaciones disponibles para la infraestructura y la versión del producto actuales para que estén disponibles en la consola de Configuration Manager.  
 
--   En el **modo sin conexión**, el punto de conexión de servicio no se conecta al servicio en la nube de Microsoft y es necesario el [Uso de la herramienta de conexión de servicio para System Center Configuration Manager](../../../../core/servers/manage/use-the-service-connection-tool.md) manual para importar las actualizaciones disponibles  
+-   En el **modo sin conexión**, el punto de conexión de servicio no se conecta al servicio en la nube de Microsoft y tendrá que usar de forma manual la [herramienta de conexión de servicio para System Center Configuration Manager](../../../../core/servers/manage/use-the-service-connection-tool.md) para importar las actualizaciones disponibles.  
 
-Al cambiar el modo entre en línea o sin conexión después de haber instalado el punto de conexión de servicio, debe reiniciar el subproceso SMS_DMP_DOWNLOADER del servicio SMS_Executive de Configuration Manager para que este cambio sea efectivo.  Para ello, use el Administrador de servicios de Configuration Manager para reiniciar solo el subproceso SMS_DMP_DOWNLOADER del servicio SMS_Executive.  También puede reiniciar el servicio SMS_Executive para Configuration Manager (que reinicia la mayoría de los componentes del sitio) o esperar a que una tarea de programación lo haga en su nombre, como una copia de seguridad de sitio, que detiene y luego reinicia SMS_Executive.  
+Al cambiar entre los modos con conexión o sin conexión después de instalar el punto de conexión de servicio, tendrá que reiniciar el subproceso SMS_DMP_DOWNLOADER del servicio SMS_Executive de Configuration Manager para que se aplique el cambio. Para ello, use el Administrador de servicios de Configuration Manager para reiniciar solo el subproceso SMS_DMP_DOWNLOADER del servicio SMS_Executive. También puede reiniciar el servicio SMS_Executive para Configuration Manager (que reinicia la mayoría de los componentes de sitio) o puede esperar hasta que se ejecute una tarea programada (como una copia de seguridad de sitio, que detiene y, después, reinicia automáticamente el servicio SMS_Executive).  
 
-Para usar el Administrador de servicios de Configuration Manager, en la consola, vaya a **Supervisión** > **Estado del sistema** > **Estado del componente**, haga clic en **Iniciar** y seleccione **Administrador de servicios de Configuration Manager**.  En el Administrador de servicios:  
+Para usar el Administrador de servicios de Configuration Manager, en la consola, vaya a **Supervisión** > **Estado del sistema** > **Estado del componente**, haga clic en **Iniciar** y, después, seleccione **Administrador de servicios de Configuration Manager**. En el Administrador de servicios:  
 
--   En el panel de navegación, expanda el sitio y los **Componentes** y seleccione el componente que desea reiniciar.  
+-   En el panel de navegación, expanda el sitio, expanda **Componentes** y, después, seleccione el componente que quiera reiniciar.  
 
--   En el panel de detalles, haga clic con el botón derecho en el componente y seleccione **Consultar**.  
+-   En el panel de detalles, haga clic con el botón derecho en el componente y, después, seleccione **Consulta**.  
 
--   Una vez que se confirma el estado del componente, haga clic con el botón derecho en el componente y seleccione **Detener**.  
+-   Cuando se confirme el estado del componente, haga clic con el botón derecho en el componente y seleccione **Detener**.  
 
--   **Consulte** el componente de nuevo para confirmar que se ha detenido y, después, haga clic con el botón derecho en el componente una vez más y seleccione **Iniciar**.  
+-   Vuelva a **consultar** el componente para confirmar que se ha detenido, vuelva a hacer clic con el botón derecho en el componente y, después, seleccione **Iniciar**.  
 
 > [!IMPORTANT]  
->  Cuando se agrega una suscripción de Microsoft Intune al punto de conexión de servicio, esta establece automáticamente el rol de sistema de sitio en el modo en línea. El punto de conexión de servicio no admite el modo sin conexión cuando se configura con una suscripción de Intune.  
+>  El proceso que agrega una suscripción de Microsoft Intune al punto de conexión de servicio establece automáticamente el rol de sistema de sitio en el modo con conexión. El punto de conexión de servicio no admite el modo sin conexión cuando se configura con una suscripción de Intune.  
 
 **Si se instala el rol en un equipo remoto con respecto al servidor de sitio:**  
 
--   La cuenta de equipo del servidor del sitio debe ser un administrador local del equipo que hospeda una conexión de servicio remoto
+-   La cuenta de equipo del servidor de sitio tiene que ser un administrador local del equipo que hospeda una conexión de servicio remoto.
 
--   Debe configurar el servidor de sistema de sitio que hospeda el rol con una cuenta de instalación de sistema de sitio  
+-   Necesita configurar el servidor de sistema de sitio que hospeda el rol con una cuenta de instalación de sistema de sitio.  
 
--   El administrador de distribución usa dicha cuenta en el servidor de sitio para transferir las actualizaciones desde el punto de conexión de servicio
+-   El administrador de distribución del servidor de sitio usa la cuenta de instalación de sistema de sitio para transferir las actualizaciones desde el punto de conexión de servicio.
 
 ##  <a name="a-namebkmkurlsa-internet-access-requirements"></a><a name="bkmk_urls"></a> Requisitos de acceso a Internet  
-Para permitir la operación, el equipo que hospeda el punto de conexión de servicio y los firewalls entre dicho equipo e Internet deben pasar las comunicaciones a través de **el puerto TCP 443** y el **puerto TCP 443** a las siguientes ubicaciones de Internet. El punto de conexión de servicio también admite el uso de un servidor proxy web (con o sin autenticación) para tener acceso a estas ubicaciones.  
+Para permitir la operación, el equipo que hospeda el punto de conexión de servicio y los firewalls entre dicho equipo e Internet deben pasar las comunicaciones a través de **el puerto TCP 443** y el **puerto TCP 443** a las siguientes ubicaciones de Internet. El punto de conexión de servicio también admite el uso de un servidor proxy web (con o sin autenticación) para acceder a estas ubicaciones.  
 
 **Actualizaciones y mantenimiento**  
 
@@ -117,10 +117,10 @@ Para permitir la operación, el equipo que hospeda el punto de conexión de serv
 ## <a name="install-the-service-connection-point"></a>Instalar el punto de conexión de servicio
 Cuando ejecute **Configurar** para instalar el sitio de nivel superior de una jerarquía, tendrá la opción de instalar el punto de conexión de servicio.
 
-Después de la ejecución de la configuración, o bien si reinstala el rol de sistema de sitio, use el Asistente para **agregar roles de sistema de sitio** o el Asistente para **crear servidor de sistema de sitio** para instalar el sistema de sitio en un servidor en el sitio de nivel superior de la jerarquía (el sitio de administración central o un sitio primario independiente).  Ambos asistentes se encuentran en la pestaña **Inicio** de la consola, en **Administración** > **Configuración de sitio** > **Servidores y roles del sistema de sitios**.
+Después de ejecutar el programa de instalación o de reinstalar el rol de sistema de sitio, use el **Asistente para agregar roles de sistema de sitio** o el **Asistente para crear servidor de sistema de sitio** para instalar el sistema de sitio en un servidor en el sitio de nivel superior de la jerarquía (es decir, el sitio de administración central o un sitio primario independiente). Los dos asistentes se encuentran en la pestaña **Inicio** de la consola, en **Administración** > **Configuración de sitio** > **Servidores y roles del sistema de sitios**.
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

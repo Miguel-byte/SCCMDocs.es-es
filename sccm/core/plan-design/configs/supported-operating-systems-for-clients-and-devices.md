@@ -2,7 +2,7 @@
 title: Dispositivos y clientes compatibles | Microsoft Docs
 description: "Obtenga información sobre qué sistemas operativos admite System Center Configuration Manager con clientes y dispositivos."
 ms.custom: na
-ms.date: 01/06/2017
+ms.date: 2/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 591a43d2243724cd784b5a3eb4779ceaf86a2ecb
-ms.openlocfilehash: 65e995c7e72dd3602ea6b19af8563aeb155bd86c
+ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
+ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
 
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>Sistemas operativos compatibles con dispositivos y clientes de System Center Configuration Manager
@@ -39,7 +39,7 @@ ms.openlocfilehash: 65e995c7e72dd3602ea6b19af8563aeb155bd86c
 **Sistemas operativos compatibles:**  
 
 -  **Windows Server 2016**: Standard, Datacenter <sup>1</sup>
-  - Windows Server 2016 se admite a partir de la versión 1606 de Configuration Manager con el paquete acumulativo de revisiones de KB3186654 (o la versión de línea base de 1606 que se ha publicado en octubre de 2016).  
+  - El sistema operativo se admite a partir de la versión 1606 de Configuration Manager con el paquete acumulativo de revisiones de KB3186654 (o la versión de línea base de 1606 publicada en octubre de 2016).  
 
 
 -   **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>1</sup>    
@@ -65,6 +65,10 @@ ms.openlocfilehash: 65e995c7e72dd3602ea6b19af8563aeb155bd86c
 -   **Windows 8** (x86, x64): Professional, Enterprise    
 
 -   **Windows 7 con SP1** (x86, x64): Professional, Enterprise y Ultimate    
+
+-   **La instalación Server Core de Windows Server 2016** (x64) <sup>2</sup>
+  - El sistema operativo se admite a partir de la versión 1606 con el paquete acumulativo de revisiones de KB3186654 (o la versión de línea base de 1606 publicada en octubre de 2016). En cambio, este sistema operativo no admite el uso de Endpoint Protection.
+
 
 -   **La instalación Server Core de Windows Server 2012 R2** (x64) <sup>2</sup>    
 
@@ -348,6 +352,6 @@ Configuration Manager admite la administración limitada de dispositivos que se 
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

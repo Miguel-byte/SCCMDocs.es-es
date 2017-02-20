@@ -2,7 +2,7 @@
 title: "Lista de comprobación para la versión 1602 | Microsoft Docs"
 description: "Conozca los pasos necesarios previos a la actualización de la versión 1511 de System Center Configuration Manager a la versión 1602."
 ms.custom: na
-ms.date: 1/11/2017
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
-ms.openlocfilehash: bac7ad8558186c6f451956297f3a791ae12176de
+ms.sourcegitcommit: a2e2bc5e873c48283d18ea6eaa5d1bb351f2a033
+ms.openlocfilehash: 1c3149b4c0247377ad556b6fe594047a6f14b989
 
 
 ---
@@ -29,41 +29,43 @@ Antes de actualizar desde la versión 1511 a la 1602 de System Center Configurat
 
  **Acerca de cómo instalar la actualización 1602:**  
 
- La actualización 1602 solo puede instalarse en el sitio de primer nivel de la jerarquía. Esto significa que se inicie la instalación desde el sitio de administración central, si existe, o desde el sitio primario independiente.  
+ La actualización 1602 solo puede instalarse en el sitio de primer nivel de la jerarquía. Esto significa que, si existe, la instalación se inicia desde el sitio de administración central, o bien desde el sitio principal independiente.  
 
--   Los sitios primarios secundarios realizan la instalación de la actualización automáticamente después de que el sitio de administración central haya terminado de instalarla. Puede utilizar ventanas de mantenimiento para controlar el momento en que un sitio instala actualizaciones. A partir de la versión de la actualización 1602, las ventanas de mantenimiento pasan a denominarse períodos para tareas administrativas. Para más información, vea [Ventanas de servicio para servidores de sitio](/sccm/core/servers/manage/service-windows).  
+-   Los sitios primarios secundarios realizan la instalación de la actualización automáticamente después de que el sitio de administración central termine de instalarla. Puede utilizar ventanas de mantenimiento para controlar el momento en que un sitio instala actualizaciones. A partir de la versión de la actualización 1602, las ventanas de mantenimiento han pasado a denominarse *períodos para tareas administrativas*. Para más información, vea [Ventanas de servicio para servidores de sitio](/sccm/core/servers/manage/service-windows).  
 
 -   Una vez que el sitio principal primario termine de instalar la actualización, tendrá que actualizar manualmente los sitios secundarios desde la consola de Configuration Manager. No se admite la actualización automática de los servidores de sitio secundario.  
 
-Cuando el servidor de sitio instala la actualización, los roles de sistema de sitio instalados en el servidor de sitio y en los equipos remotos se actualizan automáticamente. Por lo tanto, antes de instalar la actualización, asegúrese de que cada servidor de sistema de sitio cumple los requisitos previos nuevos de funcionamiento con la nueva versión de actualización.  
+Cuando el servidor de sitio instala la actualización, los roles de sistema de sitio instalados en el servidor de sitio y aquellos instalados en los equipos remotos se actualizan automáticamente. Por lo tanto, antes de instalar la actualización, asegúrese de que cada servidor de sistema de sitio cumpla los requisitos previos nuevos de funcionamiento con la nueva versión de la actualización.  
 
-La primera vez que use una consola de Configuration Manager tras el término de la actualización, se le pedirá que actualice esa consola.  Para ello, debe ejecutar el programa de instalación de Configuration Manager en el equipo que hospeda la consola y seleccionar la opción para actualizarla. Se recomienda no retrasar la instalación de la actualización de la consola.  
+La primera vez que use una consola de Configuration Manager una vez que la actualización haya terminado, se le pedirá que actualice dicha consola. Para ello, debe ejecutar el programa de instalación de Configuration Manager en el equipo que hospede la consola y seleccionar la opción para actualizarla. Se recomienda no retrasar la instalación de la actualización de la consola.  
 
  **Lista de comprobación:**  
 
- **Asegurarse de que todos los sitios tengan una versión compatible de System Center Configuration Manager:** cada servidor de sitio de la jerarquía debe ejecutar System Center Configuration Manager versión 1511 antes de iniciar la instalación de la actualización 1602.  
+ **Asegurarse de que todos los sitios ejecuten una versión compatible de System Center Configuration Manager:** cada servidor de sitio de la jerarquía debe ejecutar la versión 1511 de System Center Configuration Manager antes de iniciar la instalación de la actualización a la versión 1602.  
 
- **Revisar las versiones instaladas de .NET en los servidores de sistema de sitio:** cuando un sitio instala la actualización 1602, si todavía no está instalado .NET Framework 4.5 o posterior, Configuration Manager instala automáticamente .NET Framework 4.5.2 en cada equipo que hospeda alguno de los siguientes roles de sistema de sitio:  
+ **Revisar las versiones instaladas de Microsoft.NET en los servidores de sistema de sitio:** cuando un sitio instala la actualización 1602, si .NET Framework 4.5 o una versión posterior todavía no está instalado, Configuration Manager instala automáticamente .NET Framework 4.5.2 en cada equipo que hospede alguno de los siguientes roles de sistema de sitio:  
 
--   punto de proxy de inscripción  
+-   Punto de proxy de inscripción  
 
--   punto de inscripción  
+-   Punto de inscripción  
 
--   punto de administración  
+-   Punto de administración  
 
 -   Punto de conexión de servicio  
 
-Esta instalación puede poner el servidor de sistema de sitio en un estado pendiente de reinicio y notificar errores en el visor de estado de componentes de Configuration Manager. Además, las aplicaciones .NET del servidor pueden presentar errores aleatorios hasta que se reinicia el servidor.  
+Esta instalación puede poner el servidor de sistema de sitio en un estado pendiente de reinicio y notificar errores en el visor de estado de componentes de Configuration Manager. Además, las aplicaciones .NET del servidor pueden experimentar errores aleatorios hasta que se reinicie el servidor.  
 
- Para más información, vea [Site and site system prerequisites (Requisitos previos del sitio y el sistema de sitio)](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)  
+ Para obtener más información, consulte [Site and site system prerequisites](../../../core/plan-design/configs/site-and-site-system-prerequisites.md) (Requisitos previos de sitio y sistema de sitio).  
 
  **Revisar el estado del sitio y la jerarquía, y comprobar que no hay problemas sin resolver:** antes de actualizar un sitio, resuelva todos los problemas de funcionamiento para el servidor de sitio, el servidor de base de datos del sitio y los roles de sistema de sitio instalados en equipos remotos. Una actualización del sitio puede generar errores debido a problemas de funcionamiento existentes.  
- Para más información, vea [Use alerts and the status system for System Center Configuration Manager (Usar las alertas y el sistema de estado de System Center Configuration Manager)](../../../core/servers/manage/use-alerts-and-the-status-system.md)  
 
- **Revisar la replicación de archivos y datos entre sitios:**  asegúrese de que la replicación de archivos y base de datos entre sitios funciona y está actualizada. Los retrasos o los trabajos pendientes pueden impedir una actualización correcta o sin problemas.    
+Para obtener más información, consulte [Use alerts and the status system for System Center Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md) (Usar alertas y el sistema de estado para System Center Configuration Manager).  
+
+ **Revisar la replicación de archivos y datos entre sitios:**  asegúrese de que la replicación de archivos y base de datos entre sitios funciona y está actualizada. Los retrasos o los trabajos pendientes pueden impedir una actualización correcta y sin problemas.    
+
 Para la replicación de base de datos, puede utilizar Replication Link Analyzer para ayudar a resolver problemas antes de iniciar la actualización.    
- Para más información, consulte   
-[About the Replication Link Analyzer (Acerca de Replication Link Analyzer)](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_RLA) en el tema [Monitor hierarchy and replication infrastructure in System Center Configuration Manager (Supervisar la infraestructura de jerarquía y replicación en System Center Configuration Manager)](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md).  
+
+ Para obtener más información, consulte [Acerca de Replication Link Analyzer](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_RLA) en el tema [Supervisar la infraestructura de la jerarquía y replicación de System Center Configuration Manager](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md).  
 
  **Instalar todas las actualizaciones críticas aplicables para los sistemas operativos en equipos que hospedan el sitio, el servidor de base de datos del sitio y los roles del sistema de sitio remoto:** antes de instalar una actualización para Configuration Manager, instale todas las actualizaciones críticas para cada sistema de sitio aplicable. Si alguna de las actualizaciones que instala requiere un reinicio, reinicie los equipos correspondientes antes de iniciar la actualización.  
 
@@ -71,17 +73,15 @@ Para la replicación de base de datos, puede utilizar Replication Link Analyzer 
 
 -   Crear una copia de seguridad de la base de datos del sitio para probar la actualización de la base de datos.  
 
--   Instalar una actualización para Configuration Manager  
+-   Instalar una actualización de Configuration Manager.  
 
-Para obtener más información, consulte   
-[Database replicas for management points for System Center Configuration Manager (Réplicas de bases de datos para puntos de administración de System Center Configuration Manager)](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)  
+Para obtener más información, consulte [Réplicas de bases de datos para puntos de administración de System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
 
- **Volver a configurar los puntos de actualización de software que usan NLB:** Configuration Manager no puede actualizar un sitio que use un clúster de equilibrio de carga de red (NLB) para hospedar puntos de actualización de software.  
-Si utiliza clústeres NLB para puntos de actualización de software, use PowerShell para quitar el clúster NLB.    
+ **Volver a configurar los puntos de actualización de software que usan NLB:** Configuration Manager no puede actualizar un sitio que use un clúster de equilibrio de carga de red (NLB) para hospedar puntos de actualización de software.  Si utiliza clústeres NLB para puntos de actualización de software, use Windows PowerShell para quitar el clúster NLB.    
 
- Para más información, vea [Planear las actualizaciones de software en System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).  
+ Para obtener más información, consulte [Planear las actualizaciones de software en System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).  
 
- **Deshabilitar todas las tareas de mantenimiento de sitio en cada sitio mientras dura la instalación de la actualización en el sitio:** antes de instalar la actualización, deshabilite cualquier tarea de mantenimiento de sitio que podría ejecutarse mientras el proceso de actualización está activo. Esto incluye, entre otras cosas, lo siguiente:  
+ **Deshabilitar todas las tareas de mantenimiento de sitio en cada uno de ellos mientras dure la instalación de la actualización en el sitio en cuestión:** antes de instalar las actualizaciones, deshabilite cualquier tarea de mantenimiento de sitio que podría ejecutarse mientras el proceso de actualización esté activo. Entre estas tareas se incluyen las siguientes:  
 
 -   Copia de seguridad del servidor del sitio  
 
@@ -90,51 +90,55 @@ Si utiliza clústeres NLB para puntos de actualización de software, use PowerSh
 -   Eliminar datos de detección antiguos  
 
 Cuando se ejecuta una tarea de mantenimiento de la base de datos de sitio durante la instalación de la actualización, se puede producir un error en la instalación de la actualización. Antes de deshabilitar una tarea, programe la tarea de forma que pueda restaurar su configuración después de que se haya instalado la actualización.  
- Para más información, vea [Maintenance tasks for System Center Configuration Manager (Tareas de mantenimiento para System Center Configuration Manager)](../../../core/servers/manage/maintenance-tasks.md) y [Referencia de tareas de mantenimiento para System Center Configuration Manager](../../../core/servers/manage/reference-for-maintenance-tasks.md).  
 
- **Crear una copia de seguridad de la base de datos del sitio en el sitio de administración central y en los sitios primarios:** antes de actualizar un sitio, realice una copia de seguridad del sitio para asegurarse de que tiene una copia de seguridad correcta para utilizarla en la recuperación ante desastres.   
-Para más información, vea [Copia de seguridad y recuperación de System Center Configuration Manager](../../../protect/understand/backup-and-recovery.md).  
+ Para obtener más información, consulte [Tareas de mantenimiento para System Center Configuration Manager](../../../core/servers/manage/maintenance-tasks.md) y [Referencia de tareas de mantenimiento para System Center Configuration Manager](../../../core/servers/manage/reference-for-maintenance-tasks.md).  
 
- **Realizar una copia de seguridad de un archivo Configuration.mof personalizado:** si utiliza un archivo Configuration.mof personalizado para definir clases de datos que se utilizan con el inventario de hardware, cree una copia de seguridad de este archivo antes de actualizar el sitio. Tras la actualización, restaure este archivo al sitio de la versión 1602. Al actualizar un sitio, se sobrescribe el archivo actual con la versión original (predeterminada) del archivo. Para más información sobre el uso de este archivo, vea [Cómo ampliar el inventario de Hardware en Configuration Manager](../../../core/clients/manage/inventory/extend-hardware-inventory.md)  
+ **Crear una copia de seguridad de la base de datos del sitio en el sitio de administración central y en los sitios primarios:** antes de actualizar un sitio, realice una copia de seguridad de la base de datos del sitio para asegurarse de tener una copia de seguridad correcta para utilizarla en la recuperación ante desastres.   
+
+Para obtener más información, consulte [Copia de seguridad y recuperación de System Center Configuration Manager](../../../protect/understand/backup-and-recovery.md).  
+
+ **Realizar una copia de seguridad de un archivo Configuration.mof personalizado:** si utiliza un archivo Configuration.mof personalizado para definir clases de datos que se utilizan con el inventario de hardware, cree una copia de seguridad de este archivo antes de actualizar el sitio. Tras la actualización, restaure este archivo al sitio de la versión 1602. Al actualizar un sitio, se sobrescribe el archivo actual con la versión original (predeterminada) del archivo. Para obtener más información sobre el uso de este archivo, consulte [Cómo ampliar el inventario de hardware en System Center Configuration Manager](../../../core/clients/manage/inventory/extend-hardware-inventory.md).  
 
  **Probar la actualización de la base de datos en una copia de la última copia de seguridad de la base de datos del sitio:** antes de actualizar un sitio primario o un sitio de administración central de System Center Configuration Manager, pruebe el proceso de actualización de la base de datos del sitio en una copia de la base de datos del sitio.  
 
 -   Debe probar el proceso de actualización de base de datos del sitio porque, al actualizar un sitio, la base de datos del sitio podría modificarse.  
 
--   Aunque una actualización de base de datos de prueba no es necesaria, puede identificar problemas de la actualización antes de que la base de datos de producción se vea afectada.  
+-   Aunque no es necesario actualizar la base de datos de prueba, puede identificar problemas de actualización antes de que la de producción se vea afectada.  
 
--   Una actualización incorrecta de la base de datos del sitio podría inutilizar la base de datos del sitio, en cuyo caso podría ser necesaria una recuperación del sitio para restaurar la funcionalidad.  
+-   Una actualización incorrecta de la base de datos, podría inutilizar la base de datos del sitio, en cuyo caso podría requerirse una recuperación del sitio para recuperar la funcionalidad.  
 
 -   Aunque se trate de una base de datos de sitio compartida entre varios sitios de una jerarquía, planee la prueba de la base de datos en cada uno de los sitios correspondientes antes de actualizar el sitio.  
 
--   Si usa réplicas de base de datos para puntos de administración en un sitio primario, deshabilite la replicación antes de crear la copia de seguridad de la base de datos del sitio.  
+-   Si utiliza réplicas de base de datos para puntos de administración en un sitio primario, deshabilite la replicación antes de crear la copia de seguridad de la base de datos del sitio.  
 
 Configuration Manager no admite la realización de copias de seguridad de sitios secundarios ni la actualización de prueba de una base de datos de un sitio secundario.   
-No se puede ejecutar una actualización de prueba de base de datos en la base de datos del sitio de producción. Esta acción actualiza la base de datos del sitio y podría inutilizar el sitio. Para más información, vea la sección [Test the site database upgrade (Probar la actualización de la base de datos del sitio)](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_test) de [Upgrade to System Center Configuration Manager (Actualizar a System Center Configuration Manager)](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).  
+No ejecute una actualización de base de datos de prueba en la base de datos del sitio de producción. Esta acción actualiza la base de datos del sitio y podría inutilizar el sitio. Para más información, vea la sección [Test the site database upgrade (Probar la actualización de la base de datos del sitio)](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_test) de [Upgrade to System Center Configuration Manager (Actualizar a System Center Configuration Manager)](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).  
 
- **Plan piloto de cliente:** al instalar una actualización que actualiza el cliente, puede probar esa nueva actualización de cliente en preproducción antes de que implemente y actualice todos los clientes activos.   
- Para aprovechar las ventajas de esta opción, antes de comenzar la instalación de la actualización, debe configurar el sitio para admitir las actualizaciones automáticas de preproducción. Para más información, vea [Upgrade clients in System Center Configuration Manager (Actualizar clientes en System Center Configuration Manager)](../../../core/clients/manage/upgrade/upgrade-clients.md) y   
-[Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md)  
+ **Plan piloto de cliente:** al instalar una actualización del cliente, puede probar esa nueva actualización de cliente en preproducción antes de implementarla y actualizar todos los clientes activos.   
 
- **Plan para utilizar las ventanas de mantenimiento**  
- **para controlar el momento en que los servidores de sitio instalan actualizaciones:** puede usar las ventanas de mantenimiento para definir un período aplicable a un servidor de sitio primario durante el cual se pueden instalar las actualizaciones para ese sitio.   
-Esto puede ayudarle a controlar el momento en que los sitios de la jerarquía instalan la actualización.   
-A partir de la versión de la actualización 1602, las ventanas de mantenimiento pasan a denominarse períodos para tareas administrativas. Para más información, vea [Ventanas de servicio para servidores de sitio](/sccm/core/servers/manage/service-windows).  
+ Para aprovechar las ventajas de esta opción, debe configurar el sitio para que admita las actualizaciones automáticas de preproducción antes de comenzar la instalación de la actualización. Para más información, vea [Upgrade clients in System Center Configuration Manager (Actualizar clientes en System Center Configuration Manager)](../../../core/clients/manage/upgrade/upgrade-clients.md) y   
+[Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).  
 
- **Ejecutar el Comprobador de requisitos previos del programa de instalación:**  antes de instalar la actualización 1602, puede ejecutar el Comprobador de requisitos previos con independencia de la instalación de la actualización. Al instalar la actualización en el sitio, el Comprobador de requisitos previos vuelve a ejecutarse.  
+ **Planear usar ventanas de mantenimiento para controlar el momento en que los servidores de sitio instalan actualizaciones:** puede usar las ventanas de mantenimiento para definir un período de tiempo durante el cual se pueden instalar las actualizaciones del servidor de sitio. Esto puede ayudarle a controlar el momento en que los sitios de la jerarquía instalan la actualización.   
+
+A partir de la versión de la actualización 1602, las ventanas de mantenimiento han pasado a denominarse *períodos para tareas administrativas*. Para más información, vea [Ventanas de servicio para servidores de sitio](/sccm/core/servers/manage/service-windows).  
+
+ **Ejecutar el Comprobador de requisitos previos del programa de instalación:** antes de instalar la actualización 1602, puede ejecutar el Comprobador de requisitos previos independientemente de la instalación de la actualización. Al instalar la actualización en el sitio, el Comprobador de requisitos previos vuelve a ejecutarse.  
+
 Para más información, vea **Step 3: Run the prerequisite checker before installing an update (Paso 3: ejecutar el Comprobador de requisitos previos antes de instalar una actualización)** en el tema [Updates for System Center Configuration Manager (Actualizaciones para System Center Configuration Manager)](../../../core/servers/manage/updates.md).  
 
 > [!IMPORTANT]  
->  Cuando se ejecuta el Comprobador de requisitos previos como parte de la instalación de una actualización o de forma independiente, el proceso actualiza algunos archivos de origen del producto que se utilizan para tareas de mantenimiento del sitio. Por lo tanto, después de ejecutar el Comprobador de requisitos previos pero antes de instalar la actualización 1602, si tiene que realizar una tarea de mantenimiento del sitio, ejecute **Setupwfe.exe** (programa de instalación de Configuration Manager) desde la carpeta CD.Latest en el servidor de sitio.  
+>  Cuando se ejecuta el Comprobador de requisitos previos de forma independiente o como parte de la instalación de una actualización, el proceso actualiza algunos archivos de origen del producto que se utilizan para tareas de mantenimiento del sitio. Por lo tanto, después de ejecutar el Comprobador de requisitos previos, pero antes de instalar la actualización 1602, si necesita realizar una tarea de mantenimiento del sitio, ejecute **Setupwfe.exe** (programa de instalación de Configuration Manager) desde la carpeta CD.Latest en el servidor de sitio.  
 
- **Actualizar sitios:** ya está listo para iniciar la instalación de la actualización de la jerarquía.  
-  Se recomienda planear la instalación de la actualización fuera del horario comercial habitual para cada sitio, ya que será el momento en que el proceso de instalación de la actualización y sus acciones para volver a instalar los componentes del sitio y los roles de sistema de sitio afectarán menos a las operaciones comerciales. Para más información, vea [Updates for System Center Configuration Manager (Actualizaciones para System Center Configuration Manager)](../../../core/servers/manage/updates.md).  
+ **Actualizar sitios:** ya está listo para iniciar la instalación de la actualización de la jerarquía. Se recomienda planear la instalación de la actualización fuera del horario comercial habitual de cada sitio, ya que será el momento en que el proceso de instalación de la actualización y sus acciones para volver a instalar los componentes del sitio y los roles de sistema de sitio afectarán menos a las operaciones comerciales.
 
-## <a name="see-also"></a>Véase también  
+Para más información, vea [Updates for System Center Configuration Manager (Actualizaciones para System Center Configuration Manager)](../../../core/servers/manage/updates.md).  
+
+## <a name="see-also"></a>Consulte también  
  [Updates for System Center Configuration Manager (Actualizaciones para System Center Configuration Manager)](../../../core/servers/manage/updates.md)
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

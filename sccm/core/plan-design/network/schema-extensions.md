@@ -2,7 +2,7 @@
 title: Extensiones de esquema | Microsoft Docs
 description: Extienda el esquema de Active Directory para admitir System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,8 +18,8 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: f230b6cbe97b72fee4f5d2e45260e6217ef2cec0
+ms.sourcegitcommit: 7479e54b5db2eff893bf9fbaf52c104836cda519
+ms.openlocfilehash: 5b5540c35c02df6e3d06e4aa9269b8da3238233e
 
 
 ---
@@ -27,9 +27,9 @@ ms.openlocfilehash: f230b6cbe97b72fee4f5d2e45260e6217ef2cec0
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Puede extender el esquema de Active Directory para admitir Configuration Manager. De este modo, se edita un esquema de Active Directory de bosques para agregar un nuevo contenedor y varios atributos que los sitios de Configuration Manager usan para publicar información de claves de Active Directory a la que los clientes puedan acceder de forma segura.  Esta información puede simplificar la implementación y configuración de clientes, y ayuda a los clientes a localizar los recursos del sitio, como servidores con contenido implementado o que proporcionen varios servicios a los clientes.  
+Puede extender el esquema de Active Directory para admitir Configuration Manager. De este modo, se edita el esquema de Active Directory de un bosque para agregar un nuevo contenedor y varios atributos que los sitios de Configuration Manager usan para publicar información de claves en Active Directory a la que los clientes pueden acceder de forma segura. Esta información puede simplificar la implementación y configuración de clientes, y ayuda a los clientes a buscar los recursos del sitio, como servidores con contenido distribuido o que ofrezcan varios servicios a los clientes.  
 
--   No es necesario extender el esquema de Active Directory, pero se recomienda.  
+-   Le recomendamos que extienda el esquema de Active Directory, aunque no es obligatorio.  
 
 Antes de [extender el esquema de Active Directory](https://msdnstage.redmond.corp.microsoft.com/en-US/library/mt345589\(TechNet.10\).aspx), debe estar familiarizado con los Servicios de dominio de Active Directory y sentirse cómodo con la [modificación del esquema de Active Directory](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx).  
 
@@ -37,17 +37,17 @@ Antes de [extender el esquema de Active Directory](https://msdnstage.redmond.cor
 
 -   Las extensiones de esquema de Active Directory para System Center Configuration Manager son iguales que las que se usan en Configuration Manager 2007 y Configuration Manager 2012. Si extendió el esquema anteriormente para cualquiera de las versiones, no tiene que volver a hacerlo.  
 
--   La extensión del esquema es una acción irreversible que tiene lugar en todo el bosque y una sola vez.  
+-   La extensión del esquema es una única acción irreversible que afecta a todo el bosque.  
 
--   La extensión del esquema solo puede realizarla un usuario que pertenezca al grupo Administradores de esquema o que tenga delegados permisos suficientes para modificar el esquema.  
+-   Solo un usuario que pertenezca al grupo Administradores de esquema o que tenga delegados permisos suficientes para cambiar el esquema puede extender el esquema.  
 
--   Aunque puede extender el esquema antes o después de ejecutar el programa de instalación de Configuration Manager, se recomienda hacerlo antes de empezar a configurar los sitios y la jerarquía.  Esto puede simplificar muchos de los pasos de configuración posteriores.  
+-   Aunque puede extender el esquema antes o después de ejecutar el programa de instalación de Configuration Manager, le recomendamos que extienda el esquema antes de empezar a configurar los sitios y la jerarquía. Esto puede simplificar muchos de los pasos de configuración posteriores.  
 
 -   Después de extender el esquema, el catálogo global de Active Directory se replica en todo el bosque. Por tanto, planee extender el esquema cuando no esté previsto que el tráfico de replicación vaya a afectar negativamente a otros procesos que dependen de la red:  
 
-    -   En los bosques de Windows 2000, la extensión del esquema produce una sincronización total de todo el catálogo global.  
+    -   En los bosques de Windows 2000, la extensión del esquema produce una sincronización completa de todo el catálogo global.  
 
-    -   A partir de los bosques de Windows 2003, solo se replican los nuevos atributos agregados.  
+    -   A partir de bosques de Windows 2003, solo se replican los atributos agregados.  
 
 **Dispositivos y clientes que no usan el esquema de Active Directory:**  
 
@@ -70,15 +70,15 @@ Antes de [extender el esquema de Active Directory](https://msdnstage.redmond.cor
 ## <a name="capabilities-that-benefit-from-extending-the-schema"></a>Capacidades que se benefician de la extensión del esquema  
 **Asignación de sitio e instalación de equipo cliente:** cuando se instala un nuevo cliente en un equipo Windows, el cliente busca las propiedades de instalación en Active Directory Domain Services.  
 
--   **Soluciones alternativas:** si no extiende el esquema, use una de las siguientes opciones para proporcionar detalles de configuración que los equipos requieren para la instalación:  
+-   **Soluciones alternativas:** si no extiende el esquema, use una de las opciones siguientes para ofrecer detalles de configuración que es necesario instalar en los equipos:  
 
-    -   **Use la instalación de inserción de cliente**. Antes de utilizar el método de instalación de cliente, asegúrese de que se cumplen todos los requisitos previos. Para obtener más información, consulte la sección "Dependencias de los métodos de instalación" del tema Requisitos previos de los equipos cliente.  
+    -   **Use la instalación de inserción de cliente**. Antes de usar el método de instalación de cliente, asegúrese de que se cumplen todos los requisitos previos. Para obtener más información, consulte la sección “Dependencias de los métodos de instalación” en [Requisitos previos para la implementación de clientes en equipos Windows con System Center Configuration Manager](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers).  
 
     -   **Instale manualmente los clientes** y defina las propiedades de instalación de cliente mediante las propiedades de línea de comandos de instalación de CCMSetup. Esto debe incluir lo siguiente:  
 
         -   Especifique un punto de administración o ruta de acceso de origen desde donde el equipo puede descargar los archivos de instalación usando la propiedad de CCMSetup **/mp:=&lt;nombre de equipo de nombre de punto de administración\>** o **/source:&lt;ruta de acceso de los archivos de origen del cliente\>** en la línea de comandos de CCMSetup durante la instalación del cliente.  
 
-        -   Especifique una lista de los puntos de administración iniciales que el cliente puede utilizar para asignar al sitio y, a continuación, descargue la configuración del sitio y la directiva de cliente. Utilice la propiedad SMSMP de CCMSetup Client.msi para hacer esto.  
+        -   Especifique una lista de los puntos de administración iniciales que el cliente puede usar para asignarlos al sitio y, después, descargue la configuración del sitio y la directiva de cliente. Utilice la propiedad SMSMP de CCMSetup Client.msi para hacer esto.  
 
     -   **Publique el punto de administración en DNS o WINS** y configure los clientes para que usen este método de ubicación del servicio.  
 
@@ -86,18 +86,18 @@ Antes de [extender el esquema de Active Directory](https://msdnstage.redmond.cor
 
 -   **Soluciones alternativas:** si no extiende el esquema, use una de las opciones siguientes para proporcionar nuevas configuraciones de puerto para los clientes existentes:  
 
-    -   **Reinstale los clientes** con las opciones que configuren el puerto nuevo  
+    -   **Reinstale los clientes** con las opciones que configuren el puerto nuevo.  
 
-    -   **Implemente un script personalizado para los clientes que actualice la información de puerto**. Si los clientes no pueden comunicarse con un sitio debido a un cambio de puerto, no puede usar Configuration Manager para implementar este script. Por ejemplo, podría utilizar una directiva de grupo.  
+    -   **Implemente un script personalizado para los clientes que actualice la información de puerto**. Si los clientes no pueden comunicarse con un sitio debido a un cambio de puerto, no podrá usar Configuration Manager para implementar este script. Por ejemplo, podría utilizar una directiva de grupo.  
 
 **Escenarios de implementación de contenido**: cuando crea contenido en un sitio y, a continuación, implementa ese contenido en otro sitio de la jerarquía, el sitio receptor debe poder verificar la firma de los datos del contenido firmado. Esto requiere acceso a la clave pública del sitio de origen en el que crea estos datos. Al extender el esquema de Active Directory para Configuration Manager, la clave pública de un sitio estará disponible para todos los sitios de la jerarquía.  
 
 -   **Soluciones alternativas:** si no extiende el esquema, use la herramienta de mantenimiento de la jerarquía, **preinst.exe**, para intercambiar la información de clave segura entre sitios.  
 
-     Por ejemplo, si piensa crear contenido en un sitio primario e implementar ese contenido en un sitio secundario ubicado debajo de un sitio primario diferente, debe extender el esquema de Active Directory para permitir que el sitio secundario obtenga la clave pública de los sitios primarios de origen, o debe usar preinst.exe para compartir las claves entre los dos sitios directamente.  
+     Por ejemplo, si tiene previsto crear contenido en un sitio primario e implementar ese contenido en un sitio secundario que esté por debajo de otro sitio primario, necesitará extender el esquema de Active Directory para permitir que el sitio secundario obtenga la clave pública del sitio primario de origen, o bien tendrá que usar preinst.exe para compartir las claves entre los dos sitios directamente.  
 
-## <a name="active-directory-attributes-and-classes"></a>Atributos y clases de active Directory  
-Si extiende el esquema para System Center Configuration Manager, las clases y los atributos siguientes se agregan al esquema y están disponibles para todos los sitios de Configuration Manager de ese bosque de Active Directory.  
+## <a name="active-directory-attributes-and-classes"></a>Atributos y clases de Active Directory  
+Si extiende el esquema para System Center Configuration Manager, las siguientes clases y atributos se agregarán al esquema y estarán disponibles para todos los sitios de Configuration Manager de ese bosque de Active Directory.  
 
 -   Atributos:  
 
@@ -141,7 +141,9 @@ Si extiende el esquema para System Center Configuration Manager, las clases y lo
     -   cn=MS-SMS-Site  
 
 > [!NOTE]  
->  Las extensiones de esquema podrían incluir atributos y clases que provienen de versiones anteriores del producto, pero que Configuration Manager 2015 no usa. Por ejemplo:  
+
+>  En las extensiones de esquema se podrían incluir atributos y clases que provienen de versiones anteriores del producto, pero que no se usan en System Center Configuration Manager. Por ejemplo:  
+
 >   
 >  -   Atributo: cn=MS-SMS-Site-Boundaries  
 > -   Clase: cn=MS-SMS-Server-Locator-Point  
@@ -150,6 +152,6 @@ Para asegurarse de que las listas anteriores están actualizadas, consulte el ar
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

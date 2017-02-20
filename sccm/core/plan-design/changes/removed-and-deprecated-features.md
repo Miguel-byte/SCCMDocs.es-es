@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f912bb82b8d753f01b15f96eec5099c3f92abe75
-ms.openlocfilehash: 18b411b05dd6fc9b572e1d3d201876172bb40d07
+ms.sourcegitcommit: 1948e2914fff91f156dd8956c018ff0fabcda2f9
+ms.openlocfilehash: 3a1edd1b59676e59d4bfcd4c01a23f7a04f91f4f
 
 
 ---
@@ -50,6 +50,7 @@ Para obtener más información, vea:
 |-|-|-|  
 |Protección de acceso a redes (NAP): como aparece en System Center 2012 Configuration Manager|10 de julio de 2015|Versión 1511|  
 |Administración fuera de banda: como aparece en System Center 2012 Configuration Manager|16 de octubre de 2015|Versión 1511|
+|Secuencias de tareas: <br /> - OSDPreserveDriveLetter  <br /><br /> Ahora, durante una implementación del sistema operativo, el programa de instalación de Windows determina, de forma predeterminada, cuál es la mejor letra de unidad (normalmente C:). Si quiere especificar otra unidad, puede cambiar la ubicación en el paso de secuencia de tareas Aplicar el sistema operativo. Vaya al valor **Seleccione la ubicación en la que desea aplicar este sistema operativo**, seleccione **Letra de unidad lógica específica** y elija la unidad que quiere usar. |20 de junio de 2016 |Versión 1606 |
 |Secuencias de tareas: <br /> - Convertir el disco en dinámico <br /> - Instalar herramientas de implementación |18 de noviembre de 2016|La compatibilidad con estas secuencias de tareas finaliza con la primera actualización publicada después del 1 de junio de 2017.|
 |El Centro de software tiene un aspecto renovado y moderno. Las aplicaciones que solo se hubiesen mostrado en el catálogo de aplicaciones que depende de Silverlight (aplicaciones disponibles para el usuario) ahora se muestran en la pestaña **Aplicaciones** del Centro de software. Todavía se puede acceder al catálogo de aplicaciones mediante el vínculo de la pestaña **Estado de la instalación** del Centro de software.<br><br>En los próximos meses, la versión anterior del Centro de software dejará de estar disponible.<br><br>Puede configurar los clientes para que usen el nuevo Centro de software. Para ello, habilite la opción de cliente **Agente de equipo** > **Use new Software Center** (Usar el nuevo Centro de software).<br><br>Para más información sobre el Centro de software, consulte [Planear y configurar la administración de aplicaciones en System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management).|13 de diciembre de 2016|Se anunciará|
 |Administración de discos duros virtuales (VHD) con Configuration Manager. </br></br>Esto incluye la eliminación de opciones para crear un nuevo VHD o administrar un VHD con una secuencia de tareas, y la eliminación del nodo de discos duros virtuales de la consola de Configuration Manager. </br></br>Cuando se quita esta compatibilidad, los VHD existentes no se eliminarán, pero ya no se podrá obtener acceso a ellos desde dentro de la consola de Configuration Manager.  |6 de enero de 2017 |La compatibilidad con VHD finaliza con la primera actualización publicada después del 1 de junio de 2017.|
@@ -112,6 +113,6 @@ Detalles adicionales sobre las características eliminadas con la versión 1511 
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 
