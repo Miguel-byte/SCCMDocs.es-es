@@ -17,10 +17,10 @@
 ### [Actualizar la rama de mantenimiento a largo plazo a la rama actual](understand/convert-to-current-branch.md)
 ##  [Usar servicios en la nube](understand/use-cloud-services.md)
 ### [Configuration Manager en Azure](understand/configuration-manager-on-azure.md)
-##  [Preguntas frecuentes acerca de datos de diagnóstico y uso](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
+##  [Preguntas más frecuentes sobre productos y licencias](understand/product-and-licensing-faq.md)
+##  [Preguntas más frecuentes sobre diagnósticos y datos de uso](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
 
 #    [Planear y diseñar](plan-design/get-ready.md)
-
 ##   Cambios del producto
 ###  [Características y funcionalidades](plan-design/changes/features-and-capabilities.md)
 ###  [Cambios desde Configuration Manager 2012](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
@@ -305,6 +305,6 @@
 ###  [Actualizar análisis](clients/manage/upgrade/upgrade-analytics.md)
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 
