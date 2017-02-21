@@ -1,6 +1,6 @@
 ---
-title: Prepararse para implementar software cliente en equipos Mac | Microsoft Docs
-description: "Tareas de configuración anteriores a la implementación del cliente de Configuration Manager en equipos Mac."
+title: "Preparativos para la implementación de software cliente en Mac | Microsoft Docs"
+description: "Tareas de configuración previas a la implementación del cliente de Configuration Manager en Mac."
 ms.custom: na
 ms.date: 01/02/2017
 ms.prod: configuration-manager
@@ -22,7 +22,7 @@ ms.openlocfilehash: 9f51c15adaa850eb8343601ddcd13046480fc9c0
 
 ---
 
-# <a name="prepare-to-deploy-client-software-to-macs"></a>Prepararse para implementar software cliente en equipos Mac
+# <a name="prepare-to-deploy-client-software-to-macs"></a>Preparativos para la implementación de software cliente en Mac
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
@@ -115,7 +115,7 @@ Para ver una implementación de ejemplo en la que se crea y se instala este cert
 
 -   Permitir a los dispositivos móviles y equipos Mac usar este punto de administración  
 
- Aunque no se requieren puntos de distribución para instalar el cliente, debe configurar puntos de distribución para permitir conexiones de cliente desde Internet si quiere implementar software en estos equipos una vez instalado el cliente.  
+ Aunque no se requieren puntos de distribución para instalar el cliente, debe configurarlos para permitir conexiones de cliente desde Internet si quiere implementar software en estos equipos una vez instalado el cliente.  
 
  
 ### <a name="to-configure-management-points-and-distribution-points-to-support-macs"></a>Para configurar puntos de administración y puntos distribución para admitir equipos Mac  
