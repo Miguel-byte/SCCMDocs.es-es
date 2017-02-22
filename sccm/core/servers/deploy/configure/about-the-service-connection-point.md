@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d3e6f011527f05b35e411af52d723f459aad66ca
-ms.openlocfilehash: 99b218f23ff8ad0fbac9dbdc28c46829e6800f85
+ms.sourcegitcommit: 3a24fe53cc243294694b779fad4c3ab83ca2ecb7
+ms.openlocfilehash: ae2cc7030c1fc404dcc7392b8c3067fc0f8cafc0
 
 
 ---
@@ -83,7 +83,7 @@ Para usar el Administrador de servicios de Configuration Manager, en la consola,
 -   El administrador de distribución del servidor de sitio usa la cuenta de instalación de sistema de sitio para transferir las actualizaciones desde el punto de conexión de servicio.
 
 ##  <a name="a-namebkmkurlsa-internet-access-requirements"></a><a name="bkmk_urls"></a> Requisitos de acceso a Internet  
-Para permitir la operación, el equipo que hospeda el punto de conexión de servicio y los firewalls entre dicho equipo e Internet deben pasar las comunicaciones a través de **el puerto TCP 443** y el **puerto TCP 443** a las siguientes ubicaciones de Internet. El punto de conexión de servicio también admite el uso de un servidor proxy web (con o sin autenticación) para acceder a estas ubicaciones.  
+Para permitir la operación, el equipo que hospeda el punto de conexión de servicio y los firewalls entre dicho equipo e Internet deben pasar las comunicaciones a través de **el puerto TCP 443** y el **puerto TCP 443** a las siguientes ubicaciones de Internet. El punto de conexión de servicio también admite el uso de un servidor proxy web (con o sin autenticación) para acceder a estas ubicaciones.  Si necesita configurar una cuenta de proxy web, consulte [Compatibilidad de servidor proxy en System Center Configuration Manager](/sccm/core/plan-design/network/proxy-server-support).
 
 **Actualizaciones y mantenimiento**  
 
@@ -121,6 +121,6 @@ Después de ejecutar el programa de instalación o de reinstalar el rol de siste
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

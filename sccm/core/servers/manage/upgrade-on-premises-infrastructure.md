@@ -2,7 +2,7 @@
 title: Actualizar la infraestructura local | Microsoft Docs
 description: "Obtenga información sobre cómo actualizar la infraestructura, como SQL Server y el sistema operativo de sitio de los sistemas de sitio."
 ms.custom: na
-ms.date: 2/2/2017
+ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 83c8492191f40fc4d582562268db0d58a0f9cdde
-ms.openlocfilehash: a5d8496d98bd7f202ffbe8859981e94457ffa5c4
+ms.sourcegitcommit: 2e711cce2435957f3e85dad08f17260e1a224fc2
+ms.openlocfilehash: c6448932e91a02984ca57cef0b75c10ea3f43fa1
 
 
 ---
@@ -37,14 +37,14 @@ Use la información de este tema para ayudarle a actualizar la infraestructura d
 
 -   Actualización local a un Service Pack posterior de Windows Server si el nivel de Service Pack resultante de Windows sigue siendo compatible con Configuration Manager.  
 -   Actualización local desde:
-    - Windows Server 2012 R2 a Windows Server 2016 ([Ver detalles adicionales](#upgrade-windows-server-2012-r2-to-2016))
-    - Windows Server 2012 a Windows Server 2012 R2 ([Ver detalles adicionales](#upgrade-windows-server-2012-to-windows-server-2012-r2))
-    - Si usa la versión 1602 de Configuration Manager o una versión posterior, también se puede actualizar Windows Server 2008 R2 a Windows Server 2012 R2 ([Ver detalles adicionales](#upgrade-windows-server-2008-r2-to-windows-server-2012-r2))
+    - Windows Server 2012 R2 a Windows Server 2016 ([ver detalles adicionales](#upgrade-windows-server-2012-r2-to-2016)).
+    - Windows Server 2012 a Windows Server 2012 R2 ([ver detalles adicionales](#upgrade-windows-server-2012-to-windows-server-2012-r2)).
+    - Si usa la versión 1602 de Configuration Manager o una posterior, también se puede actualizar Windows Server 2008 R2 a Windows Server 2012 R2 ([ver detalles adicionales](#upgrade-windows-server-2008-r2-to-windows-server-2012-r2)).
 
     > [!WARNING]  
-    >  Antes de actualizar a Windows Server 2012 R2, **debe desinstalar WSUS 3.2** del servidor.  
+    >  Antes de actualizar a Windows Server 2012 R2, *debe desinstalar WSUS 3.2* del servidor.  
     >   
-    >  Para obtener más información acerca de este paso crítico, consulte la sección Funcionalidad nueva y modificada en [Introducción a Windows Server Update Services](https://technet.microsoft.com/library/hh852345.aspx) en la documentación de Windows Server.  
+    >  Para obtener más información sobre este paso crítico, consulte la sección "Funcionalidad nueva y modificada" en [Introducción a Windows Server Update Services](https://technet.microsoft.com/library/hh852345.aspx), en la documentación de Windows Server.  
 
 Para actualizar un servidor, use los procedimientos de actualización que proporciona el sistema operativo al que se va a actualizar.  Consulte lo siguiente:
   -  [Opciones de actualización para Windows Server 2012 R2](https://technet.microsoft.com/library/dn303416.aspx) en la documentación de Windows Server.  
@@ -54,35 +54,35 @@ Para actualizar un servidor, use los procedimientos de actualización que propor
 Este escenario de actualización de sistema operativo tiene las siguientes condiciones:
 
 **Antes de la actualización:**  
--   Quite el cliente de System Center Endpoint Protection (SCEP). Windows Server 2016 tiene Windows Defender integrado, que reemplaza al cliente SCEP. La presencia del cliente SCEP puede impedir la actualización a Windows Server 2016.
+-     Quite el cliente de System Center Endpoint Protection (SCEP). Windows Server 2016 tiene Windows Defender integrado, que reemplaza al cliente SCEP. La presencia del cliente SCEP puede impedir la actualización a Windows Server 2016.
 
 **Después de la actualización:**
--   Asegúrese de que Windows Defender está habilitado, establecido para el inicio automático y en ejecución.
--   Asegúrese de que se ejecutan los siguientes servicios de Configuration Manager:
+-     Asegúrese de que Windows Defender está habilitado, establecido para el inicio automático y en ejecución.
+-     Asegúrese de que se ejecutan los siguientes servicios de Configuration Manager:
   -     SMS_EXECUTIVE
   -     SMS_SITE_COMPONENT_MANAGER
 
 
--   Asegúrese de que los servicios **Activación de proceso de Windows** y **WWW/W3svc** están habilitados, establecidos para el inicio automático y en ejecución en los siguientes roles de sistema de sitio (estos servicios se deshabilitan durante la actualización):
+-     Asegúrese de que los servicios **Activación de proceso de Windows** y **WWW/W3svc** están habilitados, establecidos para el inicio automático y en ejecución en los siguientes roles de sistema de sitio (estos servicios se deshabilitan durante la actualización):
   -     Servidor de sitio
   -     Punto de administración
   -     Punto de servicio web del catálogo de aplicaciones
   -     Punto de sitios web del catálogo de aplicaciones
 
 
--   Asegúrese de que todos los servidores que hospedan un rol de sistema de sitio siguen cumpliendo todos los [requisitos previos para roles de sistema de sitio](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) que se ejecutan en ese servidor. Por ejemplo, puede que tenga que volver a instalar BITS, WSUS, o configurar valores específicos de IIS.
+-     Asegúrese de que todos los servidores que hospeden un rol de sistema de sitio sigan cumpliendo todos los [requisitos previos para roles de sistema de sitio](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) que se ejecuten en ese servidor. Por ejemplo, puede que tenga que volver a instalar BITS, WSUS, o configurar valores específicos de IIS.
 
-  Después de restaurar los requisitos previos que falten, reinicie el servidor una vez más para asegurarse de que los servicios se han iniciado y están operativos.
+  Después de restaurar los requisitos previos que falten, reinicie el servidor una vez más para asegurarse de que los servicios se hayan iniciado y estén operativos.
 
 **Problema conocido de consolas remotas de Configuration Manager:**  
-Después de actualizar el servidor de sitio o un servidor que hospeda una instancia de SMS_Provider para Windows Server 2016, es posible que los usuarios administrativos no puedan conectar una consola de Configuration Manager al sitio. Para evitar este problema, debe restaurar de forma manual los permisos del grupo de administradores de SMS en WMI. Los permisos deben establecerse en el servidor de sitio y en cada servidor remoto que hospeda una instancia del proveedor de SMS:
+Después de actualizar el servidor de sitio o un servidor que hospeda una instancia de SMS_Provider para Windows Server 2016, es posible que los usuarios administrativos no puedan conectar una consola de Configuration Manager al sitio. Para evitar este problema, debe restaurar de forma manual los permisos del grupo de administradores de SMS en WMI. Los permisos deben establecerse en el servidor de sitio y en cada servidor remoto que hospede una instancia del proveedor de SMS:
 
-1. En los servidores aplicables, abra Microsoft Management Console (MMC), agregue el complemento de **Control WMI** y seleccione **Equipo local**.
+1. En los servidores aplicables, abra Microsoft Management Console (MMC), agregue el complemento de **Control WMI** y, luego, seleccione **Equipo local**.
 2. En MMC, abra las **Propiedades** de **Control WMI (local)** y seleccione la pestaña **Seguridad**.
-3. Expanda el árbol por debajo de la raíz, seleccione el nodo **SMS** y luego haga clic en **Seguridad**.  Asegúrese de que el grupo **Administradores de SMS** tiene los permisos siguientes:
+3. Expanda el árbol por debajo de la raíz, seleccione el nodo **SMS** y, luego, elija **Seguridad**.  Asegúrese de que el grupo **Administradores de SMS** tiene los permisos siguientes:
   -     Habilitar cuenta
   -     Llamada remota habilitada
-4. Después, en la pestaña **Seguridad**, bajo el nodo SMS, seleccione el nodo **site_&lt;CódigoDeSitio>** y, después, haga clic en **Seguridad**. Asegúrese de que el grupo de **administradores de SMS** tiene el permiso siguiente:
+4. En la pestaña **Seguridad**, en el nodo **SMS**, seleccione el nodo **sitio_**&lt;*CódigoDeSitio* y, después, elija **Seguridad**. Asegúrese de que el grupo **Administradores de SMS** tiene los permisos siguientes:
   -   Ejecutar métodos
   -   Escritura de proveedor
   -   Habilitar cuenta
@@ -95,7 +95,7 @@ Después de actualizar el servidor de sitio o un servidor que hospeda una instan
 -  A diferencia de los otros escenarios compatibles, este escenario no requiere consideraciones adicionales antes de la actualización.
 
 **Después de la actualización:**
-  - Asegúrese de que los servicios de implementación de Windows están iniciados y en ejecución para los siguientes roles de sistema de sitio (este servicio se detiene durante la actualización):
+  -    Asegúrese de que los servicios de implementación de Windows están iniciados y en ejecución para los siguientes roles de sistema de sitio (este servicio se detiene durante la actualización):
     - Servidor de sitio
     - Punto de administración
     - Punto de servicio web del catálogo de aplicaciones
@@ -103,25 +103,25 @@ Después de actualizar el servidor de sitio o un servidor que hospeda una instan
 
 
   -     Asegúrese de que los servicios **Activación de proceso de Windows** y **WWW/W3svc** están habilitados, establecidos para el inicio automático y en ejecución en los siguientes roles de sistema de sitio (estos servicios se deshabilitan durante la actualización):
-    -   Servidor de sitio
-    -   Punto de administración
-    -   Punto de servicio web del catálogo de aplicaciones
-    -   Punto de sitios web del catálogo de aplicaciones
+    -     Servidor de sitio
+    -     Punto de administración
+    -     Punto de servicio web del catálogo de aplicaciones
+    -     Punto de sitios web del catálogo de aplicaciones
 
 
-  -     Asegúrese de que todos los servidores que hospedan un rol de sistema de sitio siguen cumpliendo todos los [requisitos previos para roles de sistema de sitio](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) que se ejecutan en ese servidor. Por ejemplo, puede que tenga que volver a instalar BITS, WSUS, o configurar valores específicos de IIS.
+  -     Asegúrese de que todos los servidores que hospeden un rol de sistema de sitio sigan cumpliendo todos los [requisitos previos para roles de sistema de sitio](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) que se ejecuten en ese servidor. Por ejemplo, puede que tenga que volver a instalar BITS, WSUS, o configurar valores específicos de IIS.
 
-  Después de restaurar los requisitos previos que falten, reinicie el servidor una vez más para asegurarse de que los servicios se han iniciado y están operativos.
+  Después de restaurar los requisitos previos que falten, reinicie el servidor una vez más para asegurarse de que los servicios se hayan iniciado y estén operativos.
 
 ### <a name="upgrade-windows-server-2008-r2-to-windows-server-2012-r2"></a>Actualice Windows Server 2008 R2 a Windows Server 2012 R2
 Este escenario de actualización de sistema operativo tiene las siguientes condiciones:  
 
 **Antes de la actualización:**
--   Desinstale WSUS 3.2.  
+-     Desinstale WSUS 3.2.  
     Antes de actualizar un sistema operativo de servidor a Windows Server 2012 R2, debe desinstalar WSUS 3.2 del servidor. Para obtener más información sobre este paso crítico, consulte la sección Funcionalidad nueva y modificada en Introducción a Windows Server Update Services en la documentación de Windows Server.
 
 **Después de la actualización:**
-  - Asegúrese de que los servicios de implementación de Windows están iniciados y en ejecución para los siguientes roles de sistema de sitio (este servicio se detiene durante la actualización):
+  -    Asegúrese de que los servicios de implementación de Windows están iniciados y en ejecución para los siguientes roles de sistema de sitio (este servicio se detiene durante la actualización):
     - Servidor de sitio
     - Punto de administración
     - Punto de servicio web del catálogo de aplicaciones
@@ -129,15 +129,15 @@ Este escenario de actualización de sistema operativo tiene las siguientes condi
 
 
   -     Asegúrese de que los servicios **Activación de proceso de Windows** y **WWW/W3svc** están habilitados, establecidos para el inicio automático y en ejecución en los siguientes roles de sistema de sitio (estos servicios se deshabilitan durante la actualización):
-    -   Servidor de sitio
-    -   Punto de administración
-    -   Punto de servicio web del catálogo de aplicaciones
-    -   Punto de sitios web del catálogo de aplicaciones
+    -     Servidor de sitio
+    -     Punto de administración
+    -     Punto de servicio web del catálogo de aplicaciones
+    -     Punto de sitios web del catálogo de aplicaciones
 
 
   -     Asegúrese de que todos los servidores que hospedan un rol de sistema de sitio siguen cumpliendo todos los [requisitos previos para roles de sistema de sitio](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) que se ejecutan en ese servidor. Por ejemplo, puede que tenga que volver a instalar BITS, WSUS, o configurar valores específicos de IIS.
 
-  Después de restaurar los requisitos previos que falten, reinicie el servidor una vez más para asegurarse de que los servicios se han iniciado y están operativos.
+  Después de restaurar los requisitos previos que falten, reinicie el servidor una vez más para asegurarse de que los servicios se hayan iniciado y estén operativos.
 
 
 ### <a name="unsupported-upgrade-scenarios"></a>Escenarios de actualización no compatibles
@@ -158,9 +158,9 @@ Con frecuencia, se pregunta sobre los siguientes escenarios de actualización de
 -   Actualizaciones de mantenimiento desde una compilación a otra de Windows 10.  Para más información, consulte [Administración de Windows como servicio mediante System Center Configuration Manager](../../../osd/deploy-use/manage-windows-as-a-service.md).  
 
 ##  <a name="a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server"></a><a name="BKMK_SupConfigUpgradeDBSrv"></a> Actualizar SQL Server en el servidor de base de datos del sitio  
-  Configuration Manager admite una actualización local de SQL Server desde una versión compatible de SQL en el servidor de base de datos del sitio. A continuación encontrará detalles sobre los escenarios de actualización de SQL Server compatibles con Configuration Manager y los requisitos para cada escenario.
+  Configuration Manager admite una actualización local de SQL Server desde una versión compatible de SQL en el servidor de base de datos del sitio. Los escenarios de actualización de SQL Server que encontrará en esta sección son compatibles con Configuration Manager e incluyen los requisitos de cada uno de ellos.
 
- Para obtener más información sobre qué versiones de SQL Server son compatibles con Configuration Manager, consulte [Compatibilidad con versiones de SQL Server para System Center Configuration Manager](../../../core/plan-design/configs/support-for-sql-server-versions.md).  
+ Para obtener más información sobre las versiones de SQL Server compatibles con Configuration Manager, consulte [Compatibilidad con versiones de SQL Server para System Center Configuration Manager](../../../core/plan-design/configs/support-for-sql-server-versions.md).  
 
  **Actualizar la versión del Service Pack de SQL Server:**    
  Configuration Manager admite la actualización local de SQL Server a un Service Pack posterior si el nivel de Service Pack resultante de SQL Server sigue siendo compatible con Configuration Manager.
@@ -181,7 +181,7 @@ Al actualizar la versión de SQL Server que hospeda la base de datos de sitio, d
  3. Actualice los sitios primarios principales en último lugar. Esto incluye tanto los sitios primarios secundarios que dependen de un sitio de administración central como los sitios primarios independientes que están en el sitio de nivel superior de una jerarquía.
 
 **Nivel de estimación de cardinalidad de SQL Server y la base de datos del sitio:**   
-Cuando una base de datos del sitio se actualiza de una versión anterior de SQL Server, la base de datos conserva su nivel existente de estimación de cardinalidad (CE) de SQL si se encuentra en el mínimo permitido para esa instancia de SQL Server. La actualización de SQL Server con una base de datos en un nivel de compatibilidad inferior al nivel permitido establece automáticamente la base de datos en el nivel de compatibilidad más bajo que permite SQL.
+Cuando una base de datos del sitio se actualiza de una versión anterior de SQL Server, la base de datos conserva su nivel existente de estimación de cardinalidad (CE) de SQL si se encuentra en el mínimo permitido para esa instancia de SQL Server. La actualización de SQL Server con una base de datos en un nivel de compatibilidad inferior al nivel permitido establece automáticamente la base de datos en el nivel de compatibilidad más bajo que permite SQL Server.
 
 En la tabla siguiente se identifican los niveles de compatibilidad recomendados para las bases de datos del sitio de Configuration Manager:
 
@@ -195,9 +195,9 @@ Para identificar el nivel de compatibilidad de CE de SQL Server en uso para la b
  Para obtener más información sobre los niveles de compatibilidad de CE de SQL y cómo establecerlos, consulte [Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)](https://msdn.microsoft.com/library/bb510680.aspx).
 
 
-**Para obtener más información sobre SQL Server, consulte la documentación de SQL Server en TechNet:**  
--   [Actualización a SQL Server 2014](http://technet.microsoft.com/library/ms143393\(v=sql.120))  
+Para obtener más información sobre SQL Server, consulte la documentación de SQL Server en TechNet:
 -   [Actualización a SQL Server 2012](http://technet.microsoft.com/library/ms143393\(v=sql.110))
+-   [Actualización a SQL Server 2014](http://technet.microsoft.com/library/ms143393\(v=sql.120))  
 -   [Actualización a SQL Server 2016](https://technet.microsoft.com/library/bb677622(v=sql.130))
 
 
@@ -213,6 +213,6 @@ Para identificar el nivel de compatibilidad de CE de SQL Server en uso para la b
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

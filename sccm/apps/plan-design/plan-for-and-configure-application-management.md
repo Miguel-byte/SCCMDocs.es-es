@@ -2,7 +2,7 @@
 title: "Planear y configurar la administración de aplicaciones| Microsoft Docs"
 description: "Implemente y configure las dependencias necesarias para la implementación de aplicaciones en System Center Configuration Manager."
 ms.custom: na
-ms.date: 02/03/2017
+ms.date: 02/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 50c08d63e7220a47d21dcbdcd7abafba7c7f5f75
-ms.openlocfilehash: 4eca69f54ec0bca5f1f972d3814ceb87d4a30d67
+ms.sourcegitcommit: 1c43c4968f93985515249ddb117269f8ed61302a
+ms.openlocfilehash: 46cc3fcfd9516cf1c124e24b50d0aac0cb0025dc
 
 
 ---
@@ -127,7 +127,7 @@ Use la información de este artículo como ayuda para implementar las dependenci
 
     Mensajes de estado: Utilice los componentes **SMS_PORTALWEB_CONTROL_MANAGER** y **SMS_AWEBSVC_CONTROL_MANAGER**.  
 
-    Por ejemplo, el identificador de estado **1015** para **SMS_PORTALWEB_CONTROL_MANAGER** confirma que el Administrador de componentes de sitio se instaló correctamente en el punto de sitios web del catálogo de aplicaciones.  
+    Por ejemplo, el identificador de estado **1015** para **SMS_PORTALWEB_CONTROL_MANAGER** confirma que el Administrador de componentes de sitio ha instalado correctamente el punto de sitios web del catálogo de aplicaciones.  
 
     Archivos de registro: Busque **SMSAWEBSVCSetup.log** y **SMSPORTALWEBSetup.log**.  
 
@@ -228,6 +228,6 @@ La personalización de marca del Centro de software se aplica conforme a las sig
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 
