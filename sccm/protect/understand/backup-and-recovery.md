@@ -16,12 +16,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8d638d7e8f203ff2501a09918ab3424706d1261f
-ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
+ms.sourcegitcommit: 3aa9f2e4d3f7210981b5b84942485de11fe15cb2
+ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 
 ---
 
-# <a name="backup-and-recovery"></a>Copia de seguridad y recuperación 
+# <a name="backup-and-recovery"></a>Copia de seguridad y recuperación
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
@@ -89,7 +89,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 >  Configuration Manager puede recuperar la base de datos de sitio a partir de la tarea de mantenimiento de copia de seguridad de Configuration Manager o desde una copia de seguridad de la base de datos de sitio que creara con otro proceso. Por ejemplo, puede restaurar la base de datos de sitio desde una copia de seguridad creada como parte de un plan de mantenimiento de Microsoft SQL Server. Puede restaurar la base de datos de sitio a partir de una copia de seguridad creada con System Center 2012 Data Protection Manager (DPM). Para obtener más información, vea [Uso de Data Protection Manager para realizar copias de seguridad de la base de datos del sitio](#BKMK_DPMBackup).  
 
 ###  <a name="a-namebkmkbackupmaintenancetaska-backup-maintenance-task"></a><a name="BKMK_BackupMaintenanceTask"></a> Tarea de mantenimiento de copia de seguridad  
- Puede automatizar la copia de seguridad de sitios de Configuration Manager mediante la programación de la tarea de mantenimiento predefinida Copia de seguridad del servidor del sitio. Puede hacer una copia de seguridad de un sitio de administración central y un sitio primario, pero no existe compatibilidad con la copia de seguridad de servidores de sistema de sitio o sitios secundarios. Cuando se ejecuta el servicio de copia de seguridad de Configuration Manager, este sigue las instrucciones definidas en el archivo de control de copia de seguridad (**<ConfigMgrInstallationFolder\>\Inboxes\Smsbkup.box\Smsbkup.ctl**). Puede modificar el archivo de control de copia de seguridad para cambiar el comportamiento del servicio de copia de seguridad. La información del estado de copia de seguridad del sitio se escribe en el archivo **Smsbkup.log** . Este archivo se crea en la carpeta de destino que especifique en las propiedades de la tarea de mantenimiento Copia de seguridad del servidor del sitio.  
+ Puede automatizar la copia de seguridad de sitios de Configuration Manager mediante la programación de la tarea de mantenimiento predefinida Copia de seguridad del servidor del sitio. Puede hacer una copia de seguridad de un sitio de administración central y un sitio primario, pero no existe compatibilidad con la copia de seguridad de servidores de sistema de sitio o sitios secundarios. Cuando se ejecuta el servicio de copia de seguridad de Configuration Manager, este sigue las instrucciones definidas en el archivo de control de copia de seguridad (**&lt;carpetaInstalaciónConfigMgr\>\Inboxes\Smsbkup.box\Smsbkup.ctl**). Puede modificar el archivo de control de copia de seguridad para cambiar el comportamiento del servicio de copia de seguridad. La información del estado de copia de seguridad del sitio se escribe en el archivo **Smsbkup.log** . Este archivo se crea en la carpeta de destino que especifique en las propiedades de la tarea de mantenimiento Copia de seguridad del servidor del sitio.  
 
 
 ##### <a name="to-enable-the-site-backup-maintenance-task"></a>Para habilitar la tarea de mantenimiento de copia de seguridad de sitio  
@@ -116,7 +116,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
     -   **Unidades locales en el servidor de sitio y SQL Server**: especifica que los archivos de copia de seguridad del sitio se almacenan en la ruta de acceso especificada de la unidad local del servidor de sitio y que los archivos de copia de seguridad de la base de datos del sitio se almacenan en la ruta de acceso especificada de la unidad local del servidor de base de datos del sitio. Debe crear las carpetas locales antes de que se ejecute la tarea de copia de seguridad. La cuenta de equipo del servidor de sitio debe tener permisos de NTFS de **escritura** en la carpeta que se crea en el servidor de sitio. La cuenta de equipo del servidor de SQL Server debe tener permisos de NTFS de **escritura** en la carpeta que se crea en el servidor de la base de datos del sitio. Esta opción solo está disponible cuando la base de datos del sitio no esté instalada en el servidor de sitio.  
 
     > [!NOTE]  
-    >   - La opción de examinar el destino de la copia de seguridad solo está disponible cuando se especifica la ruta de acceso UNC del destino de la copia de seguridad.
+    >    - La opción de examinar el destino de la copia de seguridad solo está disponible cuando se especifica la ruta de acceso UNC del destino de la copia de seguridad.
 
     > - El nombre de la carpeta o el nombre del recurso compartido que se utilizan para el destino de la copia de seguridad no pueden usar caracteres Unicode.  
 
@@ -139,7 +139,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   Cuando la tarea de mantenimiento Copia de seguridad del servidor del sitio se configure para crear una alerta si se produce un error en la copia de seguridad, puede comprobar el nodo **Alertas** del área de trabajo **Supervisión** en busca de errores.  
 
-    -   En <*carpetaInstalaciónConfigMgr*>\Logs, revise el archivo Smsbkup.log en busca de errores y advertencias. Cuando la copia de seguridad del sitio se complete correctamente, verá `Backup completed` con una marca de tiempo y un identificador de mensaje `STATMSG: ID=5035`.  
+    -   En &lt;*carpetaInstalaciónConfigMgr*>\Logs, revise el archivo Smsbkup.log en busca de errores y advertencias. Cuando la copia de seguridad del sitio se complete correctamente, verá `Backup completed` con una marca de tiempo y un identificador de mensaje `STATMSG: ID=5035`.  
 
     > [!TIP]  
     >  Cuando se produce un error en la tarea de mantenimiento de copia de seguridad, reinicie la tarea de copia de seguridad. Para ello, detenga y reinicie el servicio SMS_SITE_BACKUP.  
@@ -164,7 +164,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 -   El sitio podría no tener ninguna instantánea de copia de seguridad si, por ejemplo, se produce un error en la tarea de mantenimiento Copia de seguridad del servidor del sitio. Dado que la tarea de copia de seguridad elimina la instantánea de copia de seguridad anterior antes de empezar a realizar la copia de seguridad de los datos actuales, no habrá una instantánea de copia de seguridad válida.  
 
 ###  <a name="a-namebkmkusingafterbackupa-using-the-afterbackupbat-file"></a><a name="BKMK_UsingAfterBackup"></a> Uso del archivo AfterBackup.bat  
- Después de realizar la copia de seguridad del sitio correctamente, la tarea Copia de seguridad del servidor del sitio automáticamente intenta ejecutar un archivo llamado AfterBackup.bat. Debe crear manualmente el archivo AfterBackup.bat en <*carpetaInstalaciónConfigMgr*>\Inboxes\Smsbkup. Si hay un archivo AfterBackup.bat y está almacenado en la carpeta correcta, se ejecuta automáticamente después de completarse la tarea de copia de seguridad. El archivo AfterBackup.bat permite archivar la instantánea de copia de seguridad al final de cada operación de copia de seguridad y realizar automáticamente otras tareas posteriores a la copia de seguridad que no forman parte de la tarea de mantenimiento Copia de seguridad del servidor del sitio. El archivo AfterBackup.bat integra las operaciones de archivo y copia de seguridad, por lo que garantiza que se archiva cada nueva instantánea de copia de seguridad. Si el archivo AfterBackup.bat no está presente, la tarea de copia de seguridad lo omite sin que se vea afectada la operación de copia de seguridad. Para comprobar que la tarea de copia de seguridad del sitio ejecutó correctamente el archivo AfterBackup.bat, consulte el nodo **Estado del componente** del área de trabajo **Supervisión** y revise los mensajes de estado de SMS_SITE_BACKUP. Si la tarea inició correctamente el archivo de comandos AfterBackup.bat, verá el mensaje ID 5040.  
+ Después de realizar la copia de seguridad del sitio correctamente, la tarea Copia de seguridad del servidor del sitio automáticamente intenta ejecutar un archivo llamado AfterBackup.bat. Debe crear manualmente el archivo AfterBackup.bat en &lt;*carpetaInstalaciónConfigMgr*>\Inboxes\Smsbkup. Si hay un archivo AfterBackup.bat y está almacenado en la carpeta correcta, se ejecuta automáticamente después de completarse la tarea de copia de seguridad. El archivo AfterBackup.bat permite archivar la instantánea de copia de seguridad al final de cada operación de copia de seguridad y realizar automáticamente otras tareas posteriores a la copia de seguridad que no forman parte de la tarea de mantenimiento Copia de seguridad del servidor del sitio. El archivo AfterBackup.bat integra las operaciones de archivo y copia de seguridad, por lo que garantiza que se archiva cada nueva instantánea de copia de seguridad. Si el archivo AfterBackup.bat no está presente, la tarea de copia de seguridad lo omite sin que se vea afectada la operación de copia de seguridad. Para comprobar que la tarea de copia de seguridad del sitio ejecutó correctamente el archivo AfterBackup.bat, consulte el nodo **Estado del componente** del área de trabajo **Supervisión** y revise los mensajes de estado de SMS_SITE_BACKUP. Si la tarea inició correctamente el archivo de comandos AfterBackup.bat, verá el mensaje ID 5040.  
 
 > [!TIP]  
 >  Para crear el archivo AfterBackup.bat para archivar los archivos de copia de seguridad del servidor de sitio, debe usar una herramienta de comando de copia, como Robocopy, en el archivo por lotes. Por ejemplo, podría crear el archivo AfterBackup.bat y, en la primera línea, podría agregar algo similar a lo siguiente: `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`. Para más información sobre Robocopy, consulte la página web de referencia de la línea de comandos de [Robocopy](http://go.microsoft.com/fwlink/p/?LinkId=228408) .  
@@ -218,9 +218,9 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
 
 4.  En la pestaña **Rol del sitio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
-5.  Las carpetas donde se almacenan los datos de migración de estado de usuario se enumeran en la sección **Detalles de la carpeta** de la pestaña **General** .  
+5.  Las carpetas donde se almacenan los datos de migración de estado de usuario se enumeran en la sección **Detalles de la carpeta** de la pestaña **General**.  
 
-
+## <a name="recover-a-configuration-manager-site"></a>Recuperar un sitio de Configuration Manager
  Es necesario llevar a cabo una recuperación de sitio de Configuration Manager siempre que se produce un error en un sitio de Configuration Manager o se pierden datos de la base de datos de sitio. Reparar y volver a sincronizar datos son las tareas principales de una recuperación de sitio y son necesarias para evitar la interrupción de las operaciones.  
 
 > [!IMPORTANT]  
@@ -433,7 +433,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : quizás  
 
-    -   **Valores:** <ReferenceSiteFQDN\>  
+    -   **Valores:** &lt;ReferenceSiteFQDN\>  
 
     -   **Detalles** : especifica el sitio primario de referencia que usa el sitio de administración central para recuperar datos globales si la copia de seguridad de la base de datos es anterior al período de retención de seguimiento de cambios, o si se recupera el sitio sin usar una copia de seguridad.  
 
@@ -447,7 +447,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : no  
 
-    -   **Valores:** <PathToSiteServerBackupSet\>  
+    -   **Valores:** &lt;PathToSiteServerBackupSet\>  
 
     -   **Detalles** : especifica la ruta de acceso al conjunto de copia de seguridad del servidor de sitio. Esta clave es opcional si **ServerRecoveryOptions** tiene un valor de **1** o **2**. Especifique un valor para la clave **SiteServerBackupLocation** para recuperar el sitio mediante una copia de seguridad de sitio. Si no especifica ningún valor, se reinstala el sitio sin restaurarlo desde un conjunto de copia de seguridad.  
 
@@ -455,7 +455,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : quizás  
 
-    -   **Valores:** <PathToSiteDatabaseBackupSet\>  
+    -   **Valores:** &lt;PathToSiteDatabaseBackupSet\>  
 
     -   **Detalles** : especifica la ruta de acceso al conjunto de copia de seguridad de base de datos de sitio. La clave **BackupLocation** es necesaria cuando configura un valor de **1** o **4** para la clave **ServerRecoveryOptions** , y configura un valor de **10** para la clave **DatabaseRecoveryOptions** .  
 
@@ -477,7 +477,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : sí  
 
-    -   **Valores:** <Site code\>  
+    -   **Valores:** &lt;Código de sitio\>  
 
     -   **Detalles** : tres caracteres alfanuméricos que identifican de forma única el sitio en la jerarquía. Debe especificar el código del sitio que utilizó el sitio antes de que se produjera el error.  
 
@@ -493,7 +493,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : sí  
 
-    -   **Valores:** <*ConfigMgrInstallationPath*>  
+    -   **Valores:** &lt;*ConfigMgrInstallationPath*>  
 
     -   **Detalles:** especifica la carpeta de instalación de los archivos de programa de Configuration Manager.  
 
@@ -504,7 +504,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : sí  
 
-    -   **Valores:** <*FQDN del proveedor de SMS*>  
+    -   **Valores:** &lt;*FQDN del proveedor de SMS*>  
 
     -   **Detalles** : especifica el FQDN del servidor que hospedará el proveedor de SMS. Debe especificar el servidor que hospedaba el proveedor de SMS antes de producirse el error.  
 
@@ -526,7 +526,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : sí  
 
-    -   **Valores:** <*PathToSetupPrerequisiteFiles*>  
+    -   **Valores:** &lt;*PathToSetupPrerequisiteFiles*>  
 
     -   **Detalles** : especifica la ruta de acceso a los archivos de requisitos previos de instalación. Dependiendo del valor **PrerequisiteComp** , el programa de instalación utiliza esta ruta para almacenar los archivos descargados o localizar los archivos descargados previamente.  
 
@@ -558,9 +558,9 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
 -   **Nombre de clave** : SQLServerName  
 
-    -   **Requerido**: sí  
+    -   **Requerido** : sí  
 
-    -   **Valores**: *<nombreDeServidorSQL\>*  
+    -   **Valores:** *&lt;SQLServerName\>*  
 
     -   **Detalles**: nombre del servidor, o el nombre de instancia en clúster, que ejecuta SQL Server y donde se hospedará la base de datos del sitio. Debe especificar el mismo servidor que hospedaba la base de datos del sitio antes de producirse el error.  
 
@@ -570,11 +570,11 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Valores**  
 
-         *&lt;nombreDeBaseDeDatosDelSitio\>*  
+         *&lt;SiteDatabaseName\>*  
 
          o  
 
-         *<nombreDeInstancia\>*\\*<nombreDeBaseDeDatosDelSitio\>*  
+         *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*  
 
     -   **Detalles**: especifica el nombre de la base de datos de SQL Server que se crea o se usa para instalar la base de datos del sitio de administración central. Debe especificar el mismo nombre de base de datos que se utilizó antes de producirse el error.  
 
@@ -585,7 +585,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : no  
 
-    -   **Valores:** <*SSBPortNumber*>  
+    -   **Valores:** &lt;*SSBPortNumber*>  
 
     -   **Detalles** : especifique el puerto de SQL Server Service Broker (SSB) usado por SQL Server. Normalmente, SSB está configurado para utilizar el puerto TCP 4022, pero se admiten otros puertos. Debe especificar el mismo puerto SSB que se utilizó antes de producirse el error.  
 
@@ -646,7 +646,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : no  
 
-    -   **Valores:** <PathToSiteServerBackupSet\>  
+    -   **Valores:** &lt;PathToSiteServerBackupSet\>  
 
     -   **Detalles** : especifica la ruta de acceso al conjunto de copia de seguridad del servidor de sitio. Esta clave es opcional si **ServerRecoveryOptions** tiene un valor de **1** o **2**. Especifique un valor para la clave **SiteServerBackupLocation** para recuperar el sitio mediante una copia de seguridad de sitio. Si no especifica ningún valor, se reinstala el sitio sin restaurarlo desde un conjunto de copia de seguridad.  
 
@@ -654,7 +654,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : quizás  
 
-    -   **Valores:** <PathToSiteDatabaseBackupSet\>  
+    -   **Valores:** &lt;PathToSiteDatabaseBackupSet\>  
 
     -   **Detalles** : especifica la ruta de acceso al conjunto de copia de seguridad de base de datos de sitio. La clave **BackupLocation** es necesaria cuando configura un valor de **1** o **4** para la clave **ServerRecoveryOptions** , y configura un valor de **10** para la clave **DatabaseRecoveryOptions** .  
 
@@ -676,7 +676,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : sí  
 
-    -   **Valores:** <Site code\>  
+    -   **Valores:** &lt;Código de sitio\>  
 
     -   **Detalles** : tres caracteres alfanuméricos que identifican de forma única el sitio en la jerarquía. Debe especificar el código del sitio que utilizó el sitio antes de que se produjera el error.  
 
@@ -692,7 +692,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : sí  
 
-    -   **Valores:** <*ConfigMgrInstallationPath*>  
+    -   **Valores:** &lt;*ConfigMgrInstallationPath*>  
 
     -   **Detalles:** especifica la carpeta de instalación de los archivos de programa de Configuration Manager.  
 
@@ -703,7 +703,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : sí  
 
-    -   **Valores:** <*FQDN del proveedor de SMS*>  
+    -   **Valores:** &lt;*FQDN del proveedor de SMS*>  
 
     -   **Detalles** : especifica el FQDN del servidor que hospedará el proveedor de SMS. Debe especificar el servidor que hospedaba el proveedor de SMS antes de producirse el error.  
 
@@ -725,7 +725,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : sí  
 
-    -   **Valores:** <*PathToSetupPrerequisiteFiles*>  
+    -   **Valores:** &lt;*PathToSetupPrerequisiteFiles*>  
 
     -   **Detalles** : especifica la ruta de acceso a los archivos de requisitos previos de instalación. Dependiendo del valor **PrerequisiteComp** , el programa de instalación utiliza esta ruta para almacenar los archivos descargados o localizar los archivos descargados previamente.  
 
@@ -757,9 +757,9 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
 -   **Nombre de clave** : SQLServerName  
 
-    -   **Requerido**: sí  
+    -   **Requerido** : sí  
 
-    -   **Valores**: *<nombreDeServidorSQL\>*  
+    -   **Valores:** *&lt;SQLServerName\>*  
 
     -   **Detalles**: nombre del servidor, o el nombre de instancia en clúster, que ejecuta SQL Server y donde se hospedará la base de datos del sitio. Debe especificar el mismo servidor que hospedaba la base de datos del sitio antes de producirse el error.  
 
@@ -769,11 +769,11 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Valores**  
 
-         *&lt;nombreDeBaseDeDatosDelSitio\>*  
+         *&lt;SiteDatabaseName\>*  
 
          o  
 
-         *<nombreDeInstancia\>*\\*<nombreDeBaseDeDatosDelSitio\>*  
+         *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*  
 
     -   **Detalles**: especifica el nombre de la base de datos de SQL Server que se crea o se usa para instalar la base de datos del sitio de administración central. Debe especificar el mismo nombre de base de datos que se utilizó antes de producirse el error.  
 
@@ -784,7 +784,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : no  
 
-    -   **Valores:** <*SSBPortNumber*>  
+    -   **Valores:** &lt;*SSBPortNumber*>  
 
     -   **Detalles** : especifique el puerto de SQL Server Service Broker (SSB) usado por SQL Server. Normalmente, SSB está configurado para utilizar el puerto TCP 4022, pero se admiten otros puertos. Debe especificar el mismo puerto SSB que se utilizó antes de producirse el error.  
 
@@ -794,7 +794,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : quizás  
 
-    -   **Valores:** <*SiteCodeForCentralAdministrationSite*>  
+    -   **Valores:** &lt;*SiteCodeForCentralAdministrationSite*>  
 
     -   **Detalles:** especifica el sitio de administración central al que se asociará un sitio primario al unirse a la jerarquía de Configuration Manager. Esta configuración es necesaria si el sitio primario estaba asociado con un sitio de administración central antes de producirse el error. Debe especificar el código del sitio que utilizó el sitio de administración central antes de que se produjera el error.  
 
@@ -802,7 +802,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : no  
 
-    -   **Valores:** <*Interval*>  
+    -   **Valores:** &lt;*Interval*>  
 
     -   **Detalles** : especifica el intervalo de reintento (en minutos) para tratar de establecer una conexión con el sitio de administración central después de que la conexión genera un error. Por ejemplo, si se produce un error en la conexión al sitio de administración central, el sitio primario espera el número de minutos especificado en CASRetryInterval y, a continuación, vuelve a intentar establecer la conexión.  
 
@@ -810,7 +810,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Requerido** : no  
 
-    -   **Valores:** <*Timeout*>  
+    -   **Valores:** &lt;*Timeout*>  
 
     -   **Detalles** : especifica el valor de tiempo de espera máximo (en minutos) de un sitio primario para conectarse al sitio de administración central. Por ejemplo, si se produce un error de conexión del sitio primario con el sitio de administración central, el sitio primario vuelve a tratar de establecer la conexión conforme al valor especificado para CASRetryInterval hasta que se alcanza el valor de tiempo de WaitForCASTimeout. Puede especificar un valor entre 0 y 100.  
 
@@ -903,7 +903,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
  SMS Writer es un servicio que interactúa con el Servicio de instantáneas de volumen (VSS) durante el proceso de copia de seguridad. Debe ejecutar el servicio SMS Writer para que la copia de seguridad del sitio de Configuration Manager se complete correctamente.  
 
 ### <a name="purpose"></a>Finalidad  
- SMS Writer se registra con el servicio VSS y se enlaza a sus interfaces y eventos. Cuando VSS difunde eventos o envía notificaciones específicas a SMS Writer, SMS Writer responde a la notificación y toma las medidas oportunas. El servicio SMS Writer lee el archivo de control de copia de seguridad (smsbkup.ctl), ubicado en <*Ruta de instalación de ConfigMgr*>\inboxes\smsbkup.box, y determina los archivos y los datos de los que se va a hacer una copia de seguridad. El servicio SMS Writer genera metadatos, que constan de varios componentes, basados en esta información, así como datos específicos de la clave del Registro SMS y las subclaves. Envía los metadatos a VSS cuando se solicita. Luego, VSS envía los metadatos a la aplicación solicitante, el Administrador de copias de seguridad de Configuration Manager. El Administrador de copias de seguridad selecciona los datos de los que se van a hacer copia de seguridad y los envía al servicio SMS Writer mediante VSS. El servicio SMS Writer realiza los pasos apropiados para prepararse para la copia de seguridad. Después, cuando VSS está listo para tomar la instantánea, envía un evento, SMS Writer detiene todos los servicios de Configuration Manager y se asegura de que las actividades de Configuration Manager se congelen mientras se crea la instantánea. Una vez completada la instantánea, SMS Writer reinicia los servicios y las actividades.  
+ SMS Writer se registra con el servicio VSS y se enlaza a sus interfaces y eventos. Cuando VSS difunde eventos o envía notificaciones específicas a SMS Writer, SMS Writer responde a la notificación y toma las medidas oportunas. El servicio SMS Writer lee el archivo de control de copia de seguridad (smsbkup.ctl), ubicado en &lt;*rutaInstalaciónConfigMgr*>\inboxes\smsbkup.box, y determina los archivos y datos cuya copia de seguridad se va a realizar. El servicio SMS Writer genera metadatos, que constan de varios componentes, basados en esta información, así como datos específicos de la clave del Registro SMS y las subclaves. Envía los metadatos a VSS cuando se solicita. Luego, VSS envía los metadatos a la aplicación solicitante, el Administrador de copias de seguridad de Configuration Manager. El Administrador de copias de seguridad selecciona los datos de los que se van a hacer copia de seguridad y los envía al servicio SMS Writer mediante VSS. El servicio SMS Writer realiza los pasos apropiados para prepararse para la copia de seguridad. Después, cuando VSS está listo para tomar la instantánea, envía un evento, SMS Writer detiene todos los servicios de Configuration Manager y se asegura de que las actividades de Configuration Manager se congelen mientras se crea la instantánea. Una vez completada la instantánea, SMS Writer reinicia los servicios y las actividades.  
 
  El servicio SMS Writer se instala automáticamente. Debe ejecutarse cuando la aplicación VSS solicite una copia de seguridad o restauración.  
 
@@ -918,6 +918,6 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

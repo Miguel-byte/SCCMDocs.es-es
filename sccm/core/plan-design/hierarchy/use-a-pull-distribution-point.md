@@ -2,7 +2,7 @@
 title: "Punto de distribución de extracción | Microsoft Docs"
 description: "Obtenga información sobre las configuraciones y las limitaciones del uso de un punto de distribución de extracción con System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: f94d928244699c1c926dca05823f0029c588c7f1
+ms.sourcegitcommit: 9b366262ae59a8cb57c0f1760b961194d17bcf52
+ms.openlocfilehash: db5039ff6cb93e3099b096196d49a1f06c315a6b
 
 
 ---
@@ -29,9 +29,9 @@ ms.openlocfilehash: f94d928244699c1c926dca05823f0029c588c7f1
 
 Un punto de distribución de extracción para System Center Configuration Manager es un punto de distribución estándar que, para obtener el contenido distribuido, lo descarga de una ubicación de origen, como un cliente, en lugar de hacer que el contenido se inserte desde el servidor de sitio.  
 
- Cuando implementa contenido en un gran número de puntos de distribución en un sitio, los puntos de distribución de extracción pueden ayudarle a reducir la carga de procesamiento en el servidor del sitio, así como a acelerar la transferencia del contenido en cada punto de distribución. Esta eficacia se consigue mediante la descarga del proceso de transferencia del contenido en cada punto de distribución desde el proceso administrador de distribución en el servidor de sitio.  
+ Cuando implementa contenido en un gran número de puntos de distribución en un sitio, los puntos de distribución de extracción pueden ayudarle a reducir la carga de procesamiento en el servidor del sitio y a acelerar la transferencia del contenido en cada punto de distribución. Esta eficacia se consigue mediante la descarga del proceso de transferencia del contenido en cada punto de distribución desde el proceso administrador de distribución en el servidor de sitio.  
 
--   Puede configurar cada punto de distribución para que sea de extracción.  
+-   Puede configurar distintos puntos de distribución para que sean de extracción.  
 
 -   Para cada punto de distribución de extracción debe especificar uno o varios puntos de distribución de origen de los que puede obtener implementaciones (un punto de distribución de extracción solo puede obtener contenido de un punto de distribución especificado como punto de distribución de origen).  
 
@@ -48,7 +48,7 @@ Los puntos de distribución de extracción admiten las mismas configuraciones y 
 
 -   Cuando el administrador de transferencia de paquetes confirma que el contenido está disponible, envía una notificación al punto de distribución de extracción para descargar el contenido. Cuando el punto de distribución de extracción recibe esta notificación, intenta descargar el contenido de los puntos de distribución de origen.  
 
--   Después de que el punto de distribución de extracción completa la descarga del contenido, envía este estado a un punto de administración. No obstante, si no se recibe el estado después de 60 minutos, el administrador de transferencia de paquetes se reactiva y comprueba el punto de distribución de extracción para confirmar que haya descargado el contenido. Si la descarga de contenido está en curso, el administrador de transferencia de paquetes se suspende durante 60 minutos antes de comprobar de nuevo el punto de distribución de extracción. Este ciclo continúa hasta que el punto de distribución de extracción completa la transferencia de contenido.  
+-   Después de que el punto de distribución de extracción completa la descarga del contenido, envía este estado a un punto de administración. Pero si el estado no se ha recibido después de 60 minutos, el administrador de transferencia de paquetes se reactiva y comprueba el punto de distribución de extracción para confirmar que haya descargado el contenido. Si la descarga de contenido está en curso, el administrador de transferencia de paquetes se suspende durante 60 minutos antes de comprobar de nuevo el punto de distribución de extracción. Este ciclo continúa hasta que el punto de distribución de extracción completa la transferencia de contenido.  
 
 **Se puede configurar un punto de distribución de extracción** al instalar el punto de distribución o después de instalarlo mediante la edición de las propiedades del rol de sistema de sitio del punto de distribución.  
 
@@ -60,16 +60,16 @@ Los puntos de distribución de extracción admiten las mismas configuraciones y 
 
 -   No se puede configurar un punto de distribución de un servidor del sitio como un punto de distribución de extracción.  
 
--   **La configuración del contenido preconfigurado reemplaza la configuración del punto de distribución de extracción**. Un punto de distribución de extracción configurado para contenido preconfigurado espera el contenido. No extrae contenido del punto de distribución de origen y, como un punto de distribución estándar con la configuración de contenido preconfigurado, no recibe contenido del servidor de sitio.  
+-   **La configuración del contenido preconfigurado reemplaza la configuración del punto de distribución de extracción**. Un punto de distribución de extracción configurado para contenido preconfigurado espera el contenido. No extrae contenido del punto de distribución de origen y, como punto de distribución estándar con la configuración de contenido preconfigurado, no recibe contenido del servidor de sitio.  
 
--   **Un punto de distribución de extracción no usa las configuraciones de los límites de frecuencia** al transferir el contenido. Si configura un punto de distribución instalado previamente para que sea un punto de distribución de extracción, las configuraciones de los límites de frecuencia se guardan, pero no se utilizan. Si quita la configuración del punto de distribución de extracción posteriormente, se implementan las configuraciones de límite de frecuencia como se configuraron anteriormente.  
+-   **Un punto de distribución de extracción no usa las configuraciones de los límites de frecuencia** al transferir el contenido. Si configura un punto de distribución instalado previamente para que sea un punto de distribución de extracción, las configuraciones de los límites de frecuencia se guardan, pero no se utilizan. Si después quita la configuración del punto de distribución de extracción, las configuraciones de límite de frecuencia se implementan como se configuraron anteriormente.  
 
     > [!NOTE]  
     >  Cuando un punto de distribución se configura como punto de distribución de extracción, la pestaña **Límites de frecuencia** no estará visible en las propiedades del punto de distribución.  
 
--   Un punto de distribución de extracción no usa la **configuración de reintento** para la distribución de contenido. **Configuración de reintento** puede configurarse como parte de las **Propiedades del componente de distribución de software** de cada sitio. Para ver o configurar estas propiedades, en el espacio de trabajo **Administración** de la consola de Configuration Manager, expanda **Configuración del sitio** y, después, seleccione **Sitios**. Después, en el panel de resultados, seleccione un sitio. En la pestaña **Inicio** , seleccione **Configurar componentes de sitio**y, a continuación, **Distribución de software**.  
+-   Un punto de distribución de extracción no usa la **configuración de reintento** para la distribución de contenido. **Configuración de reintento** puede configurarse como parte de las **Propiedades del componente de distribución de software** de cada sitio. Para ver o configurar estas propiedades, en el espacio de trabajo **Administración** de la consola de Configuration Manager, expanda **Configuración del sitio** y, después, seleccione **Sitios**. Después seleccione un sitio en el panel de resultados y, en la pestaña **Inicio**, seleccione **Configurar componentes de sitio**. Por último, seleccione **Distribución de software**.  
 
--   Para transferir contenido desde un punto de distribución de origen en un bosque remoto, el equipo que hospeda el punto de distribución de extracción debe tener un cliente de Configuration Manager instalado, y se debe configurar una cuenta de acceso de red que pueda tener acceso al punto de distribución de origen.  
+-   Para transferir contenido de un punto de distribución de origen en un bosque remoto, el equipo que hospeda el punto de distribución de extracción debe tener instalado un cliente de Configuration Manager. Debe configurarse el uso de una cuenta de acceso de red con acceso al punto de distribución de origen.  
 
 -   En un equipo configurado como punto de distribución de extracción y que ejecuta un cliente de Configuration Manager, la versión del cliente debe ser la misma que la del sitio de Configuration Manager que instala el punto de distribución de extracción. Un requisito del punto de distribución de extracción es usar CCMFramework, que es común al punto de distribución de extracción y al cliente de Configuration Manager.  
 
@@ -98,22 +98,22 @@ Se puede asignar una prioridad a cada punto de distribución en una lista de pun
 
 Cuando un punto de distribución de extracción descarga contenido desde un punto de distribución de origen, ese punto de distribución de extracción se cuenta como un cliente en la columna **Cliente accedido (único)** del informe **Resumen de uso de los puntos de distribución** .  
 
- De forma predeterminada, un punto de distribución de extracción usa su **cuenta de equipo** para transferir contenido desde un punto de distribución de origen. Sin embargo, cuando el punto de distribución de extracción transfiere contenido desde un punto de distribución de origen que se encuentra en un bosque remoto, el punto de distribución de extracción siempre utiliza la cuenta de acceso de red. Este proceso requiere que el equipo tenga el cliente de Configuration Manager instalado y que se configure una cuenta de acceso de red con acceso al punto de distribución de origen.  
+ De forma predeterminada, un punto de distribución de extracción usa su **cuenta de equipo** para transferir contenido desde un punto de distribución de origen. Pero cuando el punto de distribución de extracción transfiere contenido desde un punto de distribución de origen que se encuentra en un bosque remoto, el punto de distribución de extracción siempre utiliza la cuenta de acceso de red. Este proceso requiere que el equipo tenga instalado el cliente de Configuration Manager y que se configure una cuenta de acceso de red con acceso al punto de distribución de origen.  
 
 ## <a name="about-content-transfers"></a>Acerca de las transferencias de contenido  
  Para administrar la transferencia de contenido, los puntos de distribución de extracción usan el componente **CCMFramework** del software de cliente de Configuration Manager.  
 
--   Este marco se instala mediante el archivo **Pulldp.msi** al configurar el punto de distribución como punto de distribución de extracción y no requiere que el cliente de Configuration Manager esté instalado.  
+-   Este marco se instala mediante el archivo **Pulldp.msi** al configurar el punto de distribución como punto de distribución de extracción. El marco no requiere el cliente de Configuration Manager.  
 
 -   Una vez instalado el punto de distribución de extracción, el servicio CCMExec del equipo del punto de distribución debe estar operativo para que el punto de distribución de extracción funcione.  
 
 -   Cuando el punto de distribución de extracción transfiere contenido, lo hace mediante el **Servicio de transferencia inteligente en segundo plano** (BITS) y registra su funcionamiento en los registros **datatransferservice.log** y **pulldp.log** del equipo del punto de distribución.  
 
-## <a name="see-also"></a>Véase también  
- [Conceptos básicos de la administración de contenido en System Center Configuration Manager](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)   
+## <a name="see-also"></a>Consulte también  
+ [Fundamental concepts for content management in System Center Configuration Manager (Aspectos básicos de la administración de contenido en System Center Configuration Manager)](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)   
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

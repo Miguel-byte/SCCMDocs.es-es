@@ -2,7 +2,7 @@
 title: "Preguntas más frecuentes sobre el cliente de Endpoint Protection | Microsoft Docs"
 description: "Obtenga respuestas a las preguntas más frecuentes sobre Windows Defender y Endpoint Protection."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: f0352e59390ade7212a64cf0de883bbb1ca28bab
+ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
+ms.openlocfilehash: b88bc5f734b85527b81e5848deb0617db4c8dfbc
 
 
 ---
@@ -29,39 +29,23 @@ ms.openlocfilehash: f0352e59390ade7212a64cf0de883bbb1ca28bab
 Estas preguntas más frecuentes están dirigidas a usuarios de equipos cuyos administradores de TI hayan implementado Windows Defender o Endpoint Protection en sus equipos administrados. Este contenido podría no ser aplicable a otro software antimalware. Microsoft System Center Endpoint Protection administra Windows Defender en Windows 10. También puede implementar y administrar el cliente de Endpoint Protection en equipos anteriores a Windows 10. Aunque en este artículo se describe Windows Defender, su información también se aplica a Endpoint Protection.  
 
 -   [¿Por qué es necesario el software antivirus y antispyware?](#why-do-i-need-antivirus-and-antispyware-software)  
-
--   [¿Cómo puedo saber si mi equipo está infectado con software malintencionado?](#how-can-i-tell-if-my-computer-is-infected-with-malicious-software)  
-
+-   [¿Cómo puedo saber si mi equipo está infectado con software malintencionado?](#how-can-i-tell-if-my-computer-is-infected-with-malicious-software)
+-   [¿Cómo encuentro la versión de Windows Defender?](#how-can-i-find-the-version-of-windows-defender)
 -   [¿Qué debo hacer si Windows Defender o Endpoint Protection detecta software malintencionado en mi equipo?](#what-should-i-do-if-windows-defender-or-endpoint-protection-detects-software-on-my-computer)  
-
 -   [¿Qué es un virus?](#what-is-a-virus)  
-
 -   [¿Qué es un spyware?](#what-is-spyware)  
-
 -   [¿Cuál es la diferencia entre virus, spyware y otro software potencialmente peligroso?](#hat-s-the-difference-between-viruses-spyware-and-other-potentially-harmful-software)  
-
 -   [¿De dónde provienen los virus, el spyware y otro software potencialmente no deseado?](#where-do-viruses-spyware-and-other-potentially-unwanted-software-come-from)  
-
 -   [¿Puede mi equipo infectarse con software malintencionado sin mi conocimiento?](#can-i-get-malicious-software-without-knowing-it)  
-
 -   [¿Por qué es importante revisar los contratos de licencia antes de instalar software?](#why-is-it-important-to-review-license-agreements-before-installing-software)  
-
 -   [¿Qué diferencias hay entre Endpoint Protection y Windows Defender?](#what-s-the-difference-between-endpoint-protection-and-windows-defender)  
-
 -   [¿Por qué Windows Defender no detecta cookies?](#why-doesn-t-windows-defender-detect-cookies)  
-
 -   [¿Cómo puedo evitar el malware?](#how-can-i-prevent-malware)  
-
 -   [¿Qué son las definiciones de virus y spyware?](#what-are-virus-and-spyware-definitions)  
-
 -   [¿Cómo mantengo las definiciones de virus y spyware actualizadas?](#how-do-i-keep-virus-and-spyware-definitions-up-to-date)  
-
 -   [¿Cómo quito o restauro elementos puestos en cuarentena por Windows Defender o Endpoint Protection?](#how-do-i-remove-or-restore-items-quarantined-by-windows-defender-or-endpoint-protection)  
-
 -   [¿Qué es la protección en tiempo real?](#what-is-real-time-protection)  
-
 -   [¿Cómo sé que se ejecuta Windows Defender o Endpoint Protection en mi equipo?](#how-do-i-know-that-windows-defender-or-endpoint-protection-is-running-on-my-computer)
-
 -   [¿Cómo se configuran las alertas de Windows Defender o Endpoint Protection?](#how-to-set-up-windows-defender-or-endpoint-protection-alerts)  
 
 ##  <a name="why-do-i-need-antivirus-and-antispyware-software"></a>¿Por qué es necesario el software antivirus y antispyware?  
@@ -104,6 +88,9 @@ Estas preguntas más frecuentes están dirigidas a usuarios de equipos cuyos adm
 -   El equipo de repente comienza a funcionar más despacio de lo normal. No todos los problemas de rendimiento del equipo están causados por software malintencionado, pero este software, en especial el spyware, puede ocasionar un cambio notable.  
 
 Puede haber software malintencionado en el equipo aunque no se observe ningún síntoma. Este tipo de software puede recopilar información sobre usted y su equipo sin su conocimiento o consentimiento. Para ayudar a proteger su privacidad y su equipo, debe ejecutar Windows Defender o Endpoint Protection en todo momento.  
+
+## <a name="how-can-i-find-the-version-of-windows-defender"></a>¿Cómo encuentro la versión de Windows Defender?
+ Para ver la versión de Windows Defender que se ejecuta en el equipo, abra Windows Defender (haga clic en **Inicio** y busque **Windows Defender**), haga clic en **Configuración** y desplácese a la parte inferior de la configuración de Windows Defender hasta que encuentre **Información de versión**.
 
 ##  <a name="what-should-i-do-if-windows-defender-or-endpoint-protection-detects-malicious-software-on-my-computer"></a>¿Qué debo hacer si Windows Defender o Endpoint Protection detecta software malintencionado en mi equipo?  
 
@@ -279,6 +266,6 @@ Para quitar todos los elementos no deseados o potencialmente peligrosos que Wind
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

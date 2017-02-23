@@ -1,7 +1,7 @@
 ---
 title: "Configurar la administración basada en roles | Microsoft Docs"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,20 +16,21 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: fb5a3cb9fc5aebf512f09a2e584c1eee58b2d15a
+ms.sourcegitcommit: 1defe96163f1bb70f586619ad89098c6f0e6c665
+ms.openlocfilehash: 3eea3a6e5f23808570ded4be3bd7412954518b96
 
 
 ---
-# <a name="configure-role-based-administration-for-system-center-configuration-manager"></a>Configurar la administración basada en roles de System Center Configuration Manager
+
+# <a name="configure-role-based-administration-for-system-center-configuration-manager"></a>Configurar la administración basada en roles de System Center Configuration Manager   
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
 En System Center Configuration Manager, la administración basada en roles combina roles de seguridad, ámbitos de seguridad y colecciones asignadas para definir el ámbito administrativo de cada usuario administrativo. Un ámbito administrativo incluye los objetos que puede ver un usuario administrativo en la consola de Configuration Manager y las tareas relacionadas con esos objetos que el usuario administrativo tiene permiso para realizar. Las configuraciones de la administración basada en roles se aplican en cada sitio en una jerarquía.  
 
- Si todavía no está familiarizado con los conceptos relacionados con la administración basada en roles, vea [Fundamentals of role-based administration for System Center Configuration Manager (Conceptos básicos de la administración basada en roles de System Center Configuration Manager)](../../../../core/understand/fundamentals-of-role-based-administration.md)  
+ Si todavía no está familiarizado con los conceptos relacionados con la administración basada en roles, vea [Conceptos básicos de la administración basada en roles de System Center Configuration Manager](../../../../core/understand/fundamentals-of-role-based-administration.md).  
 
- La información de los procedimientos siguientes puede ayudarle a crear y configurar la administración basada en roles y la configuración de seguridad relacionada.  
+ La información de los procedimientos siguientes puede ayudarle a crear y configurar la administración basada en roles y la configuración de seguridad relacionada:  
 
 -   [Crear roles de seguridad personalizados](#BKMK_CreateSecRole)  
 
@@ -50,9 +51,9 @@ En System Center Configuration Manager, la administración basada en roles combi
 
 #### <a name="to-create-custom-security-roles"></a>Para crear roles de seguridad personalizados  
 
-1.  En la consola de Configuration Manager, haga clic en **Administración**.  
+1.  En la consola de Configuration Manager, vaya a **Administración**.  
 
-2.  En el área de trabajo **Administración** , expanda **Seguridad**y, a continuación, haga clic en **Roles de seguridad**.  
+2.  En el área de trabajo **Administración**, expanda **Seguridad** y elija **Roles de seguridad**.  
 
      Utilice uno de los siguientes procesos para crear el nuevo rol de seguridad:  
 
@@ -60,24 +61,24 @@ En System Center Configuration Manager, la administración basada en roles combi
 
         1.  Seleccione un rol de seguridad existente para usarlo como el origen del nuevo rol de seguridad.  
 
-        2.  En la pestaña **Inicio** , en el grupo **Rol de seguridad** , haga clic en **Copiar**. Esto crea una copia del rol de seguridad de origen.  
+        2.  En el grupo **Rol de seguridad** de la pestaña **Inicio**, elija **Copiar**. Esto crea una copia del rol de seguridad de origen.  
 
         3.  En el asistente Copiar rol de seguridad, especifique un **Nombre** para el nuevo rol de seguridad personalizado.  
 
         4.  En **Asignaciones de operación de seguridad**, expanda todos los nodos de **Operaciones de seguridad** para mostrar las acciones disponibles.  
 
-        5.  Para cambiar el valor de una operación de seguridad, haga clic en la flecha abajo en la columna **Valor** y, a continuación, seleccione **Sí** o **No**.  
+        5.  Para cambiar el valor de una operación de seguridad, elija la flecha abajo en la columna **Valor** y seleccione **Sí** o **No**.  
 
             > [!CAUTION]  
-            >  Cuando se configura un rol de seguridad personalizado, asegúrese de no conceder permisos que no sean necesarios para los usuarios administrativos que están asociados al nuevo rol de seguridad. Por ejemplo, el valor **Modificar** para la operación de seguridad **Roles de seguridad** concede a los usuarios administrativos permiso para editar cualquier rol de seguridad accesible, incluso si no están asociados a ese rol de seguridad.  
+            >  Cuando configure un rol de seguridad personalizado, asegúrese de no conceder permisos que no sean necesarios para los usuarios administrativos asociados al nuevo rol de seguridad. Por ejemplo, el valor **Modificar** para la operación de seguridad **Roles de seguridad** concede a los usuarios administrativos permiso para editar cualquier rol de seguridad accesible, aunque no estén asociados a ese rol de seguridad.  
 
-        6.  Después de configurar los permisos, haga clic en **Aceptar** para guardar el nuevo rol de seguridad.  
+        6.  Después de configurar los permisos, elija **Aceptar** para guardar el nuevo rol de seguridad.  
 
     -   Para importar un rol de seguridad que se haya exportado desde otra jerarquía de Configuration Manager, realice las acciones siguientes:  
 
-        1.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Importar rol de seguridad**.  
+        1.  En el grupo **Crear** de la pestaña **Inicio**, elija **Importar rol de seguridad**.  
 
-        2.  Especifique el archivo .xml que contiene la configuración del rol de seguridad que desee importar y haga clic en **Abrir** para completar el procedimiento y guardar el rol de seguridad.  
+        2.  Especifique el archivo .xml que contiene la configuración de rol de seguridad que quiere importar. Elija **Abrir** para completar el procedimiento y guardar el rol de seguridad.  
 
             > [!NOTE]  
             >  Después de importar un rol de seguridad, puede editar las propiedades del rol de seguridad para cambiar los permisos de objeto asociados al rol de seguridad.  
@@ -89,31 +90,31 @@ En System Center Configuration Manager, la administración basada en roles combi
 
 #### <a name="to-modify-security-roles"></a>Para modificar roles de seguridad  
 
-1.  En la consola de Configuration Manager, haga clic en **Administración**.  
+1.  En la consola de Configuration Manager, seleccione **Administración**.  
 
-2.  En el área de trabajo **Administración** , expanda **Seguridad**y, a continuación, haga clic en **Roles de seguridad**.  
+2.  En el área de trabajo **Administración**, expanda **Seguridad** y elija **Roles de seguridad**.  
 
 3.  Seleccione el rol de seguridad personalizado que desee modificar.  
 
-4.  En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
+4.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
 
-5.  Haga clic en la pestaña **Permisos** .  
+5.  Elija la pestaña **Permisos**.  
 
 6.  En **Asignaciones de operación de seguridad**, expanda todos los nodos de **Operaciones de seguridad** para mostrar las acciones disponibles.  
 
-7.  Para cambiar el valor de una operación de seguridad, haga clic en la flecha abajo en la columna **Valor** y, a continuación, seleccione **Sí** o **No**.  
+7.  Para cambiar el valor de una operación de seguridad, elija la flecha abajo en la columna **Valor** y elija **Sí** o **No**.  
 
     > [!CAUTION]  
-    >  Cuando se configura un rol de seguridad personalizado, asegúrese de no conceder permisos que no sean necesarios para los usuarios administrativos que están asociados al nuevo rol de seguridad. Por ejemplo, el valor **Modificar** para la operación de seguridad **Roles de seguridad** concede a los usuarios administrativos permiso para editar cualquier rol de seguridad accesible, incluso si no están asociados a ese rol de seguridad.  
+    >  Cuando configure un rol de seguridad personalizado, asegúrese de no conceder permisos que no sean necesarios para los usuarios administrativos asociados al nuevo rol de seguridad. Por ejemplo, el valor **Modificar** para la operación de seguridad **Roles de seguridad** concede a los usuarios administrativos permiso para editar cualquier rol de seguridad accesible, aunque no estén asociados a ese rol de seguridad.  
 
-8.  Cuando haya terminado de configurar las asignaciones de operación de seguridad, haga clic en **Aceptar** para guardar el nuevo rol de seguridad.  
+8.  Cuando haya terminado de configurar las asignaciones de operación de seguridad, elija **Aceptar** para guardar el nuevo rol de seguridad.  
 
 ##  <a name="a-namebkmkconfigsecscopea-configure-security-scopes-for-an-object"></a><a name="BKMK_ConfigSecScope"></a> Configurar ámbitos de seguridad para un objeto  
- La asociación de un ámbito de seguridad a un objeto se administra desde el objeto y no desde el ámbito de seguridad. Las únicas configuraciones directas que admiten los ámbitos de seguridad son los cambios en su nombre y descripción. Para cambiar el nombre y la descripción de un ámbito de seguridad cuando ve las propiedades del ámbito de seguridad, debe tener el permiso **Modificar** en el objeto protegible **Ámbitos de seguridad** .  
+ La asociación de un ámbito de seguridad a un objeto se administra desde el objeto, no desde el ámbito de seguridad. Las únicas configuraciones directas que admiten los ámbitos de seguridad son los cambios en su nombre y descripción. Para cambiar el nombre y la descripción de un ámbito de seguridad cuando ve las propiedades del ámbito de seguridad, debe tener el permiso **Modificar** en el objeto protegible **Ámbitos de seguridad** .  
 
- Cuando cree un nuevo objeto en Configuration Manager, el nuevo objeto se asocia a cada ámbito de seguridad asociado a los roles de seguridad de la cuenta que se usa para crear el objeto cuando esos roles de seguridad ofrecen el permiso **Crear** o el permiso **Establecer ámbito de seguridad**. Solo después de crear el objeto, puede cambiar los ámbitos de seguridad a los que está asociado.  
+ Cuando cree un nuevo objeto en Configuration Manager, el nuevo objeto se asocia a cada ámbito de seguridad asociado a los roles de seguridad de la cuenta que se usa para crear el objeto cuando esos roles de seguridad ofrecen el permiso para **Crear** o para **Establecer ámbito de seguridad**. Solo puede cambiar los ámbitos de seguridad a los que está asociado el objeto después de crearlo.  
 
- Por ejemplo, tiene asignado un rol de seguridad que le concede el permiso para crear un nuevo grupo de límites. Cuando cree un nuevo grupo de límites, no tendrá ninguna opción a la que pueda asignar ámbitos de seguridad específicos. En su lugar, los ámbitos de seguridad disponibles en los roles de seguridad a los que está asociado se asignan automáticamente al nuevo grupo de límites. Después de guardar el nuevo grupo de límites, puede editar los ámbitos de seguridad asociados al nuevo grupo de límites.  
+ Por ejemplo, tiene asignado un rol de seguridad que le concede permiso para crear un grupo de límites. Cuando cree un nuevo grupo de límites, no tendrá ninguna opción a la que pueda asignar ámbitos de seguridad específicos. En su lugar, los ámbitos de seguridad disponibles en los roles de seguridad a los que está asociado se asignan automáticamente al nuevo grupo de límites. Después de guardar el nuevo grupo de límites, puede editar los ámbitos de seguridad asociados al nuevo grupo de límites.  
 
  Utilice el siguiente procedimiento para configurar los ámbitos de seguridad asignados a un objeto.  
 
@@ -121,19 +122,21 @@ En System Center Configuration Manager, la administración basada en roles combi
 
 1.  En la consola de Configuration Manager, seleccione un objeto que admita la asignación a un ámbito de seguridad.  
 
-2.  En la pestaña **Inicio** , en el grupo **Clasificar** , haga clic en **Establecer ámbitos de seguridad**.  
+2.  En el grupo **Clasificar** de la pestaña **Inicio**, elija **Establecer ámbitos de seguridad**.  
 
 3.  En el cuadro de diálogo **Establecer ámbitos de seguridad** , seleccione o quite los ámbitos de seguridad a los que esté asociado este objeto. Cada objeto que admita ámbitos de seguridad debe asignarse a un ámbito de seguridad como mínimo.  
 
-4.  Haga clic en **Aceptar** para guardar los ámbitos de seguridad asignados.  
+4.  Elija **Aceptar** para guardar los ámbitos de seguridad asignados.  
 
     > [!NOTE]  
     >  Cuando cree un nuevo objeto, puede asignar el objeto a varios ámbitos de seguridad. Para modificar el número de ámbitos de seguridad asociados al objeto, debe cambiar esta asignación una vez creado el objeto.  
 
 ##  <a name="a-namebkmkconfigcolla-configure-collections-to-manage-security"></a><a name="BKMK_ConfigColl"></a> Configurar recopilaciones para administrar la seguridad  
- No hay ningún procedimiento para configurar recopilaciones para la administración basada en roles. Las recopilaciones no tienen una configuración de administración basada en roles; en su lugar, se asignan recopilaciones a un usuario administrativo cuando este se configura. Las operaciones de seguridad de recopilación que estén habilitadas en los roles de seguridad asignados a los usuarios determinan los permisos que tiene un usuario administrativo para las recopilaciones y recursos de la recopilación (miembros de la recopilación).  
+ No hay ningún procedimiento para configurar recopilaciones para la administración basada en roles. Las colecciones no tienen una configuración de administración basada en roles. En su lugar, se asignan colecciones a un usuario administrativo cuando este se configura. Las operaciones de seguridad de colección que se habiliten en los roles de seguridad asignados a los usuarios determinan los permisos que tiene un usuario administrativo en las colecciones y los recursos de colección (miembros de la colección).  
 
- Cuando un usuario administrativo tiene permisos en una recopilación, también tiene permisos en las recopilaciones limitadas a esa recopilación. Por ejemplo, su organización utiliza una recopilación denominada Todos los equipos de escritorio, y existe una recopilación denominada Todos los equipos de escritorio de Estados Unidos que se limita a la recopilación Todos los equipos de escritorio. Si un usuario administrativo tiene permisos para Todos los equipos de escritorio, también tienen los mismos permisos en la recopilación Todos los equipos de escritorio de Estados Unidos. Además, un usuario administrativo no puede usar el permiso **Eliminar** o **Modificar** en una recopilación directamente asignada a él, pero puede usar estos permisos en las recopilaciones que estén limitadas a esa recopilación. En el ejemplo anterior, el usuario administrativo puede eliminar o modificar la recopilación Todos los equipos de escritorio de Estados Unidos, pero no puede eliminar o modificar la recopilación Todos los equipos de escritorio.  
+ Cuando un usuario administrativo tiene permisos en una recopilación, también tiene permisos en las recopilaciones limitadas a esa recopilación. Por ejemplo, su organización utiliza una colección denominada Todos los equipos de escritorio, y existe una colección denominada Todos los equipos de escritorio de Estados Unidos que está limitada a la colección Todos los equipos de escritorio. Si un usuario administrativo tiene permisos para Todos los equipos de escritorio, también tienen los mismos permisos en la recopilación Todos los equipos de escritorio de Estados Unidos.
+
+ Además, un usuario administrativo no puede usar el permiso para **Eliminar** o **Modificar** en una colección que se le haya asignado directamente. Pero puede usar estos permisos en las colecciones que están limitadas a esa colección. En el ejemplo anterior, el usuario administrativo puede eliminar o modificar la colección Todos los equipos de escritorio de Estados Unidos, pero no puede eliminar o modificar la colección Todos los equipos de escritorio.  
 
 ##  <a name="a-namebkmkcreateadminusera-create-a-new-administrative-user"></a><a name="BKMK_Create_AdminUser"></a> Crear un nuevo usuario administrativo  
  Para conceder a usuarios individuales o a miembros de un grupo de seguridad acceso para administrar Configuration Manager, cree un usuario administrativo en Configuration Manager y especifique la cuenta de Windows del usuario o grupo de usuarios. Cada usuario administrativo de Configuration Manager debe tener asignado al menos un rol de seguridad y un ámbito de seguridad. También puede asignar recopilaciones para limitar el ámbito administrativo del usuario administrativo.  
@@ -142,40 +145,40 @@ En System Center Configuration Manager, la administración basada en roles combi
 
 #### <a name="to-create-a-new-administrative-user"></a>Para crear un nuevo usuario administrativo  
 
-1.  En la consola de Configuration Manager, haga clic en **Administración**.  
+1.  En la consola de Configuration Manager, seleccione **Administración**.  
 
-2.  En el área de trabajo **Administración** , expanda **Seguridad**y, a continuación, haga clic en **Usuarios administrativos**.  
+2.  En el área de trabajo **Administración**, expanda **Seguridad**y, a continuación, elija **Usuarios administrativos**.  
 
-3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Agregar usuario o grupo**.  
+3.  En el grupo **Crear** de la pestaña **Inicio**, elija **Agregar usuario o grupo**.  
 
-4.  Haga clic en **Examinar** y, a continuación, seleccione la cuenta de usuario o grupo que se utilizará para este nuevo usuario administrativo.  
+4.  Elija **Examinar** y luego seleccione la cuenta de usuario o grupo que se utilizará para este nuevo usuario administrativo.  
 
     > [!NOTE]  
     >  Para la administración basada en consola, únicamente los usuarios de dominio o grupos de seguridad pueden especificarse como usuarios administrativos.  
 
-5.  Para **Roles de seguridad asociados**, haga clic en **Agregar** para abrir una lista de roles de seguridad disponibles, active la casilla de uno o varios roles de seguridad y, a continuación, haga clic en **Aceptar**.  
+5.  En **Roles de seguridad asociados**, elija **Agregar** para abrir una lista de roles de seguridad disponibles, active la casilla de uno o varios roles de seguridad y elija **Aceptar**.  
 
 6.  Seleccione una de las dos opciones siguientes para definir el comportamiento del objeto protegible para el nuevo usuario:  
 
-    -   **Todos los objetos protegibles que están relacionados con sus roles de seguridad asociados**: esta opción asocia el usuario administrativo con el ámbito de seguridad **Todo** y las recopilaciones integradas de nivel raíz para **Todos los sistemas**y **Todos los usuarios** y grupos de usuarios. Los roles de seguridad asignados al usuario definen el acceso a los objetos. Los nuevos objetos que cree este usuario administrativo se asignan al ámbito de seguridad **Predeterminado** .  
+    -   **Todas las instancias de los objetos que están relacionados con los roles de seguridad asignados**: esta opción asocia el usuario administrativo al ámbito de seguridad **Todo** y las colecciones integradas de nivel raíz para **Todos los sistemas** y **Todos los usuarios y grupos de usuarios**. Los roles de seguridad que están asignados al usuario definen el acceso a los objetos. Los nuevos objetos que cree este usuario administrativo se asignan al ámbito de seguridad **Predeterminado** .  
 
-    -   **Solo los objetos protegibles en ámbitos de seguridad o recopilaciones especificados**: de forma predeterminada, esta opción asocia el usuario administrativo al ámbito de seguridad **Predeterminado** y a las recopilaciones **Todos los sistemas** y **Todos los usuarios** y grupos de usuarios. Sin embargo, las recopilaciones y los ámbitos de seguridad reales están limitados a aquellos que están asociados a la cuenta que utilizó para crear el nuevo usuario administrativo. Esta opción es compatible con la adición o eliminación de ámbitos de seguridad y recopilaciones para personalizar el ámbito administrativo del usuario administrativo.  
+    -   **Solo las instancias de objetos asignados a los ámbitos de seguridad o recopilaciones especificados**: de forma predeterminada, esta opción asocia el usuario administrativo al ámbito de seguridad **Predeterminado** y a las colecciones **Todos los sistemas** y **Todos los usuarios y grupos de usuarios**. Sin embargo, las recopilaciones y los ámbitos de seguridad reales están limitados a aquellos que están asociados a la cuenta que utilizó para crear el nuevo usuario administrativo. Esta opción es compatible con la adición o eliminación de ámbitos de seguridad y recopilaciones para personalizar el ámbito administrativo del usuario administrativo.  
 
     > [!IMPORTANT]  
-    >  Las opciones anteriores asocian cada ámbito de seguridad y recopilación asignado a cada rol de seguridad asignado al usuario administrativo. Una tercera opción, **Asociar roles de seguridad asignados con ámbitos y recopilaciones de seguridad específicos**, se puede usar para asociar roles de seguridad individuales a recopilaciones y ámbitos de seguridad específicos. Esta tercera opción está disponible después de crear el nuevo usuario administrativo, cuando lo modifica.  
+    >  Las opciones anteriores asocian cada ámbito de seguridad y colección asignado a cada rol de seguridad que se asigne al usuario administrativo. Puede utilizar una tercera opción, **Asociar roles de seguridad asignados con ámbitos y recopilaciones de seguridad específicos**, para asociar roles de seguridad individuales a colecciones y ámbitos de seguridad específicos. Esta tercera opción está disponible después de crear el nuevo usuario administrativo, cuando lo modifica.  
 
 7.  Según su selección en el paso 6, lleve a cabo la acción siguiente:  
 
-    -   Si seleccionó **Todas las instancias de los objetos que están relacionados con los roles de seguridad asignados**, haga clic en **Aceptar** para completar este procedimiento.  
+    -   Si seleccionó **Todas las instancias de los objetos que están relacionados con los roles de seguridad asignados**, elija **Aceptar** para completar este procedimiento.  
 
-    -   Si seleccionó **Solo las instancias de objetos asignados a los ámbitos de seguridad o recopilaciones especificados**, puede hacer clic en **Agregar** para seleccionar más recopilaciones y ámbitos de seguridad, o seleccionar uno o varios objetos en la lista y, a continuación, hacer clic en **Quitar** para quitarlos. Haga clic en **Aceptar** para completar este procedimiento.  
+    -   Si seleccionó **Solo las instancias de objetos asignados a los ámbitos de seguridad o recopilaciones especificados**, puede elegir **Agregar** para seleccionar más colecciones y ámbitos de seguridad. También puede seleccionar uno o más objetos de la lista y luego elegir **Quitar** para quitarlos. Elija **Aceptar** para completar el procedimiento.  
 
 ##  <a name="a-namebkmkmodadminusera-modify-the-administrative-scope-of-an-administrative-user"></a><a name="BKMK_ModAdminUser"></a> Modificar el ámbito administrativo de un usuario administrativo  
- Para modificar el ámbito administrativo de un usuario administrativo, agregue o quite roles de seguridad, ámbitos de seguridad y recopilaciones que estén asociados al usuario. Cada usuario administrativo debe estar asociado al menos a un rol de seguridad y a un ámbito de seguridad. Es posible que tenga que asignar una o más recopilaciones al ámbito administrativo del usuario. La mayoría de los roles de seguridad interactúan con recopilaciones y no funcionan correctamente sin una recopilación asignada.  
+ Para modificar el ámbito administrativo de un usuario administrativo, agregue o quite roles de seguridad, ámbitos de seguridad y recopilaciones que estén asociados al usuario. Cada usuario administrativo debe estar asociado al menos a un rol de seguridad y a un ámbito de seguridad. Es posible que tenga que asignar una o más recopilaciones al ámbito administrativo del usuario. La mayoría de los roles de seguridad interactúan con colecciones y no funcionan correctamente sin una colección asignada.  
 
  Cuando se modifica un usuario administrativo, puede cambiar el comportamiento en cuanto a cómo se asocian los objetos protegibles a los roles de seguridad asignados. Los tres comportamientos que se pueden seleccionar son los siguientes:  
 
--   **Todos los objetos protegibles que están relacionados con sus roles de seguridad asociados**: esta opción asocia el usuario administrativo con el ámbito **Todo** y las recopilaciones integradas de nivel raíz para **Todos los sistemas**y **Todos los usuarios y grupos de usuarios**. Los roles de seguridad que están asignados al usuario definen el acceso a los objetos.  
+-   **Todos los objetos protegibles que están relacionados con sus roles de seguridad asociados**: esta opción asocia el usuario administrativo al ámbito **Todo** y las colecciones integradas de nivel raíz para **Todos los sistemas** y **Todos los usuarios y grupos de usuarios**. Los roles de seguridad que están asignados al usuario definen el acceso a los objetos.  
 
 -   **Solo los objetos protegibles de ámbitos de seguridad o recopilaciones especificados**: esta opción asocia el usuario administrativo a los mismos ámbitos de seguridad y recopilaciones que están asociados a la cuenta usada para configurar el usuario administrativo. Esta opción es compatible con la adición o eliminación de roles de seguridad y recopilaciones para personalizar el ámbito administrativo del usuario administrativo.  
 
@@ -186,120 +189,120 @@ En System Center Configuration Manager, la administración basada en roles combi
 
 La configuración actual del comportamiento del objeto protegible cambia el proceso que se utiliza para asignar roles de seguridad adicionales. Utilice los procedimientos siguientes basados en las distintas opciones de objetos protegibles para administrar un usuario administrativo.  
 
- Use el procedimiento siguiente para ver y administrar la configuración de los objetos protegibles para un usuario administrativo:  
+Use el procedimiento siguiente para ver y administrar la configuración de los objetos protegibles para un usuario administrativo.  
 
 #### <a name="to-view-and-manage-the-securable-object-behavior-for-an-administrative-user"></a>Para ver y administrar el comportamiento de los objetos protegibles para un usuario administrativo  
 
-1.  En la consola de Configuration Manager, haga clic en **Administración**.  
+1.  En la consola de Configuration Manager, seleccione **Administración**.  
 
-2.  En el área de trabajo **Administración** , expanda **Seguridad**y, a continuación, haga clic en **Usuarios administrativos**.  
+2.  En el área de trabajo **Administración**, expanda **Seguridad**y, a continuación, elija **Usuarios administrativos**.  
 
 3.  Seleccione el usuario administrativo que desee modificar.  
 
-4.  En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
+4.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
 
-5.  Haga clic en la pestaña **Ámbitos de seguridad** para ver la configuración actual de los objetos protegibles para este usuario administrativo.  
+5.  Elija la pestaña **Ámbitos de seguridad** para ver la configuración actual de los objetos protegibles para este usuario administrativo.  
 
-6.  Para modificar el comportamiento de los objetos protegibles, seleccione una opción nueva para el comportamiento de los objetos protegibles. Después de cambiar esta configuración, consulte el procedimiento adecuado para obtener más información para configurar recopilaciones y ámbitos de seguridad y roles de seguridad para este usuario administrativo.  
+6.  Para modificar el comportamiento de los objetos protegibles, seleccione una opción nueva para el comportamiento de los objetos protegibles. Después de cambiar esta configuración, vea el correspondiente procedimiento para obtener más información para configurar colecciones y ámbitos de seguridad y roles de seguridad para este usuario administrativo.  
 
 7.  Haga clic en **Aceptar** para completar el procedimiento.  
 
- Use el siguiente procedimiento para modificar un usuario administrativo que tenga el comportamiento de objetos protegibles establecido en **Todas las instancias de los objetos que están relacionados con los roles de seguridad asignados**.  
+Use el siguiente procedimiento para modificar un usuario administrativo que tenga el comportamiento de objetos protegibles establecido en **Todas las instancias de los objetos que están relacionados con los roles de seguridad asignados**.  
 
-#### <a name="option-all-securable-objects-that-are-relevant-to-their-associated-security-roles"></a>Opción: Todos los objetos protegibles que están relacionados con los roles de seguridad asignados  
+#### <a name="for-option-all-securable-objects-that-are-relevant-to-their-associated-security-roles"></a>Para la opción: Todos los objetos protegibles que están relacionados con sus roles de seguridad asociados  
 
-1.  En la consola de Configuration Manager, haga clic en **Administración**.  
+1.  En la consola de Configuration Manager, seleccione **Administración**.  
 
-2.  En el área de trabajo **Administración** , expanda **Seguridad**y, a continuación, haga clic en **Usuarios administrativos**.  
+2.  En el área de trabajo **Administración**, expanda **Seguridad**y, a continuación, elija **Usuarios administrativos**.  
 
 3.  Seleccione el usuario administrativo que desee modificar.  
 
-4.  En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
+4.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
 
-5.  Haga clic en la pestaña **Ámbitos de seguridad** para confirmar que el usuario administrativo esté configurado con **Todas las instancias de los objetos que están relacionados con los roles de seguridad asignados**.  
+5.  Elija la pestaña **Ámbitos de seguridad** para confirmar que el usuario administrativo esté configurado con **Todas las instancias de los objetos que están relacionados con los roles de seguridad asignados**.  
 
-6.  Para modificar los roles de seguridad asignados, haga clic en la pestaña **Roles de seguridad** .  
+6.  Para modificar los roles de seguridad asignados, elija la pestaña **Roles de seguridad**.  
 
-    -   Para asignar roles de seguridad adicionales a este usuario administrativo, haga clic en **Agregar**, active la casilla de cada rol de seguridad adicional que desee asignar y, a continuación, haga clic en **Aceptar**.  
+    -   Para asignar roles de seguridad adicionales a este usuario administrativo, elija **Agregar**, active la casilla de cada rol de seguridad adicional que desee asignar y elija **Aceptar**.  
 
-    -   Para quitar roles de seguridad, seleccione uno o varios roles de seguridad de la lista y, a continuación, haga clic en **Quitar**.  
+    -   Para quitar roles de seguridad, seleccione uno o varios roles de seguridad de la lista y luego elija **Quitar**.  
 
-7.  Para modificar el comportamiento de los objetos protegibles, haga clic en la pestaña **Ámbitos de seguridad** y seleccione una opción nueva para el comportamiento de los objetos protegibles. Después de cambiar esta configuración, consulte el procedimiento adecuado para obtener más información para configurar recopilaciones y ámbitos de seguridad y roles de seguridad para este usuario administrativo.  
+7.  Para modificar el comportamiento de los objetos protegibles, elija la pestaña **Ámbitos de seguridad** y seleccione otra opción para el comportamiento de los objetos protegibles. Después de cambiar esta configuración, vea el correspondiente procedimiento para obtener más información para configurar colecciones y ámbitos de seguridad y roles de seguridad para este usuario administrativo.  
 
     > [!NOTE]  
-    >  Cuando el comportamiento de objetos protegibles se establece en **Todas las instancias de los objetos que están relacionados con los roles de seguridad asignados**, no puede agregar ni quitar recopilaciones o ámbitos de seguridad específicos.  
+    >  Cuando el comportamiento de objetos protegibles se establece en **Todos los objetos protegibles que están relacionados con sus roles de seguridad asociados**, no puede agregar ni quitar colecciones ni ámbitos de seguridad específicos.  
 
-8.  Haga clic en **Aceptar** para completar este procedimiento.  
+8.  Elija **Aceptar** para completar el procedimiento.  
 
- Use el siguiente procedimiento para modificar un usuario administrativo que tenga el comportamiento de objetos protegibles establecido en **Solo las instancias de objetos asignados a los ámbitos de seguridad o recopilaciones especificados**.  
+Use el siguiente procedimiento para modificar un usuario administrativo que tenga el comportamiento de objetos protegibles establecido en **Solo las instancias de objetos asignados a los ámbitos de seguridad o recopilaciones especificados**.  
 
-#### <a name="option-only-securable-objects-in-specified-security-scopes-or-collections"></a>Opción: Solo los objetos protegibles de ámbitos de seguridad o recopilaciones especificados  
+#### <a name="for-option-only-securable-objects-in-specified-security-scopes-or-collections"></a>Para la opción: Solo las instancias de objetos asignados a los ámbitos de seguridad o recopilaciones especificados  
 
-1.  En la consola de Configuration Manager, haga clic en **Administración**.  
+1.  En la consola de Configuration Manager, seleccione **Administración**.  
 
-2.  En el área de trabajo **Administración** , expanda **Seguridad**y, a continuación, haga clic en **Usuarios administrativos**.  
-
-3.  Seleccione el usuario administrativo que desee modificar.  
-
-4.  En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
-
-5.  Haga clic en la pestaña **Ámbitos de seguridad** para confirmar que el usuario esté configurado con **Solo las instancias de objetos asignados a los ámbitos de seguridad o recopilaciones especificados**.  
-
-6.  Para modificar los roles de seguridad asignados, haga clic en la pestaña **Roles de seguridad** .  
-
-    -   Para asignar roles de seguridad adicionales a este usuario, haga clic en **Agregar**, active la casilla de cada rol de seguridad adicional que desee asignar y, a continuación, haga clic en **Aceptar**.  
-
-    -   Para quitar roles de seguridad, seleccione uno o varios roles de seguridad de la lista y, a continuación, haga clic en **Quitar**.  
-
-7.  Para modificar las recopilaciones y los ámbitos de seguridad asociados a roles de seguridad, haga clic en la pestaña **Ámbitos de seguridad** .  
-
-    -   Para asociar recopilaciones o ámbitos de seguridad nuevos a todos los roles de seguridad que estén asignados a este usuario administrativo, haga clic en **Agregar** y seleccione una de las cuatro opciones. Si seleccionó **Ámbito de seguridad** o **Recopilación**, active la casilla de uno o más objetos para completar esa selección y, a continuación, haga clic en **Aceptar**.  
-
-    -   Para quitar un ámbito de seguridad o recopilación, seleccione el objeto y, a continuación, haga clic en **Quitar**.  
-
-8.  Haga clic en **Aceptar** para completar este procedimiento.  
-
- Use el siguiente procedimiento para modificar un usuario administrativo que tenga el comportamiento de objetos protegibles establecido en **Asociar roles de seguridad asignados con ámbitos y recopilaciones de seguridad específicos**.  
-
-#### <a name="option-only-securable-objects-as-determined-by-the-security-roles-of-the-administrative-user"></a>Opción: Solo los objetos protegibles determinados por los roles de seguridad del usuario administrativo  
-
-1.  En la consola de Configuration Manager, haga clic en **Administración**.  
-
-2.  En el área de trabajo **Administración** , expanda **Seguridad**y, a continuación, haga clic en **Usuarios administrativos**.  
+2.  En el área de trabajo **Administración**, expanda **Seguridad**y, a continuación, elija **Usuarios administrativos**.  
 
 3.  Seleccione el usuario administrativo que desee modificar.  
 
-4.  En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
+4.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
 
-5.  Haga clic en la pestaña **Ámbitos de seguridad** para confirmar que el usuario administrativo esté configurado con **Solo las instancias de objetos asignados a los ámbitos de seguridad o recopilaciones especificados**.  
+5.  Elija la pestaña **Ámbitos de seguridad** para confirmar que el usuario esté configurado con **Solo las instancias de objetos asignados a los ámbitos de seguridad o recopilaciones especificados**.  
 
-6.  Para modificar los roles de seguridad asignados, haga clic en la pestaña **Roles de seguridad** .  
+6.  Para modificar los roles de seguridad asignados, elija la pestaña **Roles de seguridad**.  
 
-    -   Para asignar roles de seguridad adicionales a este usuario administrativo, haga clic en **Agregar**. En el cuadro de diálogo **Agregar rol de seguridad** , seleccione uno o varios roles de seguridad disponibles, haga clic en **Agregar**y seleccione el tipo de objeto que desea asociar a los roles de seguridad seleccionados. Si seleccionó **Ámbito de seguridad** o **Recopilación**, active la casilla de uno o más objetos para completar esa selección y, a continuación, haga clic en **Aceptar**.  
+    -   Para asignar roles de seguridad adicionales a este usuario, elija **Agregar**, active la casilla de cada rol de seguridad adicional que desee asignar y elija **Aceptar**.  
+
+    -   Para quitar roles de seguridad, seleccione uno o varios roles de seguridad de la lista y luego elija **Quitar**.  
+
+7.  Para modificar las colecciones y los ámbitos de seguridad asociados a roles de seguridad, elija la pestaña **Ámbitos de seguridad**.  
+
+    -   Para asociar nuevos ámbitos de seguridad o colecciones a todos los roles de seguridad que estén asignados a este usuario administrativo, elija **Agregar** y seleccione una de las cuatro opciones. Si seleccionó **Ámbito de seguridad** o **Colección**, active la casilla de uno o más objetos para completar esa selección y luego elija **Aceptar**.  
+
+    -   Para quitar un ámbito de seguridad o colección, elija el objeto y luego, **Quitar**.  
+
+8.  Elija **Aceptar** para completar el procedimiento.  
+
+Use el siguiente procedimiento para modificar un usuario administrativo que tenga el comportamiento de objetos protegibles establecido en **Asociar roles de seguridad asignados con ámbitos y recopilaciones de seguridad específicos**.  
+
+#### <a name="for-option-only-securable-objects-as-determined-by-the-security-roles-of-the-administrative-user"></a>Para la opción: Asociar roles de seguridad asignados con ámbitos y recopilaciones de seguridad específicos  
+
+1.  En la consola de Configuration Manager, seleccione **Administración**.  
+
+2.  En el área de trabajo **Administración**, expanda **Seguridad**y, a continuación, elija **Usuarios administrativos**.  
+
+3.  Seleccione el usuario administrativo que desee modificar.  
+
+4.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
+
+5.  Elija la pestaña **Ámbitos de seguridad** para confirmar que el usuario administrativo esté configurado con **Solo las instancias de objetos asignados a los ámbitos de seguridad o recopilaciones especificados**.  
+
+6.  Para modificar los roles de seguridad asignados, elija la pestaña **Roles de seguridad**.  
+
+    -   Para asignar roles de seguridad adicionales a este usuario administrativo, elija **Agregar**. En el cuadro de diálogo **Agregar rol de seguridad**, seleccione uno o varios roles de seguridad disponibles, elija **Agregar** y seleccione el tipo de objeto que desea asociar a los roles de seguridad seleccionados. Si seleccionó **Ámbito de seguridad** o **Colección**, active la casilla de uno o más objetos para completar esa selección y luego elija **Aceptar**.  
 
         > [!NOTE]  
         >  Debe configurar al menos un ámbito de seguridad para que se puedan asignar los roles de seguridad seleccionados al usuario administrativo. Al seleccionar varios roles de seguridad, cada ámbito de seguridad y recopilación que se configure está asociado a cada uno de los roles de seguridad seleccionados.  
 
-    -   Para quitar roles de seguridad, seleccione uno o varios roles de seguridad de la lista y, a continuación, haga clic en **Quitar**.  
+    -   Para quitar roles de seguridad, seleccione uno o varios roles de seguridad de la lista y luego elija **Quitar**.  
 
-7.  Para modificar las recopilaciones y los ámbitos de seguridad asociados a un rol de seguridad específico, haga clic en la pestaña **Ámbitos de seguridad** , seleccione el rol de seguridad y, a continuación, haga clic en **Editar**.  
+7.  Para modificar las colecciones y los ámbitos de seguridad asociados a un rol de seguridad específico, elija la pestaña **Ámbitos de seguridad**, seleccione el rol de seguridad y elija **Editar**.  
 
-    -   Para asociar nuevos objetos a este rol de seguridad, haga clic en **Agregar**y seleccione un tipo de objeto para asociar a los roles de seguridad seleccionados. Si seleccionó **Ámbito de seguridad** o **Recopilación**, active la casilla de uno o más objetos para completar esa selección y, a continuación, haga clic en **Aceptar**.  
+    -   Para asociar nuevos objetos a este rol de seguridad, elija **Agregar** y seleccione un tipo de objeto para asociarlo a los roles de seguridad seleccionados. Si seleccionó **Ámbito de seguridad** o **Colección**, active la casilla de uno o más objetos para completar esa selección y luego elija **Aceptar**.  
 
         > [!NOTE]  
         >  Debe configurar al menos un ámbito de seguridad.  
 
-    -   Para quitar una recopilación o un ámbito de seguridad que esté asociado a este rol de seguridad, seleccione el objeto y, a continuación, haga clic en **Quitar**.  
+    -   Para quitar una colección o un ámbito de seguridad que esté asociado a este rol de seguridad, seleccione el objeto y elija **Quitar**.  
 
-    -   Cuando haya terminado de modificar los objetos asociados, haga clic en **Aceptar**.  
+    -   Cuando haya terminado de modificar los objetos asociados, elija **Aceptar**.  
 
-8.  Haga clic en **Aceptar** para completar este procedimiento.  
+8.  Elija **Aceptar** para completar el procedimiento.  
 
     > [!CAUTION]  
     >  Cuando un rol de seguridad concede a usuarios administrativos el permiso de implementación de recopilaciones, dichos usuarios administrativos pueden distribuir objetos de cualquier ámbito de seguridad para el que tengan permisos de **lectura** de objetos, incluso si ese ámbito de seguridad está asociado a un rol de seguridad diferente.  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

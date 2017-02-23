@@ -2,7 +2,7 @@
 title: "Administración de aplicaciones adquiridas en la Tienda Windows para empresas | Microsoft Docs"
 description: Administre e implemente aplicaciones desde la Tienda Windows para empresas con System Center Configuration Manager.
 ms.custom: na
-ms.date: 11/19/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3847a85c11d7b72b84095ba9add563bdf5c49a75
-ms.openlocfilehash: 605cdd01d767dda3467198f5e6539448f9b559f6
+ms.sourcegitcommit: f955b5aadfc617e08d5d933dee8e42de838f83c0
+ms.openlocfilehash: bf2937f5ba86db19d9cb40e2c98cbb8ba365f7eb
 
 ---
 # <a name="manage-apps-from-the-windows-store-for-business-with-system-center-configuration-manager"></a>Administración de aplicaciones desde la Tienda Windows para empresas con System Center Configuration Manager
@@ -74,9 +74,9 @@ Because this is a pre-release feature, before you can connect Configuration Mana
 > [!IMPORTANT]
 > Cuando establezca una conexión entre Configuration Manager y la Tienda Windows para empresas, deberá proporcionar una carpeta donde se conservará el contenido de la aplicación sincronizado desde la tienda.
 Para asegurarse de que esta carpeta sea segura y que su contenido se pueda implementar en dispositivos, compruebe que se hayan aplicado los permisos siguientes:
--   El equipo en el que instale el rol de sistema de sitio del punto de conexión de servicio (el sitio de nivel superior de la jerarquía) debe tener permisos de lectura y escritura en la carpeta que haya especificado al usar la cuenta **Computer$**.
--   El autor de la aplicación debe tener permisos de lectura en la carpeta que haya especificado.
--   La cuenta **Computer$** de cada equipo que hospede una instancia del proveedor de SMS debe poder usar la carpeta que haya especificado.
+-    El equipo en el que instale el rol de sistema de sitio del punto de conexión de servicio (el sitio de nivel superior de la jerarquía) debe tener permisos de lectura y escritura en la carpeta que haya especificado al usar la cuenta **Computer$**.
+-    El autor de la aplicación debe tener permisos de lectura en la carpeta que haya especificado.
+-    La cuenta **Computer$** de cada equipo que hospede una instancia del proveedor de SMS debe poder usar la carpeta que haya especificado.
 
 
 En Azure Active Directory, registre Configuration Manager como una herramienta de administración de aplicación web o API web. De este modo, obtendrá un identificador de cliente que necesitará más adelante.
@@ -98,6 +98,9 @@ En la Tienda Windows para empresas, configure Configuration Manager como la herr
 5.  Seleccione **Activar** junto a la aplicación que acaba de importar.
 6.  En la página **Administrar > Información de la cuenta**, seleccione **Show Offline-Licensed Apps** (Mostrar aplicaciones con licencia sin conexión) si quiere permitir la adquisición de aplicaciones con licencias sin conexión.
 
+> [!Note]
+> Si utiliza más de una herramienta de administración para implementar aplicaciones de la Tienda Windows para empresas, anteriormente, solo se podía asociar una de estas con la Tienda Windows para empresas. Ahora puede asociar varias herramientas de administración con la tienda, por ejemplo, Intune y Configuration Manager.
+
 Incorpore la cuenta de la tienda a Configuration Manager.
 
 1. Asegúrese de que ha comprado al menos una aplicación en la Tienda Windows para empresas. En el área de trabajo **Administración** de la consola de Configuration Manager, expanda **Cloud Services** y, luego, seleccione **Tienda Windows para empresas**.
@@ -107,10 +110,10 @@ Incorpore la cuenta de la tienda a Configuration Manager.
 
 Cambie los idiomas de aplicación que se mostrarán en el catálogo de aplicaciones para que los descarguen los usuarios.
 
-1.  En el área de trabajo **Administración** de la consola de Configuration Manager, seleccione **Cloud Services** > **Actualizaciones y mantenimiento** > **Tienda Windows para empresas**.
-2.  Seleccione su cuenta de la Tienda Windows para empresas y haga clic en **Propiedades**.
-3.  Seleccione la pestaña **Idioma**.
-4.  Agregue o quite los idiomas que se mostrarán en el catálogo de aplicaciones. Seleccione el idioma del catálogo de aplicaciones predeterminado que estará disponible para los usuarios.
+1.    En el área de trabajo **Administración** de la consola de Configuration Manager, seleccione **Cloud Services** > **Actualizaciones y mantenimiento** > **Tienda Windows para empresas**.
+2.    Seleccione su cuenta de la Tienda Windows para empresas y haga clic en **Propiedades**.
+3.    Seleccione la pestaña **Idioma**.
+4.    Agregue o quite los idiomas que se mostrarán en el catálogo de aplicaciones. Seleccione el idioma del catálogo de aplicaciones predeterminado que estará disponible para los usuarios.
 
 >[!IMPORTANT]
 >En esta versión, si cambia los idiomas que se van a sincronizar, debe reiniciar el servicio SMS Executive en el servidor de sitio para que la configuración de idioma surta efecto.
@@ -118,17 +121,17 @@ Cambie los idiomas de aplicación que se mostrarán en el catálogo de aplicacio
 
 Modifique la clave de secreto de cliente de Azure Active Directory.
 
-1.  En el área de trabajo **Administración** de la consola de Configuration Manager, seleccione **Cloud Services** > **Actualizaciones y mantenimiento** > **Tienda Windows para empresas**.
-2.  Seleccione su cuenta de la Tienda Windows para empresas y haga clic en **Propiedades**.
-3.  En el cuadro de diálogo **Windows Store for Business Account Properties** (Propiedades de la cuenta de la Tienda Windows para empresas), escriba una nueva clave en el campo **Client secret key** (Clave de secreto de cliente) y seleccione **Comprobar**. Una vez comprobada, seleccione **Aplicar** y cierre el cuadro de diálogo.
+1.    En el área de trabajo **Administración** de la consola de Configuration Manager, seleccione **Cloud Services** > **Actualizaciones y mantenimiento** > **Tienda Windows para empresas**.
+2.    Seleccione su cuenta de la Tienda Windows para empresas y haga clic en **Propiedades**.
+3.    En el cuadro de diálogo **Windows Store for Business Account Properties** (Propiedades de la cuenta de la Tienda Windows para empresas), escriba una nueva clave en el campo **Client secret key** (Clave de secreto de cliente) y seleccione **Comprobar**. Una vez comprobada, seleccione **Aplicar** y cierre el cuadro de diálogo.
 
-## <a name="synch-apps-from-the-store-with-configuration-manager"></a>Sincronizar aplicaciones desde la tienda con Configuration Manager
+## <a name="sync-apps-from-the-store-with-configuration-manager"></a>Sincronizar aplicaciones de la tienda con Configuration Manager
 
 La sincronización se produce cada 24 horas, pero puede iniciar una sincronización inmediata mediante el procedimiento siguiente:
 
 1. En el área de trabajo **Administración** de la consola de Configuration Manager, seleccione **Cloud Services** > **Actualizaciones y mantenimiento** > **Tienda Windows para empresas**.
-3.  En la pestaña **Inicio**, en el grupo **Sincronizar**, seleccione **Sincronizar ahora**.
-4.  La aplicación que ha comprado aparecerá en el nodo **License Information for Store Apps** (Información de licencia para las aplicaciones de la Tienda) del área de trabajo **Administración de aplicaciones**.
+3.    En la pestaña **Inicio**, en el grupo **Sincronizar**, seleccione **Sincronizar ahora**.
+4.    La aplicación que ha comprado aparecerá en el nodo **License Information for Store Apps** (Información de licencia para las aplicaciones de la Tienda) del área de trabajo **Administración de aplicaciones**.
 
 
 ## <a name="create-and-deploy-a-configuration-manager-application-from-a-windows-store-for-business-app"></a>Crear e implementar una aplicación de Configuration Manager a partir de una aplicación de la Tienda Windows para empresas
@@ -150,6 +153,6 @@ Para cada aplicación de la tienda que administre, podrá ver información sobre
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 
