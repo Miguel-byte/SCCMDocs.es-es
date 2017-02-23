@@ -2,7 +2,7 @@
 title: "Ejemplo de transiciones de estado de validación de Asset Intelligence | Microsoft Docs"
 description: "Vea ejemplo de transiciones de estado de validación de Asset Intelligence en System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: 6230a6e5-a1f6-459b-84f1-07fbde0e70f0
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53

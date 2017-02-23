@@ -2,7 +2,7 @@
 title: Procedimientos recomendados para las colecciones | Microsoft Docs
 description: Conozca procedimientos recomendados para las colecciones en System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: 7a2abb79-9ae5-4a25-9e18-5dcf528de3bf
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53

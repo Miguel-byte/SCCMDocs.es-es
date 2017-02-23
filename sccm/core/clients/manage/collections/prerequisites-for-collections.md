@@ -2,7 +2,7 @@
 title: Requisitos previos de las recopilaciones | Microsoft Docs
 description: Cumpla los requisitos previos para usar recopilaciones en System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: a53e4cf1-518a-4210-9c16-022c4261d2fe
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
