@@ -16,8 +16,9 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
-ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
+ms.sourcegitcommit: bdd7961d9126dc6f3c1ae1fec1842c862e8a7c6d
+ms.openlocfilehash: 12633a7b9f799ffc74e0ee657e091595ed7eaf67
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>Sistemas operativos compatibles con dispositivos y clientes de System Center Configuration Manager
@@ -34,13 +35,13 @@ ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
 -   No se permite instalar o ejecutar el cliente de Configuration Manager para Linux o UNIX, o el cliente para Mac en equipos con una cuenta que no sea la cuenta raíz. Si lo hace, servicios importantes podrían dejar de funcionar correctamente.  
 
 ##  <a name="windows-computers"></a>Equipos Windows  
- Puede administrar equipos Windows con el cliente de Configuration Manager que se incluye con Configuration Manager. Para obtener más información, vea [Implementar clientes en equipos Windows con System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
+ Puede usar el cliente de Configuration Manager, que se incluye con Configuration Manager, para administrar los siguientes sistemas operativos de Windows. Para obtener más información, vea [Implementar clientes en equipos Windows con System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
 
 **Sistemas operativos compatibles:**  
 
+
 -  **Windows Server 2016**: Standard, Datacenter <sup>1</sup>
   - El sistema operativo se admite a partir de la versión 1606 de Configuration Manager con el paquete acumulativo de revisiones de KB3186654 (o la versión de línea base de 1606 publicada en octubre de 2016).  
-
 
 -   **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>1</sup>    
 
@@ -56,9 +57,8 @@ ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
 
 -   **Windows Server 2008 con SP2** (x86, x64): Standard, Enterprise, Datacenter <sup>1</sup>    
 
--   **Windows 10 Enterprise LTSB** (x86, x64) <sup>3</sup>    
-
--   **Windows 10** (x86, x64): Pro, Enterprise    
+-   **Windows 10**: Pro, Enterprise  
+   Vea [Support for versions of Windows 10](/sccm/core/plan-design/configs/support-for-windows-10) (Compatibilidad con las versiones de Windows 10) para obtener detalles sobre las diferentes versiones de lanzamiento de Windows 10 que admiten las diferentes versiones de Configuration Manager.
 
 -   **Windows 8.1** (x86, x64): Professional, Enterprise    
 
@@ -83,7 +83,6 @@ ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
 
  <sup>2</sup> Para admitir la instalación de inserción de cliente, el equipo que ejecuta esta versión del sistema operativo debe ejecutar el servicio de rol Servidor de archivos para el rol de servidor Servicios de archivos y almacenamiento. Para obtener más información sobre cómo instalar características de Windows en un equipo Server Core, consulte [Instalar roles de servidor y características en un servidor Server Core](http://go.microsoft.com/fwlink/p/?LinkId=299359) en la biblioteca de TechNet de Windows Server 2012.  
 
- <sup>3</sup> El uso de este sistema operativo requiere la versión 1602 o posterior de Configuration Manager.  
 
 ##  <a name="windows-embedded-computers"></a>Equipos de Windows Embedded  
  Puede administrar dispositivos de Windows Embedded mediante la instalación del software cliente de Configuration Manager en el dispositivo.  Para obtener más información, consulte [Planning for client deployment to Windows Embedded devices in System Center Configuration Manager](../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md) (Planeación de la implementación del cliente en dispositivos Windows Embedded en System Center Configuration Manager).  
@@ -349,9 +348,4 @@ Configuration Manager admite la administración limitada de dispositivos que se 
 -   **Exchange Server 2013**  
 
 -   **Exchange Online (Office 365)**: incluye Business Productivity Online Standard Suite  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

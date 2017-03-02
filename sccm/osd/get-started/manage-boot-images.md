@@ -17,8 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
-ms.openlocfilehash: 3b7125e782b60853e750aeb7ba923490e46a76b0
+ms.sourcegitcommit: 4edf7d09d39fa22fb5812aecc88febd763001eba
+ms.openlocfilehash: 369aa062d0f38eedebc0a7c351a7ce67b53d199b
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -29,9 +30,9 @@ ms.openlocfilehash: 3b7125e782b60853e750aeb7ba923490e46a76b0
 Una imagen de arranque de Configuration Manager es una imagen de [Windows PE (WinPE)](https://msdn.microsoft.com/library/windows/hardware/dn938389%28v=vs.85%29.aspx) que se usa durante la implementación de sistema operativo. Las imágenes de arranque se usan para iniciar un equipo en WinPE, que es un sistema operativo mínimo con componentes y servicios limitados que prepara el equipo de destino para la instalación de Windows.  Utilice las siguientes secciones para administrar imágenes de arranque:
 
 ##  <a name="a-namebkmkbootimagedefaulta-default-boot-images"></a><a name="BKMK_BootImageDefault"></a> Imágenes de arranque predeterminadas  
- Configuration Manager proporciona dos imágenes de arranque predeterminadas: una compatible con las plataformas x86 y otra compatible con las plataformas x64. Estas imágenes se almacenan en: \\\\*NombreDeServidor*>\SMS_<*códigoDeSitio*>\osd\bootboot\\<*x64 o i386*.  
+ Configuration Manager proporciona dos imágenes de arranque predeterminadas: una compatible con las plataformas x86 y otra compatible con las plataformas x64. Estas imágenes se almacenan en: \\\\*NombreDeServidor*>\SMS_<*códigoDeSitio*>\osd\boot\\<*x64*> o <*i386*>.  
 
- Cuando se actualiza Configuration Manager a una nueva versión, Configuration Manager podría reemplazar las imágenes de arranque predeterminadas y las imágenes de arranque personalizadas basadas en las imágenes de arranque predeterminadas en esta ubicación con los archivos actualizados. Las opciones que se configuran en las imágenes de arranque predeterminadas en el sitio (por ejemplo, los componentes opcionales) se mantienen cuando se actualizan las imágenes de arranque, incluidos los controladores. Los objetos de controlador de origen deben ser válidos, incluidos los archivos de origen de controlador; de lo contrario, los controladores no se agregarán a las imágenes de arranque actualizadas en el sitio. Tampoco se actualizarán otras imágenes de arranque que no estén basadas en las imágenes de arranque predeterminadas, aunque sí se basen en la misma versión de Windows ADK. Después de que se actualizan las imágenes de arranque, necesitará redistribuirlas a puntos de distribución. Será necesario volver a crear todos los medios que usan las imágenes de arranque. Si no desea que las imágenes de arranque predeterminadas personalizadas se actualicen automáticamente, debe almacenarlas en una ubicación distinta.  
+ Cuando se actualiza Configuration Manager a una nueva versión, Configuration Manager podría reemplazar las imágenes de arranque predeterminadas y las imágenes de arranque personalizadas basadas en las imágenes de arranque predeterminadas en esta ubicación con los archivos actualizados. Las opciones que se configuran en las imágenes de arranque predeterminadas en el sitio (por ejemplo, los componentes opcionales) se mantienen cuando se actualizan las imágenes de arranque, incluidos los controladores. Los objetos de controlador de origen deben ser válidos, incluidos los archivos de origen de controlador; de lo contrario, los controladores no se agregarán a las imágenes de arranque actualizadas en el sitio. Tampoco se actualizarán otras imágenes de arranque que no estén basadas en las imágenes de arranque predeterminadas, aunque sí se basen en la misma versión de Windows ADK. Después de que se actualizan las imágenes de arranque, necesitará redistribuirlas a puntos de distribución. Será necesario volver a crear todos los medios que usan las imágenes de arranque. Si no quiere que las imágenes de arranque predeterminadas o personalizadas se actualicen automáticamente, debe almacenarlas en una ubicación distinta.  
 
  La herramienta de registro de seguimiento de Configuration Manager se agrega a todas las imágenes de arranque que se agregan a la **Biblioteca de software**. Cuando esté en WinPE, puede iniciar la herramienta de registro de seguimiento de Configuration Manager escribiendo **CMTrace** desde un símbolo del sistema.  
 
@@ -248,9 +249,4 @@ Una imagen de arranque de Configuration Manager es una imagen de [Windows PE (Wi
 1.  Compruebe que el archivo de recursos de secuencia de tareas correcto (tsres.dll) figura en la carpeta de idioma correspondiente en el servidor de sitio antes de actualizar la imagen de arranque. Por ejemplo, el archivo de recursos en inglés está en la siguiente ubicación: <*ConfigMgrInstallationFolder*> \OSD\bin\x64\00000409\tsres.dll.  
 
 2.  Como parte de su comando de preinicio, configure la variable de entorno SMSTSLanguageFolder con el identificador de idioma correspondiente. El identificador de idioma no debe especificarse con un formato hexadecimal sino mediante el formato decimal. Por ejemplo, para establecer el identificador para el idioma inglés, se debe especificar el valor decimal 1033 en lugar del valor hexadecimal 00000409 utilizado para el nombre de la carpeta.  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

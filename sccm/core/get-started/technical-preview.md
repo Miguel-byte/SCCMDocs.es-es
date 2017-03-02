@@ -2,7 +2,7 @@
 title: Technical Preview para System Center Configuration Manager | Microsoft Docs
 description: "Obtenga información sobre la versión Technical Preview que le permite probar nuevas funcionalidades y capacidades de System Center Configuration Manager."
 ms.custom: na
-ms.date: 1/20/2017
+ms.date: 2/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 916c39133ec3796b9cff97c3c3bdb49dcbb6d7e7
-ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
+ms.sourcegitcommit: 4b1daa727477b1273cdbee1bc7e3ac8af5911ff0
+ms.openlocfilehash: 4703178c5ce3e23cb9d2e4557466fcec571c2983
+ms.lasthandoff: 02/22/2017
 
 
 ---
@@ -29,7 +30,7 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 
  Puesto que esta es una versión preliminar técnica, los detalles y las funcionalidades están sujetos a cambios.  
 
- Este tema contiene información que afecta a todas las versiones de Technical Preview y enumera todas las nuevas capacidades (o características), junto con la versión de Technical Preview en la que la capacidad aparece por primera vez, como versión 1512 para diciembre de 2015. Los detalles de estas capacidades se proporcionan en otros temas dedicados a cada versión preliminar.  
+ Este tema contiene información que afecta a todas las versiones de Technical Preview y enumera todas las nuevas funciones (o características), junto con la versión de Technical Preview en la que la función aparece por primera vez, como la versión 1701 para enero de 2017. Los detalles de estas capacidades se proporcionan en otros temas dedicados a cada versión preliminar.  
 
  Para obtener más información sobre las novedades en la rama actual de Configuration Manager, consulte [Novedades de System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).
 
@@ -37,7 +38,7 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 
 ##  <a name="a-namebkmkreqsa-requirements-and-limitations-for-the-technical-preview"></a><a name="bkmk_reqs"></a> Requisitos y limitaciones de Technical Preview  
 
-> [!IMPORTANT]  
+> [!IMPORTANT]     
 >  La versión Technical Preview solo tiene licencia para su uso en un entorno de laboratorio.  Es posible que Microsoft no proporcione servicios de soporte técnico y que algunas características no estén disponibles en el software de versión preliminar. Además, es posible que el software de versión preliminar tenga unos estándares de seguridad, privacidad, accesibilidad, disponibilidad y confiabilidad reducidos o diferentes a los del software proporcionado comercialmente.  
 
  Para la mayoría de requisitos previos del producto, use la información que aparece en [Configuraciones admitidas para System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md). Las excepciones siguientes se aplican a las versiones Technical Preview:  
@@ -50,24 +51,22 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 
 -   Solo se admiten las siguientes versiones de SQL Server:  
 
-    -   SQL Server 2012 con la actualización acumulativa 2 o posterior  
+    -   SQL Server 2016 (sin ningún Service Pack, y versiones posteriores)
+    -   SQL Server 2014 (sin ningún Service Pack, y versiones posteriores)
+    -   SQL Server 2012 (con Service Pack 2, o versiones posteriores)
 
-    -   SQL Server 2014  
 
 -   El sitio admite hasta 10 clientes, que deben ejecutar una de las siguientes opciones:  
 
-    -   Windows 7  
+      -   Windows 10  
+      -   Windows 8.1  
+      -   Windows 8  
+      -   Windows 7  
 
-    -   Windows 8  
-
-    -   Windows 8.1  
-
-    -   Windows 10  
 
 -   Solo se admiten los siguientes indicadores de instalación (conmutadores):  
 
     -   **/silent**  
-
     -   **/testdbupgrade**  
 
 -   Cuando proceda, se incluyen limitaciones o requisitos adicionales con los detalles de cada versión específica de Technical Preview  
@@ -81,7 +80,9 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 ##  <a name="a-namebkmkinstalla-install-and-update-the-technical-preview"></a><a name="bkmk_install"></a> Instalar y actualizar la versión Technical Preview  
  System Center Configuration Manager Technical Preview es diferente de la versión actual de System Center Configuration Manager.  
 
- Para usar la versión preliminar técnica, primero debe instalar una **versión de línea base** de la compilación de dicha versión. Después de instalar una versión de línea base, podrá usar las **actualizaciones en consola** para que la instalación cuente con la versión preliminar más reciente.     Normalmente, las nuevas versiones de Technical Preview están disponibles cada mes.  
+ Para usar la versión preliminar técnica, primero debe instalar una **versión de línea base** de la compilación de dicha versión. Después de instalar una versión de línea base, podrá usar las **actualizaciones en consola** para que la instalación cuente con la versión preliminar más reciente.     Normalmente, las nuevas versiones de Technical Preview están disponibles cada mes.
+
+Cada versión preliminar se admite hasta que tres versiones sucesivas están disponibles. Es decir, cuando se presente la versión 1702, la versión 1610 ya no se admitirá, pero las versiones 1611, 1612 y 1701 seguirán siendo compatibles. En cambio, si la última línea base no tuviera compatibilidad (como la versión 1610), todavía se admite para instalar un nuevo sitio de Technical Preview, siempre que actualice después esa instalación a una versión compatible.
 
 > [!TIP]  
 >  Cuando se instala una actualización de versión preliminar técnica, la instalación de versión preliminar se actualiza a la nueva versión preliminar técnica.    Una instalación de versión preliminar técnica nunca dispone de una opción para actualizar a una instalación de rama actual ni recibir actualizaciones de la versión de rama actual.  
@@ -91,13 +92,7 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 
 -   **Technical Preview 1610**: la versión Configuration Manager Technical Preview 1610 está disponible como actualización en consola para Configuration Manager Technical Preview y como nueva versión de linea base que está disponible en el sitio web [TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
--   **Technical Preview 1603** como parte de **System Center Technical Preview 5**: la versión Configuration Manager Technical Preview 1603 está disponible como actualización en consola para Configuration Manager Technical Preview y como nueva versión de linea base incluida con System Center Technical Preview 5.    La versión incluida con System Center Technical Preview 5 es la única que puede utilizarse para una instalación de línea base.  
 
-     Acerca de la versión de línea base de [Configuration Manager Technical Preview de System Center Technical Preview 5](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview):  
-
-    -   La consola de Configuration Manager y el programa de instalación enumeran la versión como System Center Configuration Manager Technical Preview 1603.  
-
-    -   Esta versión de línea base funciona igual que Configuration Manager Technical Preview 1603, incluida la compatibilidad con las actualizaciones en consola.  
 
 
 ##  <a name="a-namebkmktpfeedbacka-providing-feedback"></a><a name="BKMK_TPFeedback"></a> Proporcionar comentarios  
@@ -105,26 +100,7 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 
  También puede hablarnos de cualquier característica nueva que le gustaría ver. Para enviar nuevas ideas y votar sobre las ideas enviadas por otros usuarios, [visite nuestra página de voz del usuario](http://configurationmanager.uservoice.com).  
 
-##  <a name="a-namebdmktpknownissuesa-general-changes-introduced-in-technical-previews"></a><a name="bdmk_tpknownissues"></a> Cambios generales introducidos en Technical Preview  
-
--   **Technical Preview 1603:**  
-
-    -   A partir de Technical Preview 1603, tiene la posibilidad de configurar las implementaciones de actualizaciones de software para que los clientes ejecuten un examen de cumplimiento de las actualizaciones de software inmediatamente después de que un cliente instale las actualizaciones de software y reinicie. Esto permite al cliente comprobar las actualizaciones de software adicionales que entran en vigor después de que el cliente reinicie e instalarlas (para cumplir así los requisitos) durante la misma ventana de mantenimiento.  
-
-         Para configurar esta opción en una implementación, en la página **Experiencia del usuario** del Asistente para implementar actualizaciones de software, seleccione la opción **Si alguna actualización de esta implementación requiere un reinicio del sistema, ejecute el ciclo de evaluación de implementación de actualizaciones tras el reinicio**.  
-
-    -   A partir de Technical Preview 1603, el comportamiento de la variable de secuencia de tareas SMSTSRebootDelay ha cambiado. La variable SMSTSRebootDelay especifica el número de segundos que se debe esperar antes de reiniciar el equipo. Si esta variable no está establecida en 0, el administrador de la secuencia de tareas mostrará un cuadro de diálogo de notificación antes del reinicio.  
-        El valor que configure para esta variable se conservará hasta que se configure uno nuevo. El período de demora de los posteriores reinicios del equipo tendrán el mismo valor. En la versión 1602 y anteriores de Configuration Manager, la variable se restablece al valor predeterminado (30 segundos) cuando el equipo se reinicia.   Para más información, vea [Task sequence built-in variables in System Center Configuration Manager](../../osd/understand/task-sequence-built-in-variables.md).
-
--   **Technical Preview 1602:** a partir de la versión Technical Preview 1602, puede actualizar in situ el sistema operativo de un servidor de sistema de sitio que ejecute de Windows Server 2008 R2 a Windows Server 2012 R2.  Si usa los procedimientos de actualización de Windows Server 2012 R2, no es necesario ejecutar una restauración del servidor de sitio de Configuration Manager después de la actualización.  Para conocer los procedimientos de actualización, consulte [Opciones de actualización para Windows Server 2012 R2](https://technet.microsoft.com/library/dn303416.aspx).  
-
-    > [!WARNING]  
-    >  Antes de actualizar a Windows Server 2012 R2, **debe desinstalar WSUS 3.2** del servidor.  
-    >   
-    >  Para obtener más información acerca de este paso crítico, consulte la sección Funcionalidad nueva y modificada en [Introducción a Windows Server Update Services](https://technet.microsoft.com/library/hh852345.aspx) en la documentación de Windows Server.  
-
--   **Technical Preview 1601:** de forma predeterminada, el punto de conexión de servicio se establece en el modo en línea cuando se instala y no se admite el cambio al modo sin conexión.  
-
+<!--   ##  <a name="bdmk_tpknownissues"></a> General changes introduced in Technical Previews    -->
 
 
 
@@ -212,26 +188,12 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
  |Mejoras en el Centro de software|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_SC1603)|[Versión 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#application-management)|  
  |Mejoras en el control remoto|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RC1603)|[Versión 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#remote-control)|  
  |Personalización del tamaño de bloque de TFTP de RamDisk y el tamaño de la ventana de puntos de distribución habilitados con PXE|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RamDiskTFTP)|[Versión 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#operating-system-deployment)|  
- |Mejoras en la administración de dispositivos móviles|[Tech Preview 1602](capabilities-in-technical-preview-1602.md#BKMK_MDM)|[Versión 1602](/sccm/mdm/deploy-use/manage-ios-activation-lock) |  
- |Mejoras en el Centro de software en la versión 1602|[Tech Preview 1602](capabilities-in-technical-preview-1602.md#BKMK_SC1601)| [Versión 1602](/sccm/core/plan-design/changes/whats-new-in-version-1602#client-management)|  
- |Mejoras en mantenimiento de Windows 10|[Tech Preview 1602](capabilities-in-technical-preview-1602.md#BKMK_Win10Servicing)|[Versión 1602](/sccm/core/plan-design/changes/whats-new-in-version-1602#operating-system-deployment) |  
- |Mejoras en la integración con Microsoft Intune|[Tech Preview 1601](capabilities-in-technical-preview-1601.md#bkmk_hybrid1)|[Versión 1602](/sccm/core/plan-design/changes/whats-new-in-version-1602#conditional-access)|  
- |Estado de conexión de clientes|[Tech Preview 1601](capabilities-in-technical-preview-1601.md#bkmk_clientStatus)|[Versión 1602](/sccm/core/clients/manage/monitor-clients)|
- |Mejoras en la administración de aplicaciones|[Tech Preview 1601](capabilities-in-technical-preview-1601.md#bkmk_appmgmt1601)|[Versión 1602](/sccm/core/plan-design/changes/whats-new-in-version-1602#application-management)|  
- |Mejoras en la configuración de cumplimiento|[Tech Preview 1601](capabilities-in-technical-preview-1601.md#bkmk_compliance1601)|[Versión 1602](/sccm/core/plan-design/changes/whats-new-in-version-1602#compliance-settings)|  
- |Atestación de estado del dispositivo|[Tech Preview 1512](capabilities-in-technical-preview-1512.md#bkmk_devicehealth)|[Versión 1602](/sccm/core/servers/manage/health-attestation)|
- |Supervisión en la consola para los términos y condiciones|[Tech Preview 1512](capabilities-in-technical-preview-1512.md#bkmk_viewterms)|[Versión 1602](/sccm/mdm/deploy-use/terms-and-conditions)|  
- |Mejoras para la configuración de directivas de Endpoint Protection|[Tech Preview 1512](capabilities-in-technical-preview-1512.md#bkmk_EPpolicy)|[Versión 1602](/sccm/protect/deploy-use/endpoint-antimalware-policies)|  
- |Integración con Windows Update for Business en Windows 10|[Tech Preview 1511](capabilities-in-technical-preview-1511.md#BKMK_WUfB)|[Versión 1602](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)|  
- |Administración de la actualización de cliente de Office 365 ProPlus a través de System Center Configuration Manager|[Tech Preview 1511](capabilities-in-technical-preview-1511.md#BKMK_Office365ProPlus)|[Versión 1602](/sccm/sum/deploy-use/manage-office-365-proplus-updates)|  
- |Compatibilidad con SQL Server AlwaysOn para bases de datos de alta disponibilidad|[Tech Preview 1511](capabilities-in-technical-preview-1511.md#BKMK_AlwasyOn)|[Versión 1602](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)|  
- |Servicio de un clúster de servidores|[Tech Preview 1511](capabilities-in-technical-preview-1511.md#BKMK_ClusterServerUpdates)|[Versión 1606](/sccm/sum/deploy-use/service-a-server-group)|  
+
+
+ Cuando todas las características de una versión de Technical Preview estén disponibles en la versión mínima admitida de la Rama actual, los detalles de esa versión preliminar se quitan de esta tabla.
+
+
 ## <a name="see-also"></a>Véase también  
 [Novedades de System Center Configuration Manager](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
  [Introducción a System Center Configuration Manager](../../core/understand/introduction.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
