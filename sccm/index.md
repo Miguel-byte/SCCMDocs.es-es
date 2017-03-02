@@ -1,359 +1,729 @@
 ---
-title: "Documentación de System Center Configuration Manager | Documentos de Microsoft"
-description: "Documentación para System Center Configuration Manager"
-keywords: 
 layout: HubPage
-author: mtillman
-ms.author: mtillman
-manager: angrobe
-ms.date: 11/18/2016
-ms.topic: hubpage
-ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.suite: ems
-ms.assetid: a89ecd55-fe24-4f40-86c4-8a91dd683a1c
-toc_rel: /sccm/toc.json
+hide_bc: true
+title: "Documentación de System Center Configuration Manager"
+description: "Obtenga información sobre cómo usar System Center Configuration Manager."
 translationtype: Human Translation
-ms.sourcegitcommit: a10fb140adfc1109a49760d601b5fca3d93d4b39
-ms.openlocfilehash: 690b516b6be4380b566649adacfafcc8f920373c
+ms.sourcegitcommit: cc2df80d3da39fd8c7810db8ed3515b6c0b9b948
+ms.openlocfilehash: b925c758139d3e4d62d0acd41085b8b4d249b153
+ms.lasthandoff: 02/28/2017
 
 ---
-# <a name="system-center-configuration-manager-documentation"></a>Documentación de System Center Configuration Manager
-
-<article id="main">
-
-    <section id="hero-content">
-      <h1>Documentación de System Center Configuration Manager</h1>
-      <h2>Obtenga información sobre cómo administrar y proteger los equipos corporativos, servidores y dispositivos con la infraestructura local de Configuration Manager.</h2>
-      <h3>¿Cómo se administran los dispositivos móviles con Microsoft Intune? <a href="https://docs.microsoft.com/intune/" target="_blank">Ver la documentación de Intune&rarr;</a></h3>
-    </section>
-
-    <section id="featured" class="container">
-      <h2 class="section-heading"><span class="icon icon-warning"></span> Contenido destacado</h2>
-      <div class="features row">
-        <ul class="column column-half">
-          <li><a href="/sccm/core/understand/introduction">Introducción a Configuration Manager</a></li>
-          <li><a href="/sccm/core/get-started/evaluate-with-lab-environment">Evalúe System Center Configuration Manager mediante la creación de su propio entorno de laboratorio</a></li>
-          <li><a href="/sccm/core/plan-design/changes/whats-new-in-version-1610">Novedades de la versión 1610 de System Center Configuration Manager</a></li>
+<div id="main" class="v2">
+    <div class="container">
+        <h1>Documentación de System Center Configuration Manager</h1>
+        <ul class="pivots">
+            <li>
+                <a href="#tasks">Tareas</a>
+                <ul id="tasks">
+                     <li>
+                        <a data-default="true" href="#all">Todo</a>
+                        <ul id="all" class="cardsW">
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>Infraestructura central</h3>
+                                                <p><a href="/sccm/core/understand/introduction">Introducción a System Center Configuration Manager</a></p>
+                                                <p><a href="/sccm/core/servers/manage/updates">Updates for System Center Configuration Manager (Actualizaciones para System Center Configuration Manager)</a></p>
+                                                <p><a href="/sccm/core/clients/deploy/deploy-clients-to-windows-computers">Implementar clientes en equipos Windows</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>Administración de aplicaciones</h3>
+                                                <p><a href="/sccm/apps/understand/introduction-to-application-management">Introducción a la administración de aplicaciones</a></p>
+                                                <p><a href="/sccm/apps/deploy-use/create-applications">Crear aplicaciones</a></p>
+                                                <p><a href="/sccm/apps/deploy-use/monitor-applications-from-the-console">Supervisar aplicaciones</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>Cumplimiento de dispositivos</h3>
+                                                <p><a href="/sccm/compliance/understand/ensure-device-compliance">Asegurar el cumplimiento de dispositivos</a></p>
+                                                <p><a href="/sccm/compliance/deploy-use/create-configuration-items">Cómo crear elementos de configuración</a></p>
+                                                <p><a href="/sccm/compliance/deploy-use/upgrade-windows-version">Actualizar dispositivos de Windows con la directiva de actualización de edición</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>Administración de dispositivos móviles</h3>
+                                                <p><a href="/sccm/mdm/understand/hybrid-mobile-device-management">Comprender la administración de dispositivos móviles híbrida</a></p>
+                                                <p><a href="/sccm/mdm/deploy-use/setup-hybrid-mdm">Configurar MDM híbrida con Intune</a></p>
+                                                <p><a href="/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management">Elegir entre MDM independiente e híbrida de Intune con Configuration Manager</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>Implementación de sistema operativo</h3>
+                                                <p><a href="/sccm/osd/understand/introduction-to-operating-system-deployment">Introduction to operating system deployment</a> (Introducción a la implementación de sistema operativo)</p>
+                                                <p><a href="/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems">Escenarios para implementar sistemas operativos</a></p>
+                                                <p><a href="/sccm/osd/deploy-use/manage-windows-as-a-service">Administración de Windows como servicio</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>Proteger los datos y la infraestructura</h3>
+                                                <p><a href="/sccm/protect/understand/backup-and-recovery">Opciones de copia de seguridad y recuperación</a></p>
+                                                <p><a href="/sccm/protect/deploy-use/manage-access-to-services">Acceso condicional</a></p>
+                                                <p><a href="/sccm/protect/deploy-use/endpoint-protection">Endpoint Protection</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>Administración de actualizaciones de software</h3>
+                                                <p><a href="/sccm/sum/understand/software-updates-introduction">Introducción a la administración de actualizaciones de software</a></p>
+                                                <p><a href="/sccm/sum/get-started/prepare-for-software-updates-management">Preparar la administración de actualizaciones de software</a></p>
+                                                <p><a href="/sccm/sum/deploy-use/deploy-software-updates">Implementar actualizaciones de software</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>Kit de desarrollo de Configuration Manager</h3>
+                                                <p><a href="/sccm/develop/core/understand/configuration-manager-programming-fundamentals">Aspectos básicos de la programación de Configuration Manager</a></p>
+                                                <p><a href="/sccm/develop/reference/configuration-manager-reference">Referencia de Configuration Manager</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a data-default="true" href="#tasksPanel1">Infraestructura central</a>
+                        <ul id="tasksPanel1" class="cardsC">
+                            <li>
+                                <a href="/sccm/core/understand/introduction">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-core-infrastructure-1.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Introducción a System Center Configuration Manager</h3>
+                                                <p>Conozca los aspectos básicos sobre las funcionalidades de Configuration Manager.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/core/servers/manage/updates">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-core-infrastructure-2.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Actualizaciones para System Center Configuration Manager</h3>
+                                                <p>Comience aquí para mantener Configuration Manager actualizado. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/core/clients/deploy/deploy-clients-to-windows-computers">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-core-infrastructure-3.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Implementar clientes en equipos Windows</h3>
+                                                <p>Obtenga información acerca de cómo utilizar distintos métodos de instalación para implementar el cliente en equipos Windows.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tasksPanel2">Administración de aplicaciones</a>
+                        <ul id="tasksPanel2" class="cardsC">
+                            <li>
+                                <a href="/sccm/apps/understand/introduction-to-application-management">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-app-mgmt-1.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Introducción a la administración de aplicaciones</h3>
+                                                <p>Conozca los aspectos básicos sobre la administración de aplicaciones.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/apps/deploy-use/create-applications">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-app-mgmt-2.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Crear aplicaciones</h3>
+                                                <p>Aprenda todo lo que necesita saber para crear aplicaciones.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/apps/deploy-use/monitor-applications-from-the-console">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-app-mgmt-3.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Supervisar aplicaciones</h3>
+                                                <p>Después de implementar una aplicación, aprenda a supervisar el progreso de la implementación.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tasksPanel3">Cumplimiento de dispositivos</a>
+                        <ul id="tasksPanel3" class="cardsC">
+                            <li>
+                                <a href="/sccm/compliance/understand/ensure-device-compliance">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-device-compliance-1.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Asegurar el cumplimiento de dispositivos</h3>
+                                                <p>Configure los parámetros y evalúe el cumplimiento en los dispositivos que está administrando.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/compliance/deploy-use/create-configuration-items">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-device-compliance-2.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Cómo crear elementos de configuración</h3>
+                                                <p>Todo lo que necesita saber para crear elementos de configuración.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/compliance/deploy-use/upgrade-windows-version">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-device-compliance-3.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Actualizar dispositivos de Windows con la directiva de actualización de edición</h3>
+                                                <p>Actualice fácilmente los dispositivos Windows 10 a una edición más reciente con el archivo de licencia o la clave de producto.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tasksPanel4">Administración de dispositivos móviles</a>
+                        <ul id="tasksPanel4" class="cardsC">
+                            <li>
+                                <a href="/sccm/mdm/understand/hybrid-mobile-device-management">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-mobile-device-mgmt-1.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Comprender la administración de dispositivos móviles híbrida</h3>
+                                                <p>Obtenga información sobre cómo administrar dispositivos iOS, Android y Windows con Configuration Manager.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/mdm/deploy-use/setup-hybrid-mdm">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-mobile-device-mgmt-2.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Configurar MDM híbrida con Intune</h3>
+                                                <p>Habilite escenarios BYOD y cumpla los requisitos previos para la mayoría de estrategias de administración de dispositivos propiedad de la empresa.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-mobile-device-mgmt-3.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Elegir entre Intune independiente y MDM híbrida con Configuration Manager</h3>
+                                                <p>¿MDM independiente o híbrida de Intune? ¿Por qué elegir una u otra opción? </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tasksPanel5">Implementación de sistema operativo</a>
+                        <ul id="tasksPanel5" class="cardsC">
+                            <li>
+                                <a href="/sccm/osd/understand/introduction-to-operating-system-deployment">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-operating-sys-deploy-1.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Introducción a la implementación de sistema operativo</h3>
+                                                <p>Obtenga información sobre la implementación de sistemas operativos de empresa con Configuration Manager.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-operating-sys-deploy-2.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Escenarios para implementar sistemas operativos</h3>
+                                                <p>Implemente sistemas operativos mediante uno de los muchos escenarios de implementación de sistema operativo.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/osd/deploy-use/manage-windows-as-a-service">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-operating-sys-deploy-3.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Administración de Windows como servicio</h3>
+                                                <p>Cree planes de mantenimiento para formar anillos de implementación y garantizar que los equipos de la rama actual de Windows 10 estén actualizados cuando haya nuevas compilaciones disponibles.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tasksPanel6">Proteger los datos y la infraestructura</a>
+                        <ul id="tasksPanel6" class="cardsC">
+                            <li>
+                                <a href="/sccm/protect/understand/backup-and-recovery">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-protect-data-infrastruct-1.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Opciones de copia de seguridad y recuperación</h3>
+                                                <p>Evite la pérdida de datos con un plan de copia de seguridad y recuperación. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/protect/deploy-use/manage-access-to-services">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-protect-data-infrastruct-2.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Acceso condicional</h3>
+                                                <p>Ayude a proteger el correo electrónico, Office 365 y otros servicios mediante el acceso condicional.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/protect/deploy-use/endpoint-protection">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-protect-data-infrastruct-3.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Endpoint Protection</h3>
+                                                <p>Administre Windows Defender, Endpoint Protection y Firewall de Windows para proteger los equipos cliente.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tasksPanel7">Administración de actualizaciones de software</a>
+                        <ul id="tasksPanel7" class="cardsC">
+                            <li>
+                                <a href="/sccm/sum/understand/software-updates-introduction">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-software-update-mgmt-1.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Introducción a la administración de actualizaciones de software</h3>
+                                                <p>Administre las actualizaciones de software con Configuration Manager.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/sum/get-started/prepare-for-software-updates-management">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-software-update-mgmt-2.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Preparar la administración de actualizaciones de software</h3>
+                                                <p>Prepare la infraestructura de actualizaciones del software, incluidos los puntos de actualización de software y la sincronización de actualizaciones.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/sum/deploy-use/deploy-software-updates">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-software-update-mgmt-3.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Implementar actualizaciones de software</h3>
+                                                <p>Implemente las actualizaciones de software en la infraestructura que ha creado.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#sdkstools">SDK y herramientas</a>
+                <ul id="sdkstools">
+                    <li>
+                        <a href="#sdkstools-all">Todo</a>
+                        <ul id="sdkstools-all" class="cardsC">
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-tools-1.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="/sccm/develop/core/misc/system-center-configuration-manager-sdk">SDK de System Center Configuration Manager</a></h3>
+                                                <p>Automatice Configuration Manager a través de scripts y para los desarrolladores mediante la incorporación de características y extensiones.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-tools-2.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="/sccm/develop/core/understand/configuration-manager-programming-fundamentals">Aspectos básicos de la programación de Configuration Manager</a></h3>
+                                                <p>Obtenga información sobre las técnicas de programación que le ayudan a programar Configuration Manager correctamente. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sccm/sccm-tools-4.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="/powershell/sccm/configurationmanager/">Introducción a los cmdlets de System Center Configuration Manager</a></h3>
+                                                <p>Administre una jerarquía de Configuration Manager mediante scripts de Windows PowerShell, cmdlets y el proveedor de unidades.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#social">Social</a>
+                <ul id="social">
+                    <li>
+                        <a href="#social-all">Todo</a>
+                        <ul id="social-all" class="cardsF">
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="/media/common/i_blog.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="https://blogs.technet.microsoft.com/enterprisemobility/">Blog de Microsoft Enterprise Mobility + Security</a></h3>
+                                                <p>Las últimas noticias acerca de los servicios de Microsoft Enterprise Mobility + Security.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="/media/hubs/sccm/sccm-social-2.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="https://twitter.com/hashtag/configmgr">#ConfigMgr en Twitter</a></h3>
+                                                <p>Lea los tweets más recientes acerca de System Center Configuration Manager. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="/media/common/i_support.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="https://social.technet.microsoft.com/Forums/en-US/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc">Foros de TechNet de Configuration Manager</a></h3>
+                                                <p>Consulte las preguntas y respuestas más recientes en los foros de TechNet.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="/media/common/i_feedback.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="https://configurationmanager.uservoice.com/forums/300492-ideas">Proporcionar comentarios sobre Configuration Manager</a></h3>
+                                                <p>Díganos qué características desea ver.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="/media/common/i_feedback.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation">Proporcionar comentarios sobre la documentación</a></h3>
+                                                <p>Comparta sus ideas sobre cómo mejorar el contenido técnico.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
         </ul>
-        <ul class="column column-half">
-          <li><a href="/sccm/core/plan-design/changes/features-and-capabilities">Características y funcionalidades de System Center Configuration Manager</a></li>
-          <li><a href="/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management">Elegir entre Microsoft Intune independiente y la administración de dispositivos móviles híbrida con System Center Configuration Manager</a></li>
-          <li><a href="/sccm/core/plan-design/configs/supported-configurations">Configuraciones admitidas para System Center Configuration Manager</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <div id="journeys">
-      <section class="container">
-        <!-- <h2 class="section-heading"><span class="icon icon-inheritance"></span> Stages</h2> -->
-        <ul class="journeys-list">
-
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/sccm/core/understand/introduction">
-                <div class="title column-third">
-                  <span class="step-number">1</span>
-                  <p>Infraestructura central</p>
-                </div>
-                <p class="description column-two-thirds">Obtenga información sobre las funcionalidades de Configuration Manager y cómo planear, implementar y administrar los servidores y clientes que componen la infraestructura central del sistema.</p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/sccm/core/understand/introduction">
-                    <h3>Introducción a System Center Configuration Manager</h3>
-                    <p>Conozca los aspectos básicos sobre las funcionalidades y características de Configuration Manager.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/sccm/core/servers/manage/updates">
-                    <h3>Actualizaciones para System Center Configuration Manager </h3>
-                    <p>Comience aquí para obtener información sobre cómo mantener Configuration Manager actualizado, incluido qué es una versión de línea de base o una versión de actualización de Configuration Manager, y cómo el mantenimiento y las actualizaciones de la consola encuentran actualizaciones nuevas para su infraestructura.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/sccm/core/clients/deploy/deploy-clients-to-windows-computers">
-                    <h3>Implementar clientes en equipos Windows</h3>
-                    <p>Obtenga información sobre cómo usar distintos métodos de instalación para implementar el cliente de Configuration Manager en equipos de Windows de su organización.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/sccm/apps/understand/introduction-to-application-management">
-                <div class="title column-third">
-                  <span class="step-number">2</span>
-                  <p>Administración de aplicaciones</p>
-                </div>
-                <p class="description column-two-thirds">Obtenga información sobre cómo administrar aplicaciones a través de su ciclo de vida.</p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/sccm/apps/understand/introduction-to-application-management">
-                    <h3>Introducción a la administración de aplicaciones</h3>
-                    <p>Conozca los aspectos básicos sobre la administración de aplicaciones con Configuration Manager.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/sccm/apps/deploy-use/create-applications">
-                    <h3>Crear aplicaciones</h3>
-                    <p>Obtenga información sobre todo lo que necesita saber para crear aplicaciones en Configuration Manager.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/sccm/apps/deploy-use/monitor-applications-from-the-console">
-                    <h3>Supervisar aplicaciones</h3>
-                    <p>Después de haber implementado una aplicación, lea esta sección para obtener información sobre cómo supervisar el progreso de la implementación. También puede supervisar el uso de algunas de las aplicaciones que administra.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/sccm/compliance/understand/ensure-device-compliance">
-                <div class="title column-third">
-                  <span class="step-number">3</span>
-                  <p>Cumplimiento de dispositivos</p>
-                </div>
-                <p class="description column-two-thirds">Obtenga información sobre cómo configurar las opciones y características de los dispositivos que administra.</p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/sccm/compliance/understand/ensure-device-compliance">
-                    <h3>Asegurar el cumplimiento de dispositivos</h3>
-                    <p>Conozca los aspectos básicos sobre las opciones de configuración y la evaluación del cumplimiento en los dispositivos que administra.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/sccm/compliance/deploy-use/create-configuration-items">
-                    <h3>Cómo crear elementos de configuración</h3>
-                    <p>Todo lo que necesita saber para crear elementos de configuración que garantizan el cumplimiento del dispositivo en una amplia gama de plataformas.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/sccm/compliance/deploy-use/upgrade-windows-version">
-                    <h3>Actualizar dispositivos de Windows con la directiva de actualización de edición</h3>
-                    <p>Actualice fácilmente los dispositivos Windows 10 a una edición más reciente con el archivo de licencia o la clave de producto.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-          </li>
-
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/sccm/mdm/understand/hybrid-mobile-device-management">
-                <div class="title column-third">
-                  <span class="step-number">4</span>
-                  <p>Administración de dispositivos móviles (MDM)</p>
-                </div>
-                <p class="description column-two-thirds">Obtenga información sobre cómo administrar dispositivos móviles con Intune o con la infraestructura local de Configuration Manager.</p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/sccm/mdm/understand/hybrid-mobile-device-management">
-                    <h3>Comprender la administración de dispositivos móviles híbrida (MDM)</h3>
-                    <p>Obtenga información sobre cómo administrar dispositivos iOS, Windows y Android con Configuration Manager. Mediante el servicio de Microsoft Intune, los usuarios puede inscribir sus dispositivos personales o puede administrar los dispositivos propiedad de la empresa en una variedad de formas.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/sccm/mdm/deploy-use/setup-hybrid-mdm">
-                    <h3>Configurar MDM híbrida con Intune</h3>
-                    <p>Siga estos pasos para habilitar escenarios de "Bring Your Own Device" (BYOD) y para cumplir los requisitos previos de la mayoría de las estrategias de administración de dispositivos propiedad de la empresa.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management">
-                    <h3>Elegir entre Intune independiente y MDM híbrida con Configuration Manager</h3>
-                    <p>Obtenga información sobre las diferencias entre la administración de dispositivos con Intune independiente o MDM híbrida, y por qué elegir una u otra.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/sccm/osd/understand/introduction-to-operating-system-deployment">
-                <div class="title column-third">
-                  <span class="step-number">5</span>
-                  <p>Implementación de sistema operativo (OSD)</p>
-                </div>
-                <p class="description column-two-thirds">Obtenga información sobre cómo implementar los sistemas operativos de empresa y automatizar las tareas.</p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/sccm/osd/understand/introduction-to-operating-system-deployment">
-                    <h3>Introducción a la implementación de sistema operativo</h3>
-                    <p>Conozca los aspectos básicos sobre la implementación de sistemas operativos de empresa con Configuration Manager.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems">
-                    <h3>Escenarios para implementar sistemas operativos</h3>
-                    <p>Lea esta sección para obtener información sobre cómo implementar sistemas operativos mediante uno de los muchos escenarios de implementación de sistema operativo.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/sccm/osd/deploy-use/manage-windows-as-a-service">
-                    <h3>Administración de Windows como servicio</h3>
-                    <p>Obtenga información sobre cómo crear planes de mantenimiento para formar anillos de implementación y garantizar que los equipos de la rama actual de Windows 10 se mantengan actualizados cuando se presenten nuevas compilaciones.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/sccm/protect/understand/protect-data-and-site-infrastructure">
-                <div class="title column-third">
-                  <span class="step-number">6</span>
-                  <p>Proteger los datos y la infraestructura</p>
-                </div>
-                <p class="description column-two-thirds">Obtenga información sobre cómo proteger la infraestructura de Configuration Manager y los datos con acceso condicional, System Center Endpoint Protection y otras funcionalidades.</p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/sccm/protect/understand/backup-and-recovery">
-                    <h3>Opciones de copia de seguridad y recuperación</h3>
-                    <p>Un plan de copia de seguridad y recuperación puede ayudarle a evitar la pérdida de datos. Obtenga información sobre los enfoques de copia de seguridad y recuperación de sitios y jerarquías.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/sccm/protect/deploy-use/manage-access-to-services">
-                    <h3>Acceso condicional</h3>
-                    <p>Use el acceso condicional para ayudarle a proteger el correo electrónico, Office 365 y otros servicios.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/sccm/protect/deploy-use/endpoint-protection">
-                    <h3>Endpoint Protection</h3>
-                    <p>Obtenga información sobre cómo administrar Windows Defender, Endpoint Protection y Firewall de Windows para ayudar a proteger los equipos cliente. Protección contra amenazas avanzada de Windows Defender también puede administrarse con Configuration Manager.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/sccm/sum/understand/software-updates-introduction">
-                <div class="title column-third">
-                  <span class="step-number">7</span>
-                  <p>Administración de actualizaciones de software (SUM)</p>
-                </div>
-                <p class="description column-two-thirds">Obtenga información sobre cómo administrar las actualizaciones de software.</p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/sccm/sum/understand/software-updates-introduction">
-                    <h3>Introducción a la administración de actualizaciones de software</h3>
-                    <p>Conozca los aspectos básicos sobre la administración de las actualizaciones de software con Configuration Manager.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/sccm/sum/get-started/prepare-for-software-updates-management">
-                    <h3>Preparar la administración de actualizaciones de software</h3>
-                    <p>Lea esta sección para obtener información sobre cómo preparar la infraestructura de actualizaciones de software. Esto incluye la instalación de puntos de actualización de software, la sincronización de actualizaciones de software y la administración de la configuración de actualizaciones de software.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/sccm/sum/deploy-use/deploy-software-updates">
-                    <h3>Implementar actualizaciones de software</h3>
-                    <p>Después de que la infraestructura de actualizaciones de software se encuentre en su lugar, lea esta sección para obtener información sobre cómo implementar actualizaciones de software.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-
-
-<li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/sccm/develop/core/misc/system-center-configuration-manager-sdk">
-                <div class="title column-third">
-                  <span class="step-number">8</span>
-                  <p>Automatización y desarrollo de Configuration Manager</p>
-                </div>
-                <p class="description column-two-thirds">Obtenga información sobre cómo automatizar y extender Configuration Manager.</p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/sccm/develop/core/understand/configuration-manager-programming-fundamentals">
-                    <h3>Fundamentos de programación de Configuration Manager</h3>
-                    <p>Obtenga información sobre las técnicas de programación fundamentales que le ayudarán a programar Configuration Manager correctamente.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/sccm/develop/reference/configuration-manager-reference">
-                    <h3>Referencia de Configuration Manager</h3>
-                    <p>Proporciona información detallada sobre la biblioteca administrada Proveedor de SMS, el esquema de clase de Configuration Manager, el lenguaje de consulta de WMI extendido (WQL), los valores y calificadores con nombre y las bibliotecas de consola de Configuration Manager.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="https://docs.microsoft.com/powershell/sccm/configurationmanager/vlatest/configurationmanager">
-                    <h3>Cmdlets de Configuration Manager</h3>
-                    <p>Proporciona los archivos de ayuda en línea de los cmdlets de Configuration Manager, que incluyen información detallada sobre cada cmdlet y ejemplos que muestran cómo usarlo.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-
-
-      </section>
     </div>
-    <div class="section-border">
-      <section class="resources container">
-      <h2 class="section-heading"><span class="icon icon-note"></span>Recursos adicionales de Configuration Manager</h2>
-      <div class="resource-list row">
-          <ul class="column-half">
-          <li><a href="https://configurationmanager.uservoice.com/" target="_blank">Proporcionar comentarios sobre Configuration Manager</a></li>
-          <li><a href="https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation" target="_blank">Proporcionar comentarios sobre la documentación</a></li>
-          </ul>
-          <ul class="column-half">
-          <li><a href="https://technet.microsoft.com/library/gg682129.aspx" target="_blank">Documentación de System Center 2012 Configuration Manager</a></li>
-          <li><a href="https://social.technet.microsoft.com/Forums/en-US/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc" target="_blank">Foros de TechNet de Configuration Manager</a></li>
-          <li><a href="https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager" target="_blank">Página de producto de Configuration Manager</a></li>
-          </ul>
-      </div>
-      </section>
-    </div>
-    <aside class="alert alert-social">
-      <p>Mantenerse actualizado con Configuration Manager</p>
-      <ol class="action-list">
-        <li><a href="https://blogs.technet.microsoft.com/enterprisemobility/" target="_blank" class="button-bordered button-translucent">Blog del equipo de Enterprise Mobility and Security</a></li>
-        <li><a href="https://twitter.com/hashtag/configmgr" target="_blank" class="button-bordered button-translucent">#ConfigMgr en Twitter</a></li>
-      </ol>
-    </aside>
-</article>
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+</div>
