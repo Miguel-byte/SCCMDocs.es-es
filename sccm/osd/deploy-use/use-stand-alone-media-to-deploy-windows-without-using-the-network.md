@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 30ae794381c6894e11b21a8167d0af60463c5279
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -79,9 +80,4 @@ Puede usar medios independientes en los siguientes escenarios de implementación
 
 ## <a name="install-the-operating-system-from-stand-alone-media"></a>Instalar el sistema operativo desde medios independientes  
  Inserte el medio independiente en una unidad de arranque del equipo y luego vuelva a encenderlo para instalar el sistema operativo.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
