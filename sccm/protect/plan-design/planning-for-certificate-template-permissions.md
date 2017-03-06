@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
 ms.openlocfilehash: 3c3725678561c32fce316ed1209ac8fe73a0eed1
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -62,9 +63,4 @@ La información siguiente le ayuda a planear la configuración de permisos de pl
     -   En el servidor del sistema de sitios que hospeda el punto de registro de certificado, cree la siguiente clave DWORD del Registro con un valor de 1: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SCCM\CRP\SkipTemplateCheckOnlyIfAccountAccessDenied  
 
 3.  En la CA emisora, en la ficha **Seguridad** en las propiedades de la plantilla de certificado, agregue uno o varios grupos de seguridad para conceder permisos de lectura e inscripción a las cuentas de usuario o dispositivo.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

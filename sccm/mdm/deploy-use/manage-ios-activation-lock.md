@@ -2,7 +2,7 @@
 title: "Administración del bloqueo de activación de iOS | Microsoft Docs"
 description: "Administre el bloqueo de activación de iOS con System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/15/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: a25c6b409ea6501ead762fabb8cc11c62c84885d
 ms.openlocfilehash: cf98bbb9dee6142e8b085dbffcadb3ed712adcb9
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -104,9 +105,4 @@ Solo se puede omitir el bloqueo de activación o recuperar el código de omisió
     - Los datos de detección del dispositivo, que aparecen en el cuadro de diálogo de propiedades del dispositivo.
     - La columna **Activation Lock Bypass State** (Estado de omisión de bloqueo de activación) de la vista **Dispositivos** (esta columna está oculta de forma predeterminada).
     - La sección **Remote Device Actions Information** (Información de acciones de dispositivo remoto) de la pestaña **Resumen** del panel de detalles (cuando hay un dispositivo seleccionado).
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

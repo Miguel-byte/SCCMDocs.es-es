@@ -2,7 +2,7 @@
 title: "Inscribir dispositivos iOS con el programa de inscripción de dispositivos (DEP) en Configuration Manager | Microsoft Docs"
 description: "Habilite la inscripción del Programa de inscripción de dispositivos (DEP) iOS para implementaciones híbridas en Configuration Manager con Intune."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
 ms.openlocfilehash: 4222ca27e19ade46d53f8cd4598643ddd4fd5c8f
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>Inscripción del Programa de inscripción de dispositivos (DEP) iOS para implementaciones híbridas con Configuration Manager
@@ -121,9 +122,4 @@ Las empresas pueden comprar dispositivos iOS mediante el Programa de inscripció
 
 4.  **Distribuir los dispositivos a los usuarios**   
     Ahora puede proporcionar los dispositivos corporativos a los usuarios. Los dispositivos iOS quedan inscritos para su administración mediante Intune al activarlos.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

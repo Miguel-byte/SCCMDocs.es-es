@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 caps.latest.revision: 23
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: 85afe010e734d20ae1f1479b3edd166c54cc8fd2
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -109,9 +110,4 @@ ms.openlocfilehash: 85afe010e734d20ae1f1479b3edd166c54cc8fd2
 |Comprobar que el estado del proveedor WMI de cliente es correcto|Reiniciar el servicio Instrumental de administración de Windows|La corrección de esta comprobación de cliente solo se lleva a cabo en equipos que ejecutan Windows Server 2003, Windows XP (64 bits) o versiones anteriores.|  
 |Comprobar que el servicio de proxy de reactivación (proxy de reactivación de Configuration Manager) se está ejecutando|Iniciar el servicio de proxy de reactivación de Configuration Manager|Esta comprobación de cliente solo se realiza si la opción **Administración de energía**: **Habilitar proxy de reactivación** está establecida en **Sí** en los sistemas operativos de cliente admitidos.|  
 |Comprobar que el tipo de inicio del servicio de proxy de reactivación (proxy de reactivación de Configuration Manager) es automático|Restablecer el tipo de inicio del servicio de proxy de reactivación de Configuration Manager como automático|Esta comprobación de cliente solo se realiza si la opción **Administración de energía**: **Habilitar proxy de reactivación** está establecida en **Sí** en los sistemas operativos de cliente admitidos.|  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

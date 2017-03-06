@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 caps.latest.revision: 9
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 0e5f65552045e9cef06f5286b0087153751c79b0
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -237,9 +238,4 @@ Cada paquete de instalación de cliente contiene todos los archivos necesarios p
  El cliente de Configuration Manager para Linux y UNIX se pone en contacto con este punto de administración en el momento de la instalación del cliente. Si el cliente no puede ponerse en contacto con el punto de administración, el software cliente continúa intentándolo hasta que lo logra.  
 
  Para obtener más información sobre cómo los clientes buscan puntos de administración, consulte [Locating Management Points](../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_LocatingMPs) (Búsqueda de puntos de administración).
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

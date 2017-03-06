@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 20a573b3-53cb-4ed5-bae1-7542f533ed20
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
 ms.openlocfilehash: 0ca218e4276699dd9029308e1d8ac524563da7c5
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -63,9 +64,4 @@ La implementación de clientes en el sitio lleva tiempo y algunas instalaciones 
  Para supervisar el estado de los clientes implementados, consulte [Supervisar clientes en System Center Configuration Manager](../../../core/clients/manage/monitor-clients.md).  
 
  Puede usar informes de Configuration Manager para tener más información sobre el estado de los clientes en el sitio. Para más información sobre cómo ejecutar informes, consulte [Generación de informes en System Center Configuration Manager](../../../core/servers/manage/reporting.md).  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

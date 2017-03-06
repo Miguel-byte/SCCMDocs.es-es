@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0317fd02-3721-4634-b18b-7c976a4e92bf
 caps.latest.revision: 9
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
 ms.openlocfilehash: 08fb30da2060728142648f13846be737f98f2276
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -46,9 +47,4 @@ Los perfiles de certificado de System Center Configuration Manager (también den
 |Módulo de directivas de System Center Configuration Manager que se instala en el servidor que ejecuta el servicio del rol Servicio de inscripción de dispositivos de red para Servicios de certificados de Active Directory|Para implementar perfiles de certificado, debe instalar el módulo de directivas de System Center Configuration Manager. Encontrará este módulo de directivas en el medio de instalación de System Center Configuration Manager.|  
 |Datos de detección|System Center Configuration Manager suministra los valores de nombre alternativo del sujeto y de sujeto de certificado, que se recuperan de la información que se recopila en la detección:<br /><br /> Para certificados de usuarios: detección de usuarios de Active Directory.<br /><br /> Para certificados de equipos: detección de sistemas de Active Directory y detección de redes|  
 |Permisos de seguridad para administrar perfiles de certificado|Debe tener los siguientes permisos de seguridad para administrar la configuración de acceso de recursos de empresa, como perfiles de certificado, perfiles de Wi-Fi y perfiles de VPN:<br /><br /> Para ver y administrar alertas e informes de perfiles de certificado: **Crear**, **Eliminar**, **Modificar**, **Modificar informe**, **Leer**y **Ejecutar informe** para el objeto **Alertas** .<br /><br /> Para crear y administrar perfiles de certificado: **Directiva de autor**, **Modificar informe**, **Leer** y **Ejecutar informe** para el objeto **Perfil de certificado** .<br /><br /> Para administrar implementaciones de perfiles de Wi-Fi, certificados y VPN: **Implementar directivas de configuración**, **Modificar alerta de estado de cliente**, **Leer**y **Leer recurso** para el objeto **Recopilación** .<br /><br /> Para administrar todas las directivas de configuración: **Crear**, **Eliminar**, **Modificar**, **Leer** y **Establecer ámbito de seguridad** para el objeto **Directiva de configuración** .<br /><br /> Para ejecutar consultas relacionadas con los perfiles de certificado: permiso **Leer** para el objeto **Consulta** .<br /><br /> Para consultar información de los perfiles de certificado en la consola de System Center Configuration Manager: permiso **Leer** para el objeto **Sitio**.<br /><br /> Para ver los mensajes de estado de los perfiles de certificado: permiso **Leer** para el objeto **Mensajes de estado** .<br /><br /> Para crear y administrar el perfil de certificado de la entidad de certificación de confianza: **Directiva de autor**, **Modificar informe**, **Leer** y **Ejecutar informe** para el objeto **Perfil de certificado de CA de confianza** .<br /><br /> Para crear y administrar perfiles de VPN: **Directiva de autor**, **Modificar informe**, **Leer** y **Ejecutar informe** para el objeto **Perfil de VPN** .<br /><br /> Para crear y administrar perfiles de Wi-Fi: **Directiva de autor**, **Modificar informe**, **Leer** y **Ejecutar informe** para el objeto **Perfil de Wi-Fi** .<br /><br /> El rol de seguridad **Administrador de acceso de recursos de la compañía** incluye estos permisos necesarios para administrar los perfiles de certificado en System Center Configuration Manager. Para obtener más información, consulte la sección **Configurar la administración basada en roles** del tema [Configurar la seguridad en System Center Configuration Manager](../../core/plan-design/security/configure-security.md).|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

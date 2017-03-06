@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 caps.latest.revision: 16
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: cbcffea0fe2b4c8a05d3a835ff1193b528e55762
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -235,9 +236,4 @@ La implementación de clientes de Configuration Manager en su entorno tiene las 
 -   Entre el punto de proxy de inscripción y el punto de inscripción: HTTPS (de manera predeterminada, TCP 443)  
 
  Si utiliza un servidor proxy web, debe configurarse para el protocolo de túnel SSL. El protocolo de puente SSL no es compatible con dispositivos móviles.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

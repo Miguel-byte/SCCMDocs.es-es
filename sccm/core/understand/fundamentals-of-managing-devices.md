@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bca3db9-115a-451d-8c93-f073ceefe0c7
 caps.latest.revision: 6
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: a71e37060937f40bcb1bdb1c6165b7799fc72675
 ms.openlocfilehash: a9847e67ab1935fb66824945637ff683c006bdbe
+ms.lasthandoff: 12/29/2016
 
 
 ---
@@ -99,9 +100,4 @@ En el diagrama siguiente se muestra un ejemplo de cómo se crea y se aplica una 
  A través de un vínculo en el **Centro de software**, los usuarios pueden conectarse al **catálogo de aplicaciones**, donde pueden buscar, instalar y solicitar software. El **catálogo de aplicaciones** también se usa para configurar las preferencias, borrar dispositivos móviles y, si se ha establecido, especificar un dispositivo primario para la afinidad entre usuario y dispositivo.   
 
  Los usuarios también pueden tener acceso al **catálogo de aplicaciones** a través de una sesión de explorador de intranet o Internet.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

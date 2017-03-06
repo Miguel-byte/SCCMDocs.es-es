@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 56e0a1923305c5134386623b1e306b8ebd013d53
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="certificate-infrastructure"></a>Infraestructura de certificados
@@ -191,9 +192,4 @@ ms.openlocfilehash: 56e0a1923305c5134386623b1e306b8ebd013d53
  Ahora que ha completado los pasos de configuración para instalar el Servicio de inscripción de dispositivos de red y las dependencias, el punto de registro de certificados y el módulo de directivas de System Center Configuration Manager, ya está listo para implementar certificados para usuarios y dispositivos mediante la creación e implementación de perfiles de certificado. Para más información sobre cómo crear perfiles de certificado, vea [Creación de perfiles de certificado en Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).  
 
  Si quiere desinstalar el módulo de directivas de System Center Configuration Manager, use **Programas y características** en el Panel de control.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

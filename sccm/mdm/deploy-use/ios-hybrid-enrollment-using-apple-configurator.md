@@ -2,7 +2,7 @@
 title: Inscribir dispositivos iOS con Apple Configurator en Configuration Manager | Microsoft Docs
 descriptions: Pre-enroll iOS devices by using Apple Configurator with Configuration Manager.
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
 ms.openlocfilehash: 6c6e9edbc7b2fca3d1be4feabb238efab80465fa
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -136,9 +137,4 @@ Repita estos pasos en todos los dispositivos que quiera preparar para la inscrip
 ## <a name="step-5-distribute-devices"></a>Paso 5: Distribución de los dispositivos
 
 Los dispositivos ya están listos para la inscripción corporativa. Apague los dispositivos y distribúyalos a los usuarios. Cuando el dispositivo se encienda, se iniciará el Asistente de configuración y se solicitará al usuario su cuenta profesional o educativa para comenzar la inscripción.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

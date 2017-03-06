@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
 ms.openlocfilehash: 250c9312b932670c408554f3968ae43ae4f3dbaa
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -79,9 +80,4 @@ Puede probar una nueva versión de cliente de Configuration Manager en una recop
 2.  Revise las versiones de cliente de preproducción y de producción, asegúrese de que está especificada la recopilación de preproducción correcta y, luego, haga clic en **Promover** y en **Sí**.  
 
 3.  Después de cerrar el cuadro de diálogo, la versión del cliente actualizado reemplazará a la versión del cliente que se usa en la jerarquía. A continuación, puede actualizar los clientes de todo el sitio. Para obtener más información, consulte [Actualizar clientes de equipos Windows con System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

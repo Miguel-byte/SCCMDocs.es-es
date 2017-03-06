@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 110b65b3-2202-466f-bb5d-e5ee282506fc
 caps.latest.revision: 5
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
 ms.openlocfilehash: dbdc74cc2f94553745eb50aeadf6d33a54064c6b
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -36,9 +37,4 @@ System Center Configuration Manager (también conocido como ConfigMgr o SCCM) pr
 -   [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md) (Administración de clientes en System Center Configuration Manager)  
 
 -   [How to manage clients for Linux and UNIX servers in System Center Configuration Manager](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md) (Supervisión de clientes para servidores de Linux y UNIX en System Center Configuration Manager)  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

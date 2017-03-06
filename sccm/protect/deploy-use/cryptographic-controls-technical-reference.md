@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c63dcc5-a1bd-4037-959a-2e6ba0fd1b2c
 caps.latest.revision: 6
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 0f76ed3dd74a80d9e22cfa743e5aa484f6cd7d97
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -281,9 +282,4 @@ System Center Configuration Manager usa la firma y el cifrado para ayudar a prot
 
 ##  <a name="about-ssl-vulnerabilities"></a>Acerca de las vulnerabilidades SSL  
  Se recomienda deshabilitar SSL 3.0, habilitar TLS 1.1 y 1.2 y reordenar los conjuntos de cifrado relacionados con TLS para mejorar la seguridad de los servidores de Configuration Manager. Puede obtener información sobre cómo realizar estas acciones en [este artículo de Knowledge Base](https://support.microsoft.com/en-us/kb/245030/). Esta acción no afectará a la funcionalidad de Configuration Manager.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

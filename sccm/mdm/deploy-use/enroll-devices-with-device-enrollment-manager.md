@@ -2,7 +2,7 @@
 title: "Inscribir dispositivos con el administrador de inscripción de dispositivos en Configuration Manager | Microsoft Docs"
 description: "Inscriba dispositivos de la empresa con la cuenta del administrador de inscripción de dispositivos con System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
 ms.openlocfilehash: b356d2351b8a28bdca78176fdf0ff3c913a36bd3
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -89,9 +90,4 @@ Un restaurante quiere tabletas de punto de venta para los camareros y monitores 
 -   Las credenciales de la cuenta del administrador de inscripción de dispositivos eliminado todavía no pueden borrar ni retirar dispositivos  
 
 -   La relación de la cuenta del administrador de inscripción de dispositivos eliminado se mantiene pero no se pueden inscribir dispositivos adicionales
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

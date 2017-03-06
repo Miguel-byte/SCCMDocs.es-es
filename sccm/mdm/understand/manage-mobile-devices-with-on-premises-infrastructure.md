@@ -2,7 +2,7 @@
 title: "Administración local de dispositivos móviles (MDM) | Microsoft Docs"
 description: "Obtenga información acerca de la administración de dispositivos móviles local, una solución de administración de dispositivos en System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
 ms.openlocfilehash: cbd33bf3cf7d623d9ba7a657d4ca7d746d7e79da
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -50,9 +51,4 @@ La administración de dispositivos móviles local de System Center Configuration
 -   [Inscripción de dispositivos para la administración de dispositivos móviles (MDM) local en System Center Configuration Manager](../deploy-use/enroll-devices-on-premises-mdm.md)  
 
      Descubra cómo inscribir dispositivos, cómo los usuarios pueden inscribir sus dispositivos y cómo se realiza la inscripción masiva con un paquete de inscripción.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

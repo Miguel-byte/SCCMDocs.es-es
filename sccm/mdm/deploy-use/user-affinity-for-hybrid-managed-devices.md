@@ -2,7 +2,7 @@
 title: "Afinidad de usuario para dispositivos administrados híbridos en Configuration Manager | Microsoft Docs"
 description: Configure la afinidad de usuario para dispositivos administrados en Configuration Manager.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 74dcc0f4e680893db804956615248b7e1230d2b5
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="user-affinity-for-hybrid-managed-devices-in-configuration-manager"></a>Afinidad de usuario para dispositivos administrados híbridos en Configuration Manager
@@ -53,9 +54,4 @@ Al configurar perfiles para dispositivos propiedad de la empresa, el administrad
 
 ##  <a name="a-namebkmknouaa-managed-devices-without-user-affinity"></a><a name="BKMK_noUA"></a> Dispositivos administrados sin afinidad de usuario  
  Los dispositivos configurados con **no user affinity** no admiten el portal de empresa y no deben instalar la aplicación. El Portal de empresa está diseñado para usuarios que tienen credenciales corporativas y que necesitan acceso a recursos corporativos personalizados (por ejemplo, correo electrónico). Los dispositivos inscritos **sin afinidad de usuario** no están diseñados para tener un inicio de sesión de usuario dedicado. Los quioscos, puntos de venta (POS) y dispositivos de utilidad compartida son casos de uso típicos de dispositivos inscritos sin afinidad de usuario. En caso de que la afinidad de usuario sea un requisito, asegúrese de que el perfil de inscripción del dispositivo tenga seleccionada la **afinidad de usuario** antes de inscribirlo. Para cambiar el estado de afinidad en un dispositivo, debe cancelar su inscripción y realizarla de nuevo.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

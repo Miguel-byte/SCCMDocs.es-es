@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a933d69c-5feb-4b2b-84e8-56b3b64d5947
 caps.latest.revision: 11
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
 ms.openlocfilehash: 9c2fd7cea178716f81571856608ce517049a3e8d
+ms.lasthandoff: 12/29/2016
 
 
 ---
@@ -78,9 +79,4 @@ Se recomienda que instale los paquetes de idioma de cliente antes de implementar
  Si puede elegir qué tipo de filtro de escritura habilitar, elija los filtros de escritura basados ​​en archivo y configure excepciones para conservar el estado del cliente y los datos de inventario entre los reinicios del dispositivo por motivos de eficiencia de la red y la CPU en el cliente de Configuration Manager. Para más información sobre los filtros de escritura, vea [Planning for client deployment to Windows Embedded devices in System Center Configuration Manager (Planeación de implementación de cliente en dispositivos de Windows Embedded en System Center Configuration Manager)](../../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
  Para más información sobre el número máximo de clientes de Windows Embedded que un sitio primario puede admitir, vea [Supported operating systems for clients and devices (Sistemas operativos compatibles con clientes y dispositivos)](../../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

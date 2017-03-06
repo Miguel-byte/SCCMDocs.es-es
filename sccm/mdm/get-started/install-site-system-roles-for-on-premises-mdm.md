@@ -2,7 +2,7 @@
 title: Instalar roles para MDM local en Configuration Manager | Microsoft Docs
 description: "Instalar roles de sistema de sitio para la administración de dispositivos móviles local en System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: 916b971f851f968f6534ac834bd3182cc61614aa
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -71,9 +72,4 @@ La Administración de dispositivos móviles local en System Center Configuration
      Esto convierte de manera efectiva el punto de administración en un punto de administración de dispositivos.  
 
  Una vez que se han agregado y configurado los roles de sistema de sitio para administrar dispositivos modernos, debe configurar los servidores que hospedan los roles como puntos de conexión de confianza para inscribirse y comunicarse con los dispositivos administrados. Consulte [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager (Configurar certificados de comunicaciones de confianza para la administración de dispositivos móviles local en System Center Configuration Manager)](../../mdm/get-started/set-up-certificates-on-premises-mdm.md) para obtener más información.  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
