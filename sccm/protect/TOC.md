@@ -31,7 +31,6 @@
 
 ## [Perfiles de certificado](deploy-use/introduction-to-certificate-profiles.md)
 ### [Crear perfiles de certificado](deploy-use/create-certificate-profiles.md)
-### [Crear perfiles de certificado PFX](deploy-use/create-pfx-certificate-profiles.md)
 ### [Configurar la infraestructura de certificados](deploy-use/certificate-infrastructure.md)
 ### [Referencia técnica de controles criptográficos](deploy-use/cryptographic-controls-technical-reference.md)
 
@@ -56,25 +55,7 @@
 ### [Ayuda del cliente Endpoint Protection](deploy-use/endpoint-protection-client-help.md)
 ### [Solución de problemas de cliente](deploy-use/troubleshoot-endpoint-client.md)
 
-## [Perfiles de correo electrónico](deploy-use/introduction-to-email-profiles.md)
-### [Crear perfiles de correo electrónico](deploy-use/create-exchange-activesync-profiles.md)
-### [Implementación de perfiles de Wi-Fi, VPN, correo electrónico y certificado](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
-
-## [Administrar el acceso a servicios](deploy-use/manage-access-to-services.md)
-### [Directivas de cumplimiento de dispositivos](deploy-use/device-compliance-policies.md)
-### [Crear una directiva de cumplimiento de dispositivos](deploy-use/create-compliance-policy.md)
-### [Administrar acceso al correo electrónico](deploy-use/manage-email-access.md)
-### [Administrar el acceso a SharePoint Online](deploy-use/manage-sharepoint-online-access.md)
-### [Administrar el acceso de Skype Empresarial Online](deploy-use/manage-skype-for-business-online-access.md)
-### [Administrar el acceso a Dynamics CRM Online](deploy-use/manage-dynamics-crm-online-access.md)
-### [Administrar el acceso del equipo a los servicios de Office&365;](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
-## [Administrar el acceso según el dispositivo, la red y el riesgo de aplicación](deploy-use/configuration-manager-mobile-threat-defense.md)
-### [Lookout en Configuration Manager](deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md)
-#### [Establecer protección contra amenazas de dispositivo de Lookout](deploy-use/set-up-your-subscription-with-lookout.md)
-#### [Habilitar Lookout en Intune](deploy-use/enable-lookout-connection-in-intune.md)
-#### [Implementar aplicaciones Lookout for Work](deploy-use/configure-and-deploy-lookout-for-work-apps.md)
-#### [Habilitar directiva de protección contra amenazas de dispositivo](deploy-use/enable-device-threat-protection-rule-compliance-policy.md)
-#### [Solucionar problemas de integración de Lookout](deploy-use/troubleshoot-lookout-integration.md)
+## [Implementación de perfiles de Wi-Fi, VPN, correo electrónico y certificado](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
 
 ## [Configuración de Windows Hello para empresas](deploy-use/windows-hello-for-business-settings.md)
 
