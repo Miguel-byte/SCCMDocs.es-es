@@ -1,42 +1,97 @@
-#  Conocer y explorar
-## [MDM híbrida](understand/hybrid-mobile-device-management.md)
-## [Elegir Intune o MDM híbrida](understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)
+# Información general
+## [Qué es MDM híbrida](understand/hybrid-mobile-device-management.md)
+## [Elegir Intune independiente o MDM híbrida](understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)
 ## [Novedades de MDM híbrida](understand/whats-new-in-hybrid-mobile-device-management.md)
-## [MDM local](understand/manage-mobile-devices-with-on-premises-infrastructure.md)
 
-# Planear y diseñar
-## [Planear la MDM híbrida](plan-design/plan-hybrid-mobile-device-management.md)
-## [Planear la MDM local](plan-design/plan-on-premises-mdm.md)
+# [Planear y diseñar](plan-design/plan-hybrid-mobile-device-management.md)
+## [Plataformas de dispositivos compatibles](plan-design/supported-device-platforms-for-hybrid.md)
+## [Métodos de inscripción de dispositivos](plan-design/device-enrollment-methods.md)
 
-# Implementar y usar
-
-## [Configurar MDM híbrida](deploy-use/setup-hybrid-mdm.md)
+# [Introducción](deploy-use/setup-hybrid-mdm.md)
+## [Crear una recopilación de MDM](deploy-use/create-mdm-collection.md)
+## [Confirmar los requisitos de nombre de dominio](deploy-use/confirm-dns.md)
+## [Configurar la suscripción a Intune](deploy-use/configure-intune-subscription.md)
+## [Agregar términos y condiciones](deploy-use/terms-and-conditions.md)
+## [Crear el punto de conexión de servicio](deploy-use/create-service-connection-point.md)
+## [Habilitar la inscripción de plataforma](deploy-use/enable-platform-enrollment.md)
 ### [iOS y Mac](deploy-use/enroll-hybrid-ios-mac.md)
 ### [Windows](deploy-use/enroll-hybrid-windows.md)
 ### [Android](deploy-use/enroll-hybrid-android.md)
-### [Términos y condiciones](deploy-use/terms-and-conditions.md)
-## [Inscripción de dispositivos propiedad de la empresa en MDM híbrida](deploy-use/enroll-company-owned-devices.md)
+## [Configurar la administración adicional](deploy-use/set-up-additional-management.md)
+## [Comprobar la configuración de MDM](deploy-use/verify-mdm-configuration.md)
+
+# Procedimientos
+## [Inscribir dispositivos propiedad del usuario (BYOD)](deploy-use/enroll-user-owned-devices.md)
+## [Inscribir dispositivos de propiedad corporativa](deploy-use/enroll-company-owned-devices.md)
 ### [Inscripción directa de iOS DEP](deploy-use/ios-device-enrollment-program-for-hybrid.md)
 ### [Inscripción de Apple Configurator](deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)
 ### [Administrador de inscripción de dispositivos](deploy-use/enroll-devices-with-device-enrollment-manager.md)
 ### [Declarar previamente el identificador de hardware](deploy-use/predeclare-devices-with-hardware-id.md)
 ### [Administración del bloqueo de activación de iOS](deploy-use/manage-ios-activation-lock.md)
-### [Afinidad de usuario](deploy-use/user-affinity-for-hybrid-managed-devices.md)
+### [Afinidad entre usuario y dispositivo](deploy-use/user-affinity-for-hybrid-managed-devices.md)
 
-## [Configurar MDM local](get-started/preparation-steps-for-on-premises-mdm.md)
-### [Configurar Intune](get-started/set-up-intune-subscription-on-premises-mdm.md)
+## [Retirar, borrar, bloquear y restablecer dispositivos](deploy-use/wipe-lock-reset-devices.md)
+## [Configurar el inventario de hardware](deploy-use/mobile-device-hardware-inventory-hybrid.md)
+## [Configurar el inventario de software](deploy-use/software-inventory-mobile-devices.md)
+
+## [Administrar la configuración de cumplimiento](deploy-use/manage-compliance-settings.md)
+### [Windows 8.1 y Windows 10](deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)
+### [Windows Phone](deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client.md)
+### [iOS y Mac OS X](deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)
+### [Android y Samsung KNOX Standard](deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)
+
+## [Sincronizar dispositivos inscritos en Intune](deploy-use/sync-intune-device.md)
+
+## [Administración de aplicaciones](deploy-use/management-tasks-applications.md)
+### [Crear aplicaciones de iOS](deploy-use/creating-ios-applications.md)
+### [Directivas de configuración de aplicaciones de iOS](deploy-use/configure-ios-apps-with-app-configuration-policies.md)
+### [Aplicaciones de iOS adquiridas por volumen](deploy-use/manage-volume-purchased-ios-apps.md)
+### [Crear aplicaciones de Windows Phone](deploy-use/creating-windows-phone-applications.md)
+### [Crear aplicaciones de Android](deploy-use/creating-android-applications.md)
+### [Directivas de administración de aplicaciones móviles](deploy-use/protect-apps-using-mam-policies.md)
+### [Directivas de explorador administrado](deploy-use/manage-internet-access-using-managed-browser-policies.md)
+### [Tienda Windows para aplicaciones empresariales](deploy-use/windows-store-for-business.md)
+
+## [Administrar una suscripción a Intune](deploy-use/manage-intune-subscriptions.md)
+
+## Administrar el acceso a los recursos
+### [Crear perfiles de Wi-Fi](deploy-use/create-wifi-profiles.md)
+### [Crear perfiles de certificado PFX](deploy-use/create-pfx-certificate-profiles.md)
+### [Perfiles de VPN](deploy-use/create-vpn-profiles.md)
+### [Crear perfiles de correo electrónico](deploy-use/create-exchange-activesync-profiles.md)
+### [Configuración de Windows Hello para empresas](deploy-use/windows-hello-for-business-settings.md)
+
+## [Administrar el acceso condicional](deploy-use/manage-access-to-services.md)
+### [Directivas de cumplimiento de dispositivos](deploy-use/device-compliance-policies.md)
+### [Crear una directiva de cumplimiento de dispositivos](deploy-use/create-compliance-policy.md)
+### [Administrar acceso al correo electrónico](deploy-use/manage-email-access.md)
+### [Administrar el acceso a SharePoint Online](deploy-use/manage-sharepoint-online-access.md)
+### [Administrar el acceso de Skype Empresarial Online](deploy-use/manage-skype-for-business-online-access.md)
+### [Administrar el acceso a Dynamics CRM Online](deploy-use/manage-dynamics-crm-online-access.md)
+### [Administrar el acceso del equipo a los servicios de Office&365;](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
+
+## [Administrar el acceso en función del riesgo](deploy-use/manage-access-based-on-device-network-app-risk.md)
+### [Establecer protección contra amenazas de dispositivo de Lookout](deploy-use/set-up-your-subscription-with-lookout.md)
+### [Habilitar Lookout en Intune](deploy-use/enable-lookout-connection-in-intune.md)
+### [Implementar aplicaciones Lookout for Work](deploy-use/configure-and-deploy-lookout-for-work-apps.md)
+### [Habilitar directiva de protección contra amenazas de dispositivo](deploy-use/enable-device-threat-protection-rule-compliance-policy.md)
+### [Solucionar problemas de integración de Lookout](deploy-use/troubleshoot-lookout-integration.md)
+
+# Administración local de dispositivos móviles (MDM)
+## [Qué es MDM local](understand/manage-mobile-devices-with-on-premises-infrastructure.md)
+## [Planear la MDM local](plan-design/plan-on-premises-mdm.md)
+
+## [Pasos de configuración](get-started/preparation-steps-for-on-premises-mdm.md)
+### [Configurar la suscripción a Intune](get-started/set-up-intune-subscription-on-premises-mdm.md)
 ### [Instalar roles locales](get-started/install-site-system-roles-for-on-premises-mdm.md)
 ### [Configurar los certificados](get-started/set-up-certificates-on-premises-mdm.md)
-### [Configurar la inscripción de dispositivos](get-started/set-up-device-enrollment-on-premises-mdm.md)
+### [Configurar para la inscripción](get-started/set-up-device-enrollment-on-premises-mdm.md)
+
 ## [Inscribir dispositivos en MDM local](deploy-use/enroll-devices-on-premises-mdm.md)
 ### [Inscripción de usuarios](deploy-use/user-enroll-devices-on-premises-mdm.md)
 ### [Inscripción masiva](deploy-use/bulk-enroll-devices-on-premises-mdm.md)
+## [Administrar dispositivos](deploy-use/onprem-manage-devices.md)
+## [Administración de aplicaciones](deploy-use/onprem-manage-applications.md)
+## [Proteger datos y dispositivos](deploy-use/onprem-protect-data-devices.md)
 
-## [Retirar, bloquear y restablecer dispositivos](deploy-use/wipe-lock-reset-devices.md)
-## [Sincronizar dispositivos inscritos en Intune](deploy-use/sync-intune-device.md)
-## [Administrar dispositivos con Exchange](deploy-use/manage-mobile-devices-with-exchange-activesync.md)
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+# [Administración de dispositivos con Exchange](deploy-use/manage-mobile-devices-with-exchange-activesync.md)

@@ -120,8 +120,7 @@
 #### [Planeación de la supervisión de la migración](migration/planning-to-monitor-migration-activity.md)
 #### [Planeación de la finalización de la migración](migration/planning-to-complete-migration.md)
 ###  [Configurar jerarquías de origen y sitios de origen](migration/configuring-source-hierarchies-and-source-sites-for-migration.md)
-###  [Operaciones de migración](migration/operations-for-migration.md)
-###  [Seguridad y privacidad de la migración](migration/security-and-privacy-for-migration.md)
+###  [Operaciones para la migración](migration/operations-for-migration.md)###  [Seguridad y privacidad para la migración](migration/security-and-privacy-for-migration.md)
 
 #    [Implementar servidores y roles](servers/deploy/start-using.md)
 
@@ -172,14 +171,20 @@
 ###  [Instalación de actualizaciones en la consola](servers/manage/install-in-console-updates.md)
 #### [Diagrama de flujo: descargar actualizaciones](servers/manage/download-updates-flowchart.md)
 #### [Diagrama de flujo: replicación de actualización](servers/manage/update-replication-flowchart.md)
+###  [Características de versión preliminar](servers/manage/pre-release-features.md)
 ###  [Ventanas de servicio para servidores de sitio](servers/manage/service-windows.md)
 ###  [Uso de la herramienta de conexión de servicio](servers/manage/use-the-service-connection-tool.md)
 ###  [Uso de la herramienta de registro de actualizaciones](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [Uso del instalador de revisiones](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+<!-- 
+###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
+-->
 ###  [Lista de comprobación para la instalación de la actualización 1610](servers/manage/checklist-for-installing-update-1610.md)
 ###  [Lista de comprobación para la instalación de la actualización 1606](servers/manage/checklist-for-installing-update-1606.md)
-###  [Lista de comprobación para la instalación de la actualización 1602](servers/manage/checklist-for-installing-update-1602.md)
-###  [Compatibilidad con las versiones de la rama actual](servers/manage/current-branch-versions-supported.md)
+<!-- Deprecated from Content:
+###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
+###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)  
+-->
 
 ##   Supervisar la infraestructura
 ###  [Usar alertas y el sistema de estado](servers/manage/use-alerts-and-the-status-system.md)
@@ -202,6 +207,7 @@
 #### [Operaciones y mantenimiento de informes](servers/manage/operations-and-maintenance-for-reporting.md)
 #### [Creación de modelos de informes personalizados](servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md)
 #### [Seguridad y privacidad de la generación de informes](servers/manage/security-and-privacy-for-reporting.md)
+###  [Almacenamiento de datos](servers/manage/data-warehouse.md)
 
 #    Implementar clientes
 ##   Planeación de la implementación de cliente
@@ -260,7 +266,6 @@
 ###  [Introducción al inventario de hardware](clients/manage/inventory/introduction-to-hardware-inventory.md)
 ###  [Cómo ampliar el inventario de hardware](clients/manage/inventory/extend-hardware-inventory.md)
 ###  [Cómo configurar el inventario de hardware](clients/manage/inventory/configure-hardware-inventory.md)
-###  [Cómo configurar el inventario de hardware para dispositivos móviles en una implementación híbrida](clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md)
 ###  [Cómo usar el Explorador de recursos para ver el inventario de hardware](clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)
 ###  [Inventario de hardware para Linux y UNIX](clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)
 ###  [Seguridad y privacidad del inventario de hardware](clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)
