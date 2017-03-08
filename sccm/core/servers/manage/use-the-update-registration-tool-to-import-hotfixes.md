@@ -1,5 +1,5 @@
 ---
-title: Herramienta de registro de actualizaciones | System Center Configuration Manager
+title: Herramienta de registro de actualizaciones | Microsoft Docs
 description: "Averigüe cuándo y cómo usar la herramienta de registro de actualizaciones para importar manualmente una actualización a la consola de Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 176c1d7055ae8706b92886d59d8a048dd867c18b
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: c729212d38168acfff3f11ea41f3d52b234c70c8
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -70,9 +71,4 @@ Si instala una versión de un origen externo y el nombre de archivo de la actual
      Una vez registrada la actualización, podrá cerrar la herramienta de registro de actualizaciones.  
 
 3.  Abra la consola de Configuration Manager y vaya a AdministraciónServicios en la nubeActualizaciones y mantenimiento(Iniciar proceso de detección de actualizaciones inmediatamente). Ahora están disponibles para instalar las revisiones que se han importado. Para obtener más información sobre la instalación de actualizaciones, consulte [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) (Instalación de actualizaciones en la consola para System Center Configuration Manager).  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

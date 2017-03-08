@@ -1,5 +1,5 @@
 ---
-title: "Variables de acción de secuencia de tareas | Configuration Manager"
+title: "Variables de acción de secuencias de tareas | Microsoft Docs"
 description: "Use variables de acción de secuencia, como las variables de configuración de red, para especificar valores de configuración de un único paso en una secuencia de tareas de Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: cd0e74bff29110f5483c7132ba989d9933e7e223
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 6049ec2369e0a97b21ce6523ba8448335385ab9a
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -39,7 +40,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 > [!NOTE]  
 >  No todas las acciones de las secuencias de tareas están asociadas a un conjunto de variables de secuencias de tareas. Por ejemplo, aunque hay variables asociadas a la acción Habilitar BitLocker, no hay ninguna variable asociada a la acción Deshabilitar BitLocker.  
 
-###  <a name="a-namebkmkapplydataimagea-apply-data-image-task-sequence-action-variables"></a><a name="BKMK_ApplyDataImage"></a> Variables de acción de la secuencia de tareas Aplicar imagen de datos  
+###  <a name="BKMK_ApplyDataImage"></a> Variables de acción de la secuencia de tareas Aplicar imagen de datos  
  Las variables de esta acción especifican qué imagen de un archivo WIM se debe aplicar al equipo de destino y si se deben eliminar los archivos de la partición de destino. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Paso de secuencia de tareas Aplicar imagen de datos](task-sequence-steps.md#BKMK_ApplyDataImage).  
 
 #### <a name="details"></a>Detalles  
@@ -49,7 +50,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDDataImageIndex<br /><br /> (entrada)|Especifica el valor de índice de la imagen que se aplica al equipo de destino.|  
 |OSDWipeDestinationPartition<br /><br /> (entrada)|Especifica si se deben eliminar los archivos ubicados en la partición de destino.<br /><br /> Valores válidos:<br /><br /> **"true"** (valor predeterminado)<br /><br /> **"false"**|  
 
-###  <a name="a-namebkmkapplydriverpackagea-apply-driver-package-task-sequence-action-variables"></a><a name="BKMK_ApplyDriverPackage"></a> Variables de acción de la secuencia de tareas Aplicar paquetes de controladores  
+###  <a name="BKMK_ApplyDriverPackage"></a> Variables de acción de la secuencia de tareas Aplicar paquetes de controladores  
  Las variables de esta acción especifican información sobre la instalación de controladores de almacenamiento masivo y si se van a instalar controladores sin firmar. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Aplicar paquete de controladores](task-sequence-steps.md#BKMK_ApplyDriverPackage).  
 
 #### <a name="details"></a>Detalles  
@@ -62,7 +63,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDApplyDriverBootCriticalID<br /><br /> (entrada)|Especifica el identificador crítico para el arranque del controlador del dispositivo de almacenamiento masivo que se debe instalar. Este identificador se muestra en la sección "**scsi**" del archivo txtsetup.oem del controlador de dispositivo.<br /><br /> <br /><br /> Esta variable de secuencia de tareas es necesaria si se establece OSDApplyDriverBootCriticalContentUniqueID.|  
 |OSDAllowUnsignedDriver<br /><br /> (entrada)|Especifica si se va a configurar Windows para permitir la instalación de controladores de dispositivos sin firmar. Esta variable de secuencia de tareas no se utiliza al implementar Windows Vista y sistemas operativos posteriores.<br /><br /> Valores válidos:<br /><br /> **"true"**<br /><br /> **"false"** (valor predeterminado)|  
 
-###  <a name="a-namebkmkapplynetworksettingsa-apply-network-settings-task-sequence-action-variables"></a><a name="BKMK_ApplyNetworkSettings"></a> Variables de acción de la secuencia de tareas Aplicar configuración de red  
+###  <a name="BKMK_ApplyNetworkSettings"></a> Variables de acción de la secuencia de tareas Aplicar configuración de red  
  Las variables de esta acción especifican la configuración de red del equipo de destino, como la configuración de los adaptadores de red del equipo, la configuración de dominio y la configuración de grupo de trabajo. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Paso Aplicar configuración de red](task-sequence-steps.md#BKMK_ApplyNetworkSettings).  
 
 #### <a name="details"></a>Detalles  
@@ -81,7 +82,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDDNSSuffixSearchOrder<br /><br /> (entrada)|Especifica el orden de búsqueda DNS del equipo de destino.|  
 |OSDWorkgroupName<br /><br /> (entrada)|Especifica el nombre del grupo de trabajo al que se une el equipo de destino.<br /><br /> Debe especificar este valor o el valor de **OSDDomainName** . El nombre del grupo de trabajo puede tener un máximo de 32 caracteres.<br /><br /> Ejemplo:<br /><br /> **"Contabilidad"**|  
 
-###  <a name="a-namebkmkapplyoperatingsystema-apply-operating-system-image-task-sequence-action-variables"></a><a name="BKMK_ApplyOperatingSystem"></a> Variables de acción de la secuencia de tareas Aplicar imagen de sistema operativo  
+###  <a name="BKMK_ApplyOperatingSystem"></a> Variables de acción de la secuencia de tareas Aplicar imagen de sistema operativo  
  Las variables de esta acción especifican la configuración del sistema operativo que quiere instalar en el equipo de destino. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Aplicar imagen de sistema operativo](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage).  
 
 #### <a name="details"></a>Detalles  
@@ -93,7 +94,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDInstallEditionIndex<br /><br /> (entrada)|Especifica la versión de Windows Vista o del sistema operativo posterior que esté instalado. Si no se especifica ninguna versión, el programa de instalación de Windows determinará qué versión se debe instalar mediante la clave de producto referenciada.<br /><br /> Use solamente un valor de cero (0) si se cumplen las condiciones siguientes:<br /><br /> - Va a instalar un sistema operativo anterior a Windows Vista<br />- Va a instalar una edición de licencia por volumen de Windows Vista o una edición posterior, y no se especifica ninguna clave de producto.<br /><br /> Valores válidos:<br /><br /> **"0"** (valor predeterminado)|  
 |OSDTargetSystemDrive (salida)|Especifica la letra de unidad de la partición que contiene los archivos del sistema operativo.|  
 
-###  <a name="a-namebkmkapplywindowssettingsa-apply-windows-settings-task-sequence-action-variables"></a><a name="BKMK_ApplyWindowsSettings"></a> Variables de acción de la secuencia de tareas Aplicar configuración de Windows  
+###  <a name="BKMK_ApplyWindowsSettings"></a> Variables de acción de la secuencia de tareas Aplicar configuración de Windows  
  Las variables de esta acción especifican la configuración de Windows del equipo de destino, como el nombre del equipo, la clave de producto de Windows, la organización y el usuario registrados, y la contraseña de administrador local. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Aplicar configuración de Windows](task-sequence-steps.md#BKMK_ApplyWindowsSettings).  
 
 #### <a name="details"></a>Detalles  
@@ -110,7 +111,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDRandomAdminPassword<br /><br /> (entrada)|Especifica una contraseña generada de forma aleatoria para la cuenta de administrador en el nuevo sistema operativo. Si se establece en **true**, se deshabilitará la cuenta de administrador local en el equipo de destino. Si se establece en **false**, se habilitará la cuenta de administrador local en el equipo de destino y se asignará a la contraseña de la cuenta de administrador local el valor de la variable **OSDLocalAdminPassword**.<br /><br /> Valores válidos:<br /><br /> **"true"** (valor predeterminado)<br /><br /> **"false"**|  
 |OSDLocalAdminPassword<br /><br /> (entrada)|Especifica la contraseña del administrador local. Este valor se omite si se habilita la opción **Generar la contraseña de administrador local aleatoriamente y deshabilitar la cuenta en todas las plataformas admitidas** . El valor especificado debe tener entre 1 y 255 caracteres.|  
 
-###  <a name="a-namebkmkautoapplydriversa-auto-apply-drivers-task-sequence-action-variables"></a><a name="BKMK_AutoApplyDrivers"></a> Variables de acción de la secuencia de tareas Aplicar controladores automáticamente  
+###  <a name="BKMK_AutoApplyDrivers"></a> Variables de acción de la secuencia de tareas Aplicar controladores automáticamente  
  Las variables de esta acción especifican los controladores de Windows que están instalados en el equipo de destino y si hay controladores sin firmar instalados. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Aplicar controladores automáticamente](task-sequence-steps.md#BKMK_AutoApplyDrivers).  
 
 #### <a name="details"></a>Detalles  
@@ -121,7 +122,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDAllowUnsignedDriver<br /><br /> (entrada)|Especifica si Windows está configurado para permitir que se instalen los controladores de dispositivos sin firmar. Esta variable de secuencia de tareas no se utiliza al implementar Windows Vista y sistemas operativos posteriores.<br /><br /> Valores válidos:<br /><br /> **"true"**<br /><br /> **"false"** (valor predeterminado)|  
 |OSDAutoApplyDriverBestMatch<br /><br /> (entrada)|Especifica lo que hace la acción de secuencia de tareas si hay varios controladores de dispositivo en el catálogo de controladores que sean compatibles con un dispositivo de hardware. Si se establece en **"true"**, solo se instalará el mejor controlador de dispositivo.  Si su valor es **false**, se instalarán todos los controladores de dispositivo compatibles y el sistema operativo elegirá el mejor controlador que se debe usar.<br /><br /> Valores válidos:<br /><br /> **"true"** (valor predeterminado)<br /><br /> **"false"**|  
 
-###  <a name="a-namebkmkcapturenetworksettingsa-capture-network-settings-task-sequence-action-variables"></a><a name="BKMK_CaptureNetworkSettings"></a> Variables de acción de la secuencia de tareas Capturar configuración de red  
+###  <a name="BKMK_CaptureNetworkSettings"></a> Variables de acción de la secuencia de tareas Capturar configuración de red  
  Las variables de esta acción especifican si se ha capturado información de configuración de los ajustes del adaptador de red (TCP/IP, DNS y WINS) y si la información de pertenencia a un grupo de trabajo o un dominio se migra como parte de la implementación de sistema operativo. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Capturar configuración de red](task-sequence-steps.md#BKMK_CaptureNetworkSettings).  
 
 #### <a name="details"></a>Detalles  
@@ -131,7 +132,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDMigrateAdapterSettings<br /><br /> (entrada)|Especifica si se captura información de configuración de los ajustes del adaptador de red (TCP/IP, DNS y WINS).<br /><br /> Ejemplos:<br /><br /> **"true"** (valor predeterminado)<br /><br /> **"false"**|  
 |OSDMigrateNetworkMembership<br /><br /> (entrada)|Especifica si se migra la información de pertenencia a un grupo de trabajo o un dominio como parte de la implementación de sistema operativo.<br /><br /> Ejemplos:<br /><br /> **"true"** (valor predeterminado)<br /><br /> **"false"**|  
 
-###  <a name="a-namebkmkcaptureoperatingsystemimagea-capture-operating-system-image-task-sequence-action-variables"></a><a name="BKMK_CaptureOperatingSystemImage"></a> Variables de acción de la secuencia de tareas Capturar imagen de sistema operativo  
+###  <a name="BKMK_CaptureOperatingSystemImage"></a> Variables de acción de la secuencia de tareas Capturar imagen de sistema operativo  
  Las variables de esta acción especifican información sobre la imagen de sistema operativo que se va a capturar, como el lugar donde se almacena la imagen, quién creó la imagen y una descripción de la imagen. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Capturar imagen de sistema operativo](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage).  
 
 #### <a name="details"></a>Detalles  
@@ -146,7 +147,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDImageVersion<br /><br /> (entrada)|Número de versión opcional definido por el usuario que se asigna a la imagen capturada del sistema operativo. Este número de versión se almacena en el archivo WIM. Este valor puede ser una combinación cualquiera de letras con una longitud máxima de 32 caracteres.|  
 |OSDTargetSystemRoot<br /><br /> (entrada)|Especifica la ruta de acceso al directorio de Windows del sistema operativo instalado en el equipo de referencia. Este sistema operativo se verifica como un sistema operativo compatible para la captura por parte de Configuration Manager.|  
 
-###  <a name="a-namebkmkcaptureuserstatea-capture-user-state-task-sequence-action-variables"></a><a name="BKMK_CaptureUserState"></a> Variables de acción de la secuencia de tareas Capturar estado de usuario  
+###  <a name="BKMK_CaptureUserState"></a> Variables de acción de la secuencia de tareas Capturar estado de usuario  
  Las variables de esta acción especifican la información que utiliza la Herramienta de migración de estado de usuario (USMT), como la carpeta donde se guarda el estado de usuario, las opciones de la línea de comandos para USMT y los archivos de configuración que se utilizan para controlar la captura de los perfiles de usuario.  Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Capturar estado de usuario](task-sequence-steps.md#BKMK_CaptureUserState).  
 
 #### <a name="details"></a>Detalles  
@@ -162,7 +163,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDMigrateSkipEncryptedFiles<br /><br /> (entrada)|Especifica si se capturan los archivos cifrados.<br /><br /> Valores válidos:<br /><br /> **"true"**<br /><br /> **"false"** (valor predeterminado)|  
 |_OSDMigrateUsmtPackageID<br /><br /> (entrada)|Especifica el identificador del paquete de Configuration Manager que contendrá los archivos de USMT. Esta variable es necesaria.|  
 
-###  <a name="a-namebkmkcapturewindowssettingsa-capture-windows-settings-task-sequence-action-variables"></a><a name="BKMK_CaptureWindowsSettings"></a> Variables de acción de la secuencia de tareas Capturar configuración de Windows  
+###  <a name="BKMK_CaptureWindowsSettings"></a> Variables de acción de la secuencia de tareas Capturar configuración de Windows  
  Las variables de esta acción especifican si se migra una configuración específica de Windows al equipo de destino, como el nombre del equipo, el nombre de organización del registro y la información de zona horaria. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Capturar configuración de Windows](task-sequence-steps.md#BKMK_CaptureWindowsSettings).  
 
 #### <a name="details"></a>Detalles  
@@ -176,7 +177,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDMigrateTimeZone<br /><br /> (entrada)|Especifica si se migra la zona horaria del equipo.<br /><br /> Valores válidos:<br /><br /> **"true"** (valor predeterminado)<br /><br /> **"false"**<br /><br /> Si el valor es "true", la variable OSDTimeZone se establece en la zona horaria del equipo.|  
 |OSDTimeZone<br /><br /> (salida)|Se establece con la zona horaria del equipo. El valor se establece solo si la variable OSDMigrateTimeZone se establece en "true".|  
 
-###  <a name="a-namebkmkconnecttonetworkfoldera-connect-to-network-folder-task-sequence-action-variables"></a><a name="BKMK_ConnecttoNetworkFolder"></a> Variables de acción de la secuencia de tareas Conectarse a carpetas compartidas  
+###  <a name="BKMK_ConnecttoNetworkFolder"></a> Variables de acción de la secuencia de tareas Conectarse a carpetas compartidas  
  Las variables de esta acción especifican información sobre una carpeta de una red, como la cuenta utilizada y la contraseña para conectarse a la carpeta de red, la letra de unidad de la carpeta y la ruta de acceso a la carpeta. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Conectar a carpeta de red](task-sequence-steps.md#BKMK_ConnectToNetworkFolder).  
 
 #### <a name="details"></a>Detalles  
@@ -188,7 +189,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |SMSConnectNetworkFolderPassword<br /><br /> (entrada)|Especifica la contraseña de red que se utiliza para conectarse al recurso compartido de red.|  
 |SMSConnectNetworkFolderPath<br /><br /> (entrada)|Especifica la ruta de acceso de red para la conexión.<br /><br /> Ejemplo:<br /><br /> **"\\\nombreservidor\nombrerecursocompartido"**|  
 
-###  <a name="a-namebkmkconvertdiska-convert-disk-to-dynamic-task-sequence-action-variables"></a><a name="BKMK_ConvertDisk"></a> Variables de acción de la secuencia de tareas Convertir el disco en dinámico  
+###  <a name="BKMK_ConvertDisk"></a> Variables de acción de la secuencia de tareas Convertir el disco en dinámico  
  La variable de esta acción especifica el número del disco físico que se convertirá de disco básico a dinámico. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Convertir el disco en dinámico](task-sequence-steps.md#BKMK_ConvertDisktoDynamic).  
 
 #### <a name="details"></a>Detalles  
@@ -197,7 +198,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |--------------------------|-----------------|  
 |OSDConvertDiskIndex<br /><br /> (entrada)|Especifica el número de disco físico que se convierte.|  
 
-###  <a name="a-namebkmkenablebitlockera-enable-bitlocker-task-sequence-action-variables"></a><a name="BKMK_EnableBitLocker"></a> Variables de acción de la secuencia de tareas Habilitar BitLocker  
+###  <a name="BKMK_EnableBitLocker"></a> Variables de acción de la secuencia de tareas Habilitar BitLocker  
  Las variables de esta acción especifican las opciones de clave de inicio y la contraseña de recuperación que se utilizan para habilitar BitLocker en el equipo de destino. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Habilitar BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker).  
 
 #### <a name="details"></a>Detalles  
@@ -207,7 +208,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDBitLockerRecoveryPassword<br /><br /> (entrada)|En lugar de generar una contraseña aleatoria de recuperación, la acción de la secuencia de tareas **Habilitar BitLocker** usa el valor especificado como la contraseña de recuperación. El valor debe ser una contraseña numérica de recuperación de BitLocker válida.|  
 |OSDBitLockerStartupKey<br /><br /> (entrada)|En lugar de generar una clave de inicio aleatoria para la opción de administración de claves **Clave de inicio solo en USB**, la acción de secuencia de tareas **Habilitar BitLocker** usa el Módulo de plataforma segura (TPM) como clave de inicio. El valor debe ser una clave de inicio válida de BitLocker de 256 bits con codificación Base64.|  
 
-###  <a name="a-namebkmkformatpartitiondiska-format-and-partition-disk-task-sequence-action-variables"></a><a name="BKMK_FormatPartitionDisk"></a> Variables de acción de la secuencia de tareas Formatear y crear particiones en el disco  
+###  <a name="BKMK_FormatPartitionDisk"></a> Variables de acción de la secuencia de tareas Formatear y crear particiones en el disco  
  Las variables de esta acción especifican información de formato y creación de particiones de un disco físico, como el número de disco y una matriz de configuración de la partición. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Formatear y crear particiones en el disco](task-sequence-steps.md#BKMK_FormatandPartitionDisk).  
 
 #### <a name="details"></a>Detalles  
@@ -220,7 +221,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDPartitions<br /><br /> (entrada)|Especifica una matriz de configuración de la partición; vea el tema de SDK para acceder a las variables de la matriz en el entorno de la secuencia de tareas.<br /><br /> Esta variable de secuencia de tareas es una variable de matriz. Cada uno de los elementos de la matriz representa la configuración de una única partición en el disco duro. Es posible acceder a la configuración definida para cada partición mediante la combinación del nombre de la variable de matriz con el número de partición de disco basado en cero y el nombre de la propiedad.<br /><br /> Por ejemplo, los siguientes nombres de variables pueden utilizarse para definir las propiedades de la primera partición que se creará mediante esta acción de secuencia de tareas en el disco duro:<br /><br /> - **OSDPartitions0Type:** especifica el tipo de la partición. Se trata de una propiedad necesaria. Los valores válidos son "**Primary**", "**Extended**", "**Logical**" y "**Hidden**".<br />-   **OSDPartitions0FileSystem** : especifica el tipo de sistema de archivos que se utilizará al formatear la partición. Se trata de una propiedad opcional; si no se especifica ningún sistema de archivos, no se formateará la partición. Los valores válidos son "**FAT32**" y "**NTFS**".<br />-   **OSDPartitions0Bootable** : especifica si la partición es de arranque. Se trata de una propiedad necesaria. Si este valor se establece como "**TRUE**" en discos MBR, se convertirá en la partición activa.<br />-   **OSDPartitions0QuickFormat** : especifica el tipo de formato que se utiliza. Se trata de una propiedad necesaria. Si este valor se establece en "**TRUE**", se realizará un formato rápido; en caso contrario, se realizará un formato completo.<br />-   **OSDPartitions0VolumeName** : especifica el nombre que se asigna al volumen cuando se formatea. Se trata de una propiedad opcional.<br />-   **OSDPartitions0Size** : especifica el tamaño de la partición. Las unidades las especifica la variable **OSDPartitions0SizeUnits** . Se trata de una propiedad opcional. Si no se especifica esta propiedad, se crea la partición con todo el espacio libre restante.<br />-   **OSDPartitions0SizeUnits** : especifica las unidades que se utilizarán al interpretar la variable de secuencia de tareas **OSDPartitions0Size** . Se trata de una propiedad opcional. Los valores válidos son "**MB**" (predeterminado), "**GB**" y "**Percent**".<br />-   **OSDPartitions0VolumeLetterVariable** : las particiones siempre utilizan la siguiente letra de unidad disponible en Windows PE cuando se crean. Use esta propiedad opcional para especificar el nombre de otra variable de secuencia de tareas, que se utilizará para guardar la nueva letra de unidad para futuras referencias.<br /><br /> <br /><br /> Si se definirán varias particiones con esta acción de secuencia de tareas, las propiedades de la segunda partición pueden definirse a través de su índice en el nombre de la variable; por ejemplo, **OSDPartitions1Type**, **OSDPartitions1FileSystem**, **OSDPartitions1Bootable**, **OSDPartitions1QuickFormat**, **OSDPartitions1VolumeName** , etc.|  
 |OSDPartitionStyle<br /><br /> (entrada)|Especifica el estilo de partición que se utilizará al crear particiones en el disco. "**MBR**" indica el estilo de partición de registro de arranque maestro y "**GPT**" indica el estilo de tabla de particiones GUID.<br /><br /> Valores válidos:<br /><br /> **"GPT"**<br /><br /> **"MBR"**|  
 
-###  <a name="a-namebkmkinstallsoftwareupdatesa-install-software-updates-task-sequence-action-variables"></a><a name="BKMK_InstallSoftwareUpdates"></a> Variables de acción de la secuencia de tareas Instalar actualizaciones de software  
+###  <a name="BKMK_InstallSoftwareUpdates"></a> Variables de acción de la secuencia de tareas Instalar actualizaciones de software  
  La variable de esta acción especifica si se deben instalar todas las actualizaciones o solo las obligatorias. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Instalar actualizaciones de software](task-sequence-steps.md#BKMK_InstallSoftwareUpdates).  
 
 #### <a name="details"></a>Detalles  
@@ -229,7 +230,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |----------------------------------------|-----------------|  
 |SMSInstallUpdateTarget<br /><br /> (entrada)|Especifica si se deben instalar todas las actualizaciones o solo las obligatorias.<br /><br /> Valores válidos:<br /><br /> **"All"**<br /><br /> **"Mandatory"**|  
 
-###  <a name="a-namebkmkjoindomainworkgroupa-join-domain-or-workgroup-task-sequence-action-variables"></a><a name="BKMK_JoinDomainWorkgroup"></a> Variables de acción de secuencia de tareas de unión a un dominio o un grupo de trabajo  
+###  <a name="BKMK_JoinDomainWorkgroup"></a> Variables de acción de secuencia de tareas de unión a un dominio o un grupo de trabajo  
  Las variables de esta acción especifican la información necesaria para unir el equipo de destino a un grupo de trabajo o un dominio de Windows. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Unirse a dominio o grupo de trabajo](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup).  
 
 #### <a name="details"></a>Detalles  
@@ -244,7 +245,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDJoinType<br /><br /> (entrada)|Especifica si el equipo de destino se une a un dominio de Windows o a un grupo de trabajo. Para unir el equipo de destino a un dominio de Windows, especifique "**0**". Para unir el equipo de destino a un grupo de trabajo, especifique "**1**".<br /><br /> Valores válidos:<br /><br /> **"0"**<br /><br /> **"1"**|  
 |OSDJoinWorkgroupName<br /><br /> (entrada)|Especifica el nombre de un grupo de trabajo al que se une el equipo de destino. El nombre del grupo de trabajo debe tener entre 1 y 32 caracteres.<br /><br /> Ejemplo:<br /><br /> **"Contabilidad"**|  
 
-###  <a name="a-namebkmkpreparewindowscapturea-prepare-windows-for-capture-task-sequence-action-variables"></a><a name="BKMK_PrepareWindowsCapture"></a> Variables de acción de la secuencia de tareas Preparar Windows para la captura  
+###  <a name="BKMK_PrepareWindowsCapture"></a> Variables de acción de la secuencia de tareas Preparar Windows para la captura  
  Las variables de esta acción especifican la información utilizada para capturar el sistema operativo Windows desde el equipo de destino. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Preparar el cliente de Configuration Manager para la captura](task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture).  
 
 #### <a name="details"></a>Detalles  
@@ -255,7 +256,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDKeepActivation<br /><br /> (entrada)|Especifica si sysprep restablece la marca de activación del producto.<br /><br /> Valores válidos:<br /><br /> **"true"**<br /><br /> **"false"** (valor predeterminado)|  
 |OSDTargetSystemRoot<br /><br /> (salida)|Especifica la ruta de acceso al directorio de Windows del sistema operativo instalado en el equipo de referencia. Este sistema operativo se verifica como un sistema operativo compatible para la captura por parte de Configuration Manager.|  
 
-###  <a name="a-namebkmkreleasestatestorea-release-state-store-sequence-action-variables"></a><a name="BKMK_ReleaseStateStore"></a> Variables de acción de la secuencia Liberar almacén de estado  
+###  <a name="BKMK_ReleaseStateStore"></a> Variables de acción de la secuencia Liberar almacén de estado  
  Las variables de esta acción especifican la información que se utiliza para liberar el estado de usuario almacenado. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Liberar almacén de estado](task-sequence-steps.md#BKMK_ReleaseStateStore).  
 
 #### <a name="details"></a>Detalles  
@@ -264,7 +265,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |--------------------------|-----------------|  
 |OSDStateStorePath<br /><br /> (entrada)|El nombre de la ruta de acceso local o UNC a la ubicación desde la que se restaura el estado de usuario. Este valor lo utilizan las acciones de secuencia de tareas **Capturar estado de usuario** y **Restaurar estado de usuario** .|  
 
-###  <a name="a-namebkmkrequeststatea-request-state-store-task-sequence-action-variables"></a><a name="BKMK_RequestState"></a> Variables de acción de la secuencia de tareas Solicitar almacén de estado  
+###  <a name="BKMK_RequestState"></a> Variables de acción de la secuencia de tareas Solicitar almacén de estado  
  Las variables de esta acción especifican la información que se usa para solicitar el estado de usuario almacenado, como la carpeta en el punto de migración de estado donde se almacenan los datos de usuario. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Liberar almacén de estado](../../osd/understand/task-sequence-steps.md#BKMK_ReleaseStateStore).  
 
 #### <a name="details"></a>Detalles  
@@ -276,7 +277,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDStateSMPRetryTime<br /><br /> (entrada)|Especifica el número de segundos que espera entre reintentos la etapa de la secuencia de tareas. El número de segundos puede tener un máximo de 30 caracteres.|  
 |OSDStateStorePath<br /><br /> (salida)|La ruta de acceso UNC a la carpeta en el punto de migración de estado donde se almacena el estado de usuario.|  
 
-###  <a name="a-namebkmkrestartcomputera-restart-computer-task-sequence-action-variables"></a><a name="BKMK_RestartComputer"></a> Variables de acción de la secuencia de tareas Reiniciar equipo  
+###  <a name="BKMK_RestartComputer"></a> Variables de acción de la secuencia de tareas Reiniciar equipo  
  Las variables de esta acción especifican la información que se utiliza para reiniciar el equipo de destino. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Reiniciar equipo](task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer).  
 
 #### <a name="details"></a>Detalles  
@@ -286,7 +287,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |SMSRebootMessage<br /><br /> (entrada)|Especifica el mensaje que se mostrará a los usuarios antes de reiniciar el equipo de destino. Si esta variable no está establecida, se mostrará un mensaje de texto predeterminado. El mensaje especificado no debe superar los 512 caracteres.<br /><br /> Ejemplo:<br /><br /> - "Este equipo se reiniciará; guarde su trabajo".|  
 |SMSRebootTimeout<br /><br /> (entrada)|Especifica el número de segundos que se muestra la advertencia al usuario antes de reiniciar el equipo. Especifique cero segundos para indicar que no se muestre ningún mensaje de reinicio.<br /><br /> Ejemplos:<br /><br /> **"0"** (valor predeterminado)<br /><br /> **"5"**<br /><br /> **"10"**|  
 
-###  <a name="a-namebkmkrestoreuserstatea-restore-user-state-task-sequence-action-variables"></a><a name="BKMK_RestoreUserState"></a> Variables de acción de la secuencia de tareas Restaurar estado de usuario  
+###  <a name="BKMK_RestoreUserState"></a> Variables de acción de la secuencia de tareas Restaurar estado de usuario  
  Las variables de esta acción especifican la información que se utiliza para restaurar el estado de usuario del equipo de destino, como el nombre de la ruta de acceso de la carpeta desde la que se restaura el estado de usuario y si se restaura la cuenta de equipo local. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Restaurar estado de usuario](task-sequence-steps.md#BKMK_RestoreUserState).  
 
 #### <a name="details"></a>Detalles  
@@ -301,7 +302,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDMigrateAdditionalRestoreOptions<br /><br /> (entrada)|Especifica opciones adicionales de la línea de comandos de la herramienta de migración de estado de usuario (USMT) que se utilizan al restaurar el estado de usuario. Las opciones adicionales se especifican en la forma de una cadena que se anexa a la línea de comandos de USMT generada automáticamente. Las opciones de USMT especificadas con esta variable de secuencia de tareas no se validan para comprobar su exactitud antes de ejecutar la secuencia de tareas.|  
 |_OSDMigrateUsmtRestorePackageID<br /><br /> (entrada)|Especifica el identificador del paquete de Configuration Manager que contiene los archivos de USMT. Esta variable es necesaria.|  
 
-###  <a name="a-namebkmkruncommanda-run-command-line-task-sequence-action-variables"></a><a name="BKMK_RunCommand"></a> Variables de acción de la secuencia de tareas Ejecutar línea de comandos  
+###  <a name="BKMK_RunCommand"></a> Variables de acción de la secuencia de tareas Ejecutar línea de comandos  
  Las variables de esta acción especifican la información utilizada para ejecutar un comando desde la línea de comandos, como el directorio de trabajo donde se ejecuta el comando. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Ejecutar línea de comandos](task-sequence-steps.md#BKMK_RunCommandLine).  
 
 #### <a name="details"></a>Detalles  
@@ -329,7 +330,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |_SMSTSUUID|Especifica el UUID del equipo.|  
 |_SMSTSDefaultGateways|Especifica las puertas de enlace predeterminadas que usa el equipo.|  
 
-###  <a name="a-namebkmksetupwindowsa-setup-windows-and-configmgr-task-sequence-action-variables"></a><a name="BKMK_SetupWindows"></a> Variables de acción de la secuencia de tareas Instalar Windows y Configuration Manager  
+###  <a name="BKMK_SetupWindows"></a> Variables de acción de la secuencia de tareas Instalar Windows y Configuration Manager  
  La variable de esta acción especifica las propiedades de instalación de cliente que se usan al instalar el cliente de Configuration Manager. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Instalar Windows y Configuration Manager](task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr).  
 
 #### <a name="details"></a>Detalles  
@@ -346,9 +347,4 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |Nombre de variable de acción<br /><br /> (entrada)|Descripción|  
 |----------------------------------------|-----------------|  
 |OSDSetupAdditionalUpgradeOptions<br /><br /> (entrada)|Especifica las opciones adicionales de la línea de comandos que se agregan al programa de instalación durante la actualización a Windows 10. No se comprueban las opciones de la línea de comandos. Por lo tanto, compruebe que la opción que especifique sea precisa.<br /><br /> Para más información, consulte [Opciones de la línea de comandos del programa de instalación de Windows](https://msdn.microsoft.com/library/windows/hardware/dn938368\(v=vs.85\).aspx).|  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 
