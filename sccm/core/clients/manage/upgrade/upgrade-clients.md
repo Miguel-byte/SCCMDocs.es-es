@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: 56a3ec8ddfaaa233b41347da0ff853fdf92c275c
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -149,9 +150,4 @@ Puede usar varios métodos para actualizar el software cliente de System Center 
 -   Solo se puede utilizar para actualizar el software cliente y no se puede utilizar para instalar un nuevo cliente.  
 
  [Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
