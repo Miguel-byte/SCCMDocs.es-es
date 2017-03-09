@@ -16,14 +16,15 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f83dc12aab96ad76a62582fc2f2fe3e0b99b3b67
-ms.openlocfilehash: efda1a8f010bb0125ef726d0b960317a4fdc4f28
+ms.sourcegitcommit: 8728d9f2ae63282a8f58b20105e488fb1a5ef55b
+ms.openlocfilehash: 4c94e4de5bbfe621492e8682c9424a48eb38196d
+ms.lasthandoff: 03/03/2017
 
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>Instalación y configuración de puntos de distribución de System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
-
+ 
 Instale puntos de distribución de System Center Configuration Manager para hospedar el contenido (archivos y software) que implementa en dispositivos y usuarios. También puede crear grupos de puntos de distribución que simplifican la manera en que administra los puntos de distribución, y cómo distribuye el contenido en puntos de distribución.  
 
  Cuando *instala un nuevo punto de distribución* (mediante el asistente de instalación) o *administra las propiedades de un punto de distribución existente* (editando las propiedades del punto de distribución), puede configurar la mayoría de los valores del punto de distribución. Algunas opciones de configuración solo están disponibles cuando se instala o se edita, pero no en ambos casos:  
@@ -44,7 +45,7 @@ Instale puntos de distribución de System Center Configuration Manager para hosp
 
     -   **Configurar las programaciones de las transferencias de datos a los puntos de distribución**  
 
-##  <a name="a-namebkmkinstalla-install-a-distribution-point"></a><a name="bkmk_install"></a> Instalar un punto de distribución  
+##  <a name="bkmk_install"></a> Instalar un punto de distribución  
  Debe designar un servidor de sistema de sitio como punto de distribución antes de que el contenido puede estar disponible en los equipos cliente. Puede agregar el rol de sitio de punto de distribución a un nuevo servidor de sistema de sitio o puede agregar el rol de sitio a un servidor de sistema de sitio existente.  
 
  Cuando instala un nuevo punto de distribución, usa un asistente de instalación que le guía a través de la configuración disponible. Antes de comenzar, tenga en cuenta lo siguiente:  
@@ -95,7 +96,7 @@ Utilice los siguientes procedimientos básicos para instalar o cambiar un punto 
 
 4.  Tras realizar los cambios que quiera, guarde la configuración y cierre las propiedades del punto de distribución.  
 
-##  <a name="a-namebkmkmanagea-manage-distribution-point-groups"></a><a name="bkmk_manage"></a> Administrar grupos de puntos de distribución  
+##  <a name="bkmk_manage"></a> Administrar grupos de puntos de distribución  
  Los grupos de puntos de distribución proporcionan una agrupación lógica de los puntos de distribución para la distribución de contenido. Puede usar estos grupos para administrar y supervisar el contenido desde una ubicación central de puntos de distribución que abarcan varios sitios. Tenga en cuenta lo siguiente:
 
 -   Puede agregar uno o varios puntos de distribución desde cualquier sitio de la jerarquía a un grupo de puntos de distribución.  
@@ -159,7 +160,7 @@ Utilice los siguientes procedimientos básicos para instalar o cambiar un punto 
 
 3.  En **Grupos de puntos de distribución disponibles**, seleccione los grupos de puntos de distribución en los que se agregarán los puntos de distribución seleccionados como miembros y luego elija **Aceptar**.  
 
-##  <a name="a-namebkmkconfigsa-configure-a-distribution-point"></a><a name="bkmk_configs"></a> Configurar un punto de distribución  
+##  <a name="bkmk_configs"></a> Configurar un punto de distribución  
  Los puntos de distribución individuales admiten varias configuraciones. Sin embargo, no todos los tipos de puntos de distribución son compatibles con todas las configuraciones. Por ejemplo, los puntos de distribución basados en la nube no admiten las implementaciones de contenido que están habilitadas para PXE o multidifusión. Encontrará información sobre limitaciones específicas en los temas siguientes:  
 
 -   [Usar un punto de distribución basado en la nube con System Center Configuration Manager](../../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
@@ -343,9 +344,9 @@ Administre los grupos de límites a los que se asigna este punto de distribució
 
 Además:
 
-- Antes de la versión 1610, puede activar la casilla **Allow clients to use this site system as a fallback source location for content** (Permitir a los clientes usar este sistema de sitio como ubicación de origen de reserva para contenido) para permitir que los clientes que están fuera de estos grupos de límites reserven y usen el punto de distribución como ubicación de origen del contenido cuando no haya otros puntos de distribución disponibles. Para obtener más información sobre los grupos de límites, vea [Grupos de límites para las versiones 1511, 1602 y 1606 de System Center Configuration Manager](/sccm/core/servers/deploy/configur/boundary-groups-for-1511-1602-and-1606). Para obtener puntos de distribución preferidos, vea [Conceptos básicos de la administración de contenido en System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).
+- Antes de la versión 1610, puede activar la casilla **Allow clients to use this site system as a fallback source location for content** (Permitir a los clientes usar este sistema de sitio como ubicación de origen de reserva para contenido) para permitir que los clientes que están fuera de estos grupos de límites reserven y usen el punto de distribución como ubicación de origen del contenido cuando no haya otros puntos de distribución disponibles. Para obtener más información sobre los grupos de límites, vea [Grupos de límites para las versiones 1511, 1602 y 1606 de System Center Configuration Manager](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606). Para obtener puntos de distribución preferidos, vea [Conceptos básicos de la administración de contenido en System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).
 
-- Con la versión 1610 o posterior, puede configurar el grupo de límites *relaciones*, que define cuándo y en qué grupos de límites puede reservar el cliente para buscar contenido. Para obtener más información, consulte [Boundary groups (Grupos de límites)](/sccm/core/servers/deploy/configur/define-site-boundaries-and-boundary-groups#boundary-groups).
+- Con la versión 1610 o posterior, puede configurar el grupo de límites *relaciones*, que define cuándo y en qué grupos de límites puede reservar el cliente para buscar contenido. Para obtener más información, consulte [Boundary groups (Grupos de límites)](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
 
 
 ### <a name="schedule"></a>Programa  
@@ -388,9 +389,4 @@ Especifique si desea configurar límites de velocidad para controlar el ancho de
 -   **Modo por pulsos**: esta opción especifica el tamaño de los bloques de datos que se envían al punto de distribución. También puede especificar un retraso de tiempo entre el envío de cada bloque de datos. Utilice esta opción cuando tenga que enviar datos a través de una conexión de red con un ancho de banda muy bajo al punto de distribución. Por ejemplo, podría tener limitaciones al enviar 1 KB de datos cada cinco segundos, independientemente de la velocidad del vínculo o su uso en un momento dado.  
 
 -   **Limitado al máximo especificado de velocidades de transferencia por hora**: especifique esta opción para que un sitio envíe datos a un punto de distribución usando solo el porcentaje de tiempo que configure. Cuando se usa esta opción, Configuration Manager no identifica el ancho de banda disponible de las redes, sino que divide el tiempo en que puede enviar datos. A continuación, se envían datos durante un corto periodo de tiempo, seguido de periodos de tiempo en que no se envían datos. Por ejemplo, si la velocidad máxima se establece en **50 %**, Configuration Manager transmitirá datos durante un periodo de tiempo seguido de un periodo de tiempo igual en que no se enviarán datos. La cantidad real de datos, o el tamaño del bloque de datos, no se administra. En su lugar, solo se administra la cantidad de tiempo durante la cual se envían datos.  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

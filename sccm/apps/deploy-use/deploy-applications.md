@@ -17,8 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 7be9abadeb51d4f9e862f69c332756b19ce3e110
-ms.openlocfilehash: a52bef3c8d12ffe2d9b13dc79cbc8950d3f36aea
+ms.sourcegitcommit: cb42b6f324dc0019c2109be4d91e0eab4dca4d70
+ms.openlocfilehash: 8c54bc455828712c7f9ea297f26c98c41848cf9c
+ms.lasthandoff: 03/08/2017
 
 
 ---
@@ -84,8 +85,8 @@ No puede cambiar la acción de una implementación después de haberla creado.
 
     > [!NOTE]
     >  Las solicitudes de aprobación de aplicación se muestran en el nodo **Solicitudes de aprobación** , en **Administración de aplicaciones** en el área de trabajo **Biblioteca de software** . Si una solicitud no se aprueba antes de 45 días, se quitará. Además, volver a instalar el cliente de Configuration Manager puede cancelar las solicitudes de aprobación pendientes.
-    > Después de aprobar una aplicación para la instalación, puede denegar la solicitud. Para ello, haga clic en **Denegar** en la consola de Configuration Manager (antes, este botón aparecía atenuado tras la aprobación).
-    > Esta acción no desinstala la aplicación de los dispositivos, pero impide que los usuarios instalen copias nuevas de la aplicación desde el Centro de software.
+    >  Después de aprobar una aplicación para la instalación, puede denegar la solicitud. Para ello, haga clic en **Denegar** en la consola de Configuration Manager (antes, este botón aparecía atenuado tras la aprobación).
+    >  Esta acción no desinstala la aplicación de los dispositivos, pero impide que los usuarios instalen copias nuevas de la aplicación desde el Centro de software.
 
 
 
@@ -116,8 +117,7 @@ Cuando implemente aplicaciones en dispositivos de Windows Embedded habilitados p
 
 >[!NOTE]
     >  Cuando implemente una aplicación en un dispositivo de Windows Embedded, asegúrese de que el dispositivo es miembro de una recopilación que tenga una ventana de mantenimiento configurada. Para obtener más información sobre cómo se usan las ventanas de mantenimiento al implementar aplicaciones en dispositivos de Windows Embedded, consulte el tema [Create Windows Embedded applications](../../apps/get-started/creating-windows-embedded-applications.md) (Crear aplicaciones de Windows Embedded).
-
-    >  The options **Software Installation** and **System restart (if required to complete the installation)** are not used if the deployment purpose is set to **Available**. You can also configure the level of notification a user sees when the application is installed.
+    > Las opciones **Instalación de software** y **Reinicio del sistema (si es necesario para completar la instalación)** no se usan si el propósito de la implementación está establecido en **Disponible**. También puede configurar el nivel de notificación que ve un usuario cuando se instala la aplicación.
 
 ### <a name="specify-alert-options-for-the-deployment"></a>Especificar las opciones de alerta de la implementación
 
@@ -159,9 +159,4 @@ Además, en una implementación de alto riesgo, como una secuencia de tareas que
 ## <a name="for-more-information"></a>Para obtener más información:
 - [Settings to manage high-risk deployments (Configuración para administrar implementaciones de alto riesgo)](../../protect/understand/settings-to-manage-high-risk-deployments.md)
 - [Cómo configurar el cliente](../../core/clients/deploy/configure-client-settings.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

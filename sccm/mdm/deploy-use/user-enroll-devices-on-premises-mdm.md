@@ -2,7 +2,7 @@
 title: "Cómo inscriben dispositivos los usuarios mediante MDM local en Configuration Manager | Microsoft Docs"
 description: "Conozca cómo inscriben dispositivos los usuarios mediante la administración de dispositivos móviles local en System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: 43a30709473939829d82d822503537d448159a1c
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: 7d852843d0d3fe7c9ab0947c4b396cee0a92c754
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -45,7 +46,7 @@ En las tareas siguientes se explica cómo inscribir equipos y dispositivos y com
 
 -   [Comprobar inscripción de dispositivo](#bkmk_verify)  
 
-##  <a name="a-namebkmkenrolldeska-enroll-a-windows-10-computer"></a><a name="bkmk_enrollDesk"></a> Inscribir un equipo Windows 10  
+##  <a name="bkmk_enrollDesk"></a> Inscribir un equipo Windows 10  
 
 1.  En un equipo Windows 10, vaya a **Configuración**.  
 
@@ -59,7 +60,7 @@ En las tareas siguientes se explica cómo inscribir equipos y dispositivos y com
 
 6.  Haga clic en **Omitir** para recordar la información de inicio de sesión y después de unos instantes se conectará el dispositivo.  
 
-##  <a name="a-namebkmkenrollmoba-enroll-a-windows-10-mobile-device"></a><a name="bkmk_enrollMob"></a> Inscribir un dispositivo Windows 10 Mobile  
+##  <a name="bkmk_enrollMob"></a> Inscribir un dispositivo Windows 10 Mobile  
 
 1.  En un dispositivo Windows 10 Mobile, vaya a **Configuración**.  
 
@@ -71,18 +72,10 @@ En las tareas siguientes se explica cómo inscribir equipos y dispositivos y com
 
 5.  En la siguiente pantalla, escriba su dirección de correo electrónico y contraseña laborales y luego, haga clic en **Iniciar de sesión**. Después de unos minutos, se inscribirá el dispositivo. Haga clic en **Listo**.  
 
-##  <a name="a-namebkmkverifya-verify-device-enrollment"></a><a name="bkmk_verify"></a> Comprobar inscripción de dispositivo  
+##  <a name="bkmk_verify"></a> Comprobar inscripción de dispositivo  
  Puede comprobar que los dispositivos están inscritos correctamente en la consola de Configuration Manager.  
 
 1.  Inicie la consola de Configuration Manager.  
 
 2.  Haga clic en **Activos y compatibilidad** > **Introducción** > **Dispositivos**. El dispositivo inscrito aparece en la lista.  
-
-## <a name="see-also"></a>Véase también  
- [Enroll devices for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md) (Inscribir dispositivos para la administración de dispositivos móviles local en System Center Configuration Manager)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -1,5 +1,5 @@
 ---
-title: 'Actualizar clientes | Microsoft Docs | Windows '
+title: Actualizar clientes | Microsoft Docs
 description: Actualice clientes en equipos Windows en System Center Configuration Manager.
 ms.custom: na
 ms.date: 01/01/2017
@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
-ms.openlocfilehash: a35724a5b839b47904c46361709f248e432eff1e
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: a5b59a1d31d897473262edcd0912ef0fcbedd100
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -98,9 +99,4 @@ Puede actualizar el cliente en equipos Windows mediante los métodos de instalac
 8.  Si quiere que el paquete de instalación de cliente se copie a los puntos de distribución habilitados para contenido preconfigurado, haga clic en **Distribuir automáticamente un paquete de instalación de cliente a los puntos de distribución habilitados para contenido preconfigurado**.  
 
 9. Haga clic en **Aceptar** para guardar la configuración y cerrar el cuadro de diálogo **Propiedades de configuración de jerarquía** . Los clientes reciben esta configuración la próxima vez que descarguen la directiva.  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 
