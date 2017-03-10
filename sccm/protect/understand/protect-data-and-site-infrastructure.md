@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
 caps.latest.revision: 8
-author: Nbigman
-ms.author: nbigman
+author: Robstack
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
-ms.openlocfilehash: c80750358d64cf87f8a3ce3a4c4f4030a9dfd742
+ms.sourcegitcommit: 8679df3f8a3b692391537bacd6144a4f2fae357b
+ms.openlocfilehash: d527cb4bfb55ca50c8d2a0fed7c427af5747fe99
+ms.lasthandoff: 02/09/2017
 
 
 ---
@@ -30,7 +31,7 @@ Seguramente quiere que los usuarios puedan obtener acceso seguro a los recursos 
 
 -   Puede minimizar los esfuerzos de los usuarios para conectarse a recursos corporativos mediante la conectividad VPN con perfiles de VPN. Obtenga más información en [VPN profiles in System Center Configuration Manager](../deploy-use/vpn-profiles.md) (Perfiles de VPN en System Center Configuration Manager).  
 
--   Los perfiles de Wi-Fi proporcionan un conjunto de herramientas y recursos para ayudar a crear, implementar y supervisar configuraciones de red inalámbrica en dispositivos de su organización. Mediante la implementación de estas opciones, se minimiza la intervención de los usuarios finales para conectarse a redes inalámbricas corporativas. Obtenga más información en [Wi-Fi Profiles in System Center Configuration Manager](../deploy-use/introduction-to-wifi-profiles.md) (Perfiles de Wi-Fi en System Center Configuration Manager).  
+-   Los perfiles de Wi-Fi proporcionan un conjunto de herramientas y recursos para ayudar a crear, implementar y supervisar configuraciones de red inalámbrica en dispositivos de su organización. Mediante la implementación de estas opciones, se minimiza la intervención de los usuarios finales para conectarse a redes inalámbricas corporativas. Obtenga más información en [Wi-Fi Profiles in System Center Configuration Manager](/sccm/protect/deploy-use/create-wifi-profiles) (Perfiles de Wi-Fi en System Center Configuration Manager).  
 
 -   En [Certificate profiles in System Center Configuration Manager](../deploy-use/introduction-to-certificate-profiles.md) (Perfiles de certificado de System Center Configuration Manager), se describe el procedimiento para aprovisionar los dispositivos de los usuarios con los certificados que necesitan para conectarse a los recursos de la compañía.  
 
@@ -41,9 +42,4 @@ Seguramente quiere que los usuarios puedan obtener acceso seguro a los recursos 
 -   Los perfiles de correo electrónico proporcionan un conjunto de herramientas y recursos para ayudar a crear, implementar y supervisar la configuración del correo electrónico en los dispositivos. Esto permite a los usuarios tener acceso al correo electrónico corporativo en sus dispositivos personales sin que tengan que configurar nada. Obtenga más información en [Email profiles in System Center Configuration Manager](../deploy-use/introduction-to-email-profiles.md) (Perfiles de correo electrónico en System Center Configuration Manager).  
 
 -   Configuration Manager permite la integración con Windows Hello para empresas (anteriormente denominado Microsoft Passport for Work), que es un método alternativo de inicio de sesión que usa Active Directory o una cuenta de Azure Active Directory para reemplazar una contraseña, una tarjeta inteligente o una tarjeta inteligente virtual. Obtenga más información en [Windows Hello for Business settings in System Center Configuration Manager](../deploy-use/windows-hello-for-business-settings.md)(Configuración de Windows Hello para empresas en System Center Configuration Manager).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

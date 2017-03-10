@@ -4,7 +4,7 @@ description: Aprenda a configurar Endpoint Protection para administrar la seguri
 defintion: 
 definition: 
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,8 +18,9 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9db108fb2d4d16013f416b8ee87a57ff1c91e21f
-ms.openlocfilehash: 25ce24d16bd55366d23a176b21b38ed53aa40644
+ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
+ms.openlocfilehash: 884b5f2ec3f1aa273128dfeaaf88d969c9d8669d
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -60,11 +61,6 @@ ms.openlocfilehash: 25ce24d16bd55366d23a176b21b38ed53aa40644
 
 8.  Complete el asistente.
 
-> [!div class="button"]
-[Paso siguiente >](endpoint-configure-alerts.md)
-
-> [!div class="button"]
-[Atrás >](endpoint-protection-configure.md)
 
 ## <a name="existing-site-system-server"></a>servidor de sistema de sitio existente
 
@@ -89,15 +85,4 @@ ms.openlocfilehash: 25ce24d16bd55366d23a176b21b38ed53aa40644
     >  Esta opción configura las opciones de Cloud Protection Service (antes conocido como MAPS) que se usan de forma predeterminada. Puede configurar opciones personalizadas para cada directiva antimalware que configure. Para obtener más información, consulte [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md) (Crear e implementar directivas antimalware para Endpoint Protection en System Center Configuration Manager).
 
 8.  Complete el asistente.
-
-> [!div class="button"]
-[Paso siguiente >](endpoint-configure-alerts.md)
-
-> [!div class="button"]
-[Atrás >](endpoint-protection-configure.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
