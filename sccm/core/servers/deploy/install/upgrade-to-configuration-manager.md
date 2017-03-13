@@ -2,7 +2,7 @@
 title: Actualizar a System Center Configuration Manager | Microsoft Docs
 description: "Obtenga información sobre qué pasos seguir para ejecutar correctamente una actualización local desde un sitio y jerarquía que ejecutan System Center 2012 Configuration Manager."
 ms.custom: na
-ms.date: 1/11/2017
+ms.date: 2/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
-ms.openlocfilehash: 27d18a7c5b13f488cafb36ace2e437fe6a50c598
+ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
+ms.openlocfilehash: 8af2a797ad4e87d870bb27873a7428e96f63b76d
+ms.lasthandoff: 02/23/2017
 
 
 ---
@@ -32,7 +33,7 @@ Puede ejecutar una actualización local para actualizar a System Center Configur
  > [!TIP]
  > Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* ** e *instalar* se usan para describir tres conceptos independientes. Para obtener información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).
 
-##  <a name="a-namebkmkpatha-in-place-upgrade-paths"></a><a name="bkmk_path"></a> Rutas de actualización local  
+##  <a name="bkmk_path"></a> Rutas de actualización local  
 **Actualizar a la versión 1606**  
 El 15 de diciembre de 2016, se volvió a publicar el medio de línea base para la versión 1606 a fin de agregar compatibilidad con más escenarios de actualización. Esta nueva versión admite la actualización de lo siguiente a una versión con licencia completa de System Center Configuration Manager versión 1606:  
 -   Una instalación de evaluación de System Center Configuration Manager versión 1606
@@ -69,7 +70,7 @@ Si tiene el medio de línea base de la versión 1511, puede actualizar lo siguie
 
 -   No se admite la migración desde una versión de Technical Preview a una versión con licencia completa.  
 
-##  <a name="a-namebkmkchecklista-upgrade-checklists"></a><a name="bkmk_checklist"></a> Lista de comprobación de actualización  
+##  <a name="bkmk_checklist"></a> Lista de comprobación de actualización  
  Las listas de comprobación siguientes pueden ayudarle a planear una actualización correcta a System Center Configuration Manager.  
 
 ### <a name="before-you-upgrade"></a>Antes de realizar la actualización  
@@ -227,7 +228,7 @@ Cuando se actualiza un cliente, se desinstala el software cliente actual y se in
 
 Para obtener más información sobre cómo actualizar clientes existentes y cómo instalar nuevos clientes, consulte [Actualizar clientes de equipos Windows con System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
-##  <a name="a-namebkmkconsiderationsa-considerations-for-upgrading"></a><a name="bkmk_considerations"></a> Consideraciones sobre la actualización  
+##  <a name="bkmk_considerations"></a> Consideraciones sobre la actualización  
 **Acciones automáticas**:  
 Cuando se realiza la actualización a System Center Configuration Manager, se producen de forma automática las siguientes acciones:  
 
@@ -255,7 +256,9 @@ Cuando un sitio se actualiza a System Center Configuration Manager, algunas opci
 -   **Programaciones de resumen de actualización de software:**  
      Las programaciones de resumen personalizadas para actualizaciones de software o grupos de actualizaciones de software se restablecen al valor predeterminado de 1 hora. Al finalizar la actualización, restablezca los valores personalizados de resumen según la frecuencia necesaria.  
 
-##  <a name="a-namebkmktesta-test-the-site-database-upgrade"></a><a name="bkmk_test"></a> Probar la actualización de la base de datos del sitio  
+##  <a name="bkmk_test"></a> Probar la actualización de la base de datos del sitio  
+La siguiente información solo se aplica cuando se actualiza una versión anterior como System Center 2012 Configuration Manager a System Center Configuration Manager. Si el sitio ya ejecuta System Center Configuration Manager y va a instalar una actualización nueva, consulte [Paso 2: Probar la actualización de la base de datos antes de instalar una actualización](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) en **Antes de instalar una actualización en la consola**.
+
 Antes de actualizar un sitio, pruebe una copia de la base de datos de ese sitio para la actualización.  
 
 Para probar la base de datos para una actualización, primero debe restaurar una copia de la base de datos del sitio a una instancia de SQL Server que no hospede un sitio de Configuration Manager. La versión de SQL Server que use para hospedar la copia de la base de datos debe ser una versión de SQL Server compatible con la versión de Configuration Manager que sea el origen de la copia de la base de datos.  
@@ -298,7 +301,7 @@ Utilice el siguiente procedimiento en cada sitio de administración central y el
 
 Después de actualizar una copia de la base de datos del sitio correctamente, continúe con la actualización del sitio de Configuration Manager y su base de datos del sitio.  
 
-##  <a name="a-namebkmkupgradea-upgrade-sites"></a><a name="bkmk_upgrade"></a> Actualizar sitios  
+##  <a name="bkmk_upgrade"></a> Actualizar sitios  
 Tras completar las configuraciones previas a la actualización de su sitio, probar la actualización de la base de datos del sitio en una copia de la base de datos y descargar archivos de requisitos previos y paquetes de idioma para la versión de Service Pack que planee instalar, estará listo para actualizar su sitio de Configuration Manager.  
 
 Cuando se actualiza un sitio en una jerarquía, primero debe actualizar el sitio de nivel superior de la jerarquía. Este sitio de nivel superior es un sitio de administración central o un sitio primario independiente. Una vez completada la actualización de un sitio de administración central, puede actualizar los sitios primarios secundarios en cualquier orden que desee. Después de actualizar un sitio primario, puede actualizar sus sitios secundarios. También tiene la opción de actualizar sitios primarios adicionales antes de actualizar cualquier sitio secundario.  
@@ -378,16 +381,11 @@ En la página **Actualización** , el programa de instalación muestra el estado
 
 La actualización del sitio secundario se ejecuta en segundo plano. Una vez completada la actualización, puede confirmar el estado en la consola de Configuration Manager. Para confirmar el estado, seleccione servidor del sitio secundario y, a continuación, en la pestaña **Inicio** , en el grupo **Sitio** , haga clic en **Mostrar estado de instalación**.  
 
-##  <a name="a-namebkmkpostupgradea-perform-post-upgrade-tasks"></a><a name="BKMK_PostUpgrade"></a> Realizar tareas posteriores a la actualización  
+##  <a name="BKMK_PostUpgrade"></a> Realizar tareas posteriores a la actualización  
 Después de actualizar un sitio a un nuevo Service Pack, es posible que tenga que realizar tareas adicionales para finalizar la actualización o volver a configurar el sitio. Estas tareas pueden incluir: actualizar clientes de Configuration Manager o consolas de Configuration Manager, volver a habilitar réplicas de base de datos para puntos de administración o restaurar valores de configuración para funciones de Configuration Manager que use y que no permanezcan tras la actualización del Service Pack.  
 
 **Problemas conocidos de los sitios secundarios:**  
 - **Al actualizar a la versión 1511:** para asegurarse de que los clientes en sitios secundarios pueden encontrar el punto de administración desde el sitio secundario (punto de administración proxy), agregue de forma manual el punto de administración a los grupos de límites que también incluyen los puntos de distribución en el sitio secundario.  
 
 - **Al actualizar a la versión 1606 o posteriores:** los puntos de administración proxy se agregan de forma automática a los grupos de límites que incluyen puntos de distribución en el sitio secundario.
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

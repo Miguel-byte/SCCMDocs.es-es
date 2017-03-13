@@ -2,7 +2,7 @@
 title: Hardware recomendado | Microsoft Docs
 description: "Obtenga recomendaciones de hardware que le ayudarán a ampliar su entorno de System Center Configuration Manager más allá de una implementación básica."
 ms.custom: na
-ms.date: 12/30/2016
+ms.date: 2/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d61c726d9690a1ec512b8dbab74b0f760012c880
-ms.openlocfilehash: 7caee70c327d84f1e016c689f824d843ccdb3b42
+ms.sourcegitcommit: 63ee782a718cf4a66ffe25b022aa317f3e45784c
+ms.openlocfilehash: 6701d5f21e8511ec9cf4fe7bc5804b3e2fdc4c71
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -31,7 +32,7 @@ Las recomendaciones siguientes son instrucciones para ayudarle a escalar un ento
  Use la información de las siguientes secciones como una guía para planear los componentes de hardware que pueden satisfacer las cargas de procesamiento de clientes y sitios que usan las características disponibles de Configuration Manager con las configuraciones predeterminadas.  
 
 
-##  <a name="a-namebkmkscalesiesystemsa-site-systems"></a><a name="bkmk_ScaleSieSystems"></a> Sistemas de sitio  
+##  <a name="bkmk_ScaleSieSystems"></a> Sistemas de sitio  
  En esta sección se proporcionan las configuraciones de hardware recomendadas para los sistemas de sitio de Configuration Manager en implementaciones que admiten el número máximo de clientes y usan todas o la mayoría de las características de Configuration Manager. Es posible que las implementaciones que admitan una cantidad inferior al número máximo de clientes y que no usen todas las características disponibles requieran menos recursos del equipo. En general, los factores clave que limitan el rendimiento del conjunto del sistema son los siguientes por su orden de incidencia:  
 
 1.  Rendimiento de E/S del disco  
@@ -42,24 +43,24 @@ Las recomendaciones siguientes son instrucciones para ayudarle a escalar un ento
 
 Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas las unidades de datos y una red Ethernet de 1 Gbps.  
 
-###  <a name="a-namebkmkscalesiteservera-site-servers"></a><a name="bkmk_ScaleSiteServer"></a> Servidores de sitio  
+###  <a name="bkmk_ScaleSiteServer"></a> Servidores de sitio  
 
 |Sitio primario independiente|CPU (núcleos)|Memoria (GB)|Asignación de memoria para SQL Server (%)|  
 |-------------------------------|---------------|---------------|----------------------------------------|  
 |Servidor de sitio primario independiente con un rol de sitio de base de datos en el mismo servidor<sup>1</sup>|16|96|80|  
 |Servidor de sitio primario independiente con una base de datos de sitio remoto|8|16|-|  
 |Servidor de bases de datos remoto para un sitio primario independiente|16|64|90|  
-|Servidor de sitio de administración central con un rol de sitio de base de datos en el mismo servidor<sup>1</sup>|16|96|80|  
+|Servidor de sitio de administración central con un rol de sitio de base de datos en el mismo servidor<sup>1</sup>|20|128|80|  
 |Servidor de sitio primario de administración central con una base de datos de sitio remoto|8|16|-|  
 |Servidor de bases de datos remoto para un sitio de administración central|16|96|90|  
 |Sitio primario secundario con un rol de sitio de base de datos en el mismo servidor|16|96|80|  
 |Servidor de sitio primario secundario con una base de datos de sitio remoto|8|16|-|  
-|Servidor de bases de datos remoto para un sitio primario secundario|16|64|90|  
+|Servidor de bases de datos remoto para un sitio primario secundario|16|72|90|  
 |Servidor de sitio secundario|8|16|-|  
 
  <sup>1</sup> Si el servidor de sitio y SQL Server están instalados en el mismo equipo, la implementación admite los [números de tamaño y escala](/sccm/core/plan-design/configs/size-and-scale-numbers) máximos para sitios y clientes. Pero esta configuración puede limitar las [opciones de alta disponibilidad para System Center Configuration Manager](/sccm/protect/understand/high-availability-options), como el uso de un clúster de SQL Server. Además, debido a los mayores requisitos de E/S necesarios para admitir SQL Server y el servidor de sitio de Configuration Manager cuando ambos se ejecutan en el mismo equipo, es recomendable considerar el uso de una configuración con una máquina de SQL Server remota con implementaciones de mayor tamaño.  
 
-###  <a name="a-namebkmkremotesitesystema-remote-site-system-servers"></a><a name="bkmk_RemoteSiteSystem"></a> Servidores del sistema de sitio remoto  
+###  <a name="bkmk_RemoteSiteSystem"></a> Servidores del sistema de sitio remoto  
  Las instrucciones siguientes están destinadas para equipos que tienen un solo rol de sistema de sitio. Planee realizar ajustes al instalar varios roles de sistema de sitio en el mismo equipo.  
 
 |Rol de sistema de sitio|CPU (núcleos)|Memoria (GB)|Espacio en disco (GB)|  
@@ -76,7 +77,7 @@ Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas
 
 -   Cuadriplique el **límite de memoria privada de WsusPool** o establézcalo en **0** (ilimitado).  
 
-###  <a name="a-namebkmkdiskspacea-disk-space-for-site-systems"></a><a name="bkmk_DiskSpace"></a> Espacio en disco para los sistemas de sitio  
+###  <a name="bkmk_DiskSpace"></a> Espacio en disco para los sistemas de sitio  
  La asignación de disco y la configuración inciden en el rendimiento de Configuration Manager. Dado que no todos los entornos de Configuration Manager son iguales, los valores que implemente pueden diferir de los indicados en estas instrucciones.  
 
  Para lograr un rendimiento óptimo, ubique cada objeto en un volumen RAID dedicado independiente. Para todos los volúmenes de datos (Configuration Manager y sus archivos de base de datos), utilice RAID 10 para lograr un rendimiento óptimo.  
@@ -109,7 +110,7 @@ Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas
 
     -   SQL Server 2014 Express: 10 GB  
 
-##  <a name="a-namebkmkscaleclienta-clients"></a><a name="bkmk_ScaleClient"></a> Clientes  
+##  <a name="bkmk_ScaleClient"></a> Clientes  
  Esta sección proporciona las configuraciones de hardware recomendadas para los equipos que se administran mediante el software de cliente de Configuration Manager.  
 
 ### <a name="client-for-windows-computers"></a>Cliente para equipos Windows  
@@ -147,7 +148,7 @@ Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas
 |Espacio en disco|500 MB de espacio en disco disponible, con 5 GB recomendados para la memoria caché del cliente de Configuration Manager.|  
 |Conectividad de red|Los equipos cliente de Configuration Manager deben tener conectividad de red con los sistemas de sitio de Configuration Manager para habilitar la administración.|  
 
-##  <a name="a-namebkmkscaleconsolea-configuration-manager-console"></a><a name="bkmk_ScaleConsole"></a> Consola de Configuration Manager  
+##  <a name="bkmk_ScaleConsole"></a> Consola de Configuration Manager  
  Los requisitos en la tabla siguiente se aplican a cada equipo que ejecuta la consola de Configuration Manager.  
 
  **Configuración mínima del hardware:**  
@@ -176,7 +177,7 @@ Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas
 Además de PowerShell, se admite Windows Management Framework (WMF) 3.0 y 4.0.   
 Puede instalar PowerShell antes o después de que se instale la consola de Configuration Manager.  
 
-##  <a name="a-namebkmkscalelaba-lab-deployments"></a><a name="bkmk_ScaleLab"></a> Implementaciones de laboratorio  
+##  <a name="bkmk_ScaleLab"></a> Implementaciones de laboratorio  
  Use las siguientes recomendaciones mínimas de hardware para implementaciones de laboratorio y pruebas de Configuration Manager. Estas recomendaciones se aplican a todos los tipos de sitio, hasta un máximo de 100 clientes:  
 
 |Rol|CPU (núcleos)|Memoria (GB)|Espacio en disco (GB)|  
@@ -184,9 +185,4 @@ Puede instalar PowerShell antes o después de que se instale la consola de Confi
 |Servidor de sitio y base de datos|2 - 4|7 - 12|100|  
 |Servidor de sistema de sitio|1 - 4|2 - 4|50|  
 |Cliente|1 - 2|1 - 3|30|  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 37e45e604e89d3ce280bb2bff47d4a55b6cdfaf8
+ms.sourcegitcommit: 40e018084dd2703327ff653f962f488432b1ec98
+ms.openlocfilehash: 3bab51be96445f766e8f5bbf54eee854e5d09cee
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -26,7 +27,7 @@ ms.openlocfilehash: 37e45e604e89d3ce280bb2bff47d4a55b6cdfaf8
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-En las secciones siguientes se proporcionan detalles técnicos para que pueda configurar System Center Configuration Manager de manera que sea compatible con determinados requisitos internacionales.  
+En las secciones siguientes se proporcionan detalles técnicos para que System Center Configuration Manager sea compatible con determinados requisitos internacionales.  
 
 ## <a name="gb18030-requirements"></a>Requisitos de GB18030  
  Configuration Manager cumple los estándares definidos en GB18030 para poder usar Configuration Manager en China. Una implementación de Configuration Manager debe tener la configuración siguiente para cumplir los requisitos de GB18030:  
@@ -40,12 +41,7 @@ En las secciones siguientes se proporcionan detalles técnicos para que pueda co
     -   Chinese_Simplified_Stroke_Order_100_CI_AI  
 
     > [!NOTE]  
-    >  Estas intercalaciones de base de datos son una excepción de los requisitos que se mencionan en [Support for SQL Server versions for System Center Configuration Manager (Compatibilidad con versiones de SQL Server para System Center Configuration Manager)](../../../core/plan-design/configs/support-for-sql-server-versions.md).  
+    >  Estas intercalaciones de base de datos son una excepción de los requisitos que se mencionan en [Versiones de SQL Server compatibles con System Center Configuration Manager](../../../core/plan-design/configs/support-for-sql-server-versions.md).  
 
 -   Debe colocar un archivo de nombre **GB18030.SMS** en la carpeta raíz del volumen de sistema de cada equipo de servidor de sitio en la jerarquía. Este archivo no contiene datos y puede ser un archivo de texto vacío con este nombre para cumplir el requisito.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: d51a602de9e0cf85d80c74c034613002682e52ea
+ms.sourcegitcommit: a0d4eb601948aa3abb12409f3475d69cacf4a6aa
+ms.openlocfilehash: 90e16b316872cb370c9c2e645f46ac12afab7107
+ms.lasthandoff: 02/28/2017
 
 ---
 
@@ -26,7 +27,7 @@ ms.openlocfilehash: d51a602de9e0cf85d80c74c034613002682e52ea
 
 *Se aplica a: System Center Configuration Manager (Rama actual), (Rama de mantenimiento a largo plazo)*
 
-Con este tema obtendrá información acerca de los requisitos de licencia para las opciones de instalación disponibles con la versión de octubre de 2016 de System Center Configuration Manager 1606, que incluyen la versión de Rama actual 1606, la Rama de mantenimiento a largo plazo (LSTB) y la instalación de evaluación de la Rama actual versión 1606.
+Use este tema para obtener información sobre los requisitos de licencia de las opciones de instalación disponibles con la versión 1606 de octubre de 2016 de System Center Configuration Manager. Entre estas opciones de instalación se incluye la versión 1606 de la Rama actual, la Rama de mantenimiento a largo plazo (LTSB) y la instalación de evaluación de la versión 1606 de la Rama actual.
 
 **Introducción a las licencias:**   
 Los clientes con Software Assurance (SA) activo en licencias de System Center Configuration Manager o con derechos de suscripción equivalentes a 1 de octubre de 2016, tienen derechos para usar la versión 1606 de octubre de 2016 de System Center Configuration Manager. Los clientes con derechos para System Center Configuration Manager en o después del 1 de octubre de 2016 encontrarán dos opciones de licencia tras la instalación: la rama actual y la rama de mantenimiento a largo plazo (LTSB).
@@ -37,7 +38,7 @@ Los clientes con Software Assurance (SA) activo en licencias de System Center Co
 
 
 ## <a name="system-center-configuration-manager-licensed-branches"></a>Ramas con licencia de System Center Configuration Manager  
-Este tema hace referencia al contrato de Software Assurance (o derechos de suscripción equivalentes), que es el contrato de licencia de Microsoft que concede derechos para instalar y usar Configuration Manager.
+En este tema se hace referencia al contrato de Software Assurance (o derechos de suscripción equivalentes), que es el contrato de licencia de Microsoft que concede derechos para instalar y usar Configuration Manager.
 
 
 |Rama|Licencias|Detalles|
@@ -51,22 +52,22 @@ Además de la Rama actual, la LTSB y la instalación de evaluación de la Rama a
 
 ## <a name="licensed-branches"></a>Ramas con licencia
 Los clientes con Software Assurance (SA) activo en licencias de System Center Configuration Manager o con derechos de suscripción equivalentes a 1 de octubre de 2016, tienen derechos para usar la versión 1606 de octubre de 2016 de System Center Configuration Manager. Los clientes con derechos para la versión 1606 de System Center Configuration Manager el 1 de octubre de 2016 o después de esta fecha encontrarán dos opciones con licencia tras la instalación:
--   **Rama actual**
--   **Rama de mantenimiento a largo plazo (LTSB)**
+-    **Rama actual**
+-    **Rama de mantenimiento a largo plazo (LTSB)**
 
 
 Vea la tabla de la sección anterior para obtener más información.
 
 
 ## <a name="software-assurance-agreements-and-system-center-configuration-manager"></a>Contratos de Software Assurance y System Center Configuration Manager
-El estado de Software Assurance en sus licencias de System Center Configuration Manager, o derechos de suscripción equivalentes, el 1 de octubre de 2016 o en una fecha superior determina la rama que puede instalar y utilizar.
+El estado de Software Assurance en sus licencias de System Center Configuration Manager, o derechos de suscripción equivalentes, el 1 de octubre de 2016 o en una fecha posterior determina la rama que puede instalar y usar.
 
 
 ### <a name="software-assurance-and-the-current-branch"></a>Software Assurance y la Rama actual
 Los derechos para usar la Rama actual de System Center Configuration Manager pueden proporcionarse por:
--  **System Center:** los clientes con SA activo en System Center Standard o Datacenter Licenses pueden instalar y utilizar la opción de la Rama actual de System Center Configuration Manager.
+-  **System Center:** los clientes con SA activo en licencias de System Center Standard o Datacenter pueden instalar y usar la opción de la Rama actual de System Center Configuration Manager.
 
--  **System Center Configuration Manager:** los clientes con SA activo el licencias de System Center Configuration Manager, o con derechos de suscripción equivalentes, pueden instalar y utilizar la opción de Rama actual de System Center Configuration Manager.
+-  **System Center Configuration Manager:** los clientes con SA activo en licencias de System Center Configuration Manager, o con derechos de suscripción equivalentes, pueden instalar y usar la opción de Rama actual de System Center Configuration Manager.
 
 Si tiene SA activo en licencias de System Center Configuration Manager (o derechos de suscripción equivalentes) el 1 de octubre de 2016 o en una fecha posterior:
 - Puede instalar y usar la Rama actual.
@@ -83,15 +84,15 @@ LTSB se basa en la versión de la Rama actual 1606 y tiene las siguientes limita
 
 
 ### <a name="software-assurance-expiration-date"></a>Fecha de expiración de Software Assurance
-A partir de la versión de octubre de 2016 de los medios de línea base de la versión 1606 para System Center Configuration Manager, puede especificar la fecha de expiración de su contrato de Software Assurance. Para ello, se utiliza **Software Assurance expiration date** (Fecha de expiración de Software Assurance), que es un valor opcional que se puede especificar como cómodo recordatorio al ejecutar el programa de instalación de Configuration Manager o más adelante desde la consola de Configuration Manager.
+A partir de la versión de octubre de 2016 de los medios de línea base de la versión 1606 para System Center Configuration Manager, puede especificar la fecha de expiración de su contrato de Software Assurance. **Software Assurance expiration date** (Fecha de expiración de Software Assurance) es un valor opcional que se puede especificar como cómodo recordatorio al ejecutar el programa de instalación de Configuration Manager o más adelante desde la consola de Configuration Manager.
 
 >  [!NOTE]   
->  Microsoft no valida la fecha de expiración que especifique y no la usará para la validación de la licencia,  pero usted puede usarla como un recordatorio de la fecha de expiración. Esto es útil porque Configuration Manager busca periódicamente nuevas actualizaciones de software que se ofrecen en línea, y el estado de su licencia de Software Assurance debe ser actual para que pueda usar estas actualizaciones adicionales.    
+>  Microsoft no valida la fecha de expiración que especifique y no la usará para la validación de la licencia.  pero usted puede usarla como un recordatorio de la fecha de expiración. Esto es útil porque Configuration Manager busca de forma periódica nuevas actualizaciones de software que se ofrecen en línea y el estado de su licencia de Software Assurance debe ser actual para que pueda usar estas actualizaciones adicionales.    
 
 **Para especificar la fecha:**
-- Puede especificar el valor en la página **Clave de producto** del Asistente para instalación cuando ejecute el programa de instalación del medio de línea base de la versión 1606 de System Center Configuration Manager.
+- Al ejecutar el programa de instalación del medio de línea base de la versión 1606 de System Center Configuration Manager, puede especificar el valor en la página **Clave de producto** del Asistente para instalación.
 
-- También puede especificar esta fecha en la pestaña **Licencia** de **Propiedades de configuración de jerarquía** en la consola de Configuration Manager.
+- En la consola de Configuration Manager, en **Propiedades de configuración de jerarquía**, puede especificar el valor en la pestaña **Licencia**.
 
 Para obtener más información acerca de licencias de Software Assurance y la Rama actual de System Center Configuration Manager, consulte [Licencias y ramas para System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
 
@@ -105,7 +106,7 @@ Utilice los siguientes vínculos para obtener más información acerca de los de
 - Términos de los productos de licencias por volumen de Microsoft: [http://go.microsoft.com/fwlink/?LinkId=800052](http://go.microsoft.com/fwlink/?LinkId=800052).
 
 - Los clientes de las licencias por volumen pueden obtener un resumen de sus licencias aquí:  [https://www.microsoft.com/Licensing/servicecenter/default.aspx](https://www.microsoft.com/Licensing/servicecenter/default.aspx).  
-  Vaya al menú **Licenses** (Licencias) menú y haga clic en **Licenses Summary** (Resumen de licencias) para obtener información general de las licencias.
+  Vaya al menú **Licencias** y haga clic en **Licenses Summary** (Resumen de licencias) para obtener información general sobre las licencias.
 
 **Vídeos del Centro de servicios de licencias por volumen:**
 - Vídeos de capacitación sobre el funcionamiento del Centro de servicios de licencias por volumen: [https://www.microsoft.com/es-es/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2).
@@ -113,9 +114,4 @@ Utilice los siguientes vínculos para obtener más información acerca de los de
 - Dónde buscar el contrato de Software Assurance activo (a partir del segundo 43, aproximadamente): [https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0).
 
 - Cómo obtener los permisos del Centro de servicios de licencias por volumen: [https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4).  Puede delegar los permisos de lectura y escritura del Centro de servicios de licencias por volumen a otras personas de su organización.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

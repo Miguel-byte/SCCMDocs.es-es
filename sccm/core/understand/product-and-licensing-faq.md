@@ -2,7 +2,7 @@
 title: "Preguntas más frecuentes de productos y licencias | Microsoft Docs"
 description: Encuentre respuestas a las preguntas comunes sobre productos y licencias de System Center Configuration Manager.
 ms.custom: na
-ms.date: 2/17/2017
+ms.date: 2/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 81689631899b626bd33df8853cf82646d7e57afc
-ms.openlocfilehash: 47e35018902c424dc492025bb08bd4df4d81fcbe
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: d8f1a1a5757bbc3e2b0c17b1a89fbd56bbae6019
+ms.openlocfilehash: c1a276ad1ed6d10d286ab389ab3f05ec780c4e58
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -32,16 +32,15 @@ Estas preguntas más frecuentes tratan las preguntas comunes sobre licencias de 
 Para obtener más información sobre las características de System Center Configuration Manager, vea la página del producto [System Center Configuration Manager](https://www.microsoft.com/cloud-platform/system-center-configuration-manager) de Microsoft.
 
 
-## <a name="details"></a>Detalles
-System Center Configuration Manager es...
 
-## <a name="faq"></a>Preguntas más frecuentes
+
+## <a name="system-center-configuration-manager-licensing-faq"></a>Preguntas más frecuentes sobre licencias para System Center Configuration Manager
 
 1.    **¿Qué es la Rama actual (CB)?**   
 La Rama actual es la compilación lista para producción de System Center Configuration Manager que proporciona un modelo de servicio activo. Este modelo de servicio es como la experiencia con Windows 10 o la opción de instalación de Windows Server 2016 Nano Server. Este enfoque es compatible con los clientes que se van a mover a una "cadencia en la nube" y quieren innovar más rápidamente. Con el modelo de servicio de la rama actual, los clientes de System Center Configuration Manager siguen recibiendo nuevas funciones y características. Por esta razón, solo los clientes con Software Assurance activo en las licencias de System Center Configuration Manager, o con derechos de suscripción equivalentes, pueden instalar y usar la Rama actual de System Center Configuration Manager.
 
 2.    **¿Qué es la Rama de mantenimiento a largo plazo (LTSB)?**  
-La Rama de mantenimiento a largo plazo es una compilación lista para producción de System Center Configuration Manager que está destinada a los clientes que permiten que Software Assurance o derechos de suscripción equivalentes expiren. Comparada con la rama actual, la LTSB tiene una [funcionalidad reducida](/sccm/core/understand/introduction-to-the-ltsb#features-that-are-not-available-in-the-ltsb-of-configuration-manager). Los clientes que permiten que Software Assurance o derechos de suscripción equivalentes expiren, deben desinstalar la Rama actual de System Center Configuration Manager. Los clientes que tengan derechos de licencia perpetuos en System Center Configuration Manager pueden instalar y usar la compilación de LTSB de la versión de System Center Configuration Manager que esté vigente en el momento de la expiración.
+La Rama de mantenimiento a largo plazo es una compilación lista para producción de System Center Configuration Manager que está destinada a los clientes que permiten que expiren Software Assurance o derechos de suscripción equivalentes. Comparada con la rama actual, la LTSB tiene una [funcionalidad reducida](/sccm/core/understand/introduction-to-the-ltsb#features-that-are-not-available-in-the-ltsb-of-configuration-manager). Los clientes que permiten que Software Assurance o derechos de suscripción equivalentes expiren, deben desinstalar la Rama actual de System Center Configuration Manager. Los clientes que tengan derechos de licencia perpetuos para System Center Configuration Manager pueden instalar y usar la compilación de LTSB de la versión de System Center Configuration Manager que esté vigente en el momento de la expiración.
 
 3.    **He visto que SA y L&SA se han usado en contenido de licencias. ¿Qué significa esto con respecto a System Center Configuration Manager?**    
 Tanto SA (Software Assurance) como L&SA (Licencia y Software Assurance) son opciones de licencia que conceden derechos para usar System Center Configuration Manager. SA es una opción para un cliente que está renovando la cobertura de SA de un contrato anterior. L&SA es una opción para un cliente que compra una licencia nueva y cobertura de SA.

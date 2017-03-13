@@ -17,8 +17,9 @@ ms.author: andredm
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
-ms.openlocfilehash: 4cc7148be602367b579d63535a4938919bacf829
+ms.sourcegitcommit: b1295fff41d99b0bd6fc00ccab7a4b8bbdb60866
+ms.openlocfilehash: dda0916fac15cf768ecc2a44fda3b8939bcd048e
+ms.lasthandoff: 02/27/2017
 
 ---
 
@@ -123,7 +124,7 @@ ms.openlocfilehash: 4cc7148be602367b579d63535a4938919bacf829
     * iOS 6+
     * Android 4.0+
     * Samsung KNOX Standard 4.0+
-* **Requerir contraseña para desbloquear un dispositivo inactivo (actualización 1602):** exija a los usuarios que escriban una contraseña para obtener acceso a un dispositivo bloqueado.
+* **Requerir contraseña para desbloquear un dispositivo inactivo (actualización&1602;):** exija a los usuarios que escriban una contraseña para obtener acceso a un dispositivo bloqueado.
 
   **Compatible con:**
   * Windows Phone 8+
@@ -131,7 +132,7 @@ ms.openlocfilehash: 4cc7148be602367b579d63535a4938919bacf829
   * Android 4.0+
   * Samsung KNOX Standard 4.0+
 
-* **Minutos de inactividad antes de que sea necesaria la contraseña (actualización 1602):** especifica el tiempo de inactividad antes de que el usuario deba volver a escribir su contraseña. Establezca el valor en una de las opciones disponibles: **1 minuto**, **5 minutos**, **15 minutos**, **30 minutos**, **1 hora**.
+* **Minutos de inactividad antes de que sea necesaria la contraseña (actualización&1602;):** especifica el tiempo de inactividad antes de que el usuario deba volver a escribir su contraseña. Establezca el valor en una de las opciones disponibles: **1 minuto**, **5 minutos**, **15 minutos**, **30 minutos**, **1 hora**.
 
   Esta regla se debe usar con la regla **Requerir una contraseña para desbloquear un dispositivo inactivo**. El valor establecido aquí determina cuándo se considera que el dispositivo está inactivo y se bloquea. Si  **Requerir una contraseña para desbloquear un dispositivo inactivo** está establecida en **True**, se exige al usuario que escriba una contraseña para acceder al dispositivo bloqueado.
 
@@ -218,12 +219,14 @@ ms.openlocfilehash: 4cc7148be602367b579d63535a4938919bacf829
   - **El arranque seguro está habilitado:** cuando el arranque seguro está habilitado, se obliga al sistema a arrancar en un estado de fábrica de confianza. Además, cuando el arranque seguro está habilitado, los componentes principales que se utilizan para arrancar el equipo deben tener las firmas de cifrado correctas en las que confía la organización que ha fabricado el dispositivo. El firmware UEFI comprueba esto antes de permitir que se inicie el equipo. Si los archivos han sido alterados, se ha vulnerado la forma, el sistema no arrancará.
   - **El antimalware de inicio temprano está habilitado (esta configuración solo se aplica a los equipos):** el antimalware de inicio temprano (ELAM) proporciona protección para los equipos de la red cuando se inician y antes de que se inicialicen los controladores de terceros.<br />Esta regla está desactivada de forma predeterminada.
 
+- **Aplicaciones que no se pueden instalar en el dispositivo:** si los usuarios instalan una aplicación de la lista de aplicaciones no compatibles del administrador, se bloquearán al intentar obtener acceso al correo electrónico corporativo. Esta regla requiere el nombre y el Id. de la aplicación al agregar una aplicación a la lista de aplicaciones no compatibles definida por el administrador. También se puede agregar el publicador de la aplicación, pero no es obligatorio.
+
+  **Compatible con:**
+  * iOS 6+
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
+
   Para más información sobre cómo funciona el servicio HAS, consulte [Health Attestation CSP](https://msdn.microsoft.com/library/dn934876.aspx)(CSP de atestación de estado).
   **Compatible con:**
   * Windows 10 y Windows 10 Mobile
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

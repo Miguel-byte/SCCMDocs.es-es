@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 97051d9c65ef5ea28c94468b24863120624e8de0
-ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
+ms.sourcegitcommit: 3eab8e62ace29c0fcb24d47ec7e398d807347a38
+ms.openlocfilehash: a1d701c77afb4d6317d8a137fdf46422063df085
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -62,7 +63,7 @@ Los puntos de distribución basados en la nube ofrecen las siguientes ventajas a
 
 Un punto de distribución basado en la nube tiene las siguientes limitaciones:  
 
--   No puede utilizar un punto de distribución basado en la nube para hospedar paquetes de actualización de software.  
+-  Antes de usar la versión 1610 con la revisión KB4010155, no se puede usar un punto de distribución basado en la nube para hospedar paquetes de actualización de software. La próxima versión de Rama actual posterior a la versión 1610 será compatible con esta opción sin necesidad de instalar esta revisión.  
 
 -   No se puede usar un punto de distribución basado en la nube con implementaciones habilitadas para PXE o multidifusión.  
 
@@ -76,7 +77,7 @@ Un punto de distribución basado en la nube tiene las siguientes limitaciones:
 
 -   No se pueden configurar puntos de distribución basados en la nube como puntos de distribución de extracción.  
 
-##  <a name="a-namebkmkprereqsclouddpa-prerequisites-for-cloud-based-distribution-points"></a><a name="BKMK_PrereqsCloudDP"></a> Requisitos previos para puntos de distribución basados en la nube  
+##  <a name="BKMK_PrereqsCloudDP"></a> Requisitos previos para puntos de distribución basados en la nube  
  Los puntos de distribución basados en la nube requieren los siguientes requisitos previos para su uso:  
 
 -   Una suscripción a Azure (vea [Acerca de las suscripciones y los certificados](#BKMK_CloudDPCerts) en este tema).
@@ -91,7 +92,7 @@ Un punto de distribución basado en la nube tiene las siguientes limitaciones:
 
 -   Los clientes deben poder acceder a Internet para utilizar el punto de distribución basado en la nube.  
 
-##  <a name="a-namebkmkclouddpcosta-cost-of-using-cloud-based-distribution"></a><a name="BKMK_CloudDPCost"></a> Costo de la utilización la distribución basada en la nube  
+##  <a name="BKMK_CloudDPCost"></a> Costo de la utilización la distribución basada en la nube  
  Cuando use un punto de distribución basado en la nube, planee el costo del almacenamiento de datos y las transferencias de descarga que realizan los clientes de Configuration Manager.  
 
  Configuration Manager incluye opciones para ayudar a controlar los costos y supervisar el acceso a datos:  
@@ -139,7 +140,7 @@ Un punto de distribución basado en la nube tiene las siguientes limitaciones:
 
      Para detener un servicio en la nube, en la consola de Configuration Manager, seleccione el punto de distribución del nodo **Puntos de distribución de nube** en **Servicios en la nube**, en el área de trabajo **Administración**. Después elija **Detener servicio** para detener el servicio en la nube que se ejecuta en Azure.  
 
-##  <a name="a-namebkmkclouddpcertsa-about-subscriptions-and-certificates-for-cloud-based-distribution-points"></a><a name="BKMK_CloudDPCerts"></a> Acerca de las suscripciones y los certificados para puntos de distribución basados en la nube  
+##  <a name="BKMK_CloudDPCerts"></a> Acerca de las suscripciones y los certificados para puntos de distribución basados en la nube  
  Los puntos de distribución basados en la nube requieren certificados para permitir que Configuration Manager administre el servicio en la nube que hospeda el punto de distribución, y para que los clientes obtengan acceso al contenido del punto de distribución. A continuación se proporciona información general acerca de estos certificados. Para más información, consulte [Requisitos de certificados PKI para System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
 
  **Certificados**  
@@ -163,7 +164,7 @@ Un punto de distribución basado en la nube tiene las siguientes limitaciones:
 
    Para ver una implementación de ejemplo de este certificado, vea la sección **Implementación del certificado de servicio para puntos de distribución basados en la nube** en el tema [Ejemplo paso a paso de la implementación de los certificados PKI para System Center Configuration Manager: entidad de certificación de Windows Server 2008](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
-##  <a name="a-namebkmktasksa-common-management-tasks-for-cloud-based-distribution-points"></a><a name="bkmk_Tasks"></a> Tareas de administración comunes para puntos de distribución basados en la nube  
+##  <a name="bkmk_Tasks"></a> Tareas de administración comunes para puntos de distribución basados en la nube  
 
 -   **Comunicación entre servidor de sitio y el punto de distribución basado en la nube**: cuando se instala un punto de distribución basado en la nube, es necesario asignar un sitio primario para administrar la transferencia de contenido al servicio en la nube. Esta acción es equivalente a la instalación del rol del sistema de sitio de punto de distribución en un determinado sitio.  
 
@@ -185,7 +186,7 @@ Los clientes que usan puntos de distribución basados en la nube utilizan la sig
 
 3.  Si no está disponible un punto de distribución preferido o un punto de distribución remoto, el cliente puede entonces intentar obtener el contenido de un punto de distribución basado en la nube.  
 
-    
+
 
   Cuando un cliente usa un punto de distribución basado en la nube como una ubicación de contenido, el cliente se autentica a sí mismo en el punto de distribución basado en la nube mediante un token de acceso de Configuration Manager. Si el cliente confía en el certificado de punto de distribución basado en la nube de Configuration Manager, el cliente puede entonces descargar el contenido solicitado.  
 
@@ -212,9 +213,4 @@ Los clientes que usan puntos de distribución basados en la nube utilizan la sig
 -   **Desinstalar un punto de distribución basado en la nube**: para desinstalar un punto de distribución basado en la nube, seleccione el punto de distribución en la consola de Configuration Manager y luego seleccione **Eliminar**.  
 
     Cuando se elimina un punto de distribución basado en la nube de una jerarquía, Configuration Manager quita el contenido del servicio en la nube en Azure.  
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

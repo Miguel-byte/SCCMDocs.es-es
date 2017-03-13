@@ -16,46 +16,63 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
-ms.openlocfilehash: b4eb4768dadba7e5a635d90a87d669cc4b3869f4
+ms.sourcegitcommit: 498b8c02dbf1391e6331c8b9ad7b6ef0fdef22d0
+ms.openlocfilehash: 319289c9b211935ba10cb6d3da386ffed3c0153e
+ms.lasthandoff: 02/23/2017
 
 
 ---
-# <a name="enable-device-threat-protection-rule-in-the-compliance-policy"></a>Habilitar la regla de protección contra amenazas de dispositivo en la directiva de cumplimiento
+# <a name="create-a-lookout-device-threat-protection-rule"></a>Crear una regla de protección contra amenazas de dispositivo de Lookout
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
-Intune con Lookout Mobile Threat Protection le permite detectar amenazas móviles y hacer una evaluación de riesgos en el dispositivo. Puede crear una regla de directiva de cumplimiento en Configuration Manager para incluir la evaluación de riesgos a fin de determinar si el dispositivo está en cumplimiento. Luego puede usar la directiva de acceso condicional para permitir o bloquear el acceso a Exchange, SharePoint y otros servicios en función del cumplimiento del dispositivo.
+## <a name="before-you-begin"></a>Antes de comenzar
+
+Intune con Lookout Mobile Threat Protection le permite detectar amenazas móviles y hacer una evaluación de riesgos en el dispositivo. Puede crear una regla de directiva de cumplimiento en Configuration Manager para incluir la evaluación de riesgos a fin de determinar si el dispositivo es compatible. Luego puede usar la directiva de acceso condicional para permitir o bloquear el acceso a Exchange, SharePoint y otros servicios en función del cumplimiento del dispositivo.
 
 Si desea que Lookout Device Threat Detection influya en la directiva de cumplimiento del dispositivo:
 
-* La regla **Protección contra amenazas de dispositivo** debe estar habilitada en la directiva de cumplimiento.
+-   La regla **Protección contra amenazas de dispositivo** debe estar habilitada en la directiva de cumplimiento.
 
-* La página **Estado de Lookout** de la **consola de administrador de Intune** debe indicar **Activo**. Consulte el tema [Habilitar la conexión de Lookout MTP en Intune](enable-lookout-connection-in-intune.md) para más detalles e instrucciones sobre cómo activar la integración de Lookout.
+-   La página **Estado de Lookout** de la **consola de administrador de Intune** debe indicar **Activo**. Consulte el tema [Habilitar la conexión de Lookout MTP en Intune](https://docs.microsoft.com/sccm/protect/deploy-use/enable-lookout-connection-in-intune) para más detalles e instrucciones sobre cómo activar la integración de Lookout.
 
+Antes de crear la regla de protección contra amenazas de dispositivo en la directiva de cumplimiento, se recomienda que haga lo siguiente:
 
-Antes de crear la regla de protección contra amenazas de dispositivo en la directiva de cumplimiento, se recomienda [configurar la suscripción con Lookout Device Threat Protection](set-up-your-subscription-with-lookout.md), [habilitar la conexión de Lookout en Intune](enable-lookout-connection-in-intune.md) y [configurar la aplicación Lookout for Work](configure-and-deploy-lookout-for-work-apps.md). La regla de cumplimiento se aplica solo una vez que se completa la configuración.
+1.  [Configurar su suscripción con la protección contra amenazas de dispositivo de Lookout](https://docs.microsoft.com/sccm/protect/deploy-use/set-up-your-subscription-with-lookout)
 
-Para habilitar la regla de protección contra amenazas de dispositivo, puede usar una directiva de cumplimiento existente o crear una nueva.
+2.  [Habilitar la conexión de Lookout en Intune](https://docs.microsoft.com/sccm/protect/deploy-use/enable-lookout-connection-in-intune)
 
-Como parte de la configuración de Lookout Device Threat Protection, en la [consola de Lookout](https://aad.lookout.com), creó una directiva que clasifica las diversas amenazas en niveles alto, medio y bajo. En la directiva de cumplimiento de Intune usará el nivel de amenaza para establecer el nivel de amenaza máximo permitido.
+3.  [Configurar e implementar la aplicación Lookout for Work](https://docs.microsoft.com/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps)
 
-En la página **Reglas** del asistente para directivas de cumplimiento, defina una regla nueva con la información siguiente:
-  * Condición: nivel máximo de riesgo de protección contra amenazas de dispositivo.
-  * Valor: el valor debe ser uno de los siguientes:
-    * **Ninguno (protegido)**: es la más segura. Esto significa que el dispositivo no puede tener ninguna amenaza. Si no se encuentra ningún nivel de amenaza, el dispositivo se evalúa como no conforme.
-    * **Bajo**: el dispositivo se evalúa como conforme si solo hay amenazas de nivel bajo. Cualquier valor por encima coloca al dispositivo en un estado de no conformidad.
-    * **Medio**: el dispositivo se evalúa como conforme si las amenazas que se encuentran en él son de nivel bajo o medio. Si se detectan amenazas de nivel alto, el dispositivo se determina como no conforme.
-    * **Alto**: esta opción es la menos segura. Básicamente, permite todos los niveles de amenaza y quizás solo sea útil si usa esta solución únicamente para fines informativos.
+>[!NOTE]
+>La regla de cumplimiento solo se aplica una vez que se completa la configuración.
 
-Si crea directivas de acceso condicional para Office 365 y otros servicios, se considera la evaluación de cumplimiento anterior y los dispositivos no conformes se bloquean y no pueden tener acceso a los recursos de la empresa hasta que se resuelva la amenaza.
+## <a name="to-create-a-device-threat-protection-rule"></a>Para crear una regla de protección contra amenazas de dispositivo
 
-El estado de la protección contra amenazas de dispositivo aparece en el nodo **Seguridad** del área de trabajo **Supervisión**.
-Un gráfico visual muestra un resumen del estado con los diversos niveles de amenazas. Puede hacer clic en las secciones individuales del gráfico para ver más información, como la cantidad de dispositivos que se indican como no conformes por plataforma y los errores que se informan.
-También puede ver el estado individual de los dispositivos en el área de trabajo **Activos y compatibilidad**, en **Dispositivos**.  Puede agregar las columnas **Cumplimiento de amenaza de dispositivo** y **Nivel de amenaza de dispositivo** para ver el estado.  Estas columnas no se muestran de manera predeterminada.
+Como parte de la configuración de Lookout Device Threat Protection, en la [consola de Lookout](https://aad.lookout.com), creó una directiva que clasifica las diversas amenazas en niveles alto, medio y bajo. En la directiva de cumplimiento de Intune, usará el nivel de amenaza para establecer el nivel de amenaza máximo permitido.
 
+Para crear una regla de protección contra amenazas de dispositivo de Lookout:
 
+1.  En la consola de Configuration Manager, haga clic en el área de trabajo **Activos y compatibilidad**.
 
-<!--HONumber=Dec16_HO3-->
+2.  En **Activos y compatibilidad**, expanda **Directivas de cumplimiento.**
 
+3.  Haga clic con el botón derecho en **Directivas de cumplimiento** y, después, seleccione **Crear directiva de cumplimiento**.
 
+4.  Escriba el nombre de la directiva de cumplimiento y después seleccione **Reglas de cumplimiento para dispositivos administrados sin el cliente de Configuration Manager**.
+
+5.  Seleccione las plataformas de sistema operativo que se aprovisionarán con la directiva de cumplimiento (Android 4.1 y versiones posteriores o iOS 8 y versiones posteriores).
+
+6.  En la página **Reglas**, haga clic en **Nueva** para especificar las reglas para un dispositivo compatible.
+
+7.  En la página **Agregar regla**, defina una nueva regla con la siguiente información:
+    1.  Condición: nivel máximo de riesgo de protección contra amenazas de dispositivo.
+    
+    2.  Valor: el valor debe ser uno de los siguientes:
+        1.  **Ninguno (protegido)**: es la más segura. Esto significa que el dispositivo no puede tener ninguna amenaza. Si no se encuentra ningún nivel de amenaza, el dispositivo se evalúa como no compatible.
+        2.  **Bajo**: el dispositivo se evalúa como conforme si solo hay amenazas de nivel bajo. Cualquier valor por encima coloca al dispositivo en un estado de no conformidad.
+        3.  **Medio**: el dispositivo se evalúa como conforme si las amenazas que se encuentran en él son de nivel bajo o medio. Si se detectan amenazas de nivel alto, el dispositivo se determina como no conforme.
+        4.  **Alto**: esta opción es la menos segura. Básicamente, permite todos los niveles de amenaza y quizás solo sea útil si usa esta solución únicamente para fines informativos.
+
+>[!IMPORTANT]
+>Si crea directivas de acceso condicional para Office 365 y otros servicios, se considera la evaluación de cumplimiento anterior y los dispositivos no conformes se bloquean y no pueden tener acceso a los recursos de la empresa hasta que se resuelva la amenaza.

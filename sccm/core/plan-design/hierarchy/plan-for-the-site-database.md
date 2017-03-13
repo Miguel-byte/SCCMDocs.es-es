@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 012d5b313487640faeebe5b49064c74d41a7edb9
+ms.sourcegitcommit: cec63ed7781e236dbf5e8baa0a468193ea794339
+ms.openlocfilehash: d4efe1f013dbb74efca79cd27f7248fc085c7424
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -26,18 +27,32 @@ ms.openlocfilehash: 012d5b313487640faeebe5b49064c74d41a7edb9
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-El servidor de base de datos de sitio es un equipo que ejecuta una versión compatible de Microsoft SQL Server que almacena la información para sitios de Configuration Manager. Cada sitio de una jerarquía de Configuration Manager contiene una base de datos del sitio y un servidor al que se asigna el rol de servidor de base de datos de sitio.  
+El servidor de base de datos de sitio es un equipo que ejecuta una versión compatible de Microsoft SQL Server. SQL Server se usa para almacenar información para los sitios de Configuration Manager. Cada sitio de una jerarquía de Configuration Manager contiene una base de datos del sitio y un servidor al que se asigna el rol de servidor de base de datos de sitio.  
 
--   En los sitios de administración centrales y primarios, puede instalar SQL Server en el servidor de sitio o puede instalar SQL Server en un equipo distinto del servidor de sitio.  
+-   Para los sitios de administración central y primarios, puede instalar SQL Server en el servidor del sitio o puede instalar SQL Server en un equipo que no sea el servidor del sitio.  
 
--   En los sitios secundarios, puede usar SQL Server Express en lugar de una instalación completa de SQL Server; sin embargo, el servidor de la base de datos debe ejecutarse en el servidor de sitio secundario.  
+-   En los sitios secundarios puede usar SQL Server Express en lugar de una instalación completa de SQL Server, aunque el servidor de base de datos se debe ejecutar en el servidor de sitio secundario.  
 
-Si utiliza un equipo de servidor de base de datos remoto, asegúrese de que la conexión de red que intervenga sea una conexión de red de alta disponibilidad y ancho de banda alto. Esto se debe a que el servidor de sitio y algunos roles de sistema de sitio deben comunicarse constantemente con el SQL Server que aloja la base de datos del sitio.  
+Las siguientes configuraciones de SQL Server se pueden utilizar para hospedar la base de datos del sitio:  
+
+-   La instancia predeterminada de SQL Server  
+
+-   Una instancia con nombre en un único equipo que ejecute SQL Server  
+
+-   Una instancia con nombre en una instancia en clúster de SQL Server  
+
+-   Un grupo de disponibilidad AlwaysOn de SQL Server (a partir de la versión 1602 de System Center Configuration Manager)
 
 
-**Al seleccionar la ubicación de un servidor de base de datos remoto, tenga en cuenta lo siguiente:**  
+Para hospedar la base de datos de sitio, SQL Server debe cumplir los requisitos detallados en [Support for SQL Server versions for System Center Configuration Manager](../../../core/plan-design/configs/support-for-sql-server-versions.md) (Compatibilidad con versiones de SQL Server para System Center Configuration Manager).  
 
--   La cantidad de ancho de banda requerida para las comunicaciones con el servidor de base de datos depende de una combinación de muchas configuraciones de sitio y cliente distintas, por lo que es posible que no se prediga adecuadamente el ancho de banda realmente necesario.  
+
+
+## <a name="remote-database-server-location-considerations"></a>Consideraciones sobre la ubicación del servidor de base de datos remoto  
+
+Si usa un equipo de servidor de base de datos remoto, asegúrese de que la conexión de red que intervenga sea una conexión de red de alta disponibilidad y ancho de banda alto. El servidor de sitio y algunos roles de sistema de sitio deben comunicarse constantemente con el servidor remoto que hospeda la base de datos del sitio.
+
+-   La cantidad de ancho de banda requerida para las comunicaciones con el servidor de base de datos depende de una combinación de muchas configuraciones de sitio y cliente distintas. Por lo tanto, el ancho de banda real necesario no se puede predecir adecuadamente.  
 
 -   Cada equipo que ejecuta el proveedor de SMS y que se conecta a la base de datos del sitio aumenta los requisitos de ancho de banda de red.  
 
@@ -46,26 +61,5 @@ Si utiliza un equipo de servidor de base de datos remoto, asegúrese de que la c
 -   No puede utilizar un SQL Server en clúster para el servidor de base de datos del sitio cuando la base de datos del sitio comparte ubicación con el servidor de sitio.  
 
 
-Normalmente, un servidor de sistema de sitio admite roles de sistema de sitio solamente de un único sitio de Configuration Manager; no obstante, puede usar instancias diferentes de SQL Server, de servidores en clúster o de servidores que no están en clúster que ejecutan SQL Server, para alojar una base de datos de diferentes sitios de Configuration Manager. Para admitir bases de datos de sitios diferentes, debe configurar cada instancia de SQL Server para usar puertos exclusivos para la comunicación.  
-
-
-**Las siguientes configuraciones de SQL Server se pueden utilizar para hospedar la base de datos del sitio:**  
-
--   La instancia predeterminada de SQL Server  
-
--   Una instancia con nombre en un único equipo que ejecute SQL Server  
-
--   Una instancia con nombre en una instancia en clúster de SQL Server  
-
--   Un grupo de disponibilidad de SQL Server AlwaysOn (a partir de la versión 1602)
-
-
-**Requisitos previos de la base de datos del sitio:**  
-
--   Para hospedar la base de datos de sitio, SQL Server debe cumplir los requisitos detallados en [Support for SQL Server versions for System Center Configuration Manager](../../../core/plan-design/configs/support-for-sql-server-versions.md) (Compatibilidad con versiones de SQL Server para System Center Configuration Manager).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
+Normalmente, un servidor de sistema de sitio admite roles de sistema de sitio de un único sitio de Configuration Manager. En cambio, puede usar distintas instancias de SQL Server (en servidores en clúster o que no estén en clúster que ejecuten SQL Server) para hospedar una base de datos de varios sitios de Configuration Manager. Para admitir bases de datos de sitios diferentes, debe configurar cada instancia de SQL Server para usar puertos exclusivos para la comunicación.  
 

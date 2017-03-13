@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a2e2bc5e873c48283d18ea6eaa5d1bb351f2a033
-ms.openlocfilehash: 1c3149b4c0247377ad556b6fe594047a6f14b989
+ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
+ms.openlocfilehash: e73055707454bc052b753c5e74be9674d6aa5b8c
+ms.lasthandoff: 02/23/2017
 
 
 ---
@@ -112,7 +113,7 @@ Para obtener más información, consulte [Copia de seguridad y recuperación de 
 -   Si utiliza réplicas de base de datos para puntos de administración en un sitio primario, deshabilite la replicación antes de crear la copia de seguridad de la base de datos del sitio.  
 
 Configuration Manager no admite la realización de copias de seguridad de sitios secundarios ni la actualización de prueba de una base de datos de un sitio secundario.   
-No ejecute una actualización de base de datos de prueba en la base de datos del sitio de producción. Esta acción actualiza la base de datos del sitio y podría inutilizar el sitio. Para más información, vea la sección [Test the site database upgrade (Probar la actualización de la base de datos del sitio)](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_test) de [Upgrade to System Center Configuration Manager (Actualizar a System Center Configuration Manager)](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).  
+No ejecute una actualización de base de datos de prueba en la base de datos del sitio de producción. Esta acción actualiza la base de datos del sitio y podría inutilizar el sitio. Para obtener más información, consulte [Paso 2: Probar la actualización de la base de datos antes de instalar una actualización](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) de **Antes de instalar una actualización de la consola**.  
 
  **Plan piloto de cliente:** al instalar una actualización del cliente, puede probar esa nueva actualización de cliente en preproducción antes de implementarla y actualizar todos los clientes activos.   
 
@@ -136,9 +137,4 @@ Para más información, vea [Updates for System Center Configuration Manager (Ac
 
 ## <a name="see-also"></a>Consulte también  
  [Updates for System Center Configuration Manager (Actualizaciones para System Center Configuration Manager)](../../../core/servers/manage/updates.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

@@ -16,8 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 7972aa2c39f5b86e69087b1ed5a1c3b50ba69940
-ms.openlocfilehash: f74bd019b5403f3f5702795279759270261ce4db
+ms.sourcegitcommit: 69d3e7d51911d6195c2f62a5e81c0faca38ed306
+ms.openlocfilehash: a8fd3c24f3267ea451f4c94854e8577046efaeca
+ms.lasthandoff: 02/27/2017
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con System Center Configuration Manager y Microsoft Intune
@@ -48,7 +49,21 @@ Las siguientes características de Intune que se incorporen en febrero de 2017 f
 
 - **Nueva dirección del servidor MDM para dispositivos Windows**
 
-  La dirección del servidor MDM para la inscripción de dispositivos Windows Phone y Windows ha cambiado de manage.microsoft.com a enrollment.manage.microsoft.com. Notifique a su usuario que debe utilizar enrollment.manage.microsoft.com como dirección del servidor MDM si se le solicita durante la inscripción de dispositivos Windows Phone o Windows. Esta actualización también requiere que cualquier CNAME del DNS que redirija EnterpriseEnrollment.contoso.com a manage.microsoft.com se sustituya por un CNAME del DNS que redirija EnterpriseEnrollment.contoso.com a EnterpriseEnrollment-s.manage.microsoft.com. Para obtener más información sobre este cambio, visite http://aka.ms/intuneenrollsvrchange. 
+  La dirección del servidor MDM para la inscripción de dispositivos Windows Phone y Windows ha cambiado de manage.microsoft.com a enrollment.manage.microsoft.com. Notifique a su usuario que debe utilizar enrollment.manage.microsoft.com como dirección del servidor MDM si se le solicita durante la inscripción de dispositivos Windows Phone o Windows. Esta actualización también requiere que cualquier CNAME del DNS que redirija EnterpriseEnrollment.contoso.com a manage.microsoft.com se sustituya por un CNAME del DNS que redirija EnterpriseEnrollment.contoso.com a EnterpriseEnrollment-s.manage.microsoft.com. Para obtener más información sobre este cambio, visite http://aka.ms/intuneenrollsvrchange.
+
+### <a name="new-in-configuration-manager-technical-preview-1702"></a>Novedades de Configuration Manager Technical Preview 1702
+
+- **Compatibilidad de Android for Work**
+
+  Ya puede administrar dispositivos Android mediante Android for Work en entornos de MDM híbrida con Configuration Manager Technical Preview 1702. Ahora se pueden inscribir dispositivos Android compatibles como dispositivos Android for Work, con lo que se crea un perfil de trabajo en el dispositivo en el que se pueden implementar aplicaciones aprobadas en Play for Work. También puede configurar e implementar elementos de configuración, directivas de cumplimiento y perfiles de acceso a recursos para estos dispositivos.
+
+- **Configuración de cumplimiento de aplicaciones no compatibles**
+
+  Ahora puede crear reglas de aplicaciones no compatibles para aplicaciones Android e iOS en las directivas de cumplimiento. Si los dispositivos tienen instaladas las aplicaciones especificadas, se marcarán como "no compatibles" y perderán el acceso a los recursos de la empresa, de acuerdo con las directivas de acceso condicional aplicadas.
+
+- **Creación y distribución de certificados PFX y compatibilidad con S/MIME**
+
+  Ahora puede crear e implementar certificados PFX en los usuarios de un entorno híbrido. Después, estos certificados pueden usarse para el cifrado y descifrado de correo electrónico S/MIME en los dispositivos inscritos por el usuario.
 
 ## <a name="new-hybrid-features-in-january-2017"></a>Nuevas características híbridas de enero de 2017
 
@@ -177,13 +192,8 @@ Recursos adicionales:
 Se ha quitado de la consola de Configuration Manager la capacidad de cargar una aplicación de portal de empresa firmada, ya que la compatibilidad con Intune está quedando en desuso para Windows 8, Windows Phone 8 y Windows RT, y la compatibilidad con el portal de empresa de Windows Phone 8 finalizará en noviembre.  Los dispositivos Windows 8, Windows Phone 8 y Windows RT que ya están inscritos seguirán siendo compatibles, pero no se admitirá la inscripción de más dispositivos con estas plataformas.
 
 
-## <a name="see-also"></a>Véase también
+### <a name="see-also"></a>Véase también
 
 - [Características híbridas anteriores de MDM](whats-new-hybrid-archive.md)
 - [Novedades de MDM en System Center 2012 Configuration Manager](https://technet.microsoft.com/library/mt445560.aspx)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

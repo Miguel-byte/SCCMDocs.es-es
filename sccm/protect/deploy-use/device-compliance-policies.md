@@ -17,8 +17,9 @@ ms.author: andredm
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
-ms.openlocfilehash: fd5830fef3759def7806dbbe1802872df19ca939
+ms.sourcegitcommit: b1295fff41d99b0bd6fc00ccab7a4b8bbdb60866
+ms.openlocfilehash: 99d1d14e89903d78167ec2f7d91f8393827bd616
+ms.lasthandoff: 02/27/2017
 
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>Directivas de cumplimiento de dispositivo en System Center Configuration Manager
@@ -40,6 +41,7 @@ Las **directivas de cumplimiento** en System Center Configuration Manager define
 -   Si el dispositivo está desbloqueado o modificado  
 
 -   Si el correo electrónico en el dispositivo se administra mediante una directiva de Intune, o si el servicio de atestación de estado de dispositivo de Windows notifica el dispositivo como incorrecto.  
+-   Aplicaciones que no se pueden instalar en el dispositivo
 
 
  Puede implementar directivas de cumplimiento para recopilaciones de usuarios. Cuando se implementa una directiva de cumplimiento para un usuario, se comprueba el cumplimiento de todos los dispositivos del usuario.  
@@ -54,7 +56,8 @@ Las **directivas de cumplimiento** en System Center Configuration Manager define
 |**Perfil de correo electrónico**|No aplicable|No aplicable|En cuarentena|No aplicable|  
 |**Versión de SO mínima**|En cuarentena|En cuarentena|En cuarentena|En cuarentena|  
 |**Versión de SO máxima**|En cuarentena|En cuarentena|En cuarentena|En cuarentena|  
-|**Atestación de estado de dispositivo (actualización 1602)**|Opción no aplicable a Windows 8.1<br /><br /> Windows 10 y Windows 10 Mobile están en cuarentena.|No aplicable|No aplicable|No aplicable|  
+|**Atestación de estado de dispositivo (actualización&1602;)**|Opción no aplicable a Windows 8.1<br /><br /> Windows 10 y Windows 10 Mobile están en cuarentena.|No aplicable|No aplicable|No aplicable|
+|**Aplicaciones que no se pueden instalar**|No aplicable|No aplicable|En cuarentena|En cuarentena|
 
  **Corregido** = el sistema operativo del dispositivo exige el cumplimiento (por ejemplo, el usuario debe establecer un PIN).  La configuración nunca será no conforme.  
 
@@ -62,16 +65,10 @@ Las **directivas de cumplimiento** en System Center Configuration Manager define
 
 -   El dispositivo se bloqueará si el usuario se rige por una directiva de acceso condicional.  
 
--   El portal de empresa o portal web notificará al usuario los problemas de cumplimiento que se produzcan.  
-
+-   El portal de empresa o portal web notificará al usuario los problemas de cumplimiento que se produzcan.
 
 ### <a name="next-steps"></a>Pasos siguientes  
 [Crear e implementar una directiva de cumplimiento de dispositivos](create-compliance-policy.md)
 ### <a name="see-also"></a>Consulte también  
  [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md) (Administración del acceso a servicios en System Center Configuration Manager)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

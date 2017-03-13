@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 7847396fa2ec79a6044c41c1b53572a81692ec8e
-ms.openlocfilehash: 8ab8e504c3881c4dc07ffb569a1f440f4318d689
+ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
+ms.openlocfilehash: b0def6eb962d243a7ea5910b8d56bbb448b3a2e4
+ms.lasthandoff: 02/23/2017
 
 ---
 # <a name="checklist-for-installing-update-1606-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1606 de System Center Configuration Manager
@@ -124,7 +125,7 @@ Para obtener más información, consulte [Copia de seguridad y recuperación de 
 
 Configuration Manager no admite la realización de copias de seguridad de sitios secundarios ni la actualización de prueba de una base de datos de un sitio secundario.   
 
-No ejecute una actualización de base de datos de prueba en la base de datos del sitio de producción. Esta acción actualiza la base de datos del sitio y podría inutilizar el sitio. Para obtener más información, consulte la sección [Probar la actualización de la base de datos del sitio](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_test) en [Actualizar a System Center Configuration Manager](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).  
+No ejecute una actualización de base de datos de prueba en la base de datos del sitio de producción. Esta acción actualiza la base de datos del sitio y podría inutilizar el sitio. Para obtener más información, consulte [Paso 2: Probar la actualización de la base de datos antes de instalar una actualización](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) de **Antes de instalar una actualización de la consola**.
 
  **Plan piloto de cliente:** al instalar una actualización del cliente, puede probar esa nueva actualización de cliente en preproducción antes de implementarla y actualizar todos los clientes activos.   
 
@@ -147,9 +148,4 @@ Para más información, vea **Step 3: Run the prerequisite checker before instal
   Se recomienda planear la instalación de la actualización fuera del horario comercial habitual de cada sitio, ya que será el momento en que el proceso de instalación de la actualización y sus acciones para volver a instalar los componentes del sitio y los roles de sistema de sitio afectarán menos a las operaciones comerciales.
 
 Para más información, vea [Updates for System Center Configuration Manager (Actualizaciones para System Center Configuration Manager)](../../../core/servers/manage/updates.md).  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
