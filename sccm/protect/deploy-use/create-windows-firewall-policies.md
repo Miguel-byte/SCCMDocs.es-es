@@ -2,7 +2,7 @@
 title: Directivas de Firewall de Windows para Endpoint Protection | Microsoft Docs
 description: "Obtenga información sobre cómo crear e implementar directivas de firewall para Endpoint Protection en System Center 2012 Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 7a02ae3fb102ab85f98d3b7453fc0736e5a11200
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -62,7 +63,7 @@ Las directivas de firewall de Endpoint Protection en System Center 2012 Configur
 
 7.  Compruebe que la nueva directiva del Firewall de Windows se muestra en la lista **Directivas de Firewall de Windows** .  
 
-##  <a name="a-namebkmkassigna-to-deploy-a-windows-firewall-policy"></a><a name="BKMK_Assign"></a> Para implementar una directiva del Firewall de Windows  
+##  <a name="BKMK_Assign"></a> Para implementar una directiva del Firewall de Windows  
 
 1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
 
@@ -78,9 +79,4 @@ Las directivas de firewall de Endpoint Protection en System Center 2012 Configur
 
     > [!IMPORTANT]  
     >  Al implementar una directiva de Firewall de Windows en una recopilación, esta directiva se aplica a los equipos en orden aleatorio durante un período de dos horas para evitar el desbordamiento de la red.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
