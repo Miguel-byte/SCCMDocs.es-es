@@ -2,7 +2,7 @@
 title: "Supervisión del estado de Endpoint Protection | Microsoft Docs"
 description: "Obtenga información acerca de cómo supervisar Endpoint Protection en la jerarquía de System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/9/2016
+ms.date: 03/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
 ms.openlocfilehash: 99e266e44f718d97c2a6e61e8e6816752751ed7b
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 99e266e44f718d97c2a6e61e8e6816752751ed7b
 
 Puede supervisar Endpoint Protection en la jerarquía de Microsoft System Center Configuration Manager por medio del nodo **Estado de Endpoint Protection** en **Seguridad** del área de trabajo **Supervisión**, del nodo **Endpoint Protection** del área de trabajo **Activos y compatibilidad** y del uso de informes.  
 
-##  <a name="a-namebkmk1a-how-to-monitor-endpoint-protection-by-using-the-endpoint-protection-status-node"></a><a name="BKMK_1"></a> Supervisión de Endpoint Protection mediante el nodo de estado de Endpoint Protection  
+##  <a name="BKMK_1"></a> Supervisión de Endpoint Protection mediante el nodo de estado de Endpoint Protection  
 
 1.  En la consola de Configuration Manager, haga clic en **Supervisión**.  
 
@@ -47,7 +48,7 @@ Puede supervisar Endpoint Protection en la jerarquía de Microsoft System Center
     > [!IMPORTANT]  
     >  La información que se muestra en el nodo **Estado de Endpoint Protection** se basa en los últimos datos que se resumen a partir de la base de datos de Configuration Manager y puede no estar actualizada. Si desea recuperar los datos más recientes, en la pestaña **Inicio** , haga clic en **Ejecutar resumen**, o haga clic en **Programar resumen** para ajustar el intervalo del resumen.  
 
-##  <a name="a-namebkmk2a-how-to-monitor-endpoint-protection-in-the-assets-and-compliance-workspace"></a><a name="BKMK_2"></a> Supervisión de Endpoint Protection en el área de trabajo Activos y compatibilidad  
+##  <a name="BKMK_2"></a> Supervisión de Endpoint Protection en el área de trabajo Activos y compatibilidad  
 
 1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
 
@@ -59,7 +60,7 @@ Puede supervisar Endpoint Protection en la jerarquía de Microsoft System Center
 
 3.  En la lista *<nombre de recopilación\>*, seleccione un equipo y luego haga clic en la pestaña **Detalles de malware**.  
 
-##  <a name="a-namebkmk3a-how-to-monitor-endpoint-protection-by-using-reports"></a><a name="BKMK_3"></a> Supervisión de Endpoint Protection mediante informes  
+##  <a name="BKMK_3"></a> Supervisión de Endpoint Protection mediante informes  
  Utilice los siguientes informes para ayudarle a ver la información sobre Endpoint Protection en su jerarquía. También puede usar estos informes para ayudar a solucionar posibles problemas de Endpoint Protection. Para obtener más información sobre cómo configurar la generación de informes en Configuration Manager, vea [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md) (Generación de informes en System Center Configuration Manager) y [Log files in System Center Configuration Manager](../../core/plan-design/hierarchy/log-files.md) (Registrar archivos en System Center Configuration Manager). Los informes de Endpoint Protection están en la carpeta de Endpoint Protection.  
 
 |Nombre del informe|Descripción|  
@@ -81,9 +82,4 @@ Puede supervisar Endpoint Protection en la jerarquía de Microsoft System Center
 |**Permitido**|Un usuario administrativo seleccionado para permitir que el software que contiene el ejecución de malware.|  
 |**Ninguna acción**|Endpoint Protection no realizó ninguna acción en el malware. Esto puede ocurrir si el equipo se reinicia después de que se ha detectado malware y ya no se detecta software malintencionado; Por ejemplo, si una red asignada en la unidad se detecta software malintencionado no vuelva a conectarse cuando se reinicia el equipo.|  
 |**Bloqueado**|Endpoint Protection bloqueó la ejecución del malware. Esto puede ocurrir si se encuentra un proceso en el equipo para que contenga código malintencionado.|
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

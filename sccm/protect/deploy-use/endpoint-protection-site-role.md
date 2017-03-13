@@ -4,7 +4,7 @@ description: Aprenda a configurar Endpoint Protection para administrar la seguri
 defintion: 
 definition: 
 ms.custom: na
-ms.date: 02/14/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
