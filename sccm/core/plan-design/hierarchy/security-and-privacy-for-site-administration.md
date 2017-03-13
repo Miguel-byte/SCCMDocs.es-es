@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 168650cca28fe1331e48ea5e8e025e110dda835f
-ms.openlocfilehash: 4ca43db385ea97d5d026c50a799b783096c05d36
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: a60b8c103a303dcae0bd66f3060d5a8f17d1cef9
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -306,7 +306,8 @@ Identifique y siga las prácticas recomendadas para su versión del servidor IIS
 ##  <a name="BKMK_Security_FSP"></a> Prácticas recomendadas de seguridad para el punto de estado de reserva  
  Use los siguientes procedimientos recomendados de seguridad si instala un punto de estado de reserva en Configuration Manager.  
 
- Para obtener más información sobre las consideraciones de seguridad al instalar un punto de estado de reserva, consulte [Determinar si necesita un punto de estado de reserva](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#BKMK_Determine_FSP).  
+ Para obtener más información sobre las consideraciones de seguridad al instalar un punto de estado de reserva, consulte [Determine Whether You Require a Fallback Status Point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#determine-if-you-need-a-fallback-status-point) (Determinar si necesita un punto de estado de reserva).  
+
 
 **No ejecute otros roles de sistema de sitio en el sistema del sitio y no instale el punto de estado de reserva en un controlador de dominio.**  
 
