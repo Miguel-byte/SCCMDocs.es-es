@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 132803a1aa9aad5c5462686bd656688418e47d07
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -29,7 +30,7 @@ ms.openlocfilehash: 132803a1aa9aad5c5462686bd656688418e47d07
 Para supervisar la infraestructura y las operaciones de System Center Configuration Manager, use el área de trabajo **Supervisión** en la consola de Configuration Manager.  
 
 > [!NOTE]  
->  La excepción a esta ubicación es Migración, que se supervisa directamente en el nodo **Migración** del área de trabajo **Administración** . Para obtener más información, vea [Operations for migrating to System Center Configuration Manager](../../../core/migration/operations-for-migration.md).  
+>  La excepción a esta ubicación es Migración, que se supervisa directamente en el nodo **Migración** del área de trabajo **Administración** . Para obtener más información, vea [Operaciones para migrar a System Center Configuration Manager](../../../core/migration/operations-for-migration.md).  
 
  Además de utilizar la consola de Configuration Manager para la supervisión, puede utilizar los informes de Configuration Manager, o ver los archivos de registro de Configuration Manager para los componentes de Configuration Manager. Para más información sobre los informes, consulte [Generación de informes en System Center Configuration Manager](../../../core/servers/manage/reporting.md). Para más información sobre los archivos de registro, consulte [Archivos de registro en System Center Configuration Manager](../../../core/plan-design/hierarchy/log-files.md).  
 
@@ -55,7 +56,7 @@ Para minimizar el riesgo de un error del sitio, si las tareas de supervisión re
 
 
 
-##  <a name="a-namebkmkmonintormgmttasksa-monitor--common-management-tasks-for-configuration-manager"></a><a name="BKMK_MonintorMgmtTasks"></a> Supervisar tareas de administración comunes para Configuration Manager  
+##  <a name="BKMK_MonintorMgmtTasks"></a> Supervisar tareas de administración comunes para Configuration Manager  
  Configuration Manager proporciona supervisión integrada desde la propia consola de Configuration Manager. Puede supervisar muchas tareas, entre otras, las relacionadas con actualizaciones de software, administración de energía e implementación de contenido en toda la jerarquía.  
 
  Use la información siguiente para obtener ayuda en la supervisión de tareas comunes de Configuration Manager:  
@@ -87,10 +88,10 @@ Consulte [Supervisar el uso de aplicaciones a través de la medición de softwar
  Consulte [Monitor software updates in System Center Configuration Manager](../../../sum/deploy-use/monitor-software-updates.md) (Supervisión de actualizaciones de software en System Center Configuration Manager).  
 
 
-##  <a name="a-namebkmkmonitorinfrastructurea-monitor-hierarchy-infrastructure-for-configuration-manager"></a><a name="BKMK_MonitorInfrastructure"></a> Supervisar la infraestructura de la jerarquía para Configuration Manager  
+##  <a name="BKMK_MonitorInfrastructure"></a> Supervisar la infraestructura de la jerarquía para Configuration Manager  
 Configuration Manager proporciona varios métodos para supervisar el estado y las operaciones de la jerarquía. Puede comprobar el estado del sistema de sitios de toda la jerarquía, supervisar la replicación entre sitios desde una visualización jerárquica o geográfica, supervisar los vínculos de replicación entre sitios para la replicación de bases de datos y usar la herramienta Replication Link Analyzer para solucionar problemas de replicación.  
 
-###  <a name="a-namebkmkshnodea-about-the-site-hierarchy-node"></a><a name="BKMK_SH_Node"></a> Acerca del nodo Jerarquía de sitio  
+###  <a name="BKMK_SH_Node"></a> Acerca del nodo Jerarquía de sitio  
 El nodo **Jerarquía del sitio** del área de trabajo **Supervisión** proporciona una visión general de la jerarquía de Configuration Manager y de los vínculos entre sitios. Puede utilizar dos vistas:  
 
 -   **Diagrama de jerarquía**: esta vista muestra la jerarquía como un mapa topológico simplificado para mostrar solamente la información esencial.  
@@ -126,13 +127,13 @@ La siguiente opción modifica la vista geográfica.
 
      Cuando se especifica una ubicación, puede utilizar el cuadro **Ubicación** para buscar un sitio específico en la jerarquía. Con el sitio seleccionado, introduzca la ubicación como nombre de la ciudad o dirección postal en la columna **Ubicación** . Configuration Manager utiliza Mapas de Bing para resolver la ubicación.  
 
-###  <a name="a-namebkmkmonitorreplinksandstatussa-how-to-monitor-database-replication-links-and-replication-status"></a><a name="BKMK_MonitorRepLinksAndStatuss"></a> Cómo supervisar los vínculos de replicación de bases de datos y el estado de replicación  
+###  <a name="BKMK_MonitorRepLinksAndStatuss"></a> Cómo supervisar los vínculos de replicación de bases de datos y el estado de replicación  
  Además de los detalles de alto nivel que son accesibles desde el nodo **Jerarquía del sitio** en el área de trabajo **Supervisión** . También puede supervisar los detalles para la replicación de base de datos cuando use el nodo **Replicación de base de datos** en el área de trabajo **Supervisión** . Desde **Replicación de base de datos**, podrá supervisar el estado de los vínculos de replicación entre sitios y los detalles de inicialización y de replicación para los grupos de replicaciones en el sitio al que esté conectada la consola de Configuration Manager.  
 
 > [!TIP]  
 >  Aunque también aparece un nodo **Replicación de base de datos** debajo del nodo **Configuración de jerarquía** en el área de trabajo **Administración** , desde esta ubicación no podrá ver el estado de replicación para los vínculos de replicación de bases de datos.  
 
-####  <a name="a-namebkmkmonitorreplicationlinksa-replication-link-status"></a><a name="BKMK_MonitorReplicationLinks"></a> Estado de vínculo de replicación  
+####  <a name="BKMK_MonitorReplicationLinks"></a> Estado de vínculo de replicación  
 La replicación de bases de datos entre sitios implica la replicación de varios conjuntos de información, denominados grupos de replicación. Cada grupo de replicación se replica con diferentes prioridades de replicación. De forma predeterminada, no se pueden modificar los datos contenidos en un grupo de replicación ni la frecuencia de replicación.  
 
  Cuando un vínculo de replicación está activo y no tiene el estado de error o degradado, todos los grupos de replicación se replican oportunamente. Si uno o varios grupos de replicación no completan la replicación dentro del período de tiempo esperado, el vínculo se muestra como degradado. Los vínculos degradados podrían funcionar aún, pero deberá supervisarlos para asegurarse de que vuelvan a su estado activo o investigarlos para comprobar si hay más errores de degradación o replicación.  
@@ -149,7 +150,7 @@ La replicación de bases de datos entre sitios implica la replicación de varios
 
  Cuando un sitio principal se encuentre en proceso de actualización a un nuevo Service Pack y vea el estado del vínculo desde el sitio secundario, el estado del vínculo se mostrará como activo. Después de la actualización, hasta que el sitio secundario se encuentre también en el mismo Service Pack que el principal, el estado del vínculo se mostrará como activo cuando se visualice desde el sitio principal, y como en configuración cuando se visualice desde el sitio secundario.  
 
-####  <a name="a-namebkmkmonitorreplicationstatusa-replication-status"></a><a name="BKMK_MonitorReplicationStatus"></a> Estado de replicación  
+####  <a name="BKMK_MonitorReplicationStatus"></a> Estado de replicación  
  Puede usar el nodo **Replicación de base de datos** del área de trabajo **Supervisión** para ver el estado de replicación para un vínculo de replicación y ver información acerca de la base de datos del sitio en cada sitio del vínculo de replicación. También puede ver detalles sobre los grupos de replicación. Para ver detalles, seleccione un vínculo de replicación y, a continuación, seleccione la pestaña correspondiente al estado de replicación que desea ver. A continuación se proporcionan detalles acerca de las diferentes pestañas del estado de replicación.  
 
  **Resumen**  
@@ -190,7 +191,7 @@ La replicación de bases de datos entre sitios implica la replicación de varios
 > [!TIP]  
 >  Los grupos de replicación de datos de sitio se envían sólo desde el sitio secundario al sitio principal. Los grupos de replicación de datos globales replican en ambas direcciones.  
 
-###  <a name="a-namebkmkrlaa-about-the-replication-link-analyzer"></a><a name="BKMK_RLA"></a> Acerca de Replication Link Analyzer  
+###  <a name="BKMK_RLA"></a> Acerca de Replication Link Analyzer  
  Configuration Manager incluye **Replication Link Analyzer**, que se utiliza para analizar y reparar problemas de replicación. Puede utilizar Replication Link Analyzer para corregir errores del vínculo de replicación cuando hay errores de replicación y cuando la replicación deja de funcionar pero aún no se ha registrado el error. Se puede utilizar Replication Link Analyzer para remediar problemas de replicación entre los siguientes equipos de la jerarquía de Configuration Manager (no importa la dirección del error de replicación):  
 
 -   Entre un servidor de sitio y el servidor de base de datos de sitio.  
@@ -229,7 +230,7 @@ Las acciones de investigación y corrección que se realizan correcta e incorrec
 
 -   Con el lanzamiento de System Center Configuration Manager versión 1511, Replication Link Analyzer genera errores de certificado de SQL Server Service Broker para los sitios primarios que se actualizaron desde System Center 2012 Configuration Manager. Esto es debido a cambios en los nombres de los certificados introducidos con la versión 1511, para los que Replication Link Analyzer aún no se ha actualizado. Pueden omitirse estos errores de forma segura.  
 
-###  <a name="a-namebkmkprocsformonitoringreplicationa-procedures-for-monitoring-database-replication"></a><a name="BKMK_ProcsforMonitoringReplication"></a> Procedimientos para supervisar la replicación de base de datos  
+###  <a name="BKMK_ProcsforMonitoringReplication"></a> Procedimientos para supervisar la replicación de base de datos  
 
 ##### <a name="to-monitor-high-level-site-to-site-database-replication-status"></a>Para supervisar el estado de replicación de base de datos entre sitios de alto nivel    
 1.  En la consola de Configuration Manager, haga clic en **Supervisión**.  
@@ -242,9 +243,4 @@ Las acciones de investigación y corrección que se realizan correcta e incorrec
 1.  En la consola de Configuration Manager, haga clic en **Supervisión**.  
 
 2.  En el área de trabajo **Supervisión** , haga clic en **Replicación de base de datos**y, a continuación, seleccione el vínculo de replicación que desea supervisar. A continuación, en el área de trabajo, seleccione la pestaña correspondiente para ver distintos detalles acerca del estado de replicación de ese vínculo.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
