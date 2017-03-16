@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 24a233516058e645df2a43623855665b97b041b0
 ms.openlocfilehash: 9c0165212fe34f460be2ce870d0542b616f3bc4d
+ms.lasthandoff: 12/29/2016
 
 
 ---
@@ -31,12 +32,7 @@ En el sitio de nivel superior de una jerarquía, el rol de sistema de sitio del 
 
 -   **En modo con conexión:** los datos de uso y diagnóstico se envían automáticamente una vez por semana, desde el punto de conexión de servicio al servicio en la nube.  
 
--   **En modo sin conexión:** los datos de uso y diagnóstico se transfieren manualmente mediante la herramienta de conexión del servicio. Para obtener más información, consulte [Use the Service Connection Tool for System Center Configuration Manager (Usar la herramienta de conexión de servicio para System Center Configuration Manager)](../../../core/servers/manage/use-the-service-connection-tool.md).  
+-   **En modo sin conexión:** los datos de uso y diagnóstico se transfieren manualmente mediante la herramienta de conexión del servicio. Para obtener más información, consulte [Usar la herramienta de conexión de servicio para System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md).  
 
 Para obtener más información, consulte [Acerca del punto de conexión de servicio en System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md).  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 
