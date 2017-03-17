@@ -29,7 +29,7 @@ ms.lasthandoff: 01/21/2017
 
 Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura de Configuration Manager para tratar la administración de dispositivos móviles local.
 
-##  <a name="a-namebkmkdevicesa-supported-devices"></a><a name="bkmk_devices"></a> Dispositivos compatibles  
+##  <a name="bkmk_devices"></a> Dispositivos compatibles  
  La administración de dispositivos móviles local le permite administrar dispositivos móviles mediante las funciones de administración integradas en los sistemas operativos de los dispositivos.  La función de administración se basa en el estándar de administración de dispositivos (DM) Open Mobile Alliance (OMA) y muchas plataformas de dispositivo usan este estándar para permitir que se administren los dispositivos.  Los denominamos **dispositivos modernos** (en la documentación y en la interfaz de usuario de la consola de Configuration Manager) para distinguirlos de otros dispositivos que requieren el cliente de Configuration Manager para administrarlos.  
 
  > [!NOTE]  
@@ -41,7 +41,7 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise   
 
-##  <a name="a-namebkmkintunea-use-of-the--microsoft-intune-subscription"></a><a name="bkmk_intune"></a> Uso de la suscripción a Microsoft Intune  
+##  <a name="bkmk_intune"></a> Uso de la suscripción a Microsoft Intune  
  Necesitará una suscripción a Microsoft Intune para empezar a usar la administración de dispositivos móviles local. La suscripción solo es necesaria para realizar el seguimiento de las licencias de los dispositivos y no se usa para administrar ni almacenar la información de administración de los dispositivos. La totalidad de la administración se controla en la empresa de la organización a través de la infraestructura local de Configuration Manager.  
 
  > [!NOTE]  
@@ -54,7 +54,7 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
 
  Para obtener información sobre cómo configurar la suscripción a Intune, consulte [Configurar una suscripción de Microsoft Intune para la administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/set-up-intune-subscription-on-premises-mdm.md).  
 
-##  <a name="a-namebkmkrolesa-required-site-system-roles"></a><a name="bkmk_roles"></a> Agregar los roles de sistema de sitio requeridos  
+##  <a name="bkmk_roles"></a> Agregar los roles de sistema de sitio requeridos  
  La administración de dispositivos móviles local requiere, como mínimo, uno de cada uno de los siguientes roles de sistema de sitio:  
 
 -   **Punto de proxy de inscripción** para admitir las solicitudes de inscripción.  
@@ -69,11 +69,11 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
 
  Estos roles de sistema de sitio se pueden instalar en el servidor de sistema de sitio único o pueden ejecutarse por separado en servidores diferentes, según las necesidades de la organización. Cada servidor de sistema de sitio que se usa para la administración de dispositivos móviles local debe estar configurado como un extremo HTTPS para comunicarse con dispositivos de confianza. Para obtener más información, vea [Comunicaciones de confianza requeridas](#bkmk_trustedComs).  
 
- Para obtener más información sobre el planeamiento para roles de sistema de sitio, consulte [Plan for site system servers and site system roles for System Center Configuration Manager (Planificar los roles de sistema de sitio y los servidores de sistema de sitio en System Center Configuration Manager)](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).  
+ Para obtener más información sobre el planeamiento para roles de sistema de sitio, consulte [Planificar los roles de sistema de sitio y los servidores de sistema de sitio en System Center Configuration Manager](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).  
 
- Para obtener más información sobre cómo agregar los roles de sistema de sitio requeridos, consulte [Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager (Instalar los roles para la administración de dispositivos móviles local en System Center Configuration Manager)](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md).  
+ Para obtener más información sobre cómo agregar los roles de sistema de sitio requeridos, consulte [Instalar los roles para la administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md).  
 
-##  <a name="a-namebkmktrustedcomsa-required-trusted-communications"></a><a name="bkmk_trustedComs"></a> Comunicaciones de confianza requeridas  
+##  <a name="bkmk_trustedComs"></a> Comunicaciones de confianza requeridas  
  La administración de dispositivos móviles local requiere que los roles de sistema de sitio se habiliten para comunicaciones HTTPS. Según sus necesidades, puede usar la entidad de certificación (CA) de la empresa para establecer las conexiones de confianza entre servidores y dispositivos o podría usar una entidad de certificación disponible públicamente para que sea la autoridad de confianza.  De cualquier modo, necesitará un certificado de servidor web configurado con IIS en los servidores de sistema de sitio que hospedan los roles de sistema de sitio requeridos. También necesitará que el certificado raíz de esa entidad de certificación esté instalado en los dispositivos que deben conectarse a esos servidores.  
 
  Si usa la entidad de certificación de su empresa para establecer comunicaciones de confianza, debe realizar las tareas siguientes:  
@@ -106,7 +106,7 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
 
  Para obtener más información, consulte [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager (Configurar certificados de comunicaciones de confianza para la administración de dispositivos móviles local en System Center Configuration Manager)](../../mdm/get-started/set-up-certificates-on-premises-mdm.md).  
 
-##  <a name="a-namebkmkenrollmenta-enrollment-considerations"></a><a name="bkmk_enrollment"></a> Consideraciones de inscripción  
+##  <a name="bkmk_enrollment"></a> Consideraciones de inscripción  
  Para habilitar la inscripción de dispositivos para la administración de dispositivos móviles local, se debe conceder a los usuarios permiso de inscripción y, además, sus dispositivos deben ser capaces de establecer comunicaciones de confianza con los servidores de sistema de sitio que hospedan los roles de sistema de sitio necesarios.  
 
  La concesión de permiso de inscripción a los usuarios puede realizarse a través de la configuración de un perfil de inscripción en la configuración del cliente de Configuration Manager. Puede usar la configuración de cliente predeterminada para insertar el perfil de inscripción en todos los usuarios detectados, o bien puede configurar dicho perfil en la configuración de cliente personalizada e insertar esa configuración en una o varias recopilaciones de usuarios.  
