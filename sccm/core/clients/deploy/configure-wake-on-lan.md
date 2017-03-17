@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 09f8bc7ee04ff64934030f825a791bc043341963
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="how-to-configure-wake-on-lan-in-system-center-configuration-manager"></a>Cómo configurar Wake on LAN en System Center Configuration Manager
@@ -28,7 +29,7 @@ Especifique la configuración de Wake On LAN para System Center Configuration Ma
 
 Puede complementar Wake On LAN mediante la configuración de cliente de proxy de reactivación. No obstante, para usar el proxy de reactivación, primero debe habilitar Wake On LAN para el sitio y especificar **Usar paquetes de reactivación solamente** y la opción **Unidifusión** para el método de transmisión de Wake On LAN. Esta solución de reactivación también admite conexiones ad hoc, por ejemplo, una conexión a Escritorio remoto.
 
-Utilice el primer procedimiento para configurar un sitio primario para Wake On LAN. Luego, use el segundo procedimiento para especificar la configuración de cliente de proxy de reactivación. Este segundo procedimiento configura las opciones de cliente predeterminadas para la configuración de proxy de reactivación que se aplicarán a todos los equipos de la jerarquía. Si desea que esta configuración solo se aplique a equipos seleccionados, cree una configuración de dispositivo personalizada y asígnela a una recopilación que contenga los equipos que desea configurar para el proxy de reactivación. Para obtener más información acerca de cómo crear configuraciones de cliente personalizadas, consulte [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).
+Utilice el primer procedimiento para configurar un sitio primario para Wake On LAN. Luego, use el segundo procedimiento para especificar la configuración de cliente de proxy de reactivación. Este segundo procedimiento configura las opciones de cliente predeterminadas para la configuración de proxy de reactivación que se aplicarán a todos los equipos de la jerarquía. Si desea que esta configuración solo se aplique a equipos seleccionados, cree una configuración de dispositivo personalizada y asígnela a una recopilación que contenga los equipos que desea configurar para el proxy de reactivación. Para obtener más información acerca de cómo crear configuraciones de cliente personalizadas, consulte [Cómo establecer la configuración del cliente en Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).
 
 Un equipo que recibe la configuración de cliente de proxy de reactivación es probable que detenga su conexión de red entre 1 y 3 segundos. Esto ocurre porque el cliente debe restablecer la tarjeta de interfaz de red para habilitar el controlador de proxy de reactivación en ella.
 
@@ -57,9 +58,4 @@ Puede utilizar los siguientes informes de Wake On LAN para supervisar la instala
 
 > [!TIP]
 > Para comprobar si el proxy de reactivación está en funcionamiento, pruebe la conexión en un equipo inactivo. Por ejemplo, establezca una conexión con una carpeta compartida en ese equipo o intente conectarse al equipo mediante Escritorio remoto. Si usa Direct Access, compruebe que los prefijos IPv6 funcionan realizando las mismas pruebas para un equipo inactivo que se encuentra actualmente en Internet.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
