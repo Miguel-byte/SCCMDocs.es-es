@@ -1,13 +1,13 @@
 ---
-title: "Configurar la inscripción de dispositivos | Microsoft Docs | MDM local"
+title: "Configuración de la inscripción de dispositivos | Microsoft Docs"
 description: "Conceda permiso a los usuarios para que inscriban sus dispositivos para la administración local de dispositivos móviles en System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-- configmgr-client
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9ffaea91-1379-4b86-9953-b25e152f56a9
@@ -16,8 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: ee2bfd1b0bdd51322819cfef9fb6185642bd8796
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: 1b32d755e23e1b1db2162bb117f45791a95b139b
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -35,7 +36,7 @@ Para que los usuarios puedan inscribir sus dispositivos en la administración lo
 
 -   [Almacenar el certificado raíz en dispositivos que se van a inscribir](#bkmk_storeCert)  
 
-##  <a name="a-namebkmkcreateprofa-create-an-enrollment-profile-that-allows-users-to-enroll-modern-devices"></a><a name="bkmk_createProf"></a> Crear un perfil de inscripción que permita a los usuarios inscribir dispositivos modernos  
+##  <a name="bkmk_createProf"></a> Crear un perfil de inscripción que permita a los usuarios inscribir dispositivos modernos  
  Para insertar la configuración necesaria para permitir a los usuarios inscribir dispositivos modernos, puede agregar un nuevo perfil de inscripción a la configuración de cliente predeterminada, que se aplica a todos los usuarios detectados en el sitio de Configuration Manager.  
 
 1.  En la consola de Configuration Manager, haga clic en **Administración** > **Introducción** > **Configuración de cliente**, abra **Configuración de cliente predeterminada** y seleccione **Inscripción**.  
@@ -51,7 +52,7 @@ Para que los usuarios puedan inscribir sus dispositivos en la administración lo
 > [!NOTE]  
 >  Si quiere implementar el perfil de inscripción en un subconjunto de usuarios detectados, puede usar una recopilación de usuarios y crear la configuración de cliente personalizada para implementar en esa recopilación. Para obtener información sobre cómo crear configuraciones de cliente personalizadas, consulte [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md) (Cómo configurar el cliente en System Center Configuration Manager)  
 
-##  <a name="a-namebkmkaddclienta-set-up-additional-client-settings-for-enrolled-devices"></a><a name="bkmk_addClient"></a> Definición de configuración de cliente adicional para dispositivos inscritos  
+##  <a name="bkmk_addClient"></a> Definición de configuración de cliente adicional para dispositivos inscritos  
  Además de configurar el perfil de inscripción para los dispositivos modernos, también puede establecer otra configuración de cliente adicional para definir los ajustes de los dispositivos cuando están inscritos.  Para obtener información sobre cómo configurar clientes, consulte [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md) (Cómo configurar el cliente en System Center Configuration Manager).  
 
  No todas las configuraciones de cliente están disponibles en la administración local de dispositivos móviles. La rama actual de Configuration Manager admite las siguientes configuraciones de cliente en la administración local de dispositivos móviles:  
@@ -65,10 +66,10 @@ Para que los usuarios puedan inscribir sus dispositivos en la administración lo
     > [!NOTE]  
     >  En la administración local de dispositivos móviles, la configuración de implementación de software solo puede usarse como configuración predeterminada del cliente. No se puede usar la configuración de implementación de software con la configuración de cliente personalizada en la rama actual de Configuration Manager.  
 
-##  <a name="a-namebkmkenableusersa-enable-users-to-receive-the-modern-device-enrollment-profile"></a><a name="bkmk_enableUsers"></a> Permitir a los usuarios recibir el perfil de inscripción de dispositivos modernos  
+##  <a name="bkmk_enableUsers"></a> Permitir a los usuarios recibir el perfil de inscripción de dispositivos modernos  
  Para que los usuarios reciban la configuración de cliente modificada con el perfil de inscripción para la administración local de dispositivos móviles, debe detectarse mediante el método de detección de Active Directory. Para asegurarse de que todos los usuarios que necesiten el perfil de inscripción lo obtengan, ejecute la detección para usuarios de Active Directory. Para obtener instrucciones sobre cómo detectar usuarios, consulte [Run discovery for System Center Configuration Manager](../../core/servers/deploy/configure/run-discovery.md) (Ejecutar la detección en System Center Configuration Manager).  
 
-##  <a name="a-namebkmkstorecerta-store-the-root-certificate-on-devices-to-be-enrolled"></a><a name="bkmk_storeCert"></a> Almacenar el certificado raíz en dispositivos que se van a inscribir  
+##  <a name="bkmk_storeCert"></a> Almacenar el certificado raíz en dispositivos que se van a inscribir  
  Los usuarios con dispositivos unidos a un dominio ya tendrán probablemente el certificado raíz necesario para la comunicación de confianza con los servidores que hospedan los roles de sistema de sitio porque la raíz se emitió como parte del proceso de unión al dominio con Active Directory. Ningún equipo o dispositivo móvil unido al dominio necesitará tener instalado el certificado raíz de forma manual en el dispositivo para permitir que la inscripción tenga lugar. Estos dispositivos no tendrán el certificado raíz necesario de forma automática.  
 
  El archivo de certificado exportado debe proporcionarse en el dispositivo para la instalación manual. Esto puede hacerse mediante correo electrónico, OneDrive, tarjeta SD, unidad de memoria USB o cualquier método que se adapte mejor a sus necesidades.  
@@ -88,9 +89,4 @@ Para que los usuarios puedan inscribir sus dispositivos en la administración lo
 6.  Haga clic en **Entidades de certificación raíz de confianza**, haga clic en **Aceptar**y, luego, en **Siguiente**.  
 
 7.  Haga clic en **Finalizar**.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -2,7 +2,7 @@
 title: "Requisitos previos de la migración | Microsoft Docs"
 description: "Obtenga información sobre las versiones admitidas de Configuration Manager, los idiomas admitidos del sitio de origen y las configuraciones necesarias para llevar a cabo la migración."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6cbb790df47c9a87514b0233e2d0c12dd6f23ee9
-ms.openlocfilehash: 70e2531076abedc1381b6e3bccf15b5afe27b465
+ms.sourcegitcommit: ee7f69bd65152deffb2456d9807e1e8fee8802ec
+ms.openlocfilehash: cd90f5462ac4bb4c0a2021e6d5dde65161b9c5f6
+ms.lasthandoff: 03/07/2017
 
 
 ---
@@ -36,7 +37,7 @@ Para migrar desde una jerarquía de origen compatible, debe tener acceso a cada 
 
 -   [Configuraciones necesarias para la migración](#BKMK_Required_Configurations)  
 
-##  <a name="a-namebkmksupportedmigrationversionsa-versions-of-configuration-manager-that-are-supported-for-migration"></a><a name="BKMK_SupportedMigrationVersions"></a> Versiones de Configuration Manager admitidas para la migración  
+##  <a name="BKMK_SupportedMigrationVersions"></a> Versiones de Configuration Manager admitidas para la migración  
  Puede migrar datos de una jerarquía de origen que ejecute cualquiera de las siguientes versiones de Configuration Manager:  
 
 -   Configuration Manager 2007 SP2 (para los efectos de la migración, Configuration Manager 2007 R2 o R3 en el sitio de origen no se tiene en cuenta. Siempre y cuando el sitio de origen ejecute SP2, se admitirán los sitios que tengan instalado el complemento R2 o R3 para la migración a System Center Configuration Manager).  
@@ -46,9 +47,12 @@ Para migrar desde una jerarquía de origen compatible, debe tener acceso a cada 
     > [!TIP]  
     >  Además de la migración, puede usar una actualización local de los sitios que ejecutan System Center 2012 Configuration Manager a System Center Configuration Manager.  
 
--   Una jerarquía de System Center Configuration Manager de la misma versión o una inferior de System Center Configuration Manager  
+-   Una jerarquía de System Center Configuration Manager de la misma versión o una inferior de System Center Configuration Manager.  
 
-##  <a name="a-namebkmksorcesitelanguagea-source-site-languages-that-are-supported-for-migration"></a><a name="BKMK_SorceSiteLanguage"></a> Idiomas del sitio de origen que se admiten para la migración  
+  Por ejemplo, si tiene una jerarquía de destino que ejecuta System Center Configuration Manager 1606, podría usar la migración para copiar datos de una jerarquía de origen que ejecute la versión 1606 o 1602. Sin embargo, no podría migrar datos de una jerarquía de origen que ejecuta la versión 1610.  
+
+
+##  <a name="BKMK_SorceSiteLanguage"></a> Idiomas del sitio de origen que se admiten para la migración  
  Cuando migra datos entre jerarquías de Configuration Manager, estos se almacenan en la jerarquía de destino en el formato independiente del idioma para System Center Configuration Manager. Debido a que Configuration Manager 2007 no almacena datos en un formato neutral de idioma, el proceso de migración debe convertir los objetos a este formato durante la migración de Configuration Manager 2007. Por lo tanto, solo los sitios de origen de Configuration Manager 2007 que se instalan con los siguientes idiomas son compatibles con la migración:  
 
 -   Inglés  
@@ -69,7 +73,7 @@ Para migrar desde una jerarquía de origen compatible, debe tener acceso a cada 
 
 Al migrar datos desde una jerarquía de System Center 2012 Configuration Manager o de System Center Configuration Manager, no hay ninguna limitación en los idiomas del sitio de origen. Los objetos de la base de datos del sitio de origen ya están en un formato neutral de idioma.  
 
-##  <a name="a-namebkmkrequiredconfigurationsa-required-configurations-for-migration"></a><a name="BKMK_Required_Configurations"></a> Configuraciones necesarias para la migración  
+##  <a name="BKMK_Required_Configurations"></a> Configuraciones necesarias para la migración  
 A continuación, se enumeran las configuraciones necesarias para el uso de migración y operaciones de migración:  
 
 -   **Para configurar, ejecutar y supervisar la migración en la consola de Configuration Manager:**  
@@ -82,7 +86,7 @@ A continuación, se enumeran las configuraciones necesarias para el uso de migra
 
     -   **Cuenta de sitio de origen:** esta cuenta se usa para tener acceso al proveedor de SMS del sitio de origen.  
 
-        -   Para un sitio de origen de Configuration Manager 2007 SP2, esta cuenta necesita el permiso **Leer** para todos los objetos del sitio de origen.  
+        -   Para un sitio de origen de Configuration Manager&2007; SP2, esta cuenta necesita el permiso **Leer** para todos los objetos del sitio de origen.  
 
         -   Para un sitio de origen de System Center 2012 Configuration Manager o System Center Configuration Manager, esta cuenta requiere el permiso **Leer** para todos los objetos del sitio de origen. Este permiso se concede a la cuenta mediante administración basada en roles. Para obtener información sobre cómo usar la administración basada en roles, consulte [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md) (Conceptos básicos de la administración basada en roles de System Center Configuration Manager).  
 
@@ -118,14 +122,9 @@ A continuación, se enumeran las configuraciones necesarias para el uso de migra
 
      La **Cuenta de acceso del sitio de origen** configurada para recopilar datos del proveedor de SMS del sitio de origen debe tener los permisos siguientes:  
 
-    -   Para actualizar un punto de distribución de Configuration Manager 2007, la cuenta necesita los permisos **Leer**, **Ejecutar** y **Eliminar** en la clase **Sitio** en el servidor de sitio de Configuration Manager 2007 para quitar correctamente el punto de distribución del sitio de origen de Configuration Manager 2007.  
+    -   Para actualizar un punto de distribución de Configuration Manager&2007;, la cuenta necesita los permisos **Leer**, **Ejecutar** y **Eliminar** en la clase **Sitio** en el servidor de sitio de Configuration Manager&2007; para quitar correctamente el punto de distribución del sitio de origen de Configuration Manager&2007;.  
 
     -   Para reasignar un punto de distribución de System Center 2012 Configuration Manager o de System Center Configuration Manager, la cuenta debe tener el permiso **Modificar** para el objeto **Sitio** en el sitio de origen. Este permiso se concede a la cuenta mediante la administración basada en roles. Para obtener información sobre cómo usar la administración basada en roles, consulte [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md) (Conceptos básicos de la administración basada en roles de System Center Configuration Manager).  
 
      Para actualizar o reasignar correctamente un punto de distribución a una nueva jerarquía, los puertos que se configuran para solicitudes de clientes, en el sitio que administra el punto de distribución de la jerarquía de origen, deben coincidir con los puertos que se configuran para solicitudes de clientes en el sitio de destino que administrará el punto de distribución. Para obtener información sobre los puertos de solicitud de cliente, consulte [How to configure client communication ports in System Center Configuration Manager](../../core/clients/deploy/configure-client-communication-ports.md) (Configurar puertos de comunicación de cliente en System Center Configuration Manager).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

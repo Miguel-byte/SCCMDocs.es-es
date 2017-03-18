@@ -2,7 +2,7 @@
 title: "Configurar la administración híbrida de dispositivos Windows con System Center Configuration Manager y Microsoft Intune | Microsoft Docs"
 description: "Configure la administración de dispositivos Windows con System Center Configuration Manager y Microsoft Intune."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 76cb0c41865859fd410a187435d73c6a23b0c57e
-ms.openlocfilehash: 7b53b094eeb1d59d052c63831eeab0e10edb5913
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: a4fc4a16c78b0eaa0dcefdd596b049eacf1d255b
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -31,7 +32,7 @@ Puede usar Configuration Manager con Intune para administrar equipos de escritor
 Entre las opciones de inscripción de Windows se incluyen las siguientes:
 
 - [Inscripción automática con Azure AD](#azure-active-directory-enrollment)
-- [PC Windows](#set-up-windows-device-enrollment)
+- [PC Windows](#configure-windows-pc-enrollment)
 - [Dispositivos Windows 10 Mobile y Windows Phone](#enable-windows-phone-devices)
 
 ## <a name="azure-active-directory-enrollment"></a>Inscripción con Azure Active Directory
@@ -118,8 +119,6 @@ La inscripción automática permite a los usuarios inscribir en Intune PC Window
 
   Cuando esté listo, necesitará que los usuarios sepan cómo inscribir sus dispositivos. Consulte [Qué decirles a los usuarios finales sobre el uso de Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). Esta información se aplica a Microsoft Intune y a dispositivos móviles administrados por Configuration Manager.  
 
-
-
-<!--HONumber=Feb17_HO2-->
-
+  > [!div class="button"]
+  [< Paso anterior](create-service-connection-point.md)  [Paso siguiente >](set-up-additional-management.md)
 

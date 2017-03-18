@@ -2,7 +2,7 @@
 title: "Configuración de la administración de dispositivos híbrida de iOS y Mac con System Center Configuration Manager y Microsoft Intune | Microsoft Docs"
 description: "Configure la administración de dispositivos de iOS con System Center Configuration Manager y Microsoft Intune."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 74c75653e69154ced18d5bc713b1d9b89e88ae64
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: 2288be606d7d586de5dc18d640f295e823daf266
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -68,8 +69,6 @@ Con Configuration Manager e Intune, puede habilitar la inscripción BYOD ("Bring
 
  Cuando esté listo, necesitará que los usuarios sepan cómo inscribir sus dispositivos. Consulte [Qué decirles a los usuarios finales sobre el uso de Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). Esta información se aplica a Microsoft Intune y a dispositivos móviles administrados por Configuration Manager.
 
-
-
-<!--HONumber=Dec16_HO3-->
-
+ > [!div class="button"]
+ [< Paso anterior](create-service-connection-point.md)  [Paso siguiente >](set-up-additional-management.md)
 

@@ -1,13 +1,13 @@
 ---
-title: "Pasos de preparación | Microsoft Docs | MDM local"
+title: "Pasos de preparación | Microsoft Docs"
 description: "Prepare la administración de dispositivos mediante la administración local de dispositivos móviles (MDM) en System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-- configmgr-client
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1ef60106-8f31-46d6-95a6-25a6495f22c7
@@ -16,8 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: a5c9fa5994f9b7bd13fe53edb6998609852b98ca
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: 2ba11c8e2d8214ce9aca7c887fcb539b38da4e84
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -44,9 +45,4 @@ La administración de dispositivos mediante la administración local de disposit
 -   [Configurar la inscripción del dispositivo para Administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
 
      En esta tarea, otorga permiso a los usuarios para inscribir los equipos y dispositivos, e instala el certificado raíz de confianza en los dispositivos (normalmente unos que no están unidos a un dominio) para permitir conexiones HTTPS con los servidores del sistema de sitio.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

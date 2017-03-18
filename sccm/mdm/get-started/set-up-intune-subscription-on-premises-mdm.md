@@ -1,8 +1,8 @@
 ---
-title: "Configurar la suscripción de Intune | Microsoft Docs | Local"
+title: "Configuración de la suscripción de Intune | Microsoft Docs"
 description: "Configure una suscripción de Intune para realizar el seguimiento de las licencias de la administración local de dispositivos móviles en System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: 2cc9f59d9d32d149aa477ba61afba0094f302fc4
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: f86eac30ed0eada92ddbd25891d1693ae55b4851
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -38,7 +39,7 @@ La administración local de dispositivos móviles de System Center Configuration
  Intune es obligatorio para que la administración local de dispositivos móviles funcione. Solo tiene que [registrarse](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/) para una suscripción de prueba o de pago e ir al paso siguiente para agregar la suscripción en Configuration Manager.  
 
 ##  <a name="add-the-intune-subscription-to-configuration-manager"></a>Agregar la suscripción de Intune a Configuration Manager  
- Para agregar la suscripción a Configuration Manager, siga los mismos pasos básicos que daría al agregar la suscripción para la administración de dispositivos móviles con Intune. Lea las notas siguientes para conocer las diferencias específicas y después siga las instrucciones incluidas en [Para crear la suscripción a Microsoft Intune](../deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription).  
+ Para agregar la suscripción a Configuration Manager, siga los mismos pasos básicos que daría al agregar la suscripción para la administración de dispositivos móviles con Intune. Lea las notas siguientes para conocer las diferencias específicas y después siga las instrucciones incluidas en [Para crear la suscripción a Microsoft Intune](../deploy-use/setup-hybrid-mdm.md#configure-intune-subscription).  
 
 > [!NOTE]  
 >  Al agregar la suscripción a Intune, tenga en cuenta lo siguiente:  
@@ -67,9 +68,4 @@ La administración local de dispositivos móviles de System Center Configuration
 5.  Si planea administrar equipos de escritorio con Windows 10, haga clic con el botón secundario en **Suscripción a Microsoft Intune**, haga clic en **Configurar plataformas**y, a continuación, haga clic en **Habilitar la inscripción de Windows**.  
 
 6.  Haga clic en la casilla de verificación junto a **Habilitar la inscripción de Windows**y, a continuación, haga clic en **Aceptar**.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

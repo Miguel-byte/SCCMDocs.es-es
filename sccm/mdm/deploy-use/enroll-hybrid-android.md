@@ -2,7 +2,7 @@
 title: "Configurar la administración híbrida de dispositivos Android con System Center Configuration Manager y Microsoft Intune | Microsoft Docs"
 description: "Prepárese para administrar dispositivos móviles Android con Configuration Manager e Intune."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: ab892174643e7565ad9a74abc4f83f2f152669bd
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: 1eca422bc62f669412732ec70395d7bbf3ad9c7a
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -43,8 +44,6 @@ Para System Center Configuration Manager, los usuarios pueden descargar la aplic
 
  Cuando esté listo, necesitará que los usuarios sepan cómo inscribir sus dispositivos. Consulte [Qué decirles a los usuarios finales sobre el uso de Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). Esta información se aplica a Microsoft Intune y a dispositivos móviles administrados por Configuration Manager.
 
-
-
-<!--HONumber=Dec16_HO3-->
-
+ > [!div class="button"]
+ [< Paso anterior](create-service-connection-point.md)  [Paso siguiente >](set-up-additional-management.md)
 

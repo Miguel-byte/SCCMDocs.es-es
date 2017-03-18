@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 321b19b2-a093-4b8f-995f-41f74b886eb5
 caps.latest.revision: 13
 caps.handback.revision: 0
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
-ms.openlocfilehash: 7d42ec89300d4eb6b02bafb3f83d341f8e3ca0c0
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: f1ae976899de1fd3efcbde0c7268f071a5d0218b
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -39,15 +40,9 @@ Use perfiles de Wi-Fi en System Center Configuration Manager para implementar la
 
 -   dispositivos con Windows RT 8.1  
 
--   Dispositivos con Windows Phone 8.1  
-
 -   Dispositivos con Windows 10 Desktop o Mobile  
 
--   Dispositivos IPhone con iOS 5, iOS 6, iOS 7 e iOS 8  
-
--   Dispositivos IPad con iOS 5, iOS 6, iOS 7 e iOS 8  
-
--   Dispositivos Android con la versión 4 o posterior
+[Crear perfiles de Wi-Fi para dispositivos móviles](../../mdm/deploy-use/create-wifi-profiles.md) proporciona información sobre cómo usar perfiles de Wi-Fi en Configuration Manager para implementar la configuración de red inalámbrica para los usuarios de dispositivos móviles.
 
 > [!IMPORTANT]  
 >  Para implementar perfiles en dispositivos Android, iOS, Windows Phone y Windows 8.1 o posterior inscritos, estos dispositivos deben inscribirse en Microsoft Intune. Para obtener información sobre cómo inscribir dispositivos, consulte [Enroll devices for management in Intune](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune) (Inscribir dispositivos para la administración en Intune).  
@@ -92,7 +87,7 @@ Use perfiles de Wi-Fi en System Center Configuration Manager para implementar la
     >  Tipos de seguridad: **WPA2 Enterprise** o **WPA2 Personal**  
     > Tipos de cifrado: **AES** o **TKIP**  
     > Tipos de EAP: **Tarjeta inteligente u otro certificado** o **PEAP**  
-  
+
     > Para dispositivos Android no se admiten los tipos de seguridad **WPA-Personal**, **WPA2 – Personal** y **WEP** .  
 
 2.  seleccione el método de cifrado que la red inalámbrica usa.  
@@ -133,9 +128,4 @@ Use perfiles de Wi-Fi en System Center Configuration Manager para implementar la
 
 ### <a name="next-steps"></a>Pasos siguientes
  Para obtener más información sobre cómo implementar el perfil de Wi-Fi, consulte [How to deploy Wi-Fi profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md) (Cómo implementar perfiles de Wi-Fi en System Center Configuration Manager).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

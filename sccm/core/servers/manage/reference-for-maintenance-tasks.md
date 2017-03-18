@@ -2,7 +2,7 @@
 title: Referencia de las tareas de mantenimiento | Microsoft Docs
 description: "Vea la información de las tareas de mantenimiento del sitio de System Center Configuration Manager y compruebe si están habilitadas de forma predeterminada."
 ms.custom: na
-ms.date: 2/7/2017
+ms.date: 3/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6e19d1239cb61b570203fdd13563d5f8c5afc6ad
-ms.openlocfilehash: d2e53e7c0cd0dd1a97d3620a14a15369e1d7e0ec
+ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
+ms.openlocfilehash: 92d3c215569916a5557309d7f488aa88f387da92
+ms.lasthandoff: 03/09/2017
 
 
 ---
@@ -52,6 +53,11 @@ En este tema se describen los detalles de las tareas de mantenimiento del sitio 
 -   **Sitio primario**: habilitado    
 -   Sitio secundario: no disponible  
 
+**Eliminar historial de descargas de clientes antiguos**: use esta tarea para eliminar datos históricos sobre el origen de descarga que usan los clientes. La información del origen de descarga se utiliza para rellenar el [panel orígenes de datos de cliente](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).  
+-  Sitio de administración central (no disponible)
+-     **Sitio primario**: habilitado
+-  Sitio secundario: no disponible
+
 **Eliminar operaciones cliente antiguas**: use esta tarea para eliminar de la base de datos del sitio los datos antiguos en las operaciones de cliente. Por ejemplo, esto incluye datos para las notificaciones de cliente antiguas o caducadas (como descargar solicitudes para directivas de equipo o usuario) y para Endpoint Protection (como las solicitudes realizadas por un usuario administrativo para que los clientes ejecuten un análisis o descarguen definiciones actualizadas).
 
 -   **Sitio de administración central**: habilitado    
@@ -63,6 +69,12 @@ En este tema se describen los detalles de las tareas de mantenimiento del sitio 
 -   **Sitio de administración central**: habilitado   
 -   **Sitio primario**: habilitado    
 -   Sitio secundario: no disponible  
+
+**Eliminar datos antiguos del tráfico de la puerta de enlace de administración en la nube**: use esta tarea para eliminar todos los datos antiguos sobre el tráfico que atraviesa la [puerta de enlace de administración en la nube](/sccm/core/clients/manage/plan-cloud-management-gateway) desde la base de datos del sitio. Por ejemplo, esto incluye datos sobre el número de solicitudes, bytes de solicitud totales, bytes de respuesta totales, número de solicitudes con error y número máximo de solicitudes simultáneas.  
+- **Sitio de administración central**: habilitado
+- **Sitio primario**: habilitado
+- Sitio secundario: no disponible
+
 
 **Eliminar archivos recopilados antiguos**: use esta tarea para eliminar de la base de datos la información antigua sobre los archivos recopilados. Esta tarea también elimina los archivos recopilados desde la estructura de carpetas del servidor de sitio en el sitio seleccionado. De forma predeterminada, las cinco copias más recientes de los archivos recopilados se almacenan en el servidor de sitio en el directorio de **Inboxes\sinv.box\FileCol**. Para obtener más información, consulte [Introduction to software inventory in System Center Configuration Manager](/sccm/core/clients/manage/inventory/introduction-to-software-inventory) (Introducción al inventario de software en System Center Configuration Manager).  
 
@@ -227,6 +239,11 @@ Esta tarea solo funciona en los recursos que son clientes de Configuration Manag
 -   **Sitio primario**: habilitado    
 -   Sitio secundario: no disponible  
 
+**Eliminar registros huérfanos de estado de implementación de cliente**: use esta tarea para purgar periódicamente la tabla que contiene información de estado de implementación de cliente. Esta tarea limpiará los registros asociados con dispositivos obsoletos o retirados.  
+-   **Sitio de administración central**: habilitado    
+-   **Sitio primario**: habilitado    
+-   Sitio secundario: no disponible 
+
 **Eliminar revisiones de la aplicación sin usar**: use esta tarea para eliminar revisiones de la aplicación a las que ya no se hace referencia. Para obtener más información, consulte [How to revise and supersede applications in System Center Configuration Manager](../../../apps/deploy-use/revise-and-supersede-applications.md) (Cómo revisar y sustituir aplicaciones en System Center Configuration Manager).  
 
 -   Sitio de administración central: no disponible    
@@ -288,9 +305,4 @@ Estas asignaciones se almacenan en una tabla para una referencia rápida. Cuando
 -   Sitio de administración central: no disponible    
 -   **Sitio primario**: habilitado    
 -   Sitio secundario: no disponible  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2dd898c9b022c6f0bc243623835af0eece94128f
-ms.openlocfilehash: 95d1671501f672e1d5abe3f0fbbd7d2dfb21e0a3
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: 895b8ae58a9fda3fd22f58d77129053df09c4ccb
+ms.lasthandoff: 03/04/2017
 
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Caché del mismo nivel para clientes de Configuration Manager
@@ -28,7 +29,7 @@ ms.openlocfilehash: 95d1671501f672e1d5abe3f0fbbd7d2dfb21e0a3
 Comenzando por la versión 1610 de System Center Configuration Manager, puede usar la **Caché del mismo nivel** para ayudar a administrar la implementación de contenido a los clientes en ubicaciones remotas. La caché del mismo nivel es una solución integrada de Configuration Manager que permite que los clientes compartan contenido con otros clientes directamente desde su caché local.   
 
 > [!TIP]  
-> Con la versión 1610, el panel de orígenes de datos de cliente y la caché del mismo nivel son funciones de la versión preliminar. Para habilitarlos, vea [Uso de características de la versión preliminar a partir de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+> El panel de orígenes de datos de cliente y la memoria caché del mismo nivel son funciones de la versión preliminar introducidas en la versión 1610. Para habilitarlos, vea [Uso de características de la versión preliminar a partir de las actualizaciones](/sccm/core/servers/manage/pre-release-features).
 
  -     Use la configuración de cliente para configurar los clientes y usar la caché del mismo nivel.
  -     Para compartir el contenido, los clientes de la caché del mismo nivel deben ser miembros del grupo de límites actual del cliente que busca el contenido. Los clientes de la caché del mismo nivel en grupos de límites vecino no están incluidos con el grupo de ubicaciones de origen de contenido disponibles cuando un cliente usa la reserva para buscar contenido de un grupo de límites vecino. Para más información acerca de los grupos de límites actuales y vecinos, vea [Grupos de límites](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).
@@ -66,9 +67,4 @@ Para ayudarle a entender el uso de la caché del mismo nivel, puede ver el panel
   -  **Puerto para descarga de contenido desde nivel (HTTP/HTTPS)**
 
 En cada equipo habilitado para la caché del mismo nivel, si el Firewall de Windows está en uso, Configuration Manager lo configura para que permita el uso de los puertos que se establezcan.
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

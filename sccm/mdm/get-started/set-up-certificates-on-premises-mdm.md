@@ -1,13 +1,13 @@
 ---
-title: Configurar los certificados | Microsoft Docs | MDM local
+title: "Configuración de certificados | Microsoft Docs"
 description: "Configure certificados de comunicaciones de confianza para la administración local de dispositivos móviles en System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-- configmgr-client
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
@@ -17,8 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: d7aaad9298308b588f1bc13027082bf07066a3c2
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: ef35e98ccae0c708cd12767eef9f923f211849fb
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -49,7 +50,7 @@ La administración local de dispositivos móviles de System Center Configuration
 
 -   [Exportar el certificado con la misma raíz que el certificado de servidor web](#bkmk_exportCert)  
 
-##  <a name="a-namebkmkconfigcaa-configure-the-certification-authority-ca-for-crl-publishing"></a><a name="bkmk_configCa"></a> Configurar la entidad de certificación (CA) para la publicación de CRL  
+##  <a name="bkmk_configCa"></a> Configurar la entidad de certificación (CA) para la publicación de CRL  
  De forma predeterminada, la entidad de certificación (CA) utiliza listas de revocación de certificados (CRL) basadas en LDAP que permiten conexiones para los dispositivos unidos a un dominio. Deberá agregar listas CRL basadas en HTTP a la entidad de certificación para que se pueda confiar en los dispositivos no unidos a un dominio con certificados emitidos por dicha entidad. Estos certificados son necesarios para las comunicaciones SSL entre los servidores que hospedan los roles de sistema de sitio de Configuration Manager y los dispositivos inscritos para la administración local de dispositivos móviles.  
 
  Siga los pasos que se describen a continuación para configurar la entidad de certificación para la publicación automática de información de CRL para la emisión de certificados que permitan conexiones de confianza en dispositivos unidos y no unidos a un dominio:  
@@ -76,7 +77,7 @@ La administración local de dispositivos móviles de System Center Configuration
 
 8.  En el cuadro de diálogo Publicar CRL, seleccione **Solo diferencias entre listas CRL** y, luego, haga clic en **Aceptar**.  
 
-##  <a name="a-namebkmkcerttempla-create-the-web-server-certificate-template-on-the-ca"></a><a name="bkmk_certTempl"></a> Crear la plantilla de certificado de servidor web en la entidad de certificación  
+##  <a name="bkmk_certTempl"></a> Crear la plantilla de certificado de servidor web en la entidad de certificación  
  Después de publicar la nueva lista de revocación de certificados en la entidad de certificación, el siguiente paso es crear una plantilla de certificado de servidor web. Esta plantilla es necesaria para emitir certificados para los servidores que hospedan los roles de sistema de sitio de punto de inscripción, punto de proxy de inscripción, punto de distribución y punto de administración de dispositivos. Estos servidores serán puntos de conexión de SSL para comunicaciones de confianza entre los roles de sistema de sitio y los dispositivos inscritos.    Siga los pasos que se describen a continuación para crear la plantilla de certificado:  
 
 1.  Cree un grupo de seguridad denominado **ConfigMgr MDM Servers** que contenga los servidores que ejecutan los sistemas de sitio que requieren comunicaciones de confianza con los dispositivos inscritos.  
@@ -113,7 +114,7 @@ La administración local de dispositivos móviles de System Center Configuration
 
 12. En el cuadro de diálogo **Habilitar plantillas de certificados**, seleccione la nueva plantilla que acaba de crear, **Servidor web MDM ConfigMgr** y luego haga clic en **Aceptar**.  
 
-##  <a name="a-namebkmkrequestcerta-request-the-web-server-certificate-for-each-site-system-role"></a><a name="bkmk_requestCert"></a> Solicitar el certificado de servidor web para cada rol de sistema de sitio  
+##  <a name="bkmk_requestCert"></a> Solicitar el certificado de servidor web para cada rol de sistema de sitio  
  Los dispositivos inscritos para la administración local de dispositivos móviles tienen que confiar en los puntos de conexión SSL que hospedan el punto de inscripción, el punto de proxy de inscripción, el punto de distribución y el punto de administración de dispositivos.  En los pasos siguientes se describe cómo solicitar el certificado de servidor web para IIS. Tiene que realizar este procedimiento para cada servidor (punto de conexión SSL) que hospede uno de los roles de sistema de sitio requeridos para la administración local de dispositivos móviles.  
 
 1.  En el servidor de sitio primario, abra un símbolo del sistema con permisos de administrador, escriba **MMC** y presione **Entrar**.  
@@ -132,7 +133,7 @@ La administración local de dispositivos móviles de System Center Configuration
 
  Dado que cada servidor necesitará un certificado de servidor web único, tendrá que repetir este proceso con cada servidor que hospede uno de los roles de sistema de sitio necesarios para la administración local de dispositivos móviles.  Si un servidor hospeda todos los roles de sistema de sitio, solo será necesario solicitar un certificado de servidor web.  
 
-##  <a name="a-namebkmkbindcerta-bind-the-certificate-to-the-web-server"></a><a name="bkmk_bindCert"></a> Enlazar el certificado al servidor web  
+##  <a name="bkmk_bindCert"></a> Enlazar el certificado al servidor web  
  Ahora, el nuevo certificado debe enlazarse al servidor web de cada servidor de sistema de sitio que hospede los roles de sistema de sitio necesarios para la administración local de dispositivos móviles. Siga estos pasos con cada servidor que hospeda los roles de sistema de sitio de punto de inscripción y punto de proxy de inscripción. Si un servidor hospeda todos los roles de sistema de sitio, solo deberá seguir estos pasos una vez. No es necesario realizar esta tarea para los roles de sistema de sitio de punto de distribución y punto de administración de dispositivos, dado que reciben automáticamente el certificado necesario durante la inscripción.  
 
 1.  En el servidor que hospeda el punto de inscripción, el punto de proxy de inscripción, el punto de distribución o el punto de administración de dispositivos, haga clic en **Iniciar ** > ** Herramientas administrativas ** > ** Administrador de IIS**.  
@@ -145,7 +146,7 @@ La administración local de dispositivos móviles de System Center Configuration
 
 5.  En la consola del Administrador de IIS, en Conexiones, seleccione el servidor web y, en el panel Acciones derecho, haga clic en **Reiniciar**.  
 
-##  <a name="a-namebkmkexportcerta-export-the-certificate-with-the-same-root-as-the-web-server-certificate"></a><a name="bkmk_exportCert"></a> Exportar el certificado con la misma raíz que el certificado de servidor web  
+##  <a name="bkmk_exportCert"></a> Exportar el certificado con la misma raíz que el certificado de servidor web  
  Los Servicios de certificados de Active Directory normalmente instalan el certificado requerido de la entidad de certificación en todos los dispositivos unidos a un dominio. Pero los dispositivos no unidos a un dominio no podrán comunicarse con los roles de sistema de sitio sin un certificado de la entidad de certificación raíz. Para obtener el certificado que necesitan los dispositivos para comunicarse con los roles de sistema de sitio, puede exportarlo desde el certificado enlazado al servidor web.  
 
  Siga estos pasos para exportar el certificado raíz del certificado del servidor web.  
@@ -171,9 +172,4 @@ La administración local de dispositivos móviles de System Center Configuration
      Haga clic en **Siguiente**.  
 
 9. Revise la configuración y haga clic en **Finalizar**.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
