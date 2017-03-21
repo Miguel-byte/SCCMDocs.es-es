@@ -16,9 +16,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: b90519f6f6e3599cd34f5cf93b476739ec17847b
-ms.openlocfilehash: 64ed5982cfd1de6ec135f02c84b9396266001b42
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
+ms.openlocfilehash: 991bf551899d810a55a30f1a833de28db6295cf4
+ms.lasthandoff: 03/09/2017
 
 
 ---
@@ -33,8 +33,11 @@ En las tablas siguientes se enumeran los certificados de infraestructura de clav
 -   Para Windows Server 2008: [Servicios de certificados de Active Directory en Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
 
 > [!IMPORTANT]  
->  Windows deja de confiar en determinados certificados firmados con SHA-1 a partir del 14 de febrero de 2017. Puede obtener más información al respecto en [Windows Enforcement of SHA1 certificates](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx) (Cumplimiento de certificados SHA1 de Windows). En general, se recomienda emitir nuevos certificados de autenticación de cliente y servidor firmados con SHA-2 (lo que incluye SHA-256 y SHA-512, entre otros).
-> Además, se recomienda que todos los servicios accesibles desde Internet usen un certificado SHA-2. Por ejemplo, si adquiere un certificado público para su uso con una puerta de enlace de administración en la nube, asegúrese de que se trata de un certificado SHA-2.
+> Windows deja de confiar en determinados certificados firmados con SHA-1 a partir del 14 de febrero de 2017. System Center Configuration Manager admite certificados SHA-2. El uso de este tipo de certificados supone una importante ventaja de seguridad. Por lo tanto, se recomienda lo siguiente:
+> - Emita nuevos certificados de autenticación de cliente y servidor firmados con SHA-2 (lo que incluye SHA-256 y SHA-512, entre otros).
+> - Todos los servicios accesibles desde Internet deben usar un certificado SHA-2. Por ejemplo, si adquiere un certificado público para su uso con una puerta de enlace de administración en la nube, asegúrese de que se trata de un certificado SHA-2.  
+>
+> En la mayoría de los casos el cambio a certificados SHA-2 no afecta a las operaciones. Para obtener más información, vea [Windows Enforcement of SHA1 certificates](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx) (Cumplimiento de certificados SHA1 de Windows).
 
  Excepto los certificados de cliente que System Center Configuration Manager inscribe en dispositivos móviles y equipos Mac, los certificados que Microsoft Intune crea automáticamente para administrar dispositivos móviles y los certificados que System Center Configuration Manager instala en equipos basados en AMT, puede usar cualquier PKI para crear, implementar y administrar los certificados siguientes. Sin embargo, cuando utilice Servicios de certificados de Active Directory y plantillas de certificado, esta solución PKI de Microsoft puede facilitar la administración de los certificados. Use la columna **Plantilla de certificado de Microsoft para usar** en las tablas siguientes para identificar la plantilla de certificado que mejor satisfaga sus requisitos de certificado. Los certificados basados en plantilla solo los puede emitir una entidad de certificación (CA) empresarial que se ejecute en las ediciones Enterprise o Datacenter del sistema operativo del servidor, como Windows Server 2008 Enterprise y Windows Server 2008 Datacenter.  
 

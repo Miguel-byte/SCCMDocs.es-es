@@ -2,7 +2,7 @@
 title: Actualizaciones en la consola | Microsoft Docs
 description: System Center Configuration Manager se sincroniza con la nube de Microsoft para obtener las actualizaciones que puede instalar desde la consola.
 ms.custom: na
-ms.date: 2/23/2017
+ms.date: 3/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a0d4eb601948aa3abb12409f3475d69cacf4a6aa
-ms.openlocfilehash: a2bf28c724f8e07f32a30ab5e0b832b46cf362bb
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: eafa95922485066632a5da522e6c3de69b45050f
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -33,7 +33,7 @@ Solo las actualizaciones aplicables a su infraestructura y versión se descargan
 
 -   En **modo en línea**, el punto de conexión de servicio se conecta al servicio en la nube de Microsoft automáticamente y descarga las actualizaciones aplicables.  
 
-     De manera predeterminada, Configuration Manager busca nuevas actualizaciones cada 24 horas. A partir de la versión 1602, también puede comprobar las actualizaciones inmediatamente. Para ello, seleccione **Buscar actualizaciones** en el nodo **Administración** > **Servicios en la nube** > **Actualizaciones y mantenimiento** de la consola de Configuration Manager.  
+     De manera predeterminada, Configuration Manager busca nuevas actualizaciones cada 24 horas. También puede comprobar las actualizaciones inmediatamente. Para ello, seleccione **Buscar actualizaciones** en el nodo **Administración** > **Cloud Services** > **Actualizaciones y mantenimiento** de la consola de Configuration Manager.  
 
 -   En el **modo sin conexión**, el punto de conexión de servicio no se conecta al servicio en la nube de Microsoft. Debe [usar la herramienta de conexión de servicio para System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md) manualmente para importar las actualizaciones disponibles.  
 
@@ -44,7 +44,7 @@ Una vez que las actualizaciones se sincronizan, puede verlas en la consola de Co
 
 -   Las actualizaciones no instaladas se muestran como **Disponible**.
 
--   Las actualizaciones instaladas se muestran como **Instalado**.  A partir de la versión 1606, solo se muestra la última actualización instalada. Puede seleccionar el botón **Historial** de la cinta de opciones para ver las actualizaciones instaladas anteriormente.
+-   Las actualizaciones instaladas se muestran como **Instalado**.  Solo se muestra la última actualización instalada. Puede seleccionar el botón **Historial** de la cinta de opciones para ver las actualizaciones instaladas anteriormente.
 
 
 
@@ -61,7 +61,7 @@ Para entender mejor lo que ocurre cuando se descargan las actualizaciones, vea:
 -   [Diagrama de flujo: actualizar la replicación para System Center Configuration Manager](../../../core/servers/manage/update-replication-flowchart.md)  
 
 ## <a name="assign-permissions-to-view-and-manage-updates-and-features"></a>Asignar permisos para ver y administrar actualizaciones y características
-Antes de instalar la actualización 1606, para ver las actualizaciones en la consola, un usuario debe tener asignado un rol de seguridad que incluya el permiso de **lectura** en el grupo de permisos **Sitio**y el ámbito de seguridad **Todos**. A partir de la actualización 1606, una clase de seguridad de administración basada en roles llamada **Paquetes de actualización** concede acceso para ver y administrar las actualizaciones en la consola de Configuration Manager.    
+Para que un usuario vea las actualizaciones en la consola, debe tener asignado un rol de seguridad de administración basada en roles que incluya la clase de seguridad denominada **Paquetes de actualización**. Esta clase concede acceso para ver y administrar las actualizaciones en la consola de Configuration Manager.    
 
 **Acerca de la clase Paquetes de actualización:**  
 De forma predeterminada, **Paquetes de actualización** (SMS_CM_Updatepackages) forma parte de los siguientes roles de seguridad integrados con los permisos de la lista:
@@ -95,13 +95,10 @@ De forma predeterminada, **Paquetes de actualización** (SMS_CM_Updatepackages) 
 ###  <a name="bkmk_step1"></a> Paso 1: Revisar la lista de comprobación de actualización  
 Revise la lista de comprobación de actualización aplicable para las acciones que deben realizarse antes de iniciar la actualización:
 
--   Actualización a 1511: vea [Actualizar a System Center Configuration Manager](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).    
+- Actualización a 1606: vea [Lista de comprobación para la instalación de la actualización 1606](../../../core/servers/manage/checklist-for-installing-update-1606.md).  
 
--   Actualización a 1602 desde 1511: vea [Lista de comprobación para la instalación de la actualización 1602](../../../core/servers/manage/checklist-for-installing-update-1602.md).
-
-- Actualización a 1606 desde 1511 o 1602: vea [Lista de comprobación para la instalación de la actualización 1606](../../../core/servers/manage/checklist-for-installing-update-1606.md).  
-
-- Actualización a 1610 desde 1511, 1602 o 1606: vea [Lista de comprobación para la instalación de la actualización 1610](../../../core/servers/manage/checklist-for-installing-update-1610.md).  
+- Actualización a 1610 desde 1606: vea [Lista de comprobación para la instalación de la actualización 1610](../../../core/servers/manage/checklist-for-installing-update-1610.md).  
+<!--- Update to 1702 from either 1606 or 1610: See [Checklist for installing update 1702](../../../core/servers/manage/checklist-for-installing-update-1702.md). -->  
 
 ###  <a name="bkmk_step2"></a> Paso 2: Probar la actualización de la base de datos antes de instalar una actualización  
 La información de este paso solo se aplica al instalar una *actualización* para un sitio de System Center Configuration Manager. Si va a *actualizar* un sitio de System Center 2012 Configuration Manager a System Center Configuration Manager, vea [Probar la actualización de la base de datos del sitio](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#a-namebkmktesta-test-the-site-database-upgrade).
@@ -172,7 +169,7 @@ Más adelante, cuando instale la actualización, tiene la opción de configurarl
 
 -   Cuando se usa una consola de Configuration Manager después de actualizar el sitio, también se le pide que actualice la consola.  
 
--  Después de que el servidor de sitio completa correctamente la instalación de una actualización, actualiza automáticamente todos los roles de sistema de sitio aplicables.  La única salvedad de esto es para los puntos de distribución. Al instalar una actualización en un sitio que ya ejecuta la versión 1606 o posterior, todos los puntos de distribución ya no se desconectan para actualizar al mismo tiempo. En su lugar, el servidor de sitio usa la configuración de distribución de contenido del sitio para distribuir la actualización a un subconjunto de puntos de distribución a la vez. El resultado es que solo algunos puntos de distribución se desconectan para instalar la actualización. Esto permite a los puntos de distribución que todavía no han comenzado a actualizarse o que han completado la actualización que permanezcan en línea y puedan proporcionar contenido a los clientes.
+-  Después de que el servidor de sitio completa correctamente la instalación de una actualización, actualiza automáticamente todos los roles de sistema de sitio aplicables.  La única salvedad de esto es para los puntos de distribución. Al instalar una actualización, los puntos de distribución no se vuelven a instalar y se desconectan para actualizarse al mismo tiempo. En su lugar, el servidor de sitio usa la configuración de distribución de contenido del sitio para distribuir la actualización a un subconjunto de puntos de distribución a la vez. El resultado es que solo algunos puntos de distribución se desconectan para instalar la actualización. Esto permite a los puntos de distribución que todavía no han comenzado a actualizarse o que han completado la actualización que permanezcan en línea y puedan proporcionar contenido a los clientes.
 
 
 ###  <a name="bkmk_overview"></a> Información general sobre la instalación de actualizaciones en la consola  
@@ -185,7 +182,7 @@ Aparecerá el asistente para actualizaciones que muestra una lista de las áreas
     -   Las advertencias de requisitos previos también pueden detener la instalación de la actualización. Debe solucionar las advertencias antes de reintentar la instalación de la actualización. Consulte [Reintento de la instalación de una actualización con errores](#bkmk_retry) para más información.  
     -   Al seleccionar la opción **Ignore any prerequisite check warnings and install this update regardless of missing requirements** (Pasar por alto las advertencias de comprobación de requisitos previos e instalar esta actualización aunque falten requisitos), establece una condición para la instalación de la actualización que omite las advertencias de requisitos previos. Esto permite continuar con la instalación de la actualización. Si no selecciona esta opción, la instalación de la actualización se detendrá cuando se produce una advertencia. A menos que ya haya ejecutado la comprobación de requisitos previos y haya resuelto las advertencias de requisitos previos para un sitio, no se recomienda usar esta opción.  
 
-      A partir de la versión 1606, en las áreas de trabajo **Administración** y **Supervisión**, el nodo Actualizaciones y mantenimiento incluye un botón en la cinta de opciones denominado **Ignore prerequisite warnings** (Omitir advertencias de requisitos previos). Este botón está disponible cuando se produce un error al completar la instalación de un paquete de actualización debido a las advertencias de comprobación de los requisitos previos. Por ejemplo, si instala una actualización sin usar la opción para omitir las advertencias de requisitos previos (desde el Asistente de actualizaciones) y esa instalación se detiene con un estado de advertencia de requisitos previos pero sin errores, puede seleccionar más tarde **Ignore prerequisite warnings** (Omitir advertencias de requisitos previos) en la cinta de opciones para desencadenar una continuación automática de la instalación que, en ese caso, omitirá las advertencias de requisitos previos. Cuando se usa esta opción, la instalación de la actualización continúa automáticamente después de unos minutos.
+      En las áreas de trabajo **Administración** y **Supervisión**, el nodo Actualizaciones y mantenimiento incluye un botón en la cinta de opciones denominado **Ignore prerequisite warnings** (Omitir advertencias de requisitos previos). Este botón está disponible cuando se produce un error al completar la instalación de un paquete de actualización debido a las advertencias de comprobación de los requisitos previos. Por ejemplo, si instala una actualización sin usar la opción para omitir las advertencias de requisitos previos (desde el Asistente de actualizaciones) y esa instalación se detiene con un estado de advertencia de requisitos previos pero sin errores, puede seleccionar más tarde **Ignore prerequisite warnings** (Omitir advertencias de requisitos previos) en la cinta de opciones para desencadenar una continuación automática de la instalación que, en ese caso, omitirá las advertencias de requisitos previos. Cuando se usa esta opción, la instalación de la actualización continúa automáticamente después de unos minutos.
 
 
 
@@ -211,7 +208,7 @@ Para supervisar el progreso, utilice lo siguiente:
 
 -   En la consola de Configuration Manager: nodo **Supervisión** > **Información general** > **Actualizaciones y estado de mantenimiento**. En este nodo se muestra solamente el estado de instalación del paquete de actualización que se esté instalando actualmente.  
 
-    A partir de la versión 1606, la instalación del paquete de actualización se divide en las siguientes fases para facilitar la supervisión. Para cada fase hay detalles adicionales, incluido el archivo de registro para ver más información:  
+  La instalación del paquete de actualización se divide en las siguientes fases para facilitar la supervisión. Para cada fase hay detalles adicionales, incluido el archivo de registro para ver más información:  
     -   **Descargar** (esta fase se aplica únicamente al sitio de nivel superior en el que está instalado el rol de sistema de sitio del punto de conexión de servicio)
     -   **replicación**
     -   **Comprobación de requisitos previos**
@@ -323,36 +320,7 @@ Para ver las características disponibles y su estado, en la consola, vaya a **A
 Cuando una característica no es opcional, se instala automáticamente y no aparece en el nodo **Características**.  
 
 ##  <a name="bkmk_prerelease"></a> Uso de las características de versión preliminar de las actualizaciones
-Se incluyen características de versión preliminar en el producto para la realización de las primeras pruebas en un entorno de producción, pero no se debe considerar que ya estén listas para él. A partir de la versión 1606, debe dar su consentimiento para usar características de la versión preliminar de System Center Configuration Manager antes de poder seleccionarlas y permitir su uso.  
-
-Dar el consentimiento es una acción que se realiza una sola vez por jerarquía y que no se puede deshacer. Mientras no dé su consentimiento, no puede habilitar nuevas características de una versión preliminar incluidas con las versiones de actualización 1606 o posteriores.
-
-Para dar su consentimiento, en la consola vaya a **Administración** > **Configuración de sitio** > **Sitios** y seleccione **Configuración de jerarquía**. En la pestaña **General**, seleccione **Consent to use Pre-Release features** (Consentimiento para usar características de versiones preliminares).
-
- > [!NOTE]
- > Si ha habilitado características de versiones preliminares desde la actualización 1602 antes de instalar la actualización 1606, esas características permanecerán habilitadas para su uso después de instalar la actualización 1606, aunque no dé su consentimiento para usarlas.
-
-Cuando la jerarquía ejecuta la versión 1606 o posterior y, a continuación, instala una actualización que incluye características de versiones preliminares, dichas características están visibles en el Asistente de actualizaciones y mantenimiento con las características normales incluidas en la actualización:
-  - **Si ha dado su consentimiento:** puede habilitar las características de versiones preliminares en el Asistente de actualizaciones y mantenimiento al instalar la actualización. Para ello, seleccione las características de versiones preliminares como lo haría con cualquier otra característica.     
-
-    Opcionalmente, puede esperar a habilitar una característica de la versión preliminar posteriormente desde el nodo **Administración** > **Servicios en la nube** > **Actualizaciones y mantenimiento** > **Características** de la consola. En el nodo **Características**, seleccione la función y, después, elija **Activar**. (Esta opción aparecerá atenuada mientras no dé su consentimiento).  
-  -   **Si no ha dado su consentimiento:** al instalar una actualización, las características de versiones preliminares están visibles en el Asistente de actualizaciones y mantenimiento, pero están atenuadas y no se pueden habilitar. Una vez instalada la actualización, puede ver estas características en el nodo **Características**, pero no puede habilitarlas hasta después de dar su consentimiento en **Configuración de jerarquía**.
-
- > [!TIP]
- > Al instalar la actualización 1606, las características de versiones preliminares que se incluyen con ella no están visibles en el Asistente de actualizaciones y mantenimiento y no se pueden habilitar en ese momento. Después de instalar la actualización 1606, puede ver las características de las versiones preliminares que se incluyen en el nodo **Características**.
-
-Si ha dado su consentimiento en un sitio primario independiente y, después, expande la jerarquía mediante la instalación de un nuevo sitio de administración central, deberá dar su consentimiento de nuevo en el sitio de administración central.
-
-**Están disponibles las siguientes características de versión preliminar:**
-
- |Característica                    |Agregado como versión preliminar |Agregado como característica completa |  
-|----------------------------|---------------------|------------------------|
-| Almacenamiento en caché del mismo nivel para la distribución de contenido en los clientes |  [Versión 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) |![Todavía no](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Puerta de enlace de administración en la nube |  [Versión 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![Todavía no](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Panel de orígenes de datos de cliente |  [Versión 1610](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) |![Todavía no](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Conector de Microsoft Operations Management Suite  | [Versión 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![Todavía no](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Mantenimiento de una recopilación compatible con clústeres (Dar servicio a un grupo de servidores).| [Versión 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|![Todavía no](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-|Acceso condicional para equipos administrados por System Center Configuration Manager | [Versión 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![Todavía no](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
+Las características de versión preliminar se incluyen en la Rama actual para realizar las primeras pruebas en un entorno de producción. No se debe considerar que estas características están listas para la producción, pero se pueden usar en el entorno de producción. Para obtener más información sobre las características de versión preliminar, incluida la manera de habilitarlas en el entorno, vea [Pre-release features](/sccm/core/servers/manage/pre-release-features) (Características de versión preliminar).                |
 
 
 ## <a name="known-issues"></a>Problemas conocidos

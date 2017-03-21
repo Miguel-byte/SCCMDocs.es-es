@@ -13,9 +13,9 @@ ms.technology:
 - configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 translationtype: Human Translation
-ms.sourcegitcommit: 460089ce58910b68eb0a613bce0166754850844b
-ms.openlocfilehash: 9361c66228cf54eb1daf8138cd03fc8f6139f48d
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
+ms.openlocfilehash: 986d0446209f6e7eac1b681066d1b2e2305e1975
+ms.lasthandoff: 03/09/2017
 
 
 ---
@@ -49,7 +49,7 @@ Existen varios pasos de configuración que tiene que realizar para asegurarse de
 
 ### <a name="create-the-connection"></a>Crear la conexión
 
-1.  En la consola de Configuration Manager, seleccione **Administración** > **Cloud Services** > **Upgrade Readiness Connector (Conector de Upgrade Readiness)** > **Create Connection to Upgrade Readiness (Crear conexión para Upgrade Readiness)** para iniciar el **Asistente para agregar una conexión a Upgrade Readiness**.
+1.  En la consola de Configuration Manager, pulse **Administración** > **Cloud Services** > **Upgrade Readiness Connector (Conector de Upgrade Readiness)** > **Create Connection to Upgrade Analytics (Crear conexión para Upgrade Analytics)** para iniciar el **Asistente para agregar una conexión a Upgrade Analytics**.
 3.  En la pantalla **Azure Active Directory**, proporcione el **Inquilino**, **Id. de cliente** y **Clave secreta de cliente** y, después, seleccione **Siguiente**.
 4.  En la pantalla **Upgrade Readiness**, rellene la **Suscripción de Azure**, el **Grupo de recursos de Azure** y el **Área de trabajo de Operations Management Suite** para proporcionar la configuración de la conexión.
 5.  Compruebe la configuración de la conexión en la pantalla **Resumen** y luego seleccione **Siguiente**.

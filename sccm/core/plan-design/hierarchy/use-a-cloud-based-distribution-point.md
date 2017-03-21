@@ -2,7 +2,7 @@
 title: "Punto de distribución basado en la nube | Microsoft Docs"
 description: "Obtenga información sobre las configuraciones y las limitaciones del uso de un punto de distribución basado en la nube con System Center Configuration Manager."
 ms.custom: na
-ms.date: 2/24/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3eab8e62ace29c0fcb24d47ec7e398d807347a38
-ms.openlocfilehash: a1d701c77afb4d6317d8a137fdf46422063df085
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: 489f38d3f88391e42b5271c03151203d22b26d9e
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -63,7 +63,7 @@ Los puntos de distribución basados en la nube ofrecen las siguientes ventajas a
 
 Un punto de distribución basado en la nube tiene las siguientes limitaciones:  
 
--  Antes de usar la versión 1610 con la revisión KB4010155, no se puede usar un punto de distribución basado en la nube para hospedar paquetes de actualización de software. La próxima versión de Rama actual posterior a la versión 1610 será compatible con esta opción sin necesidad de instalar esta revisión.  
+-  Antes de usar la versión 1610 con la revisión KB4010155, no se puede usar un punto de distribución basado en la nube para hospedar paquetes de actualización de software. Este problema está corregido a partir de la versión 1702.  
 
 -   No se puede usar un punto de distribución basado en la nube con implementaciones habilitadas para PXE o multidifusión.  
 
