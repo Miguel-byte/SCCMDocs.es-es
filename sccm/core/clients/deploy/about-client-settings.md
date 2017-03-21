@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d7265aec46474ba7fc317ddb5e20b91b7b134585
-ms.openlocfilehash: 36f6eb3fe48e904adf4d04450906fada9b477246
-ms.lasthandoff: 12/29/2016
+ms.sourcegitcommit: 289db441899359f3bf3abe5d38896c7acd2045b6
+ms.openlocfilehash: 5eaca19f2b21b1c62b956d2a44d492d3ddd6d10a
+ms.lasthandoff: 03/10/2017
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Acerca de la configuración de cliente en System Center Configuration Manager
@@ -333,7 +333,7 @@ Muchas de las configuraciones del cliente se explican por sí solas. Aquí se de
 
 -   **Retraso aleatorio máximo**
 
-    La recopilación de información de hardware es aleatoria hasta dos horas, de manera que la operación no se realiza simultáneamente en todos los clientes. Puede establecer el retraso máximo para limitar el tiempo durante el que tiene lugar la operación.      
+    La recopilación de información de hardware es aleatoria hasta cuatro horas, de manera que la operación no se realiza simultáneamente en todos los clientes. Puede establecer el retraso máximo para limitar el tiempo durante el que tiene lugar la operación.      
 
 ##  <a name="metered-internet-connections"></a>Conexiones a Internet de uso medido  
  Puede administrar la forma en que los equipos cliente de Windows 8 se comunican con los sitios de Configuration Manager cuando usan conexiones a Internet de uso medido. En ocasiones, los proveedores de acceso a Internet cobran según la cantidad de datos que envía y recibe cuando se utiliza una conexión a Internet de uso medido.  
@@ -505,7 +505,7 @@ Muchas de las configuraciones del cliente se explican por sí solas. Aquí se de
 
     -   Seleccione el icono **Nuevo** para agregar un nuevo tipo de archivo al inventario. Después, especifique la información siguiente en el cuadro de diálogo **Propiedades de archivo inventariado**:  
 
-        -   **Nombre**: proporcione un nombre al archivo que quiere inventariar. Puede usar el carácter **\** para representar cualquier cadena de texto y el carácter **?** para representar cualquier carácter único. Por ejemplo, si quiere hacer un inventario de todos los archivos con la extensión .doc, especifique el nombre del archivo **\*.doc**.  
+        -   **Nombre**: proporcione un nombre al archivo que quiere inventariar. Puede usar el carácter **\** para representar cualquier cadena de texto y el carácter**?**para representar cualquier carácter único. Por ejemplo, si quiere hacer un inventario de todos los archivos con la extensión .doc, especifique el nombre del archivo**\*.doc**.  
 
         -   **Ubicación**: seleccione **Establecer** para abrir el cuadro de diálogo **Propiedades de ruta de acceso**. Puede configurar el inventario de software para buscar el archivo especificado en todos los discos duros del cliente, buscar en una ruta de acceso especificada (por ejemplo **C:\Carpeta**) o buscar una variable especificada (por ejemplo *%windir%*). También puede buscar en todas las subcarpetas de la ruta de acceso especificada.  
 
@@ -528,7 +528,7 @@ Muchas de las configuraciones del cliente se explican por sí solas. Aquí se de
 
     -   En el cuadro de diálogo **Propiedades del archivo recopilado** , proporcione la siguiente información:  
 
-        -   **Nombre**: proporcione un nombre al archivo que quiera recopilar. Puede usar el carácter **\** para representar cualquier cadena de texto y el carácter **?** para representar cualquier carácter único.  
+        -   **Nombre**: proporcione un nombre al archivo que quiera recopilar. Puede usar el carácter **\** para representar cualquier cadena de texto y el carácter**?** para representar cualquier carácter único.  
 
         -   **Ubicación**: seleccione **Establecer** para abrir el cuadro de diálogo **Propiedades de ruta de acceso**. Puede configurar el inventario de software para buscar el archivo que quiere recopilar en todos los discos duros del cliente, buscar en una ruta de acceso especificada (por ejemplo **C:\Carpeta**) o buscar una variable especificada (por ejemplo *%windir%*). También puede buscar en todas las subcarpetas de la ruta de acceso especificada.  
 

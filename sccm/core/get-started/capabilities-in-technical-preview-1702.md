@@ -16,16 +16,14 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 619899aaf8bde36e2bd62b5ba8a037b8580df198
-ms.openlocfilehash: 58b343aed6ea1d846801aca5e0a95200df1acc94
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
+ms.openlocfilehash: 3bdbcd1a3c64a1d50f2f6219b2a5e17d60979864
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1702 para System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Technical Preview)*
-
-
 
 En este artículo se presentan las características disponibles en Technical Preview para System Center Configuration Manager, versión 1702. Puede instalar esta versión para actualizar y agregar nuevas capacidades al sitio de Technical Preview de Configuration Manager. Antes de instalar esta versión de Technical Preview, lea el tema de introducción [Technical Preview for System Center Configuration Manager (Technical Preview para System Center Configuration Manager)](../../core/get-started/technical-preview.md) para familiarizarse con los requisitos y las limitaciones generales de una Technical Preview y para saber cómo actualizar entre versiones y cómo proporcionar comentarios sobre las características de una Technical Preview.    
 
@@ -144,7 +142,7 @@ Para recopilar información de evaluación de cumplimiento para actualizaciones 
 2. Haga clic en **Crear directiva de cumplimiento** o seleccione una directiva de cumplimiento existente para modificarla.
 3. En la página General, proporcione un nombre y una descripción, seleccione **Reglas de cumplimiento para dispositivos administrados con el cliente de Configuration Manager**, establezca la gravedad de no compatibilidad para la creación de informes y haga clic en **Siguiente**.
 4. En la página Plataformas admitidas, seleccione **Windows 10** y después haga clic en **Siguiente**.
-5. En la página Reglas, haga clic en **Nuevo... ** y, después, para **Condición**, seleccione **Requerir cumplimiento para Windows Update for Business**. La opción **Valor** se establece automáticamente en **True**.
+5. En la página Reglas, haga clic en **Nuevo...** y, después, para **Condición**, seleccione **Requerir cumplimiento para Windows Update for Business**. La opción **Valor** se establece automáticamente en **True**.
 
 La nueva directiva se muestra en el nodo **Directivas de cumplimiento** del área de trabajo **Activos y compatibilidad** .
 
@@ -315,6 +313,10 @@ Las secciones siguientes describen la administración de Android for Work.
   - **Administrar todos los dispositivos como Android**: (deshabilitado) Todos los dispositivos Android se inscribirán, incluidos los dispositivos que admiten Android for Work, como dispositivos Android convencionales
   - **Administrar dispositivos compatibles como Android for Work**: (habilitado) Todos los dispositivos que admiten Android for Work se inscriben como dispositivos Android for Work. Todo dispositivo Android que no admita Android for Work se inscribe como dispositivo Android convencional.
   - **Administrar los dispositivos compatibles para los usuarios únicamente en estos grupos como Android for Work**: (pruebas) Le permite dirigir la administración de Android for Work a un conjunto limitado de usuarios. Solo los miembros de los grupos seleccionados que inscriben un dispositivo que admita Android for Work se inscriben como dispositivos Android for Work. Todos los demás se inscriben como dispositivos Android.
+  
+> [!NOTE]
+> Un problema conocido impide que la opción **Administrar los dispositivos compatibles para usuarios solo en estos grupos como Android for Work** funcione según lo esperado. Los dispositivos de los usuarios en los grupos de Azure AD especificados se inscribirán como Android en lugar de Android for Work. Para probar Android for Work, debe usar la opción **Manage all supported devices as Android for Work** (Administrar todos los dispositivos compatibles como Android for Work).
+
 
   Para habilitar la inscripción de Android for Work, debe elegir una de las dos opciones de la parte inferior. La opción **Administrar los dispositivos compatibles para los usuarios únicamente en estos grupos como Android for Work** requiere configurar primero los grupos de seguridad de Azure Active Directory.
 
@@ -323,7 +325,7 @@ Verá el nombre de la cuenta y el nombre de la organización en el portal de Int
 #### <a name="approve-and-deploy-android-for-work-apps"></a>Aprobar e implementar aplicaciones Android for Work
 Siga estos pasos para aprobar aplicaciones en la tienda Play for Work, sincronizarlas con la consola de Configuration Manager e implementarlas en dispositivos Android for Work administrados. Para implementar aplicaciones en los perfiles de trabajo de los usuarios, debe aprobar las aplicaciones en Play for Work y después sincronizarlas con la consola de Configuration Manager.
 
-1. Abra un explorador y vaya a: http://www.play.com/work
+1. Abra un explorador y vaya a https://play.google.com/work.
 2. Inicie sesión con la cuenta de administrador de Google enlazada a su inquilino de Intune.
 3. Busque las aplicaciones que le gustaría implementar en su entorno y haga clic en **Aprobar** en cada una de ellas.
 4. En la consola de Configuration Manager, vaya a **Administrador** > **General** > **Cloud Services** > **Android for Work** y haga clic en **Sincronizar**.
@@ -352,4 +354,7 @@ Para probarlo, cree un elemento de configuración mediante el flujo de trabajo e
 Los dispositivos inscritos como Android for Work solo se pueden eliminar de forma selectiva porque solo se administra el perfil de trabajo. Esto evita que el perfil personal se elimine. Realizar una eliminación selectiva en un dispositivo Android for Work quita el perfil de trabajo, incluidas todas las aplicaciones y los datos, y anula la inscripción del dispositivo.
 
 Para eliminar de forma selectiva un dispositivo Android for Work, use el [proceso de eliminación selectiva](https://docs.microsoft.com/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe) normal en la consola de Configuration Manager.
+
+#### <a name="known-issues-for-android-for-work"></a>Problemas conocidos de Android for Work
+**Al configurar la programación de sincronización en Android for Work, los perfiles de correo electrónico no se pueden implementar** Una de las opciones en la interfaz de usuario de ConfigMgr para los perfiles de correo electrónico de Android for Work es "Programar". En otras plataformas, esto permite al administrador configurar una programación para la sincronización de correo electrónico y otros datos de la cuenta de correo en los dispositivos móviles en que se implementa. En cambio, no funciona para perfiles de correo electrónico de Android for Work y si se escoge cualquier opción que no sea "No configurado", el perfil no se implementará en ningún dispositivo.
 

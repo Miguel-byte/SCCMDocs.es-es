@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
-ms.openlocfilehash: 8af2a797ad4e87d870bb27873a7428e96f63b76d
-ms.lasthandoff: 02/23/2017
+ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
+ms.openlocfilehash: 49e3a9d6f4b8e1afbb76fcba33a7fb58e5a6b13f
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -60,7 +60,7 @@ Si tiene el medio de línea base de la versión 1511, puede actualizar lo siguie
 
 
 > [!TIP]  
->  Al realizar la actualización desde una versión de System Center 2012 Configuration Manager, podrá simplificar el proceso de actualización. Para obtener más información, consulte:  
+>  Al realizar la actualización desde una versión de System Center 2012 Configuration Manager a la Rama actual, es posible simplificar el proceso de actualización. Para obtener más información, consulte:  
 >   
 >  -   La sección [Versiones de línea base y versiones de actualización](../../../../core/servers/manage/updates.md#bkmk_Baselines) de [Actualizaciones para System Center Configuration Manager](../../../../core/servers/manage/updates.md)  
 >  -   [La carpeta CD.Latest para System Center Configuration Manager](../../../../core/servers/manage/the-cd.latest-folder.md)  

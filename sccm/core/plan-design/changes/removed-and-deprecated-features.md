@@ -2,7 +2,7 @@
 title: Funciones obsoletas | Microsoft Docs
 description: "Obtenga información sobre las características, los productos y los sistemas operativos que ya no admite System Center Configuration Manager."
 ms.custom: na
-ms.date: 1/5/2017
+ms.date: 3/9/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1948e2914fff91f156dd8956c018ff0fabcda2f9
-ms.openlocfilehash: 3a1edd1b59676e59d4bfcd4c01a23f7a04f91f4f
+ms.sourcegitcommit: 477ffa5d61d2dfaedf8a3a1f5687e2d72698ad28
+ms.openlocfilehash: cb57a8699081415af7e2e9dc29b0a321f100823d
+ms.lasthandoff: 03/10/2017
 
 
 ---
@@ -58,14 +59,14 @@ Para obtener más información, vea:
 
 Detalles adicionales sobre las características eliminadas con la versión 1511 de System Center Configuration Manager:
 
-###  <a name="a-namebkmkamta-out-of-band-management"></a><a name="bkmk_amt"></a> Administración fuera de banda  
+###  <a name="bkmk_amt"></a> Administración fuera de banda  
  Con Configuration Manager, se ha quitado la compatibilidad nativa con equipos basados en AMT desde la consola de Configuration Manager.  
 
 -   Los equipos basados en AMT siguen estando totalmente administrados cuando se usa el [complemento Intel SCS para Microsoft System Center Configuration Manager](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html). El complemento permite el acceso a las funciones más recientes para administrar AMT, a la vez que elimina las limitaciones introducidas hasta que Configuration Manager pudo incorporar esos cambios.  
 
 -   La administración fuera de banda en System Center 2012 Configuration Manager no se ve afectada por este cambio.  
 
-###  <a name="a-namebkmknapa-network-access-protection"></a><a name="bkmk_nap"></a> Protección de acceso a redes  
+###  <a name="bkmk_nap"></a> Protección de acceso a redes  
  System Center Configuration Manager ha eliminado la compatibilidad con Protección de acceso a redes. La característica quedó en desuso en Windows Server 2012 R2 y se eliminó en Windows 10.  
 
  Para alternativas de protección de acceso a redes, consulte la sección *Funcionalidad en desuso* de [Información general sobre servicios de acceso y directivas de redes](https://technet.microsoft.com/library/hh831683.aspx).  
@@ -76,10 +77,10 @@ Detalles adicionales sobre las características eliminadas con la versión 1511 
 
 |**Sistemas operativos**|**Primer anuncio del desuso**|**Soporte eliminado** |  
 |-|-|-|  
-|Windows Server 2008|10 de julio de 2015|La compatibilidad termina con la primera actualización publicada después del 31 de diciembre de 2016 (véase la nota 1).|  
+|Windows Server 2008|10 de julio de 2015|1511 </br></br>Se quitó la compatibilidad como un sistema de sitio. (Vea la nota 1).|  
 |Windows Server 2008 R2|10 de julio de 2015|La compatibilidad termina con la primera actualización publicada después del 31 de diciembre de 2016 (véase la nota 2).|  
 
--   Nota 1: Una vez finalizado el soporte técnico, este sistema operativo ya no se admitirá para servidores de sitio o la mayoría de los roles de sistema de sitio. Pero se seguirá admitiendo para el rol de sistema de sitio del punto de distribución (incluido el punto de distribución de extracción) hasta que se anuncie que esta compatibilidad está en desuso o hasta que expire el período extendido de soporte técnico de este sistema operativo.  
+-   Nota 1: No se admite este sistema operativo para servidores de sitio o roles de sistema de sitio con la excepción del punto de distribución y el punto de distribución de extracción. Puede seguir usando este sistema operativo como un punto de distribución hasta que se anuncie que esta compatibilidad queda obsoleta o expire el período extendido de soporte técnico de este sistema operativo. Para más información, vea [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095) (La instalación de System Center Configuration Manager CB y LTBS produce un error en Windows Server 2008). 
 
 -   Nota 2: Una vez finalizado el soporte técnico, este sistema operativo ya no se admitirá para servidores de sitio o la mayoría de los roles de sistema de sitio. Pero se seguirá admitiendo para el rol de sistema de sitio del punto de migración de estado y del punto de distribución (incluidos los puntos de distribución de extracción, así como para el entorno PXE y multidifusión) hasta que se anuncie que esta compatibilidad está en desuso o hasta que expire el período extendido de soporte técnico de este sistema operativo. A partir de la versión 1602, puede actualizar in situ el sistema operativo de un servidor de sitio de Windows Server 2008 R2 a Windows Server 2012 R2.  
 
@@ -110,9 +111,4 @@ Detalles adicionales sobre las características eliminadas con la versión 1511 
 |-|-|-|  
 |SQL Server 2008|10 de julio de 2015|Versión 1511|  
 |SQL Server 2008 R2|10 de julio de 2015|La compatibilidad termina con la primera actualización publicada después del 31 de diciembre de 2016.|  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

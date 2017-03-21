@@ -2,7 +2,7 @@
 title: "Aspectos básicos de la administración de contenido | Microsoft Docs"
 description: Use herramientas y opciones en System Center Configuration Manager para administrar el contenido que implemente.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 83020f532edd7a640f0087aad40789e026f75913
-ms.openlocfilehash: 00751cd03a3dd49718994e31bc396e4e7d29ed2b
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: 766120f5ca79f279a513b62c35a2374c859b253a
+ms.openlocfilehash: 079be3c97e4239f8c5293bed5a2ce13abfbe7798
+ms.lasthandoff: 03/15/2017
 
 
 ---
@@ -63,7 +63,7 @@ Para obtener más información sobre estas cuentas, consulte [Administración de
 -   Configuration Manager admite hasta cinco versiones incrementales de un conjunto de contenido antes de volver a enviar todo el conjunto de contenido. Después de la quinta actualización, el siguiente cambio en el conjunto de contenido hace que Configuration Manager cree una nueva versión del conjunto de contenido. Configuration Manager distribuye la nueva versión del conjunto de contenido para reemplazar el conjunto anterior y cualquiera de sus versiones incrementales. Después de que el nuevo conjunto de contenido se distribuya, la replicación diferencial binaria replicará de nuevo los cambios incrementales subsiguientes en los archivos de origen.  
 
 
-La BDR es compatible entre cada sitio principal y secundario de una jerarquía. Dentro de un sitio, la BDR es compatible entre el servidor de sitio y sus puntos de distribución. Esta compatibilidad incluye puntos de distribución de extracción, pero no incluye puntos de distribución basados en la nube. Los puntos de distribución basados en la nube no admiten la replicación diferencial binaria para transferir contenido.  
+La BDR es compatible entre cada sitio principal y secundario de una jerarquía. Dentro de un sitio, la BDR es compatible entre el servidor de sitio y sus puntos de distribución normales. En cambio, los puntos de distribución de extracción y basados en la nube no admiten la replicación diferencial binaria para transferir contenido. Los puntos de distribución de extracción admiten deltas de nivel de archivo, transferir archivos nuevos, pero no los bloques dentro de un archivo.
 
 Las aplicaciones siempre usan la replicación diferencial binaria. En el caso de los paquetes, la replicación diferencial binaria es opcional y no está habilitada de forma predeterminada. Para utilizar la replicación diferencial binaria para paquetes, debe habilitar esta funcionalidad en cada paquete. Para ello, seleccione la opción **Habilitar replicación diferencial binaria** cuando cree un paquete nuevo o cuando edite la pestaña **Origen de datos** de las propiedades del paquete.  
 

@@ -16,8 +16,9 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
-ms.openlocfilehash: 92ab3f7470fd977e5f849bea54aca1a7ef460562
+ms.sourcegitcommit: a8218e23743dafaf8ff1166142cf2dcca1212133
+ms.openlocfilehash: 6917644d6719a1ca636713aa5aebf277927123c8
+ms.lasthandoff: 03/14/2017
 
 
 ---
@@ -42,11 +43,6 @@ Para poder usar Endpoint Protection para administrar la seguridad y el malware e
 |**Paso 1:** [crear un rol de sistema de sitio de punto de Endpoint Protection](endpoint-protection-site-role.md)|El rol de sistema de sitio de punto de Endpoint Protection debe estar instalado para poder usar Endpoint Protection. Se debe instalar en un solo servidor de sistema de sitio y en la parte superior de la jerarquía en un sitio de administración central o un sitio primario independiente. |  
 |**Paso 2:** [configurar alertas de Endpoint Protection](endpoint-configure-alerts.md)|Las alertas informan al administrador si se han producido eventos específicos, como una infección de malware. Las alertas se muestran en el nodo **Alertas** del área de trabajo **Supervisión** o, de forma alternativa, pueden enviarse por correo electrónico a los usuarios especificados. |  
 |**Paso 3:** [configurar orígenes de actualizaciones de definiciones para clientes de Endpoint Protection](endpoint-definition-updates.md)|Es posible configurar Endpoint Protection para que use diversos orígenes para la descarga de actualizaciones de definiciones. |  
-|**Paso 4:** [configurar la directiva antimalware predeterminada y crear directivas antimalware personalizadas](endpoint-antimalware-policies.md)|La directiva antimalware predeterminada se aplica si está instalado el cliente de Endpoint Protection. Toda directiva personalizada que haya implementado se aplica de forma predeterminada, en los 60 minutos posteriores a la implementación del cliente. Asegúrese de haber configurado las directivas antimalware antes de implementar el cliente de Endpoint Protection. Vea |  
+|**Paso 4:** [configurar la directiva antimalware predeterminada y crear directivas antimalware personalizadas](endpoint-antimalware-policies.md)|La directiva antimalware predeterminada se aplica si está instalado el cliente de Endpoint Protection. Toda directiva personalizada que haya implementado se aplica de forma predeterminada, en los 60 minutos posteriores a la implementación del cliente. Asegúrese de que configuró las directivas antimalware antes de implementar el cliente de Endpoint Protection. |  
 |**Paso 5:** [configurar opciones de cliente personalizadas para Endpoint Protection](endpoint-protection-configure-client.md)|Use las opciones de cliente personalizadas con el fin de configurar las opciones de Endpoint Protection para las recopilaciones de equipos de la jerarquía.<br /><br /> Nota: No configure las opciones de cliente personalizadas de Endpoint Protection a menos que esté seguro de que quiere aplicarlas a todos los equipos de la jerarquía. |  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
