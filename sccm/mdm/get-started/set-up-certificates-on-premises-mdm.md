@@ -55,7 +55,7 @@ La administración local de dispositivos móviles de System Center Configuration
 
  Siga los pasos que se describen a continuación para configurar la entidad de certificación para la publicación automática de información de CRL para la emisión de certificados que permitan conexiones de confianza en dispositivos unidos y no unidos a un dominio:  
 
-1.  En el servidor en el que se ejecuta la entidad de certificación de su sitio, haga clic en **Iniciar** > ** Herramientas administrativas** > ** Entidad de certificación**.  
+1.  En el servidor en el que se ejecuta la entidad de certificación de su sitio, haga clic en **Iniciar** > **Herramientas administrativas** > ** Entidad de certificación**.  
 
 2.  En la consola de la entidad de certificación, haga clic en **CertificateAuthority** y luego en **Propiedades**.  
 
@@ -119,11 +119,11 @@ La administración local de dispositivos móviles de System Center Configuration
 
 1.  En el servidor de sitio primario, abra un símbolo del sistema con permisos de administrador, escriba **MMC** y presione **Entrar**.  
 
-2.  En MMC, haga clic en **Archivo** > ** Agregar o quitar complemento**.  
+2.  En MMC, haga clic en **Archivo** > **Agregar o quitar complemento**.  
 
 3.  En el complemento Certificados, seleccione **Certificados**, haga clic en **Agregar**, seleccione **Cuenta de equipo**, haga clic en **Siguiente**, haga clic en **Finalizar** y, finalmente, en **Aceptar** para salir de la ventana Agregar o quitar complemento.  
 
-4.  Haga clic en **Personal** y, a continuación, en **Todas las tareas** > ** Solicitar un nuevo certificado**.  
+4.  Haga clic en **Personal** y, a continuación, en **Todas las tareas** > **Solicitar un nuevo certificado**.  
 
 5.  En el asistente de Inscripción de certificados, haga clic en **Siguiente**, seleccione **Directiva de inscripción de Active Directory** y haga clic en **Siguiente**.  
 
@@ -136,11 +136,11 @@ La administración local de dispositivos móviles de System Center Configuration
 ##  <a name="bkmk_bindCert"></a> Enlazar el certificado al servidor web  
  Ahora, el nuevo certificado debe enlazarse al servidor web de cada servidor de sistema de sitio que hospede los roles de sistema de sitio necesarios para la administración local de dispositivos móviles. Siga estos pasos con cada servidor que hospeda los roles de sistema de sitio de punto de inscripción y punto de proxy de inscripción. Si un servidor hospeda todos los roles de sistema de sitio, solo deberá seguir estos pasos una vez. No es necesario realizar esta tarea para los roles de sistema de sitio de punto de distribución y punto de administración de dispositivos, dado que reciben automáticamente el certificado necesario durante la inscripción.  
 
-1.  En el servidor que hospeda el punto de inscripción, el punto de proxy de inscripción, el punto de distribución o el punto de administración de dispositivos, haga clic en **Iniciar ** > ** Herramientas administrativas ** > ** Administrador de IIS**.  
+1.  En el servidor que hospeda el punto de inscripción, el punto de proxy de inscripción, el punto de distribución o el punto de administración de dispositivos, haga clic en **Iniciar** > **Herramientas administrativas** > **Administrador de IIS**.  
 
 2.  En Conexiones, vaya a **Sitio web predeterminado**, haga clic con el botón derecho y luego haga clic en **Modificar enlaces...**  
 
-3.  En el cuadro de diálogo Enlaces de sitios, haga clic en **https** y luego en **Editar… **  
+3.  En el cuadro de diálogo Enlaces de sitios, haga clic en **https** y luego en **Editar…**  
 
 4.  En el cuadro de diálogo Modificar enlace de sitio, seleccione el certificado que acaba de inscribir como **certificado SSL**, haga clic en **Aceptar** y, luego, en **Cerrar**.  
 
