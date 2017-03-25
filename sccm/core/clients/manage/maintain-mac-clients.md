@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: c74b553ab76a2b77b0d893151351132da05a640d
 ms.openlocfilehash: 5b75f3296dc20a6766a894f463e958455ca1d65f
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -55,13 +56,13 @@ A continuación se indican procedimientos para desinstalar clientes Mac y para r
 
  -   **RenewalPeriod2**: especifica, en segundos, el segundo período de renovación en el que los usuarios pueden renovar el certificado. El valor predeterminado es 259.200 segundos (3 días). Si este valor se configura y es mayor o igual que 300 segundos y menor o igual que **RenewalPeriod1**, se usará el valor. Si **RenewalPeriod1** es mayor que 3 días, se usará un valor de 3 días para **RenewalPeriod2**.  Si **RenewalPeriod1** es menor que 3 días, **RenewalPeriod2** se establecerá en el mismo valor que **RenewalPeriod1**.  
 
- -   **RenewalReminderInterval1**: especifica, en segundos, la frecuencia con la que se mostrará el Asistente para renovación de certificados a los usuarios durante el primer período de renovación. El valor predeterminado es 86.400 segundos (1 día). Si **RenewalReminderInterval1** es mayor que 300 segundos y menor que el valor configurado para **RenewalPeriod1**, se usará el valor configurado. De lo contrario, se utilizará el valor predeterminado de 1 día.  
+ -   **RenewalReminderInterval1** - especifica, en segundos, la frecuencia con la que se mostrará el Asistente para renovación de certificados a los usuarios durante el primer período de renovación. El valor predeterminado es 86.400 segundos (1 día). Si **RenewalReminderInterval1** es mayor que 300 segundos y menor que el valor configurado para **RenewalPeriod1**, se usará el valor configurado. De lo contrario, se utilizará el valor predeterminado de 1 día.  
 
- -   **RenewalReminderInterval2**: especifica, en segundos, la frecuencia con la que se mostrará el Asistente para renovación de certificados a los usuarios durante el segundo período de renovación. El valor predeterminado es 28.800 segundos (8 horas). Si **RenewalReminderInterval2** es mayor que 300 segundos y menor o igual que **RenewalReminderInterval1** , y menor o igual que **RenewalPeriod2**, se usará el valor configurado. De lo contrario, se usará un valor de 8 horas.  
+ -   **RenewalReminderInterval2** - especifica, en segundos, la frecuencia con la que se mostrará el Asistente para renovación de certificados a los usuarios durante el segundo período de renovación. El valor predeterminado es 28.800 segundos (8 horas). Si **RenewalReminderInterval2** es mayor que 300 segundos y menor o igual que **RenewalReminderInterval1** , y menor o igual que **RenewalPeriod2**, se usará el valor configurado. De lo contrario, se usará un valor de 8 horas.  
 
-     **Ejemplo** : si se mantienen los valores predeterminados, 45 días antes de que expire el certificado, el asistente se abrirá cada 24 horas.  A los 3 días de que expire el certificado, el asistente se abrirá cada 8 horas.  
+     **Ejemplo:** si se mantienen los valores predeterminados, 45 días antes de que expire el certificado, el asistente se abrirá cada 24 horas.  A los 3 días de que expire el certificado, el asistente se abrirá cada 8 horas.  
 
-     **Ejemplo** : use la siguiente línea de comandos, o un script, para establecer el valor del primer período de renovación en 20 días.  
+     **Ejemplo:** use la siguiente línea de comandos, o un script, para establecer el valor del primer período de renovación en 20 días.  
 
      `sudo defaults write com.microsoft.ccmclient RenewalPeriod1 1728000`  
 
@@ -87,19 +88,19 @@ A continuación se indican procedimientos para desinstalar clientes Mac y para r
 
 3.  En la página **General** , especifique la siguiente información:  
 
-    -   **NombreQuitar SMSID para Mac**:  
+    -   **Nombre: Quitar SMSID para Mac**  
 
-    -   **TipoMac OS X**:  
+    -   **Tipo: Mac OS X**  
 
 4.  En la página **Plataformas admitidas**, asegúrese de que están seleccionadas todas las versiones de Mac OS X.  
 
 5.  En la página **Configuración**, seleccione **Nueva** y, después, en el cuadro de diálogo **Crear configuración**, especifique la información siguiente:  
 
-    -   **NombreQuitar SMSID para Mac**:  
+    -   **Nombre: Quitar SMSID para Mac**  
 
-    -   **Tipo de configuraciónscript**:  
+    -   **Tipo de configuraciónscript:**  
 
-    -   **Tipo de datoscadena**:  
+    -   **Tipo de datoscadena:**  
 
 6.  En el cuadro de diálogo **Crear configuración**, en **Script de detección**, seleccione **Agregar script** para especificar un script que detecta equipos Mac con el SMSID configurado.  
 
@@ -123,9 +124,9 @@ A continuación se indican procedimientos para desinstalar clientes Mac y para r
 
 12. En la página **Reglas de compatibilidad** del asistente, haga clic en **Nueva**y, a continuación, en el cuadro de diálogo **Crear regla** , especifique la información siguiente:  
 
-    -   **NombreQuitar SMSID para Mac**:  
+    -   **Nombre: Quitar SMSID para Mac**  
 
-    -   **Configuración seleccionada**: seleccione **Examinar** y, luego, seleccione el script de detección especificado previamente.  
+    -   **Configuración seleccionada:** seleccione **Examinar** y, luego, seleccione el script de detección especificado previamente.  
 
     -   En el campo **los siguientes valores** escriba **The domain/default pair of (com.microsoft.ccmclient, SMSID) does not exist**.  
 
@@ -160,10 +161,5 @@ A continuación se indican procedimientos para desinstalar clientes Mac y para r
     f.  Seleccione **Guardar cambios** y cierre el cuadro de diálogo **Keychain Access** (Acceso a cadenas de claves).  
 
 17. Reinicie el equipo Mac.  
-
-
-
-
-<!--HONumber=Jan17_HO1-->
 
 
