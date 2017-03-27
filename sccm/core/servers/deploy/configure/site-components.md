@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9e170271e1b690289085e80eeff453219bc24010
-ms.openlocfilehash: 9a61162cb992c1947a4ad52b51710740a1b6c4c6
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 83550fbf0ef1f9adb0bb2c51a4f3c26a7500d352
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -69,7 +69,7 @@ En cada sitio de System Center Configuration Manager, puede configurar component
     -   Los nombres de dominio completos (FQDN) especificados para los puntos de administración de Configuration Manager tienen entradas de host (registros A o AAA) en DNS.  
 
     > [!WARNING]  
-    >  Para que los clientes encuentren puntos de administración publicados en DNS, debe asignar los clientes a un sitio específico en lugar de usar la asignación automática de sitios. Configure estos clientes para que usen el código de sitio con el sufijo de dominio de su punto de administración. Para obtener más información, vea [Búsqueda de puntos de administración](../../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_LocatingMPs) en [Cómo asignar clientes a un sitio en System Center Configuration Manager](../../../../core/clients/deploy/assign-clients-to-a-site.md).  
+    >  Para que los clientes encuentren puntos de administración publicados en DNS, debe asignar los clientes a un sitio específico en lugar de usar la asignación automática de sitios. Configure estos clientes para que usen el código de sitio con el sufijo de dominio de su punto de administración. Para obtener más información, vea [Búsqueda de puntos de administración](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points) en [Cómo asignar clientes a un sitio en System Center Configuration Manager](/sccm/core/clients/deploy/assign-clients-to-a-site).  
 
      Si los clientes de Configuration Manager no pueden usar Active Directory Domain Services o DNS para buscar puntos de administración en la intranet, usarán [WINS](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#bkmk_wins). El primer punto de administración que se instala para el sitio se publica automáticamente en WINS cuando se configura para aceptar conexiones de cliente HTTP en la intranet.  
 
