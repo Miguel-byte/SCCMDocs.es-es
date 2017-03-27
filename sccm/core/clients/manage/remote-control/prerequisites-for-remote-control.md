@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: c1b2057e-b74f-43fa-a293-763a8f866d3d
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: eafa0d85935c2009cc63d17b06ed83a4666d7fac
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -65,9 +66,4 @@ El control remoto de System Center Configuration Manager tiene dependencias exte
 |El control remoto debe habilitarse para los clientes|De forma predeterminada, el control remoto no está habilitado cuando se instala Configuration Manager. Para obtener información sobre cómo habilitar y configurar el control remoto, consulte [Configuración del control remoto en System Center Configuration Manager](../../../../core/clients/manage/remote-control/configuring-remote-control.md).|  
 |Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.|El rol de sistema de sitio de punto de servicios de informes debe instalarse antes de poder ejecutar informes para el control remoto. Para obtener más información, consulte [Generación de informes en System Center Configuration Manager](../../../../core/servers/manage/reporting.md).|  
 |Permisos de seguridad para administrar el control remoto|Para acceder a recursos de la recopilación e iniciar una sesión de control remoto desde la consola de Configuration Manager: permisos **Controlar AMT**, **Leer**, **Leer recurso** y **Control remoto** para el objeto **Recopilación**.<br /><br /> El rol de seguridad **Operador de herramientas remotas** incluye estos permisos, que son necesarios para administrar el control remoto en Configuration Manager.<br /><br /> Para obtener más información, consulte [Configurar la administración basada en roles de System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-role-based-administration.md).<br /><br /> Además, debe agregar usuarios a los que quiera conceder permiso para utilizar el control remoto y la asistencia remota a la lista de vistas permitidas de control remoto mediante la opción **Visores permitidos de control remoto y asistencia remota** en la configuración de cliente **Herramientas remotas** .|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

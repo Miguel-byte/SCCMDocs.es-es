@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
 ms.openlocfilehash: 82867e77840e14e9b8170801ea3c4a9f399c9890
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -32,7 +33,7 @@ La administración de cliente basada en Internet (a veces denominada IBCM) le pe
 
  Utilice las siguientes secciones para planear la administración de cliente basada en Internet.  
 
-##  <a name="a-namebkmkibcmfeaturesnotsupporteda-features-that-are-not-supported-on-the-internet"></a><a name="BKMK_IBCM_FeaturesNotSupported"></a> Características no admitidas en Internet  
+##  <a name="BKMK_IBCM_FeaturesNotSupported"></a> Características no admitidas en Internet  
  No todas las funciones de administración de cliente son apropiadas para Internet y, por lo tanto, no son compatibles cuando se administran clientes en Internet. Las características que no son compatibles con la administración basada en Internet suelen estar basadas en Servicios de dominio de Active Directory, o no son apropiadas para una red pública; por ejemplo, la detección de redes y Wake on LAN (WOL).  
 
  No se admiten las siguientes características cuando los clientes se administran en Internet:  
@@ -53,7 +54,7 @@ La administración de cliente basada en Internet (a veces denominada IBCM) le pe
 
  Cuando tiene un punto de actualización de software que se ha configurado para aceptar conexiones de Internet, los clientes basados en Internet de Configuration Manager siempre realizan una búsqueda con respecto a este punto de actualización de software para determinar las actualizaciones de software que son necesarias. No obstante, cuando estos clientes se encuentran en Internet, primero intentan descargar las actualizaciones de software de Microsoft Update, en lugar de hacerlo desde un punto de distribución basado en Internet. Solo si se produce un error, intentan descargar las actualizaciones de software necesarias desde un punto de distribución basado en Internet. Los clientes que no están configurados para la administración de cliente basada en Internet nunca intentan descargar las actualizaciones de software desde Microsoft Update; siempre usan los puntos de distribución de Configuration Manager.  
 
-##  <a name="a-namebkmkplanforinternetsitesystemsa-considerations-for-client-communications-from-the-internet-or-untrusted-forest"></a><a name="BKMK_PlanforInternetSiteSystems"></a> Consideraciones sobre las comunicaciones de cliente desde Internet o desde un bosque que no es de confianza  
+##  <a name="BKMK_PlanforInternetSiteSystems"></a> Consideraciones sobre las comunicaciones de cliente desde Internet o desde un bosque que no es de confianza  
  Los siguientes roles de sistema de sitio instalados en los sitios primarios admiten conexiones provenientes de clientes que se encuentran en ubicaciones que no son de confianza, como Internet o un bosque que no es de confianza (los sitios secundarios no admiten conexiones de cliente desde ubicaciones que no son de confianza):  
 
 -   Punto de sitios web del catálogo de aplicaciones  
@@ -94,7 +95,7 @@ Aunque no es necesario tener una relación de confianza entre el bosque de un cl
 -   **Protocolo de túnel**:   
     Si su servidor proxy web no puede admitir los requisitos del protocolo de puente SSL o si quiere configurar la compatibilidad con Internet para dispositivos móviles inscritos por Configuration Manager, también se admite el protocolo de túnel SSL. Esto es una opción menos segura porque los paquetes SSL de Internet se reenvían a los sistemas de sitio sin terminación SSL, por lo que no se puede comprobar si incluyen contenido malintencionado. Cuando se utiliza el protocolo de túnel SSL, no hay ningún requisito de certificado para el servidor proxy web.  
 
-##  <a name="a-namebkmkplanforinternetclientsa-planning-for-internet-based-clients"></a><a name="BKMK_PlanforInternetClients"></a> Planeamiento de clientes basados en Internet  
+##  <a name="BKMK_PlanforInternetClients"></a> Planeamiento de clientes basados en Internet  
  Debe decidir si los equipos cliente que se administrarán a través de Internet van a configurarse para administración en la intranet e Internet, o solamente para administración de cliente basada en Internet. Solo se puede configurar la opción de administración de cliente durante la instalación de un equipo cliente. Si cambia de opinión más adelante, debe volver a instalar al cliente.  
 
 > [!NOTE]  
@@ -114,7 +115,7 @@ Aunque no es necesario tener una relación de confianza entre el bosque de un cl
 
  La ventaja de poder cambiar de forma automática entre administración de cliente basada en Internet y administración de cliente de intranet es que los equipos cliente pueden usar automáticamente todas las características de Configuration Manager cada vez que estén conectados a la intranet, a la vez que continúan siendo administrados para funciones de administración esenciales cuando están en Internet. Además, una descarga que haya comenzado en Internet se puede reanudar sin problemas en la intranet y viceversa.  
 
-##  <a name="a-namebkmkprerequisitsforinternetclientmgmta-prerequisites-for-internet-based-client-management"></a><a name="BKMK_PrerequisitsForInternetClientMgmt"></a> Requisitos previos para la administración de cliente basada en Internet  
+##  <a name="BKMK_PrerequisitsForInternetClientMgmt"></a> Requisitos previos para la administración de cliente basada en Internet  
  La administración de cliente basada en Internet de Configuration Manager presenta las siguientes dependencias externas:  
 
 -   Los clientes que van a administrarse en Internet deben tener una conexión a Internet.  
@@ -196,9 +197,4 @@ Aunque no es necesario tener una relación de confianza entre el bosque de un cl
      Para obtener información de configuración compatible con estos requisitos, consulte la documentación del firewall o del servidor proxy.  
 
      Para obtener información sobre requisitos de comunicación similares cuando se utiliza el punto de actualización de software para conexiones de cliente de Internet, consulte la documentación de Windows Server Update Services (WSUS). Por ejemplo, para WSUS en Windows Server 2003, consulte [Apéndice D: Configuración de seguridad](http://go.microsoft.com/fwlink/p/?LinkId=143368), el apéndice de implementación para la configuración de seguridad.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

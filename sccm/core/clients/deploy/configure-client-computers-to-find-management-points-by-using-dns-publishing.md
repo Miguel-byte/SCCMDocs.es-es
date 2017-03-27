@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 03cec407-0f9f-454f-a360-b005af738d29
 caps.latest.revision: 6
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 9eadb91a575323b4c36af14962f370046ea513ce
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -57,9 +58,4 @@ Los clientes de System Center Configuration Manager deben encontrar un punto de 
 2.  En la pestaña **Sitio** , especifique el sufijo DNS de un punto de administración y, a continuación, haga clic en **Aceptar**.  
 
      Si el sitio tiene varios puntos de administración en más de un dominio, especifique un solo dominio. Cuando los clientes se conectan a un punto de administración en este dominio, descargarán una lista de puntos de administración disponibles que incluirá los puntos de administración de los otros dominios.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

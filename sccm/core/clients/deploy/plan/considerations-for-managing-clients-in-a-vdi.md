@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 58251f6a4eebac4cba9f3d51f8d0aaad068c3ab8
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -48,9 +49,4 @@ System Center Configuration Manager admite la instalación del cliente de Config
 >  Con la excepción de los clientes de Windows Embedded que están en modo de mantenimiento, los clientes de Configuration Manager que no se están ejecutando en entornos virtualizados también usan este retraso aleatorio. Cuando se tienen muchos clientes implementados, este comportamiento ayuda a evitar que se produzcan picos de uso del ancho de banda de red y reduce el requisito de procesamiento de la CPU en los sistemas de sitio de Configuration Manager, como el punto de administración y el servidor de sitio. El intervalo de retraso varía según la capacidad de Configuration Manager.  
 >   
 >  El retraso de selección aleatoria está deshabilitada de forma predeterminada para las actualizaciones de software y las implementaciones de aplicaciones requeridas mediante la siguiente configuración de cliente: **Agente de equipo**: **Deshabilitar selección aleatoria de fecha límite**.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

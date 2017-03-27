@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 54ef5fbb-521d-4ca5-a1c5-61e6f538d71e
 caps.latest.revision: 8
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: c1b3b3e7fe756ce3e0c82ffc15693999d8e817d2
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -36,7 +37,7 @@ Si un equipo cliente o un dispositivo móvil cliente deja de ser de confianza, p
 
  Si los sistemas de sitio aceptan conexiones de cliente HTTPS y la infraestructura de clave pública (PKI) admite una lista de revocación de certificados (CRL), considere siempre la revocación de certificados como la primera línea de defensa contra certificados que puedan estar comprometidos. El bloqueo de clientes en Configuration Manager ofrece una segunda línea de defensa para proteger la jerarquía.  
 
-##  <a name="a-namebkmkblockvscrla-considerations-for-blocking-clients"></a><a name="BKMK_Block_vs_CRL"></a> Consideraciones para el bloqueo de clientes  
+##  <a name="BKMK_Block_vs_CRL"></a> Consideraciones para el bloqueo de clientes  
 
 -   Esta opción está disponible para conexiones de cliente HTTP y HTTPS, pero brinda seguridad limitada cuando los clientes se conectan a los sistemas de sitio mediante HTTP.  
 
@@ -71,9 +72,4 @@ Si un equipo cliente o un dispositivo móvil cliente deja de ser de confianza, p
 
     > [!NOTE]  
     >  Puede proteger aún más los sistemas de sitio que ejecutan IIS contra clientes desconocidos mediante la configuración de una lista de certificados de confianza (CTL) en IIS.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

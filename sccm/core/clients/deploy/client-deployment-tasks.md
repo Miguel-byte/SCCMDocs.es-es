@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 54dd2e8e-66f3-4a10-987a-ed7dde4d32f6
 caps.latest.revision: 3
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 39a797891386c3711263451b05aaca7a02d42239
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -36,9 +37,4 @@ Puede implementar el cliente de System Center Configuration Manager en equipos, 
 -   [Cómo asignar clientes a un sitio en Configuration Manager](../../../core/clients/deploy/assign-clients-to-a-site.md)  
 
 -   [How to configure client status in System Center Configuration Manager (Cómo configurar el estado de cliente en System Center Configuration Manager)](../../../core/clients/deploy/configure-client-status.md)  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 5c975e69-0cc0-4afd-b7fb-b7182162a933
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: e3082e1d608f60a539fc58b0129132e33c8af833
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -61,9 +62,4 @@ Puede usar los informes de System Center Configuration Manager para ver informac
 4.  Seleccione el informe **Control remoto - Toda la información de control remoto**y, a continuación, en la pestaña **Inicio** , en el **Grupo de informes**, haga clic en **Ejecutar** para abrir la ventana **Control remoto - Toda la información de control remoto** .  
 
 5.  Cuando haya terminado de consultar datos en el informe, cierre la ventana del informe.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

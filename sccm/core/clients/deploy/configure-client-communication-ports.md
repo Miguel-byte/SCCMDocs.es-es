@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 406bbdbf-ab4a-4121-a68b-154f96ea14ec
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 12e7b8e96dc29a97dc9f81b43618fd7d0faeb1bb
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -75,9 +76,4 @@ Puede cambiar los números de puerto de solicitud que usan los clientes de Syste
 7.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo de propiedades del sitio.  
 
  Repita este procedimiento para todos los sitios primarios de la jerarquía.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
