@@ -15,9 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 2e0338267ea9fdc639d57f93adda1e46aea80eec
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1511 para System Center Configuration Manager
@@ -28,7 +30,7 @@ En este artículo se presentan las características disponibles en Technical Pre
 
 Estas son las nuevas características que puede probar con esta versión.  
 
-##  <a name="a-namebkmkwufba-integration-with-windows-update-for-business-in-windows-10"></a><a name="BKMK_WUfB"></a> Integración con Windows Update for Business en Windows 10  
+##  <a name="BKMK_WUfB"></a> Integración con Windows Update for Business en Windows 10  
  Configuration Manager tiene ahora la capacidad de diferenciar entre un equipo de Windows 10 que esté directamente conectado a través de Windows Update for Business (WUfB) y aquellos equipos conectados a WSUS para obtener actualizaciones de Windows 10.  Aquellos equipos conectados a través de WUfB pueden administrar las actualizaciones en la cadencia establecida por un usuario administrador a través de las directivas de grupo o las directivas de MDM; asimismo, estas actualizaciones se pueden instalar directamente desde WUfB.    
 Configuration Manager no podrá informar sobre el estado de cumplimiento (incluyendo actualizaciones de Windows o de definiciones) de los equipos conectados a través de WUfB. Asimismo, Configuration Manager no podrá implementar actualizaciones de Microsoft o de terceros en estos equipos.  
 
@@ -52,7 +54,7 @@ Configuration Manager no podrá informar sobre el estado de cumplimiento (incluy
 
 5.  Los equipos que se administran a través de WUfB, mostrarán el valor **Desconocido** en el estado de cumplimiento y no se tendrán en cuenta como parte del porcentaje total de cumplimiento.  
 
-##  <a name="a-namebkmkoffice365proplusa-managing-office-365-proplus-client-update-through-system-center-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Administración de la actualización de cliente de Office 365 ProPlus a través de System Center Configuration Manager  
+##  <a name="BKMK_Office365ProPlus"></a> Administración de la actualización de cliente de Office 365 ProPlus a través de System Center Configuration Manager  
  Configuration Manager tiene ahora la capacidad de administrar actualizaciones de cliente para equipos de escritorio de Office 365 mediante el flujo de trabajo de administración de actualizaciones de software de Configuration Manager.    
 Cuando Microsoft publica una nueva actualización de cliente para equipos de escritorio de Office 365 para Windows Server Updates Services (WSUS), Configuration Manager puede sincronizar la actualización con su catálogo si la actualización de Office 365 está configurada para ser parte de la sincronización del catálogo.  El servidor de sitio de Configuration Manager descarga las actualizaciones de cliente de Office 365 y distribuye el paquete a los puntos de distribución de Configuration Manager.  Luego, el cliente de Configuration Manager informa a los clientes para equipos de escritorio de Office 365 de dónde obtener las actualizaciones y de cuándo iniciar el proceso de instalación de las mismas.  
 
@@ -71,7 +73,7 @@ Cuando Microsoft publica una nueva actualización de cliente para equipos de esc
 
  Para obtener los pasos detallados, consulte [Manage Office 365 client updates with System Center Configuration Manager Technical Preview (Administrar las actualizaciones de cliente de Office 365 con System Center Configuration Manager Technical Preview)](https://technet.microsoft.com/library/mt628083.aspx).  
 
-##  <a name="a-namebkmkalwasyona-support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Compatibilidad con SQL Server AlwaysOn para bases de datos de alta disponibilidad  
+##  <a name="BKMK_AlwasyOn"></a> Compatibilidad con SQL Server AlwaysOn para bases de datos de alta disponibilidad  
  Configuration Manager ahora admite el uso de grupos de disponibilidad de SQL Server AlwaysOn para hospedar la base de datos del sitio.  Cuando instale un sitio nuevo, podrá indicar al programa de instalación que use el grupo de disponibilidad en lugar de una instancia normal de SQL Server.  
 
 > [!NOTE]  
@@ -147,7 +149,7 @@ Para instalar un sitio que usa un grupo de disponibilidad de SQL Server:
 
 3.  Después de proporcionar esta información, complete la instalación con el proceso y las configuraciones normales.  
 
-##  <a name="a-namebkmkclusterserverupdatesa-service-a--server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a> Servicio de un clúster de servidores  
+##  <a name="BKMK_ClusterServerUpdates"></a> Servicio de un clúster de servidores  
 Ahora puede crear una recopilación que contenga los servidores de un clúster y, a continuación, configurar las opciones del clúster que se usarán al implementar actualizaciones en el clúster. Puede controlar el porcentaje de los servidores que están en línea en cualquier momento, así como configurar scripts de PowerShell anteriores y posteriores a la implementación para ejecutar acciones personalizadas.  
 
 **Problemas conocidos de esta versión:**  
@@ -205,9 +207,4 @@ Intente realizar la siguiente tarea y después use la información de comentario
 1.  [Implemente actualizaciones de software](https://technet.microsoft.com/library/gg712304.aspx) en la colección del clúster de servidores.  
 
 2.  [Supervise la implementación de la actualización de software](https://technet.microsoft.com/library/gg712304.aspx).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

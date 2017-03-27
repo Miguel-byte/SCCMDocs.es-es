@@ -15,9 +15,11 @@ caps.latest.revision: 7
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 4da12425382c5d64602b2728e0e661c8cb89a5e4
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1601 para System Center Configuration Manager
@@ -59,7 +61,7 @@ En este artículo se presentan las características disponibles en Technical Pre
 
 **Estas son las nuevas características que puede probar con esta versión.**  
 
-##  <a name="a-namebkmkhybrid1a-improvements-to-microsoft-intune-integration"></a><a name="bkmk_hybrid1"></a> Mejoras en la integración con Microsoft Intune  
+##  <a name="bkmk_hybrid1"></a> Mejoras en la integración con Microsoft Intune  
 En la versión Technical Preview 1601, hemos agregado compatibilidad con las siguientes características:  
 
 ### <a name="improvements-to-conditional-access"></a>Mejoras de acceso condicional  
@@ -125,7 +127,7 @@ En la versión Technical Preview 1601, hemos agregado compatibilidad con las sig
 
      Para usar esta opción, vaya a la página **General** del **Asistente de configuración de directivas de acceso condicional** de Exchange local.  
 
-##  <a name="a-namebkmkclientstatusa-client-online-status"></a><a name="bkmk_clientStatus"></a> Estado de conexión de clientes  
+##  <a name="bkmk_clientStatus"></a> Estado de conexión de clientes  
 A partir de Technical Preview 1601, se puede identificar de un vistazo si un cliente está o no conectado en la consola de Configuration Manager. Con iconos y columnas actualizados en las listas de dispositivos de la consola, puede evaluar el estado de los clientes en el entorno para identificar las áreas problemáticas y otros inconvenientes que podrían requerir su atención.  
 
 Un cliente está en línea si en ese momento está conectado a un rol de sistema de sitio del punto de administración de Configuration Manager. Siempre que el punto de administración reciba mensajes de tipo ping provenientes del cliente, su estado será en línea. Si la administración no recibe un mensaje durante un período de cinco minutos, el estado del cliente cambia a sin conexión.  
@@ -158,7 +160,7 @@ Un cliente está en línea si en ese momento está conectado a un rol de sistema
 
  Para mostrar los cambios recientes del estado de cliente, actualice la consola.  
 
-##  <a name="a-namebkmkappmgmt1601a-improvements-to-application-management"></a><a name="bkmk_appmgmt1601"></a> Mejoras en la administración de aplicaciones  
+##  <a name="bkmk_appmgmt1601"></a> Mejoras en la administración de aplicaciones  
  En la versión Technical Preview 1601, hemos agregado compatibilidad con las siguientes características:  
 
 ### <a name="manage-volume-purchased-apps-for-ios-devices"></a>Administrar aplicaciones compradas por volumen para dispositivos iOS  
@@ -194,7 +196,7 @@ Un cliente está en línea si en ese momento está conectado a un rol de sistema
 
 -   En el asistente **Implementar software**, en la página **Directiva de configuración de la aplicación**, asocie la directiva de configuración de aplicación que ha creado a un tipo de implementación compatible desde la aplicación.  
 
-##  <a name="a-namebkmkcompliance1601a-improvements-to-compliance-settings"></a><a name="bkmk_compliance1601"></a> Mejoras en la configuración de cumplimiento  
+##  <a name="bkmk_compliance1601"></a> Mejoras en la configuración de cumplimiento  
  En la versión Technical Preview 1601, hemos agregado compatibilidad con las siguientes características:  
 
 ### <a name="microsoft-edge-browser-settings"></a>Configuración del explorador Microsoft Edge  
@@ -217,9 +219,4 @@ Un cliente está en línea si en ese momento está conectado a un rol de sistema
  Para ver las nuevas opciones, elija **Pantalla completa: Samsung KNOX** en la página **Configuración del dispositivo** del elemento de configuración del asistente **Crear elemento de configuración**.  
 
  Para más información, vea [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client (Cómo crear elementos de configuración para dispositivos de Windows 8.1 y Windows 10 administrados sin el cliente de System Center Configuration Manager)](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

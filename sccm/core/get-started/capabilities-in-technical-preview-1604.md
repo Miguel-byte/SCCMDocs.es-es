@@ -15,9 +15,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1604 para System Center Configuration Manager
@@ -28,7 +30,7 @@ En este artículo se presentan las características disponibles en Technical Pre
 
  Estas son las nuevas características que puede probar con esta versión.  
 
-##  <a name="a-namebkmkwindowsvppa-manage-volume-purchased-apps-from-the-windows-store-for-business"></a><a name="BKMK_WindowsVPP"></a> Administración de aplicaciones adquiridas por volumen de la Tienda Windows para empresas  
+##  <a name="BKMK_WindowsVPP"></a> Administración de aplicaciones adquiridas por volumen de la Tienda Windows para empresas  
  La [Tienda Windows para empresas](https://www.microsoft.com/en-us/business-store) es el lugar donde puede buscar y adquirir aplicaciones para su organización, individualmente o por volumen. Al conectar la tienda a Configuration Manager, puede administrar aplicaciones adquiridas por volumen desde la consola de Configuration Manager, por ejemplo:  
 
 -   Puede sincronizar la lista de aplicaciones adquiridas con Configuration Manager.  
@@ -91,10 +93,10 @@ En este artículo se presentan las características disponibles en Technical Pre
 
 3.  Se crea una aplicación de Configuration Manager que contiene la aplicación de la Tienda Windows para empresas. Luego puede implementar y supervisar esta aplicación como lo haría con cualquier otra aplicación de Configuration Manager.  
 
-##  <a name="a-namebkmkpfwa-improvements-to-microsoft-passport-for-work-management"></a><a name="BKMK_PFW"></a> Mejoras en la administración de Microsoft Passport for Work  
+##  <a name="BKMK_PFW"></a> Mejoras en la administración de Microsoft Passport for Work  
  Ahora puede implementar directivas de Passport for Work para dispositivos de Windows 10 unidos a dominio administrados por el cliente de Configuration Manager.  
 
-##  <a name="a-namebkmkswitchsupa-option-for-clients-to-switch-to-a-new-software-update-point"></a><a name="bkmk_switchsup"></a> Opción de cambio a un nuevo punto de actualización de software para clientes  
+##  <a name="bkmk_switchsup"></a> Opción de cambio a un nuevo punto de actualización de software para clientes  
  En 1604 Technical Preview, puede habilitar la opción de cambiar a un nuevo punto de actualización de software para clientes de Configuration Manager cuando hay problemas con el punto de actualización de software activo. Para esta opción, debe tener varios puntos de actualización de software disponibles en un sitio primario. Esta opción se habilita en una colección de dispositivos y, una vez habilitada, los clientes de la colección buscan otro punto de actualización de software en el siguiente examen cuando el cliente no se puede conectar correctamente al punto de actualización de software activo. En función de las opciones de configuración de WSUS (clasificaciones de actualizaciones, productos, etc.), el cambio a un nuevo punto de actualización de software generará tráfico de red adicional. Por lo tanto, solo se debe utilizar esta opción cuando sea necesario.  
 
 #### <a name="to-enable-the-option-to-switch-software-update-points"></a>Para habilitar la opción de cambiar los puntos de actualización de software  
@@ -106,7 +108,7 @@ En este artículo se presentan las características disponibles en Technical Pre
 > [!NOTE]  
 >  Esta opción solo está disponible en los sitios que tienen varios puntos de actualización de software.  
 
-##  <a name="a-namebkmkpeercachea-client-settings-to-manage-client-cache-settings-and-client-peer-cache"></a><a name="bkmk_peercache"></a> Configuración de cliente para administrar la Configuración de caché de cliente y la Caché del mismo nivel de clientes  
+##  <a name="bkmk_peercache"></a> Configuración de cliente para administrar la Configuración de caché de cliente y la Caché del mismo nivel de clientes  
  La versión 1604 de Technical Preview introduce dos nuevas opciones de configuración para el cliente del dispositivo que repercuten en el uso de la caché del cliente. Las dos se pueden utilizar individualmente, pero se configuran en la misma hoja de propiedades de la configuración del cliente y se combinan para ayudarle a administrar la implementación de contenido para clientes en ubicaciones remotas.  
 
 -   La primera es la **caché del mismo nivel de cliente**, una solución integrada de Configuration Manager para que los clientes compartan contenido con otros clientes directamente desde su caché local. Para que los clientes de la Caché del mismo nivel compartan contenido, estos deben pertenecer al mismo grupo de límites. La caché del mismo nivel no reemplaza el uso de otras soluciones como BranchCache, sino que funciona en paralelo para ofrecerle más opciones que amplíen las tradicionales soluciones de implementación de contenido (como los puntos de distribución).  
@@ -146,7 +148,7 @@ Para ayudarle a entender el uso de la caché del mismo nivel, puede ver el panel
     > [!NOTE]  
     >  Para completar esta tarea con la versión preliminar técnica y un único punto de distribución, configure el punto de distribución de manera que sea lento para la ubicación de red de todos los clientes. A continuación, distribuya el contenido a un único cliente.  Una vez de que el cliente obtiene el contenido, puede distribuirlo a clientes adicionales que deben buscar elementos locales del mismo nivel para usarlos como origen de contenido antes de utilizar el punto de distribución considerado lento desde la ubicación del cliente.  
 
-##  <a name="a-namebkmkpassporta-support-for-passport-for-work-as-a-ksp"></a><a name="bkmk_passport"></a> Compatibilidad con Passport for Work como KSP  
+##  <a name="bkmk_passport"></a> Compatibilidad con Passport for Work como KSP  
  System Center Configuration Manager permite la integración con Microsoft Passport for Work, que es un método alternativo de inicio de sesión que usa Active Directory, o una cuenta de Azure Active Directory, para reemplazar una contraseña, una tarjeta inteligente o una tarjeta inteligente virtual.  
 Passport permite usar un gesto de usuario al iniciar sesión en lugar de una contraseña. Un gesto de usuario podría ser una autenticación biométrica de PIN simple, como Windows Hello, o un dispositivo externo como un lector de huellas digitales.  
 
@@ -156,7 +158,7 @@ Passport permite usar un gesto de usuario al iniciar sesión en lugar de una con
 
 Cuando un usuario crea un PIN de Passport, Windows envía una notificación que escucha Configuration Manager.  De este modo, Configuration Manager puede conocer rápidamente qué usuarios han creado un PIN de Passport. Configuration Manager puede entonces emitir nuevos certificados a esos usuarios si Passport se usa como proveedor de almacenamiento de claves en un perfil de certificado.  
 
-##  <a name="a-namebkmkonpremdhaa-on-premises-device-health-attestation"></a><a name="bkmk_onpremdha"></a> Atestación de estado del dispositivo local  
+##  <a name="bkmk_onpremdha"></a> Atestación de estado del dispositivo local  
  Ahora es posible configurar la atestación de estado para dispositivos con Windows 10 a fin de establecer comunicación mediante la infraestructura local.  Los administradores pueden especificar si la notificación se realiza a través de la nube o de recursos locales.  Si se selecciona **local** para la notificación de atestación de estado, se puede especificar un URI para el servicio. Esto permite a los equipos cliente sin acceso a Internet habilitar y administrar dispositivos con la atestación de estado.  
 
 #### <a name="enable-health-attestation-for-on-premises-devices"></a>Habilitación de la atestación de estado para dispositivos locales  
@@ -167,11 +169,6 @@ Cuando un usuario crea un PIN de Passport, Windows envía una notificación que 
 
 Para probarlo, configure el servicio de atestación de estado local mediante la configuración del agente de cliente.  
 
-##  <a name="a-namebkmksmarta-smartlock-setting-for-android-devices"></a><a name="BKMK_Smart"></a> Configuración de SmartLock para dispositivos Android  
+##  <a name="BKMK_Smart"></a> Configuración de SmartLock para dispositivos Android  
  Se ha agregado un nuevo valor, **Permitir Smart Lock y otros agentes de confianza**, al elemento de configuración **Android y Samsung KNOX** que le permite controlar la característica Smart Lock en dispositivos Android compatibles. Esta funcionalidad del teléfono, conocida también en ocasiones como agentes de confianza, le permite deshabilitar u omitir la contraseña de la pantalla de bloqueo del dispositivo si el dispositivo está en una ubicación de confianza, como cuando se conecta a un dispositivo Bluetooth específico o cuando está cerca de una etiqueta NFC. Puede utilizar esta opción para impedir que los usuarios finales configuren SmartLock.  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

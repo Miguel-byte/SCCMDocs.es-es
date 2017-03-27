@@ -15,9 +15,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 1d3adcf3310d88b1266388aa03ae5ea03e23f2a5
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1603-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1603 para System Center Configuration Manager
@@ -34,7 +36,7 @@ En este artículo se presentan las características disponibles en Technical Pre
 
  **Estas son las nuevas características que puede probar con esta versión.**  
 
-##  <a name="a-namebkmksc1603a-improvements-to-software-center"></a><a name="BKMK_SC1603"></a> Mejoras en el Centro de software  
+##  <a name="BKMK_SC1603"></a> Mejoras en el Centro de software  
 
 ### <a name="new-tiled-view-for-apps"></a>Nueva vista en iconos para aplicaciones  
  Los usuarios finales ahora pueden elegir entre una lista de aplicaciones o una vista en mosaico de aplicaciones en la pestaña **Aplicaciones** del Centro de software.  
@@ -42,7 +44,7 @@ En este artículo se presentan las características disponibles en Technical Pre
 ### <a name="select-multiple-updates-in-software-center"></a>Selección de varias actualizaciones en el Centro de software  
  En la pestaña **Actualizaciones** del Centro de software, ahora puede seleccionar varias actualizaciones o bien seleccionar **Actualizar todo** para empezar a instalar varias actualizaciones simultáneamente.  
 
-##  <a name="a-namebkmkrc1603a-improvements-to-remote-control"></a><a name="BKMK_RC1603"></a> Mejoras en el control remoto  
+##  <a name="BKMK_RC1603"></a> Mejoras en el control remoto  
 
 ### <a name="limit-shared-clipboard-access-in-a-remote-control-session"></a>Límite del acceso al portapapeles compartido en una sesión de control remoto  
  Ahora puede habilitar la nueva configuración de cliente de herramientas remotas **Solicitar al usuario permiso de transferencia de archivos compartidos del portapapeles** para limitar el acceso al portapapeles compartido en una sesión de control remoto.  
@@ -51,7 +53,7 @@ En este artículo se presentan las características disponibles en Technical Pre
 
  De este modo, se agrega un nivel de protección para el usuario final como anteriormente: si se ha concedido al visor control total del equipo del usuario final, este podrá usar el portapapeles compartido para transferir archivos desde la sesión a su equipo local en un modo totalmente transparente para el usuario final.  
 
-##  <a name="a-namebkmkramdisktftpa-customize-the-ramdisk-tftp-block-size-and-window-size-on-pxe-enabled-distribution-points"></a><a name="BKMK_RamDiskTFTP"></a> Personalización del tamaño de bloque de TFTP de RamDisk y el tamaño de la ventana de puntos de distribución habilitados con PXE  
+##  <a name="BKMK_RamDiskTFTP"></a> Personalización del tamaño de bloque de TFTP de RamDisk y el tamaño de la ventana de puntos de distribución habilitados con PXE  
  En 1603 Technical Preview, tiene la posibilidad de personalizar el tamaño de bloque de TFTP de RamDisk y el tamaño de la ventana de puntos de distribución habilitados con PXE. El hecho de haber personalizado su red podría provocar que se produjera un error de tiempo de espera en la descarga de la imagen de arranque porque el tamaño del bloque o la ventana es demasiado grande. La personalización tanto del tamaño del bloque como del de la ventana de TFTP de RamDisk le permiten optimizar el tráfico de TFTP al utilizar PXE para cumplir los requisitos de red específicos.   
 Debe probar la configuración personalizada en su entorno para determinar lo que es más eficaz.  
 
@@ -91,9 +93,4 @@ Debe probar la configuración personalizada en su entorno para determinar lo que
      **Valor**: &lt;tamaño de bloque personalizado\>  
 
  El valor predeterminado es 4096 (4k).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -15,9 +15,11 @@ caps.latest.revision: 6
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 6e737d06563b256010f302af4e805eb6812524e2
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1602-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1602 para System Center Configuration Manager
@@ -28,7 +30,7 @@ En este artículo se presentan las características disponibles en Technical Pre
 
  Estas son las nuevas características que puede probar con esta versión.  
 
-##  <a name="a-namebkmkmdma-improvements-to-mobile-device-management"></a><a name="BKMK_MDM"></a> Mejoras en la administración de dispositivos móviles  
+##  <a name="BKMK_MDM"></a> Mejoras en la administración de dispositivos móviles  
 
 ### <a name="ios-activation-lock"></a>Bloqueo de activación de iOS  
  System Center Configuration Manager puede ayudarle a administrar el bloqueo de activación de iOS, una característica de la aplicación Buscar mi iPhone disponible en iOS 7.1 y en dispositivos más modernos. El bloqueo de activación se habilita automáticamente cuando se usa la aplicación Buscar mi iPhone en un dispositivo. Tras su activación, se debe escribir el identificador y la contraseña de Apple del usuario para poder:  
@@ -43,12 +45,12 @@ En este artículo se presentan las características disponibles en Technical Pre
 
  Para obtener detalles, vea [Ayudar a proteger dispositivos iOS con el bypass del bloqueo de activación para Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock)  
 
-##  <a name="a-namebkmksc1601a-improvements-to-software-center-in-version-1602"></a><a name="BKMK_SC1601"></a> Mejoras en el Centro de software en la versión 1602  
+##  <a name="BKMK_SC1601"></a> Mejoras en el Centro de software en la versión 1602  
 
 ### <a name="refresh-pc-machine-and-user-policy-from-software-center"></a>Actualizar la directiva de usuario y máquina desde el Centro de software  
  Se ha agregado una nueva opción, **Directiva de sincronización**, a la página **Opciones** > **Mantenimiento del equipo** del Centro de software que hace que el equipo actualice su directiva de usuario y máquina de Configuration Manager.  
 
-##  <a name="a-namebkmkwin10servicinga-improvements-to-windows-10-servicing"></a><a name="BKMK_Win10Servicing"></a> Mejoras en mantenimiento de Windows 10  
+##  <a name="BKMK_Win10Servicing"></a> Mejoras en mantenimiento de Windows 10  
  En la versión Technical Preview 1602 se agregaron las siguientes mejoras al mantenimiento de Windows 10:  
 
 -   Nuevas opciones de filtro para los planes de mantenimiento.  Ahora puede filtrar por **Idioma**, **Necesario** y **Título**. Solo se agregarán a la implementación asociada las actualizaciones que cumplan con los criterios especificados.  
@@ -58,9 +60,4 @@ En este artículo se presentan las características disponibles en Technical Pre
 -   Ahora las actualizaciones de Windows 10 disponibles solo se muestran en el nodo **Mantenimiento de Windows 10** \ **Todas las actualizaciones de Windows 10** de la consola de Configuration Manager. Estas actualizaciones ya no se mostrarán en el nodo **Actualizaciones de software** \ **Todas las actualizaciones de software**.  
 
 -   Se mostrará a los usuarios finales que inicien un paquete de actualización de Windows 10 un cuadro de diálogo para notificarles que van a actualizar su sistema operativo.  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
