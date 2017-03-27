@@ -1308,6 +1308,7 @@
 ## [Clase WMI de servidor SMS_AzureServicesTask](core/servers/configure/sms_azureservicestask-server-wmi-class.md)
 
 # [Clases WMI de servidor de servicio de Windows 10](misc/windows-10-servicing-server-wmi-classes.md)
+## [Clase WMI de servidor SMS_AdminUIContent](misc/sms-adminuicontent-server-wmi-class.md)
 ## [Clase WMI de servidor SMS_Windows10Dashboard](misc/sms_windows10dashboard-server-wmi-class.md)
 ## [Clase WMI de servidor SMS_WindowsServicingBusinessReadyUpdates](misc/sms_windowsservicingbusinessreadyupdates-server-wmi-class.md)
 ## [Clase WMI de servidor SMS_WindowsServicingLocalizedNames](misc/sms_windowsservicinglocalizednames-server-wmi-class.md)
