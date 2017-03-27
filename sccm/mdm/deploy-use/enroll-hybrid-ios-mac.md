@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 5eae4400-58ca-4c71-804c-6a585cd3df5d
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
@@ -69,6 +69,6 @@ Con Configuration Manager e Intune, puede habilitar la inscripción BYOD ("Bring
 
  Cuando esté listo, necesitará que los usuarios sepan cómo inscribir sus dispositivos. Consulte [Qué decirles a los usuarios finales sobre el uso de Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). Esta información se aplica a Microsoft Intune y a dispositivos móviles administrados por Configuration Manager.
 
- > [!div class="button"]
- [< Paso anterior](create-service-connection-point.md)  [Paso siguiente >](set-up-additional-management.md)
+> [!div class="button"]
+[< Paso anterior](create-service-connection-point.md)  [Paso siguiente >](set-up-additional-management.md)
 
