@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3aa9f2e4d3f7210981b5b84942485de11fe15cb2
-ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 67441d0c19114f628e8b4308f58165ba67c738df
+ms.lasthandoff: 03/21/2017
 
 ---
 
@@ -66,7 +67,7 @@ Prepare enfoques de copia de seguridad y recuperación para evitar la pérdida d
 > [!NOTE]  
 >  Si usa un grupo de disponibilidad AlwaysOn de SQL Server para hospedar la base de datos de sitio, modifique los planes de recuperación y copia de seguridad tal como se explica en la sección [Changes for Backup and Recovery when you use a SQL Server AlwaysOn availability group (Cambios en Copia de seguridad y recuperación cuando se usa un grupo de disponibilidad AlwaysOn de SQL Server)](../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#bkmk_BnR) del tema [SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager (SQL Server AlwaysOn para una base de datos de sitio de alta disponibilidad para System Center Configuration Manager)](../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).  
 
-##  <a name="a-namebkmksitebackupa-back-up-a-configuration-manager-site"></a><a name="BKMK_SiteBackup"></a> Hacer una copia de seguridad de un sitio de Configuration Manager  
+##  <a name="BKMK_SiteBackup"></a> Hacer una copia de seguridad de un sitio de Configuration Manager  
  Configuration Manager tiene una tarea de mantenimiento de copia de seguridad que:  
 
 -   Se ejecuta según una programación  
@@ -88,7 +89,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 > [!NOTE]  
 >  Configuration Manager puede recuperar la base de datos de sitio a partir de la tarea de mantenimiento de copia de seguridad de Configuration Manager o desde una copia de seguridad de la base de datos de sitio que creara con otro proceso. Por ejemplo, puede restaurar la base de datos de sitio desde una copia de seguridad creada como parte de un plan de mantenimiento de Microsoft SQL Server. Puede restaurar la base de datos de sitio a partir de una copia de seguridad creada con System Center 2012 Data Protection Manager (DPM). Para obtener más información, vea [Uso de Data Protection Manager para realizar copias de seguridad de la base de datos del sitio](#BKMK_DPMBackup).  
 
-###  <a name="a-namebkmkbackupmaintenancetaska-backup-maintenance-task"></a><a name="BKMK_BackupMaintenanceTask"></a> Tarea de mantenimiento de copia de seguridad  
+###  <a name="BKMK_BackupMaintenanceTask"></a> Tarea de mantenimiento de copia de seguridad  
  Puede automatizar la copia de seguridad de sitios de Configuration Manager mediante la programación de la tarea de mantenimiento predefinida Copia de seguridad del servidor del sitio. Puede hacer una copia de seguridad de un sitio de administración central y un sitio primario, pero no existe compatibilidad con la copia de seguridad de servidores de sistema de sitio o sitios secundarios. Cuando se ejecuta el servicio de copia de seguridad de Configuration Manager, este sigue las instrucciones definidas en el archivo de control de copia de seguridad (**&lt;carpetaInstalaciónConfigMgr\>\Inboxes\Smsbkup.box\Smsbkup.ctl**). Puede modificar el archivo de control de copia de seguridad para cambiar el comportamiento del servicio de copia de seguridad. La información del estado de copia de seguridad del sitio se escribe en el archivo **Smsbkup.log** . Este archivo se crea en la carpeta de destino que especifique en las propiedades de la tarea de mantenimiento Copia de seguridad del servidor del sitio.  
 
 
@@ -144,7 +145,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
     > [!TIP]  
     >  Cuando se produce un error en la tarea de mantenimiento de copia de seguridad, reinicie la tarea de copia de seguridad. Para ello, detenga y reinicie el servicio SMS_SITE_BACKUP.  
 
-###  <a name="a-namebkmkdpmbackupa-using-data-protection-manager-to-back-up-your-site-database"></a><a name="BKMK_DPMBackup"></a> Uso de Data Protection Manager para realizar copias de seguridad de la base de datos del sitio  
+###  <a name="BKMK_DPMBackup"></a> Uso de Data Protection Manager para realizar copias de seguridad de la base de datos del sitio  
  Puede usar System Center 2012 Data Protection Manager (DPM) para hacer una copia de seguridad de la base de datos del sitio. Debe crear un nuevo grupo de protección en DPM para el equipo de la base de datos del sitio. En la página **Seleccionar miembros del grupo** del asistente Crear nuevo grupo de protección, seleccione el servicio SMS Writer de la lista de orígenes de datos y, a continuación, seleccione la base de datos del sitio como un miembro apropiado. Para obtener más información acerca del uso de DPM para realizar una copia de seguridad de la base de datos del sitio, consulte la [Data Protection Manager Documentation Library (Biblioteca de documentación de Data Protection Manager)](http://go.microsoft.com/fwlink/?LinkId=272772) en TechNet.  
 
 > [!IMPORTANT]  
@@ -152,7 +153,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
  Después de restaurar la base de datos del sitio, siga los pasos descritos en el programa de instalación para recuperar el sitio. Seleccione la opción de recuperación **Usar una base de datos del sitio que se ha recuperado manualmente** para usar la base de datos de sitio que recuperó con Data Protection Manager.  
 
-###  <a name="a-namebkmkarchivingbackupsnapshota-archiving-the-backup-snapshot"></a><a name="BKMK_ArchivingBackupSnapshot"></a> Archivo de la instantánea de copia de seguridad  
+###  <a name="BKMK_ArchivingBackupSnapshot"></a> Archivo de la instantánea de copia de seguridad  
  La primera vez que se ejecuta la tarea de mantenimiento Copia de seguridad del servidor del sitio, se crea una instantánea de la copia de seguridad, que puede utilizar para recuperar el servidor de sitio en caso de error. Cuando la tarea de copia de seguridad se ejecuta de nuevo durante ciclos posteriores, se crea una nueva instantánea de la copia de seguridad que sobrescribe la instantánea anterior. Como resultado, el sitio solo tiene una instantánea de copia de seguridad y no hay forma de recuperar la instantánea de una copia de seguridad anterior.  
 
  Se recomienda conservar varios archivos de la instantánea de copia de seguridad por los siguientes motivos:  
@@ -163,7 +164,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
 -   El sitio podría no tener ninguna instantánea de copia de seguridad si, por ejemplo, se produce un error en la tarea de mantenimiento Copia de seguridad del servidor del sitio. Dado que la tarea de copia de seguridad elimina la instantánea de copia de seguridad anterior antes de empezar a realizar la copia de seguridad de los datos actuales, no habrá una instantánea de copia de seguridad válida.  
 
-###  <a name="a-namebkmkusingafterbackupa-using-the-afterbackupbat-file"></a><a name="BKMK_UsingAfterBackup"></a> Uso del archivo AfterBackup.bat  
+###  <a name="BKMK_UsingAfterBackup"></a> Uso del archivo AfterBackup.bat  
  Después de realizar la copia de seguridad del sitio correctamente, la tarea Copia de seguridad del servidor del sitio automáticamente intenta ejecutar un archivo llamado AfterBackup.bat. Debe crear manualmente el archivo AfterBackup.bat en &lt;*carpetaInstalaciónConfigMgr*>\Inboxes\Smsbkup. Si hay un archivo AfterBackup.bat y está almacenado en la carpeta correcta, se ejecuta automáticamente después de completarse la tarea de copia de seguridad. El archivo AfterBackup.bat permite archivar la instantánea de copia de seguridad al final de cada operación de copia de seguridad y realizar automáticamente otras tareas posteriores a la copia de seguridad que no forman parte de la tarea de mantenimiento Copia de seguridad del servidor del sitio. El archivo AfterBackup.bat integra las operaciones de archivo y copia de seguridad, por lo que garantiza que se archiva cada nueva instantánea de copia de seguridad. Si el archivo AfterBackup.bat no está presente, la tarea de copia de seguridad lo omite sin que se vea afectada la operación de copia de seguridad. Para comprobar que la tarea de copia de seguridad del sitio ejecutó correctamente el archivo AfterBackup.bat, consulte el nodo **Estado del componente** del área de trabajo **Supervisión** y revise los mensajes de estado de SMS_SITE_BACKUP. Si la tarea inició correctamente el archivo de comandos AfterBackup.bat, verá el mensaje ID 5040.  
 
 > [!TIP]  
@@ -171,7 +172,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
  Aunque el uso previsto de AfterBackup.bat es archivar las instantáneas de copia de seguridad, puede crear un archivo AfterBackup.bat para realizar tareas adicionales al final de cada operación de copia de seguridad.  
 
-###  <a name="a-namebkmksupplementalbackupa-supplemental-backup-tasks"></a><a name="BKMK_SupplementalBackup"></a> Tareas de copia de seguridad adicionales  
+###  <a name="BKMK_SupplementalBackup"></a> Tareas de copia de seguridad adicionales  
  La tarea de mantenimiento Copia de seguridad del servidor del sitio facilita una instantánea de copia de seguridad para los archivos de servidor de sitio y la base de datos de sitio, pero hay otros elementos cuya copia de seguridad no se realiza y que debe tener en cuenta cuando crea la estrategia de copia de seguridad. Use las secciones siguientes como ayuda para completar la estrategia de copia de seguridad de Configuration Manager.  
 
 #### <a name="back-up-custom-reporting-services-reports"></a>Copia de seguridad de informes personalizados de Reporting Services  
@@ -241,12 +242,12 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 > [!NOTE]  
 >  Después de restaurar una base de datos de sitio configurada para réplicas de base de datos, para poder utilizar las réplicas de base de datos debe volver a configurar cada réplica de base de datos y volver a crear tanto las publicaciones como las suscripciones.  
 
-###  <a name="a-namebkmkdeterminerecoveryoptionsa-determine-your-recovery-options"></a><a name="BKMK_DetermineRecoveryOptions"></a> Determinar las opciones de recuperación  
+###  <a name="BKMK_DetermineRecoveryOptions"></a> Determinar las opciones de recuperación  
  Debe tener en cuenta dos áreas principales para la recuperación del sitio de administración central y del servidor de sitio primario de Configuration Manager: el servidor de sitio y la base de datos de sitio. Consulte las siguientes secciones para poder determinar las opciones que debe seleccionar para el escenario de recuperación.  
 
 > [!NOTE]  
 
-####  <a name="a-namebkmksiteserverrecoveryoptionsa-site-server-recovery-options"></a><a name="BKMK_SiteServerRecoveryOptions"></a> Opciones de recuperación de servidor de sitio  
+####  <a name="BKMK_SiteServerRecoveryOptions"></a> Opciones de recuperación de servidor de sitio  
  Debe iniciar el programa de instalación a partir de una copia de la carpeta CD.Latest creada fuera de la carpeta de instalación de Configuration Manager. A continuación, seleccione la opción **Recuperar un sitio** . Cuando ejecuta el programa de instalación, cuenta con las siguientes opciones de recuperación para el servidor de sitio con errores:  
 
 -   **Recuperar el servidor de sitio mediante una copia de seguridad existente**: use esta opción si tiene una copia de seguridad del servidor de sitio de Configuration Manager que se creó en el servidor de sitio como parte de la tarea de mantenimiento **Copia de seguridad del servidor del sitio** antes de que se produjeran errores en el sitio. Se vuelve a instalar y se configura el sitio a partir del sitio cuya copia de seguridad se realizó.  
@@ -256,7 +257,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 > [!NOTE]  
 >  Cuando el programa de instalación detecta que hay un sitio de Configuration Manager en el servidor, puede iniciar una recuperación de sitio, pero las opciones de recuperación del servidor de sitio estarán limitadas. Por ejemplo, si ejecuta el programa de instalación en un servidor de sitio existente, al elegir la recuperación podrá recuperar el servidor de base de datos de sitio, pero la opción de recuperación del servidor de sitio estará deshabilitada.  
 
-####  <a name="a-namebkmksitedatabaserecoveryoptiona-site-database-recovery-options"></a><a name="BKMK_SiteDatabaseRecoveryOption"></a> Opciones de recuperación de base de datos de sitio  
+####  <a name="BKMK_SiteDatabaseRecoveryOption"></a> Opciones de recuperación de base de datos de sitio  
  Cuando ejecuta el programa de instalación, tiene las siguientes opciones de recuperación para la base de datos de sitio:  
 
 -   **Recuperar la base de datos de sitio con un conjunto de copia de seguridad**: use esta opción si tiene una copia de seguridad de la base de datos de sitio de Configuration Manager que se creó como parte de la tarea de mantenimiento **Copia de seguridad del servidor del sitio** ejecutada en el sitio antes de que se produjeran errores en la base de datos del sitio. Si hay una jerarquía, los cambios realizados en la base de datos de sitio después de la última copia de seguridad de la base de datos de sitio se recuperan del sitio de administración central para un sitio primario, o de un sitio primario de referencia para un sitio de administración central. Si recupera la base de datos del sitio para un sitio primario independiente, perderá los cambios que se hayan realizado en el sitio desde la copia de seguridad más reciente.  
@@ -275,14 +276,14 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
 -   **Omitir recuperación de base de datos**: use esta opción si no se produjo una pérdida de datos en el servidor de base de datos del sitio de Configuration Manager. Esta opción solo es válida si la base de datos del sitio no está en el mismo equipo que el servidor de sitio que está en proceso de recuperación.  
 
-####  <a name="a-namebkmksqlretentiona-sql-server-change-tracking-retention-period"></a><a name="bkmk_SQLretention"></a> Período de retención de seguimiento de cambios de SQL Server  
+####  <a name="bkmk_SQLretention"></a> Período de retención de seguimiento de cambios de SQL Server  
  El seguimiento de cambios está habilitado para la base de datos del sitio en SQL Server. El seguimiento de cambios permite a Configuration Manager realizar consultas sobre los cambios que se realizaron en las tablas de base de datos a partir de un punto concreto en el tiempo. El período de retención especifica cuánto tiempo se conserva la información del seguimiento de cambios. De forma predeterminada, la base de datos del sitio está configurada para tener un período de retención de 5 días. Cuando se recupera una base de datos del sitio, el proceso de recuperación variará en función de si la copia de seguridad pertenece o no al período de retención. Por ejemplo, si se produce un error en el servidor de base de datos del sitio, y la última copia de seguridad se hizo hace 7 días, ésta no pertenecerá al período de retención.
 
  Para obtener más información sobre los datos internos de seguimiento de cambios de SQL Server, consulte los siguientes blogs del equipo de SQL Server: [Change Tracking Cleanup - part 1](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1) (Limpieza de seguimiento de cambios - parte 1) y [Change Tracking Cleanup - part 2](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2) (Limpieza de seguimiento de cambios - parte 2).
 
 
 
-####  <a name="a-namebkmkreinita-process-to-reinitialize-site-or-global-data"></a><a name="bkmk_reinit"></a> Proceso para reinicializar datos globales o del sitio  
+####  <a name="bkmk_reinit"></a> Proceso para reinicializar datos globales o del sitio  
  El proceso para reinicializar datos globales o del sitio reemplaza los datos existentes de la base de datos del sitio por datos de otra base de datos del sitio. Por ejemplo, si el sitio ABC reinicializa datos desde el sitio XYZ, se producen los siguientes pasos:  
 
 -   Los datos se copian desde el sitio XYZ al sitio ABC.  
@@ -297,7 +298,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 ##### <a name="example-scenario-2"></a>Escenario de ejemplo 2  
  **El sitio de administración central reinicializa los datos del sitio desde un sitio primario**: el proceso de recuperación quita los datos de sitio existentes para ese sitio primario en la base de datos del sitio de administración central y los reemplaza con los datos de sitio copiados desde el sitio primario. No se ven afectados los datos del sitio para otros sitios primarios.  
 
-####  <a name="a-namebkmksitedbrecoveryscenariosa-site-database-recovery-scenarios"></a><a name="BKMK_SiteDBRecoveryScenarios"></a> Escenarios de recuperación de base de datos de sitio  
+####  <a name="BKMK_SiteDBRecoveryScenarios"></a> Escenarios de recuperación de base de datos de sitio  
  Una vez restaurada la base de datos del sitio desde una copia de seguridad, Configuration Manager intenta restaurar los cambios que tuvieron lugar en los datos globales y del sitio desde la última copia de seguridad de la base de datos. A continuación se indican las acciones que Configuration Manager inicia una vez que se restaura la base de datos del sitio desde una copia de seguridad.  
 
  **El sitio recuperado es un sitio de administración central:**  
@@ -362,7 +363,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 >   
 >  **ALTER QUEUE [dbo].[ConfigMgrDRSSiteQueue] WITH STATUS = ON**  
 
-###  <a name="a-namebkmkunattendedsiterecoverykeysa-unattended-site-recovery-script-file-keys"></a><a name="BKMK_UnattendedSiteRecoveryKeys"></a> Claves de archivo de script de recuperación de sitio desatendida  
+###  <a name="BKMK_UnattendedSiteRecoveryKeys"></a> Claves de archivo de script de recuperación de sitio desatendida  
  Para realizar una recuperación desatendida de un sitio primario o un sitio de administración central de Configuration Manager, puede crear un script de instalación desatendida y usar el programa de instalación con la opción de comando /script. El script proporciona el mismo tipo de información que solicita el Asistente para instalación, excepto por el hecho de que no existe configuración predeterminada. Deben especificarse todos los valores para las claves de instalación que se aplican al tipo de recuperación que se utiliza.  
 
  Puede ejecutar el programa de instalación de Configuration Manager en modo desatendido mediante un archivo de inicialización con la opción de línea de comandos de instalación /script. La instalación desatendida se admite para la recuperación de sitios primarios y sitios de administración central de Configuration Manager. Para utilizar la opción de línea de comandos de instalación de /script, debe crear un archivo de inicialización y especificar su nombre después de la opción de línea de comandos de instalación de /script. Más importante que el nombre del archivo es que éste tenga la extensión .ini. Cuando haga referencia al archivo de inicialización del programa de instalación desde la línea de comandos, tendrá que proporcionar la ruta de acceso completa al archivo. Por ejemplo, si el archivo de inicialización de instalación es setup.ini, y se almacena en la carpeta C:\setup, la línea de comandos sería:  
@@ -814,7 +815,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Detalles** : especifica el valor de tiempo de espera máximo (en minutos) de un sitio primario para conectarse al sitio de administración central. Por ejemplo, si se produce un error de conexión del sitio primario con el sitio de administración central, el sitio primario vuelve a tratar de establecer la conexión conforme al valor especificado para CASRetryInterval hasta que se alcanza el valor de tiempo de WaitForCASTimeout. Puede especificar un valor entre 0 y 100.  
 
-###  <a name="a-namebkmkpostrecoverya-post-recovery-tasks"></a><a name="BKMK_PostRecovery"></a> Tareas posteriores a la recuperación  
+###  <a name="BKMK_PostRecovery"></a> Tareas posteriores a la recuperación  
  Tras la recuperación del sitio, se pueden llevar a cabo varias tareas posteriores a la recuperación antes de que se complete totalmente la recuperación del sitio. Consulte las secciones siguientes para obtener información útil acerca de cómo completar el proceso de recuperación del sitio.  
 
 #### <a name="re-enter-user-account-passwords"></a>Volver a escribir las contraseñas de cuentas de usuario  
@@ -844,7 +845,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
  Después de una recuperación del servidor de sitio, es preciso volver a escribir las claves de instalación de prueba de Windows especificadas para el sitio, ya que se restablecen durante la recuperación del sitio. Después de volver a escribir las claves de instalación de prueba, se restablece el contador de la columna **Activaciones usadas** de las claves de instalación de prueba de Windows en la consola de Configuration Manager. Por ejemplo, supongamos que antes del error del sitio, el valor del contador **Total de activaciones** era **100** y el de **Activaciones usadas** (el número de claves usadas por dispositivos) era **90**. Después de la recuperación del sitio, la columna **Total de activaciones** muestra **100**, pero la columna **Activaciones usadas** muestra, de forma incorrecta, **0**. Sin embargo, después de que 10 nuevos dispositivos utilicen una clave de instalación de prueba, no quedará ninguna clave de instalación de prueba y, por lo tanto, el siguiente dispositivo no podrá aplicar ninguna clave de instalación de prueba.  
 
 #### <a name="recreate-the-microsoft-intune-subscription"></a>Volver a crear la suscripción a Microsoft Intune  
- Si recupera un servidor de sitio de Configuration Manager después de volver a crear la imagen del equipo del servidor de sitio, la suscripción de Microsoft Intune no se restaurará. Debe volver a conectar la suscripción después de recuperar el sitio.  No cree una nueva solicitud de APN. En su lugar, cargue el archivo .pem válido actual que se cargó la última vez que se configuró o se renovó la administración de iOS. Para más información, vea [Configuring the Microsoft Intune subscription (Configuración de la suscripción de Microsoft Intune)](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription).  
+ Si recupera un servidor de sitio de Configuration Manager después de volver a crear la imagen del equipo del servidor de sitio, la suscripción de Microsoft Intune no se restaurará. Debe volver a conectar la suscripción después de recuperar el sitio.  No cree una nueva solicitud de APN. En su lugar, cargue el archivo .pem válido actual que se cargó la última vez que se configuró o se renovó la administración de iOS. Para más información, vea [Configuring the Microsoft Intune subscription (Configuración de la suscripción de Microsoft Intune)](/sccm/mdm/deploy-use/configure-intune-subscription).  
 
 #### <a name="configure-ssl-for-site-system-roles-that-use-iis"></a>Configuración de SSL para roles de sistema de sitio que usan IIS  
  Al recuperar sistemas de sitio que ejecutan IIS y que se habían configurado para HTTPS antes del error, debe volver a configurar IIS para utilizar el certificado de servidor web.  
@@ -888,7 +889,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 #### <a name="update-certificates-used-for-cloud-based-distribution-points"></a>Actualización de certificados que se utilizan para puntos de distribución basados en la nube  
  Configuration Manager exige un certificado de administración que usa para la comunicación entre servidores de sitio y puntos de distribución basados en la nube. Después de una recuperación de sitio, debe actualizar los certificados de los puntos de distribución basados en la nube.  
 
-####  <a name="a-namebkmkrecoversecondarysitea-recover-a-secondary-site"></a><a name="BKMK_RecoverSecondarySite"></a> Recuperar un sitio secundario  
+####  <a name="BKMK_RecoverSecondarySite"></a> Recuperar un sitio secundario  
  Configuration Manager no admite la copia de seguridad de la base de datos en un sitio secundario, pero sí admite la recuperación mediante la reinstalación del sitio secundario. Se precisa la recuperación de sitio secundario si se produce un error en un sitio secundario de Configuration Manager. Puede recuperar un sitio secundario mediante la acción **Recuperar sitio secundario** del nodo **Sitios** de la consola de Configuration Manager. A diferencia de la recuperación de un sitio de administración central o de un sitio primario, en la recuperación de un sitio secundario no se usa un archivo de copia de seguridad, sino que se reinstalan los archivos de ese sitio secundario en el equipo con errores. A continuación, los datos del sitio secundario se reinicializan con los datos del sitio primario. Durante el proceso de recuperación, Configuration Manager verifica la existencia de la biblioteca de contenido en el equipo de sitio secundario y la disponibilidad del contenido correspondiente. El sitio secundario usará la biblioteca de contenido existente, si esta incluye el contenido adecuado. En caso contrario, para recuperar la biblioteca de contenido de un sitio secundario recuperado, es necesario redistribuir o preconfigurar el contenido en ese sitio recuperado. Si tiene un punto de distribución que no está en el sitio secundario, no es preciso que vuelva a instalar el punto de distribución durante la recuperación del sitio secundario. Después de la recuperación de sitio secundario, el sitio se sincroniza automáticamente con el punto de distribución.  
 
  Puede comprobar el estado de la recuperación del sitio secundario mediante la acción **Mostrar estado de instalación** del nodo **Sitios** de la consola de Configuration Manager.  
@@ -899,7 +900,7 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 > [!IMPORTANT]  
 >  Durante la recuperación de sitio secundario, Configuration Manager no instala SQL Server Express si no está instalado en el equipo. Por lo tanto, antes de recuperar un sitio secundario, debe instalar manualmente SQL Server Express o SQL Server. Debe utilizar la misma versión de SQL Server y la misma instancia de SQL Server que se utilizaron para la base de datos del sitio secundario antes del error.  
 
-##  <a name="a-namebkmksmswriterservicea-sms-writer-service"></a><a name="BKMK_SMSWriterService"></a> Servicio SMS Writer  
+##  <a name="BKMK_SMSWriterService"></a> Servicio SMS Writer  
  SMS Writer es un servicio que interactúa con el Servicio de instantáneas de volumen (VSS) durante el proceso de copia de seguridad. Debe ejecutar el servicio SMS Writer para que la copia de seguridad del sitio de Configuration Manager se complete correctamente.  
 
 ### <a name="purpose"></a>Finalidad  
@@ -915,9 +916,4 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
 ### <a name="volume-shadow-copy-service"></a>Servicio de instantáneas de volumen  
  El servicio VSS es un conjunto de API de COM que implementan un marco para permitir la realización de copias de seguridad de volumen mientras se siguen escribiendo aplicaciones de un sistema en los volúmenes. El servicio VSS proporciona una interfaz coherente que permite la coordinación entre aplicaciones de usuario que actualizan datos en el disco (el servicio SMS Writer) y otras que realizan copias de seguridad de aplicaciones (el servicio Administrador de actualizaciones). Para obtener más información acerca de VSS, consulte el tema [Volume Shadow Copy Service (Servicio de instantáneas de volumen)](http://go.microsoft.com/fwlink/p/?LinkId=241968) en el TechCenter de Windows Server.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

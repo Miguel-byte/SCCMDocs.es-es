@@ -17,9 +17,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 32190ec39af2cf1568b3d57c2c2f25d9ff2f9e20
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 8c7bf901caa49c8585a9ed3913d4a5a2aac57013
+ms.openlocfilehash: 82f7db908f83d69a86c82ed97b845ff84e78f8b3
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>Perfiles de VPN en dispositivos móviles en System Center Configuration Manager
@@ -32,8 +32,8 @@ Use perfiles de VPN en System Center Configuration Manager para implementar la c
 
  Cuando cree un perfil de VPN, puede incluir una amplia gama de opciones de seguridad, incluidos certificados para la validación del servidor y la autenticación del cliente aprovisionados mediante perfiles de certificado de System Center Configuration Manager. Para obtener más información sobre los perfiles de certificado, consulte [Certificate profiles in System Center Configuration Manager](../../protect/deploy-use/introduction-to-certificate-profiles.md) (Perfiles de certificado en Configuration Manager).  
 
- ## <a name="vpn-profiles-when-using-configuration-manager-together-with-intune"></a>Perfiles de VPN en Configuration Manager con Intune 
- 
+ ## <a name="vpn-profiles-when-using-configuration-manager-together-with-intune"></a>Perfiles de VPN en Configuration Manager con Intune
+
  Para implementar perfiles en dispositivos iOS, Android, Windows Phone y Windows 8.1, estos dispositivos deben inscribirse en Microsoft Intune. También se pueden inscribir en Intune dispositivos de otras plataformas. Para obtener información sobre cómo realizar la inscripción, consulte [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx) (Administrar dispositivos móviles con Microsoft Intune). En esta tabla se muestra qué tipo de conexión se admite para cada plataforma de dispositivo:  
 
  |Tipo de conexión|iOS y Mac OS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop y Mobile|  
@@ -91,7 +91,7 @@ Use perfiles de VPN en System Center Configuration Manager para implementar la c
 
         -   **Recordar las credenciales de usuario en cada inicio de sesión**: las credenciales de usuario se recuerdan, de manera que el usuario no tiene que escribirlas cada vez que se conecte.  
 
-        -   **Seleccionar un certificado de cliente para la autenticación de cliente**: seleccione el [certificado SCEP](introduction-to-certificate-profiles.md) de cliente que ha creado previamente y que se usará para autenticar la conexión VPN.   
+        -   **Seleccionar un certificado de cliente para la autenticación de cliente**: seleccione el [certificado SCEP](create-pfx-certificate-profiles.md) de cliente que ha creado previamente y que se usará para autenticar la conexión VPN.   
 
             > [!NOTE]  
             >  Para dispositivos iOS, el perfil SCEP que seleccione se incrustará en el perfil de VPN. Para otras plataformas, se agrega una regla de aplicabilidad para garantizar que el perfil de VPN no se instala si el certificado no está presente o no es conforme.  

@@ -16,9 +16,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: 4222ca27e19ade46d53f8cd4598643ddd4fd5c8f
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 2ace86cc842d6a3a5b2114c4e4c33c2d65c2f256
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>Inscripción del Programa de inscripción de dispositivos (DEP) iOS para implementaciones híbridas con Configuration Manager
@@ -35,7 +35,7 @@ Las empresas pueden comprar dispositivos iOS mediante el Programa de inscripció
 ###  <a name="enable-dep-enrollment-in-configuration-manager-with-intune"></a>Habilitar la inscripción en DEP en Configuration Manager con Intune  
 
 1.  **Inicio de la administración de dispositivos iOS con Configuration Manager**   
-    Antes de que pueda inscribir dispositivos del Programa de inscripción de dispositivos (DEP) iOS, debe completar los pasos para [Set up Hybrid mobile device management (Configurar la administración híbrida de dispositivos móviles)](../../mdm/deploy-use/setup-hybrid-mdm.md) incluidos los [pasos para admitir la inscripción de iOS](../deploy-use/setup-hybrid-mdm.md#ios-and-mac-enrollment-setup).
+    Antes de que pueda inscribir dispositivos del Programa de inscripción de dispositivos (DEP) iOS, debe completar los pasos para [Set up Hybrid mobile device management (Configurar la administración híbrida de dispositivos móviles)](../../mdm/deploy-use/setup-hybrid-mdm.md) incluidos los [pasos para admitir la inscripción de iOS](../deploy-use/enroll-hybrid-ios-mac.md).
 
 2.  **Crear una solicitud de token de DEP**   
     En la consola de Configuration Manager, en el área de trabajo **Administración**, expanda **Configuración de jerarquía**, expanda **Servicios de nube** y haga clic en **Suscripciones de Windows Intune**. Haga clic en **Crear una solicitud de token de DEP** en la pestaña **Inicio** , haga clic en **Examinar** para especificar la ubicación de la descarga de la solicitud de token de DEP y, a continuación, haga clic en **Descargar**. Guarde el archivo de solicitud de token de DEP (.pem) en el equipo local. El archivo .pem se usa para solicitar un token de confianza (.p7m) en el portal del programa de inscripción de dispositivos de Apple.  
