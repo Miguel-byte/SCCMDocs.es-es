@@ -18,9 +18,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: ef68a9f998ea6ff9628e01f6ac622711de68375d
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: 3b1451edaed69a972551bd060293839aa11ec8b2
+ms.openlocfilehash: be9596537e9c80a6d78aa0685d33382bfd242afe
+ms.lasthandoff: 03/28/2017
 
 
 ---
@@ -31,14 +31,15 @@ ms.lasthandoff: 12/16/2016
 
 La inscripción en masa de la administración local de dispositivos móviles de System Center Configuration Manager es una forma más automatizada de inscribir dispositivos si se compara con la inscripción de usuario, que exige que los usuarios escriban sus credenciales para inscribir el dispositivo.  La inscripción masiva usa un paquete de inscripción para autenticar el dispositivo durante la inscripción. El paquete (un archivo .ppkg) contiene un perfil de certificado y, opcionalmente, un perfil de Wi-Fi si el dispositivo necesita conectividad de la intranet para admitir la inscripción.  
 
- > [!NOTE]  
+> [!NOTE]  
 >  La rama actual de Configuration Manager admite la inscripción en la administración local de dispositivos móviles para dispositivos con los sistemas operativos siguientes:  
 >   
->  -   Windows 10 Enterprise  
+> -  Windows 10 Enterprise  
 > -   Windows 10 Pro  
-> -   Windows 10 Team \(a partir de la versión 1602 de Configuration Manager\)  
+> -   Windows 10 Team  
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise
+> -   Windows 10 IoT Enterprise   
 
 En las tareas siguientes se explica cómo inscribir equipos y dispositivos en masa para la administración local de dispositivos móviles:  
 

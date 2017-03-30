@@ -16,9 +16,9 @@ author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: c27d9129b261b166ad7b21aff468d47eba116d67
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 3b1451edaed69a972551bd060293839aa11ec8b2
+ms.openlocfilehash: 20be68496099a67ad2d475067f073da2cef16c86
+ms.lasthandoff: 03/28/2017
 
 
 ---
@@ -72,7 +72,7 @@ Puede implementar los términos y condiciones de System Center Configuration Man
 
 ## <a name="to-monitor-terms-and-conditions"></a>Para supervisar términos y condiciones  
 
-1.  A partir de la versión 1602, puede supervisar las implementaciones de términos y condiciones en la consola de Configuration Manager. En la consola de Configuration Manager, vaya a **Supervisión** > **Información general** > **Implementaciones**.  
+1.  Puede supervisar las implementaciones de términos y condiciones en la consola de Configuration Manager. En la consola de Configuration Manager, vaya a **Supervisión** > **Información general** > **Implementaciones**.  
 
 2.  Seleccione la implementación de términos y condiciones en la lista de implementaciones.  
 

@@ -1,7 +1,7 @@
 ---
 title: "Planear la puerta de enlace de administración en la nube | Microsoft Docs"
 description: 
-ms.date: 12/19/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
@@ -10,9 +10,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1df2d8bcd73633ac1d37cc3ef31343be9c5bc95d
-ms.openlocfilehash: 6e2895565e868eb80a8f4f4b46b8a28eb4961e28
-ms.lasthandoff: 12/19/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: c61769cc97c320452c9ee27a924cb01480e6f33d
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -43,7 +43,7 @@ Se necesitan certificados de cliente y de capa de sockets seguros (SSL) para aut
 - La puerta de enlace de administración en la nube solo admite los roles de punto de administración y punto de actualización de software.
 -   En estos momentos, las siguientes características de Configuration Manager no son compatibles con la puerta de enlace de administración en la nube:
 
-    -   Actualizaciones e implementaciones de cliente con la inserción de cliente
+    -   Implementación de cliente
     -   Asignación automática de sitio
     -   Directivas de usuario
     -   Catálogo de aplicaciones (incluidas las solicitudes de aprobación de software)

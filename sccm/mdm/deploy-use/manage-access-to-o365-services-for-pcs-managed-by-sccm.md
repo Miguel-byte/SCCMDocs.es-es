@@ -16,9 +16,9 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: b7c55ce5629565cb1e3aede6680ef1796f56cb20
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
+ms.openlocfilehash: e9028a54e538b4ec987dbaeb5ba1ee22ad091728
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -51,14 +51,14 @@ ms.lasthandoff: 03/06/2017
 
 -   Windows 8.1  
 
--   Windows 10 todavía no es totalmente compatible.  Si intenta establecer el acceso condicional para equipos Windows 10, se pueden producir algunos problemas.  Consulte [Problemas conocidos](#bkmk_KnownIssues) para obtener información detallada.  
+-   Windows 10 
 
 ## <a name="configure-conditional-access"></a>Configuración de acceso condicional  
  Para configurar el acceso condicional, primero debe crear una directiva de cumplimiento y configurar la directiva de acceso condicional. Al configurar las directivas de acceso condicional para equipos, puede requerir que los equipos se atengan a la directiva de cumplimiento para acceder a los servicios Exchange Online y SharePoint Online.  
 
 ### <a name="prerequisites"></a>Requisitos previos  
 
--   Sincronización de ADFS y una suscripción de O365. La suscripción de Office&365; sirve para configurar Exchange Online y SharePoint Online.  
+-   Sincronización de ADFS y una suscripción de O365. La suscripción de Office 365 sirve para configurar Exchange Online y SharePoint Online.  
 
 -   Suscripción a Microsoft Intune. La suscripción a Microsoft Intune debe configurarse en la consola de Configuration Manager. Esto todavía requiere que se disponga de una implementación híbrida.  
 
@@ -135,15 +135,16 @@ ms.lasthandoff: 03/06/2017
 
  Los usuarios finales que están bloqueados debido a la falta de cumplimiento van a ver información de cumplimiento en el Centro de software de System Center Configuration Manager e iniciarán una nueva evaluación de directivas cuando se corrijan los problemas de cumplimiento.  
 
-##  <a name="bkmk_KnownIssues"></a> Problemas conocidos  
- Puede ver los siguientes problemas al utilizar esta característica:  
+<!---
+##  <a name="bkmk_KnownIssues"></a> Known issues  
+ You may see the following issues when using this feature:  
 
--   En esta actualización 1602, no se exige el cumplimiento de 5 días. Incluso si la comprobación de cumplimiento en el dispositivo del usuario final se produjo hace más de 5 días, los usuarios todavía pueden acceder a Office 365 y SharePoint Online.  
+-   In this 1602 update,  the 5 day compliance is not enforced. Even if compliance check on the end-user's device has happened more than 5 days ago, users still can access Office 365 and SharePoint online.  
 
--   Cuando un dispositivo no es compatible con la directiva de cumplimiento, el motivo no se muestra automáticamente. El usuario final debe ir al Centro de software nuevo para averiguar el motivo de la no conformidad. El motivo se muestra en la sección Conformidad de dispositivos del Centro de software.  
+-   When a device is not compliant with the compliance policy, the reason is not automatically displayed. The end- user must go to the new Software Center to find the reason for non-compliance. The reason is displayed in the Device compliance section of the Software Center.  
 
--   Los usuarios de Windows 10 pueden ver varios errores de acceso al intentar tener acceso a recursos de Office 365 y SharePoint Online. Tenga en cuenta que el acceso condicional no se admite totalmente para Windows 10.  
-
+-   Windows 10 users may see multiple access failures when trying to reach O365 and/or SharePoint online resources. Note that conditional access is not fully supported for Windows 10.  
+--->
 ### <a name="see-also"></a>Consulte también  
  [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md) (Proteger la infraestructura de datos y del sitio con System Center Configuration Manager)
 
