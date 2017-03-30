@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 5e6e8a18a8fc705c993177b3c5b4113a351a45a4
 ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
+ms.lasthandoff: 12/29/2016
 
 
 ---
@@ -28,7 +29,7 @@ ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
 
 Use las siguientes listas de comprobación de administrador como ayuda para planear la estrategia de migración a System Center Configuration Manager.
 
-##  <a name="a-namechecklistmigraitonplanninga-administrator-checklist-for-migration-planning"></a><a name="Checklist_Migraiton_Planning"></a> Lista de comprobación de administrador para la planeación de la migración  
+##  <a name="Checklist_Migraiton_Planning"></a> Lista de comprobación de administrador para la planeación de la migración  
  Utilice la siguiente lista de comprobación para la planeación de los pasos de la migración.  
 
 -   **Evalúe el entorno actual:**  
@@ -37,7 +38,7 @@ Use las siguientes listas de comprobación de administrador como ayuda para plan
 
 -   **Revise la funcionalidad y los cambios disponibles con la versión de Configuration Manager que usa y emplee la información para diseñar la jerarquía de destino:**  
 
-    Para obtener más información, vea [Fundamentals of System Center Configuration Manager](../../core/understand/fundamentals.md) y [What's new in System Center Configuration Manager](../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md).  
+    Para obtener más información, vea [Aspectos básicos de System Center Configuration Manager](../../core/understand/fundamentals.md) y [Novedades de System Center Configuration Manager](../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md).  
 
 
 -   **Determine el modelo de seguridad administrativa que se usará para la administración basada en roles:**  
@@ -76,7 +77,7 @@ Use las siguientes listas de comprobación de administrador como ayuda para plan
 
     Decida cuándo se migrarán los objetos y los clientes. Al finalizar la migración, puede planear la retirada de los servidores de sitio en la jerarquía de origen.  
 
-##  <a name="a-namechecklisthierarchyformigrationa-administrator-checklist-for-hierarchy-migration"></a><a name="Checklist_Hierarchy_for_migration"></a> Lista de comprobación de administrador para la migración de jerarquías  
+##  <a name="Checklist_Hierarchy_for_migration"></a> Lista de comprobación de administrador para la migración de jerarquías  
 Utilice la siguiente lista de comprobación para planear una jerarquía de destino antes de iniciar la migración.  
 
 -   **Identifique los equipos que se van a usar en la jerarquía de destino:**  
@@ -113,7 +114,7 @@ Utilice la siguiente lista de comprobación para planear una jerarquía de desti
     -   Compruebe que los clientes de Configuration Manager que instala en la jerarquía de destino pueden comunicarse correctamente con su sitio asignado.  
 
 
-##  <a name="a-namechecklisitmigrationa-administrator-checklist-for-migration"></a><a name="Checklisit_Migration"></a> Lista de comprobación de administrador para la migración  
+##  <a name="Checklisit_Migration"></a> Lista de comprobación de administrador para la migración  
 Utilice la siguiente lista de comprobación para migrar datos de la jerarquía de origen a la jerarquía de destino.  
 
 -   **Habilite la migración en la jerarquía de destino:**  
@@ -151,7 +152,7 @@ Utilice la siguiente lista de comprobación para migrar datos de la jerarquía d
 
     Al migrar un cliente a la jerarquía de destino, el cliente se asocia con los datos migrados anteriormente a esa jerarquía de destino.  
 
-    Para obtener más información, vea [Planning a client migration strategy in System Center Configuration Manager](../../core/migration/planning-a-client-migration-strategy.md).  
+    Para obtener más información, vea [Planeación de una estrategia de trabajo de migración en System Center Configuration Manager](../../core/migration/planning-a-client-migration-strategy.md).  
 
 -   **Actualice o vuelva a asignar puntos de distribución compartidos:**  
 
@@ -163,10 +164,5 @@ Utilice la siguiente lista de comprobación para migrar datos de la jerarquía d
 
 -   **Finalizar la migración:**  
 
-    Después de migrar los datos y los clientes de todos los sitios en la jerarquía de origen, y de actualizar los puntos de distribución correspondientes, puede finalizar la migración. Para finalizar la migración, detenga la recopilación de datos de los sitios de origen en la jerarquía de origen. A continuación, puede quitar la información de migración que no necesite y retirar la infraestructura de la jerarquía de origen. Para obtener más información, vea [Planning to complete migration in System Center Configuration Manager](../../core/migration/planning-to-complete-migration.md).  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
+    Después de migrar los datos y los clientes de todos los sitios en la jerarquía de origen, y de actualizar los puntos de distribución correspondientes, puede finalizar la migración. Para finalizar la migración, detenga la recopilación de datos de los sitios de origen en la jerarquía de origen. A continuación, puede quitar la información de migración que no necesite y retirar la infraestructura de la jerarquía de origen. Para obtener más información, vea [Planear la finalización de la migración en System Center Configuration Manager](../../core/migration/planning-to-complete-migration.md).  
 
