@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a8cb3c9850b183eec156c37a181c04088b71805e
-ms.openlocfilehash: 40837306816639ff8cea8930fec75b05edc5164a
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: ddf2ad1cae51c1e36df5a6d86822e2b9abe604e2
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -65,7 +66,7 @@ Al diseñar e implementar la seguridad administrativa de Configuration Manager, 
 > [!IMPORTANT]  
 >  Los retrasos de replicación entre sitios pueden impedir que un sitio reciba los cambios de la administración basada en roles. Para obtener más información sobre cómo supervisar la replicación de base de datos entre sitios, consulte el tema [Transferencias de datos entre sitios en System Center Configuration Manager](../../core/servers/manage/data-transfers-between-sites.md).  
 
-##  <a name="a-namebkmkplanrolesa-security-roles"></a><a name="bkmk_Planroles"></a> Roles de seguridad  
+##  <a name="bkmk_Planroles"></a> Roles de seguridad  
  Use roles de seguridad para conceder permisos de seguridad a usuarios administrativos. Los roles de seguridad son grupos de permisos de seguridad que se asignan a usuarios administrativos para que puedan realizar sus tareas administrativas. Estos permisos de seguridad definen las acciones administrativas que un usuario administrativo puede realizar y los permisos que se conceden para determinados tipos de objetos. Como medida de seguridad recomendada, asigne roles de seguridad que proporcionen el menor nivel de permisos.  
 
  Configuration Manager dispone de varios roles de seguridad integrados para admitir las agrupaciones habituales de tareas administrativas. Puede crear sus propios roles de seguridad para satisfacer sus requisitos empresariales. Ejemplos de roles de seguridad integrados:  
@@ -79,7 +80,7 @@ Al diseñar e implementar la seguridad administrativa de Configuration Manager, 
 > [!TIP]  
 >  Puede ver la lista de los roles de seguridad integrados y los roles de seguridad personalizados que crea, y sus descripciones, en la consola de Configuration Manager. Para ver los roles, en el área de trabajo **Administración**, expanda **Seguridad** y, después, seleccione **Roles de seguridad**.  
 
- Cada rol de seguridad tiene determinados permisos para distintos tipos de objetos. Por ejemplo, el rol de seguridad *MMM de aplicaciones* tiene los siguientes permisos para las aplicaciones: Aprobar, Crear, Eliminar, Modificar, Modificar carpetas, Mover objetos, Leer/Implementar y Establecer ámbito de seguridad.
+ Cada rol de seguridad tiene determinados permisos para distintos tipos de objetos. Por ejemplo, el rol de seguridad *Autor de aplicaciones* tiene los permisos siguientes para las aplicaciones: Aprobar, Crear, Eliminar, Modificar, Modificar carpeta, Mover objeto, Leer, Ejecutar informe y Establecer ámbito de seguridad.
 
  No puede cambiar los permisos de los roles de seguridad integrados, pero puede copiar el rol, realizar cambios y, a continuación, guardar estos cambios como un nuevo rol de seguridad personalizado. También puede importar roles de seguridad que ha exportado desde otra jerarquía, por ejemplo, de una red de prueba. Revise los roles de seguridad y sus permisos para determinar si usará los roles de seguridad integrados o si debe crear sus propios roles de seguridad personalizados.  
 
@@ -95,7 +96,7 @@ Al diseñar e implementar la seguridad administrativa de Configuration Manager, 
 
 Para obtener más información sobre cómo crear y configurar roles de seguridad para la administración basada en roles, consulte [Crear roles de seguridad personalizados](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole) y [Configurar roles de seguridad](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecRole) en el tema [Configure role-based administration for System Center Configuration Manager (Configurar la administración basada en roles para System Center Configuration Manager)](../../core/servers/deploy/configure/configure-role-based-administration.md).  
 
-##  <a name="a-namebkmkplancola-collections"></a><a name="bkmk_planCol"></a> Recopilaciones  
+##  <a name="bkmk_planCol"></a> Recopilaciones  
  Las recopilaciones especifican los recursos de usuario y equipo que los usuarios administrativos pueden ver o administrar. Por ejemplo, para que los usuarios administrativos puedan implementar aplicaciones o ejecutar el control remoto, deben estar asignados a un rol de seguridad que conceda acceso a la recopilación que contiene dichos recursos. Puede seleccionar recopilaciones de usuarios o dispositivos.  
 
  Para obtener más información sobre las recopilaciones, consulte [Introduction to collections in System Center Configuration Manager (Introducción a las recopilaciones en System Center Configuration Manager)](../../core/clients/manage/collections/introduction-to-collections.md).  
@@ -112,7 +113,7 @@ Para obtener más información sobre cómo crear y configurar roles de seguridad
 
 Para obtener más información sobre cómo configurar recopilaciones para la administración basada en roles, consulte [Configurar recopilaciones para administrar la seguridad](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigColl) en el tema [Configure role-based administration for System Center Configuration Manager (Configurar la administración basada en roles para System Center Configuration Manager)](../../core/servers/deploy/configure/configure-role-based-administration.md) .  
 
-##  <a name="a-namebkmkplanscopea-security-scopes"></a><a name="bkmk_PlanScope"></a> Ámbitos de seguridad  
+##  <a name="bkmk_PlanScope"></a> Ámbitos de seguridad  
  Use los ámbitos de seguridad para proporcionar acceso a objetos protegibles para los usuarios administrativos. Un ámbito de seguridad es un conjunto de objetos protegibles asignados a usuarios administrativos como un grupo. Todos los objetos protegibles deben estar asignados a uno o más ámbitos de seguridad. Configuration Manager tiene dos ámbitos de seguridad integrados:  
 
 -   El ámbito de seguridad integrado *Todo* concede acceso a todos los ámbitos. No se pueden asignar objetos a este ámbito de seguridad.  
@@ -212,9 +213,4 @@ Cree ámbitos de seguridad si tiene que limitar el acceso a instancias independi
 -   Los distintos usuarios administrativos requieren un determinado acceso a algunas instancias de un tipo de objeto. Por ejemplo, un grupo de usuarios administrativos requiere el permiso de lectura en determinados grupos de actualizaciones de software, y otro grupo de usuarios administrativos requiere el permiso Modificar y Eliminar para otros grupos de actualizaciones de software. Cree distintos ámbitos de seguridad para estos grupos de actualizaciones de software.  
 
 Para obtener más información sobre cómo configurar ámbitos de seguridad para la administración basada en roles, consulte [Configurar ámbitos de seguridad para un objeto](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope) en el tema [Configure role-based administration for System Center Configuration Manager (Configurar la administración basada en roles para System Center Configuration Manager)](../../core/servers/deploy/configure/configure-role-based-administration.md).  
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 

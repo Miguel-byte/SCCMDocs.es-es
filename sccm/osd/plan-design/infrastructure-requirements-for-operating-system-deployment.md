@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 77ac69cecab7aa460001a8d2800e61f20a8565ed
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 562e81df12e46a2332aa5e4de8b7c9e5819bde80
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 77ac69cecab7aa460001a8d2800e61f20a8565ed
 
 La implementación de sistema operativo en System Center 2012 Configuration Manager tiene dependencias externas y dependencias dentro del producto. Use las secciones siguientes para que le resulte más fácil prepararse para la implementación de sistema operativo.  
 
-##  <a name="a-namebkmkexternaldependenciesa-dependencies-external-to-configuration-manager"></a><a name="BKMK_ExternalDependencies"></a> Dependencias externas a Configuration Manager  
+##  <a name="BKMK_ExternalDependencies"></a> Dependencias externas a Configuration Manager  
  En la tabla siguiente se proporciona información sobre herramientas externas, kits de instalación y sistemas operativos necesarios para implementar sistemas operativos en Configuration Manager.  
 
 ### <a name="windows-adk-for-windows-10"></a>Windows ADK para Windows 10  
@@ -104,7 +105,7 @@ Debe instalar las siguientes revisiones de WSUS 4.0:
 ### <a name="windows-device-drivers"></a>Controladores de dispositivos de Windows  
  Los controladores de dispositivos de Windows pueden utilizarse cuando se instala el sistema operativo en el equipo de destino y cuando se ejecuta Windows PE mediante una imagen de arranque. Para obtener más información sobre los controladores de dispositivos, consulte [Administrar controladores](../get-started/manage-drivers.md).  
 
-##  <a name="a-namebkmkinternaldependenciesa-configuration-manager-dependencies"></a><a name="BKMK_InternalDependencies"></a> Dependencias de Configuration Manager  
+##  <a name="BKMK_InternalDependencies"></a> Dependencias de Configuration Manager  
  A continuación se proporciona información sobre los requisitos previos para la implementación del sistema operativo de Configuration Manager.  
 
 ### <a name="operating-system-image"></a>Imagen de sistema operativo  
@@ -124,10 +125,10 @@ Debe instalar las siguientes revisiones de WSUS 4.0:
  Para obtener más información sobre cómo instalar puntos de distribución y administrar contenido, consulte [Manage content and content infrastructure (Administrar el contenido y la infraestructura de contenido)](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 ### <a name="pxe-enabled-distribution-point"></a>Punto de distribución habilitado con PXE  
- Para implementar las implementaciones iniciadas con PXE, debe configurar un punto de distribución que acepte las solicitudes de PXE de los clientes. Para obtener más información sobre cómo configurar el punto de distribución, consulte [Configuraciones de punto de distribución](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#a-namebkmkconfigsa-distribution-point-configurations) y busque la categoría de configuración de PXE en la tabla.  
+ Para implementar las implementaciones iniciadas con PXE, debe configurar un punto de distribución que acepte las solicitudes de PXE de los clientes. Para más información sobre cómo configurar el punto de distribución, vea [Configurar un punto de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pxe).  
 
 ### <a name="multicast-enabled-distribution-point"></a>Punto de distribución habilitado con multidifusión  
- Para optimizar las implementaciones de sistema operativo mediante multidifusión, debe configurar un punto de distribución que admita multidifusión. Para obtener más información sobre cómo configurar el punto de distribución, consulte [Configuraciones de punto de distribución](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#a-namebkmkconfigsa-distribution-point-configurations) y busque la categoría de configuración de multidifusión en la tabla.  
+ Para optimizar las implementaciones de sistema operativo mediante multidifusión, debe configurar un punto de distribución que admita multidifusión. Para más información sobre cómo configurar el punto de distribución, vea [Configurar un punto de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#multicast).   
 
 ### <a name="state-migration-point"></a>Punto de migración de estado  
  Al capturar y restaurar datos de estado de usuario para las implementaciones en paralelo y de actualización, debe configurar un punto de migración de estado para almacenar los datos de estado de usuario en otro equipo.  
@@ -162,7 +163,7 @@ Debe instalar las siguientes revisiones de WSUS 4.0:
 ### <a name="security-scopes-for-operating-system-deployments"></a>Ámbitos de seguridad para las implementaciones de sistema operativo  
  Use ámbitos de seguridad para hacer que los usuarios administrativos tengan acceso a los objetos protegibles utilizados en las implementaciones de sistema operativo, tales como las imágenes de sistema operativo y de arranque, los paquetes de controladores y los paquetes de secuencias de tareas. Para obtener más información, consulte [Ámbitos de seguridad](../../core/understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope).  
 
-##  <a name="a-namebkmkwdsa-windows-deployment-services"></a><a name="BKMK_WDS"></a> Servicios de implementación de Windows  
+##  <a name="BKMK_WDS"></a> Servicios de implementación de Windows  
  Para admitir PXE o multidifusión, servicios de implementación de Windows (WDS) debe instalarse en el mismo servidor que los puntos de distribución que se configuran. El sistema operativo del servidor incluye WDS. En las implementaciones de PXE, WDS es el servicio que realiza el arranque de PXE. Si el punto de distribución se instala y se habilita para PXE, Configuration Manager instala un proveedor en WDS que emplea las funciones de arranque de PXE de WDS.  
 
 > [!NOTE]  
@@ -176,7 +177,7 @@ Debe instalar las siguientes revisiones de WSUS 4.0:
 
 -   Si el proveedor está instalado en un servidor remoto, debe instalar WDS en el servidor de sitio y el proveedor remoto.  
 
-###  <a name="a-namebkmkwdsanddhcpa-considerations-when-you-have-wds-and-dhcp-on-the-same-server"></a><a name="BKMK_WDSandDHCP"></a> Consideraciones si se tiene WDS y DHCP en el mismo servidor  
+###  <a name="BKMK_WDSandDHCP"></a> Consideraciones si se tiene WDS y DHCP en el mismo servidor  
  Tenga en cuenta las siguientes consideraciones sobre configuración si planea hospedar conjuntamente el punto de distribución en un servidor que ejecuta DHCP.  
 
 -   Debe tener un servidor DHCP en funcionamiento con un ámbito activo. Servicios de implementación de Windows utiliza PXE, el cual requiere un servidor DHCP.  
@@ -208,10 +209,10 @@ Debe instalar las siguientes revisiones de WSUS 4.0:
     > [!NOTE]  
     >  Además, si se requiere una autorización de DHCP en el servidor, será necesario que el puerto 68 del cliente DHCP esté abierto en el servidor.  
 
-##  <a name="a-namebkmksupportedosa-supported-operating-systems"></a><a name="BKMK_SupportedOS"></a> Sistemas operativos compatibles  
+##  <a name="BKMK_SupportedOS"></a> Sistemas operativos compatibles  
  Todos los sistemas operativos de Windows enumerados como sistemas operativos de cliente compatibles en [Sistemas operativos compatibles con clientes y dispositivos](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md) se admiten en las implementaciones de sistema operativo.  
 
-##  <a name="a-namebkmksupporteddiskconfiga-supported-disk-configurations"></a><a name="BKMK_SupportedDiskConfig"></a> Configuraciones de disco compatibles  
+##  <a name="BKMK_SupportedDiskConfig"></a> Configuraciones de disco compatibles  
  Las combinaciones de configuración de disco duro en los equipos de referencia y de destino compatibles con la implementación de sistema operativo de Configuration Manager se muestran en la tabla siguiente.  
 
 |Configuración de disco duro del equipo de referencia|Configuración de disco duro del equipo de destino|  
@@ -237,9 +238,4 @@ Debe instalar las siguientes revisiones de WSUS 4.0:
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Prepararse para la implementación de sistema operativo](../get-started/prepare-for-operating-system-deployment.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

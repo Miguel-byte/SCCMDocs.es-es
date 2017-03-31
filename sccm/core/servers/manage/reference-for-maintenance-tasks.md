@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
-ms.openlocfilehash: 92d3c215569916a5557309d7f488aa88f387da92
-ms.lasthandoff: 03/09/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: c3ca3b895d54b6dc886068b92b39d0d95c466de2
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -207,6 +207,11 @@ Esta tarea se aplica en dispositivos inscritos con Microsoft Intune (híbrido) o
 -   **Sitio primario**: habilitado    
 -   Sitio secundario: no disponible  
 
+**Eliminar registros expirados del paquete de inscripción masiva de MDM**: use esta tarea para eliminar certificados antiguos de inscripción masiva y los perfiles correspondientes después de que caduque el certificado de inscripción. Para más información, vea [Crear perfiles de certificado](/sccm/protect/deploy-use/create-certificate-profiles).
+-   **Sitio de administración central**: habilitado
+-   **Sitio primario**: habilitado
+-   Sitio secundario: no disponible
+
 **Eliminar datos de detección de cliente inactivos**: use esta tarea para eliminar de la base de datos los datos de detección de clientes inactivos. Los clientes se marcan como inactivos cuando el cliente se marca como obsoleto y por las configuraciones realizadas para el estado de cliente.
 
 Esta tarea solo funciona en los recursos que son clientes de Configuration Manager. Es diferente de la tarea **Eliminar datos de detección antiguos**, que elimina los registros de datos de detección antiguos. Cuando esta tarea se ejecuta en un sitio, quita los datos de la base de datos en todos los sitios de la jerarquía. Para más información, vea [Cómo configurar el estado de cliente en System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md).  
@@ -242,7 +247,7 @@ Esta tarea solo funciona en los recursos que son clientes de Configuration Manag
 **Eliminar registros huérfanos de estado de implementación de cliente**: use esta tarea para purgar periódicamente la tabla que contiene información de estado de implementación de cliente. Esta tarea limpiará los registros asociados con dispositivos obsoletos o retirados.  
 -   **Sitio de administración central**: habilitado    
 -   **Sitio primario**: habilitado    
--   Sitio secundario: no disponible 
+-   Sitio secundario: no disponible
 
 **Eliminar revisiones de la aplicación sin usar**: use esta tarea para eliminar revisiones de la aplicación a las que ya no se hace referencia. Para obtener más información, consulte [How to revise and supersede applications in System Center Configuration Manager](../../../apps/deploy-use/revise-and-supersede-applications.md) (Cómo revisar y sustituir aplicaciones en System Center Configuration Manager).  
 

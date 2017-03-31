@@ -16,9 +16,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c74b553ab76a2b77b0d893151351132da05a640d
-ms.openlocfilehash: 76ce5f413f406088862fb310bbea24140317ca06
-ms.lasthandoff: 01/03/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 9cab5b91a94e8bf2ad96a8a706f46c58e2a3d712
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -28,7 +28,7 @@ ms.lasthandoff: 01/03/2017
 
 En este tema se describe cómo implementar y mantener el cliente de Configuration Manager en equipos Mac. Para obtener información sobre qué se debe configurar antes de implementar clientes en equipos Mac, vea [Prepararse para implementar software cliente en equipos Mac](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients).
 
-Cuando instale un nuevo cliente para equipos Mac, es posible que tenga que instalar también actualizaciones de Configuration Manager para reflejar la nueva información de cliente en la consola de Configuration Manager. 
+Cuando instale un nuevo cliente para equipos Mac, es posible que tenga que instalar también actualizaciones de Configuration Manager para reflejar la nueva información de cliente en la consola de Configuration Manager.
 
 En estos procedimientos, tiene dos opciones para instalar los certificados de cliente. Obtenga más información sobre los certificados de cliente para equipos Mac en [Prepararse para implementar software cliente en equipos Mac](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#certificate-requirements).  
 
@@ -84,7 +84,7 @@ En estos procedimientos, tiene dos opciones para instalar los certificados de cl
 >  Para obtener más información sobre la configuración de cliente de Configuration Manager, consulte [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md) (Cómo configurar el cliente en System Center Configuration Manager).  
 
 ## <a name="download-the-client-source-files-for-macs"></a>Descargar los archivos de origen de cliente para equipos Mac  
-  
+
 1.  Descargue el paquete de archivos de cliente de Mac OS X **ConfigmgrMacClient.msi**y guárdelo en un equipo donde se ejecute Windows.  
 
      Este archivo no se incluye en los medios de instalación de Configuration Manager. Puede descargar este archivo desde el [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkID=525184).  
@@ -95,7 +95,7 @@ En estos procedimientos, tiene dos opciones para instalar los certificados de cl
 
 4.  En el equipo Mac, ejecute el archivo Macclient.dmg para extraer los archivos en una carpeta del disco local.  
 
-5.  En la carpeta, asegúrese de que se extraen los archivos Ccmsetup y CMClient.pkg, y que se creó una carpeta denominada Tools que contiene las herramientas CMDiagnostics, CMUninstall, CMAppUtil y CMEnroll. 
+5.  En la carpeta, asegúrese de que se extraen los archivos Ccmsetup y CMClient.pkg, y que se creó una carpeta denominada Tools que contiene las herramientas CMDiagnostics, CMUninstall, CMAppUtil y CMEnroll.
 
     -  **Ccmsetup**: instala el cliente de Configuration Manager en los equipos Mac.  
 
@@ -108,7 +108,7 @@ En estos procedimientos, tiene dos opciones para instalar los certificados de cl
     -   **CMEnroll**: solicita e instala el certificado de cliente para un equipo Mac, de modo que pueda instalar después el cliente de Configuration Manager.   
 
 ## <a name="install-the-client-and-then-enroll-the-client-certificate-on-the-mac"></a>Instalar el cliente e inscribir el certificado de cliente en el equipo Mac  
-  
+
 Puede inscribir clientes individuales con el [Asistente para inscripción de equipos Mac](#enroll-the-client-with-the-mac-computer-enrollment-wizard).
 
 Para la automatización que habilita la inscripción de muchos clientes, use la [herramienta CMEnroll](#client-and-certificate-automation-with-cmenroll).   
@@ -124,7 +124,7 @@ Para la automatización que habilita la inscripción de muchos clientes, use la 
 
         -   'dominio\nombre'. Por ejemplo: 'contoso\mnorth'  
 
-        -   'user@domain'. Por ejemplo: 'mnorth@contoso.com'  
+        -   "user@domain". Por ejemplo: "mnorth@contoso.com"  
 
             > [!IMPORTANT]  
             >  Si usa una dirección de correo electrónico para rellenar el campo **Nombre de usuario**, Configuration Manager automáticamente usa el nombre de dominio de la dirección de correo electrónico y el nombre predeterminado del servidor de punto de proxy de inscripción para rellenar el campo **Nombre de servidor**. Si el nombre de dominio y el nombre de servidor no coinciden con el nombre del servidor de punto de proxy de inscripción, notifique a los usuarios el nombre correcto que deben usar al realizar la inscripción de equipos Mac.  
@@ -156,7 +156,7 @@ Use este procedimiento para automatizar la instalación del cliente y solicitar 
 
     -   'dominio\nombre'. Por ejemplo: 'contoso\mnorth'  
 
-    -   'user@domain'. Por ejemplo: 'mnorth@contoso.com'  
+    -   "user@domain". Por ejemplo: "mnorth@contoso.com"  
 
      El nombre de usuario y la contraseña correspondiente deben coincidir con una cuenta de usuario de Active Directory a la que se haya concedido permisos de lectura e inscripción en la plantilla de certificado de cliente de Mac.  
 
@@ -196,12 +196,12 @@ Use este procedimiento para automatizar la instalación del cliente y solicitar 
 > -   El archivo de lista de materiales (L. Mat) y el archivo de lista de propiedades (.plist) creados por la instalación de cliente de Configuration Manager.  
 > -   El contenido de la carpeta /Library/Application Support/Microsoft/CCM/Logs.  
 >   
->  La información recopilada por CmDiagnostics se agrega a un archivo ZIP que se guarda en el escritorio del equipo con el nombre cmdiag-*<nombre de host\>***-***<fecha y hora\>*.zip.  
+>  La información recopilada por CmDiagnostics se agrega a un archivo ZIP que se guarda en el escritorio del equipo con el nombre cmdiag-*<nombre de host\>***-***&gt;fecha y hora\>*.zip.***
 
 
 ##  <a name="use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager"></a>Utilizar una solicitud de certificado y un método de instalación independiente de Configuration Manager  
 
-En primer lugar, realice estas tareas específicas de [Prepararse para implementar software cliente en equipos Mac](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients): 
+En primer lugar, realice estas tareas específicas de [Prepararse para implementar software cliente en equipos Mac](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients):
 
 1. [Implementar un certificado de servidor web en servidores del sistema de sitio](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#deploy-a-web-server-certificate-to-site-system-servers)
 

@@ -17,9 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 7d852843d0d3fe7c9ab0947c4b396cee0a92c754
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 507bad02c6e028f09a8b0c8a566ac55f7c3942a5
+ms.openlocfilehash: 8c7438c2cc0bc66654eb3e74de10553df53181d9
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -29,14 +29,15 @@ ms.lasthandoff: 03/06/2017
 
 Con la administración local de dispositivos móviles en System Center Configuration Manager, los usuarios pueden inscribir dispositivos si se les ha concedido permiso de inscripción (por medio de la configuración actualizada de cliente) y si sus dispositivos tienen instalado el certificado raíz necesario para establecer comunicaciones de confianza con los servidores que hospedan los roles de sistema de sitio requeridos. Para obtener más información sobre cómo configurar la inscripción, consulte [Configure la inscripción del dispositivo para Administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md).  
 
- > [!NOTE]  
+> [!NOTE]  
 >  La rama actual de Configuration Manager admite la inscripción en la administración de dispositivos móviles local para dispositivos con los sistemas operativos siguientes:  
 >   
->  -  Windows 10 Enterprise  
+> -  Windows 10 Enterprise  
 > -   Windows 10 Pro  
 > -   Windows 10 Team \(a partir de la versión 1602 de Configuration Manager\)  
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise
+> -   Windows 10 IoT Enterprise   
 
 En las tareas siguientes se explica cómo inscribir equipos y dispositivos y comprobar su inscripción para la administración de dispositivos móviles local:  
 

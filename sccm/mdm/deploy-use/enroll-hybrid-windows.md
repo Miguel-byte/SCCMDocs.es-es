@@ -2,7 +2,7 @@
 title: "Configurar la administración híbrida de dispositivos Windows con System Center Configuration Manager y Microsoft Intune | Microsoft Docs"
 description: "Configure la administración de dispositivos Windows con System Center Configuration Manager y Microsoft Intune."
 ms.custom: na
-ms.date: 03/09/2017
+ms.date: 03/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a8218e23743dafaf8ff1166142cf2dcca1212133
-ms.openlocfilehash: 996d01d3c5d5be4544246a5f321f67b60a8f5508
-ms.lasthandoff: 03/14/2017
+ms.sourcegitcommit: 6424fb07802b62820b4dc78a58ab30d3b956abef
+ms.openlocfilehash: 4189fe34efc2ae134150a89791dc10bbab1b9d02
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -73,14 +73,14 @@ Para habilitar la administración de dispositivos Windows para equipos o disposi
       3. También puede configurar [Windows Hello para empresas](windows-hello-for-business-settings.md).
     - **Windows Phone** para tabletas y teléfonos Windows, después realice los pasos siguientes:
       1. En la pestaña **General**, active la casilla **Windows Phone 8.1 y Windows 10 Mobile**. Ya no se admite Windows Phone 8.0.
-      2. Si su organización necesita transferir localmente aplicaciones de empresa, puede cargar el archivo o token necesarios. Para más información sobre cómo transferir localmente aplicaciones, vea [Crear aplicaciones de Windows](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications).
+      2. Si su organización necesita transferir localmente aplicaciones de empresa, puede cargar el archivo o token necesarios. Para más información sobre la instalación de prueba de las aplicaciones, vea [Crear aplicaciones de Windows](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications).
         - **Token de inscripción de aplicación**
         - **Archivo .pfx**
         - **Ninguno** Si usa un certificado de Symantec, puede especificar **Show an alert before Symantec certificates expire** (Mostrar una alerta antes de que expiren los certificados de Symantec).
 4. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  Para simplificar el proceso de inscripción con el Portal de empresa, debe crear un alias DNS para la inscripción de dispositivos. Después puede indicar a los usuarios cómo inscribir sus dispositivos.
 
 ### <a name="create-dns-alias-for-device-enrollment"></a>Creación de un alias DNS para la inscripción de dispositivos  
-Un alias DNS (tipo de registro CNAME) facilita a los usuarios la inscripción de sus dispositivos al conectarse al servicio sin necesidad de que el usuario escriba una dirección de servidor. Para crear un alias DNS (tipo de registro CNAME), tendrá que configurar un CNAME en los registros DNS de su empresa que redirija las solicitudes enviadas a una dirección URL del dominio de su empresa a servidores de servicios en la nube de Microsoft.  Por ejemplo, si el dominio de su empresa es contoso.com, debe crear un CNAME en DNS que redirija EnterpriseEnrollment.contoso.com a EnterpriseEnrollment-s.manage.microsoft.com.  
+Un alias DNS (tipo de registro CNAME) facilita a los usuarios la inscripción de sus dispositivos al conectarse al servicio sin necesidad de que el usuario escriba una dirección de servidor. Para crear un alias DNS (tipo de registro CNAME), tendrá que configurar un CNAME en los registros DNS de la empresa que redirija las solicitudes enviadas a una dirección URL del dominio de la empresa a servidores de servicios en la nube de Microsoft.  Por ejemplo, si el dominio de la empresa es contoso.com, debe crear un CNAME en DNS que redirija EnterpriseEnrollment.contoso.com a EnterpriseEnrollment-s.manage.microsoft.com.  
 
  Aunque la creación de entradas DNS CNAME es opcional, los registros CNAME facilitan la inscripción para los usuarios. Si no se encuentra ningún registro CNAME de inscripción, se pedirá a los usuarios que escriban de forma manual el nombre del servidor MDM (enrollment.manage.microsoft.com).
 
@@ -88,7 +88,7 @@ Un alias DNS (tipo de registro CNAME) facilita a los usuarios la inscripción de
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hora|
 
-Si tiene más de un sufijo UPN, debe crear un CNAME para cada nombre de dominio y apuntar todos a EnterpriseEnrollment-s.manage.microsoft.com. Por ejemplo, si los usuarios de Contoso usan name@contoso.com, pero también usan name@us.contoso.com y name@eu.constoso.com como su correo electrónico o UPN, el administrador de DNS de Contoso necesitaría crear los siguientes CNAME.
+Si tiene más de un sufijo UPN, debe crear un CNAME para cada nombre de dominio y apuntar todos a EnterpriseEnrollment-s.manage.microsoft.com. Por ejemplo, si los usuarios de Contoso usan name@contoso.com, pero también usan name@us.contoso.com y name@eu.constoso.com como su correo electrónico o UPN, el administrador de DNS de Contoso necesitaría crear los CNAME siguientes.
 
 |Tipo|Nombre de host|Apunta a|TTL|  
 |----------|---------------|---------------|---|

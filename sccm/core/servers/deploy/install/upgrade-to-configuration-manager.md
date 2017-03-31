@@ -2,7 +2,7 @@
 title: Actualizar a System Center Configuration Manager | Microsoft Docs
 description: "Obtenga información sobre qué pasos seguir para ejecutar correctamente una actualización local desde un sitio y jerarquía que ejecutan System Center 2012 Configuration Manager."
 ms.custom: na
-ms.date: 2/23/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
-ms.openlocfilehash: 49e3a9d6f4b8e1afbb76fcba33a7fb58e5a6b13f
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 6424fb07802b62820b4dc78a58ab30d3b956abef
+ms.openlocfilehash: ca07b46db0967ca03cc5e858b835d2c2108f1210
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -34,6 +34,7 @@ Puede ejecutar una actualización local para actualizar a System Center Configur
  > Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* ** e *instalar* se usan para describir tres conceptos independientes. Para obtener información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).
 
 ##  <a name="bkmk_path"></a> Rutas de actualización local  
+
 **Actualizar a la versión 1606**  
 El 15 de diciembre de 2016, se volvió a publicar el medio de línea base para la versión 1606 a fin de agregar compatibilidad con más escenarios de actualización. Esta nueva versión admite la actualización de lo siguiente a una versión con licencia completa de System Center Configuration Manager versión 1606:  
 -   Una instalación de evaluación de System Center Configuration Manager versión 1606
@@ -78,8 +79,8 @@ Si tiene el medio de línea base de la versión 1511, puede actualizar lo siguie
 
 Revise los sistemas operativos de servidor en uso para hospedar roles de sistema de sitio:  
 
--   Algunos sistemas operativos anteriores que System Center 2012 Configuration Manager admitía no se admiten en System Center Configuration Manager, y los roles de sistema de sitio en estos sistemas operativos deben reubicarse o quitarse antes de la actualización.  
--   El comprobador de requisitos previos para Configuration Manager no comprueba los requisitos previos para roles de sistema de sitio en el servidor de sitio ni en los equipos remotos.  
+-   Algunos sistemas operativos anteriores que System Center 2012 Configuration Manager admitía no se admiten en System Center Configuration Manager, y los roles de sistema de sitio en estos sistemas operativos deben reubicarse o quitarse antes de la actualización. Consulte la documentación de [Sistemas operativos compatibles con servidores de sistema de sitio de System Center Configuration Manager](../../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md).   
+-   El comprobador de requisitos previos para Configuration Manager no comprueba los requisitos previos para roles de sistema de sitio en el servidor de sitio ni en los sistemas de sitio remotos  
 
 Revise los requisitos previos requeridos para cada equipo que hospeda un rol de sistema de sitio:  
 

@@ -7,7 +7,7 @@ ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-- configmgr-client
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1e42b1c1-3d58-481f-8647-5c7ae640c5f5
@@ -17,9 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: f86eac30ed0eada92ddbd25891d1693ae55b4851
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 6424fb07802b62820b4dc78a58ab30d3b956abef
+ms.openlocfilehash: 5a81ec06e16992ae1c41b0fc98ebcd07386c5381
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -39,7 +39,7 @@ La administración local de dispositivos móviles de System Center Configuration
  Intune es obligatorio para que la administración local de dispositivos móviles funcione. Solo tiene que [registrarse](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/) para una suscripción de prueba o de pago e ir al paso siguiente para agregar la suscripción en Configuration Manager.  
 
 ##  <a name="add-the-intune-subscription-to-configuration-manager"></a>Agregar la suscripción de Intune a Configuration Manager  
- Para agregar la suscripción a Configuration Manager, siga los mismos pasos básicos que daría al agregar la suscripción para la administración de dispositivos móviles con Intune. Lea las notas siguientes para conocer las diferencias específicas y después siga las instrucciones incluidas en [Para crear la suscripción a Microsoft Intune](../deploy-use/setup-hybrid-mdm.md#configure-intune-subscription).  
+ Para agregar la suscripción a Configuration Manager, siga los mismos pasos básicos que daría al agregar la suscripción para la administración de dispositivos móviles con Intune. Lea las notas siguientes para conocer las diferencias específicas y después siga las instrucciones en [Configurar la suscripción a Intune](../deploy-use/configure-intune-subscription.md).  
 
 > [!NOTE]  
 >  Al agregar la suscripción a Intune, tenga en cuenta lo siguiente:  

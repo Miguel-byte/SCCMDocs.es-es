@@ -2,7 +2,7 @@
 title: Puertos que se usan en Configuration Manager | Microsoft Docs
 description: "Obtenga información sobre los puertos necesarios y personalizables que usa System Center Configuration Manager para las conexiones."
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 3/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6bfc5c0e3c0bdc8408ad2dd2a7807ef3e018ef60
-ms.openlocfilehash: 8cd1c5363ba05dbb35ca5a0daf32979dd8b51b19
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: 4c2906c2a963e0ae92e3c0d223afb7a47377526a
+ms.openlocfilehash: ffc2adb34427aa62f4a377e887c2ff54d47abeff
+ms.lasthandoff: 03/20/2017
 
 
 ---
@@ -603,6 +603,14 @@ Para obtener más información, consulte [Internet access requirements](/sccm/co
     -   Servicio SQL Server, que usa de forma predeterminada el puerto TCP 1433.  
 
 -   La comunicación entre sitios entre el motor de base de datos de SQL Server y varios roles de sistema de sitio de Configuration Manager tienen el puerto TCP 1433 como predeterminado.  
+
+- Configuration Manager usa los mismos puertos y protocolos para comunicarse con cada réplica de grupo de disponibilidad de SQL que hospeda la base de datos del sitio que si la réplica fuera una instancia independiente de SQL Server.
+
+Cuando se usa Azure y la base de datos del sitio está detrás de un equilibrador de carga interno o externo, configure las siguientes excepciones de firewall en cada réplica y agregue reglas de equilibrio de carga para los puertos siguientes:
+ - SQL a través de TCP: TCP 1433
+ - SQL Server Service Broker: TCP 4022
+ - Bloque de mensajes del servidor (SMB): TCP 445
+ - Asignador de puntos de conexión RPC: TCP 135
 
 > [!WARNING]  
 >  Configuration Manager no admite los puertos dinámicos. Ya que las instancias con nombre de SQL Server usan de manera predeterminada puertos dinámicos para las conexiones con el motor de base de datos, cuando usa una instancia con nombre deberá configurar manualmente el puerto estático que desea usar para la comunicación entre sitios.  

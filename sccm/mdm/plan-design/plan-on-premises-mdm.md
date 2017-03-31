@@ -17,9 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: cec595d473ca2459e43a7fa1c70b7668a8a48986
-ms.openlocfilehash: d529a058968cf99dce77997844b33ff5dc7c0004
-ms.lasthandoff: 01/21/2017
+ms.sourcegitcommit: 507bad02c6e028f09a8b0c8a566ac55f7c3942a5
+ms.openlocfilehash: 544c3bea0c7df96887ee1717f061c39c64b82d01
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -35,11 +35,12 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
  > [!NOTE]  
 >  La rama actual de Configuration Manager admite la inscripción en la administración de dispositivos móviles local para dispositivos con los sistemas operativos siguientes:  
 >   
->  -   Windows 10 Enterprise  
+> -  Windows 10 Enterprise  
 > -   Windows 10 Pro  
 > -   Windows 10 Team \(a partir de la versión 1602 de Configuration Manager\)  
 > -   Windows 10 Mobile  
-> -   Windows 10 Mobile Enterprise   
+> -   Windows 10 Mobile Enterprise
+> -   Windows 10 IoT Enterprise   
 
 ##  <a name="bkmk_intune"></a> Uso de la suscripción a Microsoft Intune  
  Necesitará una suscripción a Microsoft Intune para empezar a usar la administración de dispositivos móviles local. La suscripción solo es necesaria para realizar el seguimiento de las licencias de los dispositivos y no se usa para administrar ni almacenar la información de administración de los dispositivos. La totalidad de la administración se controla en la empresa de la organización a través de la infraestructura local de Configuration Manager.  
