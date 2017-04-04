@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: a93ea730c39cce9dc46036f5aa6ece4a62679d0f
 ms.openlocfilehash: 0d16d362b798c194645f987088ba8a95a7be3f19
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -28,14 +29,14 @@ ms.openlocfilehash: 0d16d362b798c194645f987088ba8a95a7be3f19
 Cada sitio de System Center Configuration Manager que se instala incluye un servidor de sitio que es un **servidor de sistema de sitio**. El sitio también puede incluir servidores de sistema de sitio adicionales en equipos que están alejados del servidor de sitio (equipos remotos). Los servidores de sistema de sitio (el servidor de sitio o un servidor de sistema de sitio remoto) admiten **roles de sistema de sitio**.
 
 
-##  <a name="a-namebkmksiteserversa-site-system-servers"></a><a name="bkmk_siteservers"></a> Servidores de sistema de sitio  
+##  <a name="bkmk_siteservers"></a> Servidores de sistema de sitio  
  Al instalar un rol de sistema de sitio en un equipo, ese equipo se convierte en un servidor de sistema de sitio. En cada sitio puede instalar a uno o más servidores de sistema de sitio adicionales. También puede elegir no instalar servidores de sistema de sitio adicionales y ejecutar todos los roles de sistema de sitio directamente en el equipo del servidor de sitio. Cada sistema de sitio hospeda uno o varios roles de sistema de sitio. Servidores adicionales pueden contribuir a ampliar las funcionalidades y la capacidad de un sitio al compartir la carga de procesamiento de la CPU que generan los roles de sistema de sitio en un servidor.  
 
  Al plantearse la incorporación de un servidor de sistema de sitio, asegúrese de que el servidor cumple los requisitos previos para el uso previsto. También conviene agregarlo en una ubicación de red con ancho de banda suficiente para comunicarse con los puntos de conexión esperados, como el servidor de sitio, los recursos de dominio, una ubicación en la nube, los servidores de sistema de sitio y los clientes).  
 
  Si configura el servidor de sistema de sitio con un servidor proxy para su uso por los roles de sistema de sitio, vea [Roles de sistema de sitio que pueden utilizar un servidor proxy](#bkmk_proxy).  
 
-##  <a name="a-namebkmkplanrolesa-site-system-roles"></a><a name="bkmk_planroles"></a> Roles de sistema de sitio  
+##  <a name="bkmk_planroles"></a> Roles de sistema de sitio  
  Los roles de sistema de sitio se instalan en un equipo para proporcionar a este funcionalidades adicionales. Algunos ejemplos son:  
 
 -   Puntos de administración adicionales para que el sitio pueda admitir más dispositivos, hasta alcanzar su capacidad máxima.  
@@ -118,7 +119,7 @@ Una vez instalado un sitio, se puede mover la ubicación de algunos roles de sis
 
 -   **Punto de Validador de mantenimiento del sistema.** Aunque este rol de sistema de sitio permanece visible en la consola de Configuration Manager,ya no se utiliza.  
 
-###  <a name="a-namebkmkproxya-site-system-roles-that-can-use-a-proxy-server"></a><a name="bkmk_proxy"></a> Roles de sistema de sitio que pueden utilizar un servidor proxy  
+###  <a name="bkmk_proxy"></a> Roles de sistema de sitio que pueden utilizar un servidor proxy  
  Algunos roles de sistema de sitio de Configuration Manager requieren conexiones a Internet y usarán un servidor proxy cuando se configure uno para el servidor de sistema de sitio que hospeda el rol. Normalmente, esta conexión se realiza en el contexto del **sistema** del equipo donde está instalado el rol de sistema de sitio. La conexión no puede utilizar una configuración de proxy para cuentas de usuario habituales. Cuando se requiera un servidor proxy para realizar una conexión a Internet, debe configurar el equipo para ello:  
 
 -   Puede configurar un servidor proxy al instalar un rol de sistema de sitio.  
@@ -152,9 +153,4 @@ Los siguientes son roles de sistema de sitio que pueden utilizar un servidor pro
  Para obtener más información sobre servidores proxy para puntos de actualización de software, vea la sección "Configuración de servidor proxy" en el tema [Instalar y configurar un punto de actualización de software](../../../sum/get-started/install-a-software-update-point.md).  
 
 -   **Punto de conexión de servicio.** Cuando se configura para estar en línea (no sin conexión), este rol de sistema de sitio se conecta a Microsoft Intune y al servicio en la nube de Microsoft.  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
