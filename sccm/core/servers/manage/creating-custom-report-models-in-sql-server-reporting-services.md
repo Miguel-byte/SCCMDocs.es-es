@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -29,7 +30,7 @@ ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
 System Center Configuration Manager incluye modelos de informe de ejemplo, pero también puede definir otros modelos de informe para satisfacer sus requisitos empresariales y, después, implementarlos en Configuration Manager de modo que se usen al crear informes basados en modelos. La tabla siguiente proporciona los pasos para crear e implementar un modelo de informe básico.  
 
 > [!NOTE]  
->  Para obtener los pasos para crear un modelo de informe más avanzado, consulte la sección [Steps for Creating an Advanced Report Model in SQL Server Reporting Services](#AdvancedReportModel) de este tema.  
+>  Para obtener los pasos para crear un modelo de informe más avanzado, consulte la sección [Pasos para crear un modelo de informe avanzado en SQL Server Reporting Services](#AdvancedReportModel) de este tema.  
 
 |Paso|Descripción|Más información|  
 |----------|-----------------|----------------------|  
@@ -46,7 +47,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
  En el equipo en que realice estos procedimientos, asegúrese de que tiene instalado SQL Server Business Intelligence Development Studio y de que el equipo tiene conectividad de red con el servidor de punto de servicios de informes. Para obtener información detallada acerca de SQL Server Business Intelligence Development Studio, consulte la documentación de SQL Server 2008.  
 
-###  <a name="a-namebkmkcreatereportmodelprojecta-to-create-the-report-model-project"></a><a name="BKMK_CreateReportModelProject"></a> To create the report model project  
+###  <a name="BKMK_CreateReportModelProject"></a> To create the report model project  
 
 1.  En el escritorio, haga clic en **Inicio**, en **Microsoft SQL Server 2008**y, a continuación, en **SQL Server Business Intelligence Development Studio**.  
 
@@ -63,7 +64,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
     > [!NOTE]  
     >  Si no puede ver el panel **Explorador de soluciones** , haga clic en **Ver**y, a continuación, haga clic en **Explorador de soluciones**.  
 
-###  <a name="a-namebkmkdefinereportmodeldatasourcea-to-define-the-data-source-for-the-report-model"></a><a name="BKMK_DefineReportModelDataSource"></a> To define the data source for the report model  
+###  <a name="BKMK_DefineReportModelDataSource"></a> To define the data source for the report model  
 
 1.  En el panel **Explorador de soluciones** de **SQL Server Business Intelligence Development Studio**, haga clic con el botón secundario en **Orígenes de datos** para seleccionar **Agregar nuevo origen de datos**.  
 
@@ -92,7 +93,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
     > [!NOTE]  
     >  Para editar las propiedades de un origen de datos existente, haga doble clic en el origen de datos en la carpeta **Orígenes de datos** del panel **Explorador de soluciones** para mostrar las propiedades del origen de datos en el Diseñador de origen de datos.  
 
-###  <a name="a-namebkmkdefinereportmodeldatasourceviewa-to-define-the-data-source-view-for-the-report-model"></a><a name="BKMK_DefineReportModelDataSourceView"></a> To define the data source view for the report model  
+###  <a name="BKMK_DefineReportModelDataSourceView"></a> To define the data source view for the report model  
 
 1.  En el **Explorador de soluciones**, haga clic con el botón secundario en **Vistas del origen de datos** para seleccionar **Agregar nueva vista del origen de datos**.  
 
@@ -113,7 +114,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
 8.  Haga clic en **Finalizar**. La vista del origen de datos **Simple_Model.dsv** se mostrará en la carpeta **Vistas del origen de datos** del **Explorador de soluciones**.  
 
-###  <a name="a-namebkmkcreatereportmodela-to-create-the-report-model"></a><a name="BKMK_CreateReportModel"></a> To create the report model  
+###  <a name="BKMK_CreateReportModel"></a> To create the report model  
 
 1.  En el **Explorador de soluciones**, haga clic con el botón secundario en **Modelos de informe** para seleccionar **Agregar nuevo modelo de informe**.  
 
@@ -131,7 +132,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
 8.  Para salir del asistente, haga clic en **Finalizar**. El modelo de informe se muestra en la ventana de diseño.  
 
-###  <a name="a-namebkmkpublishreportmodela-to-publish-the-report-model-for-use-in-sql-server-reporting-services"></a><a name="BKMK_PublishReportModel"></a> To publish the report model for use in SQL Server Reporting Services  
+###  <a name="BKMK_PublishReportModel"></a> To publish the report model for use in SQL Server Reporting Services  
 
 1.  En el **Explorador de soluciones**, haga clic con el botón secundario en el modelo de informe y seleccione **Implementar**. Para este ejemplo, el modelo de informe es **Simple_Model.smdl**.  
 
@@ -139,7 +140,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
 3.  Haga clic en **Archivo**, haga clic en **Guardar todo**y, a continuación, cierre **SQL Server Business Intelligence Development Studio**.  
 
-###  <a name="a-namebkmkdeployreportmodela-to-deploy-the-custom-report-model-to-configuration-manager"></a><a name="BKMK_DeployReportModel"></a> To deploy the custom report model to Configuration Manager  
+###  <a name="BKMK_DeployReportModel"></a> To deploy the custom report model to Configuration Manager  
 
 1.  Busque la carpeta en la que se creó el proyecto de modelo de informe. Por ejemplo, %*USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;Nombre del proyecto\>.*  
 
@@ -180,7 +181,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
     > [!IMPORTANT]  
     >  Después de copiar el archivo de modelo de informe en el servidor de sitio de Configuration Manager, debe salir y reiniciar la consola de Configuration Manager para poder usar el modelo de informe en el **Asistente para crear informes**.  
 
-##  <a name="a-nameadvancedreportmodela-steps-for-creating-an-advanced-report-model-in-sql-server-reporting-services"></a><a name="AdvancedReportModel"></a> Steps for Creating an Advanced Report Model in SQL Server Reporting Services  
+##  <a name="AdvancedReportModel"></a> Steps for Creating an Advanced Report Model in SQL Server Reporting Services  
  Puede usar los procedimientos siguientes para crear un modelo de informe avanzado que podrán usar los usuarios de su sitio para generar informes particulares basados en modelo según los datos en varias vistas de la base de datos de Configuration Manager. Se crea un modelo de informe que presenta a su autor la información sobre los equipos cliente y el sistema operativo instalado en estos equipos. Esta información se obtiene de las vistas siguientes de la base de datos de Configuration Manager:  
 
 -   **V_R_System**: contiene información sobre los equipos detectados y el cliente de Configuration Manager.  
@@ -422,9 +423,4 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
     > [!IMPORTANT]  
     >  Después de copiar el archivo de modelo de informe en el servidor de sitio de Configuration Manager, debe salir y reiniciar la consola de Configuration Manager para poder usar el modelo de informe en el **Asistente para crear informes**.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

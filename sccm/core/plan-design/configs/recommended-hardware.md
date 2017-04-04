@@ -82,7 +82,7 @@ Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas
 
  Para lograr un rendimiento óptimo, ubique cada objeto en un volumen RAID dedicado independiente. Para todos los volúmenes de datos (Configuration Manager y sus archivos de base de datos), utilice RAID 10 para lograr un rendimiento óptimo.  
 
-|Uso de datos|Espacio mínimo en disco|25.000 clientes|50.000 clientes|100.000 clientes|150.000 clientes|700&000; clientes (sitio de administración central)|  
+|Uso de datos|Espacio mínimo en disco|25.000 clientes|50.000 clientes|100.000 clientes|150.000 clientes|700 000 clientes (sitio de administración central)|  
 |----------------|------------------------|--------------------|--------------------|---------------------|---------------------|-----------------------------------------------------|  
 |Sistema operativo|Consulte las instrucciones para el sistema operativo.|Consulte las instrucciones para el sistema operativo.|Consulte las instrucciones para el sistema operativo.|Consulte las instrucciones para el sistema operativo.|Consulte las instrucciones para el sistema operativo.|Consulte las instrucciones para el sistema operativo.|  
 |Archivos de registro y de aplicación de Configuration Manager|25 GB|50 GB|100 GB|200 GB|300 GB|200 GB|  
