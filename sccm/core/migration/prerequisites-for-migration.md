@@ -86,7 +86,7 @@ A continuación, se enumeran las configuraciones necesarias para el uso de migra
 
     -   **Cuenta de sitio de origen:** esta cuenta se usa para tener acceso al proveedor de SMS del sitio de origen.  
 
-        -   Para un sitio de origen de Configuration Manager&2007; SP2, esta cuenta necesita el permiso **Leer** para todos los objetos del sitio de origen.  
+        -   Para un sitio de origen de Configuration Manager 2007 SP2, esta cuenta necesita el permiso **Leer** para todos los objetos del sitio de origen.  
 
         -   Para un sitio de origen de System Center 2012 Configuration Manager o System Center Configuration Manager, esta cuenta requiere el permiso **Leer** para todos los objetos del sitio de origen. Este permiso se concede a la cuenta mediante administración basada en roles. Para obtener información sobre cómo usar la administración basada en roles, consulte [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md) (Conceptos básicos de la administración basada en roles de System Center Configuration Manager).  
 
@@ -122,7 +122,7 @@ A continuación, se enumeran las configuraciones necesarias para el uso de migra
 
      La **Cuenta de acceso del sitio de origen** configurada para recopilar datos del proveedor de SMS del sitio de origen debe tener los permisos siguientes:  
 
-    -   Para actualizar un punto de distribución de Configuration Manager&2007;, la cuenta necesita los permisos **Leer**, **Ejecutar** y **Eliminar** en la clase **Sitio** en el servidor de sitio de Configuration Manager&2007; para quitar correctamente el punto de distribución del sitio de origen de Configuration Manager&2007;.  
+    -   Para actualizar un punto de distribución de Configuration Manager 2007, la cuenta necesita los permisos **Leer**, **Ejecutar** y **Eliminar** en la clase **Sitio** en el servidor de sitio de Configuration Manager 2007 para quitar correctamente el punto de distribución del sitio de origen de Configuration Manager 2007.  
 
     -   Para reasignar un punto de distribución de System Center 2012 Configuration Manager o de System Center Configuration Manager, la cuenta debe tener el permiso **Modificar** para el objeto **Sitio** en el sitio de origen. Este permiso se concede a la cuenta mediante la administración basada en roles. Para obtener información sobre cómo usar la administración basada en roles, consulte [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md) (Conceptos básicos de la administración basada en roles de System Center Configuration Manager).  
 
