@@ -128,7 +128,7 @@ A continuación se indican procedimientos para desinstalar clientes Mac y para r
 
     -   **Configuración seleccionada:** seleccione **Examinar** y, luego, seleccione el script de detección especificado previamente.  
 
-    -   En el campo **los siguientes valores** escriba **The domain/default pair of (com.microsoft.ccmclient, SMSID) does not exist**.  
+    -   En el campo **los siguientes valores** escriba **El dominio/par predeterminado (com.microsoft.ccmclient, SMSID) no existe**.  
 
     -   Habilite la opción **Ejecutar el script de corrección especificado cuando esta configuración no sea compatible**.  
 
