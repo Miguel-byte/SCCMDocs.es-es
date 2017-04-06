@@ -17,8 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 59e63cf223424f9930524e3ed3833c30dc9ca9a7
-ms.openlocfilehash: f43764acd13b0257481614fc79aebecac75542d7
+ms.sourcegitcommit: 70034213442f4c3d5a28ab65c2ceb51aa64320ad
+ms.openlocfilehash: 2e624eb2ea061a4eb7d92365410fada335640224
+ms.lasthandoff: 03/31/2017
 
 
 ---
@@ -58,14 +59,9 @@ La generación de informes en System Center Configuration Manager tiene dependen
 |SQL Server Express 2008 R2 con SP2|No compatible.|  
 |SQL Server 2012 con la actualización acumulativa 2 como mínimo<br /><br /> -   Estándar<br />-   Enterprise|Sí|  
 |SQL Server 2012 con SP1 y ninguna actualización acumulativa mínima<br /><br /> -   Estándar<br />-   Enterprise|Sí|  
-|SQL Server 2016<br /><br /> -   Estándar<br />-   Enterprise|Sí|
+|SQL Server 2014<br /><br /> -   Estándar<br />-   Enterprise|Sí|
 |SQL Server 2016<br /><br /> -   Estándar<br />-   Enterprise|Sí|
 |SQL Server 2016 con SP1<br /><br /> -   Estándar<br />-   Enterprise|Sí|
 ## <a name="next-steps"></a>Pasos siguientes
 [Operaciones y mantenimiento de informes](operations-and-maintenance-for-reporting.md)
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

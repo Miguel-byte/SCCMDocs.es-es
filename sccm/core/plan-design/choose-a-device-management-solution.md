@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 06cafc8f7934cde738a87ac1a1da585a9d4e2a99
-ms.openlocfilehash: 534a15279bff96d93ffb6564eeac2835f57f5645
-ms.lasthandoff: 02/09/2017
+ms.sourcegitcommit: 3eb48942c1259d2aa1b3c200fad73b39b11c0b8c
+ms.openlocfilehash: 9989ea1bf4cb74a6286ebae9de7614ed622de5b6
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -36,7 +36,7 @@ System Center Configuration Manager (también conocido como ConfgMgr o SCCM) ofr
 
 ###  <a name="manage-devices-with-the-configuration-manager-client"></a>Administrar dispositivos con el cliente de Configuration Manager  
 
-Esta opción, que necesita la instalación de la aplicación cliente de Configuration Manager en los dispositivos, es la que proporciona más características para administrar equipos, servidores y otros dispositivos en el entorno. Para más información, consulte [Métodos de instalación de cliente en System Center Configuration Manager](/sccm/core/client/deploy/plan/client-installation-methods).  
+Esta opción, que necesita la instalación de la aplicación cliente de Configuration Manager en los dispositivos, es la que proporciona más características para administrar equipos, servidores y otros dispositivos en el entorno. Para más información, consulte [Métodos de instalación de cliente en System Center Configuration Manager](/sccm/core/clients/deploy/plan/client-installation-methods).  
 
 ###  <a name="manage-devices-with-on-premises-configuration-manager-infrastructure"></a>Administrar dispositivos con la infraestructura local de Configuration Manager  
 
@@ -76,7 +76,7 @@ Puede usar las soluciones de administración de dispositivos por sí solas o en 
 
  Para obtener una lista completa de las plataformas compatibles, vea [Supported operating systems for clients and devices for System Center Configuration Manager (Sistemas operativos compatibles con clientes y dispositivos para System Center Configuration Manager)](configs\supported-operating-systems-for-clients-and-devices.md).
 
-##  <a name="a-namebkmkcomp2a-compare-mobile-device-management-solutions-based-on-management-functionality"></a><a name="bkmk_comp2"></a> Comparar soluciones de administración de dispositivos móviles basadas en la funcionalidad de administración  
+##  <a name="bkmk_comp2"></a> Comparar soluciones de administración de dispositivos móviles basadas en la funcionalidad de administración  
 
 |Funcionalidad de administración|Con el cliente de Configuration Manager|Configuration Manager con Microsoft Intune (híbrida)|Administración local de dispositivos móviles|Configuration Manager con Exchange|  
 |------------------------------|-------------------------------------------|-------------------------------------------------------------------|-------------------------------|-----------------------------------------|  
