@@ -2,7 +2,7 @@
 title: "Punto de conexión de servicio | Microsoft Docs"
 description: "Obtenga información sobre este rol de sistema de sitio de Configuration Manager y comprenda y planee sus diversos usos."
 ms.custom: na
-ms.date: 2/7/2017
+ms.date: 3/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3a24fe53cc243294694b779fad4c3ab83ca2ecb7
-ms.openlocfilehash: ae2cc7030c1fc404dcc7392b8c3067fc0f8cafc0
+ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
+ms.openlocfilehash: ad6df047beff670411d203220576b87f7d56d50c
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -42,17 +43,18 @@ El punto de conexión de servicio de System Center Configuration Manager es un r
 
   Para más información sobre los datos que recopila cada nivel y sobre cómo cambiar el nivel de recopilación después de instalar el rol, vea [Diagnósticos y datos de uso](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data) y, después, siga el vínculo de la versión de Configuration Manager que use.  
 
-    Para obtener más información, consulte [Configuración y niveles de datos de uso](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
+  Para obtener más información, consulte [Configuración y niveles de datos de uso](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
 
 -   **Descargar las actualizaciones válidas para la infraestructura de Configuration Manager**: solo estarán disponibles las actualizaciones apropiadas para la infraestructura, según los datos de uso que suba.  
 
- **Cada jerarquía admite una única instancia de este rol:**  
+- **Cada jerarquía admite una única instancia de este rol:**  
 
-    -   El rol de sistema de sitio solo se puede instalar en el sitio de nivel superior de la jerarquía (es decir, un sitio de administración central o un sitio primario independiente).  
+ -   El rol de sistema de sitio solo se puede instalar en el sitio de nivel superior de la jerarquía (es decir, un sitio de administración central o un sitio primario independiente).  
 
-    -   Si expande un sitio primario independiente a una jerarquía más grande, tendrá que desinstalar este rol desde el sitio primario para instalarlo en el sitio de administración central.  
+  -   Si expande un sitio primario independiente a una jerarquía más grande, tendrá que desinstalar este rol desde el sitio primario para instalarlo en el sitio de administración central.  
 
-##  <a name="a-namebkmkmodesa-modes-of-operation"></a><a name="bkmk_modes"></a> Modos de operación  
+
+##  <a name="bkmk_modes"></a> Modos de operación  
  El punto de conexión de servicio admite dos modos de funcionamiento:  
 
 -   En el **modo con conexión**, el punto de conexión de servicio comprueba automáticamente cada 24 horas si existen actualizaciones y, después, descarga las nuevas actualizaciones disponibles para la infraestructura y la versión del producto actuales para que estén disponibles en la consola de Configuration Manager.  
@@ -82,7 +84,7 @@ Para usar el Administrador de servicios de Configuration Manager, en la consola,
 
 -   El administrador de distribución del servidor de sitio usa la cuenta de instalación de sistema de sitio para transferir las actualizaciones desde el punto de conexión de servicio.
 
-##  <a name="a-namebkmkurlsa-internet-access-requirements"></a><a name="bkmk_urls"></a> Requisitos de acceso a Internet  
+##  <a name="bkmk_urls"></a> Requisitos de acceso a Internet  
 Para permitir la operación, el equipo que hospeda el punto de conexión de servicio y los firewalls entre dicho equipo e Internet deben pasar las comunicaciones a través de **el puerto TCP 443** y el **puerto TCP 443** a las siguientes ubicaciones de Internet. El punto de conexión de servicio también admite el uso de un servidor proxy web (con o sin autenticación) para acceder a estas ubicaciones.  Si necesita configurar una cuenta de proxy web, consulte [Compatibilidad de servidor proxy en System Center Configuration Manager](/sccm/core/plan-design/network/proxy-server-support).
 
 **Actualizaciones y mantenimiento**  
@@ -119,8 +121,10 @@ Cuando ejecute **Configurar** para instalar el sitio de nivel superior de una je
 
 Después de ejecutar el programa de instalación o de reinstalar el rol de sistema de sitio, use el **Asistente para agregar roles de sistema de sitio** o el **Asistente para crear servidor de sistema de sitio** para instalar el sistema de sitio en un servidor en el sitio de nivel superior de la jerarquía (es decir, el sitio de administración central o un sitio primario independiente). Los dos asistentes se encuentran en la pestaña **Inicio** de la consola, en **Administración** > **Configuración de sitio** > **Servidores y roles del sistema de sitios**.
 
+## <a name="log-files-used-by-the-service-connection-point"></a>Archivos de registro usados por el punto de conexión de servicio
+Para consultar información sobre las cargas en Microsoft, vea **Dmpuploader.log** en el equipo en que se ejecuta el punto de conexión de servicio.  Para las descargas, incluido el progreso de descarga de las actualizaciones, vea **Dmpdownloader.log**. Para obtener la lista completa de registros relacionados con el punto de conexión de servicio, vea [Punto de conexión de servicio](/sccm/core/plan-design/hierarchy/log-files#BKMK_WITLog) en el tema de archivos de registro de Configuration Manager.
 
-
-<!--HONumber=Feb17_HO3-->
-
+También puede utilizar los diagramas de flujo siguientes para conocer el flujo del proceso y las entradas del registro de claves para descargas de actualización y replicación de actualizaciones en otros sitios:
+ - [Diagrama de flujo: descargar actualizaciones](/sccm/core/servers/manage/download-updates-flowchart)
+ - [Diagrama de flujo: replicación de actualización](/sccm/core/servers/manage/update-replication-flowchart)
 

@@ -2,7 +2,7 @@
 title: Variables integradas de secuencias de tareas | Microsoft Docs
 description: "Las variables integradas de secuencia de tareas proporcionan información sobre el entorno en que se ejecuta la secuencia de tareas y están disponibles durante la secuencia de tareas completa."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c9fb0fa46058c773eec6ac23999357d35d9f970f
-ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: a3e6cca8d58055cc2d54aff3cb70a276fb40e829
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -51,7 +52,7 @@ ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
 |_SMSTSMachineName|Almacena y especifica el nombre del equipo. Almacena el nombre del equipo que la secuencia de tareas va a usar para registrar todos los mensajes de estado. Para cambiar el nombre del equipo en el nuevo sistema operativo, use la variable **OSDComputerName** .<br /><br /> Ejemplo:<br /><br /> **ABC**|  
 |_SMSTSMDataPath|Especifica la ruta de acceso definida por la variable SMSTSLocalDataDrive. Si SMSTSLocalDataDrive se define antes de iniciar la secuencia de tareas (por ejemplo, al establecer una variable de la recopilación), Configuration Manager define la variable _SMSTSMDataPath después de que se inicie la secuencia de tareas.|  
 |_SMSTSMediaType|Especifica el tipo de medio que se usa para iniciar la instalación. Algunos ejemplos de tipos de medios son medios de arranque, medios completos, PXE y medios preconfigurados.|  
-|_SMSTSMP|Almacena el nombre o dirección IP de un punto de administración de Configuration Manager.|  
+|_SMSTSMP|Almacena la dirección URL o IP de un punto de administración de Configuration Manager.|  
 |_SMSTSMPPort|Almacena el número de puerto de un punto de administración de Configuration Manager.<br /><br /> Ejemplo:<br /><br /> **80**|  
 |_SMSTSOrgName|Almacena el nombre de título de personalización de marca que se muestra en el cuadro de diálogo de interfaz de usuario de progreso de una tarea secuencia.<br /><br /> Ejemplo:<br /><br /> **Organización XYZ**|  
 |_SMSTSOSUpgradeActionReturnCode|Almacena el valor del código de salida devuelto desde el programa de instalación para indicar si se realizó correctamente o se produjo un error.  Esta variable se establece en el paso de secuencia de tareas de actualización del sistema operativo. Esto es útil con la opción de la línea de comandos del programa de instalación de Windows 10 /Compat.<br /><br /> Ejemplo:<br /><br /> Cuando se completa /Compat, puede realizar acciones en pasos posteriores, según si el código de salida es correcto o incorrecto. En caso de que sea correcto, podría iniciar la actualización. O bien, podría establecer un marcador en el entorno (por ejemplo, agregar un archivo o una clave del Registro) que después se podría utilizar para crear una recopilación de equipos que estén preparados para actualizarse o que requieran una acción antes de hacerlo.|  
@@ -79,6 +80,7 @@ ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
 |TSErrorOnWarning|Use esta variable para especificar si el motor de la secuencia de tareas considera una advertencia detectada como un error durante el paso de secuencia de tareas de instalación de la aplicación. La secuencia de tareas establece la variable _TSAppInstallStatus en **Advertencia** cuando una o más aplicaciones (o una dependencia necesaria) no se instalaron porque no se cumplió un requisito. Cuando la variable TSErrorOnWarning se establece en **True** y la variable _TSAppInstallStatus se establece en Advertencia, se considera que hay un error. Un valor **False** es el comportamiento predeterminado.|  
 |SMSTSLanguageFolder|Utilice esta variable para cambiar el idioma de visualización de una imagen de arranque independiente del idioma.|  
 |SMSTSLocalDataDrive|Especifica la ubicación donde se almacenan los archivos temporales en el equipo de destino mientras la secuencia de tareas se ejecuta.<br /><br /> Esta variable se debe establecer antes de iniciar la secuencia de tareas (por ejemplo, estableciendo una variable de la colección). Una vez que se inicia la secuencia de tareas, Configuration Manager define la variable _SMSTSMDataPath.|  
+|SMSTSMP|Use esta variable para especificar la dirección URL o IP de un punto de administración de Configuration Manager.|  
 |SMSTSMPListRequestTimeout|Use esta variable para especificar la cantidad de milisegundos que espera una secuencia de tareas antes de volver a intentar instalar una aplicación después de no poder recuperar la lista de puntos de administración de los servicios de ubicación. La secuencia de tareas espera 60.000 milisegundos (60 segundos) de forma predeterminada antes de reintentar el paso, y realiza un máximo de tres reintentos. Esta variable solo es aplicable a los pasos de secuencia de tareas Instalar aplicación e Instalar actualizaciones de software.|  
 |SMSTSMPListRequestTimeoutEnabled|Use esta variable para permitir solicitudes MPList repetidas para actualizar el cliente si este no está en la intranet. <br />De forma predeterminada, esta variable se establece en True. Cuando los clientes no están en Internet, puede establecer esta variable en False para evitar retrasos innecesarios. Esta variable solo es aplicable a los pasos de secuencia de tareas de instalación de actualizaciones de aplicaciones y de software.|  
 |SMSTSPeerDownload|Use esta variable para habilitar que el cliente use el almacenamiento en caché del mismo nivel en Windows PE.<br /><br /> Ejemplo:<br /><br /> SMSTSPeerDownload  = **TRUE** habilita esta funcionalidad.|  
@@ -94,9 +96,4 @@ ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
 |SMSTSSoftwareUpdateScanTimeout| Permite controlar el tiempo de espera para la detección de actualizaciones de software durante el paso de la secuencia de tareas [Instalar actualizaciones de software](task-sequence-steps.md#BKMK_InstallSoftwareUpdates). Por ejemplo, puede aumentar el valor predeterminado si tiene muchas actualizaciones de software para instalar. El valor predeterminado es 30 minutos. |
 |SMSTSUDAUsers|especifica el usuario primario del equipo de destino. Especifique los usuarios con el siguiente formato. Separe varios usuarios con una coma (,).<br /><br /> Ejemplo:<br /><br /> **dominio\usuario1, dominio\usuario2, dominio\usuario3.**<br /><br /> Para obtener más información sobre cómo asociar usuarios al equipo de destino, consulte [Asociar usuarios a un equipo de destino](../get-started/associate-users-with-a-destination-computer.md).|  
 |SMSTSWaitForSecondReboot|A partir de la versión 1602 de Configuration Manager, esta variable de secuencia de tareas opcional está disponible para ayudar a controlar el comportamiento del cliente cuando la instalación de una actualización de software requiere dos reinicios. Esta variable se debe establecer antes del paso [Instalar actualizaciones de software](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) para evitar que se produzca un error en una secuencia de tareas debido a un segundo reinicio por la instalación de la actualización de software.<br /><br /> Establezca el valor de SMSTSWaitForSecondReboot en segundos para especificar cuánto tiempo se pausa la secuencia de tareas durante el paso de instalación de actualizaciones de software cuando el equipo se reinicia para dejar tiempo suficiente en caso de que haya un segundo reinicio. <br />Por ejemplo, si establece SMSTSWaitForSecondReboot en 600, la secuencia de tareas se pausa durante 10 minutos tras un reinicio antes de que se ejecuten los pasos adicionales. Esto resulta útil cuando se instalan cientos de actualizaciones de software en un único paso de secuencia de tareas de instalación de actualizaciones de software.|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

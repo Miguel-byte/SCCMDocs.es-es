@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 688e05aae0e0b15b54835f8d64a98487f4d7b64d
-ms.openlocfilehash: fcd7ac43f7b2d2c92d6aadd7c490f198ac99e5e6
-ms.lasthandoff: 12/29/2016
+ms.sourcegitcommit: 199096db7a23fb14db98b95e75246ed254848ab7
+ms.openlocfilehash: 0932e2b2a4f3e13c35d6b7b0446083f1c233ce03
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -44,7 +44,7 @@ Cuando se consultan los datos sin procesar, aparecerá un valor de hash común e
 
 #### <a name="to-see-how-the-one-way-hash-works"></a>Para ver cómo funciona el algoritmo hash unidireccional  
 
-1.  Obtenga el identificador de la jerarquía mediante la ejecución de la instrucción SQL siguiente en SQL Management Studio en la base de datos de Configuration Manager: **select [dbo].[fnGetHierarchyID](\)**  
+1.  Obtenga el identificador de la jerarquía mediante la ejecución de la instrucción SQL siguiente en SQL Management Studio en la base de datos de Configuration Manager: **select [dbo].[fnGetHierarchyID]\(\)**.  
 
 2.  Use el siguiente script de Windows PowerShell para llevar a cabo el hash unidireccional del GUID que se ha obtenido de la base de datos. A continuación, puede compararlo con el identificador de la jerarquía de los datos sin procesar para ver cómo se ocultan estos datos.  
 
@@ -52,12 +52,12 @@ Cuando se consultan los datos sin procesar, aparecerá un valor de hash común e
     Param( [Parameter(Mandatory=$True)] [string]$value )  
       $guid = [System.Guid]::NewGuid()  
       if( [System.Guid]::TryParse($value,[ref] $guid) -eq $true ) {  
-         #many of the values we hash are Guids  
-         $bytesToHash = $guid.ToByteArray()  
+      #many of the values we hash are Guids  
+      $bytesToHash = $guid.ToByteArray()  
     } else {  
-         #otherwise hash as string (unicode)  
-         $ue = New-Object System.Text.UnicodeEncoding  
-         $bytesToHash = $ue.GetBytes($value)   
+      #otherwise hash as string (unicode)  
+      $ue = New-Object System.Text.UnicodeEncoding  
+      $bytesToHash = $ue.GetBytes($value)   
     }  
       # Load Hash Provider (https://en.wikipedia.org/wiki/SHA-2)   
     $hashAlgorithm = [System.Security.Cryptography.SHA256Cng]::Create()    

@@ -2,7 +2,7 @@
 title: "Administración de Windows como servicio en Configuration Manager | Microsoft Docs"
 description: "Vea el estado de Windows como servicio mediante Configuration Manager, cree planes de mantenimiento para formar anillos de implementación y vea alertas cuando el soporte técnico de los clientes de Windows 10 está a punto de finalizar."
 ms.custom: na
-ms.date: 01/23/2017
+ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
-ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
+ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
+ms.openlocfilehash: 87c3a35f4688c505f9b659a1bfe62f7a04cc7f11
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -32,7 +33,7 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
  Use las secciones siguientes para administrar Windows como servicio:
 
-##  <a name="a-namebkmkprerequisitesa-prerequisites"></a><a name="BKMK_Prerequisites"></a> Requisitos previos  
+##  <a name="BKMK_Prerequisites"></a> Requisitos previos  
  Para ver los datos en el panel de mantenimiento de Windows 10, debe hacer lo siguiente:  
 
 -   Los equipos con Windows 10 deben usar las actualizaciones de software de Configuration Manager con Windows Server Update Services (WSUS) para la administración de las actualizaciones de software. Si los equipos usan Windows Update for Business (o Windows Insiders) para la administración de actualizaciones de software, el equipo no se evaluará en los planes de mantenimiento de Windows 10. Para obtener más información, consulte [Integration with Windows Update for Business in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md) (Integración con Windows Update for Business en Windows 10).  
@@ -58,7 +59,7 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
 -   Las actualizaciones de software deben estar configuradas y sincronizadas. Debe seleccionar la clasificación **Actualizaciones** y sincronizar las actualizaciones de software para que las actualizaciones de características de Windows 10 estén disponibles en la consola de Configuration Manager. Para obtener más información, consulte [Prepare for software updates management](../../sum/get-started/prepare-for-software-updates-management.md) (Preparación para la administración de actualizaciones de software).  
 
-##  <a name="a-namebkmkservicingdashboarda-windows-10-servicing-dashboard"></a><a name="BKMK_ServicingDashboard"></a> Panel de mantenimiento de Windows 10  
+##  <a name="BKMK_ServicingDashboard"></a> Panel de mantenimiento de Windows 10  
  El panel de mantenimiento de Windows 10 le proporciona información acerca de los equipos con Windows 10 de su entorno, los planes de mantenimiento activos, la información de cumplimiento, etc. Los datos del panel de mantenimiento de Windows 10 dependen de si el punto de conexión de servicio está instalado. El panel presenta los iconos siguientes:  
 
 -   **Icono de Windows 10 Usage**: proporciona un desglose de las compilaciones públicas de Windows 10. Las compilaciones de Windows Insiders figuran como **otros** , así como las demás compilaciones que todavía no son conocidas para el sitio. El punto de conexión de servicio descargará los metadatos que informan acerca de las compilaciones de Windows y, después, estos datos se comparan con los datos de detección.  
@@ -91,7 +92,7 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
  Cuando una actualización cumple los criterios, el plan de mantenimiento agrega la actualización al paquete de implementación, distribuye el paquete a los puntos de distribución e implementa la actualización a la recopilación basándose en los valores configurados en el plan de mantenimiento.  Puede supervisar las implementaciones en el icono Service Plan Monitoring del panel de mantenimiento de Windows 10. Para obtener más información, consulte [Monitor software updates](../../sum/deploy-use/monitor-software-updates.md) (Supervisión de las actualizaciones de software).  
 
-##  <a name="a-namebkmkservicingplana-windows-10-servicing-plan"></a><a name="BKMK_ServicingPlan"></a> Plan de mantenimiento de Windows 10  
+##  <a name="BKMK_ServicingPlan"></a> Plan de mantenimiento de Windows 10  
  A medida que implementa Windows 10 CB, puede crear uno o varios planes de mantenimiento para definir los canales de implementación que quiere en su entorno, así como supervisarlos en el panel de mantenimiento de Windows 10.   
 Los planes de mantenimiento solo usan la clasificación de actualizaciones de software **Actualizaciones** , no las actualizaciones acumulativas de Windows 10. Este tipo de actualizaciones deberá seguir implementándose mediante el flujo de trabajo de las actualizaciones de software.  La experiencia del usuario final con un plan de mantenimiento es la misma que con las actualizaciones de software, incluida la configuración del plan de mantenimiento.  
 
@@ -136,7 +137,9 @@ Los planes de mantenimiento solo usan la clasificación de actualizaciones de so
 
         -   **Release Ready (Rama actual)**: en el modelo de servicio de CB, las actualizaciones de las funciones están disponibles en cuanto Microsoft las vaya lanzando.
 
-        -   **Business Ready (Rama actual para empresas)**: la rama de servicio de CBB se usa normalmente para una amplia distribución. Los clientes de Windows 10 en la rama de servicio de CBB reciben la misma compilación de Windows 10 que los de la rama de servicio de CB posteriormente.
+        -   **Business Ready (Rama actual para empresas)**: la rama de servicio de CBB se usa normalmente para una implementación amplia. Los clientes de Windows 10 en la rama de servicio de CBB reciben la misma compilación de Windows 10 que los de la rama de servicio de CB posteriormente.
+
+        Para más información sobre ramas de mantenimiento y qué opciones son las más adecuadas en su caso, vea [Ramas de mantenimiento](https://technet.microsoft.com/itpro/windows/manage/waas-overview#servicing-branches).
 
     -   **Cantidad de días después de que Microsoft publique una nueva actualización que quiere esperar antes de la implementación en su entorno**: Configuration Manager realiza la evaluación de si incluir una actualización en la implementación si la fecha actual es posterior a la fecha de publicación más el número de días que configura para esta opción.
 
@@ -203,7 +206,7 @@ Los planes de mantenimiento solo usan la clasificación de actualizaciones de so
 
     4.  **Prioridad de envío**: especifique la prioridad de envío del paquete de implementación. Configuration Manager usa la prioridad de envío para el paquete de implementación cuando envía el paquete a los puntos de distribución. Los paquetes de implementación se envían en orden de prioridad: Alta, Media, o Baja. Los paquetes con prioridades idénticas se envían en el orden en que se crearon. Si no hay ningún trabajo pendiente, el paquete se procesará inmediatamente sin tener en cuenta su prioridad.  
 
-11. En la página Puntos de distribución, especifique los puntos de distribución o los grupos de puntos de distribución que hospedarán los archivos de actualización. Para obtener más información acerca de los puntos de distribución, consulte [Distribution point configurations](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#a-namebkmkconfigsa-distribution-point-configurations) (Configuraciones de punto de distribución).  
+11. En la página Puntos de distribución, especifique los puntos de distribución o los grupos de puntos de distribución que hospedarán los archivos de actualización. Para más información sobre los puntos de distribución, vea [Configurar un punto de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs).
 
     > [!NOTE]  
     >  Esta página sólo está disponible cuando se crea un nuevo paquete de implementación de actualizaciones de software.  
@@ -220,7 +223,7 @@ Los planes de mantenimiento solo usan la clasificación de actualizaciones de so
 
  Cuando complete al asistente, se ejecutará el plan de mantenimiento. Este agregará las actualizaciones que cumplan los criterios especificados a un grupo de actualizaciones de software, descargará estas actualizaciones en la biblioteca de contenido del servidor de sitio, las distribuirá a los puntos de distribución configurados y, después, implementará el grupo de actualizaciones de software en clientes de la recopilación de destino.  
 
-##  <a name="a-namebkmkmodifyservicingplana-modify-a-servicing-plan"></a><a name="BKMK_ModifyServicingPlan"></a> Modificar un plan de mantenimiento  
+##  <a name="BKMK_ModifyServicingPlan"></a> Modificar un plan de mantenimiento  
 Después de crear un plan de mantenimiento básico desde el panel de mantenimiento de Windows 10 o si necesita cambiar la configuración de un plan de mantenimiento existente, puede hacerlo a través de las propiedades del plan de mantenimiento.
 
 > [!NOTE]
@@ -256,17 +259,17 @@ Use el siguiente procedimiento para modificar las propiedades de un plan de mant
 
     -   **Nivel de detalle**: especifique el nivel de detalle de los mensajes de estado que notifican los equipos cliente.  
 
-   **Configuración de descarga**: en la pestaña Configuración de descarga, configure las siguientes opciones:  
+    **Configuración de descarga**: en la pestaña Configuración de descarga, configure las siguientes opciones:  
 
-    -   Especifique si el cliente descargará e instalará las actualizaciones de software cuando esté conectado a una red lenta o si utiliza una ubicación de contenido de reserva.  
+    - Especifique si el cliente descargará e instalará las actualizaciones de software cuando esté conectado a una red lenta o si utiliza una ubicación de contenido de reserva.  
 
-    -   Especifique si el cliente debe descargar e instalar las actualizaciones de software desde un punto de distribución de reserva cuando el contenido de las actualizaciones de software no está disponible en un punto de distribución preferido.  
+    - Especifique si el cliente debe descargar e instalar las actualizaciones de software desde un punto de distribución de reserva cuando el contenido de las actualizaciones de software no está disponible en un punto de distribución preferido.  
 
     -   **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**: especifique si quiere habilitar el uso de BranchCache para las descargas de contenido. Para obtener más información sobre BranchCache, consulte [Conceptos básicos de la administración de contenido](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
 
     -   Especifique si los clientes deben descargar las actualizaciones de software desde Microsoft Update si las actualizaciones no están disponibles en los puntos de distribución.
-    > [!IMPORTANT]
-    > No use esta configuración para las actualizaciones del Servicio de actualización de Windows 10. Se producirá un error cuando Configuration Manager (al menos hasta la versión 1610) intente descargar las actualizaciones del Servicio de actualización de Windows 10 desde Microsoft Update.
+        > [!IMPORTANT]
+        > No use esta configuración para las actualizaciones del Servicio de actualización de Windows 10. Se producirá un error cuando Configuration Manager (al menos hasta la versión 1610) intente descargar las actualizaciones del Servicio de actualización de Windows 10 desde Microsoft Update.
 
     -   Especifique si desea permitir que los clientes descarguen después de la fecha límite de instalación cuando utilizan una conexión a Internet de uso medido. En ocasiones, los proveedores de acceso a Internet cobran según la cantidad de datos que envía y recibe cuando se utiliza una conexión a Internet de uso medido.   
 
@@ -274,9 +277,4 @@ Use el siguiente procedimiento para modificar las propiedades de un plan de mant
 
     > [!NOTE]  
     >  Puede revisar las alertas de las actualizaciones de software recientes en el área de trabajo **Biblioteca de software** del nodo **Actualizaciones de software** .  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

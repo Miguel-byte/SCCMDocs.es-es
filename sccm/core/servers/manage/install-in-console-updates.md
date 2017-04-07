@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: eafa95922485066632a5da522e6c3de69b45050f
-ms.lasthandoff: 03/04/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 3b50ada9f63e41d1b6f01009c141b8f361f5180e
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -33,14 +33,14 @@ Solo las actualizaciones aplicables a su infraestructura y versión se descargan
 
 -   En **modo en línea**, el punto de conexión de servicio se conecta al servicio en la nube de Microsoft automáticamente y descarga las actualizaciones aplicables.  
 
-     De manera predeterminada, Configuration Manager busca nuevas actualizaciones cada 24 horas. También puede comprobar las actualizaciones inmediatamente. Para ello, seleccione **Buscar actualizaciones** en el nodo **Administración** > **Cloud Services** > **Actualizaciones y mantenimiento** de la consola de Configuration Manager.  
+     De manera predeterminada, Configuration Manager busca nuevas actualizaciones cada 24 horas. También puede comprobar las actualizaciones inmediatamente. Para ello, seleccione **Buscar actualizaciones** en el nodo **Administración** > **Actualizaciones y mantenimiento** de la consola de Configuration Manager. (Antes de la versión 1702, este nodo se encontraba en **Administración** > **Cloud Services**).
 
 -   En el **modo sin conexión**, el punto de conexión de servicio no se conecta al servicio en la nube de Microsoft. Debe [usar la herramienta de conexión de servicio para System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md) manualmente para importar las actualizaciones disponibles.  
 
 > [!NOTE]  
 >  Además de las actualizaciones que obtendrá al sincronizar con el servicio en la nube de Microsoft, las correcciones fuera de banda que se instalan con la [herramienta Actualizar registro](http://technet.microsoft.com/library/mt691544.aspx) también se importan en la consola, donde puede seleccionarlas para instalarlas.  
 
-Una vez que las actualizaciones se sincronizan, puede verlas en la consola de Configuration Manager. Para ello, vaya al nodo **Administración** > **Servicios en la nube** > **Actualizaciones y mantenimiento**:  
+Una vez que las actualizaciones se sincronizan, puede verlas en la consola de Configuration Manager. Para ello, vaya al nodo **Administración** > **Actualizaciones y mantenimiento**:  
 
 -   Las actualizaciones no instaladas se muestran como **Disponible**.
 
@@ -98,7 +98,8 @@ Revise la lista de comprobación de actualización aplicable para las acciones q
 - Actualización a 1606: vea [Lista de comprobación para la instalación de la actualización 1606](../../../core/servers/manage/checklist-for-installing-update-1606.md).  
 
 - Actualización a 1610 desde 1606: vea [Lista de comprobación para la instalación de la actualización 1610](../../../core/servers/manage/checklist-for-installing-update-1610.md).  
-<!--- Update to 1702 from either 1606 or 1610: See [Checklist for installing update 1702](../../../core/servers/manage/checklist-for-installing-update-1702.md). -->  
+
+- Actualización a 1702 desde 1606 o 1610: vea [Lista de comprobación para la instalación de la actualización 1702](../../../core/servers/manage/checklist-for-installing-update-1702.md).
 
 ###  <a name="bkmk_step2"></a> Paso 2: Probar la actualización de la base de datos antes de instalar una actualización  
 La información de este paso solo se aplica al instalar una *actualización* para un sitio de System Center Configuration Manager. Si va a *actualizar* un sitio de System Center 2012 Configuration Manager a System Center Configuration Manager, vea [Probar la actualización de la base de datos del sitio](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#a-namebkmktesta-test-the-site-database-upgrade).
@@ -146,7 +147,7 @@ Más adelante, cuando instale la actualización, tiene la opción de configurarl
 
 #### <a name="to-run-the-prerequisite-checker-before-installing-an-update"></a>Para ejecutar el Comprobador de requisitos previos antes de instalar una actualización  
 
-1.  En la consola de Configuration Manager, vaya a **Administración** > **Servicios en la nube** > **Actualizaciones y mantenimiento**.  
+1.  En la consola de Configuration Manager, vaya a **Administración** > **Actualizaciones y mantenimiento**.   
 
 2.  Haga clic con el botón derecho en el paquete de actualización para el que desea ejecutar la comprobación de requisitos previos.  
 
@@ -203,7 +204,7 @@ Como parte de la instalación de la actualización, Configuration Manager:
 **3. Supervisar el progreso de las actualizaciones mientras se instalan**  
 Para supervisar el progreso, utilice lo siguiente:  
 
--   En la consola de Configuration Manager: nodo **Administración** > **Servicios en la nube** > **Actualizaciones y mantenimiento**. En este nodo se muestra el estado de instalación de todos los paquetes de actualización.
+-   En la consola de Configuration Manager, vaya al nodo **Administración** > **Actualizaciones y mantenimiento**. En este nodo se muestra el estado de instalación de todos los paquetes de actualización.
 
 
 -   En la consola de Configuration Manager: nodo **Supervisión** > **Información general** > **Actualizaciones y estado de mantenimiento**. En este nodo se muestra solamente el estado de instalación del paquete de actualización que se esté instalando actualmente.  
@@ -241,7 +242,7 @@ Se recomienda que instale la actualización inmediatamente.
 Cuando se complete la actualización de la consola, puede comprobar que la versión de la consola y del sitio es correcta. Vaya a **Acerca de System Center Configuration Manager** en la esquina superior izquierda de la consola.  
 
 ###  <a name="bkmk_toptier"></a> Para iniciar la instalación de la actualización en el sitio de nivel superior  
-En el sitio de nivel superior de la jerarquía, en la consola de Configuration Manager, vaya a **Administración** > **Servicios en la nube** > **Actualizaciones y mantenimiento**, seleccione una actualización **Disponible** y haga clic en **Install Update Pack** (Instalar el paquete de actualización).  
+En el sitio de nivel superior de la jerarquía, en la consola de Configuration Manager, vaya a **Administración** > **Actualizaciones y mantenimiento**, seleccione una actualización **Disponible** y luego haga clic en **Instalar el paquete de actualización**.  
 
 ###  <a name="bkmk_secondary"></a> Para iniciar la instalación de la actualización en un sitio secundario  
 Una vez que un sitio primario principal de sitios secundarios se actualiza, puede actualizar el sitio secundario desde la consola de Configuration Manager.  Para ello, utilice el **Asistente para actualizar sitios secundarios**.  
@@ -268,7 +269,7 @@ Puede volver a intentar la instalación de una actualización en toda la jerarqu
     -   Error de instalación
     -   Error en la replicación del contenido en el sitio   
 
-    Vaya a **Administración** > **Servicios en la nube** > **Actualizaciones y mantenimiento**, seleccione la actualización y, después, elija una de las siguientes opciones:  
+    Vaya a **Administración** > **Actualizaciones y mantenimiento**, seleccione la actualización y, después, elija una de las siguientes opciones:  
 
     -   **Reintentar**: al ejecutar **Reintentar** desde este nodo, la instalación de la actualización vuelve a empezar y omitirá automáticamente las advertencias de requisitos previos. También volverá a replicar el contenido para la actualización si no se pudo realizar la replicación previamente.
     - **Ignore prerequisite warnings** (Omitir advertencias de requisitos previos): a partir de la versión 1606, si se detiene la instalación de la actualización debido a una advertencia, puede seleccionar **Ignore prerequisite warnings** (Omitir advertencias de requisitos previos). Esta acción reinicia la instalación de la actualización y utiliza la opción para ignorar las advertencias de requisitos previos.   
@@ -315,7 +316,7 @@ Para obtener más información, consulte [Supervisar la infraestructura de la je
 ##  <a name="bkmk_options"></a> Habilitar características opcionales de las actualizaciones  
 Cuando instala una actualización que incluye una o más características opcionales, tendrá la oportunidad de habilitarlas en la jerarquía.  Puede hacerlo en el momento en que instala la actualización, o bien volver a la consola en un momento posterior y habilitar las características opcionales.
 
-Para ver las características disponibles y su estado, en la consola, vaya a **Administración** > **Servicios en la nube** > **Actualizaciones y mantenimiento** > **Características**.
+Para ver las características disponibles y su estado, en la consola, vaya a **Administración** > **Actualizaciones y mantenimiento** > **Características**.
 
 Cuando una característica no es opcional, se instala automáticamente y no aparece en el nodo **Características**.  
 

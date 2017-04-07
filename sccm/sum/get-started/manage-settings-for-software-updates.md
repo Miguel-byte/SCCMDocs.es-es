@@ -6,7 +6,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 03/26/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,19 +14,20 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
-ms.openlocfilehash: 7d37f3c5e398c914482c45ab837fe41d00fce8ea
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: fe4a8f56e0b554e206bcc4503a0268dc761ded81
+ms.lasthandoff: 03/27/2017
 
 
 ---
 
-#  <a name="a-namebkmkmanagesusettingsa-manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a> Administrar la configuración de las actualizaciones de software  
+#  <a name="BKMK_ManageSUSettings"></a> Administrar la configuración de las actualizaciones de software  
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
 Después de sincronizar las actualizaciones de software en Configuration Manager, configure y compruebe la configuración en las secciones siguientes.
 
-##  <a name="a-namebkmkclientsettingsa-client-settings-for-software-updates"></a><a name="BKMK_ClientSettings"></a> Configuración de cliente para las actualizaciones de software  
+##  <a name="BKMK_ClientSettings"></a> Configuración de cliente para las actualizaciones de software  
 Después de instalar el punto de actualización de software, la actualización de software estará habilitada en los clientes de manera predeterminada, y las opciones de la página **Actualizaciones de software** de la configuración de cliente tendrán valores predeterminados. La configuración de cliente se utiliza en todo el sitio e influye en el momento en que se examina el cumplimiento de las actualizaciones de software, y en cómo y cuándo se instalan actualizaciones de software en los equipos cliente. Antes de implementar las actualizaciones de software, compruebe que la configuración de cliente sea la adecuada para las actualizaciones de software de su sitio.  
 
 > [!IMPORTANT]  
@@ -36,7 +37,7 @@ Para obtener información sobre cómo especificar la configuración de cliente, 
 
 Para obtener más información sobre la configuración de cliente, vea [Acerca de la configuración de cliente](../../core/clients/deploy/about-client-settings.md).  
 
-##  <a name="a-namebkmkgrouppolicya-group-policy-settings-for-software-updates"></a><a name="BKMK_GroupPolicy"></a> Configuración de directiva de grupo para actualizaciones de software  
+##  <a name="BKMK_GroupPolicy"></a> Configuración de directiva de grupo para actualizaciones de software  
 Hay configuraciones de directiva de grupo específicas empleadas por el Agente de Windows Update (WUA) en equipos cliente para conectarse a WSUS que se ejecuta en el punto de actualización de software. Esta configuración de directiva de grupo también se usa para analizar correctamente la compatibilidad de las actualizaciones de software y actualizar automáticamente las actualizaciones de software y el WUA.
 
 ### <a name="specify-intranet-microsoft-update-service-location-local-policy"></a>Directiva local que especifica la ubicación del servicio Microsoft Update en la intranet  
@@ -65,10 +66,10 @@ Utilice el procedimiento siguiente para abrir las propiedades de la actualizaci�
    > [!NOTE]  
    >  En el nodo **Todas las actualizaciones de software**, Configuration Manager solo muestra las actualizaciones de software con una clasificación de **Crítico** y **Seguridad** publicadas en los últimos 30 días.  
 
-###  <a name="a-namebkmksoftwareupdatesinformationa-review-software-updates-information"></a><a name="BKMK_SoftwareUpdatesInformation"></a> Revisar la información de la actualización de software  
+###  <a name="BKMK_SoftwareUpdatesInformation"></a> Revisar la información de la actualización de software  
 En las propiedades de la actualización de software, puede revisar información detallada acerca de una actualización de software. No se muestra la información detallada cuando seleccione más de una actualización de software. Las secciones siguientes describen la información que está disponible para una actualización de software seleccionada.  
 
-####  <a name="a-namebkmksoftwareupdatedetailsa-software-update-details"></a><a name="BKMK_SoftwareUpdateDetails"></a> Detalles de la actualización de software  
+####  <a name="BKMK_SoftwareUpdateDetails"></a> Detalles de la actualización de software  
 En la pestaña **Detalles de la actualización de software** , puede ver la siguiente información de resumen sobre la actualización de software seleccionada:  
 
 - **Id. de boletín**: especifica el identificador de boletín asociado a las actualizaciones de software de seguridad. Para obtener detalles sobre el boletín de seguridad, busque el identificador del boletín en la página web de [Boletines de seguridad](http://go.microsoft.com/fwlink/p/?LinkId=58313) .  
@@ -85,7 +86,7 @@ En la pestaña **Detalles de la actualización de software** , puede ver la sigu
 
 - **Productos afectados**: muestra los productos para los que es aplicable la actualización de software.  
 
-####  <a name="a-namebkmkcontentinformationa-content-information"></a><a name="BKMK_ContentInformation"></a> Información de contenido  
+####  <a name="BKMK_ContentInformation"></a> Información de contenido  
 En la pestaña **Información de contenido** , revise la siguiente información acerca del contenido que se asocia con la actualización de software seleccionada:  
 
 -   **Id. de contenido**: especifica el identificador de contenido de la actualización de software.  
@@ -98,32 +99,32 @@ En la pestaña **Información de contenido** , revise la siguiente información 
 
 -   **Tamaño (MB)**: especifica el tamaño de los archivos de origen de la actualización de software.  
 
-####  <a name="a-namebkmkcustombundleinformationa-custom-bundle-information"></a><a name="BKMK_CustomBundleInformation"></a> Información de agrupación personalizada  
+####  <a name="BKMK_CustomBundleInformation"></a> Información de agrupación personalizada  
 En la pestaña **Información de agrupación personalizada** , revise la información de agrupación personalizada de la actualización de software. Si la actualización de software seleccionada contiene actualizaciones de software agrupadas incluidas en el archivo de la actualización de software, éstas se muestran en la sección **Información de agrupación** . Esta pestaña no muestra las actualizaciones de software agrupadas que se incluyen en la pestaña **Información de contenido** , como los archivos de actualización para los distintos idiomas.  
 
-####  <a name="a-namebkmksupersedenceinformationa-supersedence-information"></a><a name="BKMK_SupersedenceInformation"></a> Información de sustitución  
+####  <a name="BKMK_SupersedenceInformation"></a> Información de sustitución  
 En la pestaña **Información de sustitución** , puede ver la siguiente información acerca de la sustitución de la actualización de software:  
 
 - **Esta actualización se ha sustituido por las siguientes actualizaciones**: especifica las actualizaciones de software que sustituyen a esta actualización, lo que significa que las actualizaciones que se muestran son más recientes. En la mayoría de los casos, se implementará una de las actualizaciones de software que sustituye a la actualización de software. Las actualizaciones de software que se muestran en la lista contienen hipervínculos a páginas web que proporcionan más información acerca de las actualizaciones de software. Si la actualización no se ha sustituido, aparecerá **Ninguno** .  
 
 - **Esta actualización sustituye a las siguientes actualizaciones**: especifica las actualizaciones de software que sustituye esta actualización de software, lo cual significa que esta actualización de software es más reciente. En la mayoría de los casos, se implementará esta actualización de software para reemplazar las actualizaciones de software sustituidas. Las actualizaciones de software que se muestran en la lista contienen hipervínculos a páginas web que proporcionan más información acerca de las actualizaciones de software. Si esta actualización no sustituye a ninguna otra, aparecerá **Ninguno** .  
 
-###  <a name="a-namebkmksoftwareupdatessettingsa-configure-software-updates-settings"></a><a name="BKMK_SoftwareUpdatesSettings"></a> Configurar opciones de actualización de software  
+###  <a name="BKMK_SoftwareUpdatesSettings"></a> Configurar opciones de actualización de software  
 En las propiedades, se pueden configurar las opciones de actualización de software de una o varias actualizaciones de software. La mayoría de las opciones de actualización de software sólo se pueden configurar en el sitio de administración central o en el sitio primario independiente. La información de las siguientes secciones le permitirá configurar las opciones de las actualizaciones de software.  
 
-####  <a name="a-namebkmksetmaxruntimea-set-maximum-run-time"></a><a name="BKMK_SetMaxRunTime"></a> Establecer el tiempo máximo de ejecución  
+####  <a name="BKMK_SetMaxRunTime"></a> Establecer el tiempo máximo de ejecución  
 En la pestaña **Duración máxima de la ejecución** , establezca el período de tiempo máximo que se asigna a una actualización de software para completarse en equipos cliente. Si la actualización supera el valor de este período máximo, Configuration Manager crea un mensaje de estado y detiene la supervisión de la implementación para la instalación de actualizaciones de software. Esta opción sólo se puede configurar en un sitio primario independiente o en el sitio de administración central.  
 
 Configuration Manager también utiliza esta opción para determinar si la instalación de las actualizaciones de software se van a iniciar dentro de una ventana de mantenimiento configurada. Si este período máximo de tiempo es mayor que el tiempo restante disponible en la ventana de mantenimiento, la instalación de actualizaciones de software se pospone hasta el inicio de la siguiente ventana de mantenimiento. Si se van a instalar varias actualizaciones de software en un equipo cliente con una ventana de mantenimiento configurada (período de tiempo), las actualizaciones de software irán instalando desde la que tiene la duración de ejecución más baja hasta la más alta. Antes de instalar cada actualización de software, el cliente comprueba que la ventana de mantenimiento disponible proporcionará tiempo suficiente para instalar la actualización de software. Una vez iniciada la instalación de una actualización de software, su proceso de instalación continuará aunque su duración sea más prolongada que la ventana de mantenimiento. Para obtener más información sobre las ventanas de mantenimiento, consulte [How to use maintenance windows in System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md) (Uso de ventanas de mantenimiento en System Center Configuration Manager).  
 
 En la pestaña **Duración máxima de la ejecución** , puede ver y configurar las siguientes opciones:  
 
-- **Duración máxima de la ejecución**: especifica el número máximo de minutos que se asigna a una instalación de actualización de software para que se complete antes de que Configuration Manager deje de supervisarla. Esta configuración también se utiliza para determinar si resta tiempo suficiente para instalar la actualización antes del final de la ventana de mantenimiento. El valor predeterminado es 60 minutos para los Service Packs, y 5 minutos para el resto de tipos de actualización de software. El valor puede ir de 5 a 9999 minutos.  
+- **Duración máxima de la ejecución**: especifica el número máximo de minutos que se asigna a una instalación de actualización de software para que se complete antes de que Configuration Manager deje de supervisarla. Esta configuración también se utiliza para determinar si resta tiempo suficiente para instalar la actualización antes del final de la ventana de mantenimiento. El valor predeterminado es 60 minutos para los Service Pack. Para otros tipos de actualización de software, el valor predeterminado es 10 minutos si realizó una instalación nueva de la versión 1511 de Configuration Manager o posterior y 5 minutos al actualizar desde una versión anterior. El valor puede ir de 5 a 9999 minutos.  
 
 > [!IMPORTANT]  
 >  Asegúrese de establecer un valor de duración máxima de la ejecución que sea menor que la duración de la ventana de mantenimiento. De lo contrario, la instalación de la actualización de software no se iniciará.  
 
-####  <a name="a-namebkmksetcustomseveritya-set-custom-severity"></a><a name="BKMK_SetCustomSeverity"></a> Establecer gravedad personalizada  
+####  <a name="BKMK_SetCustomSeverity"></a> Establecer gravedad personalizada  
 En las propiedades de una actualización de software, puede utilizar la pestaña **Gravedad personalizada** para configurar los valores de gravedad personalizada de las actualizaciones de software. Esto puede ser necesario si los valores de gravedad predefinidos no satisfacen sus necesidades. Los valores personalizados se incluyen en la columna **Gravedad personalizada** de la consola de Configuration Manager. Puede ordenar las actualizaciones de software por los valores de gravedad personalizada definidos, y también puede crear consultas e informes que puedan filtrar en estos valores. Esta opción sólo se puede configurar en un sitio de administración central o un sitio primario independiente.  
 
 Puede configurar las siguientes opciones en la pestaña **Gravedad personalizada** .  
@@ -139,9 +140,4 @@ Si se utiliza, la comprobación de CRL debe estar habilitada en las consolas de 
 En el equipo que realiza la comprobación de CRL, desde el DVD del producto, ejecute lo siguiente desde un símbolo del sistema: **\SMSSETUP\BIN\X64\\**<*language*>**\UpdDwnldCfg.exe /checkrevocation**.  
 
 Por ejemplo, para Inglés (Estados Unidos) debe ejecutar **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation**  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -2,7 +2,7 @@
 title: "Protección de datos mediante eliminación remota, bloqueo o restablecimiento de código de acceso mediante System Center Configuration Manager | Microsoft Docs"
 description: "Proteja los datos de su dispositivo mediante eliminación completa, eliminación selectiva, bloqueo remoto o restablecimiento del código de acceso mediante System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,13 +13,13 @@ ms.topic: article
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 3aa4c2ad3568cc6ced70a65141a2c103af8b740f
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ef020a0409c1f1a68f76ecadc9885801e6c1ad4e
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-using-system-center-configuration-manager"></a>Protección de datos mediante eliminación remota, bloqueo o restablecimiento de código de acceso mediante System Center Configuration Manager
@@ -77,19 +77,22 @@ Configuration Manager proporciona capacidades de eliminación selectiva, elimina
 |Agente de administración|Se revocarán los privilegios del administrador de dispositivos.|Se revocarán los privilegios del administrador de dispositivos.|  
 |Perfiles de correo electrónico|No aplicable.|Para los perfiles de correo electrónico aprovisionados por Intune, se quitan la cuenta de correo electrónico y el correo electrónico.|  
 
+**Android for Work**
+
+Al realizar un borrado selectivo en un dispositivo Android for Work, se quita el perfil de trabajo junto con todos los datos, las aplicaciones y la configuración del perfil de trabajo de dicho dispositivo. De esta forma, se retira el dispositivo de la administración con Intune y Configuration Manager. No se admite la eliminación completa para Android for Work.
+
  **Windows 10, Windows 8.1, Windows RT 8.1 y Windows RT**  
 
-|Contenido borrado al retirar un dispositivo|Windows 10, Windows 8.1 y Windows RT 8.1|Windows RT|  
-|---------------------------------|-------------|-----------|
-|Aplicaciones y datos asociados de la compañía que se instalaron mediante Configuration Manager y Intune.|Se desinstalan las aplicaciones y se quitan las claves de instalación de prueba. Se revocará la clave de cifrado de las aplicaciones que usan Windows Selective Wipe, y no se podrá tener acceso a los datos.|Se eliminan las claves de instalación de prueba pero las aplicaciones permanecen instaladas.|  
-|Perfiles de VPN y Wi-Fi|Quitado.|No aplicable.|  
-|Certificados|Quitado y revocado.|No aplicable.|  
-|Configuración|Requisitos quitados.||  
-|Agente de administración|No aplicable. El agente de administración está integrado.|No aplicable. El agente de administración está integrado.|  
-|Perfiles de correo electrónico|Quita el correo electrónico habilitado para EFS que incluye la aplicación Correo para el correo electrónico y los datos adjuntos de Windows.|No aplicable.|  
+|Contenido borrado al retirar un dispositivo|Windows 10, Windows 8.1 y Windows RT 8.1|  
+|---------------------------------|-------------|
+|Aplicaciones y datos asociados de la compañía que se instalaron mediante Configuration Manager y Intune.|Se desinstalan las aplicaciones y se quitan las claves de instalación de prueba. Se revocará la clave de cifrado de las aplicaciones que usan Windows Selective Wipe, y no se podrá tener acceso a los datos.|  
+|Perfiles de VPN y Wi-Fi|Quitado.|  
+|Certificados|Quitado y revocado.|  
+|Configuración|Requisitos quitados.|
+|Agente de administración|No aplicable. El agente de administración está integrado.|  
+|Perfiles de correo electrónico|Quita el correo electrónico habilitado para EFS que incluye la aplicación Correo para el correo electrónico y los datos adjuntos de Windows.|  
 
- **Windows 10 Mobile, Windows Phone 8.0 y Windows Phone 8.1**  
-
+ **Windows 10 Mobile, Windows Phone 8.0 y Windows Phone 8.1**
 
  |Contenido borrado al retirar un dispositivo|Windows 10 Mobile, Windows Phone 8 y Windows Phone 8.1|  
 |-|-|
@@ -102,53 +105,29 @@ Configuration Manager proporciona capacidades de eliminación selectiva, elimina
  La siguiente configuración también se quita de los dispositivos Windows 10 Mobile y Windows Phone 8.1:  
 
 -   Requerir una contraseña para desbloquear dispositivos móviles  
-
 -   Permitir contraseñas sencillas  
-
 -   Longitud mínima de contraseña  
-
 -   Tipo de contraseña obligatoria  
-
 -   Expiración de contraseña (días)  
-
 -   Recordar el historial de contraseñas  
-
 -   Número de errores de inicio de sesión repetidos que se permiten antes de que se borre el dispositivo  
-
 -   Minutos de inactividad antes de que se pida la contraseña  
-
 -   Tipo de contraseña requerida: número mínimo de conjuntos de caracteres  
-
 -   Permitir cámara  
-
 -   Requerir cifrado en dispositivo móvil  
-
 -   Permitir almacenamiento extraíble  
-
 -   Permitir explorador web  
-
 -   Permitir almacén de aplicaciones  
-
 -   Permitir captura de pantalla  
-
 -   Permitir geolocalización  
-
 -   Permitir cuenta de Microsoft  
-
 -   Permitir copiar y pegar  
-
 -   Permitir Wi-Fi Tethering  
-
 -   Permitir la conexión automática a zonas Wi-Fi gratuitas  
-
 -   Permitir informar de zonas Wi-Fi  
-
 -   Permitir el restablecimiento de la configuración de fábrica  
-
 -   Permitir Bluetooth  
-
 -   Permitir NFC  
-
 -   Permitir Wi-Fi  
 
 ### <a name="to-initiate-a-remote-wipe-from-the-configuration-manager-console"></a>Para iniciar un borrado remoto desde la consola de Configuration Manager  
@@ -192,10 +171,11 @@ Configuration Manager proporciona capacidades de eliminación selectiva, elimina
 |Plataforma|Restablecimiento de la contraseña|  
 |--------------|--------------------|  
 |iOS|Permite borrar la contraseña de un dispositivo. No admite la creación de una nueva contraseña temporal.|  
-|Android|Permite restablecer y crear una contraseña temporal.|  
+|Android|Permite restablecer y crear una contraseña temporal.|
+|Android for Work | No compatible|
 |Windows 10|No se admite en este momento.|  
 |Windows Phone 8 y Windows Phone 8.1|Compatible.|  
-|Windows RT 8.1 y Windows RT|No compatible.|  
+|Windows RT 8.1 |No compatible.|  
 |Windows 8.1|No compatible.|  
 
 ### <a name="to-reset-the-passcode-on-a-mobile-device-remotely-in-configuration-manager"></a>Para restablecer el código de acceso de un dispositivo móvil de forma remota en Configuration Manager  
@@ -223,7 +203,7 @@ Configuration Manager proporciona capacidades de eliminación selectiva, elimina
 |Android|Compatible.|  
 |Windows 10|No se admite en este momento.|  
 |Windows Phone 8 y Windows Phone 8.1|Compatible.|  
-|Windows RT 8.1 y Windows RT|Compatible si el usuario actual del dispositivo es el mismo usuario que inscribió el dispositivo.|  
+|Windows RT 8.1 |Compatible si el usuario actual del dispositivo es el mismo usuario que inscribió el dispositivo.|  
 |Windows 8.1|Compatible si el usuario actual del dispositivo es el mismo usuario que inscribió el dispositivo.|  
 
 ### <a name="to-lock-a-mobile-device-remotely-through-the-configuration-manager-console"></a>Para bloquear un dispositivo móvil de forma remota a través de la consola de Configuration Manager  

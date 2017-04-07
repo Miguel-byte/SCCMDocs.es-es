@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
-ms.openlocfilehash: 3c3725678561c32fce316ed1209ac8fe73a0eed1
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 832be8c9fda727804f57e83768cd8799db722c67
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -37,7 +37,7 @@ La información siguiente le ayuda a planear la configuración de permisos de pl
 
 -   Lectura para la cuenta que ejecuta la consola de System Center Configuration Manager  
 
- Para obtener más información sobre estos permisos de seguridad, consulte [Paso 1: Instalar y configurar el Servicio de inscripción de dispositivos de red y dependencias](../deploy-use/certificate-infrastructure.md#step-1-install-and-configure-the-network-device-enrollment-service-and-dependencies).  
+ Para más información sobre estos permisos de seguridad, vea [Infraestructura de certificados](../deploy-use/certificate-infrastructure.md).  
 
  Cuando se usa esta configuración predeterminada, los usuarios y los dispositivos no pueden solicitar directamente certificados de las plantillas de certificado. El Servicio de inscripción de dispositivos de red debe iniciar todas las solicitudes. Esta restricción es sumamente importante, ya que las plantillas de certificado deben configurarse con **Proporcionado por el solicitante** para el sujeto del certificado, lo que implica un riesgo de suplantación si un usuario no autorizado o un dispositivo comprometido solicitan un certificado. En la configuración predeterminada, el Servicio de inscripción de dispositivos de red debe iniciar la solicitud. Sin embargo, el riesgo de suplantación continúa si el servicio que ejecuta el Servicio de inscripción de dispositivos de red se ve comprometido. Para evitar este riesgo, siga todas las recomendaciones de seguridad para el Servicio de inscripción de dispositivos de red y el equipo que ejecuta este servicio de rol.  
 

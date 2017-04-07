@@ -1,17 +1,18 @@
 ---
 title: "Supervisar la puerta de enlace de administración en la nube en Configuration Manager | Microsoft Docs"
 description: 
-ms.date: 11/18/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
 ms.assetid: 15f72f80-9850-40ce-9c3a-443ba04b6a03
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: ef12c9b966a1b83b61243311b30e1a925c20d2e3
-ms.openlocfilehash: 4475205c37c20631a189e0c315dc48e288c15ba6
+ms.sourcegitcommit: 199096db7a23fb14db98b95e75246ed254848ab7
+ms.openlocfilehash: df32a7d95799d8ae685fd66e2d9ddf25e32b37d0
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -49,16 +50,5 @@ Las alertas de tráfico de salida le ayudarán a saber el momento en el que el t
 
 ## <a name="monitor-logs"></a>Supervisar los registros
 
-El servicio de puerta de enlace de administración en la nube genera entradas en los siguientes archivos de registro:
-
--   **Cloudmgr.log**: contiene entradas para la implementación del servicio de puerta de enlace de administración en la nube, el estado del servicio en curso y datos de uso asociados con el servicio.
-
--   **SMS\_Cloud\_ProxyConnector.log**: contiene entradas para la configuración de conexiones entre el servicio de puerta de enlace de administración en la nube y el punto de conexión de la puerta de enlace de administración en la nube.
-
-Para obtener más información, consulte [Archivos de registro en System Center Configuration Manager](/sccm/core/plan-design/hierarchy/log-files).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
+El servicio de Cloud Management Gateway genera entradas en una serie de archivos de registro. Para obtener más información, consulte [Archivos de registro en System Center Configuration Manager](/sccm/core/plan-design/hierarchy/log-files).
 

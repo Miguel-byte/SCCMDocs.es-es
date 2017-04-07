@@ -2,7 +2,7 @@
 title: Accesibilidad | Microsoft Docs
 description: "Conozca las características que hacen que System Center Configuration Manager sea accesible para personas con discapacidades."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/27/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bf0ca29a68cb8fbbcacc2acd148c06abf08c5cab
-ms.openlocfilehash: ca1207b8d48ca66096d1bbe674541223c033d895
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 98599b3c188c9e9b508fea79ecf9a2b2348e9288
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="accessibility-features-in-system-center-configuration-manager"></a>Características de accesibilidad de System Center Configuration Manager
@@ -28,7 +29,7 @@ ms.openlocfilehash: ca1207b8d48ca66096d1bbe674541223c033d895
 System Center Configuration Manager incluye características que ayudan a que sea accesible para personas con discapacidades.
 
 
-## <a name="a-namebkmkaconsolea-accessibility-features-for-the-configuration-manager-console"></a><a name="bkmk_aconsole"></a> Características de accesibilidad para la consola de Configuration Manager  
+## <a name="bkmk_aconsole"></a> Características de accesibilidad para la consola de Configuration Manager  
 -   Para tener acceso a un área de trabajo, utilice los siguientes métodos abreviados de teclado:  
 
 |Área de trabajo|Método abreviado de teclado|  
@@ -46,14 +47,14 @@ System Center Configuration Manager incluye características que ayudan a que se
 
 -   Para acceder a la barra de direcciones cuando el foco está en el nodo de árbol, presione tres veces Mayús+TAB.  
 
--   En una página de asistente o de propiedades, puede desplazarse entre los diferentes cuadros utilizando los métodos abreviados de teclado. Presione la tecla Alt y el carácter subrayado (Alt+_) para seleccionar un cuadro específico.  
+-   En una página de asistente o de propiedades, puede desplazarse entre los diferentes cuadros utilizando los métodos abreviados de teclado. Presione la tecla Alt y el carácter subrayado (Alt+_) para seleccionar un cuadro específico.     
 
- -  A partir de la versión 1606, para desplazarse a los diferentes nodos de un área de trabajo, escriba la primera letra del nombre de un nodo. Cada presión de tecla mueve el cursor al siguiente nodo que comience con esa letra. Para los usuarios que tengan un lector de pantalla, el lector leerá el nombre del nodo.
+-  Para desplazarse a los diferentes nodos de un área de trabajo, escriba la primera letra del nombre de un nodo. Cada presión de tecla mueve el cursor al siguiente nodo que comience con esa letra. Para los usuarios que tengan un lector de pantalla, el lector leerá el nombre del nodo.
 
 > [!NOTE]  
 >  Es posible que la información de esta sección solo sea válida para usuarios con licencia de productos de Microsoft en Estados Unidos. Si ha obtenido este producto fuera de los Estados Unidos, puede usar la tarjeta de información de filiales incluida en el paquete de software o visitar el [sitio web de accesibilidad de Microsoft](http://go.microsoft.com/fwlink/?LinkId=8431) para obtener la información de contacto de los servicios de soporte técnico de Microsoft. Puede ponerse en contacto con su distribuidor para conocer si el tipo de productos y servicios que se describen en esta sección están disponibles en su área. La información sobre accesibilidad está disponible en otros idiomas, incluidos japonés y francés.  
 
-##  <a name="a-namebkmkahelpa-accessibility-features-for-configuration-manager-help"></a><a name="bkmk_ahelp"></a> Características de accesibilidad para la Ayuda de Configuration Manager  
+##  <a name="bkmk_ahelp"></a> Características de accesibilidad para la Ayuda de Configuration Manager  
  La Ayuda de Configuration Manager incluye características que la hacen accesible a más usuarios, incluidos aquellos con una destreza manual limitada, problemas de visión o alguna otra discapacidad.  
 
 |Para|Utilice este método abreviado de teclado|  
@@ -108,9 +109,4 @@ System Center Configuration Manager incluye características que ayudan a que se
 
     > [!NOTE]  
     >  Si cambia la fuente de los temas de Ayuda en la ventana de Ayuda, el cambio también afecta las fuentes de las páginas web en Windows Internet Explorer.  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

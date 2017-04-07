@@ -17,9 +17,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 84f21f2e86212bc3fb6a505ff62c886e62b77d52
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
+ms.openlocfilehash: 50aea2afaf34974ca92ac58b6569bff56403a9ab
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>Aplicar configuración a aplicaciones iOS con directivas de configuración de aplicaciones en System Center Configuration Manager
@@ -39,7 +39,7 @@ Para usar una directiva de configuración de aplicaciones en Configuration Manag
 
 Actualmente, las directivas de configuración de aplicaciones solo están disponibles en dispositivos con iOS 8 y versiones posteriores, y para estos tipos de aplicaciones:
 
-- **Paquete de aplicación iOS (archivo *.ipa)**
+- **Paquete de aplicación iOS (archivo*.ipa)**
 - **Paquete de aplicación de iOS en App Store**
 
 Para obtener más información sobre los tipos de instalación de aplicaciones, vea [Introducción a la administración de aplicaciones](/sccm/apps/understand/introduction-to-application-management).
@@ -70,8 +70,9 @@ Para obtener más información sobre los tipos de instalación de aplicaciones, 
 
       Para más información sobre las listas de propiedades XML, vea [Understanding XML Property Lists](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) (Descripción de las listas de propiedades XML) en la biblioteca de desarrolladores de iOS.
 
-            The format of the XML property list varies depending on the app you are configuring. Contact the app supplier for details about the format to use.
-            Intune supports the following data types in a property list:
+El formato de la lista de propiedades XML varía según la aplicación que configure. Póngase en contacto con el proveedor de la aplicación para obtener información sobre el formato que debe usar.
+Intune admite los siguientes tipos de datos en una lista de propiedades:
+            
             ```
             <integer>
             <real>
@@ -80,8 +81,9 @@ Para obtener más información sobre los tipos de instalación de aplicaciones, 
             <dict>
             <true /> or <false />
             ```
-            For more information about data types, see [About Property Lists](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) in the iOS Developer Library.
-            Intune also supports the following token types in the property list:
+Para más información sobre los tipos de datos, vea [About Property Lists](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) (Acerca de las listas de propiedades) en la biblioteca de desarrolladores de iOS.
+Intune también admite los siguientes tipos de token en la lista de propiedades:
+            
             ```
             {{userprincipalname}} - (Example: John@contoso.com)
             {{mail}} - (Example: John@contoso.com)
@@ -92,11 +94,11 @@ Para obtener más información sobre los tipos de instalación de aplicaciones, 
             {{username}} - (Example: John Doe)
             {{serialnumber}} - (Example: F4KN99ZUG5V2) for iOS devices
             {{serialnumberlast4digits}} - (Example: G5V2) for iOS devices
-
-            The {{ and }} characters are used by token types only and must not be used for other purposes.
             ```
 
-      2.  Para importar un archivo XML ya creado, haga clic en **Seleccionar archivo**.
+Los caracteres {{ y }} solo los usan los tipos de token, por lo que no deben utilizarse para otros fines.
+            
+5. Para importar un archivo XML ya creado, haga clic en **Seleccionar archivo**.
 6. Elija **Siguiente**. Si el código XML contiene errores, tendrá que corregirlos antes de continuar.
 7. Finalice los pasos que se muestran en el asistente.
 

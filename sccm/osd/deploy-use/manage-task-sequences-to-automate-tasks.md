@@ -2,7 +2,7 @@
 title: Administrar secuencias de tareas para automatizar tareas | Microsoft Docs
 description: Puede crear, editar, implementar, importar y exportar secuencias de tareas para administrarlas en su entorno de System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d04d28bbd5116a841c0872cf3f9ca18783dddc78
-ms.openlocfilehash: 417b31fa1feb6d0f674f14ef9e5c7cebd7013916
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 113fa73bf0bd1b3b8a4754eb1e96549c520d7995
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -29,7 +30,7 @@ Utilice secuencias de tareas para automatizar los pasos en su entorno de System 
 
  Consulte las siguientes secciones para administrar secuencias de tareas:
 
-##  <a name="a-namebkmkcreatetasksequencea-create-task-sequences"></a><a name="BKMK_CreateTaskSequence"></a> Crear secuencias de tareas  
+##  <a name="BKMK_CreateTaskSequence"></a> Crear secuencias de tareas  
  Cree secuencias de tareas con el Asistente para crear secuencia de tareas. Este asistente puede crear los siguientes tipos de secuencias de tareas:  
 
 |Tipo de secuencia de tareas|Más información|  
@@ -41,7 +42,13 @@ Utilice secuencias de tareas para automatizar los pasos en su entorno de System 
 |[Secuencia de tareas para administrar discos duros virtuales](use-a-task-sequence-to-manage-virtual-hard-disks.md)|Este tipo de secuencia de tareas contiene las etapas para crear un VHD, que incluye la instalación de un sistema operativo y aplicaciones, que puede publicar en System Center Virtual Machine Manager (VMM) desde la consola de Configuration Manager.|  
 |[Secuencia de tareas personalizada](create-a-custom-task-sequence.md)|Este tipo de secuencia de tareas no agrega ninguna etapa a la secuencia de tareas. Debe editar la secuencia de tareas y agregar etapas a la secuencia de tareas después de crearla.|  
 
-##  <a name="a-namebkmkmodifytasksequencea-edit-a-task-sequence"></a><a name="BKMK_ModifyTaskSequence"></a> Editar una secuencia de tareas  
+## <a name="return-to-previous-page-when-a-task-sequence-fails"></a>Volver a la página anterior cuando se produce un error en una secuencia de tareas
+A partir de la versión 1702 de Configuration Manager, puede volver a la página anterior cuando ejecuta una secuencia de tareas y se produce un error. Antes de esta versión, tenía que reiniciar la secuencia de tareas si se producía un error. Por ejemplo, puede usar el botón **Anterior** en los siguientes escenarios:
+
+- Cuando un equipo se inicia en Windows PE, el cuadro de diálogo de arranque de la secuencia de tareas puede mostrarse antes de que la secuencia de tareas esté disponible. Cuando hace clic en Siguiente en este escenario, la página final de la secuencia de tareas se muestra con un mensaje de que no existe ninguna secuencia de tareas disponible. Ahora, puede hacer clic en **Anterior** para buscar de nuevo secuencias de tareas disponibles. Puede repetir este proceso hasta que la secuencia de tareas esté disponible.
+- Cuando ejecuta una secuencia de tareas, pero los paquetes de contenido dependientes todavía no están disponibles en los puntos de distribución, se produce un error en la secuencia de tareas. Ahora puede distribuir el contenido que falta (si no se ha distribuido todavía) o esperar a que el contenido esté disponible en los puntos de distribución y, después, hacer clic en **Anterior** para reanudar la búsqueda de la secuencia de tareas para el contenido.
+
+##  <a name="BKMK_ModifyTaskSequence"></a> Editar una secuencia de tareas  
  Para modificar una secuencia de tareas, agregue o quite pasos de la secuencia de tareas, agregue o quite grupos de secuencias de tareas, o cambie el orden de los pasos. Utilice el siguiente procedimiento para modificar una secuencia de tareas existente.  
 
 > [!IMPORTANT]  
@@ -71,7 +78,53 @@ Utilice secuencias de tareas para automatizar los pasos en su entorno de System 
 
  Para obtener una lista de las etapas de secuencia de tareas disponibles, consulte [Pasos de la secuencia de tareas](../understand/task-sequence-steps.md).  
 
-##  <a name="a-namebkmkdistributetsa-distribute-content-referenced-by-a-task-sequence"></a><a name="BKMK_DistributeTS"></a> Distribuir contenido al que hace referencia una secuencia de tareas  
+## <a name="configure-high-impact-task-sequence-settings"></a>Configuración de los ajustes de la secuencia de tareas de gran impacto
+A partir de la versión 1702 de Configuration Manager, puede establecer una secuencia de tareas como de gran impacto y personalizar los mensajes que reciben los usuarios cuando ejecutan la secuencia de tareas.
+
+### <a name="set-a-task-sequence-as-a-high-impact-task-sequence"></a>Establecer una secuencia de tareas como una secuencia de tareas de alto impacto
+Siga este procedimiento para establecer una secuencia de tareas como de alto impacto.
+> [!NOTE]
+> Cualquier secuencia de tareas que cumpla determinadas condiciones se define automáticamente como de alto impacto. Para obtener información detallada, vea [Administrar implementaciones de alto riesgo](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+
+1. En la consola de Configuration Manager, vaya a **Biblioteca de software** > **Sistemas operativos** > **Secuencias de tareas**.
+2. Seleccione la secuencia de tareas que se va editar y haga clic en **Propiedades**.
+3. En la pestaña **Notificación de usuario**, seleccione **Es una secuencia de tareas de alto impacto**.
+
+### <a name="create-a-custom-notification-for-high-risk-deployments"></a>Crear una notificación personalizada para implementaciones de alto riesgo
+Utilice el procedimiento siguiente para crear una notificación personalizada para las implementaciones de gran impacto.
+1. En la consola de Configuration Manager, vaya a **Biblioteca de software** > **Sistemas operativos** > **Secuencias de tareas**.
+2. Seleccione la secuencia de tareas que se va editar y haga clic en **Propiedades**.
+3. En la pestaña **Notificación de usuario**, seleccione **Usar texto personalizado**.
+>  [!NOTE]
+>  Solo se puede establecer el texto de la notificación del usuario cuando se selecciona **Es una secuencia de tareas de alto impacto**.
+
+4. Configure las siguientes opciones (máximo de 255 caracteres para cada cuadro de texto):
+
+  **Texto del título de la notificación de usuario**: especifica el texto azul que aparece en la notificación de usuario del Centro de software. Por ejemplo, en la notificación de usuario predeterminada, esta sección contiene algo como "Confirme que quiere actualizar el sistema operativo en este equipo".
+
+  **Texto del mensaje de notificación de usuario**: hay tres cuadros de texto que proporcionan el cuerpo de la notificación personalizada. Todos los cuadros de texto requieren que agregue texto.
+  - Cuadro de texto 1: especifica el cuerpo principal del texto, que normalmente contiene instrucciones para el usuario. Por ejemplo, en la notificación de usuario predeterminada, esta sección contiene algo como "La actualización del sistema operativo llevará un tiempo y es posible que el equipo se reinicie varias veces".
+  - Cuadro de texto 2: especifica el texto en negrita debajo del cuerpo de texto principal. Por ejemplo, en la notificación de usuario predeterminada, esta sección contiene algo como "Esta actualización en contexto instala el nuevo sistema operativo y migra automáticamente sus aplicaciones, datos y configuración".
+  - Cuadro de texto 3: especifica la última línea de texto debajo del texto en negrita. Por ejemplo, en la notificación de usuario predeterminada, esta sección contiene algo como "Haga clic en Instalar para comenzar. De lo contrario, haga clic en Cancelar".   
+
+  Supongamos que configura la siguiente notificación personalizada en las propiedades.
+
+    ![Notificación personalizada para una secuencia de tareas](..\media\user-notification.png)
+
+    Se mostrará el siguiente mensaje de notificación cuando el usuario final abra la instalación desde el Centro de software.
+
+    ![Notificación personalizada para una secuencia de tareas](..\media\user-notification-enduser.png)
+
+### <a name="configure-software-center-properties"></a>Configurar propiedades del Centro de software
+Siga este procedimiento para configurar los detalles de la secuencia de tareas que aparece en el Centro de software. Estos detalles son meramente informativos.  
+1. En la consola de Configuration Manager, vaya a **Biblioteca de software** > **Sistemas operativos** > **Secuencias de tareas**.
+2. Seleccione la secuencia de tareas que se va editar y haga clic en **Propiedades**.
+3. En la pestaña **General**, está disponible la siguiente configuración para el Centro de software:
+  - **Es necesario reiniciar**: permite al usuario saber si es necesario reiniciar durante la instalación.
+  - **Tamaño de la descarga (MB)**: especifica cuántos megabytes se muestran en el Centro de software para la secuencia de tareas.  
+  - **Tiempo de ejecución estimado (minutos)**: especifica el tiempo de ejecución estimado en minutos que se muestra en el Centro de software para la secuencia de tareas.
+
+##  <a name="BKMK_DistributeTS"></a> Distribuir contenido al que hace referencia una secuencia de tareas  
  Antes de que los clientes ejecuten una secuencia de tareas que haga referencia a contenido, debe distribuir dicho contenido a los puntos de distribución. En cualquier momento, puede seleccionar la secuencia de tareas y distribuir su contenido para crear una nueva lista de paquetes de referencia para su distribución. Si realiza cambios en la secuencia de tareas con contenido actualizado, debe redistribuir el contenido antes de que esté disponible para los clientes. Utilice el siguiente procedimiento para distribuir el contenido al que hace referencia una secuencia de tareas.  
 
 #### <a name="to-distribute-referenced-content-to-distribution-points"></a>Para distribuir el contenido al que se hace referencia a los puntos de distribución  
@@ -97,7 +150,7 @@ Utilice secuencias de tareas para automatizar los pasos en su entorno de System 
 
  Puede preconfigurar el contenido al que se hace referencia en la secuencia de tareas. Configuration Manager crea un archivo de contenido preconfigurado comprimido que contiene los archivos, las dependencias asociadas y los metadatos asociados del contenido que se selecciona. A continuación, puede importar manualmente el contenido en un servidor de sitio, un sitio secundario o un punto de distribución. Para más información sobre cómo preconfigurar archivos de contenido, consulte [Preconfigurar el contenido](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content).  
 
-##  <a name="a-namebkmkdeploytsa-deploy-a-task-sequence"></a><a name="BKMK_DeployTS"></a> Implementar una secuencia de tareas  
+##  <a name="BKMK_DeployTS"></a> Implementar una secuencia de tareas  
  Utilice el siguiente procedimiento para implementar una secuencia de tareas en los equipos de una recopilación.  
 
 > [!WARNING]  
@@ -230,7 +283,7 @@ Utilice secuencias de tareas para automatizar los pasos en su entorno de System 
 
 11. Complete el asistente.  
 
-##  <a name="a-namebkmkexportimporta-export-and-import-task-sequences"></a><a name="BKMK_ExportImport"></a> Exportar e importar secuencias de tareas  
+##  <a name="BKMK_ExportImport"></a> Exportar e importar secuencias de tareas  
  Puede exportar e importar secuencias de tareas con o sin sus objetos relacionados, como, por ejemplo, una imagen de sistema operativo, una imagen de arranque, un paquete de agentes de cliente, un paquete de controladores y aplicaciones que tengan dependencias.  
 
  Considere lo siguiente al exportar e importar secuencias de tareas.  
@@ -297,7 +350,7 @@ Utilice secuencias de tareas para automatizar los pasos en su entorno de System 
 
  Después de importar la secuencia de tareas, edítela para especificar las contraseñas que se encontraban en la secuencia de tareas original. Por motivos de seguridad, no se exportan las contraseñas.  
 
-##  <a name="a-namebkmkcreatetsvariablesa-create-task-sequence-variables-for-computers-and-collections"></a><a name="BKMK_CreateTSVariables"></a> Crear variables de secuencia de tareas para equipos y recopilaciones  
+##  <a name="BKMK_CreateTSVariables"></a> Crear variables de secuencia de tareas para equipos y recopilaciones  
  Puede definir variables de secuencia de tareas personalizadas para equipos y recopilaciones. Las variables que se definen para un determinado equipo se conocen como variables de secuencia de tareas por equipo. Las variables definidas para una determinada recopilación se conocen como variables de secuencia de tareas por recopilación. Si hay un conflicto, las variables por equipo tienen prioridad sobre las variables por recopilación. Por lo tanto, las variables de secuencia de tareas asignadas a un determinado equipo tienen automáticamente más prioridad que las variables asignadas a la recopilación que contiene al equipo.  
 
  Por ejemplo, si hay una variable asignada a la recopilación ABC y hay una variable con el mismo nombre asignada al equipo XYZ, que forma parte de la recopilación ABC, la variable asignada al equipo XYZ tiene una prioridad más alta que la variable asignada a la recopilación ABC.  
@@ -342,7 +395,7 @@ Utilice secuencias de tareas para automatizar los pasos en su entorno de System 
 
 6.  Después de agregar todas las variables a la recopilación, haga clic en **Aceptar**.  
 
-##  <a name="a-namebkmkadditionalactionstsa-additional-actions-to-manage-task-sequences"></a><a name="BKMK_AdditionalActionsTS"></a> Acciones adicionales para administrar secuencias de tareas  
+##  <a name="BKMK_AdditionalActionsTS"></a> Acciones adicionales para administrar secuencias de tareas  
  Puede administrar secuencias de tareas con acciones adicionales cuando se selecciona la secuencia de tareas mediante el procedimiento siguiente.  
 
 #### <a name="to-select-a-task-sequence-to-manage"></a>Para seleccionar la secuencia de tareas que desea administrar  
@@ -366,9 +419,4 @@ Utilice secuencias de tareas para automatizar los pasos en su entorno de System 
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Escenarios para implementar sistemas operativos de empresa](scenarios-to-deploy-enterprise-operating-systems.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

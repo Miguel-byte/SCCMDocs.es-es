@@ -2,7 +2,7 @@
 title: Almacenamiento de datos | Microsoft Docs
 description: Punto de servicio de almacenamiento de datos y base de datos para System Center Configuration Manager
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 3/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: 176d1116c910306f70d9acf934ad90340bcc4fcd
-ms.lasthandoff: 03/04/2017
+ms.sourcegitcommit: 3c2a07f560e0aa3d2beb7cc50e71c98ac45c27e1
+ms.openlocfilehash: 9239f6e749c368835e8594ca2d07378d8555b99e
+ms.lasthandoff: 03/28/2017
 
 
 ---
@@ -54,6 +54,13 @@ Cuando se instala el rol de sistema de sitio, instala y configura la base de dat
   - Grupo de disponibilidad AlwaysOn de SQL Server: esta configuración no se admite.
   - Clúster de SQL Server: no se admiten clústeres de conmutación por error de SQL Server. Esto es porque la base de datos del almacenamiento de datos no se ha probado a fondo en clústeres de conmutación por error de SQL Server.
   - Cuando la base de datos del almacenamiento de datos está ubicada en un emplazamiento remoto respecto a la base de datos del servidor del sitio, debe tener una licencia independiente para el servidor SQL Server que hospeda la base de datos.
+
+> [!IMPORTANT]  
+> No se admite el almacenamiento de datos cuando el equipo que ejecuta el punto de servicio de almacenamiento de datos o que hospeda la base de datos de almacenamiento de datos ejecuta uno de los siguientes idiomas:
+> - JPN (japonés)
+> - KOR (coreano)
+> - CHS (chino simplificado)
+> - CHT (chino tradicional); este problema se resolverá en una versión futura.
 
 
 ## <a name="install-the-data-warehouse"></a>Instalar el almacenamiento de datos

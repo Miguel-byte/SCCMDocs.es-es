@@ -2,7 +2,7 @@
 title: Herramienta de registro de actualizaciones | Microsoft Docs
 description: "Averigüe cuándo y cómo usar la herramienta de registro de actualizaciones para importar manualmente una actualización a la consola de Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: c729212d38168acfff3f11ea41f3d52b234c70c8
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 35a4c201f73469fdfaa5bb8629e91886f7ae8751
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -60,15 +60,15 @@ Si instala una versión de un origen externo y el nombre de archivo de la actual
 
     -   **&lt;Producto\>-&lt;versión de producto\>-&lt;id. de artículo de KB\>-ConfigMgr.Update.exe**  
 
-    Una vez registrada la revisión, aparece como nueva actualización en la consola en el plazo de 24 horas.  Puede acelerar el proceso mediante uno de los métodos siguientes:  
+    Una vez registrada la revisión, aparece como nueva actualización en la consola en el plazo de 24 horas.  Puede acelerar el proceso:
 
-    -   Con la versión 1511: en la consola de Configuration Manager, vaya a **Administración > Cloud Services > Actualizaciones y mantenimiento** y, después, seleccione **Start update discovery process immediately** (Iniciar proceso de detección de actualizaciones inmediatamente).  De este modo se inicia la importación de la revisión inmediatamente en cuanto finalice el proceso de registro, haciendo que esté disponible en la consola.  
-
-    -   Con la versión 1602 y posteriores: en la consola de Configuration Manager, vaya a **Administración > Cloud Services > Actualizaciones y mantenimiento** y, después, haga clic en **Buscar actualizaciones**.  
+    - Abra la consola de Configuration Manager y vaya a **Administración** > **Actualizaciones y mantenimiento** y luego haga clic en **Buscar actualizaciones**. (Antes de la versión 1702, la opción Actualizaciones y mantenimiento se encontraba en **Administración** > **Cloud Services**). 
 
     La herramienta de registro de actualizaciones registra sus acciones en un archivo .log en el equipo local. El archivo de registro tiene el mismo nombre que el archivo hotfix.exe y se escribe en la carpeta **%SystemRoot%/Temp**.  
 
      Una vez registrada la actualización, podrá cerrar la herramienta de registro de actualizaciones.  
 
-3.  Abra la consola de Configuration Manager y vaya a AdministraciónServicios en la nubeActualizaciones y mantenimiento(Iniciar proceso de detección de actualizaciones inmediatamente). Ahora están disponibles para instalar las revisiones que se han importado. Para obtener más información sobre la instalación de actualizaciones, consulte [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) (Instalación de actualizaciones en la consola para System Center Configuration Manager).  
+3.  Abra la consola de Configuration Manager y vaya a **Administración** > **Actualizaciones y mantenimiento**. Ahora están disponibles para instalar las revisiones que se han importado. (Antes de la versión 1702, la opción Actualizaciones y mantenimiento se encontraba en **Administración** > **Cloud Services**).
+
+ Para obtener más información sobre la instalación de actualizaciones, consulte [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) (Instalación de actualizaciones en la consola para System Center Configuration Manager).  
 

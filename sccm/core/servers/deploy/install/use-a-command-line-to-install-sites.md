@@ -2,7 +2,7 @@
 title: "Instalación de línea de comandos | Microsoft Docs"
 description: "Obtenga información sobre cómo ejecutar el programa de instalación de System Center Configuration Manager en un símbolo del sistema para diversas instalaciones de sitio."
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 34e24deb90a39bf655a2e24d16cdbe07528e6193
-ms.openlocfilehash: 0fb8ba4bb3d4abe66f71cc83312281cecbb92c41
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: fefa5f3aa12d82b66a251cf0525475496e1e35cf
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>Usar una línea de comandos para instalar sitios de System Center Configuration Manager
@@ -33,7 +33,7 @@ ms.lasthandoff: 03/01/2017
 -   **Instalar un sitio de administración central o sitio primario desde un símbolo del sistema**  
   Consulte [Command-line options for Setup](../../../../core/servers/deploy/install/command-line-options-for-setup.md) (Opciones de línea de comandos para el programa de instalación).
 
- -  **Modificar los idiomas que se pueden usar en un sitio de administración central o sitio primario**  
+-  **Modificar los idiomas que se pueden usar en un sitio de administración central o sitio primario**  
     Para modificar los idiomas que están instalados en un sitio desde un símbolo del sistema (incluidos los idiomas para dispositivos móviles), debe hacer lo siguiente:  
 
      -   Ejecute el programa de instalación desde **&lt;ConfigMgrInstallationPath\>\Bin\X64** en el servidor de sitio.
@@ -44,7 +44,7 @@ ms.lasthandoff: 03/01/2017
 
     Para crear el archivo de script de idioma, use la información de [Command line options to manage languages](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Lang) (Opciones de línea de comandos para administrar idiomas).  
 
- -  **Usar un archivo de script de instalación para realizar instalaciones desatendidas de sitios o para recuperar sitios**  
+-  **Usar un archivo de script de instalación para realizar instalaciones desatendidas de sitios o para recuperar sitios**  
     Puede ejecutar el programa de instalación desde un símbolo del sistema mediante un script de instalación y ejecutar una instalación desatendida del sitio. También puede usar esta opción para recuperar un sitio.    
 
     Para usar un script con el programa de instalación, haga lo siguiente:  
@@ -58,7 +58,7 @@ ms.lasthandoff: 03/01/2017
     -   Identificación    
     -   Opciones    
     -   SQLConfigOptions    
-    -   HierarchyOptions    
+      -   HierarchyOptions    
     -   CloudConnectorOptions   
 
     Para recuperar un sitio, debe incluir también las siguientes secciones del archivo de script:  
@@ -66,12 +66,11 @@ ms.lasthandoff: 03/01/2017
     -   Identificación  
     -   Recuperación
 
-    Para obtener más información sobre la copia de seguridad y la recuperación, vea [Claves de archivo de script de recuperación de sitio desatendida](../../../../protect/understand/backup-and-recovery.md#BKMK_UnattendedSiteRecoveryKeys) en el tema [Copias de seguridad y recuperación en Configuration Manager](../../../../protect/understand/backup-and-recovery.md).  
+Para obtener más información sobre la copia de seguridad y la recuperación, vea [Claves de archivo de script de recuperación de sitio desatendida](../../../../protect/understand/backup-and-recovery.md#BKMK_UnattendedSiteRecoveryKeys) en el tema [Copias de seguridad y recuperación en Configuration Manager](../../../../protect/understand/backup-and-recovery.md).  
 
-    Para obtener una lista de claves y valores que se pueden usar en un archivo de script de instalación desatendida, vea [Claves de archivo de script de instalación desatendida](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended).  
+Para obtener una lista de claves y valores que se pueden usar en un archivo de script de instalación desatendida, vea [Claves de archivo de script de instalación desatendida](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended).  
 
 ## <a name="about-the-command-line-script-file"></a>Acerca del archivo de script de línea de comandos  
-
  Para llevar a cabo instalaciones desatendidas de Configuration Manager, puede ejecutar el programa de instalación con la opción de línea de comandos **/SCRIPT** y especificar un archivo de script que contenga opciones de instalación. Este método admite las siguientes tareas:  
 
 -   Instalar un sitio de administración central  
@@ -81,6 +80,18 @@ ms.lasthandoff: 03/01/2017
 
 > [!NOTE]  
 >  No puede usar el archivo de script de instalación desatendida para actualizar un sitio de evaluación a una instalación con licencia de Configuration Manager.  
+
+### <a name="the-cdlatest-key-name"></a>El nombre de clave CDLatest
+Si usa medios de la carpeta CD.Latest para ejecutar una instalación por script de las cuatro opciones de instalación siguientes, el script debe incluir la clave **CDLatest** con un valor de **1**:
+- Instalar un sitio de administración central nuevo
+- Instalar un sitio primario nuevo
+- Recuperar un sitio de administración central
+- Recuperar un sitio primario 
+
+El uso de este valor no se admite con los medios de instalación obtenidos del sitio de licencia por volumen de Microsoft.
+Vea las [opciones de línea de comandos](/sccm/core/servers/deploy/install/command-line-options-for-setup) para obtener información sobre cómo utilizar este nombre de clave en el archivo de script.
+
+
 
 ### <a name="create-the-script"></a>Crear el script
 El script de instalación se crea automáticamente al [ejecutar el programa de instalación para instalar un sitio mediante la interfaz de usuario](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md).  Cuando se confirma la configuración en la página **Resumen** del asistente, sucede lo siguiente:  

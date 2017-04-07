@@ -2,7 +2,7 @@
 title: Administrar aplicaciones iOS compradas por volumen | Microsoft Docs
 description: Implemente, administre y supervise licencias para las aplicaciones que ha adquirido mediante el App Store de iOS.
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: aef92114af913b420a6e96876141a13a855677ea
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 3c2a07f560e0aa3d2beb7cc50e71c98ac45c27e1
+ms.openlocfilehash: a63acf0d80edba1e965ba8ea99fe90edb8aa2faf
+ms.lasthandoff: 03/28/2017
 
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>Administrar aplicaciones de iOS compradas por volumen con System Center Configuration Manager
@@ -30,37 +30,47 @@ ms.lasthandoff: 03/06/2017
 
  El App Store de iOS le permite comprar varias licencias de una aplicación que quiere ejecutar en su empresa. Esto ayuda a reducir la carga administrativa relacionada con el seguimiento de varias copias de las aplicaciones que ha comprado.  
 
- System Center Configuration Manager le ayuda a implementar y administrar aplicaciones iOS que ha adquirido a través del programa mediante la importación de la información de licencia desde el App Store y la supervisión de la cantidad de licencias que ha usado.  
+ System Center Configuration Manager le ayuda a implementar y administrar aplicaciones iOS que ha adquirido a través del programa mediante la importación de la información de licencia desde el App Store y la supervisión de la cantidad de licencias que se van a usar.  
 
 ## <a name="manage-volume-purchased-apps-for-ios-devices"></a>Administrar aplicaciones compradas por volumen para dispositivos iOS  
  Puede comprar varias licencias para aplicaciones iOS a través del Programa de Compras por Volumen (PCV) de Apple. Esto implica configurar una cuenta de PCV de Apple en el sitio web de Apple y cargar el token de PCV de Apple en Configuration Manager, que proporciona las siguientes características:  
 
--   Sincronice la información de la compra por volumen con Configuration Manager.  
+-   Sincronice la información de la compra por volumen con Configuration Manager. 
+ 
+- Sincronice aplicaciones desde el Programa de compras por volumen de Apple para Empresas y el Programa de compras por volumen de Apple para educación.
+
+- Asocie varios tokens del Programa de compras por volumen de Apple con Configuration Manager.
 
 -   Las aplicaciones que ha comprado se muestran en la consola de Configuration Manager.  
 
 -   Puede implementar y supervisar estas aplicaciones, y también realizar un seguimiento del número de licencias para cada aplicación que se ha usado.  
 
--   Configuration Manager puede ayudarle a recuperar licencias cuando sea necesario mediante la desinstalación de aplicaciones compradas por volumen que haya implementado a los usuarios.  
+-   Configuration Manager puede ayudarle a recuperar licencias cuando sea necesario mediante la desinstalación de aplicaciones compradas por volumen que haya implementado.  
 
 ## <a name="before-you-start"></a>Antes de empezar  
  Antes de empezar, es necesario obtener un token de PCV de Apple y cargarlo en Configuration Manager.  
 
-> [!IMPORTANT]  
->  -   Cada organización puede tener una sola cuenta de PCV y un solo token.  
-> -   Se admite solo el Programa de Compras por Volumen para Empresas de Apple.  
-> -   Una vez asociada una cuenta de PCV de Apple a Intune, no se puede asociar posteriormente una cuenta diferente. Por este motivo, asegúrese de que varias personas tengan los detalles de la cuenta que usa.  
-> -   Si ha usado anteriormente un token de PCV con un producto MDM diferente en su cuenta de PCV de Apple existente, debe generar un nuevo token para usarlo con Configuration Manager.  
-> -   La validez de cada token es de un año.  
-> -   De manera predeterminada, Configuration Manager se sincroniza con el servicio PCV de Apple dos veces al día para garantizar que las licencias estén sincronizadas con Configuration Manager.  
->   
->      Solo se sincronizan los cambios en las licencias. Pero, una vez cada siete días, se realiza una sincronización completa.  
->   
->      Cuando pulse **Sincronizar** para realizar una sincronización manual, siempre se realizará una sincronización completa.  
-> -   Si necesita recuperar o restaurar la base de datos de Configuration Manager, se recomienda que realice una sincronización manual posteriormente para garantizar que los datos de licencia sincronizados estén actualizados.  
-> -   Aunque puede implementar aplicaciones compradas por volumen de iOS en colecciones de usuario o dispositivo, las aplicaciones de PCV que implemente en un dispositivo sin un usuario (por ejemplo, un dispositivo inscrito sin afinidad de usuario mediante el Programa de inscripción de dispositivos (DEP) o Apple Configurator) no se instalarán.  
+-   Si ha usado anteriormente un token de PCV con un producto MDM diferente en su cuenta de PCV de Apple existente, debe generar un nuevo token para usarlo con Configuration Manager.  
+-   La validez de cada token es de un año.  
+-   De manera predeterminada, Configuration Manager se sincroniza con el servicio PCV de Apple dos veces al día para garantizar que las licencias estén sincronizadas con Configuration Manager.  
+      Solo se sincronizan los cambios en las licencias. Pero, una vez cada siete días, se realiza una sincronización completa.  
+      Cuando pulse **Sincronizar** para realizar una sincronización manual, siempre se realizará una sincronización completa.  
+-   Si necesita recuperar o restaurar la base de datos de Configuration Manager, se recomienda que realice una sincronización manual posteriormente para garantizar que los datos de licencia sincronizados estén actualizados.  
+-   Además, debe haber importado un certificado válido de Apple Push Notification Service (APNs) de Apple que le permita administrar dispositivos iOS, incluida la implementación de la aplicación. Para obtener más información, consulte [Configurar la administración de dispositivos de iOS híbrido](enroll-hybrid-ios-mac.md).  
 
- Además, debe haber importado un certificado válido de Apple Push Notification Service (APNs) de Apple que le permita administrar dispositivos iOS, incluida la implementación de la aplicación. Para obtener más información, consulte [Configurar la administración de dispositivos de iOS híbrido](enroll-hybrid-ios-mac.md).  
+A partir de la versión 1702 de System Center Configuration Manager, ahora puede implementar aplicaciones con licencia en dispositivos y usuarios. Dependiendo de la capacidad de las aplicaciones para admitir licencias de dispositivo, se solicitará una licencia adecuada al realizar la implementación, como sigue:
+
+|||||
+|-|-|-|-|
+|Versión de Configuration Manager|¿La aplicación admite licencias de dispositivo?|Tipo de colección de implementación|Licencia exigida|
+|Anterior a 1702|Sí|usuario|Licencia de usuario|
+|Anterior a 1702|No|usuario|Licencia de usuario|
+|Anterior a 1702|Sí|Dispositivo|Licencia de usuario|
+|Anterior a 1702|No|Dispositivo|Licencia de usuario|
+|1702 y versiones posteriores|Sí|usuario|Licencia de usuario|
+|1702 y versiones posteriores|No|usuario|Licencia de usuario|
+|1702 y versiones posteriores|Sí|Dispositivo|Licencia de dispositivo|
+|1702 y versiones posteriores|No|Dispositivo|Licencia de usuario|
 
 ## <a name="step-1---to-get-and-upload-an-apple-vpp-token"></a>Paso 1: obtener y cargar un token de PCV de Apple  
 
@@ -79,6 +89,8 @@ ms.lasthandoff: 03/06/2017
     -   **Descripción**: si lo desea, escriba una descripción que le ayude a identificar este token de PCV en la consola de Configuration Manager.  
 
     -   **Categorías asignadas para mejorar la búsqueda y el filtrado**: si lo desea, puede asignar categorías al token de PCV para que sea más fácil encontrarlo en la consola de Configuration Manager.  
+    -   **Id. de Apple**: escriba el identificador de correo electrónico de Apple asociado con el token de VPP.
+    -   **Tipo de token**: seleccione el tipo de token de VPP que desea utilizar. Puede elegir los tipos de token **Empresa** y **EDU**.
 
 5.  Pulse **Siguiente** y, después, finalice el asistente.  
 
@@ -96,12 +108,14 @@ La aplicación de Configuration Manager que se crea contiene la aplicación de l
     > [!IMPORTANT]  
     > Debe elegir un propósito de implementación del tipo **Requerido**. Actualmente no se admiten las instalaciones disponibles.
 
- Al implementar la aplicación, cada usuario que la instala usa una licencia.  
+ Al implementar la aplicación, cada usuario que instala dicha aplicación usa una licencia, o bien en el caso de las instalaciones de dispositivo, cada dispositivo que instala la aplicación.  Si el destino es una recopilación de dispositivos con una aplicación que admite licencias de dispositivo, se reclama una licencia de dispositivo.  Si el destino es una recopilación de dispositivos con una aplicación que no admite licencias de dispositivo, se reclama una licencia de usuario. 
+
+ Cuando se crea una aplicación a partir del nodo **Información de licencia para las aplicaciones de la Tienda**, la aplicación está asociada con licencias del token para la aplicación que ha seleccionado.  Por ejemplo, puede ver dos versiones de la misma aplicación en el nodo. Esto se debe a que cada versión de la aplicación está asociada a un token de VPP de Apple distinto.  A continuación, podría crear aplicaciones de cada token e implementarlas por separado.
 
  Para recuperar una licencia, se debe cambiar la acción de implementación a **Desinstalar**. La licencia se recuperará una vez que se desinstale la aplicación.  
 
 ## <a name="step-3---monitor-ios-vpp-apps"></a>Paso 3: supervisar aplicaciones de PCV de iOS  
- El nodo **Información de licencia para las aplicaciones de la Tienda** del área de trabajo **Biblioteca de software** muestra información sobre sus aplicaciones iOS compradas por volumen. La información incluye el número total de licencias que tiene para cada aplicación y el número que se ha implementado.
+ El nodo **Información de licencia para las aplicaciones de la Tienda** del área de trabajo **Biblioteca de software** muestra información sobre sus aplicaciones iOS compradas por volumen. La información incluye el número total de licencias que tiene para cada aplicación y el número que se ha implementado. Además, en la vista se muestra con qué token de VPP está asociada la aplicación, así como el tipo de token.
 
  También puede supervisar el uso de las licencias de todas las aplicaciones de PCV que ha comprado mediante el informe **Número de aplicaciones del Programa de Compras por Volumen de Apple para iOS con licencias**.  
 

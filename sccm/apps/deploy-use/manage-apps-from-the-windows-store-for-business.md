@@ -2,7 +2,7 @@
 title: "Administración de aplicaciones adquiridas en la Tienda Windows para empresas | Microsoft Docs"
 description: Administre e implemente aplicaciones desde la Tienda Windows para empresas con System Center Configuration Manager.
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 3/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,15 +16,14 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f955b5aadfc617e08d5d933dee8e42de838f83c0
-ms.openlocfilehash: bf2937f5ba86db19d9cb40e2c98cbb8ba365f7eb
+ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
+ms.openlocfilehash: f2d9da1c584f78e27e84b7f55e7ffe4dd052a27c
+ms.lasthandoff: 03/29/2017
 
 ---
+
 # <a name="manage-apps-from-the-windows-store-for-business-with-system-center-configuration-manager"></a>Administración de aplicaciones desde la Tienda Windows para empresas con System Center Configuration Manager
-
-*Se aplica a: System Center Configuration Manager (Rama actual)*
-
-La [Tienda Windows para empresas](https://www.microsoft.com/business-store) es el lugar donde puede buscar y comprar aplicaciones de Windows para su organización, individualmente o por volumen. Al conectar la tienda a Configuration Manager, puede sincronizar la lista de aplicaciones que ha comprado con Configuration Manager, verlas en la consola de Configuration Manager e implementarlas como lo haría con cualquier otra aplicación.
+La [Tienda Windows para empresas](https://www.microsoft.com/business-store) es el lugar donde puede buscar y adquirir aplicaciones de Windows para su organización, individualmente o por volumen. Al conectar el almacén a Configuration Manager, puede sincronizar la lista de aplicaciones que haya adquirido con Configuration Manager, verlas en la consola de Configuration Manager e implementarlas como lo haría con cualquier otra aplicación.
 
 
 ## <a name="online-and-offline-apps"></a>Aplicaciones en línea y sin conexión
@@ -32,127 +31,96 @@ La [Tienda Windows para empresas](https://www.microsoft.com/business-store) es e
 La Tienda Windows para empresas admite dos tipos de aplicaciones:
 
 - **En línea**: este tipo de licencia requiere que usuarios y dispositivos se conecten a la tienda para obtener una aplicación y su licencia. Los dispositivos de Windows 10 deben estar unidos a un dominio de Azure Active Directory.
-- **Sin conexión**: las organizaciones pueden almacenar en caché las aplicaciones y las licencias para implementarlas directamente en su red local, sin necesidad de conectarse a la tienda o tener una conexión a Internet.
+- **Sin conexión**: las organizaciones pueden almacenar en caché las aplicaciones y licencias para implementarlas directamente en su red local, sin necesidad de conectarse a la tienda o tener una conexión a Internet.
 
-Obtenga más información sobre la [Tienda Windows para empresas](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview).
+[Obtenga más información](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview?f=255&MSPPError=-2147217396) acerca de la Tienda Windows para empresas.
 
-Configuration Manager admite la administración de aplicaciones de la Tienda Windows para empresas en dispositivos de Windows 10 que ejecutan el cliente de Configuration Manager y en los dispositivos de Windows 10 inscritos con Microsoft Intune (configuración híbrida). Configuration Manager ofrece las siguientes funciones para las aplicaciones en línea y sin conexión.
+Configuration Manager admite la administración de aplicaciones de la Tienda Windows para empresas tanto en dispositivos de Windows 10 que ejecutan el cliente de Configuration Manager como en los dispositivos de Windows 10 inscritos a Microsoft Intune (en lo que se conoce como configuración híbrida). Configuration Manager ofrece las siguientes funciones para las aplicaciones en línea y sin conexión.
 
 > [!IMPORTANT]
-> Para usarlas, los dispositivos de Windows 10 deben ejecutar la versión de noviembre de 2015 (1511) o una posterior.
+> Para utilizarlas, los dispositivos de Windows 10 deben ejecutar la versión de noviembre de 2015 (1511) o una posterior.
+
 
 |Capacidad|Aplicaciones sin conexión|Aplicaciones en línea|
 |------------|------------|------------|
-|Sincronizar datos de la aplicación en Configuration Manager<br>(La sincronización se produce cada 24 horas, o bien puede iniciar una sincronización inmediata).|Sí|Sí|
+|Sincronizar datos de la aplicación en Configuration Manager<br>(la sincronización se produce cada 24 horas)|Sí|Sí|
 |Crear aplicaciones de Configuration Manager desde las aplicaciones de la tienda|Sí|Sí|
-|Compatibilidad con las aplicaciones gratuitas de la tienda|Sí|Sí<sup>1</sup>|
-|Compatibilidad con las aplicaciones de pago de la tienda|No|Sí<sup>1</sup>|
-|Compatibilidad con las implementaciones necesarias para las colecciones de usuarios o dispositivos|Sí|Sí<sup>1</sup>|
-|Compatibilidad con las implementaciones disponibles para las colecciones de usuarios o dispositivos|Sí<sup>2</sup>|No|
+|Compatibilidad con las aplicaciones gratuitas de la tienda|Sí|Sí|
+|Compatibilidad con las aplicaciones de pago de la tienda|No|Sí|
+|Compatibilidad con las implementaciones necesarias para las colecciones de usuarios o dispositivos|Sí|Sí|
+|Compatibilidad con las implementaciones disponibles para las colecciones de usuarios o dispositivos|Sí|Sí|
+|Compatibilidad con las aplicaciones de línea de negocio desde la tienda|Sí|Sí|
 
-<sup>1</sup>Solo hay compatibilidad con dispositivos administrados por Intune. No se le impide la creación de una aplicación en línea en la consola de Configuration Manager y su implementación en un dispositivo administrado por el cliente de Configuration Manager, pero la implementación no funcionará. Se dirigirá a los usuarios a la página correspondiente de la tienda de aplicaciones para que instalen la aplicación manualmente.
+Para implementar aplicaciones con licencia en línea en equipos con Windows 10 con el cliente de Configuration Manager, deben ejecutar Windows 10 Creators Update o posterior.
 
-<sup>2</sup>Solo hay compatibilidad con dispositivos administrados por el cliente de Configuration Manager.
+## <a name="deploying-online-apps-using-the-windows-store-for-business-with-pcs-that-run-the-configuration-manager-client"></a>Implementación de aplicaciones en línea mediante la Tienda Windows para empresas con equipos que ejecutan el cliente de Configuration Manager
+Antes de implementar aplicaciones de la Tienda Windows para empresas en equipos que ejecutan el cliente completo de Configuration Manager, tenga en cuenta lo siguiente:
 
-<!--- ## Activate the Windows Store for Business capability
-Because this is a pre-release feature, before you can connect Configuration Manager to the Windows Store for Business, you must take the following steps:
+- Para obtener una funcionalidad completa, los equipos deben ejecutar Windows 10 Creators Update o posterior.
+- Los equipos deben estar unidos al área de trabajo de Azure Active Directory y encontrarse en el mismo inquilino de AAD donde ha registrado la Tienda Windows para empresas como una herramienta de administración.
+- Si los equipos están registrados con la cuenta predefinida de administrador, no pueden acceder a las aplicaciones de la Tienda Windows para empresas.
+- Los equipos deben tener una conexión dinámica a Internet con la Tienda Windows para empresas.
 
-**Give your consent to use pre-release features**
-1. In the **Administration** workspace of the Configuration Manager console, choose **Site Configuration** > **Sites**.
-2. Select the top-level site in your hierarchy, then, open **Hierarchy Settings**.
-3. In the **Hierarchy Settings Properties** dialog box, check the box, **Consent to use Pre-Release** features.
-4. Choose **OK**.
+### <a name="notes-for-pcs-running-earlier-versions-of-windows-10"></a>Notas para los equipos que ejecutan versiones anteriores de Windows 10
+En equipos que ejecutan una versión de Windows 10 anterior a Creators Update (con el cliente de Configuration Manager), se aplica la siguiente funcionalidad:
 
-**Activate the Windows Store for Business capability**
-1. In the **Administration** workspace of the Configuration Manager console, choose **Cloud Services** > **Updates and Servicing** > **Features**.
-2. Select **Windows Store for Business Integration**, and then in the **Home** tab, in the **Features** group, choose **Turn on**.
-3. Close and re-open the Configuration Manager console.
-4. You'll now see the node **Windows Store for Business** in the **Administration** workspace under **Cloud Services**. --->
+
+- Si la instalación la fuerza el usuario que instala la aplicación, o bien si la aplicación consume la fecha límite de instalación o la reevaluación posterior a la instalación de las implementaciones requeridas:
+    - La aplicación se "forzará" con el lanzamiento de la aplicación de la Tienda Windows para empresas. 
+    - El usuario final después debe completar la instalación desde la tienda antes de que se instale realmente
+    - El estado de la aplicación en la consola de Configuration Manager se notificará con el error "La aplicación de la Tienda Windows se abrió en el equipo cliente y está esperando a que el usuario complete la instalación".
+- En el siguiente ciclo de evaluación de la aplicación:
+    - Si el usuario final instala la aplicación desde la tienda, esta notificará el estado **Correcto**. 
+    - Si el usuario final no ha intentado instalar la aplicación desde la tienda:
+        - Las implementaciones necesarias intentarán lanzar la tienda y volver a forzar la instalación de la aplicación.
+        - Las implementaciones disponibles no se volverán a forzar.
+
+#### <a name="further-notes-for-pcs-running-earlier-versions-of-windows-10"></a>Notas adicionales para los equipos que ejecutan versiones anteriores de Windows 10:
+
+- No puede implementar líneas de aplicaciones empresariales desde la Tienda Windows para empresas.
+- Al implementar aplicaciones de pago en la tienda, a los usuarios finales se les pedirá que inicien sesión y adquieran las aplicaciones.
+- Si ha implementado una directiva de grupo que deshabilita el acceso a la versión de consumo de la Tienda Windows, las implementaciones desde la Tienda Windows para empresas no funcionarán, aunque la Tienda esté habilitada.
+
 
 ## <a name="set-up-windows-store-for-business-synchronization"></a>Configuración de la sincronización de la Tienda Windows para empresas
 
-> [!IMPORTANT]
-> Cuando establezca una conexión entre Configuration Manager y la Tienda Windows para empresas, deberá proporcionar una carpeta donde se conservará el contenido de la aplicación sincronizado desde la tienda.
-Para asegurarse de que esta carpeta sea segura y que su contenido se pueda implementar en dispositivos, compruebe que se hayan aplicado los permisos siguientes:
--    El equipo en el que instale el rol de sistema de sitio del punto de conexión de servicio (el sitio de nivel superior de la jerarquía) debe tener permisos de lectura y escritura en la carpeta que haya especificado al usar la cuenta **Computer$**.
--    El autor de la aplicación debe tener permisos de lectura en la carpeta que haya especificado.
--    La cuenta **Computer$** de cada equipo que hospede una instancia del proveedor de SMS debe poder usar la carpeta que haya especificado.
-
-
-En Azure Active Directory, registre Configuration Manager como una herramienta de administración de aplicación web o API web. De este modo, obtendrá un identificador de cliente que necesitará más adelante.
-1. En el nodo [https://manage.windowsazure.com](https://manage.windowsazure.com) de Active Directory, seleccione Azure Active Directory y **Aplicaciones** > **Agregar**.
-2.  Seleccione **Agregar una aplicación que mi organización está desarrollando**.
-3.  Escriba un nombre para la aplicación, elija **Aplicación web** y/o **API web** y, después, seleccione **Siguiente**.
+**En Azure Active Directory, registre Configuration Manager como una herramienta de administración "Aplicación web y/o API web". De este modo, obtendrá un identificador de cliente que necesitará más adelante.**
+1. En el nodo de Active Directory de [https://manage.windowsazure.com](https://manage.windowsazure.com), seleccione Azure Active Directory y luego haga clic en **Aplicaciones** > **Agregar**.
+2.  Haga clic en **Agregar una aplicación que mi organización está desarrollando**.
+3.  Escriba un nombre para la aplicación, seleccione **Aplicación web** y/o **API web** y haga clic en la flecha **Siguiente**.
 4.  Escriba la misma dirección URL para **URL de inicio de sesión** y **URI de id. de aplicación**. La dirección URL puede ser cualquiera (no es necesario que se resuelva en una dirección real). Por ejemplo, puede escribir *https://yourdomain/sccm*.
-5.  Finalice el asistente.
+5.  Complete el asistente.
 
-En Azure Active Directory, cree una clave de cliente para la herramienta de administración registrada.
-1.  Resalte la aplicación que acaba de crear y seleccione **Configurar**.
-2.  En **Claves**, elija una duración de la lista y, después, seleccione **Guardar**. De este modo, se creará una nueva clave de cliente. No salga de esta página hasta que haya incorporado correctamente la Tienda Windows para empresas a Configuration Manager.
+**En Azure Active Directory, cree una clave de cliente para la herramienta de administración registrada.**
+1.  Resalte la aplicación que acaba de crear y haga clic en **Configurar**.
+2.  En **Claves**, seleccione una duración de la lista y haga clic en **Guardar**. De este modo, se creará una nueva clave de cliente. No salga de esta página hasta que haya incorporado correctamente la Tienda Windows para empresas a Configuration Manager.
 
-En la Tienda Windows para empresas, configure Configuration Manager como la herramienta de administración de la tienda.
-1.  Abra [https://businessstore.microsoft.com/es-es/managementtools](https://businessstore.microsoft.com/en-us/managementtools) e inicie sesión si se le solicita.
+**En la Tienda Windows para empresas, configure Configuration Manager como la herramienta de administración de la tienda.**
+1.  Abra [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/en-us/managementtools) e inicie sesión si se le solicita.
 2.  Si se le solicita, acepte los términos de uso.
-3.  En **Herramientas de administración**, seleccione **Add a management tool** (Agregar una herramienta de administración).
-4.  En **Search for the tool by name** (Buscar la herramienta por nombre), escriba el nombre de la aplicación que creó anteriormente en Azure Active Directory y, luego, seleccione **Agregar**.
-5.  Seleccione **Activar** junto a la aplicación que acaba de importar.
-6.  En la página **Administrar > Información de la cuenta**, seleccione **Show Offline-Licensed Apps** (Mostrar aplicaciones con licencia sin conexión) si quiere permitir la adquisición de aplicaciones con licencias sin conexión.
+3.  Bajo **Herramientas de administración**, haga clic en **Add a management tool** (Agregar una herramienta de administración).
+4.  En **Buscar la herramienta por nombre**, escriba el nombre de la aplicación que creó anteriormente en AAD y luego haga clic en **Agregar**.
+5.  Haga clic en **Activar** junto a la aplicación que acaba de importar.
+6.  En la página **Administrar > Información de la cuenta**, seleccione **Show Offline-Licensed Apps** (Mostrar aplicaciones con licencia sin conexión) si desea permitir la adquisición de aplicaciones con licencias sin conexión.
 
-> [!Note]
-> Si utiliza más de una herramienta de administración para implementar aplicaciones de la Tienda Windows para empresas, anteriormente, solo se podía asociar una de estas con la Tienda Windows para empresas. Ahora puede asociar varias herramientas de administración con la tienda, por ejemplo, Intune y Configuration Manager.
+**Incorporación de la cuenta de la tienda a Configuration Manager**
 
-Incorpore la cuenta de la tienda a Configuration Manager.
-
-1. Asegúrese de que ha comprado al menos una aplicación en la Tienda Windows para empresas. En el área de trabajo **Administración** de la consola de Configuration Manager, expanda **Cloud Services** y, luego, seleccione **Tienda Windows para empresas**.
-2.  En la pestaña **Inicio**, en el grupo **Tienda Windows para empresas**, seleccione **Add Windows Store for Business Account** (Agregar cuenta de la Tienda Windows para empresas).
-3.  Agregue el identificador de inquilino, el identificador de cliente y la clave de secreto de cliente de Azure Active Directory y, después, finalice el asistente.
+1. Asegúrese de que ha comprado al menos una aplicación en la Tienda Windows para empresas. En el área de trabajo **Administración** de la consola de Configuration Manager, expanda **Servicios de nube** y luego haga clic en **Tienda Windows para empresas**.
+2.  En la pestaña **Inicio**, en el grupo **Tienda Windows para empresas**, haga clic en **Agregar cuenta de la Tienda Windows para empresas**. 
+3.  Agregue el identificador de inquilino, el identificador de cliente y la clave de cliente de Azure Active Directory y finalice el asistente.
 4. Una vez que haya terminado, verá la cuenta configurada en la lista **Tienda Windows para empresas** en la consola de Configuration Manager.
 
-Cambie los idiomas de aplicación que se mostrarán en el catálogo de aplicaciones para que los descarguen los usuarios.
 
-1.    En el área de trabajo **Administración** de la consola de Configuration Manager, seleccione **Cloud Services** > **Actualizaciones y mantenimiento** > **Tienda Windows para empresas**.
-2.    Seleccione su cuenta de la Tienda Windows para empresas y haga clic en **Propiedades**.
-3.    Seleccione la pestaña **Idioma**.
-4.    Agregue o quite los idiomas que se mostrarán en el catálogo de aplicaciones. Seleccione el idioma del catálogo de aplicaciones predeterminado que estará disponible para los usuarios.
-
->[!IMPORTANT]
->En esta versión, si cambia los idiomas que se van a sincronizar, debe reiniciar el servicio SMS Executive en el servidor de sitio para que la configuración de idioma surta efecto.
-
-
-Modifique la clave de secreto de cliente de Azure Active Directory.
-
-1.    En el área de trabajo **Administración** de la consola de Configuration Manager, seleccione **Cloud Services** > **Actualizaciones y mantenimiento** > **Tienda Windows para empresas**.
-2.    Seleccione su cuenta de la Tienda Windows para empresas y haga clic en **Propiedades**.
-3.    En el cuadro de diálogo **Windows Store for Business Account Properties** (Propiedades de la cuenta de la Tienda Windows para empresas), escriba una nueva clave en el campo **Client secret key** (Clave de secreto de cliente) y seleccione **Comprobar**. Una vez comprobada, seleccione **Aplicar** y cierre el cuadro de diálogo.
-
-## <a name="sync-apps-from-the-store-with-configuration-manager"></a>Sincronizar aplicaciones de la tienda con Configuration Manager
-
-La sincronización se produce cada 24 horas, pero puede iniciar una sincronización inmediata mediante el procedimiento siguiente:
-
-1. En el área de trabajo **Administración** de la consola de Configuration Manager, seleccione **Cloud Services** > **Actualizaciones y mantenimiento** > **Tienda Windows para empresas**.
-3.    En la pestaña **Inicio**, en el grupo **Sincronizar**, seleccione **Sincronizar ahora**.
-4.    La aplicación que ha comprado aparecerá en el nodo **License Information for Store Apps** (Información de licencia para las aplicaciones de la Tienda) del área de trabajo **Administración de aplicaciones**.
-
-
-## <a name="create-and-deploy-a-configuration-manager-application-from-a-windows-store-for-business-app"></a>Crear e implementar una aplicación de Configuration Manager a partir de una aplicación de la Tienda Windows para empresas
-
-En este procedimiento se da por supuesto que ha adquirido al menos una aplicación gratuita o ha comprado al menos una aplicación con licencia en línea de pago a través de la Tienda Windows para empresas.
-
-1.  En el área de trabajo **Biblioteca de software** de la consola de Configuration Manager, expanda **Administración de aplicaciones** y, luego, seleccione **License Information for Store Apps** (Información de licencia para las aplicaciones de la Tienda).
-2.  Elija la aplicación que quiere implementar y, luego, en la pestaña **Inicio**, en el grupo **Crear**, seleccione **Crear aplicación**.
+## <a name="create-and-deploy-a-configuration-manager-application-from-a-windows-store-for-business-app"></a>Cree e implemente una aplicación de Configuration Manager a partir de una aplicación de la Tienda Windows para empresas.
+1.  En el área de trabajo **Biblioteca de software** de la consola de Configuration Manager, expanda **Administración de aplicaciones** y luego haga clic en **Información de licencia para las aplicaciones de la Tienda**.
+2.  Elija la aplicación que quiere implementar y, luego, en la pestaña **Inicio**, en el grupo **Crear**, haga clic en **Crear aplicación**.
 Se crea una aplicación de Configuration Manager que contiene la aplicación de la Tienda Windows para empresas. Luego puede implementar y supervisar esta aplicación como lo haría con cualquier otra aplicación de Configuration Manager.
-
 > [!IMPORTANT]
-> En el caso de los dispositivos inscritos en Intune, las aplicaciones implementadas solo están disponibles para el usuario que originalmente haya inscrito el dispositivo. Ningún otro usuario puede usar la aplicación.
+> En el caso de los dispositivos inscritos en Intune, las aplicaciones implementadas solo están disponibles para el usuario que originalmente haya inscrito el dispositivo. Ningún otro usuario puede tener acceso a la aplicación.
 
 ## <a name="monitor-windows-store-for-business-apps"></a>Supervisión de las aplicaciones de la Tienda Windows para empresas
 
-En el área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y, luego, seleccione **License Information for Store Apps** (Información de licencia para las aplicaciones de la Tienda).
+En el área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y luego haga clic en **Información de licencia para las aplicaciones de la Tienda**.
 
-Para cada aplicación de la tienda que administre, podrá ver información sobre la aplicación, incluido su nombre, la plataforma y el número de licencias para la aplicación que posee, así como el número de licencias que tiene disponibles.
-
-
-
-<!--HONumber=Feb17_HO3-->
-
+Para cada aplicación de la tienda que administre, podrá ver información acerca de la aplicación, incluido su nombre, plataforma y número de licencias para la aplicación que posee, así como el número de licencias que tiene disponibles.
 

@@ -17,9 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: cb42b6f324dc0019c2109be4d91e0eab4dca4d70
-ms.openlocfilehash: 8c54bc455828712c7f9ea297f26c98c41848cf9c
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
+ms.openlocfilehash: 0eaa1d13e9c273a6649f50d73fb357f04464d94c
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -81,6 +81,7 @@ No puede cambiar la acción de una implementación después de haberla creado.
 
 - **Enviar paquetes de reactivación**: si el propósito de la implementación se establece en **Requerido** y se selecciona esta opción, se enviará un paquete de reactivación a los equipos antes de instalar la implementación. Este paquete reactiva el equipo a la hora límite de instalación. Para poder utilizar esta opción, los equipos y las redes deben configurarse para Wake on LAN.
 - **Permitir a los clientes de una conexión a Internet de uso medido descargar contenido una vez cumplida la fecha límite de instalación, lo cual podría suponer costes adicionales**: esta opción solo está disponible para implementaciones con un propósito **Requerido**.
+- **Cerrar automáticamente los archivos ejecutables especificados en la ficha Comportamiento de instalación del cuadro de diálogo de propiedades Tipo de implementación que estén en ejecución**: para obtener más información sobre cómo configurar una lista de los archivos ejecutables que pueden impedir la instalación de una aplicación, vea **Comprobación de los archivos ejecutables en ejecución antes de instalar una aplicación** más adelante en este tema.
 - **Solicitar aprobación del administrador si los usuarios solicitan esta aplicación**: si esta opción está seleccionada, el administrador debe aprobar las solicitudes de la aplicación de cualquier usuario antes de poder instalarla. Esta opción aparece atenuada si el propósito de la implementación es **Requerido** o si se implementa la aplicación en una recopilación de dispositivos.
 
     > [!NOTE]
@@ -155,6 +156,27 @@ El tiempo máximo que se puede posponer siempre se basa en los valores de notifi
 Además, en una implementación de alto riesgo, como una secuencia de tareas que implementa un sistema operativo, la experiencia de notificación del usuario es ahora más intrusiva. En lugar de una notificación transitoria en la barra de tareas, cada vez que se le notifica que se necesita mantenimiento de software crítico, aparece un cuadro de diálogo como el siguiente en el equipo:
 
 ![Cuadro de diálogo Software requerido](media/client-toast-notification.png)
+
+## <a name="how-to-check-for-running-executable-files-before-installing-an-application"></a>Comprobación de los archivos ejecutables en ejecución antes de instalar una aplicación
+
+>[!Tip]
+>Se introdujo con la versión 1702, y se trata de una característica de versión preliminar. Para habilitarla, vea [Características de versión preliminar en System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/manage/pre-release-features).
+
+En el cuadro de diálogo **Propiedades** de un tipo de implementación, en la pestaña **Comportamiento de instalación**, se puede especificar uno de varios archivos ejecutables que, si se está ejecutando, bloqueará la instalación del tipo de implementación. El usuario debe cerrar el archivo ejecutable en ejecución (o se puede cerrar automáticamente para las implementaciones con un propósito de requerido) antes de poder instalar el tipo de implementación. Para configurar esto:
+
+1. Abra el cuadro de diálogo **Propiedades** para cualquier tipo de implementación.
+2. En la pestaña **Comportamiento de instalación** del cuadro de diálogo *<deployment type name>* **Propiedades** y haga clic en **Agregar**.
+3. En el cuadro de diálogo **Agregar o editar archivo ejecutable**, escriba el nombre del archivo ejecutable que, si se ejecuta, bloqueará la instalación de la aplicación. Si lo desea, también puede escribir un nombre descriptivo para la aplicación, a fin de facilitar su identificación en la lista.
+4. Haga clic en **Aceptar** y luego cierre el cuadro de diálogo *<deployment type name>* **Propiedades**.
+5. Después, al implementar una aplicación, en la página **Configuración de implementación** del Asistente para implementar software, seleccione **Cerrar automáticamente los archivos ejecutables especificados en la ficha Comportamiento de instalación del cuadro de diálogo de propiedades Tipo de implementación que estén en ejecución** y luego continúe con la implementación de la aplicación.
+
+Una vez que la aplicación alcanza los equipos cliente, se aplica el comportamiento siguiente:
+
+- Si la aplicación se ha implementado como **Disponible** y un usuario final intenta instalarla, se le pedirá que cierre los ejecutables en ejecución especificados antes de poder continuar con la instalación.
+
+- Si la aplicación se ha implementado como **Requerido** y la opción **Cerrar automáticamente los ejecutables en ejecución especificados en la pestaña Comportamiento de instalación del cuadro de diálogo de propiedades del tipo de implementación** está seleccionada, verán un cuadro de diálogo que les informa de que los archivos ejecutables especificados se cerrarán automáticamente cuando se alcance la fecha límite de instalación de la aplicación. Puede programar estos cuadros de diálogo en **Configuración de cliente** > **Agente de equipo**. Si no quiere que el usuario final vea estos mensajes, seleccione **Ocultar en el Centro de software y ocultar todas las notificaciones** en la pestaña **Experiencia del usuario** de las propiedades de la implementación.
+
+- Si la aplicación se ha implementado como **Requerido** y la opción **Cerrar automáticamente los ejecutables en ejecución especificados en la pestaña Comportamiento de instalación del cuadro de diálogo de propiedades del tipo de implementación** no está seleccionada, no se podrá instalar la aplicación si una o varias de las aplicaciones especificadas está en ejecución.
 
 ## <a name="for-more-information"></a>Para obtener más información:
 - [Settings to manage high-risk deployments (Configuración para administrar implementaciones de alto riesgo)](../../protect/understand/settings-to-manage-high-risk-deployments.md)

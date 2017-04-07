@@ -2,7 +2,7 @@
 title: "Crear perfiles de correo electrónico de Exchange ActiveSync | Microsoft Docs"
 description: "Obtenga información sobre cómo crear y configurar perfiles de correo electrónico en System Center Configuration Manager que funcionen con Microsoft Intune."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8c7bf901caa49c8585a9ed3913d4a5a2aac57013
-ms.openlocfilehash: 74083f65d906fde967081229b244df24e9e08e0a
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: c90e5ebc2aca3f2133227fa59057aad8db3713f4
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -32,39 +32,37 @@ Los perfiles de correo electrónico funcionan con Microsoft Intune para permitir
 
  Puede configurar los siguientes tipos de dispositivo con los perfiles de correo electrónico:  
 
--   Dispositivos que ejecutan Windows Phone 8  
+- Windows 10
+- Windows Phone 8.1
+- Windows Phone 8.0
+- iPhone que ejecuta iOS 5, iOS 6, iOS 7 y iOS 8  
+- iPad que ejecuta iOS 5, iOS 6, iOS 7 y iOS 8  
+- Samsung KNOX Standard (4 y posterior)
+- Android for Work
 
--   Dispositivos que ejecutan Windows Phone 8.1  
+Para implementar los perfiles de correo electrónico en los dispositivos, deben inscribirse en Intune. Para obtener información sobre cómo inscribir dispositivos, consulte [Administrar dispositivos móviles con Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).
 
--   Dispositivos que ejecutan Windows 10 Mobile  
-
--   Dispositivos iPhone que ejecutan iOS 5, iOS 6, iOS 7 e iOS 8  
-
--   Dispositivos IPad con iOS 5, iOS 6, iOS 7 e iOS 8  
-
-> [!IMPORTANT]  
->  Para implementar perfiles en dispositivos iOS, Android Samsung KNOX Standard, Windows Phone, Windows 8.1 o Windows 10, estos dispositivos se deben inscribir en Intune. Para obtener información sobre cómo inscribir dispositivos, consulte [Administrar dispositivos móviles con Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
+>[!NOTE]
+>Intune proporciona dos perfiles de correo electrónico de Android for Work, uno para cada una de las aplicaciones de correo electrónico, que son Gmail y Nine Work. Estas aplicaciones están disponibles en Google Play Store y admiten conexiones a Exchange. Para habilitar la conectividad de correo electrónico, implementar una de estas aplicaciones de correo electrónico en dispositivos de los usuarios y después crear e implementar el perfil adecuado. Las aplicaciones de correo electrónico como Nine Work pueden no ser gratuitas. Revise los detalles de licencias de la aplicación o póngase en contacto con la empresa de la aplicación para plantear cualquier pregunta.
 
  Además de configurar una cuenta de correo electrónico en el dispositivo, también puede configurar las opciones de sincronización de contactos, calendarios y tareas.  
 
- Al crear un perfil de correo electrónico, puede incluir una amplia gama de opciones de seguridad, como los certificados para identidad, cifrado y firma aprovisionados mediante perfiles de certificado de System Center Configuration Manager. Para obtener más información sobre los perfiles de certificado, consulte [Certificate profiles in System Center Configuration Manager](create-pfx-certificate-profiles.md) (Perfiles de certificado en Configuration Manager).    
-
+ Al crear un perfil de correo electrónico, puede incluir una amplia gama de opciones de seguridad, como los certificados para identidad, cifrado y firma aprovisionados mediante perfiles de certificado de System Center Configuration Manager. Para obtener más información sobre los perfiles de certificado, consulte [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles) (Perfiles de certificado en Configuration Manager).    
 
 ## <a name="create-a-new-exchange-activesync-email-profile"></a>Crear un perfil de correo electrónico de Exchange ActiveSync  
 
 Iniciar el Asistente para crear perfiles de correo electrónico de Exchange ActiveSync  
 
-1.  En la consola de System Center Configuration Manager, haga clic en **Activos y compatibilidad**.  
+1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
 
 2.  En el área de trabajo **Activos y compatibilidad** , expanda **Configuración de cumplimiento**y **Acceso a los recursos de la compañía**y, a continuación, haga clic en **Perfiles de correo electrónico**.  
 
-3.  En el grupo **Crear** de la pestaña **Inicio** , haga clic en **Crear perfil de Exchange ActiveSync**.
-
-4.  Siga las instrucciones del asistente.   
-
-### <a name="to-configure-exchange-activesync-settings-for-the-exchange-activesync-email-profile"></a>Para configurar Exchange ActiveSync para el perfil de correo electrónico de Exchange ActiveSync  
-
-1.  Especifique la siguiente información en la página **Exchange ActiveSync** del Asistente para crear perfiles de correo electrónico de Exchange ActiveSync:  
+3.  En el grupo **Crear** de la pestaña **Inicio**, haga clic en **Crear perfil de correo electrónico de Exchange ActiveSync**.
+4.  En la página General del asistente, configure lo siguiente:
+    - **Nombre**: proporcione un nombre descriptivo para el perfil de correo electrónico.
+    - **Descripción**: si lo desea, escriba una descripción para el perfil de correo electrónico que facilite su identificación en la consola de Configuration Manager.
+    - **Este perfil de correo electrónico es para Android for Work**: seleccione esta opción si solo va a implementar este perfil de correo electrónico en dispositivos Android for Work. Si activa esta casilla, la página del asistente **Plataformas admitidas** no se muestra. Solo se configuran los perfiles de correo electrónico de Android for Work.
+4.  Especifique la siguiente información en la página **Exchange ActiveSync** del Asistente para crear perfiles de correo electrónico de Exchange ActiveSync:  
 
     -   **Host de Exchange ActiveSync:** especifique el nombre de host de Exchange Server de su compañía que hospeda los servicios de Exchange ActiveSync.  
 
@@ -74,7 +72,7 @@ Iniciar el Asistente para crear perfiles de correo electrónico de Exchange Acti
 
         -   **Nombre principal de usuario** Se usa el nombre principal de usuario completo para iniciar sesión en Exchange.  
 
-        -   **sAMAccountName** Se usa  
+        -   **AccountName** Se usa el nombre de cuenta de usuario completo de Active Directory.
 
         -   **Dirección SMTP principal** Se usa la dirección SMTP principal de los usuarios para iniciar sesión en Exchange.  
 
@@ -101,25 +99,26 @@ Iniciar el Asistente para crear perfiles de correo electrónico de Exchange Acti
     -   **Certificado de identidad:** haga clic en **Seleccionar** y, después, seleccione el certificado que se va a usar para la identidad.  
 
         > [!NOTE]  
-        >  Para poder seleccionar un certificado de identidad, antes hay que configurar un perfil de certificado de Protocolo de inscripción de certificados simple (SCEP). Para obtener más información sobre los perfiles de certificado, consulte [Certificate profiles in System Center Configuration Manager](create-pfx-certificate-profiles.md) (Perfiles de certificado en Configuration Manager).  
+        >  Para poder seleccionar un certificado de identidad, antes hay que configurar un perfil de certificado de Protocolo de inscripción de certificados simple (SCEP). Para obtener más información sobre los perfiles de certificado, consulte [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles) (Perfiles de certificado en Configuration Manager).  
 
          Esta opción está disponible únicamente si ha seleccionado **Certificados** en **Método de autenticación**.  
 
-    -   **Usar S/MIME** El correo electrónico saliente se envía mediante cifrado S/MIME. Esta opción es válida únicamente en dispositivos iOS.  
+    -   **Usar S/MIME** (solo para dispositivos iOS) El correo electrónico saliente se envía mediante cifrado S/MIME. Elija entre las siguientes opciones:
 
-    -   **Certificados de cifrado:** haga clic en **Seleccionar** y, después, seleccione el certificado que se va a usar para el cifrado. Esta opción es válida únicamente en dispositivos iOS.  
+        -   **Certificados de firma:** haga clic en **Seleccionar** y, después, seleccione el certificado que se va a usar para la firma. Esta opción es válida únicamente en dispositivos iOS.  
+
+            > [!NOTE]  
+            >  Para poder seleccionar un certificado de firma, antes hay que configurar un perfil de certificado PFX o de Protocolo de inscripción de certificados simple (SCEP). Para obtener más información sobre los perfiles de certificado, consulte [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles) (Perfiles de certificado en Configuration Manager).  
+
+        -   **Certificados de cifrado:** haga clic en **Seleccionar** y, después, seleccione el certificado que se va a usar para el cifrado. Esta opción es válida únicamente en dispositivos iOS. Solo puede seleccionar un certificado PFX que se usará como un certificado de cifrado.
+
+        Si selecciona un certificado de cifrado y un certificado de firma, ambos deben tener el formato PFX.
 
         > [!NOTE]  
-        >  Para poder seleccionar un certificado de cifrado, antes hay que configurar un perfil de certificado de Protocolo de inscripción de certificados simple (SCEP). Para obtener más información sobre los perfiles de certificado, consulte [Certificate profiles in System Center Configuration Manager](create-pfx-certificate-profiles.md) (Perfiles de certificado en Configuration Manager).  
+        >  Para poder seleccionar certificados, antes hay que configurarlos como un perfil de certificado PFX o de Protocolo de inscripción de certificados simple (SCEP). Para obtener más información sobre los perfiles de certificado, consulte [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles) (Perfiles de certificado en Configuration Manager).  
 
-         Esta opción está disponible únicamente si ha seleccionado **Usar S/MIME**.  
 
-    -   **Certificados de firma:** haga clic en **Seleccionar** y, después, seleccione el certificado que se va a usar para la firma. Esta opción es válida únicamente en dispositivos iOS.  
 
-        > [!NOTE]  
-        >  Para poder seleccionar un certificado de firma, antes hay que configurar un perfil de certificado de Protocolo de inscripción de certificados simple (SCEP). Para obtener más información sobre los perfiles de certificado, consulte [Certificate profiles in System Center Configuration Manager](create-pfx-certificate-profiles.md) (Perfiles de certificado en Configuration Manager).  
-
-         Esta opción está disponible únicamente si ha seleccionado **Usar S/MIME**.  
 
 ###   <a name="configure-synchronization-settings-for-the-exchange-activesync-email-profile"></a>configurar la sincronización para el perfil de correo electrónico de Exchange ActiveSync.  
 

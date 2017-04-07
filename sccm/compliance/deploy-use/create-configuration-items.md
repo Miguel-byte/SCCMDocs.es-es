@@ -2,7 +2,7 @@
 title: "Cómo crear elementos de configuración | Microsoft Docs"
 description: Cree e implemente configuraciones en dispositivos administrados por System Center Configuration Manager e inscritos con Microsoft Intune.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
-ms.openlocfilehash: bfe0e8e68f51e60508f91c806a94a505577cb50a
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: cddf549f017792add1b17b722bf51769060520b7
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -32,10 +33,5 @@ La configuración de cumplimiento de System Center Configuration Manager permite
 
 -   [Elementos de configuración para dispositivos administrados con el cliente de System Center Configuration Manager](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)  
 
--   [Elementos de configuración para dispositivos administrados sin el cliente de System Center Configuration Manager](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
+-   [Elementos de configuración para dispositivos administrados con Intune](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)  
 

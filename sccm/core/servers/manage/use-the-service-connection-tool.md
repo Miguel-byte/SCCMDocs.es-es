@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: b4642186e42745640f088b7046e70019616935ea
-ms.openlocfilehash: 9a5cd5ce3ce6868b44768d3cbe7b7c594f44d42c
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 7a9c5bb9890b00cf3485998aa46286c890429cc0
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -148,9 +149,11 @@ Puede utilizar los siguientes parámetros opcionales para especificar un servido
 
 8.  Una vez finalizada la importación, puede cerrar el símbolo del sistema. (Solo se importan las actualizaciones para la jerarquía aplicable).  
 
-9. Abra la consola de Configuration Manager y vaya a **Administración** >**Cloud Services** > **Actualizaciones y mantenimiento**. Ahora están disponibles para instalar las actualizaciones que se han importado. Para obtener más información sobre la instalación de actualizaciones, consulte [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) (Instalación de actualizaciones en la consola para System Center Configuration Manager).  
+9. Abra la consola de Configuration Manager y vaya a **Administración** > **Actualizaciones y mantenimiento**. Ahora están disponibles para instalar las actualizaciones que se han importado. (Antes de la versión 1702, la opción Actualizaciones y mantenimiento se encontraba en **Administración** > **Cloud Services**).
 
-## <a name="a-namebkmkcmda-command-line-options"></a><a name="bkmk_cmd"></a> opciones de línea de comandos  
+ Para obtener más información sobre la instalación de actualizaciones, consulte [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) (Instalación de actualizaciones en la consola para System Center Configuration Manager).  
+
+## <a name="bkmk_cmd"></a> opciones de línea de comandos  
  Para ver la información de ayuda para la herramienta de punto de conexión de servicio, abra el símbolo del sistema para la carpeta que contiene la herramienta y ejecute el comando:  **serviceconnectiontool.exe**.  
 
 |Opciones de línea de comandos|Detalles|  
@@ -159,9 +162,4 @@ Puede utilizar los siguientes parámetros opcionales para especificar un servido
 |**-connect -usagedatasrc [unidad:][rutaAcceso] -updatepackdest [unidad:][rutaAcceso] -proxyserveruri [nombreCompletoServidorProxy] -proxyusername [nombreUsuario]** <br /> <br /> Si utiliza una versión de Configuration Manager anterior a 1606, debe especificar el nombre del archivo .cab y no podrá utilizar las opciones de un servidor proxy.  Los parámetros de comando admitidos son los siguientes: <br /> **connect -usagedatasrc [unidad:][rutaAcceso][nombreDeArchivo] -updatepackdest [unidad:][rutaAcceso]** |Este comando se conecta al servicio en la nube de Configuration Manager para cargar los archivos .cab de datos de uso desde la ubicación especificada y descargar los paquetes de actualización disponibles y el contenido de la consola. Las opciones para los servidores proxy son opcionales.<br /><br /> Ejecute este comando como **administrador local** en un equipo que pueda conectarse a Internet.<br /><br /> Ejemplo de la conexión sin un servidor proxy: **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> Ejemplo para la conexión cuando se utiliza un servidor proxy: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> Si utiliza una versión anterior a 1606, debe especificar un nombre de archivo para el archivo .cab y no se puede especificar un servidor proxy. Use la siguiente línea de comandos de ejemplo: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      
 |**-import -updatepacksrc [unidad:][ruta]**|Este comando importa los paquetes de actualización y el contenido de la consola que ha descargado anteriormente a la consola de Configuration Manager.<br /><br /> Ejecute este comando como **administrador local** en el servidor que hospeda el punto de conexión de servicio.<br /><br /> Ejemplo:  **-import -updatepacksrc D:\USB\UpdatePacks**|  
 |**-export -dest [unidad:][ruta][nombrearchivo.csv]**|Este comando exporta los datos de uso a un archivo .csv, que puede ver.<br /><br /> Ejecute este comando como **administrador local** en el servidor que hospeda el punto de conexión de servicio.<br /><br /> Ejemplo: **-export -dest D:\USB\usagedata.csv**|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

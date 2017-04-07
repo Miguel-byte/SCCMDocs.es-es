@@ -17,9 +17,9 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: ad9ea7b29e03bb514fe23fdf761b312c85c16714
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: bcaa2a9b5474e06bf344dc4fd47dbb160ea36297
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>Directivas de cumplimiento de dispositivo en System Center Configuration Manager
@@ -40,22 +40,24 @@ Las **directivas de cumplimiento** en System Center Configuration Manager define
 
 -   Si el dispositivo está desbloqueado o modificado  
 
--   Si el correo electrónico en el dispositivo se administra mediante una directiva de Intune, o si el servicio de atestación de estado de dispositivo de Windows notifica el dispositivo como incorrecto.  
+-   Si el correo electrónico en el dispositivo se administra mediante una directiva de Intune, o si el servicio de atestación de estado de dispositivo de Windows notifica el dispositivo como incorrecto.
+-   Aplicaciones que no se pueden instalar en el dispositivo.
 
 
  Puede implementar directivas de cumplimiento para recopilaciones de usuarios. Cuando se implementa una directiva de cumplimiento para un usuario, se comprueba el cumplimiento de todos los dispositivos del usuario.  
 
  En la siguiente tabla se enumeran los tipos de dispositivos compatibles con las directivas de cumplimiento y se indica cómo se administran los valores de configuración no compatibles cuando se usa la directiva con una directiva de acceso condicional.  
 
-|Regla|Windows 8.1 y posterior|Windows Phone 8.1 y versiones posteriores|iOS 6.0 y versiones posteriores|Android 4.0 y versiones posteriores, Samsung KNOX Standard 4.0 y versiones posteriores|  
+|Regla|Windows 8.1 y posterior|Windows Phone 8.1 y versiones posteriores|iOS 6.0 y versiones posteriores|Android 4.0 y versiones posteriores, Samsung Knox Standard 4.0 y versiones posteriores, y Android for Work|  
 |----------|---------------------------|---------------------------------|-----------------------|---------------------------|-----------------------------------------|  
 |**Configuración de contraseña o PIN**|Corregido|Corregido|Corregido|En cuarentena|  
-|**Cifrado del dispositivo**|No aplicable|Corregido|Corregido (estableciendo PIN)|En cuarentena|  
+|**Cifrado del dispositivo**|No aplicable|Corregido|Corregido (estableciendo PIN)|En cuarentena<br>(Android for Work siempre cifrado)|  
 |**Dispositivo liberado**|No aplicable|No aplicable|En cuarentena (no es una configuración)|En cuarentena (no es una configuración)|  
 |**Perfil de correo electrónico**|No aplicable|No aplicable|En cuarentena|No aplicable|  
 |**Versión de SO mínima**|En cuarentena|En cuarentena|En cuarentena|En cuarentena|  
 |**Versión de SO máxima**|En cuarentena|En cuarentena|En cuarentena|En cuarentena|  
-|**Atestación de estado de dispositivo (actualización&1602;)**|Opción no aplicable a Windows 8.1<br /><br /> Windows 10 y Windows 10 Mobile están en cuarentena.|No aplicable|No aplicable|No aplicable|  
+|**Atestación de estado de dispositivo (actualización 1602)**|Opción no aplicable a Windows 8.1<br /><br /> Windows 10 y Windows 10 Mobile están en cuarentena.|No aplicable|No aplicable|No aplicable|  
+|**Aplicaciones que no se pueden instalar**|No aplicable|No aplicable|En cuarentena|En cuarentena|
 
  **Corregido** = el sistema operativo del dispositivo exige el cumplimiento (por ejemplo, el usuario debe establecer un PIN).  La configuración nunca será no conforme.  
 

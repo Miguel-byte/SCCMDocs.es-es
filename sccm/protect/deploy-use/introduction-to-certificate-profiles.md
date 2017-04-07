@@ -2,7 +2,7 @@
 title: "Introducción a los perfiles de certificado | Microsoft Docs"
 description: "Obtenga información sobre cómo funcionan los perfiles de certificado en System Center Configuration Manager con Servicios de certificados de Active Directory."
 ms.custom: na
-ms.date: 12/28/2016
+ms.date: 03/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,13 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
-ms.openlocfilehash: d51670b47aab77cc4e630a6aeaa0744f916bf3b9
-ms.lasthandoff: 12/29/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ba1d5b04cb0cb0284525e295a6086a3c0ac67e9f
+ms.lasthandoff: 03/27/2017
 
 
 ---
+
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>Introducción a los perfiles de certificado en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -46,10 +47,10 @@ Los perfiles de certificado proporcionan las siguientes capacidades de administr
 ## <a name="types-of-certificate-profiles"></a>Tipos de perfiles de certificado  
  Hay tres tipos de perfiles de certificado:  
 
--   **Certificado de CA de confianza** : permite implementar un certificado de CA raíz o un certificado de CA intermedio de confianza para formar una cadena de confianza si el dispositivo debe autenticar un servidor.  
+-   **Certificado de CA de confianza**: permite implementar un certificado de CA raíz o un certificado de CA intermedio de confianza para formar una cadena de confianza si el dispositivo debe autenticar un servidor.  
 
--   **Protocolo de inscripción de certificados simple (SCEP)**: le permite solicitar un certificado para un dispositivo o usuario mediante el protocolo SCEP y el Servicio de inscripción de dispositivos de red en un servidor que ejecuta Windows Server 2012 R2.
--   -   **Intercambio de información personal (.pfx)**: le permite solicitar un certificado .pfx (también conocido como PKCS #12) para un dispositivo o usuario.
+-   **Protocolo de inscripción de certificados simple (SCEP)**: permite solicitar un certificado para un dispositivo o usuario mediante el protocolo SCEP y el Servicio de inscripción de dispositivos de red en un servidor que ejecuta Windows Server 2012 R2.
+-   **Intercambio de información personal (.pfx)**: permite solicitar un certificado .pfx (también conocido como PKCS #12) para un dispositivo o usuario.
 
     > [!NOTE]  
     >  Debe crear un perfil de certificado del tipo **Certificado de CA de confianza** antes de crear un perfil de certificado de **Protocolo de inscripción de certificados simple (SCEP)**.  
@@ -100,4 +101,3 @@ Puede supervisar las implementaciones de perfil de certificado viendo los inform
 -   El dispositivo se bloquea de la jerarquía de System Center Configuration Manager.  
 
  Para revocar los certificados, el servidor de sitio envía un comando de revocación a la entidad de certificación emisora. El motivo de la revocación es **Cese de operación**.  
-

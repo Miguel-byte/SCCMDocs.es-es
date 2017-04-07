@@ -2,7 +2,7 @@
 title: Configuration Manager en Azure | Microsoft Docs
 description: "Información sobre el uso de Configuration Manager en un entorno de Azure."
 ms.custom: na
-ms.date: 01/30/2017
+ms.date: 03/27/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 264e009952db34a6f4929ecb70dc6857117ce4fe
-ms.openlocfilehash: e8798adc0e479417c682450d181611284c148e6d
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 5276ad999fc871496d79e6efff34d5edc6335380
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager en Azure - Preguntas más frecuentes
@@ -39,11 +40,11 @@ No, es un escenario IaaS (infraestructura como servicio), dado que hospeda los s
 
 ### <a name="what-areas-should-i-pay-attention-to-when-considering-a-move-of-my-configuration-manager-infrastructure-to-azure"></a>¿A qué áreas debería prestar atención a la hora de plantearme la migración de mi infraestructura de Configuration Manager a Azure?
 Buena pregunta, estas son las áreas más importantes a la hora de tomar esa decisión. Cada una se analiza en una sección independiente de este tema:
-1.  Redes
-2.  Disponibilidad
-3.  Rendimiento
-4.  Coste
-5.  Experiencia del usuario
+1.    Redes
+2.    Disponibilidad
+3.    Rendimiento
+4.    Coste
+5.    Experiencia del usuario
 
 ## <a name="networking"></a>Redes
 ### <a name="what-about-networking-requirements-should-i-use-expressroute-or-an-azure-vpn-gateway"></a>¿Qué sucede con los requisitos de red? ¿Debo usar ExpressRoute o una puerta de enlace de VPN de Azure?
@@ -145,8 +146,8 @@ La **puerta de enlace de administración en la nube** proporciona una manera sen
 
 Puede empezar a usar la puerta de enlace de administración en la nube en su entorno y proporcionarnos comentarios para que la mejoremos. Para obtener más información sobre las características de versión preliminar, vea [Uso de las características de versión preliminar de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkprereleasea-use-pre-release-features-from-updates).
 
-### <a name="i-also-heard-that-you-have-another-new-feature-called-peer-cache-in-the-technical-preview-version-1604-is-that-different-than-branchcache-which-one-should-i-choose"></a>También he oído que hay otra característica nueva denominada caché del mismo nivel en Technical Preview versión 1604. ¿Es diferente de BranchCache? ¿Cuál debería elegir?
-Sí, son totalmente diferentes. La [caché del mismo nivel](/sccm/core/get-started/capabilities-in-technical-preview-1604#bkmk_peercache) es una tecnología 100 % nativa de Configuration Manager, mientras que BranchCache es una característica de Windows. Ambas le pueden resultar útiles; BranchCache usa una difusión para buscar el contenido necesario, mientras que la caché del mismo nivel usa la configuración del grupo de límites del flujo de trabajo de distribución normal de Configuration Manager.
+### <a name="i-also-heard-that-you-have-another-new-feature-called-peer-cache-introduced-as-a-pre-release-feature-in-version-1610-is-that-different-than-branchcache-which-one-should-i-choose"></a>También he oído que hay otra característica nueva denominada caché del mismo nivel presentada como una característica de versión preliminar en la versión 1610. ¿Es diferente de BranchCache? ¿Cuál debería elegir?
+Sí, son totalmente diferentes. La [caché del mismo nivel](/sccm/core/plan-design/hierarchy/client-peer-cache) es una tecnología 100 % nativa de Configuration Manager, mientras que BranchCache es una característica de Windows. Ambas le pueden resultar útiles; BranchCache usa una difusión para buscar el contenido necesario, mientras que la caché del mismo nivel usa la configuración del grupo de límites del flujo de trabajo de distribución normal de Configuration Manager.
 
 Puede configurar cualquier cliente como origen de caché del mismo nivel. Luego, cuando los puntos de administración proporcionan a los clientes información sobre las ubicaciones de orígenes de contenido, proporcionan detalles sobre los puntos de distribución y los orígenes de caché del mismo nivel que tienen el contenido que el cliente necesita.
 
@@ -179,9 +180,4 @@ Es difícil de decir, ya que cada entorno es diferente. Lo mejor es hacer el cá
  - Más información sobre ExpressRoute: http://azure.microsoft.com/documentation/articles/expressroute-introduction/
 
  
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 

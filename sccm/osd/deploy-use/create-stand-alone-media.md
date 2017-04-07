@@ -2,7 +2,7 @@
 title: Crear medios independientes con System Center Configuration Manager | Microsoft Docs
 description: "Use medios independientes para implementar el sistema operativo en un equipo sin necesidad de una conexión a un sitio de Configuration Manager o a la red."
 ms.custom: na
-ms.date: 12/21/2016
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: ee7f69bd65152deffb2456d9807e1e8fee8802ec
-ms.openlocfilehash: 708525604c3f40cf75b5408c3666193186b7cf50
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: d4689545ce2be5c16a65b24489f30028a0f90f94
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -97,32 +97,37 @@ Antes de ejecutar el Asistente para crear medio de secuencia de tareas para crea
 
     -   Si selecciona **Conjunto de CD/DVD**, especifique la capacidad del medio y el nombre y la ruta de acceso de los archivos de salida. El asistente escribe los archivos de salida en esta ubicación. Por ejemplo: **\\\nombre de servidor\carpeta\archivo de salida.iso**  
 
-         Si la capacidad de los medios es demasiado pequeña para almacenar todo el contenido, se crean varios archivos y debe almacenar el contenido en varios CD o DVD. Si se requieren varios medios, Configuration Manager agrega un número de secuencia al nombre de cada archivo de salida que crea. Además, si implementa una aplicación junto con el sistema operativo y la aplicación no cabe en un solo medio, Configuration Manager almacena la aplicación en varios medios. Cuando se ejecuta el medio independiente, Configuration Manager pide al usuario el siguiente medio en el que se almacena la aplicación.  
+         Si la capacidad de los medios es demasiado pequeña para almacenar todo el contenido, se crean varios archivos y debe almacenar el contenido en varios CD o DVD. Si se requieren varios medios, Configuration Manager agrega un número de secuencia al nombre de cada archivo de salida que crea. Además, si implementa una aplicación junto con el sistema operativo y la aplicación no cabe en un solo medio, Configuration Manager almacena la aplicación en varios medios. Cuando se ejecuta el medio independiente, Configuration Manager pide al usuario el siguiente medio en el que se almacena la aplicación.   
 
-        > [!IMPORTANT]  
-        >  Si selecciona una imagen .iso existente, el Asistente para crear medio de secuencia de tareas elimina la imagen de la unidad o el recurso compartido cuando pasa a la siguiente página del asistente. Se elimina la imagen existente incluso si, a continuación, se cancela al asistente.  
+         > [!IMPORTANT]  
+         >  Si selecciona una imagen .iso existente, el Asistente para crear medio de secuencia de tareas elimina la imagen de la unidad o el recurso compartido cuando pasa a la siguiente página del asistente. Se elimina la imagen existente incluso si, a continuación, se cancela al asistente.  
 
      Haga clic en **Siguiente**.  
 
-6.  En la página **Seguridad** , escriba una contraseña segura para proteger el medio y, a continuación, haga clic en **Siguiente**. Si se especifica una contraseña, será necesaria para utilizar el medio.  
+6.  En la página **Seguridad**, elija una de las siguientes opciones de configuración y después haga clic en **Siguiente**:
+    - **Proteger medio con contraseña**: escriba una contraseña segura para ayudar a proteger el medio. Si se especifica una contraseña, será necesaria para utilizar el medio.  
 
-    > [!IMPORTANT]  
-    >  En un medio independiente, se cifran únicamente los pasos de la secuencia de tareas y sus variables. El contenido restante del medio no se cifra: no incluya información confidencial en los scripts de secuencia de tareas. Almacene e implemente la información confidencial mediante el uso de variables de secuencia de tareas.  
+        > [!IMPORTANT]  
+        >  En un medio independiente, se cifran únicamente los pasos de la secuencia de tareas y sus variables. El contenido restante del medio no se cifra: no incluya información confidencial en los scripts de secuencia de tareas. Almacene e implemente la información confidencial mediante el uso de variables de secuencia de tareas.  
 
+    - **Seleccionar el intervalo de tiempo de validez de este medio independiente** (a partir de la versión 1702): establezca las fechas de inicio y expiración opcionales en el medio. Estas opciones están deshabilitadas de forma predeterminada. Las fechas se comparan con la hora del sistema del equipo antes de que se ejecuten los medios independientes. Cuando la hora del sistema es anterior a la hora de inicio o posterior a la hora de expiración, los medios independientes no se inician. Estas opciones también están disponibles mediante el cmdlet de PowerShell New-CMStandaloneMedia.
 7.  En la página **CD/DVD independiente** , especifique la secuencia de tareas que implementa el sistema operativo y, a continuación, haga clic en **Siguiente**. Elija **Detectar dependencias de aplicación asociadas y agregarlas a este medio** para agregar contenido a los medios independientes para las dependencias de la aplicación.
-> [!TIP]
-> Si no ve las dependencias de aplicación esperadas, anule la selección y luego vuelva a seleccionar la configuración **Detectar dependencias de aplicación asociadas y agregarlas a este medio** para actualizar la lista.
+    > [!TIP]
+    > Si no ve las dependencias de aplicación esperadas, anule la selección y luego vuelva a seleccionar la configuración **Detectar dependencias de aplicación asociadas y agregarlas a este medio** para actualizar la lista.
 
-El asistente le permite seleccionar las secuencias de tareas asociadas con una imagen de arranque.  
+    El asistente le permite seleccionar las secuencias de tareas asociadas con una imagen de arranque.  
 
-8.  En la página **Puntos de distribución** , especifique uno o varios puntos de distribución que tengan el contenido que la secuencia de tareas necesita y luego haga clic en **Siguiente**.  
+8. En la página **Seleccionar aplicación** (disponible a partir de la versión 1702), especifique el contenido de la aplicación que desea incluir como parte del archivo multimedia y después haga clic en **Siguiente**.
+9. En la página **Seleccionar paquete** (disponible a partir de la versión 1702), especifique el contenido del paquete que desea incluir como parte del archivo multimedia y después haga clic en **Siguiente**.
+10. En la página **Seleccionar el paquete de controladores** (disponible a partir de la versión 1702), especifique el contenido del paquete de controladores que desea incluir como parte del archivo multimedia y después haga clic en **Siguiente**.
+11.  En la página **Puntos de distribución** , especifique uno o varios puntos de distribución que tengan el contenido que la secuencia de tareas necesita y luego haga clic en **Siguiente**.  
 
      Configuration Manager solo muestra los puntos de distribución que tienen el contenido. Debe distribuir todo el contenido asociado con la secuencia de tareas (imagen de arranque, imagen de sistema operativo, etc.) al menos a un punto de distribución para poder continuar. Después de distribuir el contenido, puede reiniciar el asistente o quitar los puntos de distribución ya seleccionados en esta página. Además, vaya a la página anterior y después regrese a la página **Puntos de distribución** para actualizar la lista de puntos de distribución. Para obtener más información sobre la distribución de contenido, consulte [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS) (Distribuir contenido al que hace referencia una secuencia de tareas). Para obtener más información sobre los puntos de distribución y la administración de contenido, consulte [Manage content and content infrastructure for System Center Configuration Manager](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md) (Administración del contenido y de la infraestructura de contenido para System Center Configuration Manager).  
 
     > [!NOTE]  
     >  Debe tener derechos de acceso de **lectura** para la biblioteca de contenido en los puntos de distribución.  
 
-9. En la página **Personalización** , especifique la siguiente información y, a continuación, haga clic en **Siguiente**.  
+12. En la página **Personalización** , especifique la siguiente información y, a continuación, haga clic en **Siguiente**.  
 
     -   Especifique las variables que la secuencia de tareas utiliza para implementar el sistema operativo.  
 
@@ -133,7 +138,7 @@ El asistente le permite seleccionar las secuencias de tareas asociadas con una i
         > [!TIP]  
         >  Durante la creación de medios de secuencia de tareas, la secuencia de tareas escribe el identificador de paquete y el comando de preinicio, incluidos los valores de las variables de secuencia de tareas, en el archivo de registro CreateTSMedia.log en el equipo que ejecuta la consola de Configuration Manager. Puede revisar este archivo de registro para comprobar el valor de las variables de secuencia de tareas.  
 
-10. Complete el asistente.  
+13. Complete el asistente.  
 
  Los archivos de medios independientes (.iso) se crean en la carpeta de destino. Si seleccionó **CD/DVD independiente**, ahora puede copiar los archivos de salida a un conjunto de CD o DVD.  
 

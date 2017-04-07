@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3c8f968276cb6d412a4a06cb70f1c8e45e91c605
-ms.openlocfilehash: cd53f093056fbaa2ef6fd88d5451b7698f296569
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: bcb14a2be312d4d8a4a9c235652c7bf971a7a976
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1612 para System Center Configuration Manager
@@ -182,9 +183,15 @@ Cuando la herramienta de limpieza de la biblioteca de contenido se ejecuta en cu
 
 
 ### <a name="run-the-tool"></a>Ejecutar la herramienta
-Para ejecutar la herramienta, abra un símbolo del sistema administrativo en una carpeta que contenga **ContentLibraryCleanup.exe**.  
+Para ejecutar la herramienta:
+1. Abra un símbolo del sistema administrativo en una carpeta que contenga **ContentLibraryCleanup.exe**.  
+2. Después, escriba una línea de comandos que incluya los modificadores de línea de comandos necesarios y modificadores opcionales que quiera usar.
 
-Después, escriba una línea de comandos que incluya los modificadores de línea de comandos necesarios y modificadores opcionales que quiera usar.
+**Problema conocido** Cuando se ejecuta la herramienta, se podría devolver un error similar al siguiente cuando se produce cualquier error en algún paquete o implementación, o bien cuando está en progreso:
+-  *System.InvalidOperationException: esta biblioteca de contenido no puede limpiarse ahora porque el paquete <packageID> no está totalmente instalado.*
+
+**Solución:** ninguna. La herramienta no puede identificar archivos huérfanos con confianza cuando la implementación del contenido está en curso o si se ha producido algún error en dicho proceso. Por lo tanto, la herramienta no le permitirá limpiar contenido hasta que se solucione el problema.
+
 
 
 ### <a name="command-line-switches"></a>Modificadores de línea de comandos  
@@ -314,9 +321,4 @@ Después de que realice estos cambios de configuración, puede crear una directi
 ## <a name="change-to-configuring-multi-factor-authentication-for-device-enrollment"></a>Cambiar para configurar Multi-Factor Authentication para la inscripción de dispositivos
 
 Ahora que puede configurar Multi-Factor Authentication (MFA) para la inscripción de dispositivos en Azure Portal, la opción de MFA se ha quitado de la consola de Configuration Manager. Puede encontrar más información sobre la configuración de MFA para la inscripción [en este tema de Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/multi-factor-authentication-azure-active-directory).
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

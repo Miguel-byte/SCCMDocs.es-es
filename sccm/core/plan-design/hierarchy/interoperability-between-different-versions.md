@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1b458284961171f11acc3e84f82749addc1b6afb
-ms.openlocfilehash: 890cc72f7ca0619b48ceae7c3a8c731a62341ef7
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 28593d271603ff9775425327996d844d7ed358cd
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -41,7 +41,7 @@ Puede instalar y usar varias jerarquías independientes de System Center Configu
 
  Dado que puede implementar un sitio y una jerarquía de System Center Configuration Manager en paralelo con un sitio o una jerarquía de System Center 2012 Configuration Manager existente, se recomienda que tome medidas para impedir que los clientes de una de las versiones intenten unirse a un sitio de la otra versión.
 
-Por ejemplo, si dos o más jerarquías de Configuration Manager tienen límites que se superponen (vea [Información sobre la superposición de límites](../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md#BKMK_BoundaryOverlap)) que incluyen las mismas ubicaciones de red, se recomienda asignar cada nuevo cliente a un sitio específico en lugar de usar la asignación de sitio automática. Para obtener información sobre la asignación automática de sitios en System Center 2012 Configuration Manager, consulte [Cómo asignar clientes a un sitio en System Center Configuration Manager](../../../core/clients/deploy/assign-clients-to-a-site.md).  
+Por ejemplo, si dos o más jerarquías de Configuration Manager tienen límites que se superponen (vea [Información sobre la superposición de límites](/sccm/core/servers/deploy/configure/boundary-groups#overlapping-boundaries)) que incluyen las mismas ubicaciones de red, se recomienda asignar cada nuevo cliente a un sitio específico en lugar de usar la asignación de sitio automática. Para obtener información sobre la asignación automática de sitios en System Center 2012 Configuration Manager, consulte [Cómo asignar clientes a un sitio en System Center Configuration Manager](../../../core/clients/deploy/assign-clients-to-a-site.md).  
 
  Además, no se puede instalar un cliente de System Center 2012 Configuration Manager en un equipo que hospede un rol de sistema de sitio de System Center Configuration Manager, ni se puede instalar un cliente de System Center Configuration Manager en un equipo que hospede un rol de sistema de sitio desde System Center 2012 Configuration Manager.  
 

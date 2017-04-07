@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 32af7da62bfe767a21a891338bd778ebf45f2685
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 88a72259bca79f2fa985e86cb57ec7a974bad24d
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 32af7da62bfe767a21a891338bd778ebf45f2685
 
 Use las secuencias de tareas de System Center Configuration Manager para actualizar automáticamente un sistema operativo de Windows 7 o posterior a Windows 10 en un equipo de destino. Cree una secuencia de tareas que haga referencia a la imagen del sistema operativo que quiere instalar en el equipo de destino y a cualquier otro contenido adicional, como actualizaciones de aplicaciones o software que quiera instalar. La secuencia de tareas para actualizar un sistema operativo es parte del escenario de [Upgrade Windows to the latest version (Actualizar Windows a la versión más reciente)](upgrade-windows-to-the-latest-version.md).  
 
-##  <a name="a-namebkmkupgradeosa-create-a-task-sequence-to-upgrade-an-operating-system"></a><a name="BKMK_UpgradeOS"></a> Crear una secuencia de tareas para actualizar un sistema operativo  
+##  <a name="BKMK_UpgradeOS"></a> Crear una secuencia de tareas para actualizar un sistema operativo  
  Para actualizar el sistema operativo a Windows 10 en los equipos, puede crear una secuencia de tareas y seleccionar **Actualizar un sistema operativo desde el paquete de actualización** en el Asistente para crear secuencia de tareas. El asistente agregará los pasos para actualizar el sistema operativo, aplicar actualizaciones de software e instalar aplicaciones. Antes de crear la secuencia de tareas, lo siguiente debe estar en su lugar:  
 
 -   **Requerido**  
@@ -70,6 +71,42 @@ Use las secuencias de tareas de System Center Configuration Manager para actuali
 
 9. Complete el asistente.  
 
+
+
+## <a name="configure-pre-cache-content"></a>Configuración del contenido de la caché previa
+A partir de la versión 1702, para las secuencias de tareas e implementaciones disponibles, puede decidir usar la característica de caché previa para que los clientes solo descarguen el contenido relevante antes de que un usuario instale el contenido.
+> [!TIP]  
+> La caché previa se introdujo con la versión 1702, y se trata de una característica de versión preliminar. Para habilitarla, consulte [Use pre-release features from updates](/sccm/core/servers/manage/pre-release-features) (Uso de características de la versión preliminar a partir de las actualizaciones).
+
+Por ejemplo, supongamos que quiere implementar una secuencia de tareas de actualización de Windows 10, solo quiere una única secuencia de tareas para todos los usuarios y tiene varias arquitecturas o idiomas. En las versiones anteriores a la 1702, si crea una implementación disponible y, después, el usuario hace clic en **Instalar** en el Centro de software, el contenido se descarga en ese momento. Esto agrega tiempo adicional antes de que la instalación esté lista para iniciarse. Además, se descarga todo el contenido al que se hace referencia en la secuencia de tareas. Esto incluye el paquete de actualizaciones del sistema operativo para todos los idiomas y arquitecturas. Si cada uno es aproximadamente de 3 GB de tamaño, el paquete de descarga puede ser bastante grande.
+
+El contenido de caché previa le proporciona la opción de que el cliente solo descargue el contenido aplicable tan pronto como reciba la implementación. Por lo tanto, cuando el usuario hace clic en **Instalar** en el Centro de software, el contenido está listo y la instalación se inicia rápidamente porque el contenido se encuentra en la unidad de disco duro local.
+
+### <a name="to-configure-the-pre-cache-feature"></a>Para configurar la característica de caché previa
+
+1. Cree paquetes de actualización de sistema operativo para los idiomas y las arquitecturas específicas. Especifique la arquitectura y el idioma en la pestaña **Origen de datos** del paquete. Para el idioma, use la conversión decimal (por ejemplo, 1033 es el decimal de inglés y 0x0409 es el hexadecimal equivalente). Para obtener más información, vea [Cree una secuencia de tareas para actualizar un sistema operativo en System Center Configuration Manager](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system).
+
+    Los valores de idioma y arquitectura se usan para que coincidan con las condiciones de paso de secuencia de tareas que creará en el siguiente paso para determinar si el paquete de actualización de sistema operativo debe estar previamente en la caché.
+2. Cree una secuencia de tareas con pasos condicionales para los diferentes idiomas y arquitecturas. Por ejemplo, para la versión en inglés puede crear un paso como el siguiente:
+
+    ![propiedades de la caché previa](../media/precacheproperties2.png)
+
+    ![opciones de la caché previa](../media/precacheoptions2.png)  
+
+3. Implemente la secuencia de tareas. Para la característica de caché previa, configure lo siguiente:
+    - En la pestaña **General**, seleccione **Descargar contenido previamente para esta secuencia de tareas**.
+    - En la pestaña **Configuración de implementación**, configure la secuencia de tareas con la opción **Disponible** para **Propósito**. Si crea una implementación **Requerida**, la característica de caché previa no funcionará.
+    - En la pestaña **Programación**, para la opción **Programar cuándo estará disponible esta implementación**, elija una hora futura que proporcione a los clientes tiempo suficiente para almacenar en caché previamente el contenido antes de que la implementación esté disponible para los usuarios. Por ejemplo, puede establecer que el tiempo disponible sea de 3 horas para permitir suficiente tiempo al contenido para que se almacene previamente en la caché.  
+    - En la pestaña **Puntos de distribución**, configure los valores **Opciones de implementación**. Si el contenido no se ha almacenado previamente en la caché de un cliente antes de que un usuario inicie la instalación, se usa está configuración.
+
+
+### <a name="user-experience"></a>Experiencia del usuario
+- Cuando el cliente reciba la directiva de implementación, comenzará a almacenar previamente en caché el contenido. Esto incluye todo el contenido al que se hace referencia (cualquier otro tipo de paquete) y solo el paquete de actualizaciones del sistema operativo que coincide con el cliente en función de las condiciones que establezca en la secuencia de tareas.
+- Cuando la implementación está disponible para los usuarios (configuración de la pestaña **Programación** de la implementación), se muestra una notificación para informar a los usuarios sobre la nueva implementación y esta se muestra en el Centro de software. El usuario puede ir al Centro de software y hacer clic en **Instalar** para iniciar la instalación.
+- Si el contenido no se ha almacenado en la caché completamente, usará la configuración especificada en la pestaña **Opción de implementación** de la implementación. Recomendamos que haya suficiente tiempo entre el momento en que se crea la implementación y el momento en que la implementación está disponible para los usuarios, para permitir que los clientes tengan el tiempo suficiente para almacenar el contenido previamente en la caché.
+
+
+
 ## <a name="download-package-content-task-sequence-step"></a>Paso de la secuencia de tareas Descargar contenido de paquete  
  El paso [Descargar contenido de paquete](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent) se puede usar antes del paso **Actualizar sistema de operativo** en los siguientes escenarios:  
 
@@ -91,9 +128,4 @@ Use las secuencias de tareas de System Center Configuration Manager para actuali
 
 ## <a name="folder-and-files-removed-after-computer-restart"></a>Carpeta y archivos eliminados después del reinicio del equipo  
  Cuando se completan la secuencia de tareas para actualizar un sistema operativo a Windows 10 y todos los demás pasos de la secuencia de tareas, los scripts posteriores al procesamiento y la reversión no se quitan hasta que no se reinicia el equipo.  Estos archivos de script no contienen información confidencial.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

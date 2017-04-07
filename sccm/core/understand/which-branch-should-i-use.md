@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 26a362b4e5f25414178cae6843869a54eb99028c
-ms.openlocfilehash: b190b6116fba8080ad4e144e4e349e0926d1340b
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ef044af5f6b32e4161d54c0ab1fb2ef2d245264b
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -70,7 +70,7 @@ Para obtener más información, consulte [Support for Current Branch versions](/
 ##  <a name="long-term-servicing-branch-of-system-center-configuration"></a>Rama de mantenimiento a largo plazo de System Center Configuration
 Se trata de una rama con licencia para su uso en producción para los clientes de Configuration Manager que usan la Rama actual y que han permitido que su versión de Software Assurance (SA) de Configuration Manager o derechos de suscripciones equivalentes expiren después del 1 de octubre de 2016. Para obtener más información sobre Software Assurance y opciones de licencia, consulte [Licencias y ramas para System Center Configuration Manager](learn-more-editions.md).
 
-La LTSB no recibe las actualizaciones en la consola que ofrecen nuevas características o actualizan las funciones existentes. Sin embargo, se proporcionan las revisiones de seguridad importantes.
+LTSB se basa en la versión 1606. Esta rama no recibe las actualizaciones en la consola que ofrecen nuevas características o actualizan las funciones existentes. Sin embargo, se proporcionan las revisiones de seguridad importantes. Para instalar LTSB, debe utilizar la versión 1606 de [medios de línea base](/sccm/core/servers/manage/updates#baseline-and-update-versions) obtenidos en DVD con System Center 2016 o System Center Configuration Manager.
 
 Para instalar la LTSB como un sitio nuevo o como una actualización desde un sitio de Configuration Manager 2012 admitido, utilice los [medios de línea base](/sccm/core/servers/manage/updates#baseline-and-update-versions) de la versión 1606 que recibe en formato DVD con System Center 2016 o la versión de System Center Configuration Manager (Rama actual y Rama de mantenimiento a largo plazo 1606). Puede usar los medios de línea base para instalar un nuevo sitio que ejecuta la versión 1606 de la Rama actual o un nuevo sitio que ejecuta la Rama de mantenimiento a largo plazo.
 

@@ -2,7 +2,7 @@
 title: Carpeta CD.Latest | Microsoft Docs
 description: "Obtenga información sobre el nuevo proceso de actualización que proporciona actualizaciones al producto desde la consola de Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: dcf56f6b82f89e81d636ea920f36133e245cbb1e
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 9cbda4db3c8fcd0bc039e9bb0f490af519b7d04b
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -40,11 +41,13 @@ En cambio, el medio de línea base, como la versión de línea base 1606 que se 
 
 -   Si ejecuta la tarea de copia de seguridad integrada de Configuration Manager: la carpeta se crea o se actualiza en la ubicación de la carpeta de copia de seguridad designada.  
 
+-  A partir de la versión 1606, la carpeta CD.Latest se crea al instalar un sitio nuevo con medios de línea base (como la versión 1606).
+
 Los archivos de origen de la carpeta CD.Latest se admiten para lo siguiente:  
 
-1.  **Copia de seguridad y recuperación:** la carpeta CD.Latest contiene archivos de origen que se usan para volver a instalar el sitio como parte de una recuperación del sitio. Para recuperar un sitio de Configuration Manager, la copia de seguridad de sitio debe incluir la carpeta CD.Latest (la tarea de copia de seguridad de sitio integrada incluye de forma automática esta carpeta como parte de la copia de seguridad del sitio).  
+1.  **Copia de seguridad y recuperación:** para recuperar un sitio, debe utilizar los archivos de origen de una carpeta CD.Latest que coincida con el sitio. Al ejecutar una copia de seguridad de sitio mediante la tarea de copia de seguridad de sitio integrada, la carpeta CD.Latest se incluye como parte de la copia de seguridad.
 
-    -   **Cuando vuelva a instalar el sitio como parte de una recuperación del sitio** , hágalo desde la carpeta CD.Latest incluida en la copia de seguridad. De este modo, el sitio se instala con las versiones de archivo que coinciden con la copia de seguridad del sitio y la base de datos del sitio.  
+    -   **Cuando vuelva a instalar el sitio como parte de una recuperación del sitio** , hágalo desde la carpeta CD.Latest incluida en la copia de seguridad. De este modo, el sitio se instala con las versiones de archivo que coinciden con la copia de seguridad del sitio y la base de datos del sitio.  Si no tiene acceso a la versión de la carpeta CD.Latest correcta, puede obtener una carpeta CD.Latest con las versiones de archivo correctas mediante la instalación de un sitio en un entorno de laboratorio y la posterior actualización de dicho sitio para que coincida con la versión que desea recuperar.
 
         > [!IMPORTANT]  
         >  Si no tiene disponibles la carpeta CD.Lastest correcta y su contenido, no se puede recuperar un sitio y este debe volver a instalarse.  
@@ -60,9 +63,4 @@ Los archivos de origen de la carpeta CD.Latest se admiten para lo siguiente:
 >   
 >  -   Instalación de un sitio nuevo para una jerarquía nueva  
 >  -   Actualización de un sitio de Microsoft System Center 2012 Configuration Manager a System Center Configuration Manager
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

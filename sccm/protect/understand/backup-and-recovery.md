@@ -2,7 +2,7 @@
 title: "Copia de seguridad y recuperación | Microsoft Docs"
 description: "Aprenda a realizar copias de seguridad de los sitios y a recuperarlos en caso de error o pérdida de datos en System Center Configuration Manager."
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: 67441d0c19114f628e8b4308f58165ba67c738df
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ea6668ee7ee6b209b659426a0dc2c0be605ceaf1
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -110,9 +110,9 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
     > [!IMPORTANT]  
     >  Con el fin de evitar la manipulación de los archivos de copia de seguridad, almacene los archivos en una ubicación segura. La ruta de acceso de copia de seguridad más segura es una unidad local, por lo que puede establecer los permisos del sistema de archivos NTFS en la carpeta. Configuration Manager no cifra los datos de copia de seguridad que se almacenan en la ruta de acceso de copia de seguridad.  
 
-    -   **Unidad local en servidor de sitio para los datos y la base de datos del sitio**: especifica que los archivos de copia de seguridad del sitio y de la base de datos del sitio se almacenen en la ruta de acceso especificada en la unidad de disco local del servidor de sitio. Debe crear la carpeta local antes de que se ejecute la tarea de copia de seguridad.   La cuenta Sistema local en el servidor de sitio debe tener permisos del sistema de archivos NTFS de **escritura** en la carpeta local para la copia de seguridad del servidor de sitio. La cuenta Sistema local en el equipo que ejecute SQL Server debe tener permisos de NTFS de **escritura** en la carpeta local para la copia de seguridad de la base de datos del sitio.  
+    -   **Unidad local en servidor de sitio para los datos y la base de datos del sitio**: especifica que los archivos de copia de seguridad del sitio y de la base de datos del sitio se almacenen en la ruta de acceso especificada en la unidad de disco local del servidor de sitio. Debe crear la carpeta local antes de que se ejecute la tarea de copia de seguridad. La cuenta Sistema local en el servidor de sitio debe tener permisos del sistema de archivos NTFS de **escritura** en la carpeta local para la copia de seguridad del servidor de sitio. La cuenta Sistema local en el equipo que ejecute SQL Server debe tener permisos de NTFS de **escritura** en la carpeta local para la copia de seguridad de la base de datos del sitio.  
 
-    -   **Ruta de acceso de red (nombre UNC) para los datos y la base de datos del sitio**: especifica que los archivos de copia de seguridad del sitio y de la base de datos del sitio se almacenan en la ruta de acceso UNC especificada. Tiene que crear el recurso compartido para poder ejecutar la tarea de copia de seguridad. La cuenta de equipo del servidor de sitio y la cuenta de equipo de SQL Server, si SQL Server está instalado en otro equipo, deben tener permisos de recurso compartido y NTFS **Escribir** en la carpeta de red compartida.  
+    -   **Ruta de acceso de red (nombre UNC) para los datos y la base de datos del sitio**: especifica que los archivos de copia de seguridad del sitio y de la base de datos del sitio se almacenan en la ruta de acceso UNC especificada. Debe crear el recurso compartido antes de que se ejecute la tarea de copia de seguridad. La cuenta de equipo en el servidor de sitio y la cuenta de equipo en el servidor SQL Server, si SQL Server está instalado en otro equipo, deben tener permisos de recurso compartido y NTFS de **escritura** en la carpeta de red compartida.  
 
     -   **Unidades locales en el servidor de sitio y SQL Server**: especifica que los archivos de copia de seguridad del sitio se almacenan en la ruta de acceso especificada de la unidad local del servidor de sitio y que los archivos de copia de seguridad de la base de datos del sitio se almacenan en la ruta de acceso especificada de la unidad local del servidor de base de datos del sitio. Debe crear las carpetas locales antes de que se ejecute la tarea de copia de seguridad. La cuenta de equipo del servidor de sitio debe tener permisos de NTFS de **escritura** en la carpeta que se crea en el servidor de sitio. La cuenta de equipo del servidor de SQL Server debe tener permisos de NTFS de **escritura** en la carpeta que se crea en el servidor de la base de datos del sitio. Esta opción solo está disponible cuando la base de datos del sitio no esté instalada en el servidor de sitio.  
 
@@ -390,6 +390,14 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
 
     -   **Detalles** : recupera un sitio de administración central  
 
+-   **Nombre de clave:** CDLatest  
+
+    -   **Necesario:** sí, solo cuando se utilizan medios de la carpeta CD.Latest.    
+
+    -   **Valores:** 1 si el valor es distinto de 1, se considera que no se usa CD.Latest.
+
+    -   **Detalles:** el script debe incluir esta clave y valor al ejecutar el programa de instalación desde medios de una carpeta CD.Latest, con el fin de instalar un sitio de administración central o principal, o bien para recuperar estos sitios. Este valor indica al programa de instalación que se están usando medios de la carpeta CD.Latest.  
+
 **RecoveryOptions**  
 
 -   **Nombre de clave** : ServerRecoveryOptions  
@@ -602,6 +610,14 @@ Use las secciones siguientes como ayuda para crear la estrategia de copia de seg
     -   **Valores** : RecoverPrimarySite  
 
     -   **Detalles** : recupera un sitio primario.  
+
+-   **Nombre de clave:** CDLatest  
+
+    -   **Necesario:** sí, solo cuando se utilizan medios de la carpeta CD.Latest.    
+
+    -   **Valores:** 1 si el valor es distinto de 1, se considera que no se usa CD.Latest.
+
+    -   **Detalles:** el script debe incluir esta clave y valor al ejecutar el programa de instalación desde medios de una carpeta CD.Latest, con el fin de instalar un sitio de administración central o principal, o bien para recuperar estos sitios. Este valor indica al programa de instalación que se están usando medios de la carpeta CD.Latest.
 
 **RecoveryOptions**  
 

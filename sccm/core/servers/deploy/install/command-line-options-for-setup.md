@@ -2,7 +2,7 @@
 title: "Opciones de instalación por línea de comandos | Microsoft Docs"
 description: "Use la información de este artículo para configurar scripts o instalar System Center Configuration Manager desde una línea de comandos."
 ms.custom: na
-ms.date: 13/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 36b1ab794bb1dc80c673bd41dae11f46053f3be3
-ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 04fe7b3e674287c4255563ab4a308e54d0b6c3aa
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>Opciones de línea de comandos para la instalación en System Center Configuration Manager
@@ -27,7 +28,7 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
  Use la información siguiente para configurar scripts o instalar System Center Configuration Manager desde una línea de comandos.  
 
-##  <a name="a-namebkmksetupa-command-line-options-for-setup"></a><a name="bkmk_setup"></a> Opciones de línea de comandos para la instalación  
+##  <a name="bkmk_setup"></a> Opciones de línea de comandos para la instalación  
  **/DEINSTALL**  
  Desinstala el sitio. Debe ejecutar el programa de instalación desde el equipo servidor del sitio.  
 
@@ -68,7 +69,7 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
  **/MANAGELANGS <*ruta de acceso del script de idioma*>**  
 Administra los idiomas que se instalan en un sitio instalado previamente. Para usar esta opción, debe ejecutar el programa de instalación desde **<*Ruta de instalación de Configuration Manager*>\BIN\X64** en el servidor de sitio y proporcionar la ubicación del archivo de script de idioma que contiene la configuración del idioma. Para más información sobre las opciones de idioma disponibles en el archivo de script de configuración de idioma, vea [Opciones de línea de comandos para administrar idiomas](#bkmk_Lang) en este tema.  
 
-##  <a name="a-namebkmklanga-command-line-options-to-manage-languages"></a><a name="bkmk_Lang"></a> Opciones de línea de comandos para administrar idiomas  
+##  <a name="bkmk_Lang"></a> Opciones de línea de comandos para administrar idiomas  
  **Identificación**  
 
 -   **Nombre de clave:** Action  
@@ -145,7 +146,7 @@ Administra los idiomas que se instalan en un sitio instalado previamente. Para u
 
     -   **Detalles** : especifica la ruta de acceso a los archivos de requisitos previos de instalación. Dependiendo del valor **PrerequisiteComp** , el programa de instalación utiliza esta ruta para almacenar los archivos descargados o localizar los archivos descargados previamente.  
 
-##  <a name="a-namebkmkunattendeda-unattended-setup-script-file-keys"></a><a name="bkmk_Unattended"></a> Claves de archivo de script de instalación desatendida  
+##  <a name="bkmk_Unattended"></a> Claves de archivo de script de instalación desatendida  
  Use las siguientes secciones para crear el script para una instalación desatendida. La lista muestra las claves del script de instalación disponibles, sus valores correspondientes, si son necesarias o no, el tipo de instalación para el que se usan y una breve descripción de cada clave.  
 
 ### <a name="unattended-install-for-a-central-administration-site"></a>Instalación desatendida de un sitio de administración central  
@@ -160,6 +161,14 @@ Administra los idiomas que se instalan en un sitio instalado previamente. Para u
     -   **Valores:** InstallCAS  
 
     -   **Detalles:** instala un sitio de administración central.  
+
+-   **Nombre de clave:** CDLatest  
+
+    -   **Necesario:** sí, solo cuando se utilizan medios de la carpeta CD.Latest.    
+
+    -   **Valores:** 1 si el valor es distinto de 1, se considera que no se usa CD.Latest.
+
+    -   **Detalles:** el script debe incluir esta clave y valor al ejecutar el programa de instalación desde medios de una carpeta CD.Latest, con el fin de instalar un sitio de administración central o principal, o bien para recuperar estos sitios. Este valor indica al programa de instalación que se están usando medios de la carpeta CD.Latest.
 
 **Opciones**  
 
@@ -398,6 +407,14 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
     -   **Valores:** InstallPrimarySite  
 
     -   **Detalles:** instala un sitio primario.  
+
+-   **Nombre de clave:** CDLatest  
+
+    -   **Necesario:** sí, solo cuando se utilizan medios de la carpeta CD.Latest.    
+
+    -   **Valores:** 1 si el valor es distinto de 1, se considera que no se usa CD.Latest.
+
+    -   **Detalles:** el script debe incluir esta clave y valor al ejecutar el programa de instalación desde medios de una carpeta CD.Latest, con el fin de instalar un sitio de administración central o principal, o bien para recuperar estos sitios. Este valor indica al programa de instalación que se están usando medios de la carpeta CD.Latest.
 
 **Opciones**  
 
@@ -717,6 +734,14 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
     -   **Detalles:** recupera un sitio de administración central.  
 
+-   **Nombre de clave:** CDLatest  
+
+    -   **Necesario:** sí, solo cuando se utilizan medios de la carpeta CD.Latest.    
+
+    -   **Valores:** 1 si el valor es distinto de 1, se considera que no se usa CD.Latest.
+
+    -   **Detalles:** el script debe incluir esta clave y valor al ejecutar el programa de instalación desde medios de una carpeta CD.Latest, con el fin de instalar un sitio de administración central o principal, o bien para recuperar estos sitios. Este valor indica al programa de instalación que se están usando medios de la carpeta CD.Latest.
+
 **RecoveryOptions**  
 
 -   **Nombre de clave:** ServerRecoveryOptions  
@@ -978,6 +1003,14 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
     -   **Valores:** <*RecoverPrimarySite*>  
 
     -   **Detalles:** recupera un sitio primario.  
+
+-   **Nombre de clave:** CDLatest  
+
+    -   **Necesario:** sí, solo cuando se utilizan medios de la carpeta CD.Latest.    
+
+    -   **Valores:** 1 si el valor es distinto de 1, se considera que no se usa CD.Latest.
+
+    -   **Detalles:** el script debe incluir esta clave y valor al ejecutar el programa de instalación desde medios de una carpeta CD.Latest, con el fin de instalar un sitio de administración central o principal, o bien para recuperar estos sitios. Este valor indica al programa de instalación que se están usando medios de la carpeta CD.Latest.    
 
 **RecoveryOptions**  
 
@@ -1243,9 +1276,4 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
     -   **Valores:** <*número de puerto*>  
 
     -   **Detalles:** especifica el número de puerto que se usará para el puerto de proxy.  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

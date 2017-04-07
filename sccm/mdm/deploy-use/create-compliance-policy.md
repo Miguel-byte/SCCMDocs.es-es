@@ -17,9 +17,9 @@ ms.author: andredm
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 58375a7f23109bbb2e304c17312f3438aa683cb2
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 6832bb6c6a26be76720938154942a5eb99022785
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -48,17 +48,12 @@ ms.lasthandoff: 03/06/2017
     * **Crítico**: los dispositivos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Crítico** en los informes de Configuration Manager.
     * **Crítico con evento**: los dispositivos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Crítico** en los informes de Configuration Manager. Este nivel de gravedad también se registra como evento de Windows en el registro de eventos de la aplicación.|      
 
-5.  En la página **Plataformas admitidas** , elija las plataformas de dispositivo en las que se va a evaluar esta directiva de cumplimiento o haga clic en **Seleccionar todo** para elegir todas las plataformas de dispositivo.
+5.  En la página **Plataformas admitidas** , elija las plataformas de dispositivo en las que se va a evaluar esta directiva de cumplimiento o haga clic en **Seleccionar todo** para elegir todas las plataformas de dispositivo. Las plataformas compatibles son: Windows 7, 8.1, 10, Windows Server 2008 R2, 2012, 2012 R2 y 2016.
 
 6.  En la página **Reglas** , se establecen una o varias reglas que definen la configuración que los dispositivos deben tener para poder ser evaluados como compatibles. Cuando se crea una directiva de cumplimiento, algunas de las reglas se habilitan de forma predeterminada, pero puede editarlas o eliminarlas. Para obtener una lista completa de todas las reglas, consulte la sección **Reglas de directivas de cumplimiento** más adelante en este tema.
 
 > [!NOTE]  
->  En equipos con Windows, la versión 8.1 del sistema operativo Windows se notifica como 6.3 en lugar de 8.1.    Si la regla de la versión de SO se establece en Windows 8.1 para Windows, el dispositivo se notificará como no compatible incluso aunque tenga Windows OS 8.1. Asegúrese de que está estableciendo la versión **notificada** correcta de Windows para las reglas de SO mínimo y máximo. El número de versión debe coincidir con la versión devuelta por el comando winver. Windows Phone no tiene este problema, ya que la versión se notifica como 8.1 según lo previsto.  
->   
->  En equipos con sistema operativo Windows 10, la versión debe establecerse en "10.0" + el número de compilación del sistema operativo devuelto por el comando winver. Por ejemplo, podría ser similar a 10.0.10586.  
-> Windows 10 Mobile no tiene este problema.  
->   
->  ![CA&#95;Win10OSversion](media/CA_Win10OSversion.png)  
+>  En equipos con Windows, la versión 8.1 del sistema operativo Windows se notifica como 6.3 en lugar de 8.1.    Si la regla de la versión de SO se establece en Windows 8.1 para Windows, el dispositivo se notificará como no compatible incluso aunque tenga Windows OS 8.1. Asegúrese de que está estableciendo la versión **notificada** correcta de Windows para las reglas de SO mínimo y máximo. El número de versión debe coincidir con la versión devuelta por el comando winver. Windows Phone no tiene este problema, ya que la versión se notifica como 8.1 según lo previsto. En equipos con sistema operativo Windows 10, la versión debe establecerse en "10.0" + el número de compilación del sistema operativo devuelto por el comando **winver**.
 
 7.  En la página **Resumen** del asistente, revise la configuración realizada y, a continuación, complete el asistente.
 
@@ -100,6 +95,36 @@ ms.lasthandoff: 03/06/2017
 
     -   **Desconocido**: muestra una lista de todos los usuarios y dispositivos que no notificaron la compatibilidad de la implementación de directiva seleccionada y el estado de cliente actual de los dispositivos.
 
+### <a name="to-monitor-the-individual-compliance-status"></a>Para supervisar el estado de cumplimiento individual
+
+También puede ver el estado individual de cada dispositivo:
+
+1.  En la consola de Configuration Manager, haga clic en el área de trabajo **Activos y compatibilidad**.
+
+2.  Haga clic en **Dispositivos**.
+3.  Haga clic con el botón derecho en alguna de las columnas para habilitar más columnas.
+
+Puede agregar las siguientes columnas:
+
+- **Id. de dispositivo de Azure Active Directory:** el identificador único para el dispositivo en AAD.
+
+- **Detalles del error de cumplimiento:** detalles de mensajes de error cuando hay problemas en el proceso de un extremo a otro. Si esta columna está en blanco, significa que no se han encontrado errores y que se ha informado correctamente del estado de cumplimiento.
+
+- **Ubicación del error de cumplimiento:** proporciona más detalles sobre dónde se ha producido el error de cumplimiento. Si esta columna está en blanco, significa que no se han encontrado errores y que se ha informado correctamente del estado de cumplimiento. Ejemplos de dónde se podría producir algún error en el proceso de cumplimiento: 
+    - Cliente de Configuration Manager
+    - Punto de administración
+    - Intune
+    - Azure Active Directory
+<br></br>
+- **Hora de evaluación del cumplimiento:** última vez que se ha comprobado el cumplimiento.
+
+- **Hora a la que se estableció el cumplimiento:** última vez que se ha actualizado el cumplimiento en Azure Active Directory.
+
+- **Conforme al acceso condicional:** si la máquina cumple o no las directivas de acceso condicional.
+
+> [!IMPORTANT]
+> Estas columnas no se muestran de manera predeterminada.
+
 ### <a name="to-view-intune-compliance-policies-charts"></a>Para ver los gráficos de directivas de cumplimiento de Intune
 1. A partir de la versión 1610 de Configuration Manager, en la consola de Configuration Manager, haga clic en **Supervisión**.
 2. En el área de trabajo **Supervisión**, vaya a **Información general** > **Configuración de cumplimiento** >  **Directivas de cumplimiento**.
@@ -124,7 +149,7 @@ ms.lasthandoff: 03/06/2017
     * iOS 6+
     * Android 4.0+
     * Samsung KNOX Standard 4.0+
-* **Requerir contraseña para desbloquear un dispositivo inactivo (actualización&1602;):** exija a los usuarios que escriban una contraseña para obtener acceso a un dispositivo bloqueado.
+* **Requerir contraseña para desbloquear un dispositivo inactivo (actualización 1602):** exija a los usuarios que escriban una contraseña para obtener acceso a un dispositivo bloqueado.
 
   **Compatible con:**
   * Windows Phone 8+
@@ -132,7 +157,7 @@ ms.lasthandoff: 03/06/2017
   * Android 4.0+
   * Samsung KNOX Standard 4.0+
 
-* **Minutos de inactividad antes de que sea necesaria la contraseña (actualización&1602;):** especifica el tiempo de inactividad antes de que el usuario deba volver a escribir su contraseña. Establezca el valor en una de las opciones disponibles: **1 minuto**, **5 minutos**, **15 minutos**, **30 minutos**, **1 hora**.
+* **Minutos de inactividad antes de que sea necesaria la contraseña (actualización 1602):** especifica el tiempo de inactividad antes de que el usuario deba volver a escribir su contraseña. Establezca el valor en una de las opciones disponibles: **1 minuto**, **5 minutos**, **15 minutos**, **30 minutos**, **1 hora**.
 
   Esta regla se debe usar con la regla **Requerir una contraseña para desbloquear un dispositivo inactivo**. El valor establecido aquí determina cuándo se considera que el dispositivo está inactivo y se bloquea. Si  **Requerir una contraseña para desbloquear un dispositivo inactivo** está establecida en **True**, se exige al usuario que escriba una contraseña para acceder al dispositivo bloqueado.
 
@@ -222,4 +247,29 @@ ms.lasthandoff: 03/06/2017
   Para más información sobre cómo funciona el servicio HAS, consulte [Health Attestation CSP](https://msdn.microsoft.com/library/dn934876.aspx)(CSP de atestación de estado).
   **Compatible con:**
   * Windows 10 y Windows 10 Mobile
+
+- **Aplicaciones que no se pueden instalar en el dispositivo:** si los usuarios instalan una aplicación de la lista de aplicaciones no compatibles del administrador, se bloquearán al intentar obtener acceso al correo electrónico corporativo y a otros recursos corporativos que admiten el acceso condicional. Esta regla requiere el nombre y el Id. de la aplicación al agregar una aplicación a la lista de aplicaciones no compatibles definida por el administrador. También se puede agregar el publicador de la aplicación, pero no es obligatorio.
+    - **Compatible con:**
+      * iOS 6+
+      * Android 4.0+
+      * Samsung KNOX Standard 4.0+
+
+#### <a name="whats-app-id"></a>¿Qué es el id. de la aplicación?
+
+El id. de la aplicación es un identificador que identifica de forma única la aplicación en los servicios de aplicaciones de Apple y Google. Por ejemplo, com.contoso.myapp.
+
+#### <a name="find-app-ids"></a>Búsqueda de identificadores de las aplicaciones
+
+- **Android**
+    - Puede encontrar el id. de la aplicación en la dirección URL de Google Play Store utilizada para crear la aplicación:
+        - Ejemplo de id. de la aplicación: ***…?id=com.companyname.appname&hl=es***
+
+- **iOS**
+    - En iTunes Store, en la dirección URL se encuentra el **número de identificador**; por ejemplo: ***/id875948587?mt=8***
+    - En un explorador web vaya a la dirección URL siguiente, donde debe reemplazar el número con el número de identificador que acaba de encontrar: 
+        - https://itunes.apple.com/lookup?id=875948587
+    - Descargue y abra el archivo de texto.
+    - Busque el texto "*bundleid*".
+    - Ejemplo de id. de la aplicación: "*bundleId*":"*com.companyname.appname*" 
+
 

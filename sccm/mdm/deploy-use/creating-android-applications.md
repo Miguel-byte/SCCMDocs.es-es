@@ -2,7 +2,7 @@
 title: Crear aplicaciones de Android | Microsoft Docs
 description: Consulte las consideraciones que debe tener en cuenta al crear e implementar aplicaciones para dispositivos Android.
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 3d90b2cb1e255b9e8827a991779024ccecde9646
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 45dbf119ed5eaf875293f4eb3d89b986af6019e5
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="create-android-applications-with-system-center-configuration-manager"></a>Crear aplicaciones Android con System Center Configuration Manager
@@ -37,7 +37,7 @@ Una aplicación de System Center Configuration Manager tiene uno o varios tipos 
 
 Consulte [Inicie el Asistente para crear aplicaciones](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard) para conocer los pasos necesarios para crear aplicaciones de Configuration Manager y los tipos de implementación. Asimismo, tenga en cuenta las siguientes consideraciones cuando cree e implemente aplicaciones para dispositivos Android.  
 
-## <a name="general-considerations"></a>Consideraciones generales
+## <a name="general-considerations-for-android-apps"></a>Consideraciones generales para aplicaciones Android
 
 Configuration Manager admite la implementación de los siguientes tipos de aplicaciones para Android:
 
@@ -50,4 +50,20 @@ Se admiten las siguientes acciones de implementación:
 |Tipo de dispositivo|Acciones admitidas|
 |-|-|
 |Android|**Disponible**, **Necesario**. El usuario debe dar su consentimiento para la instalación y desinstalación.
+
+## <a name="approve-and-deploy-android-for-work-apps"></a>Aprobar e implementar aplicaciones Android for Work
+Como administrador de Configuration Manager, también puede aprobar e implementar aplicaciones en el [sitio web de Play for Work](https://play.google.com/work) e implementar las aplicaciones en dispositivos Android for Work administrados.
+
+Siga estos pasos para aprobar aplicaciones en la tienda Play for Work, sincronizarlas con la consola de Configuration Manager e implementarlas en dispositivos Android for Work administrados. Para implementar aplicaciones en los perfiles de trabajo de los usuarios, debe aprobar las aplicaciones en Play for Work y después sincronizarlas con la consola de Configuration Manager.
+
+1. Abra un explorador y vaya a https://play.google.com/work.
+2. Inicie sesión con la cuenta de administrador de Google enlazada a su inquilino de Intune.
+3. Busque las aplicaciones que le gustaría implementar en su entorno y haga clic en **Aprobar** en cada una de ellas para que la aplicación esté disponible para Android for Work.
+4. En la consola de Configuration Manager, vaya a **Administrador** > **General** > **Cloud Services** > **Android for Work** y haga clic en **Sincronizar**.
+5. Espere hasta 10 minutos para que las aplicaciones se sincronicen y, después, vaya a **Biblioteca de software** > **General** > **Administración de aplicaciones** > **Información de licencia para las aplicaciones de la Tienda**.
+6. Haga clic en una aplicación sincronizada desde Play for Work y después en **Crear aplicación**.
+7. Complete el asistente y haga clic en **Cerrar**.
+8. Vaya a **Biblioteca de software** > **General** > **Administración de aplicaciones** > **Aplicaciones**, seleccione una aplicación de Android for Work e impleméntela como de costumbre.
+
+Para sincronizar aplicaciones Play for Work con Configuration Manager, debe aprobar primero al menos una aplicación en el sitio web de Play for Work.
 

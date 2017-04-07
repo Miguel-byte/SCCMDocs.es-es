@@ -2,7 +2,7 @@
 title: "Cómo crear perfiles de certificado de SCEP | Microsoft Docs"
 description: "Obtenga información sobre cómo usar perfiles de certificado para aprovisionar dispositivos administrados con los certificados que necesitan en System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/22/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,11 +17,13 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
-ms.openlocfilehash: cb9351fc63e49af611c494ec82a6c8651afae30f
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: f919ac97b24604babca4f70f184220604227eb0e
+ms.lasthandoff: 03/27/2017
 
 
 ---
+
 # <a name="create-certificate-profiles"></a>Crear perfiles de certificado
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -57,6 +59,8 @@ En la página **General** del Asistente para crear perfil de certificado, especi
 -   **Configuración de Protocolo de inscripción de certificados simple (SCEP)**: seleccione este tipo de perfil de certificado si desea solicitar un certificado para un dispositivo o usuario mediante el Protocolo de inscripción de certificados simple y el servicio de rol Servicio de inscripción de dispositivos de red.
 
 -   **Intercambio de información personal: configuración de PKCS #12 (PFX): importar**: seleccione esta opción para importar un certificado PFX. Para obtener más información sobre la creación de certificados PFX, consulte [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md) (Crear perfiles de certificado PFX).
+
+- **Intercambio de información personal: configuración de PKCS #12 (PFX): crear**: seleccione esta opción para crear un nuevo perfil de certificado PFX. Para obtener más información sobre la creación de certificados PFX, consulte [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md) (Crear perfiles de certificado PFX).
 
 
 
@@ -183,10 +187,7 @@ En la página **General** del Asistente para crear perfil de certificado, especi
 ###  <a name="specify-supported-platforms-for-the-certificate-profile"></a>Especificar las plataformas admitidas del perfil de certificado  
 
 1. En la página **Plataformas admitidas** del Asistente para crear perfil de certificado, seleccione los sistemas operativos en los que desea instalar el perfil de certificado. O bien, haga clic en **Seleccionar todo** para instalar el perfil de certificado en todos los sistemas operativos disponibles.
-2. Revise la página **Resumen** del asistente y elija **Finalizar**. Se muestra el nuevo perfil de certificado en el nodo **Perfiles de certificado** del área de trabajo **Activos y compatibilidad** y está listo para su implementación en usuarios o dispositivos, tal y como se describe en [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md) (Cómo implementar perfiles en System Center Configuration Manager).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
-
+2. Revise la página **Resumen** del asistente y elija **Finalizar**. 
+ 
+ 
+Se muestra el nuevo perfil de certificado en el nodo **Perfiles de certificado** del área de trabajo **Activos y compatibilidad** y está listo para su implementación en usuarios o dispositivos, tal y como se describe en [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md) (Cómo implementar perfiles en System Center Configuration Manager).  

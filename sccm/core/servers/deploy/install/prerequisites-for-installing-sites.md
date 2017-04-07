@@ -2,7 +2,7 @@
 title: Requisitos previos de los sitios | Microsoft Docs
 description: "Obtenga información sobre los requisitos previos necesarios para instalar los distintos tipos de sitios de System Center Configuration Manager."
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: b6c570d8addbe7df5aace461ee725a7df1d35a31
-ms.openlocfilehash: 76c8bb6d0922fad996e27c04a86cb9b4ad32a810
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ff89d4aea6be871e64e0a788f054ba4cadb3e51d
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="prerequisites-for-installing-system-center-configuration-manager-sites"></a>Requisitos previos para instalar sitios de System Center Configuration Manager
@@ -60,14 +60,14 @@ Los siguientes requisitos previos se aplican a la instalación de un sitio de ad
 - El servidor de sitio y los equipos de bases de datos de sitio deben cumplir todos los requisitos previos de configuración. Antes de iniciar el programa de instalación, puede [ejecutar manualmente el Comprobador de requisitos previos](../../../../core/servers/deploy/install/prerequisite-checker.md) para identificar y corregir problemas.  
 
 
-### <a name="bkmk_expand"></a> Expandir un sitio primario independiente
+### <a name="bkmk_expand"></a> Requisitos previos para expandir un sitio primario independiente
 Un sitio principal independiente debe cumplir los siguientes requisitos previos antes de que se puede expandir en una jerarquía con un sitio de administración central:
 
--   **Debe instalar el medio de instalación del nuevo sitio de administración central (que contiene los archivos de origen) que coincida con la versión del sitio primario independiente**
+-   **Debe instalar el medio de instalación del nuevo sitio de administración central desde la carpeta CD.Latest (que contiene los archivos de origen) que coincida con la versión del sitio primario independiente**
 
-     Para garantizar que las versiones coincidan, instale el sitio nuevo usando los archivos de origen de la [carpeta CD.Latest](../../../../core/servers/manage/the-cd.latest-folder.md) del sitio primario independiente.
+ Para garantizar que las versiones coincidan, use los archivos de origen que se encuentran en la [carpeta CD.Latest](/sccm/core/servers/manage/the-cd.latest-folder) del sitio primario independiente.
 
-     Para obtener más información sobre los archivos de origen correctos para instalar diferentes sitios, consulte la sección [Opciones para instalar los diferentes tipos de sitios](../../../../core/servers/deploy/install/prepare-to-install-sites.md#bkmk_options) del tema [Preparar la instalación de sitios](../../../../core/servers/deploy/install/prepare-to-install-sites.md).
+ Para obtener más información sobre los archivos de origen correctos para instalar diferentes sitios, consulte la sección [Opciones para instalar los diferentes tipos de sitios](../../../../core/servers/deploy/install/prepare-to-install-sites.md#bkmk_options) del tema [Preparar la instalación de sitios](../../../../core/servers/deploy/install/prepare-to-install-sites.md).
 
 
 -   **No se puede configurar el sitio primario independiente para migrar datos desde otra jerarquía de Configuration Manager**  

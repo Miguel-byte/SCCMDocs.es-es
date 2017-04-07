@@ -2,7 +2,7 @@
 title: "Probar la recopilación de preproducción de actualizaciones de cliente | Microsoft Docs"
 description: "Pruebe las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/12/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
-ms.openlocfilehash: 250c9312b932670c408554f3968ae43ae4f3dbaa
-ms.lasthandoff: 01/03/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 533c8e8b30519d83b8fc7a9d204d51e76974c4b1
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -57,7 +57,7 @@ Puede probar una nueva versión de cliente de Configuration Manager en una recop
 
 ##  <a name="to-install-a-configuration-manager-update-that-includes-a-new-version-of-the-client"></a>Para instalar una actualización de Configuration Manager que incluye una nueva versión del cliente  
 
-1.  En la consola de Configuration Manager, abra **Administración** > **Servicios en la nube** > **Actualizaciones y servicios**, seleccione una actualización **Disponible** y después elija **Instalar el paquete de actualización**  
+1.  En la consola de Configuration Manager, abra **Administración** > **Actualizaciones y mantenimiento**, seleccione una actualización **Disponible** y después elija **Instalar el paquete de actualización**. (Antes de la versión 1702, la opción Actualizaciones y mantenimiento se encontraba en **Administración** > **Cloud Services**).
 
      Para obtener más información sobre cómo instalar actualizaciones, consulte [Actualizaciones para System Center Configuration Manager](../../../../core/servers/manage/updates.md)  
 
@@ -72,7 +72,7 @@ Puede probar una nueva versión de cliente de Configuration Manager en una recop
 
 ##  <a name="to-promote-the-new-client-to-production"></a>Para promover el nuevo cliente a producción  
 
-1.  En la consola de Configuration Manager, abra **Administración** > **Servicios en la nube** > **Actualizaciones y mantenimiento** y elija **Promover el cliente de preproducción**.
+1.  En la consola de Configuration Manager, abra **Administración** > **Actualizaciones y mantenimiento** y elija **Promover el cliente de preproducción**. (Antes de la versión 1702, la opción Actualizaciones y mantenimiento se encontraba en **Administración** > **Cloud Services**).
 
     > [!TIP]
     > El botón **Promover el cliente de preproducción** también está disponible cuando se están supervisando las implementaciones de cliente en la consola en **Supervisión** > **Estado de cliente** > **Implementación del cliente de preproducción**.

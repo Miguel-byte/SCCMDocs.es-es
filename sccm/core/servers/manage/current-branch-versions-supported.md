@@ -17,8 +17,9 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: fecbdfa9ad99ca36f419cdda19a14b58f9f2b316
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 0286416807656fcf623260c7e95a703e39f6a275
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>Compatibilidad con versiones de la rama actual de System Center Configuration Manager
@@ -41,15 +42,14 @@ Ilustración 1. Ejemplo de soporte técnico de servicio de la rama actual.
 
 |Versión|Fecha de disponibilidad|Fecha de finalización del soporte técnico|  
 |-------------|-----------------------|----------------------|  
-|1511|12/8/2015|8/12/2016|  
-|1602|3/11/2016|11/3/2017|
-|1606|22/7/2016|22/7/2017|
+|1702|3/27/2017|3/27/2018|
 |1610|18/11/2016|18/11/2017|
+|1606|22/7/2016|22/7/2017|
+|1602|3/11/2016|11/3/2017|
+|1511|12/8/2015|8/12/2016|  
+
+
+
 
 Para obtener información sobre los números de versión y la disponibilidad como una actualización en la consola o una línea base, consulte [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions).
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

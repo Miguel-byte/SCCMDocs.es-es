@@ -2,7 +2,7 @@
 title: "Configuración de cliente | Microsoft Docs"
 description: "Seleccione la configuración del cliente mediante la consola de administración de System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/12/2016
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 289db441899359f3bf3abe5d38896c7acd2045b6
-ms.openlocfilehash: 5eaca19f2b21b1c62b956d2a44d492d3ddd6d10a
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: bd2cf7b0df4a1f50c006e8280bf59ea91f1b4477
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Acerca de la configuración de cliente en System Center Configuration Manager
@@ -329,7 +329,7 @@ Muchas de las configuraciones del cliente se explican por sí solas. Aquí se de
     -   Los archivos NOIDMIF deben estar en la carpeta Windows\System32\CCM\Inventory\Noidmif.  
 
     > [!NOTE]  
-    >  Este valor solo está disponible en la configuración predeterminada del cliente. 
+    >  Este valor solo está disponible en la configuración predeterminada del cliente.
 
 -   **Retraso aleatorio máximo**
 
@@ -601,6 +601,12 @@ Muchas de las configuraciones del cliente se explican por sí solas. Aquí se de
 -   **Período de tiempo durante el cual también se instalarán todas las implementaciones pendientes cuya fecha límite sea durante este período**  
 
      Utilice esta opción para especificar el intervalo de tiempo para la configuración anterior. Puede especificar un valor entre 1 y 23 horas y entre 1 y 365 días. De forma predeterminada, la opción se configura con un valor de 7 días.  
+
+-   **Habilitar instalación de archivos de instalación Express en clientes**
+
+-   **Puerto usado para descargar contenido para archivos de instalación Express**
+
+-   **Habilitar administración del Agente cliente de Office 365** Utilice esta opción para habilitar la administración del Agente cliente de Office 365. Si establece el valor en **Sí**, permite configurar las opciones de instalación de Office 365, descargar archivos desde redes de entrega de contenido (CDN) de Office e implementar los archivos como una aplicación en Configuration Manager.
 
 ##  <a name="user-and-device-affinity"></a>Afinidad entre usuario y dispositivo  
 

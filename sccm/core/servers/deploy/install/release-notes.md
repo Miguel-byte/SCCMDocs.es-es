@@ -2,7 +2,7 @@
 title: "Notas de la versión en Configuration Manager | Microsoft Docs"
 description: "Consulte estas notas relativas a problemas urgentes que aún no se han corregido en el producto o no se han tratado en un artículo de Microsoft Knowledge Base."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/27/27
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
-ms.openlocfilehash: 9e853c8fda236125717c3912f6f3cb02d6dd1058
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: aca3525fc143b281f41c3d9bd20bb93b1d91f6ce
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -35,7 +36,27 @@ Con System Center Configuration Manager, las notas de la versión del producto s
 
 ## <a name="setup-and-upgrade"></a>Instalación y actualización  
 
+### <a name="after-you-update-a-configuration-manager-console-using-consolesetupexe-from-the-site-server-folder-recent-language-pack-changes-are-not-available"></a>Después de actualizar una consola de Configuration Manager mediante ConsoleSetup.exe desde la carpeta del servidor de sitio, los cambios recientes del paquete de idioma no están disponibles.
+<!--  SMS 486420  Applicability should be 1610 and 1702.  -->
+Después de ejecutar una actualización local en una consola mediante ConsoleSetup.exe desde una carpeta de instalación de servidores de sitio, los paquetes de idioma instalados recientemente pueden no estar disponibles. Esto ocurre cuando:
+- El sitio ejecuta la versión 1610 o 1702.
+- La consola se actualiza a nivel local mediante ConsoleSetup.exe desde la carpeta de instalación del servidor de sitio.
+
+Cuando se produce este problema, la consola reinstalada no utiliza el conjunto más reciente de los paquetes de idioma que se configuraron. No se devuelve ningún error, pero los paquetes de idioma disponibles en la consola no habrán cambiado.  
+
+**Solución alternativa:** desinstale la consola actual y después vuelva a instalarla como una nueva instalación. Puede utilizar ConsoleSetup.exe desde la carpeta de instalación de servidores de sitio. Durante la instalación, asegúrese de seleccionar los archivos de paquete de idioma que desea utilizar.
+
+
+### <a name="with-version-1702-the-default-site-boundary-group-is-configured-for-use-for-site-assignment"></a>Con la versión 1702, el grupo de límites del sitio predeterminado está configurado para usarlo en la asignación de sitio.
+<!--  SMS 486380   Applicability should only be to 1702. -->
+Con la versión 1702, la pestaña Referencia de los grupos de límites del sitio predeterminado está marcada para **Usar este grupo de límites para la asignación de sitio**, muestra el sitio como **Sitio asignado** y está atenuada para que la configuración no se pueda modificar ni borrar.
+
+**Solución:** ninguna. Puede ignorar esta configuración. Aunque el grupo está habilitado para la asignación de sitio, el grupo de límites del sitio predeterminado no se utiliza para la asignación de sitio. Con 1702, esta configuración garantiza que el grupo de límites del sitio predeterminado se asocie al sitio correcto.
+
+
+
 ### <a name="when-installing-a-long-term-service-branch-site-using-version-1606-a-current-branch-site-is-installed"></a>Al instalar un sitio de Rama de mantenimiento a largo plazo mediante la versión 1606, se instala un sitio de Rama actual
+<!-- Consider move to core content  -->
 Al usar el medio de línea base de la versión 1606 incluido en la versión de octubre de 2016 para instalar un sitio de Rama de mantenimiento a largo plazo (LTSB), el programa de instalación instala en su lugar un sitio de Rama actual. Esto ocurre porque no está seleccionada la opción para instalar un punto de conexión de servicio con la instalación del sitio.
 
  - Aunque no es necesario un punto de conexión de servicio, se debe seleccionar que se instale durante la instalación de un sitio de LTSB.
@@ -50,21 +71,19 @@ Para confirmar qué rama está instalada, en la consola, vaya a **Administració
 
 
 
-
-
 ### <a name="the--sql-server-backup-model-in-use-by-configuration-manager-can-change-from-full-to-simple"></a>El modelo de copia de seguridad de SQL Server que se usa en Configuration Manager puede cambiar de completo a simple  
+<!-- Confirm applicability for upgrade to later baselines. 1511 is out of support. 1606 is minmum supported baseline  -->
+
  Al actualizar a System Center Configuration Manager versión 1511, el modelo de copia de seguridad de SQL Server que usa Configuration Manager puede cambiar de completo a simple.  
 
 -   Si usa una tarea de copia de seguridad de SQL Server personalizada con el modelo de copia de seguridad completa (en lugar de la tarea de copia de seguridad integrada para Configuration Manager), la actualización puede cambiar su modelo de copia de seguridad de completa a sencilla.  
 
 **Solución**: después de actualizar a la versión 1511, revise la configuración de SQL Server y restáurela por completo si es necesario.  
 
-### <a name="when-you-add-a-service-window-to-a-new-site-server-service-windows-that-were---configured-for-another-site-server-are-deleted"></a>Al agregar una ventana de servicio a un nuevo servidor de sitio, se eliminan las ventanas de servicio que se habían configurado para otro servidor de sitio  
- Al usar ventanas de servicio con System Center Configuration Manager versión 1511, solo se pueden configurar ventanas de servicio para un único servidor de sitio en una jerarquía. Si después de configurar ventanas de servicio en un servidor, configura una ventana de servicio en un segundo servidor de sitio, las ventanas de servicio del primero se eliminan de forma silenciosa, sin ningún error ni advertencia.  
 
-**Solución alternativa**: instale la revisión que se describe en el [artículo 3142341 de Microsoft Knowledge Base](http://support.microsoft.com/kb/3142341). Este problema también se resuelve al instalar la actualización 1602 de System Center Configuration Manager.  
 
 ### <a name="an-update-is-stuck-with-a-state-of-downloading-in-the-updates-and-servicing-node-of-the-configuration-manager-console"></a>Una actualización está detenida con un estado Descargando en el nodo Actualizaciones y mantenimiento de la consola de Configuration Manager  
+<!-- Source bug pending. Consider move to core content.  -->
 Durante la descarga automática de actualizaciones por un punto de conexión de servicio en línea, una actualización puede bloquearse con un estado Descargando. Cuando se detiene la descarga de una actualización, aparecen entradas similares a las siguientes en los archivos de registro indicados:  
 
 Registro de DMPdownloader:  
@@ -83,50 +102,10 @@ ConfigMgrSetup.log:
 
 -   **Valor para estado**: establecido en **146944** decimal o **0x00023e00** hexadecimal  
 
-### <a name="pre-release-features-introduced-in-system-center-configuration-manager-1602"></a>Características de versión preliminar introducidas en System Center Configuration Manager 1602  
-
-Se incluyen características de versión preliminar en el producto para la realización de las primeras pruebas en un entorno de producción, pero no se debe considerar que ya estén listas para él.  
-
-A partir de la actualización 1606, debe dar su consentimiento antes de poder utilizar las características de la versión preliminar. Para obtener más información, consulte [Use pre-release features from updates](../../../../core/servers/manage/install-in-console-updates.md) (Uso de características de la versión preliminar a partir de las actualizaciones).
-
-La versión 1602 de System Center Configuration Manager introduce dos características de versión preliminar:  
-
--   Acceso condicional para equipos administrados por System Center Configuration Manager. Para obtener más información, consulte [Manage access to O365 services for PCs managed by System Center Configuration Manager](../../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md) (Administración del acceso a servicios de Office&365; para equipos administrados por System Center Configuration Manager).
-    - Después de instalar la actualización 1602, el tipo de característica aparece como liberado, aunque se trate de una versión preliminar.
-    - Si actualiza de la versión 1602 a la 1606, el tipo de característica se muestra como liberado aunque se conserve la versión preliminar.
-    - Si actualiza de la versión 1511 directamente a la versión 1606, el tipo de característica se muestra como versión preliminar.
-
-
--   Mantenimiento de una recopilación compatible con clústeres. Para obtener más información, consulte [Service a server group](../../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups) (Mantenimiento de un grupo de servidores) en [Capabilities in Technical Preview 1605 for System Center Configuration Manager](../../../../core/get-started/capabilities-in-technical-preview-1605.md) (Capacidades de Technical Preview 1605 para System Center Configuration Manager).  
-
-
-
-
-### <a name="recovery-options-for-a-secondary-site-are-not-available-in-the-console"></a>Las opciones de recuperación para un sitio secundario no están disponibles en la consola  
-Después de producirse un error en la recuperación de un sitio secundario, la opción **Recuperar sitio secundario** ya no está disponible en la consola de Configuration Manager.  
-
-Este problema afecta a System Center Configuration Manager versión 1511 y 1602 y previsiblemente se resolverá en una futura actualización.  
-
-**Solución alternativa**: use uno de los métodos siguientes para recuperar (reinstalar) el sitio secundario:  
-
--   Use **Preinst.exe** y el comando **/delsite** para quitar el sitio secundario y, a continuación, vuelva a instalarlo. Para obtener más información sobre preinst.exe, consulte [Hierarchy Maintenance Tool (Preinst.exe) for System Center Configuration Manager](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md) (Herramienta de mantenimiento de jerarquía (Preinst.exe) para System Center Configuration Manager).  
-
--   Ejecute el script siguiente para iniciar la recuperación del sitio secundario. Ejecute este script en la base de datos en el sitio primario principal del sitio secundario que desea recuperar:  
-
-    ```  
-    declare @SiteCode NVARCHAR(3)=N'<replace with secondary site code>'   
-
-    UPDATE Sites SET Status = 9  
-                    , DetailedStatus = 3  
-    FROM Sites WHERE SiteCode = @SiteCode  
-
-    UPDATE SCP SET SCP.Value1 = 9  
-                    , SCP.Value2 = N'3'  
-    FROM SC_SiteDefinition_Property SCP INNER JOIN SC_SiteDefinition SC ON SC.SiteNumber = SCP.SiteNumber  
-    WHERE SC.SiteCode = @SiteCode AND SCP.[Name] = N'Requested Status'  
-  ```  
 
 ###  <a name="setup-fails-when-using-redist-files-from-the-cdlatest-folder-with-a-manifest-verification-error"></a>Se produce un error en el programa de instalación cuando se usan archivos de redistribución de la carpeta CD.Latest con un error de comprobación de manifiesto
+<!-- Source bug pending  -->
+
 Al ejecutar el programa de instalación desde la carpeta CD.Latest creada para la versión 1606 y usar los archivos de redistribución incluidos en dicha carpeta, se produce un error en el programa de instalación. Aparecen los siguientes errores en el registro de instalación de Configuration Manager:
 
   - ERROR: File hash check failed for defaultcategories.dll
@@ -138,77 +117,38 @@ Al ejecutar el programa de instalación desde la carpeta CD.Latest creada para l
 
 ### <a name="service-connection-tool-throws-an-exception-when-sql-server-is-remote-or-when-shared-memory-is-disabled"></a>La herramienta de conexión de servicio produce una excepción cuando SQL Server está instalado en una ubicación remota o cuando la memoria compartida está deshabilitada
 A partir de la versión 1606, la herramienta de conexión de servicio genera una excepción cuando se cumple una de las siguientes condiciones:  
- -  La base de datos del sitio está instalada en una ubicación remota con respecto al equipo que hospeda el punto de conexión de servicio y usa un puerto no estándar (un puerto distinto de 1433).
- -  La base de datos del sitio está en el mismo servidor que el punto de conexión de servicio, pero la **memoria compartida** del protocolo de SQL está deshabilitada.
+ -    La base de datos del sitio está instalada en una ubicación remota con respecto al equipo que hospeda el punto de conexión de servicio y usa un puerto no estándar (un puerto distinto de 1433).
+ -     La base de datos del sitio está en el mismo servidor que el punto de conexión de servicio, pero la **memoria compartida** del protocolo de SQL está deshabilitada.
 
 La excepción es similar a la siguiente:
  - *Excepción no controlada: System.Data.SqlClient.SqlException: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (proveedor: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server) --*
 
 **Solución alternativa**: mientras usa la herramienta, debe modificar el registro del servidor que hospeda el punto de conexión de servicio para que incluya información sobre el puerto de SQL Server:
 
-   1.   Antes de usar la herramienta, edite la siguiente clave del Registro y agregue el número del puerto que está en uso con el nombre de SQL Server:
+   1.    Antes de usar la herramienta, edite la siguiente clave del Registro y agregue el número del puerto que está en uso con el nombre de SQL Server:
     - Clave: HKLM\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\
       - Valor: &lt;nombre de SQL Server>
     - Agregue: **,&lt;PUERTO>**
 
     Por ejemplo, para agregar el puerto *15001* a un servidor denominado *testserver.test.net*, la clave resultante sería la siguiente: ***HKLM\Software\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\testserver.test.net,15001***
 
-   2.   Después de agregar el puerto al registro, la herramienta debería funcionar con normalidad.  
+   2.    Después de agregar el puerto al registro, la herramienta debería funcionar con normalidad.  
 
-   3.   Una vez que haya acabado de usar la herramienta, cambie la clave del Registro al valor original para los pasos **-import** y **-connect**.  
-
-
+   3.    Una vez que haya acabado de usar la herramienta, cambie la clave del Registro al valor original para los pasos **-import** y **-connect**.  
 
 
 
 
-## <a name="backup-and-recovery"></a>Copia de seguridad y recuperación
-### <a name="pre-production-client-is-not-available-after-a-site-restore"></a>El cliente de preproducción no está disponible después de una restauración del sitio
-Con la versión 1602, si utiliza clientes de preproducción y restaura el sitio de nivel superior de la jerarquía desde una copia de seguridad, la versión del cliente de preproducción no está disponible después de que se restaura el sitio.  
-
-**Solución alternativa:** después de restaurar el sitio de nivel superior de la jerarquía debe copiar manualmente los archivos de cliente de preproducción para que Configuration Manager pueda procesarlos y restaurarlos para su utilización:
-1. En el equipo del servidor de sitio de nivel superior, copie el contenido de la carpeta *&lt;CM_Install_Location\>\\Client* en la carpeta *&lt;CM_Install_Location\>\\StagingClient*.
-
-2. Cree un archivo vacío denominado **client.acu** y copie o pegue este archivo en la carpeta *&lt;CM_Install_Location\>\\Inboxes\\hman.box* del servidor de sitio. (Este archivo puede ser un archivo de texto al que se ha cambiado de nombre, siempre y cuando ya no tenga la extensión txt). Después de colocar este archivo en la carpeta hman.box, el Administrador de jerarquía en el servidor de sitio iniciará y procesará los archivos de cliente y restaurará los archivos de cliente de preproducción para su uso.
-
-Este problema se resolvió en la versión 1606.
+<!-- No current Backup and Recovery relenotes
+## Backup and recovery
+-->
 
 
-## <a name="client-deployment-and-upgrade"></a>Actualizaciones e implementaciones de cliente  
+<!-- No current  Client deployment and upgrade relenotes
+## Client deployment and upgrade  
+-->
 
-### <a name="expansion-to-central-administration-site-stops-automatic-client-upgrades"></a>La expansión al sitio de administración central detiene las actualizaciones automáticas del cliente  
-Solo en la versión 1511, no podrá ejecutar actualizaciones de cliente automáticas para ningún sitio que se expanda de un sitio primario al sitio de administración central. Cuando se expande el sitio, el sitio autorizado en el paquete de actualización de cliente no está correctamente establecido en el nuevo sitio de administración central, lo que impide que se ejecuten actualizaciones de cliente automáticas de forma satisfactoria. Este problema solo existe en la versión 1511. En la versión 1602 y versiones posteriores, este problema se ha corregido.  
 
-**Solución alternativa:** ejecute el siguiente script SQL en la base de datos del sitio de administración central. Después de ejecutar el script, las actualizaciones de cliente automáticas se deben empezar a ejecutar con normalidad.  
-
-  ```  
-  DECLARE @RootSite AS NVARCHAR(3)  
-  DECLARE @SourceServer AS NVARCHAR(255)  
-  DECLARE @FullClientPkgSource AS NVARCHAR(255)  
-  DECLARE @UpgradePkgSource AS NVARCHAR(255)  
-
-  SELECT @RootSite = SiteCode, @SourceServer = SiteServer  
-  FROM sites  
-  WHERE ISNULL(ReportToSite, N'') = N''  
-
-  SELECT @FullClientPkgSource = N'\\' + @SourceServer + N'\SMS_' + @RootSite + N'\Client'  
-  SELECT @UpgradePkgSource = N'\\' + @SourceServer + N'\SMS_' + @RootSite + N'\ClientUpgrade'  
-
-  UPDATE SMSPackages_G  
-  SET Source = @FullClientPkgSource, SourceSite = @RootSite  
-  WHERE PkgID IN  
-      (SELECT FullPackageID FROM ClientDeploymentSettings)  
-
-  UPDATE SMSPackages_G  
-  SET Source = @UpgradePkgSource, SourceSite = @RootSite  
-  WHERE PkgID IN  
-      (SELECT UpgradePackageID FROM ClientDeploymentSettings)  
-
-  UPDATE ProgramOffers_G  
-  SET SourceSite = @RootSite  
-  WHERE OfferID IN  
-      (SELECT UpgradeAdvertisementID FROM ClientDeploymentSettings)  
-  ```  
 
 ## <a name="operating-system-deployment"></a>Implementación de sistema operativo  
 
@@ -294,9 +234,4 @@ Esto solo se produce cuando agrega la misma **recopilación de usuarios** a la p
 Este problema afecta al acceso condicional de System Center Configuration Manager para **Exchange local** con la actualización 1602 y se espera que se resuelva en una futura actualización.  
 
 **Solución alternativa**: agregue la **recopilación de usuarios** a la página **Colecciones objetivo** antes de seleccionar la **recopilación de usuarios** en la página **Recopilaciones exentas**, o asegúrese de que no agrega la misma **recopilación de usuarios** tanto a las recopilaciones objetivo como exentas.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

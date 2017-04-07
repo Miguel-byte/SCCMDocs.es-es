@@ -2,7 +2,7 @@
 title: Configurar alertas de Endpoint Protection | Microsoft Docs
 description: "Obtenga más información sobre cómo configurar alertas de Endpoint Protection en System Center Configuration Manager."
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 03/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9b20b50843cadc478d5b75a276d2a24aea30f2ff
-ms.openlocfilehash: 6e7b080c1e1876c0ccef9ce6568ce88b65dfca87
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 7f4329b289b606dee5bf31aad8207de52667229f
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -90,14 +91,15 @@ ms.openlocfilehash: 6e7b080c1e1876c0ccef9ce6568ce88b65dfca87
 
 9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades de** *<Nombre de recopilación\>*.  
 
+## <a name="alert-for-outdated-malware-client"></a>Alerta para clientes de malware obsoletos
+
+A partir de la versión 1702 de Configuration Manager, puede configurar una alerta para asegurarse de que los clientes de Endpoint Protection no están obsoletos. Ahora puede ver la **Versión de cliente antimalware** y el **Estado de implementación de Endpoint Protection** si va a **Activos y compatibilidad** > **Información general** > **Dispositivos** > **Todos los clientes de escritorio y servidor**. Para comprobar una alerta, vea **Alertas** en el área de trabajo **Supervisión**. Si más de un 20 % de los clientes administrados ejecutan una versión expirada del software antimalware, la versión de cliente de antimalware está obsoleta y se muestra la alerta. Esta alerta no aparece en la pestaña **Supervisión** > **Información general**. Para actualizar los clientes antimalware expirados, habilite las actualizaciones de software para los clientes antimalware.
+
+Para configurar el porcentaje en el que se genera la alerta, expanda **Supervisión** > **Alertas** > **Todas las alertas**, haga doble clic en **Clientes antimalware obsoletos** y modifique la opción **Generar alerta si el porcentaje de clientes administrados con una versión obsoleta del cliente antimalware es más de**.
+
 > [!div class="button"]
 [Paso siguiente >](endpoint-definition-updates.md)
 
 > [!div class="button"]
 [Atrás >](endpoint-protection-site-role.md)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 139dcf9bc2a9bd253592b969b6f9d814ffcdfd8e
-ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 640cdc67f301a81a45bf27f95eb03cbc8754a9aa
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -26,10 +27,10 @@ ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
 La información de este tema es específica para el uso de grupos de límites con las versiones 1511, 1602 y 1606 de System Center Configuration Manager.
-Si usa la versión 1610 u otra posterior, consulte [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#a-namebkmkboundarygroupsa-boundary-group/) (Grupos de límites) en *Definir los límites del sitio y los grupos de límites para System Center Configuration Manager* para obtener información sobre el uso de los grupos de límites rediseñados.  
+Si utiliza la versión 1610 o posterior, vea [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) (Configuración de grupos de límites) para obtener información sobre cómo usar los grupos de límites rediseñados.  
 
 
-##  <a name="a-namebkmkboundarygroupsa-boundary-groups"></a><a name="BKMK_BoundaryGroups"></a> Boundary groups  
+##  <a name="BKMK_BoundaryGroups"></a> Boundary groups  
  Cree grupos de límites para agrupar de forma lógica las ubicaciones de red (límites) de manera que su infraestructura de red resulte más fácil de administrar. Debe asignar límites a grupos de límites para poder utilizar el grupo de límites. Los clientes usan la configuración de grupos de límites para lo siguiente:  
 
 -   Asignación automática de sitio  
@@ -56,7 +57,7 @@ Al configurar grupos de límites, se agregan uno o varios límites al grupo de l
 
 1.  En la consola de Configuration Manager, elija **Administración** > **Configuración de jerarquía** >  **Grupos de límites**.  
 
-2.  Elija el grupo de límites que desea cambiar.  
+2.  Elija el grupo de límites que quiera cambiar.  
 
 3.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
 
@@ -122,7 +123,7 @@ Al configurar grupos de límites, se agregan uno o varios límites al grupo de l
 
  Las secciones siguientes proporcionan detalles adicionales sobre las configuraciones de grupos de límites.  
 
-###  <a name="a-namebkmkboundarysiteassignmenta-about-site-assignment"></a><a name="BKMK_BoundarySiteAssignment"></a> Información sobre la asignación de sitio  
+###  <a name="BKMK_BoundarySiteAssignment"></a> Información sobre la asignación de sitio  
  Puede configurar cada grupo de límites con un sitio asignado para los clientes.  
 
 -   Un cliente recién instalado que use la asignación de sitios automática se unirá al sitio asignado de un grupo de límites que tenga la ubicación de red actual del cliente.  
@@ -137,7 +138,7 @@ Al configurar grupos de límites, se agregan uno o varios límites al grupo de l
 
 Para obtener más información sobre la asignación de sitio de los clientes, consulte [Uso de la asignación de sitio automática para los equipos](../../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_AutomaticAssignment) en [Cómo asignar clientes a un sitio en System Center Configuration Manager](../../../../core/clients/deploy/assign-clients-to-a-site.md).  
 
-###  <a name="a-namebkmkboundarycontentlocationa-about-content-location"></a><a name="BKMK_BoundaryContentLocation"></a> Información sobre la ubicación del contenido  
+###  <a name="BKMK_BoundaryContentLocation"></a> Información sobre la ubicación del contenido  
  Puede configurar cada uno de los grupos de límites con uno o varios puntos de distribución y puntos de migración de estado, y puede asociar los mismos puntos de distribución y puntos de migración de estado a varios grupos de límites.  
 
 -   **Durante la distribución de software**, los clientes solicitan una ubicación para el contenido de la implementación. Configuration Manager envía al cliente una lista de puntos de distribución asociados a cada grupo de límites que incluye la ubicación de red actual del cliente.  
@@ -146,7 +147,7 @@ Para obtener más información sobre la asignación de sitio de los clientes, co
 
 Este comportamiento permite al cliente seleccionar el servidor más cercano desde el que transferir el contenido o la información de migración de estado.  
 
-###  <a name="a-namebkmkpreferredmpa-about-preferred-management-points"></a><a name="BKMK_PreferredMP"></a> Información sobre los puntos de administración preferidos  
+###  <a name="BKMK_PreferredMP"></a> Información sobre los puntos de administración preferidos  
  Los puntos de administración preferidos permiten que un cliente identifique un punto de administración asociado a su ubicación de red (límite) actual.  
 
 -   Un cliente intenta usar un punto de administración preferido de su sitio asignado antes de usar un punto de administración de su sitio asignado que no está configurado como preferido.  
@@ -158,7 +159,7 @@ Este comportamiento permite al cliente seleccionar el servidor más cercano desd
 > [!NOTE]  
 >  Cuando un cliente se mueve, por ejemplo, cuando se desplaza con un equipo portátil a una ubicación de oficina remota y cambia su ubicación de red, podría usar un punto de administración (o punto de administración proxy) desde el sitio local de su nueva ubicación, antes de intentar usar un punto de administración desde su sitio asignado (que incluye los puntos de administración preferidos).  Consulte [Understand how clients find site resources and services for System Center Configuration Manager](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md) (Comprender cómo los clientes buscan servicios y recursos de sitio para System Center Configuration Manager) para obtener más información.  
 
-###  <a name="a-namebkmkboundaryoverlapa-about-overlapping-boundaries"></a><a name="BKMK_BoundaryOverlap"></a> Información sobre la superposición de límites  
+###  <a name="BKMK_BoundaryOverlap"></a> Información sobre la superposición de límites  
  Configuration Manager admite configuraciones de límites que se superponen para la ubicación del contenido:  
 
 -   **Cuando un cliente solicita contenido** y la ubicación de red del cliente pertenece a varios grupos de límites, Configuration Manager envía al cliente una lista de todos los puntos de distribución que tienen el contenido.  
@@ -167,15 +168,10 @@ Este comportamiento permite al cliente seleccionar el servidor más cercano desd
 
 Este comportamiento permite al cliente seleccionar el servidor más cercano desde el que transferir el contenido o la información de migración de estado.  
 
-###  <a name="a-namebkmkboudnarynetworkspeeda-about-network-connection-speed"></a><a name="BKMK_BoudnaryNetworkSpeed"></a> Información sobre la velocidad de conexión de red  
+###  <a name="BKMK_BoudnaryNetworkSpeed"></a> Información sobre la velocidad de conexión de red  
  Puede establecer la velocidad de conexión de la red para cada servidor de sistema de sitio de un grupo de límites. Esta configuración se aplica a los clientes que se conectan a un sistema de sitio basado en la configuración de este grupo de límites. El mismo servidor de sistema de sitio puede tener diferentes velocidades de conexión establecidas para distintos grupos de límites.  
 
  De forma predeterminada, la velocidad de conexión de la red se establece en **Rápida**, pero puede cambiarla a **Lenta**. La velocidad de conexión de la red y la configuración de implementación permiten comprobar si un cliente puede descargar contenido desde un punto de distribución cuando este se encuentra en un grupo de límites asociado.  
 
  Para obtener más información sobre cómo afecta la configuración de la velocidad de conexión de la red a la forma en que los clientes obtienen el contenido, consulte [Escenarios de ubicación de orígenes de contenido](../../../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

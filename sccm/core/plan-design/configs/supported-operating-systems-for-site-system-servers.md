@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 477ffa5d61d2dfaedf8a3a1f5687e2d72698ad28
-ms.openlocfilehash: f175e11d9402e7c57c45edb4d5bbe969de5dcdf7
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 86109f7186422c2b29ee933e827a7d14123e5792
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -183,6 +183,11 @@ A partir de la versión 1606 con el paquete acumulativo de revisiones de KB31866
 ## <a name="windows-server-2008-r2-with-sp1-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 R2 con SP1 (x64): Standard, Enterprise y Datacenter  
  Windows Server 2008 R2 tiene ahora soporte extendido y ya no está dentro del soporte estándar, tal y como se detalla en el [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle). Para obtener más información sobre la compatibilidad futura de estos sistemas operativos como servidores de sistema de sitio con Configuration Manager, vea [Características eliminadas y en desuso de System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
+ A partir de la versión 1702 de Configuration Manager, este sistema operativo no es compatible para los servidores de sitio o la mayoría de los roles de sistema de sitio, pero se seguirá admitiendo para el rol de sistema de sitio del punto de distribución y del punto de migración de estado (incluidos los puntos de distribución de extracción, así como para el entorno PXE y multidifusión).
+ 
+ Las versiones anteriores a la 1702 continuarán admitiendo su uso para lo siguiente.
+
+
 **Servidores de sitio:**  
 
 -   Sitio de administración central  
@@ -292,14 +297,14 @@ No se admite este sistema operativo para servidores de sitio o roles de sistema 
 
 ## <a name="the-server-core-installation-of-windows-server-2016"></a>La instalación Server Core de Windows Server 2016
 A partir de la versión 1606 con el paquete acumulativo de revisiones de KB3186654 (o la versión de línea base de 1606 publicada en octubre de 2016), el sistema operativo puede usarse como punto de distribución, con las siguientes limitaciones:  
-  -   Solo se admite la versión de&64; bits.
+  -   Solo se admite la versión de 64 bits.
   -   Los puntos de distribución de este sistema operativo no son compatibles con PXE o Multidifusión.  
 
 
 ## <a name="the-server-core-installation-of-windows-server-2012-r2"></a>La instalación de Server Core de Windows Server 2012 R2  
  Además de los sistemas operativos anteriores que se muestran, la instalación Server Core de Windows Server 2012 R2 se admite para su uso como un punto de distribución con las siguientes limitaciones:  
 
--   Solo se admite la versión de&64; bits.
+-   Solo se admite la versión de 64 bits.
 
 -   Los puntos de distribución de este sistema operativo no son compatibles con PXE o Multidifusión.  
 

@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 766120f5ca79f279a513b62c35a2374c859b253a
-ms.openlocfilehash: 079be3c97e4239f8c5293bed5a2ce13abfbe7798
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 238e460885b6490b3744690640f9ff040902b35f
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -116,7 +116,8 @@ Para obtener más información, consulte [Almacenamiento en caché del mismo niv
 ## <a name="content-library"></a>Biblioteca de contenido  
  La biblioteca de contenido es un almacén de instancia única del contenido que Configuration Manager usa para reducir el tamaño total del cuerpo combinado del contenido que distribuya.  
 
-Obtenga más información sobre la [biblioteca de contenido](../../../core/plan-design/hierarchy/the-content-library.md).
+- Obtenga más información sobre la [biblioteca de contenido](../../../core/plan-design/hierarchy/the-content-library.md).
+- Utilice la herramienta [Content Library Cleanup Tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) para quitar contenido cuando deja de estar asociado con una aplicación.  
 
 
 ## <a name="distribution-points"></a>Puntos de distribución  

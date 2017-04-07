@@ -2,7 +2,7 @@
 title: Actualizaciones | Microsoft Docs
 description: "Obtenga información sobre un método de servicio en la consola denominado **Actualizaciones y mantenimiento** que facilita la ubicación e instalación de las actualizaciones recomendadas."
 ms.custom: na
-ms.date: 1/11/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 816c6bd33e42b70bbafed0dea7624bc5a5421544
-ms.openlocfilehash: 55d4f1805937405c4101f5b814875818d2aa72c0
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: bd72d17e463cb65e79b78613b631b0267b2b26a0
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -46,8 +47,8 @@ System Center Configuration Manager usa un método de servicio en la consola den
 Si usa la rama de Technical Preview, consulte [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview) (Technical Preview para System Center Configuration Manager) para obtener información adicional específica de esa rama.
 
 
-##  <a name="a-namebkmkbaselinesa-baseline-and-update-versions"></a><a name="bkmk_Baselines"></a> Versiones de línea de base y versiones de actualización  
- La versión inicial de la rama actual de System Center Configuration Manager era la versión 1511, que es una versión de línea base. La versión 1606 se ha publicado como una línea base posteriormente:  
+##  <a name="bkmk_Baselines"></a> Versiones de línea de base y versiones de actualización  
+ La primera versión de la rama actual de System Center Configuration Manager era la versión 1511, que era una versión de línea base. Una versión de línea base más reciente es la 1606.
 
 -   Use la versión de línea de base más reciente cuando instale un sitio nuevo en una jerarquía nueva.  
 
@@ -73,22 +74,25 @@ Algunas actualizaciones de Configuration Manager se encuentran disponibles tanto
 
 Las siguientes versiones de Configuration Manager están disponibles como línea de base, actualización, o ambas:  
 
-|Versión|Fecha de disponibilidad|[Fecha de finalización del soporte técnico](/sccm/core/servers/manage/current-branch-versions-supported) |Línea de base|Actualización en la consola|  
+|Versión |Fecha de disponibilidad|[Fecha de finalización del soporte técnico](/sccm/core/servers/manage/current-branch-versions-supported) |Línea de base|Actualización en la consola|  
 |-------------|-----------|------------|--------------|------------------------|  
-| 1511 <br /><br /> 5.00.8325.1000|12/8/2015| 8/12/2016|Sí|No|  
-|[1602](/sccm/core/plan-design/changes/whats-new-in-version-1602)<br /><br /> 5.00.8355.1000|3/11/2016| 11/3/2017|No|Sí|
+|[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|3/27/2017| 3/27/2018|No|Sí|
+|[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|18/11/2016| 18/11/2017|No|Sí|
 |[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|22/7/2016| 22/7/2017|No|Sí|
 |[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) con el paquete acumulativo de revisiones 1606 (KB3186654) </br></br>5.00.8412.1307 *(Nota 1)* |12/10/2016| 22/7/2017|Sí|No|
-|[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|18/11/2016| 18/11/2017|No|Sí|
+| 1602<br /><br /> 5.00.8355.1000|3/11/2016| 11/3/2017|No|Sí|
+| 1511 <br /><br /> 5.00.8325.1000|12/8/2015| 8/12/2016|Sí|No|  
+
+
 *(Nota 1)* Este medio de línea base 1606 está disponible como parte de Microsoft System Center 2016 o de una versión de System Center Configuration Manager (rama actual y rama de mantenimiento a largo plazo 1606).
 
 Para comprobar la versión del sitio de Configuration Manager, vaya a **Acerca de System Center Configuration Manager** en la esquina superior izquierda de la consola, donde aparece la nueva versión del sitio y la consola.  
 
-##  <a name="a-namebkmkinconsolea-in-console-updates-and-servicing"></a><a name="bkmk_inconsole"></a> Actualizaciones y servicio en la consola  
+##  <a name="bkmk_inconsole"></a> Actualizaciones y servicio en la consola  
  Cuando usa una instalación lista para producción de System Center Configuration Manager, a la que también se conoce como rama actual, la mayoría de las actualizaciones que se instalan están disponibles con el canal Actualizaciones y mantenimiento. Este método identifica, descarga y pone a disposición las actualizaciones que se aplican a la versión y la configuración actual de la infraestructura e incluye solo las actualizaciones que Microsoft recomienda para todos los clientes.   
  Entre ellos, se incluye:  
 
--   Versiones nuevas, como la versión 1602.  
+-   Versiones nuevas, como la versión 1610.  
 
 -   Actualizaciones, que incluyen características nuevas para la versión actual.  
 
@@ -131,7 +135,7 @@ Cuando se instala una actualización en la consola:
 > [!NOTE]  
 >  La versión de producción de System Center Configuration Manager (rama actual), la rama de mantenimiento a largo plazo y Technical Preview para System Center Configuration Manager son diferentes versiones. Por lo tanto, las actualizaciones que se aplican para una rama no están disponibles como actualizaciones en la consola para las demás ramas. Para más información sobre las diferentes ramas, consulte [Which branch of Configuration Manager should I use (¿Qué rama de Configuration Manager debo usar?)](/sccm/core/understand/which-branch-should-i-use).
 
-##  <a name="a-namebkmkoutofbanda-out-of-band-hotfixes"></a><a name="bkmk_outofband"></a> Revisiones fuera de banda  
+##  <a name="bkmk_outofband"></a> Revisiones fuera de banda  
 Algunas revisiones se lanzan con disponibilidad limitada para abordar problemas específicos, o bien son aplicables para todos los clientes, pero no se pueden instalar con el método en la consola. Estas revisiones se entregan fuera de banda y no se detectan desde el servicio en la nube de Microsoft.  
 
 Habitualmente, obtiene información sobre las revisiones fuera de banda desde los servicios de asistencia al cliente de Microsoft, un artículo de Knowledge Base o desde el [blog del equipo de System Center Configuration Manager](https://blogs.technet.microsoft.com/configmgrteam) cuando busca corregir o enfrentar un problema con la implementación de Configuration Manager.  
@@ -145,9 +149,4 @@ Estas revisiones se instalan manualmente, mediante uno de estos dos métodos:
 -   **Instalador de revisiones:** esta herramienta se usa para instalar manualmente una revisión que no se puede instalar con el método en la consola. Este método se usa para las revisiones que usan la siguiente estructura de nombre de archivo: **&lt;Producto\>-&lt;versión del producto\>-&lt;identificador del artículo de KB\>-&lt;plataforma\>-&lt;idioma\>.exe**.
 
      Para obtener más información, consulte [Use the Hotfix Installer to install updates for System Center Configuration Manager](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md) (Uso del instalador de revisiones para instalar actualizaciones para System Center Configuration Manager).
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

@@ -2,7 +2,7 @@
 title: "Requisitos previos de la implementación de clientes de Windows | Microsoft Docs"
 description: "Obtenga información sobre los requisitos previos para la implementación de clientes en equipos Windows con System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: cbcffea0fe2b4c8a05d3a835ff1193b528e55762
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 7ed1b9e6802cc20defcb92a8e536983fd757bd29
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -36,7 +36,7 @@ La implementación de clientes de Configuration Manager en su entorno tiene las 
 > [!NOTE]  
 >  Los números de versión de software que se muestran en este artículo solo indican los números de versión mínimos necesarios.  
 
-##  <a name="a-namebkmkprereqscomputersa-prerequisites-for-computer-clients"></a><a name="BKMK_prereqs_computers"></a> Requisitos previos de los equipos cliente  
+##  <a name="BKMK_prereqs_computers"></a> Requisitos previos de los equipos cliente  
  Utilice la siguiente información para determinar los requisitos previos para la instalación del cliente de Configuration Manager en los equipos.  
 
 ### <a name="dependencies-external-to-configuration-manager"></a>Dependencias externas a Configuration Manager  
@@ -65,9 +65,10 @@ La implementación de clientes de Configuration Manager en su entorno tiene las 
 |Microsoft Silverlight 5.1.41212.0 (a partir de la versión 1602 de Configuration Manager)|Necesario para admitir la experiencia de usuario del sitio web del catálogo de aplicaciones.|  
 |Microsoft .NET Framework versión 4.5.2.|Necesario para admitir las operaciones de cliente. Se instala automáticamente en el equipo cliente si este no tiene Microsoft .NET Framework versión 4.5 o posterior instalado. Para más información, consulte [Detalles adicionales sobre la versión 4.5.2 de Microsoft .NET Framework](#dotNet).|  
 |Componentes de Microsoft SQL Server Compact 3.5 SP2|Necesarios para almacenar información relacionada con las operaciones de cliente.|  
-|Componentes de creación de imágenes de Microsoft Windows|Requisito de Microsoft .NET Framework 4.0 para Windows Server 2003 o Windows XP SP2 para equipos de 64 bits.|  
+|Componentes de creación de imágenes de Microsoft Windows|Requisito de Microsoft .NET Framework 4.0 para Windows Server 2003 o Windows XP SP2 para equipos de 64 bits.|
+|Cliente de software de PC de Microsoft Intune|No puede ejecutar el cliente de software de PC de Intune y el cliente de Configuration Manager en el mismo equipo. Asegúrese de quitar el cliente de Intune antes de instalar al cliente de Configuration Manager.|
 
-####  <a name="a-namedotneta-additional-details-about-microsoft-net-framework-version-452"></a><a name="dotNet"></a> Detalles adicionales sobre la versión 4.5.2 de Microsoft .NET Framework  
+####  <a name="dotNet"></a> Detalles adicionales sobre la versión 4.5.2 de Microsoft .NET Framework  
 
 > [!NOTE]  
 >  El 12 de enero de 2016 finalizó el soporte técnico para .NET 4.0, 4.5 y 4.5.1. Para más información, consulte [Preguntas más frecuentes de la directiva del ciclo de vida de soporte técnico de Microsoft de .NET Framework](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update) en support.microsoft.com.  
@@ -162,7 +163,7 @@ La implementación de clientes de Configuration Manager en su entorno tiene las 
 ### <a name="firewall-requirements"></a>Requisitos de firewall  
  Si hay un firewall entre los servidores del sistema del sitio y los equipos en los que desea instalar el cliente de Configuration Manager, consulte [Windows Firewall and port settings for clients in System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md) (Configuración de puertos y Firewall de Windows para clientes en System Center Configuration Manager).  
 
-##  <a name="a-namebkmkprereqsmobiledevicesa-prerequisites-for-mobile-device-clients"></a><a name="BKMK_prereqs_mobiledevices"></a> Requisitos previos de los clientes de dispositivos móviles  
+##  <a name="BKMK_prereqs_mobiledevices"></a> Requisitos previos de los clientes de dispositivos móviles  
  Utilice la siguiente información para determinar los requisitos previos para la instalación del cliente de Configuration Manager en los dispositivos móviles y utilice Configuration Manager para inscribirlos.  
 
 ### <a name="dependencies-external-to-configuration-manager"></a>Dependencias externas a Configuration Manager  

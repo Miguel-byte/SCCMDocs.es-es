@@ -2,7 +2,7 @@
 title: "Inscribir dispositivos con el administrador de inscripción de dispositivos en Configuration Manager | Microsoft Docs"
 description: "Inscriba dispositivos de la empresa con la cuenta del administrador de inscripción de dispositivos con System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
 caps.latest.revision: 8
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: b356d2351b8a28bdca78176fdf0ff3c913a36bd3
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: 7573590763c68a4c97d388be1e64054c318da9cc
+ms.openlocfilehash: 8c491636925670732e6af67d8c1c741e4793ef96
+ms.lasthandoff: 03/24/2017
 
 
 ---
@@ -26,27 +26,23 @@ ms.lasthandoff: 01/24/2017
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Las organizaciones pueden usar System Center Configuration Manager e Intune para administrar un gran número de dispositivos móviles con una sola cuenta de usuario. La cuenta del *administrador de inscripción de dispositivos* es una cuenta especial de Intune con permisos para inscribir más de cinco dispositivos.  
+Las organizaciones pueden usar Intune para administrar un gran número de dispositivos móviles con una sola cuenta de usuario. La cuenta del *administrador de inscripción de dispositivos* (DEM) es una cuenta de usuario especial que puede inscribir hasta 1000 dispositivos. Agregue usuarios existentes a la cuenta de DEM para ofrecerles funcionalidades DEM especiales. Cada dispositivo inscrito usa una sola licencia. Se recomienda que use dispositivos inscritos a través de esta cuenta como dispositivos compartidos sin afinidad de usuario, en lugar de dispositivos dedicados personales.  
 
 ## <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager"></a>Inscribir dispositivos propiedad de la empresa con el administrador de inscripción de dispositivos  
  Puede asignar un administrador o supervisor de almacén, por ejemplo, una cuenta de usuario de administrador de inscripción de dispositivos que le permita hacer lo siguiente:  
 
--   Inscribir dispositivos para la administración  
-
+-   Inscribir hasta 1000 dispositivos para la administración  
 -   Usar la aplicación de portal de empresa para instalar aplicaciones de empresa  
-
--   Instalar y desinstalar software  
-
 -   Configurar el acceso a los datos de la empresa  
-
 
 Las limitaciones siguientes se aplican a los dispositivos que se administran mediante una cuenta de administrador de inscripción de dispositivos:
 
 - El administrador del almacén no puede restablecer el dispositivo desde el portal de empresa.  
--  Los dispositivos no pueden estar unidos al área de trabajo ni a Azure Active Directory. Esto impide que estos dispositivos usen el acceso condicional.
+- Los dispositivos no pueden estar unidos al área de trabajo ni a Azure Active Directory. Esto impide que estos dispositivos usen el acceso condicional.
 -  Para implementar aplicaciones de empresa en dispositivos administrados con el administrador de inscripción de dispositivos, implemente la aplicación de portal de empresa como una **instalación requerida** en la cuenta de usuario del administrador de inscripción de dispositivos. Después, el administrador de inscripción de dispositivos puede iniciar la aplicación de portal de empresa para instalar aplicaciones adicionales.
 - Para mejorar el rendimiento, en la aplicación de portal de empresa solo se muestra el dispositivo local. La administración remota de otros dispositivos DEM solo puede llevarla a cabo un administrador desde la consola de Configuration Manager.
 - El sitio web del portal de empresa no está disponible para cuentas de administrador de inscripción de dispositivos. Use la aplicación de portal de empresa.
+- (Solo iOS) Si utiliza DEM para inscribir dispositivos iOS, no puede utilizar Apple Configurator ni el Programa de inscripción de dispositivos (DEP) de Apple para inscribir dispositivos.
 
  **Ejemplos de escenario de administrador de inscripción de dispositivos:**   
 Un restaurante quiere tabletas de punto de venta para los camareros y monitores de pedidos para el personal de cocina. Los empleados no necesitan nunca acceder a los datos de la empresa ni iniciar sesión como usuario. El administrador de Intune crea una cuenta de administrador de inscripción de dispositivos e inscribe los dispositivos propiedad de la empresa usando esa cuenta. El administrador también podría dar las credenciales de inscripción de dispositivos a un responsable del restaurante, para que pueda inscribir y administrar los dispositivos.  

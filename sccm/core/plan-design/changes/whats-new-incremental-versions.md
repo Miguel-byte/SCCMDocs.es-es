@@ -2,7 +2,7 @@
 title: Versiones incrementales de System Center Configuration Manager | Microsoft Docs
 description: "Obtenga información acerca de cómo instalar y administrar las actualizaciones de System Center Configuration Manager."
 ms.custom: na
-ms.date: 2/6/2017
+ms.date: 3/27/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 25627c625f09084e5ff2ca6d25f66396052b74b0
-ms.openlocfilehash: b296a5471fbd9d743c7877f0161b818a06c9d349
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: fb968fe866920c93edaa43be457032c3e7fd1c42
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="whats-new-in-system-center-configuration-manager-incremental-versions"></a>Acerca de las versiones incrementales de System Center Configuration Manager.
@@ -31,20 +32,18 @@ ms.openlocfilehash: b296a5471fbd9d743c7877f0161b818a06c9d349
 
  Ahora, para actualizar el producto a una nueva versión de la rama actual, utilice la consola de Configuration Manager para buscar y, luego, [instalar actualizaciones en consola](../../../core/servers/manage/install-in-console-updates.md). Varias veces al año, se publican versiones nuevas con actualizaciones de productos. Cada versión también puede incorporar nuevas características.  
 
- Cuando instala una actualización con características nuevas, puede usar (o no) esas características en la implementación. Las distintas versiones de actualización se identifican por año y mes. Por ejemplo, la versión 1511 corresponde a noviembre de 2015 (el mes en el que se envió a producción por primera vez la rama actual de System Center Configuration Manager). Las actualizaciones siguientes, a partir de 2016, tienen nombres de versión como 1602, que indica que la actualización se creó en febrero de 2016.
+ Cuando instala una actualización con características nuevas, puede usar (o no) esas características en la implementación. Las distintas versiones de actualización se identifican por año y mes. Por ejemplo, la versión 1511 corresponde a noviembre de 2015 (el mes en el que se envió a producción por primera vez la rama actual de System Center Configuration Manager). Las actualizaciones posteriores, a partir de 2016, tienen nombres de versión como 1610, que indica que la actualización se creó en octubre de 2016.
 
  Estas versiones de actualización son fundamentales para comprender la versión incremental de su instalación de System Center Configuration Manager y las características que tiene disponibles para habilitar en su implementación.
 
  La versión inicial de la rama actual de System Center Configuration Manager es la versión 1511. A partir de esta versión inicial, hay actualizaciones adicionales disponibles. Siga estos vínculos para descubrir las novedades de cada versión:
+  - [Novedades de la versión 1702](../../../core/plan-design/changes/whats-new-in-version-1702.md)
   - [Novedades de la versión 1610](../../../core/plan-design/changes/whats-new-in-version-1610.md)
-  - [Novedades de la versión 1606](../../../core/plan-design/changes/whats-new-in-version-1606.md)
-  - [Novedades de la versión 1602](../../../core/plan-design/changes/whats-new-in-version-1602.md)
+  - [Novedades de la versión 1606](../../../core/plan-design/changes/whats-new-in-version-1606.md)  
 
+<!-- 
+  - [What's new in version 1602](../../../core/plan-design/changes/whats-new-in-version-1602.md)
+-->
 
  Cada versión de la actualización tiene soporte durante un año tras su publicación. Se recomienda que, siempre que sea posible, tenga la versión más actualizada. Para más información, consulte [Support for System Center Configuration Manager current branch versions](../../../core/servers/manage/current-branch-versions-supported.md) (Soporte para las versiones de la Rama actual de System Center Configuration Manager).  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
