@@ -155,7 +155,7 @@ Un punto de distribución basado en la nube tiene las siguientes limitaciones:
 
     También puede especificar un archivo **.publishsettings** de versión uno desde el SDK 1.7 de Azure. Para obtener información sobre los archivos publishsettings, consulte la documentación de Azure.  
 
-    Para obtener más información, vea [Introducción a los certificados para los servicios en la nube de Azure](http://go.microsoft.com/fwlink/p/?LinkId=220281)[](http://go.microsoft.com/fwlink/p/?LinkId=241722) en la sección sobre la plataforma Azure de MSDN Library.  
+    Para obtener más información, consulte [Crear un certificado de administración para Windows Azure](http://go.microsoft.com/fwlink/p/?LinkId=220281) y [Agregar un certificado de administración a una suscripción de Windows Azure](http://go.microsoft.com/fwlink/p/?LinkId=241722) en la sección Plataforma Windows Azure de MSDN Library.  
 
 -   **Certificado de servicio para la comunicación del cliente con el punto de distribución**: el certificado de servicio de punto de distribución basado en la nube de Configuration Manager establece confianza entre los clientes de Configuration Manager y el punto de distribución basado en la nube y protege los datos que los clientes descargan del mismo mediante la capa de sockets seguros (SSL) a través de HTTPS.  
 
