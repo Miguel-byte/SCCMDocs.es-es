@@ -17,9 +17,9 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: f919ac97b24604babca4f70f184220604227eb0e
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: aa8924a013ebdbee888cab33001fddbe7ad2d67e
+ms.openlocfilehash: 80a716f5a42a81e5550eb1b5c7f14534e14a4fb7
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -59,8 +59,6 @@ En la página **General** del Asistente para crear perfil de certificado, especi
 -   **Configuración de Protocolo de inscripción de certificados simple (SCEP)**: seleccione este tipo de perfil de certificado si desea solicitar un certificado para un dispositivo o usuario mediante el Protocolo de inscripción de certificados simple y el servicio de rol Servicio de inscripción de dispositivos de red.
 
 -   **Intercambio de información personal: configuración de PKCS #12 (PFX): importar**: seleccione esta opción para importar un certificado PFX. Para obtener más información sobre la creación de certificados PFX, consulte [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md) (Crear perfiles de certificado PFX).
-
-- **Intercambio de información personal: configuración de PKCS #12 (PFX): crear**: seleccione esta opción para crear un nuevo perfil de certificado PFX. Para obtener más información sobre la creación de certificados PFX, consulte [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md) (Crear perfiles de certificado PFX).
 
 
 

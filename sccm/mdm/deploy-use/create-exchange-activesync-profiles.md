@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: c90e5ebc2aca3f2133227fa59057aad8db3713f4
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: aa8924a013ebdbee888cab33001fddbe7ad2d67e
+ms.openlocfilehash: a0353c49360cd99bc92b4546e12a52c3d13d1d14
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -105,10 +105,6 @@ Iniciar el Asistente para crear perfiles de correo electrónico de Exchange Acti
 
     -   **Usar S/MIME** (solo para dispositivos iOS) El correo electrónico saliente se envía mediante cifrado S/MIME. Elija entre las siguientes opciones:
 
-        -   **Certificados de firma:** haga clic en **Seleccionar** y, después, seleccione el certificado que se va a usar para la firma. Esta opción es válida únicamente en dispositivos iOS.  
-
-            > [!NOTE]  
-            >  Para poder seleccionar un certificado de firma, antes hay que configurar un perfil de certificado PFX o de Protocolo de inscripción de certificados simple (SCEP). Para obtener más información sobre los perfiles de certificado, consulte [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles) (Perfiles de certificado en Configuration Manager).  
 
         -   **Certificados de cifrado:** haga clic en **Seleccionar** y, después, seleccione el certificado que se va a usar para el cifrado. Esta opción es válida únicamente en dispositivos iOS. Solo puede seleccionar un certificado PFX que se usará como un certificado de cifrado.
 
