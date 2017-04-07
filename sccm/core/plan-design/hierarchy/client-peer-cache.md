@@ -2,7 +2,7 @@
 title: "Caché del mismo nivel de cliente | System Center Configuration Manager"
 description: "Use la caché del mismo nivel de cliente para las ubicaciones de origen de contenido cuando se distribuya contenido con System Center Configuration Manager."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 4/4/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 5298f1c836c1a872862b0e972180ac0c99c59751
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 26feb0b166beb7e48cb800a5077d00dbc3eec51a
+ms.openlocfilehash: dcd05d7d120f8997562da7d92b38c8b52a512357
+ms.lasthandoff: 04/04/2017
 
 ---
 
@@ -70,7 +70,7 @@ Para ayudarle a entender el uso de la caché del mismo nivel, puede ver el panel
 A partir de la versión 1702, puede usar tres informes para ver el uso de la caché del mismo nivel. En la consola, vaya a **Supervisión** > **Crear informes** > **Informes**. Todos los informes tienen un tipo de **contenido de distribución de software**:
 1.  **Rechazo del contenido de origen de la caché del mismo nivel**:  
 Utilice este informe para conocer la frecuencia con que los orígenes de la caché del mismo nivel de un grupo de límites rechazan una solicitud de contenido.
- - **Problema conocido:** al desglosar resultados como *MaxCPULoad* o *MaxDiskIO*, es posible que reciba un error que sugiere que no se puede encontrar el informe o los detalles. Como solución alternativa, use los dos informes siguientes, donde se muestran los resultados directamente. 
+ - **Problema conocido:** al desglosar resultados como *MaxCPULoad* o *MaxDiskIO*, es posible que reciba un error que sugiere que no se puede encontrar el informe o los detalles. Como solución alternativa, use los dos informes siguientes, donde se muestran los resultados directamente.
 
 2. **Rechazo del contenido de origen de la caché del mismo nivel según la condición**:  
 Utilice este informe para conocer los detalles de rechazo de un tipo de rechazo o grupo de límites específico. Puede especificar
@@ -87,9 +87,11 @@ Utilice este informe para conocer los detalles de rechazo de un tipo de rechazo 
 
 
 ## <a name="requirements-and-considerations-for-peer-cache"></a>Requisitos y consideraciones de la caché del mismo nivel
-- El almacenamiento en caché del mismo nivel es compatible con cualquier sistema operativo de Windows admitido como cliente de Configuration Manager. No se admiten sistemas operativos que no son Windows para el almacenamiento en caché del mismo nivel.
+-   El almacenamiento en caché del mismo nivel es compatible con cualquier sistema operativo de Windows admitido como cliente de Configuration Manager. No se admiten sistemas operativos que no son Windows para el almacenamiento en caché del mismo nivel.
 
-- Los clientes solo pueden transferir contenido desde los clientes de la caché del mismo nivel que están en su actual grupo de límites.
+-   Los clientes solo pueden transferir contenido desde los clientes de la caché del mismo nivel que están en su actual grupo de límites.
+
+-   Los sitios en los que los clientes usen la caché del mismo nivel deben estar configurados con una [cuenta de acceso de red](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account). El equipo de origen de la caché del mismo nivel usa dicha cuenta para autenticar las solicitudes de elementos del mismo nivel, acción para la que solo se necesitan permisos de usuario de dominio.
 
 -     Dado que el límite actual de un origen de contenido de la caché del mismo nivel viene determinado por el último envío de inventario de hardware del cliente, si un cliente se mueve a una ubicación de red y se encuentra en un grupo de límites diferente, podría seguir considerándose miembro de su grupo de límites anterior para la caché del mismo nivel. Esto puede dar lugar a que un cliente ofrezca un origen de contenido de la caché del mismo nivel que no está en su ubicación de red inmediata. Se recomienda excluir del origen de la caché del mismo nivel a los clientes que son propensos a esta configuración.
 

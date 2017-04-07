@@ -2,7 +2,7 @@
 title: "Nueva versión 1702 | Microsoft Docs"
 description: "Conozca en detalle los cambios y las nuevas funciones introducidas en la versión 1702 de System Center Configuration Manager."
 ms.custom: na
-ms.date: 3/28/2017
+ms.date: 3/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -14,9 +14,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 15debff961c872ed90c1365d4f8e9946fbc70cdc
-ms.openlocfilehash: 10e0c2108594253a8e6cb39bc47f84c72c073e6c
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 70034213442f4c3d5a28ab65c2ceb51aa64320ad
+ms.openlocfilehash: 9332278e960051caf6875f45212af644e2ea7890
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Novedades de la versión 1702 de System Center Configuration Manager
@@ -28,9 +28,9 @@ La actualización 1702 para la rama actual de System Center Configuration Manage
 > [!TIP]  
 > Para instalar un sitio nuevo, debe usar una versión de línea base de Configuration Manager.  
 >  Más información acerca de:    
->  -   [Instalación de nuevos sitios](https://technet.microsoft.com/library/mt590197.aspx)  
->  -   [Instalación de actualizaciones en los sitios](https://technet.microsoft.com/library/mt607046.aspx)  
->  -   [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [Instalación de nuevos sitios](https://technet.microsoft.com/library/mt590197.aspx)  
+>   - [Instalación de actualizaciones en los sitios](https://technet.microsoft.com/library/mt607046.aspx)  
+>   - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
 En las secciones siguientes se proporcionan detalles sobre los cambios y las nuevas funciones introducidas en la versión 1702 de Configuration Manager.  
 
@@ -216,6 +216,8 @@ Ahora, la versión de compilación realiza un seguimiento de Windows 10 ADK para
 ### <a name="default-boot-image-source-path-can-no-longer-be-changed"></a>Ya no se puede cambiar la ruta de acceso al origen de la imagen de arranque predeterminada
 Configuration Manager administra las imágenes de arranque predeterminadas, y la ruta de acceso de origen de la imagen de arranque predeterminada ya no se puede cambiar en la consola de Configuration Manager o mediante el SDK de Configuration Manager. Puede seguir configurando una ruta de acceso de origen personalizada para las imágenes de arranque personalizadas.
 
+### <a name="default-boot-images-are-regenerated-after-upgrading-configuration-manager-to-a-new-version"></a>Imágenes de arranque predeterminadas regeneradas tras actualizar Configuration Manager a una versión nueva
+A partir de esta versión, al actualizar la versión de Windows ADK y usar las actualizaciones para instalar la última versión de Configuration Manager, este regenerará las imágenes de arranque predeterminadas. Esto incluye la nueva versión de Windows PE a partir del Windows ADK actualizado y la nueva versión del cliente de Configuration Manager, así como los controladores, las personalizaciones, etc. Las imágenes de arranque personalizadas no se verán modificadas. Para obtener más información, consulte [Administrar imágenes de arranque](/sccm/osd/get-started/manage-boot-images#BKMK_BootImageDefault).
 
 ## <a name="software-updates"></a>Actualizaciones de software
 
@@ -267,16 +269,6 @@ A partir de la versión 1702, la administración de dispositivos móviles híbri
 - [Perfiles de correo electrónico para Android for Work](/sccm/mdm/deploy-use/create-exchange-activesync-profiles)
 - [Directivas de cumplimiento para Android for Work](/sccm/mdm/deploy-use/create-compliance-policy)
 
-
-### <a name="improvements-to-certificate-profiles"></a>Mejoras de los perfiles de certificado
-
-Ahora se puede crear un perfil de certificado PFX que sea compatible con S/MIME e implementarlo a los usuarios.  Después, este certificado puede usarse para el cifrado de S/MIME y el inicio de sesión en los dispositivos iOS inscritos por el usuario.
-Para más información, vea [Cómo crear perfiles de certificados PFX](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) y [Perfiles de correo electrónico de Exchange ActiveSync](/sccm/mdm/deploy-use/create-exchange-activesync-profiles).
-
-Además, ahora se pueden especificar varias entidades de certificación (CA) en varios roles de sistema de sitio de punto de registro de certificado y después asignar qué entidad de certificación procesa las solicitudes como parte del perfil de certificado.
-Para más información, vea [Infraestructura de certificados](/sccm/protect/deploy-use/certificate-infrastructure).
-
-Estas nuevas características para los certificados actualmente se encuentran disponibles como versión preliminar y están sujetas a cambios.
 
 ### <a name="deploy-volume-purchased-ios-apps-to-device-collections"></a>Implementación de aplicaciones iOS adquiridas por volumen en colecciones de dispositivos
 

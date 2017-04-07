@@ -2,7 +2,7 @@
 title: Crear perfiles de certificado PFX | Microsoft Docs
 description: "Obtenga información sobre cómo usar archivos PFX en System Center Configuration Manager para generar certificados específicos del usuario que admiten el intercambio de datos cifrados."
 ms.custom: na
-ms.date: 03/30/2017
+ms.date: 04/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3b1451edaed69a972551bd060293839aa11ec8b2
-ms.openlocfilehash: 2495cef2442706b343bac6d510946c1226b64cfc
-ms.lasthandoff: 03/28/2017
+ms.sourcegitcommit: 26feb0b166beb7e48cb800a5077d00dbc3eec51a
+ms.openlocfilehash: 27435316c6e47531ff989bc8956ca0c874131a0e
+ms.lasthandoff: 04/04/2017
 
 
 ---
@@ -38,7 +38,7 @@ Los [perfiles de certificado](../../protect/deploy-use/introduction-to-certifica
 - Para información sobre otros requisitos previos, consulte [Requisitos previos de perfiles de certificado](../../protect/plan-design/prerequisites-for-certificate-profiles.md).
 
 ## <a name="pfx-certificate-profiles"></a>Perfiles de certificado PFX
-System Center Configuration Manager permite aprovisionar archivos de intercambio de información personal (.pfx) en los dispositivos de usuario. Los archivos PFX pueden usarse para generar certificados específicos del usuario para admitir el intercambio de datos cifrados. Los certificados PFX pueden crearse en Configuration Manager o importarse.
+System Center Configuration Manager permite importar y, luego, aprovisionar archivos de intercambio de información personal (.pfx) en los dispositivos de usuario. Los archivos PFX pueden usarse para generar certificados específicos del usuario para admitir el intercambio de datos cifrados.
 
 > [!TIP]  
 >  En [Cómo crear e implementar perfiles de certificado PFX en Configuration Manager](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx)también encontrará un tutorial detallado en el que se describe este proceso.  
@@ -59,10 +59,10 @@ System Center Configuration Manager permite aprovisionar archivos de intercambio
 
     -   **Descripción**: facilite una descripción general del perfil de certificado y cualquier otra información adicional pertinente para identificarlo en la consola de System Center Configuration Manager. Puede utilizar un máximo de 256 caracteres.  
 
-    -   **Especifique el tipo de perfil de certificado que desea crear**: para los certificados PF, elija una de las siguientes opciones:  
+    -   **Especifique el tipo de perfil de certificado que desea crear**: para los certificados PF, elija:  
 
         -   **Intercambio de información personal: configuración de PKCS #12 (PFX): importar**: seleccione esta opción para importar un certificado PFX.  
-        -   **Intercambio de información personal: configuración de PKCS #12 (PFX): crear**: seleccione esta opción para crear un nuevo certificado PFX.
+       
 
 ### <a name="import-a-pfx-certificate"></a>Importación de un certificado PFX
 
@@ -107,28 +107,7 @@ Debe modificar las variables de script siguientes para su script:
    -   $ProfileName = nombre del perfil PFX  
    -   ComputerName = nombre del equipo host   
 
-### <a name="create-a-new-pfx-certificate"></a>Creación de un nuevo certificado PFX
 
-Al crear e implementar un certificado PFX, el mismo certificado se instalará en todos los dispositivos en que el usuario se inscribe.
-
-1. En la página **Plataforma admitida** del asistente, seleccione las plataformas de dispositivo en que se instalará este certificado y luego haga clic en **Siguiente**.
-2. En la página del asistente **Entidades de certificación**, configure lo siguiente:
-    - **Sitio primario**: seleccione el sitio primario de Configuration Manager desde el que desea seleccionar una entidad de certificación.
-    - **Entidades de certificación**: después de seleccionar un sitio primario, seleccione la entidad de certificación que desee de la lista y después haga clic en **Siguiente**.
-3. En la página **Certificado PFX** del asistente, configure los valores siguientes:
-    - **Umbral de renovación (%)**: especifique qué porcentaje de la duración del certificado tiene que quedar para que el dispositivo solicite la renovación del certificado.
-    - **Nombre de plantilla de certificado**: haga clic en **Examinar** para seleccionar el nombre de una plantilla de certificado que se haya agregado a una CA emisora. Para examinar correctamente las plantillas de certificado, la cuenta de usuario usada para ejecutar la consola de Configuration Manager debe tener permisos de **lectura** en la plantilla de certificado. Como alternativa, escriba el nombre de la plantilla de certificado. 
-    - **Formato de nombre del sujeto**: en la lista, seleccione cómo crea Configuration Manager de forma automática el nombre del sujeto en la solicitud de certificado. Si el certificado es para un usuario, también puede incluir la dirección de correo electrónico del usuario en el nombre del sujeto. Elija **Nombre común** o **Nombre completo**.
-    - **Nombre alternativo del firmante**: especifique cómo crea Configuration Manager de forma automática los valores del nombre alternativo del firmante (SAN) en la solicitud de certificado. Por ejemplo, si seleccionó un tipo de certificado de usuario, puede incluir el nombre principal de usuario (UPN) en el nombre alternativo del sujeto. Elija de entre las siguientes opciones:
-        - **Dirección de correo electrónico** 
-        - **Nombre principal del usuario (UPN)** 
-    - **Período de validez del certificado** - 
-    - **Proveedor de almacenamiento de claves (KSP) de Windows** (solo aparece si selecciona Windows como una plataforma admitida) 
-        -     **Instalar en Módulo de plataforma segura (TPM) si está presente**  
-        -   **Instalar en Módulo de plataforma segura (TPM) o se producirá un error** 
-        -   **Instalar en Windows Hello para empresas o generar un error** 
-        -   **Instalar en Proveedor de almacenamiento de claves de software** 
-4. Haga clic en **Siguiente**.
 
 ### <a name="finish-up"></a>Finalizar
 
