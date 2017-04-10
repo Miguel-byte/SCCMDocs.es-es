@@ -231,7 +231,7 @@ Las siguientes características de Intune que se incorporaron en junio de 2016 f
 
 - **Mantenimiento del servicio de Intune** La información de mantenimiento del servicio de Intune se ha movido a una ubicación central con otros servicios de Microsoft. Ahora encontrará esta información en el portal de administración de Office 365 en Estado del servicio. Para obtener más información, consulte esta [entrada de blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/04/28/intune-service-health-is-now-available-in-the-office-365-portal/).
 
-- **Mejor experiencia de configuración de directiva de datos de empresa de Windows 10 **
+- **Mejor experiencia de configuración de directiva de datos de empresa de Windows 10**
 
   Intune tiene ahora una mejor experiencia para configurar la directiva de protección de información de Windows 10. Las mejoras incluyen mejores formas de crear reglas de aplicaciones y especificar la definición de límite de red, así como otras opciones de Windows Information Protection. Para obtener más información, consulte [Crear una directiva de Windows Information Protection (WIP) con Microsoft Intune](https://technet.microsoft.com/itpro/windows/keep-secure/create-wip-policy-using-intune).
 
