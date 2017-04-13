@@ -16,9 +16,9 @@ author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6424fb07802b62820b4dc78a58ab30d3b956abef
-ms.openlocfilehash: 4189fe34efc2ae134150a89791dc10bbab1b9d02
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: 4bf5cc25c4ffb89df620b02044f43a13adc1443e
+ms.openlocfilehash: c87841ee1b30ebbcbbe8cd06309d909c38c01fdf
+ms.lasthandoff: 04/06/2017
 
 
 ---
@@ -26,12 +26,27 @@ ms.lasthandoff: 03/17/2017
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-En este tema, se explica a los administradores de TI cómo pueden permitir a los usuarios que incorporen PC de Windows y dispositivos móviles en la administración mediante Configuration Manager y Microsoft Intune. Hay disponibles dos métodos de inscripción:
--  Inscripción automática de Azure Active Directory (AD) cuando los usuarios conectan su cuenta con un dispositivo
-- Inscripción al instalar la aplicación de Portal de empresa e iniciar sesión con ella
+En este tema, se explica a los administradores de TI cómo pueden permitir a los usuarios que incorporen PC de Windows y dispositivos móviles en la administración mediante Configuration Manager y Microsoft Intune.
+
+## <a name="enable-windows-device-management"></a>Habilitar la administración de dispositivos Windows
+Para habilitar la administración de dispositivos Windows para equipos o dispositivos móviles, siga estos pasos:
+
+1.  Para poder configurar la inscripción en cualquier plataforma, complete los requisitos previos y los procedimientos de [Configurar la MDM híbrida](setup-hybrid-mdm.md).  
+2.  En la consola de Configuration Manager, en el área de trabajo **Administración**, vaya a **Información general** > **Cloud Services** > **Suscripciones a Microsoft Intune**.  
+3.  En la cinta de opciones, seleccione **Configurar plataformas** y luego seleccione la plataforma de Windows:
+    - **Windows** para portátiles y PC Windows, después realice los pasos siguientes:
+      1. En la pestaña **General**, active la casilla **Habilitar la inscripción de Windows**.
+      2. Si usa un certificado para firmar el código e implementar la aplicación de Portal de empresa, vaya al **Certificado de firma de código**. Los usuarios de dispositivos también pueden instalar la aplicación de Portal de empresa desde la Tienda Windows o puede implementar la aplicación desde la Tienda Windows para empresas sin firma de código.
+      3. También puede configurar [Windows Hello para empresas](windows-hello-for-business-settings.md).
+    - **Windows Phone** para tabletas y teléfonos Windows, después realice los pasos siguientes:
+      1. En la pestaña **General**, active la casilla **Windows Phone 8.1 y Windows 10 Mobile**. Ya no se admite Windows Phone 8.0.
+      2. Si su organización necesita transferir localmente aplicaciones de empresa, puede cargar el archivo o token necesarios. Para más información sobre la instalación de prueba de las aplicaciones, vea [Crear aplicaciones de Windows](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications).
+        - **Token de inscripción de aplicación**
+        - **Archivo .pfx**
+        - **Ninguno** Si usa un certificado de Symantec, puede especificar **Show an alert before Symantec certificates expire** (Mostrar una alerta antes de que expiren los certificados de Symantec).
+4. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  Para simplificar el proceso de inscripción con el Portal de empresa, debe crear un alias DNS para la inscripción de dispositivos. Después puede indicar a los usuarios cómo inscribir sus dispositivos.
 
 ## <a name="choose-how-to-enroll-windows-devices"></a>Elegir cómo inscribir dispositivos Windows
-
 Hay dos factores que determinan cómo inscribirá dispositivos Windows:
 - **¿Usa Azure Active Directory Premium?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) se incluye con Enterprise Mobility + Security y otros planes de licencias.
 - **¿Qué versiones de los clientes de Windows se inscribirán?** <br>Los dispositivos Windows 10 pueden inscribirse automáticamente al agregar una cuenta profesional o educativa. Las versiones anteriores deben inscribirse mediante la aplicación de Portal de empresa.
@@ -58,31 +73,11 @@ La inscripción automática permite a los usuarios inscribir dispositivos Window
 
 De manera predeterminada, la autenticación en dos fases no está habilitada para el servicio. En cambio, se recomienda la autenticación en dos fases al registrar un dispositivo. Antes de requerir la autenticación en dos fases para este servicio, debe configurar un proveedor de autenticación de dos fases en Azure Active Directory y configurar las cuentas de usuario para la autenticación multifactor. Vea [Introducción a Servidor Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
 
-## <a name="company-portal-enrollment"></a>Inscripción de Portal de empresa
-Los usuarios finales o un [administrador de inscripción de dispositivos](enroll-devices-with-device-enrollment-manager.md) pueden inscribir dispositivos Windows al instalar la aplicación de Portal de empresa y después iniciar sesión con sus credenciales de trabajo. Para simplificar la inscripción para los usuarios finales, debe agregar un registro CNAME en el registro de DNS.
-
-### <a name="enable-windows-device-management"></a>Habilitar la administración de dispositivos Windows
-Para habilitar la administración de dispositivos Windows para equipos o dispositivos móviles, siga estos pasos:
-
-1.  Para poder configurar la inscripción en cualquier plataforma, complete los requisitos previos y los procedimientos de [Configurar la MDM híbrida](setup-hybrid-mdm.md).  
-2.  En la consola de Configuration Manager, en el área de trabajo **Administración**, vaya a **Información general** > **Cloud Services** > **Suscripciones a Microsoft Intune**.  
-3.  En la cinta de opciones, seleccione **Configurar plataformas** y luego seleccione la plataforma de Windows:
-    - **Windows** para portátiles y PC Windows, después realice los pasos siguientes:
-      1. En la pestaña **General**, active la casilla **Habilitar la inscripción de Windows**.
-      2. Si usa un certificado para firmar el código e implementar la aplicación de Portal de empresa, vaya al **Certificado de firma de código**. Los usuarios de dispositivos también pueden instalar la aplicación de Portal de empresa desde la Tienda Windows o puede implementar la aplicación desde la Tienda Windows para empresas sin firma de código.
-      3. También puede configurar [Windows Hello para empresas](windows-hello-for-business-settings.md).
-    - **Windows Phone** para tabletas y teléfonos Windows, después realice los pasos siguientes:
-      1. En la pestaña **General**, active la casilla **Windows Phone 8.1 y Windows 10 Mobile**. Ya no se admite Windows Phone 8.0.
-      2. Si su organización necesita transferir localmente aplicaciones de empresa, puede cargar el archivo o token necesarios. Para más información sobre la instalación de prueba de las aplicaciones, vea [Crear aplicaciones de Windows](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications).
-        - **Token de inscripción de aplicación**
-        - **Archivo .pfx**
-        - **Ninguno** Si usa un certificado de Symantec, puede especificar **Show an alert before Symantec certificates expire** (Mostrar una alerta antes de que expiren los certificados de Symantec).
-4. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  Para simplificar el proceso de inscripción con el Portal de empresa, debe crear un alias DNS para la inscripción de dispositivos. Después puede indicar a los usuarios cómo inscribir sus dispositivos.
 
 ### <a name="create-dns-alias-for-device-enrollment"></a>Creación de un alias DNS para la inscripción de dispositivos  
 Un alias DNS (tipo de registro CNAME) facilita a los usuarios la inscripción de sus dispositivos al conectarse al servicio sin necesidad de que el usuario escriba una dirección de servidor. Para crear un alias DNS (tipo de registro CNAME), tendrá que configurar un CNAME en los registros DNS de la empresa que redirija las solicitudes enviadas a una dirección URL del dominio de la empresa a servidores de servicios en la nube de Microsoft.  Por ejemplo, si el dominio de la empresa es contoso.com, debe crear un CNAME en DNS que redirija EnterpriseEnrollment.contoso.com a EnterpriseEnrollment-s.manage.microsoft.com.  
 
- Aunque la creación de entradas DNS CNAME es opcional, los registros CNAME facilitan la inscripción para los usuarios. Si no se encuentra ningún registro CNAME de inscripción, se pedirá a los usuarios que escriban de forma manual el nombre del servidor MDM (enrollment.manage.microsoft.com).
+Aunque la creación de entradas DNS CNAME es opcional, los registros CNAME facilitan la inscripción para los usuarios. Si no se encuentra ningún registro CNAME de inscripción, se pedirá a los usuarios que escriban de forma manual el nombre del servidor MDM (enrollment.manage.microsoft.com).
 
 |Tipo|Nombre de host|Apunta a|TTL|  
 |----------|---------------|---------------|---|
