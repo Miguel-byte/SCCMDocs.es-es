@@ -2,7 +2,7 @@
 title: Hardware recomendado | Microsoft Docs
 description: "Obtenga recomendaciones de hardware que le ayudarán a ampliar su entorno de System Center Configuration Manager más allá de una implementación básica."
 ms.custom: na
-ms.date: 2/28/2017
+ms.date: 3/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 63ee782a718cf4a66ffe25b022aa317f3e45784c
-ms.openlocfilehash: 6701d5f21e8511ec9cf4fe7bc5804b3e2fdc4c71
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: 8d3791bcf737e63308155787ed23c9cc84e7e99c
+ms.openlocfilehash: fd9f5b25a1e40b5f0df823dcbe9c13a77c534c59
+ms.lasthandoff: 03/31/2017
 
 
 ---
@@ -168,14 +168,12 @@ Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas
 
  **Compatibilidad con PowerShell:**  
 
- Al instalar compatibilidad con PowerShell en un equipo que ejecuta la consola de Configuration Manager, puede ejecutar los cmdlets de PowerShell en ese equipo para administrar Configuration Manager. Se admiten las siguientes versiones mínimas:  
+ Al instalar compatibilidad con PowerShell en un equipo que ejecuta la consola de Configuration Manager, puede ejecutar los cmdlets de PowerShell en ese equipo para administrar Configuration Manager.
 
--   PowerShell 3.0  
+ - Se admite PowerShell 3.0 o posterior
 
--   PowerShell 4.0  
+Además de PowerShell, se admite Windows Management Framework (WMF) versión 3.0 o posterior.   
 
-Además de PowerShell, se admite Windows Management Framework (WMF) 3.0 y 4.0.   
-Puede instalar PowerShell antes o después de que se instale la consola de Configuration Manager.  
 
 ##  <a name="bkmk_ScaleLab"></a> Implementaciones de laboratorio  
  Use las siguientes recomendaciones mínimas de hardware para implementaciones de laboratorio y pruebas de Configuration Manager. Estas recomendaciones se aplican a todos los tipos de sitio, hasta un máximo de 100 clientes:  
