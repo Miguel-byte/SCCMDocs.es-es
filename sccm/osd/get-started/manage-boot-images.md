@@ -17,9 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 70034213442f4c3d5a28ab65c2ceb51aa64320ad
-ms.openlocfilehash: 207975538b63390fb5789b19c519db89db62e0a5
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: 0cf2ac6440588ccf4848baa7a195f78e8675447d
+ms.openlocfilehash: c6a1eb9ccaee45eb242fb320cb6b492d1a39d349
+ms.lasthandoff: 04/11/2017
 
 
 ---
@@ -29,18 +29,10 @@ ms.lasthandoff: 03/31/2017
 
 Una imagen de arranque de Configuration Manager es una imagen de [Windows PE (WinPE)](https://msdn.microsoft.com/library/windows/hardware/dn938389%28v=vs.85%29.aspx) que se usa durante la implementación de sistema operativo. Las imágenes de arranque se usan para iniciar un equipo en WinPE, que es un sistema operativo mínimo con componentes y servicios limitados que prepara el equipo de destino para la instalación de Windows.  Utilice las siguientes secciones para administrar imágenes de arranque:
 
-##  <a name="BKMK_BootImageDefault"></a> Imágenes de arranque predeterminadas  
-A partir de la versión 1702, al actualizar la versión de Windows ADK y después actualizar a la última versión de Configuration Manager, las imágenes de arranque predeterminadas se actualizan. Esto incluye la nueva versión de Windows PE a partir del Windows ADK actualizado, la nueva versión del cliente de Configuration Manager y todas las personalizaciones permanecen sin cambios. Las imágenes de arranque personalizadas no se actualizarán. Antes de la versión 1702, debe actualizar manualmente la imagen de arranque para usar la nueva versión de Windows ADK.
-
-Al ejecutar la actualización de Configuration Manager a una nueva versión principal mediante el proceso de instalación, Configuration Manager podría actualizar las imágenes de arranque predeterminadas, así como las imágenes de arranque personalizadas en función de las imágenes de arranque predeterminadas que están almacenadas en la ubicación predeterminada.
-
-Las opciones que se configuran en las imágenes de arranque predeterminadas en el sitio (por ejemplo, los componentes opcionales) se mantienen cuando se actualizan las imágenes de arranque, incluidos los controladores. Los objetos de controlador de origen deben ser válidos, incluidos los archivos de origen de controlador; de lo contrario, los controladores no se agregarán a las imágenes de arranque actualizadas en el sitio. Tampoco se actualizarán otras imágenes de arranque que no estén basadas en las imágenes de arranque predeterminadas, aunque sí se basen en la misma versión de Windows ADK. Después de que se actualizan las imágenes de arranque, necesitará redistribuirlas a puntos de distribución. Será necesario volver a crear todos los medios que usan las imágenes de arranque. Si no quiere que las imágenes de arranque predeterminadas o personalizadas se actualicen automáticamente, debe almacenarlas en una ubicación distinta.  
-
-
 ## <a name="BKMK_BootImageDefault"></a> Imágenes de arranque predeterminadas
 Configuration Manager proporciona dos imágenes de arranque predeterminadas: una compatible con las plataformas x86 y otra compatible con las plataformas x64. Estas imágenes se almacenan en: \\\\*NombreDeServidor*>\SMS_<*códigoDeSitio*>\osd\boot\\<*x64*> o <*i386*>. Las imágenes de arranque predeterminadas se actualizan o se vuelven a generar según la acción que realice.
 
-**Usar las actualizaciones y el mantenimiento para instalar la última versión de Configuration Manager** A partir de la versión 1702, al actualizar la versión de Windows ADK y usar las actualizaciones para instalar la última versión de Configuration Manager, este regenerará las imágenes de arranque predeterminadas. Esto incluye la nueva versión de Windows PE a partir del Windows ADK actualizado y la nueva versión del cliente de Configuration Manager, así como los controladores, las personalizaciones, etc. Las imágenes de arranque personalizadas no se verán modificadas. 
+**Usar las actualizaciones y el mantenimiento para instalar la última versión de Configuration Manager** A partir de la versión 1702, al actualizar la versión de Windows ADK y usar las actualizaciones para instalar la última versión de Configuration Manager, este regenerará las imágenes de arranque predeterminadas. Esto incluye la nueva versión de Windows PE a partir del Windows ADK actualizado y la nueva versión del cliente de Configuration Manager, así como los controladores, las personalizaciones, etc. Las imágenes de arranque personalizadas no se verán modificadas.
 
 Antes de la versión 1702, Configuration Manager actualiza la imagen de arranque existente (boot.wim) con los componentes de cliente, los controladores, las personalizaciones, etc., pero no usará la última versión de Windows PE desde Windows ADK. Debe modificar manualmente la imagen de arranque para usar la nueva versión de Windows ADK.
 
