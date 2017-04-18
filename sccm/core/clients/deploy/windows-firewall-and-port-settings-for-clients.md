@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
@@ -31,7 +31,7 @@ Los equipos cliente en System Center Configuration Manager que ejecutan Firewall
 
  Use las secciones siguientes para identificar estas características de administración y para obtener más información acerca de cómo configurar Firewall de Windows para estas excepciones.  
 
-##  <a name="a-namebkmkmodifyingwindowsfirewalla-modifying-the-ports-and-programs-permitted-by-windows-firewall"></a><a name="BKMK_ModifyingWindowsFirewall"></a> Modificación de los puertos y los programas permitidos por Firewall de Windows  
+##  <a name="BKMK_ModifyingWindowsFirewall"></a> Modificación de los puertos y los programas permitidos por Firewall de Windows  
  Utilice el siguiente procedimiento para modificar los puertos y los programas en Firewall de Windows para el cliente de Configuration Manager.  
 
 #### <a name="to-modify-the-ports-and-programs-permitted-by-windows-firewall"></a>Para modificar los puertos y los programas permitidos por Firewall de Windows  
