@@ -16,9 +16,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 45dbf119ed5eaf875293f4eb3d89b986af6019e5
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 27a92dc1c3710ff55f0b145386319dda371533d9
+ms.openlocfilehash: d3b20a59a9147e09e58f04f83f97fd72ebfef5a1
+ms.lasthandoff: 04/07/2017
 
 ---
 # <a name="create-android-applications-with-system-center-configuration-manager"></a>Crear aplicaciones Android con System Center Configuration Manager
@@ -30,12 +30,10 @@ Una aplicación de System Center Configuration Manager tiene uno o varios tipos 
  Puede crear aplicaciones mediante los métodos siguientes:  
 
 -   Crear automáticamente los tipos de aplicación y de implementación mediante la lectura de los archivos de instalación de la aplicación.  
-
 -   Crear manualmente la aplicación y, a continuación, agregar los tipos de implementación más adelante.  
-
 -   Importe una aplicación desde un archivo.  
 
-Consulte [Inicie el Asistente para crear aplicaciones](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard) para conocer los pasos necesarios para crear aplicaciones de Configuration Manager y los tipos de implementación. Asimismo, tenga en cuenta las siguientes consideraciones cuando cree e implemente aplicaciones para dispositivos Android.  
+Consulte [Inicie el Asistente para crear aplicaciones](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard) para conocer los pasos necesarios para crear aplicaciones de Configuration Manager y los tipos de implementación. Además, tenga en cuenta las consideraciones siguientes cuando cree e implemente aplicaciones para dispositivos Android.  
 
 ## <a name="general-considerations-for-android-apps"></a>Consideraciones generales para aplicaciones Android
 
@@ -58,11 +56,11 @@ Siga estos pasos para aprobar aplicaciones en la tienda Play for Work, sincroniz
 
 1. Abra un explorador y vaya a https://play.google.com/work.
 2. Inicie sesión con la cuenta de administrador de Google enlazada a su inquilino de Intune.
-3. Busque las aplicaciones que le gustaría implementar en su entorno y haga clic en **Aprobar** en cada una de ellas para que la aplicación esté disponible para Android for Work.
-4. En la consola de Configuration Manager, vaya a **Administrador** > **General** > **Cloud Services** > **Android for Work** y haga clic en **Sincronizar**.
+3. Busque las aplicaciones que le gustaría implementar en su entorno y seleccione **Aprobar** en cada una de ellas para que la aplicación esté disponible para Android for Work.
+4. En la consola de Configuration Manager, vaya a **Administrador** > **General** > **Cloud Services** > **Android for Work** y seleccione **Sincronizar**.
 5. Espere hasta 10 minutos para que las aplicaciones se sincronicen y, después, vaya a **Biblioteca de software** > **General** > **Administración de aplicaciones** > **Información de licencia para las aplicaciones de la Tienda**.
-6. Haga clic en una aplicación sincronizada desde Play for Work y después en **Crear aplicación**.
-7. Complete el asistente y haga clic en **Cerrar**.
+6. Seleccione una aplicación sincronizada desde Play for Work y elija **Crear aplicación**.
+7. Finalice el asistente y seleccione **Cerrar**.
 8. Vaya a **Biblioteca de software** > **General** > **Administración de aplicaciones** > **Aplicaciones**, seleccione una aplicación de Android for Work e impleméntela como de costumbre.
 
 Para sincronizar aplicaciones Play for Work con Configuration Manager, debe aprobar primero al menos una aplicación en el sitio web de Play for Work.

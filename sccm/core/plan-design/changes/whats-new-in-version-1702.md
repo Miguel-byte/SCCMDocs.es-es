@@ -14,16 +14,16 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 70034213442f4c3d5a28ab65c2ceb51aa64320ad
-ms.openlocfilehash: 9332278e960051caf6875f45212af644e2ea7890
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: d7b13f3dea5a3ae413ca6b8150ec24e1632a4d4d
+ms.openlocfilehash: 3e97184dc923cd3972c23252c1bc001edb73fe3f
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Novedades de la versión 1702 de System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-La actualización 1702 para la rama actual de System Center Configuration Manager está disponible como actualización en consola para sitios instalados previamente que ejecutan la versión 1606 o 1610.
+La actualización 1702 para la rama actual de System Center Configuration Manager está disponible como actualización en consola para sitios instalados previamente que ejecutan la versión 1602, 1606 o 1610.
 
 > [!TIP]  
 > Para instalar un sitio nuevo, debe usar una versión de línea base de Configuration Manager.  
@@ -189,7 +189,7 @@ Ahora puede volver a la página anterior cuando ejecuta una secuencia de tareas 
 - Cuando ejecuta una secuencia de tareas, pero los paquetes de contenido dependientes todavía no están disponibles en los puntos de distribución, se produce un error en la secuencia de tareas. Ahora puede distribuir el contenido que falta (si no se ha distribuido todavía) o esperar a que el contenido esté disponible en los puntos de distribución y, después, hacer clic en **Anterior** para reanudar la búsqueda de la secuencia de tareas para el contenido.
 
 ### <a name="pre-cache-content-for-available-deployments-and-task-sequences"></a>Almacenar en la caché previa contenido para las implementaciones y las secuencias de tareas disponibles
-A partir de la versión 1702, para las implementaciones disponibles y las secuencias de tareas, puede usar el contenido de la caché previa. El contenido de caché previa le proporciona la opción de que el cliente solo descargue el contenido aplicable tan pronto como reciba la implementación. Por lo tanto, cuando el usuario hace clic en **Instalar** en el Centro de software, el contenido está listo y la instalación se inicia rápidamente porque el contenido se encuentra en la unidad de disco duro local. Para obtener información detallada, vea [Configuración del contenido de la caché previa](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).
+A partir de la versión 1702, para las implementaciones disponibles de secuencias de tareas, puede usar el contenido de la caché previa. El contenido de caché previa le proporciona la opción de que el cliente solo descargue el contenido aplicable tan pronto como reciba la implementación. Por lo tanto, cuando el usuario hace clic en **Instalar** en el Centro de software, el contenido está listo y la instalación se inicia rápidamente porque el contenido se encuentra en la unidad de disco duro local. Para obtener información detallada, vea [Configuración del contenido de la caché previa](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).
 
 ### <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Conversión de BIOS a UEFI durante una actualización local
 Windows 10 Creators Update presenta una herramienta de conversión sencilla que automatiza el proceso para volver a particionar el disco duro de hardware compatible con UEFI e integra la herramienta de conversión en el proceso de actualización local de Windows 7 a Windows 10. Cuando esta herramienta se combina con la secuencia de tareas de actualización del sistema operativo y la herramienta de OEM que convierte el firmware de BIOS a UEFI, puede convertir los equipos de BIOS a UEFI durante una actualización local a Windows 10 Creators Update. Para obtener más información, consulte [Task sequence steps to manage BIOS to UEFI conversion (Pasos de la secuencia de tareas para administrar la conversión de BIOS a UEFI)](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade).

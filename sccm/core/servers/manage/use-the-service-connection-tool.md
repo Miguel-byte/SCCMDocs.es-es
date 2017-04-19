@@ -2,7 +2,7 @@
 title: "Herramienta de conexión de servicio | Microsoft Docs"
 description: "Obtenga información sobre esta herramienta que le permite conectarse al servicio en la nube de Configuration Manager para cargar manualmente la información de uso."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 7a9c5bb9890b00cf3485998aa46286c890429cc0
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
+ms.openlocfilehash: 0da80521bf223a765c3731f8ad59623d85a4c9fa
+ms.lasthandoff: 04/08/2017
 
 
 ---
@@ -26,9 +26,9 @@ ms.lasthandoff: 03/27/2017
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Use la **herramienta de conexión de servicio** cuando los servidores de sistema de sitio de Configuration Manager no están conectados a Internet, pero quiere estar al día de las actualizaciones más recientes para Configuration Manager.  
+Use la **herramienta de conexión de servicio** cuando el punto de conexión de servicio esté en modo sin conexión o cuando los servidores de sistema de sitio de Configuration Manager no estén conectados a Internet. La herramienta puede ayudarle a mantener actualizado el sitio con las últimas actualizaciones de Configuration Manager.  
 
- La herramienta le permite conectarse al servicio en la nube de Configuration Manager para cargar manualmente la información de uso de su jerarquía y descargar las actualizaciones. La carga de los datos de uso es necesaria para habilitar el servicio en la nube para proporcionar las actualizaciones correctas para su implementación.  
+Cuando se ejecuta, la herramienta se conecta manualmente al servicio en la nube de Configuration Manager para cargar información de uso de la jerarquía y descargar actualizaciones. La carga de los datos de uso es necesaria para habilitar el servicio en la nube para proporcionar las actualizaciones correctas para su implementación.  
 
 ## <a name="prerequisites-for-using-the-service-connection-tool"></a>Requisitos previos para usar la herramienta de conexión de servicio
 A continuación se indican los requisitos previos y los problemas conocidos.
@@ -85,11 +85,11 @@ También necesitará copiar la carpeta ServiceConnectionTool con todo su conteni
 ### <a name="overview"></a>Información general
 **Hay tres pasos principales para usar la herramienta de conexión de servicio:**  
 
-1.  **Preparar**: este paso coloca los datos de uso en un archivo .cab y lo almacena en una unidad USB (o la ubicación alternativa de transferencia que especifique).  
+1.  **Preparar**: este paso se ejecuta en el equipo que hospeda el punto de conexión de servicio. Cuando la herramienta se ejecuta, coloca los datos de uso en un archivo .cab y lo almacena en una unidad USB (o la ubicación alternativa de transferencia que especifique).  
 
-2.  **Conectar**: en este paso tiene que ejecutar la herramienta en un equipo remoto que se conecta a Internet para cargar los datos y descargar actualizaciones.  
+2.  **Conectar**: para este paso, debe ejecutar la herramienta en un equipo remoto que se conecte a Internet para poder cargar datos de uso y descargar actualizaciones.  
 
-3.  **Importar**: este paso importa actualizaciones para Configuration Manager a su sitio, por lo que puede ver e instalar actualizaciones desde la consola de Configuration Manager.  
+3.  **Importar**: este paso se ejecuta en el equipo que hospeda el punto de conexión de servicio. Cuando se ejecuta, la herramienta importa las actualizaciones descargadas y las agrega al sitio para que pueda verlas e instalarlas desde la consola de Configuration Manager.  
 
 A partir de la versión 1606, al conectarse a Microsoft puede cargar varios archivos .cab a la vez (cada uno desde una jerarquía distinta) y especificar un servidor proxy y un usuario para el servidor proxy.   
 

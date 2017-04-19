@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3b387d78e03cc2d1c535e52016d2de4945328f72
-ms.openlocfilehash: c51cf3b3b7563a82db40405677c2edfb6de47cf1
+ms.sourcegitcommit: d7b13f3dea5a3ae413ca6b8150ec24e1632a4d4d
+ms.openlocfilehash: 7496c8bf11d058c94bc36fd28e9557b6470b61f1
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>Supervisión del contenido que se ha distribuido con System Center Configuration Manager
@@ -35,7 +36,7 @@ Utilice la consola de System Center Configuration Manager para supervisar el con
 > [!NOTE]  
 >  Configuration Manager solo supervisa el contenido de un punto de distribución que se encuentre en la biblioteca de contenido. No se supervisa el contenido almacenado en el punto de distribución de recursos compartidos personalizados o de paquete.  
 
-##  <a name="a-namebkmkcontentstatusa-content-status-monitoring"></a><a name="BKMK_ContentStatus"></a> Supervisión del estado del contenido  
+##  <a name="BKMK_ContentStatus"></a> Supervisión del estado del contenido  
  El nodo **Estado de contenido** en el área de trabajo **Supervisión** proporciona información acerca de los paquetes de contenido. En la consola de Configuration Manager, puede revisar información como la siguiente:  
 
 -   Nombre del paquete  
@@ -151,12 +152,12 @@ Utilice el procedimiento siguiente para ver el estado de configuración del punt
 4.  En el panel de resultados, haga clic en la pestaña **Detalles** . Se mostrará información de estado del punto de distribución.  
 
 ## <a name="client-data-sources-dashboard"></a>Panel de orígenes de datos de cliente
-A partir de la versión 1610, puede usar el panel **Orígenes de datos de cliente** para entender el uso del [Almacenamiento en caché del mismo nivel](/sccm/core/plan-design/hierarchy/client-peer-cache) en su entorno. Este panel no está visible en la consola hasta que los clientes descargan el contenido con el almacenamiento en caché del mismo nivel y notifican esa información de nuevo al sitio. Esto puede tardar hasta 24 horas.
+A partir de la versión 1610, puede usar el panel **Orígenes de datos de cliente** para entender el uso del [Almacenamiento en caché del mismo nivel](/sccm/core/plan-design/hierarchy/client-peer-cache) en su entorno. El panel mostrará los datos después de que los clientes descarguen contenido y notifiquen esa información al sitio. Esto puede tardar hasta 24 horas.
 
 > [!TIP]  
-> Con la versión 1610, el panel de orígenes de datos de cliente y la caché del mismo nivel son funciones de la versión preliminar. Para habilitarlos, vea [Uso de características de la versión preliminar a partir de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+> Con la versión 1610, el panel de orígenes de datos de cliente y la caché del mismo nivel son funciones de la versión preliminar. Para habilitarlos, vea [Uso de características de la versión preliminar a partir de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease). Para que el panel **Orígenes de datos de cliente** esté visible, debe habilitarlo. Una vez que lo haya habilitado, puede tardar hasta 24 horas en empezar a mostrar los datos. 
 
-En la consola, vaya a **Supervisión** > **Estado de cliente** > **Orígenes de datos de cliente**. Aquí puede seleccionar un período de tiempo que se aplicará al panel. A continuación, en la pantalla, puede seleccionar el grupo de límites o el paquete para el que desea ver información. Al ver la información, puede mantener el puntero sobre la superficie para ver más detalles sobre los distintos orígenes de contenido o directiva.
+En la consola, vaya a **Supervisión** > **Estado de distribución** > **Orígenes de datos de cliente**. Aquí puede seleccionar un período de tiempo que se aplicará al panel. A continuación, en la pantalla, puede seleccionar el grupo de límites o el paquete para el que desea ver información. Al ver la información, puede mantener el puntero sobre la superficie para ver más detalles sobre los distintos orígenes de contenido o directiva.
 
 Entre los detalles se incluye lo siguiente:  
 - **Orígenes de contenido de cliente**: muestra el origen desde el que los clientes obtuvieron el contenido.
@@ -168,9 +169,4 @@ Entre los detalles se incluye lo siguiente:
 
 
 También puede usar un nuevo informe, **Orígenes de datos de cliente - Resumen**, para ver un resumen de los orígenes de datos de cliente de cada grupo de límites.
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

@@ -13,9 +13,9 @@ ms.technology:
 - configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 459ad5a428102b5e040bec2eaf2a70fc89789dff
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: d7b13f3dea5a3ae413ca6b8150ec24e1632a4d4d
+ms.openlocfilehash: fcdcbcde61402b47871d51deba32d23867a78370
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -23,7 +23,8 @@ ms.lasthandoff: 03/27/2017
 A partir de la versión 1702, Configuration Manager admite archivos de instalación rápida para las actualizaciones de Windows 10. Cuando use una versión compatible con Windows 10, puede usar la configuración de Configuration Manager para descargar solo los cambios entre la actualización acumulativa de Windows 10 del mes actual y la actualización del mes anterior. Sin los archivos de instalación rápida, Configuration Manager descarga cada mes la actualización acumulativa completa de Windows 10 (incluidas todas las actualizaciones de los meses anteriores). Usar los archivos de instalación rápida proporciona descargas más pequeñas y tiempos de instalación más rápidos en los clientes.
 
 > [!IMPORTANT]
-> Aunque la configuración para admitir el uso de los archivos de instalación rápida está disponible en la versión 1702 de Configuration Manager, la compatibilidad con clientes del sistema operativo está disponible en la versión 1607 de Windows 10 con una actualización del Agente de Windows Update. Esta actualización se incluye con las actualizaciones publicadas el 11 de abril de 2017, Patch Tuesday (segundo martes de cada mes). <!--For more information about these updates, see [support article 4015217](http://support.microsoft.com/kb/4015217).--> Las actualizaciones futuras se beneficiarán de la instalación rápida para descargas más pequeñas. La versión 1607 de Windows 10 sin la actualización y las versiones anteriores no admiten los archivos de instalación rápida.
+> Aunque la configuración para admitir el uso de los archivos de instalación rápida está disponible en la versión 1702 de Configuration Manager, la compatibilidad con clientes del sistema operativo está disponible en la versión 1607 de Windows 10 con una actualización del Agente de Windows Update. Esta actualización se incluye con las actualizaciones publicadas el 11 de abril de 2017, Patch Tuesday (segundo martes de cada mes). Para obtener más información sobre estas actualizaciones, vea el [artículo de soporte técnico 4015217](http://support.microsoft.com/kb/4015217). Las actualizaciones futuras se beneficiarán de la instalación rápida para descargas más pequeñas. La versión 1607 de Windows 10 sin la actualización y las versiones anteriores no admiten los archivos de instalación rápida.
+
 
 ### <a name="to-enable-the-download-of-express-installation-files-for-windows-10-updates-on-the-server"></a>Para habilitar la descarga de archivos de instalación rápida para las actualizaciones de Windows 10 en el servidor
 Para iniciar la sincronización de los metadatos de los archivos de instalación rápida de Windows 10, debe habilitarlos en las propiedades de punto de actualización de software.

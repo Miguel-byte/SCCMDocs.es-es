@@ -16,9 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 88a72259bca79f2fa985e86cb57ec7a974bad24d
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: d7b13f3dea5a3ae413ca6b8150ec24e1632a4d4d
+ms.openlocfilehash: e63b639836bc38a030a051e80db4b057ab75a0b0
+ms.lasthandoff: 04/12/2017
 
 
 ---
@@ -74,7 +74,7 @@ Use las secuencias de tareas de System Center Configuration Manager para actuali
 
 
 ## <a name="configure-pre-cache-content"></a>Configuración del contenido de la caché previa
-A partir de la versión 1702, para las secuencias de tareas e implementaciones disponibles, puede decidir usar la característica de caché previa para que los clientes solo descarguen el contenido relevante antes de que un usuario instale el contenido.
+A partir de la versión 1702, para las implementaciones disponibles de secuencias de tareas, puede decidir usar la característica de caché previa para que los clientes solo descarguen el contenido relevante antes de que un usuario instale el contenido.
 > [!TIP]  
 > La caché previa se introdujo con la versión 1702, y se trata de una característica de versión preliminar. Para habilitarla, consulte [Use pre-release features from updates](/sccm/core/servers/manage/pre-release-features) (Uso de características de la versión preliminar a partir de las actualizaciones).
 

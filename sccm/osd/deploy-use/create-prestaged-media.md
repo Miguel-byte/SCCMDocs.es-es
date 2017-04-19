@@ -2,7 +2,7 @@
 title: Crear medios preconfigurados con System Center Configuration Manager | Microsoft Docs
 description: "Cree medios preconfigurados en System Center Configuration Manager para simplificar la implementación de Windows en varios escenarios."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 56cfc5837adf986e5d2bf4a73ef9de3b1f60b4f9
+ms.sourcegitcommit: ae9488a34c6b1e04397c4875de4b3bc607f7116c
+ms.openlocfilehash: 33abf3853d912d423e427db4d35fb4a16167164e
+ms.lasthandoff: 04/11/2017
 
 
 ---
@@ -36,7 +37,7 @@ Los medios preconfigurados contienen la imagen de arranque que se utiliza para i
 
  Cuando el equipo se inicia por primera vez después de la aplicación del medio preconfigurado, el equipo arranca en Windows PE y se conecta a un punto de administración para encontrar la secuencia de tareas que completa el proceso de implementación de sistema operativo. Puede especificar las aplicaciones, los paquetes y los paquetes de controladores que quiere incluir como parte de los medios preconfigurados. Al implementar una secuencia de tareas que usa un medio preconfigurado, el asistente comprueba en primer lugar la presencia de contenido válido en la memoria caché local de la secuencia de tareas y, si el contenido no se encuentra o se ha revisado, el asistente lo descarga del punto de distribución.  
 
-##  <a name="a-namebkmkcreateprestagedmediaa-how-to-create-prestaged-media"></a><a name="BKMK_CreatePrestagedMedia"></a> Creación de medios preconfigurados  
+##  <a name="BKMK_CreatePrestagedMedia"></a> Creación de medios preconfigurados  
  Antes de crear medios preconfigurados con el Asistente para crear medio de secuencia de tareas, asegúrese de que se cumplen las condiciones siguientes:  
 
 |Tarea|Descripción|  
@@ -47,7 +48,7 @@ Los medios preconfigurados contienen la imagen de arranque que se utiliza para i
 |Unidad de disco duro del equipo de destino|El disco duro del equipo de destino debe estar formateado antes de que se realice una copia intermedia del medio preconfigurado en dicha unidad. Si el disco duro no está formateado cuando se aplique el medio, la secuencia de tareas que implementa el sistema operativo producirá un error al intentar iniciar el equipo de destino.|  
 
 > [!NOTE]  
->  El Asistente para crear medio de secuencia de tareas establece la siguiente condición de variable de secuencia de tareas en el medio: **_SMSTSMedia = OEMMedia**. Puede usar esta condición en la secuencia de tareas.  
+>  El Asistente para crear medio de secuencia de tareas establece la siguiente condición de variable de secuencia de tareas en el medio: **_SMSTSMediaType = OEMMedia**. Puede usar esta condición en la secuencia de tareas.  
 
  Utilice el procedimiento siguiente para crear medios preconfigurados.  
 
@@ -143,9 +144,4 @@ Los medios preconfigurados contienen la imagen de arranque que se utiliza para i
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Escenarios para implementar sistemas operativos de empresa](scenarios-to-deploy-enterprise-operating-systems.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

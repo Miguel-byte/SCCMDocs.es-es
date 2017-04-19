@@ -2,7 +2,7 @@
 title: Actualizaciones en la consola | Microsoft Docs
 description: System Center Configuration Manager se sincroniza con la nube de Microsoft para obtener las actualizaciones que puede instalar desde la consola.
 ms.custom: na
-ms.date: 3/7/2017
+ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 3b50ada9f63e41d1b6f01009c141b8f361f5180e
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
+ms.openlocfilehash: 18c199e78750eadc06b9635fa6104d36c2ac018d
+ms.lasthandoff: 04/08/2017
 
 
 ---
@@ -319,6 +319,10 @@ Cuando instala una actualización que incluye una o más características opcion
 Para ver las características disponibles y su estado, en la consola, vaya a **Administración** > **Actualizaciones y mantenimiento** > **Características**.
 
 Cuando una característica no es opcional, se instala automáticamente y no aparece en el nodo **Características**.  
+
+
+Al habilitar una característica nueva o de versión preliminar, el Administrador de jerarquía de Configuration Manager (HMAN) debe procesar el cambio antes de que dicha característica esté disponible. Generalmente el procesamiento del cambio es inmediato, pero puede tardar hasta 30 minutos en completarse, en función del ciclo de procesamiento de HMAN. Una vez que se haya procesado el cambio, debe reiniciar la consola para poder ver la nueva interfaz de usuario relacionada con esa característica.
+
 
 ##  <a name="bkmk_prerelease"></a> Uso de las características de versión preliminar de las actualizaciones
 Las características de versión preliminar se incluyen en la Rama actual para realizar las primeras pruebas en un entorno de producción. No se debe considerar que estas características están listas para la producción, pero se pueden usar en el entorno de producción. Para obtener más información sobre las características de versión preliminar, incluida la manera de habilitarlas en el entorno, vea [Pre-release features](/sccm/core/servers/manage/pre-release-features) (Características de versión preliminar).                |

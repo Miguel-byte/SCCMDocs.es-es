@@ -2,7 +2,7 @@
 title: Content Library Cleanup Tool | Microsoft Docs
 description: "Utilice Content Library Cleanup Tool para quitar contenido huérfano que ya no está asociado con una implementación de System Center Configuration Manager."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 4/7/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
-ms.openlocfilehash: 718e9b9eaa2dace2c72b031c244c72ef5f7e7b2f
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
+ms.openlocfilehash: 76e6772bdd5cbd32d525e728f6ebc988b045da78
+ms.lasthandoff: 04/08/2017
 
 ---
 # <a name="the-content-library-cleanup-tool-for-system-center-configuration-manager"></a>Content Library Cleanup Tool para System Center Configuration Manager
@@ -74,7 +74,7 @@ Los siguientes modificadores de línea de comandos se pueden usar en cualquier o
 |**/delete**  |**Opcional** </br> Use este modificador cuando quiera eliminar contenido del punto de distribución. Se le preguntará antes de que se elimine el contenido. </br></br> Cuando este modificador no se usa, la herramienta registra los resultados del contenido que se habría eliminado, pero no elimina contenido del punto de distribución. </br></br> Ejemplo: ***ContentLibraryCleanup.exe /dp server1.contoso.com /delete*** |
 | **/q**       |**Opcional** </br> Este modificador ejecuta la herramienta en el modo silencioso que suprime todos los mensajes (como los avisos cuando está eliminando contenido) y no abre automáticamente el archivo de registro. </br></br> Ejemplo: ***ContentLibraryCleanup.exe /q /dp server1.contoso.com*** |
 | **/dp &lt;FQDN del punto de distribución>**  | **Requerido** </br> Especifique el nombre de dominio completo (FQDN) del punto de distribución que quiere limpiar. </br></br> Ejemplo: ***ContentLibraryCleanup.exe /dp server1.contoso.com***|
-| **/ps &lt;FQDN del sitio primario>**       | **Opcional** al limpiar contenido de un punto de distribución en un sitio primario.</br>**Requerido** al limpiar contenido de un punto de distribución en un sitio secundario. </br></br> Especifique el FQDN del sitio primario al que pertenece el punto de distribución, o del primario principal cuando el punto de distribución se encuentra en un sitio secundario. </br></br> Ejemplo: ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
+| **/ps &lt;FQDN del sitio primario>**       | **Opcional** al limpiar contenido de un punto de distribución en un sitio primario.</br>**Requerido** al limpiar contenido de un punto de distribución en un sitio secundario. </br></br>La herramienta se conecta al sitio primario principal para ejecutar consultas en SMS_Provider. Estas consultas permiten a la herramienta determinar qué contenido debe estar en el punto de distribución, de modo que pueda identificar el contenido huérfano que se puede quitar. Esta conexión con el sitio primario principal debe realizarse para los puntos de distribución de un sitio secundario, ya que los detalles necesarios no están disponibles directamente en el sitio secundario.</br></br> Especifique el FQDN del sitio primario al que pertenece el punto de distribución, o del primario principal cuando el punto de distribución se encuentra en un sitio secundario. </br></br> Ejemplo: ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
 | **/sc &lt;código del sitio primario>**  | **Opcional** al limpiar contenido de un punto de distribución en un sitio primario.</br>**Requerido** al limpiar contenido de un punto de distribución en un sitio secundario. </br></br> Especifique el código del sitio del sitio primario al que pertenece el punto de distribución, o del sitio primario principal cuando el punto de distribución se encuentra en un sitio secundario.</br></br> Ejemplo: ***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
 | **/log <log file directory>**       |**Opcional** </br> Especifique la ubicación donde la herramienta escribe el archivo de registro. Puede ser una unidad local o un recurso compartido de red.</br></br> Cuando no se usa este modificador, el archivo de registro se coloca en la carpeta temporal del usuario, en el equipo donde se ejecuta la herramienta.</br></br> Ejemplo de unidad local: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Ejemplo de recurso compartido de red: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;recurso compartido>\&lt;carpeta>***|
 
