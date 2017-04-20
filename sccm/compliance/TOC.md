@@ -29,5 +29,5 @@
 
 ## [Crear elementos de configuración de perfiles y datos de usuario](deploy-use/create-user-data-and-profiles-configuration-items.md)
 ## [Crear perfiles de conexión remota](deploy-use/create-remote-connection-profiles.md)
-## [Actualizar dispositivos de Windows a una versión más reciente](deploy-use/upgrade-windows-version.md)
+## [Actualizar los dispositivos de Windows a una nueva edición](deploy-use/upgrade-windows-version.md)
 ## [Supervisar la configuración de cumplimiento](deploy-use/monitor-compliance-settings.md)
