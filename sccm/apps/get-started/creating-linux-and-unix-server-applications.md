@@ -2,7 +2,7 @@
 title: Crear aplicaciones de servidor de Linux y UNIX| Microsoft Docs
 description: Consulte las consideraciones que debe tener en cuenta al crear e implementar aplicaciones para dispositivos Linux y UNIX.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: b599a58f25a868c638b7ee00cefff80b2f71244e
-ms.openlocfilehash: f4373c888434aa6cd22e5f9b871e172cc50a7d30
+ms.sourcegitcommit: 4b9261db93c9bf72c492e3c9be5b30f81835134a
+ms.openlocfilehash: 72ebd8bd29b5ecdd817631e447291c04f49d9808
+ms.lasthandoff: 04/13/2017
 
 
 ---
@@ -145,7 +146,7 @@ La tabla siguiente enumera las propiedades de los paquetes y programas que no so
 
     -   **Velocidad de transferencia máxima durante el período de limitación (Kbps)**  
 
-    -   **Velocidad de transferencia máxima durante el período de limitación (Kbps)**  
+    -   **Velocidad de transferencia máxima fuera del período de limitación (Kbps)**  
 
 No se admite la siguiente configuración de transferencia inteligente en segundo plano y el cliente la omite para Linux y UNIX:  
 
@@ -164,9 +165,4 @@ No se admite la siguiente configuración de transferencia inteligente en segundo
 
 > [!TIP]  
 >  Si el software que desea implementar está ubicado en un recurso compartido de Network File System (NFS) al que el servidor Linux o UNIX tiene acceso, no necesita usar un punto de distribución para descargar el paquete. En cambio, cuando cree el paquete, no active la casilla **Este paquete contiene archivos de origen**. Luego, cuando configure el programa, especifique la línea de comandos adecuada para tener acceso directo al paquete en el punto de montaje NFS.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
