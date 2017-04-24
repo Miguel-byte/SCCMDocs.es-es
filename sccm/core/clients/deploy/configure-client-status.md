@@ -2,7 +2,7 @@
 title: Configurar el estado de cliente | Microsoft Docs
 description: "Seleccione la configuración del estado de cliente en System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/16/2016
 
 Para poder supervisar el estado de cliente de System Center Configuration Manager y solucionar los problemas detectados, debe configurar el sitio para especificar los parámetros que se usan para marcar los clientes como inactivos y configurar las opciones para alertarle si la actividad de cliente cae por debajo de un umbral determinado. También puede deshabilitar en los equipos la corrección automática de problemas detectados por el estado de cliente.  
 
-##  <a name="a-namebkmk1a-to-configure-client-status"></a><a name="BKMK_1"></a> Para configurar el estado de cliente  
+##  <a name="BKMK_1"></a> Para configurar el estado de cliente  
 
 1.  En la consola de Configuration Manager, haga clic en **Supervisión**.  
 
@@ -56,7 +56,7 @@ Para poder supervisar el estado de cliente de System Center Configuration Manage
 
 5.  Haga clic en **Aceptar** para guardar las propiedades y cerrar el cuadro de diálogo **Propiedades de configuración de estado de cliente** .  
 
-##  <a name="a-namebkmkschedulea-to-configure-the-schedule-for-client-status"></a><a name="BKMK_Schedule"></a> Para configurar la programación del estado de cliente  
+##  <a name="BKMK_Schedule"></a> Para configurar la programación del estado de cliente  
 
 1.  En la consola de Configuration Manager, haga clic en **Supervisión**.  
 
@@ -67,7 +67,7 @@ Para poder supervisar el estado de cliente de System Center Configuration Manage
     > [!NOTE]  
     >  Cuando se cambia la programación de actualizaciones de estado de cliente, la actualización no tendrá efecto hasta la siguiente actualización de estado de cliente programada (según la programación configurada previamente).  
 
-##  <a name="a-namebkmk2a-to-configure-alerts-for-client-status"></a><a name="BKMK_2"></a> Para configurar las alertas del estado de cliente  
+##  <a name="BKMK_2"></a> Para configurar las alertas del estado de cliente  
 
 1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
 
@@ -95,7 +95,7 @@ Para poder supervisar el estado de cliente de System Center Configuration Manage
 
 7.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo *&lt;Nombre de la colección\>***Propiedades**.  
 
-##  <a name="a-namebkmk3a-to-exclude-computers-from-automatic-remediation"></a><a name="BKMK_3"></a> Para excluir la corrección automática de equipos  
+##  <a name="BKMK_3"></a> Para excluir la corrección automática de equipos  
 
 1.  Abra el Editor del Registro en el equipo cliente en el que desea deshabilitar la corrección automática.  
 

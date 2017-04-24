@@ -2,7 +2,7 @@
 title: Administrar clientes | Microsoft Docs
 description: Aprenda a administrar clientes en System Center Configuration Manager.
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 caps.latest.revision: 17
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 19e111e0cb174f11ad08f98d2516e52c4c183d86
@@ -35,7 +35,7 @@ Cuando un cliente de System Center Configuration Manager se instala y se asigna 
 >   
 >  Use la columna **Cliente** en la consola de Configuration Manager para determinar si el cliente de Configuration Manager está instalado, de forma que pueda administrarlo desde la consola de Configuration Manager.  
 
-##  <a name="a-namebkmkmanagingclientsdevicesnodea-manage-clients-from-the-devices-node"></a><a name="BKMK_ManagingClients_DevicesNode"></a> Administrar clientes desde el nodo Dispositivos  
+##  <a name="BKMK_ManagingClients_DevicesNode"></a> Administrar clientes desde el nodo Dispositivos  
 
 Tenga en cuenta que, dependiendo del tipo de dispositivo, es posible que algunas de estas opciones no estén disponibles.  
 
@@ -153,7 +153,7 @@ Tenga en cuenta que, dependiendo del tipo de dispositivo, es posible que algunas
 
          Para obtener más información, consulte [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md) (Administración híbrida de dispositivos móviles [MDM] con System Center Configuration Manager y Microsoft Intune)  
 
-##  <a name="a-namebkmkmanagingclientsdevicecollectionsnodea-manage-clients-from-the-device-collections-node"></a><a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Administrar clientes desde el nodo Recopilaciones de dispositivos  
+##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Administrar clientes desde el nodo Recopilaciones de dispositivos  
   Muchas de las tareas que puede realizar en un dispositivo único o en varios dispositivos del nodo **Dispositivos** pueden realizarse en las recopilaciones. Esto aplica automáticamente la operación en todos los dispositivos aptos de la recopilación. Tenga en cuenta que esto genera muchos paquetes de red y aumenta el uso de la CPU en el servidor de sitio.  
 
   Antes de llevar a cabo tareas de administración de cliente en el nivel de la recopilación, considere el número de dispositivos que hay en la recopilación, si están conectados por conexiones de red de ancho de banda bajo y el tiempo que tardará en completarse la tarea para todos los dispositivos. Una vez que se haya iniciado, no puede detener la tarea de la consola.  
@@ -186,7 +186,7 @@ Tenga en cuenta que, dependiendo del tipo de dispositivo, es posible que algunas
 
          Las tareas de notificación de cliente se muestran en el nodo **Operaciones de cliente** del área de trabajo **Supervisión** .  
 
-##  <a name="a-namebkmkclientcachea-configure-the-client-cache-for-configuration-manager-clients"></a><a name="BKMK_ClientCache"></a> Configurar la caché del cliente para clientes de Configuration Manager  
+##  <a name="BKMK_ClientCache"></a> Configurar la caché del cliente para clientes de Configuration Manager  
 La caché del cliente almacena los archivos temporales para el momento en que los clientes instalen aplicaciones y programas. Las actualizaciones de software también utilizan la caché de cliente, pero estas actualizaciones no están limitadas por el tamaño de caché configurado y siempre tratarán de descargarse en la caché. Puede configurar la caché de cliente, como el tamaño y la ubicación, al instalar manualmente el cliente de Configuration Manager, cuando use la instalación de inserción de cliente o después de la instalación del cliente.
 
 A partir de la versión 1606 de Configuration Manager, puede especificar el tamaño de la carpeta de caché mediante la configuración del cliente en la consola de Configuration Manager.   
@@ -275,7 +275,7 @@ A partir de la versión 1606, puede ajustar el tamaño de la carpeta de caché d
 
      El cliente de Configuration Manager configurará el tamaño de caché con estos valores cuando se descargue la próxima directiva de cliente.
 
-##  <a name="a-namebkmkuninstalclienta-uninstall-the-configuration-manager-client"></a><a name="BKMK_UninstalClient"></a> Desinstalar el cliente de Configuration Manager  
+##  <a name="BKMK_UninstalClient"></a> Desinstalar el cliente de Configuration Manager  
  Para desinstalar de un equipo con Windows el software cliente de Configuration Manager, use **CCMSetup.exe** con la propiedad **/Uninstall**. Ejecute CCMSetup.exe en un equipo individual desde el símbolo del sistema o implemente un paquete y el programa para desinstalar el cliente de una recopilación de equipos.  
 
 > [!WARNING]  
@@ -290,7 +290,7 @@ A partir de la versión 1606, puede ajustar el tamaño de la carpeta de caché d
 > [!NOTE]  
 >  El proceso de desinstalación no muestra ningún resultado en la pantalla. Para comprobar que la desinstalación del cliente se ha realizado correctamente, examine el archivo de registro **CCMSetup.log** en la carpeta *%windir%\ ccmsetup* del equipo cliente.  
 
-##  <a name="a-namebkmkconflictingrecordsa-manage-conflicting-records-for-configuration-manager-clients"></a><a name="BKMK_ConflictingRecords"></a> Administrar registros en conflicto para clientes de Configuration Manager  
+##  <a name="BKMK_ConflictingRecords"></a> Administrar registros en conflicto para clientes de Configuration Manager  
  Configuration Manager usa el identificador de hardware para tratar de identificar los clientes que puedan estar duplicados y alertarle así de los registros en conflicto. Por ejemplo, si reinstala un equipo, el identificador de hardware podría ser el mismo, pero el GUID que utiliza Configuration Manager podría cambiar.  
 
  Si Configuration Manager puede resolver un conflicto mediante la autenticación de Windows de la cuenta del equipo, o un certificado PKI de un origen de confianza, el conflicto se resolverá automáticamente. Sin embargo, si Configuration Manager no puede resolver el conflicto, utilizará una configuración de jerarquía que, bien combina automáticamente los registros cuando detecta identificadores de hardware duplicados (configuración predeterminada), o bien permite al usuario decidir cuando combinar, bloquear o crear registros de cliente nuevos. Si decide administrar los registros duplicados manualmente, debe resolver manualmente los registros en conflicto de la consola de Configuration Manager.  
@@ -326,7 +326,7 @@ A partir de la versión 1610 de Configuration Manager, puede proporcionar una li
 2. En la pestaña **Inicio**, en el grupo **Sitios**, pulse **Configuración de jerarquía**.
 3. En la pestaña **Aprobación de cliente y registros conflictivos**, pulse **Agregar** en la sección **Identificadores de hardware duplicados** para agregar nuevos identificadores de hardware.
 
-##  <a name="a-namebkmkpolicyretrievala-initiate-policy-retrieval-for-a-configuration-manager-client"></a><a name="BKMK_PolicyRetrieval"></a> Iniciar la recuperación de directivas para un cliente de Configuration Manager  
+##  <a name="BKMK_PolicyRetrieval"></a> Iniciar la recuperación de directivas para un cliente de Configuration Manager  
  Un cliente de Configuration Manager en Windows descarga su directiva de cliente en una programación que se configura como una configuración de cliente. En cambio, pueden darse casos en que quiera iniciar la recuperación de directiva ad-hoc desde el cliente, por ejemplo, para solucionar problemas o realizar pruebas.  
 
 Puede iniciar la recuperación de directivas con:

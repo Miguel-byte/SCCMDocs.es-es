@@ -2,7 +2,7 @@
 title: Asignar clientes a un sitio | Microsoft Docs
 description: Asigne clientes a un sitio en System Center Configuration Manager.
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
 caps.latest.revision: 10
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 08afca8b422474639cbdb860e555fe0da27361a4
@@ -56,7 +56,7 @@ Si se produce un error en la asignación del cliente, el software cliente perman
 > [!NOTE]  
 >  Si asigna manualmente un equipo cliente a un código de sitio de Configuration Manager que no existe, se produce un error en la asignación de sitio.   
 
-##  <a name="a-namebkmkautomaticassignmenta-using-automatic-site-assignment-for-computers"></a><a name="BKMK_AutomaticAssignment"></a> Uso de la asignación de sitio automática para los equipos  
+##  <a name="BKMK_AutomaticAssignment"></a> Uso de la asignación de sitio automática para los equipos  
  La asignación de sitio automática puede tener lugar durante la implementación del cliente, o cuando se hace clic en **Buscar sitio** en la pestaña **Avanzadas** de **Propiedades de Configuration Manager** en el panel de control. El cliente de Configuration Manager compara su propia ubicación de red con los límites configurados en la jerarquía de Configuration Manager. Cuando la ubicación de red del cliente está dentro de un grupo de límites habilitado para la asignación de sitio, o la jerarquía está configurada para un sitio de reserva, el cliente se asigna automáticamente a ese sitio sin tener que especificar un código de sitio.  
 
  Puede configurar los límites mediante una o varias de las opciones siguientes:  

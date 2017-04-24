@@ -2,7 +2,7 @@
 title: 'Escenario de ejemplo: implementar clientes en Windows Embedded | Microsoft Docs'
 description: Vea un escenario de ejemplo para implementar y administrar clientes de System Center Configuration Manager en dispositivos Windows Embedded.
 ms.custom: na
-ms.date: 01/12/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

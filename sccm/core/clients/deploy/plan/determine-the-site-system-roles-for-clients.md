@@ -2,7 +2,7 @@
 title: Roles del sistema de sitio para clientes | Microsoft Docs
 description: Determine roles de sistema de sitio para los clientes en System Center Configuration Manager.
 ms.custom: na
-ms.date: 12/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 984e8d92-7327-4b08-9228-0c955e6ac778
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: db0642e95bbd7e704d2052aa1e0f5c27cd7bf568
