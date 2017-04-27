@@ -16,9 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
-ms.openlocfilehash: 87c3a35f4688c505f9b659a1bfe62f7a04cc7f11
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: 2c2c0f81736c1b00ea487ae1261803a8105bb5e4
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -53,7 +53,6 @@ ms.lasthandoff: 03/29/2017
 -   El punto de conexión de servicio debe estar instalado y configurado para el modo de **conexión persistente en línea** para poder ver los datos en el panel de mantenimiento de Windows 10. Cuando esté en modo sin conexión, no verá las actualizaciones de datos en el panel hasta que obtenga las actualizaciones de mantenimiento de Configuration Manager.   
      Para obtener más información, consulte [About the service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md) (Sobre el punto de conexión del servicio).  
 
--   Especifique la opción de configuración de la directiva de grupo, **Aplazar actualizaciones**, para determinar si un equipo es CB o CBB.  
 
 -   Internet Explorer 9 o una versión posterior debe estar instalado en el equipo que ejecuta la consola de Configuration Manager.  
 
@@ -122,14 +121,19 @@ Los planes de mantenimiento solo usan la clasificación de actualizaciones de so
 
     -   **Recopilación de destino**: especifica la recopilación de destino que se usará para el plan de mantenimiento. los miembros de la recopilación reciben las actualizaciones de Windows 10 definidas en el plan de mantenimiento.  
 
-    > [!NOTE]  
-    >  A partir de la versión 1602 de Configuration Manager, al realizar una implementación de alto riesgo, como un plan de mantenimiento, la ventana **Seleccionar recopilación** muestra solo las recopilaciones personalizadas que cumplen con la configuración de comprobación de implementación que está configurada en las propiedades del sitio. Las implementaciones de alto riesgo siempre se limitan a las recopilaciones personalizadas, las recopilaciones que cree y la recopilación integrada **Equipos desconocidos** . Cuando cree una implementación de alto riesgo, no puede seleccionar una recopilación integrada como **Todos los sistemas**. Desactive **Ocultar recopilaciones con un número de miembros superior a la configuración de tamaño mínimo del sitio** para ver todas las recopilaciones personalizadas que contienen menos clientes que el tamaño máximo configurado. Para obtener más información, consulte [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md) (Configuración para administrar implementaciones de alto riesgo).  
-    > La configuración de comprobación de implementación se basa en la pertenencia actual de la recopilación. Después de implementar el plan de mantenimiento, la pertenencia a la recopilación no se vuelve a evaluar para la configuración de implementación de alto riesgo.  
-    > Por ejemplo, supongamos que establece el **Tamaño predeterminado** en 100 y el **Tamaño máximo** en 1000. Al crear una implementación de alto riesgo, la ventana **Seleccionar recopilación** solo mostrará las recopilaciones que contienen menos de 100 clientes. Si desactiva la configuración **Ocultar recopilaciones con un recuento de miembros mayor que la configuración de tamaño mínimo del sitio**, la ventana mostrará las recopilaciones que contienen menos de 1000 clientes.  
-    > Al seleccionar una recopilación que contenga un rol de sitio, se aplicará lo siguiente:  
-    >   
-    >  -   Si la recopilación contiene un servidor de sistema de sitio y establece la configuración de comprobación de implementación para bloquear las recopilaciones con servidores de sistema de sitio, se producirá un error y no podrá continuar.  
-    > -   El Asistente para implementar software mostrará una advertencia de alto riesgo cuando la recopilación contenga un servidor de sistema de sitio y establezca la configuración de comprobación de implementación para advertirle si las recopilaciones tienen servidores de sistema de sitio, si la recopilación supera el valor de tamaño predeterminado o si la recopilación contiene un servidor. Debe aceptar la creación de una implementación de alto riesgo y se creará un mensaje de estado de auditoría.  
+        > [!NOTE]  
+        >  A partir de la versión 1602 de Configuration Manager, al realizar una implementación de alto riesgo, como un plan de mantenimiento, la ventana **Seleccionar recopilación** muestra solo las recopilaciones personalizadas que cumplen con la configuración de comprobación de implementación que está configurada en las propiedades del sitio.
+        >    
+        > Las implementaciones de alto riesgo siempre se limitan a las recopilaciones personalizadas, las recopilaciones que cree y la recopilación integrada **Equipos desconocidos** . Cuando cree una implementación de alto riesgo, no puede seleccionar una recopilación integrada como **Todos los sistemas**. Desactive **Ocultar recopilaciones con un número de miembros superior a la configuración de tamaño mínimo del sitio** para ver todas las recopilaciones personalizadas que contienen menos clientes que el tamaño máximo configurado. Para obtener más información, consulte [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md) (Configuración para administrar implementaciones de alto riesgo).  
+        >  
+        > La configuración de comprobación de implementación se basa en la pertenencia actual de la recopilación. Después de implementar el plan de mantenimiento, la pertenencia a la recopilación no se vuelve a evaluar para la configuración de implementación de alto riesgo.  
+        >  
+        > Por ejemplo, supongamos que establece el **Tamaño predeterminado** en 100 y el **Tamaño máximo** en 1000. Al crear una implementación de alto riesgo, la ventana **Seleccionar recopilación** solo mostrará las recopilaciones que contienen menos de 100 clientes. Si desactiva la configuración **Ocultar recopilaciones con un recuento de miembros mayor que la configuración de tamaño mínimo del sitio**, la ventana mostrará las recopilaciones que contienen menos de 1000 clientes.  
+        >
+        > Al seleccionar una recopilación que contenga un rol de sitio, se aplicará lo siguiente:    
+        >   
+        >    - Si la recopilación contiene un servidor de sistema de sitio y establece la configuración de comprobación de implementación para bloquear las recopilaciones con servidores de sistema de sitio, se producirá un error y no podrá continuar.    
+        >    - El Asistente para implementar software mostrará una advertencia de alto riesgo cuando la recopilación contenga un servidor de sistema de sitio y establezca la configuración de comprobación de implementación para advertirle si las recopilaciones tienen servidores de sistema de sitio, si la recopilación supera el valor de tamaño predeterminado o si la recopilación contiene un servidor. Debe aceptar la creación de una implementación de alto riesgo y se creará un mensaje de estado de auditoría.  
 
 6.  En la página Canal de implementación, configure las siguientes opciones:  
 
@@ -169,10 +173,10 @@ Los planes de mantenimiento solo usan la clasificación de actualizaciones de so
 
         -   **Hora específica**: seleccione esta opción para que las actualizaciones de software de la implementación se instalen automáticamente en una fecha y hora concretas. Configuration Manager determina la fecha límite para instalar actualizaciones de software, para lo cual agrega el intervalo **Hora específica** establecido a **Horas de disponibilidad del software**.  
 
-        > [!NOTE]  
-        >  La hora de la fecha límite de instalación real es la hora de la fecha límite más una cantidad aleatoria de tiempo de hasta dos horas. Se minimiza, así, el efecto negativo que podría producirse si todos los equipos cliente de la recopilación de destino instalan las actualizaciones de software de la implementación a la misma hora.  
-        >   
-        >  Puede establecer la opción **Deshabilitar selección aleatoria de fecha límite** de la configuración de cliente **Agente de equipo** para deshabilitar el retraso de la selección aleatoria de instalación para las actualizaciones necesarias. Para obtener más información, vea [Agente de equipo](../../core/clients/deploy/about-client-settings.md#computer-agent).  
+            > [!NOTE]  
+            >  La hora de la fecha límite de instalación real es la hora de la fecha límite más una cantidad aleatoria de tiempo de hasta dos horas. Se minimiza, así, el efecto negativo que podría producirse si todos los equipos cliente de la recopilación de destino instalan las actualizaciones de software de la implementación a la misma hora.  
+            >   
+            >  Puede establecer la opción **Deshabilitar selección aleatoria de fecha límite** de la configuración de cliente **Agente de equipo** para deshabilitar el retraso de la selección aleatoria de instalación para las actualizaciones necesarias. Para obtener más información, vea [Agente de equipo](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 9. En la página Experiencia del usuario, configure las siguientes opciones:  
 

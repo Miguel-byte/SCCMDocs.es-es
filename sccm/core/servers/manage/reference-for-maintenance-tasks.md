@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: c3ca3b895d54b6dc886068b92b39d0d95c466de2
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
+ms.openlocfilehash: a2d4420c2274a9b1ceb47ffd267849fdb5a55a61
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -147,7 +147,7 @@ Esta tarea se aplica en dispositivos inscritos con Microsoft Intune (híbrido) o
 -   **Sitio primario**: habilitado    
 -   **Sitio secundario**: habilitado  
 
-**Eliminar historial de tareas de notificación vencidas**: use esta tarea para eliminar de la base de datos del sitio la información sobre tareas de notificación de cliente cuando no se ha actualizado durante un período de tiempo especificado. Para obtener más información sobre las notificaciones de cliente, consulte [Tareas de implementación de cliente para System Center Configuration Manager](../../../core/clients/deploy/client-deployment-tasks.md).  
+**Eliminar historial de tareas de notificación vencidas**: use esta tarea para eliminar de la base de datos del sitio la información sobre tareas de notificación de cliente cuando no se ha actualizado durante un período de tiempo especificado. Para obtener más información sobre las notificaciones de cliente, consulte [Tareas de implementación de cliente para System Center Configuration Manager](../../../core/clients/manage/monitor-clients.md).  
 
 -   Sitio de administración central: no disponible    
 -   **Sitio primario**: habilitado    
