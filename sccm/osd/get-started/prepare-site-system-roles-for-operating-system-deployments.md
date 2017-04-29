@@ -17,8 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 1069a18eecbc5f53b74ad89e166e6f2c7b180693
+ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
+ms.openlocfilehash: 11c0f169afebdb071fefb5ce300fd1ae3481a94f
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -28,12 +29,12 @@ ms.openlocfilehash: 1069a18eecbc5f53b74ad89e166e6f2c7b180693
 
 Para implementar sistemas operativos en System Center Configuration Manager, primero debe preparar los siguientes roles de sistema de sitio que requieren configuraciones específicas y consideraciones:
 
-##  <a name="a-namebkmkdistributionpointsa-distribution-points"></a><a name="BKMK_DistributionPoints"></a> Puntos de distribución  
+##  <a name="BKMK_DistributionPoints"></a> Puntos de distribución  
  El rol de sistema de sitio de punto de distribución contiene archivos de origen para que los descarguen los clientes como, por ejemplo, contenido de aplicación, actualizaciones de software, imágenes de sistema operativo e imágenes de arranque. Puede controlar la distribución del contenido mediante las opciones de ancho de banda, limitación y programación.  
 
  Es importante disponer de suficientes puntos de distribución para admitir la implementación de sistemas operativos en los equipos. También es importante planear la selección de ubicación de dichos puntos de distribución en la jerarquía. Encontrará la mayor parte de esta información de planeación en [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md) (Administración del contenido y de la infraestructura de contenido). Sin embargo, existen algunas consideraciones adicionales de planeación para puntos de distribución específicos de implementación de sistema operativo.  
 
-###  <a name="a-namebkmkadditionalplanninga-additional-planning-considerations-for-distribution-points"></a><a name="BKMK_AdditionalPlanning"></a> Consideraciones de planeación adicionales para puntos de distribución  
+###  <a name="BKMK_AdditionalPlanning"></a> Consideraciones de planeación adicionales para puntos de distribución  
  A continuación se detallan aspectos de planeación adicionales que deben tenerse en cuenta para los puntos de distribución:  
 
 -   **¿Cómo puedo impedir las implementaciones de sistema de operativo no deseadas?**  
@@ -54,7 +55,7 @@ Para implementar sistemas operativos en System Center Configuration Manager, pri
 
      Puede implementar un sistema operativo a un punto de distribución, pero la imagen del sistema operativo se debe recibir desde un punto de distribución distinto.  
 
-###  <a name="a-namebkmkpxedistributionpointa-configuring-distribution-points-to-accept-pxe-requests"></a><a name="BKMK_PXEDistributionPoint"></a> Configuración de puntos de distribución para aceptar solicitudes PXE  
+###  <a name="BKMK_PXEDistributionPoint"></a> Configuración de puntos de distribución para aceptar solicitudes PXE  
  Para implementar sistemas operativos en clientes de Configuration Manager que efectúan solicitudes de arranque PXE, debe configurar uno o varios puntos de distribución para que acepten las solicitudes PXE. Una vez configurado el punto de distribución, puede responder a la solicitud de arranque de PXE y determinar las acciones de implementación que se deberán llevar a cabo.
 
 > [!IMPORTANT]  
@@ -97,7 +98,7 @@ Para implementar sistemas operativos en System Center Configuration Manager, pri
 
 11. Haga clic en **Aceptar** para actualizar las propiedades del punto de distribución.  
 
-###  <a name="a-namebkmkramdisktftpa-customize-the-ramdisk-tftp-block-size-and-window-size-on-pxe-enabled-distribution-points"></a><a name="BKMK_RamDiskTFTP"></a> Personalización del tamaño de bloque de TFTP de RamDisk y el tamaño de la ventana de puntos de distribución habilitados con PXE  
+###  <a name="BKMK_RamDiskTFTP"></a> Personalización del tamaño de bloque de TFTP de RamDisk y el tamaño de la ventana de puntos de distribución habilitados con PXE  
 Puede personalizar el tamaño de bloque de TFTP de RamDisk y, a partir de Configuration Manager versión 1606, el tamaño de ventana de los puntos de distribución habilitados con el entorno PXE. El hecho de haber personalizado su red podría provocar que se produjera un error de tiempo de espera en la descarga de la imagen de arranque porque el tamaño del bloque o la ventana es demasiado grande. La personalización tanto del tamaño del bloque como del de la ventana de TFTP de RamDisk le permiten optimizar el tráfico de TFTP al utilizar PXE para cumplir los requisitos de red específicos.   
 Debe probar la configuración personalizada en su entorno para determinar lo que es más eficaz.  
 
@@ -115,7 +116,7 @@ Debe probar la configuración personalizada en su entorno para determinar lo que
 
      **Tipo**: REG_DWORD  
 
-     **Valor**: <tamaño de ventana personalizado\>  
+     **Valor**: &lt;tamaño de ventana personalizado>  
 
  El valor predeterminado es 1 (1 bloque de datos completa la ventana)  
 
@@ -128,12 +129,12 @@ Debe probar la configuración personalizada en su entorno para determinar lo que
 
      **Tipo**: REG_DWORD  
 
-     **Valor**: <tamaño de bloque personalizado\>  
+     **Valor**: &lt;tamaño de bloque personalizado>  
 
  El valor predeterminado es 4096 (4k).  
 
 
-###  <a name="a-namebkmkdpmulticasta-configure-distribution-points-to-support-multicast"></a><a name="BKMK_DPMulticast"></a> Configuración de puntos de distribución para admitir la multidifusión  
+###  <a name="BKMK_DPMulticast"></a> Configuración de puntos de distribución para admitir la multidifusión  
  La multidifusión es un método de optimización de red que puede usar en puntos de distribución si es probable que varios clientes descarguen la misma imagen de sistema operativo al mismo tiempo. Cuando se usa multidifusión, varios equipos pueden descargar la imagen de sistema operativo de forma simultánea a medida que el punto de distribución la reparte mediante multidifusión, en lugar de que el punto de distribución envíe una copia de los datos a cada cliente a través de una conexión separada. Debe configurar al menos un punto de distribución para admitir la multidifusión: Para obtener más información, consulte [Use multicast to deploy Windows over the network](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md) (Usar multidifusión para implementar Windows a través de la red).  
 
  Antes de implementar el sistema operativo, debe configurar un punto de distribución para admitir la multidifusión. Utilice el siguiente procedimiento para modificar un punto de distribución existente para que admita la multidifusión. Para obtener información sobre cómo instalar un punto de distribución nuevo, consulte [Install and configure distribution points](../../core/servers/deploy/configure/install-and-configure-distribution-points.md) (Instalar y configurar puntos de distribución).
@@ -176,7 +177,7 @@ Debe probar la configuración personalizada en su entorno para determinar lo que
 
 6.  Haga clic en **Aceptar**.  
 
-##  <a name="a-namebkmkstatemigrationpointsa-state-migration-point"></a><a name="BKMK_StateMigrationPoints"></a> Punto de migración de estado  
+##  <a name="BKMK_StateMigrationPoints"></a> Punto de migración de estado  
  El punto de migración de estado almacena los datos de estado de usuario que se capturan en un equipo y se restauran en otro. Sin embargo, cuando se captura la configuración de usuario para la implementación de sistema operativo en el mismo equipo, como una implementación que actualice el sistema operativo en el equipo de destino, puede elegir si quiere almacenar los datos en el mismo equipo mediante el uso de vínculos físicos o usar un punto de migración de estado. En algunas implementaciones, al crear el almacén de estado, Configuration Manager crea automáticamente una asociación entre el almacén de estado y el equipo de destino. Tenga en cuenta los siguientes factores al planear el punto de migración de estado.  
 
 ### <a name="user-state-size"></a>Tamaño de estado de usuario  
@@ -219,9 +220,4 @@ Debe probar la configuración personalizada en su entorno para determinar lo que
 -   Si el punto de migración de estado responde solo a solicitudes de restauración de datos de estado de usuario. Cuando se habilita esta opción, no se puede utilizar el punto de migración de estado para almacenar datos de estado de usuario.  
 
  Para consultar los pasos necesarios para instalar un rol de sistema de sitio, consulte [Add site system roles](../../core/servers/deploy/configure/add-site-system-roles.md) (Agregar roles de sistema de sitio).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

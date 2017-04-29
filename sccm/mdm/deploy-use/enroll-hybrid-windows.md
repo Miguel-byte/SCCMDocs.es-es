@@ -16,9 +16,9 @@ author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4bf5cc25c4ffb89df620b02044f43a13adc1443e
-ms.openlocfilehash: c87841ee1b30ebbcbbe8cd06309d909c38c01fdf
-ms.lasthandoff: 04/06/2017
+ms.sourcegitcommit: 329de5ffb6eb1403c02cd1db634c32f045e82488
+ms.openlocfilehash: 47348baeac26bfa2ad5016622fe4dbcb9f572483
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -47,35 +47,64 @@ Para habilitar la administración de dispositivos Windows para equipos o disposi
 4. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  Para simplificar el proceso de inscripción con el Portal de empresa, debe crear un alias DNS para la inscripción de dispositivos. Después puede indicar a los usuarios cómo inscribir sus dispositivos.
 
 ## <a name="choose-how-to-enroll-windows-devices"></a>Elegir cómo inscribir dispositivos Windows
-Hay dos factores que determinan cómo inscribirá dispositivos Windows:
+
+Una vez que haya asignado licencias de Intune a los usuarios, los dispositivos Windows se pueden inscribir sin pasos adicionales, pero puede facilitar la inscripción para los usuarios.
+
+Hay dos factores que determinan cómo puede simplificar la inscripción de dispositivos Windows:
 - **¿Usa Azure Active Directory Premium?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) se incluye con Enterprise Mobility + Security y otros planes de licencias.
 - **¿Qué versiones de los clientes de Windows se inscribirán?** <br>Los dispositivos Windows 10 pueden inscribirse automáticamente al agregar una cuenta profesional o educativa. Las versiones anteriores deben inscribirse mediante la aplicación de Portal de empresa.
 
 ||**Azure AD Premium**|**Otro AD**|
 |----------|---------------|---------------|  
-|**Windows 10**|[Inscripción automática](#automatic-enrollment) |[Inscripción de Portal de empresa](#company-portal-enrollment)|
-|**Versiones anteriores de Windows**|[Inscripción de Portal de empresa](#company-portal-enrollment)|[Inscripción de Portal de empresa](#company-portal-enrollment)|
+|**Windows 10**|[Inscripción automática](#enable-windows-10-automatic-enrollment) |[Inscripción de usuarios](#enable-windows-enrollment-without-azure-ad-premium)|
+|**Versiones anteriores de Windows**|[Inscripción de usuarios](#enable-windows-enrollment-without-azure-ad-premium)|[Inscripción de usuarios](#enable-windows-enrollment-without-azure-ad-premium)|
 
-## <a name="automatic-enrollment"></a>Inscripción automática
+## <a name="enable-windows-10-automatic-enrollment"></a>Habilitar la inscripción automática de Windows 10
 
-La inscripción automática permite a los usuarios inscribir dispositivos Windows 10 corporativos o personales al agregar una cuenta profesional o educativa, y aceptar que se administre. En segundo plano, el dispositivo del usuario se registra y se conecta con Azure Active Directory. Una vez que se ha registrado, el dispositivo puede administrarse con Intune. Los dispositivos administrados aún pueden usar el Portal de empresa para tareas, pero no tienen que instalarlo para inscribirse.
+La inscripción automática permite a los usuarios inscribir en Intune PC Windows 10 y dispositivos móviles Windows 10 corporativos o personales. Para ello, deben agregar una cuenta profesional o educativa y aceptar su administración. Es así de sencillo. En segundo plano, el dispositivo del usuario se registra y se une a Azure Active Directory. Una vez se registra un dispositivo, este se administra con Intune.
 
 **Requisitos previos**
 - Suscripción a Azure Active Directory Premium ([suscripción de prueba](http://go.microsoft.com/fwlink/?LinkID=816845))
 - Suscripción a Microsoft Intune
 
-### <a name="configure-automatic-enrollment"></a>Configurar la inscripción automática
 
-1. Inicie sesión en [Azure Portal](https://manage.windowsazure.com), vaya al nodo **Active Directory** en el panel izquierdo y seleccione el directorio.
-2. Haga clic en la pestaña **Configurar** y desplácese hasta la sección denominada **Dispositivos**.
-3. Seleccione **Todos** en **Users may workplace join devices** (Los usuarios pueden unir dispositivos al área de trabajo).
-4. Seleccione el número máximo de dispositivos que quiere autorizar por usuario.
+### <a name="configure-automatic-mdm-enrollment"></a>Configurar la inscripción de MDM automática
+
+1. Inicie sesión en el [Portal de administración de Azure](https://portal.azure.com) (https://manage.windowsazure.com) y seleccione **Azure Active Directory**.
+
+  ![Captura de pantalla de Azure Portal](../media/auto-enroll-azure-main.png)
+
+2. Seleccione **Movilidad (MDM y MAM)**.
+
+  ![Captura de pantalla de Azure Portal](../media/auto-enroll-mdm.png)
+
+3. Seleccione **Microsoft Intune**.
+
+  ![Captura de pantalla de Azure Portal](../media/auto-enroll-intune.png)
+
+4. Configure **Ámbito de usuario de MDM**. Especifique qué dispositivos de los usuarios deben administrarse mediante Microsoft Intune. Los dispositivos Windows 10 de estos usuarios se inscribirán automáticamente para la administración con Microsoft Intune.
+
+    - **Ninguno**
+    - **Algunos**
+    - **Todos**
+
+   ![Captura de pantalla de Azure Portal](../media/auto-enroll-scope.png)
+
+5. Utilice los valores predeterminados para las direcciones URL siguientes:
+    - **URL de los términos de uso de MDM**
+    - **URL de detección de MDM**
+    - **URL de cumplimiento de MDM**
+
+6. Seleccione **Guardar**.
+
 
 De manera predeterminada, la autenticación en dos fases no está habilitada para el servicio. En cambio, se recomienda la autenticación en dos fases al registrar un dispositivo. Antes de requerir la autenticación en dos fases para este servicio, debe configurar un proveedor de autenticación de dos fases en Azure Active Directory y configurar las cuentas de usuario para la autenticación multifactor. Vea [Introducción a Servidor Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
 
+## <a name="enable-windows-enrollment-without-azure-ad-premium"></a>Habilitar la inscripción de Windows sin Azure AD Premium
+Puede permitir que los usuarios inscriban sus dispositivos sin la inscripción automática de Azure AD Premium. Una vez que asigne licencias, los usuarios pueden realizar la inscripción después de agregar la cuenta profesional a sus dispositivos personales o unir sus dispositivos corporativos a Azure AD. La creación de un alias DNS (tipo de registro CNAME) permite que los usuarios puedan inscribir sus dispositivos fácilmente. Al crear registros de recursos CNAME de DNS, los usuarios se conectan a Intune y se inscriben sin escribir el nombre de servidor de Intune.
 
-### <a name="create-dns-alias-for-device-enrollment"></a>Creación de un alias DNS para la inscripción de dispositivos  
-Un alias DNS (tipo de registro CNAME) facilita a los usuarios la inscripción de sus dispositivos al conectarse al servicio sin necesidad de que el usuario escriba una dirección de servidor. Para crear un alias DNS (tipo de registro CNAME), tendrá que configurar un CNAME en los registros DNS de la empresa que redirija las solicitudes enviadas a una dirección URL del dominio de la empresa a servidores de servicios en la nube de Microsoft.  Por ejemplo, si el dominio de la empresa es contoso.com, debe crear un CNAME en DNS que redirija EnterpriseEnrollment.contoso.com a EnterpriseEnrollment-s.manage.microsoft.com.  
+### <a name="create-cnames-to-simplify-enrollment"></a>Crear CNAME para simplificar la inscripción
+Cree registros de recursos DNS CNAME para el dominio de su empresa. Por ejemplo, si el sitio web de la empresa es contoso.com, debe crear un registro CNAME en DNS que redirija EnterpriseEnrollment.contoso.com a EnterpriseEnrollment-s.manage.microsoft.com.
 
 Aunque la creación de entradas DNS CNAME es opcional, los registros CNAME facilitan la inscripción para los usuarios. Si no se encuentra ningún registro CNAME de inscripción, se pedirá a los usuarios que escriban de forma manual el nombre del servidor MDM (enrollment.manage.microsoft.com).
 
@@ -90,6 +119,10 @@ Si tiene más de un sufijo UPN, debe crear un CNAME para cada nombre de dominio 
 |CNAME|EnterpriseEnrollment.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hora|
 |CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hora|
 |CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hora|
+
+`EnterpriseEnrollment-s.manage.microsoft.com`: admite un redireccionamiento al servicio Intune con reconocimiento de dominio del nombre de dominio del correo electrónico.
+
+Los cambios en los registros DNS pueden tardar hasta 72 horas en propagarse. No se puede comprobar el cambio de DNS en Intune hasta que el registro DNS se propague.
 
 ## <a name="tell-users-how-to-enroll-devices"></a>Indicar a los usuarios cómo inscribir dispositivos  
 

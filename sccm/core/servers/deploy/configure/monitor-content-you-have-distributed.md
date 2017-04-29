@@ -2,7 +2,7 @@
 title: Supervisar contenido | Microsoft Docs
 description: Aprenda a supervisar contenido distribuido mediante la consola de Configuration Manager.
 ms.custom: na
-ms.date: 2/8/2017
+ms.date: 4/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d7b13f3dea5a3ae413ca6b8150ec24e1632a4d4d
-ms.openlocfilehash: 7496c8bf11d058c94bc36fd28e9557b6470b61f1
-ms.lasthandoff: 04/12/2017
+ms.sourcegitcommit: dda2f4c01078fbbd174cbcb30357554c24f6abeb
+ms.openlocfilehash: 7659d5789b8ce4e9e0b585a331c8f68869c9492d
+ms.lasthandoff: 04/17/2017
 
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>Supervisión del contenido que se ha distribuido con System Center Configuration Manager
@@ -155,7 +155,7 @@ Utilice el procedimiento siguiente para ver el estado de configuración del punt
 A partir de la versión 1610, puede usar el panel **Orígenes de datos de cliente** para entender el uso del [Almacenamiento en caché del mismo nivel](/sccm/core/plan-design/hierarchy/client-peer-cache) en su entorno. El panel mostrará los datos después de que los clientes descarguen contenido y notifiquen esa información al sitio. Esto puede tardar hasta 24 horas.
 
 > [!TIP]  
-> Con la versión 1610, el panel de orígenes de datos de cliente y la caché del mismo nivel son funciones de la versión preliminar. Para habilitarlos, vea [Uso de características de la versión preliminar a partir de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease). Para que el panel **Orígenes de datos de cliente** esté visible, debe habilitarlo. Una vez que lo haya habilitado, puede tardar hasta 24 horas en empezar a mostrar los datos. 
+> El panel **Orígenes de datos de cliente** y **Caché del mismo nivel de cliente**  son características de la versión preliminar introducidas en la versión 1610. Debe habilitar Caché del mismo nivel de cliente antes de que el panel Orígenes de datos de cliente se vuelva visible en la consola. Para habilitar Caché del mismo nivel de cliente, vea [Uso de las características de versión preliminar de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease). Una vez que lo haya habilitado, puede tardar hasta 24 horas en empezar a mostrar los datos.
 
 En la consola, vaya a **Supervisión** > **Estado de distribución** > **Orígenes de datos de cliente**. Aquí puede seleccionar un período de tiempo que se aplicará al panel. A continuación, en la pantalla, puede seleccionar el grupo de límites o el paquete para el que desea ver información. Al ver la información, puede mantener el puntero sobre la superficie para ver más detalles sobre los distintos orígenes de contenido o directiva.
 

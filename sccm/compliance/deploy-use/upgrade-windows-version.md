@@ -1,8 +1,8 @@
 ---
-title: "Actualizar dispositivos Windows a una versión reciente | Microsoft Docs"
-description: "Actualice dispositivos que ejecuten Windows 10 Escritorio, Windows 10 Mobile o Windows 10 Holographic a una edición más reciente de forma automática."
+title: "Actualizar dispositivos de Windows a otra versión con Configuration Manager | Documentos de Microsoft"
+description: "Actualice dispositivos que ejecuten Windows 10 Escritorio, Windows 10 Mobile o Windows 10 Holographic a otra edición más reciente de forma automática con Configuration Manager."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 04/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: f14dfb77be7b53e74d53e0c1fc7e7f1731952d40
+ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
+ms.openlocfilehash: cfde0a43947013bbd3a1093688cee19fe309fd03
+ms.lasthandoff: 04/18/2017
 
 
 ---
@@ -28,7 +29,7 @@ ms.openlocfilehash: f14dfb77be7b53e74d53e0c1fc7e7f1731952d40
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
 
-La **directiva de actualización de edición** de System Center Configuration Manager permite actualizar de forma automática los dispositivos que ejecutan una de las siguientes versiones de Windows 10 a una edición más reciente:
+La **directiva de actualización de edición** de System Center Configuration Manager permite actualizar de forma automática los dispositivos que ejecutan una de las siguientes versiones de Windows 10 a otra edición:
 
 - Windows 10 Escritorio
 - Windows 10 Mobile
@@ -92,9 +93,4 @@ La nueva directiva se muestra en el nodo **Actualización de la edición de Wind
 Puede supervisar las implementaciones que acaba de crear desde el nodo **Implementaciones** del área de trabajo **Supervisión** .  
 
  Una vez que la directiva alcance un equipo Windows de destino y se evalúe, se reiniciará durante las dos horas posteriores para aplicar la actualización. Asegúrese de informar a los usuarios a los que implemente la directiva, o prográmela para que se ejecute fuera del horario laboral de los usuarios.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

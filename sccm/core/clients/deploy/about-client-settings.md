@@ -13,13 +13,13 @@ ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: bd2cf7b0df4a1f50c006e8280bf59ea91f1b4477
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
+ms.openlocfilehash: d1d2ec7c053d13ebaeb00d0dfeb126716b5f7ae5
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Acerca de la configuración de cliente en System Center Configuration Manager
@@ -505,7 +505,7 @@ Muchas de las configuraciones del cliente se explican por sí solas. Aquí se de
 
     -   Seleccione el icono **Nuevo** para agregar un nuevo tipo de archivo al inventario. Después, especifique la información siguiente en el cuadro de diálogo **Propiedades de archivo inventariado**:  
 
-        -   **Nombre**: proporcione un nombre al archivo que quiere inventariar. Puede usar el carácter **\** para representar cualquier cadena de texto y el carácter**?**para representar cualquier carácter único. Por ejemplo, si quiere hacer un inventario de todos los archivos con la extensión .doc, especifique el nombre del archivo**\*.doc**.  
+        -   **Nombre**: proporcione un nombre al archivo que quiere inventariar. Puede usar el carácter **\** para representar cualquier cadena de texto y el carácter **?** para representar un solo carácter. Por ejemplo, si quiere hacer un inventario de todos los archivos con la extensión .doc, especifique el nombre de archivo **\*.doc**.  
 
         -   **Ubicación**: seleccione **Establecer** para abrir el cuadro de diálogo **Propiedades de ruta de acceso**. Puede configurar el inventario de software para buscar el archivo especificado en todos los discos duros del cliente, buscar en una ruta de acceso especificada (por ejemplo **C:\Carpeta**) o buscar una variable especificada (por ejemplo *%windir%*). También puede buscar en todas las subcarpetas de la ruta de acceso especificada.  
 
@@ -528,7 +528,7 @@ Muchas de las configuraciones del cliente se explican por sí solas. Aquí se de
 
     -   En el cuadro de diálogo **Propiedades del archivo recopilado** , proporcione la siguiente información:  
 
-        -   **Nombre**: proporcione un nombre al archivo que quiera recopilar. Puede usar el carácter **\** para representar cualquier cadena de texto y el carácter**?** para representar cualquier carácter único.  
+        -   **Nombre**: proporcione un nombre al archivo que quiera recopilar. Puede usar el carácter **\** para representar cualquier cadena de texto y el carácter **?** para representar un solo carácter.  
 
         -   **Ubicación**: seleccione **Establecer** para abrir el cuadro de diálogo **Propiedades de ruta de acceso**. Puede configurar el inventario de software para buscar el archivo que quiere recopilar en todos los discos duros del cliente, buscar en una ruta de acceso especificada (por ejemplo **C:\Carpeta**) o buscar una variable especificada (por ejemplo *%windir%*). También puede buscar en todas las subcarpetas de la ruta de acceso especificada.  
 

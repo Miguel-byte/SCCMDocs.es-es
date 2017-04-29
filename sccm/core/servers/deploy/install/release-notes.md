@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: aca3525fc143b281f41c3d9bd20bb93b1d91f6ce
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
+ms.openlocfilehash: 44338c705e308896c5203be239c160a8220369a8
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -234,4 +234,11 @@ Esto solo se produce cuando agrega la misma **recopilación de usuarios** a la p
 Este problema afecta al acceso condicional de System Center Configuration Manager para **Exchange local** con la actualización 1602 y se espera que se resuelva en una futura actualización.  
 
 **Solución alternativa**: agregue la **recopilación de usuarios** a la página **Colecciones objetivo** antes de seleccionar la **recopilación de usuarios** en la página **Recopilaciones exentas**, o asegúrese de que no agrega la misma **recopilación de usuarios** tanto a las recopilaciones objetivo como exentas.
+
+## <a name="endpoint-protection"></a>Endpoint Protection
+<!--  Product Studio bug 485370 added by Nathbarn 04 19 2017 -->
+### <a name="antimalware-policy-fails-to-apply-on-windows-server-2016-core"></a>La directiva antimalware no se puede aplicar en Windows Server 2016 Core
+La directiva antimalware no se puede aplicar en Windows Server 2016 Core.  El código de error es 0x80070002.  Falta una dependencia para ConfigSecurityPolicy.exe.
+
+**Solución alternativa:**  ninguna.  Como administrador, puede usar la directiva de grupo para administrar la configuración de Windows Server 2016 Core.
 

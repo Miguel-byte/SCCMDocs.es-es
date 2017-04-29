@@ -16,9 +16,9 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2cdd25343cf68a79067a317b820572491a3633a2
-ms.openlocfilehash: 84d6fdcec2c539f0fd3043f01d18e165da8c52c9
-ms.lasthandoff: 04/12/2017
+ms.sourcegitcommit: db258a09ce21627ffba37eb1f3d521c1ea0341ed
+ms.openlocfilehash: 7df4bde6970b63262eee9e785d983addbeac0908
+ms.lasthandoff: 04/13/2017
 
 ---
 # <a name="support-for-windows-10-as-a-client-of-system-center-configuration-manager"></a>Compatibilidad para Windows 10 como un cliente de System Center Configuration Manager
@@ -45,7 +45,7 @@ Por ejemplo, una versión de Configuration Manager se quitará de la matriz desp
 |Enterprise 2016 LTSB                   |![Compatible.](media/green_check.png) |![Compatible.](media/green_check.png) |![Compatible.](media/green_check.png) |
 |1607 (CB)    <br />Actualización de aniversario<br />(*Véanse las ediciones*)      |![Compatible con versiones anteriores](media/blue_compat.png) |![Compatible.](media/green_check.png) |![Compatible.](media/green_check.png) |
 |1607 (CBB)    <br />Actualización de aniversario<br />(*Véanse las ediciones*)      |![No compatible](media/Red_X.png)   |![Compatible.](media/green_check.png) |![Compatible.](media/green_check.png) |
-|1703 (CBB)    <br />Creators Update<br />(*Véanse las ediciones*)      |![No compatible](media/Red_X.png)   |![No compatible](media/Red_X.png) |![Compatible con versiones anteriores](media/blue_compat.png) |
+|1703 (CB)    <br />Creators Update<br />(*Véanse las ediciones*)      |![No compatible](media/Red_X.png)   |![No compatible](media/Red_X.png) |![Compatible con versiones anteriores](media/blue_compat.png) |
 
 
 

@@ -2,7 +2,7 @@
 title: Comprobaciones de requisitos previos | Microsoft Docs
 description: Revise las comprobaciones de requisitos previos disponibles para System Center Configuration Manager. Incluye comprobaciones para derechos de seguridad.
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 4/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,16 +16,16 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 496c1444822a4601fad67f421115a609e976386d
-ms.openlocfilehash: 5a8f4a84ef5b4ccb4434ca8eb260c1c7899207ab
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dda2f4c01078fbbd174cbcb30357554c24f6abeb
+ms.openlocfilehash: 14834f62ffaa8fcba5ddb7536a0b76e18b557e53
+ms.lasthandoff: 04/17/2017
 
 ---
 # <a name="list-of-prerequisite-checks-for-system-center-configuration-manager"></a>Lista de comprobaciones de requisitos previos de System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-En las secciones siguientes se detallan las comprobaciones de requisitos previos disponibles. 
+En las secciones siguientes se detallan las comprobaciones de requisitos previos disponibles.
 
 Para obtener más información sobre el Comprobador de requisitos previos, vea [Comprobador de requisitos previos](prerequisite-checker.md).  
 
@@ -117,7 +117,7 @@ En la tabla siguiente se enumeran las comprobaciones que realiza el Comprobador 
 |**Pertenencia a dominio**|Comprueba que el equipo de Configuration Manager pertenece a un dominio de Windows.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario, <br>Proveedor de SMS, <br>SQL Server|
 |**Pertenencia a dominio**|Comprueba que el equipo de Configuration Manager pertenece a un dominio de Windows.|Advertencia|Punto de administración, <br>Punto de distribución|
 |**Unidad FAT en servidor de sitio**|Comprueba si la unidad de disco está formateada con el sistema de archivos FAT. Para mayor seguridad, instale los componentes de servidor de sitio en unidades de disco formateadas con el sistema de archivos NTFS.|Advertencia|Sitio primario|
-|**Espacio libre en disco en el servidor de sitio**|Para poder instalar el servidor de sitio, el equipo de servidor de sitio debe tener al menos 5 GB de espacio libre en disco. Debe contar con 1 GB de espacio libre adicional si instala el rol de sistema de sitio del proveedor de SMS en el mismo equipo.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario|
+|**Espacio libre en disco en el servidor de sitio**|Para poder instalar el servidor de sitio, el equipo de servidor de sitio debe tener al menos 15 GB de espacio libre en disco. Debe contar con 1 GB de espacio libre adicional si instala el rol de sistema de sitio del proveedor de SMS en el mismo equipo.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario|
 |**Reinicio del sistema pendiente**|Comprueba si otro programa requiere que el servidor se reinicie antes de ejecutar el programa de instalación.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario, <br>Consola de Configuration Manager, <br>Proveedor de SMS, <br>SQL Server, <br>Punto de administración, <br>Punto de distribución|
 |**Controlador de dominio de solo lectura**|Los servidores de base de datos de sitio y servidores de sitio secundario no se admiten en un controlador de dominio de solo lectura (RODC). Para obtener más información, vea [Problems when installing SQL Server on a domain controller](http://go.microsoft.com/fwlink/p/?LinkId=264856) (Problemas al instalar SQL Server en un controlador de dominio) en Microsoft Knowledge Base.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario|
 |**Extensiones de esquema**|Determina si se ha ampliado el esquema de Servicios de dominio de Active Directory y, si es así, la versión de las extensiones de esquema que se han utilizado. Las extensiones de esquema de Active Directory de Configuration Manager no son necesarias para la instalación del servidor de sitio, pero se recomiendan para poder usar todas las características de Configuration Manager. Para obtener más información sobre las ventajas de la extensión de esquema, vea [Preparar Active Directory para la publicación de sitios](../../../../core/plan-design/network/extend-the-active-directory-schema.md).|Advertencia|Sitio de administración central, <br>Sitio primario|
