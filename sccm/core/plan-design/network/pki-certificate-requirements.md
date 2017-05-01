@@ -2,7 +2,7 @@
 title: Requisitos de certificados PKI | Microsoft Docs
 description: "Encuentre los requisitos de certificados PKI que podría necesitar para System Center Configuration Manager."
 ms.custom: na
-ms.date: 02/23/2017
+ms.date: 04/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 405540b16b60c42430e884febb942bfbbcbeca32
-ms.openlocfilehash: 7021c079b12f03420565f5633102070e4e0ad7f8
-ms.lasthandoff: 04/19/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: a99b58acef7448af2c9576bfa0ec2635f5a4f86f
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -36,6 +36,8 @@ En las tablas siguientes se enumeran los certificados de infraestructura de clav
 > System Center Configuration Manager admite certificados Algoritmo hash seguro 2 (SHA-2). Los certificados SHA-2 ofrecen una ventaja de seguridad importante. Por lo tanto, se recomienda lo siguiente:
 > - Emita nuevos certificados de autenticación de cliente y servidor firmados con SHA-2, lo que incluye SHA-256 y SHA-512, entre otros.
 > - Todos los servicios accesibles desde Internet deben usar un certificado SHA-2. Por ejemplo, si adquiere un certificado público para su uso con una puerta de enlace de administración en la nube, asegúrese de que se trata de un certificado SHA-2.  
+>
+>Windows deja de confiar en determinados certificados firmados con SHA-1 a partir del 14 de febrero de 2017. En general, se recomienda emitir nuevos certificados de autenticación de cliente y servidor firmados con SHA-2 (lo que incluye SHA-256 y SHA-512, entre otros). Además, se recomienda que todos los servicios accesibles desde Internet usen un certificado SHA-2. Por ejemplo, si adquiere un certificado público para su uso con una puerta de enlace de administración en la nube, asegúrese de que se trata de un certificado SHA-2.
 >
 > En la mayoría de los casos, el cambio a certificados SHA-2 no afecta a las operaciones. Para obtener más información, vea [Windows Enforcement of SHA1 certificates](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx) (Cumplimiento de certificados SHA1 de Windows).
 
