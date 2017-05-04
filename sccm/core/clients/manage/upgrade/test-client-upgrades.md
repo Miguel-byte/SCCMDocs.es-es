@@ -2,7 +2,7 @@
 title: "Probar la recopilación de preproducción de actualizaciones de cliente | Microsoft Docs"
 description: "Pruebe las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,13 +13,13 @@ ms.topic: article
 ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 533c8e8b30519d83b8fc7a9d204d51e76974c4b1
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: 7edd3e46b4813dd50df7d01b367f8e73bb350a7d
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -54,6 +54,9 @@ Puede probar una nueva versión de cliente de Configuration Manager en una recop
 
 ![Probar actualizaciones de cliente](media/test-client-upgrades.png)
 
+>[!NOTE]
+>Para cambiar esta configuración, la cuenta debe ser miembro del rol de seguridad **Administrador total** y el ámbito de seguridad **Todo**.
+
 
 ##  <a name="to-install-a-configuration-manager-update-that-includes-a-new-version-of-the-client"></a>Para instalar una actualización de Configuration Manager que incluye una nueva versión del cliente  
 
@@ -80,4 +83,7 @@ Puede probar una nueva versión de cliente de Configuration Manager en una recop
 2.  Revise las versiones de cliente de preproducción y de producción, asegúrese de que está especificada la recopilación de preproducción correcta y, luego, haga clic en **Promover** y en **Sí**.  
 
 3.  Después de cerrar el cuadro de diálogo, la versión del cliente actualizado reemplazará a la versión del cliente que se usa en la jerarquía. A continuación, puede actualizar los clientes de todo el sitio. Para obtener más información, consulte [Actualizar clientes de equipos Windows con System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
+
+>[!NOTE]
+>Para habilitar el cliente de preproducción o promover un cliente de preproducción a un cliente de producción, su cuenta debe ser miembro del rol de seguridad que tiene permisos **Leer** y **Modificar** para el objeto **Paquetes de actualización**.
 

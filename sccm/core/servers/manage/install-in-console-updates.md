@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
-ms.openlocfilehash: 18c199e78750eadc06b9635fa6104d36c2ac018d
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
+ms.openlocfilehash: 29a55948a1897e1345ba14ec685b9288a844feaa
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -325,7 +325,7 @@ Al habilitar una característica nueva o de versión preliminar, el Administrado
 
 
 ##  <a name="bkmk_prerelease"></a> Uso de las características de versión preliminar de las actualizaciones
-Las características de versión preliminar se incluyen en la Rama actual para realizar las primeras pruebas en un entorno de producción. No se debe considerar que estas características están listas para la producción, pero se pueden usar en el entorno de producción. Para obtener más información sobre las características de versión preliminar, incluida la manera de habilitarlas en el entorno, vea [Pre-release features](/sccm/core/servers/manage/pre-release-features) (Características de versión preliminar).                |
+Las características de versión preliminar se incluyen en la Rama actual para realizar las primeras pruebas en un entorno de producción. No se debe considerar que estas características están listas para la producción, pero se pueden usar en el entorno de producción. Para obtener más información sobre las características de versión preliminar, incluida la manera de habilitarlas en el entorno, vea [Características de versión preliminar](/sccm/core/servers/manage/pre-release-features).             
 
 
 ## <a name="known-issues"></a>Problemas conocidos

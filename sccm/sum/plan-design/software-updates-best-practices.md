@@ -14,8 +14,9 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
 translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
-ms.openlocfilehash: ea365491dd334980693375fbb7730653af9cd8e4
+ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
+ms.openlocfilehash: 5df20f3703442de1be6220ca2770e182e330c036
+ms.lasthandoff: 04/26/2017
 
 
 
@@ -41,7 +42,7 @@ En este tema, se incluyen procedimientos recomendados para las actualizaciones d
  Cuando las bases de datos de Configuration Manager y WSUS usan el mismo servidor SQL Server y comparten la misma instancia de SQL Server, no podrá determinar fácilmente el uso de recursos entre las dos aplicaciones. Cuando se usa una instancia de SQL Server diferente para Configuration Manager y WSUS, es más sencillo diagnosticar y solucionar problemas del uso de recursos que pudieran producirse en cada aplicación.  
 
 ### <a name="specify-the-store-updates-locally-setting-for-the-wsus-installation"></a>Especificar la configuración de "Guardar actualizaciones localmente" para la instalación de WSUS  
- Cuando instale WSUS 3.0, seleccione la opción de **Guardar actualizaciones localmente** . Cuando se selecciona esta opción, los términos de la licencia asociados a las actualizaciones de software se descargan durante el proceso de sincronización y se almacenan en el disco duro local para el servidor WSUS. Cuando esta opción no esté seleccionada, los equipos cliente podrían no examinar el cumplimiento de las actualizaciones de software que tengan términos de licencia. Cuando se instala el punto de actualización de software, el administrador de sincronización de WSUS comprueba que esta configuración se habilita cada 60 minutos, de forma predeterminada.  
+ Cuando instale WSUS, seleccione la opción de **Guardar actualizaciones localmente**. Cuando se selecciona esta opción, los términos de la licencia asociados a las actualizaciones de software se descargan durante el proceso de sincronización y se almacenan en el disco duro local para el servidor WSUS. Cuando esta opción no esté seleccionada, los equipos cliente podrían no examinar el cumplimiento de las actualizaciones de software que tengan términos de licencia. Cuando se instala el punto de actualización de software, el administrador de sincronización de WSUS comprueba que esta configuración se habilita cada 60 minutos, de forma predeterminada.  
 
 ## <a name="operational-best-practices"></a>Prácticas recomendadas de uso  
  Siga las recomendaciones siguientes al usar las actualizaciones de software:  
@@ -57,9 +58,4 @@ En este tema, se incluyen procedimientos recomendados para las actualizaciones d
 
 ## <a name="see-also"></a>Véase también  
  [Planear las actualizaciones de software en System Center Configuration Manager](../../sum/plan-design/plan-for-software-updates.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -2,7 +2,7 @@
 title: Supervisar clientes en Configuration Manager | Microsoft Docs
 description: "Obtenga información detallada acerca de cómo supervisar clientes en System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 caps.latest.revision: 23
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
-ms.openlocfilehash: 85afe010e734d20ae1f1479b3edd166c54cc8fd2
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: 08a4d9b29871b49e3118aef949572cef64940f96
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/24/2017
 
  Una vez que la aplicación cliente de System Center Configuration Manager se ha instalado en los equipos y dispositivos Windows de su sitio, puede supervisar su estado y la actividad en la consola de Configuration Manager.  
 
-##  <a name="a-namebkmkabouta-about-client-status"></a><a name="bkmk_about"></a> Acerca del estado de cliente  
+##  <a name="bkmk_about"></a> Acerca del estado de cliente  
  Configuration Manager proporciona los siguientes tipos de información como estado de cliente:  
 
 -   **Estado de conexión de cliente**: a partir de la versión 1602 de Configuration Manager, este estado indica si el equipo está en línea o no. Un equipo se considera en línea si está conectado a su punto de administración asignado.  Para indicar que el cliente está en línea, envía mensajes de estilo ping al punto de administración. Si el punto de administración no recibe un mensaje en cinco minutos, se considera que el cliente está sin conexión.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/24/2017
 
      Puede configurar la corrección para que no se ejecute en equipos específicos, por ejemplo, un servidor crítico del negocio. Además, si hay elementos adicionales que desea evaluar, puede usar la configuración de cumplimiento de Configuration Manager para obtener una solución completa para la supervisión del estado general, la actividad y el cumplimiento de los equipos de su organización. Para obtener más información sobre la configuración de cumplimiento, consulte [Plan for and configure compliance settings in System Center Configuration Manager](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) (Planeación y configuración de las opciones de cumplimiento en System Center Configuration Manager).  
 
-##  <a name="a-namebkmkindstatusa-monitor-the-status-of-individual-clients"></a><a name="bkmk_indStatus"></a> Supervisión del estado de clientes individuales  
+##  <a name="bkmk_indStatus"></a> Supervisión del estado de clientes individuales  
 
 1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad** > **Dispositivos**, o elija una recopilación en **Recopilaciones de dispositivos**.  
 
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/24/2017
 
 3.  Haga clic en un cliente individual en el panel de lista para ver más información de estado en el panel de detalles, como actividad del cliente y comprobaciones del cliente.  
 
-##  <a name="a-namebkmkallstatusa-monitor-the-status-of-all-clients"></a><a name="bkmk_allStatus"></a> Supervisión del estado de todos los clientes  
+##  <a name="bkmk_allStatus"></a> Supervisión del estado de todos los clientes  
 
 1.  En la consola de Configuration Manager, haga clic en **Supervisión** > **Estado de cliente**. En esta página de la consola, puede revisar las estadísticas generales de actividad del cliente y comprobaciones de cliente en todo el sitio.  También puede cambiar el ámbito de la información eligiendo una recopilación diferente.  
 
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/24/2017
 
  Puede configurar alertas para que le notifiquen cuándo los clientes comprueban los resultados o cuándo la actividad de los clientes cae por debajo de un porcentaje específico de clientes en una recopilación, o cuándo no se produce la corrección en un porcentaje específico de clientes. Para obtener más información acerca de cómo configurar el estado de cliente, consulte [How to configure client status in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md) (Configuración del estado de cliente en System Center Configuration Manager).  
 
-##  <a name="a-namebkmkclienthealtha-checks-and-remediations-made-by-client-check"></a><a name="BKMK_ClientHealth"></a> Comprobaciones y correcciones realizadas mediante comprobación de cliente  
+##  <a name="BKMK_ClientHealth"></a> Comprobaciones y correcciones realizadas mediante comprobación de cliente  
  Las siguientes comprobaciones y correcciones pueden realizarse mediante la comprobación de cliente.  
 
 |Comprobación de cliente|Acción correctiva|Más información|  
@@ -110,4 +110,7 @@ ms.lasthandoff: 01/24/2017
 |Comprobar que el estado del proveedor WMI de cliente es correcto|Reiniciar el servicio Instrumental de administración de Windows|La corrección de esta comprobación de cliente solo se lleva a cabo en equipos que ejecutan Windows Server 2003, Windows XP (64 bits) o versiones anteriores.|  
 |Comprobar que el servicio de proxy de reactivación (proxy de reactivación de Configuration Manager) se está ejecutando|Iniciar el servicio de proxy de reactivación de Configuration Manager|Esta comprobación de cliente solo se realiza si la opción **Administración de energía**: **Habilitar proxy de reactivación** está establecida en **Sí** en los sistemas operativos de cliente admitidos.|  
 |Comprobar que el tipo de inicio del servicio de proxy de reactivación (proxy de reactivación de Configuration Manager) es automático|Restablecer el tipo de inicio del servicio de proxy de reactivación de Configuration Manager como automático|Esta comprobación de cliente solo se realiza si la opción **Administración de energía**: **Habilitar proxy de reactivación** está establecida en **Sí** en los sistemas operativos de cliente admitidos.|  
+
+## <a name="client-deployment-log-files"></a>Archivos de registro de implementación de cliente
+Para obtener información acerca de los archivos de registro utilizados por la implementación del cliente y las operaciones de administración, consulte [Archivos de registro en System Center Configuration Manager](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs).
 

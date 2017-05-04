@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4c2906c2a963e0ae92e3c0d223afb7a47377526a
-ms.openlocfilehash: ffc2adb34427aa62f4a377e887c2ff54d47abeff
-ms.lasthandoff: 03/20/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: 78caa69e10f5d386daab1e61e484d4d134469708
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -552,13 +552,13 @@ Para obtener más información, consulte [Internet access requirements](/sccm/co
 
 2.  **Puerto alternativo disponible**: se puede definir un puerto alternativo en Configuration Manager para este valor. Si se definió un puerto personalizado, sustitúyalo cuando defina la información del filtro IP para las directivas IPsec o para configurar firewalls.  
 
-3.  **Windows Server Update Services (WSUS)**: WSUS se puede instalar en el sitio web predeterminado (puerto 80) o en un sitio web personalizado (puerto 8530).  
+3.  **Windows Server Update Services (WSUS)**: WSUS puede instalarse para utilizar los puertos 80/443 o los puertos 8530/8531 para la comunicación de cliente. Cuando se ejecuta WSUS en Windows Server 2012 o Windows Server 2016, WSUS se configura de forma predeterminada para usar el puerto 8530 para HTTP y el puerto 8531 para HTTPS.  
 
      Después de la instalación, el puerto se puede cambiar. No es necesario utilizar el mismo número de puerto en toda la jerarquía del sitio.  
 
     -   Si el puerto HTTP es 80, el puerto HTTPS debe ser 443.  
 
-    -   Si el puerto HTTP es cualquier otro, el puerto HTTPS debe ser 1 o un valor mayor (por ejemplo, 8530 o 8531).  
+    -   Si el puerto HTTP es cualquier otro, el puerto HTTPS debe ser 1 o un valor mayor (por ejemplo, 8530 y 8531).   
 
     > [!NOTE]  
     >  Al configurar el punto de actualización de software para usar HTTPS, también debe estar abierto el puerto HTTP. Los datos sin cifrar, como los términos de licencia de las actualizaciones específicas, usan el puerto HTTP.  

@@ -17,9 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: a3e6cca8d58055cc2d54aff3cb70a276fb40e829
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
+ms.openlocfilehash: f5feccc4f810e1a94bb7dcdd5ad507d84b9c3b4a
+ms.lasthandoff: 04/21/2017
 
 
 ---
@@ -76,6 +76,11 @@ ms.lasthandoff: 03/27/2017
 |SMSTSDownloadProgram|Use esta variable para especificar un proveedor de contenido alternativo, un programa descargador que se use para descargar contenido en lugar del descargador de Configuration Manager predeterminado, para la secuencia de tareas. Como parte del proceso de descarga de contenido, la secuencia de tareas comprueba si la variable especifica algún programa de descarga. En caso afirmativo, la secuencia de tareas ejecuta el programa para realizar la descarga.|  
 |SMSTSDownloadRetryCount|Use esta variable para especificar el número de veces que Configuration Manager intenta descargar contenido desde un punto de distribución. El cliente lo volverá a intentar **2** veces de forma predeterminada.|  
 |SMSTSDownloadRetryDelay|Use esta variable para especificar el número de segundos que espera Configuration Manager antes de volver a intentar descargar contenido desde un punto de distribución. El cliente esperará **15** segundos de forma predeterminada antes de volver a intentarlo.|  
+|SMSTSDriverReceiveTimeOut|Utilice esta variable para especificar el número de segundos antes de que se agote el tiempo de espera de conexión al servidor.|
+|Valor predeterminado de SMSTSDriverRequestConnectTimeOut:|Utilice esta variable para especificar el número de segundos de espera para la conexión del servidor HTTP al solicitar el catálogo de controladores durante el paso de la secuencia de tareas Aplicar controladores automáticamente. Si la conexión tarda más de lo especificado en la configuración del tiempo de espera, se cancela la solicitud. De forma predeterminada, el tiempo de espera se establece en 60 segundos.|  
+|Valor predeterminado de SMSTSDriverRequestReceiveTimeOut:|Utilice esta variable para especificar el número de segundos de espera para una respuesta para una solicitud del catálogo de controladores durante el paso de la secuencia de tareas Aplicar controladores automáticamente. Si la conexión tarda más de lo especificado en la configuración del tiempo de espera, se cancela la solicitud. De manera predeterminada, el tiempo de espera se establece en 480 segundos.|
+|Valor predeterminado de SMSTSDriverRequestResolveTimeOut:|Utilice esta variable para especificar el número de segundos de espera para una resolución de nombre HTTP para una solicitud del catálogo de controladores durante el paso de la secuencia de tareas Aplicar controladores automáticamente. Si la conexión tarda más de lo especificado en la configuración del tiempo de espera, se cancela la solicitud. De forma predeterminada, el tiempo de espera se establece en 60 segundos.|
+|Valor predeterminado de SMSTSDriverRequestSendTimeOut:|Utilice esta variable para especificar el número de segundos que usar al enviar una solicitud del catálogo de controladores durante el paso de la secuencia de tareas Aplicar controladores automáticamente. Si la solicitud tarda más de lo especificado en la configuración del tiempo de espera, se cancela la solicitud. De forma predeterminada, el tiempo de espera se establece en 60 segundos.|
 |SMSTSErrorDialogTimeout|Cuando se produce un error en una secuencia de tareas, se abre un cuadro de diálogo que se cierra automáticamente transcurrido un número de segundos especificado por esta variable. El cuadro de diálogo se cierra automáticamente de forma predeterminada después de **900** segundos (15 minutos).|  
 |TSErrorOnWarning|Use esta variable para especificar si el motor de la secuencia de tareas considera una advertencia detectada como un error durante el paso de secuencia de tareas de instalación de la aplicación. La secuencia de tareas establece la variable _TSAppInstallStatus en **Advertencia** cuando una o más aplicaciones (o una dependencia necesaria) no se instalaron porque no se cumplió un requisito. Cuando la variable TSErrorOnWarning se establece en **True** y la variable _TSAppInstallStatus se establece en Advertencia, se considera que hay un error. Un valor **False** es el comportamiento predeterminado.|  
 |SMSTSLanguageFolder|Utilice esta variable para cambiar el idioma de visualización de una imagen de arranque independiente del idioma.|  

@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9b31fab8fa93195c60e9026e2df99311aa6e328f
-ms.openlocfilehash: 61d4b7017769609caf8fcb8fcdd510f5a0b5b712
-ms.lasthandoff: 04/03/2017
+ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
+ms.openlocfilehash: 8ffaee12bd826e2f19653b215ee19423ea672433
+ms.lasthandoff: 04/21/2017
 
 
 ---
@@ -112,8 +112,13 @@ Puede instalar una versión de línea base hasta 1 año después de su lanzamien
 ##  <a name="bkmk_tpCaps"></a> Funcionalidades ofrecidas en Technical Preview  
  A continuación se enumeran las capacidades que ofrece cada versión preliminar técnica de Configuration Manager.  Las capacidades que están disponibles a partir de una versión preliminar técnica siguen estando disponibles en versiones posteriores. De igual forma, las capacidades que se han agregado a System Center Configuration Manager Release (rama actual) siguen estando disponibles en las versiones preliminares técnicas posteriores.  Haga clic en el contenido de cada versión preliminar para aprender más acerca de una capacidad específica.  
 
- |Capacidad|Versión de Technical Preview|Versión de rama actual|  
- |----------------|---------------------|--------------------|
+ |Capacidad |Versión de Technical Preview |Versión de rama actual|  
+|----------------|---------------------|--------------------|
+ |Configuración de aplicaciones de Android con directivas de configuración de aplicaciones  |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#configure-android-apps-with-app-configuration-policies)|![Sin agregar](media/Red_X.gif)|
+ |El inventario de hardware recopila información de arranque seguro |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#hardware-inventory-collects-secure-boot-information)|![Sin agregar](media/Red_X.gif)|
+ |Adición de secuencias de tareas secundarias a una secuencia de tareas|[Tech Preview 1704](capabilities-in-technical-preview-1704.md#add-child-task-sequences-to-a-task-sequence)|![Sin agregar](media/Red_X.gif)|
+ |Nueva carga de imágenes de arranque con la versión actual de Windows PE |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#reload-boot-images-with-current-windows-pe-version)|![Sin agregar](media/Red_X.gif)|
+ |Mejoras en la implementación de sistema operativo|[Tech Preview 1704](capabilities-in-technical-preview-1704.md#improvements-to-operating-system-deployment)|![Sin agregar](media/Red_X.gif)|
  |Implementación de aplicaciones iOS adquiridas por volumen en colecciones de dispositivos|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#deploy-volume-purchased-ios-apps-to-device-collections)|[Versión 1702](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)|
  |Vínculos directos a aplicaciones del centro de software|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#direct-links-to-applications-in-software-center)|![Sin agregar](media/Red_X.gif)
  |Certificados PFX para equipos cliente Windows de Configuration Manager|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#pfx-certificates-for-configuration-manager-windows-client-computers)|![Sin agregar](media/Red_X.gif)|
@@ -208,11 +213,11 @@ Puede instalar una versión de línea base hasta 1 año después de su lanzamien
  |Compatibilidad con Passport for Work como KSP |[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_passport)|[Versión 1606](/sccm/protect/deploy-use/create-certificate-profiles)|  
  |Atestación de estado del dispositivo local|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_onpremdha)|[Versión 1606](/sccm/core/servers/manage/health-attestation)|  
  |Configuración de SmartLock para dispositivos Android|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#BKMK_Smart)|[Versión 1606](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-and-samsung-knox-configuration-item-settings-reference)|  
- |Mejoras en el Centro de software|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_SC1603)|[Versión 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#application-management)|  
- |Mejoras en el control remoto|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RC1603)|[Versión 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#remote-control)|  
- |Personalización del tamaño de bloque de TFTP de RamDisk y el tamaño de la ventana de puntos de distribución habilitados con PXE|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RamDiskTFTP)|[Versión 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#operating-system-deployment)|  
-
-
+ <!--  TP 1603 Aged out of support and all features in Current Branch Builds:
+ |Improvements to Software Center|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_SC1603)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#application-management)|  
+ |Improvements to remote control|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RC1603)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#remote-control)|  
+ |Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RamDiskTFTP)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#operating-system-deployment)|  
+-->
  Cuando todas las características de una versión de Technical Preview estén disponibles en la versión mínima admitida de la Rama actual, los detalles de esa versión preliminar se quitan de esta tabla.
 
 
