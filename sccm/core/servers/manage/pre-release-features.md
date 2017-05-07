@@ -2,7 +2,7 @@
 title: "Características de versión preliminar| Microsoft Docs"
 description: "Características de versión preliminar en System Center Configuration Manager"
 ms.custom: na
-ms.date: 4/13/2017
+ms.date: 4/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,16 +16,16 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 329de5ffb6eb1403c02cd1db634c32f045e82488
-ms.openlocfilehash: c9896d53061b11f249f32f118620524c6a270ec9
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: b12fcb3c372c34ee47306a9b536c3d0c4764b8be
+ms.lasthandoff: 04/24/2017
 
 
 ---
 # <a name="pre-release-features-in-system-center-configuration-manager"></a>Características de versión preliminar en System Center Configuration Manager
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
- Las características de versión preliminar se incluyen en la Rama actual para realizar las primeras pruebas en un entorno de producción. No se debe considerar que estas características están listas para la producción, pero se pueden usar en el entorno de producción.
+Las características de versión preliminar se incluyen en la Rama actual para realizar las primeras pruebas en un entorno de producción. Aunque son totalmente compatibles, aún se encuentran en proceso de desarrollo y podrían recibir cambios hasta que se saquen de la categoría de versión preliminar.
 
  Antes de poder usar las características de versión preliminar, debe dar su consentimiento para usarlas desde la consola de Configuration Manager para poder seleccionarlas y permitir su uso.  
 
