@@ -2,7 +2,7 @@
 title: Hardware recomendado | Microsoft Docs
 description: "Obtenga recomendaciones de hardware que le ayudarán a ampliar su entorno de System Center Configuration Manager más allá de una implementación básica."
 ms.custom: na
-ms.date: 3/30/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 8d3791bcf737e63308155787ed23c9cc84e7e99c
-ms.openlocfilehash: fd9f5b25a1e40b5f0df823dcbe9c13a77c534c59
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
+ms.openlocfilehash: 8dac6df60b07461d6410d305723b3f03fb09fa16
+ms.contentlocale: es-es
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -49,7 +50,7 @@ Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas
 |-------------------------------|---------------|---------------|----------------------------------------|  
 |Servidor de sitio primario independiente con un rol de sitio de base de datos en el mismo servidor<sup>1</sup>|16|96|80|  
 |Servidor de sitio primario independiente con una base de datos de sitio remoto|8|16|-|  
-|Servidor de bases de datos remoto para un sitio primario independiente|16|64|90|  
+|Servidor de bases de datos remoto para un sitio primario independiente|16|72|90|  
 |Servidor de sitio de administración central con un rol de sitio de base de datos en el mismo servidor<sup>1</sup>|20|128|80|  
 |Servidor de sitio primario de administración central con una base de datos de sitio remoto|8|16|-|  
 |Servidor de bases de datos remoto para un sitio de administración central|16|96|90|  
