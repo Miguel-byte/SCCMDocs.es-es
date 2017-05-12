@@ -15,9 +15,10 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 8728d9f2ae63282a8f58b20105e488fb1a5ef55b
 ms.openlocfilehash: 4c94e4de5bbfe621492e8682c9424a48eb38196d
+ms.contentlocale: es-es
 ms.lasthandoff: 03/03/2017
 
 ---
@@ -186,7 +187,7 @@ En las secciones siguientes se describen las configuraciones que puede seleccion
     > [!IMPORTANT]  
     >  La reparación de una aplicación de Windows Installer puede producir un error en un cliente si no se usa esta configuración.  
     >   
-    >  Cuando se implementa una aplicación de Windows Installer en un cliente de Configuration Manager, este descarga el archivo en la caché local del cliente. Los archivos se quitarán una vez finalizada la instalación..
+    >  Cuando se implementa una aplicación de Windows Installer en un cliente de Configuration Manager, este descarga el archivo en la caché local del cliente. Los archivos se quitarán una vez finalizada la instalación.
     >  
     >  El cliente de Configuration Manager actualiza la lista de origen de Windows Installer de las aplicaciones instaladas de Windows Installer con la ruta de contenido de la biblioteca de contenido de los puntos de distribución asociados. Más adelante, si inicia la acción Reparar en Agregar o quitar programas en un cliente de Configuration Manager, MSIExec intentará tener acceso a la ruta de contenido con un usuario anónimo.  
     >   
