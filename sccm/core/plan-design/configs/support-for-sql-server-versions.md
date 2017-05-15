@@ -2,7 +2,7 @@
 title: Versiones de SQL Server admitidas | Microsoft Docs
 description: "Obtenga los requisitos de configuración y versión de SQL Server para hospedar una base de datos de sitio de System Center Configuration Manager."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 21
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: ea9edf6392c41e31276900454cd78ce4bc32be7b
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d5a6fdc9a526c4fc3a9027dcedf1dd66a6fff5a7
+ms.openlocfilehash: fa7f232fd385f742bb11c6596c954d87c2da87a8
+ms.contentlocale: es-es
+ms.lasthandoff: 05/01/2017
 
 
 ---
@@ -54,10 +55,15 @@ Se admiten las siguientes instancias:
  SQL Server debe ubicarse en el equipo del servidor de sitio.  
 
 ##  <a name="bkmk_SQLVersions"></a> Versiones de SQL Server admitidas  
- En una jerarquía con varios sitios, cada sitio puede usar una versión diferente de SQL Server para hospedar la base de datos del sitio, siempre que Configuration Manager admita las versiones de SQL Server que usa.  
+ En una jerarquía con varios sitios, cada sitio puede usar una versión diferente de SQL Server para hospedar la base de datos del sitio, siempre que se cumplan las condiciones siguientes:
+ -  Configuration Manager admite las versiones de SQL Server que se usan.
+ -  Las versiones de SQL Server que se usan siguen teniendo soporte técnico de Microsoft.
+ -  SQL Server admite replicación entre las dos versiones de SQL Server.  Por ejemplo, [SQL Server no admite replicación entre SQL Server 2008 R2 y SQL Server 2016](https://docs.microsoft.com/sql/relational-databases/replication/deprecated-features-in-sql-server-replication).
+
+
 
  A menos que se especifique lo contrario, las versiones siguientes de SQL Server son compatibles con todas las versiones activas de System Center Configuration Manager. Si se agrega soporte para una nueva versión de SQL Server o Service Pack, se notificará la versión de Configuration Manager que agrega dicha compatibilidad. De forma similar, si la compatibilidad está en desuso, busque detalles sobre las versiones afectadas de Configuration Manager.   
- 
+
 La compatibilidad para un Service Pack de SQL Server específico incluye actualizaciones acumulativas para dicho Service Pack, a menos que una actualización acumulativa interrumpa la compatibilidad con versiones anteriores para dicha versión del Service Pack base. Cuando no se indica ninguna versión del Service Pack, la compatibilidad es para dicha versión de SQL Server sin Service Pack. En el futuro, si se publica algún Service Pack para esa versión, se declarará una instrucción independiente de compatibilidad antes de que se admita esa nueva versión del Service Pack.
 
 
@@ -245,7 +251,7 @@ Si tiene un firewall habilitado en el equipo que ejecuta SQL Server, asegúrese 
 Para obtener un ejemplo de cómo configurar SQL Server para usar un puerto específico, vea [Configurar un servidor para que escuche en un puerto TCP específico (Administrador de configuración de SQL Server)](http://go.microsoft.com/fwlink/p/?LinkID=226349) en la biblioteca de TechNet de SQL Server.  
 
 ## <a name="upgrade-options-for-sql-server"></a>Opciones de actualización de SQL Server
-Si necesita actualizar la versión de SQL Server, se recomiendan los métodos siguientes, del más sencillo al más complicado.
+Si tiene que actualizar la versión de SQL Server, se recomiendan los métodos siguientes, del más sencillo al más complicado.
 1. [Realice una actualización local de SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (recomendado).
 2. Instale una nueva versión de SQL Server en un equipo nuevo y después [use la opción para mover datos](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) del programa de instalación de Configuration Manager para transfiera el servidor de sitio a la nueva instancia de SQL Server.
 3. Use [Copia de seguridad y recuperación](/sccm/protect/understand/backup-and-recovery).

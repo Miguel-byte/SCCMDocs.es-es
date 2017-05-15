@@ -4,17 +4,18 @@ description:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/23/2017
+ms.date: 05/01/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology:
 - configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-translationtype: Human Translation
-ms.sourcegitcommit: 2bcc5d9dde1f1a2d9c33575d6c463e281ac818e8
-ms.openlocfilehash: 61b8cd8458718b9a54edb129739c619f947ac380
-ms.lasthandoff: 12/16/2016
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d5a6fdc9a526c4fc3a9027dcedf1dd66a6fff5a7
+ms.openlocfilehash: 97e1bc6585cee0ff433da0ec0b60b9604cb7348f
+ms.contentlocale: es-es
+ms.lasthandoff: 05/01/2017
 
 ---
 
@@ -24,13 +25,27 @@ ms.lasthandoff: 12/16/2016
 
 A partir de la versión 1610, el proceso para configurar la puerta de enlace de administración en la nube en Configuration Manager incluye los pasos siguientes:
 
-## <a name="step-1-create-a-custom-ssl-certificate"></a>Paso 1: Crear un certificado SSL personalizado
+## <a name="step-1-configure-required-certificates"></a>Paso 1: Configurar los certificados necesarios
 
-Puede crear un certificado SSL personalizado para la puerta de enlace de administración en la nube de la misma manera que si fuera para un punto de distribución basado en la nube. Siga las instrucciones de [Deploying the Service Certificate for Cloud-Based Distribution Points (Implementación del certificado de servicio para puntos de distribución basados en la nube)](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012), pero con las siguientes diferencias:
+## <a name="option-1-preferred---use-the-server-authentication-certificate-from-a-public-and-globally-trusted-certificate-provider-like-verisign"></a>Opción 1 (preferida): Usar el certificado de autenticación de servidor de un proveedor de certificados público y de confianza global (como VeriSign)
 
--   Al configurar la nueva plantilla de certificado, asigne los permisos **Leer** e **Inscribir** al grupo de seguridad que configure para los servidores de Configuration Manager.
+Cuando use este método, los clientes confiarán automáticamente en el certificado y no tendrá que crear un certificado SSL personalizado usted mismo.
 
--  Cuando se le solicite el certificado de servidor web personalizado, proporcione un nombre de dominio completo para el nombre común del certificado que finalice en**cloudapp.net** para usar la puerta de enlace de administración en la nube en la nube pública de Azure o **usgovcloudapp.net** para la nube de administración pública de Azure.
+1. Cree un registro de nombre canónico (CNAME) en el servicio de nombres de dominio (DNS) público de su organización para crear un alias del servicio Cloud Management Gateway con un nombre descriptivo que se usará en el certificado público.
+Por ejemplo, Contoso denomina su servicio Cloud Management Gateway **GraniteFalls** que, en Azure, será **GraniteFalls.CloudApp.Net**. En el DNS espacio de nombres público de Contoso, contoso.com, el administrador de DNS crea un registro CNAME para **GraniteFalls.Contoso.com** con el nombre del host real, **GraniteFalls.CloudApp.net**.
+2. Luego, con el nombre común (CN) del alias de CNAME, solicite un certificado de autenticación de servidor de un proveedor público.
+Por ejemplo, Contoso usa **GraniteFalls.Contoso.com** como CN del certificado.
+3. Cree el servicio Cloud Management Gateway en la consola de Configuration Manager con este certificado.
+    - En la página **Configuración** del Asistente para crear una instancia de Cloud Management Gateway, cuando agregue el certificado de servidor de este servicio en la nube (en **Archivo de certificado**), el asistente extraerá el nombre de host del CN de certificado como nombre del servicio y lo agregará a **cloudapp.net** (o a **usgovcloudapp.net** en el caso de la nube Azure Gobierno de EE.UU.) como FQDN de servicio para crear el servicio en Azure.
+Por ejemplo, al crear el servicio Cloud Management Gateway en Contoso, se extrae el nombre de host, **GraniteFalls**, del CN de certificado, por lo que el servicio real de Azure se crea como **GraniteFalls.CloudApp.net**.
+
+### <a name="option-2---create-a-custom-ssl-certificate-for-cloud-management-gateway-in-the-same-way-as-for-a-cloud-based-distribution-point"></a>Opción 2: Crear un certificado SSL personalizado para Cloud Management Gateway de la misma manera que se crea para un punto de distribución basado en la nube
+
+Puede crear un certificado SSL personalizado para la puerta de enlace de administración en la nube de la misma manera que si fuera para un punto de distribución basado en la nube. Siga las instrucciones de [Deploying the Service Certificate for Cloud-Based Distribution Points (Implementación del certificado de servicio para puntos de distribución basados en la nube)](/sccm/core/plan-design/network/example-deployment-of-pki-certificates), pero con las siguientes diferencias:
+
+- Al configurar la plantilla del nuevo certificado, otórguele permisos de **lectura** e **inscripción** en el grupo de seguridad que establezca para los servidores de Configuration Manager.
+- Cuando se le solicite el certificado de servidor web personalizado, proporcione un nombre de dominio completo para el nombre común del certificado que finalice en**cloudapp.net** para usar la puerta de enlace de administración en la nube en la nube pública de Azure o **usgovcloudapp.net** para la nube de administración pública de Azure.
+
 
 ## <a name="step-2-export-the-client-certificates-root"></a>Paso 2: Exportar la raíz del certificado de cliente
 

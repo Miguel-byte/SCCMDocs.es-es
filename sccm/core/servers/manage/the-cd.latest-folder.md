@@ -2,7 +2,7 @@
 title: Carpeta CD.Latest | Microsoft Docs
 description: "Obtenga información sobre el nuevo proceso de actualización que proporciona actualizaciones al producto desde la consola de Configuration Manager."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 6
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
-ms.openlocfilehash: 5fbf1a2605b4915a2f592875a5ac88368160ce87
-ms.lasthandoff: 04/26/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: 5c39e09b44500fa2f356f83579bb2fb2c1d0e937
+ms.contentlocale: es-es
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -41,7 +42,7 @@ En cambio, el medio de línea base, como la versión de línea base 1606 que se 
 
 -   Si ejecuta la tarea de copia de seguridad integrada de Configuration Manager: la carpeta se crea o se actualiza en la ubicación de la carpeta de copia de seguridad designada.  
 
--  A partir de la versión 1606, la carpeta CD.Latest se crea al instalar un sitio nuevo con medios de línea base (como la versión 1606).
+-  A partir de la versión 1606, la carpeta CD.Latest se crea al instalar un sitio nuevo con un medio de línea base (como la versión 1606 o 1702).
 
 Los archivos de origen de la carpeta CD.Latest se admiten para lo siguiente:  
 

@@ -2,7 +2,7 @@
 title: 'Cambios respecto a Configuration Manager 2012 | Microsoft Docs '
 description: Identifica los cambios y las nuevas funciones de System Center Configuration Manager con respecto a System Center 2012 Configuration Manager.
 ms.custom: na
-ms.date: 12/30/2016
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 51
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 6b1a4584ebcd4dadd983677b714486402c93e190
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: 0a3eb93a99533a1569d8f72ca01d6dfcdc75da20
+ms.contentlocale: es-es
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -38,7 +39,7 @@ ms.lasthandoff: 03/27/2017
 -   No usa un identificador de producto o de año en el nombre de producto, a diferencia de versiones anteriores como Configuration Manager 2007 o System Center 2012 Configuration Manager.
 
 -   Admite actualizaciones incrementales desde el producto, que también se denominan versiones de actualización. La versión inicial era la 1511. Las versiones posteriores se publican varias veces al año como las actualizaciones en consola, como la versión 1610.
--   Se instala con una versión de línea base. Aunque 1511 era la versión original de línea base, las nuevas versiones de línea base también se publican de vez en cuando, como la 1606. Las versiones de línea base se pueden usar para instalar un nuevo sitio de System Center Configuration Manager y la jerarquía o para actualizar desde una versión compatible de Configuration Manager 2012.
+-   Se instala con una versión de línea base. Aunque 1511 era la versión original de línea base, las nuevas versiones de línea base también se publican de vez en cuando, como la 1702. Las versiones de línea base se pueden usar para instalar un nuevo sitio de System Center Configuration Manager y la jerarquía o para actualizar desde una versión compatible de Configuration Manager 2012.
 
 
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 03/27/2017
  Algunas versiones solo están disponibles como actualizaciones para los sitios existentes (desde la consola de Configuration Manager) y no se pueden usar para instalar nuevos sitios de Configuration Manager.   
 Por ejemplo, la actualización 1610 solo está disponible en la consola de Configuration Manager. Se usa para actualizar un sitio que ya ejecuta una versión de System Center Configuration Manager.
 
-Periódicamente, una versión de actualización también se publica como una nueva versión de línea base (como la actualización 1606). Este tipo de actualización se puede usar para instalar una nueva jerarquía sin necesidad de iniciarse con una versión de línea base anterior (como 1511) y actualizar a la versión más reciente.
+Periódicamente, una versión de actualización también se publica como una nueva versión de línea base (como la actualización 1702). Este tipo de actualización se puede usar para instalar una nueva jerarquía sin necesidad de iniciarse con una versión de línea base anterior (como 1511) y actualizar a la versión más reciente.
 
 
 Para obtener más información sobre el uso de actualizaciones, consulte [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md) (Actualizaciones para System Center Configuration Manager).  

@@ -2,7 +2,7 @@
 title: "Lista de comprobación para la versión 1702 | System Center Configuration Manager"
 description: "Obtenga información sobre las acciones que se deben realizar antes de actualizar a la versión 1702 de System Center Configuration Manager."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,10 +15,11 @@ caps.latest.revision: 7
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: dd54a5668f8df73b0724f5c15a1a6a83f8fe8496
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: c4ace452d62d4fa08f4457cb1735718ca4bd016d
+ms.contentlocale: es-es
+ms.lasthandoff: 05/02/2017
 
 ---
 # <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1702 de System Center Configuration Manager
@@ -26,6 +27,9 @@ ms.lasthandoff: 03/27/2017
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
 Cuando usa la rama actual de System Center Configuration Manager, puede instalar la actualización en la consola para la versión 1702 para actualizar su jerarquía desde una versión anterior.
+
+> [!TIP]  
+La versión 1702 también está disponible como [medio de línea base](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions) que se pueden usar para instala el primer sitio de una nueva jerarquía.
 
 Para obtener la actualización de la versión 1702, debe usar un rol de sistema de sitio de punto de conexión del servicio en el sitio de nivel superior de su jerarquía. Esto puede realizarse en el modo en línea o sin conexión. Después de que su jerarquía descargue el paquete de actualización de Microsoft, lo podrá encontrar en la consola, en **Administración &gt; Información general &gt; Cloud Services &gt; Actualizaciones y mantenimiento**.
 

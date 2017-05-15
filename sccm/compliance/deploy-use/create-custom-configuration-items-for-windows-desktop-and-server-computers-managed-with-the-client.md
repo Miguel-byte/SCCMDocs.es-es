@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: e55883471fde63036c91b315ed6db6dceb315207
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
+ms.openlocfilehash: e040c6b3a951d1bdf5a46dd82f1bd92b45c2e71d
+ms.contentlocale: es-es
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -52,7 +54,7 @@ Use el elemento de configuración de **escritorios y servidores de Windows perso
 
  Un método de detección de Configuration Manager contiene reglas que se usan para detectar si una aplicación ya está instalada en un equipo. Esta detección se produce antes de que se evalúa el elemento de configuración para el cumplimiento de normas. Para detectar si una aplicación está instalada, puede detectar la presencia de un archivo de Windows Installer para la aplicación, utilice una secuencia de comandos personalizada o seleccione **suponer siempre se instala la aplicación** para evaluar el elemento de configuración para el cumplimiento, independientemente de si se instaló la aplicación.  
 
- Use estos procedimientos para configurar los métodos de detección en System Center 2012 Configuration Manager.  
+ Use estos procedimientos para configurar los métodos de detección en System Center Configuration Manager.  
 
 ### <a name="to-detect-an-application-installation-by-using-the-windows-installer-file"></a>Para detectar la instalación de una aplicación mediante el archivo de Windows Installer  
 
@@ -356,9 +358,4 @@ En la página **Plataformas admitidas** del **Asistente para crear elemento de c
 
 ## <a name="complete-the-wizard"></a>Completar el asistente  
  En la página **Resumen** del asistente, revise las acciones que deberán realizarse y, a continuación, complete el asistente. El nuevo elemento de configuración se muestra en el **elementos de configuración** nodo en el **activos y compatibilidad** área de trabajo.  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

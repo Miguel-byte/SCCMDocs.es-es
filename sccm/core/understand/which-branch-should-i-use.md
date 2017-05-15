@@ -2,7 +2,7 @@
 title: "Qué rama debo usar | Microsoft Docs"
 description: "Obtenga información acerca de las diferencias entre las ramas disponibles de System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: ef044af5f6b32e4161d54c0ab1fb2ef2d245264b
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: f791278b0aa8efc734a894da7dab1704bb567ed0
+ms.contentlocale: es-es
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -29,16 +30,19 @@ ms.lasthandoff: 03/27/2017
 
 Desde octubre de 2016, hay disponibles tres ramas de System Center Configuration Manager. Use este tema para ayudarle a seleccionar la rama adecuada a sus necesidades.
 
+> [!TIP]  
+> Todos los sitios de la jerarquía deben ejecutar la misma rama. No se admite una jerarquía con distintas ramas en diferentes sitios.
+
 ## <a name="current-branch-of-system-center-configuration-manager"></a>Rama actual de System Center Configuration Manager
 Se trata de una rama con licencia para su uso en un entorno de producción donde desea contar con la opción de obtener las características y funcionalidades más recientes. Es la rama que se usa si tiene lo siguiente: System Center Datacenter, System Center Standard, System Center Configuration Manager o derechos de suscripción equivalentes. Para obtener más información sobre Software Assurance y opciones de licencia, consulte [Licencias y ramas para System Center Configuration Manager](learn-more-editions.md).
 
 
 >  [!TIP]
-> La Rama actual también puede instalarse como una versión de evaluación que no requiere una licencia. Puede usarse una versión de evaluación durante 180 días, y admite la actualización a una edición con licencia de la Rama actual.
+> La rama actual también puede instalarse como una versión de evaluación que no requiere una licencia. Puede usarse una versión de evaluación durante 180 días, y admite la actualización a una edición con licencia de la Rama actual.
 
 La Rama actual se actualiza varias veces al año con nuevas características. Cada versión de actualización se admite durante un año tras su publicación. Debe actualizar a una versión más reciente de la Rama actual en ese período de un año o antes de que expire. Las actualizaciones a las versiones más recientes están disponibles como las actualizaciones en la consola.
 
-Para instalar la Rama actual como un sitio nuevo o como una actualización de System Center 2012 Configuration Manager con Service Pack 2 o System Center 2012 R2 Configuration Manager con Service Pack 1, se usan los [medios de línea base](/sccm/core/servers/manage/updates#baseline-and-update-versions) para System Center Configuration Manager que se incluyen como un DVD con System Center 2016 o que están disponibles como parte de una versión independiente de System Center Configuration Manager. El acceso a este medio depende del tipo de licencia que tenga para System Center Configuration Manager.
+Para instalar la Rama actual como un sitio nuevo o como una actualización de System Center 2012 Configuration Manager con Service Pack 2 o System Center 2012 R2 Configuration Manager con Service Pack 1, se usan los [medios de línea base](/sccm/core/servers/manage/updates#baseline-and-update-versions) para System Center Configuration Manager que se incluyen como un DVD con System Center 2016 o que están disponibles como parte de una versión independiente de System Center Configuration Manager. El acceso a este medio depende del tipo de licencia que tenga para System Center Configuration Manager. Las versiones de línea base posteriores, como 1702, no admiten la instalación de la LTSB.
 
 También se pueden usar los medios de línea base para instalar un nuevo sitio que sea una versión de evaluación de la Rama actual. Si solo quiere instalar una versión de evaluación, puede obtener el software desde el sitio web de [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
 
@@ -139,4 +143,15 @@ Para más información, consulte [Technical Preview for System Center Configurat
 **Opciones de actualización**
 -    Puede instalar cualquier actualización en la consola para una nueva versión de Technical Preview.
 -    No hay ninguna opción para convertir una Technical Preview a la Rama actual o LTSB.
+
+
+## <a name="identify-your-branch-and-version"></a>Identificar la rama y la versión
+Cuando ve la información de la versión de un sitio de Configuration Manager, también confirma la rama.
+
+**Versión**   
+Para comprobar la versión del sitio, en la esquina superior izquierda de la consola, vaya a **Acerca de System Center Configuration Manager**, donde aparece la **versión del sitio**. Vea []() para obtener una lista de versiones de sitios.
+
+**Rama**  
+Para confirmar la rama del sitio (como LTSB o rama actual), en la consola, vaya a **Administración** > **Configuración de sitio** > **Sitios** y abra **Configuración de jerarquía**. Si existe una opción de conversión a la rama actual y está activa, el sitio ejecuta la versión de LTSB. Cuando el sitio ejecuta la rama actual, está opción aparece atenuada.
+Para obtener más información sobre las diferentes versiones de Configuration Manager, vea "Versiones de línea de base y versiones de actualización" en el tema [Actualizaciones para System Center Configuration Manager](/sccm/core/servers/manage/updates).
 
