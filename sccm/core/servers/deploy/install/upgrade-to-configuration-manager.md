@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
-ms.openlocfilehash: 057cd079e452321a51c41797e8dd1a8f5b6a5688
+ms.sourcegitcommit: d940fd1bbf96767d44f8c55315e814be55a83897
+ms.openlocfilehash: 9e58ab8dd892adf25429564adfd6f86849ddcbdf
 ms.contentlocale: es-es
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 05/08/2017
 
 
 ---
@@ -39,7 +39,6 @@ Puede ejecutar una actualización local para actualizar a System Center Configur
 **Actualizar a la versión 1702**   
 Si tiene el medio de línea base de la versión 1702, puede actualizar lo siguiente a una versión con licencia completa de System Center Configuration Manager versión 1702:   
 -      Una instalación de evaluación de System Center Configuration Manager versión 1702
--      Una instalación de versión candidata para lanzamiento de System Center Configuration Manager
 -      System Center 2012 Configuration Manager con Service Pack 1
 -      System Center 2012 Configuration Manager con Service Pack 2
 -      System Center 2012 R2 Configuration Manager

@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 96bfa443cd2894bb1c46322cd5f984071916d9a6
-ms.openlocfilehash: 6942f4d74303d8ade8add6cc81da872648f208be
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c5a58d79f81ccdf19ad88dc932e3a52eac2c18ab
+ms.openlocfilehash: 80c43ab93ee5a2de6bf8d7993dfd46f0005d2df8
+ms.contentlocale: es-es
+ms.lasthandoff: 05/09/2017
 
 
 ---
@@ -37,7 +39,7 @@ Para habilitar la migración de datos al entorno de System Center Configuration 
 
 -   [Identificar sitios de origen adicionales de la jerarquía de origen](#BKBM_ConfigSrcSites)  
 
-##  <a name="a-namebkbmconfigsrchierarchya-specify-a-source-hierarchy-for-migration"></a><a name="BKBM_ConfigSrcHierarchy"></a> Especificar una jerarquía de origen para la migración  
+##  <a name="BKBM_ConfigSrcHierarchy"></a> Especificar una jerarquía de origen para la migración  
  Para migrar datos a la jerarquía de destino, debe especificar una jerarquía de origen compatible que contenga los datos que quiere migrar. De forma predeterminada, el sitio de nivel superior de esa jerarquía se convierte en un sitio de origen de la jerarquía de origen. Si migra desde una jerarquía de Configuration Manager 2007, puede configurar sitios de origen adicionales para la migración después recopilar los datos del sitio de origen inicial. Si migra desde una jerarquía de System Center 2012 Configuration Manager o System Center Configuration Manager, no tiene que configurar sitios de origen adicionales para migrar datos desde la jerarquía de origen. Esto se debe a que estas versiones de Configuration Manager usan una base de datos compartida que está disponible en el sitio de nivel superior de la jerarquía de origen. La base de datos compartida contiene toda la información que puede migrar.  
 
  Use los procedimientos siguientes para especificar una jerarquía de origen para la migración y para identificar sitios de origen adicionales en una jerarquía de Configuration Manager 2007.  
@@ -58,7 +60,7 @@ Para habilitar la migración de datos al entorno de System Center Configuration 
 
 6.  Especifique cuentas de acceso del sitio de origen que tengan los siguientes permisos:  
 
-    -   Cuenta de sitio de origen: permiso **Leer** del proveedor de SMS para el sitio de nivel superior especificado en la jerarquía de origen.  
+    -   Cuenta de sitio de origen: permiso **Leer** del proveedor de SMS para el sitio de nivel superior especificado en la jerarquía de origen. Las actualizaciones y el uso compartido de puntos de distribución requieren los permisos **Modificar** y **Eliminar** para el sitio en la jerarquía de origen.
 
     -   Cuenta de base de datos del sitio de origen: permisos **Leer** y **Ejecutar** de la base de datos de SQL Server para el sitio de nivel superior especificado en la jerarquía de origen.  
 
@@ -70,7 +72,7 @@ Para habilitar la migración de datos al entorno de System Center Configuration 
 
 9. Cuando finalice la obtención de datos, haga clic en **Cerrar** para cerrar el cuadro de diálogo **Estado de obtención de datos** y complete la configuración.  
 
-##  <a name="a-namebkbmconfigsrcsitesa-identify-additional-source-sites-of-the-source-hierarchy"></a><a name="BKBM_ConfigSrcSites"></a> Identificar sitios de origen adicionales de la jerarquía de origen  
+##  <a name="BKBM_ConfigSrcSites"></a> Identificar sitios de origen adicionales de la jerarquía de origen  
  Cuando se configura una jerarquía de origen compatible, el sitio de nivel superior de esa jerarquía se configura automáticamente como un sitio de origen y se recopilan datos automáticamente de ese sitio. La siguiente acción que realice depende de la versión de Configuration Manager que ejecute la jerarquía de origen:  
 
 -   En una jerarquía de origen de Configuration Manager 2007, puede comenzar la migración desde ese sitio de origen inicial o configurar sitios de origen adicionales desde la jerarquía de origen después finalizar la recopilación de datos del sitio de origen inicial. Para migrar datos que solo estén disponibles en un sitio secundario, configure sitios de origen adicionales para una jerarquía de Configuration Manager 2007. Por ejemplo, puede configurar sitios de origen adicionales para recopilar datos sobre el contenido que quiere migrar cuando ese contenido se crea en un sitio secundario en la jerarquía de origen y no está disponible en el sitio superior de la jerarquía de origen.  
@@ -93,7 +95,7 @@ Use el siguiente procedimiento para configurar sitios de origen adicionales para
 
 5.  En el cuadro de diálogo **Credenciales del sitio de origen** , para las cuentas de acceso del sitio de origen, especifique las cuentas que tengan los permisos siguientes:  
 
-    -   Cuenta de sitio de origen: permiso **Leer** del proveedor de SMS para el sitio de nivel superior especificado en la jerarquía de origen.  
+    -   Cuenta de sitio de origen: permiso **Leer** del proveedor de SMS para el sitio de nivel superior especificado en la jerarquía de origen. Las actualizaciones y el uso compartido de puntos de distribución requieren los permisos **Modificar** y **Eliminar** para el sitio en la jerarquía de origen.  
 
     -   Cuenta de base de datos del sitio de origen: permisos **Leer** y **Ejecutar** de la base de datos de SQL Server para el sitio de nivel superior especificado en la jerarquía de origen.  
 
@@ -104,9 +106,4 @@ Use el siguiente procedimiento para configurar sitios de origen adicionales para
 7. Haga clic en **Aceptar** para guardar la configuración. Se abrirá el cuadro de diálogo **Estado de obtención de datos** y la recopilación de los datos se iniciará automáticamente.  
 
 8.  Cuando termine la recopilación de datos, haga clic en **Cerrar** para completar la configuración.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

@@ -2,7 +2,7 @@
 title: Implementar clientes Mac | Microsoft Docs
 description: "Obtenga información sobre cómo implementar clientes en equipos Mac en System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 12
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: 9cab5b91a94e8bf2ad96a8a706f46c58e2a3d712
-ms.lasthandoff: 03/21/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
+ms.openlocfilehash: 6ce212c6745b70a47553891e5dbc124b4c4e50fa
+ms.contentlocale: es-es
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -34,7 +35,10 @@ En estos procedimientos, tiene dos opciones para instalar los certificados de cl
 
 -   Usar la inscripción de Configuration Manager mediante la [herramienta CMEnroll](#install-the-client-and-then-enroll-the-client-certificate-on-the-mac). El proceso de inscripción no admite la renovación automática de certificados por lo que debe volver a inscribir los equipos Mac antes de que expire el certificado instalado.    
 
--   [Usar una solicitud de certificado y un método de instalación independiente de Configuration Manager](#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager).  
+-   [Usar una solicitud de certificado y un método de instalación independiente de Configuration Manager](#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager). 
+
+>[!IMPORTANT]
+>  Para implementar el cliente en dispositivos que ejecutan macOS Sierra, el nombre de asunto del certificado de punto de administración se debe configurar correctamente mediante, por ejemplo, el FQDN del servidor de punto de administración.
 
 
 ## <a name="configure-client-settings-for-enrollment"></a>Configurar las opciones del cliente para la inscripción  
@@ -299,7 +303,7 @@ Después, realice estas tareas:
 
     -   **Configuración seleccionada**: seleccione **Examinar** y, luego, seleccione el script de detección especificado previamente.  
 
-    -   En el campo **los siguientes valores** escriba **The domain/default pair of (com.microsoft.ccmclient, SMSID) does not exist**.  
+    -   En el campo **los siguientes valores** escriba **El dominio/par predeterminado (com.microsoft.ccmclient, SMSID) no existe**.  
 
     -   Habilite la opción **Ejecutar el script de corrección especificado cuando esta configuración no sea compatible**.  
 
@@ -322,7 +326,7 @@ Después, realice estas tareas:
 17. Reiniciar.  
 
 
-### <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también
 
 [Mantenimiento de clientes Mac](/sccm/core/clients/manage/maintain-mac-clients)
 
