@@ -1,8 +1,8 @@
 ---
 title: "Instalar un sitio con el medio de línea base 1606 | Microsoft Docs"
-description: "Obtenga información sobre cómo usar el medio de línea base 1606 para instalar o actualizar sitios de System Center Configuration Manager."
+description: Instale o actualice a la LTSB de System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 05/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1a3460143628ef297c99c364ded7ebea86d270dd
-ms.openlocfilehash: c266bb753ea69785b674508647c3857b2218cb77
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
+ms.openlocfilehash: 39653604ba5fd8e1fe9dd4d42889221d983f9bec
+ms.contentlocale: es-es
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -26,13 +27,18 @@ ms.lasthandoff: 02/18/2017
 
 *Se aplica a: System Center Configuration Manager (rama actual) (rama de mantenimiento a largo plazo)*
 
-Use este tema para obtener información sobre la ejecución del programa de instalación de Configuration Manager cuando use el medio de línea base de la versión 1606 de Microsoft System Center 2016 o de una versión de System Center Configuration Manager (rama actual y rama de mantenimiento a largo plazo 1606). Puede usar este medio para instalar un nuevo sitio, o actualizar desde System Center 2012 Configuration Manager con Service Pack 2 o System Center 2012 R2 Configuration Manager con Service Pack 1. Durante la instalación, puede elegir si instala la rama actual o la rama de mantenimiento a largo plazo (LTSB).
+Cuando ejecute el programa de instalación del medio de línea base de la versión 1606 de Configuration Manager, puede instalar la rama de mantenimiento a largo plazo o un sitio de rama actual de System Center Configuration Manager.
+
+El medio de línea base está disponible en DVD como parte de Microsoft System Center 2016 o desde una versión de System Center Configuration Manager (Rama actual y Rama de mantenimiento a largo plazo 1606). Para obtener información sobre el medio de línea base, consulte [Versiones de actualización y línea base](/sccm/core/servers/manage/updates#baseline-and-udpate-versions).
+
 
 Cuando use el medio de línea base de la versión 1606, el sitio que instala o al que actualiza es:
 - *Un sitio de rama actual* que es equivalente a un sitio que se instaló primero mediante el medio de línea base 1511 y, después, se actualizó a la versión 1606 además del paquete acumulativo de revisiones 1606: KB3186654.
 -    *Un sitio de LTSB* que es equivalente al sitio de rama actual que ejecuta la versión 1606 además del paquete acumulativo de revisiones 1606: KB3186654. El medio de línea base ya incluye el paquete acumulativo de revisiones.  En cambio, la LTSB no admite todas las características o capacidades que están disponibles en la rama actual, como se detalla en [Introducción a la rama de mantenimiento a largo plazo de System Center Configuration Manager](introduction-to-the-ltsb.md).
 
 Si no está familiarizado con las diferentes ramas de System Center Configuration Manager, consulte [Which branch of Configuration Manager should I use (Qué rama de Configuration Manager debo usar)](which-branch-should-i-use.md).
+
+
 
 
 ## <a name="changes-to-setup-with-the-1606-baseline-media"></a>Cambios en la configuración con el medio de línea base 1606
@@ -98,6 +104,7 @@ Para obtener más información, consulte [Usar una línea de comandos para insta
 Cuando usa el medio de línea base 1606 para instalar un nuevo sitio de cualquier rama, use los procedimientos de instalación, preparación y planeación de sitios que se documentan en el tema [Installing System Center Configuration Manager sites (Instalación de sitios de System Center Configuration Manager)](/sccm/core/servers/deploy/install/installing-sites) además de las siguientes consideraciones sobre el programa de instalación:
 
 - Durante la instalación, debe elegir la rama de Configuration Manager que quiere instalar, y puede especificar la información de su contrato de Software Assurance.
+- Todos los sitios de una misma jerarquía deben ejecutar la misma rama. Tener una jerarquía con una mezcla de LTSB y rama actual en diferentes sitios no se admite.
 -    Nueva instalación generada por script. Para más información, vea "Nuevas opciones de instalación generadas por script" anteriormente en este artículo.
 
 ## <a name="expand-a-stand-alone-primary-site"></a>Expandir un sitio primario independiente
