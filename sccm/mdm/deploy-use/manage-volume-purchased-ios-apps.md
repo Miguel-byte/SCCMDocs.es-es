@@ -2,7 +2,7 @@
 title: Administrar aplicaciones iOS compradas por volumen | Microsoft Docs
 description: Implemente, administre y supervise licencias para las aplicaciones que ha adquirido mediante el App Store de iOS.
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 05/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 3c2a07f560e0aa3d2beb7cc50e71c98ac45c27e1
-ms.openlocfilehash: a63acf0d80edba1e965ba8ea99fe90edb8aa2faf
-ms.lasthandoff: 03/28/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
+ms.openlocfilehash: 55f1204b088a7b636a90561f20aa41c7de72bc05
+ms.contentlocale: es-es
+ms.lasthandoff: 05/04/2017
 
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>Administrar aplicaciones de iOS compradas por volumen con System Center Configuration Manager
@@ -112,7 +113,7 @@ La aplicación de Configuration Manager que se crea contiene la aplicación de l
 
  Cuando se crea una aplicación a partir del nodo **Información de licencia para las aplicaciones de la Tienda**, la aplicación está asociada con licencias del token para la aplicación que ha seleccionado.  Por ejemplo, puede ver dos versiones de la misma aplicación en el nodo. Esto se debe a que cada versión de la aplicación está asociada a un token de VPP de Apple distinto.  A continuación, podría crear aplicaciones de cada token e implementarlas por separado.
 
- Para recuperar una licencia, se debe cambiar la acción de implementación a **Desinstalar**. La licencia se recuperará una vez que se desinstale la aplicación.  
+ Para reclamar una licencia, debe crear una nueva implementación para la aplicación con una acción de implementación de **Desinstalar**. No se puede cambiar la acción de implementación en la implementación original. La licencia se recuperará una vez que se desinstale la aplicación.  
 
 ## <a name="step-3---monitor-ios-vpp-apps"></a>Paso 3: supervisar aplicaciones de PCV de iOS  
  El nodo **Información de licencia para las aplicaciones de la Tienda** del área de trabajo **Biblioteca de software** muestra información sobre sus aplicaciones iOS compradas por volumen. La información incluye el número total de licencias que tiene para cada aplicación y el número que se ha implementado. Además, en la vista se muestra con qué token de VPP está asociada la aplicación, así como el tipo de token.

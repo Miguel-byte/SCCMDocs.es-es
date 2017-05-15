@@ -2,7 +2,7 @@
 title: "Probar la recopilación de preproducción de actualizaciones de cliente | Microsoft Docs"
 description: "Pruebe las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
-ms.openlocfilehash: 7edd3e46b4813dd50df7d01b367f8e73bb350a7d
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
+ms.openlocfilehash: 572ef13883f7930e69ec1f1f53c9bfe029898c81
+ms.contentlocale: es-es
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -86,4 +87,5 @@ Puede probar una nueva versión de cliente de Configuration Manager en una recop
 
 >[!NOTE]
 >Para habilitar el cliente de preproducción o promover un cliente de preproducción a un cliente de producción, su cuenta debe ser miembro del rol de seguridad que tiene permisos **Leer** y **Modificar** para el objeto **Paquetes de actualización**.
+>Las actualizaciones de cliente cumplen las ventanas de mantenimiento de Configuration Manager que ha configurado.
 

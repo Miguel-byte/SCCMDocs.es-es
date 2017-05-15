@@ -2,7 +2,7 @@
 title: "Aspectos básicos de la administración de contenido | Microsoft Docs"
 description: Use herramientas y opciones en System Center Configuration Manager para administrar el contenido que implemente.
 ms.custom: na
-ms.date: 3/15/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 238e460885b6490b3744690640f9ff040902b35f
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
+ms.openlocfilehash: f73dde64e0e8a0fc49f45b3afb3b8f00c926a820
+ms.contentlocale: es-es
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -29,9 +30,12 @@ ms.lasthandoff: 03/27/2017
 
 System Center Configuration Manager admite un sistema eficaz de herramientas y opciones para administrar el contenido que se implementa, como aplicaciones, paquetes, actualizaciones de software e implementaciones de sistema operativo.  
 
- El contenido que se implementa se almacena en los servidores de sitio y en los servidores de sistema de sitio de punto de distribución. Este contenido puede requerir una gran cantidad de ancho de banda de red cuando se transfiere entre ubicaciones. Para planear y usar eficazmente la infraestructura de administración de contenido, se recomienda que conozca las opciones y configuraciones disponibles, y que considere cómo usarlas para adaptarse mejor a su entorno de red y a sus necesidades de implementación de contenido.  
+El contenido que se implementa se almacena en los servidores de sitio y en los servidores de sistema de sitio de punto de distribución. Este contenido puede requerir una gran cantidad de ancho de banda de red cuando se transfiere entre ubicaciones. Para planear y usar eficazmente la infraestructura de administración de contenido, se recomienda que conozca las opciones y configuraciones disponibles, y que considere cómo usarlas para adaptarse mejor a su entorno de red y a sus necesidades de implementación de contenido.  
 
-A continuación se indican los conceptos básicos de la administración de contenido. Cuando un concepto requiere información adicional o compleja, se proporcionan vínculos para dirigirle a ella.  
+> [!TIP]    
+> Puede aprender más sobre el proceso de distribución de contenido y encontrar ayuda para el diagnóstico y la resolución de problemas generales de distribución de contenido. Consulte [Understanding and Troubleshooting Content Distribution in Microsoft Configuration Manager](https://support.microsoft.com/help/4000401/content-distribution-in-mcm) (Descripción y solución de problemas de distribución de contenido en Microsoft Configuration Manager).
+
+Los siguientes son conceptos clave para la administración de contenido. Cuando un concepto requiere información adicional o compleja, se proporcionan vínculos para dirigirle a ella.
 
 ## <a name="accounts-used-for-content-management"></a>Cuentas usadas para la administración de contenido  
  Las cuentas siguientes pueden usarse con la administración de contenido:  

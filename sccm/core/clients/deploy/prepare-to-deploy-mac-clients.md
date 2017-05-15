@@ -2,7 +2,7 @@
 title: "Preparativos para la implementación de software cliente en Mac | Microsoft Docs"
 description: "Tareas de configuración previas a la implementación del cliente de Configuration Manager en Mac."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 12
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 0900e45115f02861c33fe2abdb046d11fdef3474
-ms.openlocfilehash: 9f51c15adaa850eb8343601ddcd13046480fc9c0
-ms.lasthandoff: 01/03/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
+ms.openlocfilehash: b3bb72f81812705b4654e268025074402e89a7cb
+ms.contentlocale: es-es
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -100,6 +101,9 @@ Para ver una implementación de ejemplo en la que se crea y se instala este cert
  Para ver una implementación de ejemplo en la que se crea y se instala el certificado de cliente para puntos de administración, consulte [Deploying the Client Certificate for Windows Computers](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012) (Implementación del certificado de cliente para equipos Windows).  
 
  Para ver una implementación de ejemplo en la que se crea y se instala el certificado de cliente para puntos de distribución, consulte [Deploying the Client Certificate for Distribution Points](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clientdistributionpoint2008_cm2012) (Implementación del certificado de cliente para puntos de distribución).  
+
+>[!IMPORTANT]
+>  Para implementar el cliente en dispositivos que ejecutan macOS Sierra, el nombre de asunto del certificado de punto de administración se debe configurar correctamente mediante, por ejemplo, el FQDN del servidor de punto de administración.
 
 ## <a name="prepare-the-client-certificate-template-for-macs"></a>Preparar la plantilla de certificado de cliente para equipos Mac  
 
