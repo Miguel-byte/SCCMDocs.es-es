@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: c4f30e4839709722b216262b21d7b51c07d24d1e
 ms.openlocfilehash: dc36be47310d2c2178c974a2b503d0b5f9f6e2ec
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -85,9 +87,4 @@ Configure el servidor proxy en la página Punto de actualización de software ac
 3.  En Propiedades de sistema de sitio, seleccione la pestaña **Proxy** y, después, establezca la configuración de proxy para este servidor de sitio primario.  
 
 4.  Seleccione **Aceptar** para guardar la nueva configuración del servidor proxy.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

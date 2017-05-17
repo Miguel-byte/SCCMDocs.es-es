@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
 ms.openlocfilehash: c0b4fcda6599ed91fe2393b97bdcec6cdfba9b7c
+ms.contentlocale: es-es
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -70,9 +72,4 @@ Las ventanas de mantenimiento le permiten definir un período en el que pueden r
 7.  Haga una selección en la lista desplegable **Aplicar esta programación a**.  
 
 8.  Pulse **Aceptar** y, después, cierre el cuadro de diálogo **&lt;Propiedades\> de nombre de recopilación**.  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

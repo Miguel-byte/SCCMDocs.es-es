@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 6ee39d311108253ece1c9d60c25ac06017867c1f
+ms.contentlocale: es-es
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -40,9 +42,4 @@ La información de ejemplo de este tema se puede utilizar para crear un archivo 
 |Título de software 8|Publicador de software|1.08|Inglés|1|Número de compra|Nombre del distribuidor|10/10/2010|0|10/10/2012|Comentario|  
 |Título de software 9|Publicador de software|1.09|Inglés|1|Número de compra|Nombre del distribuidor|10/10/2010|0|10/10/2012|Comentario|  
 |Título de software 10|Publicador de software|1.10|Inglés|1|Número de compra|Nombre del distribuidor|10/10/2010|0|10/10/2012|Comentario|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

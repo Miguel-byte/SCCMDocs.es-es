@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 87ab9925717a307cbda3cea1f2e470ae012fa067
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -28,10 +30,10 @@ ms.openlocfilehash: 87ab9925717a307cbda3cea1f2e470ae012fa067
 
 System Center Configuration Manager proporciona un catálogo de controladores que puede usar para administrar los controladores de dispositivos Windows en su entorno de Configuration Manager. Puede usar el catálogo de controladores para importar controladores de dispositivos en Configuration Manager, agruparlos en paquetes y distribuirlos a puntos de distribución para obtener acceso a los mismos al implementar un sistema operativo. Los controladores de dispositivos se pueden usar cuando se instala un sistema operativo completo en el equipo de destino y cuando se instala Windows PE mediante una imagen de arranque. Los controladores de dispositivos de Windows están compuestos por un archivo de información de instalación (INF) y los archivos adicionales necesarios para admitir el dispositivo. Cuando se implementa un sistema operativo, Configuration Manager obtiene la información de hardware y plataforma para el dispositivo mediante el archivo INF. Utilice lo siguiente para administrar controladores en su entorno de Configuration Manager.
 
-##  <a name="a-namebkmkdrivercategoriesa-device-driver-categories"></a><a name="BKMK_DriverCategories"></a> Categorías de controlador de dispositivos  
+##  <a name="BKMK_DriverCategories"></a> Categorías de controlador de dispositivos  
  Cuando importa controladores de dispositivos, puede asignarlos a una categoría. Las categorías de controladores de dispositivos permiten agrupar controladores de dispositivos de uso similar en el catálogo de controladores. Por ejemplo, puede asignar todos los controladores de dispositivos adaptadores de red a una determinada categoría. A continuación, cuando se crea una secuencia de tareas que incluye la etapa [Aplicar controladores automáticamente	](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers), puede especificar una categoría específica de controladores de dispositivos. Configuration Manager examina el hardware y selecciona los controladores aplicables de dicha categoría en la fase del sistema que va a usar el programa de instalación de Windows.  
 
-##  <a name="a-namebkmkmanagingdriverpackagesa-driver-packages"></a><a name="BKMK_ManagingDriverPackages"></a> Paquetes de controladores  
+##  <a name="BKMK_ManagingDriverPackages"></a> Paquetes de controladores  
  Puede agrupar controladores de dispositivos similares en paquetes para facilitar las implementaciones de sistema operativo. Por ejemplo, puede optar por crear un paquete de controladores para cada fabricante de equipos de la red. Puede crear un paquete de controladores al importar controladores en el catálogo de controladores directamente en el nodo **Paquetes de controladores** . Al finalizar la creación del paquete de controladores, deberá distribuirlo a puntos de distribución desde los cuales los equipos cliente de Configuration Manager podrán instalar los controladores como corresponda. Tenga en cuenta lo siguiente:  
 
 -   Cuando crea un paquete de controladores, la ubicación de origen del paquete debe apuntar a un recurso compartido de red vacío que ningún otro paquete de controladores esté utilizando, y el proveedor de SMS debe tener permisos de lectura y escritura en esa ubicación.  
@@ -42,7 +44,7 @@ System Center Configuration Manager proporciona un catálogo de controladores qu
 
  Use las secciones siguientes para crear y administrar paquetes de controladores.  
 
-###  <a name="a-namecreatingdriverpackagesa-create-a-driver-package"></a><a name="CreatingDriverPackages"></a> Crear un paquete de controladores  
+###  <a name="CreatingDriverPackages"></a> Crear un paquete de controladores  
  Utilice el procedimiento siguiente para crear un nuevo paquete de controladores.  
 
 > [!IMPORTANT]  
@@ -74,7 +76,7 @@ System Center Configuration Manager proporciona un catálogo de controladores qu
 
  Si el nodo **Paquetes de controladores** contiene varios paquetes, puede agregar carpetas al nodo para separar los paquetes en grupos lógicos.  
 
-###  <a name="a-namebkmkpackageactionsa-additional-actions-for-driver-packages"></a><a name="BKMK_PackageActions"></a> Acciones adicionales para paquetes de controladores  
+###  <a name="BKMK_PackageActions"></a> Acciones adicionales para paquetes de controladores  
  Se pueden realizar otras acciones para administrar paquetes de controladores cuando se seleccione uno o varios paquetes de controladores del nodo **Paquetes de controladores** . Estas acciones incluyen las siguientes:  
 
 |Acción|Descripción|  
@@ -87,10 +89,10 @@ System Center Configuration Manager proporciona un catálogo de controladores qu
 |**Actualizar puntos de distribución**|Actualiza el paquete de controladores de dispositivo en todos los puntos de distribución en los que se almacena el paquete. Esta acción copia solo el contenido que ha cambiado desde la última vez que se distribuyó.|  
 |**Propiedades**|Abre el cuadro de diálogo **Propiedades** , en el que puede revisar y cambiar las propiedades y el contenido del controlador de dispositivo. Por ejemplo, puede cambiar el nombre y la descripción del controlador de dispositivo, habilitarlo y especificar las plataformas en las que se puede ejecutar.|  
 
-##  <a name="a-namebkmkdevicedriversa-device-drivers"></a><a name="BKMK_DeviceDrivers"></a> Controladores de dispositivo  
+##  <a name="BKMK_DeviceDrivers"></a> Controladores de dispositivo  
  Puede instalar controladores de dispositivos en equipos de destino sin incluirlos en la imagen del sistema operativo que se va a implementar. Configuration Manager proporciona un catálogo de controladores con referencias a todos los controladores de dispositivos que se importan a Configuration Manager. El catálogo de controladores se encuentra en el área de trabajo **Biblioteca de software** y se compone de dos nodos: **Controladores** y **Paquetes de controladores**. El nodo **Controladores** enumera todos los controladores que haya importado en el catálogo de controladores. Use este nodo para detectar detalles acerca de cada controlador importado, modificar los controladores de un paquete de controladores o una imagen de arranque, habilitar o deshabilitar un controlador, etc.  
 
-###  <a name="a-namebkmkimportdriversa-import-device-drivers-into-the-driver-catalog"></a><a name="BKMK_ImportDrivers"></a> Importar controladores de dispositivos en el catálogo de controladores  
+###  <a name="BKMK_ImportDrivers"></a> Importar controladores de dispositivos en el catálogo de controladores  
  Debe importar los controladores de dispositivos en el catálogo de controladores para poder usarlos al implementar un sistema operativo. Para administrar mejor los controladores de dispositivos, importe solo los controladores que pretende instalar como parte de la implementación de sistema operativo. Sin embargo, también puede guardar varias versiones de controladores de dispositivos en el catálogo de controladores para proporcionar una manera sencilla de actualizar los controladores existentes de dispositivos cuando se producen cambios en los requisitos de hardware en la red.  
 
  Como parte del proceso de importación del controlador de dispositivo, Configuration Manager lee la información de proveedor, clase, versión, firma, hardware compatible y plataforma compatible asociada al dispositivo. De forma predeterminada, el controlador recibe el nombre del primer dispositivo de hardware al que presta servicio; sin embargo, puede cambiar el nombre del controlador de dispositivo más tarde. La lista de plataformas compatibles se basa en la información del archivo INF del controlador. Como la exactitud de esta información puede variar, compruebe manualmente que el controlador de dispositivo es compatible después de importarlo en el catálogo de controladores.  
@@ -166,7 +168,7 @@ System Center Configuration Manager proporciona un catálogo de controladores qu
 
 8.  Complete el asistente.  
 
-###  <a name="a-namebkmkmodifydriverpackagea-manage-device-drivers-in-a-driver-package"></a><a name="BKMK_ModifyDriverPackage"></a> Administrar controladores de dispositivos en un paquete de controladores  
+###  <a name="BKMK_ModifyDriverPackage"></a> Administrar controladores de dispositivos en un paquete de controladores  
  Utilice los procedimientos siguientes para modificar paquetes de controladores e imágenes de arranque. Para agregar o quitar controladores de dispositivos, busque los controladores en el nodo **Controladores** y, a continuación, edite los paquetes o imágenes de arranque a los que están asociados los controladores seleccionados.  
 
 #### <a name="to-modify-the-device-drivers-in-a-driver-package"></a>Para modificar los controladores de dispositivos en un paquete de controladores  
@@ -187,7 +189,7 @@ System Center Configuration Manager proporciona un catálogo de controladores qu
 
      Haga clic en **Aceptar**.  
 
-###  <a name="a-namebkmkmanagedriversbootimagea-manage-device-drivers-in-a-boot-image"></a><a name="BKMK_ManageDriversBootImage"></a> Administrar controladores de dispositivos en una imagen de arranque  
+###  <a name="BKMK_ManageDriversBootImage"></a> Administrar controladores de dispositivos en una imagen de arranque  
  Puede agregar a imágenes de arranque los controladores de dispositivos de Windows que se han importado en el catálogo de controladores. Use las siguientes directrices al agregar controladores de dispositivos a una imagen de arranque:  
 
 -   Solo agregue controladores de dispositivos de adaptadores de red y almacenamiento a las imágenes de arranque: habitualmente no se requieren otros tipos de controladores. La incorporación de controladores que no son necesarios aumenta el tamaño de la imagen de arranque innecesariamente.  
@@ -228,7 +230,7 @@ System Center Configuration Manager proporciona un catálogo de controladores qu
 
 7.  Haga clic en **Aceptar**.  
 
-###  <a name="a-namebkmkdriveractionsa-additional-actions-for-device-drivers"></a><a name="BKMK_DriverActions"></a> Acciones adicionales para controladores de dispositivos  
+###  <a name="BKMK_DriverActions"></a> Acciones adicionales para controladores de dispositivos  
  Se pueden realizar otras acciones para administrar controladores de dispositivos cuando se seleccione uno o varios controladores de dispositivos del nodo **Controladores** . Estas acciones incluyen las siguientes:  
 
 |Acción|Descripción|  
@@ -240,7 +242,7 @@ System Center Configuration Manager proporciona un catálogo de controladores qu
 |**Moverr**|Mueve el controlador de dispositivo a otra carpeta en el nodo **Controladores** .|  
 |**Propiedades**|Abre el cuadro de diálogo **Propiedades** , donde puede revisar y cambiar las propiedades del controlador de dispositivo. Por ejemplo, puede cambiar el nombre y la descripción del controlador de dispositivo, habilitarlo y especificar en qué plataformas se puede ejecutar.|  
 
-##  <a name="a-namebkmktsdriversa-use-task-sequences-to-install-device-drivers"></a><a name="BKMK_TSDrivers"></a> Usar secuencias de tareas para instalar controladores de dispositivos  
+##  <a name="BKMK_TSDrivers"></a> Usar secuencias de tareas para instalar controladores de dispositivos  
  Use secuencias de tareas para automatizar la implementación del sistema operativo. Cada paso en la secuencia de tareas puede realizar una acción determinada como, por ejemplo, la instalación de un controlador de dispositivo. Puede usar estos dos pasos de secuencia de tareas para instalar controladores de dispositivos durante la implementación de sistemas operativos:  
 
 -   [Aplicar controladores automáticamente	](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers): esta etapa le permite encontrar controladores de dispositivos coincidentes e instalarlos automáticamente como parte de una implementación de sistema operativo. Puede configurar el paso de la secuencia de tareas para instalar solo los controladores más coincidentes para los dispositivos de hardware detectados, o especificar que el paso de la secuencia de tareas instale todos los controladores admitidos de los dispositivos de hardware detectados y, a continuación, dejar al programa de instalación de Windows seleccionar el controlador más adecuado. Además, puede especificar una categoría de controladores de dispositivos para limitar los controladores que están disponibles en este paso.  
@@ -249,7 +251,7 @@ System Center Configuration Manager proporciona un catálogo de controladores qu
 
  Al usar estos pasos de la secuencia de tareas, también puede especificar cómo se instalan los controladores de dispositivos en el equipo en el que se implementa el sistema operativo. Para obtener más información, consulte [Manage task sequences to automate tasks](../deploy-use/manage-task-sequences-to-automate-tasks.md) (Administrar secuencias de tareas para automatizar tareas).  
 
-##  <a name="a-namebkmkinstallingdevicediriverstsa-use-task-sequences-to-install-device-drivers-on-computers"></a><a name="BKMK_InstallingDeviceDiriversTS"></a> Usar secuencias de tareas para instalar controladores de dispositivos en equipos  
+##  <a name="BKMK_InstallingDeviceDiriversTS"></a> Usar secuencias de tareas para instalar controladores de dispositivos en equipos  
  Utilice el procedimiento siguiente para instalar controladores de dispositivos como parte de la implementación de sistema operativo.  
 
 #### <a name="use-a-task-sequence-to-install-device-drivers"></a>Usar una secuencia de tareas para instalar controladores de dispositivos  
@@ -273,11 +275,6 @@ System Center Configuration Manager proporciona un catálogo de controladores qu
 
  Para obtener más información sobre cómo crear una secuencia de tareas para instalar un sistema operativo, vea [Create a task sequence to install an operating system](../deploy-use/create-a-task-sequence-to-install-an-operating-system.md) (Creación de una secuencia de tareas para instalar un sistema operativo).  
 
-##  <a name="a-namebkmkdriverreportsa-driver-management-reports"></a><a name="BKMK_DriverReports"></a> Informes de administración de controladores  
+##  <a name="BKMK_DriverReports"></a> Informes de administración de controladores  
  Puede usar varios informes en la categoría de informes **Administración de controladores** para obtener información general acerca de los controladores de dispositivos en el catálogo de controladores. Para obtener más información sobre informes, consulte [Generación de informes](../../core/servers/manage/reporting.md).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

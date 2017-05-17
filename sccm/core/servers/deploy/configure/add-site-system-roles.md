@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 7fa191ce37a68f604673fe9b9724f76c3ff10032
 ms.openlocfilehash: 1ad4abf1f06ed24bd1d505648280b5e5d80220c7
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -50,9 +52,4 @@ Configuration Manager no admite roles del sistema de sitio para varios sitios en
 -   [Opciones de configuración de roles de sistema de sitio para System Center Configuration Manager](../../../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md)  
 
      Algunos roles de sistema de sitio admiten configuraciones que necesitan más información de la que se puede explicar en la interfaz de usuario. En este tema encontrará esa información.  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

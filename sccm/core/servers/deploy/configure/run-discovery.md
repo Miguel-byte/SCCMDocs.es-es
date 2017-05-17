@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 7b6674f331c82cc7899b8661cf38b9d3022cf21b
 ms.openlocfilehash: 647826e9d340d3ef97abab0dba51041a3727dedc
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -64,7 +66,7 @@ Use uno o varios métodos de detección en System Center Configuration Manager p
 
 -   Puede implementar la configuración de cliente y las configuraciones relacionadas.
 
-##  <a name="a-namebkmkddrsa-about-discovery-data-records"></a><a name="BKMK_DDRs"></a> Acerca de los registros de datos de detección  
+##  <a name="BKMK_DDRs"></a> Acerca de los registros de datos de detección  
  Los DDR son archivos creados por un método de detección. Contienen información sobre un recurso que puede administrar en Configuration Manager, como equipos, usuarios y, en algunos casos, infraestructura de red. Estos se procesan en sitios primarios o en sitios de administración central. Después de agregar a la base de datos la información de recursos del DDR, se elimina el DDR y se replica la información como datos globales en todos los sitios de la jerarquía.  
 
  El sitio en que se procesa un DDR depende de la información que contiene:  
@@ -87,9 +89,4 @@ Los temas siguientes pueden servir como base para ayudarle a usar correctamente 
 -   [Select discovery methods to use for System Center Configuration Manager](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md) (Selección de los métodos de detección que se usarán para System Center Configuration Manager)  
 
 Después, cuando conozca los métodos que quiere usar, busque información para configurar cada método en [Configurar métodos de detección para System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

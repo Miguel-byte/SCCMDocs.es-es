@@ -15,9 +15,11 @@ caps.latest.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 60631bc0346bd78d704e7129bb755af504c59b1b
 ms.openlocfilehash: 6e7edc85630d22c5bbba1ff66bd1199903db76db
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 ---
 
@@ -54,9 +56,4 @@ Si el sitio ejecuta la LTSB, puede usar la siguiente opción de la consola de Co
  2. Seleccione la opción para convertir a la Rama actual y, después, haga clic en **Aplicar**.  
 
 Después de convertir el sitio a la Rama actual, podrán usarse las funciones y características que antes no estaban disponibles.
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

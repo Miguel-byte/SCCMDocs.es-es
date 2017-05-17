@@ -15,9 +15,11 @@ caps.latest.revision: 10
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a181171cc1a92ec4519f4e4b34ca3274a0aa0440
 ms.openlocfilehash: 1c9e7ada6a8aa228b30e58865baae0f6e529e6af
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -35,7 +37,7 @@ Los clientes de System Center Configuration Manager usan un proceso denominado *
 
 
 
-##  <a name="a-namebkmkfunda-fundamentals-of-service-location"></a><a name="bkmk_fund"></a> Aspectos básicos de la ubicación del servicio  
+##  <a name="bkmk_fund"></a> Aspectos básicos de la ubicación del servicio  
  Un cliente evalúa su ubicación de red actual, la preferencia del protocolo de comunicación y el sitio asignado cuando se usa una ubicación de servicio para encontrar un punto de administración con el que poder comunicarse.  
 
  **Un cliente se comunica con un punto de administración para:**  
@@ -56,7 +58,7 @@ Los clientes de System Center Configuration Manager usan un proceso denominado *
 
 -   Cuando se implementa un rol de sistema de sitio que usa Internet Information Services (IIS) y que admite la comunicación desde clientes, es necesario especificar si los clientes se conectan al sistema de sitio mediante HTTP o HTTPS. Si utiliza HTTP, también debe tener en cuenta las opciones de firma y cifrado. Para obtener más información, vea [Planeación de la firma y el cifrado](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) en [Planear la seguridad en System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md).  
 
-##  <a name="a-namebkmkplanservicelocationa-service-location-and-how-clients-determine-their-assigned-management-point"></a><a name="BKMK_Plan_Service_Location"></a> Ubicación del servicio y cómo los clientes averiguan su punto de administración asignado  
+##  <a name="BKMK_Plan_Service_Location"></a> Ubicación del servicio y cómo los clientes averiguan su punto de administración asignado  
 Cuando un cliente se asigna por primera vez a un sitio primario, selecciona un punto de administración predeterminado para ese sitio. Los sitios primarios admiten varios puntos de administración, y cada uno de los clientes identifica de forma independiente un punto de administración como su punto de administración predeterminado. Este punto de administración predeterminado luego se convierte en el punto de administración asignado a ese cliente. (También puede usar comandos de instalación de cliente para establecer el punto de administración asignado a un cliente en el momento en que se instala).  
 
 Un cliente selecciona un punto de administración con el cual comunicarse en función de las configuraciones de ubicación de red y de grupo de límites actuales del cliente. Aunque tenga un punto de administración asignado, puede que este no sea el punto de administración que el cliente use.  
@@ -83,7 +85,7 @@ Por ejemplo, cuando un cliente de Configuration Manager que está en Internet se
 
 Un cliente que no esté configurado para Internet no recibirá puntos de administración solo con conexión a Internet. Los clientes de grupo de trabajo configurados para Internet solo se comunican con puntos de administración con conexión a Internet.  
 
-##  <a name="a-namebkmkmplista-the-mp-list"></a><a name="BKMK_MPList"></a> La lista de puntos de administración  
+##  <a name="BKMK_MPList"></a> La lista de puntos de administración  
 La lista de puntos de administración es el origen de ubicación del servicio preferido de un cliente, porque es una lista de prioridades de los puntos de administración que el cliente identificó anteriormente. Cada cliente ordena esta lista en función de su ubicación de red cuando el cliente la actualiza y, luego, la almacena localmente en el cliente en WMI.  
 
 ### <a name="building-the-initial-mp-list"></a>Creación de la lista de puntos de administración inicial  
@@ -134,7 +136,7 @@ Después de establecer la comunicación con un punto de administración, el clie
 
 Luego, el cliente selecciona aleatoriamente un nuevo punto de administración que usar.  
 
-##  <a name="a-namebkmkada-active-directory"></a><a name="bkmk_ad"></a> Active Directory  
+##  <a name="bkmk_ad"></a> Active Directory  
 Los clientes que están unidos a un dominio pueden usar AD DS para la ubicación del servicio. Para ello, es necesario que los sitios [publiquen datos en Active Directory](http://technet.microsoft.com/library/hh696543.aspx).  
 
 Un cliente puede utilizar AD DS para la ubicación del servicio cuando se cumpla alguna de las siguientes condiciones:  
@@ -145,7 +147,7 @@ Un cliente puede utilizar AD DS para la ubicación del servicio cuando se cumpl
 
 Si un cliente no encuentra un punto de administración para la ubicación del servicio en AD DS, intenta usar DNS.  
 
-##  <a name="a-namebkmkdnsa-dns"></a><a name="bkmk_dns"></a> DNS  
+##  <a name="bkmk_dns"></a> DNS  
 Los clientes de la intranet pueden usar DNS para la ubicación del servicio. Esto requiere al menos un sitio en una jerarquía para publicar información sobre los puntos de administración en DNS.  
 
 Considere la posibilidad de usar DNS para la ubicación del servicio cuando se cumpla alguna de las siguientes condiciones:
@@ -243,15 +245,10 @@ Si utiliza DNS de Windows Server, puede utilizar el siguiente procedimiento para
 
 Repita estos pasos por cada punto de administración de la intranet que desee publicar en DNS.  
 
-##  <a name="a-namebkmkwinsa-wins"></a><a name="bkmk_wins"></a> WINS  
+##  <a name="bkmk_wins"></a> WINS  
 Cuando se produce un error en otros mecanismos de ubicación de servicio, los clientes pueden buscar un punto de administración inicial mediante la comprobación de WINS.  
 
 De forma predeterminada, un sitio primario publica en WINS el primer punto de administración en el sitio que está configurado para HTTP y el primer punto de administración está configurado para HTTPS.  
 
 Si no desea que los clientes encuentren un punto de administración HTTP en WINS, configure los clientes con la propiedad Client.msi de CCMSetup.exe **SMSDIRECTORYLOOKUP=NOWINS**.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

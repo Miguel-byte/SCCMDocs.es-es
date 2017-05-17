@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
 ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -32,7 +34,7 @@ Posteriormente, después de considerar las opciones de administración de conten
 > [!NOTE]
 > Al planear una nueva instalación de Configuration Manager, tenga en cuenta las [notas de la versión]( /sccm/core/servers/deploy/install/release-notes) que detallan los problemas actuales en las versiones activas. Las notas de la versión se aplican a todas las ramas de Configuration Manager.  Pero cuando use la [rama Technical Preview]( /sccm/core/get-started/technical-preview), encontrará problemas que afectan solamente a esa rama en la documentación de cada versión de Technical Preview.  
 
-##  <a name="a-namebkmktopologya-hierarchy-topology"></a><a name="bkmk_topology"></a> Topología de la jerarquía  
+##  <a name="bkmk_topology"></a> Topología de la jerarquía  
  Las topologías de las jerarquías van desde un único sitio principal independiente hasta un grupo de sitios principales y secundarios conectados con un sitio de administración central en el sitio de nivel superior (capa superior) de la jerarquía.   El impulsor clave del tipo y del número de sitios que use en una jerarquía suele ser el número y tipo de dispositivos que debe admitir, como se muestra a continuación:   
 
  **Sitio primario independiente:** use un sitio primario independiente si este puede admitir la administración de todos los dispositivos y usuarios (consulte [Sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers) [Números de tamaño y escala]). Esta también es la topología adecuada cuando las diferentes ubicaciones geográficas de su empresa pueden atenderse correctamente mediante un solo sitio principal.  Para que sea más fácil administrar el tráfico de red, puede usar puntos de administración preferidos y una infraestructura de contenido planeada cuidadosamente (vea [Conceptos básicos de la administración de contenido en System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)).  
@@ -57,7 +59,7 @@ Posteriormente, después de considerar las opciones de administración de conten
 
  Las secciones siguientes pueden ayudarle a entender cuándo se debe utilizar un sitio específico o una opción de administración de contenido en lugar de un sitio adicional.  
 
-##  <a name="a-namebkmkchoosecasa-determine-when-to-use-a-central-administration-site"></a><a name="BKMK_ChooseCAS"></a> Determinar cuándo usar un sitio de administración central  
+##  <a name="BKMK_ChooseCAS"></a> Determinar cuándo usar un sitio de administración central  
  Utilice un sitio de administración central para configurar toda la jerarquía y supervisar todos los sitios y objetos de la jerarquía. Este tipo de sitio no administra directamente los clientes, sino que coordina la replicación de datos entre sitios, que incluye la configuración de sitios y clientes en toda la jerarquía.  
 
 **La siguiente información puede ayudarle a decidir cuándo instalar un sitio de administración central:**  
@@ -82,7 +84,7 @@ Posteriormente, después de considerar las opciones de administración de conten
 
 -   Puede configurar la replicación de archivos y replicación de bases de datos para controlar la comunicación entre los sitios de la jerarquía. Esto incluye la programación de replicación de bases de datos para los datos del sitio y la administración del ancho de banda para la transferencia entre sitios de datos basados en archivos.  
 
-##  <a name="a-namebkmkchoosepriimarya-determine-when-to-use-a-primary-site"></a><a name="BKMK_ChoosePriimary"></a> Determinar cuándo usar un sitio primario  
+##  <a name="BKMK_ChoosePriimary"></a> Determinar cuándo usar un sitio primario  
  Utilice los sitios primarios para administrar clientes. Puede instalar un sitio primario como sitio primario secundario en un sitio de administración central o como el primer sitio de una nueva jerarquía. Un sitio primario que se instala como el primer sitio de la jerarquía crea un sitio primario independiente. Los sitios primarios secundarios y los sitios primarios independientes admiten sitios secundarios como sitios secundarios del sitio primario.  
 
  Considere la posibilidad de utilizar un sitio primario por alguna de las siguientes razones:  
@@ -108,7 +110,7 @@ Posteriormente, después de considerar las opciones de administración de conten
 
 -   Los sitios primarios usan la replicación de base de datos para comunicarse directamente con su sitio de administración central (esto se configura automáticamente cuando se instala un nuevo sitio).  
 
-##  <a name="a-namebkmkchoosesecondarya-determine-when-to-use-a-secondary-site"></a><a name="BKMK_ChooseSecondary"></a> Determinar cuándo usar un sitio secundario  
+##  <a name="BKMK_ChooseSecondary"></a> Determinar cuándo usar un sitio secundario  
  Utilice sitios secundarios para administrar la transferencia de contenido de implementación y datos de cliente a través de redes de ancho de banda bajo.  
 
  Es posible administrar un sitio secundario desde un sitio de administración central o desde el sitio primario principal directo del sitio secundario. Los sitios secundarios deben estar conectados a un sitio primario y no es posible moverlos a un sitio primario diferente sin desinstarlarlos y volverlos a instalar a continuación como un sitio secundario debajo del nuevo sitio primario.
@@ -138,7 +140,7 @@ Sin embargo, es posible distribuir contenido entre dos sitios secundarios del mi
 
 -   Las instalaciones de sitio secundario implementan automáticamente un punto de administración y un punto de distribución que se encuentran en el servidor de sitio secundario.  
 
-##  <a name="a-namebkmkchoosesecondaryordpa-determine-when-to-use-content-management-options"></a><a name="BKMK_ChooseSecondaryorDP"></a> Determinar cuándo usar las opciones de administración de contenido  
+##  <a name="BKMK_ChooseSecondaryorDP"></a> Determinar cuándo usar las opciones de administración de contenido  
  Si tiene clientes en ubicaciones de red remotas, considere el uso de una o varias opciones de administración de contenido en lugar de un sitio primario o secundario. A menudo, puede eliminar la necesidad de instalar un sitio si utiliza Windows BranchCache, configura los puntos de distribución para el control de ancho de banda o copia manualmente el contenido en puntos de distribución (contenido preconfigurado).  
 
 
@@ -150,7 +152,7 @@ Sin embargo, es posible distribuir contenido entre dos sitios secundarios del mi
 
  Para obtener más información sobre las opciones de administración de contenido de Configuration Manager, consulte [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md) (Conceptos básicos de la administración de contenido en System Center Configuration Manager).  
 
-##  <a name="a-namebkmkbeyonda-beyond-hierarchy-topology"></a><a name="bkmk_beyond"></a> Más allá de la topología de la jerarquía  
+##  <a name="bkmk_beyond"></a> Más allá de la topología de la jerarquía  
  Además de una topología de jerarquía inicial, considere qué servicios o funciones estarán disponibles en los diferentes sitios de la jerarquía (roles de sistema de sitio) y cómo se administrarán en la infraestructura las funciones y las configuraciones de la jerarquía. A continuación se muestran las consideraciones más comunes que se tratan en un tema independiente. Son importantes porque pueden influir en el diseño de jerarquía o puede verse afectadas por este:  
 
 -   Durante la preparación para [administrar equipos y dispositivos con System Center Configuration Manager](/sccm/core/clients/manage/manage-clients), considere si los dispositivos administrados residen de forma local, en la nube o incluyen dispositivos (BYOD) propiedad del usuario.  Además, considere cómo va a administrar los dispositivos que admiten varias opciones de administración, como los equipos con Windows 10 que se pueden administrar directamente mediante Configuration Manager o mediante la integración con Microsoft Intune.  
@@ -186,9 +188,4 @@ Sin embargo, es posible distribuir contenido entre dos sitios secundarios del mi
 -   [Transferencias de datos entre sitios en System Center Configuration Manager](../../../core/servers/manage/data-transfers-between-sites.md)  
 
 -   [Fundamentals of role-based administration for System Center Configuration Manager (Aspectos básicos de la administración basada en roles de System Center Configuration Manager)](../../../core/understand/fundamentals-of-role-based-administration.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

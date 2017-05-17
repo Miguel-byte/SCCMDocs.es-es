@@ -15,9 +15,11 @@ caps.latest.revision: 8
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 584dad7d8b05a2da9f7a66b73028ae99ff1a594f
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -29,13 +31,13 @@ En este tema se indican los pasos generales de System Center Configuration Manag
 
 Use las secciones siguientes para actualizar un equipo existente con una nueva versión de Windows.  
 
-##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> Plan  
+##  <a name="BKMK_Plan"></a> Plan  
 
 -   **Planear e implementar los requisitos de infraestructura**  
 
      Hay varios requisitos de infraestructura que deben cumplirse antes de implementar sistemas operativos, como Windows ADK, los Servicios de implementación de Windows (WDS), las configuraciones compatibles de disco duro, etc. Para obtener más información, consulte [Infrastructure requirements for operating system deployment](../plan-design/infrastructure-requirements-for-operating-system-deployment.md) (Requisitos de infraestructura para la implementación de sistema operativo).
 
-##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a> Configurar  
+##  <a name="BKMK_Configure"></a> Configurar  
 
 1.  **Preparar una imagen de arranque**  
 
@@ -59,7 +61,7 @@ Use las secciones siguientes para actualizar un equipo existente con una nueva v
 
      Use una secuencia de tareas para automatizar la instalación del sistema operativo a través de la red. Siga los pasos de [Crear una secuencia de tareas para instalar un sistema operativo](create-a-task-sequence-to-install-an-operating-system.md). Según el método de implementación que elija, puede haber consideraciones adicionales para la secuencia de tareas.  
 
-##  <a name="a-namebkmkdeploya-deploy"></a><a name="BKMK_Deploy"></a> Implementar  
+##  <a name="BKMK_Deploy"></a> Implementar  
 
 -   Use uno de los siguientes métodos de implementación para implementar el sistema operativo:  
 
@@ -78,9 +80,4 @@ Use las secciones siguientes para actualizar un equipo existente con una nueva v
 -   **Supervisar la implementación de la secuencia de tareas**  
 
      Para supervisar la implementación de la secuencia de tareas para instalar el sistema operativo, consulte [Monitor operating system deployments (Supervisar implementaciones del sistema operativo)](monitor-operating-system-deployments.md).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

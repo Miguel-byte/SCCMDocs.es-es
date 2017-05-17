@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
 ms.openlocfilehash: 6189726bbcade8229e0b2e929ebedeefdbf266a4
+ms.contentlocale: es-es
+ms.lasthandoff: 12/29/2016
 
 
 ---
@@ -53,9 +55,4 @@ Use el Explorador de recursos en System Center Configuration Manager para ver in
 
 4.  Puede hacer clic con el botón derecho en cualquier elemento del panel derecho de la ventana Explorador de recursos y pulsar **Propiedades** para ver la información de inventario recopilada en un formato más legible.  
  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

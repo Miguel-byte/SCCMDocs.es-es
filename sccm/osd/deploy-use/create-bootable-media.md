@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 9032698fa12bf453041ea06bf330d3b4687c2a97
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -32,7 +34,7 @@ Los medios de arranque de Configuration Manager contienen la imagen de arranque,
 
 -   [Reemplazar un equipo existente y transferir la configuración](replace-an-existing-computer-and-transfer-settings.md)  
 
-##  <a name="a-namebkmkcreatebootablemediaa-create-bootable-media"></a><a name="BKMK_CreateBootableMedia"></a> Crear medios de arranque  
+##  <a name="BKMK_CreateBootableMedia"></a> Crear medios de arranque  
  Si se arranca en el medio de arranque, el equipo de destino se inicia, se conecta a la red y recupera la secuencia de tareas específica, la imagen de sistema operativo y cualquier otro tipo de contenido necesario de la red. Dado que la secuencia de tareas no está en el medio, puede cambiar la secuencia de tareas o el contenido sin tener que volver a crear el medio. Los paquetes en el medio de arranque no se cifran. Debe adoptar las medidas de seguridad adecuadas, como agregar una contraseña a los medios, para asegurarse de que el contenido del paquete está protegido contra usuarios no autorizados.  
 
  Antes de crear medios de arranque con el Asistente para crear medio de secuencia de tareas, asegúrese de que se cumplen las condiciones siguientes:  
@@ -155,9 +157,4 @@ La información de esta sección le ayuda a crear medios de arranque en una unid
 
 ## <a name="next-steps"></a>Pasos siguientes  
 [Usar medios de arranque para implementar Windows a través de la red](use-bootable-media-to-deploy-windows-over-the-network.md)  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

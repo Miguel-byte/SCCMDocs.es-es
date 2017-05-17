@@ -15,9 +15,11 @@ caps.latest.revision: 15
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: c22e29da8036d69db917205f28a19a69281a64db
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1608-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1608 para System Center Configuration Manager
@@ -49,7 +51,7 @@ Se ha agregado un campo a las propiedades del software inventariado que permite 
 
 ### <a name="filter-the-software-display"></a>Filtrar la visualización de software
 Después de haber definido las relaciones de elementos primarios y secundarios, puede filtrar la vista para mostrar solo el software primario o que no tiene ninguna relación definida. Con esto se oculta todo el software establecido como secundario de otro software inventariado. Para ello:
-   1.   En la barra de búsqueda, elija **Agregar criterios**
+   1.    En la barra de búsqueda, elija **Agregar criterios**
    2. Seleccione **Software primario** y luego cambie el valor del criterio a **está vacío**; después, haga clic en **Buscar**.
 
 Ahora la vista solo muestra los elementos de software primarios o el software que no tiene ninguna relación definida. No se muestra el software que es solo un secundario de otro título.
@@ -62,9 +64,4 @@ El lector puede desactivar este comportamiento si prefiere escribir conforme a l
 > [!NOTE]
 >
 > Las teclas especiales, como ~!#@$%,, no se traducirán correctamente.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

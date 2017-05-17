@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: a543b945c4727540faa064c068b175ef63cb5a4b
+ms.contentlocale: es-es
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -55,9 +57,4 @@ Use el inventario de hardware en System Center Configuration Manager para recopi
 - Use archivos IDMIF para recopilar información acerca de los activos que no están asociados con un cliente de Configuration Manager, por ejemplo, proyectores, fotocopiadoras e impresoras de red.  
 
  Para obtener más información sobre cómo usar estos métodos para ampliar el inventario de hardware de Configuration Manager, consulte [How to configure hardware inventory in System Center Configuration Manager (Cómo configurar el inventario de hardware en System Center Configuration Manager)](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -15,9 +15,11 @@ caps.latest.revision: 7
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
 ms.openlocfilehash: 6265ee70b70a715862b1651d2f3760bef096ee8a
+ms.contentlocale: es-es
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -49,10 +51,5 @@ Use el Explorador de recursos en System Center Configuration Manager para ver in
 3.  Seleccione el equipo que contiene el inventario que quiere ver y, después, en la pestaña **Inicio** > grupo **Dispositivos**, pulse **Iniciar** >  **Explorador de recursos**.   
 
 4.  Haga clic con el botón derecho en cualquier elemento del panel derecho de la ventana **Explorador de recursos** y pulse **Propiedades** para abrir el cuadro de diálogo **Propiedades** de *<nombre del elemento\>* para ver la información de inventario recopilada en un formato más legible.  
-
-
-
-
-<!--HONumber=Jan17_HO1-->
 
 

@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9555a16d97224a1cf49a426ab225468b07403f60
 ms.openlocfilehash: e28fdeae809cadf78017dd2920e3f1a9484ec8a3
+ms.contentlocale: es-es
+ms.lasthandoff: 12/29/2016
 
 
 ---
@@ -44,7 +46,7 @@ Las recopilaciones son grupos de usuarios o dispositivos. Use las recopilaciones
 
  Para obtener información sobre la creación de recopilaciones para equipos que ejecutan Linux y UNIX, consulte [How to manage clients for Linux and UNIX servers in System Center Configuration Manager](../../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md) (Cómo administrar clientes para servidores Linux y UNIX en System Center Configuration Manager).  
 
-##  <a name="a-namebkmk1a-to-create-a-device-collection"></a><a name="BKMK_1"></a> Cómo crear una recopilación de dispositivos  
+##  <a name="BKMK_1"></a> Cómo crear una recopilación de dispositivos  
 
 1.  En la consola de Configuration Manager, seleccione **Activos y compatibilidad** > **Recopilaciones de dispositivos**.  
 
@@ -120,7 +122,7 @@ Las recopilaciones son grupos de usuarios o dispositivos. Use las recopilaciones
 > [!NOTE]  
 >  Debe actualizar o volver a cargar la consola de Configuration Manager para ver los miembros de la recopilación. Pero los miembros no aparecerán en la recopilación hasta después de la primera actualización programada o si selecciona manualmente **Actualizar pertenencia** para la recopilación. La actualización de colección puede tardar unos minutos en completarse.  
 
-##  <a name="a-namebkmk2a-to-create-a-user-collection"></a><a name="BKMK_2"></a> Cómo crear una recopilación de usuarios  
+##  <a name="BKMK_2"></a> Cómo crear una recopilación de usuarios  
 
 1.  En la consola de Configuration Manager, seleccione **Activos y compatibilidad** > **Usuarios de usuarios**.  
 
@@ -192,7 +194,7 @@ Las recopilaciones son grupos de usuarios o dispositivos. Use las recopilaciones
 > [!NOTE]  
 >  Debe actualizar o volver a cargar la consola de Configuration Manager para ver los miembros de la recopilación. Sin embargo, los miembros no aparecerán en la recopilación hasta después de la primera actualización programada o hasta que seleccione manualmente **Actualizar pertenencia** de la recopilación. La actualización de colección puede tardar unos minutos en completarse.  
 
-##  <a name="a-namebkmk3a-to-import-a-collection"></a><a name="BKMK_3"></a> Cómo importar una conexión  
+##  <a name="BKMK_3"></a> Cómo importar una conexión  
 
 1.  En la consola de Configuration Manager, seleccione **Activos y compatibilidad** > **Recopilaciones de usuarios** o **Recopilaciones de dispositivos**.  
 
@@ -206,9 +208,4 @@ Las recopilaciones son grupos de usuarios o dispositivos. Use las recopilaciones
     >  El archivo que quiera importar se debe haber exportado de un sitio que ejecute la misma versión de Configuration Manager que este. Para obtener más información sobre cómo exportar recopilaciones, consulte [How to manage collections in System Center Configuration Manager](../../../../core/clients/manage/collections/manage-collections.md) (Cómo administrar recopilaciones en System Center Configuration Manager).  
 
 6.  Complete el asistente para importar la recopilación. La nueva recopilación se muestra en el nodo **Recopilaciones de usuarios** o **Recopilaciones de dispositivos** del área de trabajo **Activos y compatibilidad** . Actualice o vuelva a cargar la consola de Configuration Manager para ver los miembros de la recopilación recién importada.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

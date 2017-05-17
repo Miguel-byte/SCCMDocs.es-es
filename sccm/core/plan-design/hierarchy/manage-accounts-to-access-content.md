@@ -15,9 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: e592a732259147ee71d404a68982c28e5138e243
 ms.openlocfilehash: 0e982d08d54af39b13f553fc531a200f921e94a6
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="manage-accounts-to-access-content-in-system-center-configuration-manager"></a>Administración de cuentas para acceder al contenido en System Center Configuration Manager
@@ -34,7 +36,7 @@ Antes de implementar el contenido en System Center Configuration Manager, piense
 
 -   **Cuenta de conexión de multidifusión**. Se usa para implementaciones de sistemas operativos.  
 
-##  <a name="a-namebkmknaaa-network-access-account"></a><a name="bkmk_NAA"></a> Cuenta de acceso a la red  
+##  <a name="bkmk_NAA"></a> Cuenta de acceso a la red  
  Los equipos cliente usan la cuenta de acceso a la red cuando no pueden usar su cuenta de equipo local para acceder a contenido en los puntos de distribución. Por ejemplo, esto se aplica a los equipos y clientes del grupo de trabajo de dominios que no son de confianza. Esta cuenta también se puede utilizar durante la implementación de un sistema operativo cuando el equipo que instala el sistema operativo no tiene aún una cuenta de equipo en el dominio.  
 
 -   Los clientes solo usan la cuenta de acceso de red para tener acceso a recursos de la red.  
@@ -66,7 +68,7 @@ Conceda a esta cuenta los permisos adecuados mínimos para acceder al software e
 
 3.  Elija la pestaña **Cuenta de acceso a la red**. Configure una o varias cuentas y, después, elija **Aceptar**.  
 
-##  <a name="a-namebkmkpaaa-package-access-accounts"></a><a name="bkmk_Paa"></a> Cuentas de acceso de paquete  
+##  <a name="bkmk_Paa"></a> Cuentas de acceso de paquete  
  Las cuentas de acceso de paquete le permiten establecer permisos del sistema de archivos NTFS para especificar los usuarios y los grupos de usuarios que pueden acceder al contenido del paquete en puntos de distribución. De forma predeterminada, Configuration Manager solo concede acceso a las cuentas genéricas **Usuarios** y **Administradores**. No obstante, puede controlar el acceso de los equipos cliente mediante el uso de grupos o cuentas de Windows adicionales. Los dispositivos móviles no utilizan las cuentas de acceso de paquete porque siempre recuperan el contenido del paquete de forma anónima.  
 
  De forma predeterminada, cuando Configuration Manager copia los archivos de contenido de un paquete en un punto de distribución, este concede acceso de **Lectura** al grupo local **Usuarios** y **Control total** al grupo de **Administradores** local. Los permisos reales que se requieren dependen del paquete. Si tiene clientes en grupos de trabajo o en bosques que no son de confianza, estos clientes utilizan la cuenta de acceso de red para acceder al contenido del paquete. Asegúrese de que la cuenta de acceso de red tiene permisos para acceder al paquete mediante el uso de las cuentas de acceso de paquete definidas.  
@@ -102,7 +104,7 @@ Conceda a esta cuenta los permisos adecuados mínimos para acceder al software e
     > [!NOTE]  
     >  Cuando se agrega un nombre de usuario para la cuenta y Configuration Manager encuentra tanto una cuenta de usuario local como una cuenta de usuario de dominio con ese nombre, este establece derechos de acceso para la cuenta de usuario de dominio.  
 
-##  <a name="a-namebkmkmultia-multicast-connection-account"></a><a name="bkmk_multi"></a> Cuenta de conexión de multidifusión  
+##  <a name="bkmk_multi"></a> Cuenta de conexión de multidifusión  
  Los puntos de distribución que están configurados para la multidifusión utilizan la cuenta de conexión de multidifusión para leer información de la base de datos del sitio.  
 
 -   Especifique la cuenta que se debe usar al configurar conexiones de base de datos de Configuration Manager para la multidifusión.  
@@ -119,9 +121,4 @@ Si crea esta cuenta, créela como una cuenta local con derechos reducidos en el 
 
 > [!IMPORTANT]  
 >  No conceda a esta cuenta derechos interactivos de inicio de sesión.  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

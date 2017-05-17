@@ -13,14 +13,16 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 78524abd4c45f0b7402d6f1e85afc60bb72ab0ee
 ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
 
-#  <a name="a-namebkmkmanualdeploya-manually-deploy-software-updates"></a><a name="BKMK_ManualDeploy"></a> Implementar actualizaciones de software manualmente  
+#  <a name="BKMK_ManualDeploy"></a> Implementar actualizaciones de software manualmente  
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
@@ -28,7 +30,7 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
  Las secciones siguientes proporcionan los pasos para implementar manualmente las actualizaciones de software.  
 
-##  <a name="a-namebkmk1searchcriteriaa-step-1-specify-search-criteria-for-software-updates"></a><a name="BKMK_1SearchCriteria"></a> Paso 1: especificar criterios de búsqueda para las actualizaciones de software  
+##  <a name="BKMK_1SearchCriteria"></a> Paso 1: especificar criterios de búsqueda para las actualizaciones de software  
  La consola de Configuration Manager puede incluir miles de actualizaciones de software. El primer paso del flujo de trabajo para implementar manualmente las actualizaciones de software es identificar aquéllas que desea implementar. Por ejemplo, podría especificar criterios para la recuperación de todas las actualizaciones de software que se requieran en más de 50 dispositivos cliente, y que tengan una clasificación de actualización de software de **Seguridad** o **Crítica** .  
 
 > [!IMPORTANT]  
@@ -54,7 +56,7 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
     > [!TIP]  
     >  Puede guardar los criterios del filtro en la pestaña **Buscar** , en el grupo **Guardar** .  
 
-##  <a name="a-namebkmk2updategroupa-step-2-create-a-software-update-group-that-contains-the-software-updates"></a><a name="BKMK_2UpdateGroup"></a> Paso 2: crear un grupo de actualizaciones de software que contenga las actualizaciones de software  
+##  <a name="BKMK_2UpdateGroup"></a> Paso 2: crear un grupo de actualizaciones de software que contenga las actualizaciones de software  
  Los grupos de actualizaciones de software suponen un método eficaz para organizar las actualizaciones de software necesarias para la posterior implementación. Puede agregar manualmente actualizaciones de software a un grupo de actualizaciones de software, o bien Configuration Manager puede agregarlas automáticamente a un grupo de actualizaciones de software nuevo o existente, mediante una regla de implementación automática (ADR). Utilice los siguientes procedimientos para agregar manualmente actualizaciones de software a un grupo de actualizaciones de software nuevo.  
 
 #### <a name="to-manually-add-software-updates-to-a-new-software-update-group"></a>Para agregar manualmente las actualizaciones de software a un grupo de actualizaciones de software nuevo  
@@ -73,7 +75,7 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
 7.  Seleccione el grupo de actualizaciones de software y, en la pestaña **Inicio** , en el grupo **Actualizar** , haga clic en **Mostrar miembros** para mostrar una lista de las actualizaciones de software incluidas en el grupo.  
 
-##  <a name="a-namebkmk3downloadcontenta-step-3-download-the-content-for-the-software-update-group"></a><a name="BKMK_3DownloadContent"></a> Paso 3: descargar el contenido para el grupo de actualizaciones de software  
+##  <a name="BKMK_3DownloadContent"></a> Paso 3: descargar el contenido para el grupo de actualizaciones de software  
  Si lo desea, antes de implementar las actualizaciones de software, puede descargar el contenido para las actualizaciones incluidas en el grupo de actualizaciones de software. Esta opción es conveniente para poder comprobar la disponibilidad del contenido en los puntos de distribución antes de implementar las actualizaciones de software. Se evitarán así problemas inesperados con la entrega de contenido. Este paso se puede omitir para que el contenido se descargue y copie en los puntos de distribución como parte del proceso de implementación. Utilice el siguiente procedimiento para descargar el contenido para las actualizaciones de software del grupo de actualizaciones de software.  
 
 
@@ -160,7 +162,7 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
 4. En la pestaña **Inicio** , en el grupo **Contenido** , haga clic en **Ver estado**.  
 
-##  <a name="a-namebkmk4deployupdategroupa-step-4-deploy-the-software-update-group"></a><a name="BKMK_4DeployUpdateGroup"></a> Paso 4: implementar el grupo de actualizaciones de software  
+##  <a name="BKMK_4DeployUpdateGroup"></a> Paso 4: implementar el grupo de actualizaciones de software  
  Tras determinar las actualizaciones de software que quiere implementar y agregar estas actualizaciones a un grupo de actualizaciones de software, puede implementar manualmente las actualizaciones de software en el grupo de actualizaciones de software. Utilice el siguiente procedimiento para implementar manualmente las actualizaciones de software en un grupo de actualizaciones de software.  
 
 #### <a name="to-manually-deploy-the-software-updates-in-a-software-update-group"></a>Para implementar manualmente las actualizaciones de software en un grupo de actualizaciones de software  
@@ -315,9 +317,4 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Supervisar actualizaciones de software](monitor-software-updates.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

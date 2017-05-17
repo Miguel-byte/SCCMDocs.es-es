@@ -15,9 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fff93794afdfa9f890b1f06d6c330d8cffc5796c
 ms.openlocfilehash: b4db5d86cc0ed020ed176feb2e8f1f9dc51a2280
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="configuration-options-for-site-system-roles-for-system-center-configuration-manager"></a>Opciones de configuración de roles de sistema de sitio para System Center Configuration Manager
@@ -26,7 +28,7 @@ ms.openlocfilehash: b4db5d86cc0ed020ed176feb2e8f1f9dc51a2280
 
 La mayoría de las opciones de configuración de los roles de sistema de sitio de System Center Configuration Manager son explicativas o se explican en los cuadros de diálogo o el asistente durante la configuración. En las secciones siguientes se explican los roles de sistema de sitio en los que se necesita información adicional para su configuración.  
 
-##  <a name="a-namebkmkapplicationcatalogwebsitea-application-catalog-website-point"></a><a name="BKMK_ApplicationCatalog_Website"></a> Punto de sitios web del catálogo de aplicaciones  
+##  <a name="BKMK_ApplicationCatalog_Website"></a> Punto de sitios web del catálogo de aplicaciones  
  Para más información sobre cómo configurar el punto de sitios web del catálogo de aplicaciones, vea [Planear y configurar la administración de aplicaciones en Configuration Manager](../../../../apps/plan-design/plan-for-and-configure-application-management.md).  
 
  **Conexiones de cliente**  
@@ -45,7 +47,7 @@ La mayoría de las opciones de configuración de los roles de sistema de sitio d
 
  Escriba el nombre que los usuarios ven en el catálogo de aplicaciones. Esta información de personalización de marca ayuda a los usuarios a identificar este sitio web como una fuente de confianza.  
 
-##  <a name="a-namebkmkapplicationcatalogwebservicea-application-catalog-web-service-point"></a><a name="BKMK_ApplicationCatalog_WebService"></a> Punto de servicio web del catálogo de aplicaciones  
+##  <a name="BKMK_ApplicationCatalog_WebService"></a> Punto de servicio web del catálogo de aplicaciones  
  Para más información sobre cómo configurar el punto de servicio web del catálogo de aplicaciones, vea [Planear y configurar la administración de aplicaciones en Configuration Manager](../../../../apps/plan-design/plan-for-and-configure-application-management.md).  
 
  **HTTPS**  
@@ -54,10 +56,10 @@ La mayoría de las opciones de configuración de los roles de sistema de sitio d
 
  Para ver un ejemplo de implementación del certificado de servidor y obtener información sobre cómo configurarlo en IIS, vea la sección *Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS* del tema [Ejemplo paso a paso de implementación de los certificados PKI para Configuration Manager: Entidad de certificación de Windows Server 2008](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
-##  <a name="a-namebkmkcertificateregistrationpointa-certificate-registration-point"></a><a name="BKMK_CertificateRegistrationPoint"></a> Punto de registro de certificados  
+##  <a name="BKMK_CertificateRegistrationPoint"></a> Punto de registro de certificados  
  Para más información sobre cómo configurar el punto de registro de certificado, vea [Introducción a perfiles de certificado](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
 
-##  <a name="a-namebkmkdistributionpointa-distribution-point"></a><a name="BKMK_Distribution_Point"></a> Punto de distribución  
+##  <a name="BKMK_Distribution_Point"></a> Punto de distribución  
  Para más información sobre cómo configurar el punto de distribución para la distribución de contenido, vea [Administración del contenido y de la infraestructura de contenido para System Center Configuration Manager](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
  Para más información sobre cómo configurar el punto de distribución para las implementaciones de entornos PXE, vea [Usar PXE para implementar Windows a través de la red con System Center Configuration Manager](../../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
@@ -97,7 +99,7 @@ Active esta casilla para habilitar el punto de distribución para contenido prec
  - **Antes de la versión 1610**, puede activar la casilla **Permitir ubicación de origen de reserva para contenido** para permitir a los clientes que están fuera de estos grupos de límites revertir y usar el punto de distribución como ubicación de origen para el contenido cuando no estén disponibles otros puntos de distribución.
  - **A partir de la versión 1610**, ya no se puede configurar **Permitir ubicación de origen de reserva para contenido**.  En su lugar, configure relaciones entre grupos de límites que determinen cuándo puede un cliente empezar a buscar grupos de límites adicionales para ubicaciones de origen de contenido válidas.
 
-##  <a name="a-namebkmkenrollmentpointa-enrollment-point"></a><a name="BKMK_Enrollment_Point"></a> Punto de inscripción  
+##  <a name="BKMK_Enrollment_Point"></a> Punto de inscripción  
 Los puntos de inscripción se usan para instalar equipos Mac y para inscribir dispositivos administrados con la administración de dispositivos móviles local. Para obtener más información, consulte:  
 
 -   [Cómo instalar clientes en equipos Mac en Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-macs.md)  
@@ -109,7 +111,7 @@ Los puntos de inscripción se usan para instalar equipos Mac y para inscribir di
 
  Para ver un ejemplo de implementación del certificado de servidor y obtener información sobre cómo configurarlo en IIS, vea la sección *Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS* del tema [Ejemplo paso a paso de implementación de los certificados PKI para Configuration Manager: Entidad de certificación de Windows Server 2008](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
-##  <a name="a-namebkmkenrollmentproxypointa-enrollment-proxy-point"></a><a name="BKMK_Enrollment_Proxy_Point"></a> Punto de proxy de inscripción  
+##  <a name="BKMK_Enrollment_Proxy_Point"></a> Punto de proxy de inscripción  
 Para más información sobre cómo configurar un punto de proxy de inscripción para dispositivos móviles, vea [Cómo inscriben dispositivos los usuarios mediante la administración de dispositivos móviles (MDM) local en System Center Configuration Manager](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md).  
 
 **Conexiones de cliente**  
@@ -117,7 +119,7 @@ Para más información sobre cómo configurar un punto de proxy de inscripción 
 
  Para ver un ejemplo de implementación del certificado de servidor y obtener información sobre cómo configurarlo en IIS, vea la sección *Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS* del tema [Ejemplo paso a paso de implementación de los certificados PKI para Configuration Manager: Entidad de certificación de Windows Server 2008](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
-##  <a name="a-namebkmkfallbackstatuspointa-fallback-status-point"></a><a name="BKMK_Fallback_Status_Point"></a> Punto de estado de reserva  
+##  <a name="BKMK_Fallback_Status_Point"></a> Punto de estado de reserva  
 **Número de mensajes de estado** e **Intervalo de limitación (en segundos)**  
 Aunque la configuración predeterminada para estas opciones (10.000 mensajes de estado y 3.600 segundos para el intervalo de limitación) son suficientes para la mayoría de las circunstancias, es posible que tenga que cambiarla cuando se cumplen las condiciones siguientes:  
 
@@ -152,9 +154,4 @@ Restablezca los valores de limitación para el punto de estado de reserva si se 
 -   Detecta que la configuración de limitación actual crea un uso intensivo de la CPU en el servidor del sitio.  
 
 No cambie la configuración de limitación de punto de estado de reserva a menos que entienda las consecuencias. Por ejemplo, si aumenta demasiado la configuración de limitación, el uso de CPU en el servidor de sitio puede aumentar también en exceso, lo cual ralentiza todas las operaciones del sitio.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

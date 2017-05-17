@@ -15,9 +15,11 @@ caps.latest.revision: 9
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9b366262ae59a8cb57c0f1760b961194d17bcf52
 ms.openlocfilehash: db5039ff6cb93e3099b096196d49a1f06c315a6b
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -111,9 +113,4 @@ Cuando un punto de distribución de extracción descarga contenido desde un punt
 
 ## <a name="see-also"></a>Consulte también  
  [Fundamental concepts for content management in System Center Configuration Manager (Aspectos básicos de la administración de contenido en System Center Configuration Manager)](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)   
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

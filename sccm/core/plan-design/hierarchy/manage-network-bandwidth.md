@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 37e4f27fcea0bbdd39c9fd3ab38aa46e3059f73a
 ms.openlocfilehash: d9dff97126c34a726677de60dd7647370c553b6e
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -26,7 +28,7 @@ ms.openlocfilehash: d9dff97126c34a726677de60dd7647370c553b6e
 # <a name="manage-network-bandwidth-for-content"></a>Administración del ancho de banda de red para contenido
 Para ayudarle a administrar el ancho de banda de red que se usa para el proceso de administración de contenido de System Center Configuration Manager, puede usar los controles integrados para la programación y el límite. También puede usar contenido preconfigurado. En las secciones siguientes se describen estas opciones con más detalle.
 
-##  <a name="a-namebkmkplanningforthrottlingascheduling-and-throttling"></a><a name="BKMK_PlanningForThrottling"></a> Programación y el límite  
+##  <a name="BKMK_PlanningForThrottling"></a> Programación y el límite  
 
  Al crear un paquete, cambie la ruta de acceso de origen para el contenido, o actualice el contenido del punto de distribución; los archivos se copian desde la ruta de acceso de origen a la biblioteca de contenido del servidor del sitio. A continuación, el contenido se copia desde la biblioteca de contenido del servidor del sitio a la biblioteca de contenido de los puntos de distribución. Una vez actualizados los archivos de origen de contenido, y distribuidos los archivos de origen, Configuration Manager solo recupera los archivos nuevos o actualizados y, a continuación, los envía al punto de distribución.
 
@@ -41,7 +43,7 @@ Para ayudarle a administrar el ancho de banda de red que se usa para el proceso 
 
 Para obtener más información, consulte [Instalación y configuración de puntos de distribución de System Center Configuration Manager](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points).  
 
-##  <a name="a-namebkmkprestagingcontentaprestaged-content"></a><a name="BKMK_PrestagingContent"></a> Contenido preconfigurado  
+##  <a name="BKMK_PrestagingContent"></a> Contenido preconfigurado  
  Puede preconfigurar contenido para agregar archivos de contenido a la biblioteca de contenido de un servidor de sitio o un punto de distribución antes de distribuir el contenido. Como los archivos de contenido ya están en la biblioteca de contenido, no se transfieren por la red al distribuir el contenido. Puede preconfigurar los archivos de contenido para aplicaciones y paquetes.  
 
 En la consola de Configuration Manager, seleccione el contenido que quiera preconfigurar y, después, use el **Asistente para crear archivos de contenido preconfigurados**. El asistente creará un archivo de contenido preconfigurado comprimido que contiene los archivos y los metadatos asociados al contenido. A continuación, puede importar manualmente el contenido a un servidor de sitio o un punto de distribución. Tenga en cuenta los puntos siguientes:  
@@ -58,7 +60,7 @@ Opcionalmente puede configurar el punto de distribución como **preconfigurado**
 
 -   Usar siempre el proceso de distribución de contenido estándar para el contenido del paquete.  
 
-###  <a name="a-namebkmkdeterminetoprestagecontentadetermine-whether-to-prestage-content"></a><a name="BKMK_DetermineToPrestageContent"></a> Determinación de si se debe preconfigurar el contenido  
+###  <a name="BKMK_DetermineToPrestageContent"></a> Determinación de si se debe preconfigurar el contenido  
  Considere la preconfiguración de contenido para aplicaciones y paquetes en los escenarios siguientes:  
 
 -   **Para solucionar el problema del ancho de banda de red limitado desde el servidor de sitio a un punto de distribución.** Si la programación y el límite no son suficientes para solucionar sus problemas relacionados con el ancho de banda, puede preconfigurar el contenido en el punto de distribución. Los puntos de distribución tienen la opción **Habilitar este punto de distribución para contenido preconfigurado**, que puede seleccionar en las propiedades del punto de distribución. Cuando se habilita esta opción, el punto de distribución se identifica como un punto de distribución preconfigurado, y puede elegir cómo administrar el contenido en una instalación por paquete.  
@@ -75,9 +77,4 @@ Opcionalmente puede configurar el punto de distribución como **preconfigurado**
     >  Las opciones anteriores se pueden aplicar por paquete y solo se usan cuando un punto de distribución esté identificado como preconfigurado. Los puntos de distribución que no se han identificado como preconfigurados omiten esta configuración. En ese caso, el contenido siempre se distribuye a través de la red desde el servidor de sitio a los puntos de distribución.  
 
 -   **Para restaurar la biblioteca de contenido en un servidor de sitio.** cuando se produce un error en el servidor de sitio, la información sobre paquetes y aplicaciones en la biblioteca de contenido se restaura en la base de datos del sitio como parte del proceso de restauración, pero los archivos de la biblioteca de contenido no se restauran como parte del proceso. Si no tiene una copia de seguridad del sistema de archivos para restaurar la biblioteca de contenido, puede crear un archivo de contenido preconfigurado de otro sitio que contenga los paquetes y aplicaciones que necesita. Después, puede extraer el archivo de contenido preconfigurado en el servidor de sitio recuperado. Para obtener más información sobre la copia de seguridad y recuperación de un servidor de sitio, consulte [Copia de seguridad y recuperación de System Center Configuration Manager](/sccm/protect/understand/backup-and-recovery).  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
+ms.contentlocale: es-es
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,10 +30,10 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 Este tema contiene información para ayudarle a administrar las tareas típicas de Asset Intelligence en la jerarquía de System Center Configuration Manager:  
 
-##  <a name="a-namebkmkviewinformationa-view-asset-intelligence-information"></a><a name="BKMK_ViewInformation"></a> Ver información de Asset Intelligence  
+##  <a name="BKMK_ViewInformation"></a> Ver información de Asset Intelligence  
  Puede ver información de Asset Intelligence en la página principal de **Asset Intelligence** y en los informes de Asset Intelligence.  
 
-###  <a name="a-namebkmkassetintelligencehomepagea-asset-intelligence-home-page"></a><a name="BKMK_AssetIntelligenceHomePage"></a> Página principal de Asset Intelligence  
+###  <a name="BKMK_AssetIntelligenceHomePage"></a> Página principal de Asset Intelligence  
  En la página principal de **Asset Intelligence** se muestra un panel de resumen para obtener información sobre el catálogo Asset Intelligence. En la página principal, puede ver información sobre la sincronización del catálogo y el estado de software inventariado. La página principal de **Asset Intelligence** se divide en las siguientes secciones:  
 
 -   **Sincronización del catálogo**: ofrece información sobre si Asset Intelligence está habilitada, el estado actual del punto de sincronización de Asset Intelligence, la programación de sincronización, si se importó el informe de licencia del cliente, cuándo se actualizó por última vez el estado y la hora de la siguiente actualización programada, y el número de cambios que se produjeron después de que se instalara el sistema de sitio del punto de sincronización de Asset Intelligence.  
@@ -49,7 +51,7 @@ Este tema contiene información para ayudarle a administrar las tareas típicas 
 
 2.  En el área de trabajo **Activos y compatibilidad** , haga clic en **Asset Intelligence**. Se muestran los informes de Asset Intelligence.  
 
-###  <a name="a-namebkmkassetintelligencereportsa-asset-intelligence-reports"></a><a name="BKMK_AssetIntelligenceReports"></a> Informes de Asset Intelligence  
+###  <a name="BKMK_AssetIntelligenceReports"></a> Informes de Asset Intelligence  
  Hay más de 60 informes de Asset Intelligence que muestran la información que ha recopilado Asset Intelligence. Muchos de estos informes vinculan a otros más específicos en los que puede consultar información general y profundizar para obtener información más detallada. Los informes de Asset Intelligence se encuentran en la consola de Configuration Manager, en el área de trabajo **Supervisión**, en el nodo **Informes**. Los informes ofrecen información sobre el hardware, la administración de licencias y el software. Para obtener más información sobre informes en Configuration Manager, vea [Generación de informes en System Center Configuration Manager](../../../../core/servers/manage/reporting.md).  
 
 > [!NOTE]  
@@ -68,7 +70,7 @@ Este tema contiene información para ayudarle a administrar las tareas típicas 
 
 3.  Seleccione el informe de Asset Intelligence que quiera ejecutar y, en la pestaña **Inicio** , en el grupo **Grupo de informes** , haga clic en **Ejecutar**.  
 
-##  <a name="a-namebkmksynchronizethecataloga-synchronize-the-asset-intelligence-catalog"></a><a name="BKMK_SynchronizeTheCatalog"></a> Sincronizar el catálogo Asset Intelligence  
+##  <a name="BKMK_SynchronizeTheCatalog"></a> Sincronizar el catálogo Asset Intelligence  
  Puede sincronizar el catálogo Asset Intelligence local con System Center Online para recuperar la categorización de títulos de software más reciente. Cuando solicita manualmente la sincronización del catálogo con System Center Online, el proceso de sincronización podría tardar 15 minutos o más. Configuration Manager actualiza el valor **Última actualización correcta** en la página principal de **Asset Intelligence** con la hora actual para cuando la sincronización finalice correctamente.  
 
 > [!NOTE]  
@@ -96,7 +98,7 @@ Este tema contiene información para ayudarle a administrar las tareas típicas 
 > [!WARNING]  
 >  System Center Online solo acepta una solicitud de sincronización manual en un período de 12 horas.  
 
-###  <a name="a-namebkmkmanuallysynchronizecataloga-to-manually-synchronize-the-asset-intelligence-catalog"></a><a name="BKMK_ManuallySynchronizeCatalog"></a> Cómo sincronizar manualmente el catálogo Asset Intelligence  
+###  <a name="BKMK_ManuallySynchronizeCatalog"></a> Cómo sincronizar manualmente el catálogo Asset Intelligence  
 
 1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
 
@@ -104,10 +106,10 @@ Este tema contiene información para ayudarle a administrar las tareas típicas 
 
 3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Sincronizar**, luego en **Sincronizar catálogo Asset Intelligence**y después en **Aceptar**.  
 
-##  <a name="a-namebkmkcustomizecataloga-customize-the-asset-intelligence-catalog"></a><a name="BKMK_CustomizeCatalog"></a> Personalizar el catálogo Asset Intelligence  
+##  <a name="BKMK_CustomizeCatalog"></a> Personalizar el catálogo Asset Intelligence  
  La información de categorización del catálogo Asset Intelligence recibida de System Center Online se almacena en la base de datos del sitio con permisos de solo lectura y no se puede modificar ni eliminar. Sin embargo, puede crear, modificar y eliminar categorías de software personalizado, familias de software, etiquetas de software e información de catálogo de los requisitos de hardware. Después puede usar datos de categorización personalizada en lugar de la información que facilita System Center Online para la información de títulos de software existente o definida por el usuario. Al cambiar o agregar información de categorización, la información del catálogo se considera definida por el usuario. La información de categorización definida por el usuario se almacena en tablas de base de datos distintas a las de la información del catálogo validada.  
 
-###  <a name="a-namebkmksoftwarecategoriesa-software-categories"></a><a name="BKMK_SoftwareCategories"></a> Categorías de software  
+###  <a name="BKMK_SoftwareCategories"></a> Categorías de software  
  Las categorías de software de Asset Intelligence se usan para categorizar en líneas generales los títulos de software inventariado y también como agrupaciones de alto nivel de familias de software más específicas. Por ejemplo, una categoría de software podría ser empresas de energía, y una familia de software dentro de esa categoría de software podría ser petróleo y gas o hidroeléctrica. Existen muchas categorías de software predefinidas en el catálogo Asset Intelligence y se pueden crear categorías adicionales definidas por el usuario para concretar aún más el software inventariado. El estado de validación de todas las categorías de software predefinido es siempre **Validado**, mientras que el de la información de categorías de software personalizado que se hayan agregado al catálogo Asset Intelligence es **Definido por el usuario**.  
 
  Use el procedimiento siguiente para crear una categoría de software definida por el usuario.  
@@ -131,7 +133,7 @@ Este tema contiene información para ayudarle a administrar las tareas típicas 
 
 6.  En la página **Finalización** , haga clic en **Cerrar** para salir del asistente.  
 
-###  <a name="a-namebkmksoftwarefamiliesa-software-families"></a><a name="BKMK_SoftwareFamilies"></a> Familias de software  
+###  <a name="BKMK_SoftwareFamilies"></a> Familias de software  
  Las familias de software de Asset Intelligence se usan para definir aún más los títulos de software inventariado dentro de las categorías de software. Por ejemplo, una categoría de software podría ser empresas de energía, y una familia de software dentro de esa categoría de software podría ser petróleo y gas o hidroeléctrica. Existen muchas familias de software predefinidas en el catálogo Asset Intelligence y se pueden crear familias adicionales definidas por el usuario para concretar el software inventariado. El estado de validación de todas las familias de software predefinido es siempre **Validado**, mientras que el de la información de familias de software personalizado que se hayan agregado al catálogo Asset Intelligence es **Definido por el usuario**.  
 
  Use el procedimiento siguiente para crear una familia de software definida por el usuario.  
@@ -153,7 +155,7 @@ Este tema contiene información para ayudarle a administrar las tareas típicas 
 
 6.  En la página **Finalización** , haga clic en **Cerrar** para salir del asistente.  
 
-###  <a name="a-namebkmksoftwarelabelsa-software-labels"></a><a name="BKMK_SoftwareLabels"></a> Etiquetas de software  
+###  <a name="BKMK_SoftwareLabels"></a> Etiquetas de software  
  Las etiquetas de software personalizado de Asset Intelligence le permiten crear filtros que puede utilizar para agrupar los títulos de software y verlos mediante informes de Asset Intelligence. Por ejemplo, puede crear una etiqueta de software denominada shareware, asociarla a un número de aplicaciones y, después, ejecutar un informe que muestre todos los títulos con la etiqueta de software shareware. El estado de validación de todas las etiquetas de software personalizado que agregue al catálogo Asset Intelligence es **Definido por el usuario** .  
 
  Use el procedimiento siguiente para crear una etiqueta personalizada definida por el usuario.  
@@ -175,7 +177,7 @@ Este tema contiene información para ayudarle a administrar las tareas típicas 
 
 6.  En la página **Finalización** , haga clic en **Cerrar** para salir del asistente.  
 
-###  <a name="a-namebkmkhardwarerequirementsa-hardware-requirements"></a><a name="BKMK_HardwareRequirements"></a> Requisitos de hardware  
+###  <a name="BKMK_HardwareRequirements"></a> Requisitos de hardware  
  La información de requisitos de hardware puede ayudarle a comprobar que los equipos cumplan los requisitos de hardware de los títulos de software antes de que se destinen a implementaciones de software. Muchos de los requisitos de hardware están predefinidos en el catálogo Asset Intelligence, y puede crear nueva información de requisitos de hardware definida por el usuario para cumplir requisitos personalizados. El estado de validación de todos los requisitos de hardware predefinidos siempre es **Validado**, mientras que el de la información de los requisitos de hardware que se hayan agregado al catálogo Asset Intelligence es **Definido por el usuario**.  
 
 > [!IMPORTANT]  
@@ -211,7 +213,7 @@ Este tema contiene información para ayudarle a administrar las tareas típicas 
 
 6.  En la página **Finalización** , haga clic en **Cerrar** para salir del asistente.  
 
-###  <a name="a-namebkmkmodifycategorizationa-modify-categorization-information-for-inventoried-software"></a><a name="BKMK_ModifyCategorization"></a> Modificar la información de categorización del software inventariado  
+###  <a name="BKMK_ModifyCategorization"></a> Modificar la información de categorización del software inventariado  
  El software predefinido en el catálogo Asset Intelligence se configura con información de categorización determinada, como el nombre de producto, el proveedor, la categoría de software y la familia de software. Cuando la información de categorización predefinida no cumple sus requisitos, puede modificar la información en las propiedades del título de software. Cuando se modifica la información de categorización de software predefinido, el estado de validación del software cambia de **Validado** a **Definido por el usuario**.  
 
 > [!IMPORTANT]  
@@ -265,7 +267,7 @@ Este tema contiene información para ayudarle a administrar las tareas típicas 
 
 6.  Cuando se revierte la información de categorización de software que se encuentre en el catálogo Asset Intelligence, el estado de validación cambia de **Definido por el usuario** a **Validado**. Cuando se revierte software que no está en el catálogo, el estado de validación cambia de **Definido por el usuario** a **Sin categoría**.  
 
-##  <a name="a-namebkmkrequestcatalogupdatea-request-a-catalog-update-for-uncategorized-software-titles"></a><a name="BKMK_RequestCatalogUpdate"></a> Solicitar una actualización del catálogo para títulos de software sin categoría  
+##  <a name="BKMK_RequestCatalogUpdate"></a> Solicitar una actualización del catálogo para títulos de software sin categoría  
  La información de títulos de software sin categoría puede enviarse a System Center Online para su investigación y categorización. Después de enviar un título de software sin categoría y cuando haya al menos 4 solicitudes de categorización de clientes para el mismo título de software, los investigadores identifican, categorizan y ponen la información de categorización del título a disposición de todos los clientes que usen el servicio System Center Online. Microsoft da máxima prioridad a los títulos de software que tengan la mayoría de solicitudes de categorización. El software personalizado y las aplicaciones de línea de negocio no suelen recibir una categoría y, como práctica recomendada, no se deberían enviar estos títulos de software a Microsoft para su categorización.  
 
  Cuando se envía información de títulos de software a System Center Online para su categorización, se aplican las condiciones siguientes:  
@@ -308,7 +310,7 @@ Este tema contiene información para ayudarle a administrar las tareas típicas 
     > [!NOTE]  
     >  El software que se envía a System Center Online para su categorización y tiene un estado de validación **Pendiente** en un sitio de administración central se sigue mostrando con un estado de validación **Sin categoría** en los sitios primarios secundarios.  
 
-##  <a name="a-namebkmkresolvesoftwaredetailsa-resolve-software-details-conflicts"></a><a name="BKMK_ResolveSoftwareDetails"></a> Resolver conflictos de detalles de software  
+##  <a name="BKMK_ResolveSoftwareDetails"></a> Resolver conflictos de detalles de software  
  Después de recibir los detalles de categorización del software recientemente actualizado de System Center Online que están en conflicto con la información de detalles de software existente, puede elegir cómo resolver el conflicto. El software que tiene un conflicto actual tiene un estado de validación de **Actualizable**. Después de resolver un conflicto de detalles de software, se conserva la información de categorización de software en el catálogo Asset Intelligence según la configuración que especifique. Un conflicto de detalles de software no se producirá de nuevo con el mismo valor de categorización de software, a menos que el valor de System Center Online cambie después de que se haya resuelto el conflicto.  
 
  Utilice el procedimiento siguiente para resolver un conflicto de detalles de software.  
@@ -336,9 +338,4 @@ Este tema contiene información para ayudarle a administrar las tareas típicas 
     -   **Sobrescribir el valor de la información de catálogo editado localmente con el valor descargado de System Center Online**: resuelve el conflicto de detalles de software sobrescribiendo la información de categorización de software del catálogo Asset Intelligence existente con la nueva información obtenida desde System Center Online. Cuando se selecciona esta opción, el estado del título de software cambia de **Actualizable** a **Validado**.  
 
      Haga clic en **Aceptar** para guardar la resolución de conflictos.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

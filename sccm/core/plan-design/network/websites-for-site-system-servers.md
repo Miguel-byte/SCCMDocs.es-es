@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 26bbec1e8d6c53ce297689ba4390b9347229eb15
 ms.openlocfilehash: 886ff3b8e867fc340c79648a57feae81653b0ccd
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -34,7 +36,7 @@ Varios roles de sistema de sitio de Configuration Manager requieren Microsoft In
 
 
 
-##  <a name="a-namebkmkwhat2knowa-what-to-know-before-choosing-to-use-custom-websites"></a><a name="BKMK_What2Know"></a> Qué debe saber antes de decidirse a usar sitios web personalizados  
+##  <a name="BKMK_What2Know"></a> Qué debe saber antes de decidirse a usar sitios web personalizados  
  De forma predeterminada, los roles de sistema de sitio usan el **sitio web predeterminado** en IIS. Esto se configura automáticamente al instalar el rol de sistema de sitio. Sin embargo, en los sitios primarios, puede usar en su lugar sitios web personalizados. Al usar sitios web personalizados:  
 
 -   Los sitios web personalizados están habilitados para todo el sitio, en lugar de solo para roles o servidores de sistema de sitio individuales.  
@@ -132,9 +134,4 @@ Dado que los pasos para crear un sitio web personalizado varían según las vers
     2.  Inicie el sitio web **SMSWEB**.  
 
     3.  Reinicie el servicio **SMS_SITE_COMPONENT_MANAGER** en el servidor de sitio.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

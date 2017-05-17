@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2e711cce2435957f3e85dad08f17260e1a224fc2
 ms.openlocfilehash: c6448932e91a02984ca57cef0b75c10ea3f43fa1
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -32,7 +34,7 @@ Use la información de este tema para ayudarle a actualizar la infraestructura d
 
 - Si quiere actualizar la infraestructura de System Center Configuration Manager a una nueva versión, vea [Actualizaciones para System Center Configuration Manager](/sccm/core/servers/manage/updates).
 
-##  <a name="a-namebkmksupconfigupgradesitesrva-upgrade-the-operating-system-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a> Actualizar el sistema operativo de los sistemas de sitio  
+##  <a name="BKMK_SupConfigUpgradeSiteSrv"></a> Actualizar el sistema operativo de los sistemas de sitio  
  Configuration Manager admite la actualización local del sistema operativo de los servidores que hospedan un servidor de sitio y de los servidores remotos que hospedan cualquier rol de sistema de sitio en las situaciones siguientes:  
 
 -   Actualización local a un Service Pack posterior de Windows Server si el nivel de Service Pack resultante de Windows sigue siendo compatible con Configuration Manager.  
@@ -148,7 +150,7 @@ Con frecuencia, se pregunta sobre los siguientes escenarios de actualización de
 
 
 
-##  <a name="a-namebkmksupconfigupgradeclienta-upgrade-the-operating-system-of-configuration-manager-clients"></a><a name="BKMK_SupConfigUpgradeClient"></a> Actualizar el sistema operativo de clientes de Configuration Manager  
+##  <a name="BKMK_SupConfigUpgradeClient"></a> Actualizar el sistema operativo de clientes de Configuration Manager  
  Configuration Manager admite una actualización local del sistema operativo para los clientes de Configuration Manager en las situaciones siguientes:  
 
 -   Actualización local a un Service Pack posterior de Windows si el nivel de Service Pack resultante sigue siendo compatible con Configuration Manager.  
@@ -157,7 +159,7 @@ Con frecuencia, se pregunta sobre los siguientes escenarios de actualización de
 
 -   Actualizaciones de mantenimiento desde una compilación a otra de Windows 10.  Para más información, consulte [Administración de Windows como servicio mediante System Center Configuration Manager](../../../osd/deploy-use/manage-windows-as-a-service.md).  
 
-##  <a name="a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server"></a><a name="BKMK_SupConfigUpgradeDBSrv"></a> Actualizar SQL Server en el servidor de base de datos del sitio  
+##  <a name="BKMK_SupConfigUpgradeDBSrv"></a> Actualizar SQL Server en el servidor de base de datos del sitio  
   Configuration Manager admite una actualización local de SQL Server desde una versión compatible de SQL en el servidor de base de datos del sitio. Los escenarios de actualización de SQL Server que encontrará en esta sección son compatibles con Configuration Manager e incluyen los requisitos de cada uno de ellos.
 
  Para obtener más información sobre las versiones de SQL Server compatibles con Configuration Manager, consulte [Compatibilidad con versiones de SQL Server para System Center Configuration Manager](../../../core/plan-design/configs/support-for-sql-server-versions.md).  
@@ -210,9 +212,4 @@ Para obtener más información sobre SQL Server, consulte la documentación de S
 
 > [!NOTE]  
 >  Al cambiar la edición de SQL Server en uso en el sitio de administración central desde una edición Standard a la edición Enterprise o Datacenter, la partición de la base de datos que limita el número de clientes que admite la jerarquía no cambia.
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

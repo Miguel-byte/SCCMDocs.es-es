@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
 ms.openlocfilehash: 5682cacb43af5bf9248446f1c35b08f137bdae9d
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -90,9 +92,4 @@ En el procedimiento siguiente, aprenderá a agregar este elemento de configuraci
  Si quiere echar un vistazo rápido a las estadísticas de cumplimiento para esta implementación, en el área de trabajo **Supervisión** , haga clic en **Implementaciones**. En la parte inferior de la pantalla, verá un gráfico **Estadísticas de compatibilidad** .  
 
  Para más información sobre cómo supervisar líneas de base de configuración, vea [Monitor compliance settings (Supervisar la configuración de cumplimiento)](../../compliance/deploy-use/monitor-compliance-settings.md)  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

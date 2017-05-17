@@ -14,9 +14,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 81d7516b814d2db74d4d857871071c8911755754
 ms.openlocfilehash: 6e53f501281e31f2b7df54b9740eac970f108257
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>Acerca de los métodos de detección para System Center Configuration Manager
@@ -25,7 +27,7 @@ ms.openlocfilehash: 6e53f501281e31f2b7df54b9740eac970f108257
 
 Los métodos de detección de System Center Configuration Manager pueden encontrar diferentes dispositivos en la red o dispositivos y usuarios de Active Directory. Para usar de manera eficiente un método de detección, necesita comprender las configuraciones disponibles y las limitaciones.  
 
-##  <a name="a-namebkmkaboutforesta-active-directory-forest-discovery"></a><a name="bkmk_aboutForest"></a> Detección de bosques de Active Directory  
+##  <a name="bkmk_aboutForest"></a> Detección de bosques de Active Directory  
  **Configurable:** Sí  
 
  **Habilitado de forma predeterminada:** No  
@@ -78,7 +80,7 @@ Las acciones de detección de bosques de Active Directory se registran en los re
 
 Para más información sobre cómo configurar este método de detección, vea [Configurar métodos de detección para System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
 
-##  <a name="a-namebkmkaboutgroupa-active-directory-group-discovery"></a><a name="bkmk_aboutGroup"></a> Detección de grupos de Active Directory  
+##  <a name="bkmk_aboutGroup"></a> Detección de grupos de Active Directory  
 **Configurable:** Sí  
 
 **Habilitado de forma predeterminada:** No  
@@ -120,7 +122,7 @@ Las acciones de detección de grupos de Active Directory se registran en el arch
 
 Para más información sobre cómo configurar este método de detección, vea [Configurar métodos de detección para System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
 
-##  <a name="a-namebkmkaboutsystema-active-directory-system-discovery"></a><a name="bkmk_aboutSystem"></a> Detección de sistemas de Active Directory  
+##  <a name="bkmk_aboutSystem"></a> Detección de sistemas de Active Directory  
 **Configurable:** Sí  
 
 **Habilitado de forma predeterminada:** No  
@@ -158,7 +160,7 @@ Las acciones de detección de sistemas de Active Directory se registran en el ar
 
 Para más información sobre cómo configurar este método de detección, vea [Configurar métodos de detección para System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
 
-##  <a name="a-namebkmkaboutusera-active-directory-user-discovery"></a><a name="bkmk_aboutUser"></a> Detección de usuario de Active Directory  
+##  <a name="bkmk_aboutUser"></a> Detección de usuario de Active Directory  
 **Configurable:** Sí  
 
 **Habilitado de forma predeterminada:** No  
@@ -188,7 +190,7 @@ Las acciones de detección de usuarios de Active Directory se registran en el ar
 
 Para más información sobre cómo configurar este método de detección, vea [Configurar métodos de detección para System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
 
-##  <a name="a-namebkmkaboutheartbeata-heartbeat-discovery"></a><a name="bkmk_aboutHeartbeat"></a> Detección de latidos  
+##  <a name="bkmk_aboutHeartbeat"></a> Detección de latidos  
 **Configurable:** Sí  
 
 **Habilitado de forma predeterminada:** Sí  
@@ -224,7 +226,7 @@ Las acciones de detección de latidos se registran en las siguientes ubicaciones
 
 Para más información sobre cómo configurar este método de detección, vea [Configurar métodos de detección para System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
 
-##  <a name="a-namebkmkaboutnetworka-network-discovery"></a><a name="bkmk_aboutNetwork"></a> Detección de redes  
+##  <a name="bkmk_aboutNetwork"></a> Detección de redes  
 **Configurable:** Sí  
 
 **Habilitado de forma predeterminada:** No  
@@ -268,7 +270,7 @@ La actividad de la detección de redes se registra en el archivo **Netdisc.log**
 > [!NOTE]  
 >  Las redes complejas y las conexiones de ancho de banda reducido pueden provocar que la detección de redes se ejecute con lentitud y genere un volumen importante de tráfico de red. Como práctica recomendada, ejecute Detección de redes solo cuando los otros métodos de detección no puedan encontrar los recursos que debe detectar. Por ejemplo, puede utilizar Detección de redes si debe detectar equipos de grupos de trabajo. Otros métodos de detección no detectan equipos de grupo de trabajo.  
 
-###  <a name="a-namebkmknetdisclevelsa-levels-of-network-discovery"></a><a name="BKMK_NetDiscLevels"></a> Niveles de detección de redes  
+###  <a name="BKMK_NetDiscLevels"></a> Niveles de detección de redes  
 Al configurar Detección de redes, se puede especificar uno de los tres niveles de detección:  
 
 |Nivel de detección|Detalles|  
@@ -281,7 +283,7 @@ Al configurar Detección de redes, se puede especificar uno de los tres niveles 
 
  Por ejemplo, cuando se utiliza Detección de redes por primera vez, puede comenzar únicamente por el nivel de topología para identificar la infraestructura de red. Después, puede volver a configurar Detección de redes para que se detecten objetos y sus sistemas operativos de dispositivos. También puede configurar otras opciones que limitan la detección de redes a un intervalo específico de segmentos de red. De esa forma, puede detectar los objetos en ubicaciones de red que necesite y evitar tráfico de red innecesario, así como detectar objetos de enrutadores perimetrales o de fuera de la red.  
 
-###  <a name="a-namebkmknetdiscoptionsa-network-discovery-options"></a><a name="BKMK_NetDiscOptions"></a> Opciones de detección de redes  
+###  <a name="BKMK_NetDiscOptions"></a> Opciones de detección de redes  
 Para que la detección de redes pueda buscar dispositivos IP direccionables, debe configurar una o varias de las siguientes opciones que especifican cómo buscar dispositivos.  
 
 > [!NOTE]  
@@ -329,7 +331,7 @@ Especifique cada dispositivo SNMP que desea que consulte Detección de redes.
 
 -   Debe configurar Detección de redes para que utilice el nombre de comunidad del dispositivo o el dispositivo rechazará la consulta basada en SNMP.  
 
-###  <a name="a-namebkmklimitnetdisca-limiting-network-discovery"></a><a name="BKMK_LimitNetDisc"></a> Limitación de la detección de redes  
+###  <a name="BKMK_LimitNetDisc"></a> Limitación de la detección de redes  
 Cuando Detección de redes consulta un dispositivo SNMP en el perímetro de la red, puede identificar información acerca de las subredes y los dispositivos SNMP que se encuentran fuera de la red inmediata. Use la siguiente información para limitar la detección de redes mediante la configuración de los dispositivos SNMP con los que se puede comunicar la detección y mediante la especificación de los segmentos de red que se van a consultar.  
 
 **Subredes:**  
@@ -374,12 +376,12 @@ En el diagrama siguiente se muestra lo que encuentra una consulta de detección 
 > [!WARNING]  
 >  Cada incremento del número de saltos de enrutador puede aumentar significativamente el número de recursos detectables y el ancho de banda de red que consume la detección de redes.  
 
-##  <a name="a-namebkmkaboutservera-server-discovery"></a><a name="bkmk_aboutServer"></a> Detección de servidores  
+##  <a name="bkmk_aboutServer"></a> Detección de servidores  
 **Configurable:** No  
 
 Además de los métodos de detección configurables por el usuario, Configuration Manager también usa un proceso denominado **Detección de servidores** (SMS_WINNT_SERVER_DISCOVERY_AGENT). Este método de detección crea registros de recursos para los equipos que son sistemas de sitio (por ejemplo, un equipo que esté configurado como un punto de administración).  
 
-##  <a name="a-namebkmkshareda-common-features-of-active-directory-group-discovery-system-discovery-and-user-discovery"></a><a name="bkmk_shared"></a> Características comunes de la detección de grupos, detección de sistemas y detección de usuarios de Active Directory  
+##  <a name="bkmk_shared"></a> Características comunes de la detección de grupos, detección de sistemas y detección de usuarios de Active Directory  
 En esta sección se proporciona información sobre las características que son comunes a los siguientes métodos de detección:  
 
 -   Detección de grupos de Active Directory  
@@ -421,7 +423,7 @@ Las siguientes opciones están disponibles con varios métodos de detección de 
 
 -   [Buscar atributos personalizados de Active Directory](#bkmk_customAD)  
 
-###  <a name="a-namebkmkdeltaa-delta-discovery"></a><a name="bkmk_delta"></a> Detección de diferencias  
+###  <a name="bkmk_delta"></a> Detección de diferencias  
 Disponible para:  
 
 -   Detección de grupos de Active Directory  
@@ -450,7 +452,7 @@ Aunque la detección de diferencias puede detectar nuevos recursos y cambios en 
 
 La detección de diferencias se configura en la pestaña **Programación de sondeo** de las propiedades para cada método de detección.  
 
-###  <a name="a-namebkmkstalelogona-filter-stale-computer-records-by-domain-logon"></a><a name="bkmk_stalelogon"></a> Filtrar registros informáticos obsoletos por inicio de sesión de dominio  
+###  <a name="bkmk_stalelogon"></a> Filtrar registros informáticos obsoletos por inicio de sesión de dominio  
 Disponible para:  
 
 -   Detección de grupos de Active Directory  
@@ -472,7 +474,7 @@ Configure el filtrado en la pestaña **Opción** de los cuadros de diálogo **Pr
 > [!WARNING]  
 >  Al configurar este filtro y la opción **Filtrar registros obsoletos por contraseña de equipo**, se excluirán de la detección los equipos que cumplan los criterios de un filtro.  
 
-###  <a name="a-namebkmkstalepassworda-filter-stale-records-by-computer-password"></a><a name="bkmk_stalepassword"></a> Filtrar registros obsoletos por contraseña de equipo  
+###  <a name="bkmk_stalepassword"></a> Filtrar registros obsoletos por contraseña de equipo  
 Disponible para:  
 
 -   Detección de grupos de Active Directory  
@@ -492,7 +494,7 @@ Configure el filtrado en la pestaña **Opción** de los cuadros de diálogo **Pr
 > [!WARNING]  
 >  Al configurar este filtro y la opción **Filtrar registros obsoletos por inicio de sesión de dominio**, se excluirán de la detección los equipos que cumplan los criterios de un filtro.  
 
-###  <a name="a-namebkmkcustomada-search-customized-active-directory-attributes"></a><a name="bkmk_customAD"></a> Buscar atributos personalizados de Active Directory  
+###  <a name="bkmk_customAD"></a> Buscar atributos personalizados de Active Directory  
  Disponible para:  
 
 -   Detección de sistemas de Active Directory  
@@ -502,9 +504,4 @@ Configure el filtrado en la pestaña **Opción** de los cuadros de diálogo **Pr
 Cada método de detección es compatible con una lista única de atributos de Active Directory que se pueden detectar.  
 
 Puede ver y configurar la lista de atributos personalizados en la pestaña **Atributos de Active Directory** de los cuadros de diálogo **Propiedades de detección de sistemas de Active Directory** y **Propiedades de detección de usuarios de Active Directory**.  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

@@ -15,9 +15,11 @@ caps.latest.revision: 13
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 1c43c4968f93985515249ddb117269f8ed61302a
 ms.openlocfilehash: 46cc3fcfd9516cf1c124e24b50d0aac0cb0025dc
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -225,9 +227,4 @@ La personalización de marca del Centro de software se aplica conforme a las sig
 
 > [!WARNING]  
 >  Una vez que haya instalado los roles de sistema de sitio del catálogo de aplicaciones, no verá inmediatamente el catálogo de aplicaciones cuando elija el vínculo **Buscar otras aplicaciones en el catálogo de aplicaciones** desde el Centro de software. El catálogo de aplicaciones estará disponible en el Centro de software después de que el cliente realiza la siguiente descarga de su directiva de cliente o hasta 25 horas después de instalados los roles de sistema de sitio del catálogo de aplicaciones.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bd20983eeca47bdd63e0385440e6c8d64901b902
 ms.openlocfilehash: 4a2a8f96a900a2c4959ae3ff59232771ece95991
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -34,9 +36,4 @@ Para preparar la red para que admita System Center Configuration Manager, planee
 |**Dominios y servicios** a los que necesitan acceder los clientes y servidores de sitios.|Puede que las funciones de Configuration Manager necesiten que los clientes y servidores de sitios accedan a servicios y dominios específicos de Internet, como Windowsudpate.microsoft.com o el servicio de Microsoft Intune.<br /><br /> Si va a usar Microsoft Intune para administrar dispositivos móviles, también tendrá que configurar el acceso a los [puertos y dominios necesarios para Intune](https://docs.microsoft.com/en-us/intune/get-started/network-infrastructure-requirements-for-microsoft-intune).|  
 |**Servidores proxy** para los servidores de sistema de sitio y las comunicaciones de cliente. Puede especificar distintos servidores proxy para los diferentes clientes y servidores de sistema de sitio.|Como estas configuraciones se realizan cuando se instala un cliente o un rol de sistema de sitio, solo necesitará conocer las configuraciones del servidor proxy más adelante cuando configure los clientes y roles de sistema de sitio.<br /><br /> Si no está seguro de si la implementación necesitará usar servidores proxy, vea [Proxy server support in System Center Configuration Manager (Compatibilidad de servidor proxy en System Center Configuration Manager)](../../../core/plan-design/network/proxy-server-support.md) para obtener información sobre los roles de sistema de sitio y las acciones de cliente que pueden usar un servidor proxy.|   
 |  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

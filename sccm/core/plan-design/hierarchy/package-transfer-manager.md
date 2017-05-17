@@ -15,9 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 099345d59891841a336cbada896ec349751fecd3
 ms.openlocfilehash: 54e54409a1792c7e28620a5e3cea3e8d8695c7d4
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="package-transfer-manager-in-system-center-configuration-manager"></a>Administrador de transferencia de paquetes en System Center Configuration Manager
@@ -87,9 +89,4 @@ En la información siguiente se describe cómo el administrador de transferencia
     -   **Punto de distribución estándar:** cuando el administrador de transferencia de paquetes termina de transferir archivos a todos los puntos de distribución remotos designados, comprueba el hash del contenido en el punto de distribución. Después, informa al Administrador de distribución de que se ha completado la distribución.  
 
     -   **Puntos de distribución de extracción:** cuando el punto de distribución de extracción completa la descarga de contenido, el punto de distribución comprueba el hash del contenido. Después, envía un mensaje de estado al punto de administración del sitio para indicar que se ha completado correctamente. Si no se recibe este estado después de 60 minutos, volverá a activarse el administrador de transferencia de paquetes. Comprueba el punto de distribución de extracción para confirmar si el punto de distribución de extracción ha descargado el contenido. Si la descarga de contenido está en curso, el administrador de transferencia de paquetes se suspende durante 60 minutos antes de volver a comprobar el punto de distribución de extracción. Este ciclo continúa hasta que el punto de distribución de extracción completa la transferencia de contenido.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

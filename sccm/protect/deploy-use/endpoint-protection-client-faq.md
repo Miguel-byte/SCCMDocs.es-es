@@ -15,9 +15,11 @@ caps.latest.revision: 15
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
 ms.openlocfilehash: b88bc5f734b85527b81e5848deb0617db4c8dfbc
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -263,9 +265,4 @@ Para quitar todos los elementos no deseados o potencialmente peligrosos que Wind
  [Solución de problemas del cliente de Windows Defender o Endpoint Protection](troubleshoot-endpoint-client.md)   
 
  [Ayuda del cliente de Endpoint Protection](endpoint-protection-client-help.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

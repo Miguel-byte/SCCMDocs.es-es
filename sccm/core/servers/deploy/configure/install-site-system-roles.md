@@ -15,9 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 8370e3b102afed518e8154d4944ab420188faccf
 ms.openlocfilehash: 76b070f8e203cc0c751f35e5a4b4904504786c04
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="install-site-system-roles-for-system-center-configuration-manager"></a>Instalación de roles de sistema de sitio para System Center Configuration Manager
@@ -38,7 +40,7 @@ Justo antes de instalar el rol de sistema de sitio, Configuration Manager compru
 
 -   Configuration Manager usa la **cuenta de instalación del sistema de sitio** para instalar roles de sistemas del sitio. Esta cuenta se especifica cuando se ejecuta el asistente aplicable para crear un nuevo servidor de sistemas del sitio o agregar roles de sistema del sitio a un servidor de sistema de sitio existente. De forma predeterminada, esta cuenta es la cuenta del sistema local del equipo del servidor del sitio, pero puede especificar una cuenta de usuario de dominio para su uso como cuenta de instalación del sistema del sitio. Para obtener más información, consulte [Cuentas que se usan en System Center Configuration Manager](../../../../core/plan-design/hierarchy/accounts.md).  
 
-##  <a name="a-namebkmkinstalla-to-install-site-system-roles-on-an-existing-site-system-server"></a><a name="bkmk_Install"></a> Para instalar roles de sistema de sitio en un servidor de sistema de sitio existente  
+##  <a name="bkmk_Install"></a> Para instalar roles de sistema de sitio en un servidor de sistema de sitio existente  
 
 1.  En la consola de Configuration Manager, haga clic en **Administración**.  
 
@@ -81,9 +83,4 @@ Justo antes de instalar el rol de sistema de sitio, Configuration Manager compru
 
 > [!TIP]  
 >  El cmdlet de Windows PowerShell, New-CMSiteSystemServer, realiza la misma función que este procedimiento. Para obtener más información, consulte [New-CMSiteSystemServer](http://go.microsoft.com/fwlink/p/?LinkID=271414) en la documentación de referencia del cmdlet de Microsoft System Center 2012 Configuration Manager SP1.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

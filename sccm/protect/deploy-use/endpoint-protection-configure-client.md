@@ -15,9 +15,11 @@ caps.latest.revision: 21
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 2d7ec9cc626f3ccfded990cf8ba392c4979adfee
+ms.contentlocale: es-es
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -173,9 +175,4 @@ Para obtener más información sobre la implementación de sistema operativo en 
 Después de completar los pasos anteriores, puede preparar el equipo de referencia para la creación de imágenes. Para obtener más información sobre la implementación de sistema operativo en Configuration Manager, consulte [Manage operating system images with System Center Configuration Manager](/sccm/osd/get-started/manage-operating-system-images) (Administrar imágenes de sistema operativo con System Center Configuration Manager).
 
 Si se implementa una imagen que contiene el software cliente de Endpoint Protection, el cliente de Endpoint Protection automáticamente notificará información al sitio de Configuration Manager al que el equipo está asignado, y se descargará y aplicará la directiva aplicable al equipo cliente.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

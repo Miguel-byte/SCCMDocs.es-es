@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: d1e320c6498e034307557e8a182c36cef2de640b
+ms.contentlocale: es-es
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,14 +30,14 @@ ms.openlocfilehash: d1e320c6498e034307557e8a182c36cef2de640b
 
 Los estados de validación de Asset Intelligence en System Center Configuration Manager no son estáticos y pueden cambiar debido a las acciones administrativas que realiza y que afectan a los datos almacenados en el catálogo Asset Intelligence. En este tema se proporcionan ejemplos de posibles transiciones de estado de validación.
 
-##  <a name="a-namebkmkuncategorizediscategorizeda-uncategorized-catalog-item-is-categorized-by-the-administrative-user"></a><a name="BKMK_UncategorizedIsCategorized"></a> El usuario administrativo categoriza un elemento de catálogo sin categoría  
+##  <a name="BKMK_UncategorizedIsCategorized"></a> El usuario administrativo categoriza un elemento de catálogo sin categoría  
 
 |**Transición de estado**|**Descripción de la transición de estado**|  
 |--------------------------|--------------------------------------|  
 |**Sin categoría**|Un título de software inventariado que System Center Online no ha categorizado previamente o que el usuario administrativo ha entrado en el catálogo de Asset Intelligence.|  
 |**Sin categoría** a **Definido porel usuario**|El usuario administrativo categoriza el elemento sin categoría.|  
 
-##  <a name="a-namebkmkcategorizedisrecategorizeda-categorized-catalog-item-is-recategorized-by-the-administrative-user"></a><a name="BKMK_CategorizedIsReCategorized"></a> El usuario administrativo vuelve a categorizar un elemento de catálogo con categoría  
+##  <a name="BKMK_CategorizedIsReCategorized"></a> El usuario administrativo vuelve a categorizar un elemento de catálogo con categoría  
 
 |**Transición de estado**|**Descripción de la transición de estado**|  
 |--------------------------|--------------------------------------|  
@@ -45,7 +47,7 @@ Los estados de validación de Asset Intelligence en System Center Configuration 
 > [!NOTE]  
 >  Como la información de categorización obtenida de System Center Online se almacena en la base de datos y no se puede eliminar, el usuario administrativo puede revertir a la categorización de System Center Online más adelante.  
 
-##  <a name="a-namebkmkuserdefinedisrecategorizeda-user-defined-catalog-item-is-recategorized-by-system-center-online"></a><a name="BKMK_UserDefinedIsRecategorized"></a> System Center Online vuelve a categorizar el elemento de catálogo definido por el usuario  
+##  <a name="BKMK_UserDefinedIsRecategorized"></a> System Center Online vuelve a categorizar el elemento de catálogo definido por el usuario  
 
 |**Transición de estado**|**Descripción de la transición de estado**|  
 |--------------------------|--------------------------------------|  
@@ -59,7 +61,7 @@ Los estados de validación de Asset Intelligence en System Center Configuration 
 > [!NOTE]  
 >  Como la información de categorización obtenida de System Center Online se almacena en la base de datos y no se puede eliminar, el usuario administrativo puede revertir a la categorización de System Center Online más adelante.  
 
-##  <a name="a-namebkmkuncategorizedissubmitteda-uncategorized-catalog-item-is-submitted-to-system-center-online-for-categorization"></a><a name="BKMK_UncategorizedIsSubmitted"></a> El elemento de catálogo sin categoría se envía a System Center Online para la categorización  
+##  <a name="BKMK_UncategorizedIsSubmitted"></a> El elemento de catálogo sin categoría se envía a System Center Online para la categorización  
 
 |**Transición de estado**|**Descripción de la transición de estado**|  
 |--------------------------|--------------------------------------|  
@@ -67,7 +69,7 @@ Los estados de validación de Asset Intelligence en System Center Configuration 
 |**Sin categorizar** a **Pendiente**|El elemento sin categoría se envía a System Center Online para que el usuario administrativo lo categorice.|  
 |**Pendiente** a **Validado**|System Center Online categoriza el elemento. El usuario administrativo importa el elemento al catálogo de Asset Intelligence mediante una actualización masiva del catálogo o una sincronización del catálogo de Asset Intelligence. Ambos están disponibles mediante el rol de sistema de sitio de punto de sincronización de Asset Intelligence.|  
 
-##  <a name="a-namebkmkuserdefinedissubmitteda-user-defined-catalog-item-is-submitted-to-system-center-online-for-categorization"></a><a name="BKMK_UserDefinedIsSubmitted"></a> El elemento de catálogo definido por el usuario se envía a System Center Online para la categorización  
+##  <a name="BKMK_UserDefinedIsSubmitted"></a> El elemento de catálogo definido por el usuario se envía a System Center Online para la categorización  
 
 |**Transición de estado**|**Descripción de la transición de estado**|  
 |--------------------------|--------------------------------------|  
@@ -81,9 +83,4 @@ Los estados de validación de Asset Intelligence en System Center Configuration 
 
 > [!NOTE]  
 >  Como la información de categorización obtenida de System Center Online se almacena en la base de datos y no se puede eliminar, puede revertir a la categorización de System Center Online más adelante.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

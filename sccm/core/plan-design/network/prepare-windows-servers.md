@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dd102603356864add4084c6881c39bebcbd635f2
 ms.openlocfilehash: 9b97dedb5d2be0bd2e47260033e6e4361467dc4e
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -34,7 +36,7 @@ Para poder usar un equipo Windows como servidor de sistema de sitio para System 
 
 Este artículo proporciona información general sobre los tipos de configuraciones de Windows que son necesarios para admitir sistemas de sitio de Configuration Manager. Para obtener información detallada sobre la configuración de roles de sistema de sitio específicos, vea [Requisitos previos de sitio y sistema de sitio para System Center Configuration Manager](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).
 
-##  <a name="a-namebkmkwinfeaturesa-windows-features-and-roles"></a><a name="BKMK_WinFeatures"></a> Roles y características de Windows  
+##  <a name="BKMK_WinFeatures"></a> Roles y características de Windows  
  Al configurar los roles y las características de Windows en un equipo, puede tenga que reiniciar el equipo para completar la configuración. Por consiguiente, conviene identificar los equipos que hospedarán roles de sistema de sitio específicos antes de instalar un sitio o un servidor de sistema de sitio de Configuration Manager.
 ### <a name="features"></a>Funciones  
  En determinados servidores de sistema de sitio se requieren las siguientes características de Windows, que deben configurarse antes de instalar un rol de sistema de sitio en ese equipo.  
@@ -98,7 +100,7 @@ Este artículo proporciona información general sobre los tipos de configuracion
 -   **Servicios de implementación de Windows**: este rol se utiliza con la implementación del sistema operativo.  
 -   **Windows Server Update Services**: este rol es necesario para implementar actualizaciones de software.  
 
-##  <a name="a-namebkmkiisfilteringa-iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a> Filtrado de solicitudes IIS para puntos de distribución  
+##  <a name="BKMK_IISFiltering"></a> Filtrado de solicitudes IIS para puntos de distribución  
  De forma predeterminada, IIS usa el filtrado de solicitudes para impedir el acceso a varias extensiones de nombre de archivo y ubicaciones de carpetas mediante la comunicación HTTP o HTTPS. En un punto de distribución, esto impide que los clientes descarguen paquetes que tienen extensiones o ubicaciones de carpeta bloqueadas.  
 
  Cuando los archivos de origen de paquete tienen extensiones bloqueadas en IIS por la configuración del filtrado de solicitudes, debe configurar Filtrado de solicitudes para que las permita. Para ello, [edite la característica de filtrado de solicitudes](https://technet.microsoft.com/library/hh831621.aspx) en el Administrador de IIS, en los equipos de los puntos de distribución.  
@@ -140,9 +142,4 @@ Por ejemplo, puede que los archivos de origen de una implementación de software
  - PROPFIND
 
 Para obtener información sobre cómo configurar el filtrado de solicitudes, vea [Configurar el filtrado de solicitudes en IIS](https://technet.microsoft.com/library/hh831621.aspx#Verbs) en TechNet u otra documentación parecida que se aplique a la versión de Windows Server que hospeda el punto de administración.
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
