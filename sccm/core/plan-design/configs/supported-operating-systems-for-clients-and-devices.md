@@ -15,10 +15,11 @@ caps.latest.revision: 5
 author: arob98
 ms.author: angrobe
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 507bad02c6e028f09a8b0c8a566ac55f7c3942a5
-ms.openlocfilehash: 4afba7b7702aa12b1cfcaf454e23b0dfb3274e7f
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d5166b16ffbe46af561b1ce98c0494cc4aaa72a8
+ms.openlocfilehash: cd7b8bf35aeb26c8b7b37f6faa51c9a09138fdb9
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>Sistemas operativos compatibles con dispositivos y clientes de System Center Configuration Manager
@@ -67,7 +68,7 @@ ms.lasthandoff: 03/22/2017
 -   **Windows 7 con SP1** (x86, x64): Professional, Enterprise y Ultimate    
 
 -   **La instalación Server Core de Windows Server 2016** (x64) <sup>2</sup>
-  - El sistema operativo se admite a partir de la versión 1606 con el paquete acumulativo de revisiones de KB3186654 (o la versión de línea base de 1606 publicada en octubre de 2016). En cambio, este sistema operativo no admite el uso de Endpoint Protection.
+  - El sistema operativo se admite a partir de la versión 1606 con el paquete acumulativo de revisiones de KB3186654 (o la versión de línea base de 1606 publicada en octubre de 2016). 
 
 
 -   **La instalación Server Core de Windows Server 2012 R2** (x64) <sup>2</sup>    
