@@ -2,7 +2,7 @@
 title: "Definición de grupos de límites| Microsoft Docs"
 description: "Obtenga información sobre los grupos de límites que vinculan a los clientes con sistemas de sitio en System Center Configuration Manager."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 10
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 8da48e89e8376cc23109faa1c74b29a64699aa87
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d940fd1bbf96767d44f8c55315e814be55a83897
+ms.openlocfilehash: 5684fd4fbfd0ffb8f3ffbcfa122eef3dafd77327
+ms.contentlocale: es-es
+ms.lasthandoff: 05/08/2017
 
 
 ---
@@ -110,7 +111,9 @@ Sin embargo, si se distribuye el contenido a petición y no está disponible en 
 ## <a name="software-update-points"></a>Puntos de actualización de software
 A partir de la versión 1702, los clientes utilizan grupos de límites para encontrar un nuevo punto de actualización de software. Puede agregar puntos de actualización de software individuales a grupos de límites diferentes para controlar qué servidores puede encontrar un cliente.
 
-Cuando se actualiza desde una versión anterior a la 1702, todos los puntos de actualización de software existentes se agregan al grupo de límites de sitio predeterminado en cada sitio. Esto mantiene el comportamiento anterior a la actualización donde los clientes seleccionan un punto de actualización de software del grupo de puntos de actualización de software disponibles que haya configurado para la jerarquía.  Este comportamiento se mantiene hasta que decida agregar puntos de actualización de software individuales a grupos de límites diferentes con un comportamiento controlado de selección y reserva.
+Cuando se actualiza desde una versión anterior a la 1702, todos los puntos de actualización de software existentes se agregan al grupo de límites de sitio predeterminado en cada sitio. Esto mantiene el comportamiento anterior a la actualización donde los clientes seleccionan un punto de actualización de software del grupo de puntos de actualización de software disponibles que haya configurado para la jerarquía.  Este comportamiento se mantiene hasta que decida agregar puntos de actualización de software individuales a grupos de límites diferentes para un comportamiento controlado de selección y reserva.
+
+Si instala un nuevo sitio que ejecuta la versión 1702 o versiones posteriores, debe asignar puntos de actualización de software a un grupo de límites para que los clientes puedan buscarlos y usarlos.
 
 
 La reserva de puntos de actualización de software se configura como otros roles de sistema de sitio, pero tiene las siguientes observaciones:

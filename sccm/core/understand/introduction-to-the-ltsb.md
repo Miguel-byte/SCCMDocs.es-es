@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
-ms.openlocfilehash: 90ba9937cf4ea708a3b5fa69c5975fdf906feeaa
+ms.sourcegitcommit: d940fd1bbf96767d44f8c55315e814be55a83897
+ms.openlocfilehash: 91c1ca860069c6ebe0d20230c4620bf3f68735a2
 ms.contentlocale: es-es
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 05/08/2017
 
 
 ---
@@ -32,6 +32,8 @@ La rama de mantenimiento a largo plazo (LTSB) de System Center Configuration Man
 
 Con respecto a la versión 1606 de Configuration Manager, la LTSB tiene menor funcionalidad cuando se compara con la rama actual de Configuration Manager.
 
+ > [!TIP]   
+ > Si desea obtener información sobre las ramas de **Windows Server**, vea [Windows Server 2016 new Current Branch for Business servicing option]( https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/) (Nueva rama actual de Windows Server 2016 para la opción de mantenimiento empresarial).
 
 ## <a name="features-that-are-not-available-in-the-ltsb-of-configuration-manager"></a>Características que no están disponibles en la LTSB de Configuration Manager
 La rama actual de Configuration Manager admite la funcionalidad siguiente que no está disponible cuando se usa la LTSB:
