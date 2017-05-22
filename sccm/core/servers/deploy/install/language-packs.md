@@ -15,9 +15,11 @@ caps.latest.revision: 10
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: e7075eb675353be130fdcc867d9e4dd1009dab35
 ms.openlocfilehash: 47da3c531289ddf13d357bde8bbda85d79ed2803
+ms.contentlocale: es-es
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -27,7 +29,7 @@ ms.openlocfilehash: 47da3c531289ddf13d357bde8bbda85d79ed2803
 
 Este tema proporciona detalles técnicos sobre la compatibilidad de idiomas en System Center Configuration Manager.  
 
-## <a name="a-namebkmksuplanguagepacksa-supported-operating-system-languages"></a><a name="BKMK_SupLanguagePacks"></a> Idiomas admitidos del sistema operativo  
+## <a name="BKMK_SupLanguagePacks"></a> Idiomas admitidos del sistema operativo  
  Puede instalar compatibilidad para los idiomas de pantalla en las siguientes tablas mediante la instalación de **paquetes de idioma de servidor** o **paquetes de idioma de cliente** en un sitio de administración central y en sitios primarios. Seleccione los idiomas de cliente y servidor que se admitirán en un sitio de los archivos de paquete de idioma disponibles durante el proceso de instalación del sitio.
 
  Los archivos de paquete de idioma se descargan cuando ejecuta el programa de instalación como parte de la descarga del archivo redistribuible y de requisitos previos. También puede usar el [Descargador del programa de instalación](setup-downloader.md) para descargar estos archivos antes de ejecutar el programa de instalación.   
@@ -39,7 +41,7 @@ Este tema proporciona detalles técnicos sobre la compatibilidad de idiomas en S
 |Idioma del servidor|Identificador de configuración regional (LCID)|Código de tres letras|  
 |---------------------|------------------------|-----------------------|  
 |Inglés (predeterminado)|0409|ENU|  
-|Chino (tradicional, Hong Kong RAE)|0c04|ZHH|  
+|Chino (tradicional, RAE de Hong Kong)|0c04|ZHH|  
 |Chino (simplificado)|0804|CHS|  
 |Chino (tradicional, Taiwán)|0404|CHT|  
 |Checo|0405|CSY|  
@@ -63,7 +65,7 @@ Este tema proporciona detalles técnicos sobre la compatibilidad de idiomas en S
 |Idioma del cliente|Identificador de configuración regional (LCID)|Código de tres letras|  
 |---------------------|------------------------|-----------------------|  
 |Inglés (predeterminado)|0409|ENG|  
-|Chino (tradicional, Hong Kong RAE)|0c04|ZHH|  
+|Chino (tradicional, RAE de Hong Kong)|0c04|ZHH|  
 |Chino - Simplificado|0804|CHS|  
 |Chino (tradicional, Taiwán)|0404|CHT|  
 |Checo|0405|CSY|  
@@ -95,9 +97,4 @@ Para identificar los paquetes de idioma instalados en un equipo que ejecuta el c
  **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs**  
 
 Puede utilizar el inventario de hardware para recopilar esta información y, a continuación, generar un informe personalizado para ver la información de idioma. Para obtener más información sobre la recopilación de inventario de hardware personalizado, consulte [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md) (Configuración de inventario de hardware en System Center Configuration Manager). Para obtener información sobre la creación de informes, vea la sección [Administración de informes de Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md#BKMK_ManageReports) en el tema [Operaciones y mantenimiento de informes en System Center Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 
