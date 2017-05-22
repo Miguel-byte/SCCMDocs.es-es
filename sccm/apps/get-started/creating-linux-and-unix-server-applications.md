@@ -139,7 +139,7 @@ La tabla siguiente enumera las propiedades de los paquetes y programas que no so
 
 -   **Limitar el ancho de banda de red máximo para transferencias BITS en segundo plano**  
 
- El cliente admite las siguientes configuraciones pata la transferencia inteligente en segundo plano:  
+ El cliente admite las siguientes configuraciones para la transferencia inteligente en segundo plano:  
 
     -   **Hora de inicio de período de limitación**  
 
