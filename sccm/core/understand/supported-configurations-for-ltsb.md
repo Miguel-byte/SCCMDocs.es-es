@@ -2,7 +2,7 @@
 title: Configuraciones admitidas para la LTSB | Microsoft Docs
 description: "Entienda qué sistemas operativos y productos dependientes funcionan con la rama de mantenimiento a largo plazo de System Center Configuration Manager."
 ms.custom: na
-ms.date: 3/9/2017
+ms.date: 5/10/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 477ffa5d61d2dfaedf8a3a1f5687e2d72698ad28
-ms.openlocfilehash: 78dcbf76f21a286506b9c605e2c176714736935b
-ms.lasthandoff: 03/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
+ms.openlocfilehash: ec33d5febcbf7b57e220f7fe27db9671080fecff
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -30,7 +31,7 @@ Use la información de este tema para comprender qué sistemas operativos y depe
 Si no se indica lo contrario en este tema o en los temas específicos de la LTSB, se aplican a la LTSB las mismas configuraciones y limitaciones que se aplican a la versión 1606 de la rama actual.  Cuando se produzcan conflictos, use la información que se aplica a la edición que use. Normalmente, la LTSB es más limitada que la rama actual.
 
 ## <a name="general-statement-of-support"></a>Estado general de compatibilidad
-Los productos y tecnologías que se detallan en las secciones siguientes son compatibles con Configuration Manager. Pero su inclusión en este contenido no expresa una extensión de la compatibilidad con cualquier producto más allá del ciclo de vida de soporte individual de los productos. Los productos que están fuera de su ciclo de vida de soporte no se pueden usar con Configuration Manager. Para obtener más información, visite el sitio web [Ciclo de vida de soporte de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=208270) y lea la [Directiva de ciclo de vida de soporte técnico: preguntas más frecuentes](http://go.microsoft.com/fwlink/p/?LinkId=31976).
+Los siguientes productos y tecnologías son compatibles con esta rama de Configuration Manager. Sin embargo, su inclusión en este contenido no expresa una extensión de la compatibilidad con cualquier producto o versión más allá del ciclo de vida de soporte individual de los productos. Los productos que están fuera de su ciclo de vida de soporte no se pueden usar con Configuration Manager. Para obtener más información, visite el sitio web [Ciclo de vida de soporte de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=208270) y lea la [Directiva de ciclo de vida de soporte técnico: preguntas más frecuentes](http://go.microsoft.com/fwlink/p/?LinkId=31976).
 
 Además, los productos y las versiones de los productos que no aparecen en los temas siguientes no se admiten a menos que se hayan anunciado en el [Blog de Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/).
 
@@ -52,7 +53,7 @@ La LTSB admite el uso de los siguientes sistemas operativos de equipo Windows co
 - Windows Server 2016
 - Windows Server 2012 (x64): Standard, Datacenter
 - Windows Server 2008 R2 con SP1 (x64): Standard, Enterprise, Datacenter
-- Windows Server 2008 con SP2 (x86, x64): Standard, Enterprise, Datacenter *(Vea la nota 1)*
+- Windows Server 2008 con SP2 (x86, x64): Standard, Enterprise, Datacenter  *(Vea la nota 1)*
 - Windows 10 Enterprise 2015 LTSB (x86, x64)
 - Windows 10 Enterprise 2016 LTSB (x86, x64)
 - Windows 8.1 (x86, x64): Professional, Enterprise
@@ -310,13 +311,11 @@ La LTSB admite las siguientes versiones de SQL Server para hospedar la base de d
 - SQL Server 2014 SP2: Standard, Enterprise
 - SQL Server 2014 SP1: Standard, Enterprise
 - SQL Server 2012 SP3: Standard, Enterprise
-- SQL Server 2012 SP2: Standard, Enterprise
 - SQL Server 2008 R2 SP3: Standard, Enterprise, Datacenter
 - SQL Server 2016 Express
 - SQL Server 2014 Express SP2
 - SQL Server 2014 Express SP1
 - SQL Server 2012 Express SP3
-- SQL Server 2012 Express SP2
 
 ## <a name="support-for-active-directory-domains"></a>Compatibilidad con dominios de Active Directory
 Todos los sistemas de sitio de la LTSB deben ser miembros de un dominio de Windows Active Directory compatible. La compatibilidad con dominios de Active Directory tiene los mismos requisitos y limitaciones que los que aparecen en [Compatibilidad con dominios de Active Directory](/sccm/core/plan-design/configs/support-for-active-directory-domains), pero se limita a los siguientes niveles funcionales de dominio:

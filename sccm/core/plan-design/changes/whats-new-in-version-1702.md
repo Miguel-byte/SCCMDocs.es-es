@@ -13,10 +13,11 @@ ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
-ms.openlocfilehash: 4616ebb84ae63acbe6af892918aa2dd1a0be4825
-ms.lasthandoff: 05/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f4cb711f369698fe8e045f8c83dd96ec6fb29d70
+ms.openlocfilehash: a2954b3c6f9a09b7246347e780c4cfc49ba39ca1
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Novedades de la versión 1702 de System Center Configuration Manager
@@ -172,8 +173,8 @@ Ahora se admite contenido adicional en medios independientes. Puede seleccionar 
 ### <a name="hardware-inventory-collects-uefi-information"></a>El inventario de hardware recopila información de UEFI
 Para ayudarle a determinar si un equipo se inicia en modo UEFI están disponibles una nueva clase de inventario de hardware (**SMS_Firmware**) y la propiedad (**UEFI**). Cuando un equipo se inicia en modo UEFI, la propiedad **UEFI** está establecida en **TRUE**. Esto está habilitado en el inventario de hardware de forma predeterminada. Para más información sobre el inventario de hardware, vea [Cómo configurar el inventario de hardware](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
 
-### <a name="improvements-to-software-center-settings-and-notification-messages-for-high-impact-task-sequences"></a>Mejoras en la configuración del Centro de software y los mensajes de notificación para las secuencias de tareas de alto impacto
-Esta versión incluye las siguientes mejoras en la configuración del Centro de software y los mensajes de notificación para las secuencias de tareas de implementación de alto impacto:
+### <a name="improvements-to-software-center-warning-messages-for-high-impact-task-sequences"></a>Mejoras en los mensajes de advertencia del Centro de software para las secuencias de tareas de alto impacto
+Esta versión incluye las siguientes mejoras en los mensajes de advertencia del Centro de software para las secuencias de tareas de implementación de alto impacto:
 
 - En las propiedades de la secuencia de tareas, ahora se puede configurar cualquier secuencia de tareas, incluidas las que no son del sistema operativo, como una implementación de alto riesgo. Cualquier secuencia de tareas que cumpla determinadas condiciones se define automáticamente como de alto impacto. Para obtener información detallada, vea [Administrar implementaciones de alto riesgo](/sccm/protect/understand/settings-to-manage-high-risk-deployments).
 - En las propiedades de la secuencia de tareas, puede elegir usar el mensaje de notificación predeterminado o crear su propio mensaje de notificación personalizado para las implementaciones de alto impacto.

@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: e6833951db27b227a3ca22925e9d9f4c3fc443fc
 ms.openlocfilehash: e8606b8a9268a0a0668b75070cf35894f4794123
 ms.contentlocale: es-es
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>Declarar previamente dispositivos con números de serie de iOS o IMEI
@@ -64,7 +64,7 @@ Al cargar los números de serie para dispositivos iOS que pertenecen a la empres
 
 El archivo .csv que se usa para identificar los dispositivos por número de serie o IMEI debe tener el formato siguiente, excepto la fila superior, que se proporciona únicamente a modo informativo. Cada fila debe contener un número de identificación: un número IMEI o un número de serie de iOS. Puede incluir ambos. Los número IMEI pueden usarse con dispositivos Android, iOS y Windows. También se admiten los números de serie de iOS.  Esta tabla contiene datos de ejemplo:
 
-| IMEI #  | Número de serie de iOS #  | Sistema operativo | Detalles |
+| Número de IMEI  | Número de serie de iOS  | Sistema operativo | Detalles |
 |------------ |---------------|-----|-----|
 | 123456789012345    |   | WINDOWS | Dispositivo Windows propiedad de la empresa|
 |   | A1B2C3D4E5C6 | IOS |     Dispositivo iOS propiedad de la empresa|

@@ -15,10 +15,11 @@ caps.latest.revision: 157
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
-ms.openlocfilehash: 8ffaee12bd826e2f19653b215ee19423ea672433
-ms.lasthandoff: 04/21/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
+ms.openlocfilehash: 3a7370fedee417588d219dc7bff46205faf42929
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -45,23 +46,7 @@ ms.lasthandoff: 04/21/2017
 
 -   Todas las instalaciones permanecen activas durante 90 días y luego cambian a inactivas.  
 
--   El único idioma admitido es el inglés.  
-
--   Solo se admite un sitio primario independiente. No se admiten sitios de administración central, varios sitios primarios ni sitios secundarios.  
-
--   Solo se admiten las siguientes versiones de SQL Server:  
-
-    -   SQL Server 2016 (sin ningún Service Pack, y versiones posteriores)
-    -   SQL Server 2014 (sin ningún Service Pack, y versiones posteriores)
-    -   SQL Server 2012 (con Service Pack 2, o versiones posteriores)
-
-
--   El sitio admite hasta 10 clientes, que deben ejecutar una de las siguientes opciones:  
-
-      -   Windows 10  
-      -   Windows 8.1  
-      -   Windows 8  
-      -   Windows 7  
+-   El único idioma admitido es el inglés.
 
 
 -   Solo se admiten los siguientes indicadores de instalación (conmutadores):  
@@ -79,6 +64,23 @@ ms.lasthandoff: 04/21/2017
 -   No se admite la actualización a esta versión preliminar.  
 
 -   No se admite la actualización a una versión de producción (rama actual) desde esta versión preliminar. En cambio, cuando haya actualizaciones disponibles para una versión preliminar, puede buscarlas e instalarlas desde el nodo **Actualizaciones y mantenimiento** de la consola de Configuration Manager. Para ver un vídeo del proceso de actualización en la consola, consulte [Installing ConfigMgr Update Package (Instalación de paquetes de actualización de Configuration Manager)](https://www.youtube.com/embed/KBd_EGFbUT8) en youtube.com.  
+-   Solo se admite un sitio primario independiente. No se admiten sitios de administración central, varios sitios primarios ni sitios secundarios.  
+
+Los siguientes productos y tecnologías son compatibles con esta rama de Configuration Manager. Sin embargo, su inclusión en este contenido no implica una extensión de la compatibilidad con cualquier producto o versión más allá del ciclo de vida de soporte individual de los productos. Los productos que están fuera de su ciclo de vida de soporte no se pueden usar con Configuration Manager. Para obtener más información sobre los ciclos de vida de soporte de Microsoft, visite el sitio web [Ciclo de vida de soporte de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=208270).  
+
+-   Solo se admiten las siguientes versiones de SQL Server:  
+
+    -   SQL Server 2016 (sin ningún Service Pack, y versiones posteriores)
+    -   SQL Server 2014 (con Service Pack 1, o versiones posteriores)
+    -   SQL Server 2012 (con Service Pack 3, o versiones posteriores)
+
+
+-   El sitio admite hasta 10 clientes, que deben ejecutar una de las siguientes opciones:  
+
+      -   Windows 10  
+      -   Windows 8.1  
+      -   Windows 8  
+      -   Windows 7  
 
 ##  <a name="bkmk_install"></a> Instalar y actualizar la versión Technical Preview  
  System Center Configuration Manager Technical Preview es diferente de la versión actual de System Center Configuration Manager.  

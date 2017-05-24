@@ -2,7 +2,7 @@
 title: Versiones de SQL Server admitidas | Microsoft Docs
 description: "Obtenga los requisitos de configuración y versión de SQL Server para hospedar una base de datos de sitio de System Center Configuration Manager."
 ms.custom: na
-ms.date: 05/01/2017
+ms.date: 05/10/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d5a6fdc9a526c4fc3a9027dcedf1dd66a6fff5a7
-ms.openlocfilehash: fa7f232fd385f742bb11c6596c954d87c2da87a8
+ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
+ms.openlocfilehash: 4166560602edf6eb299511c8b59dc3903e3bfffc
 ms.contentlocale: es-es
-ms.lasthandoff: 05/01/2017
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -45,14 +45,19 @@ Se admiten las siguientes instancias:
 -   Un clúster de SQL Server. Vea [Usar un clúster de SQL Server para hospedar la base de datos del sitio](../../../core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md).
 -   Un grupo de disponibilidad AlwaysOn de SQL Server. Esta opción requiere la versión 1602 o posterior de Configuration Manager. Para obtener más información, vea [SQL Server AlwaysOn para una base de datos de sitio de alta disponibilidad para System Center Configuration Manager](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
-> [!NOTE]  
->  No se admite un clúster de SQL Server en una configuración de clúster de equilibrio de carga de red (NLB). Además, no se admiten la tecnología de creación de reflejo ni la replicación punto a punto de la base de datos de SQL Server. La replicación transaccional estándar de SQL Server solo se admite para replicar objetos a los puntos de administración que están configurados para usar [réplicas de base de datos](https://technet.microsoft.com/library/mt608546.aspx).  
-
 
  **Sitios secundarios:**  
  La base de datos de sitio puede usar la instancia predeterminada de una instalación completa de SQL Server o SQL Server Express.  
 
  SQL Server debe ubicarse en el equipo del servidor de sitio.  
+
+ **Limitaciones para la compatibilidad**   
+ Las configuraciones que aparecen a continuación no son compatibles:
+ -   Un clúster de SQL Server en una configuración de clúster de equilibrio de carga de red (NLB)
+ -   Un clúster de SQL Server en un volumen compartido de clúster (CSV)
+ -   Tecnología de creación de reflejo y la replicación punto a punto de la base de datos de SQL Server
+
+La replicación transaccional de SQL Server solo se admite para replicar objetos a los puntos de administración que están configurados para usar [réplicas de base de datos](https://technet.microsoft.com/library/mt608546.aspx).  
 
 ##  <a name="bkmk_SQLVersions"></a> Versiones de SQL Server admitidas  
  En una jerarquía con varios sitios, cada sitio puede usar una versión diferente de SQL Server para hospedar la base de datos del sitio, siempre que se cumplan las condiciones siguientes:
@@ -109,14 +114,14 @@ Puede utilizar esta versión de SQL Server sin una versión de actualización ac
 -   Un sitio primario  
 -   Un sitio secundario  
 
+<!-- Support for this service pack version has been dropped by Microsoft    
+### SQL Server 2012 SP2: Standard, Enterprise   
+ You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
-### <a name="sql-server-2012-sp2-standard-enterprise"></a>SQL Server 2012 SP2: Standard, Enterprise   
- Puede utilizar esta versión de SQL Server sin una versión de actualización acumulativa mínima para lo siguiente:  
-
--   Un sitio de administración central  
--   Un sitio primario  
--   Un sitio secundario  
-
+-   A central administration site  
+-   A primary site  
+-   A secondary site  
+-->
 
 ### <a name="sql-server-2008-r2-sp3-standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3: Standard, Enterprise, Datacenter     
   Esta versión de SQL Server no es compatible [a partir de la versión 1702](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database).  
@@ -155,10 +160,13 @@ Puede utilizar esta versión de SQL Server sin una versión de actualización ac
 
 -   Un sitio secundario  
 
-### <a name="sql-server-2012-express-sp2"></a>SQL Server 2012 Express SP2   
- Puede utilizar esta versión de SQL Server sin una versión de actualización acumulativa mínima para lo siguiente:  
+<!-- Support for this service pack version has been dropped by Microsoft   
+### SQL Server 2012 Express SP2   
+ You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
--   Un sitio secundario  
+-   A secondary site  
+-->
+
 
 ##  <a name="bkmk_SQLConfig"></a> Configuraciones necesarias para SQL Server  
  Los siguientes elementos son necesarios para todas las instalaciones de SQL Server que use para una base de datos de sitio (incluido SQL Server Express). Si Configuration Manager instala SQL Server Express como parte de una instalación de sitio secundario, estas configuraciones se crean automáticamente.  

@@ -2,7 +2,7 @@
 title: Administrar aplicaciones iOS compradas por volumen | Microsoft Docs
 description: Implemente, administre y supervise licencias para las aplicaciones que ha adquirido mediante el App Store de iOS.
 ms.custom: na
-ms.date: 05/03/2017
+ms.date: 05/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
-ms.openlocfilehash: 55f1204b088a7b636a90561f20aa41c7de72bc05
+ms.sourcegitcommit: f4cb711f369698fe8e045f8c83dd96ec6fb29d70
+ms.openlocfilehash: ce706e938f558406044f7890c80bb7156c3b262b
 ms.contentlocale: es-es
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>Administrar aplicaciones de iOS compradas por volumen con System Center Configuration Manager
@@ -58,6 +58,7 @@ ms.lasthandoff: 05/04/2017
       Cuando pulse **Sincronizar** para realizar una sincronización manual, siempre se realizará una sincronización completa.  
 -   Si necesita recuperar o restaurar la base de datos de Configuration Manager, se recomienda que realice una sincronización manual posteriormente para garantizar que los datos de licencia sincronizados estén actualizados.  
 -   Además, debe haber importado un certificado válido de Apple Push Notification Service (APNs) de Apple que le permita administrar dispositivos iOS, incluida la implementación de la aplicación. Para obtener más información, consulte [Configurar la administración de dispositivos de iOS híbrido](enroll-hybrid-ios-mac.md).  
+-   Configuration Manager admite la adición de hasta 3000 tokens de VPP.
 
 A partir de la versión 1702 de System Center Configuration Manager, ahora puede implementar aplicaciones con licencia en dispositivos y usuarios. Dependiendo de la capacidad de las aplicaciones para admitir licencias de dispositivo, se solicitará una licencia adecuada al realizar la implementación, como sigue:
 

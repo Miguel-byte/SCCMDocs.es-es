@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 3eb48942c1259d2aa1b3c200fad73b39b11c0b8c
-ms.openlocfilehash: 39361102d77441488bf61c9cbbfb0086774e0c09
-ms.lasthandoff: 03/30/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d5166b16ffbe46af561b1ce98c0494cc4aaa72a8
+ms.openlocfilehash: e040552dab21ba9a71e06a78f6acc2ffe1b0eb61
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -92,7 +93,7 @@ Configuration Manager admite el uso de la desduplicación de datos con puntos de
 Para obtener más información, consulte [Configuration Manager Distribution Points and Windows Server 2012 Data Deduplication](http://blogs.technet.com/b/configmgrteam/archive/2014/02/18/configuration-manager-distribution-points-and-windows-server-2012-data-deduplication.aspx) (Puntos de distribución de Configuration Manager y desduplicación de datos de Windows Server 2012) en el blog del equipo de Configuration Manager e [Introducción a la desduplicación de datos](http://technet.microsoft.com/library/hh831602.aspx) en la biblioteca de TechNet de Windows Server.  
 
 ##  <a name="bkmk_DA"></a> DirectAccess  
-Configuration Manager es compatible con la característica DirectAccess en Windows Server 2008 R2 para la comunicación entre clientes y servidores del sistema de sitio.  
+Configuration Manager es compatible con la característica DirectAccess en Windows Server 2008 R2 y versiones posteriores para la comunicación entre clientes y sistemas del servidor de sitio.  
 
 -   Cuando se cumplen todos los requisitos de DirectAccess, DirectAccess habilita los clientes de Configuration Manager en Internet para comunicarse con su sitio asignado como si estuvieran en la intranet.  
 

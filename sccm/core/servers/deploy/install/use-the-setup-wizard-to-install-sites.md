@@ -14,10 +14,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 2f1bc62a4695d60dc4679e479797ee84cd4ddee4
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
+ms.openlocfilehash: 14b4172ad713a3981b8a5abe182405e271d78c26
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>Use el Asistente para instalación si quiere instalar sitios de System Center Configuration Manager.
@@ -310,7 +311,7 @@ Para expandir un sitio primario independiente, primero vea los [requisitos previ
     > [!IMPORTANT]  
     > Cuando Configuration Manager instala SQL Server Express, instala SQL Server Express 2012 sin ningún Service Pack:  
 
-    > -   Para que el sitio secundario se admita, después de instalarlo, debe actualizar SQL Server Express 2012 instalando Service Pack 2 (o posterior).
+    > -   Para que el sitio secundario se admita, después de instalarlo, debe actualizar SQL Server Express 2012 a [una versión compatible](/sccm/core/plan-design/configs/support-for-sql-server-versions#bkmk_SQLVersions).
     > -   Además, si la instalación del nuevo sitio secundario no puede finalizar, pero primero completa la instalación de SQL Server Express 2012, debe actualizar esa instancia de SQL Server Express antes de que Configuration Manager pueda volver a intentar correctamente la instalación del sitio secundario.  
 
      **Usar una instancia existente de SQL Server**  

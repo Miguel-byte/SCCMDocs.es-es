@@ -15,10 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 3eb48942c1259d2aa1b3c200fad73b39b11c0b8c
-ms.openlocfilehash: d497bd5a2971315eecdc0900f735ab2cd8b2e7bc
-ms.lasthandoff: 03/30/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f4cb711f369698fe8e045f8c83dd96ec6fb29d70
+ms.openlocfilehash: bb1b96a56db68dcea22270855b899ba3a90afd0d
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1703 para System Center Configuration Manager
@@ -141,28 +142,24 @@ Esta versión introduce la capacidad de expandir y contraer los grupos de la sec
 
 
 ## <a name="client-settings-to-configure-windows-analytics-for-upgrade-readiness"></a>Configuración de cliente para configurar Windows Analytics para Upgrade Readiness
-A partir de esta versión, puede usar la configuración de cliente de dispositivo para simplificar la configuración de Windows Analytics cuando use [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) con Configuration Manager. Windows Analytics recopila e informa de los datos de telemetría sobre los clientes de Configuration Manager a su área de trabajo de Operations Manager Suite (OMS). Los datos de telemetría recopilados pueden ayudarle a priorizar las decisiones sobre las actualizaciones de Windows para los dispositivos administrados.
-
-Los datos de telemetría que recopila Configuration Manager están en forma de archivos de registro de seguimiento de eventos para Windows (ETW). Estos archivos de registro se envían al sitio de Configuration Manager cuando el cliente envía el inventario de hardware. Después, estos archivos se transfieren al área de trabajo de OMS. Los archivos de registro y sus datos se quitan del sitio de Configuration Manager después de transferir los registros a OMS.
+A partir de esta versión, puede usar la configuración de cliente de dispositivo para simplificar la configuración de la telemetría de Windows necesaria para usar soluciones de [Windows Analytics](https://www.microsoft.com/en-us/WindowsForBusiness/windows-analytics) como [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) con Configuration Manager. Configuration Manager puede recuperar datos de Windows Analytics que pueden proporcionar información valiosa sobre el estado actual de su entorno en función de los datos de telemetría de Windows notificados por los equipos cliente. Los equipos cliente hacen llegar los datos de telemetría de Windows al servicio de telemetría de Windows y, a continuación, los datos pertinentes se transfieren a soluciones de Windows Analytics que se hospedan en una de las áreas de trabajo de OMS de su organización. Upgrade Readiness es una solución de Windows Analytics que puede ayudarle a priorizar las decisiones sobre las actualizaciones de Windows para los dispositivos administrados.
 
 Para obtener información sobre la configuración de telemetría de Windows, vea [Configurar la telemetría de Windows en la organización](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization).
 
 ### <a name="prerequisites"></a>Requisitos previos
-- Debe haber configurado el sitio para usar el registro de análisis de preparación de actualización de OMS. Para obtener información, vea [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) en la biblioteca de contenido para la rama actual.
-- Los clientes deben usar el inventario de hardware para enviar los datos de telemetría.
+- Debe haber configurado el sitio para usar el servicio de nube de Upgrade Readiness. Para obtener más información, consulte la información sobre [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)
 
 ### <a name="configure-windows-analytics-client-settings"></a>Configurar los ajustes de cliente de Windows Analytics
-Para configurar Windows Analytics, en la consola de Configuration Manager vaya a **Administración** > **Configuración de cliente**, haga doble clic en **Configuración de cliente predeterminada** y, después, seleccione **Windows Analytics**.  
+Para configurar Windows Analytics, en la consola de Configuration Manager vaya a **Administración** > **Configuración de cliente**, haga doble clic en **Create Custom Device Client Settings** (Crear configuración de cliente de dispositivo personalizada) y, después, seleccione **Windows Analytics**.  
 
-Después, configure lo siguiente:
+A continuación, configure lo siguiente después de navegar a la pestaña de configuración de **Windows Analytics**:
 - **Identificador comercial**  
-El identificador comercial asigna información desde los dispositivos que administra al área de trabajo de OMS. Si ya ha configurado el identificador comercial para su uso con Upgrade Readiness para usarlo con Configuration Manager, use dicho identificador. Si todavía no tiene un identificador comercial, vea [Generate your commercial ID key]( https://technet.microsoft.com /itpro/windows/deploy/upgrade-readiness-get-started#generate-your-commercial-id-key) (Generar la clave de identificador comercial).
+La clave de identificador comercial asigna información desde los dispositivos que administra hasta el área de trabajo de OMS que hospeda los datos de Windows Analyitics de su organización. Si ya ha configurado una clave de identificador comercial para su uso con Upgrade Readiness, úsela. Si todavía no tiene una clave de identificador comercial, vea cómo [generar la clave de identificador comercial]( https://technet.microsoft.com /itpro/windows/deploy/upgrade-readiness-get-started#generate-your-commercial-id-key).
 
 - Establecer un **nivel de telemetría para dispositivos Windows 10**   
-Para obtener información sobre lo que recopila cada nivel de telemetría de Windows 10, vea [Niveles de telemetría]( https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization#telemetry-levels) en la documentación en línea de Windows.
+Para obtener información sobre lo que recopila cada nivel de telemetría de Windows 10, vea la información para [configurar la telemetría de Windows en su organización]( https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization#telemetry-levels).
 
 - Elija **participar en la recopilación de datos comerciales en dispositivos de Windows 7, 8 y 8.1**   
 Para obtener información sobre los datos recopilados de estos sistemas operativos cuando participa, considere descargar el archivo pdf [Windows 7, Windows 8, and Windows 8.1 appraiser telemetry events and fields](https://go.microsoft.com/fwlink/?LinkID=822965) (Campos y eventos de telemetría de valoración de Windows 7, Windows 8 y Windows 8.1) de Microsoft.
 
-- **Configurar la recopilación de datos de Internet Explorer**
-
+- **Configurar la recopilación de datos de Internet Explorer** En dispositivos que ejecutan Windows 8.1 o versiones anteriores, la recopilación de datos de Internet Explorer puede permitir que Upgrade Readiness detecte incompatibilidades de aplicaciones web que podrían impedir una actualización sin problemas a Windows 10. La recopilación de datos de Internet Explorer se puede habilitar en función de cada zona de Internet. Para obtener más información acerca de las zonas de Internet, consulte la información sobre las [zonas de seguridad de las direcciones URL](https://msdn.microsoft.com/en-us/library/ms537183(v=vs.85).aspx).

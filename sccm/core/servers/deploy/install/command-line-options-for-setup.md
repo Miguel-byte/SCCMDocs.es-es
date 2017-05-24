@@ -15,10 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 04fe7b3e674287c4255563ab4a308e54d0b6c3aa
-ms.lasthandoff: 03/27/2017
+ms.contentlocale: es-es
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>Opciones de línea de comandos para la instalación en System Center Configuration Manager
@@ -57,8 +58,8 @@ ms.lasthandoff: 03/27/2017
 
  Para más información sobre los archivos de requisitos previos de la instalación, vea [Descargador del programa de instalación](setup-downloader.md).  
 
- **/SCRIPT <*Ruta de acceso de script de instalación*>**  
- Realiza instalaciones desatendidas. Cuando se usa la opción **/SCRIPT** se necesita un archivo de inicialización del programa de instalación. Para más información sobre cómo ejecutar una instalación desatendida, vea [Usar una línea de comandos para instalar sitios](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).  
+ **/SCRIPT <*ruta de acceso del script de instalación*>**  
+ Realiza instalaciones desatendidas. Es necesario un archivo de inicialización del programa de instalación cuando use la opción **/SCRIPT** . Para más información sobre cómo ejecutar una instalación desatendida, vea [Usar una línea de comandos para instalar sitios](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).  
 
  **/SDKINST <*FQDN del proveedor de SMS*>**  
  Instala el proveedor de SMS en el equipo especificado. Debe proporcionar el nombre de dominio completo (FQDN) para el equipo del proveedor de SMS. Para más información sobre el proveedor de SMS, vea [Plan para el proveedor de SMS de System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
@@ -66,8 +67,8 @@ ms.lasthandoff: 03/27/2017
  **/SDKDEINST <*FQDN del proveedor de SMS*>**  
  Desinstala el proveedor de SMS en el equipo especificado. Debe proporcionar el FQDN del equipo de proveedor de SMS.  
 
- **/MANAGELANGS <*ruta de acceso del script de idioma*>**  
-Administra los idiomas que se instalan en un sitio instalado previamente. Para usar esta opción, debe ejecutar el programa de instalación desde **<*Ruta de instalación de Configuration Manager*>\BIN\X64** en el servidor de sitio y proporcionar la ubicación del archivo de script de idioma que contiene la configuración del idioma. Para más información sobre las opciones de idioma disponibles en el archivo de script de configuración de idioma, vea [Opciones de línea de comandos para administrar idiomas](#bkmk_Lang) en este tema.  
+ **/MANAGELANGS <*ruta del acceso del script de idioma*>**  
+ Administra los idiomas que se instalan en un sitio instalado previamente. Para usar esta opción, debe ejecutar el programa de instalación desde **<*Ruta de instalación de Configuration Manager*>\BIN\X64** en el servidor de sitio y proporcionar la ubicación del archivo de script de idioma que contiene la configuración del idioma. Para más información sobre las opciones de idioma disponibles en el archivo de script de configuración de idioma, vea [Opciones de línea de comandos para administrar idiomas](#bkmk_Lang) en este tema.  
 
 ##  <a name="bkmk_Lang"></a> Opciones de línea de comandos para administrar idiomas  
  **Identificación**  
