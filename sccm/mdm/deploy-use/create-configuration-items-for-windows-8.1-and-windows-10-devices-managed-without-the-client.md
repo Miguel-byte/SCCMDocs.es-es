@@ -364,7 +364,7 @@ Esta configuración es para dispositivos con Windows 10, y versiones posteriores
 |**Habilitar SmartScreen**|Utilizar SmartScreen para comprobar que los archivos que los usuarios descargan no contienen código malintencionado.|  
 |**Permitir elementos emergentes**|Permitir o deshabilitar elementos emergentes del explorador.|  
 |**Permitir cookies**|Permitir o deshabilitar las cookies.|  
-|**Permitir autorrelleno**|Permitir el uso de la característica Autorrellenar del explorador Microsoft Edge.|  
+|**Permitir autorrelleno**|Permitir el uso de la característica Autorrellenar del explorador de Edge.|  
 |**Permitir administrador de contraseñas**|Permitir el uso de la característica Administrador de contraseñas del explorador de Edge.|  
 |**Ubicación de la lista de sitios del modo de empresa**|Especifica dónde se encuentra la lista de sitios web que se abrirá en modo de empresa. Los usuarios no pueden editar esta lista.|  
 
