@@ -42,7 +42,7 @@ Use el Explorador de recursos en System Center Configuration Manager para ver in
     >  Configuration Manager conserva el historial de inventario de hardware durante el número de días especificado en la tarea de mantenimiento de sitio **Eliminar historial de inventario antiguo**.  
 
 > [!NOTE]  
->  Para obtener información sobre cómo ver el inventario de hardware de clientes que ejecutan Linux y UNIX, consulte [How to monitor clients for Linux and UNIX servers in System Center Configuration Manager](../../../../core/clients/manage/monitor-clients-for-linux-and-unix-servers.md) (Cómo supervisar clientes para servidores Linux y UNIX en System Center Configuration Manager).  
+>  Para obtener información sobre cómo ver el inventario de hardware de clientes que ejecutan Linux y UNIX, consulte [Cómo supervisar clientes para servidores Linux y UNIX en System Center Configuration Manager](../../../../core/clients/manage/monitor-clients-for-linux-and-unix-servers.md).  
 
 ### <a name="how-to-run-resource-explorer-from-the-configuration-manager-console"></a>Ejecución del Explorador de recursos desde la consola de Configuration Manager  
 
