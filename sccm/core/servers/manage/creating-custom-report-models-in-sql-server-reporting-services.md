@@ -16,9 +16,10 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
+ms.contentlocale: es-es
 ms.lasthandoff: 12/16/2016
 
 
@@ -39,7 +40,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 |Definir un origen de datos para un modelo de informe|Después de crear un proyecto de modelo de informe, tendrá que definir un origen de datos desde el que extraer los datos empresariales. Normalmente, se trata de la base de datos de sitio de Configuration Manager.|Para obtener más información, consulte la sección [To define the data source for the report model](#BKMK_DefineReportModelDataSource) de este tema.|  
 |Definir una vista del origen de datos para un modelo de informe|Después de definir los orígenes de datos que se utilizan en el proyecto de modelo de informe, el siguiente paso es definir una vista del origen de datos para el proyecto. Una vista del origen de datos es un modelo de datos lógico basado en uno o varios orígenes de datos. Las vistas del origen de datos encapsulan el acceso a los objetos físicos, tales como tablas y vistas, contenidos en orígenes de datos subyacentes. SQL Server Reporting Services genera el modelo de informe desde la vista del origen de datos.<br /><br /> Las vistas del origen de datos facilitan el proceso de diseño del modelo ya que le proporcionan una representación útil de los datos especificados. Sin cambiar el origen de datos subyacente, puede cambiar el nombre de las tablas y los campos, y agregar campos de agregado y tablas derivadas en una vista del origen de datos. Para un modelo eficaz, agregue a la vista del origen de datos solo las tablas que va a utilizar.|Para obtener más información, consulte la sección [To define the data source view for the report model](#BKMK_DefineReportModelDataSourceView) de este tema.|  
 |Crear un modelo de informe|Un modelo de informe es una capa por encima de una base de datos que identifica los roles, los campos y las entidades empresariales. Cuando se publica, mediante el uso de estos modelos, los usuarios del Generador de informes pueden desarrollar informes sin necesidad de estar familiarizados con las estructuras de base de datos, o de entender y escribir consultas. Los modelos se componen de conjuntos de elementos de informe relacionados que se agrupan bajo un nombre descriptivo, con relaciones predefinidas entre estos elementos empresariales y con cálculos predefinidos. Los modelos se definen mediante el uso de un lenguaje XML llamado Lenguaje de definición de modelos semánticos (SMDL). La extensión de nombre de archivo para los archivos de modelo de informe es .smdl.|Para obtener más información, consulte la sección [To create the report model](#BKMK_CreateReportModel) de este tema.|  
-|Publicar un modelo de informe|Para generar un informe mediante el modelo que acaba de crear, debe publicarlo en un servidor de informes. El origen de datos y la vista del origen de datos se incluyen en el modelo cuando se publica.|Para obtener más información, consulte la sección [To publish the report model for use in SQL Server Reporting Services](#BKMK_PublishReportModel) de este tema.|  
+|Publicar un modelo de informe|Para generar un informe mediante el modelo que acaba de crear, debe publicarlo en un servidor de informes. El origen de datos y la vista del origen de datos se incluyen en el modelo cuando se publica.|Para obtener más información, consulte la sección [Para publicar el modelo de informe para su uso en SQL Server Reporting Services](#BKMK_PublishReportModel) de este tema.|  
 |Implementar el modelo de informe en Configuration Manager|Antes de usar un modelo de informe personalizado en el **Asistente para crear informes** para crear un informe basado en modelo, debe implementar el modelo de informe en Configuration Manager.|Para obtener más información, consulte la sección [To deploy the custom report model to Configuration Manager](#BKMK_DeployReportModel) de este tema.|  
 
 ## <a name="steps-for-creating-a-basic-report-model-in-sql-server-reporting-services"></a>Pasos para crear un modelo de informe básico en SQL Server Reporting Services  
@@ -64,7 +65,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
     > [!NOTE]  
     >  Si no puede ver el panel **Explorador de soluciones** , haga clic en **Ver**y, a continuación, haga clic en **Explorador de soluciones**.  
 
-###  <a name="BKMK_DefineReportModelDataSource"></a> To define the data source for the report model  
+###  <a name="BKMK_DefineReportModelDataSource"></a> Para definir el origen de datos para el modelo de informe  
 
 1.  En el panel **Explorador de soluciones** de **SQL Server Business Intelligence Development Studio**, haga clic con el botón secundario en **Orígenes de datos** para seleccionar **Agregar nuevo origen de datos**.  
 
@@ -93,7 +94,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
     > [!NOTE]  
     >  Para editar las propiedades de un origen de datos existente, haga doble clic en el origen de datos en la carpeta **Orígenes de datos** del panel **Explorador de soluciones** para mostrar las propiedades del origen de datos en el Diseñador de origen de datos.  
 
-###  <a name="BKMK_DefineReportModelDataSourceView"></a> To define the data source view for the report model  
+###  <a name="BKMK_DefineReportModelDataSourceView"></a> Para definir la vista del origen de datos para el modelo de informe  
 
 1.  En el **Explorador de soluciones**, haga clic con el botón secundario en **Vistas del origen de datos** para seleccionar **Agregar nueva vista del origen de datos**.  
 
@@ -132,7 +133,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
 8.  Para salir del asistente, haga clic en **Finalizar**. El modelo de informe se muestra en la ventana de diseño.  
 
-###  <a name="BKMK_PublishReportModel"></a> To publish the report model for use in SQL Server Reporting Services  
+###  <a name="BKMK_PublishReportModel"></a> Para publicar el modelo de informe para su uso en SQL Server Reporting Services  
 
 1.  En el **Explorador de soluciones**, haga clic con el botón secundario en el modelo de informe y seleccione **Implementar**. Para este ejemplo, el modelo de informe es **Simple_Model.smdl**.  
 
@@ -181,7 +182,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
     > [!IMPORTANT]  
     >  Después de copiar el archivo de modelo de informe en el servidor de sitio de Configuration Manager, debe salir y reiniciar la consola de Configuration Manager para poder usar el modelo de informe en el **Asistente para crear informes**.  
 
-##  <a name="AdvancedReportModel"></a> Steps for Creating an Advanced Report Model in SQL Server Reporting Services  
+##  <a name="AdvancedReportModel"></a> Pasos para crear un modelo de informe avanzado en SQL Server Reporting Services  
  Puede usar los procedimientos siguientes para crear un modelo de informe avanzado que podrán usar los usuarios de su sitio para generar informes particulares basados en modelo según los datos en varias vistas de la base de datos de Configuration Manager. Se crea un modelo de informe que presenta a su autor la información sobre los equipos cliente y el sistema operativo instalado en estos equipos. Esta información se obtiene de las vistas siguientes de la base de datos de Configuration Manager:  
 
 -   **V_R_System**: contiene información sobre los equipos detectados y el cliente de Configuration Manager.  
@@ -209,7 +210,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
     > [!NOTE]  
     >  Si no puede ver el panel **Explorador de soluciones** , haga clic en **Ver**y, a continuación, haga clic en **Explorador de soluciones**.  
 
-#### <a name="to-define-the-data-source-for-the-report-model"></a>To define the data source for the report model  
+#### <a name="to-define-the-data-source-for-the-report-model"></a>Para definir el origen de datos para el modelo de informe  
 
 1.  En el panel **Explorador de soluciones** de **SQL Server Business Intelligence Development Studio**, haga clic con el botón secundario en **Orígenes de datos** para seleccionar **Agregar nuevo origen de datos**.  
 
@@ -238,7 +239,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
     > [!NOTE]  
     >  Para editar las propiedades de un origen de datos existente, haga doble clic en el origen de datos en la carpeta **Orígenes de datos** del panel **Explorador de soluciones** para mostrar las propiedades del origen de datos en el Diseñador de origen de datos.  
 
-#### <a name="to-define-the-data-source-view-for-the-report-model"></a>To define the data source view for the report model  
+#### <a name="to-define-the-data-source-view-for-the-report-model"></a>Para definir la vista del origen de datos para el modelo de informe  
 
 1.  En el **Explorador de soluciones**, haga clic con el botón secundario en **Vistas del origen de datos** para seleccionar **Agregar nueva vista del origen de datos**.  
 
@@ -375,7 +376,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
 4.  Cuando haya terminado de cambiar el nombre de objetos, haga clic en **Archivo**y, a continuación, en **Guardar todo**.  
 
-#### <a name="to-publish-the-report-model-for-use-in-sql-server-reporting-services"></a>To publish the report model for use in SQL Server Reporting Services  
+#### <a name="to-publish-the-report-model-for-use-in-sql-server-reporting-services"></a>Para publicar el modelo de informe para su uso en SQL Server Reporting Services  
 
 1.  En el **Explorador de soluciones**, haga clic con el botón secundario en **Advanced_Model.smdl** para seleccionar **Implementar**.  
 
