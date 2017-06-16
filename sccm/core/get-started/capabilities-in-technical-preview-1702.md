@@ -143,7 +143,7 @@ Para recopilar información de evaluación de cumplimiento para actualizaciones 
 2. Haga clic en **Crear directiva de cumplimiento** o seleccione una directiva de cumplimiento existente para modificarla.
 3. En la página General, proporcione un nombre y una descripción, seleccione **Reglas de cumplimiento para dispositivos administrados con el cliente de Configuration Manager**, establezca la gravedad de no compatibilidad para la creación de informes y haga clic en **Siguiente**.
 4. En la página Plataformas admitidas, seleccione **Windows 10** y después haga clic en **Siguiente**.
-5. En la página Reglas, haga clic en **Nuevo...** y, después, para **Condición**, seleccione **Requerir cumplimiento para Windows Update for Business**. La opción **Valor** se establece automáticamente en **True**.
+5. En la página Reglas, haga clic en **Nuevo...**  y, después, para **Condición**, seleccione **Requerir cumplimiento para Windows Update for Business**. La opción **Valor** se establece automáticamente en **True**.
 
 La nueva directiva se muestra en el nodo **Directivas de cumplimiento** del área de trabajo **Activos y compatibilidad** .
 
@@ -187,9 +187,9 @@ Siga este procedimiento para establecer una secuencia de tareas como de alto imp
    **Texto del título de la notificación de usuario**: especifica el texto azul que aparece en la notificación de usuario del Centro de software. Por ejemplo, en la notificación de usuario predeterminada, esta sección contiene algo como "Confirme que quiere actualizar el sistema operativo en este equipo".
 
    **Texto del mensaje de notificación de usuario**: hay tres cuadros de texto que proporcionan el cuerpo de la notificación personalizada.
-   - Cuadro de texto&1;: especifica el cuerpo principal del texto, que normalmente contiene instrucciones para el usuario. Por ejemplo, en la notificación de usuario predeterminada, esta sección contiene algo como "La actualización del sistema operativo llevará un tiempo y es posible que el equipo se reinicie varias veces".
-   - Cuadro de texto&2;: especifica el texto en negrita debajo del cuerpo de texto principal. Por ejemplo, en la notificación de usuario predeterminada, esta sección contiene algo como "Esta actualización en contexto instala el nuevo sistema operativo y migra automáticamente sus aplicaciones, datos y configuración".
-   - Cuadro de texto&3;: especifica la última línea de texto debajo del texto en negrita. Por ejemplo, en la notificación de usuario predeterminada, esta sección contiene algo como "Haga clic en Instalar para comenzar. De lo contrario, haga clic en Cancelar".   
+   - Cuadro de texto 1: especifica el cuerpo principal del texto, que normalmente contiene instrucciones para el usuario. Por ejemplo, en la notificación de usuario predeterminada, esta sección contiene algo como "La actualización del sistema operativo llevará un tiempo y es posible que el equipo se reinicie varias veces".
+   - Cuadro de texto 2: especifica el texto en negrita debajo del cuerpo de texto principal. Por ejemplo, en la notificación de usuario predeterminada, esta sección contiene algo como "Esta actualización en contexto instala el nuevo sistema operativo y migra automáticamente sus aplicaciones, datos y configuración".
+   - Cuadro de texto 3: especifica la última línea de texto debajo del texto en negrita. Por ejemplo, en la notificación de usuario predeterminada, esta sección contiene algo como "Haga clic en Instalar para comenzar. De lo contrario, haga clic en Cancelar".   
 
    Supongamos que configura la siguiente notificación personalizada en las propiedades.
 
