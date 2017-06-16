@@ -131,7 +131,7 @@ Cuando un cliente no puede establecer contacto con el primer punto de administra
 
 Después de establecer la comunicación con un punto de administración, el cliente seguirá usándolo hasta que tenga lugar una de las siguientes situaciones:  
 
--   Han transcurrido&25; horas.  
+-   Han transcurrido 25 horas.  
 -   El cliente no puede comunicarse con el punto de administración durante cinco intentos a lo largo de un período de 10 minutos.
 
 Luego, el cliente selecciona aleatoriamente un nuevo punto de administración que usar.  
