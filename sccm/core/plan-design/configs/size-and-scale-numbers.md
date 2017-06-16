@@ -15,9 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f9c43e26758d5171a6ef56e827b4b054ebc8a5e5
 ms.openlocfilehash: c7ad33339e65e6e00e88f98d6e13baceb98dae77
+ms.contentlocale: es-es
+ms.lasthandoff: 12/30/2016
 
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Números de tamaño y escala de System Center Configuration Manager
@@ -37,7 +39,7 @@ Use la información de este tema junto con la información de los siguientes art
 
 Los siguientes números de soporte técnico se basan en el uso del hardware recomendado para Configuration Manager y la configuración predeterminada para todas las características disponibles de Configuration Manager. Cuando no use el hardware recomendado o use una configuración personalizada más agresiva (por ejemplo, ejecutar inventario de hardware o software con más frecuencia que los valores predeterminados de una vez cada siete días), el rendimiento de los sistemas de sitio puede disminuir y es posible que no se cumplan los niveles de compatibilidad indicados.
 
-##  <a name="a-namebkmksitesystemscalea-site-types"></a><a name="bkmk_SiteSystemScale"></a> Tipos de sitio  
+##  <a name="bkmk_SiteSystemScale"></a> Tipos de sitio  
  **Sitio de administración central:**  
 
 -   Un sitio de administración central admite hasta 25 sitios primarios o secundarios.  
@@ -67,7 +69,7 @@ Los siguientes números de soporte técnico se basan en el uso del hardware reco
 
     -   Cada instancia de este rol de sistema de sitio admite el número máximo de clientes que son compatibles con la jerarquía.  
 
-## <a name="a-namebkmkrolesa-site-system-roles"></a><a name="bkmk_roles"></a> Roles de sistema de sitio    
+## <a name="bkmk_roles"></a> Roles de sistema de sitio    
 
 **Punto de servicio web del catálogo de aplicaciones:**  
 
@@ -125,21 +127,21 @@ Los siguientes números de soporte técnico se basan en el uso del hardware reco
 
 -   De manera predeterminada, Configuration Manager no admite la configuración de puntos de actualización de software como clústeres de Equilibrio de carga de red (NLB). En cambio, puede usar el SDK de Configuration Manager para configurar hasta cuatro puntos de actualización de software en un clúster de NLB.  
 
-##  <a name="a-namebkmkclientnumbersa-client-numbers-for-sites-and-hierarchies"></a><a name="bkmk_clientnumbers"></a> Número de clientes para sitios y jerarquías  
+##  <a name="bkmk_clientnumbers"></a> Número de clientes para sitios y jerarquías  
  Use la siguiente información para determinar cuántos clientes, y de qué tipo, se pueden admitir en un sitio o en una jerarquía.  
 
-###  <a name="a-namebkmkcasa-hierarchy-with-a-central-administration-site"></a><a name="bkmk_cas"></a> Jerarquía con un sitio de administración central  
+###  <a name="bkmk_cas"></a> Jerarquía con un sitio de administración central  
 Un sitio de administración central admite un número total de dispositivos que incluye el número máximo de dispositivos indicados para los tres grupos siguientes:  
 
--   700&000; equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
+-   700 000 equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
 
 -   25 000 dispositivos que ejecutan Mac y Windows CE 7.0  
 
 -   Uno de los siguientes, según el modo en que su implementación admita la administración de dispositivos móviles (MDM):  
 
-    -   100&000; dispositivos que administra mediante MDM local  
+    -   100 000 dispositivos que administra mediante MDM local  
 
-    -   300&000; dispositivos basados en la nube  
+    -   300 000 dispositivos basados en la nube  
 
  Por ejemplo, en una jerarquía, de un total de 1.025.000 dispositivos, puede admitir 700 000 equipos de escritorio, hasta 25 000 Mac y Windows CE 7.0, y hasta 300 000 dispositivos basados en la nube al integrar Microsoft Intune. Si se admiten los dispositivos administrados por MDM local, el total de la jerarquía es de 825 000 dispositivos.  
 
@@ -147,50 +149,45 @@ Un sitio de administración central admite un número total de dispositivos que 
 >  En una jerarquía donde el sitio de administración central usa SQL Server Standard Edition, la jerarquía admite un máximo de 50 000 equipos de escritorio y dispositivos. La edición de SQL Server que se usa en un sitio primario independiente no limita la capacidad del sitio para admitir el número de clientes indicado.  
 
 
-###  <a name="a-namebkmkchipria-child-primary-site"></a><a name="bkmk_chipri"></a> Sitio primario secundario  
+###  <a name="bkmk_chipri"></a> Sitio primario secundario  
 Cada sitio primario secundario de una jerarquía con un sitio de administración central admite lo siguiente:  
 
--   150&000; clientes y dispositivos en total, sin limitarse a un grupo o tipo específico, siempre y cuando no se supere el número admitido para la jerarquía.  
+-   150 000 clientes y dispositivos en total, sin limitarse a un grupo o tipo específico, siempre y cuando no se supere el número admitido para la jerarquía.  
 
 Por ejemplo, un sitio primario que admite 25 000 equipos que ejecutan Mac y Windows CE 7.0 (dado que es el límite para una jerarquía) puede admitir 125 000 equipos de escritorio adicionales. Esto aumenta el número total de dispositivos compatibles hasta el límite máximo de 150 000 admitido por el sitio primario secundario.
 
-###  <a name="a-namebkmkpria-stand-alone-primary-site"></a><a name="bkmk_pri"></a> Sitio primario independiente  
+###  <a name="bkmk_pri"></a> Sitio primario independiente  
 Un sitio primario independiente admite el siguiente número de dispositivos:  
 
--   175&000; clientes y dispositivos en total, en esta proporción:  
+-   175 000 clientes y dispositivos en total, en esta proporción:  
 
-    -   150&000; equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
+    -   150 000 equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
 
     -   25 000 dispositivos que ejecutan Mac y Windows CE 7.0
 
     -   Uno de los siguientes, según el modo en que su implementación admita la administración de dispositivos móviles:  
 
-        -   50&000; dispositivos que administra mediante MDM local  
+        -   50 000 dispositivos que administra mediante MDM local  
 
-        -   150&000; dispositivos basados en la nube  
+        -   150 000 dispositivos basados en la nube  
 
 Por ejemplo, un sitio primario independiente que admite 150 000 equipos de escritorio y 10 000 equipos Mac o Windows CE 7.0 solo puede admitir 15 000 dispositivos adicionales. Esos dispositivos pueden estar en la nube o administrase mediante MDM local.  
 
-###  <a name="a-namebkmkseca-secondary-sites"></a><a name="bkmk_sec"></a> Sitios secundarios  
+###  <a name="bkmk_sec"></a> Sitios secundarios  
 Los sitios secundarios admiten lo siguiente:  
 
--   15&000; equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
+-   15 000 equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
 
-###  <a name="a-namebkmkmpa-management-points"></a><a name="bkmk_mp"></a> Puntos de administración  
+###  <a name="bkmk_mp"></a> Puntos de administración  
 Cada punto de administración puede admitir el siguiente número de dispositivos:  
 
--   25&000; clientes y dispositivos en total, en esta proporción:  
+-   25 000 clientes y dispositivos en total, en esta proporción:  
 
-    -   25&000; equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
+    -   25 000 equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
 
     -   Uno de los siguientes (no ambos):  
 
-        -   10&000; dispositivos que administra mediante MDM local  
+        -   10 000 dispositivos que administra mediante MDM local  
 
         -   10 000 dispositivos que ejecutan clientes Mac y Windows CE 7.0
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 
