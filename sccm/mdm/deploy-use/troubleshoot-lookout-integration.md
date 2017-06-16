@@ -28,7 +28,7 @@ ms.lasthandoff: 03/06/2017
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
 ## <a name="troubleshoot-login-errors"></a>Solucionar los errores de inicio de sesión
-### <a name="403-errors"></a>Errores&403;
+### <a name="403-errors"></a>Errores 403
 Puede ver un error 403 cuando inicie sesión en la [consola de Lookout MTP](https://aad.lookout.com): **No está autorizado a acceder al servicio**. Esto puede suceder cuando el nombre de usuario que ha especificado no es un miembro del grupo de Azure Active Directory (Azure AD) que está configurado para tener acceso a Lookout MTP.
 
 Lookout MTP está configurado para permitir que solo tengan acceso los usuarios de un grupo de Azure AD configurado. Si no está seguro de qué grupo está configurado para acceder a Lookout MTP, póngase en contacto con el soporte técnico de Lookout.
