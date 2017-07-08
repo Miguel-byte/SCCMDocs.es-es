@@ -99,6 +99,8 @@
 ###  [Configurar el laboratorio](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capacidades en 1706](get-started/capabilities-in-technical-preview-1706.md)
+###  [Capacidades en 1705](get-started/capabilities-in-technical-preview-1705.md)
 ###  [Capacidades en 1704](get-started/capabilities-in-technical-preview-1704.md)
 ###  [Capacidades en 1703](get-started/capabilities-in-technical-preview-1703.md)
 ###  [Capacidades en 1702](get-started/capabilities-in-technical-preview-1702.md)
@@ -111,9 +113,10 @@
 ###  [Capacidades en 1607](get-started/capabilities-in-technical-preview-1607.md)
 ###  [Capacidades en 1606](get-started/capabilities-in-technical-preview-1606.md)
 ###  [Capacidades en 1605](get-started/capabilities-in-technical-preview-1605.md)
-###  [Capacidades en 1604](get-started/capabilities-in-technical-preview-1604.md)
-###  [Capacidades en 1603](get-started/capabilities-in-technical-preview-1603.md)
-<!--
+
+<!-- No longer in support, and all features are in the Current Branch
+###  [Capabilities in 1604](get-started/capabilities-in-technical-preview-1604.md)
+###  [Capabilities in 1603](get-started/capabilities-in-technical-preview-1603.md)
 ###  [Capabilities in 1602](get-started/capabilities-in-technical-preview-1602.md)
 ###  [Capabilities in 1601](get-started/capabilities-in-technical-preview-1601.md)
 ###  [Capabilities in 1512](get-started/capabilities-in-technical-preview-1512.md)
@@ -178,7 +181,8 @@
 #### [Límites](servers/deploy/configure/boundaries.md)
 #### [Grupos de límites](servers/deploy/configure/boundary-groups.md)
 #### [Grupos de límites para versiones anteriores a 1610](servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md)
-###  [Usar SQL Server AlwaysOn](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
+###  [Prepararse para usar SQL Server Always On](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
+###  [Configurar SQL Server Always On](servers/deploy/configure/configure-aoag.md)
 ###  [Usar un clúster de SQL Server](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [Ubicaciones personalizadas para archivos de base de datos](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [Configurar la administración basada en roles](servers/deploy/configure/configure-role-based-administration.md)
@@ -204,6 +208,7 @@
 ##   [Actualizar la infraestructura local](servers/manage/upgrade-on-premises-infrastructure.md)
 ##   [Actualizaciones para Configuration Manager](servers/manage/updates.md)
 ###  [Instalación de actualizaciones en la consola](servers/manage/install-in-console-updates.md)
+#### [Probar la actualización de base de datos](servers/manage/test-database-upgrade.md)
 #### [Diagrama de flujo: descargar actualizaciones](servers/manage/download-updates-flowchart.md)
 #### [Diagrama de flujo: replicación de actualización](servers/manage/update-replication-flowchart.md)
 ###  [Características de versión preliminar](servers/manage/pre-release-features.md)
