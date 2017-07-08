@@ -2,7 +2,7 @@
 title: Instalar Updates Publisher | Microsoft Docs
 description: Instalar System Center Updates Publisher en el entorno
 ms.custom: na
-ms.date: 4/29/2017
+ms.date: 07/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
-ms.openlocfilehash: 996766d0bd9ab2a3acb1970414f0ae511d97fbff
+ms.sourcegitcommit: 70772ba7d08560aa66abcce29dc6cc6334aa2032
+ms.openlocfilehash: 63ea0383497a3f06870c0907c732010259d1a809
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="install-updates-publisher"></a>Instalar Updates Publisher
@@ -119,7 +119,7 @@ Puesto que esta carpeta contiene todos los archivos necesarios para usar Updates
 Cuando finalice la instalación, ejecute **UpdatesPublisher.exe** desde la carpeta *UpdatesPublisher* para iniciar Updates Publisher.
 
 ## <a name="next-steps"></a>Pasos siguientes
- Después de instalar Updates Publisher, se recomienda [configurar las opciones](/tools/updates-publisher-options) de Updates Publisher. Debe configurar algunas opciones para poder usar algunas características de Updates Publisher.
+ Después de instalar Updates Publisher, se recomienda [configurar las opciones](updates-publisher-options.md) de Updates Publisher. Debe configurar algunas opciones para poder usar algunas características de Updates Publisher.
 
- Pero, si quiere usar los valores predeterminados y no tiene previsto implementar actualizaciones en un servidor de actualización ni en dispositivos administrados, puede ir directamente a la sección sobre cómo [administrar catálogos de actualizaciones de software](/tools/updates-publisher-catalogs) o cómo [crear actualizaciones de software](/tools/create-updates-with-updates-publisher) y crear sus propios catálogos de actualizaciones.
+ Pero, si quiere usar los valores predeterminados y no tiene previsto implementar actualizaciones en un servidor de actualización ni en dispositivos administrados, puede ir directamente a la sección sobre cómo [administrar catálogos de actualizaciones de software](updates-publisher-catalogs.md) o cómo [crear actualizaciones de software](create-updates-with-updates-publisher.md) y crear sus propios catálogos de actualizaciones.
 
