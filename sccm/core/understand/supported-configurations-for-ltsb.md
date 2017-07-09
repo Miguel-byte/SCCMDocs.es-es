@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
-ms.openlocfilehash: ec33d5febcbf7b57e220f7fe27db9671080fecff
+ms.sourcegitcommit: b0ba955aa7f854c3fa2c06ccf9ccd8ed354758b0
+ms.openlocfilehash: 31bddee83b2365cfa903077ffaa1d7116b194378
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/12/2017
 
 
 ---
@@ -40,7 +40,7 @@ Además, los productos y las versiones de los productos que no aparecen en los t
 **Windows:**
 - Solo se admiten actualizaciones de seguridad y calidad para Windows.
 - No hay compatibilidad con ramas actuales (CB), ramas actuales para empresas (CBB) ni LTSB de Windows 10.
--    Las nuevas versiones principales de Windows Server no son compatibles.
+-   Las nuevas versiones principales de Windows Server no son compatibles.
 
 **SQL Server:**
 - Solo son compatibles con SQL Server las actualizaciones de seguridad y calidad o las actualizaciones secundarias, como los Service Pack.
@@ -51,6 +51,7 @@ La LTSB admite el uso de los siguientes sistemas operativos de equipo Windows co
 
 **Sistemas operativos compatibles:**
 - Windows Server 2016
+- Windows Server 2012 R2 (x64): Standard, Datacenter
 - Windows Server 2012 (x64): Standard, Datacenter
 - Windows Server 2008 R2 con SP1 (x64): Standard, Enterprise, Datacenter
 - Windows Server 2008 con SP2 (x86, x64): Standard, Enterprise, Datacenter  *(Vea la nota 1)*
