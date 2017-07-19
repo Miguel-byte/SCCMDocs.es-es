@@ -17,10 +17,10 @@ author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 2288be606d7d586de5dc18d640f295e823daf266
+ms.sourcegitcommit: ed6b65a1a5aabc0970cd0333cb033405cf6d2aea
+ms.openlocfilehash: 52596b211acb1182cb38259cba267bdd0846de80
 ms.contentlocale: es-es
-ms.lasthandoff: 03/06/2017
+ms.lasthandoff: 07/03/2017
 
 
 ---
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/06/2017
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Con Configuration Manager e Intune, puede habilitar la inscripción BYOD ("Bring Your Own Device") de dispositivos iOS y Mac OS X para proporcionar acceso al correo electrónico y a los recursos de la empresa a los usuarios de iPhone, iPad y Mac. Una vez que los usuarios instalen la aplicación del portal de empresa Intune, puede aplicar directivas a sus dispositivos. Antes de que pueda administrar dispositivos iOS y Mac, debe importar un certificado del Servicio de notificaciones push de Apple (APNs). Este certificado permite a Intune administrar dispositivos iOS y Mac, además de establecer una conexión de IP acreditada y cifrada con los servicios de entidad de administración de dispositivos móviles.  
+Con Configuration Manager e Intune, puede habilitar la inscripción de dispositivos iOS y macOS para proporcionar acceso al correo electrónico y a los recursos de la empresa a los usuarios de iPhone, iPad y Mac. Una vez que los usuarios instalen la aplicación del portal de empresa Intune, puede aplicar directivas a sus dispositivos. Antes de que pueda administrar dispositivos iOS y Mac, debe importar un certificado del Servicio de notificaciones push de Apple (APNs). Este certificado permite a Intune administrar dispositivos iOS y Mac mediante el establecimiento de una conexión con el servicio de administración de dispositivos de Apple.  
 
  También puede inscribir dispositivos iOS de empresa.  Consulte [Enroll company-owned devices](enroll-company-owned-devices.md) (Inscripción de dispositivos de empresa).  
 
@@ -39,21 +39,21 @@ Con Configuration Manager e Intune, puede habilitar la inscripción BYOD ("Bring
 
 1.  **Requisitos previos**: para poder configurar la inscripción en cualquier plataforma, complete los requisitos previos y los procedimientos de [Setup hybrid MDM](setup-hybrid-mdm.md) (Configurar la MDM híbrida).    
 
-2.  **Descargue una solicitud de firma de certificado** : se necesita un archivo de solicitud de firma de certificado (.csr) para solicitar un certificado de APNs de Apple.  
+2.  **Descargue una solicitud de firma de certificado**: se necesita un archivo de solicitud de firma de certificado para solicitar un certificado de Apple Push Notification Service de Apple.  
 
     1.  En la consola de Configuration Manager, en el área de trabajo **Administración** , vaya a **Servicios en la nube**> **Suscripciones a Microsoft Intune**.  
 
     2.  En la pestaña **Inicio** , haga clic en **Crear solicitud de certificado APN**. Se abre el cuadro de diálogo **Solicitar petición de firma de certificado de servicio de notificaciones push de Apple** .  
 
-    3.  Utilice la función**Examinar** para seleccionar la ruta de acceso donde se guardará el nuevo archivo de solicitud de firma de certificado (.csr). Guarde la solicitud de firma de certificado (.csr) en el equipo local.  
+    3.  Utilice la función**Examinar** para seleccionar la ruta de acceso donde se guardará el nuevo archivo de solicitud de firma de certificado. Guarde la solicitud de firma de certificado en el equipo local.  
 
-    4.  Haga clic en **Descargar**. El nuevo archivo .csr de Microsoft Intune se descarga y Configuration Manager lo guarda. Se utiliza el archivo .csr para solicitar un certificado de relación de confianza desde el portal de certificados push de Apple.  
+    4.  Haga clic en **Descargar**. El nuevo archivo de solicitud de firma de certificado de Microsoft Intune se descarga y Configuration Manager lo guarda. El archivo de solicitud de firma de certificado se utiliza para solicitar un certificado de relación de confianza desde el portal Apple Push Certificates Portal.  
 
 3.  **Solicite un certificado de APNs de Apple** : el certificado del Servicio de notificaciones push Apple (APNs) se usa para establecer una relación de confianza entre el servicio de administración, Intune y los dispositivos móviles iOS inscritos.  
 
     1.  En un explorador, vaya al [portal de certificados push de Apple](http://go.microsoft.com/fwlink/?LinkId=269844) e inicie sesión con su identificador de Apple de empresa. Este ID de Apple debe utilizarse en el futuro para renovar el certificado APNs.  
 
-    2.  Complete el asistente usando el archivo de solicitud de firma de certificado (.csr). Descargue el certificado de APNs y guarde el archivo .pem localmente. Este archivo de certificado de APNs (.pem) se usa para establecer una relación de confianza entre el servidor de notificaciones push de Apple y la entidad de administración de dispositivos móviles de Intune.  
+    2.  Complete el asistente usando el archivo de solicitud de firma de certificado (.csr). Descargue el certificado Apple Push Notification Service y guarde el archivo .pem de forma local. Este archivo de certificado de APNs (.pem) se usa para establecer una relación de confianza entre el servidor de notificaciones push de Apple y la entidad de administración de dispositivos móviles de Intune.  
 
 4.  **Habilite la inscripción y cargue el certificado de APNs** : para habilitar la inscripción de iOS, cargue el certificado de APNs.  
 
@@ -68,7 +68,7 @@ Con Configuration Manager e Intune, puede habilitar la inscripción BYOD ("Bring
 
     4.  Haga clic en **Examinar**y vaya al archivo de certificado de APNs (.cer) que descargó de Apple. Manager Configuration muestra la información del certificado de APNs. Haga clic en **Aceptar** para guardar en Intune el certificado de APNs.  
 
- Cuando esté listo, necesitará que los usuarios sepan cómo inscribir sus dispositivos. Consulte [Qué decirles a los usuarios finales sobre el uso de Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). Esta información se aplica a Microsoft Intune y a dispositivos móviles administrados por Configuration Manager.
+ Cuando esté listo, necesitará que los usuarios sepan cómo inscribir sus dispositivos. Consulte [Qué decirles a los usuarios finales sobre el uso de Microsoft Intune](https://docs.microsoft.com/intune/end-user-educate). Esta información se aplica a Microsoft Intune y a dispositivos móviles administrados por Configuration Manager.
 
 > [!div class="button"]
 [< Paso anterior](create-service-connection-point.md)  [Paso siguiente >](set-up-additional-management.md)

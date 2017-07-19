@@ -15,11 +15,11 @@ caps.latest.revision: 18
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-experimental: true
-experiment_id: rob-table-161101
-translationtype: Human Translation
-ms.sourcegitcommit: 5aef08865b232ff2dacec6906098bebf4e42e6b1
-ms.openlocfilehash: 699adb5fac0c625c321db011af6989cc4c0778ec
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
+ms.openlocfilehash: 959a36413d06bb225f260bd44c1d3d59efd44e69
+ms.contentlocale: es-es
+ms.lasthandoff: 06/28/2017
 
 
 ---
@@ -37,11 +37,11 @@ En este tema, aprenderá los conceptos básicos que necesita saber antes de empe
 
  Cuando la aplicación se implementa en dispositivos, los **requisitos** deciden qué tipo de implementación se instala en el dispositivo.  
 
- Por supuesto, hay muchas más cosas que puede hacer con una aplicación y obtendrá información sobre estas a medida que lea esta guía. La tabla siguiente presenta algunos conceptos que debe saber antes de empezar a investigar un poco más. No necesitará todos estos conceptos en cada aplicación que cree:  
+ Puede hacer muchas más cosas con una aplicación. Obtendrá información sobre ellas a medida que avance por esta guía. La tabla siguiente presenta algunos conceptos que debe saber antes de empezar a investigar un poco más:  
 
 |Concepto|Descripción|    
 |-|-|  
-|**Requirements**|En versiones anteriores de Configuration Manager, a menudo se creaba una recopilación que contenía los dispositivos que quería implementar en una aplicación. Aunque es posible crear dicha recopilación, los requisitos hacen que no sea tan necesaria su creación, ya que permiten especificar criterios mucho más granulares para la instalación de una aplicación.<br /><br /> Por ejemplo, puede especificar que una aplicación se instale solo en dispositivos que ejecutan Windows 10. A continuación, puede implementar la aplicación en todos los dispositivos, pero solo se instalará en los dispositivos que ejecuten Windows 10.<br /><br /> Configuration Manager evalúa los requisitos para determinar si se instalará una aplicación y cualquiera de sus tipos de implementación. A continuación, determina el tipo de implementación correcto mediante el que debe instalarse una aplicación. Cada siete días, de forma predeterminada, las reglas de requisitos se vuelven a evaluar para garantizar su cumplimiento conforme a la configuración de cliente **Programar la reevaluación para implementaciones**.<br /><br /> Para obtener más información, consulte [Crear e implementar una aplicación](../../apps/get-started/create-and-deploy-an-application.md).|  
+|**Requirements**|En versiones anteriores de Configuration Manager, a menudo se creaba una recopilación que contenía los dispositivos que quería implementar en una aplicación. Aunque todavía puede crear una recopilación, con los requisitos puede especificar criterios más detallados para la implementación de una aplicación.<br /><br /> Por ejemplo, puede especificar que una aplicación se instale solo en dispositivos que ejecutan Windows 10. A continuación, puede implementar la aplicación en los dispositivos, pero solo se instalará en los dispositivos que ejecuten Windows 10.<br /><br /> Configuration Manager evalúa los requisitos para determinar si se instalará una aplicación y cualquiera de sus tipos de implementación. A continuación, determina el tipo de implementación correcto mediante el que debe instalarse una aplicación. Cada siete días, de forma predeterminada, las reglas de requisitos se vuelven a evaluar para garantizar su cumplimiento conforme a la configuración de cliente **Programar la reevaluación para implementaciones**.<br /><br /> Para obtener más información, consulte [Crear e implementar una aplicación](../../apps/get-started/create-and-deploy-an-application.md).|  
 |**Condiciones globales**|Cuando se utilicen los requisitos con un tipo de implementación específico en una única aplicación, también podrá crear condiciones globales. Son una biblioteca de requisitos predefinidos que puede usar con cualquier aplicación y tipo de implementación.<br /><br /> Configuration Manager contiene un conjunto de condiciones globales integradas y también permite crear las suyas propias.<br /><br /> Para obtener más información, consulte [Crear condiciones globales](../../apps/deploy-use/create-global-conditions.md).|  
 |**Implementación simulada**|Evalúa los requisitos, el método de detección y las dependencias de una aplicación. Informa de los resultados sin instalar realmente la aplicación.<br /><br /> Para obtener más información, consulte [Simular implementaciones de aplicaciones](../../apps/deploy-use/simulate-application-deployments.md).|  
 |**Acción de implementación**|Especifica si desea instalar o desinstalar (si se admite) la aplicación que se va a implementar.<br /><br /> Para obtener más información, consulte [Implementar aplicaciones](../../apps/deploy-use/deploy-applications.md).|  
@@ -110,9 +110,4 @@ Además, al administrar dispositivos a través de la administración de disposit
 -   Scripts que se ejecutan según una programación periódica y no pueden usar evaluación global.
 
  Para obtener más información, consulte [Paquetes y programas](../../apps/deploy-use/packages-and-programs.md).  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

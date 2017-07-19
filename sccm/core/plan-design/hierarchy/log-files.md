@@ -2,7 +2,7 @@
 title: Archivos de registro para Configuration Manager | Microsoft Docs
 description: "Utilice los archivos de registro para solucionar problemas en una jerarquía de System Center Configuration Manager."
 ms.custom: na
-ms.date: 3/28/2017
+ms.date: 7/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: b991b4ea27e66c233b04f8e65a412404521d89a6
+ms.sourcegitcommit: 5e1bc0063ab3d34410f7dbc773a5eacdd5eb6d2f
+ms.openlocfilehash: 28597cf1cb269fff0872c7f79ef961496aea32ab
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/05/2017
 
 
 ---
@@ -507,7 +507,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 ||||
 |-|-|-|
 |Nombre del registro|Descripción|Equipo con el archivo de registro|
-|CloudMgr.log|Registra detalles sobre la implementación del servicio de puerta de enlace de administración en la nube, el estado del servicio en curso y datos de uso asociados con el servicio.<br>Puede configurar el nivel de registro si modifica el registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level**|La carpeta **SMS/Registros** del servidor de sistema de sitio|
+|CloudMgr.log|Registra detalles sobre la implementación del servicio de puerta de enlace de administración en la nube, el estado del servicio en curso y datos de uso asociados con el servicio.<br>Puede configurar el nivel de registro si modifica el registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level**|La carpeta *installdir* en el servidor de sitio primario o CAS.|
 |CMGSetup.log o CMG-*RoleInstanceID*-CMGSetup.log<sup>1</sup>|Registra detalles sobre la segunda fase de la implementación de Cloud Management Gateway (implementación local en Azure).<br>Puede configurar el nivel de registro mediante la configuración de **Nivel de seguimiento** [**Información** (predeterminada), **Detallado**, **Error**] en la pestaña de **configuración de Azure Portal\Cloud Services**.|**%approot%\logs** en el servidor de Azure o la carpeta SMS/Registros en el servidor de sistema de sitio|
 |CMGHttpHandler.log o CMG-*RoleInstanceID*- CMGHttpHandler.log<sup>1</sup>|Registra detalles sobre el enlace el controlador http de Cloud Management Gateway con Internet Information Services en Azure.<br>Puede configurar el nivel de registro mediante la configuración de **Nivel de seguimiento** [**Información** (predeterminada), **Detallado**, **Error**] en la pestaña de **configuración de Azure Portal\Cloud Services**.|**%approot%\logs** en el servidor de Azure o la carpeta SMS/Registros en el servidor de sistema de sitio|
 |CMGService.log o CMG-*RoleInstanceID*- CMGService.log<sup>1</sup>|Registra detalles sobre el componente principal del servicio Cloud Management Gateway en Azure.<br>Puede configurar el nivel de registro mediante la configuración de **Nivel de seguimiento** [**Información** (predeterminada), **Detallado**, **Error**] en la pestaña de **configuración de Azure Portal\Cloud Services**.|**%approot%\logs** en el servidor de Azure o la carpeta SMS/Registros en el servidor de sistema de sitio|

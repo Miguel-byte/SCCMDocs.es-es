@@ -17,10 +17,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
-ms.openlocfilehash: a33960fb89b71c0f8128e21a5054f5b63cfc6b17
+ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
+ms.openlocfilehash: 4bc076bba4672d0be0032ec785da20e60b11a6c4
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/28/2017
 
 
 ---
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/17/2017
 
 System Center Configuration Manager usa un método de servicio en la consola denominado **Actualizaciones y mantenimiento** que facilita la búsqueda e instalación de las actualizaciones recomendadas para la infraestructura de Configuration Manager. Este método de servicio en la consola se complementa con actualizaciones fuera de banda, como revisiones destinadas a los clientes que necesitan solucionar problemas que pueden ser específicos para su entorno.  
 
-> [!TIP]
+> [!TIP]  
 > Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* e *instalar* se usan para describir tres conceptos independientes. ** Para obtener información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).
 
 
@@ -85,7 +85,7 @@ Las siguientes versiones de Configuration Manager están disponibles como línea
 | 1511 <br /><br /> 5.00.8325.1000|12/8/2015| 8/12/2016|Sí|No|  
 
 
-*(Nota 1)* Este medio de línea base 1606 está disponible como parte de Microsoft System Center 2016 o de una versión de System Center Configuration Manager (rama actual y rama de mantenimiento a largo plazo 1606).
+*(Nota 1)* Los medios de base de referencia 1606 y 1702 están disponibles como parte de las versiones Microsoft System Center 2016 o System Center Configuration Manager (Rama actual y Rama de mantenimiento a largo plazo) en el [Centro de servicios de licencias por volumen](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx). Por ejemplo, en el Centro de servicios de licencias por volumen se puede buscar *System Center Config Mgr (Rama actual y Rama de mantenimiento a largo plazo )* y en los resultados figurarán los medios de base de referencia de la versión 1606 y 1702, disponibles para su descarga.
 
 Para comprobar la versión del sitio de Configuration Manager, vaya a **Acerca de System Center Configuration Manager** en la esquina superior izquierda de la consola, donde aparece la nueva versión del sitio y la consola.  
 

@@ -17,10 +17,10 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 071d758f1015d16217a54fe26df5f8f948c818a3
+ms.sourcegitcommit: 6f9e6e93fce95666503907010a5c253158c5de7c
+ms.openlocfilehash: f648d7626af50d95fbaa5a7a2abd821a9c47f5d1
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/07/2017
 
 
 ---
@@ -629,6 +629,9 @@ Este paso de secuencia de tareas solo se ejecuta en Windows PE, no en sistemas o
 
 -   Para descargar dinámicamente un paquete de controladores aplicables, use dos pasos **Descargar contenido de paquete** con condiciones para detectar el tipo de hardware adecuado para cada paquete de controlador. Configure todos los pasos **Descargar contenido de paquete** para que usen la misma variable, y use la variable para el valor **Staged content** en la sección de controladores en el paso **Actualizar sistema operativo** .  
 
+> [!NOTE]    
+> Al implementar una secuencia de tareas que contiene el paso Descargar contenido de paquete, no seleccione **Download all content locally before starting the task sequence** (Descargar todo el contenido localmente antes de iniciar la secuencia de tareas) para **Opciones de implementación** en la página **Puntos de distribución** del Asistente para implementar software.  
+
 Este paso se ejecuta en un sistema operativo estándar o en Windows PE. Pero en WinPE no se admite la opción de guardar el paquete en la caché de cliente de Configuration Manager.
 
 ### <a name="details"></a>Detalles  
@@ -654,11 +657,11 @@ Este paso se ejecuta en un sistema operativo estándar o en Windows PE. Pero en 
  **Colocar en la siguiente ubicación**  
  Elija esta opción para guardar el paquete en una de las siguientes ubicaciones:  
 
--   **Directorio de trabajo de secuencia de tareas**  
+ -   **Directorio de trabajo de secuencia de tareas**  
 
--   **Caché de cliente de Configuration Manager**: use esta opción para almacenar el contenido en la caché de los clientes. Esto permite que el cliente actúe como origen de caché del mismo nivel para otros clientes de caché del mismo nivel. Para obtener más información, consulte [Preparar el almacenamiento en caché del mismo nivel de Windows PE para reducir el tráfico WAN](../get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).  
+ -   **Caché de cliente de Configuration Manager**: use esta opción para almacenar el contenido en la caché de los clientes. Esto permite que el cliente actúe como origen de caché del mismo nivel para otros clientes de caché del mismo nivel. Para obtener más información, consulte [Preparar el almacenamiento en caché del mismo nivel de Windows PE para reducir el tráfico WAN](../get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).  
 
--   **Ruta de acceso personalizada**  
+ -   **Ruta de acceso personalizada**  
 
  **Guardar ruta de acceso como variable**  
  Puede guardar la ruta de acceso como una variable que puede usar en otro paso de la secuencia de tareas. Configuration Manager agrega un sufijo numérico al nombre de variable. Por ejemplo, si especifica una variable de %*mycontent*% como una variable personalizada, es la raíz de donde se almacena todo el contenido al que se hace referencia (que pueden ser varios paquetes). Al hacer referencia a la variable, agregará un sufijo numérico a la variable. Por ejemplo, para el primer paquete, hará referencia a la variable %*mycontent01*%. Cuando se hace referencia a la variable en unos pasos de subsecuencia, como Actualizar sistema operativo, usaría %*mycontent02*% o %*mycontent03*%, donde el número corresponde al orden en el que el paquete aparece en el paso.  

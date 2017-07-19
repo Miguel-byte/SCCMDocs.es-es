@@ -2,7 +2,7 @@
 title: "Usar el Centro de software para implementar Windows a través de la red | Microsoft Docs"
 description: "Puede implementar un sistema operativo en el Centro de software para actualizar un equipo existente con una nueva versión de Windows o para actualizar Windows a la versión más reciente."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 6/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 919e3636-53fe-4119-ad14-2d03702b391b
 caps.latest.revision: 5
-author: Dougeby
-ms.author: dougeby
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 4c3ec20396da37d36f908af527f445a7a736e0ac
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
+ms.openlocfilehash: 8988409c68b7f69439ed03872c316b2139d25616
+ms.contentlocale: es-es
+ms.lasthandoff: 06/28/2017
 
 
 ---
@@ -25,26 +27,21 @@ ms.openlocfilehash: 4c3ec20396da37d36f908af527f445a7a736e0ac
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-La secuencia de tareas para instalar un sistema operativo en System Center Configuration Manager puede estar disponible en el Centro de software. Puede implementar un sistemas operativo en Centro de software en los siguientes escenarios de implementación de sistema operativo:  
+Puede hacer que la secuencia de tareas que instala un sistema operativo en System Center Configuration Manager esté disponible en el Centro de software. Puede implementar un sistema operativo en el Centro de software en los siguientes escenarios de implementación de sistema operativo:
 
--   [Actualizar un equipo existente con una nueva versión de Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+-   [Actualizar un equipo existente con una nueva versión de Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)
 
--   [Actualizar Windows a la versión más reciente](upgrade-windows-to-the-latest-version.md)  
+-   [Actualizar Windows a la versión más reciente](upgrade-windows-to-the-latest-version.md)
 
- Complete los pasos de uno de los escenarios de implementación de sistema operativo y luego use las secciones siguientes para prepararse para las implementaciones disponibles en el Centro de software.  
+Complete los pasos de uno de los escenarios de implementación de sistema operativo. Luego siga estas secciones para prepararse para las implementaciones que están disponibles en el Centro de software.
 
 ## <a name="configure-deployment-settings"></a>Configurar la implementación  
- Cuando quiera que la implementación del sistema operativo esté disponible en el Centro de software, debe configurar la implementación para que el sistema operativo esté disponible para los clientes de Configuration Manager. Puede configurar esto en la página **Configuración de implementación** del Asistente para implementar Software o en la pestaña **Configuración de implementación** en las propiedades de la implementación.  Para la configuración **Estar disponible para** , configure **Solo clientes de Configuration Manager** o **PXE, medios y clientes de Configuration Manager**. Después de implementar el sistema operativo, se mostrará en el Centro de software para los miembros de la recopilación de destino.  
+Para que la implementación de sistema operativo esté disponible en el Centro de software, configure la implementación. Puede configurar la implementación en la página **Configuración de implementación** del Asistente para implementar software o en la pestaña **Configuración de implementación** en las propiedades de la implementación. Para la configuración **Estar disponible para** , configure **Solo clientes de Configuration Manager** o **PXE, medios y clientes de Configuration Manager**. Una vez que el sistema implemente el sistema operativo, este aparecerá en el Centro de software para los miembros de la recopilación de destino.
 
-##  <a name="a-namebkmkdeploya-deploy-the-task-sequence-to-computers"></a><a name="BKMK_Deploy"></a> Implemente la secuencia de tareas en los equipos.  
- Implemente el sistema operativo en una recopilación de destino. Para obtener más información, vea [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS). Al implementar sistemas operativos para el Centro de software, puede configurar si la implementación es necesaria o está disponible.  
+##  <a name="BKMK_Deploy"></a> Implemente la secuencia de tareas en los equipos.  
+Implemente el sistema operativo en una recopilación de destino. Para obtener más información, vea [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS). Al implementar sistemas operativos para el Centro de software, puede configurar si la implementación es necesaria o está disponible.
 
--   **Implementación necesaria**: las implementaciones necesarias harán que el sistema operativo esté disponible en el Centro de software, pero se iniciará automáticamente según la programación de asignación configurada.  
+-   **Implementación necesaria**: las implementaciones necesarias harán que el sistema operativo esté disponible en el Centro de software, pero se iniciará automáticamente según la programación de asignación configurada.
 
--   **Implementación disponible**: el sistema operativo estará disponible en el Centro de software y el usuario puede instalarlo a petición.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
+-   **Implementación disponible**: el sistema operativo estará disponible en el Centro de software y el usuario puede instalarlo a petición.
 

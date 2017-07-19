@@ -6,7 +6,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 03/28/2017
+ms.date: 06/27/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,10 +14,10 @@ ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
-ms.openlocfilehash: 703adc87b9498e39a1db71b94f1bc1a05a4889ec
+ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
+ms.openlocfilehash: b5a2fd9f15992c9e5ef8aede64af5446b6852b1a
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/28/2017
 
 
 ---
@@ -294,6 +294,9 @@ Las actualizaciones de software requieren que haya una versión compatible de WS
 
 -   Si una actualización de software de sustitución no se aprobó para su implementación en el entorno de producción.  
 
+    > [!NOTE]  
+    >  Cuando Configuration Manager establece una actualización de software reemplazada en estado **Expirado**, no establece la actualización en **Expirado** en WSUS. Sin embargo, cuando se ejecuta la tarea de limpieza de WSUS, las actualizaciones configuradas en el estado **Expirado** en Configuration Manager se establecen en un estado de **Rechazado** en el servidor de WSUS y el agente de Windows Update de los equipos ya no buscará estas actualizaciones. Esto significa que los clientes seguirán buscando una actualización caducada hasta que se ejecute la tarea de limpieza. Para obtener información acerca de la tarea de limpieza de WSUS, consulte [Mantenimiento de las actualizaciones de software](/sccm/sum/deploy-use/software-updates-maintenance).
+    
 ###  <a name="BKMK_UpdateLanguages"></a> Idiomas  
  La configuración de idioma para el punto de actualización de software permite configurar los idiomas en los que se sincronizan los detalles de resumen (metadatos de actualizaciones de software) para las actualizaciones de software, así como los idiomas de los archivos de actualización de software que se descargarán para las actualizaciones de software.  
 

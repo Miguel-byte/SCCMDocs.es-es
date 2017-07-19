@@ -2,7 +2,7 @@
 title: "Caché del mismo nivel de cliente | System Center Configuration Manager"
 description: "Use la caché del mismo nivel de cliente para las ubicaciones de origen de contenido cuando se distribuya contenido con System Center Configuration Manager."
 ms.custom: na
-ms.date: 4/4/2017
+ms.date: 7/3/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 26feb0b166beb7e48cb800a5077d00dbc3eec51a
-ms.openlocfilehash: dcd05d7d120f8997562da7d92b38c8b52a512357
+ms.sourcegitcommit: ed6b65a1a5aabc0970cd0333cb033405cf6d2aea
+ms.openlocfilehash: 94802680747a3d371716c1b345b2cba098150716
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
@@ -33,18 +33,20 @@ Comenzando por la versión 1610 de System Center Configuration Manager, puede us
 > El panel de orígenes de datos de cliente y la memoria caché del mismo nivel son funciones de la versión preliminar introducidas en la versión 1610. Para habilitarlos, vea [Uso de características de la versión preliminar a partir de las actualizaciones](/sccm/core/servers/manage/pre-release-features).
 
 ## <a name="overview"></a>Información general
- -     Use la configuración de cliente para configurar los clientes y usar la caché del mismo nivel.
- -     Para compartir el contenido, los clientes de la caché del mismo nivel deben ser miembros del grupo de límites actual del cliente que busca el contenido. Los clientes de la caché del mismo nivel en grupos de límites vecino no están incluidos con el grupo de ubicaciones de origen de contenido disponibles cuando un cliente usa la reserva para buscar contenido de un grupo de límites vecino. Para más información acerca de los grupos de límites actuales y vecinos, vea [Grupos de límites](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).
- - Los clientes sin almacenamiento en caché del mismo nivel, pero que están en el grupo de límites actual con clientes con almacenamiento en caché del mismo nivel, pueden obtener contenidos del cliente con almacenamiento en caché del mismo nivel.  
+Un cliente de la caché del mismo nivel es un cliente de Configuration Manager que está habilitado para usar el almacenamiento en la caché del mismo nivel. Un cliente de la caché del mismo nivel que tenga contenido que puede compartir con otros clientes es un origen de la caché del mismo nivel.
+ -  Use la configuración de cliente para configurar los clientes y usar la caché del mismo nivel.
+ -  Para compartir el contenido como origen de la caché del mismo nivel, un cliente de la caché del mismo nivel debe cumplir los requisitos siguientes:
+    -  Debe estar unido a un dominio. Sin embargo, un cliente que no esté unido a un dominio podrá obtener contenido de un origen de la caché del mismo nivel unido a dominio.
+    -  Debe ser miembro del grupo de límites actual del cliente que está buscando el contenido. Un cliente de la caché del mismo nivel en grupos de límites vecino no está incluido con el grupo de ubicaciones de origen de contenido disponibles cuando un cliente usa la reserva para buscar contenido de un grupo de límites vecino. Para más información acerca de los grupos de límites actuales y vecinos, vea [Grupos de límites](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).
  - Todos los tipos de contenido que se conservan en la caché del cliente de Configuration Manager pueden proporcionarse a otros clientes mediante la caché del mismo nivel.
- -    La caché del mismo nivel no reemplaza el uso de otras soluciones como BranchCache, sino que funciona en paralelo para ofrecerle más opciones que amplíen las tradicionales soluciones de implementación de contenido, como los puntos de distribución. Se trata de una solución personalizada sin ninguna dependencia de BranchCache, por lo que seguirá funcionando aunque no habilite o use Windows BranchCache.
+ -  La caché del mismo nivel no reemplaza el uso de otras soluciones como BranchCache, sino que funciona en paralelo para ofrecerle más opciones que amplíen las tradicionales soluciones de implementación de contenido, como los puntos de distribución. Se trata de una solución personalizada sin ninguna dependencia de BranchCache, por lo que seguirá funcionando aunque no habilite o use Windows BranchCache.
 
 ### <a name="operations"></a>Operaciones
 
 Después de implementar la configuración de cliente que habilita la caché del mismo nivel en una colección, los miembros de esa colección pueden actuar como origen de contenido del mismo nivel para otros clientes en el mismo grupo de límites:
- -    El cliente que actúa como origen de contenido del mismo nivel envía una lista de contenido almacenado en caché disponible a su punto de administración.
- -    A continuación, cuando el siguiente cliente en ese grupo de límites solicita contenido, cada origen de la caché del mismo nivel que tiene el contenido se devuelve como un origen de contenido posible junto con los puntos de distribución y otras ubicaciones de origen de contenido en ese grupo de límites.
- -    Según el proceso de funcionamiento normal, el cliente que busca el contenido selecciona un origen de contenido del conjunto de orígenes que se proporciona y, después, intenta obtener el contenido.
+ -  El cliente que actúa como origen de contenido del mismo nivel envía una lista de contenido almacenado en caché disponible a su punto de administración.
+ -  A continuación, cuando el siguiente cliente en ese grupo de límites solicita contenido, cada origen de la caché del mismo nivel que tiene el contenido se devuelve como un origen de contenido posible junto con los puntos de distribución y otras ubicaciones de origen de contenido en ese grupo de límites.
+ -  Según el proceso de funcionamiento normal, el cliente que busca el contenido selecciona un origen de contenido del conjunto de orígenes que se proporciona y, después, intenta obtener el contenido.
 
 > [!NOTE]
 > Si se produce una reserva para un grupo de límites vecino para el contenido, las ubicaciones de origen de contenido de la caché del mismo nivel del grupo de límites vecino no se agregan al grupo del cliente de ubicaciones de origen de contenido potenciales.  
@@ -94,13 +96,13 @@ Utilice este informe para conocer los detalles de rechazo de un tipo de rechazo 
 
 -   Los sitios en los que los clientes usen la caché del mismo nivel deben estar configurados con una [cuenta de acceso de red](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account). El equipo de origen de la caché del mismo nivel usa dicha cuenta para autenticar las solicitudes de elementos del mismo nivel, acción para la que solo se necesitan permisos de usuario de dominio.
 
--     Dado que el límite actual de un origen de contenido de la caché del mismo nivel viene determinado por el último envío de inventario de hardware del cliente, si un cliente se mueve a una ubicación de red y se encuentra en un grupo de límites diferente, podría seguir considerándose miembro de su grupo de límites anterior para la caché del mismo nivel. Esto puede dar lugar a que un cliente ofrezca un origen de contenido de la caché del mismo nivel que no está en su ubicación de red inmediata. Se recomienda excluir del origen de la caché del mismo nivel a los clientes que son propensos a esta configuración.
+-   Dado que el límite actual de un origen de contenido de la caché del mismo nivel viene determinado por el último envío de inventario de hardware del cliente, si un cliente se mueve a una ubicación de red y se encuentra en un grupo de límites diferente, podría seguir considerándose miembro de su grupo de límites anterior para la caché del mismo nivel. Esto puede dar lugar a que un cliente ofrezca un origen de contenido de la caché del mismo nivel que no está en su ubicación de red inmediata. Se recomienda excluir del origen de la caché del mismo nivel a los clientes que son propensos a esta configuración.
 
 ## <a name="to-configure-client-peer-cache-client-settings"></a>Para configurar las opciones de cliente de la caché del mismo nivel de cliente
-1.    En la consola de Configuration Manager, vaya a **Administración** > **Configuración de cliente** y, luego, abra el objeto de configuración de cliente de dispositivo que quiera usar. También puede modificar el objeto Configuración de cliente predeterminada.
-2.    En la lista de configuraciones disponibles, seleccione **Configuración de caché de cliente**.
-3.    **Habilite el cliente de Configuration Manager en el SO completo para compartir contenido** en **Sí**.
-4.    Configure las siguientes opciones para definir los puertos que desea utilizar para la caché del mismo nivel:  
+1.  En la consola de Configuration Manager, vaya a **Administración** > **Configuración de cliente** y, luego, abra el objeto de configuración de cliente de dispositivo que quiera usar. También puede modificar el objeto Configuración de cliente predeterminada.
+2.  En la lista de configuraciones disponibles, seleccione **Configuración de caché de cliente**.
+3.  **Habilite el cliente de Configuration Manager en el SO completo para compartir contenido** en **Sí**.
+4.  Configure las siguientes opciones para definir los puertos que desea utilizar para la caché del mismo nivel:  
   -  **Puerto para difusión de red inicial**
   -  **Habilitar HTTPS para la comunicación del mismo nivel del cliente**
   -  **Puerto para descarga de contenido desde nivel (HTTP/HTTPS)**
