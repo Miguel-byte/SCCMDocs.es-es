@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 45931f60273f3130cca36320770126a36dcc3d1e
-ms.openlocfilehash: 9870ffa6ae5f80db823bfc74a7cc2e67fc8cf21d
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
+ms.openlocfilehash: 17f3955aa7c63a13bab03b46002f7de0b0ec38fe
+ms.contentlocale: es-es
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -48,7 +50,7 @@ Con System Center Configuration Manager, puede migrar muchos de los distintos ob
 
 -   [Plan para migrar personalizaciones de reglas de disponibilidad de software](#Plan_Migrate_SWM_Rules)  
 
-##  <a name="a-nameplanmigratesoftwareupdatesa-plan-to-migrate-software-updates"></a><a name="Plan_migrate_Software_updates"></a> Plan para migrar actualizaciones de software  
+##  <a name="Plan_migrate_Software_updates"></a> Plan para migrar actualizaciones de software  
  Puede migrar objetos de actualización de software, como paquetes de actualización de software e implementaciones de actualización de software.  
 
  Para migrar satisfactoriamente objetos de actualización de software, primero debe configurar la jerarquía de destino con configuraciones que coincidan con el entorno de jerarquía de origen. Esto requiere las siguientes acciones:  
@@ -79,7 +81,7 @@ Cuando migre desde una jerarquía de origen de Configuration Manager 2007, el pr
 
 Al migrar objetos desde una jerarquía de origen de System Center 2012 Configuration Manager o System Center Configuration Manager, los objetos de las actualizaciones de software no se modifican.  
 
-##  <a name="a-nameplanmigratecontenta-plan-to-migrate-content"></a><a name="Plan_Migrate_content"></a> Plan para migrar contenido  
+##  <a name="Plan_Migrate_content"></a> Plan para migrar contenido  
  Puede migrar contenido de una jerarquía de origen compatible a la jerarquía de destino. Para una jerarquía de origen de Configuration Manager 2007, este contenido incluye paquetes y programas de distribución de software y aplicaciones virtuales, como Microsoft Application Virtualization (App-V). Para las jerarquías de origen de System Center 2012 Configuration Manager y System Center Configuration Manager, este contenido incluye aplicaciones y aplicaciones virtuales de App-V. Cuando se migra contenido entre jerarquías, son los archivos de origen comprimidos los que se migran a la jerarquía de destino.  
 
 ### <a name="packages-and-programs"></a>Paquetes y programas  
@@ -121,12 +123,12 @@ Puede migrar anuncios desde un sitio de origen compatible con Configuration Mana
 ### <a name="applications"></a>Aplicaciones  
  Puede migrar las aplicaciones a una jerarquía de destino desde una jerarquía de origen de System Center 2012 Configuration Manager o de System Center Configuration Manager que sea compatible. Si reasigna a un cliente de la jerarquía de origen a la jerarquía de destino, el cliente conserva el historial de las aplicaciones previamente instaladas para impedir que vuelva a ejecutar una aplicación migrada.  
 
-##  <a name="a-namebkmkmigratecollectionsa-plan-to-migrate-collections"></a><a name="BKMK_MigrateCollections"></a> Plan para migrar recopilaciones  
+##  <a name="BKMK_MigrateCollections"></a> Plan para migrar recopilaciones  
  Puede migrar los criterios de las recopilaciones de una jerarquía de origen compatible de System Center 2012 Configuration Manager o System Center Configuration Manager. Para ello, utilice una tarea de migración basada en objetos. Cuando se migra una recopilación, se migran las reglas de la misma y no la información acerca de los miembros de la recopilación ni la información o los objetos relacionados con los miembros de la recopilación.  
 
  La migración de objetos de recopilación no se admite si se migra desde una jerarquía de origen de Configuration Manager 2007.  
 
-##  <a name="a-nameplanmigrateosda-plan-to-migrate-operating-system-deployments"></a><a name="Plan_migrate_OSD"></a> Plan para migrar implementaciones de sistema operativo  
+##  <a name="Plan_migrate_OSD"></a> Plan para migrar implementaciones de sistema operativo  
 Puede migrar los siguientes objetos de implementación de sistema operativo de una jerarquía de origen compatible:  
 
 -   Imágenes y paquetes de sistema operativo. La ruta de origen de imágenes de arranque se actualiza en la ubicación de la imagen predeterminada para Windows Administrative Installation Kit (Windows AIK) en el sitio de destino. Los siguientes son los requisitos y las limitaciones de la migración de imágenes y paquetes de sistema operativo:  
@@ -142,9 +144,9 @@ Puede migrar los siguientes objetos de implementación de sistema operativo de u
     > [!NOTE]  
     >  Si migra una secuencia de tareas, es posible que Configuration Manager migre objetos no necesarios en la jerarquía de destino. Entre estos objetos se incluyen imágenes de arranque y paquetes de instalación de cliente de Configuration Manager 2007.  
 
--   Controladores y paquetes de controladores.  
+-   Controladores y paquetes de controladores. Al migrar paquetes de controladores, la cuenta de equipo del proveedor de SMS en la jerarquía de destino debe tener control total sobre el origen del paquete.
 
-##  <a name="a-nameplanmigratecompliancesettingsa-plan-to-migrate-desired-configuration-management"></a><a name="Plan_Migrate_Compliance_settings"></a> Plan para migrar la administración de configuración deseada  
+##  <a name="Plan_Migrate_Compliance_settings"></a> Plan para migrar la administración de configuración deseada  
 Puede migrar elementos de configuración y líneas de base de configuración.  
 
 > [!NOTE]  
@@ -152,14 +154,14 @@ Puede migrar elementos de configuración y líneas de base de configuración.
 
 Puede importar paquetes de configuración de Configuration Manager 2007. El proceso de importación convierte automáticamente los paquetes de configuración para que sean compatibles con System Center Configuration Manager.  
 
-##  <a name="a-nameplanmigrateboundariesa-plan-to-migrate-boundaries"></a><a name="Plan_migrate_Boundaries"></a> Plan para migrar límites  
+##  <a name="Plan_migrate_Boundaries"></a> Plan para migrar límites  
  Puede migrar los límites entre las jerarquías. Al migrar límites de Configuration Manager 2007, cada límite del sitio de origen se migra al mismo tiempo y se agrega a un nuevo grupo de límites que se crea en la jerarquía de destino. Cuando se migran límites de una jerarquía de System Center 2012 Configuration Manager o System Center Configuration Manager, cada límite seleccionado se agrega a un nuevo grupo de límites en la jerarquía de destino.  
 
  Cada grupo de límites creado automáticamente está habilitado para la ubicación de contenido pero no para la asignación de sitios. De esta manera se evita la superposición de límites para la asignación de sitios entre las jerarquías de origen y de destino. Migrar de un sitio de origen de Configuration Manager 2007 contribuye a evitar que los nuevos clientes de Configuration Manager 2007 instalados se asignen incorrectamente a la jerarquía de destino. De forma predeterminada, los clientes de System Center Configuration Manager no se asignan automáticamente a los sitios de Configuration Manager 2007.  
 
  Durante la migración, si comparte un punto de distribución con la jerarquía de destino, los límites que estén asociados con el punto de distribución automáticamente se migran a la jerarquía de destino. En la jerarquía de destino, la migración crea un nuevo grupo de límites de solo lectura para cada punto de distribución compartido. Si cambia los límites del punto de distribución en la jerarquía de origen, el grupo de límites en la jerarquía de destino se actualiza con estos cambios durante el siguiente ciclo de obtención de datos.  
 
-##  <a name="a-nameplanmigratereportsa-plan-to-migrate-reports"></a><a name="Plan_Migrate_reports"></a> Plan para migrar informes  
+##  <a name="Plan_Migrate_reports"></a> Plan para migrar informes  
 Configuration Manager no admite la migración de informes. En vez de ello, utilice el generador de informes de SQL Server Reporting Services para exportar informes de la jerarquía de origen y, a continuación, impórtelos a la jerarquía de destino.  
 
 > [!NOTE]  
@@ -167,7 +169,7 @@ Configuration Manager no admite la migración de informes. En vez de ello, utili
 
 Para más información sobre la generación de informes, vea [Generación de informes en System Center Configuration Manager](../../core/servers/manage/reporting.md).  
 
-##  <a name="a-nameplanmigrateorgfoldersa-plan-to-migrate-organizational-and-search-folders"></a><a name="Plan_Migrate_Org_Folders"></a> Plan para migrar carpetas organizativas y de búsqueda  
+##  <a name="Plan_Migrate_Org_Folders"></a> Plan para migrar carpetas organizativas y de búsqueda  
  Puede migrar las carpetas organizativas y las carpetas de búsqueda de una jerarquía de origen admitida a una jerarquía de destino. Además, desde una jerarquía de origen de System Center 2012 Configuration Manager o de System Center Configuration Manager, puede migrar los criterios de una búsqueda guardada a una jerarquía de destino.  
 
  De forma predeterminada, el proceso de migración conserva las estructuras de carpeta administrativa y de búsqueda de objetos y recopilaciones al migrar. Pero en el Asistente para crear nuevo trabajo de migración, en la página **Configuración**, puede configurar un trabajo de migración para que no migre la estructura organizativa de objetos mediante la desactivación de la casilla correspondiente. Las estructuras organizativas de las recopilaciones siempre se conservan.  
@@ -176,19 +178,14 @@ Para más información sobre la generación de informes, vea [Generación de inf
 
  Cuando se migra una búsqueda guardada de la jerarquía de origen de System Center 2012 Configuration Manager o System Center Configuration Manager, se migran los criterios de búsqueda y no la información del resultado de esta. La migración de una búsqueda guardada no es aplicable desde un sitio de origen de Configuration Manager 2007.  
 
-##  <a name="a-nameplanmigrateaia-plan-to-migrate-asset-intelligence-customizations"></a><a name="Plan_Migrate_AI"></a> Plan para migrar personalizaciones de Asset Intelligence  
+##  <a name="Plan_Migrate_AI"></a> Plan para migrar personalizaciones de Asset Intelligence  
  Puede migrar las personalizaciones de Asset Intelligence de una jerarquía de origen admitida a una jerarquía de destino. No hay cambios significativos en la estructura de las personalizaciones de Asset Intelligence entre Configuration Manager 2007 y System Center Configuration Manager.  
 
 > [!NOTE]  
 >  System Center Configuration Manager no admite la migración de objetos de Asset Intelligence de un sitio de Configuration Manager 2007 que usa Asset Intelligence Service 2.0 (AIS 2.0).  
 
-##  <a name="a-nameplanmigrateswmrulesa-plan-to-migrate-software-metering-rules-customizations"></a><a name="Plan_Migrate_SWM_Rules"></a> Plan para migrar personalizaciones de reglas de disponibilidad de software  
+##  <a name="Plan_Migrate_SWM_Rules"></a> Plan para migrar personalizaciones de reglas de disponibilidad de software  
  No hay ningún cambio significativo en la medición de software entre Configuration Manager 2007 y System Center Configuration Manager. Puede migrar las reglas de disponibilidad de software de una jerarquía de origen admitida a una jerarquía de destino.  
 
  De manera predeterminada, las reglas de disponibilidad de software que se migran a una jerarquía de destino no están asociadas a un sitio en la jerarquía de destino, sino que se aplican a todos los clientes en la jerarquía. Para aplicar una regla de disponibilidad de software a clientes de un determinado sitio, debe editar la regla de disponibilidad después de su migración.  
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

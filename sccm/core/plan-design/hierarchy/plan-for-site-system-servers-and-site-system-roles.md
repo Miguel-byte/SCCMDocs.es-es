@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a93ea730c39cce9dc46036f5aa6ece4a62679d0f
-ms.openlocfilehash: 0d16d362b798c194645f987088ba8a95a7be3f19
+ms.sourcegitcommit: 0ebda27c0f3848615346c2ecf1ab8b9bb9ab6f0d
+ms.openlocfilehash: 0a3704a2d3b75ed7e0a7f718b681448ab6fc078d
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 05/26/2017
 
 
 ---
@@ -81,7 +81,7 @@ Una vez instalado un sitio, se puede mover la ubicación de algunos roles de sis
 
 -   **Punto de distribución.** Rol de sistema de sitio que contiene archivos de origen para que descarguen los clientes, tales como imágenes de arranque, paquetes de software, actualizaciones de software, imágenes del sistema operativo y contenido de la aplicación. De forma predeterminada, este rol se instala en el equipo del servidor de sitio de nuevos sitios primarios y secundarios cuando se instala el sitio. Este rol no se admite en un sitio de administración central. Se pueden instalar varias instancias de este rol en un sitio admitido y en varios sitios de la misma jerarquía. Para obtener más información, consulte [Conceptos básicos de la administración de contenido en System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md), y [Administración del contenido y de la infraestructura de contenido para System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
--   **Punto de estado de reserva.** Rol de sistema de sitio que le ayuda a supervisar la instalación del cliente e identificar a los clientes que no están administrados porque no se pueden comunicar con su punto de administración. Aunque este rol solo se admite en sitios primarios, puede instalar varias instancias de este rol en un sitio y en varios sitios de la misma jerarquía. Para obtener más información, vea [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md) (Escenarios de ubicación de origen del contenido).
+-   **Punto de estado de reserva.** Rol de sistema de sitio que le ayuda a supervisar la instalación del cliente e identificar a los clientes que no están administrados porque no se pueden comunicar con su punto de administración. Aunque este rol solo se admite en sitios primarios, puede instalar varias instancias de él en un sitio y en varios sitios de la misma jerarquía.     
 
 
 -   **Punto de Endpoint Protection.** Rol del sistema de sitio que Configuration Manager utiliza para aceptar los términos de la licencia de Endpoint Protection y configurar la pertenencia predeterminada a Microsoft Active Protection Service. Una jerarquía admite una sola instancia de este rol, y esa debe estar en el sitio de nivel superior de la jerarquía (un sitio de administración central o el sitio primario independiente). Si expande un sitio primario independiente a una jerarquía más grande, debe desinstalar este rol desde el sitio primario y luego instalarlo en el sitio de administración central. Para obtener más información, vea [Endpoint Protection en System Center Configuration Manager](../../../protect/deploy-use/endpoint-protection.md).  

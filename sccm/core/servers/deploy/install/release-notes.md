@@ -2,7 +2,7 @@
 title: "Notas de la versión en Configuration Manager | Microsoft Docs"
 description: "Consulte estas notas relativas a problemas urgentes que aún no se han corregido en el producto o no se han tratado en un artículo de Microsoft Knowledge Base."
 ms.custom: na
-ms.date: 05/11/2017
+ms.date: 05/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d5166b16ffbe46af561b1ce98c0494cc4aaa72a8
-ms.openlocfilehash: 9da6f9678a7fb5c76f365a3522f5e5e0fdfec037
+ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
+ms.openlocfilehash: 6113576ca38da27e9e8732b3930deee96db4ae2c
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/01/2017
 
 
 ---
@@ -153,7 +153,7 @@ La excepción es similar a la siguiente:
 
 Al implementar el cliente en equipos con Windows, se produce un error en la instalación. El archivo ccmsetup.log contiene la entrada "File 'C:\WINDOWS\ccmsetup\Silverlight.exe' returned failure exit code 1612. Fail the installation" followed by "InstallFromManifest failed 0x8007064c".
 
-**Solución** Esto se debe a una versión de Silverlight previamente instalada que está dañada. Puede intentar ejecutar la herramienta siguiente en el equipo afectado para solucionar este problema: [https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed) 
+**Solución** Esto se debe a una versión de Silverlight previamente instalada que está dañada. Puede intentar ejecutar la herramienta siguiente en el equipo afectado para solucionar este problema: [https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed)
 
 
 
@@ -200,6 +200,14 @@ Después de crear e implementar una implementación de tareas de alto riesgo par
 
 **Solución alternativa**:  
 El usuario debe cerrar el cuadro de diálogo de la primera implementación de alto riesgo para ver el cuadro de diálogo de la siguiente implementación de alto riesgo.
+
+## <a name="software-updates"></a>Actualizaciones de software
+
+### <a name="importing-an-office-365-client-settings-from-a-configuration-file-fails-when-it-contains-unsupported-languages"></a>La importación de una configuración de cliente de Office 365 desde un archivo de configuración genera un error cuando contiene idiomas no admitidos
+Al importar la configuración de cliente de Office 365 desde un archivo de configuración XML existente, si el archivo contiene idiomas que no son compatibles con el cliente de Office 365 ProPlus, se producirá un error. Para obtener más información, consulte [Para implementar aplicaciones de Office 365 en clientes desde el panel Administración de clientes de Office 365](/sccm/sum/deploy-use/manage-office-365-proplus-updates#to-deploy-office-365-apps-to-clients-from-the-office-365-client-management-dashboard).
+
+**Solución alternativa**:    
+Use solo los [idiomas admitidos por el cliente de Office 365 ProPlus](https://technet.microsoft.com/library/cc179219&#40;v=office.16&#41;.aspx) en el archivo de configuración XML.  
 
 ## <a name="mobile-device-management"></a>Administración de dispositivos móviles  
 
@@ -250,9 +258,16 @@ Este problema afecta al acceso condicional de System Center Configuration Manage
 **Solución alternativa**: agregue la **recopilación de usuarios** a la página **Colecciones objetivo** antes de seleccionar la **recopilación de usuarios** en la página **Recopilaciones exentas**, o asegúrese de que no agrega la misma **recopilación de usuarios** tanto a las recopilaciones objetivo como exentas.
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
-<!--  Product Studio bug 485370 added by Nathbarn 04 19 2017 -->
+<!--  Product Studio bug 485370 added 04 19 2017 -->
 ### <a name="antimalware-policy-fails-to-apply-on-windows-server-2016-core"></a>La directiva antimalware no se puede aplicar en Windows Server 2016 Core
 La directiva antimalware no se puede aplicar en Windows Server 2016 Core.  El código de error es 0x80070002.  Falta una dependencia para ConfigSecurityPolicy.exe.
 
-**Solución:** Este problema se resuelve por el [artículo 4019472 de Knowledge Base](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) distribuido el 9 de mayo de 2017. 
+**Solución:** Este problema se resuelve por el [artículo 4019472 de Knowledge Base](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) distribuido el 9 de mayo de 2017.
+
+<!-- Product Studio bug 462286 added  05 25 2017 and valid until July 2017 GA release -->
+### <a name="windows-defender-advanced-threat-protection-policies-fail-on-older-client-agents"></a>Las directivas de Protección contra amenazas avanzada de Windows Defender dan error en agentes cliente antiguos
+
+Las directivas de Protección contra amenazas avanzada de Windows Defender creadas desde una versión 1610 de Configuration Manager o un servidor de sitio posterior no pueden aplicarse en la versión 1606 de Configuration Manager y clientes anteriores.  Los clientes no se incorporan y la evaluación de directivas informa de un error. El **Estado de implementación** en la configuración de Protección contra amenazas avanzada de Windows Defender se muestra como **Error**.
+
+**Solución**: actualice el cliente de Configuration Manager a la versión 1610 o posterior.
 

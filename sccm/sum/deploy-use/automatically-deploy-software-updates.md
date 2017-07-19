@@ -12,19 +12,21 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-translationtype: Human Translation
-ms.sourcegitcommit: 78524abd4c45f0b7402d6f1e85afc60bb72ab0ee
-ms.openlocfilehash: 34b0819957ffcc3711ee354a5b821d78fa7445cb
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
+ms.openlocfilehash: 804a9d7a32cfbdb498c6748c5d99a1874261c231
+ms.contentlocale: es-es
+ms.lasthandoff: 06/08/2017
 
 ---
 
-#  <a name="a-namebkmkautodeploya-automatically-deploy-software-updates"></a><a name="BKMK_AutoDeploy"></a> Implementar actualizaciones de software automáticamente  
+#  <a name="BKMK_AutoDeploy"></a> Implementar actualizaciones de software automáticamente  
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
  Puede implementar actualizaciones de software automáticamente al agregar actualizaciones de software nuevas a un grupo de actualizaciones asociado a una implementación activa o bien puede usar una regla de implementación automática (ADR). Normalmente las ADR se usan para implementar actualizaciones de software mensuales (que se conocen como actualizaciones "Patch Tuesday") y para administrar las actualizaciones de definiciones. Si necesita ayuda para determinar qué método de implementación es el adecuado para usted, vea [Deploy software updates (Implementar actualizaciones de software)](deploy-software-updates.md).
 
-##  <a name="a-namebkmkaddupdatestoexistinggroupa-add-software-updates-to-a-deployed-update-group"></a><a name="BKMK_AddUpdatesToExistingGroup"></a> Agregar actualizaciones de software a un grupo de actualizaciones implementado  
+##  <a name="BKMK_AddUpdatesToExistingGroup"></a> Agregar actualizaciones de software a un grupo de actualizaciones implementado  
 Una vez creado e implementado un grupo de actualizaciones de software, puede agregar actualizaciones de software al grupo de actualizaciones para que se implementen automáticamente.  
 
 > [!IMPORTANT]  
@@ -46,7 +48,7 @@ Utilice el siguiente procedimiento para agregar actualizaciones de software a un
 
 6.  Haga clic en el grupo de actualizaciones de software y, en la pestaña **Inicio** , en el grupo **Actualizar** , haga clic en **Mostrar miembros** para mostrar una lista de las actualizaciones de software del grupo.  
 
-##  <a name="a-namebkmkcreateautomaticdeploymentrulea-create-an-automatic-deployment-rule-adr"></a><a name="BKMK_CreateAutomaticDeploymentRule"></a> Crear una regla de implementación automática (ADR)  
+##  <a name="BKMK_CreateAutomaticDeploymentRule"></a> Crear una regla de implementación automática (ADR)  
 Las actualizaciones de software se pueden aprobar e implementar automáticamente mediante una ADR. Puede hacer que la regla agregue las actualizaciones de software a un nuevo grupo de actualización de software cada vez que dicha regla se ejecute o que agregue las actualizaciones de software a un grupo existente. Cuando una regla se ejecuta y agrega actualizaciones de software a un grupo existente, quita todas las actualizaciones de software del grupo y, luego, agrega las actualizaciones de software que cumplan los criterios que se hayan definido para el grupo. Por ejemplo, para ejecutar una ADR para buscar las actualizaciones de software más recientes cada día e implementarlas en los clientes, debe elegir la opción para crear un nuevo grupo de actualizaciones de software en lugar de agregar las actualizaciones de software a un grupo existente.  
 
 > [!WARNING]  
@@ -167,15 +169,15 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
 
 10. En la página Configuración de descarga, configure las siguientes opciones:  
 
-    -   Especifique si el cliente descargará e instalará las actualizaciones de software cuando esté conectado a una red lenta o si utiliza una ubicación de contenido de reserva.  
+    - Especifique si el cliente descargará e instalará las actualizaciones de software cuando esté conectado a una red lenta o si utiliza una ubicación de contenido de reserva.  
 
-    -   Especifique si el cliente debe descargar e instalar las actualizaciones de software desde un punto de distribución de reserva cuando el contenido de las actualizaciones de software no está disponible en un punto de distribución preferido.  
+    - Especifique si el cliente debe descargar e instalar las actualizaciones de software desde un punto de distribución de reserva cuando el contenido de las actualizaciones de software no está disponible en un punto de distribución preferido.  
 
-    -   **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**: especifique si quiere habilitar el uso de BranchCache para las descargas de contenido. Para más información sobre BranchCache, vea [Concepts for content management (Conceptos para la administración de contenido)](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
+    - **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**: especifique si quiere habilitar el uso de BranchCache para las descargas de contenido. Para más información sobre BranchCache, vea [Concepts for content management (Conceptos para la administración de contenido)](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
 
-    -   Especifique si los clientes conectados a la intranet deben descargar las actualizaciones de software desde Microsoft Update si las actualizaciones no están disponibles en los puntos de distribución.  
+    - **If software updates are not available on distribution point in current, neighbor or site groups, download content from Microsoft Updates** (Si las actualizaciones de software no están disponibles en el punto de distribución actual en el grupo actual, vecino o de sitio, descargue el contenido de Microsoft Updates): seleccione esta opción para que los clientes que están conectados a la intranet descarguen las actualizaciones de software desde Microsoft Update si las actualizaciones de software no están disponibles en los puntos de distribución. Los clientes basados en Internet siempre pueden ir a Microsoft Update para obtener el contenido de las actualizaciones de software.
 
-    -   Especifique si desea permitir que los clientes descarguen después de la fecha límite de instalación cuando utilizan una conexión a Internet de uso medido. En ocasiones, los proveedores de acceso a Internet cobran según la cantidad de datos que envía y recibe cuando se utiliza una conexión a Internet de uso medido.  
+    - Especifique si desea permitir que los clientes descarguen después de la fecha límite de instalación cuando utilizan una conexión a Internet de uso medido. En ocasiones, los proveedores de acceso a Internet cobran según la cantidad de datos que envía y recibe cuando se utiliza una conexión a Internet de uso medido.  
 
     > [!NOTE]  
     >  Los clientes solicitan la ubicación del contenido desde un punto de administración para las actualizaciones de software de una implementación. El comportamiento de descarga depende de cómo se hayan configurado el punto de distribución, el paquete de implementación y las opciones de esta página. Para más información, vea [Escenarios de ubicación de orígenes de contenido](../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
@@ -221,7 +223,7 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
 
  Una vez completado el asistente, se ejecutará la ADR. Ésta agregará las actualizaciones de software que cumplen los criterios especificados en un grupo de actualizaciones de software, descargará estas actualizaciones en la biblioteca de contenido del servidor de sitio, las distribuirá a los puntos de distribución configurados y, a continuación, implementará el grupo de actualizaciones de software en clientes en la recopilación de destino.  
 
-##  <a name="a-namebkmkadddeploymenttoadra-add-a-new-deployment-to-an-existing-adr"></a><a name="BKMK_AddDeploymentToADR"></a> Agregar una nueva implementación a una ADR existente  
+##  <a name="BKMK_AddDeploymentToADR"></a> Agregar una nueva implementación a una ADR existente  
  Después de crear una ADR, puede agregar distribuciones adicionales a la regla. Esto puede ayudarle a administrar la complejidad de la implementación de varias actualizaciones en diferentes recopilaciones. Cada nueva implementación ofrece todas las funcionalidades y la experiencia completa de supervisión de la implementación.  
 
 #### <a name="to-add-a-new-deployment-to-an-existing-adr"></a>Para agregar una nueva implementación a una ADR existente  
@@ -299,26 +301,21 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
 
 8. En la página Configuración de descarga, configure las siguientes opciones:  
 
-    -   Especifique si el cliente descargará e instalará las actualizaciones de software cuando esté conectado a una red lenta o si utiliza una ubicación de contenido de reserva.  
+    - Especifique si el cliente descargará e instalará las actualizaciones de software cuando esté conectado a una red lenta o si utiliza una ubicación de contenido de reserva.  
 
-    -   Especifique si el cliente debe descargar e instalar las actualizaciones de software desde un punto de distribución de reserva cuando el contenido de las actualizaciones de software no está disponible en un punto de distribución preferido.  
+    - Especifique si el cliente debe descargar e instalar las actualizaciones de software desde un punto de distribución de reserva cuando el contenido de las actualizaciones de software no está disponible en un punto de distribución preferido.  
 
-    -   **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**: especifique si quiere habilitar el uso de BranchCache para las descargas de contenido. Para más información sobre BranchCache, vea [Concepts for content management (Conceptos para la administración de contenido)](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
+    - **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**: especifique si quiere habilitar el uso de BranchCache para las descargas de contenido. Para más información sobre BranchCache, vea [Concepts for content management (Conceptos para la administración de contenido)](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
 
-    -   Especifique si los clientes conectados a la intranet deben descargar las actualizaciones de software desde Microsoft Update si las actualizaciones no están disponibles en los puntos de distribución.  
+    - **If software updates are not available on distribution point in current, neighbor or site groups, download content from Microsoft Updates** (Si las actualizaciones de software no están disponibles en el punto de distribución actual en el grupo actual, vecino o de sitio, descargue el contenido de Microsoft Updates): seleccione esta opción para que los clientes que están conectados a la intranet descarguen las actualizaciones de software desde Microsoft Update si las actualizaciones de software no están disponibles en los puntos de distribución. Los clientes basados en Internet siempre pueden ir a Microsoft Update para obtener el contenido de las actualizaciones de software.
 
-    -   Especifique si desea permitir que los clientes descarguen después de la fecha límite de instalación cuando utilizan una conexión a Internet de uso medido. En ocasiones, los proveedores de acceso a Internet cobran según la cantidad de datos que envía y recibe cuando se utiliza una conexión a Internet de uso medido.  
+    - Especifique si desea permitir que los clientes descarguen después de la fecha límite de instalación cuando utilizan una conexión a Internet de uso medido. En ocasiones, los proveedores de acceso a Internet cobran según la cantidad de datos que envía y recibe cuando se utiliza una conexión a Internet de uso medido.  
 
     > [!NOTE]  
-    >  Los clientes solicitan la ubicación del contenido desde un punto de administración para las actualizaciones de software de una implementación. El comportamiento de descarga depende de cómo se hayan configurado el punto de distribución, el paquete de implementación y las opciones de esta página. Para más información, vea [Escenarios de ubicación de orígenes de contenido](../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
+    > Los clientes solicitan la ubicación del contenido desde un punto de administración para las actualizaciones de software de una implementación. El comportamiento de descarga depende de cómo se hayan configurado el punto de distribución, el paquete de implementación y las opciones de esta página. Para más información, vea [Escenarios de ubicación de orígenes de contenido](../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
 
 Para más información sobre el proceso de implementación, vea [Software update deployment process (Proceso de implementación de actualizaciones de software)](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Supervisar actualizaciones de software](monitor-software-updates.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

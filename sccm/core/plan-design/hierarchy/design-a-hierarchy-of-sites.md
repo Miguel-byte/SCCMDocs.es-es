@@ -2,7 +2,7 @@
 title: "Diseñar una jerarquía de sitios en Configuration Manager | Microsoft Docs"
 description: "Conozca las topologías disponibles y las opciones de administración de System Center Configuration Manager para poder planear la jerarquía del sitio."
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 6/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
-ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
+ms.sourcegitcommit: db673277d1cc2d24e8dba2439b2b1891c883ebd0
+ms.openlocfilehash: 4710b1b89eb50cb7bcf4c4ee50c12a96b6561bc9
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/16/2017
 
 
 ---
@@ -66,7 +66,7 @@ Posteriormente, después de considerar las opciones de administración de conten
 
 -   El sitio de administración central es el sitio de nivel superior de una jerarquía.  
 
--   Cuando se configura una jerarquía que tiene más de un sitio primario, debe instalar un sitio de administración central, y éste debe ser el primero que se instale.  
+-   Cuando se configura una jerarquía que tiene más de un sitio primario, debe instalar un sitio de administración central. Si se necesitan dos o más sitios primarios inmediatamente, instale primero el sitio de administración central. Si ya tiene un sitio primario y desea instalar un sitio de administración central, debe [expandir el sitio primario independiente](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand) para instalar el sitio de administración central. 
 
 -   El sitio de administración central admite sólo sitios primarios como sitios secundarios.  
 

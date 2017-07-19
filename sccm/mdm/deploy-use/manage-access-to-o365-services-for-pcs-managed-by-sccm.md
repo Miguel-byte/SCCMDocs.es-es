@@ -16,10 +16,10 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
-ms.openlocfilehash: e9028a54e538b4ec987dbaeb5ba1ee22ad091728
+ms.sourcegitcommit: c8717925dba42451b1e241a7c2f59e43896d7d99
+ms.openlocfilehash: e78fe989b7ff445717c8320c4eae3900eb46baea
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/19/2017
 
 
 ---
@@ -27,31 +27,25 @@ ms.lasthandoff: 05/17/2017
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-
-
- A partir de la versión 1602 de Configuration Manager, puede configurar el acceso condicional para equipos administrados por System Center Configuration Manager.  
+A partir de la versión 1602 de Configuration Manager, puede configurar el acceso condicional para equipos administrados por System Center Configuration Manager.  
 
 > [!IMPORTANT]  
->  Se trata de una característica de versión preliminar disponible en las actualizaciones 1602, 1606 y 1610. Se incluyen características de versión preliminar en el producto para la realización de las primeras pruebas en un entorno de producción, pero no se debe considerar que ya estén listas para él. Para más información, consulte [Use pre-release features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease) (Uso de características de la versión preliminar a partir de las actualizaciones).
+> Se trata de una característica de versión preliminar disponible en las actualizaciones 1602, 1606 y 1610. Se incluyen características de versión preliminar en el producto para la realización de las primeras pruebas en un entorno de producción, pero no se debe considerar que ya estén listas para él. Para más información, consulte [Use pre-release features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease) (Uso de características de la versión preliminar a partir de las actualizaciones).
 > - Después de instalar la actualización 1602, el tipo de característica aparece como publicado, aunque se trate de una versión preliminar.
 > - Si actualiza de la versión 1602 a la 1606, el tipo de característica se muestra como liberado aunque se conserve la versión preliminar.
 > - Si actualiza de la versión 1511 directamente a la versión 1606, el tipo de característica se muestra como versión preliminar.
 
- Si desea obtener información sobre cómo configurar el acceso condicional para dispositivos inscritos y administrados por Intune o equipos que están unidos a un dominio y cuya compatibilidad no se evalúa, consulte [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md) (Administración del acceso a servicios en System Center Configuration Manager).  
-
+Si desea obtener información sobre cómo configurar el acceso condicional para dispositivos inscritos y administrados por Intune o equipos que están unidos a un dominio y cuya compatibilidad no se evalúa, consulte [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md) (Administración del acceso a servicios en System Center Configuration Manager).
 
 ## <a name="supported-services"></a>Servicios compatibles  
 
--   Exchange Online  
-
--   SharePoint Online  
+-   Exchange Online
+-   SharePoint Online
 
 ## <a name="supported-pcs"></a>Equipos compatibles  
 
--   Windows 7  
-
--   Windows 8.1  
-
+-   Windows 7
+-   Windows 8.1
 -   Windows 10 
 
 ## <a name="configure-conditional-access"></a>Configuración de acceso condicional  
@@ -61,7 +55,7 @@ ms.lasthandoff: 05/17/2017
 
 -   Sincronización de ADFS y una suscripción de O365. La suscripción de Office 365 sirve para configurar Exchange Online y SharePoint Online.  
 
--   Suscripción a Microsoft Intune. La suscripción a Microsoft Intune debe configurarse en la consola de Configuration Manager. Esto todavía requiere que se disponga de una implementación híbrida.  
+-   Suscripción a Microsoft Intune. La suscripción a Microsoft Intune debe configurarse en la consola de Configuration Manager. La suscripción de Intune se utiliza para retransmitir el estado de cumplimiento de los dispositivos a Azure Active Directory y para las licencias de usuario.  
 
  Los equipos deben cumplir los requisitos siguientes:  
 
@@ -146,6 +140,8 @@ ms.lasthandoff: 05/17/2017
 
 -   Windows 10 users may see multiple access failures when trying to reach O365 and/or SharePoint online resources. Note that conditional access is not fully supported for Windows 10.  
 --->
-### <a name="see-also"></a>Consulte también  
- [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md) (Proteger la infraestructura de datos y del sitio con System Center Configuration Manager)
+## <a name="see-also"></a>Consulte también
+
+- [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md) (Proteger la infraestructura de datos y del sitio con System Center Configuration Manager)
+- [Conditional access troubleshooting flow-chart for Configuration Manager](https://gallery.technet.microsoft.com/Conditional-access-fd747c1a?redir=0) (Gráfico del flujo para la solución de problemas de acceso condicional para Configuration Manager)
 

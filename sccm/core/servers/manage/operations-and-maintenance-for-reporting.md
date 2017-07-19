@@ -15,9 +15,11 @@ caps.latest.revision: 5
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: f5a58ba9ecd9b0998c2859b6d3f45e493d7ef3cb
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f62d969dd49fb00b688602128df74b28ff551135
+ms.openlocfilehash: df572cd0c64c82e25164430a53e1b893b3ba3cf5
+ms.contentlocale: es-es
+ms.lasthandoff: 06/07/2017
 
 
 ---
@@ -27,10 +29,10 @@ ms.openlocfilehash: f5a58ba9ecd9b0998c2859b6d3f45e493d7ef3cb
 
 Cuando la infraestructura de generación de informes esté operativa en System Center Configuration Manager, puede ejecutar una serie de operaciones habituales para administrar informes y suscripciones a informes.  
 
-##  <a name="a-namebkmkmanagereportsa-manage-configuration-manager-reports"></a><a name="BKMK_ManageReports"></a> Administración de informes de Configuration Manager  
+##  <a name="BKMK_ManageReports"></a> Administración de informes de Configuration Manager  
  Configuration Manager ofrece más de 400 informes predefinidos que le ayudan a recopilar, organizar y presentar información sobre usuarios, inventario de hardware y software, actualizaciones de software, aplicaciones, estados de sitio y otras operaciones de Configuration Manager de la organización. Puede utilizar los informes predefinidos tal cual están, o puede modificar un informe para satisfacer sus necesidades. También puede crear informes personalizados basados en SQL y en modelo para satisfacer sus necesidades. Consulte las secciones siguientes para ayudarle a administrar los informes de Configuration Manager.  
 
-###  <a name="a-namebkmkrunreporta-run-a-configuration-manager-report"></a><a name="BKMK_RunReport"></a> Ejecución de un informe de Configuration Manager  
+###  <a name="BKMK_RunReport"></a> Ejecución de un informe de Configuration Manager  
  En el Administrador de configuración de informes se almacena en SQL Server Reporting Services y los datos representados en el informe se recuperan de la base de datos del sitio de Configuration Manager. Puede obtener acceso a informes en la consola de Configuration Manager o mediante el Administrador de informes, que se obtiene acceso en un explorador web. Puede abrir informes en cualquier equipo que tenga acceso al equipo que ejecuta SQL Server Reporting Services y, además, debe disponer de los derechos suficientes para poder ver los informes. Al ejecutar un informe, el título, la descripción y la categoría del informe se muestran en el idioma del sistema operativo local.  
 
 > [!NOTE]  
@@ -38,6 +40,9 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
 > [!WARNING]  
 >  Para ejecutar informes, debe tener derechos de **lectura** para los permisos **Sitio** y **Ejecutar informe** configurados para objetos específicos.  
+
+> [!IMPORTANT]    
+> Debe haber una relación de confianza bidireccional establecida para los usuarios de un dominio distinto al de la cuenta para el punto de servicios de informes para una correcta ejecución de los informes.
 
 > [!NOTE]  
 >  El Administrador de informes es una herramienta de acceso y administración de informes basada en web que se usa para administrar una única instancia de servidor de informes en una ubicación remota a través de una conexión HTTP. Puede utilizar el Administrador de informes para las tareas operativas, por ejemplo, para ver los informes, modificar las propiedades de los informes y administrar suscripciones a informes asociados. En este tema se describen los pasos que cabe seguir para ver un informe y modificar sus propiedades en el Administrador de informes; no obstante, si desea obtener más información acerca de las demás opciones disponibles en el Administrador de informes, consulte [Administrador de informes](http://go.microsoft.com/fwlink/p/?LinkId=224916) en los Libros en pantalla de SQL Server 2008.  
@@ -73,7 +78,7 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
 4.  Si se necesitan parámetros, especifíquelos y, a continuación, haga clic en **Ver informe**.  
 
-###  <a name="a-namebkmkmodifyreportpropertiesa-modify-the-properties-for-a-configuration-manager-report"></a><a name="BKMK_ModifyReportProperties"></a> Modificación de las propiedades de un informe de Configuration Manager  
+###  <a name="BKMK_ModifyReportProperties"></a> Modificación de las propiedades de un informe de Configuration Manager  
  En la consola de Configuration Manager, puede ver las propiedades de un informe, como el nombre y la descripción, pero debe usar el Administrador de informes para poder modificar las propiedades. Use el siguiente procedimiento para modificar las propiedades de un informe de Configuration Manager.  
 
 #### <a name="to-modify-report-properties-in-report-manager"></a>Para modificar las propiedades de informes en el Administrador de informes  
@@ -91,7 +96,7 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
 5.  Cuando haya terminado, haga clic en **Aplicar**. Las propiedades del informe se guardan en el servidor de informes, y la consola de Configuration Manager recupera las propiedades actualizadas del informe.  
 
-###  <a name="a-namebkmkeditreporta-edit-a-configuration-manager-report"></a><a name="BKMK_EditReport"></a> Edición de un informe de Configuration Manager  
+###  <a name="BKMK_EditReport"></a> Edición de un informe de Configuration Manager  
  Cuando un informe existente de Configuration Manager no recupera la información de la que debe disponer o no presenta el diseño deseado, puede editar el informe en el Generador de informes.  
 
 > [!NOTE]  
@@ -115,7 +120,7 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
 4.  En el Generador de informes, modifique la configuración del informe según corresponda y, a continuación, haga clic en **Guardar** para guardar el informe en el servidor de informes.  
 
-###  <a name="a-namebkmkcreatemodelbasedreporta-create-a-model-based-report"></a><a name="BKMK_CreateModelBasedReport"></a> Creación de un informe\-basado en modelo  
+###  <a name="BKMK_CreateModelBasedReport"></a> Creación de un informe\-basado en modelo  
  Un informe basado en modelo le permite seleccionar de forma interactiva los elementos que desea incluir en el informe. Para más información sobre la creación de modelos de informes, vea [Creación de modelos de informes personalizados para System Center Configuration Manager en SQL Server Reporting Services](creating-custom-report-models-in-sql-server-reporting-services.md).  
 
 > [!IMPORTANT]  
@@ -157,7 +162,7 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
 10. Haga clic en **Guardar** para guardar el informe en el servidor de informes. Puede ejecutar y modificar el nuevo informe en el nodo **Informes** en el área de trabajo **Supervisión** .  
 
-###  <a name="a-namebkmkcreatesqlbasedreporta-create-a-sql-based-report"></a><a name="BKMK_CreateSQLBasedReport"></a> Creación de un informe\-basado en SQL  
+###  <a name="BKMK_CreateSQLBasedReport"></a> Creación de un informe\-basado en SQL  
  Un informe basado en SQL le permite recuperar los datos basados en una instrucción SQL del informe.  
 
 > [!IMPORTANT]  
@@ -200,10 +205,10 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
 9. Haga clic en **Guardar** para guardar el informe en el servidor de informes. Puede ejecutar el nuevo informe en el nodo **Informes** en el área de trabajo **Supervisión** .  
 
-##  <a name="a-namebkmkmanagereportsubscriptionsa-manage-report-subscriptions"></a><a name="BKMK_ManageReportSubscriptions"></a> Administrar suscripciones a informes  
+##  <a name="BKMK_ManageReportSubscriptions"></a> Administrar suscripciones a informes  
  Las suscripciones a informes en SQL Server Reporting Services permiten configurar la entrega automática de determinados informes a través de correo electrónico o de un recurso compartido de archivos en intervalos programados. Use el **Asistente para crear suscripciones** en System Center 2012 Configuration Manager para configurar las suscripciones a informes.  
 
-###  <a name="a-namebkmkreportsubscriptionfilesharea-create-a-report-subscription-to-deliver-a-report-to-a-file-share"></a><a name="BKMK_ReportSubscriptionFileShare"></a> Creación de una suscripción de informe para la entrega de un informe a un recurso compartido de archivos  
+###  <a name="BKMK_ReportSubscriptionFileShare"></a> Creación de una suscripción de informe para la entrega de un informe a un recurso compartido de archivos  
  Cuando se crea una suscripción de informe para la entrega de un informe a un recurso compartido de archivos, el informe se copia en el formato especificado en el recurso compartido de archivo seleccionado. Solo puede realizar la suscripción y la solicitud de entrega de un único informe a la vez.  
 
  A diferencia de los informes hospedados y administrados por un servidor de informes, los informes que se entregan en una carpeta compartida son archivos estáticos. Las características interactivas definidas para el informe no funcionan en informes que se almacenan como archivos en el sistema de archivos. Las funciones de interacción se representan como elementos estáticos. Si el informe incluye gráficos, se utiliza la presentación predeterminada. Si el informe se vincula a otro informe, el vínculo se representa como texto estático. Si desea conservar las características interactivas en un informe entregado, utilice la entrega a través de correo electrónico. Para obtener más información sobre la entrega de correo electrónico, vea la sección [Creación de una suscripción de informe para la entrega de un informe a través del correo electrónico](#BKMK_ReportSubscriptionEmail) posteriormente en este tema.  
@@ -284,7 +289,7 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
 8.  En la página **Finalización** , haga clic en **Cerrar** para salir del asistente. Compruebe que la suscripción de informe se creó correctamente. Puede ver y modificar suscripciones de informes en el nodo **Suscripciones** , en **Informes** , en el área de trabajo **Supervisión** .  
 
-###  <a name="a-namebkmkreportsubscriptionemaila-create-a-report-subscription-to-deliver-a-report-by-email"></a><a name="BKMK_ReportSubscriptionEmail"></a> Creación de una suscripción de informe para la entrega de un informe a través del correo electrónico  
+###  <a name="BKMK_ReportSubscriptionEmail"></a> Creación de una suscripción de informe para la entrega de un informe a través del correo electrónico  
  Cuando crea una suscripción de informe para entregar un informe mediante el correo electrónico, se envía un correo electrónico a los destinatarios configurados y el informe se incluye como datos adjuntos. El servidor de informes no valida las direcciones de correo electrónico ni obtiene direcciones de correo electrónico de un servidor de correo electrónico. Debe saber de antemano las direcciones de correo electrónico que desea usar. De forma predeterminada, puede enviar informes a través del correo electrónico a cualquier cuenta de correo electrónico válida dentro o fuera de su organización. Puede seleccionar las dos opciones de entrega de correo electrónico siguientes:  
 
 -   Enviar una notificación y un hipervínculo al informe generado.  
@@ -358,9 +363,4 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 -   En la página **Resumen** , revise la configuración de la suscripción de informe. Haga clic en **Anterior** para cambiar la configuración o haga clic en **Siguiente** para crear la suscripción de informe.  
 
 -   En la página **Finalización** , haga clic en **Cerrar** para salir del asistente. Compruebe que la suscripción de informe se creó correctamente. Puede ver y modificar suscripciones de informes en el nodo **Suscripciones** , en **Informes** , en el área de trabajo **Supervisión** .  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

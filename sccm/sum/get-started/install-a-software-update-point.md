@@ -6,16 +6,18 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology:
 - configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
-ms.openlocfilehash: 1d9911274fd76942131054231cdcc2bcebbd3fcb
+ms.translationtype: Human Translation
+ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
+ms.openlocfilehash: 7d369384d133c90a15e01df50ac53992d61f3873
+ms.contentlocale: es-es
+ms.lasthandoff: 06/01/2017
 
 
 
@@ -34,6 +36,9 @@ ms.openlocfilehash: 1d9911274fd76942131054231cdcc2bcebbd3fcb
 
 > [!IMPORTANT]  
 >  Puede instalar más de un punto de actualización de software en un sitio. El primer punto de actualización de software que se instala se configura como el origen de la sincronización, que sincroniza las actualizaciones desde Microsoft Update o desde el origen de la sincronización del canal de subida. Los demás puntos de actualización de software del sitio se configuran como réplicas del primer punto de actualización de software. Por este motivo algunas opciones no están disponibles tras instalar y configurar el punto de actualización de software inicial.  
+
+> [!IMPORTANT]  
+>  No se admite la instalación del rol de sistema de sitio del punto de actualización de software en un servidor que se ha configurado y utilizado como un servidor WSUS independiente o mediante un punto de actualización de software para administrar directamente clientes WSUS. Los servidores WSUS existentes solo se admiten como orígenes de sincronización ascendentes para el punto de actualización de software activo. Vea [Sincronizar desde una ubicación de origen de datos ascendente](#BKMK_wsussync).
 
  Puede agregar el rol de sistema de sitio de punto de actualización de software a un servidor de sistema de sitio existente o puede crear uno nuevo. En la página **Selección de rol del sistema** del **Asistente para crear servidor de sistema de sitio** o el **Asistente para agregar roles de sistema de sitio** , en función de si agrega el rol de sistema de sitio a un servidor de sitio nuevo o existente, seleccione **Punto de actualización de software**y, a continuación, configure las opciones del punto de actualización de software en el asistente. Las opciones varían según la versión de Configuration Manager que usa. Para obtener más información sobre cómo instalar roles de sistema de sitio, consulte [Install site system roles (Instalar roles de sistema de sitio)](../../core/servers/deploy/configure/install-site-system-roles.md).  
 
@@ -58,7 +63,7 @@ ms.openlocfilehash: 1d9911274fd76942131054231cdcc2bcebbd3fcb
 ## <a name="wsus-settings"></a>Configuración de WSUS  
  Tiene que configurar las opciones de WSUS en varias páginas del **Asistente para crear servidor de sistema de sitio** o del **Asistente para agregar roles de sistema de sitio** en función de la versión de Configuration Manager que use y, en algunos casos, solo en las propiedades del punto de actualización de software, también conocidas como propiedades de componente de punto de actualización de software. Utilice la información de las siguientes secciones para configurar las opciones de WSUS.  
 
-### <a name="a-namebkmkwsusportawsus-port-settings"></a><a name="BKMK_wsusport"></a>Configuración del puerto de WSUS  
+### <a name="BKMK_wsusport"></a>Configuración del puerto de WSUS  
  Debe configurar las opciones del puerto de WSUS en la página Punto de actualización de software del asistente o en las propiedades del punto de actualización de software. Use uno de los procedimientos siguientes para determinar la configuración de puerto usada por WSUS.  
 
 #### <a name="to-determine-the-port-settings-used-in-iis"></a>Para determinar la configuración de puerto usada en IIS  
@@ -95,7 +100,7 @@ ms.openlocfilehash: 1d9911274fd76942131054231cdcc2bcebbd3fcb
     > [!NOTE]  
     >  Si hay un firewall entre el punto de actualización de software e Internet, tal vez sea necesario configurar el firewall para aceptar los puertos HTTP y HTTPS que se usan para el sitio web de WSUS. También es posible restringir el acceso en el firewall a dominios limitados. Para obtener más información sobre la planeación de un firewall que admita actualizaciones de software, consulte [Configurar firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls).  
 
--   **Sincronizar desde una ubicación de origen de datos que preceden en la cadena**: use esta opción para sincronizar los metadatos de las actualizaciones de software desde el origen de sincronización de canal de subida. Los sitios primarios secundarios y los sitios secundarios se configuran automáticamente para utilizar la dirección URL del sitio primario para esta opción. Tiene la posibilidad de sincronizar las actualizaciones de software desde un servidor WSUS existente. Especifique una dirección URL, por ejemplo https://WSUSServer:8531, donde 8531 es el puerto que se utiliza para conectarse con el servidor WSUS.  
+-   **<a name="BKMK_wsussync"></a>Sincronizar desde una ubicación de origen de datos que preceden en la cadena**: use esta opción para sincronizar los metadatos de las actualizaciones de software desde el origen de sincronización de canal de subida. Los sitios primarios secundarios y los sitios secundarios se configuran automáticamente para utilizar la dirección URL del sitio primario para esta opción. Tiene la posibilidad de sincronizar las actualizaciones de software desde un servidor WSUS existente. Especifique una dirección URL, por ejemplo https://WSUSServer:8531, donde 8531 es el puerto que se utiliza para conectarse con el servidor WSUS.  
 
 -   **No sincronizar desde Microsoft Update o desde el origen de datos ascendente**: use esta opción para sincronizar manualmente las actualizaciones de software cuando se desconecte de Internet el punto de actualización de software en el sitio de nivel superior. Para obtener más información, consulte [Synchronize software updates from a disconnected software update point (Sincronizar actualizaciones de software desde un punto de actualización de software desconectado)](synchronize-software-updates-disconnected.md).  
 
@@ -151,9 +156,4 @@ ms.openlocfilehash: 1d9911274fd76942131054231cdcc2bcebbd3fcb
 Ha instalado el punto de actualización de software comenzando por el sitio de nivel superior de la jerarquía de Configuration Manager. Repita los procedimientos de este tema para instalar el punto de actualización de software en los sitios secundarios.
 
 Una vez que tenga los puntos de actualización de software instalados, vaya a [Synchronize software updates (Sincronizar actualizaciones de software)](synchronize-software-updates.md).
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

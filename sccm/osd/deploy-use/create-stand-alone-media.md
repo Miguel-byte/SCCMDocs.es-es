@@ -2,7 +2,7 @@
 title: Crear medios independientes con System Center Configuration Manager | Microsoft Docs
 description: "Use medios independientes para implementar el sistema operativo en un equipo sin necesidad de una conexión a un sitio de Configuration Manager o a la red."
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 06/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: d4689545ce2be5c16a65b24489f30028a0f90f94
+ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
+ms.openlocfilehash: 98f902429ad1b9965a0dc4cc2e1bd071ad5c0779
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -36,10 +36,10 @@ Los medios independientes de Configuration Manager contienen toda la informació
 
 -   [Actualizar Windows a la versión más reciente](upgrade-windows-to-the-latest-version.md)  
 
- Los medios independientes incluyen la secuencia de tareas que automatiza los pasos de instalación del sistema operativo y todo otro contenido requerido, incluida la imagen de arranque, la imagen de sistema operativo y los controladores de dispositivos. Dado que todos lo necesario para implementar el sistema operativo se guarda en los medios independiente, el espacio en disco que estos necesitan es significativamente mayor que el espacio en disco necesario para otros tipos de medios. Cuando cree un medio independiente en un sitio de administración central, el cliente recuperará su código de sitio asignado de Active Directory. Los medios independientes que creó en los sitios secundarios asignarán automáticamente al cliente el código de sitio para dicho sitio.  
+Los medios independientes incluyen la secuencia de tareas que automatiza los pasos de instalación del sistema operativo y todo otro contenido requerido, incluida la imagen de arranque, la imagen de sistema operativo y los controladores de dispositivos. Dado que todos lo necesario para implementar el sistema operativo se guarda en los medios independiente, el espacio en disco que estos necesitan es significativamente mayor que el espacio en disco necesario para otros tipos de medios. Cuando cree un medio independiente en un sitio de administración central, el cliente recuperará su código de sitio asignado de Active Directory. Los medios independientes que creó en los sitios secundarios asignarán automáticamente al cliente el código de sitio para dicho sitio.  
 
 ##  <a name="BKMK_CreateStandAloneMedia"></a> Crear medios independientes  
- Antes de crear medios independientes con el Asistente para crear medio de secuencia de tareas, asegúrese de que se cumplen las condiciones siguientes:  
+Antes de crear medios independientes con el Asistente para crear medio de secuencia de tareas, asegúrese de que se cumplen las condiciones siguientes:  
 
 ### <a name="create-a-task-sequence-to-deploy-an-operating-system"></a>Crear una secuencia de tareas para implementar un sistema operativo
 Como parte de los medios independientes, debe especificar la secuencia de tareas para implementar un sistema operativo. Para obtener los pasos para crear una nueva secuencia de tareas, consulte [Create a task sequence to install an operating system in System Center Configuration Manager](create-a-task-sequence-to-install-an-operating-system.md) (Crear una secuencia de tareas para instalar un sistema operativo en System Center Configuration Manager).
@@ -54,10 +54,19 @@ No se admiten las siguientes acciones para medios independientes:
 - El paquete dinámico se instala a través de la tarea Instalar paquete.
 - La aplicación dinámica se instala a través de la tarea Instalar aplicación.
 
-Si la secuencia de tareas para implementar un sistema operativo incluye el paso [Instalar paquete](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) y usted crea los medios independientes en un sitio de administración central, podría producirse un error. El sitio de administración central no tiene las directivas de configuración de cliente necesarias para habilitar el agente de distribución de software durante la ejecución de la secuencia de tareas. Es probable que aparezca el siguiente error en el archivo CreateTsMedia.log:<br /><br /> "WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)" (Error en el método WMI SMS_TaskSequencePackage.GetClientConfigPolicies (0x80041001))<br /><br /> En medios independientes que incluyen un paso **Instalar paquete**, debe crear el medio independiente en un sitio primario que tenga el agente de distribución de software habilitado o agregar un paso [Ejecutar línea de comandos](../understand/task-sequence-steps.md#BKMK_RunCommandLine) después del paso [Instalar Windows y Configuration Manager](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) y antes del primer paso **Instalar paquete** de la secuencia de tareas. El paso **Ejecutar línea de comandos** ejecuta un comando de WMIC para habilitar el agente de distribución de software antes de que se ejecuta el primer paso Instalar paquete. Puede utilizar lo siguiente en su paso de secuencia de tareas **Ejecutar línea de comandos** :<br /><br />
-```
-WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE
-```
+> [!NOTE]    
+> Si la secuencia de tareas para implementar un sistema operativo incluye el paso [Instalar paquete](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) y usted crea los medios independientes en un sitio de administración central, podría producirse un error. El sitio de administración central no tiene las directivas de configuración de cliente necesarias para habilitar el agente de distribución de software durante la ejecución de la secuencia de tareas. Es probable que aparezca el siguiente error en el archivo CreateTsMedia.log:    
+>     
+> "WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)" (Error en el método WMI SMS_TaskSequencePackage.GetClientConfigPolicies (0x80041001))    
+> 
+> En medios independientes que incluyen un paso **Instalar paquete**, debe crear el medio independiente en un sitio primario que tenga el agente de distribución de software habilitado o agregar un paso [Ejecutar línea de comandos](../understand/task-sequence-steps.md#BKMK_RunCommandLine) después del paso [Instalar Windows y Configuration Manager](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) y antes del primer paso **Instalar paquete** de la secuencia de tareas. El paso **Ejecutar línea de comandos** ejecuta un comando de WMIC para habilitar el agente de distribución de software antes de que se ejecuta el primer paso Instalar paquete. Puede utilizar lo siguiente en su paso de secuencia de tareas **Ejecutar línea de comandos** :    
+>    
+> *WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE*
+
+
+> [!IMPORTANT]    
+> Cuando se usa el paso **Instalar Windows y Configuration Manager** en la secuencia de tareas del sistema operativo, no seleccione la opción **Usar paquete de cliente de preproducción cuando esté disponible** para medios independientes. Si se selecciona esta opción y el paquete de cliente de preproducción está disponible, se utilizará en los medios independientes. Y esto no se admite. Para obtener más información sobre esta configuración, consulte [Instalar Windows y Configuration Manager](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr).
+
 
 ### <a name="distribute-all-content-associated-with-the-task-sequence"></a>Distribuir todo el contenido asociado con la secuencia de tareas
 Debe distribuir todo el contenido requerido por la secuencia de tareas a un punto de distribución como mínimo. Esto incluye la imagen de arranque, la imagen de sistema operativo y otros archivos asociados. El asistente recopila la información desde el punto de distribución al crear los medios independientes. Debe tener derechos de acceso de **lectura** para la biblioteca de contenido de dicho punto de distribución.  Para obtener más información, consulte [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS) (Distribuir contenido al que hace referencia una secuencia de tareas).

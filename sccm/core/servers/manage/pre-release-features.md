@@ -2,7 +2,7 @@
 title: "Características de versión preliminar| Microsoft Docs"
 description: "Características de versión preliminar en System Center Configuration Manager"
 ms.custom: na
-ms.date: 4/24/2017
+ms.date: 6/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,32 +16,32 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
-ms.openlocfilehash: b12fcb3c372c34ee47306a9b536c3d0c4764b8be
+ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
+ms.openlocfilehash: 988f8da0b221f8c0b470e7a0a8ed995356193f98
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/13/2017
 
 
 ---
 # <a name="pre-release-features-in-system-center-configuration-manager"></a>Características de versión preliminar en System Center Configuration Manager
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Las características de versión preliminar se incluyen en la Rama actual para realizar las primeras pruebas en un entorno de producción. Aunque son totalmente compatibles, aún se encuentran en proceso de desarrollo y podrían recibir cambios hasta que se saquen de la categoría de versión preliminar.
+Las características de versión preliminar son características que se encuentran en la Rama actual para realizar las primeras pruebas en un entorno de producción. Estas características son totalmente compatibles pero aún se encuentran en proceso de desarrollo y podrían recibir cambios hasta que se saquen de la categoría de versión preliminar.
 
  Antes de poder usar las características de versión preliminar, debe dar su consentimiento para usarlas desde la consola de Configuration Manager para poder seleccionarlas y permitir su uso.  
 
-Dar el consentimiento es una acción que se realiza una sola vez por jerarquía y que no se puede deshacer. Mientras no dé su consentimiento, no puede habilitar nuevas características de versión preliminar incluidas con las actualizaciones.
+Dar el consentimiento es una acción que se realiza una sola vez por jerarquía y que no se puede deshacer. Mientras no dé su consentimiento, no puede habilitar nuevas características de versión preliminar incluidas con las actualizaciones. Después de activar una característica de versión preliminar, no puede desactivarla.
 
 Para dar su consentimiento, en la consola vaya a **Administración** > **Configuración de sitio** > **Sitios** y seleccione **Configuración de jerarquía**. En la pestaña **General**, seleccione **Consent to use Pre-Release features** (Consentimiento para usar características de versiones preliminares).
 
  > [!NOTE]
- > Si previamente ha habilitado características de versión preliminar desde la actualización 1602 antes de instalar una versión de actualización posterior, esas características permanecerán habilitadas para su uso aunque no dé su consentimiento para usarlas.
+ > Si habilitó características de versión preliminar desde la actualización 1602 antes de instalar una versión de actualización posterior, esas características están habilitadas para su uso aunque no dé su consentimiento para usarlas.
 
 Cuando instale una actualización que incluya características de versión preliminar, dichas características estarán visibles en el Asistente de actualizaciones y mantenimiento con las características convencionales incluidas en la actualización:
   - **Si ha dado su consentimiento:** puede habilitar las características de versiones preliminares en el Asistente de actualizaciones y mantenimiento al instalar la actualización. Para ello, seleccione las características de versiones preliminares como lo haría con cualquier otra característica.     
 
     Opcionalmente, puede esperar a habilitar una característica de la versión preliminar posteriormente desde el nodo **Administración** > **Actualizaciones y mantenimiento** > **Características** de la consola. En el nodo **Características**, seleccione la función y, después, elija **Activar**. Esta opción aparecerá atenuada mientras no dé su consentimiento. (Antes de la versión 1702, la opción Actualizaciones y mantenimiento se encontraba en **Administración** > **Cloud Services**).
-  -   **Si no ha dado su consentimiento:** al instalar una actualización, las características de versiones preliminares están visibles en el Asistente de actualizaciones y mantenimiento, pero están atenuadas y no se pueden habilitar. Una vez instalada la actualización, puede ver estas características en el nodo **Características**, pero no puede habilitarlas hasta después de dar su consentimiento en **Configuración de jerarquía**.
+  -   **Si no ha dado su consentimiento:** al instalar una actualización, las características de versiones preliminares están visibles en el Asistente de actualizaciones y mantenimiento, pero están atenuadas y no se pueden habilitar. Después de instalar la actualización, puede ver estas características en el nodo **Características**. Sin embargo, no puede habilitarlas hasta después de que haya dado su consentimiento en **Configuración de jerarquía**.
 
 Si ha dado su consentimiento en un sitio primario independiente y, después, expande la jerarquía mediante la instalación de un nuevo sitio de administración central, deberá dar su consentimiento de nuevo en el sitio de administración central.
 

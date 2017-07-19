@@ -2,7 +2,7 @@
 title: "Lista de comprobación para la versión 1702 | System Center Configuration Manager"
 description: "Obtenga información sobre las acciones que se deben realizar antes de actualizar a la versión 1702 de System Center Configuration Manager."
 ms.custom: na
-ms.date: 05/02/2017
+ms.date: 6/6/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
-ms.openlocfilehash: c4ace452d62d4fa08f4457cb1735718ca4bd016d
+ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
+ms.openlocfilehash: 355dfb361a1ab3e1bd436dae1df8a416bf79c6c8
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1702 de System Center Configuration Manager
@@ -108,10 +108,7 @@ Para obtener más información, consulte [Acerca de Replication Link Analyzer](/
 **Instalar todas las actualizaciones críticas aplicables para los sistemas operativos en equipos que hospedan el sitio, el servidor de base de datos del sitio y los roles del sistema de sitio remoto:** antes de instalar una actualización para Configuration Manager, instale todas las actualizaciones críticas para cada sistema de sitio aplicable. Si alguna de las actualizaciones que instala requiere un reinicio, reinicie los equipos correspondientes antes de iniciar la actualización.
 
 **Deshabilitar las réplicas de la base de datos para los puntos de administración en los sitios primarios:**   
-Configuration Manager no puede actualizar correctamente un sitio primario que tiene habilitada una réplica de base de datos para puntos de administración. Deshabilite la replicación de base de datos antes de:
-
--   Crear una copia de seguridad de la base de datos del sitio para probar la actualización de la base de datos.
--   Instalar una actualización de Configuration Manager.
+Configuration Manager no puede actualizar correctamente un sitio primario que tiene habilitada una réplica de base de datos para puntos de administración. Deshabilite la replicación de base de datos antes de instalar una actualización de Configuration Manager.
 
 Para obtener más información, consulte [Réplicas de bases de datos para puntos de administración de System Center Configuration Manager](/sccm/core/servers/deploy/configure/database-replicas-for-management-points).
 
@@ -139,21 +136,24 @@ Para obtener más información, consulte [Tareas de mantenimiento para System Ce
 
 Para obtener más información, consulte [Copia de seguridad y recuperación de System Center Configuration Manager](/sccm/protect/understand/backup-and-recovery).
 
-**Probar la actualización de la base de datos en una copia de la última copia de seguridad de la base de datos del sitio:** antes de actualizar un sitio primario o un sitio de administración central de System Center Configuration Manager, puede probar el proceso de actualización de la base de datos del sitio en una copia de la base de datos del sitio.
+<!-- Removed from update guidance 6/6/2017
+**Test the database upgrade on a copy of the most recent site database backup:** 
+Before you update a System Center Configuration Manager central administration site or primary site, you can test the site database upgrade process on a copy of the site database.
 
--   Se recomienda probar el proceso de actualización de base de datos del sitio porque, al actualizar un sitio, la base de datos del sitio podría modificarse.
+-   We recommend that you test the site database upgrade process because when you upgrade a site, the site database might be modified.
 
--   Aunque no es necesario actualizar la base de datos de prueba, puede identificar problemas de actualización antes de que la de producción se vea afectada.
+-   Although a test database upgrade is not required, it can identify problems for the upgrade before your production database is affected.
 
--   Una actualización incorrecta de la base de datos, podría inutilizar la base de datos del sitio, en cuyo caso podría requerirse una recuperación del sitio para recuperar la funcionalidad.
+-   A failed site database upgrade can render your site database inoperable and might require a site recovery to restore functionality.
 
--   Aunque se trate de una base de datos de sitio compartida entre varios sitios de una jerarquía, planee la prueba de la base de datos en cada uno de los sitios correspondientes antes de actualizar el sitio.
+-   Although the site database is shared between sites in a hierarchy, plan to test the database at each applicable site before you upgrade that site.
 
--   Si utiliza réplicas de base de datos para puntos de administración en un sitio primario, deshabilite la replicación antes de crear la copia de seguridad de la base de datos del sitio.
+-   If you use database replicas for management points at a primary site, disable replication before you create the backup of the site database.
 
-Configuration Manager no admite la realización de copias de seguridad de sitios secundarios ni la actualización de prueba de una base de datos de un sitio secundario.
+Configuration Manager does not support the backup of secondary sites nor does it support the test upgrade of a secondary site database.
 
-No ejecute una actualización de base de datos de prueba en la base de datos del sitio de producción. Esta acción actualiza la base de datos del sitio y podría inutilizar el sitio. Para obtener más información, consulte [Paso 2: Probar la actualización de la base de datos antes de instalar una actualización](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) de **Antes de instalar una actualización de la consola**.
+Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, see [Step 2: Test the database upgrade before installing an update](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) from **Before you install an in-console update**.
+-->
 
 **Plan piloto de cliente:**   
 Al instalar una actualización que actualiza el cliente, puede probar esa nueva actualización de cliente en preproducción antes de implementar y actualizar todos los clientes activos.
@@ -186,11 +186,11 @@ Para más información, vea [Updates for System Center Configuration Manager (Ac
 
 ## <a name="post-update-checklist"></a>Lista de comprobación posterior a la actualización
 Revise las acciones siguientes que deben realizarse una vez finalizada la instalación de la actualización.
-1.    Asegúrese de que la replicación de sitio a sitio está activa. En la consola, consulte **Supervisión** > **Jerarquía de sitios** y **Supervisión** > **Replicación de base de datos** para obtener indicaciones sobre problemas o una confirmación de que los vínculos de replicación están activos.
-2.    Asegúrese de que cada servidor de sitio y rol de sistema de sitio se ha actualizado a la versión 1702. En la consola, puede agregar la columna opcional **Versión** a la presentación de algunos nodos, como **Sitios** y **Puntos de distribución**.
+1.  Asegúrese de que la replicación de sitio a sitio está activa. En la consola, consulte **Supervisión** > **Jerarquía de sitios** y **Supervisión** > **Replicación de base de datos** para obtener indicaciones sobre problemas o una confirmación de que los vínculos de replicación están activos.
+2.  Asegúrese de que cada servidor de sitio y rol de sistema de sitio se ha actualizado a la versión 1702. En la consola, puede agregar la columna opcional **Versión** a la presentación de algunos nodos, como **Sitios** y **Puntos de distribución**.
 
  Cuando sea necesario, un rol de sistema de sitio se reinstalará automáticamente para actualizar a la nueva versión. Considere la posibilidad de reiniciar los sistemas de sitio remoto que no se actualizan correctamente.
-3.    Vuelva a configurar réplicas de base de datos para los puntos de administración de los sitios primarios que deshabilitó antes de iniciar la actualización.
+3.  Vuelva a configurar réplicas de base de datos para los puntos de administración de los sitios primarios que deshabilitó antes de iniciar la actualización.
 4.  Vuelva a configurar las tareas de mantenimiento de base de datos que deshabilitó antes de iniciar la actualización.
-5.    Si ha configurado el proyecto piloto del cliente antes de instalar la actualización, actualice los clientes en función del plan que ha creado.
+5.  Si ha configurado el proyecto piloto del cliente antes de instalar la actualización, actualice los clientes en función del plan que ha creado.
 

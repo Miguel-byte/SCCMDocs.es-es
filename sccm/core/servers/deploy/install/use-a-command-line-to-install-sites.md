@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: fefa5f3aa12d82b66a251cf0525475496e1e35cf
+ms.sourcegitcommit: f7cd9c71287d62c9f5d36e2f032bc2a6065572ae
+ms.openlocfilehash: 8ff48b08d1abb7481592c0ea076d4efa15c3d8ee
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/06/2017
 
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>Usar una línea de comandos para instalar sitios de System Center Configuration Manager
@@ -67,7 +67,7 @@ ms.lasthandoff: 05/17/2017
     -   Identificación  
     -   Recuperación
 
-Para obtener más información sobre la copia de seguridad y la recuperación, vea [Claves de archivo de script de recuperación de sitio desatendida](../../../../protect/understand/backup-and-recovery.md#BKMK_UnattendedSiteRecoveryKeys) en el tema [Copias de seguridad y recuperación en Configuration Manager](../../../../protect/understand/backup-and-recovery.md).  
+Para obtener más información, consulte [Recuperación de sitio desatendida de Configuration Manager](/sccm/protect/understand/unattended-recovery).  
 
 Para obtener una lista de claves y valores que se pueden usar en un archivo de script de instalación desatendida, vea [Claves de archivo de script de instalación desatendida](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended).  
 
@@ -87,7 +87,7 @@ Si usa medios de la carpeta CD.Latest para ejecutar una instalación por script 
 - Instalar un sitio de administración central nuevo
 - Instalar un sitio primario nuevo
 - Recuperar un sitio de administración central
-- Recuperar un sitio primario 
+- Recuperar un sitio primario
 
 El uso de este valor no se admite con los medios de instalación obtenidos del sitio de licencia por volumen de Microsoft.
 Vea las [opciones de línea de comandos](/sccm/core/servers/deploy/install/command-line-options-for-setup) para obtener información sobre cómo utilizar este nombre de clave en el archivo de script.

@@ -2,7 +2,7 @@
 title: Actualizar a System Center Configuration Manager | Microsoft Docs
 description: "Obtenga información sobre qué pasos seguir para ejecutar correctamente una actualización local desde un sitio y jerarquía que ejecutan System Center 2012 Configuration Manager."
 ms.custom: na
-ms.date: 05/02/2017
+ms.date: 6/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d940fd1bbf96767d44f8c55315e814be55a83897
-ms.openlocfilehash: 9e58ab8dd892adf25429564adfd6f86849ddcbdf
+ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
+ms.openlocfilehash: 1166b739e1e8d667172d97883f484fdbc3a142c1
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/13/2017
 
 
 ---
@@ -32,17 +32,17 @@ Puede ejecutar una actualización local para actualizar a System Center Configur
  Antes de actualizar desde System Center 2012 Configuration Manager, debe preparar los sitios, lo que requiere quitar configuraciones específicas que pueden impedir la correcta actualización, y luego seguir la secuencia de actualización si existe más de un sitio implicado.  
 
  > [!TIP]
- > Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* ** e *instalar* se usan para describir tres conceptos independientes. Para obtener información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).
+ > Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* e *instalar* se utilizan para describir los tres conceptos independientes. ** Para obtener información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).
 
 ##  <a name="bkmk_path"></a> Rutas de actualización local  
 
 **Actualizar a la versión 1702**   
 Si tiene el medio de línea base de la versión 1702, puede actualizar lo siguiente a una versión con licencia completa de System Center Configuration Manager versión 1702:   
--      Una instalación de evaluación de System Center Configuration Manager versión 1702
--      System Center 2012 Configuration Manager con Service Pack 1
--      System Center 2012 Configuration Manager con Service Pack 2
--      System Center 2012 R2 Configuration Manager
--      System Center 2012 R2 Configuration Manager con Service Pack 1
+-     Una instalación de evaluación de System Center Configuration Manager versión 1702
+-     System Center 2012 Configuration Manager con Service Pack 1
+-     System Center 2012 Configuration Manager con Service Pack 2
+-     System Center 2012 R2 Configuration Manager
+-     System Center 2012 R2 Configuration Manager con Service Pack 1
 
 **Actualizar a la versión 1606**  
 El 15 de diciembre de 2016, se volvió a publicar el medio de línea base para la versión 1606 a fin de agregar compatibilidad con más escenarios de actualización. Esta nueva versión admite la actualización de lo siguiente a una versión con licencia completa de System Center Configuration Manager versión 1606:  
@@ -115,7 +115,7 @@ Para obtener más información, consulte [Windows Update](http://go.microsoft.co
 Los siguientes roles de sistema de sitio ya no se usan en System Center Configuration Manager y deben desinstalarse antes de actualizar desde System Center 2012 Configuration Manager:  
 
 -   Punto de administración fuera de banda  
--   Punto de validador de mantenimiento del sistema  
+-   Punto de Validador de mantenimiento del sistema  
 
 **Deshabilite las réplicas de la base de datos para los puntos de administración en los sitios primarios:**  
 Configuration Manager no puede actualizar correctamente un sitio primario que tiene habilitada una réplica de base de datos para puntos de administración. Deshabilite la replicación de base de datos antes de:  
@@ -151,7 +151,7 @@ Para obtener más información acerca de las tareas de mantenimiento del sitio, 
 **Ejecutar el comprobador de requisitos previos del programa de instalación.**:  
 Antes de actualizar un sitio, puede ejecutar el **comprobador de requisitos previos** independientemente del programa de instalación para comprobar que el sitio cumple los requisitos previos. Después, cuando actualiza el sitio, el comprobador de requisitos previos se ejecuta otra vez.  
 
-Si usa el medio de línea base para la versión 1606 de la versión de octubre de 2016, la comprobación de requisitos previos independiente evalúa el sitio para la actualización a la Rama actual y a la Rama de mantenimiento a largo plazo (LTSB) de System Center Configuration Manager. Dado que LTSB no admite algunas características, podría ver entradas en *ConfigMgrPrereq.log* parecidas a las siguientes:
+Si usa el medio de línea base para la versión 1606 de la versión de octubre de 2016, la comprobación de requisitos previos independiente evalúa el sitio para la actualización a la Rama actual y a la Rama de mantenimiento a largo plazo (LTSB) de System Center Configuration Manager. Dado que la Rama de mantenimiento a largo plazo no admite algunas características, podría ver entradas en *ConfigMgrPrereq.log* parecidas a las siguientes:
  - INFO: The site is a LTSB edition. (INFORMACIÓN: El sitio es una edición LTSB.)
  - Unsupported site system role 'Asset Intelligence synchronization point' for the LTSB edition;    Error;    Configuration Manager has detected that the 'Asset Intelligence synchronization point' is installed. (Rol de sistema de sitio "Punto de sincronización de Asset Intelligence" no admitido para la edición LTSB; Error; Configuration Manager ha detectado que está instalado el "Punto de sincronización de Asset Intelligence".) Asset Intelligence no se admite en la edición LTSB. Debe desinstalar el rol de sistema de sitio del punto de sincronización de Asset Intelligence para poder continuar.
 
@@ -271,7 +271,7 @@ Cuando un sitio se actualiza a System Center Configuration Manager, algunas opci
      Las programaciones de resumen personalizadas para actualizaciones de software o grupos de actualizaciones de software se restablecen al valor predeterminado de 1 hora. Al finalizar la actualización, restablezca los valores personalizados de resumen según la frecuencia necesaria.  
 
 ##  <a name="bkmk_test"></a> Probar la actualización de la base de datos del sitio  
-La siguiente información solo se aplica cuando se actualiza una versión anterior como System Center 2012 Configuration Manager a System Center Configuration Manager. Si el sitio ya ejecuta System Center Configuration Manager y va a instalar una actualización nueva, consulte [Paso 2: Probar la actualización de la base de datos antes de instalar una actualización](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) en **Antes de instalar una actualización en la consola**.
+La siguiente información solo se aplica cuando se actualiza una versión anterior como System Center 2012 Configuration Manager a System Center Configuration Manager.
 
 Antes de actualizar un sitio, pruebe una copia de la base de datos de ese sitio para la actualización.  
 

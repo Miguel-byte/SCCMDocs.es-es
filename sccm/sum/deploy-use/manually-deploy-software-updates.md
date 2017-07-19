@@ -14,10 +14,10 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 78524abd4c45f0b7402d6f1e85afc60bb72ab0ee
-ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
+ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
+ms.openlocfilehash: 2a0d5f12b99689749833c109d4fa399f99451d8a
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -236,10 +236,10 @@ ms.lasthandoff: 05/17/2017
 
     -   **Notificaciones de usuario**: especifique si quiere mostrar una notificación de las actualizaciones de software en el Centro de software del equipo cliente según las **Horas de disponibilidad del software** y si quiere mostrar las notificaciones de usuario en los equipos cliente. Si **Tipo de implementación** está establecido en **Disponible** en la página Configuración de implementación, no se puede seleccionar **Ocultar en el Centro de software y ocultar todas las notificaciones**.  
 
-    -   **Comportamiento de la fecha límite**: *solo disponible cuando **Tipo de implementación** * está establecido en **Requerido** * en la página Configuración de implementación.*   
+    -   **Comportamiento de la fecha límite**: *solo disponible cuando **Tipo de implementación** *está establecido en **Requerido**  *en la página Configuración de implementación.*   
     especifique el comportamiento que tiene lugar cuando se alcanza la fecha límite para la implementación de actualizaciones de software. Especifique si desea instalar las actualizaciones de software de la implementación. Especifique también si el sistema se debe reiniciar tras la instalación de las actualizaciones de software independientemente de lo establecido en una ventana de mantenimiento. Para más información sobre las ventanas de mantenimiento, vea [Cómo utilizar las ventanas de mantenimiento](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
-    -   **Comportamiento de reinicio de dispositivo**: *solo disponible cuando **Tipo de implementación** * está establecido en **Requerido** * en la página Configuración de implementación.*    
+    -   **Comportamiento de reinicio de dispositivo**: *solo disponible cuando **Tipo de implementación** *está establecido en **Requerido** *en la página Configuración de implementación.*    
     especifique si se debe suprimir el reinicio del sistema necesario para completar la instalación de actualizaciones de software en servidores y estaciones de trabajo.  
 
         > [!IMPORTANT]  
@@ -259,15 +259,15 @@ ms.lasthandoff: 05/17/2017
 
 10. En la página Configuración de descarga, configure las siguientes opciones:  
 
-    -   Especifique si el cliente descargará e instalará las actualizaciones de software cuando esté conectado a una red lenta o si utiliza una ubicación de contenido de reserva.  
+    - Especifique si el cliente descargará e instalará las actualizaciones de software cuando esté conectado a una red lenta o si utiliza una ubicación de contenido de reserva.  
 
-    -   Especifique si el cliente debe descargar e instalar las actualizaciones de software desde un punto de distribución de reserva cuando el contenido de las actualizaciones de software no está disponible en un punto de distribución preferido.  
+    - Especifique si el cliente debe descargar e instalar las actualizaciones de software desde un punto de distribución de reserva cuando el contenido de las actualizaciones de software no está disponible en un punto de distribución preferido.  
 
-    -   **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**: especifique si quiere habilitar el uso de BranchCache para las descargas de contenido. Para obtener más información sobre BranchCache, consulte [Conceptos básicos de la administración de contenido](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
+    - **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**: especifique si quiere habilitar el uso de BranchCache para las descargas de contenido. Para obtener más información sobre BranchCache, consulte [Conceptos básicos de la administración de contenido](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
 
-    -   Especifique si los clientes conectados a la intranet deben descargar las actualizaciones de software desde Microsoft Update si las actualizaciones no están disponibles en los puntos de distribución.  
+    - **If software updates are not available on distribution point in current, neighbor or site groups, download content from Microsoft Updates** (Si las actualizaciones de software no están disponibles en el punto de distribución actual en el grupo actual, vecino o de sitio, descargue el contenido de Microsoft Updates): seleccione esta opción para que los clientes que están conectados a la intranet descarguen las actualizaciones de software desde Microsoft Update si las actualizaciones de software no están disponibles en los puntos de distribución. Los clientes basados en Internet siempre pueden ir a Microsoft Update para obtener el contenido de las actualizaciones de software.
 
-    -   Especifique si desea permitir que los clientes descarguen después de la fecha límite de instalación cuando utilizan una conexión a Internet de uso medido. En ocasiones, los proveedores de acceso a Internet cobran según la cantidad de datos que envía y recibe cuando se utiliza una conexión a Internet de uso medido.  
+    - Especifique si desea permitir que los clientes descarguen después de la fecha límite de instalación cuando utilizan una conexión a Internet de uso medido. En ocasiones, los proveedores de acceso a Internet cobran según la cantidad de datos que envía y recibe cuando se utiliza una conexión a Internet de uso medido.  
 
     > [!NOTE]  
     >  Los clientes solicitan la ubicación del contenido desde un punto de administración para las actualizaciones de software de una implementación. El comportamiento de descarga depende de cómo se hayan configurado el punto de distribución, el paquete de implementación y las opciones de esta página. Para obtener más información, vea [Content source location scenarios](../../core/plan-design/hierarchy/content-source-location-scenarios.md) (Escenarios de ubicación de origen del contenido).  

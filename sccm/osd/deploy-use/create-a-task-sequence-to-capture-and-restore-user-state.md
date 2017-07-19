@@ -2,7 +2,7 @@
 title: Crear una secuencia de tareas para capturar y restaurar el estado de usuario | Microsoft Docs
 description: "Use secuencias de tareas de System Center Configuration Manager para capturar y restaurar los datos de estado de usuario en escenarios de implementación de sistema operativo."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 06/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: fdfbdd1acb1190ca7de9cff2b4b7f916d8dc1272
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
+ms.openlocfilehash: 4b3668094d576b1b8710f08b384aa2f7c5eb0cca
+ms.contentlocale: es-es
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -28,7 +30,7 @@ ms.openlocfilehash: fdfbdd1acb1190ca7de9cff2b4b7f916d8dc1272
 
 Puede usar secuencias de tareas de System Center Configuration Manager para capturar y restaurar los datos de estado de usuario en los escenarios de implementación de sistema operativo donde quiere conservar el estado de usuario del sistema operativo actual. Según el tipo de tarea de secuencia de tareas que cree, las etapas de captura y restauración podrían agregarse automáticamente como parte de la secuencia de tareas. En otros escenarios, es posible que deba agregar manualmente las etapas de captura y restauración a la secuencia de tareas. En este tema se indican las etapas que se deben agregar a una secuencia de tareas existente para capturar y restaurar los datos de estado de usuario.  
 
-##  <a name="a-namebkmkcapturerestoreuserstatea-how-to-capture-and-restore-user-state-data"></a><a name="BKMK_CaptureRestoreUserState"></a> Cómo capturar y restaurar los datos de estado de usuario  
+##  <a name="BKMK_CaptureRestoreUserState"></a> Cómo capturar y restaurar los datos de estado de usuario  
  Para capturar y restaurar el estado del usuario, debe agregar las etapas siguientes a la secuencia de tareas:  
 
 -   **Solicitar almacén de estado**: este paso solo es necesario en caso de que se almacene el estado de usuario en el punto de migración de estado.  
@@ -80,7 +82,7 @@ Puede usar secuencias de tareas de System Center Configuration Manager para capt
 
         -   Haga clic en **Capturar todos los perfiles de usuario mediante opciones estándar** para capturar todos los perfiles de usuario.  
 
-        -   Haga clic en **Personalizar la captura de perfiles de usuario** para especificar los perfiles de usuario individuales para capturar.  
+        -   Haga clic en **Personalizar la captura de perfiles de usuario** para especificar los perfiles de usuario individuales para capturar. Seleccione el archivo de configuración (miguser.xml, migsys.xml o migapp.xml) que contiene la información de perfil de usuario. No puede usar el archivo de configuración config.xml en este caso, pero puede agregarlo manualmente a la línea de comandos de USMT mediante las variables OSDMigrageAdditionalCaptureOptions y OSDMigrateAdditionalRestoreOptions.
 
     -   Seleccione **Habilitar el registro detallado** para especificar la cantidad de información que se escribirá en los archivos de registro si se produce un error.  
 
@@ -133,7 +135,7 @@ Puede usar secuencias de tareas de System Center Configuration Manager para capt
 
         -   Haga clic en **Restaurar todos los perfiles de usuario capturados con opciones estándar** para restaurar todos los perfiles de usuario.  
 
-        -   Haga clic en **Personalizar la captura de perfiles de usuario** para restaurar los perfiles de usuario individuales.  
+        -   Haga clic en **Customize user profile restore** (Personalizar la restauración de perfiles de usuario) para restaurar los perfiles de usuario individuales. Seleccione el archivo de configuración (miguser.xml, migsys.xml o migapp.xml) que contiene la información de perfil de usuario. No puede usar el archivo de configuración config.xml en este caso, pero puede agregarlo manualmente a la línea de comandos de USMT mediante las variables OSDMigrageAdditionalCaptureOptions y OSDMigrateAdditionalRestoreOptions.
 
     -   Seleccione **Restaurar perfiles de usuario de equipo local** para proporcionar una nueva contraseña para los perfiles restaurados. No se pueden migrar las contraseñas de perfiles locales.  
 
@@ -169,9 +171,4 @@ Puede usar secuencias de tareas de System Center Configuration Manager para capt
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Supervisar la implementación de la secuencia de tareas](monitor-operating-system-deployments.md#BKMK_TSDeployStatus)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

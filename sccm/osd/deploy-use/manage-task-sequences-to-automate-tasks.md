@@ -16,10 +16,10 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 113fa73bf0bd1b3b8a4754eb1e96549c520d7995
+ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
+ms.openlocfilehash: 2f3d66362c49d28a52d7f9c535eb0b3b4cc4eaf7
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -79,12 +79,70 @@ A partir de la versión 1702 de Configuration Manager, puede volver a la página
 
  Para obtener una lista de las etapas de secuencia de tareas disponibles, consulte [Pasos de la secuencia de tareas](../understand/task-sequence-steps.md).  
 
+## <a name="configure-software-center-properties"></a>Configurar propiedades del Centro de software
+Siga este procedimiento para configurar los detalles de la secuencia de tareas que aparece en el Centro de software. Estos detalles son meramente informativos.  
+1. En la consola de Configuration Manager, vaya a **Biblioteca de software** > **Sistemas operativos** > **Secuencias de tareas**.
+2. Seleccione la secuencia de tareas que se va editar y haga clic en **Propiedades**.
+3. En la pestaña **General**, está disponible la siguiente configuración para el Centro de software:
+  - **Es necesario reiniciar**: permite al usuario saber si es necesario reiniciar durante la instalación.
+  - **Tamaño de la descarga (MB)**: especifica cuántos megabytes se muestran en el Centro de software para la secuencia de tareas.  
+  - **Tiempo de ejecución estimado (minutos)**: especifica el tiempo de ejecución estimado en minutos que se muestra en el Centro de software para la secuencia de tareas.
+
+## <a name="configure-advanced-task-sequence-settings"></a>Configuración de los ajustes de la secuencia de tareas avanzada
+Siga este procedimiento para configurar los detalles de la secuencia de tareas que aparece en el Centro de software. Estos detalles son meramente informativos.  
+1. En la consola de Configuration Manager, vaya a **Biblioteca de software** > **Sistemas operativos** > **Secuencias de tareas**.
+2. Seleccione la secuencia de tareas que se va editar y haga clic en **Propiedades**.
+3. En la pestaña **Avanzadas** están disponibles las opciones siguientes:
+
+    - **Ejecutar otro programa primero**    
+    Active esta casilla para ejecutar otro programa (en otro paquete) antes de ejecutar la secuencia de tareas. De forma predeterminada, esta casilla de verificación está desactivada. No es necesario anunciar por separado el programa especificado para que se ejecute primero.
+
+        > [!IMPORTANT]     
+        Esta configuración solo se aplica a las secuencias de tareas que se ejecutan en el sistema operativo completo. Configuration Manager ignora esta configuración si la secuencia de tareas se inicia mediante PXE o medios de arranque.
+
+    - **Paquete**     
+        Al seleccionar **Ejecutar otro programa primero**, escriba o busque el paquete que contiene el programa que se debe ejecutar antes de esta secuencia de tareas.
+
+    - **Programa**     
+    Al seleccionar **Ejecutar otro programa primero**, seleccione el programa que se debe ejecutar antes de esta secuencia de tareas en la lista desplegable **Programa**.
+
+        > [!NOTE]    
+        > Si el programa seleccionado no se ejecuta en un cliente, la secuencia de tareas tampoco se ejecutará. Si el programa seleccionado se ejecuta correctamente, no se ejecutará de nuevo, incluso aunque la secuencia de tareas se vuelva a ejecutar en el mismo cliente.
+ 
+    - **Deshabilitar esta secuencia de tareas en los equipos en los que se implementó**    
+    Si selecciona esta opción, todas las implementaciones que contienen esta secuencia de tareas se deshabilitan temporalmente. La secuencia de tareas se quita de la lista de anuncios disponibles para la ejecución y no se ejecutará hasta que se vuelva a habilitar. De forma predeterminada, esta opción está deshabilitada.
+
+    - **Tiempo de ejecución máximo permitido**    
+    Especifica el tiempo máximo (en minutos) previsto para la ejecución de la secuencia de tareas en el equipo de destino. Debe usar un número entero igual o mayor que cero. De forma predeterminada, este valor está establecido en 120 minutos.
+
+        > [!IMPORTANT]    
+        > Si está usando ventanas de mantenimiento para la recopilación en la que se ejecuta esta secuencia de tareas, puede producirse un conflicto si el **Tiempo de ejecución máximo permitido** es mayor que la ventana de mantenimiento programada. Si el tiempo máximo de ejecución se establece en **0**, la secuencia de tareas comenzará durante la ventana de mantenimiento y seguirá ejecutándose hasta que se complete o se produzca un error después de cerrar la ventana de mantenimiento. Como resultado, las secuencias de tareas con un tiempo de ejecución máximo establecido en **0** podrían ejecutarse después del final de sus ventanas de mantenimiento. Si establece el tiempo de ejecución máximo en un periodo específico (esto es, diferente de **0**) que supera la duración de cualquiera de las ventanas de mantenimiento disponibles, no se ejecutará la secuencia de tareas. Para obtener más información, consulte [How to Use Maintenance Windows in Configuration Manager](/sccm/core/clients/manage/collections/use-maintenance-windows) (Uso de ventanas de mantenimiento en Configuration Manager).
+ 
+        Si el valor se establece en **0**, Configuration Manager evalúa el tiempo de ejecución máximo permitido en **12** horas (720 minutos) para el progreso de la supervisión. Sin embargo, la secuencia de tareas se iniciará siempre y cuando la duración de la cuenta atrás no supere el valor de la ventana de mantenimiento.
+
+    > [!NOTE]    
+    > Si se alcanza el tiempo de ejecución máximo, Configuration Manager detendrá la secuencia de tareas si se ha configurado para que se ejecute con derechos administrativos y no se selecciona el ajuste para permitir a los usuarios interactuar con este programa. Si no se detiene la secuencia de tareas, Configuration Manager detiene la supervisión de la secuencia de tareas una vez que se alcanza el tiempo de ejecución máximo permitido. 
+
+    - **Use a boot image**  (Usar una imagen de arranque)  
+        Habilite esta opción para usar la imagen de arranque seleccionada cuando se ejecuta la secuencia de tareas. 
+
+        Haga clic en **Examinar** para seleccionar otra imagen de arranque. Desactive esta opción para deshabilitar el uso de la imagen de arranque seleccionada cuando se ejecuta la secuencia de tareas.
+
+    - **This task sequence can run on any platform**    (Esta secuencia de tareas puede ejecutarse en cualquier plataforma)  
+        Si selecciona esta opción, Configuration Manager no comprueba el tipo de plataforma del equipo de destino cuando se implementa la secuencia de tareas. Esta opción está seleccionada de forma predeterminada.
+
+    - **This task sequence can only run on the specified client platforms**   (Esta secuencia de tareas solo puede ejecutarse en las plataformas cliente especificadas)  
+        Esta opción especifica los procesadores, los sistemas operativos y los Service Pack en los que se puede ejecutar esta secuencia de tareas. Cuando se selecciona esta opción, también debe seleccionarse al menos una plataforma de la lista. De forma predeterminada, no hay ninguna plataforma seleccionada. Configuration Manager usa esta información cuando se evalúa qué equipos de destino de una recopilación reciben la secuencia de tareas implementada.
+
+        > [!NOTE]    
+        > Cuando se ejecuta una secuencia de tareas desde un medio de arranque o el arranque PXE, esta opción se omite y la secuencia de tareas se ejecuta como si estuviera seleccionada la opción **Este programa puede ejecutarse en cualquier plataforma**.
+
 ## <a name="configure-high-impact-task-sequence-settings"></a>Configuración de los ajustes de la secuencia de tareas de gran impacto
 A partir de la versión 1702 de Configuration Manager, puede establecer una secuencia de tareas como de gran impacto y personalizar los mensajes que reciben los usuarios cuando ejecutan la secuencia de tareas.
 
 ### <a name="set-a-task-sequence-as-a-high-impact-task-sequence"></a>Establecer una secuencia de tareas como una secuencia de tareas de alto impacto
 Siga este procedimiento para establecer una secuencia de tareas como de alto impacto.
-> [!NOTE]
+> [!NOTE]    
 > Cualquier secuencia de tareas que cumpla determinadas condiciones se define automáticamente como de alto impacto. Para obtener información detallada, vea [Administrar implementaciones de alto riesgo](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
 
 1. En la consola de Configuration Manager, vaya a **Biblioteca de software** > **Sistemas operativos** > **Secuencias de tareas**.
@@ -96,7 +154,7 @@ Utilice el procedimiento siguiente para crear una notificación personalizada pa
 1. En la consola de Configuration Manager, vaya a **Biblioteca de software** > **Sistemas operativos** > **Secuencias de tareas**.
 2. Seleccione la secuencia de tareas que se va editar y haga clic en **Propiedades**.
 3. En la pestaña **Notificación de usuario**, seleccione **Usar texto personalizado**.
->  [!NOTE]
+>  [!NOTE]    
 >  Solo se puede establecer el texto de la notificación del usuario cuando se selecciona **Es una secuencia de tareas de alto impacto**.
 
 4. Configure las siguientes opciones (máximo de 255 caracteres para cada cuadro de texto):
@@ -107,23 +165,15 @@ Utilice el procedimiento siguiente para crear una notificación personalizada pa
   - Cuadro de texto 1: especifica el cuerpo principal del texto, que normalmente contiene instrucciones para el usuario. Por ejemplo, en la notificación de usuario predeterminada, esta sección contiene algo como "La actualización del sistema operativo llevará un tiempo y es posible que el equipo se reinicie varias veces".
   - Cuadro de texto 2: especifica el texto en negrita debajo del cuerpo de texto principal. Por ejemplo, en la notificación de usuario predeterminada, esta sección contiene algo como "Esta actualización en contexto instala el nuevo sistema operativo y migra automáticamente sus aplicaciones, datos y configuración".
   - Cuadro de texto 3: especifica la última línea de texto debajo del texto en negrita. Por ejemplo, en la notificación de usuario predeterminada, esta sección contiene algo como "Haga clic en Instalar para comenzar. De lo contrario, haga clic en Cancelar".   
+    
+Supongamos que configura la siguiente notificación personalizada en las propiedades.
 
-  Supongamos que configura la siguiente notificación personalizada en las propiedades.
+![Notificación personalizada para una secuencia de tareas](..\media\user-notification.png)
 
-    ![Notificación personalizada para una secuencia de tareas](..\media\user-notification.png)
+Se mostrará el siguiente mensaje de notificación cuando el usuario final abra la instalación desde el Centro de software.
 
-    Se mostrará el siguiente mensaje de notificación cuando el usuario final abra la instalación desde el Centro de software.
+![Notificación personalizada para una secuencia de tareas](..\media\user-notification-enduser.png)
 
-    ![Notificación personalizada para una secuencia de tareas](..\media\user-notification-enduser.png)
-
-### <a name="configure-software-center-properties"></a>Configurar propiedades del Centro de software
-Siga este procedimiento para configurar los detalles de la secuencia de tareas que aparece en el Centro de software. Estos detalles son meramente informativos.  
-1. En la consola de Configuration Manager, vaya a **Biblioteca de software** > **Sistemas operativos** > **Secuencias de tareas**.
-2. Seleccione la secuencia de tareas que se va editar y haga clic en **Propiedades**.
-3. En la pestaña **General**, está disponible la siguiente configuración para el Centro de software:
-  - **Es necesario reiniciar**: permite al usuario saber si es necesario reiniciar durante la instalación.
-  - **Tamaño de la descarga (MB)**: especifica cuántos megabytes se muestran en el Centro de software para la secuencia de tareas.  
-  - **Tiempo de ejecución estimado (minutos)**: especifica el tiempo de ejecución estimado en minutos que se muestra en el Centro de software para la secuencia de tareas.
 
 ##  <a name="BKMK_DistributeTS"></a> Distribuir contenido al que hace referencia una secuencia de tareas  
  Antes de que los clientes ejecuten una secuencia de tareas que haga referencia a contenido, debe distribuir dicho contenido a los puntos de distribución. En cualquier momento, puede seleccionar la secuencia de tareas y distribuir su contenido para crear una nueva lista de paquetes de referencia para su distribución. Si realiza cambios en la secuencia de tareas con contenido actualizado, debe redistribuir el contenido antes de que esté disponible para los clientes. Utilice el siguiente procedimiento para distribuir el contenido al que hace referencia una secuencia de tareas.  
@@ -352,19 +402,22 @@ Siga este procedimiento para configurar los detalles de la secuencia de tareas q
  Después de importar la secuencia de tareas, edítela para especificar las contraseñas que se encontraban en la secuencia de tareas original. Por motivos de seguridad, no se exportan las contraseñas.  
 
 ##  <a name="BKMK_CreateTSVariables"></a> Crear variables de secuencia de tareas para equipos y recopilaciones  
- Puede definir variables de secuencia de tareas personalizadas para equipos y recopilaciones. Las variables que se definen para un determinado equipo se conocen como variables de secuencia de tareas por equipo. Las variables definidas para una determinada recopilación se conocen como variables de secuencia de tareas por recopilación. Si hay un conflicto, las variables por equipo tienen prioridad sobre las variables por recopilación. Por lo tanto, las variables de secuencia de tareas asignadas a un determinado equipo tienen automáticamente más prioridad que las variables asignadas a la recopilación que contiene al equipo.  
+Puede definir variables de secuencia de tareas personalizadas para equipos y recopilaciones. Las variables que se definen para un determinado equipo se conocen como variables de secuencia de tareas por equipo. Las variables definidas para una determinada recopilación se conocen como variables de secuencia de tareas por recopilación. Si hay un conflicto, las variables por equipo tienen prioridad sobre las variables por recopilación. Por lo tanto, las variables de secuencia de tareas asignadas a un determinado equipo tienen automáticamente más prioridad que las variables asignadas a la recopilación que contiene al equipo.  
 
- Por ejemplo, si hay una variable asignada a la recopilación ABC y hay una variable con el mismo nombre asignada al equipo XYZ, que forma parte de la recopilación ABC, la variable asignada al equipo XYZ tiene una prioridad más alta que la variable asignada a la recopilación ABC.  
+Por ejemplo, si hay una variable asignada a la recopilación ABC y hay una variable con el mismo nombre asignada al equipo XYZ, que forma parte de la recopilación ABC, la variable asignada al equipo XYZ tiene una prioridad más alta que la variable asignada a la recopilación ABC.  
 
- Puede ocultar las variables por equipo y por recopilación para que no sean visibles en la consola de Configuration Manager. Si ya no desea ocultar estas variables, debe eliminarlas y redefinirlas sin seleccionar la opción para ocultarlas. Cuando se usa la opción **No mostrar este valor en la consola de Configuration Manager**, el valor de la variable no se muestra, pero la secuencia de tareas lo puede seguir usando cuando se ejecute.  
+Puede ocultar las variables por equipo y por recopilación para que no sean visibles en la consola de Configuration Manager. Si ya no desea ocultar estas variables, debe eliminarlas y redefinirlas sin seleccionar la opción para ocultarlas. Cuando se usa la opción **No mostrar este valor en la consola de Configuration Manager**, el valor de la variable no se muestra en la consola, pero la secuencia de tareas lo puede seguir usando cuando se ejecute.  
 
- Puede administrar las variables por equipo en un sitio primario o en un sitio de administración central. Configuration Manager no admite más de 1000 variables asignadas en un equipo.  
+> [!WARNING]    
+> La opción **No mostrar este valor en la consola de Configuration Manager** se aplica a la consola de Configuration Manager, pero los valores de las variables siguen apareciendo en el archivo de registro de la secuencia de tareas (SMSTS.LOG). 
 
-> [!WARNING]  
+Puede administrar las variables por equipo en un sitio primario o en un sitio de administración central. Configuration Manager no admite más de 1000 variables asignadas en un equipo.  
+
+> [!IMPORTANT]  
 >  Cuando se usan variables por recopilación para secuencias de tareas, tenga en cuenta lo siguiente:  
 >   
->  -   Dado que los cambios en recopilaciones siempre se replican a través de la jerarquía, los cambios que realice en las variables de la recopilación se aplicarán no solo en los miembros del sitio actual, sino en todos los miembros de la recopilación en la jerarquía.  
-> -   Cuando se elimina una recopilación también se eliminan las variables de secuencia de tareas que están configuradas para la recopilación.  
+> - Dado que los cambios en recopilaciones siempre se replican a través de la jerarquía, los cambios que realice en las variables de la recopilación se aplicarán no solo en los miembros del sitio actual, sino en todos los miembros de la recopilación en la jerarquía.  
+> - Cuando se elimina una recopilación también se eliminan las variables de secuencia de tareas que están configuradas para la recopilación.  
 
  Utilice los procedimientos siguientes para crear variables de secuencia de tareas para un equipo o una recopilación.  
 
@@ -397,7 +450,7 @@ Siga este procedimiento para configurar los detalles de la secuencia de tareas q
 6.  Después de agregar todas las variables a la recopilación, haga clic en **Aceptar**.  
 
 ##  <a name="BKMK_AdditionalActionsTS"></a> Acciones adicionales para administrar secuencias de tareas  
- Puede administrar secuencias de tareas con acciones adicionales cuando se selecciona la secuencia de tareas mediante el procedimiento siguiente.  
+ Puede administrar secuencias de tareas con acciones adicionales cuando se selecciona la secuencia de tareas.  
 
 #### <a name="to-select-a-task-sequence-to-manage"></a>Para seleccionar la secuencia de tareas que desea administrar  
 
@@ -416,7 +469,6 @@ Siga este procedimiento para configurar los detalles de la secuencia de tareas q
 |**Habilitar**|Habilita la secuencia de tareas para que se pueda ejecutar. No es necesario volver a implementar las secuencias de tareas implementadas después de habilitarlas.|  
 |**Crear archivo de contenido preconfigurado**|Inicia el Asistente para crear archivos de contenido preconfigurados para preconfigurar el contenido de la secuencia de tareas. Para obtener información sobre cómo crear un archivo de contenido preconfigurado, consulte [Preconfigurar el contenido](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content).|  
 |**Moverr**|La secuencia de tareas seleccionada se mueve a otra carpeta.|  
-|**Propiedades**|Abre el cuadro de diálogo **Propiedades** de la secuencia de tareas seleccionada. Utilice este cuadro de diálogo para cambiar el comportamiento del objeto de secuencia de tareas. Sin embargo, los pasos de la secuencia de tareas no se pueden cambiar mediante este cuadro de diálogo.|  
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Escenarios para implementar sistemas operativos de empresa](scenarios-to-deploy-enterprise-operating-systems.md)

@@ -2,7 +2,7 @@
 title: Almacenamiento de datos | Microsoft Docs
 description: Punto de servicio de almacenamiento de datos y base de datos para System Center Configuration Manager
 ms.custom: na
-ms.date: 3/28/2017
+ms.date: 5/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 3c2a07f560e0aa3d2beb7cc50e71c98ac45c27e1
-ms.openlocfilehash: 9239f6e749c368835e8594ca2d07378d8555b99e
+ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
+ms.openlocfilehash: f11a53bbc85b40077b3909568db5ae5552b0456c
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/01/2017
 
 
 ---
@@ -51,6 +51,7 @@ Cuando se instala el rol de sistema de sitio, instala y configura la base de dat
 - La cuenta de equipo correspondiente al equipo en el que se instala el rol de sistema de sitio se utiliza para sincronizar datos con la base de datos del almacén de datos. La cuenta requiere los permisos siguientes:  
   - **Administrator** en el equipo que hospedará la base de datos del almacenamiento de datos.
   - **DB_owner** en la base de datos del almacenamiento de datos.
+  - Permisos **DB_reader** y **execute** para la base de datos de sitio de los sitios de nivel superior.
 -    La base de datos del almacenamiento de datos es compatible con una instancia predeterminada o con nombre de SQL Server 2012 o posterior. La edición debe ser Enterprise o Datacenter.
   - Grupo de disponibilidad AlwaysOn de SQL Server: esta configuración no se admite.
   - Clúster de SQL Server: no se admiten clústeres de conmutación por error de SQL Server. Esto es porque la base de datos del almacenamiento de datos no se ha probado a fondo en clústeres de conmutación por error de SQL Server.

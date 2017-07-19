@@ -1,7 +1,7 @@
 ---
 title: "Planificación de Cloud Management Gateway | Microsoft Docs"
 description: 
-ms.date: 05/16/2017
+ms.date: 06/07/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
@@ -10,10 +10,10 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
-ms.openlocfilehash: b1295891a5567e64b901c79100c2971e526dc874
+ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
+ms.openlocfilehash: a7380ae781447880ffcba0778694ea62e10c4889
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 
@@ -22,6 +22,9 @@ ms.lasthandoff: 05/17/2017
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
 A partir de la versión 1610, la puerta de enlace de administración en la nube proporciona una manera sencilla de administrar clientes de Configuration Manager en Internet. El servicio de puerta de enlace de administración en la nube se implementa en Microsoft Azure y requiere una suscripción de Azure. Se conecta a la infraestructura de Configuration Manager local con un nuevo rol denominado punto de conexión de la puerta de enlace de administración en la nube. Una vez implementado y configurado, los clientes podrán tener acceso a los roles de sistema de sitio locales de Configuration Manager independientemente de si están conectados a la red interna privada o a Internet.
+
+> [!TIP]  
+> A partir de la versión 1610, Cloud Management Gateway es una característica de versión preliminar. Para habilitarla, consulte [Use pre-release features from updates](/sccm/core/servers/manage/pre-release-features) (Uso de características de la versión preliminar a partir de las actualizaciones).
 
 Use la consola de Configuration Manager para implementar el servicio en Azure, agregar el rol de punto de conexión de la puerta de enlace de administración en la nube y configurar roles de sistema de sitio para permitir el tráfico de la puerta de enlace de administración en la nube. La puerta de enlace de administración en la nube de momento solo admite los roles de punto de administración y punto de actualización de software.
 
@@ -93,11 +96,6 @@ La puerta de enlace de administración en la nube usa la siguiente característi
 
     - Vea el costo de usar una [distribución basada en la nube](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#cost-of-using-cloud-based-distribution) para obtener más información.
 
-## <a name="next-steps"></a>Pasos siguientes
-
-[Configurar puerta de enlace de administración en la nube](setup-cloud-management-gateway.md)
-
-
 ## <a name="frequently-asked-questions-about-the-cloud-management-gateway-cmg"></a>Preguntas más frecuentes acerca de Cloud Management Gateway (CMG)
 
 ### <a name="why-use-the-cloud-management-gateway"></a>¿Por qué utilizar CMG?
@@ -122,7 +120,7 @@ El componente del administrador del servicio de nube en el punto de conexión de
 
 Necesitará los siguientes certificados para proteger CMG:
 
-- **Certificado de administración**: puede ser cualquier certificado, como los certificados autofirmados. Puede utilizar un certificado público cargado en Azure AD o un [PFX con clave privada](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) importado en Configuration Manager para autenticarse con Azure AD. 
+- **Certificado de administración**: puede ser cualquier certificado, como los certificados autofirmados. Puede utilizar un certificado público cargado en Azure AD o un [PFX con clave privada](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) importado en Configuration Manager para autenticarse con Azure AD.
 - **Certificado del servicio web**: recomendamos que utilice un certificado de entidad de certificación pública para obtener una confianza nativa por parte de los clientes. El registro CName debe crearse en el registrador de DNS público. No se admiten certificados comodín.
 - **Carga de certificados de entidad de certificación raíz o subordinada a CMG**: CMG debe hacer la validación de cadena completa en los certificados PKI de cliente. Si usa una entidad de certificación de empresa para emitir certificados PKI de cliente y su entidad de certificación raíz o subordinada no está disponible en Internet, debe cargarla en CMG.
 
@@ -159,15 +157,17 @@ CMG ayuda a garantizar la seguridad de las maneras siguientes:
 
 - Protege al cliente de Configuration Manager del punto de conexión de publicación orientado a roles, como el punto de administración y los puntos de conexión del host del punto de actualización de software en ISS para atender las solicitudes del cliente. Cada punto de conexión publicado en CMG tiene una asignación de dirección URL.
 La dirección URL externa es la que el cliente utiliza para comunicarse con CMG.
-La dirección URL interna es el punto de conexión de CMG utilizado para reenviar las solicitudes al servidor interno. 
+La dirección URL interna es el punto de conexión de CMG utilizado para reenviar las solicitudes al servidor interno.
 
 #### <a name="example"></a>Ejemplo:
 Al habilitar el tráfico de CMG en un punto de administración, Configuration Manager crea un conjunto de asignaciones de direcciones URL internamente para cada servidor de punto de administración, como ccm_system, ccm_incoming y sms_mp.
-La dirección URL externa para el punto de conexión ccm_system del punto de administración tendría este aspecto **https://<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>/CCM_System**. La dirección URL es única para cada punto de administración. El cliente de Configuration Manager pone entonces el nombre del punto de administración habilitado para CMG, como **<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>**, en su lista del punto de administración de Internet. Todas las direcciones URL externas publicadas se cargan automáticamente en CMG para que este servicio pueda filtrarlas. Todas las asignaciones de direcciones URL se replican en el punto de conexión de CMG forma que las pueda reenviar a servidores internos en función del cliente que solicita la dirección URL externa.
+La dirección URL externa para el punto de conexión ccm_system del punto de administración tendría este aspecto **https://<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>/CCM_System**.
+La dirección URL es única para cada punto de administración. El cliente de Configuration Manager pone entonces el nombre del punto de administración habilitado para CMG, como **<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>**, en su lista del punto de administración de Internet.
+Todas las direcciones URL externas publicadas se cargan automáticamente en CMG para que este servicio pueda filtrarlas. Todas las asignaciones de direcciones URL se replican en el punto de conexión de CMG forma que las pueda reenviar a servidores internos en función del cliente que solicita la dirección URL externa.
 
-### <a name="what-ports-are-used-by-the-cloud-management-gateway"></a>¿Qué puertos se usan por CMG? 
+### <a name="what-ports-are-used-by-the-cloud-management-gateway"></a>¿Qué puertos se usan por CMG?
 
-- No se necesitan puertos de entrada en la red local. La implementación de CMG creará varios de ellos en CMG automáticamente. 
+- No se necesitan puertos de entrada en la red local. La implementación de CMG creará varios de ellos en CMG automáticamente.
 - Además de 443, el punto de conexión de CMG necesita algunos puertos de salida.
 
 |||||
@@ -182,7 +182,7 @@ La dirección URL externa para el punto de conexión ccm_system del punto de adm
 
 - Si es posible, configure CMG, el punto de conexión de CMG y el servidor de sitio de Configuration Manager en la misma región de red para reducir la latencia.
 - Actualmente, la región no es relevante para la conexión entre el cliente de Configuration Manager y CMG.
-- Para obtener alta disponibilidad, se recomiendan al menos 2 instancias virtuales de CMG y dos puntos de conexión de CMG por sitio. 
+- Para obtener alta disponibilidad, se recomiendan al menos 2 instancias virtuales de CMG y dos puntos de conexión de CMG por sitio.
 - Puede escalar CMG para que admita más clientes agregando más instancias de VM. El equilibrador de carga de Azure AD se ocupa de equilibrar su carga.
 - Cree más puntos de conexión de CMG para distribuir la carga entre ellos. CMG aplicará el sistema "round-robin" en el tráfico de sus puntos de conexión de CMG en conexión.
 - El número de cliente de soporte por instancia de VM de CMG es 6k en la versión 1702. Si el canal de CMG está sometido a una carga elevada, la solicitud se atenderá igualmente aunque quizá tarde algo más de lo normal.
@@ -195,4 +195,7 @@ Para solucionar problemas de tráfico de cliente, utilice **CMGHttpHandler.log**
 
 Para obtener una lista de todos los archivos de registro relacionados con CMG, consulte [Archivos de registro en System Center Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
 
+## <a name="next-steps"></a>Pasos siguientes
+
+[Configurar puerta de enlace de administración en la nube](setup-cloud-management-gateway.md)
 

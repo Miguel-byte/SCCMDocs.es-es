@@ -2,7 +2,7 @@
 title: "Configuración de su suscripción a Intune mediante System Center Configuration Manager | Microsoft Docs"
 description: "Configuración de su suscripción a Intune mediante System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 06/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 10cc64ae7e4d91f53201c2896b359e77ef04d32d
+ms.sourcegitcommit: 662901e850566756759fcfc61c58f3c0e56bc5aa
+ms.openlocfilehash: 22d890c972d3166f9c7b583d8d3fa917c1897880
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="configure-your-intune-subscription-with-system-center-configuration-manager-and-microsoft-intune"></a>Configuración de su suscripción a Intune con System Center Configuration Manager y Microsoft Intune
@@ -53,7 +53,7 @@ La suscripción a Intune hace lo siguiente:
 5.  En la página **Suscripción** , haga clic en **Iniciar sesión** e inicie sesión con su cuenta profesional o educativa. En el cuadro de diálogo **Establecer entidad de administración de dispositivos móviles**, active la casilla para administrar solo dispositivos móviles mediante Configuration Manager a través de la consola de Configuration Manager. Para continuar con su suscripción, debe seleccionar esta opción.
 
     > [!IMPORTANT]
-    >  Si se selecciona Configuration Manager como entidad de administración, no podrá modificarla en Microsoft Intune en el futuro.
+    >  Una vez que seleccione Configuration Manager como entidad de administración, solo puede cambiar la entidad de administración a Microsoft Intune en Configuration Manager versión 1610 o posterior y Microsoft Intune versión 1705 sin tener que ponerse en contacto con el soporte técnico de Microsoft y sin tener que anular y volver a crear la inscripción de los dispositivos administrados existentes. Para obtener más información, consulte [Cambio de la entidad de MDM](/sccm/mdm/deploy-use/change-mdm-authority).
 
 6.  Haga clic en los vínculos de privacidad para revisarlos y, a continuación, haga clic en **Siguiente**.
 

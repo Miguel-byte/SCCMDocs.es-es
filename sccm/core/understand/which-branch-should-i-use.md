@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
-ms.openlocfilehash: f791278b0aa8efc734a894da7dab1704bb567ed0
+ms.sourcegitcommit: 662901e850566756759fcfc61c58f3c0e56bc5aa
+ms.openlocfilehash: 26356a80bd8c78d4517253bae73e53d8d8f3a73a
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/03/2017
 
 
 ---
@@ -81,7 +81,7 @@ Para instalar la LTSB como un sitio nuevo o como una actualización desde un sit
 > [!TIP]  
 > Para obtener información sobre System Center 2016, consulte la [documentación de System Center 2016](https://technet.microsoft.com/system-center-docs/system-center). Esta documentación también especifica el proceso de obtención de System Center 2016, que requiere un contrato de licencia de Microsoft o derechos similares.
 
-> Para buscar la versión 1606 de System Center Configuration Manager en el Centro de servicios de licencias por volumen (VLSC), vaya a la pestaña **Downloads and Keys (Descargas y claves)** del [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) y, después, seleccione **System Center Config Mgr (rama actual y LTSB 1606)**.
+> Para buscar la versión 1606 de System Center Configuration Manager en el Centro de servicios de licencias por volumen (VLSC), vaya a la pestaña **Downloads and Keys** (Descargas y claves) de [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) y, después, seleccione **System Center Config Mgr (rama actual y LTSB)**.
 
 > También puede obtener una versión de evaluación de System Center 2016 en el sitio de [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview).
 

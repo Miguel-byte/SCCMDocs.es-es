@@ -15,9 +15,11 @@ caps.latest.revision: 6
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: aed95333b6509b0aa7061f23969381f1ce8aff7f
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f62d969dd49fb00b688602128df74b28ff551135
+ms.openlocfilehash: 7ae6bac23e585d6f61aff0f3155d050f1b537620
+ms.contentlocale: es-es
+ms.lasthandoff: 06/07/2017
 
 
 ---
@@ -33,7 +35,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
 -   [Planeación de informes en System Center Configuration Manager](../../../core/servers/manage/planning-for-reporting.md)  
 
-##  <a name="a-namebkmksqlreportingservicesa-sql-server-reporting-services"></a><a name="BKMK_SQLReportingServices"></a> SQL Server Reporting Services  
+##  <a name="BKMK_SQLReportingServices"></a> SQL Server Reporting Services  
  SQL Server Reporting Services es una plataforma de informes basada en servidor que proporciona exhaustivas funciones de informes para una amplia variedad de orígenes de datos. El punto de servicios de informes de Configuration Manager se comunica con SQL Server Reporting Services para copiar informes de Configuration Manager en una carpeta de informes especificada, para configurar Reporting Services y la seguridad de Reporting Services. Reporting Services se conecta con la base de datos del sitio de Configuration Manager para recuperar datos que se devuelven cuando se ejecutan informes.  
 
  Para poder instalar el punto de servicios de informes en un sitio de Configuration Manager, debe instalar y configurar SQL Server Reporting Services en el sistema de sitio que hospeda el rol del sistema de sitio del punto de servicios de informes. Para obtener más información acerca de la instalación de Reporting Services, consulte la [biblioteca de TechNet de SQL Server](http://go.microsoft.com/fwlink/p/?LinkId=266389).  
@@ -59,7 +61,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
 7.  Haga clic en **Salir** para cerrar el Administrador de configuración de Reporting Services.  
 
-##  <a name="a-namebkmkreportbuilder3a-configure-reporting-to-use-report-builder-30"></a><a name="BKMK_ReportBuilder3"></a> Configuración de informes para usar el Generador de informes 3.0  
+##  <a name="BKMK_ReportBuilder3"></a> Configuración de informes para usar el Generador de informes 3.0  
 
 #### <a name="to-change-the-report-builder-manifest-name-to-report-builder-30"></a>Para cambiar el nombre de manifiesto de Report Builder a Report Builder 3.0  
 
@@ -73,14 +75,17 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
 5.  Cierre el editor del Registro de Windows.  
 
-##  <a name="a-namebkmkinstallreportingservicespointa-install-a-reporting-services-point"></a><a name="BKMK_InstallReportingServicesPoint"></a> Instalar un punto de servicios de informes  
+##  <a name="BKMK_InstallReportingServicesPoint"></a> Instalar un punto de servicios de informes  
  Para administrar informes en un sitio, el punto de servicios de informes debe estar instalado en el sitio. El punto de servicios de informes copia las carpetas de informes, notifica a SQL Server Reporting Services, aplica la directiva de seguridad para informes y carpetas, y configura las opciones de Reporting Services. Para que la consola de Configuration Manager muestre informes y poder administrarlos en Configuration Manager, debe configurar el punto de servicios de informes. El punto de servicios de informes es un rol de sistema de sitio que se debe configurar en un servidor que tenga Microsoft SQL Server Reporting Services instalado y en ejecución. Para más información sobre los requisitos previos, vea [Prerequisites for reporting (Requisitos previos para la generación de informes)](prerequisites-for-reporting.md).  
 
 > [!IMPORTANT]  
 >  Cuando selecciona un sitio para instalar el punto de servicios de informes, tenga en cuenta que los usuarios que accederán a los informes deben estar en el mismo ámbito de seguridad que el sitio en el se instala el punto de servicios de informes.  
 
-> [!IMPORTANT]  
+> [!NOTE]  
 >  Una vez instalado un punto de servicios de informes en un sistema de sitio, no cambie la dirección URL del servidor de informes. Por ejemplo, si crea el punto de servicios de informes y, luego, en el Administrador de configuración de Reporting Services modifica la dirección URL del servidor de informes, la consola de Configuration Manager seguirá usando la dirección URL anterior y no podrá ejecutar, editar ni crear informes desde la consola. Cuando tenga que cambiar la dirección URL del servidor de informes, quite el punto de servicios de informes, cambie la dirección URL y, a continuación, reinstale el punto de servicios de informes.  
+
+> [!IMPORTANT]    
+> Cuando se instala un punto de servicios de informes, debe especificar una cuenta para el punto de servicios de informes. Más adelante, cuando los usuarios de un dominio distinto intenten ejecutar un informe, este dará error a menos que haya una confianza bidireccional establecida entre los dominios.
 
  Utilice el siguiente procedimiento para instalar el punto de servicios de informes.  
 
@@ -126,7 +131,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
     -   **Cuenta de punto de Reporting Services**: haga clic en **Establecer** y seleccione una cuenta que se use cuando SQL Server Reporting Services en el punto de servicios de informes se conecte con la base de datos del sitio de Configuration Manager para recuperar los datos que se muestran en un informe. Seleccione **Cuenta existente** para especificar una cuenta de usuario de Windows configurada previamente como cuenta de Configuration Manager o seleccione **Nueva cuenta** para especificar una cuenta de usuario de Windows que no esté configurada actualmente como una cuenta de Configuration Manager. Configuration Manager concede automáticamente acceso al usuario especificado a la base de datos del sitio. El usuario se muestra en la subcarpeta **Cuentas** del nodo **Seguridad** en el área de trabajo **Administración** con el nombre de cuenta **Punto de servicios de informes de ConfigMgr** .  
 
-         La cuenta que ejecuta Reporting Services debe pertenecer al grupo de seguridad local de dominio **Grupo de acceso de autorización de Windows**y tener el permiso **Lectura tokenGroupsGlobalAndUniversal** configurado como **Permitir**.  
+         La cuenta que ejecuta Reporting Services debe pertenecer al grupo de seguridad local de dominio **Grupo de acceso de autorización de Windows**y tener el permiso **Lectura tokenGroupsGlobalAndUniversal** configurado como **Permitir**. Debe haber una relación de confianza bidireccional establecida para los usuarios de un dominio distinto al de la cuenta para el punto de servicios de informes para una correcta ejecución de los informes.
 
          La cuenta de usuario de Windows especificada y la contraseña se cifran, y se almacenan en la base de datos de Reporting Services. Reporting Services recupera los datos de los informes de la base de datos del sitio mediante el uso de esta cuenta y contraseña.  
 
@@ -142,7 +147,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
     > [!NOTE]  
     >  Cuando se crean las carpetas de informes y los informes se copian en el servidor de informes, Configuration Manager determina el idioma apropiado para los objetos. Si el paquete de idioma asociado está instalado en el sitio, Configuration Manager crea los objetos en el mismo idioma que el sistema operativo que se ejecuta en el servidor de informes del sitio. Si el idioma no está disponible, los informes se crean y se muestran en inglés. Cuando se instala un punto de servicios de informes en un sitio sin paquetes de idioma, los informes se instalan en inglés. Si instala un paquete de idioma tras instalar el punto de servicios de informes, debe desinstalar y reinstalar el punto de servicios de informes para que los informes estén disponibles en el idioma del paquete de idioma apropiado. Para más información sobre los paquetes de idioma, vea [Language Packs in System Center Configuration Manager (Paquetes de idioma en System Center Configuration Manager)](../deploy/install/language-packs.md).  
 
-###  <a name="a-namebkmkfileinstallationandsecuritya-file-installation-and-report-folder-security-rights"></a><a name="BKMK_FileInstallationAndSecurity"></a> Derechos de seguridad de carpeta de informes e instalación de archivos  
+###  <a name="BKMK_FileInstallationAndSecurity"></a> Derechos de seguridad de carpeta de informes e instalación de archivos  
  Configuration Manager realiza las acciones siguientes para instalar el punto de servicios de informes y configurar Reporting Services:  
 
 > [!IMPORTANT]  
@@ -172,14 +177,14 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
      Configuration Manager se conecta a Reporting Services y establece los permisos para los usuarios en las carpetas raíz de Configuration Manager y Reporting Services, y en carpetas de informes específicas. Tras la instalación inicial del punto de servicios de informes, Configuration Manager se conecta a Reporting Services en un intervalo de 10 minutos para comprobar que los derechos de usuario configurados en las carpetas de informes son los derechos asociados que están establecidos para los usuarios de Configuration Manager. Cuando se agregan usuarios o se modifican derechos de usuario en la carpeta de informes mediante el uso del Administrador de informes de Reporting Services, Configuration Manager sobrescribe estos cambios por medio del uso de asignaciones basadas en roles almacenadas en la base de datos del sitio. Configuration Manager también quita los usuarios que no tienen derechos de generación de informes en Configuration Manager.  
 
-##  <a name="a-namebkmksecurityrolesa-reporting-services-security-roles-for-configuration-manager"></a><a name="BKMK_SecurityRoles"></a> Roles de seguridad de Reporting Services para Configuration Manager  
+##  <a name="BKMK_SecurityRoles"></a> Roles de seguridad de Reporting Services para Configuration Manager  
  Cuando Configuration Manager instala el punto de servicios de informes, se agregan los siguientes roles de seguridad en Reporting Services:  
 
 -   **Usuarios de informes de Configuration Manager**: los usuarios a los que se les asigna este rol de seguridad solo pueden ejecutar informes de Configuration Manager.  
 
 -   **Administradores de informes de Configuration Manager**: los usuarios a los que se les asigna este rol de seguridad pueden realizar todas las tareas relacionadas con la generación de informes en Configuration Manager.  
 
-##  <a name="a-namebkmkverifyreportingservicespointinstallationa-verify-the-reporting-services-point-installation"></a><a name="BKMK_VerifyReportingServicesPointInstallation"></a> Comprobación de la instalación del punto de Reporting Services  
+##  <a name="BKMK_VerifyReportingServicesPointInstallation"></a> Comprobación de la instalación del punto de Reporting Services  
  Tras agregar el rol de sitio de punto de servicios de informes, puede comprobar la instalación mediante la visualización de entradas del archivo de registro y mensajes de estado específicos. Utilice el siguiente procedimiento para comprobar que la instalación del punto de servicios de informes se realizó correctamente.  
 
 > [!WARNING]  
@@ -203,7 +208,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
 7.  Abra Srsrp.log y lea el archivo de registro a partir de la hora en la que se instaló correctamente el punto de servicios de informes. Compruebe que se crearon las carpetas de informes, se implementaron los informes, y se confirmó la directiva de seguridad en todas las carpetas. Busque **Se comprobó correctamente que el servicio SRS es correcto en el servidor** después de la última línea de las confirmaciones de la directiva de seguridad.  
 
-##  <a name="a-namebkmkcertificatea-configure-a-self-signed-certificate-for-configuration-manager-console-computers"></a><a name="BKMK_Certificate"></a> Configuración de un certificado autofirmado para los equipos de la consola de Configuration Manager  
+##  <a name="BKMK_Certificate"></a> Configuración de un certificado autofirmado para los equipos de la consola de Configuration Manager  
  Existen muchas opciones para crear informes de SQL Server Reporting Services. Cuando se crean o editan informes en la consola de Configuration Manager, Configuration Manager abre el Generador de informes para usarlo como entorno de creación. Independientemente de cómo cree los informes de Configuration Manager, un certificado autofirmado es necesario para la autenticación del servidor en el servidor de base de datos del sitio. Configuration Manager instala automáticamente el certificado en el servidor de sitio y los equipos con el proveedor de SMS instalado. Por lo tanto, puede crear o modificar informes desde la consola de Configuration Manager cuando esta se ejecuta desde uno de estos equipos. Pero cuando sea crean o modifican informes desde una consola de Configuration Manager que está instalada en un equipo distinto, debe exportar el certificado del servidor del sitio y, luego, agregarlo al almacén de certificados **Personas de confianza** en el equipo que ejecuta la consola de Configuration Manager.  
 
 > [!NOTE]  
@@ -243,7 +248,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
     5.  Haga clic en **Finalizar** para cerrar el asistente y finalizar la configuración del certificado en el equipo.  
 
-##  <a name="a-namebkmkmodifyreportingservicespointa-modify-reporting-services-point-settings"></a><a name="BKMK_ModifyReportingServicesPoint"></a> Modificación de la configuración del punto de servicios de informes  
+##  <a name="BKMK_ModifyReportingServicesPoint"></a> Modificación de la configuración del punto de servicios de informes  
  Una vez instalado el punto de servicios de informes, puede modificar la conexión de base de datos del sitio y la configuración de autenticación en las propiedades del punto de servicios de informes. Utilice el siguiente procedimiento para modificar la configuración del punto de servicios de informes.  
 
 #### <a name="to-modify-reporting-services-point-settings"></a>Para modificar la configuración del punto de servicios de informes  
@@ -280,7 +285,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 ## <a name="upgrading-sql-server"></a>Actualización de SQL Server  
  Tras actualizar SQL Server, y el servicio SQL Server Reporting Services que se usa como el origen de datos de un punto de servicios de informes, podría experimentar errores al ejecutar o editar informes desde la consola de Configuration Manager. Para que la generación de informes funcione correctamente en la consola de Configuration Manager, debe eliminar el rol de sistema de sitio de punto de servicios de informes para el sitio y volver a instalarlo. Sin embargo, tras la actualización puede continuar con la ejecución y edición de informes desde un explorador de Internet.  
 
-##  <a name="a-namebkmkconfigurereportoptionsa-configure-report-options"></a><a name="BKMK_ConfigureReportOptions"></a> Configuración de las opciones de informes  
+##  <a name="BKMK_ConfigureReportOptions"></a> Configuración de las opciones de informes  
  Use las opciones de informes de un sitio de Configuration Manager para seleccionar el punto de servicios de informes predeterminado que se usa para administrar los informes. Aunque puede haber más de un punto de servicios de informes en un sitio, solo el servidor de informes predeterminado seleccionado en Opciones de informes se utiliza para administrar los informes. Utilice el siguiente procedimiento para configurar las opciones de informes para su sitio.  
 
 #### <a name="to-configure-report-options"></a>Para configurar las opciones de informes  
@@ -295,9 +300,4 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Operaciones y mantenimiento de informes](operations-and-maintenance-for-reporting.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
