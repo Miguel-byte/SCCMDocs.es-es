@@ -15,11 +15,11 @@ caps.latest.revision: 40
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6f9e6e93fce95666503907010a5c253158c5de7c
-ms.openlocfilehash: b9777e8cfa63eda77512e4837de17b99c792a036
+ms.translationtype: HT
+ms.sourcegitcommit: 1035dbbf944a3a467d637a4a948a75b0946eb711
+ms.openlocfilehash: a9e03d4c5b290886bda87fae41e4df362eca1b71
 ms.contentlocale: es-es
-ms.lasthandoff: 07/07/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con System Center Configuration Manager y Microsoft Intune
@@ -38,6 +38,14 @@ En este artículo se proporciona información sobre nuevas características de a
 |**Novedades de Configuration Manager Technical Preview**| Todas las funciones que se enumeran en esta categoría funcionan únicamente con la versión especificada de Technical Preview. Para probar estas características, debe instalar la versión de Technical Preview especificada en la descripción de la característica. Para más información, consulte [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md) (Technical Preview para System Center Configuration Manager).|
 |**Novedades de Configuration Manager (rama actual)**| Todas las características que se enumeran en esta categoría funcionan únicamente con la versión especificada de Configuration Manager (rama actual), como la versión 1511 o 1602. Si usa una versión anterior de Configuration Manager para su implementación híbrida, debe actualizar a la versión de Configuration Manager (rama actual) que se especifica en la descripción de la característica. Para obtener más información, consulte [Upgrade to System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md) (Actualizar a System Center Configuration Manager).|
 
+## <a name="july-2017"></a>Julio de 2017
+
+### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune
+
+- **Nuevo aviso para las versiones compatibles de Android**
+
+    Se ha agregado un nuevo aviso para las versiones compatibles de Android. Para obtener más información, consulte [Finalización del soporte para Android 4.3 y versiones inferiores](#notices).
+
 ## <a name="june-2017"></a>Junio de 2017
 
 ### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune
@@ -50,17 +58,17 @@ En este artículo se proporciona información sobre nuevas características de a
 
   El explorador Intune Managed Browser ahora puede integrarse con el servicio Proxy de aplicación de Azure AD para que los usuarios puedan tener acceso a los sitios web internos incluso cuando trabajan de forma remota. Los usuarios del explorador simplemente escriben la dirección URL del sitio como harían normalmente y el explorador Managed Browser enruta la solicitud a través de la puerta de enlace web del proxy de aplicación. Para obtener más información, consulte [Administrar el acceso a Internet mediante directivas de explorador administrado](/intune/app-configuration-managed-browser).
 
-- **La aplicación Portal de empresa para Android ahora tiene una nueva experiencia de usuario final para las directivas de protección de aplicaciones**
+- **Ahora, la aplicación Portal de empresa para Android tiene una nueva experiencia de usuario final para las directivas de protección de aplicaciones**
 
-  A raíz de los comentarios de clientes, hemos modificado la aplicación Portal de empresa para Android para que aparezca el botón **Acceso al contenido de la empresa**. El objetivo es impedir que los usuarios finales pasen innecesariamente por el proceso de inscripción cuando solo necesitan tener acceso a las aplicaciones que admiten directivas de protección de aplicaciones, una característica de administración de aplicaciones móviles de Intune. Puede ver estos cambios en la página [Novedades de la interfaz de usuario de aplicaciones](/intune/whats-new-app-ui).
+  A raíz de los comentarios de clientes, hemos modificado la aplicación Portal de empresa para Android para que aparezca el botón **Acceso al contenido de la empresa**. El objetivo es impedir que los usuarios finales pasen innecesariamente por el proceso de inscripción cuando solo necesitan acceder a las aplicaciones que admiten directivas de protección de aplicaciones, una característica de administración de aplicaciones móviles de Intune. Puede ver estos cambios en la página [Novedades de la interfaz de usuario de aplicaciones](/intune/whats-new-app-ui).
 
 - **Nueva acción de menú para quitar fácilmente el Portal de empresa**
 
-  A raíz de los comentarios de los usuarios, se ha agregado en la aplicación Portal de empresa para Android una nueva acción de menú para iniciar la eliminación del Portal de empresa desde el dispositivo. Con esta acción se quita el dispositivo de administración de Intune para que la aplicación se pueda quitar del dispositivo por parte del usuario. Puede ver estos cambios en la página [Novedades de la interfaz de usuario de aplicaciones](/intune/whats-new-app-ui) y en la [documentación de usuario final Android](/intune-user-help/unenroll-your-device-from-intune-android).
+  A raíz de los comentarios de los usuarios, se ha agregado en la aplicación Portal de empresa para Android una nueva acción de menú para iniciar la eliminación del Portal de empresa desde el dispositivo. Con esta acción se quita el dispositivo de administración de Intune para que la aplicación se pueda quitar del dispositivo por parte del usuario. Puede ver estos cambios en la página de [novedades de la interfaz de usuario de aplicaciones](/intune/whats-new-app-ui) y en la [documentación de Android para el usuario final](/intune-user-help/unenroll-your-device-from-intune-android).
 
 - **Mejoras en la sincronización de aplicaciones con Windows 10 Creators Update**
 
-  La aplicación Portal de empresa para Windows 10 ahora iniciará automáticamente una sincronización para las solicitudes de instalación de aplicaciones destinada a dispositivos con Windows 10 Creators Update (versión 1703). Esto reducirá la incidencia del problema por el cual las instalaciones de aplicaciones se detienen durante el estado "Sincronización pendiente". Además, los usuarios podrán iniciar manualmente la sincronización desde dentro de la aplicación. Puede ver estos cambios en la página [Novedades de la interfaz de usuario de aplicaciones](/intune/whats-new-app-ui).
+  Ahora, la aplicación Portal de empresa para Windows 10 iniciará automáticamente una sincronización para las solicitudes de instalación de aplicaciones destinadas a dispositivos con Windows 10 Creators Update (versión 1703). De este modo, se reducirá la incidencia del problema por el cual las instalaciones de aplicaciones se detienen durante el estado "Sincronización pendiente". Además, los usuarios podrán iniciar manualmente la sincronización desde la aplicación. Puede ver estos cambios en la página [Novedades de la interfaz de usuario de aplicaciones](/intune/whats-new-app-ui).
 
 - **Nueva experiencia guiada para el Portal de empresa de Windows 10**
 
@@ -98,7 +106,7 @@ En este artículo se proporciona información sobre nuevas características de a
 
 - **Restricciones de inscripción de iOS y Android** <!-- 1290826 -->      
 
-  Los administradores ahora pueden especificar que los usuarios no inscriban los dispositivos personales de Android o iOS en su entorno híbrido. Esto le permite limitar los dispositivos inscritos a aquellos declarados con anterioridad que pertenezcan a la empresa o a aquellos dispositivos iOS inscritos solo con el Programa de inscripción de dispositivos. Para obtener más información, consulte [Restricciones de inscripción de iOS y Android](/sccm/core/get-started/capabilities-in-technical-preview-1706#android-and-ios-enrollment-restrictions).
+  Los administradores ahora pueden especificar que los usuarios no inscriban los dispositivos personales de Android o iOS en su entorno híbrido. Gracias a esto, se podrán limitar los dispositivos inscritos a aquellos declarados con anterioridad que pertenezcan a la empresa, o bien a aquellos dispositivos iOS inscritos solo con el Programa de inscripción de dispositivos. Para obtener más información, consulte [Restricciones de inscripción de iOS y Android](/sccm/core/get-started/capabilities-in-technical-preview-1706#android-and-ios-enrollment-restrictions).
 
 - **Compatibilidad con entidades de certificación de Entrust** <!-- 1350740 -->     
 
@@ -155,15 +163,15 @@ En este artículo se proporciona información sobre nuevas características de a
   - Navegar por las aplicaciones: la vista **Todas las aplicaciones** muestra una vista con las pestañas **Destacadas**, **Todas** y **Categorías** para facilitar la navegación.
   - Soporte técnico: las pestañas **Mis dispositivos** y **Contactar con TI** se han actualizado para mejorar la legibilidad.
 
-  Para obtener más detalles sobre estos cambios, vea [Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune](/intune/whats-new/whats-new-in-intune-app-ui).
+  Para obtener más información sobre estos cambios, consulte [Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune](/intune/whats-new/whats-new-in-intune-app-ui).
 
 - **Script de firma para Portal de empresa de Windows 10**
 
-  Si necesita descargar y transferir localmente la aplicación de Portal de empresa de Windows 10, ahora puede usar un script para simplificar y agilizar el proceso de firma de aplicaciones para su organización.  Para descargar el script y las instrucciones para usarlo, vea [Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/win10cpscript) (Script de firma de Microsoft Intune para Portal de empresa de Windows 10) en la Galería de TechNet. Para obtener más detalles sobre este anuncio, vea [Updating your Windows 10 Company Portal app](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/) (Actualización de la aplicación Portal de empresa de Windows 10) en el blog del equipo de soporte técnico de Intune.
+  Si necesita descargar y transferir localmente la aplicación de Portal de empresa de Windows 10, ahora puede usar un script para simplificar y agilizar el proceso de firma de aplicaciones para su organización.  Para descargar el script y las instrucciones para usarlo, vea [Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/win10cpscript) (Script de firma de Microsoft Intune para Portal de empresa de Windows 10) en la Galería de TechNet. Para obtener más información sobre este anuncio, consulte [Updating your Windows 10 Company Portal app](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/) (Actualización de la aplicación Portal de empresa para Windows 10) en el blog del equipo de soporte técnico de Intune.
 
 - **Compatibilidad mejorada para los usuarios de Android con base en China**
 
-  Debido a la ausencia de Google Play Store en China, los dispositivos Android deben obtener las aplicaciones de mercados chinos. El Portal de empresa admitirá este flujo de trabajo mediante la redirección de los usuarios de Android de China para descargar las aplicaciones de Portal de empresa y Outlook de tiendas de aplicaciones locales. Esto mejorará la experiencia del usuario cuando se habilitan las directivas de acceso condicional, tanto para la administración de dispositivos móviles como para la administración de aplicaciones móviles. Las aplicaciones Portal de empresa y Outlook para Android están disponibles en las siguientes tiendas de aplicaciones chinas:
+  Debido a la ausencia de Google Play Store en China, los dispositivos Android deben obtener las aplicaciones de mercados chinos. El Portal de empresa admite este flujo de trabajo mediante la redirección de los usuarios de Android de China a tiendas de aplicaciones locales donde podrán descargar las aplicaciones Portal de empresa y Outlook. De esta forma, se mejora la experiencia del usuario cuando se habilitan las directivas de acceso condicional, tanto para la administración de dispositivos móviles como para la administración de aplicaciones móviles. Las aplicaciones Portal de empresa y Outlook para Android están disponibles en las siguientes tiendas de aplicaciones chinas:
 
   - [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
   - [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
@@ -207,7 +215,7 @@ También se incluyen las siguientes características adicionales híbridas en la
 
 - **Compatibilidad mejorada para el Programa de Compras por Volumen (VPP) de Apple**
 
-  - Ahora puede implementar aplicaciones con licencia para dispositivos y usuarios. Dependiendo de la capacidad de las aplicaciones para admitir licencias de dispositivo, se solicitará una licencia adecuada al realizar la implementación, como sigue:
+  - Ahora puede implementar aplicaciones con licencia para dispositivos y usuarios. Según la capacidad de las aplicaciones para admitir licencias de dispositivo, se solicitará del siguiente modo una licencia adecuada al realizar la implementación:
 
     | Versión de Configuration Manager | ¿La aplicación admite licencias de dispositivo? | Tipo de colección de implementación | Licencia exigida |
     |-|-|-|-|
@@ -226,13 +234,13 @@ También se incluyen las siguientes características adicionales híbridas en la
 
   Para más información sobre las aplicaciones de iOS compradas por volumen, vea [Administrar aplicaciones de iOS compradas a través de un programa de compras por volumen](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
-- **Compatibilidad con la línea de aplicaciones empresariales de la Tienda Windows para empresas**
+- **Compatibilidad con las aplicaciones de línea de negocio de la Tienda Windows para empresas**
 
-  Ahora puede sincronizar la línea personalizada de aplicaciones empresariales en la Tienda Windows para empresas.
+  Ahora se pueden sincronizar aplicaciones de línea de negocio personalizadas en la Tienda Windows para empresas.
 
 - **Nuevas herramientas de supervisión de Mobile Threat Defense**
 
-    Ahora tiene a su disposición nuevas formas de supervisar el estado de cumplimiento con el proveedor de servicios Mobile Threat Defense.
+    Ahora hay nuevas formas de supervisar el estado de cumplimiento con el proveedor de servicios Mobile Threat Defense.
 
     Para más información, vea [Supervisión de cumplimiento de Mobile Threat Defense](/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance).
 
@@ -256,7 +264,7 @@ También se incluyen las siguientes características adicionales híbridas en la
 
 - **Configuración de cumplimiento de aplicaciones no compatibles**
 
-  Ahora puede crear reglas de aplicaciones no compatibles para aplicaciones Android e iOS en las directivas de cumplimiento. Si los dispositivos tienen instaladas las aplicaciones especificadas, se marcarán como "no compatibles" y perderán el acceso a los recursos de la empresa, de acuerdo con las directivas de acceso condicional aplicadas. Para más información, vea [Mejoras de la directiva de cumplimiento de dispositivos de acceso condicional](/sccm/core/get-started/capabilities-in-technical-preview-1702#conditional-access-device-compliance-policy-improvements).
+  Ahora puede crear reglas de aplicaciones no compatibles para aplicaciones Android e iOS en las directivas de cumplimiento. Si los dispositivos tienen instaladas las aplicaciones especificadas, se marcarán como "no compatibles" y no podrán acceder a los recursos de la empresa, según las directivas de acceso condicional aplicadas. Para más información, vea [Mejoras de la directiva de cumplimiento de dispositivos de acceso condicional](/sccm/core/get-started/capabilities-in-technical-preview-1702#conditional-access-device-compliance-policy-improvements).
 
 - **Creación y distribución de certificados PFX y compatibilidad con S/MIME**
 
@@ -287,8 +295,14 @@ También se incluyen las siguientes características adicionales híbridas en la
 
 ## <a name="notices"></a>Notificaciones
 
-### <a name="system-center-2012-configuration-sp1-and-system-center-2012-r2-configuration-manager-rtm-support-for-hybrid-mobile-device-management-ending-on-april-10-2017"></a>System Center 2012 Configuration SP1 y System Center 2012 R2 Configuration Manager (RTM): La compatibilidad con la administración de dispositivos móviles híbridos finaliza el 10 de abril de 2017
+### <a name="end-of-support-for-android-43-and-lower"></a>Finalización del soporte para Android 4.3 y versiones inferiores
+<!---1171127--->
+*6 de julio de 2017*
 
+Las aplicaciones administradas y la aplicación Portal de empresa para Android necesitan Android 4.4 y posterior para poder acceder a los recursos de la empresa. Los dispositivos que no estén actualizados antes de principios de octubre ya no podrán acceder al Portal de empresa ni a esas aplicaciones. En diciembre, se forzará la retirada de todos los dispositivos inscritos, con lo que ya podrán acceder a los recursos de la empresa. Si está usando directivas de protección de aplicaciones sin MDM, las aplicaciones no recibirán actualizaciones y la calidad de la experiencia se irá reduciendo con el tiempo.
+
+
+### <a name="system-center-2012-configuration-sp1-and-system-center-2012-r2-configuration-manager-rtm-support-for-hybrid-mobile-device-management-ending-on-april-10-2017"></a>System Center 2012 Configuration SP1 y System Center 2012 R2 Configuration Manager (RTM): La compatibilidad con la administración de dispositivos móviles híbridos finaliza el 10 de abril de 2017
 *11 de enero de 2017*
 
 La compatibilidad con System Center 2012 Configuration Manager SP1 y System Center 2012 R2 Configuration Manager RTM finalizó el 12 de julio de 2016. Posteriormente, la compatibilidad con estas versiones en cuanto a la conexión con el servicio de Microsoft Intune para MDM híbrido finalizará el 10 de abril de 2017. Después de esta fecha, MDM híbrido dejará de funcionar con estas versiones. Los dispositivos administrados quedarán esencialmente sin administrar puesto que Intune Connector ya no se conectará al servicio de Intune. No habrá ningún flujo de datos ascendente de Configuration Manager (como las directivas y las aplicaciones) a Intune ni un flujo descendente de los datos del dispositivo administrado a Configuration Manager a no ser que se lleve a cabo una actualización.
