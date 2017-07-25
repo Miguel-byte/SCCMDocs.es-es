@@ -16,10 +16,10 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 ms.translationtype: HT
-ms.sourcegitcommit: 1035dbbf944a3a467d637a4a948a75b0946eb711
-ms.openlocfilehash: a9e03d4c5b290886bda87fae41e4df362eca1b71
+ms.sourcegitcommit: 94dc0335dab74bec7989753343418fae49b3ebe9
+ms.openlocfilehash: ab011cb06b43b06fc6e2a89e2f413d35a541a111
 ms.contentlocale: es-es
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con System Center Configuration Manager y Microsoft Intune
@@ -42,9 +42,9 @@ En este artículo se proporciona información sobre nuevas características de a
 
 ### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune
 
-- **Nuevo aviso para las versiones compatibles de Android**
+- **Nuevos avisos de finalización del soporte para Android y Windows Phone**
 
-    Se ha agregado un nuevo aviso para las versiones compatibles de Android. Para obtener más información, consulte [Finalización del soporte para Android 4.3 y versiones inferiores](#notices).
+    Se agregaron nuevos avisos de finalización del soporte para las versiones de Android y Windows Phone. Para obtener más información, consulte [Notificaciones](#notices).
 
 ## <a name="june-2017"></a>Junio de 2017
 
@@ -294,6 +294,16 @@ También se incluyen las siguientes características adicionales híbridas en la
 
 
 ## <a name="notices"></a>Notificaciones
+
+### <a name="platform-support-reminder-windows-phone-81-mainstream-support-ended-july-11-2017"></a>Recordatorio sobre el soporte técnico para la plataforma: el soporte técnico estándar para Windows Phone 8.1 finalizó el 11 de julio de 2017
+<!-- 1327781 -->
+*11 de julio de 2017*
+
+La plataforma Windows Phone 8.1 ha llegado a la finalización del soporte técnico estándar. El soporte técnico para equipos con Windows 8.1 no se verá afectado.
+
+Esto no afecta inmediatamente a ningún dispositivo Windows Phone 8.1 administrado por el servicio de Intune, incluidos los inscritos en entornos híbridos MDM. Los dispositivos inscritos continuarán funcionando y todas las directivas, configuraciones y aplicaciones seguirán funcionando según lo previsto. Tenga en cuenta que no hay mejoras previstas para la plataforma Windows Phone 8.1 en el servicio de Intune ni para la aplicación Portal de empresa de Windows Phone 8.1.
+
+Se recomienda actualizar los dispositivos Windows Phone 8.1 aptos a Windows 10 Mobile lo antes posible.  
 
 ### <a name="end-of-support-for-android-43-and-lower"></a>Finalización del soporte para Android 4.3 y versiones inferiores
 <!---1171127--->
