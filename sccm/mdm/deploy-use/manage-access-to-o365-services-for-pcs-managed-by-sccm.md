@@ -15,12 +15,11 @@ caps.latest.revision: 15
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c8717925dba42451b1e241a7c2f59e43896d7d99
-ms.openlocfilehash: e78fe989b7ff445717c8320c4eae3900eb46baea
+ms.translationtype: HT
+ms.sourcegitcommit: 5ebdd12672fecc633321a66738a0978f94ba0aa4
+ms.openlocfilehash: aede531a0406c3d30c9cca957896e002ed22ae51
 ms.contentlocale: es-es
-ms.lasthandoff: 06/19/2017
-
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Administración del acceso a servicios de O365 para equipos administrados por System Center Configuration Manager
@@ -46,7 +45,17 @@ Si desea obtener información sobre cómo configurar el acceso condicional para 
 
 -   Windows 7
 -   Windows 8.1
--   Windows 10 
+-   Windows 10
+
+## <a name="supported-windows-servers"></a>Servidores de Windows compatibles
+
+-   2008 R2
+-   2012
+-   2012 R2
+-   2016
+
+    > [!IMPORTANT]
+    > En el caso de servidores de Windows que puedan tener varios usuarios que hayan iniciado sesión de manera simultánea, se deben implementar las mismas directivas de acceso condicional a todos esos usuarios.
 
 ## <a name="configure-conditional-access"></a>Configuración de acceso condicional  
  Para configurar el acceso condicional, primero debe crear una directiva de cumplimiento y configurar la directiva de acceso condicional. Al configurar las directivas de acceso condicional para equipos, puede requerir que los equipos se atengan a la directiva de cumplimiento para acceder a los servicios Exchange Online y SharePoint Online.  

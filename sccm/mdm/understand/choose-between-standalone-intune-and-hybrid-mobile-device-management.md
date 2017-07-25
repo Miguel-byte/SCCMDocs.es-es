@@ -2,7 +2,7 @@
 title: "Elegir Intune independiente o MDM híbrida | Microsoft Docs"
 description: "Elija si quiere implementar la administración de dispositivos móviles híbrida con Intune y Configuration Manager o ejecutar Intune de forma independiente."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 07/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,45 +12,47 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 73ff9bb9-e605-4b68-92a1-487684fed42d
 caps.latest.revision: 10
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 84e3896dd05a8c157f4e94625b0eca60aacc11d3
-ms.openlocfilehash: 8f2625aadfd0aed92d9922c7e3c0d3d166a78cdd
+ms.translationtype: HT
+ms.sourcegitcommit: 648bc6b96aa5ccc834442a962e6d5b5125f88bb5
+ms.openlocfilehash: ddb6d47e5dba4fddd6fa811d83b1bf0c91ad26f9
 ms.contentlocale: es-es
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 07/19/2017
 
 ---
 # <a name="choose-between-microsoft-intune-standalone-and-hybrid-mobile-device-management-with-system-center-configuration-manager"></a>Elegir entre Microsoft Intune independiente y administración de dispositivos móviles híbrida con System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Una de las preguntas más frecuentes relacionadas con la administración de dispositivos móviles (MDM) con Microsoft Intune es "¿Debo integrar Intune con Configuration Manager (MDM híbrida) o ejecutar Intune independiente en la configuración de solo en la nube?". Para responder esa pregunta, debe comparar las dos opciones con atención y tener en cuenta las actualizaciones de principios de 2017 para Intune independiente.
+Una de las preguntas más frecuentes relacionadas con la administración de dispositivos móviles (MDM) con Microsoft Intune es "¿Debo integrar Intune con Configuration Manager (MDM híbrida) o ejecutar Intune independiente en la configuración de solo en la nube?". Para responder a esa pregunta, debe comparar cuidadosamente ambas opciones.
 
-## <a name="what-is-intune-standalone"></a>¿Qué es Intune independiente?
+## <a name="intune-standalone"></a>Intune independiente
+Intune independiente es la topología de implementación recomendada de Microsoft. Intune independiente es una solución de MDM solo en la nube que se administra mediante una consola web a la que se puede acceder desde cualquier lugar del mundo. Los centros de datos de Intune se hospedan en Norteamérica, Europa y Asia. Como Intune es un servicio en la nube, puede implementar la administración de Intune en sus dispositivos en un período de tiempo relativamente corto.
 
-Intune independiente es una solución de MDM solo en la nube que no implica recursos locales y que se administra mediante una consola web a la que se puede acceder desde cualquier lugar del mundo. Los centros de datos de Intune se hospedan en Norteamérica, Europa y Asia. Como Intune es un servicio en la nube, puede implementar la administración de Intune en sus dispositivos en un período de tiempo relativamente corto. También puede optar por Intune independiente si su organización se está moviendo a la nube.
+Generalmente, los clientes consideran que es más rápido y fácil implementar la topología independiente porque no hay independencia para los componentes locales. Intune independiente está disponible ahora en la plataforma de nube de Microsoft Azure y proporciona muchas características avanzadas, como las siguientes:
+- Plataforma integrada de Enterprise Mobility Management: una experiencia de administración y plataforma de nube integrada en Azure Portal para Intune, Azure AD Premium y Azure Information Protection.
+- Administración de dispositivos móviles: funcionalidades enriquecidas de protección de la información y administración de dispositivos móviles.
+- Escala: implemente y administre dispositivos móviles sin preocuparse de la escala.
+- Control de acceso basado en rol: restrinja el acceso a las funciones administrativas en función de los ámbitos y roles asignados.
+- Acceso mediante programación (API): opciones de administración de PowerShell y SDK, además de compatibilidad con Microsoft Graph API.
+- Consola web: una consola basada en HTML 5 basada en estándares web con compatibilidad con exploradores web más modernos.
+- Generación de informes avanzada: capacidad de crear informes personalizados.
+- Agilidad: configuración sencilla y entrega rápida de funcionalidades nuevas.
 
-## <a name="what-is-hybrid-mdm-with-configuration-manager"></a>¿Qué es MDM híbrida con Configuration Manager?
 
-MDM híbrida es una solución que usa Intune como el canal de entrega de directivas, perfiles y aplicaciones a los dispositivos, pero usa infraestructura local de Configuration Manager para almacenar y administrar contenido y administrar los dispositivos. Puede elegir MDM híbrida si ya tiene una inversión importante en Configuration Manager y quiere ampliarla para administrar dispositivos móviles. Una implementación híbrida le proporciona un control "desde una única ubicación", lo que significa que puede usar la misma infraestructura local y consola administrativa para administrar dispositivos móviles con Intune así como equipos y servidores con el cliente tradicional de Configuration Manager.
+## <a name="hybrid-mdm-with-configuration-manager"></a>MDM híbrida con Configuration Manager
+MDM híbrida es una solución que integra las funcionalidades de administración de dispositivos móviles de Intune en Configuration Manager. Usa Intune como el canal de entrega de directivas, perfiles y aplicaciones a los dispositivos, pero usa infraestructura local de Configuration Manager para administrar contenido y los dispositivos. Una implementación híbrida proporciona un control desde "una sola ubicación".  Esto significa que puede usar la misma infraestructura local y consola administrativa para administrar dispositivos móviles con Intune así como equipos y servidores con el cliente tradicional de Configuration Manager. Puede elegir MDM híbrida por los siguientes motivos:  
+- Desea administrar tanto los dispositivos móviles inscritos en Intune como los dispositivos administrados con el cliente de Configuration Manager desde la misma consola administrativa
+- La infraestructura requiere que tenga varios servidores SCEP para la entrega de certificados a los dispositivos móviles
+- La infraestructura requiere que tenga varios conectores de Exchange
+- Necesita compatibilidad con el cifrado S/MIME
 
-## <a name="whats-coming-to-intune-standalone-in-early-2017"></a>Novedades de Intune independiente a principios de 2017
 
-Si está decidiendo entre independiente e híbrido, debe tener en cuenta las características que llegarán a principios de 2017 para Intune independiente. Hoy en día, MDM híbrida tiene varias características avanzadas que históricamente han sido la razón de que muchos clientes decidan administrar sus dispositivos con MDM híbrida en lugar de con Intune independiente:
+## <a name="changing-the-mdm-authority-setting"></a>Cambio de configuración de la entidad MDM
+Si necesita cambiar la configuración de la entidad MDM, puede hacerlo usted mismo sin tener que ponerse en contacto con Soporte técnico de Microsoft ni tener que anular la inscripción de los dispositivos administrados existentes y luego volver a inscribirlos. Para obtener más información, consulte [Cambio de la entidad de MDM](/sccm/mdm/deploy-use/change-mdm-authority.md).
 
--   Acceso mediante programación (API): opciones de administración de PowerShell y SDK.
-
--   Generación de informes personalizados: crear informes personalizados.
-
--   Control de acceso basado en roles: restringir el acceso a funciones administrativas en función de los roles asignados.
-
--   Escalar: implementar y administrar más de 100 000 dispositivos móviles.
-
--   Única ubicación: administrar clientes PC tradicionales y dispositivos administrados en Intune con la misma consola.
-
-Si está comenzando a planear su implementación a Intune hoy y tiene un período de varios meses para pruebas piloto, pruebas de aceptación e implementación, considere la posibilidad de elegir Intune independiente ahora conociendo las actualizaciones que llegarán al servicio en la nube y que incluirán más características. A lo largo de la primera mitad del año natural 2017, Intune independiente recibirá actualizaciones que proporcionan gran parte de las características avanzadas de una implementación híbrida con Configuration Manager. Intune independiente se moverá pronto a la plataforma en la nube de Microsoft Azure y con esta tendrá una escalabilidad mejorada, un acceso basado en roles mediante Azure Portal, informes personalizados y un acceso mediante programación con API Graph de Azure.
-
-Puede cambiar de híbrido a Intune independiente o viceversa, pero requiere ayuda del soporte técnico de Microsoft y del equipo de operaciones. También requiere anular la inscripción y volver a inscribir posteriormente todos los dispositivos después de que se cambie la entidad de administración.  Microsoft está trabajando para mejorar la experiencia de cambiar configuraciones en una actualización de servicio futura.
+> [!NOTE]    
+> Debe tener la versión 1610 o posterior de Configuration Manager para cambiar la entidad MDM a Intune independiente. Si tiene una versión anterior de Configuration Manager, puede cambiar la entidad MDM pero requiere ayuda de operaciones y Soporte técnico de Microsoft. También necesita anular la inscripción de todos los dispositivos y volver a inscribirlos una vez que se cambia la entidad MDM.  
 
