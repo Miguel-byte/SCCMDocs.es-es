@@ -16,7 +16,6 @@ ms.openlocfilehash: b80fec937b50dca3ab995be281c44c3145300f9f
 ms.contentlocale: es-es
 ms.lasthandoff: 06/03/2017
 
-
 ---
 # <a name="change-your-mdm-authority"></a>Cambio de la entidad de MDM
 A partir de la versión 1610 de Configuration Manager y la versión 1705 de Microsoft Intune, puede cambiar la entidad de MDM sin tener que ponerse en contacto con el soporte técnico de Microsoft y sin necesidad de anular y volver a crear la inscripción de sus dispositivos administrados existentes.
@@ -39,7 +38,8 @@ Revise la información siguiente para preparar el cambio de la entidad de MDM:
 - En la consola de Configuration Manager, quite todos los roles de Administrador de inscripción de dispositivos. Vaya a **Administración** > **Cloud Services** > **Suscripciones a Microsoft Intune**, seleccione la suscripción de Microsoft Intune, haga clic en **Propiedades**, haga clic en la pestaña **Administrador de inscripción de dispositivos** y quite todos los roles de Administrador de inscripción de dispositivos.
 - En la consola de Configuration Manager, quite las categorías de dispositivos existentes. Vaya a **Activos y compatibilidad** > **Introducción** > **Recopilaciones de dispositivos**, elija **Administrar categorías de dispositivos** y quite las categorías de dispositivos existentes.
 - No debería haber ningún impacto perceptible en los usuarios finales durante el cambio de entidad de MDM. Sin embargo, puede comunicar este cambio a los usuarios para asegurarse de que sus dispositivos están encendidos y de que se conectan al servicio pronto después del cambio. De este modo, estará seguro de que se conectan tantos dispositivos como sea posible al servicio y de que se registran en la nueva entidad lo antes posible.
-- Si usa Configuration Manager (inquilino híbrido) para administrar dispositivos iOS antes del cambio de la entidad de MDM, debe asegurarse de que el mismo certificado de servicio de Apple Push Notification Service que se había utilizado previamente en Configuration Manager se renueva y se utiliza para configurar el inquilino de nuevo en Intune independiente.    
+- Si usa Configuration Manager (inquilino híbrido) para administrar dispositivos iOS antes del cambio de la entidad de MDM, debe asegurarse de que el mismo certificado de servicio de Apple Push Notification Service que se había utilizado previamente en Configuration Manager se renueva y se utiliza para configurar el inquilino de nuevo en Intune independiente.
+
     > [!IMPORTANT]  
     > Si se utiliza un certificado diferente de Apple Push Notification Service para Intune independiente, se anulará la inscripción de TODOS los dispositivos de iOS y tendrá que repetir su proceso de inscripción. Antes de realizar el cambio en la entidad de MDM, asegúrese de que sabe exactamente qué certificado de Apple Push Notification Service se utilizó para administrar dispositivos iOS en Configuration Manager. Busque el mismo certificado en el portal Apple Push Certificates Portal (https://identity.apple.com) y asegúrese de que el usuario cuyo ID de Apple se usó para crear el certificado original de Apple Push Notification Service está identificado y disponible para renovar el mismo certificado de Apple Push Notification Service como parte del cambio a la nueva entidad de MDM.  
 
@@ -52,15 +52,15 @@ El proceso para cambiar la entidad de MDM a Intune independiente incluye los sig
 - La próxima vez que los dispositivos se conecten al servicio, se sincronizarán y recibirán la nueva configuración de la entidad de MDM.
 
 #### <a name="to-change-the-mdm-authority-to-intune-standalone"></a>Para cambiar la entidad de MDM a una instalación de Intune independiente
-1.    En la consola de Configuration Manager, vaya a **Administración** &gt; **Información general** &gt; **Cloud Services** &gt; **Suscripción a Microsoft Intune** y elimine la suscripción a Intune actual.
-2.    Seleccione **Cambiar entidad de MDM a Microsoft Intune** y, a continuación, haga clic en **Siguiente**.
+1.  En la consola de Configuration Manager, vaya a **Administración** &gt; **Información general** &gt; **Cloud Services** &gt; **Suscripción a Microsoft Intune** y elimine la suscripción a Intune actual.
+2.  Seleccione **Cambiar entidad de MDM a Microsoft Intune** y, a continuación, haga clic en **Siguiente**.
 
     ![Descarga de la solicitud de certificado de Apple Push Notification Service](/sccm/mdm/deploy-use/media/mdm-change-delete-subscription.png)
-3.    Inicie sesión en el inquilino de Intune que usó originalmente al configurar la entidad de MDM en Configuration Manager.
-4.    Haga clic en **Siguiente** y complete el asistente.
-5.    Ahora se ha restablecido la entidad de MDM. La suscripción a Intune ya no debe mostrarse en el nodo Suscripciones a Microsoft Intune de la consola de Configuration Manager.
-6.    Inicie sesión en la [Consola de administración de Microsoft Intune](http://manage.microsoft.com) utilizando el mismo inquilino de Intune que usó anteriormente.
-7.    Confirme que se ha restablecido la entidad de MDM y luego configure la entidad de MDM como **Microsoft Intune**. Después de cambiar la entidad de MDM, debería ver que se refleja en la consola. Para obtener más información, consulte [Configurar entidad de MDM](https://docs.microsoft.com/en-us/intune/deploy-use/prerequisites-for-enrollment#step-2-set-mdm-authority).
+3.  Inicie sesión en el inquilino de Intune que usó originalmente al configurar la entidad de MDM en Configuration Manager.
+4.  Haga clic en **Siguiente** y complete el asistente.
+5.  Ahora se ha restablecido la entidad de MDM. La suscripción a Intune ya no debe mostrarse en el nodo Suscripciones a Microsoft Intune de la consola de Configuration Manager.
+6.  Inicie sesión en la [Consola de administración de Microsoft Intune](http://manage.microsoft.com) utilizando el mismo inquilino de Intune que usó anteriormente.
+7.  Confirme que se ha restablecido la entidad de MDM y luego configure la entidad de MDM como **Microsoft Intune**. Después de cambiar la entidad de MDM, debería ver que se refleja en la consola. Para obtener más información, consulte [Configurar entidad de MDM](https://docs.microsoft.com/en-us/intune/deploy-use/prerequisites-for-enrollment#step-2-set-mdm-authority).
 <!-- [Azure portal](https://docs.microsoft.com/en-us/intune-azure/enroll-devices/set-mdm-authority) -->
 
 
@@ -68,7 +68,7 @@ El proceso para cambiar la entidad de MDM a Intune independiente incluye los sig
 Cuando tenga los dispositivos iOS, debe configurar el certificado de Apple Push Notification Service en Intune.
 
 #### <a name="to-configure-the-apns-certificate"></a>Para configurar el certificado de Apple Push Notification Service
-1.    Descargue la solicitud de certificado de Apple Push Notification Service.
+1.  Descargue la solicitud de certificado de Apple Push Notification Service.
     <!--The process is different depending on how you connect to Intune:
     **Azure portal**   
     In the [Azure portal](https://azure.portal.com), choose **More Services** &gt; **Monitoring + Management** &gt; **Intune**. On the **Intune** blade, choose **Device enrollment** &gt; **Apple Enrollment** &gt; **Apple MDM Push Certificate**, and then select **Download your CSR** to download and save the .csr file locally.   
@@ -80,22 +80,22 @@ Cuando tenga los dispositivos iOS, debe configurar el certificado de Apple Push 
 
     ![Descarga de la solicitud de certificado de Apple Push Notification Service](/sccm/mdm/deploy-use/media/mdm-change-download-apns-certificate.png)
 
-2.    Vaya al portal [Apple Push Certificates Portal](http://go.microsoft.com/fwlink/?LinkId=269844) e inicie sesión con el **mismo** ID de Apple que se usó para crear y renovar anteriormente el certificado de Apple Push Notification Service que usó en Configuration Manager (híbrido).
+2.  Vaya al portal [Apple Push Certificates Portal](http://go.microsoft.com/fwlink/?LinkId=269844) e inicie sesión con el **mismo** ID de Apple que se usó para crear y renovar anteriormente el certificado de Apple Push Notification Service que usó en Configuration Manager (híbrido).
 
     ![Página de inicio de sesión de Apple Push Notification Service](/sccm/mdm/deploy-use/media/mdm-change-apns-portal.png)
 
-3.    Seleccione el certificado de Apple Push Notification Service que usó en Configuration Manager (híbrido) y, a continuación, haga clic en **Renovar**.   
+3.  Seleccione el certificado de Apple Push Notification Service que usó en Configuration Manager (híbrido) y, a continuación, haga clic en **Renovar**.   
 
     ![Cuadro de diálogo para renovar Apple Push Notification Service](/sccm/mdm/deploy-use/media/mdm-change-renew-apns.png)
 
-4.    Seleccione la solicitud de firma del certificado de Apple Push Notification Service (.csr) que ha descargado localmente y, a continuación, haga clic en **Cargar**.
+4.  Seleccione la solicitud de firma del certificado de Apple Push Notification Service (.csr) que ha descargado localmente y, a continuación, haga clic en **Cargar**.
 
     ![Página de inicio de sesión de Apple Push Notification Service](/sccm/mdm/deploy-use/media/mdm-change-renew-apns-upload.png)  
-5.    Seleccione el mismo Apple Push Notification Service y, a continuación, haga clic en **Descargar**. Descargue el certificado de Apple Push Notification Service (.pem) y guarde el archivo localmente.  
+5.  Seleccione el mismo Apple Push Notification Service y, a continuación, haga clic en **Descargar**. Descargue el certificado de Apple Push Notification Service (.pem) y guarde el archivo localmente.  
 
     ![Página de inicio de sesión de Apple Push Notification Service](/sccm/mdm/deploy-use/media/mdm-change-renew-apns-download.png)
 
-6.    Cargue el certificado de Apple Push Notification Service renovado en el inquilino de Intune con el mismo ID de Apple que antes.
+6.  Cargue el certificado de Apple Push Notification Service renovado en el inquilino de Intune con el mismo ID de Apple que antes.
 <!--The process is different depending on how to connect to Intune:  
     **Azure portal**   
     In the [Azure portal](https://azure.portal.com), choose **More Services** &gt; **Monitoring + Management** &gt; **Intune**. On the **Intune** blade, choose **Device enrollment** &gt; **Apple Enrollment**  &gt; **Apple MDM Push Certificate**, enter your Apple ID in step 3, select the certificate (.pem) file in step 4, and then click **Upload**.     
@@ -171,13 +171,13 @@ El proceso para cambiar la entidad de MDM a Configuration Manager (híbrido) inc
 - La próxima vez que los dispositivos se conecten al servicio, se sincronizarán y recibirán la nueva configuración de la entidad de MDM.
 
 #### <a name="to-change-the-mdm-authority-to-configuration-manager"></a>Para cambiar la entidad de MDM a Configuration Manager
-1.    En la consola de Configuration Manager, vaya a **Administración** &gt; **Información general** &gt; **Cloud Services** &gt; **Suscripción a Microsoft Intune** y seleccione agregar una suscripción a Intune.
-2.    Inicie sesión en el inquilino de Intune que usó originalmente al configurar la entidad de MDM en Intune y haga clic en **Siguiente**.
-3.    Seleccione **Cambiar entidad de MDM a Configuration Manager** y haga clic en **Siguiente**.
+1.  En la consola de Configuration Manager, vaya a **Administración** &gt; **Información general** &gt; **Cloud Services** &gt; **Suscripción a Microsoft Intune** y seleccione agregar una suscripción a Intune.
+2.  Inicie sesión en el inquilino de Intune que usó originalmente al configurar la entidad de MDM en Intune y haga clic en **Siguiente**.
+3.  Seleccione **Cambiar entidad de MDM a Configuration Manager** y haga clic en **Siguiente**.
 4.  Seleccione la recopilación de usuarios que contendrá todos los usuarios que seguirán administrados por la nueva entidad de MDM híbrida.
 5.  Haga clic en **Siguiente** y complete el asistente.  
-5.    La entidad de MDM ahora se ha cambiado a **Configuration Manager**.
-6.    Inicie sesión en la [consola de administración de Microsoft Intune](http://manage.microsoft.com) con el mismo inquilino de Intune y confirme que la entidad de MDM se ha cambiado a **Configurar como Configuration Manager**.
+5.  La entidad de MDM ahora se ha cambiado a **Configuration Manager**.
+6.  Inicie sesión en la [consola de administración de Microsoft Intune](http://manage.microsoft.com) con el mismo inquilino de Intune y confirme que la entidad de MDM se ha cambiado a **Configurar como Configuration Manager**.
 
 
 ### <a name="enable-ios-enrollment"></a>Habilitar la inscripción en iOS
@@ -194,22 +194,22 @@ Cuando tenga los dispositivos iOS, debe configurar el certificado de Apple Push 
     > [!IMPORTANT]
     > Debe descargar una nueva solicitud de firma de certificado. No utilice un archivo existente o se producirá un error.  
 
-2.    Vaya al portal [Apple Push Certificates Portal](http://go.microsoft.com/fwlink/?LinkId=269844) e inicie sesión con el **mismo** ID de Apple que se usó para crear y renovar anteriormente el certificado de Apple Push Notification Service que usó en Intune independiente.
+2.  Vaya al portal [Apple Push Certificates Portal](http://go.microsoft.com/fwlink/?LinkId=269844) e inicie sesión con el **mismo** ID de Apple que se usó para crear y renovar anteriormente el certificado de Apple Push Notification Service que usó en Intune independiente.
 
     ![Página de inicio de sesión de Apple Push Notification Service](/sccm/mdm/deploy-use/media/mdm-change-apns-portal.png)
 
-3.    Seleccione el certificado de Apple Push Notification Service que usó en Intune independiente y, a continuación, haga clic en **Renovar**.   
+3.  Seleccione el certificado de Apple Push Notification Service que usó en Intune independiente y, a continuación, haga clic en **Renovar**.   
 
     ![Cuadro de diálogo para renovar Apple Push Notification Service](/sccm/mdm/deploy-use/media/mdm-change-renew-apns.png)
 
-4.    Seleccione la solicitud de firma del certificado de Apple Push Notification Service (.csr) que ha descargado localmente y, a continuación, haga clic en **Cargar**.
+4.  Seleccione la solicitud de firma del certificado de Apple Push Notification Service (.csr) que ha descargado localmente y, a continuación, haga clic en **Cargar**.
 
     ![Página de inicio de sesión de Apple Push Notification Service](/sccm/mdm/deploy-use/media/mdm-change-renew-apns-upload.png)  
-5.    Seleccione el mismo Apple Push Notification Service y, a continuación, haga clic en **Descargar**. Descargue el certificado de Apple Push Notification Service (.pem) y guarde el archivo localmente.  
+5.  Seleccione el mismo Apple Push Notification Service y, a continuación, haga clic en **Descargar**. Descargue el certificado de Apple Push Notification Service (.pem) y guarde el archivo localmente.  
 
     ![Página de inicio de sesión de Apple Push Notification Service](/sccm/mdm/deploy-use/media/mdm-change-renew-apns-download.png)
 
-6.    Cargue el certificado de Apple Push Notification Service renovado en el inquilino híbrido con el mismo ID de Apple que antes.
+6.  Cargue el certificado de Apple Push Notification Service renovado en el inquilino híbrido con el mismo ID de Apple que antes.
 
     1.  En la consola de Configuration Manager, vaya a **Administración** &gt; **Cloud Services** &gt; **Suscripción a Microsoft Intune** y seleccione **Configurar plataformas** &gt; **iOS**.  
     2.  En el cuadro de diálogo **Propiedades de suscripción a Microsoft Intune**, seleccione la pestaña **Certificado de APN** y haga clic para seleccionar la casilla **Habilitar inscripción de iOS y Mac OS X (MDM)**.  
