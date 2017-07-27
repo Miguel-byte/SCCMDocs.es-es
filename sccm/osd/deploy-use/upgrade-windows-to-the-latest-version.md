@@ -22,8 +22,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/11/2017
 
 ---
-# Actualizar Windows a la versión más reciente con System Center Configuration Manager
-<a id="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager" class="xliff"></a>
+# <a name="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager"></a>Actualizar Windows a la versión más reciente con System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
@@ -87,8 +86,7 @@ En este tema, se indican las etapas de System Center Configuration Manager para 
 
     -   [Usar medios independientes para implementar Windows sin usar la red](use-stand-alone-media-to-deploy-windows-without-using-the-network.md)  
 
-## Monitor
-<a id="monitor" class="xliff"></a>  
+## <a name="monitor"></a>Monitor  
 
 -   **Supervisar la implementación de la secuencia de tareas**  
 
