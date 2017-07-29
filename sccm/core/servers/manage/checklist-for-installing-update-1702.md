@@ -2,7 +2,7 @@
 title: "Lista de comprobación para la versión 1702 | System Center Configuration Manager"
 description: "Obtenga información sobre las acciones que se deben realizar antes de actualizar a la versión 1702 de System Center Configuration Manager."
 ms.custom: na
-ms.date: 6/6/2017
+ms.date: 06/06/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
