@@ -1,7 +1,7 @@
 ---
 title: "Asistente para la instalación | Microsoft Docs"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
-ms.openlocfilehash: 14b4172ad713a3981b8a5abe182405e271d78c26
+ms.translationtype: HT
+ms.sourcegitcommit: 5945abb49fe06c59355805aa94b04d0d445ecbc3
+ms.openlocfilehash: 678f1b35fe6f7649dacb766f7c671f4ec8ea1435
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/24/2017
 
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>Use el Asistente para instalación si quiere instalar sitios de System Center Configuration Manager.
@@ -140,7 +140,9 @@ Si va a instalar un sitio de administración central como parte de un escenario 
 
 12. En la página **Información de base de datos**, especifique la siguiente información:  
 
-    -   **Nombre de SQL Server (FQDN):** de forma predeterminada, este se establece como el equipo de servidor de sitio.  
+    -   **Nombre de SQL Server (FQDN):** de forma predeterminada, este se establece como el equipo de servidor de sitio.
+
+     Si usa un puerto personalizado, agréguelo al FQDN del servidor SQL Server. Para ello, escriba el FQDN seguido de una coma y el número de puerto.   Por ejemplo, para el servidor *SQLServer1.fabrikam.com*, use este formato para especificar el puerto *1551*: **SQLServer1.fabrikam.com,1551**
 
     -   **Nombre de instancia:** de forma predeterminada, está en blanco. Usa la instancia predeterminada de SQL en el equipo del servidor de sitio.  
 

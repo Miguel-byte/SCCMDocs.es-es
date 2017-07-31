@@ -2,7 +2,7 @@
 title: "Tamaño y escala | Microsoft Docs"
 description: "Identifique el número de roles de sistema de sitio y los sitios que necesitará para admitir los dispositivos en el entorno de System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/30/2016
+ms.date: 07/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f9c43e26758d5171a6ef56e827b4b054ebc8a5e5
-ms.openlocfilehash: c7ad33339e65e6e00e88f98d6e13baceb98dae77
+ms.translationtype: HT
+ms.sourcegitcommit: 5945abb49fe06c59355805aa94b04d0d445ecbc3
+ms.openlocfilehash: f539e2d282b56e56a9c58c773788325b27ea6b37
 ms.contentlocale: es-es
-ms.lasthandoff: 12/30/2016
+ms.lasthandoff: 07/24/2017
 
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Números de tamaño y escala de System Center Configuration Manager
@@ -133,7 +133,7 @@ Los siguientes números de soporte técnico se basan en el uso del hardware reco
 ###  <a name="bkmk_cas"></a> Jerarquía con un sitio de administración central  
 Un sitio de administración central admite un número total de dispositivos que incluye el número máximo de dispositivos indicados para los tres grupos siguientes:  
 
--   700 000 equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
+-   700 000 equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX) Consulte también la compatibilidad con [los dispositivos con Windows Embedded](#embedded).
 
 -   25 000 dispositivos que ejecutan Mac y Windows CE 7.0  
 
@@ -152,7 +152,7 @@ Un sitio de administración central admite un número total de dispositivos que 
 ###  <a name="bkmk_chipri"></a> Sitio primario secundario  
 Cada sitio primario secundario de una jerarquía con un sitio de administración central admite lo siguiente:  
 
--   150 000 clientes y dispositivos en total, sin limitarse a un grupo o tipo específico, siempre y cuando no se supere el número admitido para la jerarquía.  
+-   150 000 clientes y dispositivos en total, sin limitarse a un grupo o tipo específico, siempre y cuando no se supere el número admitido para la jerarquía. Consulte también la compatibilidad con [los dispositivos con Windows Embedded](#embedded).
 
 Por ejemplo, un sitio primario que admite 25 000 equipos que ejecutan Mac y Windows CE 7.0 (dado que es el límite para una jerarquía) puede admitir 125 000 equipos de escritorio adicionales. Esto aumenta el número total de dispositivos compatibles hasta el límite máximo de 150 000 admitido por el sitio primario secundario.
 
@@ -161,7 +161,7 @@ Un sitio primario independiente admite el siguiente número de dispositivos:
 
 -   175 000 clientes y dispositivos en total, en esta proporción:  
 
-    -   150 000 equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
+    -   150 000 equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX) Consulte también la compatibilidad con [los dispositivos con Windows Embedded](#embedded).
 
     -   25 000 dispositivos que ejecutan Mac y Windows CE 7.0
 
@@ -171,7 +171,11 @@ Un sitio primario independiente admite el siguiente número de dispositivos:
 
         -   150 000 dispositivos basados en la nube  
 
+
 Por ejemplo, un sitio primario independiente que admite 150 000 equipos de escritorio y 10 000 equipos Mac o Windows CE 7.0 solo puede admitir 15 000 dispositivos adicionales. Esos dispositivos pueden estar en la nube o administrase mediante MDM local.  
+
+### <a name="embedded"></a> Sitios principales y dispositivos con Windows Embedded
+Los sitios principales admiten dispositivos con Windows Embedded que tienen habilitados los filtros de escritura basados en archivos (FBWF). Cuando los dispositivos incrustados no tienen habilitados filtros de escritura, un sitio principal puede admitir una serie de dispositivos incrustados, hasta el máximo permitido para ese sitio. Del número total de dispositivos que un sitio principal admite, un máximo de 10 000 de estos pueden ser dispositivos con Windows Embedded, cuando dichos dispositivos están configurados para las excepciones que se muestran en la nota importante que está disponible en [Planificación de la implementación del cliente en dispositivos con Windows Embedded](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices). Un sitio principal admite solo 3000 dispositivos con Windows Embedded que tienen habilitado EWF y que no están configurados para las excepciones.
 
 ###  <a name="bkmk_sec"></a> Sitios secundarios  
 Los sitios secundarios admiten lo siguiente:  
