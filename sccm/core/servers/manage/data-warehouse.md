@@ -15,12 +15,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
-ms.openlocfilehash: f11a53bbc85b40077b3909568db5ae5552b0456c
+ms.translationtype: HT
+ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
+ms.openlocfilehash: c421c3495f56503d5cbda7b1a5ab5350a168912d
 ms.contentlocale: es-es
-ms.lasthandoff: 06/01/2017
-
+ms.lasthandoff: 07/26/2017
 
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>El punto de servicio de almacenamiento de datos para System Center Configuration Manager
@@ -52,7 +51,7 @@ Cuando se instala el rol de sistema de sitio, instala y configura la base de dat
   - **Administrator** en el equipo que hospedará la base de datos del almacenamiento de datos.
   - **DB_owner** en la base de datos del almacenamiento de datos.
   - Permisos **DB_reader** y **execute** para la base de datos de sitio de los sitios de nivel superior.
--    La base de datos del almacenamiento de datos es compatible con una instancia predeterminada o con nombre de SQL Server 2012 o posterior. La edición debe ser Enterprise o Datacenter.
+-   La base de datos del almacenamiento de datos es compatible con una instancia predeterminada o con nombre de SQL Server 2012 o posterior. La edición debe ser Enterprise o Datacenter.
   - Grupo de disponibilidad AlwaysOn de SQL Server: esta configuración no se admite.
   - Clúster de SQL Server: no se admiten clústeres de conmutación por error de SQL Server. Esto es porque la base de datos del almacenamiento de datos no se ha probado a fondo en clústeres de conmutación por error de SQL Server.
   - Cuando la base de datos del almacenamiento de datos está ubicada en un emplazamiento remoto respecto a la base de datos del servidor del sitio, debe tener una licencia independiente para el servidor SQL Server que hospeda la base de datos.
@@ -78,7 +77,7 @@ Cuando instala el rol, Configuration Manager crea la base de datos de almacenami
 Página **Selección de rol del sistema**:  
 
 Página **General**:
--     **Configuración de conexión de base de datos de almacenamiento de datos de Configuration Manager**:
+-   **Configuración de conexión de base de datos de almacenamiento de datos de Configuration Manager**:
  - **Nombre de dominio completo de SQL Server**:  
  Especifique el nombre de dominio completo (FQDN) del servidor que hospeda la base de datos del punto de servicio de almacenamiento de datos.
  - **Nombre de instancia de SQL Server, si corresponde**:   
@@ -103,15 +102,15 @@ El rol de sistema de sitio de almacenamiento de datos incluye los siguientes inf
  - **Implementación de aplicaciones - Histórico**:   
  Vea los detalles de la implementación de aplicaciones para una máquina y una aplicación determinada.
  - **Endpoint Protection y compatibilidad con actualizaciones de software - Histórico**: Vea los equipos a los que les faltan actualizaciones de software.  
- - **Inventario de hardware general - Histórico**:      
+ - **Inventario de hardware general - Histórico**:   
  Vea todo el inventario de hardware para un equipo específico.
- - **Inventario de software general - Histórico**:      
+ - **Inventario de software general - Histórico**:   
  Vea todo el inventario de software para un equipo específico.
- - **Información general del mantenimiento de infraestructura - Histórico**:     
+ - **Información general del mantenimiento de infraestructura - Histórico**:  
  Muestra información general del mantenimiento de su infraestructura de Configuration Manager.
- - **Lista de malware detectado - Histórico**:     
+ - **Lista de malware detectado - Histórico**:    
  Vea el malware que se ha detectado en la organización.
- - **Resumen de distribución de software - Histórico**:     
+ - **Resumen de distribución de software - Histórico**:   
  Un resumen de distribución de software para un equipo y anuncio específico.
 
 
@@ -126,13 +125,13 @@ A diferencia de un movimiento de la base de datos del almacenamiento de datos, e
 ## <a name="move-the-data-warehouse-database"></a>Mover la base de datos de almacenamiento de datos
 Use los siguientes pasos para mover la base de datos de almacenamiento de datos a un servidor de SQL Server nuevo:
 
-1.    Use SQL Server Management Studio para realizar una copia de seguridad de la base de datos de almacenamiento de datos y, después, restaure esa base de datos en un servidor de SQL Server en el nuevo equipo que hospedará el almacenamiento de datos.   
+1.  Use SQL Server Management Studio para realizar una copia de seguridad de la base de datos de almacenamiento de datos y, después, restaure esa base de datos en un servidor de SQL Server en el nuevo equipo que hospedará el almacenamiento de datos.   
 > [!NOTE]     
 > Después de restaurar la base de datos en el nuevo servidor, asegúrese de que los permisos de acceso de la base de datos son los mismos en la nueva base de datos de almacenamiento de datos que en la base de datos de almacenamiento de datos original.  
 
-2.    Use la consola de Configuration Manager para quitar el rol de sistema de sitio del punto de servicio de almacenamiento de datos del servidor actual.
-3.    Reinstale el punto de servicio de almacenamiento de datos y especifique el nombre del nuevo servidor de SQL Server y la instancia que hospeda la base de datos de almacenamiento de datos que ha restaurado.
-4.    Después de que se instale el rol de sistema de sitio, se completa el movimiento.
+2.  Use la consola de Configuration Manager para quitar el rol de sistema de sitio del punto de servicio de almacenamiento de datos del servidor actual.
+3.  Reinstale el punto de servicio de almacenamiento de datos y especifique el nombre del nuevo servidor de SQL Server y la instancia que hospeda la base de datos de almacenamiento de datos que ha restaurado.
+4.  Después de que se instale el rol de sistema de sitio, se completa el movimiento.
 
 ## <a name="troubleshooting-data-warehouse-issues"></a>Solución de problemas del almacenamiento de datos
 **Archivos de registro**:  
@@ -167,7 +166,7 @@ Al abrir un informe de almacenamiento de datos, se devuelve el siguiente el erro
     1. Abra IIS, haga clic en **Certificados de servidor**, haga clic con el botón derecho en **Crear certificado autofirmado** y luego especifique el "nombre descriptivo" del nombre del certificado como **Certificado de identificación de SQL Server de almacenamiento de datos**. Seleccione el almacén de certificados como **Personal**.
     2. Abra **Administrador de configuración de SQL Server**, en **Configuración de red de SQL Server**, haga clic con el botón derecho para seleccionar **Propiedades** en **Protocolos para MSSQLSERVER**. A continuación, en la pestaña **Certificado**, seleccione **Certificado de identificación de SQL Server de almacenamiento de datos** como el certificado y luego guarde los cambios.  
     3. Abra **Administrador de configuración de SQL Server**, en **Servicios de SQL Server**, reinicie **Servicio SQL Server** y **Servicio de informes**.
-    4.    Abra Microsoft Management Console (MMC) y agregue el complemento para **Certificados**; seleccione la opción de administración del certificado para **Cuenta de equipo** de la máquina local. A continuación, en MMC, expanda la carpeta **Personal** > **Certificados** y exporte el **Certificado de identificación de SQL Server de almacenamiento de datos** como un archivo **DER binario codificado X.509 (.CER)**.    
+    4.  Abra Microsoft Management Console (MMC) y agregue el complemento para **Certificados**; seleccione la opción de administración del certificado para **Cuenta de equipo** de la máquina local. A continuación, en MMC, expanda la carpeta **Personal** > **Certificados** y exporte el **Certificado de identificación de SQL Server de almacenamiento de datos** como un archivo **DER binario codificado X.509 (.CER)**.    
   2.    En el equipo que hospeda SQL Server Reporting Services, abra MMC y agregue el complemento para **Certificados**; luego, la opción de administración del certificado para **Cuenta de equipo**. En la carpeta **Entidades emisoras raíz de confianza**, importe el **Certificado de identificación de SQL Server de almacenamiento de datos**.
 
 
@@ -178,7 +177,7 @@ Al abrir un informe de almacenamiento de datos, se devuelve el siguiente el erro
 
 | Paso   | Detalles  |
 |:------:|-----------|  
-| **1**  |     El servidor de sitio transfiere y almacena datos en la base de datos del sitio.  |  
+| **1**  |  El servidor de sitio transfiere y almacena datos en la base de datos del sitio.  |  
 | **2**  |      Basándose en su programación y configuración, el punto de servicio de almacenamiento de datos obtiene datos de la base de datos del sitio.  |  
 | **3**  |  El punto de servicio de almacenamiento de datos transfiere y almacena una copia de los datos sincronizados en la base de datos de almacenamiento de datos. |  
 **Generación de informes**

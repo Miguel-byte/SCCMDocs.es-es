@@ -12,15 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 caps.latest.revision: 24
-author: Dougeby
-ms.author: dougeby
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 065b1fcb25d7c7845b6f26e757b36e7fb97ce013
-ms.openlocfilehash: ef4536578456c13de5afaa5cd1977d2e6b4b6bd1
+ms.translationtype: HT
+ms.sourcegitcommit: 1f57c63ceeb13c7f7d760d7ecfb48df749da6770
+ms.openlocfilehash: 167e639cdb9995fd743787cc9fbf364ec70f6ed9
 ms.contentlocale: es-es
-ms.lasthandoff: 05/10/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="infrastructure-requirements-for-operating-system-deployment-in-system-center-configuration-manager"></a>Requisitos de infraestructura para la implementación de sistema operativo en System Center Configuration Manager
@@ -41,7 +40,9 @@ La implementación de sistema operativo en System Center 2012 Configuration Mana
 
 -   Herramientas de implementación de Windows  
 
--   Entorno de preinstalación de Windows (Windows PE)  
+-   Entorno de preinstalación de Windows (Windows PE)
+
+Para obtener una lista de las versiones de Windows 10 ADK que puede usar con varias versiones de Configuration Manager, consulte [Soporte técnico de Windows 10 para clientes](https://docs.microsoft.com/en-us/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk).
 
  <sup>1</sup> no se necesita USMT en el servidor de sistema de sitio de proveedor de SMS.  
 
@@ -171,7 +172,7 @@ Debe instalar las siguientes revisiones de WSUS 4.0:
  Para admitir PXE o multidifusión, servicios de implementación de Windows (WDS) debe instalarse en el mismo servidor que los puntos de distribución que se configuran. El sistema operativo del servidor incluye WDS. En las implementaciones de PXE, WDS es el servicio que realiza el arranque de PXE. Si el punto de distribución se instala y se habilita para PXE, Configuration Manager instala un proveedor en WDS que emplea las funciones de arranque de PXE de WDS.  
 
 > [!NOTE]  
->  La instalación de WDS puede no realizarse correctamente si el servidor requiere un reinicio.  
+>  Si el servidor requiere un reinicio, puede que la instalación de WDS no se realice correctamente. 
 
  Entre las configuraciones de WDS que deben tenerse en cuenta se incluyen las siguientes:  
 

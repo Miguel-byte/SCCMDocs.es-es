@@ -2,7 +2,7 @@
 title: Requisitos previos de los sitios | Microsoft Docs
 description: "Obtenga información sobre los requisitos previos necesarios para instalar los distintos tipos de sitios de System Center Configuration Manager."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: ff89d4aea6be871e64e0a788f054ba4cadb3e51d
+ms.translationtype: HT
+ms.sourcegitcommit: 5945abb49fe06c59355805aa94b04d0d445ecbc3
+ms.openlocfilehash: d46a8b66ace45d25da9d86f2e91b19ae1d6875ab
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/24/2017
 
 ---
 # <a name="prerequisites-for-installing-system-center-configuration-manager-sites"></a>Requisitos previos para instalar sitios de System Center Configuration Manager
@@ -100,6 +100,19 @@ Un sitio principal independiente debe cumplir los siguientes requisitos previos 
 -   **El puerto de SQL Server Service Broker (SSB) entre el sitio primario independiente y el equipo en el que se instalará el sitio de administración central debe estar abierto**  
 
      Para replicar correctamente los datos entre un sitio de administración central y un sitio primario, Configuration Manager necesita que haya un puerto abierto entre los dos sitios para que se pueda usar SSB. Al instalar un sitio de administración central y expandir un sitio primario independiente, la comprobación de requisitos previos no comprueba que el puerto especificado para SSB esté abierto en el sitio primario.  
+
+**Problemas conocidos cuando se han configurado servicios de Azure:**  
+Si usa uno de los siguientes servicios de Azure con Configuration Manager y planea ampliar un sitio, deberá eliminar y volver a crear la conexión al servicio después de la ampliación.
+
+Servicios:  
+-       [Operations Manager Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) (OMS)
+-       [Preparación para la actualización](/sccm/core/clients/manage/upgrade/upgrade-analytics)
+-       [Tienda Windows para empresas](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+
+Para resolver el problema, siga estos pasos:
+ 1.    En la consola de Configuration Manager, elimine el servicio de Azure desde el nodo de servicios de Azure.
+ 2.    En el portal de Azure, elimine al inquilino que está asociado al servicio desde el nodo de inquilinos de Azure Active Directory.  Esto también elimina la aplicación web de Azure AD asociada al servicio.  
+ 3.   Vuelva a configurar la conexión al servicio de Azure para su uso con Configuration Manager.
 
 
 ## <a name="bkmk_secondary"></a> Sitios secundarios

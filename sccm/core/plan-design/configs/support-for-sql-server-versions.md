@@ -15,12 +15,11 @@ caps.latest.revision: 21
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
-ms.openlocfilehash: 4166560602edf6eb299511c8b59dc3903e3bfffc
+ms.translationtype: HT
+ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
+ms.openlocfilehash: b35e45b9514297e2f9ce405a3244462ed735f39f
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 07/26/2017
 
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>Versiones de SQL Server compatibles con System Center Configuration Manager
@@ -55,7 +54,7 @@ Se admiten las siguientes instancias:
  Las configuraciones que aparecen a continuación no son compatibles:
  -   Un clúster de SQL Server en una configuración de clúster de equilibrio de carga de red (NLB)
  -   Un clúster de SQL Server en un volumen compartido de clúster (CSV)
- -   Tecnología de creación de reflejo y la replicación punto a punto de la base de datos de SQL Server
+ -   Tecnología de creación de reflejo y replicación punto a punto de la base de datos de SQL Server
 
 La replicación transaccional de SQL Server solo se admite para replicar objetos a los puntos de administración que están configurados para usar [réplicas de base de datos](https://technet.microsoft.com/library/mt608546.aspx).  
 
@@ -204,7 +203,7 @@ Puede utilizar esta versión de SQL Server sin una versión de actualización ac
     -   Para un sitio secundario: establezca 4 GB como mínimo.  
 
 **Desencadenadores anidados de SQL:**  
-Los [desencadenadores anidados de SQL](http://go.microsoft.com/fwlink/?LinkId=528802) deben estar habilitados.  
+ Los[desencadenadores anidados de SQL](http://go.microsoft.com/fwlink/?LinkId=528802) deben estar habilitados.  
 
  **Integración de CLR de SQL Server**  
   La base de datos de sitio requiere Common Language Runtime (CLR) para habilitarse. Se habilita de forma automática cuando se instala Configuration Manager. Para obtener más información sobre CLR, consulte [Introducción a la integración CLR de SQL Server](https://msdn.microsoft.com/library/ms254498\(v=vs.110\).aspx).  
