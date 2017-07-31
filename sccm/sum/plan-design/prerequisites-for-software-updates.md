@@ -12,9 +12,11 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
 ms.openlocfilehash: 179f076f228daa5adf612275a822cd379b0ce1e3
+ms.contentlocale: es-es
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -83,7 +85,7 @@ En este tema aparecen los requisitos previos para las actualizaciones de softwar
 ### <a name="reporting-services-point"></a>Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.  
  El rol de sistema de sitio de punto de servicios de informes puede mostrar informes de las actualizaciones de software. Este rol es opcional pero se recomienda. Para obtener más información sobre cómo crear un punto de servicios de informes, consulte [Configuring reporting](../../core/servers/manage/configuring-reporting.md) (Configurar los informes).  
 
-##  <a name="a-namebkmkrecoverupgradesa-recover-from-synchronizing-the-upgrades-category-before-you-install-kb-3095113"></a><a name="BKMK_RecoverUpgrades"></a> Recuperación de la sincronización de la categoría Actualizaciones antes de instalar KB 3095113  
+##  <a name="BKMK_RecoverUpgrades"></a> Recuperación de la sincronización de la categoría Actualizaciones antes de instalar KB 3095113  
  Debe instalar la [revisión 3095113](https://support.microsoft.com/kb/3095113) para WSUS en los puntos de actualización de software y en los servidores de sitio antes de sincronizar la clasificación **Actualizaciones** . Si la revisión no está instalada cuando se habilita la clasificación **Actualizaciones** , WSUS verá la actualización de características de la compilación 1511 de Windows 10 aunque no pueda descargar e implementar correctamente los paquetes asociados. Si sincroniza las actualizaciones sin haber instalado primero la [revisión 3095113](https://support.microsoft.com/kb/3095113), la base de datos de WSUS (SUSDB) se rellenará con datos inutilizables que se deben borrar para poder implementar correctamente las actualizaciones.  Utilice el siguiente procedimiento para recuperarse de este problema.  
 
 #### <a name="to-recover-from-synchronizing-the-upgrades-classification-before-you-install-kb-3095113"></a>Para recuperarse de la sincronización de la clasificación Actualizaciones antes de instalar KB 3095113  
@@ -111,9 +113,4 @@ En este tema aparecen los requisitos previos para las actualizaciones de softwar
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Preparar la administración de actualizaciones de software](../get-started/prepare-for-software-updates-management.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
