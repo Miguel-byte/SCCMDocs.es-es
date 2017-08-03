@@ -60,6 +60,7 @@
 ## Administrar el acceso a los recursos
 ### [Crear perfiles de Wi-Fi](deploy-use/create-wifi-profiles.md)
 ### [Crear perfiles de certificado PFX](deploy-use/create-pfx-certificate-profiles.md)
+### [Importar perfiles de certificado PFX](deploy-use/import-pfx-certificate-profiles.md)
 ### [Perfiles de VPN](deploy-use/create-vpn-profiles.md)
 ### [Crear perfiles de correo electrónico](deploy-use/create-exchange-activesync-profiles.md)
 ### [Configuración de Windows Hello para empresas](deploy-use/windows-hello-for-business-settings.md)
