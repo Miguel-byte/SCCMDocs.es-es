@@ -25,7 +25,7 @@ ms.lasthandoff: 07/07/2017
 
 *Se aplica a: System Center Configuration Manager (Technical Preview)*
 
-En este artículo se presentan las características disponibles en Technical Preview para System Center Configuration Manager, versión 1706. Puede instalar esta versión para actualizar y agregar nuevas capacidades al sitio de Technical Preview de Configuration Manager. Antes de instalar esta versión de la versión preliminar técnica, revise [Technical Preview para System Center Configuration Manager](../../core/get-started/technical-preview.md) para familiarizarse con los requisitos y las limitaciones generales del uso de este tipo de versiones y para saber cómo actualizar entre versiones y cómo proporcionar comentarios sobre las características de una versión preliminar técnica.     
+En este artículo se presentan las características disponibles en Technical Preview para System Center Configuration Manager, versión 1706. Puede instalar esta versión para actualizar y agregar nuevas capacidades al sitio de Technical Preview de Configuration Manager. Antes de instalar esta versión de Technical Preview, revise [Technical Preview para System Center Configuration Manager](../../core/get-started/technical-preview.md) para familiarizarse con los requisitos y las limitaciones generales del uso de este tipo de versiones y para saber cómo actualizar entre versiones y cómo proporcionar comentarios sobre las características de Technical Preview.     
 
 
 <!--  Known Issues Template   
@@ -35,7 +35,7 @@ En este artículo se presentan las características disponibles en Technical Pre
 -->
 **Problemas conocidos de esta Technical Preview:**
 
--   **Mover el punto de distribución**: no se pueden usar las opciones de la consola para mover un punto de distribución entre sitios con esta versión debido al límite establecido para la vista preliminar técnica de un solo sitio primario.
+-   **Mover el punto de distribución**: no se pueden usar las opciones de la consola para mover un punto de distribución entre sitios con esta versión debido al límite establecido para Technical Preview de un solo sitio primario.
 
 -   **Configuración de cumplimiento de dispositivo**: podría experimentar un comportamiento opuesto al utilizar las dos nuevas configuraciones para el cumplimiento de dispositivo:
     - **Bloquear depuración USB en el dispositivo**
@@ -278,7 +278,7 @@ Una vez configurados los requisitos previos, estará listo para usar al Asistent
 
 2.  En la página **Servicios de Azure**, seleccione el **Conector de Upgrade Readiness** y, a continuación, haga clic en **Siguiente**.
 
-3.  En la página **Aplicación**, especifique el **entorno de Azure** (la versión preliminar técnica admite solo la nube pública). A continuación, haga clic en **importación** para abrir la ventana **Importar aplicaciones**.
+3.  En la página **Aplicación**, especifique el **entorno de Azure** (Technical Preview admite solo la nube pública). A continuación, haga clic en **importación** para abrir la ventana **Importar aplicaciones**.
 
 4.  En la ventana **Importar aplicaciones**, especifique los detalles para una aplicación web que ya existe en su instancia de Azure AD.
     -   Proporcione un nombre descriptivo para el nombre del inquilino de Azure AD. A continuación, especifique el identificador de inquilino, el nombre de la aplicación, el identificador de cliente, la clave secreta de la aplicación web de Azure y el URI del identificador de la aplicación.
@@ -317,7 +317,7 @@ Para confirmar que el dispositivo está unido a Azure AD, ejecute el comando **d
 ## <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
 <!-- 1236459 -->
 
-En Configuration Manager, puede implementar scripts en dispositivos de cliente mediante paquetes y programas. En esta versión preliminar técnica, hemos agregado nueva funcionalidad que permite realizar las siguientes acciones:
+En Configuration Manager, puede implementar scripts en dispositivos de cliente mediante paquetes y programas. En esta Technical Preview, hemos agregado nueva funcionalidad que permite realizar las siguientes acciones:
 
 - Importar scripts de PowerShell en Configuration Manager.
 - Editar los scripts desde la consola de Configuration Manager (solo para scripts sin firmar).
