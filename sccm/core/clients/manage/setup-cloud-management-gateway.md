@@ -11,11 +11,11 @@ ms.service:
 ms.technology:
 - configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d5a6fdc9a526c4fc3a9027dcedf1dd66a6fff5a7
-ms.openlocfilehash: 97e1bc6585cee0ff433da0ec0b60b9604cb7348f
+ms.translationtype: HT
+ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
+ms.openlocfilehash: df6e809aadd3d69275c137c92629ab8426bbdcb7
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -43,7 +43,7 @@ Por ejemplo, al crear el servicio Cloud Management Gateway en Contoso, se extrae
 
 Puede crear un certificado SSL personalizado para la puerta de enlace de administración en la nube de la misma manera que si fuera para un punto de distribución basado en la nube. Siga las instrucciones de [Deploying the Service Certificate for Cloud-Based Distribution Points (Implementación del certificado de servicio para puntos de distribución basados en la nube)](/sccm/core/plan-design/network/example-deployment-of-pki-certificates), pero con las siguientes diferencias:
 
-- Al configurar la plantilla del nuevo certificado, otórguele permisos de **lectura** e **inscripción** en el grupo de seguridad que establezca para los servidores de Configuration Manager.
+- Al configurar la nueva plantilla de certificado, asigne los permisos **Leer** e **Inscribir** al grupo de seguridad que configure para los servidores de Configuration Manager.
 - Cuando se le solicite el certificado de servidor web personalizado, proporcione un nombre de dominio completo para el nombre común del certificado que finalice en**cloudapp.net** para usar la puerta de enlace de administración en la nube en la nube pública de Azure o **usgovcloudapp.net** para la nube de administración pública de Azure.
 
 

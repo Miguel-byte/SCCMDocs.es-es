@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9555a16d97224a1cf49a426ab225468b07403f60
-ms.openlocfilehash: e28fdeae809cadf78017dd2920e3f1a9484ec8a3
+ms.translationtype: HT
+ms.sourcegitcommit: 5f1412fb132e3a074742e11f1142b2594146cbe1
+ms.openlocfilehash: 44b4707b1a40624c51decf548d23ddd2164c5833
 ms.contentlocale: es-es
-ms.lasthandoff: 12/29/2016
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-collections-in-system-center-configuration-manager"></a>Cómo crear recopilaciones en System Center Configuration Manager
@@ -57,65 +56,65 @@ Las recopilaciones son grupos de usuarios o dispositivos. Use las recopilaciones
 5.  En la página **Reglas de pertenencia** del **Asistente para crear recopilación de dispositivos**, en la lista **Agregar regla**, seleccione el tipo de regla de pertenencia que quiere usar para esta recopilación. Puede configurar varias reglas para cada recopilación.  
 
         
-        ##### To configure a direct rule  
+##### <a name="to-configure-a-direct-rule"></a>Cómo configurar una regla directa  
 
-        1.  En la página **Buscar recursos** del **Asistente para crear reglas de pertenencia directa**, especifique la información siguiente:  
+1.  En la página **Buscar recursos** del **Asistente para crear reglas de pertenencia directa**, especifique la información siguiente:  
 
-            -   **Clase de recurso**: seleccione el tipo de recurso que quiere buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso del sistema** para buscar datos de inventario devueltos de equipos cliente o **Equipo desconocido** para seleccionar entre los valores devueltos por equipos desconocidos.  
+-   **Clase de recurso**: seleccione el tipo de recurso que quiere buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso del sistema** para buscar datos de inventario devueltos de equipos cliente o **Equipo desconocido** para seleccionar entre los valores devueltos por equipos desconocidos.  
 
-            -   **Nombre de atributo**: seleccione el atributo asociado a la clase de recurso seleccionado que quiere buscar. Por ejemplo, si quiere seleccionar equipos por su nombre NETBIOS, seleccione **Recurso del sistema** en la lista **Clase de recurso** y **Nombre NETBIOS** en la lista **Nombre de atributo** .  
+-   **Nombre de atributo**: seleccione el atributo asociado a la clase de recurso seleccionado que quiere buscar. Por ejemplo, si quiere seleccionar equipos por su nombre NETBIOS, seleccione **Recurso del sistema** en la lista **Clase de recurso** y **Nombre NETBIOS** en la lista **Nombre de atributo** .  
 
-            -   **Excluir recursos marcados como obsoletos**: si un equipo cliente está marcado como obsoleto, no incluya este valor en los resultados de la búsqueda.  
+-   **Excluir recursos marcados como obsoletos**: si un equipo cliente está marcado como obsoleto, no incluya este valor en los resultados de la búsqueda.  
 
-            -   **Excluir recursos que no tengan instalado el cliente de Configuration Manager**: estos no se mostrarán en los resultados de búsqueda.  
+-   **Excluir recursos que no tengan instalado el cliente de Configuration Manager**: estos no se mostrarán en los resultados de búsqueda.  
 
-            -   **Valor:** escriba un valor por el que quiera buscar el nombre del atributo seleccionado. Puede utilizar el carácter de porcentaje **%** como carácter comodín. Por ejemplo, para buscar equipos que tengan un nombre NETBIOS que comience por "M", escriba **M%** en este campo.  
+-   **Valor:** escriba un valor por el que quiera buscar el nombre del atributo seleccionado. Puede utilizar el carácter de porcentaje **%** como carácter comodín. Por ejemplo, para buscar equipos que tengan un nombre NETBIOS que comience por "M", escriba **M%** en este campo.  
 
-        2.  En la página **Seleccionar recursos**, seleccione los recursos que quiere agregar a la recopilación en la lista **Recursos** y luego haga clic en **Siguiente**.  
+2.  En la página **Seleccionar recursos**, seleccione los recursos que quiere agregar a la recopilación en la lista **Recursos** y luego haga clic en **Siguiente**.  
 
 
-        ##### To configure a query rule  
+##### <a name="to-configure-a-query-rule"></a>Cómo configurar una regla de consulta  
 
-        1.  En el cuadro de diálogo **Propiedades de regla de consulta** , especifique la siguiente información:  
+1.  En el cuadro de diálogo **Propiedades de regla de consulta** , especifique la siguiente información:  
 
-            -   **Nombre**: especifique un nombre exclusivo.  
+-   **Nombre**: especifique un nombre exclusivo.  
 
-            -   **Importar instrucción de consulta**: abre el cuadro de diálogo **Examinar consulta** donde puede seleccionar una [consulta de Configuration Manager](../../../../core/servers/manage/create-queries.md) para usarla como la regla de consulta de la recopilación.   
+-   **Importar instrucción de consulta**: abre el cuadro de diálogo **Examinar consulta** donde puede seleccionar una [consulta de Configuration Manager](../../../../core/servers/manage/create-queries.md) para usarla como la regla de consulta de la recopilación.   
 
-            -   **Clase de recurso:** seleccione el tipo de recurso que quiere buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso del sistema** para buscar datos de inventario devueltos de equipos cliente o **Equipo desconocido** para seleccionar entre los valores devueltos por equipos desconocidos.  
+-   **Clase de recurso:** seleccione el tipo de recurso que quiere buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso del sistema** para buscar datos de inventario devueltos de equipos cliente o **Equipo desconocido** para seleccionar entre los valores devueltos por equipos desconocidos.  
 
-            -   **Editar instrucción de consulta**: abre el cuadro de diálogo **Propiedades de instrucción de consulta** donde puede crear una consulta para usarla como regla de la recopilación. Para obtener más información sobre consultas, consulte [Queries technical reference for System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md) (Referencia técnica de consultas para System Center Configuration Manager).  
+-   **Editar instrucción de consulta**: abre el cuadro de diálogo **Propiedades de instrucción de consulta** donde puede crear una consulta para usarla como regla de la recopilación. Para obtener más información sobre consultas, consulte [Queries technical reference for System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md) (Referencia técnica de consultas para System Center Configuration Manager).  
 
     
-        ##### To configure an include collection rule  
+##### <a name="to-configure-an-include-collection-rule"></a>Cómo configurar una regla de inclusión de recopilación  
 
-        In the **Select Collections** dialog box, select the collections you want to include in the new collection, then choose **OK**.  
+En el cuadro de diálogo **Seleccionar recopilaciones**, seleccione las recopilaciones que quiere incluir en la nueva recopilación y después pulse **Aceptar**.  
 
-        ##### To configure an exclude collection rule  
+##### <a name="to-configure-an-exclude-collection-rule"></a>Cómo configurar una regla de exclusión de recopilación  
 
-        In the **Select Collections** dialog box, select the collections you want to exclude from the new collection, then choose **OK**.  
+En el cuadro de diálogo **Seleccionar recopilaciones**, seleccione las recopilaciones que quiere excluir en la nueva recopilación y después pulse **Aceptar**.  
 
-    -   **Usar actualizaciones incrementales para esta recopilación**: seleccione esta opción para detectar y examinar de forma periódica recursos nuevos o modificados con respecto a la evaluación de recopilación anterior, independientemente de que se realice una evaluación de recopilación completa. Las actualizaciones incrementales se producen en intervalos de 10 minutos.  
+-   **Usar actualizaciones incrementales para esta recopilación**: seleccione esta opción para detectar y examinar de forma periódica recursos nuevos o modificados con respecto a la evaluación de recopilación anterior, independientemente de que se realice una evaluación de recopilación completa. Las actualizaciones incrementales se producen en intervalos de 10 minutos.  
 
-        > [!IMPORTANT]  
-        >  Las recopilaciones configuradas mediante el uso de reglas que usan las clases siguientes no admiten las actualizaciones incrementales:  
-        >   
-        >  -   SMS_G_System_CollectedFile  
-        > -   SMS_G_System_LastSoftwareScan  
-        > -   SMS_G_System_AppClientState  
-        > -   SMS_G_System_DCMDeploymentState  
-        > -   SMS_G_System_DCMDeploymentErrorAssetDetails  
-        > -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
-        > -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
-        > -   SMS_G_User_DCMDeploymentCompliantAssetDetails (solo para las recopilaciones de usuarios)  
-        > -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (solo para las recopilaciones de usuarios)  
-        > -   SMS_G_System_SoftwareUsageData  
-        > -   SMS_G_System_CI_ComplianceState  
-        > -   SMS_G_System_EndpointProtectionStatus  
-        > -   SMS_GH_System_*  
-        > -   SMS_GEH_System_*  
+> [!IMPORTANT]  
+>  Las recopilaciones configuradas mediante el uso de reglas que usan las clases siguientes no admiten las actualizaciones incrementales:  
+>   
+> -   SMS_G_System_CollectedFile  
+> -   SMS_G_System_LastSoftwareScan  
+> -   SMS_G_System_AppClientState  
+> -   SMS_G_System_DCMDeploymentState  
+> -   SMS_G_System_DCMDeploymentErrorAssetDetails  
+> -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
+> -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
+> -   SMS_G_User_DCMDeploymentCompliantAssetDetails (solo para las recopilaciones de usuarios)  
+> -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (solo para las recopilaciones de usuarios)  
+> -   SMS_G_System_SoftwareUsageData  
+> -   SMS_G_System_CI_ComplianceState  
+> -   SMS_G_System_EndpointProtectionStatus  
+> -   SMS_GH_System_*  
+> -   SMS_GEH_System_*  
 
-    -   **Programar una actualización completa en esta recopilación**: programe una evaluación completa regular de la pertenencia a la recopilación.  
+-   **Programar una actualización completa en esta recopilación**: programe una evaluación completa regular de la pertenencia a la recopilación.  
 
 6.  Complete el asistente para crear la nueva recopilación. La nueva recopilación se muestra en el nodo **Recopilaciones de dispositivos** del área de trabajo **Activos y compatibilidad** .  
 
@@ -134,60 +133,60 @@ Las recopilaciones son grupos de usuarios o dispositivos. Use las recopilaciones
 
     -   En la lista **Agregar regla** , seleccione el tipo de regla de pertenencia que quiere usar para esta recopilación. Puede configurar varias reglas para cada recopilación.  
 
-         ##### <a name="to-configure-a-direct-rule"></a>Cómo configurar una regla directa  
+##### <a name="to-configure-a-direct-rule"></a>Cómo configurar una regla directa  
 
-        1.  En la página **Buscar recursos** del **Asistente para crear reglas de pertenencia directa**, especifique:  
+1.  En la página **Buscar recursos** del **Asistente para crear reglas de pertenencia directa**, especifique:  
 
-            -   **Clase de recurso**: seleccione el tipo de recurso que quiere buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso de usuario** para buscar información de usuario recopilada por Configuration Manager o **Recurso de grupo de usuarios** para buscar información de grupo de usuarios recopilada por Configuration Manager.  
+-   **Clase de recurso**: seleccione el tipo de recurso que quiere buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso de usuario** para buscar información de usuario recopilada por Configuration Manager o **Recurso de grupo de usuarios** para buscar información de grupo de usuarios recopilada por Configuration Manager.  
 
-            -   **Nombre de atributo**: seleccione el atributo asociado a la clase de recurso que quiere buscar. Por ejemplo, si quiere seleccionar equipos por su nombre de unidad organizativa (UO), seleccione **Recurso de usuario** en la lista **Clase de recurso** y **Nombre de UO de usuario** en la lista **Nombre de atributo** .  
+-   **Nombre de atributo**: seleccione el atributo asociado a la clase de recurso que quiere buscar. Por ejemplo, si quiere seleccionar equipos por su nombre de unidad organizativa (UO), seleccione **Recurso de usuario** en la lista **Clase de recurso** y **Nombre de UO de usuario** en la lista **Nombre de atributo** .  
 
-            -   **Valor:** escriba el valor por el que quiere buscar. Puede utilizar el carácter de porcentaje **%** como carácter comodín. Por ejemplo, para buscar usuarios en la UO de Contoso, escriba **Contoso** en este campo.  
+-   **Valor:** escriba el valor por el que quiere buscar. Puede utilizar el carácter de porcentaje **%** como carácter comodín. Por ejemplo, para buscar usuarios en la UO de Contoso, escriba **Contoso** en este campo.  
 
-        2.  En la página **Seleccionar recursos**, seleccione los recursos que quiere agregar a la recopilación en la lista **Recursos**.  
+2.  En la página **Seleccionar recursos**, seleccione los recursos que quiere agregar a la recopilación en la lista **Recursos**.  
 
-        ##### <a name="to-configure-a-query-rule"></a>Cómo configurar una regla de consulta  
+##### <a name="to-configure-a-query-rule"></a>Cómo configurar una regla de consulta  
 
-        1.  En el cuadro de diálogo **Propiedades de regla de consulta**, proporcione lo siguiente:  
+1.  En el cuadro de diálogo **Propiedades de regla de consulta**, proporcione lo siguiente:  
 
-            -   **Nombre**: un nombre único.  
+-   **Nombre**: un nombre único.  
 
-            -   **Importar instrucción de consulta**: abre el cuadro de diálogo **Examinar consulta** donde puede seleccionar una [consulta de Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md) para usarla como la regla de consulta de la recopilación.  
+-   **Importar instrucción de consulta**: abre el cuadro de diálogo **Examinar consulta** donde puede seleccionar una [consulta de Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md) para usarla como la regla de consulta de la recopilación.  
 
-            -   **Clase de recurso**: seleccione el tipo de recurso que quiere buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso de usuario** para buscar información de usuario recopilada por Configuration Manager o **Recurso de grupo de usuarios** para buscar información de grupo de usuarios recopilada por Configuration Manager.  
+-   **Clase de recurso**: seleccione el tipo de recurso que quiere buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso de usuario** para buscar información de usuario recopilada por Configuration Manager o **Recurso de grupo de usuarios** para buscar información de grupo de usuarios recopilada por Configuration Manager.  
 
-            -   **Editar instrucción de consulta**: abre el cuadro de diálogo **Propiedades de instrucción de consulta** donde puede [crear una consulta](../../../../core/servers/manage/queries-technical-reference.md) para usarla como regla para la recopilación.  
+-   **Editar instrucción de consulta**: abre el cuadro de diálogo **Propiedades de instrucción de consulta** donde puede [crear una consulta](../../../../core/servers/manage/queries-technical-reference.md) para usarla como regla para la recopilación.  
 
-        ##### <a name="to-configure-an-include-collection-rule"></a>Cómo configurar una regla de inclusión de recopilación  
+##### <a name="to-configure-an-include-collection-rule"></a>Cómo configurar una regla de inclusión de recopilación  
 
-        En el cuadro de diálogo **Seleccionar recopilaciones**, seleccione las recopilaciones que quiere incluir en la nueva recopilación y después pulse **Aceptar**.  
+En el cuadro de diálogo **Seleccionar recopilaciones**, seleccione las recopilaciones que quiere incluir en la nueva recopilación y después pulse **Aceptar**.  
 
-        ##### <a name="to-configure-an-exclude-collection-rule"></a>Cómo configurar una regla de exclusión de recopilación  
+##### <a name="to-configure-an-exclude-collection-rule"></a>Cómo configurar una regla de exclusión de recopilación  
 
-        En el cuadro de diálogo **Seleccionar recopilaciones**, seleccione las recopilaciones que quiere excluir en la nueva recopilación y después pulse **Aceptar**.  
+En el cuadro de diálogo **Seleccionar recopilaciones**, seleccione las recopilaciones que quiere excluir en la nueva recopilación y después pulse **Aceptar**.  
 
 
-    -   **Usar actualizaciones incrementales para esta recopilación**: seleccione esta opción para detectar y examinar de forma periódica recursos nuevos o modificados con respecto a la evaluación de recopilación anterior, independientemente de que se realice una evaluación de recopilación completa. Las actualizaciones incrementales se producen en intervalos de 10 minutos.  
+-   **Usar actualizaciones incrementales para esta recopilación**: seleccione esta opción para detectar y examinar de forma periódica recursos nuevos o modificados con respecto a la evaluación de recopilación anterior, independientemente de que se realice una evaluación de recopilación completa. Las actualizaciones incrementales se producen en intervalos de 10 minutos.  
 
-        > [!IMPORTANT]  
-        >  Las recopilaciones configuradas mediante el uso de reglas que usan las clases siguientes no admiten las actualizaciones incrementales:  
-        >   
-        >  -   SMS_G_System_CollectedFile  
-        > -   SMS_G_System_LastSoftwareScan  
-        > -   SMS_G_System_AppClientState  
-        > -   SMS_G_System_DCMDeploymentState  
-        > -   SMS_G_System_DCMDeploymentErrorAssetDetails  
-        > -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
-        > -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
-        > -   SMS_G_User_DCMDeploymentCompliantAssetDetails (solo para las recopilaciones de usuarios)  
-        > -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (solo para las recopilaciones de usuarios)  
-        > -   SMS_G_System_SoftwareUsageData  
-        > -   SMS_G_System_CI_ComplianceState  
-        > -   SMS_G_System_EndpointProtectionStatus  
-        > -   SMS_GH_System_*  
-        > -   SMS_GEH_System_*  
+> [!IMPORTANT]  
+>  Las recopilaciones configuradas mediante el uso de reglas que usan las clases siguientes no admiten las actualizaciones incrementales:  
+>   
+> -   SMS_G_System_CollectedFile  
+> -   SMS_G_System_LastSoftwareScan  
+> -   SMS_G_System_AppClientState  
+> -   SMS_G_System_DCMDeploymentState  
+> -   SMS_G_System_DCMDeploymentErrorAssetDetails  
+> -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
+> -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
+> -   SMS_G_User_DCMDeploymentCompliantAssetDetails (solo para las recopilaciones de usuarios)  
+> -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (solo para las recopilaciones de usuarios)  
+> -   SMS_G_System_SoftwareUsageData  
+> -   SMS_G_System_CI_ComplianceState  
+> -   SMS_G_System_EndpointProtectionStatus  
+> -   SMS_GH_System_*  
+> -   SMS_GEH_System_*  
 
-    -   **Programar una actualización completa en esta recopilación**: programe una evaluación completa regular de la pertenencia a la recopilación.  
+-   **Programar una actualización completa en esta recopilación**: programe una evaluación completa regular de la pertenencia a la recopilación.  
 
 6.  Complete el asistente. La nueva recopilación se muestra en el nodo **Recopilaciones de usuarios** del área de trabajo **Activos y compatibilidad** .  
 

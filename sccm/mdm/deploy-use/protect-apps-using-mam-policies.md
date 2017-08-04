@@ -16,11 +16,11 @@ caps.handback.revision: 0
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 74f4dd44089d4a13526c981589e1f497f0e10290
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 50c137f159b0ef631f7173b8eec190182ce41cee
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>Proteger aplicaciones mediante directivas de administración de aplicaciones móviles en System Center Configuration Manager
@@ -43,12 +43,12 @@ Para usar esta nueva función, debe usar el Portal de vista previa de Azure. Los
 
 Para aplicar restricciones a una aplicación, esta debe incorporar el Kit de desarrollo de software (SDK) para aplicaciones de Microsoft Intune. Existen dos métodos de obtención de este tipo de aplicación:  
 
--   **Usar una aplicación administrada por directivas** (Android e iOS): estas aplicaciones tienen integrado el SDK de la aplicación. Para agregar este tipo de aplicación, especifique un vínculo a la aplicación desde una tienda de aplicaciones como, por ejemplo, iTunes Store o Google Play. No es necesario ningún procesamiento adicional para este tipo de aplicación. Para obtener una lista de aplicaciones administradas por directiva disponibles para dispositivos iOS y Android, consulte [Aplicaciones administradas de directivas de administración de aplicaciones móviles de Microsoft Intune](https://technet.microsoft.com/en-us/library/dn708489.aspx).  
+-   **Usar una aplicación administrada por directivas** (Android e iOS): estas aplicaciones tienen integrado el SDK de la aplicación. Para agregar este tipo de aplicación, especifique un vínculo a la aplicación desde una tienda de aplicaciones como, por ejemplo, iTunes Store o Google Play. No es necesario ningún procesamiento adicional para este tipo de aplicación. Para obtener una lista de aplicaciones administradas por directiva disponibles para dispositivos iOS y Android, consulte [Aplicaciones administradas de directivas de administración de aplicaciones móviles de Microsoft Intune](https://technet.microsoft.com/library/dn708489.aspx).  
 
 -   **Usar una aplicación "ajustada"** (Android e iOS): estas aplicaciones se vuelven a empaquetar para incluir el SDK de la aplicación mediante la **herramienta de ajuste de aplicaciones de Microsoft Intune**. Esta herramienta se usa normalmente para procesar aplicaciones de empresa que se hayan creado internamente. No se puede usar para procesar aplicaciones que se hayan descargado desde la tienda de aplicaciones. Consulte los artículos siguientes para obtener más información:
-    - [Preparar aplicaciones iOS para la administración de aplicaciones móviles con la Herramienta de ajuste de aplicaciones de Intune](https://technet.microsoft.com/en-us/library/dn878028.aspx)
+    - [Preparar aplicaciones iOS para la administración de aplicaciones móviles con la Herramienta de ajuste de aplicaciones de Intune](https://technet.microsoft.com/library/dn878028.aspx)
 
-    - [Preparar aplicaciones Android para la administración de aplicaciones móviles con la Herramienta de ajuste de aplicaciones de Intune](https://technet.microsoft.com/en-us/library/mt147413.aspx)  
+    - [Preparar aplicaciones Android para la administración de aplicaciones móviles con la Herramienta de ajuste de aplicaciones de Intune](https://technet.microsoft.com/library/mt147413.aspx)  
 
 ## <a name="create-and-deploy-an-app-with-a-mobile-application-management-policy"></a>Crear e implementar una aplicación con una directiva de administración de aplicaciones móviles  
 
@@ -58,7 +58,7 @@ Para aplicar restricciones a una aplicación, esta debe incorporar el Kit de des
 
      Por ejemplo, la dirección URL de la aplicación Microsoft Word para iPad es **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**  
 
--   **Para crear una aplicación ajustada**: use la información de los temas [Preparar aplicaciones iOS para la administración de aplicaciones móviles con la Herramienta de ajuste de aplicaciones de Intune](https://technet.microsoft.com/en-us/library/dn878028.aspx) y [Preparar aplicaciones Android para la administración de aplicaciones móviles con la Herramienta de ajuste de aplicaciones de Intune](https://technet.microsoft.com/en-us/library/mt147413.aspx) para crear una aplicación ajustada.  
+-   **Para crear una aplicación ajustada**: use la información de los temas [Preparar aplicaciones iOS para la administración de aplicaciones móviles con la Herramienta de ajuste de aplicaciones de Intune](https://technet.microsoft.com/library/dn878028.aspx) y [Preparar aplicaciones Android para la administración de aplicaciones móviles con la Herramienta de ajuste de aplicaciones de Intune](https://technet.microsoft.com/library/mt147413.aspx) para crear una aplicación ajustada.  
 
      La herramienta crea una aplicación procesada y un archivo de manifiesto asociado. Usará estos archivos al crear una aplicación de Configuration Manager que contenga la aplicación.  
 
@@ -178,5 +178,5 @@ Para obtener más información, consulte [Administrar el acceso a Internet media
 -   Si todavía no se implementó ninguna directiva en el dispositivo y se implementan dos configuraciones en conflicto, se usa la configuración predeterminada integrada en el dispositivo.  
 
 ##  <a name="see-a-list-of-available-policy-managed-apps"></a>Lista de aplicaciones administradas por directiva disponibles  
- Para obtener una lista de aplicaciones administradas por directiva que están disponibles para dispositivos iOS y Android, consulte [Partners de aplicaciones de Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-partners).  
+ Para obtener una lista de aplicaciones administradas por directiva que están disponibles para dispositivos iOS y Android, consulte [Partners de aplicaciones de Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-partners).  
 
