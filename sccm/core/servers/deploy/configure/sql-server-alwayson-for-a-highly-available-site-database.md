@@ -67,7 +67,7 @@ Cada instancia de SQL Server puede ejecutarse en una cuenta de usuario de domini
 Por ejemplo, para configurar las cuentas de servicio y los permisos de SQL Server 2016, consulte [Configure Windows Service Accounts and Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions) (Configuración de cuentas de servicio y permisos de Windows) en MSDN.
 
   Si usa el **sistema local** para ejecutar una réplica, debe configurar la autenticación de los puntos de conexión. Esto incluye la delegación de derechos para habilitar una conexión con el punto de conexión del servidor de réplica.
-  -     Para delegar derechos de SQL Server, agregue la cuenta de equipo de cada servidor SQL Server como un inicio de sesión en el resto de servidores SQL del nodo y conceda a esa cuenta derechos de SA.  
+  -     Para delegar derechos de SQL Server, agregue la cuenta de equipo de cada servidor SQL Server como un inicio de sesión en el resto de servidores SQL del nodo y conceda a esa cuenta derechos de administrador del sistema.  
   -     Delegue derechos de punto de conexión para cada servidor remoto en el punto de conexión local mediante la ejecución del script siguiente en cada réplica:    
 
               GRANT CONNECT ON endpoint::[endpoint_name]  
