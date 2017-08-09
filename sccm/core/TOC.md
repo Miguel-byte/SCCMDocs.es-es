@@ -15,6 +15,7 @@
 ### [Administrar la rama de mantenimiento a largo plazo](understand/manage-the-ltsb.md)
 ### [Actualizar la rama de mantenimiento a largo plazo a la rama actual](understand/convert-to-current-branch.md)
 ##  [Qué rama de Configuration Manager debo usar](understand/which-branch-should-i-use.md)
+##  [Cliente de interoperabilidad extendida](understand/interoperability-client.md)
 ##  [Licencias para System Center Configuration Manager](understand/learn-more-editions.md)
 ##  [Usar servicios en la nube](understand/use-cloud-services.md)
 ### [Configuration Manager en Azure](understand/configuration-manager-on-azure.md)
