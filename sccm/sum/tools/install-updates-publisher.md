@@ -123,3 +123,4 @@ Cuando finalice la instalación, ejecute **UpdatesPublisher.exe** desde la carpe
 
  Pero, si quiere usar los valores predeterminados y no tiene previsto implementar actualizaciones en un servidor de actualización ni en dispositivos administrados, puede ir directamente a la sección sobre cómo [administrar catálogos de actualizaciones de software](updates-publisher-catalogs.md) o cómo [crear actualizaciones de software](create-updates-with-updates-publisher.md) y crear sus propios catálogos de actualizaciones.
 
+
