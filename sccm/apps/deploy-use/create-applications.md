@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: da86fc2f61ce8229fb0d3f58a4f8a24d1514b30e
+ms.translationtype: HT
+ms.sourcegitcommit: b7461f89f483314bd07248bbc9d5dde85ca6b6c2
+ms.openlocfilehash: 4d048d4f9ab01b28e6c21a38cca4d82c85030618
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="create-applications-with-system-center-configuration-manager"></a>Crear aplicaciones con System Center Configuration Manager
@@ -39,7 +38,7 @@ Una aplicación de System Center Configuration Manager tiene los archivos y la i
 -   Importe una aplicación desde un archivo.  
 
 > [!NOTE]  
-> La  [creación de aplicaciones para dispositivos móviles ](../../mdm/deploy-use/create-applications.md) proporciona información detallada sobre cómo crear aplicaciones iOS, Windows Phone y Android.  
+>  La [creación de aplicaciones para dispositivos móviles ](../../mdm/deploy-use/create-applications.md) proporciona información detallada sobre cómo crear aplicaciones iOS, Windows Phone y Android.  
 
 Use los pasos siguientes para crear aplicaciones y tipos de implementación de Configuration Manager.  
 
@@ -198,6 +197,14 @@ La nueva aplicación aparece en el nodo **Aplicaciones** de la consola de Config
 
         > [!IMPORTANT]  
         >  La cuenta del sistema del equipo del servidor de sitio debe tener permisos para la ubicación del contenido que especifique.  
+
+    -   **Configuración del contenido de desinstalación**: elija una de las opciones siguientes.
+        - **Igual que el contenido de instalación**: seleccione esta opción el contenido de instalación y desinstalación es el mismo. Este es el comportamiento predeterminado.
+        - **Ningún contenido de desinstalación**: seleccione esta opción si la aplicación no necesita contenido para la desinstalación.
+        - **Diferente del contenido de instalación**: seleccione esta opción si el contenido de desinstalación es diferente al de instalación.
+
+4. Si seleccionó **Diferente del contenido de instalación**, busque o escriba la ubicación del contenido de aplicación que se usará para desinstalarla.
+5. Haga clic en **Aceptar** para cerrar el cuadro de diálogo de las propiedades del tipo de implementación.
 
     -   **Conservar contenido en la memoria caché del cliente**: seleccione esta opción para especificar si el contenido debe conservarse en la memoria caché del equipo cliente de manera indefinida, incluso aunque ya se haya ejecutado. Si bien esta opción puede ser útil en algunas implementaciones, como la implementación de software basado en Windows Installer que requiere que haya una copia de origen local disponible para aplicar las actualizaciones, reducirá el espacio libre en la memoria caché. Si se selecciona esta opción, podría posteriormente causar un error de una implementación de gran tamaño si la memoria caché no tiene espacio disponible suficiente.  
 

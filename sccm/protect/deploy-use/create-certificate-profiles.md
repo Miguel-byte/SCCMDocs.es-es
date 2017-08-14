@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: aa8924a013ebdbee888cab33001fddbe7ad2d67e
-ms.openlocfilehash: 80a716f5a42a81e5550eb1b5c7f14534e14a4fb7
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 1e00804d27ecef2aadd8bfa395db1919c46243ee
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/02/2017
 
 ---
 
@@ -34,10 +33,16 @@ Use perfiles de certificado en Configuration Manager (SCCM) para aprovisionar di
 
 En este tema, se describe cómo crear perfiles de certificado raíz de confianza y SCEP. Si quiere crear perfiles de certificado PFX, consulte [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md) (Crear perfiles de certificado PFX).
 
+Para crear un perfil de certificado, siga estos pasos:
 
-## <a name="create-a-new-certificate-profile"></a>Crear un nuevo perfil de certificado  
+1.  Inicie el Asistente para crear perfil de certificado.
+1.  Proporcione información general sobre el certificado.
+1.  Configure un certificado de entidad de certificación (CA) de confianza.  
+1.  Configure la información de los certificados SCEP (solo para certificados SCEP).  
+1.  Especifique las plataformas admitidas del perfil de certificado.
 
-### <a name="start-the-create-certificate-profile-wizard"></a>Iniciar el Asistente para crear perfil de certificado  
+
+## <a name="start-the-create-certificate-profile-wizard"></a>Inicio del Asistente para crear perfil de certificado  
 
 1.  En la consola de System Center Configuration Manager, haga clic en **Activos y compatibilidad**.  
 
@@ -45,7 +50,7 @@ En este tema, se describe cómo crear perfiles de certificado raíz de confianza
 
 3.  En la pestaña **Inicio** del grupo **Crear** , haga clic en **Crear perfil de certificado**.  
 
-### <a name="provide-general-information-about-the-certificate-profile"></a>Proporcionar información general sobre el perfil de certificado  
+## <a name="provide-general-information-about-the-certificate-profile"></a>Proporcionar información general sobre el perfil de certificado  
 
 En la página **General** del Asistente para crear perfil de certificado, especifique la información siguiente:  
 
@@ -59,11 +64,12 @@ En la página **General** del Asistente para crear perfil de certificado, especi
 
 -   **Configuración de Protocolo de inscripción de certificados simple (SCEP)**: seleccione este tipo de perfil de certificado si desea solicitar un certificado para un dispositivo o usuario mediante el Protocolo de inscripción de certificados simple y el servicio de rol Servicio de inscripción de dispositivos de red.
 
--   **Intercambio de información personal: configuración de PKCS #12 (PFX): importar**: seleccione esta opción para importar un certificado PFX. Para obtener más información sobre la creación de certificados PFX, consulte [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md) (Crear perfiles de certificado PFX).
+-   **Intercambio de información personal: configuración de PKCS #12 (PFX): importar**: seleccione esta opción para importar un certificado PFX. Para obtener más información sobre la creación de certificados PFX, consulte el artículo sobre cómo [importar perfiles de certificado PFX](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md).
+
+-   **Intercambio de información personal -- Configuración de PKCS #12 (PFX) -- Crear**: seleccione esta opción para procesar certificados PFX con una entidad de certificación. Para obtener más información sobre la creación de certificados PFX, consulte [Create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md) (Crear perfiles de certificado PFX).
 
 
-
-### <a name="configure-a-trusted-ca-certificate"></a>Configurar un certificado de CA de confianza  
+## <a name="configure-a-trusted-ca-certificate"></a>Configurar un certificado de CA de confianza  
 
 > [!IMPORTANT]  
 >  También debe configurar al menos un perfil de certificado de CA de confianza antes de crear un perfil de certificado de SCEP.    
@@ -89,7 +95,7 @@ En la página **General** del Asistente para crear perfil de certificado, especi
 2.  Utilice el valor de **Huella digital de certificado** para comprobar que importó el certificado correcto.  
 
 
-### <a name="configure-scep-certificate-information-only-for-scep-certificates"></a>Configurar la información de certificado SCEP (solo para certificados SCEP)  
+## <a name="configure-scep-certificate-information-only-for-scep-certificates"></a>Configurar la información de certificado SCEP (solo para certificados SCEP)  
 
 1.  En la página **SCEP Servers** del Asistente para crear perfil de certificado, especifique las direcciones URL para los servidores de NDES que emitirán certificados a través de SCEP. Puede elegir asignar automáticamente una dirección URL de NDES según la configuración del servidor del sistema de sitios del punto de registro de certificados, o bien agregar direcciones URL manualmente.  
 
@@ -183,7 +189,7 @@ En la página **General** del Asistente para crear perfil de certificado, especi
    >  Si especifica un certificado de CA raíz que no se ha implementado en el usuario o dispositivo, System Center Configuration Manager no iniciará la solicitud de certificado que está configurando en este perfil de certificado.  
 
 
-###  <a name="specify-supported-platforms-for-the-certificate-profile"></a>Especificar las plataformas admitidas del perfil de certificado  
+##  <a name="specify-supported-platforms-for-the-certificate-profile"></a>Especificar las plataformas admitidas del perfil de certificado  
 
 1. En la página **Plataformas admitidas** del Asistente para crear perfil de certificado, seleccione los sistemas operativos en los que desea instalar el perfil de certificado. O bien, haga clic en **Seleccionar todo** para instalar el perfil de certificado en todos los sistemas operativos disponibles.
 2. Revise la página **Resumen** del asistente y elija **Finalizar**. 

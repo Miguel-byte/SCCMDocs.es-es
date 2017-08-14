@@ -2,7 +2,7 @@
 title: "Caché del mismo nivel de cliente | System Center Configuration Manager"
 description: "Use la caché del mismo nivel de cliente para las ubicaciones de origen de contenido cuando se distribuya contenido con System Center Configuration Manager."
 ms.custom: na
-ms.date: 7/3/2017
+ms.date: 7/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed6b65a1a5aabc0970cd0333cb033405cf6d2aea
-ms.openlocfilehash: 94802680747a3d371716c1b345b2cba098150716
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 89fcd16887ae77299f9d18472ee6a1ba56794eca
 ms.contentlocale: es-es
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 
@@ -94,7 +94,9 @@ Utilice este informe para conocer los detalles de rechazo de un tipo de rechazo 
 
 -   Los clientes solo pueden transferir contenido desde los clientes de la caché del mismo nivel que están en su actual grupo de límites.
 
--   Los sitios en los que los clientes usen la caché del mismo nivel deben estar configurados con una [cuenta de acceso de red](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account). El equipo de origen de la caché del mismo nivel usa dicha cuenta para autenticar las solicitudes de elementos del mismo nivel, acción para la que solo se necesitan permisos de usuario de dominio.
+-   Antes de la versión 1706, los sitios en los que los clientes usen la caché del mismo nivel deben estar configurados con una [cuenta de acceso de red](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account). A partir de la versión 1706, que cuenta ya no es necesaria con una excepción.  La excepción es cuando un cliente usa la caché del mismo nivel para obtener y ejecutar una secuencia de tareas desde el Centro de software, y la secuencia de tareas reinicia el cliente en WinPE.  En este escenario, el cliente seguirá necesitando la cuenta de acceso de red cuando se encuentra en WinPE para poder acceder al origen de la caché del mismo nivel y obtener el contenido.
+
+    Cuando se requiere, el equipo de origen de la caché del mismo nivel usa dicha cuenta para autenticar las solicitudes de elementos del mismo nivel, acción para la que solo se necesitan permisos de usuario de dominio.
 
 -   Dado que el límite actual de un origen de contenido de la caché del mismo nivel viene determinado por el último envío de inventario de hardware del cliente, si un cliente se mueve a una ubicación de red y se encuentra en un grupo de límites diferente, podría seguir considerándose miembro de su grupo de límites anterior para la caché del mismo nivel. Esto puede dar lugar a que un cliente ofrezca un origen de contenido de la caché del mismo nivel que no está en su ubicación de red inmediata. Se recomienda excluir del origen de la caché del mismo nivel a los clientes que son propensos a esta configuración.
 

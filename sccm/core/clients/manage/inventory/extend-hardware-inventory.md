@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
-ms.openlocfilehash: 80d5a13ea5d40150ddd537251e837083e649ac52
+ms.translationtype: HT
+ms.sourcegitcommit: 5f1412fb132e3a074742e11f1142b2594146cbe1
+ms.openlocfilehash: 3e5517e1710d0d12e51fba58efda5dc5edd08544
 ms.contentlocale: es-es
-ms.lasthandoff: 01/03/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-extend-hardware-inventory-in-system-center-configuration-manager"></a>Cómo ampliar el inventario de hardware en System Center Configuration Manager
@@ -148,12 +147,12 @@ Sólo puede importar las clases de inventario cuando se modifica la configuraci�
 > [!IMPORTANT]  
 >  Cuando crea un archivo NOIDMIF, este debe guardarse en un formato codificado de ANSI. Configuration Manager no puede leer los archivos NOIDMIF guardados en un formato con codificación UTF-8.  
 
- Después de crear un archivo NOIDMIF, almacénelo en la carpeta *%Windir%***\System32\CCM\Inventory\Noidmifs** de cada cliente. Configuration Manager recopila información de los archivos NODMIF en esta carpeta durante el siguiente ciclo de inventario de hardware programado.  
+ Después de crear un archivo NOIDMIF, almacénelo en la carpeta *%Windir%***\CCM\Inventory\Noidmifs** de cada cliente. Configuration Manager recopila información de los archivos NODMIF en esta carpeta durante el siguiente ciclo de inventario de hardware programado.  
 
 ###  <a name="BKMK_IDMIF"></a> Cómo crear archivos IDMIF  
  Los archivos IDMIF se pueden usar para agregar información sobre activos que Configuration Manager no podría inventariar y que no está asociada a un dispositivo cliente determinado para la base de datos de Configuration Manager. Por ejemplo, podría usar IDMIFS para recopilar información sobre proyectores, reproductores de DVD, fotocopiadoras u otros equipos que no contengan un cliente de Configuration Manager. Para obtener información sobre la creación de archivos IDMIF, consulte la documentación del SDK de Configuration Manager.  
 
- Después de crear un archivo IDMIF, almacénelo en la carpeta *%Windir%***\System32\CCM\Inventory\Idmifs** de equipos cliente. Configuration Manager recopila información de este archivo durante el siguiente ciclo de inventario de hardware programado. Debe declarar clases nuevas para la información contenida en el archivo agregando o importarlos.  
+ Después de crear un archivo IDMIF, almacénelo en la carpeta *%Windir%***\CCM\Inventory\Idmifs** de equipos cliente. Configuration Manager recopila información de este archivo durante el siguiente ciclo de inventario de hardware programado. Debe declarar clases nuevas para la información contenida en el archivo agregando o importarlos.  
 
 > [!NOTE]
 > Los archivos MIF podrían contener grandes cantidades de datos y la recopilación de estos datos podría afectar negativamente al rendimiento del sitio. Habilite la recopilación de archivos MIF solo cuando sea necesario y configure la opción **Tamaño de archivo MIF personalizado máximo (KB)** en la configuración del inventario de hardware. Para obtener más información, consulte [Introduction to hardware inventory in System Center Configuration Manager](introduction-to-hardware-inventory.md) (Introducción al inventario de hardware en System Center Configuration Manager).

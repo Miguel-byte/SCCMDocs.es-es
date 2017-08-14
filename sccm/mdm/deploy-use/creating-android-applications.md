@@ -2,7 +2,7 @@
 title: Crear aplicaciones de Android | Microsoft Docs
 description: Consulte las consideraciones que debe tener en cuenta al crear e implementar aplicaciones para dispositivos Android.
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,18 +16,17 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.translationtype: HT
-ms.sourcegitcommit: 344b55aecd72479b759b40e8252e64a06c5eaba0
-ms.openlocfilehash: 3bfb7364c3de5264a5fa8a684965d9aebeb84719
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 3a89abc81cd70f4e499bf4e3087fd53915377c44
 ms.contentlocale: es-es
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/29/2017
 
 ---
-# Crear aplicaciones Android con System Center Configuration Manager
-<a id="create-android-applications-with-system-center-configuration-manager" class="xliff"></a>
+# <a name="create-android-applications-with-system-center-configuration-manager"></a>Crear aplicaciones Android con System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Una aplicación de System Center Configuration Manager tiene uno o varios tipos de implementación que incluyen la información y los archivos de instalación necesarios para implementar un dispositivo. Además tiene reglas que especifican cuándo y cómo se implementa el software.  
+Una aplicación de System Center Configuration Manager tiene uno o varios tipos de implementación. Los tipos de implementación comprenden los archivos de instalación y la información necesaria para implementar software en un dispositivo. Además tiene reglas que especifican cuándo y cómo se implementa el software.  
 
  Puede crear aplicaciones mediante los métodos siguientes:  
 
@@ -37,8 +36,7 @@ Una aplicación de System Center Configuration Manager tiene uno o varios tipos 
 
 Consulte [Inicie el Asistente para crear aplicaciones](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard) para conocer los pasos necesarios para crear aplicaciones de Configuration Manager y los tipos de implementación. Además, tenga en cuenta las consideraciones siguientes cuando cree e implemente aplicaciones para dispositivos Android.  
 
-## Consideraciones generales para aplicaciones Android
-<a id="general-considerations-for-android-apps" class="xliff"></a>
+## <a name="general-considerations-for-android-apps"></a>Consideraciones generales para aplicaciones Android
 
 Configuration Manager admite la implementación de los siguientes tipos de aplicaciones para Android:
 
@@ -53,8 +51,7 @@ Se admiten las siguientes acciones de implementación:
 |Android|**Disponible**, **Requerido** El usuario debe dar su consentimiento para la instalación y desinstalación.|
 |Android for Work | **Requerido** |
 
-## Aprobar e implementar aplicaciones Android for Work
-<a id="approve-and-deploy-android-for-work-apps" class="xliff"></a>
+## <a name="approve-and-deploy-android-for-work-apps"></a>Aprobar e implementar aplicaciones Android for Work
 Como administrador de Configuration Manager, también puede aprobar e implementar aplicaciones en el [sitio web de Play for Work](https://play.google.com/work) e implementar las aplicaciones en dispositivos Android for Work administrados.
 
 Siga estos pasos para aprobar aplicaciones en la tienda Play for Work, sincronizarlas con la consola de Configuration Manager e implementarlas en dispositivos Android for Work administrados. Para implementar aplicaciones en los perfiles de trabajo de los usuarios, debe aprobar las aplicaciones en Play for Work y después sincronizarlas con la consola de Configuration Manager.

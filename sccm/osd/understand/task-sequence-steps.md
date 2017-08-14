@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6f9e6e93fce95666503907010a5c253158c5de7c
-ms.openlocfilehash: f648d7626af50d95fbaa5a7a2abd821a9c47f5d1
+ms.translationtype: HT
+ms.sourcegitcommit: b7461f89f483314bd07248bbc9d5dde85ca6b6c2
+ms.openlocfilehash: e0726febc4c36a26c5e067914734838bf2681e6c
 ms.contentlocale: es-es
-ms.lasthandoff: 07/07/2017
-
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Pasos de la secuencia de tareas en System Center Configuration Manager
@@ -1527,9 +1526,9 @@ Después de seleccionar las variables de una regla, debe proporcionar un valor p
 >  Al importar una secuencia de tareas con el paso “Establecer variables dinámicas”, y **Valor secreto** está seleccionado para el valor de la variable, el valor se quita al importar la secuencia de tareas. Como resultado, debe volver a escribir el valor de la variable dinámica después de importar la secuencia de tareas.  
 
 ##  <a name="BKMK_SetTaskSequenceVariable"></a> Establecer variable de secuencia de tareas  
- Use el paso de secuencia de tareas **Configurar variable de secuencia de tareas** para establecer el valor de una variable que se utiliza con la secuencia de tareas.  
+Use el paso de secuencia de tareas **Configurar variable de secuencia de tareas** para establecer el valor de una variable que se utiliza con la secuencia de tareas.  
 
- Este paso puede ejecutarse en un sistema operativo estándar o en Windows PE. Las variables de secuencia de tareas son leídas por acciones de secuencia de tareas y especifican el comportamiento de esas acciones. Para obtener más información sobre las variables de secuencia de tareas específicas, consulte [Variables de acción de secuencias de tareas](task-sequence-action-variables.md).  
+Este paso puede ejecutarse en un sistema operativo estándar o en Windows PE. Las variables de secuencia de tareas son leídas por acciones de secuencia de tareas y especifican el comportamiento de esas acciones. Para obtener más información sobre las variables de secuencia de tareas específicas, consulte [Variables de acción de secuencias de tareas](task-sequence-action-variables.md).  
 
 ### <a name="details"></a>Detalles  
  En la pestaña **Propiedades** de este paso, puede configurar las opciones descritas en esta sección.  
@@ -1553,6 +1552,16 @@ Después de seleccionar las variables de una regla, debe proporcionar un valor p
 
  **Valor**  
  Valor que está asociado a la variable de secuencia de tareas. El valor puede ser otra variable de secuencia de tareas en la sintaxis\>%<nombre de variable>%.  
+
+## <a name="hide-task-sequence-progress"></a>Ocultación del progreso de la secuencia de tareas
+<!-- 1354291 -->
+Con la versión 1706, puede controlar cuándo se muestra el progreso de la secuencia de tareas a los usuarios finales mediante una variable nueva. En la secuencia de tareas, use el paso **Configurar variable de secuencia de tareas** para establecer el valor de la variable **TSDisableProgressUI** a fin de ocultar o mostrar el progreso de la secuencia de tareas. Puede usar el paso Configurar variable de secuencia de tareas varias veces en una secuencia de tareas para cambiar el valor de la variable. Esto le permite ocultar o mostrar el progreso de la secuencia de tareas en secciones diferentes de la secuencia de tareas.
+
+ - **Para ocultar el progreso de la secuencia de tareas**  
+En el editor de la secuencia de tareas, use el paso [Configurar variable de secuencia de tareas](#BKMK_SetTaskSequenceVariable) para establecer el valor de la variable **TSDisableProgressUI** en **True** para ocultar el progreso de la secuencia de tareas.
+
+ - **Para mostrar el progreso de la secuencia de tareas**  
+En el editor de la secuencia de tareas, use el paso [Configurar variable de secuencia de tareas](#BKMK_SetTaskSequenceVariable) para establecer el valor de la variable **TSDisableProgressUI** en **False** para mostrar el progreso de la secuencia de tareas.
 
 ##  <a name="BKMK_SetupWindowsandConfigMgr"></a> Instalar Windows y Configuration Manager  
  Use el paso de secuencia de tareas **Instalar Windows y Configuration Manager** para realizar la transición desde Windows PE al nuevo sistema operativo. Este paso de secuencia de tareas es una parte necesaria de cualquier implementación de sistema operativo. Se instala el cliente de Configuration Manager en el nuevo sistema operativo y se prepara para que la secuencia de tareas continúe con la ejecución en el sistema operativo.  

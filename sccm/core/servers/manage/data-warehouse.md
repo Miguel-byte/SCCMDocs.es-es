@@ -2,7 +2,7 @@
 title: Almacenamiento de datos | Microsoft Docs
 description: Punto de servicio de almacenamiento de datos y base de datos para System Center Configuration Manager
 ms.custom: na
-ms.date: 5/31/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: HT
-ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
-ms.openlocfilehash: c421c3495f56503d5cbda7b1a5ab5350a168912d
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: eedbf12d3bf628666efc90c85a8dfab37e4dc9ab
 ms.contentlocale: es-es
-ms.lasthandoff: 07/26/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>El punto de servicio de almacenamiento de datos para System Center Configuration Manager
@@ -27,11 +27,12 @@ ms.lasthandoff: 07/26/2017
 
 A partir de la versión 1702 puede usar el punto de servicio de almacenamiento de datos para almacenar y generar informes de datos históricos a largo plazo para su implementación de Configuration Manager.
 
-> [!TIP]  
+> [!TIP]
 > Con la versión 1702, se presentó el punto de servicio de almacenamiento de datos como una característica de versión preliminar. Para habilitarla, consulte [Use pre-release features](/sccm/core/servers/manage/pre-release-features) (Uso de características de versión preliminar).
 
-El almacenamiento de datos admite hasta 2 TB de datos, con marcas de tiempo para el seguimiento de cambios. El almacenamiento de datos se consigue mediante sincronizaciones automatizadas desde la base de datos del sitio de Configuration Manager a la base de datos de almacenamiento de datos. Puede acceder a esta información desde su punto de Reporting Services.
+> A partir de la versión 1706, ya no es una característica de versión preliminar.
 
+El almacenamiento de datos admite hasta 2 TB de datos, con marcas de tiempo para el seguimiento de cambios. El almacenamiento de datos se consigue mediante sincronizaciones automatizadas desde la base de datos del sitio de Configuration Manager a la base de datos de almacenamiento de datos. Puede acceder a esta información desde su punto de Reporting Services. Los datos que se sincronizan con la base de datos de almacenamiento de datos se conservan durante tres años. Periódicamente, una tarea integrada quita los datos anteriores a este período.
 
 Los datos que se sincronizan incluyen lo siguiente de los grupos de datos globales y datos de sitio:
 - Mantenimiento de infraestructura
@@ -46,15 +47,22 @@ Cuando se instala el rol de sistema de sitio, instala y configura la base de dat
 
 
 ## <a name="prerequisites-for-the-data-warehouse-service-point"></a>Requisitos previos del punto de servicio de almacenamiento de datos
+- El rol de sistema de sitio de almacenamiento de datos solo es compatible con el sitio de nivel superior de la jerarquía (un sitio de administración central o un sitio primario independiente).
 - El equipo en el que instale el rol de sistema de sitio necesita .NET Framework 4.5.2 o versiones posteriores.
 - La cuenta de equipo correspondiente al equipo en el que se instala el rol de sistema de sitio se utiliza para sincronizar datos con la base de datos del almacén de datos. La cuenta requiere los permisos siguientes:  
   - **Administrator** en el equipo que hospedará la base de datos del almacenamiento de datos.
   - **DB_owner** en la base de datos del almacenamiento de datos.
   - Permisos **DB_reader** y **execute** para la base de datos de sitio de los sitios de nivel superior.
--   La base de datos del almacenamiento de datos es compatible con una instancia predeterminada o con nombre de SQL Server 2012 o posterior. La edición debe ser Enterprise o Datacenter.
-  - Grupo de disponibilidad AlwaysOn de SQL Server: esta configuración no se admite.
-  - Clúster de SQL Server: no se admiten clústeres de conmutación por error de SQL Server. Esto es porque la base de datos del almacenamiento de datos no se ha probado a fondo en clústeres de conmutación por error de SQL Server.
-  - Cuando la base de datos del almacenamiento de datos está ubicada en un emplazamiento remoto respecto a la base de datos del servidor del sitio, debe tener una licencia independiente para el servidor SQL Server que hospeda la base de datos.
+- La base de datos de almacenamiento de datos requiere el uso de SQL Server 2012 o una versión posterior. La edición puede ser Standard, Enterprise o Datacenter.
+- Las siguientes configuraciones de SQL Server se pueden utilizar para hospedar la base de datos de almacenamiento:  
+  - Una instancia predeterminada
+  - Una instancia con nombre
+  - Grupo de disponibilidad de SQL Server Always On
+  - Clúster de conmutación por error de SQL Server
+-   Cuando la base de datos de almacenamiento de datos está ubicada en un emplazamiento remoto respecto a la base de datos del servidor de sitio, debe tener una licencia independiente para cada servidor SQL Server que hospeda la base de datos.
+- Si usa [vistas distribuidas](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews), debe instalar el rol de sistema de sitio del punto de servicio de almacenamiento de datos en el mismo servidor que hospeda la base de datos del sitio de los sitios de administración central.
+
+
 
 > [!IMPORTANT]  
 > No se admite el almacenamiento de datos cuando el equipo que ejecuta el punto de servicio de almacenamiento de datos o que hospeda la base de datos de almacenamiento de datos ejecuta uno de los siguientes idiomas:
@@ -65,8 +73,6 @@ Cuando se instala el rol de sistema de sitio, instala y configura la base de dat
 
 
 ## <a name="install-the-data-warehouse"></a>Instalar el almacenamiento de datos
-Puede instalar el rol de sistema de sitio del almacenamiento de datos solo en el sitio de nivel superior de la jerarquía (es decir, un sitio de administración central o un sitio primario independiente).
-
 Cada jerarquía admite una única instancia de este rol y puede encontrarse en cualquier sistema de sitio de ese sitio de nivel superior. El servidor SQL Server que hospeda la base de datos para el almacenamiento puede ser local para el rol de sistema de sitio o remoto. Aunque el almacenamiento de datos funciona con el punto de Reporting Services que está instalado en el mismo sitio, los dos roles de sistema de sitio no necesitan estar instalados en el mismo servidor.   
 
 Para instalar el rol, use el **Asistente para agregar roles de sistema de sitio** o el **Asistente para crear servidor de sistema de sitio**. Para obtener más información, consulte [Instalación de roles de sistema de sitio para System Center Configuration Manager](/sccm/core/servers/deploy/configure/install-site-system-roles).  
@@ -83,7 +89,8 @@ Página **General**:
  - **Nombre de instancia de SQL Server, si corresponde**:   
  Si no utiliza una instancia predeterminada de SQL Server, debe especificar la instancia.
  - **Nombre de la base de datos**:   
- Especifique un nombre para la base de datos de almacenamiento de datos.  Configuration Manager creará la base de datos de almacenamiento de datos con este nombre. Si especifica un nombre de base de datos que ya existe en la instancia de SQL Server, Configuration Manager usará esa base de datos.
+ Especifique un nombre para la base de datos de almacenamiento de datos. El nombre de la base de datos no puede tener más de 10 caracteres (en una versión futura, aumentaremos esta longitud).
+ Configuration Manager creará la base de datos de almacenamiento de datos con este nombre. Si especifica un nombre de base de datos que ya existe en la instancia de SQL Server, Configuration Manager usará esa base de datos.
  - **Puerto de SQL Server utilizado para la conexión**:   
  Especifique el número de puerto TCP/IP que está configurado para el servidor SQL Server que hospeda la base de datos del almacenamiento de datos. Este puerto lo usa el servicio de sincronización del almacenamiento de datos para conectarse a la base de datos de dicho almacenamiento.  
 
@@ -125,7 +132,7 @@ A diferencia de un movimiento de la base de datos del almacenamiento de datos, e
 ## <a name="move-the-data-warehouse-database"></a>Mover la base de datos de almacenamiento de datos
 Use los siguientes pasos para mover la base de datos de almacenamiento de datos a un servidor de SQL Server nuevo:
 
-1.  Use SQL Server Management Studio para realizar una copia de seguridad de la base de datos de almacenamiento de datos y, después, restaure esa base de datos en un servidor de SQL Server en el nuevo equipo que hospedará el almacenamiento de datos.   
+1.  Use SQL Server Management Studio para realizar una copia de seguridad de la base de datos de almacenamiento de datos. A continuación, restaure esa base de datos a una instancia de SQL Server del nuevo equipo que hospeda el almacenamiento de datos.   
 > [!NOTE]     
 > Después de restaurar la base de datos en el nuevo servidor, asegúrese de que los permisos de acceso de la base de datos son los mismos en la nueva base de datos de almacenamiento de datos que en la base de datos de almacenamiento de datos original.  
 
@@ -146,7 +153,7 @@ Use los siguientes registros para investigar problemas con la instalación del p
 
 
 **Problemas de sincronización conocidos**:   
-La sincronización genera el siguiente error en *Microsoft.ConfigMgrDataWarehouse.log*: **"Error al rellenar los objetos de esquema"**.  
+La sincronización genera el siguiente mensaje de error en *Microsoft.ConfigMgrDataWarehouse.log*: **"Error al rellenar los objetos de esquema"**.  
  - **Solución**:  
     Asegúrese de que la cuenta de equipo del equipo que hospeda el rol de sistema de sitio es **db_owner** en la base de datos del almacenamiento de datos.
 
@@ -167,7 +174,7 @@ Al abrir un informe de almacenamiento de datos, se devuelve el siguiente el erro
     2. Abra **Administrador de configuración de SQL Server**, en **Configuración de red de SQL Server**, haga clic con el botón derecho para seleccionar **Propiedades** en **Protocolos para MSSQLSERVER**. A continuación, en la pestaña **Certificado**, seleccione **Certificado de identificación de SQL Server de almacenamiento de datos** como el certificado y luego guarde los cambios.  
     3. Abra **Administrador de configuración de SQL Server**, en **Servicios de SQL Server**, reinicie **Servicio SQL Server** y **Servicio de informes**.
     4.  Abra Microsoft Management Console (MMC) y agregue el complemento para **Certificados**; seleccione la opción de administración del certificado para **Cuenta de equipo** de la máquina local. A continuación, en MMC, expanda la carpeta **Personal** > **Certificados** y exporte el **Certificado de identificación de SQL Server de almacenamiento de datos** como un archivo **DER binario codificado X.509 (.CER)**.    
-  2.    En el equipo que hospeda SQL Server Reporting Services, abra MMC y agregue el complemento para **Certificados**; luego, la opción de administración del certificado para **Cuenta de equipo**. En la carpeta **Entidades emisoras raíz de confianza**, importe el **Certificado de identificación de SQL Server de almacenamiento de datos**.
+  2.    En el equipo que hospeda SQL Server Reporting Services, abra MMC y agregue el complemento para **Certificados**; luego, seleccione la opción de administración del certificado para **Cuenta de equipo**. En la carpeta **Entidades emisoras raíz de confianza**, importe el **Certificado de identificación de SQL Server de almacenamiento de datos**.
 
 
 ## <a name="data-warehouse-dataflow"></a>Flujo de datos de almacenamiento de datos   

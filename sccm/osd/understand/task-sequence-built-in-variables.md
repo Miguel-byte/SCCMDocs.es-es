@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
-ms.openlocfilehash: f5feccc4f810e1a94bb7dcdd5ad507d84b9c3b4a
+ms.translationtype: HT
+ms.sourcegitcommit: b7461f89f483314bd07248bbc9d5dde85ca6b6c2
+ms.openlocfilehash: 32b24b3637dfafe401ea1d9f51b3769aa749f544
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>Variables integradas de secuencias de tareas en System Center Configuration Manager
@@ -83,7 +82,8 @@ ms.lasthandoff: 05/17/2017
 |Valor predeterminado de SMSTSDriverRequestResolveTimeOut:|Utilice esta variable para especificar el número de segundos de espera para una resolución de nombre HTTP para una solicitud del catálogo de controladores durante el paso de la secuencia de tareas Aplicar controladores automáticamente. Si la conexión tarda más de lo especificado en la configuración del tiempo de espera, se cancela la solicitud. De forma predeterminada, el tiempo de espera se establece en 60 segundos.|
 |Valor predeterminado de SMSTSDriverRequestSendTimeOut:|Utilice esta variable para especificar el número de segundos que usar al enviar una solicitud del catálogo de controladores durante el paso de la secuencia de tareas Aplicar controladores automáticamente. Si la solicitud tarda más de lo especificado en la configuración del tiempo de espera, se cancela la solicitud. De forma predeterminada, el tiempo de espera se establece en 60 segundos.|
 |SMSTSErrorDialogTimeout|Cuando se produce un error en una secuencia de tareas, se abre un cuadro de diálogo que se cierra automáticamente transcurrido un número de segundos especificado por esta variable. El cuadro de diálogo se cierra automáticamente de forma predeterminada después de **900** segundos (15 minutos).|  
-|TSErrorOnWarning|Use esta variable para especificar si el motor de la secuencia de tareas considera una advertencia detectada como un error durante el paso de secuencia de tareas de instalación de la aplicación. La secuencia de tareas establece la variable _TSAppInstallStatus en **Advertencia** cuando una o más aplicaciones (o una dependencia necesaria) no se instalaron porque no se cumplió un requisito. Cuando la variable TSErrorOnWarning se establece en **True** y la variable _TSAppInstallStatus se establece en Advertencia, se considera que hay un error. Un valor **False** es el comportamiento predeterminado.|  
+| TSDisableProgressUI | Utilice esta variable para ocultar o mostrar el progreso de la secuencia de tareas en secciones diferentes de la secuencia de tareas. | 
+|TSErrorOnWarning|Use esta variable para especificar si el motor de la secuencia de tareas considera una advertencia detectada como un error durante el paso de secuencia de tareas de instalación de la aplicación. La secuencia de tareas establece la variable _TSAppInstallStatus en **Advertencia** cuando una o más aplicaciones (o una dependencia necesaria) no se instalaron porque no se cumplió un requisito. Cuando la variable TSErrorOnWarning se establece en **True** y la variable _TSAppInstallStatus se establece en Advertencia, se considera que hay un error. Un valor **False** es el comportamiento predeterminado.| 
 |SMSTSLanguageFolder|Utilice esta variable para cambiar el idioma de visualización de una imagen de arranque independiente del idioma.|  
 |SMSTSLocalDataDrive|Especifica la ubicación donde se almacenan los archivos temporales en el equipo de destino mientras la secuencia de tareas se ejecuta.<br /><br /> Esta variable se debe establecer antes de iniciar la secuencia de tareas (por ejemplo, estableciendo una variable de la colección). Una vez que se inicia la secuencia de tareas, Configuration Manager define la variable _SMSTSMDataPath.|  
 |SMSTSMP|Use esta variable para especificar la dirección URL o IP de un punto de administración de Configuration Manager.|  

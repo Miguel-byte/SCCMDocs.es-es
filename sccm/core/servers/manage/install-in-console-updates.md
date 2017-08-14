@@ -15,12 +15,11 @@ caps.latest.revision: 36
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
-ms.openlocfilehash: 34ddb646137aaf1160d850ba7c1e0109f467225d
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 2bbc8935bee306ed0bc312cc43b8f5374a8df7ff
 ms.contentlocale: es-es
-ms.lasthandoff: 06/13/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>Instalación de actualizaciones en la consola para System Center Configuration Manager
@@ -289,6 +288,9 @@ Entre las tareas posteriores a la instalación figuran las siguientes:
 
 ##  <a name="bkmk_retry"></a> Reintento de la instalación de una actualización con errores  
 Si no se puede instalar una actualización, revise los comentarios en la consola para identificar las soluciones de errores y las advertencias. También puede consultar el archivo ConfigMgrPrereq.log en el servidor de sitio para obtener más detalles. Antes de reintentar la instalación de una actualización, debe solucionar los errores y las advertencias.  
+
+> [!TIP]  
+> Si una actualización tiene problemas para descargar o replicar, puede usar la [herramienta de restablecimiento de actualizaciones](/sccm/core/servers/manage/update-reset-tool). Esta herramienta está disponible en los sitios que ejecutan la versión 1706 o posterior. 
 
 Cuando esté listo para volver a intentar la instalación de una actualización, seleccione la actualización con errores y elija una opción adecuada. El comportamiento del reintento de instalación de la actualización depende del nodo desde el que se inicia el reintento y de la opción de reintento que se usa.  
 

@@ -2,7 +2,7 @@
 title: "Configurar la detección | Microsoft Docs"
 description: "Configure métodos de detección para que se ejecuten en un sitio de Configuration Manager a fin de detectar recursos que se puedan administrar desde la infraestructura de red y Active Directory."
 ms.custom: na
-ms.date: 2/17/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 860815010068422f2d8854ed2d574c24cc386891
-ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
+ms.translationtype: HT
+ms.sourcegitcommit: 0663ba84762c44a5c303562548499f195bae9e1c
+ms.openlocfilehash: 34a539ceaea6b070f81a28d2c0a9ce388e26cfeb
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>Configurar métodos de detección para System Center Configuration Manager
@@ -33,7 +33,9 @@ Puede configurar métodos de detección que se ejecuten en un sitio de System Ce
 
 -   La detección de servidores es un método de detección automático que busca equipos que se usen como sistemas de sitio. No se puede configurar ni deshabilitar.  
 
-**Para habilitar cualquier método de detección configurable:**  
+**Para habilitar un método de detección configurable, siga estos pasos:**  
+ > [!NOTE]  
+ > La siguiente información no se aplica a la funcionalidad de detección de usuarios de Azure Active Directory. En su lugar, consulte la sección [configurar usuarios de Azure AD detección](#azureaadisc) más adelante en este tema.
 
 1.  En la consola de Configuration Manager, elija **Administración** > **Configuración de jerarquía** y, luego, **Métodos de detección**.  
 
@@ -211,6 +213,14 @@ Utilice los procedimientos siguientes para habilitar la detección de bosques de
 7.  De forma alternativa, en la pestaña **Atributos de Active Directory** , puede configurar atributos adicionales de Active Directory para los equipos que desea detectar. También se enumeran los atributos predeterminados del objeto.  
 
 8.  Cuando haya terminado de configurar la detección de usuarios de Active Directory para este sitio, elija **Aceptar** para guardar la configuración.  
+
+## <a name="azureaadisc"></a>Configuración de la detección de usuarios de Azure AD
+A partir de la versión 1706, puede configurar la detección de usuarios de Azure Active Directory cuando se conecta Configuration Manager a la [suscripción de Azure y a Azure Active Directory](/sccm/core/servers/deploy/configure/azure-services-wizard).
+
+La funcionalidad de detección de usuarios de Azure AD está configurada como parte de *Cloud Management Gateway*. El procedimiento se detalla en la sección [Creación de la aplicación web de Azure para utilizarla Configuration Manager](/sccm/core/servers/deploy/configure/Azure-services-wizard#webapp) del tema *Configuración de servicios de Azure para utilizarlos con Configuration Manager*.
+
+
+
 
 ##  <a name="BKMK_ConfigHBDisc"></a> Configuración de la detección de latidos  
  De forma predeterminada, la detección de latidos se habilita al instalar un sitio primario de Configuration Manager. Por consiguiente, solo tiene que configurar la programación de la frecuencia con que los clientes envían el registro de datos de detección de latidos a un punto de administración cuando no quiera usar el valor predeterminado de cada siete días.  

@@ -2,7 +2,7 @@
 title: "Administración de aplicaciones adquiridas en la Tienda Windows para empresas | Microsoft Docs"
 description: Administre e implemente aplicaciones desde la Tienda Windows para empresas con System Center Configuration Manager.
 ms.custom: na
-ms.date: 7/25/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.translationtype: HT
-ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
-ms.openlocfilehash: 93e767c9a115b30d68871baece670977165f55f4
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 369b6a82a20a90ca534f9484c0be71096dd35a30
 ms.contentlocale: es-es
-ms.lasthandoff: 07/26/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 
@@ -85,6 +85,8 @@ En equipos que ejecutan una versión de Windows 10 anterior a Creators Update (c
 
 ## <a name="set-up-windows-store-for-business-synchronization"></a>Configuración de la sincronización de la Tienda Windows para empresas
 
+### <a name="for-configuration-manager-versions-prior-to-1706"></a>Para versiones de Configuration Manager anteriores a la 1706
+
 **En Azure Active Directory, registre Configuration Manager como una herramienta de administración "Aplicación web y/o API web". Esta acción le proporciona un identificador de cliente que necesitará más adelante.**
 1. En el nodo de Active Directory de [https://manage.windowsazure.com](https://manage.windowsazure.com), seleccione Azure Active Directory y luego haga clic en **Aplicaciones** > **Agregar**.
 2.  Haga clic en **Agregar una aplicación que mi organización está desarrollando**.
@@ -110,6 +112,24 @@ En equipos que ejecutan una versión de Windows 10 anterior a Creators Update (c
 2.  En la pestaña **Inicio**, en el grupo **Tienda Windows para empresas**, haga clic en **Agregar cuenta de la Tienda Windows para empresas**. 
 3.  Agregue el identificador de inquilino, el identificador de cliente y la clave de cliente de Azure Active Directory y finalice el asistente.
 4. Una vez que haya terminado, verá la cuenta configurada en la lista **Tienda Windows para empresas** en la consola de Configuration Manager.
+
+### <a name="for-configuration-manager-version-1706-and-later"></a>Para la versión 1706 de Configuration Manager y posteriores
+
+1. En la consola, vaya a **Administración** > **Introducción** > **Administración de servicios en la nube** > **Azure** > **Servicios de Azure** y, después, elija **Configurar servicios de Azure** para iniciar el **Asistente para servicios de Azure**.
+2. En la página **Servicios de Azure**, seleccione el servicio que quiera configurar y, después, haga clic en **Siguiente**.
+3. En la página **General**, proporcione un nombre descriptivo para el nombre del servicio de Azure y una descripción opcional y, después, haga clic en **Siguiente**.
+4. En la página **Aplicación**, especifique el entorno de Azure y, después, haga clic en **Examinar** para abrir la ventana **Aplicación del servidor**.
+5. En la ventana **Aplicación del servidor**, seleccione la aplicación de servidor que quiera usar y, después, haga clic en **Aceptar**. Las aplicaciones de servidor son las aplicaciones web de Azure que contienen las configuraciones de la cuenta de Azure, incluidos el identificador de inquilino, el identificador de cliente y una clave secreta para los clientes. Si no tiene una aplicación de servidor disponible, use una de las siguientes:
+    - **Crear**: para crear una nueva aplicación de servidor haga clic en **Crear**. Proporcione un nombre descriptivo para la aplicación y el inquilino. Después, una vez que inicie sesión en Azure, Configuration Manager crea automáticamente la aplicación web en Azure, incluidos el identificador de cliente y la clave secreta para su uso con la aplicación web. Podrá verlos más adelante desde Azure Portal.
+    - **Importar**: para usar una aplicación web que ya existe en su suscripción de Azure, haga clic en **Importar**. Proporcione un nombre descriptivo para la aplicación y el inquilino y, después, especifique el identificador del inquilino, el identificador de cliente y la clave secreta de la aplicación web que quiere que use Configuration Manager. Después de **Comprobar** la información, haga clic en **Aceptar** para continuar. 
+6. Revise la página **Información** y complete los pasos y configuraciones adicionales tal como se indica. Estas configuraciones son necesarias para usar el servicio con Configuration Manager. Por ejemplo, para configurar la Tienda Windows para empresas, siga estos pasos:
+    - En Azure, debe registrar Configuration Manager como una aplicación web o API web y registrar el identificador de cliente. Especifique también una clave de cliente para su uso con la herramienta de administración (que es Configuration Manager).
+    - En la consola de la Tienda Windows para empresas debe configurar Configuration Manager como la herramienta de administración de almacén, habilitar la compatibilidad de aplicaciones con licencia sin conexión y, después, comprar al menos una aplicación. 
+7. Haga clic en **Siguiente** cuando esté listo para continuar.
+8. En la página **Configuraciones de aplicación**, realice las configuraciones del catálogo de aplicaciones y el idioma para este servicio y, después, haga clic en **Siguiente**.
+9. Cuando finalice el asistente, la consola de Configuration Manager muestra que ha configurado la **Tienda Windows para empresas** como un **Tipo de servicio de nube**.
+
+
 
 
 ## <a name="create-and-deploy-a-configuration-manager-application-from-a-windows-store-for-business-app"></a>Cree e implemente una aplicación de Configuration Manager a partir de una aplicación de la Tienda Windows para empresas.

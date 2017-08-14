@@ -13,10 +13,10 @@ ms.technology:
 - configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 ms.translationtype: HT
-ms.sourcegitcommit: a986c23b18f782b713d7df0048dff2543f640b66
-ms.openlocfilehash: eb2f9ff61b68e015182a1f898afcb2a528b410ba
+ms.sourcegitcommit: 5d696e3da187d47e0d41c02864d9b5267827e701
+ms.openlocfilehash: 902d7f7216ca7bb585afae587a6706e2332da9d3
 ms.contentlocale: es-es
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 
@@ -73,7 +73,7 @@ Con las versiones anteriores de Configuration Manager, hay que realizar los sigu
 - El equipo que ejecuta el Instalador de Office 365 debe tener acceso a Internet.  
 - El usuario que ejecuta el Instalador de Office 365 debe tener acceso de **lectura** y **escritura** para el uso compartido de la ubicación de contenido que se ofrece en el asistente.
 - Si recibe un error de descarga 404, copie los archivos siguientes en la carpeta %temp% del usuario:
-  - [releasehistory.xml](http://officecdn.microsoft.com.edgesuite.net/wsus/releasehistory.cab)
+  - [releasehistory.xml](http://officecdn.microsoft.com/pr/wsus/releasehistory.cab)
   - [o365client_32bit.xml](http://officecdn.microsoft.com/pr/wsus/ofl.cab)  
 
 
@@ -123,6 +123,17 @@ Siga estos pasos para implementar actualizaciones de Office 365 con Configuratio
 
 > [!Important]
 > Debe descargar e implementar las actualizaciones en los mismos idiomas configurados en los clientes de Office 365. Por ejemplo, supongamos que tiene un cliente de Office 365 configurado con los idiomas en-us y de-de. En el servidor de sitio, descargue e implemente solo el contenido de en-us correspondiente a una actualización de Office 365 correspondiente. Cuando el usuario inicie la instalación de esta actualización desde el Centro de software, la actualización se bloqueará mientras se descarga el contenido.   
+
+## <a name="restart-behavior-and-client-notifications-for-office-365-updates"></a>Comportamiento al reiniciar y notificaciones de cliente para las actualizaciones de Office 365
+Al implementar una actualización a un cliente de Office 365, el comportamiento de reinicio y las notificaciones de cliente serán distintas en función de la versión de Configuration Manager. En la tabla siguiente se proporciona información sobre la experiencia de usuario final cuando el cliente recibe una actualización de Office 365:
+
+|Versión de Configuration Manager |Experiencia del usuario final|  
+|----------------|---------------------|
+|Antes de la 1610|Se establece una marca de reinicio y la actualización se instala después de reiniciar el equipo.|
+|1610|Las aplicaciones de Office 365 se cierran sin previo aviso antes de instalar la actualización.|
+|1610 con actualización <br/>1702|Se establece una marca de reinicio y la actualización se instala después de reiniciar el equipo.|
+|1706|El cliente recibe notificaciones emergentes y en la aplicación, así como un cuadro de diálogo de cuenta atrás, antes de instalar la actualización.|
+
 
 ## <a name="add-languages-for-office-365-update-downloads"></a>Adición de idiomas para descargar actualizaciones de Office 365
 A partir de la versión 1610 de Configuration Manager, esta utilidad puede configurarse para descargar actualizaciones de los idiomas compatibles con Office 365, independientemente de si son compatibles con Configuration Manager.    

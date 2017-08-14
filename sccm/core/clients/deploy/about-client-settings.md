@@ -2,7 +2,7 @@
 title: "Configuración de cliente | Microsoft Docs"
 description: "Seleccione la configuración del cliente mediante la consola de administración de System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 08/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c8717925dba42451b1e241a7c2f59e43896d7d99
-ms.openlocfilehash: 4a169098f30e4a9d708e41ee25c6a400d5ff0e85
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: a8233c361e1a78b14a02f328da445814624e38d8
 ms.contentlocale: es-es
-ms.lasthandoff: 06/19/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Acerca de la configuración de cliente en System Center Configuration Manager
@@ -63,9 +63,25 @@ Muchas de las configuraciones del cliente se explican por sí solas. Aquí se de
 
   A partir de la versión 1606, use esta opción para configurar el equipo cliente para [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache). Para permitir el almacenamiento en caché de BranchCache en el cliente, establezca **Habilitar BranchCache** en **Sí**.
 
+- **Habilitar BranchCache**
+
+Habilita BranchCache en los equipos cliente.
+
+- **Tamaño máximo de la caché de BranchCache (porcentaje de disco)**
+
 - **Configurar el tamaño de la caché de cliente**
 
-  La caché del cliente en los equipos Windows almacena los archivos temporales que se usan para instalar aplicaciones y programas. Seleccione **Sí** para especificar el **Tamaño máximo de caché** (en megabytes o porcentaje del disco). El tamaño de la caché de cliente puede expandirse hasta el tamaño máximo en MB o el porcentaje del disco, **lo que sea inferior**. Si esta opción se establece en **No**, el tamaño predeterminado es 5120 MB.
+  La caché del cliente en los equipos Windows almacena los archivos temporales que se usan para instalar aplicaciones y programas. Elija **Sí** y, luego, especifique lo siguiente:
+    - **Tamaño máximo de caché** (megabytes). 
+    - **Tamaño de caché máximo** (porcentaje de disco).
+El tamaño de la caché de cliente puede expandirse hasta el tamaño máximo en MB o el porcentaje del disco, **lo que sea inferior**. Si esta opción se establece en **No**, el tamaño predeterminado es 5120 MB.
+
+- **Habilitar el cliente de Configuration Manager en el SO completo para compartir contenido**
+
+Habilita la caché del mismo nivel para clientes de Configuration Manager. Después, especifique la información del puerto con el que el cliente se comunica con el equipo del mismo nivel. Configuration Manager configurará automáticamente las reglas de Firewall de Windows para permitir este tráfico. Debe configurar los puertos manualmente si usa otro firewall.
+
+
+
 
 ## <a name="client-policy"></a>Directiva de cliente  
 
@@ -140,7 +156,7 @@ Muchas de las configuraciones del cliente se explican por sí solas. Aquí se de
 
      -   Desea configurar manualmente el servidor más cercano para los clientes o asegurarse de que no se conectan a un servidor a través de una conexión de red lenta.  
 
-     -   Desea controlar qué clientes se conectan a qué servidor. Esto podría darse por motivos de pruebas, rendimiento o empresariales.  
+     -   Desea controlar qué clientes se conectan a qué servidor. Esta configuración podría darse por motivos de pruebas, rendimiento o empresariales.  
 
      -   No desea esperar hasta 25 horas o hasta un cambio de la red para que los clientes se configuren con un punto de sitios web del catálogo de aplicaciones diferente.  
 

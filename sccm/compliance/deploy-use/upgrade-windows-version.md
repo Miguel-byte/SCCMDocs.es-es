@@ -2,7 +2,7 @@
 title: "Actualizar dispositivos de Windows a otra versión con Configuration Manager | Documentos de Microsoft"
 description: "Actualice dispositivos que ejecuten Windows 10 Escritorio, Windows 10 Mobile o Windows 10 Holographic a otra edición más reciente de forma automática con Configuration Manager."
 ms.custom: na
-ms.date: 04/18/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
-ms.openlocfilehash: cfde0a43947013bbd3a1093688cee19fe309fd03
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: cd8c644d07dab0010dc211df8ce4f2dc6e1fa7ae
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
 
@@ -34,14 +33,14 @@ La **directiva de actualización de edición** de System Center Configuration Ma
 
 - Windows 10 Escritorio
 - Windows 10 Mobile
-- Windows 10 Holographic
+<!-- - Windows 10 Holographic -->
 
 Las siguientes rutas de acceso de actualización son compatibles:
 
 - Desde Windows 10 Pro a Windows 10 Enterprise
 - Desde Windows 10 Home a Windows 10 Education
 - Desde Windows 10 Mobile a Windows 10 Mobile Enterprise
-- Desde Windows 10 Holographic Pro a Windows 10 Holographic Enterprise
+<!-- - From Windows 10 Holographic Pro to Windows 10 Holographic Enterprise -->
 
 Los dispositivos deben estar inscritos en Microsoft Intune o ejecutar el software cliente de Configuration Manager. Esta directiva actualmente no es compatible con equipos administrados por MDM local.
 
@@ -50,7 +49,7 @@ Los dispositivos deben estar inscritos en Microsoft Intune o ejecutar el softwar
 
 -   Una clave de producto que sea válida para instalar la nueva versión de Windows en todos los dispositivos de destino de la directiva (para sistemas operativos de escritorio).  
 
--   Un archivo de licencia de Microsoft que contenga la información de licencia para instalar la nueva versión de Windows en todos los dispositivos de destino de la directiva (para Windows 10 Mobile y Windows 10 Holographic).
+-   Un archivo de licencia de Microsoft que contenga la información de licencia para instalar la nueva versión de Windows en todos los dispositivos de destino de la directiva (para Windows 10 Mobile<!-- and Windows 10 Holographic-->).
 
 - Para crear e implementar este tipo de directiva, debe tener asignado el rol de seguridad **Administrador total** de Configuration Manager.
 
@@ -68,7 +67,7 @@ Los dispositivos deben estar inscritos en Microsoft Intune o ejecutar el softwar
 
     -   **Descripción** (opcional): si lo desea, escriba una descripción para la directiva que le ayude a identificarla en la consola de Intune.  
 
-    -   **SKU a la que se actualizará el dispositivo** : en la lista desplegable, seleccione la versión de Windows 10 Desktop, Windows 10 Holographic o Windows 10 Mobile a la que quiere actualizar los dispositivos de destino.  
+    -   **SKU a la que se actualizará el dispositivo**: en la lista desplegable, seleccione la versión de Windows 10 Desktop, <!-- Windows 10 Holographic,--> o Windows 10 Mobile a la que quiere actualizar los dispositivos de destino.  
 
     -   **Información de licencia** : seleccione una de las siguientes opciones.  
 
@@ -77,7 +76,7 @@ Los dispositivos deben estar inscritos en Microsoft Intune o ejecutar el softwar
             > [!NOTE]  
             >  Después de crear una directiva que contenga una clave de producto, no se puede editar la clave de producto más adelante. Esto se debe a que la clave se oculta por motivos de seguridad. Para cambiar la clave de producto, debe volver a escribir toda la clave.  
 
-        -   **Archivo de licencia** : haga clic en **Examinar** para seleccionar un archivo de licencia válido en formato XML, que se usará para actualizar los dispositivos de destino que ejecuten sistemas operativos Windows 10 Holographic y Windows 10 Mobile.  
+        -   **Archivo de licencia**: haga clic en **Examinar** para seleccionar un archivo de licencia válido en formato XML, que se usará para actualizar los dispositivos de destino que ejecuten sistemas operativos <!--Windows 10 Holographic and -->Windows 10 Mobile.  
 
 6.  Complete el asistente.  
 
@@ -91,7 +90,15 @@ La nueva directiva se muestra en el nodo **Actualización de la edición de Wind
 
 4.  En el cuadro de diálogo **Deploy Windows 10 Edition Upgrade** (Implementar actualización de la edición de Windows 10), seleccione la recopilación en la que quiere implementar la directiva y la programación con la que se evaluará la directiva y, después, haga clic en **Aceptar**. En el caso de los equipos que se administran con el cliente de Configuration Manager, debe implementar la directiva en una recopilación de dispositivos. En el caso de los equipos inscritos con Intune, puede implementar la directiva en una recopilación de usuarios o dispositivos. 
 
-Puede supervisar las implementaciones que acaba de crear desde el nodo **Implementaciones** del área de trabajo **Supervisión** .  
 
- Una vez que la directiva alcance un equipo Windows de destino y se evalúe, se reiniciará durante las dos horas posteriores para aplicar la actualización. Asegúrese de informar a los usuarios a los que implemente la directiva, o prográmela para que se ejecute fuera del horario laboral de los usuarios.
+
+## <a name="next-steps"></a>Pasos siguientes
+
+Al supervisar la implementación que acaba de crear desde el nodo **Implementaciones** del área de trabajo **Supervisión**, es posible que vea errores que indican que la implementación no se realizó correctamente, por ejemplo:
+- **No se aplica a este dispositivo**
+- **Error de conversión de tipo de datos**
+
+Estos errores no significan que hubo un error en la implementación. En el equipo de destino, compruebe que la actualización se realizó correctamente.
+
+Una vez que la directiva alcance un equipo Windows de destino y se evalúe, se reiniciará durante las dos horas posteriores para aplicar la actualización. Asegúrese de informar a los usuarios a los que implemente la directiva, o prográmela para que se ejecute fuera del horario laboral de los usuarios.
 

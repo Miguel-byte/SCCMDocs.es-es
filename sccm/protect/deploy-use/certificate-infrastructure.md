@@ -1,8 +1,8 @@
 ---
-title: Configurar la infraestructura de certificados | Microsoft Docs
+title: "Configuración de la infraestructura de certificados | Microsoft Docs"
 description: "Aprenda a configurar la inscripción de certificados en System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 07/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,22 +13,22 @@ ms.topic: get-started-article
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 859a8da10f55e314b205b7a4a415a1d2a60a920a
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 640eb1df9d53fc83d93c39a7ecbaf2668e176805
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 
-# <a name="certificate-infrastructure"></a>Infraestructura de certificados
+# <a name="configure-certificate-infrastructure"></a>Configuración de la infraestructura de certificados
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Estos son los pasos, detalles y demás información sobre cómo configurar los certificados en System Center Configuration Manager. Antes de empezar, compruebe los requisitos previos que se indican en [Requisitos previos de perfiles de certificado en Configuration Manager](../../protect/plan-design/prerequisites-for-certificate-profiles.md).  
+Aprenda a configurar la infraestructura de certificados en System Center Configuration Manager. Antes de empezar, compruebe los requisitos previos que se indican en [Requisitos previos de perfiles de certificado en Configuration Manager](../../protect/plan-design/prerequisites-for-certificate-profiles.md).  
 
 Siga estos pasos para configurar la infraestructura de certificados SCEP o PFX.
 
@@ -59,7 +59,7 @@ Siga estos pasos para configurar la infraestructura de certificados SCEP o PFX.
     > [!NOTE]  
     >  Estos son los permisos de seguridad predeterminados que serán adecuados para la mayoría de los entornos. Sin embargo, puede utilizar otra configuración de seguridad. Para más información, vea [Planificación de permisos de plantilla de certificado para perfiles de certificado en System Center Configuration Manager](../../protect/plan-design/planning-for-certificate-template-permissions.md).  
 
-3.  Implemente un certificado PKI que admita la autenticación de cliente en este servidor. Es posible que ya tenga instalado en el equipo un certificado adecuado que pueda utilizar, o tal vez precise o prefiera implementar un certificado especialmente para este propósito. Para más información sobre los requisitos de este certificado, vea los detalles para servidores que ejecutan el módulo de directivas de Configuration Manager con el servicio de rol Servicio de inscripción de dispositivos de red en la sección **Certificados PKI para servidores** del tema [Requisitos de certificados PKI para System Center Configuration Manager](../../core/plan-design/network/pki-certificate-requirements.md).  
+3.  Implemente un certificado PKI que admita la autenticación de cliente en este servidor. Es posible que ya tenga instalado en el equipo un certificado adecuado que pueda utilizar, o tal vez precise o prefiera implementar un certificado especialmente para este propósito. Para obtener más información sobre los requisitos de este certificado, vea los detalles para servidores que ejecutan el módulo de directivas de Configuration Manager con el servicio de rol Servicio de inscripción de dispositivos de red en la sección **Certificados PKI para servidores** del tema [Requisitos de certificados PKI para System Center Configuration Manager](../../core/plan-design/network/pki-certificate-requirements.md).  
 
     > [!TIP]  
     >  Si necesita ayuda en la implementación de este certificado, puede usar las instrucciones de [Deploying the Client Certificate for Distribution Points (Implementación del certificado de cliente para puntos de distribución)](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012), ya que los requisitos del certificado son los mismos, con una excepción:  
@@ -124,21 +124,37 @@ Debe instalar y configurar al menos un punto de registro de certificados en la j
 
 6.  En la página **Selección de rol del sistema** , seleccione **Punto de Registro de certificado** en la lista de roles disponibles y, a continuación, haga clic en **Siguiente**. 
 
-8. En la página **Modo de registro de certificados**, seleccione si desea que este registro de certificado apunte a **Procesar solicitudes de certificado SCEP** o **Procesar solicitudes de certificado PFX**. Un punto de registro de certificados no puede procesar ambos tipos de solicitudes, pero se pueden crear varios puntos de registro de certificado si trabaja con ambos tipos de certificados.
+7. En la página **Modo de registro de certificados**, seleccione si desea que este registro de certificado apunte a **Procesar solicitudes de certificado SCEP** o **Procesar solicitudes de certificado PFX**. Un punto de registro de certificados no puede procesar ambos tipos de solicitudes, pero se pueden crear varios puntos de registro de certificado si trabaja con ambos tipos de certificados.
 
-7.  En la página **Configuración de punto de registro de certificados**, la configuración aplicada depende del tipo de certificado que el punto de registro de certificados procesará:
+   Si se procesan certificados PFX, debe elegir una entidad de certificación: Microsoft o Entrust.
+
+8.  La página **Configuración de punto de Registro de certificado** varía según el tipo de certificado:
     -   Si ha seleccionado **Procesar solicitudes de certificado SCEP**, configure lo siguiente:
         -   **Nombre del sitio web**, **Número de puerto HTTPS** y **Nombre de aplicación virtual** para el punto de registro de certificado. Estos campos se rellenan automáticamente con los valores predeterminados. 
         -   **Dirección URL para el Servicio de inscripción de dispositivos de red y certificado de CA raíz**: haga clic en **Agregar** y, en el cuadro de diálogo **Agregar dirección URL y certificado de CA raíz**, especifique lo siguiente:
             - **Dirección URL para el Servicio de inscripción de dispositivos de red**: especifique la dirección URL en el formato siguiente: https://*<server_FQDN>*/certsrv/mscep/mscep.dll . Por ejemplo, si el FQDN del servidor que ejecuta el Servicio de inscripción de dispositivos de red es server1.contoso.com, escriba **https://server1.contoso.com/certsrv/mscep/mscep.dll**.
             - **Certificado de CA raíz**: Busque y seleccione el archivo de certificado (.cer) que creó y guardó en **Paso 1: Instalar y configurar el Servicio de inscripción de dispositivos de red y dependencias**. Este certificado de CA raíz permite al punto de registro de certificados validar el certificado de autenticación de cliente que el módulo de directivas de System Center Configuration Manager usará.  
-    - Si ha seleccionado **Procesar solicitudes de certificado PFX**, configure lo siguiente:
-        - **Entidades de certificación (CA) y cuenta necesarias para conectarse a cada CA**: haga clic en **Agregar** y, en el cuadro de diálogo **Agregar una entidad de certificación y una cuenta**, especifique lo siguiente:
+
+    - Si seleccionó **Procesar solicitudes de certificado PFX**, configure los detalles de conexión y las credenciales de la entidad de certificación elegida.
+
+        - Para utilizar Microsoft como la entidad de certificación, haga clic en **Agregar** y, en el cuadro de diálogo **Agregar una entidad de certificación y una cuenta**, especifique lo siguiente:
             - **Nombre del servidor de entidad de certificación**: escriba el nombre de su servidor de entidad de certificación.
             - **Cuenta de entidad de certificación**: haga clic en **Establecer** para seleccionar o crear la cuenta que tenga permisos para inscribirse en las plantillas de la entidad de certificación.
-        - **Cuenta de conexión de Punto de Registro de certificado**: selecciona o crea la cuenta que conecta el punto de registro de certificados con la base de datos de Configuration Manager. De forma alternativa, puede usar la cuenta del equipo local en que se hospeda el punto de registro de certificados.
-        - **Cuenta de publicación de certificados de Active Directory**: seleccione una cuenta o cree una nueva cuenta que se usará para publicar certificados en objetos de usuario en Active Directory.
-8.  En el cuadro de diálogo **Agregar dirección URL y certificado de CA raíz** , especifique lo siguiente y, a continuación, haga clic en **Aceptar**:  
+            - **Cuenta de conexión de Punto de Registro de certificado**: selecciona o crea la cuenta que conecta el punto de registro de certificados con la base de datos de Configuration Manager. De forma alternativa, puede usar la cuenta del equipo local en que se hospeda el punto de registro de certificados.
+            - **Cuenta de publicación de certificados de Active Directory**: seleccione una cuenta o cree una nueva cuenta que se usará para publicar certificados en objetos de usuario en Active Directory.
+
+            - En el cuadro de diálogo **Dirección URL para el Servicio de inscripción de dispositivos de red y certificado de CA raíz**, especifique lo siguiente y, luego, haga clic en **Aceptar**:  
+
+        - Para usar Entrust como la entidad de certificación, especifique lo siguiente:
+
+           - La **URL de servicio web de MDM**
+           - Las credenciales de nombre de usuario y contraseña para la dirección URL.
+
+           Cuando se utiliza la API de MDM para definir la URL de servicio web de Entrust, asegúrese de usar, como mínimo, la versión 9 de la API, tal y como se muestra en el ejemplo siguiente:
+
+           `https://entrust.contoso.com:19443/mdmws/services/AdminServiceV9`
+
+           Las versiones anteriores de la API no son compatibles con Entrust.
 
 9. Haga clic en **Siguiente** y complete el asistente.  
 

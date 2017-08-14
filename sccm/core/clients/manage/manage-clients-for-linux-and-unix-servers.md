@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
-ms.openlocfilehash: 7a5ff0e75b8cdac68e3854c4f5aba01a7d423e9b
+ms.translationtype: HT
+ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
+ms.openlocfilehash: 506df4f7c7baa5f0586a1ddf0cb02b3de9f4d076
 ms.contentlocale: es-es
-ms.lasthandoff: 12/29/2016
-
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="how-to-manage-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>Cómo administrar clientes para servidores Linux y UNIX en System Center Configuration Manager
@@ -31,7 +30,7 @@ ms.lasthandoff: 12/29/2016
 Cuando se administran los servidores Linux y UNIX con System Center Configuration Manager, se pueden configurar recopilaciones, ventanas de mantenimiento y configuraciones de cliente para ayudar a administrar los servidores. Además, aunque el cliente de Configuration Manager para Linux y UNIX no tiene una interfaz de usuario, puede forzar al cliente a sondear manualmente la directiva de cliente.
 
 ##  <a name="BKMK_CollectionsforLnU"></a> Collections of Linux and UNIX servers  
- Use recopilaciones para administrar grupos de servidores Linux y UNIX de la misma forma que usa recopilaciones para administrar otros tipos de cliente. Las recopilaciones pueden ser recopilaciones de pertenencia directa o recopilaciones basadas en consultas que identifican los sistemas operativos cliente, las configuraciones de hardware u otros detalles sobre el cliente que se almacenan en la base de datos del sitio. Por ejemplo, puede usar las recopilaciones que incluyen servidores Linux y UNIX para administrar lo siguiente:  
+ Use recopilaciones para administrar grupos de servidores Linux y UNIX de la misma forma que usa recopilaciones para administrar otros tipos de cliente. Las colecciones pueden ser de pertenencia directa o basadas en consultas. Estas últimas identifican los sistemas operativos cliente, las configuraciones de hardware u otros detalles sobre el cliente que se almacenan en la base de datos del sitio. Por ejemplo, puede usar colecciones que incluyan servidores Linux y UNIX para administrar la siguiente configuración:  
 
 -   Configuración de cliente  
 
@@ -43,9 +42,9 @@ Cuando se administran los servidores Linux y UNIX con System Center Configuratio
 
  La configuración de cliente predeterminada para el inventario de hardware incluye información sobre el sistema operativo del equipo de cliente. Puede usar la propiedad **Título** de la clase **Sistema operativo** para identificar el sistema operativo de un servidor Linux o UNIX.  
 
- Puede ver detalles sobre los equipos que ejecutan el cliente de Configuration Manager para Linux y UNIX en el nodo Dispositivos del área de trabajo Activos y compatibilidad en la consola de Configuration Manager. En el área de trabajo Activos y compatibilidad de la consola de Configuration Manager, puede ver el nombre del sistema operativo de cada equipo en la columna **Sistema operativo**.  
+ Puede ver detalles sobre los equipos que ejecutan el cliente de Configuration Manager para Linux y UNIX en el nodo **Dispositivos** del área de trabajo **Activos y compatibilidad** en la consola de Configuration Manager. En el área de trabajo **Activos y compatibilidad** de la consola de Configuration Manager, puede ver el nombre del sistema operativo de cada equipo en la columna **Sistema operativo**.  
 
- De forma predeterminada, los servidores Linux y UNIX son miembros de la recopilación **Todos los sistemas** . Le recomendamos crear recopilaciones personalizadas que incluyan solo servidores Linux y UNIX, o un subconjunto de ellos. Esto le permite administrar operaciones como la implementación de software o la asignación de la configuración de cliente a grupos de equipos similares, de manera que pueda medir con precisión el éxito de una implementación.   
+ De forma predeterminada, los servidores Linux y UNIX son miembros de la recopilación **Todos los sistemas** . Le recomendamos crear recopilaciones personalizadas que incluyan solo servidores Linux y UNIX, o un subconjunto de ellos. Las colecciones personalizadas permiten administrar operaciones como la implementación de software o la asignación de la configuración de cliente a grupos de equipos similares, de manera que pueda medir con precisión el éxito de una implementación.   
 
  Cuando cree una recopilación personalizada para servidores Linux y UNIX, incluya consultas de regla de pertenencia que contengan el atributo de título para el atributo de sistema operativo. Para obtener más información sobre la creación de recopilaciones, consulte [How to create collections in System Center Configuration Manager](../../../core/clients/manage/collections/create-collections.md) (Creación de recopilaciones en System Center Configuration Manager).  
 
@@ -78,7 +77,7 @@ Cuando se administran los servidores Linux y UNIX con System Center Configuratio
 
 |Opción|Más información|  
 |------------|----------------------|  
-|importPFX|Use esta opción para especificar un certificado que reemplace el certificado que actualmente usa un cliente.<br /><br /> Cuando use **-importPFX**, también debe usar el parámetro de línea de comandos **–password** para proporcionar la contraseña asociada con el archivo PKCS&#12;.<br /><br /> Use **-rootcerts** para especificar los requisitos de certificado raíz adicionales.<br /><br /> Ejemplo: **certutil -importPFX &lt;ruta de acceso al certificado PKCS&#12;> -password &lt;contraseña del certificado\> [-rootcerts&lt;lista separada por comas de certificados>]**|  
+|importPFX|Use esta opción para especificar un certificado que reemplace el certificado que actualmente usa un cliente.<br /><br /> Cuando use **-importPFX**, también debe usar el parámetro de línea de comandos **–password** para proporcionar la contraseña asociada con el archivo PKCS #12.<br /><br /> Use **-rootcerts** para especificar los requisitos de certificado raíz adicionales.<br /><br /> Ejemplo: **certutil -importPFX &lt;ruta de acceso al certificado PKCS #12> -password &lt;contraseña del certificado\> [-rootcerts&lt;lista separada por comas de certificados>]**|  
 |-importsitecert|Use esta opción para actualizar el servidor de sitio que firma el certificado que se encuentra en el servidor de administración.<br /><br /> Ejemplo: **certutil -importsitecert &lt;ruta de acceso al certificado DER\>**|  
 |-importcrl|Use esta opción para actualizar la CRL en el cliente con una o varias rutas de archivos CRL.<br /><br /> Ejemplo: **certutil -importcrl &lt;rutas de acceso de archivos CRL separados por comas\>**|  
 

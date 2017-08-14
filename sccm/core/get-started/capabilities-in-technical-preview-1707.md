@@ -2,7 +2,7 @@
 title: Technical Preview 1707 | Microsoft Docs
 description: "Obtenga información sobre las características disponibles en la versión 1707 de Technical Preview para System Center Configuration Manager."
 ms.custom: na
-ms.date: 06/30/2017
+ms.date: 07/28/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
@@ -15,8 +15,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: HT
-ms.sourcegitcommit: 1f57c63ceeb13c7f7d760d7ecfb48df749da6770
-ms.openlocfilehash: 118f20768ffc99364eb9e8cf2074d7a23f4dc572
+ms.sourcegitcommit: 6e890862fd02786b675e2b7abaca7ede7c0e977a
+ms.openlocfilehash: 91fd850f055a7e892a54487307109a291e336696
 ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
@@ -62,7 +62,7 @@ Haga clic en una sección del gráfico **Modelos Surface** para obtener una list
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Configuración e implementación de directivas de Protección de aplicaciones de Windows Defender
 <!-- 1351960 -->
 
-[Protección de aplicaciones de Windows Defender](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) es una nueva característica de Windows que ayuda a proteger a los usuarios al abrir los sitios web que no sean de confianza en un contenedor aislado seguro al que no puedan tener acceso otras partes del sistema operativo. En esta versión preliminar técnica, ya se admite la configuración de esta característica mediante los parámetros de conformidad de Configuration Manager que establezca para a continuación implementarla en una recopilación. Esta característica se publicará en la versión preliminar para la versión de 64 bits de Windows 10 Creators Update (nombre de código: RS2). Para probar esta característica ahora debe estar utilizando una versión preliminar de esta actualización.
+[Protección de aplicaciones de Windows Defender](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) es una nueva característica de Windows que ayuda a proteger a los usuarios al abrir los sitios web que no sean de confianza en un contenedor aislado seguro al que no puedan tener acceso otras partes del sistema operativo. En esta versión preliminar técnica, ya se admite la configuración de esta característica mediante los parámetros de conformidad de Configuration Manager que establezca para a continuación implementarla en una recopilación. Esta característica se publicará en la versión preliminar para la versión de 64 bits de Windows 10 Fall Creators Update (nombre de código: RS3). Para probar esta característica ahora debe estar utilizando una versión preliminar de esta actualización.
 
 ### <a name="before-you-start"></a>Antes de empezar
 
@@ -87,12 +87,12 @@ Para obtener más información acerca de Protección de aplicaciones de Windows 
 
 <!-- 1236459 --->
 
-En la última versión preliminar técnica, se ha introducido una nueva funcionalidad que permite [crear y ejecutar scripts de PowerShell desde la consola de Configuration Manager]( /core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console).
+En la última versión preliminar técnica, se ha introducido una nueva funcionalidad que permite [crear y ejecutar scripts de PowerShell desde la consola de Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console).
 En esta versión preliminar técnica, hemos ampliado esta capacidad. Ahora, Configuration Manager lee el script de PowerShell y muestra los parámetros en el Asistente para crear scripts. Puede proporcionar un valor para el parámetro en el asistente que se usará cuando se ejecute el script. Como alternativa, puede dejar este parámetro en blanco. Si lo hace, deberá proporcionar un valor para el parámetro al ejecutar el script.
 
 ### <a name="try-it-out"></a>Haga la prueba
 
-1. Siga las instrucciones de [Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager]( /core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console).
+1. Siga las instrucciones de [Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console). 
 2. En la nueva página **Parámetros de script** del **Asistente para crear scripts**, elija un parámetro y, después, haga clic en **Editar**.
 3. Proporcione un valor para el parámetro seleccionado y haga clic en **Aceptar**.
 4. Complete el asistente.

@@ -2,7 +2,7 @@
 title: Actualizaciones | Microsoft Docs
 description: "Obtenga información sobre un método de servicio en la consola denominado **Actualizaciones y mantenimiento** que facilita la ubicación e instalación de las actualizaciones recomendadas."
 ms.custom: na
-ms.date: 05/02/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,22 +16,21 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
-ms.openlocfilehash: 4bc076bba4672d0be0032ec785da20e60b11a6c4
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: d46aca88111d4ee0e96b75ca5a3ec57aa4274d6d
 ms.contentlocale: es-es
-ms.lasthandoff: 06/28/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="updates-for-system-center-configuration-manager"></a>Actualizaciones para System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-System Center Configuration Manager usa un método de servicio en la consola denominado **Actualizaciones y mantenimiento** que facilita la búsqueda e instalación de las actualizaciones recomendadas para la infraestructura de Configuration Manager. Este método de servicio en la consola se complementa con actualizaciones fuera de banda, como revisiones destinadas a los clientes que necesitan solucionar problemas que pueden ser específicos para su entorno.  
+System Center Configuration Manager usa un método de servicio en la consola denominado **Actualizaciones y mantenimiento**. Este método en la consola facilita la búsqueda e instalación de actualizaciones recomendadas para su infraestructura de Configuration Manager. El mantenimiento en la consola se complementa con actualizaciones fuera de banda, como revisiones destinadas a los clientes que necesitan solucionar problemas que pueden ser específicos para su entorno.  
 
 > [!TIP]  
-> Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* e *instalar* se usan para describir tres conceptos independientes. ** Para obtener información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).
+> Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* e *instalar* se utilizan para describir los tres conceptos independientes. ** Para obtener información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).
 
 
  **Los temas siguientes pueden ayudarle a obtener información sobre cómo encontrar e instalar los distintos tipos de actualizaciones para System Center Configuration Manager:**  
@@ -53,21 +52,21 @@ Si usa la rama de Technical Preview, consulte [Technical Preview for System Cent
 
 -   Use la versión de línea de base más reciente cuando instale un sitio nuevo en una jerarquía nueva.  
 
--   Debe usar una versión de línea de base para actualizar desde System Center 2012 Configuration Manager.  
+-   Utilice una versión de línea de base para actualizar desde System Center 2012 Configuration Manager. Después de actualizar a System Center Configuration Manager, no podrá usar las versiones de línea de base para mantenerse al día; en su lugar, utilice solamente [actualizaciones en la consola](/sccm/core/servers/manage/install-in-console-updates) para actualizar a la versión más reciente.  
 
--   Las versiones de línea base adicionales se publicarán periódicamente. Al usar la última versión de línea base para instalar una nueva jerarquía, evita tener que instalar una versión obsoleta de Configuration Manager y luego una actualización de su infraestructura para actualizarla.  
+-   Las versiones de línea de base adicionales se publican periódicamente. Al usar la versión de línea de base más reciente para instalar una nueva jerarquía, evita tener que instalar una versión obsoleta de Configuration Manager y luego una actualización de su infraestructura para actualizarla.  
 
 Una vez que instala una versión de línea de base, las versiones adicionales de Configuration Manager se encuentran disponibles como actualizaciones en la consola. Las actualizaciones en la consola actualizan la infraestructura a la versión más reciente de Configuration Manager.  
 
 -   Las actualizaciones en la consola se instalan para actualizar la versión del sitio de primer nivel.  
 
--   Las actualizaciones que instala en el sitio de administración central se instalarán automáticamente en los sitios principales secundarios, a menos que los bloquee una ventana de mantenimiento que se haya configurado en el sitio principal.  
+-   Las actualizaciones que instala en el sitio de administración central se instalan automáticamente en los sitios principales secundarios, a menos que los bloquee una ventana de mantenimiento que se haya configurado en el sitio primario.  
 
--   Debe actualizar manualmente los sitios secundarios a una versión de actualización nueva desde la consola.  
+-   Actualice manualmente los sitios secundarios a una versión de actualización nueva desde la consola.  
 
-Cuando instala una actualización, esta almacena los archivos de instalación de esa versión en el servidor de sitio, en una carpeta llamada CD.Latest. Consulte [La carpeta CD.Latest para System Center Configuration Manager](../../../core/servers/manage/the-cd.latest-folder.md) para obtener más información sobre estos archivos.  
+Cuando instala una actualización, esta almacena los archivos de instalación de esa versión en el servidor de sitio, en una carpeta llamada CD.Latest. Para obtener más información sobre estos archivos, consulte [La carpeta CD.Latest para System Center Configuration Manager](../../../core/servers/manage/the-cd.latest-folder.md).  
 
--   Use los archivos de la carpeta CD.Latest durante la recuperación del sitio y para instalar sitios adicionales en una jerarquía que ya no ejecuta una versión de línea de base.  
+-   Use los archivos de la carpeta CD.Latest mientras usa Site Recovery y para instalar sitios adicionales en una jerarquía que ya no ejecuta una versión de línea de base.  
 
 -   No puede usar archivos de instalación desde la carpeta CD.Latest para instalar el primer sitio de una jerarquía nueva o para actualizar un sitio desde System Center 2012 Configuration Manager.  
 
@@ -77,12 +76,13 @@ Las siguientes versiones de Configuration Manager están disponibles como línea
 
 |Versión |Fecha de disponibilidad|[Fecha de finalización del soporte técnico](/sccm/core/servers/manage/current-branch-versions-supported) |Línea de base|Actualización en la consola|  
 |-------------|-----------|------------|--------------|------------------------|  
-|[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|3/27/2017| 3/27/2018|Sí|Sí|
-|[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|18/11/2016| 18/11/2017|No|Sí|
-|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|22/7/2016| 22/7/2017|No|Sí|
-|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) con el paquete acumulativo de revisiones 1606 (KB3186654) </br></br>5.00.8412.1307 *(Nota 1)* |12/10/2016| 22/7/2017|Sí|No|
-| 1602<br /><br /> 5.00.8355.1000|3/11/2016| 11/3/2017|No|Sí|
-| 1511 <br /><br /> 5.00.8325.1000|12/8/2015| 8/12/2016|Sí|No|  
+|[1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)<br /><br /> 5.00.8540.1000|31 de julio de 2017|31 de julio de 2018|No|Sí|
+|[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|27 de marzo de 2017| 27 de marzo de 2018|Sí|Sí|
+|[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|18 de noviembre de 2016| 18 de noviembre de 2017|No|Sí|
+|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|22 de julio de 2016| 22 de julio de 2017|No|Sí|
+|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) con el paquete acumulativo de revisiones 1606 (KB3186654) </br></br>5.00.8412.1307 *(Nota 1)* |12 de octubre de 2016| 12 de octubre de 2017|Sí|No|
+| 1602<br /><br /> 5.00.8355.1000|11 de marzo de 2016| 11 de marzo de 2017|No|Sí| 
+| 1511 <br /><br /> 5.00.8325.1000|8 de diciembre de 2015| 8 de diciembre de 2016|Sí|No|  
 
 
 *(Nota 1)* Los medios de base de referencia 1606 y 1702 están disponibles como parte de las versiones Microsoft System Center 2016 o System Center Configuration Manager (Rama actual y Rama de mantenimiento a largo plazo) en el [Centro de servicios de licencias por volumen](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx). Por ejemplo, en el Centro de servicios de licencias por volumen se puede buscar *System Center Config Mgr (Rama actual y Rama de mantenimiento a largo plazo )* y en los resultados figurarán los medios de base de referencia de la versión 1606 y 1702, disponibles para su descarga.
@@ -93,11 +93,11 @@ Para comprobar la versión del sitio de Configuration Manager, vaya a **Acerca d
  Cuando usa una instalación lista para producción de System Center Configuration Manager, a la que también se conoce como rama actual, la mayoría de las actualizaciones que se instalan están disponibles con el canal Actualizaciones y mantenimiento. Este método identifica, descarga y pone a disposición las actualizaciones que se aplican a la versión y la configuración actual de la infraestructura e incluye solo las actualizaciones que Microsoft recomienda para todos los clientes.   
  Entre ellos, se incluye:  
 
--   Versiones nuevas, como la versión 1610.  
+-   Versiones nuevas, como las versiones 1610, 1702 o 1706.  
 
--   Actualizaciones, que incluyen características nuevas para la versión actual.  
+-   Actualizaciones, que incluyen características nuevas para la versión actual.
 
--   Revisiones para la versión de Configuration Manager y que todos los clientes deberían instalar.  
+-   Revisiones para la versión de Configuration Manager y que todos los clientes deberían instalar.
 
 Las actualizaciones en la consola proporcionan mayor estabilidad y solucionan problemas comunes. Estas actualizaciones reemplazan los tipos de actualización vistos para versiones anteriores del producto por Service Packs, actualizaciones acumulativas, revisiones aplicables a todos los clientes y la extensión para Microsoft Intune. Estas actualizaciones se pueden aplicar a una o varias de las siguientes opciones:  
 
@@ -137,7 +137,7 @@ Cuando se instala una actualización en la consola:
 >  La versión de producción de System Center Configuration Manager (rama actual), la rama de mantenimiento a largo plazo y Technical Preview para System Center Configuration Manager son diferentes versiones. Por lo tanto, las actualizaciones que se aplican para una rama no están disponibles como actualizaciones en la consola para las demás ramas. Para más información sobre las diferentes ramas, consulte [Which branch of Configuration Manager should I use (¿Qué rama de Configuration Manager debo usar?)](/sccm/core/understand/which-branch-should-i-use).
 
 ##  <a name="bkmk_outofband"></a> Revisiones fuera de banda  
-Algunas revisiones se lanzan con disponibilidad limitada para abordar problemas específicos, o bien son aplicables para todos los clientes, pero no se pueden instalar con el método en la consola. Estas revisiones se entregan fuera de banda y no se detectan desde el servicio en la nube de Microsoft.  
+Algunas revisiones se lanzan con disponibilidad limitada para abordar problemas específicos, o bien son aplicables para todos los clientes, pero no se pueden instalar mediante el método en la consola. Estas revisiones se entregan fuera de banda y no se detectan desde el servicio en la nube de Microsoft.  
 
 Habitualmente, obtiene información sobre las revisiones fuera de banda desde los servicios de asistencia al cliente de Microsoft, un artículo de Knowledge Base o desde el [blog del equipo de System Center Configuration Manager](https://blogs.technet.microsoft.com/configmgrteam) cuando busca corregir o enfrentar un problema con la implementación de Configuration Manager.  
 

@@ -2,7 +2,7 @@
 title: "Introducción a los perfiles de certificado | Microsoft Docs"
 description: "Obtenga información sobre cómo funcionan los perfiles de certificado en System Center Configuration Manager con Servicios de certificados de Active Directory."
 ms.custom: na
-ms.date: 03/30/2017
+ms.date: 07/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,15 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 caps.latest.revision: 7
-author: arob98
-ms.author: angrobe
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: ba1d5b04cb0cb0284525e295a6086a3c0ac67e9f
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 7b1c0e449f3d1ef42e279e8707df6bf1df163b3f
 ms.contentlocale: es-es
-ms.lasthandoff: 03/27/2017
-
+ms.lasthandoff: 08/02/2017
 
 ---
 
@@ -51,17 +50,24 @@ Los perfiles de certificado proporcionan las siguientes capacidades de administr
 -   **Certificado de CA de confianza**: permite implementar un certificado de CA raíz o un certificado de CA intermedio de confianza para formar una cadena de confianza si el dispositivo debe autenticar un servidor.  
 
 -   **Protocolo de inscripción de certificados simple (SCEP)**: permite solicitar un certificado para un dispositivo o usuario mediante el protocolo SCEP y el Servicio de inscripción de dispositivos de red en un servidor que ejecuta Windows Server 2012 R2.
+
+    Para crear un perfil de certificado de **Protocolo de inscripción de certificados simple (SCEP)**, primero cree uno del tipo **Certificado de CA de confianza**.
+
 -   **Intercambio de información personal (.pfx)**: permite solicitar un certificado .pfx (también conocido como PKCS #12) para un dispositivo o usuario.
 
-    > [!NOTE]  
-    >  Debe crear un perfil de certificado del tipo **Certificado de CA de confianza** antes de crear un perfil de certificado de **Protocolo de inscripción de certificados simple (SCEP)**.  
+    Puede crear perfiles de certificado PFX [importando las credenciales](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md) de certificados existentes o [definiendo una autoridad de certificación](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md) para procesar las solicitudes.
+
+    A partir de la versión 1706, puede usar Microsoft o Entrust como entidades de certificación de certificados **Intercambio de información personal (.pfx)**.
+
 
 ## <a name="requirements-and-supported-platforms"></a>Requisitos y plataformas admitidas  
- Para implementar perfiles de certificado que usan el SCEP, debe instalar el punto de registro de certificado en un servidor del sistema de sitios en el sitio de administración central o en un sitio primario. También debe instalar un módulo de directivas para NDES, el módulo de directivas de Configuration Manager, en un servidor que ejecute Windows Server 2012 R2 con el rol Servicios de certificados de Active Directory y un NDES operativo y al que los dispositivos que precisan certificados puedan acceder. Para los dispositivos inscritos por Microsoft Intune, se requiere poder tener acceso al NDES desde Internet, por ejemplo, en una subred filtrada (también se conoce como red perimetral).  
+Para implementar perfiles de certificado que usan el SCEP, debe instalar el punto de registro de certificado en un servidor del sistema de sitios en el sitio de administración central o en un sitio primario. También debe instalar un módulo de directivas para NDES, el módulo de directivas de Configuration Manager, en un servidor que ejecute Windows Server 2012 R2 con el rol Servicios de certificados de Active Directory y un NDES operativo y al que los dispositivos que precisan certificados puedan acceder. Para los dispositivos inscritos por Microsoft Intune, se requiere poder tener acceso al NDES desde Internet, por ejemplo, en una subred filtrada (también se conoce como red perimetral).  
 
- Para obtener más información sobre la compatibilidad del Servicio de inscripción de dispositivos de red con un módulo de directivas para que Configuration Manager pueda implementar certificados, vea [Uso de un módulo de directivas con el servicio de inscripción de dispositivos de red](http://go.microsoft.com/fwlink/p/?LinkId=328657).  
+Los certificados PFX también requieren un punto de registro de certificados en un servidor del sistema de sitios en el sitio de administración central o en un sitio primario.  También debe especificar la entidad de certificación (CA) del certificado y especificar las credenciales de acceso pertinentes.  A partir de la versión 1706, puede especificar Microsoft o Entrust como entidades de certificación.  
 
- Configuration Manager admite la implementación de certificados en varios almacenes de certificados distintos en función de los requisitos, el tipo de dispositivo y el sistema operativo. Se admiten los dispositivos y los sistemas operativos siguientes:  
+Para obtener más información sobre la compatibilidad del Servicio de inscripción de dispositivos de red con un módulo de directivas para que Configuration Manager pueda implementar certificados, vea [Uso de un módulo de directivas con el servicio de inscripción de dispositivos de red](http://go.microsoft.com/fwlink/p/?LinkId=328657).  
+
+Configuration Manager admite la implementación de certificados en varios almacenes de certificados distintos en función de los requisitos, el tipo de dispositivo y el sistema operativo. Se admiten los dispositivos y los sistemas operativos siguientes:  
 
 -   Windows RT 8.1  
 

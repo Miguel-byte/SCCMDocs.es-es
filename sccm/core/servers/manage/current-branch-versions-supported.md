@@ -2,7 +2,7 @@
 title: Versiones de rama actual | Microsoft Docs
 description: "Revise el historial de versiones de System Center Configuration Manager y obtenga información sobre las fases del servicio ofrecido."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,38 +16,39 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 0286416807656fcf623260c7e95a703e39f6a275
+ms.translationtype: HT
+ms.sourcegitcommit: 5d696e3da187d47e0d41c02864d9b5267827e701
+ms.openlocfilehash: 1c02d2c51964fed960ffab42175762c1b04e6445
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>Compatibilidad con versiones de la rama actual de System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Microsoft planea publicar actualizaciones de la rama actual de System Center Configuration Manager varias veces al año con cada versión de actualización admitida durante doce (12) meses a partir de su fecha de publicación de disponibilidad general. Se proporcionará soporte técnico durante los doce (12) meses. Pero ahora nuestra estructura de soporte técnico es dinámica, es decir, ha evolucionado a dos fases distintas de servicio que dependen de la disponibilidad de la última versión de la rama actual.  
+Microsoft tiene previsto publicar actualizaciones de la rama actual de System Center Configuration Manager varias veces al año. Cada versión de actualización seguirá siendo compatible durante 12 meses a partir de la fecha de lanzamiento de disponibilidad general (GA). Durante esos 12 meses, ofrecemos soporte técnico. Pero ahora nuestra estructura de soporte técnico es dinámica, es decir, ha evolucionado a dos fases distintas de servicio que dependen de la disponibilidad de la última versión de la rama actual.  
 
 -   Fase de servicio de actualizaciones críticas y de seguridad: cuando se ejecuta la versión más reciente de la rama actual de Configuration Manager, recibirá actualizaciones críticas y seguridad.  
 
--   Fase de servicio de actualizaciones de seguridad (solo): después del lanzamiento de una nueva versión de la rama actual, la compatibilidad con ramas anteriores se reducirá únicamente a actualizaciones de seguridad durante el resto del ciclo de vida de soporte técnico de doce (12) meses (como se muestra en la ilustración 1).  
+-   Fase de mantenimiento de actualizaciones de seguridad (solo): después del lanzamiento de una nueva versión de la rama actual, la compatibilidad con ramas anteriores se reducirá únicamente a actualizaciones de seguridad durante el resto del ciclo de vida de soporte técnico de 12 meses (como se muestra en la ilustración 1).  
 
- ![CM&#95;Servicing&#95;support&#95;timeline](../../../core/servers/manage/media/CM_Servicing_support_timeline.png "CM_Servicing_support_timeline")  
-Ilustración 1. Ejemplo de soporte técnico de servicio de la rama actual.
+ ![Escala de tiempo de soporte técnico y mantenimiento de CM](../../../core/servers/manage/media/CM_Servicing_support_timeline.png "CM_Servicing_support_timeline")  
+Ilustración 1. Ejemplo de la superposición del ciclo de versiones del soporte técnico de mantenimiento de la rama actual.
 
 > [!NOTE]  
->  La última versión de la rama actual siempre se encuentra en la fase de servicio de actualizaciones críticas y de seguridad. Esto significa que, en caso de que se encuentre un defecto en el código que garantice una actualización crítica, debe tener instalada la versión más reciente de la rama actual para recibir una corrección. Las demás versiones compatibles de la rama actual solo podrán optar a recibir actualizaciones de seguridad. El soporte técnico finaliza después de que haya expirado el ciclo de vida de doce (12) meses para una versión de la rama actual. En ese momento, los clientes deben actualizar a una versión compatible de la rama actual.  
+>  La última versión de la rama actual siempre se encuentra en la fase de servicio de actualizaciones críticas y de seguridad. Esto significa que, en caso de que se encuentre un defecto en el código que garantice una actualización crítica, debe tener instalada la versión más reciente de la rama actual para recibir una corrección. Las demás versiones compatibles de la rama actual solo podrán optar a recibir actualizaciones de seguridad. El soporte técnico finaliza después de que haya expirado el ciclo de vida de 12 meses de una versión de la rama actual. En ese momento, los clientes deben actualizar a una versión compatible de la rama actual.  
 
  **Historial de versiones**  
 
 |Versión|Fecha de disponibilidad|Fecha de finalización del soporte técnico|  
 |-------------|-----------------------|----------------------|  
-|1702|3/27/2017|3/27/2018|
-|1610|18/11/2016|18/11/2017|
-|1606|22/7/2016|22/7/2017|
-|1602|3/11/2016|11/3/2017|
-|1511|12/8/2015|8/12/2016|  
+|1706|31 de julio de 2017|31 de julio de 2018|
+|1702|27 de marzo de 2017|27 de marzo de 2018|
+|1610|18 de noviembre de 2016|18 de noviembre de 2017|
+|1606|22 de julio de 2016| 22 de julio de 2017|
+|1602|11 de marzo de 2016|11 de marzo de 2017|
+|1511|8 de diciembre de 2015|8 de diciembre de 2016|  
 
 
 

@@ -2,7 +2,7 @@
 title: Accesibilidad | Microsoft Docs
 description: "Conozca las características que hacen que System Center Configuration Manager sea accesible para personas con discapacidades."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 98599b3c188c9e9b508fea79ecf9a2b2348e9288
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: ca518796477dda149a9f4c0ebd65f0a082eab806
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="accessibility-features-in-system-center-configuration-manager"></a>Características de accesibilidad de System Center Configuration Manager
@@ -31,14 +31,38 @@ System Center Configuration Manager incluye características que ayudan a que se
 
 
 ## <a name="bkmk_aconsole"></a> Características de accesibilidad para la consola de Configuration Manager  
--   Para tener acceso a un área de trabajo, utilice los siguientes métodos abreviados de teclado:  
 
-|Área de trabajo|Método abreviado de teclado|  
-|------|--------|  
-|Activos y compatibilidad|Ctrl+1|  
-|Biblioteca de software|Ctrl+2|  
-|monitoring|Ctrl+3|  
-|Administración|Ctrl+4|  
+**Accesos directos y mejoras con la versión 1706 y posteriores**
+
+|Método abreviado de teclado|  Finalidad|
+|--------|--------|  
+|Ctrl+M|Establece el foco en el panel principal (central).|
+|Ctrl+T|Establece el foco en el nodo superior del panel de navegación. Si el foco ya estaba en dicho panel, este se establece en el último nodo que visitó.|
+|Ctrl+I|Establece el foco en la barra de ruta de navegación, debajo de la cinta de opciones.|
+|Ctrl+L|Establece el foco en el campo **Búsqueda**, si está disponible.|
+|Ctrl+D|Establece el foco en el panel Detalles, si está disponible.|
+|Alt     |Cambia el foco dentro y fuera de la cinta de opciones.|
+
+
+- Navegación mejorada en el panel de navegación al escribir las letras de un nombre de nodo.
+- La navegación con el teclado a través de la vista principal y la cinta de opciones ahora es circular.
+- La navegación con el teclado en el panel de detalles ahora es circular. Para volver al objeto o panel anterior, utilice Ctrl + D y luego Mayús + Tab.
+- Después de actualizar una vista del área de trabajo, se establece el foco en el panel principal de esa área de trabajo.
+- Solución de un problema para permitir que los lectores de pantalla anuncien los nombres de elementos de lista.
+- Incorporación de nombres accesibles para varios controles en la página que permite a los lectores de pantalla anunciar información importante.
+
+
+**Los siguientes métodos abreviados de teclado están disponibles**
+
+- Para tener acceso a un área de trabajo, utilice los siguientes métodos abreviados de teclado:  
+
+|Método abreviado de teclado| Área de trabajo|
+|--------|--------|  
+|Ctrl + 1| Activos y compatibilidad|
+|Ctrl+2|  Biblioteca de software|
+|Ctrl+3|  monitoring|
+|Ctrl+4|  Administración|
+
 
 -   Para acceder a un menú del área de trabajo, presione la tecla TAB hasta que el foco esté en el icono Expandir o contraer. Después, presione la tecla de flecha abajo para acceder al menú del área de trabajo.  
 

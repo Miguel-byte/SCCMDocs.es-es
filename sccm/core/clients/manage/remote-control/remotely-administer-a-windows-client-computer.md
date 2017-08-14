@@ -2,7 +2,7 @@
 title: Administrar un equipo Windows de forma remota | Microsoft Docs
 description: Administre un equipo cliente de Windows remoto mediante System Center Configuration Manager.
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 07/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 08afca8b422474639cbdb860e555fe0da27361a4
-ms.openlocfilehash: dd794de867e1d0db47be9dc21a6d494087f76bc1
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: aecc4ccfec98932f3988f1ca1fcdc898cd417933
 ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="how-to-remotely-administer-a-windows-client-computer-by-using-system-center-configuration-manager"></a>Cómo administrar de forma remota un equipo cliente de Windows con System Center Configuration Manager
@@ -91,12 +90,11 @@ A continuación se indican tres formas de iniciar el visor de control remoto:
 
 -   En el símbolo del sistema de Windows, escriba *<carpeta de instalación de Configuration Manager\>***\AdminConsole\Bin\x64\CmRcViewer.exe**  
 
-    > [!NOTE]  
-    >  CmRcViewer.exe admite las siguientes opciones de línea de comandos:  
-    >   
-    >  -   *<Dirección\>*: especifica el nombre NetBIOS, el nombre de dominio completo (FQDN) o la dirección IP del equipo cliente que al que quiere conectarse.  
-    > -   *<Nombre de servidor de sitio\>*: especifica el nombre del servidor de sitio de System Center Configuration Manager al que quiere enviar mensajes de estado relacionados con la sesión de control remoto.  
-    > -   **/?** - Muestra las opciones de línea de comandos para el visor de control remoto.  
-    >   
-    >  **Ejemplo: CmRcViewer.exe** *<Dirección\>* *<\\\Nombre de servidor de sitio>*  
+CmRcViewer.exe admite las siguientes opciones de línea de comandos:  
+
+- *Dirección*: especifica el nombre NetBIOS, el nombre de dominio completo (FQDN) o la dirección IP del equipo cliente que al que quiere conectarse.
+- *Nombre de servidor de sitio*: especifica el nombre del servidor de sitio de System Center Configuration Manager al que quiere enviar mensajes de estado relacionados con la sesión de control remoto.
+- **/?** - Muestra las opciones de línea de comandos para el visor de control remoto.  
+     
+**Ejemplo: CmRcViewer.exe** *<Dirección\>* *<\\\Nombre de servidor de sitio>*  
 

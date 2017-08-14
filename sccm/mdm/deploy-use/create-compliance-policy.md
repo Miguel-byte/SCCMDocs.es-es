@@ -16,11 +16,11 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 robots: noindex
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 216d288aa7b7f2b98df86f59355d879366dcd44d
-ms.openlocfilehash: 4baa6e0fe009f5f7dc33f5ab4adb1ec5e5c5271b
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 6630d0170df22f46f14df241ffd8d48266c69263
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 
@@ -277,6 +277,31 @@ ms.lasthandoff: 05/17/2017
       * iOS 6+
       * Android 4.0+
       * Samsung KNOX Standard 4.0+
+<br></br>
+* **Tipo de contraseña requerida**. Especifica si el usuario debe crear una contraseña numérica o alfanumérica. En el caso de las contraseñas alfanuméricas, puede especificar también el número mínimo de juegos de caracteres que debe tener la contraseña. Los cuatro juegos de caracteres son: letras minúsculas, letras mayúsculas, símbolos y números.
+
+    **Compatible con:**
+    * Windows Phone 8+
+    * Windows 8.1+
+    * iOS 6+
+<br></br>
+* **Bloquear depuración USB en el dispositivo**. No es necesario configurar este parámetro porque la depuración USB ya está deshabilitada en los dispositivos Android for Work.
+
+    **Compatible con:**
+    * Android 4.0+
+    * Samsung KNOX Standard 4.0+
+<br></br>
+* **Bloquear aplicaciones de orígenes desconocidos**. Los dispositivos deben impedir la instalación de aplicaciones de orígenes desconocidos. No es necesario configurar este valor, ya que los dispositivos Android for Work siempre restringen la instalación de orígenes desconocidos.
+
+    **Compatible con:**
+    * Android 4.0+
+    * Samsung KNOX Standard 4.0+
+<br></br>
+* **Requerir examen de amenazas en las aplicaciones**. Este valor especifica que la característica Verificar aplicaciones está habilitada en el dispositivo. 
+
+    **Compatible con:**
+    * Android 4.2 hasta 4.4
+    * Samsung KNOX Standard 4.0+
 
 ### <a name="find-an-app-id"></a>Búsqueda de un identificador de aplicación
 

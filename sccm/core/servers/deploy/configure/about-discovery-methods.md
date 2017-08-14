@@ -1,7 +1,7 @@
 ---
 title: "Métodos de detección | Microsoft Docs"
 ms.custom: na
-ms.date: 2/3/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 81d7516b814d2db74d4d857871071c8911755754
-ms.openlocfilehash: 6e53f501281e31f2b7df54b9740eac970f108257
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 442e5e1fbddd00248819a8de79adc78929474fc0
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>Acerca de los métodos de detección para System Center Configuration Manager
@@ -189,6 +189,27 @@ En el cuadro de diálogo **Propiedades de detección de usuarios de Active Direc
 Las acciones de detección de usuarios de Active Directory se registran en el archivo **adusrdis.log** de la carpeta **&lt;Ruta de instalación\>\LOGS** del servidor de sitio.  
 
 Para más información sobre cómo configurar este método de detección, vea [Configurar métodos de detección para System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
+
+## <a name="azureaddisc"></a> Detección de usuarios de Azure Active Directory
+A partir de la versión 1706, puede usar la funcionalidad de detección de usuarios de Azure Active Directory (Azure AD) al configurar el entorno para usar los servicios de Azure.
+Use este método de detección para buscar la instancia de Azure AD en la que se autentican los usuarios con el fin de encontrar los atributos siguientes:  
+-   objectId
+-   DisplayName
+-   mail
+-   mailNickname
+-   onPremisesSecurityIdentifier
+-   userPrincipalName
+-   tenantID de AAD
+
+Este método es compatible con una sincronización completa y la sincronización delta de datos de usuario de Azure AD. Esta información puede utilizarse con los datos de detección que recopile de los otros métodos de detección.
+
+Las acciones para la detección de usuarios de Azure AD se registran en el archivo SMS_AZUREAD_DISCOVERY_AGENT.log del servidor de sitio de nivel superior de la jerarquía.
+
+Para configurar la detección de usuarios de Azure AD, utilice al Asistente de servicios de Azure.  Para obtener más información sobre cómo configurar este método de detección, consulte la sección [Configuración de la detección de usuarios de Azure AD](/sccm/core/servers/deploy/configure/configure-discovery-methods).
+
+
+
+
 
 ##  <a name="bkmk_aboutHeartbeat"></a> Detección de latidos  
 **Configurable:** Sí  
@@ -407,7 +428,7 @@ Cuando estos tres métodos de detección se ejecutan en un sitio específico, el
 
 La detección busca objetos en las ubicaciones especificadas y, después, intenta recopilar información sobre los objetos. Cuando se puede identificar suficiente información acerca de un recurso, se crea un DDR. La información necesaria varía en función del método de detección que se utilice.  
 
-Si configura el mismo método de detección para que se ejecute en diferentes sitios de Configuration Manager a fin de sacar partido de la consulta de servidores locales de Active Directory, puede configurar cada sitio con un único conjunto de opciones de detección. Dado que los datos de detección se comparten con cada sitio de la jerarquía, evite la superposición entre estas configuraciones para detectar de forma eficaz una sola vez cada recurso. 
+Si configura el mismo método de detección para que se ejecute en diferentes sitios de Configuration Manager a fin de sacar partido de la consulta de servidores locales de Active Directory, puede configurar cada sitio con un único conjunto de opciones de detección. Dado que los datos de detección se comparten con cada sitio de la jerarquía, evite la superposición entre estas configuraciones para detectar de forma eficaz una sola vez cada recurso.
 
 En entornos más pequeños puede ejecutar cada método de detección en un único sitio de la jerarquía para reducir la sobrecarga de trabajo administrativo y la posibilidad de que varias acciones de detección vuelvan a encontrar los mismos recursos. Al reducir el número de sitios que ejecutan la detección, puede reducir el ancho de banda de red general usado por la detección. También puede reducir el número general de DDR creados y que tienen que procesar los servidores de sitios.  
 

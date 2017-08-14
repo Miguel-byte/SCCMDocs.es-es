@@ -2,7 +2,7 @@
 title: Implementar aplicaciones | Microsoft Docs
 description: "Cree un tipo de implementación o simule la implementación de una aplicación con System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,21 +16,20 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
-ms.openlocfilehash: 0eaa1d13e9c273a6649f50d73fb357f04464d94c
+ms.translationtype: HT
+ms.sourcegitcommit: b7461f89f483314bd07248bbc9d5dde85ca6b6c2
+ms.openlocfilehash: f704d1b0ec48e3a7bbea784a7c18de77b21cd0ee
 ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="deploy-applications-with-system-center-configuration-manager"></a>Implementar aplicaciones con System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
- Antes de implementar una aplicación de System Center Configuration Manager, debe crear al menos un tipo de implementación para la aplicación. Para obtener más información sobre la creación de aplicaciones y los tipos de implementación, consulte [Create applications](../../apps/deploy-use/create-applications.md) (Crear aplicaciones).
+Antes de implementar una aplicación de System Center Configuration Manager, debe crear al menos un tipo de implementación para la aplicación. Para obtener más información sobre la creación de aplicaciones y los tipos de implementación, consulte el artículo sobre [cómo crear aplicaciones](/sccm/apps/deploy-use/create-applications).
 
- También puede simular la implementación de una aplicación. Este tipo de implementación prueba la aplicabilidad de una implementación de aplicación en equipos sin instalar o desinstalar la aplicación. Una implementación simulada evalúa el método de detección, los requisitos y las dependencias de un tipo de implementación y muestra los resultados en el nodo **Implementaciones** del área de trabajo **Supervisión**. Para obtener más información, consulte [Simulate application deployments ](../../apps/deploy-use/simulate-application-deployments.md) (Simular implementaciones de aplicaciones).
+ También puede simular la implementación de una aplicación. Este tipo de implementación prueba la aplicabilidad de una implementación de aplicación en equipos sin instalar o desinstalar la aplicación. Una implementación simulada evalúa el método de detección, los requisitos y las dependencias de un tipo de implementación y muestra los resultados en el nodo **Implementaciones** del área de trabajo **Supervisión**. Para obtener más información, consulte el artículo sobre [simular implementaciones de aplicaciones ](/sccm/apps/deploy-use/simulate-application-deployments).
 
 > [!IMPORTANT]
 >  Puede implementar (instalar o desinstalar) aplicaciones necesarias, pero no paquetes o actualizaciones de software. Los dispositivos inscritos en MDM tampoco admiten implementaciones simuladas, la experiencia del usuario o la configuración de programación.
@@ -45,61 +44,73 @@ ms.lasthandoff: 05/17/2017
 
 En la página **General** del Asistente para implementar software, especifique la información siguiente:
 
-- **Software**: muestra la aplicación que se va a implementar. Puede hacer clic en **Examinar** para seleccionar otra aplicación.
-- **Recopilación**: haga clic en **Examinar** para seleccionar la recopilación en la que se va a implementar la aplicación.
-- **Usar grupos de puntos de distribución predeterminados asociados a esta recopilación**: seleccione esta opción si quiere almacenar el contenido de la aplicación en el grupo de puntos de distribución predeterminados de la recopilación. Si no asocia la recopilación seleccionada con un grupo de puntos de distribución, esta opción aparecerá atenuada.
-- **Distribuir contenido automáticamente para las dependencias**: si esta opción está habilitada y cualquiera de los tipos de implementación de la aplicación contiene dependencias, el contenido de la aplicación dependiente se enviará también a los puntos de distribución.
+- **Software**  
+Muestra la aplicación que se va a implementar. Puede hacer clic en **Examinar** para seleccionar otra aplicación.
+- **Colección**  
+Haga clic en **Examinar** para seleccionar la colección en la que se va a implementar la aplicación.
+- **Usar grupos de puntos de distribución predeterminados asociados a esta recopilación**  
+Seleccione esta opción si desea almacenar el contenido de la aplicación en el grupo de puntos de distribución predeterminado de la colección. Si no asocia la recopilación seleccionada con un grupo de puntos de distribución, esta opción aparecerá atenuada.
+- **Distribuir contenido automáticamente para las dependencias**  
+Si esta opción está habilitada y cualquiera de los tipos de implementación de la aplicación contiene dependencias, el contenido de la aplicación dependiente se enviará también a los puntos de distribución.
 
     >[!IMPORTANT]
     > Si actualiza la aplicación dependiente después de haber implementado la aplicación principal, cualquier contenido nuevo para la dependencia no se distribuirá automáticamente.
 
-- **Comentarios (opcional)** : si lo desea, escriba una descripción de esta implementación.
+- **Comentarios (opcional)**  
+Especifique, si lo desea, un nombre y una descripción para este tipo de implementación.
 
 ### <a name="specify-content-options-for-the-deployment"></a>Especificar las opciones de contenido de la implementación
 
-En la página **Contenido**, haga clic en **Agregar** para agregar el contenido asociado a esta implementación a los puntos de distribución o grupos de puntos de distribución. Si ha seleccionado **Use default distribution points associated to this collection** (Usar puntos de distribución predeterminados asociados a esta recopilación) en la página **General**, esta opción se rellenará automáticamente y solo podrá modificarla un miembro del rol de seguridad Administrador de aplicaciones.
+En la página **Contenido**, haga clic en **Agregar** para agregar el contenido asociado a esta implementación a los puntos de distribución o grupos de puntos de distribución. Si ha seleccionado **Use default distribution points associated to this collection** (Usar puntos de distribución predeterminados asociados a esta colección) en la página **General**, esta opción se rellenará automáticamente y solo podrá modificarla un miembro del rol de seguridad Administrador de aplicaciones.
 
 ### <a name="specify-deployment-settings"></a>Especificar la configuración de implementación
 
 En la página **Configuración de implementación** del Asistente para implementar software, especifique la información siguiente:
 
-- **Acción**: en la lista desplegable, seleccione si la finalidad de la implementación es **Instalar** o **Desinstalar** la aplicación.
+- **Acción**  
+En la lista desplegable, seleccione si la finalidad de la implementación es **Instalar** o **Desinstalar** la aplicación.
 
     > [!NOTE]
     >  Si una aplicación se implementa dos veces en un dispositivo, una vez con una acción de **Instalar** y otra con una acción de **Desinstalar**, la implementación de la aplicación con una acción de **Instalar** tendrá prioridad.
 
 No puede cambiar la acción de una implementación después de haberla creado.
 
-- **Propósito**: en la lista desplegable, seleccione una de las opciones siguientes:
-    - **Disponible**: si la aplicación se implementa en un usuario, este la verá publicada en el Centro de software y la podrá instalar a petición.
-    - **Requerido**: la aplicación se implementa automáticamente según la programación. Si el estado de implementación de la aplicación no está oculto, cualquier persona que use la aplicación puede realizar un seguimiento de su estado de implementación e instalar la aplicación desde el Centro de software antes de la fecha límite.
+- **Finalidad**  
+en la lista desplegable, elija una de las siguientes opciones:
+    - **Disponible**  
+    Si la aplicación se implementa en un usuario, este la verá publicada en el Centro de software y la podrá instalar a petición.
+    - **Requerido**  
+    La aplicación se implementa automáticamente según la programación. Si el estado de implementación de la aplicación no está oculto, cualquier persona que use la aplicación puede realizar un seguimiento de su estado de implementación e instalar la aplicación desde el Centro de software antes de la fecha límite.
 
     > [!NOTE]   
     >  Cuando la acción de implementación se establece en **Desinstalar**, el propósito de la implementación se establece automáticamente en **Requerido** y no se puede cambiar.  
 
-- **Deploy automatically according to schedule whether or not a user is logged on** (Implementar automáticamente según la programación tanto si un usuario inició sesión como si no): si la implementación es en un usuario, seleccione esta opción para implementar la aplicación en los dispositivos primarios del usuario. Esta configuración no requiere que el usuario inicie sesión para ejecutar la implementación. No seleccione esta opción si el usuario debe proporcionar entrada para completar la instalación. Esta opción solo está disponible cuando la implementación tiene un propósito **Requerido**.
+- **Implementar automáticamente según la programación tanto si un usuario inició sesión como si no**  
+Si la implementación va dirigida a un usuario, seleccione esta opción para implementar la aplicación en los dispositivos principales del usuario. Esta configuración no requiere que el usuario inicie sesión para ejecutar la implementación. No seleccione esta opción si el usuario debe proporcionar entrada para completar la instalación. Esta opción solo está disponible cuando la implementación tiene un propósito **Requerido**.
 
-
-- **Enviar paquetes de reactivación**: si el propósito de la implementación se establece en **Requerido** y se selecciona esta opción, se enviará un paquete de reactivación a los equipos antes de instalar la implementación. Este paquete reactiva el equipo a la hora límite de instalación. Para poder utilizar esta opción, los equipos y las redes deben configurarse para Wake on LAN.
-- **Permitir a los clientes de una conexión a Internet de uso medido descargar contenido una vez cumplida la fecha límite de instalación, lo cual podría suponer costes adicionales**: esta opción solo está disponible para implementaciones con un propósito **Requerido**.
-- **Cerrar automáticamente los archivos ejecutables especificados en la ficha Comportamiento de instalación del cuadro de diálogo de propiedades Tipo de implementación que estén en ejecución**: para obtener más información sobre cómo configurar una lista de los archivos ejecutables que pueden impedir la instalación de una aplicación, vea **Comprobación de los archivos ejecutables en ejecución antes de instalar una aplicación** más adelante en este tema.
-- **Solicitar aprobación del administrador si los usuarios solicitan esta aplicación**: si esta opción está seleccionada, el administrador debe aprobar las solicitudes de la aplicación de cualquier usuario antes de poder instalarla. Esta opción aparece atenuada si el propósito de la implementación es **Requerido** o si se implementa la aplicación en una recopilación de dispositivos.
+- **Enviar paquetes de reactivación**  
+Si el propósito de implementación se establece en **Requerido** y se selecciona esta opción, se enviará un paquete de reactivación a los equipos antes de instalar la implementación. Este paquete reactiva el equipo a la hora límite de instalación. Para poder utilizar esta opción, los equipos y las redes deben configurarse para Wake on LAN.
+- **Permitir a los clientes de una conexión a Internet de uso medido descargar contenido una vez cumplida la fecha límite de instalación, lo cual podría suponer costos adicionales**  
+Esta opción solo está disponible cuando la implementación tiene un propósito **Requerido**.
+- **Cerrar automáticamente los archivos ejecutables especificados en la ficha Comportamiento de instalación del cuadro de diálogo de propiedades Tipo de implementación que estén en ejecución**  
+Para obtener más información sobre cómo configurar una lista de los archivos ejecutables que pueden impedir la instalación de una aplicación, consulte la sección **Comprobación de los archivos ejecutables en ejecución antes de instalar una aplicación** más adelante en este tema.
+- **Solicitar aprobación del administrador si los usuarios solicitan esta aplicación**  
+Si esta opción está seleccionada, el administrador debe aprobar las solicitudes de la aplicación de cualquier usuario antes de poder instalarla. Esta opción aparece atenuada si el propósito de la implementación es **Requerido** o si se implementa la aplicación en una recopilación de dispositivos.
 
     > [!NOTE]
     >  Las solicitudes de aprobación de aplicación se muestran en el nodo **Solicitudes de aprobación** , en **Administración de aplicaciones** en el área de trabajo **Biblioteca de software** . Si una solicitud no se aprueba antes de 45 días, se quitará. Además, volver a instalar el cliente de Configuration Manager puede cancelar las solicitudes de aprobación pendientes.
     >  Después de aprobar una aplicación para la instalación, puede denegar la solicitud. Para ello, haga clic en **Denegar** en la consola de Configuration Manager (antes, este botón aparecía atenuado tras la aprobación).
     >  Esta acción no desinstala la aplicación de los dispositivos, pero impide que los usuarios instalen copias nuevas de la aplicación desde el Centro de software.
 
-
-
-- **Automatically upgrade any superseded version of this application** (Actualizar automáticamente cualquier versión reemplazada de esta aplicación): si se selecciona esta opción, cualquier versión reemplazada de la aplicación se actualizará con la aplicación nueva.
+- **Actualizar automáticamente cualquier versión reemplazada de esta aplicación**  
+Si se selecciona esta opción, cualquier versión reemplazada de la aplicación se actualizará con la aplicación de sustitución.
 
 ### <a name="specify-scheduling-settings-for-the-deployment"></a>Especificar la configuración de programación de la implementación
 
-En la página **Programación** del Asistente para implementar software, establezca cuándo se implementará o estará disponible para dispositivos clientes esta aplicación.
+En la página **Programación** del Asistente para implementar software, establezca cuándo se implementará o estará disponible para dispositivos cliente esta aplicación.
 Las opciones de esta página variarán dependiendo de si la acción de la implementación se establece en **Disponible** o **Requerido**.
 
-En algunos casos, es posible que quiera dar más tiempo a los usuarios para instalar las implementaciones de aplicaciones o las actualizaciones de software necesarias más allá de los plazos que ha establecido. Normalmente esto es necesario cuando un equipo ha estado apagado durante un largo período de tiempo y tiene que instalar muchas implementaciones de aplicaciones o actualizaciones. Por ejemplo, si un usuario final acaba de volver de vacaciones, es posible que tenga que esperar bastante mientras se instalan las implementaciones de aplicaciones vencidas. Para solucionar este problema, puede definir un período de gracia de cumplimiento mediante la implementación de la configuración de cliente de Configuration Manager en una colección.
+En algunos casos, es posible que quiera dar más tiempo a los usuarios para instalar las implementaciones de aplicaciones o las actualizaciones de software necesarias más allá de los plazos que ha establecido. Normalmente, se requiere cuando un equipo ha estado apagado durante un largo período y tiene que instalar muchas implementaciones de aplicaciones o actualizaciones. Por ejemplo, si un usuario final ha vuelto de vacaciones, es posible que tenga que esperar bastante mientras se instalan las implementaciones de aplicaciones vencidas. Para solucionar este problema, puede definir un período de gracia de cumplimiento mediante la implementación de la configuración de cliente de Configuration Manager en una colección.
 
 Para configurar el período de gracia, haga lo siguiente:
 
@@ -133,26 +144,26 @@ En la página **Directivas de configuración de aplicaciones**, haga clic en **N
 
 En la página **Resumen** del Asistente para implementar software, revise las acciones que llevará a cabo esta implementación y, después, haga clic en **Siguiente** para finalizar el asistente.
 
-La nueva implementación se mostrará en la lista de **Implementaciones** en el nodo **Implementaciones** del área de trabajo **Supervisión** . Puede editar las propiedades de esta implementación o eliminar la implementación de la pestaña **Implementaciones** del panel de detalles de la aplicación.
+La nueva implementación se mostrará en la lista de **Implementaciones** del nodo **Implementaciones** del área de trabajo **Supervisión** . Puede editar las propiedades de esta implementación o eliminar la implementación de la pestaña **Implementaciones** del panel de detalles de la aplicación.
 
 ## <a name="delete-an-application-deployment"></a>Eliminar la implementación de una aplicación
 
 1.  En la consola de Configuration Manager, vaya a **Biblioteca de software** > **Administración de aplicaciones** > **Aplicaciones**.
-
-3.  En la lista de **Aplicaciones**, seleccione la aplicación que incluya la implementación que se va a eliminar.
-
+3.  En la lista **Aplicaciones**, seleccione la aplicación que incluya la implementación que se va a eliminar.
 4.  En la pestaña **Implementaciones** de la lista *<nombre de aplicación\>*, seleccione la implementación de la aplicación que desee eliminar. Después, en la pestaña **Implementación**, en el grupo **Implementación**, haga clic en **Eliminar**.
 
- Cuando se elimina la implementación de una aplicación, no se quitan las instancias de la aplicación que ya se han instalado. Para quitar estas aplicaciones, debe implementar la aplicación en los equipos con la opción **Desinstalar**. Si elimina una implementación de aplicación o quita un recurso de la recopilación en la que está implementando, la aplicación ya no estará visible en el Centro de software.
+Cuando se elimina la implementación de una aplicación, no se quitan las instancias de la aplicación que ya se han instalado. Para quitar estas aplicaciones, debe implementar la aplicación en los equipos con la opción **Desinstalar**. Si elimina una implementación de aplicación o quita un recurso de la recopilación en la que está implementando, la aplicación ya no estará visible en el Centro de software.
 
 ## <a name="user-notifications-for-required-deployments"></a>Notificaciones de usuario para las implementaciones requeridas
 Cuando recibe software obligatorio a través de la opción **Snooze and remind me** (Posponer y volver a recordármelo), puede seleccionar los siguientes valores en la lista desplegable:
-- **Más adelante**: especifica que las notificaciones se programan según la configuración de notificaciones establecida en Configuración de agente de cliente.
-- **Hora fija**: especifica que la notificación se programará para mostrarse de nuevo después de la hora seleccionada. Por ejemplo, si selecciona 30 minutos, la notificación se mostrará de nuevo transcurridos 30 minutos.
+- **Más adelante**.  
+Especifica que las notificaciones se programan según la configuración de notificación establecida en la configuración de agente de cliente.
+- **Hora fija**.  
+Especifica que la notificación se programará para mostrarse de nuevo después de la hora seleccionada. Por ejemplo, si selecciona 30 minutos, la notificación se mostrará de nuevo transcurrido ese tiempo.
 
 ![Página Agente de equipo de Configuración de agente de cliente](media/ComputerAgentSettings.png)
 
-El tiempo máximo que se puede posponer siempre se basa en los valores de notificación configurados en Configuración de agente de cliente en cada momento a lo largo de la escala de tiempo de implementación. Por ejemplo, si la opción **La fecha límite de la implementación es de más de 24 horas. Recordar al usuario cada (horas)** de la página **Agente de equipo** se configura para 10 horas y pasan más de 24 horas antes de la fecha límite en que se inicia el cuadro de diálogo, verá un conjunto de opciones para posponer de 10 horas como máximo. Cuando se acerca la fecha límite, el cuadro de diálogo muestra menos opciones, en consonancia con la configuración de agente de cliente correspondiente a cada componente de la escala de tiempo de implementación.
+El tiempo máximo que se puede posponer siempre se basa en los valores de notificación configurados en Configuración de agente de cliente en cada momento a lo largo de la escala de tiempo de implementación. Por ejemplo, si la opción **La fecha límite de la implementación es de más de 24 horas. Recordar al usuario cada (horas)** de la página **Agente de equipo** se configura para 10 horas y pasan más de 24 horas antes de la fecha límite en que se inicia el cuadro de diálogo, verá un conjunto de opciones para posponer de 10 horas como máximo. Cuando se acerca la fecha límite, el cuadro de diálogo muestra menos opciones, en consonancia con la configuración de agente cliente correspondiente a cada componente de la escala de tiempo de implementación.
 
 Además, en una implementación de alto riesgo, como una secuencia de tareas que implementa un sistema operativo, la experiencia de notificación del usuario es ahora más intrusiva. En lugar de una notificación transitoria en la barra de tareas, cada vez que se le notifica que se necesita mantenimiento de software crítico, aparece un cuadro de diálogo como el siguiente en el equipo:
 
@@ -163,7 +174,7 @@ Además, en una implementación de alto riesgo, como una secuencia de tareas que
 >[!Tip]
 >Se introdujo con la versión 1702, y se trata de una característica de versión preliminar. Para habilitarla, vea [Características de versión preliminar en System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/manage/pre-release-features).
 
-En el cuadro de diálogo **Propiedades** de un tipo de implementación, en la pestaña **Comportamiento de instalación**, se puede especificar uno de varios archivos ejecutables que, si se está ejecutando, bloqueará la instalación del tipo de implementación. El usuario debe cerrar el archivo ejecutable en ejecución (o se puede cerrar automáticamente para las implementaciones con un propósito de requerido) antes de poder instalar el tipo de implementación. Para configurar esto:
+En el cuadro de diálogo **Propiedades** de un tipo de implementación, en la pestaña **Comportamiento de instalación** se puede especificar uno o varios archivos ejecutables que, si se están ejecutando, bloquearán la instalación del tipo de implementación. El usuario debe cerrar el archivo ejecutable en ejecución (o se puede cerrar automáticamente para las implementaciones con un propósito de requerido) antes de poder instalar el tipo de implementación. Para configurar esto:
 
 1. Abra el cuadro de diálogo **Propiedades** para cualquier tipo de implementación.
 2. En la pestaña **Comportamiento de instalación** del cuadro de diálogo *<deployment type name>* **Propiedades** y haga clic en **Agregar**.
@@ -173,13 +184,14 @@ En el cuadro de diálogo **Propiedades** de un tipo de implementación, en la pe
 
 Una vez que la aplicación alcanza los equipos cliente, se aplica el comportamiento siguiente:
 
-- Si la aplicación se ha implementado como **Disponible** y un usuario final intenta instalarla, se le pedirá que cierre los ejecutables en ejecución especificados antes de poder continuar con la instalación.
+- Si la aplicación se ha implementado como **Disponible** y un usuario final trata de instalarla, se le pedirá que cierre los ejecutables en ejecución especificados antes de poder continuar con la instalación.
 
-- Si la aplicación se ha implementado como **Requerido** y la opción **Cerrar automáticamente los ejecutables en ejecución especificados en la pestaña Comportamiento de instalación del cuadro de diálogo de propiedades del tipo de implementación** está seleccionada, verán un cuadro de diálogo que les informa de que los archivos ejecutables especificados se cerrarán automáticamente cuando se alcance la fecha límite de instalación de la aplicación. Puede programar estos cuadros de diálogo en **Configuración de cliente** > **Agente de equipo**. Si no quiere que el usuario final vea estos mensajes, seleccione **Ocultar en el Centro de software y ocultar todas las notificaciones** en la pestaña **Experiencia del usuario** de las propiedades de la implementación.
+- Si la aplicación se ha implementado como **Requerido** y la opción **Cerrar automáticamente los ejecutables en ejecución especificados en la pestaña Comportamiento de instalación del cuadro de diálogo de propiedades del tipo de implementación** está seleccionada, verá un cuadro de diálogo que les informa de que los archivos ejecutables especificados se cerrarán automáticamente cuando se alcance la fecha límite de instalación de la aplicación. Puede programar estos cuadros de diálogo en **Configuración de cliente** > **Agente de equipo**. Si no quiere que el usuario final vea estos mensajes, seleccione **Ocultar en el Centro de software y ocultar todas las notificaciones** en la pestaña **Experiencia del usuario** de las propiedades de la implementación.
 
 - Si la aplicación se ha implementado como **Requerido** y la opción **Cerrar automáticamente los ejecutables en ejecución especificados en la pestaña Comportamiento de instalación del cuadro de diálogo de propiedades del tipo de implementación** no está seleccionada, no se podrá instalar la aplicación si una o varias de las aplicaciones especificadas está en ejecución.
 
-## <a name="for-more-information"></a>Para obtener más información:
-- [Settings to manage high-risk deployments (Configuración para administrar implementaciones de alto riesgo)](../../protect/understand/settings-to-manage-high-risk-deployments.md)
-- [Cómo configurar el cliente](../../core/clients/deploy/configure-client-settings.md)
+## <a name="for-more-information"></a>Más información
+
+   -  [Settings to manage high-risk deployments (Configuración para administrar implementaciones de alto riesgo)](../../protect/understand/settings-to-manage-high-risk-deployments.md)  
+   -  [Cómo configurar el cliente](../../core/clients/deploy/configure-client-settings.md)
 
