@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 94e42cbe-9df8-4228-a04e-0ad7626180ca
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: e6a7a0b853be930b558cdd739b90285ebb8538e7
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="administrator-checklist-for-power-management-in-system-center-configuration-manager"></a>Lista de comprobación del administrador para la administración de energía en System Center Configuration Manager
 
@@ -80,9 +79,3 @@ Esta lista de comprobación de administrador proporciona los pasos recomendados 
 |----------|-------------|  
 |Si los equipos de la jerarquía no han entrado en el modo de suspensión o hibernación, ejecute el informe **Informe de insomnio** para mostrar las causas posibles.|El **Informe de insomnio** muestra una lista de las causas comunes que impidieron que los equipos entraran en modo de suspensión o hibernación y el número de equipos afectados por cada causa durante un período de tiempo especificado. Para más información, vea [Cómo supervisar y planear la administración en el Administrador de configuración de energía](monitor-and-plan-for-power-management.md).|  
 |Si se aplican varios planes de energía a un equipo, se aplica el plan de energía menos restrictivo. Ejecute el informe **Equipos con varios planes de energía** para ver los equipos con varios planes de energía aplicados.|Vea **Equipos con varios planes de energía** en [Cómo supervisar y planear la administración en el Administrador de configuración de energía](monitor-and-plan-for-power-management.md).|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -6,22 +6,19 @@ ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: bed70809008fde5e2b0215f4dce049402edf83ba
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="define-network-locations-as-boundaries-for-system-center-configuration-manager"></a>Definición de las ubicaciones de red como límites para System Center Configuration Manager
 
@@ -44,7 +41,7 @@ Cada límite está disponible para que lo use cada sitio de la jerarquía. Despu
 
 1.  En la consola de Configuration Manager, haga clic en **Administración** > **Configuración de jerarquía** > **Límites**.  
 
-2.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear Boundary.**.  
+2.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear Boundary.**  
 
 3.  En la pestaña **General** del cuadro de diálogo Crear límite, puede especificar una **Descripción** para identificar el límite con un nombre o referencia fácil de reconocer.  
 
@@ -87,4 +84,3 @@ Cada límite está disponible para que lo use cada sitio de la jerarquía. Despu
     -   Para quitar este límite de un grupo de límites, seleccione el grupo de límites y haga clic en **Quitar**.  
 
 7.  Haga clic en **Aceptar** para cerrar las propiedades de límite y guardar la configuración.  
-

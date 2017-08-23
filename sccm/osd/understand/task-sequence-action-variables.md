@@ -6,22 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2269031-0977-4f01-a274-420e00630575
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 6049ec2369e0a97b21ce6523ba8448335385ab9a
-ms.lasthandoff: 12/16/2016
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="task-sequence-action-variables-in-system-center-configuration-manager"></a>Variables de acción de secuencias de tareas en System Center Configuration Manager
 
@@ -347,4 +345,3 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |Nombre de variable de acción<br /><br /> (entrada)|Descripción|  
 |----------------------------------------|-----------------|  
 |OSDSetupAdditionalUpgradeOptions<br /><br /> (entrada)|Especifica las opciones adicionales de la línea de comandos que se agregan al programa de instalación durante la actualización a Windows 10. No se comprueban las opciones de la línea de comandos. Por lo tanto, compruebe que la opción que especifique sea precisa.<br /><br /> Para más información, consulte [Opciones de la línea de comandos del programa de instalación de Windows](https://msdn.microsoft.com/library/windows/hardware/dn938368\(v=vs.85\).aspx).|  
-
