@@ -4,23 +4,21 @@ description: "Conozca las características disponibles en Technical Preview para
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 134a2f60-811e-4dc9-a8f5-1ce0018c5c12
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: a84d3ab55066d26c3199ea374d8beb472d66f43f
-ms.contentlocale: es-es
-ms.lasthandoff: 01/24/2017
-
+ms.openlocfilehash: 08747ca981f6697e2bd621afe5df0e3bd06b332d
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1606 para System Center Configuration Manager
 
@@ -266,4 +264,3 @@ Con Technical Preview 1606 se han presentado varios cambios que se aplican a Act
 -   **Cambio de nombre de la opción de preproducción:**
 
     En el nodo Actualizaciones y mantenimiento, el botón denominado **Opciones de cliente** ahora se denomina **Promover el cliente de preproducción**.
-

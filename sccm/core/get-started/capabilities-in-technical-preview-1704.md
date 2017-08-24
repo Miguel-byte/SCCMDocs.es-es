@@ -4,8 +4,7 @@ description: "Obtenga información sobre las características disponibles en Tec
 ms.custom: na
 ms.date: 4/21/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -14,12 +13,11 @@ ms.assetid: e318e705-20f2-417d-8cde-7dfe661b2fa7
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
 ms.openlocfilehash: d7caee47ca74064630e09c1bdb94187af256d4b4
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1704-for-system-center-configuration-manager"></a>Funciones de Technical Preview 1704 para System Center Configuration Manager
 
@@ -73,4 +71,3 @@ Hemos realizado las siguientes mejoras en la implementación del sistema operati
 - [Nueva columna **Versión de SO** para las imágenes del sistema operativo](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17558407-add-a-column-to-the-operating-system-images-node-f): hemos agregado una nueva columna denominada **Versión de SO** para mostrar la versión del sistema operativo de la imagen al ver la información en los nodos **Imágenes de sistema operativo** y **Paquetes de actualización del sistema operativo**. Solo se muestra la versión del primer índice en el .WIM. Vaya a la pestaña **Detalles** de la imagen para revisar las versiones de sistema operativo para otros índices.
 
 - [Registro más eficaz en Smsts.log](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16791919-stop-filling-smsts-log-with-useless): a partir de esta versión, se dejan de escribir entradas en el archivo smsts.log para obtener información de CCM_CIVersionInfo.PolicyID. Antes de esta versión, podría haber muchas entradas con esta información, lo que dificultaba la búsqueda de la información más pertinente en el archivo de registro.
-

@@ -6,8 +6,7 @@ ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
@@ -15,12 +14,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: eedbf12d3bf628666efc90c85a8dfab37e4dc9ab
-ms.contentlocale: es-es
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>El punto de servicio de almacenamiento de datos para System Center Configuration Manager
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -194,4 +192,3 @@ Al abrir un informe de almacenamiento de datos, se devuelve el siguiente el erro
 | **A**  |  Mediante informes integrados, un usuario solicita datos. Esta solicitud se pasa al punto de Reporting Services mediante SQL Server Reporting Services. |  
 | **B**  |      La mayoría de los informes se refieren a información actual y estas solicitudes se ejecutan en la base de datos del sitio. |  
 | **C**  | Cuando un informe solicita datos históricos, mediante uno de los informes con una *Categoría* de **Almacenamiento de datos**, la solicitud se ejecuta en la base de datos de almacenamiento de datos.   |  
-

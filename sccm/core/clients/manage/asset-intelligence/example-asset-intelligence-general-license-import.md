@@ -6,23 +6,20 @@ ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e6258333-a783-440b-b1af-f8023b782fbc
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 6ee39d311108253ece1c9d60c25ac06017867c1f
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 400afbe8c09b80985187a34b0dd0f3f8581c7d4e
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="example-asset-intelligence-general-license-import-file-in-system-center-configuration-manager"></a>Ejemplo de archivo de importación de licencia general de Asset Intelligence en System Center Configuration Manager
 
@@ -42,4 +39,3 @@ La información de ejemplo de este tema se puede utilizar para crear un archivo 
 |Título de software 8|Publicador de software|1.08|Inglés|1|Número de compra|Nombre del distribuidor|10/10/2010|0|10/10/2012|Comentario|  
 |Título de software 9|Publicador de software|1.09|Inglés|1|Número de compra|Nombre del distribuidor|10/10/2010|0|10/10/2012|Comentario|  
 |Título de software 10|Publicador de software|1.10|Inglés|1|Número de compra|Nombre del distribuidor|10/10/2010|0|10/10/2012|Comentario|  
-

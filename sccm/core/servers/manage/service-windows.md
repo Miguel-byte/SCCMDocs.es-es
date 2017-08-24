@@ -6,21 +6,20 @@ ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ca4886d4-7173-46be-8dcd-1657d5b0deb9
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
 ms.openlocfilehash: d06a2a955ff59fa84bb844033fe31874fc735087
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 #  <a name="service-windows-for-site-servers"></a>Ventanas de servicio para servidores de sitio
 
@@ -43,9 +42,3 @@ Cuándo se configura una ventana de servicio:
 1.  En la consola de Configuration Manager, abra **Administración** > **Configuración del sitio** > **Sitios** y seleccione el servidor de sitio en el que quiere configurar un periodo para tareas administrativas.  
 
 2.  A continuación, modifique las **Propiedades** de los servidores de sitio y seleccione la pestaña **Ventana de servicio** , donde puede establecer una o varias ventanas de servicio para ese servidor de sitio.  
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-

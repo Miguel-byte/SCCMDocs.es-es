@@ -6,20 +6,19 @@ ms.date: 1/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10192da2633555ab3bae60dbb1156d1926f9a4a0
 ms.openlocfilehash: b49bd179da850cee35b2487a353bb1788df03d58
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="support-for-virtualization-environments-for-system-center-configuration-manager"></a>Compatibilidad con entornos de virtualización de System Center Configuration Manager
 
@@ -52,7 +51,7 @@ Configuration Manager no puede administrar máquinas virtuales a menos que esté
 
 Las máquinas virtuales no reciben ninguna consideración especial. Por ejemplo, Configuration Manager no puede determinar si una actualización se debe volver a aplicar a una imagen de máquina virtual si la máquina virtual se ha detenido y reiniciado sin guardar el estado de la máquina virtual a la que se ha aplicado la actualización.  
 
-##  <a name="a-namebkmkazurea-microsoft-azure-virtual-machines"></a><a name="bkmk_Azure"></a> Máquinas virtuales de Microsoft Azure  
+##  <a name="bkmk_Azure"></a> Máquinas virtuales de Microsoft Azure  
  Configuration Manager puede ejecutarse en máquinas virtuales de Azure y localmente dentro de la red corporativa física. Puede usar Configuration Manager con máquinas virtuales de Azure en los escenarios siguientes:  
 
 -   **Escenario 1:** puede ejecutar Configuration Manager en una máquina virtual de Azure y usarlo para administrar clientes instalados en otras máquinas virtuales de Azure.  
@@ -67,9 +66,3 @@ Para obtener más información, vea [Configuration Manager en Azure - Preguntas 
 
 > [!IMPORTANT]  
 >  Los sitios y clientes de Configuration Manager que se ejecutan en máquinas virtuales de Azure están sujetos a los mismos requisitos de licencia que las instalaciones locales.  
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-

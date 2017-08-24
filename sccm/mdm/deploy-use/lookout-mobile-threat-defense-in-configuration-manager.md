@@ -6,8 +6,7 @@ ms.date: 04/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9083c571-f4fc-4a78-adc5-8aec84dabcbd
@@ -15,13 +14,11 @@ caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
 ms.openlocfilehash: 21841d97387f07f53993d957641f9ad892d723c2
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-access-to-company-resource-based-on-device-network-and-application-risk"></a>Administrar el acceso a los recursos de la empresa según el dispositivo, la red y el riesgo de aplicación
 
@@ -90,9 +87,8 @@ Detecte amenazas en la red como ataques de tipo "Man in the middle" e impida la 
 
 ## <a name="next-steps"></a>Pasos siguientes
 Aquí se muestran los pasos principales que debe realizar para implementar esta solución:
-1.    [Set up your subscription with Lookout mobile threat protection (Configurar su suscripción con Lookout Mobile Threat Protection)](set-up-your-subscription-with-lookout.md)
-2.    [Enable Lookout MTP connection in Intune (Habilitar la conexión de Lookout MTP en Intune)](enable-lookout-connection-in-intune.md)
+1.  [Set up your subscription with Lookout mobile threat protection (Configurar su suscripción con Lookout Mobile Threat Protection)](set-up-your-subscription-with-lookout.md)
+2.  [Enable Lookout MTP connection in Intune (Habilitar la conexión de Lookout MTP en Intune)](enable-lookout-connection-in-intune.md)
 3.  [Configure and deploy Lookout for work application (Configurar e implementar la aplicación Lookout for Work)](configure-and-deploy-lookout-for-work-apps.md)
-4.    [Configure compliance policy (Configurar directiva de cumplimiento)](enable-device-threat-protection-rule-compliance-policy.md)
-5.    [Solucionar problemas de integración de Lookout](troubleshoot-lookout-integration.md)
-
+4.  [Configure compliance policy (Configurar directiva de cumplimiento)](enable-device-threat-protection-rule-compliance-policy.md)
+5.  [Solucionar problemas de integración de Lookout](troubleshoot-lookout-integration.md)

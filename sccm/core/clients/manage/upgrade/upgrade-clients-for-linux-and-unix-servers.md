@@ -6,23 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7d2bb377-1005-4a55-bd1f-b80a6d0b22e1
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: eea9faaac579ecafd67eaac05dc7ee7ca7819db7
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 394ba7c236c05cc90a3d7f99eb6146b15d620f11
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-upgrade-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>Cómo actualizar clientes para servidores Linux y UNIX en System Center Configuration Manager
 
@@ -63,4 +60,3 @@ Puede actualizar la versión del cliente para Linux y UNIX en un equipo a una ve
      Por ejemplo, use la siguiente línea de comandos para ejecutar el script: **at -f /tmp/upgrade.sh -m now + 5 minutes**  
 
  Una vez que el cliente programe correctamente el script **upgrade.sh** que se va a ejecutar, el cliente enviará un mensaje de estado para indicar que la implementación de software se completó correctamente. Sin embargo, la instalación de cliente real la administra el equipo después del retraso. Una vez finalizada la actualización del cliente, revise el archivo **/var/opt/microsoft/scxcm.log** en el equipo cliente para validar la instalación. Además, puede confirmar que el cliente está instalado y se comunica con el sitio. Para ello, consulte los detalles del cliente en el nodo **Dispositivos** del área de trabajo **Activos y compatibilidad** en la consola de Configuration Manager.  
-

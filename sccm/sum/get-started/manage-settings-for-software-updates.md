@@ -1,5 +1,4 @@
 ---
-
 title: "Administrar la configuración de las actualizaciones de software | Microsoft Docs"
 description: "Obtenga información acerca de la configuración de cliente adecuada para las actualizaciones de software en su sitio después de instalar el punto de actualización de software."
 keywords: 
@@ -10,18 +9,14 @@ ms.date: 03/26/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: fe4a8f56e0b554e206bcc4503a0268dc761ded81
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 #  <a name="BKMK_ManageSUSettings"></a> Administrar la configuración de las actualizaciones de software  
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -141,4 +136,3 @@ Si se utiliza, la comprobación de CRL debe estar habilitada en las consolas de 
 En el equipo que realiza la comprobación de CRL, desde el DVD del producto, ejecute lo siguiente desde un símbolo del sistema: **\SMSSETUP\BIN\X64\\**<*language*>**\UpdDwnldCfg.exe /checkrevocation**.  
 
 Por ejemplo, para Inglés (Estados Unidos) debe ejecutar **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation**  
-

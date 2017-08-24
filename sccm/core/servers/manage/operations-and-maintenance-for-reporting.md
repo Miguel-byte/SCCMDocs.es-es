@@ -6,22 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f62d969dd49fb00b688602128df74b28ff551135
 ms.openlocfilehash: df572cd0c64c82e25164430a53e1b893b3ba3cf5
-ms.contentlocale: es-es
-ms.lasthandoff: 06/07/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="operations-and-maintenance-for-reporting-in-system-center-configuration-manager"></a>Operaciones y mantenimiento de informes en System Center Configuration Manager
 
@@ -363,4 +360,3 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 -   En la página **Resumen** , revise la configuración de la suscripción de informe. Haga clic en **Anterior** para cambiar la configuración o haga clic en **Siguiente** para crear la suscripción de informe.  
 
 -   En la página **Finalización** , haga clic en **Cerrar** para salir del asistente. Compruebe que la suscripción de informe se creó correctamente. Puede ver y modificar suscripciones de informes en el nodo **Suscripciones** , en **Informes** , en el área de trabajo **Supervisión** .  
-

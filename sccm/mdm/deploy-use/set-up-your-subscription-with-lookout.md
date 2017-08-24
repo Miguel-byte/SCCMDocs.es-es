@@ -6,8 +6,7 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6087b279-ba05-4824-b5e3-3af14f3d3cfe
@@ -15,13 +14,11 @@ caps.latest.revision:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 2d01b6d327e98a433030faebbff8f80fa6a8f48e
-ms.contentlocale: es-es
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: b777140c753e709f4048a30e63d8ae730d3e8723
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="set-up-your-subscription-for--lookout-device-threat-protection"></a>Configurar su suscripción para la protección contra amenazas de dispositivo de Lookout
 
@@ -131,4 +128,3 @@ La protección contra amenazas de dispositivo de Lookout clasifica las amenazas 
 Una vez que se ha completado la configuración, la protección contra amenazas de dispositivo de Lookout comienza a sondear Azure AD para los dispositivos que se corresponden con los grupos de inscripción especificados.  Puede encontrar información sobre los dispositivos inscritos en el módulo Dispositivos.  El estado inicial de los dispositivos se muestra como pendiente.  El estado del dispositivo cambia una vez que la aplicación Lookout for Work se instala, se abre y se activa en el dispositivo.  Para obtener información sobre cómo obtener que la aplicación Lookout for Work se inserte en el dispositivo, vea el tema [Configure and deploy Lookout for work apps (Configurar e implementar aplicaciones Lookout for Work)](configure-and-deploy-lookout-for-work-apps.md).
 ## <a name="next-steps"></a>Pasos siguientes
 [Enable Lookout MTP connection in Intune (Habilitar la conexión de Lookout MTP en Intune)](enable-lookout-connection-in-intune.md)
-

@@ -6,22 +6,21 @@ ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 17fab17f-304d-4f6a-87c7-30ab4f5521ed
-caps.latest.revision: 0
-caps.handback.revision: 0
+caps.latest.revision: "0"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
 ms.openlocfilehash: 6bd6cd7ea3c41fa1d70e17a1290c9f1f74cc9e37
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="about-upgrade-update-and-install-for-site-and-hierarchy-infrastructure"></a>Acerca de la actualización e instalación para sitios y jerarquía de infraestructura
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -56,9 +55,3 @@ La *instalación* se utiliza cuando crea una nueva jerarquía de Configuration M
 Cuando se instala un nuevo sitio primario o un sitio de administración central, la ubicación de setup.exe y los archivos de origen relacionados que utiliza dependen de su escenario de instalación.
 
 Para obtener más información, consulte [Preparar la instalación de sitios](/sccm/core/servers/deploy/install/prepare-to-install-sites).
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-

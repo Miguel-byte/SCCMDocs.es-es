@@ -6,23 +6,20 @@ ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0e45290e-f8f7-4335-801e-570225d12c2b
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
-ms.openlocfilehash: deed112cca011b3b410c1197b7abf0f36a864f3c
-ms.contentlocale: es-es
-ms.lasthandoff: 01/03/2017
-
-
+ms.openlocfilehash: 0baadb95ec8dbb945f1a611ebb95a03cec3199bd
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-configure-hardware-inventory-in-system-center-configuration-manager"></a>Cómo configurar el inventario de hardware en System Center Configuration Manager
 
@@ -50,4 +47,3 @@ Este procedimiento configura las opciones de cliente predeterminadas del inventa
 7.  Configure otras opciones de [configuración del cliente de inventario de hardware](../../../../core/clients/deploy/about-client-settings.md#hardware-inventory) que necesite.  
 
 Los dispositivos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [How to manage clients in System Center Configuration Manager (Cómo administrar clientes en System Center Configuration Manager)](../../../../core/clients/manage/manage-clients.md).  
-

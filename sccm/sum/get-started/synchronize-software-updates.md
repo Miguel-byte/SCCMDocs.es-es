@@ -1,5 +1,4 @@
 ---
-
 title: "Administrar la sincronización de actualizaciones de software | Microsoft Docs"
 description: "Siga estos pasos para programar la sincronización de actualizaciones de software, iniciar la sincronización de actualizaciones de software de forma manual y supervisar la sincronización de actualizaciones de software."
 keywords: 
@@ -10,18 +9,15 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: e68170a16a6a908e035247ed9c0f3cc6cdbe1983
-
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
-#  <a name="a-namebkmksumsynca-synchronize-software-updates"></a><a name="BKMK_SUMSync"></a> Sincronizar actualizaciones de software
+#  <a name="BKMK_SUMSync"></a> Sincronizar actualizaciones de software
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
@@ -80,9 +76,3 @@ Después de iniciar el proceso de sincronización, puede usar la consola de Conf
 Después de sincronizar las actualizaciones de software por primera vez o después de que haya clasificaciones o productos nuevos, debe [configurar los productos y clasificaciones nuevos](configure-classifications-and-products.md) para sincronizar las actualizaciones de software con los nuevos criterios.
 
 Después de sincronizar las actualizaciones de software con los criterios que necesite, [administre la configuración de las actualizaciones de software](manage-settings-for-software-updates.md).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

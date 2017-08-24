@@ -6,23 +6,20 @@ ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ccce7cb5-e18f-4337-8adf-2018edca3c00
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c5a58d79f81ccdf19ad88dc932e3a52eac2c18ab
 ms.openlocfilehash: 80c43ab93ee5a2de6bf8d7993dfd46f0005d2df8
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configure-source-hierarchies-and-source-sites-for-migration-to-system-center-configuration-manager"></a>Configurar jerarquías de origen y sitios de origen para la migración a System Center Configuration Manager
 
@@ -106,4 +103,3 @@ Use el siguiente procedimiento para configurar sitios de origen adicionales para
 7. Haga clic en **Aceptar** para guardar la configuración. Se abrirá el cuadro de diálogo **Estado de obtención de datos** y la recopilación de los datos se iniciará automáticamente.  
 
 8.  Cuando termine la recopilación de datos, haga clic en **Cerrar** para completar la configuración.  
-

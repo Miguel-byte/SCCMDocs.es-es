@@ -7,20 +7,18 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.topic: article
 ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 5276ad999fc871496d79e6efff34d5edc6335380
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager en Azure - Preguntas más frecuentes
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -41,11 +39,11 @@ No, es un escenario IaaS (infraestructura como servicio), dado que hospeda los s
 
 ### <a name="what-areas-should-i-pay-attention-to-when-considering-a-move-of-my-configuration-manager-infrastructure-to-azure"></a>¿A qué áreas debería prestar atención a la hora de plantearme la migración de mi infraestructura de Configuration Manager a Azure?
 Buena pregunta, estas son las áreas más importantes a la hora de tomar esa decisión. Cada una se analiza en una sección independiente de este tema:
-1.    Redes
-2.    Disponibilidad
-3.    Rendimiento
-4.    Coste
-5.    Experiencia del usuario
+1.  Redes
+2.  Disponibilidad
+3.  Rendimiento
+4.  Coste
+5.  Experiencia del usuario
 
 ## <a name="networking"></a>Redes
 ### <a name="what-about-networking-requirements-should-i-use-expressroute-or-an-azure-vpn-gateway"></a>¿Qué sucede con los requisitos de red? ¿Debo usar ExpressRoute o una puerta de enlace de VPN de Azure?
@@ -117,7 +115,7 @@ En las tablas siguientes se indican los recuentos de disco iniciales sugeridos p
 |**De 25 a 50 k**      | Servidor de sitio: F4S </br>Servidor de base de datos: DS13_V2 | Servidor de sitio: 1 x P30 </br>Servidor de base de datos: 2xP30 (seccionado)   |
 |**De 50 a 100 k**     | Servidor de sitio: F8S </br>Servidor de base de datos: DS14_V2 | Servidor de sitio: 2xP30 (seccionado)   </br>Servidor de base de datos: 3xP30 (seccionado)   |
 
-A continuación se muestra un ejemplo de la configuración de entre 50 000 y 100 000 clientes en DS14_V2 con tres discos P30 en un volumen seccionado con volúmenes lógicos independientes para los archivos de instalación y de base de datos de Configuration Manager:  ![Discos de VM](media/vm_disks.png)  
+A continuación se muestra un ejemplo de la configuración de entre 50 000 y 100 000 clientes en DS14_V2 con tres discos P30 en un volumen seccionado con volúmenes lógicos independientes para los archivos de instalación y de base de datos de Configuration Manager: ![Discos de VM](media/vm_disks.png)  
 
 
 
@@ -181,4 +179,3 @@ Es difícil de decir, ya que cada entorno es diferente. Lo mejor es hacer el cá
  - Más información sobre ExpressRoute: http://azure.microsoft.com/documentation/articles/expressroute-introduction/
 
  
-

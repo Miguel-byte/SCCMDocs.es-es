@@ -1,5 +1,4 @@
 ---
-
 title: "Sincronizar las actualizaciones sin conexión a Internet en Configuration Manager | Microsoft Docs"
 description: "Ejecute la sincronización de actualizaciones de software en el punto de actualización de software de nivel superior que está desconectado de Internet."
 keywords: 
@@ -10,19 +9,14 @@ ms.date: 01/23/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: fd9c1e9418ff1956c6ef98753e23a293440179be
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="synchronize-software-updates-from-a-disconnected-software-update-point"></a>Sincronizar actualizaciones de software desde un punto de actualización de software desconectado  
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -110,4 +104,3 @@ ms.lasthandoff: 05/17/2017
 Después de sincronizar las actualizaciones de software por primera vez o después de que haya clasificaciones o productos nuevos, debe [configurar los productos y clasificaciones nuevos](configure-classifications-and-products.md) para sincronizar las actualizaciones de software con los nuevos criterios.
 
 Después de sincronizar las actualizaciones de software con los criterios que necesite, [administre la configuración de las actualizaciones de software](manage-settings-for-software-updates.md).  
-

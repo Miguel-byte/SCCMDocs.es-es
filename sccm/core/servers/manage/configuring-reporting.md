@@ -6,22 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f62d969dd49fb00b688602128df74b28ff551135
 ms.openlocfilehash: 7ae6bac23e585d6f61aff0f3155d050f1b537620
-ms.contentlocale: es-es
-ms.lasthandoff: 06/07/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configuring-reporting-in-system-center-configuration-manager"></a>Configuración de informes en System Center Configuration Manager
 
@@ -300,4 +297,3 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Operaciones y mantenimiento de informes](operations-and-maintenance-for-reporting.md)
-

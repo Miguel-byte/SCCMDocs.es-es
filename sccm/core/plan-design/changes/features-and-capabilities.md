@@ -6,21 +6,20 @@ ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
-caps.latest.revision: 18
-caps.handback.revision: 0
+caps.latest.revision: "18"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 53b27dcb5c8bb670556fe4cee9e990619a9a63e9
 ms.openlocfilehash: 4691f43dccdf73936107f4635321897b9779bead
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="features-and-capabilities-of-system-center-configuration-manager"></a>Características y funcionalidades de System Center Configuration Manager
 
@@ -101,9 +100,3 @@ A continuación se indican las funcionalidades de administración principales de
  **Actualizaciones de software**  
 
  Proporciona un conjunto de herramientas y recursos que pueden ayudar a administrar, implementar y supervisar las actualizaciones de la empresa. Consulte [Introduction to software updates in System Center Configuration Manager](/sccm/sum/understand/software-updates-introduction) (Introducción a las actualizaciones de software en System Center Configuration Manager).  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

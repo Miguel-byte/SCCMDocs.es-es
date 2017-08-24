@@ -6,20 +6,19 @@ ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c28e3492-851a-40fc-ba13-67ebc2d8b41a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 5df6478362499d87038fa4ed2cb444aa8d5b4b7c
 ms.openlocfilehash: fb8a292c4fecbe5744e2cd09bc1442fab11046bc
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="operations-for-migrating-to-system-center-configuration-manager"></a>Operaciones para migrar a System Center Configuration Manager
 
@@ -39,7 +38,7 @@ Para migración en System Center Configuration Manager, puede migrar datos y cli
 
 -   [Finalizar la migración](#Complete_Migration)  
 
-##  <a name="a-namecreateeditmigrationjobsa-create-and-edit-migration-jobs"></a><a name="Create_Edit_migration_Jobs"></a> Crear y editar trabajos de migración  
+##  <a name="Create_Edit_migration_Jobs"></a> Crear y editar trabajos de migración  
  Use los procedimientos siguientes para crear trabajos de migración de datos, editar la lista de exclusión para los trabajos de migración basados en recopilación, configurar puntos de distribución compartidos y editar programaciones de trabajos de migración.  
 
 > [!NOTE]  
@@ -133,7 +132,7 @@ Para migración en System Center Configuration Manager, puede migrar datos y cli
 
 10. Confirme la configuración y después finalice el asistente.  
 
-###  <a name="a-namebkmkmodifyexclusionlista-modify-the-exclusion-list-for-migration"></a><a name="BKMK_Modify_Exclusion_List"></a> Modificar la lista de exclusión para la migración  
+###  <a name="BKMK_Modify_Exclusion_List"></a> Modificar la lista de exclusión para la migración  
 
 1.  En la consola de Configuration Manager, seleccione **Administración**.  
 
@@ -167,7 +166,7 @@ Para migración en System Center Configuration Manager, puede migrar datos y cli
 
 4.  En las propiedades del trabajo de migración, haga clic en la pestaña **Configuración**, cambie el tiempo de ejecución para el trabajo de migración y después haga clic en **Aceptar**.  
 
-##  <a name="a-namerunmigrationjobsa-run-migration-jobs"></a><a name="Run_Migration_Jobs"></a> Ejecutar trabajos de migración  
+##  <a name="Run_Migration_Jobs"></a> Ejecutar trabajos de migración  
  Use el procedimiento siguiente para ejecutar un trabajo de migración que aún no ha comenzado.  
 
 
@@ -179,7 +178,7 @@ Para migración en System Center Configuration Manager, puede migrar datos y cli
 
 4.  Haga clic en **Sí** para iniciar el trabajo de migración.  
 
-##  <a name="a-namebkmkprocupgrdssa-upgrade-or-reassign-a-shared-distribution-point"></a><a name="BKMK_ProcUpgrdSS"></a> Actualizar o volver a asignar un punto de distribución compartido  
+##  <a name="BKMK_ProcUpgrdSS"></a> Actualizar o volver a asignar un punto de distribución compartido  
  Puede actualizar un punto de distribución admitido compartido desde un sitio de origen de Configuration Manager 2007 (o bien volver a asignar un punto de distribución admitido compartido desde un sitio de origen de System Center Configuration Manager) para que sea un punto de distribución en la jerarquía de destino.  
 
 > [!IMPORTANT]  
@@ -204,7 +203,7 @@ Para migración en System Center Configuration Manager, puede migrar datos y cli
 
 6.  Confirme la configuración y después finalice el asistente.  
 
-##  <a name="a-namemonitormigrationa-monitor-migration-activity-in-the-migration-workspace"></a><a name="Monitor_MIgration"></a> Supervisar la actividad de migración en el área de trabajo de migración  
+##  <a name="Monitor_MIgration"></a> Supervisar la actividad de migración en el área de trabajo de migración  
  Use la consola de Configuration Manager para supervisar la migración.  
 
 1.  En la consola de Configuration Manager, seleccione **Administración**.  
@@ -215,10 +214,10 @@ Para migración en System Center Configuration Manager, puede migrar datos y cli
 
 4.  Puede ver los detalles y el estado del trabajo de migración seleccionado en las pestañas correspondientes a **Resumen** y **Objetos en el trabajo**.  
 
-##  <a name="a-namebkmkmigrateclientsa-migrate-clients"></a><a name="BKMK_MigrateClients"></a> Migrar clientes  
+##  <a name="BKMK_MigrateClients"></a> Migrar clientes  
  Después de migrar datos de clientes entre jerarquías, pero antes de finalizar la migración, planee la migración de los clientes a la jerarquía de destino. La migración de clientes entre jerarquías implica la desinstalación del software cliente Configuration Manager de equipos que están asignados a la jerarquía de origen y, después, la desinstalación del software cliente Configuration Manager de la jerarquía de destino. Si instala el cliente desde la jerarquía de destino también puede asignarlo a un sitio primario en esa jerarquía. Para más información sobre la migración de clientes, vea [Planear una estrategia de migración de clientes en System Center Configuration Manager](../../core/migration/planning-a-client-migration-strategy.md).  
 
-##  <a name="a-namecompletemigrationa-finish-migration"></a><a name="Complete_Migration"></a> Finalizar la migración  
+##  <a name="Complete_Migration"></a> Finalizar la migración  
  Use este procedimiento para finalizar la migración desde la jerarquía de origen.  
 
 1.  En la consola de Configuration Manager, seleccione **Administración**.  
@@ -238,9 +237,3 @@ Para migración en System Center Configuration Manager, puede migrar datos y cli
 8.  En el cuadro de diálogo **Limpiar datos de migración**, en la lista desplegable **Jerarquía de origen**, seleccione el código de sitio y el servidor de sitio del sitio de nivel superior de la jerarquía de origen y después haga clic en **Aceptar**.  
 
 9. Haga clic en **Sí** para finalizar el proceso de migración para la jerarquía de origen.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

@@ -9,16 +9,15 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: 70a0ad1da03a7ca88df206fec683ab1df2b531e1
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
-#  <a name="a-namebkmksumdeploya-deploy-software-updates"></a><a name="BKMK_SUMDeploy"></a> Implementar actualizaciones de software  
+#  <a name="BKMK_SUMDeploy"></a> Implementar actualizaciones de software  
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
@@ -34,7 +33,7 @@ Si configura una implementación de actualizaciones de software requeridas, las 
 
 Hay dos escenarios principales de implementación de las actualizaciones de software: la implementación manual y la implementación automática. Normalmente, primero implementará manualmente las actualizaciones de software para crear una línea de base en los equipos cliente. A partir de ahí, administrará las actualizaciones de software mediante la implementación automática.  
 
-## <a name="a-namebkmkmanualdeploymenta-manually-deploy-software-updates"></a><a name="BKMK_ManualDeployment"></a> Implementar actualizaciones de software manualmente
+## <a name="BKMK_ManualDeployment"></a> Implementar actualizaciones de software manualmente
 Puede seleccionar las actualizaciones de software en la consola de Configuration Manager e iniciar manualmente el proceso de implementación. Este método de implementación se utiliza normalmente para que los equipos cliente tengan todas las actualizaciones de software necesarias antes de que se creen las reglas de implementación automática que administran las implementaciones de las actualizaciones de software mensuales continuas, así como para implementar los requisitos de las actualizaciones de software fuera de banda. En la lista siguiente se indica el flujo de trabajo general de la implementación manual de las actualizaciones de software:  
 
 1. Filtre las actualizaciones de software que utilicen requisitos específicos. Por ejemplo, podría especificar criterios para la recuperación de todas las actualizaciones de software de seguridad o imprescindibles que se requieran en más de 50 equipos cliente.  
@@ -74,9 +73,3 @@ The Configuration Manager client downloads the content for required software upd
 
 
  <!-- For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).  -->
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

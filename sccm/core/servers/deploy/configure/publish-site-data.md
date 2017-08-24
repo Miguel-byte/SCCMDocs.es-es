@@ -6,22 +6,19 @@ ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 17cf034f-eaff-43ce-bc8e-917213c1db74
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e7629fdf7fdf615fa27894158c3d101432c95a04
 ms.openlocfilehash: bcfb002c503485f03ba27d7346acb61d0d3c6087
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="publish-site-data-for-system-center-configuration-manager"></a>Publicar datos de sitio para System Center Configuration Manager
 
@@ -73,4 +70,3 @@ Para obtener más información sobre cómo los clientes pueden buscar un punto d
     >  Si permite a los sitios publicar en un bosque, tendrá que extender el esquema de Active Directory de ese bosque para Configuration Manager. Es necesario que la cuenta del bosque de Active Directory tenga permisos de control total en el contenedor del sistema de ese bosque.  
 
 5.  Cuando termine la configuración de este bosque para utilizarlo con la detección de bosques de Active Directory, haga clic en **OK** para guardar la configuración.  
-

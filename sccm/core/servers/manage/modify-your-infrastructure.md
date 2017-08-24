@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
-caps.latest.revision: 19
-caps.handback.revision: 0
+caps.latest.revision: "19"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
 ms.openlocfilehash: a5228c4984347be4b115bfa5563791fa2fb7319c
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="modify-your-system-center-configuration-manager-infrastructure"></a>Modificar la infraestructura de System Center Configuration Manager
 
@@ -29,7 +28,7 @@ ms.openlocfilehash: a5228c4984347be4b115bfa5563791fa2fb7319c
 Después de instalar uno o varios sitios, es posible que deba modificar las configuraciones o realizar acciones que afecten a la infraestructura que tiene implementada.  
 
 
-##  <a name="a-namebkmkmanagesmsprovidera-manage-the-sms-provider"></a><a name="BKMK_ManageSMSprovider"></a> Administración del proveedor de SMS  
+##  <a name="BKMK_ManageSMSprovider"></a> Administración del proveedor de SMS  
  El proveedor de SMS [un archivo de biblioteca de vínculos dinámicos (smsprov.dll)] proporciona el punto de contacto administrativo para una o varias consolas de Configuration Manager. Al instalar varios proveedores de SMS, puede proporcionar redundancia a los puntos de contacto para administrar el sitio y la jerarquía.  
 
  En cada sitio de Configuration Manager, puede volver a ejecutar el programa de instalación para:  
@@ -65,7 +64,7 @@ Después de instalar uno o varios sitios, es posible que deba modificar las conf
 
  Cuando finalice el Asistente para instalación, se completa la configuración del proveedor de SMS. En la pestaña **General** del cuadro de diálogo **Propiedades** del sitio, puede comprobar los equipos que tienen un proveedor de SMS instalado para el sitio.  
 
-##  <a name="a-namebkmkconsolea-manage-the-configuration-manager-console"></a><a name="bkmk_Console"></a> Administración de la consola de Configuration Manager  
+##  <a name="bkmk_Console"></a> Administración de la consola de Configuration Manager  
  A continuación, se indican las tareas que puede realizar para administrar la consola de Configuration Manager:  
 
 -   **Modificar el idioma que se muestra en la consola de Configuration Manager**: para modificar los idiomas instalados, consulte [Administración del idioma de la consola de Configuration Manager](#BKMK_ManageConsoleLanguages) en este tema.  
@@ -76,7 +75,7 @@ Después de instalar uno o varios sitios, es posible que deba modificar las conf
 
 -   **Modificar permisos para limitar los usuarios administrativos que pueden ver contenido en la consola**: para modificar los permisos administrativos, que limitan qué usuarios pueden ver contenido y realizar acciones en la consola, consulte [Modify the administrative scope of an administrative user](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_ModAdminUser) (Modificación del ámbito administrativo de un usuario administrativo).     
 
-###  <a name="a-namebkmkmanageconsolelanguagesa-manage-configuration-manager-console-language"></a><a name="BKMK_ManageConsoleLanguages"></a> Administración del idioma de la consola de Configuration Manager  
+###  <a name="BKMK_ManageConsoleLanguages"></a> Administración del idioma de la consola de Configuration Manager  
  Durante la instalación del servidor de sitio, los archivos de instalación de la consola de Configuration Manager y los paquetes de idiomas compatibles con el sitio se copian en la subcarpeta **&lt;ConfigMgrInstallationPath\>\Tools\ConsoleSetup** del servidor de sitio.  
 
 -   Cuando inicia la instalación de la consola de Configuration Manager desde esta carpeta en el servidor de sitio, la consola de Configuration Manager y los archivos de paquetes de idioma admitidos se copian en el equipo.  
@@ -112,7 +111,7 @@ Por ejemplo, considere un escenario donde se instala la consola de Configuration
 
 4.  Para abrir la consola de Configuration Manager en el idioma configurado para el equipo, cambie el nombre de la carpeta al nombre original. Por ejemplo, cambie el nombre de **de.dehabilitado** a **de**.  
 
-##  <a name="a-namebkmkconfigdcomforremoteconsolea-configure-dcom-permissions-for-remote-configuration-manager-consoles"></a><a name="BKMK_ConfigDCOMforRemoteConsole"></a> Configuración de permisos de DCOM para consolas remotas de Configuration Manager  
+##  <a name="BKMK_ConfigDCOMforRemoteConsole"></a> Configuración de permisos de DCOM para consolas remotas de Configuration Manager  
  La cuenta de usuario que ejecuta la consola de Configuration Manager requiere el permiso para obtener acceso a la base de datos del sitio mediante el proveedor de SMS. Sin embargo, un usuario administrativo que usa una consola remota de Configuration Manager también requiere permisos de DCOM de **Activación remota** en:  
 
 -   El equipo de servidor de sitio  
@@ -147,7 +146,7 @@ Por ejemplo, considere un escenario donde se instala la consola de Configuration
 
  Repita este procedimiento en cada equipo del proveedor de SMS que pueda admitir consolas remotas de Configuration Manager.  
 
-##  <a name="a-namebkmkdbconfiga-modify-the-site-database-configuration"></a><a name="bkmk_dbconfig"></a> Modificación de la configuración de la base de datos del sitio  
+##  <a name="bkmk_dbconfig"></a> Modificación de la configuración de la base de datos del sitio  
  Después de instalar un sitio, puede modificar la configuración de la base de datos del sitio y el servidor de la base de datos del sitio mediante la ejecución del programa de instalación en un servidor de sitio de administración central o un servidor de sitio primario. Puede mover la base de datos del sitio a una nueva instancia de SQL Server en el mismo equipo o a otro equipo que ejecute una versión compatible de SQL Server. Estos y otros cambios relacionados no se admiten para la configuración de la base de datos en sitios secundarios.  
 
  Para obtener más información acerca de los límites de compatibilidad, consulte [Directiva de soporte técnico para los cambios de la base de datos manualmente en un entorno de Configuration Manager](https://support.microsoft.com/kb/3106512).  
@@ -178,7 +177,7 @@ Por ejemplo, considere un escenario donde se instala la consola de Configuration
 > [!IMPORTANT]  
 >  Antes de mover una base de datos que tenga una o más réplicas de base de datos para puntos de administración, deberá quitar primero las réplicas de la base de datos. Después de completar el traslado de la base de datos, se pueden reconfigurar las réplicas de la base de datos. Para obtener más información, vea [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md) (Réplicas de bases de datos para puntos de administración de System Center Configuration Manager).  
 
-##  <a name="a-namebkmkspna-manage-the-spn-for-the-site-database-server"></a><a name="bkmk_SPN"></a> Administración del SPN para el servidor de base de datos del sitio  
+##  <a name="bkmk_SPN"></a> Administración del SPN para el servidor de base de datos del sitio  
 Puede elegir la cuenta que ejecuta los servicios de SQL para la base de datos del sitio:  
 
 -   Cuando los servicios se ejecutan con la cuenta de sistema de equipos, el SPN se registra automáticamente.  
@@ -248,7 +247,7 @@ Puede registrar un SPN para la cuenta de servicio SQL Server del servidor de bas
 
 6.  Haga clic en **OK** después de que se haya cambiado correctamente la cuenta de servicio.  
 
-##  <a name="a-namebkmkreseta-run-a-site-reset"></a><a name="bkmk_reset"></a> Ejecutar un restablecimiento de sitio  
+##  <a name="bkmk_reset"></a> Ejecutar un restablecimiento de sitio  
  Cuando se ejecuta un restablecimiento de sitio en un sitio de administración central o un sitio primario, el sitio:  
 
 -   Vuelve a aplicar los permisos de registro y archivo de Configuration Manager predeterminados.  
@@ -306,7 +305,7 @@ La cuenta que utiliza para realizar un restablecimiento de sitio debe tener los 
 
 Cuando el restablecimiento del sitio haya finalizado, haga clic en **Cerrar** para completar este procedimiento.  
 
-##  <a name="a-namebkmksitelanga-manage-language-packs-at-a-site"></a><a name="bkmk_sitelang"></a> Administración de paquetes de idioma en un sitio  
+##  <a name="bkmk_sitelang"></a> Administración de paquetes de idioma en un sitio  
 Después de instalar un sitio, puede cambiar los paquetes de idioma de servidor y cliente que se usan:  
 
 **Paquetes de idioma de servidor:**  
@@ -356,7 +355,7 @@ Para obtener más información acerca de los idiomas de cliente y servidor que s
 
 8.  Haga clic en **Cerrar** para completar este procedimiento.  
 
-##  <a name="a-namebkmkmoddbalerta-modify-the-database-server-alert-threshold"></a><a name="BKMK_ModDBAlert"></a> Modificación del umbral de alerta del servidor de bases de datos  
+##  <a name="BKMK_ModDBAlert"></a> Modificación del umbral de alerta del servidor de bases de datos  
  De forma predeterminada, Configuration Manager genera alertas cuando en un servidor de base de datos de sitio queda poco espacio libre en disco. De forma predeterminada, se genera una advertencia cuando el espacio libre en disco es 10 GB o menor, y una alerta crítica cuando el espacio libre en disco es 5 GB o menor. Puede modificar estos valores o deshabilitar las alertas para cada sitio.  
 
  Para cambiar esta configuración:  
@@ -368,9 +367,3 @@ Para obtener más información acerca de los idiomas de cliente y servidor que s
 3.  En el cuadro de diálogo **Propiedades** del sitio, seleccione la pestaña **Alerta** y, a continuación, edite la configuración.  
 
 4.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo de propiedades del sitio.  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

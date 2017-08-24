@@ -6,23 +6,20 @@ ms.date: 2/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: bc15ee7e-4d0a-4463-ae2c-f72d8d45d65d
-caps.latest.revision: 17
-caps.handback.revision: 0
+caps.latest.revision: "17"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 88649111ea3a38c027efb4952211546afd0bf27e
 ms.openlocfilehash: 58beef440db8e019a06ce7c4c8eaabc8e85ce954
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prepare-active-directory-for-site-publishing"></a>Preparar Active Directory para la publicación de sitios
 
@@ -112,4 +109,3 @@ Para extender el esquema para Configuration Manager:
  Después de configurar el contenedor, conceder los permisos e instalar un sitio primario de Configuration Manager, puede configurar el sitio para la publicación de datos en Active Directory.  
 
  Para obtener más información sobre la publicación, consulte [Publicar datos de sitio para System Center Configuration Manager](../../../core/servers/deploy/configure/publish-site-data.md).  
-

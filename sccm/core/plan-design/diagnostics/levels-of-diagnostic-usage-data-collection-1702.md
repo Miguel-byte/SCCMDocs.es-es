@@ -6,12 +6,11 @@ ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d43ab033-2902-4681-8716-b4b17a6df372
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
@@ -33,12 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 0e1d93712150fb3d6fabc3f057711eba1194c3ad
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1702-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de uso para diagnóstico para la versión 1702 de System Center Configuration Manager
 
@@ -468,4 +466,3 @@ Para la versión 1702 de System Center Configuration Manager, este nivel incluye
 - Tipo de directivas de acceso condicional de EAS (bloquear o cuarentena) para dispositivos que administra Intune
 
 - Detalles de la aplicación de la Tienda Windows para empresas (lista no agregada de aplicaciones sincronizadas, incluido AppID, el estado en línea o sin conexión y el recuento total de licencias adquiridas)
-

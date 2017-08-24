@@ -6,23 +6,20 @@ ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
-caps.latest.revision: 12
-caps.handback.revision: 0
+caps.latest.revision: "12"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 485cb3ca4988f983c1ec71b6c8daf136571bf0ea
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="customize-operating-system-images-with-system-center-configuration-manager"></a>Personalizar imágenes de sistema operativo con System Center Configuration Manager
 
@@ -139,4 +136,3 @@ Las imágenes de sistema operativo de System Center Configuration Manager son ar
  Puede automatizar el proceso para crear un equipo de referencia usando una secuencia de tareas para implementar el sistema operativo, los controladores, las aplicaciones, etc.  Use las etapas siguientes para compilar el equipo de referencia y, después, para capturar la imagen de sistema operativo del equipo de referencia.  
 
 -   Use una secuencia de tareas para compilar y capturar la imagen de sistema operativo del equipo de referencia.  Para conocer los pasos detallados, consulte [Usar una secuencia de tareas para compilar y capturar un equipo de referencia](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS).  
-

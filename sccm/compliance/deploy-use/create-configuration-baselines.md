@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: 649942d3d468ec35c7246e08f741cdebd22fb3ac
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-configuration-baselines-in-system-center-configuration-manager"></a>Crear líneas base de configuración en System Center Configuration Manager
 
@@ -70,9 +69,3 @@ Las líneas base de configuración en System Center Configuration Manager contie
 8.  Para eliminar un elemento de configuración de la línea base de configuración, seleccione un elemento de configuración y luego haga clic en **Quitar**.  
 
 9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Crear línea de base de configuración** y crear la línea base de configuración.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

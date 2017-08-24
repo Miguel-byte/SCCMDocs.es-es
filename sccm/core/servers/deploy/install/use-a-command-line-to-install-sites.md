@@ -6,21 +6,19 @@ ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f7cd9c71287d62c9f5d36e2f032bc2a6065572ae
 ms.openlocfilehash: 8ff48b08d1abb7481592c0ea076d4efa15c3d8ee
-ms.contentlocale: es-es
-ms.lasthandoff: 06/06/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>Usar una línea de comandos para instalar sitios de System Center Configuration Manager
 
@@ -126,4 +124,3 @@ El script contiene valores, nombres de clave y nombres de sección. Tenga en cue
     -   Cuando hace referencia al archivo de script del programa de instalación en el símbolo del sistema, debe proporcionar la ruta de acceso completa al archivo. Por ejemplo, si su archivo de inicialización de instalación se denomina Setup.ini y se almacena en la carpeta C:\Setup, en el símbolo del sistema, escriba: **setup /script c:\setup\setup.ini**.  
 
 -   La cuenta que ejecuta el programa de instalación debe tener derechos de **administrador** en el equipo. Al ejecutar el programa de instalación con el script de instalación desatendida, abra la ventana del símbolo del sistema mediante la opción **Ejecutar como administrador**.   
-

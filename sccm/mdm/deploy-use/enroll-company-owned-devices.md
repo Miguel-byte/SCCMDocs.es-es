@@ -6,22 +6,19 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2754ce6-1460-4ddd-9050-2cc87e7964f4
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: f0b503d8c9eba2dd1b6eb4c41ec40c001b727326
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="enroll-company-owned-devices-for-hybrid-deployments-with-configuration-manager"></a>Inscribir dispositivos de empresa para implementaciones híbridas con Configuration Manager
 
@@ -47,4 +44,3 @@ Los dispositivos de empresa (COD) o de la organización se pueden incorporar a l
  ## <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>Declarar previamente dispositivos con números de serie de iOS o IMEI
 
 Puede identificar los dispositivos corporativos si importa sus números de identidad internacional de equipo móvil (IMEI) o los números de serie de iOS. Puede cargar un archivo de valores separados por comas (.csv) que incluya los números IMEI de los dispositivos o escribir la información de los dispositivos de forma manual.  Consulte [Predeclare devices with hardware ID numbers](../../mdm/deploy-use/predeclare-devices-with-hardware-id.md) (Predeclarar dispositivos con números de Id. de hardware).
-

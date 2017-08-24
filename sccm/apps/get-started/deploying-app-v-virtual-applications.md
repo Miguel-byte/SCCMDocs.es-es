@@ -6,23 +6,20 @@ ms.date: 02/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
-caps.latest.revision: 11
-caps.handback.revision: 0
+caps.latest.revision: "11"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c73373e6f2f28f8ddc197695e4b4e3488c9c1f5b
 ms.openlocfilehash: 0808edbb9a0433dd658d37e8d005c89a4778735c
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="deploy-app-v-virtual-applications-with-system-center-configuration-manager"></a>Implementar aplicaciones virtuales de App-V con System Center Configuration Manager
 
@@ -214,4 +211,3 @@ Puede usar los siguientes informes para supervisar App-V en su entorno de Config
 Configuration Manager registra información sobre las implementaciones de aplicaciones virtuales en archivos de registro. Para obtener información acerca de los archivos de registro usados por aplicaciones virtuales y la administración de aplicaciones de Configuration Manager, vea [Archivos de registro en System Center Configuration Manager](../../core/plan-design/hierarchy/log-files.md).  
 
 Para Windows Vista, Windows 7 y Windows 8, puede ver los registros para el cliente de App-V en C:\ProgramData\Microsoft\Application Virtualization Client.  
-

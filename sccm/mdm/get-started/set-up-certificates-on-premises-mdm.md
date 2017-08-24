@@ -6,23 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
-caps.latest.revision: 27
-caps.handback.revision: 0
+caps.latest.revision: "27"
+caps.handback.revision: "0"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: ef35e98ccae0c708cd12767eef9f923f211849fb
-ms.contentlocale: es-es
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: 3d695a2a40fd86ad991a26db3dcecbbb9ca186cc
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="set-up-certificates-for-trusted-communications-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Configuración de certificados para comunicaciones de confianza para la administración local de dispositivos móviles en System Center Configuration Manager
 
@@ -173,4 +170,3 @@ La administración local de dispositivos móviles de System Center Configuration
      Haga clic en **Siguiente**.  
 
 9. Revise la configuración y haga clic en **Finalizar**.  
-

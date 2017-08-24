@@ -9,14 +9,13 @@ ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
-translationtype: Human Translation
-ms.sourcegitcommit: af5f58dd5fe1f19d7a70cb9516af159c6682d194
 ms.openlocfilehash: ae09a02dd5d67113b9a7e2ce146c844efa4caf55
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 >[!IMPORTANT]
 >Esta es una función de la versión preliminar disponible en Configuration Manager, versión 1606 y versión 1610. Se incluyen características de versión preliminar en el producto para la realización de las primeras pruebas en un entorno de producción, pero no se debe considerar que ya estén listas para él. Debe activar esta función para que esté disponible. Para más información, consulte [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease) (Uso de características de la versión preliminar a partir de las actualizaciones).
@@ -89,9 +88,3 @@ Si un equipo no puede liberar un bloqueo de implementación, puede liberar de fo
 1.  En el área de trabajo **Activos y compatibilidad**, haga clic en **Recopilaciones de dispositivos** y luego haga clic en la recopilación para borrar los bloqueos de implementación.  
 
 2.  En la pestaña **Inicio**, en el grupo **Implementación**, haga clic en **Borrar los bloqueos de implementación del grupo de servidores**. Si los clientes no han podido instalar las actualizaciones de software e impiden que otros clientes instalen las suyas, los bloqueos de implementación se pueden borrar de forma manual.  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

@@ -6,22 +6,20 @@ ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 5f1412fb132e3a074742e11f1142b2594146cbe1
 ms.openlocfilehash: 44b4707b1a40624c51decf548d23ddd2164c5833
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-create-collections-in-system-center-configuration-manager"></a>Cómo crear recopilaciones en System Center Configuration Manager
 
@@ -207,4 +205,3 @@ En el cuadro de diálogo **Seleccionar recopilaciones**, seleccione las recopila
     >  El archivo que quiera importar se debe haber exportado de un sitio que ejecute la misma versión de Configuration Manager que este. Para obtener más información sobre cómo exportar recopilaciones, consulte [How to manage collections in System Center Configuration Manager](../../../../core/clients/manage/collections/manage-collections.md) (Cómo administrar recopilaciones en System Center Configuration Manager).  
 
 6.  Complete el asistente para importar la recopilación. La nueva recopilación se muestra en el nodo **Recopilaciones de usuarios** o **Recopilaciones de dispositivos** del área de trabajo **Activos y compatibilidad** . Actualice o vuelva a cargar la consola de Configuration Manager para ver los miembros de la recopilación recién importada.  
-

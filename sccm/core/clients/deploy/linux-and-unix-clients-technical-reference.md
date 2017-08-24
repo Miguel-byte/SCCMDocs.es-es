@@ -6,22 +6,19 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e5a8c79f-5791-49c5-8055-086d742e5559
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 4a10d3a59aa6417857abc163dd5416f167049f65
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 89668f3e2e0a3e2e0178e5b2c91b2508f583649f
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="linux-and-unix-clients-component-services-and-commands-for-system-center-configuration-manager"></a>Servicios de componentes y comandos de clientes Linux y UNIX en System Center Configuration Manager
 
@@ -45,4 +42,3 @@ ms.lasthandoff: 12/16/2016
 |Solaris 11|Iniciar:<br /><br /> **svcadm enable -s svc:/application/management/omiserver**<br /><br /> **svcadm enable -s svc:/application/management/ccmexecd**<br /><br /> Detener:<br /><br /> **svcadm disable -s svc:/application/management/ccmexecd**<br /><br /> **svcadm disable -s svc:/application/management/omiserver**|  
 |AIX|Iniciar:<br /><br /> **startsrc -s omiserver**<br /><br /> **startsrc -s ccmexec**<br /><br /> Detener:<br /><br /> **stopsrc -s ccmexec**<br /><br /> **stopsrc -s omiserver**|  
 |HP-UX|Iniciar: **/sbin/init.d/ccmexecd start**<br /><br /> Detener: **/sbin/init.d/ccmexecd stop**<br /><br /> Reiniciar: **/sbin/init.d/ccmexecd restart**|  
-

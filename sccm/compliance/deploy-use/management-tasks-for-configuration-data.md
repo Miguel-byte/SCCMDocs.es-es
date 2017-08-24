@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b48c693c-d2b0-4707-a5dd-fe92172c49fe
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: 1a6084834384e695b49a71fe23833049c86f8dbc
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-configuration-data-in-system-center-configuration-manager"></a>Administración de datos de configuración en System Center Configuration Manager
 
@@ -58,9 +57,3 @@ Una vez creados los elementos de configuración y las líneas base de configurac
 |**Copiar**|Crea una copia de la línea base de configuración seleccionada con un nombre que especifique. La nueva línea base de configuración no conserva ninguna relación con la línea base de configuración original.|  
 |**Eliminar**|Abre el cuadro de diálogo **Eliminar línea base de configuración** , donde puede revisar las referencias a esta línea base de configuración.<br /><br /> Debe quitar todas las referencias a una línea base de configuración antes de poder eliminar la línea base de configuración.|  
 |**Implementar**|Abre el cuadro de diálogo **Implementar línea de base de configuración** , en el que puede implementar una o varias líneas base de configuración en dispositivos de la jerarquía.<br /><br /> Para obtener más información, consulte [Deploy configuration baselines](../../compliance/deploy-use/deploy-configuration-baselines.md) (Implementación de líneas base de configuración).|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -6,24 +6,21 @@ ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
-caps.latest.revision: 8
-caps.handback.revision: 0
+caps.latest.revision: "8"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: cd8c644d07dab0010dc211df8ce4f2dc6e1fa7ae
-ms.contentlocale: es-es
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="upgrade-windows-devices-with-the-edition-upgrade-policy-in-system-center-configuration-manager"></a>Actualizar dispositivos de Windows con la directiva de actualización de edición en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -101,4 +98,3 @@ Al supervisar la implementación que acaba de crear desde el nodo **Implementaci
 Estos errores no significan que hubo un error en la implementación. En el equipo de destino, compruebe que la actualización se realizó correctamente.
 
 Una vez que la directiva alcance un equipo Windows de destino y se evalúe, se reiniciará durante las dos horas posteriores para aplicar la actualización. Asegúrese de informar a los usuarios a los que implemente la directiva, o prográmela para que se ejecute fuera del horario laboral de los usuarios.
-

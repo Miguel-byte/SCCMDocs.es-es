@@ -6,21 +6,19 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 09f8bc7ee04ff64934030f825a791bc043341963
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
+ms.openlocfilehash: 9c920651ba1dc6e0a28df458d28956126ddbaff0
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-configure-wake-on-lan-in-system-center-configuration-manager"></a>Cómo configurar Wake on LAN en System Center Configuration Manager
 
@@ -59,4 +57,3 @@ Puede utilizar los siguientes informes de Wake On LAN para supervisar la instala
 
 > [!TIP]
 > Para comprobar si el proxy de reactivación está en funcionamiento, pruebe la conexión en un equipo inactivo. Por ejemplo, establezca una conexión con una carpeta compartida en ese equipo o intente conectarse al equipo mediante Escritorio remoto. Si usa Direct Access, compruebe que los prefijos IPv6 funcionan realizando las mismas pruebas para un equipo inactivo que se encuentra actualmente en Internet.
-

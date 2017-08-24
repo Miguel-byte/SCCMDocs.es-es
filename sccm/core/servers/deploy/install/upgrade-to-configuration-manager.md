@@ -6,22 +6,19 @@ ms.date: 6/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
 ms.openlocfilehash: 1166b739e1e8d667172d97883f484fdbc3a142c1
-ms.contentlocale: es-es
-ms.lasthandoff: 06/13/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="upgrade-to-system-center-configuration-manager"></a>Actualizar a System Center Configuration Manager
 
@@ -402,4 +399,3 @@ Después de actualizar un sitio a un nuevo Service Pack, es posible que tenga qu
 - **Al actualizar a la versión 1511:** para asegurarse de que los clientes en sitios secundarios pueden encontrar el punto de administración desde el sitio secundario (punto de administración proxy), agregue de forma manual el punto de administración a los grupos de límites que también incluyen los puntos de distribución en el sitio secundario.  
 
 - **Al actualizar a la versión 1606 o posteriores:** los puntos de administración proxy se agregan de forma automática a los grupos de límites que incluyen puntos de distribución en el sitio secundario.
-

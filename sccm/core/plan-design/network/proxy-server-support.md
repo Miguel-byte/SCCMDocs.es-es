@@ -6,23 +6,20 @@ ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c4f30e4839709722b216262b21d7b51c07d24d1e
 ms.openlocfilehash: dc36be47310d2c2178c974a2b503d0b5f9f6e2ec
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="proxy-server-support-in-system-center-configuration-manager"></a>Compatibilidad de servidor proxy en System Center Configuration Manager
 
@@ -87,4 +84,3 @@ Configure el servidor proxy en la página Punto de actualización de software ac
 3.  En Propiedades de sistema de sitio, seleccione la pestaña **Proxy** y, después, establezca la configuración de proxy para este servidor de sitio primario.  
 
 4.  Seleccione **Aceptar** para guardar la nueva configuración del servidor proxy.  
-

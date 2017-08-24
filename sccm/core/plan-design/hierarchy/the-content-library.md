@@ -6,21 +6,19 @@ ms.date: 2/14/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d31fecdb71b498864df2bce7403a4290ea9700ae
 ms.openlocfilehash: 0fa9f431c00476d71b2b08f92f914d76636d1a27
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="the-content-library-in-system-center-configuration-manager"></a>La biblioteca de contenido en System Center Configuration Manager
 
@@ -66,4 +64,3 @@ Para obtener más información sobre cómo configurar la unidad para el punto de
 -   Para que la biblioteca de contenido no se instale en una unidad específica, cree un archivo vacío de nombre **no_sms_on_drive.sms** y cópielo en la carpeta raíz de la unidad antes de que se cree la biblioteca de contenido.  
 
 -   Tras la creación de la biblioteca de contenido, use la **herramienta de transferencia de biblioteca de contenido** del kit de herramientas de System Center 2012 R2 Configuration Manager para administrar la ubicación de la biblioteca de contenido. Puede descargar el kit de herramientas del [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkId=279566).  
-

@@ -6,23 +6,20 @@ ms.date: 4/19/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: lleonard-msft
-caps.handback.revision: 0
+caps.handback.revision: "0"
 ms.author: alleonar
 ms.manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7a6c89254d01f4074e5c170b20338686178ebdd3
 ms.openlocfilehash: 359fcfd9754fb5c81763bc44cac45376ea3ab0b8
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-create-vpn-profiles-in-system-center-configuration-manager"></a>Cómo crear perfiles de VPN en System Center Configuration Manager
 
@@ -41,9 +38,9 @@ En el caso de conexiones VPN de terceros, distribuya la aplicación VPN antes de
 
 1.  Complete la página **General**. y tenga en cuenta lo siguiente:  
 
-       - No use los caracteres \\/:*?&lt;>&#124;, o el carácter de espacio en el nombre de perfil de VPN. Estos caracteres no se admiten en el perfil de VPN de Windows Server.  
+    - No use los caracteres \\/:*?&lt;>&#124;, o el carácter de espacio en el nombre de perfil de VPN. Estos caracteres no se admiten en el perfil de VPN de Windows Server.  
 
-       -   Seleccione **Importar un elemento de perfil de VPN existente desde un archivo** para importar información de perfil de VPN que se ha exportado a un archivo XML (solo Windows 8.1 y Windows RT).  
+     -   Seleccione **Importar un elemento de perfil de VPN existente desde un archivo** para importar información de perfil de VPN que se ha exportado a un archivo XML (solo Windows 8.1 y Windows RT).  
 
 1.  En la página **Conexión**, especifique:  
 
@@ -79,4 +76,3 @@ Complete el asistente. El nuevo perfil de VPN se muestra en el nodo **Perfiles d
 - En el caso de conexiones VPN de terceros, distribuya la aplicación VPN antes de implementar el perfil de VPN. Si no implementa la aplicación, se les pedirá a los usuarios que lo hagan cuando intenten conectarse a la VPN. Para aprender a implementar aplicaciones, consulte [Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md) (Cómo implementar aplicaciones con System Center Configuration Manager).
 
 - Implemente el perfil de VPN tal como se describe en [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md) (Cómo implementar perfiles en System Center Configuration Manager).  
-

@@ -6,22 +6,19 @@ ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3fe32aa2-d594-4ad0-a291-b8f5395ac50b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6cf291d79c1c5d9540f809fcb00e7ab48e0c3d3b
 ms.openlocfilehash: 177a30a30f6b8579fa1956d28581d4f9d3a11838
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="frequently-asked-questions-about-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>Preguntas frecuentes acerca de datos de diagnóstico y uso para System Center Configuration Manager
 
@@ -59,4 +56,3 @@ La rama actual de Configuration Manager necesita actualizarse de forma periódic
 
 ## <a name="see-also"></a>Consulte también  
  [Diagnósticos y datos de uso para System Center Configuration Manager](../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)
-

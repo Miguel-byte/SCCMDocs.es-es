@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
-caps.latest.revision: 19
-caps.handback.revision: 0
+caps.latest.revision: "19"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: e9320e40b8e5031ffa3da5e5149c7da718cc87d5
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-a-task-sequence-to-capture-an-operating-system-in-system-center-configuration-manager"></a>Crear una secuencia de tareas para capturar un sistema operativo en System Center Configuration Manager
 
@@ -28,10 +27,10 @@ ms.openlocfilehash: e9320e40b8e5031ffa3da5e5149c7da718cc87d5
 
 Cuando use una secuencia de tareas para implementar un sistema operativo en un equipo en System Center Configuration Manager, el equipo instala la imagen de sistema operativo que especifique en la secuencia de tareas. Para personalizar la imagen de sistema operativo de modo que incluya ciertos controladores, aplicaciones, actualizaciones de software, etc., utilice una secuencia de tareas de generación y captura para generar un equipo de referencia y, a continuación, capturar la imagen del sistema operativo de ese equipo de referencia. Si ya tiene un equipo de referencia disponible para capturar, puede crear una secuencia de tareas personalizada para capturar el sistema operativo. Utilice las siguientes secciones para capturar un sistema operativo personalizado.  
 
-##  <a name="a-namebkmkbuildcapturetsa-use-a-task-sequence-to-build-and-capture-a-reference-computer"></a><a name="BKMK_BuildCaptureTS"></a> Utilizar una secuencia de tareas para generar y capturar un equipo de referencia  
+##  <a name="BKMK_BuildCaptureTS"></a> Utilizar una secuencia de tareas para generar y capturar un equipo de referencia  
  La secuencia de tareas de compilación y captura particiona y aplica formato al equipo de referencia, instala el sistema operativo, así como el cliente de Configuration Manager, las aplicaciones y las actualizaciones de software y, luego, captura el sistema operativo del equipo de referencia. Los paquetes asociados a la secuencia de tareas, como las aplicaciones, deben estar disponibles en los puntos de distribución antes de crear la secuencia de tareas de generación y captura.  
 
-###  <a name="a-namebkmkcreatepackagesa-prepare-for-operating-system-deployments"></a><a name="BKMK_CreatePackages"></a> Prepararse para la implementación de sistemas operativos  
+###  <a name="BKMK_CreatePackages"></a> Prepararse para la implementación de sistemas operativos  
  Hay muchos escenarios para implementar un sistema operativo en los equipos de su entorno. En la mayoría de los casos, creará una secuencia de tareas y seleccionará **Instalar un paquete de imágenes existente** en el Asistente para crear secuencias de tareas a fin de instalar el sistema operativo, migrar la configuración de usuario, aplicar las actualizaciones de software e instalar las aplicaciones. Antes de crear una secuencia de tareas para instalar un sistema operativo, debe contar con lo siguiente:  
 
 -   **Requerido**  
@@ -48,7 +47,7 @@ Cuando use una secuencia de tareas para implementar un sistema operativo en un e
 
     -   Las [aplicaciones](../../apps/deploy-use/create-applications.md) deben agregarse a la consola de Configuration Manager.  
 
-###  <a name="a-namebkmkcreatebuildcapturetsa-create-a-build-and-capture-task-sequence"></a><a name="BKMK_CreateBuildCaptureTS"></a> Crear una secuencia de tareas de generación y captura  
+###  <a name="BKMK_CreateBuildCaptureTS"></a> Crear una secuencia de tareas de generación y captura  
  Utilice el siguiente procedimiento para usar una secuencia de tareas para generar un equipo de referencia y capturar el sistema operativo.  
 
 #### <a name="to-create-a-task-sequence-that-builds-and-captures-an-operating-system-image"></a>Para crear una secuencia de tareas que cree y capture una imagen de sistema operativo  
@@ -145,7 +144,7 @@ Cuando use una secuencia de tareas para implementar un sistema operativo en un e
 
 -   Si el equipo de referencia no es un cliente de Configuration Manager o si quiere ejecutar manualmente la secuencia de tareas en el equipo de referencia, ejecute el **Asistente para crear medio de secuencia de tareas** para crear un medio de arranque. Para más información sobre cómo crear un medio de arranque, vea [Create bootable media (Crear medios de arranque)](create-bootable-media.md).  
 
-##  <a name="a-namebkmkcaptureexistingrefcomputera-capture-an-operating-system-image-from-an-existing-reference-computer"></a><a name="BKMK_CaptureExistingRefComputer"></a> Capturar una imagen de sistema operativo a partir de un equipo de referencia existente  
+##  <a name="BKMK_CaptureExistingRefComputer"></a> Capturar una imagen de sistema operativo a partir de un equipo de referencia existente  
  Si ya tiene un equipo de referencia listo para capturar, puede crear una secuencia de tareas que capture el sistema operativo a partir del equipo de referencia. Utilizará el paso de la secuencia de tareas **Capturar imagen de sistema operativo** para capturar una o más imágenes en un equipo de referencia y almacenarlas en un archivo de imagen (.wim) en el recurso compartido de red especificado. El equipo de referencia se inicia en Windows PE mediante una imagen de arranque, cada unidad de disco duro del equipo de referencia se captura como una imagen independiente en el archivo .wim. Si el equipo de referencia tiene varias unidades, el archivo .wim resultante contendrá una imagen independiente para cada volumen. Solo se capturan los volúmenes formateados como NTFS o FAT32. Se omiten los volúmenes con otros formatos y los volúmenes USB.  
 
  Siga el procedimiento a continuación para capturar una imagen de sistema operativo a partir de un equipo de referencia existente.  
@@ -192,7 +191,7 @@ Cuando use una secuencia de tareas para implementar un sistema operativo en un e
 
 -   Si el equipo de referencia no es un cliente de Configuration Manager o si quiere ejecutar manualmente la secuencia de tareas en el equipo de referencia, ejecute el **Asistente para crear medio de secuencia de tareas** para crear un medio de arranque. Para más información sobre cómo crear un medio de arranque, vea [Create bootable media (Crear medios de arranque)](create-bootable-media.md).  
 
-##  <a name="a-namebkmkbuildandcapturetsexamplea-task-sequence-example-to-build-and-capture-an-operating-system-image"></a><a name="BKMK_BuildandCaptureTSExample"></a> Ejemplo de secuencia de tareas para generar y capturar una imagen de sistema operativo  
+##  <a name="BKMK_BuildandCaptureTSExample"></a> Ejemplo de secuencia de tareas para generar y capturar una imagen de sistema operativo  
  Utilice la tabla siguiente como guía para crear una secuencia de tareas que genere y capture una imagen de sistema operativo. La tabla le ayudará a decidir la secuencia general de los pasos de la secuencia de tareas y cómo organizar y estructurar los pasos de la secuencia de tareas en grupos lógicos. La secuencia de tareas que cree puede ser diferente a la de este ejemplo y puede contener más o menos pasos y grupos de secuencias de tareas.  
 
 > [!IMPORTANT]  
@@ -232,9 +231,3 @@ Cuando use una secuencia de tareas para implementar un sistema operativo en un e
 
 ## <a name="next-steps"></a>Pasos siguientes  
 [Métodos para implementar sistemas operativos de empresa](methods-to-deploy-enterprise-operating-systems.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

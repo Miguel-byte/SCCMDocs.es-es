@@ -6,23 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0ef5f3ce-b0e4-4775-b5c2-b245e45b4194
-caps.latest.revision: 11
-caps.handback.revision: 0
+caps.latest.revision: "11"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
 ms.openlocfilehash: 11c0f169afebdb071fefb5ce300fd1ae3481a94f
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prepare-site-system-roles-for-operating-system-deployments-with-system-center-configuration-manager"></a>Preparar los roles de sistema de sitio para la implementación de sistemas operativos con System Center Configuration Manager
 
@@ -221,4 +218,3 @@ Debe probar la configuración personalizada en su entorno para determinar lo que
 -   Si el punto de migración de estado responde solo a solicitudes de restauración de datos de estado de usuario. Cuando se habilita esta opción, no se puede utilizar el punto de migración de estado para almacenar datos de estado de usuario.  
 
  Para consultar los pasos necesarios para instalar un rol de sistema de sitio, consulte [Add site system roles](../../core/servers/deploy/configure/add-site-system-roles.md) (Agregar roles de sistema de sitio).  
-

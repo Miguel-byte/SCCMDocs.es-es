@@ -6,8 +6,7 @@ ms.date: 03/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 408190da-bea6-4122-9dd6-f90155040e88
@@ -15,15 +14,12 @@ caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
 ms.openlocfilehash: 8edf83a0f761dfc16274ce49c3aa2b878c7fe6cd
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="monitor-mobile-threat-defense-compliance"></a>**Supervisión de cumplimiento de Mobile Threat Defense**
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -76,4 +72,3 @@ Además, en la pantalla **Dispositivos**, puede seleccionar dispositivos especí
 
 > [!TIP] 
 > Asegúrese de habilitar las columnas que no están **visibles de forma predeterminada** para ver más detalles sobre el estado de cumplimiento de Mobile Threat Defense de sus dispositivos.
-

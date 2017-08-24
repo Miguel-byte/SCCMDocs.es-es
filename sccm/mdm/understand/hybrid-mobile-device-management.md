@@ -6,22 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
-caps.latest.revision: 34
-caps.handback.revision: 0
+caps.latest.revision: "34"
+caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: e54478a03807c939ffa64ff39a21ef6f9ea4ae2d
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>Administración híbrida de dispositivos móviles (MDM) con System Center Configuration Manager y Microsoft Intune
 
@@ -48,4 +46,3 @@ Para integrar dispositivos en la administración híbrida, esos dispositivos deb
 - La inscripción "Bring Your Own Device" (BYOD) permite a los usuarios inscribir sus teléfonos personales, tabletas o equipos PC.
 - La inscripción de dispositivos de propiedad corporativa (COD) habilita la administración de escenarios como el borrado remoto, los dispositivos compartidos o la afinidad de usuario para un dispositivo.
 - Si usa [Exchange ActiveSync](../plan-design/device-enrollment-methods.md#mobile-device-management-with-exchange-activesync-and-configuration-manager), de manera local u hospedado en la nube, puede habilitar la administración simple de Intune sin la inscripción. Los equipos con Windows también pueden administrarse mediante el [software cliente de Intune](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune).
-

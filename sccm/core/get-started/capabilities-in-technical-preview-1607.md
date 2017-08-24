@@ -4,23 +4,21 @@ description: "Conozca las características disponibles en Technical Preview para
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bb69547-3370-4860-96b0-7fb600c56482
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
 ms.openlocfilehash: 4717e0f8eef01501fb5b5790e855c476c1ca4590
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1607-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1607 para System Center Configuration Manager
 
@@ -78,4 +76,3 @@ Para más información sobre este problema, vea el [Blog del equipo de soporte t
 2. En la pestaña **Inicio** , en el grupo **Sitios** , haga clic en **Configuración de jerarquía**.
 3. Vaya a la pestaña **Aprobación de cliente y registros conflictivos**.
 4. Haga clic en **Agregar** en la sección **Identificadores de hardware duplicados** para agregar nuevos identificadores de hardware.
-

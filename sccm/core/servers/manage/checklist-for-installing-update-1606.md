@@ -6,21 +6,19 @@ ms.date: 6/6/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 75652cd2-a95a-46c5-91c1-6d43fc8e787e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
 ms.openlocfilehash: a6bda116499845fedff0126e2890755931de85bb
-ms.contentlocale: es-es
-ms.lasthandoff: 06/13/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="checklist-for-installing-update-1606-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1606 de System Center Configuration Manager
 
@@ -146,4 +144,3 @@ Para más información, vea **Step 3: Run the prerequisite checker before instal
   Se recomienda planear la instalación de la actualización fuera del horario comercial habitual de cada sitio, ya que será el momento en que el proceso de instalación de la actualización y sus acciones para volver a instalar los componentes del sitio y los roles de sistema de sitio afectarán menos a las operaciones comerciales.
 
 Para más información, vea [Updates for System Center Configuration Manager (Actualizaciones para System Center Configuration Manager)](../../../core/servers/manage/updates.md).  
-

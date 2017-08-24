@@ -6,22 +6,19 @@ ms.date: 12/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
 ms.openlocfilehash: 959a36413d06bb225f260bd44c1d3d59efd44e69
-ms.contentlocale: es-es
-ms.lasthandoff: 06/28/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="introduction-to-application-management-in-system-center-configuration-manager"></a>Introducción a la administración de aplicaciones en System Center Configuration Manager
 
@@ -110,4 +107,3 @@ Además, al administrar dispositivos a través de la administración de disposit
 -   Scripts que se ejecutan según una programación periódica y no pueden usar evaluación global.
 
  Para obtener más información, consulte [Paquetes y programas](../../apps/deploy-use/packages-and-programs.md).  
-

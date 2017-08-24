@@ -4,24 +4,22 @@ description: "Conozca las características disponibles en Technical Preview para
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 684a5559-9e6e-469b-86ae-e768e9f0c9ac
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
-ms.contentlocale: es-es
-ms.lasthandoff: 01/24/2017
-
+ms.openlocfilehash: 26b0d8ea7b3e841c48945df55f8860394a98a29f
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1604 para System Center Configuration Manager
 
@@ -172,4 +170,3 @@ Para probarlo, configure el servicio de atestación de estado local mediante la 
 
 ##  <a name="BKMK_Smart"></a> Configuración de SmartLock para dispositivos Android  
  Se ha agregado un nuevo valor, **Permitir Smart Lock y otros agentes de confianza**, al elemento de configuración **Android y Samsung KNOX** que le permite controlar la característica Smart Lock en dispositivos Android compatibles. Esta funcionalidad del teléfono, conocida también en ocasiones como agentes de confianza, le permite deshabilitar u omitir la contraseña de la pantalla de bloqueo del dispositivo si el dispositivo está en una ubicación de confianza, como cuando se conecta a un dispositivo Bluetooth específico o cuando está cerca de una etiqueta NFC. Puede utilizar esta opción para impedir que los usuarios finales configuren SmartLock.  
-

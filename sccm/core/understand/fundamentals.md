@@ -6,20 +6,20 @@ ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cc4cdb35-f0b4-42b5-9cec-6431a8c30793
-caps.latest.revision: 11
-caps.handback.revision: 0
+caps.latest.revision: "11"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 9725fd25dc6584005fb3c2c1538d00513c3945a5
 ms.openlocfilehash: 662ac092746f37c354e5accf288e3375c16b9c72
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="fundamentals-of-system-center-configuration-manager"></a>Aspectos básicos de System Center Configuration Manager
 
@@ -47,9 +47,3 @@ Vea los temas siguientes para obtener información acerca de los conceptos bási
 -   [Fundamentals of client management tasks for System Center Configuration Manager (Aspectos básicos de las tareas de administración de clientes de System Center Configuration Manager)](../../core/understand/fundamentals-of-client-management-tasks.md)  
 
 -   [Fundamentals of security for System Center Configuration Manager (Aspectos básicos de la seguridad en System Center Configuration Manager)](../../core/understand/fundamentals-of-security.md)  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

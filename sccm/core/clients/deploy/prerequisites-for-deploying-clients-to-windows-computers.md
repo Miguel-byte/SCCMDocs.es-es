@@ -6,23 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
-caps.latest.revision: 16
-caps.handback.revision: 0
+caps.latest.revision: "16"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 7ed1b9e6802cc20defcb92a8e536983fd757bd29
-ms.contentlocale: es-es
-ms.lasthandoff: 03/27/2017
-
-
+ms.openlocfilehash: 6636ce4d929326fad0210407d7634ea585eb0a2d
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-system-center-configuration-manager"></a>Requisitos previos para la implementación de clientes en equipos Windows con System Center Configuration Manager
 
@@ -238,4 +235,3 @@ La implementación de clientes de Configuration Manager en su entorno tiene las 
 -   Entre el punto de proxy de inscripción y el punto de inscripción: HTTPS (de manera predeterminada, TCP 443)  
 
  Si utiliza un servidor proxy web, debe configurarse para el protocolo de túnel SSL. El protocolo de puente SSL no es compatible con dispositivos móviles.  
-

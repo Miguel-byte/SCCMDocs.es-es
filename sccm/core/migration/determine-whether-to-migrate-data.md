@@ -6,21 +6,20 @@ ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99222dc8-0e1e-4513-8302-7a1acf671e9b
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: d37261c03fddc3d576fcef73fabd7189e4c46d38
 ms.openlocfilehash: 9dc5f6c9f58e1fc33b2dc9dd76737ae23af81993
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="determine-whether-to-migrate-data-to-system-center-configuration-manager"></a>Determinar si se migrarán datos a System Center Configuration Manager
 
@@ -50,7 +49,7 @@ Después de instalar un cliente en la nueva jerarquía y de que el cliente enví
 
 -   [Datos que no se pueden migrar a System Center Configuration Manager](#Cannot_migrate)  
 
-##  <a name="a-namecanmigratea-data-that-you-can-migrate-to-system-center-configuration-manager"></a><a name="Can_Migrate"></a> Datos que se pueden migrar a System Center Configuration Manager  
+##  <a name="Can_Migrate"></a> Datos que se pueden migrar a System Center Configuration Manager  
  La migración puede migrar la mayoría de los objetos entre jerarquías de Configuration Manager compatibles. Las instancias migradas de algunos objetos desde una versión compatible de Configuration Manager 2007 deben modificarse de acuerdo con el esquema de System Center 2012 Configuration Manager y el formato de objetos.
 
 Estas modificaciones no afectan a los datos de la base de datos del sitio de origen. Los objetos que se migran desde una versión compatible de System Center 2012 Configuration Manager o System Center Configuration Manager no requieren ninguna modificación.  
@@ -161,7 +160,7 @@ Estas modificaciones no afectan a los datos de la base de datos del sitio de ori
 
 -   Paquetes de aplicaciones virtuales  
 
-##  <a name="a-namecannotmigratea-data-that-you-cannot-migrate-to-system-center-configuration-manager"></a><a name="Cannot_migrate"></a> Datos que no se pueden migrar a System Center Configuration Manager  
+##  <a name="Cannot_migrate"></a> Datos que no se pueden migrar a System Center Configuration Manager  
  No se pueden migrar los siguientes tipos de objetos:  
 
 -   Información de aprovisionamiento de cliente de AMT  
@@ -187,9 +186,3 @@ Estas modificaciones no afectan a los datos de la base de datos del sitio de ori
     -   Roles de seguridad  
 
     -   Ámbitos de seguridad  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

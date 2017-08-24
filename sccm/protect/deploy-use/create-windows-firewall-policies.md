@@ -6,22 +6,19 @@ ms.date: 03/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6ecdfad1-6305-45a8-ae75-3f33b967cb8f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 7a02ae3fb102ab85f98d3b7453fc0736e5a11200
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: acd75a8b22d050970b8c1176f725ddb4445633aa
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-and-deploy-windows-firewall-policies-for-endpoint-protection-in-system-center-configuration-manager"></a>Crear e implementar directivas de Firewall de Windows para Endpoint Protection en System Center Configuration Manager
 
@@ -80,4 +77,3 @@ Las directivas de firewall de Endpoint Protection en System Center 2012 Configur
 
     > [!IMPORTANT]  
     >  Al implementar una directiva de Firewall de Windows en una recopilación, esta directiva se aplica a los equipos en orden aleatorio durante un período de dos horas para evitar el desbordamiento de la red.
-

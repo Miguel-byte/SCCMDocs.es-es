@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3bd1e487-ea18-43c1-b7c3-acbd9b86d429
-caps.latest.revision: 15
-caps.handback.revision: 0
+caps.latest.revision: "15"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 6516db6f4c09fdd173b498c58ccc411847752c4e
 ms.openlocfilehash: bbbf278f5d31c51bfe061dd44e170f7ab1ca70ad
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-and-deploy-an-application-with-system-center-configuration-manager"></a>Crear e implementar una aplicación con System Center Configuration Manager
 
@@ -206,9 +205,3 @@ Use los datos de la sección **Supervisar la aplicación** siguiente para ver el
 ## <a name="end-user-experience"></a>Experiencia del usuario final  
 
 Los usuarios con PC que ejecutan Windows 10 a través de Configuration Manager verán un mensaje que les indica que deben instalar la aplicación Contoso. Una vez que acepten la instalación, se instalará la aplicación.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

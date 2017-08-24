@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 6b1393b2a329bcd017dc961366afb09fa7a77899
 ms.openlocfilehash: 4e8e677851ad9ae7d027ab685e842a8ff5e35573
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-system-center-configuration-manager"></a>Vincular usuarios y dispositivos con afinidad entre usuario y dispositivo en System Center Configuration Manager
 
@@ -138,9 +137,3 @@ Una vez creada una afinidad entre usuario y dispositivo, Configuration Manager c
 3.  En la pestaña **Inicio**, en el grupo **Recopilación**, seleccione **Administrar solicitudes de afinidad**.  
 
 4.  En el cuadro de diálogo **Administrar solicitudes de afinidad de dispositivo de usuario**, seleccione una solicitud de afinidad y, después, seleccione **Aprobar** o **Rechazar**.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

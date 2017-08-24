@@ -10,19 +10,16 @@ ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 539c7a89-3c03-4571-9cb4-02d455064eeb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: af0aafb4b7209d840676d16723509f399c662aad
 ms.openlocfilehash: b98684d44874ff246e4d675039c6e443aee82a62
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="example-scenario-using-system-center-endpoint-protection-to-protect-computers-from-malware-in-system-center-configuration-manager"></a>Escenario de ejemplo: uso de System Center Endpoint Protection para proteger los equipos frente al malware en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -77,4 +74,3 @@ Este tema proporciona un escenario de ejemplo sobre la implementación de Endpoi
 |Juan usa los métodos siguientes para supervisar el estado de Endpoint Protection y las acciones que lleva a cabo Endpoint Protection:<br /><br /> 1) Mediante el uso del nodo **Estado de Endpoint Protection** en **Seguridad** del área de trabajo **Supervisión**.<br /><br /> 2) Mediante el uso del nodo **Endpoint Protection** del área de trabajo **Activos y compatibilidad**.<br /><br /> 3) Mediante los informes integrados de Configuration Manager.|Consulte [How to monitor Endpoint Protection in System Center Configuration Manager](monitor-endpoint-protection.md) (Cómo supervisar Endpoint Protection en System Center Configuration Manager).|  
 
  Juan notifica la implementación correcta de Endpoint Protection a su administrador y confirma que ahora los equipos de Woodgrove Bank están protegidos contra antimalware, según los requisitos empresariales que se le asignaron.
-

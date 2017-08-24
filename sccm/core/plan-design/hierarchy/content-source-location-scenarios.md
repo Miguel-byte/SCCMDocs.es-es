@@ -6,19 +6,19 @@ ms.date: 1/3/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 70b5cbc0-64ba-49bd-8b34-fb4c09b2b95b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 7f2fd3e550c7dc1b27996dc309b53f74e8c865e9
 ms.openlocfilehash: a823458dc3b891b1c32d1cb44a96e8cafd376ed5
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="content-source-location-scenarios-in-system-center-configuration-manager"></a>Escenarios de ubicación de orígenes de contenido en System Center Configuration Manager
 
@@ -253,9 +253,3 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 4.  El punto de administración crea un desencadenador para el administrador de distribución para distribuir el contenido a todos los puntos de distribución preferidos para el cliente que realizó la solicitud de contenido.  
 
 5.  El administrador de distribución distribuye el contenido a todos los puntos de distribución preferidos, lo que permite a los clientes adicionales obtener el contenido sin utilizar un punto de distribución de reserva.  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

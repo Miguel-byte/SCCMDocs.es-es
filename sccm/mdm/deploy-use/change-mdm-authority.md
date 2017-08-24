@@ -7,15 +7,13 @@ manager: angrobe
 ms.date: 06/02/2017
 ms.topic: article
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 662901e850566756759fcfc61c58f3c0e56bc5aa
-ms.openlocfilehash: b80fec937b50dca3ab995be281c44c3145300f9f
-ms.contentlocale: es-es
-ms.lasthandoff: 06/03/2017
-
+ms.openlocfilehash: 74b9dbb1ed0172d99956e726fca3aec2b658ce77
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="change-your-mdm-authority"></a>Cambio de la entidad de MDM
 A partir de la versión 1610 de Configuration Manager y la versión 1705 de Microsoft Intune, puede cambiar la entidad de MDM sin tener que ponerse en contacto con el soporte técnico de Microsoft y sin necesidad de anular y volver a crear la inscripción de sus dispositivos administrados existentes.
@@ -255,4 +253,3 @@ Una vez completado el cambio en la entidad de MDM, revise los siguientes pasos:
     - Asegúrese de que el dispositivo recién inscrito aparece en la consola de Configuration Manager.
     - Realice una acción, como el bloqueo remoto, desde la consola de administración en el dispositivo. Si se completa correctamente, el dispositivo se está administrando mediante la nueva entidad de MDM.
 - Si tiene problemas con dispositivos concretos, puede anular la inscripción de esos dispositivos y realizarla de nuevo para que se conecten a la nueva entidad y se administren lo antes posible.
-

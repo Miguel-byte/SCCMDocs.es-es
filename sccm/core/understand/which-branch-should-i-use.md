@@ -6,22 +6,19 @@ ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 662901e850566756759fcfc61c58f3c0e56bc5aa
 ms.openlocfilehash: 26356a80bd8c78d4517253bae73e53d8d8f3a73a
-ms.contentlocale: es-es
-ms.lasthandoff: 06/03/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>¿Qué rama de Configuration Manager debo utilizar?
 
@@ -86,7 +83,7 @@ Para instalar la LTSB como un sitio nuevo o como una actualización desde un sit
 > También puede obtener una versión de evaluación de System Center 2016 en el sitio de [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview).
 
 **Características de la LTSB**
--    Recibe actualizaciones en la consola que ofrecen las revisiones de seguridad importantes
+-   Recibe actualizaciones en la consola que ofrecen las revisiones de seguridad importantes
 - Proporciona una opción de instalación cuando expira el contrato de SA o los derechos equivalentes para Configuration Manager
 - Admite la actualización (conversión) a la Rama actual cuando tenga un contrato de SA o derechos equivalentes en vigor para Configuration Manager
 
@@ -96,14 +93,14 @@ La LTSB se basa en la versión de la Rama actual 1606 y tiene las siguientes lim
 - Admite una lista limitada de conjuntos de sistemas operativos de servidor y cliente, y tecnologías relacionadas, como versiones de SQL Server. Para más información sobre lo que admite esta rama, consulte [Configuraciones admitidas de la rama de mantenimiento a largo plazo](supported-configurations-for-ltsb.md).
 - No recibe las actualizaciones para las nuevas características.
 - No admite la adición de una suscripción a Microsoft Intune, que impide el uso de:
-  -    Intune en una configuración de MDM híbrida
+  - Intune en una configuración de MDM híbrida
  - MDM local
--    No admite el uso del panel de mantenimiento de Windows 10, los planes de mantenimiento, la rama actual de Windows 10 (CB) y la rama actual para empresas (CBB).
+-   No admite el uso del panel de mantenimiento de Windows 10, los planes de mantenimiento, la rama actual de Windows 10 (CB) y la rama actual para empresas (CBB).
 - No admite las versiones futuras de Windows 10 LTSB y Windows Server.
--    No admite Asset Intelligence.
--    No admite los puntos de distribución basados en la nube.
--    No admite Soporte técnico para Exchange Online como Exchange Connector.
--    No admite ninguna característica de versión preliminar.
+-   No admite Asset Intelligence.
+-   No admite los puntos de distribución basados en la nube.
+-   No admite Soporte técnico para Exchange Online como Exchange Connector.
+-   No admite ninguna característica de versión preliminar.
 
 
 
@@ -115,7 +112,7 @@ La LTSB se basa en la versión de la Rama actual 1606 y tiene las siguientes lim
   - [Licencias y ramas para System Center Configuration Manager](learn-more-editions.md)
   - [Baseline and update versions](/sccm/core/servers/manage/updates#baseline-and-update-versions) (Versiones de línea base y actualización) en [Updates for Configuration Manager](/sccm/core/servers/manage/updates) (Actualizaciones para Configuration Manager)
 - No hay ninguna opción para convertir la LTSB en Technical Preview. Las versiones Technical Preview son instalaciones independientes que no requieren una licencia.
--    No se puede actualizar una versión de evaluación de la Rama actual a una instalación de LTSB.
+-   No se puede actualizar una versión de evaluación de la Rama actual a una instalación de LTSB.
 
 
 ## <a name="technical-preview-for-system-center-configuration-manager"></a>Technical Preview para System Center Configuration Manager
@@ -141,8 +138,8 @@ Las características que se introducen por primera vez en una Technical Preview 
 Para más información, consulte [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview) (Technical Preview para System Center Configuration Manager).
 
 **Opciones de actualización**
--    Puede instalar cualquier actualización en la consola para una nueva versión de Technical Preview.
--    No hay ninguna opción para convertir una Technical Preview a la Rama actual o LTSB.
+-   Puede instalar cualquier actualización en la consola para una nueva versión de Technical Preview.
+-   No hay ninguna opción para convertir una Technical Preview a la Rama actual o LTSB.
 
 
 ## <a name="identify-your-branch-and-version"></a>Identificar la rama y la versión
@@ -154,4 +151,3 @@ Para comprobar la versión del sitio, en la esquina superior izquierda de la con
 **Rama**  
 Para confirmar la rama del sitio (como LTSB o rama actual), en la consola, vaya a **Administración** > **Configuración de sitio** > **Sitios** y abra **Configuración de jerarquía**. Si existe una opción de conversión a la rama actual y está activa, el sitio ejecuta la versión de LTSB. Cuando el sitio ejecuta la rama actual, está opción aparece atenuada.
 Para obtener más información sobre las diferentes versiones de Configuration Manager, vea "Versiones de línea de base y versiones de actualización" en el tema [Actualizaciones para System Center Configuration Manager](/sccm/core/servers/manage/updates).
-

@@ -6,22 +6,19 @@ ms.date: 04/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
 ms.openlocfilehash: a99b58acef7448af2c9576bfa0ec2635f5a4f86f
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="pki-certificate-requirements-for-system-center-configuration-manager"></a>Requisitos de certificados PKI para System Center Configuration Manager
 
@@ -89,4 +86,3 @@ En las tablas siguientes se enumeran los certificados de infraestructura de clav
 |Equipos basados en Intel AMT|Autenticación de servidor.|**Servidor web** (modificado)<br /><br /> Configure el nombre de sujeto en **Construido a partir de esta información de Active Directory**y, a continuación, seleccione **Nombre común** para el **Formato de nombre de sujeto**.<br /><br /> Debe conceder los permisos **Leer** e **Inscribir** al grupo de seguridad universal que especifique en las propiedades de componente de administración fuera de banda.|**El valor Uso mejorado de clave** debe contener **Autenticación del servidor (1.3.6.1.5.5.7.3.1)**.<br /><br /> El nombre de sujeto debe contener el FQDN del equipo basado en AMT, proporcionado automáticamente por Active Directory Domain Services.|Este certificado se encuentra en la memoria de acceso aleatorio permanente del controlador de administración del equipo y no se encuentra visible en la interfaz de usuario de Windows.<br /><br /> Cada equipo basado en Intel AMT solicita este certificado durante el aprovisionamiento de AMT y para las actualizaciones posteriores. Si quita de estos equipos la información acerca del aprovisionamiento de AMT, estos revocarán el certificado.<br /><br /> Cuando este certificado se instala en equipos basados en Intel AMT, también se instalará la cadena de certificados a la CA raíz. Los equipos basados en AMT no admiten certificados de CA con una longitud de clave mayor que 2048 bits.<br /><br /> Tras la instalación del certificado en equipos basados en Intel AMT, este certificado autentica los equipos basados en AMT en el servidor de sistema de sitio de punto de servicio fuera de banda y en equipos que ejecutan la consola de administración fuera de banda y, además, el certificado cifra todos los datos transferidos entre ellos mediante Seguridad de la capa de transporte (TLS, por sus siglas en inglés).|  
 |Certificado de cliente Intel AMT 802.1 X|Autenticación de cliente|**Autenticación de estación de trabajo**<br /><br /> Configure el nombre del firmante en **Construido a partir de esta información de Active Directory**, seleccione **Nombre común** para el **Formato de nombre del firmante**, desactive la casilla Nombre de DNS y, a continuación, seleccione Nombre principal de usuario (UPN) como nombre alternativo del firmante.<br /><br /> Para esta plantilla de certificado, debe conceder los permisos **Leer** e **Inscribir** al grupo de seguridad universal que especifique en las propiedades de componente de administración fuera de banda.|**El valor Uso mejorado de clave** debe contener **Autenticación del cliente (1.3.6.1.5.5.7.3.2)**.<br /><br /> El campo Nombre de sujeto debe contener el FQDN del equipo basado en AMT y el nombre alternativo del sujeto debe contener el UPN.<br /><br /> Longitud de clave compatible máxima: 2048 bits.|Este certificado se encuentra en la memoria de acceso aleatorio permanente del controlador de administración del equipo y no se encuentra visible en la interfaz de usuario de Windows.<br /><br /> Cada equipo basado en Intel AMT puede solicitar este certificado durante el aprovisionamiento de AMT, pero el equipo no revoca este certificado cuando se le quita la información sobre el aprovisionamiento de AMT.<br /><br /> Tras la instalación del certificado en equipos basados en AMT, este certificado autentica los equipos basados en AMT en el servidor RADIUS, a fin de que se le pueda autorizar el acceso a la red.|  
 |Dispositivos móviles que están inscritos por Microsoft Intune|Autenticación de cliente|No aplicable: Intune crea automáticamente este certificado.|El valor **Uso mejorado de clave** contiene **Autenticación de cliente (1.3.6.1.5.5.7.3.2)**.<br /><br /> Existen tres extensiones personalizadas que identifican de forma exclusiva la suscripción a Intune de los clientes.<br /><br /> Los usuarios pueden proporcionar el valor de sujeto del certificado durante la inscripción. Sin embargo, Intune no usa este valor para identificar el dispositivo.<br /><br /> El tamaño de clave es de 2048 bits y se utiliza el algoritmo hash SHA-1.<br /><br /> **Nota:** No se puede cambiar esta configuración. Esta información se proporciona únicamente con propósito informativo.|Este certificado se solicita e instala automáticamente cuando los usuarios autenticados se inscriben en los dispositivos móviles mediante Microsoft Intune. El certificado creado para el dispositivo se encuentra en el almacén del equipo y autentica el dispositivo móvil inscrito en Intune para que se pueda administrar.<br /><br /> Las extensiones personalizadas del certificado hacen que la autenticación se limite a la suscripción a Intune establecida para la organización.|
-

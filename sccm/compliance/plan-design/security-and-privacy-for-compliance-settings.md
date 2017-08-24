@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1c409244-6778-4970-a99c-d2508c9cf62b
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: e7dc554ffcd23978eed44819b525f6cc239b2135
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-compliance-settings-in-system-center-configuration-manager"></a>Seguridad y privacidad para la configuración de cumplimiento en System Center Configuration Manager
 
@@ -42,9 +41,3 @@ ms.openlocfilehash: e7dc554ffcd23978eed44819b525f6cc239b2135
  Puede usar la configuración de cumplimiento para evaluar si los dispositivos cliente son conformes con los elementos de configuración que se implementan en las líneas base de configuración. Algunas correcciones pueden corregirse automáticamente si no son conformes. El punto de administración envía información de compatibilidad al servidor del sitio y la almacena en la base de datos del sitio. La información se cifra cuando los dispositivos la envían al punto de administración, pero no se almacena en formato cifrado en la base de datos del sitio. La información se guarda en la base de datos hasta que la tarea de mantenimiento del sitio **Eliminar datos antiguos de administración de configuración** la elimina cada 90 días. Puede configurar el intervalo de eliminación. La información de compatibilidad no se envía a Microsoft.  
 
  De manera predeterminada, los dispositivos no evalúan la configuración de cumplimiento. Además, debe configurar los elementos de configuración y las líneas base de configuración y, a continuación, implementarlos en los dispositivos.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

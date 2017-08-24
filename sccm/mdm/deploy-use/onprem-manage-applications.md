@@ -6,22 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5f44b246-3467-4778-a5c2-047ce325da58
-caps.latest.revision: 18
-caps.handback.revision: 0
+caps.latest.revision: "18"
+caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: 4085b007f006a4cfaeaef802d750b03018d6a683
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-applications-for-on-premises-mobile-device-management"></a>Administración de aplicaciones para administración de dispositivos móviles local
 
@@ -30,4 +28,3 @@ ms.lasthandoff: 05/17/2017
 Al administrar dispositivos a través de la administración de dispositivos móviles (MDM) local en Configuration Manager, puede administrar determinados tipos de aplicación adicionales. La administración de aplicaciones en MDM local es igual que administrar aplicaciones en un entorno de MDM híbrida.
 
 [Manage mobile applications](management-tasks-applications.md) (Administrar aplicaciones móviles) proporciona información detallada sobre la creación y administración de aplicaciones mediante MDM híbrida o MDM local.
-

@@ -6,22 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b1fdaee2-2816-4447-94cd-609f6948f215
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: a85a5cece803e5c16da71f897d5780049fbb82cd
 ms.openlocfilehash: eddf20bebd80028336503957dfc4c3d1dbbb23f2
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="software-metering-in-system-center-configuration-manager"></a>Medición de software en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
@@ -178,9 +176,3 @@ La medición de software no tiene dependencias externas, solo dependencias dentr
 - Juan sigue comprobando los informes de medición de software semanalmente y toma medidas correctivas si es necesario.
 
  Como resultado de esta estrategia, los costos del departamento de TI en materia de soporte técnico y licencias se reducen mediante la eliminación de las aplicaciones que ya no son necesarias. Además, el departamento de soporte técnico tiene ahora la lista deseada que detalla los usuarios que ejecutan la aplicación heredada.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

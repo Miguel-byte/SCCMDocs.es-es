@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9f7142e1-c972-4384-853b-2da1568cb3e3
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: d3cc24c7923141f039dcda26ac27489cb0143e89
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="best-practices-for-power-management-in-system-center-configuration-manager"></a>Procedimientos recomendados para la administración de energía en System Center Configuration Manager
 
@@ -82,9 +81,3 @@ Use los procedimientos recomendados siguientes para la administración de energ�
  La información de administración de energía usada en los informes mensuales se conserva en la base de datos de sitio de Configuration Manager durante 13 meses.  
 
  Cuando ejecute informes durante las fases de supervisión, planeamiento y cumplimiento de la administración de energía, guarde o exporte los resultados de aquellos cuyos datos quiera conservar para una comparación posterior por si Configuration Manager los elimina más adelante.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

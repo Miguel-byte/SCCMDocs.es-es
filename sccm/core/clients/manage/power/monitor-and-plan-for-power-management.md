@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 507bf676-2679-4e4d-8831-3ffc9cf8557e
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-monitor-and-plan-for-power-management-in-system-center-configuration-manager"></a>Cómo supervisar y planear la administración de energía en System Center Configuration Manager
 
@@ -28,7 +27,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 
 La siguiente información puede ayudarle a supervisar y planear la administración de energía en System Center Configuration Manager.  
 
-##  <a name="a-namebkmkhowtousereportsa-how-to-use-reports-for-power-management"></a><a name="BKMK_How_to_use_reports"></a> Cómo usar informes de administración de energía  
+##  <a name="BKMK_How_to_use_reports"></a> Cómo usar informes de administración de energía  
  La administración de energía en Configuration Manager incluye varios informes que le ayudarán a analizar la configuración de energía del equipo y el consumo de energía en su organización. Los informes también pueden usarse como ayuda para solucionar problemas.  
 
  Para poder usar los informes de administración de energía, debe configurar los informes para la jerarquía. Para obtener más información sobre informes en Configuration Manager, vea [Reporting in System Center Configuration Manager](../../../../core/servers/manage/reporting.md) (Generación de informes en System Center Configuration Manager).  
@@ -45,7 +44,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 > [!NOTE]  
 >  Informes de administración de energía muestran el número de equipos físicos y el número de equipos virtuales en una recopilación seleccionada. Sin embargo, en los informes de administración de energía únicamente se muestra la información de administración de energía de los equipos físicos.  
 
-###  <a name="a-namebkmkactivitya-computer-activity-report"></a><a name="BKMK_Activity"></a> Informe actividad del equipo  
+###  <a name="BKMK_Activity"></a> Informe actividad del equipo  
  El informe **Actividad de equipo** muestra un gráfico con la siguiente actividad para una recopilación especificada durante un período determinado:  
 
 -   **Computer On** : el equipo se ha activado.  
@@ -80,7 +79,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |-----------------|-------------|  
 |**Detalles de la actividad del equipo**|Haga clic en el vínculo **Haga clic para obtener información detallada** para ver una lista de equipos activos, inactivos y sin informes para la fecha especificada.<br /><br /> Para obtener más información, consulte [Computer Activity Details Report](#BKMK_Activity_Details) en este tema.|  
 
-###  <a name="a-namebkmkcompactivitybycomputera-computer-activity-by-computer-report"></a><a name="BKMK_Comp_Activity_by_computer"></a> Informe Actividad de equipo por equipo  
+###  <a name="BKMK_Comp_Activity_by_computer"></a> Informe Actividad de equipo por equipo  
  El informe **Actividad de equipo por equipo** muestra un gráfico con la siguiente actividad para un equipo especificado durante una fecha determinada:  
 
 -   **Computer On** : el equipo se ha activado.  
@@ -114,7 +113,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |-----------------|-------------|  
 |**Detalles del equipo**|Haga clic en el vínculo **Haga clic para obtener información detallada** para ver las capacidades de energía, la configuración de energía y los planes de energía aplicados para el equipo seleccionado.|  
 
-###  <a name="a-namebkmkactivitydetailsa-computer-activity-details-report"></a><a name="BKMK_Activity_Details"></a> Computer Activity Details report  
+###  <a name="BKMK_Activity_Details"></a> Computer Activity Details report  
  El informe **Detalles de actividad de equipo** muestra una lista de los equipos activos o inactivos con sus capacidades de suspensión y activación. El [Computer Activity Report](#BKMK_Activity) llama a este informe y no está diseñado para que el administrador del sitio lo ejecute directamente.  
 
  Use los parámetros siguientes para configurar este informe.  
@@ -126,7 +125,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |--------------------|-----------------|  
 |**Nombre de recopilación**|En la lista desplegable, seleccione la recopilación que quiere usar para este informe.|  
 |**Fecha de informe**|En la lista desplegable, seleccione una fecha para usarla en este informe.|  
-|**Hora de informe**|En la lista desplegable, seleccione una hora de la fecha especificada para la que quiere ejecutar este informe. Los valores válidos están comprendidos entre **12 a.m.** y **11 p.m.**.|  
+|**Hora de informe**|En la lista desplegable, seleccione una hora de la fecha especificada para la que quiere ejecutar este informe. Los valores válidos están comprendidos entre **12 a.m.** y **11 p.m**.|  
 |**Estado del equipo**|En la lista desplegable, seleccione el estado del equipo para el que quiere ejecutar este informe. Los valores válidos son **Todos** (los equipos que se han activado o desactivado), **Activado** (los equipos que se han activado) y **Desactivado** (los equipos que se han desactivado o que están en modo de suspensión o hibernación). Estos valores se devuelven solo para el período de informe seleccionado.|  
 |**Tipo de dispositivo**|En la lista desplegable, seleccione el tipo de equipo para el que quiere un informe. Los valores válidos son **Todos** (equipos de escritorio y portátiles), **Escritorio** (solo equipos de escritorio) y **Portátil** (solo equipos portátiles). Estos valores se devuelven solo para el período de informe seleccionado.|  
 |**Con capacidad de suspensión**|En la lista desplegable, seleccione si quiere mostrar los equipos con capacidad de suspensión en el informe. Los valores válidos son **Todos** (equipos con y sin capacidad de suspensión), **No** (equipos sin capacidad de suspensión) y **Sí** (equipos con capacidad de suspensión).|  
@@ -144,7 +143,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |-----------------|-------------|  
 |**Actividad de equipo por equipo**|Haga clic en un nombre de equipo para ver la actividad específica para ese equipo a lo largo de un período de elaboración de informes seleccionado. Estas actividades incluyen **Equipo encendido** (¿el equipo se ha activado), **Monitor encendido** (¿el monitor se ha activado?) y **Usuario activo** (se ha detectado actividad de teclado o mouse del equipo o una conexión a escritorio remoto).<br /><br /> Para obtener más información, consulte [Computer Activity by Computer Report](#BKMK_Comp_Activity_by_computer) en este tema.|  
 
-###  <a name="a-namebkmkcomputerdetailsa-computer-details-report"></a><a name="BKMK_Computer_Details"></a> Informe Detalles de equipo  
+###  <a name="BKMK_Computer_Details"></a> Informe Detalles de equipo  
  El informe **Detalles de equipo** muestra información detallada sobre las capacidades de energía, las configuraciones de energía y los planes de energía aplicados a un equipo especificado. Los informes **Actividad de equipo por equipo** , **Equipos con varios planes de energía** , **Capacidades de energía** y **Detalles de configuración de energía** llaman a este informe. No está diseñado para que el administrador del sitio lo ejecute directamente.  
 
 #### <a name="required-report-parameters"></a>Parámetros de informe necesarios  
@@ -161,7 +160,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 #### <a name="report-links"></a>Vínculos de informes  
  Este informe no se vincula a otros informes de administración de energía.  
 
-###  <a name="a-namebkmknotreportinga-computer-not-reporting-details-report"></a><a name="BKMK_Not_Reporting"></a> Informe El equipo no proporciona detalles  
+###  <a name="BKMK_Not_Reporting"></a> Informe El equipo no proporciona detalles  
  El informe **El equipo no proporciona detalles** muestra una lista de equipos de una recopilación especificada que no han notificado ninguna actividad de energía en una fecha y hora especificadas. El **Computer Activity Report** llama a este informe y no está diseñado para que el administrador del sitio lo ejecute directamente.  
 
 > [!NOTE]  
@@ -176,7 +175,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |--------------------|-----------------|  
 |**Nombre de recopilación**|En la lista desplegable, seleccione la recopilación que quiere usar para este informe.|  
 |**Fecha de informe**|En la lista desplegable, seleccione una fecha para este informe.|  
-|**Hora de informe**|En la lista desplegable, seleccione una hora de la fecha especificada para la que quiere ejecutar este informe. Los valores válidos están comprendidos entre **12 a.m.** y **11 p.m.**.|  
+|**Hora de informe**|En la lista desplegable, seleccione una hora de la fecha especificada para la que quiere ejecutar este informe. Los valores válidos están comprendidos entre **12 a.m.** y **11 p.m**.|  
 |**Tipo de dispositivo**|En la lista desplegable, seleccione el tipo de equipo para el que quiere un informe. Los valores válidos son **Todos** (equipos de escritorio y portátiles), **Escritorio** (solo equipos de escritorio) y **Portátil** (solo equipos portátiles). Estos valores se devuelven solo para el período de informe seleccionado.|  
 
 #### <a name="hidden-report-parameters"></a>Parámetros de informe ocultos  
@@ -185,7 +184,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 #### <a name="report-links"></a>Vínculos de informes  
  Este informe no se vincula a otros informes de administración de energía.  
 
-###  <a name="a-namebkmkexcludeda-computers-excluded"></a><a name="BKMK_Excluded"></a> Equipos excluidos  
+###  <a name="BKMK_Excluded"></a> Equipos excluidos  
  El informe **Equipos excluidos** muestra una lista de equipos de una recopilación especificada que se han excluido de la administración de energía de Configuration Manager.  
 
  Use los parámetros siguientes para configurar este informe.  
@@ -208,7 +207,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |-----------------|-------------|  
 |**Detalles del equipo de energía**|Haga clic en el nombre de un equipo para ver las capacidades de energía, la configuración de energía y los planes de energía aplicados para el equipo seleccionado.<br /><br /> Para obtener más información, consulte [Computer Details Report](#BKMK_Computer_Details) en este tema.|  
 
-###  <a name="a-namebkmkmultiplea-computers-with-multiple-power-plans"></a><a name="BKMK_Multiple"></a> Equipos con varios planes de energía  
+###  <a name="BKMK_Multiple"></a> Equipos con varios planes de energía  
  El informe **Equipos con varios planes de energía** muestra una lista de equipos que son miembros de varias recopilaciones y cada una de las cuales aplica un plan de energía diferente. Para cada equipo con una configuración de energía potencialmente conflictiva, el informe muestra el nombre del equipo y los planes de energía que se aplican para cada recopilación de la que el equipo es miembro.  
 
 > [!IMPORTANT]  
@@ -235,7 +234,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |-----------------|-------------|  
 |**Detalles del equipo de energía**|Haga clic en el nombre de un equipo para ver las capacidades de energía, la configuración de energía y los planes de energía aplicados para el equipo seleccionado.<br /><br /> Para obtener más información, consulte [Computer Details Report](#BKMK_Computer_Details) en este tema.|  
 
-###  <a name="a-namebkmkconsumptiona-energy-consumption-report"></a><a name="BKMK_Consumption"></a> Informe Consumo de energía  
+###  <a name="BKMK_Consumption"></a> Informe Consumo de energía  
  El informe **Consumo de energía** muestra la siguiente información:  
 
 -   Un gráfico que muestra el consumo de energía mensual total de los equipos en kilovatios por hora (kWh) de la recopilación especificada durante el período de tiempo especificado.  
@@ -278,7 +277,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 #### <a name="report-links"></a>Vínculos de informes  
  Este informe no se vincula a otros informes de administración de energía.  
 
-###  <a name="a-namebkmkconsumptionbydaya-energy-consumption-by-day-report"></a><a name="BKMK_Consumption_by_Day"></a> Informe Consumo de energía por día  
+###  <a name="BKMK_Consumption_by_Day"></a> Informe Consumo de energía por día  
  El informe **Consumo de energía por día** muestra la siguiente información:  
 
 -   Un gráfico que muestra el consumo de energía diario total de los equipos en kilovatios por hora (kWh) de la recopilación especificada durante el período de tiempo especificado.  
@@ -319,7 +318,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 #### <a name="report-links"></a>Vínculos de informes  
  Este informe no se vincula a otros informes de administración de energía.  
 
-###  <a name="a-namebkmkcosta-energy-cost-report"></a><a name="BKMK_Cost"></a> Informe Coste de energía  
+###  <a name="BKMK_Cost"></a> Informe Coste de energía  
  El informe **Coste de energía** muestra la siguiente información:  
 
 -   Un gráfico que muestra el coste de energía mensual total de los equipos de la recopilación especificada durante el período de tiempo especificado.  
@@ -361,7 +360,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 #### <a name="report-links"></a>Vínculos de informes  
  Este informe no se vincula a otros informes de administración de energía.  
 
-###  <a name="a-namebkmkcostbydaya-energy-cost-by-day-report"></a><a name="BKMK_Cost_by_Day"></a> Informe Coste de energía por día  
+###  <a name="BKMK_Cost_by_Day"></a> Informe Coste de energía por día  
  El informe **Coste de energía por día** muestra la siguiente información:  
 
 -   Un gráfico que muestra el coste de energía diario total de los equipos de la recopilación especificada durante los últimos 31 días.  
@@ -401,7 +400,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 #### <a name="report-links"></a>Vínculos de informes  
  Este informe no se vincula a otros informes de administración de energía.  
 
-###  <a name="a-namebkmkenvironmentalimpacta-environmental-impact-report"></a><a name="BKMK_Environmental_Impact"></a> Informe Impacto medioambiental  
+###  <a name="BKMK_Environmental_Impact"></a> Informe Impacto medioambiental  
  El informe **Impacto medioambiental** muestra la siguiente información:  
 
 -   Un gráfico que muestra el CO2 mensual total generado (en toneladas) por los equipos de la recopilación especificada durante el período de tiempo especificado.  
@@ -442,7 +441,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 #### <a name="report-links"></a>Vínculos de informes  
  Este informe no se vincula a otros informes de administración de energía.  
 
-###  <a name="a-namebkmkenvironmentalimpactbydaya-environmental-impact-by-day-report"></a><a name="BKMK_Environmental_Impact_by_Day"></a> Informe Impacto medioambiental por día  
+###  <a name="BKMK_Environmental_Impact_by_Day"></a> Informe Impacto medioambiental por día  
  El informe **Impacto medioambiental por día** muestra la siguiente información:  
 
 -   Un gráfico que muestra el CO2 diario total generado (en toneladas) por los equipos de la recopilación especificada durante los últimos 31 días.  
@@ -479,7 +478,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 #### <a name="report-links"></a>Vínculos de informes  
  Este informe no se vincula a otros informes de administración de energía.  
 
-###  <a name="a-namebkmkinsomniacomputerdetailsa-insomnia-computer-details-report"></a><a name="BKMK_Insomnia_Computer_Details"></a> Informe Detalles de insomnio de equipo  
+###  <a name="BKMK_Insomnia_Computer_Details"></a> Informe Detalles de insomnio de equipo  
  El informe **Detalles de insomnio de equipo** muestra una lista de equipos que no entraron suspensión o hibernación por un motivo concreto dentro de un período de tiempo especificado. El **Informe de insomnio** llama a este informe y no está diseñado para que el administrador del sitio lo ejecute directamente.  
 
  El **Informe de insomnio** muestra los equipos como **Sin capacidad de suspensión** cuando no tienen la capacidad de suspensión y han estado encendidos durante todo el intervalo de informe especificado. El informe muestra los equipos como **Sin capacidad de hibernación** cuando no tienen la capacidad de hibernación y han estado encendidos durante todo el intervalo de informe especificado.  
@@ -508,7 +507,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |-----------------|-------------|  
 |**Detalles del equipo**|Haga clic en el vínculo **Haga clic para obtener información detallada** para ver las capacidades de energía, la configuración de energía y los planes de energía aplicados para el equipo seleccionado.<br /><br /> Para obtener más información, consulte [Computer Details Report](#BKMK_Computer_Details) en este tema.|  
 
-###  <a name="a-namebkmkinsomniaa-insomnia-report"></a><a name="BKMK_Insomnia"></a> Insomnia report  
+###  <a name="BKMK_Insomnia"></a> Insomnia report  
  El **Informe de insomnio** muestra una lista de las causas comunes que impidieron que los equipos entraran en modo de suspensión o hibernación y el número de equipos afectados por cada causa durante un período de tiempo especificado. Hay varias causas que pueden impedir que un equipo entre en suspensión o hibernación, como un proceso que se ejecuta en el equipo, una sesión abierta de Escritorio remoto o que el equipo no tenga la capacidad de suspensión o hibernación. En este informe, puede abrir el informe **Detalles de insomnio de equipo** que muestra una lista de los equipos que no están en modo de suspensión o hibernación afectados por cada causa.  
 
  El informe de insomnio de energía muestra los equipos como **Sin capacidad de suspensión** cuando no tienen la capacidad de suspensión y han estado encendidos durante todo el intervalo de informe especificado. El informe muestra los equipos como **Sin capacidad de hibernación** cuando no tienen la capacidad de hibernación y han estado encendidos durante todo el intervalo de informe especificado.  
@@ -536,7 +535,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |-----------------|-------------|  
 |**Detalles de insomnio de equipo**|Haga clic en un número en la columna **Equipos afectados** para ver una lista de equipos que no pudieron entran en suspensión o hibernación debido a la causa seleccionada.<br /><br /> Para obtener más información, consulte [Insomnia Computer Details Report](#BKMK_Insomnia_Computer_Details) en este tema.|  
 
-###  <a name="a-namebkmkcapabilitesa-power-capabilities-report"></a><a name="BKMK_Capabilites"></a> Informe Capacidades de energía  
+###  <a name="BKMK_Capabilites"></a> Informe Capacidades de energía  
  El informe **Capacidades de energía** muestra las capacidades de hardware para la administración de energía de los equipos de la recopilación especificada. Este informe se usa normalmente en la fase de supervisión de la administración de energía para determinar las capacidades de administración de energía de los equipos de su organización. La información mostrada en el informe puede usarse para crear recopilaciones de equipos a las que se vayan a aplicar los planes de energía o que se vayan a excluir de la administración de energía. Las capacidades de administración de energía que muestra este informe son:  
 
 -   **Con capacidad de suspensión** : indica si el equipo tiene la capacidad de entrar en suspensión si se configura para ello.  
@@ -569,7 +568,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |-----------------|-------------|  
 |**Detalles del equipo**|Haga clic en el nombre de un equipo para ver las capacidades de energía, la configuración de energía y los planes de energía aplicados para el equipo seleccionado.<br /><br /> Para obtener más información, consulte [Computer Details Report](#BKMK_Computer_Details) en este tema.|  
 
-###  <a name="a-namebkmksettingsa-power-settings-report"></a><a name="BKMK_Settings"></a> Informe Configuración de energía  
+###  <a name="BKMK_Settings"></a> Informe Configuración de energía  
  El informe **Configuración de energía** muestra una lista agregada de configuraciones de energía usadas por los equipos de la recopilación especificada. Para cada configuración de energía, se muestran los modos, los valores y las unidades de energía posibles, junto con un recuento del número de equipos que usan esos valores. Este informe puede usarse durante la fase de supervisión de la administración de energía para ayudar al administrador a comprender la configuración de energía existente que los equipos usan en el sitio y para ayudar a planificar la configuración de energía óptima que se debe aplicar mediante un plan de administración de energía. El informe también es útil al solucionar problemas para validar que la configuración de energía se aplicó correctamente.  
 
 > [!NOTE]  
@@ -598,7 +597,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |-----------------|-------------|  
 |**Detalles de configuración de energía**|Haga clic en el número de equipos en la columna **Equipos** para ver una lista de todos los equipos que usan la configuración de energía de esa fila.<br /><br /> Para obtener más información, consulte [Power Settings Details Report](#BKMK_Settings_Details) en este tema.|  
 
-###  <a name="a-namebkmksettingsdetailsa-power-settings-details-report"></a><a name="BKMK_Settings_Details"></a> Power Settings Details report  
+###  <a name="BKMK_Settings_Details"></a> Power Settings Details report  
  El informe **Detalles de configuración de energía** muestra información adicional sobre los equipos seleccionados en el informe **Configuración de energía** . El informe **Configuración de energía** llama a este informe y no está diseñado para que el administrador del sitio lo ejecute directamente.  
 
 #### <a name="required-report-parameters"></a>Parámetros de informe necesarios  
@@ -624,9 +623,3 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |Nombre del informe|Detalles|  
 |-----------------|-------------|  
 |**Detalles del equipo**|Haga clic en el nombre de un equipo para ver las capacidades de energía, la configuración de energía y los planes de energía aplicados para el equipo seleccionado.<br /><br /> Para obtener más información, consulte [Computer Details Report](#BKMK_Computer_Details) en este tema.|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

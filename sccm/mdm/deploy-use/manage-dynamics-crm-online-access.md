@@ -5,22 +5,20 @@ ms.custom: na
 ms.date: 03/05/2017
 ms.reviewer: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bfc4c51-b25c-4c70-b81e-8a3b6ddf02c8
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 1579062f4ebfe2b59a81042a77bbc23387e9b058
-ms.contentlocale: es-es
-ms.lasthandoff: 03/06/2017
-
+ms.openlocfilehash: bd00f12ae3bc14a34d24c22c3d5277d275d51e85
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-dynamics-crm-online-access-in-system-center-configuration-manager"></a>Administración del acceso a Dynamics CRM Online en System Center Configuration Manager.
 
@@ -100,4 +98,3 @@ Seleccione un grupo de dispositivos móviles y, en la pestaña **Dispositivos** 
 [Manage access to SharePoint Online](../../protect/deploy-use/manage-sharepoint-online-access.md) (Administración del acceso a SharePoint Online)
 
 [Manage access to Skype for Business Online](../../protect/deploy-use/manage-skype-for-business-online-access.md) (Administración del acceso a Skype Empresarial Online)
-

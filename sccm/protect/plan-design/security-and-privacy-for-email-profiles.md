@@ -6,21 +6,20 @@ ms.date: 12/28/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 601e3a8d-e9e7-456f-a844-f19c3dae12a9
-caps.latest.revision: 3
-caps.handback.revision: 0
+caps.latest.revision: "3"
+caps.handback.revision: "0"
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
 ms.openlocfilehash: 17707f931a4fa58b225ce14f04c2a19648585bc4
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-email-profiles-in-system-center-configuration-manager"></a>Seguridad y privacidad para perfiles de correo electrónico en System Center Configuration Manager
 
@@ -37,9 +36,3 @@ ms.openlocfilehash: 17707f931a4fa58b225ce14f04c2a19648585bc4
  Los dispositivos no evalúan los perfiles de correo electrónico de manera predeterminada. Además, los perfiles de correo electrónico hay que configurarlos y, a continuación, implementarlos en los usuarios.  
 
  Antes de configurar perfiles de correo electrónico, tenga en cuenta sus requisitos de privacidad.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

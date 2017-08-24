@@ -6,21 +6,19 @@ ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: dec1e0d7-5864-43a8-9f56-413923b3914e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 640cdc67f301a81a45bf27f95eb03cbc8754a9aa
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.openlocfilehash: 311606b8d52645d3ca89642be4cc341b8a64ec56
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="boundary-groups-for-system-center-configuration-manager-version-1511-1602-and-1606"></a>Grupos de límites para las versiones 1511, 1602 y 1606 de System Center Configuration Manager
 
@@ -175,4 +173,3 @@ Este comportamiento permite al cliente seleccionar el servidor más cercano desd
  De forma predeterminada, la velocidad de conexión de la red se establece en **Rápida**, pero puede cambiarla a **Lenta**. La velocidad de conexión de la red y la configuración de implementación permiten comprobar si un cliente puede descargar contenido desde un punto de distribución cuando este se encuentra en un grupo de límites asociado.  
 
  Para obtener más información sobre cómo afecta la configuración de la velocidad de conexión de la red a la forma en que los clientes obtienen el contenido, consulte [Escenarios de ubicación de orígenes de contenido](../../../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
-

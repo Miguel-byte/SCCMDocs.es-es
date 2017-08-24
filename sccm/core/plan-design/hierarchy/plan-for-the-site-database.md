@@ -6,23 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: cec63ed7781e236dbf5e8baa0a468193ea794339
 ms.openlocfilehash: d4efe1f013dbb74efca79cd27f7248fc085c7424
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-for-the-site-database-for-system-center-configuration-manager"></a>Planificar la base de datos del sitio de System Center Configuration Manager
 
@@ -63,4 +60,3 @@ Si usa un equipo de servidor de base de datos remoto, asegúrese de que la conex
 
 
 Normalmente, un servidor de sistema de sitio admite roles de sistema de sitio de un único sitio de Configuration Manager. En cambio, puede usar distintas instancias de SQL Server (en servidores en clúster o que no estén en clúster que ejecuten SQL Server) para hospedar una base de datos de varios sitios de Configuration Manager. Para admitir bases de datos de sitios diferentes, debe configurar cada instancia de SQL Server para usar puertos exclusivos para la comunicación.  
-

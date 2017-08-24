@@ -6,20 +6,19 @@ ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2e27b0b7-7bd3-45cd-bc99-9c991606c637
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: ac4576035fda943e38d960dd425d44b7a6ef6a01
 ms.openlocfilehash: b52ca4059dfeed08cabf1f75319da40d6499622f
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-a-client-migration-strategy-in-system-center-configuration-manager"></a>Planear una estrategia de migración de clientes en System Center Configuration Manager
 
@@ -35,7 +34,7 @@ Para migrar clientes de la jerarquía de origen a una jerarquía de destino de S
 
 -   [Planear los datos de cumplimiento y de inventario durante la migración](#Planning_for_Inventory_data_migration)  
 
-##  <a name="a-nameplanningforclientagentmigrationa-plan-to-migrate-clients-to-the-destination-hierarchy"></a><a name="Planning_for_Client_Agent_Migration"></a> Planear la migración de clientes a la jerarquía de destino  
+##  <a name="Planning_for_Client_Agent_Migration"></a> Planear la migración de clientes a la jerarquía de destino  
  Cuando se migran clientes de una jerarquía de origen, se actualiza el software cliente en el equipo cliente para coincidir con la versión del producto de la jerarquía de destino.  
 
 -   **Una jerarquía de origen de Configuration Manager 2007:** cuando se migran clientes desde una jerarquía de origen que ejecute una versión compatible de Configuration Manager, el software cliente se actualiza a la versión de cliente para la jerarquía de destino.  
@@ -69,7 +68,7 @@ Puede supervisar el proceso de migración del cliente en el nodo **Migración** 
 
 Tras migrar el cliente a la jerarquía de destino, no podrá administrar ese dispositivo con su jerarquía de origen y deberá considerar la posibilidad de quitar el cliente de la jerarquía de origen. Aunque no sea un requisito a la hora de migrar jerarquías, puede servir para evitar la identificación de un cliente migrado en un informe de jerarquía de origen, o un recuento incorrecto de recursos entre las dos jerarquías durante la migración. Por ejemplo, cuando un cliente migrado permanece en la base de datos del sitio de origen, puede ejecutar un informe de actualizaciones de software que identifique de forma incorrecta el equipo como un recurso sin administrar cuando está administrado actualmente por la jerarquía de destino.  
 
-##  <a name="a-nameplanningforclientdatamigrationa-plan-to-handle-data-maintained-on-clients-during-migration"></a><a name="Planning_for_Client_Data_Migration"></a> Planear el control de los datos mantenidos en los clientes durante la migración  
+##  <a name="Planning_for_Client_Data_Migration"></a> Planear el control de los datos mantenidos en los clientes durante la migración  
 Cuando migre un cliente desde su jerarquía de origen a la jerarquía de destino, parte de la información se mantiene en el dispositivo, mientras que otra no está disponible en el dispositivo después de la migración.  
 
 La información siguiente se conserva en el dispositivo cliente:  
@@ -98,13 +97,7 @@ Cuando se migra un cliente, no se mantiene la información que se almacena en el
 
 Además, es posible que tenga que volver a instalar algunas aplicaciones.  
 
-##  <a name="a-nameplanningforinventorydatamigrationa-plan-for--inventory-and-compliance-data-during-migration"></a><a name="Planning_for_Inventory_data_migration"></a> Planear los datos de cumplimiento y de inventario durante la migración  
+##  <a name="Planning_for_Inventory_data_migration"></a> Planear los datos de cumplimiento y de inventario durante la migración  
 No se guardan los datos de cumplimiento de normas ni el inventario de cliente al migrar un cliente a la jerarquía de destino. En su lugar, esta información se vuelve a crear en la jerarquía de destino cuando un cliente envía primero su información a su sitio asignado. Para ayudar a reducir los requisitos de ancho de banda de red y el procesamiento de servidor resultantes, es mejor que migre un número pequeño de clientes en fases en lugar de migrar una gran cantidad de clientes de una sola vez.  
 
  Además, no puede migrar las personalizaciones del inventario de hardware de una jerarquía de origen. Debe introducirlas en la jerarquía de destino independientemente de la migración. Para obtener más información sobre cómo ampliar el inventario de hardware, consulte [Cómo configurar el inventario de hardware en System Center Configuration Manager](../../core/clients/manage/inventory/configure-hardware-inventory.md).  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

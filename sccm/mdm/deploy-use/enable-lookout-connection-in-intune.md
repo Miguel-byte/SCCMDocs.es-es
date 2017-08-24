@@ -6,8 +6,7 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7e4ada34-63bf-4b9f-8246-31816aa44196
@@ -15,13 +14,11 @@ caps.latest.revision:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 65d3dff359987e1d3175b06aa7a03827d48bc97d
-ms.contentlocale: es-es
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: f9ddbcc981fa1274a41ae16a6a939c0cdf739c3e
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="enable-lookout-mtp-connection-in-the-intune-admin-console"></a>Habilitar la conexión de Lookout MTP en la consola de administración de Intune
 
@@ -40,4 +37,3 @@ Esto completa la configuración de la integración de Lookout e Intune en la con
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Configurar e implementar aplicaciones Lookout for Work](configure-and-deploy-lookout-for-work-apps.md)
-

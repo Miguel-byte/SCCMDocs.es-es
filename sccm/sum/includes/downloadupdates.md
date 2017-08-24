@@ -79,8 +79,3 @@
 8. En la página **Resumen**, compruebe la configuración seleccionada en el asistente y, después, haga clic en **Siguiente** para descargar las actualizaciones de software.  
 
 9. En la página **Finalización**, compruebe que las actualizaciones de software se descargaron correctamente y, después, haga clic en **Cerrar**.  
-
-
-<!--HONumber=Jan17_HO4-->
-
-

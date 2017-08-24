@@ -6,23 +6,20 @@ ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10eb8958-3848-49d7-95c0-16119b624580
-caps.latest.revision: 11
-caps.handback.revision: 0
+caps.latest.revision: "11"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 5acf800ff5aebd849e294393337755145a60cca5
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-capture-media-with-system-center-configuration-manager"></a>Crear medios de captura con System Center Configuration Manager
 
@@ -82,4 +79,3 @@ Los medios de captura se crean mediante el Asistente para crear medio de secuenc
         >  Debe tener derechos de acceso de lectura en la biblioteca de contenido del punto de distribución.  
 
 7.  Complete el asistente.  
-

@@ -5,20 +5,18 @@ ms.custom: na
 ms.date: 05/02/2017
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f4cb711f369698fe8e045f8c83dd96ec6fb29d70
 ms.openlocfilehash: a2954b3c6f9a09b7246347e780c4cfc49ba39ca1
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Novedades de la versión 1702 de System Center Configuration Manager
 
@@ -333,4 +331,3 @@ Para más información, vea [Configuración de Windows Hello para empresas](/scc
 
 ### <a name="new-windows-hello-for-business-notification-for-end-users"></a>Nueva notificación de Windows Hello para empresas para los usuarios finales
 Una nueva notificación de Windows 10 informa a los usuarios finales de que deben realizar acciones adicionales para completar la configuración de Windows Hello para empresas (por ejemplo, configurar un PIN).
-

@@ -6,23 +6,20 @@ ms.date: 3/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
-caps.latest.revision: 8
-caps.handback.revision: 0
+caps.latest.revision: "8"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d5166b16ffbe46af561b1ce98c0494cc4aaa72a8
 ms.openlocfilehash: e040552dab21ba9a71e06a78f6acc2ffe1b0eb61
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="support-for-windows-features-and-networks-in-system-center-configuration-manager"></a>Compatibilidad con las características y redes de Windows en System Center Configuration Manager
 
@@ -139,4 +136,3 @@ Los roles del servidor de sitio requieren sistemas de archivos NTFS para que se 
      Además, la memoria caché de un cliente de Configuration Manager no se admite en un volumen habilitado para SIS.  
 
 -   **Unidad de disco extraíble**: Configuration Manager no admite la instalación de clientes o sistemas de sitio de Configuration Manager en una unidad de disco extraíble.  
-

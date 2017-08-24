@@ -6,21 +6,19 @@ ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 04fe7b3e674287c4255563ab4a308e54d0b6c3aa
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>Opciones de línea de comandos para la instalación en System Center Configuration Manager
 
@@ -1277,4 +1275,3 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
     -   **Valores:** <*número de puerto*>  
 
     -   **Detalles:** especifica el número de puerto que se usará para el puerto de proxy.  
-

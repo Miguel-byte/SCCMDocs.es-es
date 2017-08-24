@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
 ms.openlocfilehash: 8aa6971d75924ab5bcacd70c330913097ecf8717
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-migration-to-system-center-configuration-manager"></a>Seguridad y privacidad de la migración a System Center Configuration Manager
 
@@ -64,9 +63,3 @@ Puede migrar algunos o todos los datos admitidos desde un sitio de origen a una 
 La migración no está habilitada de forma predeterminada y requiere varios pasos de configuración. La información de migración no se envía a Microsoft.  
 
 Antes de migrar datos de una jerarquía de origen, tenga en cuenta los requisitos de privacidad.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

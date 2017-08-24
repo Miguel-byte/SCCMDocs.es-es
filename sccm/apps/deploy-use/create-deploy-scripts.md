@@ -2,28 +2,25 @@
 title: "Creación y ejecución de scripts con Configuration Manager | Microsoft Docs"
 description: Cree y ejecute scripts en los dispositivos cliente con Configuration Manager.
 ms.custom: na
-ms.date: 08/01/2017
+ms.date: 08/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
-caps.latest.revision: 14
-caps.handback.revision: 0
+caps.latest.revision: "14"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
+ms.openlocfilehash: ed84f7900eee5c04728d0e4d1b46027c36327bec
+ms.sourcegitcommit: b41d3e5c7f0c87f9af29e02de3e6cc9301eeafc4
 ms.translationtype: HT
-ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
-ms.openlocfilehash: 4dcda88d4e91347f6da97e8da04c38f9e65e07bc
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/11/2017
 ---
-
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -61,7 +58,6 @@ De forma predeterminada, los usuarios no pueden aprobar un script que hayan crea
 2. En el área de trabajo **Administración** , expanda **Configuración del sitio**y, a continuación, haga clic en **Sitios**.
 3. En la lista de sitios, elija el sitio y, a continuación, en la pestaña **Inicio** del grupo **Sitios**, haga clic en **Configuración de jerarquía**.
 4. En la pestaña **General** del cuadro de diálogo **Propiedades de configuración de jerarquía**, desactive la casilla **Do not allow script authors to approve their own scripts** (No permitir que los autores de scripts aprueben sus propios scripts).
-Sitios
 
 ## <a name="import-and-edit-a-script"></a>Importación y modificación de un script
 
@@ -120,4 +116,3 @@ Después de ejecutar un script en los dispositivos cliente, siga este procedimie
 1. En la consola de Configuration Manager, haga clic en **Supervisión**.
 2. En el área de trabajo **Supervisión**, haga clic en **Estado de script**.
 3. En la lista **Estado de script** aparecen los resultados de cada script ejecutado en los dispositivos cliente. Un código de salida de script de **0** suele indicar que el script se ejecutó correctamente.
-

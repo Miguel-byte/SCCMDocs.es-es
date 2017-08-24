@@ -1,5 +1,4 @@
 ---
-
 title: Implementar actualizaciones de software manualmente | Microsoft Docs
 description: "Para implementar actualizaciones manualmente, seleccione actualizaciones en la consola de Configuration Manager e impleméntelas manualmente, o agregue actualizaciones a un grupo de actualizaciones e implemente el grupo."
 keywords: 
@@ -10,18 +9,14 @@ ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
 ms.openlocfilehash: 2a0d5f12b99689749833c109d4fa399f99451d8a
-ms.contentlocale: es-es
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 #  <a name="BKMK_ManualDeploy"></a> Implementar actualizaciones de software manualmente  
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -317,4 +312,3 @@ ms.lasthandoff: 06/08/2017
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Supervisar actualizaciones de software](monitor-software-updates.md)
-

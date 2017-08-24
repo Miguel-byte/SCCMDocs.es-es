@@ -6,22 +6,19 @@ ms.date: 05/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f4f9a5fd-f573-4b99-ad93-b2c76812e922
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
 ms.openlocfilehash: 39653604ba5fd8e1fe9dd4d42889221d983f9bec
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>Instalar y actualizar con el medio de línea base de la versión 1606 para System Center Configuration Manager
 
@@ -34,7 +31,7 @@ El medio de línea base está disponible en DVD como parte de Microsoft System C
 
 Cuando use el medio de línea base de la versión 1606, el sitio que instala o al que actualiza es:
 - *Un sitio de rama actual* que es equivalente a un sitio que se instaló primero mediante el medio de línea base 1511 y, después, se actualizó a la versión 1606 además del paquete acumulativo de revisiones 1606: KB3186654.
--    *Un sitio de LTSB* que es equivalente al sitio de rama actual que ejecuta la versión 1606 además del paquete acumulativo de revisiones 1606: KB3186654. El medio de línea base ya incluye el paquete acumulativo de revisiones.  En cambio, la LTSB no admite todas las características o capacidades que están disponibles en la rama actual, como se detalla en [Introducción a la rama de mantenimiento a largo plazo de System Center Configuration Manager](introduction-to-the-ltsb.md).
+-   *Un sitio de LTSB* que es equivalente al sitio de rama actual que ejecuta la versión 1606 además del paquete acumulativo de revisiones 1606: KB3186654. El medio de línea base ya incluye el paquete acumulativo de revisiones.  En cambio, la LTSB no admite todas las características o capacidades que están disponibles en la rama actual, como se detalla en [Introducción a la rama de mantenimiento a largo plazo de System Center Configuration Manager](introduction-to-the-ltsb.md).
 
 Si no está familiarizado con las diferentes ramas de System Center Configuration Manager, consulte [Which branch of Configuration Manager should I use (Qué rama de Configuration Manager debo usar)](which-branch-should-i-use.md).
 
@@ -77,7 +74,7 @@ El medio de línea base de la versión 1606 admite una nueva clave de archivo de
 Al usar un script desatendido para instalar una rama con licencia, debe agregar la siguiente sección, los nombres de clave y valores a la sección de opciones del script. No es necesario usar estos valores para la instalación mediante script de la edición de evaluación de la rama actual:  
 
  **SABranchOptions**
--     **Nombre de clave: SAActive**
+-   **Nombre de clave: SAActive**
   - Valores: 0 o 1.  
   - Detalles: 0 instala una edición de evaluación sin licencia de la rama actual y 1 instala una edición con licencia.   
 
@@ -105,7 +102,7 @@ Cuando usa el medio de línea base 1606 para instalar un nuevo sitio de cualquie
 
 - Durante la instalación, debe elegir la rama de Configuration Manager que quiere instalar, y puede especificar la información de su contrato de Software Assurance.
 - Todos los sitios de una misma jerarquía deben ejecutar la misma rama. Tener una jerarquía con una mezcla de LTSB y rama actual en diferentes sitios no se admite.
--    Nueva instalación generada por script. Para más información, vea "Nuevas opciones de instalación generadas por script" anteriormente en este artículo.
+-   Nueva instalación generada por script. Para más información, vea "Nuevas opciones de instalación generadas por script" anteriormente en este artículo.
 
 ## <a name="expand-a-stand-alone-primary-site"></a>Expandir un sitio primario independiente
 Puede expandir un sitio primario independiente que ejecuta la LTSB.  El proceso no es diferente del que se usó para un sitio de rama actual con una salvedad:
@@ -119,7 +116,7 @@ Cuando actualice desde System Center 2012 Configuration Manager, use los procedi
 
 **Actualizar a la rama actual:**
 - Durante el programa de instalación, debe elegir la rama actual, y puede especificar la información de su contrato de Software Assurance.
--     Nueva instalación generada por script. Para más información, vea "Nuevas opciones de instalación generadas por script" anteriormente en este artículo.
+-   Nueva instalación generada por script. Para más información, vea "Nuevas opciones de instalación generadas por script" anteriormente en este artículo.
 
 **Actualizar a la LTSB:**  
 - Pasos adicionales para seguir en la lista de comprobación previa a la actualización.
@@ -155,4 +152,3 @@ Para más información, vea [la carpeta CD.Latest](/sccm/core/servers/manage/the
 Para realizar una copia de seguridad, recuperar o ejecutar el mantenimiento de un sitio que ejecuta la LTSB, use la guía y los procedimientos de [Copia de seguridad y recuperación de System Center Configuration Manager](/sccm/protect/understand/backup-and-recovery).  
 
 Use el programa de instalación de Configuration Manager de la carpeta CD.Latest de la copia de seguridad de su sitio de LTSB.
-

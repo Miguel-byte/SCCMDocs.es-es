@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 8d37b983-a964-402c-819d-2512ed2d463b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 8b5564f39f07a67a3c9278379ed59ca415603d21
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="settings-to-manage-high-risk-deployments-for-system-center-configuration-manager"></a>Configuración para administrar implementaciones de alto riesgo para System Center Configuration Manager
 
@@ -59,9 +58,3 @@ Con System Center Configuration Manager, puede configurar un sitio de modo que a
 
 ### <a name="see-also"></a>Consulte también  
  [Configurar sitios y jerarquías para System Center Configuration Manager](../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

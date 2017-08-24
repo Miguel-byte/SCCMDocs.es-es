@@ -1,5 +1,4 @@
 ---
-
 title: "Introducción a las actualizaciones de software | Microsoft Docs"
 description: "Descubra los conceptos básicos de las actualizaciones de software en System Center Configuration Manager."
 keywords: 
@@ -10,15 +9,13 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-translationtype: Human Translation
-ms.sourcegitcommit: d8cace9edd58e8fa438dbb43e54e57cd0dc55d2b
 ms.openlocfilehash: 2904b904bbaf155f016f55fbd36af80308a42d76
-
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="introduction-to-software-updates-in-system-center-configuration-manager"></a>Introducción a las actualizaciones de software en System Center Configuration Manager
 
@@ -28,7 +25,7 @@ Las actualizaciones de software en System Center Configuration Manager proporcio
 
 Para ver un escenario de ejemplo que muestra cómo podría implementar actualizaciones de software en su entorno, consulte [Example scenario to deploy security software updates](../deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md) (Escenario de ejemplo para implementar actualizaciones de software de seguridad).  
 
-##  <a name="a-namebkmksynchronizationa-software-updates-synchronization"></a><a name="BKMK_Synchronization"></a> Sincronización de las actualizaciones de software  
+##  <a name="BKMK_Synchronization"></a> Sincronización de las actualizaciones de software  
  La sincronización de las actualizaciones de software en Configuration Manager se conecta a Microsoft Update para recuperar los metadatos de actualizaciones de software. El sitio de nivel superior (sitio de administración central o sitio primario independiente) se sincroniza con Microsoft Update según una programación o cuando el usuario inicia la sincronización de forma manual desde la consola de Configuration Manager. Cuando Configuration Manager finaliza la sincronización de las actualizaciones de software en el sitio de nivel superior, la sincronización de actualizaciones de software comienza en los sitios secundarios que haya. Cuando se completa la sincronización en cada uno de los sitios, primarios o secundarios, se crea una directiva de todo el sitio que proporciona a los equipos cliente la ubicación de los puntos de actualización de software.  
 
 > [!NOTE]  
@@ -82,7 +79,7 @@ Para ver un escenario de ejemplo que muestra cómo podría implementar actualiza
 
 7.  El administrador de sincronización de WSUS envía una solicitud, de a una por vez, a cada WSUS que se ejecute en otros puntos de actualización de software del sitio. Los servidores WSUS de los otros puntos de actualización de software se configuran como réplicas del WSUS que se ejecuta en el punto de actualización de software predeterminado del sitio.  
 
-##  <a name="a-namebkmksumcompliancea-software-updates-compliance-assessment"></a><a name="BKMK_SUMCompliance"></a> Software updates compliance assessment  
+##  <a name="BKMK_SUMCompliance"></a> Software updates compliance assessment  
  Antes de implementar las actualizaciones de software en equipos cliente de Configuration Manager, inicie una detección para comprobar el cumplimiento de las actualizaciones de software en los equipos cliente. Para cada actualización de software, se crea un mensaje de estado que contiene el estado de cumplimiento para la actualización. Los mensajes de estado se envían de forma masiva al punto de administración y, a continuación, al servidor de sitio, donde el estado de cumplimiento se inserta en la base de datos del sitio. El estado de cumplimiento de las actualizaciones de software se muestra en la consola de Configuration Manager. Puede implementar e instalar las actualizaciones de software en equipos que requieren las actualizaciones. Las secciones siguientes proporcionan información acerca de los estados de cumplimiento y describen el proceso de análisis para comprobar el cumplimiento de las actualizaciones de software.  
 
 ### <a name="software-updates-compliance-states"></a>Estados de cumplimiento de las actualizaciones de software  
@@ -180,7 +177,7 @@ Para ver un escenario de ejemplo que muestra cómo podría implementar actualiza
 
      Después de la instalación de una actualización de software y del reinicio del equipo, el Agente cliente de actualizaciones de software inicia un examen mediante el uso de los metadatos locales. El cliente nunca se conecta al WSUS que se ejecuta en el punto de actualización de software para recuperar los metadatos de las actualizaciones de software.  
 
-##  <a name="a-namebkmkdeploymentpackagesa-software-update-deployment-packages"></a><a name="BKMK_DeploymentPackages"></a> Paquetes de implementación de actualizaciones de software  
+##  <a name="BKMK_DeploymentPackages"></a> Paquetes de implementación de actualizaciones de software  
  Un paquete de implementación de actualizaciones de software es el vehículo utilizado para descargar actualizaciones de software en una carpeta compartida de red y copiar los archivos de origen de las actualizaciones de software en la biblioteca de contenido de los servidores de sitio así como en los puntos de distribución definidos en la implementación. Con el Asistente para descargar actualizaciones puede descargar las actualizaciones de software y agregarlas a los paquetes de implementación antes de su implementación. Este asistente le permite aprovisionar las actualizaciones de software en los puntos de distribución y comprobar que esta parte del proceso de implementación se realiza correctamente antes de implementar las actualizaciones de software en los clientes.  
 
  Cuando se implementan las actualizaciones de software descargadas mediante el Asistente para implementar actualizaciones de software, la implementación utiliza automáticamente el paquete de implementación que contiene las actualizaciones de software. Cuando se implementan actualizaciones de software que no se descargaron, se debe especificar un paquete de implementación nuevo o existente en el Asistente para implementar actualizaciones de software, y las actualizaciones de software se descargarán cuando finalice el Asistente.  
@@ -195,10 +192,10 @@ Para ver un escenario de ejemplo que muestra cómo podría implementar actualiza
 
  Los clientes instalan las actualizaciones de software de una implementación mediante cualquier punto de distribución que tenga las actualizaciones de software disponibles, independientemente del paquete de distribución. Aunque se elimine un paquete de implementación de una implementación activa, los clientes seguirán siendo capaces de instalar las actualizaciones de software en la implementación siempre y cuando cada actualización se descargue al menos en otro paquete de implementación y esté disponible en un punto de distribución al que se pueda acceder desde el cliente. Si se elimina el último paquete de implementación que contiene una actualización de software, los equipos cliente no pueden recuperar la actualización de software hasta que la actualización se vuelve a descargar en un paquete de implementación. Las actualizaciones de software aparecen con una flecha roja en la consola de Configuration Manager cuando los archivos de actualización no están en ningún paquete de implementación. Las implementaciones aparecen con una flecha roja doble si contienen actualizaciones que se encuentran en este estado.  
 
-##  <a name="a-namebkmkdeploymentworkflowsa-software-update-deployment-workflows"></a><a name="BKMK_DeploymentWorkflows"></a> Flujos de trabajo de implementación de actualizaciones de software  
+##  <a name="BKMK_DeploymentWorkflows"></a> Flujos de trabajo de implementación de actualizaciones de software  
  Hay dos escenarios principales de implementación de las actualizaciones de software en su entorno, la implementación manual y la implementación automática. Normalmente, las actualizaciones de software se implementan manualmente para crear una línea de base para los equipos cliente y, a continuación, las actualizaciones de software se administran en los clientes mediante la implementación automática. En las secciones siguientes se facilita un resumen del flujo de trabajo de la implementación manual y automática de las actualizaciones de software.  
 
-###  <a name="a-namebkmkmanualdeploymenta-manual-deployment-of-software-updates"></a><a name="BKMK_ManualDeployment"></a> Implementación manual de las actualizaciones de software  
+###  <a name="BKMK_ManualDeployment"></a> Implementación manual de las actualizaciones de software  
  La implementación manual de las actualizaciones de software es un proceso que incluye la selección de las actualizaciones de software en la consola de Configuration Manager y el inicio manual del proceso de implementación. Este método de implementación se utiliza normalmente para que los equipos cliente tengan todas las actualizaciones de software necesarias antes de que se creen las reglas de implementación automática que administran las implementaciones de las actualizaciones de software mensuales continuas, así como para implementar los requisitos de las actualizaciones de software fuera de banda. En la lista siguiente se indica el flujo de trabajo general de la implementación manual de las actualizaciones de software:  
 
 1.  Filtre las actualizaciones de software que utilicen requisitos específicos. Por ejemplo, podría especificar criterios para la recuperación de todas las actualizaciones de software de seguridad o imprescindibles que se requieran en más de 50 equipos cliente.  
@@ -209,7 +206,7 @@ Para ver un escenario de ejemplo que muestra cómo podría implementar actualiza
 
 4.  Implemente manualmente el grupo de actualizaciones de software.  
 
-###  <a name="a-namebkmkautomaticdeploymenta-automatic-deployment-of-software-updates"></a><a name="BKMK_AutomaticDeployment"></a> Implementación automática de las actualizaciones de software  
+###  <a name="BKMK_AutomaticDeployment"></a> Implementación automática de las actualizaciones de software  
  La implementación automática de las actualizaciones de software se configura mediante una regla de implementación automática (ADR). Este método de implementación se utiliza normalmente para las actualizaciones de software mensuales (que se conocen como "Patch Tuesday") y para administrar las actualizaciones de definiciones. Cuando la regla se ejecuta, se quitan las actualizaciones de software del grupo de actualizaciones de software (si se está usando un grupo existente); las actualizaciones de software que cumplan los criterios especificados (por ejemplo, todas las actualizaciones de software de seguridad publicadas en la última semana) se agregan a un grupo de actualizaciones de software; los archivos de contenido de las actualizaciones de software se descargan y copian en los puntos de distribución, y las actualizaciones de software se implementan en equipos cliente de la colección de destino. En la lista siguiente se indica el flujo de trabajo general de la implementación automática de las actualizaciones de software:  
 
 1.  Cree una ADR que especifique la configuración de implementación, por ejemplo:  
@@ -254,7 +251,7 @@ Para ver un escenario de ejemplo que muestra cómo podría implementar actualiza
 
     -   Alertas independientes para esta implementación  
 
-##  <a name="a-namebkmkdeploymentprocessa-software-update-deployment-process"></a><a name="BKMK_DeploymentProcess"></a> Proceso de implementación de actualizaciones de software  
+##  <a name="BKMK_DeploymentProcess"></a> Proceso de implementación de actualizaciones de software  
  Después de implementar las actualizaciones de software o cuando una regla de implementación automática se ejecuta e implementa actualizaciones de software, se agrega una directiva de asignación de implementación a la directiva de equipo del sitio. Las actualizaciones de software se descargan desde la ubicación de descarga, Internet, o la carpeta compartida de red, en el origen del paquete. Las actualizaciones de software se copian desde el origen del paquete en la biblioteca de contenido del servidor del sitio y, a continuación, se copian en la biblioteca de contenido del punto de distribución.  
 
  Cuando un equipo cliente de la recopilación de destino de la implementación recibe la directiva de equipo, el Agente cliente de actualizaciones de software inicia un examen de evaluación. El agente cliente descarga el contenido de las actualizaciones de software necesarias desde un punto de distribución en la caché del cliente local en cuanto recibe la implementación, pero espera a que transcurra el tiempo configurado en la opción **Horas de disponibilidad del software** para la implementación antes de que las actualizaciones de software estén disponibles para la instalación. Las actualizaciones de software de las implementaciones opcionales (implementaciones que no tienen una fecha límite de instalación) no se descargan hasta que un usuario inicia manualmente la instalación.  
@@ -267,7 +264,7 @@ Para ver un escenario de ejemplo que muestra cómo podría implementar actualiza
 ### <a name="deployment-reevaluation-cycle"></a>Ciclo de reevaluación de la implementación  
  De forma predeterminada, los equipos cliente inician un ciclo de reevaluación de implementación cada 7 días. Durante este ciclo de evaluación, el equipo cliente busca las actualizaciones de software que se implementaron e instalaron previamente. Si faltan actualizaciones de software, las actualizaciones de software se vuelven a instalar desde la caché local. Si alguna actualización de software ya no está disponible en la caché local, se descarga desde un punto de distribución y, a continuación, se instala. Puede configurar la programación de reevaluación en la página **Actualizaciones de software** de la configuración de cliente del sitio.  
 
-##  <a name="a-namebkmkembeddeddevicesa-support-for-windows-embedded-devices-that-use-write-filters"></a><a name="BKMK_EmbeddedDevices"></a> Compatibilidad con dispositivos de Windows Embedded que usan filtros de escritura  
+##  <a name="BKMK_EmbeddedDevices"></a> Compatibilidad con dispositivos de Windows Embedded que usan filtros de escritura  
  Cuando se implementan actualizaciones de software en dispositivos de Windows Embedded con filtros de escritura habilitados, se puede especificar si se desea deshabilitar el filtro de escritura en el dispositivo durante la implementación y luego reiniciar el dispositivo después de la misma. Si no se deshabilita el filtro de escritura, el software se implementa en una superposición temporal y ya no estará instalado cuando el dispositivo se reinicie a menos que otra implementación fuerce la conservación de los cambios.  
 
 > [!NOTE]  
@@ -277,14 +274,8 @@ Para ver un escenario de ejemplo que muestra cómo podría implementar actualiza
 
  Para obtener más información sobre cómo Configuration Manager administra los dispositivos insertados que usan filtros de escritura, consulte [Planeación de implementación de cliente en dispositivos de Windows Embedded](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
-##  <a name="a-namebkmkextendsoftwareupdatesa-extend-software-updates-in-configuration-manager"></a><a name="BKMK_ExtendSoftwareUpdates"></a> Extender las actualizaciones de software en Configuration Manager  
+##  <a name="BKMK_ExtendSoftwareUpdates"></a> Extender las actualizaciones de software en Configuration Manager  
  Use System Center Updates Publisher para administrar las actualizaciones de software que no estén disponibles en Microsoft Update. Después de publicar las actualizaciones de software en el servidor de actualización y sincronizarlas en Configuration Manager, puede implementar las actualizaciones de software en los clientes de Configuration Manager. Para obtener más información sobre Updates Publisher, consulte [Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=252947).  
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Planear las actualizaciones de software](../plan-design/plan-for-software-updates.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -6,8 +6,7 @@ ms.date: 07/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7def067e-845c-4db3-9d56-fa1dcf2fd7c7
@@ -15,12 +14,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: dab99748902df0fad32a1e2adad0c05e0dd8bdc9
-ms.contentlocale: es-es
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="checklist-for-installing-update-1706-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1706 de System Center Configuration Manager
 
@@ -177,4 +175,3 @@ Después de actualizar a la versión 1706, cada vez que se inicia SMS_Executive,
 -    Microsoft SQL Server notificó el mensaje de SQL 515, gravedad 16: [23000][515][Microsoft][SQL Server Native Client 11.0][SQL Server]No se puede insertar el valor NULL en la columna "RowVersion", tabla "CM_GF1.dbo.AAD_SecretChange_Notify". La columna no admite valores NULL. Error de INSERT.
 
 Este mensaje puede omitirse.  Se produce cuando no hay servicios en la nube configurados para utilizarse antes de actualizar a la versión 1706. Este inconveniente se resolverá en una versión futura.
-

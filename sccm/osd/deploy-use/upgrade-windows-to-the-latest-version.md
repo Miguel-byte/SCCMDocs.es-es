@@ -6,21 +6,19 @@ ms.date: 02/06/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 1035dbbf944a3a467d637a4a948a75b0946eb711
 ms.openlocfilehash: 026d61113a918e43ac4395ef092b1931f33f16d3
-ms.contentlocale: es-es
-ms.lasthandoff: 07/11/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager"></a>Actualizar Windows a la versión más reciente con System Center Configuration Manager
 
@@ -91,4 +89,3 @@ En este tema, se indican las etapas de System Center Configuration Manager para 
 -   **Supervisar la implementación de la secuencia de tareas**  
 
      Para supervisar la implementación de la secuencia de tareas para actualizar el sistema operativo, consulte [Monitor operating system deployments (Supervisar implementaciones del sistema operativo)](monitor-operating-system-deployments.md).  
-

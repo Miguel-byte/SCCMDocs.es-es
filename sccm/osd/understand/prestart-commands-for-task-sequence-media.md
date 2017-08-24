@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ccc9f652-2953-4c38-8a90-c799484105ca
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 1c396534425179c6828d48acc578295167c566be
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prestart-commands-for-task-sequence-media-in-system-center-configuration-manager"></a>Comandos de preinicio para medios de secuencia de tareas en System Center Configuration Manager
 
@@ -78,9 +77,3 @@ env("MyCustomVariable") = "varname"
     -   Haga clic en **Examinar** para seleccionar el punto de distribución que hospeda el contenido para el comando de preinicio.  
 
 7.  Complete el asistente.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

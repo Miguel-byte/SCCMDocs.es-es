@@ -6,22 +6,20 @@ ms.date: 4/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
 ms.openlocfilehash: c43af95a539a9284e4e49822b284783e02f9fa21
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Administrar certificados y seguridad de Updates Publisher
 
@@ -101,4 +99,3 @@ Los procedimientos siguientes indican los pasos básicos que pueden utilizarse p
 3.  Expanda la configuración de directiva de grupo seleccionada en el árbol de la consola, **Configuración del equipo**, **Plantillas administrativas**, **Componentes de Windows** y luego, haga clic en **Windows Update**.
 
 4.  En el panel de resultados, haga clic con el botón derecho en **Allow signed content from intranet Microsoft update service location** (Permitir contenido firmado de la ubicación del servicio Microsoft update de la intranet), haga clic en **Propiedades**, en **Habilitado** y luego, en **Aceptar**.
-

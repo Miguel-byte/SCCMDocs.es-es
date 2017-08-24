@@ -4,24 +4,22 @@ description: "Conozca las características disponibles en Technical Preview para
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1b9265d1-b461-47f8-b7ef-885da0fdd969
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: 6e737d06563b256010f302af4e805eb6812524e2
-ms.contentlocale: es-es
-ms.lasthandoff: 01/24/2017
-
+ms.openlocfilehash: 2354f885aaf69683004ad78f0e1978e78fee9145
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1602-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1602 para System Center Configuration Manager
 
@@ -61,4 +59,3 @@ En este artículo se presentan las características disponibles en Technical Pre
 -   Ahora las actualizaciones de Windows 10 disponibles solo se muestran en el nodo **Mantenimiento de Windows 10** \ **Todas las actualizaciones de Windows 10** de la consola de Configuration Manager. Estas actualizaciones ya no se mostrarán en el nodo **Actualizaciones de software** \ **Todas las actualizaciones de software**.  
 
 -   Se mostrará a los usuarios finales que inicien un paquete de actualización de Windows 10 un cuadro de diálogo para notificarles que van a actualizar su sistema operativo.  
-

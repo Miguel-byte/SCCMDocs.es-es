@@ -3,20 +3,17 @@ title: Administrar clientes en Internet en Configuration Manager | Microsoft Doc
 description: "Obtenga información sobre cómo administrar clientes con la puerta de enlace de administración en la nube y la administración de clientes basada en Internet en Configuration Manager."
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.assetid: c667d6af-80c4-485f-910c-896c0171fd00
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
-ms.openlocfilehash: 6104107429184f31df12db84089f41df1ef81539
-ms.contentlocale: es-es
-ms.lasthandoff: 01/24/2017
-
+ms.openlocfilehash: 1b6752be448e1062c97a3225db4fa8af9f4832a6
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="manage-clients-on-the-internet-with-configuration-manager"></a>Administrar clientes en Internet con Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
@@ -72,4 +69,3 @@ Desventajas:
 -   La infraestructura debe exponerse en Internet.
 
 Para obtener más información, consulte [Plan for Internet-based client management (Plan para la administración de cliente basada en Internet)](plan-internet-based-client-management.md).
-

@@ -6,22 +6,19 @@ ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e7075eb675353be130fdcc867d9e4dd1009dab35
 ms.openlocfilehash: 47da3c531289ddf13d357bde8bbda85d79ed2803
-ms.contentlocale: es-es
-ms.lasthandoff: 01/03/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="language-packs-in-system-center-configuration-manager"></a>Paquetes de idioma en System Center Configuration Manager
 
@@ -97,4 +94,3 @@ Para identificar los paquetes de idioma instalados en un equipo que ejecuta el c
  **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs**  
 
 Puede utilizar el inventario de hardware para recopilar esta información y, a continuación, generar un informe personalizado para ver la información de idioma. Para obtener más información sobre la recopilación de inventario de hardware personalizado, consulte [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md) (Configuración de inventario de hardware en System Center Configuration Manager). Para obtener información sobre la creación de informes, vea la sección [Administración de informes de Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md#BKMK_ManageReports) en el tema [Operaciones y mantenimiento de informes en System Center Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
-

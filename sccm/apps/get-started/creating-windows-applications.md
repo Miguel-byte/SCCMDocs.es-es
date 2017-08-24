@@ -6,19 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 557888d1f1f899e3198c430bbe5ccdd44178f824
 ms.openlocfilehash: 9c80cc42f9ce6775067a89a9f5a63c1bf4a0c7ca
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-windows-applications-with-system-center-configuration-manager"></a>Crear aplicaciones de Windows con System Center Configuration Manager
 
@@ -66,9 +66,3 @@ Además de los otros requisitos y procedimientos de System Center Configuration 
 -   Se instalarán paquetes MSI por máquina para todos los usuarios del dispositivo.  
 
 -   Se admiten actualizaciones de aplicaciones si el código de producto MSI de cada versión es el mismo.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

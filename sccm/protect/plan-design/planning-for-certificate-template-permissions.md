@@ -6,23 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 832be8c9fda727804f57e83768cd8799db722c67
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="planning-for-certificate-template-permissions-for-certificate-profiles-in-system-center-configuration-manager"></a>Planificación de permisos de plantilla de certificado para perfiles de certificado en System Center Configuration Manager
 
@@ -64,4 +61,3 @@ La información siguiente le ayuda a planear la configuración de permisos de pl
     -   En el servidor del sistema de sitios que hospeda el punto de registro de certificado, cree la siguiente clave DWORD del Registro con un valor de 1: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SCCM\CRP\SkipTemplateCheckOnlyIfAccountAccessDenied  
 
 3.  En la CA emisora, en la ficha **Seguridad** en las propiedades de la plantilla de certificado, agregue uno o varios grupos de seguridad para conceder permisos de lectura e inscripción a las cuentas de usuario o dispositivo.  
-

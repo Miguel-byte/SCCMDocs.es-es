@@ -6,21 +6,19 @@ ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: 7b594daeed81ef2d991ad06489f9184a69804117
-ms.contentlocale: es-es
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="pre-release-features-in-system-center-configuration-manager"></a>Características de versión preliminar en System Center Configuration Manager
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -60,4 +58,3 @@ Si ha dado su consentimiento en un sitio primario independiente y, después, exp
 | Conector de Microsoft Operations Management Suite  | [Versión 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![Todavía no](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Mantenimiento de una recopilación compatible con clústeres (Dar servicio a un grupo de servidores).| [Versión 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|![Todavía no](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 |Acceso condicional para equipos administrados por System Center Configuration Manager | [Versión 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     | [Versión 1702](/sccm/mdm/deploy-use/manage-access-to-services)                     |
-

@@ -4,24 +4,22 @@ description: "Conozca las características disponibles en Technical Preview para
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e4d9e414-1346-4ed4-85d0-64d602b68731
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: 7fff6f2807a679b621b736b8ad0b6561fb37affe
-ms.contentlocale: es-es
-ms.lasthandoff: 01/24/2017
-
+ms.openlocfilehash: 5cf8d54fbaa98a75ac2a875a23a43b1d3e5be0dd
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1512 para System Center Configuration Manager
 
@@ -93,4 +91,3 @@ En 1512 Technical Preview, hemos agregado la siguiente nueva configuración de d
 **Requisitos previos para usar las directivas de Endpoint Protection:**  
 
 Antes de usar las directivas de Endpoint Protection, debe instalar y administrar el cliente de Endpoint Protection mediante la configuración de cliente de Endpoint Protection. Esto se hace con el cliente de System Center Endpoint Protection para Windows 7, Windows 8, Windows 8.1 o lo administra Windows Defender para Windows 10. Vea [Endpoint Protection en Configuration Manager](../../protect/deploy-use/endpoint-protection.md).  
-

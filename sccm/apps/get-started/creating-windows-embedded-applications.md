@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 16acfd63-0c40-424c-82f4-8c63f7f1c30b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 557888d1f1f899e3198c430bbe5ccdd44178f824
 ms.openlocfilehash: cb0c22f3060ba654778dca958d620f1e1725b93c
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-windows-embedded-applications-with-system-center-configuration-manager"></a>Crear aplicaciones de Windows Embedded con System Center Configuration Manager
 
@@ -50,9 +49,3 @@ Además de los otros requisitos y procedimientos de System Center Configuration 
 Además, los usuarios que tienen derechos reducidos no pueden iniciar sesión durante un período de mantenimiento si Configuration Manager está realizando cambios en las instalaciones y actualizaciones de software. Durante este período, los usuarios ven un mensaje que les informa que el dispositivo no está disponible porque se le están realizando tareas de mantenimiento.  
 
 **No implemente aplicaciones en dispositivos de Windows Embedded que tienen habilitados filtros de escritura si las aplicaciones requieren que el usuario acepte los términos de licencia.** Cuando los filtros de escritura se deshabilitan para que Configuration Manager pueda instalar software en dispositivos incrustados, los usuarios con derechos reducidos no pueden iniciar sesión en esos dispositivos. Si la instalación requiere que el usuario acepte los términos de licencia, esto no será posible y la instalación producirá un error. Asegúrese de no implementar software para dispositivos de Windows Embedded si la instalación requiere la interacción del usuario. Puede usar la lista Plataformas aplicables para filtrar estos sistemas operativos.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

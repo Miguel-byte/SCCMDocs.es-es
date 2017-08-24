@@ -7,20 +7,18 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.topic: article
 ms.assetid: 8b31fd3e-875a-4a31-9498-5b050aadce32
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 59633ce68e2bb2d722900215751f345d6d098721
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1610 para System Center Configuration Manager
 
@@ -65,19 +63,19 @@ Como administrador, ahora puede rechazar una solicitud de aplicación aprobada p
 #### <a name="try-it-out"></a>Haga la prueba
 Para rechazar una solicitud de aplicación aprobada:
 
-1.    En la consola de Configuration Manager, [cree e implemente una aplicación](https://docs.microsoft.com/en-us/sccm/apps/deploy-use/create-applications) que necesite aprobación.
-2.    En un equipo cliente, abra el Centro de software y envíe una solicitud para la aplicación.
-3.    En la consola de Configuration Manager, apruebe la solicitud de aplicación.
-4.    Rechace la solicitud de aplicación aprobada: en la consola de Configuration Manager, vaya a **Biblioteca de software** > **Información general** > **Administración de aplicaciones** > **Solicitudes de aprobación** y seleccione la solicitud de aplicación que quiere rechazar.  En la cinta, haga clic en **Denegar**.
+1.  En la consola de Configuration Manager, [cree e implemente una aplicación](https://docs.microsoft.com/en-us/sccm/apps/deploy-use/create-applications) que necesite aprobación.
+2.  En un equipo cliente, abra el Centro de software y envíe una solicitud para la aplicación.
+3.  En la consola de Configuration Manager, apruebe la solicitud de aplicación.
+4.  Rechace la solicitud de aplicación aprobada: en la consola de Configuration Manager, vaya a **Biblioteca de software** > **Información general** > **Administración de aplicaciones** > **Solicitudes de aprobación** y seleccione la solicitud de aplicación que quiere rechazar.  En la cinta, haga clic en **Denegar**.
 
 ## <a name="exclude-clients-from-automatic-upgrade"></a>Excluir a clientes de la actualización automática
 Technical Preview 1610 presenta una nueva opción que se puede usar para excluir un grupo de clientes de la instalación automática de versiones de cliente actualizadas.  Esto se aplica a la actualización automática y a otros métodos como la actualización basada en actualizaciones de software, los scripts de inicio de sesión y la directiva de grupo. Se puede usar para una colección de equipos a la que haya que prestar una mayor atención a la hora de actualizar el cliente. Un cliente que esté en una colección excluida omite las solicitudes para instalar el software de cliente actualizado.
 
 ### <a name="configure-exclusion-from-automatic-upgrade"></a>Configurar la exclusión de la actualización automática
 Para configurar las exclusiones de la actualización automática:
-1.    En la consola de Configuration Manager, abra **Configuración de jerarquía** en **Administración > Configuración del sitio > Sitios** y seleccione la pestaña **Actualización de cliente**.
-2.    Active la casilla correspondiente a **excluir los clientes especificados de la actualización** y, en la **colección de exclusión**, seleccione la colección que quiere excluir. Solo puede seleccionar una colección para la exclusión.
-3.    Haga clic en **Aceptar** para cerrar y guardar la configuración. Luego, después de que los clientes actualicen la directiva, los de la colección excluida ya no instalarán automáticamente las actualizaciones del software de cliente.
+1.  En la consola de Configuration Manager, abra **Configuración de jerarquía** en **Administración > Configuración del sitio > Sitios** y seleccione la pestaña **Actualización de cliente**.
+2.  Active la casilla correspondiente a **excluir los clientes especificados de la actualización** y, en la **colección de exclusión**, seleccione la colección que quiere excluir. Solo puede seleccionar una colección para la exclusión.
+3.  Haga clic en **Aceptar** para cerrar y guardar la configuración. Luego, después de que los clientes actualicen la directiva, los de la colección excluida ya no instalarán automáticamente las actualizaciones del software de cliente.
 
   ![Configuración de exclusión de actualización automática](media/automatic_upgrade_exclusion.png)
 
@@ -130,13 +128,13 @@ Concretamente, puede configurar las siguientes opciones de Windows Defender:
 
 ### <a name="try-it-out"></a>Haga la prueba
 
-1.    En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Configuración de cumplimiento** > **Elementos de configuración** y cree un nuevo **Elemento de configuración**.
-2.    Escriba un nombre, seleccione **Windows 8.1 y Windows 10** en **Settings for devices managed without the Configuration Manager client (Configuración de dispositivos administrados sin el cliente de Configuration Manager)** y haga clic en **Siguiente**.
-3.    Asegúrese de que **Todo Windows 10 (64 bits)** y **Todo Windows 10 (32 bits)** están seleccionados en la página **Plataformas admitidas** y, después, haga clic en **Siguiente**.
-4.    Seleccione el grupo de configuración **Windows Defender** y, después, haga clic en **Siguiente**.
-5.    Configure la configuración deseada en esta página y, después, haga clic en **Siguiente**.
-6.    Complete el asistente.
-7.    Agregue este elemento de configuración a una línea base de configuración e implemente esta línea base en equipos que ejecutan la actualización de noviembre (1511) de Windows 10 o versiones anteriores.
+1.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Configuración de cumplimiento** > **Elementos de configuración** y cree un nuevo **Elemento de configuración**.
+2.  Escriba un nombre, seleccione **Windows 8.1 y Windows 10** en **Settings for devices managed without the Configuration Manager client (Configuración de dispositivos administrados sin el cliente de Configuration Manager)** y haga clic en **Siguiente**.
+3.  Asegúrese de que **Todo Windows 10 (64 bits)** y **Todo Windows 10 (32 bits)** están seleccionados en la página **Plataformas admitidas** y, después, haga clic en **Siguiente**.
+4.  Seleccione el grupo de configuración **Windows Defender** y, después, haga clic en **Siguiente**.
+5.  Configure la configuración deseada en esta página y, después, haga clic en **Siguiente**.
+6.  Complete el asistente.
+7.  Agregue este elemento de configuración a una línea base de configuración e implemente esta línea base en equipos que ejecutan la actualización de noviembre (1511) de Windows 10 o versiones anteriores.
 
 > [!NOTE]
 > Recuerde marcar la casilla **Corregir configuraciones no compatibles** al implementar la línea base de configuración.
@@ -147,8 +145,8 @@ Ahora puede solicitar una sincronización de directivas para un dispositivo móv
 
 ### <a name="try-it-out"></a>Haga la prueba
 
-1.    En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > Dispositivos.
-2.    En el menú **Acciones de dispositivo remoto**, seleccione **Send Sync Request (Enviar solicitud de sincronización)**.
+1.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > Dispositivos.
+2.  En el menú **Acciones de dispositivo remoto**, seleccione **Send Sync Request (Enviar solicitud de sincronización)**.
 
 La sincronización puede tardar de cinco a diez minutos. Cualquier cambio en la directiva se sincroniza con el dispositivo. Puede realizar un seguimiento del estado de la solicitud de sincronización en la columna **Remote Sync State (Estado de la sincronización remota)** de la vista **Dispositivos** o en el cuadro de diálogo **Propiedades** del dispositivo.
 
@@ -164,4 +162,3 @@ Ahora puede requerir que los dispositivos Windows 10 inscritos en Azure Active D
 
 ## <a name="see-also"></a>Véase también
 [Technical Preview for System Center Configuration Manager (Technical Preview para System Center Configuration Manager)](../../core/get-started/technical-preview.md)
-

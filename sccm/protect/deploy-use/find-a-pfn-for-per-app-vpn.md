@@ -6,21 +6,19 @@ ms.date: 10/06/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 47118499-3d26-4c25-bfde-b129de7eaa59
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: ce50645155ecb14a82d8b982aa69c0f87dd15fbf
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn"></a>Buscar un nombre de familia de paquete (PFN) para VPN por aplicación
 
@@ -88,4 +86,3 @@ En Microsoft Edge, se muestra la información que le interesa. En Internet Explo
 `  "windowsPhoneLegacyId": "ca05b3ab-f157-450c-8c49-a1f127f5e71d",`
 `  "publisherCertificateName": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"`
 `}`
-

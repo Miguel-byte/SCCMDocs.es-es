@@ -9,14 +9,13 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: 04c5ccc53263b2672096b564695a636bfb28d952
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="icons-used-for-software-updates-in-system-center-configuration-manager"></a>Iconos que se usan para las actualizaciones de software en System Center Configuration Manager
 
@@ -124,9 +123,3 @@ Las actualizaciones de software sincronizadas se muestran en la consola de Confi
  **Preocupaciones operativas:**  
 
  Si falta el contenido de una actualización de software, los clientes no pueden instalar la actualización de software hasta que el contenido esté disponible en un punto de distribución. Puede redistribuir el contenido a los puntos de distribución mediante la acción **Redistribuir** . Si falta el contenido de una actualización de software en una implementación creada en un sitio primario, la actualización de software se debe replicar o redistribuir al sitio secundario. Para obtener más información sobre la redistribución de contenido, consulte [Manage the content you have distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage) (Administrar el contenido que ha distribuido).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -6,23 +6,20 @@ ms.date: 7/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
-caps.latest.revision: 9
-caps.handback.revision: 0
+caps.latest.revision: "9"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5e1bc0063ab3d34410f7dbc773a5eacdd5eb6d2f
 ms.openlocfilehash: 28597cf1cb269fff0872c7f79ef961496aea32ab
-ms.contentlocale: es-es
-ms.lasthandoff: 07/05/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="log-files-in-system-center-configuration-manager"></a>Archivos de registro en System Center Configuration Manager
 
@@ -820,4 +817,3 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |--------------|-----------------|----------------------------|  
 |Change.log|Registra detalles sobre la información de base de datos del servidor WSUS que ha cambiado.|Servidor WSUS|  
 |SoftwareDistribution.log|Registra detalles sobre las actualizaciones de software que se sincronizan del origen de actualizaciones configurado a la base de datos del servidor de WSUS.|Servidor WSUS|  
-

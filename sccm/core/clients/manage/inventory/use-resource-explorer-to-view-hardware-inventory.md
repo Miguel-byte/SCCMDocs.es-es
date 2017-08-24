@@ -6,22 +6,19 @@ ms.date: 01/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 375912f5-436d-4315-bdbe-d77afee6c9f3
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9c5d1e48b76392beaf54b5377c69b648537e86f8
 ms.openlocfilehash: e39fa60a5d215fa1b0a98d4463058497e63a4d4f
-ms.contentlocale: es-es
-ms.lasthandoff: 05/29/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-use-resource-explorer-to-view-hardware-inventory-in-system-center-configuration-manager"></a>Cómo usar el Explorador de recursos para ver el inventario de hardware en System Center Configuration Manager
 
@@ -51,5 +48,4 @@ Use el Explorador de recursos en System Center Configuration Manager para ver in
 3.  Seleccione el equipo que contiene el inventario que quiere ver y, después, en la pestaña **Inicio** > grupo **Dispositivos**, pulse **Iniciar** >  **Explorador de recursos**.   
 
 4.  Haga clic con el botón derecho en cualquier elemento del panel derecho de la ventana **Explorador de recursos** y pulse **Propiedades** para abrir el cuadro de diálogo **Propiedades** de *<nombre del elemento\>* para ver la información de inventario recopilada en un formato más legible.  
-
 

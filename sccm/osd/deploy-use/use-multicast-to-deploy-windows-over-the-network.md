@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4cafb7fc-380b-41b1-b83e-045aebfb7131
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 55266696aa7340fddda3a57ff90e20222ff665a5
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="use-multicast-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>Usar multidifusión para implementar Windows a través de la red con System Center Configuration Manager
 
@@ -35,17 +34,11 @@ Multidifusión es un método de optimización de red que puede usar en el entorn
 
  Complete los pasos de uno de los escenarios de implementación de sistema operativo y luego use las secciones siguientes para admitir la multidifusión.  
 
-##  <a name="a-namebkmkconfigurea-configure-a-distribution-point-to-support-multicast"></a><a name="BKMK_Configure"></a> Configurar un punto de distribución para admitir la multidifusión  
+##  <a name="BKMK_Configure"></a> Configurar un punto de distribución para admitir la multidifusión  
  Antes de usar la multidifusión durante la implementación del sistema operativo, debe configurar un punto de distribución para admitir la multidifusión. Para obtener más información, consulte [Configure distribution points to support multicast](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast) (Configuración de puntos de distribución para admitir la multidifusión).  
 
 ## <a name="prepare-an-operating-system-image-for-multicast-deployments"></a>Preparar una imagen de sistema operativo para implementaciones de multidifusión  
  Para configurar el paquete de imagen de sistema operativo para admitir la multidifusión, consulte [Prepare the operating system image for multicast deployments](../get-started/manage-operating-system-images.md#BKMK_OSImageMulticast) (Preparar la imagen de sistema operativo para implementaciones de multidifusión).  
 
-##  <a name="a-namebkmkdeploya-deploy-the-task-sequence"></a><a name="BKMK_Deploy"></a> Implementar la secuencia de tareas  
+##  <a name="BKMK_Deploy"></a> Implementar la secuencia de tareas  
  Implemente el sistema operativo en una recopilación de destino. Para obtener más información, vea [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

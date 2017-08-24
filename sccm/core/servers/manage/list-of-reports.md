@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 1480c38a6a3afef76b2e8759eaafd47d28f978f4
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="list-of-reports-in-system-center-configuration-manager"></a>Lista de informes en System Center Configuration Manager
 
@@ -790,9 +789,3 @@ Se proporcionan numerosos informes integrados con System Center Configuration Ma
 |**Historial de actividad Wake On LAN**|Muestra un historial de la actividad de reactivación que se produjo desde un período determinado.|  
 |**Detalles de estado de implementación de proxy de reactivación**|Muestra información sobre el estado de implementación del proxy de reactivación para cada dispositivo en una recopilación especificada.|  
 |**Resumen de estado de implementación de proxy de reactivación**|Muestra un resumen del estado de implementación de un proxy de reactivación en una recopilación especificada.|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

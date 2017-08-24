@@ -6,22 +6,19 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: aba688d9-fd5b-4c42-8cb4-f7e1b161ef50
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: 4a2b60d893e8d430b107a5bc43ec0748177c27c3
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 44958bc35586f5e57ab3fb59681bfb018d2bd5da
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-mobile-devices-with-system-center-configuration-manager-and-exchange"></a>Administrar dispositivos móviles mediante System Center Configuration Manager y Exchange
 
@@ -137,4 +134,3 @@ Utilice el conector de Exchange Server en System Center Configuration Manager si
     -   Para confirmar que el administrador de componentes de sitio haya instalado correctamente el conector de Exchange Server, busque el Id. de estado **1015** para el componente **SMS_EXCHANGE_CONNECTOR** . Si Configuration Manager no puede instalar correctamente el conector (por ejemplo, porque el equipo de servidor de acceso de cliente está desconectado), Configuration Manager reintenta la instalación cada 60 minutos hasta que la instalación finaliza correctamente o se quita el conector de Exchange Server.  
 
     -   En el equipo del servidor de sitio, busque el archivo SiteComp.log y, a continuación, en el archivo de registro, busque `Component SMS_EXCHANGE_CONNECTOR flagged for installation`. Una instalación correcta se registra con el texto siguiente: `STATMSG: ID=1015`.  
-

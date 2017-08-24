@@ -6,22 +6,19 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 19e111e0cb174f11ad08f98d2516e52c4c183d86
-ms.openlocfilehash: a079824ba96897bbd3f9475efcaea81804858171
-ms.contentlocale: es-es
-ms.lasthandoff: 01/05/2017
-
-
+ms.openlocfilehash: 3a86924b2e5db3ac16eeda78b95ae6747ffd656f
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>Cómo administrar clientes en System Center Configuration Manager
 
@@ -410,4 +407,3 @@ Puede iniciar la recuperación de directivas con:
     -   Abra un símbolo del sistema y escriba: **cscript &lt;ruta\nombredearchivo.vbs>**.  
 
 5.  Pulse **Aceptar** en el cuadro de diálogo **Windows Script Host**.  
-

@@ -6,22 +6,19 @@ ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
 ms.openlocfilehash: a60b8c103a303dcae0bd66f3060d5a8f17d1cef9
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-site-administration-in-system-center-configuration-manager"></a>Seguridad y privacidad para la administración de sitios en System Center Configuration Manager
 
@@ -367,4 +364,3 @@ Identifique y siga las prácticas recomendadas para su versión del servidor IIS
  La información de detección no se envía a Microsoft. En su lugar, se almacena en la base de datos de Configuration Manager. La información se conserva en la base de datos hasta que la tarea de mantenimiento del sitio **Eliminar datos de detección antiguos** la elimina cada 90 días.  
 
  Antes de configurar métodos de detección adicionales o extender la detección de Active Directory, tenga en cuenta los requisitos de privacidad.  
-

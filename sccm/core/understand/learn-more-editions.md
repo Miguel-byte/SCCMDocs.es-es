@@ -6,24 +6,21 @@ ms.date: 10/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
-caps.latest.revision: 0
-caps.handback.revision: 0
+caps.latest.revision: "0"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a0d4eb601948aa3abb12409f3475d69cacf4a6aa
 ms.openlocfilehash: 90e16b316872cb370c9c2e645f46ac12afab7107
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>Licencias y ramas para System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual), (Rama de mantenimiento a largo plazo)*
@@ -53,8 +50,8 @@ Además de la Rama actual, la LTSB y la instalación de evaluación de la Rama a
 
 ## <a name="licensed-branches"></a>Ramas con licencia
 Los clientes con Software Assurance (SA) activo en licencias de System Center Configuration Manager o con derechos de suscripción equivalentes a 1 de octubre de 2016, tienen derechos para usar la versión 1606 de octubre de 2016 de System Center Configuration Manager. Los clientes con derechos para la versión 1606 de System Center Configuration Manager el 1 de octubre de 2016 o después de esta fecha encontrarán dos opciones con licencia tras la instalación:
--    **Rama actual**
--    **Rama de mantenimiento a largo plazo (LTSB)**
+-   **Rama actual**
+-   **Rama de mantenimiento a largo plazo (LTSB)**
 
 
 Vea la tabla de la sección anterior para obtener más información.
@@ -115,4 +112,3 @@ Utilice los siguientes vínculos para obtener más información acerca de los de
 - Dónde buscar el contrato de Software Assurance activo (a partir del segundo 43, aproximadamente): [https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0).
 
 - Cómo obtener los permisos del Centro de servicios de licencias por volumen: [https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4).  Puede delegar los permisos de lectura y escritura del Centro de servicios de licencias por volumen a otras personas de su organización.
-

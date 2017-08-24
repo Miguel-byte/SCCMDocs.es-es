@@ -6,22 +6,19 @@ ms.date: 04/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 79cd131a-1a24-4751-87c8-7f275e45d847
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4b9261db93c9bf72c492e3c9be5b30f81835134a
 ms.openlocfilehash: 72ebd8bd29b5ecdd817631e447291c04f49d9808
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-linux-and-unix-server-applications-with-system-center-configuration-manager"></a>Crear aplicaciones de servidor Linux y UNIX con System Center Configuration Manager
 
@@ -166,4 +163,3 @@ No se admite la siguiente configuración de transferencia inteligente en segundo
 
 > [!TIP]  
 >  Si el software que desea implementar está ubicado en un recurso compartido de Network File System (NFS) al que el servidor Linux o UNIX tiene acceso, no necesita usar un punto de distribución para descargar el paquete. En cambio, cuando cree el paquete, no active la casilla **Este paquete contiene archivos de origen**. Luego, cuando configure el programa, especifique la línea de comandos adecuada para tener acceso directo al paquete en el punto de montaje NFS.  
-

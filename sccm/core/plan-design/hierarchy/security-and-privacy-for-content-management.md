@@ -6,22 +6,19 @@ ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5f38b726-dc00-433a-ba05-5b7dbb0d8e99
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 46af86ef8b18a8a7c4dfa593b3daf8235081b104
 ms.openlocfilehash: c4b9d13079c313879c6d43b10867c616fa962668
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-content-management-for-system-center-configuration-manager"></a>Seguridad y privacidad de la administración de contenido de System Center Configuration Manager
 
@@ -95,4 +92,3 @@ Al planear la administración de contenido, tenga en cuenta lo siguiente:
  Configuration Manager no incluye ningún dato de usuario en los archivos de contenido, aunque un usuario administrativo podría optar por incluirlos.  
 
  Antes de configurar la administración de contenido, tenga en cuenta los requisitos de privacidad.  
-

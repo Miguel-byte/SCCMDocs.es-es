@@ -6,21 +6,18 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4cd6031f-8844-4d0b-8166-b24d6528a94e
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 6451ce59e01254d96ca4aa9bbe07cde829fae9ce
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: de5602179f3ac55b51133b8280a0143f1b0ff30e
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-exclude-upgrading-clients-for-windows-computers-in-system-center-configuration-manager"></a>Cómo excluir la actualización de clientes para equipos Windows con System Center Configuration Manager
 
@@ -55,4 +52,3 @@ Siempre que una colección está configurada para ser excluida, sus miembros sol
   Si intenta actualizar manualmente un cliente que es miembro de la colección excluida y no usa este modificador, el cliente no instalará el nuevo software de cliente. Para más información, vea [How to install Configuration Manager Clients Manually (Instalación manual de clientes de Configuration Manager)](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual).
 
 Para más información sobre los métodos de instalación de clientes, vea [How to deploy clients to Windows computers in System Center Configuration Manager (Implementar clientes en equipos Windows con System Center Configuration Manager)](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
-

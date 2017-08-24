@@ -6,21 +6,20 @@ ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4800a800-66c8-4c35-aebe-e413a23790c1
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: cb5f7bf52a53935ca61b0e1b66822919b17d33e2
 ms.openlocfilehash: 0619de32f859f512ee1c9f5a9c83ef8d04a256ca
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-a-source-hierarchy-strategy-in-system-center-configuration-manager"></a>Planear una estrategia de jerarquía de origen en System Center Configuration Manager
 
@@ -28,7 +27,7 @@ ms.openlocfilehash: 0619de32f859f512ee1c9f5a9c83ef8d04a256ca
 
 Antes de configurar un trabajo de migración en su entorno de System Center Configuration Manager, debe configurar una jerarquía de origen y recopilar datos de, al menos, un sitio de origen en esa jerarquía. Las secciones siguientes le ayudarán a planear la configuración de jerarquías de origen, la configuración de sitios de origen y a determinar cómo Configuration Manager recopila información de sitios de origen en la jerarquía de origen. 
 
-##  <a name="a-namebkmksourcehierarchiesa-source-hierarchies"></a><a name="BKMK_Source_Hierarchies"></a> Jerarquías de origen  
+##  <a name="BKMK_Source_Hierarchies"></a> Jerarquías de origen  
 Una jerarquía de origen es una jerarquía de Configuration Manager que tiene los datos que quiere migrar. Cuando se configura la migración y se especifica una jerarquía de origen, se especifica el sitio de nivel superior de la jerarquía de origen. Este sitio también se denomina sitio de origen. Los sitios adicionales desde los cuales puede migrar datos en la jerarquía de origen también se denominan sitios de origen.  
 
 -   Cuando se configura un trabajo de migración para migrar datos de una jerarquía de origen de Configuration Manager 2007, se configura para migrar datos de uno o más sitios de origen específicos en la jerarquía de origen.  
@@ -62,7 +61,7 @@ Si restaura una jerarquía de origen inactiva y no usó anteriormente **Limpiar 
 
 Para más información sobre cómo configurar una jerarquía de origen, vea [Configurar jerarquías de origen y sitios de origen para la migración a System Center Configuration Manager](../../core/migration/configuring-source-hierarchies-and-source-sites-for-migration.md).  
 
-##  <a name="a-namebkmksourcesitesa-source-sites"></a><a name="BKMK_Source_Sites"></a> Sitios de origen  
+##  <a name="BKMK_Source_Sites"></a> Sitios de origen  
  Los sitios de origen son los sitios en la jerarquía de origen que tienen los datos que se van a migrar. El sitio de nivel superior de la jerarquía de origen siempre es el primer sitio de origen. Cuando la migración recopila los datos del primer sitio de origen de una nueva jerarquía de origen, detecta información acerca de los sitios adicionales en dicha jerarquía.  
 
  Una vez que la recopilación de datos se completa para el sitio de origen inicial, las acciones que el usuario deba realizar a continuación dependen de la versión del producto de la jerarquía de origen.  
@@ -82,7 +81,7 @@ Para más información sobre cómo configurar una jerarquía de origen, vea [Con
 
  Cuando configure las cuentas de acceso para recopilar datos, es posible que necesite otorgar el acceso de **Cuenta de proveedor de SMS de origen** a varios equipos de la jerarquía de origen. Esto podría ser necesario si el sitio de origen admite varias instancias del proveedor de SMS, cada una en un equipo diferente. Cuando se inicia la recopilación de datos, el sitio de nivel superior de la jerarquía de destino se pone en contacto con el sitio de nivel superior de la jerarquía de origen para identificar las ubicaciones del proveedor de SMS para ese sitio. Se identifica únicamente la primera instancia de proveedor de SMS. Si el proceso de recopilación de datos no puede acceder al proveedor de SMS en la ubicación que identifica, el proceso genera un error y no intenta conectarse con otros equipos que ejecuten una instancia del proveedor de SMS para ese sitio.  
 
-##  <a name="a-namebkmkdatagatheringa-data-gathering"></a><a name="BKMK_Data_Gathering"></a> Recopilación de datos  
+##  <a name="BKMK_Data_Gathering"></a> Recopilación de datos  
  Inmediatamente después de especificar una jerarquía de origen, de configurar las credenciales para cada sitio de origen adicional en una jerarquía de origen o de compartir los puntos de distribución para un sitio de origen, Configuration Manager comienza a recopilar datos del sitio de origen.  
 
  Luego, el proceso de recopilación de datos se repite según una programación simple para mantener la sincronización con todos los cambios que se produzcan en los datos del sitio de origen. De forma predeterminada, el proceso se repite cada cuatro horas. Puede cambiar la programación para este ciclo mediante la edición de las **Propiedades** del sitio de origen. El proceso inicial de recopilación de datos debe revisar todos los objetos de la base de datos de Configuration Manager y puede tardar mucho tiempo en finalizar. Los procesos de recopilación de datos subsiguientes identifican solo los cambios en los datos y requieren menos tiempo para completarse.  
@@ -107,9 +106,3 @@ Para más información sobre cómo configurar una jerarquía de origen, vea [Con
  Para detener la recopilación de datos de cada sitio de origen, debe ejecutar **Detener la recopilación de datos** en los sitios de origen del nivel inferior y, después, repetir el proceso en cada sitio primario. El sitio de nivel superior de la jerarquía de origen debe ser el último sitio en el que se detenga la recopilación de datos. Debe detener la recopilación de datos en cada sitio secundario antes de realizar esta acción en un sitio primario. Normalmente, solo debe detener la recopilación de datos cuando esté listo para completar el proceso de migración.  
 
  Una vez que se detiene la recopilación de datos para un sitio de origen, la información recopilada previamente sobre los objetos y recopilaciones de ese sitio permanece disponible para usarse en la configuración de nuevos trabajos de migración. Pero no verá ningún objeto ni recopilaciones nuevas, ni los cambios realizados a los objetos existentes. Si vuelve a configurar el sitio de origen y comienza a recopilar datos de nuevo, verá la información y el estado de los objetos migrados anteriormente.  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

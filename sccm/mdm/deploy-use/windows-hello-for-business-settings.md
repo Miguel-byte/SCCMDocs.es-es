@@ -6,22 +6,19 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c0593c07-5dd7-4d23-a0d8-d30165f49ef7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8c7bf901caa49c8585a9ed3913d4a5a2aac57013
-ms.openlocfilehash: 7ac2baeb3c10ce90eb643fa28a953186b571d037
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.openlocfilehash: a97b3d97eb302e4133b0a79a8c7e27004872c8b1
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="windows-hello-for-business-settings-in-system-center-configuration-manager-hybrid"></a>Configuración de Windows Hello para empresas en System Center Configuration Manager (híbrido)
 
@@ -107,4 +104,3 @@ Para información general sobre la configuración de Windows Hello para empresas
  [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md) (Proteger la infraestructura de datos y del sitio con System Center Configuration Manager)
 
  [Administrar la verificación de identidad con Windows Hello para empresas](https://technet.microsoft.com/itpro/windows/keep-secure/manage-identity-verification-using-microsoft-passport).  
-

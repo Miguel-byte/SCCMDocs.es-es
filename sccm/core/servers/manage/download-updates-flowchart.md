@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5d50a8d7-90d2-42da-b9fd-2edc190fa22e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: cd2ef0f0d694937b760d514c2a6a24973810a2b2
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="flowchart---download-updates-for-system-center-configuration-manager"></a>Diagrama de flujo: descargar actualizaciones para System Center Configuration Manager
 
@@ -28,9 +27,3 @@ ms.openlocfilehash: cd2ef0f0d694937b760d514c2a6a24973810a2b2
 Este flujo de datos muestra el proceso por el cual un sitio con un punto de conexión de servicio en línea descarga las actualizaciones en consola.  
 
  ![Diagrama de flujo: descargar actualizaciones](media/Flowchart---Download-updates.png)  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

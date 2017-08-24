@@ -6,22 +6,19 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a933d69c-5feb-4b2b-84e8-56b3b64d5947
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
-ms.openlocfilehash: 9c2fd7cea178716f81571856608ce517049a3e8d
-ms.contentlocale: es-es
-ms.lasthandoff: 12/29/2016
-
-
+ms.openlocfilehash: 979c21c436429cad03a61671b707a99817146d95
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="best-practices-for-client-deployment-in-system-center-configuration-manager"></a>Procedimientos recomendados para la implementación de clientes en System Center Configuration Manager
 
@@ -80,4 +77,3 @@ Se recomienda que instale los paquetes de idioma de cliente antes de implementar
  Si puede elegir qué tipo de filtro de escritura habilitar, elija los filtros de escritura basados ​​en archivo y configure excepciones para conservar el estado del cliente y los datos de inventario entre los reinicios del dispositivo por motivos de eficiencia de la red y la CPU en el cliente de Configuration Manager. Para más información sobre los filtros de escritura, vea [Planning for client deployment to Windows Embedded devices in System Center Configuration Manager (Planeación de implementación de cliente en dispositivos de Windows Embedded en System Center Configuration Manager)](../../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
  Para más información sobre el número máximo de clientes de Windows Embedded que un sitio primario puede admitir, vea [Supported operating systems for clients and devices (Sistemas operativos compatibles con clientes y dispositivos)](../../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).  
-

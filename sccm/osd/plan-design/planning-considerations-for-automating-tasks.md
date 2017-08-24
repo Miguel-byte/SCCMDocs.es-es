@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fc497a8a-3c54-4529-8403-6f6171a21c64
-caps.latest.revision: 13
-caps.handback.revision: 0
+caps.latest.revision: "13"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 830f715b688cc9929a179da94eba9c81de8db11a
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="planning-considerations-for-automating-tasks-in-system-center-configuration-manager"></a>Planeación de consideraciones para la automatización de tareas en System Center Configuration Manager
 
@@ -28,7 +27,7 @@ ms.openlocfilehash: 830f715b688cc9929a179da94eba9c81de8db11a
 
 Puede crear secuencias de tareas para automatizar tareas en su entorno de System Center Configuration Manager. Estas tareas van desde la captura de un sistema operativo en un equipo de referencia hasta la implementación del sistema operativo en uno o varios equipos de destino. Las acciones de la secuencia de tareas se definen en los pasos individuales de la secuencia. Cuando se ejecuta la secuencia de tareas, se realizan las acciones de cada etapa en el nivel de la línea de comandos en el contexto del sistema local sin necesidad de intervención del usuario. Use las secciones siguientes como ayuda para planear la automatización de tareas en Configuration Manager.
 
-##  <a name="a-namebkmktsstepsactionsa-task-sequence-steps-and-actions"></a><a name="BKMK_TSStepsActions"></a> Acciones y etapas de una secuencia de tareas  
+##  <a name="BKMK_TSStepsActions"></a> Acciones y etapas de una secuencia de tareas  
  Los pasos son los componentes básicos de una secuencia de tareas. Pueden contener comandos que configuran y capturan el sistema operativo de un equipo de referencia, o pueden contener comandos que instalan el sistema operativo, controladores, el cliente de Configuration Manager y software en el equipo de destino. Los comandos de un paso de la secuencia de tareas se definen mediante las acciones del paso. Existen dos tipos de acciones. Una acción definida mediante una cadena de línea de comandos se conoce como una acción personalizada. Una acción predefinida por Configuration Manager se conoce como una acción integrada. Una secuencia de tareas puede realizar cualquier combinación de acciones personalizadas e integradas.  
 
  Los pasos de la secuencia de tareas también pueden incluir condiciones que controlan cómo se comporta el paso, como detener la secuencia de tareas o continuar la secuencia de tareas si se produce un error. Las condiciones se agregan al paso mediante la inclusión de una variable de secuencia de tareas para el paso. Por ejemplo, puede utilizar la variable **SMSTSLastActionRetCode** para probar la condición del paso anterior. Las variables pueden agregarse a un solo paso o a un grupo de pasos.  
@@ -40,7 +39,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 
  Para obtener más información sobre los pasos que se pueden agregar a una secuencia de tareas, consulte [Pasos de la secuencia de tareas](../understand/task-sequence-steps.md).  
 
-##  <a name="a-namebkmktsgroupsa-task-sequence-groups"></a><a name="BKMK_TSGroups"></a> Grupos de secuencias de tareas  
+##  <a name="BKMK_TSGroups"></a> Grupos de secuencias de tareas  
  Los **Grupos** son varios pasos dentro de una secuencia de tareas. Un grupo de secuencia de tareas consta de un nombre, una descripción opciones y cualquier condición opcional evaluada como una unidad antes de que la secuencia de tareas siga con el paso siguiente. Los grupos pueden anidarse dentro de otros; un grupo puede contener una combinación de pasos y subgrupos. Los grupos son útiles para la combinación de varios pasos que comparten una condición común.  
 
 > [!IMPORTANT]  
@@ -69,7 +68,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 
  Debe asignar un nombre a los grupos de secuencias de tareas, aunque el nombre del grupo no tiene que ser único. También puede proporcionar una descripción opcional para el grupo de secuencia de tareas.  
 
-##  <a name="a-namebkmktsvariablesa-task-sequence-variables"></a><a name="BKMK_TSVariables"></a> Variables de secuencias de tareas  
+##  <a name="BKMK_TSVariables"></a> Variables de secuencias de tareas  
  Las variables de secuencia de tareas son un conjunto de pares de nombre y valor que proporcionan valores de configuración y de implementación del sistema operativo para tareas de configuración del estado del usuario, equipo y sistema operativo en un equipo cliente de Configuration Manager. Las variables de secuencia de tareas proporcionan un mecanismo para configurar y personalizar los pasos en una secuencia de tareas.  
 
  Cuando se ejecuta una secuencia de tareas, muchos de los valores de configuración de la secuencia de tareas se almacenan como variables de entorno. Puede acceder a los valores de variables de secuencia de tareas integradas, o cambiarlos, y puede crear nuevas variables de secuencia de tareas para personalizar la forma en que una secuencia de tareas se ejecuta en un equipo de destino.  
@@ -86,7 +85,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 
  Por ejemplo, podría tener una secuencia de tareas que incluyera un paso de secuencia de tareas **Unirse a dominio o grupo de trabajo**. La secuencia de tareas podría implementarse en diferentes recopilaciones, donde la pertenencia de la recopilación viene determinada por la pertenencia al dominio. En ese caso, puede especificar una variable de secuencia de tareas por recopilación para cada nombre de dominio de recopilación y, después, usar esa variable de secuencia de tareas para proporcionar el nombre de dominio apropiado en la secuencia de tareas.  
 
-###  <a name="a-namebkmktscreatevariablesa-create-task-sequence-variables"></a><a name="BKMK_TSCreateVariables"></a> Creación de variables de secuencias de tareas  
+###  <a name="BKMK_TSCreateVariables"></a> Creación de variables de secuencias de tareas  
  Puede agregar nuevas variables de secuencia de tareas para personalizar y controlar los pasos en una secuencia de tareas. Por ejemplo, puede crear una variable de secuencia de tareas para reemplazar un valor de configuración de un paso de secuencia de tareas integrado. También puede crear una variable de secuencia de tareas personalizada para usar con condiciones, líneas de comando o pasos personalizados en la secuencia de tareas. Cuando cree una variable de secuencia de tareas, la variable y el valor asociado se mantendrán dentro del entorno de la secuencia de tareas, incluso cuando la secuencia reinicie el equipo de destino. La variable y su valor pueden utilizarse dentro de la secuencia de tareas en entornos de sistema operativo diferentes. Por ejemplo, puede usarse en un sistema operativo de Windows completo y en el entorno de Windows PE.  
 
  La tabla siguiente describe los métodos para crear una variable de secuencia de tareas e información de uso adicional.  
@@ -148,7 +147,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 
 -   No hay ningún límite respecto al número de variables de secuencias de tareas que se pueden crear. Sin embargo, el número de variables está limitado por el tamaño del entorno de secuencia de tareas. El límite de tamaño total para el entorno de secuencia de tareas es de 32 MB.  
 
-###  <a name="a-namebkmktsenvironmentvariablesa-access-environment-variables"></a><a name="BKMK_TSEnvironmentVariables"></a> Acceso a variables de entorno  
+###  <a name="BKMK_TSEnvironmentVariables"></a> Acceso a variables de entorno  
  Después de especificar la variable de secuencia de tareas y su valor mediante uno de los métodos indicados en la sección anterior, puede utilizar el valor de la variable de entorno en sus secuencias de tareas. Puede acceder a los valores predeterminados de las variables de secuencia de tareas integradas, especificar un nuevo valor para una variable integrada o utilizar una variable de secuencia de tareas personalizada en una línea de comandos o un script.  
 
  En la tabla siguiente se describen las operaciones de secuencia de tareas que se pueden realizar mediante el acceso a las variables de entorno de secuencia de tareas.  
@@ -160,7 +159,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 |Evaluar una condición de un paso|Puede utilizar variables de entorno de secuencia de tareas integradas o personalizadas como parte de una condición de paso o de grupo de secuencia de tareas. El valor de la variable de entorno se evaluará antes de que se ejecute el paso o el grupo de la secuencia de tareas.<br /><br /> Para agregar una condición que evalúa un valor de variable, haga lo siguiente:<br /><br /> 1.  Seleccione el paso o el grupo al que desea agregar la condición.<br />2.  En la pestaña **Opciones** correspondiente al paso o al grupo, seleccione **Variable de secuencia de tareas** en la lista desplegable **Agregar condición**.<br />3.  En el cuadro de diálogo **Variable de secuencia de tareas**, especifique el nombre de la variable, la condición que se prueba y el valor de la variable.|  
 |Proporcionar información para un script personalizado|Las variables de la secuencia de tareas se pueden leer y escribir mediante el objeto COM de Microsoft.SMS.TSEnvironment mientras la secuencia de tareas está en ejecución.<br /><br /> En el ejemplo siguiente, un archivo de script de Visual Basic consulta la variable de secuencia de tareas **_SMSTSLogPath** para obtener la ubicación del registro actual. El script también establece una variable personalizada.<br /><br /> <br /><br /> **dim osd: set env = CreateObject("Microsoft.SMS.TSEnvironment")**<br /><br /> <br /><br /> **dim logPath**<br /><br /> <br /><br /> **' Puede consultar el entorno para obtener una variable existente.**<br /><br /> **logPath = env("_SMSTSLogPath")**<br /><br /> <br /><br /> **' También se puede establecer una variable en el entorno de OSD.**<br /><br /> **env("MyCustomVariable") = "varname"**<br /><br /> <br /><br /> Para obtener más información acerca de cómo utilizar las variables de secuencia de tareas en scripts, consulte la documentación del SDK.|  
 
-###  <a name="a-namebkmkcomputercollectionvariablesa-computer-and-collection-variables"></a><a name="BKMK_ComputerCollectionVariables"></a> Variables de equipo y colección  
+###  <a name="BKMK_ComputerCollectionVariables"></a> Variables de equipo y colección  
  Puede configurar las secuencias de tareas para que se ejecuten simultáneamente en varios equipos o recopilaciones. Puede especificar información exclusiva de cada equipo o cada recopilación; por ejemplo, puede especificar una clave de producto exclusiva del sistema operativo o unir todos los miembros de una recopilación en un dominio especificado.  
 
  Puede asignar las variables de secuencia de tareas a un único equipo o una recopilación. Cuando la secuencia de tareas se inicia para ejecutarse en el equipo o la recopilación de destino, los valores especificados se aplican al equipo o a la recopilación de destino.  
@@ -172,7 +171,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 
  Para obtener más información sobre cómo crear variables de secuencia de tareas para equipos y recopilaciones, consulte [Creación de variables de secuencia de tareas para equipos y recopilaciones](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_CreateTSVariables).  
 
-###  <a name="a-namebkmktsmediavariablesa-task-sequence-media-variables"></a><a name="BKMK_TSMediaVariables"></a> Variables de medio de secuencia de tareas  
+###  <a name="BKMK_TSMediaVariables"></a> Variables de medio de secuencia de tareas  
  Puede especificar variables de secuencia de tareas para las secuencias de tareas que se ejecutan desde un medio. Cuando se utiliza un medio para implementar el sistema operativo se agregan las variables de secuencia de tareas y se especifican sus valores al crear el medio; las variables y sus valores se almacenan en el medio.  
 
 > [!NOTE]  
@@ -183,14 +182,14 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 > [!TIP]  
 >  La secuencia de tareas escribe el identificador de paquete y el comando de preinicio, incluidos los valores de las variables de secuencia de tareas, en el archivo de registro CreateTSMedia.log en el equipo que ejecuta la consola de Configuration Manager. Puede revisar este archivo de registro para comprobar el valor de las variables de secuencia de tareas.  
 
-##  <a name="a-namebkmktscreatea-create-a--task-sequence"></a><a name="BKMK_TSCreate"></a> Creación de una secuencia de tareas  
+##  <a name="BKMK_TSCreate"></a> Creación de una secuencia de tareas  
  Las secuencias de tareas se crean mediante el Asistente para crear secuencia de tareas. El asistente puede crear secuencias de tareas integradas que realizan tareas específicas o secuencias de tareas personalizadas que pueden realizar muchas tareas diferentes.  
 
  Por ejemplo, es posible crear secuencias de tareas que permiten generar y capturar una imagen del sistema operativo de un equipo de referencia, instalar la imagen de un sistema operativo existente en un equipo de destino o crear una secuencia de tareas personalizada que realiza una tarea personalizada. Las secuencias de tareas personalizadas se pueden usar para realizar implementaciones de sistema operativo especializadas.  
 
  Para obtener más información sobre cómo crear secuencias de tareas, consulte [Crear secuencias de tareas](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_CreateTaskSequence).  
 
-##  <a name="a-namebkmktsedita-edit-a-task-sequence"></a><a name="BKMK_TSEdit"></a> Edición de una secuencia de tareas  
+##  <a name="BKMK_TSEdit"></a> Edición de una secuencia de tareas  
  Una secuencia de tareas se edita mediante el **Editor de secuencia de tareas**. El editor permite realizar los siguientes cambios en la secuencia de tareas:  
 
 -   Se puede agregar o quitar pasos de la secuencia de tareas.  
@@ -208,7 +207,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 
  Para obtener más información sobre cómo editar una secuencia de tareas, consulte [Editar una secuencia de tareas](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
 
-##  <a name="a-namebkmktsdeploya-deploy-a-task-sequence"></a><a name="BKMK_TSDeploy"></a> Implementación de una secuencia de tareas  
+##  <a name="BKMK_TSDeploy"></a> Implementación de una secuencia de tareas  
  Se puede implementar una secuencia de tareas en equipos de destino que estén en cualquier recopilación de Configuration Manager. Se incluye la recopilación **Todos los equipos desconocidos** que se utiliza para implementar sistemas operativos en equipos desconocidos. Sin embargo, no se puede implementar una secuencia de tareas en recopilaciones de usuarios.  
 
 > [!IMPORTANT]  
@@ -230,7 +229,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 
  Para obtener más información sobre cómo implementar secuencias de tareas, consulte [Implementar una secuencia de tareas](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
 
-##  <a name="a-namebkmktsexportimporta-export-and-import-a-task-sequences"></a><a name="BKMK_TSExportImport"></a> Exportación e importación de una secuencia de tareas  
+##  <a name="BKMK_TSExportImport"></a> Exportación e importación de una secuencia de tareas  
  Configuration Manager permite exportar e importar secuencias de tareas. Al exportar una secuencia de tareas, puede incluir los objetos a los que hace referencia la secuencia de tareas. Se incluyen una imagen de sistema operativo, una imagen de arranque, un paquete de agente cliente, un paquete de controladores y las aplicaciones que tienen dependencias.  
 
 > [!NOTE]  
@@ -238,7 +237,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 
  Para obtener más información sobre cómo exportar e importar secuencias de tareas, consulte [Exportación e importación de secuencias de tareas](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ExportImport).  
 
-##  <a name="a-namebkmktsruna-run-a-task-sequence"></a><a name="BKMK_TSRun"></a> Ejecución de una secuencia de tareas  
+##  <a name="BKMK_TSRun"></a> Ejecución de una secuencia de tareas  
  De forma predeterminada las secuencias de tareas siempre se ejecutan mediante la cuenta de sistema local. El paso de la línea de comandos de la secuencia de tareas permite ejecutar la secuencia de tareas como una cuenta diferente. Cuando se ejecuta la secuencia de tareas, el cliente de Configuration Manager comprueba en primer lugar si hay paquetes con referencia antes de iniciar los pasos de la secuencia de tareas. Si un paquete con referencia no se valida o no está disponible en un punto de distribución, la secuencia de tareas devuelve un error para el paso de la secuencia de tareas asociado.  
 
  Si una secuencia de tareas distribuida está configurada para descargarse y ejecutarse, todos los paquetes y aplicaciones dependientes se descargan en la caché del cliente de Configuration Manager. Los paquetes y aplicaciones necesarios se obtienen de los puntos de distribución, y si la caché del cliente de Configuration Manager es demasiado reducida o no se encuentra el paquete o la aplicación, la secuencia de tareas produce un error y se genera un mensaje de estado. También se puede especificar que el cliente descargue el contenido solo cuando sea necesario si se selecciona **Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas**, o se puede utilizar la opción **Ejecutar programa desde el punto de distribución** para especificar que el cliente instale los archivos directamente desde el punto de distribución sin descargarlos primero en la caché. La opción **Ejecutar programa desde el punto de distribución** solo está disponible si los paquetes con referencia tienen la opción **Copiar el contenido de este paquete en un recurso compartido de paquete en los puntos de distribución** habilitada en la pestaña **Acceso a datos** de las propiedades del **Paquete**.  
@@ -255,7 +254,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 > [!NOTE]  
 >  Antes de que un cliente de Configuration Manager ejecute una secuencia de tareas, el cliente comprueba todas las secuencias de tareas para ver si hay posibles dependencias y la disponibilidad de tales dependencias en un punto de distribución. Si el cliente encuentra un objeto eliminado del que depende la secuencia de tareas, el cliente genera un error y no ejecuta la secuencia de tareas.  
 
-###  <a name="a-namebkmkrunprograma-run-a-program-before-the-task-sequence-is-run"></a><a name="BKMK_RunProgram"></a> Ejecución de un programa antes de ejecutar la secuencia de tareas  
+###  <a name="BKMK_RunProgram"></a> Ejecución de un programa antes de ejecutar la secuencia de tareas  
  Puede seleccionar un programa para que se ejecute antes de que se ejecute la secuencia de tareas. Para especificar que un programa se ejecute primero, abra el cuadro de diálogo **Propiedades** para la secuencia de tareas y seleccione la pestaña **Avanzadas** para establecer las opciones siguientes:  
 
 > [!IMPORTANT]  
@@ -274,13 +273,13 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 
  Si el programa seleccionado no se ejecuta en un cliente, la secuencia de tareas tampoco se ejecuta.  
 
-##  <a name="a-namebkmktsmaintenancewindowa-use-a-maintenance-window-to-specify-when-a-task-sequence-can-run"></a><a name="BKMK_TSMaintenanceWindow"></a> Uso de una ventana de mantenimiento para especificar cuñando se puede ejecutar una tarea  
+##  <a name="BKMK_TSMaintenanceWindow"></a> Uso de una ventana de mantenimiento para especificar cuñando se puede ejecutar una tarea  
  Puede especificar en qué momento se puede ejecutar la secuencia de tareas mediante la definición de una ventana de mantenimiento para la recopilación que contiene los equipos de destino. Las ventanas de mantenimiento se configuran con fecha de inicio, hora de inicio y de finalización, y un patrón de periodicidad. Además, cuando establece la programación de la ventana de mantenimiento, puede especificar que la ventana de mantenimiento se aplique solo a las secuencias de tareas. Para obtener más información, consulte [How to Use Maintenance Windows in Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md) (Uso de ventanas de mantenimiento en Configuration Manager).  
 
 > [!IMPORTANT]  
 >  Cuando se configura una ventana de mantenimiento para ejecutar una secuencia de tareas, una vez que se inicia la secuencia de tareas, continuará ejecutándose incluso si la ventana de mantenimiento se cierra. La secuencia de tareas llegará a finalizar correctamente o producirá un error.  
 
-##  <a name="a-namebkmktsnetworkaccessaccounta-task-sequences-and-the-network-access-account"></a><a name="BKMK_TSNetworkAccessAccount"></a> Secuencias de tareas y la cuenta de acceso de red  
+##  <a name="BKMK_TSNetworkAccessAccount"></a> Secuencias de tareas y la cuenta de acceso de red  
  Aunque las secuencias de tareas se ejecutan solo en el contexto de la cuenta de sistema local, es posible que deba configurar la cuenta de acceso de red en las siguientes circunstancias:  
 
 -   Debe configurar la cuenta de acceso de red correctamente o la secuencia de tareas producirá un error si intenta tener acceso a paquetes de Configuration Manager en puntos de distribución para completar su tarea. Para obtener más información sobre la cuenta de acceso a la red, consulte [Cuenta de acceso de red](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#a-namebkmknaaa-network-access-account).  
@@ -290,7 +289,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 
 -   Si usa una imagen de arranque para iniciar una implementación de sistema operativo, Configuration Manager usa el entorno de Windows PE, que no es un sistema operativo completo. El entorno de Windows PE utiliza un nombre aleatorio, generado automáticamente, que no pertenece a ningún dominio. Si no configura la cuenta de acceso de red correctamente, el equipo podría no tener los permisos necesarios para acceder a los paquetes de Configuration Manager para completar la secuencia de tareas.  
 
-##  <a name="a-namebkmktscreatemediaa-create-media-for-task-sequences"></a><a name="BKMK_TSCreateMedia"></a> Creación de medios para secuencias de tareas  
+##  <a name="BKMK_TSCreateMedia"></a> Creación de medios para secuencias de tareas  
  Puede escribir secuencias de tareas y sus archivos y dependencias relacionados para diferentes tipos de medios. Esto incluye escribir en medios extraíbles como un conjunto de DVD o CD, o usar una unidad flash USB para medios de arranque, independientes o de captura, o escribir en un archivo Windows Imaging Format (WIM) para medios preconfigurados.  
 
  Puede crear los siguientes tipos de medios:  
@@ -323,9 +322,3 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
  Si ejecuta una secuencia de tareas utilizando medios, la arquitectura de chip de equipo especificada en el medio no se reconocerá y la secuencia de tareas intentará ejecutarse incluso aunque la arquitectura especificada no coincida con lo que está instalado en el equipo de destino. Si la arquitectura de chip contenida en el medio no coincide con la arquitectura de chip instalada en el equipo de destino, se produce un error en la instalación.  
 
  Para obtener más información sobre cómo implementar sistemas operativos a través de medios, consulte [Crear medios de secuencia de tareas](../deploy-use/create-task-sequence-media.md).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

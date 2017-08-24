@@ -6,22 +6,19 @@ ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8cc13635-85d6-4b07-a3ec-c42188bc5c74
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 35a4c201f73469fdfaa5bb8629e91886f7ae8751
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="use-the-update-registration-tool-to-import-hotfixes-to-system-center-configuration-manager"></a>Uso de la herramienta de registro de actualizaciones para importar revisiones en System Center Configuration Manager
 
@@ -72,4 +69,3 @@ Si instala una versión de un origen externo y el nombre de archivo de la actual
 3.  Abra la consola de Configuration Manager y vaya a **Administración** > **Actualizaciones y mantenimiento**. Ahora están disponibles para instalar las revisiones que se han importado. (Antes de la versión 1702, la opción Actualizaciones y mantenimiento se encontraba en **Administración** > **Cloud Services**).
 
  Para obtener más información sobre la instalación de actualizaciones, consulte [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) (Instalación de actualizaciones en la consola para System Center Configuration Manager).  
-

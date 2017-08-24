@@ -6,23 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 22cc286baa72d3e356a07b91ee0a1be646fa8a9e
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 060d63ab8bce9c3bb39d2db404580b9f59416d33
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-configure-client-status-in-system-center-configuration-manager"></a>Cómo configurar el estado de cliente en System Center Configuration Manager
 
@@ -114,4 +111,3 @@ Para poder supervisar el estado de cliente de System Center Configuration Manage
 4.  Cierre el Editor del Registro.  
 
  También puede instalar clientes mediante la propiedad de instalación CCMSetup **NotifyOnly** para excluirlos de la corrección automática. Para más información sobre esta propiedad de instalación de cliente, vea [Acerca de las propiedades de instalación de cliente de Configuración Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
-

@@ -6,22 +6,19 @@ ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
 ms.openlocfilehash: 0da80521bf223a765c3731f8ad59623d85a4c9fa
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>Uso de la herramienta de conexión de servicio para System Center Configuration Manager
 
@@ -163,4 +160,3 @@ Puede utilizar los siguientes parámetros opcionales para especificar un servido
 |**-connect -usagedatasrc [unidad:][rutaAcceso] -updatepackdest [unidad:][rutaAcceso] -proxyserveruri [nombreCompletoServidorProxy] -proxyusername [nombreUsuario]** <br /> <br /> Si utiliza una versión de Configuration Manager anterior a 1606, debe especificar el nombre del archivo .cab y no podrá utilizar las opciones de un servidor proxy.  Los parámetros de comando admitidos son los siguientes: <br /> **connect -usagedatasrc [unidad:][rutaAcceso][nombreDeArchivo] -updatepackdest [unidad:][rutaAcceso]** |Este comando se conecta al servicio en la nube de Configuration Manager para cargar los archivos .cab de datos de uso desde la ubicación especificada y descargar los paquetes de actualización disponibles y el contenido de la consola. Las opciones para los servidores proxy son opcionales.<br /><br /> Ejecute este comando como **administrador local** en un equipo que pueda conectarse a Internet.<br /><br /> Ejemplo de la conexión sin un servidor proxy: **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> Ejemplo para la conexión cuando se utiliza un servidor proxy: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> Si utiliza una versión anterior a 1606, debe especificar un nombre de archivo para el archivo .cab y no se puede especificar un servidor proxy. Use la siguiente línea de comandos de ejemplo: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      
 |**-import -updatepacksrc [unidad:][ruta]**|Este comando importa los paquetes de actualización y el contenido de la consola que ha descargado anteriormente a la consola de Configuration Manager.<br /><br /> Ejecute este comando como **administrador local** en el servidor que hospeda el punto de conexión de servicio.<br /><br /> Ejemplo:  **-import -updatepacksrc D:\USB\UpdatePacks**|  
 |**-export -dest [unidad:][ruta][nombrearchivo.csv]**|Este comando exporta los datos de uso a un archivo .csv, que puede ver.<br /><br /> Ejecute este comando como **administrador local** en el servidor que hospeda el punto de conexión de servicio.<br /><br /> Ejemplo: **-export -dest D:\USB\usagedata.csv**|  
-

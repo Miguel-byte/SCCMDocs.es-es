@@ -6,23 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1e42b1c1-3d58-481f-8647-5c7ae640c5f5
-caps.latest.revision: 8
-caps.handback.revision: 0
+caps.latest.revision: "8"
+caps.handback.revision: "0"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6424fb07802b62820b4dc78a58ab30d3b956abef
 ms.openlocfilehash: 5a81ec06e16992ae1c41b0fc98ebcd07386c5381
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="set-up-a-microsoft-intune-subscription-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Configurar una suscripción de Microsoft Intune para la administración local de dispositivos móviles en System Center Configuration Manager
 
@@ -69,4 +66,3 @@ La administración local de dispositivos móviles de System Center Configuration
 5.  Si planea administrar equipos de escritorio con Windows 10, haga clic con el botón secundario en **Suscripción a Microsoft Intune**, haga clic en **Configurar plataformas**y, a continuación, haga clic en **Habilitar la inscripción de Windows**.  
 
 6.  Haga clic en la casilla de verificación junto a **Habilitar la inscripción de Windows**y, a continuación, haga clic en **Aceptar**.  
-

@@ -6,22 +6,19 @@ ms.date: 6/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 999b5409-7e72-48d2-8554-4d44427ce383
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mattbriggs
 ms.author: mattbriggs
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
 ms.openlocfilehash: 9b20e5e2a66d92038033e816e6fc701581c48a7f
-ms.contentlocale: es-es
-ms.lasthandoff: 06/28/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="use-bootable-media-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>Use medios de arranque para implementar Windows a través de la red con System Center Configuration Manager
 
@@ -53,4 +50,3 @@ Puede especificar si el medio de arranque es una unidad flash USB o un conjunto 
 
 ##  <a name="BKMK_Deploy"></a> Instalar el sistema operativo desde un medio de arranque  
 Inserte el medio de arranque en una unidad de arranque en el equipo y luego vuelva a encenderlo para instalar el sistema operativo.
-

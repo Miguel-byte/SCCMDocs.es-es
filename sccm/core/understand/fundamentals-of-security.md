@@ -6,20 +6,19 @@ ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: d56c8a76e4770336d4a2ab519e776e48fec8ebcd
 ms.openlocfilehash: df3198885259b1db4a1aadee0db6512a1a2d4911
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="fundamentals-of-security-for-system-center-configuration-manager"></a>Aspectos básicos de la seguridad en System Center Configuration Manager
 
@@ -70,9 +69,3 @@ La capa final de seguridad se basa en los permisos de objetos de la base de dato
  A pesar de que los productos de administración empresarial ofrecen muchas ventajas ya que permiten administrar de forma eficaz una gran cantidad de clientes, también se debe tener en cuenta que este software podría afectar a la privacidad de los usuarios de su organización. System Center Configuration Manager incluye un gran número de herramientas para la recopilación de datos y la supervisión de dispositivos. Es posible que algunas herramientas ocasionen problemas relacionados con la privacidad.  
 
  Por ejemplo, al instalar el cliente de Configuration Manager, muchas opciones de administración se habilitan de manera predeterminada. Esto hace que el software cliente envíe información al sitio de Configuration Manager. La información del cliente se almacena en la base de datos de Configuration Manager y esta no se envía a Microsoft. Antes de implementar System Center Configuration Manager, tenga en cuenta los requisitos de privacidad.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

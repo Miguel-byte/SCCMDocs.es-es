@@ -6,22 +6,19 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa648e73-5fb8-4818-ab57-7466ffaf888e
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: a7b74ba1d16216983251d19adfa4b78a7e0b66e4
-ms.contentlocale: es-es
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: a5c2a8912cd2ef95a778b81d0b7f1f98315b8413
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-email-access-in-system-center-configuration-manager"></a>Administrar el acceso a correo electrónico en System Center Configuration Manager
 
@@ -177,7 +174,7 @@ Se bloquearán los exploradores no admitidos. Igualmente no se admiten las aplic
 
  Las directivas de acceso condicional de Exchange Online utilizan el siguiente flujo para evaluar si se permitirá o bloqueará el acceso a los dispositivos.  
 
- ![ConditionalAccess8 &#45;&1;](media/ConditionalAccess8-1.png)  
+ ![ConditionalAccess8 &#45; 1](media/ConditionalAccess8-1.png)  
 
  Para acceder al correo electrónico, el dispositivo debe:  
 
@@ -299,7 +296,7 @@ Se bloquearán los exploradores no admitidos. Igualmente no se admiten las aplic
 ### <a name="for-exchange-on-premises-and-tenants-in-the-legacy-exchange-online-dedicated-environment"></a>Para Exchange local (y los inquilinos del entorno heredado de Exchange Online dedicado)  
  Las directivas de acceso condicional de Exchange local y los inquilinos del entorno heredado de Exchange Online dedicado utilizan el siguiente flujo para evaluar si se deben permitir o bloquear los dispositivos.  
 
- ![ConditionalAccess8 &#45;&2;](media/ConditionalAccess8-2.png)  
+ ![ConditionalAccess8 &#45; 2](media/ConditionalAccess8-2.png)  
 
 ##### <a name="to-enable-the-exchange-on-premises-policy"></a>Para habilitar la directiva de Exchange local  
 
@@ -362,4 +359,3 @@ Se bloquearán los exploradores no admitidos. Igualmente no se admiten las aplic
 
 ### <a name="see-also"></a>Consulte también  
  [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md) (Administración del acceso a servicios en System Center Configuration Manager)
-

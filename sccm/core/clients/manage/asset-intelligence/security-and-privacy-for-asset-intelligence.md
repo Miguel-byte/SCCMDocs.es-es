@@ -6,23 +6,20 @@ ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d0c6f7a0-dcae-4e6d-aa28-35d464d97ff7
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: d577a16725c2b167d1ff9f77096018433a2fa580
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: b12054cce52e2b83715a083d78a62e06b5127a2f
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-asset-intelligence-in-system-center-configuration-manager"></a>Seguridad y privacidad de Asset Intelligence en System Center Configuration Manager
 
@@ -60,4 +57,3 @@ Este tema contiene información de seguridad y privacidad de Asset Intelligence 
 -   Los datos cargados no se pueden recuperar.  
 
  Antes de configurar la recopilación de datos de Asset Intelligence y decidir si quiere enviar información a System Center Online, tenga en cuenta los requisitos de privacidad de su organización.  
-

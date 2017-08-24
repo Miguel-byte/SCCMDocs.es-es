@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 130c053c9f2a1817dd85b1f3c01285aab19d59cb
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>Réplicas de bases de datos para puntos de administración de System Center Configuration Manager
 
@@ -32,7 +31,7 @@ Los sitios primarios de System Center Configuration Manager pueden usar una rép
 -   Esto puede ayudar a reducir los requisitos de procesamiento de CPU en el servidor de base de datos del sitio mediante la descarga de tareas de procesamiento frecuentes relacionadas con los clientes.  Un ejemplo de tareas de procesamiento frecuentes para clientes son los sitios en los que hay un gran número de clientes que realizan solicitudes frecuentes para la directiva de cliente  
 
 
-##  <a name="a-namebkmkpreparea-prepare-to-use-database-replicas"></a><a name="bkmk_Prepare"></a> Prepararse para el uso de réplicas de base de datos  
+##  <a name="bkmk_Prepare"></a> Prepararse para el uso de réplicas de base de datos  
 **Información sobre las réplicas de bases de datos para puntos de administración:**  
 
 -   Las réplicas son una copia parcial de la base de datos que se replica en una instancia independiente de SQL Server:  
@@ -87,7 +86,7 @@ Los sitios primarios de System Center Configuration Manager pueden usar una rép
 
 -   **Varias réplicas en un único servidor de SQL Server:** si configura un servidor de réplica de bases de datos para hospedar varias réplicas de bases de datos para puntos de administración (cada réplica debe estar en una instancia independiente), debe usar un script de configuración modificado (del paso 4 de la sección siguiente) para impedir que se sobrescriba el certificado autofirmado que usaban las réplicas de bases de datos previamente configuradas en ese servidor.  
 
-##  <a name="a-namebkmkdbreplicaconfiga-configure-database-replicas"></a><a name="BKMK_DBReplica_Config"></a> Configurar réplicas de bases de datos  
+##  <a name="BKMK_DBReplica_Config"></a> Configurar réplicas de bases de datos  
 Para configurar una réplica de base de datos, debe seguir los siguientes pasos:  
 
 -   [Paso 1: configurar el servidor de base de datos del sitio para publicar la réplica de base de datos](#BKMK_DBReplica_ConfigSiteDB)  
@@ -100,7 +99,7 @@ Para configurar una réplica de base de datos, debe seguir los siguientes pasos:
 
 -   [Paso 5: configurar SQL Server Service Broker para el servidor de réplica de base de datos](#BKMK_DBreplica_SSB)  
 
-###  <a name="a-namebkmkdbreplicaconfigsitedba-step-1---configure-the-site-database-server-to-publish-the-database-replica"></a><a name="BKMK_DBReplica_ConfigSiteDB"></a> Paso 1: configurar el servidor de base de datos del sitio para publicar la réplica de base de datos  
+###  <a name="BKMK_DBReplica_ConfigSiteDB"></a> Paso 1: configurar el servidor de base de datos del sitio para publicar la réplica de base de datos  
  Utilice el procedimiento siguiente como ejemplo de cómo configurar el servidor de base de datos del sitio en un equipo Windows Server 2008 R2 para publicar la réplica de base de datos. Si tiene otra versión de sistema operativo, consulte la documentación del sistema operativo correspondiente y adapte los pasos de este procedimiento, si fuera necesario.  
 
 ##### <a name="to-configure-the-site-database-server"></a>Para configurar el servidor de base de datos del sitio  
@@ -132,7 +131,7 @@ Para configurar una réplica de base de datos, debe seguir los siguientes pasos:
 
 Cuando se completa el procedimiento almacenado, el servidor de base de datos del sitio está configurado para publicar la réplica de base de datos.  
 
-###  <a name="a-namebkmkdbreplicaconfigsrva-step-2---configuring-the-database-replica-server"></a><a name="BKMK_DBReplica_ConfigSrv"></a> Paso 2: configurar el servidor de réplica de bases de datos  
+###  <a name="BKMK_DBReplica_ConfigSrv"></a> Paso 2: configurar el servidor de réplica de bases de datos  
 El servidor de réplica de base de datos es un equipo que ejecuta SQL Server y que hospeda una réplica de la base de datos del sitio para que la utilicen los puntos de administración. En una programación fija, el servidor de réplica de base de datos sincroniza su copia de la base de datos con la réplica de base de datos que publica el servidor de base de datos del sitio.  
 
 El servidor de réplica de base de datos debe cumplir los mismos requisitos que el servidor de base de datos del sitio. Sin embargo, el servidor de réplica de base de datos puede ejecutar una edición o versión diferente de SQL Server que la que utiliza el servidor de base de datos del sitio. Para obtener más información sobre las versiones compatibles de SQL Server, consulte el tema [Support for SQL Server versions for System Center Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md) (Compatibilidad con versiones de SQL Server para System Center Configuration Manager).  
@@ -213,7 +212,7 @@ Utilice el procedimiento siguiente como ejemplo de cómo configurar un servidor 
 
  La réplica de base de datos ya está preparada para que la utilice el punto de administración.  
 
-###  <a name="a-namebkmkdbreplicaconfigmpa-step-3---configure-management-points-to-use-the-database-replica"></a><a name="BKMK_DBReplica_ConfigMP"></a> Paso 3: configurar los puntos de administración para usar la réplica de base de datos  
+###  <a name="BKMK_DBReplica_ConfigMP"></a> Paso 3: configurar los puntos de administración para usar la réplica de base de datos  
  Puede configurar un punto de administración en un sitio primario para que utilice una réplica de base de datos cuando instale el rol de punto de administración, o bien puede volver a configurar un punto de administración existente para que utilice una réplica de base de datos.  
 
  Utilice la siguiente información para configurar un punto de administración para que utilice una réplica de base de datos:  
@@ -232,7 +231,7 @@ Además de configurar el punto de administración para que utilice el servidor d
 
 3.  Establezca **Autenticación de Windows** en **Habilitado**y, a continuación, cierre **Administración de Internet Information Services (IIS)**.  
 
-###  <a name="a-namebkmkdbreplicacerta-step-4--configure-a-self-signed-certificate-for-the-database-replica-server"></a><a name="BKMK_DBReplica_Cert"></a> Paso 4: configurar un certificado autofirmado para el servidor de réplica de base de datos  
+###  <a name="BKMK_DBReplica_Cert"></a> Paso 4: configurar un certificado autofirmado para el servidor de réplica de base de datos  
  Debe crear un certificado autofirmado en el servidor de réplica de base de datos y hacer que este certificado esté disponible para todos los puntos de administración que van a utilizar ese servidor de réplica de base de datos.  
 
  El certificado está automáticamente disponible para un punto de administración que está instalado en el servidor de réplica de base de datos. Sin embargo, para que este certificado esté disponible para los puntos de administración remotos, debe exportar el certificado y agregarlo al almacén de certificados Personas de confianza en el punto de administración remoto.  
@@ -413,7 +412,7 @@ Además de configurar el punto de administración para que utilice el servidor d
 
     5.  Haga clic en **Finalizar** para cerrar el asistente y completar la configuración de certificado en el punto de administración.  
 
-###  <a name="a-namebkmkdbreplicassba-step-5---configure-the-sql-server-service-broker-for-the-database-replica-server"></a><a name="BKMK_DBreplica_SSB"></a> Paso 5: configurar SQL Server Service Broker para el servidor de réplica de base de datos  
+###  <a name="BKMK_DBreplica_SSB"></a> Paso 5: configurar SQL Server Service Broker para el servidor de réplica de base de datos  
 Para admitir la notificación de cliente con una réplica de base de datos para un punto de administración, debe configurar la comunicación entre el servidor de base de datos de sitio y el servidor de réplica de base de datos para SQL Server Service Broker. Esto requiere configurar cada base de datos con información acerca de la otra base de datos, así como intercambiar certificados entre las dos bases de datos para una comunicación segura.  
 
 > [!NOTE]  
@@ -453,20 +452,20 @@ Para admitir la notificación de cliente con una réplica de base de datos para 
 
  Unos minutos después de completar la configuración de la base de datos de sitio y de la base de datos de réplica de base de datos, el administrador de notificaciones del sitio primario configura la conversación de Service Broker para la notificación de cliente desde la base de datos de sitio primario a la réplica de base de datos.  
 
-###  <a name="a-namebkmksupscripta-supplemental-script-for-additional-database-replicas-on-a-single-sql-server"></a><a name="bkmk_supscript"></a> Script adicional para las réplicas de bases de datos adicionales en un único servidor de SQL  
+###  <a name="bkmk_supscript"></a> Script adicional para las réplicas de bases de datos adicionales en un único servidor de SQL  
  Si usa el script del paso 4 para configurar un certificado autofirmado para el servidor de réplica de base de datos en un servidor SQL Server que ya tiene una réplica de base de datos que va a continuar usando, debe usar una versión modificada del script original. Las siguientes modificaciones evitan que el script elimine un certificado existente en el servidor y crean posteriores certificados con nombres descriptivos únicos.  Edite el script original como sigue:  
 
 -   Convierta en comentario (evitar que se ejecute) cada línea entre las entradas del script **# Eliminar certificado existente si existe uno** y **# Crear el nuevo certificado**. Para ello, agregue un  **#**  como primer carácter de cada línea aplicable.  
 
 -   En cada réplica de base de datos posterior, use este script para configurar y actualizar el nombre descriptivo del certificado.  Para ello, modifique la línea **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** y sustituya **ConfigMgr SQL Server Identification Certificate** por un nuevo nombre, como por ejemplo,  **ConfigMgr SQL Server Identification Certificate1**.  
 
-##  <a name="a-namebkmkdbreplicaopsa-manage-database-replica-configurations"></a><a name="BKMK_DBReplicaOps"></a> Administrar configuraciones de réplica de base de datos  
+##  <a name="BKMK_DBReplicaOps"></a> Administrar configuraciones de réplica de base de datos  
  Al utilizar una réplica de base de datos en un sitio, use la información de las siguientes secciones para complementar el proceso para desinstalar una réplica de base de datos, desinstalar un sitio que utiliza una réplica de base de datos o mover la base de datos de sitio a una instalación nueva de SQL Server. Si utiliza la información de las siguientes secciones para eliminar publicaciones, utilice la guía para eliminar la replicación transaccional de la versión SQL Server utilizada para la réplica de base de datos. Por ejemplo, si usa SQL Server 2008 R2, consulte [Cómo: eliminar una publicación (programación de la replicación con Transact-SQL)](http://go.microsoft.com/fwlink/p/?LinkId=273934).  
 
 > [!NOTE]  
 >  Después de restaurar una base de datos de sitio configurada para réplicas de base de datos, para poder utilizar las réplicas de base de datos debe volver a configurar cada réplica de base de datos y volver a crear tanto las publicaciones como las suscripciones.  
 
-###  <a name="a-namebkmkuninstalldbreplicaa-uninstall-a-database-replica"></a><a name="BKMK_UninstallDbReplica"></a> Desinstalación de una réplica de base de datos  
+###  <a name="BKMK_UninstallDbReplica"></a> Desinstalación de una réplica de base de datos  
  Al utilizar una réplica de base de datos para un punto de administración, debe desinstalar la réplica de base de datos durante un período de tiempo y, a continuación, volver a configurarla para utilizarla. Por ejemplo, debe quitar las réplicas de base de datos antes de actualizar un sitio de Configuration Manager a un nuevo Service Pack. Una vez completada la actualización del sitio, puede restaurar la réplica de base de datos para poder utilizarla.  
 
  Utilice los pasos siguientes para desinstalar una réplica de base de datos.  
@@ -489,7 +488,7 @@ Para admitir la notificación de cliente con una réplica de base de datos para 
 
 5.  Después de eliminar la publicación, la suscripción, la base de datos de réplica, y tras deshabilitar la publicación en el servidor de base de datos de sitio, se desinstala la réplica de base de datos.  
 
-###  <a name="a-namebkmkdbreplicaopsuninstalla-uninstall-a-site-server-that-publishes-a-database-replica"></a><a name="BKMK_DBReplicaOps_Uninstall"></a> Desinstalar un servidor de sitio que publica una réplica de base de datos  
+###  <a name="BKMK_DBReplicaOps_Uninstall"></a> Desinstalar un servidor de sitio que publica una réplica de base de datos  
  Antes de desinstalar un sitio que publica una réplica de base de datos, siga estos pasos para limpiar la publicación y las suscripciones.  
 
 1.  Utilice **SQL Server Management Studio** para eliminar la publicación de réplica de base de datos de la base de datos del servidor de sitio.  
@@ -498,7 +497,7 @@ Para admitir la notificación de cliente con una réplica de base de datos para 
 
 3.  Desinstale el sitio.  
 
-###  <a name="a-namebkmkdbreplicaopsmovea-move-a-site-server-database-that-publishes-a-database-replica"></a><a name="BKMK_DBReplicaOps_Move"></a> Mover una base de datos de servidor de sitio que publica una réplica de base de datos  
+###  <a name="BKMK_DBReplicaOps_Move"></a> Mover una base de datos de servidor de sitio que publica una réplica de base de datos  
  Cuando se mueve la base de datos de sitio a un nuevo equipo, siga estos pasos:  
 
 1.  Utilice **SQL Server Management Studio** para eliminar la publicación de réplica de base de datos de la base de datos del servidor de sitio.  
@@ -510,9 +509,3 @@ Para admitir la notificación de cliente con una réplica de base de datos para 
 4.  Vuelva a crear la publicación para la réplica de base de datos en el servidor de base de datos de sitio. Para obtener más información, consulte [Paso 1: configurar el servidor de base de datos del sitio para publicar la réplica de base de datos](#BKMK_DBReplica_ConfigSiteDB) en este tema.  
 
 5.  Vuelva a crear las suscripciones para la réplica de base de datos en cada servidor de réplica de base de datos. Para obtener más información, consulte [Paso 2: configurar el servidor de réplica de bases de datos](#BKMK_DBReplica_ConfigSrv) en este tema.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

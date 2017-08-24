@@ -1,5 +1,4 @@
 ---
-
 title: Configurar Endpoint Protection | Microsoft Docs
 description: "Obtenga información sobre cómo seleccionar y configurar métodos con Endpoint Protection en System Center Configuration Manager para mantener actualizadas las definiciones de antimalware en los equipos cliente."
 ms.custom: na
@@ -7,25 +6,20 @@ ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 537dd2a7-4e44-4877-b8dd-5e1499407f8d
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 9085a4daed409eeff4c95e5c467f123d0a38147a
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
-
+ms.openlocfilehash: b5da7900a4f8e2f330c4dcb2cac00b45099bd909
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 #  <a name="configure-definition-updates-for-endpoint-protection"></a>Configurar actualizaciones de definiciones de Endpoint Protection  
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -75,4 +69,3 @@ ms.lasthandoff: 12/16/2016
 -   Actualizaciones distribuidas desde el Centro de protección contra malware de Microsoft: este método descarga actualizaciones de definiciones desde el Centro de protección contra malware de Microsoft.
 
 -   [Actualizaciones desde recursos compartidos de archivos UNC](endpoint-definitions-network.md): con este método, se pueden guardar las últimas actualizaciones de definiciones y de motores en un recurso compartido en la red. De este modo, los clientes pueden acceder a la red para instalar las actualizaciones.
-

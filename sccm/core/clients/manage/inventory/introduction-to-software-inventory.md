@@ -6,23 +6,20 @@ ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 79eb49da-cd2b-4ffc-b355-b595aeba3aea
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
 ms.openlocfilehash: 969f2d28649853ddc95860fe72597d6d2c9a94e9
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="introduction-to-software-inventory-in-system-center-configuration-manager"></a>Introducción al inventario de software en System Center Configuration Manager
 
@@ -47,4 +44,3 @@ Después de habilitar el inventario de software y de que los clientes ejecuten u
  Configuration Manager puede detectar equipos de arranque dual, pero solo devuelve información de inventario del sistema operativo que estaba activo en el momento del inventario.  
 
 **Dispositivos móviles:** vea el [inventario de software para dispositivos móviles inscritos con Microsoft Intune](../../../../mdm/deploy-use/software-inventory-mobile-devices.md) para obtener información sobre la recopilación de inventario de aplicaciones instaladas en dispositivos móviles.
-

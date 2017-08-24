@@ -6,24 +6,20 @@ ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ec5b54cf-62b7-4ed1-9bb3-e8c63b9641c8
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 60631bc0346bd78d704e7129bb755af504c59b1b
 ms.openlocfilehash: 6e7edc85630d22c5bbba1ff66bd1199903db76db
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
-
 # <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>Actualizar la rama de mantenimiento a largo plazo a la rama actual
 
 *Se aplica a: System Center Configuration Manager (rama de mantenimiento a largo plazo)*
@@ -34,7 +30,7 @@ Si cuenta con un acuerdo Software Assurance actual (o derechos de licencia simil
 
 Si tiene varios sitios, basta con convertir el sitio de nivel superior de la jerarquía. Una vez convertido el sitio de nivel superior:
 - Se convierten automáticamente los sitios primarios secundarios.
--    Debe actualizar manualmente los sitios secundarios desde la consola de Configuration Manager.
+-   Debe actualizar manualmente los sitios secundarios desde la consola de Configuration Manager.
 
 ## <a name="run-setup-to-convert-the-long-term-servicing-branch"></a>Ejecutar el programa de instalación para convertir la Rama de mantenimiento a largo plazo
 En el sitio de nivel superior de la jerarquía puede ejecutar el programa de instalación de Configuration Manager desde el medio de línea base correspondiente y seleccionar **Mantenimiento del sitio**.  Después, cuando aparezca la página de licencias, seleccione la opción de la Rama actual y complete el asistente.
@@ -56,4 +52,3 @@ Si el sitio ejecuta la LTSB, puede usar la siguiente opción de la consola de Co
  2. Seleccione la opción para convertir a la Rama actual y, después, haga clic en **Aplicar**.  
 
 Después de convertir el sitio a la Rama actual, podrán usarse las funciones y características que antes no estaban disponibles.
-

@@ -6,22 +6,19 @@ ms.date: 1/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b0a7859-747f-4495-a2f4-13fd5991f897
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 28593d271603ff9775425327996d844d7ed358cd
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="interoperability-between-different-versions-of-system-center-configuration-manager"></a>Interoperabilidad entre diferentes versiones de System Center Configuration Manager
 
@@ -86,4 +83,3 @@ Por ejemplo, si dos o más jerarquías de Configuration Manager tienen límites 
 |----------------------------------|----------------------|  
 |Un entorno con System Center 2012 Configuration Manager y System Center Configuration Manager|Para administrar un sitio de Configuration Manager, la consola y el sitio al que la consola se conecta deben ejecutar la misma versión de Configuration Manager. Por ejemplo, no puede usar una consola de System Center 2012 Configuration Manager para administrar un sitio de System Center Configuration Manager, o viceversa.<br /><br /> No se admite para instalar la consola de System Center 2012 Configuration Manager y la de System Center Configuration Manager en el mismo equipo.|  
 |Un entorno con varias versiones de System Center Configuration Manager|System Center Configuration Manager no admite la instalación de más de una sola consola de Configuration Manager en un equipo. Para usar varias consolas de distintas versiones de System Center Configuration Manager, debe instalar las consolas en equipos independientes.<br /><br /> Durante el proceso de actualización a una nueva versión de los sitios de una jerarquía, puede conectar una consola a un sitio que ejecute una versión más reciente y visualizar la información de otros sitios de esa jerarquía. En cambio, esta configuración no se recomienda porque las diferencias entre la versión de la consola y la versión del sitio de Configuration Manager pueden dar lugar a problemas de datos y algunas características que están disponibles en la versión más reciente del producto no estarán disponibles en la consola. <br /></br /> No se puede administrar un sitio con una consola de una versión que no coincida con la del sitio. Hacerlo podría provocar la pérdida de los datos y poner su sitio en riesgo. Por ejemplo, no se permite utilizar una consola de la versión 1610 para administrar un sitio que ejecute la versión 1606. |
-

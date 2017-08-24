@@ -6,24 +6,21 @@ ms.date: 07/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
 ms.openlocfilehash: 640eb1df9d53fc83d93c39a7ecbaf2668e176805
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="configure-certificate-infrastructure"></a>Configuración de la infraestructura de certificados
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -209,4 +206,3 @@ Debe instalar y configurar el módulo de directivas de System Center Configurati
 
  
 Ahora que ha completado los pasos de configuración, está listo para implementar certificados para usuarios y dispositivos mediante la creación e implementación de perfiles de certificado. Para más información sobre cómo crear perfiles de certificado, vea [Creación de perfiles de certificado en Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).  
-

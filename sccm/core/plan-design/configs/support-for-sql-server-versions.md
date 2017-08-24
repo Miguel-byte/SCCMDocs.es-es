@@ -6,21 +6,19 @@ ms.date: 05/10/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
 ms.openlocfilehash: b35e45b9514297e2f9ce405a3244462ed735f39f
-ms.contentlocale: es-es
-ms.lasthandoff: 07/26/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>Versiones de SQL Server compatibles con System Center Configuration Manager
 
@@ -262,4 +260,3 @@ Si tiene que actualizar la versión de SQL Server, se recomiendan los métodos s
 1. [Realice una actualización local de SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (recomendado).
 2. Instale una nueva versión de SQL Server en un equipo nuevo y después [use la opción para mover datos](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) del programa de instalación de Configuration Manager para transfiera el servidor de sitio a la nueva instancia de SQL Server.
 3. Use [Copia de seguridad y recuperación](/sccm/protect/understand/backup-and-recovery).
-

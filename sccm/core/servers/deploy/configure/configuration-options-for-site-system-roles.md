@@ -6,21 +6,19 @@ ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0e9f0fbd-e442-4509-a021-bfdedf2d04dd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fff93794afdfa9f890b1f06d6c330d8cffc5796c
 ms.openlocfilehash: b4db5d86cc0ed020ed176feb2e8f1f9dc51a2280
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configuration-options-for-site-system-roles-for-system-center-configuration-manager"></a>Opciones de configuración de roles de sistema de sitio para System Center Configuration Manager
 
@@ -154,4 +152,3 @@ Restablezca los valores de limitación para el punto de estado de reserva si se 
 -   Detecta que la configuración de limitación actual crea un uso intensivo de la CPU en el servidor del sitio.  
 
 No cambie la configuración de limitación de punto de estado de reserva a menos que entienda las consecuencias. Por ejemplo, si aumenta demasiado la configuración de limitación, el uso de CPU en el servidor de sitio puede aumentar también en exceso, lo cual ralentiza todas las operaciones del sitio.  
-

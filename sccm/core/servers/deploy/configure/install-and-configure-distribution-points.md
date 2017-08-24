@@ -6,21 +6,19 @@ ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8728d9f2ae63282a8f58b20105e488fb1a5ef55b
 ms.openlocfilehash: 4c94e4de5bbfe621492e8682c9424a48eb38196d
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>Instalación y configuración de puntos de distribución de System Center Configuration Manager
 
@@ -390,4 +388,3 @@ Especifique si desea configurar límites de velocidad para controlar el ancho de
 -   **Modo por pulsos**: esta opción especifica el tamaño de los bloques de datos que se envían al punto de distribución. También puede especificar un retraso de tiempo entre el envío de cada bloque de datos. Utilice esta opción cuando tenga que enviar datos a través de una conexión de red con un ancho de banda muy bajo al punto de distribución. Por ejemplo, podría tener limitaciones al enviar 1 KB de datos cada cinco segundos, independientemente de la velocidad del vínculo o su uso en un momento dado.  
 
 -   **Limitado al máximo especificado de velocidades de transferencia por hora**: especifique esta opción para que un sitio envíe datos a un punto de distribución usando solo el porcentaje de tiempo que configure. Cuando se usa esta opción, Configuration Manager no identifica el ancho de banda disponible de las redes, sino que divide el tiempo en que puede enviar datos. A continuación, se envían datos durante un corto periodo de tiempo, seguido de periodos de tiempo en que no se envían datos. Por ejemplo, si la velocidad máxima se establece en **50 %**, Configuration Manager transmitirá datos durante un periodo de tiempo seguido de un periodo de tiempo igual en que no se enviarán datos. La cantidad real de datos, o el tamaño del bloque de datos, no se administra. En su lugar, solo se administra la cantidad de tiempo durante la cual se envían datos.  
-

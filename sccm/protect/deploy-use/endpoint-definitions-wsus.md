@@ -6,24 +6,20 @@ ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a34d9401-83e4-471d-8e23-b8042fc11c90
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 3142db9e25f678a0093f305ef11a17bde1990a88
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 0e606b25065fa25c782d1b5f3fbf164e60733353
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-windows-server-update-services-wsus-for-configuration-manager"></a>Habilite la descarga de definiciones de malware de Endpoint Protection desde Windows Server Update Services (WSUS) para Configuration Manager.
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -105,4 +101,3 @@ ms.lasthandoff: 12/16/2016
 
 > [!div class="button"]
 [Atrás >](endpoint-configure-alerts.md)
-

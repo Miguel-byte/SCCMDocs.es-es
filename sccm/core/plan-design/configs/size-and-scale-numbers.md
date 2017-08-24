@@ -6,21 +6,19 @@ ms.date: 07/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 5945abb49fe06c59355805aa94b04d0d445ecbc3
 ms.openlocfilehash: f539e2d282b56e56a9c58c773788325b27ea6b37
-ms.contentlocale: es-es
-ms.lasthandoff: 07/24/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Números de tamaño y escala de System Center Configuration Manager
 
@@ -194,4 +192,3 @@ Cada punto de administración puede admitir el siguiente número de dispositivos
         -   10 000 dispositivos que administra mediante MDM local  
 
         -   10 000 dispositivos que ejecutan clientes Mac y Windows CE 7.0
-

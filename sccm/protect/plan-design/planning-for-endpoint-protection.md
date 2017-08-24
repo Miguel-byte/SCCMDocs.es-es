@@ -9,17 +9,15 @@ ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
 ms.openlocfilehash: 6c4273dae99ec8db2cf827f463b973e876d0d35b
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="planning-for-endpoint-protection-in-system-center-configuration-manager"></a>Planeamiento para Endpoint Protection en System Center Configuration Manager
 
@@ -117,4 +115,3 @@ A partir de la versión 1606 de Configuration Manager (rama actual), Endpoint Pr
 
 ### <a name="distributing-definition-updates-by-using-software-updates"></a>Distribución de actualizaciones de definiciones mediante el uso de las actualizaciones de software  
  Si está usando las actualizaciones de software de Configuration Manager para distribuir las actualizaciones de definiciones, considere colocar las actualizaciones de definiciones en un paquete que no contenga otras actualizaciones de software. Esto evita que el tamaño del paquete de actualización de definición más pequeño que permite que se replique en puntos de distribución más rápidamente.
-

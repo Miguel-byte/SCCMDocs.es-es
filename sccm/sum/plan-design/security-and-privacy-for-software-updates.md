@@ -1,5 +1,4 @@
 ---
-
 title: Seguridad y privacidad de las actualizaciones de software | Microsoft Docs
 description: "Siga estos procedimientos recomendados de seguridad de las actualizaciones de software y obtenga información sobre cómo administra Configuration Manager la información de privacidad."
 keywords: 
@@ -10,15 +9,13 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: 4b4f045138abc14b6e93b3b990c5f3a8b4f2f952
-
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-software-updates-in-system-center-configuration-manager"></a>Seguridad y privacidad de las actualizaciones de software en System Center Configuration Manager
 
@@ -26,7 +23,7 @@ ms.openlocfilehash: 4b4f045138abc14b6e93b3b990c5f3a8b4f2f952
 
 Este tema contiene información sobre seguridad y privacidad de las actualizaciones de software en System Center Configuration Manager.  
 
-##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-software-updates"></a><a name="BKMK_Security_HardwareInventory"></a> Recomendaciones de seguridad para las actualizaciones de software  
+##  <a name="BKMK_Security_HardwareInventory"></a> Recomendaciones de seguridad para las actualizaciones de software  
  Use las recomendaciones de seguridad siguientes al implementar actualizaciones de software en los clientes:  
 
 -   No cambie los permisos predeterminados de los paquetes de actualización de software.  
@@ -62,7 +59,7 @@ Este tema contiene información sobre seguridad y privacidad de las actualizacio
 
      Para obtener más información, consulte [Configure WSUS to use a custom web site](plan-for-software-updates.md#BKMK_CustomWebSite) (Configurar WSUS para usar un sitio web personalizado).  
 
-##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-software-updates"></a><a name="BKMK_Privacy_HardwareInventory"></a> Información de privacidad de las actualizaciones de software  
+##  <a name="BKMK_Privacy_HardwareInventory"></a> Información de privacidad de las actualizaciones de software  
  Las actualizaciones de software examinan los equipos cliente para determinar las actualizaciones de software requeridas y, a continuación, envían la información a la base de datos del sitio. Durante el proceso de actualización de software, es posible que Configuration Manager transmita información entre clientes y servidores que permite identificar las cuentas de equipo y de inicio de sesión.  
 
  Configuration Manager mantiene información de estado sobre el proceso de implementación de software. La información de estado no se cifra durante la transmisión o el almacenamiento. La información de estado se almacena en la base de datos de Configuration Manager. Las tareas de mantenimiento de la base de datos eliminarán la información de estado. No se envía información de estado a Microsoft.  
@@ -72,9 +69,3 @@ Este tema contiene información sobre seguridad y privacidad de las actualizacio
  Configuration Manager no implementa actualizaciones de software de manera predeterminada y requiere varios pasos de configuración antes de recopilar información.  
 
  Antes de configurar las actualizaciones de software, tenga en cuenta los requisitos de privacidad.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

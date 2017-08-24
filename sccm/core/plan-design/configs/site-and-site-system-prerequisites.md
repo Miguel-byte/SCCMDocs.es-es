@@ -6,19 +6,19 @@ ms.date: 1/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 42549b98dd7f418cc3f4543198aaeb90ea8a3efd
 ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>Requisitos previos de sitio y sistema de sitio para System Center Configuration Manager
 
@@ -33,7 +33,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 > [!NOTE]  
 >  En enero de 2016 caducó el soporte para .NET Framework 4.0, 4.5 y 4.5.1. Para más información, consulte [Preguntas más frecuentes de la directiva del ciclo de vida de soporte técnico de Microsoft de .NET Framework](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update) en support.microsoft.com.  
 
-## <a name="a-namebkmkgeneralprerewqa-general-site-server-requirements-and-limitations"></a><a name="bkmk_generalprerewq"></a> Requisitos y limitaciones generales del servidor de sitio
+## <a name="bkmk_generalprerewq"></a> Requisitos y limitaciones generales del servidor de sitio
 **Se aplican a todos los tipos de servidores de sistema de sitio:**
 
 -   Cada servidor de sistema de sitio debe usar un sistema operativo de 64 bits. La única excepción a esta regla es el rol de sistema de sitio de punto de distribución, que puede instalar en algunos sistemas operativos de 32 bits.  
@@ -54,8 +54,8 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   No se permite cambiar la configuración de tipo de inicio o de inicio de sesión de ningún servicio de Configuration Manager. Si hace esto, es posible que impida que servicios clave se ejecuten correctamente.  
 
-##  <a name="a-namebkmk2012prereqa-prerequisites-for-windows-server-2012-and-later-operating-systems"></a><a name="bkmk_2012Prereq"></a> Requisitos previos para Windows Server 2012 y sistemas operativos posteriores  
-###  <a name="a-namebkmk2012sspreqa-site-server-central-administration-site-and-primary-site"></a><a name="bkmk_2012sspreq"></a> Servidor de sitio: sitio de administración central y sitio primario  
+##  <a name="bkmk_2012Prereq"></a> Requisitos previos para Windows Server 2012 y sistemas operativos posteriores  
+###  <a name="bkmk_2012sspreq"></a> Servidor de sitio: sitio de administración central y sitio primario  
   **Roles y características de Windows Server:**  
 
 -   .NET framework 3.5 SP1 (o posterior)  
@@ -78,7 +78,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   Los sitios de administración central y sitios primarios requieren las versiones x86 y x64 del archivo redistribuible aplicable.  
 
-###  <a name="a-namebkmk2012secpreqa-site-server-secondary-site"></a><a name="bkmk_2012secpreq"></a> Servidor de sitio: sitio secundario  
+###  <a name="bkmk_2012secpreq"></a> Servidor de sitio: sitio secundario  
 **Roles y características de Windows Server:**  
 
 -   .NET framework 3.5 SP1 (o posterior)  
@@ -99,7 +99,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   Asegúrese de que el servidor de sitio secundario cumple los requisitos previos para estos roles de sistema de sitio.  
 
-###  <a name="a-namebkmk2012dbpreqa-database-server"></a><a name="bkmk_2012dbpreq"></a> Servidor de bases de datos  
+###  <a name="bkmk_2012dbpreq"></a> Servidor de bases de datos  
 **Servicio de Registro remoto:**  
 
 -   Durante la instalación del sitio de Configuration Manager, debe habilitar el servicio de Registro remoto en el equipo que hospedará la base de datos del sitio.  
@@ -112,7 +112,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   Si decide que Configuration Manager instale SQL Server Express como parte de la instalación del sitio secundario, asegúrese de que el equipo cumple los requisitos para ejecutar SQL Server Express.  
 
-###  <a name="a-namebkmk2012smsprovpreqa-sms-provider-server"></a><a name="bkmk_2012smsprovpreq"></a> Servidor de proveedor de SMS  
+###  <a name="bkmk_2012smsprovpreq"></a> Servidor de proveedor de SMS  
 **Windows ADK:**  
 
 -   El equipo en el que instale una instancia del proveedor de SMS debe tener la versión adecuada de Windows ADK que requiere la versión de Configuration Manager que va a instalar o actualizar.  
@@ -121,7 +121,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   Para obtener más información sobre este requisito, consulte [Requisitos de infraestructura para la implementación de sistema operativo en System Center Configuration Manager](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
-###  <a name="a-namebkmk2012acwspreqa-application-catalog-website-point"></a><a name="bkmk_2012acwspreq"></a> Punto de sitios web del catálogo de aplicaciones  
+###  <a name="bkmk_2012acwspreq"></a> Punto de sitios web del catálogo de aplicaciones  
 **Roles y características de Windows Server:**  
 
 -   .NET framework 3.5 SP1 (o posterior)  
@@ -156,7 +156,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
     -   Compatibilidad con la metabase de IIS 6  
 
-###  <a name="a-namebkmk2012acwsitepreqa-application-catalog-web-service-point"></a><a name="bkmk_2012ACwsitepreq"></a> Punto de servicio web del catálogo de aplicaciones  
+###  <a name="bkmk_2012ACwsitepreq"></a> Punto de servicio web del catálogo de aplicaciones  
 **Roles y características de Windows Server:**  
 
 -   .NET framework 3.5 SP1 (o posterior)  
@@ -193,12 +193,12 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   Una vez colocado el rol de sistema de sitio junto con otro rol de sistema de sitio que tiene este mismo requisito, este requisito de memoria para el equipo no aumenta, pero se mantiene en un mínimo de 5 %.  
 
-###  <a name="a-namebkmk2012aipreqa-asset-intelligence-synchronization-point"></a><a name="bkmk_2012AIpreq"></a> Punto de sincronización de Asset Intelligence  
+###  <a name="bkmk_2012AIpreq"></a> Punto de sincronización de Asset Intelligence  
 **Roles y características de Windows Server:**  
 
 -   .NET Framework 4.5.2  
 
-###  <a name="a-namebkmk2012crppreqa-certificate-registration-point"></a><a name="bkmk_2012crppreq"></a> Punto de registro de certificados  
+###  <a name="bkmk_2012crppreq"></a> Punto de registro de certificados  
 **Roles y características de Windows Server:**  
 
 -   .NET Framework 4.5.2:  
@@ -219,7 +219,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
     -   Compatibilidad con WMI de IIS 6  
 
-###  <a name="a-namebkmk2012dppreqa-distribution-point"></a><a name="bkmk_2012dppreq"></a> Punto de distribución  
+###  <a name="bkmk_2012dppreq"></a> Punto de distribución  
 **Roles y características de Windows Server:**  
 
 -   Compresión diferencial remota  
@@ -264,12 +264,12 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 > [!NOTE]  
 > El rol de sistema de sitio de punto de distribución no requiere el servicio de transferencia inteligente en segundo plano (BITS). Cuando BITS se configura en el equipo de punto de distribución, no se usa BITS en el equipo de punto de distribución para facilitar la descarga de contenido por parte de los clientes que usan BITS.  
 
-###  <a name="a-namebkmk2012epppreqa-endpoint-protection-point"></a><a name="bkmk_2012EPPpreq"></a> Punto de Endpoint Protection  
+###  <a name="bkmk_2012EPPpreq"></a> Punto de Endpoint Protection  
 **Roles y características de Windows Server:**  
 
 -   .NET framework 3.5 SP1 (o posterior)  
 
-###  <a name="a-namebkmk2012enrollpreqa-enrollment-point"></a><a name="bkmk_2012Enrollpreq"></a> Punto de inscripción  
+###  <a name="bkmk_2012Enrollpreq"></a> Punto de inscripción  
 **Roles y características de Windows Server:**  
 
 -   .NET Framework 3.5 (or later)  
@@ -309,7 +309,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   Una vez colocado el rol de sistema de sitio junto con otro rol de sistema de sitio que tiene este mismo requisito, este requisito de memoria para el equipo no aumenta, pero se mantiene en un mínimo de 5 %.  
 
-###  <a name="a-namebkmk2012enrollproxpreqa-enrollment-proxy-point"></a><a name="bkmk_2012EnrollProxpreq"></a> Punto de proxy de inscripción  
+###  <a name="bkmk_2012EnrollProxpreq"></a> Punto de proxy de inscripción  
 **Roles y características de Windows Server:**  
 
 -   .NET Framework 3.5 (or later)  
@@ -350,14 +350,14 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   Una vez colocado el rol de sistema de sitio junto con otro rol de sistema de sitio que tiene este mismo requisito, este requisito de memoria para el equipo no aumenta, pero se mantiene en un mínimo de 5 %.  
 
-###  <a name="a-namebkmk2012fsppreqa-fallback-status-point"></a><a name="bkmk_2012FSPpreq"></a> Punto de estado de reserva  
+###  <a name="bkmk_2012FSPpreq"></a> Punto de estado de reserva  
 Se requiere la configuración de IIS predeterminada con las siguientes adiciones:  
 
 -   Compatibilidad con la administración de IIS 6:  
 
     -   Compatibilidad con la metabase de IIS 6  
 
-###  <a name="a-namebkmk2012mppreqa-management-point"></a><a name="bkmk_2012MPpreq"></a> Punto de administración  
+###  <a name="bkmk_2012MPpreq"></a> Punto de administración  
 **Roles y características de Windows Server:**  
 
 -   .NET Framework 4.5.2  
@@ -380,7 +380,7 @@ Se requiere la configuración de IIS predeterminada con las siguientes adiciones
 
     -   Compatibilidad con WMI de IIS 6  
 
-###  <a name="a-namebkmk2012rspointa-reporting-services-point"></a><a name="bkmk_2012RSpoint"></a> Punto de servicios de informes  
+###  <a name="bkmk_2012RSpoint"></a> Punto de servicios de informes  
 **Roles y características de Windows Server:**  
 
 -   .NET Framework 4.5.2  
@@ -393,7 +393,7 @@ Se requiere la configuración de IIS predeterminada con las siguientes adiciones
 
 -   Además, la instancia que se usa puede compartirse con otros productos de System Center, siempre y cuando los otros productos de System Center no tengan restricciones para el uso compartido de la instancia de SQL Server.  
 
-###  <a name="a-namebkmkscppreqa-service-connection-point"></a><a name="bkmk_SCPpreq"></a> Punto de conexión de servicio  
+###  <a name="bkmk_SCPpreq"></a> Punto de conexión de servicio  
 **Roles y características de Windows Server:**  
 
 -   .NET Framework 4.5.2  
@@ -406,7 +406,7 @@ Se requiere la configuración de IIS predeterminada con las siguientes adiciones
 
 -   El rol de sistema de sitio requiere la versión x64.  
 
-###  <a name="a-namebkmk2012suppreqa-software-update-point"></a><a name="bkmk_2012SUPpreq"></a> Punto de actualización de software  
+###  <a name="bkmk_2012SUPpreq"></a> Punto de actualización de software  
 **Roles y características de Windows Server:**  
 
 -   .NET framework 3.5 SP1 (o posterior)  
@@ -424,7 +424,7 @@ Requiere la configuración predeterminada de IIS.
 ### <a name="state-migration-point"></a>Punto de migración de estado  
 Requiere la configuración predeterminada de IIS.  
 
-##  <a name="a-namebkmk2008a-prerequisites-for-windows-server-2008-r2-and-windows-server-2008"></a><a name="bkmk_2008"></a> Requisitos previos para Windows Server 2008 R2 y Windows Server 2008  
+##  <a name="bkmk_2008"></a> Requisitos previos para Windows Server 2008 R2 y Windows Server 2008  
 Windows Server 2008 y Windows Server 2008 R2 tienen ahora soporte extendido y ya no están dentro del soporte estándar, tal y como se detalla en el [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle). Para más información sobre la compatibilidad futura de estos sistemas operativos como servidores de sistema de sitio con Configuration Manager, vea [Características eliminadas y en desuso de System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
 **La siguiente información es aplicable a todos los requisitos de .NET Framework:**  
@@ -435,7 +435,7 @@ Windows Server 2008 y Windows Server 2008 R2 tienen ahora soporte extendido y ya
 
 -   Puede configurar la activación de WCF como parte de la característica de Windows .NET Framework en el servidor de sistema de sitio. Por ejemplo, en Windows Server 2008 R2, ejecute el **Asistente para agregar características** para instalar características adicionales en el servidor. En la página **Seleccionar características**, expanda **Características de NET Framework 3.5.1**, expanda **Activación WCF** y después active las casillas **Activación HTTP** y **Activación no HTTP** para habilitar estas opciones.  
 
-###  <a name="a-namebkmk2008sspreqa-site-server-central-administration-site-and-primary-site"></a><a name="bkmk_2008sspreq"></a> Servidor de sitio: sitio de administración central y sitio primario  
+###  <a name="bkmk_2008sspreq"></a> Servidor de sitio: sitio de administración central y sitio primario  
 **.NET Framework:**  
 
 -   .NET framework 3.5 SP1 (o posterior)  
@@ -460,7 +460,7 @@ Windows Server 2008 y Windows Server 2008 R2 tienen ahora soporte extendido y ya
 
 -   Los sitios de administración central y sitios primarios requieren las versiones x86 y x64 del archivo redistribuible aplicable.  
 
-###  <a name="a-namebkmk2008secpreqa-site-server-secondary-site"></a><a name="bkmk_2008secpreq"></a> Servidor de sitio: sitio secundario  
+###  <a name="bkmk_2008secpreq"></a> Servidor de sitio: sitio secundario  
 **.NET Framework:**  
 
 -   .NET framework 3.5 SP1 (o posterior)  
@@ -479,7 +479,7 @@ Windows Server 2008 y Windows Server 2008 R2 tienen ahora soporte extendido y ya
 
 -   Asegúrese de que el servidor de sitio secundario cumple los requisitos previos para estos roles de sistema de sitio.  
 
-###  <a name="a-namebkmk2008dbpreqa-database-server"></a><a name="bkmk_2008dbpreq"></a> Servidor de bases de datos  
+###  <a name="bkmk_2008dbpreq"></a> Servidor de bases de datos  
 **Servicio de Registro remoto:**  
 
 -   Durante la instalación del sitio de Configuration Manager, debe habilitar el servicio de Registro remoto en el equipo que hospedará la base de datos del sitio.  
@@ -492,7 +492,7 @@ Windows Server 2008 y Windows Server 2008 R2 tienen ahora soporte extendido y ya
 
 -   Si decide que Configuration Manager instale SQL Server Express como parte de la instalación del sitio secundario, asegúrese de que el equipo cumple los requisitos para ejecutar SQL Server Express.  
 
-###  <a name="a-namebkmk2008smsprovpreqa-sms-provider-server"></a><a name="bkmk_2008smsprovpreq"></a> Servidor de proveedor de SMS  
+###  <a name="bkmk_2008smsprovpreq"></a> Servidor de proveedor de SMS  
 **Windows ADK:**  
 
 -   El equipo en el que instale una instancia del proveedor de SMS debe tener la versión adecuada de Windows ADK que requiere la versión de Configuration Manager que va a instalar o actualizar.  
@@ -501,7 +501,7 @@ Windows Server 2008 y Windows Server 2008 R2 tienen ahora soporte extendido y ya
 
 -   Para obtener más información sobre este requisito, consulte [Requisitos de infraestructura para la implementación de sistema operativo en System Center Configuration Manager](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
-###  <a name="a-namebkmk2008acwspreqa-application-catalog-website-point"></a><a name="bkmk_2008acwspreq"></a> Punto de sitios web del catálogo de aplicaciones  
+###  <a name="bkmk_2008acwspreq"></a> Punto de sitios web del catálogo de aplicaciones  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -530,7 +530,7 @@ Se requiere la configuración de IIS predeterminada con las siguientes adiciones
 
     -   Compatibilidad con la metabase de IIS 6  
 
-###  <a name="a-namebkmk2008acwsitepreqa-application-catalog-web-service-point"></a><a name="bkmk_2008ACwsitepreq"></a> Punto de servicio web del catálogo de aplicaciones  
+###  <a name="bkmk_2008ACwsitepreq"></a> Punto de servicio web del catálogo de aplicaciones  
 **.NET Framework:**  
 
 -   .NET framework 3.5 SP1 (o posterior)  
@@ -563,12 +563,12 @@ Se requiere la configuración de IIS predeterminada con las siguientes adiciones
 
 -   Una vez colocado el rol de sistema de sitio junto con otro rol de sistema de sitio que tiene este mismo requisito, este requisito de memoria para el equipo no aumenta, pero se mantiene en un mínimo de 5 %.  
 
-###  <a name="a-namebkmk2008aipreqa-asset-intelligence-synchronization-point"></a><a name="bkmk_2008AIpreq"></a> Punto de sincronización de Asset Intelligence  
+###  <a name="bkmk_2008AIpreq"></a> Punto de sincronización de Asset Intelligence  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
 
-###  <a name="a-namebkmk2008crppreqa-certificate-registration-point"></a><a name="bkmk_2008crppreq"></a> Punto de registro de certificados  
+###  <a name="bkmk_2008crppreq"></a> Punto de registro de certificados  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -585,7 +585,7 @@ Se requiere la configuración de IIS predeterminada con las siguientes adiciones
 
     -   Compatibilidad con WMI de IIS 6  
 
-###  <a name="a-namebkmk2008dppreqa-distribution-point"></a><a name="bkmk_2008dppreq"></a> Punto de distribución  
+###  <a name="bkmk_2008dppreq"></a> Punto de distribución  
 **Configuración de IIS:**
 
 Puede usar la configuración predeterminada de IIS o una configuración personalizada. Para usar una configuración personalizada de IIS, debe habilitar las siguientes opciones para IIS:  
@@ -637,12 +637,12 @@ Cuando se usa una configuración personalizada de IIS, puede quitar las opciones
 > El rol de sistema de sitio de punto de distribución no requiere el servicio de transferencia inteligente en segundo plano (BITS). Cuando BITS se configura en el equipo de punto de distribución, no se usa BITS en el equipo de punto de distribución para facilitar la descarga de contenido por parte de los clientes que usan BITS.  
 
 
-###  <a name="a-namebkmk2008epppreqa-endpoint-protection-point"></a><a name="bkmk_2008EPPpreq"></a> Punto de Endpoint Protection  
+###  <a name="bkmk_2008EPPpreq"></a> Punto de Endpoint Protection  
 **.NET Framework:**  
 
 -   .NET framework 3.5 SP1 (o posterior)  
 
-###  <a name="a-namebkmk2008enrollpreqa-enrollment-point"></a><a name="bkmk_2008Enrollpreq"></a> Punto de inscripción  
+###  <a name="bkmk_2008Enrollpreq"></a> Punto de inscripción  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -671,7 +671,7 @@ Se requiere la configuración de IIS predeterminada con las siguientes adiciones
 
 -   Una vez colocado el rol de sistema de sitio junto con otro rol de sistema de sitio que tiene este mismo requisito, este requisito de memoria para el equipo no aumenta, pero se mantiene en un mínimo de 5 %.  
 
-###  <a name="a-namebkmk2008enrollproxpreqa-enrollment-proxy-point"></a><a name="bkmk_2008EnrollProxpreq"></a> Punto de proxy de inscripción  
+###  <a name="bkmk_2008EnrollProxpreq"></a> Punto de proxy de inscripción  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -700,7 +700,7 @@ Se requiere la configuración de IIS predeterminada con las siguientes adiciones
 
 -   Una vez colocado el rol de sistema de sitio junto con otro rol de sistema de sitio que tiene este mismo requisito, este requisito de memoria para el equipo no aumenta, pero se mantiene en un mínimo de 5 %.  
 
-###  <a name="a-namebkmk2008fsppreqa-fallback-status-point"></a><a name="bkmk_2008FSPpreq"></a> Punto de estado de reserva  
+###  <a name="bkmk_2008FSPpreq"></a> Punto de estado de reserva  
 **Configuración de IIS:**
 
 Se requiere la configuración de IIS predeterminada con las siguientes adiciones:  
@@ -709,7 +709,7 @@ Se requiere la configuración de IIS predeterminada con las siguientes adiciones
 
     -   Compatibilidad con la metabase de IIS 6  
 
-###  <a name="a-namebkmk2008mppreqa-management-point"></a><a name="bkmk_2008MPpreq"></a> Punto de administración  
+###  <a name="bkmk_2008MPpreq"></a> Punto de administración  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -750,7 +750,7 @@ Cuando se usa una configuración personalizada de IIS, puede quitar las opciones
 
 -   Las extensiones de servidor BITS (y las opciones seleccionadas automáticamente) o los servicios de transferencia inteligente en segundo plano (BITS) (y las opciones seleccionadas automáticamente)  
 
-###  <a name="a-namebkmk2008rspointa-reporting-services-point"></a><a name="bkmk_2008RSpoint"></a> Punto de servicios de informes  
+###  <a name="bkmk_2008RSpoint"></a> Punto de servicios de informes  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -763,7 +763,7 @@ Cuando se usa una configuración personalizada de IIS, puede quitar las opciones
 
 -   Además, la instancia que se usa puede compartirse con otros productos de System Center, siempre y cuando los otros productos de System Center no tengan restricciones para el uso compartido de la instancia de SQL Server.  
 
-###  <a name="a-namebkmk2008scppreqa-service-connection-point"></a><a name="bkmk_2008SCPpreq"></a> Punto de conexión de servicio  
+###  <a name="bkmk_2008SCPpreq"></a> Punto de conexión de servicio  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -776,7 +776,7 @@ Cuando se usa una configuración personalizada de IIS, puede quitar las opciones
 
 -   El rol de sistema de sitio requiere la versión x64.  
 
-###  <a name="a-namebkmk2008suppreqa-software-update-point"></a><a name="bkmk_2008SUPpreq"></a> Punto de actualización de software  
+###  <a name="bkmk_2008SUPpreq"></a> Punto de actualización de software  
 **.NET Framework:**  
 
 -   .NET framework 3.5 SP1 (o posterior)  
@@ -793,13 +793,7 @@ Requiere la configuración predeterminada de IIS.
 
 -   Para obtener más información, consulte [Planear las actualizaciones de software en System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).
 
-###  <a name="a-namebkmk2008smppreqa-state-migration-point"></a><a name="bkmk_2008SMPpreq"></a> Punto de migración de estado  
+###  <a name="bkmk_2008SMPpreq"></a> Punto de migración de estado  
 **Configuración de IIS:**
 
 Requiere la configuración predeterminada de IIS.  
-
-
-
-<!--HONumber=Jan17_HO3-->
-
-

@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b189a346-8c0d-4870-a876-0719fbb0ab04
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: b247cbb68ed63a8eb99715a248686d68a28c53e2
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="refresh-an-existing-computer-with-a-new-version-of-windows-using-system-center-configuration-manager"></a>Actualizar un equipo existente con una nueva versión de Windows mediante System Center Configuration Manager
 
@@ -29,7 +28,7 @@ En este tema se proporcionan las etapas generales de System Center Configuration
 
  Use las secciones siguientes para actualizar un equipo existente con una nueva versión de Windows.  
 
-##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> Plan  
+##  <a name="BKMK_Plan"></a> Plan  
 
 -   **Planear e implementar los requisitos de infraestructura**  
 
@@ -39,7 +38,7 @@ En este tema se proporcionan las etapas generales de System Center Configuration
 
      Si se dispone a capturar la configuración del equipo existente para restaurarla posteriormente en el nuevo sistema operativo, debe instalar un punto de migración de estado. Para obtener más información, consulte [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints) (Punto de migración de estado).  
 
-##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a> Configurar  
+##  <a name="BKMK_Configure"></a> Configurar  
 
 1.  **Preparar una imagen de arranque**  
 
@@ -66,7 +65,7 @@ En este tema se proporcionan las etapas generales de System Center Configuration
     > [!NOTE]  
     >  En este escenario, la secuencia de tareas da formato y realiza la partición de los discos duros en el equipo. Para capturar la configuración de usuario, debe usar el punto de migración de estado y seleccionar **Guardar archivos y configuración de usuario en un punto de migración de estado** en la página **Migración de estado** del Asistente para crear secuencia de tareas. Si guarda la configuración y los archivos de usuario localmente, se perderán al formatear el disco duro y Configuration Manager no podrá restaurar la configuración. Para obtener más información, consulte [Manage user state](../get-started/manage-user-state.md) (Administrar el estado de usuario).  
 
-##  <a name="a-namebkmkdeploya-deploy"></a><a name="BKMK_Deploy"></a> Implementar  
+##  <a name="BKMK_Deploy"></a> Implementar  
 
 -   Use uno de los siguientes métodos de implementación para implementar el sistema operativo:  
 
@@ -87,9 +86,3 @@ En este tema se proporcionan las etapas generales de System Center Configuration
 -   **Supervisar la implementación de la secuencia de tareas**  
 
      Para supervisar la implementación de la secuencia de tareas para instalar el sistema operativo, consulte [Monitor operating system deployments (Supervisar implementaciones del sistema operativo)](monitor-operating-system-deployments.md).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

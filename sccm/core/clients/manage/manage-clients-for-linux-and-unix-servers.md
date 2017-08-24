@@ -6,22 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 948664f2-239d-47a8-92fc-f8efeebd5796
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
 ms.openlocfilehash: 506df4f7c7baa5f0586a1ddf0cb02b3de9f4d076
-ms.contentlocale: es-es
-ms.lasthandoff: 08/04/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-manage-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>Cómo administrar clientes para servidores Linux y UNIX en System Center Configuration Manager
 
@@ -80,4 +78,3 @@ Cuando se administran los servidores Linux y UNIX con System Center Configuratio
 |importPFX|Use esta opción para especificar un certificado que reemplace el certificado que actualmente usa un cliente.<br /><br /> Cuando use **-importPFX**, también debe usar el parámetro de línea de comandos **–password** para proporcionar la contraseña asociada con el archivo PKCS #12.<br /><br /> Use **-rootcerts** para especificar los requisitos de certificado raíz adicionales.<br /><br /> Ejemplo: **certutil -importPFX &lt;ruta de acceso al certificado PKCS #12> -password &lt;contraseña del certificado\> [-rootcerts&lt;lista separada por comas de certificados>]**|  
 |-importsitecert|Use esta opción para actualizar el servidor de sitio que firma el certificado que se encuentra en el servidor de administración.<br /><br /> Ejemplo: **certutil -importsitecert &lt;ruta de acceso al certificado DER\>**|  
 |-importcrl|Use esta opción para actualizar la CRL en el cliente con una o varias rutas de archivos CRL.<br /><br /> Ejemplo: **certutil -importcrl &lt;rutas de acceso de archivos CRL separados por comas\>**|  
-

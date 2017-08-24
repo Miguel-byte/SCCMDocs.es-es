@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 217c8a0e-5112-420e-a325-2a6d75326290
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 41aa6cf69a746f0ab67d804f1ee0c70db05d65ee
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-a-task-sequence-to-install-an-operating-system-in-system-center-configuration-manager"></a>Crear una secuencia de tareas para instalar un sistema operativo en System Center Configuration Manager
 
@@ -27,7 +26,7 @@ ms.openlocfilehash: 41aa6cf69a746f0ab67d804f1ee0c70db05d65ee
 
 Use secuencias de tareas de System Center Configuration Manager para instalar automáticamente una imagen de sistema operativo en un equipo de destino. Cree una secuencia de tareas que haga referencia a la imagen de arranque que se usa para iniciar el equipo de destino, la imagen de sistema operativo que quiere instalar en el equipo de destino y cualquier otro contenido adicional (por ejemplo, otras aplicaciones o actualizaciones de software) que quiera instalar. A continuación, implemente la secuencia de tareas en la recopilación que contiene el equipo de destino.  
 
-##  <a name="a-namebkmkinstallosa-create-a-task-sequence-to-install-an-operating-system"></a><a name="BKMK_InstallOS"></a> Crear una secuencia de tareas para instalar un sistema operativo  
+##  <a name="BKMK_InstallOS"></a> Crear una secuencia de tareas para instalar un sistema operativo  
  Hay muchos escenarios para implementar un sistema operativo en los equipos de su entorno. En la mayoría de los casos, creará una secuencia de tareas y seleccionará **Instalar un paquete de imágenes existente** en el Asistente para crear secuencias de tareas a fin de instalar el sistema operativo, migrar la configuración de usuario, aplicar las actualizaciones de software e instalar las aplicaciones. Antes de crear una secuencia de tareas para instalar un sistema operativo, debe contar con lo siguiente:   
 
 -   **Requerido**  
@@ -115,7 +114,7 @@ Use secuencias de tareas de System Center Configuration Manager para instalar au
 
  Ahora puede implementar la secuencia de tareas en una recopilación de equipos.  Para obtener más información, vea [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
 
-##  <a name="a-namebkmkinstallexistingosimagetsexamplea-example-task-sequence-to-install-an-existing-operating-system-image"></a><a name="BKMK_InstallExistingOSImageTSExample"></a> Ejemplo de secuencia de tareas para instalar la imagen de sistema operativo existente  
+##  <a name="BKMK_InstallExistingOSImageTSExample"></a> Ejemplo de secuencia de tareas para instalar la imagen de sistema operativo existente  
  Use la tabla siguiente como guía para crear una secuencia de tareas que implemente un sistema operativo mediante una imagen de sistema operativo existente. La tabla le ayudará a decidir la secuencia general de los pasos de la secuencia de tareas y cómo organizar y estructurar los pasos de la secuencia de tareas en grupos lógicos. La secuencia de tareas que cree puede variar desde este ejemplo y puede contener más o menos pasos de secuencia de tareas y grupos.  
 
 > [!IMPORTANT]  
@@ -156,9 +155,3 @@ Use secuencias de tareas de System Center Configuration Manager para instalar au
 |Solicitar almacenamiento de estado de usuario|Utilice este paso de la secuencia de tareas para solicitar acceso a un punto de migración de estado donde se almacenan los datos de estado de usuario.|  
 |Restaurar archivos de usuario y configuración|Utilice este paso de la secuencia de tareas para iniciar la herramienta de migración de estado de usuario (USMT) para restaurar el estado de usuario y la configuración en un equipo de destino.|  
 |Almacenamiento de información de estado de usuario de la versión|Use este paso de secuencia de tareas para notificar al punto de migración de estado que los datos de estado de usuario ya no son necesarios.|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

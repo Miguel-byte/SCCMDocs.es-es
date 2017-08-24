@@ -6,21 +6,19 @@ ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a32f5a3-9917-434f-9811-106170f404be
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d1bf0fdc3e735eb31492476fd46f008620150c0b
 ms.openlocfilehash: 8f951805c2fc25059965c15c94934c0f8546735c
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="upgrade-an-evaluation-installation-of-system-center-configuration-manager-to-a-full-installation"></a>Actualizar una instalación de evaluación de System Center Configuration Manager a una instalación completa
 
@@ -54,4 +52,3 @@ Requisitos previos para actualizar una versión de evaluación a una versión co
 
     > [!NOTE]  
     >  Es posible que en la barra de título de una consola de Configuration Manager que siga conectada al sitio actualizado se indique que el sitio aún es de una versión de evaluación, pero cambiará cuando vuelva a conectar la consola al sitio.  
-

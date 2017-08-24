@@ -1,5 +1,4 @@
 ---
-
 title: "Instalar y configurar un punto de actualización de software | Microsoft Docs"
 description: "Los sitios primarios requieren un punto de actualización de software en el sitio de administración central para la evaluación del cumplimiento de las actualizaciones de software y para implementar las actualizaciones de software en los clientes."
 keywords: 
@@ -10,20 +9,14 @@ ms.date: 05/30/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
 ms.openlocfilehash: 7d369384d133c90a15e01df50ac53992d61f3873
-ms.contentlocale: es-es
-ms.lasthandoff: 06/01/2017
-
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
-
 # <a name="install-and-configure-a-software-update-point"></a>Instalar y configurar un punto de actualización de software  
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -156,4 +149,3 @@ ms.lasthandoff: 06/01/2017
 Ha instalado el punto de actualización de software comenzando por el sitio de nivel superior de la jerarquía de Configuration Manager. Repita los procedimientos de este tema para instalar el punto de actualización de software en los sitios secundarios.
 
 Una vez que tenga los puntos de actualización de software instalados, vaya a [Synchronize software updates (Sincronizar actualizaciones de software)](synchronize-software-updates.md).
-

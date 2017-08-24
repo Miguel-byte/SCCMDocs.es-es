@@ -6,23 +6,20 @@ ms.date: 2/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 72263ec5e7104924a1ca46dc2000be9f8568599f
 ms.openlocfilehash: a776667cc9f24bd4a468afea76e466c34ce66864
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="accounts-used-in-system-center-configuration-manager"></a>Cuentas que se usan en System Center Configuration Manager
 
@@ -346,4 +343,3 @@ Esta cuenta debe ser administrador local en el equipo donde se instala WSUS. Tam
 >  Limite el ámbito de la cuenta. Por ejemplo, cree varias cuentas de ejecución de secuencia de tareas para cada secuencia de tareas de manera que si una cuenta se ve comprometida, solo se exponen los equipos cliente a los que la cuenta tiene acceso.  
 >   
 >  Si la línea de comandos requiere acceso administrativo en el equipo, considere la posibilidad de crear una cuenta de administrador local solo para la cuenta de ejecución de secuencia de tareas en todos los equipos que ejecutarán la secuencia de tareas. Elimine la cuenta cuando ya no la necesite.  
-

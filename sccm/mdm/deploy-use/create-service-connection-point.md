@@ -6,22 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 617abb22-d22f-41fb-a76b-1c4259e419d2
-caps.latest.revision: 18
-caps.handback.revision: 0
+caps.latest.revision: "18"
+caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: 9a21d02cb2a50162e5de50481f0f27f2dd7a616c
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-a-service-connection-point-with-system-center-configuration-manager-and-microsoft-intune"></a>Creación de un punto de conexión de servicio con System Center Configuration Manager y Microsoft Intune
 
@@ -61,4 +59,3 @@ Una vez creada la suscripción, puede instalar el rol de sistema de sitio del pu
 
 > [!div class="button"]
 [< Paso anterior](terms-and-conditions.md)  [Paso siguiente >](enable-platform-enrollment.md)
-

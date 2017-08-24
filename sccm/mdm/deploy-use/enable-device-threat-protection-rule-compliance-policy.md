@@ -6,8 +6,7 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99a5b715-f172-46e1-ac27-ad55bde66d0d
@@ -15,13 +14,11 @@ caps.latest.revision:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: b6e7fe0416870ebb6258f89808affe77997c879d
-ms.contentlocale: es-es
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: faa92e150686e615164ce3f5435b77a65305aab3
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="enable-device-threat-protection-rule-in-the-compliance-policy"></a>Habilitar la regla de protección contra amenazas de dispositivo en la directiva de cumplimiento
 
@@ -55,4 +52,3 @@ Si crea directivas de acceso condicional para Office 365 y otros servicios, se c
 El estado de la protección contra amenazas de dispositivo aparece en el nodo **Seguridad** del área de trabajo **Supervisión**.
 Un gráfico visual muestra un resumen del estado con los diversos niveles de amenazas. Puede hacer clic en las secciones individuales del gráfico para ver más información, como la cantidad de dispositivos que se indican como no conformes por plataforma y los errores que se informan.
 También puede ver el estado individual de los dispositivos en el área de trabajo **Activos y compatibilidad**, en **Dispositivos**.  Puede agregar las columnas **Cumplimiento de amenaza de dispositivo** y **Nivel de amenaza de dispositivo** para ver el estado.  Estas columnas no se muestran de manera predeterminada.
-

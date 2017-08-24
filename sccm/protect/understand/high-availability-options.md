@@ -6,19 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
 ms.openlocfilehash: d3e9afb90cdc85bc7299626b642c52be659e3bdf
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="high-availability-options-for-system-center-configuration-manager"></a>Opciones de alta disponibilidad para System Center Configuration Manager
 
@@ -61,7 +61,7 @@ Opciones que admiten la alta disponibilidad:
 -   [Requisitos previos de sitio y sistema de sitio](../../core/plan-design/configs/site-and-site-system-prerequisites.md)
 
 
-##  <a name="a-namebkmksnha-high-availability-for-sites-and-hierarchies"></a><a name="bkmk_snh"></a> Alta disponibilidad de sitios y jerarquías  
+##  <a name="bkmk_snh"></a> Alta disponibilidad de sitios y jerarquías  
  **Usar un clúster de SQL Server para hospedar la base de datos del sitio:**  
 
  Cuando se utiliza un clúster de SQL Server para la base de datos en un sitio de administración central o un sitio primario, se utiliza la compatibilidad con la conmutación por error integrada en SQL Server.  
@@ -86,7 +86,7 @@ Opciones que admiten la alta disponibilidad:
 
  **Instalar varias instancias del proveedor de SMS en un sitio:** el proveedor de SMS proporciona el punto de contacto administrativo para una o más consolas de Configuration Manager. Al instalar varios proveedores de SMS, puede proporcionar redundancia a los puntos de contacto para administrar el sitio y la jerarquía.  
 
-##  <a name="a-namebkmkssra-high-availability-for-site-system-roles"></a><a name="bkmk_ssr"></a> Alta disponibilidad para los roles de sistema de sitio  
+##  <a name="bkmk_ssr"></a> Alta disponibilidad para los roles de sistema de sitio  
  En cada sitio, se implementan roles de sistema de sitio para proporcionar los servicios que desea que los clientes utilicen en ese sitio. La base de datos del sitio contiene la información de configuración del sitio y de todos los clientes. Utilice una o varias de las opciones disponibles para proporcionar alta disponibilidad de la base de datos del sitio y la recuperación del sitio y de la base de datos de sitio si es necesario.  
 
  **Redundancia de roles de sistema de sitio importantes:**  
@@ -155,7 +155,7 @@ Opciones que admiten la alta disponibilidad:
 
  Para obtener más información sobre esta configuración de cliente y el funcionamiento de la detección automática, consulte la sección [Agente de equipo](../../core/clients/deploy/about-client-settings.md#computer-agent) del tema [About client settings in System Center Configuration Manager (Sobre la configuración de cliente en System Center Configuration Manager)](../../core/clients/deploy/about-client-settings.md).  
 
-##  <a name="a-namebkmkclienta-high-availability-for-clients"></a><a name="bkmk_client"></a> Alta disponibilidad para clientes  
+##  <a name="bkmk_client"></a> Alta disponibilidad para clientes  
  **Las operaciones de cliente son autónomas:**  
 
  La autonomía del cliente de Configuration Manager incluye lo siguiente:  
@@ -200,7 +200,7 @@ Opciones que admiten la alta disponibilidad:
 
 -   Un error en un equipo cliente no afecta a la integridad de la información almacenada en la base de datos. Esta información puede estar disponible en los informes.  
 
-##  <a name="a-namebkmknonhaoptionsa-options-for-sites-and-site-system-roles-that-are-not-highly-available"></a><a name="bkmk_nonHAoptions"></a> Opciones de sitios y roles de sistema de sitio que no tienen una alta disponibilidad  
+##  <a name="bkmk_nonHAoptions"></a> Opciones de sitios y roles de sistema de sitio que no tienen una alta disponibilidad  
  Varios sistemas de sitio no admiten distintas instancias en un sitio o en la jerarquía. Esta información puede ayudarle a prepararse para cuando estos sistemas de sitio se desconecten.  
 
  **Servidor de sitio (sitio):**  
@@ -261,9 +261,3 @@ Opciones que admiten la alta disponibilidad:
 
 ### <a name="see-also"></a>Consulte también  
  [Configuraciones admitidas para System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

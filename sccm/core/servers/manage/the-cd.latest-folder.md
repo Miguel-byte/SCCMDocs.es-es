@@ -6,22 +6,19 @@ ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8db92d67-5d9c-4e9c-80d0-ae6fa0dd4817
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
 ms.openlocfilehash: 5c39e09b44500fa2f356f83579bb2fb2c1d0e937
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="the-cdlatest-folder-for-system-center-configuration-manager"></a>La carpeta CD.Latest para System Center Configuration Manager
 
@@ -64,4 +61,3 @@ Los archivos de origen de la carpeta CD.Latest se admiten para lo siguiente:
 >   
 >  -   Instalación de un sitio nuevo para una jerarquía nueva  
 >  -   Actualización de un sitio de Microsoft System Center 2012 Configuration Manager a System Center Configuration Manager
-

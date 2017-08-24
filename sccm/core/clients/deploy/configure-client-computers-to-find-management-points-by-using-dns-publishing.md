@@ -6,22 +6,19 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 03cec407-0f9f-454f-a360-b005af738d29
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 9eadb91a575323b4c36af14962f370046ea513ce
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: d016ec3fe106b2d90b3c14b4f9296aed4d198644
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-configure-client-computers-to-find-management-points-by-using-dns-publishing-in-system-center-configuration-manager"></a>Configurar los equipos cliente para buscar los puntos de administración mediante el uso de la publicación en DNS en System Center Configuration Manager
 
@@ -59,4 +56,3 @@ Los clientes de System Center Configuration Manager deben encontrar un punto de 
 2.  En la pestaña **Sitio** , especifique el sufijo DNS de un punto de administración y, a continuación, haga clic en **Aceptar**.  
 
      Si el sitio tiene varios puntos de administración en más de un dominio, especifique un solo dominio. Cuando los clientes se conectan a un punto de administración en este dominio, descargarán una lista de puntos de administración disponibles que incluirá los puntos de administración de los otros dominios.
-

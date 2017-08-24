@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ab1aecdd-d943-44f5-b0a9-e8fe7439e5d6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: ba45f36c517114f7a8d2be8d9056e1b2a800dd4f
 ms.openlocfilehash: ffd66a4047ec253704e9772e2c3e3a4d9db7c46f
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-mac-computer-applications-with-system-center-configuration-manager"></a>Crear aplicaciones para equipos Mac con System Center Configuration Manager
 
@@ -147,7 +146,7 @@ Use el procedimiento siguiente para ayudarle a crear una aplicación para equipo
 3.  Seleccione una aplicación. Después, en la pestaña **Inicio**, en el grupo **Aplicación**, pulse **Crear tipo de implementación** para crear un nuevo tipo de implementación para esta aplicación.  
 
     > [!NOTE]  
-    >  También puede iniciar el **Asistente para crear tipos de implementación** desde el **Asistente para crear aplicaciones** y desde la pestaña **Tipos de implementación** del cuadro de diálogo *Propiedades\> de *<nombre de la aplicación****.  
+    >  También puede iniciar el **Asistente para crear tipos de implementación** desde el **Asistente para crear aplicaciones** y desde la pestaña **Tipos de implementación** del cuadro de diálogo *Propiedades\> de* <nombre de la aplicación****.  
 
 4.  En la página **General** del **Asistente para crear tipos de implementación**, en la lista desplegable **Tipo**, seleccione **Mac OS X**.  
 
@@ -214,9 +213,3 @@ Use el procedimiento siguiente para ayudarle a crear una aplicación para equipo
  Puede usar el mismo proceso para supervisar las implementaciones de aplicaciones en equipos Mac como haría para supervisar las implementaciones de aplicaciones en equipos Windows.  
 
  Para obtener más información, consulte [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console) (Supervisar aplicaciones).  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

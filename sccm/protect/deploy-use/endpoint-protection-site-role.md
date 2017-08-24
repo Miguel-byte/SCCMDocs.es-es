@@ -8,22 +8,19 @@ ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0a9dc0fe-a942-40a2-bab1-7eeee4d95380
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
-ms.openlocfilehash: 884b5f2ec3f1aa273128dfeaaf88d969c9d8669d
-ms.contentlocale: es-es
-ms.lasthandoff: 02/15/2017
-
-
+ms.openlocfilehash: 6e717bcbe5ef8c3f2efa717d0cebb9e675e7c127
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-an-endpoint-protection-point-site-system-role"></a>Crear un rol de sistema de sitio de punto de Endpoint Protection
 
@@ -86,4 +83,3 @@ ms.lasthandoff: 02/15/2017
     >  Esta opción configura las opciones de Cloud Protection Service (antes conocido como MAPS) que se usan de forma predeterminada. Puede configurar opciones personalizadas para cada directiva antimalware que configure. Para obtener más información, consulte [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md) (Crear e implementar directivas antimalware para Endpoint Protection en System Center Configuration Manager).
 
 8.  Complete el asistente.
-

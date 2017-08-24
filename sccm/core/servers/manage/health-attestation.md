@@ -6,22 +6,19 @@ ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
 ms.openlocfilehash: 54b3433a002b8ef29059bab04458138348f95d66
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="health-attestation-for-system-center-configuration-manager"></a>Atestación de estado para System Center Configuration Manager
 
@@ -83,4 +80,3 @@ La atestación de estado de dispositivos de Configuration Manager muestra lo sig
 -   **Principales opciones de configuración ausentes de la atestación de estado** : muestra el número de dispositivos que carecen de opciones de configuración de atestación de estado, que se indican por cada opción.
 
 El estado de la atestación de estado de dispositivos cliente puede usarse para definir reglas de acceso condicional de las directivas de cumplimiento para dispositivos administrados por Configuration Manager con Microsoft Intune. Para más información, consulte [Administrar directivas de cumplimiento de dispositivo en System Center Configuration Manager](/sccm/protect/deploy-use/device-compliance-policies).  
-

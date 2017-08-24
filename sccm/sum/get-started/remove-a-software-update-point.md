@@ -1,5 +1,4 @@
 ---
-
 title: "Quitar un punto de actualización de software | Microsoft Docs"
 description: "Siga este procedimiento para quitar el rol de sistema de sitio del punto de actualización de software en un sitio desde la consola de Configuration Manager."
 keywords: 
@@ -10,16 +9,15 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 2486375c-d4a2-4cf2-9124-9bee02bbf173
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: 22de02c51be3a0cd66b1be0f04b2fbdeb897858c
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-#  <a name="a-namebkmkremovesupa-remove-the-software-update-point-site-system-role"></a><a name="BKMK_RemoveSUP"></a> Quitar el rol de sistema de sitio de punto de actualización de software  
+#  <a name="BKMK_RemoveSUP"></a> Quitar el rol de sistema de sitio de punto de actualización de software  
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
@@ -39,9 +37,3 @@ Puede quitar el rol de sistema de sitio del punto de actualización de software 
 3.  Seleccione el servidor de sistema de sitio que tiene el punto de actualización de software que desea quitar y, a continuación, en **Roles del sistema de sitio**, seleccione **Punto de actualización de software**.  
 
 4.  En la pestaña **Rol del sitio** , en el grupo **Rol del sitio** , haga clic en **Rol remoto**. Confirme que quiere quitar el punto de actualización de software o seleccione un nuevo origen de sincronización para los demás puntos de actualización de software en el sitio.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

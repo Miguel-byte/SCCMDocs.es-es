@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
-caps.latest.revision: 11
-caps.handback.revision: 0
+caps.latest.revision: "11"
+caps.handback.revision: "0"
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
-ms.openlocfilehash: 36e5307449bd843156307598ccdde717b4b59be3
-
-
+ms.openlocfilehash: 11f5d0c3c61d675a8182e985f82e6af363b34592
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>Configurar el laboratorio de System Center Configuration Manager
 
@@ -28,7 +27,7 @@ ms.openlocfilehash: 36e5307449bd843156307598ccdde717b4b59be3
 
 Las instrucciones de este tema le permitirán configurar un laboratorio para evaluar Configuration Manager con actividades simuladas de la vida real.  
 
-##  <a name="a-namebkmklabcorea-core-components"></a><a name="BKMK_LabCore"></a> Componentes principales  
+##  <a name="BKMK_LabCore"></a> Componentes principales  
  Para configurar el entorno para System Center Configuration Manager, necesita que algunos componentes principales admitan la instalación de Configuration Manager.    
 
 -   **El entorno de laboratorio usa Windows Server 2012 R2**, donde se instalará System Center Configuration Manager.  
@@ -81,7 +80,7 @@ Aunque no es necesario para este laboratorio, puede consultar [Configuraciones a
 
 Después de instalar todos estos componentes, existen pasos adicionales que debe realizar para configurar el entorno de Windows para Configuration Manager:  
 
-###  <a name="a-namebkmklabadprepa-prepare-active-directory-content-for-the-lab"></a><a name="BKMK_LabADPrep"></a> Preparar el contenido de Active Directory para el laboratorio  
+###  <a name="BKMK_LabADPrep"></a> Preparar el contenido de Active Directory para el laboratorio  
  Para este laboratorio, creará un grupo de seguridad y después le agregará un usuario de dominio.  
 
 -   Grupo de seguridad: **Evaluation**  
@@ -96,7 +95,7 @@ Después de instalar todos estos componentes, existen pasos adicionales que debe
 
 Los pasos siguientes necesarios para habilitar que los clientes de Configuration Manager consulten Active Directory Domain Services para localizar recursos del sitio se detallan en los procedimientos siguientes.  
 
-###  <a name="a-namebkmkcreatesysmgmtlaba-create-the-system-management-container"></a><a name="BKMK_CreateSysMgmtLab"></a> Crear el contenedor System Management  
+###  <a name="BKMK_CreateSysMgmtLab"></a> Crear el contenedor System Management  
  Configuration Manager no creará de forma automática el contenedor System Management necesario en Active Directory Domain Services cuando se extiende el esquema. Por lo tanto, lo creará para el laboratorio. Para este paso será necesario que [instale el Editor ADSI](https://technet.microsoft.com/en-us/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)  
 
  Asegúrese de que ha iniciado sesión con una cuenta que tenga el permiso **Crear todos los objetos secundarios** en el contenedor **System** de los Servicios de dominio de Active Directory.  
@@ -113,7 +112,7 @@ Los pasos siguientes necesarios para habilitar que los clientes de Configuration
 
 5.  Haga clic en **Finalizar** para completar el procedimiento.  
 
-###  <a name="a-namebkmksetsecpermlaba-set-security-permissions-for-the-system-management-container"></a><a name="BKMK_SetSecPermLab"></a> Establecer permisos de seguridad para el contenedor System Management  
+###  <a name="BKMK_SetSecPermLab"></a> Establecer permisos de seguridad para el contenedor System Management  
  Conceda a la cuenta de equipo del servidor de sitio los permisos necesarios para publicar información del sitio en el contenedor. También utilizará el Editor ADSI para esta tarea.  
 
 > [!IMPORTANT]  
@@ -133,7 +132,7 @@ Los pasos siguientes necesarios para habilitar que los clientes de Configuration
 
      Para obtener información adicional sobre este procedimiento, consulte [Extender el esquema de Active Directory para System Center Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md)  
 
-###  <a name="a-namebkmkextadschlaba-extend-the-active-directory-schema-using-extadschexe"></a><a name="BKMK_ExtADSchLab"></a> Extender el esquema de Active Directory mediante extadsch.exe  
+###  <a name="BKMK_ExtADSchLab"></a> Extender el esquema de Active Directory mediante extadsch.exe  
  Extenderá el esquema de Active Directory para este laboratorio, ya que esto le permite usar todas las características y funcionalidades de Configuration Manager con la menor cantidad de trabajo administrativo. La extensión del esquema de Active Directory es una configuración que abarca todo el bosque y solo puede realizarse una vez por bosque. La extensión del esquema modifica de forma permanente el conjunto de clases y atributos de la configuración base de Active Directory. Esta acción es irreversible. La extensión del esquema permite que Configuration Manager obtenga acceso a componentes que permitirán que funcione de la forma más eficaz en el entorno del laboratorio.  
 
 > [!IMPORTANT]  
@@ -151,7 +150,7 @@ Los pasos siguientes necesarios para habilitar que los clientes de Configuration
 
      Para obtener información adicional sobre este procedimiento, consulte [Extender el esquema de Active Directory para System Center Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md).  
 
-###  <a name="a-namebkmkothertaskslaba-other-required-tasks"></a><a name="BKMK_OtherTasksLab"></a> Otras tareas necesarias  
+###  <a name="BKMK_OtherTasksLab"></a> Otras tareas necesarias  
  También debe completar las tareas siguientes antes de la instalación.  
 
  **Crear una carpeta para almacenar todas las descargas**  
@@ -344,7 +343,7 @@ De forma predeterminada, IIS bloquea el acceso a varios tipos de ubicaciones y e
 
 4.  Escriba **.msi** en el cuadro de diálogo y haga clic en **Aceptar**.  
 
-###  <a name="a-namebkmkinstallcmlaba-installing-configuration-manager"></a><a name="BKMK_InstallCMLab"></a> Instalación de Configuration Manager  
+###  <a name="BKMK_InstallCMLab"></a> Instalación de Configuration Manager  
 Creará un [Determinar cuándo utilizar un sitio primario](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChoosePriimary) para administrar directamente los clientes. Esto permitirá que el entorno de laboratorio admita la administración de [Escala de sistema de sitio](/sccm/core/plan-design/configs/size-and-scale-numbers) de posibles dispositivos.  
 Durante este proceso, también se instalará la consola de Configuration Manager, que se usará para administrar los dispositivos de evaluación a partir de ahora.  
 
@@ -370,7 +369,7 @@ Antes de comenzar la instalación, inicie el [Comprobador de requisitos previos]
     |Paso 15: **Configuración de comunicación de cliente**|Confirme que la opción **Los roles de sistema de sitio aceptan solo comunicación HTTPS de los clientes** no está seleccionada|  
     |Paso 16: **Roles de sistema de sitio**|Escriba su FQDN y confirme que la selección de **Los roles de sistema de sitio aceptan solo comunicación HTTPS de los clientes** sigue desactivada.|  
 
-###  <a name="a-namebkmkenablepublaba-enable-publishing-for-the-configuration-manager-site"></a><a name="BKMK_EnablePubLab"></a> Habilitar la publicación para el sitio de Configuration Manager  
+###  <a name="BKMK_EnablePubLab"></a> Habilitar la publicación para el sitio de Configuration Manager  
 Cada sitio de Configuration Manager publica su propia información específica del sitio en el contenedor System Management dentro de su partición de dominio en el esquema de Active Directory. Los canales bidireccionales para la comunicación entre Active Directory y Configuration Manager deben estar abiertos para controlar este tráfico. También habilitará la detección de bosques para determinar varios componentes de la infraestructura de red y de Active Directory.  
 
 ##### <a name="to-configure-active-directory-forests-for-publishing"></a>Para configurar los bosques de Active Directory para la publicación:  
@@ -398,9 +397,3 @@ Cada sitio de Configuration Manager publica su propia información específica d
 3.  En el área de trabajo **Administración** , haga clic en **Bosques de Active Directory**.  
 
 4.  En la pestaña **Publicación** de las propiedades del sitio, seleccione el bosque conectado y después haga clic en **Aceptar** para guardar la configuración.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

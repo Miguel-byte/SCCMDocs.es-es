@@ -6,24 +6,21 @@ ms.date: 4/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3cf0c2cd-397a-4622-b11c-961f334fb7d7
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
 ms.openlocfilehash: 2925abda07abaa46ad56b9b433ce003c22aede5e
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="manage-applicability-rules-in-updates-publisher"></a>Administrar reglas de aplicabilidad para Updates Publisher
 
 *Se aplica a: System Center Updates Publisher*
@@ -94,4 +91,3 @@ Para obtener información más detallada sobre cómo usar el asistente para regl
 Para eliminar una regla de aplicabilidad, seleccione la regla o el conjunto de reglas en la lista **My saved rules** (Mis reglas guardadas) del **área de trabajo Reglas** y elija **Eliminar** en la cinta de opciones. De este modo se quita la regla o el conjunto de reglas guardados de Updates Publisher.
 
 Para eliminar una regla de una actualización concreta, debe [editar la actualización](/sccm/sum/tools/manage-updates-with-updates-publisher#edit-updates-and-bundles).
-

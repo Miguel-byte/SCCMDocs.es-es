@@ -6,22 +6,19 @@ ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2a62ef64bf4e08d7027d10827d35d648bdbbeefe
-ms.openlocfilehash: 21fe718835bbbaa6382e0f0a87784e01e4c35283
-ms.contentlocale: es-es
-ms.lasthandoff: 02/14/2017
-
-
+ms.openlocfilehash: b15f85b4483bbae2444d4e73d2e2aa0b3979d9ab
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-system-center-configuration-manager-windows-server-2008-certification-authority"></a>Ejemplo paso a paso de la implementación de los certificados PKI para System Center Configuration Manager: entidad de certificación de Windows Server 2008
 
@@ -778,4 +775,3 @@ Esta implementación de certificado consta de un único procedimiento para crear
 13. Si no tiene que crear y emitir más certificados, cierre la **Entidad de certificación**.  
 
  La plantilla de certificado de cliente Mac ya está lista para seleccionarse al configurar las opciones del cliente para la inscripción.
-

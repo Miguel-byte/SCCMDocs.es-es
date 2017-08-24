@@ -6,22 +6,19 @@ ms.date: 11/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Robstack
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8679df3f8a3b692391537bacd6144a4f2fae357b
 ms.openlocfilehash: d527cb4bfb55ca50c8d2a0fed7c427af5747fe99
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="protect-data-and-site-infrastructure-with-system-center-configuration-manager"></a>Proteger la infraestructura de datos y del sitio con System Center Configuration Manager
 
@@ -43,4 +40,3 @@ Seguramente quiere que los usuarios puedan obtener acceso seguro a los recursos 
 -   Los perfiles de correo electrónico proporcionan un conjunto de herramientas y recursos para ayudar a crear, implementar y supervisar la configuración del correo electrónico en los dispositivos. Esto permite a los usuarios tener acceso al correo electrónico corporativo en sus dispositivos personales sin que tengan que configurar nada. Obtenga más información en [Email profiles in System Center Configuration Manager](../deploy-use/introduction-to-email-profiles.md) (Perfiles de correo electrónico en System Center Configuration Manager).  
 
 -   Configuration Manager permite la integración con Windows Hello para empresas (anteriormente denominado Microsoft Passport for Work), que es un método alternativo de inicio de sesión que usa Active Directory o una cuenta de Azure Active Directory para reemplazar una contraseña, una tarjeta inteligente o una tarjeta inteligente virtual. Obtenga más información en [Windows Hello for Business settings in System Center Configuration Manager](../deploy-use/windows-hello-for-business-settings.md)(Configuración de Windows Hello para empresas en System Center Configuration Manager).  
-

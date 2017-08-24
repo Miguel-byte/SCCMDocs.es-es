@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 113984fa-6150-41a1-89ed-d2a83b979732
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: 33d4a2d5a09af74e1d76ac9b34a42b749f5bf7ef
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-create-child-configuration-items-in-system-center-configuration-manager"></a>Cómo crear elementos de configuración secundarios en System Center Configuration Manager
 
@@ -43,9 +42,3 @@ El propósito habitual cuando se crea y edita un elemento de configuración secu
 4.  En la página **General** del **Asistente para crear elemento de configuración secundario**, puede elegir una revisión concreta del elemento de configuración primario que se usará para crear el elemento secundario. El resto de pasos de este asistente son idénticos a los que seguiría para crear un elemento de configuración estándar. Para obtener más información, consulte [How to create custom configuration items for Windows desktop and server computers](../../compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md) (Cómo crear elementos de configuración personalizados para equipos de escritorio y servidores).  
 
 5.  Complete el asistente. El nuevo elemento de configuración secundario se muestra en la lista **Elementos de configuración** .  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

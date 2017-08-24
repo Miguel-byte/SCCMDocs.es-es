@@ -6,23 +6,20 @@ ms.date: 07/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
 ms.openlocfilehash: 7b1c0e449f3d1ef42e279e8707df6bf1df163b3f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>Introducción a los perfiles de certificado en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*

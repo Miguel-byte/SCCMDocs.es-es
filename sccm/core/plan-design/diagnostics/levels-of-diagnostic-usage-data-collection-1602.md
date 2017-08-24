@@ -6,12 +6,11 @@ ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1210a1ca-78c7-4d17-81cf-ac1bc5c5cf3e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
@@ -34,12 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ebbc2b250d651aa8befd7f2458d67bf0f4a8ff10
-ms.openlocfilehash: e54ed320ce95876d29e6dd889dcba2f1f964164c
-ms.contentlocale: es-es
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 3e50327678d29fa2c1fed4ac0fd63738e65776cb
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1602-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de uso para diagnóstico para la versión 1602 de System Center Configuration Manager
 
@@ -65,13 +63,13 @@ Los cambios respecto de versiones anteriores se indican mediante la nota ***[Nue
 
 
  -   Información sobre la instalación:
-     - Compilación, tipo de instalación, paquetes de idioma, características que ha habilitado  
+    - Compilación, tipo de instalación, paquetes de idioma, características que ha habilitado  
 
-     - ***[Actualizado]*** Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos     
+    - ***[Actualizado]*** Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos     
 
-     - ***[Nuevo]*** Versión del script posterior a la actualización
+    - ***[Nuevo]*** Versión del script posterior a la actualización
 
-     - ***[Nuevo]*** Uso del anillo rápido de actualización
+    - ***[Nuevo]*** Uso del anillo rápido de actualización
 
 -   Métricas de rendimiento de la base de datos (información del procesamiento de replicación, los principales procedimientos almacenados de SQL Server mediante el uso de procesador y disco)
 
@@ -316,4 +314,3 @@ A partir de System Center Configuration Manager versión 1602, este nivel incluy
 -   ***[Nuevo]*** Configuración de cumplimiento: SCEP, VPN, Wi-Fi y detalles de configuración de plantilla de directiva de cumplimiento
 
 -   ***[Nuevo]*** Tipo de directivas de acceso condicional de EAS (bloquear o cuarentena) para dispositivos administrados por Intune
-

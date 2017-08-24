@@ -6,8 +6,7 @@ ms.date: 6/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
@@ -15,14 +14,12 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f7cd9c71287d62c9f5d36e2f032bc2a6065572ae
 ms.openlocfilehash: 49eea15ea2888f8f93c33eb771c09147ba21529e
-ms.contentlocale: es-es
-ms.lasthandoff: 06/06/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 #  <a name="recover-a-configuration-manager-site"></a>Recuperar un sitio de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -244,4 +241,3 @@ Durante el proceso de recuperación, Configuration Manager verifica la existenci
 Si tiene un punto de distribución que no está en el sitio secundario, no es preciso que vuelva a instalar el punto de distribución durante la recuperación del sitio secundario. Después de la recuperación de sitio secundario, el sitio se sincroniza automáticamente con el punto de distribución.
 
 Puede comprobar el estado de la recuperación del sitio secundario mediante la acción **Mostrar estado de instalación** del nodo **Sitios** de la consola de Configuration Manager.
-

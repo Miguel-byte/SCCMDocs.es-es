@@ -4,24 +4,22 @@ description: "Conozca las características disponibles en Technical Preview para
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aae1cf2f-2c04-4f68-a03a-f4a925433c09
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: 4da12425382c5d64602b2728e0e661c8cb89a5e4
-ms.contentlocale: es-es
-ms.lasthandoff: 01/24/2017
-
+ms.openlocfilehash: ef0db5b11ae2be5edcb4db87400c5c273c89972e
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1601 para System Center Configuration Manager
 
@@ -220,4 +218,3 @@ Un cliente está en línea si en ese momento está conectado a un rol de sistema
  Para ver las nuevas opciones, elija **Pantalla completa: Samsung KNOX** en la página **Configuración del dispositivo** del elemento de configuración del asistente **Crear elemento de configuración**.  
 
  Para más información, vea [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client (Cómo crear elementos de configuración para dispositivos de Windows 8.1 y Windows 10 administrados sin el cliente de System Center Configuration Manager)](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
-

@@ -6,22 +6,20 @@ ms.date: 05/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c3b9316-247b-490b-a363-8f8553821579
-caps.latest.revision: 18
-caps.handback.revision: 0
+caps.latest.revision: "18"
+caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f4cb711f369698fe8e045f8c83dd96ec6fb29d70
 ms.openlocfilehash: ce706e938f558406044f7890c80bb7156c3b262b
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>Administrar aplicaciones de iOS compradas por volumen con System Center Configuration Manager
 
@@ -124,4 +122,3 @@ La aplicación de Configuration Manager que se crea contiene la aplicación de l
  En este informe se muestra el nombre de cada aplicación junto con el número total de licencias que ha comprado y el número de licencias disponibles, entre otros datos.  
 
  Para obtener ayuda con la ejecución de los informes de Configuration Manager, consulte [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md) (Generación de informes en System Center Configuration Manager).  
-

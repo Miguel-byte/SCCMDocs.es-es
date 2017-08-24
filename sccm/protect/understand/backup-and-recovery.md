@@ -6,23 +6,20 @@ ms.date: 6/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f7cd9c71287d62c9f5d36e2f032bc2a6065572ae
 ms.openlocfilehash: 7deb00d4b67eabf3238907b337a9d0367c3d99cc
-ms.contentlocale: es-es
-ms.lasthandoff: 06/06/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="back-up-a-configuration-manager-site"></a>Hacer una copia de seguridad de un sitio de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -208,4 +205,3 @@ El servicio VSS es un conjunto de API de COM que implementan un marco para permi
 
 ## <a name="next-steps"></a>Pasos siguientes
 Después de crear una copia de seguridad, practique la [recuperación del sitio](/sccm/protect/understand/recover-sites) con esa copia de seguridad. Esto puede ayudarle a familiarizarse con el proceso de recuperación antes de que deba utilizarlo y confirmar que la copia de seguridad se completó correctamente para su finalidad prevista.  
-

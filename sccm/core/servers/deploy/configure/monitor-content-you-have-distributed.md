@@ -6,21 +6,19 @@ ms.date: 4/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 82e8a693-9adf-4ca3-8484-7e101c34c7c1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dda2f4c01078fbbd174cbcb30357554c24f6abeb
 ms.openlocfilehash: 7659d5789b8ce4e9e0b585a331c8f68869c9492d
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>Supervisión del contenido que se ha distribuido con System Center Configuration Manager
 
@@ -170,4 +168,3 @@ Entre los detalles se incluye lo siguiente:
 
 
 También puede usar un nuevo informe, **Orígenes de datos de cliente - Resumen**, para ver un resumen de los orígenes de datos de cliente de cada grupo de límites.
-

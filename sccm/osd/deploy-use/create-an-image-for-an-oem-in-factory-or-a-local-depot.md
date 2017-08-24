@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a7d3df90-062d-4d57-9e9d-e137d3e7cd7f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 07aba04fb1b845e389a5f75b115d536136c1569c
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-an-image-for-an-oem-in-factory-or-a-local-depot-with-system-center-configuration-manager"></a>Crear una imagen para un OEM en fábrica o en un almacén local con System Center Configuration Manager
 
@@ -55,9 +54,3 @@ Este método de implementación puede reducir el tráfico de red porque la image
 
 ## <a name="start-the-computer-to-install-the-operating-system"></a>Iniciar el equipo para instalar el sistema operativo  
  El archivo de medios preconfigurados se aplica a los equipos. Cuando el equipo se inicia por primera vez, se inicia el proceso de instalación del sistema operativo.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

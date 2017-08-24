@@ -6,23 +6,20 @@ ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
-caps.latest.revision: 28
-caps.handback.revision: 0
+caps.latest.revision: "28"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
 ms.openlocfilehash: f73dde64e0e8a0fc49f45b3afb3b8f00c926a820
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="fundamental-concepts-for-content-management-in-system-center-configuration-manager"></a>Conceptos básicos de la administración de contenido en System Center Configuration Manager
 
@@ -256,4 +253,3 @@ Para obtener más información:
  La preconfiguración de contenido es un proceso de transferencia de contenido a un punto de distribución sin depender de Configuration Manager para distribuir el contenido a través de la red.  
 
  Para obtener más información, consulte [Administración del ancho de banda de red](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
-

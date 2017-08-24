@@ -6,22 +6,19 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3b1451edaed69a972551bd060293839aa11ec8b2
 ms.openlocfilehash: 20be68496099a67ad2d475067f073da2cef16c86
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="add-terms-and-conditions-with-system-center-configuration-manager"></a>Incorporación de términos y condiciones con System Center Configuration Manager
 
@@ -124,4 +121,3 @@ Puede implementar los términos y condiciones de System Center Configuration Man
 
 > [!div class="button"]
 [< Paso anterior](configure-intune-subscription.md)  [Paso siguiente >](create-service-connection-point.md)
-

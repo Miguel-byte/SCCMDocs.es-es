@@ -6,22 +6,20 @@ ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
-caps.latest.revision: 26
-caps.handback.revision: 0
+caps.latest.revision: "26"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: b7461f89f483314bd07248bbc9d5dde85ca6b6c2
 ms.openlocfilehash: e0726febc4c36a26c5e067914734838bf2681e6c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Pasos de la secuencia de tareas en System Center Configuration Manager
 
@@ -1707,4 +1705,3 @@ En el editor de la secuencia de tareas, use el paso [Configurar variable de secu
  Especifica si el programa de instalación llevará a cabo las operaciones de actualización dinámica, como buscar, descargar e instalar actualizaciones (corresponde a la opción de línea de comandos /DynamicUpdate). Esta configuración no es compatible con las actualizaciones de software de Configuration Manager, pero se puede habilitar al controlar las actualizaciones con WSUS (independiente) o Windows Update.  
 
  **Invalidar directiva y usar Microsoft Update predeterminado**: seleccione esta opción para invalidar temporalmente la directiva local en tiempo real para ejecutar operaciones de actualización dinámica y que el equipo obtenga actualizaciones de Windows Update.  
-

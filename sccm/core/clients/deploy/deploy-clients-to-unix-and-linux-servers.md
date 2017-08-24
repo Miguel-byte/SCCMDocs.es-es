@@ -6,22 +6,19 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: b63367dbaacde60a364e9da6afca65383b635840
-ms.contentlocale: es-es
-ms.lasthandoff: 03/27/2017
-
-
+ms.openlocfilehash: d61d53daa5ef3d9c986cba8791d4471fea94d29d
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-system-center-configuration-manager"></a>Implementar clientes en servidores UNIX y Linux con System Center Configuration Manager
 
@@ -240,4 +237,3 @@ Cada paquete de instalación de cliente contiene todos los archivos necesarios p
  El cliente de Configuration Manager para Linux y UNIX se pone en contacto con este punto de administración en el momento de la instalación del cliente. Si el cliente no puede ponerse en contacto con el punto de administración, el software cliente continúa intentándolo hasta que lo logra.  
 
  Para obtener más información sobre cómo los clientes buscan puntos de administración, consulte [Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points) (Búsqueda de puntos de administración).
-

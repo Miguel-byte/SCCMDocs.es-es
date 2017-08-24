@@ -6,22 +6,19 @@ ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
 ms.openlocfilehash: 2f3d66362c49d28a52d7f9c535eb0b3b4cc4eaf7
-ms.contentlocale: es-es
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>Administrar secuencias de tareas para automatizar tareas en System Center Configuration Manager
 
@@ -472,4 +469,3 @@ Puede administrar las variables por equipo en un sitio primario o en un sitio de
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Escenarios para implementar sistemas operativos de empresa](scenarios-to-deploy-enterprise-operating-systems.md)
-

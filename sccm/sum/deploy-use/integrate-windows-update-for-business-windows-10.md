@@ -9,15 +9,13 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: 26e73a69d5e6ca69e766fcf3cedd992353c92cd6
-ms.contentlocale: es-es
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="integration-with-windows-update-for-business-in-windows-10"></a>Integración con Windows Update for Business en Windows 10
 
@@ -103,4 +101,3 @@ Los dispositivos con Windows 10 administrados por Windows Update para empresas d
     - **Retraso aleatorio (horas)**: especifique una ventana de retraso lo suficientemente grande para evitar un procesamiento excesivo en el Servicio de inscripción de dispositivos de red. El valor predeterminado es 64 horas.
     - **Programación**: especifique la programación de evaluación de cumplimiento según la cual se evalúa el perfil implementado en los equipos cliente. La programación puede ser simple o personalizada. Los equipos cliente evalúan el perfil cuando el usuario inicia sesión.
 4.  Complete el asistente para implementar el perfil.
-

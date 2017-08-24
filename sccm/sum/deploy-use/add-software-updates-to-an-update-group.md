@@ -9,17 +9,14 @@ ms.date: 01/23/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4e44e2b8f6baf020c3b7742bafd607082ffacaa4
 ms.openlocfilehash: 02e30ba48f3564fa8a31f21793c145054e02e002
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="add-software-updates-to-an-update-group"></a>Agregar actualizaciones de software a un grupo de actualizaciones  
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -60,4 +57,3 @@ ms.lasthandoff: 05/17/2017
 6.  Haga clic en el nodo **Grupos de actualizaciones de software** para mostrar el grupo de actualizaciones de software.  
 
 7.  Seleccione el grupo de actualizaciones de software y, en la pestaña **Inicio** , en el grupo **Actualizar** , haga clic en **Mostrar miembros** para mostrar una lista de las actualizaciones de software incluidas en el grupo de actualizaciones de software.  
-

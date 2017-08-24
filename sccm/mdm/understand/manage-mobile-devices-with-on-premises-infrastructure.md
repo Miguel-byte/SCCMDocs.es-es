@@ -6,22 +6,19 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 497c05c7-fe9f-4b88-983b-1c5b3d59308e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: cbd33bf3cf7d623d9ba7a657d4ca7d746d7e79da
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 7b96c4d4d87aa150eacc5d7d20710f5d2199e48a
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="on-premises-mobile-device-management-mdm-in-system-center-configuration-manager"></a>Administración de dispositivos móviles local en System Center Configuration Manager
 
@@ -52,4 +49,3 @@ La administración de dispositivos móviles local de System Center Configuration
 -   [Inscripción de dispositivos para la administración de dispositivos móviles (MDM) local en System Center Configuration Manager](../deploy-use/enroll-devices-on-premises-mdm.md)  
 
      Descubra cómo inscribir dispositivos, cómo los usuarios pueden inscribir sus dispositivos y cómo se realiza la inscripción masiva con un paquete de inscripción.  
-

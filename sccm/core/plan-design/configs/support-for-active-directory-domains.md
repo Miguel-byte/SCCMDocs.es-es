@@ -6,23 +6,20 @@ ms.date: 3/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8c5a13f8-42d5-4898-b7b6-e594dae8b335
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f397efe458fd85124d2a83d4a869642015fd4a5
 ms.openlocfilehash: 2654ab4eaaaf6a4bf3bd7dca9908e7033647dc2c
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="supported-active-directory-domains-for-system-center-configuration-manager"></a>Compatibilidad con los dominios de Active Directory para System Center Configuration Manager
 
@@ -88,4 +85,3 @@ En la tabla siguiente se identifican los escenarios admitidos para un espacio de
      **Por ejemplo:** el dominio de una sola etiqueta de Contoso está configurado para tener un espacio de nombres no contiguo en el DNS de contoso.com. Por tanto, al especificar el sufijo DNS en Configuration Manager para un equipo en el dominio Contoso, especifique "Contoso.com" y no "Contoso".  
 
 -   Las conexiones de Modelo de objetos componentes distribuido (DCOM) entre los servidores de sitio en el contexto del sistema deben ser correctas mediante el uso de la autenticación Kerberos.  
-

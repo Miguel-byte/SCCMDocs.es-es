@@ -6,22 +6,20 @@ ms.date: 4/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4e620080-5400-45bb-87c2-fbdbc8aeacac
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
 ms.openlocfilehash: b66ed0a5e1c87d8c82853da86e3d55b0e2c043bb
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configure-options-for-updates-publisher"></a>Configurar opciones de Updates Publisher
 
@@ -152,4 +150,3 @@ El acto de hacer expirar una actualización es irreversible. Realice esta tarea 
 4.  Después de revisar las selecciones, elija **Siguiente** para aceptarlas y hacer expirar esas actualizaciones.
 
 5.  Cuando el asistente termine, elija **Cerrar** para finalizar el asistente.
-

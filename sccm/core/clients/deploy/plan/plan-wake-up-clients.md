@@ -6,21 +6,19 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 52ee82b2-0b91-4829-89df-80a6abc0e63a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 12ee719a6a8b072fab27d083aeb2b8439484058d
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
+ms.openlocfilehash: 20f595a5b0634a627dff9ba6feeb848754615f2c
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-how-to-wake-up-clients-in-system-center-configuration-manager"></a>Planear la reactivación de clientes en System Center Configuration Manager
 
@@ -98,4 +96,3 @@ También deberá decidir si quiere usar paquetes de difusiones dirigidas a subre
 
 > [!WARNING]  
 >  Existen riesgos de seguridad asociados con las difusiones dirigidas de subred: Un atacante podría enviar un flujo continuo de solicitudes de eco del Protocolo de mensajes de control de Internet (ICMP) a la dirección de difusión dirigida desde una dirección de origen falsificada, lo que provocaría que todos los hosts respondieran a esa dirección de origen. Este tipo de ataque de denegación de servicio se suele denominar ataque smurf y normalmente se mitiga no habilitando las difusiones dirigidas de subred.
-

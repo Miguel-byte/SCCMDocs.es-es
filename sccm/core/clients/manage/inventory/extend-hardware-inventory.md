@@ -6,22 +6,20 @@ ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d5bfab4f-c55e-4545-877c-5c8db8bc1891
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 5f1412fb132e3a074742e11f1142b2594146cbe1
 ms.openlocfilehash: 3e5517e1710d0d12e51fba58efda5dc5edd08544
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-extend-hardware-inventory-in-system-center-configuration-manager"></a>Cómo ampliar el inventario de hardware en System Center Configuration Manager
 
@@ -156,4 +154,3 @@ Sólo puede importar las clases de inventario cuando se modifica la configuraci�
 
 > [!NOTE]
 > Los archivos MIF podrían contener grandes cantidades de datos y la recopilación de estos datos podría afectar negativamente al rendimiento del sitio. Habilite la recopilación de archivos MIF solo cuando sea necesario y configure la opción **Tamaño de archivo MIF personalizado máximo (KB)** en la configuración del inventario de hardware. Para obtener más información, consulte [Introduction to hardware inventory in System Center Configuration Manager](introduction-to-hardware-inventory.md) (Introducción al inventario de hardware en System Center Configuration Manager).
-

@@ -1,5 +1,4 @@
 ---
-
 title: "Preparar la administración de actualizaciones de software | Microsoft Docs"
 description: "Para preparar la administración de actualizaciones, lleve a cabo estas tareas para mostrar los datos de la evaluación de compatibilidad en la consola de System Center Configuration Manager."
 keywords: 
@@ -10,16 +9,14 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 01907900-e28b-4cd7-9479-42906416707b
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: 5c34bd1ea108dffda10c30281fb9c97ba38ae1ae
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="prepare-for-software-updates-management"></a>Preparar la administración de actualizaciones de software
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -37,9 +34,3 @@ Realice esta configuración en el sitio de administración central o el sitio pr
 
 ## <a name="step-4-manage-settings-for-software-updates"></a>Paso 4: Administrar la configuración de las actualizaciones de software
 Después de sincronizar las actualizaciones de software, compruebe la configuración del cliente de Configuration Manager, la configuración de las directivas de grupo y la configuración de las actualizaciones de software antes de implementarlas. Para obtener información detallada, consulte [Manage settings for software updates](manage-settings-for-software-updates.md) (Administrar la configuración de las actualizaciones de software).
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -6,22 +6,20 @@ ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
-caps.latest.revision: 23
-caps.handback.revision: 0
+caps.latest.revision: "23"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 0663ba84762c44a5c303562548499f195bae9e1c
 ms.openlocfilehash: cc678c1133b1944f55bcad309cf9ede9f0660b57
-ms.contentlocale: es-es
-ms.lasthandoff: 08/01/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-boot-images-with-system-center-configuration-manager"></a>Administrar imágenes de arranque con System Center Configuration Manager
 
@@ -270,4 +268,3 @@ Las imágenes de arranque personalizadas no se verán modificadas.
 1.  Compruebe que el archivo de recursos de secuencia de tareas correcto (tsres.dll) figura en la carpeta de idioma correspondiente en el servidor de sitio antes de actualizar la imagen de arranque. Por ejemplo, el archivo de recursos en inglés está en la siguiente ubicación: <*ConfigMgrInstallationFolder*> \OSD\bin\x64\00000409\tsres.dll.  
 
 2.  Como parte de su comando de preinicio, configure la variable de entorno SMSTSLanguageFolder con el identificador de idioma correspondiente. El identificador de idioma no debe especificarse con un formato hexadecimal sino mediante el formato decimal. Por ejemplo, para establecer el identificador para el idioma inglés, se debe especificar el valor decimal 1033 en lugar del valor hexadecimal 00000409 utilizado para el nombre de la carpeta.  
-

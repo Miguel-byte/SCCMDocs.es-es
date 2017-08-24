@@ -6,21 +6,20 @@ ms.date: 12/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
-caps.latest.revision: 17
-caps.handback.revision: 0
+caps.latest.revision: "17"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 03722ff4f480cd26842e395fe1f7ec8359e2b33e
 ms.openlocfilehash: 6953c3834ca303b949f22436010a87b3da9688dc
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-operating-system-images-with-system-center-configuration-manager"></a>Administrar imágenes de sistema operativo con System Center Configuration Manager
 
@@ -56,7 +55,7 @@ Si quiere conocer los pasos necesarios para crear una imagen personalizada del s
     -   La instalación del sistema operativo puede tardar más tiempo porque la instalación de aplicaciones y otras configuraciones se realiza cuando finaliza la instalación del sistema operativo.  
 
 
-##  <a name="a-namebkmkaddosimagesa-add-operating-system-images-to-configuration-manager"></a><a name="BKMK_AddOSImages"></a> Incorporación de imágenes de sistema operativo a Configuration Manager  
+##  <a name="BKMK_AddOSImages"></a> Incorporación de imágenes de sistema operativo a Configuration Manager  
  Para usar una imagen de sistema operativo, primero debe agregarla un sitio de Configuration Manager. Use el procedimiento siguiente para agregar una imagen de sistema operativo a un sitio.  
 
 #### <a name="to-add-an-operating-system-image-to-a-site"></a>Para agregar una imagen de sistema operativo a un sitio  
@@ -81,10 +80,10 @@ Si quiere conocer los pasos necesarios para crear una imagen personalizada del s
 
  Puede distribuir la imagen de sistema operativo a puntos de distribución.  
 
-##  <a name="a-namebkmkdistributebootimagesa-distribute-operating-system-images-to-distribution-points"></a><a name="BKMK_DistributeBootImages"></a> Distribución de imágenes de sistema operativo a puntos de distribución  
+##  <a name="BKMK_DistributeBootImages"></a> Distribución de imágenes de sistema operativo a puntos de distribución  
  Las imágenes de sistema operativo se distribuyen a los puntos de distribución de la misma forma que se distribuye otro tipo de contenido. En la mayoría de los casos, debe distribuir la imagen de sistema operativo a un punto de distribución, como mínimo, antes de implementar el sistema operativo. Para conocer los pasos de distribución de una imagen de sistema operativo, vea [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content) (Distribuir contenido).  
 
-##  <a name="a-namebkmkosimagesapplyupdatesa-apply-software-updates-to-an-operating-system-image"></a><a name="BKMK_OSImagesApplyUpdates"></a> Aplicación de actualizaciones de software a una imagen de sistema operativo  
+##  <a name="BKMK_OSImagesApplyUpdates"></a> Aplicación de actualizaciones de software a una imagen de sistema operativo  
  Periódicamente, se publican nuevas actualizaciones de software que son aplicables al sistema operativo contenido en la imagen de sistema operativo. Por supuesto, antes de aplicar las actualizaciones de software a una imagen debe contar con la infraestructura de actualizaciones de software, haber sincronizado correctamente dichas actualizaciones y haber descargado las actualizaciones de software en la biblioteca de contenido en el servidor del sitio. Para obtener más información, consulte [Deploy software updates](../../sum/deploy-use/deploy-software-updates.md) (Implementación de actualizaciones de software).  
 
  Puede aplicar las actualizaciones de software que sean aplicables a una imagen según una programación especificada. En función de la programación que especifique, Configuration Manager aplica las actualizaciones de software que seleccione a la imagen del sistema operativo y, a continuación, opcionalmente, distribuye la imagen actualizada a los puntos de distribución. La información sobre la imagen de sistema operativo se almacena en la base de datos del sitio, incluyendo las actualizaciones de software que se aplicaron en el momento de la importación. Las actualizaciones de software que se hayan aplicado a la imagen desde que se agregó inicialmente también se almacenan en la base de datos del sitio. Cuando inicia el asistente para aplicar actualizaciones de software a la imagen de sistema operativo, el asistente recupera una lista de actualizaciones de software aplicables aún no aplicadas a la imagen para que usted seleccione las que desea. Configuration Manager copia las actualizaciones de software de la biblioteca de contenido que se encuentra en el servidor de sitio y las aplica a la imagen de sistema operativo.  
@@ -115,7 +114,7 @@ Si quiere conocer los pasos necesarios para crear una imagen personalizada del s
 
 8.  En la página **Finalización** , compruebe que las actualizaciones de software se aplicaron correctamente a la imagen de sistema operativo.  
 
-##  <a name="a-namebkmkosimagemulticasta-prepare-the-operating-system-image-for-multicast-deployments"></a><a name="BKMK_OSImageMulticast"></a> Preparación de la imagen de sistema operativo para implementaciones de multidifusión  
+##  <a name="BKMK_OSImageMulticast"></a> Preparación de la imagen de sistema operativo para implementaciones de multidifusión  
  Use las implementaciones de multidifusión para permitir que varios equipos descarguen una imagen de sistema operativo simultáneamente. El punto de distribución envía la imagen mediante multidifusión a los clientes en vez de enviar una copia de la imagen a cada cliente a través de una conexión independiente. Al elegir el método de implementación de sistema operativo [Usar multidifusión para implementar Windows a través de la red](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md), debe configurar el paquete de imágenes de sistema operativo para que admita la multidifusión antes de distribuir la imagen de sistema operativo a un punto de distribución habilitado para multidifusión. Utilice el siguiente procedimiento para establecer las opciones de multidifusión para un paquete de imágenes de sistema operativo existente.  
 
 #### <a name="to-modify-an-operating-system-image-package-to-use-multicast"></a>Para modificar un paquete de imágenes de sistema operativo para que use la multidifusión  
@@ -139,9 +138,3 @@ Si quiere conocer los pasos necesarios para crear una imagen personalizada del s
          Si selecciona **Transferir este paquete solo mediante multidifusión**, también deberá especificar **Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas** como la opción de implementación para la imagen de sistema operativo. Puede especificar las opciones de implementación de la imagen cuando implemente la imagen de sistema operativo o más tarde mediante la modificación de las propiedades de la implementación. Las opciones de implementación se encuentran en la pestaña **Puntos de distribución** de la página **Propiedades** del objeto de implementación.  
 
 6.  Haga clic en **Aceptar**.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

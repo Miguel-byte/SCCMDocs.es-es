@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e327ce38-6c07-4a27-b6eb-7e5bf74ed04b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 50a4b75b8c8c1cb6f7a8e696abad285f99080fcd
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="planning-for-operating-system-deployment-interoperability-in-system-center-configuration-manager"></a>Planeamiento de la interoperabilidad de la implementación de sistema operativo en System Center Configuration Manager
 
@@ -71,9 +70,3 @@ Si en una misma jerarquía hay varios sitios de System Center Configuration Mana
  Una vez que el sitio de administración central se actualiza a la última versión de Configuration Manager, debe pasar a la etapa siguiente para asegurarse de que las secuencias de tareas de implementación del sistema operativo que se implementen en clientes asignados a un sitio de Configuration Manager (y que aún no se hayan actualizado a la versión más reciente del mismo) no dejen dichos clientes en un estado no administrado.  
 
 -   Cree una secuencia de tareas y úsela para implementarla exclusivamente en clientes que se encuentren en un sitio de Configuration Manager. Lo más probable es que cree una copia de una secuencia de tareas, que usará para implementarla en clientes que se encuentren en un sitio de Configuration Manager con la última versión, y que la modifique posteriormente para poder implementarla en clientes de un sitio de Configuration Manager más antiguo. Después, tendrá que configurar la secuencia de tareas para que haga referencia al paquete de instalación de cliente personalizado que usa el origen de instalación del cliente de Configuration Manager más reciente. Si aún no tiene un paquete de instalación de cliente personalizado que haga referencia al origen de instalación del cliente de Configuration Manager más antiguo, deberá crear uno manualmente.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

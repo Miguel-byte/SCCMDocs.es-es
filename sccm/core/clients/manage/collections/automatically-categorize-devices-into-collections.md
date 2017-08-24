@@ -6,21 +6,19 @@ ms.date: 04/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 98b038b4-1a13-4228-bdb8-a12194e32b0e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
-ms.openlocfilehash: b1bac05e9335dd757b8f499f97daea24e0f4acbd
-ms.contentlocale: es-es
-ms.lasthandoff: 01/03/2017
-
+ms.openlocfilehash: d1b79fb091a6ae4b967d63843ae7b45a0cbeb555
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="automatically-categorize-devices-into-collections-with-system-center-configuration-manager"></a>Clasificar automáticamente dispositivos en colecciones con System Center Configuration Manager
 
@@ -57,4 +55,3 @@ En **Activos y compatibilidad** > **Información general** > **Dispositivos**, e
 Si la columna **Categoría de dispositivos** no aparece, haga clic con el botón derecho en el encabezado de una de las columnas de la lista **Dispositivos** (como **Nombre**) y seleccione **Categoría de dispositivos**.
 
 Si asigna un dispositivo a una categoría y posteriormente elimina la categoría, el informe **Lista de dispositivos inscritos en Microsoft Intune por usuario** mostrará un GUID en la columna **Categoría de dispositivos** en lugar de un nombre de categoría.
-

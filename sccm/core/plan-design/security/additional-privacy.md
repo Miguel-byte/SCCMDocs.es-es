@@ -6,13 +6,12 @@ ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
@@ -35,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 47d473b3884c3cd2ff7516629a7c32d4e52ac39b
 ms.openlocfilehash: ef7b3656f9b4a31e07227aa4e864448d0dd1fcdc
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="additional-information-about-privacy-for-system-center-configuration-manager"></a>Más información sobre la privacidad de System Center Configuration Manager
 
@@ -112,9 +112,3 @@ Todas las comunicaciones con Microsoft Intune usan HTTPS. Para configurar la sus
 Para administrar dispositivos conectados a Microsoft Intune, algunos datos se envían a Microsoft Intune y se reciben de este. Estos datos incluyen el nombre principal de usuario (UPN) de todos los usuarios asignados al servicio e información de inventario de los dispositivos administrados por Microsoft Intune. Los metadatos, como el nombre de la aplicación, el publicador y la versión, del contenido asignado a los puntos de distribución de Manage.Microsoft.com se envían a Microsoft Intune. El contenido binario real asignado a un punto de distribución de Manage.Microsoft.com se cifra antes de cargarse en Microsoft Intune.
 
 Esta característica no está configurada de forma predeterminada. Los administradores controlan el contenido que se transfiere al punto de distribución de Manage.Microsoft.com y a los usuarios que están asignados al servicio. La característica se puede quitar en cualquier momento.
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b9800a66-7541-47ca-8276-da8ef6cb6d1b
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 03c844084c72fc52806123d9f4c11a410a3ec775
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-a-custom-task-sequence-with-system-center-configuration-manager"></a>Crear una secuencia de tareas personalizada con System Center Configuration Manager
 
@@ -28,7 +27,7 @@ ms.openlocfilehash: 03c844084c72fc52806123d9f4c11a410a3ec775
 
 Cuando se crea una secuencia de tareas personalizada en System Center Configuration Manager, no contiene ningún paso de secuencia de tareas. Después de crear la secuencia de tareas, debe modificarla y agregar las etapas de secuencia de tareas que necesite.  
 
-##  <a name="a-namebkmkcustomtsa-create-a-custom-task-sequence"></a><a name="BKMK_CustomTS"></a> Crear una secuencia de tareas personalizada  
+##  <a name="BKMK_CustomTS"></a> Crear una secuencia de tareas personalizada  
  Use el procedimiento siguiente para crear una secuencia de tareas personalizada.  
 
 #### <a name="to-create-a-custom-task-sequence"></a>Para crear una secuencia de tareas personalizada  
@@ -53,9 +52,3 @@ Cuando se crea una secuencia de tareas personalizada en System Center Configurat
 
  ## <a name="next-steps"></a>Pasos siguientes
  [Implementar la secuencia de tareas](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

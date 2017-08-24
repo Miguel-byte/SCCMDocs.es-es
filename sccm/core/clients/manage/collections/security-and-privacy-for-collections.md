@@ -6,23 +6,20 @@ ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 30bf2451-5415-4be2-ba8d-21759370cd83
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 3379494824804c6be5c051c67a79d25e7eed88f0
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 0cade975e96220e193db1de92816f97cd253532d
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-collections-in-system-center-configuration-manager"></a>Seguridad y privacidad para recopilaciones en System Center Configuration Manager
 
@@ -47,4 +44,3 @@ Este tema contiene procedimientos recomendados de seguridad e información de pr
 -   Si se usan variables de recopilación, los administradores locales pueden leer información potencialmente confidencial.  
 
      Las variables de recopilación pueden usarse al implementar un sistema operativo.  
-

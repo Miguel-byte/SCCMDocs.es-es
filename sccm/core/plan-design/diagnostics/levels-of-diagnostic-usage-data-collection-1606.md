@@ -6,12 +6,11 @@ ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7350d03-f440-4744-82d4-75f8c6c25028
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
@@ -33,16 +32,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 688e05aae0e0b15b54835f8d64a98487f4d7b64d
 ms.openlocfilehash: 27eb4225b7e907772fa5ed8b209fc04fa9f3a677
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1606-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de diagnóstico y uso para la versión 1606 de System Center Configuration Manager.
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-La versión 1606 de System Center Configuration Manager recopila tres niveles de datos de diagnóstico y uso: **Básico**, **Mejorado** y **Completo**. De forma predeterminada, esta característica se establece en el nivel Mejorado. Las secciones siguientes proporcionan detalles adicionales sobre los datos que recopila cada nivel.
+La versión 1606 de System Center Configuration Manager recopila tres niveles de datos de diagnóstico y uso: **Básico**, **Mejorado** y **Completo**. De forma predeterminada, esta característica se establece en el nivel Mejorado. En las secciones siguientes se proporcionan detalles adicionales sobre los datos que recopila cada nivel.
 
 Los cambios respecto de versiones anteriores se indican mediante la nota ***[Nuevo]***, ***[Actualizado]***, ***[Quitado]*** o ***[Movido]***.
 
@@ -50,12 +50,12 @@ Los cambios respecto de versiones anteriores se indican mediante la nota ***[Nue
 > [!IMPORTANT]
 >  Configuration Manager no recopila códigos de sitio, nombres de sitios, direcciones IP, nombres de usuario o equipo, direcciones físicas o direcciones de correo electrónico en los niveles Básico o Mejorado. Cualquier recopilación de esta información en el nivel Completo no tiene ninguna finalidad, es decir, potencialmente se incluye en la información avanzada de diagnóstico como archivos de registro o instantáneas de memoria. Microsoft no usará esta información para identificarle, para ponerse en contacto con usted ni para el desarrollo de publicidad.
 
-##  <a name="a-namebkmkchangea-how-to-change-the-level"></a><a name="bkmk_change"></a> Cómo cambiar el nivel
+##  <a name="bkmk_change"></a> Cómo cambiar el nivel
  Los administradores que tienen un ámbito administrativo basado en roles que incluye los permisos **Modificar** en la clase de objeto **Sitio** pueden cambiar el nivel de datos recopilados en la configuración de datos de diagnóstico y uso de la consola de Configuration Manager.
 
    Para ello, en la consola, vaya a la pestaña Backstage (la pestaña superior izquierda con la flecha desplegable), seleccione **Datos de uso** y, después, seleccione el nivel de datos que quiere usar.  
 
-##  <a name="a-namebkmklevel1a-level-1---basic"></a><a name="bkmk_level1"></a> Nivel 1: Básico
+##  <a name="bkmk_level1"></a> Nivel 1: Básico
  El nivel Básico incluye datos sobre la jerarquía, datos que son necesarios para ayudar a mejorar su experiencia de instalación o actualización, y datos que ayudan a determinar las actualizaciones de Configuration Manager que son aplicables a la jerarquía.
 
  A partir de la versión 1606 de System Center Configuration Manager, este nivel incluye lo siguiente:
@@ -111,7 +111,7 @@ Los cambios respecto de versiones anteriores se indican mediante la nota ***[Nue
 - ***[Nuevo]*** Versión de SQL, nivel de Service Pack, edición, identificador de intercalación y juego de caracteres
 
 
-##  <a name="a-namebkmklevel2a-level-2---enhanced"></a><a name="bkmk_level2"></a> Nivel 2: Mejorado
+##  <a name="bkmk_level2"></a> Nivel 2: Mejorado
 El nivel Mejorado es el valor predeterminado después de que finalice la instalación. Este nivel incluye datos que se han recopilado en el nivel Básico, datos específicos de característica (frecuencia y duración de uso), configuración de cliente de Configuration Manager (nombre de componente, estado y determinadas opciones como intervalos de sondeo) e información básica sobre las actualizaciones de software.
 
 Se recomienda este nivel porque proporciona a Microsoft los datos mínimos que se necesitan para realizar mejoras útiles en versiones futuras de productos y servicios. En este nivel no se recopilan nombres de objetos (sitios, usuarios, equipos u objetos), detalles sobre objetos relacionados con la seguridad o vulnerabilidades como recuentos de sistemas que necesitan actualizaciones de software.
@@ -374,7 +374,7 @@ A partir de la versión 1606 de System Center Configuration Manager, este nivel 
 
 
 
-##  <a name="a-namebkmklevel3a-level-3---full"></a><a name="bkmk_level3"></a> Nivel 3: Completo
+##  <a name="bkmk_level3"></a> Nivel 3: Completo
 El nivel Completo incluye todos los datos de los niveles Básico y Mejorado. También incluye información adicional sobre Endpoint Protection, porcentajes de cumplimiento de actualización e información de actualización de software. Este nivel también puede incluir información avanzada de diagnóstico como archivos del sistema e instantáneas de memoria que pueden incluir información personal que existía en los archivos de registro o de memoria en el momento de la captura.
 
 A partir de la versión 1606 de System Center Configuration Manager, este nivel incluye lo siguiente:
@@ -419,9 +419,3 @@ A partir de la versión 1606 de System Center Configuration Manager, este nivel 
 -   ***[Nuevo]*** Resumen de estado de ATP
 
 -   ***[Nuevo]*** Errores de instalación de implementación de cliente detallados
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

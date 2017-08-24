@@ -6,21 +6,20 @@ ms.date: 12/28/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3393db41-900a-44c5-b950-2d46a35a198c
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
 ms.openlocfilehash: c51787ad3fa0bdb285017cfab1ca6931afba9ea6
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-certificate-profiles-in-system-center-configuration-manager"></a>Seguridad y privacidad para perfiles de certificados en System Center Configuration Manager
 
@@ -48,9 +47,3 @@ ms.openlocfilehash: c51787ad3fa0bdb285017cfab1ca6931afba9ea6
  De manera predeterminada, los dispositivos no evalúan perfiles de certificado. Además, debe configurar los perfiles de certificado y luego implementarlos en usuarios o dispositivos.  
 
  Antes de configurar los perfiles de certificado, tenga en cuenta sus requisitos de privacidad.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

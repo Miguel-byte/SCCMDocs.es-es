@@ -6,23 +6,20 @@ ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
 ms.openlocfilehash: 572ef13883f7930e69ec1f1f53c9bfe029898c81
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-test-client-upgrades-in-a-pre-production-collection-in-system-center-configuration-manager"></a>Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager
 
@@ -88,4 +85,3 @@ Puede probar una nueva versión de cliente de Configuration Manager en una recop
 >[!NOTE]
 >Para habilitar el cliente de preproducción o promover un cliente de preproducción a un cliente de producción, su cuenta debe ser miembro del rol de seguridad que tiene permisos **Leer** y **Modificar** para el objeto **Paquetes de actualización**.
 >Las actualizaciones de cliente cumplen las ventanas de mantenimiento de Configuration Manager que ha configurado.
-

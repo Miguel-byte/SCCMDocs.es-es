@@ -6,21 +6,19 @@ ms.date: 03/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5d520a7-e9e5-40ee-91f9-f2684214beb6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 74dcc0f4e680893db804956615248b7e1230d2b5
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
+ms.openlocfilehash: d039792a88b9e7704f37718a88f841dd9216d1b1
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="user-affinity-for-hybrid-managed-devices-in-configuration-manager"></a>Afinidad de usuario para dispositivos administrados híbridos en Configuration Manager
 
@@ -55,4 +53,3 @@ Al configurar perfiles para dispositivos propiedad de la empresa, el administrad
 
 ##  <a name="BKMK_noUA"></a> Dispositivos administrados sin afinidad de usuario  
  Los dispositivos configurados con **no user affinity** no admiten el portal de empresa y no deben instalar la aplicación. El Portal de empresa está diseñado para usuarios que tienen credenciales corporativas y que necesitan acceso a recursos corporativos personalizados (por ejemplo, correo electrónico). Los dispositivos inscritos **sin afinidad de usuario** no están diseñados para tener un inicio de sesión de usuario dedicado. Los quioscos, puntos de venta (POS) y dispositivos de utilidad compartida son casos de uso típicos de dispositivos inscritos sin afinidad de usuario. En caso de que la afinidad de usuario sea un requisito, asegúrese de que el perfil de inscripción del dispositivo tenga seleccionada la **afinidad de usuario** antes de inscribirlo. Para cambiar el estado de afinidad en un dispositivo, debe cancelar su inscripción y realizarla de nuevo.
-

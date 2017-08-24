@@ -6,23 +6,20 @@ ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e68e1fb-a8ec-4543-bb8a-cbbaf184a418
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 2144dfa87f40fcb2195f7278a21b47e05d6d6f38
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 7652e46d2168e2de623fa8e6d5b8663701764244
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-software-inventory-in-system-center-configuration-manager"></a>Seguridad y privacidad del inventario de software en System Center Configuration Manager
 
@@ -62,4 +59,3 @@ Este tema contiene información sobre seguridad y privacidad del inventario de s
  La información de inventario no se envía a Microsoft. La información de inventario se almacena en la base de datos de Configuration Manager. Cuando los clientes usan HTTPS para conectarse a puntos de administración, los datos de inventario que se envían al sitio se cifran durante la transferencia. Si los clientes usan HTTP para conectarse a los puntos de administración, tiene la opción de habilitar el cifrado de inventario. Los datos de inventario no se almacenan en formato cifrado en la base de datos. La información se conserva en la base de datos hasta que las tareas de mantenimiento del sitio **Eliminar historial de inventario antiguo** o **Eliminar archivos recopilados antiguos** la eliminan cada 90 días. Puede configurar el intervalo de eliminación.  
 
  Antes de configurar el inventario de hardware, el inventario de software, la recopilación de archivos o la recopilación de datos de Asset Intelligence, tenga en cuenta los requisitos de privacidad.  
-

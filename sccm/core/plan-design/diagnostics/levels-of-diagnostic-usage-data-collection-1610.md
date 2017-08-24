@@ -6,12 +6,11 @@ ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eb20eb90-bcc0-41de-bfea-638ea470c0dd
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
@@ -33,12 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 688e05aae0e0b15b54835f8d64a98487f4d7b64d
-ms.openlocfilehash: 82bcd1a9fe22bf7ecc2dc5765f64f5198494152e
-ms.contentlocale: es-es
-ms.lasthandoff: 12/29/2016
-
+ms.openlocfilehash: ba1e53fdc895690bb958c12d59f82a26067ecad3
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de uso para diagnóstico para la versión 1610 de System Center Configuration Manager
 
@@ -64,13 +62,13 @@ A partir de la versión 1610, cambie el nivel de recopilación de datos desde la
 
 
 -   Información sobre la instalación:
-       - Compilación, tipo de instalación, paquetes de idioma, características que ha habilitado  
+      - Compilación, tipo de instalación, paquetes de idioma, características que ha habilitado  
 
-       - Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos     
+      - Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos    
 
-       - Versión del script posterior a la actualización
+      - Versión del script posterior a la actualización
 
-       - Uso del anillo rápido de actualización
+      - Uso del anillo rápido de actualización
 
     - ***[Nuevo]*** Uso de versión preliminar, tipo de medio de instalación, tipo de rama
 
@@ -265,7 +263,7 @@ Para la versión 1610 de System Center Configuration Manager, este nivel incluye
 
     -   Recuento de alertas que se han configurado para la característica de Endpoint Protection  
 
-    -     Directivas de protección contra amenazas avanzada (ATP) (recuento de directivas y si las directivas se implementan)
+    -   Directivas de protección contra amenazas avanzada (ATP) (recuento de directivas y si las directivas se implementan)
 
 
 - **Migración:**
@@ -438,4 +436,3 @@ Para la versión 1610 de System Center Configuration Manager, este nivel incluye
 -   Errores de instalación de implementación de cliente detallados
 
 - ***[Nuevo]*** Detalles de la aplicación de la Tienda Windows para empresas (lista no agregada de aplicaciones sincronizadas, incluido AppID, el estado en línea o sin conexión y el recuento total de licencias adquiridas)
-

@@ -6,22 +6,20 @@ ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 25fa89d6-7e47-45a6-8f4e-70b77560fba6
-caps.latest.revision: 0
-caps.handback.revision: 0
+caps.latest.revision: "0"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: 1960f86e98a957559f379b9eeb6d293f7e4182e5
-ms.contentlocale: es-es
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="update-reset-tool"></a>Herramienta de restablecimiento de actualizaciones
 
@@ -79,4 +77,3 @@ Después de ejecutar la herramienta:
  En un escenario habitual, querrá restablecer una actualización que tenga problemas de descarga. El nombre de dominio completo de los servidores de SQL Server es *server1.fabrikam.com*, la base de datos de sitio es *CM_XYZ* y el GUID del paquete es *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Ejecutará lo siguiente: ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
  En un escenario más extremo, quizá desee forzar la eliminación del paquete de actualización problemático. El nombre de dominio completo de los servidores de SQL Server es *server1.fabrikam.com*, la base de datos de sitio es *CM_XYZ* y el GUID del paquete es *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Ejecutará lo siguiente: ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***.
-

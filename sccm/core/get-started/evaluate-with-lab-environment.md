@@ -6,23 +6,20 @@ ms.date: 2/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 01b30260-f03a-4851-a549-d1b76e8cfc69
-caps.latest.revision: 25
-caps.handback.revision: 0
+caps.latest.revision: "25"
+caps.handback.revision: "0"
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0ea90d3f3bef80b8acf9018a1338ae05fc948af4
 ms.openlocfilehash: d7ea785ab1beee09b9adda735a87f89bc9481620
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="evaluate-system-center-configuration-manager-by-building-your-own-lab-environment"></a>Evalúe System Center Configuration Manager mediante la creación de su propio entorno de laboratorio
 
@@ -68,4 +65,3 @@ Las máquinas cliente se instalan en Hyper-V. El laboratorio en sí también pue
 -   Obtenga información sobre la administración de contenido en [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md) (Conceptos de la administración de contenido).  
 
 -   Obtenga información sobre cómo admitir correctamente las operaciones diarias de su implementación en [Más información sobre cómo los clientes buscan servicios y recursos de sitio para System Center Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
-

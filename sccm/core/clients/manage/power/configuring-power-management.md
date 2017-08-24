@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 435c923c-ea30-4dce-8afd-48962ed85502
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
 ms.openlocfilehash: e111ac2545dd9e0b96a50c10246bb75d286a737a
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configuring-power-management-in-system-center-configuration-manager"></a>Configuración de la administración de energía en System Center Configuration Manager
 
@@ -85,9 +84,3 @@ Para poder usar la administración de energía en System Center Configuration Ma
 4.  En la pestaña **Administración de energía** del cuadro de diálogo *<Nombre de la colección>\>***Propiedades**, seleccione **No aplicar nunca la configuración de administración de energía en equipos de esta recopilación**.  
 
 5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo *<Nombre de la colección>\>***Propiedades** y guardar la configuración.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

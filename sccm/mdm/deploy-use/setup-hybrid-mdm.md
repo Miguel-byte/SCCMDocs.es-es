@@ -6,24 +6,21 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
-caps.latest.revision: 34
-caps.handback.revision: 0
+caps.latest.revision: "34"
+caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: c494fcc38955571c06507278a1ae88e5777b5708
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="setup-hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>Configurar la administración híbrida de dispositivos móviles (MDM) con System Center Configuration Manager y Microsoft Intune
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -51,4 +48,3 @@ Para poder administrar dispositivos iOS, Windows y Android con Configuration Man
 Una vez completada la configuración híbrida, se pueden inscribir dispositivos en Configuration Manager de varias maneras:
 - **Dispositivos propiedad de la empresa (COD):** [la inscripción de dispositivos propiedad de la empresa](enroll-company-owned-devices.md) proporciona directrices sobre las diferentes formas específicas de la plataforma de inscribir dispositivos propiedad de la empresa.
 - **Dispositivos propiedad del usuario (BYOD):** [la inscripción de dispositivos propiedad del usuario (BYOD)](enroll-hybrid-ios-mac.md) proporciona instrucciones sobre las formas de inscribir dispositivos propiedad del usuario.
-

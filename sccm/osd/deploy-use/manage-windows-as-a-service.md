@@ -6,22 +6,19 @@ ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da1e687b-28f6-43c4-b14a-ff2b76e60d24
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
 ms.openlocfilehash: 2c2c0f81736c1b00ea487ae1261803a8105bb5e4
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>Administración de Windows como servicio mediante System Center Configuration Manager
 
@@ -282,4 +279,3 @@ Use el siguiente procedimiento para modificar las propiedades de un plan de mant
 
     > [!NOTE]  
     >  Puede revisar las alertas de las actualizaciones de software recientes en el área de trabajo **Biblioteca de software** del nodo **Actualizaciones de software** .  
-

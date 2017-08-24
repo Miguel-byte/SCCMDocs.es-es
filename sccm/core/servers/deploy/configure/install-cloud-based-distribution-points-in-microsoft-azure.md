@@ -6,21 +6,19 @@ ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f96905f50f879b843f98cb57c8a755aa856fb381
 ms.openlocfilehash: 39b35cccf78bba4e69a7de0ca3a5a8dc516201e3
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="install-cloud-based-distribution-points-in-microsoft-azure-for-system-center-configuration-manager"></a>Instalar puntos de distribución basados en la nube en Microsoft Azure para System Center Configuration Manager
 
@@ -132,4 +130,3 @@ Para asignar el nombre de servicio proporcionado con el certificado de servicio 
 4.  En **Propiedades de sistema de sitio**, seleccione la pestaña **Proxy** y, después, establezca la configuración de proxy para este servidor de sitio primario.  
 
 5.  Haga clic en **Aceptar** para guardar la configuración.  
-

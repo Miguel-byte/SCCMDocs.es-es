@@ -6,24 +6,20 @@ ms.date: 03/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 7f4329b289b606dee5bf31aad8207de52667229f
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Configurar alertas de Endpoint Protection en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -103,4 +99,3 @@ Para configurar el porcentaje en el que se genera la alerta, expanda **Supervisi
 
 > [!div class="button"]
 [Atrás >](endpoint-protection-site-role.md)
-

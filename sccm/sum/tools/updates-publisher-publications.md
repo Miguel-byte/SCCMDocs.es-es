@@ -6,22 +6,20 @@ ms.date: 4/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
 ms.openlocfilehash: ddea7af935d5be880b96e383401061f8aa11e6da
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-publications-in-updates-publisher"></a>Administrar publicaciones en Updates Publisher
 
@@ -105,4 +103,3 @@ Puede usar el **área de trabajo Actualizaciones** para seleccionar y luego hace
     Para poder quitar (eliminar) una actualización o agrupación personalizada de Configuration Manager, debe hacerla expirar y luego publicar ese estado de expirado en Configuration Manager. Una vez expiradas las actualizaciones o agrupaciones en Configuration Manager, ya no puede implementar ni reactivar la actualización o agrupación.
 
 -   **Para reactivar actualizaciones o agrupaciones**, seleccione una o varias actualizaciones que hayan expirado en área de trabajo Actualizaciones y luego elija **Reactivar** en la pestaña **Inicio** de la cinta de opciones. Si la actualización expirada se publicó anteriormente como expirada en Configuration Manager, no puede reactivarse.
-

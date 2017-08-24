@@ -4,23 +4,21 @@ description: "Conozca las características disponibles en Technical Preview para
 ms.custom: na
 ms.date: 02/24/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
 ms.openlocfilehash: 3bdbcd1a3c64a1d50f2f6219b2a5e17d60979864
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1702 para System Center Configuration Manager
 
@@ -57,7 +55,7 @@ Se ha agregado una función de limpieza automática que elimina las descargas in
 
 ## <a name="peer-cache-improvements"></a>Mejoras de almacenamiento en caché del mismo nivel
 A partir de esta versión, un equipo de origen de almacenamiento en caché del mismo nivel rechazará una solicitud de contenido cuando el equipo de origen de almacenamiento en caché del mismo nivel cumpla alguna de las condiciones siguientes:  
- -     Está en modo de batería baja.
+ -  Está en modo de batería baja.
  -  La carga de CPU supera el 80 % en el momento en que se solicita el contenido.
  -  E/S de disco tiene un valor *AvgDiskQueueLength* superior a 10.
  -  No hay más conexiones disponibles para el equipo.   
@@ -75,10 +73,10 @@ La infraestructura de sitio de vista previa técnica, los clientes y el dominio 
 
 ### <a name="set-up-configuration-manager-to-use-azure-ad"></a>Configurar Configuration Manager para usar Azure AD
 Para usar Azure AD con Configuration Manager, necesitará lo siguiente:
--    Suscripción de Azure.
--    Azure AD con Domain Services (DS).
--    Un sitio de Configuration Manager que se ejecute en una máquina virtual de Azure que esté unida a Azure AD.
--    Clientes de Configuration Manager que se ejecuten en el mismo entorno de Azure AD.
+-   Suscripción de Azure.
+-   Azure AD con Domain Services (DS).
+-   Un sitio de Configuration Manager que se ejecute en una máquina virtual de Azure que esté unida a Azure AD.
+-   Clientes de Configuration Manager que se ejecuten en el mismo entorno de Azure AD.
 
 Para configurar Azure AD Domain Services, consulte [Introducción a Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
 
@@ -93,7 +91,7 @@ Para cada método que use, modifique la consulta LDAP para buscar las estructura
 Los ejemplos siguientes usan el Azure AD *contoso.onmicrosoft.com*:
  - **Detección de sistemas**   
 Azure AD almacena los dispositivos bajo la unidad organizativa **AADDC Computers**.  Configurar lo siguiente:  
-  -    *LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
+  - *LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
 
 
 - **Detección de usuarios** AAD almacena los usuarios bajo la unidad organizativa **AADDC Users**.  Configurar lo siguiente:
@@ -215,9 +213,9 @@ En el cuadro de diálogo *<deployment type name>* **Propiedades** de un tipo de 
 
 ### <a name="try-it-out"></a>Pruébelo.
 
-1.    En las propiedades de un tipo de implementación de Configuration Manager, haga clic en la pestaña **Comportamiento de instalación**.
-2.    Pulse **Agregar** para agregar uno o más nombres de archivo ejecutable que quiere activar. También puede agregar un nombre para mostrar para facilitar a los usuarios la identificación de las aplicaciones de la lista.
-3.    Si la implementación va tener un propósito de requerido, en el Asistente para implementar software, se puede optar por **Cerrar automáticamente los ejecutables en ejecución especificados en la pestaña Comportamiento de instalación del cuadro de diálogo de propiedades del tipo de implementación**.
+1.  En las propiedades de un tipo de implementación de Configuration Manager, haga clic en la pestaña **Comportamiento de instalación**.
+2.  Pulse **Agregar** para agregar uno o más nombres de archivo ejecutable que quiere activar. También puede agregar un nombre para mostrar para facilitar a los usuarios la identificación de las aplicaciones de la lista.
+3.  Si la implementación va tener un propósito de requerido, en el Asistente para implementar software, se puede optar por **Cerrar automáticamente los ejecutables en ejecución especificados en la pestaña Comportamiento de instalación del cuadro de diálogo de propiedades del tipo de implementación**.
 
 Si la aplicación se ha implementado como **Disponible** y un usuario final intenta instalar una aplicación, se le pedirá que cierre los ejecutables en ejecución especificados antes de poder continuar con la instalación.
 
@@ -358,4 +356,3 @@ Para eliminar de forma selectiva un dispositivo Android for Work, use el [proces
 
 #### <a name="known-issues-for-android-for-work"></a>Problemas conocidos de Android for Work
 **Al configurar la programación de sincronización en Android for Work, los perfiles de correo electrónico no se pueden implementar** Una de las opciones en la interfaz de usuario de ConfigMgr para los perfiles de correo electrónico de Android for Work es "Programar". En otras plataformas, esto permite al administrador configurar una programación para la sincronización de correo electrónico y otros datos de la cuenta de correo en los dispositivos móviles en que se implementa. En cambio, no funciona para perfiles de correo electrónico de Android for Work y si se escoge cualquier opción que no sea "No configurado", el perfil no se implementará en ningún dispositivo.
-

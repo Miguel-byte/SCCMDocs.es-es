@@ -6,22 +6,19 @@ ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
 ms.openlocfilehash: ddf2ad1cae51c1e36df5a6d86822e2b9abe604e2
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="fundamentals-of-role-based-administration-for-system-center-configuration-manager"></a>Conceptos básicos de la administración basada en roles de System Center Configuration Manager
 
@@ -214,4 +211,3 @@ Cree ámbitos de seguridad si tiene que limitar el acceso a instancias independi
 -   Los distintos usuarios administrativos requieren un determinado acceso a algunas instancias de un tipo de objeto. Por ejemplo, un grupo de usuarios administrativos requiere el permiso de lectura en determinados grupos de actualizaciones de software, y otro grupo de usuarios administrativos requiere el permiso Modificar y Eliminar para otros grupos de actualizaciones de software. Cree distintos ámbitos de seguridad para estos grupos de actualizaciones de software.  
 
 Para obtener más información sobre cómo configurar ámbitos de seguridad para la administración basada en roles, consulte [Configurar ámbitos de seguridad para un objeto](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope) en el tema [Configure role-based administration for System Center Configuration Manager (Configurar la administración basada en roles para System Center Configuration Manager)](../../core/servers/deploy/configure/configure-role-based-administration.md).  
-

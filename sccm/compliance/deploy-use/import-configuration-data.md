@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: 60d0642618a3074fc50a848f1189f4d6559ca916
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="import-configuration-data-with-system-center-configuration-manager"></a>Importar datos de configuración con System Center Configuration Manager
 
@@ -59,9 +58,3 @@ Otros escenarios donde puede producirse un error en el proceso de importación s
 5.  En la página **Resumen**, revise las acciones que deberán realizarse y, después, complete el asistente.  
 
 Los datos de configuración importados se muestran en el nodo **Configuración de cumplimiento** del área de trabajo **Activos y compatibilidad**.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

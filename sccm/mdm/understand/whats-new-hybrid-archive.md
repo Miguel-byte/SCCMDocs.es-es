@@ -6,8 +6,7 @@ ms.date: 06/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4c27b161-9eb7-4cdd-b469-d8eb27e71aea
@@ -15,12 +14,11 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 ROBOTS: NOINDEX, NOFOLLOW
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed6b65a1a5aabc0970cd0333cb033405cf6d2aea
 ms.openlocfilehash: 0abd1cdcf44e778c91bacb8011efd711818ce2e9
-ms.contentlocale: es-es
-ms.lasthandoff: 07/03/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>Características híbridas anteriores con System Center Configuration Manager y Microsoft Intune
 
@@ -561,4 +559,3 @@ No se ha incorporado ninguna característica híbrida nueva en junio de 2016 par
 - **Bloqueo de activación de iOS**
 
   A partir de la versión 1602 de Configuration Manager (rama actual), puede administrar el bloqueo de activación de iOS, una característica de la aplicación Buscar mi iPhone disponible en dispositivos iOS 7.1 y versiones posteriores. El bloqueo de activación se habilita automáticamente cuando se usa la aplicación Buscar mi iPhone en un dispositivo.  Para obtener más información, consulte [Manage iOS Activation Lock bypass for System Center Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock#bypass-activation-lock) (Administración de la omisión del bloqueo de activación de iOS para System Center Configuration Manager).  
-

@@ -6,27 +6,26 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68fe0e7e-351e-4222-853a-877475adb589
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 2ac9f98dc7b455d3b72d794d4311863186ed53ef
 ms.openlocfilehash: cd94f9ccc7e196b30e5dc7ae9368d073b7cff5d2
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="communications-between-endpoints-in-system-center-configuration-manager"></a>Comunicaciones entre puntos de conexión en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
 
-##  <a name="a-nameplanningintra-sitecoma-communications-between-site-systems-in-a-site"></a><a name="Planning_Intra-site_Com"></a> Comunicaciones entre sistemas de sitio de un sitio  
+##  <a name="Planning_Intra-site_Com"></a> Comunicaciones entre sistemas de sitio de un sitio  
  Cuando los sistemas de sitio o los componentes de Configuration Manager se comunican a través de la red con otros sistemas de sitio u otros componentes de Configuration Manager del sitio, usan uno de los siguientes protocolos, según la configuración del sitio:  
 
 -   Bloque de mensajes del servidor (SMB)  
@@ -46,7 +45,7 @@ Para administrar fácilmente la transferencia de contenido desde el servidor de 
 Para más información, vea [Administración del ancho de banda de red para la administración de contenido](manage-network-bandwidth.md).
 
 
-##  <a name="a-nameplanningclienttositesystema-communications-from-clients-to-site-systems-and-services"></a><a name="Planning_Client_to_Site_System"></a> Comunicaciones desde los clientes a los sistemas de sitio y servicios  
+##  <a name="Planning_Client_to_Site_System"></a> Comunicaciones desde los clientes a los sistemas de sitio y servicios  
 Los clientes inician comunicaciones con roles de sistema de sitio, con Servicios de dominio de Active Directory y con servicios en línea. A fin de permitir estas comunicaciones, los firewalls deben permitir el tráfico de red entre los clientes y el extremo de sus comunicaciones. Estos extremos pueden ser los siguientes:  
 
 -   **Punto de sitios web del catálogo de aplicaciones**: admite la comunicación HTTP y HTTPS
@@ -79,7 +78,7 @@ Para más información sobre la ubicación del servicio por clientes, consulte [
 
 Para más información sobre los puertos y protocolos que los clientes usan al comunicarse con estos puntos de conexión, vea [Puertos que se usan en System Center Configuration Manager](../../../core/plan-design/hierarchy/ports.md).  
 
-###  <a name="a-namebkmkclientspana-considerations-for-client-communications-from-the-internet-or-an-untrusted-forest"></a><a name="BKMK_clientspan"></a> Consideraciones sobre las comunicaciones de cliente desde Internet o desde un bosque que no es de confianza  
+###  <a name="BKMK_clientspan"></a> Consideraciones sobre las comunicaciones de cliente desde Internet o desde un bosque que no es de confianza  
 Los siguientes roles de sistema de sitio instalados en los sitios primarios admiten conexiones provenientes de clientes que se encuentran en ubicaciones que no son de confianza, como Internet o un bosque que no es de confianza. (Los sitios secundarios no admiten conexiones de cliente desde ubicaciones que no son de confianza):  
 
 -   Punto de sitios web del catálogo de aplicaciones  
@@ -120,7 +119,7 @@ Como se muestra en el ejemplo anterior, es posible colocar sistemas de sitio bas
 -   **Protocolo de túnel**:   
     Si su servidor proxy web no puede admitir los requisitos del protocolo de puente SSL o si quiere configurar la compatibilidad con Internet para dispositivos móviles inscritos por Configuration Manager, también se admite el protocolo de túnel SSL. Esto es una opción menos segura porque los paquetes SSL de Internet se reenvían a los sistemas de sitio sin terminación SSL, por lo que no se puede comprobar si incluyen contenido malintencionado. Cuando se utiliza el protocolo de túnel SSL, no hay ningún requisito de certificado para el servidor proxy web.  
 
-##  <a name="a-nameplancomx-foresta-communications-across-active-directory-forests"></a><a name="Plan_Com_X-Forest"></a> Comunicaciones entre bosques de Active Directory  
+##  <a name="Plan_Com_X-Forest"></a> Comunicaciones entre bosques de Active Directory  
 System Center Configuration Manager es compatible con sitios y jerarquías que se distribuyen por bosques de Active Directory.  
 
 Configuration Manager también admite equipos de dominio que no están en el mismo bosque de Active Directory que el servidor de sitio, y equipos que están en grupos de trabajo:  
@@ -152,7 +151,7 @@ Configuration Manager también admite equipos de dominio que no están en el mis
 
     -   [How to Install Configuration Manager Clients on Workgroup Computers (Cómo instalar clientes de Configuration Manager en equipos de grupo de trabajo)](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup)  
 
-###  <a name="a-namebkmkspana-scenarios-to-support-a-site-or-hierarchy-that-spans-multiple-domains-and-forests"></a><a name="bkmk_span"></a> Escenarios para admitir un sitio o una jerarquía que abarca varios dominios y bosques  
+###  <a name="bkmk_span"></a> Escenarios para admitir un sitio o una jerarquía que abarca varios dominios y bosques  
 
 #### <a name="communication-between-sites-in-a-hierarchy-that-spans-forests"></a>Comunicación entre sitios en una jerarquía que abarca bosques  
 Este escenario requiere una confianza de bosque bidireccional que admita la autenticación Kerberos.  Si no dispone de una confianza de bosque bidireccional que admita la autenticación Kerberos, Configuration Manager no admitirá un sitio secundario en el bosque remoto.  
@@ -256,11 +255,5 @@ Para publicar información del sitio en otro bosque de Active Directory, debe re
 
 -   Configurar cada sitio para publicar sus datos en Servicios de dominio de Active Directory. Esta configuración permite a los clientes de ese bosque recuperar información del sitio y buscar puntos de administración. Para los clientes que no pueden usar Active Directory Domain Services para la ubicación del servicio, se puede usar DNS, WINS o el punto de administración asignado del cliente.  
 
-###  <a name="a-namebkmkxchangea-put-the-exchange-server-connector-in-a-remote-forest"></a><a name="bkmk_xchange"></a> Colocar el conector de Exchange Server en un bosque remoto  
+###  <a name="bkmk_xchange"></a> Colocar el conector de Exchange Server en un bosque remoto  
 Para admitir este escenario, asegúrese de que la resolución de nombres funcione a través de los bosques (por ejemplo, configure los reenvíos de DNS) y especifique el FQDN de la intranet del servidor Exchange Server al configurar el conector de Exchange Server. Para más información, consulte [Administrar dispositivos móviles mediante System Center Configuration Manager y Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

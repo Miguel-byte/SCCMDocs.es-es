@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 521b90b9d497818a4c1e546fca38cd15d4cab487
 ms.openlocfilehash: 6ee99fa0c07676f004e41a50bf16d0d17604e790
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-application-management-in-system-center-configuration-manager"></a>Seguridad y privacidad de la administración de aplicaciones en System Center Configuration Manager
 
@@ -68,7 +67,7 @@ ms.openlocfilehash: 6ee99fa0c07676f004e41a50bf16d0d17604e790
 
      Aunque puede configurar la configuración de un cliente para restringir permisos de instalación, por ejemplo, a usuarios primarios de un dispositivo o a administradores locales solo, esta configuración no funciona para el portal de la compañía. Esto podría resultar en una elevación de privilegios porque un usuario podría instalar una aplicación que no debería poder instalar.  
 
-##  <a name="a-namebkmkcertificatessilverlight5a-certificates-for-microsoft-silverlight-5-and-elevated-trust-mode-required-for-the-application-catalog"></a><a name="BKMK_CertificatesSilverlight5"></a> Certificados de Microsoft Silverlight 5 y modo de confianza elevado necesarios para el catálogo de aplicaciones  
+##  <a name="BKMK_CertificatesSilverlight5"></a> Certificados de Microsoft Silverlight 5 y modo de confianza elevado necesarios para el catálogo de aplicaciones  
  Los clientes de Configuration Manager requieren Microsoft Silverlight 5, que se debe ejecutar en modo de confianza elevado para que los usuarios puedan instalar software del catálogo de aplicaciones. De forma predeterminada, las aplicaciones de Silverlight se ejecutan en modo de confianza parcial para evitar que las aplicaciones accedan a los datos de usuario. Configuration Manager instala automáticamente Microsoft Silverlight 5 en los clientes si no está instalado aún. De forma predeterminada, Configuration Manager establece la configuración de cliente **Permitir que las aplicaciones de Silverlight se ejecuten en modo de confianza elevado** de Agente de equipo en **Sí**. Esta opción permite que las aplicaciones de Silverlight firmadas y de confianza soliciten el modo de confianza elevado.  
 
  Cuando instala el rol del sistema de sitio del punto de sitios web del catálogo de aplicaciones, el cliente también instala el certificado de firma de Microsoft en el almacén de equipo de editores de confianza de cada equipo cliente de Configuration Manager. Este certificado permite que las aplicaciones de Silverlight firmadas por este certificado se ejecuten en el modo de confianza elevado que requieren los equipos para instalar software desde el catálogo de aplicaciones. Configuration Manager administra automáticamente este certificado de firma. Para garantizar la continuidad del servicio, no elimine ni mueva manualmente este certificado de firma de Microsoft.  
@@ -113,9 +112,3 @@ ms.openlocfilehash: 6ee99fa0c07676f004e41a50bf16d0d17604e790
 -  La información acerca de las solicitudes de aprobación de aplicaciones se almacena en la base de datos de Configuration Manager. Las solicitudes que se cancelan o se deniegan se eliminan de forma predeterminada después de 30 días, junto con las entradas del historial de solicitudes correspondientes. Se puede configurar la eliminación mediante la tarea de mantenimiento de sitio **Eliminar datos antiguos de solicitud de la aplicación** . Las solicitudes de aprobación de aplicaciones que están en estados aprobados y pendientes no se eliminan nunca.  
 -  La información que se envía a y desde el catálogo de aplicaciones no se envía a Microsoft.  
 -  El catálogo de aplicaciones no se instala de forma predeterminada. La instalación requiere varios pasos de configuración.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

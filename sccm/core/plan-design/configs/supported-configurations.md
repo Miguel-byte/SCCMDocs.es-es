@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
-caps.latest.revision: 9
-caps.handback.revision: 0
+caps.latest.revision: "9"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 6b8601a195e81e011c49ae8662ae224f36c82c0d
 ms.openlocfilehash: aad46e9ab893b9bb3e32d35c17b9678b3a265c99
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="supported-configurations-for-system-center-configuration-manager"></a>Configuraciones admitidas para System Center Configuration Manager
 
@@ -72,9 +71,3 @@ Obtenga información sobre las tecnologías de Windows admitidas (como BranchCac
 
 -  [Compatibilidad con entornos de virtualización](../../../core/plan-design/configs/support-for-virtualization-environments.md)  
 Obtenga más información sobre cómo usar tecnologías de máquina virtual compatibles.
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

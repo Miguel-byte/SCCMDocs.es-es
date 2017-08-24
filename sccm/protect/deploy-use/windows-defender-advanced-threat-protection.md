@@ -4,23 +4,21 @@ description: "Aprenda a administrar y supervisar Protección contra amenazas ava
 ms.custom: na
 ms.date: 03/07/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0ebda27c0f3848615346c2ecf1ab8b9bb9ab6f0d
 ms.openlocfilehash: 6c3b67278fa587c137a29e174e277fb0f15872c8
-ms.contentlocale: es-es
-ms.lasthandoff: 05/26/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Protección contra amenazas avanzada de Windows Defender
 
@@ -114,4 +112,3 @@ Protección contra amenazas avanzada de Windows Defender es un servicio en el [C
 [Protección contra amenazas avanzada de Windows Defender](https://technet.microsoft.com/itpro/windows/keep-secure/windows-defender-advanced-threat-protection)
 
 [Solucionar problemas de incorporación de Protección contra amenazas avanzada de Windows Defender](https://technet.microsoft.com/itpro/windows/keep-secure/troubleshoot-onboarding-windows-defender-advanced-threat-protection)
-

@@ -6,22 +6,19 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2745bac-e1b4-4dac-8ac7-32f1c820bc9c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a25c6b409ea6501ead762fabb8cc11c62c84885d
-ms.openlocfilehash: cf98bbb9dee6142e8b085dbffcadb3ed712adcb9
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 88bef04a52f716ae13afc21c25d33dea06a3fc9c
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-ios-activation-lock-with-system-center-configuration-manager"></a>Administración del bloqueo de activación de iOS con System Center Configuration Manager
 
@@ -106,4 +103,3 @@ Solo se puede omitir el bloqueo de activación o recuperar el código de omisió
     - Los datos de detección del dispositivo, que aparecen en el cuadro de diálogo de propiedades del dispositivo.
     - La columna **Activation Lock Bypass State** (Estado de omisión de bloqueo de activación) de la vista **Dispositivos** (esta columna está oculta de forma predeterminada).
     - La sección **Remote Device Actions Information** (Información de acciones de dispositivo remoto) de la pestaña **Resumen** del panel de detalles (cuando hay un dispositivo seleccionado).
-

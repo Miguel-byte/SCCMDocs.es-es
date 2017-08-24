@@ -4,24 +4,22 @@ description: "Conozca las características disponibles en Technical Preview para
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5f861b72-9f14-4d17-a512-4a79b660abe6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: 1d3adcf3310d88b1266388aa03ae5ea03e23f2a5
-ms.contentlocale: es-es
-ms.lasthandoff: 01/24/2017
-
+ms.openlocfilehash: dee2b4ce042bb4a434bb019e17a6b16e2807945c
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1603-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1603 para System Center Configuration Manager
 
@@ -94,4 +92,3 @@ Debe probar la configuración personalizada en su entorno para determinar lo que
      **Valor**: &lt;tamaño de bloque personalizado\>  
 
  El valor predeterminado es 4096 (4k).  
-

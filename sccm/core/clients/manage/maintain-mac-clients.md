@@ -6,24 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cf6337a2-700c-47f3-b6f8-5814f9b81e59
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c74b553ab76a2b77b0d893151351132da05a640d
-ms.openlocfilehash: 5b75f3296dc20a6766a894f463e958455ca1d65f
-ms.contentlocale: es-es
-ms.lasthandoff: 01/03/2017
-
-
+ms.openlocfilehash: 3bf6651f58dc0c2aa4773f77115c3fbcd4a33221
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="maintain-mac-clients"></a>Mantenimiento de clientes Mac
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
@@ -99,7 +95,7 @@ A continuación se indican procedimientos para desinstalar clientes Mac y para r
 
     -   **Nombre: Quitar SMSID para Mac**  
 
-    -   **Tipo de configuraciónscript:**  
+    -   **Tipo de configuraciónscript**:  
 
     -   **Tipo de datoscadena:**  
 
@@ -127,7 +123,7 @@ A continuación se indican procedimientos para desinstalar clientes Mac y para r
 
     -   **Nombre: Quitar SMSID para Mac**  
 
-    -   **Configuración seleccionada:** seleccione **Examinar** y, luego, seleccione el script de detección especificado previamente.  
+    -   **Configuración seleccionada**: seleccione **Examinar** y, luego, seleccione el script de detección especificado previamente.  
 
     -   En el campo **los siguientes valores** escriba **El dominio/par predeterminado (com.microsoft.ccmclient, SMSID) no existe**.  
 
@@ -135,7 +131,7 @@ A continuación se indican procedimientos para desinstalar clientes Mac y para r
 
 13. Complete el Asistente para crear elemento de configuración.  
 
-14. Cree una línea base de configuración que contenga el elemento de configuración que acaba de crear e impleméntela en la recopilación de dispositivos que creó en el paso 1.  
+14. Cree una línea base de configuración que contenga el elemento de configuración que acaba de crear e impleméntela en la recopilación de dispositivos que ha creado en el paso 1.  
 
      Para obtener más información sobre cómo crear e implementar líneas de base de configuración, consulte [How to create configuration baselines in System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-baselines.md) (Cómo crear líneas base de configuración en System Center Configuration Manager) y [How to deploy configuration baselines in System Center Configuration Manager](../../../compliance/deploy-use/deploy-configuration-baselines.md) (Cómo implementar líneas base de configuración en System Center Configuration Manager).  
 
@@ -162,5 +158,4 @@ A continuación se indican procedimientos para desinstalar clientes Mac y para r
     f.  Seleccione **Guardar cambios** y cierre el cuadro de diálogo **Keychain Access** (Acceso a cadenas de claves).  
 
 17. Reinicie el equipo Mac.  
-
 

@@ -6,23 +6,20 @@ ms.date: 06/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
-caps.latest.revision: 21
-caps.handback.revision: 0
+caps.latest.revision: "21"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
 ms.openlocfilehash: 98f902429ad1b9965a0dc4cc2e1bd071ad5c0779
-ms.contentlocale: es-es
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-stand-alone-media-with-system-center-configuration-manager"></a>Crear medios independientes con System Center Configuration Manager
 
@@ -176,4 +173,3 @@ Antes de ejecutar el Asistente para crear medio de secuencia de tareas para crea
 |Instalar Windows y Configuration Manager|Use este paso de secuencia de tareas para instalar el software cliente de Configuration Manager. Configuration Manager instala y registra el GUID del cliente de Configuration Manager. Puede asignar los parámetros de instalación necesarios en la ventana **Propiedades de instalación** .|  
 |Restaurar archivos de usuario y la configuración - **(nuevo grupo de secuencia de tareas)**|Cree otro grupo de subsistema de secuencia de tareas. Este grupo secundario contiene los pasos necesarios para restaurar el estado del usuario.|  
 |Restaurar estado de usuario|Use este paso de secuencia de tareas para iniciar la herramienta de migración de estado de usuario (USMT) con el fin de restaurar la configuración y el estado de usuario que se capturaron con la acción Capturar estado de usuario en el equipo de destino.|  
-

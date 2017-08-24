@@ -6,23 +6,20 @@ ms.date: 3/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ee7f69bd65152deffb2456d9807e1e8fee8802ec
 ms.openlocfilehash: cd90f5462ac4bb4c0a2021e6d5dde65161b9c5f6
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prerequisites-for-migration-in-system-center-configuration-manager"></a>Requisitos previos para la migración en System Center Configuration Manager
 
@@ -128,4 +125,3 @@ A continuación, se enumeran las configuraciones necesarias para el uso de migra
     -   Para reasignar un punto de distribución de System Center 2012 Configuration Manager o de System Center Configuration Manager, la cuenta debe tener el permiso **Modificar** para el objeto **Sitio** en el sitio de origen. Este permiso se concede a la cuenta mediante la administración basada en roles. Para obtener información sobre cómo usar la administración basada en roles, consulte [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md) (Conceptos básicos de la administración basada en roles de System Center Configuration Manager).  
 
      Para actualizar o reasignar correctamente un punto de distribución a una nueva jerarquía, los puertos que se configuran para solicitudes de clientes, en el sitio que administra el punto de distribución de la jerarquía de origen, deben coincidir con los puertos que se configuran para solicitudes de clientes en el sitio de destino que administrará el punto de distribución. Para obtener información sobre los puertos de solicitud de cliente, consulte [How to configure client communication ports in System Center Configuration Manager](../../core/clients/deploy/configure-client-communication-ports.md) (Configurar puertos de comunicación de cliente en System Center Configuration Manager).  
-

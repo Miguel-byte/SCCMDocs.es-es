@@ -4,23 +4,21 @@ description: "Conozca las características disponibles en Technical Preview para
 ms.custom: na
 ms.date: 03/24/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2e801f8c-d331-41ee-8f27-908448fc0951
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f4cb711f369698fe8e045f8c83dd96ec6fb29d70
 ms.openlocfilehash: bb1b96a56db68dcea22270855b899ba3a90afd0d
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1703 para System Center Configuration Manager
 
@@ -61,12 +59,12 @@ Use el siguiente formato de dirección URL para abrir el centro de software desd
 
 ### <a name="how-to-get-the-application-identifier-of-an-application"></a>Cómo obtener el identificador de aplicación de una aplicación.
 
-1.    En la consola de Configuration Manager, haga clic en **Biblioteca de software**.
-2.    En el área de trabajo Biblioteca de software, expanda **Administración de aplicaciones** y, después, haga clic en **Aplicaciones**.
-3.    En la vista **Aplicaciones**, haga clic con el botón derecho en uno de los encabezados de columna y, después, en la lista seleccione **Id. único de CI**. Verá que el identificador único de cada aplicación se muestra ahora en la lista.
-4.    Tenga en cuenta el **Id. único de CI** de la aplicación a la que quiere proporcionar un vínculo, por ejemplo: **ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
-5.    Después, quite cualquier texto que aparezca tras el GUID de la aplicación, en este caso, **/2**. Esto le deja con el identificador de aplicación.
-6.    Por último, para terminar de crear el vínculo, anteponga **Softwarecenter:SoftwareID=**. Siguiendo con el ejemplo anterior, el vínculo final será: **Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**.
+1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software**.
+2.  En el área de trabajo Biblioteca de software, expanda **Administración de aplicaciones** y, después, haga clic en **Aplicaciones**.
+3.  En la vista **Aplicaciones**, haga clic con el botón derecho en uno de los encabezados de columna y, después, en la lista seleccione **Id. único de CI**. Verá que el identificador único de cada aplicación se muestra ahora en la lista.
+4.  Tenga en cuenta el **Id. único de CI** de la aplicación a la que quiere proporcionar un vínculo, por ejemplo: **ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
+5.  Después, quite cualquier texto que aparezca tras el GUID de la aplicación, en este caso, **/2**. Esto le deja con el identificador de aplicación.
+6.  Por último, para terminar de crear el vínculo, anteponga **Softwarecenter:SoftwareID=**. Siguiendo con el ejemplo anterior, el vínculo final será: **Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**.
 
 Mediante este vínculo, los usuarios finales pueden abrir el centro de software directamente en la aplicación especificada.
 
@@ -86,17 +84,17 @@ Technical Preview 1703 presenta el asistente para la **configuración de Servici
 
 Con Technical Preview 1703, con este asistente solo se configura la Tienda Windows para empresas (WSfB).  Otros servicios en la nube se configuran mediante sus flujos de trabajo independientes.
 
--    Use la información de este tema de vista previa para reemplazar los pasos de configuración que se encuentran en la sección [Configuración de la sincronización de la Tienda Windows para empresas](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#set-up-windows-store-for-business-synchronization) del tema de la rama actual [Administración de aplicaciones desde la Tienda Windows para empresas con System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+-   Use la información de este tema de vista previa para reemplazar los pasos de configuración que se encuentran en la sección [Configuración de la sincronización de la Tienda Windows para empresas](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#set-up-windows-store-for-business-synchronization) del tema de la rama actual [Administración de aplicaciones desde la Tienda Windows para empresas con System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
--    Para obtener más información sobre las aplicaciones web, vea [Autenticación y autorización en el Servicio de aplicaciones de Azure](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview) e [Introducción a Aplicaciones web](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
+-   Para obtener más información sobre las aplicaciones web, vea [Autenticación y autorización en el Servicio de aplicaciones de Azure](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview) e [Introducción a Aplicaciones web](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
 
 ### <a name="prerequisites-and-planning"></a>Requisitos previos y planeamiento
 Cuando establezca una conexión entre Configuration Manager y la Tienda Windows para empresas, deberá proporcionar una carpeta donde se conservará el contenido de la aplicación sincronizado desde la tienda. Para asegurarse de que esta carpeta sea segura y que su contenido se pueda implementar en dispositivos, compruebe que se hayan aplicado los permisos siguientes:
--    El equipo en el que instale el rol de sistema de sitio del punto de conexión de servicio (el sitio de nivel superior de la jerarquía) debe tener permisos de lectura y escritura en la carpeta que haya especificado al usar la cuenta **Computer$**.  
+-   El equipo en el que instale el rol de sistema de sitio del punto de conexión de servicio (el sitio de nivel superior de la jerarquía) debe tener permisos de lectura y escritura en la carpeta que haya especificado al usar la cuenta **Computer$**.  
 
--    El autor de la aplicación debe tener permisos de lectura en la carpeta que haya especificado.  
+-   El autor de la aplicación debe tener permisos de lectura en la carpeta que haya especificado.  
 
--    La cuenta **Computer$** de cada equipo que hospede una instancia del proveedor de SMS debe poder usar la carpeta que haya especificado.
+-   La cuenta **Computer$** de cada equipo que hospede una instancia del proveedor de SMS debe poder usar la carpeta que haya especificado.
 
 En Azure Active Directory, registre Configuration Manager como una herramienta de administración de aplicación web o API web. De este modo, se crea el identificador de cliente que necesitará más adelante.
 
@@ -112,8 +110,8 @@ En Azure Active Directory, registre Configuration Manager como una herramienta d
 
 5. En la ventana **Aplicación del servidor**, seleccione la aplicación de servidor que quiera usar y, después, haga clic en **Aceptar**.
 Las aplicaciones de servidor son las aplicaciones web de Azure que contienen las configuraciones de la cuenta de Azure, incluidos el identificador de inquilino, el identificador de cliente y una clave secreta para los clientes. Si no tiene una aplicación de servidor disponible, use una de las siguientes:
-  -    **Crear**: para crear una nueva aplicación de servidor haga clic en **Crear**. Proporcione un nombre descriptivo para la aplicación y el inquilino. Después, una vez que inicie sesión en Azure, Configuration Manager crea automáticamente la aplicación web en Azure, incluidos el identificador de cliente y la clave secreta para su uso con la aplicación web. Podrá verlos más adelante desde Azure Portal.
-  -    **Importar**: para usar una aplicación web que ya existe en su suscripción de Azure, haga clic en **Importar**. Proporcione un nombre descriptivo para la aplicación y el inquilino y, después, especifique el identificador del inquilino, el identificador de cliente y la clave secreta de la aplicación web que quiere que use Configuration Manager. Después de **Comprobar** la información, haga clic en **Aceptar** para continuar.  </br></br>
+  - **Crear**: para crear una nueva aplicación de servidor haga clic en **Crear**. Proporcione un nombre descriptivo para la aplicación y el inquilino. Después, una vez que inicie sesión en Azure, Configuration Manager crea automáticamente la aplicación web en Azure, incluidos el identificador de cliente y la clave secreta para su uso con la aplicación web. Podrá verlos más adelante desde Azure Portal.
+  - **Importar**: para usar una aplicación web que ya existe en su suscripción de Azure, haga clic en **Importar**. Proporcione un nombre descriptivo para la aplicación y el inquilino y, después, especifique el identificador del inquilino, el identificador de cliente y la clave secreta de la aplicación web que quiere que use Configuration Manager. Después de **Comprobar** la información, haga clic en **Aceptar** para continuar.  </br></br>
 
 6. Revise la página **Información** y complete los pasos y configuraciones adicionales tal como se indica. Estas configuraciones son necesarias para usar el servicio con Configuration Manager.
 Por ejemplo, para configurar WSfB:

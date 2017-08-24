@@ -6,22 +6,19 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68fe11fa-5fb2-4b81-b0f5-b6f2392fb4ad
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 6d5d5eb9e4bf0297e2d86bf591dab5b3f42c95fa
-ms.contentlocale: es-es
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: 6cbf2389a72c0c384ef8e84a1755ac77b64bfc6d
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-windows-phone-applications-with-system-center-configuration-manager"></a>Crear aplicaciones de Windows Phone con System Center Configuration Manager
 
@@ -66,4 +63,3 @@ Consulte [Inicie el Asistente para crear aplicaciones](../../apps/deploy-use/cre
 |**Paso 5**: eliminar la implementación que se crea automáticamente cuando se agrega la aplicación de portal de empresa al Asistente para crear suscripción de Microsoft Intune.|La suscripción a Microsoft Intune ha creado una implementación automática de esta aplicación, ya que la implementación no admite la sustitución.|  
 |**Paso 6:** crear una nueva implementación de la aplicación. En la página **Configuración de implementación** del **Asistente para implementar software**, active **Actualizar automáticamente cualquier versión reemplazada de esta aplicación**.|Cree una nueva implementación con sustitución mediante la aplicación creada con la relación de sustitución.|  
 |**Paso 7 (opcional):** de manera predeterminada, las aplicaciones de sustitución se instalan en los dispositivos después de 7 días. Para implementar la aplicación del portal de la compañía en dispositivos inscritos previamente más pronto, asigne un valor menor a la opción **Programar la reevaluación para implementaciones** .<br /><br /> Si establece esta opción en un valor inferior al predeterminado, podría afectar negativamente al rendimiento de la red y los equipos cliente.|No hay información adicional.|  
-

@@ -6,22 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 101d7d4d-92db-419d-b2ae-3c1c1dea68e9
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bc610b495047c49853c0a8f478cbf2773c0d3603
-ms.openlocfilehash: e50095ef618ec40a51c29ef2c8116f8e07401bd1
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
+ms.openlocfilehash: 744bc3792a02f13d3cf940cd1a4f2fd8749ee2f4
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>Acerca de las propiedades de instalación de cliente publicadas en Active Directory Domain Services
 
@@ -127,4 +125,3 @@ Estos equipos cliente no pueden leer ni tener acceso a las propiedades de instal
 -   Clientes asignados a un sitio de Configuration Manager que no está publicado en Active Directory Domain Services.  
 
 -   Clientes que se instalan cuando están en Internet.  
-

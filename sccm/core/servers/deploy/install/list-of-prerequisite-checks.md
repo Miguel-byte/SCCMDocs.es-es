@@ -6,21 +6,19 @@ ms.date: 4/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dda2f4c01078fbbd174cbcb30357554c24f6abeb
 ms.openlocfilehash: 14834f62ffaa8fcba5ddb7536a0b76e18b557e53
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="list-of-prerequisite-checks-for-system-center-configuration-manager"></a>Lista de comprobaciones de requisitos previos de System Center Configuration Manager
 
@@ -126,4 +124,3 @@ En la tabla siguiente se enumeran las comprobaciones que realiza el Comprobador 
 |**Sistema operativo de la consola de Configuration Manager no admitido**|Comprueba que la consola de Configuration Manager puede instalarse en equipos que ejecutan una versión de sistema operativo compatible. Para obtener más información, vea [Sistemas operativos compatibles con consolas de System Center Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-consoles).|Error|Consola de Configuration Manager|
 |**Versión del sistema operativo de servidor de sitio no compatible con el programa de instalación**|Comprueba si se está ejecutando un sistema operativo compatible en el servidor. Para obtener más información, vea [Sistemas operativos compatibles con servidores de sistema de sitio de System Center Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers.md).|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario, <br>Consola de Configuration Manager, <br>Punto de administración, <br>Punto de distribución|
 |**Comprobar la coherencia de la base de datos**|A partir de la versión 1602, este proceso comprueba la coherencia de la base de datos.|Error|Sitio de administración central, <br>Sitio primario|  
-

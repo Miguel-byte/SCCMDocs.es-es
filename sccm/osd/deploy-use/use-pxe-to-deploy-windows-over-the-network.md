@@ -6,23 +6,20 @@ ms.date: 06/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
-caps.latest.revision: 19
-caps.handback.revision: 0
+caps.latest.revision: "19"
+caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
 ms.openlocfilehash: b88ab3799027c78a8c605e934b247097b31e1d21
-ms.contentlocale: es-es
-ms.lasthandoff: 06/28/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>Usar PXE para implementar Windows a través de la red con System Center Configuration Manager
 
@@ -107,4 +104,3 @@ Cuando un cliente arranca con el entorno PXE, Configuration Manager ofrece al cl
 3. En la lista de las secuencias de tareas que se encontraron en el paso 2, Configuration Manager busca una imagen de arranque que coincida con la arquitectura del cliente que está intentando arrancar. Si se encuentra una imagen de arranque con la misma arquitectura, se usa esa imagen.
 
 4. Si no se encuentra una imagen de arranque con la misma arquitectura, Configuration Manager busca una imagen de arranque que sea compatible con la arquitectura del cliente. Busca en la lista de secuencias de tareas que se encuentra en el paso 2. Por ejemplo, un cliente de 64 bits es compatible con imágenes de arranque de 32 bits y 64 bits. Un cliente de 32 bits solo es compatible con imágenes de arranque de 32 bits. Un cliente UEFI solo es compatible con imágenes de arranque de 64 bits.
-

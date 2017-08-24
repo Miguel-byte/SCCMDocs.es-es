@@ -6,23 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="creating-custom-report-models-for-system-center-configuration-manager-in-sql-server-reporting-services"></a>Creación de modelos de informes personalizados para System Center Configuration Manager en SQL Server Reporting Services
 
@@ -424,4 +421,3 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
     > [!IMPORTANT]  
     >  Después de copiar el archivo de modelo de informe en el servidor de sitio de Configuration Manager, debe salir y reiniciar la consola de Configuration Manager para poder usar el modelo de informe en el **Asistente para crear informes**.  
-

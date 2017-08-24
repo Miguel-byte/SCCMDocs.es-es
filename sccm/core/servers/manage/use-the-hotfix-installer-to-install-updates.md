@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 8ffc7383e895909e6e6c4b8a7875fd5f0df2220e
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>Uso del instalador de revisiones para instalar actualizaciones para System Center Configuration Manager
 
@@ -33,7 +32,7 @@ Si necesita instalar una actualización (o revisión) procedente de Microsoft y 
 > [!NOTE]  
 >  En este tema se proporcionan instrucciones generales sobre cómo instalar las revisiones que actualizan System Center Configuration Manager. Para obtener información más detallada acerca de una actualización específica, consulte su correspondiente artículo de Knowledge Base (KB) en Soporte técnico de Microsoft.  
 
-##  <a name="a-namebkmkoverviewa-overview-of-hotfixes-for-configuration-manager"></a><a name="bkmk_Overview"></a> Información general sobre revisiones de Configuration Manager  
+##  <a name="bkmk_Overview"></a> Información general sobre revisiones de Configuration Manager  
  Las revisiones para Configuration Manager son similares a las de otros productos de Microsoft, como SQL Server, contienen una revisión individual o un paquete (un paquete acumulativo de revisiones) y se describen en un artículo de Microsoft Knowledge Base.  
 
  Las actualizaciones individuales contienen una única actualización diseñada para una versión específica de Configuration Manager.  
@@ -71,7 +70,7 @@ El asistente también crea implementaciones que puede utilizar para instalar las
 -   Cliente de Configuration Manager  
 
 > [!NOTE]  
-> Las  **actualizaciones para los roles de sistema de sitio** (incluidas las actualizaciones para los puntos de distribución basados en la nube y la base de datos del sitio) las instala el Administrador de componentes de sitio como parte de la actualización de los servicios y servidores de sitio.  
+>  Las **actualizaciones para los roles de sistema de sitio** (incluidas las actualizaciones para los puntos de distribución basados en la nube y la base de datos del sitio) las instala el Administrador de componentes de sitio como parte de la actualización de los servicios y servidores de sitio.  
 >   
 >  Sin embargo, de los puntos de distribución de extracción de actualizaciones se ocupa el administrador de distribución y no el Administrador de componentes de sitio.  
 
@@ -101,7 +100,7 @@ El asistente también crea implementaciones que puede utilizar para instalar las
 |&lt;Tipo de actualización\>|Estos son los tipos de actualizaciones de Configuration Manager. El asistente crea una carpeta independiente para cada tipo de actualización incluida en la agrupación de actualizaciones. Los nombres de carpeta representan los tipos de actualización. Incluyen los siguientes:<br /><br /> **Servidor**: incluye actualizaciones de los servidores de sitio, servidores de base de datos de sitio y equipos que ejecutan el proveedor de SMS.<br /><br /> **Cliente**: incluye actualizaciones del cliente de Configuration Manager.<br /><br /> **AdminConsole**: incluye actualizaciones de la consola de Configuration Manager.<br /><br /> Además de los tipos de actualización anteriores, el asistente crea una carpeta denominada **SCUP**. Esta carpeta no representa un tipo de actualización, sino que contiene el archivo .cab para Updates Publisher.|  
 |&lt;Plataforma\>|Se trata de una carpeta específica de la plataforma. Contiene archivos de actualización que son específicos de un tipo de procesador.  Estas carpetas incluyen:<br /><br />- x64<br /><br /> - I386|  
 
-##  <a name="a-namebkmkinstalla-how-to-install-updates"></a><a name="bkmk_Install"></a> Instalación de actualizaciones  
+##  <a name="bkmk_Install"></a> Instalación de actualizaciones  
  Para poder instalar las actualizaciones, primero debe instalar la agrupación de actualizaciones en un servidor de sitio. Cuando instala una agrupación de actualizaciones, inicia un asistente de instalación para dicha actualización. Este asistente hace lo siguiente:  
 
 -   Extrae los archivos de actualización.  
@@ -127,15 +126,15 @@ Una vez que la agrupación de actualizaciones esté instalada en un servidor de 
 
  Use la información de las secciones siguientes para instalar actualizaciones en cada uno de los componentes de Configuration Manager.  
 
-###  <a name="a-namebkmkserversa-update-servers"></a><a name="bkmk_servers"></a> Actualización de servidores  
+###  <a name="bkmk_servers"></a> Actualización de servidores  
  Las actualizaciones de servidores pueden incluir actualizaciones de los **sitios**, la **site database**y los equipos que ejecutan una instancia del **proveedor de SMS**:  
 
-####  <a name="a-namebkmksitea-update-a-site"></a><a name="bkmk_site"></a> Actualizar un sitio  
+####  <a name="bkmk_site"></a> Actualizar un sitio  
  Para actualizar un sitio de Configuration Manager, puede instalar la agrupación de actualizaciones directamente en el servidor de sitio o implementar las actualizaciones en un servidor de sitio después de instalar la agrupación en otro sitio.  
 
  Cuando instala una actualización en un servidor de sitio, el proceso de instalación de la actualización administra acciones adicionales que son necesarias para aplicar la actualización, como la actualización de los roles de sistema de sitio. La excepción a esto es la base de datos del sitio. La siguiente sección contiene información acerca de cómo actualizar la base de datos del sitio.  
 
-####  <a name="a-namebkmkdatabasea-update-a-site-database"></a><a name="bkmk_database"></a> Actualizar una base de datos del sitio  
+####  <a name="bkmk_database"></a> Actualizar una base de datos del sitio  
  Para actualizar la base de datos del sitio, el proceso de instalación ejecuta un archivo denominado **update.sql** en la base de datos del sitio. Puede configurar el proceso de actualización para actualizar automáticamente la base de datos del sitio o puede actualizar manualmente la base de datos del sitio más adelante.  
 
  **Actualización automática de la base de datos del sitio**  
@@ -167,12 +166,12 @@ Una vez que la agrupación de actualizaciones esté instalada en un servidor de 
 
 5.  Cuando se instala la agrupación de actualizaciones, extrae **update.sql** en la siguiente ubicación en el servidor de sitio: **\\\\&lt;Nombre de servidor\>\SMS_&lt;Código de sitio\>\Revisión\\&lt;Número de KB\>\update.sql**.  
 
-####  <a name="a-namebkmkprovidera-update-a-computer-that-runs-the-sms-provider"></a><a name="bkmk_provider"></a> Actualizar un equipo que ejecuta el proveedor de SMS  
+####  <a name="bkmk_provider"></a> Actualizar un equipo que ejecuta el proveedor de SMS  
  Después de instalar una agrupación de actualizaciones que incluye actualizaciones para el proveedor de SMS, debe implementar la actualización en cada equipo que ejecuta el proveedor de SMS. La única excepción es la instancia del proveedor de SMS que se instaló previamente en el servidor de sitio en el que se instala la agrupación de actualizaciones. La instancia local del proveedor de SMS en el servidor de sitio se actualiza cuando se instala la agrupación de actualizaciones.  
 
  Si quita y vuelve a instalar el proveedor de SMS en un equipo, debe volver a instalar la actualización del proveedor de SMS en ese equipo.  
 
-###  <a name="a-namebkmkclientsa-update-clients"></a><a name="BKMK_clients"></a> Actualizar clientes  
+###  <a name="BKMK_clients"></a> Actualizar clientes  
  Al instalar una actualización que incluye actualizaciones para el cliente de Configuration Manager, se le ofrecerá la opción de actualizar automáticamente los clientes con la instalación de actualización, o bien actualizar manualmente los clientes en un momento posterior. Para más información sobre la actualización automática de clientes, consulte [Actualizar clientes de equipos Windows con System Center Configuration Manager](https://technet.microsoft.com/library/mt627885.aspx).  
 
  Puede implementar las actualizaciones con Updates Publisher o con un paquete de implementación de software. También puede instalar manualmente la actualización en dicho cliente. Para más información sobre el uso de implementaciones para instalar actualizaciones, consulte la sección [Implementación de actualizaciones de Configuration Manager](#BKMK_Deploy) de este tema.  
@@ -184,7 +183,7 @@ Para instalar manualmente la actualización de cliente, debe ejecutar **Msiexec.
 
  Por ejemplo, puede utilizar la siguiente línea de comandos para realizar una actualización del cliente. Esta línea de comandos ejecuta MSIEXEC en el equipo cliente y hace referencia al archivo .msp que la agrupación de actualizaciones extrajo en el servidor de sitio: **msiexec.exe /p \\\\&lt;NombreDelServidor\>\SMS_&lt;CódigoDelSitio\>\Revisión\\&lt;Número de KB\>\Cliente\\&lt;Plataforma\>\\&lt;msp\> /L\*v &lt;archivoDeRegistro\>REINSTALLMODE=mous REINSTALL=ALL**.  
 
-###  <a name="a-namebkmkconsolea-update-configuration-manager-consoles"></a><a name="BKMK_console"></a> Actualizar consolas de Configuration Manager  
+###  <a name="BKMK_console"></a> Actualizar consolas de Configuration Manager  
  Para actualizar una consola de Configuration Manager, debe instalar la actualización en el equipo que ejecuta la consola al finalizar la instalación de la misma.  
 
 > [!IMPORTANT]  
@@ -200,10 +199,10 @@ Si el equipo que está actualizando ejecuta el cliente de Configuration Manager:
 
 Por ejemplo, puede usar la siguiente línea de comandos para actualizar una consola de Configuration Manager. Esta línea de comandos ejecuta MSIEXEC en el equipo y hace referencia al archivo .msp que la agrupación de actualizaciones extrajo en el servidor de sitio: **msiexec.exe /p \\\\&lt;NombreDelServidor\>\SMS_&lt;CódigoDelSitio\>\Revisión\\&lt;Número de KB\>\AdminConsole\\&lt;Plataforma\>\\&lt;msp\> /L\*v &lt;archivoDeRegistro\>REINSTALLMODE=mous REINSTALL=ALL**.  
 
-##  <a name="a-namebkmkdeploya-deploy-updates-for-configuration-manager"></a><a name="BKMK_Deploy"></a> Implementación de actualizaciones de Configuration Manager  
+##  <a name="BKMK_Deploy"></a> Implementación de actualizaciones de Configuration Manager  
  Después de instalar la agrupación de actualizaciones en un servidor de sitio, puede usar uno de los tres métodos siguientes para implementar actualizaciones en otros equipos.  
 
-###  <a name="a-namebkmkdeployscupa-use-updates-publisher-2011-to-install-updates"></a><a name="BKMK_DeploySCUP"></a> Usar Updates Publisher 2011 para instalar actualizaciones  
+###  <a name="BKMK_DeploySCUP"></a> Usar Updates Publisher 2011 para instalar actualizaciones  
  Cuando se instala la agrupación de actualizaciones en un servidor de sitio, el Asistente para instalación crea un archivo de catálogo para Updates Publisher que puede usar para implementar las actualizaciones en los equipos correspondientes. El asistente siempre crea este catálogo, incluso cuando la opción **Use package and program to deploy this update**.  
 
  El catálogo de Updates Publisher se denomina **SCUPCatalog.cab** y se encuentra en la ubicación siguiente del equipo en el que se ejecuta la agrupación de actualizaciones: **\\\\&lt;NombreDeServidor\>\SMS_&lt;Código de sitio\>\Revisión\\&lt;Número de KB\>\SCUP\SCUPCatalog.cab**.  
@@ -231,7 +230,7 @@ Por ejemplo, puede usar la siguiente línea de comandos para actualizar una cons
 
 7.  Complete el asistente para publicar las actualizaciones.  
 
-###  <a name="a-namebkmkdeployswdista-use-software-deployment-to-install-updates"></a><a name="BKMK_DeploySWDist"></a> Usar la implementación de software para instalar actualizaciones  
+###  <a name="BKMK_DeploySWDist"></a> Usar la implementación de software para instalar actualizaciones  
  Cuando instala la agrupación de actualizaciones en el servidor de sitio de un sitio primario o de un sitio de administración central, puede configurar el Asistente de instalación para crear paquetes de actualizaciones para la implementación de software. A continuación, puede implementar cada paquete en la recopilación de equipos que desea actualizar.  
 
  Para crear un paquete de implementación de software, en la página **Configurar implementación de actualización de software** del asistente, active la casilla de cada tipo de paquete de actualización que desee actualizar. Los tipos disponibles pueden ser servidores, consolas de Configuration Manager y clientes. Se crea un paquete independiente para cada tipo de actualización que se selecciona.  
@@ -249,7 +248,7 @@ Por ejemplo, puede usar la siguiente línea de comandos para actualizar una cons
 
  Para obtener información sobre cómo implementar paquetes en clientes de Configuration Manager, consulte [Packages and programs in System Center Configuration Manager](../../../apps/deploy-use/packages-and-programs.md) (Paquetes y programas en System Center Configuration Manager).  
 
-###  <a name="a-namebkmkdeploycollectionsa-create-collections-for-deploying-updates-to-configuration-manager"></a><a name="BKMK_DeployCollections"></a> Crear recopilaciones para implementar actualizaciones en Configuration Manager  
+###  <a name="BKMK_DeployCollections"></a> Crear recopilaciones para implementar actualizaciones en Configuration Manager  
  Puede implementar determinadas actualizaciones en los clientes correspondientes. La siguiente información puede ayudarle a crear recopilaciones de dispositivos para los componentes de Configuration Manager.  
 
 |Componentes de Configuration Manager|Instrucciones|  
@@ -266,9 +265,3 @@ Por ejemplo, puede usar la siguiente línea de comandos para actualizar una cons
 >  Para actualizar una base de datos del sitio, implemente la actualización en el servidor de sitio para ese sitio.  
 
  Para más información sobre la creación de recopilaciones, consulte [Cómo crear recopilaciones en System Center Configuration Manager](../../../core/clients/manage/collections/create-collections.md).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

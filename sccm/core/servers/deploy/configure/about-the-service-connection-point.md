@@ -6,23 +6,20 @@ ms.date: 6/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bc2282d5-0571-465b-9528-a555855eaacd
-caps.latest.revision: 18
-caps.handback.revision: 0
+caps.latest.revision: "18"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0ec241d07f51b80b84d65676ef1207b31a9a9983
 ms.openlocfilehash: e3d41dc1bb732e887d722f39ee86deaf0aae3240
-ms.contentlocale: es-es
-ms.lasthandoff: 06/28/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="about-the-service-connection-point-in-system-center-configuration-manager"></a>Acerca del punto de conexión de servicio en System Center Configuration Manager
 
@@ -130,4 +127,3 @@ Para consultar información sobre las cargas en Microsoft, vea **Dmpuploader.log
 También puede utilizar los diagramas de flujo siguientes para conocer el flujo del proceso y las entradas del registro de claves para descargas de actualización y replicación de actualizaciones en otros sitios:
  - [Diagrama de flujo: descargar actualizaciones](/sccm/core/servers/manage/download-updates-flowchart)
  - [Diagrama de flujo: replicación de actualización](/sccm/core/servers/manage/update-replication-flowchart)
-

@@ -6,22 +6,19 @@ ms.date: 05/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d940fd1bbf96767d44f8c55315e814be55a83897
 ms.openlocfilehash: 91c1ca860069c6ebe0d20230c4620bf3f68735a2
-ms.contentlocale: es-es
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Introducción a la rama de mantenimiento a largo plazo de System Center Configuration Manager
 
@@ -55,10 +52,10 @@ Aunque la compatibilidad con estas características no está disponible en la LT
 ## <a name="find-documentation-for-the-ltsb"></a>Buscar documentación de la LTSB
 La LTSB se basa en la versión 1606 de la rama actual. Para obtener documentación del producto, use la [documentación de la rama actual](https://docs.microsoft.com/sccm/), con advertencias y limitaciones que son específicas de la LTSB. Estas advertencias y limitaciones se identifican en los temas en línea siguientes:
 
--      [Introducción a la rama de mantenimiento a largo plazo de System Center Configuration Manager](introduction-to-the-ltsb.md) (este tema)
--      [Instalar y actualizar con el medio de línea base de la versión 1606 para System Center Configuration Manager](install-the-ltsb.md)
--      [Actualizar la rama de mantenimiento a largo plazo a la rama actual](convert-to-current-branch.md)
--      [Configuraciones admitidas para la rama de mantenimiento a largo plazo](supported-configurations-for-ltsb.md)
+-     [Introducción a la rama de mantenimiento a largo plazo de System Center Configuration Manager](introduction-to-the-ltsb.md) (este tema)
+-     [Instalar y actualizar con el medio de línea base de la versión 1606 para System Center Configuration Manager](install-the-ltsb.md)
+-     [Actualizar la rama de mantenimiento a largo plazo a la rama actual](convert-to-current-branch.md)
+-     [Configuraciones admitidas para la rama de mantenimiento a largo plazo](supported-configurations-for-ltsb.md)
 -   [Administrar la rama de mantenimiento a largo plazo de Configuration Manager](manage-the-ltsb.md)
 
 Cuando se hace referencia a la documentación de la rama actual sobre la LTSB, los detalles que se aplican a la versión 1606 también se aplican a la LTSB. Las características o los detalles que se presentan con la versión 1610 o versiones posteriores no se admiten en la LTSB.
@@ -78,4 +75,3 @@ Para obtener más información sobre licencias para ramas de Configuration Manag
 Si decide que la LTSB de Configuration Manager es la rama adecuada para su entorno, [instale un nuevo sitio de LTSB](/sccm/core/understand/install-the-ltsb#install-a-new-site) como parte de una nueva jerarquía o [actualice un sitio de System Center 2012 Configuration Manager](/sccm/core/understand/install-the-ltsb#upgrade-from-system-center-2012-configuration-manager) y la jerarquía.
 
 Si no dispone de medios de instalación, vea la [documentación de System Center 2016](https://technet.microsoft.com/system-center-docs/system-center) para obtener información sobre cómo obtener System Center 2016, que incluye medios que puede usar para instalar la LSTB de System Center Configuration Manager.  
-

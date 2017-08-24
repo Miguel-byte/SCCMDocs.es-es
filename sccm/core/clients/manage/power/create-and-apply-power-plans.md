@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 738eddaa-52e2-467f-b453-821ef2884d47
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: de81da31b524cebe8e820766a64ecc5fdb7e4771
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-create-and-apply-power-plans-in-system-center-configuration-manager"></a>Cómo crear y aplicar planes de energía en System Center Configuration Manager
 
@@ -89,7 +88,7 @@ La administración de energía de System Center Configuration Manager le permite
 
 10. Haga clic en **Aceptar** para cerrar el cuadro de diálogo *<Nombre de la colección>\>***Configuración** y aplicar el plan de energía.  
 
-##  <a name="a-namebkmkplansa-available-power-management-plan-settings"></a><a name="BKMK_Plans"></a> Available power management plan settings  
+##  <a name="BKMK_Plans"></a> Available power management plan settings  
  En la tabla siguiente se muestran las opciones de administración de energía disponibles en Configuration Manager. Puede definir configuraciones diferentes para cuando el equipo está conectado o funciona con batería. Según la versión de Windows que use, puede que algunas opciones no sean configurables.  
 
 > [!NOTE]  
@@ -112,9 +111,3 @@ La administración de energía de System Center Configuration Manager le permite
 |**Permitir el estado de suspensión durante la acción de reposo**|La selección del valor **Activado** o **Desactivado** permite que el equipo esté en modo de espera, que todavía consume algo de energía, pero permite que el equipo se reactive con mayor rapidez. Si esta opción se establece en **Desactivar**, el equipo solo puede hibernar o apagarse.|  
 |**Inactividad requerida para entrar en suspensión (%)**|Especifica el porcentaje de tiempo de inactividad en el tiempo de procesador del equipo necesario para que el equipo entre en suspensión. En equipos que ejecutan Windows 7, este valor siempre se establece en **0**.|  
 |**Habilitar temporizador de activación de Windows para equipos de escritorio**|La selección del valor **Habilitar** o **Deshabilitar** puede habilitar el temporizador de Windows integrado para que la administración de energía lo use para reactivar un equipo de escritorio. Cuando se activa un equipo de escritorio usando el temporizador de activación de Windows, permanecerá activo durante 10 minutos de forma predeterminada para que el equipo tenga tiempo de instalar actualizaciones o recibir directivas.<br /><br /> Los temporizadores de activación no se admiten en equipos portátiles para evitar escenarios en los que se activen sin estar enchufados.|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

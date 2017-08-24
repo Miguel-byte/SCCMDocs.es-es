@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: ed692bdea055775890535d2666f09ba5f5c7c4e1
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="use-alerts-and-the-status-system-for-system-center-configuration-manager"></a>Usar alertas y el sistema de estado de System Center Configuration Manager
 
@@ -28,7 +27,7 @@ ms.openlocfilehash: ed692bdea055775890535d2666f09ba5f5c7c4e1
 Configure alertas y use el sistema de estado integrado para mantenerse informado del estado de la implementación de System Center Configuration Manager.  
 
 
-##  <a name="a-namebkmkstatusa-status-system"></a><a name="bkmk_Status"></a> Sistema de estado  
+##  <a name="bkmk_Status"></a> Sistema de estado  
  Todos los componentes de sitio principales generan mensajes de estado que proporcionan comentarios sobre las operaciones de sitio y de jerarquía.    Esta información puede mantenerle informado sobre el estado de los distintos procesos de sitio. Puede ajustar el sistema de alertas para ignorar el ruido de los problemas conocidos y aumentar la visibilidad anticipada de otros problemas que pueden requerir su atención.  
 
  De forma predeterminada, el sistema de estado de Configuration Manager funciona sin necesidad de configuración mediante una configuración adecuada para la mayoría de los entornos. Sin embargo, puede configurar lo siguiente:  
@@ -55,7 +54,7 @@ Configure alertas y use el sistema de estado integrado para mantenerse informado
 
 Dado que el sistema de estado mantiene configuraciones independientes para cada sitio, debe editar cada sitio individualmente.  
 
-###  <a name="a-namebkmkconfigstatusa-procedures-for-configuring-the-status-system"></a><a name="bkmk_configstatus"></a> Procedimientos para configurar el sistema de estado  
+###  <a name="bkmk_configstatus"></a> Procedimientos para configurar el sistema de estado  
 
 ##### <a name="to-configure-status-summarizers"></a>Para configurar generadores de resumen de estado  
 
@@ -154,7 +153,7 @@ Dado que el sistema de estado mantiene configuraciones independientes para cada 
 
 4.  Haga clic en **Aceptar**.  
 
-###  <a name="a-namebkmkmonitorsystemstatusa-monitor-the-status-system-of-configuration-manager"></a><a name="BKMK_MonitorSystemStatus"></a> Supervisar el sistema de estado de Configuration Manager  
+###  <a name="BKMK_MonitorSystemStatus"></a> Supervisar el sistema de estado de Configuration Manager  
  **Estado del sistema** de Configuration Manager proporciona una introducción a las operaciones generales de los sitios y a las operaciones del servidor de sitio de la jerarquía. Puede revelar problemas operativos de los componentes o servidores de sistema de sitio, y puede usar el estado de sistema para consultar detalles específicos de las diferentes operaciones de Configuration Manager. Puede supervisar el estado de sistema desde el nodo **Estado de sistema** del área de trabajo **Supervisión** en la consola de Configuration Manager.  
 
  La mayoría de los componentes y roles de sistema de sitio de Configuration Manager generan mensajes de estado. Los detalles de los mensajes de estado se registran en cada registro operativo de componentes, pero también se envían a la base de datos de sitio donde se resumen y presentan en un resumen general de cada componente o del estado de los sistemas de sitio. En estos paquetes de mensajes de estado se facilita información de operaciones regulares y advertencias y detalles de errores. Puede configurar los umbrales con que se activan advertencias o errores, y ajustar el sistema para garantizar que la información del paquete ignora problemas conocidos que no sean relevantes en su caso, mientras se centra la atención en los problemas reales de los servidores o en operaciones de componentes que desea investigar.  
@@ -170,19 +169,19 @@ Dado que el sistema de estado mantiene configuraciones independientes para cada 
 |Registros en conflicto|Utilice este nodo para ver los mensajes de estado acerca de los clientes que puedan tener registros en conflicto.<br /><br /> Configuration Manager usa el identificador de hardware para tratar de identificar los clientes que puedan estar duplicados y alertarle así de los registros en conflicto. Por ejemplo, si tiene que reinstalar un equipo, el identificador de hardware podría ser el mismo, pero el GUID que usa Configuration Manager podría cambiar.|  
 |Consultas de mensaje de estado|Utilice este nodo para consultar mensajes de estado de eventos específicos y detalles relacionados. Puede utilizar consultas de mensaje de estado para encontrar mensajes de estado relacionados con eventos específicos.<br /><br /> A menudo, puede usar consultas de mensaje de estado para identificar cuándo se modificó un componente específico, una operación o un objeto de Configuration Manager, así como qué cuenta se usó para realizar la modificación. Por ejemplo, puede ejecutar la consulta integrada **Recopilaciones creadas, modificadas o eliminadas** para identificar cuándo se ha creado una recopilación específica y qué cuenta de usuario se ha utilizado para crear le recopilación.|  
 
-####  <a name="a-namebkmkmanagestatusa-manage-site-status-and-component-status"></a><a name="bkmk_managestatus"></a> Administrar el estado del sitio y el estado del componente  
+####  <a name="bkmk_managestatus"></a> Administrar el estado del sitio y el estado del componente  
  Utilice la siguiente información para administrar el estado del sitio y el estado del componente:  
 
 -   Para configurar umbrales para el sistema de estado, consulte [Procedimientos para configurar el sistema de estado](#bkmk_configstatus).  
 
 -   Para administrar componentes individuales en Configuration Manager, use el **Administrador de servicios de Configuration Manager**.  
 
-####  <a name="a-namebkmkviewa-view-status-messages"></a><a name="bkmk_view"></a> Ver los mensajes de estado  
+####  <a name="bkmk_view"></a> Ver los mensajes de estado  
  Puede ver los mensajes de estado de los componentes y servidores de sistema de sitio individuales.  
 
  Para ver los mensajes de estado en la consola de Configuration Manager, seleccione un componente o servidor de sistema de sitio específico y, después, haga clic en **Mostrar mensajes**. Cuando aparezcan los mensajes, tiene la opción de ver tipos de mensajes específicos o mensajes desde un período de tiempo establecido, y puede filtrar los resultados en función de los detalles de los mensajes de estado.  
 
-##  <a name="a-namebkmkalertsa-alerts"></a><a name="bkmk_Alerts"></a> Alertas  
+##  <a name="bkmk_Alerts"></a> Alertas  
  Algunas operaciones generan alertas de Configuration Manager cuando se da una condición específica.  
 
 -   Por lo general, se generan alertas cuando se produce un error que debe resolver.  
@@ -204,7 +203,7 @@ Dado que el sistema de estado mantiene configuraciones independientes para cada 
 |Configurar suscripciones de correo electrónico para las alertas|Consulte la sección [Management tasks for alerts](#BKMK_Manage) en este tema.|  
 |Supervisar alertas|Consulte la sección [Supervisar alertas](#BKMK_MonitorAlerts)|  
 
-###  <a name="a-namebkmkmanagea-management-tasks-for-alerts"></a><a name="BKMK_Manage"></a> Management tasks for alerts  
+###  <a name="BKMK_Manage"></a> Management tasks for alerts  
 
 ##### <a name="to-manage-general-alerts"></a>Para administrar alertas generales  
 
@@ -288,7 +287,7 @@ Dado que el sistema de estado mantiene configuraciones independientes para cada 
     > [!NOTE]  
     >  Puede eliminar y editar suscripciones en el área de trabajo **Supervisión** al expandir el nodo **Alertas** y hacer clic en el nodo **Suscripciones** .  
 
-###  <a name="a-namebkmkmonitoralertsa-monitor-alerts"></a><a name="BKMK_MonitorAlerts"></a> Supervisar alertas  
+###  <a name="BKMK_MonitorAlerts"></a> Supervisar alertas  
  Puede ver las alertas en el nodo **Alertas** del área de trabajo **Supervisión** . Las alertas tienen alguno de los siguientes estados de alerta:  
 
 -   **Nunca desencadenado**: no se cumplió la condición de la alerta.  
@@ -310,9 +309,3 @@ Dado que el sistema de estado mantiene configuraciones independientes para cada 
      Puede posponer una alerta sólo cuando está activa.  
 
 -   Puede editar el **comentario** de una alerta para que otros usuarios administrativos puedan ver que está al corriente de la alerta. Por ejemplo, en el comentario puede identificar cómo solucionar la condición, ofrecer información acerca del estado actual de la condición o explicar por qué ha pospuesto la alerta.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

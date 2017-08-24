@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: 75cd7e811262633d81d978265f21ec7ed3b61a58
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="monitor-compliance-settings-in-system-center-configuration-manager"></a>Supervisión de la configuración de cumplimiento en System Center Configuration Manager
 
@@ -110,9 +109,3 @@ Después de haber implementado líneas base de configuración de System Center C
 5.  Se abre el **Asistente para crear recopilación de usuario** o el **Asistente para crear recopilación de dispositivos** , en función de si el elemento de configuración se implementa en usuarios o dispositivos. El asistente se rellena automáticamente con los valores correctos para crear la recopilación; sin embargo, puede editar estos valores.  
 
 6.  Después de completar el asistente, la recopilación se muestra en el nodo **Recopilaciones de usuarios** o **Recopilaciones de dispositivos** en el área de trabajo **Activos y compatibilidad** .  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

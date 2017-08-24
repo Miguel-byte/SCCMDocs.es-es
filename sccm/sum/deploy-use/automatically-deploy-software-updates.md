@@ -9,17 +9,14 @@ ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
 ms.openlocfilehash: 804a9d7a32cfbdb498c6748c5d99a1874261c231
-ms.contentlocale: es-es
-ms.lasthandoff: 06/08/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 #  <a name="BKMK_AutoDeploy"></a> Implementar actualizaciones de software automáticamente  
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -318,4 +315,3 @@ Para más información sobre el proceso de implementación, vea [Software update
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Supervisar actualizaciones de software](monitor-software-updates.md)
-

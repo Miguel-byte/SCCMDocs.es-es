@@ -6,22 +6,19 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1ef60106-8f31-46d6-95a6-25a6495f22c7
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 2ba11c8e2d8214ce9aca7c887fcb539b38da4e84
-ms.contentlocale: es-es
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: 85bdadaaaeed9a42cfa5165d2b9f0f3ef434dc03
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="preparation-steps-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Pasos de preparación para la administración local de dispositivos móviles en System Center Configuration Manager
 
@@ -46,4 +43,3 @@ La administración de dispositivos mediante la administración local de disposit
 -   [Configurar la inscripción del dispositivo para Administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
 
      En esta tarea, otorga permiso a los usuarios para inscribir los equipos y dispositivos, e instala el certificado raíz de confianza en los dispositivos (normalmente unos que no están unidos a un dominio) para permitir conexiones HTTPS con los servidores del sistema de sitio.  
-

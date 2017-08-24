@@ -4,22 +4,21 @@ description: "Administre la configuración y el cumplimiento de los dispositivos
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7568c9aa-b99e-4466-bfc8-0301aa376930
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: f7ecfe550d2e28579ea873442b2a68dc1c7c5483
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="ensure-device-compliance-with-system-center-configuration-manager"></a>Garantizar el cumplimiento de dispositivos con System Center Configuration Manager
 
@@ -71,9 +70,3 @@ La configuración de cumplimiento de System Center Configuration Manager le ofre
  La directiva de actualización de edición permite actualizar automáticamente los dispositivos con Windows 10 a una versión más reciente. Puede especificar una clave de producto para actualizar las versiones de escritorio de Windows 10 o un archivo de licencia que pueda usarse para actualizar los dispositivos que ejecutan Windows 10 Mobile y Windows 10 Holographic.  
 
  [Actualizar dispositivos de Windows con la directiva de actualización de edición](/sccm/compliance/deploy-use/upgrade-windows-version)  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

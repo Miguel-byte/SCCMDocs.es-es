@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: a04ac74df97741f49d7aae7b599bb60d5725a592
 ms.openlocfilehash: 28bea9210c9c58dabbb00a995e78cfedd1738291
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="revise-and-supersede-applications-in-system-center-configuration-manager"></a>Revisar y sustituir aplicaciones en System Center Configuration Manager
 
@@ -129,9 +128,3 @@ En este tema aprenderá a trabajar con versiones de aplicaciones de System Cente
 4.  En la pestaña **Referencias** del cuadro de diálogo **Propiedades** de *<nombre de aplicación>\>*, elija **Aplicaciones que sustituyen a esta aplicación** en la lista desplegable **Tipo de relación**.  
 
 5.  Revise la lista de aplicaciones que sustituyen a la aplicación seleccionada y, a continuación, elija **Aceptar** para cerrar el cuadro de diálogo **Propiedades** de *<nombre de aplicación>\>* .  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

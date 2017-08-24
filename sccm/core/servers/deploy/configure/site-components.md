@@ -6,22 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5fccbbeb-0faa-4943-83c2-e67db62d392d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
 ms.openlocfilehash: 83550fbf0ef1f9adb0bb2c51a4f3c26a7500d352
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="site-components-for-system-center-configuration-manager"></a>Componentes de sitio para System Center Configuration Manager
 
@@ -123,4 +120,3 @@ Un servicio de Configuration Manager se ejecuta cuando tiene asignada una tarea 
 6.  Una vez se haya actualizado el estado del componente, use una de las cuatro opciones basadas en acciones del menú **Componente** para modificar el funcionamiento del componente. Después de solicitar una acción, debe consultar el componente para mostrar el nuevo estado del componente.  
 
 7.  Cierre Configuration Manager Service Manager cuando haya terminado de modificar el estado operativo de los componentes.  
-

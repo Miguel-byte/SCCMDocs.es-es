@@ -6,22 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2315b8b-98bc-40e1-8ef9-bfb5e69ab109
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 73d941633d270cf9628f8be14e1e56f3c78624b6
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="monitor-email-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>Supervisión de perfiles de correo electrónico, Wi-Fi y VPN en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -32,7 +30,7 @@ Después de implementar los perfiles de correo electrónico, Wi-Fi y VPN de Syst
 
 -   [Ver los resultados de compatibilidad mediante informes](#BKMK_Reports)  
 
-##  <a name="a-namebkmkconsolea-how-to-view-compliance-results-in-the-configuration-manager-console"></a><a name="BKMK_console"></a> Ver los resultados de compatibilidad en la consola de Configuration Manager  
+##  <a name="BKMK_console"></a> Ver los resultados de compatibilidad en la consola de Configuration Manager  
  Use este procedimiento para ver los detalles sobre la compatibilidad de los perfiles implementados en la consola de System Center Configuration Manager.  
 
 #### <a name="to-view-compliance-results-in-the-configuration-manager-console"></a>Para ver los resultados de compatibilidad en la consola de Configuration Manager  
@@ -60,16 +58,10 @@ Después de implementar los perfiles de correo electrónico, Wi-Fi y VPN de Syst
 
 5.  En la página **Estado de implementación**, puede revisar información detallada sobre la compatibilidad del perfil implementado. Se crea un nodo temporal en el nodo **Implementaciones** que le permite encontrar esta información rápidamente.  
 
-##  <a name="a-namebkmkreportsa-how-to-view-compliance-results-by-using-reports"></a><a name="BKMK_Reports"></a> Ver los resultados de compatibilidad mediante informes  
+##  <a name="BKMK_Reports"></a> Ver los resultados de compatibilidad mediante informes  
  La configuración de compatibilidad, que incluye los perfiles en System Center Configuration Manager, también incluye varios informes integrados que permiten supervisar la información sobre los perfiles. Estos informes tienen la categoría de informe de **Administración de compatibilidad y configuración**.  
 
 > [!IMPORTANT]  
 >  Debe usar un carácter comodín (%) para utilizar los parámetros **Filtro del dispositivo** y **Filtro de usuarios** en los informes de configuración de cumplimiento.  
 
  Para obtener más información sobre cómo configurar los informes en System Center Configuration Manager, vea [Generación de informes en System Center Configuration Manager](../../core/servers/manage/reporting.md).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

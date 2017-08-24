@@ -8,18 +8,17 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
 ms.openlocfilehash: 73bb5d4236469746102fd4893c53f20aaee122d5
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="online-documentation-for-system-center-configuration-manager"></a>Documentación en línea de System Center Configuration Manager
 
@@ -102,9 +101,3 @@ Puede ver la documentación en línea en las siguientes guías en TechNet:
 **Accesibilidad** : consulte el tema en línea [Características de accesibilidad de Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=258586), para obtener información sobre las características, los productos y los servicios que permiten que Configuration Manager sea más accesible para aquellas personas con discapacidades.  
 
 **Documentación descargable** : puede descargar una [copia de esta documentación técnica desde el Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkId=253643). Use siempre la biblioteca de TechNet para obtener la información más actualizada.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

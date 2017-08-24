@@ -6,20 +6,19 @@ ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: cf29123923436ed4cefc17c69630fc39989caeb4
 ms.openlocfilehash: 0034381a7a388ddc3eda5e774f3c63d741336301
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configure-security-in-system-center-configuration-manager"></a>Configurar la seguridad en System Center Configuration Manager
 
@@ -27,7 +26,7 @@ ms.openlocfilehash: 0034381a7a388ddc3eda5e774f3c63d741336301
 
 Use la información de este artículo para configurar opciones relacionadas con la seguridad para System Center Configuration Manager.  
 
-##  <a name="a-namebkmkconfigureclientpkia-configure-settings-for-client-pki-certificates"></a><a name="BKMK_ConfigureClientPKI"></a> Configurar opciones de certificados PKI de cliente  
+##  <a name="BKMK_ConfigureClientPKI"></a> Configurar opciones de certificados PKI de cliente  
 Si desea usar certificados de infraestructura de clave pública (PKI) para conexiones de cliente a sistemas de sitio que usan Internet Information Services (IIS), use el procedimiento siguiente para configurar las opciones de estos certificados.  
 
 #### <a name="to-configure-client-pki-certificate-settings"></a>Para configurar certificados PKI de cliente  
@@ -62,7 +61,7 @@ Si desea usar certificados de infraestructura de clave pública (PKI) para conex
 
 Repita este procedimiento para todos los sitios primarios de la jerarquía.  
 
-##  <a name="a-namebkmkconfiguresigningencryptiona-configure-signing-and-encryption"></a><a name="BKMK_ConfigureSigningEncryption"></a> Configurar la firma y el cifrado  
+##  <a name="BKMK_ConfigureSigningEncryption"></a> Configurar la firma y el cifrado  
 Configure las opciones de firma y cifrado más seguras para los sistemas de sitio que pueden admitir todos los clientes en el sitio. Estas opciones son especialmente importantes cuando se permite a los clientes comunicarse con sistemas de sitio mediante certificados autofirmados a través de HTTP.  
 
 #### <a name="to-configure-signing-and-encryption-for-a-site"></a>Para configurar la firma y el cifrado para un sitio  
@@ -86,7 +85,7 @@ Configure las opciones de firma y cifrado más seguras para los sistemas de siti
 
 Repita este procedimiento para todos los sitios primarios de la jerarquía.  
 
-##  <a name="a-namebkmkconfigurerbaa-configure-role-based-administration"></a><a name="BKMK_ConfigureRBA"></a> Configurar la administración basada en roles  
+##  <a name="BKMK_ConfigureRBA"></a> Configurar la administración basada en roles  
 La administración basada en roles combina roles de seguridad, ámbitos de seguridad y recopilaciones asignadas para definir el ámbito administrativo de cada usuario administrativo. Un ámbito administrativo incluye los objetos que puede ver un usuario administrativo en la consola de Configuration Manager y las tareas relacionadas con esos objetos que el usuario administrativo tiene permiso para realizar. Las configuraciones de la administración basada en roles se aplican en cada sitio en una jerarquía.  
 
 Los siguientes vínculos llevan a las secciones correspondientes del artículo [Configurar la administración basada en roles de System Center Configuration Manager](../../../core/servers/deploy/configure/configure-role-based-administration.md):  
@@ -106,7 +105,7 @@ Los siguientes vínculos llevan a las secciones correspondientes del artículo [
 > [!IMPORTANT]  
 >  Su propio ámbito administrativo define los objetos y valores que se pueden asignar al configurar la administración basada en roles para otro usuario administrativo. Para más información sobre el planeamiento de la administración basada en roles, vea [Fundamentals of role-based administration for System Center Configuration Manager (Aspectos básicos de la administración basada en roles de System Center Configuration Manager)](../../../core/understand/fundamentals-of-role-based-administration.md).  
 
-##  <a name="a-namebkmkmanageaccountsa-manage-accounts-that-are-used-by-configuration-manager"></a><a name="BKMK_ManageAccounts"></a> Administrar las cuentas que usa Configuration Manager  
+##  <a name="BKMK_ManageAccounts"></a> Administrar las cuentas que usa Configuration Manager  
 Configuration Manager es compatible con cuentas de Windows para muchos usos y tareas diferentes.  
 
 Use el procedimiento siguiente para ver qué cuentas están configuradas para las diferentes tareas y para administrar la contraseña que usa Configuration Manager para cada cuenta.  
@@ -127,9 +126,3 @@ Use el procedimiento siguiente para ver qué cuentas están configuradas para la
     >  La contraseña que especifique debe coincidir con la contraseña especificada para la cuenta en Usuarios y equipos de Active Directory.  
 
 6.  Haga clic en **Aceptar** para completar el procedimiento.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

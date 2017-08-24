@@ -6,23 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 0f6a6719c4c9bc1e67be11adf5206a7672624fa0
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: f7ef476a2ebcf0161ebb70d8a3d95f77806aa05e
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>Planeación de la implementación del cliente en dispositivos Windows Embedded en System Center Configuration Manager
 
@@ -110,4 +107,3 @@ ms.lasthandoff: 12/16/2016
 >   
 >      -   Windows Embedded Standard 7 (64 bits)  
 >     -   Windows Embedded POSReady 7 (64 bits)
-

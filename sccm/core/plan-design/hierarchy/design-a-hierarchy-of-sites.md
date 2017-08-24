@@ -6,23 +6,20 @@ ms.date: 6/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 07ce872e-1558-42ad-b5ad-582c5b1bdbb4
-caps.latest.revision: 22
-caps.handback.revision: 0
+caps.latest.revision: "22"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: db673277d1cc2d24e8dba2439b2b1891c883ebd0
 ms.openlocfilehash: 4710b1b89eb50cb7bcf4c4ee50c12a96b6561bc9
-ms.contentlocale: es-es
-ms.lasthandoff: 06/16/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="design-a-hierarchy-of-sites-for-system-center-configuration-manager"></a>Diseñar una jerarquía de sitios para System Center Configuration Manager
 
@@ -188,4 +185,3 @@ Sin embargo, es posible distribuir contenido entre dos sitios secundarios del mi
 -   [Transferencias de datos entre sitios en System Center Configuration Manager](../../../core/servers/manage/data-transfers-between-sites.md)  
 
 -   [Fundamentals of role-based administration for System Center Configuration Manager (Aspectos básicos de la administración basada en roles de System Center Configuration Manager)](../../../core/understand/fundamentals-of-role-based-administration.md)
-

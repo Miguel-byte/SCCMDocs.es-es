@@ -6,24 +6,20 @@ ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a8218e23743dafaf8ff1166142cf2dcca1212133
 ms.openlocfilehash: 6917644d6719a1ca636713aa5aebf277927123c8
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="configure-endpoint-protection"></a>Configurar Endpoint Protection
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -46,4 +42,3 @@ Para poder usar Endpoint Protection para administrar la seguridad y el malware e
 |**Paso 3:** [configurar orígenes de actualizaciones de definiciones para clientes de Endpoint Protection](endpoint-definition-updates.md)|Es posible configurar Endpoint Protection para que use diversos orígenes para la descarga de actualizaciones de definiciones. |  
 |**Paso 4:** [configurar la directiva antimalware predeterminada y crear directivas antimalware personalizadas](endpoint-antimalware-policies.md)|La directiva antimalware predeterminada se aplica si está instalado el cliente de Endpoint Protection. Toda directiva personalizada que haya implementado se aplica de forma predeterminada, en los 60 minutos posteriores a la implementación del cliente. Asegúrese de que configuró las directivas antimalware antes de implementar el cliente de Endpoint Protection. |  
 |**Paso 5:** [configurar opciones de cliente personalizadas para Endpoint Protection](endpoint-protection-configure-client.md)|Use las opciones de cliente personalizadas con el fin de configurar las opciones de Endpoint Protection para las recopilaciones de equipos de la jerarquía.<br /><br /> Nota: No configure las opciones de cliente personalizadas de Endpoint Protection a menos que esté seguro de que quiere aplicarlas a todos los equipos de la jerarquía. |  
-

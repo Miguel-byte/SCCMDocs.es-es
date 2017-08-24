@@ -6,23 +6,20 @@ ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1eb2fcaf-acac-4388-9b31-6cccafacaabe
-caps.latest.revision: 9
-caps.handback.revision: 0
+caps.latest.revision: "9"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
 ms.openlocfilehash: e040c6b3a951d1bdf5a46dd82f1bd92b45c2e71d
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-system-center-configuration-manager-client"></a>Cómo crear elementos de configuración personalizados para equipos de escritorio y servidores de Windows administrados con el cliente de System Center Configuration Manager
 
@@ -358,4 +355,3 @@ En la página **Plataformas admitidas** del **Asistente para crear elemento de c
 
 ## <a name="complete-the-wizard"></a>Completar el asistente  
  En la página **Resumen** del asistente, revise las acciones que deberán realizarse y, a continuación, complete el asistente. El nuevo elemento de configuración se muestra en el **elementos de configuración** nodo en el **activos y compatibilidad** área de trabajo.  
-

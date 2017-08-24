@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fc731d3f-edd7-4049-b17b-653d6693a564
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
 ms.openlocfilehash: 896807ec2c4be2835094a27add59d4cc09e93add
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="planning-to-monitor-migration-activity-in-system-center-configuration-manager"></a>Planear la supervisión de la actividad de migración en System Center Configuration Manager
 
@@ -39,9 +38,3 @@ Con System Center Configuration Manager, puede supervisar la migración en la co
     >  Si se produce un error en un trabajo de migración, revise los detalles en el archivo migmctrl.log lo antes posible. Las entradas del registro de migración se agregan continuamente al archivo y sobrescriben los detalles antiguos. Si se sobrescriben las entradas, es posible que no pueda identificar si los problemas que puedan surgir con los objetos migrados se refieren a problemas de migración. La actividad de migración se registra en el sitio del nivel superior de la jerarquía, independientemente del sitio al que se conecta su consola de Configuration Manager cuando se configura la migración.  
 
 -   Use los informes de Configuration Manager. Configuration Manager proporciona varios informes integrados de migración. También puede editar esos informes para que se ajusten a sus necesidades. Para obtener más información sobre los informes de Configuration Manager, consulte [Generación de informes en System Center Configuration Manager](../../core/servers/manage/reporting.md).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

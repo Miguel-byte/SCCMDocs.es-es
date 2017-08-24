@@ -6,23 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
-caps.latest.revision: 9
-caps.handback.revision: 0
+caps.latest.revision: "9"
+caps.handback.revision: "0"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 507bad02c6e028f09a8b0c8a566ac55f7c3942a5
 ms.openlocfilehash: 544c3bea0c7df96887ee1717f061c39c64b82d01
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Planear la administración de dispositivos móviles (MDM) local con System Center Configuration Manager
 
@@ -122,4 +119,3 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
 -   [Configurar la inscripción del dispositivo para la administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
 
 -   [Inscribir dispositivos para la administración local de dispositivos móviles en System Center Configuration Manager](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)  
-

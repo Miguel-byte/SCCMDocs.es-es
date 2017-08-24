@@ -1,5 +1,4 @@
 ---
-
 title: Mantenimiento de las actualizaciones de software | Microsoft Docs
 description: Para mantener las actualizaciones en Configuration Manager, puede programar la tarea de limpieza de WSUS o ejecutarla de forma manual.
 keywords: 
@@ -10,15 +9,13 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: 1590c623f7bc2f42a8617f110de5321212732a03
-
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="software-updates-maintenance"></a>Mantenimiento de las actualizaciones de software
 
@@ -33,9 +30,3 @@ Puede programar y ejecutar la tarea de limpieza de WSUS desde la consola de Conf
 2.  Haga clic en **Configurar componentes de sitio** en el grupo **Configuración** y, a continuación, haga clic en **Punto de actualización de software** para abrir las propiedades del componente de punto de actualización de software.  
 
 3.  Haga clic en la pestaña **Reglas de sustitución** , seleccione **Ejecutar el Asistente para la limpieza de WSUS**y, a continuación, haga clic en **Aceptar**.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0212b023-804a-4f84-b880-7a59cdb49c67
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: f77af4b8fcb193ed44511c0e5eea7290f55dbbf8
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="use-a-task-sequence-to-manage-virtual-hard-disks-in-system-center-configuration-manager"></a>Utilizar una secuencia de tareas para administrar discos duros virtuales en System Center Configuration Manager
 
@@ -60,10 +59,10 @@ En System Center Configuration Manager, puede administrar discos duros virtuales
     > [!NOTE]  
     >  Si instala la consola de VMM mientras la consola de Configuration Manager está abierta, debe reiniciar la consola de Configuration Manager una vez finalizada la instalación de la consola de VMM. De lo contrario, Configuration Manager no se conectará correctamente al servidor de administración de VMM para cargar un VHD.  
 
-##  <a name="a-namebkmkcreatevhdstepsa-steps-to-create-a-vhd"></a><a name="BKMK_CreateVHDSteps"></a> Pasos para crear un disco duro virtual  
+##  <a name="BKMK_CreateVHDSteps"></a> Pasos para crear un disco duro virtual  
  Para crear un disco duro virtual debe crear una secuencia de tareas que contenga los pasos para crear el disco duro virtual y, a continuación, usar la secuencia de tareas en el Asistente para crear disco duro virtual para crear el disco duro virtual. Las secciones siguientes proporcionan los pasos para crear el disco duro virtual.  
 
-###  <a name="a-namebkmkcreatetsa-create-a-task-sequence-for-the-vhd"></a><a name="BKMK_CreateTS"></a> Crear una secuencia de tareas para el disco duro virtual  
+###  <a name="BKMK_CreateTS"></a> Crear una secuencia de tareas para el disco duro virtual  
  Debe crear una secuencia de tareas con los pasos para crear el VHD. En el Asistente para crear secuencia de tareas, cuenta con la opción **Instalar un paquete de imagen existente en un disco duro virtual** , que crea los pasos para crear el VHD. Por ejemplo, el asistente agrega los pasos necesarios siguientes: Reiniciar en Windows PE, Formatear y crear particiones en el disco, Aplicar el sistema operativo y Apagar el equipo. No se puede crear el VHD mientras esté en el sistema operativo completo. Además, Configuration Manager debe esperar hasta que se apague la máquina virtual para poder completar el paquete. De manera predeterminada, el asistente espera 5 minutos antes del cierre de la máquina virtual. Después de crear la secuencia de tareas, puede agregar pasos adicionales en caso necesario.  
 
 > [!IMPORTANT]  
@@ -124,7 +123,7 @@ En System Center Configuration Manager, puede administrar discos duros virtuales
 
 10. Complete el asistente.  
 
-###  <a name="a-namebkmkcreatevhda-create-a-vhd"></a><a name="BKMK_CreateVHD"></a> Crear un disco duro virtual  
+###  <a name="BKMK_CreateVHD"></a> Crear un disco duro virtual  
  Después de crear una secuencia de tareas para el disco duro virtual, use el Asistente para crear disco duro virtual para crear el disco duro virtual.  
 
 > [!IMPORTANT]  
@@ -182,10 +181,10 @@ En System Center Configuration Manager, puede administrar discos duros virtuales
 > [!NOTE]  
 >  Configuration Manager recupera el tamaño del disco duro virtual mediante la conexión a la ubicación de origen del disco duro virtual. Si Configuration Manager no puede acceder al archivo de disco duro virtual, se muestra **0** en la columna **Tamaño (KB)** del disco duro virtual.  
 
-##  <a name="a-namebkmkmodifyvhdstepsa-steps-to-modify-an-existing-vhd"></a><a name="BKMK_ModifyVHDSteps"></a> Pasos para modificar un disco duro virtual existente  
+##  <a name="BKMK_ModifyVHDSteps"></a> Pasos para modificar un disco duro virtual existente  
  Para modificar un disco duro virtual, debe crear una secuencia de tareas con los pasos necesarios para modificar el disco duro virtual. A continuación, seleccione la secuencia de tareas en el Asistente para modificar disco duro virtual. El Asistente conecta el disco duro virtual a la máquina virtual, ejecuta la secuencia de tareas en el disco duro virtual y, a continuación, actualiza el archivo de disco duro virtual. Las secciones siguientes proporcionan los pasos para modificar el disco duro virtual.  
 
-###  <a name="a-namebkmkmodifytsa-create-a-task-sequence-to-modify-the-vhd"></a><a name="BKMK_ModifyTS"></a> Crear una secuencia de tareas para modificar el disco duro virtual  
+###  <a name="BKMK_ModifyTS"></a> Crear una secuencia de tareas para modificar el disco duro virtual  
  Para modificar un disco duro virtual existente, primero debe crear una secuencia de tareas. Elija solo los pasos necesarios para modificar la secuencia de tareas. Por ejemplo, si desea agregar una aplicación al disco duro virtual, cree una secuencia de tareas personalizada y, a continuación, agregue solo el paso Instalar aplicación.  
 
  Utilice el procedimiento siguiente para crear la secuencia de tareas para modificar el disco duro virtual.  
@@ -224,7 +223,7 @@ En System Center Configuration Manager, puede administrar discos duros virtuales
 
 5.  Haga clic en **Aceptar** para salir del Editor de secuencia de tareas.  
 
-###  <a name="a-namebkmkmodifyvhda-modify-a-vhd"></a><a name="BKMK_ModifyVHD"></a> Modificar un disco duro virtual  
+###  <a name="BKMK_ModifyVHD"></a> Modificar un disco duro virtual  
  Después de crear una secuencia de tareas para el disco duro virtual, use el Asistente para modificar disco duro virtual para modificar el disco duro virtual.  
 
  Utilice el procedimiento siguiente para modificar un disco duro virtual.  
@@ -269,7 +268,7 @@ En System Center Configuration Manager, puede administrar discos duros virtuales
     >   
     >  Además, podrá abrir el Administrador de Hyper-V (si instaló las herramientas de administración de Hyper-V en el equipo) y conectarse a la máquina virtual temporal creada por el asistente para visualizar la ejecución de la secuencia de tareas. Desde el equipo virtual, puede supervisar el archivo smsts.log para realizar un seguimiento del progreso de la secuencia de tareas. Cuando haya problemas con la finalización de un paso de la secuencia de tareas, puede utilizar este archivo de registro para ayudar a solucionar el problema. El archivo smsts.log se encuentra en x: \windows\temp\smstslog\smsts.log antes de formatear el disco duro, y en c:\\_SMSTaskSequence\Logs\Smstslog\ después de formatearlo. Una vez finalizados los pasos de la secuencia de tareas, la máquina virtual se apaga después de 5 minutos (de forma predeterminada) y se elimina.  
 
-##  <a name="a-namebkmkapplyupdatesa-apply-software-updates-to-a-vhd"></a><a name="BKMK_ApplyUpdates"></a> Aplicar actualizaciones de software a un disco duro virtual  
+##  <a name="BKMK_ApplyUpdates"></a> Aplicar actualizaciones de software a un disco duro virtual  
  Periódicamente, se publican nuevas actualizaciones de software que son aplicables al sistema operativo de su VHD. Puede aplicar las actualizaciones de software que sean aplicables a un VHD según una programación especificada. En la programación que especifique, Configuration Manager aplica en el VHD las actualizaciones de software que seleccione.  
 
  La información sobre el VHD se almacena en la base de datos del sitio, incluyendo las actualizaciones de software que se aplicaron en el momento en que creó el VHD. Las actualizaciones de software que se hayan aplicado al VHD desde que se creó inicialmente también se almacenan en la base de datos del sitio. Cuando inicia el asistente para aplicar actualizaciones de software al VHD, el asistente recupera una lista de actualizaciones de software aplicables aún no aplicadas al VHD para que usted seleccione las que desee.  
@@ -303,7 +302,7 @@ En System Center Configuration Manager, puede administrar discos duros virtuales
 
 8.  En la página **Finalización** , compruebe que las actualizaciones de software se aplicaron correctamente a la imagen de sistema operativo.  
 
-##  <a name="a-namebkmkimporttovmma-import-the-vhd-to-system-center-virtual-machine-manager"></a><a name="BKMK_ImportToVMM"></a> Importar el disco duro virtual en System Center Virtual Machine Manager  
+##  <a name="BKMK_ImportToVMM"></a> Importar el disco duro virtual en System Center Virtual Machine Manager  
  System Center VMM es una solución de administración para el centro de datos virtualizado que le permite configurar y administrar su host de virtualización, redes y recursos de almacenamiento para poder crear e implementar máquinas virtuales y servicios para las nubes privadas que cree. Después de crear un VHD en Configuration Manager, puede importar y administrar el VHD con VMM.  
 
 > [!TIP]  
@@ -328,9 +327,3 @@ En System Center Configuration Manager, puede administrar discos duros virtuales
     -   **Usar transferencia sin cifrar**: seleccione esta opción para transferir el archivo del VHD al servidor de administración de VMM sin el uso del cifrado.  
 
 5.  En la página Resumen, compruebe la configuración y, a continuación, complete el asistente. El tiempo que se tarda en cargar el VHD puede variar según el tamaño del archivo del VHD y el ancho de banda de red del servidor de administración de VMM.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

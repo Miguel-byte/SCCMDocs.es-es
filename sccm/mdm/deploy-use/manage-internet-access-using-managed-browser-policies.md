@@ -6,23 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 7c8d38ad6bdfece5432d4886f60ff98b8d3bd342
-ms.contentlocale: es-es
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: d2dd2c25a2714851ba1e71414cabcef38d3ce014
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-system-center-configuration-manager"></a>Administrar el acceso a Internet mediante directivas de explorador administrado con System Center Configuration Manager
 
@@ -153,4 +150,3 @@ Utilice la siguiente información para conocer los formatos permitidos y los car
 -   Si un dispositivo está recibiendo las directivas de explorador administrado por primera vez y dos directivas están en conflicto, las direcciones URL no se aplicarán en el dispositivo. Utilice el nodo **Conflictos de directivas** del área de trabajo **Directiva** para ver los conflictos.  
 
 -   Si un dispositivo ya ha recibido una directiva de explorador administrado y se implementa una segunda directiva con la configuración en conflicto, la configuración original permanece en el dispositivo. Utilice el nodo **Conflictos de directivas** del área de trabajo **Directiva** para ver los conflictos.  
-

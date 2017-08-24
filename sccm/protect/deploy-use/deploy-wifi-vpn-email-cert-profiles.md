@@ -6,19 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: c2e3aef41e9a890d136039f85777ab07284e5c27
 ms.openlocfilehash: 70372d5df13034b48f3e43b766776442f1be5823
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="deploy-profiles-in-system-center-configuration-manager"></a>Implementar perfiles de VPN en System Center Configuration Manager
 
@@ -72,9 +72,3 @@ Para poder usar perfiles, deben estar implementados en una o varias recopilacion
 [How to monitor Wi-Fi, VPN, and email profiles in System Center Configuration Manager](monitor-wifi-email-vpn-profiles.md) (Cómo supervisar perfiles de Wi-Fi, VPN y correo electrónico en System Center Configuration Manager)
 
 [How to monitor certificate profiles in System Center Configuration Manager](monitor-certificate-profiles.md) (Cómo supervisar perfiles de certificado en System Center Configuration Manager)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

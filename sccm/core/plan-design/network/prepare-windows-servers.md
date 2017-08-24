@@ -6,23 +6,20 @@ ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dd102603356864add4084c6881c39bebcbd635f2
 ms.openlocfilehash: 9b97dedb5d2be0bd2e47260033e6e4361467dc4e
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prepare-windows-servers-to-support-system-center-configuration-manager"></a>Preparar los servidores de Windows para admitir System Center Configuration Manager
 
@@ -142,4 +139,3 @@ Por ejemplo, puede que los archivos de origen de una implementación de software
  - PROPFIND
 
 Para obtener información sobre cómo configurar el filtrado de solicitudes, vea [Configurar el filtrado de solicitudes en IIS](https://technet.microsoft.com/library/hh831621.aspx#Verbs) en TechNet u otra documentación parecida que se aplique a la versión de Windows Server que hospeda el punto de administración.
-

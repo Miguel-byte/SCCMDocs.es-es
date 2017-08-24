@@ -6,22 +6,19 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ff633013-5313-4cd3-949c-56d45e777280
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 22bfae0509a5ce0b52763ea3eda7b8d6891431ed
-ms.contentlocale: es-es
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: 349fcf335e7faddbcbd2ffe0ece7e711465f28df
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-ios-applications-with-system-center-configuration-manager"></a>Crear aplicaciones iOS con System Center Configuration Manager
 
@@ -54,4 +51,3 @@ Consulte [Inicie el Asistente para crear aplicaciones](../../apps/deploy-use/cre
 
 > [!IMPORTANT]  
 >  Actualmente, los usuarios finales no pueden instalar aplicaciones corporativas desde la aplicación Portal de empresa de Microsoft Intune para iOS. Esto se debe a las restricciones establecidas para aplicaciones que se publican en la App Store de iOS (consulte la sección 2 de App Store Review Guidelines [Instrucciones de revisión para App Store]). Los usuarios pueden instalar aplicaciones corporativas (incluidas las aplicaciones administradas de App Store y los paquetes de aplicaciones de línea de negocio) si examinan el portal web de Intune desde su dispositivo (portal.manage.microsoft.com). Para más información acerca de las funciones de administración de dispositivos móviles que se habilitan con la aplicación Portal de empresa de Microsoft Intune, vea [Funciones de administración de dispositivos inscritos en Microsoft Intune](https://technet.microsoft.com/library/dn600287.aspx).  
-

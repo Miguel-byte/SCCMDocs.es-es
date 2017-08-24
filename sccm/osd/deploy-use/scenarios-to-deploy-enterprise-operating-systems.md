@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f74fdb86-c7c2-447f-91f6-b42df6370d7f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: b1bea8b1b890f7c96a432835d28ad840a9b6873d
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="scenarios-to-deploy-enterprise-operating-systems-with-system-center-configuration-manager"></a>Escenarios para implementar sistemas operativos de empresa con System Center Configuration Manager
 
@@ -64,9 +63,3 @@ Los siguientes escenarios de implementación de sistema operativo están disponi
  De forma predeterminada, cuando crea la implementación para la secuencia de tareas, la imagen se descarga primero en la caché de cliente de Configuration Manager y luego se instala. Si elige descargar la imagen a la caché de cliente de Configuration Manager antes de ejecutar la imagen y la secuencia de tareas contiene una etapa para volver a particionar el disco duro, esta etapa produce un error porque, al particionar el disco duro, se borra el contenido de la caché de cliente de Configuration Manager. Si la secuencia de tareas debe volver a particionar el disco duro, debe ejecutar la instalación de la imagen desde el punto de distribución mediante la opción **Ejecutar programa desde el punto de distribución**  cuando implemente la secuencia de tareas.  
 
  Para obtener más información, vea [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

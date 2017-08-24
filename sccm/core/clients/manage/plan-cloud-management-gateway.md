@@ -3,20 +3,17 @@ title: "Planificación de Cloud Management Gateway | Microsoft Docs"
 description: 
 ms.date: 06/07/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
 ms.openlocfilehash: a7380ae781447880ffcba0778694ea62e10c4889
-ms.contentlocale: es-es
-ms.lasthandoff: 06/08/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planificación de Cloud Management Gateway en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -198,4 +195,3 @@ Para obtener una lista de todos los archivos de registro relacionados con CMG, c
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Configurar puerta de enlace de administración en la nube](setup-cloud-management-gateway.md)
-

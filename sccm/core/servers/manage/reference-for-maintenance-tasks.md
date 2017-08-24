@@ -6,23 +6,20 @@ ms.date: 3/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
-caps.latest.revision: 16
-caps.handback.revision: 0
+caps.latest.revision: "16"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
 ms.openlocfilehash: a2d4420c2274a9b1ceb47ffd267849fdb5a55a61
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>Referencia de tareas de mantenimiento para System Center Configuration Manager
 
@@ -56,7 +53,7 @@ En este tema se describen los detalles de las tareas de mantenimiento del sitio 
 
 **Eliminar historial de descargas de clientes antiguos**: use esta tarea para eliminar datos históricos sobre el origen de descarga que usan los clientes. La información del origen de descarga se utiliza para rellenar el [panel orígenes de datos de cliente](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).  
 -  Sitio de administración central (no disponible)
--     **Sitio primario**: habilitado
+-    **Sitio primario**: habilitado
 -  Sitio secundario: no disponible
 
 **Eliminar operaciones cliente antiguas**: use esta tarea para eliminar de la base de datos del sitio los datos antiguos en las operaciones de cliente. Por ejemplo, esto incluye datos para las notificaciones de cliente antiguas o caducadas (como descargar solicitudes para directivas de equipo o usuario) y para Endpoint Protection (como las solicitudes realizadas por un usuario administrativo para que los clientes ejecuten un análisis o descarguen definiciones actualizadas).
@@ -311,4 +308,3 @@ Estas asignaciones se almacenan en una tabla para una referencia rápida. Cuando
 -   Sitio de administración central: no disponible    
 -   **Sitio primario**: habilitado    
 -   Sitio secundario: no disponible  
-

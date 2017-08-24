@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3ddff2a7-99eb-4ef8-b969-f3f7f24053db
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: f46c9479021c814b1102d72c7d493f21a7243bf1
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="introduction-to-power-management-in-system-center-configuration-manager"></a>Introducción a la administración de energía en System Center Configuration Manager
 
@@ -49,9 +48,3 @@ La administración de energía de System Center Configuration Manager gestiona l
 
 ### <a name="compliance-phase"></a>Datos de cumplimiento  
  En la fase de cumplimiento, puede ejecutar informes que le ayudarán a evaluar el uso de energía y el ahorro de coste de energía en su organización. También puede ejecutar informes que describen las mejoras en la cantidad de CO2 generado por los equipos. También están disponibles informes que ayudan a validar que la configuración de energía que se ha aplicado correctamente en los equipos y que ayudan a solucionar problemas relacionados con la característica de administración de energía.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -6,22 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c72612d4-0b3d-4e71-b3c9-35782701b78a
-caps.latest.revision: 18
-caps.handback.revision: 0
+caps.latest.revision: "18"
+caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 6c6f56dd2b68b8c87d87842ab2b0f782e16c7f9c
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.openlocfilehash: 362bcbd368fd49979c554cd009b3ba72f20d5fbd
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-create-wi-fi-profiles-for-mobile-devices-in-system-center-configuration-manager"></a>Creación de perfiles de Wi-Fi para dispositivos móviles en System Center Configuration Manager
 
@@ -47,4 +45,3 @@ Puede configurar los siguientes tipos de dispositivos móviles con perfiles de W
 [Crear un perfil de Wi-Fi](../../protect/deploy-use/create-wifi-profiles.md#create-a-wi-fi-profile) proporciona información general sobre cómo usar perfiles de Wi-Fi en Configuration Manager para implementar la configuración de red inalámbrica para los usuarios.
 
 Consulte [Implementar perfiles de VPN en System Center Configuration Manager](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md) para información sobre la implementación de perfiles de Wi-Fi.
-

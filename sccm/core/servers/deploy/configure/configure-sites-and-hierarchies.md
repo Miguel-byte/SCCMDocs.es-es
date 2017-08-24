@@ -6,22 +6,19 @@ ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5f1efaa776079b21d52b9936273380e9bb8963e9
 ms.openlocfilehash: 862f420c063cb44c419d4904fbb4696efb739758
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configure-sites-and-hierarchies-for-system-center-configuration-manager"></a>Configurar sitios y jerarquías para System Center Configuration Manager
 
@@ -54,4 +51,3 @@ Tenga en cuenta las notas siguientes sobre la configuración que son válidas pa
 |Configurar réplicas de bases de datos para puntos de administración|Configure una réplica de base de datos para reducir la carga de CPU que los puntos de administración colocan en el servidor de base de datos del sitio al atender las solicitudes de servicio de los clientes. Para obtener más información, consulte [Réplicas de bases de datos para puntos de administración de System Center Configuration Manager](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md).|  
 |Configurar un grupo de disponibilidad AlwaysOn de SQL Server para hospedar la base de datos del sitio|A partir de la versión 1602, configure grupos de disponibilidad como soluciones de alta disponibilidad y recuperación ante desastres para hospedar la base de datos del sitio en sitios primarios y en el sitio de administración central. Para obtener más información, consulte [SQL Server AlwaysOn para una base de datos de sitio de alta disponibilidad para System Center Configuration Manager](../../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).|  
 |Modificar la replicación entre sitios|Consulte [Transferencias de datos entre sitios en System Center Configuration Manager](../../../../core/servers/manage/data-transfers-between-sites.md) para más información acerca de los siguientes temas:<br /><br /> Configurar la [replicación basada en archivos](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_fileroute) entre sitios secundarios<br /><br /> Configurar [vínculos de replicación de base de datos](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_Dblinks)<br /><br /> Configurar [vistas distribuidas](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_distviews)|  
-

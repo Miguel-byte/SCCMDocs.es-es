@@ -1,5 +1,4 @@
 ---
-
 title: "Inscripción masiva de dispositivos | Microsoft Docs | MDM local"
 description: "Inscriba dispositivos en masa de forma automática con la administración local de dispositivos móviles en System Center Configuration Manager."
 ms.custom: na
@@ -7,23 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
-caps.latest.revision: 13
-caps.handback.revision: 0
+caps.latest.revision: "13"
+caps.handback.revision: "0"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3b1451edaed69a972551bd060293839aa11ec8b2
 ms.openlocfilehash: be9596537e9c80a6d78aa0685d33382bfd242afe
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-bulk-enroll-devices-with-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Cómo inscribir dispositivos en masa con la administración local de dispositivos móviles en System Center Configuration Manager
 
@@ -168,4 +164,3 @@ En las tareas siguientes se explica cómo inscribir equipos y dispositivos en ma
 -   Inicie la consola de Configuration Manager.  
 
 -   Haga clic en **Activos y compatibilidad** > **Introducción** > **Dispositivos**. El dispositivo inscrito aparece en la lista.  
-

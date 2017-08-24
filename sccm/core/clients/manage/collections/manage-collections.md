@@ -6,23 +6,20 @@ ms.date: 4/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
-caps.latest.revision: 8
-caps.handback.revision: 0
+caps.latest.revision: "8"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
 ms.openlocfilehash: 4d44f98eb0755619cdd2101203a13725186b835b
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-manage-collections-in-system-center-configuration-manager"></a>Cómo administrar recopilaciones en System Center Configuration Manager
 
@@ -87,4 +84,3 @@ Utilice la información de introducción de este tema como ayuda para realizar t
 |**Grupos de puntos de distribución**|Permite asociar uno o varios grupos de puntos de distribución a los miembros de la recopilación seleccionada. Para obtener más información, vea [Manage content and content infrastructure for System Center Configuration Manager](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md) (Administración del contenido y de la infraestructura de contenido en System Center Configuration Manager).|  
 |**Seguridad**|Muestra los usuarios administrativos que tienen permisos para la recopilación seleccionada de ámbitos de seguridad y roles asociados.|  
 |**Monitor**|Permite configurar cuándo se generan alertas del estado de los clientes y Endpoint Protection. Para obtener más información, vea [How to configure client status in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-status.md) (Configuración del estado de cliente en System Center Configuration Manager) y [How to monitor Endpoint Protection in System Center Configuration Manager](../../../../protect/deploy-use/monitor-endpoint-protection.md) (Supervisión de Endpoint Protection en System Center Configuration Manager).|  
-

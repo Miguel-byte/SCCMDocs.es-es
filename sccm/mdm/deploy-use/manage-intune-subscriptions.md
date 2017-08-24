@@ -6,22 +6,20 @@ ms.date: 06/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b494767-68c1-47b1-9a86-591bff0ad491
-caps.latest.revision: 18
-caps.handback.revision: 0
+caps.latest.revision: "18"
+caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 662901e850566756759fcfc61c58f3c0e56bc5aa
 ms.openlocfilehash: 2cb4d724c8b78657458a30c0bb020f67c6b62795
-ms.contentlocale: es-es
-ms.lasthandoff: 06/03/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-an-intune-subscription-associated-with-system-center-configuration-manager"></a>Administración de una suscripción a Intune asociada a System Center Configuration Manager
 
@@ -56,4 +54,3 @@ Ahora puede crear un nuevo punto de conexión de servicio, agregar una nueva sus
 
 ## <a name="how-to-change-mdm-authority-to-intune"></a>Cómo cambiar la entidad de MDM a Intune
 A partir de la versión 1610 de Configuration Manager y la versión 1705 de Microsoft Intune, puede cambiar la entidad de MDM sin tener que ponerse en contacto con el soporte técnico de Microsoft y sin necesidad de anular y volver a crear la inscripción de sus dispositivos administrados existentes. Para obtener más información, consulte [Cambio de la entidad de MDM](/sccm/mdm/deploy-use/change-mdm-authority).
-

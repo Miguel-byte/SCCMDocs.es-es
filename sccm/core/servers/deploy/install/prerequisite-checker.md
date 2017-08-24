@@ -6,21 +6,19 @@ ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf13bb8-4ba2-4bd7-9fac-d36a9d88a1b6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d5cc318eaf097cb3cfbfde730f7573d27af25648
 ms.openlocfilehash: f0d44f82a0b6068f8cecc5808774677eccb0f8d9
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prerequisite-checker-for-system-center-configuration-manager"></a>Comprobador de requisitos previos de System Center Configuration Manager
 
@@ -198,4 +196,3 @@ Para obtener más información sobre las comprobaciones que lleva a cabo el Comp
     -   Haga clic en un elemento de la lista para obtener más información acerca de cómo resolver el problema.  
     -   Debe resolver todos los elementos de la lista que tengan un estado de **Error** antes de instalar el servidor de sitio, el sistema de sitio o la consola de Configuration Manager.  
     -   También puede abrir el archivo **ConfigMgrPrereq.log** en la raíz de la unidad del sistema para revisar los resultados del Comprobador de requisitos previos. El archivo de registro podría contener información adicional que no se muestra en la interfaz de usuario del Comprobador de requisitos previos.  
-

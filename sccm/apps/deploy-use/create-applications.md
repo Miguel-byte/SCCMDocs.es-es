@@ -6,22 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
-caps.latest.revision: 14
-caps.handback.revision: 0
+caps.latest.revision: "14"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: b7461f89f483314bd07248bbc9d5dde85ca6b6c2
 ms.openlocfilehash: 4d048d4f9ab01b28e6c21a38cca4d82c85030618
-ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-applications-with-system-center-configuration-manager"></a>Crear aplicaciones con System Center Configuration Manager
 
@@ -477,4 +475,3 @@ La tabla siguiente contiene scripts de ejemplo de Microsoft Visual Basic (VB) qu
 |**Mac OS X**|Crea un tipo de implementación para equipos Mac desde un archivo .cmmac creado mediante la herramienta CMAppUtil.<br /><br /> Se aplica solo a equipos Mac que ejecutan el cliente de Configuration Manager.|  
 |**Aplicación web**|Crea un tipo de implementación que especifica un vínculo a una aplicación web. El tipo de implementación instala un acceso directo a la aplicación web en el dispositivo del usuario.<br /><br /> Si ha instalado Intune Managed Browser en dispositivos iOS o Android que administra, puede asegurarse de que los usuarios solo pueden utilizar el explorador administrado para abrir la aplicación. Para ello, use uno de los siguientes formatos cuando especifique un vínculo a la aplicación al reemplazar **http:** con **http-intunemam:** o **https:** con **https-intunemam:**<br /><br /> - **http-intunemam://<ruta de acceso a la aplicación web\>**<br /><br /> - **https-intunemam://<ruta de acceso a la aplicación web\>**<br /><br /> Puede usar los requisitos de la aplicación de Configuration Manager para garantizar que las aplicaciones que quiere asociar con el explorador administrado solo se instalan en dispositivos iOS y Android.<br /><br /> Para obtener más información sobre Intune Managed Browser, consulte [Administrar el acceso a Internet mediante directivas de explorador administrado](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).|  
 |**Windows Installer a través de MDM (\*.msi)**|Este tipo de instalador le permite crear e implementar aplicaciones basadas en Windows Installer en equipos que ejecuten Windows 10.<br /><br /> Las consideraciones siguientes se aplican cuando se utiliza este tipo de instalador:<br><br>- Solo puede cargar un único archivo con la extensión .msi.<br /><br /> - El código de producto y la versión del producto del archivo se usan para la detección de la aplicación.<br /><br /> - Se utilizará el comportamiento de reinicio predeterminado de la aplicación. Configuration Manager no lo controla.<br /><br /> - Se instalarán paquetes MSI por usuario para un solo usuario.<br /><br /> - Se instalarán paquetes MSI por máquina para todos los usuarios del dispositivo.<br /><br /> - Actualmente, los paquetes MSI de modo dual solo se instalan para todos los usuarios del dispositivo.<br /><br /> - Se admiten actualizaciones de aplicaciones cuando el código de producto MSI de cada versión es el mismo.|  
-

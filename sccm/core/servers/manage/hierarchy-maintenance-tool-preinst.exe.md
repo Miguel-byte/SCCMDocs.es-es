@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cead6825-6113-4ba5-a381-ac3598dfee86
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: f3ddeaadfb1418aeeaacdca47768600c86b59083
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="hierarchy-maintenance-tool-preinstexe-for-system-center-configuration-manager"></a>Herramienta de mantenimiento de jerarquía (Preinst.exe) para System Center Configuration Manager
 
@@ -93,7 +92,7 @@ La opción /PARENTKEYS coloca la clave del sitio en el que se ejecutó la opció
 
 Después de ejecutar preinst.exe con esta opción, copie manualmente el archivo &lt;*códigoDeSitio*>.CT7 en la carpeta del sitio de recuperación …\Inboxes\hman.box (no hman.box\pubkey).  
 
-##  <a name="a-namebkmkmanuallyexchangekeysa-manually-exchange-public-keys-between-sites"></a><a name="BKMK_ManuallyExchangeKeys"></a> Intercambio manual de claves públicas entre sitios  
+##  <a name="BKMK_ManuallyExchangeKeys"></a> Intercambio manual de claves públicas entre sitios  
 De manera predeterminada, la opción **Requerir intercambio de claves seguro** está habilitada para los sitios de Configuration Manager. Cuando se requiere el intercambio de claves seguro, existen dos situaciones en las que debe realizar manualmente el intercambio inicial de claves entre sitios:  
 
 -   Si el esquema de Active Directory no se ha extendido para Configuration Manager  
@@ -124,9 +123,3 @@ Puede utilizar la herramienta de mantenimiento de jerarquía para exportar las c
 3.  La opción /keyforchild coloca la clave pública del sitio primario en el archivo **&lt;código de sitio\>.CT5** en la raíz de la unidad de sistema.  
 
 4.  Mueva el archivo **&lt;código de sitio\>.CT5** al directorio del sitio secundario **&lt;directorio de instalación\>\inboxes\hman.box**.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

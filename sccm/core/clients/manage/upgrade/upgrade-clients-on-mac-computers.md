@@ -6,22 +6,19 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 74c60941-5eae-4905-9e58-252bdb39df96
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
-ms.openlocfilehash: 6bdc5cca01bf5a79a6177d7cf1de96b8ff2c2305
-ms.contentlocale: es-es
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 502116b66fc14914ca0606ae416e82202824de7a
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-upgrade-clients-on-mac-computers-in-system-center-configuration-manager"></a>Cómo actualizar clientes en equipos Mac en System Center Configuration Manager
 
@@ -104,4 +101,3 @@ Siga los pasos generales que se describen a continuación para actualizar el cli
 -   Agregue el elemento de configuración a una línea base de configuración y después implemente la línea base de configuración en todos los equipos Mac que instalan un certificado independientemente de Configuration Manager.  
 
  Para obtener más información sobre cómo crear e implementar elementos de configuración para equipos Mac, consulte [Cómo crear elementos de configuración para dispositivos Mac OS X administrados con el cliente de System Center Configuration Manager](../../../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md) y [Cómo implementar líneas base de configuración en System Center Configuration Manager](../../../../compliance/deploy-use/deploy-configuration-baselines.md).  
-

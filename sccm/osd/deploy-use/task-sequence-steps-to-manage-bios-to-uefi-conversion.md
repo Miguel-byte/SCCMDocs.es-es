@@ -6,21 +6,18 @@ ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
 ms.openlocfilehash: 528ce515c86c4e778532290026a90a46476c4576
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Pasos de la secuencia de tareas para administrar la conversión de BIOS a UEFI
 Windows 10 proporciona muchas características de seguridad nuevas que requieren dispositivos compatibles con UEFI. Es posible que tenga equipos modernos de Windows que admiten UEFI, pero que usan un BIOS heredado. Para convertir un dispositivo a UEFI es necesario que vuelva a particionar el disco duro y vuelva a configurar el firmware de cada equipo. Mediante el uso de secuencias de tareas en Configuration Manager, puede preparar un disco duro para la conversión de BIOS en UEFI, convertir de BIOS a UEFI como parte del proceso de actualización local y recopilar información de UEFI como parte del inventario de hardware.
@@ -66,4 +63,3 @@ Windows 10 Creators Update presenta una herramienta de conversión sencilla que 
    2. Agregue un paso para iniciar la herramienta de OEM que va a convertir el firmware de BIOS a UEFI. Normalmente será un paso de secuencia de tareas Ejecutar línea de comandos con una línea de comandos para iniciar la herramienta de OEM.
    3. En General, agregue el paso **Reiniciar equipo**. Para especificar lo que se debe ejecutar después del reinicio, seleccione **El sistema operativo predeterminado instalado actualmente**.
 3. Implemente la secuencia de tareas.
-

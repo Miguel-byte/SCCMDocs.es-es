@@ -6,21 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 58a0d2ae-de76-401f-b854-7a5243949033
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 30ae794381c6894e11b21a8167d0af60463c5279
-ms.lasthandoff: 12/16/2016
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="use-stand-alone-media-to-deploy-windows-without-using-the-network-in-system-center-configuration-manager"></a>Usar medios independientes para implementar Windows sin usar la red en System Center Configuration Manager
 
@@ -80,4 +78,3 @@ Puede usar medios independientes en los siguientes escenarios de implementación
 
 ## <a name="install-the-operating-system-from-stand-alone-media"></a>Instalar el sistema operativo desde medios independientes  
  Inserte el medio independiente en una unidad de arranque del equipo y luego vuelva a encenderlo para instalar el sistema operativo.  
-

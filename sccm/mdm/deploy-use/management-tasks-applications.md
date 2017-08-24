@@ -6,22 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
-caps.latest.revision: 18
-caps.handback.revision: 0
+caps.latest.revision: "18"
+caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: bc7bb99bc526ed0bbaaad15fc9af39fa8b7c3893
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-applications-in-system-center-configuration-manager"></a>Administración de aplicaciones en System Center Configuration Manager
 
@@ -56,4 +54,3 @@ Estas son algunas consideraciones que se deben tener en cuenta durante la implem
 ### <a name="next-steps"></a>Pasos siguientes
 
 Con el tiempo, le podría interesar realizar cambios en una aplicación, desinstalar una aplicación o reemplazar una aplicación implementada por una nueva. Lea [Actualizar y retirar aplicaciones mediante System Center Configuration Manager](../../apps/deploy-use/update-and-retire-applications.md) para comprender estas funcionalidades.
-

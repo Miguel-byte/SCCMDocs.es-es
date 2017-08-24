@@ -6,24 +6,20 @@ ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3b9c4027-a98b-406b-935c-ccabcfe713df
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: ca8dfd2882189065aecdb46b42205a04294dafed
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: ca40c2c745ea516b56b637249b892cd44e570a9d
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 #  <a name="using-configuration-manager-software-updates-to-deliver-definition-updates"></a>El uso de las actualizaciones de Software de Configuration Manager para entregar actualizaciones de definiciones
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -120,4 +116,3 @@ ms.lasthandoff: 12/16/2016
 
 > [!div class="button"]
 [Atrás >](endpoint-configure-alerts.md)
-

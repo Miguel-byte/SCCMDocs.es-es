@@ -5,25 +5,21 @@ ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 57413dd3-b2f8-4a5f-b27f-8464d357caff
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1defe96163f1bb70f586619ad89098c6f0e6c665
 ms.openlocfilehash: 3eea3a6e5f23808570ded4be3bd7412954518b96
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="configure-role-based-administration-for-system-center-configuration-manager"></a>Configurar la administración basada en roles de System Center Configuration Manager   
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -302,4 +298,3 @@ Use el siguiente procedimiento para modificar un usuario administrativo que teng
 
     > [!CAUTION]  
     >  Cuando un rol de seguridad concede a usuarios administrativos el permiso de implementación de recopilaciones, dichos usuarios administrativos pueden distribuir objetos de cualquier ámbito de seguridad para el que tengan permisos de **lectura** de objetos, incluso si ese ámbito de seguridad está asociado a un rol de seguridad diferente.  
-

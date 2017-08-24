@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5ee5928f-3d72-4b00-8156-1e0d1030a96c
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 5632a753fc565312a80b2ed69ce438335b3fad50
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-operating-system-deployment-in-system-center-configuration-manager"></a>Seguridad y privacidad para implementación de sistemas operativos en System Center Configuration Manager
 
@@ -28,7 +27,7 @@ ms.openlocfilehash: 5632a753fc565312a80b2ed69ce438335b3fad50
 
 Este tema contiene información sobre la seguridad y privacidad para la implementación de sistemas operativos en System Center Configuration Manager.  
 
-##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-operating-system-deployment"></a><a name="BKMK_Security_HardwareInventory"></a> Prácticas recomendadas de seguridad para la implementación de sistemas operativos  
+##  <a name="BKMK_Security_HardwareInventory"></a> Prácticas recomendadas de seguridad para la implementación de sistemas operativos  
  Siga las siguientes prácticas recomendadas de seguridad cuando implemente sistemas operativos con Configuration Manager:  
 
 -   **Implementar controles de acceso para proteger el medio de arranque**  
@@ -193,7 +192,7 @@ Este tema contiene información sobre la seguridad y privacidad para la implemen
 
      Aunque las variables de recopilación ofrecen un método flexible para implementar sistemas operativos, pueden provocar la divulgación de información.  
 
-##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-operating-system-deployment"></a><a name="BKMK_Privacy_HardwareInventory"></a> Información de privacidad para la implementación de sistemas operativos  
+##  <a name="BKMK_Privacy_HardwareInventory"></a> Información de privacidad para la implementación de sistemas operativos  
  Además de implementar sistemas operativos en equipos sin sistema operativo, Configuration Manager puede usarse para migrar configuraciones y archivos de los usuarios de un equipo a otro. El administrador configura la información que se va a transferir, como los archivos de datos personales, las opciones de configuración y las cookies del explorador.  
 
  La información se almacena en un punto de migración de estado y se cifra durante la transmisión y el almacenamiento. El nuevo equipo asociado a la información de estado puede recuperar la información. Si el nuevo equipo pierde la clave para recuperar la información, un administrador de Configuration Manager con el derecho Ver información de recuperación en objetos de instancia de asociación de equipo puede obtener acceso a la información y asociarla a un nuevo equipo. Cuando el nuevo equipo restaura la información de estado, de forma predeterminada, elimina los datos después de un día. Puede configurar cuándo el punto de migración de estado quitará los datos marcados para su eliminación. La información de migración de estado no se almacena en la base de datos del sitio y no se envía a Microsoft.  
@@ -207,9 +206,3 @@ Este tema contiene información sobre la seguridad y privacidad para la implemen
  Configuration Manager no lleva a cabo la implementación de sistemas operativos de manera predetermina: requiere varios pasos de configuración para poder recopilar información de estado de usuario o crear secuencias de tareas o imágenes de arranque.  
 
  Antes de configurar la implementación de sistema operativo, tenga en cuenta los requisitos de privacidad.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

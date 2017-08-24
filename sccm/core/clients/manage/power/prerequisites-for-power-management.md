@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9c062f13-3c1f-4621-9cae-de0e322aa03f
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 711ef491899846b86bfed0355ac7fd0f9d509c4f
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prerequisites-for-power-management-in-system-center-configuration-manager"></a>Requisitos previos de la administración de energía en System Center Configuration Manager
 
@@ -42,9 +41,3 @@ La administración de energía en System Center Configuration Manager tiene depe
 |----------------|----------------------|  
 |La administración de energía debe estar habilitada para poder crear y supervisar planes de energía.|Para obtener información sobre cómo habilitar y configurar la administración de energía, consulte [Configuring Power Management in Configuration Manager](../../../../core/clients/manage/power/configuring-power-management.md) (Configuración de la administración de energía en Configuration Manager).|  
 |Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.|Debe configurar un punto de servicios de informes antes de poder ver los informes de administración de energía. Para obtener más información, consulte [Generación de informes en System Center Configuration Manager](../../../../core/servers/manage/reporting.md).|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

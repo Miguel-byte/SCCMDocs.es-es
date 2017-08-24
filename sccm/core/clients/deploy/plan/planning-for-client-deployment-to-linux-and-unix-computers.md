@@ -6,23 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
-caps.latest.revision: 9
-caps.handback.revision: 0
+caps.latest.revision: "9"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: dad941d5984fc7e0b43954b14c3966bb2632ad05
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 367ffb919a1adb9a0530f7357a0fcf1e6636af08
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="planning-for-client-deployment-to-linux-and-unix-computers-in-system-center-configuration-manager"></a>Planificación de la implementación del cliente en equipos Linux y UNIX con System Center Configuration Manager
 
@@ -311,4 +308,3 @@ Puede instalar el cliente de System Center Configuration Manager en equipos que 
 
 > [!NOTE]  
 >  La opción de línea de comandos **ignoreSHA256validation** se ignora en los equipos que ejecutan una versión de Linux y UNIX que se publicaron con versiones de OpenSSL que admiten SHA-256.  
-

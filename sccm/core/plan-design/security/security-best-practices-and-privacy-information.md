@@ -6,20 +6,19 @@ ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b7bff8a0-fe76-4d3b-aac6-065290888bea
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 9e88ed671ce56f19a545b2749b46710d56dac2ae
 ms.openlocfilehash: 135a30085a1a02f75e9a88ed5f9ded06e9c33367
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-best-practices-and-privacy-information-for-system-center-configuration-manager"></a>Recomendaciones de seguridad e información de privacidad de System Center Configuration Manager
 
@@ -68,9 +67,3 @@ Use la siguiente información para buscar recomendaciones de seguridad e informa
 -   [Seguridad y privacidad para perfiles de certificados en System Center Configuration Manager](../../../protect/plan-design/security-and-privacy-for-certificate-profiles.md)  
 
 -   [Privacidad y seguridad de los perfiles de Wi-Fi y VPN en System Center Configuration Manager](../../../protect/plan-design/security-and-privacy-for-wifi-vpn-profiles.md)  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

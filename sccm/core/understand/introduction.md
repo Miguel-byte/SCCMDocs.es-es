@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 916aac9a8f724e37044884cd73de5fea1f1a8f97
 ms.openlocfilehash: 76f907b17df0dd2f102e34ca3cfb3ffc813c0004
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="introduction-to-system-center-configuration-manager"></a>Introducción a System Center Configuration Manager
 
@@ -74,7 +73,7 @@ Use los siguientes temas y secciones adicionales de este tema para obtener más 
 -   [Buscar ayuda sobre el uso de System Center Configuration Manager](../../core/understand/find-help.md)  
 -   [Características eliminadas y en desuso de System Center Configuration Manager](../../core/plan-design/changes/removed-and-deprecated-features.md)  
 
-##  <a name="a-namebkmkconsolea-the-configuration-manager-console"></a><a name="BKMK_Console"></a> La consola de Configuration Manager  
+##  <a name="BKMK_Console"></a> La consola de Configuration Manager  
  Después de instalar Configuration Manager, use la consola de Configuration Manager para configurar sitios y clientes, y para ejecutar y supervisar tareas de administración. Esta consola es el principal punto de administración y permite administrar varios sitios.  
 
  Puede usar la consola para ejecutar consolas secundarias para proporcionar soporte para tareas de administración de clientes específicas, como las siguientes:  
@@ -86,7 +85,7 @@ Puede instalar la consola de Configuration Manager en equipos adicionales, restr
 
 Para obtener más información, consulte [Instalar las consolas de System Center Configuration Manager](../../core/servers/deploy/install/install-consoles.md).
 
-##  <a name="a-namebkmkapplicationcataloga-the-application-catalog-software-center-and-the-company-portal"></a><a name="BKMK_ApplicationCatalog"></a> Catálogo de aplicaciones, Centro de software y portal de la compañía  
+##  <a name="BKMK_ApplicationCatalog"></a> Catálogo de aplicaciones, Centro de software y portal de la compañía  
  El **Catálogo de aplicaciones** es un sitio web donde los usuarios pueden buscar y solicitar software para sus equipos con Windows. Para utilizar el catálogo de aplicaciones, debe instalar el punto de servicio web del catálogo de aplicaciones y el punto de sitio web del catálogo de aplicaciones para el sitio.  
 
  El **Centro de software** es una aplicación que se instala si el cliente de Configuration Manager está instalado en equipos con Windows. Los usuarios ejecutan esta aplicación para pedir software y administrar el software que Configuration Manager les implementa. El Centro de software permite a los usuarios realizar lo siguiente:  
@@ -100,12 +99,12 @@ Para obtener más información, consulte [Instalar las consolas de System Center
 
 Para obtener más información, vea [Introducción a la administración de aplicaciones en System Center Configuration Manager](../../apps/understand/introduction-to-application-management.md).  
 
-###  <a name="a-namebkmkclienta-configuration-manager-properties-on-windows-pcs"></a><a name="BKMK_Client"></a> Propiedades de Configuration Manager (en equipos de Windows)  
+###  <a name="BKMK_Client"></a> Propiedades de Configuration Manager (en equipos de Windows)  
  Cuando se instala el cliente de Configuration Manager en equipos con Windows, Configuration Manager está instalado en el Panel de control. Por lo general, no tiene que configurar esta aplicación, ya que la configuración del cliente se realiza en la consola de Configuration Manager. Esta aplicación ayuda a los usuarios administrativos y al departamento de soporte técnico a solucionar problemas relacionados con los clientes individuales.  
 
  Para obtener más información sobre la implementación de clientes, consulte [Client installation methods in System Center Configuration Manager (Métodos de instalación de cliente en System Center Configuration Manager)](../../core/clients/deploy/plan/client-installation-methods.md).  
 
-##  <a name="a-namebkmkexamplescenariosa-example-scenarios-for-configuration-manager"></a><a name="BKMK_ExampleScenarios"></a> Escenarios de ejemplo de Configuration Manager  
+##  <a name="BKMK_ExampleScenarios"></a> Escenarios de ejemplo de Configuration Manager  
  Los siguientes escenarios de ejemplo muestran cómo una empresa llamada Trey Research usa System Center Configuration Manager para permitir que los usuarios:  
 
 -   Sean más productivos.  
@@ -114,7 +113,7 @@ Para obtener más información, vea [Introducción a la administración de aplic
 
 En todos los escenarios, Adán es el administrador principal de Configuration Manager.  
 
-###  <a name="a-namebkmkscenarioempowera-example-scenario-empower-users-by-ensuring-access-to-applications-from-any-device"></a><a name="BKMK_ScenarioEmpower"></a> Escenario de ejemplo: Capacitar a los usuarios garantizando el acceso a aplicaciones desde cualquier dispositivo  
+###  <a name="BKMK_ScenarioEmpower"></a> Escenario de ejemplo: Capacitar a los usuarios garantizando el acceso a aplicaciones desde cualquier dispositivo  
  Trey Research quiere garantizar que los empleados tienen acceso a las aplicaciones que necesitan y de la forma más eficaz posible. Adán asigna estos requisitos de la empresa a los escenarios siguientes:  
 
 |Requisito|Estado de administración de cliente actual|Estado de administración de cliente futuro|  
@@ -142,7 +141,7 @@ Implementa estas opciones mediante los pasos de configuración de la tabla sigui
 
  Estos pasos de configuración y resultados permiten a Trey Research capacitar completamente a sus empleados al garantizarles el acceso a las aplicaciones desde cualquier dispositivo.  
 
-###  <a name="a-namebkmkscenariounifya-example-scenario-unify-compliance-management-for-devices"></a><a name="BKMK_ScenarioUnify"></a> Escenario de ejemplo: Unificar la administración de cumplimiento para dispositivos  
+###  <a name="BKMK_ScenarioUnify"></a> Escenario de ejemplo: Unificar la administración de cumplimiento para dispositivos  
  Trey Research desea una solución de administración de clientes unificada que garantice que sus equipos ejecutan software antivirus que se mantiene actualizado automáticamente. Es decir:  
 
 -   El Firewall de Windows está habilitado.  
@@ -182,7 +181,7 @@ Implementa estas opciones mediante los pasos de configuración de la tabla sigui
 
  Estos pasos de configuración y resultados hacen que Trey Research unifique correctamente la administración de cumplimiento para dispositivos.  
 
-###  <a name="a-namebkmkscenariosimplifya-example-scenario-simplify-client-management-for-devices"></a><a name="BKMK_ScenarioSimplify"></a> Escenario de ejemplo: Simplificar la administración de clientes para dispositivos  
+###  <a name="BKMK_ScenarioSimplify"></a> Escenario de ejemplo: Simplificar la administración de clientes para dispositivos  
  Trey Research quiere que todos los equipos nuevos instalen automáticamente la imagen del equipo base de la empresa que ejecuta Windows 7. Una vez instalada la imagen del sistema operativo en estos equipos, se deben administrar y supervisar para cualquier software adicional que instalen los usuarios. Los equipos que almacenan información altamente confidencial requieren directivas de administración más restrictivas que los demás equipos. Por ejemplo, los ingenieros del departamento de soporte técnico no deben conectarse a ellos de forma remota, debe utilizarse la entrada de PIN de BitLocker para los reinicios y solo los administradores locales pueden instalar software.  
 
  Adán asigna estos requisitos de la empresa a los escenarios siguientes:  
@@ -212,16 +211,10 @@ Implementa estas opciones mediante los pasos de configuración de la tabla sigui
 
  Estos pasos y resultados de configuración simplifican la administración de clientes para dispositivos en Trey Research.  
 
-##  <a name="a-namebkmknextstepsa-next-steps"></a><a name="BKMK_NextSteps"></a> Pasos siguientes  
+##  <a name="BKMK_NextSteps"></a> Pasos siguientes  
  Antes de instalar Configuration Manager, familiarícese con los conceptos y términos básicos de Configuration Manager.  
 
 -   Si está familiarizado con System Center 2012 Configuration Manager, vea [Cambios en System Center Configuration Manager respecto a System Center 2012 Configuration Manager](../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md) para conocer las nuevas funciones.  
 -   Para obtener información general técnica de System Center Configuration Manager, consulte [Fundamentals of System Center Configuration Manager (Aspectos básicos de System Center Configuration Manager)](../../core/understand/fundamentals.md).  
 
 Cuando esté familiarizado con los conceptos básicos, use la documentación de System Center Configuration Manager para implementar y usar correctamente Configuration Manager.  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

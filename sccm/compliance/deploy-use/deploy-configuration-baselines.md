@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9be8aaf3-075e-4acd-abd2-7459254e16e2
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: 9c9e6b7780c7c10c20a60dbbbf506e916031eb88
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-deploy-configuration-baselines-in-system-center-configuration-manager"></a>Cómo implementar líneas base de configuración en System Center Configuration Manager
 
@@ -57,9 +56,3 @@ Utilice el cuadro de diálogo **Implementar líneas base de configuración** par
     >  Si la línea base de configuración se implementa en un equipo, su compatibilidad se evalúa en las dos horas siguientes a la hora de inicio que programe. Si se implementa para un usuario, la compatibilidad se evalúa cuando el usuario inicia sesión.  
 
 9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Implementar líneas de base de configuración** y crear la implementación. Para obtener más información sobre cómo supervisar la implementación, consulte [Monitor compliance settings](/sccm/compliance/deploy-use/monitor-compliance-settings) (Supervisar la configuración de cumplimiento).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

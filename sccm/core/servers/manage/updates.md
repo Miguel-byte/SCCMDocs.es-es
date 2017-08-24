@@ -6,22 +6,20 @@ ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
-caps.latest.revision: 51
-caps.handback.revision: 0
+caps.latest.revision: "51"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: d46aca88111d4ee0e96b75ca5a3ec57aa4274d6d
-ms.contentlocale: es-es
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="updates-for-system-center-configuration-manager"></a>Actualizaciones para System Center Configuration Manager
 
@@ -150,4 +148,3 @@ Estas revisiones se instalan manualmente, mediante uno de estos dos métodos:
 -   **Instalador de revisiones:** esta herramienta se usa para instalar manualmente una revisión que no se puede instalar con el método en la consola. Este método se usa para las revisiones que usan la siguiente estructura de nombre de archivo: **&lt;Producto\>-&lt;versión del producto\>-&lt;identificador del artículo de KB\>-&lt;plataforma\>-&lt;idioma\>.exe**.
 
      Para obtener más información, consulte [Use the Hotfix Installer to install updates for System Center Configuration Manager](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md) (Uso del instalador de revisiones para instalar actualizaciones para System Center Configuration Manager).
-

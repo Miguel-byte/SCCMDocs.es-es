@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: a53f8ca0cc9c4e4f7d91dd4a08eeea76cbd0b142
 ms.openlocfilehash: 72f99f0c90951f80de3d6e5ed8786d3fa482107e
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="management-tasks-for-system-center-configuration-manager-applications"></a>Tareas de administración de aplicaciones de System Center Configuration Manager
 
@@ -60,9 +59,3 @@ Para obtener más información sobre la creación de aplicaciones y los tipos de
 |**Reducir prioridad**|Reduce la prioridad del tipo de implementación seleccionado.|  
 |**Eliminar**|Elimina el tipo de implementación seleccionado.<br><br>No se puede eliminar un tipo de implementación si un tipo de implementación en otra aplicación hace referencia al mismo.<br>Para eliminar un tipo de implementación, primero debe quitar todas las dependencias al tipo de implementación que se incluyen en otros tipos de implementación.<br>Además, también debe quitar las revisiones anteriores de todas las aplicaciones que tienen un tipo de implementación que hace referencia al tipo de implementación que quiere eliminar.|  
 |**Actualizar contenido**|Actualiza el contenido del tipo de implementación seleccionado.<br /><br /> Al iniciar el asistente para un tipo de implementación que tiene una aplicación virtual, se inicia el **Asistente para actualizar contenido**. Este asistente le permite modificar las opciones de publicación y las reglas de requisitos para la aplicación virtual seleccionada. Para obtener más información, consulte [Create applications](../../apps/deploy-use/create-applications.md) (Creación de aplicaciones).<br /><br /> Al actualizar el contenido de un tipo de implementación, se crea una nueva revisión de la aplicación. Esto puede provocar que los dispositivos cliente se actualicen con la nueva aplicación.|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -6,23 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 8d15ae3f-de42-461f-a907-c43873da22d2
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: d8ccfee895f5fd3649fb4bef4a62fd790cce7ea8
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 75bddb41d4d1cf209fa7595c52b5a6aa831ba3dd
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="planning-for-client-deployment-to-mac-computers-in-system-center-configuration-manager"></a>Planeamiento de la implementación de cliente en equipos Mac en System Center Configuration Manager
 
@@ -111,4 +108,3 @@ Puede instalar el cliente de Configuration Manager en equipos Mac que ejecuten e
 -   Comprobación y corrección de cliente del estado de cliente  
 
  Para obtener más información sobre cómo instalar y configurar el cliente Mac de Configuration Manager, consulte [Cómo implementar clientes en equipos Mac con System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-macs.md).
-

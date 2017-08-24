@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
-caps.latest.revision: 8
-caps.handback.revision: 0
+caps.latest.revision: "8"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
 ms.openlocfilehash: a8b1a42c43438553cfbb62328bed933378bb344c
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>Implementar Windows to Go con System Center Configuration Manager.
 
@@ -51,7 +50,7 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
 
 8.  [El usuario inicia sesión en Windows 8](#BKMK_UserLogsIn)  
 
-###  <a name="a-namebkmkprereqsa-prerequisites-to-provision-windows-to-go"></a><a name="BKMK_Prereqs"></a> Requisitos previos para aprovisionar Windows To Go  
+###  <a name="BKMK_Prereqs"></a> Requisitos previos para aprovisionar Windows To Go  
  Antes de que aprovisione Windows To Go, debe completar las siguientes acciones en Configuration Manager:  
 
 -   **Distribuir una imagen de arranque a un punto de distribución**  
@@ -72,7 +71,7 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
 
      debe crear una secuencia de tareas para una implementación de Windows 8 a la que hará referencia al crear los medios preconfigurados. Para obtener más información, consulte [Manage task sequences to automate tasks](manage-task-sequences-to-automate-tasks.md) (Administrar secuencias de tareas para automatizar tareas).  
 
-###  <a name="a-namebkmkcreateprestagedmediaa-create-prestaged-media"></a><a name="BKMK_CreatePrestagedMedia"></a> Crear medios preconfigurados  
+###  <a name="BKMK_CreatePrestagedMedia"></a> Crear medios preconfigurados  
  Los medios preconfigurados contienen la imagen de arranque que se utiliza para iniciar el equipo de destino y la imagen de sistema operativo que se aplica al equipo de destino. Mediante el uso de la imagen de arranque, se puede iniciar el equipo que se aprovisiona con los medios preconfigurados. A continuación, el equipo puede ejecutar una secuencia de tareas de implementación de sistema operativo existente para instalar una implementación completa de sistema operativo. La secuencia de tareas que implementa el sistema operativo no se incluye en el medio.  
 
  Puede agregar contenido, como aplicaciones y controladores de dispositivos, además de la imagen de sistema operativo y la imagen de arranque durante la fase de preconfiguración. Esto reduce el tiempo que se tarda en implementar un sistema operativo y reduce el tráfico de red porque el contenido ya está en la unidad.  
@@ -213,7 +212,7 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
     > [!NOTE]  
     >  El asistente puede tardar un período prolongado de tiempo en completar el archivo multimedia preconfigurado.  
 
-###  <a name="a-namebkmkcreatepackagea-create-a-windows-to-go-creator-package"></a><a name="BKMK_CreatePackage"></a> Crear un paquete de Windows To Go Creator  
+###  <a name="BKMK_CreatePackage"></a> Crear un paquete de Windows To Go Creator  
  Como parte de la implementación de Windows To Go, debe crear un paquete para implementar el archivo multimedia preconfigurado. El paquete debe incluir la herramienta que configura la unidad de Windows To Go y extrae el medio preconfigurado en la unidad. Utilice el procedimiento siguiente para crear el paquete de Windows To Go Creator.  
 
 #### <a name="to-create-the-windows-to-go-creator-package"></a>Para crear el paquete de Windows To Go Creator  
@@ -278,7 +277,7 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
 
      Haga clic en **Siguiente** y complete el asistente.  
 
-###  <a name="a-namebkmkupdatetasksequencea-update-the-task-sequence-to-enable-bitlocker-for-windows-to-go"></a><a name="BKMK_UpdateTaskSequence"></a> Actualizar la secuencia de tareas para habilitar BitLocker para Windows To Go  
+###  <a name="BKMK_UpdateTaskSequence"></a> Actualizar la secuencia de tareas para habilitar BitLocker para Windows To Go  
  Windows To Go habilita BitLocker en una unidad externa de arranque sin el uso de TPM. Por lo tanto, debe utilizar una herramienta independiente para configurar BitLocker en la unidad de Windows To Go. Para habilitar BitLocker, debe agregar una acción a la secuencia de tareas después del paso **Instalar Windows y Configuration Manager** paso.  
 
 > [!NOTE]  
@@ -341,7 +340,7 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
     > [!NOTE]  
     >  El paso **Habilitar BitLocker** , que es probable que se produzca después del paso de línea de comandos nuevo, no se utiliza para habilitar BitLocker para Windows To Go. Sin embargo, puede mantener este paso en la secuencia de tareas que se utilizará para las implementaciones de Windows 8 que no utilicen una unidad de Windows To Go.  
 
-###  <a name="a-namebkmkdeploymentsa-deploy-the-windows-to-go-creator-package-and-task-sequence"></a><a name="BKMK_Deployments"></a> Implementar el paquete de Windows To Go Creator y la secuencia de tareas  
+###  <a name="BKMK_Deployments"></a> Implementar el paquete de Windows To Go Creator y la secuencia de tareas  
  Windows To Go es un proceso de implementación híbrida. Por lo tanto, debe implementar el paquete de Windows To Go Creator y la secuencia de tareas de Windows 8. Utilice los procedimientos siguientes para completar el proceso de implementación.  
 
 #### <a name="to-deploy-the-windows-to-go-creator-package"></a>Para implementar el paquete de Windows To Go Creator  
@@ -456,20 +455,14 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
 
 11. Complete el asistente.  
 
-###  <a name="a-namebkmkuserexperiencea-user-runs-the-windows-to-go-creator"></a><a name="BKMK_UserExperience"></a> El usuario ejecuta la herramienta Windows To Go Creator  
+###  <a name="BKMK_UserExperience"></a> El usuario ejecuta la herramienta Windows To Go Creator  
  Después de implementar el paquete de Windows To Go y la secuencia de tareas de Windows 8, Windows To Go Creator está disponible para el usuario. El usuario puede ir al catálogo de software o al Centro de software si se ha implementado Windows To Go Creator en los dispositivos, y ejecutar el programa Windows To Go Creator. Una vez descargado el paquete de Creator, se muestra un icono intermitente en la barra de tareas. Cuando el usuario hace clic en el icono, se muestra un cuadro de diálogo para que el usuario seleccione la unidad de Windows To Go que desea aprovisionar (a menos que se use la opción de línea de comandos /drive). Si la unidad no cumple los requisitos de Windows To Go o no tiene suficiente espacio libre en disco para instalar la imagen, Creator muestra un mensaje de error. El usuario puede comprobar la unidad y la imagen que se aplicarán en la página de confirmación. A medida que Creator configura y preconfigura contenido en la unidad de Windows To Go, muestra un cuadro de diálogo de progreso. Al finalizar la preconfiguración, Creator muestra una solicitud de reinicio del equipo para arrancar en la unidad de Windows To Go.  
 
 > [!NOTE]  
 >  Si no habilitó la redirección del arranque como parte de la línea de comandos de Creator en la sección [Create a Windows To Go Creator package](#BKMK_CreatePackage) , es posible que el usuario deba arrancar manualmente en la unidad de Windows To Go cada vez que se reinicia el sistema.  
 
-###  <a name="a-namebkmkconfigurestagedrivea-configuration-manager-configures-and-stages-the-windows-to-go-drive"></a><a name="BKMK_ConfigureStageDrive"></a> Configuration Manager configura y crea etapas en la unidad de Windows To Go  
+###  <a name="BKMK_ConfigureStageDrive"></a> Configuration Manager configura y crea etapas en la unidad de Windows To Go  
  Después de que el equipo reinicie la unidad de Windows To Go, la unidad arrancará en Windows PE y se conectará al punto de administración para obtener la directiva y finalizar la implementación de sistema operativo. Configuration Manager configura y crea etapas en la unidad. Después de que Configuration Manager cree etapas en la unidad, el usuario puede reiniciar el equipo para finalizar el proceso de aprovisionamiento (por ejemplo, unirse a un dominio o instalar aplicaciones). Este proceso es el mismo para todos los medios preconfigurados.  
 
-###  <a name="a-namebkmkuserlogsina-user-logs-in-to-windows-8"></a><a name="BKMK_UserLogsIn"></a> El usuario inicia sesión en Windows 8  
+###  <a name="BKMK_UserLogsIn"></a> El usuario inicia sesión en Windows 8  
  Cuando Configuration Manager finaliza el proceso de aprovisionamiento y se muestra la pantalla de bloqueo de Windows 8, el usuario puede iniciar sesión en el sistema operativo.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

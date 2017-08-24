@@ -6,22 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0a7415ba-2c53-4433-983e-780e92aa662f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0ebda27c0f3848615346c2ecf1ab8b9bb9ab6f0d
 ms.openlocfilehash: 0a3704a2d3b75ed7e0a7f718b681448ab6fc078d
-ms.contentlocale: es-es
-ms.lasthandoff: 05/26/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-for-site-system-servers-and-site-system-roles-for-system-center-configuration-manager"></a>Planeamiento de servidores y roles de sistema de sitio para System Center Configuration Manager
 
@@ -154,4 +151,3 @@ Los siguientes son roles de sistema de sitio que pueden utilizar un servidor pro
  Para obtener más información sobre servidores proxy para puntos de actualización de software, vea la sección "Configuración de servidor proxy" en el tema [Instalar y configurar un punto de actualización de software](../../../sum/get-started/install-a-software-update-point.md).  
 
 -   **Punto de conexión de servicio.** Cuando se configura para estar en línea (no sin conexión), este rol de sistema de sitio se conecta a Microsoft Intune y al servicio en la nube de Microsoft.  
-

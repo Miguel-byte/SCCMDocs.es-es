@@ -6,21 +6,19 @@ ms.date: 06/06/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b587779e-1bd3-4ee3-8146-8e31f53499bd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
-ms.openlocfilehash: 355dfb361a1ab3e1bd436dae1df8a416bf79c6c8
-ms.contentlocale: es-es
-ms.lasthandoff: 06/13/2017
-
+ms.openlocfilehash: 0c2e685961ceed920611bb9b8e611ba8512b2e6f
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1702 de System Center Configuration Manager
 
@@ -193,4 +191,3 @@ Revise las acciones siguientes que deben realizarse una vez finalizada la instal
 3.  Vuelva a configurar réplicas de base de datos para los puntos de administración de los sitios primarios que deshabilitó antes de iniciar la actualización.
 4.  Vuelva a configurar las tareas de mantenimiento de base de datos que deshabilitó antes de iniciar la actualización.
 5.  Si ha configurado el proyecto piloto del cliente antes de instalar la actualización, actualice los clientes en función del plan que ha creado.
-

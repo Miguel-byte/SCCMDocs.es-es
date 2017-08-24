@@ -6,22 +6,19 @@ ms.date: 02/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
 ms.openlocfilehash: 3c31271f3e3ae7aa45da03b3d75fd78242330646
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
@@ -115,4 +112,3 @@ Siga estos pasos para descargar el archivo de imagen que contiene el software cl
 6. Haga clic en el icono de flecha para descargar el archivo. El nombre del archivo es **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_EptProt_Lin_Mac_MLF_X21-30777.ISO**.
 
  Para más información acerca de cómo instalar y administrar los clientes de Endpoint Protection para equipos Linux y equipos Mac, use la documentación que acompaña a estos productos, que se encuentra en la carpeta **Documentation** .
-

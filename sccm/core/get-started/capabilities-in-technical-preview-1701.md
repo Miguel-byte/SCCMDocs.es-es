@@ -4,23 +4,21 @@ description: "Conozca las características disponibles en Technical Preview para
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 18598eaa-1131-44ff-8f8b-6093e87ac7a1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: b330c97a0853d1673f1cf7e0691891b72407fa51
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>Funciones de Technical Preview 1701 para System Center Configuration Manager
 
@@ -48,17 +46,17 @@ Pero con esta vista previa, los grupos de límites para los puntos de actualizac
 
 A continuación se describe el comportamiento de los puntos de actualización de software con esta Technical Preview:  
 
--    **Los clientes nuevos usan grupos de límites para seleccionar los puntos de actualización de software.** Los clientes que se instalan después de instalar la versión 1701 seleccionan un punto de actualización de software de entre los que estén asociados al grupo de límites del cliente.
+-   **Los clientes nuevos usan grupos de límites para seleccionar los puntos de actualización de software.** Los clientes que se instalan después de instalar la versión 1701 seleccionan un punto de actualización de software de entre los que estén asociados al grupo de límites del cliente.
 
   Esto sustituye el comportamiento anterior, según el cual los clientes seleccionan un punto de actualización de software aleatoriamente de una lista de puntos que comparten el bosque del cliente.   
 
--    **Los clientes instalados previamente siguen usando su punto de actualización de software actual hasta que recurren a la reserva para buscar uno nuevo.**
+-   **Los clientes instalados previamente siguen usando su punto de actualización de software actual hasta que recurren a la reserva para buscar uno nuevo.**
 Los clientes que ya estaban instalados y que tienen un punto de actualización de software seguirán usándolo hasta que recurran a la reserva. Esto incluye los puntos de actualización de software que no están asociados al grupo de límites actual del cliente. No intentarán encontrar y usar inmediatamente un punto de actualización de software de su grupo de límites actual.
 
   Los clientes que ya tengan un punto de actualización de software empezarán a usar el comportamiento de este nuevo grupo de límites únicamente cuando el cliente no logre llegar a su punto de actualización de software actual e inicie la reserva.
 Este retraso al cambiar al nuevo comportamiento es deliberado. Se debe a que un cambio en el punto de actualización de software puede producir un gran uso del ancho de banda de red cuando el cliente sincroniza los datos con el nuevo punto de actualización de software. El retraso en la transición puede ayudar a evitar que se sature la red en caso de que todos los clientes cambien a puntos de actualización de software nuevos al mismo tiempo.
 
--    **Opciones de configuración del tiempo de reserva.** En esta Technical Preview no se admiten opciones de configuración para cuando los clientes inician la reserva para buscar un nuevo punto de actualización de software. Esto incluye las opciones de configuración **Fallback times (in minutes)** (Tiempos de reserva (en minutos)) y **Never fallback** (Nunca reserva), que se pueden configurar para las relaciones de diversos grupos de límites.
+-   **Opciones de configuración del tiempo de reserva.** En esta Technical Preview no se admiten opciones de configuración para cuando los clientes inician la reserva para buscar un nuevo punto de actualización de software. Esto incluye las opciones de configuración **Fallback times (in minutes)** (Tiempos de reserva (en minutos)) y **Never fallback** (Nunca reserva), que se pueden configurar para las relaciones de diversos grupos de límites.
 
   En su lugar, los clientes conservan su comportamiento actual, según el cual el cliente intenta conectarse a su punto de actualización de software actual durante dos horas antes de que inicie la reserva para buscar un nuevo punto de actualización de software que pueda usar.
 
@@ -115,8 +113,7 @@ Para ello, modifique un archivo de configuración de modo que apunte a la nube d
 
     Cambie el valor del nombre de la configuración *FairFaxArmResourceID* de modo que sea igual a "https://management.usgovcloudapi.net/"
 
-   - **Original:**
-      &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
+   - **Original:** &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
       &lt;value>&lt;/value>   
       &lt;/setting>
 
@@ -132,9 +129,9 @@ Para ello, modifique un archivo de configuración de modo que apunte a la nube d
     - **Editado:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
     &lt;value>https://login.microsoftonline.com/&lt;/value>
 
-2.    Después de guardar el archivo con los dos cambios, reinicie la consola de Configuration Manager en el mismo equipo y úsela para instalar el conector de OMS. Para instalar el conector, use la información incluida en [Sincronizar datos de Configuration Manager con Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)y seleccione el **Área de trabajo de Operations Management Suite** que se encuentra en la nube de Microsoft Azure Government.
+2.  Después de guardar el archivo con los dos cambios, reinicie la consola de Configuration Manager en el mismo equipo y úsela para instalar el conector de OMS. Para instalar el conector, use la información incluida en [Sincronizar datos de Configuration Manager con Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)y seleccione el **Área de trabajo de Operations Management Suite** que se encuentra en la nube de Microsoft Azure Government.
 
-3.    Cuando se haya instalado el conector de OMS, la conexión a la nube de Government estará disponible al usar cualquier consola que se conecte al sitio.
+3.  Cuando se haya instalado el conector de OMS, la conexión a la nube de Government estará disponible al usar cualquier consola que se conecte al sitio.
 
 ## <a name="android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm"></a>En los asistentes para creación de MDM híbrida ya no se pueden seleccionar como destino las versiones de iOS y Android.
 
@@ -157,4 +154,3 @@ Este cambio afecta a los asistentes para crear los siguientes elementos:
 Con este cambio, las implementaciones híbridas pueden ofrecer compatibilidad con mayor rapidez para nuevas versiones de iOS y Android sin necesidad de una nueva versión o extensión de Configuration Manager. Una vez que una nueva versión es compatible con Intune independiente, los usuarios podrán actualizar sus dispositivos móviles a dicha versión.
 
 Para evitar problemas al actualizar desde versiones anteriores de Configuration Manager, las versiones de sistema operativo móvil siguen estando disponibles en las páginas de propiedades de estos elementos. Si aún necesita establecer como destino una versión concreta, puede crear el nuevo elemento y, después, especificar la versión de destino en la página de propiedades del elemento recién creado.
-

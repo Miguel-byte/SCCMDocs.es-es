@@ -6,8 +6,7 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0fd76043-d7ee-423d-8c5f-aa7e9ed58ce0
@@ -16,14 +15,12 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 robots: noindex
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: 6630d0170df22f46f14df241ffd8d48266c69263
-ms.contentlocale: es-es
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="create-and-deploy-a-device-compliance-policy"></a>Crear e implementar una directiva de cumplimiento de dispositivos
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -320,5 +317,4 @@ El identificador de la aplicación es un identificador que identifica de forma �
     4. Busque el texto **bundleid**.
 
     Un ejemplo de identificador de aplicación es "*bundleId*":"*com.companyname.appname*" 
-
 

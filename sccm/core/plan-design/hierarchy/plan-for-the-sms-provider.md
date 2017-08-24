@@ -6,22 +6,19 @@ ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 11ac851696ce52642412ca29e4873679d50cf398
 ms.openlocfilehash: 547dc39d5659c7c2e6f1ca670caddc127dbf22c4
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-for-the-sms-provider-for-system-center-configuration-manager"></a>Plan para el proveedor de SMS de System Center Configuration Manager
 
@@ -202,4 +199,3 @@ Al administrar implementaciones de sistema operativo, Windows ADK permite al pro
 
 
 La instalación de Windows ADK puede requerir hasta 650 MB de espacio libre en disco en cada equipo en el que se instala al proveedor de SMS. Estos importantes requisitos de espacio de disco son necesarios para que Configuration Manager pueda instalar las imágenes de arranque de Windows PE.  
-

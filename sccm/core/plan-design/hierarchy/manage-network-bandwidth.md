@@ -6,25 +6,21 @@ ms.date: 2/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e80d1151-91db-4a27-8411-a957297b67d0
-caps.latest.revision: 15
-caps.handback.revision: 0
+caps.latest.revision: "15"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 37e4f27fcea0bbdd39c9fd3ab38aa46e3059f73a
 ms.openlocfilehash: d9dff97126c34a726677de60dd7647370c553b6e
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="manage-network-bandwidth-for-content"></a>Administración del ancho de banda de red para contenido
 Para ayudarle a administrar el ancho de banda de red que se usa para el proceso de administración de contenido de System Center Configuration Manager, puede usar los controles integrados para la programación y el límite. También puede usar contenido preconfigurado. En las secciones siguientes se describen estas opciones con más detalle.
 
@@ -77,4 +73,3 @@ Opcionalmente puede configurar el punto de distribución como **preconfigurado**
     >  Las opciones anteriores se pueden aplicar por paquete y solo se usan cuando un punto de distribución esté identificado como preconfigurado. Los puntos de distribución que no se han identificado como preconfigurados omiten esta configuración. En ese caso, el contenido siempre se distribuye a través de la red desde el servidor de sitio a los puntos de distribución.  
 
 -   **Para restaurar la biblioteca de contenido en un servidor de sitio.** cuando se produce un error en el servidor de sitio, la información sobre paquetes y aplicaciones en la biblioteca de contenido se restaura en la base de datos del sitio como parte del proceso de restauración, pero los archivos de la biblioteca de contenido no se restauran como parte del proceso. Si no tiene una copia de seguridad del sistema de archivos para restaurar la biblioteca de contenido, puede crear un archivo de contenido preconfigurado de otro sitio que contenga los paquetes y aplicaciones que necesita. Después, puede extraer el archivo de contenido preconfigurado en el servidor de sitio recuperado. Para obtener más información sobre la copia de seguridad y recuperación de un servidor de sitio, consulte [Copia de seguridad y recuperación de System Center Configuration Manager](/sccm/protect/understand/backup-and-recovery).  
-

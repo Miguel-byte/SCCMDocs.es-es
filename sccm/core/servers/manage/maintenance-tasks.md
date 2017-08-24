@@ -6,23 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 625bb787-6d16-47a0-8b0f-b129cd909ca3
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3b56e84cbe9785e280fb02ede6644a8ed2769586
 ms.openlocfilehash: 90b6e4434abc5573a364c769bd835e08e5dff16d
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="maintenance-tasks-for-system-center-configuration-manager"></a>Tareas de mantenimiento para System Center Configuration Manager
 
@@ -141,4 +138,3 @@ Después de instalar un sitio de Configuration Manager, revise las tareas de man
 5.  Para habilitar o deshabilitar la tarea sin necesidad de editar las propiedades de la tarea, seleccione el botón **Habilitar** o **Deshabilitar**. El botón etiqueta cambia según la configuración actual de la tarea.  
 
 6.  Cuando haya terminado de configurar las tareas de mantenimiento, seleccione **Aceptar** para finalizar el procedimiento.
-

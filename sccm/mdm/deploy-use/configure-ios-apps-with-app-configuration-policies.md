@@ -6,22 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f0a78038-ea22-4826-9c07-1771b7dd2e8d
-caps.latest.revision: 18
-caps.handback.revision: 0
+caps.latest.revision: "18"
+caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
 ms.openlocfilehash: 50aea2afaf34974ca92ac58b6569bff56403a9ab
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>Aplicar configuración a aplicaciones iOS con directivas de configuración de aplicaciones en System Center Configuration Manager
 
@@ -40,7 +38,7 @@ Para usar una directiva de configuración de aplicaciones en Configuration Manag
 
 Actualmente, las directivas de configuración de aplicaciones solo están disponibles en dispositivos con iOS 8 y versiones posteriores, y para estos tipos de aplicaciones:
 
-- **Paquete de aplicación iOS (archivo*.ipa)**
+- **Paquete de aplicación iOS (archivo* .ipa)**
 - **Paquete de aplicación de iOS en App Store**
 
 Para obtener más información sobre los tipos de instalación de aplicaciones, vea [Introducción a la administración de aplicaciones](/sccm/apps/understand/introduction-to-application-management).
@@ -140,4 +138,3 @@ Cuando crea un archivo de configuración de aplicaciones móviles, puede usar es
   <string>{{udidlast4digits}}</string>
 </dict>
 ```
-

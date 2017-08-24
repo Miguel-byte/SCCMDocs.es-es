@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c7c94ba0-d709-4129-8077-075a8abaea1c
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: baca498dbc5b8e168852aa3c18ee23a9c483e69c
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="preprovision-bitlocker-in-windows-pe-with-system-center-configuration-manager"></a>Aprovisionar previamente BitLocker en Windows PE con System Center Configuration Manager
 
@@ -60,9 +59,3 @@ El paso de secuencia de tareas **Tener en servicio BitLocker** en System Center 
 |Aplicar controladores del dispositivo|En este paso se buscan e instalan controladores como parte de la implementación de sistema operativo. Para obtener más información, consulte [Aplicar controladores automáticamente](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers).|  
 |Instalar Windows y Configuration Manager|Este paso realiza la transición desde Windows PE al nuevo sistema operativo. Este paso de secuencia de tareas es una parte necesaria de cualquier implementación de sistema operativo. Se instala el cliente de Configuration Manager en el nuevo sistema operativo y se prepara para que la secuencia de tareas continúe con la ejecución en el sistema operativo. Para obtener más información, consulte [Instalar Windows y Configuration Manager](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr).|  
 |Habilitar BitLocker|Este paso habilita el cifrado de BitLocker en la unidad de disco duro y establece los protectores de clave. Ya que el disco duro se aprovisionó previamente con BitLocker, este paso se completa muy rápidamente. Windows 7 requiere que se agregue un protector de clave. Si no utiliza este paso, puede ejecutar la herramienta de línea de comandos manage-bde.exe para configurar un protector de clave. Para obtener más información, consulte [Habilitar BitLocker](../understand/task-sequence-steps.md#BKMK_EnableBitLocker).|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

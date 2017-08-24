@@ -6,20 +6,19 @@ ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4db1e15f-e832-4cf9-be33-d3971e635a55
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 68527c0e82861106b7ec28b34bffa8fd74b2dd4a
 ms.openlocfilehash: f13f38be2a19ab8a1ead246e5272515dd0570984
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="fundamentals-of-sites-and-hierarchies-for-system-center-configuration-manager"></a>Aspectos básicos de sitios y jerarquías para System Center Configuration Manager
 
@@ -72,9 +71,3 @@ Otros roles de sistema de sitio son opcionales y solo se usan cuando se quiere u
  *La extensión del esquema de Active Directory* se realiza solo una vez por bosque y puede hacerse antes o después de instalar Configuration Manager.   Al extender el esquema, debe crear un nuevo contenedor de Active Directory denominado System Management en cada dominio. El contenedor contiene un sitio de Configuration Manager que publicará datos para que los clientes los busquen. Para más información, vea [Preparar Active Directory para la publicación de sitios](../../core/plan-design/network/extend-the-active-directory-schema.md).  
 
  *La publicación de datos del sitio* mejora la seguridad de su jerarquía de Configuration Manager y reduce la sobrecarga administrativa, pero no se necesita para las funciones básicas de Configuration Manager.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

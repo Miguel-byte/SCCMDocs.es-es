@@ -5,22 +5,20 @@ ms.custom: na
 ms.date: 11/23/2016
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7eb0803-3f8f-4ab6-825a-99ac11f5ba7d
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ROBOTS: NOINDEX, NOFOLLOW
-ms.translationtype: Human Translation
-ms.sourcegitcommit: db673277d1cc2d24e8dba2439b2b1891c883ebd0
 ms.openlocfilehash: 8b80f4d14eafa4cbbfb083178a118bc0e71f4019
-ms.contentlocale: es-es
-ms.lasthandoff: 06/16/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>Novedades de la versión 1610 de System Center Configuration Manager
 
@@ -316,4 +314,3 @@ Para obtener más información, consulte [Configuration items for devices manage
 
 #### <a name="device-capability-settings"></a>Configuración de las capacidades de los dispositivos
 - **Permitir conexión automática a zonas Wi-Fi gratuitas**
-

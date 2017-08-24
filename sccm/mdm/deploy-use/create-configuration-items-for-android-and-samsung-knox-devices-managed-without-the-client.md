@@ -6,23 +6,20 @@ ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b66f3c4-e3bb-4f6a-abd5-55be649ff90d
-caps.latest.revision: 17
-caps.handback.revision: 0
+caps.latest.revision: "17"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4b9261db93c9bf72c492e3c9be5b30f81835134a
 ms.openlocfilehash: c9961c2e9866199571a1b39a7b185cb6bb96f998
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-system-center-configuration-manager-client"></a>Cómo crear elementos de configuración para dispositivos Android y Samsung KNOX administrados sin el cliente de System Center Configuration Manager
 
@@ -185,9 +182,9 @@ Android for Work tiene dos grupos de configuración para elementos de configurac
 - **Contraseña**. Idéntica a la configuración para Android "clásico".
 
 - **Perfil de trabajo**. Habilita la siguiente configuración de Android for Work:
-  -    **Permitir uso compartido de datos entre perfiles de trabajo y perfiles personales**
+  - **Permitir uso compartido de datos entre perfiles de trabajo y perfiles personales**
   - **Ocultar notificaciones del perfil de trabajo cuando el dispositivo está bloqueado** (Android 6.0+)
-  -    **Establecer directiva de permisos de aplicación predeterminada** (Android 6.0+)
+  - **Establecer directiva de permisos de aplicación predeterminada** (Android 6.0+)
 
 Para crear un elemento de configuración en el perfil de trabajo de Android, elija **Android for Work** en la página **General** y configure los valores para cada uno de los grupos de configuración. Agregue el elemento de configuración a una línea base e impleméntelo como de costumbre. Esta configuración solo se aplicará a los dispositivos inscritos como Android for Work y no a los inscritos como Android.
 
@@ -217,4 +214,3 @@ Para obtener más información sobre cómo usar los informes, consulte [Generaci
 
 ## <a name="see-also"></a>Consulte también  
 [Elementos de configuración para dispositivos administrados sin el cliente de System Center Configuration Manager](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)
-

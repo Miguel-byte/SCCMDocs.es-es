@@ -6,21 +6,20 @@ ms.date: 11/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d2dacb2d-ab3b-42a2-8dc8-94da31f993c2
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 31b68ede677df8b86412a334d1d100041a0e659e
 ms.openlocfilehash: 309b0363f9b3ec4a31b8323b9e64c9f73060c281
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prerequisites-for-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>Requisitos previos de los perfiles de Wi-Fi y VPN en System Center Configuration Manager
 
@@ -51,9 +50,3 @@ Los perfiles de Wi-Fi y VPN de System Center Configuration Manager solo contiene
 -   Para crear y administrar perfiles de Wi-Fi: **Directiva de autor**, **Modificar informe**, **Leer**y **Ejecutar informe** para el objeto **Perfil de Wi-Fi** .  
 
  El rol de seguridad **Administrador de acceso de recursos de la compañía** incluye estos permisos necesarios para administrar los perfiles de Wi-Fi en System Center Configuration Manager. Para obtener más información, consulte [Configurar la seguridad en System Center Configuration Manager](../../core/plan-design/security/configure-security.md).
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

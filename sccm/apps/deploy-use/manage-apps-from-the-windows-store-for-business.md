@@ -6,23 +6,20 @@ ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: 369b6a82a20a90ca534f9484c0be71096dd35a30
-ms.contentlocale: es-es
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="manage-apps-from-the-windows-store-for-business-with-system-center-configuration-manager"></a>Administración de aplicaciones desde la Tienda Windows para empresas con System Center Configuration Manager
 La [Tienda Windows para empresas](https://www.microsoft.com/business-store) es el lugar donde puede buscar y adquirir aplicaciones de Windows para su organización, individualmente o por volumen. Si conecta la tienda a Configuration Manager, puede sincronizar la lista de aplicaciones que ha comprado con Configuration Manager. A continuación, puede ver estas aplicaciones en la consola de Configuration Manager e implementarlas como cualquier otra aplicación.
 
@@ -145,4 +142,3 @@ Se crea una aplicación de Configuration Manager que contiene la aplicación de 
 En el área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y luego haga clic en **Información de licencia para las aplicaciones de la Tienda**.
 
 Para cada aplicación de la tienda que administre, podrá ver información acerca de la aplicación, incluido su nombre, plataforma y número de licencias para la aplicación que posee, así como el número de licencias que tiene disponibles.
-

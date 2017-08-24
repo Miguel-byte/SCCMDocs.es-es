@@ -6,21 +6,19 @@ ms.date: 2/6/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a7df9d0f-fbde-47eb-97e7-3d29536424fa
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e592a732259147ee71d404a68982c28e5138e243
 ms.openlocfilehash: 0e982d08d54af39b13f553fc531a200f921e94a6
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-accounts-to-access-content-in-system-center-configuration-manager"></a>Administración de cuentas para acceder al contenido en System Center Configuration Manager
 
@@ -121,4 +119,3 @@ Si crea esta cuenta, créela como una cuenta local con derechos reducidos en el 
 
 > [!IMPORTANT]  
 >  No conceda a esta cuenta derechos interactivos de inicio de sesión.  
-

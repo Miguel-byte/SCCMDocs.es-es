@@ -6,23 +6,21 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9fcbcc81-cd6f-496e-b075-ef1afa2b8ccc
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: 85b984d739dc9f9d2046186b381eff54ba687c66
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="create-user-data-and-profiles-configuration-items-in-system-center-configuration-manager"></a>Crear elementos de configuración de perfiles y datos de usuario en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -117,9 +115,3 @@ Los elementos de configuración de perfiles y datos de usuario de System Center 
  Supervise este tipo de elemento de configuración de la misma manera que supervisa otras configuraciones de cumplimiento.  
 
  Para obtener más información, consulte [How to monitor compliance settings](../../compliance/deploy-use/monitor-compliance-settings.md) (Cómo supervisar la configuración de cumplimiento).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

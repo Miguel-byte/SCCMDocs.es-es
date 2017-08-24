@@ -6,22 +6,19 @@ ms.date: 03/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
-ms.openlocfilehash: 99e266e44f718d97c2a6e61e8e6816752751ed7b
-ms.contentlocale: es-es
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: b5771f4faebc06076bdbf84727848c881fc1dfb4
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-monitor-endpoint-protection-status"></a>Cómo supervisar el estado de Endpoint Protection
 
@@ -83,4 +80,3 @@ Puede supervisar Endpoint Protection en la jerarquía de Microsoft System Center
 |**Permitido**|Un usuario administrativo seleccionado para permitir que el software que contiene el ejecución de malware.|  
 |**Ninguna acción**|Endpoint Protection no realizó ninguna acción en el malware. Esto puede ocurrir si el equipo se reinicia después de que se ha detectado malware y ya no se detecta software malintencionado; Por ejemplo, si una red asignada en la unidad se detecta software malintencionado no vuelva a conectarse cuando se reinicia el equipo.|  
 |**Bloqueado**|Endpoint Protection bloqueó la ejecución del malware. Esto puede ocurrir si se encuentra un proceso en el equipo para que contenga código malintencionado.|
-

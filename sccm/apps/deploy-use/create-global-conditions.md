@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2d5f871a-19dc-4bd3-a3ad-4230c7a69f1b
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 85e254f1074e02a52fea6a3cda21a37c332f249e
 ms.openlocfilehash: 8a59a1769eec4cd6d78d7686a1d8008e832dd924
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-create-global-conditions-in-system-center-configuration-manager"></a>Cómo crear condiciones globales en System Center Configuration Manager
 
@@ -213,9 +212,3 @@ En System Center Configuration Manager, las condiciones globales son reglas que 
 7.  Pulse **Aceptar** para guardar la expresión y para cerrar el cuadro de diálogo **Agregar cláusula**.  
 
 8.  Cuando termine de agregar cláusulas a la condición global, pulse **Aceptar** para cerrar el cuadro de diálogo **Crear condición global** y para guardar la condición global.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

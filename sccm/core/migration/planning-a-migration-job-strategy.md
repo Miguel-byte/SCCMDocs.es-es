@@ -6,22 +6,21 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a70bfbd4-757a-4468-9312-1c3b373ef9fc
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex
-translationtype: Human Translation
-ms.sourcegitcommit: cc0c1075af370b6190cbb269665d4a09e756ab4e
 ms.openlocfilehash: 4c83540db763bea039a92633a1d1a808e60e27ad
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-a-migration-job-strategy-in-system-center-configuration-manager"></a>Planear una estrategia de trabajo de migración en System Center Configuration Manager
 
@@ -47,7 +46,7 @@ Use trabajos de migración para configurar los datos específicos que quiera mig
 
 -   [Planeamiento de trabajos de migración de objetos migrados previamente](#About_Object_Migrations)  
 
-##  <a name="a-nametypesofmigrationa-types-of-migration-jobs"></a><a name="Types_of_Migration"></a> Tipos de trabajos de migración  
+##  <a name="Types_of_Migration"></a> Tipos de trabajos de migración  
  Configuration Manager admite los siguientes tipos de trabajos de migración. Cada tipo de trabajo está diseñado para ayudar a definir los objetos que se pueden incluir en ese trabajo.  
 
  **Migración de recopilación** (solo se admite al migrar desde Configuration Manager 2007 SP2): migre los objetos que están relacionados con las recopilaciones seleccionadas. De forma predeterminada, la migración de una recopilación incluye todos los objetos asociados a los miembros de la recopilación. Puede excluir instancias de objetos específicos al usar un trabajo de migración de recopilación.  
@@ -56,7 +55,7 @@ Use trabajos de migración para configurar los datos específicos que quiera mig
 
  **Migración de objeto migrado anteriormente**: migre objetos que migró anteriormente cuando se hayan actualizado en la jerarquía de origen después de que se hubieran migrado por última vez.  
 
-###  <a name="a-nameobjectsthatcanmigratea-objects-that-you-can-migrate"></a><a name="Objects_that_can_migrate"></a> Objetos que puede migrar  
+###  <a name="Objects_that_can_migrate"></a> Objetos que puede migrar  
  No todos los objetos se pueden migrar con un tipo específico de trabajo de migración. La lista siguiente identifica el tipo de objetos que puede migrar con cada tipo de trabajo de migración.  
 
 > [!NOTE]  
@@ -212,7 +211,7 @@ Use trabajos de migración para configurar los datos específicos que quiera mig
     > [!IMPORTANT]  
     >  Aunque puede migrar un paquete de aplicación virtual con la migración de objeto, los paquetes no se pueden migrar con el tipo de trabajo de migración de **Migración de objeto migrado anteriormente**. En su lugar, debe eliminar el paquete de aplicación virtual migrado del sitio de destino y, a continuación, crear un nuevo trabajo de migración para migrar la aplicación virtual.  
 
-##  <a name="a-nameaboutmigrationjobsa-general-planning-for-all-migration-jobs"></a><a name="About_Migration_Jobs"></a> Planeamiento general de todos los trabajos de migración  
+##  <a name="About_Migration_Jobs"></a> Planeamiento general de todos los trabajos de migración  
  Use al Asistente para crear trabajo de migración con el fin de crear un trabajo de migración para migrar objetos a la jerarquía de destino. El tipo de trabajo de migración que cree determina qué objetos están disponibles para migrar. Puede crear y usar varios trabajos de migración para migrar datos desde el mismo sitio de origen o desde varios sitios de origen. El uso de un tipo de trabajo de migración no anula el uso de un tipo diferente de trabajo de migración.  
 
  Después de ejecutar correctamente un trabajo de migración, su estado aparece como **Completado** y no se puede ejecutar de nuevo. Sin embargo, puede crear un nuevo trabajo de migración para migrar cualquiera de los objetos que se migraron en el trabajo original. Este nuevo trabajo de migración también puede incluir objetos nuevos. Al crear trabajos de migración adicionales, los objetos que se migraron previamente muestran el estado de **Migrado**. Puede seleccionar estos objetos para migrarlos otra vez pero, a menos que el objeto se haya actualizado en la jerarquía de origen, no es necesario migrar de nuevo estos objetos. Si el objeto se actualizó en la jerarquía de origen después de su migración original, puede identificar ese objeto cuando use el tipo de trabajo de migración de **Objetos modificados después de la migración**.  
@@ -258,7 +257,7 @@ Use trabajos de migración para configurar los datos específicos que quiera mig
 ### <a name="specify-conflict-resolution-for-migrated-data"></a>Especificar la resolución de conflictos para los datos migrados  
  De forma predeterminada, los trabajos de migración no sobrescriben datos en la base de datos de destino a menos que configure el trabajo de migración para omitir o sobrescribir los datos que se migraron anteriormente a la base de datos de destino.  
 
-##  <a name="a-nameaboutcollectionmigration-a-plan-for-collection-migration-jobs"></a><a name="About_Collection_Migration "></a> Planear trabajos de migración de recopilación  
+##  <a name="About_Collection_Migration "></a> Planear trabajos de migración de recopilación  
  Los trabajos de migración de recopilaciones solo están disponibles cuando se migran datos de una jerarquía de origen que ejecuta una versión admitida de Configuration Manager 2007. Debe especificar una o más recopilaciones para la migración al migrar por recopilación. Para cada recopilación que se especifica, el trabajo de migración selecciona automáticamente todos los objetos relacionados para la migración. Por ejemplo, si selecciona una recopilación específica de usuarios, se identifican los miembros de la recopilación y puede migrar las implementaciones asociadas a esa recopilación. Si lo desea, puede seleccionar otros objetos de implementación asociados a esos miembros para la migración. Todos estos elementos seleccionados se agregan a la lista de objetos que se pueden migrar.  
 
  Cuando se migra una recopilación, System Center Configuration Manager también migra las configuraciones de la recopilación, como ventanas de mantenimiento y variables de la recopilación, pero no puede migran las configuraciones de la recopilación para el aprovisionamiento del cliente de AMT.  
@@ -308,12 +307,12 @@ Use trabajos de migración para configurar los datos específicos que quiera mig
 
  Para habilitar un programa después de la migración, desactive **Deshabilitar este programa en equipos en los que esté anunciado** en la pestaña **Opciones avanzadas** de las propiedades del programa.  
 
-##  <a name="a-nameaboutobjectmigrationa-plan-for-object-migration-jobs"></a><a name="About_Object_Migration"></a> Planear trabajos de migración de objetos  
+##  <a name="About_Object_Migration"></a> Planear trabajos de migración de objetos  
  A diferencia de la migración de recopilaciones, debe seleccionar cada objeto y la instancia del objeto que se va a migrar. Puede seleccionar objetos individuales (como anuncios de una jerarquía de Configuration Manager 2007, una publicación de una jerarquía de System Center 2012 Configuration Manager o una jerarquía de System Center Configuration Manager) para agregarlos a la lista de objetos que quiere migrar para un determinado trabajo de migración. El trabajo de migración de objeto no migra al sitio de destino los objetos que no se agregan a la lista de migración.  
 
  Los trabajos de migración basados en objetos no tienen ninguna configuración adicional que se deba planear además de la aplicable a todos los trabajos de migración.  
 
-##  <a name="a-nameaboutobjectmigrationsa-plan-for-previously-migrated-object-migration-jobs"></a><a name="About_Object_Migrations"></a> Planear trabajos de migración de objetos migrados previamente  
+##  <a name="About_Object_Migrations"></a> Planear trabajos de migración de objetos migrados previamente  
  Si un objeto que ya se ha migrado a la jerarquía de destino se actualiza en la jerarquía de origen, puede migrarlo de nuevo mediante el tipo de trabajo **Objetos modificados después de la migración** . Por ejemplo, al cambiar el nombre o actualizar los archivos de origen de un paquete en la jerarquía de origen, la versión de paquete se incrementa en la jerarquía de origen. Después del incremento de la versión del paquete, el paquete se puede identificar para la migración mediante este tipo de trabajo.  
 
  Este tipo de trabajo es similar al tipo de migración de objeto, excepto que cuando se seleccionan objetos para la migración, solo puede seleccionar los que se actualizaron después de que un trabajo de migración anterior los migró.   
@@ -322,9 +321,3 @@ Use trabajos de migración para configurar los datos específicos que quiera mig
 
 > [!NOTE]  
 >  Este trabajo de migración puede identificar objetos que la jerarquía de origen actualiza automáticamente y objetos actualizados por usuarios administrativos.  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

@@ -6,19 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
 ms.openlocfilehash: 36b08285ef78d0acb9ba9c44abe2d57e311d44b3
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="deploy-and-manage-content-for-system-center-configuration-manager"></a>Implementar y administrar contenido para System Center Configuration Manager
 
@@ -26,7 +26,7 @@ ms.openlocfilehash: 36b08285ef78d0acb9ba9c44abe2d57e311d44b3
 
 Después de instalar puntos de distribución para System Center Configuration Manager, puede empezar a implementar contenido en ellos. Normalmente, el contenido se transfiere a los puntos de distribución a través de la red, pero existen otras opciones para llevar el contenido a los puntos de distribución. Después de que se haya transferido el contenido a un punto de distribución, puede actualizar, redistribuir, quitar y validar ese contenido en los puntos de distribución.  
 
-##  <a name="a-namebkmkdistributea-distribute-content"></a><a name="bkmk_distribute"></a> Distribuir contenido  
+##  <a name="bkmk_distribute"></a> Distribuir contenido  
  Normalmente, se distribuye contenido en puntos de distribución para que esté disponible en los equipos cliente. (La excepción es el uso de la distribución de contenido a petición para una implementación específica).  Al distribuir contenido, Configuration Manager almacena archivos de contenido en un paquete y, después, distribuye el paquete al punto de distribución. Entre los diversos tipos de contenido que se pueden distribuir se incluyen los siguientes:  
 
 -   Tipos de implementación de aplicaciones  
@@ -105,7 +105,7 @@ Utilice el siguiente procedimiento para distribuir contenido en puntos de distri
 
 9. La página **Confirmación** muestra si el contenido se asignó correctamente a los puntos. Para supervisar la distribución de contenido, consulte [Monitor content you have distributed with System Center Configuration Manager](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md) (Supervisar el contenido distribuido con System Center Configuration Manager).  
 
-##  <a name="a-namebkmkprestagea-use-prestaged-content"></a><a name="bkmk_prestage"></a> Usar contenido preconfigurado  
+##  <a name="bkmk_prestage"></a> Usar contenido preconfigurado  
  Se pueden preconfigurar los archivos de contenido para aplicaciones y tipos de paquetes:  
 
 -   En la consola de Configuration Manager, seleccione el contenido que necesite y, después, use el **Asistente para crear archivos de contenido preconfigurados** para crear un archivo de contenido preconfigurado comprimido que contenga los archivos y los metadatos asociados del contenido seleccionado.  
@@ -130,7 +130,7 @@ Para obtener información sobre cuándo se deben preconfigurar los archivos de c
 
 Consulte las siguientes secciones para preconfigurar el contenido.  
 
-###  <a name="a-namebkmkcreateprestagedcontentfilea-step-1-create-a-prestaged-content-file"></a><a name="BKMK_CreatePrestagedContentFile"></a> Paso 1: Crear un archivo de contenido preconfigurado  
+###  <a name="BKMK_CreatePrestagedContentFile"></a> Paso 1: Crear un archivo de contenido preconfigurado  
  Se puede crear un archivo de contenido preconfigurado comprimido que contenga los archivos y los metadatos asociados del contenido que se selecciona en la consola de Configuration Manager. Utilice el procedimiento siguiente para crear un archivo de contenido preconfigurado.  
 
 ##### <a name="to-create-a-prestaged-content-file"></a>Para crear un archivo de contenido preconfigurado  
@@ -176,7 +176,7 @@ Consulte las siguientes secciones para preconfigurar el contenido.
 
 11. En la página **Finalización** , compruebe que el archivo de contenido preconfigurado se creó correctamente y, a continuación, haga clic en **Cerrar**.  
 
-###  <a name="a-namebkmkassigncontenttodistributionpointa-step-2-assign-the-content-to-distribution-points"></a><a name="BKMK_AssignContentToDistributionPoint"></a> Paso 2: Asignar el contenido a los puntos de distribución  
+###  <a name="BKMK_AssignContentToDistributionPoint"></a> Paso 2: Asignar el contenido a los puntos de distribución  
  Una vez preconfigurado el archivo de contenido, asigne el contenido a los puntos de distribución.  
 
 > [!NOTE]  
@@ -238,7 +238,7 @@ Consulte las siguientes secciones para preconfigurar el contenido.
 
 9. La página **Confirmación** muestra si el contenido se asignó correctamente o no a los puntos de distribución. Para supervisar la distribución de contenido, consulte [Monitor content you have distributed with System Center Configuration Manager](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md) (Supervisar el contenido distribuido con System Center Configuration Manager).  
 
-###  <a name="a-namebkmkexportcontentfromprestagedcontentfilea-step-3-extract-the-content-from-the-prestaged-content-file"></a><a name="BKMK_ExportContentFromPrestagedContentFile"></a> Paso 3: Extraer el contenido del archivo de contenido preconfigurado  
+###  <a name="BKMK_ExportContentFromPrestagedContentFile"></a> Paso 3: Extraer el contenido del archivo de contenido preconfigurado  
  Después de crear el archivo de contenido preconfigurado y asignar el contenido a puntos de distribución, puede extraer los archivos de contenido en la biblioteca de contenido de un servidor de sitio o punto de distribución. Normalmente, se copió el archivo de contenido preconfigurado en una unidad portátil, como una unidad USB, o se grabó el contenido en un medio, como un DVD, y está disponible en la ubicación del servidor de sitio o punto de distribución que necesita el contenido.  
 
  Utilice el siguiente procedimiento para exportar manualmente los archivos de contenido desde el archivo de contenido preconfigurado mediante la herramienta de línea de comandos de extraer contenido.  
@@ -279,7 +279,7 @@ Consulte las siguientes secciones para preconfigurar el contenido.
     >   
     > Configuration Manager no distribuye automáticamente la versión 2 del paquete en el punto de distribución. Debe crear un nuevo archivo de contenido preconfigurado que contenga la versión del nuevo archivo y, a continuación, extraer el contenido, actualizar el punto de distribución para distribuir los archivos cambiados o redistribuir todos los archivos en el paquete.  
 
-###  <a name="a-namebkmkdpsiteservera-how-to-prestage-content-on-a-distribution-point-on-a-site-server"></a><a name="bkmk_dpsiteserver"></a> Preconfiguración del contenido en un punto de distribución de un servidor de sitio  
+###  <a name="bkmk_dpsiteserver"></a> Preconfiguración del contenido en un punto de distribución de un servidor de sitio  
  Al instalar un punto de distribución en un servidor de sitio, debe usar el procedimiento siguiente para preconfigurar correctamente el contenido. Esto se debe a que los archivos de contenido ya están en la biblioteca de contenido.  
 
  Si el punto de distribución no está habilitado para contenido preconfigurado o no está ubicado en un servidor de sitio, consulte la sección [Usar contenido preconfigurado](#bkmk_prestage) de este tema.  
@@ -305,7 +305,7 @@ Consulte las siguientes secciones para preconfigurar el contenido.
     > [!NOTE]  
     >  Si el punto de distribución se encuentra en un sitio secundario, espere como mínimo 10 minutos y, después, use una consola de Configuration Manager conectada al sitio primario principal para asignar el contenido al punto de distribución en el sitio secundario.  
 
-##  <a name="a-namebkmkmanagea-manage-the-content-you-have-distributed"></a><a name="bkmk_manage"></a> Administrar el contenido distribuido  
+##  <a name="bkmk_manage"></a> Administrar el contenido distribuido  
  Dispone de las opciones siguientes para administrar el contenido:  
  - [Actualizar contenido](#update-content)
  - [Redistribuir contenido](#redistribute-content)
@@ -513,9 +513,3 @@ El proceso de validación de contenido comprueba la integridad de los archivos d
 4.  En la pestaña **Ubicaciones de contenido** , seleccione el punto de distribución o grupo de puntos de distribución donde desee validar el contenido, haga clic en **Validar**, haga clic en **Aceptar**y, a continuación, haga clic en **Aceptar**de nuevo. Se inicia el proceso de validación del contenido en el punto de distribución o grupo de puntos de distribución seleccionado.  
 
 5.  Para ver los resultados del proceso de validación de contenido, en el área de trabajo **Supervisión** , expanda **Estado de distribución**y haga clic en el nodo **Estado de contenido** . Se muestra el contenido de cada tipo de paquete (por ejemplo, Aplicación, Paquete de actualización de software e Imagen de arranque). Para obtener más información sobre cómo supervisar el estado del contenido, consulte [Monitor content you have distributed with System Center Configuration Manager](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md) (Supervisar el contenido distribuido con System Center Configuration Manager).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

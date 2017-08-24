@@ -3,20 +3,17 @@ title: "Supervisar la puerta de enlace de administración en la nube en Configur
 description: 
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.assetid: 15f72f80-9850-40ce-9c3a-443ba04b6a03
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 199096db7a23fb14db98b95e75246ed254848ab7
-ms.openlocfilehash: df32a7d95799d8ae685fd66e2d9ddf25e32b37d0
-ms.contentlocale: es-es
-ms.lasthandoff: 03/27/2017
-
+ms.openlocfilehash: daa0790995dc13ec2c78ae2d98a9eb38c0bcf8ae
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="monitor-cloud-management-gateway-in-configuration-manager"></a>Supervisar la puerta de enlace de administración en la nube en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
@@ -52,4 +49,3 @@ Las alertas de tráfico de salida le ayudarán a saber el momento en el que el t
 ## <a name="monitor-logs"></a>Supervisar los registros
 
 El servicio de Cloud Management Gateway genera entradas en una serie de archivos de registro. Para obtener más información, consulte [Archivos de registro en System Center Configuration Manager](/sccm/core/plan-design/hierarchy/log-files).
-

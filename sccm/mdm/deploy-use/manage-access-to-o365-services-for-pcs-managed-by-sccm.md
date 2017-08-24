@@ -6,21 +6,19 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 5ebdd12672fecc633321a66738a0978f94ba0aa4
 ms.openlocfilehash: aede531a0406c3d30c9cca957896e002ed22ae51
-ms.contentlocale: es-es
-ms.lasthandoff: 07/20/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Administración del acceso a servicios de O365 para equipos administrados por System Center Configuration Manager
 
@@ -153,4 +151,3 @@ Si desea obtener información sobre cómo configurar el acceso condicional para 
 
 - [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md) (Proteger la infraestructura de datos y del sitio con System Center Configuration Manager)
 - [Conditional access troubleshooting flow-chart for Configuration Manager](https://gallery.technet.microsoft.com/Conditional-access-fd747c1a?redir=0) (Gráfico del flujo para la solución de problemas de acceso condicional para Configuration Manager)
-

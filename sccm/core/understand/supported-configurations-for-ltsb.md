@@ -6,22 +6,19 @@ ms.date: 5/10/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b0ba955aa7f854c3fa2c06ccf9ccd8ed354758b0
 ms.openlocfilehash: 31bddee83b2365cfa903077ffaa1d7116b194378
-ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Configuraciones admitidas de la rama de mantenimiento a largo plazo de System Center Configuration Manager
 
@@ -335,4 +332,3 @@ La información de los siguientes temas de la rama actual se aplican a la LTSB:
 - [Hardware recomendado](/sccm/core/plan-design/configs/recommended-hardware)
 - [Compatibilidad con las características de Windows y redes](/sccm/core/plan-design/configs/support-for-windows-features-and-networks)
 - [Compatibilidad con entornos de virtualización](/sccm/core/plan-design/configs/support-for-virtualization-environments)
-

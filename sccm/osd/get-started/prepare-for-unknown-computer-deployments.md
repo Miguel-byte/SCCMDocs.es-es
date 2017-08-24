@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9e447e34-0943-49ed-b6ba-3efebf3566c1
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 445e76950f0605da917f3d0e7e71557d969e3c2d
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prepare-for-unknown-computer-deployments-in-system-center-configuration-manager"></a>Preparación para implementaciones en equipos desconocidos en System Center Configuration Manager
 
@@ -70,7 +69,7 @@ Emplee la información de este tema para implementar sistemas operativos en equi
 > [!NOTE]  
 >  Durante la instalación de la imagen de sistema operativo, la secuencia de tareas puede recuperar variables de recopilación pero no variables de equipo de este equipo.  
 
-##  <a name="a-namebkmkenablingunknowna-enabling-unknown-computer-support"></a><a name="BKMK_EnablingUnknown"></a> Habilitación de la compatibilidad con equipos desconocidos  
+##  <a name="BKMK_EnablingUnknown"></a> Habilitación de la compatibilidad con equipos desconocidos  
  Use la información siguiente para habilitar la compatibilidad con equipos desconocidos al implementar un sistema operativo mediante PXE, medios de arranque y medios preconfigurados.  
 
 -   **PXE**  
@@ -84,9 +83,3 @@ Emplee la información de este tema para implementar sistemas operativos en equi
 -   **Medio preconfigurado**  
 
      Seleccione la casilla **Habilitar compatibilidad con equipos desconocidos** en la página **Seguridad** del Asistente para crear medio de secuencia de tareas. Para obtener más información, consulte [Create prestaged media with System Center Configuration Manager](../deploy-use/create-prestaged-media.md) (Crear medios preconfigurados con System Center Configuration Manager).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

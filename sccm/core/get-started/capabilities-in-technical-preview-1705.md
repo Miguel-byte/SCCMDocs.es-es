@@ -4,8 +4,7 @@ description: "Obtenga información sobre las características disponibles en la 
 ms.custom: na
 ms.date: 06/02/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -14,18 +13,17 @@ ms.assetid: 00684289-d21a-45f8-b1e3-c5c787d73096
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
 ms.openlocfilehash: b977a79baec73999caa21648adcb6fcfec4a4935
-ms.contentlocale: es-es
-ms.lasthandoff: 07/26/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1705 para System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Technical Preview)*
 
-En este artículo se presentan las características disponibles en Technical Preview para System Center Configuration Manager, versión 1705. Puede instalar esta versión para actualizar y agregar nuevas capacidades al sitio de Technical Preview de Configuration Manager. Antes de instalar esta versión de la versión preliminar técnica, revise [Technical Preview para System Center Configuration Manager](../../core/get-started/technical-preview.md) para familiarizarse con los requisitos y las limitaciones generales del uso de este tipo de versiones y para saber cómo actualizar entre versiones y cómo proporcionar comentarios sobre las características de una versión preliminar técnica.    
+En este artículo se presentan las características disponibles en Technical Preview para System Center Configuration Manager, versión 1705. Puede instalar esta versión para actualizar y agregar nuevas capacidades al sitio de Technical Preview de Configuration Manager. Antes de instalar esta versión de Technical Preview, revise [Technical Preview para System Center Configuration Manager](../../core/get-started/technical-preview.md) para familiarizarse con los requisitos y las limitaciones generales del uso de este tipo de versiones y para saber cómo actualizar entre versiones y cómo proporcionar comentarios sobre las características de Technical Preview.    
 
 **Problemas conocidos de esta Technical Preview:**
 -   **El conector de Operations Management Suite no se actualiza**. Cuando se actualiza desde una versión anterior de Technical Preview que tenía configurado el conector de OMS, este conector no se actualiza y deja de estar disponible en la consola. Después de la actualización, debe [usar el Asistente para servicios de Azure](capabilities-in-technical-preview-1705.md#use-azure-services-wizard-to-configure-a-connection-to-oms) y restablecer la conexión con el área de trabajo de OMS.
@@ -301,4 +299,3 @@ Los requisitos previos para configurar una conexión a OMS son iguales que los [
 7.  Compruebe la configuración de la conexión en la pantalla **Resumen** y luego seleccione **Siguiente**. En la pantalla **Progreso** se muestra el estado de la conexión; después debería seleccionar **Completar**.
 
 8.  Cuando finalice el asistente, la consola de Configuration Manager muestra que ha configurado **Operation Management Suite** como un **Tipo de servicio de nube**.
-

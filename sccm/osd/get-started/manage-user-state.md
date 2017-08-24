@@ -6,23 +6,20 @@ ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
-caps.latest.revision: 12
-caps.handback.revision: 0
+caps.latest.revision: "12"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-user-state-in-system-center-configuration-manager"></a>Administrar el estado de usuario en System Center Configuration Manager
 
@@ -132,4 +129,3 @@ Puede usar secuencias de tareas de System Center Configuration Manager para capt
 
 ##  <a name="BKMK_MigrationFails"></a> Restaurar datos de estado de usuario si se produce un error de implementación de sistema operativo  
  Si se produce un error de implementación de sistema operativo, use la característica LoadState de USMT 10.0 para recuperar los datos de estado de usuario que se capturaron durante el proceso de implementación. Se incluyen los datos que se almacenan en un punto de migración de estado o los datos que se guardan localmente en el equipo de destino. Para obtener más información acerca de esta característica de USMT, consulte [Sintaxis de LoadState](https://technet.microsoft.com/library/mt299188\(v=vs.85\).aspx).  
-

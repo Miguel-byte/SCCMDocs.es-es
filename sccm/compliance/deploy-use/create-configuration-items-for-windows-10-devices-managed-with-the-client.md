@@ -6,23 +6,20 @@ ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
-caps.latest.revision: 17
-caps.handback.revision: 0
+caps.latest.revision: "17"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: e0a42a1d4706ab29617f3b6f8960ece27672908b
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-create-configuration-items-for-windows-10-devices-managed-with-the-system-center-configuration-manager-client"></a>Cómo crear elementos de configuración para dispositivos Windows 10 administrados con el cliente de System Center Configuration Manager
 Use el elemento de configuración de **Windows 10** de System Center Configuration Manager para administrar la configuración de los equipos con Windows 10 que administra el cliente de Configuration Manager.  
@@ -140,4 +137,3 @@ Para obtener información sobre cómo configurar Windows Information Protection 
   
 ## <a name="see-also"></a>Véase también  
  [Elementos de configuración para dispositivos administrados con el cliente de System Center Configuration Manager](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)
-

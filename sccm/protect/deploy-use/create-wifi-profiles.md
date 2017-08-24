@@ -6,23 +6,20 @@ ms.date: 12/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 321b19b2-a093-4b8f-995f-41f74b886eb5
-caps.latest.revision: 13
-caps.handback.revision: 0
+caps.latest.revision: "13"
+caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: f1ae976899de1fd3efcbde0c7268f071a5d0218b
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-wi-fi-profiles"></a>Crear perfiles de Wi-Fi
 
@@ -129,4 +126,3 @@ Use perfiles de Wi-Fi en System Center Configuration Manager para implementar la
 
 ### <a name="next-steps"></a>Pasos siguientes
  Para obtener más información sobre cómo implementar el perfil de Wi-Fi, consulte [How to deploy Wi-Fi profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md) (Cómo implementar perfiles de Wi-Fi en System Center Configuration Manager).  
-

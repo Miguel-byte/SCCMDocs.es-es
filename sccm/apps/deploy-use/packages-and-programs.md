@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
-caps.latest.revision: 8
-caps.handback.revision: 0
+caps.latest.revision: "8"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 6c5b23270501c11ed5aba9a6045734c73095d1bf
 ms.openlocfilehash: 6146bcf4e5aa9df6fe0b8cf71898e488ecf217cc
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="packages-and-programs-in-system-center-configuration-manager"></a>Paquetes y programas en System Center Configuration Manager
 
@@ -412,9 +411,3 @@ Los paquetes pueden usar algunas características nuevas de Configuration Manage
 -   **Asignación**: especifique cómo se asigna el programa a los usuarios. Este valor puede ser **FirstUser** (solo el primer usuario que inicia sesión en el cliente ejecuta el programa) o **EveryUser** (todos los usuarios que inician sesión ejecutan el programa). Cuando **CanRunWhen** no está establecido en **UserLoggedOn**, esta entrada se establece en **FirstUser**.  
 
 -   **Deshabilitado**: especifique si este programa puede anunciarse a los clientes. Los valores disponibles son **True** o **False**. El valor predeterminado es **False**.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
