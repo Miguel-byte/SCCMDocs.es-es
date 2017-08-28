@@ -99,11 +99,11 @@
 ###  [Configurar la seguridad](plan-design/security/configure-security.md)
 
 #    Introducción
-
 ##   [Evaluar Configuration Manager en un laboratorio](get-started/evaluate-with-lab-environment.md)
 ###  [Configurar el laboratorio](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capacidades en 1708](get-started/capabilities-in-technical-preview-1708.md)
 ###  [Capacidades en 1707](get-started/capabilities-in-technical-preview-1707.md)
 ###  [Capacidades en 1706](get-started/capabilities-in-technical-preview-1706.md)
 ###  [Capacidades en 1705](get-started/capabilities-in-technical-preview-1705.md)
