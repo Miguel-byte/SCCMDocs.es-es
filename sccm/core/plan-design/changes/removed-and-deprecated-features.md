@@ -2,26 +2,24 @@
 title: Funciones obsoletas | Microsoft Docs
 description: "Obtenga información sobre las características, los productos y los sistemas operativos que ya no admite System Center Configuration Manager."
 ms.custom: na
-ms.date: 06/27/2017
+ms.date: 08/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d8c8b44c-1e8a-42b6-bab4-23c72a0a6169
-caps.latest.revision: 15
-caps.handback.revision: 0
+caps.latest.revision: "15"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+ms.openlocfilehash: 8ac7009014a4652a36acf69ebfe9ccab3ba8ecbd
+ms.sourcegitcommit: 3ce56c7350411d8cc3d3cb9b4054f9ada9b0ed54
 ms.translationtype: HT
-ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
-ms.openlocfilehash: 98fa323cb94013d875e2cea41b80fff8cc75b6b2
-ms.contentlocale: es-es
-ms.lasthandoff: 07/26/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/17/2017
 ---
 # <a name="removed-and-deprecated-features-for-system-center-configuration-manager"></a>Características eliminadas y en desuso de System Center Configuration Manager
 
@@ -71,7 +69,7 @@ Para obtener más información, vea:
 |**Sistemas operativos**|**Primer anuncio del desuso**|**Soporte eliminado**|  
 |-|-|-|  
 |Windows XP|10 de julio de 2015|Versión 1511|  
-|Windows XP Embedded|10 de julio de 2015|Versión 1702|  
+|Windows XP Embedded <br><br> Se incluyen todos los [sistemas operativos incrustados basados en XP](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-embedded-computers).|10 de julio de 2015|Versión 1702|  
 |Windows Server 2003|10 de julio de 2015|Versión 1511|  
 |Windows Server 2003 R2|10 de julio de 2015|Versión 1511|  
 |Windows Vista|10 de julio de 2015|Versión 1511|  
@@ -102,9 +100,10 @@ Si necesita actualizar la versión de SQL Server, se recomiendan los métodos si
 |Administración fuera de banda: como aparece en System Center 2012 Configuration Manager|16 de octubre de 2015|Versión 1511|
 |Secuencias de tareas: <br /> - OSDPreserveDriveLetter  <br /><br /> Ahora, durante una implementación del sistema operativo, el programa de instalación de Windows determina, de forma predeterminada, cuál es la mejor letra de unidad (normalmente C:). Si quiere especificar otra unidad, puede cambiar la ubicación en el paso de secuencia de tareas Aplicar el sistema operativo. Vaya al valor **Seleccione la ubicación en la que desea aplicar este sistema operativo**, seleccione **Letra de unidad lógica específica** y elija la unidad que quiere usar. |20 de junio de 2016 |Versión 1606 |
 |Secuencias de tareas: <br /> - Convertir el disco en dinámico <br /> - Instalar herramientas de implementación |18 de noviembre de 2016|La compatibilidad con estas secuencias de tareas finaliza con la primera actualización publicada después del 1 de junio de 2017.|
-|El Centro de software tiene un aspecto renovado y moderno. Las aplicaciones que solo se hubiesen mostrado en el catálogo de aplicaciones que depende de Silverlight (aplicaciones disponibles para el usuario) ahora se muestran en la pestaña **Aplicaciones** del Centro de software. Todavía se puede acceder al catálogo de aplicaciones mediante el vínculo de la pestaña **Estado de la instalación** del Centro de software.<br><br>En los próximos meses, la versión anterior del Centro de software dejará de estar disponible.<br><br>Puede configurar los clientes para que usen el nuevo Centro de software. Para ello, habilite la opción de cliente **Agente de equipo** > **Use new Software Center** (Usar el nuevo Centro de software).<br><br>Para más información sobre el Centro de software, consulte [Planear y configurar la administración de aplicaciones en System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management).|13 de diciembre de 2016|La compatibilidad con la versión anterior del Centro de software finaliza con la primera actualización publicada después del 1 de enero de 2018.|
+|El Centro de software tiene un aspecto renovado y moderno. En los próximos meses, la versión anterior del Centro de software dejará de estar disponible.<br><br>Puede configurar los clientes para que usen el nuevo Centro de software. Para ello, habilite la opción de cliente **Agente de equipo** > **Use new Software Center** (Usar el nuevo Centro de software).<br><br>Para más información sobre el Centro de software, consulte [Planear y configurar la administración de aplicaciones en System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management).|13 de diciembre de 2016|La compatibilidad con la versión anterior del Centro de software finaliza con la primera actualización publicada después del 1 de enero de 2018.|
+|Con la llegada de la nueva experiencia del Centro de software con la versión 1511, las aplicaciones que solo se hubiesen mostrado en el catálogo de aplicaciones (aplicaciones disponibles para el usuario) ahora aparecen en el Centro de software. </br></br>Con esta funcionalidad principal del catálogo de aplicaciones incluida ahora en el Centro de software, la experiencia del catálogo de aplicaciones basada en la Web dejará de estar disponible en los próximos meses.|11 de agosto de 2017| La compatibilidad con la experiencia del usuario con el sitio web del catálogo de aplicaciones finaliza con la primera actualización publicada después del 1 de junio de 2018.|
 |Administración de discos duros virtuales (VHD) con Configuration Manager. </br></br>Esto incluye la eliminación de opciones para crear un nuevo VHD o administrar un VHD con una secuencia de tareas, y la eliminación del nodo de discos duros virtuales de la consola de Configuration Manager. </br></br>Cuando se quita esta compatibilidad, los VHD existentes no se eliminarán, pero ya no se podrá obtener acceso a ellos desde dentro de la consola de Configuration Manager.  |6 de enero de 2017 |La compatibilidad con VHD finaliza con la primera actualización publicada después del 1 de junio de 2017.|
-|Herramienta de evaluación de actualizaciones de System Center Configuration Manager. </br></br>La Herramienta de evaluación de actualizaciones depende de System Center Configuration Manager y del kit de herramientas de compatibilidad de aplicaciones (ACT) 6.x. La versión final de ACT se ha entregado en Windows 10 v1511 ADK. Como no habrá más actualizaciones para ACT, se interrumpirá el soporte para la Herramienta de evaluación de actualizaciones. </br></br>La Herramienta de evaluación de actualizaciones se reemplaza por la característica [Preparación de actualización](/sccm/core/clients/manage/upgrade/upgrade-analytics). El aviso de desuso se agregó a la [página de descarga de la Herramienta de evaluación de actualizaciones](https://www.microsoft.com/download/details.aspx?id=37145) el 12 de septiembre de 2016. |12/9/2016  | 11 de julio de 2017 |  
+|Herramienta de evaluación de actualizaciones de System Center Configuration Manager. </br></br>La Herramienta de evaluación de actualizaciones depende de System Center Configuration Manager y del kit de herramientas de compatibilidad de aplicaciones (ACT) 6.x. La versión final de ACT se ha entregado en Windows 10 v1511 ADK. Como no habrá más actualizaciones para ACT, se interrumpirá el soporte para la Herramienta de evaluación de actualizaciones. </br></br>La Herramienta de evaluación de actualizaciones se reemplaza por la característica [Preparación de actualización](/sccm/core/clients/manage/upgrade/upgrade-analytics). El aviso de desuso se agregó a la [página de descarga de la Herramienta de evaluación de actualizaciones](https://www.microsoft.com/download/details.aspx?id=37145) el 12 de septiembre de 2016. |12/9/2016  | 11 de julio de 2017 |
 
 
 <br></br>
@@ -121,4 +120,3 @@ Detalles adicionales sobre las características eliminadas con la versión 1511 
  System Center Configuration Manager ha eliminado la compatibilidad con Protección de acceso a redes. La característica quedó en desuso en Windows Server 2012 R2 y se eliminó en Windows 10.  
 
  Para alternativas de protección de acceso a redes, consulte la sección *Funcionalidad en desuso* de [Información general sobre servicios de acceso y directivas de redes](https://technet.microsoft.com/library/hh831683.aspx).
-

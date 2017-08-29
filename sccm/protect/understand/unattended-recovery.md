@@ -6,8 +6,7 @@ ms.date: 6/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 828c31d1-3d70-4412-b1a8-c92e7e504d39
@@ -15,18 +14,15 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f7cd9c71287d62c9f5d36e2f032bc2a6065572ae
 ms.openlocfilehash: b5a1a1d165a6888bc26e809666d2331ff3c24d68
-ms.contentlocale: es-es
-ms.lasthandoff: 06/06/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="unattended-site-recovery-for-configuration-manager"></a>Recuperación de sitio desatendida de Configuration Manager   
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
- Para realizar una [recuperación desatendida](/sccm/protect/understand/recover-sites#site-recovery-procedures) de un sitio primario o un sitio de administración central de Configuration Manager, puede crear un script de instalación desatendida y usar el programa de instalación con la opción de comando **/script**. El script proporciona el mismo tipo de información que solicita el Asistente para instalación, excepto por el hecho de que no existe configuración predeterminada. Deben especificarse todos los valores para las claves de instalación que se aplican al tipo de recuperación que se utiliza.
+*Se aplica a: System Center Configuration Manager (Rama actual)* Para realizar una [recuperación desatendida](/sccm/protect/understand/recover-sites#site-recovery-procedures) de un sitio primario o un sitio de administración central de Configuration Manager, puede crear un script de instalación desatendida y usar el programa de instalación con la opción de comando **/script**. El script proporciona el mismo tipo de información que solicita el Asistente para instalación, excepto por el hecho de que no existe configuración predeterminada. Deben especificarse todos los valores para las claves de instalación que se aplican al tipo de recuperación que se utiliza.
 
  Para utilizar la opción de línea de comandos de instalación de /script, debe crear un archivo de inicialización y especificar su nombre después de la opción de línea de comandos de instalación de /script. Más importante que el nombre del archivo es que este tenga la extensión **.ini**. Cuando haga referencia al archivo de inicialización del programa de instalación desde la línea de comandos, tendrá que proporcionar la ruta de acceso completa al archivo. Por ejemplo, si el archivo de inicialización de instalación es *setup.ini* y se almacena en la carpeta *C:\setup*, la línea de comandos sería:
 
@@ -386,4 +382,3 @@ ms.lasthandoff: 06/06/2017
     -   **Requerido** : no
     -   **Valores:** &lt;*Timeout*>
     -   **Detalles** : especifica el valor de tiempo de espera máximo (en minutos) de un sitio primario para conectarse al sitio de administración central. Por ejemplo, si se produce un error de conexión del sitio primario con el sitio de administración central, el sitio primario vuelve a tratar de establecer la conexión conforme al valor especificado para CASRetryInterval hasta que se alcanza el valor de tiempo de WaitForCASTimeout. Puede especificar un valor entre 0 y 100.
-

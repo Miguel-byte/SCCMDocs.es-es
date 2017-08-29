@@ -4,23 +4,21 @@ description: "Obtenga información sobre las características disponibles en Tec
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bceab2e8-2f05-4a17-9ac8-a7a558670fb7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: bcb14a2be312d4d8a4a9c235652c7bf971a7a976
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1612 para System Center Configuration Manager
 
@@ -52,11 +50,11 @@ Además de instalar y configurar la base de datos de almacenamiento de datos, se
 
 | Paso         | Detalles  |
 |:------:|-----------|  
-| **1**  |     El servidor de sitio transfiere y almacena datos en la base de datos del sitio.  |  
-| **2** |      Basándose en su programación y configuración, el punto de servicio de almacenamiento de datos obtiene datos de la base de datos del sitio.  |  
+| **1**  |  El servidor de sitio transfiere y almacena datos en la base de datos del sitio.  |  
+| **2** |   Basándose en su programación y configuración, el punto de servicio de almacenamiento de datos obtiene datos de la base de datos del sitio.  |  
 | **3** |  El punto de servicio de almacenamiento de datos transfiere y almacena una copia de los datos sincronizados en la base de datos de almacenamiento de datos. |  
 | **A** |  Con los informes integrados se realiza una solicitud de datos que se pasa al punto de servicios de informes mediante SQL Server Reporting Services. |  
-| **B** |      La mayoría de los informes se refieren a información actual y estas solicitudes se ejecutan en la base de datos del sitio. |  
+| **B** |   La mayoría de los informes se refieren a información actual y estas solicitudes se ejecutan en la base de datos del sitio. |  
 | **C** | Cuando un informe solicita datos históricos, mediante uno de los informes con una *Categoría* de **Almacenamiento de datos**, la solicitud se ejecuta en la base de datos de almacenamiento de datos.   |  
 
 ### <a name="prerequisites-for-the-data-warehouse-service-point-and-database"></a>Requisitos previos de la base de datos y del punto de servicio de almacenamiento de datos
@@ -87,12 +85,12 @@ Página **General**: se necesita la siguiente información general:
 - **Configuración de la base de datos de Configuration Manager:**   
   - **Nombre del servidor**: especifique el FQDN del servidor que hospeda la base de datos del sitio. Si no usa una instancia predeterminada de SQL Server, debe especificar la instancia después del FQDN con el siguiente formato: ***&lt;Sqlserver_FQDN>\&lt;nombre_instancia>***
   - **Nombre de la base de datos**: especifique el nombre de la base de datos del sitio.
-  -    **Comprobar**: haga clic en **Comprobar** para asegurarse de que la conexión a la base de datos del sitio se ha realizado correctamente.
+  - **Comprobar**: haga clic en **Comprobar** para asegurarse de que la conexión a la base de datos del sitio se ha realizado correctamente.
 </br></br>
 - **Configuración de la base de datos de almacenamiento de datos:**
-  -    **Nombre del servidor**: especifique el FQDN del servidor que hospeda el punto de servicio de almacenamiento de datos y la base de datos. Si no usa una instancia predeterminada de SQL Server, debe especificar la instancia después del FQDN con el siguiente formato: ***&lt;Sqlserver_FQDN>\&lt;nombre_instancia>***
-  -    **Nombre de la base de datos**: especifique el FQDN de la base de datos de almacenamiento de datos.  Configuration Manager creará la base de datos con este nombre. Si especifica un nombre de base de datos que ya existe en la instancia de SQL Server, Configuration Manager usará esa base de datos.
-  -    **Comprobar**: haga clic en **Comprobar** para asegurarse de que la conexión a la base de datos del sitio se ha realizado correctamente.
+  - **Nombre del servidor**: especifique el FQDN del servidor que hospeda el punto de servicio de almacenamiento de datos y la base de datos. Si no usa una instancia predeterminada de SQL Server, debe especificar la instancia después del FQDN con el siguiente formato: ***&lt;Sqlserver_FQDN>\&lt;nombre_instancia>***
+  - **Nombre de la base de datos**: especifique el FQDN de la base de datos de almacenamiento de datos.  Configuration Manager creará la base de datos con este nombre. Si especifica un nombre de base de datos que ya existe en la instancia de SQL Server, Configuration Manager usará esa base de datos.
+  - **Comprobar**: haga clic en **Comprobar** para asegurarse de que la conexión a la base de datos del sitio se ha realizado correctamente.
 
 Página **Configuración de sincronización**:   
 - **Configuración de datos:**
@@ -109,7 +107,7 @@ Después de instalar el rol de almacenamiento de datos, asegúrese de que la cue
 #### <a name="troubleshoot-installation-and-data-synchronization"></a>Solución de problemas de instalación y sincronización de datos
 Use los siguientes registros para investigar problemas con la instalación del punto de servicio de almacenamiento de datos o con la sincronización de datos:
 - **DWSSMSI.log** y **DWSSSetup.log**: use estos registros para investigar errores al instalar el punto de servicio de almacenamiento de datos.
--     **Microsoft.ConfigMgrDataWarehouse.log**: use este registro para investigar la sincronización de datos entre la base de datos del sitio y la base de datos de almacenamiento de datos.
+-   **Microsoft.ConfigMgrDataWarehouse.log**: use este registro para investigar la sincronización de datos entre la base de datos del sitio y la base de datos de almacenamiento de datos.
 
 ### <a name="reporting"></a>Generación de informes
 Después de que instala un rol de sistema de sitio de almacenamiento de datos, los siguientes informes están disponibles en su punto de servicios de informes con una *Categoría* de **Almacenamiento de datos:**
@@ -145,7 +143,7 @@ Use los siguientes pasos para mover la base de datos de almacenamiento de datos 
 
 Puede revisar los siguientes registros de Configuration Manager para confirmar que el rol de sistema de sitio se ha reinstalado correctamente:  
 - **DWSSMSI.log** y **DWSSSetup.log**: use estos registros para investigar errores al instalar el punto de servicio de almacenamiento de datos.
--     **Microsoft.ConfigMgrDataWarehouse.log**: use este registro para investigar la sincronización de datos entre la base de datos del sitio y la base de datos de almacenamiento de datos.
+-   **Microsoft.ConfigMgrDataWarehouse.log**: use este registro para investigar la sincronización de datos entre la base de datos del sitio y la base de datos de almacenamiento de datos.
 
 
 ## <a name="content-library-cleanup-tool"></a>Herramienta de limpieza de la biblioteca de contenido
@@ -175,7 +173,7 @@ La herramienta puede ejecutarse en dos modos:
   2. **Modo de eliminación**: cuando ejecuta la herramienta con el modificador **/delete**, la herramienta se ejecuta en el modo de eliminación.
 
      - Cuando la herramienta se ejecuta en este modo, el contenido huérfano que se ha detectado en el punto de distribución especificado puede eliminarse de la biblioteca de contenido del punto de distribución.
-     -     Antes de eliminar cada archivo, se le pide al usuario su confirmación de que el archivo debe eliminarse.  Puede seleccionar **S** para sí, **N** para no o **Sí a todo** para omitir mensajes adicionales y eliminar todo el contenido huérfano.  
+     -  Antes de eliminar cada archivo, se le pide al usuario su confirmación de que el archivo debe eliminarse.  Puede seleccionar **S** para sí, **N** para no o **Sí a todo** para omitir mensajes adicionales y eliminar todo el contenido huérfano.  
      </br>
 
      Recomendamos que ejecute la herramienta en el modo de hipótesis y revise el archivo de registro resultante antes de ejecutar la herramienta con el modificador /delete.  
@@ -224,9 +222,9 @@ Ahora puede configurar una lista de archivos ejecutables (con la extensión .exe
 
 ### <a name="try-it-out"></a>Haga la prueba
 Para configurar una lista de archivos ejecutables
-1.    En la página de propiedades de cualquier tipo de implementación, pulse la pestaña **Installer Handling (Control del instalador)**.
-2.    Haga clic en **Agregar** para agregar uno de los archivos ejecutables a la lista (por ejemplo, **Edge.exe**).
-3.    Haga clic en **Aceptar** para cerrar el cuadro de diálogo de las propiedades del tipo de implementación.
+1.  En la página de propiedades de cualquier tipo de implementación, pulse la pestaña **Installer Handling (Control del instalador)**.
+2.  Haga clic en **Agregar** para agregar uno de los archivos ejecutables a la lista (por ejemplo, **Edge.exe**).
+3.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo de las propiedades del tipo de implementación.
 
 Ahora, cuando implemente esta aplicación en un usuario o dispositivo, y uno de los ejecutables que ha agregado se esté ejecutando, el usuario final verá un cuadro de diálogo del Centro de software indicándole que se ha producido un error en la instalación porque una aplicación se está ejecutando.
 
@@ -256,16 +254,16 @@ Hemos agregado compatibilidad con archivos de instalación rápida en Configurat
 
 ### <a name="to-enable-the-download-of-express-installation-files-for-windows-10-updates-on-the-server"></a>Para habilitar la descarga de archivos de instalación rápida para las actualizaciones de Windows 10 en el servidor
 Para iniciar la sincronización de los metadatos de los archivos de instalación rápida de Windows 10, debe habilitarlos en las propiedades de punto de actualización de software.
-1.    En la consola de Configuration Manager, vaya a **Administración** > **Configuración del sitio** > **Sitios**.
-2.    Seleccione el sitio de administración central o el sitio primario independiente.
-3.    En la pestaña **Inicio** , en el grupo **Configuración** , haga clic en **Configurar componentes de sitio**y, a continuación, haga clic en **Punto de actualización de software**. En la pestaña **Archivos de actualización**, seleccione **Download full files for all approved updates and express installation files for Windows 10 (Descargar archivos completos para todas las actualizaciones aprobadas y los archivos de instalación rápida de Windows 10)**.
+1.  En la consola de Configuration Manager, vaya a **Administración** > **Configuración del sitio** > **Sitios**.
+2.  Seleccione el sitio de administración central o el sitio primario independiente.
+3.  En la pestaña **Inicio** , en el grupo **Configuración** , haga clic en **Configurar componentes de sitio**y, a continuación, haga clic en **Punto de actualización de software**. En la pestaña **Archivos de actualización**, seleccione **Download full files for all approved updates and express installation files for Windows 10 (Descargar archivos completos para todas las actualizaciones aprobadas y los archivos de instalación rápida de Windows 10)**.
 
 ### <a name="to-enable-support-for-clients-to-download-and-install-express-installation-files"></a>Para habilitar la compatibilidad para que los clientes descarguen e instalen archivos de instalación rápida
 Para habilitar la compatibilidad de los archivos de instalación rápida en los clientes, debe habilitar los archivos de instalación rápida en los clientes en la sección Actualizaciones de software de la configuración de cliente. Esto crea una nueva escucha HTTP que escucha las solicitudes para descargar los archivos de instalación rápida en el puerto que especifique. Una vez que implemente la configuración de cliente para habilitar esta característica en el cliente, intentará descargar la diferencia entre la actualización acumulativa de Windows 10 del mes actual y la actualización del mes anterior (los clientes deben ejecutar una versión de Windows 10 que admita los archivos de instalación rápida).
-1.    Habilite la compatibilidad para los archivos de instalación rápida en las propiedades de componente de punto de actualización de software (procedimiento anterior).
-2.    En la consola de Configuration Manager, vaya a **Administración** > **Configuración de cliente**.
-3.    Seleccione la configuración de cliente adecuada y, después, en la pestaña **Inicio**, haga clic en **Propiedades**.
-4.    Seleccione la página **Actualizaciones de software**, configure **Sí** para la opción **Enable installation of Express Updates on clients (Habilitar la instalación de actualizaciones rápidas en clientes)** y configure el puerto que ha usado la escucha HTTP en el cliente para la opción **Port used to download content for Express Updates (Puerto usado para descargar el contenido de las actualizaciones rápidas)**.
+1.  Habilite la compatibilidad para los archivos de instalación rápida en las propiedades de componente de punto de actualización de software (procedimiento anterior).
+2.  En la consola de Configuration Manager, vaya a **Administración** > **Configuración de cliente**.
+3.  Seleccione la configuración de cliente adecuada y, después, en la pestaña **Inicio**, haga clic en **Propiedades**.
+4.  Seleccione la página **Actualizaciones de software**, configure **Sí** para la opción **Enable installation of Express Updates on clients (Habilitar la instalación de actualizaciones rápidas en clientes)** y configure el puerto que ha usado la escucha HTTP en el cliente para la opción **Port used to download content for Express Updates (Puerto usado para descargar el contenido de las actualizaciones rápidas)**.
 
 
 ## <a name="odata-endpoint-data-access"></a>Acceso a datos del punto de conexión de OData
@@ -322,4 +320,3 @@ Después de que realice estos cambios de configuración, puede crear una directi
 ## <a name="change-to-configuring-multi-factor-authentication-for-device-enrollment"></a>Cambiar para configurar Multi-Factor Authentication para la inscripción de dispositivos
 
 Ahora que puede configurar Multi-Factor Authentication (MFA) para la inscripción de dispositivos en Azure Portal, la opción de MFA se ha quitado de la consola de Configuration Manager. Puede encontrar más información sobre la configuración de MFA para la inscripción [en este tema de Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/multi-factor-authentication-azure-active-directory).
-

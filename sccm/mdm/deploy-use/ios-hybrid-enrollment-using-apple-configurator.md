@@ -2,26 +2,23 @@
 title: Inscribir dispositivos iOS con Apple Configurator en Configuration Manager | Microsoft Docs
 descriptions: Pre-enroll iOS devices by using Apple Configurator with Configuration Manager.
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 08/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 61a19d95-83ff-4ad8-9a67-f304d2ba54f2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: 6c6e9edbc7b2fca3d1be4feabb238efab80465fa
-ms.contentlocale: es-es
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 403f3b730e24c0f76314b04bcdd1d2f817bcd908
+ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="ios-hybrid-enrollment-using-apple-configurator-with-configuration-manager"></a>Inscripción híbrida de iOS híbrido con Apple Configurator con Configuration Manager
 
@@ -41,7 +38,7 @@ El siguiente procedimiento está recomendado para dispositivos iOS dedicados que
 
 -   Cables USB para conectar los dispositivos al equipo Mac  
 
-## <a name="step-1-add-a-corporate-owned-device-enrollment-profile"></a>Paso 1: Agregar un perfil de inscripción de dispositivos corporativos
+## <a name="add-a-corporate-owned-device-enrollment-profile"></a>Agregar un perfil de inscripción de dispositivos corporativos
 
 1.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Todos los dispositivos corporativos** > **iOS** > **Perfiles de inscripción**. Haga clic en **Crear perfil** para abrir el Asistente para crear el perfil. Establezca la configuración en las siguientes páginas:  
 
@@ -63,13 +60,13 @@ El siguiente procedimiento está recomendado para dispositivos iOS dedicados que
 
 4.  Revise el resumen y, después, haga clic en **Siguiente** para crear el perfil de inscripción. Para finalizar el asistente, haga clic en **Cerrar**. Ahora está listo para agregar números IMEI o números de serie a los dispositivos que quiere inscribir.  
 
-## <a name="step-2-predeclare-devices-to-enroll-with-setup-assistant"></a>Paso 2: Predeclarar los dispositivos para su inscripción con el Asistente de configuración
+## <a name="predeclare-devices-to-enroll-with-setup-assistant"></a>Predeclarar los dispositivos para su inscripción con el Asistente de configuración
 
 En este paso, predeclare los dispositivos como corporativos proporcionando una lista de identificadores de hardware (IMEI o números de serie).
 
 Para obtener más información, consulte [Predeclare devices with IMEI and iOS serial number (Predeclarar dispositivos con IMEI y números de serie de iOS)](predeclare-devices-with-hardware-id.md). Cuando haya terminado con esa tarea, vuelva a la página para seguir con el siguiente paso.
 
-## <a name="step-3-export-the-profile-to-deploy-to-ios-devices"></a>Paso 3: Exportar el perfil que se va a implementar en dispositivos iOS
+## <a name="export-the-profile-to-deploy-to-ios-devices"></a>Exportar el perfil que se va a implementar en dispositivos iOS
 
 1.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Todos los dispositivos corporativos** > **iOS** > **Perfiles de inscripción**.
 
@@ -96,7 +93,7 @@ Para obtener más información, consulte [Predeclare devices with IMEI and iOS s
 > [!NOTE]
 > La dirección URL del perfil de inscripción es válida durante dos semanas desde que se exporta. Después de dos semanas, debe exportar una nueva dirección URL para inscribir dispositivos iOS.
 
-## <a name="step-4-prepare-the-device-with-apple-configurator"></a>Paso 4: Preparación del dispositivo con Apple Configurator
+## <a name="prepare-the-device-with-apple-configurator"></a>Preparación del dispositivo con Apple Configurator
 
 Para preparar los dispositivos iOS para la inscripción, conecte cada dispositivo a un equipo Mac y cargue el perfil de inscripción en este.  
 
@@ -135,7 +132,6 @@ Para preparar los dispositivos iOS para la inscripción, conecte cada dispositiv
 
 Repita estos pasos en todos los dispositivos que quiera preparar para la inscripción.
 
-## <a name="step-5-distribute-devices"></a>Paso 5: Distribución de los dispositivos
+## <a name="distribute-devices"></a>Distribución de los dispositivos
 
 Los dispositivos ya están listos para la inscripción corporativa. Apague los dispositivos y distribúyalos a los usuarios. Cuando el dispositivo se encienda, se iniciará el Asistente de configuración y se solicitará al usuario su cuenta profesional o educativa para comenzar la inscripción.
-

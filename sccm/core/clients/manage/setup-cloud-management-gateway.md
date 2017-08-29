@@ -8,17 +8,14 @@ ms.date: 05/01/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
+ms.openlocfilehash: 84b617b3e83636ab4578174ef40e786dcf1178cd
+ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
 ms.translationtype: HT
-ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
-ms.openlocfilehash: df6e809aadd3d69275c137c92629ab8426bbdcb7
-ms.contentlocale: es-es
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/21/2017
 ---
-
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurar puerta de enlace de administración en la nube para Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
@@ -26,6 +23,9 @@ ms.lasthandoff: 08/04/2017
 A partir de la versión 1610, el proceso para configurar la puerta de enlace de administración en la nube en Configuration Manager incluye los pasos siguientes:
 
 ## <a name="step-1-configure-required-certificates"></a>Paso 1: Configurar los certificados necesarios
+
+> [!TIP]  
+> Antes de solicitar un certificado, confirme que el nombre de dominio de Azure deseado (por ejemplo, GraniteFalls.CloudApp.Net) sea único. Para realizar este registro en [Microsoft Azure Portal](https://manage.windowsazure.com), haga clic en **Nuevo**, seleccione **Servicio en la nube** y después **Creación personalizada**. En el campo **Dirección URL** escriba el nombre de dominio que desee (no haga clic en la marca de verificación para crear el servicio). El portal mostrará si el nombre de dominio está disponible o si ya está en uso por otro servicio.
 
 ## <a name="option-1-preferred---use-the-server-authentication-certificate-from-a-public-and-globally-trusted-certificate-provider-like-verisign"></a>Opción 1 (preferida): Usar el certificado de autenticación de servidor de un proveedor de certificados público y de confianza global (como VeriSign)
 
@@ -43,7 +43,6 @@ Por ejemplo, al crear el servicio Cloud Management Gateway en Contoso, se extrae
 
 Puede crear un certificado SSL personalizado para la puerta de enlace de administración en la nube de la misma manera que si fuera para un punto de distribución basado en la nube. Siga las instrucciones de [Deploying the Service Certificate for Cloud-Based Distribution Points (Implementación del certificado de servicio para puntos de distribución basados en la nube)](/sccm/core/plan-design/network/example-deployment-of-pki-certificates), pero con las siguientes diferencias:
 
-- Al configurar la nueva plantilla de certificado, asigne los permisos **Leer** e **Inscribir** al grupo de seguridad que configure para los servidores de Configuration Manager.
 - Cuando se le solicite el certificado de servidor web personalizado, proporcione un nombre de dominio completo para el nombre común del certificado que finalice en**cloudapp.net** para usar la puerta de enlace de administración en la nube en la nube pública de Azure o **usgovcloudapp.net** para la nube de administración pública de Azure.
 
 
@@ -69,6 +68,9 @@ La manera más sencilla de exportar la raíz de los certificados de cliente usad
 
 7.  Complete el Asistente para exportar certificados con el formato de certificado predeterminado. Anote el nombre y la ubicación del certificado raíz que ha creado, ya que lo necesitará para configurar la puerta de enlace de administración en la nube en un [paso posterior](#step-4-set-up-cloud-management-gateway).
 
+>[!NOTE]
+>Si el certificado de cliente lo emitió una entidad de certificación subordinada, necesitará repetir este paso para cada certificado de la cadena.
+
 ## <a name="step-3-upload-the-management-certificate-to-azure"></a>Paso 3: Cargar el certificado de administración en Azure
 
 Se necesita un certificado de administración de Azure para que Configuration Manager tenga acceso a la API de Azure y para configurar la puerta de enlace de administración en la nube. Para obtener más información e instrucciones sobre cómo cargar un certificado de administración, vea los artículos siguientes de la documentación de Azure:
@@ -80,74 +82,6 @@ Se necesita un certificado de administración de Azure para que Configuration Ma
 >[!IMPORTANT]
 >Asegúrese de copiar el identificador de suscripción asociado al certificado de administración, ya que lo necesitará para configurar la puerta de enlace de administración en la nube en la consola de Configuration Manager en el [paso siguiente](#step-4-set-up-cloud-management-gateway).
 
-### <a name="subordinate-ca-certificates-and-azure"></a>Certificados de entidad de certificación subordinada y Azure
-
-Si el certificado lo emite una entidad de certificación subordinada y la infraestructura de clave pública de la organización no está en Internet, use este procedimiento para cargar el certificado en Azure. 
-
-1. En el portal de Azure, después de configurar una puerta de enlace de administración en la nube, ubique el servicio de puerta de enlace de administración en la nube y vaya a la pestaña **Certificado**. Suba aquí sus certificados de entidad de certificación subordinada. Si tiene más de un certificado de entidad de certificación subordinada, debe cargarlos todos. 
-2. Una vez que se cargue el certificado, registre su huella digital. 
-3. Agregue la huella digital a la base de datos del sitio con este script:
-    
-```
-
-    DIM serviceCName
-    DIM subCAThumbprints
-
-    ' Verify arguments
-    IF WScript.Arguments.Count <> 2 THEN
-    WScript.StdOut.WriteLine "Usage: CScript UpdateSubCAThumbprints.vbs <ServiceCName> <SubCA cert thumbprints, separated by ;>"
-    WScript.Quit 1
-    END IF
-
-    'Get arguments
-    serviceCName = WScript.Arguments.Item(0)
-    subCAThumbprints = WScript.Arguments.Item(1)
-
-    'Find SMS Provider
-    WScript.StdOut.WriteLine "Searching for SMS Provider for local site..."
-    SET objSMSNamespace = GetObject("winmgmts:{impersonationLevel=impersonate}!\\.\root\sms")
-    SET results = objSMSNamespace.ExecQuery("SELECT * From SMS_ProviderLocation WHERE ProviderForLocalSite = true")
-
-    'Process the results
-    FOR EACH var in results
-    siteCode = var.SiteCode
-    NEXT
-
-    IF siteCode = "" THEN
-    WScript.StdOut.WriteLine "Failed to locate SMS provider."
-    WScript.Quit 1
-    END IF
-
-    WScript.StdOut.WriteLine "SiteCode = " & siteCode 
-
-    ' Connect to the SMS namespace
-    SET objWMIService = GetObject("winmgmts:{impersonationLevel=impersonate}!\\.\root\sms\site_" & siteCode)
-
-    'Get instance of SMS_AzureService
-    DIM query
-    query = "SELECT * From SMS_AzureService WHERE ServiceType = 'CloudProxyService' AND ServiceCName = '" & serviceCName & "'"
-    WScript.StdOut.WriteLine "Run WQL query: " &  query
-    SET objInstances = objWMIService.ExecQuery(query)
-
-    IF IsNull(objInstances) OR (objInstances.Count = 0) THEN
-    WScript.StdOut.WriteLine "Failed to get Azure_Service instance."
-    WScript.Quit 1
-    END IF
-
-    FOR EACH var IN objInstances
-    SET azService = var
-    NEXT
-
-    WScript.StdOut.WriteLine "Update [SubCACertThumbprint] to " & subCAThumbprints
-
-    'Update SubCA cert thumbprints
-    azService.Properties_.item("SubCACertThumbprint") = subCAThumbprints
-
-    'Save data back to provider
-    azService.Put_
-
-    WScript.StdOut.WriteLine "[SubCACertThumbprint] is updated successfully."
-```
 
 
 ## <a name="step-4-set-up-cloud-management-gateway"></a>Paso 4: Configurar puerta de enlace de administración en la nube
@@ -173,7 +107,7 @@ Si el certificado lo emite una entidad de certificación subordinada y la infrae
 
     - Especifique la clave privada (archivo .pfx) que ha exportado desde el certificado SSL personalizado.
 
-    - Especifique el certificado raíz exportado desde el certificado de cliente.
+    - Especifique el certificado raíz y todos los certificados subordinados exportados desde el certificado de cliente. El asistente acepta hasta dos certificados raíz y cuatro certificados subordinados.
 
     -   Especifique el mismo FQDN de servicio que usó cuando creó la nueva plantilla de certificado. Debe especificar uno de los siguientes sufijos para el nombre de servicio de nombre de dominio completo en función de la nube de Azure que usa:
 
@@ -207,7 +141,7 @@ El punto de conexión de puerta de enlace de administración en la nube es un ro
 
 ## <a name="step-7-configure-roles-for-cloud-management-gateway-traffic"></a>Paso 7: Configurar roles para el tráfico de puerta de enlace de administración en la nube
 
-El último paso de la configuración de la puerta de enlace de administración en la nube es configurar los roles de sistema de sitio para que acepten tráfico de la puerta de enlace de administración en la nube. En Tech Preview 1606, solo son compatibles con la puerta de enlace de administración en la nube los roles de punto de administración, punto de distribución y punto de actualización de software. Debe configurar cada rol por separado.
+El último paso de la configuración de la puerta de enlace de administración en la nube es configurar los roles de sistema de sitio para que acepten tráfico de la puerta de enlace de administración en la nube. Solo los roles de punto de administración y punto de actualización de software son compatibles para Cloud Management Gateway. Debe configurar cada rol por separado.
 
 1. En la consola de Configuration Manager, vaya a **Administración** > **Configuración de sitio** > **Servidores y roles del sistema de sitios**.
 
@@ -215,7 +149,7 @@ El último paso de la configuración de la puerta de enlace de administración e
 
 3. Elija el rol y, luego, elija **Propiedades**.
 
-4. En la hoja Propiedades del rol, en Conexiones de cliente, elija **HTTPS**, active la casilla situada junto a **Permitir el tráfico de puerta de enlace de administración en la nube de Configuration Manager** y, luego, elija **Aceptar**. Repita estos pasos para los roles restantes.
+4. En la hoja Propiedades del rol, en Conexiones de cliente, active la casilla situada junto a **Permitir tráfico de Cloud Management Gateway en Configuration Manager** y, luego, elija **Aceptar**. Repita estos pasos para los roles restantes. Habilitar la opción **HTTPS** también se recomienda como procedimiento recomendado de seguridad, pero no es necesario.
 
 ## <a name="step-8-configure-clients-for-cloud-management-gateway"></a>Paso 8: Configurar clientes para la puerta de enlace de administración en la nube
 
@@ -237,4 +171,3 @@ Este comando muestra los puntos de administración con los que puede ponerse en 
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Supervisar clientes para la puerta de enlace de administración en la nube](monitor-clients-cloud-management-gateway.md)
-

@@ -2,32 +2,29 @@
 title: "Inscribir dispositivos con el administrador de inscripción de dispositivos en Configuration Manager | Microsoft Docs"
 description: "Inscriba dispositivos de la empresa con la cuenta del administrador de inscripción de dispositivos con System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 08/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7573590763c68a4c97d388be1e64054c318da9cc
-ms.openlocfilehash: 8c491636925670732e6af67d8c1c741e4793ef96
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
-
+ms.openlocfilehash: c90ecca1ee46523d16fc1cf11495e40707631e03
+ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="enroll-devices-with-device-enrollment-manager-with-configuration-manager"></a>Inscribir dispositivos con el administrador de inscripción de dispositivos con Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Las organizaciones pueden usar Intune para administrar un gran número de dispositivos móviles con una sola cuenta de usuario. La cuenta del *administrador de inscripción de dispositivos* (DEM) es una cuenta de usuario especial que puede inscribir hasta 1000 dispositivos. Agregue usuarios existentes a la cuenta de DEM para ofrecerles funcionalidades DEM especiales. Cada dispositivo inscrito usa una sola licencia. Se recomienda que use dispositivos inscritos a través de esta cuenta como dispositivos compartidos sin afinidad de usuario, en lugar de dispositivos dedicados personales.  
+Las organizaciones pueden usar Intune para administrar un gran número de dispositivos móviles con una sola cuenta de usuario. La cuenta del *administrador de inscripción de dispositivos* (DEM) es una cuenta de usuario especial utilizada para inscribir dispositivos. Agregue usuarios existentes a la cuenta de DEM para ofrecerles funcionalidades DEM especiales. Cada dispositivo inscrito usa una sola licencia. Se recomienda que use dispositivos inscritos a través de esta cuenta como dispositivos compartidos sin afinidad de usuario, en lugar de dispositivos dedicados personales.  
 
 ## <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager"></a>Inscribir dispositivos propiedad de la empresa con el administrador de inscripción de dispositivos  
  Puede asignar un administrador o supervisor de almacén, por ejemplo, una cuenta de usuario de administrador de inscripción de dispositivos que le permita hacer lo siguiente:  
@@ -67,24 +64,14 @@ Un restaurante quiere tabletas de punto de venta para los camareros y monitores 
 7.  El administrador de inscripción de dispositivos puede inscribir ahora dispositivos móviles siguiendo el mismo procedimiento que un usuario final usa para un escenario de BYOD (Bring Your Own Device) en el portal de empresa.  
 
 #### <a name="delete-a-device-enrollment-manager-from-intune"></a>Eliminar un administrador de inscripción de dispositivos de Intune  
+La eliminación de un administrador de inscripción de dispositivos no afecta a los dispositivos inscritos. Cuando se elimina un administrador de inscripción de dispositivos:  
+- No se ha anulado la inscripción de ningún dispositivo inscrito  
+- Los dispositivos inscritos se continuarán administrando de manera completa  
+- Las credenciales de la cuenta del administrador de inscripción de dispositivos eliminado siguen siendo válidas para iniciar sesión en el portal de empresa y acceder a las aplicaciones.  
+- Las credenciales de la cuenta del administrador de inscripción de dispositivos eliminado todavía no pueden borrar ni retirar dispositivos  
+- La relación de la cuenta del administrador de inscripción de dispositivos eliminado se mantiene pero no se pueden inscribir dispositivos adicionales
 
 1.  En la consola de Configuration Manager, haga clic en **Administración**.  
-
 2.  En el área de trabajo **Administración** , expanda **Servicios en la nube**y haga clic en **Suscripciones de Microsoft Intune**. Seleccione la suscripción a Microsoft Intune a la que agregará un administrador de inscripción de dispositivos y, después, haga clic en **Propiedades**.  
-
 3.  En el cuadro de diálogo Propiedades de Suscripción a Microsoft Intune, haga clic en la pestaña **Administrador de inscripción de dispositivos**.  
-
 4.  **Busque** el administrador de inscripción de dispositivos que quiere eliminar, haga clic en **Quitar** y, luego, en **Aceptar**.  
-
- La eliminación de un administrador de inscripción de dispositivos no afecta a los dispositivos inscritos. Cuando se elimina un administrador de inscripción de dispositivos:  
-
--   Ningún dispositivo inscrito se ve afectado  
-
--   Los dispositivos inscritos se continuarán administrando de manera completa  
-
--   Las credenciales de la cuenta del administrador de inscripción de dispositivos eliminado siguen siendo válidas para iniciar sesión en el portal de empresa y acceder a las aplicaciones.  
-
--   Las credenciales de la cuenta del administrador de inscripción de dispositivos eliminado todavía no pueden borrar ni retirar dispositivos  
-
--   La relación de la cuenta del administrador de inscripción de dispositivos eliminado se mantiene pero no se pueden inscribir dispositivos adicionales
-

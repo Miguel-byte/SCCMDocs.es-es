@@ -6,37 +6,30 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 29350919-6a25-446b-a0da-05e8914fbb26
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
-ms.openlocfilehash: 47bfeec5bd5d9b843e9064560d0cd0b14bd7d6a1
-ms.contentlocale: es-es
-ms.lasthandoff: 12/29/2016
-
-
+ms.openlocfilehash: fe517e110036e09907fb070afe973b246ce4147c
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="introduction-to-remote-control-in-system-center-configuration-manager"></a>Introducción al control remoto en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-Use el control remoto para administrar de forma remota, proporcionar asistencia o ver todos los equipos cliente en la jerarquía. Puede usar el control remoto para solucionar problemas de configuración de hardware y software en los equipos cliente y para proporcionar soporte técnico. Configuration Manager admite el control remoto de equipos de un grupo de trabajo y equipos unidos a un dominio.  
+Use el control remoto para administrar de forma remota, proporcionar asistencia o ver todos los equipos cliente en la jerarquía. Puede usar el control remoto para solucionar problemas de configuración de hardware y software en los equipos cliente y para proporcionar soporte técnico. Configuration Manager admite el control remoto de todos los equipos del grupo de trabajo y equipos unidos a un dominio que ejecutan sistemas operativos compatibles para el cliente de Configuration Manager. Para más información, vea [Sistemas operativos compatibles con dispositivos y clientes de System Center Configuration Manager](../../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
 Configuration Manager también le permite configurar el cliente para ejecutar el Escritorio remoto de Windows y la Asistencia remota desde la consola de Configuration Manager.  
 
 > [!NOTE]  
->  No se puede establecer una sesión de Asistencia remota desde la consola de Configuration Manager para un equipo cliente en los siguientes escenarios:  
->   
->  -   El equipo cliente está en un grupo de trabajo.  
-> -   El equipo que ejecuta la consola de Configuration Manager ejecuta Windows XP Service Pack 3, pero el equipo host no ejecuta Windows XP Service Pack 3. Para obtener más información, consulte la documentación de la Asistencia remota de Windows.  
+>  No se puede establecer una sesión de Asistencia remota desde la consola de Configuration Manager en un equipo cliente que se encuentra en un grupo de trabajo. 
 
- Puede iniciar una sesión de control remoto desde cualquier recopilación de dispositivos en la consola de Configuration Manager, desde la ventana de símbolo del sistema de Windows o desde el menú **Inicio** de Windows.  
-
+ Puede iniciar una sesión de control remoto en la consola de Configuration Manager desde **Activos y compatibilidad** > **Dispositivos**, desde cualquier colección de dispositivos, desde la ventana de símbolo del sistema de Windows o desde el menú **Inicio** de Windows.  

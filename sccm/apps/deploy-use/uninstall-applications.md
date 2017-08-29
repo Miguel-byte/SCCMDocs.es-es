@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0ea3edaa-27c6-4391-9896-cd97d9c5d06d
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 2d0c0bc2e4e080e6061d8d3fe6cafd264d95c42a
 ms.openlocfilehash: f42fee5974567f667c015a6b0bf34d9a9a7d2dab
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="uninstall-applications-with-system-center-configuration-manager"></a>Desinstalar aplicaciones con System Center Configuration Manager
 
@@ -64,15 +63,9 @@ Realice las acciones siguientes para desinstalar una aplicación que haya implem
         > [!NOTE]  
         >  La página **Contenido** se muestra solo si selecciona la opción **Especificar manualmente la información del tipo de implementación** en la página **General** del Asistente para crear tipos de implementación.  
 
-    -   En la pestaña **Programas** del cuadro de diálogo **Propiedades de <*<nombre de tipo de implementación*>**, especifique la línea de comandos para desinstalar la aplicación en el campo **Programa de desinstalación**.  
+    -   En la pestaña **Programas** del cuadro de diálogo **<*Propiedades de <nombre de tipo de implementación>***, especifique la línea de comandos para desinstalar la aplicación en el campo **Programa de desinstalación**.  
 
 2.  Implemente la aplicación y seleccione la acción de implementación **Desinstalar** en la página **Configuración de implementación** del Asistente para implementar software.  
 
     > [!NOTE]  
     >  Al seleccionar la acción de implementación **Desinstalar**, el propósito de la implementación se configura automáticamente como **Requerido**.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

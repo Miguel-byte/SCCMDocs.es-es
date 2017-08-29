@@ -6,23 +6,20 @@ ms.date: 01/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: af06fb10d905e3fe447c6cd6ed35dac10488161f
-ms.openlocfilehash: 1bf519ad4593f6a08d7dc393f9fab91c70b51b25
-ms.contentlocale: es-es
-ms.lasthandoff: 01/05/2017
-
-
+ms.openlocfilehash: 6145cb69c69dba1eb1b9842079ee1a33686bb18a
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-for-security-in-system-center-configuration-manager"></a>Planificar la seguridad en System Center Configuration Manager
 
@@ -294,7 +291,7 @@ Puede quitar la clave raíz confiable de un cliente mediante la propiedad de Cli
 
 8.  En la nueva ventana **Resultado de la consulta** donde se muestran las instancias de **TrustedRootKey**, haga doble clic en **TrustedRootKey=@**.  
 
-9. En el cuadro de diálogo **Editor de objetos de TrustedRootKey=@**, en la sección **Propiedades**, desplácese hacia abajo hasta **TrustedRootKey CIM_STRING**. La cadena de la columna de la derecha es la clave raíz confiable. Compruebe que coincide con el valor de **SMSPublicRootKey** del archivo *&lt;directorio de Configuration Manager\>***\bin\mobileclient.tcf**.  
+9. En el cuadro de diálogo **Editor de objetos de TrustedRootKey=@** , en la sección **Propiedades** , desplácese hacia abajo hasta **TrustedRootKey CIM_STRING**. La cadena de la columna de la derecha es la clave raíz confiable. Compruebe que coincide con el valor de **SMSPublicRootKey** del archivo *&lt;directorio de Configuration Manager\>***\bin\mobileclient.tcf**.  
 
 ##  <a name="BKMK_PlanningForSigningEncryption"></a> Planear la firma y el cifrado  
  Cuando se utilizan certificados PKI para todas las comunicaciones de cliente, no es necesario planear la firma y el cifrado para proteger la comunicación de datos de cliente. Pero si configura sistemas de sitio que ejecutan IIS para permitir las conexiones de cliente HTTP, debe decidir cómo proteger la comunicación de cliente del sitio.  
@@ -310,4 +307,3 @@ Puede quitar la clave raíz confiable de un cliente mediante la propiedad de Cli
 
 ### <a name="see-also"></a>Consulte también
 [Referencia técnica de controles criptográficos de System Center Configuration Manager](../../../protect/deploy-use/cryptographic-controls-technical-reference.md).  
-

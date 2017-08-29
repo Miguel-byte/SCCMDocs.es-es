@@ -6,25 +6,21 @@ ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5e5d854c-9cc1-4dd8-b33f-0fcac675b395
-caps.latest.revision: 13
-caps.handback.revision: 0
+caps.latest.revision: "13"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
+ms.openlocfilehash: 3921748d3c99c2a35b670f3ca121dc7ab92d43bc
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
-ms.openlocfilehash: 4bb1f4a068563a5fe6f384708e10269dcd3229da
-ms.contentlocale: es-es
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
-
-
 # <a name="device-guard-management-with-configuration-manager"></a>Administración de Device Guard con Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -97,6 +93,9 @@ Cuando agregue confianza para determinados archivos y carpetas en una directiva 
     - Confiar en aplicaciones que se incluyen en una imagen de implementación de sistema operativo 
 7.  Haga clic en **Siguiente** y complete el asistente.
 
+>[!IMPORTANT]
+>La inclusión de carpetas o archivos de confianza solo se admite en los equipos cliente que ejecutan la versión 1706 o posterior del cliente de Configuration Manager. Si las reglas de inclusión están englobadas en una directiva de Device Guard y esta última se implementa en un equipo cliente que ejecuta una versión anterior del cliente de Configuration Manager, entonces no podrá aplicarse. Actualizar estos clientes anteriores resolverá este problema. Todavía se pueden aplicar directivas que no engloban ninguna regla de inclusión en las versiones anteriores del cliente de Configuration Manager.
+
 ## <a name="how-to-deploy-a-device-guard-policy"></a>Implementación de una directiva de Device Guard
 1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.
 2.  En el área de trabajo **Activos y compatibilidad**, expanda **Endpoint Protection** y haga clic en **Directivas de Device Guard**.
@@ -130,7 +129,6 @@ En esta situación, el software podría seguir teniendo permiso para ejecutarse 
 - Al utilizar Configuration Manager para habilitar la integridad de código configurable en los equipos cliente con las directivas de Device Guard, la directiva no evita que los usuarios con derechos de administrador local sorteen la directiva de Device Guard o ejecuten software que no es de confianza de otro modo. 
 - La única manera de evitar que los usuarios con derechos de administrador local deshabiliten la integridad de código configurable es mediante la implementación de una directiva binaria firmada. Esta implementación es posible a través de la directiva de grupo, pero no se admite actualmente en Configuration Manager.
 - La configuración de Configuration Manager como un instalador administrado en los equipos cliente utiliza la directiva de AppLocker. AppLocker solo se usa para identificar los instaladores administrados y todo el cumplimiento tiene lugar con la integridad de código configurable. 
-
 
 
 

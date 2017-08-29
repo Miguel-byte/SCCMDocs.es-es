@@ -6,21 +6,19 @@ ms.date: 06/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
+ms.openlocfilehash: 93609815ab4d93eddb99b8461dda9f4b4bf8058e
+ms.sourcegitcommit: 9a6f8e028fb5eb2e752da70f42a5b548339bd8f4
 ms.translationtype: HT
-ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
-ms.openlocfilehash: 8e660c667daec9b1f7630e15599df5e3cfe55b5e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con System Center Configuration Manager y Microsoft Intune
 
@@ -58,6 +56,7 @@ Las siguientes características que estaban disponibles en versiones de Configur
 - [Nuevas reglas de directiva de cumplimiento de dispositivos](/sccm/core/plan-design/changes/whats-new-in-version-1706#new-device-compliance-policy-rules)
 - [Nuevas opciones de configuración para dispositivos Windows 10 que no están administrados con el cliente de Configuration Manager](/sccm/core/plan-design/changes/whats-new-in-version-1706#new-configuration-settings-for-windows-10-devices-that-are-not-managed-with-the-configuration-manager-client)
 - [Compatibilidad con Cisco (IPsec) para perfiles de VPN de macOS](/sccm/core/get-started/capabilities-in-technical-preview-1706#cisco-ipsec-support-for-macos-vpn-profiles)
+- [Restricciones de inscripción de iOS y Android](/sccm/core/plan-design/changes/whats-new-in-version-1706#android-and-ios-enrollment-restrictions) 
 
 ## <a name="june-2017"></a>Junio de 2017
 
@@ -347,4 +346,3 @@ Se ha quitado de la consola de Configuration Manager la capacidad de cargar una 
 
 - [Características híbridas anteriores de MDM](whats-new-hybrid-archive.md)
 - [Novedades de MDM en System Center 2012 Configuration Manager](https://technet.microsoft.com/library/mt445560.aspx)
-

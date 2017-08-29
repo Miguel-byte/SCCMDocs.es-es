@@ -2,25 +2,23 @@
 title: Dispositivos y clientes compatibles | Microsoft Docs
 description: "Obtenga información sobre qué sistemas operativos admite System Center Configuration Manager con clientes y dispositivos."
 ms.custom: na
-ms.date: 2/6/2017
+ms.date: 8/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d5166b16ffbe46af561b1ce98c0494cc4aaa72a8
-ms.openlocfilehash: cd7b8bf35aeb26c8b7b37f6faa51c9a09138fdb9
-ms.contentlocale: es-es
-ms.lasthandoff: 05/17/2017
-
+ms.openlocfilehash: 82be9b005ec87199f3191612f720f4cc267a4e5c
+ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>Sistemas operativos compatibles con dispositivos y clientes de System Center Configuration Manager
 
@@ -68,7 +66,7 @@ ms.lasthandoff: 05/17/2017
 -   **Windows 7 con SP1** (x86, x64): Professional, Enterprise y Ultimate    
 
 -   **La instalación Server Core de Windows Server 2016** (x64) <sup>2</sup>
-  - El sistema operativo se admite a partir de la versión 1606 con el paquete acumulativo de revisiones de KB3186654 (o la versión de línea base de 1606 publicada en octubre de 2016). 
+  - El sistema operativo se admite a partir de la versión 1606 con el paquete acumulativo de revisiones de KB3186654 (o la versión de línea base de 1606 publicada en octubre de 2016).
 
 
 -   **La instalación Server Core de Windows Server 2012 R2** (x64) <sup>2</sup>    
@@ -124,6 +122,8 @@ Los archivos **WBEMDISP.DLL** y **WBEMDISP.TLB** deben existir y registrarse en 
 -   **Windows Embedded POSReady 7** (x86, x64)    
 
 -   **Windows Embedded Standard 7 con SP1** (x86, x64)    
+
+Los siguientes sistemas operativos se basan en Windows XP Embedded y solo se admiten con la versión 1610 y versiones anteriores de Configuration Manager. [A partir de la versión 1702, estos sistemas operativos incrustados ya no se admiten](/sccm/core/plan-design/changes/removed-and-deprecated-features#client-operating-systems).  
 
 -   **WEPOS 1.1 con SP3** (x86)    
 
@@ -351,4 +351,3 @@ Configuration Manager admite la administración limitada de dispositivos que se 
 -   **Exchange Server 2013**  
 
 -   **Exchange Online (Office 365)**: incluye Business Productivity Online Standard Suite  
-

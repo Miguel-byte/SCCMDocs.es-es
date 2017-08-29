@@ -6,23 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c1b2057e-b74f-43fa-a293-763a8f866d3d
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: eafa0d85935c2009cc63d17b06ed83a4666d7fac
-ms.contentlocale: es-es
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 12c602ddfa237768af497324440091e17e597ae9
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prerequisites-for-remote-control-in-system-center-configuration-manager"></a>Requisitos previos del control remoto en System Center Configuration Manager
 
@@ -44,21 +41,7 @@ El control remoto de System Center Configuration Manager tiene dependencias exte
 >  No se requieren servicios de Windows como una dependencia externa para el control remoto.  
 
 ### <a name="supported-operating-systems-for-the-remote-control-viewer"></a>Sistemas operativos compatibles con el visor de control remoto  
- En la tabla siguiente se ofrece información sobre los sistemas operativos compatibles con el visor de control remoto. Para obtener información sobre los sistemas operativos cliente compatibles, consulte [Supported configurations for System Center Configuration Manager](../../../../core/plan-design/configs/supported-configurations.md) (Configuraciones admitidas para System Center Configuration Manager).  
-
-|Sistema operativo|Compatibilidad con el visor|Más información|  
-|----------------------|--------------------|----------------------|  
-|Windows XP (32 bits)|Sí|Para ejecutar el visor de control remoto en este sistema operativo, primero debe descargar e instalar la [Actualización del cliente de Conexión a Escritorio remoto (RDC) 7.0 (KB969084)](https://www.microsoft.com/en-us/download/details.aspx?id=12767) en el Centro de descarga de Microsoft.|  
-|Windows XP (64 bits)|No|No hay información adicional.|  
-|Windows Vista (32 bits)|Sí|Para ejecutar el visor de control remoto en este sistema operativo, primero debe descargar e instalar la [Actualización del cliente de Conexión a Escritorio remoto (RDC) 7.0 (KB969084)](https://www.microsoft.com/en-us/download/details.aspx?id=12767) en el Centro de descarga de Microsoft.|  
-|Windows Vista (64 bits)|Sí|Para ejecutar el visor de control remoto en este sistema operativo, primero debe descargar e instalar la [Actualización del cliente de Conexión a Escritorio remoto (RDC) 7.0 (KB969084)](https://www.microsoft.com/en-us/download/details.aspx?id=12767) en el Centro de descarga de Microsoft.|  
-|Windows 7 (32 bits)|Sí|No hay información adicional.|  
-|Windows 7 (64 bits)|Sí|No hay información adicional.|  
-|Windows Server 2003 (32 bits)|No|No hay información adicional.|  
-|Windows Server 2003 (64 bits)|No|No hay información adicional.|  
-|Windows Server 2008 (32 bits)|No|No hay información adicional.|  
-|Windows Server 2008 (64 bits)|No|No hay información adicional.|  
-|Windows Server 2008 R2 (64 bits)|Sí|No hay información adicional.|  
+El Visor de control remoto se admite en todos los sistemas operativos compatibles con la consola de Configuration Manager. Para más información, vea [Configuraciones compatibles con las consolas de System Center Configuration Manager](../../../../core/plan-design/configs/supported-operating-systems-consoles.md).   
 
 ## <a name="configuration-manager-dependencies"></a>Dependencias de Configuration Manager  
 
@@ -66,5 +49,4 @@ El control remoto de System Center Configuration Manager tiene dependencias exte
 |----------------|----------------------|  
 |El control remoto debe habilitarse para los clientes|De forma predeterminada, el control remoto no está habilitado cuando se instala Configuration Manager. Para obtener información sobre cómo habilitar y configurar el control remoto, consulte [Configuración del control remoto en System Center Configuration Manager](../../../../core/clients/manage/remote-control/configuring-remote-control.md).|  
 |Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.|El rol de sistema de sitio de punto de servicios de informes debe instalarse antes de poder ejecutar informes para el control remoto. Para obtener más información, consulte [Generación de informes en System Center Configuration Manager](../../../../core/servers/manage/reporting.md).|  
-|Permisos de seguridad para administrar el control remoto|Para acceder a recursos de la recopilación e iniciar una sesión de control remoto desde la consola de Configuration Manager: permisos **Controlar AMT**, **Leer**, **Leer recurso** y **Control remoto** para el objeto **Recopilación**.<br /><br /> El rol de seguridad **Operador de herramientas remotas** incluye estos permisos, que son necesarios para administrar el control remoto en Configuration Manager.<br /><br /> Para obtener más información, consulte [Configurar la administración basada en roles de System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-role-based-administration.md).<br /><br /> Además, debe agregar usuarios a los que quiera conceder permiso para utilizar el control remoto y la asistencia remota a la lista de vistas permitidas de control remoto mediante la opción **Visores permitidos de control remoto y asistencia remota** en la configuración de cliente **Herramientas remotas** .|  
-
+|Permisos de seguridad para administrar el control remoto|Para acceder a recursos de la colección e iniciar una sesión de control remoto desde la consola de Configuration Manager: permiso **Leer**, **Leer recurso** y **Control remoto** para el objeto **Recopilación**.<br /><br /> El rol de seguridad **Operador de herramientas remotas** incluye estos permisos, que son necesarios para administrar el control remoto en Configuration Manager.<br /><br /> Para obtener más información, consulte [Configurar la administración basada en roles de System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-role-based-administration.md).<br /><br /> Además, es necesario conceder permisos a los visores permitidos para usar el control remoto mediante la adición de estos usuarios a la lista **Visores permitidos de control remoto y asistencia remota** de la configuración del cliente **Herramientas remotas**.

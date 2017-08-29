@@ -2,27 +2,24 @@
 title: Implementar clientes de Windows| Microsoft Docs
 description: "Obtenga información sobre cómo implementar clientes en equipos Windows con System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 08/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
-caps.latest.revision: 13
-caps.handback.revision: 0
+caps.latest.revision: "13"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9555a16d97224a1cf49a426ab225468b07403f60
-ms.openlocfilehash: 0e5e624fdfc2b5ee5b497d1063bd4e2d15df578b
-ms.contentlocale: es-es
-ms.lasthandoff: 12/29/2016
-
-
+ms.openlocfilehash: 9ac54136b93ee366c16cafe89036a79e808980dc
+ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-system-center-configuration-manager"></a>Implementar clientes en equipos Windows con System Center Configuration Manager
 
@@ -58,13 +55,10 @@ Los archivos de registro de cliente proporcionan información más detallada sob
 6.  Seleccione si quiere instalar el cliente en controladores de dominio.  
 
 7.  En la pestaña **Cuentas**, especifique una o varias cuentas de Configuration Manager que se van a usar al conectarse al equipo para instalar el software cliente. Haga clic en el icono **Crear**, escriba el **Nombre de usuario** y **Contraseña** (inferior a 38 caracteres), confirme la contraseña y, después, haga clic en **Aceptar**. Debe especificar al menos una cuenta de instalación de inserción de cliente, que debe tener derechos de administrador local en cada equipo en el que desea instalar el cliente. Si no especifica una cuenta de instalación de inserción de cliente, Configuration Manager intenta usar la cuenta de equipo del sistema de sitio, lo que producirá un error en la inserción de cliente entre dominios.  
-
-    
     > [!NOTE]  
     >  Si se va a utilizar el método de instalación de inserción de cliente desde un sitio secundario, la cuenta debe especificarse en el sitio secundario que inicia la inserción de cliente.  
     >   
     >  Para obtener más información sobre la cuenta de instalación de inserción de cliente, consulte el procedimiento "Para usar el Asistente para instalación de inserción de cliente", incluido a continuación.  
-
 8.  Complete la pestaña **Propiedades de instalación**.
 
      Las [propiedades de instalación de cliente](../../../core/clients/deploy/about-client-installation-properties.md) que se especifican en esta pestaña se publican en Active Directory Domain Services si el esquema se extiende a Configuration Manager y las leen las instalaciones cliente en donde se ejecuta CCMSetup sin propiedades de instalación.  
@@ -296,8 +290,8 @@ Puede preinstalar el software cliente de Configuration Manager en un equipo de i
     > [!IMPORTANT]  
     >  No especifique un código de sitio de Configuration Manager para el cliente en las propiedades de línea de comandos CCMSetup.exe.  
 
-2.  En una línea de comandos, escriba **net stop ccmexec** para asegurarse de que el servicio **Host de agente de SMS** (Ccmexec.exe) no se ejecuta en el equipo de imagen maestra.  
-
+2.  En una línea de comandos, escriba **net stop ccmexec** para asegurarse de que el servicio **Host de agente de SMS** (Ccmexec.exe) no se ejecuta en el equipo de imagen maestra.
+3.  Elimine el archivo **SMSCFG.INI** de la carpeta **Windows** del equipo de referencia.  
 3.  Quite todos los certificados almacenados en el almacén del equipo local del equipo de imagen maestra.  Por ejemplo, si utiliza certificados de infraestructura de clave pública (PKI), debe quitar los certificados en el almacén **Personal** para **Equipo** y **Usuario** antes de crear la imagen del equipo.
 
 4.  Si los clientes se van a instalar en una jerarquía de Configuration Manager diferente del equipo de imagen maestra, quite la clave raíz confiable del equipo de imagen maestra.  
@@ -470,7 +464,7 @@ Compruebe los requisitos previos y, después, siga las instrucciones de la secci
 
 5.  Asigne el objeto de directiva de grupo a los equipos que quiera aprovisionar con las propiedades de instalación de cliente de Configuration Manager.  
 
- Para obtener información acerca de la directiva de grupo de Windows, consulte la documentación de Windows Server.  
+Para obtener información acerca de la directiva de grupo de Windows, consulte la documentación de Windows Server.  
 
-### <a name="see-also"></a>Consulte también
-[Métodos de instalación de cliente en System Center Configuration Manager](../../../core/clients/deploy/plan/client-installation-methods.md)
+## <a name="next-steps"></a>Pasos siguientes
+Para obtener ayuda con la instalación del cliente de Configuration Manager, vea [Métodos de instalación de cliente en System Center Configuration Manager](../../../core/clients/deploy/plan/client-installation-methods.md).
