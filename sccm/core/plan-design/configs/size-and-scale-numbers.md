@@ -14,11 +14,11 @@ caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: f539e2d282b56e56a9c58c773788325b27ea6b37
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 9c50f6633a5ca04b62f4c3b06119fb1fbcab2643
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Números de tamaño y escala de System Center Configuration Manager
 
@@ -56,18 +56,9 @@ Los siguientes números de soporte técnico se basan en el uso del hardware reco
 
 -   Un sitio de administración central admite hasta 25 sitios primarios o secundarios.  
 
-**Punto de sitios web del catálogo de aplicaciones:**  
-
--   Puede instalar varias instancias del punto de sitios web del catálogo de aplicaciones en los sitios primarios.  
-
-    > [!TIP]  
-    >  Como procedimiento recomendado, instale el punto de sitios web del catálogo de aplicaciones y el punto de servicio web del catálogo de aplicaciones juntos en el mismo sistema de sitio cuando brinden servicio a clientes que están en la intranet.  
-
-    -   Para mejorar el rendimiento, planee admitir hasta 50.000 clientes por instancia.  
-
-    -   Cada instancia de este rol de sistema de sitio admite el número máximo de clientes que son compatibles con la jerarquía.  
 
 ## <a name="bkmk_roles"></a> Roles de sistema de sitio    
+
 
 **Punto de servicio web del catálogo de aplicaciones:**  
 
@@ -79,6 +70,18 @@ Los siguientes números de soporte técnico se basan en el uso del hardware reco
     -   Para mejorar el rendimiento, planee admitir hasta 50.000 clientes por instancia.  
 
     -   Cada instancia de este rol de sistema de sitio admite el número máximo de clientes que son compatibles con la jerarquía.  
+
+**Punto de sitios web del catálogo de aplicaciones:**  
+
+-   Puede instalar varias instancias del punto de sitios web del catálogo de aplicaciones en los sitios primarios.  
+
+    > [!TIP]  
+    >  Como procedimiento recomendado, instale el punto de sitios web del catálogo de aplicaciones y el punto de servicio web del catálogo de aplicaciones juntos en el mismo sistema de sitio cuando brinden servicio a clientes que están en la intranet.  
+
+    -   Para mejorar el rendimiento, planee admitir hasta 50.000 clientes por instancia.  
+
+    -   Cada instancia de este rol de sistema de sitio admite el número máximo de clientes que son compatibles con la jerarquía.  
+
 
 **Punto de distribución:**  
 
