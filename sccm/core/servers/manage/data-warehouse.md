@@ -2,7 +2,7 @@
 title: Almacenamiento de datos | Microsoft Docs
 description: Punto de servicio de almacenamiento de datos y base de datos para System Center Configuration Manager
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 8/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: eedbf12d3bf628666efc90c85a8dfab37e4dc9ab
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 744614d7e1ec97a4d4b4646c45cb41d734c6be34
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>El punto de servicio de almacenamiento de datos para System Center Configuration Manager
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -49,8 +49,8 @@ Cuando se instala el rol de sistema de sitio, instala y configura la base de dat
 - El equipo en el que instale el rol de sistema de sitio necesita .NET Framework 4.5.2 o versiones posteriores.
 - La cuenta de equipo correspondiente al equipo en el que se instala el rol de sistema de sitio se utiliza para sincronizar datos con la base de datos del almacén de datos. La cuenta requiere los permisos siguientes:  
   - **Administrator** en el equipo que hospedará la base de datos del almacenamiento de datos.
-  - **DB_owner** en la base de datos del almacenamiento de datos.
-  - Permisos **DB_reader** y **execute** para la base de datos de sitio de los sitios de nivel superior.
+  - **DB_Creator** en la base de datos del almacenamiento de datos.
+  - Bien **DB_owner** o **DB_reader** con permisos **execute** para la base de datos de sitio de los sitios de nivel superior.
 - La base de datos de almacenamiento de datos requiere el uso de SQL Server 2012 o una versión posterior. La edición puede ser Standard, Enterprise o Datacenter.
 - Las siguientes configuraciones de SQL Server se pueden utilizar para hospedar la base de datos de almacenamiento:  
   - Una instancia predeterminada
