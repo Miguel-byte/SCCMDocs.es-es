@@ -4,7 +4,7 @@ description: "Obtenga información sobre la versión Technical Preview que le pe
 ms.custom: na
 ms.date: 08/25/2017
 ms.prod: configuration-manager
-ms.reviewer: na
+ms.reviewer: nab
 ms.suite: na
 ms.technology: configmgr-other
 ms.tgt_pltfrm: na
@@ -14,11 +14,11 @@ caps.latest.revision: "157"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0cdbccc0147cb1f4d5130863b9610d0b190d6658
-ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
+ms.openlocfilehash: 1335794bde7805e5fb2899ca685e985afee13c4e
+ms.sourcegitcommit: 5b4fd2d36f06be5bcc7f8ebbfb92c48b7240085d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>Technical Preview para System Center Configuration Manager
 
@@ -226,7 +226,7 @@ Puede instalar una versión de línea base hasta 1 año después de su lanzamien
  |Mejoras en Asset Intelligence|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence)|![Sin agregar](media/Red_X.gif)|
  |Traducción de teclado de control remoto|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#remote-control-keyboard-translation)|![Sin agregar](media/Red_X.gif)|
  |Mejoras en la directiva de actualización de la edición de Windows 10|[Tech Preview 1607](capabilities-in-technical-preview-1607.md#dmp_edition)|[Versión 1610](/sccm/compliance/deploy-use/upgrade-windows-version)|
- |Cuadros de diálogo personalizables de personalización de marca del Centro de software|[Tech Preview 1607](capabilities-in-technical-preview-1607.md#customizable-branding-for-software-center-dialogs)|![Sin agregar](media/Red_X.gif)|  
+ |Cuadros de diálogo personalizables de personalización de marca del Centro de software|[Tech Preview 1607](capabilities-in-technical-preview-1607.md#customizable-branding-for-software-center-dialogs)|[Versión 1610](/sccm/core/plan-design/changes/whats-new-in-version-1610#customizable-branding-for-software-center-dialogs)|  
  |Varios puntos de administración de dispositivos para la administración local de dispositivos móviles|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#dmp_onprem)|[Versión 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#on-premises-mobile-device-management)|
  |Clasificar automáticamente dispositivos en recopilaciones|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#dmp_category)|[Versión 1606](/sccm/core/clients/manage/collections/automatically-categorize-devices-into-collections) |
  |Período de gracia de cumplimiento para implementaciones de actualizaciones de software y aplicaciones requeridas|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#dmp_grace)|[Versión 1610](/sccm/apps/deploy-use/deploy-applications)|
