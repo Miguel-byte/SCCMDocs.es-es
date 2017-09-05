@@ -2,7 +2,7 @@
 title: "Notas de la versión en Configuration Manager | Microsoft Docs"
 description: "Consulte estas notas relativas a problemas urgentes que aún no se han corregido en el producto o no se han tratado en un artículo de Microsoft Knowledge Base."
 ms.custom: na
-ms.date: 08/21/2017
+ms.date: 08/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 24f30bddb345e3a08d4b655d89693c226005cb0e
-ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
+ms.openlocfilehash: e54c2cd1c3e83609bff6a8cb64fb3c23b26a4eaa
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="release-notes-for-system-center-configuration-manager"></a>Notas de la versión de System Center Configuration Manager
 
@@ -27,15 +27,23 @@ ms.lasthandoff: 08/21/2017
 
 Con System Center Configuration Manager, las notas de la versión del producto se limitan a problemas urgentes que aún no se han resuelto en el producto (disponible a través de una actualización en la consola) o problemas detallados en el artículo de Microsoft Knowledge Base.  
 
- Para problemas conocidos que afectan a los escenarios principales, esta información se muestra en la documentación del producto en línea en la biblioteca de documentación de System Center Configuration Manager.  
+La información sobre los problemas conocidos que afectan a los escenarios principales se muestra en la documentación del producto en línea, que se encuentra en la biblioteca de documentación de System Center Configuration Manager.  
 
 > [!TIP]  
 >  Este tema contiene notas de la versión de la rama actual de System Center Configuration Manager. Para obtener información sobre la vista previa técnica de System Center Configuration Manager, consulte [Technical Preview for System Center Configuration Manager](../../../../core/get-started/technical-preview.md) (Technical Preview de System Center Configuration Manager).  
+
+Para obtener información sobre las características que presentan las distintas versiones, consulte lo siguiente:
+- [Novedades de la versión 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)  
+- [Novedades de la versión 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)
+- [Novedades de la versión 1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)
+   
+
 
 ## <a name="setup-and-upgrade"></a>Instalación y actualización  
 
 ### <a name="after-you-update-a-configuration-manager-console-using-consolesetupexe-from-the-site-server-folder-recent-language-pack-changes-are-not-available"></a>Después de actualizar una consola de Configuration Manager mediante ConsoleSetup.exe desde la carpeta del servidor de sitio, los cambios recientes del paquete de idioma no están disponibles.
 <!--  SMS 486420  Applicability should be 1610 and 1702.  -->
+*La información siguiente se aplica a las versiones 1610 y 1702.*   
 Después de ejecutar una actualización local en una consola mediante ConsoleSetup.exe desde una carpeta de instalación de servidores de sitio, los paquetes de idioma instalados recientemente pueden no estar disponibles. Esto ocurre cuando:
 - El sitio ejecuta la versión 1610 o 1702.
 - La consola se actualiza a nivel local mediante ConsoleSetup.exe desde la carpeta de instalación del servidor de sitio.
@@ -47,7 +55,8 @@ Cuando se produce este problema, la consola reinstalada no utiliza el conjunto m
 
 ### <a name="with-version-1702-the-default-site-boundary-group-is-configured-for-use-for-site-assignment"></a>Con la versión 1702, el grupo de límites del sitio predeterminado está configurado para usarlo en la asignación de sitio.
 <!--  SMS 486380   Applicability should only be to 1702. -->
-Con la versión 1702, la pestaña Referencia de los grupos de límites del sitio predeterminado está marcada para **Usar este grupo de límites para la asignación de sitio**, muestra el sitio como **Sitio asignado** y está atenuada para que la configuración no se pueda modificar ni borrar.
+*La información siguiente se aplica a la versión 1702.*  
+La pestaña Referencia de los grupos de límite del sitio por defecto está marcada para **Usar este grupo de límites para la asignación de sitio**, muestra el sitio como **Sitio asignado** y está atenuada para que la configuración no se pueda modificar ni borrar.
 
 **Solución:** ninguna. Puede ignorar esta configuración. Aunque el grupo está habilitado para la asignación de sitio, el grupo de límites del sitio predeterminado no se utiliza para la asignación de sitio. Con 1702, esta configuración garantiza que el grupo de límites del sitio predeterminado se asocie al sitio correcto.
 
@@ -104,7 +113,8 @@ Al ejecutar el programa de instalación desde la carpeta CD.Latest creada para l
 
 ### <a name="service-connection-tool-throws-an-exception-when-sql-server-is-remote-or-when-shared-memory-is-disabled"></a>La herramienta de conexión de servicio produce una excepción cuando SQL Server está instalado en una ubicación remota o cuando la memoria compartida está deshabilitada
 <!-- 479223   Fixed in 1702 and later   -->
-A partir de la versión 1606, la herramienta de conexión de servicio genera una excepción cuando se cumple una de las siguientes condiciones:  
+*La información siguiente se aplica a la versión 1610 y a versiones anteriores.*  
+La herramienta de conexión de servicio genera una excepción cuando se cumple una de las condiciones siguientes:  
  -  La base de datos del sitio está instalada en una ubicación remota con respecto al equipo que hospeda el punto de conexión de servicio y usa un puerto no estándar (un puerto distinto de 1433).
  -  La base de datos del sitio está en el mismo servidor que el punto de conexión de servicio, pero la **memoria compartida** del protocolo de SQL está deshabilitada.
 
@@ -131,8 +141,9 @@ La excepción es similar a la siguiente:
 ## <a name="client-deployment-and-upgrade"></a>Actualizaciones e implementaciones de cliente  
 
 ### <a name="client-installation-fails-with-error-code-0x8007064c"></a>Se produce un error en la instalación del cliente con el código de error 0x8007064c
-<!--- SMS 486973 -->
-Al implementar el cliente en equipos con Windows, se produce un error en la instalación. El archivo ccmsetup.log contiene la entrada "File 'C:\WINDOWS\ccmsetup\Silverlight.exe' returned failure exit code 1612. Fail the installation" followed by "InstallFromManifest failed 0x8007064c".
+<!--- SMS 486973  applies 1606 to 1706. Not yet fixed. -->
+*La información siguiente se aplica a todas las versiones activas de Configuration Manager.*   
+Al implementar el cliente en equipos Windows, se produce un error en la instalación. El archivo ccmsetup.log contiene la entrada "File 'C:\WINDOWS\ccmsetup\Silverlight.exe' returned failure exit code 1612. Fail the installation" followed by "InstallFromManifest failed 0x8007064c".
 
 **Solución** Esto se debe a una versión de Silverlight previamente instalada que está dañada. Puede intentar ejecutar la herramienta siguiente en el equipo afectado para solucionar este problema: [https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed)
 
@@ -158,6 +169,7 @@ Después de crear un plan de mantenimiento, abra las propiedades, vaya a la pest
 
 ### <a name="when-a-high-risk-deployment-dialog-is-visible-to-a-user-subsequent-high-risk-dialogs-with-a-sooner-deadline-are-not-displayed"></a>Cuando un cuadro de diálogo de implementación de alto riesgo es visible para un usuario, no se muestran cuadros de diálogo de alto riesgo posteriores con una fecha límite anterior.
 <!-- Fixed in 1702 and later -->
+*La información siguiente se aplica a la versión 1610 y a versiones anteriores.*   
 Después de crear e implementar una implementación de tareas de alto riesgo para los usuarios, se muestra un cuadro de diálogo de alto riesgo al usuario. Si el usuario cierra el cuadro de diálogo, cree e implemente otra implementación de alto riesgo con una fecha límite anterior a la del primero, y el usuario no recibirá un cuadro de diálogo actualizado hasta que haya cerrado el cuadro de diálogo original. Las implementaciones seguirán ejecutándose en las fechas límite configuradas.
 
 **Solución alternativa**:  
@@ -169,6 +181,7 @@ El usuario debe cerrar el cuadro de diálogo de la primera implementación de al
 
 ### <a name="importing-an-office-365-client-settings-from-a-configuration-file-fails-when-it-contains-unsupported-languages"></a>La importación de una configuración de cliente de Office 365 desde un archivo de configuración genera un error cuando contiene idiomas no admitidos
 <!-- 489258  Fixed in 1706  -->
+*La información siguiente se aplica a la versión 1702 y a versiones anteriores.*   
 Al importar la configuración de cliente de Office 365 desde un archivo de configuración XML existente, si el archivo contiene idiomas que no son compatibles con el cliente de Office 365 ProPlus, se producirá un error. Para obtener más información, consulte [Para implementar aplicaciones de Office 365 en clientes desde el panel Administración de clientes de Office 365](/sccm/sum/deploy-use/manage-office-365-proplus-updates#to-deploy-office-365-apps-to-clients-from-the-office-365-client-management-dashboard).
 
 **Solución alternativa**:    
@@ -207,6 +220,7 @@ Cuando se crea un perfil de correo electrónico de Android for Work, hay dos opc
 
 ### <a name="antimalware-policy-fails-to-apply-on-windows-server-2016-core"></a>La directiva antimalware no se puede aplicar en Windows Server 2016 Core
 <!--  Product Studio bug 485370 added 04 19 2017   Fixed in 1702 -->
+*La información siguiente se aplica a la versión 1610 y a versiones anteriores.*  
 La directiva antimalware no se puede aplicar en Windows Server 2016 Core.  El código de error es 0x80070002.  Falta una dependencia para ConfigSecurityPolicy.exe.
 
 **Solución:** Este problema se resuelve por el [artículo 4019472 de Knowledge Base](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) distribuido el 9 de mayo de 2017.
