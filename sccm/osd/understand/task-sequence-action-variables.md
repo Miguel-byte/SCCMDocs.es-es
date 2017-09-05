@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 6049ec2369e0a97b21ce6523ba8448335385ab9a
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 675ebf053de98c6ad93a53ae218696012aef96f7
+ms.sourcegitcommit: 5b4fd2d36f06be5bcc7f8ebbfb92c48b7240085d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="task-sequence-action-variables-in-system-center-configuration-manager"></a>Variables de acción de secuencias de tareas en System Center Configuration Manager
 
@@ -187,15 +187,6 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |SMSConnectNetworkFolderPassword<br /><br /> (entrada)|Especifica la contraseña de red que se utiliza para conectarse al recurso compartido de red.|  
 |SMSConnectNetworkFolderPath<br /><br /> (entrada)|Especifica la ruta de acceso de red para la conexión.<br /><br /> Ejemplo:<br /><br /> **"\\\nombreservidor\nombrerecursocompartido"**|  
 
-###  <a name="BKMK_ConvertDisk"></a> Variables de acción de la secuencia de tareas Convertir el disco en dinámico  
- La variable de esta acción especifica el número del disco físico que se convertirá de disco básico a dinámico. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Convertir el disco en dinámico](task-sequence-steps.md#BKMK_ConvertDisktoDynamic).  
-
-#### <a name="details"></a>Detalles  
-
-|Nombre de variable de acción|Descripción|  
-|--------------------------|-----------------|  
-|OSDConvertDiskIndex<br /><br /> (entrada)|Especifica el número de disco físico que se convierte.|  
-
 ###  <a name="BKMK_EnableBitLocker"></a> Variables de acción de la secuencia de tareas Habilitar BitLocker  
  Las variables de esta acción especifican las opciones de clave de inicio y la contraseña de recuperación que se utilizan para habilitar BitLocker en el equipo de destino. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Habilitar BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker).  
 
@@ -276,7 +267,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |OSDStateStorePath<br /><br /> (salida)|La ruta de acceso UNC a la carpeta en el punto de migración de estado donde se almacena el estado de usuario.|  
 
 ###  <a name="BKMK_RestartComputer"></a> Variables de acción de la secuencia de tareas Reiniciar equipo  
- Las variables de esta acción especifican la información que se utiliza para reiniciar el equipo de destino. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Reiniciar equipo](task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer).  
+ Las variables de esta acción especifican la información que se utiliza para reiniciar el equipo de destino. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Reiniciar equipo](task-sequence-steps.md#BKMK_RestartComputer).  
 
 #### <a name="details"></a>Detalles  
 
