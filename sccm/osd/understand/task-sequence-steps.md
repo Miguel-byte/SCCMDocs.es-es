@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: e0726febc4c36a26c5e067914734838bf2681e6c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 18a987141e212158424924402859799ba42f8eae
+ms.sourcegitcommit: 5b4fd2d36f06be5bcc7f8ebbfb92c48b7240085d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Pasos de la secuencia de tareas en System Center Configuration Manager
 
@@ -139,7 +139,7 @@ Los siguientes pasos de secuencia de tareas se pueden agregar a una secuencia de
  Seleccione esta opción para que el equipo de destino se una al grupo de trabajo especificado. Escriba el nombre del grupo de trabajo en la línea **Grupo de trabajo** . Este valor puede reemplazarse por el valor que se captura mediante el paso de secuencia de tareas **Capturar configuración de red** .  
 
  **Unirse a un dominio**  
- Seleccione esta opción para que el equipo de destino se una al dominio especificado. Especifique o busque el dominio, como *fabricam.com*. Especifique o busque una ruta de acceso de protocolo ligero de acceso a directorios (LDAP) de una unidad organizativa (es decir, LDAP//OU=computers, DC=Fabricam.com, C=com).  
+ Seleccione esta opción para que el equipo de destino se una al dominio especificado. Especifique o busque el dominio, como *fabricam.com*. Especifique o busque una ruta de acceso de protocolo ligero de acceso a directorios (LDAP) de una unidad organizativa (es decir, LDAP//OU=equipos, DC=Fabricam.com, C=com).  
 
  **Cuenta**  
  Haga clic en **Establecer** para especificar una cuenta con los permisos necesarios para unir el equipo al dominio. En el cuadro de diálogo **Cuenta de usuario de Windows** puede especificar el nombre de usuario con el formato siguiente: **Dominio\Usuario** .  
@@ -551,31 +551,6 @@ Este paso de secuencia de tareas solo se ejecuta en Windows PE, no en sistemas o
 
 -   Especificar las condiciones que deben cumplirse para que se ejecute el paso.  
 
-##  <a name="BKMK_ConvertDisktoDynamic"></a> Convertir el disco en dinámico  
- Use el paso de secuencia de tareas **Convertir el disco en dinámico** para convertir un disco físico de un tipo de disco básico a un tipo de disco dinámico.  
-
- Este paso se ejecuta en un sistema operativo estándar o en Windows PE. Para obtener más información sobre las variables de la secuencia de tareas aplicables a esta acción, consulte [Variables de acción de la secuencia de tareas Convertir el disco en dinámico](task-sequence-action-variables.md#BKMK_ConvertDisk).  
-
-### <a name="details"></a>Detalles  
- En la pestaña **Propiedades** de este paso, puede configurar las opciones descritas en esta sección.  
-
- Además, use la pestaña **Opciones** para realizar las siguientes acciones:  
-
--   Deshabilitar el paso.  
-
--   Especificar si la secuencia de tareas continúa aunque se produzca un error durante la ejecución del paso.  
-
--   Especificar las condiciones que deben cumplirse para que se ejecute el paso.  
-
- **Nombre**  
- Nombre corto definido por el usuario que describe la acción realizada en este paso.  
-
- **Descripción**  
- Información detallada adicional sobre la acción realizada en este paso.  
-
- **Número de disco**  
- El número de disco físico del disco que se convertirá.  
-
 ##  <a name="BKMK_DisableBitLocker"></a> Deshabilitar BitLocker  
  Use el paso de secuencia de tareas **Deshabilitar BitLocker** para deshabilitar el cifrado de BitLocker en la unidad de sistema operativo actual o en una unidad específica. Con esta acción, los protectores de clave se hacen visibles en texto no cifrado en el disco duro, pero no se descifra el contenido de la unidad. Por lo tanto, esta acción se realiza casi al instante.  
 
@@ -874,35 +849,6 @@ Este paso se ejecuta en un sistema operativo estándar o en Windows PE. Pero en 
  **Continuar instalando otras aplicaciones en la lista si se produce un error de instalación de aplicación**  
  Esta configuración especifica que el paso continúa si se produce un error la instalación de una aplicación. Si se especifica este valor, la secuencia de tareas continuará sin tener en cuenta los errores de instalación que se devuelven. Si no se especifica este valor y una instalación produce error, el paso de secuencia de tareas finalizará inmediatamente.  
 
-##  <a name="BKMK_InstallDeploymentTools"></a> Instalar herramientas de implementación  
- Use el paso de secuencia de tareas **Instalar herramientas de implementación** para instalar el paquete de Configuration Manager que contiene las herramientas de implementación de Sysprep.  
-
-### <a name="details"></a>Detalles  
- En la pestaña **Propiedades** de este paso, puede configurar las opciones descritas en esta sección.  
-
- Además, use la pestaña **Opciones** para realizar las siguientes acciones:  
-
--   Deshabilitar el paso.  
-
--   Especificar si la secuencia de tareas continúa aunque se produzca un error durante la ejecución del paso.  
-
--   Especificar las condiciones que deben cumplirse para que se ejecute el paso.  
-
- **Nombre**  
- Nombre corto definido por el usuario que describe la acción realizada en este paso.  
-
- **Descripción**  
- Información detallada adicional sobre la acción realizada en este paso.  
-
- **Paquete de Sysprep**  
- Esta configuración especifica el paquete de Configuration Manager que contiene las herramientas de implementación de Sysprep para los sistemas operativos siguientes:  
-
--   Windows XP SP3  
-
--   Windows XP X64 SP2  
-
--   Windows Server 2003 SP2  
-
 ##  <a name="BKMK_InstallPackage"></a> Instalar paquete
 
  Use el paso de secuencia de tareas **Instalar paquete** para instalar software como parte de la secuencia de tareas. Cuando se ejecuta este paso, la instalación se inicia de inmediato sin tener que esperar durante un intervalo de sondeo de directiva.  
@@ -1068,6 +1014,9 @@ Se introdujo en Configuration Manager versión 1606 una nueva variable de secuen
 Use el paso **Preparar el cliente de Configuration Manager para la captura** para quitar el cliente de Configuration Manager o para configurar el cliente en el equipo de referencia y prepararlo para la captura como parte del proceso de creación de imágenes.
 
 A partir de la versión 1610 de Configuration Manager, el paso Preparar el cliente de Configuration Manager quita por completo el cliente de Configuration Manager, en lugar de quitar solo la información de clave. Cuando la secuencia de tareas implementa la imagen capturada del sistema operativo, se instala un nuevo cliente de Configuration Manager cada vez.  
+
+> [!Note]  
+>  El cliente solo se quita durante la secuencia de tareas **Generar y capturar una imagen de sistema operativo de referencia**. Otros métodos de captura como los medios de captura o las secuencias de tareas personalizadas no quitarán el cliente.
 
 Antes de la versión 1610 de Configuration Manager, este paso realiza las siguientes tareas:  
 
