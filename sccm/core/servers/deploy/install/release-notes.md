@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: e54c2cd1c3e83609bff6a8cb64fb3c23b26a4eaa
-ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
+ms.openlocfilehash: 4e818ffd943208eab323b1558f825bd87f3ddc4c
+ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/11/2017
 ---
 # <a name="release-notes-for-system-center-configuration-manager"></a>Notas de la versión de System Center Configuration Manager
 
@@ -148,17 +148,6 @@ Al implementar el cliente en equipos Windows, se produce un error en la instalac
 **Solución** Esto se debe a una versión de Silverlight previamente instalada que está dañada. Puede intentar ejecutar la herramienta siguiente en el equipo afectado para solucionar este problema: [https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed)
 
 ## <a name="operating-system-deployment"></a>Implementación de sistema operativo  
-
-### <a name="if-the-boot-image-contains-drivers-the-image-fails-to-reload-the-current-windows-pe-version-from-the-windows-assessment-and-deployment-kit-adk"></a>Si la imagen de arranque contiene controladores, la imagen no puede volver a cargar la versión actual de Windows PE desde Windows Assessment and Deployment Kit (ADK).
-<!-- 495087 -->
-Puede utilizar al Asistente para actualizar puntos de distribución para actualizar puntos de distribución con una imagen de arranque almacenada en la última versión de Windows PE desde el directorio de instalación de Windows Assessment and Deployment Kit (ADK). Para actualizar, abra el Asistente para actualizar puntos de distribución y seleccione **Volver a cargar esta imagen de arranque con la versión de Windows PE actual desde Windows ADK**.
-
-Sin embargo, si la imagen de arranque contiene controladores, se produce un error en la actualización. En su lugar, el Asistente vuelve a cargar la imagen desde ADK, muestra un cuadro de diálogo de excepción que el usuario puede descartar y, a continuación, muestra una pantalla de éxito. Sin embargo, los componentes de cliente de Configuration Manager más recientes no se agregarán a la imagen de arranque. La imagen de arranque no se actualizará en el punto de distribución.
-
-**Solución alternativa**: ejecute dos veces el Asistente para actualizar puntos de distribución.
-
-1. Ejecute el Asistente con la opción **Volver a cargar esta imagen de arranque con la versión de Windows PE actual desde Windows ADK** seleccionada. De esta forma, obtendrá la última versión de Windows PE.
-2. Vuelva a ejecutar el Asistente, pero con la opción **Volver a cargar esta imagen de arranque con la versión de Windows PE actual desde Windows ADK** no seleccionada. Esto permite obtener los últimos binarios de cliente y actualizar la imagen de arranque en el punto de distribución.
 
 ### <a name="servicing-plans-create-a-lot-of-duplicate-software-update-groups-and-deployments-by-default"></a>Los planes de mantenimiento crean de forma predeterminada muchos grupos de actualizaciones e muchas implementaciones de software duplicadas  
 De forma predeterminada, el asistente para Crear un plan de mantenimiento se ejecuta actualmente después de cada sincronización de actualizaciones de software. Cada vez que se ejecuta el asistente, se crea un nuevo grupo de actualizaciones e implementaciones de software. Si tiene una programación de sincronización de actualizaciones de software que se ejecuta varias veces al día, por ejemplo, el asistente para Crear un plan de mantenimiento creará varios grupos de actualizaciones y varias implementaciones de software, probablemente idénticos, cada día.  
