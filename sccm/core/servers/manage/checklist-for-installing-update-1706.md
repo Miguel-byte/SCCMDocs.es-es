@@ -14,11 +14,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: dab99748902df0fad32a1e2adad0c05e0dd8bdc9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c8110d9f5fec9027d34570623c32a7474e01b9af
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="checklist-for-installing-update-1706-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1706 de System Center Configuration Manager
 
@@ -62,7 +62,6 @@ La primera vez que use una consola de Configuration Manager una vez que la actua
 > - Los **vínculos de replicación** entre el sitio de administración central y los sitios primarios secundarios se muestran como no actualizados. Esto se muestra en el estado de instalación del paquete de actualización como estado completado con la advertencia Supervisando inicialización de replicación. En el nodo Supervisión de la consola, se muestra como *El vínculo en configuración*.
 
 
-
 ## <a name="checklist"></a>Lista de comprobación
 
 **Asegúrese de que todos los sitios ejecutan una versión de System Center Configuration Manager que admite la actualización a 1706:**   
@@ -86,9 +85,9 @@ Esta instalación puede poner el servidor de sistema de sitio en un estado pendi
 
 Para obtener más información, consulte [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) (Requisitos previos de sitio y sistema de sitio).
 
-**Revisar la versión de Windows Assessment and Deployment Kit (ADK) para Windows 10**: Windows 10 ADK debe tener la versión 1607 o posterior. Si es necesario actualizar el ADK, hágalo antes de comenzar la actualización de Configuration Manager. Esto garantiza que las imágenes de arranque predeterminadas se actualicen automáticamente a la última versión de Windows PE. (Las imágenes de arranque personalizadas deben actualizarse manualmente).
+**Revisar la versión de Windows Assessment and Deployment Kit (ADK) para Windows 10**: Windows 10 ADK debe tener la versión 1703 o posterior. Para obtener más información sobre las versiones de Windows ADK admitidas, consulte [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk). Si es necesario actualizar Windows ADK, hágalo antes de comenzar la actualización de Configuration Manager. Esto garantiza que las imágenes de arranque predeterminadas se actualicen automáticamente a la última versión de Windows PE. (Las imágenes de arranque personalizadas deben actualizarse manualmente).
 
-Si actualiza el sitio antes de actualizar el ADK, vea el blog [Configuration Manager and the Windows ADK for Windows 10, version 1607](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/) (Configuration Manager y Windows ADK para Windows 10, versión 1607) para obtener un script que se pueda usar para regenerar las imágenes de arranque.
+Si actualiza el sitio antes que Windows ADK, consulte [Actualización de puntos de distribución con la imagen](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image) para conocer las mejoras aplicadas a este proceso en la versión 1706 de Configuration Manager.
 
 **Revisar el estado del sitio y la jerarquía, y comprobar que no hay problemas sin resolver:** antes de actualizar un sitio, resuelva todos los problemas de funcionamiento para el servidor de sitio, el servidor de base de datos del sitio y los roles de sistema de sitio instalados en equipos remotos. Una actualización del sitio puede generar errores debido a problemas de funcionamiento existentes.
 

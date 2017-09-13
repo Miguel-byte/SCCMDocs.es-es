@@ -2,7 +2,7 @@
 title: "Inscribir dispositivos con el administrador de inscripción de dispositivos en Configuration Manager | Microsoft Docs"
 description: "Inscriba dispositivos de la empresa con la cuenta del administrador de inscripción de dispositivos con System Center Configuration Manager."
 ms.custom: na
-ms.date: 08/15/2017
+ms.date: 09/08/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "8"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: c90ecca1ee46523d16fc1cf11495e40707631e03
-ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.openlocfilehash: dcc35fb6ebe385d07a3b60e8968e06dec8ad60af
+ms.sourcegitcommit: 40f2a4e3cc546e6bfd10f195a8e87af2b0780928
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="enroll-devices-with-device-enrollment-manager-with-configuration-manager"></a>Inscribir dispositivos con el administrador de inscripción de dispositivos con Configuration Manager
 
@@ -40,7 +40,7 @@ Las limitaciones siguientes se aplican a los dispositivos que se administran med
 -  Para implementar aplicaciones de empresa en dispositivos administrados con el administrador de inscripción de dispositivos, implemente la aplicación de portal de empresa como una **instalación requerida** en la cuenta de usuario del administrador de inscripción de dispositivos. Después, el administrador de inscripción de dispositivos puede iniciar la aplicación de portal de empresa para instalar aplicaciones adicionales.
 - Para mejorar el rendimiento, en la aplicación de portal de empresa solo se muestra el dispositivo local. La administración remota de otros dispositivos DEM solo puede llevarla a cabo un administrador desde la consola de Configuration Manager.
 - El sitio web del portal de empresa no está disponible para cuentas de administrador de inscripción de dispositivos. Use la aplicación de portal de empresa.
-- (Solo iOS) Si utiliza DEM para inscribir dispositivos iOS, no puede utilizar Apple Configurator ni el Programa de inscripción de dispositivos (DEP) de Apple para inscribir dispositivos.
+- Si usa DEM para inscribir dispositivos iOS, no puede usa Apple Configurator ni el Programa de inscripción de dispositivos (DEP) de Apple para inscribir dispositivos. (Solo iOS) 
 
  **Ejemplos de escenario de administrador de inscripción de dispositivos:**   
 Un restaurante quiere tabletas de punto de venta para los camareros y monitores de pedidos para el personal de cocina. Los empleados no necesitan nunca acceder a los datos de la empresa ni iniciar sesión como usuario. El administrador de Intune crea una cuenta de administrador de inscripción de dispositivos e inscribe los dispositivos propiedad de la empresa usando esa cuenta. El administrador también podría dar las credenciales de inscripción de dispositivos a un responsable del restaurante, para que pueda inscribir y administrar los dispositivos.  

@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.openlocfilehash: 3921748d3c99c2a35b670f3ca121dc7ab92d43bc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 2d305df5e67c3f46360e1735cb6fe263afbaed41
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="device-guard-management-with-configuration-manager"></a>Administración de Device Guard con Configuration Manager
 
@@ -104,7 +104,7 @@ Cuando agregue confianza para determinados archivos y carpetas en una directiva 
 5.  Cuando haya terminado, haga clic en **Aceptar** para implementar la directiva. 
 
 Una vez se procese la directiva en un equipo cliente, se programa un reinicio en ese cliente según la opción **Configuración de cliente** para **Reinicio de equipo**.
-La directiva no se aplica hasta que reinicie el equipo cliente.**
+La directiva no se aplica hasta que reinicie el equipo cliente.
 
 ## <a name="how-to-monitor-a-device-guard-policy"></a>Supervisión de una directiva de Device Guard
 

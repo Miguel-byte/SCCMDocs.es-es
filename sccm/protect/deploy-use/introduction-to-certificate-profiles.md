@@ -2,7 +2,7 @@
 title: "Introducción a los perfiles de certificado | Microsoft Docs"
 description: "Obtenga información sobre cómo funcionan los perfiles de certificado en System Center Configuration Manager con Servicios de certificados de Active Directory."
 ms.custom: na
-ms.date: 07/25/2017
+ms.date: 09/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,18 +14,18 @@ caps.latest.revision: "7"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 7b1c0e449f3d1ef42e279e8707df6bf1df163b3f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e269b5836648d0d227e91a017512c16217e42646
+ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/11/2017
 ---
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>Introducción a los perfiles de certificado en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
 
-Los perfiles de certificado trabajan con los Servicios de certificados de Active Directory y el rol Servicio de inscripción de dispositivos de red para aprovisionar certificados de autenticación para dispositivos administrados para que los usuarios puedan acceder sin problemas a los recursos de empresa. Por ejemplo, puede crear e implementar perfiles de certificado para proporcionar los certificados necesarios para que los usuarios inicien conexiones VPN e inalámbricas. 
+Los perfiles de certificado trabajan con los Servicios de certificados de Active Directory y el rol Servicio de inscripción de dispositivos de red para aprovisionar certificados de autenticación para dispositivos administrados para que los usuarios puedan acceder sin problemas a los recursos de empresa. Por ejemplo, puede crear e implementar perfiles de certificado para proporcionar los certificados necesarios para que los usuarios inicien conexiones VPN e inalámbricas.
 
 Los perfiles de certificado pueden configurar automáticamente dispositivos de usuario para tener acceso a los recursos de la compañía, como las redes Wi-Fi y los servidores VPN, sin tener que instalar manualmente los certificados o usar un proceso fuera de banda. Los perfiles de certificado también pueden ayudar a proteger los recursos de empresa porque permite usar una configuración más segura que es compatible con la infraestructura de clave pública (PKI) de su empresa. Por ejemplo, puede requerir la autenticación de servidor para todas las conexiones VPN y Wi-Fi porque ha aprovisionado los certificados necesarios en los dispositivos administrados.   
 
@@ -52,7 +52,7 @@ Los perfiles de certificado proporcionan las siguientes capacidades de administr
 
 -   **Intercambio de información personal (.pfx)**: permite solicitar un certificado .pfx (también conocido como PKCS #12) para un dispositivo o usuario.
 
-    Puede crear perfiles de certificado PFX [importando las credenciales](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md) de certificados existentes o [definiendo una autoridad de certificación](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md) para procesar las solicitudes.
+    Puede crear perfiles de certificado PFX [importando las credenciales](/sccm/mdm/deploy-use/import-pfx-certificate-profiles) de certificados existentes o [definiendo una autoridad de certificación](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) para procesar las solicitudes.
 
     A partir de la versión 1706, puede usar Microsoft o Entrust como entidades de certificación de certificados **Intercambio de información personal (.pfx)**.
 

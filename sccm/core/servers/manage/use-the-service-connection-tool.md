@@ -2,7 +2,7 @@
 title: "Herramienta de conexión de servicio | Microsoft Docs"
 description: "Obtenga información sobre esta herramienta que le permite conectarse al servicio en la nube de Configuration Manager para cargar manualmente la información de uso."
 ms.custom: na
-ms.date: 4/7/2017
+ms.date: 09/06/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "11"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0da80521bf223a765c3731f8ad59623d85a4c9fa
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 8039ee0c704bbe570ec3e45ba648f779923087c6
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>Uso de la herramienta de conexión de servicio para System Center Configuration Manager
 
@@ -81,7 +81,7 @@ Al ejecutar el comando siguiente, la herramienta prepara un archivo .cab que con
 También necesitará copiar la carpeta ServiceConnectionTool con todo su contenido en la unidad USB o, de lo contrario, habilitarla en el equipo que utilizará para los pasos 3 y 4.  
 
 ### <a name="overview"></a>Información general
-**Hay tres pasos principales para usar la herramienta de conexión de servicio:**  
+#### <a name="there-are-three-primary-steps-to-using-the-service-connection-tool"></a>Hay tres pasos principales para usar la herramienta de conexión de servicio  
 
 1.  **Preparar**: este paso se ejecuta en el equipo que hospeda el punto de conexión de servicio. Cuando la herramienta se ejecuta, coloca los datos de uso en un archivo .cab y lo almacena en una unidad USB (o la ubicación alternativa de transferencia que especifique).  
 
@@ -91,15 +91,28 @@ También necesitará copiar la carpeta ServiceConnectionTool con todo su conteni
 
 A partir de la versión 1606, al conectarse a Microsoft puede cargar varios archivos .cab a la vez (cada uno desde una jerarquía distinta) y especificar un servidor proxy y un usuario para el servidor proxy.   
 
-**Para cargar varios archivos .cab:**
+#### <a name="to-upload-multiple-cab-files"></a>Para cargar varios archivos .cab
  -  Coloque cada archivo .cab que exporte de jerarquías independientes en la misma carpeta. El nombre de cada archivo debe ser único y puede cambiarlo manualmente si lo precisa.
  -  Después, al ejecutar el comando para cargar datos a Microsoft, especifique la carpeta que contiene los archivos .cab. (Antes de la actualización 1606, solo puede cargar datos desde una única jerarquía a la vez y la herramienta requerirá que especifique el nombre del archivo .cab en la carpeta).
  -  Más adelante, cuando ejecute la tarea de importación en el punto de conexión de servicio de una jerarquía, la herramienta importa automáticamente solo los datos de esa jerarquía.  
 
-**Para especificar un servidor proxy:**  
+#### <a name="to-specify-a-proxy-server"></a>Para especificar un servidor proxy
 Puede utilizar los siguientes parámetros opcionales para especificar un servidor proxy (para más información acerca del uso de estos parámetros, consulte la sección de parámetros de línea de comandos de este tema):
   - **-proxyserveruri [FQDN_de_servidor_proxy]**  Utilice este parámetro para especificar el servidor proxy para esta conexión.
   -  **-proxyusername [nombreDeUsuario]**  Utilice este parámetro cuando deba especificar un usuario para el servidor proxy.
+
+#### <a name="specify-the-type-of-updates-to-download"></a>Especificar el tipo de actualizaciones que quiere descargar
+A partir de la versión 1706, se ha modificado el comportamiento de descarga de herramientas predeterminado, así como las opciones de compatibilidad con herramientas para controlar los archivos descargados.
+-   De forma predeterminada, la herramienta descarga únicamente la última actualización disponible que sea válida para la versión de su sitio. No descarga ninguna revisión.
+
+Para modificar este comportamiento, use uno de los parámetros siguientes para cambiar qué archivos se descargarán. La versión de su sitio se determina a partir de los datos del archivo .cab que se carga al ejecutar la herramienta.
+-   **-downloadall**: esta opción descarga todo, incluidas las actualizaciones y las revisiones, independientemente de la versión de su sitio.
+-   **-downloadhotfix**: esta opción descarga todas las revisiones independientemente de la versión de su sitio.
+-   **-downloadsiteversion**: esta opción descarga todas las actualizaciones y revisiones con una versión posterior a la de su sitio.
+
+Ejemplo de una línea de comandos que usa *-downloadsiteversion*:
+- **serviceconnectiontool.exe -connect  *-downloadsiteversion* -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
+
 
 
 
