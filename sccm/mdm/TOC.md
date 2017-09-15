@@ -55,8 +55,12 @@
 ### [Tienda Windows para aplicaciones empresariales](deploy-use/windows-store-for-business.md)
 
 ## [Administrar una suscripción a Intune](deploy-use/manage-intune-subscriptions.md)
-
 ## [Cambiar la entidad de MDM](deploy-use/change-mdm-authority.md)
+## [Iniciar la migración de MDM híbrida a Intune independiente](deploy-use/migrate-hybridmdm-to-intunesa.md) 
+### [Importar datos de Configuration Manager a Microsoft Intune](deploy-use/migrate-import-data.md)
+### [Preparar Intune para la migración de usuarios](deploy-use/migrate-prepare-intune.md)
+### [Cambiar la entidad de MDM para usuarios específicos (entidad de MDM mixta)](deploy-use/migrate-mixed-authority.md)
+### [Cambiar la entidad de MDM](deploy-use/migrate-change-mdm-authority.md)
 
 ## Administrar el acceso a los recursos
 ### [Crear perfiles de Wi-Fi](deploy-use/create-wifi-profiles.md)
