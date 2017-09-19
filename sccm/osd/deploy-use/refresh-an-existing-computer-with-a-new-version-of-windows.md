@@ -14,11 +14,11 @@ caps.latest.revision: "7"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: b247cbb68ed63a8eb99715a248686d68a28c53e2
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 4a87b8489e9f0ed72426364a1de02e033c1c6f82
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="refresh-an-existing-computer-with-a-new-version-of-windows-using-system-center-configuration-manager"></a>Actualizar un equipo existente con una nueva versión de Windows mediante System Center Configuration Manager
 
@@ -48,7 +48,7 @@ En este tema se proporcionan las etapas generales de System Center Configuration
 
     -   Para obtener más información sobre la personalización de una imagen de arranque, consulte [Customize boot images (Personalizar imágenes de arranque)](../get-started/customize-boot-images.md).  
 
-    -   Distribuya la imagen de arranque a puntos de distribución. Para obtener más información, consulte [Distribute content (Distribución del contenido)](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
+    -   Distribuya la imagen de arranque a puntos de distribución. Para obtener más información, consulte [Distribute content (Distribución del contenido)](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
 2.  **Preparar una imagen de sistema operativo**  
 
@@ -56,7 +56,7 @@ En este tema se proporcionan las etapas generales de System Center Configuration
 
     -   Para obtener más información sobre cómo crear una imagen de sistema operativo, consulte [Manage operating system images (Administrar imágenes de sistema operativo)](../get-started/manage-operating-system-images.md).  
 
-    -   Distribuya la imagen del sistema operativo a los puntos de distribución. Para obtener más información, consulte [Distribute content (Distribución del contenido)](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
+    -   Distribuya la imagen del sistema operativo a los puntos de distribución. Para obtener más información, consulte [Distribute content (Distribución del contenido)](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
 3.  **Crear una secuencia de tareas para implementar sistemas operativos a través de la red**  
 
