@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 caps.latest.revision: "14"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 7bbcece8a7a745b3b6cc9bbd8aa283963e2b738d
-ms.sourcegitcommit: 49add91eebfeaba6d1d203d3cf9927b9cacdfc8e
+ms.openlocfilehash: d783cc2f12400084ad1cd62a338a31c9747c05fb
+ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>Instalación y asignación de clientes Windows 10 para Configuration Manager mediante la autenticación basada en Azure AD
 
@@ -29,7 +29,7 @@ Puede usar los servicios en la nube de Configuration Manager con Azure AD para a
 - Uso de Azure AD para autenticar los clientes para acceder a los sitios de Configuration Manager. Azure AD reemplaza la necesidad de configurar y usar certificados de autenticación del cliente.
 - Puede detectar usuarios de Azure AD en el sitio para usarlos en las recopilaciones y otras operaciones de Configuration Manager.
 
-Use los temas siguientes para ayudarlo a realizar esta tarea:
+Use los siguientes temas siguientes para ayudarlo a realizar esta tarea:
 
 - **Paso 1: Configuración de la aplicación de servicios de Azure en Configuration Manager Cloud Services y configuración de la detección de usuarios de Azure AD**
 - **Paso 2: Configuración de Cloud Management Gateway** (opcional para clientes locales)

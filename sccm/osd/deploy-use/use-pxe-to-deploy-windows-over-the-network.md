@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: b88ab3799027c78a8c605e934b247097b31e1d21
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 57292b1c6f6e8b6be91eace06dbf12d788522e0b
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>Usar PXE para implementar Windows a través de la red con System Center Configuration Manager
 
@@ -46,7 +46,7 @@ Si quiere usar PXE para implementar un sistema operativo, debe distribuir imáge
 
 -   Para habilitar PXE en una imagen de arranque, seleccione **Implementar esta imagen de arranque desde el punto de distribución habilitado con PXE** en la pestaña **Origen de datos** de las propiedades de la imagen de arranque.
 
--   Si cambia las propiedades de la imagen de arranque, vuelva a distribuir dicha imagen a los puntos de distribución. Para obtener más información, consulte [Distribute content (Distribución del contenido)](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).
+-   Si cambia las propiedades de la imagen de arranque, vuelva a distribuir dicha imagen a los puntos de distribución. Para obtener más información, consulte [Distribute content (Distribución del contenido)](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
 
 ##  <a name="BKMK_PXEExclusionList"></a> Crear una lista de exclusión para las implementaciones de PXE
 Cuando implementa sistemas operativos con PXE, puede crear una lista de exclusión en cada punto de distribución. Agregue las direcciones MAC a la lista de exclusión de los equipos que quiere que el punto de distribución ignore. Los equipos de la lista no recibirán las secuencias de tareas de implementación que Configuration Manager usa para la implementación del entorno PXE.

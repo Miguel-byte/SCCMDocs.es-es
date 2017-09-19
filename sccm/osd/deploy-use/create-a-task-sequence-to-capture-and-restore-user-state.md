@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 4b3668094d576b1b8710f08b384aa2f7c5eb0cca
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3a8e2759812dae2a328cd09efdc13f8534d14379
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="create-a-task-sequence-to-capture-and-restore-user-state-in-system-center-configuration-manager"></a>Crear una secuencia de tareas para capturar y restaurar el estado de usuario en System Center Configuration Manager
 
@@ -56,7 +56,7 @@ Puede usar secuencias de tareas de System Center Configuration Manager para capt
 
     -   En el cuadro **Intervalo entre reintentos (en segundos)** , especifique cuántos segundos debe esperar la secuencia de tareas antes de reintentar capturar los datos.  
 
-    -   Active la casilla **Si una cuenta de equipo no se puede conectar al almacén de estado, usar la cuenta de acceso de red** para especificar si se usa la [cuenta de acceso de red](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#a-namebkmknaaa-network-access-account) de Configuration Manager para conectarse al almacén de estado.  
+    -   Active la casilla **Si una cuenta de equipo no se puede conectar al almacén de estado, usar la cuenta de acceso de red** para especificar si se usa la [cuenta de acceso de red](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#bkmk_NAA) de Configuration Manager para conectarse al almacén de estado.  
 
      En la pestaña **Opciones** , especifique las opciones siguientes:  
 
@@ -141,7 +141,7 @@ Puede usar secuencias de tareas de System Center Configuration Manager para capt
 
     -   Seleccione **Continuar si algunos archivos no se pueden restaurar** si desea que el paso **Restaurar estado de usuario** continúe si un archivo no se puede restaurar.  
 
-         Si almacena el estado de usuario mediante vínculos locales y la restauración no finaliza correctamente, el usuario administrativo puede eliminar manualmente los vínculos físicos que se crearon para almacenar los datos o la secuencia de tareas puede ejecutar la herramienta USMTUtils. Si se usa USMTUtils para eliminar el vínculo físico, agregue un paso [Reiniciar equipo](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer) después de ejecutar USMTUtils.  
+         Si almacena el estado de usuario mediante vínculos locales y la restauración no finaliza correctamente, el usuario administrativo puede eliminar manualmente los vínculos físicos que se crearon para almacenar los datos o la secuencia de tareas puede ejecutar la herramienta USMTUtils. Si se usa USMTUtils para eliminar el vínculo físico, agregue un paso [Reiniciar equipo](../understand/task-sequence-steps.md#BKMK_RestartComputer) después de ejecutar USMTUtils.  
 
     -   Seleccione **Habilitar el registro detallado** para especificar la cantidad de información que se escribirá en los archivos de registro si se produce un error.  
 

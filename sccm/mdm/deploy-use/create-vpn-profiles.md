@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 23ff28189c8010c21ed8b23c35598746a4f09fe7
-ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
+ms.openlocfilehash: 5b5385cebe7952e519d59a239983733dd93e661e
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>Perfiles de VPN en dispositivos móviles en System Center Configuration Manager
 
@@ -52,7 +52,7 @@ Use perfiles de VPN en System Center Configuration Manager para implementar la c
 ## <a name="create-vpn-profiles"></a>Crear perfiles de VPN
 En [Cómo crear perfiles de VPN en System Center Configuration Manager](../../protect/deploy-use/create-vpn-profiles.md) se proporciona información general sobre cómo crear perfiles de VPN.
 
-###   <a name="windows-10-vpn-features-available-when-using-configuration-manager-with-intune"></a>Características de VPN de Windows 10 disponibles cuando se usa Configuration Manager con Intune  
+## <a name="windows-10-vpn-features-available-when-using-configuration-manager-with-intune"></a>Características de VPN de Windows 10 disponibles cuando se usa Configuration Manager con Intune  
 
 
 > [!NOTE]  
@@ -157,7 +157,7 @@ En [Cómo crear perfiles de VPN en System Center Configuration Manager](../../pr
 
 **Implementar**: consulte [Implementar perfiles de VPN en System Center Configuration Manager](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md) para obtener información sobre la implementación de perfiles de VPN.
 
-### <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos siguientes  
  Use los temas siguientes para planear, configurar, operar y mantener perfiles de VPN en Configuration Manager.  
 
 -   [Requisitos previos de los perfiles de VPN en System Center Configuration Manager](../../protect/plan-design/prerequisites-for-wifi-vpn-profiles.md)  

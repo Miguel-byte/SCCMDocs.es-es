@@ -14,11 +14,11 @@ caps.latest.revision: "10"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 2f3d66362c49d28a52d7f9c535eb0b3b4cc4eaf7
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c9d94ffb61ed7a7fa40a01eedc763a16a8df30cb
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>Administrar secuencias de tareas para automatizar tareas en System Center Configuration Manager
 
@@ -196,7 +196,7 @@ Se mostrará el siguiente mensaje de notificación cuando el usuario final abra 
 
 8.  Complete el asistente.  
 
- Puede preconfigurar el contenido al que se hace referencia en la secuencia de tareas. Configuration Manager crea un archivo de contenido preconfigurado comprimido que contiene los archivos, las dependencias asociadas y los metadatos asociados del contenido que se selecciona. A continuación, puede importar manualmente el contenido en un servidor de sitio, un sitio secundario o un punto de distribución. Para más información sobre cómo preconfigurar archivos de contenido, consulte [Preconfigurar el contenido](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content).  
+ Puede preconfigurar el contenido al que se hace referencia en la secuencia de tareas. Configuration Manager crea un archivo de contenido preconfigurado comprimido que contiene los archivos, las dependencias asociadas y los metadatos asociados del contenido que se selecciona. A continuación, puede importar manualmente el contenido en un servidor de sitio, un sitio secundario o un punto de distribución. Para más información sobre cómo preconfigurar archivos de contenido, consulte [Preconfigurar el contenido](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage).  
 
 ##  <a name="BKMK_DeployTS"></a> Implementar una secuencia de tareas  
  Utilice el siguiente procedimiento para implementar una secuencia de tareas en los equipos de una recopilación.  
@@ -464,7 +464,7 @@ Puede administrar las variables por equipo en un sitio primario o en un sitio de
 |**Copiar**|Realiza una copia de la secuencia de tareas seleccionada. Es posible que esta acción sea útil si desea crear una nueva secuencia de tareas basada en una secuencia de tareas existente.<br /><br /> Al realizar una copia de una secuencia de tareas en una carpeta, la copia se muestra en la carpeta hasta que actualice el nodo de secuencia de tareas.  Después de la actualización, la copia aparece en la carpeta raíz.|  
 |**Deshabilitar**|Deshabilita la secuencia de tareas para que no pueda ejecutarse en equipos. Las secuencias de tareas deshabilitadas pueden implementarse en equipos, pero los equipos no podrán ejecutar las secuencias de tareas hasta que se habiliten.|  
 |**Habilitar**|Habilita la secuencia de tareas para que se pueda ejecutar. No es necesario volver a implementar las secuencias de tareas implementadas después de habilitarlas.|  
-|**Crear archivo de contenido preconfigurado**|Inicia el Asistente para crear archivos de contenido preconfigurados para preconfigurar el contenido de la secuencia de tareas. Para obtener información sobre cómo crear un archivo de contenido preconfigurado, consulte [Preconfigurar el contenido](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content).|  
+|**Crear archivo de contenido preconfigurado**|Inicia el Asistente para crear archivos de contenido preconfigurados para preconfigurar el contenido de la secuencia de tareas. Para obtener información sobre cómo crear un archivo de contenido preconfigurado, consulte [Preconfigurar el contenido](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage).|  
 |**Moverr**|La secuencia de tareas seleccionada se mueve a otra carpeta.|  
 
 ## <a name="next-steps"></a>Pasos siguientes

@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 830f715b688cc9929a179da94eba9c81de8db11a
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: f44fa4ef0946d3500d15db536333adab571a5f64
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="planning-considerations-for-automating-tasks-in-system-center-configuration-manager"></a>Planeación de consideraciones para la automatización de tareas en System Center Configuration Manager
 
@@ -282,7 +282,7 @@ Puede crear secuencias de tareas para automatizar tareas en su entorno de System
 ##  <a name="BKMK_TSNetworkAccessAccount"></a> Secuencias de tareas y la cuenta de acceso de red  
  Aunque las secuencias de tareas se ejecutan solo en el contexto de la cuenta de sistema local, es posible que deba configurar la cuenta de acceso de red en las siguientes circunstancias:  
 
--   Debe configurar la cuenta de acceso de red correctamente o la secuencia de tareas producirá un error si intenta tener acceso a paquetes de Configuration Manager en puntos de distribución para completar su tarea. Para obtener más información sobre la cuenta de acceso a la red, consulte [Cuenta de acceso de red](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#a-namebkmknaaa-network-access-account).  
+-   Debe configurar la cuenta de acceso de red correctamente o la secuencia de tareas producirá un error si intenta tener acceso a paquetes de Configuration Manager en puntos de distribución para completar su tarea. Para obtener más información sobre la cuenta de acceso a la red, consulte [Cuenta de acceso de red](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#bkmk_NAA).  
 
     > [!NOTE]  
     >  La cuenta de acceso de red nunca se utiliza como contexto de seguridad para ejecutar programas, instalar aplicaciones, instalar actualizaciones o ejecutar secuencias de tareas. Sin embargo, la cuenta de acceso de red se emplea para el acceso a los recursos asociados en la red.  
