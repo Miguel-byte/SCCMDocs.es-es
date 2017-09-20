@@ -2,7 +2,7 @@
 title: "Creación y ejecución de scripts con Configuration Manager | Microsoft Docs"
 description: Cree y ejecute scripts en los dispositivos cliente con Configuration Manager.
 ms.custom: na
-ms.date: 08/09/2017
+ms.date: 09/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 caps.latest.revision: "14"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: ed84f7900eee5c04728d0e4d1b46027c36327bec
-ms.sourcegitcommit: b41d3e5c7f0c87f9af29e02de3e6cc9301eeafc4
+ms.openlocfilehash: e6b29cd85504742e8638a55db2f6c4ecc8ab3e55
+ms.sourcegitcommit: 5ca89204716750eaaceb01bba40b35b85c7122ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
 
@@ -44,8 +44,8 @@ Los clientes de Configuration Manager deben ejecutar al cliente de la versión 1
 
 Para utilizar scripts, debe ser miembro del rol de seguridad de Configuration Manager adecuado.
 
-- Para importar y crear scripts: la cuenta debe tener permisos **Crear** para **scripts SMS** en el rol de seguridad **Administrador de configuración de cumplimiento**.
-- Para aprobar o denegar scripts: la cuenta debe tener permisos **Aprobar** para **scripts SMS** en el rol de seguridad **Administrador de configuración de cumplimiento**.
+- Para importar y crear scripts: la cuenta debe tener permisos **Crear** para **scripts SMS** en el rol de seguridad **Administrador total**.
+- Para aprobar o denegar scripts: la cuenta debe tener permisos **Aprobar** para **scripts SMS** en el rol de seguridad **Administrador total**.
 - Para ejecutar scripts: la cuenta debe tener permisos **Ejecutar script** para las **colecciones** en el rol de seguridad **Administrador de configuración de cumplimiento**.
 
 Para obtener más información sobre los roles de seguridad de Configuration Manager, consulte [Conceptos básicos de la administración basada en roles](/sccm/core/understand/fundamentals-of-role-based-administration).
@@ -78,9 +78,9 @@ Estos son algunos ejemplos que ilustran los scripts que recomendamos utilizar co
 
 #### <a name="create-a-folder"></a>Crea una carpeta
 
-*New-Item "c:\scripts" -nombre de la carpeta* 
- 
- 
+*New-Item "c:\scripts" -nombre de la carpeta*
+
+
 #### <a name="create-a-file"></a>Creación de un archivo
 
 *New-Item c:\scripts\new_file.txt -nombre del archivo*

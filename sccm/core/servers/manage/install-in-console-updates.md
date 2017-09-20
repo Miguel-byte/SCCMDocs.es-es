@@ -2,7 +2,7 @@
 title: Actualizaciones en la consola | Microsoft Docs
 description: System Center Configuration Manager se sincroniza con la nube de Microsoft para obtener las actualizaciones que puede instalar desde la consola.
 ms.custom: na
-ms.date: 06/13/2017
+ms.date: 09/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "36"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 2bbc8935bee306ed0bc312cc43b8f5374a8df7ff
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 10ddbcc19da8c5fc6451f62500f17790a0349389
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>Instalación de actualizaciones en la consola para System Center Configuration Manager
 
@@ -105,6 +105,9 @@ Antes de instalar una actualización, puede ejecutar la comprobación de requisi
 -   Los archivos de actualización se replican en otros sitios antes de instalar la actualización.  
 
 -   La comprobación de requisitos previos se vuelve a ejecutar automáticamente cuando decida instalar la actualización.  
+
+> [!NOTE]
+> Cuando inicie una comprobación de requisitos previos y, a continuación, vea el estado, la fase de **instalación** parecerá estar activa, pero la actualización no se estará instalando realmente. La pantalla muestra la fase de instalación porque algunas tareas, como la de extracción de los archivos binarios necesarios para ejecutar la comprobación, también forman parte de la fase de instalación.  
 
 Más adelante, cuando instale la actualización, puede configurarla para omitir las advertencias de comprobación de requisitos previos.  
 
@@ -288,7 +291,7 @@ Entre las tareas posteriores a la instalación figuran las siguientes:
 Si no se puede instalar una actualización, revise los comentarios en la consola para identificar las soluciones de errores y las advertencias. También puede consultar el archivo ConfigMgrPrereq.log en el servidor de sitio para obtener más detalles. Antes de reintentar la instalación de una actualización, debe solucionar los errores y las advertencias.  
 
 > [!TIP]  
-> Si una actualización tiene problemas para descargar o replicar, puede usar la [herramienta de restablecimiento de actualizaciones](/sccm/core/servers/manage/update-reset-tool). Esta herramienta está disponible en los sitios que ejecutan la versión 1706 o posterior. 
+> Si una actualización tiene problemas para descargar o replicar, puede usar la [herramienta de restablecimiento de actualizaciones](/sccm/core/servers/manage/update-reset-tool). Esta herramienta está disponible en los sitios que ejecutan la versión 1706 o posterior.
 
 Cuando esté listo para volver a intentar la instalación de una actualización, seleccione la actualización con errores y elija una opción adecuada. El comportamiento del reintento de instalación de la actualización depende del nodo desde el que se inicia el reintento y de la opción de reintento que se usa.  
 

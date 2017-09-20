@@ -2,7 +2,7 @@
 title: Technical Preview 1706 | Microsoft Docs
 description: "Obtenga información sobre las características disponibles en la versión 1706 de Technical Preview para System Center Configuration Manager."
 ms.custom: na
-ms.date: 06/30/2017
+ms.date: 09/15/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.reviewer: na
@@ -13,11 +13,11 @@ ms.assetid: ca3b4714-2a16-495e-8a17-1d87991d5556
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: d45f504dfe0a4c7852b0e2c8ff60d54005346c02
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5633047669f9730446159781c4ac0b1248178bf4
+ms.sourcegitcommit: 5ca89204716750eaaceb01bba40b35b85c7122ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1706 para System Center Configuration Manager
 
@@ -328,8 +328,8 @@ En Configuration Manager, puede implementar scripts en dispositivos de cliente m
 
 Para utilizar scripts, debe ser miembro del rol de seguridad de Configuration Manager adecuado.
 
-- **Para importar y crear scripts**: la cuenta debe tener permisos para **Crear** para **scripts SMS** en el rol de seguridad **Administrador de la configuración de cumplimiento**.
-- **Para aprobar o denegar scripts**: la cuenta debe tener permisos para **Aprobar** para **scripts SMS** en el rol de seguridad **Administrador de la configuración de cumplimiento**.
+- **Para importar y crear scripts**: la cuenta debe tener permisos **Crear** para **scripts SMS** en el rol de seguridad **Administrador total**.
+- **Para aprobar o denegar scripts**: la cuenta debe tener permisos **Aprobar** para **scripts SMS** en el rol de seguridad **Administrador total**.
 - **Para ejecutar scripts**: la cuenta debe tener el permiso **Ejecutar script** para las **Recopilaciones** en el rol de seguridad **Administrador de la configuración de cumplimiento**.
 
 Para obtener más información sobre los roles de seguridad de Configuration Manager, consulte [Conceptos básicos de la administración basada en roles](/sccm/core/understand/fundamentals-of-role-based-administration).
