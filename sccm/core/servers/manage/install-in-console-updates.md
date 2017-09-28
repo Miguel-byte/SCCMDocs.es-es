@@ -14,11 +14,11 @@ caps.latest.revision: "36"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 10ddbcc19da8c5fc6451f62500f17790a0349389
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 5302b5712e33c753d0193a32498bc02a2241428c
+ms.sourcegitcommit: 474e6ddbaaeac4ba17d8172321e08deeb0140d0a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>Instalación de actualizaciones en la consola para System Center Configuration Manager
 
@@ -106,8 +106,8 @@ Antes de instalar una actualización, puede ejecutar la comprobación de requisi
 
 -   La comprobación de requisitos previos se vuelve a ejecutar automáticamente cuando decida instalar la actualización.  
 
-> [!NOTE]
-> Cuando inicie una comprobación de requisitos previos y, a continuación, vea el estado, la fase de **instalación** parecerá estar activa, pero la actualización no se estará instalando realmente. La pantalla muestra la fase de instalación porque algunas tareas, como la de extracción de los archivos binarios necesarios para ejecutar la comprobación, también forman parte de la fase de instalación.  
+> [!NOTE]   
+> Cuando inicie una comprobación de requisitos previos y, a continuación, vea el estado, la fase de **instalación** parecerá estar activa, pero la actualización no se estará instalando realmente. Para cumplir el requisito previo de ejecutar una comprobación, el proceso de actualización extrae el paquete de la biblioteca de contenido y lo pone en una carpeta de almacenamiento provisional en la que se puede acceder a las comprobaciones de requisito previo actuales.  El mismo proceso se ejecuta cuando instala una actualización. Por este motivo, la instalación aparece como "En curso". En la categoría de instalación solo se muestra el paso *Extraer paquete de actualización*.  
 
 Más adelante, cuando instale la actualización, puede configurarla para omitir las advertencias de comprobación de requisitos previos.  
 

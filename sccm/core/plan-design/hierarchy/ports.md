@@ -2,7 +2,7 @@
 title: Puertos que se usan en Configuration Manager | Microsoft Docs
 description: "Obtenga información sobre los puertos necesarios y personalizables que usa System Center Configuration Manager para las conexiones."
 ms.custom: na
-ms.date: 3/20/2017
+ms.date: 09/19/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,18 +15,18 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 78caa69e10f5d386daab1e61e484d4d134469708
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: ac443971a725a7eeecaeea877b8e9636ebb4990b
+ms.sourcegitcommit: 51654bf8b5615eb99084d0a20d18ca3fccfa83a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/20/2017
 ---
 # <a name="ports-used-in-system-center-configuration-manager"></a>Puertos que se usan en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
 System Center Configuration Manager es un sistema cliente/servidor distribuido. La naturaleza distribuida de Configuration Manager significa que se pueden establecer conexiones entre servidores de sitio, sistemas de sitio y clientes. Algunas conexiones usan puertos que no son configurables, mientras que otras admiten puertos personalizados. Debe comprobar que los puertos necesarios están disponibles si usa tecnología de filtrado de puertos como firewalls, enrutadores, servidores proxy o IPsec.  
-
+    
 > [!NOTE]  
 >  Si tiene compatibilidad con clientes basados en Internet mediante el protocolo de puente SSL, además de requisitos de puerto, es posible que también tenga que permitir que algunos verbos y encabezados HTTP atraviesen el firewall.   
 
@@ -167,7 +167,7 @@ Esta comunicación se utiliza para confirmar si el otro equipo cliente está act
 |Descripción|UDP|TCP|  
 |-----------------|---------|---------|  
 |LDAP de catálogo global|--|3268|  
-|SSL de LDAP de catálogo global|--|3269|  
+
 
 ###  <a name="BKMK_PortsClient-MP"></a> Cliente -- > Punto de administración  
 
@@ -295,9 +295,7 @@ Esta comunicación se utiliza para confirmar si el otro equipo cliente está act
 |Descripción|UDP|TCP|  
 |-----------------|---------|---------|  
 |Protocolo ligero de acceso a directorios (LDAP)|--|389|  
-|LDAP (conexión de capa de sockets seguros [SSL])|636|636|  
 |LDAP de catálogo global|--|3268|  
-|SSL de LDAP de catálogo global|--|3269|  
 |Asignador de extremos de RPC|135|135|  
 |RPC|--|DINÁMICO (Véase la nota 6, **Puertos dinámicos**)|  
 
@@ -391,9 +389,7 @@ Para obtener más información, consulte [Internet access requirements](/sccm/co
 |Descripción|UDP|TCP|  
 |-----------------|---------|---------|  
 |Protocolo ligero de acceso a directorios (LDAP)|--|389|  
-|LDAP (conexión de capa de sockets seguros [SSL])|636|636|  
 |LDAP de catálogo global|--|3268|  
-|SSL de LDAP de catálogo global|--|3269|  
 |Asignador de extremos de RPC|135|135|  
 |RPC|--|DINÁMICO (Véase la nota 6, **Puertos dinámicos**)|  
 
@@ -641,17 +637,9 @@ Para obtener un ejemplo de cómo configurar SQL Server para usar un puerto espec
 ### <a name="bkmk_discovery"> </a> Detección y publicación
 Los siguientes puertos se usan para la detección y la publicación de información de sitios:
  - Protocolo ligero de acceso a directorios (LDAP): 389
- - LDAP (conexión de Capa de sockets seguros (SSL)): 636
-
-
  - LDAP de catálogo global: 3268
- - SSL de LDAP de catálogo global: 3269
-
-
  - Asignador de extremos de RPC: 135
  - RPC: puertos TCP altos asignados dinámicamente
-
-
  - TCP: 1024: 5000
  - TCP: 49152: 65535
 

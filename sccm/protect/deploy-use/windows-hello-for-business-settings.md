@@ -2,7 +2,7 @@
 title: "Configuración de Windows Hello para empresas | Microsoft Docs"
 description: Aprenda a integrar Windows Hello para empresas con System Center Configuration Manager.
 ms.custom: na
-ms.date: 08/10/2017
+ms.date: 09/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "17"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 1985428df0f82ef2e0a92fdec86189d5ffa03aee
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 43586e55f2c0c5cf117b94c61250f26ba4233f53
+ms.sourcegitcommit: 4c3906cf9614420cb8527da9e48978eb0b8f0e7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="windows-hello-for-business-settings-in-system-center-configuration-manager"></a>Configuración de Windows Hello para empresas en System Center Configuration Manager
 
@@ -65,8 +65,11 @@ Algunas configuraciones pueden no requerir la configuración de permisos, o bien
 |||||
 |-|-|-|-|
 |Versión de cliente de Windows|Configuration Manager 1602 o 1606|Configuration Manager 1610|Configuration Manager 1702 o posterior|
-|Actualización de aniversario de Windows 10|Ninguna revisión necesaria<br><br>Ningún permiso necesario<br><br>Ninguna actualización de esquema de Windows necesaria|Ninguna revisión necesaria<br><br>Ningún permiso necesario<br><br>Ninguna actualización de esquema de Windows necesaria|No es necesaria ninguna acción|
+|Actualización de aniversario de Windows 10|Ninguna revisión necesaria<br><br>Ningún permiso necesario<br><br>Ninguna actualización de esquema de Windows necesaria|Ninguna revisión necesaria (ver **Advertencia**)<br><br>Ningún permiso necesario<br><br>Ninguna actualización de esquema de Windows necesaria|Configurar permisos<br><br>Aplica el esquema de Windows Server 2016 a Active Directory|
 |Windows 10 Creators Update o posterior|No compatible|Instalar [esta revisión](https://support.microsoft.com/help/4010155/update-rollup-for-system-center-configuration-manager-current-branch-v)<br><br>Configurar permisos<br><br>Aplica el esquema de Windows Server 2016 a Active Directory|Configurar permisos<br><br>Aplica el esquema de Windows Server 2016 a Active Directory|
+
+> [!WARNING]
+> Si bien [la revisión](https://support.microsoft.com/help/4010155/update-rollup-for-system-center-configuration-manager-current-branch-v) para Configuration Manager 1610 y la Actualización de aniversario de Windows 10 no es necesaria, puede instalarla.  Si se instala, debe configurar permisos y aplicar el esquema de Windows Server 2016 en Active Directory.
 
 ## <a name="to-configure-permissions"></a>Para configurar permisos
 

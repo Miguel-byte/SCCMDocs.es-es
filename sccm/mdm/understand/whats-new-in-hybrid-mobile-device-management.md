@@ -14,11 +14,11 @@ caps.latest.revision: "40"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.openlocfilehash: c93ba688ba33c309e4d12e924061718e5a33759e
-ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
+ms.openlocfilehash: 2ef4964a74e000feac029b158f6fe0c52e3de370
+ms.sourcegitcommit: 51654bf8b5615eb99084d0a20d18ca3fccfa83a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/20/2017
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con System Center Configuration Manager y Microsoft Intune
 
@@ -36,9 +36,30 @@ En este artículo se proporciona información sobre nuevas características de a
 |**Novedades de Configuration Manager Technical Preview**| Todas las funciones que se enumeran en esta categoría funcionan únicamente con la versión especificada de Technical Preview. Para probar estas características, debe instalar la versión de Technical Preview especificada en la descripción de la característica. Para más información, consulte [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md) (Technical Preview para System Center Configuration Manager).|
 |**Novedades de Configuration Manager (rama actual)**| Todas las características que se enumeran en esta categoría funcionan únicamente con la versión especificada de Configuration Manager (rama actual), como la versión 1511 o 1602. Si usa una versión anterior de Configuration Manager para su implementación híbrida, debe actualizar a la versión de Configuration Manager (rama actual) que se especifica en la descripción de la característica. Para obtener más información, consulte [Upgrade to System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md) (Actualizar a System Center Configuration Manager).|
 
+## <a name="september-2017"></a>Septiembre de 2017
+
+### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune     
+
+- **Notificaciones de inserción adicionales para usuarios finales en la aplicación Portal de empresa para Android Oreo** <!--1475932-->    
+    Los usuarios finales verán notificaciones adicionales que indican cuando la aplicación Portal de empresa para Android Oreo realiza tareas en segundo plano, como recuperar directivas desde el servicio Intune. Con esto se aumenta la transparencia para los usuarios finales con respecto a cuando Portal de empresa realiza tareas administrativas en el dispositivo. Esto forma parte de la optimización [general de la UI de Portal de empresa ](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune) para la aplicación Portal de empresa para Android Oreo. 
+
+- **Detalles para los usuarios finales sobre qué información del dispositivo se puede ver para iOS** <!--739894-->    
+    Se agregó **Tipo de propiedad** en la pantalla Detalles del dispositivo en la aplicación Portal de empresa para iOS. Esto permitirá que los usuarios obtengan más información sobre la privacidad directamente en esta página de los documentos para el usuario final de Intune. También se podrán encontrar estos detalles en la pantalla Información. 
+
+- **Frases más fáciles de comprender para la aplicación Portal de empresa para Android** <!---1396349-->       
+    El proceso de inscripción de la aplicación Portal de empresa para Android se simplificó con texto nuevo para facilitar la inscripción de los usuarios finales. Si tiene documentación de inscripción personalizada, deberá actualizarla para reflejar las pantallas nuevas. Puede encontrar imágenes de ejemplo en la página [Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-september-11-2017).
+
+- **La aplicación Portal de empresa de Windows 10 se agregó a la directiva de autorización de Windows Information Protection** <!-- 677129 -->    
+    La aplicación Portal de empresa de Windows 10 se actualizó para admitir Windows Information Protection (WIP). La aplicación se puede agregar a la directiva de autorización de WIP. Con este cambio, ya no es necesario agregar la aplicación a la lista de **exentos**. 
+
+- **Se agregó un aviso de finalización del soporte para iOS 8.0**    
+    Se agregó un aviso para la finalización del soporte de iOS 8.0. Para obtener más información, consulte [Notificaciones](#notices).
+
 ## <a name="august-2017"></a>Agosto de 2017
 
-### <a name="new-signed-in-experience-for-android-company-portal-users-and-app-protection-policy-users----621669---"></a>Nueva experiencia de inicio de sesión para los usuarios del Portal de empresa de Android y de la directiva de protección de aplicaciones<!-- 621669 -->
+### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune     
+
+- **Nueva experiencia de inicio de sesión para los usuarios de Portal de empresa de Android y de la directiva de protección de aplicaciones** <!-- 621669 -->    
 Los usuarios finales pueden ahora examinar aplicaciones, administrar dispositivos y ver la información de contacto de TI mediante la aplicación del Portal de empresa de Android sin inscribir sus dispositivos Android. Además, si un usuario final ya usa una aplicación protegida por directivas de protección de aplicaciones de Intune y se inicia el Portal de empresa Android, el usuario final ya no recibirá un aviso para inscribir el dispositivo.
 
 
@@ -311,6 +332,10 @@ También se incluyen las siguientes características adicionales híbridas en la
 
 
 ## <a name="notices"></a>Notificaciones
+
+### <a name="end-of-support-for-ios-80"></a>Finalización del soporte de iOS 8.0 
+<!---1164477--->
+Las aplicaciones administradas y la aplicación Portal de empresa para iOS necesitan iOS 9.0 y posterior para poder acceder a los recursos de la empresa. Los dispositivos que no estén actualizados antes de septiembre ya no podrán acceder al Portal de empresa ni a esas aplicaciones. 
 
 ### <a name="platform-support-reminder-windows-phone-81-mainstream-support-ended-july-11-2017"></a>Recordatorio sobre el soporte técnico para la plataforma: el soporte técnico estándar para Windows Phone 8.1 finalizó el 11 de julio de 2017
 <!-- 1327781 -->

@@ -2,7 +2,7 @@
 title: "Administrar puntos de distribución | Microsoft Docs"
 description: "Hospede el contenido (archivos y software) que implementa en dispositivos y usuarios mediante el uso de los puntos de distribución. Aquí se muestra cómo instalarlos y configurarlos."
 ms.custom: na
-ms.date: 2/14/2017
+ms.date: 09/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,16 +14,16 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 4c94e4de5bbfe621492e8682c9424a48eb38196d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 0213b48c24461cbab5a9acab720064e0e26fa568
+ms.sourcegitcommit: 474e6ddbaaeac4ba17d8172321e08deeb0140d0a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>Instalación y configuración de puntos de distribución de System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
- 
+
 Instale puntos de distribución de System Center Configuration Manager para hospedar el contenido (archivos y software) que implementa en dispositivos y usuarios. También puede crear grupos de puntos de distribución que simplifican la manera en que administra los puntos de distribución, y cómo distribuye el contenido en puntos de distribución.  
 
  Cuando *instala un nuevo punto de distribución* (mediante el asistente de instalación) o *administra las propiedades de un punto de distribución existente* (editando las propiedades del punto de distribución), puede configurar la mayoría de los valores del punto de distribución. Algunas opciones de configuración solo están disponibles cuando se instala o se edita, pero no en ambos casos:  
@@ -45,7 +45,8 @@ Instale puntos de distribución de System Center Configuration Manager para hosp
     -   **Configurar las programaciones de las transferencias de datos a los puntos de distribución**  
 
 ##  <a name="bkmk_install"></a> Instalar un punto de distribución  
- Debe designar un servidor de sistema de sitio como punto de distribución antes de que el contenido puede estar disponible en los equipos cliente. Puede agregar el rol de sitio de punto de distribución a un nuevo servidor de sistema de sitio o puede agregar el rol de sitio a un servidor de sistema de sitio existente.  
+Debe designar un servidor de sistema de sitio como punto de distribución antes de que el contenido puede estar disponible en los equipos cliente. También debe asignar un punto de distribución al menos a un [grupo de límites](/sccm/core/servers/deploy/configure/boundary-groups#distribution-points) antes de que los equipos cliente locales puedan usar el punto de distribución como ubicación de origen del contenido. Puede agregar el rol de sitio de punto de distribución a un nuevo servidor de sistema de sitio o puede agregar el rol de sitio a un servidor de sistema de sitio existente.
+
 
  Cuando instala un nuevo punto de distribución, usa un asistente de instalación que le guía a través de la configuración disponible. Antes de comenzar, tenga en cuenta lo siguiente:  
 
@@ -339,7 +340,7 @@ Para ver los resultados del proceso de validación de contenido, en el área de 
 >  Aunque la programación de la validación de contenido se especifica mediante la hora local del equipo, la programación se muestra en la consola de Configuration Manager en hora UTC.  
 
 ### <a name="boundary-group"></a>Grupo de límites  
-Administre los grupos de límites a los que se asigna este punto de distribución. Puede asociar grupos de límites a un punto de distribución. Durante la distribución de contenido, los clientes deben estar en un grupo de límites que esté asociado con el punto de distribución para utilizarlo como una ubicación de origen para el contenido.
+Administre los grupos de límites a los que se asigna este punto de distribución. Considere agregar el punto de distribución al menos a un grupo de límites. Durante la implementación del contenido, los clientes deben estar en un grupo de límites que esté asociado con un punto de distribución para usar ese punto de distribución como ubicación de origen del contenido.
 
 Además:
 

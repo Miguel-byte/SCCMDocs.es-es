@@ -74,7 +74,7 @@ ms.lasthandoff: 08/07/2017
 ### <a name="wsus-server-connection-account"></a>Cuenta de conexión del servidor WSUS  
  Puede configurar una cuenta para que la utilice el servidor de sitio cuando se conecte a WSUS que se ejecuta en el punto de actualización de software. Cuando no se configura esta cuenta, Configuration Manager usa la cuenta de equipo del servidor de sitio para conectarse a WSUS. Configure la cuenta de conexión del servidor WSUS en la página **Configuración de cuenta y proxy** del asistente o en la pestaña **Configuración de cuenta y proxy** en Propiedades de punto de actualización de software.  Puede configurar la cuenta en distintas partes del asistente en función de la versión de Configuration Manager que usa.  
 
- Para obtener más información sobre las cuentas de Configuration Manager, consulte [Accounts used in System Center Configuration Manager (Cuentas que se usan en System Center Configuration Manager)](../../core/plan-design/hierarchy/accounts.md).  
+ Para obtener más información sobre las cuentas de Configuration Manager, consulte [Cuentas que se usan en System Center Configuration Manager](../../core/plan-design/hierarchy/accounts.md).  
 
 ## <a name="synchronization-source"></a>Origen de la sincronización  
  Es posible configurar el origen de la sincronización ascendente para la sincronización de actualizaciones de software en la página **Origen de la sincronización** del asistente, o en la pestaña **Configuración de sincronización** , en Propiedades de componente de punto de actualización de software. Las opciones para el origen de la sincronización varían dependiendo del sitio.  

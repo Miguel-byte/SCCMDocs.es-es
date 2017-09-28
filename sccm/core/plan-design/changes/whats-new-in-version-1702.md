@@ -12,11 +12,11 @@ ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: a2954b3c6f9a09b7246347e780c4cfc49ba39ca1
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: ff7f6c3b9f183502c95a2c551b1131c5abf1dd90
+ms.sourcegitcommit: 474e6ddbaaeac4ba17d8172321e08deeb0140d0a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Novedades de la versión 1702 de System Center Configuration Manager
 
@@ -256,7 +256,13 @@ Este cambio afecta a los asistentes para crear los siguientes elementos:
 
 Con este cambio, las implementaciones híbridas pueden ofrecer compatibilidad con mayor rapidez para nuevas versiones de iOS y Android sin necesidad de una nueva versión o extensión de Configuration Manager. Una vez que una nueva versión es compatible con Intune independiente, los usuarios podrán actualizar sus dispositivos móviles a dicha versión.
 
-Para evitar problemas al actualizar desde versiones anteriores de Configuration Manager, las versiones de sistema operativo móvil siguen estando disponibles en las páginas de propiedades de estos elementos. Si aún necesita establecer como destino una versión concreta, puede crear el nuevo elemento y, después, especificar la versión de destino en la página de propiedades del elemento recién creado.
+Para evitar problemas al actualizar desde versiones anteriores de Configuration Manager, las versiones de sistema operativo móvil siguen estando disponibles en las páginas de propiedades de estos elementos. Si aún necesita establecer como destino una versión concreta, puede crear el nuevo elemento y, después, especificar la versión de destino en la página de propiedades del elemento recién creado. 
+
+> [!NOTE]
+> La última versión del sistema operativo móvil disponible en las páginas de propiedades se aplica a esa versión y a todas las versiones subsiguientes. Las páginas de propiedades ofrecen las siguientes opciones para tener como destino sistemas operativos posteriores a Android 7 y iOS 10: 
+> - **Android 7 y versiones posteriores**
+> - **Todos los dispositivos táctiles iPhone o iPod con iOS 10 y versiones posteriores**
+> - **Todos los dispositivos iPad con iOS 10 y versiones posteriores**
 
 ### <a name="android-for-work-support"></a>Compatibilidad de Android for Work
 A partir de la versión 1702, la administración de dispositivos móviles híbrida con Microsoft Intune ahora admite la inscripción y administración de dispositivos Android for Work. Guía para dispositivos Android for Work administrados:

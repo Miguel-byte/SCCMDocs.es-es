@@ -2,7 +2,7 @@
 title: Compatibilidad con los dominios de Active Directory | Microsoft Docs
 description: Obtenga los requisitos de pertenencia de un sistema de sitio de System Center Configuration Manager en un dominio de Active Directory.
 ms.custom: na
-ms.date: 3/23/2017
+ms.date: 9/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 2654ab4eaaaf6a4bf3bd7dca9908e7033647dc2c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 813c2f55a5815ae3739149abc3f650a750d52cd8
+ms.sourcegitcommit: 474e6ddbaaeac4ba17d8172321e08deeb0140d0a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="supported-active-directory-domains-for-system-center-configuration-manager"></a>Compatibilidad con los dominios de Active Directory para System Center Configuration Manager
 
@@ -33,7 +33,7 @@ Todos los sistemas de sitio de System Center Configuration Manager deben ser mie
 
 -   No se permite cambiar lo siguiente en un equipo que hospeda un rol de sistema de sitio:  
 
-    -   Pertenencia a dominio  
+    -   Pertenencia a dominio *(incluye quitar un sistema de sitio del dominio y volver a unirlo al mismo dominio)*.
 
     -   Nombre de dominio  
 

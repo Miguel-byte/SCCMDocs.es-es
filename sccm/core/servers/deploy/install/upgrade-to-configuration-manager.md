@@ -14,11 +14,11 @@ caps.latest.revision: "21"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 1166b739e1e8d667172d97883f484fdbc3a142c1
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e65c22240555563cdb011849562069baf5d5887f
+ms.sourcegitcommit: 4c3906cf9614420cb8527da9e48978eb0b8f0e7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="upgrade-to-system-center-configuration-manager"></a>Actualizar a System Center Configuration Manager
 
@@ -47,7 +47,7 @@ El 15 de diciembre de 2016, se volvió a publicar el medio de línea base para l
 -   Una instalación de versión candidata de System Center Configuration Manager  
 -   System Center 2012 Configuration Manager con Service Pack 1  
 -   System Center 2012 Configuration Manager con Service Pack 2  
--   System Center 2012 R2 Configuration Manager  
+-   System Center 2012 R2 Configuration Manager sin ningún Service Pack
 -   System Center 2012 R2 Configuration Manager con Service Pack 1  
 
 Si usa un medio de línea base de la versión 1606 descargado antes del 15 de diciembre de 2016, solo puede actualizar lo siguiente a una versión con licencia completa de System Center Configuration Manager versión 1606:

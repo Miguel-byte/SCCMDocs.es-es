@@ -2,7 +2,7 @@
 title: "Supervisar el uso de aplicaciones a través de la medición de software | Microsoft Docs"
 description: 
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 09/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "8"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: d7bc0bebeb0355156553376a3535ed76d5e44835
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 87bafd8ce28d58993666057b6c5bfd8bdc0c4ed9
+ms.sourcegitcommit: 51654bf8b5615eb99084d0a20d18ca3fccfa83a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 09/20/2017
 ---
 # <a name="software-metering-in-system-center-configuration-manager"></a>Medición de software en System Center Configuration Manager
 
@@ -86,7 +86,7 @@ La medición de software no tiene dependencias externas, solo dependencias dentr
         >
         >  Este cuadro es opcional si se especifica un valor para **Nombre de archivo** .
 
-    -   **Versión** : la versión del archivo ejecutable que quiere medir. Puede usar el carácter comodín (*) para representar cualquier cadena de caracteres o el carácter comodín (?) para representar un solo carácter. Si quiere medir todas las versiones de un archivo ejecutable, use el valor predeterminado (\*).
+    -   **Versión** : la versión del archivo ejecutable que quiere medir. Puede usar el carácter comodín ( &#42; ) para representar cualquier cadena de caracteres o el carácter comodín ( ? ) para representar un solo carácter. Si quiere medir todas las versiones de un archivo ejecutable, use el valor predeterminado ( &#42; ).
 
     -   **Idioma** : el idioma del archivo ejecutable que se va a medir. El valor predeterminado es la configuración regional actual del sistema operativo que está usando. Si selecciona un archivo ejecutable para la medición haciendo clic en el botón **Examinar** , este cuadro se rellena automáticamente si la información del idioma está presente en el encabezado del archivo. Para medir todas las versiones de idioma de un archivo, seleccione **Cualquiera** en la lista desplegable.
 
