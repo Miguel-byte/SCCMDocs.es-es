@@ -222,7 +222,7 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
     > [!NOTE]  
     >  La cuenta de equipo del servidor de sitio debe tener permisos de acceso de **lectura** en la carpeta de origen.  
 
-2.  Copie el archivo multimedia preconfigurado que creó en la sección [Create prestaged media](#BKMK_CreatePrestagedMedia) en la carpeta de origen del paquete.  
+2.  Copie el archivo multimedia preconfigurado que creó en la sección [Crear medios preconfigurados](#BKMK_CreatePrestagedMedia) en la carpeta de origen del paquete.  
 
 3.  Copie la herramienta de Windows To Go Creator (WTGCreator.exe) en la carpeta de origen del paquete. La herramienta Creator está disponible en cualquier servidor de sitio primario en la siguiente ubicación: <*carpeta de instalación de Configuration Manager*>\OSD\Tools\WTG\Creator.  
 
@@ -281,7 +281,7 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
  Windows To Go habilita BitLocker en una unidad externa de arranque sin el uso de TPM. Por lo tanto, debe utilizar una herramienta independiente para configurar BitLocker en la unidad de Windows To Go. Para habilitar BitLocker, debe agregar una acción a la secuencia de tareas después del paso **Instalar Windows y Configuration Manager** paso.  
 
 > [!NOTE]  
->  BitLocker para Windows To Go requiere una frase de contraseña. En el paso [Create prestaged media](#BKMK_CreatePrestagedMedia) , se establece la frase de contraseña como parte de un comando de preinicio mediante la variable OSDBitLockerPIN.  
+>  BitLocker para Windows To Go requiere una frase de contraseña. En el paso [Crear medios preconfigurados](#BKMK_CreatePrestagedMedia) , se establece la frase de contraseña como parte de un comando de preinicio mediante la variable OSDBitLockerPIN.  
 
  Utilice el siguiente procedimiento para actualizar la secuencia de tareas de Windows 8 para habilitar BitLocker para Windows To Go.  
 
@@ -410,7 +410,7 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
     2.  **Recopilación**: haga clic en **Examinar** para seleccionar la recopilación que incluye todos los dispositivos para los que un usuario podría aprovisionar Windows To Go.  
 
         > [!IMPORTANT]  
-        >  Si el medio preconfigurado que creó en la sección [Create prestaged media](#BKMK_CreatePrestagedMedia) usa la variable SMSTSPreferredAdvertID, puede implementar la secuencia de tareas en la recopilación **Todos los sistemas** y especificar la opción **Solo Windows PE (oculta)** en la página **Contenido** . Como la secuencia de tareas está oculta, solo estará disponible para los medios.  
+        >  Si el medio preconfigurado que creó en la sección [Crear medios preconfigurados](#BKMK_CreatePrestagedMedia) usa la variable SMSTSPreferredAdvertID, puede implementar la secuencia de tareas en la recopilación **Todos los sistemas** y especificar la opción **Solo Windows PE (oculta)** en la página **Contenido** . Como la secuencia de tareas está oculta, solo estará disponible para los medios.  
 
     3.  **Usar grupos de puntos de distribución predeterminados asociados a esta recopilación**: seleccione esta opción si desea almacenar el contenido del paquete en el grupo de puntos de distribución predeterminado de las recopilaciones. Si no asocia la recopilación seleccionada con un grupo de puntos de distribución, esta opción no estará disponible.  
 
@@ -421,7 +421,7 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
     -   **Estar disponible para**: especifique si la secuencia de tareas debe estar disponible para medios, el entorno PXE o clientes de Configuration Manager.  
 
         > [!IMPORTANT]  
-        >  Use la opción **Sólo medios y PXE (ocultos)** para implementaciones automatizadas de secuencia de tareas. Seleccione **Permitir la implementación desatendida de sistema operativo** y configure la variable SMSTSPreferredAdvertID como parte del medio preconfigurado para que el equipo arranque automáticamente en la implementación de Windows To Go sin interacción del usuario cuando detecta una unidad de Windows To Go. Para obtener más información acerca de las opciones de medios preconfigurados, consulte la sección [Create prestaged media](#BKMK_CreatePrestagedMedia) .  
+        >  Use la opción **Sólo medios y PXE (ocultos)** para implementaciones automatizadas de secuencia de tareas. Seleccione **Permitir la implementación desatendida de sistema operativo** y configure la variable SMSTSPreferredAdvertID como parte del medio preconfigurado para que el equipo arranque automáticamente en la implementación de Windows To Go sin interacción del usuario cuando detecta una unidad de Windows To Go. Para obtener más información acerca de las opciones de medios preconfigurados, consulte la sección [Crear medios preconfigurados](#BKMK_CreatePrestagedMedia) .  
 
 7.  En la página **Programación** , configure las opciones siguientes y, a continuación, haga clic en **Siguiente**.  
 
@@ -459,7 +459,7 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
  Después de implementar el paquete de Windows To Go y la secuencia de tareas de Windows 8, Windows To Go Creator está disponible para el usuario. El usuario puede ir al catálogo de software o al Centro de software si se ha implementado Windows To Go Creator en los dispositivos, y ejecutar el programa Windows To Go Creator. Una vez descargado el paquete de Creator, se muestra un icono intermitente en la barra de tareas. Cuando el usuario hace clic en el icono, se muestra un cuadro de diálogo para que el usuario seleccione la unidad de Windows To Go que desea aprovisionar (a menos que se use la opción de línea de comandos /drive). Si la unidad no cumple los requisitos de Windows To Go o no tiene suficiente espacio libre en disco para instalar la imagen, Creator muestra un mensaje de error. El usuario puede comprobar la unidad y la imagen que se aplicarán en la página de confirmación. A medida que Creator configura y preconfigura contenido en la unidad de Windows To Go, muestra un cuadro de diálogo de progreso. Al finalizar la preconfiguración, Creator muestra una solicitud de reinicio del equipo para arrancar en la unidad de Windows To Go.  
 
 > [!NOTE]  
->  Si no habilitó la redirección del arranque como parte de la línea de comandos de Creator en la sección [Create a Windows To Go Creator package](#BKMK_CreatePackage) , es posible que el usuario deba arrancar manualmente en la unidad de Windows To Go cada vez que se reinicia el sistema.  
+>  Si no habilitó la redirección del arranque como parte de la línea de comandos de Creator en la sección [Crear un paquete de Windows To Go Creator](#BKMK_CreatePackage) , es posible que el usuario deba arrancar manualmente en la unidad de Windows To Go cada vez que se reinicia el sistema.  
 
 ###  <a name="BKMK_ConfigureStageDrive"></a> Configuration Manager configura y crea etapas en la unidad de Windows To Go  
  Después de que el equipo reinicie la unidad de Windows To Go, la unidad arrancará en Windows PE y se conectará al punto de administración para obtener la directiva y finalizar la implementación de sistema operativo. Configuration Manager configura y crea etapas en la unidad. Después de que Configuration Manager cree etapas en la unidad, el usuario puede reiniciar el equipo para finalizar el proceso de aprovisionamiento (por ejemplo, unirse a un dominio o instalar aplicaciones). Este proceso es el mismo para todos los medios preconfigurados.  
