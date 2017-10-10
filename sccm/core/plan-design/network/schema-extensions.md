@@ -16,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex
-ms.openlocfilehash: 5b5540c35c02df6e3d06e4aa9269b8da3238233e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5ec1e9368e836382b143d7b2bf9d1a6a7bc2fa22
+ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="schema-extensions-for-system-center-configuration-manager"></a>Extensiones de esquema para System Center Configuration Manager
 
@@ -30,7 +30,7 @@ Puede extender el esquema de Active Directory para admitir Configuration Manager
 
 -   Le recomendamos que extienda el esquema de Active Directory, aunque no es obligatorio.  
 
-Antes de [extender el esquema de Active Directory](https://msdnstage.redmond.corp.microsoft.com/en-US/library/mt345589\(TechNet.10\).aspx), debe estar familiarizado con los Servicios de dominio de Active Directory y sentirse cómodo con la [modificación del esquema de Active Directory](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx).  
+Antes de [extender el esquema de Active Directory](https://docs.microsoft.com/en-us/sccm/core/plan-design/network/extend-the-active-directory-schema), debe estar familiarizado con los Servicios de dominio de Active Directory y sentirse cómodo con la [modificación del esquema de Active Directory](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx).  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Consideraciones para extender el esquema de Active Directory para Configuration Manager  
 
