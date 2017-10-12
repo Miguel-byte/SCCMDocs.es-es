@@ -146,7 +146,7 @@ Use el procedimiento siguiente para ayudarle a crear una aplicación para equipo
 3.  Seleccione una aplicación. Después, en la pestaña **Inicio**, en el grupo **Aplicación**, pulse **Crear tipo de implementación** para crear un nuevo tipo de implementación para esta aplicación.  
 
     > [!NOTE]  
-    >  También puede iniciar el **Asistente para crear tipos de implementación** desde el **Asistente para crear aplicaciones** y desde la pestaña **Tipos de implementación** del cuadro de diálogo *Propiedades\> de *<nombre de la aplicación****.  
+    >  También puede iniciar el **Asistente para crear tipos de implementación** desde el **Asistente para crear aplicaciones** y desde la pestaña **Tipos de implementación** del cuadro de diálogo *Propiedades\> de* <nombre de la aplicación****.  
 
 4.  En la página **General** del **Asistente para crear tipos de implementación**, en la lista desplegable **Tipo**, seleccione **Mac OS X**.  
 
