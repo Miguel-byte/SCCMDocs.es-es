@@ -14,11 +14,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 06565bc52e2c409b905bbc448262cf9da25eabb0
-ms.sourcegitcommit: 4c3906cf9614420cb8527da9e48978eb0b8f0e7a
+ms.openlocfilehash: 247fbe5313c17be906802acfaa6952ab3358122e
+ms.sourcegitcommit: a17f5dece340a70cedbec03d19938dab90ae60b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/06/2017
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>Instalar y actualizar con el medio de línea base de la versión 1606 para System Center Configuration Manager
 
@@ -121,14 +121,14 @@ Cuando actualice desde System Center 2012 Configuration Manager, use los procedi
 **Actualizar a la LTSB:**  
 - Pasos adicionales para seguir en la lista de comprobación previa a la actualización.
 - Durante el programa de instalación, debe elegir la LTSB, y puede especificar la información de su contrato de Software Assurance.
-- Solo puede actualizar un sitio que ejecute System Center 2012 Configuration Manager con Service Pack 2 o System Center 2012 R2 Configuration Manager con Service Pack 1.
+- Solo puede actualizar un sitio que ejecuta System Center 2012 Configuration Manager con el Service Pack 1, System Center 2012 Configuration Manager con el Service Pack 2, System Center 2012 R2 Configuration Manager con el Service Pack 1 o System Center 2012 R2 Configuration Manager sin ningún Service Pack.
 
 ### <a name="in-place-upgrade-paths-for-the-1606-baseline-media"></a>Rutas de actualización local para el medio de línea base 1606
 Puede usar el medio de línea base 1606 para actualizar lo siguiente a una edición con licencia de System Center Configuration Manager:
 - System Center 2012 R2 Configuration Manager con Service Pack 1
 - System Center 2012 R2 Configuration Manager sin Service Pack (requiere usar el media de línea base para la versión 1606 que se volvió a publicar el 15 de diciembre de 2016).
 - System Center 2012 Configuration Manager con Service Pack 2
-- System Center 2012 Configuration Manager con Service Pack 1
+- System Center 2012 Configuration Manager con Service Pack 1 (requiere el uso del medio de línea base para la versión 1606 que se volvió a publicar el 15 de diciembre de 2016).
 
 
 También puede usar este medio para actualizar una edición de evaluación sin licencia de la rama actual a una versión de licencia completa de la rama actual.

@@ -2,7 +2,7 @@
 title: "Inscribir dispositivos iOS con el programa de inscripción de dispositivos (DEP) en Configuration Manager | Microsoft Docs"
 description: "Habilite la inscripción del Programa de inscripción de dispositivos (DEP) iOS para implementaciones híbridas en Configuration Manager con Intune."
 ms.custom: na
-ms.date: 08/15/2017
+ms.date: 09/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "9"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.openlocfilehash: e76e46ce0d6ee0582d5161709ff114b936ac5660
-ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.openlocfilehash: f34f7527c14e1be6229212bfb2d8fd022ee6defe
+ms.sourcegitcommit: 8faf42135a8dc9c384407e64f3f8ba204fb15847
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>Inscripción del Programa de inscripción de dispositivos (DEP) iOS para implementaciones híbridas con Configuration Manager
 
@@ -40,6 +40,7 @@ Las empresas pueden comprar dispositivos iOS mediante el Programa de inscripció
 3.  **Obtener un token del programa de inscripción de dispositivos**   
     Vaya al [portal del programa de inscripción de dispositivos](https://deploy.apple.com) (https://deploy.apple.com) e inicie sesión con su identificador de Apple de empresa. Este identificador de Apple debe usarse posteriormente para renovar el token de DEP.  
     1.  En la consola de [portal del programa de inscripción de dispositivos](https://deploy.apple.com), vaya a **Programa de inscripción de dispositivos** > **Administrar servidores**y, después, haga clic en **Add MDM Server**.  
+    ![Captura de pantalla de Add MDM Server (Agregar servidor MDM) en el portal del programa de inscripción de dispositivos](../media/enrollment-program-token-add-server.png)
     2.  Escriba el **nombre del servidor MDM**y, después, haga clic en **Siguiente**. El nombre del servidor es su referencia para identificar el servidor MDM. No es el nombre ni la dirección URL del servidor de Intune o Configuration Manager.  
     3.  Se abre el cuadro de diálogo **Agregar <NombreDeServidor\>**. Haga clic en **Elegir archivo…** para cargar el archivo .pem que creó en el paso anterior y, a continuación, haga clic en **Siguiente**.  
     4.  En el cuadro de diálogo **Agregar <NombreDeServidor\>** se muestra el vínculo **Su token de servidor**. Descargue el archivo de token de servidor (.p7m) en el equipo y, a continuación, haga clic en **Listo**.  
@@ -97,6 +98,7 @@ Las empresas pueden comprar dispositivos iOS mediante el Programa de inscripció
 
 1. Vaya al [portal del programa de inscripción de dispositivos](https://deploy.apple.com) (https://deploy.apple.com) e inicie sesión con su identificador de Apple de empresa.
 2. Vaya a **Programa de implementación** > **Programa de inscripción de dispositivos** > **Administrar dispositivos**. Especifique cómo va a **elegir los dispositivos**, proporcione información del dispositivo y especifique los detalles de cada dispositivo, como **Número de serie**, **Número de pedido**, o seleccione **Cargar archivo CSV**. Después, seleccione **Asignar al servidor**, seleccione el <*NombreDeServidor*> que ha especificado en el paso 3 y, después, haga clic en **Aceptar**.  
+![Captura de pantalla del portal del programa de inscripción de dispositivos de Apple, en el que se agregan dispositivos](../media/enrollment-program-token-specify-serial.png)
 
 3.  **Sincronizar los dispositivos administrados por DEP**   
     En el área de trabajo **Activos y compatibilidad**, vaya a **Todos los dispositivos corporativos** > **Dispositivos declarados previamente**. En la pestaña **Inicio** , haga clic en **Sincronización de DEP**. Se envía una solicitud de sincronización a Apple. Una vez completada la sincronización, se muestran los dispositivos administrados por DEP.

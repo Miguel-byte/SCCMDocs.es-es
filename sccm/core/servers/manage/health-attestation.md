@@ -2,7 +2,7 @@
 title: "Atestación de estado | Microsoft Docs"
 description: "Obtenga información sobre la funcionalidad de atestación de estado de dispositivos que puede verse en la consola de Configuration Manager."
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 10/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "17"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 54b3433a002b8ef29059bab04458138348f95d66
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 11d58237ea1e88785f6991450b3e898562b23918
+ms.sourcegitcommit: a17f5dece340a70cedbec03d19938dab90ae60b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/06/2017
 ---
 # <a name="health-attestation-for-system-center-configuration-manager"></a>Atestación de estado para System Center Configuration Manager
 
@@ -37,9 +37,9 @@ Esta funcionalidad está disponible para equipos y recursos locales administrado
 
  **Requisitos:**  
 
--   Dispositivos cliente que ejecutan la versión 1607 de Windows 10 o la versión 1607 de Windows Server 2016 con [Atestación de estado de dispositivo habilitada](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation)
--    Dispositivos habilitados para TPM 1.2 o TPM 2
--   Comunicación entre el agente cliente de Configuration Manager y el servicio Atestación de estado (administración de nube) de has.spserv.microsoft.com (puerto 443) o con el punto de administración con atestación de estado de dispositivo habilitada (local)
+-   Dispositivos cliente que ejecutan la versión 1607 de Windows 10 o la versión 1607 de Windows Server 2016 con la [Atestación de estado de dispositivo habilitada](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation).
+-   Dispositivos habilitados para TPM 1.2 o TPM 2.
+-   Si se usa la administración en la nube, comunicación entre el agente cliente de Configuration Manager y el punto de administración con el servicio Atestación de estado (administración en la nube) de *has.spserv.microsoft.com* (puerto 443). Si es local, el cliente debe poder comunicarse con el punto de administración habilitado para la Atestación de estado de dispositivo.
 
 ### <a name="how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers"></a>Cómo habilitar la comunicación del servicio de atestación de estado en los equipos cliente de Configuration Manager
 

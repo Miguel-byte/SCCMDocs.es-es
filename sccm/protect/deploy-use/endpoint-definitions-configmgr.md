@@ -2,7 +2,7 @@
 title: Definiciones de malware de Endpoint Protection | Microsoft Docs
 description: Aprenda a configurar las actualizaciones de software en Configuration Manager para entregar las actualizaciones de definiciones a los equipos cliente.
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 10/06/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: ca40c2c745ea516b56b637249b892cd44e570a9d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d2c29ea4c2b49142c6e63e2b5e829271098eac70
+ms.sourcegitcommit: 8ac9c2c9ba1fdcbb7cc8d5be898586865fcf67c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/07/2017
 ---
 #  <a name="using-configuration-manager-software-updates-to-deliver-definition-updates"></a>El uso de las actualizaciones de Software de Configuration Manager para entregar actualizaciones de definiciones
 
@@ -68,15 +68,15 @@ ms.lasthandoff: 08/07/2017
 
 13. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Criterios de búsqueda** y haga clic en **Siguiente**.
 
-14. En la lista **Filtros de propiedad** , active la casilla **Se reemplazó** .
+14. Si quiere, puede filtrar las actualizaciones reemplazadas.   Para ello:
+  1.  En la lista **Filtros de propiedad** , active la casilla **Se reemplazó** .
+  2.  En la lista **Criterios de búsqueda**, haga clic en **<elementos que buscar\>**. A continuación, en el cuadro de diálogo **Criterios de búsqueda** , en la lista **Especifique el valor que se va a buscar** , seleccione **No**.  <br><br>
 
-15. En la lista **Criterios de búsqueda**, haga clic en **<elementos que buscar\>**. A continuación, en el cuadro de diálogo **Criterios de búsqueda** , en la lista **Especifique el valor que se va a buscar** , seleccione **No**.
+15. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Criterios de búsqueda** y haga clic en **Siguiente**.
 
-16. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Criterios de búsqueda** y haga clic en **Siguiente**.
+16. En la página **Programación de evaluación** del asistente, seleccione **Habilitar regla para que se ejecute según una programación**y después configure la programación que se va a usar para descargar actualizaciones de definiciones. Como mínimo, establezca la regla para que se ejecute dos horas después de cada sincronización de punto de actualización de software. Haga clic en **Siguiente**.
 
-17. En la página **Programación de evaluación** del asistente, seleccione **Habilitar regla para que se ejecute según una programación**y después configure la programación que se va a usar para descargar actualizaciones de definiciones. Como mínimo, establezca la regla para que se ejecute dos horas después de cada sincronización de punto de actualización de software. Haga clic en **Siguiente**.
-
-18. En la página **Programación de implementación** , configure las siguientes opciones:
+17. En la página **Programación de implementación** , configure las siguientes opciones:
 
     -   **Hora basada en**: seleccione **UTC** si quiere que todos los clientes de la jerarquía instalen las definiciones más recientes a la misma hora. La hora real de la instalación variará dentro de una ventana de dos horas. Esta opción es un procedimiento recomendado.
 
@@ -87,28 +87,28 @@ ms.lasthandoff: 08/07/2017
         > [!NOTE]
         >  Las fechas límite de actualización de software varían durante un período de dos horas para impedir que todos los clientes soliciten una actualización al mismo tiempo.
 
-19. Haga clic en **Siguiente**.
+18. Haga clic en **Siguiente**.
 
-20. En la página **Experiencia del usuario** del asistente, en la lista **Notificaciones de usuario** , seleccione **Ocultar en el Centro de software y ocultar todas las notificaciones**.   Esto garantiza que las actualizaciones de definiciones se instalen de forma silenciosa. Haga clic en **Siguiente**.
+19. En la página **Experiencia del usuario** del asistente, en la lista **Notificaciones de usuario** , seleccione **Ocultar en el Centro de software y ocultar todas las notificaciones**.   Esto garantiza que las actualizaciones de definiciones se instalen de forma silenciosa. Haga clic en **Siguiente**.
 
-21. En la página **Alertas** del asistente, no es necesario configurar alertas. Endpoint Protection en Configuration Manager genera las alertas que sean necesarias. Haga clic en **Siguiente**.
+20. En la página **Alertas** del asistente, no es necesario configurar alertas. Endpoint Protection en Configuration Manager genera las alertas que sean necesarias. Haga clic en **Siguiente**.
 
-22. En la página **Configuración de descarga** del asistente, seleccione el comportamiento de descarga de actualizaciones de software necesario y luego haga clic en **Siguiente**.
+21. En la página **Configuración de descarga** del asistente, seleccione el comportamiento de descarga de actualizaciones de software necesario y luego haga clic en **Siguiente**.
 
-23. En la página **Paquete de implementación** del asistente, seleccione un paquete de implementación existente o cree uno nuevo que contenga los archivos de actualización de software asociados a la regla.
+22. En la página **Paquete de implementación** del asistente, seleccione un paquete de implementación existente o cree uno nuevo que contenga los archivos de actualización de software asociados a la regla.
 
     > [!NOTE]
     >  Considere la posibilidad de colocar las actualizaciones de definición en un paquete que no contenga otras actualizaciones de software. Con esta estrategia se mantiene un tamaño más pequeño de paquete de actualización de definiciones, lo que permite que se replique en los puntos de distribución más rápidamente.
 
-24. En la página **Puntos de distribución** del asistente, seleccione uno o varios puntos de distribución a los que se va a copiar el contenido de este paquete y luego haga clic en **Siguiente**.
+23. En la página **Puntos de distribución** del asistente, seleccione uno o varios puntos de distribución a los que se va a copiar el contenido de este paquete y luego haga clic en **Siguiente**.
 
-25. En la página **Ubicación de descarga** del asistente, seleccione **Descargar actualizaciones de software de Internet**y haga clic en **Siguiente**.
+24. En la página **Ubicación de descarga** del asistente, seleccione **Descargar actualizaciones de software de Internet**y haga clic en **Siguiente**.
 
-26. En la página **Selección del idioma** del asistente, seleccione cada versión de idioma de las actualizaciones que se van a descargar y luego haga clic en **Siguiente**.
+25. En la página **Selección del idioma** del asistente, seleccione cada versión de idioma de las actualizaciones que se van a descargar y luego haga clic en **Siguiente**.
 
-27. Complete el Asistente para crear regla de implementación automática.
+26. Complete el Asistente para crear regla de implementación automática.
 
-28. Compruebe que la nueva regla se muestra en el nodo **Reglas de implementación automática** de la consola de Configuration Manager.
+27. Compruebe que la nueva regla se muestra en el nodo **Reglas de implementación automática** de la consola de Configuration Manager.
 
 
 > [!div class="button"]

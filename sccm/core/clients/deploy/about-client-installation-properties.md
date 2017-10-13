@@ -14,11 +14,11 @@ caps.latest.revision: "15"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 5148fe852e4d63e1cfd2d5b9c62369155dbecb89
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: ef515da67a7293de60a7678dee69e9785d339352
+ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>Acerca de las propiedades de instalación de clientes en System Center Configuration Manager
 
@@ -179,7 +179,7 @@ Ejemplo: `ccmsetup.exe /downloadtimeout:100`
 
  Cuando no se especifica, el cliente comprueba la CRL antes de establecer una conexión HTTPS.  
 
- Para más información sobre la comprobación de CRL de cliente, consulte [Planning for PKI certificate revocation](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs) en[Plan for security en System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
+ Para más información sobre la comprobación de CRL de cliente, vea [Planear la revocación de certificados PKI](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs) en [Planificar la seguridad en System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
 
  Ejemplo: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
 
@@ -332,7 +332,7 @@ Ejemplo: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
  No especifique esta opción con la propiedad de instalación SMSSITECODE = AUTO. Los clientes basados en Internet deben asignarse directamente a su sitio basado en Internet.  
 
- Ejemplo: `CCMSetup.exe  /UsePKICert/ CCMHOSTNAME="SMSMP01.corp.contoso.com"`  
+ Ejemplo: `CCMSetup.exe  /UsePKICert CCMHOSTNAME="SMSMP01.corp.contoso.com"`  
 
 ### <a name="ccmhttpport"></a>CCMHTTPPORT
 
@@ -402,7 +402,7 @@ Ejemplo: `CCMSetup.exe DISABLECACHEOPT=TRUE`
 
 Especifica el punto de estado de reserva que recibe y procesa los mensajes de estado enviados por los equipos cliente de Configuration Manager.  
 
-Para más información sobre el punto de estado de reserva, vea [Determine if you need a fallback status point](/sccm/core/clients/deploy/plan#determine-if-you-need-a-fallback-status-point) (Determinar si necesita un punto de estado de reserva).  
+Para más información sobre el punto de estado de reserva, vea [Determine if you need a fallback status point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) (Determinar si necesita un punto de estado de reserva).  
 
 Ejemplo: `CCMSetup.exe FSP=SMSFP01`  
 

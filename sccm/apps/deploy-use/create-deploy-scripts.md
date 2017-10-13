@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: e6b29cd85504742e8638a55db2f6c4ecc8ab3e55
-ms.sourcegitcommit: 5ca89204716750eaaceb01bba40b35b85c7122ba
+ms.openlocfilehash: 4c90617890ba3751a7215e9ac54042d64cc1a227
+ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
 
@@ -58,6 +58,9 @@ De forma predeterminada, los usuarios no pueden aprobar un script que hayan crea
 2. En el área de trabajo **Administración** , expanda **Configuración del sitio**y, a continuación, haga clic en **Sitios**.
 3. En la lista de sitios, elija el sitio y, a continuación, en la pestaña **Inicio** del grupo **Sitios**, haga clic en **Configuración de jerarquía**.
 4. En la pestaña **General** del cuadro de diálogo **Propiedades de configuración de jerarquía**, desactive la casilla **Do not allow script authors to approve their own scripts** (No permitir que los autores de scripts aprueben sus propios scripts).
+
+>[!IMPORTANT]
+>Como práctica recomendada, no debe permitir que el autor de un script apruebe sus propios scripts. Solo se puede permitir en entornos de laboratorio. Piense en el impacto que puede implicar modificar este marco en un entorno de producción.
 
 ## <a name="import-and-edit-a-script"></a>Importación y modificación de un script
 
@@ -108,6 +111,9 @@ Una vez que se ha aprobado un script, podrá ejecutarse en la colección que eli
 
 >[!IMPORTANT]
 >El script tiene un período de una hora durante el cual se ejecutará. Si no ejecuta (por ejemplo, si el equipo se ha apagado) en este período, debe volver a ejecutarlo.
+
+>[!IMPORTANT]
+>El script se ejecuta como cuenta de sistema o de equipo en los clientes objetivo. Esta cuenta tiene un acceso a la red muy limitado. El acceso a sistemas y ubicaciones remotos por parte del script se debe aprovisionar teniendo en cuenta este aspecto.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
