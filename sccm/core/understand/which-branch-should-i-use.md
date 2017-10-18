@@ -108,9 +108,9 @@ La LTSB se basa en la versión de la Rama actual 1606 y tiene las siguientes lim
 - Puede convertir su instalación de LTSB a una instalación de la Rama actual. Se admite la conversión a la Rama actual antes o después de que caduque la LSTB.
 
   Para convertir, debe tener un contrato de Software Assurance activo con Microsoft. Para obtener más información, consulte los vínculos siguientes:
-  - [Upgrade the Long-Term Servicing Branch to the Current Branch](convert-to-current-branch.md) (Actualización de la Rama de mantenimiento a largo plazo a la Rama actual)
+  - [Actualización de la Rama de mantenimiento a largo plazo a la Rama actual](convert-to-current-branch.md)
   - [Licencias y ramas para System Center Configuration Manager](learn-more-editions.md)
-  - [Baseline and update versions](/sccm/core/servers/manage/updates#baseline-and-update-versions) (Versiones de línea base y actualización) en [Updates for Configuration Manager](/sccm/core/servers/manage/updates) (Actualizaciones para Configuration Manager)
+  - [Versiones de línea base y actualización](/sccm/core/servers/manage/updates#baseline-and-update-versions) en [Actualizaciones para Configuration Manager](/sccm/core/servers/manage/updates)
 - No hay ninguna opción para convertir la LTSB en Technical Preview. Las versiones Technical Preview son instalaciones independientes que no requieren una licencia.
 -   No se puede actualizar una versión de evaluación de la Rama actual a una instalación de LTSB.
 
