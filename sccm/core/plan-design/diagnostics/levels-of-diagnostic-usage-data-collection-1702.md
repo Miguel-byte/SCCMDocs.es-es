@@ -207,7 +207,7 @@ Para la versión 1702 de System Center Configuration Manager, este nivel incluye
 
    - Número de clases de inventario de hardware, reglas de inventario de software y reglas de recopilación de archivos
 
-   - ***[Nuevo] *** Estadísticas de atestación de estado de dispositivo, incluidos los códigos de errores más comunes, el número de servidores locales y los recuentos de dispositivos en varios estados.
+   - ***[Nuevo]***  Estadísticas de atestación de estado de dispositivo, incluidos los códigos de errores más comunes, el número de servidores locales y los recuentos de dispositivos en varios estados.
 
 
 

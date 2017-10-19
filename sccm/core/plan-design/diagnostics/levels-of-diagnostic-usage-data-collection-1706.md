@@ -97,7 +97,7 @@ Para la versión 1706 de System Center Configuration Manager, este nivel incluye
 
 - Tipos de puntos de distribución y puntos de administración e información básica de configuración (protegida, preconfigurada, PXE, multidifusión, estado de SSL, puntos de distribución de extracción o del mismo nivel, MDM habilitado, SSL habilitado, etc.)
 
-- ***[Nuevo] *** Lista de extensiones con hash de asistentes y páginas de propiedades de consola
+- ***[Nuevo]***  Lista de extensiones con hash de asistentes y páginas de propiedades de consola
 
 - Información sobre la instalación:
      - Compilación, tipo de instalación, paquetes de idioma, características que ha habilitado   
