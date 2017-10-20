@@ -125,7 +125,7 @@ Para la automatización que habilita la inscripción de muchos clientes, use la 
 
         -   'dominio\nombre'. Por ejemplo: 'contoso\mnorth'  
 
-        -   "user@domain". Por ejemplo: "mnorth@contoso.com"  
+        -   "user@domain".  Por ejemplo: "mnorth@contoso.com"  
 
             > [!IMPORTANT]  
             >  Si usa una dirección de correo electrónico para rellenar el campo **Nombre de usuario**, Configuration Manager automáticamente usa el nombre de dominio de la dirección de correo electrónico y el nombre predeterminado del servidor de punto de proxy de inscripción para rellenar el campo **Nombre de servidor**. Si el nombre de dominio y el nombre de servidor no coinciden con el nombre del servidor de punto de proxy de inscripción, notifique a los usuarios el nombre correcto que deben usar al realizar la inscripción de equipos Mac.  
@@ -157,7 +157,7 @@ Use este procedimiento para automatizar la instalación del cliente y solicitar 
 
     -   'dominio\nombre'. Por ejemplo: 'contoso\mnorth'  
 
-    -   "user@domain". Por ejemplo: "mnorth@contoso.com"  
+    -   "user@domain".  Por ejemplo: "mnorth@contoso.com"  
 
      El nombre de usuario y la contraseña correspondiente deben coincidir con una cuenta de usuario de Active Directory a la que se haya concedido permisos de lectura e inscripción en la plantilla de certificado de cliente de Mac.  
 
