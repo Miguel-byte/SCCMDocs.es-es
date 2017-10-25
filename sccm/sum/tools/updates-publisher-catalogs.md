@@ -25,7 +25,7 @@ ms.lasthandoff: 08/07/2017
 
 *Se aplica a: System Center Updates Publisher*
 
-Use el **área de trabajo Catálogos****** para administrar catálogos de actualizaciones de software. Esto incluye agregar nuevos catálogos, administrar suscripciones de catálogo existentes e importar información sobre las actualizaciones de un catálogo en el repositorio de Updates Publisher.
+Use el **área de trabajo** **Catálogos** para administrar catálogos de actualizaciones de software. Esto incluye agregar nuevos catálogos, administrar suscripciones de catálogo existentes e importar información sobre las actualizaciones de un catálogo en el repositorio de Updates Publisher.
 
 Los catálogos de actualizaciones de software contienen información sobre actualizaciones relacionadas que han creado organizaciones distintas a Microsoft. Otras organizaciones incluyen los proveedores de software de terceros y de su propia organización que hayan registrado sus catálogos con Microsoft. Los catálogos de proveedores de software registrados se denominan *catálogos de partner*. Los catálogos que se crean y no están registrados con Microsoft se denominan catálogos de *usuario*.
 
