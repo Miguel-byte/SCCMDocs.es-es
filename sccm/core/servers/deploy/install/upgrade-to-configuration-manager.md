@@ -29,7 +29,7 @@ Puede ejecutar una actualización local para actualizar a System Center Configur
  Antes de actualizar desde System Center 2012 Configuration Manager, debe preparar los sitios, lo que requiere quitar configuraciones específicas que pueden impedir la correcta actualización, y luego seguir la secuencia de actualización si existe más de un sitio implicado.  
 
  > [!TIP]
- > Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* e *instalar* se utilizan para describir los tres conceptos independientes. ** Para obtener información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).
+ > Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* e *instalar* se utilizan para describir los tres conceptos independientes. Para obtener información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).
 
 ##  <a name="bkmk_path"></a> Rutas de actualización local  
 

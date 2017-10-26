@@ -26,7 +26,7 @@ ms.lasthandoff: 08/07/2017
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
 
-Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* ** e *instalar* se utilizan para describir los tres conceptos independientes.
+Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* e *instalar* se utilizan para describir los tres conceptos independientes.
 
 ## <a name="upgrade"></a>Actualizar
 La *actualización* o *actualización in situ* se usan al convertir su jerarquía o sitio de Configuration Manager 2012 en uno que ejecuta System Center Configuration Manager.
