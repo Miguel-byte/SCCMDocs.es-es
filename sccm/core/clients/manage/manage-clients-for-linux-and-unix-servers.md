@@ -68,7 +68,7 @@ Cuando se administran los servidores Linux y UNIX con System Center Configuratio
 > [!NOTE]  
 >  El cliente de Configuration Manager para Linux y UNIX nunca solicita ni procesa la directiva de usuario.  
 
-##  <a name="BKMK_ManageLinuxCerts"></a> How to manage certificates on the client for Linux and UNIX  
+##  <a name="BKMK_ManageLinuxCerts"></a> Administración de certificados en el cliente para Linux y UNIX  
  Después de instalar el cliente para Linux y UNIX, puede usar la herramienta **certutil** para actualizar el cliente con un nuevo certificado PKI e importar una nueva lista de revocación de certificados (CRL). Al instalar el cliente para Linux y UNIX, esta herramienta se coloca en **/opt/microsoft/configmgr/bin/certutil**. 
 
  Para administrar certificados, en cada cliente ejecute certutil con una de las siguientes opciones:  
