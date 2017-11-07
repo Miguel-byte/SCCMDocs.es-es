@@ -1,5 +1,6 @@
 ---
-title: "Fundamentos de la administración de dispositivos | Microsoft Docs"
+title: "Fundamentos de la administración de dispositivos"
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre cómo usar System Center Configuration Manager para administrar dispositivos."
 ms.custom: na
 ms.date: 12/04/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 45d84122a86da880268c93ecd994250df6b76c8a
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b8859537bd213928df3b4388ccbedb871e43c336
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="fundamentals-of-managing-devices-with-system-center-configuration-manager"></a>Fundamentos de la administración de dispositivos con System Center Configuration Manager
 

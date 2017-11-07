@@ -1,5 +1,6 @@
 ---
-title: "Administración del bloqueo de activación de iOS | Microsoft Docs"
+title: "Administración del bloqueo de activación de iOS"
+titleSuffix: Configuration Manager
 description: "Administre el bloqueo de activación de iOS con System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "9"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: c2a771253df7d208391b749eb43d23433e4530a9
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 3b372d9f766fa48b4b57fcd0658f66573ed02d12
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-ios-activation-lock-with-system-center-configuration-manager"></a>Administración del bloqueo de activación de iOS con System Center Configuration Manager
 

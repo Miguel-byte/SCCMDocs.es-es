@@ -1,5 +1,6 @@
 ---
-title: "Introducción a la implementación de sistema operativo | Microsoft Docs"
+title: "Introducción a la implementación de sistema operativo"
+titleSuffix: Configuration Manager
 description: Comprenda los conceptos antes de implementar sistemas operativos en su entorno de Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "12"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 2baa6b7dbd66ab41bc9b67e8f43c313be233153c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5835bde38cb940d2e38df4a38146753a6842f1d7
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="introduction-to-operating-system-deployment-in-system-center-configuration-manager"></a>Introducción a la implementación de sistema operativo en System Center Configuration Manager
 

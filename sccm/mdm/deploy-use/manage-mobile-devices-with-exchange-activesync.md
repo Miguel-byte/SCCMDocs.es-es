@@ -1,5 +1,6 @@
 ---
-title: "Administrar dispositivos móviles | Microsoft Docs"
+title: "Administrar dispositivos móviles "
+titleSuffix: Configuration Manager
 description: "Administre dispositivos móviles mediante el conector de Exchange Server en System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 44958bc35586f5e57ab3fb59681bfb018d2bd5da
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d8f3a963d0fccb3469e751e1ca3319368ae92506
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-mobile-devices-with-system-center-configuration-manager-and-exchange"></a>Administrar dispositivos móviles mediante System Center Configuration Manager y Exchange
 

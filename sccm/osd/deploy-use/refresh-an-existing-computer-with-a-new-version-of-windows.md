@@ -1,5 +1,6 @@
 ---
-title: "Actualizar un equipo existente con una nueva versión de Windows | Microsoft Docs"
+title: "Actualizar un equipo existente con una nueva versión de Windows"
+titleSuffix: Configuration Manager
 description: "Puede usar varios métodos en Configuration Manager para la partición y el formato (borrado) de un equipo existente, así como para instalar un nuevo sistema operativo en el equipo."
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "7"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 4a87b8489e9f0ed72426364a1de02e033c1c6f82
-ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
+ms.openlocfilehash: a7a3f61793e92453b8ccc048192d3ae858a78a4a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="refresh-an-existing-computer-with-a-new-version-of-windows-using-system-center-configuration-manager"></a>Actualizar un equipo existente con una nueva versión de Windows mediante System Center Configuration Manager
 

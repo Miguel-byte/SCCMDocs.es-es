@@ -1,5 +1,6 @@
 ---
-title: Aprovisionar previamente BitLocker en Windows PE | Microsoft Docs
+title: Aprovisionar previamente BitLocker en Windows PE
+titleSuffix: Configuration Manager
 description: "La tarea Aprovisionar previamente BitLocker en Configuration Manager habilita BitLocker en el Entorno de preinstalación de Windows antes de la implementación del sistema operativo."
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: baca498dbc5b8e168852aa3c18ee23a9c483e69c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 936dead7461162779d85796808a8a94e9b8bc44a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="preprovision-bitlocker-in-windows-pe-with-system-center-configuration-manager"></a>Aprovisionar previamente BitLocker en Windows PE con System Center Configuration Manager
 

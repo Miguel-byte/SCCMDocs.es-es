@@ -1,5 +1,6 @@
 ---
-title: Funciones obsoletas | Microsoft Docs
+title: "Características en desuso"
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre las características, los productos y los sistemas operativos que ya no admite System Center Configuration Manager."
 ms.custom: na
 ms.date: 08/16/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 8ac7009014a4652a36acf69ebfe9ccab3ba8ecbd
-ms.sourcegitcommit: 3ce56c7350411d8cc3d3cb9b4054f9ada9b0ed54
+ms.openlocfilehash: 7a87e03cdade6339bc0ea0055edf8791e197e6f1
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="removed-and-deprecated-features-for-system-center-configuration-manager"></a>Características eliminadas y en desuso de System Center Configuration Manager
 

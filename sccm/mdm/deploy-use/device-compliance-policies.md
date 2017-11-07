@@ -1,5 +1,6 @@
 ---
-title: Directivas de cumplimiento de dispositivos | Microsoft Docs
+title: Directivas de cumplimiento de dispositivos
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre cómo administrar directivas de cumplimiento en System Center Configuration Manager para que los dispositivos sean compatibles con directivas de acceso condicional."
 ms.custom: na
 ms.date: 03/05/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: bcaa2a9b5474e06bf344dc4fd47dbb160ea36297
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d9811d81987e8531ee48a07a6855b337fdccb73b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>Directivas de cumplimiento de dispositivo en System Center Configuration Manager
 

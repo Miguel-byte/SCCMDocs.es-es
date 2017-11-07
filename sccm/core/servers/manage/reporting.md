@@ -1,5 +1,6 @@
 ---
-title: "Generación de informes | Microsoft Docs"
+title: "Generación de informes"
+titleSuffix: Configuration Manager
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -14,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: cebc48180144ae0d711ff09d16be7c37ec237cfa
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 9690e90627830bbabc551fd6377847051547df16
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="reporting-in-system-center-configuration-manager"></a>Generación de informes en System Center Configuration Manager
 

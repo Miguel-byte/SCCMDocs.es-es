@@ -1,5 +1,6 @@
 ---
-title: Crear una secuencia de tareas para implementaciones que no son de sistema operativo | Microsoft Docs
+title: Crear una secuencia de tareas para implementaciones que no son de sistema operativo
+titleSuffix: Configuration Manager
 description: "Cree secuencias de tareas que no estén relacionadas con la implementación de sistemas operativos, como la distribución de software, la actualización de controladores, la edición de estados de usuario, etc."
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: a50354070c03ad8acbd21432a192f949c0a196fa
-ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
+ms.openlocfilehash: 8d230cd6bba3bcc911f0762eea43e8cec56f0535
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-a-task-sequence-for-non-operating-system-deployments-with-system-center-configuration-manager"></a>Crear una secuencia de tareas para implementaciones que no son de sistema operativo con System Center Configuration Manager
 

@@ -1,5 +1,6 @@
 ---
-title: Garantizar el cumplimiento de dispositivos | Microsoft Docs
+title: Asegurar el cumplimiento de dispositivos
+titleSuffix: Configuration Manager
 description: "Administre la configuración y el cumplimiento de los dispositivos de la organización mediante System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 0396718ee6290c58ca1761922e51e336b997f52c
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 27738aa8587d8930781bc5f70248c8c994227851
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="ensure-device-compliance-with-system-center-configuration-manager"></a>Garantizar el cumplimiento de dispositivos con System Center Configuration Manager
 

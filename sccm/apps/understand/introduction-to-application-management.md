@@ -1,5 +1,6 @@
 ---
-title: "Introducción a la administración de aplicaciones | Microsoft Docs"
+title: "Introducción a la administración de aplicaciones"
+titleSuffix: Configuration Manager
 description: "Obtenga la información básica que necesitará para administrar e implementar las aplicaciones de System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/23/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "18"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: d92b9098eb89b8a09c39a1df13acffe694234096
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: a8a66169f3c187f8fa0319548ddde23b399811f3
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="introduction-to-application-management-in-system-center-configuration-manager"></a>Introducción a la administración de aplicaciones en System Center Configuration Manager
 

@@ -1,5 +1,6 @@
 ---
-title: "Seguridad y privacidad de la administración de energía | Microsoft Docs"
+title: "Seguridad y privacidad de la administración de energía"
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre seguridad y privacidad aplicadas a la administración de energía en System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 51a29eec13373f92a65ac09dfb23d1b5cdd1683a
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: 5de0ed261b3069306992eeddb4b71b3fe22f197c
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="security-and-privacy-for-power-management-in-system-center-configuration-manager"></a>Seguridad y privacidad de la administración de energía en System Center Configuration Manager
 

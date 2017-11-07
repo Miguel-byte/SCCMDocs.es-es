@@ -1,5 +1,6 @@
 ---
-title: "Seguridad y privacidad para la configuración de cumplimiento | Microsoft Docs"
+title: "Seguridad y privacidad para la configuración de cumplimiento"
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre los procedimientos recomendados de seguridad para la configuración de cumplimiento en System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: f38e03ffac6d3472bbef9c3b78e4c0e1f7cde598
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: cba7ceff6114e19c8bf86068c7390de8c9e505e8
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="security-and-privacy-for-compliance-settings-in-system-center-configuration-manager"></a>Seguridad y privacidad para la configuración de cumplimiento en System Center Configuration Manager
 

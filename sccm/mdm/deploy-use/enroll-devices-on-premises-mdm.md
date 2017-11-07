@@ -1,5 +1,6 @@
 ---
-title: "Inscripción de dispositivos | Microsoft Docs"
+title: 'Inscribir dispositivos '
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre los métodos para inscribir dispositivos para la administración de dispositivos móviles local en System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017
@@ -11,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: b58472e3-31a5-4305-8eb6-2522befebe02
 caps.latest.revision: "6"
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 4abaef35969ef1a5340ae8ca8aa5699cd3942642
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: aa1f085689f2d7d752f2887f9cbac5b8f642785e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="enroll-devices-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Inscribir dispositivos para la administración local de dispositivos móviles en System Center Configuration Manager
 

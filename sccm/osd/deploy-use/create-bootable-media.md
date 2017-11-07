@@ -1,5 +1,6 @@
 ---
-title: Crear medios de arranque en Configuration Manager | Microsoft Docs
+title: 'Crear medios de arranque '
+titleSuffix: Configuration Manager
 description: "Los medios de arranque de Configuration Manager facilitan instalar una nueva versión de Windows o reemplazar un equipo y transferir la configuración."
 ms.custom: na
 ms.date: 01/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 9032698fa12bf453041ea06bf330d3b4687c2a97
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: f75a29ff27a1f806d4329bd2dfc5e30a8991fac9
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-bootable-media-with-system-center-configuration-manager"></a>Crear medios de arranque con System Center Configuration Manager
 

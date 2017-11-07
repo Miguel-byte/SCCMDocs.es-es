@@ -1,5 +1,6 @@
 ---
-title: "Protección contra amenazas avanzada de Windows Defender | Microsoft Docs"
+title: "Protección contra amenazas avanzada de Windows Defender"
+titleSuffix: Configuration Manager
 description: "Aprenda a administrar y supervisar Protección contra amenazas avanzada de Windows Defender, un nuevo servicio que ayuda a las empresas a responder a los ataques avanzados."
 ms.custom: na
 ms.date: 03/07/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 6c3b67278fa587c137a29e174e277fb0f15872c8
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 561a03c7046accaa8e6d36407c75cbd4248188ce
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Protección contra amenazas avanzada de Windows Defender
 

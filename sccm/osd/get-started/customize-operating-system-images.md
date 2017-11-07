@@ -1,5 +1,6 @@
 ---
-title: "Personalizar imágenes de sistema operativo en Configuration Manager | Microsoft Docs"
+title: "Personalizar las imágenes de sistema operativo "
+titleSuffix: Configuration Manager
 description: "Use secuencias de tareas de captura y compilación, la configuración manual o una combinación de ambas para personalizar una imagen de sistema operativo."
 ms.custom: na
 ms.date: 01/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 485cb3ca4988f983c1ec71b6c8daf136571bf0ea
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 973a8df54d1acab48803b34bf18494b2ae7f6054
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="customize-operating-system-images-with-system-center-configuration-manager"></a>Personalizar imágenes de sistema operativo con System Center Configuration Manager
 

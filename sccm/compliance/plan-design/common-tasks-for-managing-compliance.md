@@ -1,5 +1,6 @@
 ---
-title: Tareas comunes para administrar el cumplimiento | Microsoft Docs
+title: Tareas comunes para administrar el cumplimiento
+titleSuffix: Configuration Manager
 description: "Aprenda a usar la configuración de cumplimiento en System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 2bd917ad4d18d815a53d9bfba97da41c6385877d
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 605495038c540467c4313b3f41a7f6ccd525ab37
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="common-tasks-for-managing-compliance-with-system-center-configuration-manager"></a>Tareas comunes para administrar el cumplimiento con System Center Configuration Manager
 

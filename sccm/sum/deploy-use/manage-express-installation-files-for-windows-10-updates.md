@@ -1,5 +1,6 @@
 ---
-title: "Administración de archivos de instalación rápida para actualizaciones de Windows 10 | Microsoft Docs"
+title: "Administración de archivos de instalación rápida para actualizaciones de Windows 10"
+titleSuffix: Configuration Manager
 description: "Configuration Manager admite archivos de instalación rápida para Windows 10, que proporciona descargas más pequeñas y tiempos de instalación más rápidos en los clientes."
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
-ms.openlocfilehash: baffb5f026bd63c50f878214e71d2c9e9b8b51c2
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 1ec69b5679f726f20da4ff0f63d9271e5d06cee3
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-express-installation-files-for-windows-10-updates"></a>Administración de archivos de instalación rápida para actualizaciones de Windows 10
 A partir de la versión 1702, Configuration Manager admite archivos de instalación rápida para las actualizaciones de Windows 10. Cuando use una versión compatible con Windows 10, puede usar la configuración de Configuration Manager para descargar solo los cambios entre la actualización acumulativa de Windows 10 del mes actual y la actualización del mes anterior. Sin los archivos de instalación rápida, Configuration Manager descarga cada mes la actualización acumulativa completa de Windows 10 (incluidas todas las actualizaciones de los meses anteriores). Usar los archivos de instalación rápida proporciona descargas más pequeñas y tiempos de instalación más rápidos en los clientes.

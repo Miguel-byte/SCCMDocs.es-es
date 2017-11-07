@@ -1,5 +1,6 @@
 ---
-title: "Configurar la detección | Microsoft Docs"
+title: "Configurar la detección"
+titleSuffix: Configuration Manager
 description: "Configure métodos de detección para que se ejecuten en un sitio de Configuration Manager a fin de detectar recursos que se puedan administrar desde la infraestructura de red y Active Directory."
 ms.custom: na
 ms.date: 7/31/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 34a539ceaea6b070f81a28d2c0a9ce388e26cfeb
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 108721f0ad5107a3b61cfeb82120a275f2f96fdf
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>Configurar métodos de detección para System Center Configuration Manager
 

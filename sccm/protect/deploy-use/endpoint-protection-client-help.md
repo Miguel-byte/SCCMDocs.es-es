@@ -1,5 +1,6 @@
 ---
-title: Ayuda del cliente de Endpoint Protection | Microsoft Docs
+title: Ayuda del cliente Endpoint Protection
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre las características y las mejoras de Endpoint Protection que ayudan a proteger el equipo frente a amenazas."
 ms.custom: na
 ms.date: 02/14/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 212c73fcb947c3b56da6055bf47fe078301ad90d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 50b9e5c89776c57a5f1605d38f6fbbee7ecd833e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="endpoint-protection-client-help"></a>Ayuda del cliente Endpoint Protection
 

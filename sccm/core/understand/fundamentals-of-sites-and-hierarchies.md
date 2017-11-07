@@ -1,5 +1,6 @@
 ---
-title: "Aspectos básicos de sitios y jerarquías | Microsoft Docs"
+title: "Aspectos básicos de sitios y jerarquías"
+titleSuffix: Configuration Manager
 description: "Obtenga información básica sobre los sitios y jerarquías de System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/30/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: f13f38be2a19ab8a1ead246e5272515dd0570984
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: be4fb2b8d4c49981f7a801aff2175d4f0762e8c3
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="fundamentals-of-sites-and-hierarchies-for-system-center-configuration-manager"></a>Aspectos básicos de sitios y jerarquías para System Center Configuration Manager
 

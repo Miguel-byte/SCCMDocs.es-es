@@ -1,5 +1,6 @@
 ---
-title: Compatibilidad con Unicode y ASCII | Microsoft Docs
+title: Compatibilidad con Unicode y ASCII
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre la compatibilidad con caracteres Unicode y ASCII en objetos de System Center Configuration Manager."
 ms.custom: na
 ms.date: 3/1/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 18f1c64c1f27001a0fdfbab4236d09a5bc279272
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 1314c0bc8de25c343b80f40de7d2a007024a17dd
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="unicode-and-ascii-support-in-system-center-configuration-manager"></a>Compatibilidad con Unicode y ASCII en System Center Configuration Manager
 

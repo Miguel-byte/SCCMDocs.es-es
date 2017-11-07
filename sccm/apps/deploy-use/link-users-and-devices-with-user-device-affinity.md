@@ -1,5 +1,6 @@
 ---
-title: Vincular usuarios y dispositivos con la afinidad entre usuario y dispositivo | Microsoft Docs
+title: Vincular usuarios y dispositivos con la afinidad entre usuario y dispositivo
+titleSuffix: Configuration Manager
 description: "Vincule usuarios y dispositivos con afinidad entre usuario y dispositivo e implemente aplicaciones automáticamente en todos los dispositivos asociados a un usuario."
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 141b4e7df4fb3fa4aed3a5a90c6197bf7636a3a0
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 1066028d0cd20521d78780ae2fdfbce91a0860b2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-system-center-configuration-manager"></a>Vincular usuarios y dispositivos con afinidad entre usuario y dispositivo en System Center Configuration Manager
 

@@ -1,5 +1,6 @@
 ---
-title: Mantener clientes Mac | Microsoft Docs
+title: Mantenimiento de clientes Mac
+titleSuffix: Configuration Manager
 description: Tareas de mantenimiento para clientes Mac de Configuration Manager.
 ms.custom: na
 ms.date: 04/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "12"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 45346a5e0d91d84a7f96acc0003ec5fad78d8ab1
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 18464a1ba604350e1c871b6bbddc5d03b1d3d956
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="maintain-mac-clients"></a>Mantenimiento de clientes Mac
 *Se aplica a: System Center Configuration Manager (Rama actual)*

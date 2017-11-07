@@ -1,5 +1,6 @@
 ---
-title: Operaciones y mantenimiento de informes | Microsoft Docs
+title: 'Operaciones y mantenimiento de informes '
+titleSuffix: Configuration Manager
 description: "Obtenga los detalles sobre la administración de informes y suscripciones a informes en System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: df572cd0c64c82e25164430a53e1b893b3ba3cf5
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 05a81cdfd46ba2bf0bea17b06bd72f79296b3930
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="operations-and-maintenance-for-reporting-in-system-center-configuration-manager"></a>Operaciones y mantenimiento de informes en System Center Configuration Manager
 

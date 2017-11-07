@@ -1,5 +1,6 @@
 ---
-title: "Administrar datos de configuración | Microsoft Docs"
+title: "Administrar datos de configuración"
+titleSuffix: Configuration Manager
 description: "Después de crear los elementos de configuración y las líneas base en System Center Configuration Manager, puede utilizar otros comandos para realizar diversas acciones."
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 07d4148559c36745e51be46957b1af3c4a94ce44
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 23a6bcf2e9fcb417dabde7700e09c953d436deb7
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-configuration-data-in-system-center-configuration-manager"></a>Administración de datos de configuración en System Center Configuration Manager
 

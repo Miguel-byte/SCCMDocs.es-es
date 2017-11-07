@@ -1,5 +1,6 @@
 ---
-title: "Preparar el almacenamiento en caché del mismo nivel de Windows PE para reducir el tráfico WAN | Microsoft Docs"
+title: "Preparar el almacenamiento en caché del mismo nivel de Windows PE para reducir el tráfico WAN"
+titleSuffix: Configuration Manager
 description: "Almacenamiento en caché del mismo nivel de Windows PE funciona en Windows PE para obtener contenido de un elemento local de mismo nivel y minimizar el tráfico WAN cuando no hay ningún punto de distribución local."
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "11"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 814c6133a30b1116d05aaeafddb0dfb7fe2a390e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: bb0ed6809d1350c4ce28e20d1a83082a51c2e687
+ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>Preparar el almacenamiento en caché del mismo nivel de Windows PE para reducir el tráfico WAN en System Center Configuration Manager
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 08/07/2017
 
 Al implementar un nuevo sistema operativo en System Center Configuration Manager, los equipos que ejecutan la secuencia de tareas pueden usar Almacenamiento en caché del mismo nivel de Windows PE para obtener contenido de un elemento local del mismo nivel (un origen de almacenamiento en caché del mismo nivel), en lugar de descargar el contenido de un punto de distribución. Esto ayuda a minimizar el tráfico de red de área extensa (WAN) en escenarios de sucursales donde no hay ningún punto de distribución local.  
 
- Almacenamiento en caché del mismo nivel en Windows PE es similar a [Windows BranchCache](http://technet.microsoft.com/library/mt617255\(TechNet.10\).aspx#bkmk_branchcache), pero funciona en el entorno de preinstalación de Windows (Windows PE). Si inicia la secuencia de tareas desde el contexto del sistema operativo, por ejemplo, desde el Centro de software en el cliente, no se usa Almacenamiento en caché del mismo nivel en Windows PE. Los siguientes términos se usan para describir a los clientes que usan Almacenamiento en caché del mismo nivel en Windows PE:  
+ Almacenamiento en caché del mismo nivel en Windows PE es similar a [Windows BranchCache](http://technet.microsoft.com/library/mt617255\(TechNet.10\).aspx#bkmk_branchcache), pero funciona en el entorno de preinstalación de Windows (Windows PE). Los siguientes términos se usan para describir a los clientes que usan Almacenamiento en caché del mismo nivel en Windows PE:  
 
 -   Un **cliente de caché del mismo nivel** es un equipo que está configurado para usar Almacenamiento en caché del mismo nivel en Windows PE.  
 

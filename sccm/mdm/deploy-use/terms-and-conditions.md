@@ -1,5 +1,6 @@
 ---
-title: "Términos y condiciones en System Center Configuration Manager | Microsoft Docs"
+title: "Términos y condiciones"
+titleSuffix: Configuration Manager
 description: "Implemente términos y condiciones en grupos de usuarios en System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "9"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 20be68496099a67ad2d475067f073da2cef16c86
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: f616212b216ad4c94b60c7a805e2f45071947e81
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="add-terms-and-conditions-with-system-center-configuration-manager"></a>Incorporación de términos y condiciones con System Center Configuration Manager
 

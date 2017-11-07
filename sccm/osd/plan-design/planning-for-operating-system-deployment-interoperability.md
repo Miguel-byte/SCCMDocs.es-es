@@ -1,5 +1,6 @@
 ---
-title: "Planeamiento de la interoperabilidad de la implementación de sistema operativo | Microsoft Docs"
+title: "Planeación de la interoperabilidad de la implementación de sistema operativo"
+titleSuffix: Configuration Manager
 description: "Comprenda los problemas de interoperabilidad cuando diferentes sitios de System Center Configuration Manager en una sola jerarquía usan versiones diferentes."
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 50a4b75b8c8c1cb6f7a8e696abad285f99080fcd
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b096ea4d6dfb4df13691c662d196f638d30d5da4
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="planning-for-operating-system-deployment-interoperability-in-system-center-configuration-manager"></a>Planeamiento de la interoperabilidad de la implementación de sistema operativo en System Center Configuration Manager
 

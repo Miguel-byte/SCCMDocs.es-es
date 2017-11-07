@@ -1,5 +1,6 @@
 ---
-title: "Administración del ancho de banda de red para el contenido | Microsoft Docs"
+title: "Administración del ancho de banda de red para contenido"
+titleSuffix: Configuration Manager
 description: "Configure la programación, el límite y el contenido preconfigurado para System Center Configuration Manager."
 ms.custom: na
 ms.date: 2/6/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: d9dff97126c34a726677de60dd7647370c553b6e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5431f23c16ed452223ad931266adad4c20739124
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-network-bandwidth-for-content"></a>Administración del ancho de banda de red para contenido
 Para ayudarle a administrar el ancho de banda de red que se usa para el proceso de administración de contenido de System Center Configuration Manager, puede usar los controles integrados para la programación y el límite. También puede usar contenido preconfigurado. En las secciones siguientes se describen estas opciones con más detalle.

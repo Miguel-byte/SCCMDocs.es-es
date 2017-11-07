@@ -1,5 +1,6 @@
 ---
-title: Comandos de preinicio para medios de secuencia de tareas | Microsoft Docs
+title: Comandos de preinicio para medios de secuencia de tareas
+titleSuffix: Configuration Manager
 description: Cree un script para usarlo con el comando de preinicio, distribuya el contenido asociado al comando de preinicio y configure el comando de preinicio en los medios.
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 1c396534425179c6828d48acc578295167c566be
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 52a4dccfe547f8c25759669dd1b09976302d5c50
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prestart-commands-for-task-sequence-media-in-system-center-configuration-manager"></a>Comandos de preinicio para medios de secuencia de tareas en System Center Configuration Manager
 

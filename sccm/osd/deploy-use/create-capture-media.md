@@ -1,5 +1,6 @@
 ---
-title: Crear medios de captura en Configuration Manager | Microsoft Docs
+title: 'Crear medios de captura '
+titleSuffix: Configuration Manager
 description: Use el Asistente para crear medio de secuencia de tareas para crear medios de captura en Configuration Manager para capturar una imagen de sistema operativo desde un equipo de referencia.
 ms.custom: na
 ms.date: 01/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 5acf800ff5aebd849e294393337755145a60cca5
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c25eade287d254907c7d7d02948eb25a88ed0a11
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-capture-media-with-system-center-configuration-manager"></a>Crear medios de captura con System Center Configuration Manager
 
