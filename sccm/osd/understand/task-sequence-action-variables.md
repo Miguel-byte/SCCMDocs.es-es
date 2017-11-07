@@ -1,5 +1,6 @@
 ---
-title: "Variables de acción de secuencias de tareas | Microsoft Docs"
+title: "Variables de acción de secuencias de tareas"
+titleSuffix: Configuration Manager
 description: "Use variables de acción de secuencia, como las variables de configuración de red, para especificar valores de configuración de un único paso en una secuencia de tareas de Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 675ebf053de98c6ad93a53ae218696012aef96f7
-ms.sourcegitcommit: 5b4fd2d36f06be5bcc7f8ebbfb92c48b7240085d
+ms.openlocfilehash: 8c1462ca922f23250ffa44c6433f01a8220d3ad7
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="task-sequence-action-variables-in-system-center-configuration-manager"></a>Variables de acción de secuencias de tareas en System Center Configuration Manager
 
