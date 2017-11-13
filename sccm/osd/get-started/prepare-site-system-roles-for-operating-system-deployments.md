@@ -1,5 +1,6 @@
 ---
-title: "Preparar los roles de sistema de sitio para la implementación de sistemas operativos | Microsoft Docs"
+title: "Preparar los roles de sistema de sitio para la implementación de sistemas operativos"
+titleSuffix: Configuration Manager
 description: Configure los roles de sistema de sitio antes de implementar sistemas operativos en System Center Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 11c0f169afebdb071fefb5ce300fd1ae3481a94f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c07172bec1032b021c2d7b7ccaabe33c96b930d2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prepare-site-system-roles-for-operating-system-deployments-with-system-center-configuration-manager"></a>Preparar los roles de sistema de sitio para la implementación de sistemas operativos con System Center Configuration Manager
 
@@ -67,7 +68,7 @@ Para implementar sistemas operativos en System Center Configuration Manager, pri
 
 2.  Seleccione el punto de distribución que desee configurar y, en la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
 
-3.  En la página de propiedades para el punto de distribución, haga clic en la pestaña **PXE** . y seleccione **Habilitar compatibilidad de PXE para clientes** para habilitar PXE en este punto de distribución.  
+3.  En la página de propiedades del punto de distribución, haga clic en la pestaña **PXE** y seleccione **Habilitar compatibilidad de PXE para clientes** para habilitar PXE en este punto de distribución.  
 
 4.  Haga clic en **Sí** en el cuadro de diálogo **Revisar los puertos necesarios para PXE** para confirmar que desea habilitar PXE. Configuration Manager configura automáticamente los puertos predeterminados en un firewall de Windows. Debe configurar los puertos manualmente si usa un firewall diferente.  
 

@@ -1,5 +1,6 @@
 ---
-title: "Archivo de novedades de MDM híbrido | Microsoft Docs"
+title: "Archivo de novedades de MDM híbrida"
+titleSuffix: Configuration Manager
 description: "Archivo de características anteriores de administración de dispositivos móviles disponibles para implementaciones híbridas con System Center Configuration Manager e Intune."
 ms.custom: na
 ms.date: 06/30/2017
@@ -10,15 +11,15 @@ ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4c27b161-9eb7-4cdd-b469-d8eb27e71aea
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 0abd1cdcf44e778c91bacb8011efd711818ce2e9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 23b43e85a0ad698a377f51ce4b0d70fe197e9344
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>Características híbridas anteriores con System Center Configuration Manager y Microsoft Intune
 

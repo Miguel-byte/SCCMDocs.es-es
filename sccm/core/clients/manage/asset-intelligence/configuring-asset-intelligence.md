@@ -1,5 +1,6 @@
 ---
-title: Configurar Asset Intelligence | Microsoft Docs
+title: "Configuración de Asset Intelligence"
+titleSuffix: Configuration Manager
 description: Configure Asset Intelligence en System Center Configuration Manager.
 ms.custom: na
 ms.date: 2/22/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: d2704e0f93ad9748f7eb06d714b3754463cb3bdb
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d6137426c4960d0e9a9117fc78d3f26803b4f001
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configure-asset-intelligence-in-system-center-configuration-manager"></a>Configurar Asset Intelligence en System Center Configuration Manager
 
@@ -140,7 +141,7 @@ Además de descargar la nueva información del catálogo Asset Intelligence, el 
 
 2.  En la pestaña **Inicio**, en el grupo **Asset Intelligence**, pulse **Importar licencias de software**.   
 
-4.  En la página **Importar** , especifique si está importando un archivo de licencias por volumen de Microsoft (MVLS) (.xml o .csv) o un archivo de declaración de licencia general (.csv). Para más información sobre cómo crear un archivo de declaración de licencia general, vea [Crear un archivo de información de declaración de licencia general para importación](#BKMK_CreateGeneralLicenseStatement) más adelante en este tema.  
+4.  En la página **Importar** , especifique si está importando un archivo de licencias por volumen de Microsoft (MVLS) (.xml o .csv) o un archivo de declaración de licencia general (.csv). Para más información sobre cómo crear un archivo de declaración de licencia general, vea [Create a general license statement information file for import](#BKMK_CreateGeneralLicenseStatement) más adelante en este tema.  
 
     > [!WARNING]  
     >  Para descargar un archivo MVLS en formato .csv que pueda importar en el catálogo Asset Intelligence, consulte [Centro de servicios de licencias por volumen de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=226547). Para acceder a esta información, debe tener una cuenta registrada en el sitio web. Debe ponerse en contacto con su representante de cuenta de Microsoft para recibir información sobre cómo obtener el archivo MVLS en formato .xml.  
@@ -152,7 +153,7 @@ Además de descargar la nueva información del catálogo Asset Intelligence, el 
 
 6. Complete el asistente.  
 
-###  <a name="BKMK_CreateGeneralLicenseStatement"></a> Crear un archivo de información de declaración de licencia general para importación  
+###  <a name="BKMK_CreateGeneralLicenseStatement"></a> Create a general license statement information file for import  
  Una declaración de licencia general también se puede importar en el catálogo Asset Intelligence mediante un archivo de importación de licencia creado manualmente con un formato de archivo delimitado por comas (.csv).  
 
 > [!NOTE]  

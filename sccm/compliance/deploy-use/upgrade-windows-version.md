@@ -1,5 +1,6 @@
 ---
-title: "Actualizar dispositivos de Windows a otra versión con Configuration Manager | Documentos de Microsoft"
+title: "Actualización de dispositivos Windows a una versión diferente"
+titleSuffix: Configuration Manager
 description: "Actualice dispositivos que ejecuten Windows 10 Escritorio, Windows 10 Mobile o Windows 10 Holographic a otra edición más reciente de forma automática con Configuration Manager."
 ms.custom: na
 ms.date: 07/31/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 89b0b89ae6acfb6e9d82dfb6d233fe131969924c
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 4a715f7bf5d5f5f3b6fbd0015882328924181eac
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="upgrade-windows-devices-with-the-edition-upgrade-policy-in-system-center-configuration-manager"></a>Actualizar dispositivos de Windows con la directiva de actualización de edición en System Center Configuration Manager
 

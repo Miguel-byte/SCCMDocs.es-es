@@ -1,5 +1,6 @@
 ---
-title: "Herramienta de mantenimiento de jerarquía | Microsoft Docs"
+title: "Herramienta de mantenimiento de jerarquías"
+titleSuffix: Configuration Manager
 description: "Comprenda lo que realiza la herramienta de mantenimiento de jerarquía y por qué podría usarla. Incluye referencia de las opciones de línea de comandos."
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: f3ddeaadfb1418aeeaacdca47768600c86b59083
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 96e5166498406259600849e9adffcdfb200e8ec1
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="hierarchy-maintenance-tool-preinstexe-for-system-center-configuration-manager"></a>Herramienta de mantenimiento de jerarquía (Preinst.exe) para System Center Configuration Manager
 

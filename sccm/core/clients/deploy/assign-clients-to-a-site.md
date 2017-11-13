@@ -1,5 +1,6 @@
 ---
-title: Asignar clientes a un sitio | Microsoft Docs
+title: "Asignación de clientes a un sitio"
+titleSuffix: Configuration Manager
 description: Asigne clientes a un sitio en System Center Configuration Manager.
 ms.custom: na
 ms.date: 04/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: fbac58f3745839d974f9ec865fee313dda211d0a
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: e11287659f6df5503cdabf203cdffa7655232acd
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-assign-clients-to-a-site-in-system-center-configuration-manager"></a>Cómo asignar clientes a un sitio en System Center Configuration Manager
 

@@ -1,5 +1,6 @@
 ---
-title: "Habilitación de la inscripción en la plataforma mediante System Center Configuration Manager | Microsoft Docs"
+title: "Habilitación de la inscripción de plataforma"
+titleSuffix: Configuration Manager
 description: "Habilite la inscripción en la plataforma mediante System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017
@@ -12,14 +13,14 @@ ms.topic: article
 ms.assetid: a9163b77-a67d-4139-8272-bb1dfdb8707c
 caps.latest.revision: "18"
 caps.handback.revision: "0"
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 4b047aa752b638aeeb7dd363a66564800d00a8df
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 318e36fc751aad31d0d641d6989df06621d17acf
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="enable-platform-enrollment-with-system-center-configuration-manager-and-microsoft-intune"></a>Habilitación de la inscripción en la plataforma con System Center Configuration Manager
 

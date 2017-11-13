@@ -1,5 +1,6 @@
 ---
-title: "Instalación y asignación del cliente desde Internet | Microsoft Docs"
+title: "Instalación y asignación del cliente desde Internet"
+titleSuffix: Configuration Manager
 description: Instale y asigne al cliente de System Center Configuration Manager desde Internet.
 ms.custom: na
 ms.date: 8/07/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d783cc2f12400084ad1cd62a338a31c9747c05fb
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: 2ef7580f94864094e9420eb0f5a5c5b4dc9d6d24
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>Instalación y asignación de clientes Windows 10 para Configuration Manager mediante la autenticación basada en Azure AD
 

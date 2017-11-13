@@ -1,5 +1,6 @@
 ---
-title: Configuraciones admitidas para la LTSB | Microsoft Docs
+title: 'Configuraciones compatibles con LTBS '
+titleSuffix: Configuration Manager
 description: "Entienda qué sistemas operativos y productos dependientes funcionan con la rama de mantenimiento a largo plazo de System Center Configuration Manager."
 ms.custom: na
 ms.date: 5/10/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 31bddee83b2365cfa903077ffaa1d7116b194378
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: dad9ad1aba5390c24adc851349aa272aa54c0611
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Configuraciones admitidas de la rama de mantenimiento a largo plazo de System Center Configuration Manager
 

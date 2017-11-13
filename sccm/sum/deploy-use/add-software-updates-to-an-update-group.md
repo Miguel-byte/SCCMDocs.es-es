@@ -1,5 +1,6 @@
 ---
-title: Agregar actualizaciones a un grupo de actualizaciones en Configuration Manager | Microsoft Docs
+title: "Adición de actualizaciones a un grupo de actualizaciones "
+titleSuffix: Configuration Manager
 description: "Agregue actualizaciones de software de forma manual o automática a un grupo de actualizaciones de software del entorno."
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
-ms.openlocfilehash: 02e30ba48f3564fa8a31f21793c145054e02e002
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: da01e07749d1e185861941515cf1a4addbd45093
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="add-software-updates-to-an-update-group"></a>Agregar actualizaciones de software a un grupo de actualizaciones  
 

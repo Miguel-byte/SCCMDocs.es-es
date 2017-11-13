@@ -1,5 +1,6 @@
 ---
-title: "Supervisar el estado de implementación de cliente | Microsoft Docs"
+title: "Supervisión del estado de implementación de cliente"
+titleSuffix: Configuration Manager
 description: "Supervise el estado de implementación de cliente en System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: bddc2cf4ae335a8b407035a90818d7fa01dcc398
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: f5ea535b47b7b9061282a1aadcaa6ed7492f08b4
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-monitor-client-deployment-status-in-system-center-configuration-manager"></a>Supervisar el estado de implementación de cliente en System Center Configuration Manager
 

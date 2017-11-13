@@ -1,5 +1,6 @@
 ---
-title: Crear condiciones globales | Microsoft Docs
+title: "Creación de condiciones globales"
+titleSuffix: Configuration Manager
 description: "Cree condiciones globales para especificar cómo se proporciona y se implementa una aplicación en los dispositivos cliente."
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 6aedab4ab23749061ec103e0de92edafdad13d33
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 480e7a68308d458bc77ddb4956db2616eaaced97
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-global-conditions-in-system-center-configuration-manager"></a>Cómo crear condiciones globales en System Center Configuration Manager
 

@@ -1,5 +1,6 @@
 ---
-title: Usar ventanas de mantenimiento | Microsoft Docs
+title: Uso de ventanas de mantenimiento
+titleSuffix: Configuration Manager
 description: Use recopilaciones y ventanas de mantenimiento para administrar eficazmente los clientes en System Center Configuration Manager.
 ms.custom: na
 ms.date: 02/22/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: fa67cf597c73bab47209c9b98539f97e174ae70b
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 960955af87cdae9c43b5b520c348e32e1f48ef32
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-use-maintenance-windows-in-system-center-configuration-manager"></a>Cómo usar ventanas de mantenimiento en System Center Configuration Manager
 

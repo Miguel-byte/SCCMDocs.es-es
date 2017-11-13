@@ -1,5 +1,6 @@
 ---
-title: "Instalar un sitio con el medio de línea base 1606 | Microsoft Docs"
+title: "Instalación de un sitio con el medio de línea base 1606 "
+titleSuffix: Configuration Manager
 description: Instale o actualice a la LTSB de System Center Configuration Manager.
 ms.custom: na
 ms.date: 09/06/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 247fbe5313c17be906802acfaa6952ab3358122e
-ms.sourcegitcommit: a17f5dece340a70cedbec03d19938dab90ae60b1
+ms.openlocfilehash: 13f483a31e5f74af549fd201e53079ae894227ae
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>Instalar y actualizar con el medio de línea base de la versión 1606 para System Center Configuration Manager
 

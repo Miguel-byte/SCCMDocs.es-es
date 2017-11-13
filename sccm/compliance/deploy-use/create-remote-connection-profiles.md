@@ -1,5 +1,6 @@
 ---
-title: "Crear perfiles de conexión remota | Microsoft Docs"
+title: "Creación de perfiles de conexión remota"
+titleSuffix: Configuration Manager
 description: "Use perfiles de conexión remota de System Center Configuration Manager para permitir a los usuarios conectarse remotamente a equipos de trabajo."
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: d12faf657ca99dd572f1b28eb398783426fcdf8c
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 8ca0b961f075f41984d6dbba7321c375940a8622
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="remote-connection-profiles-in-system-center-configuration-manager"></a>Perfiles de conexión remota en System Center Configuration Manager
 

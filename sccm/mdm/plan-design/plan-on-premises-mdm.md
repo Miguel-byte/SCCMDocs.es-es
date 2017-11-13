@@ -1,5 +1,6 @@
 ---
-title: Planear MDM local | Microsoft Docs
+title: Planeamiento de MDM local
+titleSuffix: Configuration Manager
 description: "Planee la administración de dispositivos móviles local para administrar dispositivos en System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017
@@ -12,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
 caps.latest.revision: "9"
 caps.handback.revision: "0"
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 544c3bea0c7df96887ee1717f061c39c64b82d01
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e1c6a5ccd003295d007e78f0745c30732e10c2df
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Planear la administración de dispositivos móviles (MDM) local con System Center Configuration Manager
 

@@ -1,5 +1,6 @@
 ---
-title: Seguridad y privacidad de las recopilaciones | Microsoft Docs
+title: Seguridad y privacidad de recopilaciones
+titleSuffix: Configuration Manager
 description: Consulte los procedimientos recomendados sobre la seguridad y la privacidad de las recopilaciones en System Center Configuration Manager.
 ms.custom: na
 ms.date: 2/22/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 0cade975e96220e193db1de92816f97cd253532d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 9990b4e31224f4f41e217108625c8b52a143c7c5
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="security-and-privacy-for-collections-in-system-center-configuration-manager"></a>Seguridad y privacidad para recopilaciones en System Center Configuration Manager
 

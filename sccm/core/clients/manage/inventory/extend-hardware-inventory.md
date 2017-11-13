@@ -1,5 +1,6 @@
 ---
-title: Ampliar el inventario de hardware | Microsoft Docs
+title: "Ampliación del inventario de hardware"
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre cómo ampliar el inventario de hardware en System Center Configuration Manager."
 ms.custom: na
 ms.date: 02/22/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 3e5517e1710d0d12e51fba58efda5dc5edd08544
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: f742d3aab8b377fed38020046a7d1bcf72b28a05
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-extend-hardware-inventory-in-system-center-configuration-manager"></a>Cómo ampliar el inventario de hardware en System Center Configuration Manager
 

@@ -1,5 +1,6 @@
 ---
-title: SQL Server AlwaysOn | Microsoft Docs
+title: SQL Server Always On
+titleSuffix: Configuration Manager
 description: Planee el uso de un grupo de disponibilidad Always On de SQL Server con SCCM.
 ms.custom: na
 ms.date: 09/22/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "16"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 3e275f6203a9e0b9210bfbadbf9addf64f6533d8
-ms.sourcegitcommit: 8faf42135a8dc9c384407e64f3f8ba204fb15847
+ms.openlocfilehash: 24eaa33f1f9b333894817f089149e2cbed35df75
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Preparación para usar grupos de disponibilidad AlwaysOn de SQL Server con Configuration Manager
 
@@ -75,7 +76,7 @@ Para obtener más información, consulte [Crear un punto de conexión de creaci�
 -   Antes de la versión 1706, puede tener hasta dos réplicas secundarias sincrónicas.
 -   A partir de la versión 1706, puede usar el mismo número y tipo de réplicas en un grupo de disponibilidad en la medida en que lo admita la versión de SQL Server que utilice.
 
-    Se puede utilizar la réplica de confirmación asincrónica para recuperar una réplica sincrónica. Vea [las opciones de recuperación de la base de datos de sitio]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) en el tema Copia de seguridad y recuperación para obtener información sobre cómo realizar esta tarea.
+-   A partir de la versión 1706, se puede utilizar una réplica de confirmación asincrónica para recuperar una réplica sincrónica. Vea [las opciones de recuperación de la base de datos de sitio]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) en el tema Copia de seguridad y recuperación para obtener información sobre cómo realizar esta tarea.
     > [!CAUTION]  
     > Configuration Manager no admite la conmutación por error para usar la réplica de confirmación asincrónica como la base de datos de sitio.
 Dado que Configuration Manager no valida el estado de la réplica de confirmación asincrónica para confirmar que está actualizada, y que [por cuestiones de diseño una réplica de este tipo puede no estar sincronizada]( https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), el uso de una réplica de confirmación asincrónica como la base de datos de sitio puede poner en peligro la integridad de los datos y del sitio.

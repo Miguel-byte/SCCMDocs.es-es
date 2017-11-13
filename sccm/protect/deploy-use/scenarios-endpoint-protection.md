@@ -1,5 +1,6 @@
 ---
-title: 'Escenario: Endpoint Protection protege los equipos frente al malware | Microsoft Docs'
+title: 'Escenario: Endpoint Protection protege los equipos frente al malware'
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre cómo implementar Endpoint Protection en Configuration Manager para proteger los equipos frente a los ataques de malware."
 ms.custom: na
 ms.date: 03/13/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: b98684d44874ff246e4d675039c6e443aee82a62
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a0aa02a9091ea9ecdd060f1e7023e9d3f95269a1
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="example-scenario-using-system-center-endpoint-protection-to-protect-computers-from-malware-in-system-center-configuration-manager"></a>Escenario de ejemplo: uso de System Center Endpoint Protection para proteger los equipos frente al malware en System Center Configuration Manager
 

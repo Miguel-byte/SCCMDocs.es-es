@@ -1,5 +1,6 @@
 ---
-title: Servicios de componentes y comandos de cliente UNIX/Linux | Microsoft Docs
+title: Servicios de componentes y comandos de cliente UNIX/Linux
+titleSuffix: Configuration Manager
 description: "Obtenga información acerca de los servicios de componentes y comandos de clientes Linux y UNIX en System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: f11795b05f1b422e97fd32e7457c44b708fa93e4
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 238a824aad1acd1f3dd41b1b01afa9248b44ab5d
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="linux-and-unix-clients-component-services-and-commands-for-system-center-configuration-manager"></a>Servicios de componentes y comandos de clientes Linux y UNIX en System Center Configuration Manager
 

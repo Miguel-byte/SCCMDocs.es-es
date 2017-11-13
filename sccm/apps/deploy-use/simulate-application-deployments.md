@@ -1,5 +1,6 @@
 ---
-title: Simular implementaciones de aplicaciones | Microsoft Docs
+title: "Simulación de implementaciones de aplicaciones"
+titleSuffix: Configuration Manager
 description: "Evalúe el método de detección, los requisitos y las dependencias de un tipo de implementación sin instalar la aplicación."
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 7fe8818170906d2a741f407edca0aae838f1643a
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: ecd641a14188e0247d10e0fac613ea760abb00d1
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="simulate-application-deployments-with-system-center-configuration-manager"></a>Simular implementaciones de aplicaciones con System Center Configuration Manager
 

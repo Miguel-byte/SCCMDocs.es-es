@@ -1,5 +1,6 @@
 ---
-title: "Preguntas más frecuentes de productos y licencias | Microsoft Docs"
+title: "Preguntas más frecuentes sobre productos y licencias"
+titleSuffix: Configuration Manager
 description: Encuentre respuestas a las preguntas comunes sobre productos y licencias de System Center Configuration Manager.
 ms.custom: na
 ms.date: 2/28/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: c1a276ad1ed6d10d286ab389ab3f05ec780c4e58
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 99a28c8cd2311f23d26d8a105c3aef179dd634e1
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="frequently-asked-questions-for-system-center-configuration-manager-branches-and-licensing"></a>Preguntas más frecuentes sobre las licencias y ramas de System Center Configuration Manager
 

@@ -1,5 +1,6 @@
 ---
-title: Crear actualizaciones | Microsoft Docs
+title: "Creación de actualizaciones"
+titleSuffix: Configuration Manager
 description: Crear y agrupar actualizaciones de software con System Center Updates Publisher
 ms.custom: na
 ms.date: 4/29/2017
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 98e490d7f5ca17dcf2a0aaa848f14e789f214123
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 37e2d83dd463f4ffe71fa09ab68b94be980d434b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create--software-updates-and-update-bundles-with-updates-publisher"></a>Crear actualizaciones de software y actualizar agrupaciones con Updates Publisher
 

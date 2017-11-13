@@ -1,5 +1,6 @@
 ---
-title: "Aspectos básicos de la administración de clientes | Microsoft Docs"
+title: "Aspectos básicos de la administración de clientes"
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre las tareas que ejecuta para administrar clientes de System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/30/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0fee4f4ba462e59859ac93c4218b67cb26bdd6f6
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a88be6397e1e2b1f86a517d2c068e1c0cb8a40bc
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="fundamentals-of-client-management-tasks-for-system-center-configuration-manager"></a>Aspectos básicos de las tareas de administración de clientes de System Center Configuration Manager
 

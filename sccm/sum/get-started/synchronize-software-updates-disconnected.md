@@ -1,5 +1,6 @@
 ---
-title: "Sincronizar las actualizaciones sin conexión a Internet en Configuration Manager | Microsoft Docs"
+title: "Sincronización de actualizaciones sin conexión a Internet "
+titleSuffix: Configuration Manager
 description: "Ejecute la sincronización de actualizaciones de software en el punto de actualización de software de nivel superior que está desconectado de Internet."
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
-ms.openlocfilehash: fd9c1e9418ff1956c6ef98753e23a293440179be
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e10c3b1695e3ce652559242b0248e7dc818741b7
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="synchronize-software-updates-from-a-disconnected-software-update-point"></a>Sincronizar actualizaciones de software desde un punto de actualización de software desconectado  
 

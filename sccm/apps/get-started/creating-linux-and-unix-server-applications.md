@@ -1,5 +1,6 @@
 ---
-title: Crear aplicaciones de servidor de Linux y UNIX| Microsoft Docs
+title: "Creación de aplicaciones de servidor Linux y Unix"
+titleSuffix: Configuration Manager
 description: Consulte las consideraciones que debe tener en cuenta al crear e implementar aplicaciones para dispositivos Linux y UNIX.
 ms.custom: na
 ms.date: 04/13/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "7"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 92eeb4e535b18955139e37e216dd8f2a22fab3eb
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 81a3ef6ee05a8f0f66ca1a70d56bc33017c66d9c
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-linux-and-unix-server-applications-with-system-center-configuration-manager"></a>Crear aplicaciones de servidor Linux y UNIX con System Center Configuration Manager
 

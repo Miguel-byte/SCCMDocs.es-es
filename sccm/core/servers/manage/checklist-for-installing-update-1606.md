@@ -1,5 +1,6 @@
 ---
-title: "Lista de comprobación para la versión 1606 | Microsoft Docs"
+title: "Lista de comprobación de 1606"
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre los pasos necesarios previos a la actualización de la versión 1511 o 1602 de System Center Configuration Manager a la versión 1606."
 ms.custom: na
 ms.date: 6/6/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "7"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: a6bda116499845fedff0126e2890755931de85bb
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 1f3bb243c6c40a1c949b3c75aa4f8727f5ed42bd
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="checklist-for-installing-update-1606-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1606 de System Center Configuration Manager
 

@@ -1,5 +1,6 @@
 ---
-title: Versiones incrementales de System Center Configuration Manager | Microsoft Docs
+title: Versiones incrementales
+titleSuffix: Configuraton Manager
 description: "Obtenga información acerca de cómo instalar y administrar las actualizaciones de System Center Configuration Manager."
 ms.custom: na
 ms.date: 7/31/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 043c9521f4a94ea2df5cebb4ca1c0b1127f0edbc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5ebbf4e1dd0e67a879250c559bdae5c7be3dfc91
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="whats-new-in-system-center-configuration-manager-incremental-versions"></a>Acerca de las versiones incrementales de System Center Configuration Manager.
 

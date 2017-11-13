@@ -1,5 +1,6 @@
 ---
-title: "Administración de clientes de infraestructura de escritorio virtual (VDI) | Microsoft Docs "
+title: "Administración de clientes de infraestructura de escritorio virtual (VDI) "
+titleSuffix: Configuration Manager
 description: Administre clientes de System Center Configuration Manager en una infraestructura de escritorio virtual (VDI).
 ms.custom: na
 ms.date: 04/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 0368caa83f1d2b5b67b24fb2030182ae2f41db9d
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 1d35865895a8837d4c30a4f43967f777e61d7cbf
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="considerations-for-managing-system-center-configuration-manager-clients--in-a-virtual-desktop-infrastructure-vdi"></a>Consideraciones para la administración de clientes de System Center Configuration Manager en una infraestructura de escritorio virtual (VDI)
 

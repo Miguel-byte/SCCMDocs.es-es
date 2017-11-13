@@ -1,8 +1,9 @@
 ---
-title: "Protección de datos mediante borrado remoto, bloqueo o restablecimiento de código de acceso con System Center Configuration Manager | Microsoft Docs"
+title: "Protección de los datos con borrado, bloqueo o restablecimiento de contraseña de forma remota"
+titleSuffix: Configuration Manager
 description: "Proteja los datos del dispositivo mediante borrado completo, borrado selectivo, bloqueo remoto o restablecimiento del código de acceso con System Center Configuration Manager."
 ms.custom: na
-ms.date: 09/28/2017
+ms.date: 10/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: ea92d7b4656a04f312f04c19cac6b17df931c9c5
-ms.sourcegitcommit: db079cd7322e7d4926b2df0ccb37e752c570d902
+ms.openlocfilehash: 55d49c388b4ea60627f72ffe61796c70de6f9416
+ms.sourcegitcommit: a5f8b5cfdabf0298e4302e24210e725a06a9de82
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/30/2017
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>Protección de datos mediante borrado remoto, bloqueo o restablecimiento de código de acceso con System Center Configuration Manager
 
@@ -39,6 +40,9 @@ System Center Configuration Manager proporciona funcionalidades de borrado selec
 Podría emitir un comando de eliminación de datos del dispositivo cuando necesita proteger un dispositivo perdido o retirar un dispositivo del uso activo.  
 
 Emitir una **eliminación de datos completa** a un dispositivo para restaurar el dispositivo a sus valores predeterminados de fábrica. Esto quita todos los datos de empresa y de usuario así como la configuración. Puede realizar una eliminación completa en dispositivos Windows Phone, iOS, Android y Windows 10.  
+
+> [!NOTE]
+> Solo puede realizar un borrado completo en dispositivos propiedad de la empresa.
 
 > [!NOTE]
 > La eliminación en dispositivos de Windows 10 en versiones anteriores a la versión 1511 con menos de 4 GB de RAM puede provocar que el dispositivo no responda. [Obtenga más información](https://technet.microsoft.com/library/mt592024.aspx#full-wipe-disables-windows-10-devices-with-less-than-4-gb-ram).

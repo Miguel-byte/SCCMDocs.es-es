@@ -1,5 +1,6 @@
 ---
-title: "Configurar la MDM híbrida | Microsoft Docs"
+title: "Configuración de MDM híbrida"
+titleSuffix: Configuration Manager
 description: "Configure la inscripción de dispositivos híbridos con Configuration Manager e Intune."
 ms.custom: na
 ms.date: 03/05/2017
@@ -12,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 caps.latest.revision: "34"
 caps.handback.revision: "0"
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: c494fcc38955571c06507278a1ae88e5777b5708
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 63b49cbef7c584b0bc77752ec9b0e89811c68494
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="setup-hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>Configurar la administración híbrida de dispositivos móviles (MDM) con System Center Configuration Manager y Microsoft Intune
 

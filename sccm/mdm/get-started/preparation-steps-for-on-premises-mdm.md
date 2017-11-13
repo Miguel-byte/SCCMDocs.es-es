@@ -1,5 +1,6 @@
 ---
-title: "Pasos de preparación | Microsoft Docs"
+title: "Pasos de preparación "
+titleSuffix: Configuration Manager
 description: "Prepare la administración de dispositivos mediante la administración local de dispositivos móviles (MDM) en System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/05/2017
@@ -11,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1ef60106-8f31-46d6-95a6-25a6495f22c7
 caps.latest.revision: "4"
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 85bdadaaaeed9a42cfa5165d2b9f0f3ef434dc03
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 6c2275480cbecf35997e38185e0cead28cff10fc
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="preparation-steps-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Pasos de preparación para la administración local de dispositivos móviles en System Center Configuration Manager
 

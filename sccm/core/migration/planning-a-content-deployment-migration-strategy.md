@@ -1,5 +1,6 @@
 ---
-title: Migrar contenido | Microsoft Docs
+title: "Migración de contenido"
+titleSuffix: Configuration Manager
 description: "Use puntos de distribución para administrar contenido mientras migra datos a una jerarquía de destino de System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/30/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 25619d91522193178e0415f649ca4b34c94ecc89
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 09e4fd0237d16cdaa25ba3c26a8661bd14fd6692
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-a-content-deployment-migration-strategy-in-system-center-configuration-manager"></a>Planear una estrategia de migración de implementación de contenido en System Center Configuration Manager
 

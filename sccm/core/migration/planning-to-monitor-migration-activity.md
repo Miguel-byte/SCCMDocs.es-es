@@ -1,5 +1,6 @@
 ---
-title: "Supervisar la migración | Microsoft Docs"
+title: "Supervisión de la migración"
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre cómo usar la consola de Configuration Manager para supervisar el progreso y la finalización correcta de los trabajos de migración."
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 896807ec2c4be2835094a27add59d4cc09e93add
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 1782e8abaf01cf8097393fa45db999a6a02c6cb5
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="planning-to-monitor-migration-activity-in-system-center-configuration-manager"></a>Planear la supervisión de la actividad de migración en System Center Configuration Manager
 

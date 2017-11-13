@@ -1,5 +1,6 @@
 ---
-title: "Planeamiento del trabajo de migración | Microsoft Docs"
+title: "Planeamiento de trabajos de migración"
+titleSuffix: Configuration Manager
 description: "Use trabajos de migración para configurar los datos que quiera migrar al entorno de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,11 +17,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex
-ms.openlocfilehash: 4c83540db763bea039a92633a1d1a808e60e27ad
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 87f0af8b1a8f2dc136f6c90f36dcc828b67f97e9
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-a-migration-job-strategy-in-system-center-configuration-manager"></a>Planear una estrategia de trabajo de migración en System Center Configuration Manager
 

@@ -1,5 +1,6 @@
 ---
-title: "Requisitos previos de la migración | Microsoft Docs"
+title: "Requisitos previos de la migración"
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre las versiones admitidas de Configuration Manager, los idiomas admitidos del sitio de origen y las configuraciones necesarias para llevar a cabo la migración."
 ms.custom: na
 ms.date: 3/7/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: cd90f5462ac4bb4c0a2021e6d5dde65161b9c5f6
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b1f4942562bf9e1f460ba9e4dae488e57a345e35
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prerequisites-for-migration-in-system-center-configuration-manager"></a>Requisitos previos para la migración en System Center Configuration Manager
 

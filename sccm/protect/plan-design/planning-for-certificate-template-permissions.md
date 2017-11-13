@@ -1,5 +1,6 @@
 ---
-title: Planeamiento de permisos de plantilla de certificado | Microsoft Docs
+title: Planeamiento de permisos de plantilla de certificado
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre cómo planear los permisos que necesita para configurar las plantillas de certificado que usa System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 832be8c9fda727804f57e83768cd8799db722c67
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e5c748297b318e5256f2064811151ae96a55fccd
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="planning-for-certificate-template-permissions-for-certificate-profiles-in-system-center-configuration-manager"></a>Planificación de permisos de plantilla de certificado para perfiles de certificado en System Center Configuration Manager
 

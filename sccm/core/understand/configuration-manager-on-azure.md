@@ -1,5 +1,5 @@
 ---
-title: Configuration Manager en Azure | Microsoft Docs
+title: Configuration Manager en Azure
 description: "Información sobre el uso de Configuration Manager en un entorno de Azure."
 ms.custom: na
 ms.date: 03/27/2017
@@ -14,11 +14,11 @@ caps.latest.revision: "2"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 5276ad999fc871496d79e6efff34d5edc6335380
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a1d4fb9c8a19565d6f49f3d3e1e70f698305e6a4
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager en Azure - Preguntas más frecuentes
 *Se aplica a: System Center Configuration Manager (rama actual)*

@@ -1,5 +1,6 @@
 ---
-title: Requisitos previos del sitio | Microsoft Docs
+title: Requisitos previos del sitio
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre cómo configurar un equipo Windows como un servidor de sistema de sitio de System Center Configuration Manager."
 ms.custom: na
 ms.date: 8/25/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 09749a3045ca6eebf1363b6e53cd8607b5f32578
-ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
+ms.openlocfilehash: 8e55af275a2c585273602f9b9308eaed03679ae4
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>Requisitos previos de sitio y sistema de sitio para System Center Configuration Manager
 

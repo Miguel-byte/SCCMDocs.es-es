@@ -1,5 +1,6 @@
 ---
-title: Copia de seguridad de sitios | Microsoft Docs
+title: Sitios de copia de seguridad
+titleSuffix: Configuration Manager
 description: "Aprenda a realizar copias de seguridad de los sitios ante la posibilidad de un error o pérdida de datos en System Center Configuration Manager."
 ms.custom: na
 ms.date: 6/5/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "22"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 7deb00d4b67eabf3238907b337a9d0367c3d99cc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 7dae5ada647146713b884b09d0eda1c7ec6531ef
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Hacer una copia de seguridad de un sitio de Configuration Manager
 

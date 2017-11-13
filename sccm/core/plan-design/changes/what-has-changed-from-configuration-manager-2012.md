@@ -1,5 +1,5 @@
 ---
-title: 'Cambios respecto a Configuration Manager 2012 | Microsoft Docs '
+title: 'Cambios desde Configuration Manager 2012 '
 description: Identifica los cambios y las nuevas funciones de System Center Configuration Manager con respecto a System Center 2012 Configuration Manager.
 ms.custom: na
 ms.date: 05/02/2017
@@ -14,11 +14,11 @@ caps.latest.revision: "51"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0a3eb93a99533a1569d8f72ca01d6dfcdc75da20
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 97882e89076b994c60760621dbab3fa8e75126fc
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="what39s-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>Cambios en System Center Configuration Manager respecto a System Center 2012 Configuration Manager
 

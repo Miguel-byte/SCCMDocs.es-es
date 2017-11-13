@@ -1,5 +1,6 @@
 ---
-title: Configurar el inventario de software | Microsoft Docs
+title: "Configuración del inventario de software"
+titleSuffix: Configuration Manager
 description: Configure el inventario de software y excluya carpetas del inventario de software en Configuration Manager.
 ms.custom: na
 ms.date: 02/22/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: e60cec71c425e5e42d450cbeee366528d4b42405
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3aac8bdf45a90f0c9c734d2f796e590e5dc9b90e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-configure-software-inventory-in-system-center-configuration-manager"></a>Cómo configurar el inventario de software en System Center Configuration Manager
 

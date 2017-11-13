@@ -1,5 +1,6 @@
 ---
-title: "Tamaño y escala | Microsoft Docs"
+title: "Tamaño y escala"
+titleSuffix: Configuration Manager
 description: "Identifique el número de roles de sistema de sitio y los sitios que necesitará para admitir los dispositivos en el entorno de System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/24/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 9c50f6633a5ca04b62f4c3b06119fb1fbcab2643
-ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
+ms.openlocfilehash: c0277fed7db5803aa2b2246ca879640136dce02a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Números de tamaño y escala de System Center Configuration Manager
 
@@ -54,7 +55,6 @@ Los siguientes números de soporte técnico se basan en el uso del hardware reco
 
 -   Los sitios secundarios no admiten otros sitios secundarios.  
 
--   Un sitio de administración central admite hasta 25 sitios primarios o secundarios.  
 
 
 ## <a name="bkmk_roles"></a> Roles de sistema de sitio    

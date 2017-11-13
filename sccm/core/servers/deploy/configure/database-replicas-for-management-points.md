@@ -1,5 +1,6 @@
 ---
-title: "Réplicas de base de datos para puntos de administración | Microsoft Docs"
+title: "Réplicas de bases de datos de punto de administración"
+titleSuffix: Configuration Manager
 description: "Use una réplica de base de datos para reducir la carga de CPU que los puntos de administración colocan en el servidor de base de datos del sitio."
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "9"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 130c053c9f2a1817dd85b1f3c01285aab19d59cb
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c33bed2244e259edc0c5a7bb547be8bf69213920
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>Réplicas de bases de datos para puntos de administración de System Center Configuration Manager
 

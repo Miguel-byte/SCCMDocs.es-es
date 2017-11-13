@@ -1,5 +1,6 @@
 ---
-title: Preparar los servidores de Windows | Microsoft Docs
+title: "Preparación de los servidores Windows"
+titleSuffix: Configuration Manager
 description: "Asegúrese de que un equipo cumpla los requisitos previos para su uso como servidor de sitio o servidor del sistema de sitio de System Center Configuration Manager."
 ms.custom: na
 ms.date: 2/14/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 9b97dedb5d2be0bd2e47260033e6e4361467dc4e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 77fee006aaf7c55c05fc66106fef1ecfc4d27d08
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prepare-windows-servers-to-support-system-center-configuration-manager"></a>Preparar los servidores de Windows para admitir System Center Configuration Manager
 

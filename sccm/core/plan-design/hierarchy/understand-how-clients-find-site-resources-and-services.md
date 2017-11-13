@@ -1,5 +1,6 @@
 ---
-title: Buscar recursos de sitio | Microsoft Docs
+title: "Búsqueda de recursos del sitio"
+titleSuffix: Configuration Manager
 description: "Más información sobre cómo y cuándo los clientes de System Center Configuration Manager usan la ubicación del servicio para buscar recursos de sitio."
 ms.custom: na
 ms.date: 2/7/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 1c9e7ada6a8aa228b30e58865baae0f6e529e6af
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e64b2c4242903143b677189e3bd4c8f32ebace20
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>Más información sobre cómo los clientes buscan servicios y recursos de sitio para System Center Configuration Manager
 

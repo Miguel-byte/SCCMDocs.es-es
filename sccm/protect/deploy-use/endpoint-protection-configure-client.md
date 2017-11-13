@@ -1,5 +1,6 @@
 ---
-title: Configurar el cliente de Endpoint Protection | Microsoft Docs
+title: "Configuración del cliente de Endpoint Protection"
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre cómo establecer una configuración de cliente personalizada para Endpoint Protection que se puede implementar en recopilaciones de equipos de la jerarquía."
 ms.custom: na
 ms.date: 02/14/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 1488aaa465fb9810bc1b641d41dad95189d37418
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: de8f7411219446420a8c8bca00799d8d7d18fd2f
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configure-custom-client-settings-for-endpoint-protection"></a>Establecer una configuración de cliente personalizada para Endpoint Protection
 

@@ -1,5 +1,6 @@
 ---
-title: Implementar contenido | Microsoft Docs
+title: "Implementación de contenido"
+titleSuffix: Configuration Manager
 description: "Después de instalar puntos de distribución para System Center Configuration Manager, siga los pasos que se indican a continuación para empezar a implementar contenido en ellos."
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 36b08285ef78d0acb9ba9c44abe2d57e311d44b3
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b409e8b050a3f1871819bd857c225a8cf6333712
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="deploy-and-manage-content-for-system-center-configuration-manager"></a>Implementar y administrar contenido para System Center Configuration Manager
 

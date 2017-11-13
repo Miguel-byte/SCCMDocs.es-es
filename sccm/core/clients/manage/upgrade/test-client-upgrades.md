@@ -1,5 +1,6 @@
 ---
-title: "Probar la recopilación de preproducción de actualizaciones de cliente | Microsoft Docs"
+title: "Prueba de las actualizaciones de cliente en una recopilación de preproducción"
+titleSuffix: Configuration Manager
 description: "Pruebe las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager."
 ms.custom: na
 ms.date: 05/04/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 5b6e60e7c6225e37dd345e99c703505e346cd0a4
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: e301c3df57d3f625157015692374e512e00dfc60
+ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="how-to-test-client-upgrades-in-a-pre-production-collection-in-system-center-configuration-manager"></a>Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager
 
@@ -39,8 +40,10 @@ Puede probar una nueva versión de cliente de Configuration Manager en una recop
 3.  Promover el nuevo cliente a producción.  
 
 ##  <a name="to-configure-automatic-client-upgrades-to-use-a-pre-production-collection"></a>Para configurar las actualizaciones automáticas de cliente para que usen una recopilación de preproducción  
+> [!IMPORTANT]
+> La implementación de clientes de preproducción no se admite en equipos del grupo de trabajo. no pueden usar la autenticación requerida para que el punto de distribución obtenga acceso al paquete de cliente de preproducción.  Reciben el cliente más reciente cuando se promueve a cliente de producción.
 
-1. [Configure una recopilación](..\collections\create-collections.md) que contenga los equipos en los que quiere implementar el cliente de preproducción. No incluya equipos de grupo de trabajo en las recopilaciones de preproducción, ya que no pueden usar la autenticación requerida para que el punto de distribución obtenga acceso al paquete de cliente de preproducción.   
+1. [Configure una recopilación](..\collections\create-collections.md) que contenga los equipos en los que quiere implementar el cliente de preproducción.   
 
 1.  En la consola de Configuration Manager, abra **Administración** > **Configuración del sitio** > **Sitios** y elija **Configuración de jerarquía**.  
 

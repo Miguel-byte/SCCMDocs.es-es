@@ -1,5 +1,6 @@
 ---
-title: "Configuración de aplicaciones Android for Work con directivas de configuración de aplicaciones | Microsoft Docs"
+title: "Configuración de aplicaciones de Android for Work con directivas de configuración de aplicaciones"
+titleSuffix: Configuration Manager
 description: "Evite los problemas de configuración en los dispositivos con Android for Work mediante la implementación de directivas de configuración de aplicaciones en los usuarios antes de que ejecuten las aplicaciones."
 ms.custom: na
 ms.date: 09/12/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: NathBarn
 ms.author: NathBarn
 manager: angrobe
-ms.openlocfilehash: bd8388689a49873860fa9951b7d522f9d96fc11f
-ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
+ms.openlocfilehash: 79d1b3fed3baa74c8ad195925ccda35713cb8865
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="apply-settings-to-android-for-work-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>Aplicación de configuración a aplicaciones Android for Work con directivas de configuración de aplicaciones en System Center Configuration Manager
 

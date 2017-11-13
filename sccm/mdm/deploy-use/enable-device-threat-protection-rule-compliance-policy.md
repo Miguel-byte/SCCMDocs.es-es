@@ -1,5 +1,6 @@
 ---
-title: "Habilitación de la regla de protección de dispositivos en la directiva de cumplimiento | Microsoft Docs"
+title: "Habilitación de la regla de protección de dispositivos en la directiva de cumplimiento"
+titleSuffix: Configuration Manager
 description: "Habilite la regla de protección contra amenazas móviles en la directiva de cumplimiento de dispositivos."
 ms.custom: na
 ms.date: 03/05/2017
@@ -11,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99a5b715-f172-46e1-ac27-ad55bde66d0d
 caps.latest.revision: 
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: faa92e150686e615164ce3f5435b77a65305aab3
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d74360ce800f030e85e2b87defc1de3376c6aee5
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="enable-device-threat-protection-rule-in-the-compliance-policy"></a>Habilitar la regla de protección contra amenazas de dispositivo en la directiva de cumplimiento
 

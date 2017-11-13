@@ -1,5 +1,6 @@
 ---
-title: Technical Preview 1709 | Microsoft Docs
+title: Technical Preview 1709
+titleSuffix: Configuration Manager
 description: "Obtenga información sobre las características disponibles en la versión 1709 de Technical Preview para System Center Configuration Manager."
 ms.custom: na
 ms.date: 09/28/2017
@@ -13,11 +14,11 @@ ms.assetid: a3ef6bdc-a204-4c4c-a02f-2bd03f35183e
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 3348bc91e6810c873d50cb4efd3efb9fbd024bd3
-ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
+ms.openlocfilehash: 90e31c26204323e33560270044ebac7dfe135684
+ms.sourcegitcommit: 1573a1bd0bd58fefb1ea651b3ea8d6fd53eff546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1709 para System Center Configuration Manager
 
@@ -43,8 +44,8 @@ En este artículo se presentan las características disponibles en Technical Pre
 
 **Estas son las nuevas características que puede probar con esta versión.**  
 
-## <a name="improved-vpn-profile-experience-in-configuration-manager-console----1313282---"></a>Experiencia mejorada del perfil VPN en la consola de Configuration Manager <!-- 1313282 -->
-
+## <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Experiencia mejorada del perfil VPN en la consola de Configuration Manager
+<!-- 1313282 -->
 Con esta versión hemos actualizado las páginas de propiedades y el asistente de perfiles VPN para mostrar una configuración más adecuada para la plataforma seleccionada. De manera específica:
 
 - Cada plataforma tiene su propio flujo de trabajo, lo que significa que los nuevos perfiles VPN contienen únicamente la configuración compatible con la plataforma.
@@ -80,8 +81,7 @@ A medida que seleccione distintas plataformas, observe que solo se muestran las 
 
 ## <a name="co-management-for-windows-10-devices"></a>Administración conjunta para dispositivos de Windows 10    
 <!-- 1350871 -->
-Muchos clientes quieren administrar dispositivos de Windows 10 de la misma manera que administran dispositivos móviles mediante una solución simplificada, basada en la nube y de costo inferior, pero llevar a cabo la transición de la administración tradicional a una administración moderna puede resultar complicado. La administración conjunta es una solución en la que los dispositivos de Windows 10 se pueden administrar de forma simultánea mediante Intune y Configuration Manager. También se pueden unir a Active Directory (AD) y a Azure Active Directory (Azure AD) para ofrecer un método para poder modernizar la administración con el tiempo. Es una solución que sirve para ofrecer un vínculo entre la administración tradicional y la administración moderna. Además, le proporciona una guía para llevar a cabo la transición con un enfoque por fases.  
-
+Muchos clientes quieren administrar dispositivos de Windows 10 de la misma manera que administran dispositivos móviles mediante una solución simplificada, basada en la nube y de costo inferior, pero llevar a cabo la transición de la administración tradicional a una administración moderna puede resultar complicado. A partir de Windows 10, versión 1607 (también conocida como la Actualización de aniversario), puede unir un dispositivo Windows 10 a Active Directory (AD) local y a Azure AD basado en la nube al mismo tiempo (Azure AD híbrido). La administración conjunta aprovecha esta mejora y le permite administrar dispositivos Windows 10 de forma simultánea mediante Configuration Manager e Intune. Se trata de una solución que sirve de puente entre la administración tradicional y moderna, y proporciona un camino para realizar la transición con un enfoque por fases. 
 
 ### <a name="prerequisites"></a>Requisitos previos
 Debe cumplir los siguientes requisitos previos para poder habilitar la administración conjunta. Existen requisitos previos generales y distintos requisitos previos para los clientes existentes de Configuration Manager y dispositivos que no son clientes.
@@ -210,7 +210,6 @@ En la sección anterior ha preparado dispositivos de Windows 10 para la administ
     - **Producción**: al seleccionar esta opción, se habilitan todos los dispositivos de Windows 10 compatibles para la administración conjunta. Configure el **grupo de exclusión** con una o varias colecciones. Los dispositivos que forman parte de cualquiera de las colecciones de este grupo se excluyen del uso de la administración conjunta. 
 5. En la página de habilitación, elija **Piloto** o **Todo** (en función de los valores configurados en la página de almacenamiento provisional) para habilitar la inscripción automática en Intune y, luego, haga clic en **Siguiente**. Si elige **Piloto**, solo los clientes de Configuration Manager que sean miembros del grupo piloto se inscribirán automáticamente en Intune. De esta manera podrá habilitar la administración conjunta en un subconjunto de clientes para probarla inicialmente e implementarla con un enfoque por fases. 
 6. En la página Cargas de trabajo, elija si quiere cambiar las cargas de trabajo de Configuration Manager para que las administre Intune. Luego, haga clic en **Siguiente**. Use los controles deslizantes para seleccionar si se debe cambiar la carga de trabajo al grupo piloto o para todos los clientes de Windows 10 (en función de los valores configurados en la página de almacenamiento provisional). 
-
 7. Para habilitar la administración conjunta, siga los pasos del asistente.  
 
 <!--### Modify your co-management settings

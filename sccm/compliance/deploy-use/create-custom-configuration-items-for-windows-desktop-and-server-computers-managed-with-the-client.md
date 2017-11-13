@@ -1,5 +1,6 @@
 ---
-title: "Crear elementos de configuración para equipos Windows administrados por el cliente en Configuration Manager | Microsoft Docs"
+title: "Creación de elementos de configuración para equipos Windows administrado por el cliente "
+titleSuffix: Configuration Manager
 description: "Administre la configuración de equipos y servidores de Windows con un elemento de configuración de escritorios y servidores de Windows."
 ms.custom: na
 ms.date: 11/18/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 9fe28782744a419acad9c1acec49ff8db6c0eaa6
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: ed3aa1ce9e21c7c486cc40deb804a8687a1cd4f2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-system-center-configuration-manager-client"></a>Cómo crear elementos de configuración personalizados para equipos de escritorio y servidores de Windows administrados con el cliente de System Center Configuration Manager
 

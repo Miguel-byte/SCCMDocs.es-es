@@ -1,5 +1,6 @@
 ---
-title: Content Library Cleanup Tool | Microsoft Docs
+title: Herramienta de limpieza de la biblioteca de contenido
+titleSuffix: Configuration Manager
 description: "Utilice Content Library Cleanup Tool para quitar contenido huérfano que ya no está asociado con una implementación de System Center Configuration Manager."
 ms.custom: na
 ms.date: 4/7/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 76e6772bdd5cbd32d525e728f6ebc988b045da78
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c5bb9c055378c769613de45ffd776bbbdc1d0080
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="the-content-library-cleanup-tool-for-system-center-configuration-manager"></a>Content Library Cleanup Tool para System Center Configuration Manager
 

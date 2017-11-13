@@ -1,5 +1,6 @@
 ---
-title: "Crear líneas base de configuración | Microsoft Docs"
+title: "Creación de líneas base de configuración"
+titleSuffix: Configuration Manager
 description: "Cree líneas base de configuración en System Center Configuration Manager que pueda implementar en una recopilación."
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 1283322a775f030d3b312396691c374914604970
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 1556594e439439ef30418d384d537d5efb6b46fc
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-configuration-baselines-in-system-center-configuration-manager"></a>Crear líneas base de configuración en System Center Configuration Manager
 

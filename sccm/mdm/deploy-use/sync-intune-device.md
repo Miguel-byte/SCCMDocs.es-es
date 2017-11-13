@@ -1,5 +1,6 @@
 ---
-title: Sincronizar directivas en dispositivos inscritos con Intune de manera remota | Microsoft Docs
+title: "Sincronización remota de directivas en dispositivos inscritos con Intune"
+titleSuffix: Configuration Manager
 description: "Obtener información sobre cómo sincronizar directivas en dispositivos inscritos con Intune desde la consola de Configuration Manager"
 ms.custom: na
 ms.date: 03/05/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 387f6303611010ab3d72f796455409ebfff65099
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: a03ba69c679bcfdc54744314c7a4cb3ef8b2a7a0
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="remotely-synchronize-policy-on-intune-enrolled-devices-from-the-configuration-manager-console"></a>Sincronizar directivas en dispositivos inscritos con Intune de manera remota desde la consola de Configuration Manager
 

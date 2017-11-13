@@ -1,5 +1,6 @@
 ---
-title: Versiones de rama actual | Microsoft Docs
+title: Versiones de la Rama actual
+titleSuffix: Configuration Manager
 description: "Revise el historial de versiones de System Center Configuration Manager y obtenga información sobre las fases del servicio ofrecido."
 ms.custom: na
 ms.date: 7/31/2017
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 1c02d2c51964fed960ffab42175762c1b04e6445
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3907a8f764ddd4dcea992875d0181b93d4760b42
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>Compatibilidad con versiones de la rama actual de System Center Configuration Manager
 

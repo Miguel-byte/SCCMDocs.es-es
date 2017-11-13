@@ -1,5 +1,6 @@
 ---
-title: "Compatibilidad con las características de Windows | Microsoft Docs"
+title: "Compatibilidad con características de Windows"
+titleSuffix: Configuration Manager
 description: "Descubra qué características de redes y Windows admite System Center Configuration Manager."
 ms.custom: na
 ms.date: 8/24/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: be9b7e84fecfa7a07c411c3d46168e5485e0dfab
-ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
+ms.openlocfilehash: 8688b4ed3b29bf380510ada475988dfe7cbc45b8
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="support-for-windows-features-and-networks-in-system-center-configuration-manager"></a>Compatibilidad con las características y redes de Windows en System Center Configuration Manager
 

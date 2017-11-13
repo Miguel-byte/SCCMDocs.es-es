@@ -1,5 +1,6 @@
 ---
-title: "Generación de informes de procedimientos recomendados | Microsoft Docs"
+title: "Notificación de los procedimientos recomendados"
+titleSuffix: Configuration Manager
 description: "Lea algunas sugerencias de utilidad sobre el uso de la capacidad de generación de informes de System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 759258999f3eaa810803a6a7f856f00fe7771a9e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b66e4417658e8a5f25056ed37b5367d57ff72781
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="best-practices-for-reporting-in-system-center-configuration-manager"></a>Procedimientos recomendados para la generación de informes en System Center Configuration Manager
 

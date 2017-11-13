@@ -1,5 +1,6 @@
 ---
-title: "Planeamiento de la implementación de clientes | Microsoft Docs"
+title: "Planeamiento del diseño de implementación"
+titleSuffix: Configuration Manager
 description: "Planee la implementación de clientes y preparar la infraestructura de System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "3"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 824cc9650cdc5cd7ac30e6dedb608fa8ef63b0ff
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: ed4fd972ab817aee574b7e84f75956a31ab3203a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="planning-considerations-for-deploying-clients-in-system-center-configuration-manager"></a>Consideraciones de planeación para la implementación de clientes en System Center Configuration Manager
 

@@ -1,5 +1,6 @@
 ---
-title: Referencia de las tareas de mantenimiento | Microsoft Docs
+title: Referencia de las tareas de mantenimiento
+titleSuffix: Configuration Manager
 description: "Vea la información de las tareas de mantenimiento del sitio de System Center Configuration Manager y compruebe si están habilitadas de forma predeterminada."
 ms.custom: na
 ms.date: 3/8/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: a2d4420c2274a9b1ceb47ffd267849fdb5a55a61
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 6cff26b689b3fb1139d235295530faa9d30f9bf6
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>Referencia de tareas de mantenimiento para System Center Configuration Manager
 

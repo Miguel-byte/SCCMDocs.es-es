@@ -1,5 +1,6 @@
 ---
-title: Funciones de Technical Preview 1601 de Configuration Manager
+title: Funcionalidades de Technical Preview 1601
+titleSuffix: Configuration Manager
 description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1601."
 ms.custom: na
 ms.date: 01/23/2017
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: ef0db5b11ae2be5edcb4db87400c5c273c89972e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d673fce313ca0cfb0a001dac9bbe296f883a4871
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1601 para System Center Configuration Manager
 
