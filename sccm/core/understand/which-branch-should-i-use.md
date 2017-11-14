@@ -1,5 +1,6 @@
 ---
-title: "Qué rama debo usar | Microsoft Docs"
+title: "La rama que se debería usar"
+titleSuffix: Configuration Manager
 description: "Obtenga información acerca de las diferencias entre las ramas disponibles de System Center Configuration Manager."
 ms.custom: na
 ms.date: 05/02/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 26356a80bd8c78d4517253bae73e53d8d8f3a73a
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 047ffc0953db4a4cc5d543d880136ce61fa99fa7
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>¿Qué rama de Configuration Manager debo utilizar?
 
@@ -108,9 +109,9 @@ La LTSB se basa en la versión de la Rama actual 1606 y tiene las siguientes lim
 - Puede convertir su instalación de LTSB a una instalación de la Rama actual. Se admite la conversión a la Rama actual antes o después de que caduque la LSTB.
 
   Para convertir, debe tener un contrato de Software Assurance activo con Microsoft. Para obtener más información, consulte los vínculos siguientes:
-  - [Actualización de la Rama de mantenimiento a largo plazo a la Rama actual](convert-to-current-branch.md)
+  - [Upgrade the Long-Term Servicing Branch to the Current Branch](convert-to-current-branch.md) (Actualización de la Rama de mantenimiento a largo plazo a la Rama actual)
   - [Licencias y ramas para System Center Configuration Manager](learn-more-editions.md)
-  - [Versiones de línea base y actualización](/sccm/core/servers/manage/updates#baseline-and-update-versions) en [Actualizaciones para Configuration Manager](/sccm/core/servers/manage/updates)
+  - [Baseline and update versions](/sccm/core/servers/manage/updates#baseline-and-update-versions) (Versiones de línea base y actualización) en [Updates for Configuration Manager](/sccm/core/servers/manage/updates) (Actualizaciones para Configuration Manager)
 - No hay ninguna opción para convertir la LTSB en Technical Preview. Las versiones Technical Preview son instalaciones independientes que no requieren una licencia.
 -   No se puede actualizar una versión de evaluación de la Rama actual a una instalación de LTSB.
 
@@ -149,5 +150,4 @@ Cuando ve la información de la versión de un sitio de Configuration Manager, t
 Para comprobar la versión del sitio, en la esquina superior izquierda de la consola, vaya a **Acerca de System Center Configuration Manager**, donde aparece la **versión del sitio**. Vea []() para obtener una lista de versiones de sitios.
 
 **Rama**  
-Para confirmar la rama del sitio (como LTSB o rama actual), en la consola, vaya a **Administración** > **Configuración de sitio** > **Sitios** y abra **Configuración de jerarquía**. Si existe una opción de conversión a la rama actual y está activa, el sitio ejecuta la versión de LTSB. Cuando el sitio ejecuta la rama actual, está opción aparece atenuada.
-Para obtener más información sobre las diferentes versiones de Configuration Manager, vea "Versiones de línea de base y versiones de actualización" en el tema [Actualizaciones para System Center Configuration Manager](/sccm/core/servers/manage/updates).
+Para confirmar la rama del sitio (como LTSB o rama actual), en la consola, vaya a **Administración** > **Configuración de sitio** > **Sitios** y abra **Configuración de jerarquía**. Si existe una opción de conversión a la rama actual y está activa, el sitio ejecuta la versión de LTSB. Cuando el sitio ejecuta la rama actual, está opción aparece atenuada. Para obtener más información sobre las diferentes versiones de Configuration Manager, vea "Versiones de línea de base y versiones de actualización" en el tema [Actualizaciones para System Center Configuration Manager](/sccm/core/servers/manage/updates).
