@@ -1,5 +1,6 @@
 ---
-title: Servicio de un grupo de servidores | Documentos de Microsoft
+title: Dar servicio a un grupo de servidores
+titleSuffix: Configuration Manager
 description: La consola de System Center Configuration Manager proporciona alertas y estados para supervisar la compatibilidad y las actualizaciones.
 keywords: 
 author: dougeby
@@ -11,19 +12,18 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
-ms.openlocfilehash: ae09a02dd5d67113b9a7e2ce146c844efa4caf55
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 12382015f2b673103c3c0d8fc9c0cbf29511a434
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/17/2017
 ---
->[!IMPORTANT]
->Esta es una función de la versión preliminar disponible en Configuration Manager, versión 1606 y versión 1610. Se incluyen características de versión preliminar en el producto para la realización de las primeras pruebas en un entorno de producción, pero no se debe considerar que ya estén listas para él. Debe activar esta función para que esté disponible. Para más información, consulte [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease) (Uso de características de la versión preliminar a partir de las actualizaciones).
-
-
 # <a name="service-a-server-group"></a>Dar servicio a un grupo de servidores
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
+
+>[!IMPORTANT]
+>Las características de versión preliminar son características que se encuentran en la Rama actual para realizar las primeras pruebas en un entorno de producción. Estas características son totalmente compatibles pero aún se encuentran en proceso de desarrollo y podrían recibir cambios hasta que se saquen de la categoría de versión preliminar. Debe activar esta función para que esté disponible. Para más información, consulte [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease) (Uso de características de la versión preliminar a partir de las actualizaciones).
 
 A partir de System Center Configuration Manager versión 1606, puede configurar los grupos de servidores de una recopilación para definir la cantidad, el porcentaje o el orden en que instalarán las actualizaciones de software los equipos de la recopilación. También puede configurar scripts de PowerShell anteriores y posteriores a la implementación para ejecutar acciones personalizadas.
 

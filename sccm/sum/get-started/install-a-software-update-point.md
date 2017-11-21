@@ -1,5 +1,6 @@
 ---
-title: "Instalar y configurar un punto de actualización de software | Microsoft Docs"
+title: "Instalar y configurar un punto de actualización de software"
+titleSuffix: Configuration Manager
 description: "Los sitios primarios requieren un punto de actualización de software en el sitio de administración central para la evaluación del cumplimiento de las actualizaciones de software y para implementar las actualizaciones de software en los clientes."
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.openlocfilehash: 7d369384d133c90a15e01df50ac53992d61f3873
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c17dd40175bac5ecc4361e905f009f1ed5c2f5a4
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-and-configure-a-software-update-point"></a>Instalar y configurar un punto de actualización de software  
 
@@ -74,7 +75,7 @@ ms.lasthandoff: 08/07/2017
 ### <a name="wsus-server-connection-account"></a>Cuenta de conexión del servidor WSUS  
  Puede configurar una cuenta para que la utilice el servidor de sitio cuando se conecte a WSUS que se ejecuta en el punto de actualización de software. Cuando no se configura esta cuenta, Configuration Manager usa la cuenta de equipo del servidor de sitio para conectarse a WSUS. Configure la cuenta de conexión del servidor WSUS en la página **Configuración de cuenta y proxy** del asistente o en la pestaña **Configuración de cuenta y proxy** en Propiedades de punto de actualización de software.  Puede configurar la cuenta en distintas partes del asistente en función de la versión de Configuration Manager que usa.  
 
- Para obtener más información sobre las cuentas de Configuration Manager, consulte [Cuentas que se usan en System Center Configuration Manager](../../core/plan-design/hierarchy/accounts.md).  
+ Para obtener más información sobre las cuentas de Configuration Manager, consulte [Accounts used in System Center Configuration Manager (Cuentas que se usan en System Center Configuration Manager)](../../core/plan-design/hierarchy/accounts.md).  
 
 ## <a name="synchronization-source"></a>Origen de la sincronización  
  Es posible configurar el origen de la sincronización ascendente para la sincronización de actualizaciones de software en la página **Origen de la sincronización** del asistente, o en la pestaña **Configuración de sincronización** , en Propiedades de componente de punto de actualización de software. Las opciones para el origen de la sincronización varían dependiendo del sitio.  
