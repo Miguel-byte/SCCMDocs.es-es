@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 12633eced1850b718bf7cad019cd943305a7d9fb
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 4eedd96fd399cf9577da8069bd0c8d5702f50d7b
+ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>Proteger aplicaciones mediante directivas de administración de aplicaciones móviles en System Center Configuration Manager
 
@@ -30,7 +30,7 @@ Las directivas de administración de aplicaciones de System Center Configuration
 
 -   Dispositivos que ejecutan Android 4 y versiones posteriores  
 
--   Dispositivos que ejecutan iOS 7 y versiones posteriores  
+-   Dispositivos que ejecutan iOS 9 y versiones posteriores  
 
 También puede usar directivas de administración de aplicaciones móviles para proteger las aplicaciones en dispositivos que no estén administrados por Intune. Con esta nueva función, puede aplicar directivas de administración de aplicaciones móviles a aplicaciones que se conecten a los servicios de Office 365. Esto no se admite para las aplicaciones que se conectan a Exchange o SharePoint local.  
 
