@@ -72,6 +72,7 @@
 
 ## [Administrar el acceso condicional](deploy-use/manage-access-to-services.md)
 ### [Directivas de cumplimiento de dispositivos](deploy-use/device-compliance-policies.md)
+#### [Acciones de no cumplimiento](deploy-use/actions-for-noncompliance.md)
 ### [Crear una directiva de cumplimiento de dispositivos](deploy-use/create-compliance-policy.md)
 ### [Administrar acceso al correo electrónico](deploy-use/manage-email-access.md)
 ### [Administrar el acceso a SharePoint Online](deploy-use/manage-sharepoint-online-access.md)

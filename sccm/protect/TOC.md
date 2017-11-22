@@ -52,6 +52,8 @@
 
 ### [Directivas de Firewall de Windows](deploy-use/create-windows-firewall-policies.md)
 ### [Protección contra amenazas avanzada de Windows Defender](deploy-use/windows-defender-advanced-threat-protection.md)
+### [Creación e implementación de una directiva de Protección contra vulnerabilidades de seguridad](deploy-use/create-deploy-exploit-guard-policy.md)
+### [Creación e implementación de una directiva de Protección de aplicaciones](deploy-use/create-deploy-application-guard-policy.md)
 ### [Tareas de antimalware y firewall](deploy-use/endpoint-antimalware-firewall.md)
 ### [Escenario de Endpoint Protection](deploy-use/scenarios-endpoint-protection.md)
 ### [Ayuda del cliente Endpoint Protection](deploy-use/endpoint-protection-client-help.md)
