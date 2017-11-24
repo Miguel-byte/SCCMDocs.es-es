@@ -3,7 +3,7 @@ title: "Proteger aplicaciones mediante directivas de administración de aplicaci
 titleSuffix: Configuration Manager
 description: Modifique la funcionalidad de las aplicaciones que implemente para que cumplan las directivas de cumplimiento y seguridad de su empresa.
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 4eedd96fd399cf9577da8069bd0c8d5702f50d7b
-ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
+ms.openlocfilehash: 3365f46026178d30c9bffa5078d251186d0ffba3
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>Proteger aplicaciones mediante directivas de administración de aplicaciones móviles en System Center Configuration Manager
 
@@ -134,6 +134,8 @@ Para aplicar restricciones a una aplicación, esta debe incorporar el Kit de des
 |**Volver a comprobar los requisitos de acceso después de (minutos)**|Especifique el período de tiempo que debe transcurrir antes de que se vuelvan a comprobar los requisitos de acceso de la aplicación una vez iniciada la aplicación (en el campo **Tiempo de espera**).<br /><br /> En el campo **Período de gracia sin conexión**, si el dispositivo está desconectado, se especifica el período de tiempo que debe transcurrir antes de que se vuelvan a comprobar los requisitos de acceso de la aplicación.|  
 |**Cifrar datos de aplicación**|Especifica que se cifren todos los datos asociados a esta aplicación, incluidos los datos almacenados externamente, como los datos almacenados en tarjetas SD.<br /><br /> **Cifrado para iOS**<br /><br /> En el caso de aplicaciones que están asociadas a una directiva de administración de aplicaciones móviles de Configuration Manager, los datos se cifran en reposo con el cifrado de nivel de dispositivo proporcionado por el sistema operativo. Esta opción se habilita a través de la directiva de PIN del dispositivo que debe establecer el administrador de TI. Cuando se requiere un PIN, los datos se cifran según la configuración de la directiva de administración de aplicaciones móviles. Como se indica en la documentación de Apple, [los módulos usados por iOS 7 están certificados mediante FIPS 140-2](http://support.apple.com/en-us/HT202739).<br /><br /> **Cifrado para Android**<br /><br /> En el caso de las aplicaciones que están asociadas a una directiva de administración de aplicaciones móviles de Configuration Manager, Microsoft proporciona el cifrado. Los datos se cifran de forma sincrónica durante las operaciones de E/S de archivos según la configuración de la directiva de administración de aplicaciones móviles. Las aplicaciones administradas en Android usan el cifrado AES-128 en modo CBC mediante las bibliotecas de criptografía de la plataforma. El método de cifrado no está certificado mediante FIPS 140-2. El contenido del almacenamiento del dispositivo está siempre cifrado.|  
     |**Bloquear captura de pantalla** (solo en dispositivos Android)|Especifica que las funciones de captura de pantalla del dispositivo se bloquean cuando se usa esta aplicación.|  
+    |**Deshabilitar sincronización de contactos**| A partir de la versión 1710, esta opción impide que la aplicación pueda guardar datos en la aplicación Contactos nativa del dispositivo. Si elige No, la aplicación podrá guardar los datos en la aplicación Contactos nativa del dispositivo.|  
+    |**Deshabilitar la impresión**| A partir de la versión 1710, esta opción impide que la aplicación pueda imprimir datos profesionales o educativos. |  
 
 6)  En la página **Explorador administrado**, seleccione si se permite que el explorador administrado abra solo las direcciones URL de la lista o si se bloquea el explorador administrado para que no las abra y, después, seleccione **Siguiente**.  
 Para obtener más información, consulte [Administrar el acceso a Internet mediante directivas de explorador administrado con Configuration Manager](manage-internet-access-using-managed-browser-policies.md).  
