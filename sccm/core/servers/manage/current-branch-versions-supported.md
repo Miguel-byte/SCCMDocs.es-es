@@ -3,7 +3,7 @@ title: Versiones de la Rama actual
 titleSuffix: Configuration Manager
 description: "Revise el historial de versiones de System Center Configuration Manager y obtenga información sobre las fases del servicio ofrecido."
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 11/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 628c01d3f746155076e5bab68a38c0a50c73697d
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 8909c4de81ef0ca914120a67be1634380dc50c53
+ms.sourcegitcommit: 29196ffba45b16b2b6a2dc71de981dead850c41c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>Compatibilidad con versiones de la rama actual de System Center Configuration Manager
 
@@ -44,9 +44,9 @@ Ilustración 1. Ejemplo de la superposición del ciclo de versiones del soporte 
 
  **Historial de versiones**  
 
-|Versión|Fecha de disponibilidad|Fecha de finalización del soporte técnico|  
+|Versión |Fecha de disponibilidad |Fecha de finalización del soporte técnico|  
 |-------------|-----------------------|----------------------|  
-|1710|20 de noviembre de 2017|20 de noviembre de 2018|
+|1710|20 de noviembre de 2017|20 de mayo de 2019 |
 |1706|31 de julio de 2017|31 de julio de 2018|
 |1702|27 de marzo de 2017|27 de marzo de 2018|
 |1610|18 de noviembre de 2016|18 de noviembre de 2017|
