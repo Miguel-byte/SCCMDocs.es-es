@@ -15,11 +15,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 047ffc0953db4a4cc5d543d880136ce61fa99fa7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: a1d9144db864d261c13992a2ef4d01223d927d88
+ms.sourcegitcommit: c4a1bafcd004638d264a93d307c70d8b6f7fe023
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>¿Qué rama de Configuration Manager debo utilizar?
 
@@ -147,7 +147,7 @@ Para más información, consulte [Technical Preview for System Center Configurat
 Cuando ve la información de la versión de un sitio de Configuration Manager, también confirma la rama.
 
 **Versión**   
-Para comprobar la versión del sitio, en la esquina superior izquierda de la consola, vaya a **Acerca de System Center Configuration Manager**, donde aparece la **versión del sitio**. Vea []() para obtener una lista de versiones de sitios.
+Para comprobar la versión del sitio, en la esquina superior izquierda de la consola, vaya a **Acerca de System Center Configuration Manager**, donde aparece la **versión del sitio**. Vea [Versiones de línea base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines) para obtener una lista de versiones de sitios.
 
 **Rama**  
 Para confirmar la rama del sitio (como LTSB o rama actual), en la consola, vaya a **Administración** > **Configuración de sitio** > **Sitios** y abra **Configuración de jerarquía**. Si existe una opción de conversión a la rama actual y está activa, el sitio ejecuta la versión de LTSB. Cuando el sitio ejecuta la rama actual, está opción aparece atenuada. Para obtener más información sobre las diferentes versiones de Configuration Manager, vea "Versiones de línea de base y versiones de actualización" en el tema [Actualizaciones para System Center Configuration Manager](/sccm/core/servers/manage/updates).

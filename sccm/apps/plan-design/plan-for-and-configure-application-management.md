@@ -3,7 +3,7 @@ title: "Planear y configurar la administración de aplicaciones"
 titleSuffix: Configuration Manager
 description: "Implemente y configure las dependencias necesarias para la implementación de aplicaciones en System Center Configuration Manager."
 ms.custom: na
-ms.date: 02/09/2017
+ms.date: 11/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "13"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 66317bea84adbddf2d2e94c30a4a72e19229439b
-ms.sourcegitcommit: 18ac58374d2d513fe2a197c80f7c8c6890a7d612
+ms.openlocfilehash: cd06d3ee2ea14c9ff1b9cf09980c2b25a5263db9
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>Planear y configurar la administración de aplicaciones en Configuration Manager
 
@@ -185,6 +185,26 @@ La personalización de marca del Centro de software se aplica conforme a las sig
 1. Si no está instalado el rol de servidor de sitio del punto de sitios web del catálogo de aplicaciones, el Centro de software mostrará el nombre de organización especificado en el cliente **Agente de equipo** que establece el **Nombre de organización mostrado en el Centro de software**. Para obtener instrucciones, vea [Cómo establecer la configuración del cliente](https://docs.microsoft.com/sccm/core/clients/deploy/configure-client-settings).
 2. Si está instalado el rol de servidor de sitio del punto de sitios web del catálogo de aplicaciones, el Centro de software mostrará el nombre de la organización y el color especificados en las propiedades del rol de servidor de sitio del punto de sitios web del catálogo de aplicaciones. Para más información, vea [Configuration options for Application Catalog website point (Opciones de configuración del punto de sitios web del catálogo de aplicaciones)](https://docs.microsoft.com/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).
 3. Si una suscripción de Microsoft Intune está configurada y conectada a Configuration Manager, el Centro de software mostrará el nombre de la organización, el color y el logotipo de la empresa especificados en las propiedades de la suscripción de Intune. Para más información, vea [Configuring the Microsoft Intune subscription (Configuración de la suscripción de Microsoft Intune)](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription).
+
+#### <a name="to-manually-set-software-center-branding"></a>Personalización de la marca del Centro de software
+<!-- 1351224 -->
+Con la versión 1710, puede agregar manualmente elementos de personalización de marca de empresa y especificar la visibilidad de las pestañas en el Centro de software. Puede agregar el nombre de compañía específico del Centro de software, establecer un tema de color para la configuración de Centro de software, establecer un logotipo de empresa y establecer las pestañas visibles para los dispositivos del cliente.
+
+1. En la consola de **Configuration Manager**, elija **Administración** > **Configuración de cliente**. Haga clic en la instancia de la configuración de cliente que desea.
+2. En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.
+3. En el cuadro de diálogo **Configuración predeterminada**, elija **Centro de software**.
+4. Seleccione **Sí** en **Select new settings to specify company information** (Seleccionar nueva configuración para especificar la información de la empresa) para habilitar la configuración de personalización del Centro de software.
+5. Escriba el **nombre de la empresa**.
+6. Seleccione la **combinación de colores para el Centro de software**.
+7. Haga clic en **Examinar** para navegar hasta el logotipo del Centro de software. El logotipo debe ser un JPEG o PNG de 400 x 100 píxeles, con un tamaño máximo de 750 KB.
+8. Seleccione **SÍ** para mostrar las pestañas en el Centro de software en los dispositivos del cliente. Debe estar visible al menos una pestaña:
+
+    -  Habilitar pestaña Aplicaciones
+    -  Habilitar pestaña Actualizaciones
+    -  Habilitar pestaña Sistemas operativos
+    -  Habilitar pestaña Estado de instalación
+    -  Habilitar pestaña Cumplimiento de dispositivos
+    -  Habilitar pestaña Opciones
 
 > [!IMPORTANT]  
 >  La personalización de marca del Centro de software se sincroniza con el servicio de Intune cada 14 días. Por lo tanto, puede haber un retraso antes de que los cambios realizados en Intune se muestren en Configuration Manager.

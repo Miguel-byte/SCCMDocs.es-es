@@ -3,7 +3,7 @@ title: "Administración de clientes"
 titleSuffix: Configuration Manager
 description: Aprenda a administrar clientes en System Center Configuration Manager.
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "17"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d62138f573745a16634e06aeb9301a248f707cae
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: ae1bc53cf15b2a1746656667f7bf546742432c11
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>Cómo administrar clientes en System Center Configuration Manager
 
@@ -51,7 +51,7 @@ Tenga en cuenta que, dependiendo del tipo de dispositivo, es posible que algunas
     -   **Agregar el dispositivo a una recopilación nueva o existente**  
 
          Agregue el dispositivo a una recopilación con una regla directa.  
-         
+
     -   **Instalar y volver a instalar el cliente mediante el asistente Inserción del cliente**  
 
          Instale y vuelva a instalar el cliente de Configuration Manager para repararlo o para volver a configurarlo en equipos que ejecutan Windows. Incluye opciones de configuración de sitios y las propiedades client.msi que establece para la instalación de inserción del cliente.  
@@ -185,6 +185,21 @@ Tenga en cuenta que, dependiendo del tipo de dispositivo, es posible que algunas
 
          Las tareas de notificación de cliente se muestran en el nodo **Operaciones de cliente** del área de trabajo **Supervisión** .  
 
+
+## <a name="restart-clients"></a>Reinicio de clientes
+A partir de la versión 1710, puede usar la consola de Configuration Manager para identificar los dispositivos de cliente que requieren un reinicio y, después, usar una acción de notificación de cliente para reiniciarlos.
+
+Para identificar los dispositivos que están pendiente un reinicio, vaya a **Activos y compatibilidad** > **Dispositivos** y seleccione una recopilación con dispositivos que pueden necesitar un reinicio. Después de seleccionar una recopilación, puede ver el estado de cada dispositivo en el panel de detalles en una nueva columna denominada **Reinicio pendiente**. Cada dispositivo tiene un valor de **Sí** o **No**.
+
+**Para crear la notificación de cliente para reiniciar un dispositivo:**
+1.  Busque el dispositivo que quiere reiniciar en el nodo Dispositivos de la consola.
+2.  Haga clic con el botón derecho en el dispositivo, seleccione **Notificación de cliente** y, después, seleccione **Reiniciar**. Se abre una ventana de información sobre el reinicio. Haga clic en **Aceptar** para confirmar la solicitud de reinicio.
+
+Cuando el cliente recibe la notificación de un **Centro de software**, se abre la ventana de notificación para informar al usuario sobre el reinicio. De forma predeterminada, el reinicio se produce al cabo de 90 minutos. Puede modificar la hora de reinicio en la [configuración de cliente](/sccm/core/clients/deploy/configure-client-settings). La configuración para el comportamiento del reinicio se encuentra en la pestaña [Reinicio de equipo](/sccm/core/clients/deploy/about-client-settings#computer-restart) de la configuración predeterminada.
+
+
+
+
 ##  <a name="BKMK_ClientCache"></a> Configurar la caché del cliente para clientes de Configuration Manager  
 La caché del cliente almacena los archivos temporales para el momento en que los clientes instalen aplicaciones y programas. Las actualizaciones de software también utilizan la caché de cliente, pero estas actualizaciones no están limitadas por el tamaño de caché configurado y siempre tratarán de descargarse en la caché. Puede configurar la caché de cliente, como el tamaño y la ubicación, al instalar manualmente el cliente de Configuration Manager, cuando use la instalación de inserción de cliente o después de la instalación del cliente.
 
@@ -257,8 +272,8 @@ Para obtener más información sobre cómo utilizar estas propiedades de línea 
 5.  Para eliminar los archivos de la carpeta de caché, pulse **Eliminar archivos**.  
 
     > [!NOTE]
-    > 
-    > La carpeta de caché es una carpeta de Windows normal, por lo que puede automatizar la eliminación del contenido de la carpeta con un script, una utilidad o con el cmdlet de PowerShell `Remove-Item`. 
+    >
+    > La carpeta de caché es una carpeta de Windows normal, por lo que puede automatizar la eliminación del contenido de la carpeta con un script, una utilidad o con el cmdlet de PowerShell `Remove-Item`.
 
 
 ### <a name="to-configure-client-cache-size-in-client-settings"></a>Para configurar el tamaño de la caché de cliente en la configuración de cliente
@@ -273,6 +288,8 @@ A partir de la versión 1606, puede ajustar el tamaño de la carpeta de caché d
  3. Pulse **Configuración de caché de cliente** y pulse **Sí** para **Configurar el tamaño de caché de cliente**, después use la opción **MB** o **Porcentaje de disco**. La memoria caché se ajusta al tamaño que sea menor.
 
      El cliente de Configuration Manager configurará el tamaño de caché con estos valores cuando se descargue la próxima directiva de cliente.
+
+
 
 ##  <a name="BKMK_UninstalClient"></a> Desinstalar el cliente de Configuration Manager  
  Para desinstalar de un equipo con Windows el software cliente de Configuration Manager, use **CCMSetup.exe** con la propiedad **/Uninstall**. Ejecute CCMSetup.exe en un equipo individual desde el símbolo del sistema o implemente un paquete y el programa para desinstalar el cliente de una recopilación de equipos.  
@@ -331,7 +348,7 @@ A partir de la versión 1610 de Configuration Manager, puede proporcionar una li
 Puede iniciar la recuperación de directivas con:
 
 
-- [Notificación de cliente](#initiate-client-policy-retrieval-using-client-notification) 
+- [Notificación de cliente](#initiate-client-policy-retrieval-using-client-notification)
 - [La pestaña **Acciones** en el cliente](#manually-initiate-client-policy-retrieval-on-the-actions-tab-of-the-configuration-manager-client)
 - [Un script](#manually-initiate-client-policy-retrieval-by-script)
 

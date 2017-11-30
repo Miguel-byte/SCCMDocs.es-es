@@ -3,7 +3,7 @@ title: Requisitos de certificados PKI
 titleSuffix: Configuration Manager
 description: "Encuentre los requisitos de certificados PKI que podría necesitar para System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/24/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,21 +15,26 @@ caps.latest.revision: "17"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: f5afa9fd9823cfbaa305b4d4e88f89be7004bd60
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: c9d95f6282820a41db762c143b3aa2f6d4fadf3e
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pki-certificate-requirements-for-system-center-configuration-manager"></a>Requisitos de certificados PKI para System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-En las tablas siguientes se enumeran los certificados de infraestructura de clave pública (PKI) que pueda necesitar para System Center Configuration Manager. Esta información supone un conocimiento básico de los certificados PKI. Para obtener una guía paso a paso de una implementación, vea [Ejemplo paso a paso de la implementación de los certificados PKI para System Center Configuration Manager: entidad de certificación de Windows Server 2008](/sccm/core/plan-design/network/example-deployment-of-pki-certificates). Para obtener más información acerca de los servicios de certificados de Active Directory, consulte la siguiente documentación:  
+En las tablas siguientes se enumeran los certificados de infraestructura de clave pública (PKI) que pueda necesitar para System Center Configuration Manager. Esta información supone un conocimiento básico de los certificados PKI. Para obtener una guía paso a paso de una implementación, vea [Ejemplo paso a paso de la implementación de los certificados PKI para System Center Configuration Manager: entidad de certificación de Windows Server 2008](/sccm/core/plan-design/network/example-deployment-of-pki-certificates). 
+
+Para obtener más información acerca de los servicios de certificados de Active Directory, consulte la siguiente documentación:  
 
 -   Para Windows Server 2012: [Información general de Servicios de certificados de Active Directory](http://go.microsoft.com/fwlink/p/?LinkId=286744)  
 
--   Para Windows Server 2008: [Servicios de certificados de Active Directory en Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
+-   Para Windows Server 2008: [Servicios de certificados de Active Directory en Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)
+
+Para obtener información sobre el uso de certificados Cryptography API: Next Generation (CNG) con Configuration Manager, consulte [Introducción a los certificados CNG](cng-certificates-overview.md).
+
 
 > [!IMPORTANT]  
 > System Center Configuration Manager admite certificados Algoritmo hash seguro 2 (SHA-2). Los certificados SHA-2 ofrecen una ventaja de seguridad importante. Por lo tanto, se recomienda lo siguiente:

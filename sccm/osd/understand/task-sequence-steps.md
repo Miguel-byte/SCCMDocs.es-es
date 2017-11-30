@@ -3,7 +3,7 @@ title: Pasos de la secuencia de tareas
 titleSuffix: Configuration Manager
 description: "Obtenga información sobre los pasos de la secuencia de tareas que puede agregar a una secuencia de tareas de Configuration Manager."
 ms.custom: na
-ms.date: 03/26/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,17 +16,20 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 8bc73b8aaafa9af4e12589b2d2a742bfc18afd0e
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 02d3ca5ed494c20266125686f26b66cebcc7c2a2
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Pasos de la secuencia de tareas en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
 Los siguientes pasos de secuencia de tareas se pueden agregar a una secuencia de tareas de Configuration Manager. Para obtener información sobre cómo editar una secuencia de tareas, consulte [Editar una secuencia de tareas](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
+
+> [!TIP]  
+> **Compatibilidad con Windows 10, versión 1709 (también conocida como Fall Creators Update)**.  A partir de esta versión de Windows, Windows Media incluye varias ediciones. Al configurar una secuencia de tareas para usar un paquete de actualizaciones del sistema operativo o una imagen del sistema operativo, no olvide seleccionar una [edición que se pueda usar con Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
 
 
 ##  <a name="BKMK_ApplyDataImage"></a> Paso de secuencia de tareas Aplicar imagen de datos  
@@ -536,6 +539,22 @@ Este paso de secuencia de tareas solo se ejecuta en Windows PE, no en sistemas o
  **Garantizar que el sistema operativo actual que se va a actualizar es**  
  Seleccione esta opción para verificar que el sistema operativo instalado en el equipo de destino cumple el requisito que especifique. De forma predeterminada, esta opción tiene un valor de **CLIENTE**.  
 
+##  <a name="child-task-sequence"></a>Secuencia de tareas secundarias
+
+A partir de Configuration Manager versión 1710, puede agregar un nuevo paso de secuencia de tareas que ejecute otra secuencia de tareas. Esto crea una relación de elementos primarios y secundarios entre las secuencias de tareas. Con una secuencia de tareas secundarias, puede crear secuencias de tareas modulares que puede volver a usar.
+
+Tenga en cuenta lo siguiente al agregar una secuencia de tareas secundaria a una secuencia de tareas:
+
+ - Las secuencias de tareas primaria y secundaria se combinan eficazmente en una única directiva que ejecuta el cliente.
+ - El entorno es global. Por ejemplo, si una variable se establece por la secuencia de tareas primaria y, a continuación, se cambia por la secuencia de tareas secundaria, la variable permanece cambiada en adelante. De forma similar, si la secuencia de tareas secundaria crea una nueva variable, la variable está disponible para los pasos restantes de la secuencia de tareas primaria.
+ - Los mensajes de estado se envían de manera normal para una operación de secuencia de tareas única.
+ - Las secuencias de tareas escriben entradas en el archivo smsts.log, con nuevas entradas de registro que dejan claro cuando se inicia una secuencia de tareas secundaria.
+
+### <a name="details"></a>Detalles
+
+1. En el editor de secuencia de tareas, haga clic en **Agregar**, seleccione **General** y haga clic en **Ejecutar secuencia de tareas**.
+2. Haga clic en **Examinar** para seleccionar la secuencia de tareas secundaria.  
+
 ##  <a name="BKMK_ConnectToNetworkFolder"></a> Conectar a carpeta de red  
  Use la acción de secuencia de tareas **Conectar a carpeta de red** para crear una conexión a una carpeta de red compartida.  
 
@@ -745,7 +764,7 @@ Este paso se ejecuta en un sistema operativo estándar o en Windows PE. Pero en 
  El número de disco físico del disco al que se dará formato. El número se basa en el orden de enumeración de disco de Windows.  
 
  **Tipo de disco**  
- El tipo de disco al que se da formato. Hay dos opciones para seleccionar en la lista desplegable:  
+ El tipo de disco al que se da formato. Hay dos opciones para seleccionar en la lista desplegable: 
 
 -   Estándar (MBR): registro de arranque maestro.  
 

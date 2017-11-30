@@ -9,11 +9,11 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: ffe7b2aa025b20d5b1d1a718e0eaa045817a66ee
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: b1063826841c37973e26954e164d867649c3fb9f
+ms.sourcegitcommit: c4a1bafcd004638d264a93d307c70d8b6f7fe023
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planificación de Cloud Management Gateway en Configuration Manager
 
@@ -45,7 +45,7 @@ Se necesitan certificados de cliente y de capa de sockets seguros (SSL) para aut
 - La puerta de enlace de administración en la nube solo admite los roles de punto de administración y punto de actualización de software.
 -   En estos momentos, las siguientes características de Configuration Manager no son compatibles con la puerta de enlace de administración en la nube:
 
-    -   Implementación de cliente
+    -   Inserción de cliente
     -   Asignación automática de sitio
     -   Catálogo de aplicaciones (incluidas las solicitudes de aprobación de software)
     -   Implementación completa de sistema operativo (OSD)

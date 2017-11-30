@@ -3,7 +3,7 @@ title: SQL Server Always On
 titleSuffix: Configuration Manager
 description: Planee el uso de un grupo de disponibilidad Always On de SQL Server con SCCM.
 ms.custom: na
-ms.date: 09/22/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "16"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 24eaa33f1f9b333894817f089149e2cbed35df75
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 93aec5773f56ad28950ae75db54739d04124794f
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Preparación para usar grupos de disponibilidad AlwaysOn de SQL Server con Configuration Manager
 
@@ -216,6 +216,11 @@ Las siguientes limitaciones se aplican a todos los escenarios.
   Introducidos con la edición SQL Server 2016 Standard, los [grupos de disponibilidad básica](https://msdn.microsoft.com/library/mt614935.aspx) no admiten el acceso de lectura a réplicas secundarias, un requisito para su uso con Configuration Manager.
 - **Instancia del clúster de conmutación por error**  
   Las [instancias del clúster de conmutación por error](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server) no son compatibles con las réplicas usadas junto con Configuration Manager.
+
+- **MultiSubnetFailover**    
+    No se admite para usar un grupo de disponibilidad de una configuración de varias subredes o con la cadena de conexión de palabras clave [MutliSubnetFailover](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover).
+
+
 
 **Servidores SQL Server que hospedan grupos de disponibilidad adicionales:**   
 Antes de la versión 1610 de Configuration Manager, cuando un grupo de disponibilidad en un servidor SQL Server hospeda uno o varios grupos de disponibilidad además del grupo que se usa para Configuration Manager, cada réplica de esos grupos de disponibilidad adicionales debe tener las siguientes configuraciones en el momento de ejecutar el programa de instalación de Configuration Manager o instalar una actualización para Configuration Manager:

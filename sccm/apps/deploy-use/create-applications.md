@@ -3,7 +3,7 @@ title: Crear aplicaciones
 titleSuffix: Configuration Manager
 description: "Cree e implemente aplicaciones y tipos de implementación con System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 6896a4905b9eecf520dae2c887100df472963356
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: f680b692f3ae92fb8a5e8b6640ed053ceedba436
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-applications-with-system-center-configuration-manager"></a>Crear aplicaciones con System Center Configuration Manager
 
@@ -119,7 +119,7 @@ La nueva aplicación aparece en el nodo **Aplicaciones** de la consola de Config
 
     -   **Palabras clave**: especifique una lista de palabras clave en el idioma que ha seleccionado en la lista desplegable **Idioma seleccionado**. Estas palabras clave ayudarán a los usuarios del Centro de software a encontrar la aplicación.  
 
-    -   **Icono**: seleccione **Examinar** para elegir un icono para esta aplicación entre los que están disponibles. Si no especifica un icono, se utilizará un icono predeterminado para esta aplicación.  
+    -   **Icono**: seleccione **Examinar** para elegir un icono para esta aplicación entre los que están disponibles. Si no especifica un icono, se utilizará un icono predeterminado para esta aplicación. Ahora puede configurar un icono con una dimensión de píxel de hasta 512 x 512.
 
     -   **Mostrar esta aplicación como destacada y resaltarla en el portal de empresa**: seleccione esta opción para que la aplicación se muestre de forma destacada en el portal de empresa.  
 

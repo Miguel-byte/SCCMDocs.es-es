@@ -1,42 +1,41 @@
 ---
-title: "Configurar puerta de enlace de administración en la nube | Microsoft Docs"
+title: "Configuración de Cloud Management Gateway"
+titleSuffix: Configuration Manager
 description: 
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.date: 05/01/2017
+ms.date: 09/26/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 84b617b3e83636ab4578174ef40e786dcf1178cd
-ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
+ms.openlocfilehash: 7463cd7199098b21843fd5b99ed284a12ff91e00
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurar puerta de enlace de administración en la nube para Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
-
-A partir de la versión 1610, el proceso para configurar la puerta de enlace de administración en la nube en Configuration Manager incluye los pasos siguientes:
+*Se aplica a: System Center Configuration Manager (rama actual)* El proceso para configurar la puerta de enlace de administración en la nube en Configuration Manager incluye los pasos siguientes:
 
 ## <a name="step-1-configure-required-certificates"></a>Paso 1: Configurar los certificados necesarios
 
 > [!TIP]  
 > Antes de solicitar un certificado, confirme que el nombre de dominio de Azure deseado (por ejemplo, GraniteFalls.CloudApp.Net) sea único. Para realizar este registro en [Microsoft Azure Portal](https://manage.windowsazure.com), haga clic en **Nuevo**, seleccione **Servicio en la nube** y después **Creación personalizada**. En el campo **Dirección URL** escriba el nombre de dominio que desee (no haga clic en la marca de verificación para crear el servicio). El portal mostrará si el nombre de dominio está disponible o si ya está en uso por otro servicio.
 
-## <a name="option-1-preferred---use-the-server-authentication-certificate-from-a-public-and-globally-trusted-certificate-provider-like-verisign"></a>Opción 1 (preferida): Usar el certificado de autenticación de servidor de un proveedor de certificados público y de confianza global (como VeriSign)
+### <a name="option-1-preferred---use-the-server-authentication-certificate-from-a-public-and-globally-trusted-certificate-provider-like-verisign"></a>Opción 1 (preferida): Usar el certificado de autenticación de servidor de un proveedor de certificados público y de confianza global (como VeriSign)
 
 Cuando use este método, los clientes confiarán automáticamente en el certificado y no tendrá que crear un certificado SSL personalizado usted mismo.
 
 1. Cree un registro de nombre canónico (CNAME) en el servicio de nombres de dominio (DNS) público de su organización para crear un alias del servicio Cloud Management Gateway con un nombre descriptivo que se usará en el certificado público.
-Por ejemplo, Contoso denomina su servicio Cloud Management Gateway **GraniteFalls** que, en Azure, será **GraniteFalls.CloudApp.Net**. En el DNS espacio de nombres público de Contoso, contoso.com, el administrador de DNS crea un registro CNAME para **GraniteFalls.Contoso.com** con el nombre del host real, **GraniteFalls.CloudApp.net**.
+Por ejemplo, Contoso denomina su servicio de puerta de enlace de administración en la nube **GraniteFalls** que, en Azure, será **GraniteFalls.CloudApp.Net**. En el DNS espacio de nombres público de Contoso, contoso.com, el administrador de DNS crea un registro CNAME para **GraniteFalls.Contoso.com** con el nombre del host real, **GraniteFalls.CloudApp.net**.
 2. Luego, con el nombre común (CN) del alias de CNAME, solicite un certificado de autenticación de servidor de un proveedor público.
 Por ejemplo, Contoso usa **GraniteFalls.Contoso.com** como CN del certificado.
 3. Cree el servicio Cloud Management Gateway en la consola de Configuration Manager con este certificado.
-    - En la página **Configuración** del Asistente para crear una instancia de Cloud Management Gateway, cuando agregue el certificado de servidor de este servicio en la nube (en **Archivo de certificado**), el asistente extraerá el nombre de host del CN de certificado como nombre del servicio y lo agregará a **cloudapp.net** (o a **usgovcloudapp.net** en el caso de la nube Azure Gobierno de EE.UU.) como FQDN de servicio para crear el servicio en Azure.
+    - En la página **Configuración** del Asistente para crear una instancia de Cloud Management Gateway: cuando agregue el certificado de servidor de este servicio en la nube (en **Archivo de certificado**), el asistente extraerá el nombre de host del CN de certificado como nombre del servicio y lo agregará a **cloudapp.net** (o a **usgovcloudapp.net** en el caso de la nube Azure Gobierno de EE. UU.) como FQDN de servicio para crear el servicio en Azure.
 Por ejemplo, al crear el servicio Cloud Management Gateway en Contoso, se extrae el nombre de host, **GraniteFalls**, del CN de certificado, por lo que el servicio real de Azure se crea como **GraniteFalls.CloudApp.net**.
 
 ### <a name="option-2---create-a-custom-ssl-certificate-for-cloud-management-gateway-in-the-same-way-as-for-a-cloud-based-distribution-point"></a>Opción 2: Crear un certificado SSL personalizado para Cloud Management Gateway de la misma manera que se crea para un punto de distribución basado en la nube
@@ -50,15 +49,15 @@ Puede crear un certificado SSL personalizado para la puerta de enlace de adminis
 
 La manera más sencilla de exportar la raíz de los certificados de cliente usados en la red es abrir un certificado de cliente en uno de los equipos unidos a dominio que tenga uno y copiarlo.
 
-> [!NOTE] 
+> [!NOTE]
 >
 > Los certificados de cliente son necesarios en cualquier equipo que desee administrar con la puerta de enlace de administración en la nube y en el servidor de sistema de sitio que hospeda el punto de conexión de la puerta de enlace de administración en la nube. Si necesita agregar un certificado de cliente a cualquiera de estas máquinas, vea [Deploying the Client Certificate for Windows Computers (Implementación del certificado de cliente para equipos Windows)](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).
 
 1.  En la ventana Ejecutar, escriba **mmc** y presione ENTRAR.
 
-2.  En el menú Archivo, elija **Agrear o quitar complemento...**.
+2.  En el menú Archivo, elija **Agregar o quitar complemento**.
 
-3.  En el cuadro de diálogo Agregar o quitar complemento, elija **Certificados** > **Agregar &gt;** > **Cuenta de equipo** > **Siguiente** > **Equipo local** > **Finalizar**. 
+3.  En el cuadro de diálogo Agregar o quitar complemento, elija **Certificados** > **Agregar &gt;** > **Cuenta de equipo** > **Siguiente** > **Equipo local** > **Finalizar**.
 
 4.  Vaya a **Certificados** &gt; **Personal** &gt; **Certificados**.
 
@@ -122,7 +121,7 @@ Se necesita un certificado de administración de Azure para que Configuration Ma
 
 5. Si desea administrar el tráfico de la puerta de enlace de administración en la nube con un umbral de 14 días, elija la casilla para activar la alerta de umbral. Luego, especifique el umbral y el porcentaje en que desea elevar los distintos niveles de alerta. Elija **Siguiente** cuando termine.
 
-6. Revise la configuración y elija **Siguiente**. Configuration Manager comienza a configurar el servicio. Cuando cierre el asistente, llevará entre 5 y 15 minutos aprovisionar por completo el servicio en Azure. Compruebe la columna **Estado** de la puerta de enlace de administración en la nube recién configurada para determinar si el servicio está listo.
+6. Revise la configuración y elija **Siguiente**. Configuration Manager comienza a configurar el servicio. Cuando cierre el asistente, llevará entre 5 y 15 minutos aprovisionar por completo el servicio en Azure. Compruebe la columna **Estado** de la nueva puerta de enlace de administración en la nube para determinar si el servicio está listo.
 
 ## <a name="step-5-configure-primary-site-for-client-certification-authentication"></a>Paso 5: Configurar un sitio primario para la autenticación de certificados de cliente
 
@@ -141,7 +140,7 @@ El punto de conexión de puerta de enlace de administración en la nube es un ro
 
 ## <a name="step-7-configure-roles-for-cloud-management-gateway-traffic"></a>Paso 7: Configurar roles para el tráfico de puerta de enlace de administración en la nube
 
-El último paso de la configuración de la puerta de enlace de administración en la nube es configurar los roles de sistema de sitio para que acepten tráfico de la puerta de enlace de administración en la nube. Solo los roles de punto de administración y punto de actualización de software son compatibles para Cloud Management Gateway. Debe configurar cada rol por separado.
+El último paso de la configuración de la puerta de enlace de administración en la nube es configurar los roles de sistema de sitio para que acepten tráfico de la puerta de enlace de administración en la nube. Solo los roles de punto de administración y punto de actualización de software son compatibles para Cloud Management Gateway. Configure cada rol por separado.
 
 1. En la consola de Configuration Manager, vaya a **Administración** > **Configuración de sitio** > **Servidores y roles del sistema de sitios**.
 
@@ -155,7 +154,7 @@ El último paso de la configuración de la puerta de enlace de administración e
 
 Una vez que los roles de sistema de sitio y puerta de enlace de administración en la nube están completamente configurados y en ejecución, los clientes obtendrán automáticamente la ubicación del servicio de puerta de enlace de administración en la nube en la siguiente solicitud de ubicación. Los clientes deben encontrarse en la red corporativa para recibir la ubicación del servicio de puerta de enlace de administración en la nube. El ciclo de sondeo de las solicitudes de ubicación es cada 24 horas. Si no quiere esperar a la solicitud de ubicación normalmente programada, puede forzar la solicitud si reinicia el servicio Host de agente de SMS (ccmexec.exe) en el equipo.
 
-Con la ubicación del servicio de puerta de enlace de administración en la nube configurada en el cliente, puede determinar automáticamente si se encuentra en la intranet o en Internet. Si el cliente puede ponerse en contacto con el controlador de dominio o con el punto de administración local, lo usará para comunicarse con Configuration Manager. De lo contrario, considerará que se encuentra en Internet y usará la ubicación del servicio de puerta de enlace de administración en la nube para comunicarse.
+Con la ubicación del servicio de puerta de enlace de administración en la nube configurada en el cliente, puede determinar automáticamente si se encuentra en la intranet o en Internet. Si el cliente puede ponerse en contacto con el controlador de dominio o el punto de administración local, lo usará para comunicarse con el Configuration Manager. En caso contrario, considerará que está conectado a Internet y utilizará la ubicación del servicio de puerta de enlace de administración en la nube para comunicarse.
 
 >[!NOTE]
 > Puede forzar a un cliente para que siempre use la puerta de enlace de administración en la nube independientemente de si se encuentra en la intranet o en Internet. Para ello, debe establecer la siguiente clave de registro en el equipo cliente:

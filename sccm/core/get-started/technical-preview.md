@@ -3,7 +3,7 @@ title: Versiones de Technical Preview
 titleSuffix: Configuration Manager
 description: "Obtenga información sobre la versión Technical Preview que le permite probar nuevas funcionalidades y capacidades de System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/30/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "157"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0f6fb329dae1dda18bbb1869dc77872a2a6a1b98
-ms.sourcegitcommit: 5437b2823bada8f8c9e67940f584953b9d190628
+ms.openlocfilehash: c03581ba5d582d6b86f17c7ec34c3e6e0e8d627e
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>Technical Preview para System Center Configuration Manager
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 10/31/2017
 
  Puesto que esta es una versión preliminar técnica, los detalles y las funcionalidades están sujetos a cambios.  
 
- Este tema contiene información que afecta a todas las versiones de Technical Preview y enumera todas las nuevas funciones (o características), junto con la versión de Technical Preview en la que la función aparece por primera vez, como la versión 1701 para enero de 2017. Los detalles de estas capacidades se proporcionan en otros temas dedicados a cada versión preliminar.  
+ Este tema contiene información que afecta a todas las versiones de Technical Preview y enumera todas las nuevas funciones (o características), junto con la versión de Technical Preview en la que la función aparece por primera vez, como la versión 1710 para octubre de 2017. Los detalles de estas capacidades se proporcionan en otros temas dedicados a cada versión preliminar.  
 
  Para obtener más información sobre las novedades en la rama actual de Configuration Manager, consulte [Novedades de System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).
 
@@ -83,7 +83,7 @@ Los siguientes productos y tecnologías son compatibles con esta rama de Configu
 ##  <a name="bkmk_install"></a> Instalar y actualizar la versión Technical Preview  
  System Center Configuration Manager Technical Preview es diferente de la versión actual de System Center Configuration Manager.  
 
- Para usar la versión preliminar técnica, primero debe instalar una **versión de línea base** de la compilación de dicha versión. Después de instalar una versión de línea base, podrá usar las **actualizaciones en consola** para que la instalación cuente con la versión preliminar más reciente.     Normalmente, las nuevas versiones de Technical Preview están disponibles cada mes.
+ Para usar la versión preliminar técnica, primero debe instalar una **versión de línea base** de la compilación de dicha versión. Después de instalar una versión de línea base, podrá usar las **actualizaciones en consola** para que la instalación cuente con la versión preliminar más reciente. Normalmente, las nuevas versiones de Technical Preview están disponibles cada mes.
 
 Cada versión preliminar se admite hasta que tres versiones sucesivas están disponibles. Es decir, cuando se presente la versión 1708, la versión 1704 ya no se admitirá, pero las versiones 1705, 1706 y 1707 seguirán admitiéndose. Si una línea base deja de ser compatible, como en el caso de la versión 1703, todavía se admitirá para instalar un nuevo sitio de Technical Preview hasta que haya una nueva versión disponible, siempre que después actualice la instalación a otra compatible. Al actualizar, si no ve la última versión compatible en la consola, actualice a la última disponible y, luego, repita el proceso hasta que pueda instalar la más reciente de Technical Preview.
 
@@ -92,8 +92,8 @@ Cada versión preliminar se admite hasta que tres versiones sucesivas están dis
 
 **Versiones activas de línea base de Technical Preview:**  
 Puede instalar una versión de línea base hasta 1 año después de su lanzamiento. Sin embargo, al instalar un sitio nuevo de Technical Preview, se recomienda usar la última versión de línea base disponible.
--  **Technical Preview 1703**: la versión Configuration Manager Technical Preview 1703 está disponible como actualización en consola para Configuration Manager Technical Preview y como nueva versión de base de referencia, [disponible en el sitio web TechNet Evaluation Center](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
-
+-  **Technical Preview 1711**: la versión Configuration Manager Technical Preview 1711 está disponible como actualización en consola para Configuration Manager Technical Preview y como nueva versión de base de referencia, [disponible en el sitio web TechNet Evaluation Center](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+-  **Technical Preview 1703**: la versión Configuration Manager Technical Preview 1703 estaba disponible como actualización en consola para Configuration Manager Technical Preview y como versión de línea base. Si va a instalar una nueva línea base, se recomienda usar la versión 1711.
 
 
 ##  <a name="BKMK_TPFeedback"></a> Proporcionar comentarios  
@@ -111,31 +111,42 @@ A continuación se enumeran las capacidades que ofrece cada versión preliminar 
 
  |Capacidad |Versión de Technical Preview |Versión de rama actual|  
  |----------------|---------------------|--------------------|
+ |Mejoras para ejecutar el paso de secuencia de tareas <!-- 1261338 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![Sin agregar](media/Red_X.gif)    |
+ |Permitir la interacción del usuario al instalar aplicaciones como <!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![Sin agregar](media/Red_X.gif)    |
+ |Nuevas directivas de cumplimiento para Windows 10 <!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md#new-compliance-policy-options-for-windows-10) |![Sin agregar](media/Red_X.gif)    |
+
+
+## <a name="capabilities-delivered-in-previous-technical-previews"></a>Funcionalidades ofrecidas en anteriores versiones preliminares técnicas
+ Cuando todas las características de una versión preliminar técnica estén disponibles en la versión mínima admitida de la Rama actual, los detalles de esa versión preliminar se quitan de esta tabla siguiente.  
+
+ |Capacidad |Versión de Technical Preview |Versión de rama actual|  
+ |----------------|---------------------|--------------------|
  |Telemetría de Windows 10 para el estado de dispositivos de Windows Analytics<!--1356148 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health) |![Sin agregar](media/Red_X.gif)    |
  |Mejoras de los iconos del Centro de software<!-- 1356194 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#software-center-no-longer-distorts-icons-larger-than-250x250) |![Sin agregar](media/Red_X.gif)    |
- |Comprobación del cumplimiento del Centro de software en dispositivos administrados conjuntamente<!-- 1356374 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|![Sin agregar](media/Red_X.gif)    |
+ |Comprobación del cumplimiento del Centro de software en dispositivos administrados conjuntamente<!-- 1356374 -->|[Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|![Sin agregar](media/Red_X.gif)    |
  |Compatibilidad limitada con certificados CNG<!-- 1356191 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limited-support-for-cng-certificates)|![Sin agregar](media/Red_X.gif)    |
- |Compatibilidad con la Protección contra vulnerabilidades de seguridad<!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |![Sin agregar](media/Red_X.gif)    |
- |Descripciones mejoradas para reinicios de equipo pendientes <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Sin agregar](media/Red_X.gif)    |
- |Cambios en la directiva de Device Guard <!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Sin agregar](media/Red_X.gif)    |
- |Configuración e implementación de directivas de Protección de aplicaciones de Windows Defender <!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![Sin agregar](media/Red_X.gif)    |
- 
+ |Compatibilidad con la Protección contra vulnerabilidades de seguridad<!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |[Versión 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)    |
+ |Descripciones mejoradas para reinicios de equipo pendientes <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Versión 1710](/sccm/core/clients/manage/manage-clients)    |
+ |Cambios en la directiva de Device Guard <!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Versión 1710](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)    |
+ |Configuración e implementación de directivas de Protección de aplicaciones de Windows Defender <!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Versión 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)    |
+ |Mejoras en la implementación de scripts de PowerShell desde Configuration Manager <!-- 1236459 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#improvements-for-deploying-powershell-scripts-from-configuration-manager) | [Versión 1710](/sccm/apps/deploy-use/create-deploy-scripts)
+
 ## <a name="capabilities-delivered-in-previous-technical-previews"></a>Funcionalidades ofrecidas en anteriores versiones preliminares técnicas
  Cuando todas las características de una versión preliminar técnica estén disponibles en la versión mínima admitida de la Rama actual, los detalles de esa versión preliminar se quitan de esta tabla siguiente.  
 
  |Capacidad |Versión de Technical Preview |Versión de rama actual|  
  |----------------|---------------------|--------------------|
  |Experiencia mejorada del perfil VPN en la consola de Configuration Manager <!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |![Sin agregar](media/Red_X.gif)    |
- |Administración conjunta para dispositivos de Windows 10|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|![Sin agregar](media/Red_X.gif)    |
- |Mejora para especificar parámetros de script al implementar scripts de PowerShell desde Configuration Manager <!-- 1236459 -->|[Tech Preview 1708](capabilities-in-technical-preview-1708.md#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![Sin agregar](media/Red_X.gif)|
+ |Administración conjunta para dispositivos de Windows 10|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|[Versión 1710](/sccm/core/clients/manage/co-management-overview.md)|
+ |Mejora para especificar parámetros de script al implementar scripts de PowerShell desde Configuration Manager <!-- 1236459 -->|[Tech Preview 1708](capabilities-in-technical-preview-1708.md#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|[Versión 1710](/sccm/apps/deploy-use/create-deploy-scripts)|
  |Información de administración <!-- 1353967 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#management-insights)|![Sin agregar](media/Red_X.gif)|
- |Reinicio de equipos desde la consola de Configuration Manager <!-- 1356283 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#restart-computers-from-the-configuration-manager-console)|![Sin agregar](media/Red_X.gif)|
+ |Reinicio de equipos desde la consola de Configuration Manager <!-- 1356283 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#restart-computers-from-the-configuration-manager-console)|[Versión 1710](/sccm/core/clients/manage/manage-clients) |
  |Personalización del Centro de software <!-- 1351224 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#software-center-customization)|![Sin agregar](media/Red_X.gif)|
-|Compatibilidad con la caché del mismo nivel de cliente para archivos de instalación rápida en Windows 10 y Office 365|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365)|![Sin agregar](media/Red_X.gif)|
+|Compatibilidad con la caché del mismo nivel de cliente para archivos de instalación rápida en Windows 10 y Office 365|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365)|[Versión 1706](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache)|
  |Panel de Surface Device|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#surface-device-dashboard)|![Sin agregar](media/Red_X.gif)|
- |Configuración e implementación de directivas de Protección de aplicaciones de Windows Defender|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#configure-and-deploy-windows-defender-application-guard-policies)|![Sin agregar](media/Red_X.gif)|
- |Agregar parámetros al implementar scripts de PowerShell desde Configuration Manager|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![Sin agregar](media/Red_X.gif)|
- |Configuración de nueva directiva de administración de aplicaciones móviles|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-policy-settings)|![Sin agregar](media/Red_X.gif)|
+ |Configuración e implementación de directivas de Protección de aplicaciones de Windows Defender|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#configure-and-deploy-windows-defender-application-guard-policies)|[Versión 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)|
+ |Agregar parámetros al implementar scripts de PowerShell desde Configuration Manager|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|[Versión 1710](/sccm/apps/deploy-use/create-deploy-scripts)|
+ |Configuración de nueva directiva de administración de aplicaciones móviles|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-policy-settings)|[Versión 1710](/sccm/mdm/deploy-use/protect-apps-using-mam-policies#step-3-create-an-application-management-policy)|
  |Mejoras de los grupos de límites para puntos de actualización de software|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#improved-boundary-groups-for-software-update-points)|[Versión 1706](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)|
  |Alta disponibilidad del rol del servidor de sitio|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |![Sin agregar](media/Red_X.gif)|
  |Inclusión de la confianza para determinados archivos y carpetas en una directiva de Device Guard|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#include-trust-for-specific-files-and-folders-in-a-device-guard-policy)|[Versión 1706](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|
@@ -144,7 +155,7 @@ A continuación se enumeran las capacidades que ofrece cada versión preliminar 
  |Mejoras de accesibilidad |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#accessibility-improvements)|[Versión 1706](/sccm/core/understand/accessibility-features)|
  |Compatibilidad del Asistente para servicios de Azure para Upgrade Readiness |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#changes-to-the-azure-services-wizard-to-support-upgrade-readiness)|[Versión 1706](/sccm/core/servers/deploy/configure/azure-services-wizard)|
  |Nueva configuración de cliente para Cloud Services|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-client-settings-for-cloud-services)|[Versión 1706](/sccm/core/clients/deploy/deploy-clients-cmg-azure)|
- |Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#create-and-run-powershell-scripts-from-the-configuration-manager-console)|[Versión 1706](/sccm/apps/deploy-use/create-deploy-scripts)|
+ |Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#create-and-run-powershell-scripts-from-the-configuration-manager-console)|[Versión 1710](/sccm/apps/deploy-use/create-deploy-scripts)|
  |Compatibilidad con el arranque de red de PXE para IPv6 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|![Sin agregar](media/Red_X.gif)|
  |Administración de las actualizaciones de controladores de Microsoft Surface |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#manage-microsoft-surface-driver-updates)|[Versión 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#manage-microsoft-surface-driver-updates)|
  |Configuración de directivas de aplazamiento de Windows Update para empresas |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#configure-windows-update-for-business-deferral-policies)|[Versión 1706](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)|
@@ -157,7 +168,7 @@ A continuación se enumeran las capacidades que ofrece cada versión preliminar 
  |Compatibilidad con entidades de certificación de Entrust|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#support-for-entrust-certification-authorities)|[Versión 1706](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)|
  |Compatibilidad con Cisco (IPsec) para perfiles de VPN de macOS|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#cisco-ipsec-support-for-macos-vpn-profiles)|[Versión 1706](/sccm/protect/deploy-use/vpn-profiles)|
  |Nuevas funcionalidades para Azure AD y administración en la nube|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|[Versión 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#azure-ad-integration-with-configuration-manager)|
- |Configuración e implementación de directivas de Protección de aplicaciones de Windows Defender|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#configure-and-deploy-windows-defender-application-guard-policies)|![Sin agregar](media/Red_X.gif)|
+ |Configuración e implementación de directivas de Protección de aplicaciones de Windows Defender|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#configure-and-deploy-windows-defender-application-guard-policies)|[Versión 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)|
  |Herramienta de restablecimiento de actualizaciones  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#update-reset-tool)|[Versión 1706](/sccm/core/servers/manage/update-reset-tool)|
  |Compatibilidad de la consola con una configuración elevada de ppp  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#high-dpi-console-support)|[Versión 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#high-dpi-console-support)|
  |Mejoras de almacenamiento en caché del mismo nivel  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#peer-cache-improvements) |[Versión 1706](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache)|
@@ -276,4 +287,3 @@ A continuación se enumeran las capacidades que ofrece cada versión preliminar 
 ## <a name="see-also"></a>Véase también  
 [Novedades de System Center Configuration Manager](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
  [Introducción a System Center Configuration Manager](../../core/understand/introduction.md)
-

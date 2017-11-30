@@ -3,7 +3,7 @@ title: Technical Preview 1710 | Microsoft Docs
 titleSuffix: Configuration Manager
 description: "Aprenda sobre las características disponibles en la versión 1710 de Technical Preview para System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/30/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.reviewer: na
@@ -14,11 +14,11 @@ ms.assetid: f4706a58-1f11-4eab-b1eb-3d1a0da02d0f
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 813fdc40c4a0eb7c2dd3c1831bac1ba1667fe247
-ms.sourcegitcommit: 5437b2823bada8f8c9e67940f584953b9d190628
+ms.openlocfilehash: 309d677c0b8c692548d649346bb35bfa9d2a81f3
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="capabilities-in-technical-preview-1710-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1710 para System Center Configuration Manager
 
@@ -52,6 +52,19 @@ En este artículo se presentan las características disponibles en Technical Pre
  -  Task 1
  -  Task 2              
 -->
+
+## <a name="improvements-for-deploying-powershell-scripts-from-configuration-manager"></a>Mejoras en la implementación de scripts de PowerShell desde Configuration Manager
+Con esta versión, los scripts de PowerShell que implemente ahora admiten el uso de las siguientes mejoras: 
+- **Ámbitos de seguridad**.  Ahora, los scripts usan ámbitos de seguridad para controlar la creación y ejecución de scripts. Esto se realiza mediante la asignación de etiquetas que representan grupos de usuarios. Para obtener más información, consulte [Configuración de la administración basada en roles de System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
+- **Supervisión en tiempo real**. Al supervisar la ejecución de un script, ahora se realiza en tiempo real.
+- **Validación de parámetros**. Cada parámetro de script tiene un cuadro de diálogo **Script Parameter Properties** (Propiedades de parámetros de script) con el objetivo de agregar validación para ese parámetro. Después de agregar la validación, debería obtener errores si va a especificar un valor para un parámetro que no cumple su validación.
+
+La implementación de scripts de PowerShell se introdujo por primera vez en la versión preliminar técnica [Tech Preview 1706](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console). En [Tech Preview 1707](/sccm/core/get-started/capabilities-in-technical-preview-1707#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager) y, luego, en [Tech Preview 1708](/sccm/core/get-started/capabilities-in-technical-preview-1708#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager) llegaron más mejoras.
+
+
+### <a name="try-it-out"></a>Haga la prueba
+
+Para probar el uso de la funcionalidad de ejecución de scripts, consulte [Creación y ejecución de scripts](../../apps/deploy-use/create-deploy-scripts.md).
 
 
 
@@ -116,7 +129,7 @@ Los dispositivos administrados deben ejecutar Windows 10 1709 Fall Creators Upda
 Después de crear directivas de Protección contra vulnerabilidades de seguridad, use al asistente correspondiente para implementarlas. Para ello, abra la consola de Configuration Manager en **Activos y compatibilidad** > **Endpoint Protection** y, a continuación, haga clic en **Deploy Exploit Guard Policy** (Implementar directiva de Protección contra vulnerabilidades de seguridad).
 
 ## <a name="limited-support-for-cng-certificates"></a>Compatibilidad limitada con certificados CNG
-<!-- 1356191 --> 
+<!-- 1356191 -->
 A partir de esta versión, ahora puede usar plantillas de certificado [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) en los siguientes escenarios:
 
 - Registro de cliente y comunicación con un punto de administración de HTTPS.   
@@ -184,13 +197,13 @@ Para permitir que un dispositivo que ejecuta Windows Defender SmartScreen ejecut
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies----1351960---"></a>Configuración e implementación de directivas de Protección de aplicaciones de Windows Defender <!-- 1351960 -->
 
 [Protección de aplicaciones de Windows Defender](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) es una nueva característica de Windows que ayuda a proteger a los usuarios al abrir los sitios web que no sean de confianza en un contenedor aislado seguro al que no puedan tener acceso otras partes del sistema operativo. En esta versión preliminar técnica, ya se admite la configuración de esta característica mediante los parámetros de conformidad de Configuration Manager que establezca para a continuación implementarla en una recopilación. Esta característica se publicará en la versión preliminar para la versión de 64 bits de Windows 10 Creators Update (nombre de código: RS2). Para probar esta característica ahora debe estar utilizando una versión preliminar de esta actualización.
- 
+
 ### <a name="before-you-start"></a>Antes de empezar
 Para crear e implementar directivas de Protección de aplicaciones de Windows Defender, los dispositivos de Windows 10 en los que implementa la directiva deben configurarse con una directiva de aislamiento de red. Para más información, consulte la entrada de blog a la que se hace referencia más adelante. Esta funcionalidad solo es aplicable a compilaciones de Windows 10 Insider actuales. Para probarla, los clientes deben ejecutar una compilación reciente de Windows 10 Insider.
 
 ### <a name="try-it-out"></a>Haga la prueba
 
-Para comprender los aspectos básicos acerca de Windows Defender Application Guard, lea [la entrada del blog]((https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)).
+Para comprender los aspectos básicos acerca de Windows Defender Application Guard, lea [la entrada del blog](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97).
 
 Para crear una directiva y examinar la configuración disponible:
 1. En la consola de **Configuration Manager**, elija **Activos y compatibilidad**.
@@ -202,7 +215,7 @@ Para crear una directiva y examinar la configuración disponible:
     > [!NOTE]
     > Los equipos con Windows 10 solo almacenan una lista de aislamiento de red en el cliente. En esta versión, puede crear dos tipos diferentes de listas de aislamiento de red (una de Windows Information Protection y otra de Windows Defender Application Guard) e implementarlas en el cliente. Si implementa ambas directivas, deben coincidir con estas listas de aislamiento de red. Si implementa listas que no coincidan con el mismo cliente, se producirá un error en la implementación.
 
-    Puede encontrar más información sobre cómo especificar definiciones de red en la [documentación de Windows Information Protection](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm). 
+    Puede encontrar más información sobre cómo especificar definiciones de red en la [documentación de Windows Information Protection](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm).
 
 6. Cuando haya terminado, complete el asistente e implemente la directiva en uno o varios dispositivos de Windows 10.
 

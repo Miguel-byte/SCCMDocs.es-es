@@ -3,7 +3,7 @@ title: Compatibilidad con Windows 10
 titleSuffix: Configuration Manager
 description: Conozca las versiones de Windows 10 que se admiten como clientes o para OSD con System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/11/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "5"
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 8ce7230a3aa64b78937b305fee4dc8e3f38abead
-ms.sourcegitcommit: f9c38b87fcd543ab8a5d7a7f446b42fd3e55450c
+ms.openlocfilehash: aae4a3d504ea5dad901a6248cb219aff7a03b585
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="support-for-windows-10-for-system-center-configuration-manager"></a>Compatibilidad con Windows 10 para System Center Configuration Manager  
 
@@ -38,13 +38,13 @@ Por ejemplo, una versión de Configuration Manager se quitará de la matriz desp
 -   La siguiente información complementa a [Sistemas operativos compatibles con clientes y dispositivos](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).
 -   Si usa la Rama de mantenimiento a largo plazo de Configuration Manager, vea [Configuraciones admitidas de la Rama de mantenimiento a largo plazo de System Center Configuration Manager](/sccm/core/understand/supported-configurations-for-ltsb).
 
-|Versión de Windows 10                    |Configuration Manager 1610          |    Configuration Manager 1702          |    Configuration Manager 1706 |
+|Versión de Windows 10                    |  Configuration Manager 1702          |    Configuration Manager 1706 |Configuration Manager 1710          |  
 |---------------------|-----|-----|-----|
-|Enterprise 2015 LTSB                   |![Compatible.](media/green_check.png) |![Compatible.](media/green_check.png) |![Compatible.](media/green_check.png) |
-|Enterprise 2016 LTSB                   |![Compatible.](media/green_check.png) |![Compatible.](media/green_check.png) |![Compatible.](media/green_check.png) |
+|Enterprise 2015 LTSB                   |![Compatible.](media/green_check.png) |![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
+|Enterprise 2016 LTSB                   |![Compatible.](media/green_check.png) |![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
 |1607   <br />(También conocida como la Actualización de aniversario)<br />(*Véanse las ediciones*)   |![Compatible.](media/green_check.png) |![Compatible.](media/green_check.png)            |![Compatible.](media/green_check.png) |
-|1703   <br />(También conocida como Creators Update)<br />(*Véanse las ediciones*)      |![No compatible](media/Red_X.png)   |![Compatible con versiones anteriores](media/blue_compat.png) |![Compatible.](media/green_check.png) |
-|1709   <br />(También conocida como Fall Creators Update)<br />(*Véanse las ediciones*) |![No compatible](media/Red_X.png)   |![No compatible](media/Red_X.png)   |![Compatible con versiones anteriores](media/blue_compat.png) |
+|1703   <br />(También conocida como Creators Update)<br />(*Véanse las ediciones*)      |![Compatible con versiones anteriores](media/blue_compat.png) |![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
+|1709   <br />(También conocida como Fall Creators Update)<br />(*Véanse las ediciones*) |![No compatible](media/Red_X.png)   |![Compatible con versiones anteriores](media/blue_compat.png) | ![Compatible.](media/green_check.png) |
 
 
 
@@ -62,11 +62,11 @@ Cuando se implementan sistemas operativos con Configuration Manager, [Windows AD
 
 En la tabla siguiente se enumeran las versiones de Windows 10 ADK que puede usar con diferentes versiones de Configuration Manager.
 
-|Versión del ADK de Windows 10  |Configuration Manager 1610 |Configuration Manager 1702   |Configuration Manager 1706 |
+|Versión del ADK de Windows 10  |Configuration Manager 1702   |Configuration Manager 1706 |Configuration Manager 1710 |
 |--------------------|-----|-----|-----|
-|1607  |![Compatible.](media/green_check.png)           |![Compatible con versiones anteriores](media/blue_compat.png) |![No compatible](media/Red_X.png)|
-|1703  |![No compatible](media/Red_X.png)             |![Compatible.](media/green_check.png)            |![Compatible.](media/green_check.png) |  
-|1709  |![No compatible](media/Red_X.png)             |![No compatible](media/Red_X.png)              |![Compatible.](media/green_check.png) |  
+|1607  |![Compatible con versiones anteriores](media/blue_compat.png) |![No compatible](media/Red_X.png)| ![No compatible](media/Red_X.png) |
+|1703  |![Compatible.](media/green_check.png)            |![Compatible.](media/green_check.png) | ![Compatible con versiones anteriores](media/blue_compat.png)|
+|1709  |![No compatible](media/Red_X.png)              |![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png)|
 
 |Clave|
 |--|

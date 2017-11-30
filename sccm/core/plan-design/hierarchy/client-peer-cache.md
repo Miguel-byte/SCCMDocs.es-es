@@ -3,7 +3,7 @@ title: "Caché del mismo nivel de cliente"
 titleSuffix: Configuration Manager
 description: "Use la caché del mismo nivel de cliente para las ubicaciones de origen de contenido cuando se distribuya contenido con System Center Configuration Manager."
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 11/20/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 20438f51a67fb29da21c879620870caf3328121d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 2bf8f0e5a2636ffd92f8ba1898cc4f1b250f925f
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Caché del mismo nivel para clientes de Configuration Manager
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 10/12/2017
 Comenzando por la versión 1610 de System Center Configuration Manager, puede usar la **Caché del mismo nivel** para ayudar a administrar la implementación de contenido a los clientes en ubicaciones remotas. La caché del mismo nivel es una solución integrada de Configuration Manager que permite que los clientes compartan contenido con otros clientes directamente desde su caché local.   
 
 > [!TIP]  
-> El panel de orígenes de datos de cliente y la memoria caché del mismo nivel son funciones de la versión preliminar introducidas en la versión 1610. Para habilitarlos, vea [Uso de características de la versión preliminar a partir de las actualizaciones](/sccm/core/servers/manage/pre-release-features).
+> Esta característica se introdujo por primera vez en la versión 1610 como un [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1710, ya no es una característica de versión preliminar.
 
 ## <a name="overview"></a>Información general
 Un cliente de la caché del mismo nivel es un cliente de Configuration Manager que está habilitado para usar el almacenamiento en la caché del mismo nivel. Un cliente de la caché del mismo nivel que tenga contenido que puede compartir con otros clientes es un origen de la caché del mismo nivel.

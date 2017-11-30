@@ -3,7 +3,7 @@ title: "Configuración de cliente"
 titleSuffix: Configuration Manager
 description: "Seleccione la configuración del cliente mediante la consola de administración de System Center Configuration Manager."
 ms.custom: na
-ms.date: 08/01/2017
+ms.date: 11/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: f34479d6cf0c1153615c612480f204b71a8d84cb
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 46429a02debaaaa90562b9586af57e43a9aab92c
+ms.sourcegitcommit: b74c1beaabbb628fdf5d6948fa9a6ad719fd5035
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Acerca de la configuración de cliente en System Center Configuration Manager
 
@@ -71,7 +71,7 @@ Habilita BranchCache en los equipos cliente.
 - **Configurar el tamaño de la caché de cliente**
 
   La caché del cliente en los equipos Windows almacena los archivos temporales que se usan para instalar aplicaciones y programas. Elija **Sí** y, luego, especifique lo siguiente:
-    - **Tamaño máximo de caché** (megabytes). 
+    - **Tamaño máximo de caché** (megabytes).
     - **Tamaño de caché máximo** (porcentaje de disco).
 El tamaño de la caché de cliente puede expandirse hasta el tamaño máximo en MB o el porcentaje del disco, **lo que sea inferior**. Si esta opción se establece en **No**, el tamaño predeterminado es 5120 MB.
 
@@ -288,6 +288,8 @@ Habilita la caché del mismo nivel para clientes de Configuration Manager. Despu
  Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo usar ventanas de mantenimiento en System Center Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 ##  <a name="endpoint-protection"></a>Endpoint Protection  
+>  [!Tip]   
+> Además de la información siguiente, puede encontrar detalles adicionales sobre el uso de las opciones del cliente de Endpoint Protection en [Escenario de ejemplo: uso de System Center Endpoint Protection para proteger los equipos frente al malware en System Center Configuration Manager](/sccm/protect/deploy-use/scenarios-endpoint-protection).
 
 -   **Administrar el cliente de Endpoint Protection en equipos cliente**  
 

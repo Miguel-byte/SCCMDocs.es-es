@@ -15,11 +15,11 @@ caps.latest.revision: "5"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 7d63aa43062b331dde993ae5f59f1d2a7e846482
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 20a8f91d10d98542f08e440bcfbc1a6f98a51932
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-client-settings-in-system-center-configuration-manager"></a>Cómo configurar el cliente en System Center Configuration Manager
 
@@ -66,6 +66,19 @@ La implementación de esta configuración personalizada reemplaza la configuraci
 10. Vea el orden de la configuración de cliente personalizada que acaba de crear. Si hay más de una configuración de cliente personalizada, se aplican en función de su número de orden. Si hay algún conflicto, la configuración que tenga el número de orden más bajo reemplaza al resto de configuraciones. Para cambiar el número de orden, en la pestaña **Inicio**, en el grupo **Configuración de cliente**, elija **Subir elemento** o en **Bajar elemento**.  
 
  Los equipos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Initiate Policy Retrieval for a Configuration Manager Client (Iniciar la recuperación de directivas para un cliente de Configuration Manager)](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) en [How to manage clients in System Center Configuration Manager (Cómo administrar clientes en System Center Configuration Manager)](../../../core/clients/manage/manage-clients.md).  
+
+## <a name="limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health"></a>Limitación de la telemetría mejorada de Windows 10 al envío únicamente de datos pertinentes para el Estado de dispositivos de Windows Analytics
+<!-- 1356148 -->
+
+Con la versión 1710, puede establecer el nivel de recopilación de datos de telemetría de Windows 10 en **Mejorado (limitado)**. Esta configuración le permite obtener información práctica sobre los dispositivos de su entorno sin que los dispositivos informen de todos los datos del nivel de telemetría **Mejorado** con Windows 10, versión 1709 o una versión posterior.
+
+El nivel de telemetría Enhanced (Limited) (Mejorado [limitado]) incluye métricas del nivel básico, así como un subconjunto de datos recopilados del nivel **Mejorado** que resulta pertinente para Windows Analytics. Para más información sobre los niveles de telemetría, consulte [aquí](https://docs.microsoft.com/windows/configuration/configure-windows-telemetry-in-your-organization#telemetry-levels).
+
+1.  En la consola de Configuration Manager, elija **Administración** > **Configuración de cliente** > **Configuración de cliente predeterminada**.  
+
+2.  En la pestaña **Inicio**, elija **Propiedades**.  
+
+3.  Abra la ventana de **Cloud Services** y establezca el nivel de telemetría de Windows 10 en **Mejorado**.
 
 ##  <a name="view-client-settings"></a>Ver la configuración de cliente  
  Cuando se han implementado varias configuraciones de cliente en el mismo dispositivo, usuario o grupo de usuarios, el establecimiento de prioridades y la combinación de configuraciones pueden resultar complejos. Para ver la configuración de cliente:  

@@ -3,9 +3,9 @@ title: Administrar secuencias de tareas para automatizar tareas
 titleSuffix: Configuration Manager
 description: Puede crear, editar, implementar, importar y exportar secuencias de tareas para administrarlas en su entorno de System Center Configuration Manager.
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 11/15/2017
 ms.prod: configuration-manager
-ms.reviewer: na
+ms.reviewer: nac
 ms.suite: na
 ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
@@ -15,11 +15,11 @@ caps.latest.revision: "10"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 0174a95f1d3a487cab66d8152a3de70d91b07635
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 44e6afbfac3ef1e8318991854c8fdd22ead4c6ed
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>Administrar secuencias de tareas para automatizar tareas en System Center Configuration Manager
 
@@ -446,6 +446,22 @@ Puede administrar las variables por equipo en un sitio primario o en un sitio de
 5.  Si lo desea, especifique la prioridad de  Configuration Manager que desea utilizar cuando se evalúen las variables de la secuencia de tareas.  
 
 6.  Después de agregar todas las variables a la recopilación, haga clic en **Aceptar**.  
+
+## <a name="add-child-task-sequences-to-a-task-sequence"></a>Adición de secuencias de tareas secundarias a una secuencia de tareas
+
+A partir de Configuration Manager versión 1710, puede agregar un nuevo paso de secuencia de tareas que ejecute otra secuencia de tareas. Esto crea una relación de elementos primarios y secundarios entre las secuencias de tareas. De este modo, puede crear más secuencias de tareas modulares que puede volver a utilizar.
+
+Tenga en cuenta lo siguiente al agregar una secuencia de tareas secundaria a una secuencia de tareas:
+
+ - Las secuencias de tareas primaria y secundaria se combinan eficazmente en una única directiva que ejecuta el cliente.
+ - El entorno es global. Por ejemplo, si una variable se establece por la secuencia de tareas primaria y, a continuación, se cambia por la secuencia de tareas secundaria, la variable permanece cambiada en adelante. De forma similar, si la secuencia de tareas secundaria crea una nueva variable, la variable está disponible para los pasos restantes de la secuencia de tareas primaria.
+ - Los mensajes de estado se envían de manera normal para una operación de secuencia de tareas única.
+ - Las secuencias de tareas escriben entradas en el archivo smsts.log, con nuevas entradas de registro que dejan claro cuando se inicia una secuencia de tareas secundaria.
+
+### <a name="to-add-a-child-task-sequence-to-a-task-sequence"></a>Para agregar una secuencia de tareas secundaria a una secuencia de tareas
+
+1. En el editor de secuencia de tareas, haga clic en **Agregar**, seleccione **General** y haga clic en **Ejecutar secuencia de tareas**.
+2. Haga clic en **Examinar** para seleccionar la secuencia de tareas secundaria.  
 
 ##  <a name="BKMK_AdditionalActionsTS"></a> Acciones adicionales para administrar secuencias de tareas  
  Puede administrar secuencias de tareas con acciones adicionales cuando se selecciona la secuencia de tareas.  

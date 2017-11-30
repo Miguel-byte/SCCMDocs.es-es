@@ -1,21 +1,22 @@
 ---
-title: "Introducción a las actualizaciones de software | Microsoft Docs"
+title: "Introducción a las actualizaciones de software"
+titleSuffix: Configuration Manager
 description: "Descubra los conceptos básicos de las actualizaciones de software en System Center Configuration Manager."
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 10/30/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: 2904b904bbaf155f016f55fbd36af80308a42d76
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 66aa73e5c1aae68feeacb0eabe6233845289d104
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="introduction-to-software-updates-in-system-center-configuration-manager"></a>Introducción a las actualizaciones de software en System Center Configuration Manager
 
@@ -254,7 +255,7 @@ Para ver un escenario de ejemplo que muestra cómo podría implementar actualiza
 ##  <a name="BKMK_DeploymentProcess"></a> Proceso de implementación de actualizaciones de software  
  Después de implementar las actualizaciones de software o cuando una regla de implementación automática se ejecuta e implementa actualizaciones de software, se agrega una directiva de asignación de implementación a la directiva de equipo del sitio. Las actualizaciones de software se descargan desde la ubicación de descarga, Internet, o la carpeta compartida de red, en el origen del paquete. Las actualizaciones de software se copian desde el origen del paquete en la biblioteca de contenido del servidor del sitio y, a continuación, se copian en la biblioteca de contenido del punto de distribución.  
 
- Cuando un equipo cliente de la recopilación de destino de la implementación recibe la directiva de equipo, el Agente cliente de actualizaciones de software inicia un examen de evaluación. El agente cliente descarga el contenido de las actualizaciones de software necesarias desde un punto de distribución en la caché del cliente local en cuanto recibe la implementación, pero espera a que transcurra el tiempo configurado en la opción **Horas de disponibilidad del software** para la implementación antes de que las actualizaciones de software estén disponibles para la instalación. Las actualizaciones de software de las implementaciones opcionales (implementaciones que no tienen una fecha límite de instalación) no se descargan hasta que un usuario inicia manualmente la instalación.  
+ Cuando un equipo cliente de la recopilación de destino de la implementación recibe la directiva de equipo, el Agente cliente de actualizaciones de software inicia un examen de evaluación. El agente cliente descarga el contenido de las actualizaciones de software necesarias desde un punto de distribución en la caché del cliente local en la opción **Horas de disponibilidad del software** para la implementación antes de que las actualizaciones de software estén disponibles para la instalación. Las actualizaciones de software de las implementaciones opcionales (implementaciones que no tienen una fecha límite de instalación) no se descargan hasta que un usuario inicia manualmente la instalación.  
 
  Cuando pasa la fecha límite configurada, el Agente cliente de actualizaciones de software realiza un examen para comprobar que las actualizaciones de software siguen siendo necesarias. A continuación, comprueba la caché local del equipo cliente para comprobar que los archivos de origen de las actualizaciones de software siguen estando disponibles. Por último, el cliente instala las actualizaciones de software. Si se eliminó el contenido de la caché del cliente para dejar espacio a otra implementación, el cliente vuelve a descargar las actualizaciones de software desde el punto de distribución en la caché del cliente. Las actualizaciones de software siempre se descargan en la memoria caché del cliente, con independencia del tamaño de memoria caché de cliente máximo configurado. Una vez completada la instalación, el agente cliente comprueba que las actualizaciones de software ya no son necesarias y, a continuación, envía un mensaje de estado al punto de administración para indicar que las actualizaciones de software ya están instaladas en el cliente.  
 
