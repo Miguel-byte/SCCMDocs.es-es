@@ -15,11 +15,11 @@ caps.latest.revision: "17"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: ae1bc53cf15b2a1746656667f7bf546742432c11
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 8afb217524d5c2236fb07b13cb42ca50ae200183
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>Cómo administrar clientes en System Center Configuration Manager
 
@@ -269,12 +269,7 @@ Para obtener más información sobre cómo utilizar estas propiedades de línea 
 
 2.  En la pestaña **Caché** establezca las propiedades de espacio y ubicación. La ubicación predeterminada es *%windir%*\ccmcache.  
 
-5.  Para eliminar los archivos de la carpeta de caché, pulse **Eliminar archivos**.  
-
-    > [!NOTE]
-    >
-    > La carpeta de caché es una carpeta de Windows normal, por lo que puede automatizar la eliminación del contenido de la carpeta con un script, una utilidad o con el cmdlet de PowerShell `Remove-Item`.
-
+3.  Para eliminar los archivos de la carpeta de caché, pulse **Eliminar archivos**.  
 
 ### <a name="to-configure-client-cache-size-in-client-settings"></a>Para configurar el tamaño de la caché de cliente en la configuración de cliente
 
