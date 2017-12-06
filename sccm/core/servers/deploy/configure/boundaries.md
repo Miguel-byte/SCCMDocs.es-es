@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
 caps.latest.revision: "10"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: fda54ad44a037a7b7952f6339c33625759a79e17
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 224e91ebb3ff6ccfa94c3e2022066ad6d27c3afb
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="define-network-locations-as-boundaries-for-system-center-configuration-manager"></a>Definición de las ubicaciones de red como límites para System Center Configuration Manager
 
@@ -42,7 +42,7 @@ Cada límite está disponible para que lo use cada sitio de la jerarquía. Despu
 
 1.  En la consola de Configuration Manager, haga clic en **Administración** > **Configuración de jerarquía** > **Límites**.  
 
-2.  En la pestaña **Inicio**, en el grupo **Crear**, haga clic en **Crear Boundary.**  
+2.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear Boundary.**  
 
 3.  En la pestaña **General** del cuadro de diálogo Crear límite, puede especificar una **Descripción** para identificar el límite con un nombre o referencia fácil de reconocer.  
 
