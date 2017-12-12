@@ -3,7 +3,7 @@ title: "Preguntas más frecuentes sobre el cliente de Endpoint Protection"
 titleSuffix: Configuration Manager
 description: "Obtenga respuestas a las preguntas más frecuentes sobre Windows Defender y Endpoint Protection."
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 12/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 caps.latest.revision: "15"
-author: NathBarn
-ms.author: nathbarn
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: a3fb0bc39f1606f1a65b5623c9567819b1a0c52e
-ms.sourcegitcommit: 5d46ed593b1cc461ea3f6ff6917bcd272b095ed7
+ms.openlocfilehash: 2656a5c40dbd2916ef36268936a4e2163ebde14d
+ms.sourcegitcommit: 372171a5cd8d143d6d47b651018cda0c91cad67c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Preguntas más frecuentes sobre el cliente de Endpoint Protection
 
@@ -203,7 +203,7 @@ Para quitar todos los elementos no deseados o potencialmente peligrosos que Wind
 
 ##  <a name="what-is-real-time-protection"></a>¿Qué es la protección en tiempo real?  
 
- La protección en tiempo real permite que Windows Defender supervise el equipo en todo momento y le avise cuando amenazas potenciales, como virus y spyware, intentan instalarse o ejecutarse en el equipo. Dado que esta característica es un elemento importante del mecanismo que usa Windows Defender para ayudar a proteger el equipo, debe asegurarse de que siempre esté siempre activada. Si se desactiva la protección en tiempo real, Windows Defender le avisa y cambia el estado del equipo a "En riesgo".  
+ La protección en tiempo real permite que Windows Defender supervise el equipo en todo momento y le avise cuando amenazas potenciales, como virus y spyware, intentan instalarse o ejecutarse en el equipo. Dado que esta característica es un elemento importante del mecanismo que usa Windows Defender para ayudar a proteger el equipo, debe asegurarse de que siempre esté siempre activada. Si se desactiva la protección en tiempo real, Windows Defender le avisa y cambia el estado del equipo a **"En riesgo"**.  
 
  Siempre que la protección en tiempo real detecta una amenaza real o potencial, Windows Defender muestra una notificación. Ahora puede elegir entre las siguientes opciones:  
 
