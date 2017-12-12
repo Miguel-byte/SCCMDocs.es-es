@@ -3,7 +3,7 @@ title: "Novedades de la MDM híbrida"
 titleSuffix: Configuration Manager
 description: "Obtenga información sobre las nuevas características de administración de dispositivos móviles disponibles para implementaciones híbridas con Configuration Manager e Intune."
 ms.custom: na
-ms.date: 11/12/2017
+ms.date: 11/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 4877d05004bd883a3ae0ad353a78643cf559275e
-ms.sourcegitcommit: 536f7295e9ea361f1f9ead6c25f3685deb041ad8
+ms.openlocfilehash: 189e737eca5dee5bca3f0748cd1b4d944f868565
+ms.sourcegitcommit: 4af1da9c18f5bdff31426cf1d58c7d949372292d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con System Center Configuration Manager y Microsoft Intune
 
@@ -46,42 +46,56 @@ En cada sección de este artículo se enumeran las características híbridas or
 
 ### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune
 
-- **Ya está disponible la aplicación Portal de empresa para macOS** <!--1541700--> El Portal de empresa de Intune en macOS tiene una experiencia actualizada, que se ha optimizado para mostrar correctamente toda la información y las notificaciones de conformidad que los usuarios necesitan en todos los dispositivos en que están inscritos. Además, una vez que el Portal de empresa de Intune se ha implementado en un dispositivo, Microsoft AutoUpdate para macOS le proporcionará las actualizaciones. Inicie sesión en el sitio web del Portal de empresa de Intune desde un dispositivo macOS para descargar el nuevo Portal de empresa de Intune para macOS.
+- **Protocolo de texto permitido de las aplicaciones administradas** <!-- 1414050  -->    
+  Las aplicaciones administradas por Intune App SDK pueden enviar mensajes SMS.
 
-- **Microsoft Planner ahora forma parte de la lista de aplicaciones aprobadas para la administración de aplicaciones móviles (MAM)**  <!-- 1248473 --> La aplicación Microsoft Planner para iOS y Android ya forma parte de las aplicaciones aprobadas para la administración de aplicaciones móviles. La aplicación puede configurarse a través de la hoja Intune App Protection de Azure Portal para todos los inquilinos. Para obtener información, vea la [lista de aplicaciones aprobadas para la administración de aplicaciones móviles](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+- **La aplicación Portal de empresa para macOS está disponible** <!--1541700-->    
+  El Portal de empresa de Intune en macOS tiene una experiencia actualizada, que se ha optimizado para mostrar correctamente toda la información y las notificaciones de cumplimiento que los usuarios necesitan en todos los dispositivos que han inscrito. Además, una vez que el Portal de empresa de Intune se ha implementado en un dispositivo, Microsoft AutoUpdate para macOS le proporcionará las actualizaciones. Inicie sesión en el sitio web del Portal de empresa de Intune desde un dispositivo macOS para descargar el nuevo Portal de empresa de Intune para macOS.
 
-- **Acceso a los registros de la aplicación administrada para iOS** <!-- 1469920 --> Ahora, los usuarios finales que tengan Managed Browser instalado pueden ver el estado de administración de todas las aplicaciones publicadas de Microsoft, así como enviar registros para solucionar problemas con sus aplicaciones iOS administradas.
+- **Microsoft Planner ahora forma parte de la lista de administración de aplicaciones móviles (MAM) de aplicaciones aprobadas**  <!-- 1248473 -->    
+  La aplicación de Microsoft Planner para iOS y Android ahora forma parte de las aplicaciones aprobadas para la administración de aplicaciones móviles (MAM). La aplicación puede configurarse a través de la hoja Intune App Protection de Azure Portal para todos los inquilinos. Para obtener información, vea la [lista de aplicaciones aprobadas para la administración de aplicaciones móviles](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+
+- **Acceso a los registros de la aplicación administrada para iOS** <!-- 1469920 -->    
+  Ahora, los usuarios finales que tengan Managed Browser instalado pueden ver el estado de administración de todas las aplicaciones publicadas de Microsoft y enviar registros para solucionar problemas con sus aplicaciones iOS administradas.
   
   Para más información sobre cómo habilitar el modo de solución de problemas en Managed Browser en un dispositivo iOS, vea [Cómo tener acceso a los registros de aplicación administrada con Managed Browser en iOS](https://docs.microsoft.com/intune/app-configuration-managed-browser#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios).
 
-- **Mejoras en el flujo de trabajo de instalación de dispositivos en el Portal de empresa para iOS 2.9.0** Se ha mejorado el flujo de trabajo de instalación de dispositivos en la aplicación Portal de empresa para iOS. El lenguaje resulta más fácil de usar y se han combinado pantallas donde era posible. El lenguaje también se ha hecho más específico para la empresa mediante el uso del nombre de la empresa en el texto de instalación. Puede ver este flujo de trabajo actualizado en la página de [novedades de la interfaz de usuario de aplicaciones](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-november-13-2017).
+- **Mejoras en el flujo de trabajo de instalación de dispositivos en la aplicación Portal de empresa para iOS en la versión 2.9.0**    
+  Se ha mejorado el flujo de trabajo de instalación de dispositivos en la aplicación Portal de empresa para iOS. El lenguaje resulta más fácil de usar y se han combinado pantallas donde era posible. El lenguaje también se ha hecho más específico para la empresa mediante el uso del nombre de la empresa en el texto de instalación. Puede ver este flujo de trabajo actualizado en la página de [novedades de la interfaz de usuario de aplicaciones](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-november-13-2017).
 
-- **Solicitudes de comentarios sobre la aplicación Portal de empresa para Android** <!--1165249--> La aplicación Portal de empresa para Android ahora solicita comentarios a los usuarios finales. Estos comentarios se envían directamente a Microsoft, además de ofrecer a los usuarios finales una oportunidad para revisar la aplicación en Google Play Store público. Los comentarios no son obligatorios, por lo que los usuarios pueden descartarlos y continuar usando la aplicación. 
+- **Peticiones de comentario para la aplicación Portal de empresa para Android** <!--1165249-->    
+Ahora la aplicación Portal de empresa para Android solicita comentarios del usuario final. Estos comentarios se envían directamente a Microsoft, además de ofrecer a los usuarios finales una oportunidad para revisar la aplicación en Google Play Store público. Los comentarios no son obligatorios, por lo que los usuarios pueden descartarlos y continuar usando la aplicación. 
 
-- **Informar a los usuarios de qué información sobre el dispositivo se puede ver en dispositivos Windows 10** <!--1337920--> Se ha agregado **Tipo de propiedad** a la pantalla Detalles del dispositivo de la aplicación Portal de empresa para Windows 10. Esto permitirá que los usuarios obtengan más información sobre la privacidad directamente en esta página de los documentos para el usuario final de Intune. También se podrán encontrar estos detalles en la pantalla **Información**.
+- **Información a los usuarios finales de qué información del dispositivo se puede ver en los dispositivos Windows 10** <!--1337920-->    
+Se agregó **Tipo de propiedad** en la pantalla Detalles del dispositivo en la aplicación Portal de empresa para Windows 10. Esto permitirá que los usuarios obtengan más información sobre la privacidad directamente en esta página de los documentos para el usuario final de Intune. También se podrán encontrar estos detalles en la pantalla **Información**.
 
-- **Nueva acción "Resolver" disponible para dispositivos Android** <!--1583480--> La aplicación Portal de empresa para Android va a integrar una acción "Resolver" en la página _Actualizar configuración del dispositivo_. Si se selecciona esta opción, se remitirá al usuario final directamente a la configuración que causa el incumplimiento del dispositivo. La aplicación Portal de empresa para Android actualmente admite esta acción para los valores de configuración [código de acceso de dispositivo](https://docs.microsoft.com/intune-user-help/set-your-pin-or-password-android), [cifrado de dispositivo](https://docs.microsoft.com/intune-user-help/encrypt-your-device-android), [depuración USB](https://docs.microsoft.com/intune-user-help/you-need-to-turn-off-usb-debugging-android) y [orígenes desconocidos](https://docs.microsoft.com/intune-user-help/you-need-to-turn-off-unknown-sources-android). 
+- **Nueva acción "Resolver" disponible para dispositivos Android**<!--1583480-->    
+  La aplicación Portal de empresa para Android presenta una acción "Resolver" en la página _Actualizar configuración del dispositivo_. Si se selecciona esta opción, se remitirá al usuario final directamente a la configuración que causa el incumplimiento del dispositivo. La aplicación Portal de empresa para Android actualmente admite esta acción para los valores de configuración [código de acceso de dispositivo](https://docs.microsoft.com/intune-user-help/set-your-pin-or-password-android), [cifrado de dispositivo](https://docs.microsoft.com/intune-user-help/encrypt-your-device-android), [depuración USB](https://docs.microsoft.com/intune-user-help/you-need-to-turn-off-usb-debugging-android) y [orígenes desconocidos](https://docs.microsoft.com/intune-user-help/you-need-to-turn-off-unknown-sources-android). 
 
 
 ### <a name="new-in-configuration-manager-current-branch"></a>Novedades de Configuration Manager (rama actual)
 
-- **Configuración de nueva directiva de administración de aplicaciones móviles** <!-- 1324760 --> Las siguientes opciones se han agregado a la configuración de directiva de administración de aplicaciones móviles:
+- **Acciones de no cumplimiento** <!--1321366 -->    
+  Ahora puede configurar una secuencia ordenada de acciones que se aplican a los dispositivos que no cumplen las normas. Por ejemplo, puede notificar a los usuarios de dispositivos no compatibles a través de correo electrónico o marcar los dispositivos como no compatibles. Para obtener más información, vea [Configurar acciones de no cumplimiento](/sccm/mdm/deploy-use/actions-for-noncompliance).
+
+- **Configuración de nueva directiva de administración de aplicaciones móviles** <!-- 1324760 -->    
+  Las siguientes opciones se han agregado a la configuración de directiva de administración de aplicaciones móviles:
   - **Deshabilitar sincronización de contactos:** impide que la aplicación guarde los datos en la aplicación de contactos nativa del dispositivo.
   - **Deshabilitar la impresión:** impide que la aplicación imprima datos profesionales o educativos.
 
   Vea [Proteger aplicaciones mediante directivas de administración de aplicaciones móviles en System Center Configuration Manager](/sccm/mdm/deploy-use/protect-apps-using-mam-policies) para probar la nueva configuración de la directiva de protección de aplicaciones.
 
-- **Compatibilidad con dispositivos Windows 10 (ARM64)** <!-- 1355000 --> Cuando los dispositivos ARM64 que ejecutan Windows 10 estén disponibles, admitirán los escenarios híbridos de administración de dispositivos móviles (MDM). Para más información, vea [Compatibilidad con dispositivos Windows 10 (ARM64)](/sccm/core/plan-design/changes/whats-new-in-version-1710#windows-10-arm64-device-support).
+- **Compatibilidad con dispositivos Windows 10 (ARM64)** <!-- 1355000 -->    
+  Cuando los dispositivos ARM64 que ejecutan Windows 10 estén disponibles, admitirán los escenarios híbridos de administración de dispositivos móviles (MDM). Para más información, vea [Compatibilidad con dispositivos Windows 10 (ARM64)](/sccm/core/plan-design/changes/whats-new-in-version-1710#windows-10-arm64-device-support).
 
-- **Experiencia mejorada del perfil VPN en la consola de Configuration Manager** <!-- 1318232 --> Con esta versión, se han actualizado las páginas de propiedades y el Asistente para perfiles VPN con el fin de mostrar una configuración más adecuada para la plataforma seleccionada. Esta característica estaba disponible anteriormente en Configuration Manager Technical Preview 1709 y ahora está disponible en implementaciones híbridas con Intune y la versión 1710 de Configuration Manager (rama actual):
+- **Experiencia mejorada del perfil VPN en la consola de Configuration Manager** <!-- 1318232 -->    
+  Con esta versión hemos actualizado las páginas de propiedades y el asistente de perfiles VPN para mostrar una configuración más adecuada para la plataforma seleccionada. Esta característica estaba disponible anteriormente en Configuration Manager Technical Preview 1709 y ahora está disponible en implementaciones híbridas con Intune y la versión 1710 de Configuration Manager (rama actual):
   - [Experiencia mejorada del perfil VPN en la consola de Configuration Manager](/sccm/core/plan-design/changes/whats-new-in-version-1710#improved-vpn-profile-experience-in-configuration-manager-console).
 
 
-Experiencia mejorada del perfil VPN en la consola de Configuration Manager
-
 ### <a name="new-in-configuration-manger-technical-preview-1711"></a>Novedades de Configuration Manager Technical Preview 1711
 
-- **Nuevas opciones de directivas de cumplimiento para Windows 10** Ahora puede configurar nuevas opciones para las directivas de cumplimiento en los dispositivos Windows 10. La nueva configuración incluye directivas para firewall, Control de cuentas de usuario, antivirus de Windows Defender y control de versiones de compilación del sistema operativo. Para obtener información, vea [Nuevas opciones de directivas de cumplimiento para Windows 10](/sccm/core/get-started/capabilities-in-technical-preview-1711#new-compliance-policy-options-for-windows-10).
+- **Nuevas opciones de directivas de cumplimiento para Windows 10** Ahora puede configurar nuevas opciones para las directivas de cumplimiento en los dispositivos Windows 10. La nueva configuración incluye directivas para Firewall, Control de cuentas de usuario, Antivirus de Windows Defender y control de versiones de compilación del sistema operativo. Para obtener información, vea [Nuevas opciones de directivas de cumplimiento para Windows 10](/sccm/core/get-started/capabilities-in-technical-preview-1711#new-compliance-policy-options-for-windows-10).
 
 
 ## <a name="october-2017"></a>Octubre de 2017
@@ -94,7 +108,11 @@ Experiencia mejorada del perfil VPN en la consola de Configuration Manager
 
 ### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune  
 
-- **Compatibilidad con la autenticación basada en certificados en el Portal de empresa para iOS** <!--1029830--> Se ha agregado compatibilidad con la autenticación basada en certificados (CBA) en la aplicación del Portal de empresa para iOS. Los usuarios con CBA escriben su nombre de usuario y luego pulsan el vínculo para iniciar sesión con un certificado. CBA ya se admite en las aplicaciones del Portal de empresa de Android y Windows. Puede aprender más sobre la página de [inicio de sesión en la aplicación del Portal de empresa](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal).
+- **Indicador de progreso de instalación del dispositivo en el Portal de empresa de Android** <!--1565657-->    
+  La aplicación Portal de empresa para Android muestra un indicador de progreso de instalación de dispositivos cuando un usuario inscribe sus dispositivos. El indicador muestra estados nuevos, comenzando con "Configurando el dispositivo...", sigue con "Registrando el dispositivo..." y "Finalizando el registro del dispositivo...", y acaba con "Finalizando la configuración del dispositivo...".  
+
+- **Compatibilidad con la autenticación basada en certificados en el Portal de empresa para iOS** <!--1029830-->    
+  Se ha agregado compatibilidad con la autenticación basada en certificados (CBA) en la aplicación Portal de empresa para iOS. Los usuarios con CBA escriben su nombre de usuario y luego pulsan el vínculo para iniciar sesión con un certificado. CBA ya se admite en las aplicaciones del Portal de empresa de Android y Windows. Puede aprender más sobre la página de [inicio de sesión en la aplicación del Portal de empresa](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal).
 
 - **Mejoras en el flujo de trabajo de configuración de dispositivos en el Portal de empresa** <!--1490692-->    
   Se ha mejorado el flujo de trabajo de instalación de dispositivos en la aplicación del Portal de empresa para Android. El lenguaje resulta más fácil de usar y es específico de su empresa. Además, hemos combinado pantallas donde era posible. Puede ver estas mejoras en la página [Novedades de la interfaz de usuario de aplicaciones](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-october-2-2017).

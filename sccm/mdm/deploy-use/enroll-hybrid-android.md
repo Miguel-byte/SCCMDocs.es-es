@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 4b638b0325aa5f75d60a008ea60531a818ec76c2
-ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
+ms.openlocfilehash: c9b35122f6afbb4fffbbff48b919fd696939c897
+ms.sourcegitcommit: 51cfce302fa8ddf633ad1f379b1161c0617089b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="set-up-android-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Configurar la administración de dispositivos híbrida de Android con System Center Configuration Manager y Microsoft Intune
 
@@ -60,7 +60,7 @@ Los pasos siguientes permiten a Configuration Manager administrar dispositivos A
 > Un problema conocido impide que la opción **Administrar los dispositivos compatibles para usuarios solo en estos grupos como Android for Work** funcione según lo esperado. Los dispositivos de los usuarios en los grupos de Azure AD especificados se inscriben como Android en lugar de Android for Work. Para habilitar Android for Work, debe usar la opción **Administrar todos los dispositivos compatibles como Android for Work**.
 
 
-Cuando esté listo, necesitará que los usuarios sepan cómo inscribir sus dispositivos. Consulte [Qué decirles a los usuarios finales sobre el uso de Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). Esta información se aplica a Microsoft Intune y a dispositivos móviles administrados por Configuration Manager.
+Cuando esté listo, necesitará que los usuarios sepan cómo inscribir sus dispositivos. Consulte [Qué decirles a los usuarios finales sobre el uso de Microsoft Intune](https://docs.microsoft.com/en-us/intune/end-user-educate). Esta información se aplica a Microsoft Intune y a dispositivos móviles administrados por Configuration Manager.
 
 Verá el nombre de la cuenta y el nombre de la organización en el portal de Intune cuando se complete el enlace. En ese momento, podrá cerrar los dos exploradores.
 

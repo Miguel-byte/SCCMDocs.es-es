@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 caps.latest.revision: "4"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: c0277fed7db5803aa2b2246ca879640136dce02a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: bda1ab737a3af5e13f180771cc17c9850165906c
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Números de tamaño y escala de System Center Configuration Manager
 
@@ -147,7 +147,10 @@ Un sitio de administración central admite un número total de dispositivos que 
  Por ejemplo, en una jerarquía, de un total de 1.025.000 dispositivos, puede admitir 700 000 equipos de escritorio, hasta 25 000 Mac y Windows CE 7.0, y hasta 300 000 dispositivos basados en la nube al integrar Microsoft Intune. Si se admiten los dispositivos administrados por MDM local, el total de la jerarquía es de 825 000 dispositivos.  
 
 > [!IMPORTANT]  
->  En una jerarquía donde el sitio de administración central usa SQL Server Standard Edition, la jerarquía admite un máximo de 50 000 equipos de escritorio y dispositivos. La edición de SQL Server que se usa en un sitio primario independiente no limita la capacidad del sitio para admitir el número de clientes indicado.  
+>  En una jerarquía donde el sitio de administración central usa SQL Server Standard Edition, la jerarquía admite un máximo de 50 000 equipos de escritorio y dispositivos. Para admitir más de 50 000 equipos de escritorio y dispositivos, debe usar una edición Enterprise de SQL Server. Este requisito solo se aplica a un sitio de administración central y no a un sitio primario independiente ni a un sitio primario secundario donde la edición de SQL Server que se usa no limita la capacidad del sitio para admitir el número de clientes indicado.   
+
+
+ La edición de SQL Server que se usa en un sitio primario independiente no limita la capacidad del sitio para admitir el número de clientes indicado.  
 
 
 ###  <a name="bkmk_chipri"></a> Sitio primario secundario  

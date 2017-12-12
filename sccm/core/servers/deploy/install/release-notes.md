@@ -3,7 +3,7 @@ title: "Notas de la versión "
 titleSuffix: Configuration Manager
 description: "Consulte estas notas relativas a problemas urgentes que aún no se han corregido en el producto o no se han tratado en un artículo de Microsoft Knowledge Base."
 ms.custom: na
-ms.date: 08/23/2017
+ms.date: 11/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 caps.latest.revision: "41"
 caps.handback.revision: "0"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 2571cfbff1373db05279918af776d8be81a5c322
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 8030ce7f98ebb34d9581ad036513b9b1c879c0ad
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="release-notes-for-system-center-configuration-manager"></a>Notas de la versión de System Center Configuration Manager
 
@@ -37,30 +37,10 @@ Para obtener información sobre las características que presentan las distintas
 - [Novedades de la versión 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)  
 - [Novedades de la versión 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)
 - [Novedades de la versión 1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)
-   
+
 
 
 ## <a name="setup-and-upgrade"></a>Instalación y actualización  
-
-### <a name="after-you-update-a-configuration-manager-console-using-consolesetupexe-from-the-site-server-folder-recent-language-pack-changes-are-not-available"></a>Después de actualizar una consola de Configuration Manager mediante ConsoleSetup.exe desde la carpeta del servidor de sitio, los cambios recientes del paquete de idioma no están disponibles.
-<!--  SMS 486420  Applicability should be 1610 and 1702.  -->
-*La información siguiente se aplica a las versiones 1610 y 1702.*   
-Después de ejecutar una actualización local en una consola mediante ConsoleSetup.exe desde una carpeta de instalación de servidores de sitio, los paquetes de idioma instalados recientemente pueden no estar disponibles. Esto ocurre cuando:
-- El sitio ejecuta la versión 1610 o 1702.
-- La consola se actualiza a nivel local mediante ConsoleSetup.exe desde la carpeta de instalación del servidor de sitio.
-
-Cuando se produce este problema, la consola reinstalada no utiliza el conjunto más reciente de los paquetes de idioma que se configuraron. No se devuelve ningún error, pero los paquetes de idioma disponibles en la consola no habrán cambiado.  
-
-**Solución alternativa:** desinstale la consola actual y después vuelva a instalarla como una nueva instalación. Puede utilizar ConsoleSetup.exe desde la carpeta de instalación de servidores de sitio. Durante la instalación, asegúrese de seleccionar los archivos de paquete de idioma que desea utilizar.
-
-
-### <a name="with-version-1702-the-default-site-boundary-group-is-configured-for-use-for-site-assignment"></a>Con la versión 1702, el grupo de límites del sitio predeterminado está configurado para usarlo en la asignación de sitio.
-<!--  SMS 486380   Applicability should only be to 1702. -->
-*La información siguiente se aplica a la versión 1702.*  
-La pestaña Referencia de los grupos de límite del sitio por defecto está marcada para **Usar este grupo de límites para la asignación de sitio**, muestra el sitio como **Sitio asignado** y está atenuada para que la configuración no se pueda modificar ni borrar.
-
-**Solución:** ninguna. Puede ignorar esta configuración. Aunque el grupo está habilitado para la asignación de sitio, el grupo de límites del sitio predeterminado no se utiliza para la asignación de sitio. Con 1702, esta configuración garantiza que el grupo de límites del sitio predeterminado se asocie al sitio correcto.
-
 
 
 ### <a name="when-installing-a-long-term-service-branch-site-using-version-1606-a-current-branch-site-is-installed"></a>Al instalar un sitio de Rama de mantenimiento a largo plazo mediante la versión 1606, se instala un sitio de Rama actual
@@ -112,29 +92,6 @@ Al ejecutar el programa de instalación desde la carpeta CD.Latest creada para l
  - Elimine manualmente la carpeta *cd.latest\redist\languagepack\zhh* y, luego, vuelva a ejecutar la instalación.
 
 
-### <a name="service-connection-tool-throws-an-exception-when-sql-server-is-remote-or-when-shared-memory-is-disabled"></a>La herramienta de conexión de servicio produce una excepción cuando SQL Server está instalado en una ubicación remota o cuando la memoria compartida está deshabilitada
-<!-- 479223   Fixed in 1702 and later   -->
-*La información siguiente se aplica a la versión 1610 y a versiones anteriores.*  
-La herramienta de conexión de servicio genera una excepción cuando se cumple una de las condiciones siguientes:  
- -  La base de datos del sitio está instalada en una ubicación remota con respecto al equipo que hospeda el punto de conexión de servicio y usa un puerto no estándar (un puerto distinto de 1433).
- -  La base de datos del sitio está en el mismo servidor que el punto de conexión de servicio, pero la **memoria compartida** del protocolo de SQL está deshabilitada.
-
-La excepción es similar a la siguiente:
- - *Excepción no controlada: System.Data.SqlClient.SqlException: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (proveedor: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server) --*
-
-**Solución alternativa**: mientras usa la herramienta, debe modificar el registro del servidor que hospeda el punto de conexión de servicio para que incluya información sobre el puerto de SQL Server:
-
-   1.   Antes de usar la herramienta, edite la siguiente clave del Registro y agregue el número del puerto que está en uso con el nombre de SQL Server:
-    - Clave: HKLM\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\
-      - Valor: &lt;nombre de SQL Server>
-    - Agregue: **,&lt;PUERTO>**
-
-    Por ejemplo, para agregar el puerto *15001* a un servidor denominado *testserver.test.net*, la clave resultante sería la siguiente: ***HKLM\Software\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\testserver.test.net,15001***
-
-   2.   Después de agregar el puerto al registro, la herramienta debería funcionar con normalidad.  
-
-   3.   Una vez que haya acabado de usar la herramienta, cambie la clave del Registro al valor original para los pasos **-import** y **-connect**.  
-
 
 <!-- ## Backup and recovery  -->
 
@@ -157,15 +114,6 @@ De forma predeterminada, el asistente para Crear un plan de mantenimiento se eje
 Después de crear un plan de mantenimiento, abra las propiedades, vaya a la pestaña **Programación de evaluación**, seleccione **Ejecutar la regla en una programación**, haga clic en **Personalizar** y cree una programación personalizada. Por ejemplo, puede hacer que el plan de mantenimiento se ejecute cada 60 días.  
 
 
-### <a name="when-a-high-risk-deployment-dialog-is-visible-to-a-user-subsequent-high-risk-dialogs-with-a-sooner-deadline-are-not-displayed"></a>Cuando un cuadro de diálogo de implementación de alto riesgo es visible para un usuario, no se muestran cuadros de diálogo de alto riesgo posteriores con una fecha límite anterior.
-<!-- Fixed in 1702 and later -->
-*La información siguiente se aplica a la versión 1610 y a versiones anteriores.*   
-Después de crear e implementar una implementación de tareas de alto riesgo para los usuarios, se muestra un cuadro de diálogo de alto riesgo al usuario. Si el usuario cierra el cuadro de diálogo, cree e implemente otra implementación de alto riesgo con una fecha límite anterior a la del primero, y el usuario no recibirá un cuadro de diálogo actualizado hasta que haya cerrado el cuadro de diálogo original. Las implementaciones seguirán ejecutándose en las fechas límite configuradas.
-
-**Solución alternativa**:  
-El usuario debe cerrar el cuadro de diálogo de la primera implementación de alto riesgo para ver el cuadro de diálogo de la siguiente implementación de alto riesgo.
-
-
 
 ## <a name="software-updates"></a>Actualizaciones de software
 
@@ -180,6 +128,12 @@ Use solo los [idiomas admitidos por el cliente de Office 365 ProPlus](https://te
 
 
 ## <a name="mobile-device-management"></a>Administración de dispositivos móviles  
+
+### <a name="beginning-with-version-1710-you-can-no-longer-deploy-windows-phone-81-vpn-profiles-to-windows-10------503274--should-be-fixed-by-1802-if-not-sooner---"></a>A partir de la versión 1710, ya no se pueden implementar perfiles de VPN de Windows Phone 8.1 en Windows 10   <!-- 503274  Should be fixed by 1802, if not sooner -->
+En 1710 ya no es posible crear un perfil de VPN mediante el flujo de trabajo de Windows Phone 8.1 que también se aplica a dispositivos Windows 10. Para estos perfiles ya no se muestra la página Plataformas admitidas en el Asistente para creación y se selecciona automáticamente Windows Phone 8.1 en el back-end; en las páginas de propiedades, la página Plataformas admitidas está disponible, pero no se muestran las opciones de Windows 10.
+
+**Solución alternativa**: use el flujo de trabajo del perfil de VPN de Windows 10 para dispositivos Windows 10. Si esto no es posible para su entorno, póngase en contacto con el soporte técnico. El soporte técnico puede ayudarle a agregar los destinos de Windows 10, si es necesario.
+
 
 ### <a name="full-wipe-disables-windows-10-devices-with-less-than-4-gb-ram"></a>El borrado completo deshabilita los dispositivos de Windows 10 con menos de 4 GB de RAM
 Realizar un borrado completo en dispositivos de Windows 10 RTM (versiones anteriores a la 1511) con menos de 4 GB de RAM puede inutilizar el dispositivo. Después de intentar borrar el dispositivo, este no se puede iniciar y no responde.
@@ -204,20 +158,4 @@ Cuando se crea un perfil de correo electrónico de Android for Work, hay dos opc
 
 <!-- ## Reports and monitoring    -->
 <!-- ## Conditional access   -->
-
-
-## <a name="endpoint-protection"></a>Endpoint Protection
-
-### <a name="antimalware-policy-fails-to-apply-on-windows-server-2016-core"></a>La directiva antimalware no se puede aplicar en Windows Server 2016 Core
-<!--  Product Studio bug 485370 added 04 19 2017   Fixed in 1702 -->
-*La información siguiente se aplica a la versión 1610 y a versiones anteriores.*  
-La directiva antimalware no se puede aplicar en Windows Server 2016 Core.  El código de error es 0x80070002.  Falta una dependencia para ConfigSecurityPolicy.exe.
-
-**Solución:** Este problema se resuelve por el [artículo 4019472 de Knowledge Base](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) distribuido el 9 de mayo de 2017.
-
-
-### <a name="windows-defender-advanced-threat-protection-policies-fail-on-older-client-agents"></a>Las directivas de Protección contra amenazas avanzada de Windows Defender dan error en agentes cliente antiguos
-<!-- Product Studio bug 462286 added  05 25 2017 and valid until July 2017 GA release      Fixed in 1610 -->
-Las directivas de Protección contra amenazas avanzada de Windows Defender creadas desde una versión 1610 de Configuration Manager o un servidor de sitio posterior no pueden aplicarse en la versión 1606 de Configuration Manager y clientes anteriores.  Los clientes no se incorporan y la evaluación de directivas informa de un error. El **Estado de implementación** en la configuración de Protección contra amenazas avanzada de Windows Defender se muestra como **Error**.
-
-**Solución**: actualice el cliente de Configuration Manager a la versión 1610 o posterior.
+<!-- ## Endpoint Protection -->

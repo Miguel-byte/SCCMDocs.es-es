@@ -13,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: d8c8b44c-1e8a-42b6-bab4-23c72a0a6169
 caps.latest.revision: "15"
 caps.handback.revision: "0"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 7a87e03cdade6339bc0ea0055edf8791e197e6f1
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 95df27d4bf21a2cb1b6d613415a3eff4c3a73552
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="removed-and-deprecated-features-for-system-center-configuration-manager"></a>Características eliminadas y en desuso de System Center Configuration Manager
 
@@ -55,7 +55,7 @@ Para obtener más información, vea:
 |Windows Server 2008|10 de julio de 2015|Versión 1511 </br></br>Se quitó la compatibilidad como un sistema de sitio. (Vea la nota 1).|  
 |Windows Server 2008 R2|10 de julio de 2015| Versión 1702 (véase la nota 2)|  
 
--   Nota 1: No se admite este sistema operativo para servidores de sitio o roles de sistema de sitio con la excepción del punto de distribución y el punto de distribución de extracción. Puede seguir usando este sistema operativo como un punto de distribución hasta que se anuncie que esta compatibilidad queda obsoleta o expire el período extendido de soporte técnico de este sistema operativo. Para más información, vea [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095) (La instalación de System Center Configuration Manager CB y LTBS produce un error en Windows Server 2008).
+-   Nota 1: No se admite este sistema operativo para servidores del sitio o roles del sistema de sitio excepto para el punto de distribución y el punto de distribución de extracción. Puede seguir usando este sistema operativo como un punto de distribución hasta que se anuncie que esta compatibilidad queda obsoleta o expire el período extendido de soporte técnico de este sistema operativo. Para más información, vea [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095) (La instalación de System Center Configuration Manager CB y LTBS produce un error en Windows Server 2008).
 
 -   Nota 2: a partir de la versión 1702, este sistema operativo no se admite para los servidores de sitio o la mayoría de los roles de sistema de sitio; sin embargo, las versiones anteriores a 1702 sí permitirán utilizarlo. Este sistema operativo se seguirá admitiendo para el rol de sistema de sitio del punto de distribución (incluidos los puntos de distribución de extracción, así como para el entorno PXE y multidifusión) hasta que se anuncie que esta compatibilidad está en desuso o hasta que expire el período extendido de soporte técnico de este sistema operativo. A partir de la versión 1602, puede actualizar in situ el sistema operativo de un servidor de sitio de Windows Server 2008 R2 a Windows Server 2012 R2.  
 
@@ -89,7 +89,7 @@ Para obtener más información, vea:
 
 Si necesita actualizar la versión de SQL Server, se recomiendan los métodos siguientes, del más sencillo al más complicado.
 1. [Realice una actualización local de SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (recomendado).
-2. Instale una nueva versión de SQL Server en un equipo nuevo y después [use la opción para mover datos](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) del programa de instalación de Configuration Manager para transfiera el servidor de sitio a la nueva instancia de SQL Server.
+2. Instale una nueva versión de SQL Server en un equipo nuevo. Después, [use la opción de mover la base de datos](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) del programa de instalación de Configuration Manager para que el servidor de sitio señale al nuevo servidor SQL Server.
 3. Use [Copia de seguridad y recuperación](/sccm/protect/understand/backup-and-recovery).
 
 
@@ -104,7 +104,7 @@ Si necesita actualizar la versión de SQL Server, se recomiendan los métodos si
 |El Centro de software tiene un aspecto renovado y moderno. En los próximos meses, la versión anterior del Centro de software dejará de estar disponible.<br><br>Puede configurar los clientes para que usen el nuevo Centro de software. Para ello, habilite la opción de cliente **Agente de equipo** > **Use new Software Center** (Usar el nuevo Centro de software).<br><br>Para más información sobre el Centro de software, consulte [Planear y configurar la administración de aplicaciones en System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management).|13 de diciembre de 2016|La compatibilidad con la versión anterior del Centro de software finaliza con la primera actualización publicada después del 1 de enero de 2018.|
 |Con la llegada de la nueva experiencia del Centro de software con la versión 1511, las aplicaciones que solo se hubiesen mostrado en el catálogo de aplicaciones (aplicaciones disponibles para el usuario) ahora aparecen en el Centro de software. </br></br>Con esta funcionalidad principal del catálogo de aplicaciones incluida ahora en el Centro de software, la experiencia del catálogo de aplicaciones basada en la Web dejará de estar disponible en los próximos meses.|11 de agosto de 2017| La compatibilidad con la experiencia del usuario con el sitio web del catálogo de aplicaciones finaliza con la primera actualización publicada después del 1 de junio de 2018.|
 |Administración de discos duros virtuales (VHD) con Configuration Manager. </br></br>Esto incluye la eliminación de opciones para crear un nuevo VHD o administrar un VHD con una secuencia de tareas, y la eliminación del nodo de discos duros virtuales de la consola de Configuration Manager. </br></br>Cuando se quita esta compatibilidad, los VHD existentes no se eliminarán, pero ya no se podrá obtener acceso a ellos desde dentro de la consola de Configuration Manager.  |6 de enero de 2017 |La compatibilidad con VHD finaliza con la primera actualización publicada después del 1 de junio de 2017.|
-|Herramienta de evaluación de actualizaciones de System Center Configuration Manager. </br></br>La Herramienta de evaluación de actualizaciones depende de System Center Configuration Manager y del kit de herramientas de compatibilidad de aplicaciones (ACT) 6.x. La versión final de ACT se ha entregado en Windows 10 v1511 ADK. Como no habrá más actualizaciones para ACT, se interrumpirá el soporte para la Herramienta de evaluación de actualizaciones. </br></br>La Herramienta de evaluación de actualizaciones se reemplaza por la característica [Preparación de actualización](/sccm/core/clients/manage/upgrade/upgrade-analytics). El aviso de desuso se agregó a la [página de descarga de la Herramienta de evaluación de actualizaciones](https://www.microsoft.com/download/details.aspx?id=37145) el 12 de septiembre de 2016. |12/9/2016  | 11 de julio de 2017 |
+|Herramienta de evaluación de actualizaciones de System Center Configuration Manager. </br></br>La Herramienta de evaluación de actualizaciones depende de System Center Configuration Manager y del kit de herramientas de compatibilidad de aplicaciones (ACT) 6.x. La versión final de ACT se ha entregado en Windows 10 v1511 ADK. Como no habrá más actualizaciones para ACT, se interrumpirá el soporte para la Herramienta de evaluación de actualizaciones. </br></br>La Herramienta de evaluación de actualizaciones se reemplaza por la característica [Preparación de actualización](/sccm/core/clients/manage/upgrade/upgrade-analytics). El aviso de desuso se agregó a la [página de descarga de UAT](https://www.microsoft.com/download/details.aspx?id=37145) el 12 de septiembre de 2016. | 12 de septiembre de 2016  | 11 de julio de 2017 |
 
 
 <br></br>
