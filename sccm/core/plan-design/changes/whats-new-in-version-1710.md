@@ -13,11 +13,11 @@ ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 83bd5fc972bc0bef07b206e160463db71837e827
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 8431ebffc6d1aa463c5622bd67db8a140c0cfe69
+ms.sourcegitcommit: 2dc9c83e57e9734ffc4a93f79cd71285036eeb8b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>Novedades de la versión 1710 de System Center Configuration Manager
 
@@ -58,7 +58,7 @@ Ahora puede usar [puntos de distribución en la nube](/sccm/core/plan-design/hie
 
 ### <a name="co-management-for-windows-10-devices"></a>Administración conjunta para dispositivos de Windows 10    
 <!-- 1350871 -->
-A partir de Windows 10, versión 1607 (también conocida como la Actualización de aniversario), puede unir un dispositivo Windows 10 a Active Directory (AD) local y a Azure AD basado en la nube al mismo tiempo (Azure AD híbrido). La administración conjunta aprovecha esta mejora y le permite administrar dispositivos Windows 10 de forma simultánea mediante Configuration Manager e Intune. Se trata de una solución que sirve de puente entre la administración tradicional y moderna, y proporciona un camino para realizar la transición con un enfoque por fases. Para más información, consulte [Administración conjunta para dispositivos de Windows 10](/sccm/core/clients/manage/co-management-overview).
+Las actualizaciones anteriores de Windows 10 ya permiten unir un dispositivo Windows 10 a Active Directory (AD) local y en la nube al mismo tiempo (Azure AD híbrido). A partir de la versión 1710 de Configuration Manager, la administración conjunta aprovecha esta mejora y permite administrar dispositivos de la versión 1709 de Windows 10 (también conocida con el nombre Fall Creators Update) de forma simultánea mediante Intune y Configuration Manager. Se trata de una solución que sirve de puente entre la administración tradicional y moderna, y proporciona un camino para realizar la transición con un enfoque por fases. Para más información, consulte [Administración conjunta para dispositivos de Windows 10](/sccm/core/clients/manage/co-management-overview).
 
 ### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>Reinicio de equipos desde la consola de Configuration Manager <!-- 1356283 -->
 A partir de esta versión, puede usar la consola de Configuration Manager para identificar los dispositivos de cliente que requieren un reinicio y, después, usar una acción de notificación de cliente para reiniciarlos.
@@ -165,7 +165,6 @@ Con esta versión, hemos actualizado las páginas de propiedades y el Asistente 
 - Cuando la plataforma se establece en **Android**, **Android for Work** o **Windows Phone 8.1**, la página **Plataformas admitidas** no es necesaria y no se muestra.
 - El flujo de trabajo basado en el cliente de Configuration Manager se ha combinado con los flujos de trabajo de Windows 10 basados en el cliente de dispositivos móviles híbridos (MDM). Ambos admiten la misma configuración.
 - Cada flujo de trabajo de la plataforma incluye únicamente las opciones adecuadas para ese flujo de trabajo.  Por ejemplo, el flujo de trabajo de Android contiene configuraciones adecuadas para Android; las configuraciones adecuadas para iOS o Windows 10 Mobile ya no aparecen en el flujo de trabajo de Android.
-- En los dispositivos Windows 8.1, los tipos de conexión que administra solo el cliente de Configuration Manager (no compatible con Intune) están claramente marcados.
 - La página VPN automática está obsoleta y se ha quitado.
 
 Estos cambios se aplican a los nuevos perfiles VPN.  
