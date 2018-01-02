@@ -3,7 +3,7 @@ title: Almacenamiento de datos
 titleSuffix: Configuration Manager
 description: Punto de servicio de almacenamiento de datos y base de datos para System Center Configuration Manager
 ms.custom: na
-ms.date: 8/25/2017
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision:
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 2e6ac983e5ca63dacb77f2e26515d7123748d64d
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 4d420ce623c834401383231d00e3f361342f2d2e
+ms.sourcegitcommit: 52b956cfe32c3f06ae68d6ba6fc3244ce5a66325
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/06/2017
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>El punto de servicio de almacenamiento de datos para System Center Configuration Manager
 *Se aplica a: System Center Configuration Manager (rama actual)*
@@ -27,9 +27,7 @@ ms.lasthandoff: 12/04/2017
 A partir de la versión 1702 puede usar el punto de servicio de almacenamiento de datos para almacenar y generar informes de datos históricos a largo plazo para su implementación de Configuration Manager.
 
 > [!TIP]
-> Con la versión 1702, se presentó el punto de servicio de almacenamiento de datos como una característica de versión preliminar. Para habilitarla, consulte [Use pre-release features](/sccm/core/servers/manage/pre-release-features) (Uso de características de versión preliminar).
-
-> A partir de la versión 1706, ya no es una característica de versión preliminar.
+> Esta característica se introdujo por primera vez en la versión 1702 como una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1706, ya no es una característica de versión preliminar.
 
 El almacenamiento de datos admite hasta 2 TB de datos, con marcas de tiempo para el seguimiento de cambios. El almacenamiento de datos se consigue mediante sincronizaciones automatizadas desde la base de datos del sitio de Configuration Manager a la base de datos de almacenamiento de datos. Puede acceder a esta información desde su punto de Reporting Services. Los datos que se sincronizan con la base de datos de almacenamiento de datos se conservan durante tres años. Periódicamente, una tarea integrada quita los datos anteriores a este período.
 

@@ -3,7 +3,7 @@ title: "Caché del mismo nivel de cliente"
 titleSuffix: Configuration Manager
 description: "Use la caché del mismo nivel de cliente para las ubicaciones de origen de contenido cuando se distribuya contenido con System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 12/07/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision: "3"
 author: aaroncz
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 60f70d3e24f6290fb022b9bd8ca1512b0ed3d719
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: cadc62ab21ac8cd43120a5baa79dd635a12b4069
+ms.sourcegitcommit: 2dc9c83e57e9734ffc4a93f79cd71285036eeb8b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Caché del mismo nivel para clientes de Configuration Manager
 
@@ -36,7 +36,7 @@ Un cliente de la caché del mismo nivel es un cliente de Configuration Manager q
  -  Para compartir el contenido como origen de la caché del mismo nivel, un cliente de la caché del mismo nivel debe cumplir los requisitos siguientes:
     -  Debe estar unido a un dominio. Sin embargo, un cliente que no esté unido a un dominio podrá obtener contenido de un origen de la caché del mismo nivel unido a dominio.
     -  Debe ser miembro del grupo de límites actual del cliente que está buscando el contenido. Un cliente de la caché del mismo nivel en grupos de límites vecino no está incluido con el grupo de ubicaciones de origen de contenido disponibles cuando un cliente usa la reserva para buscar contenido de un grupo de límites vecino. Para más información acerca de los grupos de límites actuales y vecinos, vea [Grupos de límites](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).
- - Todos los tipos de contenido que se conservan en la caché del cliente de Configuration Manager pueden proporcionarse a otros clientes mediante la caché del mismo nivel.
+ - Todos los tipos de contenido que se conservan en la memoria caché del cliente de Configuration Manager pueden proporcionarse a otros clientes mediante la caché del mismo nivel, incluidos archivos de Office 365 y archivos de instalación rápida.<!--SMS.500850-->
  -  La caché del mismo nivel no reemplaza el uso de otras soluciones como BranchCache, sino que funciona en paralelo para ofrecerle más opciones que amplíen las tradicionales soluciones de implementación de contenido, como los puntos de distribución. Se trata de una solución personalizada sin ninguna dependencia de BranchCache, por lo que seguirá funcionando aunque no habilite o use Windows BranchCache.
 
 ### <a name="operations"></a>Operaciones

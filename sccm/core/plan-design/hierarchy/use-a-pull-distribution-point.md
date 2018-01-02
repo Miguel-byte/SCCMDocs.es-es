@@ -15,11 +15,11 @@ caps.latest.revision: "9"
 author: aaroncz
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: ea8eead4706472a02f216b432ea9f2e6bdf23f66
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: f0feba771dcc75d84cd1233fea562472ff6c1158
+ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="use-a-pull-distribution-point-with-system-center-configuration-manager"></a>Usar un punto de distribución de extracción con System Center Configuration Manager
 
@@ -105,8 +105,10 @@ Cuando un punto de distribución de extracción descarga contenido desde un punt
 -   Este marco se instala mediante el archivo **Pulldp.msi** al configurar el punto de distribución como punto de distribución de extracción. El marco no requiere el cliente de Configuration Manager.  
 
 -   Una vez instalado el punto de distribución de extracción, el servicio CCMExec del equipo del punto de distribución debe estar operativo para que el punto de distribución de extracción funcione.  
+<!--sms.503672 -Clarified BITS use-->
+-   Cuando el punto de distribución de extracción transfiere contenido, realiza la transferencia mediante el **Servicio de transferencia inteligente en segundo plano** (BITS) integrado en el sistema operativo Windows. Un punto de distribución de extracción no requiere que la característica Extensión de servidor IIS de BITS esté instalada.
 
--   Cuando el punto de distribución de extracción transfiere contenido, lo hace mediante el **Servicio de transferencia inteligente en segundo plano** (BITS) y registra su funcionamiento en los registros **datatransferservice.log** y **pulldp.log** del equipo del punto de distribución.  
+-  El punto de distribución de extracción registra su funcionamiento en **datatransferservice.log** y **pulldp.log** que se encuentran en el equipo de punto de distribución.
 
 ## <a name="see-also"></a>Consulte también  
  [Fundamental concepts for content management in System Center Configuration Manager (Aspectos básicos de la administración de contenido en System Center Configuration Manager)](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)   

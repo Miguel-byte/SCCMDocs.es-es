@@ -3,7 +3,7 @@ title: Administrar el acceso a SharePoint Online
 titleSuffix: Configuration Manager
 description: "Obtenga información acerca de cómo usar la directiva de acceso condicional de SharePoint Online de System Center Configuration Manager para administrar el acceso a OneDrive."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 12/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 49cec466-1676-4fe2-a2fe-5004f01d735e
 caps.latest.revision: "11"
 caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 2c1d7cd3462a54a064ec47d0b375ee4cdb25a4b4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 99b2aca418b7ce28a4216b38e711b3d38973e2b7
+ms.sourcegitcommit: 372171a5cd8d143d6d47b651018cda0c91cad67c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="manage-sharepoint-online-access-in-system-center-configuration-manager"></a>Administrar el acceso a SharePoint Online en System Center Configuration Manager
 
@@ -164,7 +164,7 @@ Las aplicaciones de escritorio de Office pueden tener acceso a SharePoint Online
 
 4.  En **Acceso de explorador** a SharePoint Online y OneDrive for Business, se puede elegir permitir el acceso solo a Exchange Online a través de los exploradores admitidos: Safari (iOS) y Chrome (Android). El acceso desde otros exploradores estará bloqueado.  Las mismas restricciones de plataforma que seleccionó para el acceso a las aplicaciones para OneDrive también se aplica aquí.
 
-    En los dispositivos **Android** , los usuarios tienen que habilitar el acceso de explorador.  Para ello, el usuario final tiene que habilitar la opción "Habilitar acceso al explorador" en el dispositivo inscrito de la manera siguiente:
+    En los dispositivos **Android** , los usuarios tienen que habilitar el acceso de explorador.  Para ello, el usuario final tiene que activar la opción **Habilitar acceso al explorador** en el dispositivo inscrito como se indica a continuación:
     1.  Abra la **aplicación del portal de empresa**.
     2.  Vaya a la página **Configuración** desde los tres puntos (...) o el botón de menú de hardware.
     3.  Presione el botón **Habilitar acceso al explorador** .

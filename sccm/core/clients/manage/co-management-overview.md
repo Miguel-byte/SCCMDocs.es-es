@@ -10,15 +10,15 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: 
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: c0a577c6076630f0615f953091f35c4f3c2d0a7d
-ms.sourcegitcommit: 536f7295e9ea361f1f9ead6c25f3685deb041ad8
+ms.openlocfilehash: 4b582d5fbd9e2e916c439b149e117f1a65da98bf
+ms.sourcegitcommit: 5f4a584d4a833b0cc22bd8c47da7dd55aced97fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="co-management-for-windows-10-devices"></a>Administración conjunta para dispositivos de Windows 10    
 <!-- 1350871 -->
-Muchos clientes quieren administrar dispositivos de Windows 10 de la misma manera que administran dispositivos móviles mediante una solución simplificada, basada en la nube y de costo inferior, pero llevar a cabo la transición de la administración tradicional a una administración moderna puede resultar complicado. En Windows 10, versión 1709 (también conocida como Fall Creators Update) y versiones posteriores, puede unir un dispositivo Windows 10 a Active Directory (AD) local y a Azure AD basado en la nube al mismo tiempo (Azure AD híbrido). A partir de la versión 1710 de Configuration Manager, la administración conjunta aprovecha esta mejora y permite administrar dispositivos Windows 10 de forma simultánea mediante Configuration Manager e Intune. Se trata de una solución que sirve de puente entre la administración tradicional y moderna, y proporciona un camino para realizar la transición con un enfoque por fases. 
+Muchos clientes quieren administrar dispositivos de Windows 10 de la misma manera que administran dispositivos móviles mediante una solución simplificada, basada en la nube y de costo inferior, pero llevar a cabo la transición de la administración tradicional a una administración moderna puede resultar complicado. Las actualizaciones anteriores de Windows 10 ya permiten unir un dispositivo Windows 10 a Active Directory (AD) local y en la nube al mismo tiempo (Azure AD híbrido). A partir de la versión 1710 de Configuration Manager, la administración conjunta aprovecha esta mejora y permite administrar dispositivos de la versión 1709 de Windows 10 (también conocida con el nombre Fall Creators Update) de forma simultánea mediante Intune y Configuration Manager. Se trata de una solución que sirve de puente entre la administración tradicional y moderna, y proporciona un camino para realizar la transición con un enfoque por fases. 
 
 Hay dos formas de conseguir la administración conjunta.  Una es que los dispositivos Windows 10 administrados mediante Configuration Manager y los dispositivos unidos a Azure AD híbrido se inscriban en Intune. La otra es que los dispositivos aprovisionados por Intune que se inscriben en Intune y, luego, se instalan con cliente de Configuration Manager obtengan un estado de administración conjunta.  
 

@@ -3,7 +3,7 @@ title: Cree una secuencia de tareas para actualizar un sistema operativo
 titleSuffix: Configuration Manager
 description: "Las secuencias de tareas de System Center Configuration Manager pueden actualizar automáticamente un sistema operativo de Windows 7 o posterior a Windows 10."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "12"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 2787c8a692321a49cf287fc2f09858690360dc25
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 002acbcff01105e612e8c090606a6aa5d45a014b
+ms.sourcegitcommit: 52b956cfe32c3f06ae68d6ba6fc3244ce5a66325
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-operating-system-in-system-center-configuration-manager"></a>Cree una secuencia de tareas para actualizar un sistema operativo en System Center Configuration Manager
 
@@ -78,7 +78,7 @@ Use las secuencias de tareas de System Center Configuration Manager para actuali
 ## <a name="configure-pre-cache-content"></a>Configuración del contenido de la caché previa
 A partir de la versión 1702, para las implementaciones disponibles de secuencias de tareas, puede decidir usar la característica de caché previa para que los clientes solo descarguen el contenido relevante antes de que un usuario instale el contenido.
 > [!TIP]  
-> La caché previa se introdujo con la versión 1702, y se trata de una característica de versión preliminar. Para habilitarla, consulte [Use pre-release features from updates](/sccm/core/servers/manage/pre-release-features) (Uso de características de la versión preliminar a partir de las actualizaciones).
+> Esta característica se introdujo por primera vez en la versión 1702 como una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1706, ya no es una característica de versión preliminar.
 
 Por ejemplo, supongamos que quiere implementar una secuencia de tareas de actualización de Windows 10, solo quiere una única secuencia de tareas para todos los usuarios y tiene varias arquitecturas o idiomas. En las versiones anteriores a la 1702, si crea una implementación disponible y, después, el usuario hace clic en **Instalar** en el Centro de software, el contenido se descarga en ese momento. Esto agrega tiempo adicional antes de que la instalación esté lista para iniciarse. Además, se descarga todo el contenido al que se hace referencia en la secuencia de tareas. Esto incluye el paquete de actualizaciones del sistema operativo para todos los idiomas y arquitecturas. Si cada uno es aproximadamente de 3 GB de tamaño, el paquete de descarga puede ser bastante grande.
 

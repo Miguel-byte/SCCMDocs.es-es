@@ -5,16 +5,16 @@ description: "Obtenga información acerca de cómo cambiar la entidad de MDM des
 keywords: 
 author: dougeby
 manager: angrobe
-ms.date: 09/14/2017
+ms.date: 12/05/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: 746bf7d7ef7dd411c47840731edfe664510e5a77
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 8884883c6e4e82cf38d83b9b7843002be3742bf1
+ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>Cambio de la entidad de MDM a Intune independiente
 
@@ -25,7 +25,7 @@ Puede cambiar un inquilino de Microsoft Intune existente configurado desde la co
 > [!Important]    
 > Para cambiar la entidad de MDM sin migrar primero usuarios de MDM híbrida a Intune, vea [Cambio de la entidad de MDM](change-mdm-authority.md).
 
-En los pasos descritos en este tema se cambia la entidad de MDM para el inquilino a Intune y se migran todos los dispositivos que aún no se han migrado a Intune independiente. En este tema se proporciona información sobre cómo cambiar un inquilino existente de Microsoft Intune configurado desde la consola de Configuration Manager (híbrida) a Intune independiente y se presupone que ya ha completado los pasos siguientes:
+En este artículo se proporciona información sobre cómo cambiar un inquilino existente de Microsoft Intune configurado desde la consola de Configuration Manager (híbrida) a Intune independiente y se presupone que ya ha completado los pasos siguientes:
 - Se ha usado la [herramienta de importación de datos de Intune](migrate-import-data.md) para importar objetos de Configuration Manager a Intune. 
 - [Se ha preparado Intune para la migración de usuario](migrate-prepare-intune.md) para asegurarse de que los usuarios y sus dispositivos continúan siendo administrados después de la migración.
 - [Se ha cambiado la entidad de MDM para usuarios específicos (entidad de MDM mixta)](migrate-mixed-authority.md) para comenzar a administrar los dispositivos de usuario desde Azure Portal.
@@ -33,7 +33,7 @@ En los pasos descritos en este tema se cambia la entidad de MDM para el inquilin
 
 ## <a name="users-and-devices-that-have-not-been-migrated"></a>Usuarios y dispositivos que no se han migrado
 Ya ha migrado muchos usuarios y ha probado la funcionalidad de Intune para asegurarse de que todo funciona según lo previsto. Por lo tanto, sus directivas, perfiles, aplicaciones, etc. se han configurado en Intune y ha probado exhaustivamente los objetos en los dispositivos. No debería haber ninguna configuración nueva necesaria para las directivas de nivel del inquilino después del cambio en la entidad de MDM. Sin embargo, para los usuarios y dispositivos que no se han migrado previamente, revise la siguiente información acerca de lo que puede esperar después del cambio en la entidad de MDM:    
-- Habrá probablemente un tiempo de transición (hasta ocho horas) antes de que el dispositivo se compruebe y se sincronice con el servicio.
+- Probablemente haya un tiempo de transición (hasta ocho horas) antes de que el dispositivo se compruebe y se sincronice con el servicio.
 - Los dispositivos deben conectarse al servicio después del cambio para que la configuración de la nueva entidad de MDM (Intune independiente) reemplace la configuración existente en el dispositivo.
 - Algunas de las opciones básicas (como los perfiles) de la entidad de MDM anterior (híbrida) permanecen en el dispositivo durante siete días. 
 - Los dispositivos sin usuarios asociados (normalmente al tener el Programa de inscripción de dispositivos iOS o escenarios de inscripción de forma masiva) no se migran a la nueva entidad de MDM. Para esos dispositivos, debe llamar al soporte técnico para solicitar ayuda para trasladarlos a la nueva entidad de MDM.
@@ -44,7 +44,7 @@ Revise la información siguiente para preparar el cambio de la entidad de MDM:
 - Asegúrese de que todos los usuarios que están administrados actualmente por la MDM híbrida tengan una licencia de Intune o EMS asignada antes de los cambios en la entidad de MDM. Tener la licencia garantiza que el usuario y sus dispositivos se administran por Intune independiente después del cambio en la entidad de MDM. Para obtener más información, consulte [Assign Intune licenses to your user accounts](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4) (Asignar licencias de Intune a sus cuentas de usuario).
 - Asegúrese de que la cuenta de usuario de administrador tenga asignada una licencia de Intune/EMS.
 
-### <a name="change-the-mdm-authority-to-intune"></a>Cambio de la entidad de MDM a Intune
+## <a name="change-the-mdm-authority-to-intune"></a>Cambio de la entidad de MDM a Intune
 Utilice el procedimiento siguiente para cambiar la entidad de MDM de inquilino a Intune.
 
 1.  En la consola de Configuration Manager, vaya a **Administración** &gt; **Información general** &gt; **Cloud Services** &gt; **Suscripción a Microsoft Intune** y elimine la suscripción a Intune actual.
@@ -72,10 +72,10 @@ Una vez completado el cambio en la entidad de MDM, revise la siguiente informaci
 - Si tiene problemas con dispositivos concretos, puede anular la inscripción de esos dispositivos y realizarla de nuevo para que se conecten a la nueva entidad y se administren lo antes posible.
 - Para usuarios y dispositivos que no se han migrado anteriormente:
     - Compruebe que los dispositivos se muestran ahora en la hoja**Dispositivos** como dispositivos administrados. Estos dispositivos deben comprobarse y sincronizarse con el servicio después del cambio de entidad de MDM para que se muestren. 
-    - Cuando el servicio de Intune detecta que ha cambiado la entidad de MDM de un inquilino, envía un mensaje de notificación a todos los dispositivos inscritos para que inicien el proceso de comprobación y se sincronicen en el servicio (no forma parte de la comprobación programada regularmente). Por lo tanto, una vez que cambie la entidad de MDM para el inquilino de híbrido a Intune independiente, todos los dispositivos que estén encendidos y en línea se conectarán en el servicio, recibirán la nueva entidad de MDM y serán administrados por Intune independiente a partir de ahora. No habrá ninguna interrupción en el proceso de administración y protección de estos dispositivos.
+    - Cuando el servicio de Intune detecta que ha cambiado la entidad de MDM de un inquilino, envía un mensaje de notificación a todos los dispositivos inscritos para que inicien el proceso de comprobación y se sincronicen en el servicio (no forma parte de la comprobación programada regularmente). Por lo tanto, una vez que cambie la entidad de MDM para el inquilino de híbrido a Intune independiente, todos los dispositivos que estén encendidos y en línea se conectan en el servicio, reciben la nueva entidad de MDM y son administrados por Intune independiente a partir de ahora. No hay ninguna interrupción en el proceso de administración y protección de estos dispositivos.
     - Los dispositivos que estén apagados o sin conexión durante el cambio en la entidad de MDM (o poco tiempo después) se conectan al servicio y se sincronizarán con él con la nueva entidad de MDM cuando estén encendidos y en línea.  
     - Los usuarios pueden cambiar rápidamente a la nueva entidad de MDM iniciando manualmente una comprobación desde el dispositivo en el servicio. Pueden realizar la comprobación fácilmente mediante la aplicación Portal de empresa e iniciando una comprobación de cumplimiento del dispositivo.
-    - Existe un período transitorio entre el momento en que un dispositivo está sin conexión durante el cambio de entidad de MDM y el momento en que se comprueba la idoneidad de ese dispositivo para su registro en el servicio. Para garantizar que el dispositivo permanece protegido y funcional durante este período transitorio, los siguientes perfiles permanecerán en el dispositivo hasta siete días (o hasta que el dispositivo se conecte con la nueva entidad de MDM y reciba la nueva configuración que sobrescribirá la actual):
+    - Existe un período transitorio entre el momento en que un dispositivo está sin conexión durante el cambio de entidad de MDM y el momento en que se comprueba la idoneidad de ese dispositivo para su registro en el servicio. Para garantizar que el dispositivo permanece protegido y funcional durante este período transitorio, los siguientes perfiles permanecen en el dispositivo hasta siete días (o hasta que el dispositivo se conecte con la nueva entidad de MDM y reciba la nueva configuración que sobrescribirá la actual):
         - Perfil de correo electrónico
         - Perfil de VPN
         - Perfil de certificado

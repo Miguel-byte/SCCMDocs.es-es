@@ -3,7 +3,7 @@ title: Implementar aplicaciones
 titleSuffix: Configuration Manager
 description: "Cree un tipo de implementación o simule la implementación de una aplicación con System Center Configuration Manager."
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 31c8a2e212de8c112b68d68e108db3463516142f
-ms.sourcegitcommit: b36f8c8b06e4b2e13f8c1500a82af79a071ab4f6
+ms.openlocfilehash: 97d1ac775a3b38f63372f0ab01243dfdfeb4edb5
+ms.sourcegitcommit: 52b956cfe32c3f06ae68d6ba6fc3244ce5a66325
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="deploy-applications-with-system-center-configuration-manager"></a>Implementar aplicaciones con System Center Configuration Manager
 
@@ -171,8 +171,7 @@ Además, en una implementación de alto riesgo, como una secuencia de tareas que
 ## <a name="how-to-check-for-running-executable-files-before-installing-an-application"></a>Comprobación de los archivos ejecutables en ejecución antes de instalar una aplicación
 
 >[!Tip]
->Se incluye en la versión 1702, y se trata de una característica en versión preliminar. Para habilitarla, vea [Características de versión preliminar en System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/manage/pre-release-features).
-> A partir de la versión 1706, ya no es una característica de versión preliminar.
+> Esta característica se introdujo por primera vez en la versión 1702 como una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1706, ya no es una característica de versión preliminar.
 
 En el cuadro de diálogo **Propiedades** de un tipo de implementación, en la pestaña **Comportamiento de instalación** se puede especificar uno o varios archivos ejecutables que, si se están ejecutando, bloquearán la instalación del tipo de implementación. El usuario debe cerrar el archivo ejecutable en ejecución (o se puede cerrar automáticamente para las implementaciones con un propósito de requerido) antes de poder instalar el tipo de implementación. Para configurar esto:
 

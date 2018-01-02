@@ -3,7 +3,7 @@ title: "Más información sobre licencias y ramas"
 titleSuffix: Configuration Manager
 description: "Con este tema obtendrá información acerca de los requisitos de licencia para las opciones de instalación disponibles con la versión de octubre de 2016 de System Center Configuration Manager, que incluyen la versión de Rama actual 1606, la Rama de mantenimiento a largo plazo (LSTB) y la instalación de evaluación de la Rama actual."
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: aaroncz
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 0890b25f4b5b96a8d39b0dcf6f0aa659c07265db
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: bcb25fc6faad3d5f7162ae4ceb200c6de1c1c25b
+ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>Licencias y ramas para System Center Configuration Manager
 
@@ -42,7 +42,7 @@ En este tema se hace referencia al contrato de Software Assurance (o derechos de
 
 |Rama|Licencias|Detalles|
 |----------------|---------------------|--------------------|
-|Rama actual | Requiere un contrato de Software Assurance activo (o derechos equivalentes) para Configuration Manager. </br></br> Consulte [Software Assurance y la Rama actual](#software-assurance-and-the-current-Branch) en este tema.| Se admite su uso en entornos de producción que desean recibir actualizaciones periódicas de calidad y de características de Microsoft. </br></br> Esta rama proporciona acceso para usar todas las características y mejoras. </br></br> Cada actualización de la versión tiene soporte técnico durante un (1) año después de su lanzamiento; una vez transcurrido dicho período, debe actualizar a una versión más reciente que aún tenga [soporte](/sccm/core/servers/manage/current-branch-versions-supported).|
+|Rama actual | Requiere un contrato de Software Assurance activo (o derechos equivalentes) para Configuration Manager. </br></br> Consulte [Software Assurance y la Rama actual](#software-assurance-and-the-current-Branch) en este tema.| Se admite su uso en entornos de producción que desean recibir actualizaciones periódicas de calidad y de características de Microsoft. </br></br> Esta rama proporciona acceso para usar todas las características y mejoras. </br></br> Para las versiones de Configuration Manager anteriores a la 1710, se ofrece soporte técnico durante 12 meses. Desde la versión 1710, cada versión de actualización seguirá siendo compatible durante 18 meses a partir de la fecha de lanzamiento de disponibilidad general. Consulte [Compatibilidad con versiones de la rama actual de System Center Configuration Manager](/sccm/core/servers/manage/current-branch-versions-supported) para más detalles.|
 |Rama de mantenimiento a largo plazo (LTSB)| Requiere un contrato de Software Assurance en vigor con Microsoft en el momento del lanzamiento (1 de octubre de 2016) </br></br> Consulte [Software Assurance y LTSB](#software-assurance-and-the-ltsb) en este tema. | Se admite su uso en entornos de producción. Uso destinado a clientes que han dejado que su contrato de Software Assurance (SA) o los derechos de suscripción equivalentes para Configuration Manager caduquen después del 1 de octubre de 2016. </br></br> Esta rama tiene opciones limitadas en comparación con la Rama actual. </br></br> Las actualizaciones de seguridad críticas para Configuration Manager se ponen a disposición de esta Rama, pero no así las nuevas características. |
 |Instalación de evaluación de la Rama actual| No requiere un contrato de Software Assurance con Microsoft. | Las [instalaciones de evaluación](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) siempre son la Rama actual, y pueden usarse durante 180 días. </br></br> La instalación de evaluación puede actualizarse a una instalación completa de la Rama actual. No puede actualizar una instalación de evaluación a la Rama de mantenimiento a largo plazo.|
 
