@@ -31,7 +31,7 @@
 ## Administración de aplicaciones
 ### [Tareas administrativas](deploy-use/management-tasks-applications.md)
 ### [Afinidad entre usuario y dispositivo](deploy-use/link-users-and-devices-with-user-device-affinity.md)
-### [Aplicaciones adquiridas por volumen de la Tienda Windows para empresas](deploy-use/manage-apps-from-the-windows-store-for-business.md)
+### [Aplicaciones adquiridas por volumen de la Tienda Microsoft para Empresas](deploy-use/manage-apps-from-the-windows-store-for-business.md)
 ### [Entornos virtuales de App-V](deploy-use/create-app-v-virtual-environments.md)
 
 ## Actualizar y retirar aplicaciones
