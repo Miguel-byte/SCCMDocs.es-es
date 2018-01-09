@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 caps.latest.revision: "7"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 16416313b1ea171f695d2b4908331f78f584d28f
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 518be0c1cb4c361d8802ed70779d192725eb8feb
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="accounts-used-in-system-center-configuration-manager"></a>Cuentas que se usan en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Use la información siguiente para identificar las cuentas y los grupos de Windows que se usan en System Center Configuration Manager, cómo se usan y cualquier requisito aplicable.  
 

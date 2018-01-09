@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3359f254-dd48-42b7-9eab-c92a3417e3fb
 caps.latest.revision: "3"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 5a7310cb811103832cb56e7688d8a80d134469cf
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: eef88b25119558c78c57e2df665507be6d70698f
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="package-transfer-manager-in-system-center-configuration-manager"></a>Administrador de transferencia de paquetes en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En un sitio de System Center Configuration Manager, el administrador de transferencia de paquetes es un componente del servicio SMS_Executive que administra la transferencia de contenido desde un equipo de servidor de sitio a puntos de distribución remotos en un sitio. (Un punto de distribución remoto es el que no se encuentra en el equipo de servidor del sitio). El administrador de transferencia de paquetes no es compatible con las configuraciones del administrador, pero comprender su funcionamiento puede ayudarle a planear su infraestructura de administración de contenido. También puede ayudarle a solucionar problemas de distribución de contenido.
 

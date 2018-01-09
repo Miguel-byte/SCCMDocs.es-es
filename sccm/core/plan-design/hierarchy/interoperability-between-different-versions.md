@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b0a7859-747f-4495-a2f4-13fd5991f897
 caps.latest.revision: "8"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 5b7b4c938ae057e7bcb7f281ddb266ade0cdafb4
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 66bfb130a27ed8e4b8b9d052a672ef7f72b56f59
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="interoperability-between-different-versions-of-system-center-configuration-manager"></a>Interoperabilidad entre diferentes versiones de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede instalar y usar varias jerarquías independientes de System Center Configuration Manager en la misma red. En cambio, debido a que diferentes jerarquías de Configuration Manager no interoperan fuera del proceso de migración, cada jerarquía requiere configuraciones para evitar conflictos entre ellas. Además, puede crear algunas configuraciones para ayudar a los recursos que administra a interactuar con los sistemas del sitio desde la jerarquía correcta.  
 
