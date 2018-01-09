@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 caps.latest.revision: "10"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 44e6afbfac3ef1e8318991854c8fdd22ead4c6ed
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: b3071905a368ff9bc8e932d91f9b1e7d707b106b
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>Administrar secuencias de tareas para automatizar tareas en System Center Configuration Manager
 
@@ -221,7 +221,7 @@ Se mostrará el siguiente mensaje de notificación cuando el usuario final abra 
     > [!NOTE]  
     >  Si **Implementar** no está disponible, la secuencia de tareas tiene una referencia que no es válida.  Corrija la referencia y, a continuación, intente implementar la secuencia de tareas de nuevo.  
 
-5.  En la página **General** , especifique la información siguiente y, a continuación, haga clic en **Siguiente**.  
+5.  On the **General** , especifique la información siguiente y, a continuación, haga clic en **Siguiente**.  
 
     -   **Secuencia de tareas**: especifique la secuencia de tareas que quiere implementar. De forma predeterminada, este cuadro muestra la secuencia de tareas seleccionada.  
 

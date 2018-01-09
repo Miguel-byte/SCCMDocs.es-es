@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 caps.latest.revision: "19"
 caps.handback.revision: "0"
-author: mattbriggs
-ms.author: mabrigg
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 017a8f0d5b38145f6708e61ff5d7b2c3614b62a0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 1ae9c9385abe90a38169f5d539be944f03817007
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>Usar PXE para implementar Windows a través de la red con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las implementaciones de sistema operativo iniciadas por el entorno de ejecución previo al arranque (PXE) en System Center Configuration Manager permiten que los equipos cliente soliciten e implementen sistemas operativos a través de la red. En este escenario de implementación, la imagen de sistema operativo y las imágenes de arranque de Windows PE (versiones x86 y x64) se envían a un punto de distribución que está configurado para aceptar solicitudes de arranque de PXE.
 

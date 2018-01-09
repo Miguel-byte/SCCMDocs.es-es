@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: ead79e64-1b63-4d0d-8bd5-addff8919820
 caps.latest.revision: "11"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: f75a29ff27a1f806d4329bd2dfc5e30a8991fac9
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: f0dd624259e4f1b2a0bd14112a2cd25bb7a38767
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="create-bootable-media-with-system-center-configuration-manager"></a>Crear medios de arranque con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Los medios de arranque de Configuration Manager contienen la imagen de arranque, comandos de preinicio y archivos asociados opcionales y archivos de Configuration Manager. Use los medios preconfigurados para los siguientes escenarios de implementación de sistema operativo:  
 

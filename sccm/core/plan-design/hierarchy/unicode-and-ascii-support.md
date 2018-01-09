@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: 2bdec799-905f-48bc-aed5-2d92134739e8
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: c35a33ffb20e548d4c9e51de01da803bdcf47f50
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 654d70d97adefca6801bb64b1e23797e71c75f40
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="unicode-and-ascii-support-in-system-center-configuration-manager"></a>Compatibilidad con Unicode y ASCII en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 System Center Configuration Manager crea la mayoría de los objetos mediante caracteres Unicode. Sin embargo, varios objetos admiten solo caracteres ASCII o tienen otras limitaciones.  
 
@@ -89,7 +89,7 @@ System Center Configuration Manager crea la mayoría de los objetos mediante car
 
     -   Punto de proxy de inscripción  
 
-    -   Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.  
+    -   Punto de servicios de informes  
 
     -   Punto de migración de estado  
 

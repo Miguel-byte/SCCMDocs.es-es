@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4db1e15f-e832-4cf9-be33-d3971e635a55
 caps.latest.revision: "6"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 3e1cd18a3791b6ad009ca21851bb7173f8510f71
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 0355219b1270dd5fb9b0ed78406ee0059fbceeba
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="fundamentals-of-sites-and-hierarchies-for-system-center-configuration-manager"></a>Aspectos básicos de sitios y jerarquías para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Una implementación de System Center Configuration Manager debe instalarse en un dominio de Active Directory. La base de esta implementación incluye uno o varios sitios de Configuration Manager que forman una jerarquía de sitios. Desde un único sitio hasta una jerarquía de varios sitio, el tipo y la ubicación de los sitios que instale proporcionan la capacidad de escalar verticalmente (expandir) su implementación cuando sea necesario y ofrecer servicios clave a los usuarios y dispositivos administrados.
 
@@ -66,7 +66,7 @@ Otros roles de sistema de sitio son opcionales y solo se usan cuando se quiere u
 
  Para más información sobre los distintos roles de sistema de sitio, vea [Roles de sistema de sitio](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md#bkmk_planroles) en [Planeamiento de servidores y roles de sistema de sitio para System Center Configuration Manager](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).
 
-## <a name="publishing-site-information-to-active-directory-domain-services"></a>Publicación de información de sitio en los Servicios de dominio de Active Directory  
+## <a name="publishing-site-information-to-active-directory-domain-services"></a>Publicación de información de sitio en Active Directory Domain Services  
  Para simplificar la administración de Configuration Manager, puede extender el esquema de Active Directory para admitir los detalles usados por Configuration Manager y, después, hacer que los sitios publiquen su información clave en Active Directory Domain Services (AD DS). Después, los equipos que quiera administrar pueden recuperar de forma segura la información relacionada con el sitio de la fuente de confianza de AD DS. La información que los clientes pueden recuperar identifica los sitios disponibles, los servidores de sistema de sitio y los servicios que proporcionan dichos servidores.  
 
  *La extensión del esquema de Active Directory* se realiza solo una vez por bosque y puede hacerse antes o después de instalar Configuration Manager.   Al extender el esquema, debe crear un nuevo contenedor de Active Directory denominado System Management en cada dominio. El contenedor contiene un sitio de Configuration Manager que publicará datos para que los clientes los busquen. Para más información, vea [Preparar Active Directory para la publicación de sitios](../../core/plan-design/network/extend-the-active-directory-schema.md).  

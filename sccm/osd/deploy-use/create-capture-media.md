@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: 10eb8958-3848-49d7-95c0-16119b624580
 caps.latest.revision: "11"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: c25eade287d254907c7d7d02948eb25a88ed0a11
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: be797589052a45f239629a5db56b79102257cdfd
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="create-capture-media-with-system-center-configuration-manager"></a>Crear medios de captura con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Los medios de captura de Configuration Manager permiten capturar una imagen de sistema operativo desde un equipo de referencia. Use los medios de captura para el escenario siguiente:  
 
@@ -38,7 +38,7 @@ Los medios de captura se crean mediante el Asistente para crear medio de secuenc
 |Tarea|Descripción|  
 |----------|-----------------|  
 |Imagen de arranque|Tenga en cuenta los siguientes datos sobre la imagen de arranque que usará en la secuencia de tareas para capturar el sistema operativo:<br /><br /> - La arquitectura de la imagen de arranque debe ser adecuada para la arquitectura del equipo de destino. Por ejemplo, un equipo de destino x64 puede arrancar y ejecutar una imagen de arranque x86 o x64. Sin embargo, un equipo de destino x86 solo puede arrancar y ejecutar una imagen de arranque x86.<br />- Asegúrese de que la imagen de arranque contiene los controladores de almacenamiento masivo y de red necesarios para aprovisionar el equipo de destino.|  
-|Distribuir todo el contenido asociado con la secuencia de tareas|Debe distribuir todo el contenido requerido por la secuencia de tareas a un punto de distribución como mínimo. Esto incluye la imagen de arranque, la imagen de sistema operativo y otros archivos asociados. El asistente recopila la información desde el punto de distribución al crear los medios independientes. Debe tener derechos de acceso de **lectura** para la biblioteca de contenido de dicho punto de distribución.  Para obtener más información, consulte [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute) (Distribuir contenido).|  
+|Distribuir todo el contenido asociado con la secuencia de tareas|Debe distribuir todo el contenido requerido por la secuencia de tareas a un punto de distribución como mínimo. Esto incluye la imagen de arranque, la imagen de sistema operativo y otros archivos asociados. El asistente recopila la información desde el punto de distribución al crear los medios independientes. Debe tener derechos de acceso de **lectura** para la biblioteca de contenido de dicho punto de distribución.  Para obtener más información, consulte [Distribute content (Distribución del contenido)](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).|  
 |Preparar la unidad USB extraíble|Para una unidad USB extraíble:<br /><br /> Si va a usar una unidad USB extraíble, dicha unidad debe estar conectada al equipo donde se ejecuta el asistente y debe ser detectada por Windows como un dispositivo de eliminación. El asistente escribe directamente en la unidad extraíble cuando crea los medios.|  
 |Crear una carpeta de salida|Para un conjunto de CD o DVD:<br /><br /> Antes de ejecutar el Asistente para crear medio de secuencia de tareas para crear medios para un conjunto de CD o DVD, debe crear una carpeta para los archivos de salida creados por el asistente. El medio creado para un conjunto de CD o DVD se escribe como archivo .iso directamente en esa carpeta.|  
 

@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: c7c94ba0-d709-4129-8077-075a8abaea1c
 caps.latest.revision: "4"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 936dead7461162779d85796808a8a94e9b8bc44a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: f5fa0951ff07ad4d4722b521c5039078a7baaec4
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="preprovision-bitlocker-in-windows-pe-with-system-center-configuration-manager"></a>Aprovisionar previamente BitLocker en Windows PE con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 El paso de secuencia de tareas **Tener en servicio BitLocker** en System Center Configuration Manager permite habilitar BitLocker en el Entorno de preinstalación de Windows (Windows PE) antes de la implementación del sistema operativo. Sólo se cifra el espacio de la unidad que se utiliza, por ello los tiempos de cifrado son mucho más rápidos. Se realiza mediante un protector de borrado generado aleatoriamente que se aplica al volumen formateado y el cifrado del volumen antes de ejecutar el proceso de instalación de Windows. La capacidad para tener en servicio BitLocker se introdujo con Windows 8 y Windows Server 2012. Sin embargo, puede tener en servicio BitLocker en una unidad de disco duro e instalar Windows 7 siempre y cuando siga pasos específicos. Una vez finalizada la instalación de Windows 7, debe establecer un protector de clave de BitLocker porque el panel de control de BitLocker de Windows 7 no es compatible con BitLocker con un protector de borrado. Debe agregar un protector de clave mediante el paso **Habilitar BitLocker** o mediante la herramienta de línea de comandos manage-bde.exe.  
 

@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 caps.latest.revision: "8"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 91e3fa4aba93dc3012fe1e702f50c4f9438a69e8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 9d902f75911b484d22d38b07cea40e1c00ea0d93
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>Implementar Windows to Go con System Center Configuration Manager.
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En este tema se proporcionan los pasos para aprovisionar Windows To Go en System Center Configuration Manager. Windows To Go es una función empresarial de Windows 8 que habilita la creación de un área de trabajo Windows To Go que se puede arrancar desde una unidad externa conectada mediante USB en equipos que cumplan los requisitos de certificados de Windows 7 o Windows 8, sin tener en cuenta el sistema operativo que se ejecute en el equipo. Las áreas de trabajo de Windows To Go pueden utilizar la misma imagen que usan las empresas en los equipos de escritorio y portátiles, y se puede administrar de la misma manera.  
 
@@ -59,18 +59,18 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
      antes de crear los medios preconfigurados, debe distribuir la imagen de arranque en un punto de distribución.  
 
     > [!NOTE]  
-    >  Las imágenes de arranque se usan para instalar el sistema operativo en los equipos de destino dentro del entorno de Configuration Manager. Contienen una versión de Windows PE que instala el sistema operativo, así como todos los controladores de dispositivo adicionales que fuesen necesarios. Configuration Manager proporciona dos imágenes de arranque: una compatible con las plataformas x86 y otra compatible con las plataformas x64. También puede crear sus propias imágenes de arranque. Para obtener más información, consulte [Manage boot images](../get-started/manage-boot-images.md) (Administrar imágenes de arranque).  
+    >  Las imágenes de arranque se usan para instalar el sistema operativo en los equipos de destino dentro del entorno de Configuration Manager. Contienen una versión de Windows PE que instala el sistema operativo, así como todos los controladores de dispositivo adicionales que fuesen necesarios. Configuration Manager proporciona dos imágenes de arranque: una compatible con las plataformas x86 y otra compatible con las plataformas x64. También puede crear sus propias imágenes de arranque. Para más información, vea [Manage boot images (Administrar imágenes de arranque)](../get-started/manage-boot-images.md).  
 
 -   **Distribuir la imagen de sistema operativo Windows 8 a un punto de distribución**  
 
      antes de crear los medios preconfigurados, debe distribuir la imagen de sistema operativo Windows 8 en un punto de distribución.  
 
     > [!NOTE]  
-    >  Las imágenes de sistema operativo son archivos con formato .WIM y representan una recopilación comprimida de archivos de referencia y carpetas que se necesitan para instalar y configurar correctamente un sistema operativo en un equipo. Para obtener más información, consulte [Manage operating system images](../get-started/manage-operating-system-images.md) (Administrar imágenes de sistema operativo).  
+    >  Las imágenes de sistema operativo son archivos con formato .WIM y representan una recopilación comprimida de archivos de referencia y carpetas que se necesitan para instalar y configurar correctamente un sistema operativo en un equipo. Para obtener más información, consulte [Administrar imágenes de sistema operativo](../get-started/manage-operating-system-images.md).  
 
 -   **Crear una secuencia de tareas para implementar Windows 8**  
 
-     debe crear una secuencia de tareas para una implementación de Windows 8 a la que hará referencia al crear los medios preconfigurados. Para obtener más información, consulte [Manage task sequences to automate tasks](manage-task-sequences-to-automate-tasks.md) (Administrar secuencias de tareas para automatizar tareas).  
+     debe crear una secuencia de tareas para una implementación de Windows 8 a la que hará referencia al crear los medios preconfigurados. Para obtener más información, vea [Manage task sequences to automate tasks](manage-task-sequences-to-automate-tasks.md) (Administración de secuencias de tareas para automatizar tareas).  
 
 ###  <a name="BKMK_CreatePrestagedMedia"></a> Crear medios preconfigurados  
  Los medios preconfigurados contienen la imagen de arranque que se utiliza para iniciar el equipo de destino y la imagen de sistema operativo que se aplica al equipo de destino. Mediante el uso de la imagen de arranque, se puede iniciar el equipo que se aprovisiona con los medios preconfigurados. A continuación, el equipo puede ejecutar una secuencia de tareas de implementación de sistema operativo existente para instalar una implementación completa de sistema operativo. La secuencia de tareas que implementa el sistema operativo no se incluye en el medio.  

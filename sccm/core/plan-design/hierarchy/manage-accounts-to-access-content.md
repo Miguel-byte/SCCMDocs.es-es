@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a7df9d0f-fbde-47eb-97e7-3d29536424fa
 caps.latest.revision: "4"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: e67a3f36f3b4eb424fa1b87293907d9a9cac86e2
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: e0f0d4d12905a986159d379b9fd29a06afa4cad0
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="manage-accounts-to-access-content-in-system-center-configuration-manager"></a>Administración de cuentas para acceder al contenido en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Antes de implementar el contenido en System Center Configuration Manager, piense en cómo tendrán acceso los clientes a dicho contenido desde los puntos de distribución. En este artículo se describen las siguientes cuentas que se utilizan para este propósito:
 

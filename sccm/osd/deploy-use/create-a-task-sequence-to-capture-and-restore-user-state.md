@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: d566d85c-bf7a-40e7-8239-57640a1db5f4
 caps.latest.revision: "7"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 5bb55816481db8b93baada07d36c72dd39b62478
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 3fb30240c7d926657e01a4b9e03cef38fd2ee128
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="create-a-task-sequence-to-capture-and-restore-user-state-in-system-center-configuration-manager"></a>Crear una secuencia de tareas para capturar y restaurar el estado de usuario en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede usar secuencias de tareas de System Center Configuration Manager para capturar y restaurar los datos de estado de usuario en los escenarios de implementación de sistema operativo donde quiere conservar el estado de usuario del sistema operativo actual. Según el tipo de tarea de secuencia de tareas que cree, las etapas de captura y restauración podrían agregarse automáticamente como parte de la secuencia de tareas. En otros escenarios, es posible que deba agregar manualmente las etapas de captura y restauración a la secuencia de tareas. En este tema se indican las etapas que se deben agregar a una secuencia de tareas existente para capturar y restaurar los datos de estado de usuario.  
 

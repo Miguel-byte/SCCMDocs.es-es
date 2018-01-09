@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
 caps.latest.revision: "16"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: b016237107f28c006dc3f3e6eddf3cff5b9b753b
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 76dfa18cb7f794be9102bf045cd4212adc7ad56f
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="introduction-to-system-center-configuration-manager"></a>Introducción a System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 System Center Configuration Manager es un producto del conjunto de soluciones de administración de Microsoft System Center, y puede ayudarle a administrar dispositivos y usuarios locales y en la nube.  
 
@@ -166,7 +166,7 @@ Adán asigna estos requisitos de la empresa a los escenarios siguientes:
 
 -   Endpoint Protection  
 -   Actualizaciones de software  
--   Configuración de compatibilidad  
+-   Configuración de cumplimiento  
 -   Administración de dispositivos móviles  
 -   Administración de cliente basada en Internet  
 
@@ -197,7 +197,7 @@ Implementa estas opciones mediante los pasos de configuración de la tabla sigui
 
 -   Implementación de sistema operativo  
 -   Implementación del cliente y estado del cliente  
--   Configuración de compatibilidad  
+-   Configuración de cumplimiento  
 -   Configuración de cliente  
 -   Métodos de inventario y Asset Intelligence  
 -   Administración basada en roles  

@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 caps.latest.revision: "12"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 973a8df54d1acab48803b34bf18494b2ae7f6054
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: ae70c30b4dba85ae2f0693d70f27dcceb7700fcc
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="customize-operating-system-images-with-system-center-configuration-manager"></a>Personalizar imágenes de sistema operativo con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las imágenes de sistema operativo de System Center Configuration Manager son archivos WIM y representan una recopilación comprimida de archivos de referencia y carpetas necesarios para instalar y configurar correctamente un sistema operativo en un equipo. Una imagen de sistema operativo personalizada se compila y captura mediante un equipo de referencia que se configura con todos los archivos de sistema operativo, los archivos auxiliares, las actualizaciones de software, las herramientas y las aplicaciones de software necesarios. La medida en que configure el equipo de referencia manualmente depende de usted. Puede automatizar completamente la configuración del equipo de referencia mediante el uso de una secuencia de tareas de compilación y captura, puede configurar manualmente algunos aspectos del equipo de referencia y automatizar luego el resto mediante secuencias de tareas, o puede configurar manualmente el equipo de referencia sin usar secuencias de tareas. Use las siguientes secciones para personalizar un sistema operativo.
 

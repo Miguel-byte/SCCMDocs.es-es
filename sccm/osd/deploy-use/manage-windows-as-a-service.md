@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da1e687b-28f6-43c4-b14a-ff2b76e60d24
 caps.latest.revision: "26"
-author: Dougeby
-ms.author: dougeby
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: b9b15a781adef81e970adf50b8b6f26dd75d95f8
-ms.sourcegitcommit: b517c791554500209435bca21fbf3ef8a26828c9
+ms.openlocfilehash: 3848d0d6a9f3b5d778879c598bf859fb1e8a7ac7
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>Administración de Windows como servicio mediante System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
  En System Center Configuration Manager, puede ver el estado de Windows como servicio en su entorno, crear planes de mantenimiento para formar anillos de implementación y asegurarse de que los sistemas de la Rama actual de Windows 10 se mantienen actualizados cuando aparecen nuevas compilaciones. Además, puede ver alertas cuando el servicio de soporte técnico de los clientes que poseen las compilaciones de Rama actual (CB) o de Rama actual para empresas (CBB) de Windows 10 está a punto de finalizar.  

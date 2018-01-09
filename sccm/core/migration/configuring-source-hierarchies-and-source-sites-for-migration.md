@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: ccce7cb5-e18f-4337-8adf-2018edca3c00
 caps.latest.revision: "5"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 6a5613a8f1235f28020d116f9ff6f70d1cd5284d
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 7977f66c71da300c59c7781f09975ca08ddea0b9
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="configure-source-hierarchies-and-source-sites-for-migration-to-system-center-configuration-manager"></a>Configurar jerarquías de origen y sitios de origen para la migración a System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Para habilitar la migración de datos al entorno de System Center Configuration Manager, debe configurar una jerarquía de origen de Configuration Manager compatible y uno o varios sitios de origen de esa jerarquía que contengan los datos que quiere migrar.  
 

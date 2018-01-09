@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: 90498b4b-6a9b-43cd-b465-1d6c9a52df1c
 caps.latest.revision: "8"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: d3ba78ae32f62a74b73d7b1387d11265a9e41f77
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 790f7272240df7f19bb91fc0b4da15cbffb1463e
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="create-task-sequence-media-with-system-center-configuration-manager"></a>Crear medios de secuencia de tareas con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede usar medios para capturar una imagen de sistema operativo de un equipo de referencia o implementar un sistema operativo en un equipo de destino en su entorno de System Center Configuration Manager. La creación de medios puede realizarse en un CD, un DVD o una unidad flash USB.  
 

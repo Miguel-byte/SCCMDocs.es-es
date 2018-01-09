@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d9a1c545-8301-492c-832f-2c108ff93c77
 caps.latest.revision: "12"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 5835bde38cb940d2e38df4a38146753a6842f1d7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 31f18ce9df3fcdb133589ce5214cef96372ee1b0
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="introduction-to-operating-system-deployment-in-system-center-configuration-manager"></a>Introducción a la implementación de sistema operativo en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede usar Configuration Manager para implementar sistemas operativos de varias maneras diferentes. Use la información de esta sección para comprender cómo implementar sistemas operativos y automatizar tareas. 
 
@@ -115,7 +115,7 @@ Puede usar Configuration Manager para implementar sistemas operativos de varias 
 
 -   Un equipo que no ha detectado Configuration Manager  
 
- Para obtener más información, consulte [Preparación para implementaciones en equipos desconocidos](../get-started/prepare-for-unknown-computer-deployments.md).  
+ Para obtener más información, consulte [Prepare for unknown computer deployments](../get-started/prepare-for-unknown-computer-deployments.md) (Preparación para implementaciones en equipos desconocidos).  
 
 ##  <a name="BKMK_UDA"></a> Asociar usuarios a un equipo  
  Al implementar un sistema operativo, puede asociar los usuarios al equipo de destino para admitir las acciones de la afinidad de dispositivo de usuario. Cuando asocia un usuario a un equipo de destino, el usuario administrativo puede realizar acciones más adelante en el equipo que esté asociado a ese usuario, como implementar una aplicación en el equipo de un usuario específico. Sin embargo, cuando se implementa un sistema operativo, no se puede implementar el sistema operativo en el equipo de un usuario específico. Para obtener más información, consulte [Asociar usuarios a un equipo de destino](../get-started/associate-users-with-a-destination-computer.md).  

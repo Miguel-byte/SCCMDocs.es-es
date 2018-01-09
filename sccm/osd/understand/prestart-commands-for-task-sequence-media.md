@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: ccc9f652-2953-4c38-8a90-c799484105ca
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 52a4dccfe547f8c25759669dd1b09976302d5c50
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 3a1b39bb988d305c02d85ef168789d081637c084
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="prestart-commands-for-task-sequence-media-in-system-center-configuration-manager"></a>Comandos de preinicio para medios de secuencia de tareas en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede crear un comando de preinicio en System Center Configuration Manager para usarlo con medios de arranque, medios independientes o medios preconfigurados. El comando de preinicio es un script o un archivo ejecutable que se ejecuta antes de que se seleccione la secuencia de tareas, y que puede interactuar con el usuario en Windows PE. El comando de preinicio puede solicitar información al usuario, y guardarla en el entorno de la secuencia de tareas, o consultar una variable de la secuencia de tareas para obtener información. Cuando se arranca el equipo de destino, se ejecuta la línea de comandos antes de que se descargue la directiva desde el punto de administración. Utilice los siguientes procedimientos para crear un script para utilizarlo con el comando de preinicio, distribuir el contenido asociado con el comando de preinicio, y configurar el comando de preinicio en el medio.  
 

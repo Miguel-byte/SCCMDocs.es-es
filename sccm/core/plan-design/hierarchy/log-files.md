@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 caps.latest.revision: "9"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 1463aa5a64de50b31ad0fc94709e2b41fd1c3bb0
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: c310e23b543e8767a393ca5bf87a224a9269e359
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="log-files-in-system-center-configuration-manager"></a>Archivos de registro en System Center Configuration Manager
 
@@ -469,10 +469,10 @@ El archivo de registro SMS_DM.log en el servidor de sistema de sitio además reg
 
 |Nombre del registro|Descripción|Equipo con el archivo de registro|  
 |--------------|-----------------|----------------------------|  
-|Crp.log|Registra actividades de inscripción.|Punto de registro de certificado|  
+|Crp.log|Registra actividades de inscripción.|Punto de registro de certificados|  
 |Crpctrl.log|Registra el estado operativo del punto de registro de certificado.|Punto de registro de certificado|  
-|Crpsetup.log|Registra detalles sobre la instalación y configuración del punto de registro de certificado.|Punto de registro de certificado|  
-|Crpmsi.log|Registra detalles sobre la instalación y configuración del punto de registro de certificado.|Punto de registro de certificado|  
+|Crpsetup.log|Registra detalles sobre la instalación y configuración del punto de registro de certificado.|Punto de registro de certificados|  
+|Crpmsi.log|Registra detalles sobre la instalación y configuración del punto de registro de certificado.|Punto de registro de certificados|  
 |NDESPlugin.log|Registra actividades de inscripción de certificado y verificación de desafío.|Módulo de directivas de Configuration Manager y el servicio de inscripción de dispositivos de red|  
 
  Además de los archivos de registro de Configuration Manager, revise los registros de aplicaciones de Windows en el Visor de eventos del servidor que ejecuta el Servicio de inscripción de dispositivos de red y el servidor que hospeda el punto de registro de certificado. Por ejemplo, busque mensajes del origen **NetworkDeviceEnrollmentService**. También puede utilizar los siguientes archivos de registro:  

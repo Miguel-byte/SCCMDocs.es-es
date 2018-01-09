@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
 caps.latest.revision: "15"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: d584c6db85a5466e76a79f398e635ba93f8081ff
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: e29efd4de847a861afa75a7a10868cad30e4cf97
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>Variables integradas de secuencias de tareas en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
  System Center Configuration Manager proporciona las variables integradas de secuencias de tareas. Las variables integradas proporcionan información sobre el entorno donde se ejecuta la secuencia de tareas, y sus valores están disponibles en la secuencia de tareas completa. Las variables integradas se suelen inicializar antes de que se ejecuten los pasos de la secuencia de tareas. Por ejemplo, la variable integrada **_SMSTSLogPath** es una variable de entorno que especifica la ruta de acceso que los componentes de Configuration Manager usan para escribir archivos de registro mientras la secuencia de tareas se ejecuta. Cualquier paso de la secuencia de tareas puede tener acceso a esta variable de entorno. En cambio, algunas variables (como &#95;SMSTSCurrentActionName) se evalúan antes de cada paso. Los valores de las variables integradas son normalmente de solo lectura. Los valores son de solo lectura en el caso de las variables integradas con un nombre que comienza por un carácter de subrayado.  
@@ -94,7 +94,7 @@ ms.lasthandoff: 10/12/2017
 |SMSTSPostAction|Especifica un comando que se ejecuta una vez completada la secuencia de tareas. Por ejemplo, puede usar esta variable para especificar un script que permite escribir filtros en los dispositivos incrustados después de la secuencia de tareas implemente un sistema operativo en el dispositivo.|  
 |SMSTSPreferredAdvertID|Fuerza la ejecución de una determinada implementación de destino en el equipo de destino. Esto se puede establecer a través de un comando de preinicio desde un medio o PXE. Si esta variable se establece, la secuencia de tareas invalida todas las implementaciones necesarias.|  
 |SMSTSPreserveContent|Esta variable marca la conservación del contenido de la secuencia de tareas en la memoria caché del cliente de Configuration Manager después de la implementación. Esta acción es diferente a usar SMSTSPersisContent, que solo conserva el contenido el tiempo que dure la secuencia de tareas y usa la memoria caché de la secuencia de tareas, no la memoria caché del cliente de Configuration Manager.<br /><br /> Ejemplo:<br /><br /> SMSTSPreserveContent = **TRUE** habilita esta funcionalidad.|  
-|SMSTSRebootDelay|Especifica el número de segundos que se debe para esperar antes de reiniciar el equipo. Si esta variable no está establecida en 0, el administrador de la secuencia de tareas mostrará un cuadro de diálogo de notificación antes del reinicio.<br /><br /> Ejemplos:<br /><br /> **0**<br /><br /> **30**|  
+|SMSTSRebootDelay|Especifica el número de segundos que se debe para esperar antes de reiniciar el equipo. Si esta variable no está establecida en 0, el administrador de la secuencia de tareas mostrará un cuadro de diálogo de notificación antes del reinicio.<br /><br /> Ejemplo:<br /><br /> **0**<br /><br /> **30**|  
 |SMSTSRebootMessage|Especifica el mensaje que se va a mostrar en el cuadro de diálogo de apagado cuando se solicita un reinicio. Si esta variable no se establece, aparecerá un mensaje predeterminado.<br /><br /> Ejemplo:<br /><br /> **El administrador de la secuencia de tareas está reiniciando este equipo**.|  
 |SMSTSRebootRequested|Indica que se ha solicitado el reinicio una vez completado el paso actual de la secuencia de tareas. Si se requiere un reinicio, basta con establecer esta variable en **true**y el administrador de la secuencia de tareas reiniciará el equipo después de este paso de la secuencia de tareas. El paso de la secuencia de tareas debe establecer esta variable de secuencia de tareas si requiere un reinicio para completarse. Una vez reiniciado el equipo, la secuencia de tareas seguirá ejecutándose desde el paso siguiente de la secuencia de tareas.|  
 |SMSTSRetryRequested|Solicita un reintento después de que se haya completado el paso actual de la secuencia de tareas. Si esta variable de secuencia de tareas se establece, **SMSTSRebootRequested** también debe establecerse en **true**. Una vez reiniciado el equipo, el administrador de la secuencia de tareas volverá a ejecutar el mismo paso de la secuencia de tareas.|  

@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
 caps.latest.revision: "19"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 48530c177a03b66dbc126025ca61e0078bc89d9f
-ms.sourcegitcommit: 5ec9f8c312688bf7f4de4d6007b121d743b80c4d
+ms.openlocfilehash: c376a6b600e775f532410ad467b99cda1fbfc575
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="create-a-task-sequence-to-capture-an-operating-system-in-system-center-configuration-manager"></a>Crear una secuencia de tareas para capturar un sistema operativo en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Cuando use una secuencia de tareas para implementar un sistema operativo en un equipo en System Center Configuration Manager, el equipo instala la imagen de sistema operativo que especifique en la secuencia de tareas. Para personalizar la imagen de sistema operativo de modo que incluya ciertos controladores, aplicaciones, actualizaciones de software, etc., utilice una secuencia de tareas de generación y captura para generar un equipo de referencia y, a continuación, capturar la imagen del sistema operativo de ese equipo de referencia. Si ya tiene un equipo de referencia disponible para capturar, puede crear una secuencia de tareas personalizada para capturar el sistema operativo. Utilice las siguientes secciones para capturar un sistema operativo personalizado.  
 

@@ -14,11 +14,11 @@ ms.assetid: 2e68dc12-6776-437a-9138-45cd7d4bf9cf
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: e970dff4ea295694fcc5cf80e238baf2c9d081b5
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: b740c422a71e625ccc110a043028cf986cdffb20
+ms.sourcegitcommit: ed8b2438ef85c9160741ef61f9171be41dd1ae0a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/17/2017
 ---
 # <a name="capabilities-in-technical-preview-1711-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1711 para System Center Configuration Manager
 
@@ -109,20 +109,6 @@ También puede utilizar esta característica al implementar una aplicación medi
 1. Cree o edite una aplicación.
 2. Implemente la aplicación en un cliente.
 3. Instale la aplicación desde el Centro de software. Debe aparecer la interfaz de instalación de la aplicación. El usuario final debe seguir al Asistente para instalación de aplicaciones y la aplicación se instalará correctamente.
-
-## <a name="new-compliance-policy-options-for-windows-10"></a>Nuevas opciones de directivas de cumplimiento para Windows 10
-A continuación, se muestran las nuevas directivas de cumplimiento que se pueden configurar en dispositivos Windows 10.
-- **Requerir firewall**.  Especifique si un dispositivo debe tener un firewall habilitado y si tiene que estar supervisando todas las redes.
-- **Requerir Control de cuentas de usuario**. Especifique que un dispositivo debe tener habilitado el Control de cuentas de usuario.
-- **Defender**:
-  - **Requerir el Antivirus de Windows Defender**.  Requiera que un dispositivo tenga el Antivirus de Windows Defender habilitado.
-  - **Versión del Antivirus de Windows Defender**.  Especifique la versión mínima de las definiciones de spyware que debe tener instaladas un dispositivo.
-  - **Requerir firma actual de Antivirus de Windows Defender**. Compruebe que una firma del Antivirus de Windows Defender esté actualizada.
-  - **Requerir protección en tiempo real**.  Especifique si un dispositivo debe tener habilitada la protección en tiempo real del Antivirus de Windows Defender.
-- **Compilaciones válidas del sistema operativo**.  Especifique los requisitos mínimos y máximos de compilación de sistemas operativos.  
-
-Utilice el Asistente para crear directivas de cumplimiento para configurar estas directivas y seleccionar estas nuevas opciones al agregar una regla a la directiva que va a configurar.  
-Aprenda a [crear](/sccm/mdm/deploy-use/create-compliance-policy#create-a-compliance-policy) y a [implementar](/sccm/mdm/deploy-use/create-compliance-policy#deploy-a-compliance-policy) las directivas de cumplimiento.
 
 
 

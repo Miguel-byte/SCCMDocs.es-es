@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: 66f7759c-6272-4116-aad7-0d05db1d46cd
 caps.latest.revision: "8"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 4d1b8c46dc517573c7d8051660837bb80859e993
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 7332ff4bf0ad10bd18e42485fb548eee70deaf04
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="plan-a-content-deployment-migration-strategy-in-system-center-configuration-manager"></a>Planear una estrategia de migración de implementación de contenido en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Mientras migra datos activamente a una jerarquía de destino de System Center Configuration Manager, los clientes de Configuration Manager en ambas jerarquías de origen y destino pueden mantener el acceso al contenido que implemente en la jerarquía de origen. También puede usar la migración para actualizar o reasignar los puntos de distribución de la jerarquía de origen para que se conviertan en puntos de distribución en la jerarquía de destino. Cuando comparte y actualiza o reasigna puntos de distribución, esta estrategia puede ayudarle a evitar tener que volver a implementar contenido en los servidores nuevos de la jerarquía de destino para los clientes que migre.  
 

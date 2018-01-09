@@ -13,19 +13,19 @@ ms.topic: article
 ms.assetid: a70bfbd4-757a-4468-9312-1c3b373ef9fc
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
 robots: noindex
-ms.openlocfilehash: bd333d4417926514055195100791d630958797c2
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 96fb65352042c7785dded06251b57cea04b293d7
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="plan-a-migration-job-strategy-in-system-center-configuration-manager"></a>Planear una estrategia de trabajo de migración en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Use trabajos de migración para configurar los datos específicos que quiera migrar al entorno de System Center Configuration Manager. Los trabajos de migración identifican los objetos que planea migrar y se ejecutan en el sitio de nivel superior en la jerarquía de destino. Puede configurar uno o varios trabajos de migración por cada sitio de origen. Esto le permite migrar todos los objetos al mismo tiempo o subconjuntos limitados de datos con cada trabajo.  
 

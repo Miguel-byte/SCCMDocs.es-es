@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
 caps.latest.revision: "4"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 25cd63970741dfb242be9566fa54f348dea2b665
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 334b79e675ea7804128b0feb9678de4ad06dbc93
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="the-content-library-cleanup-tool-for-system-center-configuration-manager"></a>Content Library Cleanup Tool para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
  A partir de la versión 1702, puede usar una herramienta de línea de comandos (**ContentLibraryCleanup.exe**) para quitar contenido que ya no está asociado con ningún paquete o aplicación de un punto de distribución (contenido huérfano). Esta herramienta se denomina Content Library Cleanup Tool y sustituye a las versiones anteriores de herramientas similares publicadas para productos anteriores de Configuration Manager.  
 
@@ -31,7 +31,7 @@ La herramienta solo afecta al contenido del punto de distribución que especifiq
 
 Puede encontrar **ContentLibraryCleanup.exe** en la carpeta *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* del servidor de sitio de un sitio primario o de un sitio de administración central.
 
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>requisitos  
  La herramienta solo puede ejecutarse en un único punto de distribución a la vez.  
  - Puede ejecutarse directamente en el equipo que hospeda el punto de distribución que desea limpiar o de manera remota desde otro servidor.
  - La cuenta de usuario que ejecuta la herramienta debe tener directamente los permisos de administración basada en roles que son iguales a los de Administrador total en la jerarquía de Configuration Manager. La herramienta no funciona cuando la cuenta de usuario recibe permisos como un miembro de un grupo de seguridad de Windows que tiene los permisos de Administrador total.

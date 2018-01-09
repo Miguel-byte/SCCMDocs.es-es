@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 caps.latest.revision: "15"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 4c1d721c9fb0b01f15f1f0468bc797ffffb9e345
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 184768e87406051508c8dcacfa63db5ff85c3732
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="customize-boot-images-with-system-center-configuration-manager"></a>Personalizar imágenes de arranque con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Cada versión de Configuration Manager admite una determinada versión de Windows Assessment and Deployment Kit (Windows ADK). Puede mantener o personalizar imágenes de arranque desde la consola de Configuration Manager si se basan en una versión de Windows PE de la versión admitida de Windows ADK. Puede personalizar otras imágenes de arranque mediante otros métodos como, por ejemplo, a través de la herramienta de línea de comandos DISM (Administración y mantenimiento de imágenes de implementación) que forma parte de AIK de Windows y Windows ADK.  
 
@@ -208,7 +208,7 @@ Cada versión de Configuration Manager admite una determinada versión de Window
 5.  Después de montar la imagen de arranque, use DISM para agregar componentes opcionales a la imagen de arranque. En Windows PE 3.1, por ejemplo, los componentes opcionales se encuentran en <*rutaDeInstalación*>\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\.  
 
     > [!NOTE]
-    >  En este procedimiento se utiliza la siguiente ubicación para los componentes opcionales: C:\Archivos de programa\Windows AIK\Tools\PETools\amd64\WinPE_FPs. La ruta de acceso que se utiliza puede variar según las opciones de instalación y la versión que elija para AIK de Windows.  
+    >  Este procedimiento usa la siguiente ubicación para los componentes opcionales: C:\Archivos de programa\Windows AIK\Tools\PETools\amd64\WinPE_FPs. La ruta de acceso que se utiliza puede variar según las opciones de instalación y la versión que elija para AIK de Windows.  
 
      Escriba lo siguiente para instalar los componentes opcionales:  
 

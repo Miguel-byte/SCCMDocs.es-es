@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
 caps.latest.revision: "10"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 417c9591c5c3cdf2d253564d9fd93344a7d31239
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 1a81506afa49d0ae7af29f274f790d3fa5c7e61d
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="fundamentals-of-role-based-administration-for-system-center-configuration-manager"></a>Conceptos básicos de la administración basada en roles de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Con System Center Configuration Manager, usa la administración basada en roles para proteger el acceso que se necesita para administrar Configuration Manager. Además, protege el acceso a los objetos que administra, como las recopilaciones, implementaciones y sitios. Una vez que comprenda los conceptos presentados en este tema, podrá [Configure role-based administration for System Center Configuration Manager (Configurar la administración basada en roles para System Center Configuration Manager)](../../core/servers/deploy/configure/configure-role-based-administration.md).  
 

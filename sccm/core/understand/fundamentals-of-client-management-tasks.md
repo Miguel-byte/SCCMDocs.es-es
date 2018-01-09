@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8d4e5641-354e-4439-8b4f-620a760e233d
 caps.latest.revision: "4"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 0cbfc2e331cc20eb84a343b9bd08947d13b72e77
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 30605b999d4c873fc98e8376e820b30882c43858
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="fundamentals-of-client-management-tasks-for-system-center-configuration-manager"></a>Aspectos básicos de las tareas de administración de clientes de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Después de instalar los clientes de System Center Configuration Manager, hay varias tareas que ejecuta para administrar los clientes.  Algunas de las tareas se ejecutan desde la consola de Configuration Manager. Otras tareas se ejecutan desde la aplicación cliente de Configuration Manager. La aplicación cliente de Configuration Manager se instala con el software cliente de Configuration Manager.
 

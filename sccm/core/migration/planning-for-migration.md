@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: b2bf493e-1e10-496f-a139-2646522703ed
 caps.latest.revision: "7"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 76ee1377f0ee555f9a939c5282df16cee73ecf61
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 390211f13fb6bac6dab5b133744ec01ec589bc77
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="plan-for-migration-to-system-center-configuration-manager"></a>Planear la migración a System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Antes de migrar datos a una jerarquía de destino de System Center Configuration Manager, asegúrese de estar familiarizado con las jerarquías y los sitios de Configuration Manager. Para más información sobre sitios y jerarquías, vea [Aspectos básicos de System Center Configuration Manager](../../core/understand/fundamentals.md).  
 

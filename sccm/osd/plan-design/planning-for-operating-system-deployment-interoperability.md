@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e327ce38-6c07-4a27-b6eb-7e5bf74ed04b
 caps.latest.revision: "10"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: b096ea4d6dfb4df13691c662d196f638d30d5da4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 41c7c83602f965cd4a225d38a00b90501206de45
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="planning-for-operating-system-deployment-interoperability-in-system-center-configuration-manager"></a>Planeamiento de la interoperabilidad de la implementación de sistema operativo en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Si en una misma jerarquía hay varios sitios de System Center Configuration Manager que usan versiones diferentes, no estarán disponibles algunas funciones de Configuration Manager. Normalmente, la funcionalidad de la versión más actual de Service Pack de Configuration Manager no es accesible en sitios o por clientes que ejecutan una versión anterior. Para obtener más información, consulte [Interoperabilidad entre diferentes versiones de System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md).  
 

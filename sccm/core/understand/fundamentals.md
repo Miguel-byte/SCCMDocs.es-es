@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: cc4cdb35-f0b4-42b5-9cec-6431a8c30793
 caps.latest.revision: "11"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 1ea8c62ce4b0dd68042b08e91dd4d4d7a7b07aa8
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 7474544b5008117846bda2bba6670d768250b3cc
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="fundamentals-of-system-center-configuration-manager"></a>Aspectos básicos de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Si no está familiarizado con System Center Configuration Manager, lea los temas fundamentales para obtener información sobre los conceptos básicos de Configuration Manager antes de ejecutar el programa de instalación para instalar el primer sitio. Si está familiarizado con Configuration Manager, puede empezar directamente. Se recomienda que empiece con [Novedades de System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).  
 

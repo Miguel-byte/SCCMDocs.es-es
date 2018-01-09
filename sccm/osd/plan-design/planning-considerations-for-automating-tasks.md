@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: fc497a8a-3c54-4529-8403-6f6171a21c64
 caps.latest.revision: "13"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: cfd3e33006f05b4270266b3c8b316764d29cdb0d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 5d044e7c7869faeb0b3ea24e24ff40674a63920e
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="planning-considerations-for-automating-tasks-in-system-center-configuration-manager"></a>Planeación de consideraciones para la automatización de tareas en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede crear secuencias de tareas para automatizar tareas en su entorno de System Center Configuration Manager. Estas tareas van desde la captura de un sistema operativo en un equipo de referencia hasta la implementación del sistema operativo en uno o varios equipos de destino. Las acciones de la secuencia de tareas se definen en los pasos individuales de la secuencia. Cuando se ejecuta la secuencia de tareas, se realizan las acciones de cada etapa en el nivel de la línea de comandos en el contexto del sistema local sin necesidad de intervención del usuario. Use las secciones siguientes como ayuda para planear la automatización de tareas en Configuration Manager.
 

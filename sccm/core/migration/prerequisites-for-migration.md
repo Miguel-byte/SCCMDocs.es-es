@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
 caps.latest.revision: "10"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 38690a7027502227d9801bf60faa027e3801ffa1
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 8079d5d8c329df47b71560734832ee14c68f0734
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="prerequisites-for-migration-in-system-center-configuration-manager"></a>Requisitos previos para la migración en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Para migrar desde una jerarquía de origen compatible, debe tener acceso a cada sitio de origen de Configuration Manager aplicable. También debe tener permisos en el sitio de destino de System Center Configuration Manager para configurar y ejecutar operaciones de migración.  
 

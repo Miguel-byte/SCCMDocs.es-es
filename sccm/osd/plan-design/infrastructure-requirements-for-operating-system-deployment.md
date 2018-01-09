@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 caps.latest.revision: "24"
-author: mattbriggs
-ms.author: mabrigg
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 0b90cb20707340bec6fc7d5ddbab6f39d78e10bf
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 30b6a4e009d1e44fff124dc5814bdd2e6445a63a
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="infrastructure-requirements-for-operating-system-deployment-in-system-center-configuration-manager"></a>Requisitos de infraestructura para la implementación de sistema operativo en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 La implementación de sistema operativo en System Center 2012 Configuration Manager tiene dependencias externas y dependencias dentro del producto. Use las secciones siguientes para que le resulte más fácil prepararse para la implementación de sistema operativo.  
 
@@ -91,7 +91,7 @@ Para obtener una lista de las versiones de Windows 10 ADK que puede usar con var
 ### <a name="windows-server-update-services-wsus"></a>Windows Server Update Services (WSUS)  
 Debe instalar las siguientes revisiones de WSUS 4.0:
   - [Hotfix 3095113](https://support.microsoft.com/kb/3095113) para el mantenimiento de Windows 10, que usa la infraestructura de actualizaciones de software para obtener actualizaciones de características de Windows 10. Si tiene WSUS 3.2, debe usar las secuencias de tareas para actualizar Windows 10. Para obtener más información, consulte [Administración de Windows como servicio](../deploy-use/manage-windows-as-a-service.md).  
-  - [Revisión 3159706](https://support.microsoft.com/kb/3159706) es necesaria para usar el mantenimiento de Windows 10 para actualizar equipos a la Actualización de aniversario de Windows 10, así como para las versiones posteriores. Existen pasos manuales descritos en el artículo de ayuda que debe seguir para instalar esta revisión. Para obtener más información, consulte [Administración de Windows como servicio](../deploy-use/manage-windows-as-a-service.md).
+  - [Revisión 3159706](https://support.microsoft.com/kb/3159706) es necesaria para usar el mantenimiento de Windows 10 para actualizar equipos a la Actualización de aniversario de Windows 10, así como para las versiones posteriores. Existen pasos manuales descritos en el artículo de ayuda que debe seguir para instalar esta revisión. Para obtener más información, consulte [Manage Windows as a service](../deploy-use/manage-windows-as-a-service.md) (Administrar Windows como servicio).
 
 
 ### <a name="internet-information-services-iis-on-the-site-system-servers"></a>Internet Information Services (IIS) en los servidores de sistema de sitio  
@@ -142,9 +142,9 @@ Debe instalar las siguientes revisiones de WSUS 4.0:
  Para obtener más información sobre cómo capturar y restaurar el estado de usuario, consulte [Administrar el estado de usuario](../get-started/manage-user-state.md).  
 
 ### <a name="service-connection-point"></a>Punto de conexión de servicio  
- Si usa Windows como servicio (WaaS) para implementar la rama actual de Windows 10, debe tener instalado el punto de conexión de servicio. Para obtener más información, consulte [Administración de Windows como servicio](../deploy-use/manage-windows-as-a-service.md).  
+ Si usa Windows como servicio (WaaS) para implementar la rama actual de Windows 10, debe tener instalado el punto de conexión de servicio. Para obtener más información, consulte [Manage Windows as a service](../deploy-use/manage-windows-as-a-service.md) (Administrar Windows como servicio).  
 
-### <a name="reporting-services-point"></a>Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.  
+### <a name="reporting-services-point"></a>Punto de servicios de informes  
  Con el fin de usar informes de Configuration Manager para las implementaciones de sistema operativo, debe instalar y configurar un punto de servicios de informes. Para obtener más información, consulte [Informes](../../core/servers/manage/reporting.md).  
 
 ### <a name="security-permissions-for-operating-system-deployments"></a>Permisos de seguridad para las implementaciones de sistema operativo  

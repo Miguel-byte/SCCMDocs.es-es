@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 caps.latest.revision: "8"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: bc3237b701a49aa176c924323710beea3dcc6fa9
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 0b6fa22a7bc3de7bb5bc0d26f8e35b51d55c5e72
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="ports-used-in-system-center-configuration-manager"></a>Puertos que se usan en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 System Center Configuration Manager es un sistema cliente/servidor distribuido. La naturaleza distribuida de Configuration Manager significa que se pueden establecer conexiones entre servidores de sitio, sistemas de sitio y clientes. Algunas conexiones usan puertos que no son configurables, mientras que otras admiten puertos personalizados. Debe comprobar que los puertos necesarios están disponibles si usa tecnología de filtrado de puertos como firewalls, enrutadores, servidores proxy o IPsec.  
     

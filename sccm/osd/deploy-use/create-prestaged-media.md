@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ff6e7267-302a-4563-815e-cdc0d1a4b60f
 caps.latest.revision: "12"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 4b10aab0674e4066b399c636ecf2226ae109260e
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: a26fc3daf17aefe24a46ece561fc2ceaf5284ffb
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="create-prestaged-media-with-system-center-configuration-manager"></a>Crear medios preconfigurados con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Los medios preconfigurados de System Center Configuration Manager son un archivo Windows Imaging Format (WIM) que puede ser instalado en un equipo sin sistema operativo por el fabricante o en un centro de configuración empresarial no relacionado con el entorno de Configuration Manager.  
 Los medios preconfigurados contienen la imagen de arranque que se utiliza para iniciar el equipo de destino y la imagen de sistema operativo que se aplica al equipo de destino. También puede especificar las aplicaciones, los paquetes y los paquetes de controladores que quiere incluir como parte de los medios preconfigurados. La secuencia de tareas que implementa el sistema operativo no se incluye en el medio. Los medios preconfigurados se aplican a la unidad de disco duro de un nuevo equipo antes de enviar el equipo al usuario final. Use los medios preconfigurados para los siguientes escenarios de implementación de sistema operativo:  
@@ -111,7 +111,7 @@ Los medios preconfigurados contienen la imagen de arranque que se utiliza para i
     > [!IMPORTANT]  
     >  La arquitectura de la imagen de arranque que se distribuye debe ser adecuada para la arquitectura del equipo de destino. Por ejemplo, un equipo de destino x64 puede arrancar y ejecutar una imagen de arranque x86 o x64. Sin embargo, un equipo de destino x86 solo puede arrancar y ejecutar una imagen de arranque x86.  
 
-    -   En el cuadro **Imagen de arranque** , especifique la imagen de arranque para iniciar el equipo de destino. Para obtener más información, consulte [Manage boot images](../get-started/manage-boot-images.md) (Administrar imágenes de arranque).  
+    -   En el cuadro **Imagen de arranque** , especifique la imagen de arranque para iniciar el equipo de destino. Para más información, vea [Manage boot images (Administrar imágenes de arranque)](../get-started/manage-boot-images.md).  
 
     -   En el cuadro **Punto de distribución** , especifique el punto de distribución donde reside la imagen de arranque. El asistente recupera la imagen de arranque desde el punto de distribución y la escribe en el medio.  
 

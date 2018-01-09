@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e18be4d1-9f6e-477c-a79d-c46014b4a03a
 caps.latest.revision: "9"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 90946f98277658532c7238c0c8486b72e1175207
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 3af9ca608ed69d912d79659d1d7a3bf49f2fbd65
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="security-and-privacy-for-system-center-configuration-manager"></a>Seguridad y privacidad en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En este artículo se incluyen recursos de seguridad y privacidad para System Center Configuration Manager.  
 
@@ -61,7 +61,7 @@ En este artículo se incluyen recursos de seguridad y privacidad para System Cen
 
  **Artículos de seguridad y privacidad:**  
 
--   [Planificar la seguridad en System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md)  
+-   [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md) (Planear la seguridad en System Center Configuration Manager)  
 
 -   [Configurar la seguridad en System Center Configuration Manager](../../../core/plan-design/security/configure-security.md)  
 

@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8d27e5ac-4f19-4b3d-85c7-fa34eb5d5e7e
 caps.latest.revision: "3"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: de4f57adc187d21a0f954299299912176e7692ab
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 120328aa7ed2ace752c9719404d50b24f4cece7b
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="prepare-for-operating-system-deployment-in-system-center-configuration-manager"></a>Prepararse para la implementación de sistema operativo en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Hay varias cosas que debe hacer en Configuration Manager para poder implementar sistemas operativos. Use los temas siguientes para prepararse para la implementación de sistema operativo:  
 

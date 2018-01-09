@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0212b023-804a-4f84-b880-7a59cdb49c67
 caps.latest.revision: "5"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 586eec745bdf86a42a9d33fb9e1163f03efa1c59
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 89e30f81648aff16de2f7db55cbdda06cf69551d
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="use-a-task-sequence-to-manage-virtual-hard-disks-in-system-center-configuration-manager"></a>Utilizar una secuencia de tareas para administrar discos duros virtuales en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En System Center Configuration Manager, puede administrar discos duros virtuales (VHD) e integrar los VHD que cree en el centro de datos desde la consola de Configuration Manager. De forma específica, puede crear y modificar un VHD, agregar aplicaciones y actualizaciones de software al VHD, y publicar el VHD en System Center Virtual Machine Manager (VMM) desde la consola de Configuration Manager.  
 
@@ -87,7 +87,7 @@ En System Center Configuration Manager, puede administrar discos duros virtuales
 
     -   **Descripción**: especifique una descripción de la secuencia de tareas.  
 
-    -   **Imagen de arranque**: especifique la imagen de arranque que instala el sistema operativo en el equipo de destino. Para obtener más información, consulte [Manage boot images](../get-started/manage-boot-images.md) (Administrar imágenes de arranque).  
+    -   **Imagen de arranque**: especifique la imagen de arranque que instala el sistema operativo en el equipo de destino. Para más información, vea [Manage boot images (Administrar imágenes de arranque)](../get-started/manage-boot-images.md).  
 
 6.  En la página **Instalar Windows** , especifique la siguiente configuración y, a continuación, haga clic en **Siguiente**.  
 

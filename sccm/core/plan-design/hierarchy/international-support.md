@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: 46dd9cb2-a812-4b6a-a747-b840f92fef8b
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 217e7bedc9ed85088c6723658a7af87d6406604c
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 2b54bc3977d1c5b2aa67fb51ed582b8a220a56a6
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="international-support-in-system-center-configuration-manager"></a>Compatibilidad internacional en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En las secciones siguientes se proporcionan detalles técnicos para que System Center Configuration Manager sea compatible con determinados requisitos internacionales.  
 

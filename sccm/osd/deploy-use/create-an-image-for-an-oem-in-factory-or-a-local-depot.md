@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a7d3df90-062d-4d57-9e9d-e137d3e7cd7f
 caps.latest.revision: "8"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: ec1d8012a899d09c46489578f396e7b298f6ec2c
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: e12acb44cc78e0a6d118cfece538366263758aec
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="create-an-image-for-an-oem-in-factory-or-a-local-depot-with-system-center-configuration-manager"></a>Crear una imagen para un OEM en fábrica o en un almacén local con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las implementaciones de medios preconfigurados de System Center Configuration Manager permiten implementar un sistema operativo en un equipo que no esté aprovisionado por completo. Los medios preconfigurados son un archivo Windows Imaging Format (WIM) que puede ser instalado en un equipo sin sistema operativo por el fabricante (OEM) o en un centro de configuración empresarial no relacionado con el entorno de Configuration Manager. Más adelante, en el entorno de Configuration Manager, el equipo se iniciará mediante la imagen de arranque proporcionada por los medios, se ejecutará una comprobación del algoritmo hash en los medios preconfigurados para garantizar su validez y, después, el equipo se conectará al punto de administración del sitio en busca de secuencias de tareas disponibles que completen el proceso de descarga.
 

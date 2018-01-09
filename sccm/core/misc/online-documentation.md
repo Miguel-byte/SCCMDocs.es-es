@@ -12,14 +12,14 @@ ms.service:
 ms.technology: configmgr-other
 ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 caps.latest.revision: "5"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: dc2f98fa2f400d78e244c9e10fa01b664f852ade
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: b6e98c5c8564059363ca9b5b141bda73807ff646
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="online-documentation-for-system-center-configuration-manager"></a>Documentación en línea de System Center Configuration Manager
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 12/01/2017
 Biblioteca de documentación de System Center Configuration Manager.  
 Busque la biblioteca de documentación para la versión del producto que usa:  
 
-## <a name="system-center-configuration-manager-current-branch"></a>System Center Configuration Manager (rama actual)  
+## <a name="system-center-configuration-manager-current-branch"></a>System Center Configuration Manager (current branch)  
 **Documentación en línea** : puede ver la documentación en línea de la rama actual de System Center Configuration Manager en TechNet:  
 
 -   [Introducción a System Center Configuration Manager](https://technet.microsoft.com/library/mt622715.aspx)  

@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
 caps.latest.revision: "12"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: e0996f57d7d9fbcb9926c16f718b65073c78b3bc
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: b70e8ecd32957f19b9738d14c94c7e54b0312ea5
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="manage-operating-system-upgrade-packages-with-system-center-configuration-manager"></a>Administrar paquetes de actualización de sistema operativo con System Center Configuration Manager
 
@@ -47,7 +47,7 @@ Un paquete de actualización de System Center Configuration Manager contiene los
     > [!IMPORTANT]  
     >  Limite el acceso a los archivos de origen de instalación para evitar la manipulación no deseada.  
 
-5.  En la página **General** , especifique la información siguiente y, a continuación, haga clic en **Siguiente**. Esta información es útil para propósitos de identificación cuando se agregan varios instaladores de sistema operativo.  
+5.  On the **General** , especifique la información siguiente y, a continuación, haga clic en **Siguiente**. Esta información es útil para propósitos de identificación cuando se agregan varios instaladores de sistema operativo.  
 
     -   **Nombre**: especifique el nombre del instalador de sistema operativo.  
 

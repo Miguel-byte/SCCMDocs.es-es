@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 999b5409-7e72-48d2-8554-4d44427ce383
 caps.latest.revision: "5"
-author: mattbriggs
-ms.author: mattbriggs
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: ca5cabc18659ed52cd4e0b9130f0179faf2c9d28
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 7ba166225c93440ddc56eb39692c80680330a94d
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="use-bootable-media-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>Use medios de arranque para implementar Windows a través de la red con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede implementar el sistema operativo cuando el equipo de destino se inicia con una implementación de medios de arranque. Los medios contienen un puntero a la secuencia de tareas, la imagen del sistema operativo y otro contenido requerido de la red. Cuando se inicia el equipo de destino, el equipo recupera los elementos a los que hace referencia el puntero. Una vez que los medios de arranque liberan contenido, puede actualizar el destino sin tener que reemplazarlo en los medios.
 

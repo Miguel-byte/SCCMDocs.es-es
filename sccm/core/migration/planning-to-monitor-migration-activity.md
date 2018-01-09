@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: fc731d3f-edd7-4049-b17b-653d6693a564
 caps.latest.revision: "4"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: f8daba77fc05f2200124d4c29a6081c9376659e9
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: ee5c65b41678bd5c86170f2d7a20b1d2fc569226
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="planning-to-monitor-migration-activity-in-system-center-configuration-manager"></a>Planear la supervisión de la actividad de migración en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Con System Center Configuration Manager, puede supervisar la migración en la consola de Configuration Manager, que se conecta a la jerarquía de destino. En la consola de Configuration Manager, situada en el área de trabajo **Administración**, puede usar el nodo **Migración** para supervisar el progreso y la finalización de los trabajos de migración. Puede ver información de resumen de cada trabajo de migración que identifica los objetos que se han migrado, los objetos que aún no se han migrado y el número de objetos excluidos de un trabajo de migración. También podrá ver detalles acerca de cualquier problema en la migración.  
 
