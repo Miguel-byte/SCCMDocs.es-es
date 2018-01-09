@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: e2269031-0977-4f01-a274-420e00630575
 caps.latest.revision: "10"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 8c1462ca922f23250ffa44c6433f01a8220d3ad7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: da1a9b9d73a06a099b71e59cbf3621791eaed527
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="task-sequence-action-variables-in-system-center-configuration-manager"></a>Variables de acción de secuencias de tareas en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las variables de acción de secuencias de tareas especifican los valores de configuración que se usan en un único paso de una secuencia de tareas de System Center Configuration Manager. De forma predeterminada, la configuración que se usa en una etapa de secuencia de tareas se inicializa antes de que la etapa se ejecute y solo está disponible mientras se ejecuta la etapa de secuencia de tareas asociada. En otras palabras, la configuración de variable de secuencia de tareas se agrega al entorno de secuencia de tareas antes de que se ejecute la etapa de secuencia de tareas, y se quita el valor del entorno de secuencia de tareas después de que se ejecute la etapa de secuencia de tareas.  
 
@@ -128,8 +128,8 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 
 |Nombre de variable de acción|Descripción|  
 |--------------------------|-----------------|  
-|OSDMigrateAdapterSettings<br /><br /> (entrada)|Especifica si se captura información de configuración de los ajustes del adaptador de red (TCP/IP, DNS y WINS).<br /><br /> Ejemplos:<br /><br /> **"true"** (valor predeterminado)<br /><br /> **"false"**|  
-|OSDMigrateNetworkMembership<br /><br /> (entrada)|Especifica si se migra la información de pertenencia a un grupo de trabajo o un dominio como parte de la implementación de sistema operativo.<br /><br /> Ejemplos:<br /><br /> **"true"** (valor predeterminado)<br /><br /> **"false"**|  
+|OSDMigrateAdapterSettings<br /><br /> (entrada)|Especifica si se captura información de configuración de los ajustes del adaptador de red (TCP/IP, DNS y WINS).<br /><br /> Ejemplo:<br /><br /> **"true"** (valor predeterminado)<br /><br /> **"false"**|  
+|OSDMigrateNetworkMembership<br /><br /> (entrada)|Especifica si se migra la información de pertenencia a un grupo de trabajo o un dominio como parte de la implementación de sistema operativo.<br /><br /> Ejemplo:<br /><br /> **"true"** (valor predeterminado)<br /><br /> **"false"**|  
 
 ###  <a name="BKMK_CaptureOperatingSystemImage"></a> Variables de acción de la secuencia de tareas Capturar imagen de sistema operativo  
  Las variables de esta acción especifican información sobre la imagen de sistema operativo que se va a capturar, como el lugar donde se almacena la imagen, quién creó la imagen y una descripción de la imagen. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Capturar imagen de sistema operativo](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage).  
@@ -184,7 +184,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |Nombre de variable de acción|Descripción|  
 |--------------------------|-----------------|  
 |SMSConnectNetworkFolderAccount<br /><br /> (entrada)|Especifica la cuenta de administrador que se utiliza para conectarse al recurso compartido de red.|  
-|SMSConnectNetworkFolderDriveLetter<br /><br /> (entrada)|Especifica la letra de unidad de la red a la que se debe conectar. Este valor es opcional; si no se especifica, la conexión de red no se asigna a una letra de unidad. Si se especifica este valor, debe estar en el intervalo de D: a Z:.  Además, no utilice X:, ya que es la letra de unidad que usa Windows PE durante la etapa de Windows PE.<br /><br /> Ejemplos:<br /><br /> **"D:"**<br /><br /> **"E:"**|  
+|SMSConnectNetworkFolderDriveLetter<br /><br /> (entrada)|Especifica la letra de unidad de la red a la que se debe conectar. Este valor es opcional; si no se especifica, la conexión de red no se asigna a una letra de unidad. Si se especifica este valor, debe estar en el intervalo de D: a Z:.  Además, no utilice X:, ya que es la letra de unidad que usa Windows PE durante la etapa de Windows PE.<br /><br /> Ejemplo:<br /><br /> **"D:"**<br /><br /> **"E:"**|  
 |SMSConnectNetworkFolderPassword<br /><br /> (entrada)|Especifica la contraseña de red que se utiliza para conectarse al recurso compartido de red.|  
 |SMSConnectNetworkFolderPath<br /><br /> (entrada)|Especifica la ruta de acceso de red para la conexión.<br /><br /> Ejemplo:<br /><br /> **"\\\nombreservidor\nombrerecursocompartido"**|  
 
@@ -275,7 +275,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |Nombre de variable de acción|Descripción|  
 |--------------------------|-----------------|  
 |SMSRebootMessage<br /><br /> (entrada)|Especifica el mensaje que se mostrará a los usuarios antes de reiniciar el equipo de destino. Si esta variable no está establecida, se mostrará un mensaje de texto predeterminado. El mensaje especificado no debe superar los 512 caracteres.<br /><br /> Ejemplo:<br /><br /> - "Este equipo se reiniciará; guarde su trabajo".|  
-|SMSRebootTimeout<br /><br /> (entrada)|Especifica el número de segundos que se muestra la advertencia al usuario antes de reiniciar el equipo. Especifique cero segundos para indicar que no se muestre ningún mensaje de reinicio.<br /><br /> Ejemplos:<br /><br /> **"0"** (valor predeterminado)<br /><br /> **"5"**<br /><br /> **"10"**|  
+|SMSRebootTimeout<br /><br /> (entrada)|Especifica el número de segundos que se muestra la advertencia al usuario antes de reiniciar el equipo. Especifique cero segundos para indicar que no se muestre ningún mensaje de reinicio.<br /><br /> Ejemplo:<br /><br /> **"0"** (valor predeterminado)<br /><br /> **"5"**<br /><br /> **"10"**|  
 
 ###  <a name="BKMK_RestoreUserState"></a> Variables de acción de la secuencia de tareas Restaurar estado de usuario  
  Las variables de esta acción especifican la información que se utiliza para restaurar el estado de usuario del equipo de destino, como el nombre de la ruta de acceso de la carpeta desde la que se restaura el estado de usuario y si se restaura la cuenta de equipo local. Para obtener más información sobre el paso de secuencia de tareas asociado a estas variables, consulte [Restaurar estado de usuario](task-sequence-steps.md#BKMK_RestoreUserState).  
@@ -300,7 +300,7 @@ Las variables de acción de secuencias de tareas especifican los valores de conf
 |Nombre de variable de acción|Descripción|  
 |--------------------------|-----------------|  
 |SMSTSDisableWow64Redirection<br /><br /> (entrada)|De forma predeterminada, cuando se ejecuta un sistema operativo de 64 bits, el programa de la línea de comandos se encuentra y ejecuta mediante el redirector del sistema de archivos WOW64, para que se encuentren las versiones de 32 bits de los  archivos DLL y los programas del sistema operativo. Si establece esta variable como "true", se deshabilita el uso del redirector del sistema de archivos WOW64 para que se puedan encontrar las versiones nativas de 64 bits de los archivos DLL y los programas del sistema operativo. Esta variable no tiene ningún efecto cuando se ejecuta en un sistema operativo de 32 bits.|  
-|WorkingDirectory<br /><br /> (entrada)|Especifica el directorio inicial de una acción de la línea de comandos. El nombre de directorio especificado no debe superar los 255 caracteres.<br /><br /> Ejemplos:<br /><br /> -   **"C:\\"**<br />-   **"%SystemRoot%"**|  
+|WorkingDirectory<br /><br /> (entrada)|Especifica el directorio inicial de una acción de la línea de comandos. El nombre de directorio especificado no debe superar los 255 caracteres.<br /><br /> Ejemplo:<br /><br /> -   **"C:\\"**<br />-   **"%SystemRoot%"**|  
 |SMSTSRunCommandLineUserName<br /><br /> (entrada)|Especifica la cuenta mediante la que se ejecuta la línea de comandos. El valor es una cadena con el formato nombredeusuario o dominio\nombredeusuario.|  
 |SMSTSRunCommandLinePassword<br /><br /> (entrada)|Especifica la contraseña de la cuenta que especifica la variable SMSTSRunCommandLineUserName.|  
 

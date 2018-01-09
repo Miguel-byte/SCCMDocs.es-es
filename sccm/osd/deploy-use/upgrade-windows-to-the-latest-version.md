@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 caps.latest.revision: "13"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: ff6477b21f5befb421f85c2204c1b0f1d75742f1
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 30c2c2d3d2a59006e7f2ad490537a7d5bb55003a
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager"></a>Actualizar Windows a la versión más reciente con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En este tema, se indican las etapas de System Center Configuration Manager para actualizar un sistema operativo en un equipo de Windows 7 o una versión posterior a Windows 10, o de Windows Server 2012 a Windows Server 2016 en un equipo de destino. Puede elegir entre distintos métodos de implementación, como medios independientes o el Centro de software. Escenario de actualización local:  
 
@@ -83,7 +83,7 @@ En este tema, se indican las etapas de System Center Configuration Manager para 
 
     -   [Usar Centro de software para implementar Windows a través de la red](use-software-center-to-deploy-windows-over-the-network.md)  
 
-    -   [Usar medios independientes para implementar Windows sin usar la red](use-stand-alone-media-to-deploy-windows-without-using-the-network.md)  
+    -   [Use stand-alone media to deploy Windows without using the network](use-stand-alone-media-to-deploy-windows-without-using-the-network.md) (Uso de medios independientes para implementar Windows sin usar la red)  
 
 ## <a name="monitor"></a>Monitor  
 
