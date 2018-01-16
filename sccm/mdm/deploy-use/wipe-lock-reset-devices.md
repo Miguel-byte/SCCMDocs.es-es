@@ -16,15 +16,15 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 55d49c388b4ea60627f72ffe61796c70de6f9416
-ms.sourcegitcommit: a5f8b5cfdabf0298e4302e24210e725a06a9de82
+ms.openlocfilehash: e8121480f3a9d61ba0a04667407a305119d80e12
+ms.sourcegitcommit: ba23ff90709a5fde1a63c650ab0d848f441afc43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>Protección de datos mediante borrado remoto, bloqueo o restablecimiento de código de acceso con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 System Center Configuration Manager proporciona funcionalidades de borrado selectivo, borrado completo, bloqueo remoto y restablecimiento de código de acceso. Los dispositivos móviles pueden almacenar datos confidenciales y proporcionar acceso a muchos recursos corporativos. Para proteger dispositivos, puede emitir:  
 
@@ -171,17 +171,17 @@ Los datos y las aplicaciones que son compatibles actualmente con el borrado sele
 ##  <a name="passcode-reset"></a>Restablecimiento de la contraseña  
 Si un usuario olvida su contraseña, puede ayudarle quitando la contraseña de un dispositivo o forzar el uso de una nueva contraseña temporal en un dispositivo. En la tabla siguiente se muestra cómo funciona el restablecimiento del código de acceso en distintas plataformas móviles.  
 
-|Plataforma|Restablecimiento de la contraseña|  
-|--------------|--------------------|  
-|iOS|Permite borrar la contraseña de un dispositivo. No admite la creación de una nueva contraseña temporal.|
-|macOS| No compatible.|
-|Android|Compatible. Se crea un código de acceso temporal.|
-|Android for Work | No compatible.|
-|PC Windows 10|No compatible.|  
-|Windows 10 Mobile|Compatible (excepto los dispositivos unidos a Azure AD).|
-|Windows Phone 8.1|Compatible.|  
-|Windows RT 8.1 |No compatible.|  
-|PC Windows 8.1 |No compatible.|  
+| Plataforma                              | Restablecimiento de la contraseña                                                                               |
+|---------------------------------------|----------------------------------------------------------------------------------------------|
+| iOS                                   | Permite borrar la contraseña de un dispositivo. No admite la creación de una nueva contraseña temporal. |
+| macOS                                 | No compatible.                                                                               |
+| Android                               | Compatible con versiones anteriores a Android 7.0. Crea un código de acceso temporal.                |
+| Android for Work                      | No compatible.                                                                               |
+| PC Windows 10                        | No compatible.                                                                               |
+| Windows 10 Mobile                     | Compatible (excepto los dispositivos unidos a Azure AD).  |
+| Windows Phone 8 y Windows Phone 8.1 | Compatible.                                                                                   |
+| Windows RT 8.1                        | No compatible.                                                                               |
+| PC Windows 8.1                       | No compatible.                                                                               |
 
 > [!Note]    
 > Debe llevar a cabo la acción de restablecimiento de contraseña desde el sitio de nivel superior de su entorno. Por ejemplo, si usa un sitio de administración central, solo puede llevar a cabo la acción en ese sitio. Si usa un sitio principal independiente, solo puede llevar a cabo la acción en ese sitio.

@@ -14,11 +14,11 @@ ms.assetid: ca3b4714-2a16-495e-8a17-1d87991d5556
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: d7819dd71a37bc581b629ac180f657134495f50c
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: cfb14ebb7b4f7eb9a008ad4464978778e57514a6
+ms.sourcegitcommit: d029b373113051634ed030545348a458eb7b25f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1706 para System Center Configuration Manager
 
@@ -445,7 +445,7 @@ Los dispositivos con Windows 10 administrados por Windows Update para empresas d
     - **Directiva de configuración que desea implementar:**: seleccione la directiva de Windows Update para empresas que desea implementar.
     - **Recopilación**: haga clic en **Examinar** para seleccionar la recopilación en la que quiere implementar la directiva.
     - **Corregir las reglas no compatibles cuando se admita**: seleccione esta opción para corregir automáticamente las reglas que no sean compatibles con Instrumental de administración de Windows (WMI), el Registro, los scripts y toda la configuración de los dispositivos móviles que Configuration Manager haya inscrito.
-    - **Permitir la corrección fuera de la ventana de mantenimiento**: si se ha configurado una ventana de mantenimiento para la recopilación en la que se va a implementar la directiva, habilite esta opción para permitir que la configuración de cumplimiento corrija el valor fuera de la ventana de mantenimiento. Para más información sobre las ventanas de mantenimiento, vea [Cómo utilizar las ventanas de mantenimiento](/sccm/core/clients/manage/collections/use-maintenance-windows).
+    - **Permitir la corrección fuera de la ventana de mantenimiento**: si se ha configurado una ventana de mantenimiento para la recopilación en la que se va a implementar la directiva, habilite esta opción para permitir que la configuración de cumplimiento corrija el valor fuera de la ventana de mantenimiento. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](/sccm/core/clients/manage/collections/use-maintenance-windows).
     - **Generar una alerta**: configura una alerta que se genera si la compatibilidad de la línea base de configuración es inferior a un determinado porcentaje en una hora y fecha especificadas. También puede especificar si desea que se envíe una alerta a System Center Operations Manager.
     - **Retraso aleatorio (horas)**: especifique una ventana de retraso lo suficientemente grande para evitar un procesamiento excesivo en el Servicio de inscripción de dispositivos de red. El valor predeterminado es 64 horas.
     - **Programación**: especifique la programación de evaluación de cumplimiento según la cual se evalúa el perfil implementado en los equipos cliente. La programación puede ser simple o personalizada. Los equipos cliente evalúan el perfil cuando el usuario inicia sesión.
@@ -462,10 +462,10 @@ Puede configurar Entrust como entidad de certificación al agregar un rol de Pun
 **Problema conocido**: en la versión 1706 de Technical Preview, no se emiten certificados PFX para entidades de certificación de Microsoft. Esto no afecta a los certificados PFX o los perfiles de SCEP importados.
 
 
-## <a name="cisco-ipsec-support-for-macos-vpn-profiles"></a>Compatibilidad con Cisco (IPsec) para perfiles de VPN de macOS
+## <a name="cisco-ipsec-support-for-ios-vpn-profiles"></a>Compatibilidad de Cisco (IPsec) con perfiles de VPN de iOS
 <!-- 1321367 -->
 
-Puede crear un perfil de VPN de macOS con Cisco (IPsec) como tipo de conexión. Para obtener más información, vea [Crear perfiles de VPN](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles).
+Puede crear un perfil de VPN de iOS con Cisco (IPsec) como tipo de conexión. Para obtener más información, vea [Crear perfiles de VPN](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles).
 
 
 ## <a name="new-windows-configuration-item-settings"></a>Nuevas opciones para elementos de configuración de Windows

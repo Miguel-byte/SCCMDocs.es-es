@@ -12,15 +12,15 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-ms.openlocfilehash: 6aaa15ff4908fe7e71e0b9c14fc021a57ccbb727
-ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
+ms.openlocfilehash: becab57c5f04bb67512d665175038f6c477b65b1
+ms.sourcegitcommit: e13bb2c86c40a88e5f4602beb1d31e4adc90e099
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 #  <a name="BKMK_ManualDeploy"></a> Implementar actualizaciones de software manualmente  
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
  Una implementación de actualizaciones de software manual es el proceso de selección de actualizaciones de software desde la consola de Configuration Manager e inicio manual del proceso de implementación. También, se pueden agregar actualizaciones de software seleccionadas a un grupo de actualización para, a continuación, implementar manualmente el grupo de actualización. La implementación manual se suele usar para actualizar los dispositivos cliente con las actualizaciones de software necesarias para, posteriormente, crear reglas de implementación automática (ADR) que administren las implementaciones de actualizaciones de software mensuales. También se utiliza un método manual para implementar actualizaciones de software fuera de banda. Si necesita ayuda para determinar qué método de implementación es el adecuado para usted, vea [Deploy software updates](deploy-software-updates.md) (Implementación de actualizaciones de software).
 
@@ -232,10 +232,10 @@ ms.lasthandoff: 11/17/2017
 
     -   **Notificaciones de usuario**: especifique si quiere mostrar una notificación de las actualizaciones de software en el Centro de software del equipo cliente según las **Horas de disponibilidad del software** y si quiere mostrar las notificaciones de usuario en los equipos cliente. Si **Tipo de implementación** está establecido en **Disponible** en la página Configuración de implementación, no se puede seleccionar **Ocultar en el Centro de software y ocultar todas las notificaciones**.  
 
-    -   **Comportamiento de la fecha límite**: *solo disponible cuando **Tipo de implementación** *está establecido en **Requerido**  *en la página Configuración de implementación.*   
-    especifique el comportamiento que tiene lugar cuando se alcanza la fecha límite para la implementación de actualizaciones de software. Especifique si desea instalar las actualizaciones de software de la implementación. Especifique también si el sistema se debe reiniciar tras la instalación de las actualizaciones de software independientemente de lo establecido en una ventana de mantenimiento. Para más información sobre las ventanas de mantenimiento, vea [Cómo utilizar las ventanas de mantenimiento](../../core/clients/manage/collections/use-maintenance-windows.md).  
+    -   **Comportamiento de la fecha límite**: solo disponible cuando **Tipo de implementación** está establecido en **Requerido** en la página Configuración de implementación.   
+    especifique el comportamiento que tiene lugar cuando se alcanza la fecha límite para la implementación de actualizaciones de software. Especifique si desea instalar las actualizaciones de software de la implementación. Especifique también si el sistema se debe reiniciar tras la instalación de las actualizaciones de software independientemente de lo establecido en una ventana de mantenimiento. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
-    -   **Comportamiento de reinicio de dispositivo**: *solo disponible cuando **Tipo de implementación** *está establecido en **Requerido** *en la página Configuración de implementación.*    
+    -   **Comportamiento de reinicio de dispositivo**: solo disponible cuando **Tipo de implementación** está establecido en **Requerido** en la página Configuración de implementación.    
     especifique si se debe suprimir el reinicio del sistema necesario para completar la instalación de actualizaciones de software en servidores y estaciones de trabajo.  
 
         > [!IMPORTANT]  
@@ -292,7 +292,7 @@ ms.lasthandoff: 11/17/2017
 
     4.  **Prioridad de envío**: especifique la prioridad de envío del paquete de implementación. Configuration Manager usa la prioridad de envío para el paquete de implementación cuando envía el paquete a los puntos de distribución. Los paquetes de implementación se envían en orden de prioridad: Alta, Media, o Baja. Los paquetes con prioridades idénticas se envían en el orden en que se crearon. Si no hay ningún trabajo pendiente, el paquete se procesará inmediatamente sin tener en cuenta su prioridad.  
 
-13. En la página Puntos de distribución, especifique los puntos de distribución o los grupos de puntos de distribución que hospedarán los archivos de actualización de software. Para obtener más información acerca de los puntos de distribución, consulte [Distribution point configurations](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs) (Configuraciones de punto de distribución).  
+13. En la página Puntos de distribución, especifique los puntos de distribución o los grupos de puntos de distribución que hospedarán los archivos de actualización de software. Para más información sobre los puntos de distribución, vea [Distribution point configurations (Configuraciones de puntos de distribución)](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs).  
 
 14. En la página Ubicación de descarga, especifique si los archivos de actualización de software se van a descargar desde Internet o desde la red local. Configure las siguientes opciones:  
 

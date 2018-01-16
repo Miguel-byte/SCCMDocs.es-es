@@ -3,7 +3,7 @@ title: "Creación y ejecución de scripts"
 titleSuffix: Configuration Manager
 description: Cree y ejecute scripts de Powershell en dispositivos cliente.
 ms.custom: na
-ms.date: 11/29/2017
+ms.date: 01/05/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 caps.latest.revision: "14"
 caps.handback.revision: "0"
-author: BrucePerlerMS
-ms.author: bruceper
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 1472f697ae8b82e6268433aa6398fcc10a429994
-ms.sourcegitcommit: 5f4a584d4a833b0cc22bd8c47da7dd55aced97fa
+ms.openlocfilehash: b00dfb875ca032032a9782e9950247eb3fceb124
+ms.sourcegitcommit: 9de3d74030b7c3313c34b5cbe2dbe6e18a48c043
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
 
@@ -75,9 +75,9 @@ Los scripts deben aprobarse, mediante el rol de *aprobador de scripts*, antes de
 1. En la consola de Configuration Manager, haga clic en **Biblioteca de software**.
 2. En el área de trabajo **Biblioteca de software**, haga clic en **Scripts**.
 3. En la lista **Script**, elija el script que desea aprobar o rechazar y, a continuación, en la pestaña **Inicio**, en el grupo **Script**, haga clic en **Aprobar o denegar**.
-4. En el cuadro de diálogo **Aprobar o denegar script**, seleccione **Aprobar** o **Denegar** el script y, opcionalmente, escriba un comentario sobre su decisión.  Si se deniega un script, este no se puede ejecutar en los dispositivos cliente. <br>
+4. En el cuadro de diálogo **Aprobar o denegar script**, seleccione **Aprobar** o **Denegar** el script. Si lo desea, escriba un comentario sobre su decisión.  Si se deniega un script, este no se puede ejecutar en los dispositivos cliente. <br>
 ![Scripts: aprobación](./media/run-scripts/RS-approval.png)
-5. Complete el asistente. En la lista **Script**, podrá ver el cambio de la columna **Estado de la aprobación** en función de la acción llevada a cabo.
+1. Complete el asistente. En la lista **Script**, podrá ver el cambio de la columna **Estado de la aprobación** en función de la acción llevada a cabo.
 
 ### <a name="allow-users-to-approve-their-own-scripts"></a>Procedimiento para permitir que los usuarios aprueben sus propios scripts
 
@@ -106,7 +106,11 @@ La funcionalidad de ejecución de scripts utiliza ámbitos de seguridad, una car
     - **Importar**: se importa un script de PowerShell en la consola. El script se muestra en el campo **Script**.
     - **Borrar**: se quita el script actual del campo Script.
     - **Script**: se muestra el script importado actualmente. Puede editar el script en este campo según sea necesario.
-1. Complete el asistente. El nuevo script se muestra en la lista **Script** con el estado **En espera de aprobación**. Para poder ejecutar este script en los dispositivos cliente, debe aprobarlo.
+5. Complete el asistente. El nuevo script se muestra en la lista **Script** con el estado **En espera de aprobación**. Para poder ejecutar este script en los dispositivos cliente, debe aprobarlo. 
+
+> [!IMPORTANT]
+    >  Evite la aplicación de scripts al reinicio de un dispositivo o de un agente de Configuration Manageral utilizar la característica Ejecutar scripts. Si lo hace, podría provocar un estado de reinicio continuo. Si es necesario, existen mejoras en la característica de notificación de clientes que permiten reiniciar dispositivos, a partir de la versión 1710 de Configuration Manager. La [columna Reinicio pendiente](/sccm/core/clients/manage/manage-clients#Restart-clients) puede ayudar a identificar los dispositivos que necesitan un reinicio. 
+<!--SMS503978--Script reboot warning-->
 
 ## <a name="script-parameters"></a>Parámetros de script
 *(Se introdujo con la versión 1710)*  
@@ -191,7 +195,7 @@ El script se ejecuta como cuenta de *sistema* o de *equipo* en los clientes obje
 
 ## <a name="script-monitoring"></a>Supervisión de scripts
 
-Una vez iniciada la ejecución de un script en una recopilación de dispositivos, utilice el procedimiento siguiente para supervisar la operación. A partir de la versión 1710, puede supervisar un script en tiempo real en cuanto se ejecuta, así como volver a un informe de una ejecución determinada de la funcionalidad de ejecución de scripts. <br>
+Una vez iniciada la ejecución de un script en una recopilación de dispositivos, utilice el procedimiento siguiente para supervisar la operación. A partir de la versión 1710, puede supervisar un script en tiempo real en cuanto se ejecuta, así como volver a un informe de una ejecución determinada de la funcionalidad Ejecutar scripts. <br>
 
 ![Supervisión de scripts: estado de ejecución de scripts](./media/run-scripts/RS-monitoring-three-bar.png)
 
