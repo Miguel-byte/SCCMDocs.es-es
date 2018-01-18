@@ -15,15 +15,15 @@ caps.latest.revision: "6"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 2ec4f4fdd1e351379922302e81af88e311a37c8e
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: c512cba550e405c866204af981aba75639665de2
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="create-android-applications-with-system-center-configuration-manager"></a>Crear aplicaciones Android con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Una aplicación de System Center Configuration Manager tiene uno o varios tipos de implementación. Los tipos de implementación comprenden los archivos de instalación y la información necesaria para implementar software en un dispositivo. Además tiene reglas que especifican cuándo y cómo se implementa el software.  
 
@@ -48,7 +48,7 @@ Se admiten las siguientes acciones de implementación:
 |Tipo de dispositivo|Acciones admitidas|
 |-|-|
 |Android|**Disponible**, **Requerido** El usuario debe dar su consentimiento para la instalación y desinstalación.|
-|Android for Work | **Requerido** |
+|Android for Work |**Disponible**, **Necesario** |
 
 ## <a name="approve-and-deploy-android-for-work-apps"></a>Aprobar e implementar aplicaciones Android for Work
 Como administrador de Configuration Manager, también puede aprobar e implementar aplicaciones en el [sitio web de Play for Work](https://play.google.com/work) e implementar las aplicaciones en dispositivos Android for Work administrados.
@@ -65,3 +65,5 @@ Siga estos pasos para aprobar aplicaciones en la tienda Play for Work, sincroniz
 8. Vaya a **Biblioteca de software** > **General** > **Administración de aplicaciones** > **Aplicaciones**, seleccione una aplicación de Android for Work e impleméntela como de costumbre.
 
 Para sincronizar aplicaciones Play for Work con Configuration Manager, debe aprobar primero al menos una aplicación en el sitio web de Play for Work.
+
+Las aplicaciones implementadas como **Disponibles** se muestran en la aplicación Google Play con el distintivo de trabajo en lugar del Portal de empresa. Esto permite implementar aplicaciones desde un origen de confianza (la aplicación Google Play con el distintivo de trabajo es una fuente de confianza) y no tener que permitir aplicaciones de orígenes que no sean de confianza.

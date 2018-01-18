@@ -3,7 +3,7 @@ title: "Lista de comprobación para la versión 1710 | System Center Configurati
 titleSuffix: Configuration Manager
 description: "Obtenga información sobre las acciones que se deben realizar antes de actualizar a la versión 1710 de System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 12/19/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision:
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: bf015eed67fc28faad259f4c3a54ad51ab33d531
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: f1f80a630a607d6d914fc6e6106a2ce9df39dcc3
+ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="checklist-for-installing-update-1710-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1710 de System Center Configuration Manager
 
@@ -127,6 +127,8 @@ Antes de instalar la actualización, deshabilite cualquier tarea de mantenimient
 Cuando se ejecuta una tarea de mantenimiento de la base de datos de sitio durante la instalación de la actualización, se puede producir un error en la instalación de la actualización. Antes de deshabilitar una tarea, programe la tarea de forma que pueda restaurar su configuración después de instalar la actualización.
 
 Para obtener más información, consulte [Tareas de mantenimiento para System Center Configuration Manager](/sccm/core/servers/manage/maintenance-tasks) y [Referencia de tareas de mantenimiento para System Center Configuration Manager](/sccm/core/servers/manage/reference-for-maintenance-tasks).
+
+**Detener temporalmente el software antivirus en los servidores de System Center Configuration Manager:** antes de actualizar un sitio, asegúrese de que ha detenido el software antivirus en los servidores de Configuration Manager. <!--SMS.503481--> 
 
 **Crear una copia de seguridad de la base de datos del sitio en el sitio de administración central y en los sitios primarios:** antes de actualizar un sitio, realice una copia de seguridad del sitio para asegurarse de que tiene una copia de seguridad correcta para utilizarla en la recuperación ante desastres.
 

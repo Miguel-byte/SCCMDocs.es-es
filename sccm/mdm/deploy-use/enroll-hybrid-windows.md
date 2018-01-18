@@ -15,15 +15,15 @@ caps.latest.revision: "9"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: dd62748f853915d71fcbad1964f5a67785aaf3f6
-ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
+ms.openlocfilehash: 95808d4fd743d5cc18cacb69bb38bc729acdda25
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="set-up-windows-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Configurar la administración híbrida de dispositivos Windows con System Center Configuration Manager y Microsoft Intune
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En este tema, se explica a los administradores de TI cómo pueden permitir a los usuarios que incorporen PC de Windows y dispositivos móviles en la administración mediante Configuration Manager y Microsoft Intune.
 
@@ -35,7 +35,7 @@ Para habilitar la administración de dispositivos Windows para equipos o disposi
 3.  En la cinta de opciones, seleccione **Configurar plataformas** y luego seleccione la plataforma de Windows:
     - **Windows** para portátiles y PC Windows, después realice los pasos siguientes:
       1. En la pestaña **General**, active la casilla **Habilitar la inscripción de Windows**.
-      2. Si usa un certificado para firmar el código e implementar la aplicación de Portal de empresa, vaya al **Certificado de firma de código**. Los usuarios de dispositivos también pueden instalar la aplicación de Portal de empresa desde la Tienda Windows o puede implementar la aplicación desde la Tienda Windows para empresas sin firma de código.
+      2. Si usa un certificado para firmar el código e implementar la aplicación de Portal de empresa, vaya al **Certificado de firma de código**. Los usuarios de dispositivos también pueden instalar la aplicación de Portal de empresa desde Microsoft Store o la puede implementar desde Microsoft Store para Empresas sin firma de código.
       3. También puede configurar [Windows Hello para empresas](windows-hello-for-business-settings.md).
     - **Windows Phone** para tabletas y teléfonos Windows, después realice los pasos siguientes:
       1. En la pestaña **General**, active la casilla **Windows Phone 8.1 y Windows 10 Mobile**. Ya no se admite Windows Phone 8.0.
@@ -107,13 +107,13 @@ Cree registros de recursos DNS CNAME para el dominio de su empresa. Por ejemplo,
 
 Aunque la creación de entradas DNS CNAME es opcional, los registros CNAME facilitan la inscripción para los usuarios. Si no se encuentra ningún registro CNAME de inscripción, se pedirá a los usuarios que escriban de forma manual el nombre del servidor MDM (enrollment.manage.microsoft.com).
 
-|Tipo|Nombre de host|Apunta a|TTL|  
+|Escriba|Nombre de host|Apunta a|TTL|  
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hora|
 
 Si tiene más de un sufijo UPN, debe crear un CNAME para cada nombre de dominio y apuntar todos a EnterpriseEnrollment-s.manage.microsoft.com. Por ejemplo, si los usuarios de Contoso usan name@contoso.com, pero también usan name@us.contoso.com y name@eu.constoso.com como su correo electrónico o UPN, el administrador de DNS de Contoso necesitaría crear los CNAME siguientes.
 
-|Tipo|Nombre de host|Apunta a|TTL|  
+|Escriba|Nombre de host|Apunta a|TTL|  
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hora|
 |CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hora|

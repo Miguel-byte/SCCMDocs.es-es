@@ -10,11 +10,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: 
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: b336b56cc34119a4acec8e798b8c59970f5c7dbf
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: d605dd4770be6878b08f4ac61da6ab27e3b6d61f
+ms.sourcegitcommit: ac9268e31440ffe91b133c2ba8405d885248d404
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>Preparar dispositivos de Windows 10 para la administración conjunta
 Puede habilitar la administración conjunta en los dispositivos de Windows 10 que están unidos a AD y a Azure AD y que están inscritos en Intune y en un cliente en Configuration Manager. Para los nuevos dispositivos de Windows 10 y para los que ya estén inscritos en Intune, instale el cliente de Configuration Manager antes de administrarlos de forma conjunta. Para los dispositivos de Windows 10 que ya son clientes de Configuration Manager, puede inscribirlos en Intune y habilitar la administración conjunta en la consola de Configuration Manager.
@@ -22,7 +22,7 @@ Puede habilitar la administración conjunta en los dispositivos de Windows 10 qu
 ## <a name="command-line-to-install-configuration-manager-client"></a>Línea de comandos para instalar el cliente de Configuration Manager
 Debe crear una aplicación en Intune para los dispositivos de Windows 10 que aún no son clientes de Configuration Manager. Al crear la aplicación en las secciones siguientes, use la siguiente línea de comandos:
 
-```ccmsetup.msi CCMSETUPCMD="/mp:&#60;*URL of cloud management gateway mutual auth endpoint*&#62;/ CCMHOSTNAME=&#60;*URL of cloud management gateway mutual auth endpoint*&#62; SMSSiteCode=&#60;*Sitecode*&#62; SMSMP=https:&#47;/&#60;*FQDN of MP*&#62; AADTENANTID=&#60;*AAD tenant ID*&#62; AADTENANTNAME=&#60;*Tenant name*&#62; AADCLIENTAPPID=&#60;*Server AppID for AAD Integration*&#62; AADRESOURCEURI=https:&#47;/&#60;*Resource ID*&#62;”```
+ccmsetup.msi CCMSETUPCMD="/mp:&#60;*Dirección URL del punto de conexión de autenticación mutua de Cloud Management Gateway*&#62;/ CCMHOSTNAME=&#60;*Dirección URL del punto de conexión de autenticación mutua de Cloud Management Gateway*&#62; SMSSiteCode=&#60;*CódigoSitio*&#62; SMSMP=https:&#47;/&#60;*FQDN del MP*&#62; AADTENANTID=&#60;*Id. de inquilino de AAD*&#62; AADTENANTNAME=&#60;*Nombre del inquilino*&#62; AADCLIENTAPPID=&#60;*Id. de aplicación del servidor de integración de AAD*&#62; AADRESOURCEURI=https:&#47;/&#60;*Id. de recurso*&#62;”
 
 Por ejemplo, si tuviera los siguientes valores:
 
@@ -43,15 +43,19 @@ Por ejemplo, si tuviera los siguientes valores:
 
 Usaría la siguiente línea de comandos:
 
-```ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https:/&#47;sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https:/&#47;ConfigMgrServer”```
+ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https:/&#47;sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https:/&#47;ConfigMgrServer"
 
 > [!Tip]
->Encontrará los parámetros de la línea de comandos del sitio siguiendo estos pasos:     
+> Encontrará los parámetros de la línea de comandos del sitio siguiendo estos pasos:     
 > 1. En la consola de Configuration Manager, vaya a **Administración** > **Información general** > **Servicios de nube** > **Co-management** (Administración conjunta).  
 > 2. En la pestaña Home (Inicio), en el grupo Manage (Administrar), elija  **Configure co-management** (Configurar administración conjunta) para abrir el Co-management Onboarding Wizard (Asistente para la incorporación de la administración conjunta).    
 > 3. En la página de suscripción, haga clic en **Iniciar sesión**, inicie sesión con su inquilino de Intune y haga clic en **Siguiente**.    
 > 4. En la página de habilitación, haga clic en **Copiar** en la sección **Devices enrolled in Intune** (Dispositivos inscritos en Intune) para copiar la línea de comandos en el Portapapeles y, luego, guarde la línea de comandos para usarla en el procedimiento en el que se creará la aplicación.  
 > 5. Haga clic en **Cancelar** para salir del asistente.
+
+> [!Important]    
+> Si personaliza la línea de comandos para instalar el cliente de Configuration Manager, asegúrese de que no supere los 1024 caracteres. Cuando la línea de comandos es mayor de 1024 caracteres, se produce un error en la instalación del cliente.
+
 
 ## <a name="new-windows-10-devices"></a>Nuevos dispositivos de Windows 10
 Para los nuevos dispositivos de Windows 10, puede usar el servicio AutoPilot para definir la configuración rápida (OOBE), que incluye la unión del dispositivo a AD y a Azure AD, así como la inscripción del dispositivo en Intune. Luego, cree una aplicación en Intune para implementar el cliente de Configuration Manager.  

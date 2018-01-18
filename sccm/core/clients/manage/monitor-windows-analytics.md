@@ -3,7 +3,7 @@ title: "Supervisión de clientes con Windows Analytics"
 titleSuffix: Configuration Manager
 description: "Windows Analytics es un conjunto de soluciones que se ejecutan en Operations Management Suite que permiten extraer información valiosa sobre el estado actual del entorno. Para ello, aprovecha los datos de telemetría de Windows que notifican los dispositivos de dicho entorno."
 ms.custom: na
-ms.date: 07/31/2017
+ms.date: 01/02/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,54 +12,58 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: CF35CE87-3BA8-4A84-9BC8-ABCEA4666212
 caps.latest.revision: "23"
-author: mattbriggs
-ms.author: mabrigg
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 4d8c0eef8c85645ceb6f12aaf776ce1b1f82cbdd
-ms.sourcegitcommit: d025a2cbd1ed82f42f67255c97b913f2163b3baf
+ms.openlocfilehash: 6e0b6ec99755b89213b540f22315038911b8eb29
+ms.sourcegitcommit: f1535281b2c3fecff773b722c3f7590bf6ba10a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="use-windows-analytics-with-configuration-manager"></a>Uso de Windows Analytics con Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
-[Windows Analytics](https://www.microsoft.com/WindowsForBusiness/windows-analytics) es un conjunto de soluciones que se ejecutan en [Operations Management Suite](/azure/operations-management-suite/operations-management-suite-overview). Estas soluciones permiten obtener información del estado actual del entorno. Los dispositivos de su entorno notifican datos de telemetría de Windows y estos datos se pueden analizar, además de accederse a ellos, mediante soluciones del [portal web de Operations Management Suite](https://mms.microsoft.com). En el caso de [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics), se pueden realizar acciones directamente sobre los datos en el nodo de supervisión de la consola de Configuration Manager conectando Upgrade Readiness a Configuration Manager.
+[Windows Analytics](https://www.microsoft.com/WindowsForBusiness/windows-analytics) es un conjunto de soluciones que se ejecutan en [Operations Management Suite](/azure/operations-management-suite/operations-management-suite-overview) (OMS). Estas soluciones permiten obtener información del estado actual del entorno. Los dispositivos de su entorno notifican datos de telemetría de Windows y estos datos se pueden analizar, además de accederse a ellos, mediante soluciones del [portal web de Operations Management Suite](https://mms.microsoft.com). Mediante la conexión de [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) a Configuration Manager, se puede tener acceso directo a los datos del nodo **Supervisión** de la consola de Configuration Manager.
 
-Los datos de telemetría de Windows que utiliza Windows Analytics no se transfieren directamente al servidor de sitio de Configuration Manager. Los equipos cliente envían datos de telemetría de Windows al servicio de telemetría y los datos pertinentes se transfieren entonces a las soluciones de Windows Analytics hospedadas en una de las áreas de trabajo de OMS de la organización. Configuration Manager puede llevarle a los datos pertinentes en el portal web con vínculos en contexto o directamente mostrar aquellos que forman parte de las soluciones que se han conectado a Configuration Manager. También se pueden consultar directamente los datos desde el portal web de Operations Management Suite.
+Los datos de telemetría de Windows que utiliza Windows Analytics no se transfieren directamente al servidor de sitio de Configuration Manager. Los equipos cliente envían los datos de telemetría de Windows al servicio de telemetría de Windows. Después, este servicio transfiere los datos pertinentes a las soluciones de Windows Analytics hospedadas en una de las áreas de trabajo de OMS de la organización. Configuration Manager puede llevarle a los datos pertinentes en el portal web con vínculos en contexto, o bien mostrar directamente los datos que forman parte de las soluciones que se han conectado a Configuration Manager. También se pueden consultar directamente los datos desde el portal web de Operations Management Suite.
 
 >[!Important]
->[Los datos de diagnóstico y uso de Configuration Manager](../../plan-design/diagnostics/diagnostics-and-usage-data.md), que se notifican a Microsoft desde el servidor de sitio de Configuration Manager, son totalmente independientes de Windows Analytics y el servicio de telemetría de Windows.
+>[Los datos de diagnóstico y uso de Configuration Manager](../../plan-design/diagnostics/diagnostics-and-usage-data.md), que el servidor de sitio de Configuration Manager notifica a Microsoft, son independientes de Windows Analytics y la telemetría de Windows.
 
 ## <a name="configure-clients-to-report-data-to-windows-analytics"></a>Configuración de clientes para notificar datos a Windows Analytics
 
-Para que los dispositivos cliente notifiquen los datos a Windows Analytics, deben configurarse con una clave de identificador comercial asociada con el área de trabajo de Operations Management Suite que hospeda los datos de Windows Analytics de la organización. Asimismo, deben configurarse para notificar la telemetría en un nivel correspondiente a la solución o las soluciones concretas que se van a utilizar. 
+Para que los dispositivos cliente notifiquen datos a Windows Analytics, debe configurarlos con una clave de id. comercial asociada con el área de trabajo de OMS en la que se hospedan los datos de Windows Analytics. También debe configurar los dispositivos para que notifiquen la telemetría en un nivel correspondiente a las soluciones concretas que quiera usar. 
 
 ### <a name="configure-windows-analytics-client-settings"></a>Configurar los ajustes de cliente de Windows Analytics
 Para configurar Windows Analytics, en la consola de Configuration Manager vaya a **Administración** > **Configuración de cliente**, haga doble clic en **Create Custom Device Client Settings** (Crear configuración de cliente de dispositivo personalizada) y, después, seleccione **Windows Analytics**.  
 
-Configure lo siguiente después de acceder a la pestaña de configuración de **Windows Analytics**:
+Después de desplazarse a la pestaña de configuración de **Windows Analytics**, configure las opciones siguientes:
   -  **Clave de id. comercial**  
 La clave de identificador comercial asigna información desde los dispositivos que administra hasta el área de trabajo de OMS que hospeda los datos de Windows Analyitics de su organización. Si ya ha configurado una clave de identificador comercial para su uso con Upgrade Readiness, úsela. Si todavía no tiene una clave de identificador comercial, vea cómo [generar la clave de identificador comercial]( https://technet.microsoft.com/itpro/windows/deploy/upgrade-readiness-get-started#generate-your-commercial-id-key).
 
   -  **Nivel de telemetría para los dispositivos Windows 10**   
-Para obtener información sobre lo que recopila cada nivel de telemetría de Windows 10, vea la información para [configurar la telemetría de Windows en su organización](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization#telemetry-levels).
+Para obtener información sobre cada nivel de telemetría de Windows 10, vea [Configurar la telemetría de Windows en la organización](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization#telemetry-levels).
+
+   > [!Note]
+   > Con la versión 1710, puede establecer el nivel de recopilación de datos de telemetría de Windows 10 en **Mejorado (limitado)**. Esta configuración le permite obtener información práctica sobre los dispositivos de su entorno sin que los dispositivos informen de todos los datos del nivel de telemetría **Mejorado** con Windows 10, versión 1709 o una versión posterior. El nivel de telemetría Mejorado (limitado) incluye métricas del nivel Básico, así como un subconjunto de datos recopilados del nivel Mejorado que resulta relevante para Windows Analytics.
+
 
   -  **Sistema de registro de usuario para recopilar datos comerciales en dispositivos Windows 7, 8 y 8.1**   
-Para obtener información sobre los datos recopilados de estos sistemas operativos cuando participa, considere descargar el archivo pdf [Windows 7, Windows 8, and Windows 8.1 appraiser telemetry events and fields](https://go.microsoft.com/fwlink/?LinkID=822965) (Campos y eventos de telemetría de valoración de Windows 7, Windows 8 y Windows 8.1) de Microsoft.
+Para obtener más información, vea [Windows 7, Windows 8, and Windows 8.1 appraiser telemetry events and fields](https://go.microsoft.com/fwlink/?LinkID=822965) (Eventos y campos de telemetría de evaluador de Windows 7, Windows 8 y Windows 8.1).
 
   -  **Configurar la recopilación de datos de Internet Explorer**  
 En los dispositivos que ejecutan Windows 8.1 o versiones anteriores, la recopilación de datos de Internet Explorer puede permitir que Upgrade Readiness detecte incompatibilidades de aplicaciones web que podrían impedir una actualización sin problemas a Windows 10. La recopilación de datos de Internet Explorer se puede habilitar en función de cada zona de Internet. Para obtener más información acerca de las zonas de Internet, consulte la información sobre las [zonas de seguridad de las direcciones URL](https://msdn.microsoft.com/library/ms537183(v=vs.85).aspx).
 
 ## <a name="use-upgrade-readiness-to-identify-windows-10-compatibility-issues"></a>Uso de Upgrade Readiness para identificar problemas de compatibilidad de Windows 10
 
-Upgrade Readiness (antes Upgrade Analytics) permite analizar la preparación del dispositivo y la compatibilidad con Windows 10. Gracias a esta evaluación, las actualizaciones se realizan con menos problemas. Tras conectar Configuration Manager con Upgrade Readiness, podrá acceder a estos datos de compatibilidad de actualización del cliente directamente desde la consola de Configuration Manager. Después, podrá seleccionar dispositivos para su actualización o corrección desde la lista de dispositivos.
+Upgrade Readiness (antes Upgrade Analytics) permite analizar la preparación del dispositivo y la compatibilidad con Windows 10. Gracias a esta evaluación, las actualizaciones se realizan con menos problemas. Tras conectar Configuration Manager con Upgrade Readiness, se puede tener acceso a estos datos de compatibilidad de actualización del cliente directamente desde la consola de Configuration Manager. Después, seleccione los dispositivos para su actualización o corrección desde la lista de dispositivos.
 
 Para obtener más información y detalles sobre cómo configurar Upgrade Readiness y conectarse a esta solución, consulte [Upgrade Readiness](../../clients/manage/upgrade/upgrade-analytics.md).
 
 ## <a name="use-windows-analytics-to-identify-gaps-in-windows-information-protection-policies"></a>Uso de Windows Analytics para identificar carencias en las directivas de Windows Information Protection
 
-Los dispositivos Windows 10 de la versión 1703 y posteriores que están configurados con una directiva de [Windows Information Protection](https://docs.microsoft.com/en-us/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip) (WIP) notifican la telemetría en las aplicaciones que tienen acceso a los datos corporativos del entorno, pero no se tienen en cuenta en las reglas de aplicación de las directivas de WIP. Se trata de aplicaciones que posiblemente necesitan los usuarios del entorno para mantener su productividad, pero cuyo acceso se ha bloqueado, así que saber que acceden a los datos corporativos puede ser útil para mantener las directivas de Windows Information Protection en Configuration Manager. 
+Los dispositivos Windows 10 de la versión 1703 y posteriores configurados con una directiva de [Windows Information Protection](https://docs.microsoft.com/en-us/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip) (WIP) notifican la telemetría en las aplicaciones que tienen acceso a los datos corporativos del entorno, pero no se incluyen las reglas de aplicación de las directivas de WIP. Los usuarios pueden necesitar estas aplicaciones para mantener su productividad, pero WIP bloquea el acceso de los usuarios. Saber que los usuarios tienen acceso a los datos corporativos es útil para el mantenimiento de las directivas de Windows Information Protection en Configuration Manager. 
 
-Puede acceder a estos datos de Windows Information Protection usando esta [consulta Operations Management Suite](https://go.microsoft.com/fwlink/?linkid=849952).
+Obtenga acceso a estos datos de Windows Information Protection mediante esta [consulta de Operations Management Suite](https://go.microsoft.com/fwlink/?linkid=849952).

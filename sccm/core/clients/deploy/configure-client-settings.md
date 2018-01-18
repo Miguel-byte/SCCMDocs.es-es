@@ -3,7 +3,7 @@ title: "Configuración del cliente"
 titleSuffix: Configuration Manager
 description: "Seleccione la configuración de cliente en System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 12/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 95e9858a-bad4-4651-9e61-2e31dc5050fa
 caps.latest.revision: "5"
-author: arob98
-ms.author: angrobe
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 20a8f91d10d98542f08e440bcfbc1a6f98a51932
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: c777e800d154b060040363aefbc611e284f233b4
+ms.sourcegitcommit: f1535281b2c3fecff773b722c3f7590bf6ba10a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-configure-client-settings-in-system-center-configuration-manager"></a>Cómo configurar el cliente en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Puede administrar toda la configuración de cliente en System Center Configuration Manager desde **Administración** > **Configuración de cliente**. Modifique la configuración predeterminada si desea configurar opciones para todos los usuarios y dispositivos de la jerarquía que no tienen aplicada ninguna configuración personalizada. Si desea aplicar una configuración diferente solamente a algunos usuarios o dispositivos, cree una configuración personalizada e impleméntela en las recopilaciones.  
+Puede administrar toda la configuración de cliente en System Center Configuration Manager desde **Administración** > **Configuración de cliente**. Modifique la configuración predeterminada si desea configurar opciones para todos los usuarios y dispositivos de la jerarquía que no tienen aplicada ninguna configuración personalizada. Si quiere aplicar una configuración diferente solamente a algunos usuarios o dispositivos, cree una configuración personalizada e impleméntela en las recopilaciones.  
 
 Para más información sobre cada opción de cliente, vea [About client settings in System Center Configuration Manager (Acerca de la configuración de cliente en System Center Configuration Manager)](../../../core/clients/deploy/about-client-settings.md).
 
@@ -63,25 +63,14 @@ La implementación de esta configuración personalizada reemplaza la configuraci
 
 9. En el cuadro de diálogo **Seleccionar colección**, seleccione la colección adecuada y, luego, elija **Aceptar**. Puede comprobar la recopilación seleccionada si hace clic en la pestaña **Implementaciones** en el panel de detalles.  
 
-10. Vea el orden de la configuración de cliente personalizada que acaba de crear. Si hay más de una configuración de cliente personalizada, se aplican en función de su número de orden. Si hay algún conflicto, la configuración que tenga el número de orden más bajo reemplaza al resto de configuraciones. Para cambiar el número de orden, en la pestaña **Inicio**, en el grupo **Configuración de cliente**, elija **Subir elemento** o en **Bajar elemento**.  
+10. Vea el orden de la configuración de cliente personalizada que ha creado. Si hay más de una configuración de cliente personalizada, se aplican en función de su número de orden. Si hay algún conflicto, la configuración que tenga el número de orden más bajo reemplaza al resto de configuraciones. Para cambiar el número de orden, en la pestaña **Inicio**, en el grupo **Configuración de cliente**, elija **Subir elemento** o en **Bajar elemento**.  
 
  Los equipos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Initiate Policy Retrieval for a Configuration Manager Client (Iniciar la recuperación de directivas para un cliente de Configuration Manager)](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) en [How to manage clients in System Center Configuration Manager (Cómo administrar clientes en System Center Configuration Manager)](../../../core/clients/manage/manage-clients.md).  
 
-## <a name="limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health"></a>Limitación de la telemetría mejorada de Windows 10 al envío únicamente de datos pertinentes para el Estado de dispositivos de Windows Analytics
-<!-- 1356148 -->
 
-Con la versión 1710, puede establecer el nivel de recopilación de datos de telemetría de Windows 10 en **Mejorado (limitado)**. Esta configuración le permite obtener información práctica sobre los dispositivos de su entorno sin que los dispositivos informen de todos los datos del nivel de telemetría **Mejorado** con Windows 10, versión 1709 o una versión posterior.
-
-El nivel de telemetría Enhanced (Limited) (Mejorado [limitado]) incluye métricas del nivel básico, así como un subconjunto de datos recopilados del nivel **Mejorado** que resulta pertinente para Windows Analytics. Para más información sobre los niveles de telemetría, consulte [aquí](https://docs.microsoft.com/windows/configuration/configure-windows-telemetry-in-your-organization#telemetry-levels).
-
-1.  En la consola de Configuration Manager, elija **Administración** > **Configuración de cliente** > **Configuración de cliente predeterminada**.  
-
-2.  En la pestaña **Inicio**, elija **Propiedades**.  
-
-3.  Abra la ventana de **Cloud Services** y establezca el nivel de telemetría de Windows 10 en **Mejorado**.
 
 ##  <a name="view-client-settings"></a>Ver la configuración de cliente  
- Cuando se han implementado varias configuraciones de cliente en el mismo dispositivo, usuario o grupo de usuarios, el establecimiento de prioridades y la combinación de configuraciones pueden resultar complejos. Para ver la configuración de cliente:  
+ Cuando se implementan varias configuraciones de cliente en el mismo dispositivo, usuario o grupo de usuarios, el establecimiento de prioridades y la combinación de configuraciones son complejos. Para ver la configuración de cliente:  
 
 1.  En la consola de Configuration Manager, elija **Activos y compatibilidad** > **Dispositivos** > **Usuarios** o **Colecciones de usuarios**.  
 

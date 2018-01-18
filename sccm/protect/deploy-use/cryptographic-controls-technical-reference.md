@@ -3,25 +3,25 @@ title: "Referencia técnica de controles criptográficos"
 titleSuffix: Configuration Manager
 description: "Obtenga información sobre la manera en que la firma y el cifrado pueden proteger contra ataques para leer datos de System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/5/2017
+ms.date: 12/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
-author: arob98
-ms.author: angrobe
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: ebaff93d346b53afea8770fbe0634112bcecf82d
-ms.sourcegitcommit: 372171a5cd8d143d6d47b651018cda0c91cad67c
+ms.openlocfilehash: 2c1ed6f4c93f74719ab3fe5d723f7dc01eb1ede7
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Referencia técnica de controles criptográficos
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 System Center Configuration Manager usa la firma y el cifrado para ayudar a proteger la administración de los dispositivos en la jerarquía de Configuration Manager. Con la firma, si los datos se han modificado en el tránsito, se descartan. El cifrado, mediante un analizador de protocolos de red, ayuda a impedir que un atacante pueda leer los datos.  
@@ -277,8 +277,8 @@ System Center Configuration Manager usa la firma y el cifrado para ayudar a prot
 
  Cuando un punto de administración autentica primero un cliente mediante el certificado de cliente autofirmado, este mecanismo proporciona una seguridad mínima, ya que cualquier equipo puede generar un certificado autofirmado. En esta situación, se debe aumentar el proceso de identidad del cliente por aprobación. Solo los equipos de confianza deben aprobarse, ya sea automáticamente mediante Configuration Manager o a través de un usuario administrativo de forma manual. Para obtener más información, consulte la sección relativa a la aprobación en [Communications between endpoints in System Center Configuration Manager](../../core/plan-design/hierarchy/communications-between-endpoints.md) (Comunicaciones entre puntos de conexión en System Center Configuration Manager).  
 
-## <a name="to-make-configuration-manager-servers-more-secure"></a>Para hacer que los servidores de Configuration Manager sean más seguros  
-Para hacer que los servidores de Configuration Manager sean más seguros, haga lo siguiente:
+## <a name="about-ssl-vulnerabilities"></a>Acerca de las vulnerabilidades SSL
+Para mejorar la seguridad de los clientes y servidores de Configuration Manager, siga estos pasos:
 
 -   Habilitar TLS 1.2
 
@@ -286,5 +286,5 @@ Para hacer que los servidores de Configuration Manager sean más seguros, haga l
 -   Deshabilitar SSL 3.0, TLS 1.0 y TLS 1.1 
 -   Volver a ordenar los conjuntos de cifrado relacionados con TLS 
 
-Para más información, consulte el siguiente artículo de Knowledge Base: [Cómo restringir el uso de ciertos algoritmos criptográficos y protocolos en Schannel.dll](https://support.microsoft.com/en-us/kb/245030/). Estos procedimientos no afectan a la funcionalidad de Configuration Manager.
+Para más información, vea [Cómo restringir el uso de ciertos algoritmos criptográficos y protocolos en Schannel.dll](https://support.microsoft.com/en-us/kb/245030/) y [Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/en-us/library/windows/desktop/bb870930.aspx) (Prioridad de los conjuntos de cifrado de SChannel). Estos procedimientos no afectan a la funcionalidad de Configuration Manager.
 

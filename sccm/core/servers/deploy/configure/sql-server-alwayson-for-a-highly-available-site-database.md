@@ -3,7 +3,7 @@ title: SQL Server Always On
 titleSuffix: Configuration Manager
 description: Planee el uso de un grupo de disponibilidad Always On de SQL Server con SCCM.
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 12/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,15 +15,15 @@ caps.latest.revision: "16"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 42d5a059e11dffc7890ec78ce7361ebfe905a050
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 7efd0c76a0723a98661b0861eb16298eee524f35
+ms.sourcegitcommit: f1535281b2c3fecff773b722c3f7590bf6ba10a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Preparación para usar grupos de disponibilidad AlwaysOn de SQL Server con Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Prepare System Center Configuration Manager para usar grupos de disponibilidad AlwaysOn de SQL Server como una solución de alta disponibilidad y recuperación ante desastres para la base de datos de sitio.  
 Configuration Manager admite el uso de grupos de disponibilidad:
@@ -78,7 +78,7 @@ Para obtener más información, consulte [Crear un punto de conexión de creaci�
 
 -   A partir de la versión 1706, se puede utilizar una réplica de confirmación asincrónica para recuperar una réplica sincrónica. Vea [las opciones de recuperación de la base de datos de sitio]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) en el tema Copia de seguridad y recuperación para obtener información sobre cómo realizar esta tarea.
     > [!CAUTION]  
-    > Configuration Manager no admite la conmutación por error para usar la réplica de confirmación asincrónica como la base de datos de sitio.
+    > Configuration Manager no admite la [conmutación por error](https://go.microsoft.com/fwlink/?linkid=626885) para usar la réplica de confirmación asincrónica como la base de datos de sitio.
 Dado que Configuration Manager no valida el estado de la réplica de confirmación asincrónica para confirmar que está actualizada, y que [por cuestiones de diseño una réplica de este tipo puede no estar sincronizada]( https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), el uso de una réplica de confirmación asincrónica como la base de datos de sitio puede poner en peligro la integridad de los datos y del sitio.
 
 Cada miembro de réplica debe cumplir lo siguiente:

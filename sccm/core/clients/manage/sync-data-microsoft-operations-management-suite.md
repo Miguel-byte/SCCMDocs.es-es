@@ -15,19 +15,19 @@ caps.latest.revision: "9"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 166f7c73f2050657a85bd5160f74c40cfd87fd7f
-ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
+ms.openlocfilehash: bfe500c160bf2ddffd060baabb44cda81337e1cc
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 01/02/2018
 ---
 #  <a name="sync-data-from-configuration-manager-to-the-microsoft-operations-management-suite"></a>Sincronizar datos de Configuration Manager con Microsoft Operations Management Suite
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede usar el **Asistente para servicios de Azure** para configurar la conexión desde Configuration Manager hasta el servicio en la nube de Operations Management Suite (OMS). A partir de la versión 1706, el asistente reemplaza los flujos de trabajo anteriores para configurar esta conexión. Para las versiones anteriores, consulte [Sincronización de datos de Configuration Manager con Microsoft Operations Management Suite (1702 y versiones anteriores)](#Sync-data-from-Configuration-Manager-to-the-Microsoft-Operations-Management-Suite-(1702-and-earlier)).
 
--   El asistente se utiliza para configurar los servicios en la nube para Configuration Manager, como OMS, la Tienda Windows para empresas (WSfB) y Azure Active Directory (Azure AD).  
+-   El asistente se usa para configurar los servicios en la nube para Configuration Manager, como OMS, Microsoft Store para Empresas y Azure Active Directory (Azure AD).  
 
 -   Configuration Manager se conecta a OMS para utilizar características como [Log Analytics](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) o [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics).
 

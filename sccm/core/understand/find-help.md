@@ -3,7 +3,7 @@ title: "Búsqueda de ayuda"
 titleSuffix: Configuration Manager
 description: "Busque recursos para obtener más información sobre System Center Configuration Manager."
 ms.custom: na
-ms.date: 2/8/2017
+ms.date: 12/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,61 +13,61 @@ ms.topic: article
 ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 caps.latest.revision: "19"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 205f59db7d0d830ab7fe31aee929d59da3d0aae1
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 73c057af033a91535d79c743e05df83601112626
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="find-help-for-using-system-center-configuration-manager"></a>Buscar ayuda sobre el uso de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Para más información sobre System Center Configuration Manager, use los recursos siguientes:  
+En este artículo se proporcionan varios recursos para buscar ayuda sobre el uso de Configuration Manager.  
 
--   [Información y soporte técnico](#bkmk_Info)  
+Para obtener ayuda sobre la accesibilidad, vea [Características de accesibilidad de System Center Configuration Manager](../../core/understand/accessibility-features.md).
 
-    -   [Realizar búsquedas en la biblioteca de documentación](#BKMK_SearchTips)  
 
-    -   [Blog del equipo de System Center Configuration Manager](#BKMK_ProductGroupBlog)  
-    -   [Opciones de soporte técnico y recursos de la comunidad](#BKMK_SupportOptions)
-
-  Para obtener ayuda sobre la accesibilidad, consulte [Accessibility features in System Center Configuration Manager](../../core/understand/accessibility-features.md) (Características de accesibilidad de System Center Configuration Manager).
-
-##  <a name="bkmk_Info"></a> Información y soporte técnico  
+##  <a name="bkmk_Info"></a> Documentación del producto  
  Use los recursos siguientes para obtener más información sobre Configuration Manager.  
 
--   **Para acceder a la documentación del producto más reciente de System Center Configuration Manager:** use la [Biblioteca de documentación para System Center Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=691974) de TechNet.
+-   Para acceder a la documentación más reciente del producto, comience en el [índice de biblioteca](https://docs.microsoft.com/sccm/)
 
--   **Para enviar comentarios sobre la documentación**: envíe comentarios con **UserVoice** en [System Center Configuration Manager Feedback (Documentation)](https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation) (Comentarios sobre System Center Configuration Manager [Documentación]).  
+-   Para proporcionar comentarios sobre la documentación, envíelos a través de [UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation)  
 
--   **Para descargar una copia archivada de la documentación:** vaya a la Galería de TechNet:
-
-    - [Versión 1602](https://gallery.technet.microsoft.com/documentation-for-system-ea90eaf1)
-    - [Versión 1511](https://gallery.technet.microsoft.com/documentation-for-system-ea90eaf1)
 
 ###  <a name="BKMK_SearchTips"></a> Realizar búsquedas en la biblioteca de documentación  
  Utilice las siguientes sugerencias de búsqueda para encontrar la información que necesita:  
 
--   Al usar el motor de búsqueda preferido para buscar contenido para System Center Configuration Manager, puede centrar los resultados de la búsqueda en la biblioteca de contenido actual si incluye los dos términos siguientes: **SCCM** y **Docs**.
+-   Al usar el motor de búsqueda preferido para buscar contenido para Configuration Manager, centre los resultados de la búsqueda en la biblioteca de contenido actual incluyendo los dos términos siguientes: **SCCM** y **Docs**.
 
--   Use términos de búsqueda que coincidan con los que vea en la interfaz de usuario (UI) y en la documentación en línea, en lugar de términos o abreviaturas no oficiales que pueda ver en el contenido de la comunidad. Por ejemplo, busque “punto de administración” en lugar de “MP”, “tipo de implementación” en lugar de “DT” y “actualizaciones de software” en lugar de “SUM”.  
+-   Use los términos de búsqueda que coincidan con la terminología en la interfaz de usuario y la documentación en línea. Evite términos no oficiales o abreviaciones que es posible que vea en el contenido de la Comunidad. Por ejemplo, busque “punto de administración” en lugar de “MP”, “tipo de implementación” en lugar de “DT” y “actualizaciones de software” en lugar de “SUM”.  
 
--   Al buscar en una página en TechNet o en el archivo de ayuda (por ejemplo, seleccione Ctrl+F1 y escriba los términos de búsqueda en el cuadro **Buscar**), en los resultados se excluye el texto de las secciones contraídas. Para buscar texto en las secciones contraídas, expanda las secciones antes de buscar en la página. Para hacerlo, seleccione el botón **Expandir todo** en la parte superior de la página o haga doble clic en cualquier sección contraída. Cuando se expanden todas las secciones, una búsqueda en la página realiza una búsqueda en todas las secciones de dicha página.  
+-   Para buscar dentro de un artículo que está viendo actualmente en docs.microsoft.com, presione Ctrl+F y, después, escriba los términos de búsqueda en el cuadro **Buscar** del explorador. 
 
--   Para buscar un tema en el archivo de ayuda, presione F1 y, después, escriba los términos de búsqueda en el cuadro de diálogo **Buscar**. El archivo de ayuda no admite la opción **Expandir todo** (tendrá que expandir de forma manual las secciones contraídas para que la búsqueda en la página encuentre texto en esas secciones).  
+-   En cada artículo de docs.microsoft.com se incluyen los siguientes campos para ayudar a buscar el contenido:
+    - **Búsqueda** en la esquina superior derecha. Para buscar todos los artículos, escriba los términos en este campo. Los artículos de la biblioteca de Configuration Manager incluyen el ámbito "ConfigMgr" de forma automática.
+    - **Filtro** encima de la tabla de contenido de la izquierda. Para buscar en la tabla de contenido actual, escriba los términos en este campo. Este campo solo compara los términos que aparecen en los títulos de artículo. 
 
--   Siempre que sea posible, utilice la biblioteca en línea de TechNet en lugar de documentación descargada. TechNet contiene la información más actualizada. Es posible que la información que busque no esté en la documentación descargada o que haya correcciones o información adicional en línea.  
 
--   Si le resulta más fácil y rápido buscar en la documentación almacenada de forma local, puede seleccionar varios temas en TechNet y guardarlos localmente. Primero, inicie sesión en TechNet. Después, en la parte superior de la página que quiera guardar de forma local, seleccione **Exportar** (junto a **Imprimir**). De este modo, aparecerá la pancarta **Exportar varios conjuntos de páginas** , que permite agregar y quitar las páginas que quiera guardar. Después, seleccione **Administrar páginas** para exportarlas. Para más información, haga clic en **Ayuda** en el mensaje emergente.  
+## <a name="product-feedback"></a>Comentarios sobre el producto
+Notifique los posibles defectos del producto a través de la [aplicación Centro de opiniones](https://support.microsoft.com/en-us/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app) integrada en Windows 10. Cuando **agregue nuevos comentarios**, no olvide seleccionar la categoría **Enterprise Management** y, después, elija una de las subcategorías siguientes:
+ - Cliente de Configuration Manager
+ - Consola de Configuration Manager
+ - Implementación del sistema operativo de Configuration Manager
+ - Servidor de Configuration Manager
 
-###  <a name="BKMK_ProductGroupBlog"></a> Blog del equipo de System Center Configuration Manager  
- El equipo de ingeniería de Configuration Manager y los equipos asociados usan el [System Center Configuration Manager Team Blog](http://go.microsoft.com/fwlink/?LinkId=191941) (Blog del equipo de System Center Configuration Manager) para ofrecerle información técnica y otras noticias sobre Configuration Manager y tecnologías relacionadas. Nuestras entradas de blog complementan la documentación del producto y la información de soporte técnico.  
+Siga usando nuestra [página User Voice](http://configurationmanager.uservoice.com/) para votar nuevas ideas de características en Configuration Manager.
 
-###  <a name="BKMK_SupportOptions"></a> Opciones de soporte técnico y recursos de la comunidad  
+
+##  <a name="BKMK_ProductGroupBlog"></a> Blog del equipo de Configuration Manager  
+ El equipo de ingeniería de Configuration Manager y los equipos asociados usan el [blog Enterprise Mobility + Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=system-center-configuration-manager) para ofrecer información técnica y otras noticias sobre Configuration Manager y tecnologías relacionadas. Nuestras entradas de blog complementan la documentación del producto y la información de soporte técnico.  
+
+
+##  <a name="BKMK_SupportOptions"></a> Opciones de soporte técnico y recursos de la comunidad  
  Los siguientes vínculos proporcionan información sobre las opciones de soporte técnico y los recursos de la comunidad:  
 
 -   [Soporte técnico de Microsoft](http://go.microsoft.com/fwlink/?LinkId=243064)  
@@ -75,3 +75,4 @@ Para más información sobre System Center Configuration Manager, use los recurs
 -   [Configuration Manager Community: System Center Configuration Manager (Current Branch) Survival Guide](http://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx ) (Comunidad de Configuration Manager: Guía de supervivencia de System Center Configuration Manager [rama actual])  
 
 -   [Página de foros de Configuration Manager](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)  
+    <!-- NOTE: the above URL requires "en-US" for the category to work -->

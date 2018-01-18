@@ -3,7 +3,7 @@ title: "Novedades de la MDM híbrida"
 titleSuffix: Configuration Manager
 description: "Obtenga información sobre las nuevas características de administración de dispositivos móviles disponibles para implementaciones híbridas con Configuration Manager e Intune."
 ms.custom: na
-ms.date: 11/29/2017
+ms.date: 01/04/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,15 +14,15 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 189e737eca5dee5bca3f0748cd1b4d944f868565
-ms.sourcegitcommit: 4af1da9c18f5bdff31426cf1d58c7d949372292d
+ms.openlocfilehash: 243daf8626e329214ce1b94f109d19773bbc57c5
+ms.sourcegitcommit: 2da6b06818371e93f28e36cadf3a154d50ce5bf4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con System Center Configuration Manager y Microsoft Intune
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En este artículo se proporciona información sobre nuevas características de administración de dispositivos móviles (MDM) disponibles para implementaciones híbridas con System Center Configuration Manager y Microsoft Intune.     
 
@@ -38,8 +38,15 @@ En cada sección de este artículo se enumeran las características híbridas or
 |Categorías de características|Descripción|
 |-|-|
 |**Novedades de Microsoft Intune** | En general, todas las características que se enumeran en esta categoría deberían funcionar con todas las versiones de Configuration Manager, incluidas las versiones de System Center 2012 R2 Configuration Manager, ya que estas características solo necesitan el servicio de Intune y ninguna función adicional en Configuration Manager.|
-|**Novedades de Configuration Manager Technical Preview**| Todas las funciones que se enumeran en esta categoría funcionan únicamente con la versión especificada de Technical Preview. Para probar estas características, debe instalar la versión de Technical Preview especificada en la descripción de la característica. Para más información, consulte [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md) (Technical Preview para System Center Configuration Manager).|
+|**Novedades de Configuration Manager Technical Preview**| Todas las funciones que se enumeran en esta categoría funcionan únicamente con la versión especificada de Technical Preview. Para probar estas características, debe instalar la versión de Technical Preview especificada en la descripción de la característica. Para obtener más información, consulte [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md) (Technical Preview para System Center Configuration Manager).|
 |**Novedades de Configuration Manager (rama actual)**| Todas las características que se enumeran en esta categoría funcionan únicamente con la versión especificada de Configuration Manager (rama actual), como la versión 1511 o 1602. Si usa una versión anterior de Configuration Manager para su implementación híbrida, debe actualizar a la versión de Configuration Manager (rama actual) que se especifica en la descripción de la característica. Para obtener más información, consulte [Upgrade to System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md) (Actualizar a System Center Configuration Manager).|
+
+## <a name="december-2017"></a>Diciembre de 2017
+
+### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune
+
+- **Implementaciones de aplicaciones disponibles que ahora se admiten para Android Enterprise**    
+  Ahora puede implementar aplicaciones de Android Enterprise (anteriormente Android for Work) como **Disponibles**, además de **Requeridas**. Para más información, vea [Cómo crear aplicaciones Android con System Center Configuration Manager](/sccm/mdm/deploy-use/creating-android-applications).
 
 
 ## <a name="november-2017"></a>Noviembre de 2017
@@ -374,9 +381,9 @@ También se incluyen las siguientes características adicionales híbridas en la
 
   Para más información sobre las aplicaciones de iOS compradas por volumen, vea [Administrar aplicaciones de iOS compradas a través de un programa de compras por volumen](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
-- **Compatibilidad con las aplicaciones de línea de negocio de la Tienda Windows para empresas**
+- **Compatibilidad con aplicaciones de línea de negocio en Microsoft Store para Empresas**
 
-  Ahora se pueden sincronizar aplicaciones de línea de negocio personalizadas en la Tienda Windows para empresas.
+  Ahora se pueden sincronizar las aplicaciones de línea de negocio personalizadas desde Microsoft Store para Empresas.
 
 - **Nuevas herramientas de supervisión de Mobile Threat Defense**
 

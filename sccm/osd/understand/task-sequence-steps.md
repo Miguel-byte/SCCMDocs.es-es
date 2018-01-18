@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 caps.latest.revision: "26"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 40a2d91baf8c02cdda96e9520ce155032272ebdd
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 77ce50cf363c9429f9ef38aa2acf5b898bc8052d
+ms.sourcegitcommit: b97aa456b392d817bc9723cbd5c0ce6602e7ae34
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/28/2017
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Pasos de la secuencia de tareas en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Los siguientes pasos de secuencia de tareas se pueden agregar a una secuencia de tareas de Configuration Manager. Para obtener información sobre cómo editar una secuencia de tareas, consulte [Editar una secuencia de tareas](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
 
@@ -1304,7 +1304,7 @@ Antes de la versión 1610 de Configuration Manager, este paso realiza las siguie
 
  Si el nombre de archivo no tiene una extensión de nombre de archivo especificada, Configuration Manager prueba con .com, .exe y .bat. Si el nombre de archivo tiene una extensión que no es un archivo ejecutable, Configuration Manager intenta aplicar una asociación local. Por ejemplo, si la línea de comandos es readme.gif, Configuration Manager inicia la aplicación especificada en el equipo de destino para abrir archivos .gif.  
 
- Ejemplos:  
+ Ejemplo:  
 
  **setup.exe /a**  
 
@@ -1319,7 +1319,7 @@ Antes de la versión 1610 de Configuration Manager, este paso realiza las siguie
  **Iniciar en**  
  Especifica la carpeta ejecutable para el programa, con un máximo de 127 caracteres. Esta carpeta puede ser una ruta de acceso absoluta en el equipo de destino, o una ruta de acceso relacionada con la carpeta del punto de distribución que contiene el paquete. Este campo es opcional.  
 
- Ejemplos:  
+ Ejemplo:  
 
  **c:\officexp**  
 
@@ -1477,7 +1477,7 @@ Tenga en cuenta lo siguiente al agregar una secuencia de tareas secundaria a una
 
 -   **Marca y modelo**: use esta categoría de regla para evaluar los valores de marca y modelo de un equipo. La marca y el modelo deben evaluarse como true para que la regla se evalúe como true.   
 
-    A partir de la versión 1610 de Configuration Manager, puede especificar un asterisco (*****) y un signo de interrogación (**?**) como caracteres comodín, donde ***** coincide con varios caracteres y **?** coincide con un carácter simple. Por ejemplo, la cadena "DELL*900?" coincidirá con DELL-ABC-9001 y con DELL9009.
+    A partir de la versión 1610 de Configuration Manager, puede especificar un asterisco (**&#42;**) y un signo de interrogación (**?**) como caracteres comodín, donde **&#42;** coincide con varios caracteres y **?** coincide con un carácter simple. Por ejemplo, la cadena "DELL*900?" coincidirá con DELL-ABC-9001 y con DELL9009. 
 
 -   **Variable de secuencia de tareas**: use esta categoría de regla para agregar una variable de secuencia de tareas, la condición y el valor que quiere evaluar. La regla se evalúa como true cuando el valor establecido para la variable cumple la condición especificada.  
 

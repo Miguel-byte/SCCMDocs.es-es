@@ -3,7 +3,7 @@ title: Versiones de SQL Server admitidas
 titleSuffix: Configuration Manager
 description: "Obtenga los requisitos de configuración y versión de SQL Server para hospedar una base de datos de sitio de System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/30/2017
+ms.date: 12/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,15 +15,15 @@ caps.latest.revision: "21"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 7006d6cd03da53daf0f6cb59cc4ef83e7e800a1e
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: ccc07aa709c0a168a8df7a1bd7944e9399bec13f
+ms.sourcegitcommit: 3dea4342f79909c5064289bd18ed36269812e30c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>Versiones de SQL Server compatibles con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Cada sitio de System Center Configuration Manager requiere una versión y una configuración de SQL Server compatibles para hospedar la base de datos del sitio.  
 
@@ -67,21 +67,29 @@ La replicación transaccional de SQL Server solo se admite para replicar objetos
 
  A menos que se especifique lo contrario, las versiones siguientes de SQL Server son compatibles con todas las versiones activas de System Center Configuration Manager. Si se agrega soporte para una nueva versión de SQL Server o Service Pack, se notificará la versión de Configuration Manager que agrega dicha compatibilidad. De forma similar, si la compatibilidad está en desuso, busque detalles sobre las versiones afectadas de Configuration Manager.   
 
-La compatibilidad para un Service Pack de SQL Server específico incluye actualizaciones acumulativas para dicho Service Pack, a menos que una actualización acumulativa interrumpa la compatibilidad con versiones anteriores para dicha versión del Service Pack base. Cuando no se indica ninguna versión del Service Pack, la compatibilidad es para dicha versión de SQL Server sin Service Pack. En el futuro, si se publica algún Service Pack para esa versión, se declarará una instrucción independiente de compatibilidad antes de que se admita esa nueva versión del Service Pack.
+La compatibilidad para un Service Pack de SQL Server específico incluye actualizaciones acumulativas a menos que interrumpan la compatibilidad con versiones anteriores para la versión del Service Pack base. Cuando no se indica ninguna versión del Service Pack, la compatibilidad es para la versión de SQL Server sin Service Pack. En el futuro, si se publica algún Service Pack para una versión de SQL Server, se declarará una instrucción independiente de compatibilidad antes de que se admita la versión nueva del Service Pack.
 
 
 > [!IMPORTANT]  
 >  Cuando usa SQL Server Standard para la base de datos en el sitio de administración central, limita el número total de clientes que una jerarquía puede admitir. Consulte [Números de tamaño y escala](../../../core/plan-design/configs/size-and-scale-numbers.md).
 
+### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017: Standard, Enterprise  
+Puede usar esta versión de SQL Server, con una [versión 2 de actualización acumulativa](https://support.microsoft.com/help/4052574) mínima, empezando por [Configuration Manager versión 1710](https://docs.microsoft.com/en-us/sccm/core/plan-design/changes/whats-new-in-version-1710) para los sitios siguientes: 
+
+-   Un sitio de administración central  
+-   Un sitio primario  
+-   Un sitio secundario  
+<!--SMS.498506-->
+
 ### <a name="sql-server-2016-sp1-standard-enterprise"></a>SQL Server 2016 SP1: Standard, Enterprise  
-Puede utilizar esta versión de SQL Server sin una versión de actualización acumulativa mínima para lo siguiente:  
+Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:  
 
 -   Un sitio de administración central  
 -   Un sitio primario  
 -   Un sitio secundario  
 
 ### <a name="sql-server-2016-standard-enterprise"></a>SQL Server 2016: Standard, Enterprise  
-Puede utilizar esta versión de SQL Server sin una versión de actualización acumulativa mínima para lo siguiente:  
+Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:  
 
 -   Un sitio de administración central  
 -   Un sitio primario  
@@ -89,28 +97,28 @@ Puede utilizar esta versión de SQL Server sin una versión de actualización ac
 
 
 ### <a name="sql-server-2014-sp2-standard-enterprise"></a>SQL Server 2014 SP2: Standard, Enterprise  
-Puede utilizar esta versión de SQL Server sin una versión de actualización acumulativa mínima para lo siguiente:  
+Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:  
 
 -   Un sitio de administración central  
 -   Un sitio primario  
 -   Un sitio secundario
 
 ### <a name="sql-server-2014-sp1-standard-enterprise"></a>SQL Server 2014 SP1: Standard, Enterprise  
- Puede utilizar esta versión de SQL Server sin una versión de actualización acumulativa mínima para lo siguiente:  
+ Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:  
 
 -   Un sitio de administración central  
 -   Un sitio primario  
 -   Un sitio secundario
 
 ### <a name="sql-server-2012-sp4-standard-enterprise"></a>SQL Server 2012 SP4: Standard, Enterprise  
- Puede utilizar esta versión de SQL Server sin una versión de actualización acumulativa mínima para lo siguiente:  
+ Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:  
 
 -   Un sitio de administración central  
 -   Un sitio primario  
 -   Un sitio secundario  
 
 ### <a name="sql-server-2012-sp3-standard-enterprise"></a>SQL Server 2012 SP3: Standard, Enterprise  
- Puede utilizar esta versión de SQL Server sin una versión de actualización acumulativa mínima para lo siguiente:  
+ Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:  
 
 -   Un sitio de administración central  
 -   Un sitio primario  
@@ -118,7 +126,7 @@ Puede utilizar esta versión de SQL Server sin una versión de actualización ac
 
 <!-- Support for this service pack version has been dropped by Microsoft    
 ### SQL Server 2012 SP2: Standard, Enterprise   
- You can use this version of SQL Server with no minimum cumulative update version for the following:  
+ You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
 
 -   A central administration site  
 -   A primary site  
@@ -129,40 +137,45 @@ Puede utilizar esta versión de SQL Server sin una versión de actualización ac
   Esta versión de SQL Server no es compatible [a partir de la versión 1702](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database).  
  Esta versión de SQL Server sigue siendo compatible cuando se utiliza una versión de Configuration Manager anterior a la 1702.
 
-Si es compatible con su versión de Configuration Manager, puede utilizar esta versión de SQL Server sin una versión de actualización acumulativa mínima para lo siguiente:  
+Si es compatible con la versión de Configuration Manager, puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:  
 
 -   Un sitio de administración central  
 -   Un sitio primario
 -   Un sitio secundario
 
+### <a name="sql-server-2017-express"></a>SQL Server 2017 Express   
+Puede usar esta versión de SQL Server, con una [versión 2 de actualización acumulativa](https://support.microsoft.com/help/4052574) mínima, empezando por [Configuration Manager versión 1710](https://docs.microsoft.com/en-us/sccm/core/plan-design/changes/whats-new-in-version-1710) para los sitios siguientes:
+-   Un sitio secundario
+<!--SMS.498506-->
+
 ### <a name="sql-server-2016-express-sp1"></a>SQL Server 2016 Express SP1  
-Puede utilizar esta versión de SQL Server sin una versión de actualización acumulativa mínima para lo siguiente:
+Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:
 -   Un sitio secundario
 
 ### <a name="sql-server-2016-express"></a>SQL Server 2016 Express
-Puede utilizar esta versión de SQL Server sin una versión de actualización acumulativa mínima para lo siguiente:
+Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:
 -   Un sitio secundario
 
 
 ### <a name="sql-server-2014-express-sp2"></a>SQL Server 2014 Express SP2   
-Puede utilizar esta versión de SQL Server sin una versión de actualización acumulativa mínima para lo siguiente:  
+Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:  
 
 -   Un sitio secundario  
 
 
 ### <a name="sql-server-2014-express-sp1"></a>SQL Server 2014 Express SP1   
- Puede utilizar esta versión de SQL Server sin una versión de actualización acumulativa mínima para lo siguiente:  
+ Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:  
 
 -   Un sitio secundario  
 
 ### <a name="sql-server-2012-express-sp3"></a>SQL Server 2012 Express SP3  
-Puede utilizar esta versión de SQL Server sin una versión de actualización acumulativa mínima para lo siguiente:  
+Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:  
 
 -   Un sitio secundario  
 
 <!-- Support for this service pack version has been dropped by Microsoft   
 ### SQL Server 2012 Express SP2   
- You can use this version of SQL Server with no minimum cumulative update version for the following:  
+ You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
 
 -   A secondary site  
 -->
@@ -188,7 +201,7 @@ Puede utilizar esta versión de SQL Server sin una versión de actualización ac
  Configuration Manager requiere la **autenticación de Windows** para validar las conexiones con la base de datos.  
 
  **Instancia de SQL Server:**  
- Debe usar una instancia dedicada de SQL Server para cada sitio. Esto puede ser una **instancia con nombre** o una **instancia predeterminada**.  
+ Debe usar una instancia dedicada de SQL Server para cada sitio. La instancia puede ser una **instancia con nombre** o la **instancia predeterminada**.  
 
  **Memoria de SQL Server:**  
  Reserve memoria para SQL Server con SQL Server Management Studio y configure el valor **Memoria mínima del servidor** en **Opciones de memoria del servidor**. Para más información sobre cómo establecer una cantidad fija de memoria, vea [Cómo establecer una cantidad fija de memoria (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759).  
@@ -227,7 +240,7 @@ Puede utilizar esta versión de SQL Server sin una versión de actualización ac
 
 Cuando el equipo que ejecuta SQL Server no usa su cuenta de sistema local para ejecutar el servicio de SQL Server, debe configurar el SPN de la cuenta que ejecuta el servicio de SQL Server en Active Directory Domain Services. (Cuando se usa la cuenta del sistema, el SPN se registra automáticamente).
 
-Para obtener más información sobre los SPN de la base de datos del sitio, vea [Administrar el SPN para el servidor de base de datos del sitio](../../../core/servers/manage/modify-your-infrastructure.md#bkmk_SPN) en el tema [Modificar la infraestructura de System Center Configuration Manager](../../../core/servers/manage/modify-your-infrastructure.md).  
+Para obtener más información sobre los SPN de la base de datos del sitio, vea [Administrar el SPN para el servidor de base de datos del sitio](../../../core/servers/manage/modify-your-infrastructure.md#bkmk_SPN) en el artículo [Modificar la infraestructura de System Center Configuration Manager](../../../core/servers/manage/modify-your-infrastructure.md).  
 
 Para obtener información sobre cómo cambiar la cuenta que usa el servicio de SQL Server, vea [Cambiar la cuenta de inicio del servicio para SQL Server (Administrador de configuración de SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=237661).  
 
@@ -242,11 +255,11 @@ SQL Server Reporting Services se necesita para instalar un punto de servicios de
 Para la comunicación con el motor de base de datos de SQL Server y para la replicación entre sitios, puede usar las configuraciones del puerto de SQL Server predeterminadas o especificar puertos personalizados:  
 
 -   Las **comunicaciones entre sitios** usan SQL Server Service Broker, que usa de manera predeterminada el puerto TCP 4022.  
--   La **comunicación entre sitios** entre el motor de base de datos de SQL Server y varios roles de sistema de sitio de Configuration Manager tienen el puerto TCP 1433 como predeterminado. Los siguientes roles de sistema de sitio se comunican directamente con la base de datos de SQL Server:  
+-   Las **comunicaciones entre sitios** entre el motor de base de datos de SQL Server y varios roles de sistema de sitio de Configuration Manager usan el puerto TCP 1433 de forma predeterminada. Los siguientes roles de sistema de sitio se comunican directamente con la base de datos de SQL Server:  
 
     -   Punto de administración  
     -   Equipo de proveedor de SMS  
-    -   Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.  
+    -   Punto de servicios de informes  
     -   Servidor de sitio  
 
 Si un equipo que ejecuta SQL Server hospeda una base de datos de más de un sitio, cada base de datos debe usar una instancia independiente de SQL Server. Además, cada instancia debe estar configurada para usar un conjunto de puertos único.  

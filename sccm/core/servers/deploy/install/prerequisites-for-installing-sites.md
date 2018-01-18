@@ -15,15 +15,15 @@ caps.latest.revision: "5"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 2875a90b1f2ae853563d7716fcfe634efd551fe5
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 07e57a15834d2f29444f47b9503cc04947f36150
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="prerequisites-for-installing-system-center-configuration-manager-sites"></a>Requisitos previos para instalar sitios de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Antes de iniciar una instalación de sitio, se recomienda obtener información sobre los requisitos previos necesarios para instalar los diferentes tipos de sitios de System Center Configuration Manager.
 
@@ -106,7 +106,7 @@ Si usa uno de los siguientes servicios de Azure con Configuration Manager y plan
 Servicios:  
 -       [Operations Manager Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) (OMS)
 -       [Preparación para la actualización](/sccm/core/clients/manage/upgrade/upgrade-analytics)
--       [Tienda Windows para empresas](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+-       [Microsoft Store para Empresas](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
 
 Para resolver el problema, siga estos pasos:
  1.    En la consola de Configuration Manager, elimine el servicio de Azure desde el nodo de servicios de Azure.

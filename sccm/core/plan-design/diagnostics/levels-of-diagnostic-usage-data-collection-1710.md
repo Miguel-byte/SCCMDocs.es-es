@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: ce5239340032db7deb5bcb20d00aba77c9b140e2
-ms.sourcegitcommit: da27d37cc4e4e06cf23758846cdd7acb617f744b
+ms.openlocfilehash: 1129da43f9c50d21f2ce8392721c77a4e614e410
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1710-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de uso para diagnóstico de la versión 1710 de System Center Configuration Manager
 
@@ -168,7 +168,7 @@ Para la versión 1710 de System Center Configuration Manager, este nivel incluye
 
    - Recuento de tipos de implementación de Windows Installer por configuración de contenido de desinstalación
 
-   - Recuento de las aplicaciones de la Tienda Windows para empresas y estadísticas de sincronización (incluidos los tipos resumidos de aplicaciones, el estado de la aplicación con licencia y el número de aplicaciones con licencia en línea y sin conexión)  
+   - Recuento de las aplicaciones de Microsoft Store para Empresas y estadísticas de sincronización (incluidos los tipos resumidos de aplicaciones, el estado de la aplicación con licencia y el número de aplicaciones con licencia en línea y sin conexión)  
 
    - Duración y el tipo de ventana de mantenimiento  
 
@@ -519,4 +519,4 @@ Para la versión 1710 de System Center Configuration Manager, este nivel incluye
 
 - Tipo de directivas de acceso condicional de EAS (bloquear o cuarentena) para dispositivos que administra Intune
 
-- Detalles de la aplicación de la Tienda Windows para empresas (lista no agregada de aplicaciones sincronizadas, incluido AppID, el estado en línea o sin conexión y el recuento total de licencias adquiridas)
+- Detalles de la aplicación de Microsoft Store para Empresas (lista no agregada de aplicaciones sincronizadas, incluido AppID, el estado en línea o sin conexión, y el recuento total de licencias compradas)

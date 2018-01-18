@@ -3,7 +3,7 @@ title: "Administración del acceso a servicios de O365 para equipos administrado
 titleSuffix: Configuration Manager
 description: Aprenda a configurar el acceso condicional para equipos administrados por System Center Configuration Manager.
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 12/19/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "15"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: a49e53ca81d8bd01747c41ab9c25de7fd6396f32
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: bf38358d12c2617d924fe59bf7bf7457dfa95143
+ms.sourcegitcommit: 6c2aa79924c0e7fc64ef5e9003498fc00c349db9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Administración del acceso a servicios de O365 para equipos administrados por System Center Configuration Manager
 
@@ -27,13 +27,10 @@ ms.lasthandoff: 10/12/2017
 
 A partir de la versión 1602 de Configuration Manager, puede configurar el acceso condicional para equipos administrados por System Center Configuration Manager.  
 
-> [!IMPORTANT]  
-> Se trata de una característica de versión preliminar disponible en las actualizaciones 1602, 1606 y 1610. Se incluyen características de versión preliminar en el producto para la realización de las primeras pruebas en un entorno de producción, pero no se debe considerar que ya estén listas para él. Para más información, consulte [Use pre-release features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease) (Uso de características de la versión preliminar a partir de las actualizaciones).
-> - Después de instalar la actualización 1602, el tipo de característica aparece como publicado, aunque se trate de una versión preliminar.
-> - Si actualiza de la versión 1602 a la 1606, el tipo de característica se muestra como liberado aunque se conserve la versión preliminar.
-> - Si actualiza de la versión 1511 directamente a la versión 1606, el tipo de característica se muestra como versión preliminar.
+> [!Tip]  
+> Esta característica se introdujo por primera vez en la versión 1602 como una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1702, ya no es una característica de versión preliminar.
 
-Si desea obtener información sobre cómo configurar el acceso condicional para dispositivos inscritos y administrados por Intune o equipos que están unidos a un dominio y cuya compatibilidad no se evalúa, consulte [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md) (Administración del acceso a servicios en System Center Configuration Manager).
+Para obtener información sobre cómo configurar el acceso condicional para dispositivos inscritos y administrados por Microsoft Intune, vea [Administrar el acceso a servicios en System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md). En ese artículo también se describen los dispositivos que están unidos a un dominio y no se evalúan para cumplimiento.
 
 ## <a name="supported-services"></a>Servicios compatibles  
 
@@ -57,7 +54,7 @@ Si desea obtener información sobre cómo configurar el acceso condicional para 
     > En el caso de servidores de Windows que puedan tener varios usuarios que hayan iniciado sesión de manera simultánea, se deben implementar las mismas directivas de acceso condicional a todos esos usuarios.
 
 ## <a name="configure-conditional-access"></a>Configuración de acceso condicional  
- Para configurar el acceso condicional, primero debe crear una directiva de cumplimiento y configurar la directiva de acceso condicional. Al configurar las directivas de acceso condicional para equipos, puede requerir que los equipos se atengan a la directiva de cumplimiento para acceder a los servicios Exchange Online y SharePoint Online.  
+ Para configurar el acceso condicional, primero debe crear una directiva de cumplimiento y configurar la directiva de acceso condicional. Al configurar directivas de acceso condicional para PC, puede requerir que los PC se atengan a la directiva de cumplimiento para tener acceso a los servicios Exchange Online y SharePoint Online.  
 
 ### <a name="prerequisites"></a>Requisitos previos  
 
@@ -67,36 +64,46 @@ Si desea obtener información sobre cómo configurar el acceso condicional para 
 
  Los equipos deben cumplir los requisitos siguientes:  
 
--   [Requisitos previos](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1) para el registro automático de dispositivos con Azure Active Directory  
+-   [Requisitos previos](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) para el registro automático de dispositivos con Azure Active Directory  
 
      Puede registrar equipos con Azure AD a través de la directiva de cumplimiento.  
 
     -   Para equipos con Windows 8.1 y Windows 10, puede usar una directiva de grupo de Active Directory para configurar los dispositivos a fin de que se registren automáticamente en Azure AD.  
 
-    -   Para equipos con Windows 7, debe implementar el paquete de software de registro de dispositivo en el equipo con Windows 7 a través de System Center Configuration Manager. Puede encontrar más información en el tema [Registro automático de dispositivos en Azure Active Directory para dispositivos Windows unidos a un dominio](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   Para equipos con Windows 7, debe implementar el paquete de software de registro de dispositivo en el equipo con Windows 7 a través de System Center Configuration Manager. Puede encontrar más información en el artículo [Registro automático de dispositivos en Azure Active Directory para dispositivos Windows unidos a un dominio](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).  
 
--   Debe usar Office 2013 u Office 2016 con la autenticación moderna [habilitada](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a).  
+-   Debe usar Office 2013 u Office 2016 con la autenticación moderna [habilitada](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a).  
 
- Los pasos descritos a continuación se aplican a Exchange Online y SharePoint Online.  
+ Los pasos siguientes se aplican a Exchange Online y SharePoint Online  
 
 ### <a name="step-1-configure-compliance-policy"></a>Paso 1. Configurar directiva de cumplimiento  
  En la consola de Configuration Manager, cree una directiva de cumplimiento con las reglas siguientes:  
 
--   Requerir registro en Azure Active Directory: esta regla comprueba si el dispositivo del usuario está unido al lugar de trabajo en Azure AD; de lo contrario, el dispositivo se registra automáticamente en Azure AD. El registro automático solo se admite en Windows 8.1. Para equipos con Windows 7, implemente un archivo MSI para realizar el registro automático. Para más información, consulte [Registro automático de dispositivos en Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)  
+-   **Requerir registro en Azure Active Directory:** esta regla comprueba si el dispositivo del usuario está unido al lugar de trabajo en Azure AD; de lo contrario, el dispositivo se registra automáticamente en Azure AD. El registro automático solo se admite en Windows 8.1. Para equipos con Windows 7, implemente un archivo MSI para realizar el registro automático. Para más información, vea [Registro automático de dispositivos en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
 
--   **Todas las actualizaciones necesarias que se instalan con una fecha límite anterior a un número determinado de días**: esta regla comprueba si el dispositivo del usuario tiene todas las actualizaciones necesarias (especificadas en la regla Actualizaciones automáticas requeridas) dentro de la fecha límite y el período de gracia que usted especifique e instala automáticamente cualquier actualización necesaria pendiente.  
+-   **Se han instalado todas las actualizaciones necesarias con una caducidad superior a un determinado número de días**: esta regla comprueba si el dispositivo del usuario tiene todas las actualizaciones necesarias (especificadas en la regla Actualizaciones automáticas requeridas) dentro de la fecha límite y el período de gracia que especifique e instala automáticamente cualquier actualización requerida pendiente.  
 
--   **Requerir cifrado de unidad BitLocker**: se trata de una comprobación para ver si la unidad principal (por ejemplo, C:\\\) del dispositivo está cifrada con BitLocker. Si el cifrado BitLocker no está habilitado en el dispositivo primario, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
+-   **Requerir cifrado de unidad BitLocker**: esta regla comprueba si la unidad principal (por ejemplo, C:\\) del dispositivo está cifrada con BitLocker. Si el cifrado BitLocker no está habilitado en el dispositivo primario, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
 
--   **Requerir antimalware:** se trata de una comprobación para ver si el software antimalware (System Center Endpoint Protection o Windows Defender solamente) está habilitado y en ejecución. Si no está habilitado, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
+-   **Requerir Antimalware:** esta regla comprueba si System Center Endpoint Protection o Windows Defender está habilitado y en ejecución. Si no está habilitado, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
+
+-   **El servicio de atestación de estado declara que tiene un estado correcto:** esta condición incluye cuatro subreglas para comprobar el cumplimiento del dispositivo en el servicio de atestación de estado de dispositivo. Para más información, vea [Atestación de estado](/sccm/core/servers/manage/health-attestation). 
+
+    - **Debe estar habilitado BitLocker en el dispositivo**
+    - **Debe estar habilitado el arranque seguro en el dispositivo** 
+    - **Debe estar habilitada la integridad de código en el dispositivo**
+    - **Debe estar habilitado el antimalware de inicio temprano en el dispositivo**
+
+>[!Tip]
+> Los criterios de acceso condicional de atestación de estado del dispositivo, que se introdujeron con la versión 1710, son una característica de versión preliminar. Para habilitar esta característica, vea [Características de versión preliminar](/sccm/core/servers/manage/pre-release-features). 
 
 ### <a name="step-2-evaluate-the-effect-of-conditional-access"></a>Paso 2. Evaluar el impacto del acceso condicional  
- Ejecute el informe de compatibilidad de acceso condicional. Se puede encontrar en la sección Supervisión, en Informes > Administración de compatibilidad y configuración. Esto muestra el estado de cumplimiento para todos los dispositivos.  Se bloqueará el acceso de los dispositivos registrados como no compatibles a Exchange Online y SharePoint Online.  
+ Ejecute el informe de compatibilidad de acceso condicional. Se puede encontrar en la sección Supervisión, en Informes > Administración de compatibilidad y configuración. En este informe se muestra el estado de cumplimiento para todos los dispositivos.  Se bloquea el acceso de los dispositivos registrados como no compatibles a Exchange Online y SharePoint Online.  
 
  ![CA&#95;compliance&#95;report](media/CA_compliance_report.png)  
 
 ### <a name="configure-active-directory-security-groups"></a>Configurar grupos de seguridad de Active Directory  
- Las directivas de acceso condicional se dirigen a grupos de usuarios en función de los tipos de directivas. Estos grupos contienen los usuarios de destino o exentos de la directiva. Cuando un usuario es destinatario de una directiva, cada dispositivo que use debe ser conforme con el fin de obtener acceso al servicio.  
+ Las directivas de acceso condicional se dirigen a grupos de usuarios en función de los tipos de directivas. Estos grupos contienen los usuarios destinatarios de la directiva o exentos de ella. Cuando un usuario es destinatario de una directiva, cada dispositivo que use debe ser conforme con el fin de obtener acceso al servicio.  
 
  Grupos de usuarios de seguridad de Active Directory Estos grupos de usuarios se deben sincronizar con Azure Active Directory. Estos grupos se pueden configurar también en el Centro de administración de Office 365 o en el Portal de cuentas de Intune.  
 
@@ -105,7 +112,7 @@ Si desea obtener información sobre cómo configurar el acceso condicional para 
 -   **Grupos destinatarios**: grupos de usuarios a los que se aplica la directiva. Debe usarse el mismo grupo para la directiva de cumplimiento y de acceso condicional.  
 
 -   **Grupos exentos**: grupos de usuarios que están exentos de la directiva (opcional)  
-    Si un usuario pertenece a ambos, estará exento de la directiva.  
+    Si un usuario pertenece a ambos, está exento de la directiva.  
 
      Solo se evalúan los grupos que son destinatarios de la directiva de acceso condicional.  
 
@@ -119,7 +126,7 @@ Si desea obtener información sobre cómo configurar el acceso condicional para 
 
 3.  En la pestaña **Inicio** , en el grupo **Vínculos** , haga clic en **Configurar directiva de acceso condicional en la consola de Intune**. Puede que deba proporcionar el nombre de usuario y la contraseña de la cuenta utilizada para conectar Configuration Manager con Intune.  
 
-     Se abrirá la consola de administración de Intune.  
+     Se abre la consola de administración de Intune.  
 
 4.  Para Exchange Online, en la consola de administración de Microsoft Intune, haga clic en **Directiva > Acceso condicional > Directiva de Exchange Online**.  
 
@@ -136,19 +143,10 @@ Si desea obtener información sobre cómo configurar el acceso condicional para 
 
 7.  Haga clic en **Guardar** para crear y guardar la directiva.  
 
- Los usuarios finales que están bloqueados debido a la falta de cumplimiento van a ver información de cumplimiento en el Centro de software de System Center Configuration Manager e iniciarán una nueva evaluación de directivas cuando se corrijan los problemas de cumplimiento.  
+Los usuarios ven la información de cumplimiento en el Centro de software. Cuando se bloqueen debido al no cumplimiento, inicie una nueva evaluación de directiva después de corregir los problemas de cumplimiento.  
 
-<!---
-##  <a name="bkmk_KnownIssues"></a> Known issues  
- You may see the following issues when using this feature:  
 
--   In this 1602 update,  the 5 day compliance is not enforced. Even if compliance check on the end-user's device has happened more than 5 days ago, users still can access Office 365 and SharePoint online.  
-
--   When a device is not compliant with the compliance policy, the reason is not automatically displayed. The end- user must go to the new Software Center to find the reason for non-compliance. The reason is displayed in the Device compliance section of the Software Center.  
-
--   Windows 10 users may see multiple access failures when trying to reach O365 and/or SharePoint online resources. Note that conditional access is not fully supported for Windows 10.  
---->
 ## <a name="see-also"></a>Consulte también
 
-- [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md) (Proteger la infraestructura de datos y del sitio con System Center Configuration Manager)
+- [Proteger la infraestructura de datos y del sitio con System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)
 - [Conditional access troubleshooting flow-chart for Configuration Manager](https://gallery.technet.microsoft.com/Conditional-access-fd747c1a?redir=0) (Gráfico del flujo para la solución de problemas de acceso condicional para Configuration Manager)

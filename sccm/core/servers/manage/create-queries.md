@@ -3,7 +3,7 @@ title: "Creación de consultas"
 titleSuffix: Configuration Manager
 description: "Descubra cómo crear e importar consultas en System Center Configuration Manager. Incluye ejemplos de consultas y sugerencias."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,18 +13,18 @@ ms.topic: article
 ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 caps.latest.revision: "5"
 caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: cbd9710cec365323e754d2109c8c61c29a4c301f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 32400ebcd834e3b98bf0f1ff6a1f6b41d8e12076
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="how-to-create-queries-in-system-center-configuration-manager"></a>Cómo crear consultas en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede utilizar este tema para crear o importar consultas en System Center Configuration Manager.  
 
@@ -51,10 +51,10 @@ Puede utilizar este tema para crear o importar consultas en System Center Config
 
 6.  Haga clic en **Editar instrucción de consulta** para abrir el cuadro de diálogo **Propiedades de instrucción** *&lt;nombre de la consulta\>*.  
 
-7.  En la pestaña **General** del cuadro de diálogo **Propiedades de instrucción** *&lt;nombre de la consulta\>*, especifique los atributos que devuelve esta consulta y cómo se mostrarán. Seleccione el icono **Nuevo** para agregar un nuevo atributo. También puede seleccionar **Mostrar idioma de consulta** para escribir o editar la consulta directamente en el lenguaje de consulta de WMI (WQL). Para obtener ejemplos de consultas de WMI, consulte la sección [Example WQL queries](#BKMK_Example) en este tema.  
+7.  En la pestaña **General** del cuadro de diálogo **Propiedades de instrucción** *&lt;nombre de la consulta\>*, especifique los atributos que devuelve esta consulta y cómo se van a mostrar. Seleccione el icono **Nuevo** para agregar un nuevo atributo. También puede seleccionar **Mostrar idioma de consulta** para escribir o editar la consulta directamente en el lenguaje de consulta de WMI (WQL). Para obtener ejemplos de consultas de WMI, consulte la sección [Example WQL queries](#BKMK_Example) en este tema.  
 
     > [!TIP]  
-    > Puede usar la siguiente documentación de referencia MSDN para ayudarle a construir sus propias consultas WQL:  
+    > Puede utilizar la siguiente documentación de referencia MSDN que le ayudarán a construir sus propias consultas WQL:  
     >   
     > -   [WQL (SQL para WMI)](http://go.microsoft.com/fwlink/p/?LinkId=256653)  
     > -   [Cláusula WHERE](http://go.microsoft.com/fwlink/p/?LinkId=256654)  
@@ -178,6 +178,10 @@ Use uno de los siguientes valores para *&lt;Id. de dispositivo\>*:
 |Android|11|  
 |Sistema Intel en un chip|12|  
 |Servidores Unix y Linux|13|  
+|Apple macOS (MDM)|14|
+|Microsoft HoloLens (MDM)|15|
+|Microsoft Surface Hub (MDM)|16|
+|Android for Work|17|
 
  Por ejemplo, si quiere que la consulta devuelva solo los equipos Mac, use la siguiente consulta:  
 
