@@ -15,15 +15,15 @@ caps.latest.revision: "3"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: a9d2fddd1210fc9b83026e27aafefd50fc5aac4d
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 39a14ad732a4f932b05a66365fb52add2889efc8
+ms.sourcegitcommit: 645cd5a324bdd299906efa27eaca5885eafc9e9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-consoles"></a>Sistemas operativos compatibles con consolas de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
  Para admitir la consola de System Center Configuration Manager, los siguientes sistemas operativos requieren una versión mínima de .NET Framework 4.5.2. La excepción es Windows 10, que requiere como mínimo .NET Framework 4.6.  
@@ -42,6 +42,6 @@ ms.lasthandoff: 12/04/2017
 
 -   **Windows 8.1** (x86, x64): Professional, Enterprise  
 
--   **Windows 8** (x86, x64): Professional, Enterprise  
+<!---   **Windows 8** (x86, x64): Professional, Enterprise  -removed Jan 12,2018 sms505863-->
 
 -   **Windows 7 con SP1** (x86, x64): Professional, Enterprise, Ultimate  
