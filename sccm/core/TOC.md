@@ -15,6 +15,7 @@
 ### [Administrar la rama de mantenimiento a largo plazo](understand/manage-the-ltsb.md)
 ### [Actualizar la rama de mantenimiento a largo plazo a la rama actual](understand/convert-to-current-branch.md)
 ##  [Qué rama de Configuration Manager debo usar](understand/which-branch-should-i-use.md)
+##  [Configuration Manager y Windows como servicio](understand/configuration-manager-and-windows-as-service.md)
 ##  [Cliente de interoperabilidad extendida](understand/interoperability-client.md)
 ##  [Licencias para System Center Configuration Manager](understand/learn-more-editions.md)
 ##  [Usar servicios en la nube](understand/use-cloud-services.md)
@@ -40,7 +41,7 @@
 ##   [Configuraciones admitidas](plan-design/configs/supported-configurations.md)
 ###  [Números de tamaño y escala](plan-design/configs/size-and-scale-numbers.md)
 ###  [Requisitos previos de sitio y sistema de sitio](plan-design/configs/site-and-site-system-prerequisites.md)
-###  [Sistemas operativos compatibles con los servidores de sistema de sitio](plan-design/configs/supported-operating-systems-for-site-system-servers.md)
+###  [Sistemas operativos compatibles con servidores de sistema de sitio](plan-design/configs/supported-operating-systems-for-site-system-servers.md)
 ###  [Sistemas operativos compatibles con clientes y dispositivos](plan-design/configs/supported-operating-systems-for-clients-and-devices.md)
 ###  [Compatibilidad con Windows 10 como cliente](plan-design/configs/support-for-windows-10.md)
 ###  [Sistemas operativos compatibles con consolas](plan-design/configs/supported-operating-systems-consoles.md)
@@ -106,12 +107,13 @@
 
 <!-- Only show the current plus three, i.e., four total) -->
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Características en 1801](get-started/capabilities-in-technical-preview-1801.md)
 ###  [Capacidades en 1712](get-started/capabilities-in-technical-preview-1712.md)
 ###  [Capacidades en 1711](get-started/capabilities-in-technical-preview-1711.md)
 ###  [Capacidades en 1710](get-started/capabilities-in-technical-preview-1710.md)
-###  [Capacidades en 1709](get-started/capabilities-in-technical-preview-1709.md)
 
 <!-- No longer in support
+###  [Capabilities in 1709](get-started/capabilities-in-technical-preview-1709.md)
 ###  [Capabilities in 1708](get-started/capabilities-in-technical-preview-1708.md)
 ###  [Capabilities in 1707](get-started/capabilities-in-technical-preview-1707.md)
 ###  [Capabilities in 1706](get-started/capabilities-in-technical-preview-1706.md)
@@ -163,7 +165,7 @@
 #### [Comprobaciones de requisitos previos](servers/deploy/install/list-of-prerequisite-checks.md)
 ###  [Instalar sitios](servers/deploy/install/installing-sites.md)
 #### [Preparar la instalación de sitios](servers/deploy/install/prepare-to-install-sites.md)
-#### [Requisitos previos para instalar sitios](servers/deploy/install/prerequisites-for-installing-sites.md)
+#### [Requisitos previos para instalar un sitio](servers/deploy/install/prerequisites-for-installing-sites.md)
 #### [Usar el Asistente para instalación](servers/deploy/install/use-the-setup-wizard-to-install-sites.md)
 #### [Usar una línea de comandos](servers/deploy/install/use-a-command-line-to-install-sites.md)
 ##### [Opciones de línea de comandos](servers/deploy/install/command-line-options-for-setup.md)
@@ -285,7 +287,7 @@
 ##   Tareas de implementación de cliente
 ###  [Configurar puertos de comunicación de cliente](clients/deploy/configure-client-communication-ports.md)
 ###  [Configurar los equipos cliente para buscar los puntos de administración mediante el uso de la publicación en DNS](clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md)
-###  [Cómo configurar el cliente](clients/deploy/configure-client-settings.md)
+###  [Cómo establecer la configuración del cliente](clients/deploy/configure-client-settings.md)
 #### [Acerca de la configuración de cliente](clients/deploy/about-client-settings.md)
 ###  [Configurar Wake on LAN](clients/deploy/configure-wake-on-lan.md)
 ###  [Implementar clientes en equipos Windows](clients/deploy/deploy-clients-to-windows-computers.md)
