@@ -7,23 +7,24 @@ ms.date: 8/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 412bddaa604c053662a605115acdabe76a2cb03c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: c740e9b23cb2968463e8843b5f3cdcbaba7c4d91
+ms.sourcegitcommit: 645cd5a324bdd299906efa27eaca5885eafc9e9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>Sistemas operativos compatibles con dispositivos y clientes de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
  System Center Configuration Manager admite la instalación de software cliente en diversos equipos Windows, Mac, Linux y UNIX.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/04/2017
 -   No se permite instalar o ejecutar el cliente de Configuration Manager para Linux o UNIX, o el cliente para Mac en equipos con una cuenta que no sea la cuenta raíz. Si lo hace, servicios importantes podrían dejar de funcionar correctamente.  
 
 ##  <a name="windows-computers"></a>Equipos Windows  
- Puede usar el cliente de Configuration Manager, que se incluye con Configuration Manager, para administrar los siguientes sistemas operativos de Windows. Para obtener más información, vea [Implementar clientes en equipos Windows con System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
+ Puede usar el cliente de Configuration Manager, que se incluye con Configuration Manager, para administrar los siguientes sistemas operativos de Windows. Para más información, vea [Implementar clientes en equipos Windows con System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
 
 **Sistemas operativos compatibles:**  
 
@@ -61,7 +62,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **Windows 8.1** (x86, x64): Professional, Enterprise    
 
--   **Windows 8** (x86, x64): Professional, Enterprise    
+<!---   **Windows 8** (x86, x64): Professional, Enterprise  -removed Jan 12,2018 sms505863-->
 
 -   **Windows 7 con SP1** (x86, x64): Professional, Enterprise y Ultimate    
 
@@ -111,11 +112,11 @@ Los archivos **WBEMDISP.DLL** y **WBEMDISP.TLB** deben existir y registrarse en 
 
 -   **Windows Embedded 8.1 Industry** (x86, x64)    
 
--   **Windows Embedded 8 Industry** (x86, x64)    
+   <!----   **Windows Embedded 8 Industry** (x86, x64)  -removed Jan 12,2018 sms505863-->
 
 -   **Windows Embedded 8 Standard** (x86, x64)    
 
--   **Windows Embedded 8 Pro** (x86, x64)    
+<!---   **Windows Embedded 8 Pro** (x86, x64)    -removed Jan 12,2018 sms505863-->
 
 -   **Windows Thin PC** (x86, x64)    
 

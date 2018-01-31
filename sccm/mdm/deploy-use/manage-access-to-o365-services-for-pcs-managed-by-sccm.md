@@ -3,32 +3,35 @@ title: "Administración del acceso a servicios de O365 para equipos administrado
 titleSuffix: Configuration Manager
 description: Aprenda a configurar el acceso condicional para equipos administrados por System Center Configuration Manager.
 ms.custom: na
-ms.date: 12/19/2017
+ms.date: 01/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: bf38358d12c2617d924fe59bf7bf7457dfa95143
-ms.sourcegitcommit: 6c2aa79924c0e7fc64ef5e9003498fc00c349db9
+ms.openlocfilehash: e1f50ea65236473f059ded6ef85c37646e929e53
+ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Administración del acceso a servicios de O365 para equipos administrados por System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-A partir de la versión 1602 de Configuration Manager, puede configurar el acceso condicional para equipos administrados por System Center Configuration Manager.  
+En este artículo se describe cómo configurar el acceso condicional para equipos administrados por Configuration Manager.  
 
-> [!Tip]  
-> Esta característica se introdujo por primera vez en la versión 1602 como una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1702, ya no es una característica de versión preliminar.
+<!--
+ >> [!Tip]  
+> This feature was first introduced in version 1602 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1702, this feature is no longer a pre-release feature.
+-->
 
 Para obtener información sobre cómo configurar el acceso condicional para dispositivos inscritos y administrados por Microsoft Intune, vea [Administrar el acceso a servicios en System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md). En ese artículo también se describen los dispositivos que están unidos a un dominio y no se evalúan para cumplimiento.
 
@@ -45,16 +48,16 @@ Para obtener información sobre cómo configurar el acceso condicional para disp
 
 ## <a name="supported-windows-servers"></a>Servidores de Windows compatibles
 
--   2008 R2
--   2012
--   2012 R2
--   2016
+-   Windows Server 2008 R2
+-   Windows Server 2012
+-   Windows Server 2012 R2
+-   Windows Server 2016
 
     > [!IMPORTANT]
-    > En el caso de servidores de Windows que puedan tener varios usuarios que hayan iniciado sesión de manera simultánea, se deben implementar las mismas directivas de acceso condicional a todos esos usuarios.
+    > En el caso de servidores de Windows que puedan tener varios usuarios que hayan iniciado sesión de manera simultánea, implemente las mismas directivas de acceso condicional en todos esos usuarios.
 
 ## <a name="configure-conditional-access"></a>Configuración de acceso condicional  
- Para configurar el acceso condicional, primero debe crear una directiva de cumplimiento y configurar la directiva de acceso condicional. Al configurar directivas de acceso condicional para PC, puede requerir que los PC se atengan a la directiva de cumplimiento para tener acceso a los servicios Exchange Online y SharePoint Online.  
+ Para configurar el acceso condicional, primero debe crear una directiva de cumplimiento y configurar la directiva de acceso condicional. Al configurar directivas de acceso condicional para PC, puede requerir que los PC cumplan la directiva para tener acceso a los servicios Exchange Online y SharePoint Online.  
 
 ### <a name="prerequisites"></a>Requisitos previos  
 
@@ -81,7 +84,7 @@ Para obtener información sobre cómo configurar el acceso condicional para disp
 
 -   **Requerir registro en Azure Active Directory:** esta regla comprueba si el dispositivo del usuario está unido al lugar de trabajo en Azure AD; de lo contrario, el dispositivo se registra automáticamente en Azure AD. El registro automático solo se admite en Windows 8.1. Para equipos con Windows 7, implemente un archivo MSI para realizar el registro automático. Para más información, vea [Registro automático de dispositivos en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
 
--   **Se han instalado todas las actualizaciones necesarias con una caducidad superior a un determinado número de días**: esta regla comprueba si el dispositivo del usuario tiene todas las actualizaciones necesarias (especificadas en la regla Actualizaciones automáticas requeridas) dentro de la fecha límite y el período de gracia que especifique e instala automáticamente cualquier actualización requerida pendiente.  
+-   **Se han instalado todas las actualizaciones necesarias con una fecha límite superior a un determinado número de días**: especifique el valor para el período de gracia a partir de la fecha límite de la implementación para las actualizaciones necesarias en el dispositivo del usuario. Al agregar esta regla también se instalan automáticamente todas las actualizaciones necesarias pendientes. Especifique las actualizaciones necesarias en la regla **Actualizaciones automáticas requeridas**.   
 
 -   **Requerir cifrado de unidad BitLocker**: esta regla comprueba si la unidad principal (por ejemplo, C:\\) del dispositivo está cifrada con BitLocker. Si el cifrado BitLocker no está habilitado en el dispositivo primario, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
 
@@ -134,7 +137,7 @@ Para obtener información sobre cómo configurar el acceso condicional para disp
 
 5.  Defina el requisito de equipos Windows con la opción**Los dispositivos deben ser compatibles**.  
 
-6.  En **Grupos de destino**, haga clic en **Modificar** para seleccionar los grupos de seguridad de Azure Active Directory a los que se aplicará la directiva.  
+6.  En **Grupos destinatarios**, haga clic en **Modificar** para seleccionar los grupos de seguridad de Azure Active Directory a los que se aplica la directiva.  
 
     > [!NOTE]  
     >  Debe usarse el mismo grupo de usuarios de seguridad para implementar la directiva de cumplimiento y el grupo de destino de la directiva de acceso condicional.  

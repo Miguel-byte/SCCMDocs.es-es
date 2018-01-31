@@ -3,23 +3,24 @@ title: Versiones de Technical Preview
 titleSuffix: Configuration Manager
 description: "Obtenga información sobre la versión Technical Preview que le permite probar nuevas funcionalidades y capacidades de System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/22/2017
+ms.date: 01/19/2018
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
-caps.latest.revision: "157"
+caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 692cf74cbae3f176bab254aeec0e63c10929cfcc
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 975bd66bb86efb133ccd7017295e8108558f633d
+ms.sourcegitcommit: db9978135d7a6455d83dbe4a5175af2bdeaeafd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>Technical Preview para System Center Configuration Manager
 
@@ -27,9 +28,9 @@ ms.lasthandoff: 01/04/2018
 
 **Le damos la bienvenida a System Center Configuration Manager Technical Preview**. En este artículo se proporcionan detalles sobre la versión preliminar en evolución que presenta nuevas funcionalidades y características en las que estamos trabajando. En cada nueva versión preliminar técnica se presentan nuevas características que no se incluyeron en la rama actual de Configuration Manager cuando se puso a disposición la versión preliminar técnica. Estas características podrían incluirse finalmente en una actualización de la versión actual de la rama, pero antes de finalizarlas y agregarlas, queremos que tenga la oportunidad de probarlas y enviarnos sus comentarios.  
 
- Puesto que esta es una versión preliminar técnica, los detalles y las funcionalidades están sujetos a cambios.  
+ Como esta es una versión preliminar técnica, los detalles y las funcionalidades están sujetos a cambios.  
 
- Este artículo contiene información que se aplica a todas las versiones de Technical Preview. También se muestra cada nueva funcionalidad (o característica) junto con la versión de Technical Preview en la que aparece por primera vez, como la versión 1712 para diciembre de 2017. Estas características se detallan en temas independientes dedicados a cada versión preliminar.  
+ Este artículo contiene información que se aplica a todas las versiones de Technical Preview. También se muestra cada nueva funcionalidad (o característica) junto con la versión de Technical Preview en la que aparece por primera vez, como la versión 1801 para enero de 2018. Estas características se detallan en temas independientes dedicados a cada versión preliminar.  
 
  Para obtener más información sobre las novedades en la rama actual de Configuration Manager, consulte [Novedades de System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).
 
@@ -68,6 +69,7 @@ Los siguientes productos y tecnologías son compatibles con esta rama de Configu
 
 -   Solo se admiten las siguientes versiones de SQL Server:  
 
+    -   SQL Server 2017 (con la actualización acumulativa 2 y versiones posteriores) a partir de la versión 1710 de Configuration Manager
     -   SQL Server 2016 (sin ningún Service Pack, y versiones posteriores)
     -   SQL Server 2014 (con Service Pack 1, o versiones posteriores)
     -   SQL Server 2012 (con Service Pack 3, o versiones posteriores)
@@ -77,20 +79,20 @@ Los siguientes productos y tecnologías son compatibles con esta rama de Configu
 
       -   Windows 10  
       -   Windows 8.1  
-      -   Windows 8  
       -   Windows 7  
 
 ##  <a name="bkmk_install"></a> Instalar y actualizar la versión Technical Preview  
  System Center Configuration Manager Technical Preview es diferente de la versión actual de System Center Configuration Manager.  
 
- Para usar la versión preliminar técnica, primero debe instalar una **versión de base de referencia** de la compilación de dicha versión. Después de instalar una versión de línea base, podrá usar las **actualizaciones en consola** para que la instalación cuente con la versión preliminar más reciente. Normalmente, las nuevas versiones de Technical Preview están disponibles cada mes.
+ Para usar la versión preliminar técnica, primero debe instalar una **versión de base de referencia** de la compilación de dicha versión. Después de instalar una versión de referencia, use las **actualizaciones en consola** para que la instalación cuente con la versión preliminar más reciente. Normalmente, las nuevas versiones de Technical Preview están disponibles cada mes.
 
 Cada versión preliminar se admite hasta que tres versiones sucesivas están disponibles. Es decir, cuando se publicó la versión 1708, la versión 1704 ya no se admitía, pero las versiones 1705, 1706 y 1707 seguían admitiéndose. Si una base de referencia deja de ser compatible, todavía se admite para instalar un nuevo sitio de Technical Preview hasta que haya una nueva versión disponible, siempre que después actualice la instalación a otra compatible. Actualice a la versión más reciente disponible y, después, repita el proceso hasta que pueda instalar la versión más reciente de la versión preliminar técnica.
 
 > [!TIP]  
 >  Cuando se instala una actualización de versión preliminar técnica, la instalación de versión preliminar se actualiza a la nueva versión preliminar técnica.    Una instalación de versión preliminar técnica nunca dispone de una opción para actualizar a una instalación de rama actual ni recibir actualizaciones de la versión de rama actual.  
 
-**Versiones activas de línea base de Technical Preview:**  
+**Versiones activas de línea base de Technical Preview:**
+   
 Puede instalar una versión de base de referencia hasta un año después de su lanzamiento. Sin embargo, al instalar un sitio nuevo de Technical Preview, se recomienda usar la última versión de línea base disponible.
 -  **Technical Preview 1711**: la versión Configuration Manager Technical Preview 1711 está disponible como actualización en consola y como versión de base de referencia. Descargue las versiones de base de referencia [desde el centro de evaluación de TechNet](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
@@ -110,15 +112,15 @@ A continuación se enumeran las funcionalidades que ofrece cada versión prelimi
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1712"></a>Technical Preview versión 1712
-- [No actualizar automáticamente las aplicaciones reemplazadas](capabilities-in-technical-preview-1712.md#do-not-automatically-upgrade-superseded-applications) <!-- 1351266 --> 
-- [Instalar varias aplicaciones en el Centro de software](capabilities-in-technical-preview-1712.md#install-multiple-applications-in-software-center) <!-- 1357126 --> 
-- [Cambio en la instalación del cliente de Configuration Manager](capabilities-in-technical-preview-1712.md#change-in-the-configuration-manager-client-install) <!-- 1356195 --> 
-- [Cambio en el panel de dispositivos Surface](capabilities-in-technical-preview-1712.md#change-to-the-surface-device-dashboard) <!-- 1355788 --> 
-- [Mejoras en el panel de administración de clientes de Office 365](capabilities-in-technical-preview-1712.md#improvements-to-office-365-client-management-dashboard) <!-- 1357281 --> 
-- [Mejoras en la consola de Configuration Manager](capabilities-in-technical-preview-1712.md#improvements-to-the-configuration-manager-console) <!-- 1357280,1357282 --> 
-- [Mejoras en la implementación de sistema operativo](capabilities-in-technical-preview-1712.md#improvements-to-operating-system-deployment) <!-- SMS 500897 --> 
-- [Integración de la aplicación Centro de opiniones de Windows 10](capabilities-in-technical-preview-1712.md#windows-10-feedback-hub-app-integration) <!-- NA -->
+### <a name="technical-preview-version-1801"></a>Technical Preview versión 1801
+- [Creación de implementaciones por fases](capabilities-in-technical-preview-1801.md#create-phased-deployments) <!-- 1357405 --> 
+- [Informes de administración conjunta](capabilities-in-technical-preview-1801.md#co-management-reporting) <!-- 1356648 --> 
+- [Mejoras en la programación de evaluación de reglas de implementación automática](capabilities-in-technical-preview-1801.md#improvements-to-automatic-deployment-rule-evaluation-schedule) <!-- 1357133 --> 
+- [Reasignación de un punto de distribución](capabilities-in-technical-preview-1801.md#reassign-distribution-point) <!-- 1306937 --> 
+- [Mejoras en el inventario de hardware](capabilities-in-technical-preview-1801.md#improvements-to-hardware-inventory) <!-- 1357389 --> 
+- [Mejoras en la configuración de cliente para el Centro de software](capabilities-in-technical-preview-1801.md#improvements-to-client-settings-for-software-center) <!-- 1355146 --> 
+- [Nueva configuración de Protección de aplicaciones de Windows Defender](capabilities-in-technical-preview-1801.md#new-settings-for-windows-defender-application-guard) <!-- 1356256 --> 
+- [Mejoras para ejecutar scripts](capabilities-in-technical-preview-1801.md#improvements-to-run-scripts) <!-- 1236459 --> 
 
 
 
@@ -126,10 +128,20 @@ A continuación se enumeran las funcionalidades que ofrece cada versión prelimi
 ## <a name="capabilities-delivered-in-recent-supported-technical-previews"></a>Funcionalidades ofrecidas en Technical Preview recientes admitidas
 A continuación se enumeran las funcionalidades ofrecidas en versiones anteriores de Technical Preview de Configuration Manager que todavía se admiten. 
 
-<!-- This is the full list of new features in the past three TP releases. Each month, add features from the list above to the top of this table. Then remove the bottom of this list (and/or move individual items not in CB to the third table below). -->
+<!-- This is the full list of new features in the past three TP releases. 
+Each month, add features from the list above to the top of this table. 
+Then remove the bottom of this list and/or move individual items not in CB to the third table below.
+-->
 
  |Capacidad |Versión de Technical Preview |Versión de rama actual|  
  |----------------|---------------------|--------------------|
+ |No actualizar automáticamente las aplicaciones reemplazadas <!-- 1351266 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#do-not-automatically-upgrade-superseded-applications)  |![Sin agregar](media/Red_X.gif)    | 
+ |Instalación de varias aplicaciones en el Centro de software <!-- 1357126 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#install-multiple-applications-in-software-center)  |![Sin agregar](media/Red_X.gif)    |
+ |Cambio en la instalación del cliente de Configuration Manager <!-- 1356195 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#change-in-the-configuration-manager-client-install)  |![Sin agregar](media/Red_X.gif)    | 
+ |Cambio en el panel de dispositivos Surface <!-- 1355788 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#change-to-the-surface-device-dashboard)  |![Sin agregar](media/Red_X.gif)    | 
+ |Mejoras en el panel de administración de clientes de Office 365 <!-- 1357281 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-office-365-client-management-dashboard)  |![Sin agregar](media/Red_X.gif)    | 
+ |Mejoras en la consola de Configuration Manager <!-- 1357280,1357282 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-the-configuration-manager-console)  |![Sin agregar](media/Red_X.gif)    | 
+ |Mejoras en la implementación de sistema operativo <!-- SMS 500897 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-operating-system-deployment)  |![Sin agregar](media/Red_X.gif)    | 
  |Ejecutar paso de secuencia de tareas <!-- 1261338 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |[Versión 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence)    |
  |Permitir la interacción del usuario al instalar aplicaciones como <!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![Sin agregar](media/Red_X.gif)    |
  |Telemetría de Windows 10 para el estado de dispositivos de Windows Analytics<!--1356148 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health) |[Versión 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710#reporting)    |
@@ -137,21 +149,24 @@ A continuación se enumeran las funcionalidades ofrecidas en versiones anteriore
  |Comprobación del cumplimiento del Centro de software en dispositivos administrados conjuntamente<!-- 1356374 -->|[Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|[Versión 1710](/sccm/core/clients/manage/co-management-overview)    |
  |Compatibilidad limitada con certificados CNG<!-- 1356191 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limited-support-for-cng-certificates)|[Versión 1710](/sccm/core/plan-design/network/cng-certificates-overview)    |
  |Compatibilidad con la Protección contra vulnerabilidades de seguridad<!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |[Versión 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)    |
- |Descripciones mejoradas para reinicios de equipo pendientes <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Versión 1710](/sccm/core/clients/manage/manage-clients)    |
+ |Descripciones mejoradas para reinicios de equipo pendientes   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Versión 1710](/sccm/core/clients/manage/manage-clients)    |
  |Cambios en la directiva de Device Guard <!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Versión 1710](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)    |
  |Configuración e implementación de directivas de Protección de aplicaciones de Windows Defender <!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Versión 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)    |
  |Mejoras en la implementación de scripts de PowerShell desde Configuration Manager <!-- 1236459 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#improvements-for-deploying-powershell-scripts-from-configuration-manager) | [Versión 1710](/sccm/apps/deploy-use/create-deploy-scripts)
- |Experiencia mejorada del perfil VPN en la consola de Configuration Manager <!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |[Versión 1710](/sccm/protect/deploy-use/create-vpn-profiles)    |
- |Administración conjunta para dispositivos de Windows 10|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|[Versión 1710](/sccm/core/clients/manage/co-management-overview.md)|
  
 
 ## <a name="capabilities-delivered-in-previous-technical-previews"></a>Funcionalidades ofrecidas en anteriores versiones preliminares técnicas
 A continuación se enumeran las funcionalidades específicas ofrecidas en versiones anteriores de Technical Preview de Configuration Manager. Estas funcionalidades siguen estando disponibles en versiones posteriores, pero todavía no están disponibles en una versión de rama actual. 
 
-<!-- This is the list of individual features that are still in TP (not in CB). Note there is no third column in this table! Each month review and remove from this list for anything that's now available in CB. Copy from the bottom of the list above any individual feature that is still in TP and add to the top of this list (then remove the third column) -->
+<!-- This is the list of individual features that are still in TP (not in CB). 
+**Note there is no third column in this table!**
+Copy from the bottom of the list above any individual feature that is still in TP and add to the top of this list (then remove the third column)
+With each CB release, review and remove from this list for anything that's now available in CB. 
+-->
 
  |Capacidad |Versión de Technical Preview |  
  |----------------|---------------------|
+ |Experiencia mejorada del perfil VPN en la consola de Configuration Manager <!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |
  |Información de administración <!-- 1353967 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#management-insights)|
  |Panel de dispositivos Surface <!-- 1355788 --> |[Tech Preview 1707](capabilities-in-technical-preview-1707.md#surface-device-dashboard)|
  |Alta disponibilidad del rol del servidor de sitio <!-- 1128774 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |
@@ -162,8 +177,6 @@ A continuación se enumeran las funcionalidades específicas ofrecidas en versio
  |Acceso a datos de punto de conexión de OData <!-- 1321523 --> |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|
  |Mejoras en Asset Intelligence <!-- 1307390 --> |[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence)|
  |Los usuarios finales pueden instalar aplicaciones desde el Portal de empresa <!-- 1037233? --> |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_End)|
-
-
 
 
 

@@ -7,29 +7,30 @@ ms.date: 06/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: e7606e087e2540b49e8aa23c09d09831651ee48b
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 03618b541f8f00ccab69fa4ebcef81ffc146010c
+ms.sourcegitcommit: 645cd5a324bdd299906efa27eaca5885eafc9e9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>Sistemas operativos compatibles con servidores de sistema de sitio de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 En este artículo, se detallan las versiones de Windows que puede usar para hospedar un sitio o rol de sistema de sitio de System Center Configuration Manager.
 
 
-Utilice la información de este tema con la información de los siguientes artículos:
+Use la información de este artículo con la información de los artículos siguientes:
 -   [Hardware recomendado para Configuration Manager](../../../core/plan-design/configs/recommended-hardware.md)
 -   [Sitio y requisitos previos de sistema de sitio para Configuration Manager](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)
 -   [Números de tamaño y escala para Configuration Manager](../../../core/plan-design/configs/size-and-scale-numbers.md)
@@ -55,7 +56,7 @@ A partir de la versión 1606 con el paquete acumulativo de revisiones de KB31866
 
 -   Punto de sincronización de Asset Intelligence  
 
--   Punto de registro de certificado  
+-   Punto de registro de certificados  
 
 -   Punto de distribución  
 
@@ -71,7 +72,7 @@ A partir de la versión 1606 con el paquete acumulativo de revisiones de KB31866
 
 -   Punto de administración
 
--   Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.  
+-   Punto de servicios de informes  
 
 -   Punto de conexión de servicio  
 
@@ -102,7 +103,7 @@ A partir de la versión 1606 con el paquete acumulativo de revisiones de KB31866
 
 -   Punto de sincronización de Asset Intelligence  
 
--   Punto de registro de certificado  
+-   Punto de registro de certificados  
 
 -   Punto de distribución  
 
@@ -118,7 +119,7 @@ A partir de la versión 1606 con el paquete acumulativo de revisiones de KB31866
 
 -   Punto de administración
 
--   Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.  
+-   Punto de servicios de informes  
 
 -   Punto de conexión de servicio  
 
@@ -149,7 +150,7 @@ A partir de la versión 1606 con el paquete acumulativo de revisiones de KB31866
 
 -   Punto de sincronización de Asset Intelligence  
 
--   Punto de registro de certificado  
+-   Punto de registro de certificados  
 
 -   Punto de distribución  
 
@@ -165,7 +166,7 @@ A partir de la versión 1606 con el paquete acumulativo de revisiones de KB31866
 
 -   Punto de administración
 
--   Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.  
+-   Punto de servicios de informes  
 
 -   Punto de conexión de servicio  
 
@@ -180,7 +181,7 @@ A partir de la versión 1606 con el paquete acumulativo de revisiones de KB31866
 -   Punto de migración de estado  
 
 ## <a name="windows-server-2008-r2-with-sp1-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 R2 con SP1 (x64): Standard, Enterprise y Datacenter  
- Windows Server 2008 R2 tiene ahora soporte extendido y ya no está dentro del soporte estándar, tal y como se detalla en el [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle). Para obtener más información sobre la compatibilidad futura de estos sistemas operativos como servidores de sistema de sitio con Configuration Manager, vea [Características eliminadas y en desuso de System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
+ Windows Server 2008 R2 tiene ahora soporte extendido y ya no está dentro del soporte estándar, tal y como se detalla en el [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle). Para más información sobre la compatibilidad futura de estos sistemas operativos como servidores de sistema de sitio con Configuration Manager, vea [Características eliminadas y en desuso de System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
  A partir de la versión 1702 de Configuration Manager, este sistema operativo no es compatible para los servidores de sitio o la mayoría de los roles de sistema de sitio, pero se seguirá admitiendo para el rol de sistema de sitio del punto de distribución (incluidos los puntos de distribución de extracción, así como para el entorno PXE y multidifusión).
 
@@ -203,7 +204,7 @@ A partir de la versión 1606 con el paquete acumulativo de revisiones de KB31866
 
 -   Punto de sincronización de Asset Intelligence  
 
--   Punto de registro de certificado  
+-   Punto de registro de certificados  
 
 -   Punto de distribución  
 
@@ -219,7 +220,7 @@ A partir de la versión 1606 con el paquete acumulativo de revisiones de KB31866
 
 -   Punto de administración
 
--   Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.  
+-   Punto de servicios de informes  
 
 -   Punto de conexión de servicio  
 
@@ -271,16 +272,18 @@ No se admite este sistema operativo para servidores de sitio o roles de sistema 
 
     -   Los puntos de distribución admiten varias configuraciones diferentes y cada uno tiene requisitos diferentes. En algunos casos, estas configuraciones admiten la instalación no solo en los servidores sino también en sistemas operativos de clientes. Para obtener más información sobre las opciones disponibles para los puntos de distribución, vea [Administración del contenido y de la infraestructura de contenido para System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-## <a name="windows-8-x86-x64-professional-and-enterprise"></a>Windows 8 (x86, x64): Professional y Enterprise
-**Servidores de sistema de sitio:**  
+<!--## Windows 8 (x86, x64): Professional and Enterprise
+**Site system servers:**  
 
--   Punto de distribución  
+-   Distribution point  
 
-    -   Los puntos de distribución en este sistema operativo no son compatibles con PXE.  
+    -   Distribution points on this operating system are not supported for PXE.  
 
-    -   Los puntos de distribución en esta versión del sistema operativo no son compatibles con Multidifusión.  
+    -   Distribution points on this operating system version do not support Multicast.  
 
-    -   Los puntos de distribución admiten varias configuraciones diferentes y cada uno tiene requisitos diferentes. En algunos casos, estas configuraciones admiten la instalación no solo en los servidores sino también en sistemas operativos de clientes. Para obtener más información sobre las opciones disponibles para los puntos de distribución, vea [Administración del contenido y de la infraestructura de contenido para System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+   
+    -  - -removed Jan 12,2018 sms505863-->
 
 ## <a name="windows-7-with-sp1-x86-x64-professional-enterprise-and-ultimate"></a>Windows 7 con SP1 (x86, x64): Professional, Enterprise y Ultimate  
 **Servidores de sistema de sitio:**  

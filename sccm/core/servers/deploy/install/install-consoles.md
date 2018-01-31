@@ -7,23 +7,24 @@ ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d39c201f-d364-4e7b-bde4-faa76d747f33
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: fab460a18ce3729fbffa0228ad2b861b70b84e12
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: ca1c62fc6034b33380d9075c4f5430954537781f
+ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="install-the-system-center-configuration-manager-console"></a>Instalar la consola de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Los administradores usan la consola de System Center Configuration Manager para administrar el entorno de Configuration Manager. Cada consola de Configuration Manager puede conectarse a un sitio de administración central o a un sitio primario. No puede conectar una consola de Configuration Manager a un sitio secundario.
 
@@ -44,9 +45,9 @@ Los administradores usan la consola de System Center Configuration Manager para 
 
 2.  Vaya a una de estas ubicaciones:  
 
-    -   En el servidor de sitio, vaya a **<*ruta de instalación del servidor de sitio de Configuration Manager*> \Tools\ConsoleSetup**.  
+    -   En el servidor de sitio, vaya a **<*Ruta de instalación del servidor de sitio de Configuration Manager*>\Tools\ConsoleSetup**.  
 
-    -   Desde los medios de origen de Configuration Manager, vaya a **<*archivos de origen de Configuration Manager*>\Smssetup\Bin\I386**.  
+    -   Desde los medios de origen de Configuration Manager, vaya a **<*Archivos de origen de Configuration Manager*>\Smssetup\Bin\I386**.  
 
     > [!TIP]  
     >  Como procedimiento recomendado, inicie la instalación de la consola de Configuration Manager desde un servidor de sitio, en lugar de hacerlo desde los medios de instalación de System Center Configuration Manager. El método de instalación del servidor de sitio copia los archivos de instalación de la consola de Configuration Manager y los paquetes de idiomas admitidos para el sitio en la subcarpeta **Tools\ConsoleSetup**. Instalar la consola de Configuration Manager desde los medios de instalación siempre instalará la versión en inglés, independientemente de los idiomas admitidos en el servidor de sitio o la configuración de idioma del sistema operativo que se ejecuta en el equipo. Opcionalmente, puede copiar la carpeta **ConsoleSetup** en una ubicación alternativa para iniciar la instalación.
@@ -70,9 +71,9 @@ Los administradores usan la consola de System Center Configuration Manager para 
 
 1.  En el servidor desde el que instala la consola de Configuration Manager, abra una ventana del símbolo del sistema y vaya a una de las siguientes ubicaciones:  
 
-    -   **<*ruta de instalación del servidor de sitio de Configuration Manager*> \Tools\ConsoleSetup**  
+    -   **<*Ruta de instalación del servidor de sitio de Configuration Manager*>\Tools\ConsoleSetup**  
 
-    -   **<*medios de instalación de Configuration Manager*>\SMSSETUP\BIN\I386**  
+    -   **<*Medios de instalación de Configuration Manager*>\SMSSETUP\BIN\I386**  
 
     > [!TIP]  
     >  Al instalar la consola de Configuration Manager desde el símbolo del sistema, siempre se instala la versión en inglés, independientemente de la configuración de idioma del sistema operativo que se ejecute en el equipo. Para instalar la consola de Configuration Manager en un idioma distinto del inglés, debe [instalar la consola de Configuration Manager mediante el Asistente para instalación](#to-install-the-configuration-manager-console-by-using-the-setup-wizard).  
@@ -93,6 +94,6 @@ Los administradores usan la consola de System Center Configuration Manager para 
 
   -  **consolesetup.exe /q TargetDir="D:\Program Files\ConfigMgr" EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com**  
 
-  -  **consolesetup.exe /q LangPackDir=C:\Downloads\ConfigMgr TargetDir="D:\Program Files\ConfigMgr" Console EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com**  
+  -  **consolesetup.exe /q LangPackDir=C:\Downloads\ConfigMgr TargetDir="D:\Program Files\ConfigMgr Console" EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com**  
 
   -  **consolesetup.exe /uninstall /q**  

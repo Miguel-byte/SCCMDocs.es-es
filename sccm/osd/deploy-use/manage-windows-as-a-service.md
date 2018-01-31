@@ -7,19 +7,20 @@ ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da1e687b-28f6-43c4-b14a-ff2b76e60d24
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 3848d0d6a9f3b5d778879c598bf859fb1e8a7ac7
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+ms.openlocfilehash: a67d75f27cbc2d53cc5d8c418e25232d88b4f067
+ms.sourcegitcommit: db9978135d7a6455d83dbe4a5175af2bdeaeafd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>Administración de Windows como servicio mediante System Center Configuration Manager
 
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/12/2017
     -   **Compilación del sistema operativo**: especifica la versión del sistema operativo. Por ejemplo, **10.0.10240** (RTM) o **10.0.10586** (versión 1511)  
 
 -   El punto de conexión de servicio debe estar instalado y configurado para el modo de **conexión persistente en línea** para poder ver los datos en el panel de mantenimiento de Windows 10. Cuando esté en modo sin conexión, no verá las actualizaciones de datos en el panel hasta que obtenga las actualizaciones de mantenimiento de Configuration Manager.   
-     Para obtener más información, consulte [About the service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md) (Sobre el punto de conexión del servicio).  
+      Para obtener más información, consulte [About the service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md) (Sobre el punto de conexión del servicio).  
 
 
 -   Internet Explorer 9 o una versión posterior debe estar instalado en el equipo que ejecuta la consola de Configuration Manager.  
@@ -280,3 +281,6 @@ Use el siguiente procedimiento para modificar las propiedades de un plan de mant
 
     > [!NOTE]  
     >  Puede revisar las alertas de las actualizaciones de software recientes en el área de trabajo **Biblioteca de software** del nodo **Actualizaciones de software** .  
+
+**Para más información:** <br/>
+[Aspectos básicos de Configuration Manager como servicio y de Windows como servicio](/sccm/core/understand/configuration-manager-and-windows-as-service.md)

@@ -7,20 +7,21 @@ ms.date: 11/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-app
+ms.technology:
+- configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
-caps.latest.revision: "14"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: f680b692f3ae92fb8a5e8b6640ed053ceedba436
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: d7073b397cdf7b233f8264bd07019303a77a610f
+ms.sourcegitcommit: 2f6a13d208dcd8aa59c88f107791f9c4388e78e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-applications-with-system-center-configuration-manager"></a>Crear aplicaciones con System Center Configuration Manager
 
@@ -337,7 +338,16 @@ La tabla siguiente contiene scripts de ejemplo de Microsoft Visual Basic (VB) qu
         > [!IMPORTANT]  
         >  Se puede producir un conflicto si el **Tiempo de ejecución máximo permitido** es mayor que la ventana de mantenimiento programada. Si el usuario configura la duración máxima de la ejecución como un periodo que excede la duración de las ventanas de mantenimiento disponibles, ese tipo de implementación no se ejecutará.  
 
-2.  **Tiempo de instalación estimado (minutos)**: especifique el tiempo estimado que tardará la instalación del tipo de implementación. Esto se muestra a los usuarios del Centro de software.  
+    -   **Tiempo de instalación estimado (minutos)**: especifique el tiempo estimado que tardará la instalación del tipo de implementación. Esto se muestra a los usuarios del Centro de software.  
+
+    -   **Especificar comportamiento de reinicio específico**: especifique la acción posterior a la instalación. Están disponibles las siguientes opciones:  
+
+        -   **Determinar comportamiento en función de códigos de retorno**: controle los reinicios en función de los códigos configurados en la pestaña Códigos de retorno.  En el Centro de software se indicará que **puede ser necesario reiniciar**.  Si un usuario ha iniciado sesión durante la instalación, se le solicitará según la configuración de la experiencia de usuario de la implementación.  
+
+        -   **Ninguna acción específica**: no es necesario reiniciar después de la instalación.  El Centro de software notificará que no es necesario reiniciar.  
+        -   **El programa de instalación de software puede forzar un reinicio del dispositivo**: Configuration Manager no controlará ni iniciará un reinicio, pero es posible que la instalación real lo haga sin previo aviso.  Use esta opción para impedir que Configuration Manager notifique el error de instalación cuando el programa de instalación inicia un reinicio.  En el Centro de software se indicará que **puede ser necesario reiniciar**.  
+
+        -   **El cliente de Configuration Manager forzará un reinicio obligatorio del dispositivo**: Configuration Manager forzará un reinicio del dispositivo después de una instalación correcta.  El Centro de software notificará que es necesario reiniciar.  Si un usuario ha iniciado sesión durante la instalación, se le solicitará según la configuración de la experiencia de usuario de la implementación.
 
 ## <a name="specify-requirements-for-the-deployment-type"></a>Especificar requisitos para el tipo de implementación  
 
