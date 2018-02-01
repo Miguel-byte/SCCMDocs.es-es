@@ -17,11 +17,11 @@ caps.handback.revision:
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 695d21eb065f4d89143644dad28bfdb711392ab9
-ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
+ms.openlocfilehash: 158817547d40f09fb8bd30ebedd5aea6420a8571
+ms.sourcegitcommit: aee9ac45c15f27d8cf827890edcae94c03f5fd5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Pasos de la secuencia de tareas en System Center Configuration Manager
 
@@ -536,7 +536,7 @@ Este paso se ejecuta en un sistema operativo estándar o en Windows PE. Pero en 
 
  -   **Caché de cliente de Configuration Manager**: use esta opción para almacenar el contenido en la caché de cliente. El cliente actúa como origen de caché del mismo nivel para otros clientes de caché del mismo nivel. Para obtener más información, consulte [Preparar el almacenamiento en caché del mismo nivel de Windows PE para reducir el tráfico WAN](../get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).  
 
- -   **Ruta de acceso personalizada**  
+ -    **Ruta de acceso personalizada**: con esta opción, el motor de secuencia de tareas descarga primero el paquete en el directorio de trabajo de la secuencia de tareas y lo mueve a la ruta de acceso que se especifique. El motor de secuencia de tareas anexa la ruta de acceso al identificador del paquete. 
    
 **Guardar ruta de acceso como variable**  
  Puede guardar la ruta de acceso como una variable que puede usar en otro paso de la secuencia de tareas. Configuration Manager agrega un sufijo numérico al nombre de variable. Por ejemplo, si especifica una variable %*mycontent*% como variable personalizada, será la raíz donde la secuencia de tareas almacena todo el contenido al que se hace referencia. Este contenido puede incluir varios paquetes. Después, al hacer referencia a la variable, agregue un sufijo numérico. Por ejemplo, para el primer paquete, haga referencia a %*mycontent01*%. Cuando se hace referencia a la variable en pasos posteriores, como **Actualizar sistema operativo**, use %*mycontent02*% o %*mycontent03*%, donde el número corresponde al orden en el que el paso **Descargar contenido de paquete** enumera los paquetes.  
