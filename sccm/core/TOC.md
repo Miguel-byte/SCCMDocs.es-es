@@ -1,4 +1,4 @@
-#   Conocer y explorar
+#   Comprensión y exploración
 ##  [Introducción a Configuration Manager](understand/introduction.md)
 ### [Buscar ayuda para Configuration Manager](understand/find-help.md)
 ### [Características de accesibilidad](understand/accessibility-features.md)
@@ -36,8 +36,10 @@
 ###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
 -->
-###  [Características eliminadas y en desuso](plan-design/changes/removed-and-deprecated-features.md)
-
+###  [Eliminado y en desuso](plan-design/changes/deprecated/removed-and-deprecated.md)
+#### [Características eliminadas y en desuso](plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)
+#### [Eliminado y en desuso para servidores del sitio](plan-design/changes/deprecated/removed-and-deprecated-server.md)
+#### [Eliminado y en desuso para clientes](plan-design/changes/deprecated/removed-and-deprecated-client.md)
 ##   [Configuraciones admitidas](plan-design/configs/supported-configurations.md)
 ###  [Números de tamaño y escala](plan-design/configs/size-and-scale-numbers.md)
 ###  [Requisitos previos de sitio y sistema de sitio](plan-design/configs/site-and-site-system-prerequisites.md)
@@ -323,7 +325,7 @@
 ###  [Supervisar clientes en la puerta de enlace de administración en la nube](clients/manage/monitor-clients-cloud-management-gateway.md)
 ###  [Planear la administración de cliente basada en Internet](clients/manage/plan-internet-based-client-management.md)
 
-##   Recopilaciones
+##   Colecciones
 ###  [Introducción a las recopilaciones](clients/manage/collections/introduction-to-collections.md)
 ### [Requisitos previos de las recopilaciones](clients/manage/collections/prerequisites-for-collections.md)
 ### [Procedimientos recomendados para recopilaciones](clients/manage/collections/best-practices-for-collections.md)
