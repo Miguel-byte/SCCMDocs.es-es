@@ -5,7 +5,8 @@ description: "Obtenga información sobre las características disponibles en la 
 ms.custom: na
 ms.date: 09/15/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -199,7 +200,7 @@ Ahora tiene la posibilidad de agregar confianza para determinados archivos y car
 ### <a name="try-it-out"></a>Haga la prueba
 
 1.  Mientras está creando una directiva de Device Guard, en la pestaña Inclusiones del Asistente para crear directiva de Device Guard, haga clic en **Agregar**.
-2.  En el cuadro de diálogo **Agregar archivo o carpeta de confianza	**, especifique la información sobre el archivo o la carpeta en que desea confiar. Puede especificar una ruta de acceso de archivo o carpeta local o conectarse a un dispositivo remoto para el que tiene permiso para conectarse y especificar una ruta de acceso de archivo o carpeta en dicho dispositivo.
+2.  En el cuadro de diálogo **Agregar archivo o carpeta de confianza**, especifique la información sobre el archivo o la carpeta en que desea confiar. Puede especificar una ruta de acceso de archivo o carpeta local o conectarse a un dispositivo remoto para el que tiene permiso para conectarse y especificar una ruta de acceso de archivo o carpeta en dicho dispositivo.
 3.  Complete el asistente.
 
 
