@@ -3,28 +3,29 @@ title: Requisitos previos de los informes
 titleSuffix: Configuration Manager
 description: Analice varias dependencias que afectan al uso de los informes en System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/29/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cc508a5-5023-4833-b776-ae9a6971138f
-caps.latest.revision: "5"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 09f6ebd47070c63d238a74242d4b04b84c95ef49
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 3feafa8a20bedfba381c29a5d7fe80a47517b6ab
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="prerequisites-for-reporting-in-system-center-configuration-manager"></a>Requisitos previos de los informes en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 La generación de informes en System Center Configuration Manager tiene dependencias externas y dependencias dentro del producto.  
 
@@ -41,7 +42,7 @@ La generación de informes en System Center Configuration Manager tiene dependen
 
 |Requisito previo|Más información|  
 |------------------|----------------------|  
-|Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.|A fin de poder usar los informes en Configuration Manager, primero debe configurarse el rol de sistema de sitio del punto de servicios de informes. Para obtener más información sobre cómo instalar y configurar un punto de servicios de informes, consulte [Configuración de informes en System Center Configuration Manager](../../../core/servers/manage/configuring-reporting.md).|  
+|Punto de servicios de informes|A fin de poder usar los informes en Configuration Manager, primero debe configurarse el rol de sistema de sitio del punto de servicios de informes. Para obtener más información sobre cómo instalar y configurar un punto de servicios de informes, consulte [Configuración de informes en System Center Configuration Manager](../../../core/servers/manage/configuring-reporting.md).|  
 
 ## <a name="supported-sql-server-versions-for-the-reporting-services-point"></a>Versiones de SQL Server admitidas para el punto de servicios de informes  
  La base de datos de Reporting Services puede instalarse en la instancia predeterminada o en una instancia con nombre de una instalación de SQL Server de 64 bits. La instancia de SQL Server puede coexistir con el servidor de sistema del sitio, o en un equipo remoto.  
@@ -49,17 +50,19 @@ La generación de informes en System Center Configuration Manager tiene dependen
  La tabla siguiente muestra las versiones de SQL Server que son compatibles con el punto de servicios de informes.  
 
 |Versión de SQL Server|Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.|  
-|------------------------|------------------------------|  
-|SQL Server 2008 SP2 con la actualización acumulativa 9 como mínimo<br /><br /> -   Estándar<br />-   Enterprise<br />-   Centro de datos|Sí|  
-|SQL Server 2008 SP3 con la actualización acumulativa 4 como mínimo<br /><br /> -   Estándar<br />-   Enterprise<br />-   Centro de datos|Sí|  
-|SQL Server 2008 R2 con SP1 y la actualización acumulativa 6 como mínimo<br /><br /> -   Estándar<br />-   Enterprise<br />-   Centro de datos|Sí|  
-|SQL Server 2008 R2 con SP2<br /><br /> -   Estándar<br />-   Enterprise<br />-   Centro de datos|Sí|  
-|SQL Server Express 2008 R2 con SP1 y la actualización acumulativa 4 como mínimo|No compatible.|  
-|SQL Server Express 2008 R2 con SP2|No compatible.|  
-|SQL Server 2012 con la actualización acumulativa 2 como mínimo<br /><br /> -   Estándar<br />-   Enterprise|Sí|  
-|SQL Server 2012 con SP1 y ninguna actualización acumulativa mínima<br /><br /> -   Estándar<br />-   Enterprise|Sí|  
-|SQL Server 2014<br /><br /> -   Estándar<br />-   Enterprise|Sí|
+|------------------------|------------------------------|
+|SQL Server 2017 con la actualización acumulativa 2 como mínimo<br /><br /> -   Estándar<br />-   Enterprise|Sí, a partir de la versión 1710 de Configuration Manager|  
+|SQL Server 2016 con SP1<br /><br /> -   Estándar<br />-   Enterprise|Sí| 
 |SQL Server 2016<br /><br /> -   Estándar<br />-   Enterprise|Sí|
-|SQL Server 2016 con SP1<br /><br /> -   Estándar<br />-   Enterprise|Sí|
+|SQL Server 2014 con SP2<br /><br /> -   Estándar<br />-   Enterprise|Sí|
+|SQL Server 2014 con SP1<br /><br /> -   Estándar<br />-   Enterprise|Sí|
+|SQL Server 2012 con SP4 <br /><br /> -   Estándar<br />-   Enterprise|Sí|  
+|SQL Server 2012 con SP3 <br /><br /> -   Estándar<br />-   Enterprise|Sí|  
+|SQL Server 2008 R2 con SP3<br /><br /> -   Estándar<br />-   Enterprise<br />-   Centro de datos|Sí, para las versiones compatibles de Configuration Manager anteriores a la 1702.|  
+|SQL Server Express 2008 R2 con SP3|No compatible.| 
+
+
+
+
 ## <a name="next-steps"></a>Pasos siguientes
 [Operaciones y mantenimiento de informes](operations-and-maintenance-for-reporting.md)

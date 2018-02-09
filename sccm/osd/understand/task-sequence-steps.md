@@ -17,11 +17,11 @@ caps.handback.revision:
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 158817547d40f09fb8bd30ebedd5aea6420a8571
-ms.sourcegitcommit: aee9ac45c15f27d8cf827890edcae94c03f5fd5e
+ms.openlocfilehash: 5320d7747f7e2c6164da8c1801e631b749935d6d
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Pasos de la secuencia de tareas en System Center Configuration Manager
 
@@ -1313,7 +1313,7 @@ En el editor de secuencia de tareas, haga clic en **Agregar**, seleccione **Imá
  Haga clic en **Examinar** y después seleccione el paquete de instalación de cliente de Configuration Manager para usar con este paso.  
 
  **Usar el paquete de cliente de preproducción cuando esté disponible**  
- Si hay un paquete de cliente de preproducción disponible, la secuencia de tareas lo usa en lugar del paquete de cliente de producción. El cliente de preproducción es una versión más reciente para pruebas en el entorno de producción. Haga clic en **Examinar** y después seleccione el paquete de instalación de cliente de preproducción para usar con este paso.  
+ Si hay un paquete de cliente de preproducción disponible y el equipo forma parte de la colección de uso piloto, la secuencia de tareas lo usa en lugar del paquete de cliente de producción. El cliente de preproducción es una versión más reciente para pruebas en el entorno de producción. Haga clic en **Examinar** y después seleccione el paquete de instalación de cliente de preproducción para usar con este paso.  
 
  **Propiedades de instalación**  
  La acción de secuencia de tareas especifica automáticamente la asignación de sitios y la configuración predeterminada. Puede usar este campo para especificar propiedades de instalación adicionales que se utilizarán al instalar el cliente. Si desea especificar varias propiedades de instalación, sepárelas con un espacio.  

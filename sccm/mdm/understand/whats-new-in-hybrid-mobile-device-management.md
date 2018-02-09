@@ -15,11 +15,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 04ed2ac1abe54c3b8c7c86f210b35f5f52d80ef6
-ms.sourcegitcommit: c432624b8816f59d51a3c8ef68960ed4099d9124
+ms.openlocfilehash: aca30a199e38b2d4ed38a458694d98010b5e2496
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con System Center Configuration Manager y Microsoft Intune
 
@@ -46,6 +46,9 @@ En cada sección de este artículo se enumeran las características híbridas or
 ## <a name="january-2018"></a>Enero de 2018
 
 ### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune
+
+- **Nueva funcionalidad para la acción "Resolver" para dispositivos Android** <!--1583480-->    
+  La aplicación Portal de empresa para Android expande la acción "Resolver" para la opción **Actualizar configuración del dispositivo** para resolver [problemas con el cifrado del dispositivo](https://docs.microsoft.com/intune-user-help/encrypt-your-device-android).
 
 - **Bloqueo remoto disponible en la aplicación del Portal de empresa para Windows 10** <!--676506-->    
   Los usuarios finales ya pueden bloquear de forma remota sus dispositivos desde la aplicación del Portal de empresa para Windows 10. No se mostrará para el dispositivo local que usen activamente.

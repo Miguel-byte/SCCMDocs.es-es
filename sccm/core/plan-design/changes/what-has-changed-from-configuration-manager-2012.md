@@ -6,23 +6,24 @@ ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: fb8b7dd27d890750fb93f02d38c0fd9d6c0feca6
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 6e0da4f8c42bb0b2275566eba35b1e06b2028c1b
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="what39s-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>Cambios en System Center Configuration Manager respecto a System Center 2012 Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
  La rama actual de System Center Configuration Manager presenta cambios importantes de System Center 2012 Configuration Manager. En este tema se identifican los cambios más importantes y las nuevas funciones de la versión de línea base 1511 de System Center Configuration Manager. Para obtener más información sobre los cambios que se presentan en actualizaciones posteriores para System Center Configuration Manager, vea [Acerca de las versiones incrementales de System Center Configuration Manager](/sccm/core/plan-design/changes/whats-new-incremental-versions).
@@ -81,7 +82,7 @@ Tenga en cuenta que la administración fuera de banda en System Center 2012 Conf
 ##  <a name="bkmk_out"></a> Característica en desuso  
  Algunas características, como los equipos nativos basados en la [Compatibilidad con la Tecnología de administración activa (AMT) de Intel](#bkmk_AMT), se quitan de la consola de Configuration Manager. Otras características, como la Protección de acceso a redes, se quitan completamente. Además, algunos productos de Microsoft anteriores como Windows Vista, Windows Server 2008 y SQL Server 2008, ya no son compatibles.  
 
- Para obtener una lista de características en desuso, consulte [Removed and deprecated features for System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md) (Características eliminadas y en desuso de System Center Configuration Manager).  
+ Para obtener una lista de características en desuso, consulte [Removed and deprecated items for System Center Configuration Manager](../../../core/plan-design/changes/deprecated/removed-and-deprecated.md) (Elementos eliminados y en desuso de System Center Configuration Manager).  
 
  Para obtener información detallada sobre productos, sistemas operativos y configuraciones compatibles, consulte [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md) (Configuraciones admitidas para System Center Configuration Manager).  
 

@@ -3,7 +3,7 @@ title: "Punto de conexión de servicio"
 titleSuffix: Configuration Manager
 description: "Obtenga información sobre este rol de sistema de sitio de Configuration Manager y comprenda y planee sus diversos usos."
 ms.custom: na
-ms.date: 6/28/2017
+ms.date: 1/29/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,17 +17,17 @@ caps.handback.revision:
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 9651694530d1258100c9c564bfc59447ac454a96
-ms.sourcegitcommit: ac20475ae9c1ea5ca3632cb6a44440c316f171f4
+ms.openlocfilehash: a029d54000dee669ae437a460ebcb31f359bfd27
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="about-the-service-connection-point-in-system-center-configuration-manager"></a>Acerca del punto de conexión de servicio en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-El punto de conexión de servicio de System Center Configuration Manager es un rol de sistema de sitio que realiza varias funciones importantes para la jerarquía. Antes de configurar el punto de conexión de servicio, le recomendamos que comprenda y planee los diferentes usos que puedan afectar a la forma de configurar este rol de sistema de sitio:  
+El punto de conexión de servicio de System Center Configuration Manager es un rol de sistema de sitio que realiza varias funciones importantes para la jerarquía. Antes de configurar el punto de conexión de servicio, es conveniente conocer y planear sus posibilidades de uso.  La planificación del uso podría afectar su forma de configurar este rol de sistema de sitio:  
 
 -   **Administrar dispositivos móviles con Microsoft Intune**: este rol reemplaza al conector de Windows Intune que se usaba en las versiones anteriores de Configuration Manager y se puede configurar con los detalles de la suscripción de Intune. Consulte [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../../mdm/understand/hybrid-mobile-device-management.md) (Administración híbrida de dispositivos móviles (MDM) con System Center Configuration Manager y Microsoft Intune).  
 
@@ -41,9 +41,9 @@ El punto de conexión de servicio de System Center Configuration Manager es un r
 
     -   Identificar las actualizaciones de Configuration Manager válidas para la versión de Configuration Manager que use  
 
-  Para más información sobre los datos que recopila cada nivel y sobre cómo cambiar el nivel de recopilación después de instalar el rol, vea [Diagnósticos y datos de uso](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data) y, después, siga el vínculo de la versión de Configuration Manager que use.  
+  Para obtener más información sobre los datos que recopila cada nivel y sobre cómo cambiar el nivel de recopilación después de instalar el rol, consulte [Diagnósticos y datos de uso](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data). Después, siga el vínculo para la versión de Configuration Manager que utilice.  
 
-  Para obtener más información, consulte [Configuración y niveles de datos de uso](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
+  Para obtener más información, vea [Configuración y niveles de datos de uso](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
 
 -   **Descargar las actualizaciones válidas para la infraestructura de Configuration Manager**: solo estarán disponibles las actualizaciones apropiadas para la infraestructura, según los datos de uso que suba.  
 
@@ -57,11 +57,11 @@ El punto de conexión de servicio de System Center Configuration Manager es un r
 ##  <a name="bkmk_modes"></a> Modos de operación  
  El punto de conexión de servicio admite dos modos de funcionamiento:  
 
--   En el **modo con conexión**, el punto de conexión de servicio comprueba automáticamente cada 24 horas si existen actualizaciones y, después, descarga las nuevas actualizaciones disponibles para la infraestructura y la versión del producto actuales para que estén disponibles en la consola de Configuration Manager.  
+-   En el **modo en línea**, el punto de conexión de servicio comprueba si existen actualizaciones automáticamente cada 24 horas. Descarga automáticamente las nuevas actualizaciones disponibles para la infraestructura y la versión del producto actuales para que estén disponibles en la consola de Configuration Manager.  
 
--   En el **modo sin conexión**, el punto de conexión de servicio no se conecta al servicio en la nube de Microsoft y tendrá que usar de forma manual la [herramienta de conexión de servicio para System Center Configuration Manager](../../../../core/servers/manage/use-the-service-connection-tool.md) para importar las actualizaciones disponibles.  
+-   En el **modo sin conexión**, el punto de conexión de servicio no se conecta al servicio en la nube de Microsoft. Para importar manualmente las actualizaciones disponibles, [use la herramienta de conexión de servicio para System Center Configuration Manager](../../../../core/servers/manage/use-the-service-connection-tool.md).  
 
-Al cambiar entre los modos con conexión o sin conexión después de instalar el punto de conexión de servicio, tendrá que reiniciar el subproceso SMS_DMP_DOWNLOADER del servicio SMS_Executive de Configuration Manager para que se aplique el cambio. Para ello, use el Administrador de servicios de Configuration Manager para reiniciar solo el subproceso SMS_DMP_DOWNLOADER del servicio SMS_Executive. También puede reiniciar el servicio SMS_Executive para Configuration Manager (que reinicia la mayoría de los componentes de sitio) o puede esperar hasta que se ejecute una tarea programada (como una copia de seguridad de sitio, que detiene y, después, reinicia automáticamente el servicio SMS_Executive).  
+Al cambiar entre los modos con conexión o sin conexión después de instalar el punto de conexión de servicio, tendrá que reiniciar el subproceso SMS_DMP_DOWNLOADER del servicio SMS_Executive de Configuration Manager para que se aplique el cambio. Puede usar el Administrador de servicios de Configuration Manager para reiniciar solo el subproceso SMS_DMP_DOWNLOADER del servicio SMS_Executive. También puede reiniciar el servicio SMS_Executive para Configuration Manager, con lo que se reinician la mayoría de componentes del sitio. Como alternativa, puede esperar que una tarea programada, como una copia de seguridad del sitio, detenga y después reinicie el servicio SMS_Executive.  
 
 Para usar el Administrador de servicios de Configuration Manager, en la consola, vaya a **Supervisión** > **Estado del sistema** > **Estado del componente**, haga clic en **Iniciar** y, después, seleccione **Administrador de servicios de Configuration Manager**. En el Administrador de servicios:  
 
@@ -71,7 +71,7 @@ Para usar el Administrador de servicios de Configuration Manager, en la consola,
 
 -   Cuando se confirme el estado del componente, haga clic con el botón derecho en el componente y seleccione **Detener**.  
 
--   Vuelva a **consultar** el componente para confirmar que se ha detenido, vuelva a hacer clic con el botón derecho en el componente y, después, seleccione **Iniciar**.  
+-   **Consulte** el componente de nuevo para confirmar que se ha detenido. Haga clic en el componente una vez más y después elija **Iniciar**.  
 
 > [!IMPORTANT]  
 >  El proceso que agrega una suscripción de Microsoft Intune al punto de conexión de servicio establece automáticamente el rol de sistema de sitio en el modo con conexión. El punto de conexión de servicio no admite el modo sin conexión cuando se configura con una suscripción de Intune.  
@@ -124,7 +124,7 @@ Cuando ejecute **Configurar** para instalar el sitio de nivel superior de una je
 Después de ejecutar el programa de instalación o de reinstalar el rol de sistema de sitio, use el **Asistente para agregar roles de sistema de sitio** o el **Asistente para crear servidor de sistema de sitio** para instalar el sistema de sitio en un servidor en el sitio de nivel superior de la jerarquía (es decir, el sitio de administración central o un sitio primario independiente). Los dos asistentes se encuentran en la pestaña **Inicio** de la consola, en **Administración** > **Configuración de sitio** > **Servidores y roles del sistema de sitios**.
 
 ## <a name="log-files-used-by-the-service-connection-point"></a>Archivos de registro usados por el punto de conexión de servicio
-Para consultar información sobre las cargas en Microsoft, vea **Dmpuploader.log** en el equipo en que se ejecuta el punto de conexión de servicio.  Para las descargas, incluido el progreso de descarga de las actualizaciones, vea **Dmpdownloader.log**. Para obtener la lista completa de registros relacionados con el punto de conexión de servicio, vea [Punto de conexión de servicio](/sccm/core/plan-design/hierarchy/log-files#BKMK_WITLog) en el tema de archivos de registro de Configuration Manager.
+Para consultar información sobre las cargas en Microsoft, vea **Dmpuploader.log** en el equipo en que se ejecuta el punto de conexión de servicio.  Para las descargas, incluido el progreso de descarga de las actualizaciones, vea **Dmpdownloader.log**. Para obtener la lista completa de registros relacionados con el punto de conexión de servicio, consulte [Punto de conexión de servicio](/sccm/core/plan-design/hierarchy/log-files#BKMK_WITLog) en el artículo de archivos de registro de Configuration Manager.
 
 También puede utilizar los diagramas de flujo siguientes para conocer el flujo del proceso y las entradas del registro de claves para descargas de actualización y replicación de actualizaciones en otros sitios:
  - [Diagrama de flujo: descargar actualizaciones](/sccm/core/servers/manage/download-updates-flowchart)
