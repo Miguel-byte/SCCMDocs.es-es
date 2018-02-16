@@ -10,20 +10,23 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: 
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 4b582d5fbd9e2e916c439b149e117f1a65da98bf
-ms.sourcegitcommit: 5f4a584d4a833b0cc22bd8c47da7dd55aced97fa
+ms.openlocfilehash: 0cc11a05013fd9c25ee98ec35adcbe822d8a21fb
+ms.sourcegitcommit: 389c4e5b4e9953b74c13b1689195f99c526fa737
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="co-management-for-windows-10-devices"></a>Administración conjunta para dispositivos de Windows 10    
 <!-- 1350871 -->
 Muchos clientes quieren administrar dispositivos de Windows 10 de la misma manera que administran dispositivos móviles mediante una solución simplificada, basada en la nube y de costo inferior, pero llevar a cabo la transición de la administración tradicional a una administración moderna puede resultar complicado. Las actualizaciones anteriores de Windows 10 ya permiten unir un dispositivo Windows 10 a Active Directory (AD) local y en la nube al mismo tiempo (Azure AD híbrido). A partir de la versión 1710 de Configuration Manager, la administración conjunta aprovecha esta mejora y permite administrar dispositivos de la versión 1709 de Windows 10 (también conocida con el nombre Fall Creators Update) de forma simultánea mediante Intune y Configuration Manager. Se trata de una solución que sirve de puente entre la administración tradicional y moderna, y proporciona un camino para realizar la transición con un enfoque por fases. 
 
-Hay dos formas de conseguir la administración conjunta.  Una es que los dispositivos Windows 10 administrados mediante Configuration Manager y los dispositivos unidos a Azure AD híbrido se inscriban en Intune. La otra es que los dispositivos aprovisionados por Intune que se inscriben en Intune y, luego, se instalan con cliente de Configuration Manager obtengan un estado de administración conjunta.  
+Hay dos formas de conseguir la administración conjunta.  Una es que los dispositivos Windows 10 administrados mediante Configuration Manager y los dispositivos unidos a Azure AD híbrido se inscriban en Intune. La otra es que los dispositivos aprovisionados por Intune que se inscriben en Intune y, luego, se instalan con cliente de Configuration Manager obtengan un estado de administración conjunta.
 
 ## <a name="prerequisites"></a>Requisitos previos
 Debe cumplir los siguientes requisitos previos para poder habilitar la administración conjunta. Hay requisitos previos generales y distintos requisitos previos para los clientes con el cliente de Configuration Manager y los dispositivos que no tienen instalado el cliente.
+
+> [!IMPORTANT]
+> Los dispositivos móviles con Windows 10 no admiten la administración conjunta.
 
 ### <a name="general-prerequisites"></a>Requisitos previos generales
 A continuación se indican los requisitos previos generales para poder habilitar la administración conjunta:  
