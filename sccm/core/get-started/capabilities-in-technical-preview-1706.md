@@ -489,7 +489,7 @@ En esta versión, hemos agregado los siguientes nuevos parámetros que puede usa
 ### <a name="store"></a>Tienda
 
 - **Actualizar automáticamente las aplicaciones de la tienda**
-- **Usar solo una tienda privada	**
+- **Usar solo una tienda privada**
 - **Inicio de aplicaciones de la tienda**
 
 ### <a name="microsoft-edge"></a>Microsoft Edge
