@@ -16,11 +16,11 @@ caps.latest.revision:
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 40894c4ebb562e5c979f1226349ff91c38516618
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+ms.openlocfilehash: 6d93be3ec04396c9980b039617c673985090cdc6
+ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="keep-windows-10-up-to-date-in-the-enterprise-using-configuration-manager"></a>Mantener actualizado Windows 10 en la empresa mediante Configuration Manager
 
@@ -36,7 +36,7 @@ System Center Configuration Manager proporciona un amplio control sobre las actu
 |[Ciclo de vida de soporte técnico](/sccm/core/servers/manage/current-branch-versions-supported)|Se explica el nuevo modelo de soporte técnico y servicios.|
 |[Elementos eliminados y en desuso](/sccm//core/plan-design/changes/deprecated/removed-and-deprecated)|Se proporcionan notificaciones anticipadas sobre los cambios futuros que es posible que afecten al uso de Configuration Manager.|
 |[Configuration Manager como servicio](/sccm/core/servers/manage/updates)|Se explica el sencillo método en consola para aplicar actualizaciones de características a Configuration Manager.|
-|[Obtención de actualizaciones disponibles](/core/servers/manage/install-in-console-updates#get-available-updates)|Se explican los dos modos disponibles para obtener las nuevas actualizaciones de características de Configuration Manager.|
+|[Obtención de actualizaciones disponibles](/sccm/core/servers/manage/install-in-console-updates.md#get-available-updates)|Se explican los dos modos disponibles para obtener las nuevas actualizaciones de características de Configuration Manager.|
 |[Lista de comprobación de actualización](/sccm/core/servers/manage/install-in-console-updates#bkmk_beforeinstall)|Se proporcionan listas de comprobación de actualización específicas de la versión, si procede.| 
 |[Instalación de nuevas actualizaciones de características de Configuration Manager](/sccm/core/servers/manage/install-in-console-updates#bkmk_install)|Se explican los pasos de instalación para actualizaciones de características.|
 |[Compatibilidad con Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)|Se proporciona una matriz de compatibilidad para versiones de Windows 10 (y ADK).|

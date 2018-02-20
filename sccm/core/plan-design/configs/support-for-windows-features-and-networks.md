@@ -7,24 +7,25 @@ ms.date: 8/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
-caps.latest.revision: "8"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 0cc1915a73ed55403eca27021b77aab1fd1ddb03
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 91e86bd578403d17ec7e4cc9dc6284c51a57053e
+ms.sourcegitcommit: 37e990d191028160486dbca286d2ea945bd5c8c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="support-for-windows-features-and-networks-in-system-center-configuration-manager"></a>Compatibilidad con las características y redes de Windows en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Este tema identifica la compatibilidad de System Center Configuration Manager con las características de red y Windows comunes.  
 
@@ -65,7 +66,8 @@ Estos clientes también almacenan en caché el contenido. De esta manera, los si
 |Windows Server 2008 con SP2|**Requiere BITS 4.0**: puede instalar la versión 4.0 de BITS en los clientes de Configuration Manager mediante la distribución de software o actualizaciones de software. Para obtener más información sobre la versión 4.0 de BITS, vea [Windows Management Framework](http://go.microsoft.com/fwlink/p/?LinkId=181979).<br /><br /> En este sistema operativo, la funcionalidad de cliente de BranchCache no es compatible con la distribución de software que se ejecuta desde la red ni con las transferencias de archivos SMB. Además, este sistema operativo no puede usar la funcionalidad de BranchCache con puntos de distribución basados en la nube.|  
 |Windows Server 2008 R2|Compatible de forma predeterminada|  
 |Windows Server 2012|Compatible de forma predeterminada|  
-|Windows Server 2012 R2|Compatible de forma predeterminada|  
+|Windows Server 2012 R2|Compatible de forma predeterminada|  
+|Windows Server 2016|Compatible de forma predeterminada|  
 
  Para obtener más información sobre BranchCache, vea [BranchCache para Windows](http://go.microsoft.com/fwlink/p/?LinkId=177945) en la documentación de Windows Server.  
 
