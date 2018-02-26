@@ -3,7 +3,7 @@ title: Versiones de Technical Preview
 titleSuffix: Configuration Manager
 description: "Obtenga información sobre la versión Technical Preview que le permite probar nuevas funcionalidades y capacidades de System Center Configuration Manager."
 ms.custom: na
-ms.date: 01/19/2018
+ms.date: 02/09/2018
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -16,11 +16,11 @@ caps.latest.revision:
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 975bd66bb86efb133ccd7017295e8108558f633d
-ms.sourcegitcommit: db9978135d7a6455d83dbe4a5175af2bdeaeafd8
+ms.openlocfilehash: 4f16216bd1bbb662cc8d532664ccd593f94d3898
+ms.sourcegitcommit: e15516983883a4dd002c4bdd114147b04b811021
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>Technical Preview para System Center Configuration Manager
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 01/22/2018
 
  Como esta es una versión preliminar técnica, los detalles y las funcionalidades están sujetos a cambios.  
 
- Este artículo contiene información que se aplica a todas las versiones de Technical Preview. También se muestra cada nueva funcionalidad (o característica) junto con la versión de Technical Preview en la que aparece por primera vez, como la versión 1801 para enero de 2018. Estas características se detallan en temas independientes dedicados a cada versión preliminar.  
+ Este artículo contiene información que se aplica a todas las versiones de Technical Preview. También se muestra cada nueva funcionalidad (o característica) junto con la versión de Technical Preview en la que aparece por primera vez, como la versión 1802 para febrero de 2018. Estas características se detallan en temas independientes dedicados a cada versión preliminar.  
 
  Para obtener más información sobre las novedades en la rama actual de Configuration Manager, consulte [Novedades de System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).
 
@@ -60,7 +60,9 @@ ms.lasthandoff: 01/22/2018
 
 -   No se admite la migración a esta versión preliminar o desde ella.  
 
--   No se admite la actualización a esta versión preliminar.  
+-   No se admite la actualización a esta versión preliminar. 
+
+-   No hay ninguna compatibilidad para la recuperación de sitio desde la carpeta cd.latest.  <!--507106-->
 
 -   No se admite la actualización a una versión de producción (rama actual) desde esta versión preliminar. En cambio, cuando haya actualizaciones disponibles para una versión preliminar, puede buscarlas e instalarlas desde el nodo **Actualizaciones y mantenimiento** de la consola de Configuration Manager. Para ver un vídeo del proceso de actualización en la consola, consulte [Installing ConfigMgr Update Package (Instalación de paquetes de actualización de Configuration Manager)](https://www.youtube.com/embed/KBd_EGFbUT8) en youtube.com.  
 -   Solo se admite un sitio primario independiente. No se admiten sitios de administración central, varios sitios primarios ni sitios secundarios.  
@@ -112,16 +114,28 @@ A continuación se enumeran las funcionalidades que ofrece cada versión prelimi
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1801"></a>Technical Preview versión 1801
-- [Creación de implementaciones por fases](capabilities-in-technical-preview-1801.md#create-phased-deployments) <!-- 1357405 --> 
-- [Informes de administración conjunta](capabilities-in-technical-preview-1801.md#co-management-reporting) <!-- 1356648 --> 
-- [Mejoras en la programación de evaluación de reglas de implementación automática](capabilities-in-technical-preview-1801.md#improvements-to-automatic-deployment-rule-evaluation-schedule) <!-- 1357133 --> 
-- [Reasignación de un punto de distribución](capabilities-in-technical-preview-1801.md#reassign-distribution-point) <!-- 1306937 --> 
-- [Mejoras en el inventario de hardware](capabilities-in-technical-preview-1801.md#improvements-to-hardware-inventory) <!-- 1357389 --> 
-- [Mejoras en la configuración de cliente para el Centro de software](capabilities-in-technical-preview-1801.md#improvements-to-client-settings-for-software-center) <!-- 1355146 --> 
-- [Nueva configuración de Protección de aplicaciones de Windows Defender](capabilities-in-technical-preview-1801.md#new-settings-for-windows-defender-application-guard) <!-- 1356256 --> 
-- [Mejoras para ejecutar scripts](capabilities-in-technical-preview-1801.md#improvements-to-run-scripts) <!-- 1236459 --> 
-
+### <a name="technical-preview-version-1802"></a>Technical Preview, versión 1802
+- [Transición de la carga de trabajo de Endpoint Protection a Intune mediante la administración conjunta](capabilities-in-technical-preview-1802.md#transition-endpoint-protection-workload-to-intune-using-co-management) <!-- 1357365 -->
+- [Configuración de la optimización de distribución de Windows para usar grupos de límites de Configuration Manager](capabilities-in-technical-preview-1802.md#configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups) <!-- 1324696 --> 
+- [Secuencia de tareas de actualización en contexto de Windows 10 a través de Cloud Management Gateway](capabilities-in-technical-preview-1802.md#windows-10-in-place-upgrade-task-sequence-via-cloud-management-gateway) <!-- 1357149 -->
+- [Mejoras en la secuencia de tareas de actualización en contexto de Windows 10](capabilities-in-technical-preview-1802.md#improvements-to-windows-10-in-place-upgrade-task-sequence) <!-- 1357425 --> 
+- [Mejoras en los puntos de distribución habilitados con PXE](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) <!-- 1357580 --> 
+- [Plantillas de implementación para secuencias de tareas](capabilities-in-technical-preview-1802.md#deployment-templates-for-task-sequences) <!-- 1357391 --> 
+- [Panel de ciclo de vida del producto](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) <!--1319632 --> 
+- [Mejoras en la creación de informes](capabilities-in-technical-preview-1802.md#improvements-to-reporting) <!--1357653 --> 
+- [Mejoras en el Centro de software](capabilities-in-technical-preview-1802.md#improvements-to-software-center) <!--1357592 --> 
+- [Mejoras para ejecutar scripts](capabilities-in-technical-preview-1802.md#improvements-to-run-scripts) <!--1236459 --> 
+- [Reserva de grupo de límites para puntos de administración](capabilities-in-technical-preview-1802.md#boundary-group-fallback-for-management-points) <!-- 1324594 --> 
+- [Mejora de la compatibilidad con certificados CNG](capabilities-in-technical-preview-1802.md#improved-support-for-cng-certificates) <!-- 1357314 --> 
+- [Compatibilidad con Cloud Management Gateway para Azure Resource Manager](capabilities-in-technical-preview-1802.md#cloud-management-gateway-support-for-azure-resource-manager) <!-- 1324735 --> 
+- [Aprobación de solicitudes de aplicación para los usuarios por dispositivo](capabilities-in-technical-preview-1802.md#approve-application-requests-for-users-per-device) <!-- 1357015 --> 
+- [Usar el Centro de software para buscar e instalar aplicaciones disponibles para el usuario en dispositivos unidos a Azure AD](capabilities-in-technical-preview-1802.md#use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices) <!-- 1322613 --> 
+- [Información de dispositivo Windows AutoPilot](capabilities-in-technical-preview-1802.md#report-on-windows-autopilot-device-information) <!-- 1351442 --> 
+- [Mejoras en las directivas de Configuration Manager para Protección contra vulnerabilidades de seguridad de Windows Defender](capabilities-in-technical-preview-1802.md#improvements-to-configuration-manager-policies-for-windows-device-exploit-guard) <!-- 1356220 -->
+- [Directivas del explorador Microsoft Edge](capabilities-in-technical-preview-1802.md#microsoft-edge-browser-policies) <!-- 1357310 -->
+- [Informe sobre la cantidad de exploradores predeterminados](capabilities-in-technical-preview-1802.md#report-for-default-browser-counts) <!-- 1357830 --> 
+- [Compatibilidad con dispositivos Windows 10 ARM64](capabilities-in-technical-preview-1802.md#support-for-windows-10-arm64-devices) <!-- 1353704 --> 
+- [Cambios en las implementaciones por fases](capabilities-in-technical-preview-1802.md#changes-to-phased-deployments) <!-- 1357405 -->
 
 
 
@@ -135,8 +149,17 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |Capacidad |Versión de Technical Preview |Versión de rama actual|  
  |----------------|---------------------|--------------------|
+ |Creación de implementaciones por fases <!-- 1357405 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#create-phased-deployments)  |![Sin agregar](media/Red_X.gif)    |
+ |Informes de administración conjunta <!-- 1356648 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#co-management-reporting)  |![Sin agregar](media/Red_X.gif)    |
+ |Mejoras en la programación de evaluación de reglas de implementación automática <!-- 1357133 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-automatic-deployment-rule-evaluation-schedule)  |![Sin agregar](media/Red_X.gif)    |
+ |Reasignación de un punto de distribución <!-- 1306937 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#reassign-distribution-point)  |![Sin agregar](media/Red_X.gif)    |
+ |Mejoras en el inventario de hardware <!-- 1357389 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-hardware-inventory)  |![Sin agregar](media/Red_X.gif)    |
+ |Mejoras en la configuración de cliente para el Centro de software <!-- 1355146 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-client-settings-for-software-center)  |![Sin agregar](media/Red_X.gif)    |
+ |Nueva configuración de Protección de aplicaciones de Windows Defender <!-- 1356256 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#new-settings-for-windows-defender-application-guard)  |![Sin agregar](media/Red_X.gif)    |
+ |Mejoras para ejecutar scripts <!-- 1236459 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-run-scripts)  |![Sin agregar](media/Red_X.gif)    |
  |No actualizar automáticamente las aplicaciones reemplazadas <!-- 1351266 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#do-not-automatically-upgrade-superseded-applications)  |![Sin agregar](media/Red_X.gif)    | 
  |Instalación de varias aplicaciones en el Centro de software <!-- 1357126 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#install-multiple-applications-in-software-center)  |![Sin agregar](media/Red_X.gif)    |
+ |Servicio del respondedor PXE basado en cliente <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service)  |![Sin agregar](media/Red_X.gif)    |
  |Cambio en la instalación del cliente de Configuration Manager <!-- 1356195 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#change-in-the-configuration-manager-client-install)  |![Sin agregar](media/Red_X.gif)    | 
  |Cambio en el panel de dispositivos Surface <!-- 1355788 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#change-to-the-surface-device-dashboard)  |![Sin agregar](media/Red_X.gif)    | 
  |Mejoras en el panel de administración de clientes de Office 365 <!-- 1357281 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-office-365-client-management-dashboard)  |![Sin agregar](media/Red_X.gif)    | 
@@ -144,15 +167,7 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  |Mejoras en la implementación de sistema operativo <!-- SMS 500897 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-operating-system-deployment)  |![Sin agregar](media/Red_X.gif)    | 
  |Ejecutar paso de secuencia de tareas <!-- 1261338 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |[Versión 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence)    |
  |Permitir la interacción del usuario al instalar aplicaciones como <!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![Sin agregar](media/Red_X.gif)    |
- |Telemetría de Windows 10 para el estado de dispositivos de Windows Analytics<!--1356148 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health) |[Versión 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710#reporting)    |
- |Mejoras de los iconos del Centro de software<!-- 1356194 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#software-center-no-longer-distorts-icons-larger-than-250x250) |[Versión 1710](/sccm/apps/plan-design/plan-for-and-configure-application-management#supplemental-procedures-to-install-and-configure-the-application-catalog-and-software-center)    |
- |Comprobación del cumplimiento del Centro de software en dispositivos administrados conjuntamente<!-- 1356374 -->|[Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|[Versión 1710](/sccm/core/clients/manage/co-management-overview)    |
- |Compatibilidad limitada con certificados CNG<!-- 1356191 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limited-support-for-cng-certificates)|[Versión 1710](/sccm/core/plan-design/network/cng-certificates-overview)    |
- |Compatibilidad con la Protección contra vulnerabilidades de seguridad<!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |[Versión 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)    |
- |Descripciones mejoradas para reinicios de equipo pendientes   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Versión 1710](/sccm/core/clients/manage/manage-clients)    |
- |Cambios en la directiva de Device Guard <!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Versión 1710](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)    |
- |Configuración e implementación de directivas de Protección de aplicaciones de Windows Defender <!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[Versión 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)    |
- |Mejoras en la implementación de scripts de PowerShell desde Configuration Manager <!-- 1236459 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#improvements-for-deploying-powershell-scripts-from-configuration-manager) | [Versión 1710](/sccm/apps/deploy-use/create-deploy-scripts)
+
  
 
 ## <a name="capabilities-delivered-in-previous-technical-previews"></a>Funcionalidades ofrecidas en anteriores versiones preliminares técnicas

@@ -3,24 +3,25 @@ title: "Archivos de registro para la solución de problemas"
 titleSuffix: Configuration Manager
 description: "Utilice los archivos de registro para solucionar problemas en una jerarquía de System Center Configuration Manager."
 ms.custom: na
-ms.date: 7/03/2017
+ms.date: 02/14/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
-caps.latest.revision: "9"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: c310e23b543e8767a393ca5bf87a224a9269e359
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: b0f15b0c7cf983234f41e3f202be7d46ce4954e2
+ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="log-files-in-system-center-configuration-manager"></a>Archivos de registro en System Center Configuration Manager
 
@@ -50,7 +51,9 @@ En System Center Configuration Manager, los componentes de servidor de cliente y
 
     -   [Registros de servidor de sistema de sitio y servidor de sitio](#BKMK_SiteSiteServerLog)  
 
-    -   [Archivos de registro de instalación de servidor de sitio](#BKMK_SiteInstallLog)  
+    -   [Archivos de registro de instalación de servidor de sitio](#BKMK_SiteInstallLog) 
+
+    -   [Archivos de registro del punto de servicio de almacenamiento de datos](#BKMK_DataWarehouse)
 
     -   [Archivos de registro de punto de estado de reserva](#BKMK_FSPLog)  
 
@@ -73,6 +76,8 @@ En System Center Configuration Manager, los componentes de servidor de cliente y
     -   [Puerta de enlace de administración en la nube](#cloud-management-gateway)
 
     -   [Configuración de cumplimiento y acceso a los recursos de la compañía](#BKMK_CompSettingsLog)  
+
+    -   [Acceso condicional](#BKMK_CA)
 
     -   [Consola de Configuration Manager](#BKMK_ConsoleLog)  
 
@@ -115,14 +120,14 @@ En System Center Configuration Manager, los componentes de servidor de cliente y
     -   [Servidor WSUS](#BKMK_WSUSLog)  
 
 ##  <a name="BKMK_AboutLogs"></a> Acerca de los archivos de registro de Configuration Manager  
- La mayoría de los procesos de Configuration Manager escriben información operativa en un archivo de registro dedicado al proceso de que se trate. Los archivos de registro se identifican mediante las extensiones de archivo **.log** o **.lo_**. Configuration Manager escribe en un archivo .log hasta que dicho registro alcanza su tamaño máximo. Cuando el registro está lleno, el archivo .log se copia en un archivo con el mismo nombre pero con la extensión .lo_, y el proceso o el componente continúa escribiendo en el archivo .log. Cuando el archivo .log vuelve a alcanzar el tamaño máximo, se sobrescribe el archivo .lo_ y el proceso se repite. Algunos componentes establecen un historial de archivos de registro al anexar una marca de fecha y hora al nombre del archivo de registro y al conservar la extensión .log. Una excepción al tamaño máximo y al uso del archivo .lo_ es el cliente para Linux y UNIX. Para más información sobre el modo en que el cliente para UNIX y Linux usa los archivos de registro, vea [Administrar archivos de registro en el cliente para UNIX y Linux](#BKMK_ManageLinuxLogs) en este tema.  
+ La mayoría de los procesos de Configuration Manager escriben información operativa en un archivo de registro dedicado al proceso de que se trate. Los archivos de registro se identifican mediante las extensiones de archivo **.log** o **.lo_**. Configuration Manager escribe en un archivo .log hasta que dicho registro alcanza su tamaño máximo. Cuando el registro está lleno, el archivo .log se copia en un archivo con el mismo nombre pero con la extensión .lo_, y el proceso o el componente continúa escribiendo en el archivo .log. Cuando el archivo .log vuelve a alcanzar el tamaño máximo, se sobrescribe el archivo .lo_ y el proceso se repite. Algunos componentes establecen un historial de archivos de registro al anexar una marca de fecha y hora al nombre del archivo de registro y al conservar la extensión .log. Una excepción al tamaño máximo y al uso del archivo .lo_ es el cliente para Linux y UNIX. Para más información sobre el modo en que el cliente para UNIX y Linux usa los archivos de registro, vea [Administrar archivos de registro en el cliente para UNIX y Linux](#BKMK_ManageLinuxLogs) en este artículo.  
 
  Para ver los registros, use la herramienta de visualización de registros de Configuration Manager, CMTrace, que se encuentra en la carpeta \\SMSSetup\\Tools del medio de origen de Configuration Manager. La herramienta CMTrace también se agrega a todas las imágenes de arranque que se agregan a la Biblioteca de software.  
 
 ###  <a name="BKMK_LogOptions"></a> Configuración de opciones de registro mediante el Administrador de servicios de Configuration Manager  
  En Configuration Manager, puede cambiar la ubicación de almacenamiento de los archivos de registro y el tamaño de los archivos de registro.  
 
- Para modificar el tamaño de los archivos de registro, cambiar el nombre y la ubicación de estos archivos y forzar a varios componentes a escribir en un único archivo de registro, siga estos pasos.  
+ Para modificar el tamaño de los archivos de registro, cambiar el nombre y la ubicación de estos archivos y forzar a varios componentes a escribir en un único archivo de registro, siga estos pasos:  
 
 #### <a name="to-modify-logging-for-a-component"></a>Para modificar el registro de un componente  
 
@@ -361,6 +366,15 @@ El archivo de registro SMS_DM.log en el servidor de sistema de sitio además reg
 |SMS_BOOTSTRAP.log|Registra información sobre el progreso del inicio del proceso de instalación de sitio secundario. Los detalles del proceso de instalación figuran en ConfigMgrSetup.log.|Servidor de sitio|  
 |smstsvc.log|Registra información sobre la instalación, el uso y la eliminación de un servicio de Windows que se usa para probar la conectividad de red y los permisos entre servidores, mediante la cuenta de equipo del servidor que inicia la conexión.|Registros de servidor de sistema de sitio y servidor de sitio|  
 
+###  <a name="BKMK_DataWarehouse"></a>Archivos de registro del punto de servicio de almacenamiento de datos  
+ En la tabla siguiente se incluyen los archivos de registro que contienen información relacionada con el punto de servicio del almacenamiento de datos.  
+
+|Nombre del registro|Descripción|Equipo con el archivo de registro|  
+|--------------|-----------------|----------------------------|  
+|DWSSMSI.log|Registra mensajes generados por la instalación de un punto de servicio de almacenamiento de datos.|Servidor de sistema de sitio|  
+|DWSSSetup.log|Registra mensajes generados por la instalación de un punto de servicio de almacenamiento de datos.|Servidor de sistema de sitio|  
+|Microsoft.ConfigMgrDataWarehouse.log|Registra información acerca de la sincronización de datos entre la base de datos de sitio y la base de datos de almacenamiento de datos.|Servidor de sistema de sitio|  
+
 ###  <a name="BKMK_FSPLog"></a> Archivos de registro de punto de estado de reserva  
  En la tabla siguiente se incluyen los archivos de registro que contienen información relacionada con el punto de estado de reserva.  
 
@@ -389,7 +403,7 @@ El archivo de registro SMS_DM.log en el servidor de sistema de sitio además reg
 |MP_Retry.log|Registra procesos de reintento de inventario de hardware.|Servidor de sistema de sitio|  
 |MP_Sinv.log|Registra detalles acerca de la conversión de registros XML de inventario de software de clientes y los copia en el servidor de sitio.|Servidor de sistema de sitio|  
 |MP_SinvCollFile.log|Registra los detalles acerca de la recopilación de archivos.|Servidor de sistema de sitio|  
-|MP_Status.log|Registra detalles acerca de la conversión de archivos XML.svf de mensaje de estado de clientes y los copia en el servidor de sitio.|Servidor de sistema de sitio|  
+|MP_Status.log|Registra detalles acerca de la conversión de archivos XML.svf de mensaje de estado de clientes y los copia en el servidor de sitio.|Servidor de sistema de sitio|
 |mpcontrol.log|Registra el registro del punto de administración en WINS. Registra la disponibilidad del punto de administración cada 10 minutos.|Servidor de sitio|  
 |mpfdm.log|Registra las acciones del componente de punto de administración que mueve los archivos de cliente a la carpeta INBOXES correspondiente en el servidor de sitio.|Servidor de sistema de sitio|  
 |mpMSI.log|Registra los detalles sobre la instalación de un punto de administración.|Servidor de sitio|  
@@ -511,7 +525,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |CMGService.log o CMG-*RoleInstanceID*- CMGService.log<sup>1</sup>|Registra detalles sobre el componente principal del servicio Cloud Management Gateway en Azure.<br>Puede configurar el nivel de registro mediante la configuración de **Nivel de seguimiento** [**Información** (predeterminada), **Detallado**, **Error**] en la pestaña de **configuración de Azure Portal\Cloud Services**.|**%approot%\logs** en el servidor de Azure o la carpeta SMS/Registros en el servidor de sistema de sitio|
 |SMS_Cloud_ProxyConnector.log|Registra detalles sobre la configuración de conexiones entre el servicio de puerta de enlace de administración en la nube y el punto de conexión de la puerta de enlace de administración en la nube.|Servidor de sistema de sitio|
 
-<sup>1</sup> Se trata de archivos de registro locales de Configuration Manager que el administrador de servicio en la nube sincroniza desde Azure Storage cada 5 minutos. Cloud Management Gateway insertará registros en Azure Storage cada 5 minutos. Por tanto, el retraso máximo será de 10 minutos. Los modificadores detallados afectarán a los registros locales y remotos.
+<sup>1</sup> Se trata de archivos de registro locales de Configuration Manager que el administrador de servicio en la nube sincroniza desde Azure Storage cada 5 minutos. Cloud Management Gateway inserta registros en Azure Storage cada 5 minutos. Por tanto, el retraso máximo es de 10 minutos. Los modificadores detallados afectan a los registros locales y remotos.
 
 - Para solucionar problemas con implementaciones, use **CloudMgr.log** y **CMGSetup.log**
 - Para solucionar problemas de estado del servicio, utilice **CMGService.log** y **SMS_Cloud_ProxyConnector.log**.
@@ -527,6 +541,19 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |DCMAgent.log|Registra información de alto nivel acerca de la evaluación, notificación de conflictos y corrección de elementos de configuración y aplicaciones.|Cliente|  
 |DCMReporting.log|Registra información acerca de resultados de plataforma de directiva de informes en mensajes de estado de elementos de configuración.|Cliente|  
 |DcmWmiProvider.log|Registra información sobre la lectura de synclets de elemento de configuración de WMI.|Cliente|  
+
+###  <a name="BKMK_CA"></a> Acceso condicional
+ En la tabla siguiente se incluyen los archivos de registro que contienen información relacionada con el acceso condicional.  
+
+|Nombre del registro|Descripción|Equipo con el archivo de registro|  
+|--------------|-----------------|----------------------------|  
+|ADALOperationProvider.log|Registra los detalles sobre la adquisición del token de AAD.|Cliente|  
+|cloudusersync.log|Registra la habilitación de licencia de usuarios.|Equipo con el punto de conexión de servicio|  
+|ComplRelayAgent.log|Recibe el estado de cumplimiento general de DCM, adquiere el token del punto de administración, adquiere el token de AAD y notifica la compatibilidad a Intune (el servicio de retransmisión de la entidad de certificación).|Cliente|  
+|DcmWmiProvider.log|Registra información sobre la lectura de synclets de elemento de configuración de WMI.|Cliente|  
+|dmpdownloader.log|Registra detalles sobre las descargas desde Microsoft Intune.|Equipo con el punto de conexión de servicio|
+|dmpuploader.log|Registra detalles relacionados con la carga de cambios de base de datos en Microsoft Intune.|Equipo con el punto de conexión de servicio|   
+|MP_Token.log|Registra solicitudes de token de los clientes.|Servidor de sistema de sitio|  
 
 ###  <a name="BKMK_ConsoleLog"></a> Consola de Configuration Manager  
  En la tabla siguiente se incluyen los archivos de registro que contienen información relacionada con la consola de Configuration Manager.  
@@ -549,7 +576,6 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |PrestageContent.log|Registra los detalles sobre el uso de la herramienta ExtractContent.exe en un punto de distribución preconfigurado remoto. Esta herramienta extrae el contenido que ha sido exportado a un archivo.|Rol de sistema de sitio|  
 |SMSdpmon.log|Registra detalles sobre tareas programadas de supervisión de estado de punto de distribución configuradas en un punto de distribución.|Rol de sistema de sitio|  
 |smsdpprov.log|Registra detalles acerca de la extracción de archivos comprimidos recibidos de un sitio primario. El proveedor de WMI del punto de distribución remoto genera este registro.|Equipo de punto de distribución que no comparte ubicación con el servidor de sitio|  
-
 
 ###  <a name="BKMK_DiscoveryLog"></a> Detección  
 En la tabla siguiente se incluyen los archivos de registro que contienen información relacionada con la detección.  
@@ -772,7 +798,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
  En la tabla siguiente se incluyen los archivos de registro que contienen información relacionada con el uso de Wake On LAN.  
 
 > [!NOTE]  
->  Si complementa Wake on LAN con el uso de un proxy de reactivación, esta actividad se registra en el cliente. Por ejemplo, vea CcmExec.log y SleepAgent_<*dominio*\>@SYSTEM_0.log en la sección [Operaciones de cliente](#BKMK_ClientOpLogs) de este tema.  
+>  Si complementa Wake on LAN con el uso de un proxy de reactivación, esta actividad se registra en el cliente. Por ejemplo, vea CcmExec.log y SleepAgent_<*dominio*\>@SYSTEM_0.log en la sección [Operaciones de cliente](#BKMK_ClientOpLogs) de este artículo.  
 
 |Nombre del registro|Descripción|Equipo con el archivo de registro|  
 |--------------|-----------------|----------------------------|  
