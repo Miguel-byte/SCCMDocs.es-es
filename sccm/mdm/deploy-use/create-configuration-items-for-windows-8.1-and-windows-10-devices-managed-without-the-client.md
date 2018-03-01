@@ -7,12 +7,13 @@ ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
-caps.latest.revision: "20"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
@@ -370,8 +371,8 @@ Esta configuración es para dispositivos con Windows 10, y versiones posteriores
 |**Habilitar SmartScreen**|Utilizar SmartScreen para comprobar que los archivos que los usuarios descargan no contienen código malintencionado.|  
 |**Permitir elementos emergentes**|Permitir o deshabilitar elementos emergentes del explorador.|  
 |**Permitir cookies**|Permitir o deshabilitar las cookies.|  
-|**Permitir autorrelleno**|Permitir el uso de la característica Autorrellenar del explorador de Edge.|  
-|**Permitir administrador de contraseñas**|Permitir el uso de la característica Administrador de contraseñas del explorador de Edge.|  
+|**Permitir autorrelleno**|Permitir el uso de la característica Autorrellenar del explorador de Microsoft Edge.|  
+|**Permitir administrador de contraseñas**|Permitir el uso de la característica Administrador de contraseñas del explorador de Microsoft Edge.|  
 |**Ubicación de la lista de sitios del modo de empresa**|Especifica dónde se encuentra la lista de sitios web que se abrirá en modo de empresa. Los usuarios no pueden editar esta lista.|
 |**Bloquear acceso a about:flags**|Impida que el usuario final acceda a la página about:flags de Edge que contiene configuración experimental y para desarrolladores.|
 |**Invalidación de avisos de SmartScreen**|Permite al usuario final omitir las advertencias del filtro SmartScreen sobre los sitios web que pueden ser malintencionados.|
