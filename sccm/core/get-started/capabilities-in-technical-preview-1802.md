@@ -15,11 +15,11 @@ ms.assetid: 4884a2d3-13ce-44e5-88c4-a66dc7ec6014
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b5e8f744573680ab55fcfff26622e312206ca1a
-ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
+ms.openlocfilehash: 162c47d867e78498650da685327c0fe296aa2eda
+ms.sourcegitcommit: b1fa7be6a6fa5bb7c49e90c0e28a21ba8b41c842
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="capabilities-in-technical-preview-1802-for-system-center-configuration-manager"></a>Funciones de Technical Preview 1802 para System Center Configuration Manager
 
@@ -318,9 +318,9 @@ Windows AutoPilot es una solución para la incorporación y configuración de nu
 
 
 
-## <a name="improvements-to-configuration-manager-policies-for-windows-device-exploit-guard"></a>Mejoras en las directivas de Configuration Manager para Protección contra vulnerabilidades de seguridad de Windows Defender
+## <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Mejoras en las directivas de Configuration Manager para Protección contra vulnerabilidades de seguridad de Windows Defender
 <!-- 1356220 -->
-Se han agregado nuevos parámetros de directivas para el acceso a las carpetas Reducción de la superficie expuesta a ataques y Controlado para Protección contra vulnerabilidades de seguridad de Windows Defender en Configuration Manager.
+Se han agregado nuevos parámetros de directivas para el acceso a las carpetas Reducción de la superficie expuesta a ataques y Controlado para [Protección contra vulnerabilidades de seguridad de Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) en Configuration Manager.
 
 **Nueva configuración para el acceso a la carpeta Controlado**<br/>
 Hay dos opciones adicionales para configurar el acceso a la carpeta Controlado: **Block disk sectors only** (Bloquear solo sectores de disco) y **Audit disk sectors only** (Auditar solo sectores de disco). Estos dos parámetros permiten que el acceso a la carpeta Controlado se habilite solo para sectores de arranque, y no habilita la protección de carpetas específicas o las carpetas protegidas de manera predeterminada. 

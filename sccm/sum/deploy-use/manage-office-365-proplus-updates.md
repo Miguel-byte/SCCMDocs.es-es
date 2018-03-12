@@ -5,18 +5,19 @@ description: "Configuration Manager sincroniza las actualizaciones de cliente de
 keywords: 
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.date: 12/28/2017
+manager: dougeby
+ms.date: 02/16/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology: configmgr-sum
+ms.technology:
+- configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: b951e72635806c12bd0ec0dd66e382a767b99b43
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 2f765df84b94524cf56f6d1d9e051157f1a325ef
+ms.sourcegitcommit: 45ff3ffa040eada5656b17f47dcabd3c637bdb60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Administración de Office 365 ProPlus con Configuration Manager
 
@@ -30,7 +31,7 @@ Configuration Manager permite administrar aplicaciones de Office 365 ProPlus de 
 
 - [Implementación de actualizaciones de Office 365](#deploy-office-365-updates): a partir de la versión 1602 de Configuration Manager, se pueden administrar las actualizaciones de cliente de Office 365 mediante el flujo de trabajo de administración de actualizaciones de software. Cuando Microsoft publica una nueva actualización de cliente de Office 365 en Content Delivery Network (CDN) de Office, Microsoft también publica un paquete de actualización para Windows Server Update Services (WSUS). Después de que Configuration Manager sincroniza la actualización de cliente de Office 365 desde el catálogo WSUS en el servidor de sitio, la actualización está disponible para implementarla en los clientes.    
 
-- [Adición de idiomas para descargar actualizaciones de Office 365](#add-languages-for-office-365-update-downloads): a partir de la versión 1610 de Configuration Manager, se puede agregar compatibilidad para Configuration Manager para descargar actualizaciones de los idiomas compatibles con Office 365. Esto significa que no es necesario que Configuration Manager admita el idioma mientras lo haga Office 365.  
+- [Adición de idiomas para descargar actualizaciones de Office 365](#add-languages-for-office-365-update-downloads): a partir de la versión 1610 de Configuration Manager, se puede agregar compatibilidad para Configuration Manager para descargar actualizaciones de los idiomas compatibles con Office 365. Esto significa que no es necesario que Configuration Manager admita el idioma mientras lo haga Office 365. Antes de la versión 1610 de Configuration Manager, debe descargar e implementar actualizaciones en los mismos idiomas configurados en los clientes de Office 365. 
 
 - [Cambio del canal de actualización](#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager): con este fin, se puede usar una directiva de grupo para distribuir un cambio del valor de una clave del Registro en los clientes de Office 365.
 
@@ -98,6 +99,8 @@ Después de crear e implementar aplicaciones de Office 365 mediante el Instalado
 
 
 ## <a name="deploy-office-365-updates"></a>Implementación de actualizaciones de Office 365
+A partir de la versión 1706 de Configuration Manager, las actualizaciones de cliente de Office 365 se han movido al nodo **Administración de clientes de Office 365** >**Actualizaciones de Office 365**. Esto no afectará a la configuración de ADR. 
+
 Siga estos pasos para implementar actualizaciones de Office 365 con Configuration Manager:
 
 1.  [Compruebe los requisitos](https://technet.microsoft.com/library/mt628083.aspx) para usar Configuration Manager para administrar las actualizaciones de cliente de Office 365 en la sección **Requisitos para usar Configuration Manager para administrar las actualizaciones de cliente de Office 365** del artículo.  
@@ -118,7 +121,7 @@ Siga estos pasos para implementar actualizaciones de Office 365 con Configuratio
 4. [Implemente actualizaciones de Office 365](deploy-software-updates.md) en los clientes.   
 
 > [!Important]
-> Debe descargar e implementar las actualizaciones en los mismos idiomas configurados en los clientes de Office 365. Por ejemplo, supongamos que tiene un cliente de Office 365 configurado con los idiomas en-us y de-de. En el servidor de sitio, descargue e implemente solo el contenido de en-us correspondiente a una actualización de Office 365 correspondiente. Cuando el usuario inicie la instalación de esta actualización desde el Centro de software, la actualización se bloqueará mientras se descarga el contenido.   
+> Antes de la versión 1610 de Configuration Manager, debe descargar e implementar actualizaciones en los mismos idiomas configurados en los clientes de Office 365. Por ejemplo, supongamos que tiene un cliente de Office 365 configurado con los idiomas en-us y de-de. En el servidor de sitio, descargue e implemente solo el contenido de en-us correspondiente a una actualización de Office 365 correspondiente. Cuando el usuario inicie la instalación de esta actualización desde el Centro de software, la actualización se bloquea mientras se descarga el contenido para de-de.   
 
 ## <a name="restart-behavior-and-client-notifications-for-office-365-updates"></a>Comportamiento al reiniciar y notificaciones de cliente para las actualizaciones de Office 365
 Al implementar una actualización a un cliente de Office 365, el comportamiento de reinicio y las notificaciones de cliente serán distintas en función de la versión de Configuration Manager. En la tabla siguiente se proporciona información sobre la experiencia de usuario final cuando el cliente recibe una actualización de Office 365:
@@ -131,7 +134,7 @@ Al implementar una actualización a un cliente de Office 365, el comportamiento 
 |1706|El cliente recibe notificaciones emergentes y en la aplicación, así como un cuadro de diálogo de cuenta atrás, antes de instalar la actualización.|
 
 > [!Important]
-> En la versión 1706 de Configuration Manager, tenga en cuenta los siguientes detalles:
+> Desde la versión 1706 de Configuration Manager, tenga en cuenta los siguientes detalles:
 >
 >- Un icono de notificación se muestra en el área de notificación de la barra de tareas para aplicaciones necesarias, donde la fecha límite es 48 horas y el contenido de la actualización se ha descargado. 
 >- Un cuadro de diálogo de cuenta atrás se muestra en las aplicaciones necesarias, donde la fecha límite es de 7,5 horas y la actualización se ha descargado. El usuario puede posponer el cuadro de diálogo de cuenta atrás hasta tres veces antes de la fecha límite. Cuando se hace, se muestra la cuenta atrás de nuevo después de 2 horas. Si no se pospone, hay una cuenta regresiva de 30 minutos y la actualización se instala cuando expira la cuenta atrás.

@@ -3,30 +3,31 @@ title: Puertos usados para las conexiones
 titleSuffix: Configuration Manager
 description: "Obtenga información sobre los puertos necesarios y personalizables que usa System Center Configuration Manager para las conexiones."
 ms.custom: na
-ms.date: 09/19/2017
+ms.date: 02/16/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
-caps.latest.revision: "8"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 0b6fa22a7bc3de7bb5bc0d26f8e35b51d55c5e72
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 8db098f69180aac3785087af6ee305b3651094e5
+ms.sourcegitcommit: 1378532fac2620ddcfd31061982f344a290c2e67
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="ports-used-in-system-center-configuration-manager"></a>Puertos que se usan en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-System Center Configuration Manager es un sistema cliente/servidor distribuido. La naturaleza distribuida de Configuration Manager significa que se pueden establecer conexiones entre servidores de sitio, sistemas de sitio y clientes. Algunas conexiones usan puertos que no son configurables, mientras que otras admiten puertos personalizados. Debe comprobar que los puertos necesarios están disponibles si usa tecnología de filtrado de puertos como firewalls, enrutadores, servidores proxy o IPsec.  
+System Center Configuration Manager es un sistema cliente/servidor distribuido. La naturaleza distribuida de Configuration Manager significa que se pueden establecer conexiones entre servidores de sitio, sistemas de sitio y clientes. Algunas conexiones usan puertos que no son configurables, mientras que otras admiten puertos personalizados. Compruebe que los puertos necesarios están disponibles si usa tecnología de filtrado de puertos como firewalls, enrutadores, servidores proxy o IPsec.  
     
 > [!NOTE]  
 >  Si tiene compatibilidad con clientes basados en Internet mediante el protocolo de puente SSL, además de requisitos de puerto, es posible que también tenga que permitir que algunos verbos y encabezados HTTP atraviesen el firewall.   
@@ -205,6 +206,13 @@ Esta comunicación se utiliza para confirmar si el otro equipo cliente está act
 |Descripción|UDP|TCP|  
 |-----------------|---------|---------|  
 |Protocolo de transferencia de hipertexto (HTTP)|--|80|  
+|Protocolo seguro de transferencia de hipertexto (HTTPS)|--|443|
+
+La consola de Configuration Manager utiliza el acceso a Internet para lo siguiente: 
+- La descarga de actualizaciones de software de Microsoft Update para los paquetes de implementación.
+- El elemento Comentarios de la barra de herramientas.
+- Vínculos a la documentación de la consola.
+<!--506823-->
 
 ###  <a name="BKMK_PortsConsole-RSP"></a> Consola de Configuration Manager -- > Punto de servicios de informes  
 
@@ -338,7 +346,7 @@ Esta comunicación se utiliza para confirmar si el otro equipo cliente está act
 |Descripción|UDP|TCP|  
 |-----------------|---------|---------|  
 |Protocolo seguro de transferencia de hipertexto (HTTPS)|--|443|
-Para obtener más información, consulte [Internet access requirements](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls) (Requisitos del acceso de Internet) para obtener información sobre el punto de conexión de servicio.
+Para obtener más información, consulte [Requisitos de acceso a Internet](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls) para el punto de conexión de servicio.
 
 ###  <a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> Servidor de sitio &lt; -- > Punto de servicio web del catálogo de aplicaciones  
 
@@ -689,12 +697,12 @@ Utilice IPsec para proteger el tráfico entre el servidor de sitio y los sistema
 >  Antes de instalar estos sistemas de sitio, asegúrese de que el servicio de registro remoto se ejecuta en el servidor de sistema de sitio y que ha especificado una cuenta de instalación del sistema de sitio si el sistema de sitio está en un bosque de Active Directory sin una relación de confianza.  
 
 ###  <a name="BKMK_PortsClientInstall"></a> Puertos usados por la instalación de cliente de Configuration Manager  
-Los puertos que se utilizan durante la instalación de cliente dependen del método de implementación de cliente. Para obtener una lista de puertos para cada método de implementación de clientes, vea **Puertos utilizados durante la implementación de cliente de Configuration Manager** del tema [Configuración de puertos y Firewall de Windows para clientes en System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md). Para obtener información sobre cómo configurar Firewall de Windows en el cliente para la instalación de cliente y la comunicación posterior a la instalación, consulte [Firewall de Windows y Configuración de puerto para los clientes en System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md).  
+Los puertos que se utilizan durante la instalación de cliente dependen del método de implementación de cliente. Para obtener una lista de puertos para cada método de implementación de clientes, vea **Puertos utilizados durante la implementación de cliente de Configuration Manager** del artículo [Configuración de puertos y Firewall de Windows para clientes en System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md). Para obtener información sobre cómo configurar Firewall de Windows en el cliente para la instalación de cliente y la comunicación posterior a la instalación, consulte [Firewall de Windows y Configuración de puerto para los clientes en System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md).  
 
 ###  <a name="BKMK_MigrationPorts"></a> Puertos usados por la migración  
 El servidor de sitio que ejecuta la migración usa varios puertos para conectarse a los sitios que correspondan en la jerarquía de orígenes con el fin de recopilar datos de las bases de datos de SQL Server de los sitios de origen y compartir puntos de distribución.  
 
- Para obtener información sobre estos puertos, consulte la sección [Configuraciones necesarias para la migración](../../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations) del tema [Requisitos previos para la migración en System Center Configuration Manager](../../../core/migration/prerequisites-for-migration.md).  
+ Para obtener información sobre estos puertos, consulte la sección [Configuraciones necesarias para la migración](../../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations) del artículo [Requisitos previos para la migración en System Center Configuration Manager](../../../core/migration/prerequisites-for-migration.md).  
 
 ###  <a name="BKMK_ServerPorts"></a> Puertos usados por Windows Server  
  En la tabla siguiente se incluyen algunos de los puertos clave que Windows Server usa y sus respectivas funciones. Para obtener una lista completa de los requisitos de puertos de red y servicios de Windows Server, consulte [Introducción al servicio y requisitos del puerto de red para el sistema Windows Server](http://go.microsoft.com/fwlink/p/?LinkID=123652).  
