@@ -3,23 +3,24 @@ title: "La rama que se debería usar"
 titleSuffix: Configuration Manager
 description: "Obtenga información acerca de las diferencias entre las ramas disponibles de System Center Configuration Manager."
 ms.custom: na
-ms.date: 05/02/2017
+ms.date: 03/08/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
-caps.latest.revision: "0"
+caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 9985ff5db4357b6b18de1ef58de40bc631d6cc6b
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: d762cf5e6932e17d8dfb0dd6c442c452028b5228
+ms.sourcegitcommit: b653342fb5d69a16e71b3548a7e9a2e47e54bf88
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>¿Qué rama de Configuration Manager debo utilizar?
 
@@ -77,7 +78,7 @@ LTSB se basa en la versión 1606. Esta rama no recibe las actualizaciones en la 
 Para instalar la LTSB como un sitio nuevo o como una actualización desde un sitio de Configuration Manager 2012 admitido, utilice los [medios de línea base](/sccm/core/servers/manage/updates#baseline-and-update-versions) de la versión 1606 que recibe en formato DVD con System Center 2016 o la versión de System Center Configuration Manager (Rama actual y Rama de mantenimiento a largo plazo 1606). Puede usar los medios de línea base para instalar un nuevo sitio que ejecuta la versión 1606 de la Rama actual o un nuevo sitio que ejecuta la Rama de mantenimiento a largo plazo.
 
 > [!TIP]  
-> Para obtener información sobre System Center 2016, consulte la [documentación de System Center 2016](https://technet.microsoft.com/system-center-docs/system-center). Esta documentación también especifica el proceso de obtención de System Center 2016, que requiere un contrato de licencia de Microsoft o derechos similares.
+> Para obtener información sobre System Center 2016, consulte la [documentación de System Center 2016](https://docs.microsoft.com/system-center/index). Esta documentación también especifica el proceso de obtención de System Center 2016, que requiere un contrato de licencia de Microsoft o derechos similares.
 
 > Para buscar la versión 1606 de System Center Configuration Manager en el Centro de servicios de licencias por volumen (VLSC), vaya a la pestaña **Downloads and Keys** (Descargas y claves) de [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) y, después, seleccione **System Center Config Mgr (rama actual y LTSB)**.
 
@@ -90,7 +91,7 @@ Para instalar la LTSB como un sitio nuevo o como una actualización desde un sit
 
 **Limitaciones**  
 La LTSB se basa en la versión de la Rama actual 1606 y tiene las siguientes limitaciones:
-- La LTSB tiene soporte técnico durante 10 años con actualizaciones de seguridad críticas después de su disponibilidad general (octubre de 2016). Una vez transcurrido este período, el soporte para esta rama expira. Para obtener más información sobre el ciclo de vida de soporte técnico, consulte [Directiva de ciclos de vida de Microsoft](https://support.microsoft.com/en-us/lifecycle).
+- La LTSB tiene soporte técnico durante 10 años con actualizaciones de seguridad críticas después de su disponibilidad general (octubre de 2016). Una vez transcurrido este período, el soporte para esta rama expira. Para obtener más información sobre el ciclo de vida de soporte técnico, consulte [Directiva de ciclos de vida de Microsoft](https://support.microsoft.com/lifecycle).
 - Admite una lista limitada de conjuntos de sistemas operativos de servidor y cliente, y tecnologías relacionadas, como versiones de SQL Server. Para más información sobre lo que admite esta rama, consulte [Configuraciones admitidas de la rama de mantenimiento a largo plazo](supported-configurations-for-ltsb.md).
 - No recibe las actualizaciones para las nuevas características.
 - No admite la adición de una suscripción a Microsoft Intune, que impide el uso de:
