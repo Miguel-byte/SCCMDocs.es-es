@@ -2,22 +2,23 @@
 title: "Planeamiento de la puerta de enlace de administración de nube"
 titleSuffix: Configuration Manager
 description: 
-ms.date: 10/06/2017
+ms.date: 03/08/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: b1063826841c37973e26954e164d867649c3fb9f
-ms.sourcegitcommit: c4a1bafcd004638d264a93d307c70d8b6f7fe023
+ms.openlocfilehash: 051d3fcba379aec83ea7c4dc1e407b3d3e774e12
+ms.sourcegitcommit: b653342fb5d69a16e71b3548a7e9a2e47e54bf88
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planificación de Cloud Management Gateway en Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 A partir de la versión 1610, la puerta de enlace de administración en la nube proporciona una manera sencilla de administrar clientes de Configuration Manager en Internet. El servicio de puerta de enlace de administración en la nube se implementa en Microsoft Azure y requiere una suscripción de Azure. Se conecta a la infraestructura de Configuration Manager local con un nuevo rol denominado punto de conexión de la puerta de enlace de administración en la nube. Una vez implementado y configurado, los clientes podrán tener acceso a los roles de sistema de sitio locales de Configuration Manager independientemente de si están conectados a la red interna privada o a Internet.
 
@@ -30,7 +31,7 @@ Se necesitan certificados de cliente y de capa de sockets seguros (SSL) para aut
 
 ## <a name="requirements-for-cloud-management-gateway"></a>Requisitos para la puerta de enlace de administración en la nube
 
--   Equipos cliente y servidor de sistema de sitio que ejecuten el punto de conexión de la puerta de enlace de administración en la nube.
+-    Sistema de sitio que ejecuta el conector de puerta de enlace de administración en la nube para que lo utilicen los clientes basados en Internet.
 
 -   Certificados SSL personalizados de la CA interna: se usan para cifrar la comunicación de los equipos cliente y para autenticar la identidad del servicio de puerta de enlace de administración en la nube.
 

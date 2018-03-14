@@ -1,0 +1,88 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: "Documentación de Microsoft Deployment Toolkit"
+metadata:
+  document_id: bfb05467-f6ec-4cb2-b108-254972de2d06
+  title: "Documentación de Microsoft Deployment Toolkit"
+  description: "Microsoft Deployment Toolkit proporciona una colección unificada de herramientas, procesos y guías para automatizar las implementaciones de escritorio y servidores."
+  keywords: "software gratuito, herramienta, proceso, flujo de trabajo, automatización, implementación, automatizado, distribución"
+  author: arob98
+  ms.author: angrobe
+  manager: angrobe
+  ms.date: 12/27/2017
+  ms.topic: landing-page
+  ms.devlang: na
+  ms.prod: configuration-manager
+  ms.openlocfilehash: 56462ae538a2336f94a1883d099ad7b45c714633
+  ms.sourcegitcommit: 32bbc006a41868a6d9a708db5f7b372d9c71d985
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 03/08/2018
+sections:
+- items:
+  - type: markdown
+    text: "Microsoft Deployment Toolkit proporciona una colección unificada de herramientas, procesos y guías para automatizar las implementaciones de escritorio y servidores."
+- items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 2
+    items:
+    - href: whats-new-in-mdt.md
+      html: <p>Vea las novedades.</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_whats-new.svg
+      title: Novedades
+    - href: release-notes.md
+      html: "<p>Información sobre las correcciones y los errores que se incluyen en esta versión.</p>"
+      image:
+        src: https://docs.microsoft.com/media/common/i_whats-new.svg
+      title: "Notas de la versión"
+    - href: samples-guide.md
+      html: "<p>Opciones de configuración de ejemplo para escenarios de implementación específicos.</p>"
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-samples.svg
+      title: "Guía de ejemplos"
+    - href: user-driven-installation-developers-guide.md
+      html: "<p>Personalice la instalación controlada por el usuario para su organización.</p>"
+      image:
+        src: https://docs.microsoft.com/media/common/i_architecture.svg
+      title: "Guía del desarrollador"
+- title: "Guías de inicios rápidos"
+  items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: lite-touch-installation-guide.md
+      title: "Instalación mediante un medio de arranque"
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: user-driven-installation-guide.md
+      title: "Implementación con la instalación controlada por el usuario"
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: sccm-guide.md
+      title: "Implementación en un nuevo equipo"
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+- title: Recursos adicionales
+  items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: use-the-mdt.md
+      title: "Realización de implementaciones con intervención mínima (Lite Touch), sin intervención (Zero-Touch) e implementaciones de instalaciones controladas por el usuario."
+      image:
+        src: https://docs.microsoft.com/media/common/i_api-reference.svg
+    - href: toolkit-reference.md
+      title: "Opciones de configuración que ayudan con las implementaciones."
+      image:
+        src: https://docs.microsoft.com/media/common/i_download-install.svg
+    - href: troubleshooting-reference.md
+      title: "Archivos de registro, códigos de error y otra información de solución de problemas."
+      image:
+        src: https://docs.microsoft.com/media/common/i_support.svg
