@@ -7,24 +7,25 @@ ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: lleonard-msft
-caps.handback.revision: "0"
+caps.handback.revision: 
 ms.author: alleonar
 ms.manager: angrobe
 ms.openlocfilehash: 21fc286cdcc05244e1895ded5623d346e6cb8ebe
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="how-to-create-vpn-profiles-in-system-center-configuration-manager"></a>Cómo crear perfiles de VPN en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Los tipos de conexión disponibles para las diferentes plataformas de dispositivos se describen en [Perfiles de VPN en System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md).  
 
@@ -37,7 +38,7 @@ En el caso de conexiones VPN de terceros, distribuya la aplicación VPN antes de
 2.  En la pestaña **Inicio**, en el grupo **Crear**, pulse **Crear perfil de VPN**.  
 
 
-3.  Complete la página **General**. y tenga en cuenta lo siguiente:  
+3.  Complete la página **General**. Tenga en cuenta lo siguiente:  
 
     - Seleccione la **plataforma** adecuada.
 
@@ -68,7 +69,7 @@ En el caso de conexiones VPN de terceros, distribuya la aplicación VPN antes de
 |**Omitir VPN al conectarse a la red Wi-Fi de empresa**  |La conexión VPN no se usará cuando el dispositivo se conecte a la red Wi-Fi de la empresa.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - VPN móvil de punto de comprobación<br /><br /> - Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - IKEv2<br /><br /> - L2TP|  
 |**Omitir VPN al conectarse a la red Wi-Fi doméstica**  |La conexión VPN no se usará cuando el dispositivo se conecte a una red Wi-Fi doméstica.|Todos|  
 |**VPN por aplicación (iOS 7 y versiones posteriores, Mac OS X 10.9 y versiones posteriores)** |Asocie esta conexión VPN con una aplicación iOS para que la conexión se abra cuando se ejecute la aplicación. Puede asociar el perfil de VPN con una aplicación al implementarla.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - VPN móvil de punto de comprobación|  
-|**XML personalizado (opcional)** |Especifique los comandos XML personalizados que configuran la conexión VPN.<br /><br /> Ejemplos:<br /><br /> Para **Pulse Secure**:<br /><br /> **&lt;pulse-schema><br /> &nbsp; &lt;isSingleSignOnCredential>true&lt;/isSingleSignOnCredential\><br />&lt;/pulse-schema>**<br /><br /> Para **CheckPoint Mobile VPN**:<br /><br /> **&lt;CheckPointVPN <br /> &nbsp; port="443" name="CheckPointSelfhost" <br /> &nbsp; sso="true" <br /> &nbsp; debug="3"<br />/>**<br /><br /> Para **Dell SonicWALL Mobile Connect**:<br /><br /> **&lt;MobileConnect\><br />&nbsp; &nbsp; &lt;Compression\>false&lt;/Compression\><br />&nbsp; &nbsp; &lt;debugLogging\>True&lt;/debugLogging\><br />&nbsp; &nbsp; &lt;packetCapture\>False&lt;/packetCapture\><br />&lt;/MobileConnect\>**<br /><br /> Para **F5 Edge Client**:<br /><br /> **&lt;f5-vpn-conf>&lt;single-sign-on-credential>&lt;/f5-vpn-conf>**<br /><br /> Consulte la documentación de VPN de cada fabricante para más información sobre cómo escribir comandos XML personalizados.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - VPN móvil de punto de comprobación|  
+|**XML personalizado (opcional)** |Especifique los comandos XML personalizados que configuran la conexión VPN.<br /><br /> Ejemplo:<br /><br /> Para **Pulse Secure**:<br /><br /> **&lt;pulse-schema><br /> &nbsp; &lt;isSingleSignOnCredential>true&lt;/isSingleSignOnCredential\><br />&lt;/pulse-schema>**<br /><br /> Para **CheckPoint Mobile VPN**:<br /><br /> **&lt;CheckPointVPN <br /> &nbsp; port="443" name="CheckPointSelfhost" <br /> &nbsp; sso="true" <br /> &nbsp; debug="3"<br />/>**<br /><br /> Para **Dell SonicWALL Mobile Connect**:<br /><br /> **&lt;MobileConnect\><br />&nbsp; &nbsp; &lt;Compression\>false&lt;/Compression\><br />&nbsp; &nbsp; &lt;debugLogging\>True&lt;/debugLogging\><br />&nbsp; &nbsp; &lt;packetCapture\>False&lt;/packetCapture\><br />&lt;/MobileConnect\>**<br /><br /> Para **F5 Edge Client**:<br /><br /> **&lt;f5-vpn-conf>&lt;single-sign-on-credential>&lt;/f5-vpn-conf>**<br /><br /> Consulte la documentación de VPN de cada fabricante para más información sobre cómo escribir comandos XML personalizados.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - VPN móvil de punto de comprobación|  
 
 > [!NOTE]  
 >  Para información específica para crear perfiles de VPN para dispositivos móviles, consulte [Create VPN Profiles](../../mdm/deploy-use/create-vpn-profiles.md) (Crear perfiles de VPN).  
