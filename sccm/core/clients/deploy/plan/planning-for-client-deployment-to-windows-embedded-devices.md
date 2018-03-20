@@ -65,7 +65,7 @@ ms.lasthandoff: 03/20/2018
 >
 > **Solo para dispositivos que usen FBWF:** configure las siguientes excepciones para conservar el estado del cliente y los datos de inventario entre reinicios de dispositivo:  
 >   
->  -   CCMINSTALLDIR\\*.sdf  
+>  -   CCMINSTALLDIR\\\*.sdf  
 > -   CCMINSTALLDIR\ServiceData  
 > -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 >   
