@@ -33,8 +33,8 @@ Además de los otros requisitos y procedimientos de System Center Configuration 
 
 |Tipo de dispositivo|Tipos de archivo compatibles|  
 |-----------------|---------------------|  
-|Windows RT y Windows RT 8.1|*.appx, \*.appxbundle|  
-|Windows 8.1 y posterior inscrito como dispositivo móvil|*.appx, \*.appxbundle|  
+|Windows RT y Windows RT 8.1|\*.appx, \*.appxbundle|  
+|Windows 8.1 y posterior inscrito como dispositivo móvil|\*.appx, \*.appxbundle|  
 
  Se admiten las siguientes acciones de implementación:  
 

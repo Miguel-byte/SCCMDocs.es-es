@@ -55,7 +55,7 @@ En este tema, aprenderá los conceptos básicos que necesita saber antes de empe
  Configuration Manager le permite implementar los siguientes tipos de aplicaciones:  
 
 - Windows Installer (archivo *.msi)
-- Paquete de aplicación de Windows (*.appx, *.appxbundle)
+- Paquete de aplicación de Windows (\*.appx, \*.appxbundle)
 - Paquete de aplicación de Windows (en la Tienda Windows)
 - Microsoft Application Virtualization 4
 - Microsoft Application Virtualization 5
