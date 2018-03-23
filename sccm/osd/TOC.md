@@ -42,10 +42,11 @@
 ### [Usar medios independientes para implementar Windows sin usar la red](deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md)
 ### [Usar multidifusión para implementar Windows a través de la red](deploy-use/use-multicast-to-deploy-windows-over-the-network.md)
 ### [Crear una imagen para un OEM en fábrica o en un almacén local](deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md)
-### [Implementar Windows to Go](deploy-use/deploy-windows-to-go.md)
+### [Deploy Windows to Go](deploy-use/deploy-windows-to-go.md) (Implementación de Windows to Go)
 
 ## [Administración de Windows como servicio](deploy-use/manage-windows-as-a-service.md)
 ## [Supervisar implementaciones del sistema operativo](deploy-use/monitor-operating-system-deployments.md)
+## [Creación de una implementación por fases para una secuencia de tareas](deploy-use/create-phased-deployment-for-task-sequence.md)
 
 ## [Administrar secuencias de tareas para automatizar tareas](deploy-use/manage-task-sequences-to-automate-tasks.md)
 ### [Crear una secuencia de tareas para instalar un sistema operativo](deploy-use/create-a-task-sequence-to-install-an-operating-system.md)
