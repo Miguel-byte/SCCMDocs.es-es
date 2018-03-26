@@ -1,7 +1,8 @@
-#   Comprensión y exploración
+#   Conocer y explorar
 ##  [Introducción a Configuration Manager](understand/introduction.md)
 ### [Buscar ayuda para Configuration Manager](understand/find-help.md)
 ### [Características de accesibilidad](understand/accessibility-features.md)
+### [Manual del usuario del Centro de software](understand/software-center.md)
 ##  [Aspectos básicos de Configuration Manager](understand/fundamentals.md)
 ### [Aspectos básicos de sitios y jerarquías](understand/fundamentals-of-sites-and-hierarchies.md)
 #### [Acerca de la actualización e instalación de la infraestructura de sitios y jerarquías](understand/upgrade-update-install.md)
@@ -28,18 +29,19 @@
 ###  [Características y funcionalidades](plan-design/changes/features-and-capabilities.md)
 ###  [Cambios desde Configuration Manager 2012](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [Novedades de versiones incrementales](plan-design/changes/whats-new-incremental-versions.md)
+###  [Novedades de la versión 1802](plan-design/changes/whats-new-in-version-1802.md)
 ###  [Novedades de la versión 1710](plan-design/changes/whats-new-in-version-1710.md)
 ###  [Novedades de la versión 1706](plan-design/changes/whats-new-in-version-1706.md)
-###  [Novedades de la versión 1702](plan-design/changes/whats-new-in-version-1702.md)
 <!--
+###  [What's new in version 1702](plan-design/changes/whats-new-in-version-1702.md)
 ###  [What's new in version 1610](plan-design/changes/whats-new-in-version-1610.md)
 ###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
 -->
-###  [Eliminado y en desuso](plan-design/changes/deprecated/removed-and-deprecated.md)
+###  [Elementos eliminados y en desuso](plan-design/changes/deprecated/removed-and-deprecated.md)
 #### [Características eliminadas y en desuso](plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)
-#### [Eliminado y en desuso para servidores del sitio](plan-design/changes/deprecated/removed-and-deprecated-server.md)
-#### [Eliminado y en desuso para clientes](plan-design/changes/deprecated/removed-and-deprecated-client.md)
+#### [Características eliminadas y en desuso para servidores de sitio](plan-design/changes/deprecated/removed-and-deprecated-server.md)
+#### [Características eliminadas y en desuso para clientes](plan-design/changes/deprecated/removed-and-deprecated-client.md)
 ##   [Configuraciones admitidas](plan-design/configs/supported-configurations.md)
 ###  [Números de tamaño y escala](plan-design/configs/size-and-scale-numbers.md)
 ###  [Requisitos previos de sitio y sistema de sitio](plan-design/configs/site-and-site-system-prerequisites.md)
@@ -65,7 +67,6 @@
 #### [Herramienta de limpieza de la biblioteca de contenido](plan-design/hierarchy/content-library-cleanup-tool.md)
 #### [Administrar cuentas para acceder al contenido](plan-design/hierarchy/manage-accounts-to-access-content.md)
 #### [Caché del mismo nivel para clientes de Configuration Manager](plan-design/hierarchy/client-peer-cache.md)
-#### [Escenarios de ubicación de origen de contenido](plan-design/hierarchy/content-source-location-scenarios.md)
 #### [Administrador de transferencia de paquetes](plan-design/hierarchy/package-transfer-manager.md)
 #### [Administración del ancho de banda de red para la administración de contenido](plan-design/hierarchy/manage-network-bandwidth.md)
 #### [Seguridad y privacidad de la administración de contenido](plan-design/hierarchy/security-and-privacy-for-content-management.md)
@@ -82,10 +83,11 @@
 
 ##   [Diagnósticos y datos de uso](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [Cómo se usan los datos de uso y diagnóstico](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
+###  [Datos de diagnóstico de la versión 1802](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802.md)
 ###  [Datos de diagnóstico de la versión 1710](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710.md)
 ###  [Datos de diagnóstico para 1706](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1706.md)
-###  [Datos de diagnóstico para 1702](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md)
 <!--
+###  [Diagnostic data for 1702](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md)
 ###  [Diagnostic data for 1610](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
 ###  [Diagnostic data for 1606](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
 ###  [Diagnostic data for 1602](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
@@ -109,8 +111,8 @@
 
 <!-- Only show the current plus three, i.e., four total) -->
 ##   [Technical Preview](get-started/technical-preview.md)
-###  [Características en 1802](get-started/capabilities-in-technical-preview-1802.md)
-###  [Características en 1801](get-started/capabilities-in-technical-preview-1801.md)
+###  [Capacidades en 1802](get-started/capabilities-in-technical-preview-1802.md)
+###  [Capacidades en 1801](get-started/capabilities-in-technical-preview-1801.md)
 ###  [Capacidades en 1712](get-started/capabilities-in-technical-preview-1712.md)
 ###  [Capacidades en 1711](get-started/capabilities-in-technical-preview-1711.md)
 
@@ -201,6 +203,7 @@
 -->
 
 #    Administrar la infraestructura
+## [Información de administración](servers/manage/management-insights.md)
 ##   [Tareas de mantenimiento](servers/manage/maintenance-tasks.md)
 ###  [Referencia de las tareas de mantenimiento](servers/manage/reference-for-maintenance-tasks.md)
 ##   [Modificar la infraestructura](servers/manage/modify-your-infrastructure.md)
@@ -217,10 +220,11 @@
 ###  [Uso de la herramienta de conexión de servicio](servers/manage/use-the-service-connection-tool.md)
 ###  [Uso de la herramienta de registro de actualizaciones](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [Uso del instalador de revisiones](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+###  [Lista de comprobación para la instalación de la actualización 1802](servers/manage/checklist-for-installing-update-1802.md)
 ###  [Lista de comprobación para la instalación de la actualización 1710](servers/manage/checklist-for-installing-update-1710.md)
 ###  [Lista de comprobación para la instalación de la actualización 1706](servers/manage/checklist-for-installing-update-1706.md)
-###  [Lista de comprobación para la instalación de la actualización 1702](servers/manage/checklist-for-installing-update-1702.md)
 <!-- Deprecated from Content - still published but out of TOC:
+###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
 ###  [Checklist for installing update 1610](servers/manage/checklist-for-installing-update-1610.md)
 ###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
 ###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
@@ -274,13 +278,13 @@
 #### [Acerca de la configuración de cliente](clients/deploy/about-client-settings.md)
 ###  [Configurar Wake on LAN](clients/deploy/configure-wake-on-lan.md)
 ###  [Implementar clientes en equipos Windows](clients/deploy/deploy-clients-to-windows-computers.md)
+#### [Instalación de clientes mediante Azure AD](clients/deploy/deploy-clients-cmg-azure.md)
 #### [Propiedades de instalación de cliente](clients/deploy/about-client-installation-properties.md)
 #### [Propiedades de instalación de cliente publicadas en AD](clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md)
 ###  [Implementar clientes en servidores UNIX y Linux](clients/deploy/deploy-clients-to-unix-and-linux-servers.md)
 #### [Comandos de cliente de Linux y UNIX](clients/deploy/linux-and-unix-clients-technical-reference.md)
 ###  [Preparar la implementación de clientes en equipos Mac](clients/deploy/prepare-to-deploy-mac-clients.md)
 ###  [Cómo implementar clientes en equipos Mac](clients/deploy/deploy-clients-to-macs.md)
-###  [Instalar los clientes desde Internet con Azure AD](clients/deploy/deploy-clients-cmg-azure.md)
 ###  [Cómo asignar clientes a un sitio](clients/deploy/assign-clients-to-a-site.md)
 ###  [Cómo configurar el estado de cliente](clients/deploy/configure-client-status.md)
 ###  [Supervisar el estado de implementación de cliente](clients/deploy/monitor-client-deployment-status.md)
@@ -295,18 +299,24 @@
 ###  [Cómo administrar clientes de Linux y UNIX](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [Sincronizar datos en OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
 ###  [Mantenimiento de clientes Mac](clients/manage/maintain-mac-clients.md)
+### [Panel de administración conjunta](clients/manage/co-management-dashboard.md)
+
+### [Panel de dispositivos Surface](clients/manage/surface-device-dashboard.md)
 
 ##   [Administración conjunta para dispositivos Windows 10](clients/manage/co-management-overview.md)
 ###  [Preparación de dispositivos Windows 10 para la administración conjunta](clients/manage/co-management-prepare.md)
 ###  [Cambio de las cargas de trabajo de Configuration Manager a Intune](clients/manage/co-management-switch-workloads.md)
 
-##   [Administrar clientes en Internet](clients/manage/manage-clients-internet.md)
-###  [Planear puerta de enlace de administración en la nube](clients/manage/plan-cloud-management-gateway.md)
-###  [Configurar puerta de enlace de administración en la nube](clients/manage/setup-cloud-management-gateway.md)
-###  [Supervisar clientes en la puerta de enlace de administración en la nube](clients/manage/monitor-clients-cloud-management-gateway.md)
-###  [Planear la administración de cliente basada en Internet](clients/manage/plan-internet-based-client-management.md)
+##   [Administración de clientes en Internet](clients/manage/manage-clients-internet.md)
+###  [Planear puerta de enlace de administración en la nube](clients/manage/cmg/plan-cloud-management-gateway.md)
+####  [Seguridad y privacidad de la puerta de enlace de administración en la nube](clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md)
+####  [Preguntas más frecuentes sobre la puerta de enlace de administración en la nube](clients/manage/cmg/cloud-management-gateway-faq.md)
+####  [Certificados para la puerta de enlace de administración en la nube](clients/manage/cmg/certificates-for-cloud-management-gateway.md)
+####  [Configurar puerta de enlace de administración en la nube](clients/manage/cmg/setup-cloud-management-gateway.md)
+####  [Supervisar clientes en la puerta de enlace de administración en la nube](clients/manage/cmg/monitor-clients-cloud-management-gateway.md)
+###  [Planeación de la administración de cliente basada en Internet](clients/manage/plan-internet-based-client-management.md)
 
-##   Colecciones
+##   Recopilaciones
 ###  [Introducción a las recopilaciones](clients/manage/collections/introduction-to-collections.md)
 ### [Requisitos previos de las recopilaciones](clients/manage/collections/prerequisites-for-collections.md)
 ### [Procedimientos recomendados para recopilaciones](clients/manage/collections/best-practices-for-collections.md)
