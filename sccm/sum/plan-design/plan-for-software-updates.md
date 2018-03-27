@@ -1,23 +1,23 @@
 ---
 title: Planear las actualizaciones de software
 titleSuffix: Configuration Manager
-description: "Es imprescindible planear la infraestructura de punto de actualización de software antes de usar las actualizaciones de software en un entorno de producción de System Center Configuration Manager."
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.date: 06/27/2017
+description: Es imprescindible planear la infraestructura de punto de actualización de software antes de usar las actualizaciones de software en un entorno de producción de System Center Configuration Manager.
+keywords: ''
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: configuration-manager
-ms.service: 
+ms.service: ''
 ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: e36048141400097950a7c24733f382acacb73131
-ms.sourcegitcommit: db9978135d7a6455d83dbe4a5175af2bdeaeafd8
+ms.openlocfilehash: b57a1b584ec40d67b263959ae52f694c486481d7
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="plan-for-software-updates-in-system-center-configuration-manager"></a>Planear las actualizaciones de software en System Center Configuration Manager
 
@@ -134,10 +134,10 @@ Habilite esta opción en una recopilación de dispositivos o en un conjunto de d
  Normalmente, el sitio de nivel superior de la jerarquía está configurado para sincronizar los metadatos de las actualizaciones de software con Microsoft Update. Si su directiva de seguridad corporativa no permite acceder a Internet desde el sitio de nivel superior, puede configurar el origen de la sincronización del sitio de nivel superior para usar un servidor WSUS existente que no esté en su jerarquía de Configuration Manager. Por ejemplo, podría tener un servidor WSUS instalado en su red perimetral que tiene acceso a Internet, a diferencia del sitio de nivel superior. Puede configurar el servidor WSUS de la red perimetral como origen de la sincronización para los metadatos de las actualizaciones de software. Debe asegurarse de que el servidor WSUS de la red perimetral sincroniza las actualizaciones de software que cumplen los criterios necesarios de la jerarquía de Configuration Manager. De lo contrario, es posible que el sitio de nivel superior no sincronice las actualizaciones de software previstas. Al instalar el punto de actualización de software, configure una cuenta de conexión de WSUS que tenga acceso al servidor WSUS de la red perimetral y asegúrese de que el firewall permite el tráfico en los puertos correspondientes. Para obtener más información, consulte [los puertos que usa el punto de actualización de software para el origen de la sincronización](../../core/plan-design/hierarchy/ports.md#BKMK_PortsSUP-WSUS).  
 
 ###  <a name="BKMK_NLBSUPSP1"></a> Punto de actualización de software configurado para usar NLB  
- El cambio del punto de actualización de software probablemente satisfaga las necesidades de tolerancia a errores. De manera predeterminada, Configuration Manager no admite la configuración de puntos de actualización de software como clústeres de NLB. Antes de la versión 1702 de Configuration Manager, podía usar el SDK de Configuration Manager para configurar hasta cuatro puntos de actualización de software en un clúster NLB. Sin embargo, a partir de la versión 1702 de Configuration Manager, los puntos de actualización de software no se admiten como clústeres NLB y las actualizaciones a la versión 1702 de Configuration Manager se bloquearán si se detecta esta configuración. Para obtener más información sobre el cmdlet Set-CMSoftwareUpdatePoint de PowerShell, consulte [Set-CMSoftwareUpdatePoint](http://go.microsoft.com/fwlink/?LinkId=276834).
+ El cambio del punto de actualización de software probablemente satisfaga las necesidades de tolerancia a errores. De manera predeterminada, Configuration Manager no admite la configuración de puntos de actualización de software como clústeres de NLB. Antes de la versión 1702 de Configuration Manager, se podía usar el SDK de Configuration Manager para configurar hasta cuatro puntos de actualización de software en un clúster NLB. Sin embargo, a partir de la versión 1702 de Configuration Manager, los puntos de actualización de software no se admiten como clústeres NLB y las actualizaciones a la versión 1702 de Configuration Manager se bloquearán si se detecta esta configuración. Para obtener más información sobre el cmdlet Set-CMSoftwareUpdatePoint de PowerShell, consulte [Set-CMSoftwareUpdatePoint](http://go.microsoft.com/fwlink/?LinkId=276834).
 
 ###  <a name="BKMK_SUPSecSite"></a> Punto de actualización de software en un sitio secundario  
- El punto de actualización de software es opcional en un sitio secundario. Cuando se instala un punto de actualización de software en un sitio secundario, la base de datos de WSUS se configura como una réplica del punto de actualización de software predeterminado del sitio primario principal. Solo se puede instalar un punto de actualización de software en un sitio secundario. Los dispositivos asignados a un sitio secundario se configuran para utilizar un punto de actualización de software del sitio primario cuando no hay un punto de actualización de software instalado en el sitio secundario. Se suele instalar un punto de actualización de software en un sitio secundario cuando el ancho de banda de red es limitado entre los dispositivos asignados al sitio secundario y los puntos de actualización de software del sitio primario principal, o cuando el punto de actualización de software se acerca al límite de su capacidad. Una vez que un punto de actualización de software está correctamente instalado y configurado en el sitio secundario, se actualiza una directiva para todo el sitio para los equipos cliente asignados al sitio, que empezarán a utilizar el nuevo punto de actualización de software.  
+ El punto de actualización de software es opcional en un sitio secundario. Solo se puede instalar un punto de actualización de software en un sitio secundario. Los dispositivos asignados a un sitio secundario se configuran para utilizar un punto de actualización de software del sitio primario cuando no hay un punto de actualización de software instalado en el sitio secundario. Se suele instalar un punto de actualización de software en un sitio secundario cuando el ancho de banda de red es limitado entre los dispositivos asignados al sitio secundario y los puntos de actualización de software del sitio primario principal, o cuando el punto de actualización de software se acerca al límite de su capacidad. Una vez que un punto de actualización de software está correctamente instalado y configurado en el sitio secundario, se actualiza una directiva para todo el sitio para los equipos cliente asignados al sitio, que empezarán a utilizar el nuevo punto de actualización de software.  
 
 ##  <a name="BKMK_SUPInstallation"></a> Planeamiento de la instalación de puntos de actualización de software  
  Antes de crear un rol de sistema de sitio de punto de actualización de software en Configuration Manager, se deben tener en cuenta varios requisitos en función de la infraestructura de Configuration Manager. Cuando configure el punto de actualización de software para la comunicación mediante SSL, es especialmente importante que consulte esta sección, ya que debe seguir unos pasos adicionales para que los puntos de actualización de software de la jerarquía funcionen correctamente. Esta sección proporciona información acerca de los pasos que debe seguir para planear y preparar correctamente la instalación de los puntos de actualización de software.  
@@ -172,7 +172,7 @@ Las actualizaciones de software requieren que haya una versión compatible de WS
  Cuando un servidor WSUS se configura como un punto de actualización de software, ya no es posible utilizarlo como un servidor WSUS independiente. Si necesita un servidor WSUS independiente no administrado por Configuration Manager, debe configurarlo en un servidor diferente.
 
 ####  <a name="BKMK_WSUSAsReplica"></a> Configurar WSUS como un servidor de réplica  
- Cuando se crea un rol de sistema de sitio de punto de actualización de software en un servidor de sitio primario, no se puede utilizar un servidor WSUS que esté configurado como una réplica. Cuando el servidor WSUS está configurado como una réplica, Configuration Manager no puede configurar el servidor WSUS, y la sincronización de WSUS tampoco se puede llevar a cabo. Cuando se crea un punto de actualización de software en un sitio secundario, Configuration Manager configura WSUS para que sea un servidor de réplica del WSUS que se ejecuta en el punto de actualización de software del sitio primario principal. El primer punto de actualización de software que se instala en un sitio primario es el punto de actualización de software predeterminado. Los puntos de actualización de software adicionales del sitio se configuran como réplicas del punto de actualización de software predeterminado.  
+ Cuando se crea un rol de sistema de sitio de punto de actualización de software en un servidor de sitio primario, no se puede utilizar un servidor WSUS que esté configurado como una réplica. Cuando el servidor WSUS está configurado como una réplica, Configuration Manager no puede configurar el servidor WSUS, y la sincronización de WSUS tampoco se puede llevar a cabo. El primer punto de actualización de software que se instala en un sitio primario es el punto de actualización de software predeterminado. Los puntos de actualización de software adicionales del sitio se configuran como réplicas del punto de actualización de software predeterminado.  
 
 ####  <a name="BKMK_WSUSandSSL"></a> Decidir si se va a configurar WSUS para usar SSL  
  Puede utilizar el protocolo SSL para proteger el WSUS que se ejecuta en el punto de actualización de software. WSUS utiliza SSL para autenticar en el servidor WSUS los equipos cliente y los servidores WSUS que siguen en la cadena. WSUS también utiliza SSL para cifrar los metadatos de las actualizaciones de software. Si decide proteger WSUS con SSL, debe preparar el servidor WSUS antes de instalar el punto de actualización de software.  
