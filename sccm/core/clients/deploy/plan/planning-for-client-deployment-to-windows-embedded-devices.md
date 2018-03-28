@@ -1,7 +1,7 @@
 ---
-title: "Planeamiento de implementación de clientes en dispositivos de Windows Embedded"
+title: Planeamiento de implementación de clientes en dispositivos de Windows Embedded
 titleSuffix: Configuration Manager
-description: "Planee la implementación del cliente en dispositivos Windows Embedded en System Center Configuration Manager."
+description: Planee la implementación del cliente en dispositivos Windows Embedded en System Center Configuration Manager.
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: ''
+caps.handback.revision: ''
 author: arob98
 ms.author: angrobe
 manager: angrobe
 ms.openlocfilehash: c4f3d8a9b043707340e56d3ae483ad66ca17dc10
-ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>Planeación de la implementación del cliente en dispositivos Windows Embedded en System Center Configuration Manager
 
@@ -65,7 +65,7 @@ ms.lasthandoff: 03/20/2018
 >
 > **Solo para dispositivos que usen FBWF:** configure las siguientes excepciones para conservar el estado del cliente y los datos de inventario entre reinicios de dispositivo:  
 >   
->  -   CCMINSTALLDIR\\\*.sdf  
+>  -   CCMINSTALLDIR\\*.sdf  
 > -   CCMINSTALLDIR\ServiceData  
 > -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 >   

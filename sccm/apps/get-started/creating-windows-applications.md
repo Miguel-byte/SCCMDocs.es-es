@@ -1,5 +1,5 @@
 ---
-title: "Creación de aplicaciones Windows"
+title: Creación de aplicaciones Windows
 titleSuffix: Configuration Manager
 description: Consulte las consideraciones que debe tener en cuenta al crear e implementar aplicaciones para dispositivos Windows.
 ms.custom: na
@@ -12,15 +12,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
 ms.openlocfilehash: 76e421571fa96d5e9ee808ac5d61361f52c6cbe3
-ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="create-windows-applications-with-system-center-configuration-manager"></a>Crear aplicaciones de Windows con System Center Configuration Manager
 
@@ -34,7 +34,7 @@ Además de los otros requisitos y procedimientos de System Center Configuration 
 |Tipo de dispositivo|Tipos de archivo compatibles|  
 |-----------------|---------------------|  
 |Windows RT y Windows RT 8.1|\*.appx, \*.appxbundle|  
-|Windows 8.1 y posterior inscrito como dispositivo móvil|\*.appx, \*.appxbundle|  
+|Windows 8.1 y posterior inscrito como dispositivo móvil|*.appx, \*.appxbundle|  
 
  Se admiten las siguientes acciones de implementación:  
 
