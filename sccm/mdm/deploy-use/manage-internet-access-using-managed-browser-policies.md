@@ -92,7 +92,7 @@ La directiva nueva se muestra en el nodo **Directivas de administración de apli
 
 Utilice la siguiente información para conocer los formatos permitidos y los caracteres comodín que puede usar al especificar direcciones URL en las listas de permitidos y bloqueados.  
 
--   Puede utilizar el carácter comodín '**\***' según las reglas de la siguiente lista de patrones permitidos.  
+-   Puede utilizar el carácter comodín '**\\***' según las reglas de la siguiente lista de patrones permitidos.  
 
 -   Asegúrese de anteponer **http** o **https** a todas las direcciones URL al introducirlas en la lista.  
 
@@ -111,7 +111,7 @@ Utilice la siguiente información para conocer los formatos permitidos y los car
     |http://www.contoso.com<br /><br /> Coincide con una sola página|www.contoso.com|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> contoso.com/|  
     |http://contoso.com<br /><br /> Coincide con una sola página|contoso.com/|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com|  
     |http://www.contoso.com/*<br /><br /> Coincide con todas las direcciones URL que comienzan con www.contoso.com|www.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com/videos/tvshows|host.contoso.com<br /><br /> host.contoso.com/images|  
-    |http://*.contoso.com/\*<br /><br /> Coincide con todos los subdominios en contoso.com|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/images|contoso.host.com|  
+    |http://\*.contoso.com/\*<br /><br /> Coincide con todos los subdominios en contoso.com|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/images|contoso.host.com|  
     |http://www.contoso.com/images<br /><br /> Coincide con una sola carpeta|www.contoso.com/images|www.contoso.com/images/dogs|  
     |http://www.contoso.com:80<br /><br /> Coincide con una sola página, con un número de puerto|http://www.contoso.com:80||  
     |https://www.contoso.com<br /><br /> Coincide con una sola página segura|https://www.contoso.com|http://www.contoso.com|  
@@ -121,11 +121,11 @@ Utilice la siguiente información para conocer los formatos permitidos y los car
 
     -   *.com  
 
-    -   *.contoso/\*  
+    -   \*.contoso/\*  
 
     -   www.contoso.com/*images  
 
-    -   www.contoso.com/*images\*pigs  
+    -   www.contoso.com/\*images\*pigs  
 
     -   www.contoso.com/page*  
 
