@@ -109,19 +109,12 @@
 ##   [Evaluar Configuration Manager en un laboratorio](get-started/evaluate-with-lab-environment.md)
 ###  [Configurar el laboratorio](get-started/set-up-your-lab.md)
 
-<!-- Only show the current plus three, i.e., four total) -->
+<!-- Only show the current plus three; four total) -->
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capacidades en 1803](get-started/capabilities-in-technical-preview-1803.md)
 ###  [Capacidades en 1802](get-started/capabilities-in-technical-preview-1802.md)
-###  [Capacidades en 1801](get-started/capabilities-in-technical-preview-1801.md)
+###  [Características en 1801](get-started/capabilities-in-technical-preview-1801.md)
 ###  [Capacidades en 1712](get-started/capabilities-in-technical-preview-1712.md)
-###  [Capacidades en 1711](get-started/capabilities-in-technical-preview-1711.md)
-
-<!-- No longer in support
-###  [Capabilities in 1710](get-started/capabilities-in-technical-preview-1710.md)
-###  [Capabilities in 1709](get-started/capabilities-in-technical-preview-1709.md)
-###  [Capabilities in 1708](get-started/capabilities-in-technical-preview-1708.md)
-###  [Capabilities in 1707](get-started/capabilities-in-technical-preview-1707.md)
--->
 
 ##   [Migrar datos entre jerarquías](migration/migrate-data-between-hierarchies.md)
 ###  [Planeación de la migración](migration/planning-for-migration.md)
