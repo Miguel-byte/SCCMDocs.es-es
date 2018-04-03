@@ -1,25 +1,26 @@
 ---
 title: Funcionalidades de Technical Preview 1612
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre las características disponibles en Technical Preview para System Center Configuration Manager, versión 1612."
+description: Obtenga información sobre las características disponibles en Technical Preview para System Center Configuration Manager, versión 1612.
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bceab2e8-2f05-4a17-9ac8-a7a558670fb7
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: erikje
 ms.author: erikje
 manager: angrobe
 ms.openlocfilehash: 80cace2bec8cb9c39d5f3f00ea244b697e1d75c9
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1612 para System Center Configuration Manager
 
@@ -156,7 +157,7 @@ Después de instalar la versión 1612 de Technical Preview, puede buscar **Conte
 
 La herramienta que se incluye en esta versión de Technical Preview está diseñada para reemplazar las versiones anteriores de herramientas similares para los productos antiguos de Configuration Manager. Aunque esta versión de la herramienta dejará de funcionar después del 1 de marzo de 2017, se presentarán nuevas versiones con las futuras versiones de Technical Preview hasta que esta herramienta se presente como parte de la rama actual o como una versión extraordinaria lista para la producción.
 
-### <a name="requirements"></a>Requisitos  
+### <a name="requirements"></a>requisitos  
  - La herramienta puede ejecutarse directamente en el equipo que hospeda el punto de distribución o de manera remota desde otro servidor. La herramienta solo puede ejecutarse en un único punto de distribución a la vez.
  - La cuenta de usuario que ejecuta la herramienta debe tener directamente los permisos de administración basada en roles que son iguales a los de Administrador total en la jerarquía de Configuration Manager.  La herramienta no funciona cuando a la cuenta de usuario se le conceden permisos como un miembro de un grupo de seguridad de Windows que tiene los permisos de Administrador total.
 

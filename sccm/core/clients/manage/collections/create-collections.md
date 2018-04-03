@@ -1,30 +1,31 @@
 ---
-title: "Creación de recopilaciones"
+title: Creación de recopilaciones
 titleSuffix: Configuration Manager
-description: "Cree recopilaciones en System Center Configuration Manager para facilitar la administración de grupos de usuarios y dispositivos."
+description: Cree recopilaciones en System Center Configuration Manager para facilitar la administración de grupos de usuarios y dispositivos.
 ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
-caps.latest.revision: "6"
-caps.handback.revision: "0"
+caps.latest.revision: 6
+caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.openlocfilehash: d7f320c53b2b696d3981019dfacccab5796455c8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="how-to-create-collections-in-system-center-configuration-manager"></a>Cómo crear recopilaciones en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las recopilaciones son grupos de usuarios o dispositivos. Use las recopilaciones para tareas como la administración de aplicaciones, la implementación de la configuración de cumplimiento o la instalación de actualizaciones de software. También puede utilizar las recopilaciones para administrar grupos de configuraciones de cliente o usarlas con administración basada en roles para especificar recursos a los que puede un usuario administrativo puede acceder. Configuration Manager contiene varias recopilaciones integradas. Para obtener más información, consulte [Introduction to collections in System Center Configuration Manager](../../../../core/clients/manage/collections/introduction-to-collections.md) (Introducción a las recopilaciones en System Center Configuration Manager).  
 

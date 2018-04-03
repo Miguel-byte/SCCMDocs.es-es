@@ -7,20 +7,21 @@ ms.date: 07/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ab5cda93-b67c-4aa5-904d-7b63ce790aa0
-caps.latest.revision: "1"
+caps.latest.revision: 1
 author: mestew
 ms.author: mstewart
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 629e7dd98b1b5ff7f240461b61893dfc433f61dc
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: ce65e58a2c1be0420077bddded7567ff931d041f
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-updates-publisher"></a>Instalar Updates Publisher
 
@@ -109,7 +110,7 @@ Se admiten los idiomas siguientes en títulos y descripciones de actualizaciones
 
 
 ## <a name="install-updates-publisher"></a>Instalar Updates Publisher
-Obtenga el **UpdatesPubliser.msi** para instalar System Center Updates Publisher desde el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?linkid=847967).
+Obtenga el **UpdatesPubliser.msi** para instalar System Center Updates Publisher desde el [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=55543).
 
 Para instalar Updates Publisher, ejecute el **UpdatesPublisher.msi** en un equipo que cumpla los *requisitos previos*. El instalador crea la siguiente carpeta para que contenga los archivos necesarios para ejecutar Updates Publisher: *&lt;ruta de acceso&gt;\Archivos de programa\Microsoft\UpdatesPublisher*.
 
