@@ -1,9 +1,9 @@
 ---
-title: "Configuración de cliente"
+title: Configuración de cliente
 titleSuffix: Configuration Manager
-description: "Seleccione la configuración del cliente mediante la consola de administración de System Center Configuration Manager."
+description: Obtenga información sobre la configuración predeterminada y personalizada para controlar los comportamientos del cliente.
 ms.custom: na
-ms.date: 01/05/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 15
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: dddfde242a67a0b4a9311c0fb6f0b2f0e6742cc2
-ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
+manager: dougeby
+ms.openlocfilehash: 42b9364fc88acc3f403db8d2ca9243a117fd78bf
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Acerca de la configuración de cliente en System Center Configuration Manager
 
@@ -114,18 +114,19 @@ Esta configuración se aplica a los usuarios cuando sus equipos estén en la int
 
 Establezca esto en **Sí** para que los usuarios reciban la directiva de usuario en equipos basados en Internet. Los requisitos siguientes también son de aplicación:  
 
--   El cliente y el sitio están configurados para la administración de cliente basada en Internet.
+-   El cliente y el sitio están configurados para la [administración de cliente basada en Internet](/sccm/core/clients/manage/plan-internet-based-client-management) o [Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
 
 -   El valor **Habilitar directiva de usuario en clientes** es **Sí**.  
 
--   El punto de administración basado en Internet autentica correctamente al usuario mediante la autenticación de Windows (Kerberos o NTLM).  
+-   El punto de administración basado en Internet autentica correctamente al usuario mediante la autenticación de Windows (Kerberos o NTLM). Para obtener más información, vea [Consideraciones sobre las comunicaciones de cliente desde Internet](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
+
+-   A partir de la versión 1710, Cloud Management Gateway autentica correctamente al usuario mediante el uso de Azure Active Directory. Para obtener más información, vea cómo [implementar aplicaciones disponibles para el usuario en dispositivos unidos a Azure AD](\sccm\apps\deploy-use\deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
 
 Si esta opción se establece como **No**, o no se cumple alguno de los requisitos anteriores, un equipo conectado a Internet solo recibe directivas de equipo. En este escenario, los usuarios sí podrán ver, solicitar e instalar aplicaciones desde un catálogo de aplicaciones basado en Internet. Si este valor es **No**, pero el de **Habilitar directiva de usuario en clientes** es **Sí**, los usuarios no reciben las directivas de usuario hasta que el equipo se conecte a la intranet.  
 
-Para obtener más información sobre cómo administrar clientes en Internet, vea [Consideraciones sobre las comunicaciones de cliente desde Internet o desde un bosque que no es de confianza](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
-
 > [!NOTE]  
->  Las solicitudes de aprobación de aplicación de los usuarios no requieren directivas de usuario ni autenticación de usuario.  
+>  Para la administración de clientes basados en Internet, las solicitudes de aprobación de aplicación de los usuarios no requieren directivas de usuario ni autenticación de usuario. Cloud Management Gateway no es compatible con solicitudes de aprobación de aplicación.   
+
 
 
 ## <a name="cloud-services"></a>Servicios en la nube
@@ -228,7 +229,7 @@ Escriba el nombre que ven los usuarios en el Centro de software. Esta informaci�
 
 ### <a name="use-new-software-center"></a>Usar el nuevo Centro de software
 
-Si se establece en **Sí**, todos los equipos cliente utilizarán el Centro de software. En el Centro de software se muestran aplicaciones disponibles para el usuario a las que antes solo se podía tener acceso desde el catálogo de aplicaciones. El catálogo de aplicaciones requiere Silverlight, que no es un requisito previo para el Centro de software.   
+Si se establece en **Sí**, todos los equipos cliente utilizarán el Centro de software. En el Centro de software se muestran aplicaciones disponibles para el usuario a las que antes solo se podía tener acceso desde el catálogo de aplicaciones. El catálogo de aplicaciones requiere Silverlight, que no es un requisito previo para el Centro de software. A partir de Configuration Manager 1802, el valor predeterminado es **Sí**.  
 
 Los roles de sistema de sitio de punto de sitios web del catálogo de aplicaciones y de punto de servicio web del catálogo de aplicaciones siguen siendo necesarios para que las aplicaciones disponibles para el usuario aparezcan en el Centro de software.  
 
@@ -322,6 +323,21 @@ Las opciones siguientes deben tener menos duración que la ventana de mantenimie
 
 Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo usar ventanas de mantenimiento en System Center Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md).
 
+
+
+## <a name="delivery-optimization"></a>Optimización de entrega
+
+<!-- 1324696 -->
+Los grupos de límites de Configuration Manager se usan para definir y regular la distribución de contenido a través de la red corporativa y en las oficinas remotas. La [optimización de distribución de Windows](/windows/deployment/update/waas-delivery-optimization) es una tecnología entre iguales basada en la nube para compartir contenido entre los dispositivos de Windows 10. A partir de la versión 1802, configure la optimización de entrega para usar los grupos de límites al compartir contenido entre iguales.
+
+ > [!Note]
+ > La optimización de distribución solo está disponible en clientes de Windows 10
+
+### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Uso de grupos de límites de Configuration Manager para el identificador del grupo de optimización de distribución
+ Seleccione **Sí** para aplicar el identificador del grupo de límites como identificador del grupo de optimización de entrega en el cliente. Cuando el cliente se comunica con el servicio en la nube de optimización de distribución, utiliza este identificador para buscar elementos del mismo nivel con el contenido deseado. 
+
+
+
 ##  <a name="endpoint-protection"></a>Endpoint Protection  
 >  [!Tip]   
 > Además de la información siguiente, puede encontrar detalles sobre el uso de las opciones del cliente de Endpoint Protection en [Escenario de ejemplo: uso de System Center Endpoint Protection para proteger los equipos frente al malware en System Center Configuration Manager](/sccm/protect/deploy-use/scenarios-endpoint-protection).
@@ -330,11 +346,11 @@ Para obtener más información sobre las ventanas de mantenimiento, consulte [C�
 
 Seleccione **Sí** si quiere administrar los clientes existentes de Endpoint Protection y Windows Defender en los equipos de la jerarquía.  
 
-Seleccione esta opción si ya ha instalado el cliente de Endpoint Protection y quiere administrarlo con Configuration Manager. En esta instalación independiente se incluye un proceso incluido en script en el que se usa una aplicación o un paquete de Configuration Manager y un programa.
+Seleccione esta opción si ya ha instalado el cliente de Endpoint Protection y quiere administrarlo con Configuration Manager. En esta instalación independiente se incluye un proceso incluido en script en el que se usa una aplicación o un paquete de Configuration Manager y un programa. A partir de Configuration Manager 1802, no es necesario que los dispositivos de Windows 10 tengan instalado el agente de Endpoint Protection. Aun así, seguirá siendo necesario habilitar la **administración del cliente de Endpoint Protection en equipos cliente** para estos dispositivos. <!--503654-->
 
 ### <a name="install-endpoint-protection-client-on-client-computers"></a>Instalar cliente de Endpoint Protection en equipos cliente
 
-Seleccione **Sí** para instalar y habilitar el cliente de Endpoint Protection en los equipos cliente en los que todavía no se ejecute.  
+Seleccione **Sí** para instalar y habilitar el cliente de Endpoint Protection en los equipos cliente en los que todavía no se ejecute. A partir de Configuration Manager 1802, no es necesario que los clientes de Windows 10 tengan instalado el agente de Endpoint Protection.  
 
 > [!NOTE]  
 >  Si el cliente de Endpoint Protection ya está instalado y se selecciona **No**, el cliente de Endpoint Protection no se desinstala. Para desinstalar el cliente de Endpoint Protection, establezca la configuración de cliente **Administrar el cliente de Endpoint Protection en equipos cliente** en **No**. Después, implemente un paquete y un programa para desinstalar el cliente de Endpoint Protection.  
@@ -609,8 +625,14 @@ Escriba el nombre de la organización que ven los usuarios en el Centro de softw
 - **Combinación de colores del Centro de software** </br>
 Seleccione **Seleccionar color** para definir el color principal usado por el Centro de software.
 - **Seleccionar un logotipo para el Centro de software** </br>
-Seleccione **Examinar** para seleccionar una imagen para mostrar en el Centro de software. El logotipo debe ser un archivo JPEG, PNG o BMP de 400 x 100 píxeles, con un tamaño máximo de 750 KB. El nombre de archivo del logotipo no debe contener espacios. <!--SMS.503731 space in filename, noticed BMP missing as filetype-->
+Seleccione **Examinar** para seleccionar una imagen para mostrar en el Centro de software. El logotipo debe ser un archivo JPEG, PNG o BMP de 400 x 100 píxeles, con un tamaño máximo de 750 KB. El nombre de archivo del logotipo no debe contener espacios.  
+         
+### <a name="bkmk_HideUnapproved"></a> Ocultar aplicaciones no aprobadas en el Centro de software
+A partir de Configuration Manager versión 1802, cuando esta opción esté habilitada, las aplicaciones disponibles para los usuarios que necesiten aprobación se ocultarán en el Centro de software.   <!--1355146-->
 
+### <a name="bkmk_HideInstalled"></a> Ocultar aplicaciones instaladas en el Centro de software
+A partir de Configuration Manager versión 1802, las aplicaciones que estén instaladas ya no aparecerán en la pestaña Aplicaciones cuando se habilite esta opción. Esta opción se establece como valor predeterminado al instalar o actualizar a Configuration Manager 1802.  Las aplicaciones instaladas siguen estando disponibles para su revisión en la pestaña Estado de la instalación. <!--1357592-->   
+  
 ### <a name="software-center-tab-visibility"></a>Visibilidad de las pestañas del Centro de software
 Establezca las opciones adicionales de este grupo en **Sí** para que las pestañas siguientes sean visibles en el Centro de software:
 - **Aplicaciones**
@@ -662,7 +684,7 @@ Si quiere especificar los tipos de archivo para incluir en el inventario, selecc
 
 -   Seleccione **Nuevo** para agregar un nuevo tipo de archivo al inventario. Después, especifique la información siguiente en el cuadro de diálogo **Propiedades de archivo inventariado**:  
 
-    -   **Nombre**: proporcione un nombre al archivo que quiere inventariar. Use un carácter comodín de asterisco (**&#42;**) para representar cualquier cadena de texto y un signo de interrogación (**?**) para representar cualquier carácter individual. Por ejemplo, si quiere hacer un inventario de todos los archivos con la extensión .doc, especifique el nombre de archivo **\*.doc**.  
+    -   **Nombre**: proporcione un nombre al archivo que quiere inventariar. Use un carácter comodín de asterisco (**& #42;**) para representar cualquier cadena de texto y un signo de interrogación (**?**) para representar cualquier carácter individual. Por ejemplo, si quiere hacer un inventario de todos los archivos con la extensión .doc, especifique el nombre de archivo **\*.doc**.  
 
     -   **Ubicación**: seleccione **Establecer** para abrir el cuadro de diálogo **Propiedades de ruta de acceso**. Configure el inventario de software para buscar el archivo especificado en todos los discos duros del cliente, buscar en una ruta de acceso especificada (por ejemplo **C:\Carpeta**) o buscar una variable especificada (por ejemplo *%windir%*). También puede buscar en todas las subcarpetas de la ruta de acceso especificada.  
 
@@ -683,7 +705,7 @@ Si quiere recopilar archivos de los equipos cliente, seleccione **Archivos** y, 
 
 -   En el cuadro de diálogo **Propiedades del archivo recopilado** , proporcione la siguiente información:  
 
-    -   **Nombre**: proporcione un nombre al archivo que quiera recopilar. Use un carácter comodín de asterisco (**&#42;**) para representar cualquier cadena de texto y un signo de interrogación (**?**) para representar cualquier carácter individual.  
+    -   **Nombre**: proporcione un nombre al archivo que quiera recopilar. Use un carácter comodín de asterisco (**& #42;**) para representar cualquier cadena de texto y un signo de interrogación (**?**) para representar cualquier carácter individual.  
 
     -   **Ubicación**: seleccione **Establecer** para abrir el cuadro de diálogo **Propiedades de ruta de acceso**. Configure el inventario de software para buscar el archivo que quiere recopilar en todos los discos duros del cliente, buscar en una ruta de acceso especificada (por ejemplo **C:\Carpeta**) o buscar una variable especificada (por ejemplo *%windir%*). También puede buscar en todas las subcarpetas de la ruta de acceso especificada.  
 
@@ -777,7 +799,7 @@ Esta opción configura el puerto local para el que agente de escucha HTTP descar
 
 ### <a name="enable-management-of-the-office-365-client-agent"></a>Habilitar administración del Agente cliente de Office 365
 
-Cuando se establece en **Sí**, habilita la configuración de opciones de instalación de Office 365. También permite descargar archivos desde redes de Content Delivery Network (CDN) de Office e implementar los archivos como una aplicación en Configuration Manager. Para más información, vea [Administración de Office 365 ProPlus](/sccm/sum/deploy-use/manage-office-365-proplus-updates).
+Cuando se establece en **Sí**, habilita la configuración de opciones de instalación de Office 365. También permite descargar archivos desde redes de Content Delivery Network (CDN) de Office e implementar los archivos como una aplicación en Configuration Manager. Para obtener más información, vea [Administración de Office 365 ProPlus](/sccm/sum/deploy-use/manage-office-365-proplus-updates).
 
 
 

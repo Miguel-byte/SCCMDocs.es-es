@@ -1,30 +1,31 @@
 ---
-title: "Solución de problemas del cliente de Windows Defender o Endpoint Protection"
+title: Solución de problemas del cliente de Windows Defender o Endpoint Protection
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo solucionar problemas con Windows Defender y Endpoint Protection."
+description: Obtenga información sobre cómo solucionar problemas con Windows Defender y Endpoint Protection.
 ms.custom: na
-ms.date: 01/03/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d837253e-fcc2-422a-9e2c-c78b938dfd8c
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: b667db471a16faef057f49a0a26759849e03f237
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 7
+caps.handback.revision: 0
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.openlocfilehash: a8460cafce15e5fb97ace76983932841ec77412f
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>Solución de problemas del cliente de Windows Defender o Endpoint Protection
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 Si tiene problemas con Windows Defender o Endpoint Protection, póngase en contacto con el administrador de seguridad para obtener soporte técnico. También puede intentar solucionar los problemas siguientes:  
@@ -100,7 +101,7 @@ Si tiene problemas con Windows Defender o Endpoint Protection, póngase en conta
 
 2.  Si el mensaje de error recibido contiene el código 0x80072f8f, el problema se debe probablemente a una fecha incorrecta o al valor de tiempo en el equipo.  
 
-3.  Para restablecer la fecha o el valor de tiempo de su equipo, siga los pasos de [Corregir accesos directos de escritorio rotos y tareas comunes de mantenimiento del sistema](http://go.microsoft.com/fwlink/?LinkId=155579) (http://go.microsoft.com/fwlink/?LinkId=155579).  
+3.  Para restablecer el valor de fecha y hora del equipo, siga los pasos de [Fix broken desktop shortcuts and common system maintenance tasks](http://go.microsoft.com/fwlink/?LinkId=155579) (Corregir accesos directos de escritorio rotos y tareas comunes de mantenimiento del sistema) (http://go.microsoft.com/fwlink/?LinkId=155579).  
 
 ### <a name="step-4-rename-the-software-distribution-folder-on-your-computer"></a>Paso 4: cambiar el nombre de la carpeta SoftwareDistribution en el equipo  
 
@@ -153,16 +154,16 @@ Si tiene problemas con Windows Defender o Endpoint Protection, póngase en conta
 
 ### <a name="step-6-manually-install-the-virus-and-spyware-definition-updates"></a>Paso 6: instalar manualmente las actualizaciones de definiciones de virus y spyware  
 
--   Si está ejecutando un sistema operativo de Windows de 32 bits, descargue las últimas actualizaciones manualmente en [http://go.microsoft.com/fwlink/?LinkID=87342](http://go.microsoft.com/fwlink/?LinkID=87342) (http://go.microsoft.com/fwlink/?LinkID=87342).  
+-   Si ejecuta un sistema operativo de Windows de 32 bits, descargue las últimas actualizaciones manualmente en [http://go.microsoft.com/fwlink/?LinkID=87342](http://go.microsoft.com/fwlink/?LinkID=87342) (http://go.microsoft.com/fwlink/?LinkID=87342).  
 
--   Si está ejecutando un sistema operativo de Windows de 64 bits, descargue las últimas actualizaciones manualmente en [http://go.microsoft.com/fwlink/?LinkID=87341](http://go.microsoft.com/fwlink/?LinkID=87341) (http://go.microsoft.com/fwlink/?LinkID=87341).  
+-   Si ejecuta un sistema operativo de Windows de 64 bits, descargue las últimas actualizaciones manualmente en [http://go.microsoft.com/fwlink/?LinkID=87341](http://go.microsoft.com/fwlink/?LinkID=87341) (http://go.microsoft.com/fwlink/?LinkID=87341).  
 
 -   Haga clic en **Ejecutar**. Las actualizaciones más recientes se instalan manualmente en el equipo.  
 
 
 ### <a name="step-7-contact-support"></a>Paso 7: ponerse en contacto con el servicio de soporte técnico  
 
--   Si no se resuelve el problema siguiendo los pasos, póngase en contacto con el soporte técnico. Para obtener más información, consulte [Soporte al cliente](http://go.microsoft.com/fwlink/?LinkID=196174) (http://go.microsoft.com/fwlink/?LinkID=196174).  
+-   Si no se resuelve el problema siguiendo los pasos, póngase en contacto con el soporte técnico. Para obtener más información, vea la [asistencia al cliente](http://go.microsoft.com/fwlink/?LinkID=196174) (http://go.microsoft.com/fwlink/?LinkID=196174).  
 
 ##  <a name="starting-windows-defender-or-endpoint-protection-service"></a>Iniciar el servicio de Windows Defender o Endpoint Protection  
  **Síntoma**  
@@ -238,8 +239,7 @@ Si tiene problemas con Windows Defender o Endpoint Protection, póngase en conta
 3.  Si usa un módem por cable o un enrutador DSL, asegúrese de que las conexiones con el enrutador y con el equipo estén bien conectadas. Pruebe a desconectar y apagar el enrutador y el módem. Espere unos minutos, conecte el módem en primer lugar, espere un minuto y, a continuación, conecte el enrutador y reinicie el equipo.  
 
 ##  <a name="detected-threat-cant-be-remediated"></a>No se puede corregir una amenaza detectada  
- Si Windows Defender o  
-      Endpoint Protection detectan una posible amenaza que oculta un archivo comprimido con la extensión de nombre de archivo .zip o dentro de un recurso compartido de red, intenta tratar la amenaza poniéndola en cuarentena o quitando la amenaza.  
+ Cuando Windows Defender o Endpoint Protection detecta una posible amenaza que se oculta en un archivo comprimido con la extensión de nombre de archivo .zip o dentro de un recurso compartido de red, intenta hacerle frente a la amenaza poniéndola en cuarentena o eliminándola.  
 
 ### <a name="remove-or-scan-the-file"></a>Quitar o examinar el archivo  
 

@@ -1,20 +1,22 @@
 ---
-title: "Administración conjunta para dispositivos de Windows 10"
-description: "Obtenga información sobre cómo administrar simultáneamente dispositivos Windows 10 mediante Configuration Manager y Microsoft Intune."
-keywords: 
-author: dougeby
-manager: angrobe
-ms.date: 11/20/2017
+title: Administración conjunta para dispositivos de Windows 10
+titleSuffix: Configuration Manager
+description: Obtenga información sobre cómo administrar simultáneamente dispositivos Windows 10 mediante Configuration Manager y Microsoft Intune.
+keywords: ''
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: configuration-manager
-ms.service: 
-ms.technology: 
+ms.service: ''
+ms.technology: ''
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 0cc11a05013fd9c25ee98ec35adcbe822d8a21fb
-ms.sourcegitcommit: 389c4e5b4e9953b74c13b1689195f99c526fa737
+ms.openlocfilehash: e4b8bd58d30cd87ffc461289edbfc5da9a684cda
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="co-management-for-windows-10-devices"></a>Administración conjunta para dispositivos de Windows 10    
 <!-- 1350871 -->
@@ -50,7 +52,7 @@ A continuación se indican los requisitos previos generales para poder habilitar
 - [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) en Configuration Manager (al usar Intune para instalar el cliente de Configuration Manager)
 
 ## <a name="workloads-you-can-switch-to-intune"></a>Cargas de trabajo que puede pasar a Intune
-Después de habilitar la administración conjunta, Configuration Manager sigue administrando todas las cargas de trabajo. Cuando decida que ya está listo, puede hacer que Intune empiece a administrar las cargas de trabajo disponibles. Puede hacer que Intune administre las siguientes cargas de trabajo.   
+Después de habilitar la administración conjunta, Configuration Manager sigue administrando todas las cargas de trabajo. Cuando decida que ya está listo, puede hacer que Intune empiece a administrar las cargas de trabajo disponibles. Puede hacer que Intune administre las siguientes cargas de trabajo:   
 
 ### <a name="compliance-policies"></a>Directivas de cumplimiento
 Las directivas de cumplimiento definen las reglas y los valores de configuración que un dispositivo debe cumplir para que se considere conforme a las directivas de acceso condicional. Las directivas de cumplimiento también se pueden usar para supervisar y corregir problemas de compatibilidad con dispositivos independientemente del acceso condicional. Para obtener más información, vea [Directivas de cumplimiento de dispositivos](/sccm/mdm/deploy-use/device-compliance-policies).  
@@ -60,6 +62,10 @@ Las directivas de Windows Update para empresas le permiten configurar directivas
 
 ### <a name="resource-access-policies"></a>Directivas de acceso a recursos
 Las directivas de acceso a recursos configuran los ajustes de VPN, Wi-Fi, correo electrónico y certificados en los dispositivos. Para obtener más información, consulte el artículo sobre cómo [implementar perfiles de acceso a recursos](/sccm/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles).
+
+### <a name="endpoint-protection"></a>Endpoint Protection 
+<!-- 1357365 -->
+A partir de Configuration Manager 1802, La carga de trabajo de Endpoint Protection se puede pasar a Intune. Para obtener más información, vea [Cambiar las cargas de trabajo a Intune](/sccm/core/clients/manage/co-management-switch-workloads.md#Workloads-able-to-be-transitioned-to-Intune) y [Endpoint Protection en Configuration Manager](/sccm/protect/deploy-use/endpoint-protection).
 
 ## <a name="architectural-overview-for-co-management"></a>Introducción a la arquitectura de la administración conjunta
 En el siguiente diagrama se muestra una introducción a la arquitectura de la administración conjunta y cómo encaja en las infraestructuras existentes de Intune y de Configuration Manager.
