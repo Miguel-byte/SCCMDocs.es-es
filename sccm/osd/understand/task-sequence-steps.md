@@ -3,7 +3,7 @@ title: Pasos de la secuencia de tareas
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los pasos que puede agregar a una secuencia de tareas de Configuration Manager.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/30/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ad68209784b78da5c6e75745094ba8e6bc002c44
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 53929400b983a2191e60a7d42ae84062afd44e3a
+ms.sourcegitcommit: d8a4a53630351b3d677bbdc5d203e7d330472cba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Pasos de la secuencia de tareas en System Center Configuration Manager
 
@@ -711,6 +711,10 @@ Las condiciones siguientes afectan a las aplicaciones instaladas por la secuenci
 -   Si el valor de una variable contiene alguna información que no sea el nombre de la aplicación, La secuencia de tareas no instala la aplicación y continúa.  
 
 -   Si la secuencia de tareas no encuentra una variable con el nombre de base especificado y el sufijo "01", no instala ninguna aplicación. 
+    
+> [!Important]  
+> Estos valores distinguen entre mayúsculas y minúsculas. Por ejemplo, "instalar" es distinto de "Instalar". Si tiene que cambiar el valor, el editor de secuencia de tareas no detecta los cambios de mayúsculas y minúsculas. Hay que realizar otra modificación al mismo tiempo; por ejemplo, modificar la descripción del paso.<!--509714-->   
+
    
 **Continuar instalando otras aplicaciones en la lista si se produce un error de instalación de aplicación**  
  Esta configuración especifica que el paso continúe cuando se produzca un error en la instalación de una aplicación. Si especifica esta opción, la secuencia de tareas continúa con independencia de los errores de instalación. Si no se especifica esta opción y se produce un error en la instalación, el paso finaliza inmediatamente.  
@@ -789,6 +793,10 @@ En el editor de secuencia de tareas, haga clic en **Agregar**, seleccione **Soft
 -   Si el identificador de paquete contiene caracteres en minúsculas, se produce un error en la instalación de software.  
 
 -   Si la secuencia de tareas no encuentra una variable con el nombre de base especificado y el sufijo "001", la secuencia de tareas no instala ningún paquete. La secuencia de tareas continúa.  
+    
+> [!Important]  
+> Estos valores distinguen entre mayúsculas y minúsculas. Por ejemplo, "instalar" es distinto de "Instalar". Si tiene que cambiar el valor, el editor de secuencia de tareas no detecta los cambios de mayúsculas y minúsculas. Hay que realizar otra modificación al mismo tiempo; por ejemplo, modificar la descripción del paso.<!--509714-->   
+
    
 **Continuar instalando otros paquetes en la lista si se produce un error de instalación de un paquete de software**  
  Esta configuración especifica que el paso continúa si se produce un error la instalación de un paquete de software. Si especifica esta opción, la secuencia de tareas continúa con independencia de los errores de instalación. Si no se especifica esta opción y se produce un error en la instalación, el paso finaliza inmediatamente.  
