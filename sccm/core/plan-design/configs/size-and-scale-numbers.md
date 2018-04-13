@@ -1,33 +1,34 @@
 ---
-title: "Tamaño y escala"
+title: Tamaño y escala
 titleSuffix: Configuration Manager
-description: "Identifique el número de roles de sistema de sitio y los sitios que necesitará para admitir los dispositivos en el entorno de System Center Configuration Manager."
+description: Determine el número de roles de sistema de sitio y los sitios que necesitará para admitir los dispositivos en el entorno.
 ms.custom: na
-ms.date: 07/24/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: bda1ab737a3af5e13f180771cc17c9850165906c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+manager: dougeby
+ms.openlocfilehash: cc5ce67ffe7c18d4e7be4c9a74f2a0ca0ba0253c
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Números de tamaño y escala de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 
-Cada implementación de System Center Configuration Manager tendrá un número máximo de sitios, roles de sistema de sitio y dispositivos que podrá admitir. Estos números varían en función de la estructura de jerarquía (qué tipos y el número de sitios que usa) y los roles de sistema de sitio que implementa.  La información de las siguientes área puede ayudarle a identificar el número de roles de sistema de sitio y sitios que necesitará para admitir los dispositivos que espera administrar con su entorno.
+Cada implementación de Configuration Manager tiene un número máximo de sitios, roles de sistema de sitio y dispositivos que puede admitir. Estos números varían en función de la estructura de la jerarquía, los tipos y números de sitios que se usen y los roles de sistema de sitio que se implementen. La información de este artículo puede ayudar a identificar el número de roles de sistema de sitio y los sitios que se necesitan para admitir los dispositivos que se esperan administrar.
 
 Use la información de este tema junto con la información de los siguientes artículos:
 -   [Hardware recomendado](../../../core/plan-design/configs/recommended-hardware.md)
@@ -36,22 +37,25 @@ Use la información de este tema junto con la información de los siguientes art
 -   [Requisitos previos de sitio y sistema de sitio](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)
 
 
-Los siguientes números de soporte técnico se basan en el uso del hardware recomendado para Configuration Manager y la configuración predeterminada para todas las características disponibles de Configuration Manager. Cuando no use el hardware recomendado o use una configuración personalizada más agresiva (por ejemplo, ejecutar inventario de hardware o software con más frecuencia que los valores predeterminados de una vez cada siete días), el rendimiento de los sistemas de sitio puede disminuir y es posible que no se cumplan los niveles de compatibilidad indicados.
+Estos números de compatibilidad se basan en el uso del hardware recomendado para Configuration Manager. También se basan en la configuración predeterminada para todas las características disponibles de Configuration Manager. Si no usa el hardware recomendado o usa una configuración personalizada más agresiva, el rendimiento de los sistemas de sitio puede verse afectado. Es posible que los sistemas de sitio no cumplan los niveles de compatibilidad indicados. (Un ejemplo de configuración de cliente más agresiva es la ejecución de inventario de hardware o software con más frecuencia que los valores predeterminados de una vez cada siete días).
 
 ##  <a name="bkmk_SiteSystemScale"></a> Tipos de sitio  
- **Sitio de administración central:**  
+
+### <a name="central-administration-site"></a>Sitio de administración central  
 
 -   Un sitio de administración central admite hasta 25 sitios primarios o secundarios.  
 
-**Sitio primario:**  
+
+### <a name="primary-site"></a>Sitio primario  
 
 -   Cada sitio primario admite hasta 250 sitios secundarios.  
 
 -   El número de sitios secundarios por cada sitio primario se basa en conexiones de red de área extensa (WAN) confiables y continuamente conectadas. Para las ubicaciones que tienen menos de 500 clientes, considere la posibilidad de un punto de distribución en lugar de un sitio secundario.  
 
- Para más información sobre los números de clientes y dispositivos que un sitio primario puede admitir, vea [Número de clientes para sitios y jerarquías](#bkmk_clientnumbers) en este tema.  
+ Para obtener más información sobre el número de clientes y dispositivos que un sitio primario puede admitir, vea [Número de clientes para sitios y jerarquías](#bkmk_clientnumbers).  
 
-**Sitio secundario:**  
+
+### <a name="secondary-site"></a>Sitio secundario  
 
 -   Los sitios secundarios no admiten otros sitios secundarios.  
 
@@ -60,7 +64,7 @@ Los siguientes números de soporte técnico se basan en el uso del hardware reco
 ## <a name="bkmk_roles"></a> Roles de sistema de sitio    
 
 
-**Punto de servicio web del catálogo de aplicaciones:**  
+### <a name="application-catalog-web-service-point"></a>Punto de servicio web del catálogo de aplicaciones  
 
 -   Puede instalar varias instancias del punto de servicio web del catálogo de aplicaciones en los sitios primarios.  
 
@@ -71,7 +75,8 @@ Los siguientes números de soporte técnico se basan en el uso del hardware reco
 
     -   Cada instancia de este rol de sistema de sitio admite el número máximo de clientes que son compatibles con la jerarquía.  
 
-**Punto de sitios web del catálogo de aplicaciones:**  
+
+### <a name="application-catalog-website-point"></a>Punto de sitios web del catálogo de aplicaciones  
 
 -   Puede instalar varias instancias del punto de sitios web del catálogo de aplicaciones en los sitios primarios.  
 
@@ -83,7 +88,30 @@ Los siguientes números de soporte técnico se basan en el uso del hardware reco
     -   Cada instancia de este rol de sistema de sitio admite el número máximo de clientes que son compatibles con la jerarquía.  
 
 
-**Punto de distribución:**  
+### <a name="bkmk_cmg"></a> Cloud Management Gateway
+
+- Se pueden instalar varias instancias de Cloud Management Gateway (CMG) en los sitios primarios o el sitio de administración central.  
+
+    > [!Tip]  
+    > En una jerarquía, cree la instancia de CMG en el sitio de administración central.  
+
+    - Una instancia de CMG admite hasta 16 instancias de máquina virtual (VM) en el servicio de nube de Azure.  
+
+    - Cada instancia de VM de CMG admite 6000 conexiones de cliente simultáneas. Cuando CMG soporta una carga elevada debido a que el número de clientes es mayor que el admitido, sigue administrando las solicitudes, pero pueden producirse retrasos.  
+
+Para obtener más información, vea [Rendimiento y escalabilidad](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#performance-and-scale) de CMG.
+
+
+### <a name="cloud-management-gateway-connection-point"></a>Punto de conexión de Cloud Management Gateway
+
+- Se pueden instalar varias instancias del punto de conexión de Cloud Management Gateway en los sitios primarios.  
+
+- Un punto de conexión de CMG puede admitir una instancia de CMG con hasta cuatro instancias de máquina virtual. Si la instancia de CMG tiene más de cuatro instancias de máquina virtual, agregue un segundo punto de conexión de CMG para equilibrar la carga. Una instancia de CMG con 16 instancias de máquina virtual debe estar vinculada a cuatro puntos de conexión de CMG.
+
+Para obtener más información, vea [Rendimiento y escalabilidad](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#performance-and-scale) de CMG.
+
+
+### <a name="distribution-point"></a>Punto de distribución  
 
 -   Puntos de distribución por sitio:  
 
@@ -100,16 +128,17 @@ Los siguientes números de soporte técnico se basan en el uso del hardware reco
 -   Cada punto de distribución es compatible con un total combinado de hasta 10.000 paquetes y aplicaciones.  
 
 > [!WARNING]  
->  El número real de clientes que puede admitir un punto de distribución depende de la velocidad de la red y la configuración de hardware del equipo de punto de distribución.  
+>  El número real de clientes que puede admitir un punto de distribución depende de la velocidad de la red y la configuración de hardware del servidor.  
 >   
->  El número de puntos de extracción que puede admitir un punto de distribución de origen depende también de la velocidad de la red y la configuración de hardware del equipo de punto de distribución de origen. Pero este número también se ve afectado por la cantidad de contenido que haya implementado. Esto es porque, a diferencia de los clientes que suelen tener acceso a contenido en distintos momentos durante el transcurso de una implementación, todos los puntos de distribución de extracción solicitan a la vez el contenido, y pueden solicitar todo el contenido disponible, no solo el contenido que se aplica a ellos, como haría un cliente. Cuando se coloca demasiada carga de procesamiento en un punto de distribución de origen, se pueden producir retrasos inesperados al distribuir el contenido a los puntos de distribución previstos en el entorno.  
+>  El número de puntos de extracción que puede admitir un punto de distribución de origen depende también de la velocidad de la red y la configuración de hardware del punto de distribución de origen. Pero este número también se ve afectado por la cantidad de contenido que haya implementado. Este efecto se debe a que, a diferencia de los clientes que suelen tener acceso a contenido en distintos momentos durante una implementación, todos los puntos de distribución de extracción solicitan el contenido al mismo tiempo. Los puntos de distribución de extracción pueden solicitar todo el contenido disponible, no solo el contenido que les corresponde. Cuando se coloca una carga de procesamiento elevada en un punto de distribución de origen, se pueden producir retrasos inesperados al distribuir el contenido a los puntos de distribución de destino.  
 
 
-**Punto de estado de reserva:**  
+### <a name="fallback-status-point"></a>Punto de estado de reserva  
 
 -   Cada punto de estado de reserva puede admitir hasta 100.000 clientes.  
 
-**Punto de administración:**  
+
+### <a name="management-point"></a>Punto de administración  
 
 -   Cada sitio primario admite hasta 15 puntos de administración.  
 
@@ -118,18 +147,22 @@ Los siguientes números de soporte técnico se basan en el uso del hardware reco
 
 -   Cada sitio secundario admite un solo punto de administración que se debe instalar en el servidor de sitio secundario.  
 
- Para más información sobre los números de clientes y dispositivos que un punto de administración puede admitir, vea la sección [Puntos de administración](#bkmk_mp) de este tema.  
+ Para obtener más información sobre el número de clientes y dispositivos que un punto de administración puede admitir, vea la sección [Puntos de administración](#bkmk_mp).  
 
-**Punto de actualización de software:**  
 
--   Un punto de actualización de software que está instalado en el servidor de sitio puede admitir hasta 25.000 clientes.  
+### <a name="software-update-point"></a>Punto de actualización de software  
+
+-   Un punto de actualización de software que está instalado en el servidor de sitio puede admitir hasta 25.000 clientes.   
 
 -   Un punto de actualización de software remoto del servidor de sitio puede admitir hasta 150 000 clientes cuando el equipo remoto cumple los requisitos de Windows Server Update Services (WSUS) para admitir este número de clientes.  
 
 -   De manera predeterminada, Configuration Manager no admite la configuración de puntos de actualización de software como clústeres de Equilibrio de carga de red (NLB). En cambio, puede usar el SDK de Configuration Manager para configurar hasta cuatro puntos de actualización de software en un clúster de NLB.  
 
+
+
 ##  <a name="bkmk_clientnumbers"></a> Número de clientes para sitios y jerarquías  
  Use la siguiente información para determinar cuántos clientes, y de qué tipo, se pueden admitir en un sitio o en una jerarquía.  
+
 
 ###  <a name="bkmk_cas"></a> Jerarquía con un sitio de administración central  
 Un sitio de administración central admite un número total de dispositivos que incluye el número máximo de dispositivos indicados para los tres grupos siguientes:  
@@ -144,21 +177,22 @@ Un sitio de administración central admite un número total de dispositivos que 
 
     -   300 000 dispositivos basados en la nube  
 
- Por ejemplo, en una jerarquía, de un total de 1.025.000 dispositivos, puede admitir 700 000 equipos de escritorio, hasta 25 000 Mac y Windows CE 7.0, y hasta 300 000 dispositivos basados en la nube al integrar Microsoft Intune. Si se admiten los dispositivos administrados por MDM local, el total de la jerarquía es de 825 000 dispositivos.  
+ Por ejemplo, puede admitir 700 000 equipos de escritorio, hasta 25 000 dispositivos Mac y Windows CE 7.0, y hasta 300 000 dispositivos basados en la nube al integrar Microsoft Intune. Esta jerarquía admite un total de 1 025 000 dispositivos. Si se admiten los dispositivos administrados por MDM local, el total de la jerarquía es de 825 000 dispositivos.  
 
 > [!IMPORTANT]  
->  En una jerarquía donde el sitio de administración central usa SQL Server Standard Edition, la jerarquía admite un máximo de 50 000 equipos de escritorio y dispositivos. Para admitir más de 50 000 equipos de escritorio y dispositivos, debe usar una edición Enterprise de SQL Server. Este requisito solo se aplica a un sitio de administración central y no a un sitio primario independiente ni a un sitio primario secundario donde la edición de SQL Server que se usa no limita la capacidad del sitio para admitir el número de clientes indicado.   
+>  En una jerarquía donde el sitio de administración central usa SQL Server Standard Edition, la jerarquía admite un máximo de 50 000 equipos de escritorio y dispositivos. Para admitir más de 50 000 equipos de escritorio y dispositivos, debe usar una edición Enterprise de SQL Server. Este requisito solo se aplica a un sitio de administración central. No se aplica a un sitio primario independiente o un sitio primario secundario. La edición de SQL Server que se usa para un sitio primario no limita su capacidad para admitir el número de clientes indicado.   
 
 
  La edición de SQL Server que se usa en un sitio primario independiente no limita la capacidad del sitio para admitir el número de clientes indicado.  
 
 
 ###  <a name="bkmk_chipri"></a> Sitio primario secundario  
-Cada sitio primario secundario de una jerarquía con un sitio de administración central admite lo siguiente:  
+Cada sitio primario secundario de una jerarquía con un sitio de administración central admite el número de clientes siguiente:  
 
 -   150 000 clientes y dispositivos en total, sin limitarse a un grupo o tipo específico, siempre y cuando no se supere el número admitido para la jerarquía. Consulte también la compatibilidad con [los dispositivos con Windows Embedded](#embedded).
 
-Por ejemplo, un sitio primario que admite 25 000 equipos que ejecutan Mac y Windows CE 7.0 (dado que es el límite para una jerarquía) puede admitir 125 000 equipos de escritorio adicionales. Esto aumenta el número total de dispositivos compatibles hasta el límite máximo de 150 000 admitido por el sitio primario secundario.
+Por ejemplo, un sitio primario admite 25 000 dispositivos Mac y Windows CE 7.0. Este número es el límite de una jerarquía. Después, este sitio primario puede admitir 125 000 equipos de escritorio adicionales. El número total de dispositivos admitidos por el sitio primario secundario es el límite máximo admitido de 150 000.
+
 
 ###  <a name="bkmk_pri"></a> Sitio primario independiente  
 Un sitio primario independiente admite el siguiente número de dispositivos:  
@@ -178,13 +212,16 @@ Un sitio primario independiente admite el siguiente número de dispositivos:
 
 Por ejemplo, un sitio primario independiente que admite 150 000 equipos de escritorio y 10 000 equipos Mac o Windows CE 7.0 solo puede admitir 15 000 dispositivos adicionales. Esos dispositivos pueden estar en la nube o administrase mediante MDM local.  
 
+
 ### <a name="embedded"></a> Sitios principales y dispositivos con Windows Embedded
-Los sitios principales admiten dispositivos con Windows Embedded que tienen habilitados los filtros de escritura basados en archivos (FBWF). Cuando los dispositivos incrustados no tienen habilitados filtros de escritura, un sitio principal puede admitir una serie de dispositivos incrustados, hasta el máximo permitido para ese sitio. Del número total de dispositivos que un sitio principal admite, un máximo de 10 000 de estos pueden ser dispositivos con Windows Embedded, cuando dichos dispositivos están configurados para las excepciones que se muestran en la nota importante que está disponible en [Planificación de la implementación del cliente en dispositivos con Windows Embedded](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices). Un sitio principal admite solo 3000 dispositivos con Windows Embedded que tienen habilitado EWF y que no están configurados para las excepciones.
+Los sitios principales admiten dispositivos con Windows Embedded que tienen habilitados los filtros de escritura basados en archivos (FBWF). Cuando los dispositivos insertados no tienen filtros de escritura habilitados, un sitio primario puede admitir una serie de dispositivos insertados, hasta el máximo permitido para ese sitio. Del número total de dispositivos que admite un sitio primario, un máximo de 10 000 de estos dispositivos pueden ser de Windows Embedded. Estos dispositivos se deben configurar para las excepciones enumeradas en la nota importante que se encuentra en [Planeamiento de la implementación de clientes en dispositivos de Windows Embedded](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices). Un sitio principal admite solo 3000 dispositivos con Windows Embedded que tienen habilitado EWF y que no están configurados para las excepciones.
+
 
 ###  <a name="bkmk_sec"></a> Sitios secundarios  
-Los sitios secundarios admiten lo siguiente:  
+Los sitios secundarios admiten el número de dispositivos siguiente:  
 
 -   15 000 equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX)  
+
 
 ###  <a name="bkmk_mp"></a> Puntos de administración  
 Cada punto de administración puede admitir el siguiente número de dispositivos:  

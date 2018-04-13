@@ -1,34 +1,37 @@
 ---
-title: "Introducción a la configuración de cumplimiento"
+title: Introducción a la configuración de cumplimiento
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo funciona la configuración de cumplimiento en System Center Configuration Manager. Además, obtenga información sobre los conceptos principales que necesita conocer."
+description: Obtenga información sobre los conceptos básicos y cómo funciona la configuración de cumplimiento.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
-caps.latest.revision: "11"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: b1171f806d1bda9671fd5817362285a461ee2d44
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 11
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: a8f672d4d92db8f1bd6e19c4a483b5b3107ad703
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="get-started-with-compliance-settings-in-system-center-configuration-manager"></a>Introducción a la configuración de cumplimiento en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Antes de empezar a crear elementos de configuración de System Center Configuration Manager, debe revisar este tema para entender cómo funciona la configuración de cumplimiento y para obtener información sobre los conceptos principales que debe conocer.  
+Antes de crear la configuración de cumplimiento de Configuration Manager, obtenga información sobre los conceptos básicos y cómo funcionan.  
 
-## <a name="how-compliance-settings-works"></a>Funcionamiento de la configuración de cumplimiento  
- La configuración de cumplimiento le permite administrar la configuración y el cumplimiento de servidores, portátiles, equipos de escritorio y dispositivos móviles en su organización.  
+
+
+## <a name="how-compliance-settings-work"></a>Funcionamiento de la configuración de cumplimiento  
+ La configuración de cumplimiento permite administrar la configuración y el cumplimiento de los clientes de la organización.  
 
  Los elementos de configuración se clasifican en dos categorías principales:  
 
@@ -36,50 +39,83 @@ Antes de empezar a crear elementos de configuración de System Center Configurat
 
 -   **Configuración para dispositivos administrados sin el cliente de Configuration Manager**: suelen ser dispositivos administrados con Microsoft Intune o con la administración de dispositivo local de Configuration Manager.  
 
+
+
 ## <a name="what-devices-are-supported"></a>¿Qué dispositivos son compatibles?  
 
-
-|Tipo de dispositivo|Más información|  
+| Tipo de dispositivo | Más información |  
 |------------|----------------------|  
-|Equipos con Windows (con el cliente de Configuration Manager)|Permite crear elementos de configuración personalizados que permiten evaluar elementos como las claves del registro, los archivos y los atributos de Active Directory.<br /><br /> Si se usa el tipo de elemento de configuración de Windows 10, las opciones deseadas se seleccionan de una lista predefinida.|  
-|Equipos con Windows (inscritos con Microsoft Intune)|Seleccione la configuración que quiera de una lista predefinida.|  
-|Dispositivos iOS (inscritos con Microsoft Intune)|Seleccione la configuración que quiera de una lista predefinida.|  
-|Dispositivos Android (inscritos con Microsoft Intune)|Seleccione la configuración que quiera de una lista predefinida.|  
-|Dispositivos Windows Phone (inscritos con Microsoft Intune)|Seleccione la configuración que quiera de una lista predefinida.|  
-|Equipos Mac (con el cliente de Configuration Manager)|Permite crear elementos de configuración personalizados que facilitan la evaluación de elementos como los valores de las preferencias de Mac OS X (lista de propiedades) y los resultados devueltos por un script.|  
-|Equipos Mac (inscritos con Microsoft Intune)|Seleccione la configuración que quiera de una lista predefinida.|  
+| Equipos con Windows (con el cliente de Configuration Manager) | Cree elementos de configuración personalizados para evaluar elementos como las claves del Registro, los archivos y los atributos de Active Directory.<br /><br /> Si se usa el tipo de elemento de configuración de Windows 10, seleccione las opciones en una lista predefinida. |  
+| Equipos con Windows (inscritos con Microsoft Intune) | Seleccione la configuración de una lista predefinida. |  
+| Dispositivos iOS (inscritos con Microsoft Intune) | Seleccione la configuración de una lista predefinida. |  
+| Dispositivos Android (inscritos con Microsoft Intune) | Seleccione la configuración de una lista predefinida. |  
+| Dispositivos Windows Phone (inscritos con Microsoft Intune) | Seleccione la configuración de una lista predefinida. |  
+| Equipos Mac (con el cliente de Configuration Manager) | Cree elementos de configuración personalizados para evaluar objetos como las preferencias de macOS y los resultados devueltos por un script. |  
+| Equipos Mac (inscritos con Microsoft Intune) | Seleccione la configuración de una lista predefinida. |  
+
+
 
 ## <a name="what-is-a-configuration-item"></a>¿Qué es un elemento de configuración?  
- Un elemento de configuración puede considerarse un contenedor que almacena la información siguiente (la información que se configure dependerá del tipo de elemento de configuración):  
+ Un elemento de configuración es un contenedor que almacena información específica. La información que se configure depende del tipo de elemento de configuración. Los elementos de configuración pueden incluir la información siguiente:
 
--   **Información de método de detección** (para elementos de configuración de Windows que solo contienen la configuración de la aplicación): permite detectar si una aplicación está instalada mediante la detección del archivo del programa de instalación de Windows para la aplicación o mediante un script personalizado.  
+-   **Información de método de detección** es solo para los elementos de configuración de Windows que contienen la configuración de la aplicación. Detecta si una aplicación está instalada. Esta detección usa el archivo de Windows Installer para la aplicación, o bien un script personalizado.  
 
--   **Configuración** : representa las condiciones técnicas o de negocio que se usan para evaluar el cumplimiento en dispositivos cliente. Puede configurar una nueva configuración o ir a una configuración existente en un equipo de referencia.  
+-   **Configuración** representa las condiciones de negocio o técnicas para evaluar el cumplimiento en los dispositivos cliente. Establezca una configuración nueva o vaya a una configuración existente en un equipo de referencia.  
 
--   **Reglas de compatibilidad** : especifican las condiciones que definen el cumplimiento del valor de un elemento de configuración. Para poder evaluar el cumplimiento de una configuración, debe tener al menos una regla de cumplimiento. Algunas configuración permiten corregir los valores que no son conformes. Puede crear nuevas reglas o buscar una configuración existente en cualquier elemento de configuración para seleccionar sus reglas.  
+-   Las **reglas de cumplimiento** especifican las condiciones que definen el cumplimiento de una opción de elemento de configuración. Antes de que el cliente evalúe una configuración de cumplimiento, debe tener al menos una regla de cumplimiento. Algunas configuraciones corrigen valores no compatibles. Cree reglas o busque una configuración existente en cualquier elemento de configuración y seleccione las reglas que contenga.  
 
--   **Plataformas admitidas** : son las plataformas de dispositivo que define en las que se evaluará el elemento de configuración para determinar su cumplimiento. Si implementa un elemento de configuración en un dispositivo que no está en la lista de plataformas admitidas, no se evaluará su cumplimiento.  
+-   Las **plataformas admitidas** son las plataformas de dispositivo definidas en las que el cliente evalúa el cumplimiento de los elementos de configuración. Si se implementa un elemento de configuración en un dispositivo que no está en la lista de plataformas admitidas, no evalúa el cumplimiento.  
+
+
 
 ## <a name="what-is-a-configuration-baseline"></a>¿Qué es una línea base de configuración?  
- El cumplimiento se evalúa mediante la definición de una línea base de configuración que contiene los elementos de configuración que quiere evaluar, y las configuraciones y reglas que describen el nivel de cumplimiento que debe tener. Puede importar estos datos de configuración desde el sitio web en paquetes de configuración de Microsoft System Center Configuration Manager como procedimientos recomendados que se definen por Microsoft y otros proveedores en Configuration Manager y, después, importarlos a Configuration Manager. O bien, puede crear elementos de configuración y líneas base de configuración.  
+ Defina una línea base de configuración en la que se incluyan los elementos de configuración que se van a evaluar. Incluya también la configuración y las reglas que describen el nivel de cumplimiento requerido. Importe estos datos de configuración desde los paquetes de configuración de Configuration Manager. Microsoft y otros proveedores definen estos paquetes de configuración. O bien, cree elementos de configuración y líneas base de configuración.  
 
- Después de definir una línea base de configuración, puede implementarla para usuarios y dispositivos a través de las recopilaciones y evaluar su configuración de cumplimiento en una programación. Los dispositivos pueden tener varias líneas base de configuración implementados. Esto le proporciona un alto nivel de control.  
+ Después de definir una línea base de configuración, impleméntela en las recopilaciones de dispositivos y usuarios. Después, el cliente evalúa la configuración de línea base de cumplimiento según una programación. Se puede implementar más de una línea base de configuración en los dispositivos. Este nivel de detalle proporciona mayor control del cumplimiento. 
 
- Los dispositivos cliente evalúan su cumplimiento con cada línea base de configuración implementadas y notifican inmediatamente los resultados al sitio mediante mensajes de estado. Si un dispositivo cliente no está conectado actualmente a la red, pero descargó los elementos de configuración a los que se hace referencia en una línea base de configuración implementada, se evaluará la compatibilidad de la línea base de configuración. La información de cumplimiento se envía cuando se vuelve a establecer la conexión.  
+ Los dispositivos cliente evalúan su cumplimiento con cada línea base de configuración implementadas y notifican inmediatamente los resultados al sitio mediante mensajes de estado. Si un dispositivo está actualmente desconectado de la red, pero descargó la línea base de configuración, seguirá evaluando el cumplimiento de los elementos de configuración. Envía la información de cumplimiento cuando se vuelve a conectar.  
 
- Puede supervisar los resultados de la evaluación de cumplimiento de la línea base de configuración desde el nodo **Implementaciones** del área de trabajo **Supervisión** en la consola de Configuration Manager para ver las causas más comunes de incumplimiento, los errores y el número de usuarios y dispositivos afectados. También puede ejecutar informes de configuración de cumplimiento para conocer los detalles adicionales, como los dispositivos conformes o no conformes, y el elemento de la línea base de configuración que provoca el incumplimiento de un equipo. También puede ver los resultados de la evaluación de cumplimiento desde equipos Windows que ejecuten el software de cliente de Configuration Manager mediante la pestaña **Configuraciones** en **Configuration Manager** en el Panel de control.  
+### <a name="monitoring-configuration-baselines"></a>Supervisión de líneas base de configuración
+- Supervise los resultados de la evaluación de cumplimiento en la consola de Configuration Manager, en el área de trabajo **Supervisión**, en el nodo **Implementaciones**. Por ejemplo:
+    - Causas comunes de no cumplimiento
+    - Errores
+    - El número de dispositivos y usuarios afectados
+- Ejecute informes de configuración de cumplimiento con detalles adicionales. Por ejemplo:
+    - Qué dispositivos son compatibles o no compatibles
+    - Qué elemento de la línea base de configuración está causando que un equipo sea no compatible
+- Vea los resultados de evaluación de cumplimiento de los equipos Windows en los que se ejecuta al cliente de Configuration Manager. Abra el panel de control de **Configuration Manager** y cambie a la pestaña **Configuraciones**.  
+
+
 
 ## <a name="user-data-and-profiles-configuration-items"></a>Elementos de configuración de perfiles y datos de usuario  
- Los elementos de configuración de perfiles y datos de usuario contienen opciones para controlar cómo los usuarios de la jerarquía administran el redireccionamiento de carpetas, los archivos sin conexión y los perfiles móviles en equipos que ejecutan Windows 8 y versiones posteriores. Puede implementarlos en recopilaciones de usuarios y, después, supervisar su cumplimiento desde el nodo **Supervisión** de la consola de Configuration Manager. A diferencia de otros elementos de configuración, estos no se agregan a las líneas base de configuración antes de implementarlos. Se pueden implementar directamente con el cuadro de diálogo **Implementar elemento de configuración de perfiles y datos de usuario** .  
+ Los elementos de configuración de perfiles y datos de usuario incluyen opciones que controlan cómo los usuarios de equipos que ejecutan Windows 8 y versiones posteriores administran lo siguiente:  
+   - Redirección de carpetas
+   - Archivos sin conexión
+   - Perfiles móviles  
 
- Para obtener más información, consulte [Create user data and profiles configuration items (Crear elementos de configuración de perfiles y datos de usuario)](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items).  
+Implemente estos elementos de configuración en recopilaciones de usuarios. Supervise su cumplimiento desde el nodo **Supervisión** de la consola de Configuration Manager. A diferencia de otros elementos de configuración, no los agregue a las líneas base de configuración antes de implementarlos. Impleméntelos directamente haciendo clic en **Implementar** en la cinta.  
+
+ Para obtener más información, vea [Creación de elementos de configuración de perfiles y datos de usuario](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items).  
+
+
 
 ## <a name="remote-connection-profiles"></a>Perfiles de conexión remota  
- Los perfiles de conexión remota proporcionan un conjunto de herramientas y recursos para ayudarle a crear, implementar y supervisar la configuración de conexión remota en dispositivos de su organización. Mediante la implementación de estas opciones, se minimiza la intervención del usuario final para conectarse a sus equipos en la red corporativa.  
+ Los perfiles de conexión remota proporcionan un conjunto de herramientas y recursos para ayudar a crear, implementar y supervisar la configuración de conexión remota. Mediante la implementación de estas opciones en los dispositivos, se minimiza el esfuerzo que necesitan los usuarios finales para conectar sus equipos a la red corporativa.  
 
-Para obtener más información, consulte [Create remote connection profiles (Crear perfiles de conexión remota)](/sccm/compliance/deploy-use/create-remote-connection-profiles).  
+Para más información, consulte [Perfiles de conexión remota en System Center Configuration Manager](/sccm/compliance/deploy-use/create-remote-connection-profiles).  
+
+
 
 ## <a name="windows-edition-upgrade"></a>Actualización de edición de Windows
-La directiva de actualización de edición le permite actualizar dispositivos automáticamente que ejecutan determinadas versiones de Windows 10 a una versión más reciente proporcionando una nueva clave de producto o archivo de licencia.
+La directiva de actualización de edición actualiza automáticamente a una versión más reciente los dispositivos que ejecutan determinadas versiones de Windows 10. Esta directiva proporciona una clave de producto nueva o un archivo de licencia que el dispositivo usa para la actualización.
 
-Para obtener más información, consulte [Upgrade Windows devices with the edition upgrade policy (Actualizar dispositivos de Windows con la directiva de actualización de edición)](/sccm/compliance/deploy-use/upgrade-windows-version).
+Para obtener más información, vea [Actualizar dispositivos de Windows con la directiva de actualización de edición en System Center Configuration Manager](/sccm/compliance/deploy-use/upgrade-windows-version).
+
+
+
+## <a name="microsoft-edge-browser-profiles"></a>Perfiles del explorador Microsoft Edge
+<!-- 1357310 -->
+A partir de la versión 1802, para los clientes que usan el explorador web [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) en los clientes de Windows 10, cree una directiva de configuración de cumplimiento para configurar varias opciones de Microsoft Edge. 
+
+Para obtener más información, vea [Microsoft Edge browser profiles](/sccm/compliance/deploy-use/browser-profiles) (Perfiles del explorador Microsoft Edge).
+

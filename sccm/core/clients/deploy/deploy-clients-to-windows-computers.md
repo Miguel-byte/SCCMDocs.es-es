@@ -1,49 +1,52 @@
 ---
-title: "Implementación de clientes de Windows"
+title: Implementar clientes en Windows
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo implementar clientes en equipos Windows con System Center Configuration Manager."
+description: Obtenga información sobre cómo implementar el cliente de Configuration Manager en equipos Windows.
 ms.custom: na
-ms.date: 08/20/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
-caps.latest.revision: "13"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 31b8ffc12c483f5c10063a305101de5ca98cbd8b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 13
+caps.handback.revision: 0
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 3d7c3e9c9f2af8d612ef158897c281d422692268
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-system-center-configuration-manager"></a>Implementar clientes en equipos Windows con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Antes de instalar los clientes de Configuration Manager, asegúrese de que todos los [requisitos previos](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md) están en vigor y de que se completaron todas las configuraciones de implementación necesarias.   
 
+
+
 ##  <a name="BKMK_ClientPush"></a> Cómo instalar clientes con inserción de cliente  
 
-Puede configurar una instalación de inserción de cliente para un sitio y la instalación de cliente se ejecutará automáticamente en los equipos detectados dentro de los límites configurados del sitio cuando estos límites se configuran como un grupo de límites. O bien, puede iniciar una instalación de inserción de cliente mediante la ejecución del Asistente para instalación de inserción de cliente para una recopilación o recurso específico dentro de una recopilación.  
+Puede configurar la instalación de inserción de cliente para un sitio. La instalación de cliente se ejecuta automáticamente en los equipos detectados dentro de los límites configurados del sitio cuando estos se configuran como un grupo de límites. O bien, puede iniciar una instalación de inserción de cliente mediante la ejecución del Asistente para instalación de inserción de cliente para una recopilación o recurso específico dentro de una recopilación.  
 
 También puede usar el Asistente para instalación de inserción de cliente para instalar el cliente de Configuration Manager a los resultados de [consulta](../../../core/servers/manage/queries-technical-reference.md). Para que la instalación se realice correctamente, uno de los elementos devueltos por la consulta debe ser el atributo **ResourceID** de la clase **Recurso del sistema**.   
 
-Si el servidor de sitio no puede ponerse en contacto con el equipo cliente ni iniciar el proceso de instalación, repite automáticamente el intento de instalación cada hora durante un máximo de 7 días.  
+Si el servidor de sitio no se puede poner en contacto con el equipo cliente ni iniciar el proceso de instalación, reintenta automáticamente la instalación cada hora. El servidor continúa intentándolo hasta un máximo de siete días.  
 
-Para realizar un seguimiento del proceso de instalación de cliente, instale un sistema de sitio del punto de estado de reserva antes de instalar los clientes. Cuando se instala un punto de estado de reserva, se asigna automáticamente a los clientes cuando se instalan por el método de instalación de inserción de cliente. Consulte los informes de implementación y asignación de cliente para realizar un seguimiento del progreso de la instalación de cliente. 
+Para realizar el seguimiento del proceso de instalación de cliente, instale un punto de estado de reserva antes de instalar los clientes. Cuando se instala un punto de estado de reserva, se asigna automáticamente a los clientes cuando se instalan por el método de instalación de inserción de cliente. Para realizar el seguimiento del progreso de la instalación de cliente, vea los informes de implementación y asignación de cliente. 
 
-Los archivos de registro de cliente proporcionan información más detallada sobre la solución de problemas y no requieren un punto de estado de reserva. Por ejemplo, el archivo CCM.log en el servidor de sitio registra todos los problemas que el servidor de sitio tiene al conectarse al equipo y el archivo CCMSetup.log en el cliente registra el proceso de instalación.  
+Los archivos de registro de cliente proporcionan información más detallada sobre la solución de problemas. Los archivos de registro no requieren un punto de estado de reserva. Por ejemplo, el archivo **CCM.log** en el servidor de sitio registra todos los problemas del servidor de sitio cuando se conecta al equipo. El archivo **CCMSetup.log** en el cliente registra el proceso de instalación.  
 
 > [!IMPORTANT]  
->  Para que la inserción de cliente se realice correctamente, asegúrese de que todos los requisitos previos están en vigor. Se muestran en la sección "Installation Method Dependencies" (Dependencias de los métodos de instalación) en [Prerequisites for deploying clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md) (Requisitos previos para la implementación de clientes en equipos Windows en System Center Configuration Manager).  
+>  Para que la inserción de cliente se realice correctamente, asegúrese de que todos los requisitos previos están en vigor. Para obtener más información, vea [Dependencias de los métodos de instalación](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#installation-method-dependencies).  
 
-### <a name="to-configure-the-site-to-automatically-use-client-push-for-discovered-computers"></a>Para configurar el sitio para que utilice automáticamente la inserción de cliente para equipos detectados
+### <a name="configure-the-site-to-automatically-use-client-push-for-discovered-computers"></a>Configurar el sitio para que use automáticamente la inserción de cliente para los equipos detectados
 
 1.  En la consola de Configuration Manager, pulse **Administración** > **Configuración del sitio** > **Sitios**.  
 
@@ -55,19 +58,20 @@ Los archivos de registro de cliente proporcionan información más detallada sob
 
 6.  Seleccione si quiere instalar el cliente en controladores de dominio.  
 
-7.  En la pestaña **Cuentas**, especifique una o varias cuentas de Configuration Manager que se van a usar al conectarse al equipo para instalar el software cliente. Haga clic en el icono **Crear**, escriba el **Nombre de usuario** y **Contraseña** (inferior a 38 caracteres), confirme la contraseña y, después, haga clic en **Aceptar**. Debe especificar al menos una cuenta de instalación de inserción de cliente, que debe tener derechos de administrador local en cada equipo en el que desea instalar el cliente. Si no especifica una cuenta de instalación de inserción de cliente, Configuration Manager intenta usar la cuenta de equipo del sistema de sitio, lo que producirá un error en la inserción de cliente entre dominios.  
+7.  En la pestaña **Cuentas**, especifique una o varias cuentas de Configuration Manager que se van a usar al conectarse al equipo de destino. Haga clic en el icono **Crear**, escriba el **Nombre de usuario** y **Contraseña** (inferior a 38 caracteres), confirme la contraseña y, después, haga clic en **Aceptar**. Especifique al menos una cuenta de instalación de inserción de cliente. Esta cuenta debe tener derechos de administrador local en el equipo de destino para instalar el cliente. Si no especifica al menos una cuenta de instalación de inserción de cliente, Configuration Manager intenta usar la cuenta de equipo de sistema de sitio. Se produce un error en la inserción de cliente entre dominios cuando se usa la cuenta de equipo de sistema de sitio.  
     > [!NOTE]  
-    >  Si se va a utilizar el método de instalación de inserción de cliente desde un sitio secundario, la cuenta debe especificarse en el sitio secundario que inicia la inserción de cliente.  
+    >  Para usar la inserción de cliente desde un sitio secundario, especifique la cuenta en el sitio secundario que inicia la inserción de cliente.  
     >   
-    >  Para obtener más información sobre la cuenta de instalación de inserción de cliente, consulte el procedimiento "Para usar el Asistente para instalación de inserción de cliente", incluido a continuación.  
+    >  Para obtener más información sobre la cuenta de instalación de inserción de cliente, vea el procedimiento siguiente, [Usar el Asistente para instalación de inserción de cliente](#use-the-client-push-installation-wizard).  
+
 8.  Complete la pestaña **Propiedades de instalación**.
 
-     Las [propiedades de instalación de cliente](../../../core/clients/deploy/about-client-installation-properties.md) que se especifican en esta pestaña se publican en Active Directory Domain Services si el esquema se extiende a Configuration Manager y las leen las instalaciones cliente en donde se ejecuta CCMSetup sin propiedades de instalación.  
+     Si se amplía el esquema para Configuration Manager, el sitio publica en Active Directory Domain Services las [propiedades de instalación de cliente](../../../core/clients/deploy/about-client-installation-properties.md) que se especifiquen en esta pestaña. Las instalaciones de cliente leen estas propiedades cuando se ejecuta CCMSetup sin propiedades de instalación.  
 
     > [!NOTE]  
-    >  Si habilita la instalación de inserción de cliente en un sitio secundario, asegúrese de que la propiedad SMSSITECODE esté establecida en el nombre de sitio de Configuration Manager de su sitio primario principal. Si el esquema de Active Directory se extiende a Configuration Manager, también puede establecerlo en AUTO para que busque automáticamente la asignación correcta de sitio.  
+    >  Si se habilita la instalación de inserción de cliente en un sitio secundario, asegúrese de que la propiedad **SMSSITECODE** esté establecida en el nombre de sitio de Configuration Manager de su sitio primario principal. Si el esquema de Active Directory se extiende a Configuration Manager, también se puede establecer esta propiedad en AUTO para que busque automáticamente la asignación de sitio correcta.  
 
-### <a name="to-use-the-client-push-installation-wizard"></a>Para utilizar el Asistente para instalación de inserción de cliente
+### <a name="use-the-client-push-installation-wizard"></a>Usar el Asistente para instalación de inserción de cliente
 
 1.  En la consola de Configuration Manager, pulse **Administración** >  **Configuración del sitio** > **Sitios**.  
 
@@ -77,13 +81,13 @@ Los archivos de registro de cliente proporcionan información más detallada sob
 
 5.  Complete la pestaña **Propiedades de instalación**.  
 
-     Las [propiedades de instalación de cliente](../../../core/clients/deploy/about-client-installation-properties.md) que se especifican en esta pestaña se publican en Active Directory Domain Services si el esquema se extiende a Configuration Manager y las leen las instalaciones cliente en donde se ejecuta CCMSetup sin propiedades de instalación.  
+     Si se amplía el esquema para Configuration Manager, el sitio publica en Active Directory Domain Services las [propiedades de instalación de cliente](../../../core/clients/deploy/about-client-installation-properties.md) que se especifiquen en esta pestaña. Las instalaciones de cliente leen estas propiedades cuando se ejecuta CCMSetup sin propiedades de instalación.   
 
 6.  En la consola de Configuration Manager, elija **Activos y compatibilidad**.  
 
 7.  En el área de trabajo **Activos y compatibilidad** , seleccione uno o varios equipos o una recopilación de equipos.  
 
-8.  En la pestaña **Inicio** , elija una de las opciones siguientes:  
+8.  En la pestaña **Inicio**, elija una de las opciones siguientes:  
 
     -   Si quiere instalar el cliente en un único equipo o en varios, en el grupo **Dispositivo**, pulse **Instalar cliente**.  
 
@@ -96,30 +100,32 @@ Los archivos de registro de cliente proporcionan información más detallada sob
 11. Revise la configuración de instalación y, a continuación, cierre el asistente.  
 
 > [!NOTE]  
->  Puede utilizar el asistente para instalar clientes, incluso si el sitio no está configurado para la inserción de clientes.  
+>  Se puede usar el asistente para instalar clientes incluso si el sitio no está configurado para la inserción de clientes.  
+
+
 
 ##  <a name="BKMK_ClientSUP"></a> Cómo instalar clientes con la instalación basada en actualizaciones de software  
  La instalación de clientes basada en actualizaciones de software publica el cliente en un punto de actualización de software como una actualización de software. Use este método para una actualización o instalación por primera vez.  
 
- Si un equipo tiene instalado el cliente, Configuration Manager proporciona el cliente con la directiva de cliente, que incluye el puerto y nombre de servidor del punto de actualización de software desde el que podrá obtener actualizaciones de software.   
+ Si un equipo tiene instalado el cliente de Configuration Manager, recibe la directiva de cliente desde el sitio. Esta directiva incluye el nombre del servidor de punto de actualización de software y el puerto desde el que se van a obtener las actualizaciones de software.   
 
 > [!IMPORTANT]  
 >  Para utilizar la instalación basada en actualizaciones de software, debe utilizar el mismo servidor de Windows Server Update Services (WSUS) para la instalación de cliente y actualizaciones de software. Este servidor debe ser el punto de actualización de software activo de un sitio primario. Para obtener más información, consulte [Install a software update point](../../../sum/get-started/install-a-software-update-point.md) (Instalar un punto de actualización de software).  
 
-Si un equipo no tiene instalado el cliente de Configuration Manager, debe configurar y asignar un objeto de directiva de grupo (GPO) en Active Directory Domain Services para especificar el nombre de servidor del punto de actualización de software.  
+Si un equipo no tiene instalado el cliente de Configuration Manager, configure y asigne un objeto de directiva de grupo en Active Directory Domain Services para especificar el nombre de servidor del punto de actualización de software.  
 
-No se pueden agregar propiedades de línea de comandos a una instalación de cliente basada en actualizaciones de software. Si extendió el esquema de Active Directory a Configuration Manager, los equipos cliente consultan automáticamente las propiedades de instalación en Active Directory Domain Services cuando realizan la instalación.  
+No se pueden agregar propiedades de línea de comandos a una instalación de cliente basada en actualizaciones de software. Si se extendió el esquema de Active Directory a Configuration Manager, los equipos cliente consultan automáticamente las propiedades de instalación en Active Directory Domain Services cuando realizan la instalación.  
 
-Si no se extendió el esquema de Active Directory, puede utilizar la directiva de grupo para aprovisionar la configuración de instalación de cliente en su sitio. Esta configuración se aplica automáticamente a cualquier instalación de cliente basada en actualizaciones de software. Para obtener más información, consulte [How to Provision Client Installation Properties (Group Policy and Software Update-Based Client Installation)](#BKMK_Provision) [Cómo aprovisionar propiedades de instalación de cliente (instalación de cliente con directivas de grupo y basada en actualizaciones de software)] y [How to assign clients to a site in System Center Configuration Manager](../../../core/clients/deploy/assign-clients-to-a-site.md) (Cómo asignar clientes a un sitio en System Center Configuration Manager).  
+Si no se extendió el esquema de Active Directory, se puede usar la directiva de grupo para aprovisionar la configuración de instalación de cliente en el sitio. Esta configuración se aplica automáticamente a cualquier instalación de cliente basada en actualizaciones de software. Para obtener más información, vea [Cómo aprovisionar propiedades de instalación de cliente (instalación de cliente con directivas de grupo y basada en actualizaciones de software)](#BKMK_Provision) y [Cómo asignar clientes a un sitio en System Center Configuration Manager](../../../core/clients/deploy/assign-clients-to-a-site.md).  
 
 Use los procedimientos siguientes para configurar equipos sin un cliente de Configuration Manager para usar el punto de actualización de software para la instalación de cliente y actualizaciones de software, y para publicar el software de cliente en el punto de actualización de software.  
 
 > [!NOTE]  
 >  Si los equipos se encuentran en un estado de reinicio pendiente tras una instalación de software previa, una instalación de clientes basada en actualizaciones de software podría provocar que el equipo se reinicie.  
 
-### <a name="configure-a-group-policy-object-in-active-directory-domain-services-to-specify-the-software-update-point-for-client-installation-and-software-updates"></a>Configurar un objeto de directiva de grupo en Active Directory Domain Services para especificar el punto de actualización de software para la instalación de cliente y actualizaciones de software:  
+### <a name="configure-a-group-policy-object-in-active-directory-domain-services-to-specify-the-software-update-point-for-client-installation-and-software-updates"></a>Configure un objeto de directiva de grupo en Active Directory Domain Services para especificar el punto de actualización de software para la instalación de cliente y las actualizaciones de software:  
 
-1.  Utilice la Consola de administración de directivas de grupo para abrir un objeto de directiva de grupo nuevo o existente.  
+1.  Use la Consola de administración de directivas de grupo para abrir un objeto de directiva de grupo nuevo o existente.  
 
 2.  En la consola, expanda **Configuración del equipo**, expanda **Plantillas administrativas** y **Componentes de Windows** y, después, pulse **Windows Update**.  
 
@@ -132,15 +138,15 @@ Use los procedimientos siguientes para configurar equipos sin un cliente de Conf
     -   Si el sistema de sitio de Configuration Manager no está configurado para usar un FQDN, use un formato de nombre corto.  
 
     > [!NOTE]  
-    >  Para determinar el número de puerto, vea [Cómo determinar la configuración de puerto usada por WSUS en System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).  
+    >  Para determinar el número de puerto, vea [Configuración del puerto de WSUS](../../../sum/plan-design/plan-for-software-updates.md).  
 
      Ejemplo: **http://server1.contoso.com:8530**  
 
-5.  En el cuadro **Establecer el servidor de estadísticas de la intranet**, especifique el nombre del servidor de estadísticas de la intranet. No tiene que ser el mismo que el servidor de punto de actualización de software, y el formato no tiene que coincidir si es el mismo servidor.  
+5.  En el cuadro **Establecer el servidor de estadísticas de la intranet**, especifique el nombre del servidor de estadísticas de la intranet. No tiene que ser el mismo que el servidor de punto de actualización de software. Si es el mismo servidor, no es necesario que el formato coincida.  
 
-6.  Asigne el objeto de directiva de grupo a los equipos en los que se va a instalar el cliente y recibir actualizaciones de software.  
+6.  Asigne el objeto de directiva de grupo a los equipos en los que se quiere instalar el cliente y recibir actualizaciones de software.  
 
-### <a name="to-publish-the-configuration-manager-client-to-the-software-update-point"></a>Para publicar el cliente de Configuration Manager en el punto de actualización de software  
+### <a name="publish-the-configuration-manager-client-to-the-software-update-point"></a>Publicar el cliente de Configuration Manager en el punto de actualización de software  
 
 1.  En la consola de Configuration Manager, haga clic en **Administración** > **Configuración del sitio** > **Sitios**.  
 
@@ -153,30 +159,34 @@ Use los procedimientos siguientes para configurar equipos sin un cliente de Conf
 6.  Si el software cliente del servidor de sitio de Configuration Manager es una versión posterior a la del punto de actualización de software, se abre el cuadro de diálogo **Se detectó una versión más reciente del paquete de cliente**. Haga clic en **Sí** para publicar la versión más reciente.  
 
     > [!NOTE]  
-    >  Si el software cliente no se ha publicado anteriormente en el punto de actualización de software, este cuadro quedará en blanco.  
+    >  Si el software cliente no se ha publicado anteriormente en el punto de actualización de software, este cuadro está en blanco.  
 
-La actualización de software para el cliente de Configuration Manager no se actualiza automáticamente cuando hay una nueva versión. Si actualiza el sitio, lo que incluye una nueva versión de cliente, debe repetir este procedimiento y hacer clic en **Sí** para el paso 6.  
+La actualización de software para el cliente de Configuration Manager no se actualiza automáticamente cuando hay una versión nueva. Si se actualiza el sitio, lo que incluye una versión de cliente nueva, se debe repetir este procedimiento y hacer clic en **Sí** para el paso 6.  
+
+
 
 ##  <a name="BKMK_ClientGP"></a> Cómo instalar clientes con directiva de grupo  
- Puede usar una directiva de grupo de Active Directory Domain Services para publicar o asignar el cliente de Configuration Manager con el fin de instalarlo en equipos de su empresa. El cliente se instalará cuando se inicie el equipo. Cuando use una directiva de grupo, el cliente se muestra en **Agregar o quitar programas** del Panel de control para que el usuario lo instale.  
+ Se puede usar una directiva de grupo de Active Directory Domain Services para publicar o asignar el cliente de Configuration Manager para instalarlo en los equipos de la empresa. El cliente se instala cuando se inicia el equipo. Cuando se usa la directiva de grupo, el cliente se muestra en **Agregar o quitar programas** del Panel de Control para que el usuario lo instale.  
 
- Utilice el paquete de Windows Installer (CCMSetup.msi) para instalaciones basadas en directiva de grupo. Este archivo se encuentra en la carpeta **&lt;directorio de instalación de ConfigMgr\>\bin\i386** en el servidor de sitio de Configuration Manager. No puede agregar propiedades a este archivo para modificar el comportamiento de la instalación.  
+ Use el paquete de Windows Installer (CCMSetup.msi) para instalaciones basadas en directiva de grupo. Este archivo se encuentra en la carpeta **&lt;directorio de instalación de ConfigMgr\>\bin\i386** en el servidor de sitio de Configuration Manager. No se pueden agregar propiedades a este archivo para modificar el comportamiento de la instalación.  
 
 > [!IMPORTANT]  
 >  Es necesario tener permisos de administrador para tener acceso a los archivos de instalación del cliente.  
 
--   Si el esquema de Active Directory se extiende para Configuration Manager y se selecciona **Publish this site in Active Directory Domain Services** (Publicar este sitio en Active Directory Domain Services) en la pestaña **Avanzadas** del cuadro de diálogo **Propiedades del sitio**, los equipos cliente buscan automáticamente en Active Directory Domain Services las propiedades de instalación. Para obtener más información sobre las propiedades de instalación publicadas, consulte [About client installation properties published to Active Directory Domain Services in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md) (Acerca de las propiedades de instalación de cliente publicadas en Active Directory Domain Services en System Center Configuration Manager).  
+-   Si el esquema de Active Directory se extiende para Configuration Manager y se selecciona **Publish this site in Active Directory Domain Services** (Publicar este sitio en Active Directory Domain Services) en la pestaña **Avanzadas** del cuadro de diálogo **Propiedades del sitio**, los equipos cliente buscan automáticamente en Active Directory Domain Services las propiedades de instalación. Para obtener más información sobre las propiedades de instalación publicadas, vea [Acerca de las propiedades de instalación de cliente publicadas en Active Directory Domain Services](../../../core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md).  
 
--   Si no se ha ampliado el esquema de Active Directory, puede usar el procedimiento de este tema para almacenar las propiedades de instalación en el Registro de los equipos: [Aprovisionamiento de propiedades de instalación de cliente (instalación de clientes con directivas de grupo y basada en actualizaciones de software)](#BKMK_Provision). Estas propiedades de instalación se usarán una vez se haya instalado el cliente.  
+-   Si no se ha ampliado el esquema de Active Directory, se puede usar el procedimiento de este tema para almacenar las propiedades de instalación en el Registro de los equipos: [Cómo aprovisionar propiedades de instalación de cliente (instalación de cliente con directivas de grupo y basada en actualizaciones de software)](#BKMK_Provision). Estas propiedades de instalación se usan cuando se instala el cliente.  
 
-Para obtener información acerca del uso de una directiva de grupo en Servicios de dominio de Active Directory para instalar software, consulte la documentación de Windows Server.  
+Para obtener información sobre cómo usar una directiva de grupo en Active Directory Domain para instalar software, consulte la documentación de Windows Server.  
+
+
 
 ##  <a name="BKMK_Manual"></a> Cómo instalar clientes manualmente  
  Es posible instalar manualmente el software cliente en los equipos de su empresa mediante el programa CCMSetup.exe. Este programa y los archivos auxiliares se encuentran en la carpeta **Cliente** de la carpeta de instalación de Configuration Manager del servidor de sitio y en los puntos de administración de su sitio. Esta carpeta se comparte en la red como  
 
  \\\\*&lt;Nombre del servidor de sitio\>*\SMS_*&lt;Código de sitio\>*\Client\  
 
- donde *&lt;Nombre del servidor de sitio\>* es el nombre de uno de los servidores que hospedan un punto de administración y *&lt;Código de sitio\>* es el código del sitio primario al que pertenece el cliente.  Para ejecutar CCMSetup.exe desde la línea de comandos en el cliente, debe asignar una unidad de red a esta ubicación y luego ejecutar el comando.  
+ donde *&lt;Nombre del servidor de sitio\>* es el nombre de uno de los servidores que hospedan un punto de administración y *&lt;Código de sitio\>* es el código del sitio primario al que se asigna el cliente. Para ejecutar CCMSetup.exe desde la línea de comandos en el cliente, debe asignar una unidad de red a esta ubicación y luego ejecutar el comando.  
 
 > [!IMPORTANT]  
 >  Es necesario tener permisos de administrador para tener acceso a los archivos de instalación del cliente.  
@@ -185,9 +195,8 @@ Para obtener información acerca del uso de una directiva de grupo en Servicios 
 
  Es posible especificar propiedades de línea de comandos para CCMSetup.exe y Client.msi para modificar el comportamiento de la instalación del cliente. Asegúrese de especificar las propiedades de CCMSetup (las propiedades que comienzan por **/**) antes de especificar las propiedades de Client.msi. Por ejemplo:  
 
-```  
-CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=AUTO FSP=SMSFP01  
-```  
+`CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=AUTO FSP=SMSFP01`    
+
 y el cliente se instala mediante las propiedades siguientes:  
 
 |Propiedad|Descripción|  
@@ -195,53 +204,70 @@ y el cliente se instala mediante las propiedades siguientes:
 |**/mp:SMSMP01**|Esta propiedad de CCMSetup especifica que el punto de administración SMSMP01 descargue los archivos de instalación de cliente requeridos.|  
 |**/logon**|Esta propiedad de CCMSetup especifica que la instalación se debe detener si se encuentra un cliente de Configuration Manager en el equipo.|  
 |**SMSSITECODE=AUTO**|Esta propiedad de Client.msi especifica que el cliente intenta localizar el código de sitio de Configuration Manager que va a usar, por ejemplo, mediante Active Directory Domain Services.|  
-|**FSP=SMSFP01**|Esta propiedad de Client.msi especifica que el punto de estado de reserva denominado SMSFP01 se utilizará para recibir mensajes de estado enviados desde el equipo cliente.|  
+|**FSP=SMSFP01**|Esta propiedad de Client.msi especifica que el punto de estado de reserva denominado SMSFP01 se usa para recibir mensajes de estado enviados desde el equipo cliente.|  
 
- Para obtener más información sobre todas las propiedades de CCMSetup.exe, consulte [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md) (Acerca de las propiedades de instalación de cliente en System Center Configuration Manager).  
+ Para obtener más información sobre todas las propiedades de CCMSetup.exe, vea [Acerca de las propiedades de instalación de cliente](../../../core/clients/deploy/about-client-installation-properties.md).  
+
+> [!Tip]  
+> Para el procedimiento de instalación del cliente de Configuration Manager en un dispositivo Windows 10 moderno mediante identidades de Azure AD, vea [Instalación y asignación de clientes Windows 10 para Configuration Manager mediante la autenticación basada en Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure). Ese procedimiento es para los clientes en la intranet o Internet.  
+
 
 ### <a name="examples"></a>Ejemplos
- Estos ejemplos son para clientes de Active Directory de la intranet y utilizan los siguientes valores para representar diferentes aspectos del sitio:  
+ Estos ejemplos son para los clientes de Active Directory en la intranet. Usan los valores siguientes para representar diferentes aspectos del sitio:  
 
  **MPSERVER** = servidor que hospeda el punto de administración   
 **FSPSERVER** = servidor que hospeda el punto de estado de reserva  
 **ABC** = código de sitio  
 **contoso.com** = nombre de dominio  
 
- Todos los servidores de sistema de sitio están configurados con un FQDN de intranet y el sitio se publica en el bosque de Active Directory del cliente.  
+ Todos los servidores de sistema de sitio se configuran con un FQDN de intranet. El sitio se publica en el bosque de Active Directory del cliente.  
 
- En el equipo cliente, inicie sesión como administrador local, asigne una unidad (z:) a \\\\MPSERVER\SMS_ABC\Client, cambie el símbolo del sistema a la unidad z y luego ejecute uno de los siguientes comandos.  
+ En el equipo cliente, inicie sesión como administrador local, asigne una unidad (z:) a \\\\MPSERVER\SMS_ABC\Client, cambie el símbolo del sistema a la unidad z y luego ejecute uno de los comandos siguientes:  
 
  **Ejemplo 1:**  
 
-```  
-CCMSetup.exe  
-```  
-En este ejemplo se instala el cliente sin propiedades adicionales para que el cliente se configure automáticamente usando las propiedades de instalación del cliente publicadas en Active Directory Domain Services. Por ejemplo, el cliente se configura automáticamente para el código de sitio (requiere que la ubicación de red del cliente se incluya en un grupo de límites configurado para asignación de clientes), un punto de administración, el punto de estado de reserva y para comunicación mediante HTTPS solamente. Para obtener más información sobre las propiedades de instalación de cliente que se pueden configurar automáticamente para clientes de Active Directory, consulte [About client installation properties published to Active Directory Domain Services in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md) (Acerca de las propiedades de instalación de cliente publicadas en Active Directory Domain Services en System Center Configuration Manager).  
+`CCMSetup.exe`  
+
+En este ejemplo se instala el cliente sin propiedades adicionales. El cliente se configura automáticamente con las propiedades de instalación de Active Directory Domain Services. Se configura automáticamente para las opciones siguientes: 
+- Código de sitio. Esta configuración requiere que la ubicación de red del cliente se incluya en un grupo de límites configurado para la asignación de cliente. 
+- Punto de administración
+- Punto de estado de reserva
+- Comunicación solo mediante HTTPS  
+  
+Para obtener más información, vea [Acerca de las propiedades de instalación de cliente publicadas en Active Directory Domain Services](../../../core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md).  
 
  **Ejemplo 2:**  
 
-```  
-CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=server05.contoso.com CCMFIRSTCERT=1 FSP=server06.constoso.com  
-```  
-En este ejemplo se invalida la configuración automática que Active Directory Domain Services puede proporcionar y no se requiere que la ubicación de red del cliente se incluya en un grupo de límites configurado para la asignación de clientes. En su lugar, la instalación especifica el sitio, un punto de administración de intranet y un punto de administración basado en Internet, un punto de estado de reserva que acepte conexiones de Internet, y el uso de un certificado PKI de cliente (si está disponible) que tenga un periodo de validez mayor.  
+`CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=server05.contoso.com CCMFIRSTCERT=1 FSP=server06.constoso.com`
+  
+En este ejemplo se reemplaza la configuración automática que proporciona Active Directory Domain Services. No requiere que la ubicación de red del cliente esté incluida en un grupo de límites configurado para la asignación de cliente. En su lugar, la instalación especifica los valores siguientes:
+- Código de sitio
+- Punto de administración de intranet 
+- Punto de administración basado en Internet
+- Punto de estado de reserva que acepta conexiones desde Internet
+- Usar un certificado PKI de cliente (si está disponible) con el período de validez más largo  
+
+
 
 ##  <a name="BKMK_ClientLogonScript"></a> Cómo instalar clientes con scripts de inicio de sesión  
  Configuration Manager admite scripts de inicio de sesión para instalar el software de cliente de Configuration Manager. Puede utilizar el archivo de programa **CCMSetup.exe** en un script de inicio de sesión para activar la instalación del cliente.  
 
- La instalación del script de inicio de sesión utiliza los mismos métodos que la instalación manual del cliente. Es posible especificar la propiedad de instalación **/logon** para CCMSsetup.exe, lo cual evita que se instale el cliente si ya existe alguna versión del cliente en el equipo. De este modo, se impide que se vuelva a instalar el cliente cada vez que se ejecute el script de inicio de sesión.  
+ La instalación del script de inicio de sesión utiliza los mismos métodos que la instalación manual del cliente. Se puede especificar la propiedad de instalación **/logon** para CCMSsetup.exe. Si ya existe una versión del cliente en el equipo, esta propiedad evita que el cliente se instale. Este comportamiento impide que se vuelva a instalar el cliente cada vez que se ejecute el script de inicio de sesión.  
 
- Si no se especifica ningún origen de instalación que use la propiedad **/Source** y no se especifica ningún punto de administración del que obtener la instalación mediante la propiedad **/MP**, CCMSetup.exe puede localizar el punto de administración mediante una búsqueda en Active Directory Domain Services si el esquema se ha ampliado para Configuration Manager y el sitio está publicado en Active Directory Domain Services. Como alternativa, el cliente puede utilizar DNS o WINS para localizar un punto de administración.  
+ Si no se especifica ningún origen de instalación mediante la propiedad **/Source** ni ningún punto de administración del que obtener la instalación mediante la propiedad **/MP**, CCMSetup.exe localiza el punto de administración buscando en Active Directory Domain Services. Este comportamiento solo se produce si el esquema se ha ampliado para Configuration Manager y el sitio está publicado en Active Directory Domain Services. Como alternativa, el cliente puede utilizar DNS o WINS para localizar un punto de administración.  
+
+
 
 ##  <a name="BKMK_ClientApp"></a> Cómo instalar clientes con un paquete y un programa  
- Es posible usar Configuration Manager para crear e implementar un paquete y un programa que actualice el software cliente para equipos seleccionados de la jerarquía. Con Configuration Manager se suministra un archivo de definición del paquete que rellena las propiedades del paquete con los valores que se suelen usar. Es posible personalizar el comportamiento de la instalación del cliente mediante la especificación de propiedades de línea de comandos adicionales.  
+ Es posible usar Configuration Manager para crear e implementar un paquete y un programa que actualice el software cliente para equipos seleccionados de la jerarquía. Con Configuration Manager se suministra un archivo de definición del paquete que rellena las propiedades del paquete con los valores que se suelen usar. Se puede personalizar el comportamiento de la instalación del cliente mediante la especificación de propiedades de línea de comandos adicionales.  
 
 > [!NOTE]  
->  No puede actualizar clientes de Configuration Manager 2007 con este método. En su lugar, utilice la actualización de cliente automática, que automáticamente crea e implementa un paquete que contiene la versión más reciente del cliente. Para obtener más información, consulte [Upgrade clients in System Center Configuration Manager](../../../core/clients/manage/upgrade/upgrade-clients.md) (Actualizar clientes en System Center Configuration Manager).  
+>  No puede actualizar clientes de Configuration Manager 2007 con este método. En su lugar, utilice la actualización de cliente automática, que automáticamente crea e implementa un paquete que contiene la versión más reciente del cliente. Para obtener más información, vea [Actualizar clientes](../../../core/clients/manage/upgrade/upgrade-clients.md).  
 >   
->  Para obtener más información sobre cómo migrar desde versiones anteriores del cliente de Configuration Manager, consulte [Planning a client migration strategy in System Center Configuration Manager](../../../core/migration/planning-a-client-migration-strategy.md) (Planear una estrategia de migración de clientes en System Center Configuration Manager).  
+>  Para obtener más información sobre cómo migrar desde versiones anteriores del cliente de Configuration Manager, vea [Planear una estrategia de migración de clientes](../../../core/migration/planning-a-client-migration-strategy.md).  
 
  
-###<a name="to-create-a-package-and-program-for-the-client-software"></a>Para crear un paquete y un programa para el software cliente  
+### <a name="create-a-package-and-program-for-the-client-software"></a>Crear un paquete y un programa para el software cliente  
 
 Use el procedimiento siguiente para crear un paquete y un programa de Configuration Manager que pueda implementar en equipos cliente de Configuration Manager para actualizar el software cliente.  
 
@@ -253,55 +279,71 @@ Use el procedimiento siguiente para crear un paquete y un programa de Configurat
 
 5.  En la página **Archivos de origen**, seleccione **Obtener siempre los archivos de la carpeta de origen**.  
 
-6.  En la página **Carpeta de origen**, seleccione **Ruta de red (nombre UNC)** y especifique la ruta de acceso de red al equipo y la carpeta que contiene los archivos de instalación de cliente.  
+6.  En la página **Carpeta de origen**, seleccione **Ruta de red (nombre UNC)**. Después, escriba la ruta de acceso de red al equipo y la carpeta que contiene los archivos de instalación de cliente.  
 
     > [!NOTE]  
-    >  El equipo en el que se ejecuta la implementación de Configuration Manager debe tener acceso a la carpeta de red especificada, de otro modo, se producirá un error en la instalación.  
+    >  El equipo en el que se ejecuta la implementación de Configuration Manager debe tener acceso a la carpeta de red especificada; en caso contrario se produce un error en la instalación.  
 
-    Si desea cambiar alguna de las propiedades de instalación de cliente, puede modificar los parámetros de la línea de comandos de CCMSetup.exe en la pestaña **General** del cuadro de diálogo del programa **Propiedades de actualización silenciosa de agente de Configuration Manager** . Las propiedades de instalación predeterminadas son **/noservice SMSSITECODE=AUTO**.  
+    Para cambiar alguna de las propiedades de instalación de cliente, modifique los parámetros de la línea de comandos de CCMSetup.exe en la pestaña **General** del cuadro de diálogo del programa **Propiedades de actualización silenciosa de agente de Configuration Manager**. Las propiedades de instalación predeterminadas son **/noservice SMSSITECODE=AUTO**.  
 
 9. Distribuya el paquete a todos los puntos de distribución en los que desea hospedar el paquete de actualización de cliente. A continuación, puede implementar el paquete en recopilaciones de equipos que contengan los clientes que quiere actualizar.  
 
-## <a name="how-to-install-clients-to-intune-mdm-managed-windows-devices"></a>Cómo instalar clientes en dispositivos Windows administrados por MDM con Intune
+
+
+## <a name="bkmk_mdm"></a>Cómo instalar clientes en dispositivos Windows administrados por MDM con Intune
 
 Puede implementar los archivos de instalación de cliente en equipos inscritos con Microsoft Intune. 
 
-Para asegurarse de que el dispositivo permanezca en estado administrado una vez instalado el software cliente, el dispositivo debe encontrarse en la red corporativa y dentro de los límites del sitio de Configuration Manager. 
+Este procedimiento es para un cliente tradicional que está conectado a la intranet. Usa métodos de autenticación de cliente tradicionales. Para asegurarse de que el dispositivo permanece en un estado administrado después de instalar el software cliente, el dispositivo debe encontrarse en la intranet y dentro de los límites del sitio de Configuration Manager.  
+
+Para el procedimiento de instalación del cliente de Configuration Manager en un dispositivo Windows 10 moderno mediante identidades de Azure AD, vea [Instalación y asignación de clientes Windows 10 para Configuration Manager mediante la autenticación basada en Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
 > [!NOTE]
-> Una vez instalado el software cliente, se anulará la inscripción del dispositivo en Intune.
+> Una vez instalado el software cliente, se anula la inscripción del dispositivo en Intune.
+> 
+> A partir de la versión 1710, no se anula la inscripción de los clientes de Intune. Pueden tener el cliente de Configuration Manager y la inscripción de MDM al mismo tiempo. Para obtener más información, vea [Administración conjunta para dispositivos de Windows 10](/sccm/core/clients/manage/co-management-overview).
 
-### <a name="to-install-clients-with-intune"></a>Para instalar clientes con Intune:
+###  <a name="install-clients-with-intune"></a>Instalar clientes con Intune:
 
-1. En Intune, [cree una aplicación](/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune) que contenga el archivo de instalación de cliente de Configuration Manager **ccmsetup.msi**.
+1. En Intune, [cree una aplicación](/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune) que contenga el archivo de instalación de cliente de Configuration Manager **ccmsetup.msi**. Este archivo se encuentra en la carpeta **&lt;directorio de instalación de ConfigMgr\>\bin\i386** en el servidor de sitio de Configuration Manager.
 
-2. En el editor de software de Intune, use los siguientes parámetros de línea de comandos:
+2. En el editor de software de Intune, escribe los parámetros de línea de comandos. Por ejemplo, use la línea de comandos siguiente con un cliente tradicional en la intranet:
 
-  **CCMSETUPCMD="/MP:&lt;FQDN del punto de administración> SMSMP=&lt;FQDN del punto de administración> SMSSITECODE=&lt;Código de su sitio> DNSSUFFIX=&lt;Sufijo DNS del punto de administración>"**
+  `CCMSETUPCMD="/MP:&lt;FQDN of management point> SMSMP=&lt;FQDN of management point> SMSSITECODE=&lt;Your site code> DNSSUFFIX=&lt;DNS Suffix of management point>"`  
+
+   > [!Note]  
+   > Para obtener una línea de comandos de ejemplo para usar con un cliente de Windows 10 moderno mediante autenticación de Azure AD, vea [Preparar dispositivos de Windows 10 para la administración conjunta](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).
 
 3. [Implemente la aplicación](/intune/deploy-use/deploy-apps-in-microsoft-intune) en los equipos Windows inscritos.
 
+
+
 ##  <a name="BKMK_ClientImage"></a> Cómo instalar clientes con una imagen de equipo  
-Puede preinstalar el software cliente de Configuration Manager en un equipo de imagen maestra que usará para crear imágenes en otros equipos.   
+Se puede preinstalar el software cliente de Configuration Manager en un equipo de referencia que se use para crear una imagen de SO.   
 
-### <a name="to-prepare-the-client-computer-for-imaging"></a>Para preparar el equipo cliente para la creación de imágenes  
+> [!Important]
+> Al usar la secuencia de tareas de Configuration Manager para implementar la imagen de SO, el paso de secuencia de comandos [Preparar el cliente de Configuration Manager](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture) quita completamente el cliente de Configuration Manager. 
 
-1.  Instale manualmente el software de cliente de Configuration Manager en el equipo de imagen maestra. Para obtener más información, vea [Instalación manual de clientes de Configuration Manager](#BKMK_Manual).  
+### <a name="prepare-the-client-computer-for-imaging"></a>Preparar el equipo cliente para la creación de imágenes  
+
+1.  Instale manualmente el software de cliente de Configuration Manager en el equipo de referencia. Para obtener más información, vea [Instalación manual de clientes de Configuration Manager](#BKMK_Manual).  
 
     > [!IMPORTANT]  
-    >  No especifique un código de sitio de Configuration Manager para el cliente en las propiedades de línea de comandos CCMSetup.exe.  
+    >  No especifique un código de sitio de Configuration Manager para el cliente en las propiedades de línea de comandos de CCMSetup.exe.  
 
-2.  En una línea de comandos, escriba **net stop ccmexec** para asegurarse de que el servicio **Host de agente de SMS** (Ccmexec.exe) no se ejecuta en el equipo de imagen maestra.
+2.  En una línea de comandos, escriba `net stop ccmexec` para asegurarse de que el servicio **Host de agente de SMS** (Ccmexec.exe) no se ejecuta en el equipo de referencia.
 3.  Elimine el archivo **SMSCFG.INI** de la carpeta **Windows** del equipo de referencia.  
-3.  Quite todos los certificados almacenados en el almacén del equipo local del equipo de imagen maestra.  Por ejemplo, si utiliza certificados de infraestructura de clave pública (PKI), debe quitar los certificados en el almacén **Personal** para **Equipo** y **Usuario** antes de crear la imagen del equipo.
+3.  Quite todos los certificados almacenados en el almacén del equipo local en el equipo de referencia. Por ejemplo, si utiliza certificados de infraestructura de clave pública (PKI), debe quitar los certificados en el almacén **Personal** para **Equipo** y **Usuario** antes de crear la imagen del equipo.
 
-4.  Si los clientes se van a instalar en una jerarquía de Configuration Manager diferente del equipo de imagen maestra, quite la clave raíz confiable del equipo de imagen maestra.  
+4.  Si los clientes están instalados en otra jerarquía de Configuration Manager que la del equipo de referencia, quite la clave raíz confiable del equipo de referencia.  
     > [!NOTE]  
-    >  Si los clientes no pueden consultar los Servicios de dominio de Active Directory para localizar un punto de administración, utilizan la clave raíz de confianza para determinar los puntos de administración de confianza. Si todos los clientes con imágenes se van a implementar en la misma jerarquía que el equipo maestro, deje la clave raíz de confianza. Si los clientes se van a implementar en jerarquías distintas, quite la clave raíz de confianza y, como práctica recomendada, aprovisione previamente a estos clientes con la nueva clave raíz de confianza. Para obtener más información, consulte [Planning for the Trusted Root Key](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) (Planeación de la clave raíz confiable). 
+    >  Si los clientes no pueden consultar los Servicios de dominio de Active Directory para localizar un punto de administración, utilizan la clave raíz de confianza para determinar los puntos de administración de confianza. Si todos los clientes con imágenes están implementados en la misma jerarquía que el equipo maestro, deje la clave raíz confiable. Si los clientes están implementados en jerarquías distintas, quite la clave raíz confiable. Aprovisione también estos clientes con la nueva clave raíz confiable. Para obtener más información, consulte [Planeación de la clave raíz confiable](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK). 
 
 5.  Utilice software de creación de imágenes para capturar la imagen del equipo maestro.  
 
 6.  Implemente la imagen en equipos de destino.  
+
+
 
 ##  <a name="BKMK_ClientWorkgroup"></a> Cómo instalar clientes en equipos del grupo de trabajo  
  Configuration Manager admite la instalación de cliente para equipos del grupo de trabajo. Instale el cliente en los equipos del grupo de trabajo mediante el método especificado en [Instalación manual de clientes de Configuration Manager](#BKMK_Manual).  
@@ -310,7 +352,7 @@ Puede preinstalar el software cliente de Configuration Manager en un equipo de i
 
 -   El cliente debe instalarse manualmente en cada equipo del grupo de trabajo. Durante la instalación, el usuario que ha iniciado sesión debe tener derechos de administrador local.  
 
--   Con el fin de obtener acceso a recursos en el dominio de servidor del sitio de Configuration Manager, la cuenta de acceso de red debe estar configurada para el sitio. Especifique esta cuenta como una propiedad del componente de distribución de software. Para obtener más información, consulte [Site components for System Center Configuration Manager](../../../core/servers/deploy/configure/site-components.md) (Componentes de sitio para System Center Configuration Manager).  
+-   Con el fin de obtener acceso a recursos en el dominio de servidor del sitio de Configuration Manager, la cuenta de acceso de red debe estar configurada para el sitio. Especifique esta cuenta como una propiedad del componente de distribución de software. Para obtener más información, consulte [Componentes de sitio para System Center Configuration Manager](../../../core/servers/deploy/configure/site-components.md).  
 
  Limitaciones:  
 
@@ -328,84 +370,97 @@ Puede preinstalar el software cliente de Configuration Manager en un equipo de i
 
 -   No se puede configurar un cliente de grupo de trabajo como punto de distribución. Configuration Manager requiere que los equipos de punto de distribución pertenezcan a un dominio.  
 
-### <a name="to-install-the-client-on-workgroup-computers"></a>Para instalar el cliente en equipos del grupo de trabajo  
+### <a name="install-the-client-on-workgroup-computers"></a>Instalar el cliente en equipos del grupo de trabajo  
 
-Compruebe los requisitos previos y, después, siga las instrucciones de la sección [Instalación manual de clientes de Configuration Manager](#BKMK_Manual).  
+Compruebe los requisitos previos y, después, siga las instrucciones de la sección [Cómo instalar clientes manualmente](#BKMK_Manual).  
 
-   En este ejemplo se instala el cliente para la administración de cliente de intranet y se especifica el código de sitio y el sufijo DNS para localizar un punto de administración: `**CCMSetup.exe SMSSITECODE=ABC DNSSUFFIX=constoso.com**`  
+   En este ejemplo se instala al cliente para la administración de cliente de intranet y se especifica el código de sitio y el sufijo DNS para localizar un punto de administración. `CCMSetup.exe SMSSITECODE=ABC DNSSUFFIX=constoso.com`  
 
      
 
-   En este ejemplo se requiere que el cliente se encuentre en una ubicación de red configurada en un grupo de límites para que la asignación automática de sitio pueda realizarse correctamente. El comando incluye un punto de estado de reserva en el servidor FSPSERVER, para realizar un seguimiento de la implementación de cliente e identificar cualquier problema de comunicación de cliente: `**CCMSetup.exe FSP=fspserver.constoso.com**`  
+   En este ejemplo se requiere que el cliente se encuentre en una ubicación de red configurada en un grupo de límites. Este requisito es para que la asignación automática de sitio se pueda realizar correctamente. El comando incluye un punto de estado de reserva en el servidor FSPSERVER. Esta propiedad ayuda a realizar el seguimiento de la implementación de cliente y a identificar cualquier problema comunicación del cliente. 
+   `CCMSetup.exe FSP=fspserver.constoso.com`  
 
       
 
 ##  <a name="BKMK_ClientInternet"></a> Cómo instalar clientes para la administración de cliente basada en Internet  
- Si el sitio de Configuration Manager admite la administración de cliente basada en Internet para clientes que a veces se encuentran en la intranet y a veces en Internet, el usuario dispone de dos opciones para instalar clientes en la intranet:  
+ 
+> [!Note]
+> Esta sección no se aplica a los clientes que usan una instancia de [Cloud Management Gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). Para instalar clientes basados en Internet mediante una instancia de Cloud Management Gateway, vea [Instalación y asignación de clientes Windows 10 para Configuration Manager mediante la autenticación basada en Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
--   Puede incluir la propiedad Client.msi de CCMHOSTNAME=*&lt;FQDN de Internet del punto de administración basado en Internet\>* al instalar el cliente, por ejemplo, mediante instalación manual o inserción de cliente. Cuando se utiliza este método, también debe asignar directamente el cliente al sitio y no se puede utilizar la asignación automática de sitio. En la sección [Instalación manual de clientes de Configuration Manager](#BKMK_Manual) de este tema se proporciona un ejemplo de este método de configuración.  
+Si el sitio de Configuration Manager admite la [administración de cliente basada en Internet](/sccm/core/clients/manage/plan-internet-based-client-management) para clientes que a veces se encuentran en la intranet y a veces en Internet, dispone de dos opciones para instalar clientes en la intranet:  
 
--   Puede instalar el cliente para la administración de cliente de intranet y, después, asignar un punto de administración de cliente basada en Internet al cliente mediante las propiedades de cliente de Configuration Manager en el Panel de control, o mediante un script. Cuando utilice este método, puede utilizar la asignación automática de cliente. Para obtener más información, consulte la sección [Configuración de clientes para administración de cliente basada en Internet después de la instalación de cliente](#BKMK_ConfigureIBCM_MP) de este tema.  
+-   Puede incluir la propiedad Client.msi de CCMHOSTNAME=*&lt;FQDN de Internet del punto de administración basado en Internet\>* al instalar el cliente, por ejemplo, mediante instalación manual o inserción de cliente. Cuando se utiliza este método, también debe asignar directamente el cliente al sitio y no se puede utilizar la asignación automática de sitio. En la sección [Cómo instalar clientes manualmente](#BKMK_Manual) de este tema se proporciona un ejemplo de este método de configuración.  
 
- Si tiene que instalar clientes que se encuentran en Internet porque son clientes únicamente de Internet o porque debe instalarlos antes de que vuelvan a la intranet, elija uno de los siguientes métodos admitidos:  
+-   Puede instalar el cliente para la administración de cliente de intranet y después asignar un punto de administración de cliente basado en Internet al cliente. Cambie el punto de administración mediante las propiedades de cliente de Configuration Manager en el Panel de control, o bien mediante un script. Cuando utilice este método, puede utilizar la asignación automática de cliente. Para obtener más información, vea la sección [Cómo configurar clientes para la administración de cliente basada en Internet después de la instalación de cliente](#BKMK_ConfigureIBCM_MP) de este tema.  
 
--   Proporcione un mecanismo para que estos clientes se conecten temporalmente a la intranet mediante una red privada virtual (VPN) y, después, instálelos mediante cualquier método de instalación de cliente apropiado.  
+ Si tiene que instalar clientes que están en Internet, elija uno de los siguientes métodos admitidos:  
 
--   Debe usarse un método de instalación que sea independiente de Configuration Manager, como el empaquetado de los archivos de origen de instalación de cliente en medios extraíbles que se pueden enviar a los usuarios para que realicen la instalación con instrucciones. Los archivos de origen de instalación de cliente están ubicados en la carpeta *&lt;rutaDeInstalación\>*\Client, en el servidor de sitio de Configuration Manager y en los puntos de administración. Incluya un script en los medios para copiarlo manualmente en la carpeta de cliente y, desde esta carpeta, instale el cliente mediante CCMSetup.exe y todas las propiedades de línea de comandos apropiadas de CCMSetup.  
+-   Proporcione un mecanismo para que estos clientes se conecten temporalmente a la intranet con una VPN. Después, instale el cliente mediante cualquier método de instalación de cliente adecuado.  
+
+-   Use un método de instalación independiente de Configuration Manager. Por ejemplo, empaquete los archivos de origen de instalación de cliente en medios extraíbles que se puedan enviar a los usuarios para que realicen la instalación con instrucciones. Los archivos de origen de instalación de cliente están ubicados en la carpeta *&lt;rutaDeInstalación\>*\Client, en el servidor de sitio de Configuration Manager y en los puntos de administración. Incluya un script en los medios para copiarlo manualmente en la carpeta de cliente y, desde esta carpeta, instale el cliente mediante CCMSetup.exe y todas las propiedades de línea de comandos apropiadas de CCMSetup.  
 
 > [!NOTE]  
 >  Configuration Manager no admite la instalación de un cliente directamente desde el punto de administración basado en Internet ni desde el punto de actualización de software basado en Internet.  
 
- Como los clientes administrados en Internet deben comunicarse con los sistemas de sitio basados en Internet, asegúrese de que estos clientes también disponen de certificados de infraestructura de clave pública (PKI) instalados antes de instalarlos. Debe instalar estos certificados con independencia de Configuration Manager. Para obtener más información sobre los requisitos de certificados, consulte [PKI certificate requirements for System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md) (Requisitos de certificados PKI para System Center Configuration Manager).  
+ Los clientes que se administran a través de Internet se deben comunicar con sistemas de sitio basados en Internet. Asegúrese de que estos clientes también disponen de certificados de infraestructura de clave pública (PKI) antes de instalar al cliente. Instale estos certificados con independencia de Configuration Manager. Para obtener más información sobre los requisitos de certificado, vea [Requisitos de certificados PKI](../../../core/plan-design/network/pki-certificate-requirements.md).  
 
-### <a name="to-install-clients-on-the-internet-by-specifying-ccmsetup-command-line-properties"></a>Para instalar clientes en Internet mediante la especificación de propiedades de línea de comandos de CCMSetup  
+### <a name="install-clients-on-the-internet-by-specifying-ccmsetup-command-line-properties"></a>Instalar clientes en Internet mediante la especificación de propiedades de línea de comandos de CCMSetup  
 
-1.  Siga las instrucciones de la sección [Instalación manual de clientes de Configuration Manager](#BKMK_Manual) e incluya siempre lo siguiente:  
+1.  Siga las instrucciones de la sección [Cómo instalar clientes manualmente](#BKMK_Manual) e incluya siempre lo siguiente:  
 
-    -   Propiedad de la línea de comandos de CCMSetup **/source:***&lt;ruta de acceso local a la carpeta de cliente copiada\>*  
+    -   Propiedad de línea de comandos de CCMSetup **/source:***&lt;ruta de acceso local a la carpeta de cliente copiada\>*  
 
     -   Propiedad de línea de comandos de CCMSetup **/UsePKICert**  
 
-    -   Propiedad Client.msi **CCMHOSTNAME=***&lt;FQDN del punto de administración basado en Internet\>*  
+    -   Propiedad de Client.msi **CCMHOSTNAME=***&lt;FQDN del punto de administración basado en Internet\>*  
 
-    -   Propiedad Client.msi **SMSSIGNCERT=***&lt;ruta de acceso local al certificado que firma el servidor de sitio exportado\>*  
+    -   Propiedad de Client.msi **SMSSIGNCERT=***&lt;ruta de acceso local al certificado que firma el servidor de sitio exportado\>*  
 
-    -   Propiedad Client.msi **SMSSITECODE=***&lt;código de sitio del punto de administración basado en Internet\>*  
+    -   Propiedad de Client.msi **SMSSITECODE=***&lt;código de sitio del punto de administración basado en Internet\>*  
 
     > [!NOTE]  
-    >  Si el sitio tiene más de un punto de administración basado en Internet, no importa qué punto de administración basado en Internet se especifique para la propiedad CCMHOSTNAME. Cuando un cliente de Configuration Manager se conecta al punto de administración basado en Internet especificado, el punto de administración envía al cliente una lista de puntos de administración basados en Internet disponibles del sitio, y el cliente selecciona uno de la lista aleatoriamente.  
+    >  Si el sitio tiene más de un punto de administración basado en Internet, no importa cuál se especifique para la propiedad CCMHOSTNAME. Cuando un cliente de Configuration Manager se conecta al punto de administración basado en Internet especificado, el punto de administración envía al cliente una lista de los puntos de administración basados en Internet disponibles en el sitio. El cliente selecciona uno de la lista de manera aleatoria.  
 
 2.  Si no desea que el cliente compruebe la lista de revocación de certificados (CRL), especifique la propiedad de línea de comandos de CCMSetup **/NoCRLCheck**.  
 
-3.  Si usa un punto de estado de reserva basado en Internet, especifique la propiedad Client.msi **FSP=***&lt;FQDN de Internet del punto de estado de reserva basado en Internet\>*.  
+3.  Si se usa un punto de estado de reserva basado en Internet, especifique la propiedad de Client.msi **FSP=***&lt;FQDN de Internet del punto de estado de reserva basado en Internet\>*.  
 
-4.  Si va a instalar el cliente para la administración de cliente solo de Internet, especifique la propiedad Client.msi **CCMALWAYSINF=1**.  
+4.  Si va a instalar el cliente para la administración de cliente solo de Internet, especifique la propiedad de Client.msi **CCMALWAYSINF=1**.  
 
-5.  Compruebe si tiene que especificar propiedades de línea de comandos de CCMSetup adicionales. Por ejemplo, es posible que tenga que especificar un criterio de selección de certificado si el cliente tiene más de un certificado válido de PKI. Para ver la lista de las propiedades, consulte [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md) (Acerca de las propiedades de instalación de clientes en System Center Configuration Manager).  
+5.  Compruebe si tiene que especificar propiedades de línea de comandos de CCMSetup adicionales. Por ejemplo, es posible que tenga que especificar un criterio de selección de certificado si el cliente tiene más de un certificado válido de PKI. Para obtener una lista de las propiedades disponibles, vea [Acerca de las propiedades de instalación de clientes en System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
-   Ejemplo: `**CCMSetup.exe /source: D:\Clients /UsePKICert CCMHOSTNAME=server1.contoso.com SMSSIGNCERT=siteserver.cer SMSSITECODE=ABC FSP=server2.contoso.com CCMALWAYSINF=1 CCMFIRSTCERT=1**`  
+   Ejemplo:  
+   `CCMSetup.exe /source: D:\Clients /UsePKICert CCMHOSTNAME=server1.contoso.com SMSSIGNCERT=siteserver.cer SMSSITECODE=ABC FSP=server2.contoso.com CCMALWAYSINF=1 CCMFIRSTCERT=1`    
 
-   En este ejemplo se instalan los archivos de origen de cliente desde una carpeta en la unidad D con la opción de utilizar un certificado PKI de cliente y seleccionar el certificado con el período de validez más largo para la administración de cliente solo de Internet, se asigna el cliente para utilizar el punto de administración basado en Internet denominado SERVER1 y el punto de estado de reserva basado en Internet del dominio contoso.com, y se asigna el cliente al sitio ABC.  
+   En este ejemplo se instala el cliente con los comportamientos siguientes:
+   - Usar archivos de origen de una carpeta en la unidad D.
+   - Usar un certificado PKI de cliente. 
+   - Seleccionar el certificado con el mayor período de validez. 
+   - Administración de cliente solo de Internet.
+   - Asignar el cliente para usar el punto de administración basado en Internet denominado SERVER1.
+   - Asignar el punto de estado de reserva basado en Internet en el dominio contoso.com.
+   - Asignar al cliente al sitio ABC.  
 
-###  <a name="BKMK_ConfigureIBCM_MP"></a> Cómo configurar clientes para la administración de cliente basada en Internet después de la instalación de cliente  
- Para asignar el punto de administración basado en Internet después de instalar el cliente, utilice uno de los procedimientos siguientes. El primero necesita una configuración manual y es apropiado para pocos clientes. El segundo es más apropiado para configurar muchos clientes.  
+###  <a name="BKMK_ConfigureIBCM_MP"></a>Para configurar clientes para la administración de cliente basada en Internet después de la instalación de cliente  
+ Para asignar el punto de administración basado en Internet después de instalar el cliente, use uno de estos procedimientos. El primero necesita una configuración manual y es apropiado para pocos clientes. El segundo es más apropiado para configurar muchos clientes.  
 
-#### <a name="to-configure-clients-for-internet-based-client-management-after-client-installation-by-assigning-the-internet-based-management-point-in-configuration-manager-properties"></a>Para configurar clientes para la administración de clientes basados en Internet después de la instalación de cliente mediante la asignación del punto de administración basado en Internet en Propiedades de Configuration Manager  
+#### <a name="configure-clients-for-internet-based-client-management-after-client-installation-by-assigning-the-internet-based-management-point-in-configuration-manager-properties"></a>Configurar clientes para la administración de clientes basados en Internet después de la instalación de cliente mediante la asignación del punto de administración basado en Internet en propiedades de Configuration Manager  
 
 1.  Navegue a **Configuration Manager** en el Panel de Control del equipo cliente y, a continuación, haga doble clic para abrir sus propiedades.  
 
-2.  En la pestaña **Internet** , escriba el nombre de dominio completo del punto de administración basado en Internet en el cuadro de texto FQDN de Internet.  
+2.  En la pestaña **Internet**, escriba el nombre de dominio completo del punto de administración basado en Internet en el cuadro de texto FQDN de Internet.  
 
     > [!NOTE]  
     >  La pestaña **Internet** solo está disponible si el cliente tiene un certificado de PKI de cliente.  
 
-3.  Especifique la configuración del servidor proxy si el cliente va a tener acceso a Internet mediante un servidor proxy.  
+3.  Si el cliente va a tener acceso a Internet mediante un servidor proxy, escriba la configuración del servidor proxy.  
 
-#### <a name="to-configure-clients-for-internet-based-client-management-after-client-installation-by-using-a-script"></a>Para configurar clientes para administración de cliente basada en Internet después de la instalación de cliente mediante el uso de un script  
+#### <a name="configure-clients-for-internet-based-client-management-after-client-installation-by-using-a-script"></a>Configurar clientes para la administración de cliente basada en Internet después de la instalación de cliente mediante un script  
 
 1.  Abra un editor de texto, como el Bloc de notas.  
 
-2.  Copie e inserte lo siguiente en el archivo. Reemplace *mp.contoso.com* por el FQDN de Internet de su punto de administración basado en Internet.  
+2.  Copie e inserte el ejemplo de VBScript siguiente en el archivo. Reemplace *mp.contoso.com* por el FQDN de Internet del punto de administración basado en Internet.  
 
     ```  
     on error resume next  
@@ -419,7 +474,7 @@ Compruebe los requisitos previos y, después, siga las instrucciones de la secci
     ' Create the client COM object.  
     Set client = CreateObject ("Microsoft.SMS.Client")  
 
-    ' Set the Internet-Based Management Point FQDN by calling the SetCurrentManagementPoint method.  
+    ' Set the internet-based management point FQDN by calling the SetCurrentManagementPoint method.  
     client.SetInternetManagementPointFQDN newInternetBasedManagementPointFQDN  
 
     ' Clear variables.  
@@ -429,11 +484,11 @@ Compruebe los requisitos previos y, después, siga las instrucciones de la secci
     ```  
 
     > [!NOTE]  
-    >  Si tiene que eliminar un punto de administración específico basado en Internet para que el cliente no se configure para utilizar un punto de administración basado en Internet, quite el valor dentro de las comillas para que esta línea sea **newInternetBasedManagementPointFQDN = ""**.  
+    >  Si tiene que eliminar un punto de administración basado en Internet específico para que el cliente no se configure para usar un punto de administración basado en Internet, quite el valor dentro de las comillas para que esta línea sea: `newInternetBasedManagementPointFQDN = ""`.  
 
 4.  Guarde el archivo con una extensión .vbs.  
 
-5.  Utilice cscript para ejecutar el script en los equipos cliente, mediante uno de los métodos siguientes:  
+5.  Use cscript.exe para ejecutar el script en los equipos cliente, mediante uno de los métodos siguientes:  
 
     -   Implemente el archivo en clientes de Configuration Manager existentes mediante un paquete y un programa.  
 
@@ -441,31 +496,35 @@ Compruebe los requisitos previos y, después, siga las instrucciones de la secci
 
  Tendrá que reiniciar el cliente para que los cambios surtan efecto.  
 
-##  <a name="BKMK_Provision"></a> Cómo aprovisionar propiedades de instalación de cliente (instalación de cliente con directivas de grupo y basada en actualizaciones de software)  
- Puede usar la directiva de grupo de Windows para aprovisionar los equipos con las propiedades de instalación de cliente de Configuration Manager. Estas propiedades se almacenan en el Registro del equipo y se leen cuando se instala el software de cliente. Normalmente, este procedimiento no se necesitará, pero puede ser necesario para algunos escenarios de instalación de cliente como:  
 
--   Usa la configuración de directiva de grupo o métodos de instalación de cliente basados en actualizaciones de software y no amplió el esquema de Active Directory para Configuration Manager.  
+
+##  <a name="BKMK_Provision"></a> Cómo aprovisionar propiedades de instalación de cliente (instalación de cliente con directivas de grupo y basada en actualizaciones de software)  
+ Puede usar la directiva de grupo de Windows para aprovisionar los equipos con las propiedades de instalación de cliente de Configuration Manager. Estas propiedades se almacenan en el Registro del equipo y se leen cuando se instala el software de cliente. Normalmente, este procedimiento no es necesario, pero es posible que se necesite en algunos escenarios de instalación de cliente como:  
+
+-   Se está usando la configuración de directiva de grupo o métodos de instalación de cliente basados en actualizaciones de software. No se ha ampliado el esquema de Active Directory para Configuration Manager.  
 
 -   Desea reemplazar las propiedades de instalación de cliente en equipos específicos.  
 
 > [!NOTE]  
->  Si las propiedades de instalación se incluyen en la línea de comandos de CCMSetup.exe, no se utilizarán las propiedades de instalación aprovisionadas en los equipos.  
+>  Si se proporcionan propiedades de instalación en la línea de comandos de CCMSetup.exe, no se usan las propiedades de instalación aprovisionadas en los equipos.  
 
- Se incluye una plantilla administrativa de directiva de grupo denominada ConfigMgrInstallation.adm en el medio de instalación de Configuration Manager, que se puede usar para aprovisionar equipos cliente con propiedades de instalación.   
+ En el medio de instalación de Configuration Manager se proporciona una plantilla administrativa de directiva de grupo denominada ConfigMgrInstallation.adm. Esta plantilla se puede usar para aprovisionar equipos cliente con propiedades de instalación.   
 
-### <a name="to-configure-and-assign-client-installation-properties-by-using-a-group-policy-object"></a>Para configurar y asignar propiedades de instalación de cliente mediante un objeto de directiva de grupo  
+### <a name="configure-and-assign-client-installation-properties-by-using-a-group-policy-object"></a>Configurar y asignar propiedades de instalación de cliente mediante un objeto de directiva de grupo  
 
-1.  Importe la plantilla administrativa ConfigMgrInstallation.adm en un nuevo objeto de directiva de grupo, o en un objeto existente, mediante un editor como el Editor de objetos de directiva de grupo de Windows. El archivo puede encontrarse en la carpeta **TOOLS\ConfigMgrADMTemplates** en los medios de instalación de Configuration Manager.  
+1.  Importe la plantilla administrativa ConfigMgrInstallation.adm en un objeto de directiva de grupo nuevo o existente, mediante un editor como el Editor de objetos de directiva de grupo de Windows. El archivo puede encontrarse en la carpeta **TOOLS\ConfigMgrADMTemplates** en los medios de instalación de Configuration Manager.  
 
 2.  Abra las propiedades de la configuración importada **Configurar opciones de implementación de cliente**.  
 
 3.  Pulse **Habilitado**.  
 
-4.  En el cuadro **CCMSetup** , escriba las propiedades de línea de comandos de CCMSetup necesarias. Para ver la lista de todas las propiedades de la línea de comandos de CCMSetup y ejemplos de su uso, consulte [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md) (Acerca de las propiedades de instalación de cliente en System Center Configuration Manager).  
+4.  En el cuadro **CCMSetup** , escriba las propiedades de línea de comandos de CCMSetup necesarias. Para obtener una lista de las propiedades de la línea de comandos de CCMSetup y ejemplos de su uso, vea [Acerca de las propiedades de instalación de clientes en System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
 5.  Asigne el objeto de directiva de grupo a los equipos que quiera aprovisionar con las propiedades de instalación de cliente de Configuration Manager.  
 
-Para obtener información acerca de la directiva de grupo de Windows, consulte la documentación de Windows Server.  
+Para obtener información sobre la directiva de grupo de Windows, consulte la documentación de Windows Server.  
+
+
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener ayuda con la instalación del cliente de Configuration Manager, vea [Métodos de instalación de cliente en System Center Configuration Manager](../../../core/clients/deploy/plan/client-installation-methods.md).
+Para obtener ayuda para la instalación del cliente de Configuration Manager, vea [Métodos de instalación de cliente en System Center Configuration Manager](../../../core/clients/deploy/plan/client-installation-methods.md).

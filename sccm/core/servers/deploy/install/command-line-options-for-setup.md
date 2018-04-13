@@ -1,9 +1,9 @@
 ---
-title: "Configuración de opciones de la línea de comandos"
+title: Configuración de opciones de la línea de comandos
 titleSuffix: Configuration Manager
-description: "Use la información de este artículo para configurar scripts o instalar System Center Configuration Manager desde una línea de comandos."
+description: Cree scripts de automatización para instalar System Center Configuration Manager desde una línea de comandos.
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,26 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
-caps.latest.revision: 
+caps.latest.revision: 3
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 3b2076087e13958be15dd5151961fa825e22a433
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+manager: dougeby
+ms.openlocfilehash: fede359c884ef8b4027935b2e3fb48a5b7543d26
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
-# <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>Opciones de línea de comandos para la instalación en System Center Configuration Manager
+# <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>Opciones de la línea de comandos para la instalación en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
  Use la información siguiente para configurar scripts o instalar System Center Configuration Manager desde una línea de comandos.  
 
-##  <a name="bkmk_setup"></a> Opciones de línea de comandos para la instalación  
+##  <a name="bkmk_setup"></a> Opciones de la línea de comandos para la instalación  
  **/DEINSTALL**  
- Desinstala el sitio. Debe ejecutar el programa de instalación desde el equipo servidor del sitio.  
+ Desinstala el sitio. Ejecute el programa de instalación desde el equipo de servidor de sitio.  
 
  **/DONTSTARTSITECOMP**  
  Instala un sitio, pero impide que se inicie el servicio Administrador de componentes de sitio. Hasta que se inicie el servicio Administrador de componentes del sitio, el sitio no está activo. El Administrador de componentes de sitio es responsable de instalar e iniciar el servicio SMS_Executive y de procesos adicionales en el sitio. Una vez completada la instalación del sitio, cuando se inicia el servicio Administrador de componentes de sitio, instala el servicio SMS_Executive y los procesos adicionales necesarios para que el sitio funcione.  
@@ -40,42 +40,42 @@ ms.lasthandoff: 12/04/2017
  Oculta la interfaz de usuario durante la instalación. Use esta opción solamente en combinación con la opción **/SCRIPT**. El archivo de script desatendido debe proporcionar todas las opciones necesarias o se produce un error en la instalación.  
 
  **/NOUSERINPUT**  
- Deshabilita la entrada del usuario durante la instalación, pero muestra el Asistente para instalación. Use esta opción solamente en combinación con la opción **/SCRIPT**. El archivo de script desatendido debe proporcionar todas las opciones necesarias o se produce un error en la instalación.  
+ Deshabilita la entrada del usuario durante la instalación, pero muestra el Asistente para la instalación. Use esta opción solamente en combinación con la opción **/SCRIPT**. El archivo de script desatendido debe proporcionar todas las opciones necesarias o se produce un error en la instalación.  
 
  **/RESETSITE**  
- Realiza el restablecimiento de un sitio; restablece las cuentas del servicio y la base de datos para el sitio. Debe ejecutar el programa de instalación desde **<*ruta de instalación de Configuration Manager*>\BIN\X64** en el servidor de sitio. Para más información sobre el restablecimiento del sitio, vea la sección [Ejecutar un restablecimiento de sitio](../../../../core/servers/manage/modify-your-infrastructure.md#bkmk_reset) en [Modificar la infraestructura de System Center Configuration Manager](../../../../core/servers/manage/modify-your-infrastructure.md).  
+ Realiza el restablecimiento de un sitio; restablece las cuentas del servicio y la base de datos para el sitio. Ejecute el programa de instalación desde **<*ruta de instalación de Configuration Manager*>\BIN\X64** en el servidor de sitio. Para más información sobre el restablecimiento del sitio, vea la sección [Ejecutar un restablecimiento de sitio](../../../../core/servers/manage/modify-your-infrastructure.md#bkmk_reset) en [Modificar la infraestructura de System Center Configuration Manager](../../../../core/servers/manage/modify-your-infrastructure.md).  
 
  **/TESTDBUPGRADE <*nombre de instancia*>\\<*nombre de base de datos*>**  
- Realiza una prueba en una copia de seguridad de la base de datos del sitio para asegurarse de que la base de datos es capaz de una actualización. Debe proporcionar el nombre de la instancia y el nombre de la base de datos de la base de datos del sitio. Si especifica solo el nombre de la base de datos, el programa de instalación utiliza el nombre de instancia predeterminado.  
+ Realiza una prueba en una copia de seguridad de la base de datos del sitio para asegurarse de que la base de datos es capaz de una actualización. Proporcione el nombre de instancia y el nombre de base de datos de la base de datos del sitio. Si solo se especifica el nombre de base de datos, el programa de instalación usa el nombre de instancia predeterminado.  
 
 > [!IMPORTANT]  
 >  No ejecute esta opción de línea de comandos en la base de datos del sitio de producción. Ejecutar esta opción de línea de comandos en la base de datos del sitio de producción actualiza la base de datos del sitio y podría inutilizar el sitio.  
 
  **/UPGRADE**  
- Ejecuta una actualización desatendida de un sitio. Cuando use **/UPGRADE**, también debe especificar la clave del producto, incluidos los guiones (-). Además, debe especificar la ruta de acceso a los archivos de requisitos previos de instalación descargados anteriormente.  
+ Ejecuta una actualización desatendida de un sitio. Cuando use **/UPGRADE**, también debe especificar la clave del producto, incluidos los guiones (-). Además, se debe especificar la ruta de acceso a los archivos de requisitos previos de instalación descargados anteriormente.  
 
  Ejemplo: `setupwpf.exe /UPGRADE xxxxx-xxxxx-xxxxx-xxxxx-xxxxx <path to external component files>`  
 
- Para más información sobre los archivos de requisitos previos de la instalación, vea [Descargador del programa de instalación](setup-downloader.md).  
+ Para obtener más información sobre los archivos de requisitos previos de la instalación, vea [Descargador del programa de instalación](setup-downloader.md).  
 
  **/SCRIPT <*ruta de acceso del script de instalación*>**  
- Realiza instalaciones desatendidas. Es necesario un archivo de inicialización del programa de instalación cuando use la opción **/SCRIPT** . Para más información sobre cómo ejecutar una instalación desatendida, vea [Usar una línea de comandos para instalar sitios](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).  
+ Realiza instalaciones desatendidas. Es necesario un archivo de inicialización del programa de instalación cuando se usa la opción **/SCRIPT**. Para obtener más información sobre cómo ejecutar una instalación desatendida, vea [Usar una línea de comandos para instalar sitios de System Center Configuration Manager](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).  
 
  **/SDKINST <*FQDN del proveedor de SMS*>**  
- Instala el proveedor de SMS en el equipo especificado. Debe proporcionar el nombre de dominio completo (FQDN) para el equipo del proveedor de SMS. Para más información sobre el proveedor de SMS, vea [Plan para el proveedor de SMS de System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
+ Instala el proveedor de SMS en el equipo especificado. Proporcione el nombre de dominio completo (FQDN) para el equipo del proveedor de SMS. Para obtener más información sobre el proveedor de SMS, vea [Plan para el proveedor de SMS](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
  **/SDKDEINST <*FQDN del proveedor de SMS*>**  
- Desinstala el proveedor de SMS en el equipo especificado. Debe proporcionar el FQDN del equipo de proveedor de SMS.  
+ Desinstala el proveedor de SMS en el equipo especificado. Proporcione el FQDN del equipo de proveedor de SMS.  
 
  **/MANAGELANGS <*ruta del acceso del script de idioma*>**  
- Administra los idiomas que se instalan en un sitio instalado previamente. Para usar esta opción, debe ejecutar el programa de instalación desde **<*Ruta de instalación de Configuration Manager*>\BIN\X64** en el servidor de sitio y proporcionar la ubicación del archivo de script de idioma que contiene la configuración del idioma. Para más información sobre las opciones de idioma disponibles en el archivo de script de configuración de idioma, vea [Opciones de línea de comandos para administrar idiomas](#bkmk_Lang) en este tema.  
+ Administra los idiomas que se instalan en un sitio instalado previamente. Para usar esta opción, ejecute el programa de instalación desde **<*ruta de instalación de Configuration Manager*>\BIN\X64** en el servidor de sitio. Proporcione la ubicación del archivo de script de idioma que contiene la configuración de idioma. Para obtener más información sobre las opciones de idioma disponibles en el archivo de script de configuración de idioma, vea la sección [Opciones de la línea de comandos para administrar idiomas](#bkmk_Lang).  
 
 ##  <a name="bkmk_Lang"></a> Opciones de línea de comandos para administrar idiomas  
  **Identificación**  
 
 -   **Nombre de clave:** Action  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** ManageLanguages  
 
@@ -117,7 +117,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave:** MobileDeviceLanguage  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -129,7 +129,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave:**: PrerequisiteComp  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -137,27 +137,27 @@ ms.lasthandoff: 12/04/2017
 
          1 = ya se ha descargado  
 
-    -   **Detalles** : especifica si se han descargado los archivos de requisitos previos de instalación. Por ejemplo, si usa un valor de **0**, el programa de instalación descargará los archivos.  
+    -   **Detalles:** especifica si ya se han descargado los archivos de requisitos previos de instalación. Por ejemplo, si usa un valor de **0**, el programa de instalación descarga los archivos.  
 
 -   **Nombre de clave:** PrerequisitePath  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
-    -   **Valores:** <*ruta de acceso a archivos de requisitos previos de instalación*>  
+    -   **Valores:** <*ruta de acceso a los archivos de requisitos previos de instalación*>  
 
-    -   **Detalles** : especifica la ruta de acceso a los archivos de requisitos previos de instalación. Dependiendo del valor **PrerequisiteComp** , el programa de instalación utiliza esta ruta para almacenar los archivos descargados o localizar los archivos descargados previamente.  
+    -   **Detalles:** especifica la ruta de acceso a los archivos de requisitos previos de instalación. En función del valor **PrerequisiteComp**, el programa de instalación usa esta ruta de acceso para almacenar los archivos descargados o localizar los archivos descargados previamente.  
 
-##  <a name="bkmk_Unattended"></a> Claves de archivo de script de instalación desatendida  
- Use las siguientes secciones para crear el script para una instalación desatendida. La lista muestra las claves del script de instalación disponibles, sus valores correspondientes, si son necesarias o no, el tipo de instalación para el que se usan y una breve descripción de cada clave.  
+##  <a name="bkmk_Unattended"></a> Claves de archivo de scripts de instalación desatendida  
+ Use las secciones siguientes para crear el script para la instalación desatendida. En la lista se muestran las claves del script de instalación disponibles, sus valores correspondientes, si son necesarias o no, el tipo de instalación para el que se usan y una breve descripción de cada clave.  
 
 ### <a name="unattended-install-for-a-central-administration-site"></a>Instalación desatendida de un sitio de administración central  
- Utilice los siguientes datos para instalar un sitio de administración central mediante un archivo de script de instalación desatendida.  
+ Use los datos siguientes para instalar un sitio de administración central mediante un archivo de script de instalación desatendida.  
 
 **Identificación**  
 
 -   **Nombre de clave:** Action  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** InstallCAS  
 
@@ -175,7 +175,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave:** ProductID  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *o* Eval  
 
@@ -183,7 +183,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave:** SiteCode  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*código de sitio*>  
 
@@ -191,7 +191,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave:** nombre del sitio  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*nombre de sitio*>  
 
@@ -199,7 +199,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave:** SMSInstallDir  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*ruta de instalación de Configuration Manager*>  
 
@@ -207,7 +207,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave:** SDKServer  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*FQDN del proveedor de SMS*>  
 
@@ -215,7 +215,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave:**: PrerequisiteComp  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -223,19 +223,19 @@ ms.lasthandoff: 12/04/2017
 
          1 = ya se ha descargado  
 
-    -   **Detalles** : especifica si se han descargado los archivos de requisitos previos de instalación. Por ejemplo, si usa un valor de **0**, el programa de instalación descargará los archivos.  
+    -   **Detalles:** especifica si ya se han descargado los archivos de requisitos previos de instalación. Por ejemplo, si usa un valor de **0**, el programa de instalación descarga los archivos.  
 
 -   **Nombre de clave:** PrerequisitePath  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
-    -   **Valores:** <*ruta de acceso a archivos de requisitos previos de instalación*>  
+    -   **Valores:** <*ruta de acceso a los archivos de requisitos previos de instalación*>  
 
-    -   **Detalles** : especifica la ruta de acceso a los archivos de requisitos previos de instalación. Dependiendo del valor **PrerequisiteComp** , el programa de instalación utiliza esta ruta para almacenar los archivos descargados o localizar los archivos descargados previamente.  
+    -   **Detalles:** especifica la ruta de acceso a los archivos de requisitos previos de instalación. En función del valor **PrerequisiteComp**, el programa de instalación usa esta ruta de acceso para almacenar los archivos descargados o localizar los archivos descargados previamente.  
 
 -   **Nombre de clave:** AdminConsole  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -246,8 +246,10 @@ ms.lasthandoff: 12/04/2017
     -   **Detalles:** especifica si se va a instalar la consola de Configuration Manager.  
 
 -   **Nombre de clave:** JoinCEIP  
+    > [!Note]  
+    > A partir de la versión 1802 de Configuration Manager, la característica CEIP se ha quitado del producto.
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -291,7 +293,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave:** MobileDeviceLanguage  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -305,7 +307,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave:** SQLServerName  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*nombre de servidor SQL*>  
 
@@ -313,14 +315,14 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave:** DatabaseName  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*nombre de base de datos de sitio*> o <*nombre de instancia*>\\<*nombre de base de datos de sitio*>  
 
-    -   **Detalles:** especifica el nombre de la base de datos de SQL Server que se crea o se usa para instalar la base de datos del sitio de administración central.  
+    -   **Detalles:** especifica el nombre de la base de datos de SQL Server que se va a crear o usar cuando el programa de instalación instala la base de datos del sitio de administración central.  
 
         > [!IMPORTANT]  
-        >  Debe especificar el nombre de instancia y el nombre de la base de datos del sitio si no utiliza la instancia predeterminada.  
+        >  Si no se usa la instancia predeterminada, se debe especificar el nombre de instancia y el nombre de la base de datos del sitio.  
 
 -   **Nombre de clave:** SQLSSBPort  
 
@@ -350,7 +352,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave:** CloudConnector  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -378,7 +380,7 @@ ms.lasthandoff: 12/04/2017
 
          1 = instalar  
 
-    -   **Detalles:** especifica si el punto de conexión de servicio usará un servidor proxy.  
+    -   **Detalles:** especifica si el punto de conexión de servicio usa un servidor proxy.  
 
 -   **Nombre de clave:** ProxyName  
 
@@ -386,7 +388,7 @@ ms.lasthandoff: 12/04/2017
 
     -   **Valores:** <*FQDN del servidor proxy*>  
 
-    -   **Detalles:** especifica el FQDN del servidor proxy que usará el rol de sistema de sitio del punto de conexión de servicio.  
+    -   **Detalles:** especifica el FQDN del servidor proxy que usa el punto de conexión de servicio.  
 
 -   **Nombre de clave:** ProxyPort  
 
@@ -397,13 +399,13 @@ ms.lasthandoff: 12/04/2017
     -   **Detalles:** especifica el número de puerto que se usará para el puerto de proxy.  
 
 ### <a name="unattended-install-for-a-primary-site"></a>Instalación desatendida de un sitio principal  
-Utilice los siguientes detalles para instalar un sitio principal mediante un archivo de script de instalación desatendida.  
+Use los detalles siguientes para instalar un sitio primario mediante un archivo de script de instalación desatendida.  
 
 **Identificación**  
 
 -   **Nombre de clave:** Action  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** InstallPrimarySite  
 
@@ -421,7 +423,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** ProductID  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *o* Eval  
 
@@ -429,7 +431,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** SiteCode  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*código de sitio*>  
 
@@ -437,7 +439,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** SiteName  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*nombre de sitio*>  
 
@@ -445,7 +447,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** SMSInstallDir  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*ruta de instalación de Configuration Manager*>
 
@@ -453,7 +455,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** SDKServer  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*FQDN del proveedor de SMS*>  
 
@@ -461,7 +463,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:**: PrerequisiteComp  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -469,19 +471,19 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
          1 = ya se ha descargado  
 
-    -   **Detalles** : especifica si se han descargado los archivos de requisitos previos de instalación. Por ejemplo, si usa un valor de **0**, el programa de instalación descargará los archivos.  
+    -   **Detalles:** especifica si ya se han descargado los archivos de requisitos previos de instalación. Por ejemplo, si usa un valor de **0**, el programa de instalación descarga los archivos.  
 
 -   **Nombre de clave:** PrerequisitePath  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
-    -   **Valores:** <*ruta de acceso a archivos de requisitos previos de instalación*>  
+    -   **Valores:** <*ruta de acceso a los archivos de requisitos previos de instalación*>  
 
-    -   **Detalles** : especifica la ruta de acceso a los archivos de requisitos previos de instalación. Dependiendo del valor **PrerequisiteComp** , el programa de instalación utiliza esta ruta para almacenar los archivos descargados o localizar los archivos descargados previamente.  
+    -   **Detalles:** especifica la ruta de acceso a los archivos de requisitos previos de instalación. En función del valor **PrerequisiteComp**, el programa de instalación usa esta ruta de acceso para almacenar los archivos descargados o localizar los archivos descargados previamente.  
 
 -   **Nombre de clave:** AdminConsole  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -492,8 +494,10 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
     -   **Detalles:** especifica si se va a instalar la consola de Configuration Manager.  
 
 -   **Nombre de clave:** JoinCEIP  
+    > [!Note]  
+    > A partir de la versión 1802 de Configuration Manager, la característica CEIP se ha quitado del producto.
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -537,7 +541,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** RoleCommunicationProtocol  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** EnforceHTTPS *o* HTTPorHTTPS  
 
@@ -545,7 +549,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** ClientsUsePKICertificate  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -589,7 +593,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** MobileDeviceLanguage  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -603,7 +607,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** SQLServerName  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*nombre de servidor SQL*>  
 
@@ -611,14 +615,14 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** DatabaseName  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*nombre de base de datos de sitio*> o <*nombre de instancia*>\\<*nombre de base de datos de sitio*>  
 
     -   **Detalles:** especifica el nombre de la base de datos de SQL Server que se crea o usa para instalar la base de datos del sitio primario.  
 
         > [!IMPORTANT]  
-        >  Debe especificar el nombre de instancia y el nombre de la base de datos del sitio si no utiliza la instancia predeterminada.  
+        >  Si no se usa la instancia predeterminada, se debe especificar el nombre de instancia y el nombre de la base de datos del sitio.  
 
 -   **Nombre de clave:** SQLSSBPort  
 
@@ -652,7 +656,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
     -   **Valores:** <*FQDN del sitio de administración central*>  
 
-    -   **Detalles:** especifica el sitio de administración central al que se asociará un sitio primario al unirse a la jerarquía de Configuration Manager. Debe especificar el sitio de administración central mientras se ejecuta el programa de instalación.  
+    -   **Detalles:** especifica el sitio de administración central al que se asocia un sitio primario al unirse a la jerarquía de Configuration Manager. Especifique el sitio de administración central durante el programa de instalación.  
 
 -   **Nombre de clave:** CASRetryInterval  
 
@@ -666,7 +670,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
     -   **Requerido** : no  
 
-    -   **Valores:** <*Timeout*>  
+    -   **Valores:** <*Tiempo de espera*>  
 
          Un valor de **0** a **100**  
 
@@ -676,7 +680,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** CloudConnector  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -704,7 +708,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
          1 = instalar  
 
-    -   **Detalles:** especifica si el punto de conexión de servicio usará un servidor proxy.  
+    -   **Detalles:** especifica si el punto de conexión de servicio usa un servidor proxy.  
 
 -   **Nombre de clave:** ProxyName  
 
@@ -712,7 +716,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
     -   **Valores:** <*FQDN del servidor proxy*>  
 
-    -   **Detalles:** especifica el FQDN del servidor proxy que usará el rol de sistema de sitio del punto de conexión de servicio.  
+    -   **Detalles:** especifica el FQDN del servidor proxy que usa el punto de conexión de servicio.  
 
 -   **Nombre de clave:** ProxyPort  
 
@@ -723,13 +727,13 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
     -   **Detalles:** especifica el número de puerto que se usará para el puerto de proxy.  
 
 ### <a name="unattended-recovery-for-a-central-administration-site"></a>Recuperación desatendida de un sitio de administración central  
- Use los siguientes detalles para recuperar un sitio de administración central mediante un archivo de script de instalación desatendida.  
+ Use los detalles siguientes para recuperar un sitio de administración central mediante un archivo de script de instalación desatendida.  
 
 **Identificación**  
 
 -   **Nombre de clave:** Action  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : RecoverCCAR  
 
@@ -747,7 +751,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** ServerRecoveryOptions  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 1, 2 o 4  
 
@@ -757,7 +761,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
          4 = recuperar sólo SQL Server.  
 
-    -   **Detalles** : especifica si el programa de instalación recuperará el servidor de sitio, SQL Server o ambos. Las claves asociadas son necesarias cuando se establece el siguiente valor para el valor **ServerRecoveryOptions**:  
+    -   **Detalles**: especifica si el programa de instalación recupera el servidor de sitio, SQL Server o ambos. Las claves asociadas son necesarias cuando se establece el siguiente valor para el valor **ServerRecoveryOptions**:  
 
         -   Valor = 1: tiene la opción de especificar un valor de la clave **SiteServerBackupLocation** para recuperar el sitio mediante una copia de seguridad de sitio. Si no especifica ningún valor, se reinstala el sitio sin restaurarlo desde un conjunto de copia de seguridad.  
 
@@ -813,7 +817,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** ProductID  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *o* Eval  
 
@@ -821,11 +825,11 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** SiteCode  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*código de sitio*>  
 
-    -   **Detalles:** especifica tres caracteres alfanuméricos que identifican al sitio de forma única en la jerarquía. Debe especificar el código de sitio que utilizó el sitio antes de que se produjera el error.
+    -   **Detalles:** especifica tres caracteres alfanuméricos que identifican al sitio de forma única en la jerarquía. Especifique el código de sitio que usó el sitio antes de producirse el error.
 
 -   **Nombre de clave:** SiteName  
 
@@ -837,7 +841,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** SMSInstallDir  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*ruta de instalación de Configuration Manager*>  
 
@@ -845,17 +849,17 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** SDKServer  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*FQDN del proveedor de SMS*>  
 
-    -   **Detalles** : especifica el FQDN del servidor que hospedará el proveedor de SMS. Debe especificar el servidor que hospedaba el proveedor de SMS antes de producirse el error.  
+    -   **Detalles:** especifica el FQDN del servidor que hospeda el proveedor de SMS. Especifique el servidor que hospedaba el proveedor de SMS antes de producirse el error.  
 
          Puede configurar proveedores de SMS adicionales para el sitio después de la instalación inicial. Para más información sobre el proveedor de SMS, vea [Plan para el proveedor de SMS de System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
 -   **Nombre de clave:**: PrerequisiteComp  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -863,15 +867,15 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
          1 = ya se ha descargado  
 
-    -   **Detalles** : especifica si se han descargado los archivos de requisitos previos de instalación. Por ejemplo, si usa un valor de **0**, el programa de instalación descargará los archivos.  
+    -   **Detalles:** especifica si ya se han descargado los archivos de requisitos previos de instalación. Por ejemplo, si usa un valor de **0**, el programa de instalación descarga los archivos.  
 
 -   **Nombre de clave:** PrerequisitePath  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
-    -   **Valores:** <*ruta de acceso a archivos de requisitos previos de instalación*>  
+    -   **Valores:** <*ruta de acceso a los archivos de requisitos previos de instalación*>  
 
-    -   **Detalles** : especifica la ruta de acceso a los archivos de requisitos previos de instalación. Dependiendo del valor **PrerequisiteComp** , el programa de instalación utiliza esta ruta para almacenar los archivos descargados o localizar los archivos descargados previamente.  
+    -   **Detalles:** especifica la ruta de acceso a los archivos de requisitos previos de instalación. En función del valor **PrerequisiteComp**, el programa de instalación usa esta ruta de acceso para almacenar los archivos descargados o localizar los archivos descargados previamente.  
 
 -   **Nombre de clave:** AdminConsole  
 
@@ -886,8 +890,10 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
     -   **Detalles:** especifica si se va a instalar la consola de Configuration Manager.  
 
 -   **Nombre de clave:** JoinCEIP  
+    > [!Note]  
+    > A partir de la versión 1802 de Configuration Manager, la característica CEIP se ha quitado del producto.
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -901,30 +907,30 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** SQLServerName  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*nombre de servidor SQL*>  
 
-    -   **Detalles:** especifica el nombre del servidor o de la instancia en clúster que ejecuta SQL Server, y cuál hospedará la base de datos de sitio. Debe especificar el mismo servidor que hospedaba la base de datos del sitio antes de producirse el error.  
+    -   **Detalles:** especifica el nombre del servidor o de la instancia en clúster que ejecuta SQL Server, y cuál hospeda la base de datos del sitio. Especifique el mismo servidor que hospedaba la base de datos del sitio antes de producirse el error.  
 
 -   **Nombre de clave:** DatabaseName  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*nombre de base de datos de sitio*> o <*nombre de instancia*>\\<*nombre de base de datos de sitio*>  
 
-    -   **Detalles:** especifica el nombre de la base de datos de SQL Server que se crea o se usa para instalar la base de datos del sitio de administración central. Debe especificar el mismo nombre de base de datos que se utilizó antes de producirse el error.  
+    -   **Detalles:** especifica el nombre de la base de datos de SQL Server que se crea o se usa para instalar la base de datos del sitio de administración central. Especifique el mismo nombre de base de datos que se usó antes de producirse el error.  
 
         > [!IMPORTANT]  
-        >  Debe especificar el nombre de instancia y el nombre de la base de datos del sitio si no utiliza la instancia predeterminada.  
+        >  Si no se usa la instancia predeterminada, se debe especificar el nombre de instancia y el nombre de la base de datos del sitio.  
 
 -   **Nombre de clave:** SQLSSBPort  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*número de puerto SSB*>  
 
-    -   **Detalles:** especifica el puerto SSB que usa SQL Server. Normalmente, SSB está configurado para usar el puerto TCP 4022. Debe especificar el mismo puerto SSB que se utilizó antes de producirse el error.  
+    -   **Detalles:** especifica el puerto SSB que usa SQL Server. Normalmente, SSB está configurado para usar el puerto TCP 4022. Especifique el mismo puerto SSB que se usó antes de producirse el error.  
 
 -   **Nombre de clave:** SQLDataFilePath  
 
@@ -946,7 +952,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** CloudConnector  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -974,7 +980,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
          1 = instalar  
 
-    -   **Detalles:** especifica si el punto de conexión de servicio usará un servidor proxy.  
+    -   **Detalles:** especifica si el punto de conexión de servicio usa un servidor proxy.  
 
 -   **Nombre de clave:** ProxyName  
 
@@ -982,7 +988,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
     -   **Valores:** <*FQDN del servidor proxy*>  
 
-    -   **Detalles:** especifica el FQDN del servidor proxy que usará el rol de sistema de sitio del punto de conexión de servicio.  
+    -   **Detalles:** especifica el FQDN del servidor proxy que usa el punto de conexión de servicio.  
 
 -   **Nombre de clave:** ProxyPort  
 
@@ -993,13 +999,13 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
     -   **Detalles:** especifica el número de puerto que se usará para el puerto de proxy.  
 
 ### <a name="unattended-recovery-for-a-primary-site"></a>Recuperación desatendida de un sitio principal  
- Utilice los siguientes datos para recuperar un sitio principal mediante un archivo de script de instalación desatendida.  
+ Use los datos siguientes para recuperar un sitio primario mediante un archivo de script de instalación desatendida.  
 
 **Identificación**  
 
 -   **Nombre de clave:** Action  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*RecoverPrimarySite*>  
 
@@ -1017,7 +1023,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** ServerRecoveryOptions  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 1, 2 o 4  
 
@@ -1027,7 +1033,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
          4 = recuperar sólo SQL Server.  
 
-    -   **Detalles** : especifica si el programa de instalación recuperará el servidor de sitio, SQL Server o ambos. Las claves asociadas son necesarias cuando se establece el siguiente valor para el valor **ServerRecoveryOptions**:  
+    -   **Detalles**: especifica si el programa de instalación recupera el servidor de sitio, SQL Server o ambos. Las claves asociadas son necesarias cuando se establece el siguiente valor para el valor **ServerRecoveryOptions**:  
 
         -   Valor = 1: tiene la opción de especificar un valor de la clave **SiteServerBackupLocation** para recuperar el sitio mediante una copia de seguridad de sitio. Si no especifica ningún valor, se reinstala el sitio sin restaurarlo desde un conjunto de copia de seguridad.  
 
@@ -1073,7 +1079,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** ProductID  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** *xxxxx-xxxxx-xxxxx-xxxxx-xxxxx* o *Eval*  
 
@@ -1081,11 +1087,11 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** SiteCode  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*código de sitio*>  
 
-    -   **Detalles:** especifica tres caracteres alfanuméricos que identifican al sitio de forma única en la jerarquía. Debe especificar el código de sitio que utilizó el sitio antes de que se produjera el error.
+    -   **Detalles:** especifica tres caracteres alfanuméricos que identifican al sitio de forma única en la jerarquía. Especifique el código de sitio que usó el sitio antes de producirse el error.
 
 -   **Nombre de clave:** SiteName  
 
@@ -1097,7 +1103,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** SMSInstallDir  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*ruta de instalación de Configuration Manager*>  
 
@@ -1105,15 +1111,15 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** SDKServer  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*FQDN del proveedor de SMS*>  
 
-    -   **Detalles** : especifica el FQDN del servidor que hospedará el proveedor de SMS. Debe especificar el servidor que hospedaba el proveedor de SMS antes de producirse el error. Puede configurar proveedores de SMS adicionales para el sitio después de la instalación inicial. Para más información sobre el proveedor de SMS, vea [Plan para el proveedor de SMS de System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
+    -   **Detalles:** especifica el FQDN del servidor que hospeda el proveedor de SMS. Especifique el servidor que hospedaba el proveedor de SMS antes de producirse el error. Configure proveedores de SMS adicionales para el sitio después de la instalación inicial. Para obtener más información sobre el proveedor de SMS, vea [Plan para el proveedor de SMS](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
 -   **Nombre de clave:**: PrerequisiteComp  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -1121,15 +1127,15 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
          1 = ya se ha descargado  
 
-    -   **Detalles** : especifica si se han descargado los archivos de requisitos previos de instalación. Por ejemplo, si usa un valor de **0**, el programa de instalación descargará los archivos.  
+    -   **Detalles:** especifica si ya se han descargado los archivos de requisitos previos de instalación. Por ejemplo, si usa un valor de **0**, el programa de instalación descarga los archivos.  
 
 -   **Nombre de clave:** PrerequisitePath  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
-    -   **Valores:** <*ruta de acceso a archivos de requisitos previos de instalación*>  
+    -   **Valores:** <*ruta de acceso a los archivos de requisitos previos de instalación*>  
 
-    -   **Detalles** : especifica la ruta de acceso a los archivos de requisitos previos de instalación. Dependiendo del valor **PrerequisiteComp** , el programa de instalación utiliza esta ruta para almacenar los archivos descargados o localizar los archivos descargados previamente.  
+    -   **Detalles:** especifica la ruta de acceso a los archivos de requisitos previos de instalación. En función del valor **PrerequisiteComp**, el programa de instalación usa esta ruta de acceso para almacenar los archivos descargados o localizar los archivos descargados previamente.  
 
 -   **Nombre de clave:** AdminConsole  
 
@@ -1144,8 +1150,10 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
     -   **Detalles:** especifica si se va a instalar la consola de Configuration Manager.  
 
 -   **Nombre de clave:** JoinCEIP  
+    > [!Note]  
+    > A partir de la versión 1802 de Configuration Manager, la característica CEIP se ha quitado del producto.
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -1159,32 +1167,32 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** SQLServerName  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*nombre de servidor SQL*>  
 
-    -   **Detalles:** especifica el nombre del servidor o de la instancia en clúster que ejecuta SQL Server, y cuál hospedará la base de datos de sitio. Debe especificar el mismo servidor que hospedaba la base de datos del sitio antes de producirse el error.  
+    -   **Detalles:** especifica el nombre del servidor o de la instancia en clúster que ejecuta SQL Server, y cuál hospeda la base de datos del sitio. Especifique el mismo servidor que hospedaba la base de datos del sitio antes de producirse el error.  
 
 -   **Nombre de clave:** DatabaseName  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
-    -   **Valores:**  <*nombre de base de datos de sitio*> o <*nombre de instancia*>\\<*nombre de base de datos de sitio*>
+    -   **Valores:** <*nombre de base de datos de sitio*> o <*nombre de instancia*>\\<*nombre de base de datos de sitio*>
 
     -   **Detalles:**  
 
-         especifica el nombre de la base de datos de SQL Server que se crea o se usa para instalar la base de datos del sitio de administración central. Debe especificar el mismo nombre de base de datos que se utilizó antes de producirse el error.  
+         especifica el nombre de la base de datos de SQL Server que se crea o se usa para instalar la base de datos del sitio de administración central. Especifique el mismo nombre de base de datos que se usó antes de producirse el error.  
 
         > [!IMPORTANT]  
-        >  Debe especificar el nombre de instancia y el nombre de la base de datos del sitio si no utiliza la instancia predeterminada.  
+        >  Si no se usa la instancia predeterminada, se debe especificar el nombre de instancia y el nombre de la base de datos del sitio.  
 
 -   **Nombre de clave:** SQLSSBPort  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores:** <*número de puerto SSB*>  
 
-    -   **Detalles:** especifica el puerto SSB que usa SQL Server. Normalmente, SSB está configurado para usar el puerto TCP 4022. Debe especificar el mismo puerto SSB que se utilizó antes de producirse el error.  
+    -   **Detalles:** especifica el puerto SSB que usa SQL Server. Normalmente, SSB está configurado para usar el puerto TCP 4022. Especifique el mismo puerto SSB que se usó antes de producirse el error.  
 
 -   **Nombre de clave:** SQLDataFilePath  
 
@@ -1210,7 +1218,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
     -   **Valores:** <*código de sitio para el sitio de administración central*>  
 
-    -   **Detalles:** especifica el sitio de administración central al que se asocia un sitio primario cuando se une a la jerarquía de Configuration Manager. Esta configuración es necesaria si el sitio primario estaba asociado con un sitio de administración central antes de producirse el error. Debe especificar el código del sitio que utilizó el sitio de administración central antes de que se produjera el error.  
+    -   **Detalles:** especifica el sitio de administración central al que se asocia un sitio primario cuando se une a la jerarquía de Configuration Manager. Esta configuración es necesaria si el sitio primario estaba asociado con un sitio de administración central antes de producirse el error. Especifique el código de sitio que se usó para el sitio de administración central antes de que se produjera el error.  
 
 -   **Nombre de clave:** CASRetryInterval  
 
@@ -1224,7 +1232,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
     -   **Requerido** : no  
 
-    -   **Valores:** <*Timeout*>  
+    -   **Valores:** <*Tiempo de espera*>  
 
     -   **Detalles** : especifica el valor de tiempo de espera máximo (en minutos) de un sitio primario para conectarse al sitio de administración central. Por ejemplo, si se produce un error de conexión del sitio primario con el sitio de administración central, el sitio primario vuelve a tratar de establecer la conexión conforme al valor **CASRetryInterval** hasta que se alcanza el valor de tiempo de **WaitForCASTimeout**. Puede especificar un valor de **0** a **100**.  
 
@@ -1232,7 +1240,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
 -   **Nombre de clave:** CloudConnector  
 
-    -   **Requerido** : sí  
+    -   **Requerido**: sí  
 
     -   **Valores** : 0 o 1  
 
@@ -1260,7 +1268,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
          1 = instalar  
 
-    -   **Detalles:** especifica si el punto de conexión de servicio usará un servidor proxy.  
+    -   **Detalles:** especifica si el punto de conexión de servicio usa un servidor proxy.  
 
 -   **Nombre de clave:** ProxyName  
 
@@ -1268,7 +1276,7 @@ Utilice los siguientes detalles para instalar un sitio principal mediante un arc
 
     -   **Valores:** <*FQDN del servidor proxy*>  
 
-    -   **Detalles:** especifica el FQDN del servidor proxy que usará el rol de sistema de sitio del punto de conexión de servicio.  
+    -   **Detalles:** especifica el FQDN del servidor proxy que usa el punto de conexión de servicio.  
 
 -   **Nombre de clave:** ProxyPort  
 

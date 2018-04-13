@@ -3,7 +3,7 @@ title: Almacenamiento de datos
 titleSuffix: Configuration Manager
 description: Punto de servicio de almacenamiento de datos y base de datos para System Center Configuration Manager
 ms.custom: na
-ms.date: 02/26/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,15 +12,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 954ec65bae15e087d6cf5afbcc8e0da1ebf83533
-ms.sourcegitcommit: be939893f0ceca4add8655ae2c24e42aa16aec38
+ms.openlocfilehash: 83bfc0e3d7bdf1ff8718c7c211c897e37b21a06b
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/23/2018
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>El punto de servicio de almacenamiento de datos para System Center Configuration Manager
 *Se aplica a: System Center Configuration Manager (Rama actual)*
@@ -88,6 +88,7 @@ Página **General**:
      - **Nombre de la base de datos**: especifique un nombre para la base de datos de almacenamiento de datos. El nombre de la base de datos no puede tener más de 10 caracteres (en una versión futura, aumentaremos esta longitud).
      Configuration Manager creará la base de datos de almacenamiento de datos con este nombre. Si especifica un nombre de base de datos que ya existe en la instancia de SQL Server, Configuration Manager usará esa base de datos.
      - **Puerto de SQL Server usado para la conexión**: especifique el número de puerto TCP/IP que utiliza el servidor SQL Server que hospeda la base de datos del almacenamiento de datos. Este puerto lo usa el servicio de sincronización del almacenamiento de datos para conectarse a la base de datos de dicho almacenamiento.  
+     - **Cuenta de punto de servicio de almacenamiento de datos**: a partir de la versión 1802, especifique la cuenta que SQL Server Reporting Services usa al conectarse a la base de datos de almacenamiento de datos. 
 
 Página **Programación de sincronización**:   
 - **Programación de sincronización**:
@@ -96,8 +97,12 @@ Página **Programación de sincronización**:
          - **Diariamente**: permite especificar que la sincronización se ejecute cada día.
          - **Semanalmente**: permite especificar un solo día cada semana, con una periodicidad semanal para la sincronización.
 
+
 ## <a name="reporting"></a>Generación de informes
 Después de instalar un punto de servicio de almacenamiento de datos, varios informes pasan a estar disponibles en el punto de servicios de informes que está instalado en el mismo sitio. Si instala el punto de servicio de almacenamiento de datos antes de instalar un punto de servicios de informes, los informes se agregan automáticamente cuando se instale posteriormente el punto de servicios de informes.
+
+>[!WARNING]
+>En la versión 1802 de Configuration Manager, se agregó compatibilidad con credenciales alternativas para el punto de almacenamiento de datos. <!--507334-->Si ha actualizado desde una versión anterior de Configuration Manager, debe especificar las credenciales que SQL Server Reporting Services usará para conectarse a la base de datos de almacenamiento de datos. Los informes de almacenamiento de datos no se abrirán hasta que se especifican las credenciales. Para especificar una cuenta, vaya a **Administración** >**Configuración** >**Servidores y roles de sistema de sitio**. Haga clic en el servidor con el punto de servicio de almacenamiento de datos y, después, haga clic con el botón derecho en el rol de punto de servicio de almacenamiento de datos. Seleccione **Propiedades** y, después, especifique la **cuenta de punto de servicio de almacenamiento de datos**.
 
 El rol de sistema de sitio de almacenamiento de datos incluye los siguientes informes, que tienen una categoría de **almacenamiento de datos**:
  - **Implementación de aplicaciones - Histórico**: vea los detalles de la implementación de aplicaciones para una máquina y una aplicación determinada.

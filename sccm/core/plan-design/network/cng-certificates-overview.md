@@ -1,24 +1,25 @@
 ---
-title: "Introducción a los certificados CNG"
+title: Introducción a los certificados CNG
 titleSuffix: Configuration Manager
-description: "Artículo de introducción a los certificados CNG en Configuration Manager"
+description: Obtenga información sobre los certificados Cryptography Next Generation (CNG) para clientes y servidores de Configuration Manager.
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
-ms.assetid: 
-author: vhorne
-ms.author: victorh
-manager: angrobe
-ms.openlocfilehash: f5f5138270d4f14b76b2c41e41ec034a0c12a932
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.assetid: ''
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 271cc0e2753f1a65740187a4faf6875c1a018014
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="cng-certificates-overview"></a>Introducción a los certificados CNG
 <!-- 1356191 --> 
@@ -30,26 +31,36 @@ Puede usar plantillas de certificado [Cryptography API: Next Generation (CNG)](h
 
 - Registro de cliente y comunicación con un punto de administración de HTTPS.   
 - Distribución de software e implementación de aplicaciones con un punto de distribución de HTTPS.   
-- Implementación de sistema operativo.  
+- Implementación de sistema operativo  
 - SDK de mensajería de cliente (con la actualización más reciente) y proxy de ISV.   
-- Configuración de Cloud Management Gateway.  
+- Configuración de Cloud Management Gateway  
+
+A partir de la versión 1802, use certificados CNG para los siguientes roles de servidor habilitados para HTTPS: <!-- 1357314 -->   
+- Punto de administración
+- Punto de distribución
+- Punto de actualización de software
+- Punto de migración de estado     
 
 > [!NOTE]
 > CNG es compatible con Crypto API (CAPI). Los certificados CAPI siguen siendo compatibles, incluso cuando se habilita la compatibilidad con CNG en el cliente.
 
 ## <a name="unsupported-scenarios"></a>Escenarios no admitidos
 
-Actualmente no se admiten los siguientes escenarios:
+Actualmente no se admiten los escenarios siguientes:
 
-- El servicio web del catálogo de aplicaciones, el sitio web del catálogo de aplicaciones y los roles del punto de proxy de inscripción no funcionan cuando instalan en modo HTTPS con un certificado CNG enlazado al sitio web en Internet Information Services (IIS). El Centro de software no muestra como disponibles los paquetes y las aplicaciones que se implementan en recopilaciones de grupos de usuarios o de usuarios.
+- Los roles de servidor siguientes no funcionan cuando se instalan en modo HTTPS con un certificado CNG enlazado al sitio web en Internet Information Services (IIS): 
+    - Servicio web del catálogo de aplicaciones
+    - Sitio web del catálogo de aplicaciones
+    - Punto de inscripción  
+    - Punto de proxy de inscripción  
 
-- El punto de migración de estado no funciona cuando se instala en modo HTTPS con un certificado CNG enlazado al sitio web en IIS.
+- El Centro de software no muestra como disponibles los paquetes y las aplicaciones que se implementan en recopilaciones de grupos de usuarios o de usuarios.
 
 - El uso de certificados CNG para crear un punto de distribución en la nube.
 
-- La comunicación del módulo de directivas de NDES al punto de registro de certificado (CRP) no se realiza correctamente si el módulo de directivas de NDES está utilizando un certificado CNG para el certificado de autenticación del cliente.
+- Si el módulo de directivas de NDES usa un certificado CNG para la autenticación del cliente, se produce un error en la comunicación con el punto de registro de certificado.
 
-- Si se especifica un certificado CNG, no se crean correctamente soportes físicos de arranque mediante el proceso de creación de soportes físicos de secuencia de tareas.
+- Si se especifica un certificado CNG al crear los medios de secuencia de tareas, el asistente no puede crear medios de arranque.
 
 ## <a name="to-use-cng-certificates"></a>Uso de los certificados CNG
 

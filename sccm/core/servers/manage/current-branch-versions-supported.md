@@ -1,30 +1,31 @@
 ---
 title: Versiones de la Rama actual
 titleSuffix: Configuration Manager
-description: "Revise el historial de versiones de System Center Configuration Manager y obtenga información sobre las fases del servicio ofrecido."
+description: Revise el historial de versiones de System Center Configuration Manager y obtenga información sobre las fases del servicio ofrecido.
 ms.custom: na
-ms.date: 11/22/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: mestew
 ms.author: mstewart
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 694b205144559d0ee4aee38c38361d5bd8b62a9d
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: e2ea7d8a915caebfdac824147e60bae509151fbf
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>Compatibilidad con versiones de la rama actual de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Microsoft tiene previsto publicar actualizaciones de la rama actual de System Center Configuration Manager varias veces al año. Para las versiones de Configuration Manager anteriores a la 1710, se ofrece soporte técnico durante 12 meses. Desde la versión 1710, cada versión de actualización seguirá siendo compatible durante 18 meses a partir de la fecha de lanzamiento de disponibilidad general (GA). Durante todo el período, ofrecemos soporte técnico. Pero nuestra estructura de soporte técnico es dinámica, es decir, ha evolucionado a dos fases distintas de servicio que dependen de la disponibilidad de la última versión de la rama actual.  
 
@@ -45,7 +46,8 @@ Ilustración 1. Ejemplo de la superposición del ciclo de versiones del soporte 
  **Historial de versiones**  
 
 |Versión |Fecha de disponibilidad |Fecha de finalización del soporte técnico|  
-|-------------|-----------------------|----------------------|  
+|-------------|-----------------------|----------------------|
+|1802|22 de marzo de 2018|22 de septiembre de 2019  
 |1710|20 de noviembre de 2017|20 de mayo de 2019 |
 |1706|31 de julio de 2017|31 de julio de 2018|
 |1702|27 de marzo de 2017|27 de marzo de 2018|

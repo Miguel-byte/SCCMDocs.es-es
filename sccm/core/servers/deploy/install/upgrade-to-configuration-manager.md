@@ -1,28 +1,29 @@
 ---
 title: Actualizar a System Center Configuration Manager
-description: "Obtenga información sobre qué pasos seguir para ejecutar correctamente una actualización local desde un sitio y jerarquía que ejecutan System Center 2012 Configuration Manager."
+description: Obtenga información sobre qué pasos seguir para ejecutar correctamente una actualización local desde un sitio y jerarquía que ejecutan System Center 2012 Configuration Manager.
 ms.custom: na
-ms.date: 6/6/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 770976309fbd5e8884dfec4bdaa29630ef1c02d0
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 72e11a04eb64d649749f2001ac4e3550c784132c
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="upgrade-to-system-center-configuration-manager"></a>Actualizar a System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede ejecutar una actualización local para actualizar a System Center Configuration Manager desde un sitio y jerarquía que ejecutan System Center 2012 Configuration Manager.  
 
@@ -32,6 +33,14 @@ Puede ejecutar una actualización local para actualizar a System Center Configur
  > Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* e *instalar* se utilizan para describir los tres conceptos independientes. Para obtener información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).
 
 ##  <a name="bkmk_path"></a> Rutas de actualización local  
+
+**Actualizar a la versión 1802**   
+Si tiene el medio de base de referencia de la versión 1702, puede actualizar lo siguiente a una versión con licencia completa de System Center Configuration Manager, versión 1802:   
+-     Una instalación de evaluación de System Center Configuration Manager, versión 1802
+-     System Center 2012 Configuration Manager con Service Pack 1
+-     System Center 2012 Configuration Manager con Service Pack 2
+-     System Center 2012 R2 Configuration Manager
+-     System Center 2012 R2 Configuration Manager con Service Pack 1
 
 **Actualizar a la versión 1702**   
 Si tiene el medio de línea base de la versión 1702, puede actualizar lo siguiente a una versión con licencia completa de System Center Configuration Manager versión 1702:   
@@ -345,7 +354,7 @@ Use los procedimientos siguientes para actualizar sitios de Configuration Manage
      A partir de la versión de octubre de 2016 de los medios de línea base de la versión 1606 para System Center Configuration Manager, puede especificar la fecha de expiración de su contrato de Software Assurance. También puede especificar la **fecha de expiración de Software Assurance** de su contrato de licencia como un cómodo recordatorio de esa fecha. Si no la especifica durante la instalación, puede especificarla más tarde desde la consola de Configuration Manager.
 
      >  [!NOTE]   
-     >  Microsoft no valida la fecha de expiración que especifique y no la usará para la validación de la licencia,  pero usted puede usarla como un recordatorio de la fecha de expiración. Esto es útil porque Configuration Manager busca de forma periódica nuevas actualizaciones de software que se ofrecen en línea y el estado de su licencia de Software Assurance debe ser actual para que pueda usar estas actualizaciones adicionales.    
+     >  Microsoft no valida la fecha de expiración que especifique y no la usará para la validación de la licencia.  pero usted puede usarla como un recordatorio de la fecha de expiración. Esto es útil porque Configuration Manager busca de forma periódica nuevas actualizaciones de software que se ofrecen en línea y el estado de su licencia de Software Assurance debe ser actual para que pueda usar estas actualizaciones adicionales.    
 
      Para obtener más información, consulte [Licencias y ramas para System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
 

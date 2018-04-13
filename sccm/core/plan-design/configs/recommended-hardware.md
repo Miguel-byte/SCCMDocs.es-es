@@ -1,9 +1,9 @@
 ---
 title: Hardware recomendado
 titleSuffix: Configuration Manager
-description: "Obtenga recomendaciones de hardware que le ayudarán a ampliar su entorno de System Center Configuration Manager más allá de una implementación básica."
+description: Obtenga recomendaciones de hardware que le ayudarán a ampliar su entorno de System Center Configuration Manager más allá de una implementación básica.
 ms.custom: na
-ms.date: 05/04/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,20 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5267f0af-34d3-47a0-9ab8-986c41276e6c
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 26
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 5def3fdef8e9182cb624640fa54ff2eae224e6a1
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 8d0883c7c2a735a2e651d61083d4d45570408ebb
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="recommended-hardware-for-system-center-configuration-manager"></a>Hardware recomendado para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las recomendaciones siguientes son instrucciones para ayudarle a escalar un entorno de System Center Configuration Manager de tal manera que admita más que una implementación básica de sitios, sistemas de sitios y clientes. No pretenden cubrir todas las configuraciones de jerarquía y sitios posibles.  
 
@@ -86,7 +86,7 @@ Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas
 |----------------|------------------------|--------------------|--------------------|---------------------|---------------------|-----------------------------------------------------|  
 |Sistema operativo|Consulte las instrucciones para el sistema operativo.|Consulte las instrucciones para el sistema operativo.|Consulte las instrucciones para el sistema operativo.|Consulte las instrucciones para el sistema operativo.|Consulte las instrucciones para el sistema operativo.|Consulte las instrucciones para el sistema operativo.|  
 |Archivos de registro y de aplicación de Configuration Manager|25 GB|50 GB|100 GB|200 GB|300 GB|200 GB|  
-|Archivo .mdf de la base de datos del sitio|75 GB por cada 25.000 clientes|75 GB|150 GB|300 GB|500 GB|2 TB|  
+|Archivo .mdf de la base de datos del sitio|75 GB por cada 25.000 clientes|75 GB|150 GB|300 GB|500 GB|2 TB|  
 |Archivo .ldf de la base de datos del sitio|25 GB por cada 25.000 clientes|25 GB|50 GB|100 GB|150 GB|100 GB|  
 |Archivos temporales de la base de datos (.mdf y .ldf)|Según sea necesario|Según sea necesario|Según sea necesario|Según sea necesario|Según sea necesario|Según sea necesario|  
 |Contenido (recursos compartidos de punto de distribución)|Según sea necesario<sup>1</sup>|Según sea necesario<sup>1</sup>|Según sea necesario<sup>1</sup>|Según sea necesario<sup>1</sup>|Según sea necesario<sup>1</sup>|Según sea necesario<sup>1</sup>|  
@@ -102,9 +102,9 @@ Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas
     > [!NOTE]  
     >  Una vez que tenga 50 000 o más clientes en un sitio, planee usar cuatro o más archivos .mdf de base de datos temporal.  
 
--   El tamaño de la base de datos temporal para un sitio de administración central suele ser mucho menor que el necesario para un sitio primario.  
+-   El tamaño de la base de datos temporal para un sitio de administración central suele ser mucho menor que el de un sitio primario.  
 
--   El tamaño de la base de datos del sitio secundario está limitado del siguiente modo:  
+-   El tamaño de la base de datos del sitio secundario tiene las limitaciones de tamaño siguientes:  
 
     -   SQL Server 2012 Express: 10 GB  
 
@@ -120,7 +120,7 @@ Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas
 
 -   **Espacio en disco:** 500 MB de espacio en disco disponible, con 5 GB recomendados para la memoria caché del cliente de Configuration Manager. Se requiere menos espacio en disco si se usa la configuración personalizada para instalar el cliente de Configuration Manager:  
 
-    -   Use la propiedad de línea de comandos de CCMSetup /skippprereq para evitar la instalación de archivos que el cliente no requiere. Por ejemplo, ejecute **CCMSetup.exe /skipprereq:silverlight.exe** si el cliente no va a usar el catálogo de aplicaciones.  
+    -   Use la propiedad de línea de comandos de CCMSetup /skippprereq para evitar la instalación de archivos que el cliente no requiere. Por ejemplo, ejecute **CCMSetup.exe /skipprereq:silverlight.exe** si el cliente no va a usar el catálogo de aplicaciones. A partir de Configuration Manager 1802, Silverlight ya no se instala de manera automática.  
 
     -   Use la propiedad Client.msi SMSCACHESIZE para establecer un archivo de caché más pequeño que el valor predeterminado de 5120 MB. El tamaño mínimo es 1 MB. Por ejemplo, **CCMSetup.exe SMSCachesize=2** crea una memoria caché de 2 MB de tamaño.  
 

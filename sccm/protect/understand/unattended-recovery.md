@@ -1,49 +1,52 @@
 ---
-title: "Recuperación desatendida"
+title: Recuperación desatendida
 titleSuffix: Configuration Manager
 description: Use un script para recuperar sus sitios en System Center Configuration Manager.
 ms.custom: na
-ms.date: 6/5/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 828c31d1-3d70-4412-b1a8-c92e7e504d39
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: be561de1fd14245e3cf52148683611a307484d3d
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+manager: dougeby
+ms.openlocfilehash: fc6325d00e048fbbf54d740a89f78070fac6b0cb
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="unattended-site-recovery-for-configuration-manager"></a>Recuperación de sitio desatendida de Configuration Manager   
 
-*Se aplica a: System Center Configuration Manager (Rama actual)* Para realizar una [recuperación desatendida](/sccm/protect/understand/recover-sites#site-recovery-procedures) de un sitio primario o un sitio de administración central de Configuration Manager, puede crear un script de instalación desatendida y usar el programa de instalación con la opción de comando **/script**. El script proporciona el mismo tipo de información que solicita el Asistente para instalación, excepto por el hecho de que no existe configuración predeterminada. Deben especificarse todos los valores para las claves de instalación que se aplican al tipo de recuperación que se utiliza.
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
- Para utilizar la opción de línea de comandos de instalación de /script, debe crear un archivo de inicialización y especificar su nombre después de la opción de línea de comandos de instalación de /script. Más importante que el nombre del archivo es que este tenga la extensión **.ini**. Cuando haga referencia al archivo de inicialización del programa de instalación desde la línea de comandos, tendrá que proporcionar la ruta de acceso completa al archivo. Por ejemplo, si el archivo de inicialización de instalación es *setup.ini* y se almacena en la carpeta *C:\setup*, la línea de comandos sería:
+ Para realizar una [recuperación desatendida](/sccm/protect/understand/recover-sites#site-recovery-procedures) de un sitio de administración central o sitio primario de Configuration Manager, puede crear un script de instalación desatendida y después usar el programa de instalación con la opción de comando **/script**. El script proporciona el mismo tipo de información que solicita el Asistente para instalación, excepto por el hecho de que no existe configuración predeterminada. Deben especificarse todos los valores para las claves de instalación que se aplican al tipo de recuperación que se utiliza.
 
- **setup /script c:\setup\setup.ini**.
+ Para usar la opción de la línea de comandos de instalación /script, debe crear un archivo de inicialización. Luego, especifique el nombre de este archivo después de la opción /script. Más importante que el nombre del archivo es que este tenga la extensión **.ini**. Cuando haga referencia al archivo de inicialización del programa de instalación desde la línea de comandos, tendrá que proporcionar la ruta de acceso completa al archivo. Por ejemplo, si el archivo de inicialización de instalación es *setup.ini* y se almacena en la carpeta *C:\setup*, la línea de comandos sería:
+
+ `setup /script c:\setup\setup.ini`
 
 > [!IMPORTANT]  
->  Debe tener derechos de administrador para ejecutar el programa de instalación. Cuando ejecute el programa de instalación con el script de instalación desatendida, inicie el símbolo del sistema en un contexto de administrador mediante **Ejecutar como administrador**.
+>  Debe tener derechos de administrador para ejecutar el programa de instalación. Al ejecutar el programa de instalación con el script de instalación desatendida, inicie el símbolo del sistema en un contexto de administrador mediante **Ejecutar como administrador**.
 
  El script contiene valores, nombres de clave y nombres de sección. Los nombres de clave de sección necesarios varían en función del tipo de recuperación para el que crea el script. No hay un orden determinado para las secciones ni para las claves de las secciones. Las claves no distinguen mayúsculas de minúsculas. Cuando proporciona valores para las claves, el nombre de la clave debe ir seguido por un signo de igual (=) y el valor de la clave.
 
  Utilice las siguientes secciones como guía para crear un script para una recuperación de sitio desatendida. Las tablas enumeran las claves del script de instalación disponibles, sus valores correspondientes, si son necesarias o no, el tipo de instalación para el que se usan y una breve descripción de cada clave.
 
 ## <a name="recover-a-central-administration-site-unattended"></a>Recuperación de un sitio de administración central en modo desatendido
- Utilice la información siguiente para configurar un archivo de script de instalación desatendida para recuperar un sitio de administración central.
+ Use la información siguiente para configurar un archivo de script de instalación desatendida para recuperar un sitio de administración central.
 
  **Identificación**
 
 -   **Nombre de clave** : Action
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores** : RecoverCCAR
     -   **Detalles** : recupera un sitio de administración central
 
@@ -57,12 +60,12 @@ ms.lasthandoff: 12/04/2017
 **RecoveryOptions**   
 -   **Nombre de clave** : ServerRecoveryOptions   
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores** : 1, 2 o 4  
          1 = servidor de sitio de recuperación y SQL Server.   
          2 = recuperar sólo servidor de sitio.  
          4 = recuperar sólo SQL Server.
-    -   **Detalles** : especifica si el programa de instalación recuperará el servidor de sitio, SQL Server o ambos. Las claves asociadas son necesarias cuando se establece el siguiente valor para la configuración de ServerRecoveryOptions:  
+    -   **Detalles**: especifica si el programa de instalación recupera el servidor de sitio, SQL Server o ambos. Las claves asociadas son necesarias cuando se establece el siguiente valor para la configuración de ServerRecoveryOptions:  
         -   **Valor = 1** : tiene la opción de especificar un valor de la clave **SiteServerBackupLocation** para recuperar el sitio mediante una copia de seguridad de sitio. Si no especifica ningún valor, se reinstala el sitio sin restaurarlo desde un conjunto de copia de seguridad.
 
              se requiere la clave **BackupLocation** cuando configura un valor de **10** para la clave **DatabaseRecoveryOptions** , que se utiliza para restaurar la base de datos de sitio desde la copia de seguridad.
@@ -74,19 +77,19 @@ ms.lasthandoff: 12/04/2017
 -   **Nombre de clave** : DatabaseRecoveryOptions
 
     -   **Requerido** : quizás
-    -   **Valores:** 10, 20, 40, 80  
-         10 = restaurar la base de datos de sitio desde la copia de seguridad.  
-         20 = utilizar una base de datos de sitio que se recuperó manualmente mediante otro método.   
-         40 = crear una base de datos nueva para el sitio. Utilice esta opción si no hay ninguna copia de seguridad de base de datos de sitio disponible. Los datos globales y de sitio se recuperan mediante la replicación desde otros sitios.  
-         80 = omitir recuperación de base de datos.
-    -   **Detalles** : especifica cómo el programa de instalación recuperará la base de datos de sitio en SQL Server. Esta clave es necesaria cuando **ServerRecoveryOptions** tiene un valor de **1** o **4**.
+    -   **Valores**   
+         - **10** = restaurar la base de datos de sitio desde la copia de seguridad.  
+         - **20** = usar una base de datos de sitio que se ha recuperado manualmente mediante otro método.   
+         - **40** = crear una base de datos para el sitio. Utilice esta opción si no hay ninguna copia de seguridad de base de datos de sitio disponible. Los datos globales y de sitio se recuperan mediante la replicación desde otros sitios.  
+         - **80** = omitir recuperación de base de datos.
+    -   **Detalles:** especifica cómo recupera el programa de instalación la base de datos de sitio en SQL Server. Esta clave es necesaria cuando **ServerRecoveryOptions** tiene un valor de **1** o **4**.
 
 
 -   **Nombre de clave** : ReferenceSite  
 
     -   **Requerido** : quizás
     -   **Valores:** &lt;ReferenceSiteFQDN\>
-    -   **Detalles** : especifica el sitio primario de referencia que usa el sitio de administración central para recuperar datos globales si la copia de seguridad de la base de datos es anterior al período de retención de seguimiento de cambios, o si se recupera el sitio sin usar una copia de seguridad.
+    -   **Detalles:** especifica el sitio primario de referencia. Si la copia de seguridad de la base de datos es anterior al período de retención de seguimiento de cambios, o si se recupera el sitio sin una copia de seguridad, el sitio de administración central usa el sitio de referencia para recuperar los datos globales.
 
          Si no especifica ningún sitio de referencia y la copia de seguridad es anterior al período de retención de seguimiento de cambios, todos los sitios primarios se reinicializan con los datos restaurados desde el sitio de administración central.
 
@@ -111,30 +114,30 @@ ms.lasthandoff: 12/04/2017
 **Opciones**
 
 -   **Nombre de clave** : ProductID
-    -   **Requerido** : sí
-    -   **Valores:**   
-         xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
-          Eval
+    -   **Requerido**: sí
+    -   **Valores**   
+         - xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
+         - Eval
     -   **Detalles:** especifica la clave de producto de instalación de Configuration Manager, incluidos los guiones. Si escribe **Eval**, puede instalar la versión de evaluación de Configuration Manager.  
 
 
 -   **Nombre de clave** : SiteCode
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores:** &lt;Código de sitio\>
-    -   **Detalles** : tres caracteres alfanuméricos que identifican de forma única el sitio en la jerarquía. Debe especificar el código del sitio que utilizó el sitio antes de que se produjera el error.
+    -   **Detalles:** tres caracteres alfanuméricos que identifican de forma única el sitio en la jerarquía. Especifique el código de sitio que usó el sitio antes de que se produjera el error.
 
 
 -   **Nombre de clave** : SiteName
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores** : SiteName
     -   **Detalles** : descripción de este sitio.
 
 
 -   **Nombre de clave** : SMSInstallDir
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores:** &lt;*ConfigMgrInstallationPath*>
     -   **Detalles:** especifica la carpeta de instalación de los archivos de programa de Configuration Manager.
         > [!NOTE]   
@@ -142,26 +145,26 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave** : SDKServer
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores:** &lt;*FQDN del proveedor de SMS*>
-    -   **Detalles** : especifica el FQDN del servidor que hospedará el proveedor de SMS. Debe especificar el servidor que hospedaba el proveedor de SMS antes de producirse el error.
+    -   **Detalles:** especifica el FQDN del servidor que hospeda el proveedor de SMS. Especifique el servidor que hospedaba el proveedor de SMS antes de producirse el error.
 
          Puede configurar proveedores de SMS adicionales para el sitio después de la instalación inicial.
 
 -   **Nombre de clave** : PrerequisiteComp
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores** : 0 o 1  
          0 = descargar   
          1 = ya se ha descargado
-    -   **Detalles** : especifica si se han descargado los archivos de requisitos previos de instalación. Por ejemplo, si utiliza un valor de 0, el programa de instalación descargará los archivos.  
+    -   **Detalles:** especifica si ya se han descargado los archivos de requisitos previos de instalación. Por ejemplo, si se usa un valor de 0, el programa de instalación descarga los archivos.  
 
 
 -   **Nombre de clave** : PrerequisitePath
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores:** &lt;*PathToSetupPrerequisiteFiles*>
-    -   **Detalles** : especifica la ruta de acceso a los archivos de requisitos previos de instalación. Dependiendo del valor **PrerequisiteComp** , el programa de instalación utiliza esta ruta para almacenar los archivos descargados o localizar los archivos descargados previamente.
+    -   **Detalles:** especifica la ruta de acceso a los archivos de requisitos previos de instalación. En función del valor **PrerequisiteComp**, el programa de instalación usa esta ruta de acceso para almacenar los archivos descargados o localizar los archivos descargados previamente.
 
 -   **Nombre de clave** : AdminConsole
 
@@ -171,9 +174,11 @@ ms.lasthandoff: 12/04/2017
     -   **Detalles:** especifica si se va a instalar la consola de Configuration Manager. Esta clave es necesaria, salvo cuando **ServerRecoveryOptions** tiene un valor de **4**.
 
 
--   **Nombre de clave** : JoinCEIP
+-   **Nombre de clave** : JoinCEIP   
+    > [!Note]  
+    > A partir de la versión 1802 de Configuration Manager, la característica CEIP se ha quitado del producto.
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores** : 0 o 1  
          0 = no unir  
          1 = unir
@@ -183,34 +188,34 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave** : SQLServerName
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores:** *&lt;SQLServerName\>*
-    -   **Detalles**: nombre del servidor, o el nombre de instancia en clúster, que ejecuta SQL Server y donde se hospedará la base de datos del sitio. Debe especificar el mismo servidor que hospedaba la base de datos del sitio antes de producirse el error.
+    -   **Detalles:** el nombre del servidor, o el nombre de instancia en clúster, que ejecuta SQL Server y que hospeda la base de datos del sitio. Especifique el mismo servidor que hospedaba la base de datos del sitio antes de producirse el error.
 
 
 -   **Nombre de clave** : DatabaseName
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores:** *&lt;SiteDatabaseName\>* o *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*
-    -   **Detalles**: especifica el nombre de la base de datos de SQL Server que se crea o se usa para instalar la base de datos del sitio de administración central. Debe especificar el mismo nombre de base de datos que se utilizó antes de producirse el error.
+    -   **Detalles**: especifica el nombre de la base de datos de SQL Server que se crea o se usa para instalar la base de datos del sitio de administración central. Especifique el mismo nombre de base de datos que se usó antes de producirse el error.
 
         > [!IMPORTANT]  
-        >  Debe especificar el nombre de instancia y el nombre de la base de datos del sitio si no utiliza la instancia predeterminada.
+        >  Si no se usa la instancia predeterminada, se debe especificar el nombre de instancia y el nombre de la base de datos del sitio.
 
 -   **Nombre de clave** : SQLSSBPort
 
     -   **Requerido** : no
-    -   **Valores:** &lt;*SSBPortNumber*>
-    -   **Detalles** : especifique el puerto de SQL Server Service Broker (SSB) usado por SQL Server. Normalmente, SSB está configurado para utilizar el puerto TCP 4022, pero se admiten otros puertos. Debe especificar el mismo puerto SSB que se utilizó antes de producirse el error.
+    -   **Valores:** &lt;*NúmeroDePuertoSSB*>
+    -   **Detalles** : especifique el puerto de SQL Server Service Broker (SSB) usado por SQL Server. Normalmente, SSB está configurado para utilizar el puerto TCP 4022, pero se admiten otros puertos. Especifique el mismo puerto SSB que se usó antes de producirse el error.
 
 ## <a name="recover-a-primary-site-unattended"></a>Recuperación de un sitio primario desatendido
- Utilice la información siguiente para configurar un archivo de script de instalación desatendida para recuperar un sitio de administración central.
+ Use la información siguiente para configurar un archivo de script de instalación desatendida para recuperar un sitio de administración central.
 
  **Identificación**
 
 -   **Nombre de clave** : Action
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores** : RecoverPrimarySite
     -   **Detalles** : recupera un sitio primario.
 
@@ -225,12 +230,12 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave** : ServerRecoveryOptions
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores** : 1, 2 o 4    
          1 = servidor de sitio de recuperación y SQL Server.   
          2 = recuperar sólo servidor de sitio.  
          4 = recuperar sólo SQL Server.
-    -   **Detalles** : especifica si el programa de instalación recuperará el servidor de sitio, SQL Server o ambos. Las claves asociadas son necesarias cuando se establece el siguiente valor para la configuración de ServerRecoveryOptions:
+    -   **Detalles**: especifica si el programa de instalación recupera el servidor de sitio, SQL Server o ambos. Las claves asociadas son necesarias cuando se establece el siguiente valor para la configuración de ServerRecoveryOptions:
 
         -   **Valor = 1** : tiene la opción de especificar un valor de la clave **SiteServerBackupLocation** para recuperar el sitio mediante una copia de seguridad de sitio. Si no especifica ningún valor, se reinstala el sitio sin restaurarlo desde un conjunto de copia de seguridad.
 
@@ -243,12 +248,12 @@ ms.lasthandoff: 12/04/2017
 -   **Nombre de clave** : DatabaseRecoveryOptions
 
     -   **Requerido** : quizás
-    -   **Valores:** 10, 20, 40, 80  
-         10 = restaurar la base de datos de sitio desde la copia de seguridad.  
-         20 = utilizar una base de datos de sitio que se recuperó manualmente mediante otro método.     
-         40 = crear una base de datos nueva para el sitio. Utilice esta opción si no hay ninguna copia de seguridad de base de datos de sitio disponible. Los datos globales y de sitio se recuperan mediante la replicación desde otros sitios.  
-         80 = omitir recuperación de base de datos.
-    -   **Detalles** : especifica cómo el programa de instalación recuperará la base de datos de sitio en SQL Server. Esta clave es necesaria cuando **ServerRecoveryOptions** tiene un valor de **1** o **4**.
+    -   **Valores**   
+         - **10** = restaurar la base de datos de sitio desde la copia de seguridad.  
+         - **20** = usar una base de datos de sitio que se ha recuperado manualmente mediante otro método.     
+         - **40** = crear una base de datos para el sitio. Utilice esta opción si no hay ninguna copia de seguridad de base de datos de sitio disponible. Los datos globales y de sitio se recuperan mediante la replicación desde otros sitios.  
+         - **80** = omitir recuperación de base de datos.
+    -   **Detalles:** especifica cómo recupera el programa de instalación la base de datos de sitio en SQL Server. Esta clave es necesaria cuando **ServerRecoveryOptions** tiene un valor de **1** o **4**.
 
 
 -   **Nombre de clave** : SiteServerBackupLocation
@@ -268,30 +273,30 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave** : ProductID
 
-    -   **Requerido** : sí
-    -   **Valores:**     
-         xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
-         Eval     
+    -   **Requerido**: sí
+    -   **Valores**     
+         - xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
+         - Eval     
     -   **Detalles:** especifica la clave de producto de instalación de Configuration Manager, incluidos los guiones. Si escribe **Eval**, puede instalar la versión de evaluación de Configuration Manager.  
 
 
 -   **Nombre de clave** : SiteCode
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores:** &lt;Código de sitio\>
-    -   **Detalles** : tres caracteres alfanuméricos que identifican de forma única el sitio en la jerarquía. Debe especificar el código del sitio que utilizó el sitio antes de que se produjera el error.
+    -   **Detalles:** tres caracteres alfanuméricos que identifican de forma única el sitio en la jerarquía. Especifique el código de sitio que usó el sitio antes de que se produjera el error.
 
 
 -   **Nombre de clave** : SiteName
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores** : SiteName
     -   **Detalles** : descripción de este sitio.
 
 
 -   **Nombre de clave** : SMSInstallDir
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores:** &lt;*ConfigMgrInstallationPath*>
     -   **Detalles:** especifica la carpeta de instalación de los archivos de programa de Configuration Manager.
 
@@ -300,26 +305,26 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave** : SDKServer
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores:** &lt;*FQDN del proveedor de SMS*>
-    -   **Detalles** : especifica el FQDN del servidor que hospedará el proveedor de SMS. Debe especificar el servidor que hospedaba el proveedor de SMS antes de producirse el error.
+    -   **Detalles:** especifica el FQDN del servidor que hospeda el proveedor de SMS. Especifique el servidor que hospedaba el proveedor de SMS antes de producirse el error.
 
          Puede configurar proveedores de SMS adicionales para el sitio después de la instalación inicial.
 
 -   **Nombre de clave** : PrerequisiteComp
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores** : 0 o 1    
          0 = descargar   
          1 = ya se ha descargado   
-    -   **Detalles** : especifica si se han descargado los archivos de requisitos previos de instalación. Por ejemplo, si utiliza un valor de 0, el programa de instalación descargará los archivos.
+    -   **Detalles:** especifica si ya se han descargado los archivos de requisitos previos de instalación. Por ejemplo, si se usa un valor de 0, el programa de instalación descarga los archivos.
 
 
 -   **Nombre de clave** : PrerequisitePath
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores:** &lt;*PathToSetupPrerequisiteFiles*>
-    -   **Detalles** : especifica la ruta de acceso a los archivos de requisitos previos de instalación. Dependiendo del valor **PrerequisiteComp** , el programa de instalación utiliza esta ruta para almacenar los archivos descargados o localizar los archivos descargados previamente.
+    -   **Detalles:** especifica la ruta de acceso a los archivos de requisitos previos de instalación. En función del valor **PrerequisiteComp**, el programa de instalación usa esta ruta de acceso para almacenar los archivos descargados o localizar los archivos descargados previamente.
 
 
 -   **Nombre de clave** : AdminConsole
@@ -330,9 +335,11 @@ ms.lasthandoff: 12/04/2017
          1 = instalar  
     -   **Detalles:** especifica si se va a instalar la consola de Configuration Manager. Esta clave es necesaria, salvo cuando **ServerRecoveryOptions** tiene un valor de **4**.
 
--   **Nombre de clave** : JoinCEIP
+-   **Nombre de clave** : JoinCEIP  
+    > [!Note]  
+    > A partir de la versión 1802 de Configuration Manager, la característica CEIP se ha quitado del producto.
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores** : 0 o 1    
          0 = no unir  
          1 = unir
@@ -343,39 +350,39 @@ ms.lasthandoff: 12/04/2017
 
 -   **Nombre de clave** : SQLServerName
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores:** *&lt;SQLServerName\>*
-    -   **Detalles**: nombre del servidor, o el nombre de instancia en clúster, que ejecuta SQL Server y donde se hospedará la base de datos del sitio. Debe especificar el mismo servidor que hospedaba la base de datos del sitio antes de producirse el error.
+    -   **Detalles:** el nombre del servidor, o el nombre de instancia en clúster, que ejecuta SQL Server y que hospeda la base de datos del sitio. Especifique el mismo servidor que hospedaba la base de datos del sitio antes de producirse el error.
 
 
 -   **Nombre de clave** : DatabaseName
 
-    -   **Requerido** : sí
+    -   **Requerido**: sí
     -   **Valores:** *&lt;SiteDatabaseName\>* o *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*
-    -   **Detalles**: especifica el nombre de la base de datos de SQL Server que se crea o se usa para instalar la base de datos del sitio de administración central. Debe especificar el mismo nombre de base de datos que se utilizó antes de producirse el error.
+    -   **Detalles**: especifica el nombre de la base de datos de SQL Server que se crea o se usa para instalar la base de datos del sitio de administración central. Especifique el mismo nombre de base de datos que se usó antes de producirse el error.
 
         > [!IMPORTANT]    
-        >  Debe especificar el nombre de instancia y el nombre de la base de datos del sitio si no utiliza la instancia predeterminada.
+        >  Si no se usa la instancia predeterminada, se debe especificar el nombre de instancia y el nombre de la base de datos del sitio.
 
 -   **Nombre de clave** : SQLSSBPort
 
     -   **Requerido** : no
-    -   **Valores:** &lt;*SSBPortNumber*>
-    -   **Detalles** : especifique el puerto de SQL Server Service Broker (SSB) usado por SQL Server. Normalmente, SSB está configurado para utilizar el puerto TCP 4022, pero se admiten otros puertos. Debe especificar el mismo puerto SSB que se utilizó antes de producirse el error.
+    -   **Valores:** &lt;*NúmeroDePuertoSSB*>
+    -   **Detalles** : especifique el puerto de SQL Server Service Broker (SSB) usado por SQL Server. Normalmente, SSB está configurado para utilizar el puerto TCP 4022, pero se admiten otros puertos. Especifique el mismo puerto SSB que se usó antes de producirse el error.
 
 **Jerarquía ExpansionOption**
 
 -   **Nombre de clave** : CCARSiteServer
 
     -   **Requerido** : quizás
-    -   **Valores:** &lt;*SiteCodeForCentralAdministrationSite*>
-    -   **Detalles:** especifica el sitio de administración central al que se asociará un sitio primario al unirse a la jerarquía de Configuration Manager. Esta configuración es necesaria si el sitio primario estaba asociado con un sitio de administración central antes de producirse el error. Debe especificar el código del sitio que utilizó el sitio de administración central antes de que se produjera el error.
+    -   **Valores:** &lt;*CódigoDeSitioParaElSitioDeAdministraciónCentral*>
+    -   **Detalles:** especifica el sitio de administración central al que se asocia un sitio primario al unirse a la jerarquía de Configuration Manager. Esta configuración es necesaria si el sitio primario estaba asociado con un sitio de administración central antes de producirse el error. Especifique el código de sitio que se usó para el sitio de administración central antes de que se produjera el error.
 
 -   **Nombre de clave** : CASRetryInterval
 
     -   **Requerido** : no
-    -   **Valores:** &lt;*Interval*>
-    -   **Detalles** : especifica el intervalo de reintento (en minutos) para tratar de establecer una conexión con el sitio de administración central después de que la conexión genera un error. Por ejemplo, si se produce un error en la conexión al sitio de administración central, el sitio primario espera el número de minutos especificado en CASRetryInterval y, a continuación, vuelve a intentar establecer la conexión.
+    -   **Valores:** &lt;*Intervalo*>
+    -   **Detalles** : especifica el intervalo de reintento (en minutos) para tratar de establecer una conexión con el sitio de administración central después de que la conexión genera un error. Por ejemplo, si se produce un error en la conexión al sitio de administración central, el sitio primario espera el número de minutos especificado en CASRetryInterval y, después, vuelve a intentar la conexión.
 
 
 -   **Nombre de clave** : WaitForCASTimeout

@@ -1,20 +1,22 @@
 ---
-title: "Declaración de privacidad de System Center Configuration Manager: información adicional"
-description: "Conozca cómo Microsoft recopila y usa datos de una implementación de System Center Configuration Manager."
+title: 'Declaración de privacidad: información adicional'
+titleSuffix: Configuration Manager
+description: Obtenga información sobre cómo Microsoft recopila y usa datos de System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/13/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
-caps.latest.revision: "5"
-caps.handback.revision: "0"
+caps.latest.revision: 5
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -34,11 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 5332d02f4d128516f310a2edff897b4efc5b971b
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: eb557a29b1412e136023b3e6caddf358732659e9
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="additional-information-about-privacy-for-system-center-configuration-manager"></a>Más información sobre la privacidad de System Center Configuration Manager
 
@@ -57,18 +59,22 @@ Configuration Manager solamente recopila datos de la base de datos de SQL Server
 
 Los administradores pueden cambiar el nivel de datos recopilado en la sección **Datos de uso** de la consola de Configuration Manager.
 
-Para más información, vea los artículos "Más información" sobre los niveles de datos de uso y la configuración en el artículo [Diagnósticos y datos de uso para System Center Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=626566).
+Para obtener más información, vea los artículos "Más información" sobre los niveles de datos de uso y la configuración en el artículo [Diagnósticos y datos de uso para System Center Configuration Manager](https://go.microsoft.com/fwlink/?LinkID=626566).
 
 
 ## <a name="customer-experience-improvement-program"></a>Programa para la mejora de la experiencia del usuario
+
+> [!Note]  
+> A partir de la versión 1802 de Configuration Manager, la característica CEIP se ha quitado del producto.
+
 El Programa para la mejora de la experiencia del usuario (CEIP) recopila información básica de la consola de Configuration Manager sobre la configuración de hardware y el empleo de nuestro software y nuestros servicios para identificar tendencias y patrones de uso. CEIP también recopila el tipo y el número de los errores que encuentra, el rendimiento del hardware y el software, y la velocidad de los servicios. No recopilamos su nombre, dirección ni ninguna otra información de contacto. No se recopilan datos de CEIP de los equipos cliente.
 
 Usamos esta información para mejorar la calidad, la confiabilidad y el rendimiento del software y los servicios de Microsoft.
 
-Para más información sobre la información recopilada, procesada o transmitida por CEIP, vea la [Declaración de privacidad para el Programa para la mejora de la experiencia del usuario de Microsoft](http://go.microsoft.com/fwlink/?LinkID=525211).
+Para más información sobre la información recopilada, procesada o transmitida por CEIP, vea la [Declaración de privacidad para el Programa para la mejora de la experiencia del usuario de Microsoft](https://go.microsoft.com/fwlink/?LinkID=525211).
 
 ## <a name="operations-management-suite-connector"></a>Operations Management Suite Connector
-El conector de Microsoft Operations Management Suite sincroniza datos como colecciones de System Center Configuration Manager con Microsoft Operations Management Suite. El identificador de suscripción de Microsoft Azure y la clave secreta se almacenan en la base de datos de Configuration Manager cuando un administrador configura la característica. El secreto de cliente de Azure Active Directory y la clave compartida del área de trabajo de Microsoft Operations Management Suite se almacenan en la base de datos local de System Center Configuration Manager. Todas las comunicaciones entre System Center Configuration Manager y Microsoft Operations Management Suite usan HTTPS. No se proporciona a Microsoft ninguna información adicional sobre las colecciones más allá de datos de telemetría aleatorios. Para obtener información detallada sobre la información que recopila Microsoft Operations Management Suite, vea [Seguridad de datos de Log Analytics](http://go.microsoft.com/fwlink/?LinkId=823545).
+El conector de Microsoft Operations Management Suite sincroniza datos como colecciones de System Center Configuration Manager con Microsoft Operations Management Suite. El identificador de suscripción de Microsoft Azure y la clave secreta se almacenan en la base de datos de Configuration Manager cuando un administrador configura la característica. El secreto de cliente de Azure Active Directory y la clave compartida del área de trabajo de Microsoft Operations Management Suite se almacenan en la base de datos local de System Center Configuration Manager. Todas las comunicaciones entre System Center Configuration Manager y Microsoft Operations Management Suite usan HTTPS. No se proporciona a Microsoft ninguna información adicional sobre las colecciones más allá de datos de telemetría aleatorios. Para obtener información detallada sobre la información que recopila Microsoft Operations Management Suite, vea [Seguridad de datos de Log Analytics](https://go.microsoft.com/fwlink/?LinkId=823545).
 
 ## <a name="asset-intelligence"></a>Asset Intelligence
 Asset Intelligence permite a los administradores de TI definir, realizar el seguimiento y administrar de manera proactiva la conformidad con los estándares de configuración. La medición y la creación de informes sobre la implementación y el uso de aplicaciones físicas y virtuales ayuda a las organizaciones a tomar mejores decisiones empresariales acerca de las licencias de software y el cumplimiento con los contratos de licencia. Después de recopilar datos de uso de los clientes de Configuration Manager, los administradores pueden usar características distintas para ver los datos, incluidas las recopilaciones, las consultas y los informes.
@@ -96,16 +102,16 @@ Los informes de Microsoft Cloud Protection Service se usan para mejorar el softw
 
 Microsoft Cloud Protection Service no recopila intencionadamente información personal. En la medida en que Microsoft Cloud Protection Service recopila información personal, Microsoft no usa dicha información para identificarle ni ponerse en contacto con usted.
 
-Encontrará más detalles relacionados con los datos recopilados en la documentación del producto en [Endpoint Protection en System Center Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=823547).
+Encontrará más detalles relacionados con los datos recopilados en la documentación del producto en [Endpoint Protection en System Center Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=823547).
 
 ## <a name="site-hierarchy--geographical-view-with-bing-maps"></a>Jerarquía del sitio – vista geográfica con Bing Maps
 Jerarquía del sitio: la Vista geográfica le permite usar mapas proporcionados por Mapas de Bing de Microsoft para ver la topología del servidor físico de Configuration Manager. Para habilitar esta característica, se envía información de ubicación proporcionada por usted desde su servidor al servicio web de Mapas de Bing.
 
-Microsoft utiliza la información para hacer funcionar y mejorar Microsoft Bing Maps y otros sitios y servicios de Microsoft. Para más información, vea la [Declaración de privacidad de Microsoft](http://go.microsoft.com/fwlink/?LinkId=823548).
+Microsoft utiliza la información para hacer funcionar y mejorar Microsoft Bing Maps y otros sitios y servicios de Microsoft. Para más información, vea la [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?LinkId=823548).
 Puede elegir no utilizar la Vista geográfica para la Jerarquía del sitio. La vista Diagrama de jerarquía le permite ver la jerarquía y no usa el servicio Mapas de Bing.
 
 ## <a name="microsoft-intune-subscription"></a>Suscripción a Microsoft Intune
-Los clientes que compraron una suscripción a Microsoft Intune pueden usar Configuration Manager para administrar los dispositivos móviles que se conectan a través de Microsoft Intune. La [Declaración de privacidad de Microsoft Online Services](http://go.microsoft.com/fwlink/?LinkId=262214) se aplica a los servicios en línea de Microsoft, incluido Microsoft Intune. Si los clientes además tienen una suscripción de Microsoft Intune, la [Declaración de privacidad de Microsoft Online Services](http://go.microsoft.com/fwlink/?LinkId=262214) debe leerse con la presente declaración de privacidad.
+Los clientes que compraron una suscripción a Microsoft Intune pueden usar Configuration Manager para administrar los dispositivos móviles que se conectan a través de Microsoft Intune. La [Declaración de privacidad de Microsoft Online Services](https://go.microsoft.com/fwlink/?LinkId=262214) se aplica a los servicios en línea de Microsoft, incluido Microsoft Intune. Si los clientes además tienen una suscripción de Microsoft Intune, la [Declaración de privacidad de Microsoft Online Services](https://go.microsoft.com/fwlink/?LinkId=262214) debe leerse con la presente declaración de privacidad.
 
 Todas las comunicaciones con Microsoft Intune usan HTTPS. Para configurar la suscripción de Microsoft Intune y descargar la solicitud de firma de certificado (CSR) necesaria para configurar la compatibilidad con iOS, un administrador debe iniciar sesión en Microsoft Intune mediante la cuenta profesional y la contraseña correspondiente. Estas credenciales no se almacenan en Configuration Manager. Todas las demás comunicaciones con Microsoft Intune se autentican mediante certificados PKI generados automáticamente por Microsoft Intune.
 

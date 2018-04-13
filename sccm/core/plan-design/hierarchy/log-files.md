@@ -1,9 +1,9 @@
 ---
-title: "Archivos de registro para la solución de problemas"
+title: Archivos de registro para la solución de problemas
 titleSuffix: Configuration Manager
-description: "Utilice los archivos de registro para solucionar problemas en una jerarquía de System Center Configuration Manager."
+description: Use los archivos de registro para solucionar problemas con los clientes y sistemas de sitio de Configuration Manager.
 ms.custom: na
-ms.date: 02/14/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,24 +12,24 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 9
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b0f15b0c7cf983234f41e3f202be7d46ce4954e2
-ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
+ms.openlocfilehash: 471730e056ca512f300ead234b9a8a9e4f10a835
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="log-files-in-system-center-configuration-manager"></a>Archivos de registro en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-En System Center Configuration Manager, los componentes de servidor de cliente y sitio registran información de proceso en archivos de registro individuales. Puede usar la información de los archivos de registro para ayudar a solucionar los problemas que pueden producirse en la jerarquía de Configuration Manager. De forma predeterminada, el registro de componentes de cliente y servidor está habilitado en Configuration Manager.   
+En Configuration Manager, los componentes de cliente y servidor de sitio registran información de proceso en archivos de registro individuales. Se puede usar la información de estos archivos de registro para facilitar la solución de los problemas que puedan producirse. De forma predeterminada, Configuration Manager habilita el registro para los componentes de cliente y servidor.   
 
- En las secciones siguientes se proporcionan detalles sobre los diferentes archivos de registro disponibles. Puede usar esta información para ver y supervisar los detalles operativos de los registros de cliente y servidor de Configuration Manager y para identificar información de errores que pueda ayudarle a solucionar los problemas.  
+ En las secciones siguientes se proporcionan detalles sobre los diferentes archivos de registro disponibles. Supervise los registros de cliente y servidor de Configuration Manager para obtener detalles de operaciones y vea información de los errores para solucionar los problemas.  
 
 -   [Acerca de los archivos de registro de Configuration Manager](#BKMK_AboutLogs)  
 
@@ -125,7 +125,7 @@ En System Center Configuration Manager, los componentes de servidor de cliente y
  Para ver los registros, use la herramienta de visualización de registros de Configuration Manager, CMTrace, que se encuentra en la carpeta \\SMSSetup\\Tools del medio de origen de Configuration Manager. La herramienta CMTrace también se agrega a todas las imágenes de arranque que se agregan a la Biblioteca de software.  
 
 ###  <a name="BKMK_LogOptions"></a> Configuración de opciones de registro mediante el Administrador de servicios de Configuration Manager  
- En Configuration Manager, puede cambiar la ubicación de almacenamiento de los archivos de registro y el tamaño de los archivos de registro.  
+ Puede cambiar dónde almacena Configuration Manager los archivos de registro y su tamaño.  
 
  Para modificar el tamaño de los archivos de registro, cambiar el nombre y la ubicación de estos archivos y forzar a varios componentes a escribir en un único archivo de registro, siga estos pasos:  
 
@@ -141,7 +141,7 @@ En System Center Configuration Manager, los componentes de servidor de cliente y
 8.  Seleccione **Aceptar** para guardar la configuración.  
 
 ###  <a name="BKMK_LogLocation"></a> Búsqueda de registros de Configuration Manager  
-Los archivos de registro de Configuration Manager se almacenan en diferentes ubicaciones que dependen del proceso con que se crea el archivo de registro, así como de la configuración de los sistemas de sitio. Habida cuenta de que la ubicación del registro puede variar en un equipo, use la función de búsqueda para localizar los archivos de registro correspondientes en los equipos de Configuration Manager, si necesita solucionar un escenario concreto.  
+Configuration Manager almacena los archivos de registro en varias ubicaciones. Estas ubicaciones dependen del proceso que crea el archivo de registro y la configuración de los sistemas de sitio. Habida cuenta de que la ubicación del registro puede variar en un equipo, use la función de búsqueda para localizar los archivos de registro correspondientes en los equipos de Configuration Manager, si necesita solucionar un escenario concreto.  
 
 ##  <a name="BKMK_ClientLogs"></a> Registros de cliente de Configuration Manager  
 En las siguientes secciones se indican los archivos de registro relacionados con las operaciones de cliente y la instalación de cliente.  
@@ -152,7 +152,7 @@ En la siguiente tabla se muestran los archivos de registro del cliente de Config
 |Nombre del registro|Descripción|  
 |--------------|-----------------|  
 |CAS.log|Servicio de acceso a contenido. Mantiene la caché del paquete local en el cliente.|  
-|Ccm32BitLauncher.log|Registra las acciones para iniciar aplicaciones en el cliente marcadas como "Ejecutar en modo de 32 bits".|  
+|Ccm32BitLauncher.log|Registra las acciones para iniciar aplicaciones en el cliente marcadas como *Ejecutar en modo de 32 bits*.|  
 |CcmEval.log|Registra las actividades de evaluación de estado de cliente de Configuration Manager y los detalles de los componentes necesarios para el cliente de Configuration Manager.|  
 |CcmEvalTask.log|Registra las actividades de evaluación de estado de cliente de Configuration Manager iniciadas por la tarea programada de evaluación.|  
 |CcmExec.log|Registra actividades del cliente y el servicio de host de agente SMS Este archivo de registro también incluye información acerca de cómo habilitar y deshabilitar el proxy de reactivación.|  
@@ -220,10 +220,10 @@ En la siguiente tabla se muestran los archivos de registro del cliente de Config
 |client.msi.log|Registra las tareas de instalación realizadas por client.msi. Puede usarse para solucionar problemas de instalación o eliminación de cliente.|  
 
 ###  <a name="BKMK_LogFilesforLnU"></a> Cliente para Linux y UNIX  
- El cliente de Configuration Manager para Linux y UNIX registra información en los siguientes archivos de registro.  
+ El cliente de Configuration Manager para Linux y UNIX registra información en los archivos de registro siguientes:  
 
 > [!TIP]  
->  A partir de los clientes para Linux y UNIX de la actualización acumulativa 1, puede usar CMTrace para ver los archivos de registro del cliente para Linux y UNIX.  
+>  Use CMTrace para ver los archivos de registro del cliente de UNIX y Linux.  
 
 > [!NOTE]  
 >  Cuando utilice la versión de lanzamiento del cliente para Linux y UNIX y consulte la documentación de esta sección, reemplace las referencias siguientes para cada archivo o proceso:  
@@ -266,7 +266,7 @@ Por ejemplo, puede usar el comando estándar de Linux y UNIX **logrotate** para 
 Para obtener información acerca de **logrotate**, consulte la documentación de las distribuciones de Linux y UNIX que utiliza.  
 
 ###  <a name="BKMK_LogfilesforMac"></a> Cliente para equipos Mac  
-El cliente de Configuration Manager para equipos Mac registra información en los siguientes archivos de registro.  
+El cliente de Configuration Manager para equipos Mac registra la información en los archivos de registro siguientes:  
 
 |Nombre del registro|Detalles|  
 |--------------|-------------|  
@@ -338,7 +338,8 @@ El archivo de registro SMS_DM.log en el servidor de sistema de sitio además reg
 |sinvproc.log|Registra información acerca del procesamiento de datos de inventario de software en la base de datos del sitio.|Servidor de sitio|  
 |sitecomp.log|Registra detalles sobre el mantenimiento de los componentes de sitio instalados en todos los servidores de sistema de sitio en el sitio.|Servidor de sitio|  
 |sitectrl.log|Registra cambios de configuración de sitio realizados en objetos de control de sitio en la base de datos.|Servidor de sitio|  
-|sitestat.log|Registra el proceso de supervisión de disponibilidad y espacio en disco de todos los sistemas de sitio.|Servidor de sitio|  
+|sitestat.log|Registra el proceso de supervisión de disponibilidad y espacio en disco de todos los sistemas de sitio.|Servidor de sitio|
+|SMS_PhasedDeployment.log| Archivo de registro para implementaciones por fases, una característica de versión preliminar a partir de la versión 1802 de Configuration Manager.|Sitio de nivel superior de la jerarquía de Configuration Manager|   
 |SmsAdminUI.log|Registra la actividad de consola de Configuration Manager.|Equipo que ejecuta la consola de Configuration Manager|  
 |SMSAWEBSVCSetup.log|Registra las actividades de instalación del servicio web del catálogo de aplicaciones.|Servidor de sistema de sitio|  
 |smsbkup.log|Registra el resultado de la salida del proceso de copia de seguridad de sitio.|Servidor de sitio|  
@@ -516,16 +517,15 @@ El archivo de registro SMS_DM.log en el servidor de sistema de sitio además reg
 
 En la tabla siguiente se incluyen los archivos de registro que contienen información relacionada con la puerta de enlace de administración en la nube.
 
-||||
-|-|-|-|
 |Nombre del registro|Descripción|Equipo con el archivo de registro|
-|CloudMgr.log|Registra detalles sobre la implementación del servicio de puerta de enlace de administración en la nube, el estado del servicio en curso y datos de uso asociados con el servicio.<br>Puede configurar el nivel de registro si modifica el registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level**|La carpeta *installdir* en el servidor de sitio primario o CAS.|
-|CMGSetup.log o CMG-*RoleInstanceID*-CMGSetup.log<sup>1</sup>|Registra detalles sobre la segunda fase de la implementación de Cloud Management Gateway (implementación local en Azure).<br>Puede configurar el nivel de registro mediante la configuración de **Nivel de seguimiento** [**Información** (predeterminada), **Detallado**, **Error**] en la pestaña de **configuración de Azure Portal\Cloud Services**.|**%approot%\logs** en el servidor de Azure o la carpeta SMS/Registros en el servidor de sistema de sitio|
-|CMGHttpHandler.log o CMG-*RoleInstanceID*- CMGHttpHandler.log<sup>1</sup>|Registra detalles sobre el enlace el controlador http de Cloud Management Gateway con Internet Information Services en Azure.<br>Puede configurar el nivel de registro mediante la configuración de **Nivel de seguimiento** [**Información** (predeterminada), **Detallado**, **Error**] en la pestaña de **configuración de Azure Portal\Cloud Services**.|**%approot%\logs** en el servidor de Azure o la carpeta SMS/Registros en el servidor de sistema de sitio|
-|CMGService.log o CMG-*RoleInstanceID*- CMGService.log<sup>1</sup>|Registra detalles sobre el componente principal del servicio Cloud Management Gateway en Azure.<br>Puede configurar el nivel de registro mediante la configuración de **Nivel de seguimiento** [**Información** (predeterminada), **Detallado**, **Error**] en la pestaña de **configuración de Azure Portal\Cloud Services**.|**%approot%\logs** en el servidor de Azure o la carpeta SMS/Registros en el servidor de sistema de sitio|
-|SMS_Cloud_ProxyConnector.log|Registra detalles sobre la configuración de conexiones entre el servicio de puerta de enlace de administración en la nube y el punto de conexión de la puerta de enlace de administración en la nube.|Servidor de sistema de sitio|
+|--------------|-----------------|----------------------------|  
+|CloudMgr.log|Registra detalles sobre la implementación del servicio de puerta de enlace de administración en la nube, el estado del servicio en curso y datos de uso asociados con el servicio.<br>Se puede configurar el nivel de registro si se modifica el valor **Nivel de registro** de la clave del Registro HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER.|La carpeta *installdir* en el servidor de sitio primario o CAS.|
+|CMGSetup.log<sup>1</sup>|Registra detalles sobre la segunda fase de la implementación de Cloud Management Gateway (implementación local en Azure).<br>Puede configurar el nivel de registro mediante la configuración de **Nivel de seguimiento** [**Información** (predeterminada), **Detallado**, **Error**] en la pestaña de **configuración de Azure Portal\Cloud Services**.|**%approot%\logs** en el servidor de Azure o la carpeta SMS/Registros en el servidor de sistema de sitio|
+|CMGHttpHandler.log<sup>1</sup>|Registra detalles sobre el enlace el controlador http de Cloud Management Gateway con Internet Information Services en Azure.<br>Puede configurar el nivel de registro mediante la configuración de **Nivel de seguimiento** [**Información** (predeterminada), **Detallado**, **Error**] en la pestaña de **configuración de Azure Portal\Cloud Services**.|**%approot%\logs** en el servidor de Azure o la carpeta SMS/Registros en el servidor de sistema de sitio|
+|CMGService.log<sup>1</sup>|Registra detalles sobre el componente principal del servicio Cloud Management Gateway en Azure.<br>Puede configurar el nivel de registro mediante la configuración de **Nivel de seguimiento** [**Información** (predeterminada), **Detallado**, **Error**] en la pestaña de **configuración de Azure Portal\Cloud Services**.|**%approot%\logs** en el servidor de Azure o la carpeta SMS/Registros en el servidor de sistema de sitio|
+|SMS_Cloud_</br>ProxyConnector.log|Registra detalles sobre la configuración de conexiones entre el servicio de puerta de enlace de administración en la nube y el punto de conexión de la puerta de enlace de administración en la nube.|Servidor de sistema de sitio|
 
-<sup>1</sup> Se trata de archivos de registro locales de Configuration Manager que el administrador de servicio en la nube sincroniza desde Azure Storage cada 5 minutos. Cloud Management Gateway inserta registros en Azure Storage cada 5 minutos. Por tanto, el retraso máximo es de 10 minutos. Los modificadores detallados afectan a los registros locales y remotos.
+<sup>1</sup> Se trata de archivos de registro locales de Configuration Manager que el administrador de servicio en la nube sincroniza desde Azure Storage cada cinco minutos. Cloud Management Gateway inserta registros en Azure Storage cada cinco minutos. Por tanto, el retraso máximo es de 10 minutos. Los modificadores detallados afectan a los registros locales y remotos. Los nombres de archivo reales incluyen el nombre de servicio y el identificador de instancia de rol. Por ejemplo, CMG-*NombreDeServicio*-*IDInstanciaDeRol*-CMGSetup.log
 
 - Para solucionar problemas con implementaciones, use **CloudMgr.log** y **CMGSetup.log**
 - Para solucionar problemas de estado del servicio, utilice **CMGService.log** y **SMS_Cloud_ProxyConnector.log**.
@@ -699,7 +699,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |MCSSetup.log|Registra los detalles acerca de la instalación del rol del servidor de multidifusión.|Servidor de sistema de sitio|  
 |MCSMSI.log|Registra los detalles acerca de la instalación del rol del servidor de multidifusión.|Servidor de sistema de sitio|  
 |Mcsperf.log|Registra los detalles acerca de las actualizaciones de contador de rendimiento de multidifusión.|Servidor de sistema de sitio|  
-|MP_ClientIDManager.log|Registra las respuestas de punto de administración a secuencias de tareas de solicitudes de identificador de cliente iniciadas desde PXE o desde medios de arranque.|Servidor de sistema de sitio|  
+|MP_ClientIDManager.log|Registra las respuestas de punto de administración a las solicitudes de identificador de cliente que las secuencias de tareas inician desde PXE o medios de arranque.|Servidor de sistema de sitio|  
 |MP_DriverManager.log|Registra las respuestas de puntos de administración a las solicitudes de acciones de secuencias de tareas de aplicación automática de controladores.|Servidor de sistema de sitio|  
 |OfflineServicingMgr.log|Registra detalles de los planes de mantenimiento sin conexión y de las acciones de aplicación de actualizaciones en archivos Windows Imaging Format (WIM) de sistema operativo.|Servidor de sistema de sitio|  
 |Setupact.log|Registra los detalles acerca de los registros de instalación y SysPrep de Windows.|Cliente|  
@@ -710,7 +710,8 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |smpmsi.log|Registra los detalles de instalación y configuración acerca del punto de migración de estado.|Servidor de sistema de sitio|  
 |smpperf.log|Registra las actualizaciones de contador de rendimiento de punto de migración de estado.|Servidor de sistema de sitio|  
 |smspxe.log|Registra detalles sobre las respuestas a los clientes que usan arranque PXE y detalles sobre la expansión de archivos e imágenes de arranque.|Servidor de sistema de sitio|  
-|smssmpsetup.log|Registra los detalles de instalación y configuración acerca del punto de migración de estado.|Servidor de sistema de sitio|  
+|smssmpsetup.log|Registra los detalles de instalación y configuración acerca del punto de migración de estado.|Servidor de sistema de sitio|
+| SMS_PhasedDeployment.log| Archivo de registro para implementaciones por fases, una característica de versión preliminar a partir de la versión 1802 de Configuration Manager.|Sitio de nivel superior de la jerarquía de Configuration Manager| 
 |Smsts.log|Registra las actividades de secuencia de tareas.|Cliente|  
 |TSAgent.log|Registra el resultado de las dependencias de secuencia de tareas antes de iniciar una secuencia de tareas.|Cliente|  
 |TaskSequenceProvider.log|Registra los detalles acerca de las secuencias de tareas cuando se importan, exportan o editan.|Servidor de sistema de sitio|  
@@ -729,7 +730,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 
 |Nombre del registro|Descripción|Equipo con el archivo de registro|  
 |--------------|-----------------|----------------------------|  
-|CMRcViewer.log|Registra los detalles acerca de la actividad del visor de control remoto.|En la carpeta %temp% del equipo que ejecuta el visor de control remoto|  
+|CMRcViewer.log|Registra los detalles acerca de la actividad del visor de control remoto.|En el equipo que ejecuta el visor de control remoto, en la carpeta %temp%.|  
 
 ###  <a name="BKMK_ReportLog"></a> Generación de informes  
  En la tabla siguiente se incluyen los archivos de registro de Configuration Manager que contienen información relacionada con la generación de informes.  
