@@ -1,21 +1,21 @@
 ---
-title: "Preparación de Intune para la migración de usuarios"
+title: Preparación de Intune para la migración de usuarios
 titleSuffix: Configuration Manager
-description: "Aprenda a preparar Intune en Azure para migrar usuarios desde MDM híbrida."
-keywords: 
+description: Aprenda a preparar Intune en Azure para migrar usuarios desde MDM híbrida.
+keywords: ''
 author: dougeby
 manager: dougeby
 ms.date: 12/05/2017
 ms.topic: article
 ms.prod: configmgr-hybrid
-ms.service: 
-ms.technology: 
+ms.service: ''
+ms.technology: ''
 ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
-ms.openlocfilehash: 226586f0ee42cdad98b1d74f25421685d85e0dcf
-ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
+ms.openlocfilehash: 8d636f2c46f3fa14fbc76a605d2cf55a2c0375c6
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepare-intune-for-user-migration"></a>Preparación de Intune para la migración de usuarios 
 
@@ -42,7 +42,7 @@ En Configuration Manager, agregue una recopilación a la suscripción de Intune;
 Es probable que los usuarios y grupos ya se encuentran en AAD si tiene configurada la sincronización de directorios. Para asegurarse de que los usuarios forman parte del grupo de usuarios correcto, se recomienda revisar los grupos de usuarios de Intune. Destine directivas, perfiles, aplicaciones, etc., a estos grupos. Asegúrese de que los usuarios que migre a Intune independiente formen parte de los grupos correctos. 
 
 ## <a name="configure-role-based-administration-control-rbac"></a>Configuración del control de administración basada en roles (RBAC)
-Como parte de la migración, configure todos los roles RBAC en Intune y asigne usuarios a esos roles. Tenga en cuenta que existen diferencias entre RBAC en Configuration Manager e Intune, por ejemplo, el ámbito de los recursos. Para obtener más información, consulte [Control de administración basada en roles (RBAC) con Intune](https://docs.microsoft.com/en-us/intune/role-based-access-control).
+Como parte de la migración, configure todos los roles RBAC en Intune y asigne usuarios a esos roles. Tenga en cuenta que existen diferencias entre RBAC en Configuration Manager e Intune, por ejemplo, el ámbito de los recursos. Para obtener más información, consulte [Control de administración basada en roles (RBAC) con Intune](https://docs.microsoft.com/intune/role-based-access-control).
 
 ## <a name="assign-apps-and-policies-to-aad-groups"></a>Asignación de aplicaciones y directivas a grupos de AAD
 Si ha completado la fase [Importación de datos de Configuration Manager en Microsoft Intune](migrate-import-data.md) del proceso de migración para migrar diferentes objetos de Configuration Manager en Intune, muchos de los objetos ya podrían estar asignados a grupos de AAD. Sin embargo, debe comprobar que todos los objetos (aplicaciones, directivas, perfiles, etc.) están asignados a los grupos de AAD correctos. Si asigna los objetos correctamente, los dispositivos del usuario se configuran automáticamente después de migrar el usuario; el proceso de migración debería ser transparente para los usuarios. Para obtener más información sobre la asignación de objetos a un grupo de AAD, consulte lo siguiente: 
@@ -62,7 +62,7 @@ Los scripts de PowerShell están disponibles para ayudarle a prepararse para la 
 ### <a name="steps-to-ensure-conditional-access-works-properly-after-user-migration"></a>Pasos para garantizar que el acceso condicional funciona correctamente después de la migración de usuarios
 Para que el acceso condicional funcione correctamente después de migrar usuarios y para garantizar que los usuarios sigan teniendo acceso a su servidor de correo electrónico, asegúrese de que se cumpla la siguiente condición:
 - Si se establece la configuración de nivel de acceso predeterminado de Exchange ActiveSync (DefaultAccessLevel) en Bloquear y Cuarentena, los dispositivos podrían perder el acceso al correo electrónico. 
-- Si Exchange Connector está instalado en Configuration Manager y el **nivel de acceso cuando un dispositivo móvil no está administrado por una configuración de regla** tiene un valor de **Permitir acceso**, debe instalar el [conector de Exchange local en Intune](https://docs.microsoft.com/en-us/intune/conditional-access-exchange-create#configure-exchange-on-premises-access) antes de migrar los usuarios. Configure el nivel de acceso predeterminado en Intune en la hoja **Exchange local** de **Configuración avanzada de acceso a Exchange ActiveSync**. Para obtener más información, consulte [Configuración del acceso a Exchange local](https://docs.microsoft.com/intune/conditional-access-exchange-create#configure-exchange-on-premises-access).
+- Si Exchange Connector está instalado en Configuration Manager y el **nivel de acceso cuando un dispositivo móvil no está administrado por una configuración de regla** tiene un valor de **Permitir acceso**, debe instalar el [conector de Exchange local en Intune](https://docs.microsoft.com/intune/conditional-access-exchange-create#configure-exchange-on-premises-access) antes de migrar los usuarios. Configure el nivel de acceso predeterminado en Intune en la hoja **Exchange local** de **Configuración avanzada de acceso a Exchange ActiveSync**. Para obtener más información, consulte [Configuración del acceso a Exchange local](https://docs.microsoft.com/intune/conditional-access-exchange-create#configure-exchange-on-premises-access).
 - Utilice la misma configuración para ambos conectores. El último conector que configure sobrescribe la configuración de la organización de ActiveSync escrita previamente por el otro conector. Si configura los conectores de manera diferente, podrían producirse cambios inesperados en el acceso condicional.
 - Quite usuarios del acceso condicional estableciendo destinos en Configuration Manager una vez que se migran a Intune independiente.
 

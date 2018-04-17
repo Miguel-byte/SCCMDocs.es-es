@@ -1,26 +1,27 @@
 ---
 title: Funcionalidades de Technical Preview 1601
 titleSuffix: Configuration Manager
-description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1601."
+description: Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1601.
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aae1cf2f-2c04-4f68-a03a-f4a925433c09
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: erikje
 ms.author: erikje
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 70efb483ac15ba14497b884ed753032e8e48a4b5
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: b17a89ab08c99a1c3cd8a501e7d58d5b42a110a3
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1601 para System Center Configuration Manager
 
@@ -79,11 +80,11 @@ En la versión Technical Preview 1601, hemos agregado compatibilidad con las sig
 
     -   Suscripción a Microsoft Intune. La suscripción a Microsoft Intune debe configurarse en la consola de Configuration Manager.  
 
-    -   [Requisitos previos para el registro automático en Azure AD](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   [Requisitos previos para el registro automático en Azure AD](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
 
     Para usar esta opción, debe crear una directiva de cumplimiento en Configuration Manager con las reglas específicas que se describen a continuación y establecer una directiva de acceso condicional en la consola de Intune.  Además, para asegurarse de que se permita el acceso únicamente a los equipos compatibles, debe establecer el requisito de equipo Windows en la opción **Los dispositivos deben ser compatibles**. A continuación se detallan las reglas de directiva de cumplimiento que se aplican a los equipos administrados por System Center Configuration Manager.  
 
-    -   **Requiere registro en Azure Active Directory:** esta regla comprueba si el dispositivo del usuario está unido al área de trabajo en Azure AD y, si no, se registra automáticamente en Azure AD. El registro automático solo se admite en Windows 8.1. Para equipos con Windows 7, implemente un archivo MSI para realizar el registro automático. Para más información, vea [aquí](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   **Requiere registro en Azure Active Directory:** esta regla comprueba si el dispositivo del usuario está unido al área de trabajo en Azure AD y, si no, se registra automáticamente en Azure AD. El registro automático solo se admite en Windows 8.1. Para equipos con Windows 7, implemente un archivo MSI para realizar el registro automático. Para más información, vea [aquí](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
 
     -   **Se han instalado todas las actualizaciones necesarias con una caducidad superior a X días:** esta regla comprueba si el dispositivo del usuario tiene todas las actualizaciones necesarias (especificadas en la regla **Actualizaciones automáticas requeridas**) dentro de la fecha límite y el período de gracia especificados e instala automáticamente cualquier actualización necesaria pendiente.  
 

@@ -1,26 +1,27 @@
 ---
-title: "Configuración de aplicaciones de Android for Work con directivas de configuración de aplicaciones"
+title: Configuración de aplicaciones de Android for Work con directivas de configuración de aplicaciones
 titleSuffix: Configuration Manager
-description: "Evite los problemas de configuración en los dispositivos con Android for Work mediante la implementación de directivas de configuración de aplicaciones en los usuarios antes de que ejecuten las aplicaciones."
+description: Evite los problemas de configuración en los dispositivos con Android for Work mediante la implementación de directivas de configuración de aplicaciones en los usuarios antes de que ejecuten las aplicaciones.
 ms.custom: na
 ms.date: 09/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9126d188-7780-45a4-b21d-7fcf4fad7da2
-caps.latest.revision: "0"
-caps.handback.revision: "0"
+caps.latest.revision: 0
+caps.handback.revision: 0
 author: NathBarn
 ms.author: NathBarn
 manager: angrobe
-ms.openlocfilehash: 79d1b3fed3baa74c8ad195925ccda35713cb8865
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 0b1d4993e6ddb2301121a1e32b1672425e919dea
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="apply-settings-to-android-for-work-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>Aplicación de configuración a aplicaciones Android for Work con directivas de configuración de aplicaciones en System Center Configuration Manager
 
@@ -35,7 +36,7 @@ Puede usar directivas de configuración de aplicaciones en System Center Configu
 Si el usuario especifica la configuración de manera incorrecta, la responsabilidad de corregirla recaerá en el departamento de soporte técnico y la implementación de aplicación será lenta. Para evitar estos problemas, puede usar directivas de configuración de aplicaciones para implementar la configuración necesaria en los usuarios antes de que ejecuten la aplicación. La configuración se asociada con un usuario automáticamente. No es necesario que el usuario realice ninguna acción.
 En lugar de implementar las directivas de configuración directamente en los usuarios y los dispositivos, asocie la directiva con un tipo de implementación al implementar la aplicación. La configuración de directiva se aplica cada vez que la aplicación la compruebe (normalmente, la primera vez que se ejecuta la aplicación).
 
-Las directivas de configuración de aplicaciones Android solo están disponibles en los dispositivos que ejecutan Android for Work, y se aplican a las aplicaciones aprobadas en la tienda Play for Work. Para obtener información acerca de las aplicaciones compradas por volumen de Android, vea [Implementación de aplicaciones para dispositivos Android for Work](https://docs.microsoft.com/en-us/intune/deploy-use/android-for-work-apps).
+Las directivas de configuración de aplicaciones Android solo están disponibles en los dispositivos que ejecutan Android for Work, y se aplican a las aplicaciones aprobadas en la tienda Play for Work. Para obtener información acerca de las aplicaciones compradas por volumen de Android, vea [Implementación de aplicaciones para dispositivos Android for Work](https://docs.microsoft.com/intune/deploy-use/android-for-work-apps).
 
 Para obtener más información sobre los tipos de instalación de aplicaciones, vea [Introducción a la administración de aplicaciones](/sccm/apps/understand/introduction-to-application-management).
 

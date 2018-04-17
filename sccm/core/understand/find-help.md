@@ -1,26 +1,27 @@
 ---
-title: "Búsqueda de ayuda"
+title: Búsqueda de ayuda
 titleSuffix: Configuration Manager
-description: "Busque recursos para obtener más información sobre System Center Configuration Manager."
+description: Busque recursos para obtener más información sobre System Center Configuration Manager.
 ms.custom: na
 ms.date: 12/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
-caps.latest.revision: "19"
-caps.handback.revision: "0"
+caps.latest.revision: 19
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 73c057af033a91535d79c743e05df83601112626
-ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
+ms.openlocfilehash: bcf53c11a30aa2fc3995697f36f00960035bbe57
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="find-help-for-using-system-center-configuration-manager"></a>Buscar ayuda sobre el uso de System Center Configuration Manager
 
@@ -54,7 +55,7 @@ Para obtener ayuda sobre la accesibilidad, vea [Características de accesibilida
 
 
 ## <a name="product-feedback"></a>Comentarios sobre el producto
-Notifique los posibles defectos del producto a través de la [aplicación Centro de opiniones](https://support.microsoft.com/en-us/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app) integrada en Windows 10. Cuando **agregue nuevos comentarios**, no olvide seleccionar la categoría **Enterprise Management** y, después, elija una de las subcategorías siguientes:
+Notifique los posibles defectos del producto a través de la [aplicación Centro de opiniones](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app) integrada en Windows 10. Cuando **agregue nuevos comentarios**, no olvide seleccionar la categoría **Enterprise Management** y, después, elija una de las subcategorías siguientes:
  - Cliente de Configuration Manager
  - Consola de Configuration Manager
  - Implementación del sistema operativo de Configuration Manager

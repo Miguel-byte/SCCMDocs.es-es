@@ -1,25 +1,26 @@
 ---
-title: "Administrar acceso al correo electrónico"
+title: Administrar acceso al correo electrónico
 titleSuffix: Configuration Manager
-description: "Aprenda a usar el acceso condicional de System Center Configuration Manager para administrar el acceso al correo electrónico de Exchange."
+description: Aprenda a usar el acceso condicional de System Center Configuration Manager para administrar el acceso al correo electrónico de Exchange.
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa648e73-5fb8-4818-ab57-7466ffaf888e
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: a83c2030de8a146dad7bf2258e8a983c8ab6c45e
-ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
+ms.openlocfilehash: e36674d27757daab9ced4e7e8b51942a4929b5ff
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-email-access-in-system-center-configuration-manager"></a>Administrar el acceso a correo electrónico en System Center Configuration Manager
 
@@ -47,7 +48,7 @@ Puede controlar el acceso a Exchange Online y Exchange local desde el cliente de
 
 Las aplicaciones de escritorio de Office pueden tener acceso a Exchange Online en equipos que ejecutan:  
 
--   Office 2013 de escritorio y posterior con [autenticación moderna](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) habilitada.  
+-   Office 2013 de escritorio y posterior con [autenticación moderna](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) habilitada.  
 
 -   Windows 7.0 o Windows 8.1  
 
@@ -171,11 +172,11 @@ Se bloquearán los exploradores no admitidos. Igualmente no se admiten las aplic
 #### <a name="for-exchange-online-and-tenants-in-the-new-exchange-online-dedicated-environment"></a>Para Exchange Online (y los inquilinos del nuevo entorno de Exchange Online dedicado)
 
 >[!NOTE]
->También puede crear la directiva de acceso condicional en la consola de administración de Azure AD. La consola de administración de Azure AD le permite crear las directivas de acceso condicional de dispositivos de Intune (denominada directiva de acceso condicional basada en dispositivos en Azure AD), además de otras directivas de acceso condicional, como la autenticación multifactor. También puede configurar directivas de acceso condicional para aplicaciones empresariales de terceros, como Salesforce y Box, compatibles con Azure AD. Para obtener más información, consulte [Establecimiento de una directiva de acceso condicional basado en dispositivos de Azure Active Directory para el control de acceso a aplicaciones conectadas a Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
+>También puede crear la directiva de acceso condicional en la consola de administración de Azure AD. La consola de administración de Azure AD le permite crear las directivas de acceso condicional de dispositivos de Intune (denominada directiva de acceso condicional basada en dispositivos en Azure AD), además de otras directivas de acceso condicional, como la autenticación multifactor. También puede configurar directivas de acceso condicional para aplicaciones empresariales de terceros, como Salesforce y Box, compatibles con Azure AD. Para obtener más información, consulte [Establecimiento de una directiva de acceso condicional basado en dispositivos de Azure Active Directory para el control de acceso a aplicaciones conectadas a Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
 
  Las directivas de acceso condicional de Exchange Online utilizan el siguiente flujo para evaluar si se permitirá o bloqueará el acceso a los dispositivos.  
 
- ![ConditionalAccess8 &#45; 1](media/ConditionalAccess8-1.png)  
+ ![ConditionalAccess8 & #45; 1](media/ConditionalAccess8-1.png)  
 
  Para acceder al correo electrónico, el dispositivo debe:  
 
@@ -185,7 +186,7 @@ Se bloquearán los exploradores no admitidos. Igualmente no se admiten las aplic
 
 -   Registrar el dispositivo en Azure Active Directory, lo que se lleva a cabo automáticamente si el dispositivo está inscrito con Intune.  
 
-     Los equipos unidos a un dominio deben configurarse para que [registren automáticamente el dispositivo](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) con Azure Active Directory.  
+     Los equipos unidos a un dominio deben configurarse para que [registren automáticamente el dispositivo](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) con Azure Active Directory.  
 
 -   Tener activado el correo electrónico, que asocia el identificador de Exchange ActiveSync del dispositivo con el registro del dispositivo en Azure Active Directory (aplicable solo a dispositivos iOS y Android).  
 
@@ -297,7 +298,7 @@ Se bloquearán los exploradores no admitidos. Igualmente no se admiten las aplic
 ### <a name="for-exchange-on-premises-and-tenants-in-the-legacy-exchange-online-dedicated-environment"></a>Para Exchange local (y los inquilinos del entorno heredado de Exchange Online dedicado)  
  Las directivas de acceso condicional de Exchange local y los inquilinos del entorno heredado de Exchange Online dedicado utilizan el siguiente flujo para evaluar si se deben permitir o bloquear los dispositivos.  
 
- ![ConditionalAccess8 &#45; 2](media/ConditionalAccess8-2.png)  
+ ![ConditionalAccess8 & #45; 2](media/ConditionalAccess8-2.png)  
 
 ##### <a name="to-enable-the-exchange-on-premises-policy"></a>Para habilitar la directiva de Exchange local  
 

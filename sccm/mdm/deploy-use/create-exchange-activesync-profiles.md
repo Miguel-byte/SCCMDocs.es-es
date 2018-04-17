@@ -1,30 +1,31 @@
 ---
-title: "Creación de perfiles de correo electrónico de Exchange ActiveSync"
+title: Creación de perfiles de correo electrónico de Exchange ActiveSync
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo crear y configurar perfiles de correo electrónico en System Center Configuration Manager que funcionen con Microsoft Intune."
+description: Obtenga información sobre cómo crear y configurar perfiles de correo electrónico en System Center Configuration Manager que funcionen con Microsoft Intune.
 ms.custom: na
 ms.date: 07/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 120442be-179e-450c-a0c4-284046895da3
-caps.latest.revision: "4"
-caps.handback.revision: "0"
+caps.latest.revision: 4
+caps.handback.revision: 0
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 5fc0d5e68e27b3bde9ed3aa45a439c8b333da1d6
-ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
+ms.openlocfilehash: ab429e2702ab1595b035c8e2895dad584be4061a
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exchange-activesync-email-profiles-in-system-center-configuration-manager"></a>Perfiles de correo electrónico de Exchange ActiveSync en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Al usar Microsoft Intune y Exchange ActiveSync, puede configurar dispositivos con restricciones y perfiles de correo electrónico. Así, los usuarios pueden acceder a los correos electrónicos corporativos desde sus dispositivos con un trabajo de configuración mínimo por su parte.  
 
@@ -37,7 +38,7 @@ Al usar Microsoft Intune y Exchange ActiveSync, puede configurar dispositivos co
 - Samsung KNOX Standard (4 y posterior)
 - Android for Work
 
-Para implementar los perfiles de correo electrónico en los dispositivos, debe inscribirlos en Intune. Para obtener información sobre cómo inscribir dispositivos, consulte [Administrar dispositivos móviles con Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).
+Para implementar los perfiles de correo electrónico en los dispositivos, debe inscribirlos en Intune. Para obtener información sobre cómo inscribir dispositivos, consulte [Administrar dispositivos móviles con Microsoft Intune](https://technet.microsoft.com/library/dn646962.aspx).
 
 > [!NOTE]
 > Intune proporciona dos perfiles de correo electrónico de Android for Work, uno para cada una de las aplicaciones de correo electrónico, que son Gmail y Nine Work. Estas aplicaciones están disponibles en Google Play Store y admiten conexiones a Exchange. Para habilitar la conectividad de correo electrónico, implementar una de estas aplicaciones de correo electrónico en dispositivos de los usuarios y después crear e implementar el perfil adecuado. Es posible que las aplicaciones de correo electrónico como Nine Work no sean gratuitas. Revise los detalles de licencias de la aplicación o póngase en contacto con la empresa de la aplicación para plantear cualquier pregunta.

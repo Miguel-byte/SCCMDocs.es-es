@@ -1,29 +1,30 @@
 ---
-title: "Novedades de la versión 1606"
+title: Novedades de la versión 1606
 titleSuffix: Configuraton Manager
-description: "Obtenga detalles sobre los cambios y las nuevas funciones introducidas en la versión 1606 de System Center Configuration Manager."
+description: Obtenga detalles sobre los cambios y las nuevas funciones introducidas en la versión 1606 de System Center Configuration Manager.
 ms.custom: na
 ms.date: 12/30/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: e26519de8ce0b905fd52ca6ab0762a406d2f1e2c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 9c948e0ff84c4741d77b9096e52d3abd765aba7b
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>Novedades de la versión 1606 de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 La actualización 1606 para System Center Configuration Manager está disponible como una actualización en consola para sitios instalados previamente que ejecutan la versión 1511 o 1602. La versión 1511 es la versión de línea base inicial que se usa para instalar sitios nuevos de Configuration Manager.
 > [!TIP]  
@@ -89,7 +90,7 @@ Para navegar entre los distintos nodos de un área de trabajo, ahora puede escri
 A continuación se presentan cambios en la administración de la consola de Configuration Manager:
 ### <a name="oms-connector"></a>Conector de OMS
 
-Ahora puede conectar Configuration Manager como recopilaciones de System Center Configuration Manager a [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/en-us/documentation/articles/operations-management-suite-overview/). De este modo, los datos (como colecciones) de la implementación de Configuration Manager estarán visibles en OMS. Para obtener más información, vea [Sincronizar datos de Configuration Manager con Microsoft Operations Management Suite aquí](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md).
+Ahora puede conectar Configuration Manager como recopilaciones de System Center Configuration Manager a [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/documentation/articles/operations-management-suite-overview/). De este modo, los datos (como colecciones) de la implementación de Configuration Manager estarán visibles en OMS. Para obtener más información, vea [Sincronizar datos de Configuration Manager con Microsoft Operations Management Suite aquí](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md).
 
 El conector de OMS es una característica de la versión preliminar. Para habilitarla, consulte [Use pre-release features from updates](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease) (Uso de características de la versión preliminar a partir de las actualizaciones).
 

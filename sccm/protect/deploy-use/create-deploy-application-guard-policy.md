@@ -16,11 +16,11 @@ caps.latest.revision: 5
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: faa1a50b29fe4ba966812441243b81ee2d31b024
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 3f122dc7ba1bce5aaf8fe0ac6e4c75165a9b5a0b
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Creación e implementación de directivas de Protección de aplicaciones de Windows Defender 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
@@ -29,7 +29,7 @@ Puede crear e implementar directivas de [Protección de aplicaciones de Windows 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para crear e implementar una directiva de Protección de aplicaciones de Windows Defender, debe usar la actualización de Windows 10 Fall Creator (1709). Además, los dispositivos Windows 10 en los que implementa la directiva deben configurarse con una directiva de aislamiento de red. Para obtener más información, consulte [Información general de la Protección de aplicaciones de Windows Defender](https://docs.microsoft.com/en-us/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview). 
+Para crear e implementar una directiva de Protección de aplicaciones de Windows Defender, debe usar la actualización de Windows 10 Fall Creator (1709). Además, los dispositivos Windows 10 en los que implementa la directiva deben configurarse con una directiva de aislamiento de red. Para obtener más información, consulte [Información general de la Protección de aplicaciones de Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview). 
 
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>Cree una directiva y examine la configuración disponible:

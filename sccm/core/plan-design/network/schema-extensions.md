@@ -7,31 +7,32 @@ ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
-caps.latest.revision: "8"
-caps.handback.revision: "0"
+caps.latest.revision: 8
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: angrobe
 robots: noindex
-ms.openlocfilehash: 1fa1e3be3d08c9aa1f9271868f6b01e20b63e444
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: cc658166a7094f716db0ee495bc2338b52303b50
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="schema-extensions-for-system-center-configuration-manager"></a>Extensiones de esquema para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede extender el esquema de Active Directory para admitir Configuration Manager. De este modo, se edita el esquema de Active Directory de un bosque para agregar un nuevo contenedor y varios atributos que los sitios de Configuration Manager usan para publicar información de claves en Active Directory a la que los clientes pueden acceder de forma segura. Esta información puede simplificar la implementación y configuración de clientes, y ayuda a los clientes a buscar los recursos del sitio, como servidores con contenido distribuido o que ofrezcan varios servicios a los clientes.  
 
 -   Le recomendamos que extienda el esquema de Active Directory, aunque no es obligatorio.  
 
-Antes de [extender el esquema de Active Directory](https://docs.microsoft.com/en-us/sccm/core/plan-design/network/extend-the-active-directory-schema), debe estar familiarizado con los Servicios de dominio de Active Directory y sentirse cómodo con la [modificación del esquema de Active Directory](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx).  
+Antes de [extender el esquema de Active Directory](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema), debe estar familiarizado con los Servicios de dominio de Active Directory y sentirse cómodo con la [modificación del esquema de Active Directory](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx).  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Consideraciones para extender el esquema de Active Directory para Configuration Manager  
 

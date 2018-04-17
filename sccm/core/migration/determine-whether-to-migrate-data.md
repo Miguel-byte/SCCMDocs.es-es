@@ -1,26 +1,27 @@
 ---
-title: "Selección del contenido para migrar"
+title: Selección del contenido para migrar
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre qué datos puede y no puede migrar a System Center Configuration Manager."
+description: Obtenga información sobre qué datos puede y no puede migrar a System Center Configuration Manager.
 ms.custom: na
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99222dc8-0e1e-4513-8302-7a1acf671e9b
-caps.latest.revision: "6"
-caps.handback.revision: "0"
+caps.latest.revision: 6
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 822bc5b4e17bdc611243fadfb13c551b0a8237a8
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 0718b7863c45f7b7e56380d4a2fa74e8d1a17b54
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="determine-whether-to-migrate-data-to-system-center-configuration-manager"></a>Determinar si se migrarán datos a System Center Configuration Manager
 
@@ -59,8 +60,6 @@ Estas modificaciones no afectan a los datos de la base de datos del sitio de ori
 
 ### <a name="objects-that-you-can-migrate-from-system-center-2012-configuration-manager-or-system-center-configuration-manager-current-branch"></a>Objetos que se pueden migrar desde System Center 2012 Configuration Manager o desde la rama actual de System Center Configuration Manager
 
--   Anuncios  
-
 -   Aplicaciones para System Center 2012 Configuration Manager y versiones posteriores  
 
 -   Entorno virtual de App-V desde System Center 2012 Configuration Manager y versiones posteriores  
@@ -76,6 +75,8 @@ Estas modificaciones no afectan a los datos de la base de datos del sitio de ori
     -   Líneas de base de configuración  
 
     -   Elementos de configuración  
+
+-   Implementaciones  
 
 -   Implementación de sistema operativo:  
 

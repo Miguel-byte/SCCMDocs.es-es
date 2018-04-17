@@ -1,25 +1,26 @@
 ---
 title: Funcionalidades de Technical Preview 1609
 titleSuffix: Configuration Manager
-description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1609."
+description: Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1609.
 ms.custom: na
 ms.date: 01/23/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.topic: article
 ms.assetid: e2a59116-b2e5-4dd2-90eb-0b8a5eb50b56
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: e1cceae5f73d003be2fe64df9e6dbaa7badaf0c7
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 4beca8479e5adbfa24b597769b792fd91bed9a2c
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="capabilities-in-technical-preview-1609-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1609 para System Center Configuration Manager
 
@@ -95,7 +96,7 @@ El procedimiento para crear e implementar una aplicación de Configuration Manag
 
 Se han agregado muchas opciones nuevas que se pueden usar en los elementos de configuración de varias plataformas de dispositivo.
 Son opciones que existían con anterioridad en Microsoft Intune en una configuración independiente y que ahora están disponibles al usar Intune con Configuration Manager.
-Si necesita ayuda con cualquiera de estas opciones, abra [Administrar la configuración y las características de los dispositivos con directivas de Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) y luego seleccione el subtema de configuración de la plataforma que quiera.
+Si necesita ayuda con cualquiera de estas opciones, abra [Administrar la configuración y las características de los dispositivos con directivas de Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) y luego seleccione el subtema de configuración de la plataforma que quiera.
 
 
 ### <a name="new-settings-for-android-devices"></a>Nuevas opciones para dispositivos Android
