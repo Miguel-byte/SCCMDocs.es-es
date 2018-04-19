@@ -1,7 +1,7 @@
 ---
-title: "Creación de elementos de configuración para dispositivos Windows 8.1 y Windows 10 administrados con Intune"
+title: Creación de elementos de configuración para dispositivos Windows 8.1 y Windows 10 administrados con Intune
 titleSuffix: Configuration Manager
-description: "Use el elemento de configuración de Windows 10 de System Center Configuration Manager para administrar la configuración de los equipos con Windows 10."
+description: Use el elemento de configuración de Windows 10 de System Center Configuration Manager para administrar la configuración de los equipos con Windows 10.
 ms.custom: na
 ms.date: 07/31/2017
 ms.prod: configuration-manager
@@ -12,8 +12,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 20
+caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
@@ -374,13 +374,13 @@ Esta configuración es para dispositivos con Windows 10, y versiones posteriores
 |**Permitir autorrelleno**|Permitir el uso de la característica Autorrellenar del explorador de Microsoft Edge.|  
 |**Permitir administrador de contraseñas**|Permitir el uso de la característica Administrador de contraseñas del explorador de Microsoft Edge.|  
 |**Ubicación de la lista de sitios del modo de empresa**|Especifica dónde se encuentra la lista de sitios web que se abrirá en modo de empresa. Los usuarios no pueden editar esta lista.|
-|**Bloquear acceso a about:flags**|Impida que el usuario final acceda a la página about:flags de Edge que contiene configuración experimental y para desarrolladores.|
+|**Bloquear acceso a about:flags**|Impida que el usuario final acceda a la página about:flags de Microsoft Edge que contiene configuración experimental y para desarrolladores.|
 |**Invalidación de avisos de SmartScreen**|Permite al usuario final omitir las advertencias del filtro SmartScreen sobre los sitios web que pueden ser malintencionados.|
 |**Invalidación de avisos de SmartScreen para archivos**|Permite al usuario final omitir las advertencias del filtro SmartScreen sobre cómo descargar archivos que pueden ser malintencionados.|
 |**Dirección IP de Localhost para WebRTC**|Impida que la dirección IP de Localhost de los usuarios se muestre cuando se realicen llamadas telefónicas con el protocolo RTC web.|
 |**Motor de búsqueda predeterminado**|Especifique el motor de búsqueda predeterminado que se usará. Los usuarios finales pueden cambiar este valor en cualquier momento.|
 |**URL de archivo XML OpenSearch**|Puede usar un archivo OpenSearch XML para crear un servicio de búsqueda para Microsoft Edge.<br>Para obtener más información, consulte [OpenSearch](https://msdn.microsoft.com/library/windows/desktop/dd940337).|
-|**Páginas principales (solo escritorio)**|Agregue una lista de sitios que quiera usar como páginas principales en el explorador Edge (solo dispositivos de escritorio).|  
+|**Páginas principales (solo escritorio)**|Agregue una lista de sitios que quiera usar como páginas principales en el explorador Microsoft Edge (solo dispositivos de escritorio).|  
 
 
 ### <a name="windows-defender"></a>Windows Defender
