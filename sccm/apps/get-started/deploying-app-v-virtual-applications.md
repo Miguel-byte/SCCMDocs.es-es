@@ -1,26 +1,27 @@
 ---
-title: "Implementación de aplicaciones virtuales de App-V"
+title: Implementación de aplicaciones virtuales de App-V
 titleSuffix: Configuration Manager
 description: Consulte las consideraciones que debe tener en cuenta al crear e implementar aplicaciones virtuales.
 ms.custom: na
-ms.date: 02/16/2017
+ms.date: 03/12/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-app
+ms.technology:
+- configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
-caps.latest.revision: "11"
-caps.handback.revision: "0"
+caps.latest.revision: 11
+caps.handback.revision: 0
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: bf324f458c37fa137e24179eb4455fcbe75c855d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 99c259a20a7e9c9f34d7b355e6fea5d4c6861392
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-app-v-virtual-applications-with-system-center-configuration-manager"></a>Implementar aplicaciones virtuales de App-V con System Center Configuration Manager
 
@@ -46,7 +47,7 @@ Además de los otros requisitos y procedimientos de System Center Configuration 
 
 -   Al secuenciar una aplicación, debe guardar el paquete en una ubicación a la que pueda tener acceso Configuration Manager. A continuación, puede crear una implementación de aplicación que contenga esta aplicación virtual.  
 
--   Configuration Manager no admite el uso de la función de la memoria caché compartida de solo lectura de App-V.  
+-   Configuration Manager no admite el uso de la función de la memoria caché compartida de solo lectura de App-V 4.6.  
 
 -   Configuration Manager admite la característica de almacén de contenido compartido en App-V 5.  
 
@@ -66,7 +67,7 @@ Además de los otros requisitos y procedimientos de System Center Configuration 
      También debe actualizar el cliente de App-V 4.6 SP1 con la revisión descrita en el artículo [2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322) de Knowledge Base para poder implementar correctamente aplicaciones virtuales.  
 
 -   **App-V 5, App-V 5.0 SP1, App-V 5.0 SP2, App-V 5.0 SP3 y App-V 5.1:** para App-V 5.0 SP2, debe instalar la [revisión 5](https://support.microsoft.com/en-us/kb/2963211) o usar App-V 5.0 SP3.  
--   **App-V 5.2**: se integra en Windows 10 Enterprise (Anniversary Update y versiones posteriores).
+-   **App-V 5.2**: se integra en Windows 10 Education (versión 1607 en adelante), Windows 10 Enterprise (versión 1607 en adelante) y Windows Server 2016.
 
 Para obtener más información sobre App-V en Windows 10, vea los temas siguientes:
 
@@ -83,12 +84,12 @@ Para obtener más información sobre App-V en Windows 10, vea los temas siguient
 
 3.   **Distribuir**: la distribución es el proceso de hacer que las aplicaciones de App-V estén disponibles en los puntos de distribución de Configuration Manager.
 
-4.   **Implementar**: la implementación es el proceso de hacer que la aplicación esté disponible en los equipos cliente. Esto se conoce como streaming en una infraestructura completa de App-V.  
+4.   **Implementar**: la implementación es el proceso de hacer que la aplicación esté disponible en los equipos cliente. Esto se conoce como publicación y streaming en una infraestructura completa de App-V.  
 
 ##  <a name="configuration-manager-virtual-application-delivery-methods"></a>Métodos de entrega de aplicaciones virtuales en Configuration Manager  
 Configuration Manager admite dos métodos para la entrega de aplicaciones virtuales a los clientes: entrega por streaming y entrega local (descarga y ejecución).
 
-Cuando decida qué método de entrega va a autilizar, compare el requisitos de espacio en disco reducido para la entrega mediante la transmisión por secuencias, frente a la disponibilidad garantizada de aplicaciones de App-V que ofrece la entrega local. El aumento de espacio en el disco del cliente que se requiere para la entrega local podría ser mejor que transmitir contenido para que los usuarios tengan siempre la aplicación disponible desde cualquier ubicación.  
+Cuando decida qué método de entrega va a utilizar, compare el requisito de espacio en disco reducido para la entrega mediante la transmisión por secuencias, frente a la disponibilidad garantizada de aplicaciones de App-V que ofrece la entrega local. El aumento de espacio en el disco del cliente que se requiere para la entrega local podría ser mejor que transmitir contenido para que los usuarios tengan siempre la aplicación disponible desde cualquier ubicación.  
 
 ###  <a name="streaming-delivery"></a>Entrega mediante transmisión por secuencias
 Al usar Configuration Manager para administrar el cliente de App-V, admite el streaming de aplicaciones virtuales a través de HTTP o HTTPS desde un punto de distribución. La transmisión por secuencias a través de HTTP o HTTPS está habilitada de forma predeterminada, y se configura en el cuadro de diálogo de propiedades del punto de distribución. Cuando implementa una aplicación virtual en equipos cliente y un usuario la ejecuta, el cliente de Configuration Manager se pone en contacto con un punto de administración para determinar qué punto de distribución se va a usar. Después, la aplicación se transmite por streaming desde el punto de distribución.  
@@ -100,7 +101,7 @@ Utilice la información de esta table como guía para decidir si la entrega en s
 |Este método utiliza los protocolos de red estándar para transmitir el contenido del paquete desde puntos de distribución.<br /><br /> Accesos directos al programa para aplicaciones virtuales invocan una conexión al punto de distribución; por lo tanto, la entrega de la aplicación virtual se realiza a petición.<br /><br /> Este método es apropiado para clientes que tengan conexiones de ancho de banda alto a los puntos de distribución.<br /><br /> Las aplicaciones virtuales actualizadas distribuidas en toda la empresa estarán disponibles cuando los clientes reciben la directiva que les informa de la sustitución de la versión actual, y que van a descargar sólo los cambios realizados desde la versión anterior.<br /><br /> Se definen permisos de acceso al punto de distribución para que los usuarios no tengan acceso a aplicaciones ni paquetes no autorizados.|Las aplicaciones virtuales no se transmiten por secuencias hasta que el usuario ejecuta la aplicación por primera vez. En este escenario, un usuario podría recibir los accesos directos a programas para las aplicaciones virtuales y, a continuación, desconectarse de la red antes de ejecutar las aplicaciones virtuales por primera vez. Si el usuario intenta ejecutar la aplicación virtual mientras el cliente está sin conexión, el usuario verá un error y no podrá ejecutar la aplicación virtualizada porque no hay ningún punto de distribución de Configuration Manager disponible para transmitir por streaming la aplicación. La aplicación estará disponible hasta que el usuario se vuelve a conectar a la red y ejecute la aplicación.<br /><br /> Para evitarlo, puede usar el método de entrega local de aplicaciones virtuales a clientes o habilitar la administración de clientes basados en Internet para completar una entrega mediante transmisión por secuencias.|  
 
 ###  <a name="local-delivery-download-and-execute"></a>Entrega local (descargar y ejecutar)  
-Cuando utiliza el método de entrega local, el cliente de Configuration Manager primero descarga el paquete de aplicación virtual completo en la caché de cliente de Configuration Manager. Configuration Manager indica a continuación al cliente de App-V que transmita la aplicación desde la caché de Configuration Manager en la caché de App-V. Si implementa una aplicación virtual en equipos cliente y su contenido no está en la memoria caché de App-V, el cliente de App-V transmite por streaming el contenido de la aplicación desde la memoria caché del cliente de Configuration Manager a la memoria caché de App-V y, luego, ejecuta la aplicación. Una vez ejecutada correctamente la aplicación, puede configurar el cliente de Configuration Manager para que elimine las versiones anteriores del paquete durante el siguiente ciclo de eliminación, o para que las mantenga en la memoria caché del cliente de Configuration Manager.  
+La descarga y ejecución es el método más común cuando se usa Configuration Manager, ya que es el que mejor imita cómo se entregan otros formatos de aplicación con Configuration Manager. Cuando utiliza el método de entrega local, el cliente de Configuration Manager primero descarga el paquete de aplicación virtual completo en la caché de cliente de Configuration Manager. Configuration Manager indica a continuación al cliente de App-V que transmita la aplicación desde la caché de Configuration Manager en la caché de App-V. Si implementa una aplicación virtual en equipos cliente y su contenido no está en la memoria caché de App-V, el cliente de App-V transmite por streaming el contenido de la aplicación desde la memoria caché del cliente de Configuration Manager a la memoria caché de App-V y, luego, ejecuta la aplicación. Una vez ejecutada correctamente la aplicación, puede configurar el cliente de Configuration Manager para que elimine las versiones anteriores del paquete durante el siguiente ciclo de eliminación, o para que las mantenga en la memoria caché del cliente de Configuration Manager. Conservar el contenido localmente puede sacar partido de métodos de optimización de entrega de contenido de paquetes como BranchCache y caché del mismo nivel.
 
 Utilice la información de esta table como guía para decidir si la entrega local es el mejor método de entrega para usted:   
 
@@ -177,7 +178,7 @@ Una aplicación típica de App-V 5 podría contener los siguientes archivos:
 
 -   Un archivo de configuración de implementación  
 
-El archivo de configuración de usuario tiene opciones que se aplican solo al usuario que ha iniciado la sesión. Por ejemplo, puede editar los archivos de configuración para cambiar la información acerca de el acceso directo de la aplicación que se implementará en los usuarios. También puede crear una aplicación de Configuration Manager con varios tipos de implementación. Cada tipo de implementación puede contener un archivo de configuración de usuario distinto y usar reglas de requisitos para garantizar que se instalan en los usuarios correspondientes.  
+El archivo de configuración de usuario tiene opciones que se aplican solo al usuario que ha iniciado la sesión. Por ejemplo, puede editar los archivos de configuración para cambiar la información acerca del acceso directo de la aplicación que se implementará en los usuarios. También puede crear una aplicación de Configuration Manager con varios tipos de implementación. Cada tipo de implementación puede contener un archivo de configuración de usuario distinto y usar reglas de requisitos para garantizar que se instalan en los usuarios correspondientes.  
 
 El archivo de configuración de implementación tiene valores que se aplican al equipo, como la configuración del Registro. El archivo también puede tener la configuración de usuario, que se aplicará a todos los usuarios.  
 

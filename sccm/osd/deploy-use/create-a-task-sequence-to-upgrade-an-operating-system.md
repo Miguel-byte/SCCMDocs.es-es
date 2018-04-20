@@ -1,9 +1,9 @@
 ---
-title: Cree una secuencia de tareas para actualizar un sistema operativo
+title: Creación de una secuencia de tareas de actualización de SO
 titleSuffix: Configuration Manager
 description: Use una secuencia de tareas para actualizar automáticamente de Windows 7 o una versión posterior a Windows 10
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.latest.revision: 12
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 91d3bf5b1488eb7eac52c7426e4bdeeb92ff43b8
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 48a5e7aa381924e3c0ad052833c9588e3dffa4f5
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-operating-system-in-system-center-configuration-manager"></a>Cree una secuencia de tareas para actualizar un sistema operativo en System Center Configuration Manager
 
@@ -87,9 +87,16 @@ Use secuencias de tareas en Configuration Manager para actualizar automáticamen
 
 
 ## <a name="configure-pre-cache-content"></a>Configuración del contenido de la caché previa
-La característica de caché previa para las implementaciones disponibles de secuencias de tareas permite que los clientes descarguen el contenido del paquete de actualización del sistema operativo relevante antes de que un usuario instale la secuencia de tareas.
+<!--1021244-->
+La característica de caché previa para las implementaciones disponibles de secuencias de tareas permite que los clientes descarguen el contenido del paquete de actualización del sistema operativo relevante antes de que un usuario instale la secuencia de tareas.  
+
 > [!TIP]  
-> Esta característica se introdujo por primera vez en la versión 1702 como una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1706, ya no es una característica de versión preliminar.
+> Esta característica se introdujo por primera vez en la versión 1702 como una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1706, ya no es una característica de versión preliminar.  
+
+
+> [!Note]  
+> Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para más información, vea [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
 Por ejemplo, solo quiere una secuencia de tareas de actualización en contexto para todos los usuarios y tiene muchas arquitecturas y lenguajes. En versiones anteriores, el contenido se comienza a descargar cuando el usuario instala una implementación de secuencia de tareas disponible desde el Centro de software. Este retraso agrega tiempo adicional antes de que la instalación esté lista para iniciarse. Se descarga todo el contenido al que se hace referencia en la secuencia de tareas. Este contenido incluye el paquete de actualización de sistema operativo para todos los lenguajes y arquitecturas. Si cada paquete de actualización tiene aproximadamente tres GB de tamaño, el contenido total es muy grande.
 

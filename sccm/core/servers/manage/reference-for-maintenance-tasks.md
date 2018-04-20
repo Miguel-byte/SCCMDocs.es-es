@@ -1,30 +1,31 @@
 ---
 title: Referencia de las tareas de mantenimiento
 titleSuffix: Configuration Manager
-description: "Vea la información de las tareas de mantenimiento del sitio de System Center Configuration Manager y compruebe si están habilitadas de forma predeterminada."
+description: Vea la información de las tareas de mantenimiento del sitio de System Center Configuration Manager y compruebe si están habilitadas de forma predeterminada.
 ms.custom: na
 ms.date: 3/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
-caps.latest.revision: "16"
-caps.handback.revision: "0"
+caps.latest.revision: 16
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 3f67bddcb7233b62769271871354c86c5440e320
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 21b5e47efd2678f78fe7b7c0e10524ec7141634d
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>Referencia de tareas de mantenimiento para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En este tema se describen los detalles de las tareas de mantenimiento del sitio de System Center Configuration Manager y se especifica en qué tipos de sitio están disponibles. Además, en cada entrada también se indica si la tarea está habilitada o no de forma predeterminada. Para obtener más información sobre la planeación y la configuración de sitios para ejecutar tareas de mantenimiento, consulte [Tareas de mantenimiento para System Center Configuration Manager](../../../core/servers/manage/maintenance-tasks.md).  
 
@@ -105,7 +106,7 @@ En este tema se describen los detalles de las tareas de mantenimiento del sitio 
 -   **Sitio primario**: habilitado    
 -   Sitio secundario: no disponible  
 
-**Eliminar datos de detección antiguos**: use esta tarea para eliminar de la base de datos los datos de detección antiguos. Estos datos pueden contener registros de detección de latidos, detección de redes y métodos de detección de Active Directory Domain Services (sistema, usuario y grupo). Cuando se ejecuta esta tarea en un sitio, se eliminan los datos asociados a ese sitio, y esos cambios se replican a otros sitios. Para obtener información sobre la detección, consulte [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md) (Ejecutar la detección para System Center Configuration Manager).  
+**Eliminar datos de detección antiguos**: use esta tarea para eliminar de la base de datos los datos de detección antiguos. Estos datos pueden contener registros de detección de latidos, detección de redes y métodos de detección de Active Directory Domain Services (sistema, usuario y grupo). Esta tarea también quitará los dispositivos antiguos marcados como retirados. Cuando se ejecuta esta tarea en un sitio, se eliminan los datos asociados a ese sitio, y esos cambios se replican a otros sitios. Para obtener información sobre la detección, consulte [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md) (Ejecutar la detección para System Center Configuration Manager).  
 
 -   Sitio de administración central: no disponible    
 -   **Sitio primario**: habilitado    
@@ -237,7 +238,7 @@ Esta tarea solo funciona en los recursos que son clientes de Configuration Manag
 -   **Sitio primario**: no habilitado    
 -   Sitio secundario: no disponible  
 
-**Eliminar sitios y subredes obsoletos de detección de bosque**: use esta tarea para eliminar datos sobre sitios, subredes y dominios de Active Directory que el método de detección de bosques de Active Directory no ha detectado en los últimos 30 días. Esto elimina los datos de detección, pero no afecta a los límites creados desde estos datos de detección. Para obtener más información, consulte [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md) (Ejecutar la detección para System Center Configuration Manager).  
+**Eliminar sitios y subredes obsoletos de detección de bosque**: use esta tarea para eliminar datos sobre sitios, subredes y dominios de Active Directory que el método de detección de bosques de Active Directory no ha detectado en los últimos 30 días. Esto elimina los datos de detección, pero no afecta a los límites creados desde estos datos de detección. Para obtener más información, consulte [Ejecutar la detección para System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md).  
 
 -   **Sitio de administración central**: habilitado    
 -   **Sitio primario**: habilitado    

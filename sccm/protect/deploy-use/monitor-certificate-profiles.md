@@ -1,5 +1,5 @@
 ---
-title: "Supervisión de perfiles de certificado"
+title: Supervisión de perfiles de certificado
 titleSuffix: Configuration Manager
 description: Aprenda a supervisar el estado de cumplimiento de los perfiles de certificado de System Center Configuration Manager.
 ms.custom: na
@@ -7,24 +7,25 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 98feaa06-64b1-4e86-a122-93017c97cd4f
-caps.latest.revision: "7"
-caps.handback.revision: "0"
+caps.latest.revision: 7
+caps.handback.revision: 0
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: eaefae0c51af91e4419ef15cf02b8250c3d2efd8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 6b0ae2042c1c463bce53c0c1a7438cc7102cd66e
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-monitor-certificate-profiles-in-system-center-configuration-manager"></a>Cómo supervisar perfiles de certificado en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 ##  <a name="view-compliance-results-in-the-configuration-manager-console"></a>Ver los resultados de cumplimiento en la consola de Configuration Manager  
@@ -61,7 +62,7 @@ Para supervisar el cumplimiento del certificado SCEP, no use la consola. En su l
     |0x00000004|La inscripción debe aplazarse.|  
     |0x00000010|Error.|  
     |0x00000020|Se desconoce el estado de la inscripción.|  
-    |0x00000040|Se ha omitido la información de estado. Esto puede ocurrir si una entidad de certificación HYPERLINK "http://msdn.microsoft.com/en-us/windows/ms721572" \l "_security_certification_authority_gly" no es válida o no se ha seleccionado para la supervisión.|  
+    |0x00000040|Se ha omitido la información de estado. Esto puede ocurrir si una entidad de certificación HYPERLINK "http://msdn.microsoft.com/windows/ms721572" \l "_security_certification_authority_gly" no es válida o no se ha seleccionado para la supervisión.|  
     |0x00000100|Se ha denegado la inscripción.|  
 
 ##  <a name="view-compliance-results-by-using-reports"></a>Ver los resultados de compatibilidad mediante informes

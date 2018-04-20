@@ -1,9 +1,9 @@
 ---
-title: 'Sincronización de datos con Microsoft Operations Management Suite '
+title: Sincronizar datos en OMS
 titleSuffix: Configuration Manager
 description: Sincronice datos de System Center Configuration Manager con Microsoft Operations Management Suite.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,24 +13,31 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 33bcf8b3-a6b6-4fc9-bb59-70a9621b2b0d
 caps.latest.revision: 9
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df57255108d0e5e8b8f5e4e8d73a392c4cf2faae
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 4ac6d69d07e17946abefdc4f5b7d4a1a73385c44
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 #  <a name="sync-data-from-configuration-manager-to-the-microsoft-operations-management-suite"></a>Sincronizar datos de Configuration Manager con Microsoft Operations Management Suite
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
+<!--1258052-->
 Puede usar el **Asistente para servicios de Azure** para configurar la conexión desde Configuration Manager hasta el servicio en la nube de Operations Management Suite (OMS). A partir de la versión 1706, el asistente reemplaza los flujos de trabajo anteriores para configurar esta conexión. Para las versiones anteriores, consulte [Sincronización de datos de Configuration Manager con Microsoft Operations Management Suite (1702 y versiones anteriores)](#Sync-data-from-Configuration-Manager-to-the-Microsoft-Operations-Management-Suite-(1702-and-earlier)).
 
 -   El asistente se usa para configurar los servicios en la nube para Configuration Manager, como OMS, Microsoft Store para Empresas y Azure Active Directory (Azure AD).  
 
 -   Configuration Manager se conecta a OMS para utilizar características como [Log Analytics](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) o [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics).
+
+
+> [!Note]  
+> Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para más información, vea [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
+
 
 ## <a name="prerequisites-for-the-oms-connector"></a>Requisitos previos para el conector de OMS
 Los requisitos previos para configurar una conexión a OMS son iguales que los [documentados para la versión 1702 de Rama actual](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#prerequisites). Esa información se repite aquí:  

@@ -1,9 +1,9 @@
 ---
-title: "Caché del mismo nivel de cliente"
+title: Caché del mismo nivel de cliente
 titleSuffix: Configuration Manager
-description: "Use la caché del mismo nivel de cliente para las ubicaciones de origen de contenido cuando se distribuya contenido con System Center Configuration Manager."
+description: Use la caché del mismo nivel de cliente para las ubicaciones de origen de contenido cuando se distribuya contenido con System Center Configuration Manager.
 ms.custom: na
-ms.date: 12/07/2017
+ms.date: 04/10/2018
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -12,24 +12,30 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
-caps.latest.revision: 
+caps.latest.revision: 3
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 424f4030f2dd2a337a29d48ca831fa3a791de610
-ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
+manager: dougeby
+ms.openlocfilehash: 99eef9faf6ac66f65d16020b703e3a64d9beb9d0
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Caché del mismo nivel para clientes de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Comenzando por la versión 1610 de System Center Configuration Manager, puede usar la **Caché del mismo nivel** para ayudar a administrar la implementación de contenido a los clientes en ubicaciones remotas. La caché del mismo nivel es una solución integrada de Configuration Manager que permite que los clientes compartan contenido con otros clientes directamente desde su caché local.   
+<!--1101436-->
+Use **Caché del mismo nivel** para ayudar a administrar la implementación de contenido en los clientes en ubicaciones remotas. La caché del mismo nivel es una solución integrada de Configuration Manager que permite que los clientes compartan contenido con otros clientes directamente desde su caché local.   
 
 > [!TIP]  
-> Esta característica se introdujo por primera vez en la versión 1610 como un [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1710, ya no es una característica de versión preliminar.
+> Esta característica se introdujo por primera vez en la versión 1610 como un [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1710, ya no es una característica de versión preliminar.  
+
+
+> [!Note]  
+> Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para más información, vea [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
 ## <a name="overview"></a>Información general
 Un cliente de la caché del mismo nivel es un cliente de Configuration Manager que está habilitado para usar el almacenamiento en la caché del mismo nivel. Un cliente de la caché del mismo nivel que tenga contenido que puede compartir con otros clientes es un origen de la caché del mismo nivel.
@@ -38,7 +44,7 @@ Un cliente de la caché del mismo nivel es un cliente de Configuration Manager q
     -  Debe estar unido a un dominio. Sin embargo, un cliente que no esté unido a un dominio podrá obtener contenido de un origen de la caché del mismo nivel unido a dominio.
     -  Debe ser miembro del grupo de límites actual del cliente que está buscando el contenido. Cuando un cliente usa la reserva para buscar contenido de un grupo de límites vecino, la lista de ubicaciones de origen de contenido no incluye un cliente de la caché del mismo nivel en un grupo de límites vecino. Para más información acerca de los grupos de límites actuales y vecinos, vea [Grupos de límites](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).
  - El cliente de Configuration Manager proporciona todos los tipos de contenido en la caché a otros clientes mediante la caché del mismo nivel. Este contenido incluye archivos de Office 365 y de instalación rápida.<!--SMS.500850-->
- -  La caché del mismo nivel no reemplaza el uso de otras soluciones como BranchCache. La caché del mismo nivel funciona junto con otras soluciones para ofrecer más opciones para extender las soluciones tradicionales de implementación de contenido (como puntos de distribución). La caché del mismo nivel es una solución personalizada que no depende de BranchCache.  Si no habilita o usa Windows BranchCache, la caché del mismo nivel sigue funcionando.
+ -  La caché del mismo nivel no reemplaza el uso de otras soluciones como BranchCache. La caché del mismo nivel funciona junto con otras soluciones para ofrecer más opciones para extender las soluciones tradicionales de implementación de contenido (como puntos de distribución). La caché del mismo nivel es una solución personalizada que no depende de BranchCache. Si no habilita o usa Windows BranchCache, la caché del mismo nivel sigue funcionando.
 
 ### <a name="operations"></a>Operaciones
 
@@ -82,7 +88,7 @@ Utilice este informe para conocer los detalles de rechazo de un tipo de rechazo 
 3. **Detalles del rechazo del contenido de origen de la caché del mismo nivel**:   
   Use este informe para conocer el contenido que el cliente solicitaba cuando se rechazó.
 
- - **Problema conocido:** no puede seleccionar de entre los parámetros disponibles y, en su lugar, debe escribirlos manualmente. Escriba el valor para *Tipo de rechazo* como se muestra en el informe **Rechazo del contenido de origen de la caché del mismo nivel**. Después, escriba el *Id. del recurso* para el origen de contenido sobre el que quiera obtener más información.  Para buscar el identificador de recurso del origen de contenido:  
+ - **Problema conocido:** no puede seleccionar de entre los parámetros disponibles y, en su lugar, debe escribirlos manualmente. Escriba el valor para *Tipo de rechazo* como se muestra en el informe **Rechazo del contenido de origen de la caché del mismo nivel**. Después, escriba el *Id. del recurso* para el origen de contenido sobre el que quiera obtener más información. Para buscar el identificador de recurso del origen de contenido:  
 
     1. Busque el nombre de equipo que se muestra como *Origen de caché del mismo nivel* en los resultados del informe **Rechazo del contenido de origen de la caché del mismo nivel por condición**.  
     2. A continuación, vaya a **Activos y compatibilidad** > **Dispositivos** y después busque ese nombre de equipos. Utilice el valor de la columna de identificador de recurso.  
@@ -93,7 +99,7 @@ Utilice este informe para conocer los detalles de rechazo de un tipo de rechazo 
 
 -   Los clientes solo pueden transferir contenido desde los clientes de la caché del mismo nivel que están en su actual grupo de límites.
 
--   Antes de la versión 1706, los sitios en los que los clientes usen la caché del mismo nivel deben estar configurados con una [cuenta de acceso de red](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account). A partir de la versión 1706, que cuenta ya no es necesaria con una excepción.  El escenario de excepción es cuando un cliente que admite la caché del mismo nivel ejecuta una secuencia de tareas desde el Centro de software, y la secuencia de tareas reinicia el cliente en una imagen de arranque. En este escenario, el cliente sigue necesitando la cuenta de acceso a la red. Cuando el cliente está en Windows PE, usa la cuenta de acceso a la red para obtener contenido desde el origen de caché del mismo nivel.
+-   Antes de la versión 1706, los sitios en los que los clientes usen la caché del mismo nivel deben estar configurados con una [cuenta de acceso de red](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account). A partir de la versión 1706, que cuenta ya no es necesaria con una excepción. El escenario de excepción es cuando un cliente que admite la caché del mismo nivel ejecuta una secuencia de tareas desde el Centro de software, y la secuencia de tareas reinicia el cliente en una imagen de arranque. En este escenario, el cliente sigue necesitando la cuenta de acceso a la red. Cuando el cliente está en Windows PE, usa la cuenta de acceso a la red para obtener contenido desde el origen de caché del mismo nivel.
 
     Cuando es necesario, el equipo de origen de memoria caché del mismo nivel usa la cuenta de acceso a la red para autenticar las solicitudes de descarga de elementos del mismo nivel. Esta cuenta solo requiere permisos de usuario de dominio para este propósito.
 

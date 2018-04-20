@@ -16,11 +16,11 @@ caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 5ec9266f33b318ac9c42f86840ebd7ac59713bdf
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 262bfa3991bbd95fad779da9520358d527a42b07
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>Administrar secuencias de tareas para automatizar tareas en System Center Configuration Manager
 
@@ -201,7 +201,7 @@ Se mostrará el siguiente mensaje de notificación cuando el usuario final abra 
 
 8.  Complete el asistente.  
 
- Puede preconfigurar el contenido al que se hace referencia en la secuencia de tareas. Configuration Manager crea un archivo de contenido preconfigurado comprimido que contiene los archivos, las dependencias asociadas y los metadatos asociados del contenido que se selecciona. A continuación, puede importar manualmente el contenido en un servidor de sitio, un sitio secundario o un punto de distribución. Para obtener más información sobre cómo preconfigurar archivos de contenido, consulte [Preconfigurar el contenido](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage).  
+ Puede preconfigurar el contenido al que se hace referencia en la secuencia de tareas. Configuration Manager crea un archivo de contenido preconfigurado comprimido que contiene los archivos, las dependencias asociadas y los metadatos asociados del contenido que se selecciona. A continuación, puede importar manualmente el contenido en un servidor de sitio, un sitio secundario o un punto de distribución. Para más información sobre cómo preconfigurar archivos de contenido, consulte [Preconfigurar el contenido](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage).  
 
 
 
@@ -251,7 +251,14 @@ Se mostrará el siguiente mensaje de notificación cuando el usuario final abra 
         >     - Si la recopilación contiene un servidor  
 
     -   **Comentarios (opcional)**: especifique información adicional que describa esta implementación de la secuencia de tareas.  
-    - **Seleccionar plantilla de implementación**: a partir de Configuration Manager versión 1802, puede guardar y especificar una plantilla de implementación para una secuencia de tareas. <!--1357391-->
+    - **Seleccionar plantilla de implementación**: a partir de Configuration Manager versión 1802,<!--1357391--> puede guardar y especificar una plantilla de implementación para una secuencia de tareas.     
+
+         > [!IMPORTANT]
+         > En Configuration Manager versión 1802, algunos elementos no se guardan en la plantilla.  <!--510610--> Asegúrese de que estos elementos se aplican al ejecutar el asistente para la implementación:
+         > - Instalación de software 
+         > - Programación 
+         > - Descarga previa de contenido
+ 
 6.  En la página **Configuración de implementación** , especifique la información siguiente y, a continuación, haga clic en **Siguiente**.  
 
     -   **Propósito**: en la lista desplegable, elija una de las opciones que se indican a continuación.  
@@ -274,7 +281,7 @@ Se mostrará el siguiente mensaje de notificación cuando el usuario final abra 
     -   **Estar disponible para**: especifique si la secuencia de tareas debe estar disponible para medios, el entorno PXE o clientes de Configuration Manager.  
 
         > [!IMPORTANT]  
-        >  Use la opción **Sólo medios y PXE (ocultos)** para implementaciones automatizadas de secuencia de tareas. Para que el equipo arranque automáticamente en la implementación sin interacción del usuario, seleccione **Permitir la implementación desatendida de sistema operativo** y configure la variable SMSTSPreferredAdvertID como parte del medio. Para obtener más información sobre las variables integradas, vea [Variables integradas de secuencia de tareas en Configuration Manager](../understand/task-sequence-built-in-variables.md).  
+        >  Use la opción **Sólo medios y PXE (ocultos)** para implementaciones automatizadas de secuencia de tareas. Para que el equipo arranque automáticamente en la implementación sin interacción del usuario, seleccione **Permitir la implementación desatendida de sistema operativo** y configure la variable SMSTSPreferredAdvertID como parte del medio. Para más información sobre las variables integradas, vea [Variables integradas de secuencia de tareas en Configuration Manager](../understand/task-sequence-built-in-variables.md).  
 
 7.  En la página **Programación** , especifique la información siguiente y, a continuación, haga clic en **Siguiente**.  
 

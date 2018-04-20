@@ -1,7 +1,7 @@
 ---
 title: Funcionalidades de Technical Preview 1702
 titleSuffix: Configuration Manager
-description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1702."
+description: Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1702.
 ms.custom: na
 ms.date: 02/24/2017
 ms.prod: configuration-manager
@@ -12,15 +12,15 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
-caps.latest.revision: 
+caps.latest.revision: 5
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: ed2a858c55cbf389a0e974f4699b5a9c548953ef
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 94c025a75cd0aef62ee00c11b8ee5a113fba2bb1
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1702 para System Center Configuration Manager
 
@@ -42,7 +42,7 @@ Esta versión preliminar presenta nuevas opciones de comentarios en la consola d
 -  Al hacer clic con el botón derecho en cualquier objeto de la consola.   
     ![Opción de hacer clic con el botón derecho](./media/feedback-option.png)   
 
-Al hacer clic en **Comentarios** se abre el explorador en el sitio web de comentarios de UserVoice de Configuration Manager, en https://configurationmanager.uservoice.com/forums/300492-ideas.
+Al seleccionar **Comentarios**, se abre el explorador en el sitio web de comentarios de UserVoice de Configuration Manager, en https://configurationmanager.uservoice.com/forums/300492-ideas.
 ##  <a name="changes-for-updates-and-servicing"></a>Cambios para actualizaciones y mantenimiento
 Con esta versión preliminar se presenta lo siguiente.
 
@@ -104,7 +104,7 @@ Azure AD almacena los dispositivos bajo la unidad organizativa **AADDC Computers
 Azure AD no tiene ninguna unidad organizativa que almacene los grupos. En su lugar, use la misma estructura general que las consultas de usuario o de sistema, y configure la consulta LDAP para que apunte a la unidad organizativa que contiene los grupos que quiere detectar.
 
 Para obtener más información sobre Azure AD, consulte lo siguiente:  
- - [Azure Active Directory Domain Services](https://azure.microsoft.com/en-us/services/active-directory-ds) en azure.microsoft.com.
+ - [Azure Active Directory Domain Services](https://azure.microsoft.com/services/active-directory-ds) en azure.microsoft.com.
  - [Documentación acerca de Active Directory Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services) en docs.microsoft.com.
 
 ## <a name="conditional-access-device-compliance-policy-improvements"></a>Mejoras de la directiva de cumplimiento de dispositivos de acceso condicional
@@ -155,7 +155,7 @@ La nueva directiva se muestra en el nodo **Directivas de cumplimiento** del áre
 4. Cuando haya terminado, haga clic en **Aceptar**.
 
 ### <a name="monitor-the-compliance-policy"></a>Supervisar la directiva de cumplimiento
-Después de crear la directiva de cumplimiento, puede supervisar los resultados de compatibilidad en la consola de Configuration Manager. Para obtener más información, consulte [Monitor the compliance policy (Supervisar la directiva de cumplimiento)](https://docs.microsoft.com/en-us/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy).
+Después de crear la directiva de cumplimiento, puede supervisar los resultados de compatibilidad en la consola de Configuration Manager. Para obtener más información, consulte [Monitor the compliance policy (Supervisar la directiva de cumplimiento)](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy).
 
 
 ## <a name="improvements-to-software-center-settings-and-notification-messages-for-high-impact-task-sequences"></a>Mejoras en la configuración del Centro de software y los mensajes de notificación para las secuencias de tareas de alto impacto
@@ -301,7 +301,7 @@ Android for Work es una plataforma independiente de Android y deberá decidir qu
 Las secciones siguientes describen la administración de Android for Work.
 
 #### <a name="enable-android-for-work-management"></a>Habilitar la administración de Android for Work
-1. Cree una cuenta de Google en https://accounts.google.com/SignUp para usar como cuenta de administrador de Android for Work que se asociará con todas las tareas de administración de Android for Work para este inquilino de Intune. Podría ser una cuenta de Google que se comparte entre los administradores que administran dispositivos Android. Se trata de la cuenta de Google que su organización usa para administrar y publicar aplicaciones en la consola de Play for Work. Usará esta cuenta para aprobar aplicaciones en la tienda de Play for Work, por lo que debe realizar el seguimiento del nombre y la contraseña de la cuenta.
+1. Cree una cuenta de Google en https://accounts.google.com/SignUp para usarla como la cuenta de administrador de Android for Work que va a estar asociada a todas las tareas de administración de Android for Work de este inquilino de Intune. Podría ser una cuenta de Google que se comparte entre los administradores que administran dispositivos Android. Se trata de la cuenta de Google que su organización usa para administrar y publicar aplicaciones en la consola de Play for Work. Usará esta cuenta para aprobar aplicaciones en la tienda de Play for Work, por lo que debe realizar el seguimiento del nombre y la contraseña de la cuenta.
 2. Habilite la inscripción de Android enlazando la cuenta de Google con el inquilino de Intune administrado en Configuration Manager:
   1. Vaya a **Administración** > **General** > **Cloud Services** > **Suscripciones a Microsoft Intune** y seleccione la suscripción a Intune.
   2. En la cinta, haga clic en **Configurar plataformas** > **Android** y asegúrese de que **Habilitar inscripción de Android** está activada.
@@ -326,7 +326,7 @@ Verá el nombre de la cuenta y el nombre de la organización en el portal de Int
 #### <a name="approve-and-deploy-android-for-work-apps"></a>Aprobar e implementar aplicaciones Android for Work
 Siga estos pasos para aprobar aplicaciones en la tienda Play for Work, sincronizarlas con la consola de Configuration Manager e implementarlas en dispositivos Android for Work administrados. Para implementar aplicaciones en los perfiles de trabajo de los usuarios, debe aprobar las aplicaciones en Play for Work y después sincronizarlas con la consola de Configuration Manager.
 
-1. Abra un explorador y vaya a https://play.google.com/work.
+1. Abra un explorador y vaya a: https://play.google.com/work.
 2. Inicie sesión con la cuenta de administrador de Google enlazada a su inquilino de Intune.
 3. Busque las aplicaciones que le gustaría implementar en su entorno y haga clic en **Aprobar** en cada una de ellas.
 4. En la consola de Configuration Manager, vaya a **Administrador** > **General** > **Cloud Services** > **Android for Work** y haga clic en **Sincronizar**.

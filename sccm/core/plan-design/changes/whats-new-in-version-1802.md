@@ -15,11 +15,11 @@ ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4582d1105f2465c37e001570227112bfca3bad1c
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 9c9ff975a58e7c56375fa7740a0a5bb6ebfa6341
+ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>Novedades de la versión 1802 de System Center Configuration Manager
 
@@ -122,7 +122,7 @@ Al crear una instancia de [Cloud Management Gateway](/sccm/core/clients/manage/p
 
 - A partir de esta versión, **Cloud Management Gateway** ya no es una característica de versión preliminar.  
 
-- La documentación de las características se ha revisado y mejorado. Vea los siguientes artículos para obtener más información:
+- La documentación de las características se ha revisado y mejorado. Vea los siguientes artículos para más información:
     - [Planificación de Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
     - [Números de tamaño y escala de Cloud Management Gateway](/sccm/core/plan-design/configs/size-and-scale-numbers#bkmk_cmg)
     - [Seguridad y privacidad de la puerta de enlace de administración en la nube](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway)
@@ -149,8 +149,8 @@ El panel de dispositivos Surface proporciona información sobre los dispositivos
 Para obtener más información, vea el artículo [Surface dashboard](/sccm/core/clients/manage/surface-device-dashboard) (Panel de Surface).
 
 ### <a name="change-in-the-configuration-manager-client-install"></a>Cambio en la instalación del cliente de Configuration Manager
-<!--1356195-->|
-A partir de esta versión, Silverlight ya no se instala automáticamente en los dispositivos cliente. Para obtener más información, vea [Requisitos previos para la implementación de clientes en equipos Windows](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.#BKMK_ExternalDependencies).
+<!--1356195-->
+A partir de esta versión, Silverlight ya no se instala automáticamente en los dispositivos cliente. Para más información, vea [Requisitos previos para la implementación de clientes en equipos Windows](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#bkmk_ExternalDependencies).
 
 ## <a name="co-management"></a>Administración conjunta
 

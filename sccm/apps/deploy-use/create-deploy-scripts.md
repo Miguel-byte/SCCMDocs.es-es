@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 29806161b29b87834c0cb4b1e478d92bff7a7b3c
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 19bb8b2c4e47dcc8a75db568e7f93541544a4566
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
 
@@ -70,10 +70,6 @@ La funcionalidad de ejecución de scripts actualmente admite lo siguiente:
 >[!WARNING]
 >Tenga en cuenta que, cuando se usan parámetros, se abre un área expuesta para el posible riesgo de ataque por inyección de código de PowerShell. Existen varias formas de mitigar esto y buscar soluciones alternativas, como usar expresiones regulares para validar la entrada de parámetros o usar parámetros predefinidos. Un procedimiento recomendado muy habitual consiste en no incluir los secretos en los scripts de PowerShell (contraseñas, etc). [Más información sobre la seguridad del script de PowerShell](/sccm/apps/deploy-use/learn-script-security) <!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
 
-
-## <a name="group-policy-considerations-for-scripts"></a>Consideraciones sobre las directivas de grupo para scripts
-<!--While running scripts on devices, Configuration Manager sets policy to allow local scripts and remote signed scripts.--> 
-El establecimiento de una directiva de ejecución a través de una directiva de grupo podría impedir que los scripts se ejecutasen con Configuration Manager. Para información sobre las directivas de ejecución y cómo se establecen, vea el artículo [Acerca de las directivas de ejecución](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies). <!--507185-->
 
 ## <a name="run-script-authors-and-approvers"></a>Autores y aprobadores de la funcionalidad de ejecución de scripts
 
@@ -202,7 +198,7 @@ La sección de validación del cuadro de diálogo **Propiedades de parámetros d
 
 - **Longitud mínima**: número mínimo de caracteres del campo *FirstName*.
 - **Longitud máxima**: número máximo de caracteres del campo *FirstName*.
-- **RegEx**: abreviatura de *expresión regular*. Para obtener más información sobre el uso de la expresión regular, vea la sección siguiente, *Uso de la validación de expresión regular*.
+- **RegEx**: abreviatura de *expresión regular*. Para más información sobre el uso de la expresión regular, vea la sección siguiente, *Uso de la validación de expresión regular*.
 - **Error personalizado**: este campo resulta útil para agregar su propio mensaje de error personalizado que reemplazará a los mensajes de error de validación del sistema.
 
 #### <a name="using-regular-expression-validation"></a>Uso de la validación de expresión regular
@@ -275,9 +271,13 @@ Una vez iniciada la ejecución de un script en una recopilación de dispositivos
 ## <a name="script-output"></a>Salida del script
 
 - A partir de Configuration Manager versión 1802, la salida del script realiza la devolución con el formato JSON. Este formato devuelve de manera uniforme una salida de script legible. 
-- Los scripts que obtengan un resultado desconocido o aquellos en los que el cliente estaba sin conexión no se mostrarán en los gráficos ni en el conjunto de datos. <!--507179-->
+- Los scripts que obtengan un resultado desconocido o en los que el cliente estaba sin conexión no se mostrarán en los gráficos ni en el conjunto de datos. <!--507179-->
 - Evite devolver una salida de script grande, ya que se trunca en 4 KB. <!--508488-->
 - Algunas funciones con el formato de salida de script no están disponibles cuando se ejecuta Configuration Manager versión 1802 o posterior con una versión de nivel inferior del cliente. <!--508487-->
+    - Si tiene un cliente de Configuration Manager anterior a la versión 1802, obtendrá una cadena de salida.
+    -  Para clientes de Configuration Manager con versión 1802 y versiones posteriores, se obtiene el formato JSON.
+        - Por ejemplo, podría obtener resultados que indican TEXTO en una versión de cliente y "TEXTO" (incluido entre comillas dobles) en otra versión, y se colocarán en el gráfico como dos categorías diferentes.
+        - Si tiene que solucionar este comportamiento, considere la posibilidad de ejecutar un script en dos colecciones diferentes; uno con clientes anteriores a la versión 1802 y otro con clientes de la versión 1802 y posteriores. O, si lo prefiere, puede convertir un objeto de enumeración en un valor de cadena en los scripts para que se muestren correctamente en formato JSON. 
 - Convierta un objeto de enumeración en un valor de cadena en los scripts para que se muestren correctamente en formato JSON. <!--508377--> ![Convertir un objeto de enumeración en un valor de cadena](./media/run-scripts/enum-tostring-JSON.png)
 
 
