@@ -3,7 +3,7 @@ title: Administrar secuencias de tareas
 titleSuffix: Configuration Manager
 description: Cree, edite, implemente, importe y exporte secuencias de tareas para administrarlas y automatizar las tareas en su entorno.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: nac
 ms.suite: na
@@ -15,12 +15,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 262bfa3991bbd95fad779da9520358d527a42b07
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+manager: dougeby
+ms.openlocfilehash: 9ed5a94d644aa0bdb7d63c3b976da7dd566dfedd
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>Administrar secuencias de tareas para automatizar tareas en System Center Configuration Manager
 
@@ -483,8 +483,12 @@ Puede administrar las variables por equipo en un sitio primario o en un sitio de
 6.  Después de agregar todas las variables a la recopilación, haga clic en **Aceptar**.  
 
 ## <a name="add-child-task-sequences-to-a-task-sequence"></a>Adición de secuencias de tareas secundarias a una secuencia de tareas
+<!--1261338-->
+A partir de Configuration Manager versión 1710, puede agregar un nuevo paso de secuencia de tareas que ejecute otra secuencia de tareas. Este paso crea una relación primario-secundario entre las secuencias de tareas. El uso de este paso le permite crear más secuencias de tareas modulares que puede volver a usar.  
 
-A partir de Configuration Manager versión 1710, puede agregar un nuevo paso de secuencia de tareas que ejecute otra secuencia de tareas. Este paso crea una relación primario-secundario entre las secuencias de tareas. El uso de este paso le permite crear más secuencias de tareas modulares que puede volver a usar.
+> [!Note]  
+> Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para más información, vea [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
 Tenga en cuenta lo siguiente al agregar una secuencia de tareas secundaria a una secuencia de tareas:
 
