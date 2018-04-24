@@ -3,7 +3,7 @@ title: Actualización en la consola
 titleSuffix: Configuration Manager
 description: Instalación de actualizaciones en Configuration Manager desde Microsoft Cloud
 ms.custom: na
-ms.date: 03/28/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 caps.latest.revision: 36
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 054bbd8e7b1dd3f5d565afe60eb7e3379cc7a9ee
-ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
+ms.openlocfilehash: 9924346ccbd862aa4462075a3307b4ec40b955bc
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>Instalación de actualizaciones en la consola para System Center Configuration Manager
 
@@ -311,7 +311,7 @@ Cuando esté listo para volver a intentar la instalación de una actualización,
 #### <a name="retry-installation-for-the-hierarchy"></a>Volver a intentar la instalación en la jerarquía
 Puede volver a intentar la instalación de una actualización en toda la jerarquía si la actualización presenta alguno de los estados siguientes:  
 
-  -   La comprobación de requisitos previos se ha superado con una o más advertencias y la opción de omitir las advertencias de comprobación de requisitos previos no se ha establecido en el Asistente para actualización. (El valor de actualización de **Ignore prerequisite warnings** (Omitir advertencias de requisitos previos) en el nodo **Actualizaciones y mantenimiento** es **No**).   
+  -   Las comprobaciones de requisitos previos se han superado con una o más advertencias y la opción de omitir las advertencias de comprobación de requisitos previos no se ha establecido en el Asistente para actualización. (El valor de actualización de **Ignore prerequisite warnings** (Omitir advertencias de requisitos previos) en el nodo **Actualizaciones y mantenimiento** es **No**).   
   -   Errores en la comprobación de requisitos previos    
   -   Error de instalación
   -   Error en la replicación del contenido en el sitio   
@@ -324,7 +324,7 @@ Vaya a **Administración** > **Actualizaciones y mantenimiento**, seleccione la 
 #### <a name="retry-installation-for-the-site"></a>Volver a intentar la instalación en el sitio  
  Puede volver a intentar la instalación de una actualización en un sitio específico si la actualización presenta alguno de los estados siguientes:  
 
-  -   La comprobación de requisitos previos se ha superado con una o más advertencias y la opción de omitir las advertencias de comprobación de requisitos previos no se ha establecido en el Asistente para actualización. (El valor de actualización de **Ignorar advertencia sobre requisitos previos** en el nodo Actualizaciones y mantenimiento es **No**).  
+  -   Las comprobaciones de requisitos previos se han superado con una o más advertencias y la opción de omitir las advertencias de comprobación de requisitos previos no se ha establecido en el Asistente para actualización. (El valor de actualización de **Ignorar advertencia sobre requisitos previos** en el nodo Actualizaciones y mantenimiento es **No**).  
   -   Errores en la comprobación de requisitos previos    
   -   Error de instalación    
 
@@ -369,10 +369,36 @@ Cuando una actualización incluye una o varias características opcionales, tien
 
 Para ver las características disponibles y su estado, en la consola, vaya a **Administración** > **Actualizaciones y mantenimiento** > **Características**.
 
-Cuando una característica no es opcional, se instala automáticamente y no aparece en el nodo **Características**.  
+Cuando una característica no es opcional, se instala automáticamente. No aparece en el nodo **Características**.  
+
+> [!Important]  
+> En una jerarquía multisitio solo se pueden habilitar características opcionales o de versión preliminar desde el sitio de administración central. Con este comportamiento se procura que no haya ningún conflicto en la jerarquía. <!--507197-->
+ 
+
+Al habilitar una característica nueva o de versión preliminar, el Administrador de jerarquía de Configuration Manager (HMAN) debe procesar el cambio antes de que dicha característica esté disponible. Generalmente el procesamiento del cambio es inmediato, pero puede tardar hasta 30 minutos en completarse, en función del ciclo de procesamiento de HMAN. Una vez que se haya procesado el cambio, debe reiniciar la consola para poder ver los nuevos nodos relacionados con esa característica.
+
+#### <a name="list-of-optional-features"></a>Lista de características opcionales
+Las siguientes características son opcionales en la versión más reciente de Configuration Manager:<!--505213-->  
+- [Acceso condicional para los equipos administrados](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)  <!--1191496-->
+- [Passport for Work](/sccm/protect/deploy-use/windows-hello-for-business-settings) (conocido ahora como *Windows Hello para empresas*) <!--1245704-->
+- [VPN para Windows 10](/sccm/protect/deploy-use/vpn-profiles) <!--1283610-->
+- [Directiva de Protección contra vulnerabilidades de seguridad de Windows Defender](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468-->
+- [Conector de Microsoft Operations Management Suite (OMS)](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) <!--1258052-->
+- [Creación de PFX](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368-->
+- [Caché del mismo nivel de cliente](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436-->
+- [Punto de servicio de almacenamiento de datos](/sccm/core/servers/manage/data-warehouse) <!--1277922-->
+- [Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764-->
+- [Actualizaciones de controladores de Surface](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490-->
+- [Almacenamiento en caché previa de contenido de secuencias de tareas](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244-->
+- [Ejecutar paso de secuencia de tareas](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338-->
+- [Creación y ejecución de scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459-->
+- [Evaluación de Atestación de estado de dispositivo para las directivas de cumplimiento de acceso condicional](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616-->
+- [Aprobación de solicitudes de aplicación para los usuarios por dispositivo](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) <!--1357015-->  
 
 
-Al habilitar una característica nueva o de versión preliminar, el Administrador de jerarquía de Configuration Manager (HMAN) debe procesar el cambio antes de que dicha característica esté disponible. Generalmente el procesamiento del cambio es inmediato, pero puede tardar hasta 30 minutos en completarse, en función del ciclo de procesamiento de HMAN. Una vez que se haya procesado el cambio, debe reiniciar la consola para poder ver la nueva interfaz de usuario relacionada con esa característica.
+> [!Tip]  
+> Para obtener más información sobre las características cuya habilitación requiere consentimiento, consulte las [características de versión preliminar](/sccm/core/servers/manage/pre-release-features).  
+> Para más información sobre las características que solo están disponibles en la rama de Technical Preview, vea [Technical Preview](/sccm/core/get-started/technical-preview).
 
 
 

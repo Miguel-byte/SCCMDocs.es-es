@@ -1,29 +1,30 @@
 ---
-title: "Implementación de clientes Mac"
+title: Implementación de clientes Mac
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo implementar clientes en equipos Mac en System Center Configuration Manager."
+description: Obtenga información sobre cómo implementar clientes en equipos Mac en System Center Configuration Manager.
 ms.custom: na
 ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e46ad501-5d73-44ac-92de-0de14ef72b83
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: arob98
 ms.author: angrobe
 manager: angrobe
 ms.openlocfilehash: 1b7f20a48e0e7219d933c367fb9f0315fc287dfd
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="how-to-deploy-clients-to-macs"></a>How to deploy clients to Macs
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En este tema se describe cómo implementar y mantener el cliente de Configuration Manager en equipos Mac. Para obtener información sobre qué se debe configurar antes de implementar clientes en equipos Mac, vea [Prepararse para implementar software cliente en equipos Mac](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients).
 
@@ -269,7 +270,7 @@ Después, realice estas tareas:
 
 5.  En la página **Configuración** del asistente, haga clic en **Nueva** y, a continuación, en el cuadro de diálogo **Crear configuración** , especifique la información siguiente:  
 
-    -   **NombreQuitar SMSID para Mac**:  
+    -   **Nombre: Quitar SMSID para Mac**  
 
     -   **Tipo de configuraciónscript**:  
 
@@ -297,7 +298,7 @@ Después, realice estas tareas:
 
 12. En la página **Reglas de compatibilidad** del asistente, seleccione **Nueva** y, después, en el cuadro de diálogo **Crear regla**, especifique la información siguiente:  
 
-    -   **NombreQuitar SMSID para Mac**:  
+    -   **Nombre: Quitar SMSID para Mac**  
 
     -   **Configuración seleccionada**: seleccione **Examinar** y, luego, seleccione el script de detección especificado previamente.  
 

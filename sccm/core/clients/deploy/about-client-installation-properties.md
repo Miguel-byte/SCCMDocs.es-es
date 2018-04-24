@@ -3,7 +3,7 @@ title: Propiedades de instalación de cliente
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las propiedades de la línea de comandos de ccmsetup para instalar el cliente de Configuration Manager.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 057b078767a08574a806cb6af1cdb3812148a457
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 40e844fbb15a101574d9628648dde0db59c855c4
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>Acerca de las propiedades de instalación de clientes en System Center Configuration Manager
 
@@ -250,6 +250,20 @@ Ejemplo: `CCMSetup.exe /ExcludeFeatures:ClientUI` no instala el Centro de softwa
 
 
 
+## <a name="ccmsetupMsiProps"></a> Propiedades de Ccmsetup.msi  
+ Las siguientes propiedades pueden modificar el comportamiento de la instalación de ccmsetup.msi.
+
+### <a name="ccmsetupcmd"></a>CCMSETUPCMD 
+
+Especifica las propiedades de línea de comandos que se pasan a ccmsetup.exe después haber sido instalado por ccmsetup.msi. Incluye otras propiedades entre comillas. Use esta propiedad cuando arranque el cliente de Configuration Manager mediante el método de instalación de MDM de Intune. 
+
+Ejemplo: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.contoso.com"`
+
+ > [!Tip]
+ > Microsoft Intune limita la línea de comandos a 1024 caracteres. 
+
+
+
 ##  <a name="clientMsiProps"></a> Propiedades de Client.msi  
  Las siguientes propiedades pueden modificar el comportamiento de la instalación de client.msi. Si usa el método de instalación de inserción de cliente, también puede especificar las propiedades en la pestaña **Cliente** del cuadro de diálogo **Propiedades de instalación de inserción de cliente** .  
 
@@ -282,16 +296,16 @@ Especifica el identificador de inquilino de Azure AD. Este inquilino se vincula 
 
 Ejemplo: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
+<!-- 
+### AADTENANTNAME
 
-### <a name="aadtenantname"></a>AADTENANTNAME
+Specifies the Azure AD tenant name. This tenant is linked to Configuration Manager when you [configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for Cloud Management. To obtain the value for this property, use the following steps:
+- On a Windows 10 device that is joined to the same Azure AD tenant, open a command prompt.
+- Run the following command: `dsregcmd.exe /status`
+- In the Device State section, find the **TenantName** value. For example, `TenantName : Contoso`
 
-Especifica el nombre de inquilino de Azure AD. Este inquilino se vincula a Configuration Manager al [configurar servicios de Azure](/sccm/core/servers/deploy/configure/azure-services-wizard) para la administración en la nube. Para obtener el valor de esta propiedad, siga los pasos siguientes:
-- En un dispositivo Windows 10 unido al mismo inquilino de Azure AD, abra un símbolo del sistema.
-- Ejecute el comando siguiente: `dsregcmd.exe /status`.
-- En la sección Estado del dispositivo, busque el valor **TenantName**. Por ejemplo, `TenantName : Contoso`.
-
-Ejemplo: `ccmsetup.exe AADTENANTNAME=Contoso`
-
+Example: `ccmsetup.exe AADTENANTNAME=Contoso`
+-->
 
 ### <a name="ccmadmins"></a>CCMADMINS  
 
@@ -424,7 +438,7 @@ Ejemplo: `CCMSetup.exe /UsePKICert CCMHTTPSPORT=443`
 
 ### <a name="ccminstalldir"></a>CCMINSTALLDIR
 
- Identifica la carpeta en la que se instalan los archivos de cliente de Configuration Manager, de forma predeterminada *%Windir%*\CCM. Independientemente de la ubicación de instalación de estos archivos, el archivo Ccmcore.dll siempre se instala en la carpeta *%Windir%\System32*. Además, en un sistema operativo de 64 bits, siempre se instala una copia del archivo Ccmcore.dll en la carpeta *%Windir%*\SysWOW64. Este archivo es compatible con aplicaciones de 32 bits que usan la versión de 32 bits de las API de cliente del SDK de Configuration Manager.  
+ Identifica la carpeta en la que se instalan los archivos de cliente de Configuration Manager, de forma predeterminada *%Windir%* \CCM. Independientemente de la ubicación de instalación de estos archivos, el archivo Ccmcore.dll siempre se instala en la carpeta *%Windir%\System32*. Además, en un sistema operativo de 64 bits, siempre se instala una copia del archivo Ccmcore.dll en la carpeta *%Windir%* \SysWOW64. Este archivo es compatible con aplicaciones de 32 bits que usan la versión de 32 bits de las API de cliente del SDK de Configuration Manager.  
 
  Ejemplo: `CCMSetup.exe CCMINSTALLDIR="C:\ConfigMgr"`  
 
@@ -478,7 +492,7 @@ Ejemplo: `CCMSetup.exe DISABLECACHEOPT=TRUE`
 
 Especifica el punto de estado de reserva que recibe y procesa los mensajes de estado enviados por los equipos cliente de Configuration Manager.  
 
-Para obtener más información sobre el punto de estado de reserva, vea [Determine if you need a fallback status point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) (Determinar si necesita un punto de estado de reserva).  
+Para más información sobre el punto de estado de reserva, vea [Determine if you need a fallback status point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) (Determinar si necesita un punto de estado de reserva).  
 
 Ejemplo: `CCMSetup.exe FSP=SMSFP01`  
 
@@ -549,7 +563,7 @@ Ejemplo: `CCMSetup.exe SMSCACHEFLAGS=NTFSONLY;COMPRESS`
 ### <a name="smscachesize"></a>SMSCACHESIZE
 
 > [!IMPORTANT]
-> Hay opciones de cliente disponibles para especificar el tamaño de la carpeta de caché del cliente. La adición de dichas opciones reemplaza efectivamente el uso de SMSCACHESIZE como propiedad de client.msi para especificar el tamaño de la caché del cliente. Para obtener más información, consulte la [configuración del cliente del tamaño de la caché](about-client-settings.md#client-cache-settings).  
+> Hay opciones de cliente disponibles para especificar el tamaño de la carpeta de caché del cliente. La adición de dichas opciones reemplaza efectivamente el uso de SMSCACHESIZE como propiedad de client.msi para especificar el tamaño de la caché del cliente. Para más información, consulte la [configuración del cliente del tamaño de la caché](about-client-settings.md#client-cache-settings).  
 
 <!-- For 1602 and earlier, SMSCACHESIZE specifies the size of the client cache folder in megabyte (MB) or as a percentage when used with the PERCENTDISKSPACE or PERCENTFREEDISKSPACE property. If this property isn't set, the folder defaults to a maximum size of 5120 MB. The lowest value that you can specify is 1 MB.  -->
 

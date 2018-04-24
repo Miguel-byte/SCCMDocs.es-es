@@ -1,25 +1,26 @@
 ---
-title: "Punto de distribución de extracción"
+title: Punto de distribución de extracción
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre las configuraciones y las limitaciones del uso de un punto de distribución de extracción con System Center Configuration Manager."
+description: Obtenga información sobre las configuraciones y las limitaciones del uso de un punto de distribución de extracción con System Center Configuration Manager.
 ms.custom: na
 ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: b4acf5753c8629bcd0f4e2ef5a97bfcb570e9d24
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 3ef93ae505c2af709a3bd1e6a0e7a278993a77ff
+ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="use-a-pull-distribution-point-with-system-center-configuration-manager"></a>Usar un punto de distribución de extracción con System Center Configuration Manager
 
@@ -45,14 +46,37 @@ Los puntos de distribución de extracción admiten las mismas configuraciones y 
 
 -   Cuando se distribuye contenido a un punto de distribución de extracción, el administrador de transferencia de paquetes en el servidor de sitio comprueba la base de datos del sitio para confirmar si el contenido está disponible en un punto de distribución de origen. Si no puede confirmar que el contenido está en un punto de distribución de origen para el punto de distribución de extracción, repite la comprobación cada 20 minutos hasta que el contenido esté disponible.  
 
--   Cuando el administrador de transferencia de paquetes confirma que el contenido está disponible, envía una notificación al punto de distribución de extracción para descargar el contenido. Cuando el punto de distribución de extracción recibe esta notificación, intenta descargar el contenido de los puntos de distribución de origen.  
+-   Cuando el administrador de transferencia de paquetes confirma que el contenido está disponible, envía una notificación al punto de distribución de extracción para descargar el contenido. Si se produce un error en esta notificación, se volverá a intentar según lo establecido en **Configuración de reintento** del componente de distribución de software para los puntos de distribución de extracción. Cuando el punto de distribución de extracción recibe esta notificación, intenta descargar el contenido de los puntos de distribución de origen.  
 
--   Después de que el punto de distribución de extracción completa la descarga del contenido, envía este estado a un punto de administración. Pero si el estado no se ha recibido después de 60 minutos, el administrador de transferencia de paquetes se reactiva y comprueba el punto de distribución de extracción para confirmar que haya descargado el contenido. Si la descarga de contenido está en curso, el administrador de transferencia de paquetes se suspende durante 60 minutos antes de comprobar de nuevo el punto de distribución de extracción. Este ciclo continúa hasta que el punto de distribución de extracción completa la transferencia de contenido.  
+-   Mientras el punto de distribución de extracción descarga el contenido, el administrador de transferencia de paquetes sondeará el estado según lo establecido en **Configuración del sondeo de estado** del componente de distribución de software para los puntos de distribución de extracción.  Cuando el punto de distribución de extracción completa la descarga del contenido, envía este estado a un punto de administración.
 
 **Se puede configurar un punto de distribución de extracción** al instalar el punto de distribución o después de instalarlo mediante la edición de las propiedades del rol de sistema de sitio del punto de distribución.  
 
 **Se puede quitar la configuración para que el punto de distribución deje de ser de extracción**, mediante la edición de las propiedades del punto de distribución. Cuando se quita la configuración de punto de distribución de extracción, el punto de distribución vuelve a su funcionamiento normal y el servidor de sitio administra las posteriores transferencias de contenido al punto de distribución.  
 
+## <a name="to-configure-software-distribution-component-for-pull-distribution-points"></a>Para configurar el componente de distribución de software para puntos de distribución de extracción
+
+1.  En la consola de Configuration Manager, seleccione **Administración** > **Sitios**.  
+
+2.  Seleccione el sitio que quiera y elija **Configurar componentes de sitio** > **Distribución de software**.
+
+3. Seleccione la pestaña **Punto de distribución de extracción**.  
+
+4.  En la lista **Configuración de reintento**, configure estos valores:  
+
+    -   **Number of retries** (Número de reintentos): Número de veces que el administrador de transferencia de paquetes intenta notificar al punto de distribución de extracción para que descargue el contenido.  Si se supera este número, el administrador de transferencia de paquetes cancelará la transferencia.
+
+    -   **Delay before retrying (minutes)** [Retraso antes de reintentar (minutos)]: Número de minutos que el administrador de transferencia de paquetes esperará entre los intentos. 
+
+5.  En la lista **Configuración del sondeo de estado**, configure estos valores:  
+
+    -   **Number of polls** (Número de sondeos): Número de veces que el administrador de transferencia de paquetes se pone en contacto con el punto de distribución de extracción para recuperar el estado del trabajo.  Si se supera este número antes de completarse el trabajo, el administrador de transferencia de paquetes cancelará la transferencia.
+
+    -   **Delay before retrying (minutes)** [Retraso antes de reintentar (minutos)]: Número de minutos que el administrador de transferencia de paquetes esperará entre los intentos. 
+    
+    > [!NOTE]  
+    >  Cuando el administrador de transferencia de paquetes cancela un trabajo porque se ha superado el número de reintentos de sondeo de estado, el punto de distribución de extracción seguirá descargando el contenido.  Cuando termine, se enviará el mensaje de estado adecuado al administrador de transferencia de paquetes y la consola reflejará el nuevo estado.
+    
 ## <a name="limitations-for-pull-distribution-points"></a>Limitaciones de los puntos de distribución de extracción  
 
 -   No se pueden configurar puntos de distribución basados en la nube como puntos de distribución de extracción.  
@@ -61,12 +85,12 @@ Los puntos de distribución de extracción admiten las mismas configuraciones y 
 
 -   **La configuración del contenido preconfigurado reemplaza la configuración del punto de distribución de extracción**. Un punto de distribución de extracción configurado para contenido preconfigurado espera el contenido. No extrae contenido del punto de distribución de origen y, como punto de distribución estándar con la configuración de contenido preconfigurado, no recibe contenido del servidor de sitio.  
 
--   **Un punto de distribución de extracción no usa las configuraciones de los límites de frecuencia** al transferir el contenido. Si configura un punto de distribución instalado previamente para que sea un punto de distribución de extracción, las configuraciones de los límites de frecuencia se guardan, pero no se utilizan. Si después quita la configuración del punto de distribución de extracción, las configuraciones de límite de frecuencia se implementan como se configuraron anteriormente.  
+-   **Un punto de distribución de extracción no usa las configuraciones de límites de frecuencia y de programación** al transferir el contenido. Si configura un punto de distribución instalado previamente para que sea un punto de distribución de extracción, se guardarán las configuraciones de límites de frecuencia y de programación, pero no se usarán. Si después quita la configuración del punto de distribución de extracción, las configuraciones de límites de frecuencia y de programación se implementan tal y como se configuraron anteriormente.  
 
     > [!NOTE]  
-    >  Cuando un punto de distribución se configura como punto de distribución de extracción, la pestaña **Límites de frecuencia** no estará visible en las propiedades del punto de distribución.  
+    >  Cuando un punto de distribución se configura como punto de distribución de extracción, las pestañas **Programación** y **Límites de frecuencia** no se mostrarán en las propiedades del punto de distribución.  
 
--   Un punto de distribución de extracción no usa la **configuración de reintento** para la distribución de contenido. **Configuración de reintento** puede configurarse como parte de las **Propiedades del componente de distribución de software** de cada sitio. Para ver o configurar estas propiedades, en el espacio de trabajo **Administración** de la consola de Configuration Manager, expanda **Configuración del sitio** y, después, seleccione **Sitios**. Después seleccione un sitio en el panel de resultados y, en la pestaña **Inicio**, seleccione **Configurar componentes de sitio**. Por último, seleccione **Distribución de software**.  
+-   Los puntos de distribución de extracción no usan la configuración de la pestaña **General** de **Propiedades del componente de distribución de software** para cada sitio.  Esto incluye las opciones **Configuración de distribución simultánea** y **Configuración de reintento de multidifusión**.  Use la pestaña **Punto de distribución de extracción** para configurar las opciones para los puntos de distribución de extracción.
 
 -   Para transferir contenido de un punto de distribución de origen en un bosque remoto, el equipo que hospeda el punto de distribución de extracción debe tener instalado un cliente de Configuration Manager. Debe configurarse el uso de una cuenta de acceso de red con acceso al punto de distribución de origen.  
 

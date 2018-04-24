@@ -10,11 +10,11 @@ ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 1c7adec8f8919736c61859791802a96766af31bb
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 0e4d2add8ece7f548955064a479d9545a1fc64e1
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificados para Cloud Management Gateway
 
@@ -136,7 +136,7 @@ Después de emitir un certificado de autenticación de cliente a un equipo, siga
 *Requisitos de certificados*
 - En las versiones 1706 o 1710, cuando se administran clientes tradicionales con una identidad local mediante un certificado de autenticación de cliente, este certificado es recomendable pero no obligatorio.
 - En la versión 1710, cuando se administran clientes de Windows 10 unidos a Azure AD, este certificado es necesario para los puntos de administración. 
-- A partir de la versión 1802, este certificado es necesario en todos los escenarios. 
+- A partir de la versión 1802, este certificado es necesario en todos los escenarios. Solo los puntos de administración que habilite para CMG deben ser HTTPS. Este cambio de comportamiento proporciona una mejor compatibilidad con la autenticación basada en tokens de Azure AD. 
 
 Aprovisione este certificado fuera del contexto de Configuration Manager. Por ejemplo, use Servicios de certificados de Active Directory y una directiva de grupo para emitir un certificado de servidor web. Para obtener más información, vea [Requisitos de certificados PKI ](/sccm/core/plan-design/network/pki-certificate-requirements) e [Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).
 

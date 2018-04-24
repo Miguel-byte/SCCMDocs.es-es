@@ -1,9 +1,9 @@
 ---
-title: Actualizaciones
+title: Actualizaciones y mantenimiento
 titleSuffix: Configuration Manager
-description: Obtenga información sobre un método de servicio en la consola denominado **Actualizaciones y mantenimiento** que facilita la ubicación e instalación de las actualizaciones recomendadas.
+description: Conozca el método de servicio en la consola denominado Actualizaciones y mantenimiento con el que es más fácil encontrar e instalar actualizaciones recomendadas.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,12 @@ caps.latest.revision: 51
 caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 8be32aa07819239820711079e4ff3637e96367db
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+manager: dougeby
+ms.openlocfilehash: 7660736dbacebb7167cb6bd19d7590d7f774e17c
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="updates-for-system-center-configuration-manager"></a>Actualizaciones para System Center Configuration Manager
 
@@ -91,6 +91,10 @@ Las siguientes versiones de Configuration Manager están disponibles como línea
 
 Para comprobar la versión del sitio de Configuration Manager, vaya a **Acerca de System Center Configuration Manager** en la esquina superior izquierda de la consola, donde aparece la nueva versión del sitio y la consola.  
 
+ > [!Note]  
+ > A partir de la versión 1802, la versión de la consola ahora es ligeramente diferente de la versión del sitio. La versión secundaria de la consola ahora corresponde a la versión de lanzamiento de Configuration Manager. Por ejemplo, en Configuration Manager versión 1802, la versión de sitio inicial es 5.0.8634.1000 y la versión inicial de la consola es 5. **1802**.1082.1700. Los números de compilación (1082) y revisión (1700) pueden cambiar con futuras revisiones de la versión 1802.
+
+
 ##  <a name="bkmk_inconsole"></a> Actualizaciones y servicio en la consola  
  Cuando usa una instalación lista para producción de System Center Configuration Manager, a la que también se conoce como rama actual, la mayoría de las actualizaciones que se instalan están disponibles con el canal Actualizaciones y mantenimiento. Este método identifica, descarga y pone a disposición las actualizaciones que se aplican a la versión y la configuración actual de la infraestructura e incluye solo las actualizaciones que Microsoft recomienda para todos los clientes.   
  Entre ellos, se incluye:  
@@ -136,7 +140,7 @@ Cuando se instala una actualización en la consola:
 -   Una vez que se actualiza un sitio principal, los sitios secundarios no se actualizan automáticamente. En lugar de eso, es usted quien debe iniciar la actualización de los sitios secundarios.  
 
 > [!NOTE]  
->  La versión de producción de System Center Configuration Manager (rama actual), la rama de mantenimiento a largo plazo y Technical Preview para System Center Configuration Manager son diferentes versiones. Por lo tanto, las actualizaciones que se aplican para una rama no están disponibles como actualizaciones en la consola para las demás ramas. Para obtener más información sobre las diferentes ramas, consulte [Which branch of Configuration Manager should I use (¿Qué rama de Configuration Manager debo usar?)](/sccm/core/understand/which-branch-should-i-use).
+>  La versión de producción de System Center Configuration Manager (rama actual), la rama de mantenimiento a largo plazo y Technical Preview para System Center Configuration Manager son diferentes versiones. Por lo tanto, las actualizaciones que se aplican para una rama no están disponibles como actualizaciones en la consola para las demás ramas. Para más información sobre las diferentes ramas, consulte [Which branch of Configuration Manager should I use (¿Qué rama de Configuration Manager debo usar?)](/sccm/core/understand/which-branch-should-i-use).
 
 ##  <a name="bkmk_outofband"></a> Revisiones fuera de banda  
 Algunas revisiones se lanzan con disponibilidad limitada para abordar problemas específicos, o bien son aplicables para todos los clientes, pero no se pueden instalar mediante el método en la consola. Estas revisiones se entregan fuera de banda y no se detectan desde el servicio en la nube de Microsoft.  

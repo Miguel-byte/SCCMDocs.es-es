@@ -1,41 +1,42 @@
 ---
-title: "Protección contra amenazas avanzada de Windows Defender"
+title: Protección contra amenazas avanzada de Windows Defender
 titleSuffix: Configuration Manager
-description: "Aprenda a administrar y supervisar Protección contra amenazas avanzada de Windows Defender, un nuevo servicio que ayuda a las empresas a responder a los ataques avanzados."
+description: Aprenda a administrar y supervisar Protección contra amenazas avanzada de Windows Defender, un nuevo servicio que ayuda a las empresas a responder a los ataques avanzados.
 ms.custom: na
 ms.date: 03/07/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 561a03c7046accaa8e6d36407c75cbd4248188ce
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 84786d741eda2be24a7deb39478e68c68adc38fe
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Protección contra amenazas avanzada de Windows Defender
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
-A partir de la versión 1606 de Configuration Manager (rama actual), Endpoint Protection puede ayudar a administrar y supervisar la protección contra amenazas avanzadas de Windows Defender (ATP). Protección contra amenazas avanzada de Windows Defender es un nuevo servicio que ayuda a las empresas a detectar ataques avanzados en sus redes, a investigarlos y a responder a ellos.  Obtenga más información sobre [Protección contra amenazas avanzada de Windows Defender](http://aka.ms/technet-wdatp). Las directivas de Configuration Manager pueden ayudarle a incorporar y supervisar dispositivos administrados de Windows 10, versión 1607 (compilación 14328).
+A partir de la versión 1606 de Configuration Manager (rama actual), Endpoint Protection puede ayudar a administrar y supervisar la [Protección contra amenazas avanzada (ATP) de Windows Defender](http://aka.ms/technet-wdatp). Protección contra amenazas avanzada de Windows Defender ayuda a las empresas a detectar e investigar ataques avanzados en sus redes, y responder ante ellos.  Las directivas de Configuration Manager o Microsoft Intune pueden ayudarle a incorporar y supervisar dispositivos administrados con Windows 10, versión 1607 (compilación 14328) o versiones posteriores.
 
-Protección contra amenazas avanzada de Windows Defender es un servicio en el [Centro de seguridad de Windows](https://securitycenter.windows.com). Al agregar e implementar un archivo de configuración de incorporación de cliente, Configuration Manager puede supervisar el estado de implementación y el mantenimiento del agente de Protección contra amenazas avanzada de Windows Defender. La Protección contra amenazas avanzada de Windows Defender solo se admite en equipos que ejecutan el cliente de Configuration Manager. No se admiten la administración de dispositivos móviles local y los equipos administrados con MDM de Intune híbrido.
+Protección contra amenazas avanzada de Windows Defender es un servicio del [Centro de seguridad avanzada de Windows Defender](https://securitycenter.windows.com). Al agregar e implementar un archivo de configuración de incorporación de cliente, Configuration Manager puede supervisar el estado de implementación y el mantenimiento del agente de Protección contra amenazas avanzada de Windows Defender. Protección contra amenazas avanzada de Windows Defender se admite en equipos que ejecutan el cliente de Configuration Manager o que están administrados por Microsoft Intune, pero no se admiten equipos con una administración híbrida de MDM e Intune.
 
  **Requisitos previos**  
 
--   Suscripción al servicio en línea Protección contra amenazas avanzada de Windows Defender  
+-   Suscripción al servicio en línea Protección de amenazas avanzada de Windows Defender  
 -   Equipos cliente que ejecutan Windows 10, versión 1607 y posteriores  
--   Equipos cliente que ejecutan la versión de Configuration Manager 1610 o un agente cliente posterior
+-   Equipos cliente que ejecutan Configuration Manager versión 1610 o un agente cliente posterior, o administrados por Microsoft Intune
 
-## <a name="how-to-create-an-onboarding-configuration-file"></a>Creación de un archivo de configuración de incorporación  
+## <a name="how-to-create-an-onboarding-configuration-file"></a>Cómo crear un archivo de configuración de incorporación de cliente  
 
  1.  Inicie sesión en el [servicio en línea Protección contra amenazas avanzada de Windows Defender](https://securitycenter.windows.com/).   
 

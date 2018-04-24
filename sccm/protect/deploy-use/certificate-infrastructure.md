@@ -1,30 +1,31 @@
 ---
-title: "Configuración de la infraestructura de certificados"
+title: Configuración de la infraestructura de certificados
 titleSuffix: Configuration Manager
-description: "Aprenda a configurar la inscripción de certificados en System Center Configuration Manager."
+description: Aprenda a configurar la inscripción de certificados en System Center Configuration Manager.
 ms.custom: na
 ms.date: 07/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
-caps.latest.revision: "7"
-caps.handback.revision: "0"
+caps.latest.revision: 7
+caps.handback.revision: 0
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
 ms.openlocfilehash: 9ef62bbf6269a6090f2345b10c24cc4df16c1e3b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="configure-certificate-infrastructure"></a>Configuración de la infraestructura de certificados
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Aprenda a configurar la infraestructura de certificados en System Center Configuration Manager. Antes de empezar, compruebe los requisitos previos que se indican en [Requisitos previos de perfiles de certificado en Configuration Manager](../../protect/plan-design/prerequisites-for-certificate-profiles.md).  
 
@@ -160,11 +161,11 @@ Debe instalar y configurar al menos un punto de registro de certificados en la j
 
     -   En el área de trabajo **Supervisión** , expanda **Estado del sistema**, haga clic en **Estado del componente**y busque mensajes de estado del componente **SMS_CERTIFICATE_REGISTRATION_POINT** .  
 
-    -   En el servidor de sistema de sitio, use el archivo *<ruta de instalación de Configuration Manager\>*\Logs\crpsetup.log y el archivo *<ruta de instalación de Configuration Manager\>*\Logs\crpmsi.log. Una instalación correcta devolverá un código de salida de 0.  
+    -   En el servidor de sistema de sitio, use el archivo *<ruta de instalación de Configuration Manager\>* \Logs\crpsetup.log y el archivo *<ruta de instalación de Configuration Manager\>* \Logs\crpmsi.log. Una instalación correcta devolverá un código de salida de 0.  
 
-    -   Mediante un explorador, compruebe que puede conectarse a la dirección URL del punto de registro de certificados (por ejemplo, https://server1.contoso.com/CMCertificateRegistration). Se debería visualizar una página de **error del servidor** para el nombre de la aplicación, con una descripción de HTTP 404.  
+    -   Mediante un explorador, compruebe que puede conectarse a la dirección URL del punto de registro de certificados, como por ejemplo, https://server1.contoso.com/CMCertificateRegistration. Se debería visualizar una página de **error del servidor** para el nombre de la aplicación, con una descripción de HTTP 404.  
 
-11. Busque el archivo de certificado exportado para la CA raíz que el punto de registro de certificado creó automáticamente en la carpeta siguiente en el equipo del servidor de sitio primario:*<ruta de instalación de Configuration Manager\>*\inboxes\certmgr.box. Guarde este archivo en una ubicación protegida a la que pueda acceder de forma segura posteriormente cuando instale el módulo de directivas de System Center Configuration Manager en el servidor que ejecuta el Servicio de inscripción de dispositivos de red.  
+11. Busque el archivo de certificado exportado para la CA raíz que el punto de registro de certificado creó automáticamente en la carpeta siguiente en el equipo del servidor de sitio primario:*<ruta de instalación de Configuration Manager\>* \inboxes\certmgr.box. Guarde este archivo en una ubicación protegida a la que pueda acceder de forma segura posteriormente cuando instale el módulo de directivas de System Center Configuration Manager en el servidor que ejecuta el Servicio de inscripción de dispositivos de red.  
 
     > [!TIP]  
     >  Este certificado no está disponible inmediatamente en esta carpeta. Es posible que tenga que esperar (por ejemplo, media hora) para que System Center Configuration Manager copie el archivo en esta ubicación.  
@@ -190,7 +191,7 @@ Debe instalar y configurar el módulo de directivas de System Center Configurati
 
 4.  En la página **Carpeta de instalación** , acepte la carpeta de instalación predeterminada para el módulo de directivas o especifique una carpeta alternativa. A continuación, haga clic en **Siguiente**.  
 
-5.  En la página **Punto de registro de certificado** , especifique la dirección URL del punto de registro de certificado. Para ello, use el FQDN del servidor del sistema de sitios y el nombre de la aplicación virtual especificado en las propiedades del punto de registro de certificado. El nombre de la aplicación virtual predeterminado es CMCertificateRegistration. Por ejemplo, si el servidor de sistema de sitio tiene un FQDN de server1.contoso.com y utiliza el nombre de la aplicación virtual predeterminado, especifique **https://server1.contoso.com/CMCertificateRegistration**.  
+5.  En la página **Punto de registro de certificado** , especifique la dirección URL del punto de registro de certificado. Para ello, use el FQDN del servidor del sistema de sitios y el nombre de la aplicación virtual especificado en las propiedades del punto de registro de certificado. El nombre de la aplicación virtual predeterminado es CMCertificateRegistration. Por ejemplo, si el servidor del sistema de sitio tiene el FQDN server1.contoso.com y se usó el nombre de la aplicación virtual predeterminada, especifique **https://server1.contoso.com/CMCertificateRegistration**.  
 
 6.  Acepte el puerto predeterminado **443** o especifique otro número de puerto que use el punto de Registro de certificado. A continuación, haga clic en **Siguiente**.  
 

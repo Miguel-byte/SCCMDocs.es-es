@@ -1,25 +1,26 @@
 ---
-title: "Declaración de privacidad para cmdletlLibrary de Configuration Manager"
-description: "Obtenga información sobre cómo Microsoft recopila y usa datos relacionados con la biblioteca de cmdlets de System Center Configuration Manager."
+title: Declaración de privacidad para cmdletlLibrary de Configuration Manager
+description: Obtenga información sobre cómo Microsoft recopila y usa datos relacionados con la biblioteca de cmdlets de System Center Configuration Manager.
 ms.custom: na
 ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bec00fb4-1ac0-4e49-b330-0871b3722459
-caps.latest.revision: "5"
-caps.handback.revision: "0"
+caps.latest.revision: 5
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: f4f018721aa09f7e8bd42b9e74552c0d34e0f5a9
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 0ed94de1fc4782539baed0f1589cebf69c0f2219
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="system-center-configuration-manager-privacy-statement---configuration-manager-cmdlet-library"></a>Declaración de privacidad de System Center Configuration Manager: biblioteca de cmdlets de Configuration Manager
 
@@ -28,24 +29,32 @@ ms.lasthandoff: 01/04/2018
 Esta declaración de privacidad cubre las características de la biblioteca de cmdlets de System Center Configuration Manager.  
 
 ## <a name="usage-data"></a>Datos de uso  
- **Qué hace esta característica:**   
-la biblioteca de cmdlets de System Center Configuration Manager le permite administrar una jerarquía de Configuration Manager con scripts y cmdlets de Windows PowerShell. La biblioteca de cmdlets recopila información sobre cómo usar los cmdlets de la biblioteca para identificar tendencias y patrones de uso. La biblioteca de cmdlets también recopila los tipos y números de errores que se producen al usar los cmdlets.  
 
- **Información recopilada, procesada o transmitida:**   
-Los datos de uso recopilados incluyen el inicio, detención y terminación de cmdlets, la ejecución de cmdlets desusados y las métricas de actividad para operaciones del proveedor de Systems Management Server (SMS) relacionadas con los cmdlets. Esta información no contiene datos que identifiquen personalmente al usuario.  La información de errores recopilada incluye errores devueltos por los cmdlets y los detalles de error de los errores de excepción. Es posible que algunos informes de detalles de error contengan identificadores individuales, como un número de serie para un dispositivo que está conectado al equipo. La biblioteca de cmdlets filtra y anonimiza la información de los informes de errores para quitar los identificadores individuales antes de transmitirlos a Microsoft.  
+#### <a name="what-this-feature-does"></a>Funciones de esta característica   
 
- **Uso de la información:**   
-usamos esta información para mejorar la calidad, la seguridad y la integridad de los productos y servicios que ofrecemos.  
+la biblioteca de cmdlets de System Center Configuration Manager le permite administrar una jerarquía de Configuration Manager con scripts y cmdlets de Windows PowerShell. La biblioteca de cmdlets recopila información sobre cómo usar los cmdlets de la biblioteca para identificar tendencias y patrones de uso. La biblioteca de cmdlets también recopila los tipos y números de errores que se reciben al usar los cmdlets.  
 
- **Opción/control:**   
+#### <a name="information-collected-processed-or-transmitted"></a>Información recopilada, procesada o transmitida
+   
+Los datos de uso recopilados incluyen el inicio, la detención y la terminación de cmdlets, la ejecución de cmdlets desusados y las métricas de actividad para operaciones del proveedor de SMS relacionadas con los cmdlets. Esta información no contiene datos que identifiquen personalmente al usuario. La información de errores recopilada incluye errores devueltos por los cmdlets y los detalles de error de los errores de excepción. Es posible que algunos informes de detalles de error incluyan identificadores individuales, como un número de serie para un dispositivo que está conectado al equipo. La biblioteca de cmdlets filtra y anonimiza la información de los informes de errores para quitar los identificadores individuales antes de transmitirlos a Microsoft.  
+
+#### <a name="use-of-information"></a>Uso de la información
+   
+Microsoft usa esta información para mejorar la calidad, la seguridad y la integridad de los productos y servicios que ofrece.  
+
+#### <a name="choicecontrol"></a>Opción/control   
+
 esta característica de datos de uso está habilitada de forma predeterminada. La biblioteca de cmdlets de System Center Configuration Manager incluye dos claves del Registro que controlan esta característica.  
 
- Para dejar de participar totalmente tiene que establecer estos dos valores clave del registro, uno para cada uno de los proveedores de seguimiento de eventos para Windows (ETW):  
+ Para dejar de participar por completo, establezca estos dos valores de clave del Registro. Son para cada uno de los proveedores de Seguimiento de eventos para Windows (ETW):  
 
--   HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Provider:CeipLevel=0 (para dejar de participar en los datos de uso del proveedor de la unidad)  
+-   HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Provider:CeipLevel=0 (para dejar de participar en los datos de uso del proveedor de unidad)  
 
--   HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Cmdlets:CeipLevel=0 (para dejar de participar en los datos de uso de los cmdlets )  
+-   HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Cmdlets:CeipLevel=0 (para dejar de participar en los datos de uso de los cmdlets)  
 
- Los cambios a la configuración de datos de uso son específicos para el equipo en el que se realizan.  
+ Los cambios en la configuración de datos de uso son específicos para el equipo en el que se realizan.  
 
- Para más información sobre cómo configurar datos de uso (recopilación), vea la [documentación de la biblioteca de cmdlets de System Center Configuration Manager](https://technet.microsoft.com/en-us/library/dn958404.aspx).   
+
+## <a name="next-steps"></a>Pasos siguientes
+
+[Documentación de la biblioteca de cmdlets de System Center Configuration Manager](https://docs.microsoft.com/powershell/sccm/configurationmanager/)   

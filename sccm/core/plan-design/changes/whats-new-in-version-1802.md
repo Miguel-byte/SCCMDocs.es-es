@@ -3,7 +3,7 @@ title: Nueva versión 1802
 titleSuffix: Configuration Manager
 description: Conozca en detalle los cambios y las nuevas funciones introducidas en la versión 1802 de Configuration Manager.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/11/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,20 +12,27 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9c9ff975a58e7c56375fa7740a0a5bb6ebfa6341
-ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
+ms.openlocfilehash: a667c34dc39ef0578ff840e5603080b09c67c63c
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>Novedades de la versión 1802 de System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
 La actualización 1802 para la rama actual de Configuration Manager está disponible como una actualización en la consola. Aplique esta actualización en los sitios que ejecuten las versiones 1702, 1706 o 1710. <!-- baseline only statement: -->Al instalar un nuevo sitio, también está disponible como una versión de línea base.
+
+Además de nuevas características, esta versión también incluye cambios adicionales como, por ejemplo, correcciones de errores. Para obtener más información, vea [Resumen de cambios en la rama actual de System Center Configuration Manager, versión 1802](https://support.microsoft.com/help/4101375).
+
+<!--
+The following additional updates to this release are also now available:
+- [Update rollup for System Center Configuration Manager current branch, version 1710](https://support.microsoft.com/help/4057517)
+-->
 
 > [!TIP]  
 > Para instalar un sitio nuevo, debe usar una versión de línea base de Configuration Manager.  
@@ -124,7 +131,7 @@ Al crear una instancia de [Cloud Management Gateway](/sccm/core/clients/manage/p
 
 - La documentación de las características se ha revisado y mejorado. Vea los siguientes artículos para más información:
     - [Planificación de Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
-    - [Números de tamaño y escala de Cloud Management Gateway](/sccm/core/plan-design/configs/size-and-scale-numbers#bkmk_cmg)
+    - [Números de tamaño y escala de System Center Configuration Manager](/sccm/core/plan-design/configs/size-and-scale-numbers#bkmk_cmg)
     - [Seguridad y privacidad de la puerta de enlace de administración en la nube](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway)
     - [Preguntas más frecuentes sobre Cloud Management Gateway](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
     - [Certificados para la puerta de enlace de administración en la nube](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)

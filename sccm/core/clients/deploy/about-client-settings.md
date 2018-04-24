@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 42b9364fc88acc3f403db8d2ca9243a117fd78bf
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: bd03457abdd5cc4464c10227626ba72637c96f90
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Acerca de la configuración de cliente en System Center Configuration Manager
 
@@ -161,7 +161,7 @@ Seleccione **Sí** si quiere implementar elementos de configuración de [perfile
 
 Para obtener más información sobre las siguientes tres configuraciones, vea [Notificaciones de usuario para las implementaciones requeridas](/sccm/apps/deploy-use/deploy-applications#user-notifications-for-required-deployments):
 
--    **La fecha límite de la implementación es de más de 24 horas. Recordar al usuario cada (horas)**
+-   **La fecha límite de la implementación es de más de 24 horas. Recordar al usuario cada (horas)**
 -   **La fecha límite de la implementación es antes de 24 horas. Recordar al usuario cada (horas)** 
 -   **La fecha límite de la implementación es antes de 1 hora. Recordar al usuario cada (minutos)** 
 
@@ -714,7 +714,7 @@ Si quiere recopilar archivos de los equipos cliente, seleccione **Archivos** y, 
     -   **Detener la recopilación de archivos cuando el tamaño total de archivos supere (KB)**: especifique el tamaño del archivo, en kilobytes (KB), después del cual el cliente detiene la recopilación de los archivos especificados.  
 
     > [!NOTE]  
-    >  El servidor de sitio recopila las cinco versiones cambiadas más recientemente de los archivos recopilados y las almacena en *&lt;directorio de instalación de Configuration Manager\>*\Inboxes\Sinv.box\Filecol. Si un archivo no ha cambiado desde el último ciclo de inventario de software, el archivo no se recopila de nuevo.  
+    >  El servidor de sitio recopila las cinco versiones cambiadas más recientemente de los archivos recopilados y las almacena en *&lt;directorio de instalación de Configuration Manager\>* \Inboxes\Sinv.box\Filecol. Si un archivo no ha cambiado desde el último ciclo de inventario de software, el archivo no se recopila de nuevo.  
     >   
     >  El inventario de software no recopila archivos de más de 20 MB.  
     >   
@@ -799,10 +799,11 @@ Esta opción configura el puerto local para el que agente de escucha HTTP descar
 
 ### <a name="enable-management-of-the-office-365-client-agent"></a>Habilitar administración del Agente cliente de Office 365
 
-Cuando se establece en **Sí**, habilita la configuración de opciones de instalación de Office 365. También permite descargar archivos desde redes de Content Delivery Network (CDN) de Office e implementar los archivos como una aplicación en Configuration Manager. Para obtener más información, vea [Administración de Office 365 ProPlus](/sccm/sum/deploy-use/manage-office-365-proplus-updates).
+Cuando se establece en **Sí**, habilita la configuración de opciones de instalación de Office 365. También permite descargar archivos desde redes de Content Delivery Network (CDN) de Office e implementar los archivos como una aplicación en Configuration Manager. Para más información, vea [Administración de Office 365 ProPlus](/sccm/sum/deploy-use/manage-office-365-proplus-updates).
 
+### <a name="enable-third-party-software-updates"></a>Habilitar actualizaciones de software de terceros 
 
-
+Cuando se establece en **Sí**, establece la directiva para permitir actualizaciones firmadas para una ubicación del servicio Microsoft Update en la intranet e instala el certificado de firma en el almacén de editores de confianza en el cliente. Esta configuración de cliente se agregó en Configuration Manager versión 1802.
 ## <a name="state-messaging"></a>Mensajes de estado
 
 ### <a name="state-message-reporting-cycle-minutes"></a>Ciclo de notificación de mensaje de estado (minutos)

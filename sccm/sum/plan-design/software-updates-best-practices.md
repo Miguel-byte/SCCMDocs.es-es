@@ -1,26 +1,14 @@
----
-title: Procedimientos recomendados para las actualizaciones de software
-titleSuffix: Configuration Manager
-description: Use estos procedimientos recomendados para las actualizaciones de software en System Center Configuration Manager.
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.date: 10/06/2016
-ms.topic: article
-ms.prod: configuration-manager
-ms.service: 
-ms.technology: configmgr-sum
-ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-ms.openlocfilehash: 10913870f650bdda6eb7e65dc88ba8e3f0b17de4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ ---
+
+title: Procedimientos recomendados para actualizaciones de software titleSuffix: "Configuration Manager" description: "Use estos procedimientos recomendados para las actualizaciones de software en System Center Configuration Manager."
+keywords: author: dougeby ms.author: dougeby manager: angrobe ms.date: 10/06/2018 ms.topic: article ms.prod: configuration-manager ms.service: ms.technology:
+ - configmgr-sum ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
+
+
 ---
 # <a name="best-practices-for-software-updates-in-system-center-configuration-manager"></a>Procedimientos recomendados para las actualizaciones de software en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En este tema, se incluyen procedimientos recomendados para las actualizaciones de software en System Center Configuration Manager. La información se ordena en prácticas recomendadas para la instalación inicial y prácticas recomendadas para las operaciones en curso.  
 

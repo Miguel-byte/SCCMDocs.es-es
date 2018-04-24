@@ -6,18 +6,18 @@ keywords: ''
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: ''
 ms.technology:
 - configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 5bd1a3afd7957e4db1b43e344a7b88e18de50695
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 4fbbe4b6792c51cd7adeeae3a96f81927153362c
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Administración de Office 365 ProPlus con Configuration Manager
 
@@ -43,7 +43,7 @@ El panel de administración de clientes de Office 365 proporciona una serie de g
 - Versiones de cliente de Office 365
 - Idiomas de cliente de Office 365
 - Canales de cliente de Office 365     
-  Para obtener más información, vea [Información general de los canales de actualización para Office 365 ProPlus](https://technet.microsoft.com/library/mt455210.aspx).
+  Para más información, vea [Información general de los canales de actualización para Office 365 ProPlus](https://technet.microsoft.com/library/mt455210.aspx).
 
 Para ver el panel de administración de clientes de Office 365 en la consola de Configuration Manager, vaya a **Biblioteca de software** > **Información general** > **Administración de clientes de Office 365**. En la parte superior del panel, use la opción desplegable **Colección** para filtrar los datos del panel por miembros de una colección determinada. A partir de Configuration Manager versión 1802, en el panel de administración de clientes de Office 365 se muestra una lista de los dispositivos correspondientes al seleccionar las secciones de un gráfico.
 
@@ -95,7 +95,7 @@ Con las versiones anteriores de Configuration Manager, hay que realizar los sigu
 Después de crear e implementar aplicaciones de Office 365 mediante el Instalador de Office 365, Configuration Manager no administrará las actualizaciones de Office de forma predeterminada. Para permitir que los clientes de Office 365 reciban actualizaciones de Configuration Manager, vea [Implementar actualizaciones de Office 365 con Configuration Manager](#deploy-office-365-updates-with-configuration-manager).
 
 >[!NOTE]
->Después de implementar las aplicaciones de Office 365, puede crear reglas de implementación automática para mantener esas aplicaciones. Para crear una regla de implementación automática para las aplicaciones de Office 365, haga clic en **Crear un ADR** desde el panel de administración de clientes de Office 365. Seleccione **Cliente de Office 365** cuando elija el producto. Para obtener más información, vea [Implementar actualizaciones de software automáticamente](/sccm/sum/deploy-use/automatically-deploy-software-updates).
+>Después de implementar las aplicaciones de Office 365, puede crear reglas de implementación automática para mantener esas aplicaciones. Para crear una regla de implementación automática para las aplicaciones de Office 365, haga clic en **Crear un ADR** desde el panel de administración de clientes de Office 365. Seleccione **Cliente de Office 365** cuando elija el producto. Para más información, vea [Implementar actualizaciones de software automáticamente](/sccm/sum/deploy-use/automatically-deploy-software-updates).
 
 
 ## <a name="deploy-office-365-updates"></a>Implementación de actualizaciones de Office 365
@@ -112,7 +112,7 @@ Siga estos pasos para implementar actualizaciones de Office 365 con Configuratio
 
       1.  En la consola de Configuration Manager, haga clic en **Administración** > **Información general** > **Configuración de cliente**.  
 
-      2.  Abra la configuración de dispositivo adecuada para habilitar el agente cliente. Para obtener más información sobre las configuraciones de cliente personalizada y predeterminada, vea [Cómo establecer la configuración del cliente en Configuration Manager](../../core/clients/deploy/configure-client-settings.md).  
+      2.  Abra la configuración de dispositivo adecuada para habilitar el agente cliente. Para más información sobre las configuraciones de cliente personalizada y predeterminada, vea [Cómo establecer la configuración del cliente en Configuration Manager](../../core/clients/deploy/configure-client-settings.md).  
 
       3.  Haga clic en **Actualizaciones de software** y seleccione **Sí** para el valor **Habilitar administración del Agente cliente de Office 365**.  
 
@@ -174,6 +174,17 @@ Siga el procedimiento de abajo en el punto de actualización de software del sit
 11. Ahora, las actualizaciones de Office 365 se descargarán en los idiomas seleccionados en el asistente y en los que haya configurado en este procedimiento. Para comprobar que las actualizaciones se han descargado en esos idiomas, vaya al origen del paquete de la actualización y busque los archivos con el código de idioma en el nombre de archivo.  
 ![Nombres de archivo con idiomas adicionales](..\media\5-verification.png)
 
+## <a name="updating-office-365-during-task-sequences-when-office-365-is-installed-in-the-base-image"></a>Actualización de Office 365 durante las secuencias de tareas cuando se instala Office 365 en la imagen base
+Cuando se instala un sistema operativo en el que ya está instalado Office 365 en la imagen, es posible que el valor de la clave del Registro del canal de actualización tenga la ubicación de instalación original. En este caso, la búsqueda de actualizaciones no mostrará ninguna actualización del cliente de Office 365 según corresponda. Hay una tarea programada de actualizaciones automáticas de Office que se ejecuta varias veces por semana. Después de ejecutarse esta tarea, el canal de actualización apuntará a la URL configurada de CDN de Office y la búsqueda mostrará estas actualizaciones según corresponda. <!--510452-->
+
+Para asegurarse de que el canal de actualización está configurado de modo que se puedan encontrar las actualizaciones aplicables, siga estos pasos:
+1. En una máquina con la misma versión de Office 365 como la imagen base del sistema operativo, abra el Programador de tareas (taskschd.msc) e identifique la tarea de las actualizaciones automáticas de Office 365. Por lo general, se encuentra en **Biblioteca del Programador de tareas** >**Microsoft**>**Office**.
+2. Haga clic con el botón derecho en la tarea de actualización automática y seleccione **Propiedades**.
+3. Vaya a la pestaña **Acciones** y haga clic en **Editar**. Copie el comando y los argumentos. 
+4. En la consola de Configuration Manager, edite la secuencia de tareas.
+5. Agregue un nuevo paso **Ejecutar línea de comandos** antes del paso **Instalar actualizaciones** en la secuencia de tareas. 
+6. Copie el comando y los argumentos que ha recopilado de la tarea programada de actualizaciones automáticas de Office. 
+7. Haga clic en **Aceptar**. 
 
 ## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>Cambiar el canal de actualización después de permitir que los clientes de Office 365 reciban actualizaciones de Configuration Manager
 Para cambiar el canal de actualización después de permitir que los clientes de Office 365 reciban actualizaciones de Configuration Manager, se puede usar una directiva de grupo para distribuir un cambio del valor de una clave del Registro en los clientes de Office 365. Cambie la clave del Registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** para que use uno de los valores siguientes:

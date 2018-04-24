@@ -3,7 +3,7 @@ title: Instalar el cliente con Azure AD
 titleSuffix: Configuration Manager
 description: Instale y asigne el cliente de Configuration Manager en dispositivos Windows 10 con Azure Active Directory para la autenticación
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a8ca1a60a249756065ee2af6cb9c37f3fe2a1e0
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 12fc1b394ae98c2b384630f4a00e4239e4e8d9d6
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>Instalación y asignación de clientes Windows 10 para Configuration Manager mediante la autenticación basada en Azure AD
 
@@ -48,6 +48,8 @@ Para instalar el cliente de Configuration Manager en dispositivos Windows 10 med
 - Además de los [requisitos previos existentes](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012MPpreq) para el rol de sistema de sitio del punto de administración, habilite también **ASP.NET 4.5** en este servidor. Incluya las demás opciones que se seleccionen automáticamente al habilitar ASP.NET 4.5.  
 
 - Configure todos los puntos de administración para el modo HTTPS. Para obtener más información, vea [Requisitos de certificados PKI ](/sccm/core/plan-design/network/pki-certificate-requirements) e [Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
+    - Si está usando Cloud Management Gateway, solo necesitará configurar HTTPS para los puntos de administración que habilite para Cloud Management Gateway.
+    - Si va a implementar clientes en la intranet mediante la autenticación basada en tokens de Azure AD, deberá habilitar para HTTPS todos los puntos de administración con los que puedan ponerse en contacto estos clientes. 
 
 - Opcionalmente, configure una instancia de [Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) (CMG) para implementar clientes basados en Internet. Para los clientes locales que se autentican con Azure AD, no necesita CMG.  
 
@@ -87,7 +89,7 @@ Para instalar manualmente el cliente con la identidad de Azure AD, primero revis
  > [!Note]  
  > El dispositivo necesita tener acceso a Internet para ponerse en contacto con Azure AD, pero no hace falta que esté basado en Internet. 
 
-En el ejemplo siguiente se muestra la estructura general de la línea de comandos: `ccmsetup.exe /mp:<source management point> CCMHOSTNAME=<internet-based management point> SMSSiteCode=<site code> SMSMP=<initial management point> AADTENANTID=<Azure AD tenant identifier> AADTENANTNAME=<Azure AD tenant name> AADCLIENTAPPID=<Azure AD client app identifier> AADRESOURCEURI=<Azure AD server app identifier>`.
+En el ejemplo siguiente se muestra la estructura general de la línea de comandos: `ccmsetup.exe /mp:<source management point> CCMHOSTNAME=<internet-based management point> SMSSiteCode=<site code> SMSMP=<initial management point> AADTENANTID=<Azure AD tenant identifier> AADCLIENTAPPID=<Azure AD client app identifier> AADRESOURCEURI=<Azure AD server app identifier>`.
 
 Para obtener más información, vea [Acerca de las propiedades de instalación de clientes](/sccm/core/clients/deploy/about-client-installation-properties).
 
@@ -96,7 +98,7 @@ Las propiedades /mp y CCMHOSTNAME especifican uno de los valores siguientes, en 
 - Puerta de enlace de administración en la nube
 - El punto de administración basado en Internet. La propiedad SMSMP el especifica el punto de administración local o basado en Internet.
 
-En este ejemplo se usa una instancia de Cloud Management Gateway. Sustituye los valores de ejemplo para cada propiedad: `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADTENANTNAME=contoso AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`.
+En este ejemplo se usa una instancia de Cloud Management Gateway. Sustituye los valores de ejemplo para cada propiedad: `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`.
 
 Para automatizar la instalación del cliente mediante la identidad de Azure AD a través de Microsoft Intune, vea el proceso para [Preparar dispositivos de Windows 10 para la administración conjunta](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).
 

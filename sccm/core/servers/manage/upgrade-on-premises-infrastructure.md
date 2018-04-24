@@ -1,7 +1,7 @@
 ---
 title: Actualizar la infraestructura local
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo actualizar la infraestructura, como SQL Server y el sistema operativo de sitio de los sistemas de sitio."
+description: Obtenga información sobre cómo actualizar la infraestructura, como SQL Server y el sistema operativo de sitio de los sistemas de sitio.
 ms.custom: na
 ms.date: 02/15/2018
 ms.prod: configuration-manager
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 7
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 8e17ffad2b972119c92e449bef8f086b950b106c
-ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
+ms.openlocfilehash: 5c4403588872e426a9346e6c4c50f1853b75f4b9
+ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-system-center-configuration-manager"></a>Actualizar la infraestructura local que es compatible con System Center Configuration Manager
 
@@ -74,6 +74,8 @@ Al actualizar Windows Server 2012 o Windows Server 2012 R2 a Windows Server 2016
 -   Asegúrese de que todos los servidores que hospeden un rol de sistema de sitio sigan cumpliendo todos los [requisitos previos para roles de sistema de sitio](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) que se ejecuten en ese servidor. Por ejemplo, puede que tenga que volver a instalar BITS, WSUS, o configurar valores específicos de IIS.
 
 -   Después de restaurar los requisitos previos que falten, reinicie el servidor una vez más para asegurarse de que los servicios se hayan iniciado y estén operativos.
+
+-   Si va a actualizar el servidor de sitio primario, elija [Ejecutar un restablecimiento de sitio](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_reset).
 
 **Problema conocido de consolas remotas de Configuration Manager:**  
 Después de actualizar el servidor de sitio o un servidor que hospeda una instancia de SMS_Provider para Windows Server 2016, es posible que los usuarios administrativos no puedan conectar una consola de Configuration Manager al sitio. Para evitar este problema, debe restaurar de forma manual los permisos del grupo de administradores de SMS en WMI. Los permisos deben establecerse en el servidor de sitio y en cada servidor remoto que hospede una instancia del proveedor de SMS:

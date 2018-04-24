@@ -2,7 +2,7 @@
 title: Planear para Cloud Management Gateway
 titleSuffix: Configuration Manager
 description: Planee y diseñe Cloud Management Gateway (CMG) para simplificar la administración de clientes basados en Internet.
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
@@ -10,20 +10,26 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dabc248c1788ecad4d7b25c0a1f592e0ddeef826
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: 2b207ffe95a078c955817d9251da3adbdf4de10d
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planificación de Cloud Management Gateway en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
-
+ 
+<!--1101764-->
 Cloud Management Gateway (CMG) proporciona una manera sencilla de administrar clientes de Configuration Manager en Internet. Al implementar CMG como un servicio en la nube de Microsoft Azure, puede administrar los clientes tradicionales que se mueven por Internet sin una infraestructura adicional. Tampoco necesita exponer la infraestructura local a Internet. 
 
 > [!Tip]  
-> Esta característica se introdujo por primera vez en la versión 1610 como un [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1802, ya no es una característica de versión preliminar.
+> Esta característica se introdujo por primera vez en la versión 1610 como un [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1802, ya no es una característica de versión preliminar.  
+
+
+> [!Note]  
+> Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para más información, vea [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
 Después de establecer los requisitos previos, la creación de CMG consta de los tres pasos siguientes en la consola de Configuration Manager:
 1. Implementar el servicio en la nube de CMG en Azure.
@@ -186,6 +192,7 @@ En la tabla siguiente se muestra la compatibilidad de CMG con características d
 | Endpoint Protection     | ![Compatible.](media/green_check.png) |
 | Inventario de hardware y software     | ![Compatible.](media/green_check.png) |
 | Estado de cliente y notificaciones     | ![Compatible.](media/green_check.png) |
+| Ejecutar scripts     | ![Compatible.](media/green_check.png) |
 | Configuración de cumplimiento     | ![Compatible.](media/green_check.png) |
 | Instalación de cliente</br>(con integración de Azure AD)     | ![Compatible.](media/green_check.png)  (1706) |
 | Distribución de software (dirigida al dispositivo)     | ![Compatible.](media/green_check.png) |
@@ -347,6 +354,6 @@ El sistema de sitio del punto de conexión de CMG admite el uso de un proxy web.
 
 - [Certificados para la puerta de enlace de administración en la nube](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)
 - [Seguridad y privacidad de la puerta de enlace de administración en la nube](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway)
-- [Números de tamaño y escala de Cloud Management Gateway](/sccm/core/plan-design/configs/size-and-scale-numbers#bkmk_cmg)
+- [Números de tamaño y escala de System Center Configuration Manager](/sccm/core/plan-design/configs/size-and-scale-numbers#bkmk_cmg)
 - [Preguntas más frecuentes sobre Cloud Management Gateway](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
 - [Configurar puerta de enlace de administración en la nube](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)

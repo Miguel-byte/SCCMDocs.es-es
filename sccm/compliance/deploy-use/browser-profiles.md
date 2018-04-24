@@ -5,17 +5,17 @@ description: Configuración de las opciones para el explorador web Microsoft Edg
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 57393c00faa0cc26d785d91ad1c6ecb9407ba5da
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: cb162e030249b02018af52ad3266b6b8df5ce355
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="configure-microsoft-edge-settings-in-system-center-configuration-manager"></a>Configuración de Microsoft Edge en System Center Configuration Manager
 
@@ -24,6 +24,7 @@ ms.lasthandoff: 03/23/2018
 <!-- 1357310 -->
 A partir de la versión 1802, para los clientes que usan el explorador web [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) en los clientes de Windows 10, cree una directiva de configuración de cumplimiento de Configuration Manager para configurar varias opciones de Microsoft Edge. 
 
+Esta directiva solo se aplica a clientes de Windows 10, versión 1703 o una versión posterior. <!--511552-->
 
 
 ## <a name="policy-settings"></a>Configuración de directiva

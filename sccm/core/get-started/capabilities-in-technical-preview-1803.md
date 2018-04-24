@@ -15,11 +15,11 @@ ms.assetid: 56dc4b07-5aa4-43e2-9be8-d26ae5ff5613
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ac96927b563673311e9ca55d1f2d4edaac30adbe
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: f3c200fe699f85c195e41fc2b395a3d710b1788a
+ms.sourcegitcommit: d3863a9b34f9925515cabe9a290a6c733e10108b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="capabilities-in-technical-preview-1803-for-system-center-configuration-manager"></a>Capacidades de la versión preliminar técnica 1803 para System Center Configuration Manager
 
@@ -146,7 +146,7 @@ Al seleccionar **Habilitar actualizaciones de software de terceros** en la confi
 En respuesta a los [comentarios de los usuarios](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/20234866-allow-us-to-copy-information-out-of-the-asset-det), hemos habilitado la característica de copiar y pegar en el panel de detalles de activos en las vistas de supervisión de estado de implementación y distribución.  <!--1357552-->
 
 ## <a name="scap-extensions"></a>Extensiones SCAP
-La versión preliminar de las extensiones SCAP está disponible en la carpeta Cd.latest en SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi. Esta versión preliminar de las extensiones SCAP puede instalarse en cualquier versión admitida de rama actual de Configuration Manager y LTSB 1606.
+La versión preliminar de las extensiones SCAP está disponible en la carpeta Cd.latest en SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi. Esta versión preliminar de las extensiones SCAP puede instalarse en cualquier versión admitida de rama actual de Configuration Manager y LTSB 1606. Para obtener más información, consulte [About the Security Content Automation Protocol (SCAP) extensions](/sccm/compliance/plan-design/scap/about-scap) (Acerca de las extensiones de Security Content Automation Protocol [SCAP]).
 
 
 
