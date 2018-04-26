@@ -1,18 +1,19 @@
 ---
 title: Seguridad y privacidad de perfiles de certificados
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre los procedimientos recomendados de seguridad para administrar perfiles de certificado de usuarios y dispositivos en System Center Configuration Manager."
+description: Obtenga información sobre los procedimientos recomendados de seguridad para administrar perfiles de certificado de usuarios y dispositivos en System Center Configuration Manager.
 ms.custom: na
 ms.date: 12/28/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3393db41-900a-44c5-b950-2d46a35a198c
-caps.latest.revision: "7"
-caps.handback.revision: "0"
+caps.latest.revision: 7
+caps.handback.revision: 0
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
