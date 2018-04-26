@@ -1,17 +1,18 @@
 ---
 title: Escenarios para implementar sistemas operativos de empresa
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre distintos escenarios para implementar sistemas operativos de empresa con System Center Configuration Manager."
+description: Obtenga información sobre distintos escenarios para implementar sistemas operativos de empresa con System Center Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f74fdb86-c7c2-447f-91f6-b42df6370d7f
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
@@ -50,7 +51,7 @@ Los siguientes escenarios de implementación de sistema operativo están disponi
 
  El tamaño de caché predeterminado en clientes de Configuration Manager puede no ser lo suficientemente grande para la mayoría de las implementaciones de imagen de sistema operativo. Si planea descargar la imagen completa a la caché del cliente, debe ajustar el tamaño de la caché del cliente de Configuration Manager en los equipos de destino para acomodar el tamaño de la imagen que va a implementar.  
 
- Para obtener más información, vea [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache).  
+ Para obtener más información, vea [Configurar la caché del cliente para clientes de Configuration Manager](../../core/clients/manage/manage-clients.md#BKMK_ClientCache).  
 
 ## <a name="task-sequence-deployments"></a>Implementaciones de secuencia de tareas  
  La secuencia de tareas que cree puede implementar la imagen del sistema operativo en un equipo cliente de Configuration Manager de una de las formas siguientes:  

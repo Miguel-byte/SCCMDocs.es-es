@@ -1,17 +1,18 @@
 ---
-title: "Preparar el almacenamiento en caché del mismo nivel de Windows PE para reducir el tráfico WAN"
+title: Preparar el almacenamiento en caché del mismo nivel de Windows PE para reducir el tráfico WAN
 titleSuffix: Configuration Manager
-description: "Almacenamiento en caché del mismo nivel de Windows PE funciona en Windows PE para obtener contenido de un elemento local de mismo nivel y minimizar el tráfico WAN cuando no hay ningún punto de distribución local."
+description: Almacenamiento en caché del mismo nivel de Windows PE funciona en Windows PE para obtener contenido de un elemento local de mismo nivel y minimizar el tráfico WAN cuando no hay ningún punto de distribución local.
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
@@ -74,7 +75,7 @@ Use las siguientes secciones para administrar Almacenamiento en caché del mismo
         > [!TIP]  
         >  Los clientes usarán HTTPS para descargar contenido cuando esté disponible. Sin embargo, se usará el mismo número de puerto para HTTP o HTTPS.  
 
--   [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) en los clientes para asegurarse de que tienen espacio suficiente para contener y almacenar las imágenes que implemente. Almacenamiento en caché del mismo nivel en Windows PE no afecta a la configuración o el comportamiento de la caché del cliente.  
+-   [Configurar la caché del cliente para clientes de Configuration Manager](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) en los clientes para asegurarse de que tienen espacio suficiente para contener y almacenar las imágenes que implemente. Almacenamiento en caché del mismo nivel en Windows PE no afecta a la configuración o el comportamiento de la caché del cliente.  
 
 -   Las opciones de implementación para la implementación de la secuencia de tareas deben configurarse como Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas.  
 

@@ -1,5 +1,5 @@
 ---
-title: "Configuración del control remoto"
+title: Configuración del control remoto
 titleSuffix: Configuration Manager
 description: Configure el control remoto en System Center Configuration Manager.
 ms.custom: na
@@ -7,12 +7,13 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
-caps.latest.revision: "4"
-caps.handback.revision: "0"
+caps.latest.revision: 4
+caps.handback.revision: 0
 author: arob98
 ms.author: angrobe
 manager: angrobe
@@ -42,7 +43,7 @@ Para usar Asistencia remota o Escritorio remoto, debe estar instalado y configur
 
     Puede cambiar el nombre de la compañía que aparece en el cuadro de diálogo **Control remoto de ConfigMgr** mediante la configuración de un valor para **Nombre de organización mostrado en el Centro de software** en la configuración de cliente del **Agente de equipo** .  
 
- Los equipos cliente se configuran con estas opciones la próxima vez que descargan directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [How to manage clients in System Center Configuration Manager (Cómo administrar clientes en System Center Configuration Manager)](../../../../core/clients/manage/manage-clients.md).  
+ Los equipos cliente se configuran con estas opciones la próxima vez que descargan directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Cómo administrar clientes en System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
 
 #### <a name="enable-keyboard-translation"></a>Habilitar traducción del teclado
 

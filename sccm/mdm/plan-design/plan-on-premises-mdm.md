@@ -1,18 +1,19 @@
 ---
 title: Planeamiento de MDM local
 titleSuffix: Configuration Manager
-description: "Planee la administración de dispositivos móviles local para administrar dispositivos en System Center Configuration Manager."
+description: Planee la administración de dispositivos móviles local para administrar dispositivos en System Center Configuration Manager.
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
-caps.latest.revision: "9"
-caps.handback.revision: "0"
+caps.latest.revision: 9
+caps.handback.revision: 0
 author: dougeby
 ms.author: dougeby
 manager: angrobe
@@ -104,7 +105,7 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
 
 -   Paquete de aprovisionamiento de configuración rápida (OOBE)  
 
- Para obtener más información, consulte [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager (Configurar certificados de comunicaciones de confianza para la administración de dispositivos móviles local en System Center Configuration Manager)](../../mdm/get-started/set-up-certificates-on-premises-mdm.md).  
+ Para obtener más información, consulte [Configurar certificados de comunicaciones de confianza para la administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md).  
 
 ##  <a name="bkmk_enrollment"></a> Consideraciones de inscripción  
  Para habilitar la inscripción de dispositivos para la administración de dispositivos móviles local, se debe conceder a los usuarios permiso de inscripción y, además, sus dispositivos deben ser capaces de establecer comunicaciones de confianza con los servidores de sistema de sitio que hospedan los roles de sistema de sitio necesarios.  
