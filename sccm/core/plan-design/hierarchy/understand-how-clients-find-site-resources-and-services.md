@@ -1,25 +1,26 @@
 ---
-title: "Búsqueda de recursos del sitio"
+title: Búsqueda de recursos del sitio
 titleSuffix: Configuration Manager
-description: "Más información sobre cómo y cuándo los clientes de System Center Configuration Manager usan la ubicación del servicio para buscar recursos de sitio."
+description: Más información sobre cómo y cuándo los clientes de System Center Configuration Manager usan la ubicación del servicio para buscar recursos de sitio.
 ms.custom: na
 ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: d0cbaf0b9f10926015cf203dbb28633976034162
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 76d9d486bf0c07da3d81596b1b065fe6532b29fe
+ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>Más información sobre cómo los clientes buscan servicios y recursos de sitio para System Center Configuration Manager
 
@@ -61,8 +62,8 @@ Cuando un cliente se asigna por primera vez a un sitio primario, selecciona un p
 
 Un cliente selecciona un punto de administración con el cual comunicarse en función de las configuraciones de ubicación de red y de grupo de límites actuales del cliente. Aunque tenga un punto de administración asignado, puede que este no sea el punto de administración que el cliente use.  
 
-    > [!NOTE]  
-    >  A client always uses the assigned management point for registration messages and certain policy messages, even when other communications are sent to a proxy or local management point.  
+   > [!NOTE]  
+   >  Un cliente siempre usa el punto de administración asignado para los mensajes de registro y para determinados mensajes de la directiva, aun cuando se envíen otras comunicaciones a un punto de administración proxy o local.
 
 Puede usar puntos de administración preferidos. Los puntos de administración preferidos son los puntos de administración de un sitio asignado del cliente que se asocian a un grupo de límites que el cliente usa para buscar servidores de sistema de sitio. La asociación de un punto de administración preferido a un grupo de límites como servidor de sistema de sitio es similar a la forma en que los puntos de distribución o puntos de migración de estado se asocian a un grupo de límites. Si habilita puntos de administración preferidos para la jerarquía, cuando un cliente usa un punto de administración desde su sitio asignado intentará usar un punto de administración preferido antes de usar otros puntos de administración desde su sitio asignado.  
 
