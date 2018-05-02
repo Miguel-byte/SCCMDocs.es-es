@@ -1,29 +1,30 @@
 ---
-title: "Configuración de informes"
+title: Configuración de informes
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo configurar la generación de informes en la jerarquía de Configuration Manager, incluida información sobre SQL Server Reporting Services."
+description: Obtenga información sobre cómo configurar la generación de informes en la jerarquía de Configuration Manager, incluida información sobre SQL Server Reporting Services.
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: be8c36c73478e232254185681546f5f52c7d701f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 6d50a35dc86b80ea135c79fc2f9825162115b764
+ms.sourcegitcommit: f65d4d24f0533e5e196ece0d8a4df0fb3e30eba1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-reporting-in-system-center-configuration-manager"></a>Configuración de informes en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Para crear, modificar y ejecutar informes en la consola de System Center Configuration Manager, debe realizar varias tareas de configuración. Use las siguientes secciones de este tema como guía para configurar la generación de informes en la jerarquía de Configuration Manager:  
 
@@ -129,7 +130,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
     -   **Cuenta de punto de Reporting Services**: haga clic en **Establecer** y seleccione una cuenta que se use cuando SQL Server Reporting Services en el punto de servicios de informes se conecte con la base de datos del sitio de Configuration Manager para recuperar los datos que se muestran en un informe. Seleccione **Cuenta existente** para especificar una cuenta de usuario de Windows configurada previamente como cuenta de Configuration Manager o seleccione **Nueva cuenta** para especificar una cuenta de usuario de Windows que no esté configurada actualmente como una cuenta de Configuration Manager. Configuration Manager concede automáticamente acceso al usuario especificado a la base de datos del sitio. El usuario se muestra en la subcarpeta **Cuentas** del nodo **Seguridad** en el área de trabajo **Administración** con el nombre de cuenta **Punto de servicios de informes de ConfigMgr** .  
 
-         La cuenta que ejecuta Reporting Services debe pertenecer al grupo de seguridad local de dominio **Grupo de acceso de autorización de Windows**y tener el permiso **Lectura tokenGroupsGlobalAndUniversal** configurado como **Permitir**. Debe haber una relación de confianza bidireccional establecida para los usuarios de un dominio distinto al de la cuenta para el punto de servicios de informes para una correcta ejecución de los informes.
+         La cuenta que ejecuta Reporting Services debe pertenecer al grupo de seguridad local de dominio **Grupo de acceso de autorización de Windows**y tener el permiso **Lectura tokenGroupsGlobalAndUniversal** configurado como **Permitir**. Debe existir una relación de confianza bidireccional establecida para los usuarios de un dominio distinto al de la cuenta de punto de Reporting Services para la correcta ejecución de los informes.
 
          La cuenta de usuario de Windows especificada y la contraseña se cifran, y se almacenan en la base de datos de Reporting Services. Reporting Services recupera los datos de los informes de la base de datos del sitio mediante el uso de esta cuenta y contraseña.  
 
