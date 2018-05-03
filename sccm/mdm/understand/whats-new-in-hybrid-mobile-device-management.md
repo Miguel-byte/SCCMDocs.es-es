@@ -15,11 +15,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6918983bca3e598fd99a8f7670ada3f7e43cfa6
-ms.sourcegitcommit: d8a4a53630351b3d677bbdc5d203e7d330472cba
+ms.openlocfilehash: 6a47569ee56931d76a41e5f14ed56f8276d264fb
+ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con Configuration Manager y Microsoft Intune
 
@@ -47,6 +47,24 @@ En cada sección de este artículo se enumeran las características híbridas or
 ## <a name="april-2018"></a>Abril de 2018
 
 ### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune
+
+#### <a name="updated-help-experience-on-company-portal-app-for-android"></a>Se ha actualizado la experiencia de Ayuda en la aplicación Portal de empresa para Android. 
+<!--1631531-->
+Se ha actualizado la experiencia de Ayuda en la aplicación Portal de empresa para Android con el fin de adaptarla a los procedimientos recomendados para la plataforma Android. Ahora, cuando los usuarios detectan un problema en la aplicación, pueden pulsar **Menú** > **Ayuda** y:
+- Cargar registros de diagnóstico en Microsoft.
+- Enviar un correo electrónico que describa el problema y el identificador de incidentes a una persona de soporte técnico de la empresa.
+
+
+#### <a name="update-where-to-configure-your-app-protection-policies"></a>Actualización de la ubicación donde se configuran las directivas de protección de aplicaciones 
+<!--2144597-->
+En el servicio de Microsoft Intune en Azure Portal, vamos a redirigirle temporalmente de la hoja del servicio **Intune App Protection** a la hoja **Aplicación móvil**. Tenga en cuenta que todas las directivas de protección de aplicaciones ya se encuentran en la hoja **Aplicación móvil** de Intune, en Configuración de aplicaciones. En lugar de ir a Intune App Protection, simplemente irá a Intune. En abril de 2018, se suspenderá el redireccionamiento y se quitará por completo la hoja del servicio **Intune App Protection**, para que haya una sola ubicación para las directivas de protección de aplicaciones en Intune. 
+
+**¿Cómo me afecta esto a mí?** Este cambio afectará tanto a los clientes de Intune independientes como a los clientes híbridos (Intune con Configuration Manager). Esta integración le ayudará a simplificar la administración en la nube.
+
+**¿Qué he de hacer para prepararme para este cambio?** Etiquete **Intune** como favorito en lugar de la hoja del servicio **Intune App Protection** y asegúrese de que está familiarizado con el flujo de trabajo de la directiva de protección de aplicaciones de la hoja de la aplicación **Móvil** en Intune. Se le redirigirá durante un breve período de tiempo y luego se quitará la hoja **Intune App Protection**. Recuerde que todas las directivas de protección de aplicaciones ya se encuentran en Intune y que puede modificar cualquiera de las directivas de acceso condicional. Para obtener más información sobre cómo modificar las directivas de acceso condicional, vea [Acceso condicional en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal). Para obtener más información, vea [¿Qué son las directivas de protección de aplicaciones?](/intune/app-protection-policy) 
+
+
+
 
 #### <a name="user-experience-update-for-the-company-portal-app-for-ios"></a>Actualización de la experiencia de usuario para la aplicación Portal de empresa para iOS 
 <!--1412866-->

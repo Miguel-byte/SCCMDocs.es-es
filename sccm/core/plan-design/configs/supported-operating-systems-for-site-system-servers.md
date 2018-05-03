@@ -3,7 +3,7 @@ title: Servidores de sistema de sitio admitidos
 titleSuffix: Configuration Manager
 description: Obtenga información sobre qué versiones de Windows puede usar para hospedar un sitio o rol de sistema de sitio de System Center Configuration Manager.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/17/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,21 +13,21 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
 caps.latest.revision: 44
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5bcaddb38ea6ecf1c3b5e0543c676c6a99e06101
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 092fc9d47e0dc7bb7afe0e078bd835dd2d091226
+ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>Sistemas operativos compatibles con servidores de sistema de sitio de System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
-En este artículo, se detallan las versiones de Windows que puede usar para hospedar un sitio o rol de sistema de sitio de System Center Configuration Manager.
+En este artículo, se detallan las versiones de Windows que puede usar para hospedar un sitio o un rol de sistema de sitio de Configuration Manager.
 
 
 Use la información de este artículo con la información de los artículos siguientes:
@@ -85,6 +85,14 @@ Con el paquete acumulativo de revisiones de KB3186654, este sistema operativo es
 -   Punto de actualización de software  
 
 -   Punto de migración de estado
+
+
+
+## <a name="windows-storage-server-2016"></a>Windows Storage Server 2016
+
+**Servidor de sistema de sitio**  
+
+-   Punto de distribución  
 
 
 
@@ -253,7 +261,10 @@ Este sistema operativo no se admite para servidores de sitio o roles del sistema
 
     -   Los puntos de distribución admiten varias configuraciones diferentes y cada uno tiene requisitos diferentes. En algunos casos, estas configuraciones admiten la instalación no solo en los servidores sino también en sistemas operativos de clientes. Para obtener más información sobre las opciones disponibles para los puntos de distribución, vea [Administración del contenido y de la infraestructura de contenido para System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-
+## <a name="the-server-core-installation-of-windows-server-version-1709"></a>Instalación Server Core de Windows Server versión 1709
+A partir de Configuration Manager 1710, se admite [Windows Server, versión 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709) como punto de distribución con las limitaciones siguientes:  
+  -   Solo se admite la versión de 64 bits.
+  -   Los puntos de distribución de este sistema operativo no son compatibles con PXE o Multidifusión.  
 
 ## <a name="the-server-core-installation-of-windows-server-2016"></a>La instalación Server Core de Windows Server 2016
 Con el paquete acumulativo de revisiones de KB3186654, este sistema operativo se admite para su uso como un punto de distribución con las limitaciones siguientes:  

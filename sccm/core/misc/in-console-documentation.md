@@ -16,11 +16,11 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: 7810191f270fde70cc573cb73af9b5ca23a6bfcb
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 856f23aaf64686b3e895d43e768350ea2ddc405c
+ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 <!-- 
 TFS 1357546
@@ -29,6 +29,10 @@ This page displays in-console, under the Support workspace, Documentation node.
 
 
 # <a name="configuration-manager-documentation"></a>Documentación de Configuration Manager
+Los vínculos de esta página representan contenido mantenido que le ayudará con el aprendizaje y la compatibilidad de Configuration Manager. 
+
+[Biblioteca de documentación de Configuration Manager](https://docs.microsoft.com/sccm)
+
 
 </br>
 
@@ -40,7 +44,7 @@ This page displays in-console, under the Support workspace, Documentation node.
 > - [Actualizado recientemente](#bkmk_update)
 
 ### <a name="recommended"></a>Recomendado 
-Una lista mantenida manualmente de artículos importantes:
+Lista mantenida manualmente de artículos importantes.
 
 - [Administración conjunta para dispositivos Windows 10](/sccm/core/clients/manage/co-management-overview)
 - [Aspectos básicos de Configuration Manager como servicio y de Windows como servicio](/sccm/core/understand/configuration-manager-and-windows-as-service)
@@ -66,7 +70,7 @@ Una lista mantenida manualmente de artículos importantes:
 > - [Actualizado recientemente](#bkmk_update)
 
 ### <a name="trending"></a>Tendencias
-Nuestros artículos más populares del último mes:
+Los artículos más populares del último mes.
 
 - [Nueva versión 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)
 - [Archivos de registro para la solución de problemas](/sccm/core/plan-design/hierarchy/log-files)
@@ -94,7 +98,7 @@ Nuestros artículos más populares del último mes:
 > - [Actualizado recientemente](#bkmk_update)
 
 ### <a name="recently-updated"></a>Actualizado recientemente
-Artículos revisados en el último mes:
+Artículos revisados en el último mes.
 
 - [Requisitos previos del sitio](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)
 - [Almacenamiento de datos](/sccm/core/servers/manage/data-warehouse)
@@ -108,3 +112,37 @@ Artículos revisados en el último mes:
 - [Archivos de registro para la solución de problemas](/sccm/core/plan-design/hierarchy/log-files)
 
 
+
+</br>
+
+</br>
+
+</br>
+
+### <a name="troubleshooting-articles"></a>Artículos de solución de problemas
+Tutoriales guiados que le ayudarán a solucionar problemas de características y componentes de Configuration Manager.
+
+- Solución de problemas de arranque PXE  
+- Solución de problemas de sincronización de actualización de software  
+- Descripción y solución de problemas de distribución de contenido  
+- Descripción y solución de problemas de integración de Microsoft Store para Empresas  
+- Solución de problemas de administración de actualizaciones de software  
+- Solución de problemas del paso de secuencia de tareas de instalación de aplicaciones  
+
+
+</br>
+
+</br>
+
+</br>
+
+### <a name="new-and-updated-support-articles"></a>Artículos de soporte técnico nuevos y actualizados
+Artículos de soporte técnico que son nuevos o se han actualizado en los últimos dos meses.
+
+- Los clientes de Configuration Manager no reciben datos de la directiva después de recuperar un sitio primario de una CAS  
+- Paquete acumulativo de actualizaciones 2 de la rama actual de System Center Configuration Manager, versión 1710  
+- Error de inscripción automática de dispositivos administrados conjuntamente en la rama actual de System Center Configuration Manager, versión 1710  
+- Aviso de implementaciones de Windows 10 sobre la elección de idioma en Configuration Manager  
+
+> [!Tip]  
+> Para suscribirse a notificaciones de Atom o RSS de nuevos artículos de soporte técnico de Configuration Manager, vea [Support content updates](https://support.microsoft.com/help/4089498/) (Actualizaciones de contenido de soporte técnico) y seleccione **System Center Configuration Manager**.  

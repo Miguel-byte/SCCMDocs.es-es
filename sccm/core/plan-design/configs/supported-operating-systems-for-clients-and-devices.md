@@ -1,9 +1,9 @@
 ---
 title: Dispositivos y clientes compatibles
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre qué sistemas operativos admite System Center Configuration Manager con clientes y dispositivos."
+description: Obtenga información sobre qué sistemas operativos admite System Center Configuration Manager con clientes y dispositivos.
 ms.custom: na
-ms.date: 8/30/2017
+ms.date: 04/17/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,22 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 614226e60f9bcd7b8e3c1330f52a4847e89e0880
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+caps.latest.revision: 5
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: d6befce522bcfef293f36def39405e9555cd3510
+ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>Sistemas operativos compatibles con dispositivos y clientes de System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
- System Center Configuration Manager admite la instalación de software cliente en diversos equipos Windows, Mac, Linux y UNIX.  
+ Configuration Manager admite la instalación de software cliente en diversos equipos Windows, Mac, Linux y UNIX.  
 
  **Requisitos y limitaciones para todos los clientes:**  
 
@@ -43,6 +43,8 @@ ms.lasthandoff: 02/01/2018
 
 -  **Windows Server 2016**: Standard, Datacenter <sup>1</sup>
   - El sistema operativo se admite a partir de la versión 1606 de Configuration Manager con el paquete acumulativo de revisiones de KB3186654 (o la versión de línea base de 1606 publicada en octubre de 2016).  
+
+-   **Windows Storage Server 2016**  
 
 -   **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>1</sup>    
 
@@ -65,6 +67,9 @@ ms.lasthandoff: 02/01/2018
 <!---   **Windows 8** (x86, x64): Professional, Enterprise  -removed Jan 12,2018 sms505863-->
 
 -   **Windows 7 con SP1** (x86, x64): Professional, Enterprise y Ultimate    
+
+-   **Instalación Server Core de Windows Server versión 1709** (x64) <sup>2</sup>
+  - Este sistema operativo a se admite partir de la versión 1710.
 
 -   **La instalación Server Core de Windows Server 2016** (x64) <sup>2</sup>
   - El sistema operativo se admite a partir de la versión 1606 con el paquete acumulativo de revisiones de KB3186654 (o la versión de línea base de 1606 publicada en octubre de 2016).

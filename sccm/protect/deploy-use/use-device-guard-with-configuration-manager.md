@@ -1,9 +1,9 @@
 ---
-title: "Administración de Windows Device Guard"
+title: Administración de Windows Device Guard
 titleSuffix: Configuration Manager
 description: Aprenda a usar System Center Configuration Manager para administrar Windows Device Guard.
 ms.custom: na
-ms.date: 10/20/2017
+ms.date: 12/19/2017
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
@@ -12,31 +12,34 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5e5d854c-9cc1-4dd8-b33f-0fcac675b395
-caps.latest.revision: 
-caps.handback.revision: 
-author: arob98
-ms.author: angrobe
+caps.latest.revision: 13
+caps.handback.revision: 0
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 8d84d0d65db7668baa7be9bbf0ad1df869b37919
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 48d1e641b4c4b4ef1939fb53d3b6fde91c127d0e
+ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="device-guard-management-with-configuration-manager"></a>Administración de Device Guard con Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 ## <a name="introduction"></a>Introducción
 Device Guard es un grupo de características de Windows 10 que se han diseñado para proteger a los equipos frente a malware y otro software que no es de confianza. Evita la ejecución de código malintencionado al garantizar que solo se pueda ejecutar código aprobado que conoce.
 
-Device Guard incluye una funcionalidad de seguridad basada en software y hardware. La integridad de código configurable es una capa de seguridad basada en software que exige una lista explícita de software que se puede ejecutar en un equipo. Por sí sola, la integridad de código configurable no tiene ningún requisito previo de hardware o firmware. Las directivas de Windows Defender Application Control implementadas con Configuration Manager permiten una directiva de integridad de código configurable en equipos de recopilaciones de destino que cumplen con la versión mínima de Windows y los requisitos de SKU que se describen en este artículo. Si quiere, la protección basada en hipervisor de las directivas de integridad de código implementadas a través de Configuration Manager se puede habilitar mediante una directiva de grupo en el hardware que lo permita.
+Device Guard incluye una funcionalidad de seguridad basada en software y hardware. Control de aplicaciones de Windows Defender es una capa de seguridad basada en software que exige una lista explícita de software que se puede ejecutar en un equipo. Por sí solo, el control de aplicaciones no tiene ningún requisito previo de hardware ni firmware. Las directivas de control de aplicaciones que se implementan con Configuration Manager habilitan una directiva en equipos de colecciones de destino que cumplen con los requisitos de SKU y de versión mínima de Windows que se describen en este artículo. Si quiere, la protección basada en hipervisor de directivas de control de aplicaciones implementadas con Configuration Manager se puede habilitar mediante una directiva de grupo en hardware compatible.
 
 Para obtener más información sobre Device Guard, consulte la [guía de implementación de Device Guard](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide).
 
+   > [!NOTE]
+   > A partir de Windows 10, versión 1709, las directivas de integridad de código configurables se denominan control de aplicaciones de Windows Defender.
+
 ## <a name="using-device-guard-with-configuration-manager"></a>Uso de Device Guard con Configuration Manager
 
-Puede usar Configuration Manager para implementar una directiva de Windows Defender Application Control que le permita configurar el modo en que se ejecuta Device Guard en los equipos de una recopilación. 
+Puede usar Configuration Manager para implementar una directiva de control de aplicaciones de Windows Defender. Esta directiva permite configurar el modo en el que Device Guard se ejecuta en equipos de una colección. 
 
 Configure uno de los siguientes modos:
 
@@ -62,6 +65,7 @@ Al implementar una directiva, por lo general, se pueden ejecutar los siguientes 
     - Windows Update para empresas
     - Windows Server Update Services
     - Configuration Manager
+    - También puede ejecutar software de confianza con una buena reputación, según determine Microsoft Intelligent Security Graph (ISG). ISG está formado por Windows Defender SmartScreen y otros servicios de Microsoft. Para que el software sea de confianza, el dispositivo debe ejecutar Windows Defender SmartScreen y Windows 10 versión 1709.
 
 >[!IMPORTANT]
 >Estos elementos no incluyen software que *no* esté integrado en Windows y que se actualice automáticamente desde actualizaciones de software de terceros o de Internet, tanto si se instalan a través de cualquiera de los mecanismos de actualización mencionados anteriormente como desde Internet. Solo se pueden ejecutar los cambios en el software que se implementen a través del cliente de Configuration Manager.
@@ -72,47 +76,49 @@ Antes de configurar o implementar directivas de Windows Defender Application Con
 
 - La administración de Device Guard es una característica de versión preliminar de Configuration Manager y está sujeta a cambios.
 - Para utilizar Device Guard con Configuration Manager, los equipos que administra deben ejecutar Windows 10 Enterprise versión 1703, o posterior.
-- Una vez que se procesa una directiva correctamente en un equipo cliente, Configuration Manager se configura como un instalador administrado en ese cliente, y el software implementado a través de SCCM después de los procesos de directiva pasa a ser de confianza automáticamente. El software que instala Configuration Manager antes de los procesos de directivas de Windows Defender Application Control no pasa a ser de confianza automáticamente.
+- Después de procesar correctamente una directiva en un equipo cliente, Configuration Manager se configura como instalador administrado en ese cliente. El software que se implementa a través de él, después de que se procese la directiva, pasa a ser automáticamente de confianza. El software que instala Configuration Manager antes de que se procese la directiva de control de aplicaciones de Windows Defender no pasa a ser de confianza automáticamente.
 - Los equipos cliente deben tener conectividad con el controlador de dominio a fin de poder procesar una directiva de Windows Defender Application Control correctamente.
-- La programación de evaluación de cumplimiento predeterminada para las directivas de Windows Defender Application Control, que se puede configurar durante la implementación, se realiza cada día. Si se observan problemas de procesamiento de la directiva, puede resultar útil configurar la programación de evaluación de cumplimiento para que sea más corta, por ejemplo, cada hora. Esta programación determina con qué frecuencia los clientes intentan volver a procesar una directiva de Windows Defender Application Control cuando se produce un error.
+- La programación de evaluación de cumplimiento predeterminada de las directivas de Control de aplicaciones, que se puede configurar durante la implementación, se realiza cada día. Si se observan problemas de procesamiento de la directiva, puede resultar útil configurar la programación de evaluación de cumplimiento para que sea más corta, por ejemplo, cada hora. Esta programación determina la frecuencia con la que los clientes intentan volver a procesar una directiva de control de aplicaciones de Windows Defender en caso de error.
 - Independientemente del modo de cumplimiento que seleccione, al implementar una directiva de Windows Defender Application Control, los equipos cliente no pueden ejecutar aplicaciones de HTML con la extensión .hta.
 
 ## <a name="how-to-create-a-windows-defender-application-control-policy"></a>Creación de directivas de Windows Defender Application Control
 1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.
-2.  En el área de trabajo **Activos y compatibilidad**, expanda **Endpoint Protection** y haga clic en **Directivas de Windows Defender Application Control**.
-3.  En la pestaña **Inicio**, en el grupo **Crear**, haga clic en **Crear directiva de Windows Defender Application Control**.
-4.  En la página **General** del **Asistente para crear directivas de Windows Defender Application Control**, especifique la configuración siguiente:
+2.  En el área de trabajo **Activos y compatibilidad**, expanda **Endpoint Protection** y haga clic en **Control de aplicaciones de Windows Defender**.
+3.  En el grupo **Crear** de la pestaña **Inicio**, haga clic en **Crear directiva de control de aplicaciones**.
+4.  En la página **General** del **Asistente para crear directivas de Control de aplicaciones**, especifique la configuración siguiente:
     - **Nombre**: escriba un nombre único para esta directiva de Windows Defender Application Control. 
     - **Descripción**: si quiere, escriba una descripción de la directiva que lo ayude a identificarla en la consola de Configuration Manager.
+    - **Fuerce un reinicio de dispositivos para que esta directiva se pueda aplicar a todos los procesos**: después de procesar la directiva en un equipo cliente, se programa un reinicio en el cliente según la opción **Configuración de cliente** para **Reinicio de equipo**.
+        - Los dispositivos con Windows 10, versión 1703 o anteriores, se reinician siempre automáticamente.
+        - A partir de Windows 10 versión 1709, a las aplicaciones que se ejecutan actualmente en el dispositivo no se les aplicará la nueva directiva de Control de aplicaciones hasta después del reinicio. Pero, las aplicaciones iniciadas después que se aplique la directiva cumplirán la nueva directiva de Control de aplicaciones. 
     - **Modo de cumplimiento**: elija uno de los siguientes métodos de cumplimiento de Device Guard en el equipo cliente.
         - **Cumplimiento habilitado**: solo se permiten archivos ejecutables de confianza.
         - **Solo auditoría**: permite la ejecución de todos los archivos ejecutables, pero registra los archivos ejecutables que se ejecutan en el registro de eventos del cliente local.
-5.  En la pestaña **Inclusiones** del **Asistente para crear directivas de Windows Defender Application Control**, haga clic en **Agregar** si desea agregar opcionalmente confianza para determinados archivos o carpetas en los equipos. 
-6.  En el cuadro de diálogo **Agregar archivo o carpeta de confianza	**, especifique la información sobre el archivo o la carpeta en que desea confiar. Puede especificar una ruta de acceso de archivo o carpeta local o conectarse a un dispositivo remoto para el que tiene permiso para conectarse y especificar una ruta de acceso de archivo o carpeta en dicho dispositivo.
-Cuando agregue confianza para determinados archivos y carpetas en una directiva de Windows Defender Application Control, puede realizar lo siguiente:
+5.  En la pestaña **Inclusiones** del **Asistente para crear directivas de Control de aplicaciones**, elija si quiere **Autorizar el software de confianza para Intelligent Security Graph**.
+6. Haga clic en **Agregar** si quiere agregar la relación de confianza a determinados archivos o carpetas en los equipos. En el cuadro de diálogo **Agregar archivo o carpeta de confianza**, puede especificar un archivo local o una ruta de acceso de carpeta de confianza. También puede especificar una ruta de acceso de archivo o carpeta en un dispositivo remoto en el que tenga permiso para conectarse. Cuando agregue confianza para determinados archivos y carpetas en una directiva de control de aplicaciones de Windows Defender, puede realizar lo siguiente:
     - Solucionar problemas con los comportamientos de instalador administrado
     - Confiar en aplicaciones de línea de negocio que no se pueden implementar con Configuration Manager
     - Confiar en aplicaciones que se incluyen en una imagen de implementación de sistema operativo 
-7.  Haga clic en **Siguiente** y complete el asistente.
+8.  Haga clic en **Siguiente** para completar el asistente.
 
 >[!IMPORTANT]
 >La inclusión de carpetas o archivos de confianza solo se admite en los equipos cliente que ejecutan la versión 1706 o posterior del cliente de Configuration Manager. Si las reglas de inclusión están englobadas en una directiva de Windows Defender Application Control y esta última se implementa en un equipo cliente que ejecuta una versión anterior del cliente de Configuration Manager, no podrá aplicarse. Actualizar estos clientes anteriores resolverá este problema. Todavía se pueden aplicar directivas que no engloban ninguna regla de inclusión en las versiones anteriores del cliente de Configuration Manager.
 
 ## <a name="how-to-deploy-a-windows-defender-application-control-policy"></a>Implementación de directivas de Windows Defender Application Control
 1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.
-2.  En el área de trabajo **Activos y compatibilidad**, expanda **Endpoint Protection** y haga clic en **Directivas de Windows Defender Application Control**.
-3.  En la lista de directivas, seleccione la que quiera implementar y, después, en la pestaña **Inicio**, en el grupo **Implementación**, haga clic en **Implementar**.
-4.  En el cuadro de diálogo **Implementar la directiva de Windows Defender Application Control**, seleccione la colección a la que desea implementar la directiva. A continuación, configure una programación para determinar cuándo los clientes evalúan la directiva. Por último, seleccione si el cliente puede evaluar la directiva fuera de las ventanas de mantenimiento configuradas.
+2.  En el área de trabajo **Activos y compatibilidad**, expanda **Endpoint Protection** y haga clic en **Control de aplicaciones de Windows Defender**.
+3.  En la lista de directivas, seleccione la que quiera implementar y luego, en el grupo **Implementación** de la pestaña **Inicio**, haga clic en **Implementar la directiva de control de aplicaciones**.
+4.  En el cuadro de diálogo **Implementar la directiva de control de aplicaciones**, seleccione la colección en la que quiere implementar la directiva. A continuación, configure una programación para determinar cuándo los clientes evalúan la directiva. Por último, seleccione si el cliente puede evaluar la directiva fuera de las ventanas de mantenimiento configuradas.
 5.  Cuando haya terminado, haga clic en **Aceptar** para implementar la directiva. 
 
-### <a name="restarting-the-device-after-deploying-the-policy"></a>Reinicio del dispositivo después de implementar la directiva
+<!--Reworked article to put this inline while working on VSO 1355092
+### Restarting the device after deploying the policy
 
-Una vez se procese la directiva en un equipo cliente, se programa un reinicio en ese cliente según la opción **Configuración de cliente** para **Reinicio de equipo**. No es necesario reiniciar para aplicar las directivas, pero es la opción predeterminada. Si desea desactivar los reinicios, siga estos pasos:
+After the policy is processed on a client PC, a restart is scheduled on that client according to the **Client Settings** for **Computer Restart**. A restart is not required to apply policies, but it is the default. If you want to turn off restarts, follow these steps:
 
-1. Abra el **Asistente para crear directivas de Windows Defender Application Control**.
-2. En la página **General**, desactive la casilla **Forzar un reinicio de los dispositivos para poder aplicar esta directiva a todos los procesos**.
-3. Haga clic en **Siguiente** hasta que finalice el asistente.
-
+1. Open the **Create Windows Defender Application Policy** wizard.
+2. On the **General** page, clear the check box for **Enforce a restart of devices so that this policy can be enforced for all processes**.
+3. Click **Next** until the wizard completes.-->
 
 
 ## <a name="how-to-monitor-a-windows-defender-application-control-policy"></a>Supervisión de directivas de Windows Defender Application Control
@@ -128,27 +134,27 @@ Para comprobar el software específico que se bloquea o audita, vea los siguient
 1.  Para bloquear y auditar archivos ejecutables, utilice **Registros de aplicaciones y servicios** > **Microsoft** > **Windows** > **Integridad de código** > **Operativo**.
 2.  Para bloquear y auditar Windows Installer y archivos de script, utilice **Registros de aplicaciones y servicios** > **Microsoft** > **Windows** > **AppLocker** > **MSI y script**.
 
-## <a name="automatically-let-software-run-if-it-is-trusted-by-intelligent-security-graph"></a>Permitir automáticamente la ejecución de software si confía en él Intelligent Security Graph
+<!--Reworked article to put this inline while working on VSO 1355092
+## Automatically let software run if it is trusted by Intelligent Security Graph
 
-Puede permitir que los dispositivos bloqueados ejecuten software de confianza con una buena reputación, según determine Microsoft Intelligent Security Graph (ISG). ISG está formado por [Windows Defender SmartScreen](https://docs.microsoft.com/windows/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) y otros servicios de Microsoft. Los dispositivos deben ejecutar Windows Defender SmartScreen para que el software sea de confianza.
+You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](https://docs.microsoft.com/windows/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender SmartScreen for this software to be trusted.
 
-1. Abra el **Asistente para crear directivas de Windows Defender Application Control**.
-2. En la página **Inclusiones**, active la casilla **Autorizar el software de confianza para Intelligent Security Graph**.
-3. En el cuadro Archivos o carpetas de confianza, agregue los archivos y las carpetas que quiere que sean de confianza.
-4. Haga clic en **Siguiente** hasta que finalice el asistente.
-
+1. Open the **Create Windows Defender Application Policy** wizard.
+2. On the **Inclusions** page, check the box for **Authorize software that is trusted by the Intelligent Security Graph**.
+3. Click **Next** until the wizard completes.
+-->
 
 
 ## <a name="security-and-privacy-information-for-device-guard"></a>Información de seguridad y privacidad para Device Guard
 
 - En esta versión preliminar, no implemente directivas de Windows Defender Application Control con el modo de cumplimiento **Solo auditoría** en un entorno de producción. Este modo está diseñado para ayudarle a probar la funcionalidad solo en una configuración de laboratorio.
-- Los dispositivos que tienen una directiva implementada en el modo **Solo auditoría** o **Cumplimiento habilitado**, que no se han reiniciado para aplicar la directiva, son vulnerables al software que no es de confianza que se instala.
+- Los dispositivos que tienen una directiva implementada en el modo **Solo auditoría** o **Cumplimiento habilitado** que no se hayan reiniciado para aplicar la directiva, son vulnerables al software que se instale que no sea de confianza.
 En esta situación, el software podría seguir teniendo permiso para ejecutarse incluso si se reinicia el dispositivo, o recibe una directiva en modo **Cumplimiento habilitado**.
 - Para asegurarse de que la directiva de Windows Defender Application Control es eficaz, prepare el dispositivo en un entorno de laboratorio. A continuación, implemente la directiva **Cumplimiento habilitado** y, por último, reinicie el dispositivo antes de enviar el dispositivo a un usuario final.
 - No implemente una directiva con **Cumplimiento habilitado** y, a continuación, una directiva con **Solo auditoría** en el mismo dispositivo. Esta configuración puede provocar la ejecución de software que no es de confianza.
-- Al utilizar Configuration Manager para habilitar la integridad de código configurable en los equipos cliente con las directivas de Windows Defender Application Control, la directiva no evita que los usuarios con derechos de administrador local sorteen la directiva de Windows Defender Application Control o ejecuten software que no es de confianza de otro modo. 
-- La única manera de evitar que los usuarios con derechos de administrador local deshabiliten la integridad de código configurable es mediante la implementación de una directiva binaria firmada. Esta implementación es posible a través de la directiva de grupo, pero no se admite actualmente en Configuration Manager.
-- La configuración de Configuration Manager como un instalador administrado en los equipos cliente utiliza la directiva de AppLocker. AppLocker solo se usa para identificar los instaladores administrados y todo el cumplimiento tiene lugar con la integridad de código configurable. 
+- Cuando se usa Configuration Manager para habilitar Control de aplicaciones de Windows Defender en los equipos cliente, la directiva no evita que los usuarios con derechos de administrador local sorteen las directivas de Control de aplicaciones o ejecuten de otro modo software que no es de confianza. 
+- La única manera de evitar que los usuarios con derechos de administrador local deshabiliten el Control de aplicaciones consiste en implementar una directiva binaria firmada. Esta implementación es posible a través de la directiva de grupo, pero no se admite actualmente en Configuration Manager.
+- La configuración de Configuration Manager como un instalador administrado en los equipos cliente utiliza la directiva de AppLocker. AppLocker solo se usa para identificar los instaladores administrados y todo el cumplimiento tiene lugar en la aplicación. 
 
 
 
