@@ -2,25 +2,21 @@
 title: Versiones de Technical Preview
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la versión Technical Preview para probar nuevas funcionalidades y capacidades de Configuration Manager.
-ms.custom: na
-ms.date: 03/27/2018
+ms.date: 04/25/2018
 ms.prod: configuration-manager
-ms.reviewer: nab
-ms.suite: na
 ms.technology:
 - configmgr-other
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 caps.latest.revision: 157
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 753503fd8c59ef8f93c0968c3d5c386cec35f88e
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: 79a535bd9ee7f597e551c2d4f84c39c84ecf262f
+ms.sourcegitcommit: d67c6246bb6027cd5501e772b0521f9272407c28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>Technical Preview para System Center Configuration Manager
 
@@ -30,7 +26,7 @@ ms.lasthandoff: 03/28/2018
 
  Como esta es una versión preliminar técnica, los detalles y las funcionalidades están sujetos a cambios.  
 
- Este artículo contiene información que se aplica a todas las versiones de Technical Preview. También se muestra cada nueva capacidad (o característica) junto con la versión de Technical Preview en la que aparece por primera vez, como la versión 1803 para enero de 2018. Estas características se detallan en temas independientes dedicados a cada versión preliminar.  
+ Este artículo contiene información que se aplica a todas las versiones de Technical Preview. También se muestra cada nueva funcionalidad (o característica) junto con la versión de Technical Preview en la que aparece por primera vez, como la versión 1804 de abril de 2018. Estas características se detallan en temas independientes dedicados a cada versión preliminar.  
 
  Para obtener más información sobre las novedades en la rama actual de Configuration Manager, consulte [Novedades de System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).
 
@@ -114,14 +110,17 @@ A continuación se enumeran las funcionalidades que ofrece cada versión prelimi
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1803"></a>Technical Preview, versión 1803
-- [Compatibilidad de puntos de distribución de extracción con puntos de distribución de nube como orígenes](capabilities-in-technical-preview-1803.md#pull-distribution-points-support-cloud-distribution-points-as-source) <!--1321554--> 
-- [Compatibilidad de la descarga parcial en la memoria caché del mismo nivel de cliente para reducir la utilización de la WAN](capabilities-in-technical-preview-1803.md#partial-download-support-in-client-peer-cache-to-reduce-wan-utilization) <!--1357346--> 
-- [Ventanas de mantenimiento en el Centro de software](capabilities-in-technical-preview-1803.md#maintenance-windows-in-software-center) <!--1358131--> 
-- [Pestaña personalizada de la página web en el Centro de software](capabilities-in-technical-preview-1803.md#custom-tab-for-webpage-in-software-center) <!--1358132--> 
-- [Habilitar compatibilidad con la actualización de software de terceros en clientes](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients) <!--1357605-->
-- [Habilitar la copia y el pegado de detalles de activos desde vistas de supervisión](capabilities-in-technical-preview-1803.md#enable-copypaste-of-asset-details-from-monitoring-views) <!--1357552-->
-- [Extensiones SCAP](capabilities-in-technical-preview-1803.md#scap-extensions) <!--1357552-->
+### <a name="technical-preview-version-1804"></a>Technical Preview, versión 1804
+- [Configuración de una biblioteca de contenido remoto para el servidor de sitio](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server) <!--1357525--> 
+- [Envío de comentarios desde la consola de Configuration Manager](capabilities-in-technical-preview-1804.md#bkmk_feedback) <!--1357542--> 
+- [Support Center](capabilities-in-technical-preview-1804.md#support-center) <!--1357489--> 
+- [Kit de herramientas de Configuration Manager](capabilities-in-technical-preview-1804.md#configuration-manager-toolkit) <!--1357145--> 
+- [Desinstalación de aplicaciones al revocarse la aprobación](capabilities-in-technical-preview-1804.md#uninstall-application-on-approval-revocation) <!--1357891--> 
+- [Exclusión de contenedores de Active Directory de la detección](capabilities-in-technical-preview-1804.md#exclude-active-directory-containers-from-discovery) <!--1358143--> 
+- [Especificación de la visibilidad del vínculo al sitio web del catálogo de aplicaciones en el Centro de software](capabilities-in-technical-preview-1804.md#specify-the-visibility-of-the-application-catalog-website-link-in-software-center) <!--1358214--> 
+- [Filtrado de las reglas de implementación automáticas por arquitectura de actualización de software](capabilities-in-technical-preview-1804.md#filter-automatic-deployment-rules-by-software-update-architecture) <!--1322266--> 
+- [Mejoras en la implementación del sistema operativo](capabilities-in-technical-preview-1804.md#improvements-to-os-deployment) <!--1358330,1358493--> 
+- [Mejoras en la consola de Configuration Manager](capabilities-in-technical-preview-1804.md#improvements-to-the-configuration-manager-console) <!--510252--> 
 
 
 
@@ -135,6 +134,13 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |Capacidad |Versión de Technical Preview |Versión de rama actual|  
  |----------------|---------------------|--------------------|
+ | Compatibilidad de puntos de distribución de extracción con puntos de distribución de nube como orígenes<!--1321554--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#pull-distribution-points-support-cloud-distribution-points-as-source)  | ![Sin agregar](media/Red_X.gif) | 
+ | Compatibilidad de descarga parcial en la memoria caché del mismo nivel de cliente para reducir la utilización de la WAN <!--1357346--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#partial-download-support-in-client-peer-cache-to-reduce-wan-utilization)  | ![Sin agregar](media/Red_X.gif) | 
+ | Ventanas de mantenimiento en el Centro de software <!--1358131--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#maintenance-windows-in-software-center)  | ![Sin agregar](media/Red_X.gif) | 
+ | Pestaña Personalizado de la página web del Centro de software <!--1358132--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#custom-tab-for-webpage-in-software-center)  | ![Sin agregar](media/Red_X.gif) | 
+ | Habilitación de la compatibilidad con actualizaciones de software de terceros en clientes <!--1357605--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients)  | ![Sin agregar](media/Red_X.gif) | 
+ | Habilitación del copiado y pegado de detalles de recursos desde vistas de supervisión <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-copypaste-of-asset-details-from-monitoring-views)  | ![Sin agregar](media/Red_X.gif) | 
+ | Extensiones SCAP <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#scap-extensions)  | ![Sin agregar](media/Red_X.gif) | 
  | Transición de la carga de trabajo de Endpoint Protection a Intune mediante la administración conjunta <!-- 1357365 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#transition-endpoint-protection-workload-to-intune-using-co-management) | [Versión 1802](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune) |  
  | Configuración de la optimización de distribución de Windows para usar grupos de límites de Configuration Manager <!-- 1324696 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups) | [Versión 1802](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization) |  
  | Secuencia de tareas de actualización local de Windows 10 a través de Cloud Management Gateway <!-- 1357149 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#windows-10-in-place-upgrade-task-sequence-via-cloud-management-gateway) | [Versión 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#deploy-windows-10-in-place-upgrade-via-cmg) |  
@@ -162,15 +168,7 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Mejoras en la configuración de cliente para el Centro de software <!-- 1355146 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-client-settings-for-software-center) | [Versión 1802](/sccm/core/clients/deploy/about-client-settings#BKMK_HideUnapproved) |
  | Nueva configuración de Protección de aplicaciones de Windows Defender <!-- 1356256 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#new-settings-for-windows-defender-application-guard) | [Versión 1802](/sccm/protect/deploy-use/create-deploy-application-guard-policy#BKMK_HIS) |
  | Mejoras para ejecutar scripts <!-- 1236459 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-run-scripts) | [Versión 1802](/sccm/apps/deploy-use/create-deploy-scripts) |
- | No actualizar automáticamente las aplicaciones reemplazadas <!-- 1351266 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#do-not-automatically-upgrade-superseded-applications) | [Versión 1802](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) | 
- | Instalación de varias aplicaciones en el Centro de software <!-- 1357126 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#install-multiple-applications-in-software-center) | [Versión 1802](/sccm/core/understand/software-center#install-multiple-applications) |
- | Servicio del respondedor PXE basado en cliente <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) | ![Sin agregar](media/Red_X.gif) |
- | Cambio en la instalación del cliente de Configuration Manager <!-- 1356195 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#change-in-the-configuration-manager-client-install) | [Versión 1802](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.#BKMK_ExternalDependencies) | 
- | Cambio en el panel de dispositivos Surface <!-- 1355788 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#change-to-the-surface-device-dashboard) | [Versión 1802](/sccm/core/clients/manage/surface-device-dashboard) | 
- | Mejoras en el panel de administración de clientes de Office 365 <!-- 1357281 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-office-365-client-management-dashboard) | [Versión 1802](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard) | 
- | Mejoras en la consola de Configuration Manager <!-- 1357280,1357282 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-the-configuration-manager-console) | Versión 1802 | 
- | Mejoras en la implementación del sistema operativo <!-- SMS 500897 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-operating-system-deployment) | Versión 1802 | 
-
+ 
   
 
 ## <a name="capabilities-delivered-in-previous-technical-previews"></a>Funcionalidades ofrecidas en anteriores versiones preliminares técnicas
@@ -184,6 +182,7 @@ With each CB release, review and remove from this list for anything that's now a
 
  |Capacidad |Versión de Technical Preview |  
  |----------------|---------------------|
+ | Servicio del respondedor PXE basado en cliente <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
  |Alta disponibilidad del rol del servidor de sitio <!-- 1128774 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |
  |Compatibilidad con el arranque de red de PXE para IPv6 <!-- 1269793 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
  |Uso de Azure Active Directory <!-- 1322145? --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
@@ -197,3 +196,8 @@ With each CB release, review and remove from this list for anything that's now a
 ## <a name="see-also"></a>Véase también  
 [Novedades de System Center Configuration Manager](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
  [Introducción a System Center Configuration Manager](../../core/understand/introduction.md)
+
+> [!Tip]  
+> Para más información sobre las características de la rama actual que requieren consentimiento, consulte las [características de versión preliminar](/sccm/core/servers/manage/pre-release-features).  
+> Para más información sobre las características de la rama actual que se deben habilitar primero, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).  
+
