@@ -12,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 1657cbacde468ef7c54f95524e0fa9607a1a0186
-ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
+ms.openlocfilehash: 3d7ca4bb72f6f3f76855faac125385374347ba55
+ms.sourcegitcommit: d67c6246bb6027cd5501e772b0521f9272407c28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="co-management-for-windows-10-devices"></a>Administración conjunta para dispositivos de Windows 10    
  Con actualizaciones anteriores de Windows 10 ya puede unir un dispositivo Windows 10 a Active Directory (AD) local y Azure AD en la nube al mismo tiempo (Azure AD híbrido). A partir de la Configuration Manager versión 1710, la administración conjunta aprovecha esta mejora y permite administrar dispositivos Windows 10 versión 1709 de forma simultánea mediante Configuration Manager e Intune. <!-- 1350871 -->
@@ -82,7 +82,7 @@ El artículo [Cargas de trabajo que se pueden pasar a Intune](/sccm/core/clients
 ### <a name="install-configuration-manager-client-to-the-devices-enrolled-in-intune"></a>Instalación del cliente Configuration Manager en los dispositivos inscritos en Intune
 Al inscribir dispositivos de Windows 10 en Intune, puede instalar en ellos el cliente de Configuration Manager ([con un argumento de línea de comandos específico](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)) para preparar los clientes para la administración conjunta. Luego podrá habilitar la administración conjunta desde la consola de Configuration Manager para empezar a trasladar cargas de trabajo específicas a Intune para dispositivos específicos de Windows 10.
 Para los dispositivos de Windows 10 que todavía no están inscritos en Intune, puede usar la inscripción automática en Azure para inscribirlos. Para los nuevos dispositivos Windows 10, puede usar [Windows AutoPilot](https://docs.microsoft.com/intune/enrollment-autopilot) para definir la configuración rápida (OOBE), que incluye la inscripción automática, que inscribe dispositivos en Intune.
- - Habilitación de [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) en Configuration Manager (solo cuando se use Intune para instalar el cliente de Configuration Manager).
+ - Habilite [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) en Configuration Manager (solo cuando se use Intune para instalar el cliente de Configuration Manager).
 
 ## <a name="monitor-co-management"></a>Supervisión de la administración conjunta
 [El panel de administración conjunta](/sccm/core/clients/manage/co-management-dashboard) le ayudará a revisar las máquinas que se administran conjuntamente en el entorno. Los gráficos ayudan a identificar los dispositivos que podrían requerir atención.
