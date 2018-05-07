@@ -1,6 +1,7 @@
 #   Conocer y explorar
 ##  [Introducción a Configuration Manager](understand/introduction.md)
 ### [Buscar ayuda para Configuration Manager](understand/find-help.md)
+### [Uso de los documentos](understand/use-docs.md)
 ### [Características de accesibilidad](understand/accessibility-features.md)
 ### [Manual del usuario del Centro de software](understand/software-center.md)
 ##  [Aspectos básicos de Configuration Manager](understand/fundamentals.md)
