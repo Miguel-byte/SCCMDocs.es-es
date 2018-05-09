@@ -1,29 +1,24 @@
 ---
-title: "Réplicas de bases de datos de punto de administración"
+title: Réplicas de bases de datos de punto de administración
 titleSuffix: Configuration Manager
-description: "Use una réplica de base de datos para reducir la carga de CPU que los puntos de administración colocan en el servidor de base de datos del sitio."
-ms.custom: na
+description: Use una réplica de base de datos para reducir la carga de CPU que los puntos de administración colocan en el servidor de base de datos del sitio.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
-caps.latest.revision: "9"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: f322d5dcd2f505f52e363e07801497ffa3bfdc7e
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0893df43f7979fa3c36ba90ab400e399f96e6228
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>Réplicas de bases de datos para puntos de administración de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Los sitios primarios de System Center Configuration Manager pueden usar una réplica de base de datos para reducir la carga de CPU que los puntos de administración ejercen sobre el servidor de base de datos del sitio mientras atienden las solicitudes de servicio de los clientes.  
 
@@ -152,7 +147,7 @@ Utilice el procedimiento siguiente como ejemplo de cómo configurar un servidor 
 
     2.  Seleccione **ConfigMgr_MPReplica**y, a continuación, haga clic en **Siguiente**.  
 
-    3.  En la página **Ubicación del Agente de distribución** , seleccione **Ejecutar cada agente en su suscriptor (suscripciones de extracción)**y haga clic en **Siguiente**.  
+    3.  En la página **Ubicación del Agente de distribución** , seleccione **Ejecutar cada agente en su suscriptor (suscripciones de extracción)** y haga clic en **Siguiente**.  
 
     4.  En la página **Suscriptores** realice una de las acciones siguientes:  
 
@@ -184,7 +179,7 @@ Utilice el procedimiento siguiente como ejemplo de cómo configurar un servidor 
 
          Después de configurar las opciones de seguridad de conexión, haga clic en **Aceptar** para guardarlas y, a continuación, haga clic en **Siguiente**.  
 
-    7.  En la página **Programación de sincronización** , en el cuadro de lista **Programación del agente** , seleccione **Definir programación**y después configure la **Nueva programación de trabajo**. Establezca la frecuencia para que tenga lugar **Diariamente**, se repita cada **5 minuto(s)**y que la duración tenga el valor **Sin fecha de finalización**. Haga clic en **Siguiente** para guardar la programación y, a continuación, vuelva a hacer clic en **Siguiente** .  
+    7.  En la página **Programación de sincronización** , en el cuadro de lista **Programación del agente** , seleccione **Definir programación**y después configure la **Nueva programación de trabajo**. Establezca la frecuencia para que tenga lugar **Diariamente**, se repita cada **5 minuto(s)** y que la duración tenga el valor **Sin fecha de finalización**. Haga clic en **Siguiente** para guardar la programación y, a continuación, vuelva a hacer clic en **Siguiente** .  
 
     8.  En la página **Acciones del asistente** , active la casilla para **crear las suscripciones**y haga clic en **Siguiente**.  
 

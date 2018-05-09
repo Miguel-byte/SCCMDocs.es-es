@@ -2,28 +2,23 @@
 title: Definiciones de malware de Endpoint Protection
 titleSuffix: Configuration Manager
 description: Aprenda a configurar las actualizaciones de software en Configuration Manager para entregar las actualizaciones de definiciones a los equipos cliente.
-ms.custom: na
 ms.date: 10/06/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 3b9c4027-a98b-406b-935c-ccabcfe713df
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: cf488babe28267c2438e03fa94c514c872f960c7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 414231d2cd07e583196b6b1abdd6530c3d49681a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="using-configuration-manager-software-updates-to-deliver-definition-updates"></a>El uso de las actualizaciones de Software de Configuration Manager para entregar actualizaciones de definiciones
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
  Puede configurar las actualizaciones de software en Configuration Manager para entregar las actualizaciones de definiciones a los equipos cliente. Esto se hace mediante la configuración de reglas de implementación automática. Antes de empezar a crear reglas de implementación automática, asegúrese de que ha configurado las actualizaciones de software de Configuration Manager. Para obtener más información, consulte [Introduction to software updates in System Center Configuration Manager](/sccm/sum/understand/software-updates-introduction) (Introducción a las actualizaciones de software en System Center Configuration Manager).

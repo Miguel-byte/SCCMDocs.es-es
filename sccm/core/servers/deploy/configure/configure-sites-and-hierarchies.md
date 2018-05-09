@@ -1,29 +1,24 @@
 ---
-title: "Configuración de sitios"
+title: Configuración de sitios
 titleSuffix: Configuration Manager
-description: "Consulte esta lista de comprobación para asegurarse de tener en cuenta las configuraciones más comunes que afectan a los sitios y las jerarquías."
-ms.custom: na
+description: Consulte esta lista de comprobación para asegurarse de tener en cuenta las configuraciones más comunes que afectan a los sitios y las jerarquías.
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
-caps.latest.revision: "15"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 55daf30e3386e53f3711c07fa971750d6aa33423
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 8a74f998c7bae22d94f2471724c2d51de918dfc4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sites-and-hierarchies-for-system-center-configuration-manager"></a>Configurar sitios y jerarquías para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Después de instalar el primer sitio de System Center Configuration Manager o de agregar sitios adicionales a la jerarquía, use la siguiente lista de comprobación para asegurarse de tener en cuenta las configuraciones más comunes que afectan tanto a los sitios como a las jerarquías.  
 

@@ -2,25 +2,19 @@
 title: Propiedades de instalación de cliente
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las propiedades de la línea de comandos de ccmsetup para instalar el cliente de Configuration Manager.
-ms.custom: na
 ms.date: 03/28/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
-caps.latest.revision: 15
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 40e844fbb15a101574d9628648dde0db59c855c4
-ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
+ms.openlocfilehash: 27479bf3db9ab0ed5d842f5cbf9db4e399a4168d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>Acerca de las propiedades de instalación de clientes en System Center Configuration Manager
 

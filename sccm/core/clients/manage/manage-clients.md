@@ -1,25 +1,20 @@
 ---
-title: "Administración de clientes"
+title: Administración de clientes
 titleSuffix: Configuration Manager
 description: Aprenda a administrar clientes en System Center Configuration Manager.
-ms.custom: na
 ms.date: 12/21/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
-caps.latest.revision: "17"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 2065fd0910b1d89df3f8296c87ede15b89331568
-ms.sourcegitcommit: 528b1ce79803fecd34937a790e9b5cde282d4caa
+manager: dougeby
+ms.openlocfilehash: 623d7b6a048b7728e40adb3655dc1017408fb1d7
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>Cómo administrar clientes en System Center Configuration Manager
 
@@ -278,7 +273,7 @@ Para obtener más información sobre estas propiedades de línea de comandos par
 
 1.  En el equipo cliente, vaya a **Configuration Manager** en el Panel de control y haga doble clic para abrir las propiedades.  
 
-2.  En la pestaña **Caché** establezca las propiedades de espacio y ubicación. La ubicación predeterminada es *%windir%*\ccmcache.  
+2.  En la pestaña **Caché** establezca las propiedades de espacio y ubicación. La ubicación predeterminada es *%windir%* \ccmcache.  
 
 3.  Para eliminar los archivos de la carpeta de caché, pulse **Eliminar archivos**.  
 

@@ -1,28 +1,23 @@
 ---
-title: "Asistente para la instalación"
+title: Asistente para la instalación
 titleSuffix: Configuration Manager
-ms.custom: na
 ms.date: 7/24/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
-caps.latest.revision: "3"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 266b6ef8664b98d0bf15e20f8bf968b609dd607b
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c15f59ababae6908a08c28d3ec8ad46075068d52
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>Use el Asistente para instalación si quiere instalar sitios de System Center Configuration Manager.
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 Para instalar un nuevo sitio de System Center Configuration Manager mediante una interfaz de usuario interactiva, use el Asistente para instalación de Configuration Manager (setup.exe). El asistente admite la instalación de un sitio primario o un sitio de administración central. También se usa para [actualizar una instalación de evaluación](../../../../core/servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md) de Configuration Manager a una instalación con licencia completa. Si no quiere usar el asistente, puede usar en su lugar un [script de instalación](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md) y ejecutar una instalación desatendida de línea de comandos.
@@ -79,7 +74,7 @@ Si va a instalar un sitio de administración central como parte de un escenario 
       > [!NOTE]   
       > Microsoft no valida la fecha de expiración especificada y no la usará para la validación de la licencia, pero usted puede usarla como un recordatorio de la fecha de expiración. Esto es útil porque Configuration Manager busca de forma periódica nuevas actualizaciones de software que se ofrecen en línea y el estado de su licencia de Software Assurance debe ser actual para poder usar estas actualizaciones adicionales.    
 
-      Para obtener más información, consulte [Licensing and branches for System Center Configuration Manager](/sccm/core/understand/learn-more-editions) (Licencias y ramas para System Center Configuration Manager).
+      Para obtener más información, consulte [Licencias y ramas para System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
 
 5.  En la página **Términos de licencia del software de Microsoft** , lea y acepte los términos de licencia.  
 
@@ -280,7 +275,7 @@ Para expandir un sitio primario independiente, primero vea los [requisitos previ
 
     -   **Nombre de sitio:** todos los sitios requieren este nombre descriptivo, que le facilitará la identificación del sitio.  
 
-    -   **Carpeta de instalación:**esta es la ruta a la carpeta de instalación de Configuration Manager. No se puede cambiar la ubicación después de instalar el sitio. La ruta de acceso no puede contener caracteres Unicode ni espacios finales.  
+    -   **Carpeta de instalación:** esta es la ruta a la carpeta de instalación de Configuration Manager. No se puede cambiar la ubicación después de instalar el sitio. La ruta de acceso no puede contener caracteres Unicode ni espacios finales.  
 
     > [!IMPORTANT]  
     > Después de especificar los detalles en esta página, seleccione **Resumen** para usar la configuración predeterminada para el resto de las opciones del sitio secundario, y para ir directamente a la página **Resumen** del asistente.  

@@ -1,29 +1,24 @@
 ---
 title: Opciones de rol de sistema de sitio
 titleSuffix: Configuration Manager
-description: "Lea este artículo para obtener detalles sobre los roles de sistema de sitio de Configuration Manager que no son necesariamente explicativos."
-ms.custom: na
+description: Lea este artículo para obtener detalles sobre los roles de sistema de sitio de Configuration Manager que no son necesariamente explicativos.
 ms.date: 2/8/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e9f0fbd-e442-4509-a021-bfdedf2d04dd
-caps.latest.revision: "5"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 83fbde5fd15b1781822bcc743e2c13611ad88e0d
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 5651eaa7a69c6b75c37cb368973d1d3947e3a498
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuration-options-for-site-system-roles-for-system-center-configuration-manager"></a>Opciones de configuración de roles de sistema de sitio para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 La mayoría de las opciones de configuración de los roles de sistema de sitio de System Center Configuration Manager son explicativas o se explican en los cuadros de diálogo o el asistente durante la configuración. En las secciones siguientes se explican los roles de sistema de sitio en los que se necesita información adicional para su configuración.  
 

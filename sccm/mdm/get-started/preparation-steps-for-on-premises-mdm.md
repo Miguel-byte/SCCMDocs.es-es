@@ -1,29 +1,24 @@
 ---
-title: "Pasos de preparación "
+title: 'Pasos de preparación '
 titleSuffix: Configuration Manager
-description: "Prepare la administración de dispositivos mediante la administración local de dispositivos móviles (MDM) en System Center Configuration Manager."
-ms.custom: na
+description: Prepare la administración de dispositivos mediante la administración local de dispositivos móviles (MDM) en System Center Configuration Manager.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 1ef60106-8f31-46d6-95a6-25a6495f22c7
-caps.latest.revision: "4"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 6c2275480cbecf35997e38185e0cead28cff10fc
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 711af365353d68020a7bbbef8026f452d4203ce3
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="preparation-steps-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Pasos de preparación para la administración local de dispositivos móviles en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 La administración de dispositivos mediante la administración local de dispositivos móviles de System Center Configuration Manager requiere que la infraestructura de Configuration Manager se configure para que los roles de sistema de sitio (punto de proxy de inscripción, punto de inscripción, punto de administración de dispositivos y punto de distribución) puedan comunicarse a través de un canal de confianza con los dispositivos móviles que administrará.  
 

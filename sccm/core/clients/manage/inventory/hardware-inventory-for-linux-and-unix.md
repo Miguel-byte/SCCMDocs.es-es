@@ -1,29 +1,24 @@
 ---
 title: Inventario de hardware para Linux y UNIX
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo usar el inventario de hardware para Linux y UNIX en System Center Configuration Manager."
-ms.custom: na
+description: Obtenga información sobre cómo usar el inventario de hardware para Linux y UNIX en System Center Configuration Manager.
 ms.date: 02/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
-caps.latest.revision: "6"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 6f71478f6a2a8e5a2a41068624debfe3ac3e915d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 68e60611356cbaea3dc14a42776e89ecdc951008
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-system-center-configuration-manager"></a>Inventario de hardware para Linux y UNIX en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 El cliente de System Center Configuration Manager para Linux y UNIX admite el inventario de hardware. Después de recopilar el inventario de hardware, puede ejecutar y ver el inventario en el Explorador de recursos o informes de Configuration Manager y usar esta información para crear consultas y recopilaciones que permiten las siguientes operaciones:  
 
@@ -118,7 +113,7 @@ El cliente de System Center Configuration Manager para Linux y UNIX admite el in
      Para obtener información acerca de **omicli** y probar los proveedores personalizados, consulte la Guía de introducción de OMI.  
 
 > [!TIP]  
->  Utilice la distribución de software para implementar proveedores personalizados y para registrar proveedores personalizados en cada equipo cliente con Linux y UNIX.  
+>  Utilice la distribución de software para implementar proveedores personalizados y registrar proveedores personalizados en cada equipo cliente Linux y UNIX.  
 
 ###  <a name="BKMK_AddLinuxProvidertoCM"></a> Habilite la nueva clase de inventario en Configuration Manager:  
  Antes de que Configuration Manager puede informar sobre el inventario que notifica el nuevo proveedor en equipos Linux y UNIX, debe importar el archivo Managed Object Format (MOF) que define el esquema del proveedor personalizado.  

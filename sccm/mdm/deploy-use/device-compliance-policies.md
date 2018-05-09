@@ -1,30 +1,24 @@
 ---
 title: Directivas de cumplimiento de dispositivos
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo administrar directivas de cumplimiento en System Center Configuration Manager para que los dispositivos sean compatibles con directivas de acceso condicional."
-ms.custom: na
+description: Obtenga información sobre cómo administrar directivas de cumplimiento en System Center Configuration Manager para que los dispositivos sean compatibles con directivas de acceso condicional.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ad8fa94d-45bb-4c94-8d86-31234c5cf21c
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: d9811d81987e8531ee48a07a6855b337fdccb73b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 776af7499c576f21d47dafec8a668f3c4051ad88
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>Directivas de cumplimiento de dispositivo en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las **directivas de cumplimiento** en System Center Configuration Manager definen las reglas y los valores de configuración que un dispositivo debe cumplir para que se considere conforme a las directivas de acceso condicional. Las directivas de cumplimiento también se pueden usar para supervisar y corregir problemas de compatibilidad con dispositivos independientemente del acceso condicional.  
 

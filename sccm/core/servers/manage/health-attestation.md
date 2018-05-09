@@ -1,29 +1,24 @@
 ---
-title: "Atestación de estado"
+title: Atestación de estado
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre la funcionalidad de atestación de estado de dispositivos que puede verse en la consola de Configuration Manager."
-ms.custom: na
+description: Obtenga información sobre la funcionalidad de atestación de estado de dispositivos que puede verse en la consola de Configuration Manager.
 ms.date: 10/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
-caps.latest.revision: "17"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 4b9ce2aad95036e12167626897052de23cc937ae
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: c41a04d82edb46a234b6e5bd10d796e6544cbfad
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="health-attestation-for-system-center-configuration-manager"></a>Atestación de estado para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Los administradores pueden ver el estado de la [atestación de estado de los dispositivos de Windows 10](https://technet.microsoft.com/library/mt592023.aspx) en la consola de Configuration Manager.  La atestación de estado del dispositivo permite al administrador garantizar que los equipos cliente tienen habilitadas las siguientes configuraciones BIOS, TPM y de software de arranque de confianza:  
 

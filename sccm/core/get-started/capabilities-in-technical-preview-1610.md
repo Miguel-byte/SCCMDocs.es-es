@@ -1,25 +1,20 @@
 ---
 title: Funcionalidades de Technical Preview 1610
 titleSuffix: Configuration Manager
-description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1610."
-ms.custom: na
+description: Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1610.
 ms.date: 01/23/2017
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b31fd3e-875a-4a31-9498-5b050aadce32
-caps.latest.revision: "2"
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 1ab5ce458b4892422aa82ae99ed69ae2eb671583
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0798deff2f4904cb1cecac79251e7bc0688e0d4e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1610 para System Center Configuration Manager
 

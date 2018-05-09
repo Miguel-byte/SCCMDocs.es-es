@@ -1,29 +1,24 @@
 ---
-title: "Definición de límites"
+title: Definición de límites
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo definir ubicaciones de red de la intranet que pueden contener los dispositivos que quiere administrar."
-ms.custom: na
+description: Obtenga información sobre cómo definir ubicaciones de red de la intranet que pueden contener los dispositivos que quiere administrar.
 ms.date: 3/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
-caps.latest.revision: "10"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 224e91ebb3ff6ccfa94c3e2022066ad6d27c3afb
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 1e27bce7576f6d96a8e8af95fa5df69dd39c05cd
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-network-locations-as-boundaries-for-system-center-configuration-manager"></a>Definición de las ubicaciones de red como límites para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Los límites de Configuration Manager son ubicaciones de red que contienen dispositivos que desea administrar. El límite en que un dispositivo se encuentra es equivalente al sitio de Active Directory, o bien la dirección IP de red identificada por el cliente de Configuratoin Manager que está instalado en el dispositivo.
  - Puede crear límites independientes manualmente. No obstante, Configuration Manager no es compatible con la entrada directa de una superred como un límite. En su lugar, utilice el tipo de límite de intervalo de direcciones IP.
@@ -42,7 +37,7 @@ Cada límite está disponible para que lo use cada sitio de la jerarquía. Despu
 
 1.  En la consola de Configuration Manager, haga clic en **Administración** > **Configuración de jerarquía** > **Límites**.  
 
-2.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear Boundary.**  
+2.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear Boundary**.  
 
 3.  En la pestaña **General** del cuadro de diálogo Crear límite, puede especificar una **Descripción** para identificar el límite con un nombre o referencia fácil de reconocer.  
 

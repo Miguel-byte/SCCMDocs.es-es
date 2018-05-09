@@ -1,29 +1,24 @@
 ---
-title: "Administración de implementaciones de alto riesgo"
+title: Administración de implementaciones de alto riesgo
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo configurar el sitio en System Center Configuration Manager para advertir a los administradores si crean una implementación de alto riesgo."
-ms.custom: na
+description: Obtenga información sobre cómo configurar el sitio en System Center Configuration Manager para advertir a los administradores si crean una implementación de alto riesgo.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 8d37b983-a964-402c-819d-2512ed2d463b
-caps.latest.revision: "6"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 96855503183c1f9a3b51c5861ca661089f3c2994
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 44c7c805baedde820bc230dc25a3186762ecc8dc
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="settings-to-manage-high-risk-deployments-for-system-center-configuration-manager"></a>Configuración para administrar implementaciones de alto riesgo para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 Con System Center Configuration Manager, puede configurar un sitio de modo que avise a los administradores si crean una implementación de una secuencia de tareas de alto riesgo. Se consideran implementaciones de alto riesgo las siguientes:  

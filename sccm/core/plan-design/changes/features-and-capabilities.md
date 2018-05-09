@@ -1,30 +1,24 @@
 ---
-title: "Características y funcionalidades"
+title: Características y funcionalidades
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre las funcionalidades de administración principales de System Center Configuration Manager."
-ms.custom: na
+description: Obtenga información sobre las funcionalidades de administración principales de System Center Configuration Manager.
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 71e1edc178e770d7c05007c258e8085a2e3fe984
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: fadc93d1977d5d066a6c4c3884bdbaeefb2a0c90
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="features-and-capabilities-of-system-center-configuration-manager"></a>Características y funcionalidades de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 A continuación se indican las funcionalidades de administración principales de System Center Configuration Manager. Cada funcionalidad tiene sus propios requisitos previos, y las funcionalidades que use podrían influir en el diseño y la implementación de su jerarquía de Configuration Manager. Por ejemplo, si desea implementar software en dispositivos de su jerarquía, debe instalar el rol de punto de distribución del sistema de sitio.  
 

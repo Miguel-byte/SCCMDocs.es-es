@@ -1,29 +1,24 @@
 ---
-title: "Inscripción de dispositivos propiedad de la empresa "
+title: 'Inscripción de dispositivos propiedad de la empresa '
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre los diferentes métodos para inscribir dispositivos de empresa para implementaciones híbridas con Configuration Manager."
-ms.custom: na
+description: Obtenga información sobre los diferentes métodos para inscribir dispositivos de empresa para implementaciones híbridas con Configuration Manager.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2754ce6-1460-4ddd-9050-2cc87e7964f4
-caps.latest.revision: "13"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 5b1e05e45ec6193eeef5e48cfa8d8476a92dde56
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 36b4169f3bed1957f8ea14159902f408ba642944
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enroll-company-owned-devices-for-hybrid-deployments-with-configuration-manager"></a>Inscribir dispositivos de empresa para implementaciones híbridas con Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Los dispositivos de empresa (COD) o de la organización se pueden incorporar a la administración de varias maneras, según el dispositivo y la manera en que se adquirió.  
 

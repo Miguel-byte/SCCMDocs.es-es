@@ -1,26 +1,20 @@
 ---
-title: "Creación de elementos de configuración para equipos Mac administrados por el cliente "
+title: 'Creación de elementos de configuración para equipos Mac administrados por el cliente '
 titleSuffix: Configuration Manager
-description: "Use el elemento de configuración de Mac OS X de System Center Configuration Manager para administrar la configuración de los dispositivos Mac OS X."
-ms.custom: na
+description: Use el elemento de configuración de Mac OS X de System Center Configuration Manager para administrar la configuración de los dispositivos Mac OS X.
 ms.date: 03/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 1947bc8907d00a2f6d78acee5f563fa9b7f6cf78
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: e6358c8e84d12c37418d7a1af459e775783efaa2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-mac-os-x-devices-managed-with-the-system-center-configuration-manager-client"></a>Cómo crear elementos de configuración para dispositivos Mac OS X administrados con el cliente de System Center Configuration Manager
 Use el elemento de configuración de **Mac OS X (personalizado)** de System Center Configuration Manager para administrar la configuración de los dispositivos Mac OS X que administra el cliente de Configuration Manager.  
@@ -102,7 +96,7 @@ Use el elemento de configuración de **Mac OS X (personalizado)** de System Cent
   
     -   Para un tipo de regla **Valor**, especifique la siguiente información:  
   
-        -   La configuración debe cumplir la siguiente regla: seleccione un operador y un valor cuyo cumplimiento se evalúa con la configuración seleccionada. Puede usar los operadores siguientes:  
+        -   La configuración debe cumplir la siguiente regla: seleccione un operador y un valor cuyo cumplimiento se evalúa con la configuración seleccionada. Puede utilizar los operadores siguientes:  
   
             -   **Igual a**  
   

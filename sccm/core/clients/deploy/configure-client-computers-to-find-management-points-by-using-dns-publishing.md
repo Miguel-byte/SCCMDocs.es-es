@@ -1,29 +1,24 @@
 ---
-title: "Configuración de clientes para buscar puntos de administración mediante la publicación en DNS"
+title: Configuración de clientes para buscar puntos de administración mediante la publicación en DNS
 titleSuffix: Configuration Manager
-description: "Configure los equipos cliente para buscar puntos de administración mediante la publicación en DNS en System Center Configuration Manager."
-ms.custom: na
+description: Configure los equipos cliente para buscar puntos de administración mediante la publicación en DNS en System Center Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 03cec407-0f9f-454f-a360-b005af738d29
-caps.latest.revision: "6"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: d2462c282b5b979177fda735847279a12208ba6d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 3735e2cc8ac2f7e4a5c05b49783cad3981a04930
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-client-computers-to-find-management-points-by-using-dns-publishing-in-system-center-configuration-manager"></a>Configurar los equipos cliente para buscar los puntos de administración mediante el uso de la publicación en DNS en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Los clientes de System Center Configuration Manager deben encontrar un punto de administración para completar la asignación de sitios y como proceso continuo para seguir siendo administrados. Los Servicios de dominio de Active Directory proporcionan el método más seguro para que los clientes en la intranet encuentren puntos de administración. Sin embargo, si los clientes no pueden usar este método de ubicación de servicio (por ejemplo, no han extendido el esquema de Active Directory o son parte de un grupo de trabajo) use la publicación en DNS con método de ubicación de servicio alternativo.  
 

@@ -1,25 +1,20 @@
 ---
-title: "Creación de aplicaciones de Android"
+title: Creación de aplicaciones de Android
 titleSuffix: Configuration Manager
 description: Consulte las consideraciones que debe tener en cuenta al crear e implementar aplicaciones para dispositivos Android.
-ms.custom: na
 ms.date: 07/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e025c48c-1514-4ab7-836c-e0635aaa993a
-caps.latest.revision: "6"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: c512cba550e405c866204af981aba75639665de2
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4c09216744b33412bf1840c20aad659c59b0f52b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-android-applications-with-system-center-configuration-manager"></a>Crear aplicaciones Android con System Center Configuration Manager
 
@@ -55,7 +50,7 @@ Como administrador de Configuration Manager, también puede aprobar e implementa
 
 Siga estos pasos para aprobar aplicaciones en la tienda Play for Work, sincronizarlas con la consola de Configuration Manager e implementarlas en dispositivos Android for Work administrados. Para implementar aplicaciones en los perfiles de trabajo de los usuarios, debe aprobar las aplicaciones en Play for Work y después sincronizarlas con la consola de Configuration Manager.
 
-1. Abra un explorador y vaya a https://play.google.com/work.
+1. Abra un explorador y vaya a: https://play.google.com/work.
 2. Inicie sesión con la cuenta de administrador de Google enlazada a su inquilino de Intune.
 3. Busque las aplicaciones que le gustaría implementar en su entorno y seleccione **Aprobar** en cada una de ellas para que la aplicación esté disponible para Android for Work.
 4. En la consola de Configuration Manager, vaya a **Administrador** > **General** > **Cloud Services** > **Android for Work** y seleccione **Sincronizar**.

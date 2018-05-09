@@ -1,25 +1,20 @@
 ---
-title: "Planear y configurar la administración de aplicaciones"
+title: Planear y configurar la administración de aplicaciones
 titleSuffix: Configuration Manager
-description: "Implemente y configure las dependencias necesarias para la implementación de aplicaciones en System Center Configuration Manager."
-ms.custom: na
+description: Implemente y configure las dependencias necesarias para la implementación de aplicaciones en System Center Configuration Manager.
 ms.date: 11/07/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
-caps.latest.revision: "13"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: cd06d3ee2ea14c9ff1b9cf09980c2b25a5263db9
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 18d9fe80a1c5525457579dadbfeaeafa3425202d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>Planear y configurar la administración de aplicaciones en Configuration Manager
 
@@ -46,7 +41,7 @@ Use la información de este artículo como ayuda para implementar las dependenci
 |Cliente de App-V 4.6 SP1 o posterior para ejecutar aplicaciones virtuales|Para crear aplicaciones virtuales en Configuration Manager, los equipos cliente deben tener instalado App-V 4.6 SP1 o posterior.<br /><br /> También debe actualizar el cliente de App-V con la revisión descrita en el [artículo 2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322) de Knowledge Base para poder implementar aplicaciones virtuales.|  
 |Punto de servicio web del catálogo de aplicaciones|El punto de servicio web del catálogo de aplicaciones es un rol de sistema de sitio que proporciona información acerca del software disponible desde la biblioteca de software al sitio web del catálogo de aplicaciones.<br /><br /> Para más información sobre cómo configurar este rol de sistema de sitio, consulte [Configurar el centro de software y el catálogo de aplicaciones (equipos Windows solamente)](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only) en este tema.|  
 |Punto de sitios web del catálogo de aplicaciones|El punto de sitios web del catálogo de aplicaciones es un rol de sistema de sitio que proporciona a los usuarios una lista del software disponible.<br /><br /> Para más información sobre cómo configurar este rol de sistema de sitio, consulte [Configurar el centro de software y el catálogo de aplicaciones (equipos Windows solamente)](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only) en este tema.|  
-|Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.|Para usar los informes de Configuration Manager para la administración de aplicaciones, primero debe instalar y configurar un punto de servicios de informes.<br /><br /> Para obtener más información, consulte [Generación de informes en System Center Configuration Manager](../../core/servers/manage/reporting.md).|  
+|Punto de servicios de informes|Para usar los informes de Configuration Manager para la administración de aplicaciones, primero debe instalar y configurar un punto de servicios de informes.<br /><br /> Para obtener más información, consulte [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md) (Generación de informes en System Center Configuration Manager).|  
 |Permisos de seguridad para la administración de aplicaciones|Debe tener los siguientes permisos de seguridad para administrar aplicaciones:<br /><br /> El rol de seguridad **Autor de aplicaciones** incluye los permisos indicados anteriormente que son necesarios para crear, cambiar y retirar aplicaciones en Configuration Manager.<br /><br /> **Para implementar aplicaciones:**<br /><br /> El rol de seguridad **Administrador de implementación de aplicaciones** incluye los permisos indicados anteriormente que son necesarios para implementar aplicaciones en Configuration Manager.<br /><br /> El rol de seguridad **Administrador de aplicaciones** contiene todos los permisos de los roles de seguridad **Autor de aplicaciones** y **Administrador de implementación de aplicaciones** .<br /><br /> Para obtener más información, vea [Configurar la administración basada en roles](../../core/servers/deploy/configure/configure-role-based-administration.md).|  
 
 ##  <a name="configure-software-center-and-the-application-catalog-windows-pcs-only"></a>Configurar el centro de software y el catálogo de aplicaciones (equipos Windows solamente)  

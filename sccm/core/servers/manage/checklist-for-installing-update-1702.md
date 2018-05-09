@@ -1,25 +1,20 @@
 ---
-title: "Lista de comprobación para 1702"
+title: Lista de comprobación para 1702
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre las acciones que se deben realizar antes de actualizar a la versión 1702 de System Center Configuration Manager."
-ms.custom: na
+description: Obtenga información sobre las acciones que se deben realizar antes de actualizar a la versión 1702 de System Center Configuration Manager.
 ms.date: 06/06/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b587779e-1bd3-4ee3-8146-8e31f53499bd
-caps.latest.revision: "7"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: d7b3f6d058e17e12ca910f43f7a9cbe98d128bee
-ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: db5ca29f093e27c2c572714dc4c85a630c774b15
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1702 de System Center Configuration Manager
 
@@ -38,7 +33,7 @@ Para obtener la actualización de la versión 1702, debe usar un rol de sistema 
 
     -   Si el registro dmpdownloader.log indica que el proceso de dmpdownloader está suspendido y a la espera de un intervalo antes de comprobar las actualizaciones, puede reiniciar el servicio **SMS_Executive** en el servidor de sitio para reiniciar la descarga de los archivos de redistribución de la actualización.
 
-    -   Otro problema común de descarga se produce cuando la configuración del servidor proxy impide las descargas desde <http://silverlight.dlservice.microsoft.com> y <http://download.microsoft.com>.
+    -   Otro problema común de descarga se produce cuando la configuración del servidor proxy impide descargas desde <http://silverlight.dlservice.microsoft.com> y <http://download.microsoft.com>.
 
 Para obtener más información sobre la instalación de actualizaciones, consulte [Actualizaciones y servicio en la consola](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing).
 

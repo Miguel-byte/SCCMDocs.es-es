@@ -2,25 +2,19 @@
 title: Administración de Windows como servicio
 titleSuffix: Configuration Manager
 description: Vea el estado de Windows como servicio (WaaS) mediante Configuration Manager, cree planes de mantenimiento para formar anillos de implementación y vea alertas cuando los clientes de Windows 10 estén próximos al final del soporte técnico.
-ms.custom: na
 ms.date: 10/02/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-sum
+ms.topic: conceptual
 ms.assetid: da1e687b-28f6-43c4-b14a-ff2b76e60d24
-caps.latest.revision: 26
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 71f31b7adbffea0eb74983960a8b50c4d9b37033
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: 6a6c9295f96519f9897228d03b85c76246a13ca9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>Administración de Windows como servicio mediante System Center Configuration Manager
 

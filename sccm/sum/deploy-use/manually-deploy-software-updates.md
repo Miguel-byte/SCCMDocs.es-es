@@ -1,22 +1,20 @@
 ---
 title: Implementar actualizaciones de software manualmente
 titleSuffix: Configuration Manager
-description: "Para implementar actualizaciones manualmente, seleccione actualizaciones en la consola de Configuration Manager e impleméntelas manualmente, o agregue actualizaciones a un grupo de actualizaciones e implemente el grupo."
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: Para implementar actualizaciones manualmente, seleccione actualizaciones en la consola de Configuration Manager e impleméntelas manualmente, o agregue actualizaciones a un grupo de actualizaciones e implemente el grupo.
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ms.date: 12/07/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-ms.openlocfilehash: becab57c5f04bb67512d665175038f6c477b65b1
-ms.sourcegitcommit: e13bb2c86c40a88e5f4602beb1d31e4adc90e099
+ms.openlocfilehash: 3f79da78df10e97813b221ffca3df25396591fbc
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="BKMK_ManualDeploy"></a> Implementar actualizaciones de software manualmente  
 
@@ -175,7 +173,7 @@ ms.lasthandoff: 01/12/2018
 
     -   **Nombre**: especifique el nombre para la implementación. La implementación debe tener un nombre único que describa su propósito, y la diferencie de otras implementaciones del sitio de Configuration Manager. De forma predeterminada, Configuration Manager asigna automáticamente un nombre para la implementación con el siguiente formato: **Actualizaciones de Microsoft Software -** <*fecha*><*hora*>.  
 
-    -   **Descripción:**especifique una descripción para la implementación. La descripción proporciona información general de la implementación, además de cualquier otra información pertinente que permita identificar y diferenciar esta del resto de implementaciones del sitio de Configuration Manager. El campo de descripción es opcional, tiene un límite de 256 caracteres y tiene un valor en blanco de forma predeterminada.  
+    -   **Descripción:** especifique una descripción para la implementación. La descripción proporciona información general de la implementación, además de cualquier otra información pertinente que permita identificar y diferenciar esta del resto de implementaciones del sitio de Configuration Manager. El campo de descripción es opcional, tiene un límite de 256 caracteres y tiene un valor en blanco de forma predeterminada.  
 
     -   **Actualización de software/Grupo de actualizaciones de software**: compruebe que la actualización de software, o el grupo de actualizaciones de software es el correcto.  
 

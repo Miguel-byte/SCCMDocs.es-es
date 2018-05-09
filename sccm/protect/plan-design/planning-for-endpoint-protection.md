@@ -1,28 +1,23 @@
 ---
 title: Planeamiento de Endpoint Protection
 titleSuffix: Configuration Manager
-ms.custom: na
 ms.date: 03/07/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
-caps.latest.revision: "16"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 3ffb112dc1aaf71162b0f706f5c07fb6d08e47f9
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 0e8cd4a409718645d06f17c8cea36e7b06ec61d2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-for-endpoint-protection-in-system-center-configuration-manager"></a>Planeamiento para Endpoint Protection en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 Endpoint Protection en System Center Configuration Manager permite administrar las directivas antimalware y la seguridad del Firewall de Windows para equipos cliente de su jerarquía de Configuration Manager.  
@@ -85,7 +80,7 @@ Endpoint Protection en Configuration Manager permite crear directivas antimalwar
 
 ## <a name="windows-defender-advanced-threat-protection"></a>Protección contra amenazas avanzada de Windows Defender
 
-A partir de la versión 1606 de Configuration Manager (rama actual), Endpoint Protection puede ayudar a administrar y supervisar la protección contra amenazas avanzadas de Windows Defender (ATP). La Protección contra amenazas avanzada de Windows Defender es un nuevo servicio que ayuda a las empresas a detectar ataques avanzados en sus redes, a investigarlos y a responder a ellos. Consulte [Windows Defender Advanced Threat Protection](../deploy-use/windows-defender-advanced-threat-protection.md) (Protección contra amenazas avanzada de Windows Defender).
+A partir de la versión 1606 de Configuration Manager (rama actual), Endpoint Protection puede ayudar a administrar y supervisar la protección contra amenazas avanzadas de Windows Defender (ATP). Protección contra amenazas avanzada de Windows Defender es un nuevo servicio que ayuda a las empresas a detectar ataques avanzados en sus redes, a investigarlos y a responder a ellos. Consulte [Windows Defender Advanced Threat Protection](../deploy-use/windows-defender-advanced-threat-protection.md) (Protección contra amenazas avanzada de Windows Defender).
 
 ## <a name="endpoint-protection-workflow"></a>Flujo de trabajo de Endpoint Protection  
  Use el siguiente diagrama para entender mejor el flujo de trabajo para implementar Endpoint Protection en su jerarquía de Configuration Manager.  

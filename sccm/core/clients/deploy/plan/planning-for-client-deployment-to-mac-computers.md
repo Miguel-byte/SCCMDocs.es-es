@@ -1,30 +1,24 @@
 ---
-title: "Planeamiento de la implementación del cliente en equipos Mac"
+title: Planeamiento de la implementación del cliente en equipos Mac
 titleSuffix: Configuration Manager
-description: "Planee la implementación de cliente en equipos Mac en System Center Configuration Manager."
-ms.custom: na
+description: Planee la implementación de cliente en equipos Mac en System Center Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 8d15ae3f-de42-461f-a907-c43873da22d2
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 93f6313e25c7015bde10a5770cb4a8e170bff880
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 05268780bd6dc3b86052b694f360065f8f70d6e6
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-for-client-deployment-to-mac-computers-in-system-center-configuration-manager"></a>Planeamiento de la implementación de cliente en equipos Mac en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede instalar el cliente de Configuration Manager en equipos Mac que ejecuten el sistema operativo Mac OS X y usen las siguientes capacidades de administración:  
 

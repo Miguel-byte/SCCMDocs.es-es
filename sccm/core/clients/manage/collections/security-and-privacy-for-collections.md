@@ -2,33 +2,27 @@
 title: Seguridad y privacidad de recopilaciones
 titleSuffix: Configuration Manager
 description: Consulte los procedimientos recomendados sobre la seguridad y la privacidad de las recopilaciones en System Center Configuration Manager.
-ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 30bf2451-5415-4be2-ba8d-21759370cd83
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 9990b4e31224f4f41e217108625c8b52a143c7c5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b9b19cfcddc2f477a5e70e8f3d25c3eb0c207814
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-collections-in-system-center-configuration-manager"></a>Seguridad y privacidad para recopilaciones en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Este tema contiene procedimientos recomendados de seguridad e información de privacidad respecto a las recopilaciones de System Center Configuration Manager.  
 
- No hay ninguna información de privacidad específica para las recopilaciones en Configuration Manager. Las recopilaciones son contenedores para recursos, como usuarios y dispositivos. La pertenencia a la recopilación depende a menudo de la información que recopila Configuration Manager durante el funcionamiento normal. Por ejemplo, con la información de recursos que se ha recopilado de la detección o inventario, se puede configurar una recopilación para que contenga los dispositivos que cumplen los criterios especificados. Las recopilaciones también pueden basarse en la información de estado actual de las operaciones de administración de cliente, como la implementación de software y la comprobación de cumplimiento. Además de estas recopilaciones basadas en consultas, los usuarios administrativos también pueden agregar recursos a las recopilaciones.  
+ No hay ninguna información de privacidad específica para las recopilaciones en Configuration Manager. Las recopilaciones son contenedores para recursos, como usuarios y dispositivos. La pertenencia a la recopilación depende a menudo de la información que recopila Configuration Manager durante el funcionamiento normal. Por ejemplo, con la información de recursos que se ha recopilado de la detección o inventario, se puede configurar una recopilación para que contenga los dispositivos que cumplen los criterios especificados. Las recopilaciones también pueden basarse en la información de estado actual de las operaciones de administración de cliente, como la implementación de software y la comprobación de cumplimiento. Además de estas colecciones basadas en consultas, los usuarios administrativos también pueden agregar recursos a las colecciones.  
 
  Para obtener más información sobre las recopilaciones, consulte [Introducción a las recopilaciones en System Center Configuration Manager](../../../../core/clients/manage/collections/introduction-to-collections.md). Para obtener más información sobre los procedimientos recomendados de seguridad e información de privacidad para las operaciones de Configuration Manager que se pueden usar para configurar la pertenencia a una recopilación, consulte [Security best practices and privacy information for System Center Configuration Manager](../../../../core/plan-design/security/security-best-practices-and-privacy-information.md) (Procedimientos recomendados de seguridad e información de privacidad de System Center Configuration Manager).  
 

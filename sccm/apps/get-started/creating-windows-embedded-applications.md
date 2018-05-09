@@ -1,29 +1,24 @@
 ---
-title: "Creación de aplicaciones de Windows Embedded"
+title: Creación de aplicaciones de Windows Embedded
 titleSuffix: Configuration Manager
 description: Consulte las consideraciones que debe tener en cuenta al crear e implementar aplicaciones para dispositivos de Windows Embedded.
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16acfd63-0c40-424c-82f4-8c63f7f1c30b
-caps.latest.revision: "7"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: e37dabb84cc6d56d9f08b2c0ee07115dd4bcb4fd
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 6374fa186ab13f3288e218e6670da3ea4ff10f4e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-windows-embedded-applications-with-system-center-configuration-manager"></a>Crear aplicaciones de Windows Embedded con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Además de los otros requisitos y procedimientos de System Center Configuration Manager para crear una aplicación, también debe tener en cuenta las consideraciones siguientes al crear e implementar aplicaciones para dispositivos de Windows Embedded.  
 

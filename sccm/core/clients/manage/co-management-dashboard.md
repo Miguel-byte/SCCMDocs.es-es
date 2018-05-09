@@ -1,26 +1,20 @@
 ---
 title: Panel de administración conjunta
-titleSuffix: System Center Configuration Manager
+titleSuffix: Configuraton Manager
 description: Revise la información sobre la administración conjunta mediante el panel.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
-caps.latest.revision: 1
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 380ca748921a806a0e5edf608a62e8a44edf4d84
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: cdf073aa3e9ca3be6062ea0e5e0528bb97937989
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="co-management-dashboard-in-system-center-configuration-manager"></a>Panel de administración conjunta en System Center Configuration Manager
 *Se aplica a: System Center Configuration Manager (Rama actual)*

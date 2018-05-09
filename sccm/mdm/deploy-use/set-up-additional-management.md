@@ -1,30 +1,24 @@
 ---
-title: "Configuración de la administración adicional"
+title: Configuración de la administración adicional
 titleSuffix: Configuration Manager
-description: "Configure la administración adicional mediante System Center Configuration Manager."
-ms.custom: na
+description: Configure la administración adicional mediante System Center Configuration Manager.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4877d674-6bbc-4e16-810c-daad70c74daa
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: e3aaefb1d240449467dc9744a3e959e21d3351d3
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 58a61dffbdd9b04d3e872e23f88ddc0ac864f99d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-additional-management-with-system-center-configuration-manager"></a>Configuración de administración adicional con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 (Opcional) Puede configurar administración adicional antes de que se inscriban los dispositivos. Estas soluciones de administración se pueden crear e implementar una vez que los dispositivos están inscritos, aunque muchas organizaciones prefieren implementarlas según se incorporan los dispositivos a la administración.
 

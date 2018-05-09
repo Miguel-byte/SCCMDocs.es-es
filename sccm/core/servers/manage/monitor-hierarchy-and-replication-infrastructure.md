@@ -1,26 +1,20 @@
 ---
-title: "Supervisión de la replicación"
+title: Supervisión de la replicación
 titleSuffix: Configuration Manager
-description: "Aprenda a supervisar la infraestructura y las operaciones en Configuration Manager mediante el área de trabajo Supervisión de la consola."
-ms.custom: na
+description: Aprenda a supervisar la infraestructura y las operaciones en Configuration Manager mediante el área de trabajo Supervisión de la consola.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3fab4d67-8d2a-45ce-8b06-471280102cf6
-caps.latest.revision: "11"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 459a619d08a5d38c51301e2f6cff23a5d46a9464
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 04faf92545f84fdf53c522ad9aa0c74bbd5c4aa1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-hierarchy-and-replication-infrastructure-in-system-center-configuration-manager"></a>Supervisar la infraestructura de la jerarquía y replicación de System Center Configuration Manager
 

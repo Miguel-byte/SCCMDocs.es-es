@@ -1,30 +1,24 @@
 ---
-title: "Administración de una suscripción a Intune"
+title: Administración de una suscripción a Intune
 titleSuffix: Configuration Manager
-description: "Administre una suscripción a Intune asociada a System Center Configuration Manager."
-ms.custom: na
+description: Administre una suscripción a Intune asociada a System Center Configuration Manager.
 ms.date: 06/02/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9b494767-68c1-47b1-9a86-591bff0ad491
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: a6bb27adeddc366526df699b69e95c6e7d6482ae
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 1b8390faa557f37b2ee148299079df81d3c13299
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-an-intune-subscription-associated-with-system-center-configuration-manager"></a>Administración de una suscripción a Intune asociada a System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Si agrega una suscripción de Microsoft Intune (una suscripción de prueba o suscripción de pago) a Configuration Manager y luego necesita cambiar a otra suscripción de Intune, debe eliminar tanto la **suscripción a Microsoft Intune** como el **punto de conexión de servicio** desde la consola de Configuration Manager antes de poder agregar una nueva suscripción.
 

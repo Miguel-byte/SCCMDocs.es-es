@@ -1,36 +1,30 @@
 ---
 title: Seguridad y privacidad para consultas
 titleSuffix: Configuration Manager
-description: "Analice los procedimientos recomendados de seguridad y privacidad al consultar información de la base de datos del sitio."
-ms.custom: na
+description: Analice los procedimientos recomendados de seguridad y privacidad al consultar información de la base de datos del sitio.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 30080620-20d3-4c38-b8dd-db5516e1acae
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 6ab8498a2153dd272e9451aa58b68b4f804cd93a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 2d84385782df17d4019d6de65bcc7006aeab8b24
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-queries-in-system-center-configuration-manager"></a>Seguridad y privacidad para consultas en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Las consultas de System Center Configuration Manager le permiten devolver información de la base de datos del sitio según los criterios que especifique. Configuration Manager recopila la información de la base de datos del sitio durante el funcionamiento normal. Por ejemplo, con la información que se ha recopilado de la detección o inventario, puede configurar una consulta para identificar los dispositivos que cumplen los criterios especificados.  
+Las consultas de System Center Configuration Manager le permiten devolver información de la base de datos del sitio según los criterios que especifique. Configuration Manager recopila la información de la base de datos del sitio durante el funcionamiento normal. Por ejemplo, utilizando la información que se ha recopilado de descubrimiento o inventario, puede configurar una consulta para identificar los dispositivos que cumplen los criterios especificados.  
 
  Para obtener más información sobre las consultas, consulte [Introducción a las consultas en System Center Configuration Manager](../../../core/servers/manage/introduction-to-queries.md). Para obtener más información sobre los procedimientos recomendados de seguridad e información de privacidad para las operaciones de Configuration Manager que recopilan información que se puede recuperar usando consultas, consulte [Seguridad y privacidad en System Center Configuration Manager](../../../core/plan-design/security/security-and-privacy.md).  
 
-## <a name="security-best-practices-for-queries"></a>Procedimientos recomendados de seguridad para consultas  
+## <a name="security-best-practices-for-queries"></a>Prácticas recomendadas de seguridad para las consultas  
  Use el siguiente procedimiento recomendado de seguridad para consultas.  
 
 |Práctica recomendada de seguridad|Más información|  

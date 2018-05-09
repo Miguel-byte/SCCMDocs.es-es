@@ -1,29 +1,24 @@
 ---
 title: Proteger los datos y la infraestructura del sitio
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo proteger los recursos de su organización de la exposición o de los ataques malintencionados con System Center Configuration Manager."
-ms.custom: na
+description: Obtenga información sobre cómo proteger los recursos de su organización de la exposición o de los ataques malintencionados con System Center Configuration Manager.
 ms.date: 11/27/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
-caps.latest.revision: "8"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 925842a19f79e3674e988ea03661dfec36ba7145
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: e76a16fab84f5ccfcd71af4bc80913e31acdadd9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="protect-data-and-site-infrastructure-with-system-center-configuration-manager"></a>Proteger la infraestructura de datos y del sitio con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 Seguramente quiere que los usuarios puedan obtener acceso seguro a los recursos de su organización, para que la infraestructura y los datos estén protegidos contra la exposición o los ataques malintencionados. La información de estos temas describe cómo usar System Center Configuration Manager (también conocido como ConfigMgr o SCCM) para permitir ese tipo de acceso y cómo contribuir a proteger los recursos de la organización.  

@@ -2,26 +2,19 @@
 title: Configuración del control remoto
 titleSuffix: Configuration Manager
 description: Configure el control remoto en System Center Configuration Manager.
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: dudeso
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
-caps.latest.revision: 4
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: b5183f64a4793d2d24fec71a29ceaf0148446a36
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4e4d380319704eda608930ac938232513800b81a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-remote-control-in-system-center-configuration-manager"></a>Configuración del control remoto en System Center Configuration Manager
 
@@ -43,7 +36,7 @@ Para usar Asistencia remota o Escritorio remoto, debe estar instalado y configur
 
     Puede cambiar el nombre de la compañía que aparece en el cuadro de diálogo **Control remoto de ConfigMgr** mediante la configuración de un valor para **Nombre de organización mostrado en el Centro de software** en la configuración de cliente del **Agente de equipo** .  
 
- Los equipos cliente se configuran con estas opciones la próxima vez que descargan directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Cómo administrar clientes en System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
+ Los equipos cliente se configuran con estas opciones la próxima vez que descargan directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [How to manage clients in System Center Configuration Manager (Cómo administrar clientes en System Center Configuration Manager)](../../../../core/clients/manage/manage-clients.md).  
 
 #### <a name="enable-keyboard-translation"></a>Habilitar traducción del teclado
 

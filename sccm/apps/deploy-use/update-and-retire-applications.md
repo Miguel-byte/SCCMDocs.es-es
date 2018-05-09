@@ -2,24 +2,19 @@
 title: Actualizar y retirar aplicaciones
 titleSuffix: Configuration Manager
 description: Revise, sustituya o desinstale aplicaciones implementadas con System Center Configuration Manager.
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68ac8a07-8e54-4a3c-91e3-e50dc1cabf5d
-caps.latest.revision: "9"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: bb17e3aebefcc3ea56e57fea963695eee9adf92d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 831edd1d2c606253dcdc372a0a1503199734835c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="update-and-retire-applications-with-system-center-configuration-manager"></a>Actualizar y retirar aplicaciones mediante System Center Configuration Manager
 

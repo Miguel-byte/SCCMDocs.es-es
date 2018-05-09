@@ -1,29 +1,24 @@
 ---
 title: Tareas comunes para administrar el cumplimiento
 titleSuffix: Configuration Manager
-description: "Aprenda a usar la configuración de cumplimiento en System Center Configuration Manager."
-ms.custom: na
+description: Aprenda a usar la configuración de cumplimiento en System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 915f866e-7559-4c9c-aee2-f9ca92e637b3
-caps.latest.revision: "5"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 605495038c540467c4313b3f41a7f6ccd525ab37
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 87d9209624441d571bf01e56717134115540b3fb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-tasks-for-managing-compliance-with-system-center-configuration-manager"></a>Tareas comunes para administrar el cumplimiento con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En esta sección, encontrará algunos escenarios comunes que le ayudarán a aprender a usar la configuración de cumplimiento en System Center Configuration Manager.  
 

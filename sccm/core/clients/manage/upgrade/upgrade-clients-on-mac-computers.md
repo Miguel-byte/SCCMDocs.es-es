@@ -1,30 +1,24 @@
 ---
-title: "Actualización de clientes de macOS "
+title: 'Actualización de clientes de macOS '
 titleSuffix: Configuration Manager
 description: Actualice clientes en equipos Mac en System Center Configuration Manager.
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 74c60941-5eae-4905-9e58-252bdb39df96
-caps.latest.revision: 
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 7ce260a4d93e58e31ec14219c317c793d4b9bb32
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 667c8c3ea986e39627f3ed96e53719d6de74d3b2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-upgrade-clients-on-mac-computers-in-system-center-configuration-manager"></a>Cómo actualizar clientes en equipos Mac en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Siga los pasos generales que se describen a continuación para actualizar el cliente de equipos Mac mediante una aplicación de System Center Configuration Manager. Alternativamente, también puede descargar el archivo de instalación del cliente Mac, copiarlo a una ubicación de red compartida o en una carpeta local en el equipo Mac y, a continuación, solicitar a los usuarios la ejecución manual de la instalación.  
 

@@ -1,30 +1,24 @@
 ---
 title: Seguridad y privacidad de los clientes
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre la seguridad y privacidad de los clientes en System Center Configuration Manager."
-ms.custom: na
+description: Obtenga información sobre la seguridad y privacidad de los clientes en System Center Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
-caps.latest.revision: "10"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: b28a461894bcd1cffd3c98bfce9fcfe22cc7a8f0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 89b7664067747c9afb04c3a5dd059e81cfb2716e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-clients-in-system-center-configuration-manager"></a>Seguridad y privacidad para clientes en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Este artículo contiene información de seguridad y privacidad para clientes de System Center Configuration Manager y para dispositivos móviles administrados mediante el conector de Exchange Server:  
 

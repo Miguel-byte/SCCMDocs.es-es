@@ -1,29 +1,24 @@
 ---
-title: "Uso de datos de diagnóstico"
+title: Uso de datos de diagnóstico
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo Microsoft usa los datos de uso y diagnóstico que System Center Configuration Manager recopila."
-ms.custom: na
+description: Obtenga información sobre cómo Microsoft usa los datos de uso y diagnóstico que System Center Configuration Manager recopila.
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8021bc8-2799-41f4-83c2-e27d1242028c
-caps.latest.revision: "5"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: d34305ddb158a01c0d79189705af597344a56f8d
-ms.sourcegitcommit: da27d37cc4e4e06cf23758846cdd7acb617f744b
+manager: dougeby
+ms.openlocfilehash: fac92818a56b9ef7c7e8e6b923fb0d833f9053c2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-diagnostics-and-usage-data-is-used-for-system-center-configuration-manager"></a>Cómo se usan los datos de uso y diagnóstico para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Los datos de uso y diagnóstico recopilados por System Center Configuration Manager proporcionan información casi inmediata a Microsoft sobre cómo funciona el producto y se usa para ajustar las actualizaciones futuras. También podemos ver datos de configuración que nos ayudan a diseñar y probar las configuraciones que están en producción. Por ejemplo:  
 

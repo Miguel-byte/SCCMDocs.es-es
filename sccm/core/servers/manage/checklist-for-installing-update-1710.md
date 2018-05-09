@@ -1,25 +1,20 @@
 ---
-title: "Lista de comprobación para la versión 1710 | System Center Configuration Manager"
+title: Lista de comprobación para la versión 1710 | System Center Configuration Manager
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre las acciones que se deben realizar antes de actualizar a la versión 1710 de System Center Configuration Manager."
-ms.custom: na
+description: Obtenga información sobre las acciones que se deben realizar antes de actualizar a la versión 1710 de System Center Configuration Manager.
 ms.date: 12/19/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7e8ab8ca-41ef-467a-943b-a115d88cafe0
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: f1f80a630a607d6d914fc6e6106a2ce9df39dcc3
-ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 62426dc3acadc6043a31f9d4bd3dcc4843eaad76
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checklist-for-installing-update-1710-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1710 de System Center Configuration Manager
 
@@ -35,7 +30,7 @@ Para obtener la actualización de la versión 1710, debe usar un rol de sistema 
 
     -   Si el registro dmpdownloader.log indica que el proceso de dmpdownloader está suspendido y a la espera de un intervalo antes de comprobar las actualizaciones, puede reiniciar el servicio **SMS_Executive** en el servidor de sitio para reiniciar la descarga de los archivos de redistribución de la actualización.
 
-    -   Otro problema común de descarga se produce cuando la configuración del servidor proxy impide las descargas desde <http://silverlight.dlservice.microsoft.com> y <http://download.microsoft.com>.
+    -   Otro problema común de descarga se produce cuando la configuración del servidor proxy impide descargas desde <http://silverlight.dlservice.microsoft.com> y <http://download.microsoft.com>.
 
 Para obtener más información sobre la instalación de actualizaciones, consulte [Actualizaciones y servicio en la consola](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing).
 

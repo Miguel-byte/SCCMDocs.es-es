@@ -1,29 +1,24 @@
 ---
 title: Configurar Wake On LAN
 titleSuffix: Configuration Manager
-description: "Seleccione la configuración de Wake on LAN en System Center Configuration Manager."
-ms.custom: na
+description: Seleccione la configuración de Wake on LAN en System Center Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
-caps.latest.revision: "7"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: b2250b64609bc4c39a81312e1b41586a55f576df
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 32753e44d188aed8d47c22030fba82f86e605efc
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-wake-on-lan-in-system-center-configuration-manager"></a>Cómo configurar Wake on LAN en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Especifique la configuración de Wake On LAN para System Center Configuration Manager si quiere reactivar los equipos que están en estado de suspensión para instalar el software necesario, por ejemplo, actualizaciones de software, aplicaciones, secuencias de tareas y programas.
 

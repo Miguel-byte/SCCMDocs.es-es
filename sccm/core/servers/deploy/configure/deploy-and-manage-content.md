@@ -1,30 +1,24 @@
 ---
-title: "Implementación de contenido"
+title: Implementación de contenido
 titleSuffix: Configuration Manager
-description: "Después de instalar puntos de distribución para System Center Configuration Manager, siga los pasos que se indican a continuación para empezar a implementar contenido en ellos."
-ms.custom: na
+description: Después de instalar puntos de distribución para System Center Configuration Manager, siga los pasos que se indican a continuación para empezar a implementar contenido en ellos.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 14d2d9cfc25f7445ad6e873f1969e1ffcd522737
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c6a2a69047a8fee5ab0c1f4f0f13197178334f05
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-and-manage-content-for-system-center-configuration-manager"></a>Implementar y administrar contenido para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Después de instalar puntos de distribución para System Center Configuration Manager, puede empezar a implementar contenido en ellos. Normalmente, el contenido se transfiere a los puntos de distribución a través de la red, pero existen otras opciones para llevar el contenido a los puntos de distribución. Después de que se haya transferido el contenido a un punto de distribución, puede actualizar, redistribuir, quitar y validar ese contenido en los puntos de distribución.  
 

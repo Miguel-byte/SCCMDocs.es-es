@@ -1,26 +1,20 @@
 ---
-title: "Configuración del firewall y el puerto para clientes de Windows"
+title: Configuración del firewall y el puerto para clientes de Windows
 titleSuffix: Configuration Manager
-description: "Seleccione la configuración de puertos y Firewall de Windows para clientes en System Center Configuration Manager"
-ms.custom: na
+description: Seleccione la configuración de puertos y Firewall de Windows para clientes en System Center Configuration Manager
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: fe9f98ad6567b4f691dcfe6f70868fc63d61a63d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 193ee803fd0a6bacf043dbabc6550ef68a4a629a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-firewall-and-port-settings-for-clients-in-system-center-configuration-manager"></a>Configuración de puertos y Firewall de Windows para clientes en System Center Configuration Manager
 
@@ -150,7 +144,7 @@ Los equipos cliente en System Center Configuration Manager que ejecutan Firewall
 
 |Descripción|UDP|TCP|  
 |-----------------|---------|---------|  
-|Bloque de mensajes del servidor (SMB) entre el equipo cliente y un recurso compartido de red desde el que se ejecuta CCMSetup.exe.<br /><br /> Cuando instala Configuration Manager, los archivos de origen de la instalación del cliente se copian y se comparten de forma automática desde la carpeta *&lt;RutaDeInstalación\>*\Client en los puntos de administración. Sin embargo, puede copiar estos archivos y crear un nuevo recurso compartido en cualquier equipo de la red. Como alternativa, puede eliminar este tráfico de red ejecutando CCMSetup.exe localmente, por ejemplo, mediante el uso de medios extraíbles.|--|445|  
+|Bloque de mensajes del servidor (SMB) entre el equipo cliente y un recurso compartido de red desde el que se ejecuta CCMSetup.exe.<br /><br /> Cuando instala Configuration Manager, los archivos de origen de la instalación del cliente se copian y se comparten de forma automática desde la carpeta *&lt;RutaDeInstalación\>* \Client en los puntos de administración. Sin embargo, puede copiar estos archivos y crear un nuevo recurso compartido en cualquier equipo de la red. Como alternativa, puede eliminar este tráfico de red ejecutando CCMSetup.exe localmente, por ejemplo, mediante el uso de medios extraíbles.|--|445|  
 |Protocolo de transferencia de hipertexto (HTTP) desde el equipo cliente a un punto de administración cuando la conexión es a través de HTTP y no se especifica la propiedad de la línea de comandos CCMSetup **/source:&lt;Ruta\>**.|--|80 (Véase la nota 1, **Puerto alternativo disponible**)|  
 |Protocolo seguro de transferencia de hipertexto (HTTPS) desde el equipo cliente a un punto de administración cuando la conexión es a través de HTTPS y no se especifica la propiedad de la línea de comandos CCMSetup **/source:&lt;Ruta\>**.|--|443 (véase la nota 1, **Puerto alternativo disponible**)|  
 |Bloque de mensajes del servidor (SMB) entre el servidor de origen y el equipo cliente cuando especifica la propiedad de la línea de comandos CCMSetup **/source:&lt;Ruta\>**.|--|445|  

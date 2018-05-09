@@ -1,29 +1,24 @@
 ---
-title: "Selección de los métodos de detección"
+title: Selección de los métodos de detección
 titleSuffix: Configuration Manager
-description: "Consulte las consideraciones sobre qué métodos usar y en qué sitios ejecutarlos."
-ms.custom: na
+description: Consulte las consideraciones sobre qué métodos usar y en qué sitios ejecutarlos.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 127ce713-d085-430f-ac7b-2701637fe126
-caps.latest.revision: "9"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 0a8a572c51a6d36ffe11c7a2c05933c96790e95f
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: faa974fda68c9448902f2f5c8e8fcf8ef2f2d386
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-discovery-methods-to-use-for-system-center-configuration-manager"></a>Selección de los métodos de detección que se usarán para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Para usar la detección de System Center Configuration Manager de forma correcta y eficaz, debe tener en cuenta qué métodos usar y en qué sitios ejecutarlos.  
 

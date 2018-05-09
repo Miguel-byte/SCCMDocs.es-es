@@ -2,25 +2,19 @@
 title: Creación de una imagen para un OEM en fábrica o en un almacén local
 titleSuffix: Configuration Manager
 description: Use implementaciones de medios preconfigurados para reducir el tráfico de red mientras implementa un sistema operativo en un equipo que no esté aprovisionado por completo.
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: a7d3df90-062d-4d57-9e9d-e137d3e7cd7f
-caps.latest.revision: 8
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: e12acb44cc78e0a6d118cfece538366263758aec
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 0c8cf0af19017f4acfd95bcd01f8226229c05a14
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-an-image-for-an-oem-in-factory-or-a-local-depot-with-system-center-configuration-manager"></a>Crear una imagen para un OEM en fábrica o en un almacén local con System Center Configuration Manager
 
@@ -49,7 +43,7 @@ Este método de implementación puede reducir el tráfico de red porque la image
 -   **Sólo medios y PXE (ocultos)**  
 
 ## <a name="create-the-prestaged-media"></a>Crear los medios preconfigurados  
- Cree el archivo de medios preconfigurados para enviar al OEM o al almacén local. Para más información, vea [Crear medios preconfigurados con System Center Configuration Manager](create-prestaged-media.md).  
+ Cree el archivo de medios preconfigurados para enviar al OEM o al almacén local. Para más información, vea [Create prestaged media with System Center Configuration Manager (Crear medios preconfigurados con System Center Configuration Manager)](create-prestaged-media.md).  
 
 ## <a name="send-the-prestaged-media-file-to-the-oem-or-local-depot"></a>Enviar el archivo de medios preconfigurados al OEM o al almacén local  
  Envíe los medios al OEM o al almacén local para preconfigurar los equipos. El archivo de medios preconfigurados se aplica a un disco duro formateado en el equipo.  

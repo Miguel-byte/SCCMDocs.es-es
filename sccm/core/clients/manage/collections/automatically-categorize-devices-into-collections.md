@@ -1,29 +1,24 @@
 ---
-title: "Clasificar automáticamente dispositivos en recopilaciones"
+title: Clasificar automáticamente dispositivos en recopilaciones
 titleSuffix: Configuration Manager
-description: "Clasifique los dispositivos en colecciones automáticamente con System Center Configuration Manager."
-ms.custom: na
+description: Clasifique los dispositivos en colecciones automáticamente con System Center Configuration Manager.
 ms.date: 04/23/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 98b038b4-1a13-4228-bdb8-a12194e32b0e
-caps.latest.revision: "5"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 2a9b311b0abbeb56d9043410ecbeb54ec244fbef
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: fcffc48431045fab2b2f69e112258c844ad184bb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="automatically-categorize-devices-into-collections-with-system-center-configuration-manager"></a>Clasificar automáticamente dispositivos en colecciones con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede crear categorías de dispositivos, que se pueden usar para colocar automáticamente los dispositivos en colecciones de dispositivos cuando se usa Configuration Manager con Microsoft Intune. Después, los usuarios tienen que elegir una categoría de dispositivos cuando inscriben un dispositivo en Intune. Puede cambiar una categoría de dispositivo desde la consola de Configuration Manager.
 

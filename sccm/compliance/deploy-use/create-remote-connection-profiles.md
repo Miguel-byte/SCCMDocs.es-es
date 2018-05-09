@@ -1,30 +1,24 @@
 ---
-title: "Creación de perfiles de conexión remota"
+title: Creación de perfiles de conexión remota
 titleSuffix: Configuration Manager
-description: "Use perfiles de conexión remota de System Center Configuration Manager para permitir a los usuarios conectarse remotamente a equipos de trabajo."
-ms.custom: na
+description: Use perfiles de conexión remota de System Center Configuration Manager para permitir a los usuarios conectarse remotamente a equipos de trabajo.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 8ca0b961f075f41984d6dbba7321c375940a8622
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: c0e94fd8669556223044403fc72216fcaaaa5e54
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remote-connection-profiles-in-system-center-configuration-manager"></a>Perfiles de conexión remota en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Use perfiles de conexión remota de System Center Configuration Manager para permitir a los usuarios conectarse remotamente a los equipos del trabajo si no están conectados al dominio o si sus equipos personales se conectan a través de Internet.  
 
@@ -135,7 +129,7 @@ Implementar un perfil de conexión remota
 
     -   **Corregir las reglas no compatibles cuando se admita**: habilite esta opción para corregir automáticamente el perfil de conexión remota si no es conforme en un dispositivo (por ejemplo, si no figura en este).  
 
-    -   **Permitir la corrección fuera de la ventana de mantenimiento**: si se ha configurado una ventana de mantenimiento para la recopilación en la que se va a implementar el perfil de conexión remota, habilite esta opción para que Configuration Manager corrija el perfil de conexión remota fuera de la ventana de mantenimiento. Para obtener más información sobre las ventanas de mantenimiento, consulte [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows) (Cómo usar las ventanas de mantenimiento).  
+    -   **Permitir la corrección fuera de la ventana de mantenimiento**: si se ha configurado una ventana de mantenimiento para la recopilación en la que se va a implementar el perfil de conexión remota, habilite esta opción para que Configuration Manager corrija el perfil de conexión remota fuera de la ventana de mantenimiento. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](/sccm/core/clients/manage/collections/use-maintenance-windows).  
 
     -   **Generar una alerta** : habilite esta opción para configurar una alerta que se genera si la compatibilidad del perfil de conexión remota es inferior a un determinado porcentaje en una hora y fecha especificadas. También puede especificar si desea que se envíe una alerta a System Center Operations Manager.  
 
@@ -181,4 +175,4 @@ Implementar un perfil de conexión remota
 > [!IMPORTANT]  
 >  Debe usar un carácter comodín (%) para utilizar los parámetros **Filtro del dispositivo** y **Filtro de usuarios** en los informes de configuración de cumplimiento.  
 
- Para obtener más información sobre cómo configurar la generación de informes en Configuration Manager, consulte [Reporting in System Center Configuration Manager](/sccm/core/servers/manage/reporting) (Generación de informes en System Center Configuration Manager).  
+ Para obtener más información sobre cómo configurar los informes en Configuration Manager, vea [Generación de informes en System Center Configuration Manager](/sccm/core/servers/manage/reporting).  

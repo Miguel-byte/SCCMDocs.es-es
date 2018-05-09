@@ -1,29 +1,24 @@
 ---
 title: Transferencias de datos
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo Configuration Manager mueve datos entre sitios y cómo se puede administrar la transferencia de datos a través de la red."
-ms.custom: na
+description: Obtenga información sobre cómo Configuration Manager mueve datos entre sitios y cómo se puede administrar la transferencia de datos a través de la red.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
-caps.latest.revision: "12"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 185598e9f6b0678ca1fcbe9c19ed420f37805861
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 45fb1bc31a7e888ca4caa21a710e74ec0fde422c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-transfers-between-sites-in-system-center-configuration-manager"></a>Transferencias de datos entre sitios en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 System Center Configuration Manager usa la **replicación basada en archivos** y la **replicación de base de datos** para transferir distintos tipos de información entre sitios. Obtenga información sobre cómo Configuration Manager mueve datos entre sitios y cómo se puede administrar la transferencia de datos a través de la red.  
 

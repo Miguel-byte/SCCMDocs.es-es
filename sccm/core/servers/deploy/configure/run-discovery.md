@@ -1,30 +1,24 @@
 ---
-title: "Detección de recursos de usuario y dispositivo"
+title: Detección de recursos de usuario y dispositivo
 titleSuffix: Configuration Manager
-description: "Lea la información general sobre el proceso de detección y los registros de datos de detección."
-ms.custom: na
+description: Lea la información general sobre el proceso de detección y los registros de datos de detección.
 ms.date: 2/8/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 30844519-ce14-456f-bfb8-4318b578e9f6
-caps.latest.revision: "20"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: b380df38c4e08a04691a0bca9d46580fedf7b78a
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7d43415ce9517843490c815f7c9f2f3490e87674
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="run-discovery-for-system-center-configuration-manager"></a>Ejecutar la detección para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Use uno o varios métodos de detección en System Center Configuration Manager para buscar recursos de usuarios y dispositivos que pueda administrar. También puede usar la detección para identificar la infraestructura de red en su entorno. Existen varios métodos de detección que puede usar para detectar elementos y cada método tiene su propia configuración y limitaciones.  
 

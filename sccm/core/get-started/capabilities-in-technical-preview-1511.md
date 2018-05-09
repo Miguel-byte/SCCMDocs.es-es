@@ -1,32 +1,27 @@
 ---
 title: Funcionalidades de Technical Preview 1511
 titleSuffix: Configuration Manager
-description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1511."
-ms.custom: na
+description: Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1511.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 69473706-21b3-498b-a67e-670fdc988f0d
-caps.latest.revision: "5"
-author: erikje
-ms.author: erikje
-manager: angrobe
+author: aczechowski
 robots: noindex,nofollow
-ms.openlocfilehash: e12e67a3b0d182a8e3abd045c89e6b2bf3183054
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 8a805d6b7075d61b0e7669200670ac8434eccdf5
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1511 para System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Technical Preview)*
 
-En este artículo se presentan las características disponibles en Technical Preview para System Center Configuration Manager, versión 1511. Esta versión es una instalación de línea base de la Technical Preview que puede usar para instalar un nuevo sitio de Technical Preview o para actualizar desde una versión anterior de la Technical Preview.   Antes de instalar esta versión de Technical Preview, lea el tema de introducción [Technical Preview for System Center Configuration Manager (Technical Preview para System Center Configuration Manager)](/sccm/core/get-started/technical-preview) para familiarizarse con los requisitos y las limitaciones generales para usar una Technical Preview y para saber cómo actualizar entre versiones y cómo proporcionar comentarios sobre las características de una Technical Preview.  
+En este artículo se presentan las características disponibles en Technical Preview para System Center Configuration Manager, versión 1511. Esta versión es una instalación de línea base de la Technical Preview que puede usar para instalar un nuevo sitio de Technical Preview o para actualizar desde una versión anterior de la Technical Preview.   Antes de instalar esta versión de Technical Preview, lea el tema de introducción [Technical Preview for System Center Configuration Manager (Technical Preview para System Center Configuration Manager)](/sccm/core/get-started/technical-preview) para familiarizarse con los requisitos y las limitaciones generales de una Technical Preview y para saber cómo actualizar entre versiones y cómo proporcionar comentarios sobre las características de una Technical Preview.  
 
 Estas son las nuevas características que puede probar con esta versión.  
 

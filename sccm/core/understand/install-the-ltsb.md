@@ -1,25 +1,20 @@
 ---
-title: "Instalación de un sitio con el medio de línea base 1606 "
+title: 'Instalación de un sitio con el medio de línea base 1606 '
 titleSuffix: Configuration Manager
 description: Instale o actualice a la LTSB de System Center Configuration Manager.
-ms.custom: na
 ms.date: 09/06/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4f9a5fd-f573-4b99-ad93-b2c76812e922
-caps.latest.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 9fbb7dc1c64d82e03ba7ad3289e0939279ecf006
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: e0a4369e9c302c687f15b29b0daafbf4329e22a5
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>Instalar y actualizar con el medio de línea base de la versión 1606 para System Center Configuration Manager
 

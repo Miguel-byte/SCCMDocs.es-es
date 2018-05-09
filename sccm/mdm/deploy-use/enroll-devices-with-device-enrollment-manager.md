@@ -1,29 +1,24 @@
 ---
-title: "Inscripción de dispositivos con el Administrador de inscripción de dispositivos "
+title: 'Inscripción de dispositivos con el Administrador de inscripción de dispositivos '
 titleSuffix: Configuration Manager
-description: "Inscriba dispositivos de la empresa con la cuenta del administrador de inscripción de dispositivos con System Center Configuration Manager."
-ms.custom: na
+description: Inscriba dispositivos de la empresa con la cuenta del administrador de inscripción de dispositivos con System Center Configuration Manager.
 ms.date: 09/08/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
-caps.latest.revision: "8"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: edfda4c65ac42c228b80015653678af0dbad8da3
-ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 9a691bc98a26cdf56d22c03840997d9e0a380b7b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enroll-devices-with-device-enrollment-manager-with-configuration-manager"></a>Inscribir dispositivos con el administrador de inscripción de dispositivos con Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las organizaciones pueden usar Intune para administrar un gran número de dispositivos móviles con una sola cuenta de usuario. La cuenta del *administrador de inscripción de dispositivos* (DEM) es una cuenta de usuario especial utilizada para inscribir dispositivos. Agregue usuarios existentes a la cuenta de DEM para ofrecerles funcionalidades DEM especiales. Cada dispositivo inscrito usa una sola licencia. Se recomienda que use dispositivos inscritos a través de esta cuenta como dispositivos compartidos sin afinidad de usuario, en lugar de dispositivos dedicados personales.  
 

@@ -1,29 +1,24 @@
 ---
-title: "Términos y condiciones"
+title: Términos y condiciones
 titleSuffix: Configuration Manager
-description: "Implemente términos y condiciones en grupos de usuarios en System Center Configuration Manager."
-ms.custom: na
+description: Implemente términos y condiciones en grupos de usuarios en System Center Configuration Manager.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
-caps.latest.revision: "9"
-author: nathbarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: f616212b216ad4c94b60c7a805e2f45071947e81
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: cda5f01842f08ccc3e8dfbd17078fe157954d985
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-terms-and-conditions-with-system-center-configuration-manager"></a>Incorporación de términos y condiciones con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede implementar los términos y condiciones de System Center Configuration Manager en los grupos de usuarios para explicar en qué afecta la inscripción del dispositivo, el acceso a los recursos de trabajo y el uso del portal de empresa a los dispositivos y los usuarios. Los usuarios deben aceptar los términos y las condiciones para poder usar el portal de empresa a fin de inscribirse y obtener acceso a su trabajo.  
 

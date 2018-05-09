@@ -1,25 +1,20 @@
 ---
 title: Funcionalidades de Technical Preview 1605
 titleSuffix: Configuration Manager
-description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1605."
-ms.custom: na
+description: Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1605.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bafd028-1923-4463-9e3e-ee41bc0c437b
-caps.latest.revision: "36"
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 795b7658f5da8f863f208f01896ae2d7823ff2a6
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 05d87b253f2387dd8428f4b9fadea3fe5f3a48e8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1605 para System Center Configuration Manager
 
@@ -102,7 +97,7 @@ Acciones comunes como **Retirar/borrar**, **Restablecer contraseña**, **Bloqueo
 
 1.  En Azure Active Directory, registre Configuration Manager como una herramienta de administración "Aplicación web y/o API web". De este modo, obtendrá un identificador de cliente que necesitará más adelante.  
 
-    1.  En el nodo de Active Directory de [https://manage.windowsazure.com](https://manage.windowsazure.com), seleccione Azure Active Directory y luego haga clic en **Aplicaciones** > **Agregar**.  
+    1.  En el nodo de Active Directory de [https://manage.windowsazure.com](https://manage.windowsazure.com), seleccione Azure Active Directory y, luego, haga clic en **Aplicaciones** > **Agregar**.  
 
     2.  Haga clic en **Agregar una aplicación que mi organización está desarrollando**.  
 
@@ -120,7 +115,7 @@ Acciones comunes como **Retirar/borrar**, **Restablecer contraseña**, **Bloqueo
 
 3.  En la Tienda Windows para empresas, configure Configuration Manager como la herramienta de administración de la tienda.  
 
-    1.  Abra [https://businessstore.microsoft.com/es-es/managementtools](https://businessstore.microsoft.com/managementtools) e inicie sesión si se le solicita.  
+    1.  Abra [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/managementtools) e inicie sesión si se le solicita.  
 
     2.  Si es necesario, acepte los términos de uso.  
 

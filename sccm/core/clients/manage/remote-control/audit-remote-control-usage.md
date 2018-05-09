@@ -1,30 +1,24 @@
 ---
-title: "Auditoría del uso del control remoto"
+title: Auditoría del uso del control remoto
 titleSuffix: Configuration Manager
 description: Audite el uso del control remoto en System Center Configuration Manager.
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 5c975e69-0cc0-4afd-b7fb-b7182162a933
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 46d465464c1059c5ce81a89cdabe330cf06eb8e6
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b216df726ed46c54bcb4778f0f93b2d19f0f9321
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-audit-remote-control-usage-in-system-center-configuration-manager"></a>Cómo auditar el uso del control remoto en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede usar los informes de System Center Configuration Manager para ver información de auditoría del control remoto.  
 

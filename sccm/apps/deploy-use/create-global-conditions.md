@@ -1,30 +1,24 @@
 ---
-title: "Creación de condiciones globales"
+title: Creación de condiciones globales
 titleSuffix: Configuration Manager
-description: "Cree condiciones globales para especificar cómo se proporciona y se implementa una aplicación en los dispositivos cliente."
-ms.custom: na
+description: Cree condiciones globales para especificar cómo se proporciona y se implementa una aplicación en los dispositivos cliente.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d5f871a-19dc-4bd3-a3ad-4230c7a69f1b
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 480e7a68308d458bc77ddb4956db2616eaaced97
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: dac47f55a1ad0d287e789d555d2f0a93b40f9376
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-global-conditions-in-system-center-configuration-manager"></a>Cómo crear condiciones globales en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En System Center Configuration Manager, las condiciones globales son reglas que representan condiciones técnicas o de negocio que puede usar para especificar cómo se proporciona y se implementa una aplicación en dispositivos cliente. El acceso a las condiciones globales se realiza desde la página **Requisitos** del Asistente para crear tipos de implementación.  
 
@@ -102,7 +96,7 @@ En System Center Configuration Manager, las condiciones globales son reglas que 
 
         -   **Incluir subcarpetas** : habilite esta opción si desea buscar en las subcarpetas de la ruta especificada.  
 
-        -   **Este archivo o esta carpeta están asociados con una aplicación de 64 bits**: elija si se debe buscar en la ubicación del archivo de sistema de 64 bits (*%windir%*\system32), además de en la ubicación del archivo de sistema de 32 bits (*%windir%*\syswow64) en clientes de Configuration Manager que ejecutan una versión de 64 bits de Windows.  
+        -   **Este archivo o esta carpeta están asociados con una aplicación de 64 bits**: elija si se debe buscar en la ubicación del archivo de sistema de 64 bits (*%windir%* \system32), además de en la ubicación del archivo de sistema de 32 bits (*%windir%* \syswow64) en clientes de Configuration Manager que ejecutan una versión de 64 bits de Windows.  
 
             > [!NOTE]  
             >  Si el mismo archivo o carpeta existe en ubicaciones de archivo de sistema de 64 y 32 bits en el mismo equipo de 64 bits, la condición global detectará varios archivos.  
@@ -181,7 +175,7 @@ En System Center Configuration Manager, las condiciones globales son reglas que 
 
         -   **Incluir subcarpetas** : habilite esta opción si desea buscar en las subcarpetas de la ruta especificada.  
 
-        -   **Este archivo está asociado con una aplicación de 64 bits**: elija si se debe buscar en la ubicación del archivo de sistema de 64 bits (*%windir%*\system32), además de en la ubicación del archivo de sistema de 32 bits (*%windir%*\syswow64) en clientes de Configuration Manager que ejecutan una versión de 64 bits de Windows.  
+        -   **Este archivo está asociado con una aplicación de 64 bits**: elija si se debe buscar en la ubicación del archivo de sistema de 64 bits (*%windir%* \system32), además de en la ubicación del archivo de sistema de 32 bits (*%windir%* \syswow64) en clientes de Configuration Manager que ejecutan una versión de 64 bits de Windows.  
 
         -   **Consulta XPath** : especifique una consulta de lenguaje de rutas XML (XPath) válida y completa para evaluar el cumplimiento en los equipos cliente.  
 

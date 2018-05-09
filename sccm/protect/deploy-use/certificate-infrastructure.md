@@ -2,26 +2,19 @@
 title: Configuración de la infraestructura de certificados
 titleSuffix: Configuration Manager
 description: Aprenda a configurar la inscripción de certificados en System Center Configuration Manager.
-ms.custom: na
 ms.date: 07/25/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: lleonard-msft
-ms.author: alleonar
-manager: angrobe
-ms.openlocfilehash: 9ef62bbf6269a6090f2345b10c24cc4df16c1e3b
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c27f92374470c7d87d49661b20996a3f0c47f8a4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-certificate-infrastructure"></a>Configuración de la infraestructura de certificados
 

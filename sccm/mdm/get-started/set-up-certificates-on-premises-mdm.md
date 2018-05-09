@@ -1,30 +1,24 @@
 ---
 title: 'Configurar los certificados '
 titleSuffix: Configuration Manager
-description: "Configure certificados de comunicaciones de confianza para la administración local de dispositivos móviles en System Center Configuration Manager."
-ms.custom: na
+description: Configure certificados de comunicaciones de confianza para la administración local de dispositivos móviles en System Center Configuration Manager.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
-caps.latest.revision: "27"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 860f6e3f418a15ecfb79e9cbac5e6a09e17feb1a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c538c3b7668cc93069f0805b98f29586c3d7c86c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-certificates-for-trusted-communications-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Configuración de certificados para comunicaciones de confianza para la administración local de dispositivos móviles en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 La administración local de dispositivos móviles de System Center Configuration Manager requiere que los roles de sistema de sitio del punto de inscripción, el punto de proxy de inscripción, el punto de distribución y el punto de administración de dispositivos estén configurados para comunicaciones de confianza con los dispositivos administrados. Cualquier servidor de sistema de sitio que hospeda uno o varios de esos roles debe tener un certificado PKI exclusivo enlazado al servidor web en el sistema. También, un certificado con la misma raíz que el certificado de los servidores se debe almacenar en los dispositivos administrados con el fin de establecer comunicaciones de confianza con ellos.  
 
@@ -135,7 +129,7 @@ La administración local de dispositivos móviles de System Center Configuration
 ##  <a name="bkmk_bindCert"></a> Enlazar el certificado al servidor web  
  Ahora, el nuevo certificado debe enlazarse al servidor web de cada servidor de sistema de sitio que hospede los roles de sistema de sitio necesarios para la administración local de dispositivos móviles. Siga estos pasos con cada servidor que hospeda los roles de sistema de sitio de punto de inscripción y punto de proxy de inscripción. Si un servidor hospeda todos los roles de sistema de sitio, solo deberá seguir estos pasos una vez. No es necesario realizar esta tarea para los roles de sistema de sitio de punto de distribución y punto de administración de dispositivos, dado que reciben automáticamente el certificado necesario durante la inscripción.  
 
-1.  En el servidor que hospeda el punto de inscripción, el punto de proxy de inscripción, el punto de distribución o el punto de administración de dispositivos, haga clic en **Iniciar**  >  **Herramientas administrativas**  >  **Administrador de IIS**.  
+1.  En el servidor que hospeda el punto de inscripción, el punto de proxy de inscripción, el punto de distribución o el punto de administración de dispositivos, haga clic en **Iniciar**  > **Herramientas administrativas** >  **Administrador de IIS**.  
 
 2.  En Conexiones, vaya a **Sitio web predeterminado**, haga clic con el botón derecho y luego haga clic en **Modificar enlaces...**  
 

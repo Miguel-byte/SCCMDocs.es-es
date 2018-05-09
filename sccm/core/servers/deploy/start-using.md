@@ -1,28 +1,22 @@
 ---
 title: Comenzar a usar System Center Configuration Manager
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 32609a30-465c-4406-b227-aca5c276e015
-caps.latest.revision: "4"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 4b6f50fb8fc2b816e4dc94132d505e2486727a59
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: ac9178c5962b778aa4464d1d6ff8b901429ba77e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="start-using-system-center-configuration-manager"></a>Comenzar a usar System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Después de planear la topología del sitio y la jerarquía de System Center Configuration Manager, y cuando esté preparado para la instalación o actualización de los sitios, use la información de los temas siguientes:  
 

@@ -2,20 +2,18 @@
 title: Preparación de Intune para la migración de usuarios
 titleSuffix: Configuration Manager
 description: Aprenda a preparar Intune en Azure para migrar usuarios desde MDM híbrida.
-keywords: ''
-author: dougeby
+author: aczechowski
 manager: dougeby
 ms.date: 12/05/2017
-ms.topic: article
-ms.prod: configmgr-hybrid
-ms.service: ''
-ms.technology: ''
+ms.topic: conceptual
+ms.prod: configuration-manager
+ms.technology: configmgr-hybrid
 ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
-ms.openlocfilehash: 8d636f2c46f3fa14fbc76a605d2cf55a2c0375c6
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: a2636713f8c121eecd826eeba060f8e3f8e865f3
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-intune-for-user-migration"></a>Preparación de Intune para la migración de usuarios 
 

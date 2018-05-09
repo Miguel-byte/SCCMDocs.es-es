@@ -1,31 +1,24 @@
 ---
-title: "Creación de perfiles de certificado PFX mediante la importación de detalles de certificado"
+title: Creación de perfiles de certificado PFX mediante la importación de detalles de certificado
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo usar archivos PFX en System Center Configuration Manager para generar certificados específicos del usuario que admiten el intercambio de datos cifrados."
-ms.custom: na
+description: Obtenga información sobre cómo usar archivos PFX en System Center Configuration Manager para generar certificados específicos del usuario que admiten el intercambio de datos cifrados.
 ms.date: 04/04/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
-caps.latest.revision: 
-caps.handback.revision: 
-author: lleonard-msft
-ms.author: alleonar
-manager: angrobe
-ms.openlocfilehash: 25c6927698e409ff3b0c3f846e2cc567a6f458ab
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 81847846efe99bbc3ad5f0ff5a074b393c8b140a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-pfx-certificate-profiles-by-importing-certificate-details"></a>Creación de perfiles de certificado PFX mediante la importación de detalles de certificado.
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 A continuación, aprenderá a crear un perfil de certificado mediante la importación de credenciales de certificados externos.  

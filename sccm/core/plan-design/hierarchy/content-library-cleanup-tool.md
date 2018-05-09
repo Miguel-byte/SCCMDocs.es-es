@@ -1,25 +1,20 @@
 ---
 title: Herramienta de limpieza de la biblioteca de contenido
 titleSuffix: Configuration Manager
-description: "Utilice Content Library Cleanup Tool para quitar contenido huérfano que ya no está asociado con una implementación de System Center Configuration Manager."
-ms.custom: na
+description: Utilice Content Library Cleanup Tool para quitar contenido huérfano que ya no está asociado con una implementación de System Center Configuration Manager.
 ms.date: 4/7/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
-caps.latest.revision: "4"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 334b79e675ea7804128b0feb9678de4ad06dbc93
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 5d83b23673d8eea6e98f21ea30b6b802eb7e5595
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-content-library-cleanup-tool-for-system-center-configuration-manager"></a>Content Library Cleanup Tool para System Center Configuration Manager
 
@@ -29,7 +24,7 @@ ms.lasthandoff: 01/04/2018
 
 La herramienta solo afecta al contenido del punto de distribución que especifique al ejecutar la herramienta. La herramienta no puede quitar el contenido de la biblioteca de contenido en el servidor de sitio.
 
-Puede encontrar **ContentLibraryCleanup.exe** en la carpeta \*%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* del servidor de sitio de un sitio primario o de un sitio de administración central.
+Puede encontrar **ContentLibraryCleanup.exe** en la carpeta *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* del servidor de sitio de un sitio primario o de un sitio de administración central.
 
 ## <a name="requirements"></a>requisitos  
  La herramienta solo puede ejecutarse en un único punto de distribución a la vez.  

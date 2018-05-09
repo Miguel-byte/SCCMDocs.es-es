@@ -1,29 +1,24 @@
 ---
 title: Herramienta de registro de actualizaciones
 titleSuffix: Configuration Manager
-description: "Averigüe cuándo y cómo usar la herramienta de registro de actualizaciones para importar manualmente una actualización a la consola de Configuration Manager."
-ms.custom: na
+description: Averigüe cuándo y cómo usar la herramienta de registro de actualizaciones para importar manualmente una actualización a la consola de Configuration Manager.
 ms.date: 3/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8cc13635-85d6-4b07-a3ec-c42188bc5c74
-caps.latest.revision: "8"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 2e62d3d1df75bd7edd7ef12e7cefd7613cf794bd
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: d82ae79ae3466eff753e92c232b2cdd40fbcb2cb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-update-registration-tool-to-import-hotfixes-to-system-center-configuration-manager"></a>Uso de la herramienta de registro de actualizaciones para importar revisiones en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Algunas actualizaciones para Configuration Manager no están disponibles desde el servicio en la nube de Microsoft y solo se obtienen de un origen externo. Un ejemplo es la versión limitada de una revisión para resolver un problema específico.   
 Si instala una versión de un origen externo y el nombre de archivo de la actualización o la revisión termina con la extensión **update.exe**, use la **herramienta de registro de actualizaciones** para importar manualmente la actualización a la consola de Configuration Manager. La herramienta permite extraer y transferir el paquete de actualización al servidor del sitio y registrar la actualización en la consola de Configuration Manager.  

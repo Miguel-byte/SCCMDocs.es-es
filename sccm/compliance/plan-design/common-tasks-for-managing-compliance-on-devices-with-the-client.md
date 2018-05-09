@@ -1,29 +1,24 @@
 ---
-title: "Tareas comunes de administración de cumplimiento para dispositivos administrados por el cliente "
+title: 'Tareas comunes de administración de cumplimiento para dispositivos administrados por el cliente '
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre la configuración de cumplimiento de System Center Configuration Manager al repasar algunos escenarios comunes."
-ms.custom: na
+description: Obtenga información sobre la configuración de cumplimiento de System Center Configuration Manager al repasar algunos escenarios comunes.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
-caps.latest.revision: "8"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 0e70e565f7e1000aa452487cdd71ae165dd0c67b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: ed9be26417aceef3fb73f48c2a4a2f15f0ba1b52
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-tasks-for-managing-compliance-on-devices-with-the-system-center-configuration-manager-client"></a>Tareas comunes para administrar el cumplimiento en dispositivos que tienen el cliente de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Los escenarios de este tema ofrecen una introducción al uso de la configuración de cumplimiento de System Center Configuration Manager al repasar algunos escenarios habituales que podría encontrarse.  
 

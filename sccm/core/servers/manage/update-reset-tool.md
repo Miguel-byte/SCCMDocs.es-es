@@ -2,29 +2,23 @@
 title: Herramienta de restablecimiento de actualizaciones
 titleSuffix: Configuration Manager
 description: Utilice la herramienta de restablecimiento de actualizaciones para actualizaciones en la consola para System Center Configuration Manager.
-ms.custom: na
 ms.date: 7/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 25fa89d6-7e47-45a6-8f4e-70b77560fba6
-caps.latest.revision: "0"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: cf854b1ea571991c1f070d6b3896db7861fe020f
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: e6ae6ed46cc1db5f545182e4b4f6b46374b5c174
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="update-reset-tool"></a>Herramienta de restablecimiento de actualizaciones
 
-*Se aplica a: System Center Configuration Manager (rama actual)*  
+*Se aplica a: System Center Configuration Manager (Rama actual)*  
 
 
 A partir de la versión 1706, los sitios primarios de Configuration Manager y los sitios de administración central incluyen la Herramienta de restablecimiento de actualizaciones de Configuration Manager, **CMUpdateReset.exe**. Utilice la herramienta para solucionar problemas cuando las actualizaciones en la consola tengan problemas al descargar o replicar. La herramienta se encuentra en la carpeta ***\cd.latest\SMSSETUP\TOOLS*** del servidor de sitio.

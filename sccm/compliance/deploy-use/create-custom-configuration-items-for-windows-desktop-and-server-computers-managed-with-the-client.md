@@ -1,30 +1,24 @@
 ---
-title: "Creación de elementos de configuración para equipos Windows administrado por el cliente "
+title: 'Creación de elementos de configuración para equipos Windows administrado por el cliente '
 titleSuffix: Configuration Manager
-description: "Administre la configuración de equipos y servidores de Windows con un elemento de configuración de escritorios y servidores de Windows."
-ms.custom: na
+description: Administre la configuración de equipos y servidores de Windows con un elemento de configuración de escritorios y servidores de Windows.
 ms.date: 11/18/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 1eb2fcaf-acac-4388-9b31-6cccafacaabe
-caps.latest.revision: "9"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: ed3aa1ce9e21c7c486cc40deb804a8687a1cd4f2
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b2b2af6c022d854a6c6d623e3901abac70d42c7a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-system-center-configuration-manager-client"></a>Cómo crear elementos de configuración personalizados para equipos de escritorio y servidores de Windows administrados con el cliente de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 Use el elemento de configuración de **escritorios y servidores de Windows personalizados** de System Center Configuration Manager para administrar la configuración de equipos y servidores de Windows administrados por el cliente de Configuration Manager.  
@@ -235,7 +229,7 @@ Use el elemento de configuración de **escritorios y servidores de Windows perso
 
             -   **Incluir subcarpetas** : habilite esta opción si desea buscar en las subcarpetas de la ruta especificada.  
 
-            -   **Este archivo está asociado con una aplicación de 64 bits**: elija si se debe buscar en la ubicación de archivo de sistema de 64 bits (*%windir%*\System32), además de en la ubicación de archivo de sistema de 32 bits (*%windir%*\Syswow64) en clientes de Configuration Manager que ejecutan una versión de 64 bits de Windows.  
+            -   **Este archivo está asociado con una aplicación de 64 bits**: elija si se debe buscar en la ubicación de archivo de sistema de 64 bits (*%windir%* \System32), además de en la ubicación de archivo de sistema de 32 bits (*%windir%* \Syswow64) en clientes de Configuration Manager que ejecutan una versión de 64 bits de Windows.  
 
             -   **Consulta XPath** -especifique una completa XML path language (XPath) consulta válida que se usa para evaluar el cumplimiento en equipos cliente.  
 
@@ -260,7 +254,7 @@ Use el elemento de configuración de **escritorios y servidores de Windows perso
 ##  <a name="configure-compliance-rules"></a>Configurar reglas de cumplimiento  
  Use el procedimiento siguiente para configurar reglas de cumplimiento para el elemento de configuración.  
 
- Las reglas de cumplimiento especifican las condiciones que definen la conformidad de un elemento de configuración. Antes de que se pueden evaluar una configuración de compatibilidad, debe tener al menos una regla de cumplimiento. WMI, el registro y la configuración de la secuencia de comandos le permite corregir valores que se encuentran como no conforme. Puede crear nuevas reglas o busque una configuración existente en cualquier elemento de configuración para seleccionar las reglas en ella.  
+ En las reglas de cumplimiento, especifique las condiciones que definen el cumplimiento de un elemento de configuración. Para poder evaluar el cumplimiento de una configuración, debe tener al menos una regla de cumplimiento. WMI, el registro y la configuración de la secuencia de comandos le permite corregir valores que se encuentran como no conforme. Puede crear nuevas reglas o busque una configuración existente en cualquier elemento de configuración para seleccionar las reglas en ella.  
 
 ### <a name="to-create-a-compliance-rule"></a>Para crear una regla de cumplimiento  
 

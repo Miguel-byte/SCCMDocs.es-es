@@ -1,30 +1,24 @@
 ---
-title: "Notificación de los procedimientos recomendados"
+title: Notificación de los procedimientos recomendados
 titleSuffix: Configuration Manager
-description: "Lea algunas sugerencias de utilidad sobre el uso de la capacidad de generación de informes de System Center Configuration Manager."
-ms.custom: na
+description: Lea algunas sugerencias de utilidad sobre el uso de la capacidad de generación de informes de System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 64f9d931-33f1-456f-a4e4-0ec077465bd0
-caps.latest.revision: "4"
-caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: b66e4417658e8a5f25056ed37b5367d57ff72781
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 87ed3a0591107695a1f418b38f2e3f5cb9168c63
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="best-practices-for-reporting-in-system-center-configuration-manager"></a>Procedimientos recomendados para la generación de informes en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Use los procedimientos recomendados siguientes para la generación de informes en System Center Configuration Manager:  
 
@@ -38,4 +32,4 @@ Use los procedimientos recomendados siguientes para la generación de informes e
  Siempre que sea posible, programe el procesamiento de suscripción de informes para que se ejecute fuera del horario de oficina normal a fin de minimizar el procesamiento de la CPU en el servidor de base de datos de sitio de Configuration Manager. Esta práctica también mejora la disponibilidad de solicitudes de informes imprevistas.  
 
 ## <a name="next-steps"></a>Pasos siguientes
-[Configurar la generación de informes](configuring-reporting.md)
+[Configuración de informes](configuring-reporting.md)

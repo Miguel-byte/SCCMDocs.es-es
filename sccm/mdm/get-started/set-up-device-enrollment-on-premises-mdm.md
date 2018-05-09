@@ -1,29 +1,24 @@
 ---
-title: "Configurar la inscripción de dispositivos "
+title: 'Configurar la inscripción de dispositivos '
 titleSuffix: Configuration Manager
-description: "Conceda permiso a los usuarios para que inscriban sus dispositivos para la administración local de dispositivos móviles en System Center Configuration Manager."
-ms.custom: na
+description: Conceda permiso a los usuarios para que inscriban sus dispositivos para la administración local de dispositivos móviles en System Center Configuration Manager.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 9ffaea91-1379-4b86-9953-b25e152f56a9
-caps.latest.revision: "10"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 50aef3a2e523353d488a53eed0b346ddfef42478
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7d0424b662df4baba7374685dd7631347501352c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-device-enrollment-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Configure la inscripción del dispositivo para Administración de dispositivos móviles local en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Para que los usuarios puedan inscribir sus dispositivos en la administración local de dispositivos móviles de System Center Configuration Manager, tiene que concederles el permiso para llevarlo a cabo. Para conceder permiso a los usuarios para inscribir dispositivos, realice las siguientes tareas.
 

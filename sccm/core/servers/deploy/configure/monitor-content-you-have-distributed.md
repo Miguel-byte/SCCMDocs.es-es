@@ -2,28 +2,23 @@
 title: Supervisar contenido
 titleSuffix: Configuration Manager
 description: Aprenda a supervisar contenido distribuido mediante la consola de Configuration Manager.
-ms.custom: na
 ms.date: 12/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 82e8a693-9adf-4ca3-8484-7e101c34c7c1
-caps.latest.revision: "5"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 62d783735e64b6f3f11dae9af6ac5a7584d689ef
-ms.sourcegitcommit: 52b956cfe32c3f06ae68d6ba6fc3244ce5a66325
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 44ddf230d33759787636e88f6edcdd79744fd7b2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>Supervisión del contenido que se ha distribuido con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Utilice la consola de System Center Configuration Manager para supervisar el contenido distribuido, incluido lo siguiente:  
 

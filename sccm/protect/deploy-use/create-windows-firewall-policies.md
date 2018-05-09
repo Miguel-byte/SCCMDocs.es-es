@@ -1,29 +1,24 @@
 ---
 title: Directivas de Firewall de Windows para Endpoint Protection
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo crear e implementar directivas de firewall para Endpoint Protection en System Center 2012 Configuration Manager."
-ms.custom: na
+description: Obtenga información sobre cómo crear e implementar directivas de firewall para Endpoint Protection en System Center 2012 Configuration Manager.
 ms.date: 03/07/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 6ecdfad1-6305-45a8-ae75-3f33b967cb8f
-caps.latest.revision: "5"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: cce8eb704b88e551051e7a90b37f1ca3250c3da3
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: e3030b4390e38ca2dfce6805c04d5b0bb7916bba
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-deploy-windows-firewall-policies-for-endpoint-protection-in-system-center-configuration-manager"></a>Crear e implementar directivas de Firewall de Windows para Endpoint Protection en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las directivas de firewall de Endpoint Protection en System Center 2012 Configuration Manager permiten realizar tareas básicas de configuración y mantenimiento del Firewall de Windows en equipos cliente de la jerarquía. Puede usar las directivas de Firewall de Windows para realizar las siguientes tareas:  
 
@@ -31,7 +26,7 @@ Las directivas de firewall de Endpoint Protection en System Center 2012 Configur
 
 -   Controlar si se permiten las conexiones entrantes en los equipos cliente.  
 
--   Controlar si se avisa a los usuarios cuando el Firewall de Windows bloquea un nuevo programa.  
+-   Controlar si los usuarios reciben notificaciones cuando Firewall de Windows bloquea un programa nuevo.  
 
 1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
 

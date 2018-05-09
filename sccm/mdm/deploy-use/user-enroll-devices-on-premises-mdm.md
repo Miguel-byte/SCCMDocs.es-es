@@ -1,30 +1,24 @@
 ---
-title: "Cómo los usuarios inscriben dispositivos con la MDM local "
+title: 'Cómo los usuarios inscriben dispositivos con la MDM local '
 titleSuffix: Configuration Manager
-description: "Conozca cómo inscriben dispositivos los usuarios mediante la administración de dispositivos móviles local en System Center Configuration Manager."
-ms.custom: na
+description: Conozca cómo inscriben dispositivos los usuarios mediante la administración de dispositivos móviles local en System Center Configuration Manager.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 59004b34-b64f-4d77-898c-07bf3dc75430
-caps.latest.revision: "9"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: c63cf121c75d5920e51987236f33707afcc08c6b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 15774704665b2b52daf1061db221ab0eb158eceb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-users-enroll-devices-with-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Cómo inscriben dispositivos los usuarios mediante la administración de dispositivos móviles (MDM) local en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Con la administración local de dispositivos móviles en System Center Configuration Manager, los usuarios pueden inscribir dispositivos si se les ha concedido permiso de inscripción (por medio de la configuración actualizada de cliente) y si sus dispositivos tienen instalado el certificado raíz necesario para establecer comunicaciones de confianza con los servidores que hospedan los roles de sistema de sitio requeridos. Para obtener más información sobre cómo configurar la inscripción, consulte [Configure la inscripción del dispositivo para Administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md).  
 

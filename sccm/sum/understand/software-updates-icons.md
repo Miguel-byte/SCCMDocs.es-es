@@ -1,26 +1,24 @@
 ---
 title: Iconos que se usan para las actualizaciones de software
 titleSuffix: Configuration Manager
-description: "La consola de Configuration Manager contiene iconos que indican un estado del grupo de actualizaciones de software o actualización sincronizada."
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: La consola de Configuration Manager contiene iconos que indican un estado del grupo de actualizaciones de software o actualización sincronizada.
+author: aczechowski
+manager: dougeby
 ms.date: 10/06/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
-ms.openlocfilehash: 34a988fc530c4ebd57a818bbeee4f88a2c39959a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.author: aaroncz
+ms.openlocfilehash: d772b4ede4c8bfe13c68597ec8fe9a1f3dccbf38
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="icons-used-for-software-updates-in-system-center-configuration-manager"></a>Iconos que se usan para las actualizaciones de software en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las actualizaciones de software sincronizadas se muestran en la consola de Configuration Manager y la primera columna de cada actualización de software contiene un icono que indica un estado específico. Los grupos de actualizaciones de software también se representan con un icono que proporciona información sobre el estado de las actualizaciones de software que contiene el grupo. Esta sección proporciona información acerca de los iconos de actualización de software y de lo que representa cada icono.  
 

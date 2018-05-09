@@ -2,30 +2,23 @@
 title: Uso de Asset Intelligence
 titleSuffix: Configuration Manager
 description: Realice tareas comunes de Asset Intelligence en System Center Configuration Manager.
-ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: e8159bd9-5c2b-4d25-82f9-78fcfd732ba9
-caps.latest.revision: 
-caps.handback.revision: 
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 7838f087c18a2cfad6ff487ff987e638906faf6a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7d12fb7f3c7e14df57ec23074de23bfcf53e6c4b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-use-asset-intelligence-in-system-center-configuration-manager"></a>Cómo usar Asset Intelligence en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Este tema contiene información para ayudarle a administrar las tareas típicas de Asset Intelligence en la jerarquía de System Center Configuration Manager:  
 
@@ -267,7 +260,7 @@ Este tema contiene información para ayudarle a administrar las tareas típicas 
 6.  Cuando se revierte la información de categorización de software que se encuentre en el catálogo Asset Intelligence, el estado de validación cambia de **Definido por el usuario** a **Validado**. Cuando se revierte software que no está en el catálogo, el estado de validación cambia de **Definido por el usuario** a **Sin categoría**.  
 
 ##  <a name="BKMK_RequestCatalogUpdate"></a> Solicitar una actualización del catálogo para títulos de software sin categoría  
- La información de títulos de software sin categoría puede enviarse a System Center Online para su investigación y categorización. Después de enviar un título de software sin categoría y cuando haya al menos 4 solicitudes de categorización de clientes para el mismo título de software, los investigadores identifican, categorizan y ponen la información de categorización del título a disposición de todos los clientes que usen el servicio System Center Online. Microsoft da máxima prioridad a los títulos de software que tengan la mayoría de solicitudes de categorización. El software personalizado y las aplicaciones de línea de negocio no suelen recibir una categoría y, como práctica recomendada, no se deberían enviar estos títulos de software a Microsoft para su categorización.  
+ Información de títulos de software sin categorizar puede enviarse a System Center Online de investigación y la categorización. Después de enviar un título de software sin categoría y cuando haya al menos 4 solicitudes de categorización de clientes para el mismo título de software, los investigadores identifican, categorizan y ponen la información de categorización del título a disposición de todos los clientes que usen el servicio System Center Online. Microsoft da máxima prioridad a los títulos de software que tengan la mayoría de solicitudes de categorización. El software personalizado y las aplicaciones de línea de negocio no suelen recibir una categoría y, como práctica recomendada, no se deberían enviar estos títulos de software a Microsoft para su categorización.  
 
  Cuando se envía información de títulos de software a System Center Online para su categorización, se aplican las condiciones siguientes:  
 
@@ -310,7 +303,7 @@ Este tema contiene información para ayudarle a administrar las tareas típicas 
     >  El software que se envía a System Center Online para su categorización y tiene un estado de validación **Pendiente** en un sitio de administración central se sigue mostrando con un estado de validación **Sin categoría** en los sitios primarios secundarios.  
 
 ##  <a name="BKMK_ResolveSoftwareDetails"></a> Resolver conflictos de detalles de software  
- Después de recibir los detalles de categorización del software recientemente actualizado de System Center Online que están en conflicto con la información de detalles de software existente, puede elegir cómo resolver el conflicto. El software que tiene un conflicto actual tiene un estado de validación de **Actualizable**. Después de resolver un conflicto de detalles de software, se conserva la información de categorización de software en el catálogo Asset Intelligence según la configuración que especifique. Un conflicto de detalles de software no se producirá de nuevo con el mismo valor de categorización de software, a menos que el valor de System Center Online cambie después de que se haya resuelto el conflicto.  
+ Tras la categorización de software recién actualizado detalles se han recibido de System Center Online que entran en conflicto con la información de detalles de software existente, puede elegir cómo resolver el conflicto. El software que tiene un conflicto actual tiene un estado de validación de **Actualizable**. Después de resolver un conflicto de detalles de software, se conserva la información de categorización de software en el catálogo Asset Intelligence según la configuración que especifique. Un conflicto de detalles de software no se producirá de nuevo con el mismo valor de categorización de software, a menos que el valor de System Center Online cambie después de que se haya resuelto el conflicto.  
 
  Utilice el procedimiento siguiente para resolver un conflicto de detalles de software.  
 

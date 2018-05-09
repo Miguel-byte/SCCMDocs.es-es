@@ -1,30 +1,24 @@
 ---
 title: Instalador de revisiones
 titleSuffix: Configuration Manager
-description: "Averigüe cuándo y cómo instalar actualizaciones mediante el instalador de revisiones para Configuration Manager."
-ms.custom: na
+description: Averigüe cuándo y cómo instalar actualizaciones mediante el instalador de revisiones para Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 0ed8399c080994745f79f58818781e9d32be7e48
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 5c90889861db55a27da897e709b16b66edece08a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>Uso del instalador de revisiones para instalar actualizaciones para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Algunas actualizaciones para System Center Configuration Manager no están disponibles desde el servicio en la nube de Microsoft y solo se obtienen de un origen externo. Un ejemplo es la versión limitada de una revisión para resolver un problema específico.   
 Si necesita instalar una actualización (o revisión) procedente de Microsoft y el nombre de archivo de la actualización termina con una extensión **.exe** (en lugar de **update.exe**), debe usar el instalador de revisiones que se incluye en la descarga de la revisión para instalar la actualización directamente en el servidor de sitio de Configuration Manager.  
@@ -241,7 +235,7 @@ Por ejemplo, puede usar la siguiente línea de comandos para actualizar una cons
 >  El paquete para servidores contiene actualizaciones de los siguientes componentes:  
 >   
 >  -   Servidor de sitio  
->  -   proveedor de SMS  
+>  -   Proveedor de SMS  
 >  -   Base de datos del sitio  
 
  A continuación, en la página **Configurar método de implementación de actualización de software** del asistente, seleccione la opción **Usaré la distribución de software**. Esta selección hace que el asistente cree los paquetes de implementación de software.  

@@ -1,30 +1,22 @@
 ---
-title: "Preparación para la implementación"
+title: Preparación para la implementación
 titleSuffix: Configuration Manager
-description: "Busque temas que le ayudarán a planear una implementación de System Center Configuration Manager."
-ms.custom: na
+description: Busque temas que le ayudarán a planear una implementación de System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3e839a3e-e476-4ec2-bf29-21e78180441d
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: mstewart
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: cdcb91e97d5663aea55a8201546c66683e1d4d97
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.openlocfilehash: b315cfcbfd9ff6b40bdf9547611a38d75863cfb4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="get-ready-for-system-center-configuration-manager"></a>Prepararse para System Center Configuration Manager.
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Use la información de los temas siguientes cuando esté listo para comenzar a planear su implementación de System Center Configuration Manager:  
 

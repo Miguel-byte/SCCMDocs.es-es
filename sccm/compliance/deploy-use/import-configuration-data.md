@@ -1,30 +1,24 @@
 ---
-title: "Importar datos de configuración"
+title: Importar datos de configuración
 titleSuffix: Configuration Manager
-description: "Importe datos de configuración si se encuentran en formato de archivo contenedor y se ajustan al esquema de Lenguaje de modelado de servicios compatible."
-ms.custom: na
+description: Importe datos de configuración si se encuentran en formato de archivo contenedor y se ajustan al esquema de Lenguaje de modelado de servicios compatible.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: c7273ff47edb4a6d39d8c85b2d349ee7315edb17
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 2a779f80f42439fe6526c05d7027c22fb191e41e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-configuration-data-with-system-center-configuration-manager"></a>Importar datos de configuración con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Además de crear líneas de base de configuración y elementos de configuración en la consola de System Center Configuration Manager, puede importar datos de configuración si se encuentran en formato de archivo contenedor (.cab) y se ajustan al esquema de Lenguaje de modelado de servicios (SML) compatible. Puede importar datos de configuración desde:  
 

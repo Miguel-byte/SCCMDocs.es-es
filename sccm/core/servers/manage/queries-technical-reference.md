@@ -1,29 +1,24 @@
 ---
-title: "Referencia técnica de consultas"
+title: Referencia técnica de consultas
 titleSuffix: Configuration Manager
-description: "Consulte una lista de temas que le ayudarán a usar las consultas para recuperar información sobre los recursos del sitio."
-ms.custom: na
+description: Consulte una lista de temas que le ayudarán a usar las consultas para recuperar información sobre los recursos del sitio.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 727bca0d-6458-48dc-9a63-3b66d9799ddb
-caps.latest.revision: "4"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 745148bb84b5090b2c8d46100fc374cc6c341557
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 46f6bdefa2bd59ee1488c00dc1c2150608d0575d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="queries-technical-reference-for-system-center-configuration-manager"></a>Referencia técnica de consultas para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las consultas de System Center Configuration Manager devuelven información de la base de datos del sitio en función de los criterios que se especifiquen. Puede usar consultas para recuperar información sobre los recursos del sitio o sobre los mensajes de datos y estado de inventario.  
 

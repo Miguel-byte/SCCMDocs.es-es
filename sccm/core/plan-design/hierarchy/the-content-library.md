@@ -1,25 +1,20 @@
 ---
 title: La biblioteca de contenido
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre la biblioteca de contenido que usa System Center Configuration Manager para reducir el tamaño total del contenido distribuido."
-ms.custom: na
+description: Obtenga información sobre la biblioteca de contenido que usa System Center Configuration Manager para reducir el tamaño total del contenido distribuido.
 ms.date: 2/14/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
-caps.latest.revision: "4"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 9951a6562a86fbbf7f705989724d2d8c9c36cca0
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: df34c2c8ecb0f906657d1bbc2e49c87a5ff93e15
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-content-library-in-system-center-configuration-manager"></a>La biblioteca de contenido en System Center Configuration Manager
 

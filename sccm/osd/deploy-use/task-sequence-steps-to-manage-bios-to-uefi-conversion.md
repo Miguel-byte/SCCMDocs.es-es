@@ -1,24 +1,20 @@
 ---
-title: "Pasos de la secuencia de tareas para administrar la conversión de BIOS a UEFI"
+title: Pasos de la secuencia de tareas para administrar la conversión de BIOS a UEFI
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo personalizar una secuencia de tareas de implementación de sistema operativo para preparar una partición FAT32 para la transición a UEFI."
-ms.custom: na
+description: Obtenga información sobre cómo personalizar una secuencia de tareas de implementación de sistema operativo para preparar una partición FAT32 para la transición a UEFI.
 ms.date: 03/24/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: f2d53b7f525d4f827b78840a7f0d9482d203c08d
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 8c807f771d88701127c47d0290b6d8fc6bcb0f00
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Pasos de la secuencia de tareas para administrar la conversión de BIOS a UEFI
 Windows 10 proporciona muchas características de seguridad nuevas que requieren dispositivos compatibles con UEFI. Es posible que tenga equipos modernos de Windows que admiten UEFI, pero que usan un BIOS heredado. Para convertir un dispositivo a UEFI es necesario que vuelva a particionar el disco duro y vuelva a configurar el firmware de cada equipo. Mediante el uso de secuencias de tareas en Configuration Manager, puede preparar un disco duro para la conversión de BIOS en UEFI, convertir de BIOS a UEFI como parte del proceso de actualización local y recopilar información de UEFI como parte del inventario de hardware.

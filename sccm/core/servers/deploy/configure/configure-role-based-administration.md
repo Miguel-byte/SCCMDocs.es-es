@@ -1,29 +1,23 @@
 ---
-title: "Configurar la administración basada en roles"
+title: Configurar la administración basada en roles
 titleSuffix: Configuration Manager
-ms.custom: na
 ms.date: 2/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 57413dd3-b2f8-4a5f-b27f-8464d357caff
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: e893cc051839a631b4d38f8dacd132ffb1c521c6
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 44472640b6982e850b840a407e0c30059a3e189b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-role-based-administration-for-system-center-configuration-manager"></a>Configurar la administración basada en roles de System Center Configuration Manager   
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En System Center Configuration Manager, la administración basada en roles combina roles de seguridad, ámbitos de seguridad y colecciones asignadas para definir el ámbito administrativo de cada usuario administrativo. Un ámbito administrativo incluye los objetos que puede ver un usuario administrativo en la consola de Configuration Manager y las tareas relacionadas con esos objetos que el usuario administrativo tiene permiso para realizar. Las configuraciones de la administración basada en roles se aplican en cada sitio en una jerarquía.  
 

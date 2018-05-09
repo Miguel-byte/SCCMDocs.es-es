@@ -1,26 +1,24 @@
 ---
-title: "Sincronización de actualizaciones sin conexión a Internet "
+title: 'Sincronización de actualizaciones sin conexión a Internet '
 titleSuffix: Configuration Manager
-description: "Ejecute la sincronización de actualizaciones de software en el punto de actualización de software de nivel superior que está desconectado de Internet."
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: Ejecute la sincronización de actualizaciones de software en el punto de actualización de software de nivel superior que está desconectado de Internet.
+author: aczechowski
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
-ms.openlocfilehash: e10c3b1695e3ce652559242b0248e7dc818741b7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: da6204a78ce45c72d2b8d5586d02c8692405f295
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="synchronize-software-updates-from-a-disconnected-software-update-point"></a>Sincronizar actualizaciones de software desde un punto de actualización de software desconectado  
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
  Cuando un punto de actualización de software en el sitio de nivel superior se desconecta de Internet, debe usar las funciones de exportación e importación de la herramienta WSUSUtil para sincronizar los metadatos de las actualizaciones de software. Puede elegir un servidor WSUS existente que no se incluya en su jerarquía de Configuration Manager como origen de la sincronización. En este tema, se proporciona información sobre cómo usar las funciones de exportación e importación de la herramienta WSUSUtil.  
 

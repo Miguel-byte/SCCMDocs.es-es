@@ -1,43 +1,20 @@
 ---
-title: "Datos de diagnóstico de 1610"
+title: Datos de diagnóstico de 1610
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre los niveles de datos de diagnóstico y uso que se recopilan en la versión 1610 de System Center Configuration Manager."
-ms.custom: na
+description: Obtenga información sobre los niveles de datos de diagnóstico y uso que se recopilan en la versión 1610 de System Center Configuration Manager.
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eb20eb90-bcc0-41de-bfea-638ea470c0dd
-caps.latest.revision: "4"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- hu-hu
-- it-it
-- ja-jp
-- ko-kr
-- nl-nl
-- pl-pl
-- pt-br
-- pt-pt
-- ru-ru
-- sv-se
-- tr-tr
-- zh-cn
-- zh-tw
-ms.openlocfilehash: c9b51142ca4c6b96e13ee171ebb6314f13b1fcda
-ms.sourcegitcommit: da27d37cc4e4e06cf23758846cdd7acb617f744b
+manager: dougeby
+ms.openlocfilehash: 658d005234469d8729b515e9deeb02e20e94c748
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de uso para diagnóstico para la versión 1610 de System Center Configuration Manager
 

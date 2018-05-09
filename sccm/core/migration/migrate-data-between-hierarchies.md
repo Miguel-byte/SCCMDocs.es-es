@@ -1,26 +1,20 @@
 ---
-title: "Migración de datos"
+title: Migración de datos
 titleSuffix: Configuration Manager
-description: "Obtenga información acerca de cómo transferir datos desde una jerarquía de origen a una jerarquía de destino de System Center Configuration Manager."
-ms.custom: na
+description: Obtenga información acerca de cómo transferir datos desde una jerarquía de origen a una jerarquía de destino de System Center Configuration Manager.
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf014eb0-f8c2-4d37-b8d7-368d63a10b89
-caps.latest.revision: "11"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 8b2e55a2be2572a380ae994389a8a1c9c402aed7
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 17b0a13040ec589ee8987685d30d9a3d232afde8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrate-data-between-hierarchies-in-system-center-configuration-manager"></a>Migrar datos entre jerarquías en System Center Configuration Manager
 

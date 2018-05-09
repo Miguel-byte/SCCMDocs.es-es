@@ -1,26 +1,20 @@
 ---
-title: "Administración de recopilaciones"
+title: Administración de recopilaciones
 titleSuffix: Configuration Manager
-description: "Realice tareas de administración de recopilaciones en System Center Configuration Manager de colecciones comunes."
-ms.custom: na
+description: Realice tareas de administración de recopilaciones en System Center Configuration Manager de colecciones comunes.
 ms.date: 4/25/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 0655a1dc566657cb27cdc7537603871dc36cc568
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b00b62a90f496eb19a77dcc431ccf157b1227923
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-manage-collections-in-system-center-configuration-manager"></a>Cómo administrar recopilaciones en System Center Configuration Manager
 
@@ -77,11 +71,11 @@ Utilice la información de introducción de este tema como ayuda para realizar t
 |Nombre de la pestaña|Más información|  
 |--------------|----------------------|  
 |**General**|Permite ver y configurar información general sobre la recopilación seleccionada, incluidos el nombre de la recopilación y la recopilación de restricción.|  
-|**Reglas de pertenencia**|Permite configurar las reglas de pertenencia que definen la pertenencia de esta recopilación. Para obtener más información, vea [Cómo crear recopilaciones en System Center Configuration Manager](../../../../core/clients/manage/collections/create-collections.md).|  
-|**Administración de energía**|Permite configurar los planes de administración de energía que se asignan a los equipos de la recopilación seleccionada. Para obtener más información, consulte [Introduction to power management](../../../../core/clients/manage/power/introduction-to-power-management.md) (Introducción a la administración de energía).|  
+|**Reglas de pertenencia**|Permite configurar las reglas de pertenencia que definen la pertenencia de esta colección. Para obtener más información, vea [Cómo crear recopilaciones en System Center Configuration Manager](../../../../core/clients/manage/collections/create-collections.md).|  
+|**Administración de energía**|Permite configurar los planes de administración de energía que se asignan a los equipos de la colección seleccionada. Para obtener más información, consulte [Introduction to power management](../../../../core/clients/manage/power/introduction-to-power-management.md) (Introducción a la administración de energía).|  
 |**Implementaciones**|Muestra cualquier software que se haya implementado en los miembros de la recopilación seleccionada.|  
 |**Ventanas de mantenimiento**|Permite ver y configurar ventanas de mantenimiento que se aplican a los miembros de la recopilación seleccionada. Para obtener más información, consulte [How to use maintenance windows in System Center Configuration Manager](../../../../core/clients/manage/collections/use-maintenance-windows.md) (Uso de ventanas de mantenimiento en Configuration Manager).|  
-|**Variables de recopilación**|Permite configurar las variables que se aplican a esta recopilación y que las secuencias de tareas pueden utilizar. Para obtener más información, consulte [Variables integradas de secuencia de tareas](../../../../osd/understand/task-sequence-built-in-variables.md).|  
-|**Grupos de puntos de distribución**|Permite asociar uno o varios grupos de puntos de distribución a los miembros de la recopilación seleccionada. Para obtener más información, vea [Manage content and content infrastructure for System Center Configuration Manager](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md) (Administración del contenido y de la infraestructura de contenido en System Center Configuration Manager).|  
+|**Variables de recopilación**|Le permite que configurar variables que se aplican a esta colección y se pueden utilizar secuencias de tareas. Para obtener más información, consulte [Variables integradas de secuencia de tareas](../../../../osd/understand/task-sequence-built-in-variables.md).|  
+|**Grupos de puntos de distribución**|Le permite asociar uno o más grupos de puntos de distribución a los miembros de la colección seleccionada. Para obtener más información, vea [Manage content and content infrastructure for System Center Configuration Manager](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md) (Administración del contenido y de la infraestructura de contenido en System Center Configuration Manager).|  
 |**Seguridad**|Muestra los usuarios administrativos que tienen permisos para la recopilación seleccionada de ámbitos de seguridad y roles asociados.|  
 |**Monitor**|Permite configurar cuándo se generan alertas del estado de los clientes y Endpoint Protection. Para obtener más información, vea [How to configure client status in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-status.md) (Configuración del estado de cliente en System Center Configuration Manager) y [How to monitor Endpoint Protection in System Center Configuration Manager](../../../../protect/deploy-use/monitor-endpoint-protection.md) (Supervisión de Endpoint Protection en System Center Configuration Manager).|  

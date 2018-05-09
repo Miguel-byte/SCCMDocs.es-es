@@ -1,30 +1,24 @@
 ---
-title: "Habilitación de la inscripción de plataforma"
+title: Habilitación de la inscripción de plataforma
 titleSuffix: Configuration Manager
-description: "Habilite la inscripción en la plataforma mediante System Center Configuration Manager."
-ms.custom: na
+description: Habilite la inscripción en la plataforma mediante System Center Configuration Manager.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9163b77-a67d-4139-8272-bb1dfdb8707c
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 318e36fc751aad31d0d641d6989df06621d17acf
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 9a93d58f990738a93a489e0ee5920098ea04fce0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-platform-enrollment-with-system-center-configuration-manager-and-microsoft-intune"></a>Habilitación de la inscripción en la plataforma con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las diferentes plataformas de dispositivos requieren una configuración adicional para habilitar la inscripción de dispositivos.
   - [Configuración de inscripción de iOS y Mac](enroll-hybrid-ios-mac.md): obtenga un certificado de inserción de MDM de Apple

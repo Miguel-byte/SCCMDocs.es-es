@@ -1,27 +1,20 @@
 ---
-title: "Supervisión y planeamiento de la administración de energía"
+title: Supervisión y planeamiento de la administración de energía
 titleSuffix: Configuration Manager
-description: "Aprenda a supervisar y planear la administración de energía en System Center Configuration Manager."
-ms.custom: na
+description: Aprenda a supervisar y planear la administración de energía en System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 507bf676-2679-4e4d-8831-3ffc9cf8557e
-caps.latest.revision: 
-caps.handback.revision: 
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: ce89941550d02ef80bf9f7e9bab83850dda9e981
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 70e6f4ddfa335a08bdf7039274b388b5a468311e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-monitor-and-plan-for-power-management-in-system-center-configuration-manager"></a>Cómo supervisar y planear la administración de energía en System Center Configuration Manager
 
@@ -69,7 +62,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |**Fecha de inicio**|En la lista desplegable, seleccione la fecha de inicio para este informe.|  
 |**Fecha de finalización (opcional)**|En la lista desplegable, seleccione la fecha de finalización opcional para este informe.|  
 |**Nombre de recopilación**|En la lista desplegable, seleccione la recopilación que quiere usar para este informe.|  
-|**Tipo de dispositivo**|En la lista desplegable, seleccione el tipo de equipo para el que quiere un informe. Los valores válidos son **Todos** (equipos de escritorio y portátiles), **Escritorio** (solo equipos de escritorio) y **Portátil** (solo equipos portátiles).|  
+|**Tipo de dispositivo**|En la lista desplegable, seleccione el tipo de equipo que se desea un informe. Los valores válidos son **Todos** (equipos de escritorio y portátiles), **Escritorio** (solo equipos de escritorio) y **Portátil** (solo equipos portátiles).|  
 
 #### <a name="hidden-report-parameters"></a>Parámetros de informe ocultos  
  Este informe no tiene parámetros ocultos que se puedan establecer.  
@@ -128,11 +121,11 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |**Nombre de recopilación**|En la lista desplegable, seleccione la recopilación que quiere usar para este informe.|  
 |**Fecha de informe**|En la lista desplegable, seleccione una fecha para usarla en este informe.|  
 |**Hora de informe**|En la lista desplegable, seleccione una hora de la fecha especificada para la que quiere ejecutar este informe. Los valores válidos están comprendidos entre **12 a.m.** y **11 p.m**.|  
-|**Estado del equipo**|En la lista desplegable, seleccione el estado del equipo para el que quiere ejecutar este informe. Los valores válidos son **Todos** (los equipos que se han activado o desactivado), **Activado** (los equipos que se han activado) y **Desactivado** (los equipos que se han desactivado o que están en modo de suspensión o hibernación). Estos valores se devuelven solo para el período de informe seleccionado.|  
-|**Tipo de dispositivo**|En la lista desplegable, seleccione el tipo de equipo para el que quiere un informe. Los valores válidos son **Todos** (equipos de escritorio y portátiles), **Escritorio** (solo equipos de escritorio) y **Portátil** (solo equipos portátiles). Estos valores se devuelven solo para el período de informe seleccionado.|  
-|**Con capacidad de suspensión**|En la lista desplegable, seleccione si quiere mostrar los equipos con capacidad de suspensión en el informe. Los valores válidos son **Todos** (equipos con y sin capacidad de suspensión), **No** (equipos sin capacidad de suspensión) y **Sí** (equipos con capacidad de suspensión).|  
-|**Con capacidad de activación desde suspensión**|En la lista desplegable, seleccione si quiere mostrar los equipos con capacidad de activación desde suspensión en el informe. Los valores válidos son **Todos** (equipos con y sin capacidad de reactivación tras suspensión), **No** (equipos sin capacidad de reactivación tras suspensión) y **Sí** (equipos con capacidad de reactivación tras suspensión).|  
-|**Plan de energía**|En la lista desplegable, seleccione los tipos de plan de energía que quiere mostrar en el informe. Los valores válidos son **Todos** (equipos que no tienen ningún plan de administración de energía aplicado; equipos que tienen un plan de administración de energía aplicado; equipos excluidos de la administración de energía), **Sin especificar** (equipos que no tienen un plan de administración de energía aplicado) **Definido** (equipos que tienen un plan de administración de energía aplicado) y **Excluido** (equipos que se han excluido de la administración de energía).|  
+|**Estado del equipo**|En la lista desplegable, seleccione el estado del equipo para el que se va a ejecutar este informe. Los valores válidos son **Todos** (los equipos que se han activado o desactivado), **Activado** (los equipos que se han activado) y **Desactivado** (los equipos que se han desactivado o que están en modo de suspensión o hibernación). Estos valores se devuelven solo para el período de informe seleccionado.|  
+|**Tipo de dispositivo**|En la lista desplegable, seleccione el tipo de equipo que se desea un informe. Los valores válidos son **Todos** (equipos de escritorio y portátiles), **Escritorio** (solo equipos de escritorio) y **Portátil** (solo equipos portátiles). Estos valores se devuelven solo para el período de informe seleccionado.|  
+|**Con capacidad de suspensión**|En la lista desplegable, seleccione si desea mostrar los equipos capaces de suspensión en el informe. Los valores válidos son **Todos** (equipos con y sin capacidad de suspensión), **No** (equipos sin capacidad de suspensión) y **Sí** (equipos con capacidad de suspensión).|  
+|**Con capacidad de activación desde suspensión**|En la lista desplegable, seleccione si desea mostrar los equipos capaces de reactivación de una suspensión en el informe. Los valores válidos son **Todos** (equipos con y sin capacidad de reactivación tras suspensión), **No** (equipos sin capacidad de reactivación tras suspensión) y **Sí** (equipos con capacidad de reactivación tras suspensión).|  
+|**Plan de energía**|En la lista desplegable, seleccione los tipos de plan de energía que desea mostrar en el informe. Los valores válidos son **Todos** (equipos que no tienen ningún plan de administración de energía aplicado; equipos que tienen un plan de administración de energía aplicado; equipos excluidos de la administración de energía), **Sin especificar** (equipos que no tienen un plan de administración de energía aplicado) **Definido** (equipos que tienen un plan de administración de energía aplicado) y **Excluido** (equipos que se han excluido de la administración de energía).|  
 |**Sistema operativo**|En la lista desplegable, seleccione los sistemas operativos que quiere mostrar en el informe o seleccione **Todos** para mostrar todos los sistemas operativos.|  
 
 #### <a name="hidden-report-parameters"></a>Parámetros de informe ocultos  
@@ -178,7 +171,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |**Nombre de recopilación**|En la lista desplegable, seleccione la recopilación que quiere usar para este informe.|  
 |**Fecha de informe**|En la lista desplegable, seleccione una fecha para este informe.|  
 |**Hora de informe**|En la lista desplegable, seleccione una hora de la fecha especificada para la que quiere ejecutar este informe. Los valores válidos están comprendidos entre **12 a.m.** y **11 p.m**.|  
-|**Tipo de dispositivo**|En la lista desplegable, seleccione el tipo de equipo para el que quiere un informe. Los valores válidos son **Todos** (equipos de escritorio y portátiles), **Escritorio** (solo equipos de escritorio) y **Portátil** (solo equipos portátiles). Estos valores se devuelven solo para el período de informe seleccionado.|  
+|**Tipo de dispositivo**|En la lista desplegable, seleccione el tipo de equipo que se desea un informe. Los valores válidos son **Todos** (equipos de escritorio y portátiles), **Escritorio** (solo equipos de escritorio) y **Portátil** (solo equipos portátiles). Estos valores se devuelven solo para el período de informe seleccionado.|  
 
 #### <a name="hidden-report-parameters"></a>Parámetros de informe ocultos  
  Este informe no tiene parámetros ocultos que se puedan establecer.  
@@ -196,7 +189,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 
 |Nombre del parámetro|Descripción|  
 |--------------------|-----------------|  
-|**Colección**|En la lista desplegable, seleccione la recopilación para este informe.|  
+|**Colección**|En la lista desplegable, seleccione una colección para este informe.|  
 |**Motivo**|En la lista desplegable, seleccione el motivo por el que los equipos se excluyeron de la administración de energía. Puede mostrar  **Todos** (todos los equipos excluidos), **Excluido por el administrador** (solo equipos que se han excluido por un usuario administrativo) y **Excluido por el usuario** (solo los equipos que se han excluido por un usuario del Centro de software).|  
 
 #### <a name="hidden-report-parameters"></a>Parámetros de informe ocultos  
@@ -224,7 +217,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 
 |Nombre del parámetro|Descripción|  
 |--------------------|-----------------|  
-|**Nombre de recopilación**|En la lista desplegable, seleccione la recopilación para este informe.|  
+|**Nombre de recopilación**|En la lista desplegable, seleccione una colección para este informe.|  
 
 #### <a name="hidden-report-parameters"></a>Parámetros de informe ocultos  
  Este informe no tiene parámetros ocultos que se puedan establecer.  
@@ -259,8 +252,8 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |--------------------|-----------------|  
 |**Fecha de inicio**|En la lista desplegable, seleccione una fecha de inicio para este informe.|  
 |**Fecha de finalización**|En la lista desplegable, seleccione una fecha de finalización para este informe.|  
-|**Nombre de recopilación**|En la lista desplegable, seleccione la recopilación para este informe.|  
-|**Tipo de dispositivo**|En la lista desplegable, seleccione el tipo de equipo para el que quiere un informe. Los valores válidos son **Todos** (equipos de escritorio y portátiles), **Escritorio** (solo equipos de escritorio) y **Portátil** (solo equipos portátiles). Estos valores se devuelven solo para el período de informe seleccionado.|  
+|**Nombre de recopilación**|En la lista desplegable, seleccione una colección para este informe.|  
+|**Tipo de dispositivo**|En la lista desplegable, seleccione el tipo de equipo que se desea un informe. Los valores válidos son **Todos** (equipos de escritorio y portátiles), **Escritorio** (solo equipos de escritorio) y **Portátil** (solo equipos portátiles). Estos valores se devuelven solo para el período de informe seleccionado.|  
 
 #### <a name="hidden-report-parameters"></a>Parámetros de informe ocultos  
  Pueden especificarse de manera opcional los siguientes parámetros ocultos para cambiar el comportamiento de este informe.  
@@ -300,7 +293,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 
 |Nombre del parámetro|Descripción|  
 |--------------------|-----------------|  
-|**Colección**|En la lista desplegable, seleccione la recopilación para este informe.|  
+|**Colección**|En la lista desplegable, seleccione una colección para este informe.|  
 |**Device Type**|En la lista desplegable, seleccione el tipo de equipo del que quiere informar. Los valores válidos son **Todos** (equipos de escritorio y portátiles), **Escritorio** (solo equipos de escritorio) y **Portátil** (solo equipos portátiles). Estos valores se devuelven solo para el período de informe seleccionado.|  
 
 #### <a name="hidden-report-parameters"></a>Parámetros de informe ocultos  
@@ -422,8 +415,8 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |--------------------|-----------------|  
 |**Fecha de inicio de informe**|En la lista desplegable, seleccione una fecha de inicio para este informe.|  
 |**Fecha de finalización de informe**|En la lista desplegable, seleccione una fecha de finalización para este informe.|  
-|**Nombre de recopilación**|En la lista desplegable, seleccione la recopilación para este informe.|  
-|**Tipo de dispositivo**|En la lista desplegable, seleccione el tipo de equipo para el que quiere un informe. Los valores válidos son **Todos** (equipos de escritorio y portátiles), **Escritorio** (solo equipos de escritorio) y **Portátil** (solo equipos portátiles). Estos valores se devuelven solo para el período de informe seleccionado.|  
+|**Nombre de recopilación**|En la lista desplegable, seleccione una colección para este informe.|  
+|**Tipo de dispositivo**|En la lista desplegable, seleccione el tipo de equipo que se desea un informe. Los valores válidos son **Todos** (equipos de escritorio y portátiles), **Escritorio** (solo equipos de escritorio) y **Portátil** (solo equipos portátiles). Estos valores se devuelven solo para el período de informe seleccionado.|  
 
 #### <a name="hidden-report-parameters"></a>Parámetros de informe ocultos  
  Pueden especificarse de manera opcional los siguientes parámetros ocultos para cambiar el comportamiento de este informe.  
@@ -459,7 +452,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 
 |Nombre del parámetro|Descripción|  
 |--------------------|-----------------|  
-|**Nombre de recopilación**|En la lista desplegable, seleccione la recopilación para este informe.|  
+|**Nombre de recopilación**|En la lista desplegable, seleccione una colección para este informe.|  
 |**Tipo de dispositivo**|En la lista desplegable, seleccione el tipo de equipo sobre el que quiere informar. Los valores válidos son **Todos** (equipos de escritorio y portátiles), **Escritorio** (solo equipos de escritorio) y **Portátil** (solo equipos portátiles). Estos valores se devuelven solo para el período de informe seleccionado.|  
 
 #### <a name="hidden-report-parameters"></a>Parámetros de informe ocultos  
@@ -557,7 +550,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 
 |Nombre del parámetro|Descripción|  
 |--------------------|-----------------|  
-|**Colección**|En la lista desplegable, seleccione la recopilación para este informe.|  
+|**Colección**|En la lista desplegable, seleccione una colección para este informe.|  
 |**Mostrar filtro**|En la lista desplegable, seleccione **No se admite** para mostrar solo los equipos de la recopilación especificada que no tienen la capacidad de suspensión, hibernación, reactivación de una suspensión o reactivación de hibernación. Seleccione **Mostrar todo** para mostrar todos los equipos de la recopilación especificada.|  
 
 #### <a name="hidden-report-parameters"></a>Parámetros de informe ocultos  
@@ -583,7 +576,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 
 |Nombre del parámetro|Descripción|  
 |--------------------|-----------------|  
-|**Nombre de recopilación**|En la lista desplegable, seleccione la recopilación para este informe.|  
+|**Nombre de recopilación**|En la lista desplegable, seleccione una colección para este informe.|  
 
 #### <a name="hidden-report-parameters"></a>Parámetros de informe ocultos  
  Pueden especificarse de manera opcional los siguientes parámetros ocultos para cambiar el comportamiento de este informe.  
@@ -608,7 +601,7 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 |Nombre del parámetro|Descripción|  
 |--------------------|-----------------|  
 |**Colección**|En la lista desplegable, seleccione la recopilación que quiere usar para este informe.|  
-|**GUID de configuración de energía**|En la lista desplegable, seleccione el GUID de configuración de energía sobre el que quiere informar. Para obtener una lista de todas las configuraciones de energía y sus usos, vea [Available power management plan settings](../../../../core/clients/manage/power/create-and-apply-power-plans.md#BKMK_Plans) (Configuración de los planes de administración de energía disponibles) en el tema [How to create and apply power plans in System Center Configuration Manager](../../../../core/clients/manage/power/create-and-apply-power-plans.md) (Creación y aplicación de planes de energía en System Center Configuration Manager).|  
+|**GUID de configuración de energía**|En la lista desplegable, seleccione el GUID de configuración de energía en el que desee notificar. Para obtener una lista de todas las configuraciones de energía y sus usos, vea [Available power management plan settings](../../../../core/clients/manage/power/create-and-apply-power-plans.md#BKMK_Plans) (Configuración de los planes de administración de energía disponibles) en el tema [How to create and apply power plans in System Center Configuration Manager](../../../../core/clients/manage/power/create-and-apply-power-plans.md) (Creación y aplicación de planes de energía en System Center Configuration Manager).|  
 |**Power Mode**|En la lista desplegable, seleccione el tipo de configuración de energía que quiere mostrar en los resultados del informe. Seleccione **Con corriente alterna** para ver la configuración de energía para cuando el equipo está conectado y **Con batería** para ver la configuración de energía para cuando el equipo funciona con batería.|  
 |**Índice de configuración**|En la lista desplegable, seleccione el valor para el nombre de la configuración de energía seleccionada sobre el que quiere informar. Por ejemplo, si quiere mostrar todos los equipos con la opción **Apagar disco duro tras** definida en **10** minutos, seleccione **Apagar disco duro tras** para **Nombre de configuración de energía** y **10** para **Índice de configuración**.|  
 

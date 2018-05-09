@@ -1,29 +1,24 @@
 ---
-title: "Implementación de clientes UNIX o Linux"
+title: Implementación de clientes UNIX o Linux
 titleSuffix: Configuration Manager
 description: Aprenda a implementar un cliente en un servidor UNIX o Linux con System Center Configuration Manager.
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
-caps.latest.revision: "9"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 808997a423dbac6785c9da82f7b6bc8663168486
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7caffbbccfa53ef4e502685263cb0d81c6e83535
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-system-center-configuration-manager"></a>Implementar clientes en servidores UNIX y Linux con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Para poder administrar un servidor Linux o UNIX con System Center Configuration Manager, debe instalar el cliente de Configuration Manager para Linux y UNIX en cada servidor Linux o UNIX. Puede realizar la instalación del cliente manualmente en cada equipo o usar un script de shell que instale el cliente de forma remota. Configuration Manager no admite el uso de la instalación de inserción de cliente en servidores Linux o UNIX. Opcionalmente puede configurar un Runbook de System Center Orchestrator para automatizar la instalación del cliente en el servidor Linux o UNIX.  
 

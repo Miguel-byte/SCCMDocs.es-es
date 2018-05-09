@@ -1,30 +1,24 @@
 ---
-title: "Administración de aplicaciones para la administración local de dispositivos móviles"
+title: Administración de aplicaciones para la administración local de dispositivos móviles
 titleSuffix: Configuration Manager
-description: "Administre aplicaciones para administración de dispositivos móviles local."
-ms.custom: na
+description: Administre aplicaciones para administración de dispositivos móviles local.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f44b246-3467-4778-a5c2-047ce325da58
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 49665629fc5824b12b9fca10b34c4c1bfe49f236
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 78cefff25b2657a137ceae6971c80fc35f5163e0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-applications-for-on-premises-mobile-device-management"></a>Administración de aplicaciones para administración de dispositivos móviles local
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Al administrar dispositivos a través de la administración de dispositivos móviles (MDM) local en Configuration Manager, puede administrar determinados tipos de aplicación adicionales. La administración de aplicaciones en MDM local es igual que administrar aplicaciones en un entorno de MDM híbrida.
 

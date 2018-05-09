@@ -1,25 +1,20 @@
 ---
 title: Usar medios independientes para implementar Windows sin usar la red
 titleSuffix: Configuration Manager
-description: "Use medios independientes en Configuration Manager para implementar sistemas operativos cuando el ancho de banda sea limitado o como una opción a la actualización o la instalación de equipos."
-ms.custom: na
+description: Use medios independientes en Configuration Manager para implementar sistemas operativos cuando el ancho de banda sea limitado o como una opción a la actualización o la instalación de equipos.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 58a0d2ae-de76-401f-b854-7a5243949033
-caps.latest.revision: "16"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 02f7c1d549b38c6bddb31fef91de49b0aa1d7969
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 18e50806868955eac807645a5378aea53acdc899
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-stand-alone-media-to-deploy-windows-without-using-the-network-in-system-center-configuration-manager"></a>Usar medios independientes para implementar Windows sin usar la red en System Center Configuration Manager
 

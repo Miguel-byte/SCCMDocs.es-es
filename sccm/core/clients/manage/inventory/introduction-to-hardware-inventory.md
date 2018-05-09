@@ -1,30 +1,24 @@
 ---
 title: 'Inventario de hardware '
 titleSuffix: Configuration Manager
-description: "Obtenga una introducción al inventario de hardware en System Center Configuration Manager."
-ms.custom: na
+description: Obtenga una introducción al inventario de hardware en System Center Configuration Manager.
 ms.date: 02/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 3969952e-9d05-49c9-82a2-e7e90ccef511
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: d453a341cb238166af7d7d4694fde44ea1b0ad56
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 688bb6dc57f5d50e1807bff40a1d1a4c66f4b349
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-hardware-inventory-in-system-center-configuration-manager"></a>Introducción al inventario de hardware en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Use el inventario de hardware en System Center Configuration Manager para recopilar información sobre la configuración del hardware de dispositivos cliente en su organización. Para recopilar el inventario de hardware, la opción **Habilitar inventario de hardware en clientes** debe estar habilitada en la configuración de cliente.  
 

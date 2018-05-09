@@ -1,26 +1,20 @@
 ---
-title: "Administrar datos de configuración"
+title: Administrar datos de configuración
 titleSuffix: Configuration Manager
-description: "Después de crear los elementos de configuración y las líneas base en System Center Configuration Manager, puede utilizar otros comandos para realizar diversas acciones."
-ms.custom: na
+description: Después de crear los elementos de configuración y las líneas base en System Center Configuration Manager, puede utilizar otros comandos para realizar diversas acciones.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: b48c693c-d2b0-4707-a5dd-fe92172c49fe
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 23a6bcf2e9fcb417dabde7700e09c953d436deb7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: d4602a2dbee04259d5953873485cdbccdc58167d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-configuration-data-in-system-center-configuration-manager"></a>Administración de datos de configuración en System Center Configuration Manager
 
@@ -36,9 +30,9 @@ Una vez creados los elementos de configuración y las líneas base de configurac
 |---------------------|-------------|  
 |**Crear elemento de configuración secundario**|Abre el **Asistente para crear elemento de configuración secundario** , donde puede crear un elemento de configuración secundario a partir del elemento de configuración seleccionado.<br /><br /> No se puede crear un elemento de configuración secundario a partir de un elemento de configuración de dispositivo móvil.<br /><br /> Para obtener más información, consulte [Create child configuration items](../../compliance/deploy-use/create-child-configuration-items.md) (Creación de elementos de configuración secundarios).|  
 |**Historial de revisiones**|Abre el cuadro de diálogo **Historial de revisión del elemento de configuración** , donde puede ver y administrar las revisiones anteriores del elemento de configuración seleccionado.|  
-|**Ver definición de XML**|Muestra el archivo de definición XML del elemento de configuración seleccionado en una nueva ventana. Esta información puede ser útil cuando quiera crear manualmente datos de configuración.|  
+|**Ver definición de XML**|Muestra el archivo de definición XML del elemento de configuración seleccionado en una nueva ventana. Esta información puede ser útil cuando desee crear manualmente datos de configuración.|  
 |**Exportarar**|Exporta un elemento de configuración en un formato de archivo .cab, si se creó en ese sitio. Después, puede importarlo en el mismo sitio de Configuration Manager o en otro. Los datos de configuración se convierten en el resumen de DCM.|  
-|**Copiar**|Crea una copia del elemento de configuración seleccionado con un nombre que especifique. El nuevo elemento de configuración no conserva ninguna relación con el elemento de configuración original. Esto significa que el elemento de configuración duplicado no sigue heredando información de configuración del elemento de configuración original.|  
+|**Copiar**|Crea una copia del elemento de configuración seleccionado con un nombre que especifique. El nuevo elemento de configuración no conserva ninguna relación con el elemento de configuración original. Esto significa que el elemento de configuración duplicada no continúa heredar información de configuración del elemento de configuración original.|  
 |**Eliminar**|Abre el cuadro de diálogo **Eliminar elemento de configuración** , donde puede revisar las referencias a este elemento de configuración.<br /><br /> Debe quitar todas las referencias a un elemento de configuración antes de poder eliminar el elemento de configuración.|  
 
 ## <a name="manage-configuration-baselines"></a>Administración de líneas base de configuración  
@@ -51,10 +45,10 @@ Una vez creados los elementos de configuración y las líneas base de configurac
 |**Mostrar miembros**|Muestra todos los elementos de configuración a los que la línea base hace referencia.|  
 |**Programar resumen**|Configura la programación que determina la actualización de los datos que se muestran en el nodo **Líneas base de configuración** en la consola de Configuration Manager con la información más reciente de la base de datos del sitio.|  
 |**Ejecutar resumen**|El resumen hace que los datos del nodo **Líneas base de configuración** se actualicen con los datos más recientes de la base de datos del sitio. Esta acción puede tardar varios minutos en completarse. Es posible que tenga que hacer clic en **Actualizar** para poder ver los datos más recientes en la consola.|  
-|**Ver definición de XML**|Muestra el archivo de definición XML de la línea base de configuración seleccionada en una nueva ventana. Esta información puede ser útil cuando quiera crear manualmente datos de configuración.|  
-|**Habilitar**|Permite una línea base de configuración para la supervisión del cumplimiento.|  
-|**Deshabilitar**|Deshabilita una línea base de configuración para que ya no se evalúe su cumplimiento en los equipos cliente. Las líneas base de configuración que hacen referencia a esta línea base de configuración también se deshabilitarán.|  
+|**Ver definición de XML**|Muestra el archivo de definición XML de la línea base de configuración seleccionada en una nueva ventana. Esta información puede ser útil cuando desee crear manualmente datos de configuración.|  
+|**Habilitar**|Permite una referencia de configuración para la supervisión del cumplimiento de normas.|  
+|**Deshabilitar**|Deshabilita una línea base de configuración para que ya no se evalúe su cumplimiento en los equipos cliente. Líneas base de configuración que hacen referencia a esta línea de base de configuración también se deshabilitará.|  
 |**Exportarar**|Exporta una línea base de configuración en un formato de archivo .cab, si se creó en ese sitio. Después, puede importarlo en el mismo sitio de Configuration Manager o en otro. Los datos de configuración se convierten en el resumen de DCM.<br /><br /> Para obtener información sobre cómo importar datos de configuración, consulte [Importe datos de configuración](../../compliance/deploy-use/import-configuration-data.md).|  
-|**Copiar**|Crea una copia de la línea base de configuración seleccionada con un nombre que especifique. La nueva línea base de configuración no conserva ninguna relación con la línea base de configuración original.|  
+|**Copiar**|Crea una copia de la línea base de configuración seleccionada con un nombre que especifique. La nueva instantánea de configuración no conserva ninguna relación con la línea de base original.|  
 |**Eliminar**|Abre el cuadro de diálogo **Eliminar línea base de configuración** , donde puede revisar las referencias a esta línea base de configuración.<br /><br /> Debe quitar todas las referencias a una línea base de configuración antes de poder eliminar la línea base de configuración.|  
 |**Implementar**|Abre el cuadro de diálogo **Implementar línea de base de configuración** , en el que puede implementar una o varias líneas base de configuración en dispositivos de la jerarquía.<br /><br /> Para obtener más información, consulte [Deploy configuration baselines](../../compliance/deploy-use/deploy-configuration-baselines.md) (Implementación de líneas base de configuración).|  

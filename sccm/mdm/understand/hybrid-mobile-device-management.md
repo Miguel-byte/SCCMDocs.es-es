@@ -1,30 +1,24 @@
 ---
-title: "Administración de dispositivos móviles híbridos (MDM) con Microsoft Intune"
+title: Administración de dispositivos móviles híbridos (MDM) con Microsoft Intune
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre la administración híbrida de dispositivos móviles (MDM) con System Center Configuration Manager y Microsoft Intune."
-ms.custom: na
+description: Obtenga información sobre la administración híbrida de dispositivos móviles (MDM) con System Center Configuration Manager y Microsoft Intune.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
-caps.latest.revision: "34"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: da817ac299115c1151851d302c1935ad3f956bdf
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c8651b5a82c4e3cb4e39fac53cc5bc3357df6e47
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>Administración híbrida de dispositivos móviles (MDM) con System Center Configuration Manager y Microsoft Intune
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 Puede administrar dispositivos iOS, Windows y Android con Configuration Manager y Microsoft Intune. Todas las tareas de administración se controlan desde la consola de Configuration Manager donde realiza el resto de las tareas de administración que se integran perfectamente al servicio en línea de Microsoft Intune mediante Internet.  Puede usar Configuration Manager para permitir a los usuarios un acceso seguro y administrado a los recursos de la compañía en sus dispositivos. Mediante el uso de la administración de dispositivos, se protegen los datos de la compañía a la vez que se permite a los usuarios inscribir sus dispositivos corporativos o personales para tener acceso a los datos de la compañía. Funcionalidades de administración en dispositivos:

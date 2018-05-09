@@ -1,26 +1,20 @@
 ---
-title: "Migración de contenido"
+title: Migración de contenido
 titleSuffix: Configuration Manager
-description: "Use puntos de distribución para administrar contenido mientras migra datos a una jerarquía de destino de System Center Configuration Manager."
-ms.custom: na
+description: Use puntos de distribución para administrar contenido mientras migra datos a una jerarquía de destino de System Center Configuration Manager.
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 66f7759c-6272-4116-aad7-0d05db1d46cd
-caps.latest.revision: "8"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 7332ff4bf0ad10bd18e42485fb548eee70deaf04
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: d261b246c0718777be56425c7783d05f767575df
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-a-content-deployment-migration-strategy-in-system-center-configuration-manager"></a>Planear una estrategia de migración de implementación de contenido en System Center Configuration Manager
 

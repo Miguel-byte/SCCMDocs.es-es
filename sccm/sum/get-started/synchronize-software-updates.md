@@ -1,27 +1,24 @@
 ---
-title: "Administración de la sincronización de actualizaciones de software"
+title: Administración de la sincronización de actualizaciones de software
 titleSuffix: Configuration Manager
-description: "Siga estos pasos para programar la sincronización de actualizaciones de software, iniciar la sincronización de actualizaciones de software de forma manual y supervisar la sincronización de actualizaciones de software."
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: Siga estos pasos para programar la sincronización de actualizaciones de software, iniciar la sincronización de actualizaciones de software de forma manual y supervisar la sincronización de actualizaciones de software.
+author: aczechowski
 ms.date: 10/06/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
-ms.openlocfilehash: 3a17fb317553c783250b92212315a6ea895105c6
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 7e2e5493f1aaee448c6573d08a57a69aafb478c7
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="BKMK_SUMSync"></a> Sincronizar actualizaciones de software
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
  La sincronización de las actualizaciones de software en Configuration Manager es el proceso de recuperación de los metadatos de actualización de software que cumplen los criterios que configure. Esto incluye productos, clasificaciones e idiomas específicos. Normalmente, el punto de actualización de software en el sitio de administración central o en un sitio primario independiente recupera los metadatos de Microsoft Update. Después, el sitio de nivel superior enviará una solicitud de sincronización a otros sitios. Cuando un sitio recibe una solicitud de sincronización desde el sitio primario, el punto de actualización de software del sitio recupera metadatos de las actualizaciones de software desde su [origen de la sincronización](../plan-design/plan-for-software-updates.md#BKMK_SyncSource) del canal de subida. Para obtener más información sobre la sincronización de actualizaciones de software, consulte [Sincronización de las actualizaciones de software](../understand/software-updates-introduction.md#BKMK_Synchronization).
 

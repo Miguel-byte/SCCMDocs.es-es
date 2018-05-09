@@ -1,30 +1,24 @@
 ---
-title: "Procedimientos recomendados para la administración de energía"
+title: Procedimientos recomendados para la administración de energía
 titleSuffix: Configuration Manager
-description: "Conozca procedimientos recomendados para la administración de energía en System Center Configuration Manager."
-ms.custom: na
+description: Conozca procedimientos recomendados para la administración de energía en System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 9f7142e1-c972-4384-853b-2da1568cb3e3
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: f4fac4064102439857904d3227ba65878ac6c65f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 480f7a890e82b46e2b2d69180763f39504a47e0c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="best-practices-for-power-management-in-system-center-configuration-manager"></a>Procedimientos recomendados para la administración de energía en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Use los procedimientos recomendados siguientes para la administración de energía en System Center Configuration Manager.  
 

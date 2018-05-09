@@ -1,29 +1,24 @@
 ---
-title: "Actualización de la base de datos de prueba"
+title: Actualización de la base de datos de prueba
 titleSuffix: Configuration Manager
-description: "Pruebe la actualización de la base de datos de sitio al instalar actualizaciones para Configuration Manager."
-ms.custom: na
+description: Pruebe la actualización de la base de datos de sitio al instalar actualizaciones para Configuration Manager.
 ms.date: 06/13/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: abb696f3-a816-4f12-a9f1-0503a81e1976
-caps.latest.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 455116fc153e099af298657da9e8038f7202b39b
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 3bd64cd937bf0a90a00ea6b17664d80394dcafab
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="test-the-database-upgrade-when-installing-an-update"></a>Prueba de la actualización de la base de datos al instalar una actualización
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 La información de este tema le ayudará a ejecutar una actualización de la base de datos de prueba antes de instalar una actualización en la consola de la Rama actual de Configuration Manager. Sin embargo, la actualización de prueba ya no es un paso necesario o recomendado a menos que la base de datos sea sospechosa o se haya modificado mediante personalizaciones no admitidas explícitamente por Configuration Manager.
 

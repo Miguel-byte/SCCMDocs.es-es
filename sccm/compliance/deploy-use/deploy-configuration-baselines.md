@@ -1,30 +1,24 @@
 ---
-title: "Implementación de líneas base de configuración"
+title: Implementación de líneas base de configuración
 titleSuffix: Configuration Manager
-description: "Implemente líneas base de configuración para definir implementaciones de línea base de configuración y agregar o quitar líneas base de configuración de las implementaciones."
-ms.custom: na
+description: Implemente líneas base de configuración para definir implementaciones de línea base de configuración y agregar o quitar líneas base de configuración de las implementaciones.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 9be8aaf3-075e-4acd-abd2-7459254e16e2
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: e61314c5c10f4a4c9eda1f0a292cb5a9c72b32bb
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: c55382bf1fc377fd7e86f433a0cb92a5240eafa1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-deploy-configuration-baselines-in-system-center-configuration-manager"></a>Cómo implementar líneas base de configuración en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las líneas base de configuración de System Center Configuration Manager deben implementarse en una o varias recopilaciones de usuarios o dispositivos antes de que los dispositivos cliente de esas recopilaciones puedan evaluar su compatibilidad con la línea base de configuración.  
 
@@ -45,7 +39,7 @@ Utilice el cuadro de diálogo **Implementar líneas base de configuración** par
 
     -   **Corregir las reglas no compatibles cuando se admita**: corrige automáticamente las reglas que no sean compatibles con Instrumental de administración de Windows (WMI), el Registro, los scripts y toda la configuración de los dispositivos móviles que Configuration Manager haya inscrito.  
 
-    -   **Permitir la corrección fuera de la ventana de mantenimiento** : si se ha configurado una ventana de mantenimiento para la recopilación en la que se va a implementar la línea base de configuración, habilite esta opción para permitir que la configuración de cumplimiento corrija el valor fuera de la ventana de mantenimiento. Para obtener más información sobre las ventanas de mantenimiento, consulte [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows) (Cómo usar las ventanas de mantenimiento).  
+    -   **Permitir la corrección fuera de la ventana de mantenimiento** : si se ha configurado una ventana de mantenimiento para la recopilación en la que se va a implementar la línea base de configuración, habilite esta opción para permitir que la configuración de cumplimiento corrija el valor fuera de la ventana de mantenimiento. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](/sccm/core/clients/manage/collections/use-maintenance-windows).  
 
 6.  **Generar una alerta**: configura una alerta que se genera si la compatibilidad de la línea base de configuración es inferior a un determinado porcentaje en una hora y fecha especificadas. También puede especificar si desea que se envíe una alerta a System Center Operations Manager.  
 

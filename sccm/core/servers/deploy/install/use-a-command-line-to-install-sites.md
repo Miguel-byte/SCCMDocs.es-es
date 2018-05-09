@@ -1,29 +1,24 @@
 ---
-title: "Instalación de línea de comandos"
+title: Instalación de línea de comandos
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo ejecutar el programa de instalación de System Center Configuration Manager en un símbolo del sistema para diversas instalaciones de sitio."
-ms.custom: na
+description: Obtenga información sobre cómo ejecutar el programa de instalación de System Center Configuration Manager en un símbolo del sistema para diversas instalaciones de sitio.
 ms.date: 3/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
-caps.latest.revision: "3"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 430fb636a3e40323d222376c6af210a4a17e470f
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 3df559dc151950834aab4d909811cb42ec4822d0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>Usar una línea de comandos para instalar sitios de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
  Puede ejecutar el programa de instalación de System Center Configuration Manager en un símbolo del sistema para instalar diversos tipos de sitio.
 

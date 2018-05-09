@@ -1,29 +1,24 @@
 ---
-title: "Introducción a los informes"
+title: Introducción a los informes
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre el conjunto de herramientas y recursos disponibles para administrar los informes en Configuration Manager."
-ms.custom: na
+description: Obtenga información sobre el conjunto de herramientas y recursos disponibles para administrar los informes en Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
-caps.latest.revision: "7"
-author: Dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: eab08e56ac133f412dd70386002eabb29ecb7115
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 579e9494a4f44f41a411af88bf58df7dcc5e8075
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-reporting-in-system-center-configuration-manager"></a>Introducción a los informes en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Los informes de System Center Configuration Manager proporcionan un conjunto de herramientas y recursos para usar las avanzadas funcionalidades de informes de SQL Server Reporting Services (SSRS) y la amplia experiencia de creación que ofrece el Generador de informes de Reporting Services. Los informes le permiten reunir, organizar y presentar información sobre los usuarios, inventario de hardware y software, actualizaciones de software, aplicaciones, estado del sitio y otras operaciones de Configuration Manager de la organización. La herramienta de informes le proporciona numerosos informes predefinidos que puede usar sin realizar cambios o bien modificándolos para satisfacer sus necesidades; también puede crear informes personalizados. Use las secciones siguientes para ayudarle a administrar los informes de Configuration Manager.  
 

@@ -2,25 +2,19 @@
 title: Preparar el almacenamiento en caché del mismo nivel de Windows PE para reducir el tráfico WAN
 titleSuffix: Configuration Manager
 description: Almacenamiento en caché del mismo nivel de Windows PE funciona en Windows PE para obtener contenido de un elemento local de mismo nivel y minimizar el tráfico WAN cuando no hay ningún punto de distribución local.
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
-caps.latest.revision: 11
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 24e6aaa404054f5b9ac477cc0dbdd6fa9cce1860
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 90eaaec52076e4ac4fbaddf6cc07cf20359b5a68
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>Preparar el almacenamiento en caché del mismo nivel de Windows PE para reducir el tráfico WAN en System Center Configuration Manager
 
@@ -75,7 +69,7 @@ Use las siguientes secciones para administrar Almacenamiento en caché del mismo
         > [!TIP]  
         >  Los clientes usarán HTTPS para descargar contenido cuando esté disponible. Sin embargo, se usará el mismo número de puerto para HTTP o HTTPS.  
 
--   [Configurar la caché del cliente para clientes de Configuration Manager](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) en los clientes para asegurarse de que tienen espacio suficiente para contener y almacenar las imágenes que implemente. Almacenamiento en caché del mismo nivel en Windows PE no afecta a la configuración o el comportamiento de la caché del cliente.  
+-   [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) en los clientes para asegurarse de que tienen espacio suficiente para contener y almacenar las imágenes que implemente. Almacenamiento en caché del mismo nivel en Windows PE no afecta a la configuración o el comportamiento de la caché del cliente.  
 
 -   Las opciones de implementación para la implementación de la secuencia de tareas deben configurarse como Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas.  
 

@@ -1,29 +1,24 @@
 ---
-title: "Afinidad de usuario para dispositivos administrados híbridos"
+title: Afinidad de usuario para dispositivos administrados híbridos
 titleSuffix: Configuration Manager
 description: Configure la afinidad de usuario para dispositivos administrados en Configuration Manager.
-ms.custom: na
 ms.date: 03/05/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b5d520a7-e9e5-40ee-91f9-f2684214beb6
-caps.latest.revision: "6"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: ea496402fa72c3145038701d65af5a72dd9fd3c4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 11b448d27dbf639eaccf0f41ed97b7961a01adb6
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-affinity-for-hybrid-managed-devices-in-configuration-manager"></a>Afinidad de usuario para dispositivos administrados híbridos en Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Al configurar perfiles para dispositivos propiedad de la empresa, el administrador puede especificar si los dispositivos administrados pueden tener *afinidad de usuario*, de modo que se identifique a un usuario específico con el dispositivo.  
 

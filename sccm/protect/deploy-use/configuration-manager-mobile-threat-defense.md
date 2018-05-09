@@ -1,29 +1,24 @@
 ---
 title: Mobile Threat Defense
 titleSuffix: Configuration Manager
-description: "Restricción del acceso a recursos de la compañía según el riesgo de las aplicaciones, la red y los dispositivos mediante Configuration Manager y asociados de Mobile Threat Defense para Intune"
-ms.custom: na
+description: Restricción del acceso a recursos de la compañía según el riesgo de las aplicaciones, la red y los dispositivos mediante Configuration Manager y asociados de Mobile Threat Defense para Intune
 ms.date: 03/02/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 4c0e6824-2dfe-4700-b817-d5631e0eb872
-caps.latest.revision: 
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 83911f35dbe8fc7bc24a4885929fbdf5660e7285
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 6aeed0c7e509ee96b226f5d1c7649bcf84af3af8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="intune-mobile-threat-defense-connectors-in-configuration-manager"></a>Conectores de Mobile Threat Defense para Intune en Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 La [implementación de MDM híbrida (SCCM con Intune)](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management) y la integración entre Intune y los asociados de Mobile Threat Defense le proporcionan la capacidad de controlar el acceso a los recursos de la empresa y a los datos basándose en la evaluación de riesgo de los dispositivos.
 

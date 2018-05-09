@@ -2,30 +2,23 @@
 title: Planeamiento de MDM local
 titleSuffix: Configuration Manager
 description: Planee la administración de dispositivos móviles local para administrar dispositivos en System Center Configuration Manager.
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
-caps.latest.revision: 9
-caps.handback.revision: 0
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: e1c6a5ccd003295d007e78f0745c30732e10c2df
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 10cddac80b9a7ea4bd912e2f52585cdcef7e70da
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Planear la administración de dispositivos móviles (MDM) local con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura de Configuration Manager para tratar la administración de dispositivos móviles local.
 
@@ -33,7 +26,7 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
  La administración de dispositivos móviles local le permite administrar dispositivos móviles mediante las funciones de administración integradas en los sistemas operativos de los dispositivos.  La función de administración se basa en el estándar de administración de dispositivos (DM) Open Mobile Alliance (OMA) y muchas plataformas de dispositivo usan este estándar para permitir que se administren los dispositivos.  Los denominamos **dispositivos modernos** (en la documentación y en la interfaz de usuario de la consola de Configuration Manager) para distinguirlos de otros dispositivos que requieren el cliente de Configuration Manager para administrarlos.  
 
  > [!NOTE]  
->  La rama actual de Configuration Manager admite la inscripción en la administración de dispositivos móviles local para dispositivos con los sistemas operativos siguientes:  
+>  La rama actual de Configuration Manager admite la inscripción en la administración local de dispositivos móviles para dispositivos con los sistemas operativos siguientes:  
 >   
 > -  Windows 10 Enterprise  
 > -   Windows 10 Pro  
@@ -105,7 +98,7 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
 
 -   Paquete de aprovisionamiento de configuración rápida (OOBE)  
 
- Para obtener más información, consulte [Configurar certificados de comunicaciones de confianza para la administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md).  
+ Para obtener más información, consulte [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager (Configurar certificados de comunicaciones de confianza para la administración de dispositivos móviles local en System Center Configuration Manager)](../../mdm/get-started/set-up-certificates-on-premises-mdm.md).  
 
 ##  <a name="bkmk_enrollment"></a> Consideraciones de inscripción  
  Para habilitar la inscripción de dispositivos para la administración de dispositivos móviles local, se debe conceder a los usuarios permiso de inscripción y, además, sus dispositivos deben ser capaces de establecer comunicaciones de confianza con los servidores de sistema de sitio que hospedan los roles de sistema de sitio necesarios.  

@@ -1,30 +1,24 @@
 ---
-title: "Inscripción masiva de dispositivos en MDM local"
+title: Inscripción masiva de dispositivos en MDM local
 titleSuffix: Configuration Manager
-description: "Inscriba dispositivos en masa de forma automática con la administración local de dispositivos móviles en System Center Configuration Manager."
-ms.custom: na
+description: Inscriba dispositivos en masa de forma automática con la administración local de dispositivos móviles en System Center Configuration Manager.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
-caps.latest.revision: "13"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 3d2f61a60b4f78e5e1edb883b6a6834237a36acf
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 437f6e6068fb56f1a906cbb8bea24cd3c707f0e3
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-bulk-enroll-devices-with-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Cómo inscribir dispositivos en masa con la administración local de dispositivos móviles en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 La inscripción en masa de la administración local de dispositivos móviles de System Center Configuration Manager es una forma más automatizada de inscribir dispositivos si se compara con la inscripción de usuario, que exige que los usuarios escriban sus credenciales para inscribir el dispositivo.  La inscripción masiva usa un paquete de inscripción para autenticar el dispositivo durante la inscripción. El paquete (un archivo .ppkg) contiene un perfil de certificado y, opcionalmente, un perfil de Wi-Fi si el dispositivo necesita conectividad de la intranet para admitir la inscripción.  

@@ -1,30 +1,24 @@
 ---
-title: "Configuración del inventario de hardware"
+title: Configuración del inventario de hardware
 titleSuffix: Configuration Manager
-description: "Configure el inventario de hardware de todos los clientes o de una colección en System Center Configuration Manager."
-ms.custom: na
+description: Configure el inventario de hardware de todos los clientes o de una colección en System Center Configuration Manager.
 ms.date: 02/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 0e45290e-f8f7-4335-801e-570225d12c2b
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 91f17e4ab9f828576ac1b11076a008289ff588a0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 7b282fdb2f7cf3a200950484e4da5b9505c5b71c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-hardware-inventory-in-system-center-configuration-manager"></a>Cómo configurar el inventario de hardware en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Este procedimiento configura las opciones de cliente predeterminadas del inventario de hardware y se aplicará a todos los clientes de la jerarquía. Si quiere que esta configuración solo se aplique a algunos clientes, cree una configuración de cliente de dispositivo personalizada y asígnela a una recopilación que contenga los dispositivos que quiera usar para el inventario de hardware. Vea [Cómo configurar el cliente en System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md).  
 
@@ -47,4 +41,4 @@ Este procedimiento configura las opciones de cliente predeterminadas del inventa
 
 7.  Configure otras opciones de [configuración del cliente de inventario de hardware](../../../../core/clients/deploy/about-client-settings.md#hardware-inventory) que necesite.  
 
-Los dispositivos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [How to manage clients in System Center Configuration Manager (Cómo administrar clientes en System Center Configuration Manager)](../../../../core/clients/manage/manage-clients.md).  
+Los dispositivos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Cómo administrar clientes en System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  

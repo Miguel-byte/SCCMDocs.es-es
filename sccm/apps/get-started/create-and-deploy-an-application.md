@@ -1,30 +1,24 @@
 ---
-title: "Crear e implementar una aplicación"
+title: Crear e implementar una aplicación
 titleSuffix: Configuration Manager
-description: "Cree e implemente una aplicación que contenga una aplicación de línea de negocio y aprenda a administrar aplicaciones de forma eficaz."
-ms.custom: na
+description: Cree e implemente una aplicación que contenga una aplicación de línea de negocio y aprenda a administrar aplicaciones de forma eficaz.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3bd1e487-ea18-43c1-b7c3-acbd9b86d429
-caps.latest.revision: "15"
-caps.handback.revision: "0"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: a9f8a54400897e30d01d97f81b98e0e539fc86a7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 3d34ec4abb712ce6797033a5ff490280611e1b02
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-deploy-an-application-with-system-center-configuration-manager"></a>Crear e implementar una aplicación con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En este tema, se pondrá de inmediato a crear una aplicación con System Center Configuration Manager. En este ejemplo, creará e implementará una aplicación que contiene una línea de aplicación empresarial para equipos de Windows denominada **Contoso.msi** que debe instalarse en todos los equipos de su empresa que ejecutan Windows 10. Al hacerlo, aprenderá muchas cosas que puede hacer para administrar aplicaciones de forma eficaz.  
 

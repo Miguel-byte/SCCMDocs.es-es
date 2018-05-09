@@ -1,25 +1,20 @@
 ---
-title: "Seguridad y privacidad de la administración de contenido"
+title: Seguridad y privacidad de la administración de contenido
 titleSuffix: Configuration Manager
-description: "Optimice la seguridad y la privacidad de la administración de contenido de System Center Configuration Manager."
-ms.custom: na
+description: Optimice la seguridad y la privacidad de la administración de contenido de System Center Configuration Manager.
 ms.date: 3/1/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f38b726-dc00-433a-ba05-5b7dbb0d8e99
-caps.latest.revision: "8"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 67d91f9a6b82e1f00aa8f7ab9314dfc0df686d96
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: d82af132cc6ba60a459d9872cf76f69adc00daa6
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-content-management-for-system-center-configuration-manager"></a>Seguridad y privacidad de la administración de contenido de System Center Configuration Manager
 

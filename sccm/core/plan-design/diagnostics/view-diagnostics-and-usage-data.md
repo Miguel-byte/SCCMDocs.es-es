@@ -1,29 +1,24 @@
 ---
-title: "Visualización de datos de diagnóstico"
+title: Visualización de datos de diagnóstico
 titleSuffix: Configuration Manager
-description: "Vea datos de diagnóstico y de uso para confirmar que la jerarquía de System Center Configuration Manager no contiene información confidencial."
-ms.custom: na
+description: Vea datos de diagnóstico y de uso para confirmar que la jerarquía de System Center Configuration Manager no contiene información confidencial.
 ms.date: 3/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 594eb284-0d93-4c5d-9ae6-f0f71203682a
-caps.latest.revision: "8"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: eb05bee0e0fceb68611c660870bb1778a07ef0a9
-ms.sourcegitcommit: da27d37cc4e4e06cf23758846cdd7acb617f744b
+manager: dougeby
+ms.openlocfilehash: 15e6f84be22d90e937c33ebd3a24520e6832a751
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-view-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>Visualización de datos de diagnóstico y uso para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede ver datos de diagnóstico y de uso de la jerarquía de System Center Configuration Manager para confirmar que no se incluye información confidencial o de identificación. Los datos de telemetría se resumen y se almacenan en la tabla **TEL_TelemetryResults** de la base de datos del sitio y se les aplica formato para que sean eficientes y útiles en programación. Aunque las opciones siguientes proporcionan una visión de los datos exactos que se envían a Microsoft, no se pretenden usar para otros propósitos, como el análisis de datos.  
 

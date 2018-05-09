@@ -1,30 +1,24 @@
 ---
-title: "Creación de elementos de configuración secundarios"
+title: Creación de elementos de configuración secundarios
 titleSuffix: Configuration Manager
-description: "Cree elementos de configuración secundarios en System Center Configuration Manager."
-ms.custom: na
+description: Cree elementos de configuración secundarios en System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 113984fa-6150-41a1-89ed-d2a83b979732
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: c1a59bbedbe157c491800064ba54079c4a980b04
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 358f2d67a5a4689927632bb1492ace1a33490451
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-child-configuration-items-in-system-center-configuration-manager"></a>Cómo crear elementos de configuración secundarios en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Los elementos de configuración secundarios de System Center Configuration Manager son copias de los elementos de configuración que mantienen una relación con el elemento de configuración original; por tanto, heredan la configuración original del elemento de configuración primario.  
 

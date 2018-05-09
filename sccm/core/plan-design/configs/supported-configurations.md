@@ -1,30 +1,24 @@
 ---
 title: Configuraciones admitidas
 titleSuffix: Configuration Manager
-description: "Identifique requisitos y configuraciones fundamentales para que pueda planear, implementar y mantener una implementación funcional de System Center Configuration Manager."
-ms.custom: na
+description: Identifique requisitos y configuraciones fundamentales para que pueda planear, implementar y mantener una implementación funcional de System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
-caps.latest.revision: "9"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 097a4e5b6a44aec52027f075ad002a2393ae3fb3
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: de769a24b44c5ab5e28035e96fef341aecd78006
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-configurations-for-system-center-configuration-manager"></a>Configuraciones admitidas para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Como una solución local, System Center Configuration Manager usa los servidores, clientes, configuraciones de red y otros productos como Microsoft Intune, SQL Server y Azure.
 

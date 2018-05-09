@@ -2,29 +2,23 @@
 title: Requisitos previos de Asset Intelligence
 titleSuffix: Configuration Manager
 description: Obtenga los requisitos previos de Asset Intelligence en System Center Configuration Manager.
-ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 23ab4f94-7bfe-436e-8a6a-029409a2730c
-caps.latest.revision: "10"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 88358017bd8807caca3c544ecdf07c1b751efd3f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b8e7477f8a5b837327640f78656070579fad23a8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prerequisites-for-asset-intelligence-in-system-center-configuration-manager"></a>Requisitos previos de Asset Intelligence en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Asset Intelligence en System Center Configuration Manager tiene dependencias externas y dependencias dentro del producto.  
 
@@ -47,4 +41,4 @@ Asset Intelligence en System Center Configuration Manager tiene dependencias ext
 |Dependencias de agente cliente de inventario de hardware|Para recopilar los datos de inventario necesarios para algunos informes de Asset Intelligence, el Agente cliente de inventario de hardware debe estar habilitado. Además, algunas clases de informes de inventario de hardware de las que dependen los informes de Asset Intelligence deben habilitarse en equipos de servidor de sitio primario.<br /><br /> Para obtener información sobre cómo habilitar el Agente cliente de inventario de hardware, consulte [How to extend hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/extend-hardware-inventory.md) (Cómo ampliar el inventario de hardware en System Center Configuration Manager).|  
 |Dependencias de Agente cliente de medición de software|Los datos de diversos informes de software de Asset Intelligence dependen del Agente cliente de medición de software. Para obtener información sobre cómo habilitar el Agente cliente de medición de software, consulte [Monitor app usage with software metering in System Center Configuration Manager](../../../../apps/deploy-use/monitor-app-usage-with-software-metering.md) (Supervisar el uso de aplicaciones a través de la medición de software en System Center Configuration Manager).<br /><br /> Los siguientes informes de software de Asset Intelligence dependen del Agente cliente de medición de software para proporcionar datos:<br /><br /> - Software 07A - Programas ejecutables usados recientemente por recuento de equipos<br />- Software 07B - Equipos que han usado recientemente un ejecutable especificado<br />- Software 07C - Programas ejecutables usados recientemente en un equipo especificado<br />- Software 08A - Ejecutables usados recientemente por recuento de usuarios<br />- Software 08B - Usuarios que han usado recientemente un programa ejecutable especificado<br />- Software 08C - Programas ejecutables usados recientemente por un usuario especificado|  
 |Requisitos previos de la clase de informes de inventario de hardware de Asset Intelligence|Los informes de Asset Intelligence en Configuration Manager dependen de clases de informes de inventario de hardware específicas. Hasta que se habilitan las clases de informes de inventario de hardware y los clientes han informado su inventario de hardware basado en estas clases de informes, los informes de Asset Intelligence asociados no contienen ningún dato. Puede habilitar las clases de informes de inventario de hardware siguientes para admitir los requisitos de informes de Asset Intelligence:<br /><br /> -   SMS_SystemConsoleUsage<sup>1</sup><br />-   SMS_SystemConsoleUser<sup>1</sup><br />-   SMS_InstalledSoftware<br />-   SMS_AutoStartSoftware<br />-   SMS_BrowserHelperObject<br />-   Win32_USBDevice<br />-   SMS_InstalledExecutable<br />-   SMS_SoftwareShortcut<br />-   SoftwareLicensingService<br />-   SoftwareLicensingProduct<br />-   SMS_SoftwareTag<br /><br /> <sup>1</sup> De forma predeterminada, las clases de informes de inventario de hardware de Asset Intelligence **SMS_SystemConsoleUsage** y **SMS_SystemConsoleUser** están habilitadas.<br /><br /> Las clases de informes de inventario de hardware de Asset Intelligence se pueden editar en el área de trabajo **Activos y compatibilidad** de la consola de Configuration Manager, desde el nodo **Asset Intelligence**. Para obtener más información, consulte la sección [Habilitar las clases de informes de inventario de hardware de Asset Intelligence](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md#BKMK_EnableAssetIntelligence) del tema [Configurar Asset Intelligence en System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md).|  
-|Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.|El rol de sistema de sitio de punto de servicios de informes debe instalarse antes de que puedan mostrarse los informes de actualizaciones de software. Para obtener más información sobre la creación de un punto de servicios de informes, consulte [Configuración de informes en Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=232661).|  
+|Punto de servicios de informes|El rol de sistema de sitio de punto de servicios de informes debe instalarse antes de que puedan mostrarse los informes de actualizaciones de software. Para obtener más información sobre la creación de un punto de servicios de informes, consulte [Configuración de informes en Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=232661).|  

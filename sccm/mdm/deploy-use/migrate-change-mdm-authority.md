@@ -1,20 +1,19 @@
 ---
 title: Cambio de la entidad de MDM a Intune
 titleSuffix: Configuration Manager
-description: "Obtenga información acerca de cómo cambiar la entidad de MDM desde Configuration Manager (híbrido) a Intune independiente."
-keywords: 
-author: dougeby
-manager: angrobe
+description: Obtenga información acerca de cómo cambiar la entidad de MDM desde Configuration Manager (híbrido) a Intune independiente.
+author: aczechowski
+manager: dougeby
 ms.date: 12/05/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: 8884883c6e4e82cf38d83b9b7843002be3742bf1
-ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
+ms.openlocfilehash: b8bc778f4bcede45d3035b8b119fc3e4a4df4978
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>Cambio de la entidad de MDM a Intune independiente
 

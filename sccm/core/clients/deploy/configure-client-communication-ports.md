@@ -1,30 +1,24 @@
 ---
-title: "Configuración de puertos de comunicación de cliente"
+title: Configuración de puertos de comunicación de cliente
 titleSuffix: Configuration Manager
-description: "Configure puertos de comunicación de cliente en System Center Configuration Manager."
-ms.custom: na
+description: Configure puertos de comunicación de cliente en System Center Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 406bbdbf-ab4a-4121-a68b-154f96ea14ec
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: caec28f9e791bcbc2c67b63c9ff8886f9b750bca
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b6f90995d00767c1607cc74323ebe4feefc97130
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-client-communication-ports-in-system-center-configuration-manager"></a>Configurar puertos de comunicación de cliente en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede cambiar los números de puerto de solicitud que usan los clientes de System Center Configuration Manager para comunicarse con los sistemas de sitio que usan HTTP y HTTPS para la comunicación. Si bien es probable que HTTP o HTTPS estén ya configurados para los firewalls, la notificación de cliente que utiliza HTTP o HTTPS requiere más uso de CPU y memoria en el equipo de punto de administración que si se usa un número de puerto personalizado. También se puede especificar el número de puerto de sitio que se va a usar para activar clientes mediante los paquetes de reactivación tradicionales.  
 
@@ -33,7 +27,7 @@ Puede cambiar los números de puerto de solicitud que usan los clientes de Syste
  Los valores predeterminados para los puertos de solicitud de cliente son **80** para el tráfico HTTP y **443** para el tráfico HTTPS. Cámbielos sólo si no desea utilizar estos valores predeterminados. Un escenario típico de uso de puertos personalizados es en el que se utiliza un sitio web personalizado en IIS en lugar del sitio web predeterminado. Si cambia los números de puerto predeterminados para el sitio web predeterminado en IIS y otras aplicaciones también utilizan el sitio web predeterminado, es muy posible que estas generen errores.  
 
 > [!IMPORTANT]  
->  No cambie los números de puerto en Configuration Manager sin conocer bien las consecuencias de ello. Ejemplos:  
+>  No cambie los números de puerto en Configuration Manager sin conocer bien las consecuencias de ello. Ejemplo:  
 >   
 >  -   Si cambia los números de puerto para los servicios de solicitud de cliente como una configuración de sitio, y no se actualiza la configuración de los clientes existentes para que utilicen los números de puerto nuevos, estos clientes llegarán a tener un estado no administrado.  
 > -   Antes de configurar un número de puerto no predeterminado, asegúrese de que los firewalls y dispositivos de red implicados pueden admitir esta configuración para, si es necesario, realizar los ajustes necesarios. Si va a administrar los clientes en Internet y cambia el número de puerto HTTPS 443 predeterminado, los enrutadores y firewalls de Internet podrían bloquear esta comunicación.  

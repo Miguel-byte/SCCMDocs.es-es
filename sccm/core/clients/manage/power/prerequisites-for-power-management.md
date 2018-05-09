@@ -1,30 +1,24 @@
 ---
-title: "Requisitos previos de la administración de energía"
+title: Requisitos previos de la administración de energía
 titleSuffix: Configuration Manager
-description: "Consulte los requisitos previos de la administración de energía en System Center Configuration Manager."
-ms.custom: na
+description: Consulte los requisitos previos de la administración de energía en System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 9c062f13-3c1f-4621-9cae-de0e322aa03f
-caps.latest.revision: "4"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 79cda9025c13f2cc76f67f89dba1fcdfdaa52ae2
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: c6630ef07c0b7947875ea2adac4e6612143aaee8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prerequisites-for-power-management-in-system-center-configuration-manager"></a>Requisitos previos de la administración de energía en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 La administración de energía en System Center Configuration Manager tiene dependencias externas y dependencias dentro del producto.  
 
@@ -41,4 +35,4 @@ La administración de energía en System Center Configuration Manager tiene depe
 |Dependencia|Más información|  
 |----------------|----------------------|  
 |La administración de energía debe estar habilitada para poder crear y supervisar planes de energía.|Para obtener información sobre cómo habilitar y configurar la administración de energía, consulte [Configuring Power Management in Configuration Manager](../../../../core/clients/manage/power/configuring-power-management.md) (Configuración de la administración de energía en Configuration Manager).|  
-|Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.|Debe configurar un punto de servicios de informes antes de poder ver los informes de administración de energía. Para obtener más información, consulte [Generación de informes en System Center Configuration Manager](../../../../core/servers/manage/reporting.md).|  
+|Punto de servicios de informes|Debe configurar un punto de servicios de informes antes de poder ver los informes de administración de energía. Para obtener más información, consulte [Reporting in System Center Configuration Manager](../../../../core/servers/manage/reporting.md) (Generación de informes en System Center Configuration Manager).|  

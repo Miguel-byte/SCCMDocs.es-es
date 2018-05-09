@@ -2,28 +2,23 @@
 title: Bloqueo de clientes
 titleSuffix: Configuration Manager
 description: Bloquee el acceso de clientes para la seguridad del sistema mediante System Center Configuration Manager.
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 54ef5fbb-521d-4ca5-a1c5-61e6f538d71e
-caps.latest.revision: "8"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 6c2f6e5a6b25ab9f5f4397a46a717cc68ccf8556
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4371e9ede643d794058520cf001f30f01b47fe94
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="determine-whether-to-block-clients-in-system-center-configuration-manager"></a>Determinar si se deben bloquear clientes en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Si un equipo cliente o un dispositivo móvil cliente deja de ser de confianza, puede bloquear el cliente en la consola de System Center 2012 Configuration Manager. La infraestructura de Configuration Manager rechaza los clientes bloqueados para que no se puedan comunicar con los sistemas de sitio para descargar directivas, cargar datos de inventario o enviar mensajes de estado.  
 

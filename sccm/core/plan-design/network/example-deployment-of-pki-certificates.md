@@ -1,29 +1,24 @@
 ---
-title: "Implementación de certificados PKI"
+title: Implementación de certificados PKI
 titleSuffix: Configuration Manager
-description: "Siga un ejemplo paso a paso para obtener información sobre cómo crear e implementar certificados PKI que usa System Center Configuration Manager."
-ms.custom: na
+description: Siga un ejemplo paso a paso para obtener información sobre cómo crear e implementar certificados PKI que usa System Center Configuration Manager.
 ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
-caps.latest.revision: "11"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 092e3e752a27ab652f2b38c0ba43e6e2e26c99c8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0b34163bfb5aea716062882d4c2ebb1360bba2c9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-system-center-configuration-manager-windows-server-2008-certification-authority"></a>Ejemplo paso a paso de la implementación de los certificados PKI para System Center Configuration Manager: entidad de certificación de Windows Server 2008
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Esta implementación de ejemplo paso a paso, que usa una entidad de certificación (CA) de Windows Server 2008, tiene procedimientos que le muestran cómo crear e implementar los certificados de infraestructura de clave pública (PKI) que usa System Center Configuration Manager. Estos procedimientos utilizan una entidad de certificación (CA) empresarial y plantillas de certificado. Los pasos son adecuados solo para una red de prueba, como una prueba de concepto.  
 
@@ -156,7 +151,7 @@ Esta implementación de ejemplo paso a paso, que usa una entidad de certificaci�
 
 13. En el cuadro **Valor**, especifique los valores de FQDN que especificará en las propiedades de sistema de sitio de System Center Configuration Manager y, después, pulse **Aceptar** para cerrar el cuadro de diálogo **Propiedades de certificado**.  
 
-     Ejemplos:  
+     Ejemplo:  
 
     -   Si el sistema de sitio solo va a aceptar conexiones de cliente de la intranet y el FQDN de la intranet del servidor de sistema de sitio es **server1.internal.contoso.com**, escriba **server1.internal.contoso.com** y, después, pulse **Agregar**.  
 

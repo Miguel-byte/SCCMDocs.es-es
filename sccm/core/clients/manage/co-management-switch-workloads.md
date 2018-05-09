@@ -1,23 +1,20 @@
 ---
 title: Cambiar las cargas de trabajo de Configuration Manager a Intune
-titleSuffix: System Center Configuration Manager
+titleSuffix: Configuraton Manager
 description: Obtenga información sobre cómo cambiar las cargas de trabajo que administra actualmente Configuration Manager a Microsoft Intune.
 ms.prod: configuration-manager
-ms.suite: na
-ms.technology:
-- configmgr-client
-author: mestew
-ms.author: mstewart
+ms.technology: configmgr-client
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
-ms.service: ''
+ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: d0cee0eb242011d6cc7b3085b4ae9df908604fa8
-ms.sourcegitcommit: ac06e034cc60db7b1acade1f541e26b6cc50506e
+ms.openlocfilehash: 439e4e26c08b5a2710da0978ed2407d715bc86bd
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="switch-configuration-manager-workloads-to-intune"></a>Cambiar las cargas de trabajo de Configuration Manager a Intune
 En [Preparación de dispositivos Windows 10 para la administración conjunta](co-management-prepare.md), preparó los dispositivos Windows 10 para la administración conjunta. Estos dispositivos están unidos a AD y a Azure AD, están inscritos en Intune y tienen el cliente de Configuration Manager. Es probable que aún tenga dispositivos de Windows 10 unidos a AD y que tenga el cliente de Configuration Manager, pero no que esté unido a Azure AD ni inscrito en Intune. En el siguiente procedimiento se proporcionan los pasos necesarios para habilitar la administración conjunta y preparar el resto de los dispositivos de Windows 10 (clientes de Configuration Manager sin la inscripción de Intune) para la administración conjunta. También podrá empezar a trasladar a Intune determinadas cargas de trabajo de Configuration Manager.

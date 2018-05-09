@@ -1,30 +1,24 @@
 ---
-title: "Tareas comunes para las líneas base de configuración "
+title: 'Tareas comunes para las líneas base de configuración '
 titleSuffix: Configuration Manager
-description: "Aprenda a crear e implementar líneas base de configuración de System Center Configuration Manager."
-ms.custom: na
+description: Aprenda a crear e implementar líneas base de configuración de System Center Configuration Manager.
 ms.date: 07/12/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 4bb6afeb-d267-4f9b-ade2-26e5400c223b
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 50f7bdf4dc537f734864304d96566347e6341de6
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: bd76ecfcd4f5731e7fa078a00e79fdc6ab91ffa4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-tasks-for-creating-and-deploying-configuration-baselines-with-system-center-configuration-manager"></a>Tareas comunes para crear e implementar líneas de base de configuración con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Este tema contiene escenarios comunes para obtener información sobre cómo crear e implementar líneas de base de configuración de System Center Configuration Manager.  
 

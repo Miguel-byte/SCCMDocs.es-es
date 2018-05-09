@@ -1,26 +1,24 @@
 ---
 title: 'Descargar actualizaciones de software '
 titleSuffix: Configuration Manager
-description: "Use el Asistente para descargar actualizaciones de software para descargar actualizaciones de software y distribuirlas en puntos de distribución para que estén listas para la implementación en los clientes."
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: Use el Asistente para descargar actualizaciones de software para descargar actualizaciones de software y distribuirlas en puntos de distribución para que estén listas para la implementación en los clientes.
+author: aczechowski
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
-ms.openlocfilehash: 534592d3f240aa647d49e2045aa83798e872b9a4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 6c4aa062c79a1ed03d32b894ac6764d63c657ddb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="download-software-updates"></a>Descargar actualizaciones de software  
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Hay varios métodos disponibles para la descarga de actualizaciones de software en Configuration Manager. Al crear una regla de implementación automática (ADR) o implementar manualmente las actualizaciones de software, las actualizaciones de software se descargan en la biblioteca de contenido del servidor de sitio. Después, las actualizaciones de software se copian en la biblioteca de contenido de los puntos de distribución que están asociados con el paquete de implementación configurado. Si desea descargar las actualizaciones de software antes de su implementación, puede utilizar al Asistente para descargar actualizaciones. Esto le permitirá comprobar que las actualizaciones de software están disponibles en los puntos de distribución antes de implementar las actualizaciones de software en los equipos cliente.  
 

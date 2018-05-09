@@ -1,30 +1,24 @@
 ---
-title: "Creación de aplicaciones de Windows Phone"
+title: Creación de aplicaciones de Windows Phone
 titleSuffix: Configuration Manager
 description: Consulte las consideraciones que debe tener en cuenta al crear e implementar aplicaciones para dispositivos de Windows Phone.
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 68fe11fa-5fb2-4b81-b0f5-b6f2392fb4ad
-caps.latest.revision: 
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 154cc1f6e8f16f2bfbb717cfd44fe596b9e31ac5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c755db47c9d3acb9c858ecb5bed14bb36055663b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-windows-phone-applications-with-system-center-configuration-manager"></a>Crear aplicaciones de Windows Phone con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Una aplicación de System Center Configuration Manager tiene uno o varios tipos de implementación que incluyen la información y los archivos de instalación necesarios para implementar un dispositivo. Además tiene reglas que especifican cuándo y cómo se implementa el software.  
 
@@ -44,7 +38,7 @@ Consulte [Inicie el Asistente para crear aplicaciones](../../apps/deploy-use/cre
 |Tipo de dispositivo|Tipos de archivo compatibles|  
 |-----------------|---------------------|  
 |Windows Phone 8|.xap|  
-|Windows Phone 8,1|.xap, .appx, .appxbundle|
+|Windows Phone 8.1|.xap, .appx, .appxbundle|
 |Windows 10 Mobile|.xap, .appx, .appxbundle|
 
  Se admiten las siguientes acciones de implementación:  

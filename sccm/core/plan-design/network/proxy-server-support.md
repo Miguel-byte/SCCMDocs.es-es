@@ -1,30 +1,24 @@
 ---
 title: Compatibilidad de servidor proxy
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre la compatibilidad de System Center Configuration Manager con los servidores proxy que usan los servidores y los clientes del sistema de sitio."
-ms.custom: na
+description: Obtenga información sobre la compatibilidad de System Center Configuration Manager con los servidores proxy que usan los servidores y los clientes del sistema de sitio.
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: fe42d5ca64b5a969e1a6def4266466875c4a3183
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 480ab29bbd97f2cdc173019b1b3cccd90403d011
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="proxy-server-support-in-system-center-configuration-manager"></a>Compatibilidad de servidor proxy en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Tanto los servidores como los clientes del sistema de sitio de System Center Configuration Manager pueden usar un servidor proxy.  
 

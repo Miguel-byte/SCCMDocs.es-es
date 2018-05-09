@@ -2,29 +2,23 @@
 title: Dominios de Active Directory admitidos
 titleSuffix: Configuration Manager
 description: Obtenga los requisitos de pertenencia de un sistema de sitio de System Center Configuration Manager en un dominio de Active Directory.
-ms.custom: na
 ms.date: 9/18/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8c5a13f8-42d5-4898-b7b6-e594dae8b335
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 7ec8d6f3a37f48e7dc6032af5b30fb452171d14c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: dcb0f5e82d0ef53524e9abfdb974605e3ae73db3
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-active-directory-domains-for-system-center-configuration-manager"></a>Compatibilidad con los dominios de Active Directory para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Todos los sistemas de sitio de System Center Configuration Manager deben ser miembros de un dominio de Windows Server Active Directory compatible. Los equipos cliente de Configuration Manager pueden ser miembros del dominio o miembros del grupo de trabajo.  
 

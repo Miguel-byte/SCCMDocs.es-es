@@ -2,22 +2,19 @@
 title: Implementar actualizaciones de software automáticamente
 titleSuffix: Configuration Manager
 description: Implemente actualizaciones de software automáticamente al agregar nuevas actualizaciones de software a un grupo de actualizaciones asociado a una implementación activa, o bien mediante el empleo de reglas de ADR.
-keywords: ''
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: afa0bd21d23dc0be50d90452ad5dd5d909542279
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 3b267e122370cc12ecec2f42dcb1dfc62c45fe63
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="BKMK_AutoDeploy"></a> Implementar actualizaciones de software automáticamente  
 
@@ -171,7 +168,7 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
 
     2.  **Descripción**: especifique una descripción que proporcione información sobre el paquete de implementación. La descripción está limitada a 127 caracteres.  
 
-    3.  **Origen de paquete**: especifica la ubicación de los archivos de origen de la actualización de software.  Escriba una ruta de red de la ubicación de los archivos de origen, por ejemplo, **\\\servidor\nombre de recurso compartido\ruta**, o haga clic en **Examinar** para buscar la ubicación de red. Cree la carpeta compartida para los archivos de origen del paquete de implementación antes de continuar a la página siguiente.  
+    3.  **Origen de paquete**: especifica la ubicación de los archivos de origen de la actualización de software.  Escriba una ruta de red de la ubicación de los archivos de origen, por ejemplo, **\\\servidor\nombre de recurso compartido\ruta**, o haga clic en **Examinar** para buscar la ubicación de red. Cree la carpeta compartida para los archivos de origen del paquete de implementación antes de continuar con la página siguiente.  
 
         - Ningún otro paquete de implementación de software puede usar la ubicación de origen del paquete de implementación especificado.
         - Puede cambiar la ubicación de origen del paquete en las propiedades del paquete de implementación después de que Configuration Manager cree el paquete de implementación. Pero si lo hace, primero debe copiar el contenido desde el origen del paquete original a la nueva ubicación de origen del paquete.  
