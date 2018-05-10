@@ -2,25 +2,20 @@
 title: Reglas de aplicabilidad
 titleSuffix: Configuration Manager
 description: Administrar reglas de aplicabilidad para System Center Updates Publisher
-ms.custom: na
 ms.date: 4/29/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-sum
+ms.topic: conceptual
 ms.assetid: 3cf0c2cd-397a-4622-b11c-961f334fb7d7
-caps.latest.revision: "1"
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 469081b31741812d0fe1b3e9f3d59fd29c93ee97
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 84705584328b09313bebd1e6c70a0063b2b0724f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-applicability-rules-in-updates-publisher"></a>Administrar reglas de aplicabilidad para Updates Publisher
 
@@ -82,7 +77,7 @@ La información siguiente es similar a la correspondiente a cómo se crean regla
 ## <a name="edit-applicability-rule-sets"></a>Editar conjuntos de reglas de aplicabilidad
 Para editar una regla de aplicabilidad, seleccione una regla que se haya guardado en la lista **My saved rules** (Mis reglas guardadas) del **área de trabajo Reglas** y elija **Editar** en la cinta de opciones. Se abrirá el asistente para **editar reglas**.
 
-Este asistente**editar reglas** muestra las reglas actuales del conjunto de reglas. Edite las reglas de la misma manera que usa el asistente para **crear reglas** para crear otras reglas. Puede usar este asistente para cambiar el nombre del conjunto de reglas, eliminar reglas, cambiar el orden de reglas y relaciones o agregar nuevas reglas.
+Este asistente**** muestra las reglas actuales del conjunto de reglas. Edite las reglas de la misma manera que usa el asistente para **crear reglas** para crear otras reglas. Puede usar este asistente para cambiar el nombre del conjunto de reglas, eliminar reglas, cambiar el orden de reglas y relaciones o agregar nuevas reglas.
 
 Después de realizar cambios, elija **Aceptar** para guardar los cambios y cerrar el asistente.
 

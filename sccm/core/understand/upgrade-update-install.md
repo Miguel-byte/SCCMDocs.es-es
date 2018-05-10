@@ -1,33 +1,27 @@
 ---
-title: "Acerca de la instalación y la actualización"
+title: Acerca de la instalación y la actualización
 titleSuffix: Configuration Manager
-description: "Obtenga información acerca de la diferencia entre las condiciones de instalación, actualización al administrar la infraestructura de Configuration Manager."
-ms.custom: na
+description: Obtenga información acerca de la diferencia entre las condiciones de instalación, actualización al administrar la infraestructura de Configuration Manager.
 ms.date: 1/11/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 17fab17f-304d-4f6a-87c7-30ab4f5521ed
-caps.latest.revision: "0"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 98ece2b96053f077f057682be65c485131f51446
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: ba59f4139a46ff5f073d15495196324540f7857a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="about-upgrade-update-and-install-for-site-and-hierarchy-infrastructure"></a>Acerca de la actualización e instalación para sitios y jerarquía de infraestructura
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
-Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* e *instalar* se utilizan para describir los tres conceptos independientes.
+Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* ** e *instalar* se utilizan para describir los tres conceptos independientes.
 
 ## <a name="upgrade"></a>Actualizar
 La *actualización* o *actualización in situ* se usan al convertir su jerarquía o sitio de Configuration Manager 2012 en uno que ejecuta System Center Configuration Manager.

@@ -67,7 +67,7 @@ Si se produce un error en la asignación del cliente, el software cliente perman
 > [!NOTE]  
 >  Si un cliente de Configuration Manager tiene varios adaptadores de red y, por tanto, tiene varias direcciones IP, la dirección IP usada para evaluar la asignación de sitio del cliente se asigna de manera aleatoria.  
 
- Para más información sobre cómo configurar grupos de límites para la asignación de sitio y cómo configurar un sitio de reserva para la asignación de sitio automática, vea [Define site boundaries and boundary groups for System Center Configuration Manager (Definir límites de sitio y grupos de límites para System Center Configuration Manager)](../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md).  
+ Para más información sobre cómo configurar grupos de límites para la asignación de sitio y cómo configurar un sitio de reserva para la asignación de sitio automática, vea [Definir límites de sitio y grupos de límites para System Center Configuration Manager](../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md).  
 
  Los clientes de Configuration Manager que usan la asignación de sitio automática intentan encontrar grupos de límites de sitio que están publicados en Active Directory Domain Services. Si esto produce un error (por ejemplo, el esquema de Active Directory no se extiende para Configuration Manager o los clientes son equipos de grupo de trabajo), los clientes pueden obtener la información de grupos de límites desde un punto de administración.  
 
