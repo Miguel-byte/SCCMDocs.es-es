@@ -26,7 +26,7 @@ Para poder administrar un servidor Linux o UNIX con System Center Configuration 
 
  El script de instalación del cliente de Configuration Manager para Linux y UNIX admite propiedades de línea de comandos. Algunas propiedades de línea de comandos son necesarios, mientras que otros son opcionales. Por ejemplo, cuando se instala el cliente, debe especificar un punto de administración del sitio que usa el servidor Linux o UNIX para su contacto inicial con el sitio. Para obtener una lista completa de propiedades de línea de comandos, consulte [Propiedades de línea de comandos para la instalación del cliente en servidores Linux y UNIX](#BKMK_CmdLineInstallLnUClient).  
 
- Después de instalar el cliente, se especifican las opciones de cliente en la consola de Configuration Manager para configurar el agente cliente de la misma manera que lo haría con clientes basados en Windows. Para obtener más información, consulte [Client settings for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU) (Configuración de cliente para servidores Linux y UNIX).  
+ Después de instalar el cliente, se especifican las opciones de cliente en la consola de Configuration Manager para configurar el agente cliente de la misma manera que lo haría con clientes basados en Windows. Para obtener más información, consulte [Configuración de cliente para servidores Linux y UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU) (Configuración de cliente para servidores Linux y UNIX).  
 
 ##  <a name="BKMK_AboutInstallPackages"></a> Acerca de los paquetes de instalación de cliente y el agente Universal  
  Para instalar el cliente para Linux y UNIX en una plataforma concreta, debe usar el paquete de instalación de cliente aplicable para el equipo donde se instala el cliente. Los paquetes de instalación de cliente aplicables se incluyen como parte de la descarga de cada cliente desde el [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkID=525184). Además de los paquetes de instalación de cliente, la descarga de cliente incluye el script de **install** que administra la instalación del cliente en cada equipo.  
@@ -111,7 +111,7 @@ Cada paquete de instalación de cliente contiene todos los archivos necesarios p
 
      Opcional. Especifica el FQDN, el servidor de punto de estado de reserva que utiliza el cliente para enviar mensajes de estado.  
 
-     Para obtener más información sobre el punto de estado de reserva, consulte [Determine Whether You Require a Fallback Status Point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) (Determinar si necesita un punto de estado de reserva).  
+     Para obtener más información sobre el punto de estado de reserva, consulte [Determinar si necesita un punto de estado de reserva](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) (Determinar si necesita un punto de estado de reserva).  
 
 
 -   **-dir &lt;directorio\>**  
@@ -138,7 +138,7 @@ Cada paquete de instalación de cliente contiene todos los archivos necesarios p
 
 -   **-UsePKICert &lt;parámetro\>**  
 
-     Opcional. Especifica el nombre completo de ruta de acceso y a un certificado de PKI X.509 en el formato Public Key Certificate Standard (PKCS #12). Este certificado se utiliza para la autenticación de cliente. Si no se especifica un certificado durante la instalación y necesita agregar o cambiar un certificado, use la utilidad **certutil** . Consulte [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) (Cómo administrar certificados en el cliente para Linux y UNIX) para obtener información sobre certutil.  
+     Opcional. Especifica el nombre completo de ruta de acceso y a un certificado de PKI X.509 en el formato Public Key Certificate Standard (PKCS #12). Este certificado se utiliza para la autenticación de cliente. Si no se especifica un certificado durante la instalación y necesita agregar o cambiar un certificado, use la utilidad **certutil** . Consulte [Cómo administrar certificados en el cliente para Linux y UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) (Cómo administrar certificados en el cliente para Linux y UNIX) para obtener información sobre certutil.  
 
      Cuando use **-UsePKICert**, también debe proporcionar la contraseña asociada con el archivo PKCS#12 mediante el parámetro de línea de comandos **-certpw** .  
 
@@ -187,13 +187,13 @@ Cada paquete de instalación de cliente contiene todos los archivos necesarios p
 
 -   **-ignoreSHA256validation**  
 
-     Opcional. Especifica que la instalación de cliente omite la validación de SHA-256. Use esta opción al instalar el cliente en sistemas operativos que no se publicaron con una versión de OpenSSL que admite SHA-256. Para obtener más información, consulte [About Linux and UNIX Operating Systems That do not Support SHA-256](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_NoSHA-256) (Acerca de sistemas operativos Linux y UNIX que no admiten SHA-256).  
+     Opcional. Especifica que la instalación de cliente omite la validación de SHA-256. Use esta opción al instalar el cliente en sistemas operativos que no se publicaron con una versión de OpenSSL que admite SHA-256. Para obtener más información, consulte [Acerca de sistemas operativos Linux y UNIX que no admiten SHA-256](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_NoSHA-256) (Acerca de sistemas operativos Linux y UNIX que no admiten SHA-256).  
 
 -   **-signcertpath &lt;ubicación del archivo\>**  
 
      Opcional. Especifica la ruta de acceso completa y **.cer** nombre de archivo del certificado autofirmado exportado en el servidor de sitio. Si no hay certificados PKI disponibles, el servidor de sitio de Configuration Manager genera automáticamente los certificados autofirmados.  
 
-     Estos certificados se utilizan para validar que las directivas de cliente descargadas desde el punto de administración se enviaron desde el sitio deseado. Si no se especifica un certificado autofirmado durante la instalación o necesita cambiar el certificado, use la utilidad **certutil** . Consulte [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) (Cómo administrar certificados en el cliente para Linux y UNIX) para obtener información sobre certutil.  
+     Estos certificados se utilizan para validar que las directivas de cliente descargadas desde el punto de administración se enviaron desde el sitio deseado. Si no se especifica un certificado autofirmado durante la instalación o necesita cambiar el certificado, use la utilidad **certutil** . Consulte [Cómo administrar certificados en el cliente para Linux y UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) (Cómo administrar certificados en el cliente para Linux y UNIX) para obtener información sobre certutil.  
 
      Este certificado se puede recuperar a través del almacén de certificados **SMS** ; el nombre del firmante es **Servidor de sitio** y su nombre descriptivo es **Certificado de firma de servidor de sitio**.  
 
@@ -232,4 +232,4 @@ Cada paquete de instalación de cliente contiene todos los archivos necesarios p
 
  El cliente de Configuration Manager para Linux y UNIX se pone en contacto con este punto de administración en el momento de la instalación del cliente. Si el cliente no puede ponerse en contacto con el punto de administración, el software cliente continúa intentándolo hasta que lo logra.  
 
- Para obtener más información sobre cómo los clientes buscan puntos de administración, consulte [Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points) (Búsqueda de puntos de administración).
+ Para obtener más información sobre cómo los clientes buscan puntos de administración, consulte [Búsqueda de puntos de administración](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points) (Búsqueda de puntos de administración).

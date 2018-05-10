@@ -79,7 +79,7 @@ Coho Vineyard & Winery está abriendo un centro de visitantes y necesita quiosco
 
      Debido a que estos dispositivos están unidos a un dominio de Active Directory, Julia no necesita aprobarlos manualmente como clientes de confianza, y confirma que están aprobados desde la consola de Configuration Manager.  
 
-     Para más información, vea [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
+     Para más información, vea [Cómo administrar clientes en System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
 
 8.  Para instalar el software de presentación interactiva, Julia ejecuta el **Asistente para implementar software** y configura una aplicación necesaria. En la página **Experiencia del usuario** del asistente, en la sección **Tratamiento de filtros de escritura para dispositivos de Windows Embedded** , acepta la opción predeterminada que selecciona **Confirmar cambios dentro de la fecha límite o en una ventana de mantenimiento (reinicio necesario)**.  
 
