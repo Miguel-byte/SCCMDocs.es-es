@@ -98,7 +98,7 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
 
 -   Paquete de aprovisionamiento de configuración rápida (OOBE)  
 
- Para obtener más información, consulte [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager (Configurar certificados de comunicaciones de confianza para la administración de dispositivos móviles local en System Center Configuration Manager)](../../mdm/get-started/set-up-certificates-on-premises-mdm.md).  
+ Para obtener más información, consulte [Configurar certificados de comunicaciones de confianza para la administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md).  
 
 ##  <a name="bkmk_enrollment"></a> Consideraciones de inscripción  
  Para habilitar la inscripción de dispositivos para la administración de dispositivos móviles local, se debe conceder a los usuarios permiso de inscripción y, además, sus dispositivos deben ser capaces de establecer comunicaciones de confianza con los servidores de sistema de sitio que hospedan los roles de sistema de sitio necesarios.  

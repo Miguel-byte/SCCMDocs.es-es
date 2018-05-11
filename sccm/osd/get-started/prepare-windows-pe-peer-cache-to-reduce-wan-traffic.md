@@ -69,7 +69,7 @@ Use las siguientes secciones para administrar Almacenamiento en caché del mismo
         > [!TIP]  
         >  Los clientes usarán HTTPS para descargar contenido cuando esté disponible. Sin embargo, se usará el mismo número de puerto para HTTP o HTTPS.  
 
--   [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) en los clientes para asegurarse de que tienen espacio suficiente para contener y almacenar las imágenes que implemente. Almacenamiento en caché del mismo nivel en Windows PE no afecta a la configuración o el comportamiento de la caché del cliente.  
+-   [Configurar la caché del cliente para clientes de Configuration Manager](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) en los clientes para asegurarse de que tienen espacio suficiente para contener y almacenar las imágenes que implemente. Almacenamiento en caché del mismo nivel en Windows PE no afecta a la configuración o el comportamiento de la caché del cliente.  
 
 -   Las opciones de implementación para la implementación de la secuencia de tareas deben configurarse como Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas.  
 
