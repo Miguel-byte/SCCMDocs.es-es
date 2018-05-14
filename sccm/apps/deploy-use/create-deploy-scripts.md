@@ -2,26 +2,19 @@
 title: Creación y ejecución de scripts
 titleSuffix: Configuration Manager
 description: Cree y ejecute scripts de Powershell en dispositivos cliente.
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
-caps.latest.revision: 14
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b9699b2f4bd1f18890d25582be9a8d20778b64be
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: fcf3bc335efc4c7436842b29d30c67c118ceb05d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
 
@@ -116,43 +109,50 @@ Los tres roles de seguridad usados para ejecutar scripts no se crean de forma pr
 1. En la consola de Configuration Manager, vaya a **Administración** >**Seguridad** >**Roles de seguridad**
 2. Haga clic con el botón derecho en un rol y haga clic en **Copiar**. El rol que copie tendrá permisos ya asignados. Asegúrese de que solo toma los permisos que le interesan. 
 3. Asigne al rol personalizado un **nombre** y una **descripción**. 
-4. Asigne al rol de seguridad los permisos que se describen a continuación. 
+4. Asigne al rol de seguridad los permisos que se describen a continuación.  
 
-    ### <a name="security-role-permissions"></a>**Permisos de rol de seguridad**
+### <a name="security-role-permissions"></a>Permisos de rol de seguridad  
 
-     **Nombre de rol**: ejecutores de scripts
-    - **Descripción**: estos permisos permiten a este rol ejecutar únicamente los scripts creados y aprobados por otros roles. 
-    - **Permisos:** asegúrese de que los permisos siguientes están establecidos en **Sí**.
-         |**Categoría**|**Permiso**|**Estado**|
-         |---|---|---|
-         |Colección|Ejecutar secuencia de comandos|Sí|
-         |Scripts SMS|Crear|Sí|
-         |Scripts SMS|Lectura|Sí|
+**Nombre de rol**: ejecutores de scripts  
+- **Descripción**: estos permisos permiten a este rol ejecutar únicamente los scripts creados y aprobados por otros roles.  
+- **Permisos:** asegúrese de que los permisos siguientes están establecidos en **Sí**.  
 
-     **Nombre de rol**: autores de scripts
-    - **Descripción**: estos permisos permiten a este rol crear scripts, pero no puede aprobarlos ni ejecutarlos. 
-    - **Permisos:** asegúrese de que están establecidos los permisos siguientes.
-    - 
-         |**Categoría**|**Permiso**|**Estado**|
-         |---|---|---|
-         |Colección|Ejecutar secuencia de comandos|No|
-         |Scripts SMS|Crear|Sí|
-         |Scripts SMS|Lectura|Sí|
-         |Scripts SMS|Eliminar|Sí|
-         |Scripts SMS|Modificar|Sí|
+|Categoría|Permiso|Estado|
+|---|---|---|
+|Colección|Ejecutar secuencia de comandos|Sí|
+|Sitio|Lectura|Sí|
+|Scripts SMS|Crear|Sí|
+|Scripts SMS|Lectura|Sí|
 
-    **Nombre de rol**: autores de scripts
-    - **Descripción**: estos permisos permiten a este rol aprobar scripts, pero no puede crearlos ni ejecutarlos. 
-    - **Permisos:** asegúrese de que están establecidos los permisos siguientes.
 
-         |**Categoría**|**Permiso**|**Estado**|
-         |---|---|---|
-         |Colección|Ejecutar secuencia de comandos|No|
-         |Scripts SMS|Lectura|Sí|
-         |Scripts SMS|Aprobar|Sí|
-         |Scripts SMS|Modificar|Sí|
+**Nombre de rol**: autores de scripts  
+- **Descripción**: estos permisos permiten a este rol crear scripts, pero no puede aprobarlos ni ejecutarlos.  
+- **Permisos:** asegúrese de que están establecidos los permisos siguientes.
+ 
+|Categoría|Permiso|Estado|
+|---|---|---|
+|Colección|Ejecutar secuencia de comandos|No|
+|Sitio|Lectura|Sí|
+|Scripts SMS|Crear|Sí|
+|Scripts SMS|Lectura|Sí|
+|Scripts SMS|Eliminar|Sí|
+|Scripts SMS|Modificar|Sí|
+
+
+**Nombre de rol**: aprobadores de scripts  
+- **Descripción**: estos permisos permiten a este rol aprobar scripts, pero no puede crearlos ni ejecutarlos.  
+- **Permisos:** asegúrese de que están establecidos los permisos siguientes.  
+
+|Categoría|Permiso|Estado|
+|---|---|---|
+|Colección|Ejecutar secuencia de comandos|No|
+|Sitio|Lectura|Sí|
+|Scripts SMS|Lectura|Sí|
+|Scripts SMS|Aprobar|Sí|
+|Scripts SMS|Modificar|Sí|
+
      
-**Ejemplo de permisos de scripts SMS para el rol de autores de scripts**
+**Ejemplo de permisos de scripts SMS para el rol de autores de scripts**  
 
  ![Ejemplo de permisos de scripts SMS para el rol de autores de scripts](./media/run-scripts/script_authors_permissions.png)
 
@@ -184,7 +184,8 @@ En el cuadro de diálogo **Crear script**, haga clic en **Parámetros de script*
 Cada uno de los parámetros de script tiene su propio cuadro de diálogo para agregar más detalles y la validación.
 
 >[!IMPORTANT]
-> Los valores de parámetro no pueden contener un apóstrofo. 
+> Los valores de parámetro no pueden contener un apóstrofo. </br></br>
+> Hay un problema conocido en Configuration Manager versión 1802 donde los parámetros con espacios no se pasan correctamente al script. Si se usa un espacio en el parámetro, solo se pasa al script el primer elemento del parámetro, pero no lo que sigue al espacio. Los administradores pueden crear scripts de solución alternativa sustituyendo los espacios por caracteres alternativos y convertirlos, o con otros métodos.
 
 
 ### <a name="parameter-validation"></a>Validación de parámetros
