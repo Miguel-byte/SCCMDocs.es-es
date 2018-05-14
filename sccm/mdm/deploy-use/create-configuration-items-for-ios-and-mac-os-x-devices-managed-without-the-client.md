@@ -1,26 +1,20 @@
 ---
-title: "Creación de elementos de configuración para dispositivos iOS y Mac OS X administrados con Intune"
+title: Creación de elementos de configuración para dispositivos iOS y Mac OS X administrados con Intune
 titleSuffix: Configuration Manager
-description: "Use el elemento de configuración de iOS y Mac OS X de System Center Configuration Manager para administrar la configuración de los dispositivos iOS y Mac OS X."
-ms.custom: na
+description: Use el elemento de configuración de iOS y Mac OS X de System Center Configuration Manager para administrar la configuración de los dispositivos iOS y Mac OS X.
 ms.date: 03/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 613a48ac-c55d-4c4a-94ea-d3747a1b10cb
-caps.latest.revision: "15"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: d101ffc649928c1136386bc7979d4a37ad404af1
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0a6925cdc1f3b3a5018cc4895820019d88254bd3
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>Creación de elementos de configuración para dispositivos iOS y Mac OS X administrados con Intune
 Use el elemento de configuración de **iOS y Mac OS X** de System Center Configuration Manager para administrar la configuración de los dispositivos iOS y Mac OS X inscritos en Microsoft Intune o que administra System Center Configuration Manager de forma local.  
@@ -237,13 +231,13 @@ Use el elemento de configuración de **iOS y Mac OS X** de System Center Configu
   
     -   **Lista de aplicaciones compatibles**: seleccione esta opción si desea especificar una lista de aplicaciones que los usuarios pueden instalar. Cualquier otra aplicación instalada se notificará como no compatible.  
   
-    -   **Agregar**: agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección, opcionalmente el editor de la aplicación y la dirección URL de la aplicación en la tienda de aplicaciones.  
+    -   **Agregar**: agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección (opcionalmente puede ser el editor de la aplicación) y la dirección URL de la aplicación en la tienda de aplicaciones.  
   
          Para especificar la dirección URL, en iTunes App Store, busque la aplicación que desea usar.  
   
          Abra la página de la aplicación y copie la dirección URL en el Portapapeles. Ya puede utilizarla como dirección URL en una la lista de aplicaciones conformes o no conformes.  
   
-         **Ejemplo:** busque la aplicación **Microsoft Word para iPad** en la tienda. La dirección URL que utilice será **https://itunes.apple.com/es/app/microsoft-word-for-ipad/id586447913?mt=8**.  
+         **Ejemplo:** busque la aplicación **Microsoft Word para iPad** en la tienda. La dirección URL que usa será **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
   
     -   **Editar**: permite editar el nombre, el editor y la dirección URL de la aplicación seleccionada.  
   
@@ -280,7 +274,7 @@ Use el elemento de configuración de **iOS y Mac OS X** de System Center Configu
         >  Para buscar el identificador de paquete de una aplicación, siga estos pasos en un equipo Mac que tenga la aplicación instalada:  
         >   
         >  1.  Abra la carpeta en la que está instalada la aplicación (por ejemplo, **/Applications**)  
-        > 2.  Seleccione el paquete *<nombre de aplicación\>***.app** y elija **Mostrar contenido del paquete**  
+        > 2.  Seleccione el paquete *<Nombre de aplicación\>***.app** y elija **Mostrar contenido del paquete**  
         > 3.  Abra el archivo **Info.plist**  
         > 4.  Compruebe el valor asociado a la clave **CFBundleIdentifier**  
         >   
@@ -363,7 +357,7 @@ Use el elemento de configuración de **iOS y Mac OS X** de System Center Configu
   
         -   Copie la dirección URL de la página y úsela como dirección URL para especificar la aplicación que desea ejecutar en modo de pantalla completa.  
   
-        -   **Ejemplo:** busque **Microsoft Word para iPad**. La dirección URL que utilice será **https://itunes.apple.com/es/app/microsoft-word-for-ipad/id586447913?mt=8**.  
+        -   **Ejemplo:** busque **Microsoft Word para iPad**. La dirección URL que usa será **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
   
     -   **Táctil**: habilita o deshabilita la pantalla táctil en el dispositivo.  
   

@@ -2,20 +2,19 @@
 title: Preparar Windows 10 para la administración conjunta
 titleSuffix: Configuration Manager
 description: Aprenda a preparar dispositivos Windows 10 para la administración conjunta.
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/28/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology: ''
+ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 93a991cb3fd78e44f5ae4434a9845a57450e1025
-ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
+ms.openlocfilehash: 8c025d7c7a1dc452cb96f937801656bc4d0cadab
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>Preparar dispositivos de Windows 10 para la administración conjunta
 Puede habilitar la administración conjunta en los dispositivos de Windows 10 que están unidos a AD y a Azure AD y que están inscritos en Microsoft Intune y en un cliente en Configuration Manager. Para los nuevos dispositivos de Windows 10 y para los que ya estén inscritos en Intune, instale el cliente de Configuration Manager antes de administrarlos de forma conjunta. Para los dispositivos de Windows 10 que ya son clientes de Configuration Manager, puede inscribirlos en Intune y habilitar la administración conjunta en la consola de Configuration Manager.
@@ -30,7 +29,7 @@ Debe cumplir los siguientes requisitos previos para poder habilitar la administr
 A continuación se indican los requisitos previos generales para poder habilitar la administración conjunta:  
 
 - Versión 1710 de Configuration Manager o posterior
-- Azure AD
+- [Sitio incorporado con Azure AD para administración en la nube](/sccm/core/servers/deploy/configure/azure-services-wizard)
 - Licencia de EMS o de Intune para todos los usuarios
 - [Inscripción automática con Azure AD](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) habilitada
 - Suscripción a Intune &#40;entidad de MDM en Intune establecida en **Intune**&#41;

@@ -1,29 +1,24 @@
 ---
-title: "Preguntas más frecuentes sobre el cliente de Endpoint Protection"
+title: Preguntas más frecuentes sobre el cliente de Endpoint Protection
 titleSuffix: Configuration Manager
-description: "Obtenga respuestas a las preguntas más frecuentes sobre Windows Defender y Endpoint Protection."
-ms.custom: na
+description: Obtenga respuestas a las preguntas más frecuentes sobre Windows Defender y Endpoint Protection.
 ms.date: 12/09/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
-caps.latest.revision: "15"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 2656a5c40dbd2916ef36268936a4e2163ebde14d
-ms.sourcegitcommit: 372171a5cd8d143d6d47b651018cda0c91cad67c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7e86c8196cf2ff2473b066fccf741c2df20cd8f9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Preguntas más frecuentes sobre el cliente de Endpoint Protection
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 Estas preguntas más frecuentes están dirigidas a usuarios de equipos cuyos administradores de TI hayan implementado Windows Defender o Endpoint Protection en sus equipos administrados. Este contenido podría no ser aplicable a otro software antimalware. Microsoft System Center Endpoint Protection administra Windows Defender en Windows 10. También puede implementar y administrar el cliente de Endpoint Protection en equipos anteriores a Windows 10. Aunque en este artículo se describe Windows Defender, su información también se aplica a Endpoint Protection.  
@@ -158,7 +153,7 @@ Para quitar todos los elementos no deseados o potencialmente peligrosos que Wind
 
 -   Asegúrese de que el software antivirus y antispyware, Windows Defender, usa las actualizaciones más recientes contra amenazas potenciales (consulte ¿Cómo mantengo las definiciones de virus y spyware actualizadas?). Además, asegúrese de usar siempre la versión más reciente de Windows Defender.  
 
--   Descargue solo actualizaciones de orígenes de confianza. Si tiene un sistema operativo Windows, vaya siempre a [Microsoft Update](http://go.microsoft.com/fwlink/?LinkID=96304) (http://go.microsoft.com/fwlink/?LinkID=96304) y para el resto de software use siempre sitios web legítimos de la empresa o la persona que los desarrolla.  
+-   Descargue solo actualizaciones de orígenes de confianza. Si tiene un sistema operativo Windows, vaya siempre a [Microsoft Update](http://go.microsoft.com/fwlink/?LinkID=96304) (http://go.microsoft.com/fwlink/?LinkID=96304)) y, para el resto de software, use siempre sitios web legítimos de la empresa o la persona que los desarrolla.  
 
 -   Si recibe un correo electrónico con archivos adjuntos y no está seguro del origen, elimínelo inmediatamente. No descargue aplicaciones ni archivos de orígenes desconocidos y tenga cuidado al intercambiar archivos con otros usuarios.  
 

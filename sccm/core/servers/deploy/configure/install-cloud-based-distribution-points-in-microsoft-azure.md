@@ -1,29 +1,24 @@
 ---
-title: "Instalación de puntos de distribución basados en la nube"
+title: Instalación de puntos de distribución basados en la nube
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre lo que necesita para empezar a usar los puntos de distribución basados en la nube en Microsoft Azure."
-ms.custom: na
+description: Obtenga información sobre lo que necesita para empezar a usar los puntos de distribución basados en la nube en Microsoft Azure.
 ms.date: 2/8/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
-caps.latest.revision: "7"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 6471ac81718666403127c0ebcfaa19c41d3af47b
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 2c9c79c5e635a50fecf02c46e2a134df87c2d784
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-cloud-based-distribution-points-in-microsoft-azure-for-system-center-configuration-manager"></a>Instalar puntos de distribución basados en la nube en Microsoft Azure para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede instalar puntos de distribución basados en la nube de System Center Configuration Manager en Microsoft Azure. Si no está familiarizado con los puntos de distribución basados en la nube, vea [Usar un punto de distribución basado en la nube](../../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md) antes de continuar.
 
@@ -46,7 +41,7 @@ Puede instalar puntos de distribución basados en la nube de System Center Confi
 
 ### <a name="to-set-up-a-cloud-service-in-azure-for-a-distribution-point"></a>Para configurar un servicio de nube en Azure para un punto de distribución  
 
-1.  Abra un explorador web para Azure Portal, en https://manage.windowsazure.com, y obtenga acceso a su cuenta.  
+1.  Abra un explorador web para Azure Portal, en https://manage.windowsazure.com, y acceda a la cuenta.  
 
 2.  Haga clic en **Servicios hospedados, cuentas de almacenamiento y CDN** y, después, seleccione **Certificados de administración**.  
 
@@ -104,7 +99,7 @@ El asistente crea un nuevo servicio hospedado para el punto de distribución bas
 ##  <a name="BKMK_ConfigDNSforCloudDPs"></a> Configurar la resolución de nombres para puntos de distribución basados en la nube  
  Antes de que los clientes puedan tener acceso al punto de distribución basado en la nube, deben ser capaces de resolver el nombre del punto de distribución basado en la nube en una dirección IP que administra Azure. Los clientes hacen esto en dos fases:  
 
-1.  Asignan el nombre del servicio que se ha proporcionado con el certificado del servicio de punto de distribución basado en la nube de Configuration Manager a su FQDN de servicio de Azure. Este FQDN contiene un GUID y el sufijo DNS de **cloudapp.net**. El GUID se genera automáticamente después de instalar el punto de distribución basado en la nube. Para ver el FDQN completo en Azure Portal, haga referencia a la **DIRECCIÓN URL DEL SITIO** en el panel del servicio en la nube. Un ejemplo de dirección URL de sitio es **http://d1594d4527614a09b934d470.cloudapp.net**.  
+1.  Asignan el nombre del servicio que se ha proporcionado con el certificado del servicio de punto de distribución basado en la nube de Configuration Manager a su FQDN de servicio de Azure. Este FQDN contiene un GUID y el sufijo DNS de **cloudapp.net**. El GUID se genera automáticamente después de instalar el punto de distribución basado en la nube. Para ver el FDQN completo en Azure Portal, haga referencia a la **DIRECCIÓN URL DEL SITIO** en el panel del servicio en la nube. Una dirección URL del sitio de ejemplo es **http://d1594d4527614a09b934d470.cloudapp.net**.  
 
 2.  Resuelven el FQDN de servicio de Azure en la dirección IP que Azure asigna. Esta dirección IP también puede identificarse en el panel del servicio en la nube en Azure Portal y recibe el nombre de **DIRECCIÓN IP VIRTUAL PÚBLICA (VIP)**.  
 

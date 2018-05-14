@@ -1,25 +1,19 @@
 ---
-title: "Creación de elementos de configuración para dispositivos Windows Phone administrados con Intune"
+title: Creación de elementos de configuración para dispositivos Windows Phone administrados con Intune
 titleSuffix: Configuration Manager
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: df10dc4d-c9ff-4574-bb33-8d30eb14cfe3
-caps.latest.revision: "13"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: f0a032bfa1d8d6383caf3065678d9b0a4dd3dde0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4590077b303d5676aa72a816d785a0864fe2205f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-windows-phone-devices-managed-without-the-system-center-configuration-manager-client"></a>Cómo crear elementos de configuración para dispositivos Windows Phone administrados sin el cliente de System Center Configuration Manager
 Use el elemento de configuración de **Windows Phone** de System Center Configuration Manager para administrar la configuración de los dispositivos Windows Phone inscritos en Microsoft Intune o que administra Configuration Manager de forma local.  
@@ -298,7 +292,7 @@ Use el elemento de configuración de **Windows Phone** de System Center Configur
 |Configuración|Más información|  
 |**Lista de aplicaciones bloqueadas**|Seleccione esta opción si desea especificar una lista de aplicaciones que los usuarios no podrán instalar.|  
 |**Lista de aplicaciones permitidas**|Seleccione esta opción si desea especificar una lista de aplicaciones que los usuarios pueden instalar.|  
-|**Agregar**|Agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección (opcionalmente puede ser el editor de la aplicación) y la dirección URL de la aplicación en la tienda de aplicaciones.<br /><br /> Para especificar la dirección URL, en la página de la tienda de Windows Phone, busque la aplicación que desea usar.<br /><br /> **Ejemplo:** busque la aplicación **Skype** en la tienda. La dirección URL que utilice será http://www.windowsphone.com/es-es/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51.<br /><br /> Para la aplicación del portal de la empresa, o aplicaciones de línea de negocio, no es necesario especificar una dirección URL completa, solo el GUID de la aplicación.|  
+|**Agregar**|Agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección (opcionalmente puede ser el editor de la aplicación) y la dirección URL de la aplicación en la tienda de aplicaciones.<br /><br /> Para especificar la dirección URL, en la página de la tienda de Windows Phone, busque la aplicación que desea usar.<br /><br /> **Ejemplo:** busque la aplicación **Skype** en la tienda. La dirección URL que usa será http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51.<br /><br /> Para la aplicación del portal de la empresa, o aplicaciones de línea de negocio, no es necesario especificar una dirección URL completa, solo el GUID de la aplicación.|  
 |**Editarar**|Permite editar el nombre, el editor y la dirección URL de la aplicación seleccionada.|  
 |**Quitar**|Elimina la aplicación seleccionada de la lista.|  
 |**Importarar**|Importa la lista de las aplicaciones que ha especificado en un archivo de valores separados por comas. Utilice el formato, nombre de la aplicación, editor, dirección URL de la aplicación en el archivo.|  

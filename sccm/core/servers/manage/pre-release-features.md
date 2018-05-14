@@ -2,25 +2,19 @@
 title: Características de la versión preliminar
 titleSuffix: Configuration Manager
 description: Las características de versión preliminar son características que se encuentran en la Rama actual para realizar las primeras pruebas en un entorno de producción.
-ms.custom: na
-ms.date: 04/10/2018
+ms.date: 05/01/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
-caps.latest.revision: 36
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6e3a6a8dd437238a9dd08b07494b51333283f41c
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: d4e9664832b37dd05f001404012acab80fd87a43
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pre-release-features-in-system-center-configuration-manager"></a>Características de versión preliminar en System Center Configuration Manager
 *Se aplica a: System Center Configuration Manager (Rama actual)*
@@ -50,7 +44,8 @@ Cuando instale una actualización que incluya características de versión preli
 
  |Característica          |Agregado como versión preliminar | Agregado como característica completa|  
 |------------------|---------------------|---------------------|
-|Implementaciones por fases <!--1356837-->|[Versión 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence.md)|![Todavía no](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+|Soporte para Cisco AnyConnect 4.0.07x y versiones posteriores para iOS<!--1357393-->|[Versión 1802](/sccm/mdm/deploy-use/create-vpn-profiles)|![Todavía no](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+|Implementaciones por fases <!--1356837-->|[Versión 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|![Todavía no](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Ejecutar paso de secuencia de tareas <!-- 1261338 --> |  [Versión 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |[Versión 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence)|
 | Windows Defender Exploit Guard <!-- 1355468 --> |  [Versión 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |[Versión 1802](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)|
 | Evaluación de la Atestación de mantenimiento del dispositivo para las directivas de cumplimiento en el acceso condicional <!-- 1235616 --> |  [Versión 1710](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) |[Versión 1802](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)|

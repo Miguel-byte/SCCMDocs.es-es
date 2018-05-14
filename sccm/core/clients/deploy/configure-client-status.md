@@ -1,31 +1,24 @@
 ---
-title: "Configuración del estado de cliente"
+title: Configuración del estado de cliente
 titleSuffix: Configuration Manager
-description: "Seleccione la configuración del estado de cliente en System Center Configuration Manager."
-ms.custom: na
+description: Seleccione la configuración del estado de cliente en System Center Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
-caps.latest.revision: 
-caps.handback.revision: 
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 5db52925515e65797a43ed35775460369f742f49
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 8f919e647ae252731d60a98e01485a01aae10698
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-client-status-in-system-center-configuration-manager"></a>Cómo configurar el estado de cliente en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Para poder supervisar el estado de cliente de System Center Configuration Manager y solucionar los problemas detectados, debe configurar el sitio para especificar los parámetros que se usan para marcar los clientes como inactivos y configurar las opciones para alertarle si la actividad de cliente cae por debajo de un umbral determinado. También puede deshabilitar en los equipos la corrección automática de problemas detectados por el estado de cliente.  
 
@@ -78,7 +71,7 @@ Para poder supervisar el estado de cliente de System Center Configuration Manage
     > [!NOTE]  
     >  No puede configurar alertas para recopilaciones de usuario.  
 
-4.  En la pestaña **Alertas** del cuadro de diálogo *&lt;Nombre de la colección\>***Propiedades**, haga clic en **Agregar**.  
+4.  En la pestaña **Alertas** del cuadro de diálogo *&lt;Nombre de recopilación\>***Propiedades** haga clic en **Agregar**.  
 
     > [!NOTE]  
     >  La pestaña **Alertas** solo es visible si el rol de seguridad con el que está asociado tiene permisos para alertas.  
@@ -93,7 +86,7 @@ Para poder supervisar el estado de cliente de System Center Configuration Manage
 
     -   **Generar alerta**: especifique el porcentaje de umbral para la alerta.  
 
-7.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo *&lt;Nombre de la colección\>***Propiedades**.  
+7.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo *&lt;Nombre de recopilación\>***Propiedades**.  
 
 ##  <a name="BKMK_3"></a> Para excluir la corrección automática de equipos  
 

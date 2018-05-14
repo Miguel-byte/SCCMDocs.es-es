@@ -1,29 +1,24 @@
 ---
-title: "Configuración de la suscripción con Lookout"
+title: Configuración de la suscripción con Lookout
 titleSuffix: Configuration Manager
-description: "En este tema se proporciona información sobre cómo configurar la protección contra amenazas de dispositivo de Lookout."
-ms.custom: na
+description: En este tema se proporciona información sobre cómo configurar la protección contra amenazas de dispositivo de Lookout.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6087b279-ba05-4824-b5e3-3af14f3d3cfe
-caps.latest.revision: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 142926bc41a79adc8d8300e413022fb0e3566c5a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 08bf88c0f6660c213c47a5ed283b3be0431056a2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-your-subscription-for--lookout-device-threat-protection"></a>Configurar su suscripción para la protección contra amenazas de dispositivo de Lookout
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Para tener preparada su suscripción para el servicio de protección contra amenazas de dispositivo de Lookout, el soporte técnico de Lookout (enterprisesupport@lookout.com) necesita la siguiente información sobre su suscripción de Azure Active Directory (Azure AD). El inquilino de Lookout Mobility Endpoint Security se asociará con su suscripción de Azure AD para integrar Lookout con Intune. 
 
@@ -59,7 +54,7 @@ El soporte técnico de Lookout trabajará con su contacto principal para incorpo
 
 ## <a name="configure-your-subscription-with-lookout-device-threat-protection"></a>Configurar su suscripción con la protección contra amenazas de dispositivo de Lookout
 ### <a name="step-1-set-up-your-device-threat-protection"></a>Paso 1: Configurar la protección contra amenazas de dispositivo
-Después de que el equipo de soporte técnico de Lookout cree su cuenta de Lookout Enterprise, puede iniciar sesión en la consola de Lookout.   Se envía un correo electrónico de Lookout al contacto principal de su empresa con un vínculo a la dirección URL de inicio de sesión: https://aad.lookout.com/les?action=consent
+Después de que el equipo de soporte técnico de Lookout cree su cuenta de Lookout Enterprise, puede iniciar sesión en la consola de Lookout.   Se envía un mensaje de correo electrónico de Lookout al contacto principal de la empresa con un vínculo a la dirección URL de inicio de sesión: https://aad.lookout.com/les?action=consent
 
 Debe usar una cuenta de usuario con el rol de Administrador global de Azure AD cuando inicie sesión por primera vez en la consola de Lookout, ya que Lookout necesita esta información para registrar su inquilino de Azure AD.   Los inicios de sesión posteriores no necesitarán que el usuario tenga este nivel de privilegio de Azure AD.  En el primer inicio de sesión, se muestra una página de consentimiento. Pulse **Aceptar** para completar el registro.
 

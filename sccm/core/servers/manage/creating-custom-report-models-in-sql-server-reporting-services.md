@@ -1,30 +1,24 @@
 ---
-title: "Creación de informes personalizados"
+title: Creación de informes personalizados
 titleSuffix: Configuration Manager
-description: "Defina modelos de informe para satisfacer sus requisitos empresariales y, después, impleméntelos en Configuration Manager."
-ms.custom: na
+description: Defina modelos de informe para satisfacer sus requisitos empresariales y, después, impleméntelos en Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 56274cbec336219a7734d23bf1bade8a7892de30
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: fd606ff7068b7c14047e445d16ea78d20a5c12ea
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-custom-report-models-for-system-center-configuration-manager-in-sql-server-reporting-services"></a>Creación de modelos de informes personalizados para System Center Configuration Manager en SQL Server Reporting Services
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 System Center Configuration Manager incluye modelos de informe de ejemplo, pero también puede definir otros modelos de informe para satisfacer sus requisitos empresariales y, después, implementarlos en Configuration Manager de modo que se usen al crear informes basados en modelos. La tabla siguiente proporciona los pasos para crear e implementar un modelo de informe básico.  
 
@@ -163,7 +157,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
 6.  Cierre el archivo *&lt;Nombre del modelo\>***.dsv**.  
 
-7.  En el archivo *&lt;Nombre del modelo\>***.smdl**, busque las últimas tres líneas del archivo, que muestran lo siguiente:  
+7.  En el archivo *&lt;Nombre del modelo\>***.smdl**, busque las últimas tres líneas del archivo, que aparecen así:  
 
      `</Entity>`  
 
@@ -175,7 +169,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
 9. Guarde y cierre el archivo *&lt;Nombre del modelo\>***.smdl**.  
 
-10. Copie el archivo *&lt;Nombre del modelo\>***.smdl** en la carpeta *%programfiles%*\Microsoft Configuration Manager \AdminConsole\XmlStorage\Other en el servidor de sitio de Configuration Manager.  
+10. Copie el archivo *&lt;Nombre del modelo\>***.smdl** en la carpeta *%programfiles%* \Microsoft Configuration Manager \AdminConsole\XmlStorage\Other en el servidor de sitio de Configuration Manager.  
 
     > [!IMPORTANT]  
     >  Después de copiar el archivo de modelo de informe en el servidor de sitio de Configuration Manager, debe salir y reiniciar la consola de Configuration Manager para poder usar el modelo de informe en el **Asistente para crear informes**.  
@@ -406,7 +400,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
 6.  Cierre el archivo *&lt;Nombre del modelo\>***.dsv**.  
 
-7.  En el archivo *&lt;Nombre del modelo\>***.smdl**, busque las últimas tres líneas del archivo, que muestran lo siguiente:  
+7.  En el archivo *&lt;Nombre del modelo\>***.smdl**, busque las últimas tres líneas del archivo, que aparecen así:  
 
      `</Entity>`  
 
@@ -418,7 +412,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
 9. Guarde y cierre el archivo *&lt;Nombre del modelo\>***.smdl**.  
 
-10. Copie el archivo *&lt;Nombre del modelo\>***.smdl** en la carpeta *%programfiles%*\Microsoft Configuration Manager \AdminConsole\XmlStorage\Other en el servidor de sitio de Configuration Manager.  
+10. Copie el archivo *&lt;Nombre del modelo\>***.smdl** en la carpeta *%programfiles%* \Microsoft Configuration Manager\AdminConsole\XmlStorage\Other en el servidor de sitio de Configuration Manager.  
 
     > [!IMPORTANT]  
     >  Después de copiar el archivo de modelo de informe en el servidor de sitio de Configuration Manager, debe salir y reiniciar la consola de Configuration Manager para poder usar el modelo de informe en el **Asistente para crear informes**.  

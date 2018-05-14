@@ -2,24 +2,19 @@
 title: Novedades de la MDM híbrida
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las nuevas características de administración de dispositivos móviles disponibles para implementaciones híbridas con Configuration Manager e Intune.
-ms.custom: na
-ms.date: 04/02/2018
+ms.date: 05/01/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6a47569ee56931d76a41e5f14ed56f8276d264fb
-ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
+ms.openlocfilehash: 3105f9597d1f3971d6ef1092a33b0077118a1a22
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con Configuration Manager y Microsoft Intune
 
@@ -44,9 +39,43 @@ En cada sección de este artículo se enumeran las características híbridas or
 
 
 
+## <a name="may-2018"></a>Mayo de 2018
+
+### <a name="new-in-configuration-manager-current-branch"></a>Novedades de Configuration Manager (rama actual)
+
+#### <a name="support-for-new-versions-of-cisco-anyconnect-client-for-ios"></a>Compatibilidad con las nuevas versiones del cliente de Cisco AnyConnect para iOS
+<!--1357393-->
+Puede habilitar la compatibilidad con Cisco AnyConnect para iOS, versión 4.0.7 o posterior. Si lo hace, los perfiles de VPN de Cisco AnyConnect existentes se etiquetan **Cisco Legacy AnyConnect** y siguen funcionando como antes. La opción **Cisco AnyConnect** es para los nuevos perfiles de VPN que funcionan con Cisco AnyConnect en iOS versión 4.0.7 o posterior.
+
+Para obtener más información sobre cómo habilitar esta característica, vea [Características de versión preliminar](/sccm/core/servers/manage/pre-release-features).
+
+> [!Note]  
+> Siga usando la opción **Cisco Legacy AnyConnect** para perfiles de VPN de macOS. 
+
+
+
 ## <a name="april-2018"></a>Abril de 2018
 
 ### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune
+
+
+#### <a name="improved-device-tiles-in-the-windows-10-company-portal"></a>Iconos de dispositivo mejorados en el Portal de empresa de Windows 10
+<!--2213364-->
+Se han actualizado los iconos para que sean más accesibles para los usuarios con deficiencia visual y para que funcionen mejor con las herramientas de lectura de pantalla.
+
+
+#### <a name="test-the-company-portal-for-macos-on-virtual-machines"></a>Probar el Portal de empresa para macOS en máquinas virtuales
+<!--2216679-->
+Se han publicado instrucciones para ayudar a los administradores de TI a probar la aplicación Portal de empresa para macOS en máquinas virtuales en Parallels Desktop y VMware Fusion. Para obtener más información, vea [Enroll virtual macOS machines for testing](/intune/macos-enroll#enroll-virtual-macos-machines-for-testing) (Inscribir máquinas virtuales de macOS para pruebas).
+
+
+#### <a name="send-diagnostic-reports-in-company-portal-app-for-macos"></a>Enviar informes de diagnóstico en la aplicación Portal de empresa para macOS
+<!--2216677-->
+La aplicación Portal de empresa para dispositivos macOS se ha actualizado para mejorar la forma en que los usuarios notifican errores relacionados con Intune. Desde la aplicación Portal de empresa, los empleados pueden:
+
+- Cargar informes de diagnóstico directamente para el equipo de desarrollo de Microsoft.
+- Enviar por correo electrónico un identificador de incidente al equipo de soporte técnico de TI de la empresa.
+
 
 #### <a name="updated-help-experience-on-company-portal-app-for-android"></a>Se ha actualizado la experiencia de Ayuda en la aplicación Portal de empresa para Android. 
 <!--1631531-->

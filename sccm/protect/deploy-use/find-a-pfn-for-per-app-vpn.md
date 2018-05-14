@@ -1,29 +1,24 @@
 ---
-title: "Buscar un nombre de familia de paquete (PFN) para VPN por aplicación"
+title: Buscar un nombre de familia de paquete (PFN) para VPN por aplicación
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre las dos maneras de buscar un nombre de familia de paquete para poder configurar una VPN por aplicación."
-ms.custom: na
+description: Obtenga información sobre las dos maneras de buscar un nombre de familia de paquete para poder configurar una VPN por aplicación.
 ms.date: 10/06/2016
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 47118499-3d26-4c25-bfde-b129de7eaa59
-caps.latest.revision: "3"
-author: Nbigman
-ms.author: nbigman
-manager: angrobe
-ms.openlocfilehash: 640f44985ad45442b05f2bbf4ee1ec9c2590cba4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 1228133baca139fb17975f91139a8dedaee9ebe9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn"></a>Buscar un nombre de familia de paquete (PFN) para VPN por aplicación
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 Hay dos maneras de buscar un PFN para poder configurar una VPN por aplicación.
@@ -73,10 +68,10 @@ Esta es la información que se recupera para OneNote:
 
 ## <a name="find-a-pfn-if-the-app-is-not-installed-on-a-computer"></a>Buscar un PFN si la aplicación no está instalada en un equipo
 
-1.  Vaya a https://www.microsoft.com/es-es/store/apps.
+1.  Vaya a https://www.microsoft.com/en-us/store/apps
 2.  En la barra de búsqueda, escriba el nombre de la aplicación. En nuestro ejemplo, busque OneNote.
 3.  Haga clic en el vínculo de la aplicación. Observe que la dirección URL a la que tiene acceso contiene una serie de letras al final. En nuestro ejemplo, la dirección URL tiene el siguiente aspecto: `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`
-4.  En otra pestaña, pegue la dirección URL `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`, pero sustituya `<app id>` por el identificador de la aplicación que obtuvo en https://www.microsoft.com/es-es/store/apps, que es esa serie de letras que se incluye al final de la dirección URL en el paso 3. En nuestro ejemplo de OneNote, pegaría lo siguiente: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
+4.  En otra pestaña, pegue la siguiente dirección URL, `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`, pero sustituya `<app id>` por el identificador de la aplicación que obtuvo en https://www.microsoft.com/en-us/store/apps, esa serie de letras del final de la dirección URL en el paso 3. En nuestro ejemplo de OneNote, pegaría lo siguiente: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
 En Microsoft Edge, se muestra la información que le interesa. En Internet Explorer, debe hacer clic en **Abrir** para verla. El valor PFN se muestra en la primera línea. Este es el aspecto de los resultados de nuestro ejemplo:
 

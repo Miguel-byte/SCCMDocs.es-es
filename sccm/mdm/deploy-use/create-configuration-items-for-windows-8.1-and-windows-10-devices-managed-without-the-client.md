@@ -2,26 +2,19 @@
 title: Creación de elementos de configuración para dispositivos Windows 8.1 y Windows 10 administrados con Intune
 titleSuffix: Configuration Manager
 description: Use el elemento de configuración de Windows 10 de System Center Configuration Manager para administrar la configuración de los equipos con Windows 10.
-ms.custom: na
 ms.date: 07/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
-caps.latest.revision: 20
-caps.handback.revision: 0
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 7f5a50ae6ea05af7e864cf94df3063d70bd737b4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 639fabbe1e2f51194669fc1f196d88140193a727
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-windows-81-and-windows-10-devices-managed-without-the-system-center-configuration-manager-client"></a>Cómo crear elementos de configuración para dispositivos de Windows 8.1 y Windows 10 administrados sin el cliente de System Center Configuration Manager
 
@@ -330,7 +323,7 @@ En la página **Lista de aplicaciones permitidas o bloqueadas**, especifique la 
     |-------------|----------------------|  
     |**Lista de aplicaciones bloqueadas**|Seleccione esta opción si desea especificar una lista de aplicaciones que los usuarios no pueden instalar.|  
     |**Lista de aplicaciones permitidas**|Seleccione esta opción si desea especificar una lista de aplicaciones que los usuarios pueden instalar. Se bloqueará la instalación de las demás aplicaciones.|  
-    |**Agregar**|Agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección, opcionalmente el editor de la aplicación y la dirección URL de la aplicación en la tienda de aplicaciones.<br /><br /> Para especificar la dirección URL, en la Tienda Windows, busque la aplicación que desea usar.<br /><br /> Abra la página de la aplicación y copie la dirección URL en el Portapapeles. Ya puede usarla como dirección URL en una la lista de aplicaciones permitidas o bloqueadas.<br /><br /> **Ejemplo:** busque la aplicación **Skype** en la tienda. La dirección URL que utiliza será **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
+    |**Agregar**|Agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección (opcionalmente puede ser el editor de la aplicación) y la dirección URL de la aplicación en la tienda de aplicaciones.<br /><br /> Para especificar la dirección URL, en la Tienda Windows, busque la aplicación que desea usar.<br /><br /> Abra la página de la aplicación y copie la dirección URL en el Portapapeles. Ya puede usarla como dirección URL en una la lista de aplicaciones permitidas o bloqueadas.<br /><br /> **Ejemplo:** busque la aplicación **Skype** en la tienda. La dirección URL que usa es **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
     |**Editarar**|Permite editar el nombre, el editor y la dirección URL de la aplicación seleccionada.|  
     |**Quitar**|Elimina la aplicación seleccionada de la lista.|  
     |**Importarar**|Importa la lista de las aplicaciones que ha especificado en un archivo de valores separados por comas. Utilice el formato, nombre de la aplicación, editor, dirección URL de la aplicación en el archivo.|  
@@ -371,16 +364,16 @@ Esta configuración es para dispositivos con Windows 10, y versiones posteriores
 |**Habilitar SmartScreen**|Utilizar SmartScreen para comprobar que los archivos que los usuarios descargan no contienen código malintencionado.|  
 |**Permitir elementos emergentes**|Permitir o deshabilitar elementos emergentes del explorador.|  
 |**Permitir cookies**|Permitir o deshabilitar las cookies.|  
-|**Permitir autorrelleno**|Permitir el uso de la característica Autorrellenar del explorador de Microsoft Edge.|  
+|**Permitir autorrelleno**|Permitir el uso de la característica Autorrellenar del explorador de Edge.|  
 |**Permitir administrador de contraseñas**|Permitir el uso de la característica Administrador de contraseñas del explorador de Microsoft Edge.|  
 |**Ubicación de la lista de sitios del modo de empresa**|Especifica dónde se encuentra la lista de sitios web que se abrirá en modo de empresa. Los usuarios no pueden editar esta lista.|
-|**Bloquear acceso a about:flags**|Impida que el usuario final acceda a la página about:flags de Microsoft Edge que contiene configuración experimental y para desarrolladores.|
+|**Bloquear acceso a about:flags**|Impida que el usuario final acceda a la página about:flags de Edge que contiene configuración experimental y para desarrolladores.|
 |**Invalidación de avisos de SmartScreen**|Permite al usuario final omitir las advertencias del filtro SmartScreen sobre los sitios web que pueden ser malintencionados.|
 |**Invalidación de avisos de SmartScreen para archivos**|Permite al usuario final omitir las advertencias del filtro SmartScreen sobre cómo descargar archivos que pueden ser malintencionados.|
 |**Dirección IP de Localhost para WebRTC**|Impida que la dirección IP de Localhost de los usuarios se muestre cuando se realicen llamadas telefónicas con el protocolo RTC web.|
 |**Motor de búsqueda predeterminado**|Especifique el motor de búsqueda predeterminado que se usará. Los usuarios finales pueden cambiar este valor en cualquier momento.|
 |**URL de archivo XML OpenSearch**|Puede usar un archivo OpenSearch XML para crear un servicio de búsqueda para Microsoft Edge.<br>Para obtener más información, consulte [OpenSearch](https://msdn.microsoft.com/library/windows/desktop/dd940337).|
-|**Páginas principales (solo escritorio)**|Agregue una lista de sitios que quiera usar como páginas principales en el explorador Microsoft Edge (solo dispositivos de escritorio).|  
+|**Páginas principales (solo escritorio)**|Agregue una lista de sitios que quiera usar como páginas principales en el explorador Edge (solo dispositivos de escritorio).|  
 
 
 ### <a name="windows-defender"></a>Windows Defender

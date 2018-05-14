@@ -1,30 +1,24 @@
 ---
 title: Comprobador de requisitos previos
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre cómo usar el Comprobador de requisitos previos para identificar y corregir problemas que podrían bloquear un sitio o la instalación de un rol de sistema de sitio."
-ms.custom: na
+description: Obtenga información sobre cómo usar el Comprobador de requisitos previos para identificar y corregir problemas que podrían bloquear un sitio o la instalación de un rol de sistema de sitio.
 ms.date: 3/1/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: aaf13bb8-4ba2-4bd7-9fac-d36a9d88a1b6
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 45e356b153a95a49f09f2d2931b8b306d0fd2b4c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 296ed6590c10adeab22fb274d5e6f44bc578a784
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prerequisite-checker-for-system-center-configuration-manager"></a>Comprobador de requisitos previos de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
  Antes de ejecutar el programa de instalación para instalar o actualizar un sitio de System Center Configuration Manager, o antes de instalar un rol de sistema de sitio en un servidor nuevo, puede usar esta aplicación independiente (**Prereqchk.exe**) de la versión de Configuration Manager que desea usar para comprobar la disponibilidad del servidor. Use el Comprobador de requisitos previos para identificar y corregir problemas que podrían bloquear un sitio o la instalación de un rol de sistema de sitio.  
 
@@ -137,15 +131,15 @@ Para obtener más información sobre las comprobaciones que lleva a cabo el Comp
 
          Necesario. Comprueba que el equipo especificado cumple los requisitos del proveedor de SMS.  
 
-    -   **/JOIN &lt;*FQDN del sitio de administración central*>**  
+    -   **/JOIN &lt;*FQDN de sitio de administración central*>**  
 
          No es necesario. Comprueba que el equipo local cumple los requisitos para la conexión al servidor de sitio de administración central.  
 
-    -   **/MP &lt;*FQDN del punto de administración*>**  
+    -   **/MP &lt;*FQDN de punto de administración*>**  
 
          No es necesario. Comprueba que el equipo especificado cumple los requisitos para el rol de sistema de sitio de punto de administración. Esta opción solo se admite cuando se usa la opción **/PRI** .  
 
-    -   **/DP &lt;*FQDN del punto de distribución*>**  
+    -   **/DP &lt;*FQDN de punto de distribución*>**  
 
          No es necesario. Comprueba que el equipo especificado cumple los requisitos para el rol de sistema de sitio de punto de distribución. Esta opción solo se admite cuando se usa la opción **/PRI** .  
 
@@ -163,7 +157,7 @@ Para obtener más información sobre las comprobaciones que lleva a cabo el Comp
 
          No es necesario. Inicia el Comprobador de requisitos previos sin mostrar la interfaz de usuario. Debe especificar esta opción antes que cualquier otra opción en la línea de comandos.  
 
-    -   **/SEC &lt;*FQDN del servidor de sitio secundario*>**  
+    -   **/SEC &lt;*FQDN de servidor de sitio secundario*>**  
 
          Necesario. Comprueba que el equipo especificado cumple los requisitos para el sitio secundario.  
 

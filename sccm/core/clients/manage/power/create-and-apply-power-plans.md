@@ -1,30 +1,24 @@
 ---
-title: "Creación y aplicación de planes de energía"
+title: Creación y aplicación de planes de energía
 titleSuffix: Configuration Manager
-description: "Cree y aplique planes de energía en System Center Configuration Manager."
-ms.custom: na
+description: Cree y aplique planes de energía en System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 738eddaa-52e2-467f-b453-821ef2884d47
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: ec32a0b1591fffe77ace91f478e03302f429c957
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 4504f26f8f6288750d36028d8eb795ae0d839fbc
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-and-apply-power-plans-in-system-center-configuration-manager"></a>Cómo crear y aplicar planes de energía en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 La administración de energía de System Center Configuration Manager le permite aplicar los planes de energía incluidos en Configuration Manager a colecciones de equipos de la jerarquía o crear sus propios planes de energía personalizados. Use el procedimiento de este tema para aplicar un plan de energía integrado o personalizado a los equipos.  
 
@@ -52,7 +46,7 @@ La administración de energía de System Center Configuration Manager le permite
 
 3.  En la lista **Recopilaciones de dispositivos** , haga clic en la recopilación a la que quiere aplicar la configuración de administración de energía y, a continuación, en la pestaña **Inicio** en el grupo **Propiedades** , haga clic en **Propiedades**.  
 
-4.  En la pestaña **Administración de energía** del cuadro de diálogo *<Nombre de la colección>\>***Propiedades**, seleccione **Especificar la configuración de administración de energía para esta recopilación**.  
+4.  En la pestaña **Administración de energía** del cuadro de diálogo *<Nombre de recopilación\>***Propiedades**, seleccione **Especificar la configuración de administración de energía para esta recopilación**.  
 
     > [!NOTE]  
     >  También puede hacer clic en **Examinar** y, a continuación, copiar la configuración de administración de energía de una recopilación seleccionada en la recopilación seleccionada.  
@@ -69,12 +63,12 @@ La administración de energía de System Center Configuration Manager le permite
     > [!NOTE]  
     >  Puede usar el informe **Actividad de equipo** que le ayudará a decidir las programaciones que debe usar para las horas punta y fuera de horas punta al aplicar planes de energía a recopilaciones de equipos. Para más información, vea [Cómo supervisar y planear la administración en el Administrador de configuración de energía](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
 
-     También puede seleccionar los planes de energía integrados, **Equilibrado (ConfigMgr)**, **Alto rendimiento (ConfigMgr)** y **Ahorro de energía (ConfigMgr)**y, a continuación, hacer clic en **Ver** para mostrar las propiedades de cada plan de energía.  
+     También puede seleccionar los planes de energía integrados, **Equilibrado (ConfigMgr)**, **Alto rendimiento (ConfigMgr)** y **Ahorro de energía (ConfigMgr)** y, a continuación, hacer clic en **Ver** para mostrar las propiedades de cada plan de energía.  
 
     > [!NOTE]  
     >  No se pueden modificar los planes de energía integrados.  
 
-8.  En el cuadro de diálogo *<nombre de plan de energía\>***Propiedades**, configure las opciones siguientes:  
+8.  En el cuadro de diálogo *<Nombre de plan de energía\>***Propiedades**, configure las opciones siguientes:  
 
     -   **Nombre:** especifique un nombre para este plan de energía o use el nombre predeterminado proporcionado.  
 
@@ -85,9 +79,9 @@ La administración de energía de System Center Configuration Manager le permite
         > [!IMPORTANT]  
         >  La configuración habilitada se aplica a los equipos cuando se aplica el plan de energía. Si desactiva una casilla de configuración de energía, no se cambia el valor en el equipo cliente cuando se aplica el plan de energía. Al desactivar una casilla no se restaura la configuración de energía a su valor anterior antes de haber aplicado un plan de energía.  
 
-9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo *<nombre de plan de energía\>***Propiedades**.  
+9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo *<Nombre de plan de energía\>***Propiedades**.  
 
-10. Haga clic en **Aceptar** para cerrar el cuadro de diálogo *<Nombre de la colección>\>***Configuración** y aplicar el plan de energía.  
+10. Haga clic en **Aceptar** para cerrar el cuadro de diálogo *<Nombre de recopilación\>***Configuración** y aplicar el plan de energía.  
 
 ##  <a name="BKMK_Plans"></a> Available power management plan settings  
  En la tabla siguiente se muestran las opciones de administración de energía disponibles en Configuration Manager. Puede definir configuraciones diferentes para cuando el equipo está conectado o funciona con batería. Según la versión de Windows que use, puede que algunas opciones no sean configurables.  
@@ -107,8 +101,8 @@ La administración de energía de System Center Configuration Manager le permite
 |**Apagar disco duro tras (minutos)**|Especifica el período de tiempo, en minutos, que el disco duro del equipo debe estar inactivo antes de que se apague. Especifique un valor de **0** si no quiere que la administración de energía apague el disco duro del equipo.|  
 |**Hibernar tras (minutos)**|Especifica el período de tiempo, en minutos, que el equipo debe estar inactivo antes de que entre en hibernación. Especifique un valor de **0** si no quiere que la administración de energía coloque el equipo en hibernación.|  
 |**Acción de batería baja**|Especifica la acción que se produce cuando la batería del equipo alcanza el nivel de notificación de batería baja especificado. Especifica la acción que se produce cuando el usuario cierra la tapa de un equipo portátil. Los valores posibles son **No hacer nada**, **Suspender**, **Hibernar** y **Apagar**.|  
-|**Acción de nivel crítico de batería**|Especifica la acción que se realiza cuando la batería del equipo alcanza el nivel de notificación de nivel crítico de batería especificado. Especifica la acción que se produce cuando el usuario cierra la tapa de un equipo portátil. Los valores posibles incluyen **Suspender**, **Hibernar** y **Apagar**.|  
+|**Acción de nivel crítico de batería**|Especifica la acción que se realiza cuando la batería del equipo alcanza el nivel de notificación de batería crítica especificado. Especifica la acción que se produce cuando el usuario cierra la tapa de un equipo portátil. Los valores posibles incluyen **Suspender**, **Hibernar** y **Apagar**.|  
 |**Permitir suspensión híbrida**|La selección del valor **Activado** o **Desactivado** especifica si Windows guarda un archivo de hibernación al entrar en suspensión, que puede usarse para restaurar el estado del equipo en caso de pérdida de energía mientras ha entrado en modo de suspensión.<br /><br /> La suspensión híbrida está diseñada para equipos de escritorio y, de forma predeterminada, no está habilitada en equipos portátiles. En equipos que ejecutan Windows 7, la habilitación de la suspensión híbrida deshabilita la función de hibernación.|  
 |**Permitir el estado de suspensión durante la acción de reposo**|La selección del valor **Activado** o **Desactivado** permite que el equipo esté en modo de espera, que todavía consume algo de energía, pero permite que el equipo se reactive con mayor rapidez. Si esta opción se establece en **Desactivar**, el equipo solo puede hibernar o apagarse.|  
 |**Inactividad requerida para entrar en suspensión (%)**|Especifica el porcentaje de tiempo de inactividad en el tiempo de procesador del equipo necesario para que el equipo entre en suspensión. En equipos que ejecutan Windows 7, este valor siempre se establece en **0**.|  
-|**Habilitar temporizador de activación de Windows para equipos de escritorio**|La selección del valor **Habilitar** o **Deshabilitar** puede habilitar el temporizador de Windows integrado para que la administración de energía lo use para reactivar un equipo de escritorio. Cuando se activa un equipo de escritorio usando el temporizador de activación de Windows, permanecerá activo durante 10 minutos de forma predeterminada para que el equipo tenga tiempo de instalar actualizaciones o recibir directivas.<br /><br /> Los temporizadores de activación no se admiten en equipos portátiles para evitar escenarios en los que se activen sin estar enchufados.|  
+|**Habilitar temporizador de activación de Windows para equipos de escritorio**|La selección del valor **Habilitar** o **Deshabilitar** puede habilitar el temporizador de Windows integrado para que la administración de energía lo use para reactivar un equipo de escritorio. Cuando se reactiva un equipo de escritorio utilizando el temporizador de activación Windows, permanecerá activo durante 10 minutos para que tenga tiempo para el equipo para instalar las actualizaciones o para recibir la directiva de forma predeterminada.<br /><br /> Los temporizadores de activación no se admiten en equipos portátiles para evitar escenarios en los que se activen sin estar enchufados.|  

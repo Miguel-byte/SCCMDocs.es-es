@@ -1,29 +1,24 @@
 ---
-title: "Configuración de alertas de Endpoint Protection"
+title: Configuración de alertas de Endpoint Protection
 titleSuffix: Configuration Manager
-description: "Obtenga más información sobre cómo configurar alertas de Endpoint Protection en System Center Configuration Manager."
-ms.custom: na
+description: Obtenga más información sobre cómo configurar alertas de Endpoint Protection en System Center Configuration Manager.
 ms.date: 03/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 91df245565cfe99f79a18618d62c00f0cea579d2
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 275ce06520174adf10100b77a8034620b072c93f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Configurar alertas de Endpoint Protection en Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
  Puede configurar alertas de Endpoint Protection en Microsoft System Center Configuration Manager para enviar notificaciones a los usuarios administrativos cuando se producen eventos específicos, como una infección de malware en su jerarquía. Las notificaciones se muestran en el panel de Endpoint Protection en la consola de Configuration Manager, en el nodo **Alertas** del área de trabajo **Supervisión**. También se pueden enviar por correo electrónico a los usuarios especificados.
 
@@ -43,12 +38,12 @@ ms.lasthandoff: 10/12/2017
     > [!NOTE]
     >  No puede configurar alertas para recopilaciones de usuario.
 
-4.  En la pestaña **Alertas** del cuadro de diálogo **Propiedades de** *<Nombre de recopilación\>*, seleccione **Ver esta recopilación en el panel de Endpoint Protection** si quiere ver los detalles de las operaciones de antimalware realizadas para esta recopilación en el área de trabajo **Supervisión** de la consola de Configuration Manager.
+4.  En la pestaña **Alertas** del cuadro de diálogo *<Nombre de recopilación\>***Propiedades**, seleccione **Ver esta recopilación en el panel de Endpoint Protection** si quiere ver los detalles de las operaciones de antimalware realizadas para esta recopilación en el área de trabajo **Supervisión** de la consola de Configuration Manager.
 
     > [!NOTE]
     >  Esta opción no está disponible para la recopilación **Todos los sistemas** .
 
-5.  En la pestaña **Alertas** del cuadro de diálogo **Propiedades de** *<Nombre de recopilación\>*, haga clic en **Agregar**.
+5.  En la pestaña **Alertas** del cuadro de diálogo *Nombre de recopilación\>***Propiedades**, haga clic en **Agregar**.
 
 6.  En el cuadro de diálogo **Agregar nuevas alertas de recopilación**, en la sección **Generate an alert when these conditions apply** (Generar una alerta si se cumplen estas condiciones), seleccione las alertas que quiere que Configuration Manager genere cuando se produzcan los eventos de Endpoint Protection especificados y después haga clic en **Aceptar**.
 
@@ -87,7 +82,7 @@ ms.lasthandoff: 10/12/2017
 
         -   **Intervalo de detección (horas)** : indique el intervalo de detección (en horas) en que se debe producir el número de detecciones de malware. Especifique un número entre **1** y **168**.
 
-9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades de** *<Nombre de recopilación\>*.  
+9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo *<Nombre de recopilación\>***Propiedades**.  
 
 ## <a name="alert-for-outdated-malware-client"></a>Alerta para clientes de malware obsoletos
 

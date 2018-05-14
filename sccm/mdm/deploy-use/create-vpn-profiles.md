@@ -1,45 +1,42 @@
 ---
 title: Perfiles de VPN
 titleSuffix: Configuration Manager
-description: Perfiles de VPN en dispositivos móviles en System Center Configuration Manager.
-ms.custom: na
-ms.date: 11/20/2017
+description: Obtenga más información sobre los perfiles de VPN en dispositivos móviles en Configuration Manager.
+ms.date: 05/01/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
-caps.latest.revision: 18
-caps.handback.revision: 0
-author: lleonard-msft
-ms.author: alleonar
-manager: angrobe
-ms.openlocfilehash: a66212537c9e6829965f81d7622ae825ca6b80bb
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 1b59c413fdd857db3aadd94b9851ad0778937a0a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>Perfiles de VPN en dispositivos móviles en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Use perfiles de VPN en System Center Configuration Manager para implementar la configuración de VPN en los usuarios de dispositivos móviles de la organización. Mediante la implementación de esta configuración, se minimiza la intervención del usuario final necesaria para conectarse a los recursos de la red de la empresa.  
+Use perfiles de VPN en Configuration Manager para implementar la configuración de VPN para los usuarios de dispositivos móviles de la organización. Mediante la implementación de esta configuración, se minimiza la intervención del usuario final necesaria para conectarse a los recursos de la red de la empresa.  
 
- Por ejemplo, quiere configurar todos los dispositivos que ejecutan el sistema operativo iOS con los parámetros necesarios para conectarse a un recurso compartido de archivos en la red corporativa. Puede crear un perfil de VPN que tenga la configuración necesaria para conectarse a la red corporativa y, después, implementar este perfil a todos los usuarios de la jerarquía que tengan dispositivos que ejecuten iOS. Los usuarios de dispositivos iOS verán la conexión VPN en la lista de redes disponibles y pueden conectarse a esta red con un esfuerzo mínimo.  
+Por ejemplo, quiere configurar todos los dispositivos iOS para conectarse a un recurso compartido de archivos de la red corporativa. Cree un perfil de VPN con la configuración de conexión necesaria. Luego implemente este perfil para todos los usuarios con dispositivos iOS. Esos usuarios ven la conexión VPN en la lista de redes disponibles y pueden conectarse a esta red sin apenas esfuerzo.  
 
- Cuando se crea un perfil de VPN, puede incluir una amplia gama de opciones de seguridad. Por ejemplo, puede especificar certificados para la validación de servidor y la autenticación de cliente que se han configurado mediante perfiles de certificado de System Center Configuration Manager. Para obtener más información sobre los perfiles de certificado, consulte la información sobre [perfiles de certificado en Configuration Manager](../../protect/deploy-use/introduction-to-certificate-profiles.md).  
+Cuando se crea un perfil de VPN, puede incluir una amplia gama de opciones de seguridad. Por ejemplo, puede especificar certificados para la validación de servidor y la autenticación de cliente que se han configurado mediante perfiles de certificado de Configuration Manager. Para obtener más información, consulte [Introduction to certificate profiles in System Center Configuration Manager](../../protect/deploy-use/introduction-to-certificate-profiles.md) (Introducción a perfiles de certificado en Configuration Manager).  
 
- ## <a name="vpn-profiles-when-using-configuration-manager-together-with-intune"></a>Perfiles de VPN en Configuration Manager con Intune
 
- Para implementar perfiles en dispositivos iOS, Android, Windows Phone y Windows 8.1, estos dispositivos deben inscribirse en Microsoft Intune. También se pueden inscribir en Intune dispositivos de otras plataformas. Para obtener información sobre cómo realizar la inscripción, consulte [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/library/dn646962.aspx) (Administrar dispositivos móviles con Microsoft Intune). En esta tabla se muestra qué tipo de conexión se admite para cada plataforma de dispositivo:  
+
+## <a name="vpn-profiles-when-using-configuration-manager-together-with-intune"></a>Perfiles de VPN en Configuration Manager con Intune
+
+Para implementar perfiles en dispositivos iOS, Android, Windows Phone y Windows 8.1, estos deben estar inscritos en Microsoft Intune. También se pueden inscribir en Intune dispositivos de otras plataformas. Para obtener información sobre cómo realizar la inscripción, vea [Enroll devices in Microsoft Intune](/intune/device-enrollment) (Inscribir dispositivos en Microsoft Intune). 
+
+En esta tabla se muestra qué tipo de conexión se admite para cada plataforma de dispositivo:  
 
  |Tipo de conexión|iOS y macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop y Mobile|  
- |---------------------|----------------------|-------------|-----------------|----------------|--------------------|-----------------------|-----------------------------------|  
- |Cisco AnyConnect|Sí|Sí|No|No|No|No|No|
+ |---------------|---------------|-------|-----------|----------|--------------|-----------------|-----------------------------|  
+ |Cisco AnyConnect|Sí<sup>1</sup>|Sí|No|No|No|No|No|
  |Cisco (IPsec)|Solo iOS|No|No|No|No|No|No|  
  |Pulse Secure|Sí|Sí|Sí|No|Sí|Sí|Sí|  
  |F5 Edge Client|Sí|Sí|Sí|No|Sí|Sí|Sí|  
@@ -51,35 +48,63 @@ Use perfiles de VPN en System Center Configuration Manager para implementar la c
  |PPTP|Sí|No|Sí|Sí|Sí|No|Sí|  
  |L2TP|Sí|No|Sí|Sí|Sí|No|Sí (OMA-URI)|  
 
-## <a name="create-vpn-profiles"></a>Crear perfiles de VPN
-En [Cómo crear perfiles de VPN en System Center Configuration Manager](../../protect/deploy-use/create-vpn-profiles.md) se proporciona información general sobre cómo crear perfiles de VPN.
+<sup>1</sup> A partir de la versión 1802, varía el uso del tipo de conexión de Cisco AnyConnect.<!--1357393-->  
+   - Use la opción **Cisco Legacy AnyConnect** para perfiles de VPN en las siguientes versiones:
+       - iOS con Cisco AnyConnect versión 4.0.5 o anteriores
+       - macOS con cualquier versión de Cisco AnyConnect
+   - Use la opción **Cisco AnyConnect** para perfiles de VPN en las siguientes versiones:
+       - iOS con Cisco AnyConnect versión 4.0.7 o posteriores
+
+     > [!Note]  
+     > Cisco AnyConnect 4.0.07x y versiones posteriores para iOS es una característica de versión preliminar. Para habilitarla, vea [Características de versión preliminar](/sccm/core/servers/manage/pre-release-features).  
+
+
 
 ## <a name="windows-10-vpn-features-available-when-using-configuration-manager-with-intune"></a>Características de VPN de Windows 10 disponibles cuando se usa Configuration Manager con Intune  
 
+Las siguientes opciones están disponibles para todos los tipos de conexión en Windows 10:
 
-> [!NOTE]  
-> El nombre de un perfil de VPN que usa las características de VPN de Windows 10 no puede estar en formato Unicode ni incluir caracteres especiales.
+- **Omitir VPN al conectarse a la red Wi-Fi de empresa**: la conexión VPN no se usa cuando el dispositivo está conectado a la red Wi-Fi de empresa. Escriba el nombre de red de confianza que se ha usado para determinar si el dispositivo está conectado a la red de la empresa.  
+
+- **Reglas de tráfico de red**: defina qué protocolos, puertos local y remoto e intervalos de direcciones se van a habilitar para la conexión VPN.  
+
+     > [!Note]  
+     > Si no se crea ninguna regla de tráfico de red, se habilitan todos los protocolos, puertos e intervalos de direcciones. Una vez creada una regla, la conexión VPN solo usa los protocolos, puertos e intervalos de direcciones que especifique en esa regla o en reglas adicionales.  
+  
+- **Rutas**: rutas que usan la conexión VPN. La creación de más de 60 rutas puede producir un error en la directiva.  
+
+- **Servidores DNS**: servidores DNS que usa la conexión VPN una vez establecida la conexión.  
+
+- **Aplicaciones que se conectan automáticamente a la VPN**: puede agregar aplicaciones o importar listas de aplicaciones que usan automáticamente la conexión VPN. El tipo de aplicación determina el identificador de la aplicación. Para una aplicación de escritorio, proporcione la ruta del archivo de la aplicación. Para una aplicación universal, proporcione el nombre de familia de paquete (PFN). Para obtener información sobre cómo buscar el PFN de una aplicación, consulte [Find a package family name for per-app VPN](../../protect/deploy-use/find-a-pfn-for-per-app-vpn.md) (Buscar un nombre de familia de paquete para VPN por aplicación).  
+
+     > [!IMPORTANT]  
+     > Proteja todas las listas de aplicaciones asociadas que se compilan para su uso en la configuración de VPN por aplicación. Si un usuario no autorizado modifica la lista y usted la importa a la lista de aplicaciones de VPN por aplicación, podría autorizar el acceso a VPN a aplicaciones que no deberían tener acceso. Una forma de proteger las listas de aplicaciones consiste en usar una lista de control de acceso (ACL).  
 
 
-|Opción|Más información|Tipo de conexión|  
-    |------------|----------------------|---------------------|  
-    |**Omitir VPN al conectarse a la red Wi-Fi de empresa**|La conexión VPN no se usará cuando el dispositivo se conecte a la red Wi-Fi de la empresa. Escriba el nombre de red de confianza que se ha usado para determinar si el dispositivo está conectado a la red de la empresa.|Todos|  
-    |**Reglas de tráfico de red**|Defina qué protocolos, puertos local y remoto e intervalos de direcciones se habilitarán para la conexión VPN.<br /><br /> **Nota:** Si no se crea ninguna regla de tráfico de red, se habilitan todos los protocolos, puertos e intervalos de direcciones. Una vez creada una regla, la conexión VPN solo usará los protocolos, puertos e intervalos de direcciones que especifique en esa regla o en reglas adicionales.|Todos|  
-    |**Rutas**|Rutas que usará la conexión VPN. Tenga en cuenta que la creación de más de 60 rutas puede producir un error en la directiva. |Todos|  
-    |**Servidores DNS**|Servidores DNS que usa la conexión VPN una vez establecida la conexión.|Todos|  
-    |**Aplicaciones que se conectan automáticamente a la VPN**|Puede agregar aplicaciones o importar listas de aplicaciones que usarán automáticamente la conexión VPN. El tipo de aplicación determinará el identificador de la aplicación. Para una aplicación de escritorio, proporcione la ruta del archivo de la aplicación. Para una aplicación universal, proporcione el nombre de familia de paquete (PFN). Para obtener información sobre cómo buscar el PFN de una aplicación, consulte [Find a package family name for per-app VPN](../../protect/deploy-use/find-a-pfn-for-per-app-vpn.md) (Buscar un nombre de familia de paquete para VPN por aplicación). |Todos|
 
-> [!IMPORTANT]
-> Se recomienda que proteja todas las listas de aplicaciones asociadas que se compilan para su uso en la configuración de VPN por aplicación. Si un usuario no autorizado modifica la lista y usted la importa en la lista de aplicaciones de VPN por aplicación, podría autorizar el acceso a VPN a aplicaciones que no deberían tener acceso. Una forma de proteger las listas de aplicaciones consiste en usar una lista de control de acceso (ACL).
+## <a name="create-vpn-profiles"></a>Crear perfiles de VPN
 
-1. En la página **Plataformas admitidas** del **Asistente para crear perfil de VPN**, seleccione los sistemas operativos en los que se instalará el perfil de VPN o elija **Seleccionar todo** para instalar el perfil de VPN en todos los sistemas operativos disponibles.  
-2.  En la página **Método de autenticación** del asistente, especifique:  
 
-    -   **Método de autenticación:** seleccione el método de autenticación que usará la conexión VPN. Métodos disponibles dependiendo del tipo de conexión como se muestra en esta tabla.  
+1. En el área de trabajo **Activos y compatibilidad** de la consola de Configuration Manager, expanda **Configuración de cumplimiento**, expanda **Acceso a los recursos de la compañía** y seleccione **Perfiles de VPN**. 
+
+2. Haga clic en **Crear perfil de VPN** en la cinta de opciones.  
+
+3. En la página **General**, especifique un **Nombre** y luego seleccione el **Tipo de perfil de VPN**.   
+     > [!NOTE]  
+     > El nombre de un perfil de VPN que usa las características de VPN de Windows 10 no puede estar en formato Unicode ni incluir caracteres especiales.
+
+
+4. Si la página **Plataformas compatibles** está disponible, seleccione las versiones de sistema operativo para el tipo de perfil de VPN especificado anteriormente. Elija **Seleccionar todo** para instalar el perfil de VPN en todas las versiones de sistema operativo disponibles.  
+
+5. Configure la conexión VPN en la página **Conexión**. Para obtener más información sobre estas opciones, vea el paso sobre la página Conexión en [Crear un perfil de VPN](/sccm/protect/deploy-use/create-vpn-profiles#create-a-vpn-profile).  
+
+6.  En la página **Método de autenticación**, especifique la configuración siguiente:  
+
+    -   **Método de autenticación:** seleccione el método de autenticación que usa la conexión VPN. Métodos disponibles dependiendo del tipo de conexión como se muestra en esta tabla.  
 
         |Método de autenticación|Tipos de &nbsp;conexión&nbsp; admitidos|  
         |---------------------------|--------------------------------|  
-        |**Certificados**<br /><br /> **Notas:**<ul><li>Si el certificado de cliente se autentica en un servidor RADIUS, como un Servidor de directivas de redes, el nombre alternativo del sujeto en el certificado debe configurarse como el nombre principal de usuario.</li><li>En el caso de las implementaciones de Android, seleccione el identificador EKU y el valor de hash de huella digital del emisor de certificados.  De lo contrario, los usuarios deben seleccionar manualmente el certificado adecuado.</li></ul>  |<ul><li>Cisco AnyConnect</li><li>Pulse Secure</li><li>F5 Edge Client</li><li>Dell SonicWALL Mobile Connect</li><li> VPN móvil de punto de comprobación</li></ul>|  
+        |**Certificados**<br /><br /> **Notas:**<ul><li>Si el certificado de cliente se autentica en un servidor RADIUS, como un Servidor de directivas de redes, establezca el nombre alternativo del firmante del certificado en el nombre principal de usuario.</li><li>En el caso de las implementaciones de Android, seleccione el identificador EKU y el valor de hash de huella digital del emisor de certificados. De lo contrario, los usuarios deben seleccionar manualmente el certificado adecuado.</li></ul>  |<ul><li>Cisco AnyConnect</li><li>Cisco Legacy AnyConnect</li><li>Pulse Secure</li><li>F5 Edge Client</li><li>Dell SonicWALL Mobile Connect</li><li> VPN móvil de punto de comprobación</li></ul>|  
         |**Nombre de usuario y contraseña**|<ul><li>Pulse Secure</li><li>F5 Edge Client</li><li>Dell SonicWALL Mobile Connect</li><li> VPN móvil de punto de comprobación</li></ul>|  
         |**Microsoft EAP-TTLS**|<ul><li>Microsoft SSL (SSTP)</li><li>Microsoft Automatic</li><li>PPTP</li><li>IKEv2</li><li>L2TP</li></ul>|  
         |**EAP (PEAP) protegido de Microsoft**|<ul><li>Microsoft SSL (SSTP)</li><li>Microsoft Automatic</li><li>IKEv2</li><li>PPTP</li><li>L2TP</li></ul>|  
@@ -93,25 +118,25 @@ En [Cómo crear perfiles de VPN en System Center Configuration Manager](../../pr
 
         -   **Recordar las credenciales de usuario en cada inicio de sesión**: las credenciales de usuario se recuerdan, de manera que el usuario no tiene que escribirlas cada vez que se conecte.  
 
-        -   **Seleccionar un certificado de cliente para la autenticación de cliente**: seleccione el [certificado SCEP](create-pfx-certificate-profiles.md) de cliente que ha creado previamente y que se usará para autenticar la conexión VPN.   
+        -   **Seleccionar un certificado de cliente para la autenticación de cliente**: seleccione el [certificado SCEP](create-pfx-certificate-profiles.md) de cliente que ha creado previamente y que se usa para autenticar la conexión VPN.   
 
             > [!NOTE]  
-            >  Para dispositivos iOS, el perfil SCEP que seleccione se incrustará en el perfil de VPN. Para otras plataformas, se agrega una regla de aplicabilidad para garantizar que el perfil de VPN no se instala si el certificado no está presente o no es conforme.  
+            >  Para dispositivos iOS, el perfil SCEP que seleccione se incrusta en el perfil de VPN. Para otras plataformas, se agrega una regla de aplicabilidad para garantizar que el perfil de VPN no se instala si el certificado no está presente o no es conforme.  
             >   
-            >  Si el certificado SCEP que especifique no es compatible o no se implementó, el perfil de VPN no se instalará en el dispositivo.
+            >  Si el certificado SCEP que especifique no es conforme o no se ha implementado, el perfil de VPN no se instala en el dispositivo.
             >  
-            >  Los dispositivos que ejecutan iOS solo admiten RSA SecurID y MSCHAP v2 como métodos de autenticación cuando el tipo de conexión es PPTP. Para evitar errores, implemente un perfil de VPN PPTP independiente en los dispositivos que ejecutan iOS.  
+            >  Los dispositivos que ejecutan iOS solo admiten RSA SecurID y MSCHAP v2 como métodos de autenticación cuando el tipo de conexión es PPTP. Para evitar errores, implemente un perfil de VPN PPTP independiente en los dispositivos que ejecutan iOS.   
 
-        - **Acceso condicional**
-            - Pulse **Habilitar acceso condicional para esta conexión VPN** para asegurarse de que los dispositivos que se conectan a la VPN se prueban para el cumplimiento del acceso condicional antes de la conexión. Las directivas de cumplimiento se describen en [Directivas de cumplimiento de dispositivo en System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/device-compliance-policies.md).
-            - Seleccione **Habilitar inicio de sesión único (SSO) con certificado alternativo** para elegir un certificado diferente al certificado de autenticación de VPN para el cumplimiento del dispositivo. Si elige esta opción, proporcione el **EKU** (lista separada por comas) y el **Hash del emisor** para el certificado correcto que el cliente de VPN debe buscar.
+        - **Acceso condicional**  
+            - Pulse **Habilitar acceso condicional para esta conexión VPN** para asegurarse de que los dispositivos que se conectan a la VPN se prueban para el cumplimiento del acceso condicional antes de la conexión. Para obtener más información, vea [Directivas de cumplimiento de dispositivos](/sccm/protect/deploy-use/device-compliance-policies).  
 
-         - Para **Windows Information Protection**, proporcione la identidad corporativa administrada por la empresa, que normalmente es el dominio principal de la organización, por ejemplo, *contoso.com*. Puede especificar varios dominios que sean propiedad de la organización separándolos con el carácter "|". Por ejemplo, *contoso.com|newcontoso.com*.   
-            Para obtener más información sobre Windows Information Protection, consulte [Crear una directiva de Windows Information Protection (WIP) con Microsoft Intune](https://technet.microsoft.com/itpro/windows/keep-secure/create-wip-policy-using-intune).   
+            - Seleccione **Habilitar inicio de sesión único (SSO) con certificado alternativo** para elegir un certificado diferente al certificado de autenticación de VPN para el cumplimiento del dispositivo. Si elige esta opción, proporcione el **EKU** (lista separada por comas) y el **Hash del emisor** para el certificado correcto que el cliente de VPN debe buscar.  
 
-         ![Configurar el acceso condicional para VPN](media/vpn-conditional-access.png)
+         - Para **Windows Information Protection**, proporcione la identidad corporativa administrada por la empresa, que normalmente es el dominio principal de la organización, por ejemplo, *contoso.com*. Puede especificar varios dominios que sean propiedad de la organización si los separa con el carácter "|". Por ejemplo, *contoso.com|newcontoso.com*. Para obtener más información, vea [Creación e implementación de una directiva de protección de aplicaciones de Windows Information Protection (WIP) con Intune](/intune/windows-information-protection-policy-create).   
 
-         Cuando lo admita la versión de Windows que ejecuta Configuration Manager _y_ el método de autorización seleccionado, puede hacer clic en **Configurar** para abrir el cuadro de diálogo de propiedades de Windows y configurar las propiedades del método de autenticación.  Si **Configurar** está deshabilitado, utilice medios alternativos para configurar las propiedades del método de autenticación.
+         ![Asistente para crear perfil de VPN, página Método de autenticación](media/vpn-conditional-access.png)
+
+         Si la versión del cliente Windows lo admite, la opción de **Configurar** el método de autenticación está disponible. Esta opción abre el cuadro de diálogo de propiedades de Windows para configurar el método de autenticación. Si **Configurar** está deshabilitado, utilice medios alternativos para configurar las propiedades del método de autenticación.  
 
 3.  En la página **Configuración de proxy** del **Asistente para crear perfil de VPN**, active la casilla **Configurar configuración de proxy para este perfil de VPN** si su conexión VPN usa un servidor proxy. Después, proporcione la información del servidor proxy. Para obtener más información, consulte la documentación de Windows Server.  
 
@@ -119,16 +144,17 @@ En [Cómo crear perfiles de VPN en System Center Configuration Manager](../../pr
     >  En los equipos Windows 8.1, el perfil de VPN no mostrará la información de proxy hasta que se conecte a la VPN con ese equipo.  
 
 
-4. Configure opciones de DNS adicionales (si es necesario).  
+4. Configure opciones de DNS adicionales si fuera necesario.  
 
 5. Finalice el asistente. El nuevo perfil de VPN se muestra en el nodo **Perfiles de VPN** en el área de trabajo **Activos y compatibilidad** .  
 
 
-**Implementar**: consulte [Implementar perfiles de VPN en System Center Configuration Manager](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md) para obtener información sobre la implementación de perfiles de VPN.
 
 ## <a name="next-steps"></a>Pasos siguientes  
- Use los temas siguientes para planear, configurar, operar y mantener perfiles de VPN en Configuration Manager.  
+Para obtener más información sobre cómo implementar perfiles de VPN, vea [Implementación de perfiles de Wi-Fi, VPN, correo electrónico y certificado](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md).
 
--   [Requisitos previos de los perfiles de VPN en System Center Configuration Manager](../../protect/plan-design/prerequisites-for-wifi-vpn-profiles.md)  
+ Use los artículos siguientes para planear, configurar, operar y mantener perfiles de VPN:  
 
--   [Seguridad y privacidad de los perfiles de VPN en System Center Configuration Manager](../../protect/plan-design/security-and-privacy-for-wifi-vpn-profiles.md)
+-   [Requisitos previos de los perfiles de VPN](../../protect/plan-design/prerequisites-for-wifi-vpn-profiles.md)  
+
+-   [Seguridad y privacidad de los perfiles de VPN](../../protect/plan-design/security-and-privacy-for-wifi-vpn-profiles.md)

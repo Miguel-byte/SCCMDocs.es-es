@@ -1,30 +1,24 @@
 ---
 title: Planear la seguridad
 titleSuffix: Configuration Manager
-description: "Obtenga las recomendaciones de seguridad y otra información sobre seguridad en System Center Configuration Manager."
-ms.custom: na
+description: Obtenga las recomendaciones de seguridad y otra información sobre seguridad en System Center Configuration Manager.
 ms.date: 01/04/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 8f63d1b762b296cb6b6aa56480a5cddf7a3249dc
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 02ab0884b49a8b4ac6998b9994cec23f02f076ec
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-security-in-system-center-configuration-manager"></a>Planificar la seguridad en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 ##  <a name="BKMK_PlanningForCertificates"></a> Planear certificados (autofirmados y PKI)  
  Configuration Manager usa una combinación de certificados autofirmados y certificados de infraestructura de clave pública (PKI).  
@@ -58,7 +52,7 @@ ms.lasthandoff: 10/12/2017
 
 2.  Exporte el certificado sin la clave privada, almacene el archivo de forma segura y acceda al mismo solo desde un canal seguro, por ejemplo, mediante la firma de Bloque de mensajes del servidor (SMB) o IPsec.  
 
-3.  Instale el cliente mediante el uso de la propiedad de Client.msi **SMSSIGNCERT=***&lt;ruta completa y nombre de archivo\>*, con CCMSetup.exe.  
+3.  Instale el cliente mediante la propiedad de Client.msi **SMSSIGNCERT=***&lt;ruta completa y nombre de archivo\>*, con CCMSetup.exe.  
 
 ###  <a name="BKMK_PlanningForCRLs"></a> Planear la revocación de certificados PKI  
 Cuando use certificados PKI con Configuration Manager, planifique si y cómo los clientes y servidores usarán una lista de revocación de certificados (CRL) para comprobar el certificado en el equipo que se conecta. La CRL es un archivo que crea y firma una entidad de certificación (CA), y tiene una lista de certificados que la CA ha emitido pero revocado. Un administrador de CAL puede revocar los certificados, por ejemplo, si se sabe o se sospecha que un certificado emitido está comprometido.  
@@ -194,7 +188,7 @@ Debido al número de opciones de configuración de Configuration Manager, no exi
      También puede implementar la herramienta de evaluación de preparación de HTTPS (**cmHttpsReadiness.exe**) en los equipos y usar los informes para ver cuántos equipos pueden utilizar un certificado PKI de cliente con Configuration Manager.  
 
     > [!NOTE]  
-    >  Cuando el cliente de Configuration Manager se instala, la herramienta **cmHttpsReadiness.exe** se instala en la carpeta *%windir%***\CCM**. Cuando ejecuta esta herramienta en los clientes, puede especificar las siguientes opciones:  
+    >  Cuando se instala el cliente de Configuration Manager, la herramienta **cmHttpsReadiness.exe** se instala en la carpeta *%windir%***\CCM**. Cuando ejecuta esta herramienta en los clientes, puede especificar las siguientes opciones:  
     >   
     >  -   /Store:&lt;nombre\>  
     > -   /Issuers:&lt;lista\>  
@@ -250,7 +244,7 @@ Puede quitar la clave raíz confiable de un cliente mediante la propiedad de Cli
 
 #### <a name="to-pre-provision-a-client-with-the-trusted-root-key-by-using-a-file"></a>Para aprovisionar previamente un cliente con la clave raíz confiable mediante un archivo  
 
-1.  En un editor de texto, abra el archivo *&lt;Directorio de Configuration Manager\>***\bin\mobileclient.tcf**.  
+1.  En un editor de texto, abra el archivo *&lt;directorio de Configuration Manager\>***\bin\mobileclient.tcf**.  
 
 2.  Busque la entrada **SMSPublicRootKey=**, copie la clave de esa línea y cierre el archivo sin realizar ningún cambio.  
 
@@ -258,18 +252,18 @@ Puede quitar la clave raíz confiable de un cliente mediante la propiedad de Cli
 
 4.  Guarde el archivo y colóquelo en una ubicación donde todos los equipos tengan acceso al mismo y donde esté protegido para evitar alteraciones.  
 
-5.  Instale el cliente mediante cualquier método de instalación que acepte las propiedades de Client.msi, y especifique la propiedad de Client.msi **SMSROOTKEYPATH=***&lt;ruta completa y nombre de archivo\>*.  
+5.  Instale el cliente mediante cualquier método de instalación que acepte las propiedades de Client.msi y especifique la propiedad de Client.msi **SMSROOTKEYPATH=***&lt;ruta completa y nombre de archivo\>*.  
 
     > [!IMPORTANT]  
     >  Cuando especifique la clave raíz confiable para incrementar la seguridad durante la instalación de clientes, también debe especificar el código de sitio mediante la propiedad de Client.msi **SMSSITECODE=&lt;código de sitio\>**.  
 
 #### <a name="to-pre-provision-a-client-with-the-trusted-root-key-without-using-a-file"></a>Para aprovisionar previamente un cliente con la clave raíz confiable sin utilizar un archivo  
 
-1.  En un editor de texto, abra el archivo *&lt;Directorio de Configuration Manager\>***\bin\mobileclient.tcf**.  
+1.  En un editor de texto, abra el archivo *&lt;directorio de Configuration Manager\>***\bin\mobileclient.tcf**.  
 
 2.  Busque la entrada SMSPublicRootKey=, anote la clave de esa línea o cópiela en el Portapapeles y, después, cierre el archivo sin realizar ningún cambio.  
 
-3.  Instale el cliente mediante cualquier método de instalación que acepte las propiedades de Client.msi, y especifique la propiedad de Client.msi **SMSPublicRootKey=***&lt;clave\>*, donde *&lt;clave\>* es la cadena copiada de mobileclient.tcf.  
+3.  Instale el cliente mediante cualquier método de instalación que acepte las propiedades de Client.msi y especifique la propiedad de Client.msi **SMSPublicRootKey=***&lt;key\>*, donde *&lt;key\>* es la cadena copiada de mobileclient.tcf.  
 
     > [!IMPORTANT]  
     >  Cuando especifique la clave raíz confiable para incrementar la seguridad durante la instalación de clientes, también debe especificar el código de sitio mediante la propiedad de Client.msi **SMSSITECODE=&lt;código de sitio\>**.  
@@ -292,7 +286,7 @@ Puede quitar la clave raíz confiable de un cliente mediante la propiedad de Cli
 
 8.  En la nueva ventana **Resultado de la consulta** donde se muestran las instancias de **TrustedRootKey**, haga doble clic en **TrustedRootKey=@**.  
 
-9. En el cuadro de diálogo **Editor de objetos de TrustedRootKey=@** , en la sección **Propiedades** , desplácese hacia abajo hasta **TrustedRootKey CIM_STRING**. La cadena de la columna de la derecha es la clave raíz confiable. Compruebe que coincide con el valor de **SMSPublicRootKey** del archivo *&lt;directorio de Configuration Manager\>***\bin\mobileclient.tcf**.  
+9. En el cuadro de diálogo **Editor de objetos de TrustedRootKey=@** , en la sección **Propiedades** , desplácese hacia abajo hasta **TrustedRootKey CIM_STRING**. La cadena de la columna de la derecha es la clave raíz confiable. Compruebe que coincide con el valor de **SMSPublicRootKey** del archivo, *&lt;directorio de Configuration Manager\>***\bin\mobileclient.tcf**.  
 
 ##  <a name="BKMK_PlanningForSigningEncryption"></a> Planear la firma y el cifrado  
  Cuando se utilizan certificados PKI para todas las comunicaciones de cliente, no es necesario planear la firma y el cifrado para proteger la comunicación de datos de cliente. Pero si configura sistemas de sitio que ejecutan IIS para permitir las conexiones de cliente HTTP, debe decidir cómo proteger la comunicación de cliente del sitio.  

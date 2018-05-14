@@ -1,26 +1,21 @@
 ---
 title: Funcionalidades de Technical Preview 1604
 titleSuffix: Configuration Manager
-description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1604."
-ms.custom: na
+description: Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1604.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 684a5559-9e6e-469b-86ae-e768e9f0c9ac
-caps.latest.revision: "8"
-author: erikje
-ms.author: erikje
-manager: angrobe
+author: aczechowski
 robots: noindex,nofollow
-ms.openlocfilehash: a6a3bb10b751768cd0e3987b30c80b5953e8eda5
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 113e22c33e9e8545c382373f3ba093dba3969939
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1604 para System Center Configuration Manager
 
@@ -63,7 +58,7 @@ En este artículo se presentan las características disponibles en Technical Pre
 
 3.  En la Tienda Windows para empresas, configure Configuration Manager como la herramienta de administración de la tienda.  
 
-    1.  Abra [https://businessstore.microsoft.com/es-es/managementtools](https://businessstore.microsoft.com/en-us/managementtools) e inicie sesión si se le solicita.  
+    1.  Abra [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/en-us/managementtools) e inicie sesión si se le solicita.  
 
     2.  Si es necesario, acepte los términos de uso.  
 

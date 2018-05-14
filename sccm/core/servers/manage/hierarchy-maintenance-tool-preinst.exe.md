@@ -1,30 +1,24 @@
 ---
-title: "Herramienta de mantenimiento de jerarquías"
+title: Herramienta de mantenimiento de jerarquías
 titleSuffix: Configuration Manager
-description: "Comprenda lo que realiza la herramienta de mantenimiento de jerarquía y por qué podría usarla. Incluye referencia de las opciones de línea de comandos."
-ms.custom: na
+description: Comprenda lo que realiza la herramienta de mantenimiento de jerarquía y por qué podría usarla. Incluye referencia de las opciones de línea de comandos.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cead6825-6113-4ba5-a381-ac3598dfee86
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 02bd5bfe0fc4ccc976d95b944bd51e9f0a276db0
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4dd1bf9b4085b6e1591d5841bfc307398505f5d1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hierarchy-maintenance-tool-preinstexe-for-system-center-configuration-manager"></a>Herramienta de mantenimiento de jerarquía (Preinst.exe) para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 La herramienta de mantenimiento de jerarquía (Preinst.exe) pasa comandos al Administrador de jerarquías de System Center Configuration Manager mientras se ejecuta el servicio Administrador de jerarquías. La herramienta de mantenimiento de jerarquía se instala automáticamente al instalar un sitio de Configuration Manager. Encontrará Preinst.exe en la carpeta compartida del servidor de sitio \\&lt;*nombreDeServidorDeSitio*>\SMS_&lt;*códigoDeSitio*\bin\X64\00000409.  
 
@@ -47,7 +41,7 @@ Cuando se utiliza la herramienta de mantenimiento de jerarquía, debe ejecutarla
 
 Al ejecutar la herramienta de mantenimiento de jerarquía, debe usar la sintaxis siguiente: preinst.exe /&lt;opción\>. A continuación se indican las opciones de la línea de comandos.  
 
- **/DELJOB &lt;*códigoDeSitio*>**: use esta opción en un sitio para eliminar todos los trabajos o los comandos del sitio actual al sitio de destino especificado.  
+ **/DELJOB &lt;*códigoDeSitio*>**: use esta opción en un sitio para eliminar todos los trabajos o los comandos del sitio actual para el sitio de destino especificado.  
 
  **/DELSITE &lt;*códigoDeSitioSecundarioParaEliminar*>**: use esta opción en un sitio primario para eliminar los datos de los sitios secundarios de la base de datos del sitio del sitio primario. Por lo general, use esta opción si se da de baja un equipo de servidor de sitio antes de desinstalar el sitio del mismo.  
 

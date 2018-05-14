@@ -1,25 +1,20 @@
 ---
 title: Funcionalidades de Technical Preview 1701
 titleSuffix: Configuration Manager
-description: "Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1701."
-ms.custom: na
+description: Conozca las características disponibles en Technical Preview para System Center Configuration Manager, versión 1701.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 18598eaa-1131-44ff-8f8b-6093e87ac7a1
-caps.latest.revision: "5"
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 90e5aa799516bf2a7d6715e12bb8f3d1b72737f3
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 894d268151f9c9dfb05ded812eb642f8025dc459
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>Funciones de Technical Preview 1701 para System Center Configuration Manager
 
@@ -99,7 +94,7 @@ A partir de esta versión de vista previa, puede configurar los puntos de admini
 
 ### <a name="try-it-out"></a>Haga la prueba
 
-- **Habilitar la atestación de estado de dispositivo local en un punto de administración**<br>  En la consola de Configuration Manager, vaya al punto de administración y abra **Propiedades de componente de punto de administración**. Después, haga clic en la pestaña **Opciones avanzadas**. Haga clic en **Agregar** y especifique la dirección URL local (por ejemplo, https://10.10.10.10) para **On-premises device health attestation service URLs** (Direcciones URL del servicio de atestación de estado de dispositivo local).
+- **Habilitar la atestación de estado de dispositivo local en un punto de administración**<br>  En la consola de Configuration Manager, vaya al punto de administración y abra **Propiedades de componente de punto de administración**. Después, haga clic en la pestaña **Opciones avanzadas**. Haga clic en **Agregar** y especifique la dirección URL local (por ejemplo, https://10.10.10.10) para **On-premises device health attestation service URLs** (Direcciones URL del servicio de atestación de estado de dispositivo local)).
 - **Habilitar los informes de atestación de estado del punto de administración local para el agente cliente**<br>En la consola de Configuration Manager, elija **Administración** > **Configuración de cliente** y haga doble clic o cree una **Configuración de dispositivo personalizada**. Seleccione **Agente de equipo** y establezca **Use on-premises Health Attestation Service** (Usar el servicio de atestación de estado local) en **Sí**. Si **Enable communication with Device Health Attestation Service** (Habilitar la comunicación con el servicio de atestación de estado de dispositivo) está establecido en **Sí** y **Use on-premises Health Attestation** (Usar la atestación de estado local) está establecido en **No**, el punto de administración usará el servicio de atestación de estado de dispositivo basado en la nube.
 
 ## <a name="use-the-oms-connector-for-microsoft-azure-government-cloud"></a>Usar el conector de OMS para la nube de Microsoft Azure Government
@@ -112,7 +107,7 @@ Para ello, modifique un archivo de configuración de modo que apunte a la nube d
 
   **Ediciones:**
 
-    Cambie el valor del nombre de la configuración *FairFaxArmResourceID* de modo que sea igual a "https://management.usgovcloudapi.net/"
+    Cambie el valor del nombre de la configuración *FairFaxArmResourceID* para que sea igual a "https://management.usgovcloudapi.net/".
 
    - **Original:** &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
       &lt;value>&lt;/value>   
@@ -122,7 +117,7 @@ Para ello, modifique un archivo de configuración de modo que apunte a la nube d
       &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value>https://management.usgovcloudapi.net/&lt;/value>  
       &lt;/setting>
 
-  Cambie el valor del nombre de la configuración *FairFaxAuthorityResource* de modo que sea igual a "https://login.microsoftonline.com/"
+  Cambie el valor del nombre de la configuración *FairFaxAuthorityResource* para que sea igual a "https://login.microsoftonline.com/".
 
   - **Original:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
     &lt;value>&lt;/value>

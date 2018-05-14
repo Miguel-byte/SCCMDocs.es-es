@@ -1,26 +1,20 @@
 ---
-title: "Creación de elementos de configuración para dispositivos Android y Samsung KNOX Standard administrados con Intune"
+title: Creación de elementos de configuración para dispositivos Android y Samsung KNOX Standard administrados con Intune
 titleSuffix: Configuration Manager
-description: "Use el elemento de configuración de Android y Samsung KNOX Standard de System Center Configuration Manager para administrar la configuración de los dispositivos."
-ms.custom: na
+description: Use el elemento de configuración de Android y Samsung KNOX Standard de System Center Configuration Manager para administrar la configuración de los dispositivos.
 ms.date: 03/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b66f3c4-e3bb-4f6a-abd5-55be649ff90d
-caps.latest.revision: "17"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 3fa824c94b02ed7141c7051bab86fa64a4a9ee49
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: fbfcc2189e2ce06e6348936caad6c68de51f5bdb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-system-center-configuration-manager-client"></a>Cómo crear elementos de configuración para dispositivos Android y Samsung KNOX administrados sin el cliente de System Center Configuration Manager
 
@@ -172,7 +166,7 @@ En la página **Aplicaciones compatibles y no compatibles (Android)** , especifi
 |-------------|----------------------|  
 |**Lista de aplicaciones no compatibles**|Especifica una lista de aplicaciones que se notificarán como no compatibles si los usuarios las instalan.|  
 |**Lista de aplicaciones compatibles**|Especifica una lista de aplicaciones que los usuarios pueden instalar. Cualquier otra aplicación instalada se notificará como no compatible.|  
-|**Agregar**|Agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección, opcionalmente el editor de la aplicación y la dirección URL de la aplicación en la tienda de aplicaciones.<br /><br /> Para especificar la dirección URL, en la [sección Aplicaciones de Google Play](https://play.google.com/store/apps), busque la aplicación que quiera usar.<br /><br /> Abra la página de la aplicación y copie la dirección URL en el Portapapeles. Ya puede utilizarla como dirección URL en una la lista de aplicaciones conformes o no conformes.<br /><br /> **Ejemplo:** busque **Microsoft Office Mobile**en Google Play. La dirección URL que utilice será **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.|  
+|**Agregar**|Agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección, opcionalmente el editor de la aplicación y la dirección URL de la aplicación en la tienda de aplicaciones.<br /><br /> Para especificar la dirección URL, en la [sección Aplicaciones de Google Play](https://play.google.com/store/apps), busque la aplicación que quiera usar.<br /><br /> Abra la página de la aplicación y copie la dirección URL en el Portapapeles. Ya puede utilizarla como dirección URL en una la lista de aplicaciones conformes o no conformes.<br /><br /> **Ejemplo:** busque **Microsoft Office Mobile**en Google Play. La dirección URL que usa será **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.|  
 |**Editarar**|Permite editar el nombre, el editor y la dirección URL de la aplicación seleccionada.|  
 |**Quitar**|Elimina la aplicación seleccionada de la lista.|  
 |**Importarar**|Importa la lista de las aplicaciones que ha especificado en un archivo de valores separados por comas. Utilice el formato, el nombre de la aplicación, el editor y la dirección URL de la aplicación en el archivo.|  

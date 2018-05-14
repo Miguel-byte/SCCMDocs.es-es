@@ -1,31 +1,24 @@
 ---
-title: "Configuración de la suscripción a Intune"
+title: Configuración de la suscripción a Intune
 titleSuffix: Configuration Manager
-description: "Configuración de su suscripción a Intune mediante System Center Configuration Manager."
-ms.custom: na
+description: Configuración de su suscripción a Intune mediante System Center Configuration Manager.
 ms.date: 06/02/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 99de8fe7-560e-401a-8ab2-6d87d091be17
-caps.latest.revision: 
-caps.handback.revision: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 720ba9e11ea16f5318ba78504cfe455e1019ab3f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 6ab10b0bc099aa58b1a0703bbc1c7b53c9de85cf
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-your-intune-subscription-with-system-center-configuration-manager-and-microsoft-intune"></a>Configuración de su suscripción a Intune con System Center Configuration Manager y Microsoft Intune
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 La suscripción de Intune le permite administrar dispositivos a través de Internet. Esto incluye la especificación de qué recopilación de usuarios puede inscribir dispositivos y la definición de la información que se presenta a los usuarios. Al crear la suscripción a Intune, también puede agregar personalización de marca de la compañía al portal de la compañía de Intune con el logotipo de la compañía y combinaciones de colores personalizadas.
 
@@ -66,7 +59,7 @@ La suscripción a Intune hace lo siguiente:
 
   -   **Nombre de compañía**: especifique el nombre de su compañía.
 
-  -   **Dirección URL a la documentación de privacidad de la compañía**: si publica la información de privacidad de su compañía en un vínculo accesible desde Internet, proporcione un vínculo al que los usuarios puedan acceder desde el portal de empresa, por ejemplo, http://www.contoso.com/CP_privacy.html. La información de privacidad puede aclarar la información que comparten los usuarios con su compañía.
+  -   **Dirección URL a la documentación de privacidad de la compañía**: si publica la información de privacidad de la compañía en un vínculo accesible desde Internet, proporcione un vínculo al que los usuarios puedan acceder desde el Portal de empresa, por ejemplo, http://www.contoso.com/CP_privacy.html. La información de privacidad puede aclarar la información que comparten los usuarios con su compañía.
 
   -   **Combinación de colores del portal de la compañía**: si lo desea, cambie el color predeterminado azul de los portales de la compañía.
 

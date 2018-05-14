@@ -2,30 +2,24 @@
 title: Certificados y seguridad
 titleSuffix: Configuration Manager
 description: Administrar certificados y seguridad de System Center Updates Publisher
-ms.custom: na
 ms.date: 4/29/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-sum
+ms.topic: conceptual
 ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 9d8812da3588b60f388288cef6f9a093731d873f
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: b3ce22747cddc1371fb38718cc97b70cda8afcb1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Administrar certificados y seguridad de Updates Publisher
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Los procedimientos siguientes pueden ayudarle a configurar el almacén de certificados en el servidor e actualización, configurar un certificado autofirmado en el equipo cliente y configurar la directiva de grupo para que permita que el Agente de Windows Update en los equipos busque actualizaciones publicadas.
 
@@ -41,7 +35,7 @@ El procedimiento siguiente es uno de los distintos métodos posibles para agrega
 
 3.  Seleccione **Otro equipo** y escriba el nombre del servidor de actualización o haga clic en **Examinar** para encontrar el equipo servidor de actualización, haga clic en **Finalizar**, en **Cerrar** y luego, en **Aceptar**.
 
-4.  Expanda **Certificados (*nombre del servidor de actualización*)**, expanda **WSUS** y haga clic en **Certificados**.
+4.  Expanda **Certificados (*nombre del servidor de actualización*)**, expanda **WSUS** y luego haga clic en **Certificados**.
 
 5.  Haga clic con el botón derecho en el certificado que quiera, haga clic en **Todas las tareas** y luego, en **Exportar**.
 
@@ -51,7 +45,7 @@ El procedimiento siguiente es uno de los distintos métodos posibles para agrega
 
 8.  Si se usa un certificado autofirmado, como **WSUS Publishers Self-signed** (Editores WSUS autofirmados), haga lic en **Entidades de certificación raíz de confianza**, en **Todas las tareas** y luego, en **Importar**. Complete el Asistente para importar certificados con el archivo exportado del paso 6.
 
-9.  Haga clic con el botón derecho en **Certificados (*nombre del servidor de actualización*)**, haga clic en **Conectarse a otro equipo**, especifique el nombre del equipo de Updates Publisher y haga clic en **Aceptar**.
+9.  Haga clic con el botón derecho en **Certificados (*nombre del servidor de actualización*)**, haga clic en **Conectar a otro equipo**, especifique el nombre del equipo de Updates Publisher y haga clic en **Aceptar**.
 
 10. Si Updates Publisher es remoto con respecto al servidor de actualización, repita los pasos del 7 al 9 para importar el certificado al almacén de certificados del equipo de Updates Publisher.
 
@@ -71,7 +65,7 @@ El siguiente ejemplo muestra cómo configurar el certificado de firma en equipos
 
 3.  Seleccione **Otro equipo** y escriba el nombre del servidor de actualización o haga clic en **Examinar** para encontrar el equipo servidor de actualización, haga clic en **Finalizar**, en **Cerrar** y luego, en **Aceptar**.
 
-4.  Expanda **Certificados (*nombre del servidor de actualización*)**, expanda **WSUS** y haga clic en **Certificados**.
+4.  Expanda **Certificados (*nombre del servidor de actualización*)**, expanda **WSUS** y luego haga clic en **Certificados**.
 
 5.  Haga clic con el botón derecho en el certificado en el panel de resultados, haga clic en **Todas las tareas** y luego, en **Exportar**. Complete el **Asistente para exportar certificados** con la configuración predeterminada para crear un archivo de exportación de certificado con el nombre y la ubicación especificados en el asistente.
 
@@ -82,7 +76,7 @@ El siguiente ejemplo muestra cómo configurar el certificado de firma en equipos
     -   Para los certificados emitidos por una entidad de certificación (CA): agregue el certificado al almacén de certificados **Editores de confianza**.
 
     > [!NOTE]
-    > El WUA también comprueba si la opción de directiva de grupo **Allow signed content from intranet Microsoft update service location** (Permitir contenido firmado procedente de la ubicación del servicio Microsoft Update de la intranet) está habilitada en el equipo local. Esta opción de directiva debe estar habilitada para que el Agente de Windows Update pueda examinar las actualizaciones que se crearon y publicaron con Updates Publisher. Para obtener más información sobre cómo habilitar esta configuración de directiva de grupo, vea [Cómo configurar la directiva de grupo en los equipos cliente](https://technet.microsoft.com/library/bb530967.aspx(d=robot).
+    > El WUA también comprueba si la opción de directiva de grupo **Allow signed content from intranet Microsoft update service location** (Permitir contenido firmado procedente de la ubicación del servicio Microsoft Update de la intranet) está habilitada en el equipo local. Esta opción de directiva debe estar habilitada para que el Agente de Windows Update pueda examinar las actualizaciones que se crearon y publicaron con Updates Publisher. Para obtener más información sobre cómo habilitar esta opción de directiva de grupo, vea [Cómo configurar la directiva de grupo en los equipos cliente](https://technet.microsoft.com/library/bb530967.aspx(d=robot)).
 
 
 

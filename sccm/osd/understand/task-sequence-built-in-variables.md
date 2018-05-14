@@ -2,26 +2,19 @@
 title: Variables integradas de secuencia de tareas
 titleSuffix: Configuration Manager
 description: Las variables integradas de secuencia de tareas proporcionan información sobre el entorno en que se ejecuta la secuencia de tareas y están disponibles durante la secuencia de tareas completa.
-ms.custom: na
 ms.date: 04/18/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
-caps.latest.revision: 15
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fe26982195e7cae639cc457dbba31e3dbd45b6d3
-ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
+ms.openlocfilehash: d3ea1b35c5f220155cecafddaf3a2ff1acf5ed53
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>Variables integradas de secuencias de tareas en System Center Configuration Manager
 
@@ -78,7 +71,7 @@ ms.lasthandoff: 04/20/2018
 |SMSTSDriverReceiveTimeOut|Número de segundos antes de que la conexión al servidor agote el tiempo de espera.|
 |SMSTSErrorDialogTimeout|Cuando se produce un error en una secuencia de tareas, muestra un cuadro de diálogo con el error. La secuencia de tareas lo descarta automáticamente después del número de segundos especificado por esta variable. De forma predeterminada, este valor es **900** segundos (15 minutos).|  
 | TSDisableProgressUI | <!-- 1354291 --> A partir de la versión 1706 de Configuration Manager, use esta variable para controlar cuándo la secuencia de tareas muestra el progreso a los usuarios finales. Para ocultar o mostrar el progreso en momentos diferentes, establezca esta variable varias veces en una secuencia de tareas. Para ocultar el progreso de la secuencia de tareas, establezca el valor de esta variable en **True**. Para mostrar el progreso de la secuencia de tareas, establezca el valor de esta variable en **False**. | 
-| SMSTSDisableStatusRetry | <!--512358--> En escenarios desconectados, el motor de secuencia de tareas intenta repetidamente enviar mensajes de estado al punto de administración. Este comportamiento en este escenario provoca retrasos en el procesamiento de la secuencia de tareas. A partir de Configuration Manager versión 1802, establezca esta variable en **True** y el motor de secuencia de tareas no intentará volver a enviar mensajes de estado después del primer error. Este comportamiento se mantiene hasta el siguiente reinicio o el valor de esta variable se establece en **False**. NOTA: Los [informes de estado de la secuencia de tareas](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status) se basan en estos mensajes de estado para mostrar el progreso, el historial y los detalles de cada paso. | 
+| SMSTSDisableStatusRetry | <!--512358--> En escenarios desconectados, el motor de secuencia de tareas intenta repetidamente enviar mensajes de estado al punto de administración. Este comportamiento en este escenario provoca retrasos en el procesamiento de la secuencia de tareas. A partir de Configuration Manager versión 1802, establezca esta variable en **True** y el motor de secuencia de tareas no intenta enviar mensajes de estado después de que el primer mensaje no se envíe. Este primer intento incluye varios reintentos.<br/><br/>Cuando se reinicia la secuencia de tareas, el valor de esta variable persiste. Pero la secuencia de tareas intenta enviar un mensaje de estado inicial. Este primer intento incluye varios reintentos. Si se realiza correctamente, la secuencia de tareas sigue enviando mensajes de estado independientemente del valor de esta variable. Si no se puede enviar el mensaje de estado, la secuencia de tareas usa el valor de esta variable.<br/><br/>NOTA: Los [informes de estado de la secuencia de tareas](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status) se basan en estos mensajes de estado para mostrar el progreso, el historial y los detalles de cada paso. | 
 |SMSTSLanguageFolder|Utilice esta variable para cambiar el idioma de visualización de una imagen de arranque independiente del idioma.|  
 |SMSTSLocalDataDrive|Especifica la ubicación donde se almacenan los archivos temporales en el equipo de destino mientras la secuencia de tareas se ejecuta.<br /><br /> Esta variable se debe establecer antes de iniciar la secuencia de tareas (por ejemplo, estableciendo una variable de la colección). Una vez que se inicia la secuencia de tareas, Configuration Manager define la variable _SMSTSMDataPath.|  
 |SMSTSMP|Use esta variable para especificar la dirección URL o IP de un punto de administración de Configuration Manager.|  

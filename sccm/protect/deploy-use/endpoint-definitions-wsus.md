@@ -1,29 +1,24 @@
 ---
 title: Definiciones de malware de Endpoint Protection desde WSUS
 titleSuffix: Configuration Manager
-definition: Learn how to configure Windows Server Updates Services to auto-approve definition updates.
-ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: a34d9401-83e4-471d-8e23-b8042fc11c90
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: fcc0e1909705fb1954c58c438438792a4866d3bf
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+description: Obtenga información sobre cómo configurar Windows Server Updates Services para aprobar automáticamente actualizaciones de definiciones.
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: b1c79a839ad1c83c96d7fe4583b46f6a3edbffba
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-windows-server-update-services-wsus-for-configuration-manager"></a>Habilite la descarga de definiciones de malware de Endpoint Protection desde Windows Server Update Services (WSUS) para Configuration Manager.
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
  Si usa WSUS para mantener actualizadas las definiciones de antimalware, puede configurarlo para aprobar automáticamente las actualizaciones de definiciones. Si bien el uso de las actualizaciones de software de Configuration Manager es el método recomendado para mantener actualizadas las definiciones, también se puede configurar WSUS como método que permita a los usuarios iniciar manualmente la actualización de definiciones. Use los procedimientos siguientes para configurar WSUS como un origen de actualización de definiciones.
 

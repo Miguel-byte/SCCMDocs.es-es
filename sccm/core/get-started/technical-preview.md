@@ -4,19 +4,17 @@ titleSuffix: Configuration Manager
 description: Obtenga información sobre la versión Technical Preview para probar nuevas funcionalidades y capacidades de Configuration Manager.
 ms.date: 04/25/2018
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
-caps.latest.revision: 157
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79a535bd9ee7f597e551c2d4f84c39c84ecf262f
-ms.sourcegitcommit: d67c6246bb6027cd5501e772b0521f9272407c28
+ms.openlocfilehash: 6b39f5eec4209e176374dcbdffc11183625c4967
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>Technical Preview para System Center Configuration Manager
 
@@ -92,7 +90,7 @@ Cada versión preliminar se admite hasta que tres versiones sucesivas están dis
 **Versiones activas de línea base de Technical Preview:**
    
 Puede instalar una versión de base de referencia hasta un año después de su lanzamiento. Sin embargo, al instalar un sitio nuevo de Technical Preview, se recomienda usar la última versión de línea base disponible.
--  **Technical Preview 1711**: la versión Configuration Manager Technical Preview 1711 está disponible como actualización en consola y como versión de base de referencia. Descargue las versiones de base de referencia [desde el centro de evaluación de TechNet](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+-  **Technical Preview 1804**: la versión Configuration Manager Technical Preview 1804 está disponible como actualización en la consola y como nueva versión de línea base. Descargue las versiones de base de referencia [desde el centro de evaluación de TechNet](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
 
 ##  <a name="BKMK_TPFeedback"></a> Proporcionar comentarios  

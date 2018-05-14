@@ -1,24 +1,19 @@
 ---
 title: Configuration Manager en Azure
-description: "Información sobre el uso de Configuration Manager en un entorno de Azure."
-ms.custom: na
+description: Información sobre el uso de Configuration Manager en un entorno de Azure.
 ms.date: 03/27/2017
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
-caps.latest.revision: "2"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: d73ab50e5fc9472a977951f6c2d5bbd3fd408c39
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 2b952e76fc21e3190430cdf34cb4a264918fd199
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager en Azure - Preguntas más frecuentes
 *Se aplica a: System Center Configuration Manager (Rama actual)*
@@ -156,18 +151,18 @@ Puede configurar cualquier cliente como origen de caché del mismo nivel. Luego,
 Es difícil de decir, ya que cada entorno es diferente. Lo mejor es hacer el cálculo con su entorno con la calculadora de precios de Microsoft Azure: https://azure.microsoft.com/pricing/calculator/
 
 ## <a name="additional-resources"></a>Recursos adicionales
-**Aspectos básicos:** http://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
+**Conceptos básicos:** http://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Tipos de máquinas virtuales de Azure:**
  - Tamaños de máquinas de Azure: https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
- - Precios de máquinas virtuales: http://azure.microsoft.com/pricing/details/virtual-machines/  
+ - Precios de VM: http://azure.microsoft.com/pricing/details/virtual-machines/  
  - Precios de almacenamiento: http://azure.microsoft.com/pricing/details/storage/
 
 **Consideraciones de rendimiento del disco:**    
- - Introducción a los discos premium: http://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
- - Más información sobre los discos premium: http://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
- - Práctica colección de gráficos sobre tamaños máximos y objetivos de rendimiento del almacenamiento: https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
- - Otra introducción y algunos atractivos datos de expertos sobre cómo funciona Premium Storage en segundo plano: http://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
+ - Introducción a de disco Premium: http://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
+ - Más información de disco Premium: http://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
+ - Práctica recopilación de gráficos de tamaños máximos y destinos de rendimiento del almacenamiento: https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
+ - Otra introducción + algunos estupendos datos de expertos sobre los entresijos de funcionamiento de Premium Storage: http://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
 
 **Disponibilidad:**
  - SLA de tiempo de actividad de IaaS de Azure: https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
@@ -175,7 +170,7 @@ Es difícil de decir, ya que cada entorno es diferente. Lo mejor es hacer el cá
 
 **Conectividad:**
  - ExpressRoute frente a VPN de Azure: http://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
- - Precios de ExpressRoute: http://azure.microsoft.com/pricing/details/expressroute/
- - Más información sobre ExpressRoute: http://azure.microsoft.com/documentation/articles/expressroute-introduction/
+ - Precios de Express Route: http://azure.microsoft.com/pricing/details/expressroute/
+ - Más información sobre Express Route: http://azure.microsoft.com/documentation/articles/expressroute-introduction/
 
  

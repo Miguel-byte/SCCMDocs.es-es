@@ -1,26 +1,20 @@
 ---
 title: Configure iOS apps with app configuration policies
 titleSuffix: Configuration Manager
-description: "Evite los problemas de configuración en los dispositivos con iOS 8 o posterior mediante la implementación de directivas de configuración de aplicaciones en los usuarios antes de que ejecuten las aplicaciones."
-ms.custom: na
+description: Evite los problemas de configuración en los dispositivos con iOS 8 o posterior mediante la implementación de directivas de configuración de aplicaciones en los usuarios antes de que ejecuten las aplicaciones.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f0a78038-ea22-4826-9c07-1771b7dd2e8d
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 905b0925f88395942c954561aa0828c15d3ba758
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: e5d00b1efd02d3b096a0b64033b450f0da949eeb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>Aplicar configuración a aplicaciones iOS con directivas de configuración de aplicaciones en System Center Configuration Manager
 
@@ -39,7 +33,7 @@ Para usar una directiva de configuración de aplicaciones en Configuration Manag
 
 Actualmente, las directivas de configuración de aplicaciones solo están disponibles en dispositivos con iOS 8 y versiones posteriores, y para estos tipos de aplicaciones:
 
-- **Paquete de aplicación iOS (archivo* .ipa)**
+- **Paquete de aplicación para iOS (archivo *.ipa)**
 - **Paquete de aplicación de iOS en App Store**
 
 Para obtener más información sobre los tipos de instalación de aplicaciones, vea [Introducción a la administración de aplicaciones](/sccm/apps/understand/introduction-to-application-management).

@@ -1,26 +1,20 @@
 ---
-title: "Más información sobre licencias y ramas"
+title: Más información sobre licencias y ramas
 titleSuffix: Configuration Manager
-description: "Con este tema obtendrá información acerca de los requisitos de licencia para las opciones de instalación disponibles con la versión de octubre de 2016 de System Center Configuration Manager, que incluyen la versión de Rama actual 1606, la Rama de mantenimiento a largo plazo (LSTB) y la instalación de evaluación de la Rama actual."
-ms.custom: na
+description: Con este tema obtendrá información acerca de los requisitos de licencia para las opciones de instalación disponibles con la versión de octubre de 2016 de System Center Configuration Manager, que incluyen la versión de Rama actual 1606, la Rama de mantenimiento a largo plazo (LSTB) y la instalación de evaluación de la Rama actual.
 ms.date: 12/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
-caps.latest.revision: "0"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 8c5fcb718cf03a1e779212207d696cfa5fe9f0e2
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 8eb561d9867c6bde778ffd5fb6ef404395c359da
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>Licencias y ramas para System Center Configuration Manager
 
@@ -100,16 +94,16 @@ Para obtener más información acerca de licencias de Software Assurance y la Ra
 Utilice los siguientes vínculos para obtener más información acerca de los detalles de licencias de productos.
 
 **Vínculos del Centro de servicios de licencias por volumen de Microsoft (VLSC):**
-- Información general del Centro de servicios de licencias por volumen: [https://www.microsoft.com/es-es/Licensing/existing-customer/vlsc-training-and-resources.aspx](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx).
+- Información general de VLSC: [https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx).
 
-- Términos de los productos de licencias por volumen de Microsoft: [http://go.microsoft.com/fwlink/?LinkId=800052](http://go.microsoft.com/fwlink/?LinkId=800052).
+- Términos del programa Licencias por Volumen de Microsoft: [http://go.microsoft.com/fwlink/?LinkId=800052](http://go.microsoft.com/fwlink/?LinkId=800052).
 
-- Los clientes de las licencias por volumen pueden obtener un resumen de sus licencias aquí:  [https://www.microsoft.com/Licensing/servicecenter/default.aspx](https://www.microsoft.com/Licensing/servicecenter/default.aspx).  
+- Los clientes de licencias de volumen pueden obtener un resumen de sus licencias aquí: [https://www.microsoft.com/Licensing/servicecenter/default.aspx](https://www.microsoft.com/Licensing/servicecenter/default.aspx).  
   Vaya al menú **Licencias** y haga clic en **Licenses Summary** (Resumen de licencias) para obtener información general sobre las licencias.
 
 **Vídeos del Centro de servicios de licencias por volumen:**
-- Vídeos de capacitación sobre el funcionamiento del Centro de servicios de licencias por volumen: [https://www.microsoft.com/es-es/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2).
+- Vídeos de aprendizaje sobre el funcionamiento de VLSC: [https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2).
 
-- Dónde buscar el contrato de Software Assurance activo (a partir del segundo 43, aproximadamente): [https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0).
+- Dónde buscar el contrato de Software Assurance activo (a partir de unos 43 segundos en): [https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0).
 
-- Cómo obtener los permisos del Centro de servicios de licencias por volumen: [https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4).  Puede delegar los permisos de lectura y escritura del Centro de servicios de licencias por volumen a otras personas de su organización.
+- Cómo obtener permisos para VLSC: [https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4).  Puede delegar los permisos de lectura y escritura del Centro de servicios de licencias por volumen a otras personas de su organización.

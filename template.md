@@ -1,20 +1,25 @@
 ---
-title: "TÍTULO DEL ARTÍCULO | Microsoft Docs"
-description: 
-keywords: 
-author: GITHUB USERNAME
-manager: ALIAS
-ms.date: 10/06/2016
-ms.topic: article
-ms.prod: 
-ms.service: 
-ms.technology: 
-ms.assetid: GET ONE FROM guidgenerator.com
-ms.openlocfilehash: a218011ded1ff3acc1dbd24471119b701f2cce23
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+title:
+- TÍTULO DEL ARTÍCULO en 35 caracteres o menos
+titleSuffix: Configuration Manager
+description: ''
+ms.date: mm/dd/yyyy
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+ms.assetid:
+- GET ONE FROM guidgenerator.com
+author:
+- GITHUB USERNAME
+ms.author:
+- ALIAS
+manager:
+- ALIAS
+ms.openlocfilehash: bb0a23b8870d31136967b1bc594580bcc2cd0cd9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="metadata-and-markdown-template"></a>Metadatos y plantilla Markdown
 
@@ -95,7 +100,7 @@ Si aparece una dirección URL en un archivo de Markdown, se transformará en un 
 1. es
 1. una
 1. lista
-1. ordenada  
+1. Lista  
 
 
 #### <a name="ordered-list-with-an-embedded-list"></a>Lista ordenada con una lista insertada
@@ -107,23 +112,23 @@ Si aparece una dirección URL en un archivo de Markdown, se transformará en un 
     1. Miss Scarlett
     1. Professor Plum
 1. ordenada
-1. insertada
+1. lista
 
 
 ### <a name="unordered-lists"></a>Listas desordenadas
 
 - Esta
-- es
-- una
+- estará
+- a
 - lista
-- con viñetas
+- lista
 
 
 ##### <a name="unordered-list-with-an-embedded-lists"></a>Lista desordenada con una lista insertada
 
 - Esta
 - lista
-- con viñetas
+- lista
     - Mrs. Peacock
     - Mr. Green
 - contiene  
@@ -139,14 +144,14 @@ Si aparece una dirección URL en un archivo de Markdown, se transformará en un 
 
 ## <a name="tables"></a>Tablas
 
-| Las tablas        | son           | estupendas  |
+| Tablas        | son           | estupendas  |
 | ------------- |:-------------:| -----:|
 | la col. 3 está      | alineada a la derecha | 1600 USD |
 | la col. 2 está      | centrada      |   12 USD |
 | La col. 1, de forma predeterminada, está | alineada a la izquierda     |    1 USD |
 
 
-## <a name="code"></a>Código
+## <a name="code"></a>código
 
 ### <a name="codeblock"></a>Bloque de código
 

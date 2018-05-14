@@ -1,25 +1,20 @@
 ---
-title: "Supervisión del estado de Endpoint Protection"
+title: Supervisión del estado de Endpoint Protection
 titleSuffix: Configuration Manager
-description: "Obtenga información acerca de cómo supervisar Endpoint Protection en la jerarquía de System Center Configuration Manager."
-ms.custom: na
+description: Obtenga información acerca de cómo supervisar Endpoint Protection en la jerarquía de System Center Configuration Manager.
 ms.date: 03/13/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
-caps.latest.revision: "8"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 9e6356f8b3814ac49c26bfa4d319c3c9926a4382
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: f4e1ea4cb097381467774af9c3161079419d6840
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-monitor-endpoint-protection-status"></a>Cómo supervisar el estado de Endpoint Protection
 
@@ -38,7 +33,7 @@ Puede supervisar Endpoint Protection en la jerarquía de Microsoft System Center
     > [!IMPORTANT]  
     >  Las colecciones están disponibles para la selección en los casos siguientes:  
     >   
-    >  -   Si selecciona la opción **Ver esta recopilación en el panel de Endpoint Protection** en la pestaña **Alerta**s del cuadro de diálogo *<nombre de recopilación\>***Propiedades**.  
+    >  -   Si selecciona **Ver esta recopilación en el panel de Endpoint Protection** en la pestaña **Alertas** del cuadro de diálogo *<Nombre de recopilación\>***Propiedades**.  
     > -   Al implementar una directiva antimalware de Endpoint Protection en la recopilación.  
     > -   Al habilitar e implementar la configuración de cliente de Endpoint Protection en la recopilación.  
 

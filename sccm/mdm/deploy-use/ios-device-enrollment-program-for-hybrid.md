@@ -1,31 +1,26 @@
 ---
-title: "Inscripción de dispositivos iOS mediante el Programa de inscripción de dispositivos (DEP) "
+title: 'Inscripción de dispositivos iOS mediante el Programa de inscripción de dispositivos (DEP) '
 titleSuffix: Configuration Manager
-description: "Habilite la inscripción del Programa de inscripción de dispositivos (DEP) iOS para implementaciones híbridas en Configuration Manager con Intune."
-ms.custom: na
+description: Habilite la inscripción del Programa de inscripción de dispositivos (DEP) iOS para implementaciones híbridas en Configuration Manager con Intune.
 ms.date: 09/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 78d44adc-9b1c-4bc6-b72d-e93873916ea6
-caps.latest.revision: "9"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 1d8a1765b599daa98014feeb3d88efe9a07cb907
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: a4a6d8d67060dbf7c5bc75892d2f231bce67df8f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>Inscripción del Programa de inscripción de dispositivos (DEP) iOS para implementaciones híbridas con Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Las empresas pueden comprar dispositivos iOS mediante el Programa de inscripción de dispositivos de Apple y, después, administrarlos mediante Microsoft Intune. Para administrar los dispositivos iOS de la empresa con el Programa de inscripción de dispositivos de Apple (DEP), las empresas deben completar los pasos de Apple para participar en el programa y adquirir los dispositivos a través de este programa. Puede consultar los detalles de este proceso en:  [https://deploy.apple.com](https://deploy.apple.com). Entre las ventajas del programa se incluye la configuración manos libres de dispositivos sin USB que permite conectar cada dispositivo a un equipo.  
+Las empresas pueden comprar dispositivos iOS mediante el Programa de inscripción de dispositivos de Apple y, después, administrarlos mediante Microsoft Intune. Para administrar los dispositivos iOS de la empresa con el Programa de inscripción de dispositivos de Apple (DEP), las empresas deben completar los pasos de Apple para participar en el programa y adquirir los dispositivos a través de este programa. Los detalles de ese proceso están disponibles en: [https://deploy.apple.com](https://deploy.apple.com). Entre las ventajas del programa se incluye la configuración manos libres de dispositivos sin USB que permite conectar cada dispositivo a un equipo.  
 
  Para poder inscribir dispositivos iOS de empresa con el programa DEP, necesita un token de DEP de Apple. Este token permite a Intune sincronizar información sobre dispositivos propiedad de la empresa que participan en DEP. También permite que Intune cargue los perfiles de inscripción en Apple y asigne dispositivos a estos perfiles.  
 
@@ -39,7 +34,7 @@ Las empresas pueden comprar dispositivos iOS mediante el Programa de inscripció
 2.  **Crear una solicitud de token de DEP**   
     En la consola de Configuration Manager, en el área de trabajo **Administración**, expanda **Configuración de jerarquía**, expanda **Servicios de nube** y haga clic en **Suscripciones a Microsoft Intune**. Haga clic en **Crear una solicitud de token de DEP** en la pestaña **Inicio** , haga clic en **Examinar** para especificar la ubicación de la descarga de la solicitud de token de DEP y, a continuación, haga clic en **Descargar**. Guarde el archivo de solicitud de token de DEP (.pem) en el equipo local. El archivo .pem se usa para solicitar un token de confianza (.p7m) en el portal del programa de inscripción de dispositivos de Apple.  
 3.  **Obtener un token del programa de inscripción de dispositivos**   
-    Vaya al [portal del programa de inscripción de dispositivos](https://deploy.apple.com) (https://deploy.apple.com) e inicie sesión con su identificador de Apple de empresa. Este identificador de Apple debe usarse posteriormente para renovar el token de DEP.  
+    Vaya al [portal del Programa de inscripción de dispositivos](https://deploy.apple.com) (https://deploy.apple.com)) e inicie sesión con el identificador de Apple de empresa. Este identificador de Apple debe usarse posteriormente para renovar el token de DEP.  
     1.  En la consola de [portal del programa de inscripción de dispositivos](https://deploy.apple.com), vaya a **Programa de inscripción de dispositivos** > **Administrar servidores**y, después, haga clic en **Add MDM Server**.  
     ![Captura de pantalla de Add MDM Server (Agregar servidor MDM) en el portal del programa de inscripción de dispositivos](../media/enrollment-program-token-add-server.png)
     2.  Escriba el **nombre del servidor MDM**y, después, haga clic en **Siguiente**. El nombre del servidor es su referencia para identificar el servidor MDM. No es el nombre ni la dirección URL del servidor de Intune o Configuration Manager.  
@@ -97,7 +92,7 @@ Las empresas pueden comprar dispositivos iOS mediante el Programa de inscripció
 
 ## <a name="assign-dep-devices-for-management"></a>Asignar dispositivos DEP para la administración
 
-1. Vaya al [portal del programa de inscripción de dispositivos](https://deploy.apple.com) (https://deploy.apple.com) e inicie sesión con su identificador de Apple de empresa.
+1. Vaya al [portal del Programa de inscripción de dispositivos](https://deploy.apple.com) (https://deploy.apple.com)) e inicie sesión con el identificador de Apple de empresa.
 2. Vaya a **Programa de implementación** > **Programa de inscripción de dispositivos** > **Administrar dispositivos**. Especifique cómo va a **elegir los dispositivos**, proporcione información del dispositivo y especifique los detalles de cada dispositivo, como **Número de serie**, **Número de pedido**, o seleccione **Cargar archivo CSV**. Después, seleccione **Asignar al servidor**, seleccione el <*NombreDeServidor*> que ha especificado en el paso 3 y, después, haga clic en **Aceptar**.  
 ![Captura de pantalla del portal del programa de inscripción de dispositivos de Apple, en el que se agregan dispositivos](../media/enrollment-program-token-specify-serial.png)
 

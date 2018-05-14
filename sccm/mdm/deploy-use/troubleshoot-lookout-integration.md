@@ -1,25 +1,20 @@
 ---
-title: "Solución de problemas de integración de Lookout"
+title: Solución de problemas de integración de Lookout
 titleSuffix: Configuration Manager
-description: "En este tema se describen los problemas que se producen normalmente con la integración de Lookout."
-ms.custom: na
+description: En este tema se describen los problemas que se producen normalmente con la integración de Lookout.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e36b98c7-d0f4-4dd6-bac3-6a6c4b4bf841
-caps.latest.revision: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 244d32e98ad863f6c9ea1747b4f786c3a1279fc0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: ee978543248e70182e12a3d6234cfd12be80dc98
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-lookout-integration-with-intune"></a>Solucionar problemas de integración de Lookout con Intune
 
@@ -35,14 +30,14 @@ Puede ponerse en contacto con el soporte técnico de Lookout de las siguientes m
 
 * Correo electrónico: enterprisesupport@lookout.com
 * Inicie sesión en la [Consola de MTP](http://aad.lookout.com) y vaya al módulo **Soporte técnico**.
-* Vaya a https://enterprise.support.lookout.com/hc/requests y efectúe una solicitud de soporte técnico.
+* Vaya a: https://enterprise.support.lookout.com/hc/requests y realice una solicitud de soporte técnico.
 
 ### <a name="unable-to-sign-in"></a>No se puede iniciar sesión
 Puede que vea el siguiente error cuando el usuario de administrador global de Azure AD no ha aceptado la configuración inicial de Lookout.
 
 ![captura de pantalla de la pantalla de inicio de sesión de Lookout que muestra un error de inicio de sesión](media/lookout-consent-not-accepted-error.png)
 
-Para resolver este problema, el usuario de administrador global debe iniciar sesión en https://aad.lookout.com/les?action=consent y aceptar la solicitud para iniciar la configuración. Puede encontrar más información detallada en el tema [Set up your subscription with Lookout MTP (Configurar su suscripción con Lookout MTP)](set-up-your-subscription-with-lookout.md).
+Para resolver este problema, el usuario administrador global debe iniciar sesión en https://aad.lookout.com/les?action=consent y aceptar la solicitud para iniciar la configuración. Puede encontrar más información detallada en el tema [Set up your subscription with Lookout MTP (Configurar su suscripción con Lookout MTP)](set-up-your-subscription-with-lookout.md).
 
 ## <a name="troubleshoot-device-status-issues"></a>Solución de problemas del estado del dispositivo
 

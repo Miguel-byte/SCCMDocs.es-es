@@ -1,30 +1,24 @@
 ---
-title: "Configuración de grupos de disponibilidad"
+title: Configuración de grupos de disponibilidad
 titleSuffix: Configuration Manager
 description: Configure y administre los grupos de disponibilidad Always On de SQL Server con SCCM.
-ms.custom: na
 ms.date: 7/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7e4ec207-bb49-401f-af1b-dd705ecb465d
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: d6b208da49e27775548ac6f544b7a7278b96d980
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 2baafa04c315ebc7512504f042c89615b7217b4c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>Configuración de grupos de disponibilidad AlwaysOn de SQL Server para Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Use la información de este tema para configurar y administrar los grupos de disponibilidad que use con Configuration Manager.
 
@@ -96,7 +90,7 @@ Para completar este procedimiento, la cuenta que utilice para ejecutar el progra
 3.  A continuación, seleccione la opción **Modificar configuración de SQL Server** y luego haga clic en **Siguiente**.
 
 4.  Vuelva a configurar lo siguiente en la base de datos de sitio:
-    -   **Nombre de SQL Server**: escriba el nombre virtual para el **agente de escucha** que configuró al crear el grupo de disponibilidad. El nombre virtual debe ser un nombre DNS completo, como **&lt;*endpointServer*>.fabrikam.com**.  
+    -   **Nombre de SQL Server**: escriba el nombre virtual para el **agente de escucha** que configuró al crear el grupo de disponibilidad. El nombre virtual debe ser un nombre DNS completo, como **&lt;*servidorPuntodeconexión*>.fabrikam.com**.  
 
     -   **Instancia**: este valor debe estar en blanco para especificar la instancia predeterminada para el *agente de escucha* del grupo de disponibilidad. Si la base de datos de sitio actual se ejecuta en una instancia con nombre, esta aparecerá y debe borrarse.
 
@@ -158,7 +152,7 @@ Para completar este procedimiento, la cuenta que utilice debe cumplir los requis
 
 4.  En el servidor que hospedará la base de datos de sitio (la réplica principal o el servidor donde haya restaurado la base de datos de sitio), cambie el modelo de copia de seguridad de la base de datos de sitio de **COMPLETA** a **SIMPLE**. Consulte [Ver o cambiar el modelo de recuperación de una base de datos (SQL Server)](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server) en la documentación de SQL Server.  
 
-5.  Ejecute el **programa de instalación de Configuration Manager** desde la **&lt;*carpeta de instalación del sitio de Configuration Manager>*\BIN\X64\setup.exe**.
+5.  Ejecute el **programa de instalación de Configuration Manager** desde la **&lt;*carpeta de instalación del sitio de Configuration Manager>* \BIN\X64\setup.exe**.
 
 6.  En la página **Primeros pasos** , seleccione **Realizar mantenimiento de sitio o restablecer este sitio**y, a continuación, haga clic en **Siguiente**.  
 

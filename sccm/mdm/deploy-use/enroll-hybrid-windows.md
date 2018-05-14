@@ -1,25 +1,20 @@
 ---
-title: "Configuración de la administración de dispositivos híbridos Windows con Microsoft Intune"
+title: Configuración de la administración de dispositivos híbridos Windows con Microsoft Intune
 titleSuffix: Configuration Manager
-description: "Configure la administración de dispositivos Windows con System Center Configuration Manager y Microsoft Intune."
-ms.custom: na
+description: Configure la administración de dispositivos Windows con System Center Configuration Manager y Microsoft Intune.
 ms.date: 03/17/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: dc1f70f5-64ab-42ab-aa91-d3858803e12f
-caps.latest.revision: "9"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 95808d4fd743d5cc18cacb69bb38bc729acdda25
-ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 1e45cae03754fcfa3a310bf59e8e3280d5088518
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-windows-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Configurar la administración híbrida de dispositivos Windows con System Center Configuration Manager y Microsoft Intune
 
@@ -69,7 +64,7 @@ La inscripción automática permite a los usuarios inscribir en Intune PC Window
 
 ### <a name="configure-automatic-mdm-enrollment"></a>Configurar la inscripción de MDM automática
 
-1. Inicie sesión en el [Portal de administración de Azure](https://portal.azure.com) (https://manage.windowsazure.com) y seleccione **Azure Active Directory**.
+1. Inicie sesión en el [Portal de administración de Azure](https://portal.azure.com) (https://manage.windowsazure.com)) y seleccione **Azure Active Directory**.
 
   ![Captura de pantalla de Azure Portal](../media/auto-enroll-azure-main.png)
 

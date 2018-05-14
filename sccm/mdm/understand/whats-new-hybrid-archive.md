@@ -1,26 +1,21 @@
 ---
-title: "Archivo de novedades de MDM híbrida"
+title: Archivo de novedades de MDM híbrida
 titleSuffix: Configuration Manager
-description: "Archivo de características anteriores de administración de dispositivos móviles disponibles para implementaciones híbridas con System Center Configuration Manager e Intune."
-ms.custom: na
+description: Archivo de características anteriores de administración de dispositivos móviles disponibles para implementaciones híbridas con System Center Configuration Manager e Intune.
 ms.date: 02/21/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 4c27b161-9eb7-4cdd-b469-d8eb27e71aea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: d6b67cd820a618d6a96424362ff282cbf232f092
-ms.sourcegitcommit: 45ff3ffa040eada5656b17f47dcabd3c637bdb60
+ms.openlocfilehash: 88b005ad90625592a4fccfa1d98abfcb8b930a75
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>Características híbridas anteriores con System Center Configuration Manager y Microsoft Intune
 
@@ -48,7 +43,7 @@ En este artículo se proporciona información sobre características anteriores 
 
 - **Nueva dirección del servidor MDM para dispositivos Windows**
 
-  La dirección del servidor MDM para la inscripción de dispositivos Windows Phone y Windows ha cambiado de manage.microsoft.com a enrollment.manage.microsoft.com. Notifique a su usuario que debe utilizar enrollment.manage.microsoft.com como dirección del servidor MDM si se le solicita durante la inscripción de dispositivos Windows Phone o Windows. Esta actualización también requiere que cualquier CNAME del DNS que redirija EnterpriseEnrollment.contoso.com a manage.microsoft.com se sustituya por un CNAME del DNS que redirija EnterpriseEnrollment.contoso.com a EnterpriseEnrollment-s.manage.microsoft.com. Para obtener más información sobre este cambio, visite http://aka.ms/intuneenrollsvrchange.
+  La dirección del servidor MDM para la inscripción de dispositivos Windows Phone y Windows ha cambiado de manage.microsoft.com a enrollment.manage.microsoft.com. Notifique a su usuario que debe utilizar enrollment.manage.microsoft.com como dirección del servidor MDM si se le solicita durante la inscripción de dispositivos Windows Phone o Windows. Esta actualización también requiere que cualquier CNAME del DNS que redirija EnterpriseEnrollment.contoso.com a manage.microsoft.com se sustituya por un CNAME del DNS que redirija EnterpriseEnrollment.contoso.com a EnterpriseEnrollment-s.manage.microsoft.com. Para obtener información adicional sobre este cambio, visite http://aka.ms/intuneenrollsvrchange.
 
 ### <a name="new-in-configuration-manager-technical-preview-1702"></a>Novedades de Configuration Manager Technical Preview 1702
 
@@ -96,7 +91,7 @@ En este artículo se proporciona información sobre características anteriores 
 
 - **La autenticación multifactor (MFA) acerca de la inscripción se está trasladando a Azure Portal**
 
-  Anteriormente, tenía que ir a la consola de Intune o a la consola de Configuration Manager para configurar inscripciones de MFA para Intune. Con esta función actualizada, ahora puede iniciar sesión en [Microsoft Azure Portal] (https://manage.windowsazure.com) con credenciales de Intune y configurar las opciones de MFA a través de Azure AD. Para obtener más información, vea [Autenticación multifactor para Microsoft Intune] (https://aka.ms/mfa_ad).
+  Anteriormente, tenía que ir a la consola de Intune o a la consola de Configuration Manager para configurar inscripciones de MFA para Intune. Con esta característica actualizada, ahora puede iniciar sesión en [Microsoft Azure Portal] (https://manage.windowsazure.com)) con las credenciales de Intune y configurar las opciones de MFA a través de Azure AD. Para obtener más información, vea [Multi-factor Authentication para Microsoft Intune] (https://aka.ms/mfa_ad)).
 
 - **Aplicación de portal de empresa para Android ahora disponible en China**
 

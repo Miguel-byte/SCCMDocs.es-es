@@ -4,18 +4,17 @@ titleSuffix: Configuration Manager
 description: Conozca las nuevas características disponibles en la versión Technical Preview 1804 de Configuration Manager.
 ms.date: 04/25/2018
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 8af43618-ec60-4c3e-a007-12399d1335b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 82de25f24771d4b66d58a550eb4caed6ad262869
-ms.sourcegitcommit: d67c6246bb6027cd5501e772b0521f9272407c28
+ms.openlocfilehash: 0fcdcc984e267e6c54ad7c6194e8494854f0a1ee
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1804-for-system-center-configuration-manager"></a>Funcionalidades de la versión Technical Preview 1804 de System Center Configuration Manager
 
@@ -176,6 +175,9 @@ Las herramientas de servidor y cliente de Configuration Manager ahora se incluye
 >  - Send Schedule Tool
 > 
 > <sup>1</sup> CMTrace no depende de .NET o Windows Presentation Foundation (WPF), así que aún se usa en imágenes de arranque de Windows PE.
+
+### <a name="known-issues"></a>Problemas conocidos
+Algunas herramientas de cliente y servidor pueden cerrarse inesperadamente al iniciar. Este problema se debe a un archivo que falta en el soporte físico. Como solución, copie el archivo **Microsoft.Diagnostics.Tracing.EventSource.dll** desde el directorio AdminConsole\bin en los directorios SMSSETUP\Tools\ClientTools y ServerTools. Este archivo debe ser de la misma versión que usa la consola de Configuration Manager. Es posible que otras versiones no funcionen. <!--513977-->
 
 
 

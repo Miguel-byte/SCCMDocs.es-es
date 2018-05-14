@@ -1,30 +1,24 @@
 ---
-title: "Configuración de la administración de energía"
+title: Configuración de la administración de energía
 titleSuffix: Configuration Manager
-description: "Configure la administración de energía en System Center Configuration Manager."
-ms.custom: na
+description: Configure la administración de energía en System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 435c923c-ea30-4dce-8afd-48962ed85502
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: ed6aa0ce35d93837ac133cccedb44dedaa4a9602
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: ceb8c07c111818136db7c3815eee58cc87ae75c8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-power-management-in-system-center-configuration-manager"></a>Configuración de la administración de energía en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Para poder usar la administración de energía en System Center Configuration Manager, debe realizar los siguientes pasos de configuración.  
 
@@ -51,7 +45,7 @@ Para poder usar la administración de energía en System Center Configuration Ma
 
 8.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Configuración de cliente predeterminada** .  
 
- Los equipos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [How to manage clients in System Center Configuration Manager (Cómo administrar clientes en System Center Configuration Manager)](../../../../core/clients/manage/manage-clients.md).  
+ Los equipos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Cómo administrar clientes en System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
 
 ## <a name="exclude-computers-from-power-management"></a>Excluir equipos de la administración de energía  
  Puede impedir que las recopilaciones de equipos reciban la configuración de administración de energía. Si un equipo es miembro de alguna recopilación que se excluye de la configuración de administración de energía, ese equipo no aplica la configuración de administración de energía, incluso si es miembro de otra recopilación que aplica la configuración de administración de energía.  
@@ -82,6 +76,6 @@ Para poder usar la administración de energía en System Center Configuration Ma
 
 3.  En la lista **Recopilaciones de dispositivos** , seleccione la recopilación que quiere excluir de la administración de energía y, a continuación, en la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
 
-4.  En la pestaña **Administración de energía** del cuadro de diálogo *<Nombre de la colección>\>***Propiedades**, seleccione **No aplicar nunca la configuración de administración de energía en equipos de esta recopilación**.  
+4.  En la pestaña **Administración de energía** del cuadro de diálogo *<Nombre de recopilación\>***Propiedades**, seleccione **No aplicar nunca la configuración de administración de energía en equipos de esta recopilación**.  
 
-5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo *<Nombre de la colección>\>***Propiedades** y guardar la configuración.  
+5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo *<Nombre de recopilación\>***Propiedades** y guardar la configuración.  

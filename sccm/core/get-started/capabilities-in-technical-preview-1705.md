@@ -1,24 +1,20 @@
 ---
 title: Technical Preview 1705
 titleSuffix: Configuration Manager
-description: "Obtenga información sobre las características disponibles en la versión 1705 de Technical Preview para System Center Configuration Manager."
-ms.custom: na
+description: Obtenga información sobre las características disponibles en la versión 1705 de Technical Preview para System Center Configuration Manager.
 ms.date: 06/02/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 00684289-d21a-45f8-b1e3-c5c787d73096
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 60415539a645e40f1b097897d4b255924d61f389
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 49205ac1d1fc2dd20cbd4a0844632c5f3d181e45
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1705 para System Center Configuration Manager
 

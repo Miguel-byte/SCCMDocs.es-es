@@ -2,25 +2,19 @@
 title: Configurar la detección
 titleSuffix: Configuration Manager
 description: Configure métodos de detección para buscar recursos para administrar desde la red, Active Directory y Azure Active Directory.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
-caps.latest.revision: 5
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 825b9b250000e8353b1428cbee45f8fda9a30c35
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: e7ac10fdc08569e519468633f30548c5c76b5838
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>Configurar métodos de detección para System Center Configuration Manager
 
@@ -183,6 +177,9 @@ Utilice los procedimientos siguientes para habilitar la detección de bosques de
 6.  En la pestaña **Programación de sondeo** , configure la programación de sondeo de detección completa y la detección de diferencias.  
 
 7.  De forma alternativa, en la pestaña **Atributos de Active Directory** , puede configurar atributos adicionales de Active Directory para los equipos que desea detectar. También se enumeran los atributos predeterminados del objeto.  
+
+     > [!Tip]  
+     > Por ejemplo, la organización usa el atributo **Descripción** en la cuenta de equipo de Active Directory. Haga clic en **Personalizado** y agregue `Description` como un atributo personalizado. Después de que se ejecute este método de detección, este atributo se muestra en la pestaña Propiedades del dispositivo de la consola de Configuration Manager.<!--513948-->
 
 8.  De forma alternativa, en la pestaña **Opción**, puede configurar las opciones para filtrar o excluir de la detección los registros de equipos obsoletos.  
 

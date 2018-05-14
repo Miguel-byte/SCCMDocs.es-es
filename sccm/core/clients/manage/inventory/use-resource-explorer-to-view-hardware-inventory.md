@@ -1,30 +1,24 @@
 ---
-title: "Visualización del inventario de hardware con el Explorador de recursos"
+title: Visualización del inventario de hardware con el Explorador de recursos
 titleSuffix: Configuration Manager
 description: Use el Explorador de recursos para ver el inventario de hardware en System Center Configuration Manager.
-ms.custom: na
 ms.date: 01/03/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 375912f5-436d-4315-bdbe-d77afee6c9f3
-caps.latest.revision: 
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: a08fdd76fee73e50cb1f1249dd3ef4f54ce378a0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: be2c8c3dbfef5ea0f35e338b14439c65150310be
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-use-resource-explorer-to-view-hardware-inventory-in-system-center-configuration-manager"></a>Cómo usar el Explorador de recursos para ver el inventario de hardware en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Use el Explorador de recursos en System Center Configuration Manager para ver información sobre el inventario de hardware recopilado de los clientes de la jerarquía.  
 
@@ -49,5 +43,5 @@ Use el Explorador de recursos en System Center Configuration Manager para ver in
 
 3.  Seleccione el equipo que contiene el inventario que quiere ver y, después, en la pestaña **Inicio** > grupo **Dispositivos**, pulse **Iniciar** >  **Explorador de recursos**.   
 
-4.  Haga clic con el botón derecho en cualquier elemento del panel derecho de la ventana **Explorador de recursos** y pulse **Propiedades** para abrir el cuadro de diálogo **Propiedades** de *<nombre del elemento\>* para ver la información de inventario recopilada en un formato más legible.  
+4.  Haga clic con el botón derecho en cualquier elemento del panel derecho de la ventana **Explorador de recursos** y elija **Propiedades** para abrir el cuadro de diálogo *Propiedades de <nombre del elemento\>* para ver la información de inventario recopilada en un formato más legible.  
 

@@ -1,26 +1,20 @@
 ---
-title: "Personalizar imágenes de arranque "
+title: 'Personalizar imágenes de arranque '
 titleSuffix: Configuration Manager
-description: "Conozca diversas maneras de usar Configuration Manager o la herramienta de línea de comandos de Administración y mantenimiento de imágenes de implementación (DISM) para personalizar una imagen de arranque."
-ms.custom: na
+description: Conozca diversas maneras de usar Configuration Manager o la herramienta de línea de comandos de Administración y mantenimiento de imágenes de implementación (DISM) para personalizar una imagen de arranque.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
-caps.latest.revision: "15"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 184768e87406051508c8dcacfa63db5ff85c3732
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 3532e6db7b4ece1676c9b9f41f9336274ac3d117
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-boot-images-with-system-center-configuration-manager"></a>Personalizar imágenes de arranque con System Center Configuration Manager
 
@@ -165,7 +159,7 @@ Cada versión de Configuration Manager admite una determinada versión de Window
 
     4.  En un símbolo del sistema, escriba **wbemtest** para abrir la Herramienta de comprobación del instrumental de administración de Windows.  
 
-    5.  Escriba **\\\\<***Equipo del proveedor de SMS***>\root\sms\site_<***código de sitio***>** en **Espacio de nombres** y, después, haga clic en **Conectar**.  
+    5.  Escriba **\\\\<***Equipo del proveedor de SMS***>\root\sms\site_<***código de sitio***>** en **Espacio de nombres** y luego haga clic en **Conectar**.  
 
     6.  Haga clic en **Abrir instancia**, escriba **sms_bootimagepackage.packageID="<idDePaquete\>"** y haga clic en **Aceptar**. Como IDdepaquete, escriba el valor que se identificó en el paso 3.  
 
@@ -281,7 +275,7 @@ Cada versión de Configuration Manager admite una determinada versión de Window
 
     4.  En un símbolo del sistema, escriba **wbemtest** para abrir la Herramienta de comprobación del instrumental de administración de Windows.  
 
-    5.  Escriba **\\\\<***Equipo del proveedor de SMS***>\root\sms\site_<***código de sitio***>** en **Espacio de nombres** y, después, haga clic en **Conectar**.  
+    5.  Escriba **\\\\<***Equipo del proveedor de SMS***>\root\sms\site_<***código de sitio***>** en **Espacio de nombres** y luego haga clic en **Conectar**.  
 
     6.  Haga clic en **Abrir instancia**, escriba **sms_bootimagepackage.packageID="<idDePaquete\>"** y haga clic en **Aceptar**. Como IDdepaquete, escriba el valor que se identificó en el paso 3.  
 
