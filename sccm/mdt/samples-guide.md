@@ -11,11 +11,11 @@ ms.assetid: 2ff0100c-b7ef-4e09-8c96-fc1898390b6d
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: fe61cecea2b2a4f4083933b937af90dfb61ea5bf
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 6b36da9f98749858829ab591571496532b26f290
+ms.sourcegitcommit: 7198ec49d9ce68c6d55bfb9e2d537b5442a132cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="microsoft-deployment-toolkit-samples-guide"></a>Guía de ejemplos de Microsoft Deployment Toolkit  
  Esta guía forma parte de Microsoft® Deployment Toolkit (MDT) 2013 y sirve de orientación para un equipo de expertos a lo largo de la implementación de sistemas operativos Windows y Microsoft Office. En concreto, la guía está diseñada para ofrecer opciones de configuración de ejemplo para escenarios de implementación específicos.  
@@ -1722,7 +1722,7 @@ IF ((Computer Model IS “Contoso 1950”) AND (operating system=2003 OR operati
 
 19. En la página **Folders to Replicate** (Carpetas para replicar), haga clic en **Agregar** y lleve a cabo estos pasos:  
 
-    1.  En el cuadro **Local Path of the folder to replicate** (Ruta de acceso local de la carpeta para replicar), haga clic en **Examinar** para ir a la carpeta *X:\\* Deployment, donde *X* es la letra de unidad del servidor de implementación.  
+    1.  En el cuadro **Local Path of the folder to replicate** (Ruta de acceso local de la carpeta para replicar), haga clic en **Examinar** para ir a la carpeta *X:\\*Deployment, donde *X* es la letra de unidad del servidor de implementación.  
 
     2.  Haga clic en **Use name based on path** (Usar nombre basado en la ruta de acceso).  
 
@@ -3670,9 +3670,11 @@ Remove-item -path "DS002:\Task Sequences\Windows Vista Business Production Build
 -   ```  
     New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
     ```  
-
--   Update\-MDTDeploymentShare \-path "DS002:" \-Verbose  
-
+    
+-   ```
+    Update\-MDTDeploymentShare \-path "DS002:" \-Verbose  
+    ```
+    
 ###  <a name="CreateLinkedDeployShare"></a> Crear un recurso compartido de implementación vinculado  
  Los siguientes comandos de Windows PowerShell crean un recurso compartido de implementación que está vinculado al recurso compartido de implementación de producción y se encuentra en el recurso compartido \\\\*remote\_server\_name*\\Deployment$. El perfil de selección Everything se usa para determinar que contenido se replica en el recurso compartido de implementación vinculado. El contenido del recurso compartido de implementación de producción se combinará con el contenido que ya existe en el recurso compartido \\\\*remote\_server\_name*\\Deployment$.  
 
