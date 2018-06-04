@@ -1,5 +1,6 @@
 ---
-title: Planeamiento de la implementación del cliente en dispositivos Windows Embedded | Microsoft Docs
+title: Planeamiento de implementación de clientes en dispositivos de Windows Embedded
+titleSuffix: Configuration Manager
 description: Planee la implementación del cliente en dispositivos Windows Embedded en System Center Configuration Manager.
 ms.custom: na
 ms.date: 04/23/2017
@@ -16,22 +17,22 @@ caps.handback.revision: 0
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 513dcb2a224a6e60553fdc602813e9fe47116235
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: c4f3d8a9b043707340e56d3ae483ad66ca17dc10
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2017
-ms.locfileid: "22103611"
+ms.lasthandoff: 03/27/2018
+ms.locfileid: "23134504"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>Planeación de la implementación del cliente en dispositivos Windows Embedded en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 <a name="BKMK_DeployClientEmbedded"></a> Si su dispositivo de Windows Embedded no incluye el cliente de System Center Configuration Manager, puede usar cualquiera de los métodos de instalación de cliente si el dispositivo cumple con las dependencias necesarias. Si el dispositivo incrustado admite filtros de escritura, debe deshabilitar estos filtros antes de instalar el cliente, y volverlos a habilitar posteriormente una vez que el cliente esté instalado y asignado a un sitio.  
 
  Tenga en cuenta que, al deshabilitar los filtros, no debe deshabilitar los controladores de filtro. Normalmente, estos controladores se inician automáticamente cuando se inicia el equipo. La deshabilitación de los controladores impedirá la instalación del cliente o interferirá con la orquestación de filtros de escritura, con lo que se producirá un error en las operaciones del cliente. Estos son los servicios asociados a cada tipo de filtro de escritura que se deben seguir ejecutando:  
 
-|Tipo de filtro de escritura|Controlador|Tipo|Descripción|  
+|Tipo de filtro de escritura|Controlador|Escriba|Descripción|  
 |-----------------------|------------|----------|-----------------|  
 |EWF|EWF|Kernel|Implementa una redirección de E/S de nivel de sector en los volúmenes protegidos.|  
 |FBWF|FBWF|Sistema de archivos|Implementa una redirección de E/S de nivel de archivo en los volúmenes protegidos.|  

@@ -1,30 +1,25 @@
 ---
-title: Introducción a la administración de aplicaciones | Microsoft Docs
+title: Introducción a la administración de aplicaciones
+titleSuffix: Configuration Manager
 description: Obtenga la información básica que necesitará para administrar e implementar las aplicaciones de System Center Configuration Manager.
-ms.custom: na
 ms.date: 12/23/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
-caps.latest.revision: 18
-author: robstackmsft
-ms.author: robstack
-manager: angrobe
-ms.openlocfilehash: 959a36413d06bb225f260bd44c1d3d59efd44e69
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: bcdc5800a1c280c99289528c40e0efee8acf5ad5
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2017
-ms.locfileid: "20784598"
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "32336177"
 ---
 # <a name="introduction-to-application-management-in-system-center-configuration-manager"></a>Introducción a la administración de aplicaciones en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En este tema, aprenderá los conceptos básicos que necesita saber antes de empezar a trabajar con aplicaciones de System Center Configuration Manager.  
 
@@ -55,7 +50,7 @@ En este tema, aprenderá los conceptos básicos que necesita saber antes de empe
  Configuration Manager le permite implementar los siguientes tipos de aplicaciones:  
 
 - Windows Installer (archivo *.msi)
-- Paquete de aplicación de Windows (*.appx, *.appxbundle)
+- Paquete de aplicación de Windows (\*.appx, \*.appxbundle)
 - Paquete de aplicación de Windows (en la Tienda Windows)
 - Microsoft Application Virtualization 4
 - Microsoft Application Virtualization 5
