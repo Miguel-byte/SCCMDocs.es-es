@@ -1,30 +1,37 @@
 ---
-title: Planeamiento de implementación de clientes en dispositivos de Windows Embedded
-titleSuffix: Configuration Manager
+title: Planeamiento de la implementación del cliente en dispositivos Windows Embedded | Microsoft Docs
 description: Planee la implementación del cliente en dispositivos Windows Embedded en System Center Configuration Manager.
+ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-client
-ms.topic: conceptual
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+- configmgr-client
+ms.tgt_pltfrm: na
+ms.topic: get-started-article
 ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.openlocfilehash: 6ca987411775ec3a6fbe626d4b34f83313673f5b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+caps.latest.revision: 7
+caps.handback.revision: 0
+author: arob98
+ms.author: angrobe
+manager: angrobe
+ms.openlocfilehash: 513dcb2a224a6e60553fdc602813e9fe47116235
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/15/2017
+ms.locfileid: "22103611"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>Planeación de la implementación del cliente en dispositivos Windows Embedded en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 <a name="BKMK_DeployClientEmbedded"></a> Si su dispositivo de Windows Embedded no incluye el cliente de System Center Configuration Manager, puede usar cualquiera de los métodos de instalación de cliente si el dispositivo cumple con las dependencias necesarias. Si el dispositivo incrustado admite filtros de escritura, debe deshabilitar estos filtros antes de instalar el cliente, y volverlos a habilitar posteriormente una vez que el cliente esté instalado y asignado a un sitio.  
 
  Tenga en cuenta que, al deshabilitar los filtros, no debe deshabilitar los controladores de filtro. Normalmente, estos controladores se inician automáticamente cuando se inicia el equipo. La deshabilitación de los controladores impedirá la instalación del cliente o interferirá con la orquestación de filtros de escritura, con lo que se producirá un error en las operaciones del cliente. Estos son los servicios asociados a cada tipo de filtro de escritura que se deben seguir ejecutando:  
 
-|Tipo de filtro de escritura|Controlador|Escriba|Descripción|  
+|Tipo de filtro de escritura|Controlador|Tipo|Descripción|  
 |-----------------------|------------|----------|-----------------|  
 |EWF|EWF|Kernel|Implementa una redirección de E/S de nivel de sector en los volúmenes protegidos.|  
 |FBWF|FBWF|Sistema de archivos|Implementa una redirección de E/S de nivel de archivo en los volúmenes protegidos.|  
@@ -58,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 >
 > **Solo para dispositivos que usen FBWF:** configure las siguientes excepciones para conservar el estado del cliente y los datos de inventario entre reinicios de dispositivo:  
 >   
->  -   CCMINSTALLDIR\\\*.sdf  
+>  -   CCMINSTALLDIR\\*.sdf  
 > -   CCMINSTALLDIR\ServiceData  
 > -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 >   
