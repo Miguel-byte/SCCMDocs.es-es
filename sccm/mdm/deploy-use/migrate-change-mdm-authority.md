@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: b8bc778f4bcede45d3035b8b119fc3e4a4df4978
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b295dad503b801ff9d04767f75c1688107016d0b
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569687"
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>Cambio de la entidad de MDM a Intune independiente
 
@@ -53,7 +54,9 @@ Utilice el procedimiento siguiente para cambiar la entidad de MDM de inquilino a
 3.  Inicie sesión en el inquilino de Intune que usó originalmente al configurar la entidad de MDM en Configuration Manager.
 4.  Haga clic en **Siguiente** y complete el asistente.
 5.  Ahora se ha restablecido la entidad de MDM. La suscripción a Intune ya no se muestra en el nodo Suscripciones a Microsoft Intune de la consola de Configuration Manager.
-6.  Inicie sesión en [Intune en Azure Portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) mediante el mismo inquilino de Intune que usó anteriormente.    
+6.  Inicie sesión en el [portal de Intune](https://aka.ms/IntunePortal).
+7.  En la hoja de Microsoft Intune, haga clic en **Inscripción de dispositivos**.
+8.  En la hoja de información general de inscripción de dispositivos, vea la propiedad **Entidad de MDM**.
 
   > [!Important]    
   > No utilice la consola de Intune clásica. Debe iniciar sesión en Intune en Azure Portal.

@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: e62b748596aba1404d6b097e5aa0bf74266f055b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: fbae44d1344dd36d3c0a6faf2e50727dfa830ba0
+ms.sourcegitcommit: 8060ea520fb08629e1d5f249daffe825536673a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35232377"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificados para Cloud Management Gateway
 
@@ -41,7 +42,7 @@ CMG crea un servicio HTTPS al que se conectan los clientes basados en Internet. 
 ### <a name="cmg-trusted-root-certificate-to-clients"></a>Certificado raíz de confianza de CMG para clientes
 
 Los clientes deben confiar en el certificado de autenticación de servidor CMG. Hay dos métodos para conseguir esta relación de confianza:
-- Usar un certificado de un proveedor de certificados público y de confianza global. Por ejemplo, VeriSign o Thawte, entre otros. Los clientes de Windows incluyen entidades de certificación raíz de confianza (CA) de estos proveedores. Al usar un certificado de autenticación de servidor emitido por uno de estos proveedores, los clientes confían automáticamente en él. 
+- Usar un certificado de un proveedor de certificados público y de confianza global. Por ejemplo, DigiCert, VeriSign o Thawte, entre otros. Los clientes de Windows incluyen entidades de certificación raíz de confianza (CA) de estos proveedores. Al usar un certificado de autenticación de servidor emitido por uno de estos proveedores, los clientes confían automáticamente en él. 
 - Usar un certificado emitido por una entidad de certificación de empresa de la infraestructura de clave pública (PKI). La mayoría de las implementaciones de PKI de empresa agregan las entidades de certificación raíz de confianza a clientes de Windows. Por ejemplo, mediante el uso de Servicios de certificados de Active Directory con una directiva de grupo. Si emite el certificado de autenticación de servidor CMG desde una entidad de certificación en la que los clientes no confían automáticamente, debe agregar el certificado raíz de confianza de la entidad de certificación a los clientes basados en Internet.
     - También puede usar perfiles de certificado de Configuration Manager para aprovisionar certificados en los clientes. Para obtener más información, vea [Introducción a los perfiles de certificado](/sccm/protect/deploy-use/introduction-to-certificate-profiles).
 

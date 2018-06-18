@@ -10,11 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 3a667ae075ac688d4b49789ed88f858c2ff39397
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9324126014245b586ba8fed87c670ac829f6cb81
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34703475"
 ---
 # <a name="co-management-for-windows-10-devices"></a>Administración conjunta para dispositivos de Windows 10    
  Con actualizaciones anteriores de Windows 10 ya puede unir un dispositivo Windows 10 a Active Directory (AD) local y Azure AD en la nube al mismo tiempo (Azure AD híbrido). A partir de la Configuration Manager versión 1710, la administración conjunta aprovecha esta mejora y permite administrar dispositivos Windows 10 versión 1709 de forma simultánea mediante Configuration Manager e Intune. <!-- 1350871 -->
@@ -60,7 +61,7 @@ Hay dos formas de conseguir la administración conjunta. Una es que los disposit
 ### <a name="enable-co-management"></a>Habilitación de la administración conjunta 
  En la consola de Configuration Manager, vaya a **Administración** > **Información general** > **Servicios de nube** > **Co-management** (Administración conjunta). Seleccione  **Configure co-management** (Configurar administración conjunta) en la cinta para abrir el **Co-management Onboarding Wizard** (Asistente para incorporación de la administración conjunta). 
    
-1. En la página **Suscripción**, haga clic en **Iniciar sesión** e inicie sesión en el inquilino de Intune y luego haga clic en **Siguiente**.    
+1. En la página **Suscripción**, haga clic en **Iniciar sesión** e inicie sesión en el inquilino de Intune y luego haga clic en **Siguiente**. Asegúrese de que la cuenta utilizada para iniciar sesión en el inquilino tiene asignada una licencia de Intune. En caso contrario, se producirá el error "Usuario no reconocido".   
 2. En la página **Habilitación**, elija la opción **Automatic enrollment into Intune** (Inscripción automática en Intune). Copie la línea de comandos para los dispositivos ya inscritos en Intune, si es necesario. 
 3. En la página **Cargas de trabajo**, elija para cada carga de trabajo el grupo de dispositivos que quiere pasar a la administración con Intune.
 4. En la página **Almacenamiento provisional**, seleccione una colección de dispositivos para que sea la **Recopilación piloto**. Revise el **Resumen** y finalice el asistente. 

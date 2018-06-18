@@ -10,11 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 3dd5a7f9717843244ab8477a09b109261618f9aa
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 07616a1c03c0383e9001418043dc6cd7ec117c1d
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34703492"
 ---
 # <a name="integration-with-windows-update-for-business-in-windows-10"></a>Integración con Windows Update for Business en Windows 10
 
@@ -72,7 +73,8 @@ A partir de la versión 1706 de Configuration Manager, puede configurar directiv
 >A partir de la versión 1802 de Configuration Manager, se pueden establecer directivas de aplazamiento para Windows Insider. <!--507201-->Para obtener más información sobre el programa Windows Insider, vea [Introducción al Programa Windows Insider para empresas](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business).
 
 ### <a name="prerequisites"></a>Requisitos previos
-Los dispositivos con Windows 10 administrados por Windows Update para empresas deben tener conectividad a Internet.
+-   Windows 10, versión 1703 o posteriores.
+-   Los dispositivos con Windows 10 administrados por Windows Update para empresas deben tener conectividad a Internet.
 
 #### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>Para crear una directiva de aplazamiento para Windows Update para empresas
 1. En **Biblioteca de Software** > **Mantenimiento de Windows 10** > **Directivas de Windows Update para empresas**

@@ -1,8 +1,8 @@
 ---
-title: Lista de comprobación para la versión 1802 | System Center Configuration Manager
+title: Lista de comprobación de 1802
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las acciones que se deben realizar antes de actualizar a la versión 1802 de System Center Configuration Manager.
-ms.date: 03/22/2018
+ms.date: 06/08/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 6af92de2-b2c7-4d5c-affd-6cce81979fb5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f16f69e7b359112a03bb26c964ac0a6990c0b24
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 74fa4e9240cf4a3d369d6b20bcb9233fb6319a8d
+ms.sourcegitcommit: 690f64bd02139f893bd0b45e2e0f00ed6bb4e1c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35259305"
 ---
 # <a name="checklist-for-installing-update-1802-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1802 de System Center Configuration Manager
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/03/2018
 
 Cuando se usa la rama actual de System Center Configuration Manager, se puede instalar la actualización en la consola para la versión 1802 para actualizar la jerarquía desde una versión anterior. <!-- baseline only statement: -->(Como la versión 1802 también está disponible como [medio de línea base](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), se puede usar el medio de instalación para instalar el primer sitio de una jerarquía nueva).
 
-Para obtener la actualización de la versión 1802, se debe usar un rol de sistema de sitio de punto de conexión del servicio en el sitio de nivel superior de la jerarquía. Esto puede realizarse en el modo en línea o sin conexión. Después de que su jerarquía descargue el paquete de actualización de Microsoft, lo podrá encontrar en la consola, en **Administración &gt; Información general &gt; Cloud Services &gt; Actualizaciones y mantenimiento**.
+Para obtener la actualización de la versión 1802, se debe usar un punto de conexión del servicio en el sitio de nivel superior de la jerarquía. Este rol de sistema de sitio puede realizarse en el modo en línea o sin conexión. Después de que su jerarquía descargue el paquete de actualización de Microsoft, lo podrá encontrar en la consola, en el área de trabajo **Administración** del nodo **Actualizaciones y mantenimiento**.
 
 -   Cuando la actualización aparezca como **Disponible**, ya está lista para instalarse. Antes de instalar la versión 1802, revise la información siguiente [sobre la instalación de la actualización 1802](#about-installing-update-1802) y la [lista de comprobación](#checklist) para obtener las configuraciones que se deben realizar antes de iniciar la actualización.
 
@@ -141,10 +142,14 @@ Use períodos para tareas administrativas para definir un período durante el cu
 
 Esto puede ayudarle a controlar el momento en que los sitios de la jerarquía instalan la actualización. Para más información, vea [Ventanas de servicio para servidores de sitio](/sccm/core/servers/manage/service-windows).
 
+**Revisar extensiones compatibles:**   
+<!--SCCMdocs#587-->   
+Si amplía Configuration Manager con otros productos de Microsoft o de partners de Microsoft, confirme que sean compatibles con la versión 1802. Para ello, consulte al proveedor del producto. Por ejemplo, vea las [notas de la versión](/sccm/mdt/release-notes) de Microsoft Deployment Toolkit.
+
 **Ejecutar el Comprobador de requisitos previos del programa de instalación:**   
 Cuando la actualización aparece en la consola como **Disponible**, puede ejecutar de manera independiente el Comprobador de requisitos previos antes de instalar la actualización. (Al instalar la actualización en el sitio, el Comprobador de requisitos previos vuelve a ejecutarse).
 
-Para ejecutar una comprobación de requisitos previos desde la consola, vaya a **Administración > Información general > Cloud Services > Actualizaciones y mantenimiento**. Luego, haga clic con el botón derecho en **Paquete de actualización 1802 de Configuration Manager** y, después, elija **Ejecutar comprobación de requisitos previos**.
+Para ejecutar una comprobación de requisitos previos desde la consola, vaya al área de trabajo **Administración** y seleccione **Actualizaciones y mantenimiento**. Seleccione el paquete de actualización **Configuration Manager 1802** y haga clic en **Ejecutar comprobación de requisitos previos** en la cinta.
 
 Para obtener más información sobre iniciar y, después, supervisar la comprobación de requisitos previos, consulte **Paso 3: Ejecutar el Comprobador de requisitos previos antes de instalar una actualización** en el tema [Instalación de actualizaciones en la consola para System Center Configuration Manager](/sccm/core/servers/manage/install-in-console-updates).
 
@@ -167,3 +172,4 @@ Revise las acciones siguientes que deben realizarse una vez finalizada la instal
 3.  Vuelva a configurar réplicas de base de datos para los puntos de administración de los sitios primarios que deshabilitó antes de iniciar la actualización.
 4.  Vuelva a configurar las tareas de mantenimiento de base de datos que deshabilitó antes de iniciar la actualización.
 5.  Si ha configurado el proyecto piloto del cliente antes de instalar la actualización, actualice los clientes en función del plan que ha creado.
+6.  Si usa extensiones para Configuration Manager, actualícelas a la versión más reciente para que admitan esta actualización de Configuration Manager. 
