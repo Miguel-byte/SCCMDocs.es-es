@@ -29,6 +29,7 @@
 ## [Mantenimiento de las actualizaciones de software](deploy-use/software-updates-maintenance.md)
 ## [Dar servicio a un grupo de servidores](deploy-use/service-a-server-group.md)
 ## [Administrar las actualizaciones de Office 365 ProPlus](deploy-use/manage-office-365-proplus-updates.md)
+## [Optimizar la distribución de actualizaciones de Windows 10](deploy-use/optimize-windows-10-update-delivery.md)
 ## [Administración de archivos de instalación rápida para actualizaciones de Windows 10](deploy-use/manage-express-installation-files-for-windows-10-updates.md)
 ## [Integración con Windows Update for Business en Windows 10](deploy-use/integrate-windows-update-for-business-windows-10.md)
 ## [Escenario de ejemplo para implementar actualizaciones de seguridad](deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)
