@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32341702"
 ---
 # <a name="prepare-to-install-system-center-configuration-manager-sites"></a>Preparar la instalación de sitios de System Center Configuration Manager
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/03/2018
 Para preparar una implementación correcta de uno o varios sitios de System Center Configuration Manager, debe familiarizarse con la información descrita en este artículo. Estos pasos le pueden ahorrar tiempo a la hora de instalar varios sitios y pueden evitar que se lleven a cabo pasos incorrectos, con lo que se tendrían que volver a instalar los sitios.
 
 > [!TIP]
-> Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* e *instalar* se utilizan para describir los tres conceptos independientes. ** Para obtener información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).
+> Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *mejorar*, *actualizar* e *instalar* se utilizan para describir los tres conceptos independientes.  Para obtener información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).
 
 ## <a name="bkmk_options"></a> Opciones para instalar los diferentes tipos de sitios
 Al instalar un sitio de Configuration Manager nuevo, la versión de los archivos de origen que se pueden usar depende de la versión de los sitios que ya están en la jerarquía (en caso de que haya). Los métodos de instalación disponibles dependen del tipo de sitio que quiera instalar.  
