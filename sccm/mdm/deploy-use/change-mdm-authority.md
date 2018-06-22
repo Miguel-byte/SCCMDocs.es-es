@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32349524"
 ---
 # <a name="change-your-mdm-authority"></a>Cambio de la entidad de MDM
 Puede cambiar la entidad de MDM sin tener que ponerse en contacto con el Soporte técnico de Microsoft y sin necesidad de anular y volver a crear la inscripción de sus dispositivos administrados existentes. En este artículo se proporcionan los pasos para cambiar un inquilino de Microsoft Intune existente configurado desde la consola de Configuration Manager (híbrida) a Intune independiente. Al completar los pasos descritos en este artículo, los dispositivos se administran con Microsoft Intune en [Azure Portal](https://portal.azure.com). 

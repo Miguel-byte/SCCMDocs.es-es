@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32333100"
 ---
 # <a name="learn-more-about-available-updates-for-system-center-configuration-manager"></a>Para más información sobre las actualizaciones disponibles de System Center Configuration Manager
 

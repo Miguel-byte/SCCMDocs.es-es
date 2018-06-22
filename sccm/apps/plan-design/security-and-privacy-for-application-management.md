@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32336415"
 ---
 # <a name="security-and-privacy-for-application-management-in-system-center-configuration-manager"></a>Seguridad y privacidad de la administración de aplicaciones en System Center Configuration Manager
 

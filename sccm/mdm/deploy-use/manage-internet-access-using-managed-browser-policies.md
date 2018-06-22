@@ -2,26 +2,20 @@
 title: Administrar el acceso a Internet mediante directivas de explorador administrado
 titleSuffix: Configuration Manager
 description: Implemente Intune Managed Browser para administrar y restringir el acceso a Internet.
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
-caps.latest.revision: ''
-caps.handback.revision: ''
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 3aea2a65733a52ab532d451b21ae98fbc0f122c6
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 8754219f36e30f2442178dc5521e05246948d3de
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "32350153"
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-system-center-configuration-manager"></a>Administrar el acceso a Internet mediante directivas de explorador administrado con System Center Configuration Manager
 
@@ -92,7 +86,7 @@ La directiva nueva se muestra en el nodo **Directivas de administración de apli
 
 Utilice la siguiente información para conocer los formatos permitidos y los caracteres comodín que puede usar al especificar direcciones URL en las listas de permitidos y bloqueados.  
 
--   Puede utilizar el carácter comodín '**\\***' según las reglas de la siguiente lista de patrones permitidos.  
+-   Puede utilizar el carácter comodín '**\***' según las reglas de la siguiente lista de patrones permitidos.  
 
 -   Asegúrese de anteponer **http** o **https** a todas las direcciones URL al introducirlas en la lista.  
 
@@ -111,7 +105,7 @@ Utilice la siguiente información para conocer los formatos permitidos y los car
     |http://www.contoso.com<br /><br /> Coincide con una sola página|www.contoso.com|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> contoso.com/|  
     |http://contoso.com<br /><br /> Coincide con una sola página|contoso.com/|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com|  
     |http://www.contoso.com/*<br /><br /> Coincide con todas las direcciones URL que comienzan con www.contoso.com|www.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com/videos/tvshows|host.contoso.com<br /><br /> host.contoso.com/images|  
-    |http://\*.contoso.com/\*<br /><br /> Coincide con todos los subdominios en contoso.com|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/images|contoso.host.com|  
+    |http://*.contoso.com/\*<br /><br /> Coincide con todos los subdominios en contoso.com|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/images|contoso.host.com|  
     |http://www.contoso.com/images<br /><br /> Coincide con una sola carpeta|www.contoso.com/images|www.contoso.com/images/dogs|  
     |http://www.contoso.com:80<br /><br /> Coincide con una sola página, con un número de puerto|http://www.contoso.com:80||  
     |https://www.contoso.com<br /><br /> Coincide con una sola página segura|https://www.contoso.com|http://www.contoso.com|  
@@ -121,11 +115,11 @@ Utilice la siguiente información para conocer los formatos permitidos y los car
 
     -   *.com  
 
-    -   \*.contoso/\*  
+    -   *.contoso/\*  
 
     -   www.contoso.com/*images  
 
-    -   www.contoso.com/\*images\*pigs  
+    -   www.contoso.com/*images\*pigs  
 
     -   www.contoso.com/page*  
 

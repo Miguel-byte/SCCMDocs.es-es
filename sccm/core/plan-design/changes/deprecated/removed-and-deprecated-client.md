@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32333042"
 ---
 # <a name="removed-and-deprecated-items-for-system-center-configuration-manager-clients"></a>Elementos eliminados y en desuso de clientes de System Center Configuration Manager
 

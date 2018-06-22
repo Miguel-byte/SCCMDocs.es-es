@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32337248"
 ---
 # <a name="manage-network-bandwidth-for-content"></a>Administración del ancho de banda de red para contenido
 Para ayudarle a administrar el ancho de banda de red que se usa para el proceso de administración de contenido de System Center Configuration Manager, puede usar los controles integrados para la programación y el límite. También puede usar contenido preconfigurado. En las secciones siguientes se describen estas opciones con más detalle.

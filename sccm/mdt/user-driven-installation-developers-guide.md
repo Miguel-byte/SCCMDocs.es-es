@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/27/2018
+ms.locfileid: "27821089"
 ---
 # <a name="user-driven-installation---developers-guide"></a>Instalación controlada por el usuario: guía para desarrolladores
 La instalación controlada por el usuario (UDI) ayuda a simplificar la implementación de sistemas operativos cliente Windows®, como Windows 8.1, en equipos con la característica de implementación de sistema operativo (OSD) de Microsoft® System Center 2012 R2 Configuration Manager. UDI forma parte de Microsoft Deployment Toolkit (MDT).  

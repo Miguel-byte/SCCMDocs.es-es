@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32347236"
 ---
 # <a name="create-windows-phone-applications-with-system-center-configuration-manager"></a>Crear aplicaciones de Windows Phone con System Center Configuration Manager
 

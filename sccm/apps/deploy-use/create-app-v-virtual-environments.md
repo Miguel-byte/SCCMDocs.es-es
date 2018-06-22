@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32331835"
 ---
 # <a name="create-app-v-virtual-environments-in-system-center-configuration-manager"></a>Crear entornos virtuales de App-V en System Center Configuration Manager
 
