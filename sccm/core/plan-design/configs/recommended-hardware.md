@@ -2,7 +2,7 @@
 title: Hardware recomendado
 titleSuffix: Configuration Manager
 description: Obtenga recomendaciones de hardware que le ayudarán a ampliar su entorno de System Center Configuration Manager más allá de una implementación básica.
-ms.date: 03/22/2018
+ms.date: 05/23/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 5267f0af-34d3-47a0-9ab8-986c41276e6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ae2ba43c8e5c97dd0b8b9ba43c3e3fde1eb259f4
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 51d3a537fd7aa874fb2662bb6ec15fcfaa2124e5
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474333"
 ---
 # <a name="recommended-hardware-for-system-center-configuration-manager"></a>Hardware recomendado para System Center Configuration Manager
 
@@ -23,6 +24,7 @@ ms.lasthandoff: 05/03/2018
 Las recomendaciones siguientes son instrucciones para ayudarle a escalar un entorno de System Center Configuration Manager de tal manera que admita más que una implementación básica de sitios, sistemas de sitios y clientes. No pretenden cubrir todas las configuraciones de jerarquía y sitios posibles.  
 
  Use la información de las siguientes secciones como una guía para planear los componentes de hardware que pueden satisfacer las cargas de procesamiento de clientes y sitios que usan las características disponibles de Configuration Manager con las configuraciones predeterminadas.  
+
 
 
 ##  <a name="bkmk_ScaleSieSystems"></a> Sistemas de sitio  
@@ -113,11 +115,11 @@ Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas
 
 -   **Espacio en disco:** 500 MB de espacio en disco disponible, con 5 GB recomendados para la memoria caché del cliente de Configuration Manager. Se requiere menos espacio en disco si se usa la configuración personalizada para instalar el cliente de Configuration Manager:  
 
-    -   Use la propiedad de línea de comandos de CCMSetup /skippprereq para evitar la instalación de archivos que el cliente no requiere. Por ejemplo, ejecute **CCMSetup.exe /skipprereq:silverlight.exe** si el cliente no va a usar el catálogo de aplicaciones. A partir de Configuration Manager 1802, Silverlight ya no se instala de manera automática.  
+    -   Use la propiedad de línea de comandos de CCMSetup /skippprereq para evitar la instalación de archivos que el cliente no requiere. Por ejemplo, ejecute `CCMSetup.exe /skipprereq:silverlight.exe` si el cliente no usa el catálogo de aplicaciones. A partir de Configuration Manager 1802, Silverlight ya no se instala de manera automática.  
 
-    -   Use la propiedad Client.msi SMSCACHESIZE para establecer un archivo de caché más pequeño que el valor predeterminado de 5120 MB. El tamaño mínimo es 1 MB. Por ejemplo, **CCMSetup.exe SMSCachesize=2** crea una memoria caché de 2 MB de tamaño.  
+    -   Use la propiedad Client.msi SMSCACHESIZE para establecer un archivo de caché más pequeño que el valor predeterminado de 5120 MB. El tamaño mínimo es 1 MB. Por ejemplo, `CCMSetup.exe SMSCachesize=2` crea una memoria caché de 2 MB de tamaño.  
 
-    Para obtener más información sobre esta configuración de instalación de clientes, consulte [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md) (Acerca de las propiedades de instalación de clientes en System Center Configuration Manager).  
+    Para más información sobre esta configuración de instalación de clientes, consulte [Acerca de las propiedades de instalación de clientes en System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
     > [!TIP]  
     >  La instalación del cliente con espacio en disco mínimo es útil para dispositivos de Windows Embedded que suelen tener tamaños de disco más pequeños que los equipos de Windows estándar.  
@@ -173,6 +175,6 @@ Además de PowerShell, se admite Windows Management Framework (WMF) versión 3.0
 
 |Rol|CPU (núcleos)|Memoria (GB)|Espacio en disco (GB)|  
 |----------|---------------|-------------------|-----------------------|  
-|Servidor de sitio y base de datos|2 - 4|7 - 12|100|  
+|Servidor de sitio y base de datos|2 - 4|8 - 12|100|  
 |Servidor de sistema de sitio|1 - 4|2 - 4|50|  
 |Cliente|1 - 2|1 - 3|30|  

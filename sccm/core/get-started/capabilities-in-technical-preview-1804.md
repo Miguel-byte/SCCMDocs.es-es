@@ -2,7 +2,7 @@
 title: Technical Preview 1804
 titleSuffix: Configuration Manager
 description: Conozca las nuevas características disponibles en la versión Technical Preview 1804 de Configuration Manager.
-ms.date: 04/25/2018
+ms.date: 05/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 8af43618-ec60-4c3e-a007-12399d1335b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0fcdcc984e267e6c54ad7c6194e8494854f0a1ee
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a796c8cc23ab15e3fbeb09fca6ffa6f1dbd45bc3
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474350"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-system-center-configuration-manager"></a>Funcionalidades de la versión Technical Preview 1804 de System Center Configuration Manager
 
@@ -28,9 +29,15 @@ Revise el artículo [Technical Preview para System Center Configuration Manager]
 <!--  Known Issues Template   -->
 ## <a name="known-issues-in-this-technical-preview"></a>Problemas conocidos de esta Technical Preview
 
+### <a name="bkmk_ki-prereqs"></a> El vínculo del programa de instalación para descargar las actualizaciones no funciona
+<!--514334--> Si ejecuta el programa de instalación desde un disco, la página inicial incluye un vínculo denominado **Obtener las actualizaciones de Configuration Manager más recientes**, que no funciona en esta versión. Es este vínculo es para descargar los archivos necesarios para el programa de instalación.
+
+#### <a name="workaround"></a>Solución alternativa
+Para descargar los archivos necesarios para el programa de instalación, ejecute el asistente para la instalación. En la página Descargas de requisitos previos, use la opción de **Descargar archivos requeridos**. 
+
+
 ### <a name="bkmk_appcathttps"></a> El punto de servicio web del catálogo de aplicaciones no se puede habilitar para HTTPS
-<!--512637-->
-Si el punto de servicio web del catálogo de aplicaciones está habilitado para HTTPS:
+<!--512637--> Si el punto de servicio web del catálogo de aplicaciones está habilitado para HTTPS:
 
 - Las aplicaciones implementadas como disponibles para los usuarios no se muestran en el Centro de software  
 
@@ -50,8 +57,7 @@ Vuelva a configurar el punto de servicio de web del catálogo de aplicaciones pa
 
 
 ## <a name="configure-a-remote-content-library-for-the-site-server"></a>Configuración de una biblioteca de contenido remoto para el servidor de sitio  
-<!--1357525-->
-Para liberar espacio de la unidad de disco duro en el servidor de sitio primario, cambie la ubicación de su [biblioteca de contenido](/sccm/core/plan-design/hierarchy/the-content-library) a otra ubicación de almacenamiento. Puede mover la biblioteca de contenido a otra unidad en el servidor de sitio, un servidor independiente o discos tolerantes a errores de una red de área de almacenamiento (SAN). Se recomienda una SAN, ya que proporciona almacenamiento elástico que aumenta o disminuye con el tiempo para satisfacer los requisitos variables del contenido. 
+<!--1357525--> Para liberar espacio de la unidad de disco duro en el servidor de sitio primario, cambie la ubicación de su [biblioteca de contenido](/sccm/core/plan-design/hierarchy/the-content-library) a otra ubicación de almacenamiento. Puede mover la biblioteca de contenido a otra unidad en el servidor de sitio, un servidor independiente o discos tolerantes a errores de una red de área de almacenamiento (SAN). Se recomienda una SAN, ya que proporciona almacenamiento elástico que aumenta o disminuye con el tiempo para satisfacer los requisitos variables del contenido. 
 
 Esta biblioteca de contenido remoto es un nuevo requisito previo para la [alta disponibilidad del rol de servidor de sitio](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability). 
 
@@ -210,8 +216,7 @@ El comportamiento de revocar la aprobación de una aplicación ha cambiado. Ahor
 
 
 ## <a name="exclude-active-directory-containers-from-discovery"></a>Exclusión de contenedores de Active Directory de la detección
-<!--1358143-->
-Para reducir el número de objetos detectados, ahora puede excluir determinados contenedores de la detección del sistema de Active Directory. Esta característica es el resultado de sus [comentarios en UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8414520-exclude-virtual-cluster-and-ou-from-discovery).
+<!--1358143--> Para reducir el número de objetos detectados, ahora puede excluir determinados contenedores de la detección del sistema de Active Directory. Esta característica es el resultado de sus [comentarios en UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8414520-exclude-virtual-cluster-and-ou-from-discovery).
 
 ### <a name="try-it-out"></a>Haga la prueba
  Intente completar las tareas. Y, luego, envíenos sus [comentarios](#bkmk_feedback) para que sepamos cómo le ha ido.
@@ -257,8 +262,7 @@ Para más información sobre la configuración de cliente, consulte [Configuraci
 
 
 ## <a name="filter-automatic-deployment-rules-by-software-update-architecture"></a>Filtrado de las reglas de implementación automáticas por arquitectura de actualización de software
- <!--1322266-->
-Ahora puede filtrar las reglas de implementación automática para excluir arquitecturas como Itanium y ARM64.
+ <!--1322266--> Ahora puede filtrar las reglas de implementación automática para excluir arquitecturas como Itanium y ARM64.
 
 ### <a name="try-it-out"></a>Haga la prueba
 Intente completar las tareas. Y, luego, envíenos sus [comentarios](#bkmk_feedback) para que sepamos cómo le ha ido.

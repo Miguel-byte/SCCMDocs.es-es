@@ -1,8 +1,8 @@
 ---
 title: Reactivación de clientes
 titleSuffix: Configuration Manager
-description: Planee la reactivación de clientes en System Center Configuration Manager.
-ms.date: 04/23/2017
+description: Planee la reactivación de clientes en System Center Configuration Manager mediante Wake on LAN (WOL).
+ms.date: 05/23/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,31 +10,32 @@ ms.assetid: 52ee82b2-0b91-4829-89df-80a6abc0e63a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: aa5a0b30526f66add7dfb87fa988ed502cca1ee1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2f36ff6c28bd8a3fa23599652aff82ef0c721cad
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474147"
 ---
 # <a name="plan-how-to-wake-up-clients-in-system-center-configuration-manager"></a>Planear la reactivación de clientes en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
- Configuration Manager admite dos tecnologías Wake On LAN (red de área local) para reactivar equipos en modo de suspensión si desea instalar software requerido, como actualizaciones de software y aplicaciones: paquetes de reactivación tradicionales y comandos de encendido AMT.  
+ Configuration Manager admite paquetes de reactivación tradicionales para reactivar equipos en modo de suspensión si desea instalar software requerido, como actualizaciones de software y aplicaciones.  
 
 Puede complementar el método de los paquetes de reactivación tradicionales mediante la configuración del cliente proxy de reactivación. El proxy de reactivación usa un protocolo punto a punto y equipos elegidos para comprobar si otros equipos de la subred están activados y, si no es así, reactivarlos en caso necesario. Si el sitio está configurado para Wake On LAN y los clientes están configurados para el proxy de reactivación, el proceso funciona del siguiente modo:  
 
-1.  Los equipos que tengan instalado el cliente de Configuration Manager que no estén inactivos en la subred comprueban si los demás equipos de la subred están activos. Para ello, se envían entre sí un comando ping de TCP/IP cada 5 segundos.  
+1.  Los equipos que tengan instalado el cliente de Configuration Manager que no estén inactivos en la subred comprueban si los demás equipos de la subred están activos. Realizan esta comprobación enviando entre sí un comando ping de TCP/IP cada cinco segundos.  
 
 2.  Si no hay respuesta desde los demás equipos, se asume que están en modo de suspensión. Los equipos que están activos se convierten en el *equipo administrador* de la subred.  
 
      Dado que es posible que un equipo no responda por un motivo distinto a estar inactivo (por ejemplo, si está apagado o fuera de la red o si ya no se aplica la configuración del cliente proxy de activación), se enviará a los equipos un paquete de reactivación cada día a las 14.00 h (hora local). Dejará de suponerse que los equipos que no responden están inactivos, y no se reactivarán mediante el proxy de reactivación.  
 
-     Para admitir el proxy de reactivación, es necesario que al menos tres equipos estén activos para cada subred. Para conseguirlo, se eligen tres equipos de manera no determinista para que sean los *equipos guardianes* para la subred. Esto significa que permanecerán activos, independientemente de la directiva de energía que tengan configurada para que entren en modo de suspensión o hibernación después de un determinado período de inactividad. Los equipos guardianes obedecen los comandos de apagado o reinicio, por ejemplo, resultantes de las tareas de mantenimiento. Si esto ocurre, los demás equipos guardianes activan a otros equipos de la subred para que esta siga teniendo tres equipos guardianes.  
+     Para admitir el proxy de reactivación, es necesario que al menos tres equipos estén activos para cada subred. Para conseguir este requisito, se eligen tres equipos de manera no determinista para que sean los *equipos guardianes* para la subred. Este estado significa que permanecerán activos, independientemente de la directiva de energía que tengan configurada para que entren en modo de suspensión o hibernación después de un determinado período de inactividad. Los equipos guardianes obedecen los comandos de apagado o reinicio, por ejemplo, resultantes de las tareas de mantenimiento. Si esta acción ocurre, los demás equipos guardianes activan a otros equipos de la subred para que esta siga teniendo tres equipos guardianes.  
 
 3.  Los equipos administradores piden al conmutador de la red que redirija el tráfico de red para los equipos inactivos a ellos mismos.  
 
-     La redirección se consigue mediante la difusión por parte del equipo administrador de una trama Ethernet que utiliza la dirección MAC del equipo inactivo como dirección de origen. Esto hace que el conmutador de red se comporte como si el equipo inactivo se hubiera movido al mismo puerto en el que se encuentra el equipo administrador. El equipo administrador también envía paquetes ARP para que los equipos inactivos conserven la capacidad de admitir entradas en la memoria caché de ARP. El equipo administrador también responderá a las solicitudes ARP en nombre del equipo inactivo y responderá con la dirección MAC del equipo inactivo.  
+     La redirección se consigue mediante la difusión por parte del equipo administrador de una trama Ethernet que utiliza la dirección MAC del equipo inactivo como dirección de origen. Este comportamiento hace que el conmutador de red se comporte como si el equipo inactivo se hubiera movido al mismo puerto en el que se encuentra el equipo administrador. El equipo administrador también envía paquetes ARP para que los equipos inactivos conserven la capacidad de admitir entradas en la memoria caché de ARP. El equipo administrador también responde a las solicitudes ARP en nombre del equipo inactivo y responde con la dirección MAC del equipo inactivo.  
 
     > [!WARNING]  
     >  Durante este proceso, la asignación de IP a MAC del equipo inactivo seguirá siendo la misma. El proxy de reactivación funciona informando al conmutador de red de que un adaptador de red diferente utiliza el puerto que fue registrado por otro adaptador de red. Sin embargo, este comportamiento (conocido como solapa de MAC) es poco común para el funcionamiento de redes estándar. Algunas herramientas de supervisión de red buscan este comportamiento y pueden dar por hecho que algo no funciona correctamente. Por lo tanto, estas herramientas de supervisión pueden generar alertas o cerrar puertos cuando se utiliza el proxy de reactivación.  
@@ -50,7 +51,7 @@ Puede complementar el método de los paquetes de reactivación tradicionales med
 > [!IMPORTANT]  
 >  Si dispone de un equipo independiente que se encargue de la infraestructura de red y de los servicios de red, notifique a este equipo e inclúyalo durante su período de evaluación y pruebas. Por ejemplo, en una red que utilice el control de acceso de red 802.1X, el proxy de reactivación no funcionará y podrá interrumpir el servicio de red. Además, el proxy de reactivación podría provocar que algunas herramientas de supervisión de red generen alertas cuando las herramientas detecten el tráfico para reactivar otros equipos.  
 
--   Los clientes compatibles son Windows 7, Windows 8, Windows Server 2008 R2, Windows Server 2012.  
+-   Todos los sistemas operativos de Windows enumerados como clientes compatibles en [Sistemas operativos compatibles con clientes y dispositivos](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices) se admiten en Wake on LAN.  
 
 -   No se admiten sistemas operativos invitados que se ejecuten en una máquina virtual.  
 
@@ -60,7 +61,7 @@ Puede complementar el método de los paquetes de reactivación tradicionales med
 
 -   Si un equipo tiene más de un adaptador de red, no podrá configurar qué adaptador se debe usar para el proxy de activación; la opción es no determinista. Pero el adaptador seleccionado se registra en el archivo SleepAgent_<DOMINIO\>@SYSTEM_0.log.  
 
--   La red deberá permitir solicitudes de eco ICMP (al menos dentro de la subred). No se puede configurar el intervalo de 5 segundos que se utiliza para enviar los comandos ping de ICMP.  
+-   La red deberá permitir solicitudes de eco ICMP (al menos dentro de la subred). No se puede configurar el intervalo de cinco segundos que se utiliza para enviar los comandos ping de ICMP.  
 
 -   La comunicación está sin encriptar y sin autenticar y no se admite IPsec.  
 
@@ -80,7 +81,7 @@ Si quiere reactivar equipos para la instalación programada de software, deberá
 
  Para usar el proxy de reactivación, deberá implementar la configuración del cliente proxy de reactivación de Administración de energía además de configurar el sitio principal.  
 
-También deberá decidir si quiere usar paquetes de difusiones dirigidas a subred o paquetes de unidifusión y qué número de puerto UDP usar. De forma predeterminada, los paquetes de reactivación tradicionales se transmiten mediante el puerto 9 de UDP, pero, para aumentar la seguridad, puede seleccionar un puerto alternativo para el sitio si lo admiten los enrutadores y firewalls intervinientes.  
+Decida si quiere usar paquetes de difusiones dirigidas a subred o paquetes de unidifusión y qué número de puerto UDP usar. De forma predeterminada, los paquetes de reactivación tradicionales se transmiten mediante el puerto 9 de UDP, pero, para aumentar la seguridad, puede seleccionar un puerto alternativo para el sitio si lo admiten los enrutadores y firewalls intervinientes.  
 
 ### <a name="choose-between-unicast-and-subnet-directed-broadcast-for-wake-on-lan"></a>elija entre Unidifusión y Difusión dirigida a subred para Wake-on-LAN  
  Si decide reactivar equipos mediante el envío de paquetes de reactivación tradicionales, deberá decidir si desea transmitir paquetes de unidifusión o paquetes de difusión dirigida a subred. Si usa el proxy de reactivación, deberá usar paquetes de unidifusión. De lo contrario, utilice la siguiente tabla como ayuda para determinar qué método de transmisión desea elegir.  

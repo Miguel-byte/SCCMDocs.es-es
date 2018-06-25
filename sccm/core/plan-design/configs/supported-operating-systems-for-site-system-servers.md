@@ -2,7 +2,7 @@
 title: Servidores de sistema de sitio admitidos
 titleSuffix: Configuration Manager
 description: Obtenga información sobre qué versiones de Windows puede usar para hospedar un sitio o rol de sistema de sitio de System Center Configuration Manager.
-ms.date: 04/17/2018
+ms.date: 05/23/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: de7f340080111daf3f1b19e26aa838dc6db2e263
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: aa933186e95f084bd4e3e518e167a1cd301a4484
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474299"
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>Sistemas operativos compatibles con servidores de sistema de sitio de System Center Configuration Manager
 
@@ -254,6 +255,11 @@ Este sistema operativo no se admite para servidores de sitio o roles del sistema
     -   Los puntos de distribución en esta versión del sistema operativo no son compatibles con Multidifusión.  
 
     -   Los puntos de distribución admiten varias configuraciones diferentes y cada uno tiene requisitos diferentes. En algunos casos, estas configuraciones admiten la instalación no solo en los servidores sino también en sistemas operativos de clientes. Para obtener más información sobre las opciones disponibles para los puntos de distribución, vea [Administración del contenido y de la infraestructura de contenido para System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+
+## <a name="the-server-core-installation-of-windows-server-version-1803"></a>Instalación Server Core de Windows Server, versión 1803
+<!--503702--> A partir de Configuration Manager 1802, se admite [Windows Server, versión 1803](https://docs.microsoft.com/windows-server/get-started/get-started-with-1803) como punto de distribución con las limitaciones siguientes:  
+  -   Solo se admite la versión de 64 bits.
+  -   Los puntos de distribución de este sistema operativo no son compatibles con PXE o Multidifusión.  
 
 ## <a name="the-server-core-installation-of-windows-server-version-1709"></a>Instalación Server Core de Windows Server versión 1709
 A partir de Configuration Manager 1710, se admite [Windows Server, versión 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709) como punto de distribución con las limitaciones siguientes:  

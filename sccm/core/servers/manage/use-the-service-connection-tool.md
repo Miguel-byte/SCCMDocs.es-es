@@ -10,11 +10,12 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 906b39f01b05600d86a045e07d3e28184e9360e8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 1faabd64d11eeef8e825f22f7f661112813f5459
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474316"
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>Uso de la herramienta de conexión de servicio para System Center Configuration Manager
 
@@ -101,7 +102,13 @@ Puede utilizar los siguientes parámetros opcionales para especificar un servido
 A partir de la versión 1706, se ha modificado el comportamiento de descarga de herramientas predeterminado, así como las opciones de compatibilidad con herramientas para controlar los archivos descargados.
 -   De forma predeterminada, la herramienta descarga únicamente la última actualización disponible que sea válida para la versión de su sitio. No descarga ninguna revisión.
 
-Para modificar este comportamiento, use uno de los parámetros siguientes para cambiar qué archivos se descargarán. La versión de su sitio se determina a partir de los datos del archivo .cab que se carga al ejecutar la herramienta.
+Para modificar este comportamiento, use uno de los parámetros siguientes para cambiar qué archivos se descargarán. 
+
+> [!NOTE]
+> La versión de su sitio se determina a partir de los datos del archivo .cab que se carga al ejecutar la herramienta.
+>
+> Puede comprobar la versión buscando el archivo *SiteVersion*.txt dentro del archivo. cab.
+
 -   **-downloadall**: esta opción descarga todo, incluidas las actualizaciones y las revisiones, independientemente de la versión de su sitio.
 -   **-downloadhotfix**: esta opción descarga todas las revisiones independientemente de la versión de su sitio.
 -   **-downloadsiteversion**: esta opción descarga todas las actualizaciones y revisiones con una versión posterior a la de su sitio.
@@ -160,8 +167,19 @@ Ejemplo de una línea de comandos que usa *-downloadsiteversion*:
 
  Para obtener más información sobre la instalación de actualizaciones, consulte [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) (Instalación de actualizaciones en la consola para System Center Configuration Manager).  
 
+## <a name="bkmk_cmd"></a> Archivos de registro
+
+**ServiceConnectionTool.log**
+
+Cada vez que se ejecute la herramienta de conexión de servicio, se generará un archivo de registro en la misma ubicación que la herramienta denominada **ServiceConnectionTool.log**.  Este archivo de registro proporcionará detalles simples sobre la ejecución de la herramienta en función de qué comandos se usan.  Un archivo de registro existente se sustituirá cada vez que ejecute la herramienta.
+
+**ConfigMgrSetup.log**
+
+Al utilizar la herramienta para conectarse y descargar actualizaciones, se generará un archivo de registro en la raíz de la unidad del sistema denominado **ConfigMgrSetup.log**.  Este archivo de registro le proporcionará información más detallada, como qué archivos se descargan y extraen, y si las comprobaciones del hash se realizan correctamente.
+
 ## <a name="bkmk_cmd"></a> opciones de línea de comandos  
  Para ver la información de ayuda para la herramienta de punto de conexión de servicio, abra el símbolo del sistema para la carpeta que contiene la herramienta y ejecute el comando:  **serviceconnectiontool.exe**.  
+
 
 |Opciones de línea de comandos|Detalles|  
 |---------------------------|-------------|  

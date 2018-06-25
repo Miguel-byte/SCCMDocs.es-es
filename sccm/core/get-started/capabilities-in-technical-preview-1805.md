@@ -2,7 +2,7 @@
 title: Technical Preview 1805
 titleSuffix: Configuration Manager
 description: Conozca las nuevas características disponibles en la versión Technical Preview 1805 de Configuration Manager.
-ms.date: 05/11/2018
+ms.date: 05/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 7996b3eb-5259-483b-af40-adae2943d123
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bb2b25440c87d4969d152ce410b8a28f010868ce
-ms.sourcegitcommit: 021272d5858e5dbb650b95644736d1de3dab7d8a
+ms.openlocfilehash: 24cb16ab17475bdd063949c7e3e2961b53341026
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34450158"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1805 para System Center Configuration Manager
 
@@ -45,8 +46,7 @@ Steps to workaround, if any.
 
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence"></a>Creación de una implementación por fases con fases configuradas manualmente para una secuencia de tareas
-<!--1358148--> 
-Ahora puede [crear una implementación por fases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) con fases configuradas manualmente para una secuencia de tareas. Puede agregar hasta 10 fases adicionales desde la pestaña **Fases** del asistente Crear una implementación por fases. 
+<!--1358148--> Ahora puede [crear una implementación por fases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) con fases configuradas manualmente para una secuencia de tareas. Puede agregar hasta 10 fases adicionales desde la pestaña **Fases** del asistente Crear una implementación por fases. 
 
 
 ### <a name="try-it-out"></a>Haga la prueba
@@ -84,8 +84,7 @@ Siga las instrucciones para crear una implementación por fases donde puede conf
 
 
 ## <a name="cloud-distribution-point-support-for-azure-resource-manager"></a>Compatibilidad con puntos de distribución de nube para Azure Resource Manager
-<!--1322209-->
-Al crear una instancia del [punto de distribución de nube](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure), el asistente ahora proporciona la opción de crear una **implementación de Azure Resource Manager**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) es una moderna plataforma para administrar todos los recursos de la solución como una única entidad, denominada [grupo de recursos](/azure/azure-resource-manager/resource-group-overview#resource-groups). Al implementar un punto de distribución de nube con Azure Resource Manager, el sitio usa Azure Active Directory (Azure AD) para autenticar y crear los recursos necesarios en la nube. Esta implementación modernizada no requiere el certificado de administración de Azure clásico.  
+<!--1322209--> Al crear una instancia del [punto de distribución de nube](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure), el asistente ahora proporciona la opción de crear una **implementación de Azure Resource Manager**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) es una moderna plataforma para administrar todos los recursos de la solución como una única entidad, denominada [grupo de recursos](/azure/azure-resource-manager/resource-group-overview#resource-groups). Al implementar un punto de distribución de nube con Azure Resource Manager, el sitio usa Azure Active Directory (Azure AD) para autenticar y crear los recursos necesarios en la nube. Esta implementación modernizada no requiere el certificado de administración de Azure clásico.  
 
 El asistente para punto de distribución de nube sigue ofreciendo la opción de una **implementación del servicio clásico** mediante un certificado de administración de Azure. Para simplificar la implementación y administración de recursos, se recomienda utilizar el modelo de implementación de Azure Resource Manager para todos los puntos de distribución de nube nuevos. Si es posible, vuelva a implementar los puntos de distribución de nube a través de Resource Manager.
 
@@ -120,8 +119,7 @@ Supervise el progreso de la implementación del servicio con el punto de conexi�
 
 
 ## <a name="take-actions-based-on-management-insights"></a>Realización de acciones basadas en la información de administración
-<!--1357930-->
-Alguna [información de administración](/sccm/core/servers/manage/management-insights) ahora tiene la opción de realizar una acción. Dependiendo de la regla, esta acción muestra uno de los siguientes comportamientos:  
+<!--1357930--> Alguna [información de administración](/sccm/core/servers/manage/management-insights) ahora tiene la opción de realizar una acción. Dependiendo de la regla, esta acción muestra uno de los siguientes comportamientos:  
 
 - Navegar automáticamente por la consola hasta el nodo donde se puede realizar una acción. Por ejemplo, si la información de administración recomienda cambiar una configuración de cliente, al llevar a cabo la acción navegará hasta el nodo Configuración de cliente. Puede realizar otra acción modificando los valores predeterminados o un objeto de configuración de cliente personalizado.  
 
@@ -181,8 +179,7 @@ Para más información sobre Windows LEDBAT, consulte la entrada de blog [New tr
 
 
 ## <a name="cloud-management-dashboard"></a>Panel de administración en la nube
-<!--1358461-->
-El nuevo **panel de administración en la nube** proporciona una vista centralizada para el uso de Cloud Management Gateway (CMG). Cuando el sitio está incorporado con Azure AD, también muestra los datos sobre los usuarios en la nube y los dispositivos.  
+<!--1358461--> El nuevo **panel de administración en la nube** proporciona una vista centralizada para el uso de Cloud Management Gateway (CMG). Cuando el sitio está incorporado con Azure AD, también muestra los datos sobre los usuarios en la nube y los dispositivos.  
 
 La captura de pantalla siguiente es una parte del panel de administración en la nube que muestra dos de los iconos disponibles:  
 ![Iconos del panel de administración: Tráfico de CMG y Clientes en línea actuales](media/1358461-cmg-dashboard.png)
@@ -220,8 +217,7 @@ En la consola de Configuration Manager, vaya al área de trabajo **Supervisión*
 
 
 ## <a name="cmpivot"></a>CMPivot
-<!--1358456-->
-Configuration Manager siempre ha proporcionado un gran almacén centralizado de datos de dispositivo, que los clientes utilizan para informes. Sin embargo, esos datos son solo tan buenos como la última vez que se recopilaron de los clientes. 
+<!--1358456--> Configuration Manager siempre ha proporcionado un gran almacén centralizado de datos de dispositivo, que los clientes utilizan para informes. Sin embargo, esos datos son solo tan buenos como la última vez que se recopilaron de los clientes. 
 
 CMPivot es una nueva utilidad en la consola que proporciona acceso al estado en tiempo real de los dispositivos de su entorno. Esta utilidad ejecuta una consulta inmediatamente en todos los dispositivos conectados actualmente en la colección de destino y devuelve los resultados. A continuación, puede filtrar y agrupar estos datos en la herramienta. Mediante el suministro de datos en tiempo real de los clientes en línea, puede contestar preguntas empresariales, solucionar problemas y responder a incidentes de seguridad más rápidamente.
 
@@ -264,8 +260,7 @@ Intente completar las tareas. Y, luego, envíenos sus [comentarios](capabilities
 
 
 ## <a name="improved-secure-client-communications"></a>Comunicaciones de cliente seguras mejoradas
-<!--1356889,1358228,1358460-->
-Es recomendable utilizar la comunicación HTTPS para todas las vías de comunicación de Configuration Manager, pero puede ser un reto para algunos clientes debido a la sobrecarga de administración de certificados PKI. La introducción de la integración de Azure Active Directory (Azure AD) reduce algunos requisitos de certificado, pero no todos. 
+<!--1356889,1358228,1358460--> Es recomendable utilizar la comunicación HTTPS para todas las vías de comunicación de Configuration Manager, pero puede ser un reto para algunos clientes debido a la sobrecarga de administración de certificados PKI. La introducción de la integración de Azure Active Directory (Azure AD) reduce algunos requisitos de certificado, pero no todos. 
 
 Esta versión incluye mejoras en la forma en que los clientes se comunican con los sistemas de sitio. Hay dos objetivos principales para estas mejoras:  
 
@@ -282,18 +277,16 @@ Los siguientes escenarios aprovechan estas mejoras:
 
 #### <a name="bkmk_token1"></a> Escenario 1: Cliente a punto de administración
 <!--1356889-->
-Los [dispositivos unidos a Azure AD](/azure/active-directory/device-management-introduction#azure-ad-joined-devices) pueden comunicarse a través de una instancia de Cloud Management Gateway (CMG) con un punto de administración configurado para HTTP. El servidor de sitio genera un certificado para el punto de administración para que pueda comunicarse a través de un canal seguro.   
+[Los dispositivos unidos a Azure AD](/azure/active-directory/device-management-introduction#azure-ad-joined-devices) pueden comunicarse a través de una instancia de Cloud Management Gateway (CMG) con un punto de administración configurado para HTTP. El servidor de sitio genera un certificado para el punto de administración para que pueda comunicarse a través de un canal seguro.   
 
 > [!Note]  
 > Este comportamiento se cambia desde la versión de rama actual 1802 de Configuration Manager, lo que requiere un punto de administración habilitado para HTTPS para este escenario. Para obtener más información, vea [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https) (Habilitar el punto de administración para HTTPS).  
 
 #### <a name="bkmk_token2"></a> Escenario 2: Cliente a punto de distribución
-<!--1358228-->
-Un grupo de trabajo o un cliente unido a Azure AD puede descargar contenido a través de un canal seguro desde un punto de distribución configurado para HTTP.   
+<!--1358228--> Un grupo de trabajo o un cliente unido a Azure AD puede descargar contenido a través de un canal seguro desde un punto de distribución configurado para HTTP.   
 
 #### <a name="bkmk_token3"></a> Escenario 3: Identidad de dispositivo de Azure AD 
-<!--1358460-->
-Un [dispositivo de Azure AD híbrido](/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) o unido a Azure AD sin un usuario de Azure AD con sesión iniciada puede comunicarse de forma segura con su sitio asignado. La identidad del dispositivo basado en la nube ahora es suficiente para autenticarse con el punto de administración y CMG.  
+<!--1358460--> Un [dispositivo de Azure AD híbrido](/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) o unido a Azure AD sin un usuario de Azure AD con sesión iniciada puede comunicarse de forma segura con su sitio asignado. La identidad del dispositivo basado en la nube ahora es suficiente para autenticarse con el punto de administración y CMG.  
 
 
 ### <a name="prerequisites"></a>Requisitos previos  
@@ -336,8 +329,7 @@ Puede ver estos certificados en la consola de Configuration Manager. Vaya al ár
 
 
 ## <a name="improvements-for-enabling-third-party-software-update-support"></a>Mejoras para habilitar la compatibilidad de actualización de software de terceros
-<!--1357605-->
-Como resultado de los comentarios de UserVoice sobre la [compatibilidad de actualización de software de terceros](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co), esta versión itera en la integración con System Center Updates Publisher (SCUP). La [versión 1803](/sccm/core/get-started/capabilities-in-technical-preview-1803#enable-third-party-software-update-support-on-clients) de la versión preliminar técnica de Configuration Manager agregó la capacidad de leer el certificado de WSUS para actualizaciones de terceros y, luego, implementar ese certificado en los clientes. Pero todavía había que usar la herramienta SCUP para crear y administrar el certificado para firmar las actualizaciones de software de terceros.
+<!--1357605--> Como resultado de los comentarios de UserVoice sobre la [compatibilidad de actualización de software de terceros](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co), esta versión itera en la integración con System Center Updates Publisher (SCUP). La [versión 1803](/sccm/core/get-started/capabilities-in-technical-preview-1803#enable-third-party-software-update-support-on-clients) de la versión preliminar técnica de Configuration Manager agregó la capacidad de leer el certificado de WSUS para actualizaciones de terceros y, luego, implementar ese certificado en los clientes. Pero todavía había que usar la herramienta SCUP para crear y administrar el certificado para firmar las actualizaciones de software de terceros.
 
 En esta versión, puede permitir que el sitio de Configuration Manager configure automáticamente el certificado. El sitio se comunica con WSUS para generar un certificado para esta finalidad. Después, Configuration Manager continúa con la implementación de ese certificado a los clientes. Esta iteración elimina la necesidad de usar la herramienta SCUP para crear y administrar el certificado. 
 
@@ -396,8 +388,7 @@ La herramienta de visualización de registro de CMTrace ahora se instala automá
 
 
 ## <a name="improvement-to-the-configuration-manager-console"></a>Mejora en la consola de Configuration Manager
-<!--1358202-->
-Hemos realizado la siguiente mejora en la consola de Configuration Manager:
+<!--1358202--> Hemos realizado la siguiente mejora en la consola de Configuration Manager:
 
 - En las listas de dispositivos bajo Activos y compatibilidad, Dispositivos, ahora, de forma predeterminada, se muestra el usuario que ha iniciado sesión. Este valor es tan actual como el [estado de cliente](/sccm/core/clients/manage/monitor-clients#bkmk_indStatus). El valor se borra cuando el usuario cierra la sesión. Si ningún usuario ha iniciado sesión, el valor está en blanco. 
 
@@ -407,12 +398,14 @@ El valor del usuario que tiene iniciada sesión actualmente están en blanco en 
 
 
 ## <a name="improvements-to-console-feedback"></a>Mejoras en los comentarios de la consola
-<!--1357542-->
-Esta versión incluye las siguientes mejoras en el nuevo mecanismo [Comentarios](capabilities-in-technical-preview-1804.md#bkmk_feedback) en la consola de Configuration Manager:  
+<!--1357542--> Esta versión incluye las siguientes mejoras en el nuevo mecanismo [Comentarios](capabilities-in-technical-preview-1804.md#bkmk_feedback) en la consola de Configuration Manager:  
 
 - El cuadro de diálogo de comentarios ahora recuerda la configuración anterior, como las opciones seleccionadas y su dirección de correo electrónico.  
 
 - Ahora es compatible con comentarios sin conexión. Guarde sus comentarios de la consola y luego cárguelos en Microsoft desde un sistema conectado a Internet. Use la nueva herramienta de cargador de comentarios sin conexión que se encuentra en `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe`. Para ver las opciones de línea de comandos disponibles y requeridas, ejecute la herramienta con la opción `--help`. El sistema conectado necesita acceder a **petrol.office.microsoft.com**.
+
+### <a name="known-issues"></a>Problemas conocidos
+Cuando se usa **Enviar una sonrisa** o **Enviar una desaprobación** desde la consola de un equipo con conectividad a Internet, pueden devolver el siguiente mensaje: "Error al enviar comentarios." Si hace clic en **Más detalles**, se mostrará el siguiente texto: `{"Message":""}`. Este error es debido a un problema conocido con la respuesta del sistema de comentarios de back-end. Puede pasar por alto el error. Microsoft seguirá recibiendo sus comentarios. (Si los detalles muestran un mensaje diferente, utilice la opción de comentarios sin conexión para volver a intentar enviar los comentarios en otro momento).
 
 
 
@@ -427,8 +420,7 @@ Esta versión incluye las siguientes mejoras adicionales cuando se usa la opció
 
 
 ## <a name="improvement-to-hardware-inventory-for-large-integer-values"></a>Mejora en el inventario de hardware para los valores enteros grandes
-<!--1357880-->
-El inventario de hardware actualmente tiene un límite para los enteros mayores que 4 294 967 296 (2^32). Este límite puede alcanzarse en atributos como tamaños de unidades de disco duro en bytes. El punto de administración no procesa los valores de enteros por encima de este límite, por lo que no se almacena ningún valor en la base de datos. Ahora, en esta versión, se ha aumentado el límite hasta 18 446 744 073 709 551 616 (2^64). 
+<!--1357880--> El inventario de hardware actualmente tiene un límite para los enteros mayores que 4 294 967 296 (2^32). Este límite puede alcanzarse en atributos como tamaños de unidades de disco duro en bytes. El punto de administración no procesa los valores de enteros por encima de este límite, por lo que no se almacena ningún valor en la base de datos. Ahora, en esta versión, se ha aumentado el límite hasta 18 446 744 073 709 551 616 (2^64). 
 
 Para una propiedad con un valor que no cambia, como el tamaño total del disco, no puede ver inmediatamente el valor después de actualizar el sitio. La mayoría del inventario de hardware es un informe diferencial. El cliente envía solamente los valores que cambian. Para solucionar este comportamiento temporalmente, agregue otra propiedad a la misma clase. Esta acción hace que el cliente actualice todas las propiedades de la clase que ha cambiado. 
 
@@ -451,8 +443,7 @@ Intente completar las tareas. Y, luego, envíenos sus [comentarios](capabilities
 
 
 ## <a name="improvement-to-support-for-cng-certificates"></a>Mejora en la compatibilidad con certificados CNG
-<!--1357314-->
-En esta versión, use [certificados CNG](/sccm/core/plan-design/network/cng-certificates-overview) para los siguientes roles de servidor adicionales habilitados para HTTPS:  
+<!--1357314--> En esta versión, use [certificados CNG](/sccm/core/plan-design/network/cng-certificates-overview) para los siguientes roles de servidor adicionales habilitados para HTTPS:  
 - Punto de registro de certificados, incluido el servidor NDES con el módulo de directivas de Configuration Manager
 
 

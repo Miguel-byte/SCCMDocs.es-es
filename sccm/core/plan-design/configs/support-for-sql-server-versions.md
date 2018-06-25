@@ -2,7 +2,7 @@
 title: Versiones de SQL Server admitidas
 titleSuffix: Configuration Manager
 description: Obtenga los requisitos de configuración y versión de SQL Server para hospedar una base de datos de sitio de System Center Configuration Manager.
-ms.date: 02/14/2018
+ms.date: 05/23/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 48faef82ade8cf8dc1f9397a5029d96db1a68555
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 431e26c24794b4854a1aed37ba85d4d44580791c
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474282"
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>Versiones de SQL Server compatibles con System Center Configuration Manager
 
@@ -22,8 +23,11 @@ ms.lasthandoff: 05/03/2018
 
 Cada sitio de System Center Configuration Manager requiere una versión y una configuración de SQL Server compatibles para hospedar la base de datos del sitio.  
 
+
+
 ##  <a name="bkmk_Instances"></a> Instancias y ubicaciones de SQL Server  
- **Sitios primarios y sitio de administración central**  
+ 
+### <a name="central-administration-site-and-primary-sites"></a>Sitio de administración central y sitio primario  
  La base de datos de sitio debe usar una instalación completa de SQL Server.  
 
  SQL Server puede ubicarse en:  
@@ -39,18 +43,21 @@ Se admiten las siguientes instancias:
 -   Un grupo de disponibilidad AlwaysOn de SQL Server. Esta opción requiere la versión 1602 o posterior de Configuration Manager. Para obtener más información, vea [SQL Server AlwaysOn para una base de datos de sitio de alta disponibilidad para System Center Configuration Manager](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 
- **Sitios secundarios**  
+### <a name="secondary-sites"></a>Sitios secundarios  
  La base de datos de sitio puede usar la instancia predeterminada de una instalación completa de SQL Server o SQL Server Express.  
 
  SQL Server debe ubicarse en el equipo del servidor de sitio.  
 
- **Limitaciones para la compatibilidad**   
+
+### <a name="limitations-to-support"></a>Limitaciones para la compatibilidad   
  Las configuraciones que aparecen a continuación no son compatibles:
  -   Un clúster de SQL Server en una configuración de clúster de equilibrio de carga de red (NLB)
  -   Un clúster de SQL Server en un volumen compartido de clúster (CSV)
  -   Tecnología de creación de reflejo y replicación punto a punto de la base de datos de SQL Server
 
 La replicación transaccional de SQL Server solo se admite para replicar objetos a los puntos de administración que están configurados para usar [réplicas de base de datos](https://technet.microsoft.com/library/mt608546.aspx).  
+
+
 
 ##  <a name="bkmk_SQLVersions"></a> Versiones de SQL Server admitidas  
  En una jerarquía con varios sitios, cada sitio puede usar una versión diferente de SQL Server para hospedar la base de datos del sitio. Pero siempre que se cumplan las condiciones siguientes:
@@ -69,12 +76,19 @@ La compatibilidad para un Service Pack de SQL Server específico incluye actuali
 >  Cuando usa SQL Server Standard para la base de datos en el sitio de administración central, limita el número total de clientes que una jerarquía puede admitir. Consulte [Números de tamaño y escala](../../../core/plan-design/configs/size-and-scale-numbers.md).
 
 ### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017: Standard, Enterprise  
-Puede usar esta versión de SQL Server, con una [versión 2 de actualización acumulativa](https://support.microsoft.com/help/4052574) mínima, empezando por [Configuration Manager versión 1710](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1710) para los sitios siguientes: 
+Puede usar esta versión de SQL Server, con una [versión 2 de actualización acumulativa](https://support.microsoft.com/help/4052574) mínima, empezando por [Configuration Manager versión 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) para los sitios siguientes: 
 
 -   Un sitio de administración central  
 -   Un sitio primario  
 -   Un sitio secundario  
 <!--SMS.498506-->
+
+### <a name="sql-server-2016-sp2-standard-enterprise"></a>SQL Server 2016 SP2: Standard, Enterprise  
+<!--514985--> Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:  
+
+-   Un sitio de administración central  
+-   Un sitio primario  
+-   Un sitio secundario  
 
 ### <a name="sql-server-2016-sp1-standard-enterprise"></a>SQL Server 2016 SP1: Standard, Enterprise  
 Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:  
@@ -139,9 +153,12 @@ Si es compatible con la versión de Configuration Manager, puede usar esta versi
 -   Un sitio secundario
 
 ### <a name="sql-server-2017-express"></a>SQL Server 2017 Express   
-Puede usar esta versión de SQL Server, con una [versión 2 de actualización acumulativa](https://support.microsoft.com/help/4052574) mínima, empezando por [Configuration Manager versión 1710](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1710) para los sitios siguientes:
+Puede usar esta versión de SQL Server, con una [versión 2 de actualización acumulativa](https://support.microsoft.com/help/4052574) mínima, empezando por [Configuration Manager versión 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) para los sitios siguientes:
+-   Un sitio secundario <!--SMS.498506-->
+
+### <a name="sql-server-2016-express-sp2"></a>SQL Server 2016 Express SP2  
+Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:
 -   Un sitio secundario
-<!--SMS.498506-->
 
 ### <a name="sql-server-2016-express-sp1"></a>SQL Server 2016 Express SP1  
 Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:
@@ -179,51 +196,53 @@ Puede usar esta versión de SQL Server sin una versión de actualización acumul
 ##  <a name="bkmk_SQLConfig"></a> Configuraciones necesarias para SQL Server  
  Los siguientes elementos son necesarios para todas las instalaciones de SQL Server que use para una base de datos de sitio (incluido SQL Server Express). Si Configuration Manager instala SQL Server Express como parte de una instalación de sitio secundario, estas configuraciones se crean automáticamente.  
 
- **Versión de arquitectura de SQL Server**  
+### <a name="sql-server-architecture-version"></a>Versión de arquitectura de SQL Server  
  Configuration Manager requiere una versión de 64 bits de SQL Server para hospedar la base de datos del sitio.  
 
- **Intercalación de base de datos**  
+### <a name="database-collation"></a>Intercalación de base de datos  
  En cada sitio, la instancia de SQL Server que se usa para el sitio y la base de datos del sitio deben usar la intercalación siguiente: **SQL_Latin1_General_CP1_CI_AS**.  
 
  Configuration Manager admite dos excepciones a esta intercalación para cumplir los estándares definidos en GB18030 para su uso en China. Para obtener más información, consulte [Compatibilidad internacional en System Center Configuration Manager](../../../core/plan-design/hierarchy/international-support.md).  
 
- **Nivel de compatibilidad de la base de datos** </br>
+### <a name="database-compatibility-level"></a>Nivel de compatibilidad de la base de datos   
  Configuration Manager requiere que el nivel de compatibilidad para la base de datos del sitio no sea inferior a la versión mínima compatible de SQL Server para su versión de Configuration Manager. Por ejemplo, a partir de la versión 1702, debe tener un [nivel de compatibilidad de la base de datos](https://docs.microsoft.com/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database) mayor o igual a 110. <!-- SMS.506266--> 
 
- **Características de SQL Server**  
+### <a name="sql-server-features"></a>Características de SQL Server  
  Solo la característica **Servicios de motor de base de datos** es necesaria para cada servidor de sitio.  
 
  La replicación de base de datos de Configuration Manager no requiere la característica **Replicación de SQL Server**. En cambio, esta configuración de SQL Server es necesaria si usa [réplicas de bases de datos para puntos de administración de System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
 
- **Autenticación de Windows**  
+### <a name="windows-authentication"></a>Autenticación de Windows  
  Configuration Manager requiere la **autenticación de Windows** para validar las conexiones con la base de datos.  
 
- **Instancia de SQL Server**  
+### <a name="sql-server-instance"></a>Instancia de SQL Server  
  Debe usar una instancia dedicada de SQL Server para cada sitio. La instancia puede ser una **instancia con nombre** o la **instancia predeterminada**.  
 
- **Memoria de SQL Server**  
- Reserve memoria para SQL Server con SQL Server Management Studio y configure el valor **Memoria mínima del servidor** en **Opciones de memoria del servidor**. Para obtener más información acerca de cómo configurarlo, consulte [Cómo establecer una cantidad fija de memoria (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759).  
+### <a name="sql-server-memory"></a>Memoria de SQL Server  
+ Reserve memoria para SQL Server con SQL Server Management Studio y configure el valor **Memoria mínima del servidor** en **Opciones de memoria del servidor**. Para más información sobre cómo configurarlo, consulte [Cómo establecer una cantidad fija de memoria (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759).  
 
--   **Para un servidor de base de datos que está instalado en el mismo equipo que el servidor de sitio** Limite la memoria para SQL Server a entre un 50 y 80 % de la memoria de sistema direccionable disponible.  
+-   **Para un servidor de base de datos que está instalado en el mismo equipo que el servidor de sitio**: limite la memoria para SQL Server a entre un 50 y 80 % de la memoria de sistema direccionable disponible.  
 
--   **Para un servidor de base de datos dedicado (ubicación remota con respecto al servidor de sitio)** Limite la memoria para SQL Server a entre un 80 y 90 % de la memoria de sistema direccionable disponible.  
+-   **Para un servidor de base de datos dedicado (ubicación remota con respecto al servidor de sitio)**: limite la memoria para SQL Server a entre un 80 y 90 % de la memoria de sistema direccionable disponible.  
 
--   **Para una reserva de memoria para el grupo de búferes de cada instancia de SQL Server en uso:**  
+-   **Para una reserva de memoria para el grupo de búferes de cada instancia de SQL Server en uso**:  
 
     -   Para un sitio de administración central: establezca 8 GB como mínimo.  
     -   Para un sitio primario: establezca 8 GB como mínimo.  
     -   Para un sitio secundario: establezca 4 GB como mínimo.  
 
-**Desencadenadores anidados de SQL**  
+### <a name="sql-nested-triggers"></a>Desencadenadores anidados de SQL  
  Los[desencadenadores anidados de SQL](http://go.microsoft.com/fwlink/?LinkId=528802) deben estar habilitados.  
 
- **Integración de CLR de SQL Server**  
+### <a name="sql-server-clr-integration"></a>Integración de CLR de SQL Server  
   La base de datos de sitio requiere Common Language Runtime (CLR) para habilitarse. Se habilita de forma automática cuando se instala Configuration Manager. Para obtener más información sobre CLR, consulte [Introducción a la integración CLR de SQL Server](https://msdn.microsoft.com/library/ms254498\(v=vs.110\).aspx).  
+
+
 
 ##  <a name="bkmk_optional"></a> Configuraciones opcionales para SQL Server  
  Las siguientes configuraciones son opcionales para cada base de datos que use una instalación completa de SQL Server.  
 
- **Servicio de SQL Server**  
+### <a name="sql-server-service"></a>Servicio de SQL Server  
  Puede configurar el servicio SQL Server para que se ejecute mediante:  
 
 -   Una cuenta de *usuario de dominio con derechos reducidos*:  
@@ -234,7 +253,7 @@ Puede usar esta versión de SQL Server sin una versión de actualización acumul
 
     -   Use la cuenta de sistema local para simplificar el proceso de configuración.  
     -   Cuando se usa la cuenta de sistema local, Configuration Manager registra automáticamente el SPN para el servicio SQL Server.  
-    -   Tenga en cuenta que el uso de la cuenta de sistema local para el servicio SQL Server no es un procedimiento recomendado de SQL Server.  
+    -   El uso de la cuenta de sistema local para el servicio SQL Server no es un procedimiento recomendado de SQL Server.  
 
 Cuando el equipo que ejecuta SQL Server no usa su cuenta de sistema local para ejecutar el servicio de SQL Server, debe configurar el SPN de la cuenta que ejecuta el servicio de SQL Server en Active Directory Domain Services. (Cuando se usa la cuenta del sistema, el SPN se registra automáticamente).
 
@@ -242,14 +261,14 @@ Para obtener más información sobre los SPN de la base de datos del sitio, vea 
 
 Para obtener información sobre cómo cambiar la cuenta que usa el servicio de SQL Server, vea [Cambiar la cuenta de inicio del servicio para SQL Server (Administrador de configuración de SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=237661).  
 
-**SQL Server Reporting Services**  
+### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services  
 SQL Server Reporting Services se necesita para instalar un punto de servicios de informes que le permita ejecutar informes.  
 
 > [!IMPORTANT]  
-> Después de actualizar SQL Server desde una versión anterior, podría ver el siguiente error: *Report Builder Does Not Exist* (El generador de informes no existe).    
-> Para resolver este error, debe reinstalar el rol de sistema de sitio de punto de servicios de informes.
+> Después de actualizar SQL Server desde una versión anterior, podría ver el siguiente error: *Report Builder Does Not Exist* (El generador de informes no existe).  
+> Para resolver este error, debe reinstalar el rol de sistema de sitio de punto de servicios de informes.  
 
-**Puertos de SQL Server**  
+### <a name="sql-server-ports"></a>Puertos de SQL Server  
 Para la comunicación con el motor de base de datos de SQL Server y para la replicación entre sitios, puede usar las configuraciones del puerto de SQL Server predeterminadas o especificar puertos personalizados:  
 
 -   Las **comunicaciones entre sitios** usan SQL Server Service Broker, que usa de manera predeterminada el puerto TCP 4022.  
@@ -268,6 +287,8 @@ Si un equipo que ejecuta SQL Server hospeda una base de datos de más de un siti
 Si tiene un firewall habilitado en el equipo que ejecuta SQL Server, asegúrese de que está configurado para permitir los puertos utilizados por su implementación en todas las ubicaciones en la red entre los equipos que se comunican con SQL Server.  
 
 Para obtener un ejemplo de cómo configurar SQL Server para usar un puerto específico, vea [Configurar un servidor para que escuche en un puerto TCP específico (Administrador de configuración de SQL Server)](http://go.microsoft.com/fwlink/p/?LinkID=226349) en la biblioteca de TechNet de SQL Server.  
+
+
 
 ## <a name="upgrade-options-for-sql-server"></a>Opciones de actualización de SQL Server
 Si tiene que actualizar la versión de SQL Server, se recomiendan los métodos siguientes, del más sencillo al más complicado.
