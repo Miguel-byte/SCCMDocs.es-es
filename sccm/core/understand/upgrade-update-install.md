@@ -22,9 +22,9 @@ ms.locfileid: "32344422"
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
-Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* ** e *instalar* se utilizan para describir los tres conceptos independientes.
+Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *mejorar*, *actualizar* e *instalar* se utilizan para describir los tres conceptos independientes.
 
-## <a name="upgrade"></a>Actualizar
+## <a name="upgrade"></a>Mejorar
 La *actualización* o *actualización in situ* se usan al convertir su jerarquía o sitio de Configuration Manager 2012 en uno que ejecuta System Center Configuration Manager.
 Cuando actualice a System Center 2012 Configuration Manager para System Center Configuration Manager, continúe usando los mismos servidores para albergar sus sitios y servidores de sitios y conservar los datos existentes y configuraciones para Configuration Manager.  Esto es diferente de [migración](/sccm/core/migration/migrate-data-between-hierarchies), que es una manera de conservar las configuraciones y datos acerca de los dispositivos administrados durante el uso de nuevos sitios de System Center Configuration Manager instalados en el nuevo hardware.
 

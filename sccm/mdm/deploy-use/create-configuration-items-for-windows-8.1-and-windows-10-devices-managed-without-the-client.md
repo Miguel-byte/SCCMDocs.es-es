@@ -130,7 +130,7 @@ ms.locfileid: "32352108"
 |**Escribir una contraseña para obtener acceso a la tienda de aplicaciones**|Los usuarios deben escribir una contraseña para obtener acceso a la tienda de aplicaciones.|  
 |**Compras desde la aplicación**|Permite a los usuarios realizar compras desde la aplicación.|
 |**Actualizar automáticamente las aplicaciones de la tienda**|Permite que aplicaciones instaladas d la Tienda Windows se actualicen automáticamente.|
-|**Usar solo una tienda privada	**|Habilite esta opción para permitir que solo los usuarios finales descarguen aplicaciones de su tienda privada.|
+|**Usar solo una tienda privada**|Habilite esta opción para permitir que solo los usuarios finales descarguen aplicaciones de su tienda privada.|
 |**Inicio de aplicaciones de la tienda**|Se usa para deshabilitar todas las aplicaciones que se han instalado previamente en el dispositivo, o bien que se han descargado de la Tienda Windows.|
   
 ### <a name="browser"></a>Explorador  
