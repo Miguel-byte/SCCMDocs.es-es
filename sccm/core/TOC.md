@@ -112,6 +112,7 @@
 
 <!-- Only show the current plus three; four total) -->
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capacidades en 1806.2](get-started/capabilities-in-technical-preview-1806-2.md)
 ###  [Capacidades en 1806](get-started/capabilities-in-technical-preview-1806.md)
 ###  [Capacidades en 1805](get-started/capabilities-in-technical-preview-1805.md)
 ###  [Funcionalidades en 1804](get-started/capabilities-in-technical-preview-1804.md)
