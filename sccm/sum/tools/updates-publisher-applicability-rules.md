@@ -78,7 +78,7 @@ La información siguiente es similar a la correspondiente a cómo se crean regla
 ## <a name="edit-applicability-rule-sets"></a>Editar conjuntos de reglas de aplicabilidad
 Para editar una regla de aplicabilidad, seleccione una regla que se haya guardado en la lista **My saved rules** (Mis reglas guardadas) del **área de trabajo Reglas** y elija **Editar** en la cinta de opciones. Se abrirá el asistente para **editar reglas**.
 
-Este asistente**** muestra las reglas actuales del conjunto de reglas. Edite las reglas de la misma manera que usa el asistente para **crear reglas** para crear otras reglas. Puede usar este asistente para cambiar el nombre del conjunto de reglas, eliminar reglas, cambiar el orden de reglas y relaciones o agregar nuevas reglas.
+Este asistente**editar reglas** muestra las reglas actuales del conjunto de reglas. Edite las reglas de la misma manera que usa el asistente para **crear reglas** para crear otras reglas. Puede usar este asistente para cambiar el nombre del conjunto de reglas, eliminar reglas, cambiar el orden de reglas y relaciones o agregar nuevas reglas.
 
 Después de realizar cambios, elija **Aceptar** para guardar los cambios y cerrar el asistente.
 
