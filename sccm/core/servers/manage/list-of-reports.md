@@ -10,12 +10,12 @@ ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d486907a7819758b27c9a644214ed4d5ec873762
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 705247080fc99a6a9dd7dfcb773b2220283cd7a6
+ms.sourcegitcommit: e3f7bb8cec4b37a311bc86098297534cab947de8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342552"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36759039"
 ---
 # <a name="list-of-reports-in-system-center-configuration-manager"></a>Lista de informes en System Center Configuration Manager
 
@@ -28,7 +28,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="administrative-security"></a>Seguridad administrativa  
- Los informes siguientes aparecen en la categoría **Seguridad administrativa** .  
+ Los seis informes siguientes aparecen en la categoría **Seguridad administrativa**.  
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -42,7 +42,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="alerts"></a>Alertas  
-
+Los dos informes siguientes aparecen en la categoría **Alertas**.  
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
 |**Cuadro de mandos de alertas**|Muestra un resumen de todas las alertas pospuestas que se generaron entre la fecha de inicio y de finalización especificada.|  
@@ -51,6 +51,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="asset-intelligence"></a>Asset Intelligence  
+Los sesenta y dos informes siguientes aparecen en la categoría **Asset Intelligence**.  
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -120,6 +121,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="client-push"></a>Inserción de cliente  
+Los cuatro informes siguientes aparecen en la categoría **Inserción de cliente**.  
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -131,6 +133,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="client-status"></a>Estado de cliente  
+Los siete informes siguientes aparecen en la categoría **Estado de cliente**.  
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -145,6 +148,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="company-resource-access"></a>Acceso a los recursos de la empresa  
+Los tres informes siguientes aparecen en la categoría **Acceso a los recursos de la empresa**. 
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -155,6 +159,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="compliance-and-settings-management"></a>Administración de compatibilidad y configuración  
+Los veintidós informes siguientes aparecen en la categoría **Administración de compatibilidad y configuración**. 
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -184,6 +189,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="device-management"></a>Administración del dispositivo  
+Los treinta y siete informes siguientes aparecen en la categoría **Administración del dispositivo**. 
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -228,6 +234,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="driver-management"></a>Administración de controladores  
+Los trece informes siguientes aparecen en la categoría **Administración de controladores**. 
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -248,7 +255,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="endpoint-protection"></a>Endpoint Protection  
-
+Los seis informes siguientes aparecen en la categoría **Endpoint Protection**. 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
 |**Informe de actividad de antimalware**|Muestra información general sobre la actividad de antimalware.|  
@@ -261,7 +268,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="hardware---cd-rom"></a>Hardware - CD-ROM  
-
+Los cuatro informes siguientes aparecen en la categoría **Hardware - CD-ROM**. 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
 |**Información de CD-ROM para un equipo específico**|Muestra información sobre las unidades de CD-ROM en un equipo especificado.|  
@@ -272,6 +279,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="hardware---disk"></a>Hardware - Disco  
+Los ocho informes siguientes aparecen en la categoría **Hardware - Disco**. 
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -287,6 +295,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="hardware---general"></a>Hardware - General  
+Los cinco informes siguientes aparecen en la categoría **Hardware - General**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -299,6 +308,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="hardware---memory"></a>Hardware - Memoria  
+Los cinco informes siguientes aparecen en la categoría **Hardware - Memoria**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -311,6 +321,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="hardware---modem"></a>Hardware - Módem  
+Los tres informes siguientes aparecen en la categoría **Hardware - Módem**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -321,6 +332,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="hardware---network-adapter"></a>Hardware - Adaptador de red  
+Los tres informes siguientes aparecen en la categoría **Hardware - Adaptador de red**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -331,6 +343,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="hardware---processor"></a>Hardware - Procesador  
+Los cinco informes siguientes aparecen en la categoría **Hardware - Procesador**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -343,6 +356,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="hardware---scsi"></a>Hardware - SCSI  
+Los cinco informes siguientes aparecen en la categoría **Hardware - SCSI**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -353,6 +367,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="hardware---security"></a>Hardware: seguridad
+El siguiente informe aparece en la categoría **Hardware - Seguridad**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -361,6 +376,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="hardware---sound-card"></a>Hardware - Tarjeta de sonido  
+Los tres informes siguientes aparecen en la categoría **Hardware - SCSI**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -371,6 +387,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="hardware---video-card"></a>Hardware - Tarjeta de vídeo  
+Los tres informes siguientes aparecen en la categoría **Hardware - Tarjeta de vídeo**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -381,6 +398,8 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="migration"></a>Migración  
+
+Los cinco informes siguientes aparecen en la categoría **Migración**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -394,6 +413,8 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 ## <a name="network"></a>Red  
 
+Los seis informes siguientes aparecen en la categoría **Red**.
+
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
 |**Recuento de direcciones IP por subred**|Muestra el número de direcciones IP inventariadas para cada subred IP.|  
@@ -406,6 +427,9 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="operating-system"></a>Sistema operativo  
+
+Los diez informes siguientes aparecen en la categoría **Sistema operativo**.
+
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -423,6 +447,8 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="power-management"></a>Administración de energía  
+
+Los dieciocho informes siguientes aparecen en la categoría **Administración de energía**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -448,6 +474,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="replication-traffic"></a>Tráfico de replicación  
+Los diez informes siguientes aparecen en la categoría **Tráfico de replicación**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -465,6 +492,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="site---client-information"></a>Sitio - Información del cliente  
+Los diecinueve informes siguientes aparecen en la categoría **Sitio - Información del cliente**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -491,6 +519,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="site---discovery-and-inventory-information"></a>Sitio - Información de detección e inventario  
+Los diez informes siguientes aparecen en la categoría **Sitio - Información de detección e inventario**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -508,6 +537,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="site---general"></a>Sitio - General  
+Los tres informes siguientes aparecen en la categoría **Sitio - General**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -518,6 +548,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="site---server-information"></a>Sitio - Información del servidor  
+El informe siguiente aparece en la categoría **Sitio - Información del cliente**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -526,6 +557,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="software---companies-and-products"></a>Software - Compañías y productos  
+Los quince informes siguientes aparecen en la categoría **Software - Compañías y productos**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -548,6 +580,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="software---files"></a>Software - Archivos  
+Los cinco informes siguientes aparecen en la categoría **Software - Archivos**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -560,6 +593,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="software-distribution---application-monitoring"></a>Distribución de software - Supervisión de aplicaciones  
+Los diez informes siguientes aparecen en la categoría **Distribución de software - Supervisión de aplicaciones**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -577,6 +611,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="software-distribution---collections"></a>Distribución de software - Recopilaciones  
+Los tres informes siguientes aparecen en la categoría **Distribución de software - Recopilaciones**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -587,6 +622,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="software-distribution---content"></a>Distribución de software - Contenido  
+Los dieciséis informes siguientes aparecen en la categoría **Distribución de software - Contenido**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -609,7 +645,8 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 
-## <a name="software-distribution---package-and-program-deployment"></a>Distribución de software - Implementación de paquete y programa  
+## <a name="software-distribution---package-and-program-deployment"></a>Distribución de software - Implementación de paquete y programa 
+Los cinco informes siguientes aparecen en la categoría **Distribución de software - Implementación de paquete y programa**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -622,6 +659,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="software-distribution---package-and-program-deployment-status"></a>Distribución de software - Estado de implementación de paquete y programa  
+Los cinco informes siguientes aparecen en la categoría **Distribución de software - Estado de implementación de paquete y programa**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -634,6 +672,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="software-metering"></a>Medición de software  
+Los trece informes siguientes aparecen en la categoría **Medición de software**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -654,6 +693,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="software-updates---a-compliance"></a>Actualizaciones de software - A Cumplimiento  
+Los ocho informes siguientes aparecen en la categoría **Actualizaciones de software - A Cumplimiento**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -669,6 +709,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="software-updates---b-deployment-management"></a>Actualizaciones de software - B Administración de implementación  
+Los ocho informes siguientes aparecen en la categoría **Actualizaciones de software - B Administración de implementación**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -684,6 +725,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="software-updates---c-deployment-states"></a>Actualizaciones de software - C Estados de implementación  
+Los seis informes siguientes aparecen en la categoría **Actualizaciones de software - C Estados de implementación**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -697,6 +739,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="software-updates---d-scan"></a>Actualizaciones de software - D Examen  
+Los cuatro informes siguientes aparecen en la categoría **Actualizaciones de software - D Examen**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -709,6 +752,8 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 ## <a name="software-updates---e-troubleshooting"></a>Actualizaciones de software - E Solución de problemas  
 
+Los cuatro informes siguientes aparecen en la categoría **Actualizaciones de software - E Solución de problemas**.
+
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
 |**Solución de problemas 1 - Errores de examen**|Muestra los errores de examen en el sitio y el recuento de equipos que experimentan cada error.|  
@@ -719,6 +764,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="state-migration"></a>Migración de estado  
+Los tres informes siguientes aparecen en la categoría **Migración de estado**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -729,6 +775,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="status-messages"></a>Mensajes de estado  
+Los doce informes siguientes aparecen en la categoría **Mensajes de estado**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -749,6 +796,8 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 ## <a name="status-messages---audit"></a>Mensajes de estado - Auditoría  
 
+Los tres informes siguientes aparecen en la categoría **Mensajes de estado - Auditoría**.
+
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
 |**Todos los mensajes de auditoría para un usuario específico**|Muestra un resumen de todos los mensajes de estado de auditoría para un usuario especificado. Mensajes de auditoría describen las acciones realizadas en la consola de Configuration Manager que agregan, modifican o eliminan objetos en Configuration Manager.|  
@@ -758,6 +807,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="task-sequence---deployment-status"></a>Secuencia de tareas - Estado de implementación  
+Los once informes siguientes aparecen en la categoría **Secuencia de tareas - Estado de implementación**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -776,6 +826,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="task-sequence---deployments"></a>Secuencia de tareas - Implementaciones  
+Los once informes siguientes aparecen en la categoría **Secuencia de tareas - Implementaciones**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -794,6 +845,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="task-sequence---progress"></a>Secuencia de tareas - Progreso  
+Los cinco informes siguientes aparecen en la categoría **Secuencia de tareas - Progreso**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -806,6 +858,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="task-sequences---references"></a>Secuencias de tareas - Referencias  
+El informe siguiente aparece en la categoría **Secuencia de tareas - Referencias**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -815,6 +868,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 <!--
 ## Upgrade Assessment  
+The following 11 reports are listed under the **Upgrade Assessment** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -835,6 +889,8 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 ## <a name="user---device-affinity"></a>Afinidad entre usuario y dispositivo  
 
+Los dos informes siguientes aparecen en la categoría **Afinidad entre usuario y dispositivo**.
+
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
 |**Asociaciones de afinidad de dispositivos de usuario pendientes por recopilación**|Este informe muestra todas las asignaciones de afinidad de dispositivo de usuario pendientes basadas en los datos de uso para los miembros de una recopilación.|  
@@ -843,6 +899,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="user-data-and-profiles-health"></a>Mantenimiento de perfiles y datos de usuario  
+Los cuatro informes siguientes aparecen en la categoría **Mantenimiento de perfiles y datos de usuario**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -854,6 +911,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="users"></a>Users  
+Los tres informes siguientes aparecen en la categoría **Usuarios**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -864,6 +922,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="virtual-applications"></a>Aplicaciones virtuales  
+Los siete informes siguientes aparecen en la categoría **Aplicaciones virtuales**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -878,6 +937,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="volume-purchase-programs---apple"></a>Programas de Compras por Volumen - Apple
+El siguiente informe aparece en la categoría **Programas de Compras por Volumen - Apple**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -886,6 +946,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="vulnerability-assessment"></a>Evaluación de vulnerabilidad
+El siguiente informe aparece en la categoría **Evaluación de vulnerabilidad**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -894,6 +955,7 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="wake-on-lan"></a>Wake On LAN  
+Los siete informes siguientes aparecen en la categoría **Wake On LAN**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  

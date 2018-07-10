@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: a94ac00b8fce6098cbd829947f4e2fbdcb761b9e
-ms.sourcegitcommit: c5e078b8eee87f527e5b5a0c2eb687bb9d6896c5
+ms.openlocfilehash: fa73ed132a00455b47355877b1c20e8d2f8c4f3a
+ms.sourcegitcommit: 59afe6f05333d4150afaf88ab0a85a979818e3fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34270721"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957804"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Administración de Office 365 ProPlus con Configuration Manager
 
@@ -48,7 +48,7 @@ Para ver el panel de administración de clientes de Office 365 en la consola de 
 ### <a name="display-data-in-the-office-365-client-management-dashboard"></a>Mostrar datos en el panel de administración de clientes de Office 365
 Los datos que se muestran en el panel de administración de clientes de Office 365 proceden de inventario de hardware. Habilite el inventario de hardware y seleccione la clase de inventario de hardware **Configuraciones de Office 365 ProPlus** antes de que los datos aparezcan en el panel. 
 #### <a name="to-display-data-in-the-office-365-client-management-dashboard"></a>Para mostrar datos en el panel de administración de clientes de Office 365
-1. Habilite el inventario de hardware, si aún no está habilitado. Para obtener más información, consulte [Configurar el inventario de hardware](\sccm\core\clients\manage\configure-hardware-inventory).
+1. Habilite el inventario de hardware, si aún no está habilitado. Para obtener más información, consulte [Configurar el inventario de hardware](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
 2. En la consola de Configuration Manager, navegue a **Administración** > **Configuración de cliente** > **Configuración de cliente predeterminada**.  
 3. En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
 4. En el **configuración de cliente predeterminada** cuadro de diálogo, haga clic en **de inventario de Hardware**.  

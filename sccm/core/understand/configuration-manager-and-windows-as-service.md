@@ -1,8 +1,8 @@
 ---
-title: Aspectos básicos de Windows como servicio
+title: Configuration Manager y Windows como servicio
 titleSuffix: Configuration Manager
 description: Obtenga información básica sobre cómo adoptar la rama actual de Configuration Manager para admitir Windows como servicio.
-ms.date: 04/30/2018
+ms.date: 06/15/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,21 +10,22 @@ ms.assetid: c8534a1e-57b8-4688-b6e6-299d82cfcec9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ca2b72cb3533c3b857b3edbb4e37ca846d4cfa4
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: e2fb6b022526ce4bae1de21012ac996dbcea35cf
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36260914"
 ---
-# <a name="keep-windows-10-up-to-date-in-the-enterprise-using-configuration-manager"></a>Mantener actualizado Windows 10 en la empresa mediante Configuration Manager
+# <a name="configuration-manager-and-windows-as-a-service"></a>Configuration Manager y Windows como servicio
 
 *Se aplica a: System Center Configuration Manager (rama actual)*
 
-System Center Configuration Manager proporciona un amplio control sobre las actualizaciones de características para Windows 10. Para adoptar totalmente Windows como modelo de servicio, también debe adoptar el modelo de rama actual de Configuration Manager. Para mantenerse al día con Windows 10 y obtener la mejor experiencia posible, es necesario hacerlo también con Configuration Manager. Las nuevas versiones de Configuration Manager son necesarias para aprovechar al máximo las nuevas y emocionantes características empresariales para Windows 10. Este contenido está diseñado para ser la página de destino de los artículos clave necesarios para adoptar la rama actual de Configuration Manager. La rama actual de Configuration Manager permite iniciar el camino hacia Windows como servicio.
+System Center Configuration Manager proporciona un amplio control sobre las actualizaciones de características para Windows 10. Para adoptar totalmente Windows como modelo de servicio, también debe adoptar el modelo de rama actual de Configuration Manager. Para mantenerse al día con Windows 10 y obtener la mejor experiencia posible, es necesario hacerlo también con Configuration Manager. Las nuevas versiones de Configuration Manager son necesarias para aprovechar al máximo las nuevas y emocionantes características empresariales para Windows 10. Este artículo está diseñado para ser la página de destino de los artículos clave necesarios para adoptar la rama actual de Configuration Manager. La rama actual de Configuration Manager permite iniciar el camino hacia Windows como servicio.
 
-## <a name="key-topics-about-adopting-configuration-manager-current-branch"></a>Temas clave sobre la adopción de la rama actual de Configuration Manager
+## <a name="key-articles-about-adopting-configuration-manager-current-branch"></a>Artículos clave sobre la adopción de la rama actual de Configuration Manager
 
-| Tema        | Descripción          | 
+| Artículo        | Descripción          | 
 | ------------- |-------------|
 |[Overview of Configuration Manager current branch](/sccm/core/plan-design/changes/whats-new-incremental-versions) (Introducción a la rama actual de Configuration Manager)|Se proporciona un breve resumen de los puntos clave para el nuevo modelo de servicio para Configuration Manager (rama actual)|
 |[Ciclo de vida de soporte técnico](/sccm/core/servers/manage/current-branch-versions-supported)|Se explica el nuevo modelo de soporte técnico y servicios.|
@@ -37,12 +38,13 @@ System Center Configuration Manager proporciona un amplio control sobre las actu
 |[Technical Preview para Configuration Manager](/sccm/core/get-started/technical-preview)|Se proporciona información sobre el programa de Technical Preview de Configuration Manager.|
 
 
-## <a name="key-topics-about-adopting-windows-as-a-service"></a>Temas clave sobre la adopción de Windows como servicio
-| Tema        | Descripción          | 
+## <a name="key-articles-about-adopting-windows-as-a-service"></a>Artículos clave sobre la adopción de Windows como servicio
+| Artículo        | Descripción          | 
 | ------------- |-------------|
 |[Administración de Windows como servicio](/sccm/osd/deploy-use/manage-windows-as-a-service)|Se explica cómo usar los planes de mantenimiento para implementar actualizaciones de características de Windows 10.|
 |[Upgrade Windows 10 via task sequence](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system) (Actualizar Windows 10 mediante la secuencia de tareas)|Detalles de la creación de una secuencia de tareas para actualizar Windows 10 con recomendaciones adicionales.|
 |[Implementaciones por fases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|Las implementaciones por fases automatizan una implementación coordinada y secuencial de una secuencia de tareas en varias recopilaciones.|  
+|[Optimizar la distribución de actualizaciones de Windows 10](/sccm/sum/deploy-use/optimize-windows-10-update-delivery)|Use Configuration Manager para administrar el contenido de actualización para estar al día con Windows 10.|
 |[Integrar con Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)|Upgrade Readiness permite evaluar y analizar si los dispositivos del entorno están preparados para actualizarse a Windows 10.| 
 |[Integración de Windows Update para empresas (opcional)](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)|Se explica cómo definir e implementar directivas de Windows Update para empresas (WUfB) mediante Configuration Manager.|
 |[Uso de la administración conjunta con Microsoft Intune y Windows Update para empresas (opcional)](/sccm/core/clients/manage/co-management-overview)|Se proporciona información general sobre la administración conjunta| 

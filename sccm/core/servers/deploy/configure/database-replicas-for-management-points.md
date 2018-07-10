@@ -10,11 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0893df43f7979fa3c36ba90ab400e399f96e6228
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5ab632367e6cc30210db00a61ee4d3b9c414fdbd
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36260819"
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>Réplicas de bases de datos para puntos de administración de System Center Configuration Manager
 
@@ -78,7 +79,7 @@ Los sitios primarios de System Center Configuration Manager pueden usar una rép
 
     -   [Mover una base de datos de servidor de sitio que publica una réplica de base de datos](#BKMK_DBReplicaOps_Move)  
 
--   **Actualizaciones de System Center Configuration Manager**: antes de actualizar un sitio de System Center 2012 Configuration Manager a System Center Configuration Manager, debe deshabilitar las réplicas de bases de datos para los puntos de administración.  Después de actualizar los sitios, puede volver a configurar las réplicas de bases de datos de los puntos de administración.  
+-   **Actualizaciones de System Center Configuration Manager**: antes de actualizar un sitio de System Center 2012 Configuration Manager a la rama actual de System Center Configuration Manager o de actualizar la rama actual de Configuration Manager a la última versión, debe deshabilitar las réplicas de bases de datos para los puntos de administración.  Después de actualizar los sitios, puede volver a configurar las réplicas de bases de datos de los puntos de administración.  
 
 -   **Varias réplicas en un único servidor de SQL Server:** si configura un servidor de réplica de bases de datos para hospedar varias réplicas de bases de datos para puntos de administración (cada réplica debe estar en una instancia independiente), debe usar un script de configuración modificado (del paso 4 de la sección siguiente) para impedir que se sobrescriba el certificado autofirmado que usaban las réplicas de bases de datos previamente configuradas en ese servidor.  
 

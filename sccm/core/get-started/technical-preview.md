@@ -2,7 +2,7 @@
 title: Versiones de Technical Preview
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la versión Technical Preview para probar nuevas funcionalidades y capacidades de Configuration Manager.
-ms.date: 06/01/2018
+ms.date: 06/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b7372e0b894e93a5a8ec15e54bfeb09e18be6c32
-ms.sourcegitcommit: 10a6e3444da631786e9b1729e79a5b728d54ca72
+ms.openlocfilehash: 1fd848c3e0ed663e0731eb86d39c930db3af7819
+ms.sourcegitcommit: d1bf26bcf0d78b37ac7598fab36eb58ca69b1dc5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34754001"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066290"
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>Technical Preview para System Center Configuration Manager
 
@@ -34,7 +34,7 @@ ms.locfileid: "34754001"
 ##  <a name="bkmk_reqs"></a> Requisitos y limitaciones de Technical Preview  
 
 > [!IMPORTANT]     
->  La versión Technical Preview solo tiene licencia para su uso en un entorno de laboratorio.  Es posible que Microsoft no proporcione servicios de soporte técnico y que algunas características no estén disponibles en el software de versión preliminar. Además, es posible que el software de versión preliminar tenga estándares de seguridad, privacidad, accesibilidad, disponibilidad y confiabilidad reducidos o diferentes a los del software proporcionado comercialmente.  
+>  La versión Technical Preview solo tiene licencia para su uso en un entorno de laboratorio. Es posible que Microsoft no proporcione servicios de soporte técnico y que algunas características no estén disponibles en el software de versión preliminar. Además, es posible que el software de versión preliminar tenga estándares de seguridad, privacidad, accesibilidad, disponibilidad y confiabilidad reducidos o diferentes a los del software proporcionado comercialmente.  
 
  Para la mayoría de requisitos previos del producto, use la información que aparece en [Configuraciones admitidas para System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md). Las excepciones siguientes se aplican a las versiones Technical Preview:  
 
@@ -62,7 +62,7 @@ ms.locfileid: "34754001"
 -   No se admite la actualización a una versión de producción (rama actual) desde esta versión preliminar. En cambio, cuando haya actualizaciones disponibles para una versión preliminar, puede buscarlas e instalarlas desde el nodo **Actualizaciones y mantenimiento** de la consola de Configuration Manager. Para ver un vídeo del proceso de actualización en la consola, consulte [Installing ConfigMgr Update Package (Instalación de paquetes de actualización de Configuration Manager)](https://www.youtube.com/embed/KBd_EGFbUT8) en youtube.com.  
 -   Solo se admite un sitio primario independiente. No se admiten sitios de administración central, varios sitios primarios ni sitios secundarios.  
 
-Los siguientes productos y tecnologías son compatibles con esta rama de Configuration Manager. Sin embargo, su inclusión en este contenido no implica una extensión de la compatibilidad con cualquier producto o versión más allá del ciclo de vida de soporte individual de los productos. Los productos que están fuera de su ciclo de vida de soporte no se pueden usar con Configuration Manager. Para obtener más información sobre los ciclos de vida de soporte de Microsoft, visite el sitio web [Ciclo de vida de soporte de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=208270).  
+Los siguientes productos y tecnologías son compatibles con esta rama de Configuration Manager. Sin embargo, su inclusión en este contenido no implica una extensión de la compatibilidad con cualquier producto o versión más allá del ciclo de vida de soporte individual de los productos. Los productos que están fuera de su ciclo de vida de soporte no se pueden usar con Configuration Manager. Para obtener más información sobre los ciclos de vida de soporte de Microsoft, visite el sitio web [Ciclo de vida de soporte de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=208270).  
 
 -   Solo se admiten las siguientes versiones de SQL Server:  
 
@@ -97,7 +97,7 @@ Puede instalar una versión de base de referencia hasta un año después de su l
 ##  <a name="BKMK_TPFeedback"></a> Proporcionar comentarios  
  Nos encanta recibir sus comentarios sobre las características de nuestras versiones Technical Preview. Para obtener más información, vea [Comentarios sobre el producto](../understand/find-help.md#product-feedback).
 
-También puede hablarnos sobre las ideas que tenga sobre características nuevas que le gustaría ver. Para enviar nuevas ideas y votar sobre las ideas enviadas por otros usuarios, [visite nuestra página de voz del usuario](http://configurationmanager.uservoice.com).  
+También puede hablarnos sobre las ideas que tenga sobre características nuevas que le gustaría ver. Para enviar nuevas ideas y votar sobre las ideas enviadas por otros usuarios, [visite nuestra página de voz del usuario](https://configurationmanager.uservoice.com).  
 
 <!--   ##  <a name="bdmk_tpknownissues"></a> General changes introduced in Technical Previews    -->
 
@@ -105,24 +105,20 @@ También puede hablarnos sobre las ideas que tenga sobre características nuevas
 
 
 ##  <a name="bkmk_tpCaps"></a> Funcionalidades ofrecidas en la vista preliminar técnica más reciente  
-A continuación se enumeran las funcionalidades que ofrece cada versión preliminar técnica de Configuration Manager.  Las funcionalidades que estaban disponibles en una versión anterior de Technical Preview siguen estando disponibles en versiones posteriores. De igual forma, las funcionalidades que se han agregado a la rama actual de Configuration Manager siguen estando disponibles en las versiones de Technical Preview.  Haga clic en el contenido de cada versión preliminar para aprender más acerca de una capacidad específica.  
+A continuación se enumeran las funcionalidades que ofrece cada versión preliminar técnica de Configuration Manager. Las funcionalidades que estaban disponibles en una versión anterior de Technical Preview siguen estando disponibles en versiones posteriores. De igual forma, las funcionalidades que se han agregado a la rama actual de Configuration Manager siguen estando disponibles en las versiones de Technical Preview. Haga clic en el contenido de cada versión preliminar para aprender más acerca de una capacidad específica.  
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1806"></a>Technical Preview, versión 1806
-- [Actualizaciones de software de terceros](capabilities-in-technical-preview-1806.md#bkmk-3pupdate) <!--1352101-->
-- [Configurar SmartScreen de Windows Defender para Microsoft Edge](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge) <!--1353701-->
-- [Sincronizar directiva MDM desde Microsoft Intune para un dispositivo administrado conjuntamente](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device) <!--1357377-->
-- [Transición de la carga de trabajo de Office 365 a Intune mediante la administración conjunta](capabilities-in-technical-preview-1806.md#transition-office-365-workload-to-intune-using-co-management) <!--1357841-->
-- [Package Conversion Manager](capabilities-in-technical-preview-1806.md#package-conversion-manager) <!--1357861-->
-- [Implementar actualizaciones de software sin contenido](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content) <!--1357933-->
-- [Integración de la Herramienta de personalización de Office en el instalador de Office 365](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer) <!--1358149-->
-- [Mejoras en Cloud Management Gateway](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway) <!--1358215,1358651,503899--> 
-- [Mejoras en las comunicaciones de cliente seguras](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications) <!--1358278,1358279-->
-- [Mejoras de la infraestructura del Centro de software](capabilities-in-technical-preview-1806.md#software-center-infrastructure-improvements) <!--1358309-->
-- [Aprovisionar los paquetes de aplicación de Windows para todos los usuarios en un dispositivo](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device) <!--1358310-->
-- [Mejoras en el panel de Surface](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard) <!--1358654-->
-- [Revisión de unidad predeterminada de inventario de hardware](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision) <!--514442-->
+### <a name="technical-preview-version-18062"></a>Technical Preview, versión 1806.2
+- [Mejoras en las implementaciones por fases](capabilities-in-technical-preview-1806-2.md#bkmk_pod) <!--1358577,1358147,1358578-->
+- [Compatibilidad con nuevos formatos de paquete de aplicaciones de Windows](capabilities-in-technical-preview-1806-2.md#bkmk_msix) <!--1357427-->
+- [Mejora de seguridad de inserción de cliente](capabilities-in-technical-preview-1806-2.md#bkmk_client-push) <!--1358204-->
+- [Información de administración para un mantenimiento proactivo](capabilities-in-technical-preview-1806-2.md#bkmk_insights) <!--1352184,et al-->
+- [Carga de trabajo de aplicaciones móviles de transición para los dispositivos administrados conjuntamente](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt) <!--1357892-->
+- [Opciones de grupo de límites para descargas del mismo nivel](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions) <!--1356193-->
+- [Soporte técnico de actualizaciones de software de terceros para catálogos personalizados](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate) <!--1358714-->
+- [Mejoras de las características de administración en la nube](capabilities-in-technical-preview-1806-2.md#bkmk_cloud) <!--511980,515854-->
+- [Informe de cumplimiento de nuevas actualizaciones de software](capabilities-in-technical-preview-1806-2.md#bkmk_report) <!--1357775-->
 
 
 
@@ -136,6 +132,19 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |Capacidad |Versión de Technical Preview |Versión de rama actual|  
  |----------------|---------------------|--------------------|
+ | Actualizaciones de software de terceros <!--1352101--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate)  | ![Sin agregar](media/Red_X.gif) |  
+ | Configurar SmartScreen de Windows Defender para Microsoft Edge <!--1353701--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge)  | ![Sin agregar](media/Red_X.gif) |  
+ | Sincronizar directiva MDM desde Microsoft Intune para un dispositivo administrado conjuntamente <!--1357377--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device)  | ![Sin agregar](media/Red_X.gif) |  
+ | Transición de la carga de trabajo de Office 365 a Intune mediante la administración conjunta <!--1357841--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#transition-office-365-workload-to-intune-using-co-management)  | ![Sin agregar](media/Red_X.gif) |  
+ | Package Conversion Manager <!--1357861--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#package-conversion-manager)  | ![Sin agregar](media/Red_X.gif) |  
+ | Implementar actualizaciones de software sin contenido <!--1357933--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content)  | ![Sin agregar](media/Red_X.gif) |  
+ | Integración de la Herramienta de personalización de Office en el instalador de Office 365 <!--1358149--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer)  | ![Sin agregar](media/Red_X.gif) |  
+ | Mejoras en Cloud Management Gateway <!--1358215,1358651,503899--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway)   | ![Sin agregar](media/Red_X.gif) |  
+ | Mejoras en las comunicaciones de cliente seguras <!--1358278,1358279--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications)  | ![Sin agregar](media/Red_X.gif) |  
+ | Mejoras de la infraestructura del Centro de software <!--1358309--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#software-center-infrastructure-improvements)  | ![Sin agregar](media/Red_X.gif) |  
+ | Aprovisionar los paquetes de aplicación de Windows para todos los usuarios en un dispositivo <!--1358310--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device)  | ![Sin agregar](media/Red_X.gif) |  
+ | Mejoras en el panel de Surface <!--1358654--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard)  | ![Sin agregar](media/Red_X.gif) |  
+ | Revisión de unidad predeterminada de inventario de hardware <!--514442--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision)  | ![Sin agregar](media/Red_X.gif) |  
  | Creación de una implementación por fases con fases configuradas manualmente para una secuencia de tareas <!--1358148--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence)  | ![Sin agregar](media/Red_X.gif) |  
  | Compatibilidad con puntos de distribución de nube para Azure Resource Manager <!--1322209--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  | ![Sin agregar](media/Red_X.gif) |  
  | Realización de acciones basadas en la información de administración <!--1357930--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights)  | ![Sin agregar](media/Red_X.gif) |  

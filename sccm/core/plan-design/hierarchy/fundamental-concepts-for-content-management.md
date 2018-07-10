@@ -2,7 +2,7 @@
 title: Conceptos básicos de administración de contenido
 titleSuffix: Configuration Manager
 description: Use herramientas y opciones en Configuration Manager para administrar el contenido que implemente.
-ms.date: 03/22/2018
+ms.date: 06/15/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,13 +10,14 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5dfe33e7182eae158c15afb848d3a9f1702678ba
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4419a563a65ab9d98a76dcf58b48ae00e0763dab
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36260741"
 ---
-# <a name="fundamental-concepts-for-content-management-in-system-center-configuration-manager"></a>Conceptos básicos de la administración de contenido en System Center Configuration Manager
+# <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Aspectos básicos de la administración de contenido en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
@@ -69,7 +70,7 @@ Las aplicaciones siempre usan la replicación diferencial binaria. La BDR es opc
 
 
 ## <a name="branchcache"></a>BranchCache  
- [BranchCache](/windows-server/networking/branchcache/branchcache) es una tecnología de Windows. Los clientes que admiten BranchCache y que han descargado una implementación configurada para BranchCache, después actúan como un origen de contenido para otros clientes habilitados para BranchCache.  
+ [BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) es una tecnología de Windows. Los clientes que admiten BranchCache y que han descargado una implementación configurada para BranchCache, después actúan como un origen de contenido para otros clientes habilitados para BranchCache.  
 
  Por ejemplo, tiene un punto de distribución en el que se ejecuta Windows Server 2012 o una versión posterior, y está configurado como un servidor de BranchCache. Cuando el primer cliente habilitado para BranchCache solicita contenido desde este servidor, el cliente descarga el contenido y lo almacena en caché.  
 
@@ -77,11 +78,14 @@ Las aplicaciones siempre usan la replicación diferencial binaria. La BDR es opc
 - Otros clientes en la misma subred no tendrán que descargar el contenido desde el punto de distribución.  
 - El contenido se distribuye entre varios clientes para futuras transferencias.  
 
+Para obtener más información, vea [Compatibilidad con Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache).
+
 
 
 ## <a name="delivery-optimization"></a>Optimización de entrega
-<!-- 1324696 -->
-Los grupos de límites de Configuration Manager se usan para definir y regular la distribución de contenido a través de la red corporativa y en las oficinas remotas. La [optimización de distribución de Windows](/windows/deployment/update/waas-delivery-optimization) es una tecnología entre iguales basada en la nube para compartir contenido entre los dispositivos de Windows 10. A partir de la versión 1802, configure la optimización de entrega para usar los grupos de límites al compartir contenido entre iguales. La configuración de cliente aplica el identificador del grupo de límites como el identificador del grupo de optimización de entrega en el cliente. Cuando el cliente se comunica con el servicio en la nube de optimización de distribución, utiliza este identificador para buscar elementos del mismo nivel con el contenido deseado. Para obtener más información, vea la configuración de cliente de [optimización de distribución](/sccm/core/clients/deploy/about-client-settings#delivery-optimization).
+<!-- 1324696 --> Los grupos de límites de Configuration Manager se usan para definir y regular la distribución de contenido a través de la red corporativa y en las oficinas remotas. La [optimización de distribución de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) es una tecnología entre iguales basada en la nube para compartir contenido entre los dispositivos de Windows 10. A partir de la versión 1802, configure la optimización de entrega para usar los grupos de límites al compartir contenido entre iguales. La configuración de cliente aplica el identificador del grupo de límites como el identificador del grupo de optimización de entrega en el cliente. Cuando el cliente se comunica con el servicio en la nube de optimización de distribución, utiliza este identificador para buscar elementos del mismo nivel con el contenido deseado. Para obtener más información, vea la configuración de cliente de [optimización de distribución](/sccm/core/clients/deploy/about-client-settings#delivery-optimization).
+
+La Optimización de distribución es la tecnología recomendada para [optimizar la distribución de actualizaciones de Windows 10](/sccm/sum/deploy-use/optimize-windows-10-update-delivery) de archivos de instalación rápida para actualizaciones de calidad de Windows 10.
 
 
 
