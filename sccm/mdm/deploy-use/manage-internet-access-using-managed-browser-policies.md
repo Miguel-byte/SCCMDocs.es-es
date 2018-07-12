@@ -2,7 +2,7 @@
 title: Administrar el acceso a Internet mediante directivas de explorador administrado
 titleSuffix: Configuration Manager
 description: Implemente Intune Managed Browser para administrar y restringir el acceso a Internet.
-ms.date: 03/05/2017
+ms.date: 07/06/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8754219f36e30f2442178dc5521e05246948d3de
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9fe64aef541a4e6405b0fbf6308afc6269d88f56
+ms.sourcegitcommit: f03cb34693b9806e9fecd3c0162de70cc8cb4b1e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350153"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886491"
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-system-center-configuration-manager"></a>Administrar el acceso a Internet mediante directivas de explorador administrado con System Center Configuration Manager
 
@@ -86,55 +86,55 @@ La directiva nueva se muestra en el nodo **Directivas de administración de apli
 
 Utilice la siguiente información para conocer los formatos permitidos y los caracteres comodín que puede usar al especificar direcciones URL en las listas de permitidos y bloqueados.  
 
--   Puede utilizar el carácter comodín '**\***' según las reglas de la siguiente lista de patrones permitidos.  
+-   Utilice el carácter comodín `*` (asterisco) según las reglas de la siguiente lista de patrones permitidos.  
 
--   Asegúrese de anteponer **http** o **https** a todas las direcciones URL al introducirlas en la lista.  
+-   Anteponga **http** o **https** a todas las direcciones URL al introducirlas en la lista.  
 
--   Puede especificar números de puerto en la dirección. Si no especifica un número de puerto, los valores usados serán:  
+-   Especifique números de puerto en la dirección. Si no especifica un número de puerto, se usan los siguientes valores:  
 
     -   Puerto 80 para http  
 
     -   Puerto 443 para https  
 
-     No se admite el uso de caracteres comodín para el número de puerto como, por ejemplo, **http://www.contoso.com:\*** y **http://www.contoso.com: /\***  
+     No use caracteres comodín para el número de puerto, que no se admite. Por ejemplo, `http://www.contoso.com:*`.   
 
 -   Utilice la siguiente tabla para obtener información acerca de los patrones permitidos que puede usar al especificar direcciones URL:  
 
     |Dirección URL|Coincide|No coincide|  
     |---------|-------------|--------------------|  
-    |http://www.contoso.com<br /><br /> Coincide con una sola página|www.contoso.com|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> contoso.com/|  
-    |http://contoso.com<br /><br /> Coincide con una sola página|contoso.com/|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com|  
-    |http://www.contoso.com/*<br /><br /> Coincide con todas las direcciones URL que comienzan con www.contoso.com|www.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com/videos/tvshows|host.contoso.com<br /><br /> host.contoso.com/images|  
-    |http://*.contoso.com/\*<br /><br /> Coincide con todos los subdominios en contoso.com|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/images|contoso.host.com|  
-    |http://www.contoso.com/images<br /><br /> Coincide con una sola carpeta|www.contoso.com/images|www.contoso.com/images/dogs|  
-    |http://www.contoso.com:80<br /><br /> Coincide con una sola página, con un número de puerto|http://www.contoso.com:80||  
-    |https://www.contoso.com<br /><br /> Coincide con una sola página segura|https://www.contoso.com|http://www.contoso.com|  
-    |http://www.contoso.com/images/*<br /><br /> Coincide con una sola carpeta y todas sus subcarpetas|www.contoso.com/images/dogs<br /><br /> www.contoso.com/images/cats|www.contoso.com/videos|  
+    |`http://www.contoso.com`<br /><br /> Coincide con una sola página|`www.contoso.com`|`host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `contoso.com/`|  
+    |`http://contoso.com`<br /><br /> Coincide con una sola página|`contoso.com`|`host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com`|  
+    |`http://www.contoso.com/*`<br /><br /> Coincide con todas las direcciones URL que comienzan por `www.contoso.com`|`www.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com/videos/tvshows`|`host.contoso.com`<br /><br /> `host.contoso.com/images`|  
+    |`http://*.contoso.com/*`<br /><br /> Coincide con todos los subdominios en contoso.com|`developer.contoso.com/resources`<br /><br /> `news.contoso.com/images`<br /><br /> `news.contoso.com/videos`|`contoso.host.com`|  
+    |`http://www.contoso.com/images`<br /><br /> Coincide con una sola carpeta|`www.contoso.com/images`|`www.contoso.com/images/dogs`|  
+    |`http://www.contoso.com:80`<br /><br /> Coincide con una sola página, con un número de puerto|`http://www.contoso.com:80`||  
+    |`https://www.contoso.com`<br /><br /> Coincide con una sola página segura|`https://www.contoso.com`|`http://www.contoso.com`|  
+    |`http://www.contoso.com/images/*`<br /><br /> Coincide con una sola carpeta y todas sus subcarpetas|`www.contoso.com/images/dogs`<br /><br /> `www.contoso.com/images/cats`|`www.contoso.com/videos`|  
 
 -   Los siguientes son ejemplos de algunas de las entradas que no se pueden especificar:  
 
-    -   *.com  
+    -   `*.com`  
 
-    -   *.contoso/\*  
+    -   `*.contoso/*`  
 
-    -   www.contoso.com/*images  
+    -   `www.contoso.com/*images`  
 
-    -   www.contoso.com/*images\*pigs  
+    -   `www.contoso.com/*images*pigs`  
 
-    -   www.contoso.com/page*  
+    -   `www.contoso.com/page*`  
 
     -   Direcciones IP  
 
-    -   https://*  
+    -   `https://*`  
 
-    -   http://*  
+    -   `http://*`  
 
-    -   http://www.contoso.com:*  
+    -   `http://www.contoso.com:*`  
 
-    -   http://www.contoso.com: /*  
+    -   `http://www.contoso.com: /*`  
 
 > [!NOTE]  
->  *.microsoft.com siempre se permite.  
+>  `*.microsoft.com` se permite siempre.  
 
 ### <a name="how-conflicts-between-the-allow-and-block-list-are-resolved"></a>Cómo se resuelven los conflictos entre las listas de permitidos y bloqueados  
  Si se implementan varias directivas de explorador administrado en un dispositivo y la configuración presenta conflictos, tanto el modo (permitir o bloquear) como las listas de direcciones URL se evalúan para detectar conflictos. En caso de conflicto, se aplica el comportamiento siguiente:  
