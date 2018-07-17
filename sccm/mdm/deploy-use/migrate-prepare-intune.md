@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
-ms.openlocfilehash: a2636713f8c121eecd826eeba060f8e3f8e865f3
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0d71abbe33def6e12e75c2042e48f3d7ddcfe5c6
+ms.sourcegitcommit: 06d490d526070e17d77e86bc6c200899ded911cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353171"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38967154"
 ---
 # <a name="prepare-intune-for-user-migration"></a>Preparación de Intune para la migración de usuarios 
 
@@ -66,7 +66,7 @@ Para que el acceso condicional funcione correctamente después de migrar usuario
 - Quite usuarios del acceso condicional estableciendo destinos en Configuration Manager una vez que se migran a Intune independiente.
 
 ## <a name="configure-the-microsoft-intune-certificate-connector"></a>Configuración de Microsoft Intune Certificate Connector
-Si usa NDES para emitir certificados mediante SCEP, debe configurar Microsoft Intune Certificate Connector. El equipo que hospeda el conector de NDES en Intune no puede ser el mismo equipo que hospeda el conector de NDES en Configuration Manager. Para obtener más información, consulte [Configuración y administración de certificados SCEP con Intune](https://docs.microsoft.com/en-us/intune/certificates-scep-configure). 
+Si usa NDES para emitir certificados mediante SCEP, debe configurar Microsoft Intune Certificate Connector. El equipo que hospeda el conector de NDES en Intune no puede ser el mismo equipo que hospeda el conector de NDES en Configuration Manager. Para obtener más información, consulte [Configuración y administración de certificados SCEP con Intune](https://docs.microsoft.com/intune/certificates-scep-configure). 
 
 > [!Important]    
 > Después de configurar el conector, debe modificar los perfiles SCEP importados para hacer referencia a la nueva dirección URL del servidor.
