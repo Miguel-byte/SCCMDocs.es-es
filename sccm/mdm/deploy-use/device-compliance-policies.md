@@ -1,8 +1,8 @@
 ---
 title: Directivas de cumplimiento de dispositivos
 titleSuffix: Configuration Manager
-description: Obtenga información sobre cómo administrar directivas de cumplimiento en System Center Configuration Manager para que los dispositivos sean compatibles con directivas de acceso condicional.
-ms.date: 03/05/2017
+description: Obtenga información sobre cómo administrar directivas de cumplimiento en Configuration Manager para que los dispositivos sean compatibles con directivas de acceso condicional.
+ms.date: 07/12/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,36 +10,41 @@ ms.assetid: ad8fa94d-45bb-4c94-8d86-31234c5cf21c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 776af7499c576f21d47dafec8a668f3c4051ad88
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 8c27c945b384a9769d008667f124d414275a3c11
+ms.sourcegitcommit: e54e9d4a735e72b84095e0017c5bec50af480207
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347270"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39039597"
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>Directivas de cumplimiento de dispositivo en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Las **directivas de cumplimiento** en System Center Configuration Manager definen las reglas y los valores de configuración que un dispositivo debe cumplir para que se considere conforme a las directivas de acceso condicional. Las directivas de cumplimiento también se pueden usar para supervisar y corregir problemas de compatibilidad con dispositivos independientemente del acceso condicional.  
+Las directivas de cumplimiento de Configuration Manager definen las reglas y los valores de configuración que un dispositivo debe cumplir para que se considere conforme a las directivas de acceso condicional. Las directivas de cumplimiento también se pueden usar para supervisar y corregir problemas de compatibilidad con dispositivos independientemente del acceso condicional.  
 
 
 > [!IMPORTANT]  
->  En este artículo se describen las directivas de cumplimiento para los dispositivos administrados por Microsoft Intune.    Las directivas de cumplimiento para los equipos administrados por System Center Configuration Manager se describen en [Manage access to O365 services for PCs managed by System Center Configuration Manager](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md) (Administración del acceso a servicios de O365 para equipos administrados por System Center Configuration Manager).  
+>  En este artículo se describen las directivas de cumplimiento para los dispositivos administrados por Microsoft Intune. Las directivas de cumplimiento para los dispositivos administrados por el cliente de Configuration Manager se describen en [Administración del acceso a servicios de O365 para equipos administrados por System Center Configuration Manager](/sccm/protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
 
  Estas reglas incluyen requisitos como los siguientes:  
 
--   PIN y contraseñas para tener acceso a un dispositivo
+-   PIN y contraseñas para tener acceso a un dispositivo  
 
--   Cifrado de los datos almacenados en el dispositivo
+-   Cifrado de los datos almacenados en el dispositivo  
 
 -   Si el dispositivo está desbloqueado o modificado  
 
--   Si el correo electrónico en el dispositivo se administra mediante una directiva de Intune, o si el servicio de atestación de estado de dispositivo de Windows notifica el dispositivo como incorrecto.
--   Aplicaciones que no se pueden instalar en el dispositivo.
+-   Si el correo electrónico en el dispositivo se administra mediante una directiva de Intune, o si el servicio de atestación de estado de dispositivo de Windows notifica el dispositivo como incorrecto.  
+
+-   Aplicaciones que no se pueden instalar en el dispositivo.  
 
 
  Puede implementar directivas de cumplimiento para recopilaciones de usuarios. Cuando se implementa una directiva de cumplimiento para un usuario, se comprueba el cumplimiento de todos los dispositivos del usuario.  
+
+
+
+## <a name="supported-device-types"></a>Tipos de dispositivos compatibles
 
  En la siguiente tabla se enumeran los tipos de dispositivos compatibles con las directivas de cumplimiento y se indica cómo se administran los valores de configuración no compatibles cuando se usa la directiva con una directiva de acceso condicional.  
 
@@ -54,16 +59,37 @@ Las **directivas de cumplimiento** en System Center Configuration Manager define
 |**Atestación de estado de dispositivo (actualización 1602)**|Opción no aplicable a Windows 8.1<br /><br /> Windows 10 y Windows 10 Mobile están en cuarentena.|No aplicable|No aplicable|No aplicable|  
 |**Aplicaciones que no se pueden instalar**|No aplicable|No aplicable|En cuarentena|En cuarentena|
 
- **Corregido** = el sistema operativo del dispositivo exige el cumplimiento (por ejemplo, el usuario debe establecer un PIN).  La configuración nunca será no conforme.  
+ **Corregido** = el sistema operativo del dispositivo aplica el cumplimiento. Por ejemplo, se obliga al usuario a establecer un PIN. Nunca hay un caso en que el valor sea no compatible.  
 
- **En cuarentena** = el sistema operativo del dispositivo no exige el cumplimiento (por ejemplo, los dispositivos Android no obligan al usuario a cifrar el dispositivo).  En este caso:  
+ **En cuarentena** = el sistema operativo del dispositivo no aplica el cumplimiento. Por ejemplo, los dispositivos Android no obligan al usuario a cifrar el dispositivo. En este caso:  
 
--   El dispositivo se bloqueará si el usuario se rige por una directiva de acceso condicional.  
+-   Si el usuario se rige por una directiva de acceso condicional, se bloquea el dispositivo.  
 
--   El portal de empresa o portal web notificará al usuario los problemas de cumplimiento que se produzcan.  
+-   El portal de empresa o portal web notifica al usuario los problemas de cumplimiento.  
 
 
-### <a name="next-steps"></a>Pasos siguientes  
-[Crear e implementar una directiva de cumplimiento de dispositivos](create-compliance-policy.md)
+
+## <a name="devices-without-any-assigned-compliance-policy"></a>Dispositivos sin ninguna directiva de cumplimiento asignada
+<!--2520152--> A partir de julio de 2018, configure si todos los dispositivos sin ninguna directiva de cumplimiento asignada se consideran compatibles o no compatibles. De forma predeterminada, los dispositivos sin directiva de cumplimiento asignada se consideran compatibles. Use los pasos siguientes para cambiar este valor en Azure Portal:
+
+1. Inicie sesión en [Intune en Azure Portal](https://aka.ms/intuneportal).  
+
+2. Seleccione **Cumplimiento del dispositivo** y luego **Configuración de directivas de cumplimiento** en el grupo de configuración.  
+
+3. En la opción **Marcar los dispositivos que no tienen asignada una directiva de cumplimiento como**, seleccione una de las siguientes opciones:  
+
+     - **Compatibles** (predeterminada): los dispositivos sin directiva de cumplimiento asignada se consideran compatibles con la directiva. Si el acceso condicional está habilitado, estos dispositivos tienen acceso a los recursos internos.  
+
+     - **No compatibles**: los dispositivos sin directiva de cumplimiento asignada se consideran no compatibles con la directiva. Si el acceso condicional está habilitado, estos dispositivos no pueden acceder a los recursos internos según las condiciones de la directiva de acceso condicional.  
+
+4. Haga clic en Guardar.  
+
+Se recomienda encarecidamente implementar al menos una directiva de cumplimiento para cada plataforma para todos los usuarios del entorno. Luego establezca esta opción en **No compatibles** con el fin de garantizar la seguridad de los recursos internos. Para obtener más información, vea la entrada de blog [Security Enhancements in the Intune Service](https://aka.ms/compliance_policies) (Mejoras de seguridad en el servicio Intune).
+
+
+
+## <a name="next-steps"></a>Pasos siguientes  
+[Crear e implementar una directiva de cumplimiento de dispositivos](/sccm/mdm/deploy-use/create-compliance-policy)
+
 ### <a name="see-also"></a>Consulte también  
- [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md) (Administración del acceso a servicios en System Center Configuration Manager)
+ [Administrar el acceso a servicios en System Center Configuration Manager](/sccm/protect/deploy-use/manage-access-to-services)

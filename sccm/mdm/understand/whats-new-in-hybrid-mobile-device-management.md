@@ -2,7 +2,7 @@
 title: Novedades de la MDM híbrida
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las nuevas características de administración de dispositivos móviles disponibles para implementaciones híbridas con Configuration Manager e Intune.
-ms.date: 07/05/2018
+ms.date: 07/12/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5d527d2fc4fdc52e132b6f603d9b83851e1693f3
-ms.sourcegitcommit: c9d0a4c24ce90825cb2d05e4fe37c5b41fa48a50
+ms.openlocfilehash: d2a705ed8b09e4c2de92baa22164cbe97f180462
+ms.sourcegitcommit: e54e9d4a735e72b84095e0017c5bec50af480207
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37923543"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39039631"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con Configuration Manager y Microsoft Intune
 
@@ -43,6 +43,17 @@ En cada sección de este artículo se enumeran las características híbridas or
 ## <a name="july-2018"></a>Julio de 2018
 
 ### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune
+
+#### <a name="support-for-security-enhancement-in-intune-service"></a>Compatibilidad con la mejora de seguridad del servicio Intune
+<!--2520152--> Ahora puede especificar que los dispositivos sin ninguna directiva de cumplimiento asignada no son compatibles en inquilinos híbridos. Configure este valor en Intune en Azure Portal. Se recomienda encarecidamente habilitar esta característica para proteger los recursos internos.
+
+Esta característica está desactivada de manera predeterminada en inquilinos híbridos. Cuando se habilita esta característica, los dispositivos que no tienen una directiva de cumplimiento asignada se consideran no compatibles. Si también habilita el acceso condicional, estos dispositivos pierden el acceso a los recursos internos. Estos recursos pueden ser Outlook o SharePoint, en función de las directivas de acceso condicional del entorno. Si deja esta opción desactivada, estos dispositivos siguen teniendo el mismo nivel de acceso que en la actualidad.
+
+Para ayudar a determinar el impacto de la activación de esta característica, se proporciona un [script en la Galería TechNet](https://gallery.technet.microsoft.com/SQL-Query-for-Hybrid-MDM-5bcb8695). Cuando se ejecuta este script en la base de datos de Configuration Manager, enumera los dispositivos que no tienen ninguna directiva de cumplimiento.
+
+Vea los siguientes artículos para más información:
+- Entrada de blog [Security Enhancements in the Intune Service](https://aka.ms/compliance_policies) (Mejoras de seguridad en el servicio Intune) 
+- [Directivas de cumplimiento de dispositivo en System Center Configuration Manager](/sccm/mdm/deploy-use/device-compliance-policies)
 
 #### <a name="updates-to-out-of-compliance-messages-in-company-portal-app"></a>Actualizaciones de los mensajes de no compatibilidad en el Portal de empresa 
 <!--1832222--> Estamos revisando los mensajes que ven los usuarios de dispositivos cuando un dispositivo no es compatible. Los mensajes conservan sus significados originales, pero se han actualizado para usar un lenguaje más descriptivo y una jerga menos técnica. También estamos actualizando los vínculos a la documentación y las medidas de corrección para mantenerlos actualizados.  
