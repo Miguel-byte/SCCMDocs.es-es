@@ -10,12 +10,12 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a89c9d5a0fa4ea57a7824fe16b24120347ddaac
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: ed6174bcb3c99461b00ec5fc57d4508b9390747d
+ms.sourcegitcommit: acad0674b2743193f87990fb50194c4f17823a8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338040"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146935"
 ---
 # <a name="deploy-applications-with-system-center-configuration-manager"></a>Implementar aplicaciones con System Center Configuration Manager
 
@@ -102,7 +102,7 @@ En la página **Configuración de implementación** del Asistente para implement
 - **Actualizar automáticamente cualquier versión reemplazada de esta aplicación**: el cliente actualiza cualquier versión reemplazada de la aplicación con la aplicación nueva.    
 
     > [!NOTE]  
-    > A partir de la versión 1802, esta opción se puede habilitar o deshabilitar para el propósito de instalación **Disponible** o **Requerido**. <!--1351266--> 
+    > A partir de la versión 1802, esta opción se puede habilitar o deshabilitar para el propósito de instalación **Disponible**. <!--1351266--> 
 
 
 ### <a name="specify-scheduling-settings-for-the-deployment"></a>Especificar la configuración de programación de la implementación
@@ -195,8 +195,7 @@ Después de que los clientes reciban la implementación, se aplica el comportami
 
 
 ## <a name="deploy-user-available-applications-on-azure-ad-joined-devices"></a>Implementar aplicaciones disponibles para el usuario en dispositivos unidos a Azure AD
-<!-- 1322613 -->
-Si se implementan aplicaciones como disponibles para los usuarios, a partir de la versión 1802 pueden examinarlas e instalarlas a través del Centro de software en dispositivos de Azure Active Directory (Azure AD).  
+<!-- 1322613 --> Si se implementan aplicaciones como disponibles para los usuarios, a partir de la versión 1802 pueden examinarlas e instalarlas a través del Centro de software en dispositivos de Azure Active Directory (Azure AD).  
 
 #### <a name="prerequisites"></a>Requisitos previos
 
