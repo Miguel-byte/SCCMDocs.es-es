@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 26d43b1ee065f3ae0b1221ca81e69f6cb1da6f6c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 983b6b73c79c51792bf015c74d40466231fbaf3d
+ms.sourcegitcommit: 7c26485b600544a64a5cf2edca6f2f8f29fecde9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351874"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130677"
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>Administrar secuencias de tareas para automatizar tareas en System Center Configuration Manager
 
@@ -262,6 +262,9 @@ Se mostrará el siguiente mensaje de notificación cuando el usuario final abra 
 
         -   **Necesario**: la secuencia de tareas se implementa automáticamente, según la programación configurada. Si la secuencia de tareas no está oculta, el usuario todavía puede seguir su estado de implementación. También puede instalar la secuencia de tareas antes de la fecha límite mediante el Centro de software.  
 
+        >  [!NOTE]  
+        >  Si varios usuarios inician sesión en el dispositivo, es posible que las implementaciones de paquete y secuencia de tareas no aparezcan en el centro de Software.
+
     -   **Implementar automáticamente según la programación tanto si un usuario inició sesión como si no**: esta opción no está disponible cuando se implementa una secuencia de tareas.  
 
     -   **Enviar paquetes de reactivación**: si el propósito de la implementación se establece en **Requerido** y se selecciona esta opción, el sitio envía un paquete de reactivación a los equipos antes de ejecutar la implementación. Este paquete reactiva el equipo en suspensión a la hora límite de instalación. Para poder utilizar esta opción, los equipos y las redes deben configurarse para Wake on LAN.  
@@ -478,8 +481,7 @@ Puede administrar las variables por equipo en un sitio primario o en un sitio de
 6.  Después de agregar todas las variables a la recopilación, haga clic en **Aceptar**.  
 
 ## <a name="add-child-task-sequences-to-a-task-sequence"></a>Adición de secuencias de tareas secundarias a una secuencia de tareas
-<!--1261338-->
-A partir de Configuration Manager versión 1710, puede agregar un nuevo paso de secuencia de tareas que ejecute otra secuencia de tareas. Este paso crea una relación primario-secundario entre las secuencias de tareas. El uso de este paso le permite crear más secuencias de tareas modulares que puede volver a usar.  
+<!--1261338--> A partir de Configuration Manager versión 1710, puede agregar un nuevo paso de secuencia de tareas que ejecute otra secuencia de tareas. Este paso crea una relación primario-secundario entre las secuencias de tareas. El uso de este paso le permite crear más secuencias de tareas modulares que puede volver a usar.  
 
 > [!Note]  
 > Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para más información, vea [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  

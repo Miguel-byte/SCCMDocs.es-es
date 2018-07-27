@@ -10,12 +10,12 @@ ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 6f34fd322e5f94550602d7883a0303d10059b702
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4815695ad67ac86491da9ea3274fd7db660c8190
+ms.sourcegitcommit: 7c26485b600544a64a5cf2edca6f2f8f29fecde9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341957"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130653"
 ---
 # <a name="packages-and-programs-in-system-center-configuration-manager"></a>Paquetes y programas en System Center Configuration Manager
 
@@ -91,7 +91,8 @@ Los paquetes pueden usar algunas características nuevas de Configuration Manage
 
              Cuando se ejecuta el programa en un cliente, Configuration Manager busca primero el nombre del archivo de la línea de comandos dentro del paquete, luego busca en la carpeta de Windows local y, después, busca en la ubicación *%path%* local. Si no se encuentra el archivo, se produce un error en el programa.  
 
-        -   **Carpeta de inicio** (opcional): especifique la carpeta desde la que se ejecuta el programa, con un máximo de 127 caracteres. Esta carpeta puede ser una ruta de acceso absoluta en el cliente, o una ruta de acceso relacionada con la carpeta del punto de distribución que contiene el paquete.
+        -   
+  **Carpeta de inicio** (opcional): especifique la carpeta desde la que se ejecuta el programa, con un máximo de 127 caracteres. Esta carpeta puede ser una ruta de acceso absoluta en el cliente, o una ruta de acceso relacionada con la carpeta del punto de distribución que contiene el paquete.
 
         -   **Ejecutar**: especifique el modo en que se ejecutará el programa en los equipos cliente. Seleccione una de las acciones siguientes:  
 
@@ -212,6 +213,9 @@ Los paquetes pueden usar algunas características nuevas de Configuration Manage
 
         -   **Requerido**: el paquete y el programa se implementan automáticamente según la programación configurada. Sin embargo, un usuario puede realizar un seguimiento del estado de implementación de paquete y programa e instalarlo antes de la fecha límite mediante el centro de Software.  
 
+        >  [!NOTE]  
+        >  Si varios usuarios inician sesión en el dispositivo, es posible que las implementaciones de paquete y secuencia de tareas no aparezcan en el centro de Software.
+        
     -   **Enviar paquetes de reactivación**: si el propósito de la implementación se establece en **Requerido** y se selecciona esta opción, se enviará un paquete de reactivación a los equipos antes de instalar la implementación para reactivar el equipo en suspensión a la hora límite de instalación. Para poder usar esta opción, los equipos deben configurarse para Wake On LAN.  
 
     -  **Permitir a los clientes de una conexión a Internet de uso medido descargar contenido una vez cumplida la fecha límite de instalación, lo cual podría suponer costes adicionales**: seleccione esta opción si es necesario.  
