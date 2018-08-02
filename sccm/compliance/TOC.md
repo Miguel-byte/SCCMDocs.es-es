@@ -12,9 +12,9 @@
 ## [Seguridad y privacidad](plan-design/security-and-privacy-for-compliance-settings.md)
 
 ## [Extensiones de Security Content Automation Protocol (SCAP)](plan-design/scap/about-scap.md)
-### [Instalar y configurar extensiones SCAP](plan-design/scap/install-configure-scap.md)
-### [Importar la configuración de cumplimiento de SCAP](plan-design/scap/import-scap-compliance-settings.md)
-### [Solución de problemas de extensiones SCAP](plan-design/scap/troubleshooting-scap.md)
+### [Instalación y configuración de extensiones SCAP](plan-design/scap/install-configure-scap.md)
+### [Implementación y supervisión de cumplimiento de SCAP](plan-design/scap/deploy-monitor-export.md)
+### [Solución de problemas con extensiones SCAP](plan-design/scap/troubleshooting-scap.md)
 
 # Implementar y usar
 

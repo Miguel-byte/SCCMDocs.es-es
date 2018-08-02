@@ -45,8 +45,9 @@
 ### [Deploy Windows to Go](deploy-use/deploy-windows-to-go.md) (Implementación de Windows to Go)
 
 ## [Administración de Windows como servicio](deploy-use/manage-windows-as-a-service.md)
+## [Creación de una implementación por fases](deploy-use/create-phased-deployment-for-task-sequence.md)
+## [Administración y supervisión de implementaciones por fases](deploy-use/manage-monitor-phased-deployments.md)
 ## [Supervisar implementaciones del sistema operativo](deploy-use/monitor-operating-system-deployments.md)
-## [Creación de una implementación por fases para una secuencia de tareas](deploy-use/create-phased-deployment-for-task-sequence.md)
 
 ## [Administrar secuencias de tareas para automatizar tareas](deploy-use/manage-task-sequences-to-automate-tasks.md)
 ### [Crear una secuencia de tareas para instalar un sistema operativo](deploy-use/create-a-task-sequence-to-install-an-operating-system.md)
