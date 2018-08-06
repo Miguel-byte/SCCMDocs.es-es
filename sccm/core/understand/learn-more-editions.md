@@ -10,12 +10,12 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a8ce492aa34fa130a11bde0d5823252a9d782960
-ms.sourcegitcommit: e35d07870656eadd29faacc378ecd091ff3bdcfb
+ms.openlocfilehash: 33cd99fd51bd7fabc1ae7f8379bcf2a69a5c4898
+ms.sourcegitcommit: f195190347a98b6c5be957564d33b6c4dfb610d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848635"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39309381"
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>Licencias y ramas para System Center Configuration Manager
 
@@ -28,7 +28,7 @@ Los clientes con Software Assurance (SA) activo en licencias de System Center Co
 
 
 **Detalles de las licencias:**  
-[Aquí puede encontrar los términos y condiciones completos de los productos que compra mediante los programas de licencias por volumen de Microsoft](http://go.microsoft.com/fwlink/?LinkId=800052).
+[Aquí puede encontrar los términos y condiciones completos de los productos que compra mediante los programas de licencias por volumen de Microsoft](https://go.microsoft.com/fwlink/?LinkId=800052).
 
 
 ## <a name="system-center-configuration-manager-licensed-branches"></a>Ramas con licencia de System Center Configuration Manager  
@@ -95,16 +95,15 @@ Para obtener más información acerca de licencias de Software Assurance y la Ra
 Utilice los siguientes vínculos para obtener más información acerca de los detalles de licencias de productos.
 
 **Vínculos del Centro de servicios de licencias por volumen de Microsoft (VLSC):**
-- Información general de VLSC: [https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx).
+- [Información general de VLSC](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx)
 
-- Términos del programa Licencias por Volumen de Microsoft: [http://go.microsoft.com/fwlink/?LinkId=800052](http://go.microsoft.com/fwlink/?LinkId=800052).
+- [Términos del programa Licencias por Volumen de Microsoft](https://go.microsoft.com/fwlink/?LinkId=800052)
 
-- Los clientes de licencias de volumen pueden obtener un resumen de sus licencias aquí: [https://www.microsoft.com/Licensing/servicecenter/default.aspx](https://www.microsoft.com/Licensing/servicecenter/default.aspx).  
-  Vaya al menú **Licencias** y haga clic en **Licenses Summary** (Resumen de licencias) para obtener información general sobre las licencias.
+- Los clientes de licencias por volumen pueden obtener un resumen de sus licencias en el [Centro de servicios de licencias por volumen](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Vaya al menú **Licencias** y haga clic en **Licenses Summary** (Resumen de licencias) para obtener información general sobre las licencias.
 
 **Vídeos del Centro de servicios de licencias por volumen:**
-- Vídeos de aprendizaje sobre el funcionamiento de VLSC: [https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2).
+- [Vídeos de aprendizaje sobre el funcionamiento de VLSC](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2)  
 
-- Dónde buscar el contrato de Software Assurance activo (a partir de unos 43 segundos en): [https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0).
+- [Dónde buscar el contrato de Software Assurance activo](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0) (a partir de unos 43 segundos en)  
 
-- Cómo obtener permisos para VLSC: [https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4).  Puede delegar los permisos de lectura y escritura del Centro de servicios de licencias por volumen a otras personas de su organización.
+- [Cómo obtener permisos para VLSC](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4) Puede delegar los permisos de lectura y escritura del Centro de servicios de licencias por volumen a otras personas de su organización.

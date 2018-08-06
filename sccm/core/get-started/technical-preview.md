@@ -1,8 +1,8 @@
 ---
 title: Versiones de Technical Preview
 titleSuffix: Configuration Manager
-description: Obtenga información sobre la versión Technical Preview para probar nuevas funcionalidades y capacidades de Configuration Manager.
-ms.date: 06/27/2018
+description: Obtenga información sobre la rama de Technical Preview para probar nuevas funcionalidades y funcionalidades de Configuration Manager.
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,66 +10,69 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1fd848c3e0ed663e0731eb86d39c930db3af7819
-ms.sourcegitcommit: d1bf26bcf0d78b37ac7598fab36eb58ca69b1dc5
+ms.openlocfilehash: ec9c4cdf54e6ffc55cc2983152f56492e5b1b354
+ms.sourcegitcommit: af4f8bd8dffe6fb05f51322ea9e94d335a2cc0c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066290"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39360722"
 ---
-# <a name="technical-preview-for-system-center-configuration-manager"></a>Technical Preview para System Center Configuration Manager
+# <a name="technical-preview-for-configuration-manager"></a>Technical Preview para Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Technical Preview)*
 
-**Le damos la bienvenida a System Center Configuration Manager Technical Preview**. En este artículo se proporcionan detalles sobre la versión preliminar en evolución que presenta nuevas funcionalidades y características en las que estamos trabajando. En cada nueva versión preliminar técnica se presentan nuevas características que no se incluyeron en la rama actual de Configuration Manager cuando se puso a disposición la versión preliminar técnica. Estas características podrían incluirse finalmente en una actualización de la versión actual de la rama, pero antes de finalizarlas y agregarlas, queremos que tenga la oportunidad de probarlas y enviarnos sus comentarios.  
+Este artículo proporciona detalles sobre de la rama de Technical Preview mensual de Configuration Manager. Technical Preview presenta una funcionalidad nueva en que está trabajando Microsoft. Presenta características nuevas que no están todavía incluida en la rama actual de Configuration Manager. Estas características podrían incluirse finalmente en una actualización de la rama actual. Antes de finalizar la las características, queremos que las pruebe y nos comparta sus comentarios.  
 
- Como esta es una versión preliminar técnica, los detalles y las funcionalidades están sujetos a cambios.  
+Como esta es una versión preliminar técnica, los detalles y las funcionalidades están sujetos a cambios.  
 
- Este artículo contiene información que se aplica a todas las versiones de Technical Preview. También se muestran las nuevas capacidades (o características) junto con la versión de Technical Preview en las que aparecen por primera vez, como la versión 1806 de junio de 2018. Estas características se detallan en temas independientes dedicados a cada versión preliminar.  
+Esta información se aplica a todas las versiones de la rama de Technical Preview de Configuration Manager. En este artículo se enumera cada una de las características nuevas junto con la versión de Technical Preview en las que aparece por primera vez. Por ejemplo, la versión **1806** de junio (06) de 2018 (18). Los artículos independientes dedicados a cada versión preliminar detallan las características individuales.  
 
- Para obtener más información sobre las novedades en la rama actual de Configuration Manager, consulte [Novedades de System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).
+Para más información sobre las novedades de la *rama actual* de Configuration Manager, consulte [Novedades de las versiones incrementales de Configuration Manager](/sccm/core/plan-design/changes/whats-new-incremental-versions).
 
 
 
-##  <a name="bkmk_reqs"></a> Requisitos y limitaciones de Technical Preview  
+##  <a name="bkmk_reqs"></a> Limitaciones y requisitos  
 
 > [!IMPORTANT]     
 >  La versión Technical Preview solo tiene licencia para su uso en un entorno de laboratorio. Es posible que Microsoft no proporcione servicios de soporte técnico y que algunas características no estén disponibles en el software de versión preliminar. Además, es posible que el software de versión preliminar tenga estándares de seguridad, privacidad, accesibilidad, disponibilidad y confiabilidad reducidos o diferentes a los del software proporcionado comercialmente.  
 
- Para la mayoría de requisitos previos del producto, use la información que aparece en [Configuraciones admitidas para System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md). Las excepciones siguientes se aplican a las versiones Technical Preview:  
+ Para la mayoría de requisitos previos de producto, use la información que se encuentra en las [configuraciones admitidas](/sccm/core/plan-design/configs/supported-configurations). Las excepciones siguientes se aplican a la rama de Technical Preview:  
 
--   Todas las instalaciones permanecen activas durante 90 días y luego cambian a inactivas.  
+-   Cada instalación permanece activa durante 90 días y luego cambia a inactiva.  
 
--   El único idioma admitido es el inglés.
+-   El único idioma admitido es el inglés.  
 
+-   Solo admite los parámetros de línea de comandos de configuración siguientes:  
+    -   `/silent`  
+    -   `/testdbupgrade`    
 
--   Solo se admiten los siguientes indicadores de instalación (conmutadores):  
-
-    -   **/silent**  
-    -   **/testdbupgrade**    
-
-
--   De forma predeterminada, cuando se usa Technical Preview, el punto de conexión de servicio se instala en modo en línea. No admite el cambio al modo sin conexión.
+-   El punto de conexión del servicio se instala en el modo en línea. No admite el modo sin conexión.  
 
 -   En los artículos independientes de cada versión específica de Technical Preview se incluyen limitaciones o requisitos adicionales, según corresponda.
 
--   No se admite la migración a esta versión preliminar o desde ella.  
+-   Las características siguientes no son compatibles con la rama de Technical Preview:  
 
--   No se admite la actualización a esta versión preliminar. 
+    - [Migración](/sccm/core/migration/migrate-data-between-hierarchies) desde o hasta esta rama de versión preliminar.  
 
--   No hay ninguna compatibilidad para la recuperación de sitio desde la carpeta cd.latest.  <!--507106-->
+    - [Actualización](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager) a esta rama de versión preliminar.  
 
--   No se admite la actualización a una versión de producción (rama actual) desde esta versión preliminar. En cambio, cuando haya actualizaciones disponibles para una versión preliminar, puede buscarlas e instalarlas desde el nodo **Actualizaciones y mantenimiento** de la consola de Configuration Manager. Para ver un vídeo del proceso de actualización en la consola, consulte [Installing ConfigMgr Update Package (Instalación de paquetes de actualización de Configuration Manager)](https://www.youtube.com/embed/KBd_EGFbUT8) en youtube.com.  
--   Solo se admite un sitio primario independiente. No se admiten sitios de administración central, varios sitios primarios ni sitios secundarios.  
+    - [Recuperación del sitio](/sccm/core/servers/manage/recover-sites) desde la carpeta cd.latest.  <!--507106-->
 
-Los siguientes productos y tecnologías son compatibles con esta rama de Configuration Manager. Sin embargo, su inclusión en este contenido no implica una extensión de la compatibilidad con cualquier producto o versión más allá del ciclo de vida de soporte individual de los productos. Los productos que están fuera de su ciclo de vida de soporte no se pueden usar con Configuration Manager. Para obtener más información sobre los ciclos de vida de soporte de Microsoft, visite el sitio web [Ciclo de vida de soporte de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=208270).  
+-   No se admite la actualización de esta rama de versión preliminar a la rama actual.  
 
--   Solo se admiten las siguientes versiones de SQL Server:  
+    > [!Note]  
+    > Cuando haya actualizaciones disponibles para una versión preliminar, seguirá siendo posible buscarlas e instalarlas desde el nodo **Actualizaciones y mantenimiento** de la consola de Configuration Manager. Para ver un vídeo del proceso de actualización en la consola, vea [Installing Configuration Manager update packages](https://www.youtube.com/embed/KBd_EGFbUT8) (Instalación de las actualizaciones de Configuration Manager) en youtube.com.  
+
+-   Solo admite un sitio primario independiente. No se admiten sitios de administración central, varios sitios primarios ni sitios secundarios.  
+
+La rama de Technical Preview de Configuration Manager admite los productos y las tecnologías siguientes: 
+
+-   Solo es compatible con las versiones siguientes de **SQL Server**:  
 
     -   SQL Server 2017 (con la actualización acumulativa 2 y versiones posteriores) a partir de la versión 1710 de Configuration Manager
     -   SQL Server 2016 (sin ningún Service Pack, y versiones posteriores)
     -   SQL Server 2014 (con Service Pack 1, o versiones posteriores)
-    -   SQL Server 2012 (con Service Pack 3, o versiones posteriores)
+    -   SQL Server 2012 (con Service Pack 3, o versiones posteriores)  
 
 
 -   El sitio admite hasta 10 clientes, que deben ejecutar una de las siguientes versiones de Windows:  
@@ -78,60 +81,84 @@ Los siguientes productos y tecnologías son compatibles con esta rama de Configu
       -   Windows 8.1  
       -   Windows 7  
 
-##  <a name="bkmk_install"></a> Instalar y actualizar la versión Technical Preview  
- System Center Configuration Manager Technical Preview es diferente de la versión actual de System Center Configuration Manager.  
+> [!Note]  
+> La inclusión de estos productos en este contenido no implica una extensión de la compatibilidad con una versión que están fuera de su ciclo de vida de soporte. Configuration Manager no es compatible con los productos que están fuera de su ciclo de vida de soporte. Para más información, consulte [Directiva de ciclo de vida de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=208270).  
 
- Para usar la versión preliminar técnica, primero debe instalar una **versión de base de referencia** de la compilación de dicha versión. Después de instalar una versión de referencia, use las **actualizaciones en consola** para que la instalación cuente con la versión preliminar más reciente. Normalmente, las nuevas versiones de Technical Preview están disponibles cada mes.
 
-Cada versión preliminar se admite hasta que tres versiones sucesivas están disponibles. Es decir, cuando se publicó la versión 1708, la versión 1704 ya no se admitía, pero las versiones 1705, 1706 y 1707 seguían admitiéndose. Si una base de referencia deja de ser compatible, todavía se admite para instalar un nuevo sitio de Technical Preview hasta que haya una nueva versión disponible, siempre que después actualice la instalación a otra compatible. Actualice a la versión más reciente disponible y, después, repita el proceso hasta que pueda instalar la versión más reciente de la versión preliminar técnica.
+
+##  <a name="bkmk_install"></a> Instalación y actualización  
+
+La rama de Technical Preview de Configuration Manager para su uso en laboratorio es distinta de la rama actual de Configuration Manager para su uso en producción.  
+
+En primer lugar, instale una versión de base de referencia de la rama de Technical Preview. Después de instalar una versión de referencia, use las actualizaciones en consola para que la instalación cuente con la versión preliminar más reciente. Normalmente, las nuevas versiones de Technical Preview están disponibles cada mes.
+
+Microsoft admite cada versión de Technical Preview hasta que hay disponibles tres versiones sucesivas. Por ejemplo, cuando se publica la versión 1708, se deja de admitir la versión 1704. Las versiones 1705, 1706 y 1707 siguen siendo compatibles. Cuando una base de referencia deja de ser compatible, todavía se admite para instalar un nuevo sitio de Technical Preview, suponiendo que se actualiza inmediatamente a una versión compatible. La base de referencia anterior se admite hasta que haya disponible una versión de base de referencia nueva. Actualice a la versión disponible más reciente desde la base de referencia y repita el proceso de actualización hasta instalar la versión de Technical Preview más reciente.
 
 > [!TIP]  
->  Cuando se instala una actualización de versión preliminar técnica, la instalación de versión preliminar se actualiza a la nueva versión preliminar técnica. Una instalación de versión preliminar técnica nunca dispone de una opción para actualizar a una instalación de rama actual ni recibir actualizaciones de la versión de rama actual.  
+>  Cuando se instala una actualización de versión preliminar técnica, la instalación de versión preliminar se actualiza a la nueva versión preliminar técnica. Una instalación de Technical Preview nunca tiene la opción de actualizar a una instalación de rama actual. Tampoco recibe nunca actualizaciones desde la versión de rama actual. 
+> 
+> Varias veces a lo largo del año, hay versiones de rama de Technical Preview y versiones de rama actuales con el mismo número de versión. Por ejemplo, hay una versión 1802 de Technical Preview y una versión 1802 de rama actual. 
 
-**Versiones activas de línea base de Technical Preview:**
    
-Puede instalar una versión de base de referencia hasta un año después de su lanzamiento. Sin embargo, al instalar un sitio nuevo de Technical Preview, se recomienda usar la última versión de línea base disponible.
--  **Technical Preview 1806**: la versión Configuration Manager Technical Preview 1806 está disponible como actualización en la consola y como nueva versión de línea base. Descargue las versiones de base de referencia [desde el centro de evaluación de TechNet](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+### <a name="active-baseline-versions"></a>Versiones de base de referencia activas
+   
+Instale una versión de base de referencia hasta un año después de su lanzamiento. Cuando instale un sitio de Technical Preview nuevo, use la versión de base de referencia más reciente si hay más de una versión de base de referencia disponible actualmente.
+
+-  **Versión de Technical Preview 1806**: la versión 1806 de Technical Preview de Configuration Manager está disponible tanto como actualización en consola como una versión de base de referencia nueva. Descargue las versiones de base de referencia [desde el centro de evaluación de TechNet](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+
 
 
 ##  <a name="BKMK_TPFeedback"></a> Proporcionar comentarios  
- Nos encanta recibir sus comentarios sobre las características de nuestras versiones Technical Preview. Para obtener más información, vea [Comentarios sobre el producto](../understand/find-help.md#product-feedback).
 
-También puede hablarnos sobre las ideas que tenga sobre características nuevas que le gustaría ver. Para enviar nuevas ideas y votar sobre las ideas enviadas por otros usuarios, [visite nuestra página de voz del usuario](https://configurationmanager.uservoice.com).  
+Nos encanta recibir sus comentarios sobre las características nuevas en Technical Preview. Para obtener más información, vea [Comentarios sobre el producto](/sccm/core/understand/find-help#product-feedback).
+
+También puede hablarnos sobre las ideas que tenga sobre características nuevas que le gustaría ver. Para enviar nuevas ideas y votar sobre las ideas enviadas por otros usuarios, [visite nuestra página de UserVoice](https://configurationmanager.uservoice.com).  
 
 <!--   ##  <a name="bdmk_tpknownissues"></a> General changes introduced in Technical Previews    -->
 
 
 
+##  <a name="bkmk_tpCaps"></a> Características de la versión más reciente  
 
-##  <a name="bkmk_tpCaps"></a> Funcionalidades ofrecidas en la vista preliminar técnica más reciente  
-A continuación se enumeran las funcionalidades que ofrece cada versión preliminar técnica de Configuration Manager. Las funcionalidades que estaban disponibles en una versión anterior de Technical Preview siguen estando disponibles en versiones posteriores. De igual forma, las funcionalidades que se han agregado a la rama actual de Configuration Manager siguen estando disponibles en las versiones de Technical Preview. Haga clic en el contenido de cada versión preliminar para aprender más acerca de una capacidad específica.  
+Las características siguientes están disponibles con la versión de Technical Preview de Configuration Manager más reciente: 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-18062"></a>Technical Preview, versión 1806.2
-- [Mejoras en las implementaciones por fases](capabilities-in-technical-preview-1806-2.md#bkmk_pod) <!--1358577,1358147,1358578-->
-- [Compatibilidad con nuevos formatos de paquete de aplicaciones de Windows](capabilities-in-technical-preview-1806-2.md#bkmk_msix) <!--1357427-->
-- [Mejora de seguridad de inserción de cliente](capabilities-in-technical-preview-1806-2.md#bkmk_client-push) <!--1358204-->
-- [Información de administración para un mantenimiento proactivo](capabilities-in-technical-preview-1806-2.md#bkmk_insights) <!--1352184,et al-->
-- [Carga de trabajo de aplicaciones móviles de transición para los dispositivos administrados conjuntamente](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt) <!--1357892-->
-- [Opciones de grupo de límites para descargas del mismo nivel](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions) <!--1356193-->
-- [Soporte técnico de actualizaciones de software de terceros para catálogos personalizados](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate) <!--1358714-->
-- [Mejoras de las características de administración en la nube](capabilities-in-technical-preview-1806-2.md#bkmk_cloud) <!--511980,515854-->
-- [Informe de cumplimiento de nuevas actualizaciones de software](capabilities-in-technical-preview-1806-2.md#bkmk_report) <!--1357775-->
+### <a name="technical-preview-version-1807"></a>Technical Preview versión 1807
+
+- [Central de la comunidad](capabilities-in-technical-preview-1807.md#bkmk_hub) <!--1357766-->
+- [Especificación de la unidad para la instalación sin conexión de imágenes de SO](capabilities-in-technical-preview-1807.md#bkmk_osd) <!--1358924-->
+- [Actividad de sincronización de dispositivos administrados conjuntamente desde Intune](capabilities-in-technical-preview-1807.md#bkmk_comgmt) <!--1358565-->
+- [Reparación de aplicaciones](capabilities-in-technical-preview-1807.md#bkmk_app-repair) <!--1357866-->
+- [Aprobación de solicitudes de aplicación por correo electrónico](capabilities-in-technical-preview-1807.md#bkmk_email-approve) <!--1321550-->
+- [Mejora en la salida del script](capabilities-in-technical-preview-1807.md#bkmk_script) <!--1236459-->
+- [Mejora de las actualizaciones de software de terceros](capabilities-in-technical-preview-1807.md#bkmk_3pupdate) <!--1358714-->
+
+> [!Note]  
+> Las características que estaban disponibles en una versión anterior de Technical Preview siguen estando disponibles en versiones posteriores. Del mismo modo, las características que se agregan a la rama actual de Configuration Manager siguen estando disponibles en la rama de Technical Preview.   
 
 
 
-## <a name="capabilities-delivered-in-recent-supported-technical-previews"></a>Funcionalidades ofrecidas en Technical Preview recientes admitidas
-A continuación se enumeran las funcionalidades ofrecidas en versiones anteriores de Technical Preview de Configuration Manager que todavía se admiten. 
+## <a name="features-in-recent-supported-technical-previews"></a>Características en versiones Technical Preview compatibles recientes
+
+Las características siguientes se lanzaron con versiones anteriores de la rama de Technical Preview de Configuration Manager que todavía se admiten: 
 
 <!-- This is the full list of new features in the past THREE (3) TP releases. 
 Each month, add features from the list above to the top of this table. 
 Then remove the bottom of this list and/or move individual items not in CB to the third table below.
 -->
 
- |Capacidad |Versión de Technical Preview |Versión de rama actual|  
+ |Característica |Versión de Technical Preview |Versión de rama actual|  
  |----------------|---------------------|--------------------|
+ | Mejoras en las implementaciones por fases <!--1358577,1358147,1358578--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_pod)  | ![Sin agregar](media/Red_X.gif) |  
+ | Compatibilidad con nuevos formatos de paquete de aplicaciones de Windows <!--1357427--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_msix)  | ![Sin agregar](media/Red_X.gif) |  
+ | Mejora de seguridad de inserción de cliente <!--1358204--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_client-push)  | ![Sin agregar](media/Red_X.gif) |  
+ | Información de administración para un mantenimiento proactivo <!--1352184,et al--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_insights)  | ![Sin agregar](media/Red_X.gif) |  
+ | Carga de trabajo de aplicaciones móviles de transición para los dispositivos administrados conjuntamente <!--1357892--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt)  | ![Sin agregar](media/Red_X.gif) |  
+ | Opciones de grupo de límites para descargas del mismo nivel <!--1356193--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions)  | ![Sin agregar](media/Red_X.gif) |  
+ | Soporte técnico de actualizaciones de software de terceros para catálogos personalizados <!--1358714--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate)  | ![Sin agregar](media/Red_X.gif) |  
+ | Mejoras de las características de administración en la nube <!--511980,515854--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_cloud)  | ![Sin agregar](media/Red_X.gif) |  
+ | Informe de cumplimiento de nuevas actualizaciones de software <!--1357775--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_report)  | ![Sin agregar](media/Red_X.gif) |  
  | Actualizaciones de software de terceros <!--1352101--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate)  | ![Sin agregar](media/Red_X.gif) |  
  | Configurar SmartScreen de Windows Defender para Microsoft Edge <!--1353701--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge)  | ![Sin agregar](media/Red_X.gif) |  
  | Sincronizar directiva MDM desde Microsoft Intune para un dispositivo administrado conjuntamente <!--1357377--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device)  | ![Sin agregar](media/Red_X.gif) |  
@@ -162,7 +189,7 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Mejora en el inventario de hardware para los valores enteros grandes <!--1357880--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-hardware-inventory-for-large-integer-values)  | ![Sin agregar](media/Red_X.gif) |  
  | Mejora en el mantenimiento de WSUS <!--1357898--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-wsus-maintenance)  | ![Sin agregar](media/Red_X.gif) |  
  | Mejora en la compatibilidad con certificados CNG <!--1357314--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-support-for-cng-certificates)  | ![Sin agregar](media/Red_X.gif) |  
-| Configuración de una biblioteca de contenido remoto para el servidor de sitio <!--1357525--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server)  | ![Sin agregar](media/Red_X.gif) | 
+ | Configuración de una biblioteca de contenido remoto para el servidor de sitio <!--1357525--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server)  | ![Sin agregar](media/Red_X.gif) | 
  | Envío de comentarios desde la consola de Configuration Manager <!--1357542--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#bkmk_feedback)  | ![Sin agregar](media/Red_X.gif) | 
  | Centro de soporte técnico <!--1357489--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#support-center)  | ![Sin agregar](media/Red_X.gif) | 
  | Kit de herramientas de Configuration Manager <!--1357145--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configuration-manager-toolkit)  | ![Sin agregar](media/Red_X.gif) | 
@@ -181,8 +208,9 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  
   
 
-## <a name="capabilities-delivered-in-previous-technical-previews"></a>Funcionalidades ofrecidas en anteriores versiones preliminares técnicas
-A continuación se enumeran las funcionalidades específicas ofrecidas en versiones anteriores de Technical Preview de Configuration Manager. Estas funcionalidades siguen estando disponibles en versiones posteriores, pero todavía no están disponibles en una versión de rama actual. 
+## <a name="features-in-previous-technical-previews"></a>Características de las versiones de Technical Preview anteriores
+
+Las características siguientes se lanzaron con versiones anteriores de la rama de Technical Preview de Configuration Manager. Estas características siguen estando disponibles en versiones posteriores, pero todavía no están disponibles en la rama actual. 
 
 <!-- This is the list of individual features that are still in TP (not in CB). 
 **Note there is no third column in this table!**
@@ -190,7 +218,7 @@ Copy from the bottom of the list above any individual feature that is still in T
 With each CB release, review and remove from this list for anything that's now available in CB. 
 -->
 
- |Capacidad |Versión de Technical Preview |  
+ |Característica |Versión de Technical Preview |  
  |----------------|---------------------|
  | Mejoras en los puntos de distribución habilitados con PXE <!-- 1357580 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) | 
  | Panel de ciclo de vida del producto <!--1319632 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) | 
@@ -205,11 +233,13 @@ With each CB release, review and remove from this list for anything that's now a
 
 
 
-## <a name="see-also"></a>Véase también  
-[Novedades de System Center Configuration Manager](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
- [Introducción a System Center Configuration Manager](../../core/understand/introduction.md)
+## <a name="see-also"></a>Consulte también
+  
+- [Evaluar Configuration Manager en un laboratorio](/sccm/core/get-started/evaluate-with-lab-environment)
+- [Novedades de las versiones incrementales de Configuration Manager](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
+- [Introducción a Configuration Manager](/sccm/core/understand/introduction)
 
 > [!Tip]  
 > Para más información sobre las características de la rama actual que requieren consentimiento, consulte las [características de versión preliminar](/sccm/core/servers/manage/pre-release-features).  
+> 
 > Para más información sobre las características de la rama actual que se deben habilitar primero, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).  
-
