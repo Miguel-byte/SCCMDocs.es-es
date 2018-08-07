@@ -10,12 +10,12 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b995687e330fe4beca26da83ee29ddc504c38e3a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: de8116e1fec500750e429edfb48303b8c24822f4
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343939"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384844"
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Números de tamaño y escala de System Center Configuration Manager
 
@@ -150,8 +150,6 @@ Para obtener más información, vea [Rendimiento y escalabilidad](/sccm/core/cli
 -   Un punto de actualización de software que está instalado en el servidor de sitio puede admitir hasta 25.000 clientes.   
 
 -   Un punto de actualización de software remoto del servidor de sitio puede admitir hasta 150 000 clientes cuando el equipo remoto cumple los requisitos de Windows Server Update Services (WSUS) para admitir este número de clientes.  
-
--   De manera predeterminada, Configuration Manager no admite la configuración de puntos de actualización de software como clústeres de Equilibrio de carga de red (NLB). En cambio, puede usar el SDK de Configuration Manager para configurar hasta cuatro puntos de actualización de software en un clúster de NLB.  
 
 
 
