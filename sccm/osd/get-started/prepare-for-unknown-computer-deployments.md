@@ -78,4 +78,4 @@ Emplee la información de este tema para implementar sistemas operativos en equi
 
 -   **Medio preconfigurado**  
 
-     Seleccione la casilla **Habilitar compatibilidad con equipos desconocidos** en la página **Seguridad** del Asistente para crear medio de secuencia de tareas. Para obtener más información, consulte [Create prestaged media with System Center Configuration Manager](../deploy-use/create-prestaged-media.md) (Crear medios preconfigurados con System Center Configuration Manager).  
+     Seleccione la casilla **Habilitar compatibilidad con equipos desconocidos** en la página **Seguridad** del Asistente para crear medio de secuencia de tareas. Para más información, vea [Crear medios preconfigurados con System Center Configuration Manager](../deploy-use/create-prestaged-media.md).  
