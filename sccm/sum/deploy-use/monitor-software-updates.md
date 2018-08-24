@@ -5,17 +5,17 @@ description: La consola de System Center Configuration Manager proporciona alert
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 11/20/2016
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
-ms.openlocfilehash: bc594fe6b870e1054033601a67209aa9ad72ccef
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: e51e2c8236b014063efe9734baf338ebe70d1eb3
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351877"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384490"
 ---
 # <a name="monitor-software-updates-in-system-center-configuration-manager"></a>Supervisar actualizaciones de software en System Center Configuration Manager
 
@@ -61,6 +61,26 @@ Después de configurar las opciones de alertas, si se producen las condiciones e
 
 ##  <a name="BKMK_SUReports"></a> Informes de actualizaciones de software  
  Los mensajes de estado para las actualizaciones de software proporcionan información acerca de la compatibilidad de las actualizaciones de software y el estado de la evaluación y aplicación de las implementaciones de actualizaciones de software. Puede ejecutar informes de actualizaciones de software para mostrar los mensajes de estado. Se encuentran disponibles más de 30 informes predefinidos de actualizaciones de software. Se organizan en diferentes categorías y se pueden utilizar para proporcionar información específica acerca de las implementaciones y actualizaciones de software. Además de utilizar los informes preconfigurados, también puede crear informes de actualizaciones de software personalizados según las necesidades de la empresa. Para obtener más información, vea [Operaciones y mantenimiento de informes](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
+
+### <a name="recommended-software-updates-reports"></a>Informes de actualizaciones de software recomendados
+Los siguientes son algunos de los informes que son útiles para identificar posibles problemas: 
+
+#### <a name="compliance-9---overall-health-and-compliance-starting-in-version-1806"></a>Cumplimiento 9 - Mantenimiento general y cumplimiento (a partir de la versión 1806)
+El informe incluye las siguientes partes:
+
+- **Clientes correctos frente a clientes totales**: en este gráfico de barras se comparan los clientes "correctos" que se han comunicado con el sitio en el período de tiempo especificado frente al número total de clientes de la colección especificada.
+- **Información general de cumplimiento**: en este gráfico circular se muestra el estado de cumplimiento general de un grupo de actualizaciones de software específico de clientes activos de la colección especificada.
+- **Cinco principales actualizaciones no conformes por identificador de artículo**: en este gráfico de barras se muestran las cinco principales actualizaciones de software del grupo especificado no conformes de los clientes activos de la colección especificada.
+- En la parte inferior del informe se muestra una tabla con detalles adicionales, en la que se enumeran las actualizaciones de software del grupo especificado.
+
+#### <a name="management-2---updates-required-but-not-deployed"></a>Administración 2 - Actualizaciones necesarias pero no implementadas
+
+Este informe muestra las actualizaciones de software específicas del proveedor en una clasificación de actualizaciones específica que se detectaron como requeridas en los clientes pero que no se implementaron en una colección especificada. 
+
+#### <a name="troubleshooting-2---deployment-errors"></a>Solución de problemas 2 - Errores de implementación
+
+Este informe devuelve los errores de implementación del sitio y un recuento de equipos en los que se produce cada error. 
+
 
 ##  <a name="BKMK_MonitorContent"></a> Supervisar contenido  
  Puede supervisar el contenido en la consola de Configuration Manager para consultar el estado de todos los tipos de paquetes en relación con los puntos de distribución asociados. Esto puede incluir el estado de validación del contenido del paquete, el estado del contenido asignado a un grupo de puntos de distribución específico, el estado del contenido asignado a un punto de distribución y el estado de las características opcionales de cada punto de distribución (validación de contenido, PXE y multidifusión).  

@@ -2,7 +2,7 @@
 title: Versiones incrementales
 titleSuffix: Configuraton Manager
 description: Conozca las novedades de la última actualización de Configuration Manager.
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 28b7819b915eb2dea8a34d1474141067ac7751b5
-ms.sourcegitcommit: 0305e710f634529793ae73e5aac24168ee4fe02f
+ms.openlocfilehash: 13037b857b890d400881d8d7173b7ca03dd83ebc
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042786"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384133"
 ---
-# <a name="whats-new-in-system-center-configuration-manager-incremental-versions"></a>Novedades de las versiones incrementales de System Center Configuration Manager
+# <a name="whats-new-in-configuration-manager-incremental-versions"></a>Novedades de las versiones incrementales de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
@@ -27,11 +27,13 @@ ms.locfileid: "37042786"
 
  Las distintas versiones de actualización se identifican por año y mes. Por ejemplo, la versión 1511 corresponde a noviembre de 2015 (el mes en el que se envió a producción por primera vez la rama actual de Configuration Manager). Las siguientes actualizaciones tienen nombres de versión como 1802, que indica que la actualización se creó en febrero de 2018. Estas versiones de actualización son fundamentales para comprender la versión incremental de su instalación de Configuration Manager y las características que tiene disponibles para habilitarlas en su entorno.
 
+
+
 ## <a name="supported-versions"></a>Versiones admitidas
  Use estos vínculos para descubrir las novedades de cada versión compatible:
+  - [Novedades de la versión 1806](../../../core/plan-design/changes/whats-new-in-version-1806.md)  
   - [Novedades de la versión 1802](../../../core/plan-design/changes/whats-new-in-version-1802.md)
   - [Novedades de la versión 1710](../../../core/plan-design/changes/whats-new-in-version-1710.md)
-  - [Novedades de la versión 1706](../../../core/plan-design/changes/whats-new-in-version-1706.md)  
 
 
 Para las versiones de Configuration Manager anteriores a la 1710, se ofrece soporte técnico durante 12 meses. Desde la versión 1710, cada versión de actualización seguirá siendo compatible durante 18 meses a partir de la fecha de lanzamiento de disponibilidad general (GA).  Tenga siempre la versión más actualizada. Para más información, vea [Compatibilidad con versiones de la rama actual de System Center Configuration Manager](../../../core/servers/manage/current-branch-versions-supported.md).  

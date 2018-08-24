@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7ff953d658c54c2cebbbfd29a6bba83fe65cc08e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5607402171a3b771560ff439b1f1f99a6a947e83
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342348"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383303"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configuración de servicios de Azure para utilizarlos con Configuration Manager
 
@@ -63,7 +63,7 @@ En la tabla siguiente se muestran detalles sobre cada uno de los servicios.
 |Administración en la nube con</br>Detección de usuarios de Azure AD | Varios | Público | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | Importar, Crear |
 |Conector de OMS | Uno | Pública, Privada | ![Compatible.](media/green_check.png) | ![No compatible](media/Red_X.png) | Importar |
 |Upgrade Readiness | Uno | Público | ![Compatible.](media/green_check.png) | ![No compatible](media/Red_X.png) | Importar |
-|Microsoft Store para</br>Empresas y Educación | Uno | Público | ![Compatible.](media/green_check.png) | ![No compatible](media/Red_X.png) | Importar, Crear |
+|Microsoft Store para</br>Business | Uno | Público | ![Compatible.](media/green_check.png) | ![No compatible](media/Red_X.png) | Importar, Crear |
 
 
 ### <a name="about-azure-ad-apps"></a>Acerca de las aplicaciones de Azure AD
@@ -90,7 +90,7 @@ Para obtener más información sobre las aplicaciones de Azure, empiece con los 
 
 Una vez decidido el servicio al que quiere conectarse, consulte la tabla de la sección [Detalles del servicio](#service-details). En esta tabla se proporciona la información necesaria para completar el Asistente para servicios de Azure. Primero, consúltelo con el administrador de Azure AD. Decida si crear manualmente las aplicaciones de antemano en Azure Portal y después importar los detalles de la aplicación en Configuration Manager. O bien, use Configuration Manager para crear las aplicaciones directamente en Azure AD. Para recopilar los datos necesarios de Azure AD, revise la información de las demás secciones de este artículo.
 
-Algunos servicios requieren que las aplicaciones de Azure AD tengan permisos específicos. Revise la información de cada servicio para determinar los permisos necesarios. Por ejemplo, para poder importar una aplicación web, un administrador de Azure debe crearla primero en [Azure Portal](https://portal.azure.com). Al configurar Upgrade Readiness o el Conector de OMS, tendrá que conceder permisos de *colaborador* a la aplicación web recién registrada en el grupo de recursos que contiene el área de trabajo de OMS relevante. Este permiso permite que Configuration Manager tenga acceso a esa área de trabajo. Busque el nombre del registro de aplicación en la hoja **Agregar usuarios** al asignar el permiso. Este proceso es el mismo que la [concesión de permisos a Configuration Manager para acceder a OMS](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms). Un administrador de Azure debe asignar estos permisos antes de importar la aplicación en Configuration Manager.
+Algunos servicios requieren que las aplicaciones de Azure AD tengan permisos específicos. Revise la información de cada servicio para determinar los permisos necesarios. Por ejemplo, para poder importar una aplicación web, un administrador de Azure debe crearla primero en [Azure Portal](https://portal.azure.com). Al configurar Upgrade Readiness o el Conector de OMS, tendrá que conceder permisos de *colaborador* a la aplicación web recién registrada en el grupo de recursos que contiene el área de trabajo de OMS relevante. Este permiso permite que Configuration Manager tenga acceso a esa área de trabajo. Al asignar el permiso, busque el nombre del registro de aplicación en el área **Agregar usuarios** de Azure Portal. Este proceso es el mismo que la [concesión de permisos a Configuration Manager para acceder a OMS](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms). Un administrador de Azure debe asignar estos permisos antes de importar la aplicación en Configuration Manager.
 
 
 
@@ -213,14 +213,14 @@ Después de especificar las aplicaciones web y nativas en la página Aplicacione
 
 -   Servicio **Conector de Upgrade Readiness**, página **Configuración**: [Uso del Asistente de Azure para crear la conexión](/sccm/core/clients/manage/upgrade/upgrade-analytics#use-the-azure-wizard-to-create-the-connection).  
 
--   Servicio **Microsoft Store para Empresas**, página **Configuraciones**: [Configurar la sincronización de Microsoft Store para Empresas](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#for-configuration-manager-version-1706-and-later).  
+-   Servicio **Microsoft Store para Empresas**, página **Configuraciones**: [Configurar la sincronización de Microsoft Store para Empresas](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_config).  
 
 
 Por último, complete al Asistente para servicios de Azure a través de las páginas Resumen, Progreso y Finalización. Ha completado la configuración de un servicio de Azure en Configuration Manager. Repita este proceso para configurar otros servicios de Azure.
 
 
 ## <a name="view-the-configuration-of-an-azure-service"></a>Visualización de la configuración de un servicio de Azure
-Puede ver las propiedades de un servicio de Azure que haya configurado para usarse. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Cloud Services** y haga clic en **Servicios de Azure**. Seleccione el servicio que quiere ver o modificar y, luego, haga clic en **Propiedades**.
+Vea las propiedades de un servicio de Azure que haya configurado para usarse. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Cloud Services** y haga clic en **Servicios de Azure**. Seleccione el servicio que quiere ver o modificar y, luego, haga clic en **Propiedades**.
 
 Si selecciona un servicio y después hace clic en **Eliminar** en la cinta, esta acción elimina la conexión en Configuration Manager. No quita la aplicación de Azure AD. Pida al administrador de Azure que elimine la aplicación cuando ya no la necesite. O bien, ejecute el Asistente para servicios de Azure para importar la aplicación.<!--483440-->
 

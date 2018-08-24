@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec9c4cdf54e6ffc55cc2983152f56492e5b1b354
-ms.sourcegitcommit: af4f8bd8dffe6fb05f51322ea9e94d335a2cc0c0
+ms.openlocfilehash: b60ebcf0ce94dfdc25466b31c9a64d0d556e1ac6
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/31/2018
-ms.locfileid: "39360722"
+ms.locfileid: "39385395"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview para Configuration Manager
 
@@ -34,9 +34,9 @@ Para más información sobre las novedades de la *rama actual* de Configuration 
 ##  <a name="bkmk_reqs"></a> Limitaciones y requisitos  
 
 > [!IMPORTANT]     
->  La versión Technical Preview solo tiene licencia para su uso en un entorno de laboratorio. Es posible que Microsoft no proporcione servicios de soporte técnico y que algunas características no estén disponibles en el software de versión preliminar. Además, es posible que el software de versión preliminar tenga estándares de seguridad, privacidad, accesibilidad, disponibilidad y confiabilidad reducidos o diferentes a los del software proporcionado comercialmente.  
+>  La versión preliminar técnica solo tiene licencia para su uso en un entorno de laboratorio. Es posible que Microsoft no proporcione servicios de soporte técnico y que algunas características no estén disponibles en el software de versión preliminar. Además, es posible que el software de versión preliminar tenga estándares de seguridad, privacidad, accesibilidad, disponibilidad y confiabilidad reducidos o diferentes a los del software proporcionado comercialmente.  
 
- Para la mayoría de requisitos previos de producto, use la información que se encuentra en las [configuraciones admitidas](/sccm/core/plan-design/configs/supported-configurations). Las excepciones siguientes se aplican a la rama de Technical Preview:  
+Para la mayoría de requisitos previos de producto, use la información que se encuentra en las [configuraciones admitidas](/sccm/core/plan-design/configs/supported-configurations). Las excepciones siguientes se aplican a la rama de Technical Preview:  
 
 -   Cada instalación permanece activa durante 90 días y luego cambia a inactiva.  
 
@@ -99,7 +99,7 @@ Microsoft admite cada versión de Technical Preview hasta que hay disponibles tr
 > 
 > Varias veces a lo largo del año, hay versiones de rama de Technical Preview y versiones de rama actuales con el mismo número de versión. Por ejemplo, hay una versión 1802 de Technical Preview y una versión 1802 de rama actual. 
 
-   
+
 ### <a name="active-baseline-versions"></a>Versiones de base de referencia activas
    
 Instale una versión de base de referencia hasta un año después de su lanzamiento. Cuando instale un sitio de Technical Preview nuevo, use la versión de base de referencia más reciente si hay más de una versión de base de referencia disponible actualmente.
@@ -134,6 +134,7 @@ Las características siguientes están disponibles con la versión de Technical 
 - [Mejora en la salida del script](capabilities-in-technical-preview-1807.md#bkmk_script) <!--1236459-->
 - [Mejora de las actualizaciones de software de terceros](capabilities-in-technical-preview-1807.md#bkmk_3pupdate) <!--1358714-->
 
+
 > [!Note]  
 > Las características que estaban disponibles en una versión anterior de Technical Preview siguen estando disponibles en versiones posteriores. Del mismo modo, las características que se agregan a la rama actual de Configuration Manager siguen estando disponibles en la rama de Technical Preview.   
 
@@ -150,61 +151,61 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |Característica |Versión de Technical Preview |Versión de rama actual|  
  |----------------|---------------------|--------------------|
- | Mejoras en las implementaciones por fases <!--1358577,1358147,1358578--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_pod)  | ![Sin agregar](media/Red_X.gif) |  
- | Compatibilidad con nuevos formatos de paquete de aplicaciones de Windows <!--1357427--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_msix)  | ![Sin agregar](media/Red_X.gif) |  
- | Mejora de seguridad de inserción de cliente <!--1358204--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_client-push)  | ![Sin agregar](media/Red_X.gif) |  
- | Información de administración para un mantenimiento proactivo <!--1352184,et al--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_insights)  | ![Sin agregar](media/Red_X.gif) |  
- | Carga de trabajo de aplicaciones móviles de transición para los dispositivos administrados conjuntamente <!--1357892--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt)  | ![Sin agregar](media/Red_X.gif) |  
- | Opciones de grupo de límites para descargas del mismo nivel <!--1356193--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions)  | ![Sin agregar](media/Red_X.gif) |  
- | Soporte técnico de actualizaciones de software de terceros para catálogos personalizados <!--1358714--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate)  | ![Sin agregar](media/Red_X.gif) |  
- | Mejoras de las características de administración en la nube <!--511980,515854--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_cloud)  | ![Sin agregar](media/Red_X.gif) |  
- | Informe de cumplimiento de nuevas actualizaciones de software <!--1357775--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_report)  | ![Sin agregar](media/Red_X.gif) |  
- | Actualizaciones de software de terceros <!--1352101--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate)  | ![Sin agregar](media/Red_X.gif) |  
- | Configurar SmartScreen de Windows Defender para Microsoft Edge <!--1353701--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge)  | ![Sin agregar](media/Red_X.gif) |  
- | Sincronizar directiva MDM desde Microsoft Intune para un dispositivo administrado conjuntamente <!--1357377--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device)  | ![Sin agregar](media/Red_X.gif) |  
- | Transición de la carga de trabajo de Office 365 a Intune mediante la administración conjunta <!--1357841--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#transition-office-365-workload-to-intune-using-co-management)  | ![Sin agregar](media/Red_X.gif) |  
- | Package Conversion Manager <!--1357861--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#package-conversion-manager)  | ![Sin agregar](media/Red_X.gif) |  
- | Implementar actualizaciones de software sin contenido <!--1357933--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content)  | ![Sin agregar](media/Red_X.gif) |  
- | Integración de la Herramienta de personalización de Office en el instalador de Office 365 <!--1358149--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer)  | ![Sin agregar](media/Red_X.gif) |  
- | Mejoras en Cloud Management Gateway <!--1358215,1358651,503899--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway)   | ![Sin agregar](media/Red_X.gif) |  
- | Mejoras en las comunicaciones de cliente seguras <!--1358278,1358279--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications)  | ![Sin agregar](media/Red_X.gif) |  
- | Mejoras de la infraestructura del Centro de software <!--1358309--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#software-center-infrastructure-improvements)  | ![Sin agregar](media/Red_X.gif) |  
- | Aprovisionar los paquetes de aplicación de Windows para todos los usuarios en un dispositivo <!--1358310--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device)  | ![Sin agregar](media/Red_X.gif) |  
- | Mejoras en el panel de Surface <!--1358654--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard)  | ![Sin agregar](media/Red_X.gif) |  
- | Revisión de unidad predeterminada de inventario de hardware <!--514442--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision)  | ![Sin agregar](media/Red_X.gif) |  
- | Creación de una implementación por fases con fases configuradas manualmente para una secuencia de tareas <!--1358148--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence)  | ![Sin agregar](media/Red_X.gif) |  
- | Compatibilidad con puntos de distribución de nube para Azure Resource Manager <!--1322209--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  | ![Sin agregar](media/Red_X.gif) |  
- | Realización de acciones basadas en la información de administración <!--1357930--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights)  | ![Sin agregar](media/Red_X.gif) |  
- | Transición de la carga de trabajo de la configuración del dispositivo a Intune mediante la administración conjunta <!--1357903--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#transition-device-configuration-workload-to-intune-using-co-management)  | ![Sin agregar](media/Red_X.gif) |  
- | Habilitación de los puntos de distribución para usar el control de congestión de red <!--1358112--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#enable-distribution-points-to-use-network-congestion-control)  | ![Sin agregar](media/Red_X.gif) |  
- | Panel de administración en la nube <!--1358461--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-management-dashboard)  | ![Sin agregar](media/Red_X.gif) |  
- | CMPivot <!--1358456--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmpivot)  | ![Sin agregar](media/Red_X.gif) |  
- | Comunicaciones de cliente seguras mejoradas <!--1356889,1358228,1358460--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improved-secure-client-communications)  | ![Sin agregar](media/Red_X.gif) |  
- | Mejoras para habilitar la compatibilidad de actualización de software de terceros <!--1357605--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support)  | ![Sin agregar](media/Red_X.gif) |  
- | Mejoras en la secuencia de tareas de actualización local de Windows 10 <!--1358500--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-windows-10-in-place-upgrade-task-sequence)  | ![Sin agregar](media/Red_X.gif) |  
- | Herramienta CMTrace instalada con el cliente <!--1357971--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmtrace-installed-with-client)  | ![Sin agregar](media/Red_X.gif) |  
- | Mejora en la consola de Configuration Manager <!--1358202--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-the-configuration-manager-console)  | ![Sin agregar](media/Red_X.gif) |  
- | Mejoras en los comentarios de la consola <!--1357542--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-console-feedback)  | ![Sin agregar](media/Red_X.gif) |  
- | Mejoras en los puntos de distribución habilitados con PXE <!--1357580--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-pxe-enabled-distribution-points)  | ![Sin agregar](media/Red_X.gif) |  
- | Mejora en el inventario de hardware para los valores enteros grandes <!--1357880--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-hardware-inventory-for-large-integer-values)  | ![Sin agregar](media/Red_X.gif) |  
- | Mejora en el mantenimiento de WSUS <!--1357898--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-wsus-maintenance)  | ![Sin agregar](media/Red_X.gif) |  
- | Mejora en la compatibilidad con certificados CNG <!--1357314--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-support-for-cng-certificates)  | ![Sin agregar](media/Red_X.gif) |  
- | Configuración de una biblioteca de contenido remoto para el servidor de sitio <!--1357525--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server)  | ![Sin agregar](media/Red_X.gif) | 
- | Envío de comentarios desde la consola de Configuration Manager <!--1357542--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#bkmk_feedback)  | ![Sin agregar](media/Red_X.gif) | 
+ | Mejoras en las implementaciones por fases <!--1358577,1358147,1358578--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_pod)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Compatibilidad con nuevos formatos de paquete de aplicaciones de Windows <!--1357427--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_msix)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Mejora de seguridad de inserción de cliente <!--1358204--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_client-push)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Información de administración para un mantenimiento proactivo <!--1352184,et al--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_insights)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Carga de trabajo de aplicaciones móviles de transición para los dispositivos administrados conjuntamente <!--1357892--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Opciones de grupo de límites para descargas del mismo nivel <!--1356193--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Soporte técnico de actualizaciones de software de terceros para catálogos personalizados <!--1358714--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Mejoras de las características de administración en la nube <!--511980,515854--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_cloud)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Informe de cumplimiento de nuevas actualizaciones de software <!--1357775--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_report)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Actualizaciones de software de terceros <!--1352101--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Configurar SmartScreen de Windows Defender para Microsoft Edge <!--1353701--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Sincronizar directiva MDM desde Microsoft Intune para un dispositivo administrado conjuntamente <!--1357377--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Transición de la carga de trabajo de Office 365 a Intune mediante la administración conjunta <!--1357841--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#transition-office-365-workload-to-intune-using-co-management)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Package Conversion Manager <!--1357861--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#package-conversion-manager)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Implementar actualizaciones de software sin contenido <!--1357933--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Integración de la Herramienta de personalización de Office en el instalador de Office 365 <!--1358149--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Mejoras en Cloud Management Gateway <!--1358215,1358651,503899--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway)   | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Mejoras en las comunicaciones de cliente seguras <!--1358278,1358279--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Mejoras de la infraestructura del Centro de software <!--1358309--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#software-center-infrastructure-improvements)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Aprovisionar los paquetes de aplicación de Windows para todos los usuarios en un dispositivo <!--1358310--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Mejoras en el panel de Surface <!--1358654--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Revisión de unidad predeterminada de inventario de hardware <!--514442--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Creación de una implementación por fases con fases configuradas manualmente para una secuencia de tareas <!--1358148--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Compatibilidad con puntos de distribución de nube para Azure Resource Manager <!--1322209--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Realización de acciones basadas en la información de administración <!--1357930--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Transición de la carga de trabajo de la configuración del dispositivo a Intune mediante la administración conjunta <!--1357903--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#transition-device-configuration-workload-to-intune-using-co-management)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Habilitación de los puntos de distribución para usar el control de congestión de red <!--1358112--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#enable-distribution-points-to-use-network-congestion-control)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Panel de administración en la nube <!--1358461--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-management-dashboard)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | CMPivot <!--1358456--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmpivot)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Comunicaciones de cliente seguras mejoradas <!--1356889,1358228,1358460--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improved-secure-client-communications)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Mejoras para habilitar la compatibilidad de actualización de software de terceros <!--1357605--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Mejoras en la secuencia de tareas de actualización local de Windows 10 <!--1358500--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-windows-10-in-place-upgrade-task-sequence)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Herramienta CMTrace instalada con el cliente <!--1357971--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmtrace-installed-with-client)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Mejora en la consola de Configuration Manager <!--1358202--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-the-configuration-manager-console)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Mejoras en los comentarios de la consola <!--1357542--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-console-feedback)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Mejoras en los puntos de distribución habilitados con PXE <!--1357580--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-pxe-enabled-distribution-points)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Mejora en el inventario de hardware para los valores enteros grandes <!--1357880--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-hardware-inventory-for-large-integer-values)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Mejora en el mantenimiento de WSUS <!--1357898--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-wsus-maintenance)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Mejora en la compatibilidad con certificados CNG <!--1357314--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-support-for-cng-certificates)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Configuración de una biblioteca de contenido remoto para el servidor de sitio <!--1357525--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | Envío de comentarios desde la consola de Configuration Manager <!--1357542--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#bkmk_feedback)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
  | Centro de soporte técnico <!--1357489--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#support-center)  | ![Sin agregar](media/Red_X.gif) | 
- | Kit de herramientas de Configuration Manager <!--1357145--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configuration-manager-toolkit)  | ![Sin agregar](media/Red_X.gif) | 
- | Desinstalación de aplicaciones al revocarse la aprobación <!--1357891--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#uninstall-application-on-approval-revocation)  | ![Sin agregar](media/Red_X.gif) | 
- | Exclusión de contenedores de Active Directory de la detección <!--1358143--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#exclude-active-directory-containers-from-discovery)  | ![Sin agregar](media/Red_X.gif) | 
- | Especificación de la visibilidad del vínculo al sitio web del catálogo de aplicaciones en el Centro de software <!--1358214--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#specify-the-visibility-of-the-application-catalog-website-link-in-software-center)  | ![Sin agregar](media/Red_X.gif) | 
- | Filtrado de las reglas de implementación automáticas por arquitectura de actualización de software <!--1322266--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#filter-automatic-deployment-rules-by-software-update-architecture)  | ![Sin agregar](media/Red_X.gif) | 
- | Mejoras en la implementación del sistema operativo <!--1358330,1358493--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#improvements-to-os-deployment) | ![Sin agregar](media/Red_X.gif) | 
- | Compatibilidad de puntos de distribución de extracción con puntos de distribución de nube como orígenes<!--1321554--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#pull-distribution-points-support-cloud-distribution-points-as-source)  | ![Sin agregar](media/Red_X.gif) | 
- | Compatibilidad de descarga parcial en la memoria caché del mismo nivel de cliente para reducir la utilización de la WAN <!--1357346--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#partial-download-support-in-client-peer-cache-to-reduce-wan-utilization)  | ![Sin agregar](media/Red_X.gif) | 
- | Ventanas de mantenimiento en el Centro de software <!--1358131--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#maintenance-windows-in-software-center)  | ![Sin agregar](media/Red_X.gif) | 
- | Pestaña Personalizado de la página web del Centro de software <!--1358132--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#custom-tab-for-webpage-in-software-center)  | ![Sin agregar](media/Red_X.gif) | 
- | Habilitación de la compatibilidad con actualizaciones de software de terceros en clientes <!--1357605--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients)  | ![Sin agregar](media/Red_X.gif) | 
- | Habilitación del copiado y pegado de detalles de recursos desde vistas de supervisión <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-copypaste-of-asset-details-from-monitoring-views)  | ![Sin agregar](media/Red_X.gif) | 
- | Extensiones SCAP <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#scap-extensions)  | ![Sin agregar](media/Red_X.gif) | 
+ | Kit de herramientas de Configuration Manager <!--1357145--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configuration-manager-toolkit)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | Desinstalación de aplicaciones al revocarse la aprobación <!--1357891--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#uninstall-application-on-approval-revocation)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | Exclusión de contenedores de Active Directory de la detección <!--1358143--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#exclude-active-directory-containers-from-discovery)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | Especificación de la visibilidad del vínculo al sitio web del catálogo de aplicaciones en el Centro de software <!--1358214--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#specify-the-visibility-of-the-application-catalog-website-link-in-software-center)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | Filtrado de las reglas de implementación automáticas por arquitectura de actualización de software <!--1322266--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#filter-automatic-deployment-rules-by-software-update-architecture)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | Mejoras en la implementación del sistema operativo <!--1358330,1358493--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#improvements-to-os-deployment) | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | Compatibilidad de puntos de distribución de extracción con puntos de distribución de nube como orígenes<!--1321554--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#pull-distribution-points-support-cloud-distribution-points-as-source)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | Compatibilidad de descarga parcial en la memoria caché del mismo nivel de cliente para reducir la utilización de la WAN <!--1357346--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#partial-download-support-in-client-peer-cache-to-reduce-wan-utilization)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | Ventanas de mantenimiento en el Centro de software <!--1358131--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#maintenance-windows-in-software-center)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | Pestaña Personalizado de la página web del Centro de software <!--1358132--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#custom-tab-for-webpage-in-software-center)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | Habilitación de la compatibilidad con actualizaciones de software de terceros en clientes <!--1357605--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | Habilitación del copiado y pegado de detalles de recursos desde vistas de supervisión <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-copypaste-of-asset-details-from-monitoring-views)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | Extensiones SCAP <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#scap-extensions)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
  
   
 
@@ -218,23 +219,28 @@ Copy from the bottom of the list above any individual feature that is still in T
 With each CB release, review and remove from this list for anything that's now available in CB. 
 -->
 
- |Característica |Versión de Technical Preview |  
- |----------------|---------------------|
- | Mejoras en los puntos de distribución habilitados con PXE <!-- 1357580 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) | 
- | Panel de ciclo de vida del producto <!--1319632 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) | 
- | Servicio del respondedor PXE basado en cliente <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
- |Alta disponibilidad del rol del servidor de sitio <!-- 1128774 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |
- |Compatibilidad con el arranque de red de PXE para IPv6 <!-- 1269793 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
- |Uso de Azure Active Directory <!-- 1322145? --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
- |Evaluación del cumplimiento para actualizaciones de Windows Update para empresas <!-- 1235390 --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#compliance-assessment-for-windows-update-for-business-updates) |
- |Acceso a datos de punto de conexión de OData <!-- 1321523 --> |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|
- |Mejoras en Asset Intelligence <!-- 1307390 --> |[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence)|
- |Los usuarios finales pueden instalar aplicaciones desde el Portal de empresa <!-- 1037233? --> |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_End)|
+|Característica |Versión de Technical Preview |  
+|----------------|---------------------|
+| Servicio del respondedor PXE basado en cliente <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
+|Compatibilidad con el arranque de red de PXE para IPv6 <!-- 1269793 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
+|Uso de Azure Active Directory <!-- 1322145? --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
+|Evaluación del cumplimiento para actualizaciones de Windows Update para empresas <!-- 1235390 --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#compliance-assessment-for-windows-update-for-business-updates) |
+|Acceso a datos de punto de conexión de OData <!-- 1321523 --> |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|
+|Mejoras en Asset Intelligence <!-- 1307390 --> |[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence)|
+|Los usuarios finales pueden instalar aplicaciones desde el Portal de empresa <!-- 1037233? --> |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_End)|
+
+<!--Removed for 1806 CB:
+ |Site server role high availability <!-- 1128774  |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |
+ | Product lifecycle dashboard <!--1319632  | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) | 
+ | Improvements to PXE-enabled distribution points <!-- 1357580  | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) | 
+-->
 
 
 
-## <a name="see-also"></a>Consulte también
-  
+## <a name="see-also"></a>Consulte también  
+
+Vea los siguientes artículos para más información:  
+
 - [Evaluar Configuration Manager en un laboratorio](/sccm/core/get-started/evaluate-with-lab-environment)
 - [Novedades de las versiones incrementales de Configuration Manager](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
 - [Introducción a Configuration Manager](/sccm/core/understand/introduction)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 8c025d7c7a1dc452cb96f937801656bc4d0cadab
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a34a50d4c7b917666316f9a4651aaebc2c001287
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339604"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384270"
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>Preparar dispositivos de Windows 10 para la administración conjunta
 Puede habilitar la administración conjunta en los dispositivos de Windows 10 que están unidos a AD y a Azure AD y que están inscritos en Microsoft Intune y en un cliente en Configuration Manager. Para los nuevos dispositivos de Windows 10 y para los que ya estén inscritos en Intune, instale el cliente de Configuration Manager antes de administrarlos de forma conjunta. Para los dispositivos de Windows 10 que ya son clientes de Configuration Manager, puede inscribirlos en Intune y habilitar la administración conjunta en la consola de Configuration Manager.
@@ -25,11 +25,12 @@ Puede habilitar la administración conjunta en los dispositivos de Windows 10 qu
 
 
 ## <a name="prerequisites"></a>Requisitos previos
-Debe cumplir los siguientes requisitos previos para poder habilitar la administración conjunta. Hay requisitos previos generales y distintos requisitos previos para los clientes con el cliente de Configuration Manager y los dispositivos que no tienen instalado el cliente.
+Debe cumplir los siguientes requisitos previos para poder habilitar la administración conjunta. Hay requisitos previos generales y distintos requisitos previos para los dispositivos con el cliente de Configuration Manager y aquellos que no tienen instalado el cliente.
 ### <a name="general-prerequisites"></a>Requisitos previos generales
 A continuación se indican los requisitos previos generales para poder habilitar la administración conjunta:  
 
 - Versión 1710 de Configuration Manager o posterior
+    - A partir de la versión 1806 de Configuration Manager, puede conectar varias instancias de Configuration Manager a un único inquilino de Intune. <!--1357944-->
 - [Sitio incorporado con Azure AD para administración en la nube](/sccm/core/servers/deploy/configure/azure-services-wizard)
 - Licencia de EMS o de Intune para todos los usuarios
 - [Inscripción automática con Azure AD](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) habilitada
@@ -39,6 +40,16 @@ A continuación se indican los requisitos previos generales para poder habilitar
    > [!Note]  
    > Si tiene un entorno de MDM híbrido (Intune integrado con Configuration Manager), no puede habilitar la administración conjunta. Sin embargo, puede iniciar la migración de los usuarios a Intune independiente y, después, habilitar sus dispositivos Windows 10 asociados para la administración conjunta. Si quiere saber más sobre la migración a Intune independiente, vea [Iniciar la migración de MDM híbrida a Intune independiente](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 
+### <a name="prerequisite-azure-resource-manager-roles"></a>Requisitos previos de roles de Azure Resource Manager
+Para obtener más información sobre los roles de Azure, vea [Entender los distintos roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
+|Acción|Rol necesario|
+|----|----|
+|Configurar una instancia de Cloud Management Gateway|Administrador de suscripción de Azure|
+|Configurar un punto de distribución basado en la nube|Administrador de suscripción de Azure|
+|Crear aplicaciones de Azure Active Directory desde la consola de Configuration Manager|Administrador global de Azure Active Directory|
+|Importar aplicaciones de cliente y servidor de Azure en la consola de Configuration Manager| Administrador de Configuration Manager, no se necesitan roles de Azure adicionales.|
+|Configurar la administración conjunta mediante el Asistente para la administración conjunta| Derechos de usuario de Azure Active Directory, junto con ser administrador de Configuration Manager con todos los derechos de ámbito. 
+ 
 ### <a name="additional-prerequisites-for-devices-with-the-configuration-manager-client"></a>Requisitos previos adicionales para los dispositivos con el cliente de Configuration Manager
 - Windows 10, versión 1709 o posteriores
 - [Unidos a Azure AD híbrido](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (unidos a AD y a Azure AD)

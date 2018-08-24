@@ -2,7 +2,7 @@
 title: Planear y configurar la administración de aplicaciones
 titleSuffix: Configuration Manager
 description: Implemente y configure las dependencias necesarias para la implementación de aplicaciones en System Center Configuration Manager.
-ms.date: 11/07/2017
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18d9fe80a1c5525457579dadbfeaeafa3425202d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 626fbb8d431857b1b672fffd9f3ba0df8b2a3da0
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340155"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385208"
 ---
 # <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>Planear y configurar la administración de aplicaciones en Configuration Manager
 
@@ -183,8 +183,7 @@ La personalización de marca del Centro de software se aplica conforme a las sig
 3. Si una suscripción de Microsoft Intune está configurada y conectada a Configuration Manager, el Centro de software mostrará el nombre de la organización, el color y el logotipo de la empresa especificados en las propiedades de la suscripción de Intune. Para más información, vea [Configuring the Microsoft Intune subscription (Configuración de la suscripción de Microsoft Intune)](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription).
 
 #### <a name="to-manually-set-software-center-branding"></a>Personalización de la marca del Centro de software
-<!-- 1351224 -->
-Con la versión 1710, puede agregar manualmente elementos de personalización de marca de empresa y especificar la visibilidad de las pestañas en el Centro de software. Puede agregar el nombre de compañía específico del Centro de software, establecer un tema de color para la configuración de Centro de software, establecer un logotipo de empresa y establecer las pestañas visibles para los dispositivos del cliente.
+<!-- 1351224 --> Con la versión 1710, se pueden agregar de forma manual elementos de personalización de marca empresariales y especificar la visibilidad de pestañas en el Centro de software. Puede agregar el nombre de compañía específico del Centro de software, establecer un tema de color para la configuración de Centro de software, establecer un logotipo de empresa y establecer las pestañas visibles para los dispositivos del cliente.
 
 1. En la consola de **Configuration Manager**, elija **Administración** > **Configuración de cliente**. Haga clic en la instancia de la configuración de cliente que desea.
 2. En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.
@@ -201,9 +200,13 @@ Con la versión 1710, puede agregar manualmente elementos de personalización de
     -  Habilitar pestaña Estado de instalación
     -  Habilitar pestaña Cumplimiento de dispositivos
     -  Habilitar pestaña Opciones
+    -  Especificar una pestaña personalizada para el Centro de software (a partir de la versión 1806) <!--1358132 -->
+        - Nombre de la pestaña
+        - URL de contenido
 
 > [!IMPORTANT]  
->  La personalización de marca del Centro de software se sincroniza con el servicio de Intune cada 14 días. Por lo tanto, puede haber un retraso antes de que los cambios realizados en Intune se muestren en Configuration Manager.
+> - Puede que algunas de las características de los sitios web no funcionen cuando se usen como una pestaña personalizada en el Centro de software. Asegúrese de probar los resultados antes de implementar esto en los clientes. <!--519659--> 
+> - La personalización de marca del Centro de software se sincroniza con el servicio de Intune cada 14 días. Por lo tanto, puede haber un retraso antes de que los cambios realizados en Intune se muestren en Configuration Manager.
 
 ###  <a name="step-5-verify-that-the-application-catalog-is-operational"></a>Paso 5: comprobar si funciona el catálogo de aplicaciones  
  Utilice los procedimientos siguientes para comprobar que el catálogo de aplicaciones esté funcionando. Puede usar el catálogo de aplicaciones directamente desde un explorador o desde el Centro de software.  

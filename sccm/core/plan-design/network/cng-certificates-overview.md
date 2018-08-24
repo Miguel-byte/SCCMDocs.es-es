@@ -2,7 +2,7 @@
 title: Introducción a los certificados CNG
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los certificados Cryptography Next Generation (CNG) para clientes y servidores de Configuration Manager.
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a4f37330f94111bcc41b81d9127039056f69e2b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 8b85961c14c3db69c3e02e776798588fadd0fc89
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334273"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383160"
 ---
 # <a name="cng-certificates-overview"></a>Introducción a los certificados CNG
 <!-- 1356191 --> 
@@ -37,6 +37,10 @@ A partir de la versión 1802, use certificados CNG para los siguientes roles de 
 - Punto de actualización de software
 - Punto de migración de estado     
 
+A partir de la versión 1806, use certificados CNG para los siguientes roles de servidor habilitados para HTTPS:
+
+- Punto de registro de certificados, incluido el servidor NDES con el módulo de directivas de Configuration Manager <!--1357314-->
+
 > [!NOTE]
 > CNG es compatible con Crypto API (CAPI). Los certificados CAPI siguen siendo compatibles, incluso cuando se habilita la compatibilidad con CNG en el cliente.
 
@@ -54,9 +58,11 @@ Actualmente no se admiten los escenarios siguientes:
 
 - El uso de certificados CNG para crear un punto de distribución en la nube.
 
-- Si el módulo de directivas de NDES usa un certificado CNG para la autenticación del cliente, se produce un error en la comunicación con el punto de registro de certificado.
+- Si el módulo de directivas de NDES usa un certificado CNG para la autenticación del cliente, se produce un error en la comunicación con el punto de registro de certificado. 
+    - Se admite a partir de la versión 1806 de Configuration Manager.
 
 - Si se especifica un certificado CNG al crear los medios de secuencia de tareas, el asistente no puede crear medios de arranque.
+    - Se admite a partir de la versión 1806 de Configuration Manager.
 
 ## <a name="to-use-cng-certificates"></a>Uso de los certificados CNG
 
@@ -71,6 +77,7 @@ Para usar certificados CNG, la entidad de certificación (CA) debe proporcionar 
 - Pestaña **Criptografía**
 
     - La **categoría del proveedor** debe ser **Proveedor de almacenamiento de claves**. (obligatorio)
+    - **La solicitud debe usar uno de los siguientes proveedores:** debe ser **Proveedor de almacenamiento de claves (KSP) de Microsoft**. 
 
 > [!NOTE]
 > Los requisitos para su entorno u organización pueden ser diferentes. Póngase en contacto con su experto PKI. Hay que tener en cuenta un punto importante: una plantilla de certificado debe usar un proveedor de almacenamiento de claves para utilizar CNG.

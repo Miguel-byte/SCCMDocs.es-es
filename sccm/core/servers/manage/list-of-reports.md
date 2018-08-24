@@ -2,7 +2,7 @@
 title: Lista de informes
 titleSuffix: Configuration Manager
 description: Revise la lista de informes que se proporcionan con Configuration Manager. Los informes aparecen en varias categorías.
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 705247080fc99a6a9dd7dfcb773b2220283cd7a6
-ms.sourcegitcommit: e3f7bb8cec4b37a311bc86098297534cab947de8
+ms.openlocfilehash: 9f4bbb8ec680248b31b1ddd8c457e62e9be44d4b
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36759039"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385276"
 ---
 # <a name="list-of-reports-in-system-center-configuration-manager"></a>Lista de informes en System Center Configuration Manager
 
@@ -705,7 +705,7 @@ Los ocho informes siguientes aparecen en la categoría **Actualizaciones de soft
 |**Cumplimiento 6 - Estados de actualización de software específica (secundario)**|Muestra el recuento y el porcentaje de equipos en cada estado de cumplimiento para la actualización de software especificada.|  
 |**Cumplimiento 7 - Equipos en un estado de cumplimiento específico para un grupo de actualización (secundario)**|Muestra todos los equipos de una recopilación que tienen un estado de cumplimiento general especificado en un grupo de actualizaciones de software.|  
 |**Cumplimiento 8 - Equipos en un estado de cumplimiento específico para una actualización (secundario)**|Muestra todos los equipos de una recopilación que tienen un estado de cumplimiento especificado para una actualización de software.|  
-
+|**Cumplimiento 9: Estado general y cumplimiento**|Muestra los datos de cumplimiento y estado general de un grupo de actualizaciones de software. (A partir de la versión 1806).| 
 
 
 ## <a name="software-updates---b-deployment-management"></a>Actualizaciones de software - B Administración de implementación  

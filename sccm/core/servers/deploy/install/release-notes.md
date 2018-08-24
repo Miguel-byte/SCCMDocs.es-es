@@ -2,7 +2,7 @@
 title: Notas de la versión
 titleSuffix: Configuration Manager
 description: Obtenga información sobre problemas urgentes que todavía no se han corregido en el producto o no se han tratado en un artículo de Microsoft Knowledge Base.
-ms.date: 04/18/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4aeacdbc73e21c3bae18111e22c8407eba865a87
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9daf0fb53face0cf7ed56f2a45ab044fbfac203c
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338166"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385514"
 ---
-# <a name="release-notes-for-system-center-configuration-manager"></a>Notas de la versión de System Center Configuration Manager
+# <a name="release-notes-for-configuration-manager"></a>Notas de la versión de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
@@ -26,12 +26,12 @@ Con Configuration Manager, las notas de la versión del producto se limitan a cu
 La documentación específica de características incluye información acerca de los problemas conocidos que afectan a escenarios básicos.  
 
 > [!TIP]  
->  Este tema contiene notas de la versión de la rama actual de Configuration Manager. Para obtener información sobre la rama de Technical Preview, vea [Technical Preview para System Center Configuration Manager](../../../../core/get-started/technical-preview.md).  
+>  Este tema contiene notas de la versión de la rama actual de Configuration Manager. Para obtener más información sobre la rama Technical Preview, vea [Technical Preview](../../../../core/get-started/technical-preview.md)  
 
 Para obtener información sobre las características que presentan las distintas versiones, consulte los siguientes artículos:
+- [Novedades de la versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 - [Novedades de la versión 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)
 - [Novedades de la versión 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)
-- [Novedades de la versión 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)  
 
 
 
@@ -74,8 +74,7 @@ Aunque no tiene ningún efecto en el resultado del proceso de instalación, incl
 ### <a name="azure-ad-enabled-clients-cant-communicate-with-management-point"></a>Los clientes habilitados para Azure AD no se pueden comunicar con el punto de administración
 <!--501089-->
 *Se aplica a: Configuration Manager, versión 1706*
-<!--also fixed in 1710 HFRU-->
-En el escenario [Instalación y asignación de clientes Windows 10 para Configuration Manager mediante la autenticación basada en Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure), se produce un error en la comunicación de cliente cuando el punto de administración habilitado para HTTPS usa credenciales de base de datos alternativas. 
+<!--also fixed in 1710 HFRU--> En el escenario [Instalación y asignación de clientes Windows 10 para Configuration Manager mediante la autenticación basada en Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure), se produce un error en la comunicación de cliente cuando el punto de administración habilitado para HTTPS usa credenciales de base de datos alternativas. 
 
 #### <a name="workaround"></a>Solución alternativa
 Solucione este problema con una de las acciones siguientes:
@@ -88,14 +87,6 @@ Solucione este problema con una de las acciones siguientes:
 
 
 ## <a name="software-updates"></a>Actualizaciones de software
-
-### <a name="servicing-plans-create-many-duplicate-software-update-groups-and-deployments-by-default"></a>Los planes de mantenimiento crean de forma predeterminada muchos grupos de actualizaciones e muchas implementaciones de software duplicadas  
-<!-- 474326 -->
-De forma predeterminada, el asistente para Crear un plan de mantenimiento se ejecuta actualmente después de cada sincronización de actualizaciones de software. Cada vez que se ejecuta el asistente, se crea un nuevo grupo de actualizaciones e implementaciones de software. Si tiene una programación de sincronización de actualizaciones de software que se ejecuta varias veces al día, el Asistente para crear un plan de mantenimiento crea varios grupos de actualizaciones de software e implementaciones cada día.  
-
-#### <a name="workaround"></a>Solución alternativa
- Después de crear un plan de mantenimiento, abra las propiedades, vaya a la pestaña **Programación de evaluación**, seleccione **Ejecutar la regla en una programación**, haga clic en **Personalizar** y cree una programación personalizada. Por ejemplo, puede hacer que el plan de mantenimiento se ejecute cada 60 días.  
-
 
 ### <a name="changing-office-365-client-setting-doesnt-apply"></a>No se aplica la configuración cliente de cambios de Office 365 
 <!--511551-->

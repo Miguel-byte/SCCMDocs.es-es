@@ -2,7 +2,7 @@
 title: Punto de conexión de servicio
 titleSuffix: Configuration Manager
 description: Obtenga información sobre este rol de sistema de sitio de Configuration Manager y comprenda y planee sus diversos usos.
-ms.date: 07/05/2018
+ms.date: 08/01/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: bc2282d5-0571-465b-9528-a555855eaacd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6002c077ae0a8e34f35a9d0e36d02f5950946bde
-ms.sourcegitcommit: 73b241a72db8f8f3bd7e269fc81ad49e14f01058
+ms.openlocfilehash: 560fa3480f00811f325eb22dda439facac36e6e4
+ms.sourcegitcommit: 6e0e5b4b7779ce03e2b56b3b5f68f4ace1acedd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37843294"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467681"
 ---
 # <a name="about-the-service-connection-point-in-system-center-configuration-manager"></a>Acerca del punto de conexión de servicio en System Center Configuration Manager
 
@@ -80,6 +80,9 @@ Para usar el Administrador de servicios de Configuration Manager, en la consola,
 
 ##  <a name="bkmk_urls"></a> Requisitos de acceso a Internet  
 Para permitir la operación, el equipo que hospeda el punto de conexión de servicio y los firewalls entre dicho equipo e Internet deben pasar las comunicaciones a través del puerto de salida **TCP 443** para HTTPS y el puerto de salida **TCP 80** para HTTP a las siguientes ubicaciones de Internet. El punto de conexión de servicio también admite el uso de un servidor proxy web (con o sin autenticación) para acceder a estas ubicaciones.  Si necesita configurar una cuenta de proxy web, consulte [Compatibilidad de servidor proxy en System Center Configuration Manager](/sccm/core/plan-design/network/proxy-server-support).
+
+> [!TIP]
+> El punto de conexión de servicio usa el servicio de Microsoft Intune cuando se conecta a http://go.Microsoft.com o http://manage.Microsoft.com. Hay un problema conocido por el que el conector de Intune experimenta problemas de conectividad si no está instalado el certificado raíz de Baltimore CyberTrust, si ha expirado o si está dañado en el sistema de sitio de Configuration Manager que tenga el rol de punto de conexión de servicio instalado. Para obtener más información, vea [Configuration Manager Service Connection Point doesn't download updates](https://support.microsoft.com/help/3187516) (El punto de conexión de servicio en System Center Configuration Manager no descarga las actualizaciones).
 
 **Actualizaciones y mantenimiento**  
 

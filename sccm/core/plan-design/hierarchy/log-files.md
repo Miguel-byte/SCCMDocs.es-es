@@ -2,7 +2,7 @@
 title: Archivos de registro para la solución de problemas
 titleSuffix: Configuration Manager
 description: Use los archivos de registro para solucionar problemas con los clientes y sistemas de sitio de Configuration Manager.
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c068ea5a079d43148191e41dc9a2b4fb7a2e00c7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2bd3f76b982356fc444681d1990bee08e90b32fc
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342671"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385293"
 ---
-# <a name="log-files-in-system-center-configuration-manager"></a>Archivos de registro en System Center Configuration Manager
+# <a name="log-files-in-configuration-manager"></a>Archivos de registro en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
@@ -116,7 +116,7 @@ En Configuration Manager, los componentes de cliente y servidor de sitio registr
 ##  <a name="BKMK_AboutLogs"></a> Acerca de los archivos de registro de Configuration Manager  
  La mayoría de los procesos de Configuration Manager escriben información operativa en un archivo de registro dedicado al proceso de que se trate. Los archivos de registro se identifican mediante las extensiones de archivo **.log** o **.lo_**. Configuration Manager escribe en un archivo .log hasta que dicho registro alcanza su tamaño máximo. Cuando el registro está lleno, el archivo .log se copia en un archivo con el mismo nombre pero con la extensión .lo_, y el proceso o el componente continúa escribiendo en el archivo .log. Cuando el archivo .log vuelve a alcanzar el tamaño máximo, se sobrescribe el archivo .lo_ y el proceso se repite. Algunos componentes establecen un historial de archivos de registro al anexar una marca de fecha y hora al nombre del archivo de registro y al conservar la extensión .log. Una excepción al tamaño máximo y al uso del archivo .lo_ es el cliente para Linux y UNIX. Para más información sobre el modo en que el cliente para UNIX y Linux usa los archivos de registro, vea [Administrar archivos de registro en el cliente para UNIX y Linux](#BKMK_ManageLinuxLogs) en este artículo.  
 
- Para ver los registros, use la herramienta de visualización de registros de Configuration Manager, CMTrace, que se encuentra en la carpeta \\SMSSetup\\Tools del medio de origen de Configuration Manager. La herramienta CMTrace también se agrega a todas las imágenes de arranque que se agregan a la Biblioteca de software.  
+ Para ver los registros, use la herramienta de visualización de registros de Configuration Manager, CMTrace, que se encuentra en la carpeta \\SMSSetup\\Tools del medio de origen de Configuration Manager. La herramienta CMTrace también se agrega a todas las imágenes de arranque que se agregan a la Biblioteca de software. A partir de la versión 1806, la herramienta de visualización de registros CMTrace se instala automáticamente con el cliente de Configuration Manager.<!--1357971--> Para obtener más información, vea [CMTrace](/sccm/core/support/cmtrace). 
 
 ###  <a name="BKMK_LogOptions"></a> Configuración de opciones de registro mediante el Administrador de servicios de Configuration Manager  
  Puede cambiar dónde almacena Configuration Manager los archivos de registro y su tamaño.  
@@ -333,6 +333,7 @@ El archivo de registro SMS_DM.log en el servidor de sistema de sitio además reg
 |sitecomp.log|Registra detalles sobre el mantenimiento de los componentes de sitio instalados en todos los servidores de sistema de sitio en el sitio.|Servidor de sitio|  
 |sitectrl.log|Registra cambios de configuración de sitio realizados en objetos de control de sitio en la base de datos.|Servidor de sitio|  
 |sitestat.log|Registra el proceso de supervisión de disponibilidad y espacio en disco de todos los sistemas de sitio.|Servidor de sitio|
+|SMS_ISVUPDATES_SYNCAGENT.log| Archivo de registro para la sincronización de actualizaciones de software de terceros a partir de la versión 1806 de Configuration Manager.| Actualización de software de nivel superior de la jerarquía de Configuration Manager.|
 |SMS_PhasedDeployment.log| Archivo de registro para implementaciones por fases, una característica de versión preliminar a partir de la versión 1802 de Configuration Manager.|Sitio de nivel superior de la jerarquía de Configuration Manager|   
 |SmsAdminUI.log|Registra la actividad de consola de Configuration Manager.|Equipo que ejecuta la consola de Configuration Manager|  
 |SMSAWEBSVCSetup.log|Registra las actividades de instalación del servicio web del catálogo de aplicaciones.|Servidor de sistema de sitio|  
@@ -411,7 +412,8 @@ El archivo de registro SMS_DM.log en el servidor de sistema de sitio además reg
 |--------------|-----------------|----------------------------|  
 |objreplmgr.log|Registra detalles sobre la replicación de archivos de notificación de actualizaciones de software de un sitio primario a sitios secundarios.|Servidor de sitio|  
 |PatchDownloader.log|Registra detalles sobre el proceso de descarga de actualizaciones de software del origen de actualizaciones al destino de descarga en el servidor de sitio.|Equipo que hospeda la consola de Configuration Manager desde la que se inician las descargas|  
-|ruleengine.log|Registra detalles acerca de las reglas de implementación automática de identificación, descarga de contenido y creación de grupos de actualizaciones de software e implementación.|Servidor de sitio|  
+|ruleengine.log|Registra detalles acerca de las reglas de implementación automática de identificación, descarga de contenido y creación de grupos de actualizaciones de software e implementación.|Servidor de sitio| 
+|SMS_ISVUPDATES_SYNCAGENT.log| Archivo de registro para la sincronización de actualizaciones de software de terceros a partir de la versión 1806 de Configuration Manager.| Actualización de software de nivel superior de la jerarquía de Configuration Manager.| 
 |SUPSetup.log|Registra detalles acerca de la instalación de un punto de actualización de software. Cuando se completa la instalación del punto de actualización de software, **Installation was successful** se escribe en este archivo de registro.|Servidor de sistema de sitio|  
 |WCM.log|Registra los detalles sobre la configuración del punto de actualización de software y las conexiones con el servidor WSUS para las clasificaciones, idiomas y categorías de actualizaciones suscritas.|Servidor de sitio que se conecta al servidor WSUS|  
 |WSUSCtrl.log|Registra los detalles acerca de la configuración, la conectividad de base de datos y el estado del servidor WSUS para el sitio.|Servidor de sistema de sitio|  
@@ -777,7 +779,8 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |RebootCoordinator.log|Registra los detalles acerca de la coordinación de reinicios del sistema en los equipos cliente después de que se instalan las actualizaciones de software.|Cliente|  
 |ScanAgent.log|Registra los detalles acerca de cómo examinar las solicitudes de actualización de software, la ubicación de WSUS y acciones relacionadas.|Cliente|  
 |SdmAgent.log|Registra detalles sobre cómo realizar un seguimiento de la corrección y la compatibilidad. Pero en el archivo de registro de actualizaciones de software, Updateshandler.log, se proporcionan detalles más informativos sobre cómo instalar las actualizaciones de software necesarias a efectos de compatibilidad.<br /><br /> Este archivo de registro se comparte con la configuración de compatibilidad.|Cliente|  
-|ServiceWindowManager.log|Registra los detalles acerca de la evaluación de las ventanas de mantenimiento.|Cliente|  
+|ServiceWindowManager.log|Registra los detalles acerca de la evaluación de las ventanas de mantenimiento.|Cliente|
+|SMS_ISVUPDATES_SYNCAGENT.log| Archivo de registro para la sincronización de actualizaciones de software de terceros a partir de la versión 1806 de Configuration Manager.| Actualización de software de nivel superior de la jerarquía de Configuration Manager.|  
 |SmsWusHandler.log|Registra los detalles sobre el proceso de análisis de la herramienta de inventario para Microsoft Update.|Cliente|  
 |StateMessage.log|Registra detalles sobre los mensajes de estado de actualizaciones de software que se crean y envían al punto de administración.|Cliente|  
 |SUPSetup.log|Registra detalles acerca de la instalación de un punto de actualización de software. Cuando se completa la instalación del punto de actualización de software, **Installation was successful** se escribe en este archivo de registro.|Servidor de sistema de sitio|  

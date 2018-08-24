@@ -1,8 +1,8 @@
 ---
 title: Introducción a la administración de aplicaciones
 titleSuffix: Configuration Manager
-description: Obtenga la información básica que necesitará para administrar e implementar las aplicaciones de System Center Configuration Manager.
-ms.date: 12/23/2016
+description: Obtenga la información básica que necesitará para administrar e implementar las aplicaciones de Configuration Manager.
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,97 +10,199 @@ ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bcdc5800a1c280c99289528c40e0efee8acf5ad5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 70ab4136f39b4bf559c3d460ca1528bb4de0f6e1
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336177"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384297"
 ---
-# <a name="introduction-to-application-management-in-system-center-configuration-manager"></a>Introducción a la administración de aplicaciones en System Center Configuration Manager
+# <a name="introduction-to-application-management-in-configuration-manager"></a>Introducción a la administración de aplicaciones en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-En este tema, aprenderá los conceptos básicos que necesita saber antes de empezar a trabajar con aplicaciones de System Center Configuration Manager.  
+En este artículo, aprenderá los conceptos básicos antes de empezar a trabajar con aplicaciones de Configuration Manager.  
 
 > [!TIP]  
->  Si ya está familiarizado con la administración de aplicaciones en Configuration Manager, puede omitir este tema y pasar a la creación de una aplicación de ejemplo. Consulte [Crear e implementar una aplicación con System Center Configuration Manager](../../apps/get-started/create-and-deploy-an-application.md).  
+>  Si ya está familiarizado con la forma de administrar aplicaciones en Configuration Manager, omita este artículo. Pase a la creación de una aplicación de ejemplo: [Crear e implementar una aplicación](/sccm/apps/get-started/create-and-deploy-an-application).  
+
+
 
 ## <a name="what-is-an-application"></a>¿Qué es una aplicación?  
- Aunque el término *aplicación* es un término ampliamente usado en informática, en Configuration Manager, significa algo distinto. Piense en una aplicación como en una caja. Dicha caja contiene uno o varios conjuntos de archivos de instalación de un paquete de software (conocidos como **tipo de implementación**) más instrucciones acerca de la implementación del software.  
 
- Cuando la aplicación se implementa en dispositivos, los **requisitos** deciden qué tipo de implementación se instala en el dispositivo.  
+Aunque *aplicación* es un término ampliamente usado en informática, en Configuration Manager significa algo específico. Piense en una aplicación como en una caja. Dicha caja contiene uno o varios conjuntos de archivos de instalación de un paquete de software (conocidos como *tipo de implementación*) más instrucciones acerca de la implementación del software.  
 
- Puede hacer muchas más cosas con una aplicación. Obtendrá información sobre ellas a medida que avance por esta guía. La tabla siguiente presenta algunos conceptos que debe saber antes de empezar a investigar un poco más:  
+Cuando la aplicación se implementa en dispositivos, los **requisitos** deciden qué tipo de implementación instala Configuration Manager en el dispositivo.  
 
-|Concepto|Descripción|    
-|-|-|  
-|**Requirements**|En versiones anteriores de Configuration Manager, a menudo se creaba una recopilación que contenía los dispositivos que quería implementar en una aplicación. Aunque todavía puede crear una recopilación, con los requisitos puede especificar criterios más detallados para la implementación de una aplicación.<br /><br /> Por ejemplo, puede especificar que una aplicación se instale solo en dispositivos que ejecutan Windows 10. A continuación, puede implementar la aplicación en los dispositivos, pero solo se instalará en los dispositivos que ejecuten Windows 10.<br /><br /> Configuration Manager evalúa los requisitos para determinar si se instalará una aplicación y cualquiera de sus tipos de implementación. A continuación, determina el tipo de implementación correcto mediante el que debe instalarse una aplicación. Cada siete días, de forma predeterminada, las reglas de requisitos se vuelven a evaluar para garantizar su cumplimiento conforme a la configuración de cliente **Programar la reevaluación para implementaciones**.<br /><br /> Para obtener más información, consulte [Crear e implementar una aplicación](../../apps/get-started/create-and-deploy-an-application.md).|  
-|**Condiciones globales**|Cuando se utilicen los requisitos con un tipo de implementación específico en una única aplicación, también podrá crear condiciones globales. Son una biblioteca de requisitos predefinidos que puede usar con cualquier aplicación y tipo de implementación.<br /><br /> Configuration Manager contiene un conjunto de condiciones globales integradas y también permite crear las suyas propias.<br /><br /> Para obtener más información, consulte [Crear condiciones globales](../../apps/deploy-use/create-global-conditions.md).|  
-|**Implementación simulada**|Evalúa los requisitos, el método de detección y las dependencias de una aplicación. Informa de los resultados sin instalar realmente la aplicación.<br /><br /> Para obtener más información, consulte [Simular implementaciones de aplicaciones](../../apps/deploy-use/simulate-application-deployments.md).|  
-|**Acción de implementación**|Especifica si desea instalar o desinstalar (si se admite) la aplicación que se va a implementar.<br /><br /> Para obtener más información, consulte [Implementar aplicaciones](../../apps/deploy-use/deploy-applications.md).|  
-|**Propósito de implementación**|Especifica si la aplicación de la implementación tendrá el estado **Requerido**o **Disponible**.<br /><br /> **Requerido** significa que la aplicación se implementa automáticamente según la programación configurada. Sin embargo, un usuario puede realizar un seguimiento del estado de la implementación de la aplicación si no está oculto y puede instalar la aplicación antes de la fecha límite mediante el Centro de software.<br /><br /> **Disponible** significa que si la aplicación se implementa en un usuario, este la verá en el Centro de software y la podrá solicitar a petición.<br /><br /> Para obtener más información, consulte [Implementar aplicaciones](../../apps/deploy-use/deploy-applications.md).|  
-|**Revisiones**|Si se hacen revisiones en una aplicación o en un tipo de implementación contenido en una aplicación, Configuration Manager crea una versión nueva de la aplicación. También puede ver el historial de cada revisión de aplicación, ver sus propiedades, restaurar una versión anterior de una aplicación o eliminar una versión anterior.<br /><br /> Para obtener más información, consulte [Actualizar y retirar aplicaciones](../../apps/deploy-use/update-and-retire-applications.md).|  
-|**Método de detección**|Los métodos de detección se usan para detectar si ya está instalada una aplicación implementada. Si el método de detección indica que la aplicación está instalada, Configuration Manager no intenta instalarla de nuevo.<br /><br /> Para obtener más información, consulte [Crear aplicaciones](../../apps/deploy-use/create-applications.md).|  
-|**Dependencias**|Las dependencias definen uno o más tipos de implementación de otra aplicación que se deben instalar antes de que se instale un tipo de implementación. Puede configurar los tipos de implementación dependientes para que se instalen automáticamente antes de la instalación de un determinado tipo de implementación.<br /><br /> Para obtener más información, consulte [Crear aplicaciones](../../apps/deploy-use/create-applications.md).|  
-|**Sustitución**|Configuration Manager le permite actualizar o reemplazar las aplicaciones existentes mediante una relación de sustitución. Cuando se sustituye una aplicación, puede especificar un nuevo tipo de implementación para reemplazar el tipo de implementación de la aplicación sustituida. También puede decidir si desea actualizar o desinstalar la aplicación sustituida antes de que se instale la aplicación sustituida.<br /><br /> Para obtener más información, consulte [Crear aplicaciones](../../apps/deploy-use/create-applications.md).|  
-|**Administración centrada en el usuario**|Las aplicaciones de Configuration Manager admiten la administración centrada en el usuario, por lo que permiten asociar usuarios específicos con dispositivos concretos. En lugar de tener que recordar el nombre del dispositivo de un usuario, ahora puede implementar aplicaciones para el usuario y el dispositivo. Esta funcionalidad puede ayudarle a asegurarse de que las aplicaciones más importantes siempre estén disponible en todos los dispositivos a los que accede un usuario específico. Si un usuario adquiere un nuevo equipo, puede instalar automáticamente las aplicaciones del usuario en el dispositivo antes de que inicie sesión.<br /><br /> Para obtener información, consulte [Vincular usuarios y dispositivos con la afinidad entre usuario y dispositivo](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).|  
+Puede hacer muchas más cosas con una aplicación. Obtendrá información sobre ellas a medida que avance por esta guía. En las secciones siguientes se presentan algunos conceptos que debe saber antes de empezar a investigar un poco más:  
+
+#### <a name="deployment-type"></a>Tipo de implementación
+Si la *aplicación* es la caja, el *tipo de implementación* es el conjunto de contenido que hay en la caja. Una aplicación necesita al menos un tipo de implementación, dado que determina cómo se instala la aplicación. Use más de un tipo de implementación para configurar otro contenido y programa de instalación para la misma aplicación. 
+
+Por ejemplo, su empresa tiene una aplicación de línea de negocio denominada Astoria. Los desarrolladores de la aplicación proporcionan las siguientes maneras de instalar la aplicación:
+- Paquete de Windows Installer para una funcionalidad completa en dispositivos Windows 10
+- Un paquete de App-V para su uso en la granja de servidores de Terminal Server
+- Un paquete de aplicación de Android para usuarios móviles  
+
+Cree una única aplicación para Astoria en Configuration Manager. La aplicación define los metadatos generales sobre la aplicación que son comunes en todas las plataformas y métodos de instalación. Después, se crean tres tipos de implementación para los métodos de instalación disponibles y se implementa la aplicación en todos los usuarios. Según los requisitos y otras configuraciones de los tipos de implementación, Configuration Manager determina el método adecuado en cada caso de uso. 
+
+Para obtener más información, consulte [Crear tipos de implementación de la aplicación](/sccm/apps/deploy-use/create-applications#bkmk_create-dt).
+
+#### <a name="requirements"></a>requisitos
+En versiones anteriores de Configuration Manager, se creaba una colección de dispositivos para implementar en una aplicación. Aunque todavía puede crear una colección, use los *requisitos* para especificar criterios más detallados para la implementación de una aplicación.
+
+Por ejemplo, especifique que una aplicación solo se puede instalar en dispositivos que ejecutan Windows 10. Al implementar la aplicación en todos los dispositivos, solo se instala en los que ejecuten Windows 10.
+
+Configuration Manager evalúa los requisitos para determinar si instala una aplicación y cualquiera de sus tipos de implementación. A continuación, determina el tipo de implementación correcto mediante el que debe instalarse una aplicación. De forma predeterminada, el cliente de Configuration Manager vuelve a evaluar las reglas de requisitos cada siete días para determinar su cumplimiento conforme a la configuración de cliente **Programar la reevaluación para implementaciones**.
+
+Para obtener más información, vea [Crear e implementar una aplicación](/sccm/apps/get-started/create-and-deploy-an-application) y [Especificar requisitos para el tipo de implementación](/sccm/apps/deploy-use/create-applications#bkmk_dt-require).
+
+#### <a name="global-conditions"></a>Condiciones globales
+Aunque los requisitos se usan con un tipo de implementación específico en una única aplicación, también se pueden crear *condiciones globales*. Estas condiciones son una biblioteca de requisitos predefinidos que se puede usar con cualquier aplicación y tipo de implementación. Configuration Manager incluye un conjunto de condiciones globales integradas, o bien puede crear las suyas propias. 
+
+Para obtener más información, vea [Creación de condiciones globales](/sccm/apps/deploy-use/create-global-conditions).
+
+#### <a name="simulated-deployment"></a>Implementación simulada
+Una *implementación simulada* evalúa los requisitos, el método de detección y las dependencias de una aplicación. Un cliente informa de los resultados sin instalar realmente la aplicación. 
+
+Para obtener más información, consulte el artículo sobre [simular implementaciones de aplicaciones ](/sccm/apps/deploy-use/simulate-application-deployments).  
+
+#### <a name="deployment-action"></a>Acción de implementación
+Una *acción de implementación* especifica si se quiere instalar o desinstalar la aplicación que se va a implementar. No todos los tipos de implementación admiten la acción de desinstalación. 
+
+Para obtener más información, consulte [Deploy applications](/sccm/apps/deploy-use/deploy-applications) (Implementar aplicaciones).  
+
+#### <a name="deployment-purpose"></a>Propósito de implementación
+El *propósito de implementación* especifica si la aplicación de implementación tiene el estado **Requerido** o **Disponible**:  
+
+- El cliente instala automáticamente una implementación *requerida* según la programación que se establezca. Si la aplicación no está oculta, un usuario puede realizar el seguimiento de su estado de implementación. También puede usar el Centro de software para instalar la aplicación antes de la fecha límite.  
+
+- Si la aplicación se implementa en un usuario como *disponible*, la verá en el Centro de software y podrá solicitarla a petición.  
+
+Para obtener más información, consulte [Deploy applications](/sccm/apps/deploy-use/deploy-applications) (Implementar aplicaciones).  
+
+#### <a name="revisions"></a>Revisiones
+Si se hacen *revisiones* en una aplicación o un tipo de implementación, Configuration Manager crea una versión nueva de la aplicación. Realice las acciones siguientes en la consola de Configuration Manager: 
+- Mostrar el historial de cada revisión de aplicación
+- Ver sus propiedades
+- Restaurar una versión anterior de una aplicación
+- Eliminar una versión anterior
+
+Para obtener más información, vea [Actualizar y retirar aplicaciones](/sccm/apps/deploy-use/update-and-retire-applications).  
+
+#### <a name="detection-method"></a>Método de detección
+Los *métodos de detección* se usan para detectar si un dispositivo ya ha instalado una aplicación. Si el método de detección indica que la aplicación está instalada, Configuration Manager no intenta instalarla de nuevo.
+
+Para obtener más información, vea las [opciones de método de detección del tipo de implementación](/sccm/apps/deploy-use/create-applications##bkmk_dt-detect).
+
+#### <a name="dependencies"></a>Dependencias
+Las *dependencias* definen uno o más tipos de implementación de otra aplicación que el cliente debe instalar antes de instalar este tipo de implementación. 
+
+Para obtener más información, vea [Especificar dependencias para el tipo de implementación](/sccm/apps/deploy-use/create-applications#bkmk_dt-depend).  
+
+#### <a name="supersedence"></a>Sustitución
+Configuration Manager permite actualizar o reemplazar las aplicaciones existentes mediante una relación de *sustitución*. Cuando se sustituye una aplicación, se puede especificar un tipo de implementación nuevo para reemplazar el de la aplicación sustituida. También se puede decidir si se quiere actualizar o desinstalar la aplicación sustituida antes de que el cliente instale la de sustitución.
+
+Para obtener más información, consulte [Sustitución de la aplicación](/sccm/apps/deploy-use/revise-and-supersede-applications#application-supersedence).  
+
+#### <a name="user-centric-management"></a>Administración centrada en el usuario
+Las aplicaciones de Configuration Manager admiten la *administración centrada en el usuario*, que permite asociar usuarios específicos con dispositivos concretos. En lugar de tener que recordar el nombre del dispositivo de un usuario, las aplicaciones se implementan en el usuario y el dispositivo. Esta funcionalidad ayuda a asegurarse de que las aplicaciones más importantes siempre estén disponibles en todos los dispositivos del usuario. Si un usuario adquiere un equipo nuevo, Configuration Manager instala de forma automática las aplicaciones en el dispositivo antes de que el usuario inicie sesión. 
+
+Para obtener más información, vea [Vincular usuarios y dispositivos con la afinidad entre usuario y dispositivo](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
+
+
 
 ## <a name="what-application-types-can-you-deploy"></a>¿Qué tipos de aplicación puede implementar?  
- Configuration Manager le permite implementar los siguientes tipos de aplicaciones:  
 
-- Windows Installer (archivo *.msi)
-- Paquete de aplicación de Windows (\*.appx, \*.appxbundle)
-- Paquete de aplicación de Windows (en la Tienda Windows)
-- Microsoft Application Virtualization 4
-- Microsoft Application Virtualization 5
-- Archivo .CAB de Windows Mobile
+Configuration Manager le permite implementar los siguientes tipos de aplicaciones:  
+
+- Windows Installer (msi)  
+
+- Paquete de aplicación de Windows (appx o appxbundle)  
+
+    > [!Note]  
+    > A partir de la versión 1806, este tipo incluye los nuevos formatos de paquete de aplicación de Windows 10 (msix) y lote de aplicaciones (msixbundle).<!--1357427-->  
+
+- Paquete de aplicación de Windows en Microsoft Store  
+
+- Microsoft App-V v4 y v5  
+
 - macOS  
 
 
-Además, al administrar dispositivos a través de la administración de dispositivos locales de Microsoft Intune o Configuration Manager, puede administrar estos tipos de aplicación adicionales:
+Además, al administrar dispositivos a través de la administración de dispositivos locales de Microsoft Intune o Configuration Manager, se administran estos tipos de aplicación adicionales:  
 
-- Paquete de aplicación de Windows Phone (archivo *.xap)
-- Paquete de aplicación iOS (archivo *.ipa)
-- Paquete de aplicación de Android (archivo *.apk)
-- Paquete de aplicación para Android en Google Play
-- Paquete de aplicación de Windows Phone (en la Tienda Windows Phone)
-- Windows Installer a través de MDM
+- Paquete de aplicación de Windows Phone (xap)  
+
+- Paquete de aplicación de Windows Phone en Microsoft Store  
+
+- Paquete de aplicación para iOS (ipa)  
+
+- Paquete de aplicación para iOS en App Store  
+
+- Paquete de aplicación de Android (apk)  
+
+- Paquete de aplicación para Android en Google Play  
+
+- Windows Installer a través de MDM (msi)  
+
 - Aplicación web
 
 
 
 ## <a name="state-based-applications"></a>Aplicaciones basadas en estado  
- Las aplicaciones de Configuration Manager usan la supervisión basada en estado, lo cual permite hacer un seguimiento del último estado de implementación de aplicación para usuarios y dispositivos. Los mensajes de estado muestran información acerca de dispositivos individuales. Por ejemplo, si una aplicación se implementa en una recopilación de usuarios, puede ver el estado de cumplimiento de la implementación y el propósito de la implementación en la consola de Configuration Manager. Puede supervisar la implementación de todo el software mediante el área de trabajo **Supervisión** en la consola de Configuration Manager. Las implementaciones de software incluyen actualizaciones de software, configuración de cumplimiento, aplicaciones, secuencias de tareas, y paquetes y programas. Para obtener más información, consulte [Supervisión de aplicaciones](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
 
- Configuration Manager vuelve a evaluar las implementaciones de aplicaciones con determinada frecuencia. Por ejemplo:  
+Las aplicaciones de Configuration Manager usan la supervisión basada en estado. Se puede realizar el seguimiento del último estado de implementación de la aplicación para usuarios y dispositivos. Los mensajes de estado muestran información acerca de dispositivos individuales. Por ejemplo, si una aplicación se implementa en una colección de usuarios, puede ver el estado de cumplimiento de la implementación y el propósito de la implementación en la consola de Configuration Manager. Supervise la implementación de todo el software desde el área de trabajo **Supervisión** de la consola de Configuration Manager. Para obtener más información, consulte [Supervisión de aplicaciones](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
 
--   El usuario final desinstala una aplicación implementada. En el siguiente ciclo de evaluación, Configuration Manager detecta que la aplicación no está presente y vuelve a instalarla.  
+El cliente de Configuration Manager vuelve a evaluar las implementaciones de aplicaciones de manera periódica. Por ejemplo:  
 
--   Una aplicación no se instaló en un dispositivo porque no cumple los requisitos. Posteriormente, se realiza un cambio en el dispositivo y cumple los requisitos. Configuration Manager detecta este cambio y la aplicación se instala.  
+- Un usuario desinstala una aplicación implementada. En el siguiente ciclo de evaluación, Configuration Manager detecta que la aplicación no está presente. Después, el cliente reinstala la aplicación de forma automática.  
+
+- Configuration Manager no instaló una aplicación en un dispositivo porque no cumplía los requisitos. Posteriormente, se realiza un cambio en el dispositivo y cumple los requisitos. Configuration Manager detecta este cambio y el cliente instala la aplicación.  
+
+Puede establecer el intervalo de reevaluación para las implementaciones de aplicaciones. Use la configuración de cliente **Programar la reevaluación para implementaciones** del grupo **Implementación de software**. Para más información, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#software-deployment).  
 
 
- Puede establecer la configuración de cliente **Programar reevaluación de implementaciones** para configurar el intervalo de reevaluación de las implementaciones de aplicaciones. Para más información, vea [Acerca de la configuración de cliente](../../core/clients/deploy/about-client-settings.md).  
 
 ## <a name="get-started-creating-an-application"></a>Empezar a crear una aplicación  
- Si quiere comenzar de inmediato a crear una aplicación, encontrará un tutorial para crear una aplicación sencilla en el tema [Crear e implementar una aplicación con System Center Configuration Manager](../../apps/get-started/create-and-deploy-an-application.md).  
 
- Si está familiarizado con los aspectos básicos y quiere obtener más información de referencia sobre las opciones disponibles, empiece por [Crear aplicaciones](/sccm/apps/deploy-use/create-applications).  
+Si quiere comenzar de inmediato y crear una aplicación, encontrará un tutorial en el artículo [Crear e implementar una aplicación](/sccm/apps/get-started/create-and-deploy-an-application).  
 
-## <a name="software-center-and-the-application-catalog"></a>Centro de software y Catálogo de aplicaciones  
- En versiones anteriores de Configuration Manager, el Centro de software se usaba para instalar y programar las instalaciones de software, configurar las opciones de control remoto y configurar la administración de energía. Los usuarios podían conectarse al catálogo de aplicaciones para buscar y solicitar software, configurar algunas opciones de preferencia y borrar remotamente sus dispositivos móviles.  
+Si está familiarizado con los aspectos básicos y quiere obtener más información de referencia sobre todas las opciones disponibles, empiece por [Crear aplicaciones](/sccm/apps/deploy-use/create-applications).  
 
- Aunque estas opciones siguen estando disponibles en System Center Configuration Manager, ahora hay una nueva versión del Centro de software disponible que permite buscar aplicaciones. No tiene que usar el catálogo de aplicaciones, que requiere un explorador web habilitado para Silverlight. Sin embargo, los roles de sistema de sitio de punto de sitios web del catálogo de aplicaciones y de punto de servicio web del catálogo de aplicaciones siguen siendo necesarios para que las aplicaciones disponibles para el usuario aparezcan en el Centro de software.  
 
- Para obtener más información, consulte [Planear y configurar la administración de aplicaciones en Configuration Manager](../../apps/plan-design/plan-for-and-configure-application-management.md).  
 
-## <a name="configuration-manager-packages-and-programs"></a>Paquetes y programas de Configuration Manager  
- Configuration Manager mantiene la compatibilidad de los paquetes y programas usados en versiones anteriores del producto. Una implementación que utilice paquetes y programas podría ser más adecuada que una implementación que use una aplicación cuando se implementa algo de lo siguiente:  
+## <a name="software-center"></a>Centro de software  
 
--   Scripts que no instalan una aplicación en un equipo, como un script para desfragmentar la unidad de disco del equipo.  
+El Centro de software es una aplicación de Windows que se instala con el cliente de Configuration Manager. Se puede usar para las acciones siguientes:  
+- Buscar y solicitar las aplicaciones implementadas en el dispositivo o el usuario
+- Instalar y programar las instalaciones de software
+- Ver el estado de instalación de las aplicaciones, actualizaciones de software y sistemas operativos
+- Configurar opciones de control remoto
+- Configurar la administración de energía
 
--   Secuencias de comandos "Uso único" que no es necesario supervisar de forma constante.  
+Vea los siguientes artículos para más información:  
+- [Planear y configurar la administración de aplicaciones en Configuration Manager](/sccm/apps/plan-design/plan-for-and-configure-application-management)
+- [Manual del usuario del Centro de software](/sccm/core/understand/software-center)
 
--   Scripts que se ejecutan según una programación periódica y no pueden usar evaluación global.
+> [!Note]  
+> El rol de Punto de servicio web del catálogo de aplicaciones ya no es necesario en la versión 1806, pero todavía es un rol compatible. 
+> 
+> En la versión 1806 no se admite el rol de sitio web del catálogo de aplicaciones. Para más información, consulte [Características en desuso y eliminadas](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
- Para obtener más información, consulte [Paquetes y programas](../../apps/deploy-use/packages-and-programs.md).  
+
+
+## <a name="packages-and-programs"></a>Paquetes y programas  
+
+Configuration Manager mantiene la compatibilidad de los paquetes y programas usados en versiones anteriores del producto. 
+
+Para obtener más información, consulte [Paquetes y programas](/sccm/apps/deploy-use/packages-and-programs).  
+
+
+
+## <a name="next-steps"></a>Pasos siguientes
+
+Ahora que comprende los conceptos básicos de administración de aplicaciones en Configuration Manager, continúe con los artículos siguientes:
+- [Crear e implementar una aplicación de ejemplo](/sccm/apps/get-started/create-and-deploy-an-application)
+- [Planear y configurar la administración de aplicaciones en Configuration Manager](/sccm/apps/plan-design/plan-for-and-configure-application-management)
+- [Crear aplicaciones](/sccm/apps/deploy-use/create-applications)

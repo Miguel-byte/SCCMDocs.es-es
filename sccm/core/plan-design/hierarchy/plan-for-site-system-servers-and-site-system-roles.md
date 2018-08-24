@@ -1,8 +1,8 @@
 ---
 title: Planeamiento de roles de sistema de sitio
-titleSuffix: Configuration Manager
-description: Tenga en cuenta los servidores y roles de sistema de sitio cuando planifique la jerarquía de System Center Configuration Manager.
-ms.date: 10/06/2016
+titleSuffix: Configuration Manager"
+description: Al planear la jerarquía de Configuration Manager, tenga en cuenta los servidores de sistema de sitio y los roles de sistema de sitio.
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,141 +10,144 @@ ms.assetid: 0a7415ba-2c53-4433-983e-780e92aa662f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 252c8544d4d976e210448c7deb285cfbe8b71a0f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 6805aed620ea6bd41d1ec3460c1076b44d28f67a
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341736"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385361"
 ---
-# <a name="plan-for-site-system-servers-and-site-system-roles-for-system-center-configuration-manager"></a>Planeamiento de servidores y roles de sistema de sitio para System Center Configuration Manager
+# <a name="plan-for-site-system-servers-and-site-system-roles-in-configuration-manager"></a>Planeamiento de servidores de sistema de sitio y roles de sistema de sitio para Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Cada sitio de System Center Configuration Manager que se instala incluye un servidor de sitio que es un **servidor de sistema de sitio**. El sitio también puede incluir servidores de sistema de sitio adicionales en equipos que están alejados del servidor de sitio (equipos remotos). Los servidores de sistema de sitio (el servidor de sitio o un servidor de sistema de sitio remoto) admiten **roles de sistema de sitio**.
+En cada sitio de Configuration Manager que se instala, se incluye un servidor de sitio que es un **servidor de sistema de sitio**. El sitio también puede incluir servidores de sistema de sitio adicionales en equipos que están alejados del servidor de sitio (equipos remotos). Los servidores de sistema de sitio (el servidor de sitio o un servidor de sistema de sitio remoto) admiten **roles de sistema de sitio**.  
 
 
 ##  <a name="bkmk_siteservers"></a> Servidores de sistema de sitio  
- Al instalar un rol de sistema de sitio en un equipo, ese equipo se convierte en un servidor de sistema de sitio. En cada sitio puede instalar a uno o más servidores de sistema de sitio adicionales. También puede elegir no instalar servidores de sistema de sitio adicionales y ejecutar todos los roles de sistema de sitio directamente en el equipo del servidor de sitio. Cada sistema de sitio hospeda uno o varios roles de sistema de sitio. Servidores adicionales pueden contribuir a ampliar las funcionalidades y la capacidad de un sitio al compartir la carga de procesamiento de la CPU que generan los roles de sistema de sitio en un servidor.  
 
- Al plantearse la incorporación de un servidor de sistema de sitio, asegúrese de que el servidor cumple los requisitos previos para el uso previsto. También conviene agregarlo en una ubicación de red con ancho de banda suficiente para comunicarse con los puntos de conexión esperados, como el servidor de sitio, los recursos de dominio, una ubicación en la nube, los servidores de sistema de sitio y los clientes).  
+Al instalar un rol de sistema de sitio en un equipo, ese equipo se convierte en un servidor de sistema de sitio. En cada sitio puede instalar a uno o más servidores de sistema de sitio adicionales. También puede elegir no instalar servidores de sistema de sitio adicionales y ejecutar todos los roles de sistema de sitio directamente en el equipo servidor de sitio. Cada sistema de sitio hospeda uno o varios roles de sistema de sitio. Si se usan más servidores, pueden ampliarse las funciones y la capacidad de un sitio al compartir la carga de procesamiento que aplican los roles de sistema de sitio en un servidor.  
 
- Si configura el servidor de sistema de sitio con un servidor proxy para su uso por los roles de sistema de sitio, vea [Roles de sistema de sitio que pueden utilizar un servidor proxy](#bkmk_proxy).  
+Al plantearse la incorporación de un servidor de sistema de sitio, asegúrese de que el servidor cumple los requisitos previos para el uso previsto. Además, agréguelo a una ubicación de red que tenga un ancho de banda suficiente para comunicarse con los puntos de conexión esperados. Entre estos puntos de conexión, se incluyen el servidor de sitio, los recursos del dominio, una ubicación basada en la nube, servidores de sistema de sitio y clientes.  
+
+
 
 ##  <a name="bkmk_planroles"></a> Roles de sistema de sitio  
- Los roles de sistema de sitio se instalan en un equipo para proporcionar a este funcionalidades adicionales. Algunos ejemplos son:  
+
+Instale los roles de sistema de sitio en un servidor para proporcionar funciones adicionales al sitio. Algunos ejemplos son:  
 
 -   Puntos de administración adicionales para que el sitio pueda admitir más dispositivos, hasta alcanzar su capacidad máxima.  
 
 -   Puntos de distribución adicionales para expandir la infraestructura de contenido y mejorar así el rendimiento de las distribuciones de contenido a los usuarios y dispositivos.  
 
--   Uno o varios roles de sistema de sitio específicos de la característica. Por ejemplo, un punto de actualización de software que le permite administrar las actualizaciones de software de los dispositivos administrados o un punto de servicios de informes que le permite ejecutar informes para supervisar y comprender la implementación o compartir información relacionada.  
+-   Uno o varios roles de sistema de sitio específicos de la característica. Por ejemplo, un punto de actualización de software le permite administrar actualizaciones de software para dispositivos administrados. Un punto de servicios de informes le permite ejecutar informes para supervisar, comprender y compartir información sobre su entorno.  
 
 
-Diferentes sitios de Configuration Manager pueden admitir distintos conjuntos de roles de sistema de sitio. Los roles de sistema de sitio admitidos dependen del tipo de sitio (sitio de administración central, sitio primario o sitio secundario). La topología de la jerarquía puede limitar la colocación de algunos roles en determinados tipos de sitios. Por ejemplo, el punto de conexión de servicio solo se admite en el sitio de nivel superior de la jerarquía, que podría ser un sitio de administración central o un sitio primario independiente. Este rol no se admite en un sitio principal secundario ni en los sitios secundarios.  
+Diferentes sitios de Configuration Manager pueden admitir distintos conjuntos de roles de sistema de sitio. El conjunto admitido de roles de sistema de sitio depende del tipo de sitio. (Entre los tipos de sitios, se incluyen un sitio de administración central, sitios primarios o sitios secundarios). La topología de la jerarquía puede limitar la colocación de algunos roles en determinados tipos de sitios. Por ejemplo, el punto de conexión de servicio solo se admite en el sitio de nivel superior de la jerarquía. El sitio de nivel superior puede ser un sitio de administración central o un sitio primario independiente. Este rol no se admite en un sitio primario secundario ni en los sitios secundarios.  
 
-Una vez instalado un sitio, se puede mover la ubicación de algunos roles de sistema de sitio de su ubicación predeterminada en el servidor de sitio a otro servidor. Por ejemplo, este es el caso del punto de administración o el punto de distribución, que se instalan de manera predeterminada en un servidor de sitio primario o secundario. También puede instalar instancias adicionales de algunos roles de sistema de sitio para ampliar las funcionalidades del sitio (ofrecer más servicios a los clientes) y para cumplir sus requisitos empresariales. Algunos roles son necesarios, mientras que otros son opcionales.  
+Una vez instalado un sitio, se puede mover la ubicación de algunos roles de sistema de sitio de su ubicación predeterminada en el servidor de sitio a otro servidor. Por ejemplo, los roles del punto de administración o del punto de distribución se instalan de forma predeterminada en un servidor de sitio primario o secundario. Además, instale más instancias de roles de sistema de sitio para expandir las funciones del sitio y adaptarse a sus requisitos empresariales. Algunos roles son necesarios, mientras que otros son opcionales.  
 
--   **Servidor de sitio de Configuration Manager.** Este rol identifica el servidor donde se ejecuta el programa de instalación de Configuration Manager para instalar un sitio o el servidor en el que se instala un sitio secundario. Este rol no se puede mover ni desinstalar hasta que se desinstale el sitio.  
+#### <a name="configuration-manager-site-server"></a>Servidor de sitio de Configuration Manager
+Este rol identifica el servidor donde se ejecuta el programa de instalación de Configuration Manager para instalar un sitio o el servidor donde se instala un sitio secundario. No se puede mover ni desinstalar este rol hasta que se desinstale el sitio.  
 
--   **Sistema de sitio de Configuration Manager.** Este rol se asigna a cualquier equipo en el que se instale un sitio o un rol de sistema de sitio. Este rol no se puede mover ni desinstalar hasta que el último rol de sistema de sitio se quite del equipo.  
+#### <a name="configuration-manager-site-system"></a>Sistema de sitio de Configuration Manager
+Este rol se asigna a cualquier equipo en el que se instale un sitio o un rol de sistema de sitio. No se puede mover ni desinstalar este rol hasta que se quite el último rol de sistema de sitio del equipo.  
 
--   **Rol de sistema de sitio de componente de Configuration Manager.** Este rol identifica un sistema de sitio que ejecuta una instancia del servicio SMS Executive y es necesario para admitir otros roles, como los puntos de administración. Este rol no se puede mover ni desinstalar hasta que el último rol de sistema de sitio aplicable se quite del equipo.  
+#### <a name="configuration-manager-component-site-system-role"></a>Rol de sistema de sitio de componente de Configuration Manager
+Este rol identifica un sistema de sitio que ejecuta una instancia del servicio **SMS Executive**. Se necesita para admitir otros roles, como puntos de administración. Este rol no se puede mover ni desinstalar hasta que se quite el último rol de sistema de sitio válido del equipo.  
 
--   **Servidor de base de datos del sitio de Configuration Manager.** Este rol se asigna a los servidores de sistema de sitio que contienen una instancia de la base de datos del sitio en un sitio. Este rol solo se puede mover a un nuevo servidor modificando el sitio para que use otra instancia de SQL Server para hospedar la base de datos del sitio.  
+#### <a name="configuration-manager-site-database-server"></a>Servidor de base de datos del sitio de Configuration Manager
+El sitio asigna este rol a servidores de sistema de sitio que contienen una instancia de la base de datos del sitio. Solo se puede mover este rol a un nuevo servidor si se ejecuta el programa de instalación para modificar el sitio y configurarlo de forma que use otra instancia de SQL Server para hospedar la base de datos del sitio.  
 
--   **Proveedor de SMS.** El rol de proveedor de SMS se asigna a cada equipo que hospeda una instancia del proveedor de SMS, la interfaz entre una consola de Configuration Manager y la base de datos del sitio. De forma predeterminada, este rol se instala automáticamente en el servidor de sitio de un sitio de administración central y en sitios primarios. Puede instalar instancias adicionales para proporcionar acceso a otros usuarios administrativos.  
+#### <a name="sms-provider"></a>Proveedor de SMS
+Asigne este rol a cada equipo que hospede una instancia del proveedor de SMS. El proveedor es la interfaz entre una consola de Configuration Manager y la base de datos del sitio. De forma predeterminada, este rol se instala automáticamente en el servidor de sitio de un sitio de administración central y sitios primarios. Puede instalar más instancias en cada sitio para proporcionar acceso a otros usuarios administrativos o para redundancia.  
 
-     Para instalar proveedores de SMS adicionales, debe ejecutar el programa de instalación de Configuration Manager en el servidor del sitio para [administrar el proveedor de SMS](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider). Luego puede instalar proveedores adicionales en otros equipos. Solo puede instalar una instancia de proveedor de SMS en un equipo y dicho equipo debe estar en el mismo dominio que el servidor de sitio.  
+Para instalar proveedores de SMS adicionales, tiene que ejecutar el programa de instalación de Configuration Manager en el servidor de sitio para [administrar el proveedor de SMS](/sccm/core/servers/manage/modify-your-infrastructure#BKMK_ManageSMSprovider). Después, puede instalar proveedores adicionales en otros equipos. Solo se puede instalar una instancia del proveedor de SMS en un equipo. Ese equipo tiene que estar en el mismo dominio que el servidor de sitio.  
 
--   **Punto de servicio web del catálogo de aplicaciones.** Rol del sistema de sitio que proporciona información de software al sitio web del catálogo de aplicaciones desde la biblioteca de software. Aunque este rol solo se admite en sitios primarios, puede instalar varias instancias de él en un sitio o en varios sitios de la misma jerarquía.  
+#### <a name="application-catalog-web-service-point"></a>Punto de servicio web del catálogo de aplicaciones
+Rol de sistema de sitio que proporciona información del software al sitio web del catálogo de aplicaciones desde la biblioteca de software. Aunque este rol solo se admite en sitios primarios, puede instalar varias instancias de él en un sitio o en varios sitios de la misma jerarquía.  
 
--   **Punto de sitio web del catálogo de aplicaciones.** Rol del sistema de sitio que proporciona a los usuarios una lista de software disponible desde el catálogo de aplicaciones. Aunque este rol solo se admite en sitios primarios, puede instalar varias instancias de él en un sitio o en varios sitios de la misma jerarquía.  
+#### <a name="application-catalog-website-point"></a>Punto de sitios web del catálogo de aplicaciones
+Rol del sistema de sitio que proporciona a los usuarios una lista de software disponible desde el catálogo de aplicaciones. Aunque este rol solo se admite en sitios primarios, puede instalar varias instancias de él en un sitio o en varios sitios de la misma jerarquía.  
 
-     Si el catálogo de aplicaciones admite equipos cliente en Internet, instale, como práctica recomendada de seguridad, el punto de sitio web del catálogo de aplicaciones en una red perimetral de seguridad y el punto de servicio web del catálogo de aplicaciones en la intranet.  
+Cuando el catálogo de aplicaciones admite equipos cliente en Internet, con el fin de mejorar la seguridad, instale el punto de sitios web del catálogo de aplicaciones en una red perimetral. Después, instale el punto de servicio web del catálogo de aplicaciones en la intranet.  
 
--   **Punto de sincronización de Asset Intelligence.** Rol de sistema de sitio que se conecta a Microsoft para descargar información del catálogo de Asset Intelligence. Este rol también carga títulos sin clasificar, para que se puedan tener en cuenta para su futura inclusión en el catálogo. Una jerarquía admite una sola instancia de este rol, y esa debe estar en el sitio de nivel superior de la jerarquía (un sitio de administración central o el sitio primario independiente). Si expande un sitio primario independiente a una jerarquía más grande, debe desinstalar este rol desde el sitio primario y luego instalarlo en el sitio de administración central.   Para obtener más información, consulte [Asset Intelligence en System Center Configuration Manager](../../../core/clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).  
+#### <a name="asset-intelligence-synchronization-point"></a>Punto de sincronización de Asset Intelligence
+Rol de sistema de sitio que se conecta a Microsoft para descargar información del catálogo de Asset Intelligence. Este rol también carga títulos sin clasificar para que Microsoft pueda tener en cuenta para su futura inclusión en el catálogo. Una jerarquía solo admite una única instancia de este rol en el sitio de nivel superior de la jerarquía. Si expande un sitio primario independiente a una jerarquía más grande, desinstale este rol del sitio principal. Después, instálelo en el sitio de administración central. 
 
--   **Punto de registro del certificados.** Rol de sistema que se comunica con un servidor que ejecute el Servicio de inscripción de dispositivos de red. Este rol administra las solicitudes de certificado de dispositivo que usan el Protocolo de inscripción de certificados simple (SCEP). Este rol solo se admite en los sitios primarios y el sitio de administración central.
+Para obtener más información, vea [Asset Intelligence en Configuration Manager](/sccm/core/clients/manage/asset-intelligence/introduction-to-asset-intelligence).  
 
-     Aunque un único punto de registro de certificados puede proporcionar funcionalidad a toda una jerarquía, tal vez prefiera instalar varias instancias de este rol en un sitio y en varios sitios de la misma jerarquía. Esto puede ayudar con equilibrio de carga. Cuando existen varias instancias en una jerarquía, los clientes se asignan aleatoriamente a uno de los puntos de registro de certificado.  
+#### <a name="certificate-registration-point"></a>Punto de registro de certificados
+Rol de sistema de sitio que se comunica con un servidor que ejecute el Servicio de inscripción de dispositivos de red (NDES). Este rol administra las solicitudes de certificado de dispositivo que usan el Protocolo de inscripción de certificados simple (SCEP). Este rol solo se admite en los sitios primarios y el sitio de administración central.
 
-     Cada punto de registro de certificado requiere acceso a una instancia independiente del Servicio de inscripción de dispositivos de red. No se pueden configurar dos o más puntos de registro de certificado para que utilicen el mismo Servicio de inscripción de dispositivos de red. Además, el punto de registro de certificados no debe instalarse en el mismo servidor que ejecuta el Servicio de inscripción de dispositivos de red.  
+Aunque un único punto de registro de certificados puede proporcionar funcionalidad a toda una jerarquía, tal vez prefiera instalar varias instancias de este rol en un sitio y en varios sitios de la misma jerarquía. Este diseño facilita el equilibrio de carga. Cuando existen varias instancias en una jerarquía, los clientes se asignan aleatoriamente a uno de los puntos de registro de certificado.  
 
-- **Punto de conexión de puerta de enlace de administración en la nube.** Rol de sistema de sitio para comunicarse con la [puerta de enlace de administración en la nube](/sccm/core/clients/manage/setup-cloud-management-gateway).
+Cada punto de registro de certificado necesita acceder a una instancia de NDES separada. No se pueden configurar dos o más puntos de registro de certificado para que usen la misma instancia de NDES. Además, no instale el punto de registro de certificado en el mismo servidor donde se ejecute NDES.  
 
--   **Punto de distribución.** Rol de sistema de sitio que contiene archivos de origen para que descarguen los clientes, tales como imágenes de arranque, paquetes de software, actualizaciones de software, imágenes del sistema operativo y contenido de la aplicación. De forma predeterminada, este rol se instala en el equipo del servidor de sitio de nuevos sitios primarios y secundarios cuando se instala el sitio. Este rol no se admite en un sitio de administración central. Se pueden instalar varias instancias de este rol en un sitio admitido y en varios sitios de la misma jerarquía. Para obtener más información, consulte [Conceptos básicos de la administración de contenido en System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md), y [Administración del contenido y de la infraestructura de contenido para System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+#### <a name="cloud-management-gateway-connection-point"></a>Punto de conexión de Cloud Management Gateway
+Rol de sistema de sitio para comunicarse con la [puerta de enlace de administración en la nube](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
 
--   **Punto de estado de reserva.** Rol de sistema de sitio que le ayuda a supervisar la instalación del cliente e identificar a los clientes que no están administrados porque no se pueden comunicar con su punto de administración. Aunque este rol solo se admite en sitios primarios, puede instalar varias instancias de él en un sitio y en varios sitios de la misma jerarquía.     
+#### <a name="data-warehouse-service-point"></a>Punto de servicio de almacenamiento de datos
+Use el punto de servicio de almacenamiento de datos para almacenar y generar informes de datos históricos a largo plazo para su entorno de Configuration Manager. Para obtener más información, vea [Almacenamiento de datos](/sccm/core/servers/manage/data-warehouse).  
+
+#### <a name="distribution-point"></a>Punto de distribución
+Rol de sistema de sitio que contiene archivos de origen para que los clientes puedan descargarlos, por ejemplo: 
+- Contenido de aplicaciones
+- Paquetes de software
+- Actualizaciones de software
+- Imágenes de SO
+- Imágenes de arranque  
+
+De forma predeterminada, este rol se instala en el servidor de sitio al instalar un nuevo sitio primario o secundario. Este rol no se admite en un sitio de administración central. Se pueden instalar varias instancias de este rol en un sitio admitido y en varios sitios de la misma jerarquía. Para obtener más información, vea [Conceptos fundamentales de la administración de contenidos](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management) y [Administrar el contenido y la infraestructura de contenido](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
+
+#### <a name="endpoint-protection-point"></a>Punto de Endpoint Protection
+Rol del sistema de sitio que Configuration Manager utiliza para aceptar los términos de la licencia de Endpoint Protection y configurar la pertenencia predeterminada a Microsoft Active Protection Service. Una jerarquía solo admite una única instancia de este rol y tiene que encontrarse en el sitio de nivel superior. Si expande un sitio primario independiente a una jerarquía más grande, desinstale el rol del sitio primario y, después, instálelo en el sitio de administración central. Para obtener más información, vea [Endpoint Protection en Configuration Manager](/sccm/protect/deploy-use/endpoint-protection).  
+
+#### <a name="enrollment-point"></a>Punto de inscripción
+Rol de sistema de sitio que usa certificados PKI en Configuration Manager para inscribir dispositivos móviles y equipos con macOS. Aunque este rol solo se admite en sitios primarios, puede instalar varias instancias de él en un sitio o en varios sitios de la misma jerarquía.  
+
+Si un usuario inscribe dispositivos móviles mediante Configuration Manager y su cuenta de Active Directory se encuentra en un bosque que no es de confianza para el bosque del servidor de sitio, tiene que instalarse un punto de inscripción en el bosque del usuario. Después, Configuration Manager podrá autenticar al usuario.  
+
+#### <a name="enrollment-proxy-point"></a>Punto de proxy de inscripción
+Rol de sistema de sitio que administra solicitudes de inscripción de Configuration Manager por parte de dispositivos móviles y equipos con macOS. Aunque este rol solo se admite en sitios primarios, puede instalar varias instancias de él en un sitio o en varios sitios de la misma jerarquía.  
+
+Al admitir dispositivos móviles en Internet, instale un punto de proxy de inscripción en una red perimetral e instale otro en la intranet.   
+
+#### <a name="exchange-server-connector"></a>Conector de Exchange Server
+Para obtener información sobre este rol, vea [Administrar dispositivos móviles mediante Configuration Manager y Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
+
+#### <a name="fallback-status-point"></a>Punto de estado de reserva
+Un rol de sistema de sitio que le permite supervisar la instalación de clientes. Identifica los clientes no administrados porque no pueden establecer comunicación con el punto de administración. Aunque este rol solo se admite en sitios primarios, puede instalar varias instancias de él en un sitio y en varios sitios de la misma jerarquía.     
+
+#### <a name="management-point"></a>Punto de administración
+Un rol de sistema de sitio que proporciona información de ubicación del servicio y directivas a los clientes. También recibe datos de configuración de los clientes.  
+
+De forma predeterminada, este rol se instala en el servidor de sitio al instalar un nuevo sitio primario o secundario. Los sitios primarios admiten varias instancias de este rol. Los sitios secundarios solo admiten un único punto de administración. También se conoce como punto de administración proxy; este rol, cuando se encuentra en un sitio secundario, proporciona un punto de contacto local para que los clientes puedan obtener directivas de usuario y equipo.  
+
+Configure los puntos de administración para que sean compatibles con HTTP o HTTPS. También son compatibles con dispositivos móviles inscritos con la Administración de dispositivos móviles (MDM) local de Configuration Manager. Para reducir la carga de procesamiento del servidor de base de datos del sitio cuando los puntos de administración procesan solicitudes de clientes, use [Réplicas de base de datos para puntos de administración](/sccm/core/servers/deploy/configure/database-replicas-for-management-points).  
+
+#### <a name="reporting-services-point"></a>Punto de servicios de informes
+Rol de sistema de sitio que se integra con SQL Server Reporting Services para crear y administrar informes para Configuration Manager. Este rol se admite en sitios primarios y en el sitio de administración central. Se pueden instalar varias instancias de él en un sitio admitido. Para obtener más información, vea [Planeamiento de informes](/sccm/core/servers/manage/planning-for-reporting).  
+
+#### <a name="service-connection-point"></a>Punto de conexión de servicio
+Rol de sistema de sitio que carga los datos de uso del sitio y es necesario para realizar las actualizaciones de Configuration Manager disponibles en la consola. Este rol también permite administrar dispositivos móviles con Microsoft Intune y MDM local. Una jerarquía solo admite una única instancia de este rol y tiene que encontrarse en el sitio de nivel superior de su jerarquía. Si expande un sitio primario independiente a una jerarquía más grande, desinstale el rol del sitio primario y, después, instálelo en el sitio de administración central. Para obtener más información, consulte [About the service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) (Sobre el punto de conexión del servicio).  
+
+#### <a name="software-update-point"></a>Punto de actualización de software
+Rol de sistema de sitio que se integra con Windows Server Update Services (WSUS) para proporcionar actualizaciones de software a los clientes de Configuration Manager. Este rol se admite en todos los sitios:  
+
+-   Instale este sistema de sitio en el sitio de administración central para la sincronización con WSUS.  
+
+-   Configure cada instancia de este rol en sitios primarios secundarios para la sincronización con el sitio de administración central.  
+
+-   También puede instalar un punto de actualización de software en sitios secundarios cuando la transferencia de datos por la red sea lenta.  
+
+Para obtener más información, vea [Planear actualizaciones de software](/sccm/sum/plan-design/plan-for-software-updates).  
+
+#### <a name="state-migration-point"></a>Punto de migración de estado
+Al migrar un equipo a un nuevo sistema operativo, este rol de sistema de sitio almacena datos de estado de usuario. Este rol se admite en sitios primarios y sitios secundarios. Se pueden instalar varias instancias de este rol en un sitio y en varios sitios de la misma jerarquía. Para obtener más información sobre cómo almacenar el estado de usuario al implementar un sistema operativo, vea [Administrar el estado del usuario](/sccm/osd/get-started/manage-user-state).  
 
 
--   **Punto de Endpoint Protection.** Rol del sistema de sitio que Configuration Manager utiliza para aceptar los términos de la licencia de Endpoint Protection y configurar la pertenencia predeterminada a Microsoft Active Protection Service. Una jerarquía admite una sola instancia de este rol, y esa debe estar en el sitio de nivel superior de la jerarquía (un sitio de administración central o el sitio primario independiente). Si expande un sitio primario independiente a una jerarquía más grande, debe desinstalar este rol desde el sitio primario y luego instalarlo en el sitio de administración central. Para obtener más información, vea [Endpoint Protection en System Center Configuration Manager](../../../protect/deploy-use/endpoint-protection.md).  
 
--   **Punto de inscripción.** Rol de sistema de sitio que utiliza certificados PKI en Configuration Manager para inscribir dispositivos móviles y equipos Mac. Aunque este rol solo se admite en sitios primarios, puede instalar varias instancias de él en un sitio o en varios sitios de la misma jerarquía.  
+## <a name="next-steps"></a>Pasos siguientes
 
-     Si un usuario inscribe dispositivos móviles mediante Configuration Manager y su cuenta de Active Directory se encuentra en un bosque que no es de confianza para el bosque del servidor de sitio, debe instalarse un punto de inscripción en el bosque del usuario. Después puede autenticarse el usuario.  
-
--   **Punto de proxy de inscripción.** Rol del sistema de sitio que administra solicitudes de inscripción de Configuration Manager por parte de dispositivos móviles y equipos Mac. Aunque este rol solo se admite en sitios primarios, puede instalar varias instancias de él en un sitio o en varios sitios de la misma jerarquía.  
-
-     Cuando admita dispositivos móviles en Internet, instale el punto de proxy de inscripción en una red perimetral de seguridad y el punto de inscripción en la intranet.  
-
--   **Conector de Exchange Server.** Para obtener información sobre este rol, vea [Administrar dispositivos móviles mediante System Center Configuration Manager y Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
-
--   **Punto de administración.** Rol del sistema de sitio que proporciona a los clientes información de ubicación de servicio y de directiva y recibe datos de configuración de los clientes.  
-
-    De forma predeterminada, este rol se instala en el equipo del servidor de sitio de nuevos sitios primarios y secundarios cuando se instala el sitio. Los sitios primarios admiten varias instancias de este rol. Los sitios secundarios admiten un único punto de administración para proporcionar un punto de contacto local para que los clientes obtengan directivas de usuario y equipo (un punto de administración en un sitio secundario se conoce como un punto de administración de proxy).  
-
-     Los puntos de administración se pueden configurar para admitir HTTP o HTTPs, así como compatibilidad con dispositivos móviles que se administren con la administración local de dispositivos móviles de System Center Configuration Manager. Puede utilizar [Réplicas de bases de datos para puntos de administración de System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md) para reducir la carga de CPU que los puntos de administración ejercen sobre el servidor de base de datos del sitio mientras atienden las solicitudes de servicio de los clientes.  
-
--   **Punto de servicios de informes.** Rol de sistema de sitio que se integra con SQL Server Reporting Services para crear y administrar informes para Configuration Manager. Este rol se admite en sitios primarios y en el sitio de administración central. Se pueden instalar varias instancias de él en un sitio admitido. Para obtener más información, consulte [Planeamiento de informes en System Center Configuration Manager](../../../core/servers/manage/planning-for-reporting.md).  
-
--   **Punto de conexión de servicio.** Rol de sistema de sitio que se usa para administrar dispositivos móviles con Microsoft Intune y MDM local. Este rol también carga los datos de uso del sitio y es necesario para realizar las actualizaciones de Configuration Manager disponibles en la consola de Configuration Manager. Una jerarquía admite una sola instancia de este rol, y esa debe estar en el sitio de nivel superior de la jerarquía (un sitio de administración central o el sitio primario independiente). Si expande un sitio primario independiente a una jerarquía más grande, debe desinstalar este rol desde el sitio primario y luego instalarlo en el sitio de administración central. Para obtener más información, consulte [Acerca del punto de conexión de servicio en System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md).  
-
--   **Punto de actualización de software.** Rol de sistema de sitio que se integra con Windows Server Update Services (WSUS) para proporcionar actualizaciones de software a los clientes de Configuration Manager. Este rol se admite en todos los sitios:  
-
-    -   Instale este sistema de sitio en el sitio de administración central para la sincronización con WSUS.  
-
-    -   Configure cada instancia de este rol en sitios primarios secundarios para la sincronización con el sitio de administración central.  
-
-    -   Considere también la posibilidad de instalar un punto de actualización de software en sitios secundarios cuando la transferencia de datos a través de la red sea lenta.  
-
-    Para obtener más información, consulte [Planear las actualizaciones de software en System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).  
-
--   **Punto de migración de estado.** Rol de sistema de sitio que almacena datos de estado de usuario cuando se migra un equipo a un nuevo sistema operativo. Este rol se admite en sitios primarios y sitios secundarios. Se pueden instalar varias instancias de este rol en un sitio y en varios sitios de la misma jerarquía. Para obtener más información sobre cómo almacenar el estado de usuario al implementar sistemas operativos, consulte [Administrar el estado de usuario en System Center Configuration Manager](../../../osd/get-started/manage-user-state.md).  
-
--   **Punto de Validador de mantenimiento del sistema.** Aunque este rol de sistema de sitio permanece visible en la consola de Configuration Manager,ya no se utiliza.  
-
-###  <a name="bkmk_proxy"></a> Roles de sistema de sitio que pueden utilizar un servidor proxy  
- Algunos roles de sistema de sitio de Configuration Manager requieren conexiones a Internet y usarán un servidor proxy cuando se configure uno para el servidor de sistema de sitio que hospeda el rol. Normalmente, esta conexión se realiza en el contexto del **sistema** del equipo donde está instalado el rol de sistema de sitio. La conexión no puede utilizar una configuración de proxy para cuentas de usuario habituales. Cuando se requiera un servidor proxy para realizar una conexión a Internet, debe configurar el equipo para ello:  
-
--   Puede configurar un servidor proxy al instalar un rol de sistema de sitio.  
-
--   Puede agregar o modificar una configuración de servidor proxy cuando use la consola de Configuration Manager.  
-
--   Se usa la misma configuración de servidor proxy para todos los roles de sistema de sitio en un servidor de sistema de sitio que pueda usar una configuración de este tipo. Si necesita roles de sistema de sitio diferentes para utilizar servidores proxy distintos, debe instalar los roles de sistema de sitio en equipos de servidor de sistema de sitio diferentes.  
-
--   Si modifica la configuración de servidor proxy o instala un nuevo rol de sistema de sitio en un equipo que ya tiene una, la nueva configuración sobrescribe la configuración original.  
-
-
-Para obtener los procedimientos sobre configuración del servidor proxy para roles de sistema de sitio, vea el tema [Agregar roles de sistema de sitio para System Center Configuration Manager](../../../core/servers/deploy/configure/add-site-system-roles.md).  
-
-Los siguientes son roles de sistema de sitio que pueden utilizar un servidor proxy:  
-
--   **Punto de sincronización de Asset Intelligence.** Este rol de sistema de sitio se conecta a Microsoft y usa una configuración de servidor proxy en el equipo que hospeda el punto de sincronización de Asset Intelligence.  
-
--   **punto de distribución basado en la nube.** Cuando use un punto de distribución basado en la nube, el sitio primario que administra el punto de distribución basado en la nube debe poder conectarse a Microsoft Azure para aprovisionar, supervisar y distribuir contenido en el punto de distribución. Si se necesita un servidor proxy para esta conexión, debe configurar el servidor proxy en el servidor del sitio primario. No se puede configurar un servidor proxy en el punto de distribución basado en la nube de Azure. Para obtener más información, vea la sección [Configurar parámetros proxy para sitios primarios que administran servicios en la nube](../../../core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md#BKMK_ConfigProxyforCloud) en el tema [Instalar puntos de distribución basados en la nube en Microsoft Azure para System Center Configuration Manager](../../../core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md).  
-
--   **Conector de Exchange Server.** Este rol de sistema de sitio se conecta a Exchange Server y usa una configuración de servidor proxy en el equipo que hospeda el conector de Exchange Server.  
-
--   **Punto de actualización de software.** Este rol de sistema de sitio puede requerir conexiones a Microsoft Update para descargar revisiones y sincronizar la información sobre las actualizaciones. Normalmente, cuando se configura el servidor proxy, cada rol de sistema de sitio en ese equipo que admite el uso del servidor proxy utiliza el servidor proxy. No se requiere ninguna configuración adicional. Una excepción a esto es el punto de actualización de software. De forma predeterminada, un punto de actualización de software no utiliza un servidor proxy disponible a menos que también se habiliten las siguientes opciones al configurar el punto de actualización de software:  
-
-    -   **Utilizar un servidor proxy al sincronizar las actualizaciones de software**  
-
-    -   **Utilizar un servidor proxy al descargar contenido mediante reglas de implementación automática**  
-
-    > [!TIP]  
-    >  Para poder seleccionar una de las opciones, debe configurarse un servidor proxy en el servidor de sistema de sitio que hospeda el punto de actualización de software. Sólo se utiliza el servidor proxy para las opciones específicas que seleccione.  
-
- Para obtener más información sobre servidores proxy para puntos de actualización de software, vea la sección "Configuración de servidor proxy" en el tema [Instalar y configurar un punto de actualización de software](../../../sum/get-started/install-a-software-update-point.md).  
-
--   **Punto de conexión de servicio.** Cuando se configura para estar en línea (no sin conexión), este rol de sistema de sitio se conecta a Microsoft Intune y al servicio en la nube de Microsoft.  
+Algunos roles de sistema de sitio de Configuration Manager necesitan conexiones a Internet. Si su entorno necesita tráfico de Internet para usar un servidor proxy, configure estos roles de sistema de sitio para que usen el proxy. Para obtener más información, vea [Compatibilidad de servidor proxy](/sccm/core/plan-design/network/proxy-server-support).  

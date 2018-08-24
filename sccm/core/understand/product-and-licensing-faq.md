@@ -2,7 +2,7 @@
 title: Preguntas más frecuentes sobre productos y licencias
 titleSuffix: Configuration Manager
 description: Encuentre respuestas a las preguntas comunes sobre productos y licencias de System Center Configuration Manager.
-ms.date: 04/30/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,21 +10,21 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 781ffffac4367fb899c37c50492390a65244e17d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9e58e11bec9441f73bff021c8a6a24d150777cbe
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340324"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385548"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Preguntas más frecuentes sobre las licencias y ramas de Configuration Manager
 
  *Se aplica a: System Center Configuration Manager (Rama actual), System Center Configuration Manager (Rama de mantenimiento a largo plazo)*
 
 ## <a name="summary"></a>Resumen
-Estas preguntas más frecuentes tratan las preguntas comunes sobre licencias de la Rama actual de System Center Configuration Manager y las versiones de la Rama de mantenimiento a largo plazo (LSTB), disponibles a través de los programas de Licencias por Volumen de Microsoft. Este artículo solo tiene fines informativos. No reemplaza ni sustituye ninguna documentación que trate sobre las licencias de System Center Configuration Manager. Para más información, consulte las licencias de producto para [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> y los [términos del producto](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). En las condiciones del producto se describen los términos de uso de todos los productos de Microsoft en las licencias por volumen.
+Estas preguntas más frecuentes tratan las preguntas comunes sobre licencias de la Rama actual de System Center Configuration Manager y las versiones de la Rama de mantenimiento a largo plazo (LSTB), disponibles a través de los programas de Licencias por Volumen de Microsoft. Este artículo solo tiene fines informativos. No reemplaza ni sustituye ninguna documentación que trate sobre las licencias de System Center Configuration Manager. Para más información, consulte las licencias de producto para [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> y los [términos del producto](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). En las condiciones del producto se describen los términos de uso de todos los productos de Microsoft en las licencias por volumen.
 
-Para más información acerca de las características de System Center Configuration Manager, consulte la [página del producto](https://www.microsoft.com/cloud-platform/system-center-configuration-manager).
+Para obtener más información acerca de las características de Configuration Manager, vea la [página del producto](https://www.microsoft.com/cloud-platform/system-center-configuration-manager).
 
 
 
@@ -66,6 +66,8 @@ EMS concede derechos para usar System Center Configuration Manager (Rama actual 
 Si su SA ha expirado después del 1 de octubre de 2016, dependiendo de bajo qué programa haya adquirido L&SA, puede conservar una licencia perpetua para usar la Rama de mantenimiento a largo plazo (LTSB). Si en estos momentos usa la Rama actual, debe desinstalarla y, después, instalar la LTSB. No existe ninguna compatibilidad de migración ni de conversión desde la Rama actual a LTSB.
 
 Si su SA ha expirado antes del 1 de octubre de 2016 y conservaba una licencia perpetua de System Center Configuration Manager, entonces su única opción para un uso continuado es instalar y usar System Center 2012 R2 Configuration Manager y sus Service Packs disponibles. Se le pidió desinstalar la Rama actual cuando su SA expiró, y volver a instalar esa versión anterior del producto. No existe ninguna compatibilidad de migración ni de cambiar de la Rama actual de System Center Configuration Manager a versiones anteriores de Configuration Manager.   
+
+Si usa System Center Endpoint Protection, primero debe desinstalarlo si su SA expira. System Center Endpoint Protection no ofrece derechos *L (licencia)* ni derechos perpetuos.<!--506238--> 
 
 
 ### <a name="bkmk_owncb"></a> ¿La rama actual es de mi propiedad?   

@@ -1,8 +1,8 @@
 ---
 title: Seguridad y privacidad de los clientes
 titleSuffix: Configuration Manager
-description: Obtenga información sobre la seguridad y privacidad de los clientes en System Center Configuration Manager.
-ms.date: 04/23/2017
+description: Obtenga información sobre seguridad y privacidad para los clientes de Configuration Manager.
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,293 +10,404 @@ ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 89b7664067747c9afb04c3a5dd059e81cfb2716e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3dfb749695ffb7a8ecdeab5e4fbed764023eb6e2
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341243"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385599"
 ---
-# <a name="security-and-privacy-for-clients-in-system-center-configuration-manager"></a>Seguridad y privacidad para clientes en System Center Configuration Manager
+# <a name="security-and-privacy-for-configuration-manager-clients"></a>Seguridad y privacidad para los clientes de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Este artículo contiene información de seguridad y privacidad para clientes de System Center Configuration Manager y para dispositivos móviles administrados mediante el conector de Exchange Server:  
+En este artículo, se describe información de privacidad y seguridad para los clientes de Configuration Manager. También se incluye información para los dispositivos móviles administrados con el [conector de Exchange Server](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
 
-##  <a name="BKMK_Security_Cliients"></a> Prácticas recomendadas de seguridad para clientes  
- Cuando Configuration Manager acepta datos de dispositivos que ejecutan el cliente de Configuration Manager, existe el riesgo de que los clientes ataquen el sitio. Por ejemplo, podrían enviar un inventario con formato incorrecto o intentar sobrecargar los sistemas de sitio. Implemente el cliente de Configuration Manager únicamente en dispositivos fiables. Además, utilice las siguientes prácticas recomendadas de seguridad para proteger el sitio de dispositivos no autorizados o comprometidos:  
 
- **Use certificados de infraestructura de claves públicas (PKI) para las comunicaciones de cliente con sistemas de sitio que ejecutan IIS.**  
+
+##  <a name="BKMK_Security_Clients"></a> Prácticas recomendadas de seguridad para clientes  
+
+El sitio de Configuration Manager acepta datos de dispositivos que ejecuten el cliente de Configuration Manager. Este comportamiento introduce el riesgo de clientes que puedan atacar al sitio. Por ejemplo, podrían enviar un inventario con formato incorrecto o intentar sobrecargar los sistemas de sitio. Implemente el cliente de Configuration Manager únicamente en dispositivos fiables. Además, utilice las siguientes prácticas recomendadas de seguridad para proteger el sitio de dispositivos no autorizados o comprometidos:  
+
+#### <a name="use-public-key-infrastructure-pki-certificates-for-client-communications-with-site-systems-that-run-iis"></a>Usar certificados de infraestructura de clave pública (PKI) para las comunicaciones de cliente con sistemas de sitio donde se ejecute IIS  
 
 -   Como una propiedad de sitio, configure **Configuración de sistema de sitio** para **HTTPS solamente**.  
 
--   Instale los clientes con la propiedad **/UsePKICert** de CCMSetup.  
+-   Instale clientes con la propiedad `UsePKICert` CCMSetup.  
 
 -   Utilice una lista de revocación de certificados (CRL) y asegúrese de que los clientes y los servidores de comunicación puedan acceder siempre a la misma.  
 
- Estos certificados son necesarios para los clientes de dispositivos móviles y para las conexiones de equipos cliente en Internet y, a excepción de los puntos de distribución, se recomiendan para todas las conexiones de cliente en la intranet.  
+Los clientes de dispositivos móviles y algunos clientes basados en Internet necesitan estos certificados. Microsoft recomienda usar estos certificados para todas las conexiones de cliente en la intranet.  
 
- Para obtener más información sobre los requisitos de los certificados PKI y sobre cómo se usan para proteger Configuration Manager, consulte [Requisitos de certificados PKI para System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md).  
+Para obtener más información sobre los requisitos de certificados PKI y cómo se usan para proteger Configuration Manager, vea [Requisitos de certificados PKI](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
- **Apruebe automáticamente los equipos cliente de dominios de confianza y compruebe y apruebe manualmente los demás equipos**  
 
- Puede configurar la aprobación para la jerarquía como manual, automática para equipos de dominios de confianza o automática para todos los equipos. El método de aprobación más seguro consiste en aprobar automáticamente los clientes que son miembros de dominios de confianza y, a continuación, comprobar y aprobar manualmente todos los demás equipos. No se recomienda aprobar automáticamente todos los clientes a menos que disponga de otros controles de acceso para evitar que los equipos no confiables accedan a la red.  
+#### <a name="automatically-approve-client-computers-from-trusted-domains-and-manually-check-and-approve-other-computers"></a>Apruebe automáticamente los equipos cliente de dominios de confianza y compruebe y apruebe manualmente los demás equipos  
 
- Con la aprobación se identifica un equipo cuando se confía en que está administrado por Configuration Manager si no se puede utilizar la autenticación PKI.  
+Si no puede usar la autenticación de PKI, la aprobación identifica un equipo en el que confía para que pueda administrarlo Configuration Manager. La jerarquía tiene las opciones siguientes para configurar la aprobación de cliente:  
+- Manual
+- Automático para equipos en dominios de confianza
+- Automático para todos los equipos  
 
- Para obtener más información sobre cómo aprobar equipos manualmente, consulte [Manage Clients from the Devices Node](../../../../core/clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode) (Administrar clientes desde el nodo Dispositivos).  
+El método de aprobación más seguro es aprobar automáticamente los clientes que pertenezcan a dominios de confianza. Después, compruebe y apruebe de forma manual el resto de los equipos. No le recomendamos que apruebe automáticamente todos los clientes, excepto si tiene otros controles de acceso para impedir que los equipos que no sean de confianza puedan acceder a la red.  
 
- **No utilice el bloqueo para evitar que los clientes accedan a la jerarquía de Configuration Manager**  
+Para obtener más información sobre cómo aprobar equipos de forma manual, vea [Administrar clientes desde el nodo de dispositivos](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode).  
 
- Los clientes bloqueados son rechazados por la infraestructura de Configuration Manager para que no se puedan comunicar con los sistemas de sitio para descargar directivas, cargar datos de inventario o enviar mensajes de estado. De todas formas, no debe usar el bloqueo para proteger la jerarquía de Configuration Manager de equipos no confiables cuando los sistemas de sitio aceptan conexiones de cliente HTTP. En este escenario, un cliente bloqueado podría volver a unirse al sitio con un nuevo certificado autofirmado e identificador de hardware. El bloqueo está diseñado para bloquear medios de arranque perdidos o comprometidos cuando se implementa un sistema operativo en clientes y cuando todos los sistemas de sitio aceptan conexiones de cliente de HTTPS. Si utiliza una infraestructura de clave pública (PKI) compatible con una lista de revocación de certificados (CRL), considere siempre la revocación de certificados como la primera línea de defensa contra certificados que puedan estar comprometidos. El bloqueo de clientes en Configuration Manager ofrece una segunda línea de defensa para proteger la jerarquía.  
 
- Para obtener más información, consulte [Determine whether to block clients in System Center Configuration Manager](../../../../core/clients/deploy/plan/determine-whether-to-block-clients.md) (Determinar si se deben bloquear clientes en System Center Configuration Manager).  
+#### <a name="dont-rely-on-blocking-to-prevent-clients-from-accessing-the-configuration-manager-hierarchy"></a>No use funciones de bloqueo para impedir que los clientes accedan a la jerarquía de Configuration Manager.  
 
- **Utilice los métodos de instalación de cliente más seguros que sean prácticos para su entorno:**  
+La infraestructura de Configuration Manager rechaza los clientes bloqueados. Los clientes bloqueados no pueden comunicarse con los sistemas de sitio para descargar directivas, cargar datos de inventario o enviar mensajes de estado. 
+
+El bloqueo se diseñó para los escenarios siguientes: 
+- Para bloquear medios de arranque perdidos o en peligro al implementar un SO en clientes.
+- Cuando todos los sistemas de sitio aceptan conexiones de cliente HTTPS. 
+
+Cuando los sistemas de sitio aceptan conexiones de cliente HTTP, no use el bloqueo para proteger la jerarquía de Configuration Manager ante equipos que no sean de confianza. En este escenario, un cliente bloqueado podría volver a unirse al sitio con un nuevo certificado autofirmado y un nuevo id. de hardware. 
+
+La revocación de certificado es la línea de defensa principal ante posibles certificados en peligro. Una lista de revocación de certificados (CRL) solo está disponible desde una infraestructura de clave pública (PKI) admitida. El bloqueo de clientes en Configuration Manager ofrece una segunda línea de defensa para proteger la jerarquía.  
+
+Para obtener más información, vea [Determinar si bloquear clientes](/sccm/core/clients/deploy/plan/determine-whether-to-block-clients).  
+
+
+#### <a name="use-the-most-secure-client-installation-methods-that-are-practical-for-your-environment"></a>Usar los métodos de instalación de cliente más seguros que sean prácticos para su entorno  
 
 -   Para los equipos de dominio, los métodos de instalación de clientes con directiva de grupo y de instalación de clientes basada en actualizaciones de software son más seguros que la instalación de inserción de cliente.  
 
--   La creación de imágenes y la instalación manual pueden ser muy seguras si aplica controles de acceso y controles de cambios.  
+-   Si aplica controles de acceso y controles de cambio, use métodos de instalación manual y creación de imágenes.  
 
- De todos los métodos de instalación de clientes, la instalación de inserción de cliente es el menos seguro debido a sus numerosas dependencias, que incluyen los permisos administrativos locales, el recurso compartido Admin$ y numerosas excepciones de firewall. Estas dependencias ocasionan un aumento de la superficie expuesta a ataques.  
+-   En la versión 1806 o posteriores, use la autenticación mutua de Kerberos con la instalación de inserción de cliente.  
 
- Para obtener más información sobre los diferentes métodos de instalación de cliente, consulte [Client installation methods in System Center Configuration Manager](../../../../core/clients/deploy/plan/client-installation-methods.md) (Métodos de instalación de cliente en System Center Configuration Manager).  
+De todos los métodos de instalación de cliente, la instalación de inserción de cliente es el menos seguro debido al gran número de dependencias que tiene. Entre estas dependencias, se incluyen los permisos administrativos locales, el recurso compartido Admin$ y las excepciones del firewall. El número y el tipo de estas dependencias hace que se incremente su superficie expuesta a ataques.  
 
- Además, siempre que sea posible, seleccione un método de instalación de clientes que requiera los mínimos permisos de seguridad en Configuration Manager, y restrinja los usuarios administrativos a los que se asignan roles de seguridad que incluyen permisos que se pueden utilizar para tareas que no sean la implementación de clientes. Por ejemplo, la actualización de cliente automática requiere el rol de seguridad **Administrador total** , que otorga todos los permisos de seguridad a un usuario administrativo.  
+A partir de la versión 1806, al usar la instalación de inserción de cliente, el sitio puede exigir la autenticación mutua de Kerberos si no permite revertir a NTLM antes de establecer la conexión. Esta mejora ayuda a proteger la comunicación entre el servidor y el cliente. Para obtener más información, vea [Instalar clientes con la instalación de inserción de cliente](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).<!--1358204-->  
 
- Para obtener más información sobre las dependencias y los permisos de seguridad necesarios para cada método de instalación de clientes, consulte la sección "Installation Method Dependencies" (Dependencias de los métodos de instalación) del tema [Prerequisites for Computer Clients](../../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#BKMK_prereqs_computers) (Requisitos previos de los equipos cliente).  
+Para obtener más información sobre los distintos tipos de instalación de clientes, vea [Métodos de instalación de cliente](/sccm/core/clients/deploy/plan/client-installation-methods).  
 
- **Si debe utilizar la instalación de inserción de cliente, tome medidas adicionales para proteger la cuenta de instalación de inserción de cliente**  
+Siempre que sea posible, seleccione un método de instalación de cliente que exija el número mínimo de permisos de seguridad en Configuration Manager. Restrinja los usuarios administrativos que tengan asignados roles de seguridad con permisos que puedan usarse para fines distintos de la implementación de clientes. Por ejemplo, para configurar la actualización de cliente automática, se necesita el rol de seguridad **Administrador total**, que concede a un usuario administrativo todos los permisos de seguridad.  
 
- Aunque esta cuenta debe ser miembro del grupo **Administradores** local de cada equipo en el que se va a instalar el software cliente de Configuration Manager, no agregue nunca la cuenta de instalación de inserción de cliente al grupo **Admins. del dominio**. En lugar de ello, cree un grupo global y agregue ese grupo global al grupo **Administradores** local de los equipos cliente. También puede crear un objeto de directiva de grupo para agregar una configuración de grupo restringido para agregar la cuenta de instalación de inserción de cliente al grupo **Administradores** local.  
+Para obtener más información sobre las dependencias y los permisos de seguridad necesarios para cada método de instalación de cliente, vea “Dependencias del método de instalación” en [Requisitos previos para clientes de equipos](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#BKMK_prereqs_computers).  
 
- Para mayor seguridad, cree varias cuentas de instalación de inserción de cliente, cada una con acceso administrativo a un número limitado de equipos, de modo que si una cuenta se ve comprometida solo se vean comprometidos los equipos cliente a los que tiene acceso dicha cuenta.  
 
- **Quite los certificados antes de la creación de imágenes del equipo cliente**  
+#### <a name="if-you-must-use-client-push-installation-take-additional-steps-to-secure-the-client-push-installation-account"></a>Si debe utilizar la instalación de inserción de cliente, tome medidas adicionales para proteger la cuenta de instalación de inserción de cliente  
 
- Si piensa implementar los clientes mediante el uso de la tecnología de creación de imágenes, quite siempre los certificados como los certificados PKI que incluyen la autenticación de cliente y los certificados autofirmados antes de capturar la imagen. Si no quita estos certificados, los clientes podrían suplantarse unos a otros y no se podrían comprobar los datos de cada cliente.  
+Esta cuenta necesita ser miembro del grupo de **administradores** locales en cada equipo donde se instale el cliente de Configuration Manager. Nunca agregue la cuenta de instalación de inserción de cliente al grupo **Administradores del dominio**. En su lugar, cree un grupo global y, después, agréguelo al grupo de **administradores** locales en los clientes. Cree un objeto de directiva de grupo para agregar una configuración de grupo restringido y agregar la cuenta de instalación de inserción de cliente al grupo de **administradores** locales.  
 
- Para obtener más información acerca del uso de Sysprep para preparar un equipo para la creación de imágenes, consulte la documentación de implementación de Windows.  
+Para mejorar la seguridad, cree varias cuentas de instalación de inserción de cliente, cada una con acceso de administrador a un número limitado de equipos. Si una cuenta pierde su carácter confidencial, solo estarán en peligro los equipos cliente a los que acceda esa cuenta.  
 
- **Asegúrese de que los equipos cliente de Configuration Manager obtienen una copia autorizada de estos certificados:**  
 
--   La clave raíz confiable de Configuration Manager  
+#### <a name="remove-certificates-before-imaging-clients"></a>Quitar los certificados antes de crear imágenes de clientes  
 
-     Si no extendió el esquema de Active Directory para Configuration Manager y los clientes no utilizan certificados PKI cuando se comunican con los puntos de administración, los clientes emplean la clave raíz confiable de Configuration Manager para autenticar los puntos de administración válidos. En este escenario, los clientes no tienen ninguna posibilidad de comprobar si el punto de administración es un punto de administración confiable para la jerarquía a menos que utilicen la clave raíz confiable. Sin la clave raíz confiable, un atacante experimentado podría dirigir los clientes a un punto de administración no autorizado.  
+Al implementar clientes con imágenes de SO, quite siempre los certificados antes de realizar la captura de la imagen. En estos certificados, se incluyen certificados PKI para la autenticación de cliente y certificados autofirmados. Si no quita estos certificados, los clientes podrían suplantarse entre sí. No se pueden verificar los datos de cada cliente.  
 
-     Si los clientes no pueden descargar la clave raíz confiable de Configuration Manager desde el catálogo global o mediante los certificados PKI, aprovisione previamente los clientes con la clave raíz confiable para asegurarse de que no puedan ser dirigidos a un punto de administración no autorizado. Para obtener más información, consulte [Planning for the Trusted Root Key](../../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) (Planeación de la clave raíz confiable).  
+Para obtener más información, vea [Crear una secuencia de tareas para capturar un sistema operativo](/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system).  
+
+
+#### <a name="ensure-that-the-configuration-manager-computer-clients-get-an-authorized-copy-of-these-certificates"></a>Comprobar que los clientes de equipos de Configuration Manager obtengan una copia autorizada de estos certificados  
+
+-   El certificado de clave raíz confiable de Configuration Manager  
+
+    Cuando las dos afirmaciones siguientes son verdaderas, los clientes usan la clave raíz confiable de Configuration Manager para autenticar puntos de administración válidos:  
+
+      - No ha extendido el esquema de Active Directory a Configuration Manager.
+      - Los clientes no usan certificados PKI cuando se comunican con puntos de administración.  
+
+    En este escenario, los clientes no pueden comprobar que el punto de administración es de confianza para la jerarquía, excepto si usan la clave raíz confiable. Sin la clave raíz confiable, un atacante experimentado podría dirigir los clientes a un punto de administración no autorizado.  
+
+    Cuando los clientes no pueden descargar la clave raíz confiable de Configuration Manager del catálogo global o mediante el uso de certificados PKI, aprovisione previamente los clientes con la clave raíz confiable. Esta acción garantiza que no se puedan dirigir a un punto de administración no autorizado. Para obtener más información, consulte [Planeación de la clave raíz confiable](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForRTK).  
 
 -   El certificado de firma de servidor de sitio  
 
-     Los clientes utilizan el certificado de firma de servidor de sitio para comprobar que el servidor de sitio firmó la directiva de cliente que descargan desde un punto de administración. Este certificado está autofirmado por el servidor de sitio y publicado en Servicios de dominio de Active Directory.  
+     Los clientes usan este certificado para verificar que el servidor del sitio firmó la directiva descargada desde un punto de administración. Este certificado está autofirmado por el servidor de sitio y publicado en Servicios de dominio de Active Directory.  
 
-     Si los clientes no pueden descargar el certificado de firma de servidor de sitio desde el catálogo global, de forma predeterminada lo descargan desde el punto de administración. Si el punto de administración se ve expuesto a una red no confiable (como Internet), instale manualmente el certificado de firma de servidor de sitio en los clientes para asegurarse de que no puedan ejecutar directivas de cliente alteradas desde un punto de administración comprometido.  
+     Cuando los clientes no pueden descargar el certificado de firma del servidor de sitio desde el catálogo global, de forma predeterminada lo descargarán desde el punto de administración. Si el punto de administración está expuesto a una red que no es de confianza (como Internet), instale de forma manual el certificado de firma del servidor de sitio en los clientes. Esta acción garantiza que no se puedan descargar directivas de cliente manipuladas desde un punto de administración en peligro.  
 
-     Para instalar manualmente el certificado de firma de servidor de sitio, utilice la propiedad de CCMSetup Client.msi **SMSSIGNCERT**. Para obtener más información, consulte [About client installation properties in System Center Configuration Manager](../../../../core/clients/deploy/about-client-installation-properties.md) (Acerca de las propiedades de instalación de clientes en System Center Configuration Manager).  
+     Para instalar manualmente el certificado de firma de servidor de sitio, utilice la propiedad de CCMSetup Client.msi **SMSSIGNCERT**. Para obtener más información, vea [Información sobre las propiedades de instalación de clientes](/sccm/core/clients/deploy/about-client-installation-properties).  
 
- **No utilice la asignación de sitio automática si el cliente va a descargar la clave raíz confiable desde el primer punto de administración con el que se pone en contacto**  
 
- Esta práctica recomendada de seguridad está vinculada a la entrada anterior. Para evitar el riesgo de que un nuevo cliente descargue la clave raíz confiable desde un punto de administración no autorizado, utilice la asignación de sitio automática sólo en los siguientes escenarios:  
+#### <a name="dont-use-automatic-site-assignment-if-the-client-downloads-the-trusted-root-key-from-the-first-management-point-it-contacts"></a>No usar la asignación automática de sitios si el cliente descarga la clave raíz confiable desde el primer punto de administración con el que establezca contacto  
 
--   El cliente puede acceder a la información de sitio de Configuration Manager que está publicada en Active Directory Domain Services.  
+Para evitar el riesgo de que un nuevo cliente descargue la clave raíz confiable desde un punto de administración no autorizado, use únicamente la asignación automática de sitios en los escenarios siguientes:  
+
+-   El cliente puede acceder a la información del sitio de Configuration Manager publicada en Active Directory Domain Services.  
 
 -   Se aprovisiona previamente el cliente con la clave raíz confiable.  
 
 -   Se utilizan certificados PKI de una entidad de certificación empresarial para establecer la confianza entre el cliente y el punto de administración.  
 
- Para obtener más información sobre la clave raíz confiable, consulte [Planning for the Trusted Root Key](../../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) (Planeación de la clave raíz confiable).  
+Para obtener más información sobre la clave raíz confiable, vea [Planear la clave raíz confiable](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForRTK).  
 
- **Instale equipos cliente con la opción de CCMSetup Client.msi SMSDIRECTORYLOOKUP=NoWINS**  
 
- El método de ubicación de servicio más seguro para que los clientes encuentren los sitios y los puntos de administración consiste en utilizar Active Directory Domain Services. Si no es posible, por ejemplo, porque no puede extender el esquema de Active Directory para Configuration Manager, o porque los clientes pertenecen a un grupo de trabajo o un bosque que no es de confianza, puede utilizar la publicación en DNS como método de ubicación de servicio alternativo. Si no se puede utilizar ninguno de los dos métodos, los clientes pueden recurrir al uso de WINS si el punto de administración no está configurado para las conexiones de cliente HTTPS.  
+#### <a name="install-client-computers-with-the-ccmsetup-clientmsi-option-smsdirectorylookupnowins"></a>Instale equipos cliente con la opción de CCMSetup Client.msi SMSDIRECTORYLOOKUP=NoWINS  
 
- Dado que la publicación en WINS es menos segura que los demás métodos de publicación, configure los equipos cliente para que no recurran al uso de WINS; para ello, especifique SMSDIRECTORYLOOKUP=NoWINS. Si debe utilizar WINS para la ubicación de servicio, utilice SMSDIRECTORYLOOKUP=WINSSECURE (configuración predeterminada), que utiliza la clave raíz confiable de Configuration Manager para validar el certificado autofirmado del punto de administración.  
+El método de ubicación de servicio más seguro para que los clientes encuentren los sitios y los puntos de administración consiste en utilizar Active Directory Domain Services. A veces, este método no puede aplicarse en algunos entornos. Por ejemplo, porque no se pueda extender el esquema de Active Directory para Configuration Manager, o bien porque los clientes se encuentren en un grupo de trabajo o bosque que no sea de confianza. Si este método no puede usarse, use la publicación en DNS como un método alternativo de ubicación del servicio. Si ambos métodos producen errores y el punto de administración no se configura para las conexiones de cliente HTTPS, los clientes pueden revertir al uso de WINS.  
+
+Publicar en WINS es menos seguro que el resto de los métodos de publicación. Para configurar los equipos cliente de forma que no reviertan al uso de WINS, especifique **SMSDIRECTORYLOOKUP=NoWINS**. Si necesita usar WINS para la ubicación del servicio, use **SMSDIRECTORYLOOKUP=WINSSECURE**. Esta configuración es la predeterminada. Usa la clave raíz confiable de Configuration Manager para validar el certificado autofirmado del punto de administración.  
 
 > [!NOTE]  
->  Cuando el cliente está configurado para SMSDIRECTORYLOOKUP=WINSSECURE y encuentra un punto de administración de WINS, el cliente comprueba su copia de la clave raíz confiable de Configuration Manager que se encuentra en WMI. Si la firma del certificado del punto de administración coincide con la copia del cliente de la clave raíz confiable, el certificado se valida y el cliente se comunica con el punto de administración que encontró mediante WINS. Si la firma del certificado del punto de administración no coincide con la copia del cliente de la clave raíz confiable, el certificado no es válido y el cliente no se puede comunicar con el punto de administración que encontró mediante WINS.  
+>  Si configura el cliente para **SMSDIRECTORYLOOKUP=WINSSECURE** y encuentra un punto de administración desde WINS, el cliente comprobará su copia de la clave raíz confiable de Configuration Manager que se encuentra en WMI.  
+> 
+> Si la firma del certificado de punto de administración coincide con la copia del cliente de la clave raíz confiable, el certificado se considerará válido. Después de validar el certificado, el cliente iniciará la comunicación con el punto de administración encontrado mediante el uso de WINS.  
+> 
+> Si la firma del certificado de punto de administración no coincide con la copia del cliente de la clave raíz confiable, el certificado no se considerará válido. En este escenario, el cliente no se comunica con el punto de administración encontrado mediante el uso de WINS.  
 
- **Asegúrese de que las ventanas de mantenimiento son lo suficientemente grandes como para implementar las actualizaciones de software imprescindibles**  
 
- Puede configurar ventanas de mantenimiento para recopilaciones de dispositivos para restringir los momentos en los que Configuration Manager puede instalar software en estos dispositivos. Si configura una ventana de mantenimiento demasiado pequeña, es posible que el cliente no pueda instalar las actualizaciones de software imprescindibles, lo que hace que el cliente sea vulnerable a los ataques que la actualización de software mitiga.  
+#### <a name="make-sure-that-maintenance-windows-are-large-enough-to-deploy-critical-software-updates"></a>Asegúrese de que las ventanas de mantenimiento son lo suficientemente grandes como para implementar las actualizaciones de software imprescindibles  
 
- **En el caso de los dispositivos de Windows Embedded con filtros de escritura, tome medidas de seguridad adicionales para reducir la superficie expuesta a ataques si Configuration Manager deshabilita los filtros de escritura para conservar las instalaciones de software y los cambios**  
+Las ventanas de mantenimiento para las colecciones de dispositivos restringen los períodos en que Configuration Manager puede instalar software en estos dispositivos. Si configura una ventana de mantenimiento demasiado reducida, es posible que el cliente no pueda instalar actualizaciones de software críticas. Este comportamiento deja vulnerable al cliente ante cualquier ataque que mitigue la actualización de software.  
 
- Cuando hay filtros de escritura habilitados en los dispositivos de Windows Embedded, cualquier instalación de software o cambio se realiza solamente en la superposición y no se conserva después de reiniciarse el dispositivo. Si utiliza Configuration Manager para deshabilitar temporalmente los filtros de escritura para conservar las instalaciones de software y los cambios, durante este periodo, el dispositivo incrustado es vulnerable a posibles cambios de todos los volúmenes, lo que incluye las carpetas compartidas.  
 
- Aunque Configuration Manager bloquea el equipo durante este periodo para que solo los administradores locales puedan iniciar sesión, siempre que sea posible, tome medidas de seguridad adicionales para proteger el equipo. Por ejemplo, habilite restricciones adicionales en el firewall y desconecte el dispositivo de la red.  
+#### <a name="take-additional-security-precautions-to-reduce-the-attack-surface-on-windows-embedded-devices-with-write-filters"></a>Medidas de seguridad adicionales para reducir la superficie expuesta a ataques en dispositivos de Windows Embedded con filtros de escritura  
 
- Si utiliza ventanas de mantenimiento para conservar los cambios, planee las ventanas con cuidado de modo que el tiempo durante el que los filtros de escritura pueden estar deshabilitados sea lo más corto posible pero se disponga de tiempo suficiente para que las instalaciones de software y los reinicios se completen.  
+Al habilitar filtros de escritura en dispositivos de Windows Embedded, las instalaciones de software o los cambios solo se realizan en la superposición. Estos cambios no persisten después de reiniciar el dispositivo. Si usa Configuration Manager para deshabilitar los filtros de escritura, durante este período, el dispositivo incrustado será vulnerable a cambios en todos los volúmenes. Entre estos volúmenes, también se incluyen las carpetas compartidas.  
 
- **Si utiliza la instalación de clientes basada en actualizaciones de software e instala una versión posterior del cliente en el sitio, actualice la actualización de software que está publicada en el punto de actualización de software para que los clientes reciban la versión más reciente**  
+Configuration Manager bloquea el equipo durante este período para que solo puedan iniciar sesión los administradores locales. Siempre que sea posible, tome medidas de seguridad adicionales para proteger el equipo. Por ejemplo, habilite restricciones adicionales en el firewall.  
 
- Si instala una versión posterior del cliente en el sitio, por ejemplo, si actualiza el sitio, la actualización de software de la implementación de cliente que está publicada en el punto de actualización de software no se actualiza automáticamente. Debe volver a publicar el cliente de Configuration Manager en el punto de actualización de software y hacer clic en **Sí** para actualizar el número de versión.  
+Si usa ventanas de mantenimiento para que persistan los cambios, planee estas ventanas cuidadosamente. Minimice el tiempo en que estarán deshabilitados los filtros de escritura, pero asegúrese de que sean lo suficientemente amplios para permitir que se completen las instalaciones de software y los reinicios.  
 
- Para obtener más información, consulte el procedimiento “To publish the Configuration Manager client to the software update point” (Para publicar el cliente de Configuration Manager en el punto de actualización de software) del tema [How to Install Configuration Manager Clients by Using Software Update-Based Installation](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientSUP) (Instalación de clientes de Configuration Manager mediante la instalación basada en actualizaciones de software).  
 
- **Configure la opción de Agente de equipo del dispositivo cliente Suspender indicación de PIN de BitLocker en el reinicio como Siempre solo para los equipos de confianza que tienen acceso físico restringido**  
+#### <a name="use-the-latest-client-version-with-software-update-based-client-installation"></a>Usar la versión del cliente más reciente con la instalación de cliente basada en actualizaciones de software
 
- Si configura esta opción del cliente como **Siempre**, Configuration Manager puede llevar a cabo la instalación de software para garantizar que se instalan las actualizaciones de software imprescindibles y que se reanudan los servicios. Sin embargo, si un atacante intercepta el proceso de reinicio, podría tomar el control del equipo. Utilice esta configuración sólo si confía en el equipo y el acceso físico al equipo está restringido. Por ejemplo, esta configuración podría ser apropiada para los servidores de un centro de datos.  
+Si usa la instalación de cliente basada en actualizaciones de software e instala una versión posterior del cliente en el sitio, actualice la actualización de software publicada. Después, el cliente recibirá la versión más reciente desde el punto de actualización de software.  
 
- **No configure la opción de Agente de equipo del dispositivo cliente Directiva de ejecución de PowerShell como Desviar.**  
+Al actualizar el sitio, no se actualizará automáticamente la actualización de software para la implementación de cliente que se publique en el punto de actualización de software. Vuelva a publicar el cliente de Configuration Manager en el punto de actualización de software y actualice el número de versión.  
 
- Esta opción del cliente permite que el cliente de Configuration Manager ejecute scripts de PowerShell sin firmar, con lo que podría ejecutarse malware en los equipos cliente. Si debe seleccionar esta opción, utilice una configuración de cliente personalizada y asígnela sólo a los equipos cliente que deben ejecutar scripts de PowerShell sin firmar.  
+Para obtener más información, vea [Instalar clientes de Configuration Manager con la instalación basada en actualizaciones de software](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientSUP).  
+
+
+#### <a name="only-suspend-bitlocker-pin-entry-on-trusted-and-restricted-access-devices"></a>Solo suspender la indicación de PIN de BitLocker en dispositivos con acceso restringido y de confianza  
+
+Solo establezca la opción de cliente **Suspender indicación de PIN de BitLocker en el reinicio** en **Siempre** en los equipos en los que confíe y que tengan restringido el acceso físico.
+
+Al establecer esta opción de cliente en **Siempre**, Configuration Manager puede completar la instalación de software. Este comportamiento facilita la instalación de actualizaciones de software críticas y la reanudación de los servicios. Si un atacante intercepta el proceso de reinicio, podría tomar el control del equipo. Use esta opción solo cuando confíe en el equipo y cuando el acceso físico al equipo esté restringido. Por ejemplo, esta configuración podría ser adecuada para los servidores de un centro de datos.  
+
+Para obtener más información sobre esta configuración de cliente, vea [Información sobre la configuración de clientes](/sccm/core/clients/deploy/about-client-settings#suspend-bitlocker-pin-entry-on-restart).  
+
+
+#### <a name="dont-bypass-powershell-execution-policy"></a>No omitir la directiva de ejecución de PowerShell   
+
+Si establece la configuración del cliente de Configuration Manager **Directiva de ejecución de PowerShell** en **Omitir**, Windows permitirá que se ejecuten scripts de PowerShell no firmados. Este comportamiento podría permitir que se ejecutara malware en los equipos cliente. Cuando la organización exige esta opción, use una configuración de cliente personalizada. Asígnela solo a los equipos cliente donde sea necesario ejecutar scripts de PowerShell no firmados.  
+
+Para obtener más información sobre esta configuración de cliente, vea [Información sobre la configuración de clientes](/sccm/core/clients/deploy/about-client-settings#powershell-execution-policy).  
+
+
 
 ##  <a name="bkmk_mobile"></a> Prácticas recomendadas de seguridad para dispositivos móviles  
- **Para dispositivos móviles que se inscriben con Configuration Manager y compatibles con Internet: Instale el punto de proxy de inscripción en una red perimetral y el punto de inscripción en la intranet**  
 
- Esta separación de roles facilita la protección del punto de inscripción contra los ataques. Si el punto de inscripción se ve comprometido, un atacante podría obtener certificados para la autenticación y robar las credenciales de los usuarios que inscriben sus dispositivos móviles.  
 
- **Para dispositivos móviles: Configure la contraseña para facilitar la protección de los dispositivos móviles contra el acceso no autorizado**  
+#### <a name="install-the-enrollment-proxy-point-in-a-perimeter-network-and-the-enrollment-point-in-the-intranet"></a>Instale el punto de proxy de inscripción en una red perimetral y el punto de inscripción en la intranet  
 
- Para dispositivos móviles inscritos por Configuration Manager: utilice un elemento de configuración de dispositivo móvil para configurar la contraseña de modo que la complejidad de la contraseña sea el PIN y la longitud de contraseña mínima sea al menos la longitud predeterminada.  
+Para los dispositivos móviles basados en Internet que inscriba con Configuration Manager, instale el punto de proxy de inscripción en una red perimetral y el punto de inscripción en la intranet. Esta separación de roles facilita la protección del punto de inscripción contra los ataques. Si un atacante pone en peligro el punto de inscripción, podría obtener los certificados para la autenticación. También podría robar las credenciales de los usuarios que hayan inscrito sus dispositivos móviles.  
 
- Para dispositivos móviles que no tienen el cliente de Configuration Manager instalado pero que se administran con el conector de Exchange Server: configure la **Configuración de contraseña** del conector de Exchange Server de modo que la complejidad de la contraseña sea el PIN y especifique al menos la longitud predeterminada para la longitud de contraseña mínima.  
 
- **Para dispositivos móviles: Para facilitar la prevención de alteraciones de la información de inventario y la información de estado, permita que las aplicaciones se ejecuten solo si están firmadas por empresas de confianza y no permita que se instalen archivos sin firmar**  
+#### <a name="configure-the-password-settings-to-help-protect-mobile-devices-from-unauthorized-access"></a>Configure la contraseña para facilitar la protección de los dispositivos móviles contra el acceso no autorizado  
 
- Para ver más dispositivos móviles inscritos por Configuration Manager: utilice un elemento de configuración de dispositivo móvil para configurar la opción de seguridad **Aplicaciones sin firmar** como **Prohibido** y configure **Instalación de archivos sin firmar** de modo que sea una fuente de confianza.  
+*Para dispositivos móviles inscritos con Configuration Manager*: use un elemento de configuración de dispositivo móvil para configurar la complejidad de contraseña como el PIN. Especifique al menos la longitud mínima de la contraseña predeterminada.  
 
- Para dispositivos móviles que no tienen el cliente de Configuration Manager instalado pero que se administran mediante el conector de Exchange Server: configure la **Configuración de la aplicación** del conector de Exchange Server de modo que **Instalación de archivos sin firmar** y **Aplicaciones sin firmar** se configuren como **Prohibido**.  
+*Para dispositivos móviles que no tienen instalado el cliente de Configuration Manager, pero están administrados con el conector de Exchange Server*: configure las **opciones de contraseña** para el conector de Exchange Server de forma que la complejidad de contraseña sea el PIN. Especifique al menos la longitud mínima de la contraseña predeterminada.  
 
- **Para dispositivos móviles: Contribuya a evitar ataques de elevación de privilegios mediante el bloqueo del dispositivo móvil cuando no se utiliza**  
 
- Para ver más dispositivos móviles inscritos por Configuration Manager: utilice un elemento de configuración de dispositivo móvil para configurar la opción de contraseña **Tiempo de inactividad en minutos antes de que se bloquee el dispositivo móvil**.  
+#### <a name="only-allow-applications-to-run-that-are-signed-by-companies-that-you-trust"></a>Solo permitir la ejecución de aplicaciones firmadas por compañías en las que confíe  
 
- Para dispositivos móviles que no tienen el cliente de Configuration Manager instalado pero que se administran mediante el conector de Exchange Server: configure la **Configuración de contraseña** del conector de Exchange Server para configurar **Tiempo de inactividad en minutos antes de que se bloquee el dispositivo móvil**.  
+Ayuda a impedir la manipulación de información de inventario e información de estado al permitir que las aplicaciones solo se ejecuten cuando estén firmadas por compañías en la se confíe. No permita que los dispositivos instalen archivos no firmados.  
 
- **Para dispositivos móviles: evite la elevación de privilegios mediante la restricción de los usuarios que pueden inscribir sus dispositivos móviles.**  
+*Para dispositivos móviles inscritos con Configuration Manager*: use un elemento de configuración de dispositivo móvil para establecer la opción de seguridad **Aplicaciones sin firmar** en **Prohibido**. Configure las **Instalaciones de archivos sin firmar** para que sean un origen de confianza.  
 
- Utilice una configuración de cliente personalizada en lugar de la configuración de cliente predeterminada para permitir sólo a los usuarios autorizados que inscriban sus dispositivos móviles.  
+*Para dispositivos móviles que no tienen instalado el cliente de Configuration Manager, pero están administrados con el conector de Exchange Server*: establezca la **Configuración de aplicación** del conector de Exchange Server de forma que la **Instalación de archivos sin firmar** y las **Aplicaciones sin firmar** estén **Prohibidas**.  
 
- **Para dispositivos móviles: no implemente aplicaciones para usuarios que tienen dispositivos móviles inscritos por Configuration Manager o Microsoft Intune en los siguientes escenarios:**  
 
--   Cuando más de una persona utiliza el dispositivo móvil.  
+#### <a name="lock-mobile-devices-when-not-in-use"></a>Bloquear los dispositivos móviles cuando no estén en uso  
 
--   Cuando un administrador inscribe el dispositivo en nombre de un usuario.  
+Ayuda a impedir los ataques de elevación de privilegios al bloquear el dispositivo móvil cuando no esté en uso.
 
--   Cuando el dispositivo se transfiere a otra persona sin retirarlo y volver a inscribirlo.  
+*Para dispositivos móviles inscritos con Configuration Manager*: use un elemento de configuración de dispositivo móvil para configurar la opción de contraseña **Tiempo de inactividad en minutos antes de que se bloquee el dispositivo móvil**.  
 
- Se crea una relación de afinidad de dispositivo de usuario durante la inscripción, que permite asignar el usuario que realiza la inscripción al dispositivo móvil. Si otro usuario utiliza el dispositivo móvil, podrá ejecutar las aplicaciones implementadas para el usuario original, lo que podría ocasionar una elevación de privilegios. Asimismo, si un administrador inscribe el dispositivo móvil para un usuario, las aplicaciones implementadas para el usuario no se instalarán en el dispositivo móvil, sino que en su lugar podrían instalarse las aplicaciones implementadas para el administrador.  
+*Para dispositivos móviles que no tienen instalado el cliente de Configuration Manager, pero están administrados con el conector de Exchange Server*: configure las **opciones de contraseña** para el conector de Exchange Server de forma que se establezca el **Tiempo de inactividad en minutos antes de que se bloquee el dispositivo móvil**.  
 
- A diferencia de la afinidad de dispositivo de usuario para equipos Windows, no se puede definir manualmente la información de la afinidad de dispositivo de usuario para los dispositivos móviles inscritos por Microsoft Intune.  
 
- Si transfiere la propiedad de un dispositivo móvil inscrito mediante Intune, retire el dispositivo móvil de Intune para quitar la afinidad de dispositivo de usuario y, después, pida al usuario actual que vuelva a inscribirlo.  
+#### <a name="restrict-the-users-who-can-enroll-their-mobile-devices"></a>Restringir los usuarios que pueden inscribir sus dispositivos móviles  
 
- **Para dispositivos móviles: Asegúrese de que los usuarios inscriben sus propios dispositivos móviles para Microsoft Intune**  
+Contribuya a evitar ataques de elevación de privilegios mediante la restricción de los usuarios que pueden inscribir sus dispositivos móviles. Utilice una configuración de cliente personalizada en lugar de la configuración de cliente predeterminada para permitir sólo a los usuarios autorizados que inscriban sus dispositivos móviles.  
 
- Dado que se crea una relación de afinidad de dispositivo de usuario durante la inscripción, que permite asignar el usuario que realiza la inscripción al dispositivo móvil, si un administrador inscribe el dispositivo móvil para un usuario, las aplicaciones implementadas para el usuario no se instalarán en el dispositivo móvil, sino que en su lugar podrían instalarse las aplicaciones implementadas para el administrador.  
 
- **Para el conector de Exchange Server: Asegúrese de que la conexión entre el servidor de sitio de Configuration Manager y el equipo con Exchange Server está protegida**  
+#### <a name="user-device-affinity-guidance-for-mobile-devices"></a>Guía de afinidad entre usuario y dispositivo para dispositivos móviles  
 
- Utilice IPsec si se usa Exchange Server local; Exchange hospedado protege automáticamente la conexión mediante SSL.  
+No implemente aplicaciones a los usuarios que tengan dispositivos móviles inscritos por Configuration Manager o Microsoft Intune en los escenarios siguientes:  
 
- **Para el conector de Exchange Server: utilice el principio de privilegios mínimos para el conector**  
+-   Más de una persona usa el dispositivo móvil.  
 
- Para ver una lista de los cmdlets mínimos que necesita el conector de Exchange Server, consulte [Manage mobile devices with System Center Configuration Manager and Exchange](../../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md) (Administrar dispositivos móviles con System Center Configuration Manager y Exchange).  
+-   Un administrador ha inscrito el dispositivo en nombre de un usuario.  
+
+-   El dispositivo se transfiere a otra persona sin retirarlo y, después, volver a inscribirlo.  
+
+La inscripción de dispositivos crea una relación de afinidad entre usuario y dispositivo. Esta relación asigna el usuario que realiza la inscripción al dispositivo móvil. Si otro usuario usa el dispositivo móvil, podría ejecutar las aplicaciones implementadas para el usuario original, lo que podría causar una elevación de privilegios. De forma similar, si un administrador inscribe el dispositivo móvil para un usuario, las aplicaciones implementadas para el usuario no se instalarán en el dispositivo móvil. En su lugar, podrían instalarse las aplicaciones implementadas para el administrador.  
+
+Al contrario que la afinidad entre usuario y dispositivo para equipos con Windows, no se puede definir de forma manual la información de afinidad entre usuario y dispositivo para los dispositivos móviles inscritos mediante Microsoft Intune.  
+
+Si transfiere la propiedad de un dispositivo móvil inscrito por Intune, primero tendrá que retirar el dispositivo móvil de Intune. Esta acción quitará la relación de afinidad entre usuario y dispositivo. Después, pida al usuario actual que vuelva a inscribir el dispositivo.  
+
+
+#### <a name="make-sure-that-users-enroll-their-own-mobile-devices-for-microsoft-intune"></a>Asegúrese de que los usuarios inscriban sus propios dispositivos móviles para Microsoft Intune.  
+
+Durante la inscripción, se crea una relación de afinidad entre usuario y dispositivo. Esta acción asigna el usuario que realiza la inscripción al dispositivo móvil. Si un administrador inscribe el dispositivo móvil para un usuario, las aplicaciones implementadas en el usuario no se instalarán en el dispositivo móvil. En su lugar, podrían instalarse las aplicaciones implementadas para el administrador.  
+
+
+#### <a name="protect-the-connection-between-the-configuration-manager-site-server-and-the-exchange-server"></a>Proteger la conexión entre el servidor de sitio de Configuration Manager y Exchange Server   
+
+Si el servidor Exchange se encuentra en un entorno local, use IPsec. Un entorno hospedado de Exchange protege automáticamente la conexión mediante SSL.  
+
+
+#### <a name="use-the-principle-of-least-privileges-for-the-connector"></a>Utilice el principio de privilegios mínimos para el conector  
+
+Para obtener una lista de los cmdlet mínimos que necesita el conector de Exchange Server, vea [Administrar dispositivos móviles con Configuration Manager y Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
+
+
 
 ##  <a name="bkmk_macs"></a> Prácticas recomendadas de seguridad para equipos Mac  
- **Para equipos Mac: almacene y acceda a los archivos de origen del cliente desde una ubicación segura.**  
 
- Configuration Manager no comprueba si se ha manipulado estos archivos de origen del cliente antes de instalar o inscribir el cliente en el equipo Mac. Descargue esos archivos desde un origen de confianza y almacénelos y tenga acceso a ellos de forma segura.  
 
- **Para equipos Mac: Independientemente de Configuration Manager, supervise el periodo de validez del certificado inscrito en los usuarios y haga un seguimiento de este.**  
+#### <a name="store-and-access-the-client-source-files-from-a-secured-location"></a>Almacenar y acceder a archivos de origen de cliente desde una ubicación segura  
 
- Para garantizar la continuidad de la actividad, supervise el periodo de validez de los certificados que utiliza para los equipos Mac y realice un seguimiento del mismo. Configuration Manager no admite la renovación automática de este certificado ni le avisa cuando el certificado está a punto de expirar. Un periodo de validez típico es 1 año.  
+Antes de instalar o inscribir el cliente en un equipo Mac, Configuration Manager no verifica si los archivos de origen de cliente han sido manipulados. Descargue los archivos desde un origen de confianza. Almacénelos y acceda a estos de forma segura.  
 
- Para obtener información sobre cómo renovar el certificado, consulte [Renewing the Mac Client Certificate Manually](../../../../core/clients/deploy/deploy-clients-to-macs.md#renewing-the-mac-client-certificate) (Renovación manual del certificado de cliente Mac).  
 
- **Para equipos Mac: considere la posibilidad de configurar el certificado de CA raíz de confianza de modo que sea de confianza solo para el protocolo SSL y ayudar, así, a proteger contra la elevación de privilegios.**  
+#### <a name="monitor-and-track-the-validity-period-of-the-certificate"></a>Supervisar y realizar un seguimiento del período de validez del certificado  
 
- Cuando inscriba equipos Mac, se instalará automáticamente un certificado de usuario para administrar el cliente de Configuration Manager, junto con el certificado raíz de confianza al que se vincula el certificado de usuario. Si desea restringir la confianza de este certificado raíz únicamente al protocolo SSL, puede utilizar el siguiente procedimiento.  
+Para garantizar la continuidad de la actividad, supervise el periodo de validez de los certificados que utiliza para los equipos Mac y realice un seguimiento del mismo. Configuration Manager no renueva automáticamente el certificado ni le advierte de que este va a expirar. El período de validez típico suele ser de un año.  
 
- Una vez efectuado este procedimiento, no se confiaría en el certificado raíz para validar protocolos diferentes de SSL (por ejemplo, Correo seguro (S/MIME), Protocolo de autenticación extensible (EAP) o la firma de código).  
+Para obtener más información sobre cómo renovar el certificado, vea [Renovar de forma manual el certificado de cliente Mac](/sccm/core/clients/deploy/deploy-clients-to-macs#renewing-the-mac-client-certificate).  
 
-> [!NOTE]  
->  También puede utilizar este procedimiento si ha instalado el certificado de cliente independientemente de Configuration Manager.  
 
- Para restringir el certificado de entidad emisora raíz al protocolo SSL solo:  
+#### <a name="configure-the-trusted-root-certificate-for-ssl-only"></a>Configurar el certificado raíz de confianza solo para SSL  
+
+Para facilitar la protección contra la elevación de privilegios, configure el certificado de la entidad de certificación raíz de confianza para que solo confíe en el protocolo SSL.
+
+Al inscribir equipos Mac, se instala automáticamente un certificado de usuario para administrar el cliente de Configuration Manager. En este certificado de usuario, se incluyen los certificados raíz de confianza en esta cadena de confianza. Para restringir la confianza de este certificado raíz solo al protocolo SSL, siga este procedimiento:  
 
 1.  En el equipo Mac, abra una ventana de terminal.  
 
-2.  Escriba el comando **sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access**  
+2.  Escriba este comando: `sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access`  
 
-3.  En el cuadro de diálogo **Acceso a llaveros** , en la sección **Llaves** , haga clic en **Sistema**y, a continuación, en la sección **Categoría** , haga clic en **Certificados**.  
+3.  En el cuadro de diálogo **Acceso a Llaveros**, en la sección **Llaveros**, haga clic en **Sistema**. Después, en la sección **Categoría**, haga clic en **Certificados**.  
 
-4.  Busque y haga doble clic en el certificado de entidad emisora raíz para el certificado de cliente de Mac.  
+4.  Busque el certificado de CA raíz para el certificado de cliente Mac y haga doble clic en este.  
 
 5.  En el cuadro de diálogo para el certificado de entidad emisora raíz, expanda la sección **Confianza** y a continuación, realice los siguientes cambios:  
 
-    1.  Para la configuración **Al utilizar este certificado** , cambie la configuración predeterminada de **Confiar siempre** a **Usar ajustes por omisión**.  
+    1.  **Al usar este certificado**: cambie la opción **Confiar siempre** a **Usar valores predeterminados del sistema**.  
 
-    2.  Para la configuración **Secure Sockets Layer (SSL)** , cambie **ningún valor especificado** a **Confiar siempre**.  
+    2.  **Capa de sockets seguros (SSL)**: cambie la opción **No se especificó ningún valor** a **Confiar siempre**.  
 
-6.  Cierre el cuadro de diálogo; cuando se le solicite, escriba la contraseña del administrador y, luego, haga clic en **Actualizar ajustes**.  
+6.  Cierre el cuadro de diálogo. Cuando se le pida, escriba la contraseña del administrador y, después, haga clic en **Actualizar configuración**.  
+
+Cuando se complete el procedimiento, solo se confiará en el certificado raíz para validar el protocolo SSL. Otros protocolos en los que no confía este certificado raíz son Correo seguro (S/MIME), Autenticación extensible (EAP) o la firma de código.  
+
+> [!NOTE]  
+>  Además, siga este procedimiento si ha instalado el certificado de cliente de forma independiente de Configuration Manager.  
+
+
 
 ##  <a name="BKMK_SecurityIssues_Clients"></a> Problemas de seguridad de los clientes de Configuration Manager  
- Los siguientes problemas de seguridad no disponen de mitigación:  
 
--   No se autentican los mensajes de estado  
+Los siguientes problemas de seguridad no disponen de mitigación:  
 
-     No se realiza la autenticación de los mensajes de estado. Cuando un punto de administración acepta conexiones de cliente HTTP, cualquier dispositivo puede enviar mensajes de estado al punto de administración. Si el punto de administración acepta conexiones de cliente HTTPS solamente, un dispositivo debe obtener un certificado de autenticación de cliente válido de una entidad de certificación raíz de confianza, pero también podría entonces enviar cualquier tipo de mensaje de estado. Si un cliente envía un mensaje de estado no válido se descartará.  
 
-     Hay varios posibles ataques contra esta vulnerabilidad. Un atacante podría enviar un mensaje de estado ficticio para pasar a ser miembro de una recopilación basada en consultas de mensaje de estado. Cualquier cliente podría iniciar una denegación de servicio contra el punto de administración al desbordarlo con mensajes de estado. Si los mensajes de estado desencadenan acciones en las reglas de filtro de mensajes de estado, un atacante podría desencadenar la regla de filtro de mensajes de estado. Un atacante también podría enviar un mensaje de estado que podría invalidar la información de supervisión.  
+#### <a name="status-messages-arent-authenticated"></a>Los mensajes de estado no se autentican  
 
--   Las directivas pueden redestinarse a clientes sin destino  
+No se realiza la autenticación de los mensajes de estado. Cuando un punto de administración acepta conexiones de cliente HTTP, cualquier dispositivo puede enviar mensajes de estado al punto de administración. Si el punto de administración solo admite conexiones de cliente HTTPS, es necesario que un dispositivo tenga un certificado de autenticación de cliente válido, pero también podría enviar cualquier mensaje de estado. El punto de administración descarta los mensajes de estado no válidos recibidos de un cliente.  
 
-     Existen varios métodos que los atacantes podrían utilizar para hacer que una directiva destinada a un cliente se aplique a un cliente completamente diferente. Por ejemplo, el atacante de un cliente de confianza podría enviar información falsa de inventario o de detección para agregar el equipo a una recopilación a la que no debería pertenecer y, a continuación, recibir todas las implementaciones de dicha recopilación. Aunque existen controles para impedir que los atacantes modifiquen las directivas directamente, los atacantes podrían utilizar una directiva existente para volver a formatear y volver a implementar un sistema operativo y enviarlo a un equipo diferente, creando así una denegación de servicio. Estos tipos de ataques requieren una sincronización precisa y amplios conocimientos de la infraestructura de Configuration Manager.  
+Existen posibles ataques frente a esta vulnerabilidad: 
+- Un atacante podría enviar un mensaje de estado falso para convertirse en miembro de una colección basada en consultas de mensajes de estado. 
+- Cualquier cliente podría iniciar una denegación de servicio contra el punto de administración al desbordarlo con mensajes de estado. 
+- Si los mensajes de estado desencadenan acciones en las reglas de filtro de mensajes de estado, un atacante podría desencadenar la regla de filtro de mensajes de estado. 
+- Un atacante podría enviar un mensaje de estado que hiciera que la información de los informes no fuera precisa.  
 
--   Los registros de cliente permiten el acceso de usuario  
 
-     Todos los archivos de registro de cliente permiten a los usuarios el acceso de lectura y a los usuarios interactivos el acceso de escritura. Si se habilita el registro detallado, los atacantes podrían leer los archivos de registro para buscar información acerca de vulnerabilidades de sistema o compatibilidad. Los procesos como la instalación de software que se realizan en el contexto de un usuario deben ser capaces de escribir en registros con una cuenta de usuario con derechos reducidos. Esto significa que un atacante también podría escribir en los registros con una cuenta con derechos reducidos.  
+#### <a name="policies-can-be-retargeted-to-non-targeted-clients"></a>Las directivas pueden redestinarse a clientes sin destino  
 
-     El riesgo más grave consiste en que un atacante podría quitar de los archivos de registro la información que podría necesitar un administrador para realizar tareas de detección de intrusos y auditoría.  
+Existen varios métodos que los atacantes podrían utilizar para hacer que una directiva destinada a un cliente se aplique a un cliente completamente diferente. Por ejemplo, un atacante desde un cliente de confianza podría enviar información falsa de detección o inventario para agregar el equipo a una colección a la que no tendría que pertenecer. Después, se cliente recibirá todas las implementaciones para esa colección. 
 
--   Un equipo podría utilizarse para obtener un certificado diseñado para la inscripción de dispositivos móviles  
+Existen controles para impedir que los atacantes puedan modificar directamente una directiva. Pero los atacantes podrían usar una directiva existente para cambiar el formato y volver a implementar un SO y, después, enviarlo a otro equipo. Esta directiva redirigida podría crear una denegación de servicio. Estos tipos de ataques requieren una sincronización precisa y amplios conocimientos de la infraestructura de Configuration Manager.  
 
-     Cuando Configuration Manager procesa una solicitud de inscripción, no puede comprobar que la solicitud se originó en un dispositivo móvil en lugar de en un equipo. Si la solicitud proviene de un equipo, puede instalar un certificado PKI que se puede registrar en Configuration Manager. Para contribuir a evitar un ataque de elevación de privilegios en este escenario, permita sólo a los usuarios de confianza que inscriban sus dispositivos móviles y supervise cuidadosamente las actividades de inscripción.  
 
--   La conexión de un cliente al punto de administración no se desactiva si se bloquea un cliente y el cliente bloqueado puede seguir enviando paquetes de notificaciones de cliente al punto de administración como mensajes de mantenimiento de conexión.  
+#### <a name="client-logs-allow-user-access"></a>Los registros de cliente permiten el acceso de usuario  
 
-     Cuando se bloquea un cliente que ya no es de confianza y que ha establecido una comunicación de notificación de cliente, Configuration Manager no desconecta la sesión. El cliente bloqueado puede seguir enviando paquetes a su punto de administración hasta que el cliente se desconecta de la red. Los paquetes solo son paquetes pequeños de mantenimiento de conexión y los clientes no pueden ser administrados por Configuration Manager hasta que se desbloquean.  
+Todos los archivos de registro de cliente conceden permiso a la cuenta **Grupos** con acceso de *Lectura* y al usuario **Interactivo** especial con acceso de *Escritura*. Si se habilita el registro detallado, los atacantes podrían leer los archivos de registro para buscar información acerca de vulnerabilidades de sistema o compatibilidad. Los procesos, como el software que el cliente instala en el contexto de un usuario, necesitan escribir en registros con una cuenta de usuario de derechos reducidos. Debido a comportamiento, un atacante también podría escribir en los registros con una cuenta de derechos reducidos.  
 
--   Cuando utiliza la actualización de cliente automática y el cliente se dirige a un punto de administración para que descargue los archivos de origen de cliente, no se comprueba que el punto de administración sea una fuente de confianza  
+El riesgo más grave es que un atacante pudiera quitar información de los archivos de registro. Puede que un administrador necesitara esta información para detectar intrusiones y realizar auditorías.  
 
--   Cuando los usuarios inscriben equipos Mac, están en riesgo de suplantación de identidad DNS  
 
-     Cuando el equipo Mac se conecta al punto proxy de inscripción durante la inscripción, es poco probable que el equipo Mac ya tenga el certificado de CA raíz. En este momento, el servidor no es de confianza para el equipo Mac y solicitará al usuario que continúe. Si el nombre completo del punto del proxy de inscripción se resuelve mediante un servidor DNS no autorizado, podría dirigir el equipo Mac a un punto de proxy de inscripción malintencionado e instalar certificados de un origen que no es de confianza. Para ayudar a reducir este riesgo, siga los procedimientos recomendados para evitar la suplantación de DNS en su entorno.  
+#### <a name="a-computer-could-be-used-to-obtain-a-certificate-thats-designed-for-mobile-device-enrollment"></a>Podría usarse un equipo para obtener un certificado diseñado para la inscripción de dispositivos móviles  
 
--   La inscripción de Mac no limita las solicitudes de certificados  
+Cuando Configuration Manager procesa una solicitud de inscripción, no puede verificar si la solicitud se ha originado desde un dispositivo móvil o desde un equipo. Si la solicitud proviene de un equipo, puede instalar un certificado PKI que se puede registrar en Configuration Manager. 
 
-     Los usuarios pueden volver a inscribir sus equipos Mac y solicitar cada vez un nuevo certificado de cliente. Configuration Manager no comprueba varias solicitudes o limita el número de certificados solicitados desde un equipo único. Un usuario malintencionado podría ejecutar una secuencia de comandos que repite la solicitud de inscripción de línea de comandos, lo que provocaría una denegación de servicio en la red o en la entidad emisora de certificados (CA). Para ayudar a reducir este riesgo, debe supervisar cuidadosamente la CA emisora de certificados para este tipo de comportamiento sospechoso. Un equipo que muestra este modelo de comportamiento debe bloquearse inmediatamente de la jerarquía de Configuration Manager.  
+Para impedir un ataque de elevación de privilegios en este escenario, solo permita que los usuarios de confianza puedan inscribir sus dispositivos móviles. Supervise detenidamente las actividades de inscripción de dispositivos en el sitio.  
 
--   Una confirmación de borrado no comprueba que el dispositivo se haya borrado con éxito  
 
-     Cuando inicie una acción de borrado para un dispositivo móvil y Configuration Manager muestre el estado de borrado que se debe confirmar, la comprobación confirma si Configuration Manager ha enviado correctamente el mensaje y no si el dispositivo ha actuado sobre él. Además, para los dispositivos móviles que se administran mediante el conector de Exchange Server, una confirmación de borrado comprueba que Exchange, no el dispositivo, ha recibido el comando.  
+#### <a name="a-blocked-client-can-still-send-messages-to-the-management-point"></a>Un cliente bloqueado sigue siendo capaz de enviar mensajes al punto de administración
 
--   Si usa las opciones de confirmación de cambios en los dispositivos de Windows Embedded, las cuentas podrían bloquearse antes de lo previsto.  
+Al bloquear un cliente en el que ya no confía, pero que ha establecido una conexión de red para la notificación de cliente, Configuration Manager no desconecta la sesión. El cliente bloqueado puede seguir enviando paquetes a su punto de administración hasta que el cliente se desconecta de la red. Estos paquetes son simplemente paquetes de conexión persistente de tamaño reducido. Este cliente no se puede administrar con Configuration Manager hasta que se desbloquee.  
 
-     Si el dispositivo de Windows Embedded ejecuta un sistema operativo anterior a Windows 7 y un usuario intenta iniciar sesión mientras los filtros de escritura están deshabilitados para confirmar los cambios efectuados por Configuration Manager, se reduce a la mitad el número de intentos de inicio de sesión incorrectos permitidos antes de que se bloquee la cuenta. Por ejemplo, si **Umbral de bloqueo de cuenta** se configura como 6 y un usuario escribe la contraseña incorrectamente 3 veces, la cuenta se bloquea, con lo que se crea una situación de denegación de servicio.  Si los usuarios deben iniciar sesión en dispositivos incrustados en este escenario, adviértales de la posibilidad de reducción del umbral de bloqueo.  
 
-##  <a name="BKMK_Privacy_Cliients"></a> Información de privacidad para los clientes de Configuration Manager  
- Cuando se implementa el cliente de Configuration Manager, se habilita la configuración del cliente para poder utilizar las funciones de administración de Configuration Manager. Las opciones utilizadas para configurar las funciones se pueden aplicar a todos los clientes de la jerarquía de Configuration Manager, independientemente de si están conectados directamente a la red corporativa, conectados a través de una sesión remota o conectados a Internet aunque compatibles con Configuration Manager.  
+#### <a name="automatic-client-upgrade-doesnt-verify-the-management-point"></a>La actualización de cliente automática no verifica el punto de administración
 
- La información del cliente se almacena en la base de datos de Configuration Manager y no se envía a Microsoft. La información se guarda en la base de datos hasta que la tarea de mantenimiento del sitio **Eliminar datos de detección antiguos** la elimina cada 90 días. Puede configurar el intervalo de eliminación.  
+Al usar la actualización de cliente automática, el cliente puede dirigirse a un punto de administración para descargar los archivos de origen del cliente. En este escenario, el cliente no verifica el punto de administración como el origen de confianza.  
 
- Antes de configurar el cliente de Configuration Manager, tenga en cuenta los requisitos de privacidad.  
+
+#### <a name="when-users-first-enroll-mac-computers-theyre-at-risk-from-dns-spoofing"></a>Cuando los usuarios inscriben por primera vez equipos Mac, están en riesgo de ataques de suplantación de DNS  
+
+Cuando el equipo Mac se conecta al punto de proxy de inscripción durante la inscripción, es poco probable que ya tenga el certificado de CA raíz de confianza. En este momento, el equipo Mac no confía en el servidor y le pide al usuario que continúe. Si un servidor DNS no autorizado resuelve el nombre de dominio completo (FQDN) del punto de proxy de inscripción, podría dirigir el equipo Mac a un punto de proxy de inscripción no autorizado para instalar certificados desde un origen que no sea de confianza. Para ayudar a reducir este riesgo, siga los procedimientos recomendados para evitar la suplantación de DNS en su entorno.  
+
+
+#### <a name="mac-enrollment-doesnt-limit-certificate-requests"></a>La inscripción de equipos Mac no limita las solicitudes de certificado  
+
+Los usuarios pueden volver a inscribir sus equipos Mac y solicitar cada vez un nuevo certificado de cliente. Configuration Manager no comprueba si hay varias solicitudes ni limita el número de certificados solicitados desde un mismo equipo. Un usuario no autorizado podría ejecutar un script que repita la solicitud de inscripción desde la línea de comandos. Este ataque podría causar una denegación de servicio en la red o la entidad de certificación (CA) emisora. Para ayudar a reducir este riesgo, debe supervisar cuidadosamente la CA emisora de certificados para este tipo de comportamiento sospechoso. Bloquee de inmediato desde la jerarquía de Configuration Manager cualquier equipo donde se muestre este patrón de comportamiento.  
+
+
+#### <a name="a-wipe-acknowledgment-doesnt-verify-that-the-device-has-been-successfully-wiped"></a>Una confirmación de borrado no comprueba que el dispositivo se haya borrado correctamente  
+
+Si inicia una acción de borrado para un dispositivo móvil y Configuration Manager confirma el borrado, la verificación es que Configuration Manager ha *enviado* correctamente el mensaje. No comprueba que el dispositivo haya *actuado* en la solicitud. 
+
+Para los dispositivos móviles administrados por el conector de Exchange Server, una confirmación de borrado verifica que Exchange haya recibido el comando, pero no que lo haya recibido el dispositivo.  
+
+
+#### <a name="if-you-use-the-options-to-commit-changes-on-windows-embedded-devices-accounts-might-be-locked-out-sooner-than-expected"></a>Si usa las opciones para confirmar los cambios en dispositivos de Windows Embedded, las cuentas podrían bloquearse antes de lo esperado  
+
+Si el dispositivo de Windows Embedded ejecuta una versión del sistema operativo anterior a Windows 7 y un usuario intenta iniciar sesión cuando los filtros de escritura están deshabilitados por Configuration Manager, Windows solo permitirá la mitad del número configurado de intentos incorrectos antes de que se bloquee la cuenta. 
+
+Por ejemplo, imagine que configura la directiva de dominio **Umbral de bloqueo de cuenta** en seis intentos. Un usuario escribe de forma incorrecta la contraseña tres veces seguidas y la cuenta queda bloqueada. Este comportamiento crea de manera eficaz una denegación de servicio. Si los usuarios necesitan iniciar sesión en los dispositivos incrustados en este escenario, infórmeles sobre la posibilidad de un umbral de bloqueo reducido.  
+
+
+
+##  <a name="BKMK_Privacy_Clients"></a> Información de privacidad para los clientes de Configuration Manager  
+
+Al implementar el cliente de Configuration Manager, se habilita la configuración del cliente para las características de Configuration Manager. Las opciones que use para configurar las características se pueden aplicar a todos los clientes de la jerarquía de Configuration Manager. Este comportamiento es el mismo, independientemente de si están conectados directamente a la red interna, conectados mediante una sesión remota o conectados a Internet.  
+
+La información del cliente se almacena en la base de datos de Configuration Manager de SQL Server y no se envía a Microsoft. La información se conserva en la base de datos hasta que se elimina mediante la tarea de mantenimiento del sitio **Eliminar datos de detección antiguos** cada 90 días. Puede configurar el intervalo de eliminación. 
+
+Algunos diagnósticos resumidos o agregados y datos de uso se envían a Microsoft. Para obtener más información, vea [Diagnósticos y datos de uso](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).  
+
+Antes de configurar el cliente de Configuration Manager, tenga en cuenta los requisitos de privacidad.  
+
 
 ### <a name="privacy-information-for-mobile-devices-that-are-enrolled-by-configuration-manager"></a>Información de privacidad para dispositivos móviles inscritos por Configuration Manager  
- Para obtener información de privacidad sobre la inscripción de dispositivos móviles de Configuration Manager, consulte [Declaración de privacidad de System Center Configuration Manager: anexo para dispositivos móviles](../../../../core/misc/privacy/privacy-statement-mobile-device-addendum.md).  
+
+Para obtener información de privacidad al inscribir un dispositivo móvil con Configuration Manager, vea [Declaración de privacidad de System Center Configuration Manager: Anexo de dispositivos móviles](/sccm/core/misc/privacy/privacy-statement-mobile-device-addendum).  
+
 
 ### <a name="client-status"></a>Estado de cliente  
- Configuration Manager supervisa la actividad de los clientes, efectúa evaluaciones periódicas y puede corregir el cliente de Configuration Manager y sus dependencias. El estado de cliente se habilita de manera predeterminada, usa métricas de servidor para la comprobación de la actividad de cliente y acciones de cliente para autocomprobaciones, correcciones y para enviar información de estado de cliente al sitio de Configuration Manager. El cliente ejecuta autocomprobaciones según una programación configurable. El cliente envía los resultados de las comprobaciones al sitio de Configuration Manager. Esta información se cifra durante la transferencia.  
 
- La información del estado de cliente se almacena en la base de datos de Configuration Manager y no se envía a Microsoft. La información no se almacena en formato cifrado en la base de datos del sitio. La información se retiene en la base de datos hasta que se elimina según el valor configurado en la opción de estado de cliente **Retener el historial de estado de cliente durante el siguiente número de días**. El valor predeterminado de esta configuración es 31 días.  
+Configuration Manager supervisa la actividad de los clientes. Evalúa de forma periódica el cliente de Configuration Manager y puede solucionar problemas con el cliente y sus dependencias. El estado del cliente está habilitado de forma predeterminada. Usa métricas del lado servidor para las comprobaciones de actividad de cliente. El estado de cliente usa acciones del lado cliente para comprobaciones automáticas, correcciones y el envío de información de estado de cliente al sitio. El cliente ejecuta las comprobaciones automáticas según una programación que puede configurar. El cliente envía los resultados de las comprobaciones al sitio de Configuration Manager. Esta información se cifra durante la transferencia.  
 
- Antes de instalar el cliente de Configuration Manager con comprobación de estado de cliente, tenga en cuenta sus requisitos de privacidad.  
+La información de estado de cliente se almacena en la base de datos de Configuration Manager de SQL Server y no se envía a Microsoft. La información no se almacena con un formato cifrado en la base de datos del sitio. La información se conserva en la base de datos hasta que se elimina según el valor configurado para la opción de estado de cliente **Retener el historial de estado de cliente durante el siguiente número de días**. El valor predeterminado de esta configuración es 31 días.  
+
+Antes de instalar el cliente de Configuration Manager con comprobación de estado de cliente, tenga en cuenta sus requisitos de privacidad.  
+
+
 
 ##  <a name="BKMK_Privacy_ExchangeConnector"></a> Información de privacidad para dispositivos móviles administrados mediante el conector de Exchange Server  
- El conector de Exchange Server busca y administra dispositivos que se conectan a Exchange Server (locales u hospedados) mediante el protocolo de ActiveSync. Los registros encontrados por el conector de Exchange Server se almacenan en la base de datos de Configuration Manager. Se recopila la información de Exchange Server. No contiene información adicional distinta a la enviada por los dispositivos móviles a Exchange Server.  
 
- La información del dispositivo móvil no se envía a Microsoft. La información del dispositivo móvil se almacena en la base de datos de Configuration Manager. La información se guarda en la base de datos hasta que la tarea de mantenimiento del sitio **Eliminar datos de detección antiguos** la elimina cada 90 días. Puede configurar el intervalo de eliminación.  
+El conector de Exchange Server usa el protocolo ActiveSync para detectar y administrar dispositivos que se conecten a una instancia local u hospedada de Exchange Server. Los registros encontrados por el conector de Exchange Server se almacenan en la base de datos de Configuration Manager de SQL Server. La información se recopila desde Exchange Server. No contiene información adicional de lo que envían los dispositivos móviles a Exchange Server.  
 
- Antes de instalar y configurar el conector de Exchange Server, tenga en cuenta los requisitos de privacidad.  
+La información de dispositivos móviles no se envía a Microsoft. La información de dispositivos móviles se almacena en la base de datos de Configuration Manager de la instancia de SQL Server. La información se conserva en la base de datos hasta que se elimina mediante la tarea de mantenimiento del sitio **Eliminar datos de detección antiguos** cada 90 días. Puede configurar el intervalo de eliminación.  
+
+Antes de instalar y configurar el conector de Exchange Server, tenga en cuenta los requisitos de privacidad.  

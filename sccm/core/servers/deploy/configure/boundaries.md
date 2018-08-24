@@ -10,18 +10,18 @@ ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e27bce7576f6d96a8e8af95fa5df69dd39c05cd
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 060d15ce396a8d062164c7971d1c90ee583414bb
+ms.sourcegitcommit: aa610a806f9680753f4d0c0c385357fad51f5fd3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344337"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401168"
 ---
 # <a name="define-network-locations-as-boundaries-for-system-center-configuration-manager"></a>Definición de las ubicaciones de red como límites para System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Los límites de Configuration Manager son ubicaciones de red que contienen dispositivos que desea administrar. El límite en que un dispositivo se encuentra es equivalente al sitio de Active Directory, o bien la dirección IP de red identificada por el cliente de Configuratoin Manager que está instalado en el dispositivo.
+Los límites de Configuration Manager son ubicaciones de red que contienen dispositivos que desea administrar. El límite en el que se encuentra un dispositivo es equivalente al sitio de Active Directory, o bien la dirección IP de red identificada por el cliente de Configuration Manager que está instalado en el dispositivo.
  - Puede crear límites independientes manualmente. No obstante, Configuration Manager no es compatible con la entrada directa de una superred como un límite. En su lugar, utilice el tipo de límite de intervalo de direcciones IP.
  - Puede configurar el método de [detección de bosques de Active Directory](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutForest) para que detecte automáticamente y cree límites para las subredes IP y el sitio de Active Directory que detecta. Cuando la detección de bosques de Active Directory identifica una superred asignada a un sitio de Active Directory, Configuration Manager convierte la superred en un límite de intervalo de direcciones IP.  
 

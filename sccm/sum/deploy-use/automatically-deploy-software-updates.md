@@ -1,123 +1,119 @@
 ---
 title: Implementar actualizaciones de software automáticamente
 titleSuffix: Configuration Manager
-description: Implemente actualizaciones de software automáticamente al agregar nuevas actualizaciones de software a un grupo de actualizaciones asociado a una implementación activa, o bien mediante el empleo de reglas de ADR.
+description: Implementación automática de actualizaciones de software usando reglas de implementación automática (ADR).
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: 3b267e122370cc12ecec2f42dcb1dfc62c45fe63
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2ae76e9bca172b4f45a39444800a0fe152104aa4
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353593"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383606"
 ---
-#  <a name="BKMK_AutoDeploy"></a> Implementar actualizaciones de software automáticamente  
+#  <a name="automatically-deploy-software-updates"></a>Implementar actualizaciones de software automáticamente  
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
- Se puede usar una regla de implementación automática (ADR) en lugar de agregar actualizaciones nuevas a un grupo de actualización de software existente. Normalmente, las ADR se usan para implementar actualizaciones de software mensuales (conocidas como actualizaciones "Patch Tuesday") y para administrar las actualizaciones de definiciones. Si necesita ayuda para determinar qué método de implementación es el adecuado para usted, vea [Deploy software updates](deploy-software-updates.md) (Implementación de actualizaciones de software).
+Use una regla de implementación automática (ADR) en lugar de agregar actualizaciones nuevas a un grupo de actualización de software existente. Normalmente, las ADR se usan para implementar actualizaciones de software mensuales (también conocidas como actualizaciones "Patch Tuesday") y para administrar las actualizaciones de definiciones de Endpoint Protection. Si necesita ayuda para determinar qué método de implementación es el adecuado para usted, vea [Deploy software updates](deploy-software-updates.md) (Implementación de actualizaciones de software).
 
-<!--##  <a name="BKMK_AddUpdatesToExistingGroup"></a> Add software updates to a deployed update group  
-After you create and deploy a software update group, you can add software updates to the update group and they will be automatically deployed.  
-
-> [!IMPORTANT]  
->  When you add software updates to an existing software update group that has already been deployed, it might take several minutes before the additional software updates are added to the deployment.  
-
-Use the following procedure to add software updates to an existing update group.  
-
-#### To add software updates to an existing software update group  
-
-1.  In the Configuration Manager console, navigate to **Software Library** > **Overview** > **Software Updates**.  
-
-2.  Select the software updates that are to be added to the new software update group.  
-
-3.  On the **Home** tab, in the **Update** group, click **Edit Membership**.  
-
-4.  Select the software update group to which you want to add the software updates as members.  
-
-5.  Click the **Software Update Groups** node to display the software update group.  
-
-6.  Click the software update group, and in the **Home** tab, in the **Update** group, click **Show Members** to display a list of the software updates in the group.  --mstewart this is already doc'd on the SUG page. -->
 
 ##  <a name="BKMK_CreateAutomaticDeploymentRule"></a> Crear una regla de implementación automática (ADR)  
-Las actualizaciones de software se pueden aprobar e implementar automáticamente mediante una ADR. Puede hacer que la regla agregue las actualizaciones de software a un nuevo grupo de actualización de software cada vez que dicha regla se ejecute o que agregue las actualizaciones de software a un grupo existente. Cuando una regla se ejecuta y agrega actualizaciones de software a un grupo existente, quita todas las actualizaciones del grupo y luego agrega las que cumplan los criterios que se hayan definido para el grupo. 
+Las actualizaciones de software se pueden aprobar e implementar automáticamente mediante una ADR. La regla puede agregar las actualizaciones de software a un nuevo grupo de actualización de software cada vez que dicha regla se ejecute o agregar actualizaciones de software a un grupo existente. Cuando una regla se ejecuta y agrega actualizaciones de software a un grupo existente, la regla quita todas las actualizaciones del grupo. Después, agrega al grupo las actualizaciones que cumplen los criterios definidos. 
 
 > [!WARNING]  
->  Antes de crear una ADR por primera vez, compruebe que se completó la sincronización de las actualizaciones de software en el sitio. Esto es importante si se ejecuta Configuration Manager en un idioma que no sea el inglés, porque las clasificaciones de actualizaciones de software se muestran en inglés antes de la primera sincronización y, después, en el idioma localizado una vez completada la sincronización de las actualizaciones de software. Las reglas creadas antes de sincronizar las actualizaciones de software podrían no funcionar correctamente tras la sincronización porque la cadena de texto podría no coincidir.  
+>  Antes de crear una ADR por primera vez, compruebe que el sitio ha completado la sincronización de las actualizaciones de software. Este paso es importante al ejecutar Configuration Manager en un idioma distinto del inglés. Las clasificaciones de actualizaciones de software se muestran en inglés antes de la primera sincronización y luego se muestran en el idioma localizado una vez completada la sincronización de las actualizaciones de software. Las reglas creadas antes de sincronizar las actualizaciones de software podrían no funcionar correctamente tras la sincronización porque la cadena de texto podría no coincidir.  
 
- Use el procedimiento siguiente para crear una ADR.  
 
-#### <a name="to-create-an-adr"></a>Para crear una ADR  
+### <a name="bkmk_adr-process"></a> Proceso para crear una ADR  
 
-1.  En la consola de Configuration Manager, vaya a **Biblioteca de software****Información general** > **Actualizaciones de software** > **Reglas de implementación automática**.  
+1.  En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software**, expanda **Actualizaciones de software** y seleccione el nodo **Reglas de implementación automática**.  
 
-2.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear regla de implementación automática**. Se abre el Asistente para crear regla de implementación automática.  
+2.  En la cinta, haga clic en **Crear regla de implementación automática**.  
 
-3.  En la página **General** , configure las siguientes opciones:  
+3.  En la página **General** del Asistente para crear regla de implementación automática, configure las siguientes opciones:  
 
     -   **Nombre**: especifique el nombre de la ADR. El nombre debe ser único, describir el objetivo de la regla e identificarla entre el resto de reglas del sitio de Configuration Manager.  
 
     -   **Descripción**: especifique una descripción para la ADR. La descripción debería proporcionar información general de la regla implementación y otra información relevante que ayude a diferenciar esta regla de otras. El campo de descripción es opcional, tiene un límite de 256 caracteres y tiene un valor en blanco de forma predeterminada.  
 
-    -   **Seleccionar plantilla de implementación**: especifique si quiere aplicar una plantilla de implementación guardada anteriormente. Se puede configurar una plantilla de implementación que contenga varias propiedades de implementación de actualización comunes que se puedan usar para crear las ADR. Estas plantillas permiten garantizar la coherencia en implementaciones similares y ahorrar tiempo.  
+    -   **Plantilla**: seleccione una plantilla de implementación para especificar si se deben aplicar configuraciones de ADR que se guardaron anteriormente. Configure una plantilla de implementación que contenga varias propiedades de implementación de actualización comunes que pueda usar para crear ADR adicionales. Estas plantillas permiten ahorrar tiempo y garantizar la coherencia en implementaciones similares. Seleccione una de las siguientes plantillas de implementación de actualización de software integradas:  
 
-         - Puede elegir entre las plantillas de implementación de actualización de software integradas del Asistente para crear regla de implementación automática. La plantilla **Actualizaciones de definiciones** proporciona opciones de configuración comunes para implementar actualizaciones de definiciones de software. La plantilla **Patch Tuesday** proporciona opciones de configuración comunes para implementar actualizaciones de software en un ciclo mensual.  
+         - La plantilla **Patch Tuesday** proporciona opciones de configuración comunes para implementar actualizaciones de software en un ciclo mensual.  
+
+         - La plantilla **Actualizaciones de cliente de Office 365** proporciona opciones de configuración comunes que se usarán al implementar las actualizaciones para los clientes de Office 365 Pro Plus.  
+
+         - La plantilla **Actualizaciones de SCEP y Antivirus de Windows Defender** proporciona opciones de configuración comunes que se usarán cuando implemente actualizaciones de definiciones de Endpoint Protection.  
 
     -   **Recopilación**: especifica la recopilación de destino que se utilizará para la implementación. los miembros de la recopilación reciben las actualizaciones de software definidas en la implementación.  
 
-    -   Decida si desea agregar las actualizaciones de software a un grupo de actualizaciones de software nuevo o a uno existente. En la mayoría de los casos, probablemente, elegirá crear un nuevo grupo de actualizaciones de software cuando se ejecuta la regla de implementación automática. Sin embargo, podría optar por un grupo existente si la regla se ejecuta con una programación más exigente. Por ejemplo, si va a ejecutar la regla diariamente para las actualizaciones de definiciones, podría agregar las actualizaciones de software a un grupo de actualizaciones de software existente.  
+    -   Decida si desea agregar las actualizaciones de software a un grupo de actualizaciones de software nuevo o a uno existente. En la mayoría de los casos, elegirá crear un nuevo grupo de actualizaciones de software cuando se ejecuta la regla de implementación automática. Si la regla se ejecuta con una programación más exigente, podría optar por un grupo existente. Por ejemplo, si ejecuta la regla diariamente para las actualizaciones de definiciones, podría agregar las actualizaciones de software a un grupo de actualizaciones de software existente.  
 
-    -   **Habilitar la implementación después de ejecutar la regla**: especifique si quiere habilitar la implementación de actualizaciones de software después de la ejecución de la regla de implementación automática. En cuanto a esta especificación, considere los aspectos siguientes:  
+    -   **Habilitar la implementación después de ejecutar la regla**: especifique si quiere habilitar la implementación de actualizaciones de software después de la ejecución de la regla de implementación automática. Considere las opciones siguientes para esta configuración:  
 
         -   Cuando se habilita la implementación, las actualizaciones que cumplen los criterios definidos de la regla se agregan a un grupo de actualizaciones de software. El contenido de actualización de software se descarga según sea necesario. El contenido se copia en los puntos de distribución especificados y las actualizaciones se implementan en los clientes de la recopilación de destino.  
 
-        -   Cuando no se habilita la implementación, las actualizaciones que cumplen los criterios definidos de la regla se agregan a un grupo de actualizaciones de software. Se configura la directiva de implementación de actualizaciones de software. Pero las actualizaciones no se descargan ni implementan en los clientes. Esta situación proporciona tiempo para preparar la implementación de las actualizaciones, comprobar que las actualizaciones que cumplen los criterios son adecuadas y habilitar la implementación posteriormente.  
+        -   Cuando no habilita la implementación, las actualizaciones que cumplen los criterios definidos de la regla se agregan a un grupo de actualizaciones de software. El contenido de implementación de actualización de software se descarga, según sea necesario, y se distribuye a los puntos de distribución especificados. El sitio crea una implementación deshabilitada en el grupo de actualizaciones de software para impedir que las actualizaciones se implementen en los clientes. Esta opción proporciona tiempo para preparar la implementación de las actualizaciones, comprobar que las actualizaciones que cumplen los criterios son adecuadas y habilitar la implementación.  
 
-4.  En la página Configuración de implementación, configure las siguientes opciones:  
+4.  En la página **Configuración de implementación**, configure las siguientes opciones:  
 
-    -   **Usar Wake-on-LAN para activar clientes para las implementaciones requeridas**: especifica si se debe habilitar Wake on LAN en la fecha límite para enviar paquetes de reactivación a equipos que requieran una o varias actualizaciones de software en la implementación. Los equipos que estén en modo de suspensión en la fecha límite de instalación se activarán para que se pueda iniciar la instalación. Los clientes que están en modo de suspensión pero no requieren actualizaciones de software de la implementación no se iniciarán. De forma predeterminada, esta opción no está habilitada. Para poder utilizar esta opción, debe configurar los equipos y redes para Wake On LAN. 
+    -   **Usar Wake on LAN para activar clientes para las implementaciones requeridas**: especifica si se debe habilitar Wake on LAN en la fecha límite. Wake on LAN envía paquetes de reactivación a equipos que requieran una o varias actualizaciones de software en la implementación. El sitio activa cualquier equipo que esté en modo de suspensión en la fecha límite de instalación para que se pueda iniciar la instalación. Los clientes que están en modo de suspensión, pero no requieren actualizaciones de software de la implementación, no se iniciarán. De forma predeterminada, esta opción no está habilitada. Para poder usar esta opción, configure los equipos y las redes para Wake on LAN. Para obtener más información, vea [Cómo configurar Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan).  
 
-    -   **Nivel de detalle**: especifique el nivel de detalle de los mensajes de estado que notifican los equipos cliente.  
+    -   **Nivel de detalle**: especifique el nivel de detalle de los mensajes de estado que notifican los clientes.  
 
         > [!IMPORTANT]  
         >  Cuando implemente actualizaciones de definiciones, establezca el nivel de detalle en **Solo error** para que el cliente notifique un mensaje de estado solo cuando se produzca un error en la actualización de definiciones. De lo contrario, el número de mensajes de estado que notifique el cliente podría afectar al rendimiento en el servidor del sitio.  
 
-    -   **Configuración de términos de licencia**: especifique si quiere implementar automáticamente las actualizaciones de software con los términos de licencia asociados. Algunas actualizaciones de software incluyen términos de licencia, como, por ejemplo, un Service Pack. Cuando se implementan automáticamente actualizaciones de software, no se muestran los términos de licencia, y no se da la opción de aceptarlos. Puede elegir implementar automáticamente todas las actualizaciones de software independientemente de si tienen términos de licencia asociados, o bien implementar solo las actualizaciones que no tengan términos de licencia asociados.  
-        - Para revisar los términos de licencia de una actualización de software, selecciónela en el nodo **Todas las actualizaciones de software** del área de trabajo **Biblioteca de software**. En la pestaña **Inicio**, en el grupo **Actualizar**, haga clic en **Revisar la licencia**.    
-        - Para buscar actualizaciones de software con términos de licencia asociados, se puede agregar la columna **Términos de licencia** al panel de resultados del nodo **Todas las actualizaciones de software**. Haga clic en el encabezado de la columna para ordenar por actualizaciones de software con términos de licencia.  
+    -   **Configuración de términos de licencia**: especifique si quiere implementar automáticamente las actualizaciones de software con los términos de licencia asociados. Algunas actualizaciones de software incluyen términos de licencia. Cuando se implementan automáticamente actualizaciones de software, no se muestran los términos de licencia, y no se da la opción de aceptarlos. Puede elegir implementar automáticamente todas las actualizaciones de software independientemente de si tienen términos de licencia asociados, o bien implementar solo las actualizaciones que no tengan términos de licencia asociados.  
 
-5.  En la página Actualizaciones de software, configure los criterios para las actualizaciones de software que la regla de implementación automática recupera y agrega al grupo de actualizaciones de software. El límite para las actualizaciones de software en la regla de implementación automática es de 1000 actualizaciones de software. Si es necesario, se puede filtrar por el tamaño del contenido de las actualizaciones de software en las reglas de implementación automática. Para más información, vea [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems (Configuration Manager y mantenimiento simplificado de Windows en sistemas operativos de nivel inferior)](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).
+         - Para revisar los términos de licencia de una actualización de software, selecciónela en el nodo **Todas las actualizaciones de software** del área de trabajo **Biblioteca de software**. En la cinta, haga clic en **Revisar la licencia**.    
+
+         - Para buscar actualizaciones de software con términos de licencia asociados, agregue la columna **Términos de licencia** al panel de resultados del nodo **Todas las actualizaciones de software**. Haga clic en el encabezado de la columna para ordenar por actualizaciones de software con términos de licencia.  
+
+5.  En la página **Actualizaciones de software**, configure los criterios para las actualizaciones de software que la regla de implementación automática recupera y agrega al grupo de actualizaciones de software.  
+
+     - El límite para las actualizaciones de software en la regla de implementación automática es de 1000 actualizaciones de software.  
+
+     - Si es necesario, filtre por el tamaño del contenido de las actualizaciones de software en las reglas de implementación automática. Para más información, vea [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems (Configuration Manager y mantenimiento simplificado de Windows en sistemas operativos de nivel inferior)](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).  
+
+     - A partir de la versión 1806, está disponible un filtro de propiedad para **Arquitectura**. Use este filtro para excluir arquitecturas como Itanium y ARM64 que son menos comunes. Recuerde que hay aplicaciones de 32 bits (x86) y componentes que se ejecutan en sistemas de 64 bits (x64). A menos que tenga claro que no necesita x86, habilítelo también cuando elija x64.<!--1322266-->  
 
 
-6.  En la página Programación de evaluación, especifique si quiere habilitar la regla de implementación automática para que se ejecute en función de una programación. Si la habilita, haga clic en **Personalizar** para configurar la programación periódica. La configuración de la hora de inicio para la programación se basa en la hora local del equipo que ejecuta la consola de Configuration Manager.
-    - La configuración de la hora de inicio para la programación se basa en la hora local del equipo que ejecuta la consola de Configuration Manager.
-    - La evaluación de regla de implementación automática puede ejecutar tres veces al día.
-    - No establezca nunca la programación de evaluación con una frecuencia que supere la programación de sincronización de actualizaciones de software. La programación de sincronización de punto de actualización de software se muestra para que se pueda determinar la frecuencia de la programación de evaluación. 
-    - Para ejecutar manualmente la regla de implementación automática, seleccione la regla y luego haga clic en **Ejecutar ahora** en la pestaña **Inicio** del grupo **Regla de implementación automática** .
+6.  En la página **Programación de evaluación**, especifique si quiere habilitar la regla de implementación automática para que se ejecute en función de una programación. Si la habilita, haga clic en **Personalizar** para configurar la programación periódica.  
+
+    - La configuración de la hora de inicio para la programación se basa en la hora local del equipo que ejecuta la consola de Configuration Manager.  
+
+    - La evaluación de regla de implementación automática puede ejecutar tres veces al día.  
+
+    - No establezca nunca la programación de evaluación con una frecuencia que supere la programación de sincronización de actualizaciones de software. Esta página muestra la programación de sincronización de punto de actualización de software para que se pueda determinar la frecuencia de la programación de evaluación.  
+    
+    - Para ejecutar manualmente la regla de implementación automática, seleccione la regla en el nodo **Regla de implementación automática** de la consola y después haga clic en **Ejecutar ahora** en la cinta.  
     
        > [!NOTE]  
-       >A partir de la versión 1802 de Configuration Manager, se pueden programar ADR para evaluar el desplazamiento con respecto a un día base. Es decir, si la revisión del martes en su caso cae en miércoles, se puede establecer la programación de evaluación para el segundo martes del mes con un desplazamiento de un día. <!--1357133-->
-       > - Al programar la evaluación para que se produzca con un desplazamiento durante la última semana del mes, la evaluación se programará para el último día del mes si el desplazamiento elegido se desborda en el mes siguiente. <!--506731-->
-
+       > A partir de la versión 1802, se pueden programar ADR para evaluar el desplazamiento con respecto a un día base. Por ejemplo, si Patch Tuesday en su caso cae en miércoles, establezca la programación de evaluación para el segundo martes del mes con un desplazamiento de un día.<!--1357133-->  
+       >  
+       > Al programar la evaluación con un desplazamiento durante la última semana del mes, si el desplazamiento elegido se desborda en el mes siguiente, el sitio programará la evaluación para el último día del mes.<!--506731-->  
+       >  
        > ![Desplazamiento de la programación de evaluación personalizada de ADR desde el día base](./media/ADR-evaluation-schedule-offset.PNG)
 
    
-7.  En la página Programación de implementación, configure las siguientes opciones:  
+7.  En la página **Programación de implementación**, configure las siguientes opciones:  
 
-    -   **Programar evaluación**: especifique si Configuration Manager evalúa la hora disponible y las horas límite de instalación mediante la hora UTC o la hora local del equipo que ejecuta la consola de Configuration Manager.  
-         - Al seleccionar la hora local y luego **Lo antes posible** para **Horas de disponibilidad del software** o **Fecha límite de instalación**, la hora actual en el equipo que ejecuta la consola de Configuration Manager se usa para evaluar cuándo hay actualizaciones disponibles o cuándo se instalan en un cliente. Si el cliente está en una zona horaria distinta, estas acciones se producirán cuando la hora del cliente llegue a la hora de evaluación.  
+    -   **Programar evaluación**: especifique cuándo Configuration Manager evaluará la hora disponible y las horas de fecha límite de instalación. Puede elegir entre usar Hora universal coordinada (UTC) o la hora local del equipo que ejecuta la consola de Configuration Manager.  
+
+          - Al seleccionar **Hora local del cliente** aquí y luego **Lo antes posible** para **Horas de disponibilidad del software**, la hora actual en el equipo que ejecuta la consola de Configuration Manager se usa para evaluar cuándo hay actualizaciones disponibles. Este comportamiento es el mismo con la **fecha límite de instalación** y la hora a la que se instalan las actualizaciones en un cliente. Si el cliente está en otra zona horaria, estas acciones se producirán cuando la hora del cliente llegue a la hora de evaluación.  
 
     -   **Horas de disponibilidad del software**: seleccione una de las siguientes opciones a fin de especificar cuándo estarán disponibles las actualizaciones de software para los clientes:  
 
-        -   **Lo antes posible**: hace que las actualizaciones de software incluidas en la implementación estén disponibles para los equipos cliente lo antes posible. Si se crea la implementación con esta opción seleccionada, Configuration Manager actualiza la directiva del cliente. En el siguiente ciclo de sondeo de directiva de cliente, los clientes conocen la existencia de la implementación y pueden obtener las actualizaciones disponibles para la instalación.  
+        -   **Lo antes posible**: hace que las actualizaciones de software de la implementación estén disponibles para los equipos clientes lo antes posible. Si se crea la implementación con esta opción seleccionada, Configuration Manager actualiza la directiva del cliente. En el siguiente ciclo de sondeo de directiva de cliente, los clientes conocen la existencia de la implementación y las actualizaciones de software están disponibles para la instalación.  
 
-        -   **Hora específica**: hace que las actualizaciones de software incluidas en la implementación estén disponibles para los clientes en una fecha y hora concretas. Si se crea la implementación con esta opción habilitada, Configuration Manager actualiza la directiva del cliente. Con el siguiente ciclo de sondeo de directiva de cliente, los clientes conocen la existencia de la implementación. Sin embargo, las actualizaciones de software de la implementación no están disponibles para la instalación hasta después de la fecha y hora configurada.  
+        -   **Hora específica**: hace que las actualizaciones de software incluidas en la implementación estén disponibles para los clientes en una fecha y hora concretas. Si se crea la implementación con esta opción habilitada, Configuration Manager actualiza la directiva del cliente. Con el siguiente ciclo de sondeo de directiva de cliente, los clientes conocen la existencia de la implementación. En cambio, las actualizaciones de software de la implementación no están disponibles para la instalación hasta después de la fecha y hora configurada.  
 
     -   **Fecha límite de instalación**: seleccione una de las siguientes opciones para especificar la fecha de límite de instalación de las actualizaciones de software de la implementación:  
 
@@ -125,159 +121,120 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
 
         -   **Hora específica**: seleccione esta opción para que las actualizaciones de software de la implementación se instalen automáticamente en una fecha y hora concretas. Configuration Manager determina la fecha límite para instalar actualizaciones de software, para lo cual agrega el intervalo **Hora específica** establecido a **Horas de disponibilidad del software**.  
 
-            - La hora de la fecha límite de instalación real es la hora de la fecha límite más una cantidad aleatoria de tiempo de hasta dos horas. La selección aleatoria reduce el posible impacto de los equipos cliente de la recopilación que instalan las actualizaciones en la implementación a la misma hora.  
-          
-             - Puede establecer la opción **Deshabilitar selección aleatoria de fecha límite** de la configuración de cliente **Agente de equipo** para deshabilitar el retraso de la selección aleatoria de instalación para las actualizaciones de software requeridas. Para más información, vea [Agente de equipo](../../core/clients/deploy/about-client-settings.md#computer-agent).  
+             - La hora de la fecha límite de instalación real es la hora de la fecha límite más una cantidad aleatoria de tiempo de hasta dos horas. La selección aleatoria reduce el posible impacto de los clientes de la recopilación que instalan las actualizaciones en la implementación a la misma hora.  
 
-8. En la página Experiencia del usuario, configure las siguientes opciones:  
+             - Para deshabilitar el retraso de la selección aleatoria de instalación para las actualizaciones de software requeridas, establezca la opción del cliente en **Deshabilitar selección aleatoria de fecha límite** en el grupo **Agente de equipo**. Para obtener más información, vea [Configuración de cliente de Agente de equipo](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
 
-    -   **Notificaciones de usuario**: especifique si quiere mostrar una notificación de las actualizaciones de software en el Centro de software del equipo cliente según las **Horas de disponibilidad del software** y si quiere mostrar las notificaciones de usuario en los equipos cliente.  
+    -  **Retrasar el cumplimiento de esta implementación de acuerdo con las preferencias del usuario hasta el período de gracia definido en la configuración del cliente**: habilite esta opción para dar más tiempo a los usuarios para instalar las actualizaciones de software requeridas más allá de la fecha límite.  
 
-    -   **Comportamiento de la fecha límite**: especifique el comportamiento que tiene lugar cuando se alcanza la fecha límite para la implementación de actualizaciones de software. Especifique si desea instalar las actualizaciones de software de la implementación. Especifique también si el sistema se debe reiniciar tras la instalación de las actualizaciones de software independientemente de lo establecido en una ventana de mantenimiento. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](../../core/clients/manage/collections/use-maintenance-windows.md).  
+        - Este comportamiento es normalmente necesario cuando un equipo ha estado apagado durante mucho tiempo y necesita instalar muchas aplicaciones o actualizaciones de software. Por ejemplo, cuando un usuario vuelve de vacaciones, tiene que esperar mucho tiempo mientras el cliente instala las implementaciones atrasadas.  
+
+        - Configure este período de gracia con la propiedad **Período de gracia para el cumplimiento tras la fecha límite de la implementación (horas)** en la configuración del cliente. Para obtener más información, consulte la sección [Agente de equipo](/sccm/core/clients/deploy/about-client-settings#computer-agent). El período de gracia de cumplimiento se aplica a todas las implementaciones que tienen habilitada esta opción y que están destinadas a dispositivos en los que también se ha implementado la configuración del cliente.  
+
+        - Después de la fecha límite, el cliente instala las actualizaciones de software en la primera ventana que no sea de empresa, configurada por el usuario, hasta ese período de gracia. No obstante, el usuario puede abrir el Centro de software e instalar las actualizaciones de software en cualquier momento. Una vez que expira el período de gracia, el cumplimiento vuelve al comportamiento normal para implementaciones vencidas.  
+
+8. En la página **Experiencia del usuario**, configure las siguientes opciones:  
+
+    -   **Notificaciones de usuario**: especifique si quiere mostrar una notificación en el Centro de software según las **Horas de disponibilidad del software** configuradas. Esta configuración también controla si se debe notificar a los usuarios en los clientes.  
+
+    -   **Comportamiento de la fecha límite**: especifica los comportamientos cuando la implementación de actualizaciones de software alcanza la fecha límite fuera de las ventanas de mantenimiento definidas. Las opciones incluyen la posibilidad de instalar las actualizaciones de software y de realizar un reinicio del sistema tras la instalación. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](/sccm/core/clients/manage/collections/use-maintenance-windows).  
 
     -   **Comportamiento de reinicio de dispositivo**: especifique si se debe suprimir el reinicio del sistema necesario para completar la instalación de actualizaciones en servidores y estaciones de trabajo.  
 
         > [!WARNING]  
-        >  Suprimir los reinicios de sistema puede ser útil en entornos de servidor, si no desea que los equipos que instalan las actualizaciones de software se reinicien de manera predeterminada. Sin embargo, esta opción puede dejar a los equipos en un estado poco seguro; por su lado, forzar el reinicio permite asegurar que la instalación de actualizaciones de software se completa inmediatamente.  
+        >  Suprimir los reinicios del sistema puede ser útil en entornos de servidor o si no quiere que los equipos de destino se reinicien de forma predeterminada. En cambio, esta opción puede dejar los equipos en un estado poco seguro. Permitir un reinicio forzado ayuda a asegurar la finalización inmediata de la instalación de la actualización de software.  
 
-    -   **Tratamiento de filtros de escritura para dispositivos de Windows Embedded**: cuando implemente actualizaciones de software en dispositivos de Windows Embedded habilitados para filtro de escritura, puede especificar que las actualizaciones de software se instalen en la superposición temporal y, o bien confirmar los cambios más tarde, o bien confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento. Al confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento, es necesario reiniciar. Los cambios se conservan en el dispositivo.  
+    -   **Tratamiento de filtros de escritura para dispositivos de Windows Embedded**: esta configuración controla el comportamiento de instalación en dispositivos Windows Embedded habilitados con un filtro de escritura. Elija esta opción para que los cambios se confirmen en la fecha límite de instalación o durante una ventana de mantenimiento. Al seleccionar esta opción, se necesita un reinicio y los cambios persisten en el dispositivo. En caso contrario, la actualización se instala, se aplica a la superposición temporal y se confirmará más tarde.  
 
-           -  Cuando implemente una actualización de software en un dispositivo de Windows Embedded, asegúrese de que el dispositivo sea miembro de una recopilación que tenga una ventana de mantenimiento configurada.  
+           -  Al implementar una actualización de software en un dispositivo de Windows Embedded, asegúrese de que el dispositivo sea miembro de una colección que tenga configurada una ventana de mantenimiento.  
 
-    - **Comportamiento de reevaluación de implementación de actualizaciones de software tras el reinicio**: seleccione esta opción para configurar las implementaciones de actualizaciones de software para que los clientes ejecuten un examen de cumplimiento de actualizaciones de software inmediatamente después de que un cliente instale las actualizaciones de software y se reinicie. Esta opción permite al cliente comprobar las actualizaciones adicionales que entran en vigor después de que el cliente se reinicie y luego las instala durante la misma ventana de mantenimiento.
+    - **Comportamiento de reevaluación de implementación de actualizaciones de software tras el reinicio**: seleccione esta opción para configurar las implementaciones de actualizaciones de software para que los clientes ejecuten un examen de cumplimiento de actualizaciones de software inmediatamente después de que un cliente instale las actualizaciones de software y se reinicie. Esta opción permite al cliente comprobar las actualizaciones adicionales que entran en vigor después de que el cliente se reinicie y luego las instala durante la misma ventana de mantenimiento.  
 
-9. En la página Alertas, configure cómo generarán Configuration Manager y System Center Operations Manager las alertas para esta implementación. Puede revisar las alertas de las actualizaciones de software recientes en el área de trabajo **Biblioteca de software** del nodo **Actualizaciones de software** .  
+9. En la página **Alertas**, configure la forma en que Configuration Manager genera las alertas para esta implementación. Revise las alertas de las actualizaciones de software recientes de Configuration Manager en el nodo **Actualizaciones de software** del área de trabajo **Biblioteca de software**. Si también usa System Center Operations Manager, configure también sus alertas.  
 
-10. En la página Configuración de descarga, configure las siguientes opciones:  
+10. En la página **Configuración de descarga**, configure las siguientes opciones:  
 
-    - Especifique si los clientes deben descargar e instalar las actualizaciones cuando estén conectados a una red lenta o si usan una ubicación de contenido de reserva.  
+    - Especifique si los clientes deben descargar e instalar las actualizaciones al usar un punto de distribución desde un grupo vecino o los grupos de límites predeterminados del sitio.  
 
-    - Especifique si los clientes tienen que descargar e instalar las actualizaciones de software desde un punto de distribución de reserva cuando el contenido de las actualizaciones de software no está disponible en un punto de distribución preferido.  
+    - Especifique si los clientes deben descargar e instalar las actualizaciones desde un punto de distribución en el grupo de límites predeterminados del sitio, cuando el contenido para las actualizaciones de software no está disponible desde un punto de distribución en el grupo actual o en los grupos de límites vecinos.  
 
-    - **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**: especifique si quiere habilitar el uso de BranchCache para las descargas de contenido. Para más información sobre BranchCache, vea [Concepts for content management (Conceptos para la administración de contenido)](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
+    - **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**: especifique si quiere habilitar el uso de BranchCache para las descargas de contenido. Para obtener más información, vea [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache). A partir de la versión 1802, BranchCache siempre está habilitado en los clientes. Esta configuración se eliminó, ya que los clientes usan BranchCache si el punto de distribución lo admite.  
 
-    - **Si las actualizaciones de software no están disponibles en un punto de distribución del grupo de límites actual, vecino o del sitio, descargue el contenido de Microsoft Update**: seleccione esta opción para que los clientes que están conectados a la intranet descarguen las actualizaciones de software desde Microsoft Update si las actualizaciones de software no están disponibles en los puntos de distribución. Los clientes basados en Internet siempre pueden ir a Microsoft Update para obtener el contenido de las actualizaciones de software.
+    - **Si las actualizaciones de software no están disponibles en un punto de distribución del grupo de límites actual, vecino o del sitio, descargue el contenido de Microsoft Update**: seleccione esta opción para que los clientes que están conectados a la intranet descarguen las actualizaciones de software desde Microsoft Update si no están disponibles en los puntos de distribución. Los clientes basados en Internet siempre van a Microsoft Update para obtener el contenido de las actualizaciones de software.  
 
-    - Especifique si desea permitir que los clientes descarguen después de la fecha límite de instalación cuando utilizan una conexión a Internet de uso medido. En ocasiones, los proveedores de acceso a Internet cobran según la cantidad de datos que envía y recibe cuando se utiliza una conexión a Internet de uso medido.  
+    - Especifique si quiere permitir que los clientes descarguen después de la fecha límite de instalación cuando utilizan una conexión a Internet de uso medido. En ocasiones, los proveedores de acceso a Internet cobran según la cantidad de datos que envía y recibe cuando se utiliza una conexión de uso medido.  
 
     > [!NOTE]  
-    >  Los clientes solicitan la ubicación del contenido desde un punto de administración para las actualizaciones de software de una implementación. El comportamiento de descarga depende de cómo se hayan configurado el punto de distribución, el paquete de implementación y las opciones de esta página. Para obtener más información, vea [Content source location scenarios](../../core/plan-design/hierarchy/content-source-location-scenarios.md) (Escenarios de ubicación de origen del contenido).  
+    >  Los clientes solicitan la ubicación del contenido desde un punto de administración para las actualizaciones de software de una implementación. El comportamiento de descarga depende de cómo se hayan configurado el punto de distribución, el paquete de implementación y las opciones de esta página.   
 
-11. En la página Paquete de implementación, seleccione un paquete de implementación existente o configure las opciones siguientes para crear un nuevo paquete de implementación:  
+11. En la página **Paquete de implementación**, seleccione una de las siguientes opciones:  
 
-    1.  **Nombre**: especifique el nombre del paquete de implementación. Use un nombre único que describa el contenido del paquete. Está limitado a 50 caracteres.  
+    - **Seleccione un paquete de implementación**: agregue estas actualizaciones a un paquete de implementación existente.  
 
-    2.  **Descripción**: especifique una descripción que proporcione información sobre el paquete de implementación. La descripción está limitada a 127 caracteres.  
+    - **Crear un nuevo paquete de implementación**: agregue estas actualizaciones a un paquete de implementación nuevo. Configure las siguientes opciones adicionales:  
 
-    3.  **Origen de paquete**: especifica la ubicación de los archivos de origen de la actualización de software.  Escriba una ruta de red de la ubicación de los archivos de origen, por ejemplo, **\\\servidor\nombre de recurso compartido\ruta**, o haga clic en **Examinar** para buscar la ubicación de red. Cree la carpeta compartida para los archivos de origen del paquete de implementación antes de continuar con la página siguiente.  
+        -  **Nombre**: especifique el nombre del paquete de implementación. Use un nombre único que describa el contenido del paquete. Está limitado a 50 caracteres.  
 
-        - Ningún otro paquete de implementación de software puede usar la ubicación de origen del paquete de implementación especificado.
-        - Puede cambiar la ubicación de origen del paquete en las propiedades del paquete de implementación después de que Configuration Manager cree el paquete de implementación. Pero si lo hace, primero debe copiar el contenido desde el origen del paquete original a la nueva ubicación de origen del paquete.  
-        -  Tanto la cuenta de equipo del proveedor de SMS como el usuario que ejecuta el asistente para descargar actualizaciones de software deben tener permisos NTFS de **escritura** en la ubicación de descarga. Debe restringir cuidadosamente el acceso a la ubicación de descarga para reducir el riesgo de alteración de los archivos de origen de la actualización de software por parte de atacantes.  
-       
+        -  **Descripción**: especifique una descripción que proporcione información sobre el paquete de implementación. La descripción opcional está limitada a 127 caracteres.  
 
-    4.  **Prioridad de envío**: especifique la prioridad de envío del paquete de implementación. Configuration Manager usa la prioridad de envío para el paquete de implementación cuando envía el paquete a los puntos de distribución. Los paquetes de implementación se envían en orden de prioridad: Alta, Media, o Baja. Los paquetes con prioridades idénticas se envían en el orden en que se crearon. Si no hay ningún trabajo pendiente, el paquete se procesará inmediatamente sin tener en cuenta su prioridad.  
+        -  **Origen de paquete**: especifica la ubicación de los archivos de origen de la actualización de software. Escriba una ruta de acceso a la red para la ubicación de origen (por ejemplo, `\\server\sharename\path`) o haga clic en **Examinar** para buscar la ubicación de red. Cree la carpeta compartida para los archivos de origen del paquete de implementación antes de continuar con la página siguiente.  
 
-12. En la página Puntos de distribución, especifique los puntos de distribución o los grupos de puntos de distribución que hospedarán los archivos de actualización de software. Para más información sobre los puntos de distribución, vea [Distribution point configurations (Configuraciones de puntos de distribución)](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs). Esta página sólo está disponible cuando se crea un nuevo paquete de implementación de actualizaciones de software.
+            - No se puede usar la ubicación especificada como origen de otro paquete de implementación de software.  
+
+            - Puede cambiar la ubicación de origen del paquete en las propiedades del paquete de implementación después de que Configuration Manager cree el paquete de implementación. Si lo hace, copie primero el contenido desde el origen del paquete original a la nueva ubicación de origen del paquete.  
+
+            -  La cuenta de equipo del proveedor de SMS y el usuario que ejecuta el asistente para descargar actualizaciones de software deben tener permisos de **Escritura** en la ubicación de descarga. Restrinja el acceso a la ubicación de descarga. Esta restricción reduce el riesgo de que los atacantes alteren los archivos de origen de actualización de software.  
+
+        -  **Prioridad de envío**: especifique la prioridad de envío del paquete de implementación. Configuration Manager usa esta prioridad cuando envía el paquete a los puntos de distribución. Los paquetes de implementación se envían en orden de prioridad: alta, media o baja. Los paquetes con prioridades idénticas se envían en el orden en que se crearon. Si no hay ningún trabajo pendiente, el paquete se procesa inmediatamente sin tener en cuenta su prioridad.  
+
+        - **Habilitar replicación diferencial binaria**: habilite esta opción para minimizar el tráfico de red entre sitios. La replicación diferencial binaria (BDR) solo actualiza el contenido que ha cambiado en el paquete, en lugar de actualizar todo el contenido del paquete. Para obtener más información, vea [Replicación diferencial binaria](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#binary-differential-replication).  
+
+    - **Sin paquete de implementación**: a partir de la versión 1806, puede implementar las actualizaciones de software en los dispositivos sin antes descargar y distribuir el contenido a los puntos de distribución. Esta configuración es útil cuando se trabaja con contenido de actualización extremadamente grande. También puede usarla cuando quiera que los clientes siempre obtengan contenido desde el servicio en la nube de Microsoft Update. En este escenario, los clientes también pueden descargar el contenido desde los equipos del mismo nivel que ya tienen el contenido necesario. El cliente de Configuration Manager sigue administrando la descarga del contenido, por lo que puede usar la característica de caché del mismo nivel de Configuration Manager u otras tecnologías como, por ejemplo, Optimización de distribución. Esta característica es compatible con cualquier tipo de actualización admitida por la administración de actualizaciones de software de Configuration Manager, incluidas las actualizaciones de Windows y Office.<!--1357933-->  
+
+12. En la página **Puntos de distribución**, especifique los puntos de distribución o los grupos de puntos de distribución que hospedan los archivos de actualización de software. Para más información sobre los puntos de distribución, vea [Distribution point configurations (Configuraciones de puntos de distribución)](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs). Esta página sólo está disponible cuando se crea un nuevo paquete de implementación de actualizaciones de software.  
   
 
-13. En la página Ubicación de descarga, especifique si los archivos de actualización de software se van a descargar desde Internet o desde la red local. Configure las siguientes opciones:  
+13. En la página **Ubicación de descarga**, especifique si los archivos de actualización de software se van a descargar desde Internet o desde la red local. Configure las siguientes opciones:  
 
     -   **Descargar actualizaciones de software de Internet**: seleccione esta opción para descargar las actualizaciones de software desde una ubicación de Internet especificada. Esta opción está habilitada de forma predeterminada.  
 
-    -   **Descargar actualizaciones de software de una ubicación en mi red**: seleccione esta opción para descargar las actualizaciones de software desde un directorio local o una carpeta compartida. Esta opción es útil si el equipo que ejecuta el asistente no tiene acceso a Internet. Cualquier equipo con acceso a Internet puede descargar de forma preliminar las actualizaciones de software y almacenarlas en una ubicación de la red local a la que se pueda tener acceso desde el equipo que ejecuta el asistente.  
+    -   **Descargar actualizaciones de software de una ubicación en mi red**: seleccione esta opción para descargar las actualizaciones de software desde un directorio local o una carpeta compartida. Esta opción es útil si el equipo que ejecuta el asistente no tiene acceso a Internet. Cualquier equipo con acceso a Internet puede descargar de forma preliminar las actualizaciones de software. Después, almacénelas en una ubicación en la red local que sea accesible desde el equipo que ejecuta al asistente.  
 
-14. En la página Selección del idioma, seleccione los idiomas para los que se descargan las actualizaciones de software seleccionadas. Las actualizaciones de software sólo se descargan si están disponibles en los idiomas seleccionados. Las actualizaciones de software que no utilicen ningún idioma específico se descargarán siempre. De forma predeterminada, el asistente selecciona los idiomas que se han configurado en las propiedades del punto de actualización de software. Debe seleccionar, como mínimo, un idioma para poder pasar a la página siguiente. Si solo selecciona idiomas no admitidos por una actualización de software, se producirá un error en la descarga de la actualización.  
+14. En la página **Selección del idioma**, seleccione los idiomas para los que el sitio descarga las actualizaciones de software seleccionadas. El sitio solo descarga estas actualizaciones si están disponibles en los idiomas seleccionados. Las actualizaciones de software que no son específicas de un idioma se descargan siempre. De forma predeterminada, el asistente selecciona los idiomas que se han configurado en las propiedades del punto de actualización de software. Debe seleccionar, como mínimo, un idioma para poder pasar a la página siguiente. Si solo se seleccionan idiomas que una actualización de software no admite, la descarga no se completa para esa actualización.  
 
-15. En la página Resumen, revise la configuración. Para guardar la configuración en una plantilla de implementación, haga clic en **Guardar como plantilla**. Escriba un nombre, seleccione la configuración que quiere incluir en la plantilla y, después, haga clic en **Guardar**. Para cambiar una configuración, haga clic en la página correspondiente del asistente y cámbiela.  
-    -  El nombre de plantilla puede incluir caracteres ASCII alfanumérico, **\\** (barra diagonal inversa) y **‘** (comillas tipográficas).  
+15. En la página **Resumen** , revise la configuración. Para guardar la configuración en una plantilla de implementación, haga clic en **Guardar como plantilla**. Escriba un nombre, seleccione la configuración que quiere incluir en la plantilla y, después, haga clic en **Guardar**. Para cambiar una configuración, haga clic en la página correspondiente del asistente y cámbiela.  
+
+    -  El nombre de plantilla puede incluir caracteres ASCII alfanuméricos, `\` (barra diagonal inversa) o `'` (comillas tipográficas).  
 
 16. Haga clic en **Siguiente** crear la regla de implementación automática (ADR).  
 
- Una vez completado el asistente, se ejecutará la ADR. Agregará las actualizaciones de software que cumplen los criterios especificados a un grupo de actualizaciones de software. Después, la ADR descarga las actualizaciones de la biblioteca de contenido en el servidor de sitio y las distribuye a los puntos de distribución configurados. Luego, la ADR implementa el grupo de actualizaciones de software en los clientes de la recopilación de destino.  
+Después de completar el asistente, se ejecuta la ADR. Agrega las actualizaciones de software que cumplen los criterios especificados a un grupo de actualizaciones de software. Después, la ADR descarga las actualizaciones de la biblioteca de contenido en el servidor de sitio y las distribuye a los puntos de distribución configurados. Luego, la ADR implementa el grupo de actualizaciones de software en los clientes de la recopilación de destino.  
+
+
 
 ##  <a name="BKMK_AddDeploymentToADR"></a> Agregar una nueva implementación a una ADR existente  
- Después de crear una ADR, puede agregar implementaciones adicionales a la regla. Esto puede ayudarle a administrar la complejidad de la implementación de varias actualizaciones en diferentes recopilaciones. Cada nueva implementación ofrece todas las funcionalidades y la experiencia completa de supervisión de la implementación.  
 
-#### <a name="to-add-a-new-deployment-to-an-existing-adr"></a>Para agregar una nueva implementación a una ADR existente  
+Después de crear una ADR, agregue implementaciones adicionales a la regla. Esta acción le ayuda a administrar la complejidad de la implementación de varias actualizaciones en diferentes recopilaciones. Cada nueva implementación ofrece todas las funcionalidades y la experiencia completa de supervisión de la implementación.  
 
-1.  En la consola de Configuration Manager, vaya a **Biblioteca de software** > **Información general** > **Actualizaciones de software** > **Reglas de implementación automática** y luego seleccione la regla que quiera.  
 
-2.  En la pestaña **Inicio** , del grupo **Regla de implementación automática** , haga clic en **Agregar implementación**. Se abrirá el Asistente para agregar implementaciones.  
+### <a name="process-to-add-a-new-deployment-to-an-existing-adr"></a>Proceso para agregar una nueva implementación a una ADR existente  
 
-3.  En la página **Recopilación** , configure las siguientes opciones:  
+1.  En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software**, expanda **Actualizaciones de software**, seleccione el nodo **Reglas de implementación automática** y después seleccione la regla deseada.  
 
-    -   **Recopilación**: especifica la recopilación de destino que se utilizará para la implementación. los miembros de la recopilación reciben las actualizaciones de software definidas en la implementación.  
+2.  En la cinta, haga clic en **Agregar implementación**.   
 
-    -   **Habilitar la implementación después de ejecutar la regla**: especifique si quiere habilitar la implementación de actualizaciones de software después de la ejecución de la regla de implementación automática. En cuanto a esta especificación, considere los aspectos siguientes:  
+3.  En la página **Colección** del Asistente para agregar implementación, configure las opciones disponibles de forma similar a la página **General** del Asistente para crear regla de implementación automática. Para obtener más información, consulte la sección anterior en el [Proceso para crear una ADR](#bkmk_adr-process). El resto del Asistente para agregar implementación incluye las páginas siguientes, que también coinciden con una descripción detallada anterior:  
 
-        -   Cuando se habilita la implementación, las actualizaciones que cumplen los criterios definidos de la regla se agregan a un grupo de actualizaciones de software. El contenido de actualización de software se descarga según sea necesario. El contenido se copia en los puntos de distribución especificados y las actualizaciones se implementan en los clientes de la recopilación de destino.  
+     - Configuración de implementación
+     - Programación de implementación
+     - Experiencia del usuario
+     - Alertas
+     - Configuración de descarga  
 
-        -  Cuando no se habilita la implementación, las actualizaciones que cumplen los criterios definidos de la regla se agregan a un grupo de actualizaciones de software. Se configura la directiva de implementación de actualizaciones de software. Pero las actualizaciones no se descargan ni implementan en los clientes. Esta situación proporciona tiempo para preparar la implementación de las actualizaciones, comprobar que las actualizaciones que cumplen los criterios son adecuadas y habilitar la implementación posteriormente.  
 
-4.  En la página Configuración de implementación, configure las siguientes opciones:  
+Para obtener más información sobre el proceso de implementación, consulte [Proceso de implementación de actualizaciones de software](/sccm/sum/understand/software-updates-introduction#BKMK_DeploymentProcess).
 
-    -   **Usar Wake-on-LAN para activar clientes para las implementaciones requeridas**: especifica si se debe habilitar Wake on LAN en la fecha límite para enviar paquetes de reactivación a equipos que requieran una o varias actualizaciones de software en la implementación. Los equipos que estén en modo de suspensión en la fecha límite de instalación se activarán para que se pueda iniciar la instalación. Los clientes que están en modo de suspensión pero no requieren actualizaciones de software de la implementación no se iniciarán. De forma predeterminada, esta opción no está habilitada. Para poder utilizar esta opción, debe configurar los equipos y redes para Wake On LAN.  
 
-    -   **Nivel de detalle**: especifique el nivel de detalle de los mensajes de estado que notifican los equipos cliente.  
-
-        > [!IMPORTANT]  
-        >  Cuando implemente actualizaciones de definiciones, configure el nivel de detalle en **Sólo error** para que el cliente notifique un mensaje de estado sólo cuando no se pueda entregar una definición de estado al cliente. De lo contrario, el número de mensajes de estado que notifique el cliente podría afectar al rendimiento en el servidor del sitio.  
-
-5.  En la página Programación de implementación, configure las siguientes opciones:  
-
-    -   **Programar evaluación**: especifique si Configuration Manager evalúa la hora disponible y las horas límite de instalación mediante la hora UTC o la hora local del equipo que ejecuta la consola de Configuration Manager.  
-
-           -  Al seleccionar la hora local y luego **Lo antes posible** para **Horas de disponibilidad del software** o **Fecha límite de instalación**, la hora actual en el equipo que ejecuta la consola de Configuration Manager se usa para evaluar cuándo hay actualizaciones disponibles o cuándo se instalan en un cliente. Si el cliente está en una zona horaria distinta, estas acciones se producirán cuando la hora del cliente llegue a la hora de evaluación.  
-
-    -   **Horas de disponibilidad del software**: seleccione una de las siguientes opciones a fin de especificar cuándo estarán disponibles las actualizaciones de software para los clientes:  
-
-        -   **Lo antes posible**: seleccione esta opción a fin de que las actualizaciones de software incluidas en la implementación estén disponibles para los equipos cliente lo antes posible. Si se crea la implementación con esta opción seleccionada, Configuration Manager actualiza la directiva del cliente. En el siguiente ciclo de sondeo de directiva de cliente, los clientes conocen la existencia de la implementación y pueden obtener las actualizaciones disponibles para la instalación.  
-
-        -   **Hora específica**: hace que las actualizaciones de software incluidas en la implementación estén disponibles para los clientes en una fecha y hora concretas. Si se crea la implementación con esta opción habilitada, Configuration Manager actualiza la directiva del cliente. Con el siguiente ciclo de sondeo de directiva de cliente, los clientes conocen la existencia de la implementación. Sin embargo, las actualizaciones de software de la implementación no están disponibles para la instalación hasta después de la fecha y hora configurada. 
-
-    -   **Fecha límite de instalación**: seleccione una de las siguientes opciones para especificar la fecha de límite de instalación de las actualizaciones de software de la implementación:  
-
-        -   **Lo antes posible**: seleccione esta opción para que se instalen automáticamente las actualizaciones de software incluidas en la implementación lo antes posible.  
-
-        -   **Hora específica**: seleccione esta opción para que las actualizaciones de software de la implementación se instalen automáticamente en una fecha y hora concretas. Configuration Manager determina la fecha límite para instalar actualizaciones de software, para lo cual agrega el intervalo **Hora específica** establecido a **Horas de disponibilidad del software**.  
-
-               - La hora de la fecha límite de instalación real es la hora de la fecha límite más una cantidad aleatoria de tiempo de hasta dos horas. Esto reduce el posible impacto de los equipos cliente de la recopilación que instalan las actualizaciones en la implementación a la misma hora.  
-              - Puede establecer la opción **Deshabilitar selección aleatoria de fecha límite** de la configuración de cliente **Agente de equipo** para deshabilitar el retraso de la selección aleatoria de instalación para las actualizaciones de software requeridas. Para más información, vea [Agente de equipo](../../core/clients/deploy/about-client-settings.md#computer-agent).  
-
-6.  En la página Experiencia del usuario, configure las siguientes opciones:  
-
-    -   **Notificaciones de usuario**: especifique si quiere mostrar una notificación de las actualizaciones de software en el Centro de software del equipo cliente según las **Horas de disponibilidad del software** y si quiere mostrar las notificaciones de usuario en los equipos cliente.  
-
-    -   **Comportamiento de la fecha límite**: especifique el comportamiento que tiene lugar cuando se alcanza la fecha límite para la implementación de actualizaciones de software. Especifique si desea instalar las actualizaciones de software de la implementación. Especifique también si el sistema se debe reiniciar tras la instalación de las actualizaciones de software independientemente de lo establecido en una ventana de mantenimiento. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](../../core/clients/manage/collections/use-maintenance-windows.md).  
-
-    -   **Comportamiento de reinicio de dispositivo**: especifique si se debe suprimir el reinicio del sistema necesario para completar la instalación de actualizaciones en servidores y estaciones de trabajo.  
- 
-           > [!WARNING]  
-           >  Suprimir los reinicios de sistema puede ser útil en entornos de servidor, si no desea que los equipos que instalan las actualizaciones de software se reinicien de manera predeterminada. Sin embargo, esta opción puede dejar a los equipos en un estado poco seguro; por su lado, forzar el reinicio permite asegurar que la instalación de actualizaciones de software se completa inmediatamente.  
-
-    - **Tratamiento de filtros de escritura para dispositivos de Windows Embedded**: cuando implemente actualizaciones de software en dispositivos de Windows Embedded habilitados para filtro de escritura, puede especificar que las actualizaciones de software se instalen en la superposición temporal y, o bien confirmar los cambios más tarde, o bien confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento. Al confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento, es necesario reiniciar. Los cambios se conservan en el dispositivo.  
-
-        - Cuando implemente una actualización de software en un dispositivo de Windows Embedded, asegúrese de que el dispositivo es miembro de una recopilación que tenga una ventana de mantenimiento configurada.  
-
-7.  En la página Alertas, configure cómo generarán Configuration Manager y System Center Operations Manager las alertas para esta implementación. Puede revisar las alertas de las actualizaciones de software recientes en el área de trabajo **Biblioteca de software** del nodo **Actualizaciones de software** .  
-
-8. En la página Configuración de descarga, configure las siguientes opciones:  
-
-    - Especifique si los clientes deben descargar e instalar las actualizaciones de software cuando estén conectados a una red lenta o si usan una ubicación de contenido de reserva.  
-
-    - Especifique si el cliente debe descargar e instalar las actualizaciones de software desde un punto de distribución de reserva cuando el contenido de las actualizaciones de software no está disponible en un punto de distribución preferido.  
-
-    - **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**: especifique si quiere habilitar el uso de BranchCache para las descargas de contenido. Para más información sobre BranchCache, vea [Concepts for content management (Conceptos para la administración de contenido)](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
-
-    - **Si las actualizaciones de software no están disponibles en un punto de distribución del grupo de límites actual, vecino o del sitio, descargue el contenido de Microsoft Update**: seleccione esta opción para que los clientes que están conectados a la intranet descarguen las actualizaciones de software desde Microsoft Update si las actualizaciones de software no están disponibles en los puntos de distribución. Los clientes basados en Internet siempre pueden ir a Microsoft Update para obtener el contenido de las actualizaciones de software.
-
-    - Especifique si desea permitir que los clientes descarguen después de la fecha límite de instalación cuando utilizan una conexión a Internet de uso medido. En ocasiones, los proveedores de acceso a Internet cobran según la cantidad de datos que envía y recibe cuando se utiliza una conexión a Internet de uso medido.  
-
-    > [!NOTE]  
-    > Los clientes solicitan la ubicación del contenido desde un punto de administración para las actualizaciones de software de una implementación. El comportamiento de descarga depende de cómo se hayan configurado el punto de distribución, el paquete de implementación y las opciones de esta página. Para más información, vea [Escenarios de ubicación de orígenes de contenido](../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
-
-Para más información sobre el proceso de implementación, vea [Software update deployment process (Proceso de implementación de actualizaciones de software)](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Supervisar actualizaciones de software](monitor-software-updates.md)

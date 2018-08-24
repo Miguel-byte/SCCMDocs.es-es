@@ -5,17 +5,17 @@ description: Obtenga información sobre las características y funcionalidad del
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
-ms.openlocfilehash: ff40af9dd40921b63f8b8bd13ba5c287c3bf9972
-ms.sourcegitcommit: e35d07870656eadd29faacc378ecd091ff3bdcfb
+ms.openlocfilehash: bcdc6298a7b1c429888acf2b7257cec072e9b878
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848669"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383427"
 ---
 # <a name="software-center-user-guide"></a>Manual del usuario del Centro de software
 
@@ -52,8 +52,7 @@ Haga clic en la pestaña **Aplicaciones** para buscar e instalar las aplicacione
 
 
 ### <a name="install-multiple-applications"></a>Instalar varias aplicaciones 
-<!-- 1357126 -->
-Instale más de una aplicación a la vez en lugar de esperar a que finalice una antes de iniciar la siguiente. No sirve para todas las aplicaciones:
+<!-- 1357126 --> Instale más de una aplicación a la vez en lugar de esperar a que finalice una antes de iniciar la siguiente. No sirve para todas las aplicaciones:
 - La aplicación es visible para usted.
 - La aplicación todavía no se descargado o instalado.
 - El administrador de TI no requiere la aprobación para instalar la aplicación.
@@ -96,8 +95,11 @@ Haga clic en la pestaña **Estado de instalación** para ver el estado de las ap
 - **Instalado**: Centro de software ya ha instalado esta aplicación en este equipo.
 - **Descargando**: Centro de software está descargando el software para instalar en este equipo.
 - **Error**: Centro de software encontró un error al intentar instalar el software.
+- **Programado para instalar después de**: muestra la fecha y hora de la siguiente ventana de mantenimiento del dispositivo para instalar software que se publicará próximamente. El administrador de TI define las ventanas de mantenimiento.<!--1358131-->
+    - Se puede ver el estado en las pestañas **Todo** y **Próximas**. 
+    - Puede instalar antes de la hora de la ventana de mantenimiento haciendo clic en el botón **Instalar ahora**. 
 
-
+El administrador de TI puede permitirle ver aplicaciones desde el sitio web del catálogo de aplicaciones. Para ver el sitio web, haga clic en **Abrir el sitio web del catálogo de aplicaciones** en la esquina superior derecha. <!--1358214-->
 
 ## <a name="device-compliance"></a>Cumplimiento de dispositivos
 
@@ -134,3 +136,5 @@ Especifique el modo en que el Centro de software aplica los cambios al software 
 - **Suspender las actividades del Centro de software si el equipo está en modo Presentación**: esta opción está habilitada de forma predeterminada.
 - **Directiva de sincronización**: haga clic en este botón cuando se lo indique el administrador de TI. Este equipo comprueba cualquier novedad con los servidores, como aplicaciones, actualizaciones de software o sistemas operativos.
 
+## <a name="custom-tab-in-software-center"></a>Pestaña personalizada en Centro de software
+El administrador de TI podría haber agregado una pestaña adicional al Centro de software. El administrador asigna un nombre a esta ventana y lleva a un sitio web que haya especificado. Por ejemplo, podría tener una pestaña denominada "Departamento de soporte técnico" que lleva al sitio web del departamento de soporte técnico de su organización. <!--1358132-->
