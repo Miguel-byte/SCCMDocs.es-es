@@ -2,7 +2,7 @@
 title: Sitios de copia de seguridad
 titleSuffix: Configuration Manager
 description: Obtenga información para realizar copias de seguridad de los sitios ante la posibilidad de un error o pérdida de datos en Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 08/24/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 39af53c6ddfdb58f340432aa3392a046cdeef428
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 85ce1c4b5201c29ffa3543357f50a379c1b11e7f
+ms.sourcegitcommit: 84afecee44200e27d1d5bb5ed2d54fd6a8c51617
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386216"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43053888"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Hacer una copia de seguridad de un sitio de Configuration Manager
 
@@ -129,7 +129,7 @@ Conserve varios archivos de la instantánea de copia de seguridad por los siguie
 
 
 ## <a name="using-the-afterbackupbat-file"></a>Uso del archivo AfterBackup.bat  
-Después de realizar la copia de seguridad del sitio correctamente, la tarea de copia de seguridad automáticamente intenta ejecutar un script denominado **AfterBackup.bat**. Cree manualmente el archivo AfterBackup.bat en el servidor de sitio en `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup`. Si hay un archivo AfterBackup.bat en la carpeta correcta, se ejecuta automáticamente después de que termine la tarea de copia de seguridad.
+Después de realizar la copia de seguridad del sitio correctamente, la tarea de copia de seguridad automáticamente intenta ejecutar un script denominado **AfterBackup.bat**. Cree manualmente el archivo AfterBackup.bat en el servidor de sitio en `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box`. Si hay un archivo AfterBackup.bat en la carpeta correcta, se ejecuta automáticamente después de que termine la tarea de copia de seguridad.
 
 El archivo AfterBackup.bat permite archivar la instantánea de copia de seguridad al final de cada operación de copia de seguridad. Puede realizar automáticamente otras tareas posteriores a la copia de seguridad que no formen parte de la tarea de mantenimiento Copia de seguridad del servidor del sitio. El archivo AfterBackup.bat integra las operaciones de archivo y copia de seguridad, por lo que garantiza que se archiva cada nueva instantánea de copia de seguridad.
 
