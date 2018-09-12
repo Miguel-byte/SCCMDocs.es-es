@@ -10,12 +10,12 @@ ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9409b6cc71ea238755f40baf75e6211c447b547f
-ms.sourcegitcommit: 826e9ec385d6a1c1f3aa86ac202883154e0c1285
+ms.openlocfilehash: fdeb9d258c5c80fdd8d98d61943ace5469837d3d
+ms.sourcegitcommit: aca62bd3d267b1dbea46d4db6f32d797c5f6263c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37116505"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348025"
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>Perfiles de VPN en dispositivos móviles en System Center Configuration Manager
 
@@ -61,7 +61,7 @@ En esta tabla se muestra qué tipo de conexión se admite para cada plataforma d
   
   
 > [!Note]  
-> F5 Access 2018 no es compatible para perfiles de VPN en MDM híbrida.  
+> Las versiones 3.0 y posteriores de F5 Access para iOS no son compatibles para los perfiles de VPN en la administración híbrida de dispositivos móviles. A este producto también se le conoce como F5 Access 2018. Si necesita crear perfiles de VPN para este cliente VPN, use Intune independiente. Las futuras versiones de iOS, incluida la versión 12, no admiten las versiones 2.1 o anteriores de F5 Access. Para más información, vea el [blog del equipo de soporte técnico de Microsoft Intune](https://aka.ms/iOS12_and_VPN).
 
 
 ## <a name="windows-10-vpn-features-available-when-using-configuration-manager-with-intune"></a>Características de VPN de Windows 10 disponibles cuando se usa Configuration Manager con Intune  

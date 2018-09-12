@@ -2,7 +2,7 @@
 title: Configurar la detección
 titleSuffix: Configuration Manager
 description: Configure métodos de detección para buscar recursos para administrar desde la red, Active Directory y Azure Active Directory.
-ms.date: 03/22/2018
+ms.date: 08/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,21 +10,21 @@ ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e7ac10fdc08569e519468633f30548c5c76b5838
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: e232875aab086dea04261abc4d83df8d5d03e6c8
+ms.sourcegitcommit: aca62bd3d267b1dbea46d4db6f32d797c5f6263c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344126"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347977"
 ---
-# <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>Configurar métodos de detección para System Center Configuration Manager
+# <a name="configure-discovery-methods-for-configuration-manager"></a>Configurar métodos de detección para Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 Configure métodos de detección para buscar recursos para administrar desde la red, Active Directory y Azure Active Directory (Azure AD). Primero habilite y luego configure cada método que quiera usar para realizar búsquedas en el entorno. También se puede deshabilitar un método con el mismo procedimiento que se use para habilitarlo. Las únicas excepciones a este proceso son la detección de latidos y la detección de servidores:  
 
--   De forma predeterminada, la **detección de latidos** ya está habilitada cuando se instala un sitio primario de Configuration Manager. Se configura para ejecutarse de acuerdo a una programación básica. Mantenga habilitada la detección de latidos. Garantiza que los registros de datos de detección (DDR) para los dispositivos están actualizados. Para obtener más información sobre la detección de latidos, vea [Acerca de la detección de latidos](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutHeartbeat).  
+-   De forma predeterminada, la **detección de latidos** ya está habilitada cuando se instala un sitio primario de Configuration Manager. Se configura para ejecutarse de acuerdo a una programación básica. Mantenga habilitada la detección de latidos. Garantiza que los registros de datos de detección (DDR) para los dispositivos están actualizados. Para obtener más información sobre la detección de latidos, vea [Acerca de la detección de latidos](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutHeartbeat).  
 
 -   **Detección de servidores** es un método de detección automática. Busca los equipos que se usan como sistemas de sitio. No se puede configurar ni deshabilitar.  
 
@@ -36,57 +36,65 @@ Configure métodos de detección para buscar recursos para administrar desde la 
 
 2.  Seleccione el método de detección para el sitio donde desea habilitar la detección.  
 
-3.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**. En la pestaña **General**, active la casilla **Habilitar &lt;método de detección\>**.  
+3.  En la pestaña **Inicio** de la cinta de opciones, en el grupo **Propiedades**, seleccione **Propiedades**. En la pestaña **General**, seleccione la opción para **Habilitar &lt;método de detección\>**.  
 
-     Si esta casilla ya está activada, puede desactivarla para deshabilitar el método de detección.  
+     Si esta opción ya está habilitada, puede deshabilitar el método de detección si anula la selección de la casilla.  
 
-4.  Elija **Aceptar** para guardar la configuración.  
+4.  Seleccione **Aceptar** para guardar la configuración.  
 
 
 
 ##  <a name="BKMK_ConfigADForestDisc"></a> Configuración de la detección de bosques de Active Directory  
-Para finalizar la configuración de detección de bosques de Active Directory, debe realizar configuraciones en dos ubicaciones:  
 
--   En el nodo **Métodos de detección**, puede:
+Para finalizar la configuración de detección de bosques de Active Directory, configure los ajustes de las ubicaciones siguientes de la consola de Configuration Manager:  
 
-    - Habilitar este método de detección.
-    - Establecer una programación de sondeo.
+- En el nodo **Métodos de detección**, puede:
+
+    - Habilitar este método de detección.  
+
+    - Establecer una programación de sondeo.  
+
     - Seleccione si la detección crea automáticamente límites para los sitios y subredes de Active Directory que detecta.  
 
--   En el nodo **Bosques de Active Directory**, puede:
+- En el nodo **Bosques de Active Directory**, puede:
 
-    - Agregar bosques que quiere detectar.
-    - Habilitar la detección sitios y subredes de Active Directory en el bosque.
-    - Configurar opciones que habiliten sitios de Configuration Manager para publicar la información del sitio en el bosque.
+    - Agregar bosques que quiere detectar.  
+
+    - Habilitar la detección sitios y subredes de Active Directory en el bosque.  
+
+    - Configurar opciones que habiliten sitios de Configuration Manager para publicar la información del sitio en el bosque.  
+
     - Asignar una cuenta para utilizarla como la cuenta de bosque de Active Directory de cada bosque.  
 
 Utilice los procedimientos siguientes para habilitar la detección de bosques de Active Directory y configurar bosques individuales a fin de utilizarlos con la detección de bosques de Active Directory.  
 
-#### <a name="to-enable-active-directory-forest-discovery"></a>Para habilitar la detección de bosques de Active Directory  
 
-1.  En la consola de Configuration Manager, elija **Administración** > **Configuración de jerarquía** y, luego, **Métodos de detección**.  
+### <a name="enable-active-directory-forest-discovery"></a>Habilitar detección de bosques de Active Directory  
+
+1.  En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración de jerarquía** y seleccione el nodo **Métodos de detección**.  
 
 2.  Seleccione el método Detección de bosques de Active Directory para el sitio donde desea configurar la detección.  
 
-3.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
+3.  En la pestaña **Inicio** de la cinta de opciones, en el grupo **Propiedades**, seleccione **Propiedades**.  
 
-4.  En la pestaña **General**, active la casilla para habilitar la detección. También puede configurar ahora la detección y volver después para habilitarla.  
+4.  En la pestaña **General**, seleccione la casilla para habilitar la detección. También puede configurar ahora la detección y volver después para habilitarla.  
 
 5.  Especifique opciones para crear los límites de sitio para las ubicaciones detectadas.  
 
 6.  Especifique una programación de ejecución de la detección.  
 
-7.  Cuando termine la configuración de la detección de bosques de Active Directory para este sitio, elija **Aceptar** para guardar la configuración.  
+7.  Seleccione **Aceptar** para guardar la configuración.  
 
-#### <a name="to-configure-a-forest-for-active-directory-forest-discovery"></a>Para configurar un bosque para la detección de bosques de Active Directory  
 
-1.  En el área de trabajo **Administración**, elija **Bosques de Active Directory**. Si previamente ejecutó la detección de bosques de Active Directory, verá cada bosque detectado en el panel de resultados. El bosque local y todos los bosques de confianza se detectan cuando se ejecuta la detección de bosques de Active Directory. Sólo deben agregarse manualmente los bosques que no son de confianza.  
+### <a name="configure-a-forest-for-active-directory-forest-discovery"></a>Configuración de un bosque para la detección de bosques de Active Directory  
 
-    -   Para configurar un bosque detectado anteriormente, seleccione el bosque en el panel de resultados. Después, en el grupo **Propiedades** de la pestaña **Inicio**, elija **Propiedades** para abrir las propiedades del bosque. Continúe con el paso 3.  
+1.  En el área de trabajo **Administración**, expanda **Configuración de jerarquía** y luego haga clic en **Bosques de Active Directory**. Si previamente ejecutó la detección de bosques de Active Directory, verá cada bosque detectado en el panel de resultados. El bosque local y todos los bosques de confianza se detectan cuando se ejecuta la detección de bosques de Active Directory. Solo debe agregar manualmente los bosques que no son de confianza.  
 
-    -   Para configurar un nuevo bosque que no aparece en la lista, en el grupo **Crear** de la pestaña **Inicio**, elija **Agregar bosque** para abrir el cuadro de diálogo **Agregar bosques**. Continúe con el paso 3.  
+    -   Para configurar un bosque detectado anteriormente, seleccione el bosque en el panel de resultados. Después, en la pestaña **Inicio**, en el grupo **Propiedades**, haga clic en **Propiedades** para abrir las propiedades del bosque. Continúe con el paso 3.  
 
-2.  En la pestaña **General**, finalice las configuraciones del bosque que desea detectar y especifique la **cuenta de bosque de Active Directory**.  
+    -   Para configurar un nuevo bosque que no se muestra, en la pestaña **Inicio** de la cinta de opciones, en el grupo **Crear**, seleccione **Agregar bosque**. Esta acción abre el cuadro de diálogo **Agregar bosques**. Continúe con el paso 3.  
+
+2.  En la pestaña **General**, finalice las configuraciones del bosque que desea detectar y especifique la **cuenta de bosque de Active Directory**. Para más información sobre esta cuenta, vea [Cuentas](/sccm/core/plan-design/hierarchy/accounts#active-directory-forest-account).  
 
     > [!NOTE]  
     >  La detección de bosques de Active Directory requiere una cuenta global para detectar bosques que no son de confianza y publicar en ellos. Si no se usa la cuenta de equipo del servidor de sitio, solo se puede seleccionar una cuenta global.  
@@ -94,40 +102,44 @@ Utilice los procedimientos siguientes para habilitar la detección de bosques de
 3.  Si piensa permitir que los sitios publiquen datos del sitio en este bosque, finalice las configuraciones necesarias para publicar en este bosque en la pestaña **Publicación**.  
 
     > [!NOTE]  
-    >  Si permite que los sitios publiquen en un bosque, tendrá que extender el esquema de Active Directory del bosque para Configuration Manager. Es preciso que la cuenta de bosque de Active Directory tenga permisos de control total en el contenedor del sistema del bosque.  
+    >  Si permite que los sitios publiquen en un bosque, extienda el esquema de Active Directory del bosque para Configuration Manager. Es necesario que la cuenta del bosque de Active Directory tenga permisos de control total en el contenedor del sistema de ese bosque.  
 
-4.  Cuando termine la configuración de este bosque para su uso con la detección de bosques de Active Directory, elija **Aceptar** para guardar la configuración.  
+4.  Seleccione **Aceptar** para guardar la configuración.  
 
 
 
 ##  <a name="BKMK_ConfigADDiscGeneral"></a> Configuración de la detección de Active Directory para equipos, usuarios o grupos  
- Para configurar la detección de equipos, usuarios o grupos, use la información de estas secciones para los métodos de detección siguientes:  
 
--   Detección de grupos de Active Directory  
+Para configurar la detección de equipos, usuarios o grupos, comience con estos pasos comunes:
 
--   Detección de sistemas de Active Directory  
+1.  En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración de jerarquía** y seleccione el nodo **Métodos de detección**.  
 
--   Detección de usuario de Active Directory  
+2.  Seleccione el método para el sitio donde desea configurar la detección.  
+
+3.  En la pestaña **Inicio** de la cinta de opciones, en el grupo **Propiedades**, seleccione **Propiedades**.  
+
+4.  En la pestaña **General**, seleccione la casilla para habilitar la detección. También puede configurar ahora la detección y volver después para habilitarla.  
+
+Después, utilice la información de las siguientes secciones para configurar los métodos de detección específicos:  
+
+- [Detección de grupos de Active Directory](#bkmk_config-adgd)  
+
+- [Detección de sistemas de Active Directory](#bkmk_config-adgd)  
+
+- [Detección de usuarios de Active Directory](#bkmk_config-adud)  
 
 > [!NOTE]  
 >  La información de esta sección no se aplica a la detección de bosques de Active Directory.  
 
- Si bien cada uno de estos métodos de detección es independiente del resto, comparten opciones similares. Para más información sobre estas opciones de configuración, vea [Shared options for Group, System, and User discovery](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_shared) (Opciones compartidas para la detección de grupos, sistemas y usuarios).  
+ Si bien cada uno de estos métodos de detección es independiente del resto, comparten opciones similares. Para más información sobre estas opciones de configuración, vea [Características comunes de la detección de grupos, detección de sistemas y detección de usuarios de Active Directory](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_shared).  
 
 > [!WARNING]  
 >  El sondeo de Active Directory de cada uno de estos métodos de detección puede generar un tráfico de red elevado. Considere la posibilidad de programar los métodos de detección para que se ejecuten cuando este tráfico de red no afecte negativamente a los usos de negocio de la red.  
 
-#### <a name="to-configure-active-directory-group-discovery"></a>Para configurar la detección de grupos de Active Directory  
 
-1.  En la consola de Configuration Manager, elija **Administración** > **Configuración de jerarquía** y, luego, **Métodos de detección**.  
+### <a name="bkmk_config-adgd"></a> Configuración de la detección de grupos de Active Directory  
 
-2.  Elija el método **Detección de grupos de Active Directory** para el sitio donde desea configurar la detección.  
-
-3.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
-
-4.  En la pestaña **General**, active la casilla para habilitar la detección. También puede configurar ahora la detección y volver después para habilitarla.  
-
-5.  Elija **Agregar** para configurar un ámbito de detección, elija **Grupos** o **Ubicación** y realice finalice las siguientes configuraciones en el cuadro de diálogo **Agregar grupos**o **Agregar ubicación de Active Directory**:  
+1. En la pestaña **General** de la ventana Propiedades de Detección de grupos de Active Directory, seleccione **Agregar** para configurar un ámbito de detección. Seleccione **Grupos** o **Ubicación**. Después, finalice las configuraciones siguientes en los cuadros de diálogo **Agregar grupos** o **Agregar ubicación de Active Directory**:  
 
     1.  Especifique un **Nombre** para este ámbito de detección.  
 
@@ -137,92 +149,88 @@ Utilice los procedimientos siguientes para habilitar la detección de bosques de
 
         -   Si elige **Ubicación**, especifique un contenedor de Active Directory como ubicación que se deba detectar. También puede habilitar una búsqueda recursiva de los contenedores secundarios de Active Directory para esta ubicación.  
 
-    3.  Especifique la **Cuenta de detección de grupos de Active Directory** utilizada para buscar este ámbito de detección.  
+    3.  Especifique la **Cuenta de detección de grupos de Active Directory** que el sitio usa para buscar este ámbito de detección. Para más información, vea [Cuentas](/sccm/core/plan-design/hierarchy/accounts#active-directory-group-discovery-account).  
 
-    4.  Elija **Aceptar** para guardar la configuración del ámbito de detección.  
+    4.  Seleccione **Aceptar** para guardar la configuración del ámbito de detección.  
 
-6.  Repita el paso 6 para cada ámbito de detección adicional que desee definir.  
+2.  Repita los pasos anteriores para cada ámbito de detección adicional que desee definir.  
 
-7.  En la pestaña **Programación de sondeo** , configure la programación de sondeo de detección completa y la detección de diferencias.  
+3.  En la pestaña **Programación de sondeo** , configure la programación de sondeo de detección completa y la detección de diferencias.  
 
-8.  De forma alternativa, en la pestaña **Opción**, configure las opciones para filtrar o excluir de la detección los registros de equipos obsoletos. Configure también la detección de la pertenencia a grupos de distribución.  
+4.  En la pestaña **Opciones**, configure las opciones para filtrar o excluir de la detección los registros de equipos obsoletos. Configure también la detección de la pertenencia a grupos de distribución.  
 
     > [!NOTE]  
     >  De forma predeterminada, la detección de grupos de Active Directory detecta únicamente la pertenencia a grupos de seguridad.  
 
-9. Cuando haya terminado de configurar la detección de grupos de Active Directory para este sitio, elija **Aceptar** para guardar la configuración.  
+5. Seleccione **Aceptar** para guardar la configuración.  
 
-#### <a name="to-configure-active-directory-system-discovery"></a>Para configurar la detección de sistemas de Active Directory  
 
-1.  En la consola de Configuration Manager, elija **Administración** > **Configuración de jerarquía** y, luego, **Métodos de detección**.  
+### <a name="bkmk_config-adsd"></a> Configuración de la detección de sistemas de Active Directory  
 
-2.  Seleccione el método para el sitio donde desea configurar la detección.  
+1. En la pestaña **General** de la ventana Propiedades de Detección de sistemas de Active Directory, seleccione el icono **Nuevo** ![Icono Nuevo](media/Disc_new_Icon.gif) para especificar un nuevo contenedor de Active Directory. En el cuadro de diálogo **Contenedor de Active Directory**, finalice las configuraciones siguientes:  
 
-3.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
+    1.  Escriba o busque una ubicación para la **ruta de acceso**. Este valor es una ruta de acceso LDAP válida a un contenedor o unidad organizativa (OU). El sitio consulta esta ruta de acceso para los recursos. Por ejemplo, `LDAP://CN=Computers,DC=contoso,DC=com`.  
 
-4.  En la pestaña **General**, active la casilla para habilitar la detección. También puede configurar ahora la detección y volver después para habilitarla.  
+    2.  Especifique las opciones que modifican el comportamiento de búsqueda:  
 
-5.  Elija el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif) para especificar un nuevo contenedor de Active Directory. En el cuadro de diálogo **Contenedor de Active Directory**, finalice las configuraciones siguientes:  
+        - **Detectar objetos dentro de grupos de Active Directory**: el sitio también examina la pertenencia a grupos en esta ruta de acceso.  
 
-    1.  Especifique una o varias ubicaciones de búsqueda.  
+        - **Buscar recursivamente contenedores secundarios de Active Directory**: si habilita esta opción, el sitio busca los contenedores o las unidades organizativas adicionales dentro de la ruta de acceso anterior. Si deshabilita esta opción, el sitio solo busca recursos en la ruta de acceso específica.  
 
-    2.  Para cada ubicación, especifique las opciones que modifican el comportamiento de búsqueda.  
+            A partir de la versión 1806, seleccione los subcontenedores que se excluirán de esta búsqueda recursiva. Esta opción ayuda a reducir el número de objetos detectados. Seleccione **Agregar** para elegir los contenedores en la ruta de acceso anterior. En el cuadro de diálogo Seleccionar nuevo contenedor, seleccione un contenedor secundario para excluir. Seleccione **Aceptar** para cerrar el cuadro de diálogo Seleccionar nuevo contenedor.<!--1358143-->
 
-    3.  Para cada ubicación, especifique la cuenta para utilizarla como la **Cuenta de detección de Active Directory**.  
+            > [!Tip]  
+            > La lista de contenedores de Active Directory de la ventana Propiedades de Detección de sistemas de Active Directory incluye una columna **Tiene exclusiones**. Al seleccionar contenedores para excluir, este valor es **Sí**.  
+
+    3.  Para cada ubicación, especifique la cuenta para utilizarla como la **Cuenta de detección de Active Directory**. Para más información, vea [Cuentas](/sccm/core/plan-design/hierarchy/accounts#active-directory-system-discovery-account).  
 
         > [!TIP]  
         >  Para cada ubicación especificada, se puede configurar un conjunto de opciones de detección y una única cuenta de detección de Active Directory.  
 
-    4.  Elija **Aceptar** para guardar la configuración del contenedor de Active Directory.  
+    4.  Seleccione **Aceptar** para guardar la configuración del contenedor de Active Directory.  
 
-6.  En la pestaña **Programación de sondeo** , configure la programación de sondeo de detección completa y la detección de diferencias.  
+2.  En la pestaña **Programación de sondeo** , configure la programación de sondeo de detección completa y la detección de diferencias.  
 
-7.  De forma alternativa, en la pestaña **Atributos de Active Directory** , puede configurar atributos adicionales de Active Directory para los equipos que desea detectar. También se enumeran los atributos predeterminados del objeto.  
+3.  En la pestaña **Atributos de Active Directory**, configure atributos adicionales de Active Directory para los equipos que desea detectar. En esta pestaña también se enumeran los atributos predeterminados del objeto.  
 
      > [!Tip]  
-     > Por ejemplo, la organización usa el atributo **Descripción** en la cuenta de equipo de Active Directory. Haga clic en **Personalizado** y agregue `Description` como un atributo personalizado. Después de que se ejecute este método de detección, este atributo se muestra en la pestaña Propiedades del dispositivo de la consola de Configuration Manager.<!--513948-->
+     > Por ejemplo, la organización usa el atributo **Descripción** en la cuenta de equipo de Active Directory. Seleccione **Personalizar** y agregue `Description` como un atributo personalizado. Después de que se ejecute este método de detección, este atributo se muestra en la pestaña Propiedades del dispositivo de la consola de Configuration Manager.<!--513948-->  
 
-8.  De forma alternativa, en la pestaña **Opción**, puede configurar las opciones para filtrar o excluir de la detección los registros de equipos obsoletos.  
+4.  En la pestaña **Opciones**, configure las opciones para filtrar o excluir de la detección los registros de equipos obsoletos.  
 
-9. Cuando haya terminado de configurar la detección de sistemas de Active Directory para este sitio, elija **Aceptar** para guardar la configuración.  
+5. Seleccione **Aceptar** para guardar la configuración.  
 
-#### <a name="to-configure-active-directory-user-discovery"></a>Para configurar la detección de usuarios de Active Directory  
 
-1.  En la consola de Configuration Manager, elija **Administración** > **Configuración de jerarquía** y, luego, **Métodos de detección**.  
+### <a name="bkmk_config-adud"></a> Configuración de la detección de usuarios de Active Directory  
 
-2.  Elija el método **Detección de usuarios de Active Directory** para el sitio donde quiere configurar la detección.  
-
-3.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
-
-4.  En la pestaña **General**, active la casilla para habilitar la detección. También puede configurar ahora la detección y volver después para habilitarla.  
-
-5.  Elija el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif) para especificar un nuevo contenedor de Active Directory. En el cuadro de diálogo **Contenedor de Active Directory**, finalice las configuraciones siguientes:  
+1.  En la pestaña **General** de la ventana Propiedades de Detección de usuarios de Active Directory, seleccione el icono **Nuevo** ![Icono Nuevo](media/Disc_new_Icon.gif) para especificar un nuevo contenedor de Active Directory. En el cuadro de diálogo **Contenedor de Active Directory**, finalice las configuraciones siguientes:  
 
     1.  Especifique una o varias ubicaciones de búsqueda.  
 
     2.  Para cada ubicación, especifique las opciones que modifican el comportamiento de búsqueda.  
 
-    3.  Para cada ubicación, especifique la cuenta para utilizarla como la **Cuenta de detección de Active Directory**.  
+    3.  Para cada ubicación, especifique la cuenta para utilizarla como la **Cuenta de detección de Active Directory**. Para más información, vea [Cuentas](/sccm/core/plan-design/hierarchy/accounts#active-directory-user-discovery-account).  
 
         > [!NOTE]  
         >  Para cada ubicación especificada, se puede configurar un único conjunto de opciones de detección y una única cuenta de detección de Active Directory.  
 
-    4.  Elija **Aceptar** para guardar la configuración del contenedor de Active Directory.  
+    4.  Seleccione **Aceptar** para guardar la configuración del contenedor de Active Directory.  
 
 6.  En la pestaña **Programación de sondeo** , configure la programación de sondeo de detección completa y la detección de diferencias.  
 
-7.  De forma alternativa, en la pestaña **Atributos de Active Directory** , puede configurar atributos adicionales de Active Directory para los equipos que desea detectar. También se enumeran los atributos predeterminados del objeto.  
+7.  En la pestaña **Atributos de Active Directory**, configure atributos adicionales de Active Directory para los equipos que desea detectar. En esta pestaña también se enumeran los atributos predeterminados del objeto.  
 
-8.  Cuando haya terminado de configurar la detección de usuarios de Active Directory para este sitio, elija **Aceptar** para guardar la configuración.  
+8.  Seleccione **Aceptar** para guardar la configuración.  
 
 
 
 ## <a name="azureaadisc"></a>Configuración de la detección de usuarios de Azure AD
+
 La detección de usuarios de Azure AD no se habilita ni configura igual que otros métodos de detección. Configúrela al incorporar el sitio de Configuration Manager a Azure AD. Cuando se [configuran servicios de Azure](/sccm/core/servers/deploy/configure/azure-services-wizard) para la **administración en la nube**, también puede habilitar y configurar este método de detección. 
 
 Al configurar el servicio **Cloud Management** de Azure: 
-- En la página **Detección** del asistente, haga clic en **Habilitar la detección de usuarios de Azure Active Directory**. 
-- Haga clic en **Configuración**. 
+- En la página **Detección** del asistente, seleccione la opción **Habilitar la detección de usuarios de Azure Active Directory**. 
+- Seleccione **Configuración**. 
 - En el cuadro de diálogo Configuración de detección de usuarios de Azure AD, configure una programación para cuando se produce la detección. También se puede habilitar la detección de diferencias, que busca únicamente las cuentas nuevas o modificadas en Azure AD. 
 
 Para obtener más información, vea [Detección de usuarios de Azure AD](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
@@ -230,9 +238,9 @@ Para obtener más información, vea [Detección de usuarios de Azure AD](/sccm/c
  > [!Important]  
  > Antes de *importar* la aplicación de Azure AD en Configuration Manager, deberá conceder el permiso de aplicación de servidor para leer datos de directorio de Azure AD. 
  >  - En [Azure Portal](https://portal.azure.com), vaya a la hoja **Azure Active Directory**. 
- >  - Haga clic en **Registros de aplicaciones** y cambie a **Todas las aplicaciones** si es necesario. 
+ >  - Seleccione **Registros de aplicaciones** y cambie a **Todas las aplicaciones** si es necesario. 
  >  - Seleccione la aplicación de servidor de tipo *Aplicación web/API* y, después, haga clic en **Configuración**. 
- >  - Haga clic en **Permisos necesarios** y después en **Conceder permisos**.
+ >  - Seleccione **Permisos necesarios** y después **Conceder permisos**.
  >  
  > Si se *crea* la aplicación de servidor desde Configuration Manager, Azure AD crea automáticamente los permisos con la aplicación. Deberá dar su consentimiento a la aplicación en Azure Portal.
 
@@ -242,28 +250,30 @@ Para obtener más información, vea [Detección de usuarios de Azure AD](/sccm/c
 
 
 ##  <a name="BKMK_ConfigHBDisc"></a> Configuración de la detección de latidos  
- De forma predeterminada, la detección de latidos se habilita al instalar un sitio primario de Configuration Manager. Como resultado, solo tiene que configurar la programación de la frecuencia con que los clientes envían el registro de datos de detección de latidos a un punto de administración cuando no quiera usar el valor predeterminado de cada siete días.  
+
+Configuration Manager habilita el método de detección de latidos al instalar un sitio primario. Si desea usar la programación predeterminada para cada siete días, no hay que configurar nada más. De lo contrario, solo tiene que configurar la programación de la frecuencia con que los clientes envían el registro de datos de detección de latidos a un punto de administración.  
 
 > [!NOTE]  
->  Si la instalación de inserción de cliente y la tarea de mantenimiento del sitio **Borrar marca de instalación** están habilitadas en el mismo sitio, establezca la programación de la detección de latidos para que sea inferior al **Periodo de nueva detección de cliente** de la tarea de mantenimiento del sitio **Borrar marca de instalación** . Para más información sobre las tareas de mantenimiento del sitio, vea [Maintenance tasks for System Center Configuration Manager (Tareas de mantenimiento para System Center Configuration Manager)](../../../../core/servers/manage/maintenance-tasks.md).  
-
-#### <a name="to-configure-the-heartbeat-discovery-schedule"></a>Para configurar la programación de la detección de latidos  
-
-1.  En la consola de Configuration Manager, elija **Administración** > **Configuración de jerarquía** y, luego, **Métodos de detección**.  
-
-2.  Seleccione **Detección de latidos** para el sitio donde quiere configurar la detección de latidos.  
-
-3.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
-
-4.  Configure la frecuencia con la que los clientes envían registros de datos de detección de latidos y luego elija **Aceptar** para guardar la configuración.  
+>  Si habilita la instalación de inserción de cliente y la tarea de mantenimiento del sitio **Borrar marca de instalación** en el mismo sitio, establezca la programación de la detección de latidos para que sea inferior al **Periodo de nueva detección de cliente** de la tarea de mantenimiento del sitio **Borrar marca de instalación**. Para más información sobre las tareas de mantenimiento del sitio, vea [Tareas de mantenimiento](/sccm/core/servers/manage/maintenance-tasks).  
 
 
+### <a name="configure-the-heartbeat-discovery-schedule"></a>Configuración de la programación de la detección de latidos  
+
+1.  En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración de jerarquía** y seleccione el nodo **Métodos de detección**.  
+
+2.  Seleccione el método **Detección de latidos** para el sitio donde desea configurar la detección de latidos.  
+
+3.  En la pestaña **Inicio** de la cinta de opciones, en el grupo **Propiedades**, seleccione **Propiedades**.  
+
+4.  Configure la frecuencia con la que los clientes envían registros de datos de detección de latidos. Después, seleccione **Aceptar** para guardar la configuración.  
+
+
+
+<a name="BKMK_AboutConfigNetworkDisc"></a>
 
 ##  <a name="BKMK_ConfigNetworkDisc"></a> Configuración de la detección de redes  
- Para facilitar la configuración de la detección de redes, use la información de estas secciones.  
 
-###  <a name="BKMK_AboutConfigNetworkDisc"></a> Acerca de la configuración de la detección de redes  
- Antes de configurar la detección de redes, debe entender los temas siguientes:  
+ Antes de configurar Detección de redes, debe entender los temas siguientes:  
 
 -   Niveles disponibles de la detección de redes  
 
@@ -271,25 +281,39 @@ Para obtener más información, vea [Detección de usuarios de Azure AD](/sccm/c
 
 -   Limitar la detección de redes en la red  
 
-Para obtener más información, vea la sección [Acerca de la detección de redes](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutNetwork).  
+Para obtener más información, vea la sección [Acerca de la detección de redes](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutNetwork).  
 
- En las secciones siguientes se proporciona información sobre configuraciones comunes para la detección de redes. Puede aplicar una o varias de estas configuraciones para utilizarlas durante la misma ejecución de la detección. Si utiliza varias configuraciones, debe planear las interacciones que pueden afectar a los resultados de la detección.  
+En las secciones siguientes se proporciona información sobre configuraciones comunes para la detección de redes. Puede aplicar una o varias de estas configuraciones para utilizarlas durante la misma ejecución de la detección. Si utiliza varias configuraciones, planee las interacciones que pueden afectar a los resultados de la detección.  
 
- Por ejemplo, podría detectar todos los dispositivos de Protocolo Simple de administración de redes (SNMP) que utilicen un nombre de comunidad SNMP específico. Además, para la misma ejecución de la detección, puede deshabilitar la detección en una subred específica. Cuando se ejecuta la detección, la detección de redes no detecta los dispositivos SNMP con el nombre de comunidad especificado en la subred que se ha deshabilitado.  
+Por ejemplo, detecta todos los dispositivos de Protocolo simple de administración de redes (SNMP) que utilizan un nombre de comunidad SNMP específico. Para la misma ejecución de la detección, deshabilite la detección en una subred específica. Cuando se ejecuta la detección, la detección de redes no detecta los dispositivos SNMP con el nombre de comunidad especificado en la subred que se ha deshabilitado.  
 
-####  <a name="BKMK_DetermineNetTopology"></a> Determinación de la topología de red  
+
+###  <a name="BKMK_DetermineNetTopology"></a> Determinación de la topología de red  
+
  Puede utilizar una detección solo de topología para asignar unidades de red. Este tipo de detección no detecta posibles clientes. La detección de redes solo de topología se basa en SNMP.  
 
- Al asignar la topología de red, debe configurar el **Número máximo de saltos** en la pestaña **SNMP** del cuadro de diálogo **Propiedades de detección de redes**. Unos pocos saltos pueden ayudarle a controlar el ancho de banda de red que se utiliza cuando se ejecuta la detección. Conforme aumenta el número de elementos detectados en su red, puede incrementar el número de saltos para obtener una mejor comprensión de la topología de red.  
+ Al asignar la topología de red, configure el **Número máximo de saltos** en la pestaña **SNMP** del cuadro de diálogo **Propiedades de detección de redes**. Unos pocos saltos pueden ayudarle a controlar el ancho de banda de red que se utiliza cuando se ejecuta la detección. Conforme aumenta el número de elementos detectados en su red, incremente el número de saltos para obtener una mejor comprensión de la topología de red.  
 
- Una vez que comprende la topología de red, puede configurar propiedades adicionales para Detección de redes con el fin de detectar clientes potenciales y sus sistemas operativos mientras usa las configuraciones disponibles para limitar los segmentos de red que Detección de redes puede encontrar.  
+ Una vez que comprenda la topología de red, configure propiedades adicionales para la Detección de redes. Estas propiedades ayudan a detectar clientes potenciales y sus sistemas operativos. Configure también la Detección de redes para limitar los segmentos de red que puede buscar.  
+
+ Para más información, vea [Determinación de la topología de red](#bkmk_proc-top).
+
+
+### <a name="network-discovery-search-options"></a>Opciones de búsqueda de Detección de redes
+
+Configuration Manager admite los siguientes métodos de búsqueda de red:
+- [Limitación de búsquedas mediante el uso de subredes](#BKMK_LimitBySubnet)
+- [Búsqueda en un dominio específico](#BKMK_SearchByDomain)
+- [Limitación de búsquedas mediante el uso de nombres de comunidad SNMP](#BKMK_LimitBySNMPname)
+- [Búsqueda en un servidor DHCP específico](#BKMK_SearchByDHCP)
 
 ####  <a name="BKMK_LimitBySubnet"></a> Limitación de búsquedas mediante el uso de subredes  
- Puede configurar Detección de redes para buscar subredes específicas durante la ejecución de la detección. De forma predeterminada, Detección de redes busca la subred del servidor que ejecuta la detección. Las subredes adicionales que se pueden configurar y habilitar solo se aplican a las opciones de búsqueda de SNMP y Protocolo de configuración dinámica de host (DHCP). Cuando Detección de redes busca dominios, no está limitada por las configuraciones para subredes.  
 
- Si especifica una o más subredes en la pestaña **Subredes** del cuadro de diálogo **Propiedades de detección de redes** , solo se buscarán las subredes marcadas como **Habilitada** .  
+ Puede configurar Detección de redes para buscar subredes específicas durante la ejecución de la detección. De forma predeterminada, Detección de redes busca la subred del servidor que ejecuta la detección. Las subredes adicionales que se pueden configurar y habilitar solo se aplican a las opciones de búsqueda de SNMP y DHCP. Cuando Detección de redes busca dominios, no está limitada por las configuraciones para subredes.  
 
- Cuando se deshabilita una subred, se excluye de la detección y se aplican las condiciones siguientes:  
+ Si especifica una o más subredes en la pestaña **Subredes** del cuadro de diálogo **Propiedades de detección de redes**, solo se buscarán las subredes marcadas como **Habilitada**.  
+
+ Cuando se deshabilita una subred, el sitio la excluye de la detección y se aplican las condiciones siguientes:  
 
 -   Las consultas basadas en SNMP no se ejecutan en la subred.  
 
@@ -297,12 +321,14 @@ Para obtener más información, vea la sección [Acerca de la detección de rede
 
 -   Las consultas basadas en dominio pueden detectar recursos ubicados en la subred.  
 
+
 ####  <a name="BKMK_SearchByDomain"></a> Búsqueda en un dominio específico  
+
  Puede configurar Detección de redes para buscar un dominio específico o un conjunto de dominios durante la ejecución de la detección. De forma predeterminada, Detección de redes busca el dominio local del servidor que ejecuta la detección.  
 
- Si especifica uno o más dominios en la pestaña **Dominios** del cuadro de diálogo **Propiedades de detección de redes** , solo se buscarán los dominios marcados como **Habilitado** .  
+ Si especifica uno o más dominios en la pestaña **Dominios** del cuadro de diálogo **Propiedades de detección de redes**, solo se buscarán los dominios marcados como **Habilitado**.  
 
- Cuando se deshabilita un dominio, se excluye de la detección y se aplican las condiciones siguientes:  
+ Cuando se deshabilita un dominio, el sitio lo excluye de la detección y se aplican las condiciones siguientes:  
 
 -   Detección de redes no consulta a los controladores de dominio de ese dominio.  
 
@@ -310,137 +336,137 @@ Para obtener más información, vea la sección [Acerca de la detección de rede
 
 -   Los servidores DHCP pueden responder todavía con una lista de recursos ubicados en el dominio.  
 
-####  <a name="BKMK_LimitBySNMPname"></a> Limitación de búsquedas mediante el uso de nombres de comunidad SNMP  
- Configure Detección de redes para buscar una comunidad SNMP específica o un conjunto de comunidades durante la ejecución de la detección. De forma predeterminada, el nombre de comunidad configurado para su uso es **public** .  
+
+#### <a name="BKMK_LimitBySNMPname"></a> Limitación de búsquedas mediante el uso de nombres de comunidad SNMP  
+
+ Configure Detección de redes para buscar una comunidad SNMP específica o un conjunto de comunidades durante la ejecución de la detección. De forma predeterminada, el método configura el nombre de comunidad **público**.  
 
  Detección de redes utiliza nombres de comunidad para tener acceso a los enrutadores que son dispositivos SNMP. Un enrutador puede proporcionar Detección de redes con información acerca de otros enrutadores y subredes que están vinculados al primer enrutador.  
 
 > [!NOTE]  
 >  Los nombres de comunidad SNMP son similares a las contraseñas. Detección de redes puede obtener la información solo de un dispositivo SNMP para el que se ha especificado un nombre de comunidad. Cada dispositivo SNMP puede tener su propio nombre de comunidad, pero a menudo el mismo nombre de comunidad se comparte entre varios dispositivos. Además, la mayoría de los dispositivos SNMP tienen el nombre de comunidad predeterminado **public**. Pero algunas organizaciones eliminan el nombre de comunidad **public** de sus dispositivos como precaución de seguridad.  
 
- Si se muestran varias comunidades SNMP en la pestaña **SNMP** del cuadro de diálogo **Propiedades de detección de redes**, Detección de redes las busca en el orden en el que se muestran. Para ayudar a minimizar el tráfico generado por los intentos de ponerse en contacto con un dispositivo mediante el uso de nombres diferentes, asegúrese de que los nombres usados con más frecuencia se encuentren al comienzo de la lista.  
+ Si incluye más de una comunidad SNMP en la pestaña **SNMP** del cuadro de diálogo **Propiedades de detección de redes**, las busca en el orden en el que se muestran. Asegúrese de que los nombres usados con más frecuencia aparecen en la parte superior de la lista. Esta configuración ayuda a minimizar el tráfico de red que el sitio genera cuando intenta ponerse en contacto con un dispositivo mediante el uso de nombres diferentes.
 
 > [!NOTE]  
 >  Además de usar el nombre de comunidad SNMP, se puede especificar la dirección IP o el nombre que se pueda resolver de un dispositivo SNMP específico. Esta acción se realiza en la pestaña **Dispositivos SNMP** del cuadro de diálogo **Propiedades de detección de redes**.  
 
+
 ####  <a name="BKMK_SearchByDHCP"></a> Búsqueda en un servidor DHCP específico  
+
  Puede configurar Detección de redes para utilizar un servidor DHCP específico o varios servidores para detectar clientes DHCP durante la ejecución de la detección.  
 
- Detección de redes busca todos los servidores DHCP especificados en la pestaña **DHCP** del cuadro de diálogo **Propiedades de detección de redes** . Si un servidor DHCP concede la dirección IP al servidor que ejecuta la detección, se puede configurar la detección para buscar ese servidor DHCP. Para ello, active la casilla **Incluir el servidor DHCP configurado para que el servidor de sitio lo utilice**.  
+ Detección de redes busca todos los servidores DHCP especificados en la pestaña **DHCP** del cuadro de diálogo **Propiedades de detección de redes** . Si al servidor que ejecuta la detección se le ha concedido la dirección IP desde un servidor DHCP, puede configurar la detección para buscar en ese servidor DHCP. Habilite este comportamiento con la opción **Incluir el servidor DHCP configurado para que el servidor de sitio lo utilice**.  
 
 > [!NOTE]  
 >  Para configurar correctamente un servidor DHCP en Detección de redes, el entorno debe ser compatible con IPv4. No se puede configurar Detección de redes para usar un servidor DHCP en un entorno nativo de IPv6.  
 
+
 ###  <a name="BKMK_HowToConfigNetDisc"></a> Cómo configurar la detección de redes  
+
  Use los procedimientos siguientes para detectar en primer lugar solo la topología de red y, a continuación, configurar Detección de redes para detectar clientes potenciales mediante una o más de las opciones de Detección de redes disponibles.  
 
-##### <a name="to-determine-your-network-topology"></a>Para determinar la topología de red  
+#### <a name="bkmk_proc-top"></a> Determinación de la topología de red  
 
-1.  En la consola de Configuration Manager, elija **Administración** > **Configuración de jerarquía** y, luego, **Métodos de detección**.  
+1.  En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración de jerarquía** y seleccione el nodo **Métodos de detección**.  
 
-2.  Elija **Detección de redes** para el sitio donde quiera ejecutar la detección de redes.  
+2.  Seleccione el método **Detección de redes** para el sitio donde desea detectar recursos de red.  
 
-3.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
+3.  En la pestaña **Inicio** de la cinta de opciones, en el grupo **Propiedades**, seleccione **Propiedades**.  
 
-    -   En la pestaña **General**, active la casilla **Habilitar la detección de redes** y seleccione **Topología** en las opciones de **Tipo de detección**.  
+    -   En la pestaña **General**, seleccione la opción para **Habilitar la detección de redes**. Luego seleccione **Topología** en las opciones del **Tipo de detección**.  
 
-    -   En la pestaña **Subredes**, active la casilla **Buscar subredes locales**.  
+    -   En la pestaña **Subredes**, seleccione la opción **Buscar subredes locales**.  
 
         > [!TIP]  
-        >  Si conoce las subredes específicas que componen la red, desactive la casilla **Buscar subredes locales**. Después, presione el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif) para agregar las subredes específicas que se quieren buscar. Para redes grandes, a menudo es mejor buscar solo una o dos subredes al mismo tiempo para minimizar el uso de ancho de banda de red.  
+        >  Si conoce las subredes específicas que componen la red, desactive la casilla **Buscar subredes locales**. Después, seleccione el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif) y agregue las subredes específicas que se quieren buscar. Para redes grandes, busque solo una o dos subredes al mismo tiempo para minimizar el uso de ancho de banda de red.  
 
-    -   En la pestaña **Dominios**, active la casilla **Buscar dominio local**.  
+    -   En la pestaña **Dominios**, seleccione la opción para **Buscar dominio local**.  
 
-    -   En la pestaña **SNMP** , use la lista desplegable **Número máximo de saltos** para especificar el número de saltos de enrutador que Detección de redes puede incorporar al asignar la topología.  
+    -   En la pestaña **SNMP**, seleccione una opción de la lista desplegable **Número máximo de saltos**. Esta opción especifica cuántos saltos de enrutador puede tardar la Detección de redes en asignar la topología.  
 
         > [!TIP]  
         >  Cuando asigne por primera vez la topología de red, configure pocos saltos del enrutador para minimizar el uso de ancho de banda de red.  
 
-4.  En la pestaña **Programación**, elija el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif) para configurar una programación para la ejecución de la detección de redes.  
+4.  En la pestaña **Programación**, seleccione el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif) y defina una programación para la ejecución de la detección.  
 
     > [!NOTE]  
     >  No se puede asignar una configuración de detección diferente a programaciones de Detección de redes independientes. Cada vez que se ejecuta Detección de redes, utiliza la configuración de detección actual.  
 
-5.  Elija **Aceptar** para aceptar las configuraciones. Detección de redes se ejecuta a la hora programada.  
+5.  Seleccione **Aceptar** para aceptar las configuraciones. Detección de redes se ejecuta a la hora programada.  
 
-##### <a name="to-configure-network-discovery"></a>Para configurar Detección de redes  
 
-1.  En la consola de Configuration Manager, elija **Administración** > **Configuración de jerarquía** y, luego, **Métodos de detección**.  
+#### <a name="bkmk_proc-config"></a> Cómo configurar la detección de redes  
 
-2.  Elija **Detección de redes** para el sitio donde quiera ejecutar la detección de redes.  
+1.  En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración de jerarquía** y seleccione el nodo **Métodos de detección**.  
 
-3.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
+2.  Seleccione el método **Detección de redes** para el sitio donde desea detectar recursos de red.  
 
-4.  Active la casilla **Habilitar la detección de redes** en la pestaña **General** y luego, en las opciones de **Tipo de detección**, seleccione el tipo de detección que quiere ejecutar.  
+3.  En la pestaña **Inicio** de la cinta de opciones, en el grupo **Propiedades**, seleccione **Propiedades**.  
 
-5.  Para configurar la detección para la búsqueda de subredes, elija la pestaña **Subredes** y configure una o más de las opciones siguientes:  
+4.  En la pestaña **General**, seleccione la opción para **Habilitar la detección de redes**.  
 
-    -   Para ejecutar la detección de subredes locales en el equipo que ejecuta la detección, active la casilla **Buscar subredes locales**.  
+    - En las opciones de **Tipo de detección**, seleccione el tipo de detección que desea ejecutar.  
+
+    - Habilite la opción **Red lenta** para que Configuration Manager realice ajustes automáticos de las redes de ancho de banda bajo.  
+
+5.  Para configurar la detección para buscar subredes, cambie a la pestaña **Subredes**. Luego configure una o varias de las siguientes opciones:  
+
+    -   Para ejecutar la detección de subredes locales en el equipo que ejecuta la detección, habilite la opción para **Buscar subredes locales**.  
 
     -   Para buscar una subred específica, la subred debe aparecer en **Subred a buscar** y tener un valor de **Búsqueda** de **Habilitada**:  
 
-        1.  Si la subred no aparece, elija el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif). En el cuadro de diálogo **Nueva asignación de subred**, escriba la información **Subred** y **Máscara** y luego elija **Aceptar**. De forma predeterminada, se habilita una nueva subred para la búsqueda.  
+        1.  Si la subred no aparece, seleccione el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif). En el cuadro de diálogo **Nueva asignación de subred**, escriba la información **Subred** y **Máscara** y luego seleccione **Aceptar**. De forma predeterminada, se habilita una nueva subred para la búsqueda.  
 
-        2.  Para cambiar el valor de **Búsqueda** de una subred de la lista, seleccione la subred y elija el icono **Alternar** para alternar el valor entre **Deshabilitada** y **Habilitada**.  
+        2.  Para cambiar el valor de **búsqueda** de una subred mostrada, selecciónela en la lista. Después, seleccione el icono **Alternar** para cambiar el valor entre **Deshabilitado** y **Habilitado**.  
 
-6.  Para configurar la detección para la búsqueda de dominios, elija la pestaña **Dominios** y configure una o más de las opciones siguientes:  
+6.  Para configurar la detección para buscar dominios, cambie a la pestaña **Dominios**. Luego configure una o varias de las siguientes opciones:  
 
-    -   Para ejecutar la detección en el dominio del equipo que ejecuta la detección, active la casilla **Buscar dominio local**.  
+    -   Para ejecutar la detección en el dominio del equipo que ejecuta la detección, habilite la opción **Buscar dominio local**.  
 
     -   Para buscar un dominio concreto, el dominio debe aparecer en **Dominios** y tener un valor de **Búsqueda** de **Habilitada**:  
 
-        1.  Si el dominio no aparece, elija el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif). En el cuadro de diálogo **Propiedades del dominio**, escriba la información de **Dominio** y elija **Aceptar**. De forma predeterminada, se habilita un nuevo dominio para la búsqueda.  
+        1.  Si el dominio no aparece, seleccione el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif). En el cuadro de diálogo **Propiedades del dominio**, escriba la información de **Dominio** y seleccione **Aceptar**. De forma predeterminada, se habilita un nuevo dominio para la búsqueda.  
 
-        2.  Para cambiar el valor de **Búsqueda** de un dominio de la lista, seleccione el dominio y elija el icono **Alternar** para alternar el valor entre **Deshabilitada** y **Habilitada**.  
+        2.  Para cambiar el valor de **búsqueda** de un dominio mostrado, selecciónelo en la lista. Después, seleccione el icono **Alternar** para cambiar el valor entre **Deshabilitado** y **Habilitado**.  
 
-7.  Para configurar la detección para la búsqueda de nombres de comunidad SNMP específicos para dispositivos SNMP, elija la pestaña **SNMP** y configure una o más de las opciones siguientes:  
+7.  Para configurar la detección para buscar nombres de comunidad SNMP específicos para dispositivos SNMP, cambie a la pestaña **SNMP**. Luego configure una o varias de las siguientes opciones:  
 
-    -   Para agregar un nombre de comunidad SNMP a la lista **Nombres de comunidades SNMP**, elija el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif). En el cuadro de diálogo **Nombre de comunidad SNMP nuevo**, especifique el **Nombre** de la comunidad SNMP y elija **Aceptar**.  
+    - Para agregar un nombre de comunidad SNMP a la lista **Nombres de comunidades SNMP**, seleccione el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif). En el cuadro de diálogo **Nombre de comunidad SNMP nuevo**, especifique el **Nombre** de la comunidad SNMP y luego seleccione **Aceptar**.  
 
-    -   Para quitar un nombre de comunidad SNMP, seleccione el nombre de comunidad y elija el icono **Eliminar** ![icono Eliminar](media/Disc_delete_Icon.gif).  
+    - Para quitar un nombre de comunidad SNMP, seleccione el nombre de comunidad y luego seleccione el icono **Eliminar** ![icono Eliminar](media/Disc_delete_Icon.gif).  
 
-    -   Para ajustar el orden de búsqueda de nombres de comunidades SNMP, seleccione un nombre de comunidad y elija el icono **Subir elemento** ![icono Subir elemento](media/Disc_moveUp_Icon.gif) o el icono **Bajar elemento** ![icono Bajar elemento](media/Disc_moveDown_Icon.gif). Cuando se ejecuta la detección, los nombres de comunidad se buscan de arriba a abajo. Tenga en cuenta los siguientes aspectos.
+    - Para ajustar el orden de búsqueda de nombres de comunidad SNMP, seleccione un nombre de comunidad de la lista. Luego seleccione el icono **Subir elemento** ![icono de mover hacia arriba](media/Disc_moveUp_Icon.gif) o el icono **Bajar elemento** ![icono de mover hacia abajo](media/Disc_moveDown_Icon.gif). Cuando se ejecuta la detección, los nombres de comunidad se buscan de arriba a abajo. 
 
-        > [!NOTE]  
-        >  Detección de redes utiliza nombres de comunidad SNMP para tener acceso a los enrutadores que son dispositivos SNMP. Un enrutador puede informar a Detección de redes acerca de otros enrutadores y subredes vinculadas al primer enrutador.  
+    - Para configurar el número máximo de saltos de enrutador en las búsquedas de SNMP, seleccione el número de saltos en la lista desplegable **Número máximo de saltos**.  
 
-        -   Los nombres de comunidad SNMP son similares a las contraseñas.  
-
-        -   Detección de redes puede obtener la información solo de un dispositivo SNMP para el que se ha especificado un nombre de comunidad.  
-
-        -   Cada dispositivo SNMP puede tener su propio nombre de comunidad, pero a menudo el mismo nombre de comunidad se comparte entre varios dispositivos.  
-
-        -   La mayoría de los dispositivos SNMP tienen el nombre de comunidad predeterminado **Public**. Puede usarlo si no conoce ningún otro nombre de comunidad. Sin embargo, algunas organizaciones eliminan el nombre de comunidad **Public** de sus dispositivos como precaución de seguridad.  
-
-8.  Para configurar el número máximo de saltos de enrutador en las búsquedas de SNMP, elija la pestaña **SNMP** y seleccione el número de saltos en la lista desplegable **Número máximo de saltos**.  
-
-9. Para configurar un dispositivo SNMP, elija la pestaña **Dispositivos SNMP**. Si el dispositivo no aparece, elija el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif). En el cuadro de diálogo **Nuevo dispositivo SNMP**, especifique la dirección IP o el nombre del dispositivo SNMP y elija **Aceptar**.  
+8. Para configurar un dispositivo SNMP, cambie a la pestaña **Dispositivos SNMP**. Si el dispositivo no aparece, seleccione el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif). En el cuadro de diálogo **Nuevo dispositivo SNMP**, especifique la dirección IP o el nombre del dispositivo SNMP y luego seleccione **Aceptar**.  
 
     > [!NOTE]  
     >  Si especifica un nombre de dispositivo, Configuration Manager debe ser capaz de resolver el nombre NetBIOS en una dirección IP.  
 
-10. Para configurar la detección para la consulta de servidores DHCP específicos para clientes DHCP, elija la pestaña **DHCP** y configure una o más de las opciones siguientes:  
+9. Para configurar la detección para consultar servidores DHCP específicos, cambie a la pestaña **DHCP**. Luego configure una o varias de las siguientes opciones:  
 
-    -   Para consultar el servidor DHCP en el equipo que ejecuta la detección, seleccione **Usar siempre el servidor DHCP del servidor de sitio**.  
+    -   Para consultar el servidor DHCP en el equipo que ejecuta la detección, habilite la opción **Usar siempre el servidor DHCP del servidor de sitio**.  
 
         > [!NOTE]  
         >  Para usar esta opción, el servidor debe conceder su dirección IP desde un servidor DHCP y no puede usar una dirección IP estática.  
 
-    -   Para consultar un servidor DHCP específico, elija el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif). En el cuadro de diálogo **Servidor DHCP nuevo**, especifique la dirección IP o el nombre del servidor y luego elija **Aceptar**.  
+    -   Para consultar un servidor DHCP específico, seleccione el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif). En el cuadro de diálogo **Servidor DHCP nuevo**, especifique la dirección IP o el nombre del servidor y luego seleccione **Aceptar**.  
 
         > [!NOTE]  
         >  Si especifica un nombre de servidor, Configuration Manager debe ser capaz de resolver el nombre NetBIOS en una dirección IP.  
 
-11. Para configurar cuándo se va a ejecutar la detección, elija la pestaña **Programación** y luego, el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif) para establecer una programación para ejecutar la detección de redes.  
-
-     Puede configurar varias programaciones periódicas y programaciones sin ninguna periodicidad.  
+10. Para configurar cuándo se ejecuta la detección, cambie a la pestaña **Programación**. Seleccione el icono **Nuevo** ![icono Nuevo](media/Disc_new_Icon.gif) para configurar una programación para la ejecución de la Detección de redes. Puede configurar varias programaciones periódicas y programaciones sin ninguna periodicidad.  
 
     > [!NOTE]  
-    >  Si se aparecen varias programaciones en la pestaña **Programación** a la vez, todas las programaciones ejecutarán una Detección de redes conforme a la configuración y a la hora indicada en la programación. Este comportamiento también se aplica a las programaciones periódicas.  
+    >  Si en la pestaña **Programación** aparece más de una programación al mismo tiempo, la Detección de redes se ejecuta para todas las programaciones conforme a la configuración y a la hora indicada en la programación. Este comportamiento también se aplica a las programaciones periódicas.  
 
-12. Elija **Aceptar** para guardar las configuraciones.  
+11. Seleccione **Aceptar** para guardar las configuraciones.  
+
 
 ###  <a name="BKMK_HowToVerifyNetDisc"></a> Cómo comprobar que se ha completado la detección de redes  
+
  El tiempo necesario para que finalice Detección de redes puede variar en función de uno o varios de los factores siguientes:  
 
 -   El tamaño de la red  
@@ -451,24 +477,20 @@ Para obtener más información, vea la sección [Acerca de la detección de rede
 
 -   El tipo de detección que se está ejecutando  
 
-Como Detección de redes no crea mensajes para alertar del momento en que ha finalizado la detección, se puede usar el procedimiento siguiente para comprobar cuándo ha finalizado la detección.  
+La Detección de redes no crea mensajes para avisarle cuando haya finalizado. Use el procedimiento siguiente para verificar cuándo ha finalizado la detección:  
 
-##### <a name="to-verify-that-network-discovery-has-finished"></a>Para comprobar que ha finalizado la detección de redes  
+1.  En la consola de Configuration Manager, vaya al área de trabajo **Supervisión**. Expanda **Estado del sistema** y luego seleccione el nodo **Consultas de mensaje de estado**.  
 
-1.  En la consola de Configuration Manager, elija **Supervisión**.  
+2.  Seleccione la consulta **Todos los mensajes de estado**.  
 
-2.  En el área de trabajo **Supervisión**, expanda **Estado del sistema** y elija **Consultas de mensaje de estado**.  
+3.  En la pestaña **Inicio** de la cinta de opciones, en el grupo **Consultas de mensaje de estado**, seleccione **Mostrar mensajes**.  
 
-3.  Elija **Todos los mensajes de estado**.  
-
-4.  En el grupo **Consultas de mensaje de estado** de la pestaña **Inicio**, elija **Mostrar mensajes**.  
-
-5.  En la lista desplegable **Seleccionar fecha y hora**, seleccione un valor que incluya el momento en que se inició la detección y, luego, elija **Aceptar** para abrir el **Visor de mensajes de estado de Configuration Manager**.  
+4.  En la ventana Todos los mensajes de estado, seleccione un valor de la lista desplegable **Seleccionar fecha y hora** que incluye cuánto tiempo hace que se inició la detección. Luego, seleccione **Aceptar** para abrir el **Visor de mensajes de estado de Configuration Manager**.  
 
     > [!TIP]  
     >  También puede usar la opción **Especificar fecha y hora** para seleccionar la fecha y la hora de ejecución de la detección. Esta opción es útil cuando se ejecuta la detección de redes en una determinada fecha y desea recuperar los mensajes solo desde esa fecha.  
 
-6.  Para validar la finalización de la detección de redes, busque un mensaje de estado que tenga los siguientes detalles:  
+5.  Para validar la finalización de la detección de redes, busque un mensaje de estado que tenga los siguientes detalles:  
 
     -   Id. de mensaje: **502**  
 
