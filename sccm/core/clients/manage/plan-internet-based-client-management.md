@@ -10,12 +10,12 @@ ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7f4de7295075de4b5baa5e7ba3fa1a3aea2ec032
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f31a221151239b6a72a750652731dca7e4557649
+ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336289"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42584528"
 ---
 # <a name="plan-for-internet-based-client-management-in-system-center-configuration-manager"></a>Planear la administración de cliente basada en Internet en System Center Configuration Manager
 
@@ -85,6 +85,9 @@ Aunque no es necesario tener una relación de confianza entre el bosque de un cl
     La configuración recomendada cuando se usan servidores proxy web para la administración de clientes basada en Internet es el protocolo de puente SSL a SSL, que usa la terminación SSL con autenticación. Los equipos cliente deben ser autenticados mediante autenticación de equipo, mientras que los clientes heredados de dispositivos móviles se autentican mediante autenticación de usuario. Los dispositivos móviles inscritos por Configuration Manager no son compatibles con el protocolo de puente SSL.  
 
      La ventaja de terminación SSL en el servidor proxy web es que los paquetes de Internet están sujetos a inspección antes de que se reenvíen a la red interna. El servidor proxy web autentica la conexión desde el cliente, la termina y, a continuación, abre una nueva conexión autenticada para los sistemas de sitio basados en Internet. Cuando los clientes de Configuration Manager usan un servidor proxy web, la identidad del cliente (GUID de cliente) se incluye de forma segura en la carga de paquete para que el punto de administración no considere como cliente al servidor proxy web. En Configuration Manager no se admite el protocolo de puente con HTTP a HTTPS o de HTTPS a HTTP.  
+     
+    > [!Note]  
+    > Configuration Manager no admite el ajuste de opciones de configuración de puente de SSL de terceros. Por ejemplo, Citrix Netscaler o F5 BIG-IP. Póngase en contacto con su proveedor del dispositivo para configurarlo para su uso con Configuration Manager.  
 
 -   **Protocolo de túnel**:   
     Si su servidor proxy web no puede admitir los requisitos del protocolo de puente SSL o si quiere configurar la compatibilidad con Internet para dispositivos móviles inscritos por Configuration Manager, también se admite el protocolo de túnel SSL. Esto es una opción menos segura porque los paquetes SSL de Internet se reenvían a los sistemas de sitio sin terminación SSL, por lo que no se puede comprobar si incluyen contenido malintencionado. Cuando se utiliza el protocolo de túnel SSL, no hay ningún requisito de certificado para el servidor proxy web.  

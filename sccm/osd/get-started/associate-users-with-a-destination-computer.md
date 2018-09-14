@@ -1,8 +1,8 @@
 ---
-title: Asociar usuarios a un equipo de destino
+title: Asociar usuarios a un equipo
 titleSuffix: Configuration Manager
-description: Configure System Center Configuration Manager para asociar usuarios a equipos de destino al implementar sistemas operativos.
-ms.date: 10/06/2016
+description: Configure Configuration Manager para asociar usuarios a equipos de destino al implementar sistemas operativos.
+ms.date: 08/17/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,32 +10,49 @@ ms.assetid: 07c3c6d9-f056-4c4d-bc70-ede5ca933807
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2a4065b0e6774160efb6be22fe2ec8268c60d6ed
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 325b571adbcb2750eaa0b3a856dda753c43634f0
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347593"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755907"
 ---
-# <a name="associate-users-with-a-destination-computer-in-system-center-configuration-manager"></a>Asociar usuarios a un equipo de destino en System Center Configuration Manager
+# <a name="associate-users-with-a-destination-computer-in-configuration-manager"></a>Asocie usuarios a un equipo de destino en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Si usa System Center Configuration Manager para implementar un sistema operativo, puede asociar usuarios al equipo de destino donde se ha implementado el sistema operativo. Esta configuración incluye lo siguiente:  
+ Si utiliza Configuration Manager para implementar sistemas operativos, puede asociar los usuarios con el equipo de destino. Esta opción funciona con independencia de que sea un solo usuarios o sean varios usuarios los usuarios primarios del equipo de destino.  
 
--   Que un solo usuario es el usuario primario del equipo de destino.  
+ La afinidad de dispositivo de usuario admite la administración centrada en el usuario para el proceso de implementación de aplicaciones. Si asocia un usuario con el equipo de destino en el que va a instalar un sistema operativo, puede implementar posteriormente aplicaciones para ese usuario. Las aplicaciones se instalarán automáticamente en el equipo de destino. Aunque puede configurar la compatibilidad para la afinidad de dispositivo de usuario durante la implementación del sistema operativo, no puede usar la afinidad de dispositivo de usuario para implementar el sistema operativo.  
 
--   Que varios usuarios son los usuarios primarios del equipo de destino.  
+ Para más información sobre la afinidad entre usuario y dispositivo, vea [Link users and devices with user device affinity (Vincular usuarios y dispositivos con afinidad entre usuario y dispositivo)](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
 
- La afinidad de dispositivo de usuario admite la administración centrada en el usuario para el proceso de implementación de aplicaciones. Si asocia un usuario con el equipo de destino en el que va a instalar un sistema operativo, puede implementar posteriormente aplicaciones para ese usuario. Las aplicaciones se instalarán automáticamente en el equipo de destino. Sin embargo, aunque puede configurar la compatibilidad para la afinidad de dispositivo de usuario al implementar sistemas operativos, no puede utilizar la afinidad de dispositivo de usuario para implementar sistemas operativos.  
+ Existen varios métodos por los que puede integrar la afinidad de dispositivo de usuario en las implementaciones de sistema operativo. Puede integrar la afinidad de dispositivo de usuario en implementaciones de PXE, implementaciones de medios de arranque e implementaciones de medios preconfigurados.  
 
- Para más información sobre la afinidad entre usuario y dispositivo, vea [Link users and devices with user device affinity (Vincular usuarios y dispositivos con afinidad entre usuario y dispositivo)](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).  
 
-## <a name="how-to-specify-a-user-when-you-deploy-operating-systems"></a>Cómo especificar un usuario al implementar sistemas operativos  
- La tabla siguiente incluye las acciones que puede realizar para integrar la afinidad de dispositivo de usuario en las implementaciones de sistemas operativos. Puede integrar la afinidad de dispositivo de usuario en implementaciones de PXE, implementaciones de medios de arranque e implementaciones de medios preconfigurados.  
+### <a name="create-a-task-sequence-that-includes-the-smstsassignusersmode-variable"></a>Crear una secuencia de tareas que incluye la variable **SMSTSAssignUsersMode**
 
-|Acción|Más información|  
-|------------|----------------------|  
-|Crear una secuencia de tareas que incluye la variable **SMSTSAssignUsersMode**|Agregue la variable **SMSTSAssignUsersMode** al principio de la secuencia de tareas mediante el paso de secuencia de tareas [Configurar variable de secuencia de tareas](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable). Esta variable especifica cómo administra la secuencia de tareas la información del usuario.<br /><br /> Establezca la variable en uno de los siguientes valores:<br /><br /> <br /><br /> **Automático**: la secuencia de tareas crea automáticamente una relación entre el usuario y el equipo de destino, e implementa el sistema operativo.<br /><br /> **Pendiente**: la secuencia de tareas crea una relación entre el usuario y el equipo de destino, pero espera la aprobación del usuario administrativo antes de implementar el sistema operativo.<br /><br /> **Deshabilitado**: La secuencia de tareas no asocia ningún usuario con el equipo de destino y continúa con la implementación del sistema operativo.<br /><br /> <br /><br /> Esta variable también se puede configurar en un equipo o una recopilación. Para más información sobre las variables integradas, vea [Variables integradas de secuencia de tareas en Configuration Manager](../../osd/understand/task-sequence-built-in-variables.md).|  
-|Crear un comando de preinicio que recopila la información de usuario|El comando de preinicio puede ser un script de Visual Basic (VB) que tiene un cuadro de entrada, o una aplicación HTML (HTA) que valida los datos de usuario que se especifican.<br /><br /> El comando de preinicio debe establecer la variable **SMSTSUdaUsers** que se utiliza cuando se ejecuta la secuencia de tareas. Esta variable se puede establecer en un equipo, en una recopilación o en una variable de secuencia de tareas. Use el siguiente formato al agregar varios usuarios: *dominio\usuario1, dominio\usuario2, dominio\usuario3*.|  
-|Configurar cómo asocian el usuario con el equipo de destino los puntos de distribución y los medios|Si [configura un punto de distribución para que acepte solicitudes de arranque PXE](https://technet.microsoft.com/library/mt627944\(TechNet.10\).aspx#BKMK_PXEDistributionPoint) y si crea [medios de arranque](http://technet.microsoft.com/library/mt627921\(TechNet.10\).aspx) o [medios preconfigurados](https://technet.microsoft.com/library/mt627922\(TechNet.10\).aspx) mediante el Asistente para crear medio de secuencia de tareas, puede especificar cómo admite el punto de distribución o el medio la asociación de los usuarios con el equipo de destino en el que está implementado el sistema operativo.<br /><br /> La configuración de la compatibilidad de la afinidad de dispositivo de usuario no tiene ningún método integrado que valide la identidad de usuario. Este aspecto puede ser importante si un técnico que lleva a cabo el aprovisionamiento del equipo introduce información en nombre del usuario. Además de configurar cómo administra la información de usuario la secuencia de tareas, la configuración de estas opciones en el punto de distribución y en el medio permite restringir las implementaciones que se inician desde un arranque PXE o un tipo de medio determinado.|  
+ Agregue la variable **SMSTSAssignUsersMode** al principio de la secuencia de tareas mediante el paso [Configurar variable de secuencia de tareas](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable). Esta variable especifica cómo administra la secuencia de tareas la información del usuario.
+
+ Para más información, vea [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSAssignUsersMode) (Variables de secuencia de tareas).
+
+
+### <a name="create-a-prestart-command-that-gathers-the-user-information"></a>Crear un comando de preinicio que recopila la información de usuario
+
+ El comando de preinicio puede ser un VBScript con un cuadro de entrada. También puede ser una aplicación HTML (HTA) que valida los datos de usuario que escriban. 
+
+ Este comando de preinicio debe establecer la variable **SMSTSUDAUsers** que se utiliza cuando se ejecuta la secuencia de tareas. Esta variable se puede establecer en un equipo, en una recopilación o en una variable de secuencia de tareas.
+
+ Para más información, vea [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSUDAUsers) (Variables de secuencia de tareas).
+
+
+### <a name="configure-how-distribution-points-and-media-associate-the-user-with-the-destination-computer"></a>Configurar cómo asocian el usuario con el equipo de destino los puntos de distribución y los medios
+
+ El punto de distribución o el medio admite la asociación de los usuarios con el equipo de destino donde se implementa el sistema operativo. Use uno de los métodos siguientes: 
+
+ - [Configurar un punto de distribución para aceptar solicitudes de arranque PXE](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_PXEDistributionPoint)  
+ - [Crear medios de arranque](/sccm/osd/deploy-use/create-bootable-media)  
+ - [Crear medios preconfigurados](/sccm/osd/deploy-use/create-prestaged-media)  
+
+
+ La configuración de la compatibilidad de la afinidad de dispositivo de usuario no tiene ningún método integrado que valide la identidad de usuario. Este comportamiento es importante si un técnico que lleva a cabo el aprovisionamiento del equipo introduce información en nombre del usuario. Además de configurar cómo administra la información de usuario la secuencia de tareas, la configuración de estas opciones en el punto de distribución y en el medio permite restringir las implementaciones que se inician desde un arranque PXE o un tipo de medio determinado.

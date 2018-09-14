@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76796cdb56a7106ac709866a9df7c2a08bc6b7bc
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c314cba909929ee49355eab59dfc813aab7e393e
+ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337095"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42584478"
 ---
 # <a name="how-to-create-collections-in-system-center-configuration-manager"></a>Cómo crear recopilaciones en System Center Configuration Manager
 
@@ -88,7 +88,7 @@ En el cuadro de diálogo **Seleccionar recopilaciones**, seleccione las recopila
 
 En el cuadro de diálogo **Seleccionar recopilaciones**, seleccione las recopilaciones que quiere excluir en la nueva recopilación y después pulse **Aceptar**.  
 
--   **Usar actualizaciones incrementales para esta recopilación**: seleccione esta opción para detectar y examinar de forma periódica recursos nuevos o modificados con respecto a la evaluación de recopilación anterior, independientemente de que se realice una evaluación de recopilación completa. Las actualizaciones incrementales se producen en intervalos de 10 minutos.  
+-   **Usar actualizaciones incrementales para esta recopilación**: seleccione esta opción para detectar y examinar de forma periódica recursos nuevos o modificados con respecto a la evaluación de recopilación anterior, independientemente de que se realice una evaluación de recopilación completa. Las actualizaciones incrementales se producen en intervalos de 5 minutos de manera predeterminada.  
 
 > [!IMPORTANT]  
 >  Las recopilaciones configuradas mediante el uso de reglas que usan las clases siguientes no admiten las actualizaciones incrementales:  
@@ -160,7 +160,7 @@ En el cuadro de diálogo **Seleccionar recopilaciones**, seleccione las recopila
 En el cuadro de diálogo **Seleccionar recopilaciones**, seleccione las recopilaciones que quiere excluir en la nueva recopilación y después pulse **Aceptar**.  
 
 
--   **Usar actualizaciones incrementales para esta recopilación**: seleccione esta opción para detectar y examinar de forma periódica recursos nuevos o modificados con respecto a la evaluación de recopilación anterior, independientemente de que se realice una evaluación de recopilación completa. Las actualizaciones incrementales se producen en intervalos de 10 minutos.  
+-   **Usar actualizaciones incrementales para esta recopilación**: seleccione esta opción para detectar y examinar de forma periódica recursos nuevos o modificados con respecto a la evaluación de recopilación anterior, independientemente de que se realice una evaluación de recopilación completa. Las actualizaciones incrementales se producen en intervalos de 5 minutos de manera predeterminada.  
 
 > [!IMPORTANT]  
 >  Las recopilaciones configuradas mediante el uso de reglas que usan las clases siguientes no admiten las actualizaciones incrementales:  

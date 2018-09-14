@@ -10,12 +10,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 765f599af115e481197603fabd0f3698807ec13a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 10dfebccd997a42f4c79e5d88bdf05e26585aebb
+ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385327"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589879"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Sitio y requisitos previos de sistema de sitio para Configuration Manager
 
@@ -84,7 +84,7 @@ Vea las secciones principales de este artículo para obtener información sobre 
 
 - .NET framework 3.5 SP1 (o posterior)  
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 o 4.7.1  
+- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2  
 
     - Para obtener más información sobre las versiones de .NET Framework, vea [Versiones y dependencias de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).
 
@@ -110,7 +110,7 @@ Vea las secciones principales de este artículo para obtener información sobre 
 
 - .NET framework 3.5 SP1 (o posterior)  
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 o 4.7.1  
+- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2  
 
     - Para obtener más información sobre las versiones de .NET Framework, vea [Versiones y dependencias de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).  
 
@@ -162,7 +162,7 @@ Vea las secciones principales de este artículo para obtener información sobre 
 
 - .NET framework 3.5 SP1 (o posterior)  
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 o 4.7.1  
+- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2  
 
     - ASP.NET 4.5  
 
@@ -203,7 +203,7 @@ Vea las secciones principales de este artículo para obtener información sobre 
 
 -   .NET framework 3.5 SP1 (o posterior)  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 o 4.7.1:  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2:  
 
     -   ASP.NET 4.5:  
 
@@ -241,7 +241,7 @@ Vea las secciones principales de este artículo para obtener información sobre 
 
 #### <a name="windows-server-roles-and-features"></a>Roles y características de Windows Server  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 o 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2 
 
 
 
@@ -249,7 +249,7 @@ Vea las secciones principales de este artículo para obtener información sobre 
 
 #### <a name="windows-server-roles-and-features"></a>Roles y características de Windows Server  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 o 4.7.1:  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2:  
 
     -   Activación HTTP  
 
@@ -336,7 +336,7 @@ Para obtener más información, vea [Instalación y configuración de puntos de 
 
 -   .NET Framework 3.5 (or later)  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 o 4.7.1:  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2:  
 
      Cuando se instala este rol de sistema de sitio, Configuration Manager instala automáticamente .NET Framework 4.5.2. Esta instalación puede colocar el servidor en un estado de reinicio pendiente. Si hay un reinicio pendiente para .NET Framework, es posible que las aplicaciones .NET produzcan un error después de que se reinicia el servidor y finaliza la instalación.  
 
@@ -378,7 +378,7 @@ Para obtener más información, vea [Instalación y configuración de puntos de 
 
 -   .NET Framework 3.5 (or later)  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 o 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2 
 
      Cuando se instala este rol de sistema de sitio, Configuration Manager instala automáticamente .NET Framework 4.5.2. Esta instalación puede colocar el servidor en un estado de reinicio pendiente. Si hay un reinicio pendiente para .NET Framework, es posible que las aplicaciones .NET produzcan un error después de que se reinicia el servidor y se completa la instalación.  
 
@@ -430,7 +430,7 @@ Se requiere la configuración de IIS predeterminada con las siguientes adiciones
 
 #### <a name="windows-server-roles-and-features"></a>Roles y características de Windows Server  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 o 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2 
 
 -   Las extensiones de servidor BITS (y las opciones seleccionadas automáticamente) o los servicios de transferencia inteligente en segundo plano (BITS) (y las opciones seleccionadas automáticamente)  
 
@@ -456,7 +456,7 @@ Se requiere la configuración de IIS predeterminada con las siguientes adiciones
 
 #### <a name="windows-server-roles-and-features"></a>Roles y características de Windows Server  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 o 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2 
 
 #### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services  
 
@@ -472,7 +472,7 @@ Se requiere la configuración de IIS predeterminada con las siguientes adiciones
 
 #### <a name="windows-server-roles-and-features"></a>Roles y características de Windows Server  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 o 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2 
 
      Cuando se instala este rol de sistema de sitio, Configuration Manager instala automáticamente .NET Framework 4.5.2. Esta instalación puede colocar el servidor en un estado de reinicio pendiente. Si hay un reinicio pendiente para .NET Framework, es posible que las aplicaciones .NET produzcan un error después de que se reinicia el servidor y finaliza la instalación.  
 
@@ -490,7 +490,7 @@ Se requiere la configuración de IIS predeterminada con las siguientes adiciones
 
 -   .NET framework 3.5 SP1 (o posterior)  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 o 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2 
 
 Requiere la configuración predeterminada de IIS.
 
@@ -508,7 +508,7 @@ Requiere la configuración predeterminada de IIS.
 
 -   .NET Framework 3.5 (or later)  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 o 4.7.1:  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2:  
 
      Cuando se instala este rol de sistema de sitio, Configuration Manager instala automáticamente .NET Framework 4.5.2. Esta instalación puede colocar el servidor en un estado de reinicio pendiente. Si hay un reinicio pendiente para .NET Framework, es posible que las aplicaciones .NET produzcan un error después de que se reinicia el servidor y finaliza la instalación.  
 

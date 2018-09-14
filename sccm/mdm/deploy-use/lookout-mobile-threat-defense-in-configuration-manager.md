@@ -2,7 +2,7 @@
 title: Restricción del acceso basado en el riesgo
 titleSuffix: Configuration Manager
 description: Restrinja el acceso a los recursos de la empresa según el dispositivo, la red y el riesgo de aplicación.
-ms.date: 04/25/2017
+ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,80 +10,113 @@ ms.assetid: 9083c571-f4fc-4a78-adc5-8aec84dabcbd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d0843fcc0956cf65da27ad10c19e59d97b60f16a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c8e984c6eb76716e031ed793a7753840842f0ea7
+ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348487"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42584536"
 ---
 # <a name="manage-access-to-company-resource-based-on-device-network-and-application-risk"></a>Administrar el acceso a los recursos de la empresa según el dispositivo, la red y el riesgo de aplicación
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Puede controlar el acceso desde dispositivos móviles a recursos corporativos, basándose en la evaluación de riesgo dirigida por Lookout; una solución de protección contra amenazas de dispositivo que se integra en Microsoft Intune. El riesgo se basa en la telemetría que recopila el servicio de Lookout de los dispositivos para las vulnerabilidades de sistema operativo (SO), aplicaciones malintencionadas instaladas y perfiles de red malintencionados. 
+Controle el acceso desde dispositivos móviles a recursos corporativos en función de la evaluación de riesgos efectuada por Lookout. Lookout es una solución de protección contra amenazas de dispositivos integrada con Microsoft Intune. El riesgo se basa en los datos recopilados por el servicio de Lookout. Recopila datos de dispositivos para comprobar si hay vulnerabilidades del sistema operativo, aplicaciones malintencionadas instaladas y perfiles de red malintencionados. 
 
-Basándose en la evaluación de riesgos que Lookout ha notificado que se ha habilitado mediante las directivas de cumplimiento de System Center Configuration Manager (SCCM), puede configurar directivas de acceso condicional y permitir o bloquear los dispositivos que se han determinado como no conformes debido a las amenazas detectadas en ellos.
+En función de la evaluación de riesgos notificada por Lookout y habilitada a través de las directivas de cumplimiento de Configuration Manager, se configuran las directivas de acceso condicional. Estas directivas permiten o bloquean dispositivos que Configuration Manager determina como no conformes debido a las amenazas detectadas en ellos.
 
-La [implementación de MDM híbrida (SSCM con Intune)](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management) le proporciona la capacidad de controlar el acceso a los recursos de la empresa y a los datos basándose en la evaluación de riesgo que proporcionan soluciones de protección contra amenazas de dispositivo como Lookout.
+> [!Important]  
+> Desde el 14 de agosto de 2018, la administración híbrida de dispositivos móviles es una [característica en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management). <!--Intune feature 2683117-->  
 
-## <a name="how-do-the-hybrid-mdm-deployment-and-lookout-device-threat-protection-help-protect-company-resources"></a>¿Cómo ayudan la implementación de MDM híbrida y la protección contra amenazas de dispositivo de Lookout a proteger los recursos de la empresa?
-La aplicación móvil de Lookout (Lookout for Work), que se ejecuta en dispositivos móviles, captura el sistema de archivos, la pila de red, la telemetría de aplicaciones y dispositivos (si está disponible) y lo envía al servicio en la nube de protección contra amenazas de dispositivo de Lookout para calcular un riesgo de dispositivo agregado para las amenazas móviles. También puede cambiar la clasificación del nivel de riesgo de las amenazas en la consola de Lookout para que se adapte a sus necesidades.  
 
-La directiva de cumplimiento en SCCM ahora incluye una nueva regla para Lookout Mobile Threat Protection que se basa en la evaluación de riesgo de amenazas de dispositivo de Lookout. Cuando esta regla está habilitada, el dispositivo se evalúa para su cumplimiento.
 
-Si se determina que el dispositivo es no conforme con la directiva de cumplimiento, el acceso a recursos como Exchange Online y SharePoint Online puede bloquearse con las directivas de acceso condicional. Cuando el acceso se bloquea, a los usuarios finales se les proporciona un tutorial para ayudarles a resolver el problema y obtener acceso a los recursos de la empresa. Este tutorial se inicia con la aplicación de Lookout for Work.
+## <a name="how-does-it-work"></a>Cómo funciona
 
-## <a name="supported-platforms"></a>Plataformas compatibles:
-* **Android 4.1 y versiones posteriores**, y con inscripción en Microsoft Intune.
-* **iOS 8 y versiones posteriores**, y con inscripción en Microsoft Intune.
-Para obtener información sobre las plataformas y los idiomas que se admiten en Lookout, consulte este [artículo](https://personal.support.lookout.com/hc/en-us/articles/114094140253).
+¿Cómo ayudan la implementación de MDM híbrida y la protección contra amenazas de dispositivo de Lookout a proteger los recursos de la empresa?
 
-## <a name="prerequisites"></a>Requisitos previos:
-* [Implementación de MDM híbrida](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management)
-* Una suscripción a Microsoft Intune y Azure Active Directory.
-* Una suscripción de empresa a Lookout Mobile EndPoint Security.  Para obtener más información, consulte [Lookout Mobile Endpoint Security](https://www.lookout.com/products/mobile-endpoint-security).
+La aplicación móvil de Lookout (Lookout for Work) se ejecuta en dispositivos móviles. Captura el sistema de archivos, la pila de red y los datos de uso del dispositivo y de la aplicación cuando estén disponibles. La aplicación envía estos datos al servicio en la nube de protección de amenazas de dispositivos de Lookout para calcular un riesgo de dispositivo agregado para amenazas móviles. Use la consola de Lookout para cambiar la clasificación del nivel de riesgo de las amenazas para que se adapte a sus necesidades.  
+
+La directiva de cumplimiento en Configuration Manager ahora incluye una nueva regla para Lookout Mobile Threat Protection que se basa en la evaluación de riesgo de amenazas de dispositivo de Lookout. Al habilitar esta regla, Configuration Manager evalúa el cumplimiento del dispositivo.
+
+Si el dispositivo no está conforme con la directiva de cumplimiento, puede bloquear el acceso a recursos como Exchange Online y SharePoint Online con las directivas de acceso condicional. Cuando el acceso se bloquea, el usuario final recibe un tutorial para ayudarle a resolver el problema y obtener acceso a los recursos de la empresa. El usuario inicia este tutorial a través de la aplicación Lookout for Work.
+
+
+
+## <a name="supported-platforms"></a>Plataformas admitidas
+
+- **Android 4.1 y versiones posteriores**, y con inscripción en Microsoft Intune.  
+
+- **iOS 8 y versiones posteriores**, y con inscripción en Microsoft Intune.  
+
+
+Para obtener información sobre las plataformas y los idiomas que se admiten en Lookout, consulte este [artículo de soporte de Lookout](https://personal.support.lookout.com/hc/articles/114094140253).
+
+
+
+## <a name="prerequisites"></a>Requisitos previos
+
+- [MDM híbrida](/sccm/mdm/understand/hybrid-mobile-device-management)  
+
+- Una suscripción a Microsoft Intune y Azure Active Directory.  
+
+- Una suscripción de empresa a Lookout Mobile EndPoint Security. Para obtener más información, consulte [Lookout Mobile Endpoint Security](https://www.lookout.com/products/mobile-endpoint-security).  
+
+
 
 ## <a name="example-scenarios"></a>Escenarios de ejemplo
-A continuación se muestran algunos escenarios comunes:
-### <a name="control-access-based-on-threat-from-malicious-apps"></a>Controlar el acceso basándose en amenazas de aplicaciones malintencionadas:
+
+
+### <a name="control-access-based-on-threat-from-malicious-apps"></a>Control del acceso basándose en amenazas de aplicaciones malintencionadas
+
 Cuando las aplicaciones malintencionadas, como malware, se detectan en el dispositivo, puede impedir que estos dispositivos:
-* Se conecten al correo electrónico de la empresa antes de resolver la amenaza.
-* Sincronicen archivos corporativos con la aplicación OneDrive para el trabajo.
-* Tengan acceso a las aplicaciones esenciales de la empresa.
 
-**Acceso bloqueado cuando se detectan aplicaciones malintencionadas:**
+- Se conecten al correo electrónico de la empresa antes de resolver la amenaza.  
 
-![Diagrama que muestra una directiva de acceso condicional bloqueando el acceso cuando se determina que un dispositivo es no conforme debido a aplicaciones malintencionadas en el dispositivo](media/config-mgr-maliciousapps_blocked.png)
+- Sincronicen archivos corporativos con la aplicación OneDrive para el trabajo.  
 
-**Dispositivo desbloqueado y que puede tener acceso a los recursos de la empresa cuando se corrige la amenaza:**
+- Tengan acceso a las aplicaciones esenciales de la empresa.  
 
-![Diagrama que muestra la directiva de acceso condicional concediendo acceso cuando se determina que el dispositivo es conforme después de la corrección](media/config-mgr-maliciousapps-unblocked.png)
-### <a name="control-access-based-on-threat-to-network"></a>Controlar el acceso basándose en amenazas en la red:
+#### <a name="access-blocked-when-malicious-apps-are-detected"></a>Acceso bloqueado cuando se detectan aplicaciones malintencionadas
+
+![Directiva de acceso condicional que bloquea el acceso cuando se detectan aplicaciones malintencionadas](media/config-mgr-maliciousapps_blocked.png)
+
+#### <a name="device-unblocked-and-is-able-to-access-company-resources-when-the-threat-is-remediated"></a>Dispositivo desbloqueado y que puede tener acceso a los recursos de la empresa cuando se corrige la amenaza
+
+![Directiva de acceso condicional que concede acceso cuando el dispositivo está conforme](media/config-mgr-maliciousapps-unblocked.png)
+
+
+### <a name="control-access-based-on-threat-to-network"></a>Controlar el acceso basándose en amenazas en la red
+
 Detecte amenazas en la red como ataques de tipo "Man in the middle" y restrinja el acceso a redes Wi-Fi en función del riesgo del dispositivo.
 
-**Acceso bloqueado a la red mediante Wi-Fi:**
+#### <a name="access-to-network-through-wifi-blocked"></a>Acceso bloqueado a la red mediante Wi-Fi
 
-![Diagrama que muestra el acceso condicional bloqueando el acceso de Wi-Fi basándose en amenazas de red](media/config-mgr-network-wifi-blocked.png)
+![Acceso condicional bloqueando el acceso de Wi-Fi basándose en amenazas de red](media/config-mgr-network-wifi-blocked.png)
 
-**Acceso concedido tras la corrección:**
+#### <a name="access-granted-on-remediation"></a>Acceso concedido tras la corrección
 
-![Diagrama que muestra el acceso condicional permitiendo el acceso tras la corrección de la amenaza](media/config-mgr-network-wifi-unblocked.png)
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Controlar el acceso a SharePoint Online basándose en amenazas en la red:
+![Acceso condicional que permite el acceso tras la corrección de la amenaza](media/config-mgr-network-wifi-unblocked.png)
+
+
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Controlar el acceso a SharePoint Online basándose en amenazas en la red
 
 Detecte amenazas en la red como ataques de tipo "Man in the middle" e impida la sincronización de archivos corporativos en función del riesgo del dispositivo.
 
-**Acceso bloqueado a SharePoint Online basándose en una amenaza de red detectada en el dispositivo:**
+#### <a name="access-blocked-sharepoint-online-based-on-network-threat-detected-on-the-device"></a>Acceso bloqueado a SharePoint Online basándose en una amenaza de red detectada en el dispositivo
 
-![Diagrama que muestra el acceso condicional bloqueando el acceso del dispositivo a SharePoint Online basándose en la detección de amenazas](media/config-mgr-network-spo-blocked.png)
+![Acceso condicional que bloquea el acceso del dispositivo a SharePoint Online](media/config-mgr-network-spo-blocked.png)
 
 
-**Acceso concedido tras la corrección:**
+#### <a name="access-granted-on-remediation"></a>Acceso concedido tras la corrección
 
-![Diagrama que muestra el acceso condicional permitiendo el acceso después de que la amenaza de red se haya corregido](media/config-mgr-network-spo-unblocked.png)
+![Acceso condicional que permite el acceso después de que la amenaza de red se haya corregido](media/config-mgr-network-spo-unblocked.png)
+
+
 
 ## <a name="next-steps"></a>Pasos siguientes
-Aquí se muestran los pasos principales que debe realizar para implementar esta solución:
+
+Para implementar esta solución, siga estos pasos:  
+
 1.  [Set up your subscription with Lookout mobile threat protection (Configurar su suscripción con Lookout Mobile Threat Protection)](set-up-your-subscription-with-lookout.md)
 2.  [Enable Lookout MTP connection in Intune (Habilitar la conexión de Lookout MTP en Intune)](enable-lookout-connection-in-intune.md)
 3.  [Configure and deploy Lookout for work application (Configurar e implementar la aplicación Lookout for Work)](configure-and-deploy-lookout-for-work-apps.md)

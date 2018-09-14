@@ -1,8 +1,8 @@
 ---
 title: Protección de los datos con borrado, bloqueo o restablecimiento de contraseña de forma remota
 titleSuffix: Configuration Manager
-description: Proteja los datos del dispositivo mediante borrado completo, borrado selectivo, bloqueo remoto o restablecimiento del código de acceso con System Center Configuration Manager.
-ms.date: 10/27/2017
+description: Proteja los datos del dispositivo mediante borrado completo, borrado selectivo, bloqueo remoto o restablecimiento del código de acceso con Configuration Manager.
+ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 670667c21e85d7e5c174c051b6adbdca3eba55a8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 21fed8dbba8cc5c8e96218459288b57364fe350e
+ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353008"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42584517"
 ---
-# <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>Protección de datos mediante borrado remoto, bloqueo o restablecimiento de código de acceso con System Center Configuration Manager
+# <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-configuration-manager"></a>Protección de datos mediante borrado remoto, bloqueo o restablecimiento de código de acceso con Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-System Center Configuration Manager proporciona funcionalidades de borrado selectivo, borrado completo, bloqueo remoto y restablecimiento de código de acceso. Los dispositivos móviles pueden almacenar datos confidenciales y proporcionar acceso a muchos recursos corporativos. Para proteger dispositivos, puede emitir:  
+Configuration Manager proporciona capacidades de eliminación selectiva, eliminación completa, bloqueo remoto y restablecimiento de código de acceso. Los dispositivos móviles pueden almacenar datos confidenciales y proporcionar acceso a muchos recursos corporativos. Para proteger dispositivos, puede emitir:  
 
 - Una eliminación de datos completa para restaurar el dispositivo a su configuración de fábrica.  
 
@@ -31,7 +31,13 @@ System Center Configuration Manager proporciona funcionalidades de borrado selec
 
 - Un restablecimiento del código de acceso del dispositivo.  
 
+> [!Important]  
+> Desde el 14 de agosto de 2018, la administración híbrida de dispositivos móviles es una [característica en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management). <!--Intune feature 2683117-->  
+
+
+
 ## <a name="full-wipe"></a>Eliminación completa  
+
 Podría emitir un comando de eliminación de datos del dispositivo cuando necesita proteger un dispositivo perdido o retirar un dispositivo del uso activo.  
 
 Emitir una **eliminación de datos completa** a un dispositivo para restaurar el dispositivo a sus valores predeterminados de fábrica. Esto quita todos los datos de empresa y de usuario así como la configuración. Puede realizar una eliminación completa en dispositivos Windows Phone, iOS, Android y Windows 10.  
@@ -50,7 +56,10 @@ Emitir una **eliminación de datos completa** a un dispositivo para restaurar el
 
 3. Elija **Acciones de dispositivo remoto** en **Grupo de dispositivos** y, a continuación, **Retirar/borrar**.  
 
+
+
 ## <a name="selective-wipe"></a>Borrado selectivo  
+
 Emitir una **eliminación selectiva** a un dispositivo para quitar solo los datos de la compañía. En la tabla siguiente se describen los datos que se eliminan para cada plataforma y el efecto en los datos que permanecen en el dispositivo después de un borrado selectivo.  
 
 **iOS**  
@@ -136,7 +145,10 @@ La siguiente configuración también se quita de los dispositivos Windows 10 Mob
 
 3. Elija **Acciones de dispositivo remoto** en **Grupo de dispositivos** y, a continuación, **Retirar/borrar**.  
 
+
+
 ## <a name="wiping-efs-enabled-content"></a>Eliminación de contenido habilitado para EFS  
+
 Windows 8.1 y Windows RT 8.1 admiten el borrado selectivo de contenido cifrado con Sistema de cifrado de archivos (EFS). La información siguiente es aplicable a un borrado selectivo de contenido habilitado para EFS:  
 
 - Solo se borran de forma selectiva las aplicaciones y los datos protegidos con EFS que usen el mismo dominio de Internet que la cuenta de Intune. Para obtener más información, consulte [Borrado selectivo de Windows para la administración de datos del dispositivo](http://technet.microsoft.com/library/dn486874.aspx).  
@@ -153,6 +165,7 @@ Los datos y las aplicaciones que son compatibles actualmente con el borrado sele
 
 - Archivos y carpetas cifrados con EFS. Para obtener más información, consulte las [prácticas recomendadas para el sistema de cifrado de archivos](http://support.microsoft.com/kb/223316).  
 
+
 ### <a name="best-practices-for-selective-wipe"></a>Procedimientos recomendados para el borrado selectivo  
 
 - Para lograr un borrado correcto de correo electrónico, configure los perfiles de correo electrónico en dispositivos iOS y Windows Phone 8.1.  
@@ -163,7 +176,10 @@ Los datos y las aplicaciones que son compatibles actualmente con el borrado sele
 
 - Si se ha desactivado una cuenta, transcurrido un año, Intune retirará la cuenta y se realizará un borrado selectivo.  
 
+
+
 ##  <a name="passcode-reset"></a>Restablecimiento de la contraseña  
+
 Si un usuario olvida su contraseña, puede ayudarle quitando la contraseña de un dispositivo o forzar el uso de una nueva contraseña temporal en un dispositivo. En la tabla siguiente se muestra cómo funciona el restablecimiento del código de acceso en distintas plataformas móviles.  
 
 | Plataforma                              | Restablecimiento de la contraseña                                                                               |
@@ -197,7 +213,10 @@ Si un usuario olvida su contraseña, puede ayudarle quitando la contraseña de u
 
 3. Elija **Acciones de dispositivo remoto** en **Grupo de dispositivos** y, a continuación, **Show Passcode State** (Mostrar estado del código de acceso).  
 
+
+
 ## <a name="remote-lock"></a>Bloqueo remoto  
+
 Si un usuario pierde su dispositivo, es posible bloquearlo de forma remota. La tabla siguiente muestra el modo en que se puede usar el bloqueo remoto en distintas plataformas móviles.  
 
 |Plataforma|Bloqueo remoto|  
@@ -228,5 +247,8 @@ Si un usuario pierde su dispositivo, es posible bloquearlo de forma remota. La t
 
 3. Elija **Acciones de dispositivo remoto** en **Grupo de dispositivos** y, a continuación, elija **Show Remote Lock State** (Mostrar estado de bloqueo remoto).  
 
-### <a name="see-also"></a>Consulte también  
+
+
+## <a name="see-also"></a>Consulte también  
+
 [Borrado selectivo de Windows para la administración de datos del dispositivo](http://technet.microsoft.com/library/dn486874.aspx)   

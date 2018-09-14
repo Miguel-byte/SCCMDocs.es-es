@@ -10,12 +10,12 @@ ms.assetid: d39c201f-d364-4e7b-bde4-faa76d747f33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f17e479ef6b285cdb70960471dced73e83af520c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a8d1d0a727f0a4ad4a2bfc25141f7e2982494080
+ms.sourcegitcommit: b596d944e49f3c4912c6ca91915ed1418c17a1a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339441"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42584405"
 ---
 # <a name="install-the-system-center-configuration-manager-console"></a>Instalar la consola de System Center Configuration Manager
 
@@ -85,14 +85,14 @@ Los administradores usan la consola de Configuration Manager para administrar el
   |/uninstall|Desinstala la consola de Configuration Manager. Especifique primero esta opción cuando la use con la opción **/q**.|  
   |LangPackDir|Especifica la ruta de acceso a la carpeta que contiene los archivos de idioma. Puede usar el **Descargador del programa de instalación** para descargar los archivos de idioma. Si no utiliza esta opción, el programa de instalación busca la carpeta de idioma en la carpeta actual. Si no se encuentra la carpeta de idioma, el programa de instalación continúa con la instalación únicamente de la versión en inglés. Para obtener más información, consulte [Descargador del programa de instalación](setup-downloader.md).|  
   |TargetDir|Especifica la carpeta de instalación para instalar la consola de Configuration Manager. Esta opción es obligatoria si usa la opción **/q** .|  
-  |EnableSQM|Especifica si se va a participar en el Programa para la mejora de la experiencia del usuario (CEIP). Use un valor de **1** para unirse al CEIP y un valor de **0** para no unirse al programa. Esta opción es obligatoria si usa la opción **/q** .</br></br>Nota: A partir de la versión 1802 de Configuration Manager, la característica CEIP se ha quitado del producto.|  
+  |EnableSQM|Especifica si se va a participar en el Programa para la mejora de la experiencia del usuario (CEIP). Use un valor de **1** para unirse al CEIP y un valor de **0** para no unirse al programa. Esta opción es obligatoria si usa la opción **/q** .</br></br>Nota: A partir de la versión 1802 de Configuration Manager, la característica CEIP se ha quitado del producto.  El uso del parámetro hará que la instalación dé error.|  
   |DefaultSiteServerName|Especifica el FQDN del servidor de sitio al que se conecta la consola cuando se abre. Esta opción es obligatoria si usa la opción **/q** .|  
 
 
   ### <a name="examples"></a>Ejemplos
+  **Para la versión 1802 y más recientes, NO incluya el parámetro EnableSQM**
+  -  `ConsoleSetup.exe /q TargetDir="%ProgramFiles%\ConfigMgr Console" DefaultSiteServerName=MyServer.Contoso.com`
 
-  -  `consolesetup.exe /q TargetDir="D:\Program Files\ConfigMgr" EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com`  
+  -  `ConsoleSetup.exe /q TargetDir="C:\Program Files\ConfigMgr Console" DefaultSiteServerName=MyServer.Contoso.com EnableSQM=1  LangPackDir=C:\Downloads\ConfigMgr`  
 
-  -  `consolesetup.exe /q LangPackDir=C:\Downloads\ConfigMgr TargetDir="D:\Program Files\ConfigMgr Console" EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com`  
-
-  -  `consolesetup.exe /uninstall /q`  
+  -  `ConsoleSetup.exe /uninstall /q`  

@@ -10,12 +10,12 @@ ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18435bd43ed74daee646096d1e8d8b6ed7b7bc27
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 057310d7f580cfc61f23a53977716743ed906867
+ms.sourcegitcommit: 849391d3985b057027cae610bd3a79fdaa708b94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386346"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42584629"
 ---
 # <a name="high-availability-options-for-configuration-manager"></a>Opciones de alta disponibilidad para Configuration Manager
 
@@ -25,7 +25,7 @@ En este artículo se explica cómo implementar Configuration Manager mediante el
 
 Las siguientes opciones de Configuration Manager permiten la alta disponibilidad:   
 
-- A partir de la versión 1806, configure el sitio de administración central y cada sitio primario con un servidor de sitio adicional en modo pasivo.  
+- A partir de la versión 1806, configure cualquier sitio principal independiente con un servidor de sitio adicional en modo pasivo.  
  
 - Configure un grupo de disponibilidad Always On de SQL Server para la base de datos de sitio de los sitios primarios y el sitio de administración central.
 
@@ -70,7 +70,7 @@ Por ejemplo, los clientes de Configuration Manager suelen funcionar de forma aut
 ##  <a name="bkmk_snh"></a> Alta disponibilidad de sitios y jerarquías  
 
 #### <a name="use-a-site-server-in-passive-mode"></a>Usar un servidor de sitio en modo pasivo
-A partir de la versión 1806, instale un servidor de sitio adicional en modo *pasivo*. El servidor de sitio en modo pasivo se suma al servidor de sitio existente en modo *activo*. Un servidor de sitio en modo pasivo está disponible para uso inmediato, cuando sea necesario. Para obtener más información, vea [Alta disponibilidad de servidor de sitio](/sccm/core/servers/deploy/configure/site-server-high-availability).  
+A partir de la versión 1806, instale un servidor de sitio adicional en modo *pasivo* para un sitio principal independiente. El servidor de sitio en modo pasivo se suma al servidor de sitio existente en modo *activo*. Un servidor de sitio en modo pasivo está disponible para uso inmediato, cuando sea necesario. Para obtener más información, vea [Alta disponibilidad de servidor de sitio](/sccm/core/servers/deploy/configure/site-server-high-availability).  
 
 #### <a name="use-a-remote-content-library"></a>Usar una biblioteca de contenido remota
 A partir de la versión 1806, mueva la biblioteca de contenido del sitio a una ubicación remota que proporcione almacenamiento de alta disponibilidad. Esta característica es un requisito para la alta disponibilidad del servidor de sitio. Para obtener más información, vea [La biblioteca de contenido](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).

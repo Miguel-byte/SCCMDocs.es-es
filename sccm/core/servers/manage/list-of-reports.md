@@ -10,12 +10,12 @@ ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f4bbb8ec680248b31b1ddd8c457e62e9be44d4b
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 9d292d85ce5a30e56d7909d74b986ac408d29346
+ms.sourcegitcommit: 849391d3985b057027cae610bd3a79fdaa708b94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385276"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42584827"
 ---
 # <a name="list-of-reports-in-system-center-configuration-manager"></a>Lista de informes en System Center Configuration Manager
 
@@ -51,7 +51,7 @@ Los dos informes siguientes aparecen en la categoría **Alertas**.
 
 
 ## <a name="asset-intelligence"></a>Asset Intelligence  
-Los sesenta y dos informes siguientes aparecen en la categoría **Asset Intelligence**.  
+Los 66 informes siguientes aparecen en la categoría **Asset Intelligence**.  
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -117,6 +117,10 @@ Los sesenta y dos informes siguientes aparecen en la categoría **Asset Intellig
 |**Software 14A - Búsqueda de software con etiqueta de identificación de software habilitada**|Muestra el recuento de software instalado con una etiqueta de identificación de software habilitada.|  
 |**Software 14B - Equipos con etiqueta de identificación de software específica habilitada instalada**|Muestra todos los equipos que tienen software instalado con una etiqueta de identificación de software habilitada especificada.|  
 |**Software 14C - Software instalado con etiqueta de identificación de software habilitada en un equipo específico**|Muestra todo el software instalado con una etiqueta de identificación de software especificada habilitada en un equipo especificado.|  
+|**Ciclo de vida 01A - Equipos con un producto de software específico**|Vea una lista de equipos en los que se detecta un producto especificado.|
+|**Ciclo de vida 02A - Lista de máquinas con productos que han expirado en la organización**|Vea equipos que contienen productos expirados. Este informe se puede filtrar por nombre de producto.|
+|**Ciclo de vida 03A - Lista de productos expirados que se encontraron en la organización**|Vea los detalles de productos de su entorno cuyo ciclo de vida ha expirado.|
+|**Ciclo de vida 04A - Información general del ciclo de vida de los productos**|Vea una lista de los ciclos de vida de los productos. Filtre la lista por nombre de producto y los días para que expire.|
 
 
 
@@ -186,6 +190,18 @@ Los veintidós informes siguientes aparecen en la categoría **Administración d
 |**Resumen de usuarios que tienen aplicaciones no conformes**|Muestra información sobre los usuarios que tienen aplicaciones instaladas que no son conformes con la directiva especificada.|  
 |**Aceptación de términos y condiciones**|Muestra los elementos de términos y condiciones y la versión que cada usuario ha aceptado.|  
 
+## <a name="data-warehouse"></a>Almacenamiento de datos  
+Los 7 informes siguientes aparecen en la categoría **Almacenamiento de datos**. 
+
+|Nombre del informe|Descripción|  
+|-----------------|-----------------|  
+|**Implementación de aplicaciones**|Historial: vea los detalles de la implementación de aplicaciones para una máquina y una aplicación determinada.|
+|**Cumplimiento de las actualizaciones de software y Endpoint Protection**|Historial: vea los equipos a los que les faltan actualizaciones de software.|
+|**Inventario de hardware general**|Historial: vea todo el inventario de hardware para un equipo específico.|
+|**Inventario de software general**|Historial: vea todo el inventario de software para un equipo específico.|
+|**Información general del mantenimiento de infraestructura**|Historial: muestra información general del mantenimiento de su infraestructura de Configuration Manager.|
+|**Lista de malware detectado**|Historial: vea el malware que se ha detectado en la organización.|
+|**Resumen de distribución de software**|Historial: un resumen de distribución de software para un equipo y anuncio específico.|
 
 
 ## <a name="device-management"></a>Administración del dispositivo  
@@ -443,7 +459,6 @@ Los diez informes siguientes aparecen en la categoría **Sistema operativo**.
 |**Servicios - Información de servicios para un equipo específico**|Muestra información de resumen sobre los servicios del equipo especificado.|  
 |**Detalles de mantenimiento de Windows 10 para una recopilación específica**|Muestra información general sobre el mantenimiento de Windows 10 para una recopilación específica.|
 |**Equipos Windows Server**|Muestra una lista de equipos que ejecutan sistemas operativos Windows Server.|  
-
 
 
 ## <a name="power-management"></a>Administración de energía  

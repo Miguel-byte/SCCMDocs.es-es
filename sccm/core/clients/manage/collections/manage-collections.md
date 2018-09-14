@@ -1,8 +1,8 @@
 ---
 title: Administración de recopilaciones
 titleSuffix: Configuration Manager
-description: Realice tareas de administración de recopilaciones en System Center Configuration Manager de colecciones comunes.
-ms.date: 4/25/2017
+description: Realice tareas de administración de recopilaciones comunes en Configuration Manager.
+ms.date: 08/17/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,73 +10,209 @@ ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b00b62a90f496eb19a77dcc431ccf157b1227923
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5d7c967ce02c009cd9659c7956f7ca79f4a34faf
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337975"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755979"
 ---
-# <a name="how-to-manage-collections-in-system-center-configuration-manager"></a>Cómo administrar recopilaciones en System Center Configuration Manager
+# <a name="how-to-manage-collections-in-configuration-manager"></a>Administración de recopilaciones en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Utilice la información de introducción de este tema como ayuda para realizar tareas de administración para las recopilaciones en System Center Configuration Manager.  
+Utilice la información de introducción de este artículo como ayuda para realizar tareas de administración para las recopilaciones en Configuration Manager.  
 
 > [!NOTE]  
->  Para obtener más información sobre la creación de recopilaciones, consulte [Cómo crear recopilaciones en System Center Configuration Manager](../../../../core/clients/manage/collections/create-collections.md).  
+>  Para obtener información sobre cómo crear recopilaciones de Configuration Manager, vea [How to create collections](/sccm/core/clients/manage/collections/create-collections) (Creación de recopilaciones).  
 
-## <a name="how-to-manage-device-collections"></a>Cómo administrar de recopilaciones de dispositivos  
+
+
+## <a name="bkmk_device"></a> Administración de recopilaciones de dispositivos  
+
  En el área de trabajo **Activos y compatibilidad** , seleccione **Recopilaciones de dispositivos**, seleccione la recopilación que se debe administrar y luego seleccione una tarea de administración.  
 
- Utilice la tabla siguiente para obtener más información acerca de las tareas de administración que pueden requerir información para poder seleccionarlas.  
 
-|Tarea de administración|Detalles|Más información|  
-|---------------------|-------------|----------------------|  
-|**Mostrar miembros**|Muestra todos los recursos que sean miembros de la recopilación seleccionada en un nodo temporal en el nodo **Dispositivos** .|No hay información adicional.|  
-|**Agregar elementos seleccionados**|Ofrece las opciones siguientes para realizar una de las acciones siguientes:<br /><br /> - <br />                    **Agregar elementos seleccionados a la recopilación de dispositivos existente**: abre el cuadro de diálogo **Seleccionar recopilación**, donde puede seleccionar la recopilación en la que quiere agregar los miembros de la recopilación seleccionada. La recopilación seleccionada se incluye en esta recopilación mediante una regla de pertenencia **Incluir recopilaciones** .<br /><br /> - **Agregar elementos seleccionados a la nueva recopilación de dispositivos**: abre el **Asistente para crear recopilación de dispositivos**, donde puede crear una nueva recopilación. La recopilación seleccionada se incluye en esta recopilación mediante una regla de pertenencia **Incluir recopilaciones** .|[Cómo crear recopilaciones en System Center Configuration Manager](../../../../core/clients/manage/collections/create-collections.md)|  
-|**Instalar cliente**|Abre el **Asistente para instalar clientes**, que utiliza la instalación de inserción de cliente para instalar un cliente de Configuration Manager en todos los equipos de la recopilación seleccionada.|[Implementar clientes en equipos Windows](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)|  
-|**Administrar solicitudes de afinidad**|Abre el cuadro de diálogo **Administrar solicitudes de afinidad de dispositivo de usuario** , donde puede aprobar o rechazar solicitudes pendientes para establecer afinidades de dispositivos de usuario de dispositivos de la recopilación seleccionada.|[Link users and devices with user device affinity in System Center Configuration Manager](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md) (Vinculación de usuarios y dispositivos con afinidad entre usuario y dispositivo en System Center Configuration Manager).|  
-|**Desactivar implementaciones de PXE necesarias**|Borra las implementaciones de arranque PXE necesarias de todos los miembros de la recopilación seleccionada.|[Introduction to operating system deployment](../../../../osd/understand/introduction-to-operating-system-deployment.md) (Introducción a la implementación de sistema operativo)|  
-|**Actualizar pertenencia**|Evalúa la pertenencia de la recopilación seleccionada. En las recopilaciones con muchos miembros, esta actualización puede tardar algo de tiempo en finalizar. Utilice la acción **Actualizar** para actualizar la pantalla con los nuevos miembros de las recopilaciones después de que se complete la actualización.|No hay información adicional.|  
-|**Agregar recursos**|Abre el cuadro de diálogo **Agregar recursos a la recopilación** , donde puede buscar nuevos recursos para agregarlos a la recopilación seleccionada.<br /><br /> El icono de la recopilación seleccionada mostrará un símbolo de reloj de arena mientras la actualización está en curso.|No hay información adicional.|  
-|**Notificación de cliente**|Indica a todos los clientes de la recopilación de dispositivos seleccionada que descarguen la directiva de equipo o usuario.|No hay información adicional.|  
-|**Endpoint Protection**|Realiza un examen rápido o completo en busca de antimalware o descarga de las últimas definiciones de antimalware en los equipos de la recopilación seleccionada.|[Endpoint Protection in System Center Configuration Manager](../../../../protect/deploy-use/endpoint-protection.md) (Endpoint Protection en System Center Configuration Manager)|  
-|**Exportarar**|Abre el **Asistente para exportar recopilaciones** que le ayuda a exportar esta recopilación en un archivo MOF que después puede archivarse o utilizarse en otro sitio de Configuration Manager.<br /><br /> Cuando se exporta una recopilación, las recopilaciones a las que hace referencia la recopilación seleccionada mediante una regla de **inclusión** o **exclusión** no se exportan.|No hay información adicional.|  
-|**Copiar**|Crea una copia de la recopilación seleccionada. La nueva recopilación utiliza la recopilación seleccionada como una recopilación de restricción.|No hay información adicional.|  
-|**Eliminar**|Elimina la recopilación seleccionada. También puede eliminar todos los recursos de la recopilación de la base de datos del sitio.<br /><br /> No se pueden eliminar las recopilaciones integradas en Configuration Manager.|Para obtener una lista de las colecciones integradas, consulte [Introducción a las recopilaciones en System Center Configuration Manager](../../../../core/clients/manage/collections/introduction-to-collections.md).|  
-|**Simular implementación**|Abre el **Asistente para simular implementación de aplicación** , que le permite probar los resultados de una implementación de aplicación en equipos sin instalar ni desinstalar la aplicación.|[How to simulate application deployments with System Center Configuration Manager](../../../../apps/deploy-use/simulate-application-deployments.md) (Simulación de implementaciones de aplicaciones con System Center Configuration Manager)|  
-|**Implementar**|Se muestran las opciones siguientes:<br /><br /> - <br />                    **Aplicación**: abre el **Asistente para implementar software**, donde puede seleccionar y configurar una implementación de aplicación en la recopilación seleccionada.<br /><br /> - <br />                    **Programa** : abre el **Asistente para implementar software** , donde puede seleccionar y configurar una implementación de paquete y programa en la recopilación seleccionada.<br /><br /> - **Línea base de configuración**: abre el cuadro de diálogo **Implementar líneas de base de configuración**, donde puede configurar la implementación de una o varias líneas base de configuración en la recopilación seleccionada.<br /><br /> - <br />                    **Secuencia de tareas** : abre el **Asistente para implementar software** , donde puede seleccionar y configurar una implementación de secuencia de tareas en la recopilación seleccionada.<br /><br /> - <br />                    **Actualizaciones de software**: abre el **Asistente para implementar actualizaciones de software**, donde puede configurar la implementación de actualizaciones de software en recursos de la recopilación seleccionada.|[How to deploy applications with System Center Configuration Manager](../../../../apps/deploy-use/deploy-applications.md) (Implementación de aplicaciones con System Center Configuration Manager)<br /><br /> [Packages and programs in System Center Configuration Manager](../../../../apps/deploy-use/packages-and-programs.md) (Paquetes y programas en System Center Configuration Manager)<br /><br /> [How to deploy configuration baselines in System Center Configuration Manager](../../../../compliance/deploy-use/deploy-configuration-baselines.md) (Implementación de líneas base de configuración en System Center Configuration Manager)<br /><br /> [Manage task sequences to automate tasks in System Center Configuration Manager](../../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md) (Administración de secuencias de tareas para automatizar tareas en System Center Configuration Manager)<br /><br /> [Administrar actualizaciones de software en System Center Configuration Manager](/sccm/sum/understand/software-updates-introduction)|  
+#### <a name="show-members"></a>Mostrar miembros
+ Muestra todos los recursos que sean miembros de la recopilación seleccionada en un nodo temporal en el nodo **Dispositivos** .
 
-## <a name="how-to-manage-user-collections"></a>Cómo administrar recopilaciones de usuarios  
+
+#### <a name="add-selected-items"></a>Agregar los elementos seleccionados
+ Se muestran las opciones siguientes: 
+
+ - **Agregar elementos seleccionados a la recopilación de dispositivos existente**: abre el cuadro de diálogo **Seleccionar recopilación**. Seleccione la recopilación a la que desea agregar los miembros de la recopilación seleccionada. La recopilación seleccionada se incluye en esta recopilación mediante una regla de pertenencia **Incluir recopilaciones** .  
+
+ - **Agregar elementos seleccionados a la nueva recopilación de dispositivos**: abre el **Asistente para crear recopilación de dispositivos**, donde puede crear una nueva recopilación. La recopilación seleccionada se incluye en esta recopilación mediante una regla de pertenencia **Incluir recopilaciones** .  
+
+
+ Para obtener más información, vea [Creación de recopilaciones](/sccm/core/clients/manage/collections/create-collections).
+
+
+#### <a name="install-client"></a>Instalar el cliente
+ Se abre el **Asistente para la instalación de cliente**. Este asistente utiliza la instalación de inserción de cliente para instalar un cliente de Configuration Manager en todos los equipos de la recopilación seleccionada. Para obtener más información, vea [Instalación de inserción de cliente](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).
+
+
+#### <a name="run-script"></a>Ejecutar secuencia de comandos
+ Se abre el Asistente para **ejecutar script** para ejecutar un script de PowerShell en todos los clientes de la recopilación. Para obtener más información, consulte [Creación y ejecución de scripts de PowerShell](/sccm/apps/deploy-use/create-deploy-scripts).
+
+
+#### <a name="manage-affinity-requests"></a>Administrar solicitudes de afinidad
+ Se abre el cuadro de diálogo **Administrar solicitudes de afinidad de dispositivo de usuario**. Apruebe o rechace solicitudes pendientes para establecer afinidades de dispositivos de usuario de dispositivos de la recopilación seleccionada. Para obtener más información, vea [Vincular usuarios y dispositivos con la afinidad entre usuario y dispositivo](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
+
+
+#### <a name="clear-required-pxe-deployments"></a>Desactive las implementaciones de PXE necesaria
+ Borra las implementaciones de arranque PXE necesarias de todos los miembros de la recopilación seleccionada. Para obtener más información, vea [Use PXE to deploy Windows over the network](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network) (Uso de PXE para implementar Windows a través de la red).
+
+
+#### <a name="update-membership"></a>Actualizar pertenencia
+ Evalúa la pertenencia a la colección seleccionada. En las recopilaciones con muchos miembros, esta actualización puede tardar algo de tiempo en finalizar. Utilice la acción **Actualizar** para actualizar la pantalla con los nuevos miembros de las recopilaciones después de que se complete la actualización.
+
+
+#### <a name="add-resources"></a>Agregar recursos
+ Se abre el cuadro de diálogo **Agregar recursos a la recopilación**. Busque nuevos recursos para agregarlos a la recopilación seleccionada. El icono de la recopilación seleccionada muestra un símbolo de reloj de arena mientras la actualización está en curso.
+
+
+#### <a name="client-notification"></a>Notificación de cliente
+ Indique a todos los clientes de la recopilación de dispositivos seleccionada que realicen inmediatamente una de las siguientes acciones:
+
+ - **Descargar directiva de equipo**: actualice la directiva de dispositivos. Para obtener más información, vea [Iniciar la recuperación de directivas para un cliente de Configuration Manager](/sccm/core/clients/manage/manage-clients#BKMK_PolicyRetrieval).  
+
+ - **Descargar directiva de usuario**: actualice la directiva de usuarios.  
+
+ - **Recopilar datos de detección**: desencadene clientes para enviar un registro de datos de detección (DDR). Para obtener más información, vea [Heartbeat Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutHeartbeat) (Detección de latidos).  
+
+ - **Recopilar inventario de software**: desencadene clientes para ejecutar un ciclo de inventario de software. Para obtener más información, vea [Introducción al inventario de software](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).  
+
+ - **Recopilar inventario de hardware**: desencadene clientes para ejecutar un ciclo de inventario de hardware. Para obtener más información, vea [Introducción al inventario de hardware](/sccm/core/clients/manage/inventory/introduction-to-hardware-inventory).  
+
+ - **Evaluar implementaciones de aplicaciones**: desencadene clientes para ejecutar un ciclo de evaluación de la implementación de aplicaciones. Para obtener más información, vea [Programar la reevaluación para implementaciones](/sccm/core/clients/deploy/about-client-settings#schedule-re-evaluation-for-deployments).  
+
+ - **Evaluar implementaciones de actualizaciones de software**: desencadene clientes para ejecutar un ciclo de evaluación de la implementación de actualizaciones de software. Para obtener más información, vea [Introducción a las actualizaciones de software](/sccm/sum/understand/software-updates-introduction).  
+
+ - **Cambiar al siguiente punto de actualización de Software**: desencadene clientes para cambiar al siguiente punto de actualización de software disponible. Para obtener más información, vea [Cambio de punto de actualización de software](/sccm/sum/plan-design/plan-for-software-updates#BKMK_SUPSwitching).  
+
+ - **Evaluar atestación de estado de dispositivo**: desencadene clientes de Windows 10 para comprobar y enviar su estado de dispositivo más reciente. Para más información, vea [Atestación de estado](/sccm/core/servers/manage/health-attestation).  
+
+ - **Comprobar el cumplimiento de acceso condicional**: desencadene clientes para comprobar su cumplimiento con el acceso condicional. Para obtener más información, consulte [Administración del acceso a servicios de O365](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
+
+
+#### <a name="endpoint-protection"></a>Endpoint Protection
+ Indique a todos los clientes de la recopilación de dispositivos seleccionada que realicen inmediatamente una de las siguientes acciones:
+
+ - **Análisis completo**: desencadene Endpoint Protection o Windows Defender para ejecutar un examen antimalware *completo*.  
+
+ - **Análisis rápido**: desencadene Endpoint Protection o Windows Defender para ejecutar un examen antimalware *rápido*.  
+
+ - **Descargar definición**: desencadene Endpoint Protection o Windows Defender para descargar las últimas definiciones de antimalware.  
+
+
+ Para obtener más información, vea [Endpoint Protection en Configuration Manager](/sccm/protect/deploy-use/endpoint-protection).
+
+
+#### <a name="export"></a>Exportar
+ Abre el **Asistente para exportación de recopilación** que le ayuda a exportar esta recopilación a un archivo de formato de objetos administrados (MOF). Este archivo puede archivarse o importarse luego en otro sitio de Configuration Manager. Al exportar una recopilación, no se exportan las recopilaciones a las que se hace referencia. Este tipo de recopilaciones son aquellas a las que se hace referencia por parte de la recopilación seleccionada mediante una regla de **inclusión** o **exclusión**.
+
+
+#### <a name="copy"></a>Copiar
+ Crea una copia de la colección seleccionada. La nueva recopilación utiliza la recopilación seleccionada como una recopilación de restricción.
+
+
+#### <a name="refresh"></a>Actualizar
+ Actualiza la vista.
+
+
+#### <a name="delete"></a>Eliminar
+ Elimina la colección seleccionada. También puede eliminar todos los recursos de la recopilación de la base de datos del sitio. 
+
+ No puede eliminar las recopilaciones integradas en Configuration Manager. Para obtener una lista de las recopilaciones integradas, consulte [Introduction to collections](/sccm/core/clients/manage/collections/introduction-to-collections#built-in-collections) (Introducción a las recopilaciones).
+
+
+#### <a name="simulate-deployment"></a>Simular implementación
+ Se abre el **Asistente para simular implementación de aplicación**. Este asistente le permite probar los resultados de una implementación de aplicación en equipos sin instalar ni desinstalar la aplicación. Para obtener más información, consulte [Cómo simular implementaciones de aplicaciones](/sccm/apps/deploy-use/simulate-application-deployments).
+
+
+#### <a name="deploy"></a>Implementar
+ Se muestran las opciones siguientes:  
+
+ - **Aplicación**: abre el **Asistente para implementar software**. Seleccione y configure una implementación de aplicación en la recopilación seleccionada. Para obtener más información, consulte [Cómo implementar aplicaciones](/sccm/apps/deploy-use/deploy-applications).  
+
+ - **Programa**: abre el **Asistente para implementar software**. Seleccione y configure una implementación de paquete y programa en la recopilación seleccionada. Para obtener más información, consulte [Paquetes y programas](/sccm/apps/deploy-use/packages-and-programs).  
+
+ - **Línea base de configuración**: se abre el cuadro de diálogo **Implementar líneas de base de configuración**. Configure la implementación de una o varias líneas base de configuración en la recopilación seleccionada. Para más información, vea [Cómo implementar líneas base de configuración](/sccm/compliance/deploy-use/deploy-configuration-baselines).  
+
+ - **Secuencia de tareas**: abre el **Asistente para implementar software**. Seleccione y configure una implementación de secuencia de tareas en la recopilación seleccionada. Para obtener más información, vea [Manage task sequences to automate tasks](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS) (Administración de secuencias de tareas para automatizar tareas).  
+
+ - **Actualizaciones de software**: se abre el **Asistente para implementar actualizaciones de software**. Configure la implementación de actualizaciones de software en los recursos de la recopilación seleccionada. Para obtener más información, vea [Administrar actualizaciones de software](/sccm/sum/understand/software-updates-introduction).  
+
+
+#### <a name="clear-server-group-deployment-locks"></a>Borrar los bloqueos de implementación del grupo de servidores
+ Libere de forma manual todos los bloqueos de implementación del grupo de servidores de la recopilación. Para obtener más información, consulte [Dar servicio a un grupo de servidores](/sccm/sum/deploy-use/service-a-server-group).
+
+
+#### <a name="move"></a>Mover
+ Mueva la recopilación seleccionada a otra carpeta en el nodo **Recopilaciones de dispositivos**. 
+
+
+#### <a name="properties"></a>Propiedades
+ Para obtener más información, consulte [Propiedades de recopilación](#BKMK_CollProp).  
+
+
+
+## <a name="bkmk_user"></a> Administración de recopilaciones de usuarios  
+
  En el área de trabajo **Activos y compatibilidad** , seleccione **Recopilaciones de usuarios**, seleccione la recopilación que se debe administrar y luego seleccione una tarea de administración.  
 
- Utilice la tabla siguiente para obtener más información acerca de las tareas de administración que pueden requerir información para poder seleccionarlas.  
+ > [!Note]  
+ > Las siguientes acciones están disponibles en las recopilaciones de usuarios, pero los comportamientos son los mismos que en las recopilaciones de dispositivos. La diferencia es que se aplican a las recopilaciones de usuarios y los usuarios contenidos en estas. Para obtener más información, vea la acción correspondiente en [Cómo administrar recopilaciones de dispositivos](#bkmk_device).  
 
-|Tarea de administración|Detalles|Más información|  
-|---------------------|-------------|----------------------|  
-|**Mostrar miembros**|Muestra todos los recursos que sean miembros de la recopilación seleccionada en un nodo temporal en el nodo **Usuarios** .|No hay información adicional.|  
-|**Agregar elementos seleccionados**|Esta opción le permite realizar una de las acciones siguientes:<br /><br /> - <br />                    **Agregar elementos seleccionados a la recopilación de usuario existente**: abre el cuadro de diálogo **Seleccionar recopilación**, donde puede seleccionar la recopilación en la que quiere agregar los miembros de la recopilación seleccionada. La recopilación seleccionada se incluye en esta recopilación mediante una regla de pertenencia **Incluir recopilaciones** .<br /><br /> - **Agregar elementos seleccionados a la nueva recopilación de usuarios**: abre el **Asistente para crear recopilación de usuarios**, donde puede crear una nueva recopilación. La recopilación seleccionada se incluye en esta recopilación mediante una regla de pertenencia **Incluir recopilaciones** .|[Cómo crear recopilaciones en System Center Configuration Manager](../../../../core/clients/manage/collections/create-collections.md)|  
-|**Administrar solicitudes de afinidad**|Abre el cuadro de diálogo **Administrar solicitudes de afinidad de dispositivo de usuario** , donde puede aprobar o rechazar solicitudes pendientes para establecer afinidades de dispositivos de usuario de usuarios de la recopilación seleccionada.|[Link users and devices with user device affinity in System Center Configuration Manager](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md) (Vinculación de usuarios y dispositivos con afinidad entre usuario y dispositivo en System Center Configuration Manager).|  
-|**Actualizar pertenencia**|Evalúa la pertenencia de la recopilación seleccionada. En las recopilaciones con muchos miembros, esta actualización puede tardar algo de tiempo en finalizar. Utilice la acción **Actualizar** para actualizar la pantalla con los nuevos miembros de las recopilaciones después de que se complete la actualización.<br /><br /> El icono de la recopilación seleccionada mostrará un símbolo de reloj de arena mientras la actualización está en curso.|No hay información adicional.|  
-|**Agregar recursos**|Abre el cuadro de diálogo **Agregar recursos a la recopilación** , donde puede buscar nuevos recursos para agregarlos a la recopilación seleccionada.|No hay información adicional.|  
-|**Exportarar**|Abre el **Asistente para exportar recopilaciones** que le ayuda a exportar esta recopilación en un archivo MOF que después puede archivarse o utilizarse en otro sitio de Configuration Manager.<br /><br /> Cuando se exporta una recopilación, las recopilaciones a las que hace referencia la recopilación seleccionada mediante una regla de **inclusión** o **exclusión** no se exportan.|No hay información adicional.|  
-|**Copiar**|Crea una copia de la recopilación seleccionada. La nueva recopilación utiliza la recopilación seleccionada como una recopilación de restricción.|No hay información adicional.|  
-|**Eliminar**|Elimina la recopilación seleccionada. También puede eliminar todos los recursos de la recopilación de la base de datos del sitio.<br /><br /> No se pueden eliminar las recopilaciones integradas en Configuration Manager.|Para obtener una lista de las colecciones integradas, consulte [Introducción a las recopilaciones en System Center Configuration Manager](../../../../core/clients/manage/collections/introduction-to-collections.md).|  
-|**Simular implementación**|Abre el **Asistente para simular implementación de aplicación** , que le permite probar los resultados de una implementación de aplicación en equipos sin instalar ni desinstalar la aplicación.|[How to simulate application deployments with System Center Configuration Manager](../../../../apps/deploy-use/simulate-application-deployments.md) (Simulación de implementaciones de aplicaciones con System Center Configuration Manager)|  
-|**Implementar**|Se muestran las opciones siguientes:<br /><br /> - **Aplicación**: abre el **Asistente para implementar software**, donde puede seleccionar y configurar una implementación de aplicación en la recopilación seleccionada.<br /><br /> - <br />                    **Programa** : abre el **Asistente para implementar software** , donde puede seleccionar y configurar una implementación de paquete y programa en la recopilación seleccionada.<br /><br /> - **Línea base de configuración**: abre el cuadro de diálogo **Implementar líneas de base de configuración**, donde puede configurar la implementación de una o varias líneas base de configuración en la recopilación seleccionada.|[How to deploy applications with System Center Configuration Manager](../../../../apps/deploy-use/deploy-applications.md) (Implementación de aplicaciones con System Center Configuration Manager)<br /><br /> [Packages and programs in System Center Configuration Manager](../../../../apps/deploy-use/packages-and-programs.md) (Paquetes y programas en System Center Configuration Manager)<br /><br /> [How to deploy configuration baselines in System Center Configuration Manager](../../../../compliance/deploy-use/deploy-configuration-baselines.md) (Implementación de líneas base de configuración en System Center Configuration Manager)|  
+ - **Mostrar miembros**  
+ - **Agregar elementos seleccionados**  
+     - **Agregar elementos seleccionados a la recopilación de usuario existente**  
+     - **Agregar elementos seleccionados a la nueva recopilación de usuario**  
+ - **Administrar solicitudes de afinidad**  
+ - **Actualizar pertenencia**  
+ - **Agregar recursos**  
+ - **Exportarar**  
+ - **Copiar**  
+ - **Actualizar**  
+ - **Eliminar**  
+ - **Simular implementación**  
+ - **Implementar**  
+     - **Aplicación**  
+     - **Programa**  
+     - **Línea de base de configuración**   
+ - **Moverr**  
+ - **Propiedades**
+
+
 
 ##  <a name="BKMK_CollProp"></a> Propiedades de recopilación  
- Al abrir el cuadro de diálogo **Propiedades** de una recopilación, puede ver y configurar las siguientes propiedades de una recopilación.  
 
-|Nombre de la pestaña|Más información|  
-|--------------|----------------------|  
-|**General**|Permite ver y configurar información general sobre la recopilación seleccionada, incluidos el nombre de la recopilación y la recopilación de restricción.|  
-|**Reglas de pertenencia**|Permite configurar las reglas de pertenencia que definen la pertenencia de esta colección. Para obtener más información, vea [Cómo crear recopilaciones en System Center Configuration Manager](../../../../core/clients/manage/collections/create-collections.md).|  
-|**Administración de energía**|Permite configurar los planes de administración de energía que se asignan a los equipos de la colección seleccionada. Para obtener más información, consulte [Introduction to power management](../../../../core/clients/manage/power/introduction-to-power-management.md) (Introducción a la administración de energía).|  
-|**Implementaciones**|Muestra cualquier software que se haya implementado en los miembros de la recopilación seleccionada.|  
-|**Ventanas de mantenimiento**|Permite ver y configurar ventanas de mantenimiento que se aplican a los miembros de la recopilación seleccionada. Para obtener más información, consulte [How to use maintenance windows in System Center Configuration Manager](../../../../core/clients/manage/collections/use-maintenance-windows.md) (Uso de ventanas de mantenimiento en Configuration Manager).|  
-|**Variables de recopilación**|Le permite que configurar variables que se aplican a esta colección y se pueden utilizar secuencias de tareas. Para obtener más información, consulte [Variables integradas de secuencia de tareas](../../../../osd/understand/task-sequence-built-in-variables.md).|  
-|**Grupos de puntos de distribución**|Le permite asociar uno o más grupos de puntos de distribución a los miembros de la colección seleccionada. Para obtener más información, vea [Manage content and content infrastructure for System Center Configuration Manager](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md) (Administración del contenido y de la infraestructura de contenido en System Center Configuration Manager).|  
-|**Seguridad**|Muestra los usuarios administrativos que tienen permisos para la recopilación seleccionada de ámbitos de seguridad y roles asociados.|  
-|**Monitor**|Permite configurar cuándo se generan alertas del estado de los clientes y Endpoint Protection. Para obtener más información, vea [How to configure client status in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-status.md) (Configuración del estado de cliente en System Center Configuration Manager) y [How to monitor Endpoint Protection in System Center Configuration Manager](../../../../protect/deploy-use/monitor-endpoint-protection.md) (Supervisión de Endpoint Protection en System Center Configuration Manager).|  
+ Al abrir el cuadro de diálogo **Propiedades** de una recopilación, vea y configure las opciones siguientes:  
+
+#### <a name="general"></a>General
+ Vea y configure información general sobre la recopilación seleccionada, incluidos el nombre de la recopilación y la recopilación de restricción.
+
+#### <a name="membership-rules"></a>Reglas de asociación
+ Configure las reglas de pertenencia que definen la pertenencia de esta recopilación. Para obtener más información, vea [Creación de recopilaciones](/sccm/core/clients/manage/collections/create-collections).  
+
+#### <a name="power-management"></a>Administración de energía
+ Configure los planes de administración de energía que se asignan a los equipos de la recopilación seleccionada. Para obtener más información, consulte [Introduction to power management](/sccm/core/clients/manage/power/introduction-to-power-management) (Introducción a la administración de energía).  
+
+#### <a name="deployments"></a>Implementaciones
+ Muestra cualquier software que haya implementado en los miembros de la recopilación seleccionada.  
+
+#### <a name="maintenance-windows"></a>Ventanas de mantenimiento
+ Vea y configure ventanas de mantenimiento que se aplican a los miembros de la recopilación seleccionada. Para obtener más información, consulte [How to Use Maintenance Windows in Configuration Manager](/sccm/core/clients/manage/collections/use-maintenance-windows) (Uso de ventanas de mantenimiento en Configuration Manager).
+
+#### <a name="collection-variables"></a>Colección de Variables
+ Configure variables que se aplican a esta recopilación y se pueden utilizar por las secuencias de tareas. Para obtener más información, consulte [How to set task sequence variables](/sccm/osd/understand/using-task-sequence-variables#bkmk_set) (Establecimiento de las variables de secuencia de tareas).  
+
+#### <a name="distribution-point-groups"></a>Grupos de puntos de distribución
+ Asocie uno o varios grupos de puntos de distribución a los miembros de la recopilación seleccionada. Para obtener más información, consulte [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure) (Administración del contenido y de la infraestructura de contenido).
+
+#### <a name="security"></a>Seguridad
+ Muestra los usuarios administrativos que tienen permisos para la recopilación seleccionada de ámbitos de seguridad y roles asociados. Para obtener más información, vea [Aspectos básicos de la administración basada en roles](/sccm/core/understand/fundamentals-of-role-based-administration).  
+
+#### <a name="alerts"></a>Alertas 
+ Configure cuándo se generan alertas del estado de los clientes y Endpoint Protection. Para obtener más información, vea [Cómo configurar el estado de cliente](/sccm/core/clients/deploy/configure-client-status) y [Cómo supervisar Endpoint Protection](/sccm/protect/deploy-use/monitor-endpoint-protection).  

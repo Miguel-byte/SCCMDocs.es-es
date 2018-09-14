@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a50aa9d2269830fa09c494c63c7681f1dbda3cc0
-ms.sourcegitcommit: 6e0e5b4b7779ce03e2b56b3b5f68f4ace1acedd8
+ms.openlocfilehash: 3c31b950ef59147f6f3f46c1cba7780b7789948c
+ms.sourcegitcommit: 4b7812b505e80f79fc90dfa8a6db06eea79a3550
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467596"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "42584570"
 ---
 # <a name="enable-third-party-updates"></a>Habilitar actualizaciones de terceros 
 
@@ -164,6 +164,7 @@ La sincronización de actualizaciones de software de terceros se controla median
 -  Configuration Manager tiene una nueva versión del formato de archivo cab de catálogo. La nueva versión incluye los certificados para los archivos binarios del proveedor. Estos certificados se agregan al nodo **Certificados** de la sección **Seguridad** del área de trabajo **Administración** una vez que se aprueba el catálogo y se considera de confianza.  
      - Puede seguir usando la versión anterior del archivo cab de catálogo siempre que la dirección URL de descarga sea https y las actualizaciones estén firmadas. El contenido no se publicará porque los certificados para los archivos binarios no están en el archivo cab ni se han aprobado aún. Puede solucionar este problema si busca el certificado en el nodo **Certificados**, lo desbloquea y luego vuelve a publicar la actualización. Si va a publicar varias actualizaciones firmadas con diferentes certificados, tiene que desbloquear cada certificado que se use.
      - Para obtener más información, vea los mensajes de estado 11523 y 11524 de la siguiente tabla de mensajes de estado.
+-  Cuando el servicio de sincronización de actualizaciones de software de terceros en el punto de actualización de software de nivel superior requiera un servidor proxy para el acceso a Internet, las comprobaciones de firmas digitales podrían dar error. Para solucionar este problema, configure los ajustes del proxy WinHTTP en el sistema de sitio. Para obtener más información, consulte [Netsh commands for WinHTTP](https://go.microsoft.com/fwlink/p/?linkid=199086) (Comandos Netsh para WinHTTP).
 
 ## <a name="status-messages"></a>Mensajes de estado
 
@@ -176,7 +177,7 @@ La sincronización de actualizaciones de software de terceros se controla median
 
 
 ## <a name="working-with-third-party-updates-video"></a>Vídeo Trabajar con actualizaciones de terceros
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bvAQeDSJIbs?ecver=1" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ai8rLCLtuTI?rel=0" frameborder="0" allowfullscreen></iframe>
 
 
 

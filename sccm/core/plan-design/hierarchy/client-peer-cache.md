@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 00a79e099255b9ec19660914825334dc95b30682
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: c3dc6189f73b939f632581a8b50f05a72310111d
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383857"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42756003"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Caché del mismo nivel para clientes de Configuration Manager
 
@@ -45,7 +45,7 @@ El cliente de Configuration Manager usa la caché del mismo nivel para proporcio
 La caché del mismo nivel no reemplaza el uso de otras soluciones como Optimización de distribución o Windows BranchCache. La caché del mismo nivel funciona junto con otras soluciones. Estas tecnologías le proporcionan más opciones para extender las soluciones tradicionales de implementación de contenido, como los puntos de distribución. La caché del mismo nivel es una solución personalizada que no depende de BranchCache. Si no habilita o usa BranchCache, la caché del mismo nivel sigue funcionando.  
 
   > [!Note]  
-  > A partir de la versión 1802, Windows BranchCache siempre está habilitado en los clientes. Se ha quitado la opción **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**. Los clientes usan BranchCache si el punto de distribución lo admite.<!--SCCMDocs issue 539-->  
+  > A partir de la versión 1802, Windows BranchCache siempre está habilitado en las implementaciones. Se ha quitado la opción **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**.<!--SCCMDocs issue 539--> Si el punto de distribución lo admite, y está habilitado en la configuración del cliente, los clientes usan BranchCache. Para obtener más información, vea [Configurar BranchCache](/sccm/core/clients/deploy/about-client-settings#configure-branchcache).<!--SCCMDocs issue 735-->   
 
 
 
@@ -175,7 +175,7 @@ Para ver cómo controlan la descarga de contenido en partes, vea el **ContentTra
 
 - El cliente de origen de caché del mismo nivel actualiza la última vez a la que se hizo referencia al contenido en caché cuando un elemento del mismo nivel lo descarga. El cliente usa esta marca de tiempo cuando mantiene de forma automática su caché, y primero quita el contenido antiguo. Por tanto, debe esperar para quitar el contenido que los clientes de caché de mismo nivel descargan con más frecuencia, si lo hacen.  
 
-- Si es necesario, durante una secuencia de tareas de implementación de sistema operativo, use la variable **SMSTSPreserveContent** para conservar el contenido en la caché del cliente. Para obtener más información, vea [Variables integradas de secuencia de tareas](/sccm/osd/understand/task-sequence-built-in-variables).  
+- Si es necesario, durante una secuencia de tareas de implementación de sistema operativo, use la variable **SMSTSPreserveContent** para conservar el contenido en la caché del cliente. Para más información, vea [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSPreserveContent) (Variables de secuencia de tareas).  
 
 - Si es necesario, al crear el software siguiente, use la opción **Conservar contenido en la memoria caché del cliente**:  
     - Aplicaciones
