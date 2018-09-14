@@ -2,7 +2,7 @@
 title: Características en desuso
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las características que Configuration Manager ya no admite.
-ms.date: 07/30/2018
+ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8075fb0e00a0cc9bd8190bb2838431be8c2d1ce8
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: a84d25203fc0addc32271446e1375c9013c0bb6e
+ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382879"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42584618"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Características en desuso y eliminadas de Configuration Manager
 
@@ -31,6 +31,7 @@ Esta información está sujeta a cambios en futuras versiones. Podría no inclui
 
 |Característica|Primer anuncio del desuso|Soporte técnico eliminado|  
 |-----------|---|--------------|  
+|Administración híbrida de dispositivos móviles. Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management). <!--Intune feature 2683117-->|14 de agosto de 2018|1 de septiembre de 2019|
 |La **experiencia de usuario de Silverlight** del punto de sitios web del catálogo de aplicaciones ya no se admite. Los usuarios deben utilizar el nuevo Centro de software. NOTA: Los roles Punto de sitios web y Punto de servicio web del catálogo de aplicaciones todavía son compatibles. En algunos escenarios, el nuevo Centro de software se comunica con el punto de sitio web del catálogo de aplicaciones.|11 de agosto de 2017| Versión 1806|
 |La versión anterior del Centro de software.<br><br>Para obtener más información sobre el nuevo Centro de software, vea [Planear y configurar la administración de aplicaciones](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only).|13 de diciembre de 2016|Versión 1802|
 |Administración de discos duros virtuales (VHD) con Configuration Manager. </br></br>Este desuso incluye la eliminación de opciones para crear un nuevo VHD o administrar un VHD con una secuencia de tareas, y la eliminación del nodo de discos duros virtuales de la consola de Configuration Manager. </br></br>Los VHD existentes no se eliminan, pero ya no son accesibles desde la consola de Configuration Manager.  |6 de enero de 2017 |Versión 1710|
