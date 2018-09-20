@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 07616a1c03c0383e9001418043dc6cd7ec117c1d
-ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
+ms.openlocfilehash: ce3937b630eea38af34f1abd7c7348ebf2f8dfdb
+ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703492"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44111100"
 ---
 # <a name="integration-with-windows-update-for-business-in-windows-10"></a>Integración con Windows Update for Business en Windows 10
 
@@ -66,8 +66,7 @@ Windows Update para empresas (WUfB) permite mantener los dispositivos basados en
 5.  Los equipos que se administran a través de WUfB, mostrarán el valor **Desconocido** en el estado de cumplimiento y no se tendrán en cuenta como parte del porcentaje total de cumplimiento.  
 
 ## <a name="configure-windows-update-for-business-deferral-policies"></a>Configuración de directivas de aplazamiento de Windows Update para empresas
-<!-- 1290890 -->
-A partir de la versión 1706 de Configuration Manager, puede configurar directivas de aplazamiento para actualizaciones de características de Windows 10 o actualizaciones de calidad para dispositivos con Windows 10 administradas directamente mediante Windows Update para empresas. Puede administrar las directivas de aplazamiento en el nuevo nodo **Directivas de Windows Update para empresas**, en **Biblioteca de Software** > **Mantenimiento de Windows 10**.
+<!-- 1290890 --> A partir de la versión 1706 de Configuration Manager, puede configurar directivas de aplazamiento para actualizaciones de características de Windows 10 o actualizaciones de calidad para dispositivos con Windows 10 administradas directamente mediante Windows Update para empresas. Puede administrar las directivas de aplazamiento en el nuevo nodo **Directivas de Windows Update para empresas**, en **Biblioteca de Software** > **Mantenimiento de Windows 10**.
 
 >[!NOTE] 
 >A partir de la versión 1802 de Configuration Manager, se pueden establecer directivas de aplazamiento para Windows Insider. <!--507201-->Para obtener más información sobre el programa Windows Insider, vea [Introducción al Programa Windows Insider para empresas](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business).
@@ -82,10 +81,10 @@ A partir de la versión 1706 de Configuration Manager, puede configurar directiv
 3. En la página **General**, proporcione un nombre y una descripción para la directiva.
 4. En la página **Deferral Policies** (Directivas de aplazamiento), configure si se van a aplazar o pausar las actualizaciones de características. Las actualizaciones de características son generalmente nuevas características de Windows. Después de configurar el parámetro **Nivel de preparación de la rama**, puede definir si le gustaría aplazar la recepción de actualizaciones de características después de que se pongan a disposición de los usuarios por parte de Microsoft, y por cuánto tiempo.
     - **Nivel de preparación de la rama**: configure la rama para la que el dispositivo recibirá actualizaciones de Windows (Rama actual o Rama actual para empresas).
-    - **Período de aplazamiento (días)**: especifique el número de días durante los que se aplazarán las actualizaciones de características. Puede aplazar la recepción de estas actualizaciones de características durante un período de 180 días a partir de su lanzamiento.
+    - **Período de aplazamiento (días)**: especifique el número de días durante los que se aplazarán las actualizaciones de características. Puede aplazar la recepción de estas actualizaciones de características durante un período de 365 días a partir de su lanzamiento.
     - **Pausar el inicio de las actualizaciones de características**: seleccione si desea pausar la recepción de actualizaciones de características para los dispositivos durante un período de hasta 60 días a partir del momento en que pausa las actualizaciones. Una vez que transcurra el máximo de días, la funcionalidad de pausa expirará automáticamente y el dispositivo buscará actualizaciones aplicables en Windows Update. Después de este análisis, puede pausar las actualizaciones de nuevo. Puede quitar la pausa de las actualizaciones de características desactivando la casilla.   
 5. Elija si desea aplazar o pausar las actualizaciones de calidad. Las actualizaciones de calidad suelen ser correcciones y mejoras en la funcionalidad de Windows existente y normalmente se publican el primer martes de cada mes, aunque pueden publicarse en cualquier momento por parte de Microsoft. Puede definir si desea aplazar la recepción de actualizaciones de calidad después de su lanzamiento, y por cuánto tiempo.
-    - **Período de aplazamiento (días)**: especifique el número de días durante los que se aplazarán las actualizaciones de características. Puede aplazar la recepción de estas actualizaciones de características durante un período de 180 días a partir de su lanzamiento.
+    - **Período de aplazamiento (días)**: especifique el número de días durante los que se aplazarán las actualizaciones de calidad. Puede aplazar la recepción de estas actualizaciones de calidad durante un período de 30 días a partir de su lanzamiento.
     - **Pausar el inicio de las actualizaciones de calidad**: seleccione si desea pausar la recepción de actualizaciones de calidad para los dispositivos durante un período de hasta 35 días a partir del momento en que pausa las actualizaciones. Una vez que transcurra el máximo de días, la funcionalidad de pausa expirará automáticamente y el dispositivo buscará actualizaciones aplicables en Windows Update. Después de este análisis, puede pausar las actualizaciones de nuevo. Puede quitar la pausa de las actualizaciones de calidad desactivando la casilla.
 6. Seleccione **Instalar actualizaciones de otros productos de Microsoft** para habilitar el parámetro de directiva de grupo que permite que la configuración de aplazamiento sea aplicable a Microsoft Update, así como a las actualizaciones de Windows Update.
 7. Seleccione **Include drivers with Windows Update** (Incluir controladores con Windows Update) para actualizar automáticamente los controladores desde las actualizaciones de Windows Update. Si desactiva esta opción, no se descargan las actualizaciones de controladores desde Windows Update.

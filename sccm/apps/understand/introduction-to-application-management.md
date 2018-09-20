@@ -2,7 +2,7 @@
 title: Introducción a la administración de aplicaciones
 titleSuffix: Configuration Manager
 description: Obtenga la información básica que necesitará para administrar e implementar las aplicaciones de Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 08/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 70ab4136f39b4bf559c3d460ca1528bb4de0f6e1
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 0d4e83cbcb1c95303719b1d86ffc9a8969c16998
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384297"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893913"
 ---
 # <a name="introduction-to-application-management-in-configuration-manager"></a>Introducción a la administración de aplicaciones en Configuration Manager
 
@@ -186,9 +186,9 @@ Vea los siguientes artículos para más información:
 - [Manual del usuario del Centro de software](/sccm/core/understand/software-center)
 
 > [!Note]  
-> El rol de Punto de servicio web del catálogo de aplicaciones ya no es necesario en la versión 1806, pero todavía es un rol compatible. 
+> Los roles Punto de sitios web y Punto de servicio web del catálogo de aplicaciones ya no son *necesarios* en la versión 1806, aunque todavía son *compatibles*. 
 > 
-> En la versión 1806 no se admite el rol de sitio web del catálogo de aplicaciones. Para más información, consulte [Características en desuso y eliminadas](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+> La **experiencia de usuario de Silverlight** del punto de sitios web del catálogo de aplicaciones ya no se admite. Para más información, consulte [Características en desuso y eliminadas](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
 
 

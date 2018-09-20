@@ -10,12 +10,12 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 89742711f17997487fec403d51c89a42ceff34ec
-ms.sourcegitcommit: 52ec30245ba559596d2f88a3eff70c467b4a056f
+ms.openlocfilehash: 13dbffd442cfbe0ced30d46b9a93dd03418202c9
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381047"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893848"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Novedades de la versión 1806 de la rama actual de Configuration Manager
 
@@ -385,8 +385,15 @@ Estas secuencias de tareas pueden ser para la implementación del sistema operat
 
 ## <a name="software-center"></a>Centro de software
 
+> [!Important]  
+> Para aprovechar las nuevas características de Configuration Manager, primero actualice los clientes a la versión más reciente. Aunque la funcionalidad nueva aparece en la consola de Configuration Manager cuando se actualiza el sitio y la consola, la totalidad del escenario no es funcional hasta que la versión del cliente también es la más reciente.
+
+
 ### <a name="software-center-infrastructure-improvements"></a>Mejoras de la infraestructura del Centro de software
-<!--1358309--> Los roles del catálogo de aplicaciones ya no son necesarios para mostrar las aplicaciones disponibles para el usuario en el Centro de software. Este cambio ayuda a reducir la infraestructura de servidor necesaria para entregar las aplicaciones a los usuarios. El Centro de software se basa ahora en el punto de administración para obtener esta información, lo que facilita el escalado de los entornos de mayor tamaño al asignarlos a [grupos de límites](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
+<!--1358309-->
+*** [Actualizado]*** Los roles del catálogo de aplicaciones ya no son necesarios para mostrar las aplicaciones disponibles para el usuario en el Centro de software. Este cambio ayuda a reducir la infraestructura de servidor necesaria para entregar las aplicaciones a los usuarios. El Centro de software se basa ahora en el punto de administración para obtener esta información, lo que facilita el escalado de los entornos de mayor tamaño al asignarlos a [grupos de límites](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
+
+Para obtener más información, consulte [Configurar el centro de software](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
 
 > [!Note]  
 > Los roles Punto de sitios web y Punto de servicio web del catálogo de aplicaciones ya no son *necesarios* en la versión 1806, aunque todavía son *compatibles*. 

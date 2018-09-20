@@ -10,12 +10,12 @@ ms.assetid: 8fce5391-8e75-4f99-813a-76f8842be5bc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 46f9d4bb2b861b767352793cde0ce436a7f4da1d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 7ba95a61b074fa1ae4cc4c77f896659b91eaaaaa
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340539"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893705"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1710-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de uso para diagnóstico de la versión 1710 de System Center Configuration Manager
 
@@ -214,11 +214,11 @@ Para la versión 1710 de System Center Configuration Manager, este nivel incluye
 
   - Recuento de clientes unidos a servicios de Azure Active Directory
 
-  - Recuento de recopilaciones sincronizadas con Operations Management Suite
+  - Recuento de recopilaciones sincronizadas con Azure Log Analytics
 
   - Recuento de conectores de Upgrade Analytics
 
-  - Si el conector en la nube de Operations Management Suite está habilitado
+  - Si el conector en la nube de Azure Log Analytics está habilitado
 
 
 - ***[Nuevo]*** Administración conjunta

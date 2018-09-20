@@ -10,12 +10,12 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e72cdf667f96828fb6730cf3294c8d20ec553130
-ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
+ms.openlocfilehash: 7b82bdfcbe69c7e9d59185fc6af20a85e65a6e7d
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43289261"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893573"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Características de versión preliminar en Configuration Manager
 
@@ -91,7 +91,7 @@ Al habilitar una característica de versión preliminar, el Administrador de jer
 | Punto de servicio de almacenamiento de datos <!-- 1277922 --> |  [Versión 1702](/sccm/core/servers/manage/data-warehouse) |[Versión 1706](/sccm/core/servers/manage/data-warehouse)|
 | Almacenamiento en caché del mismo nivel para la distribución de contenido en los clientes <!-- 1101436 --> |  [Versión 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) | [Versión 1710](/sccm/core/plan-design/hierarchy/client-peer-cache)|
 | Puerta de enlace de administración en la nube <!-- 1101764 --> |  [Versión 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |[Versión 1802](/sccm/core/clients/manage/plan-cloud-management-gateway)|
-| Conector de Microsoft Operations Management Suite <!-- 1236739 --> | [Versión 1606](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) |[Versión 1802](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)|
+| Conector de Log Analytics <!-- 1236739 --> | [Versión 1606](/sccm/core/clients/manage/sync-data-log-analytics) |[Versión 1802](/sccm/core/clients/manage/sync-data-log-analytics)|
 | Mantenimiento de una recopilación compatible con clústeres (dar servicio a un grupo de servidores) <!-- 1081776 --> | [Versión 1602](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_ServerGroups)|![Todavía no](media/red_x.png)|
 | Acceso condicional para equipos administrados por System Center Configuration Manager <!--  --> | [Versión 1602](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)     | [Versión 1702](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)                     |
 <!--Image used = ![Not yet](media/red_x.png) -->

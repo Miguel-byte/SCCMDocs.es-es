@@ -10,12 +10,12 @@ ms.assetid: a0287beb-70a9-4b57-a627-e7bfba27fd3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5da60a9dd45b3993f9c1afd95c41a90956ec70c4
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: d964295134538cf281af214830a5bc416484be51
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385966"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893678"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1806"></a>Niveles de recopilación de datos de utilización para diagnóstico en la versión 1806
 
@@ -258,11 +258,11 @@ Para la versión 1806 de Configuration Manager, este nivel incluye los datos sig
 
   - Recuento de servicios y aplicaciones de Azure Active Directory conectados a Configuration Manager
 
-  - Recuento de recopilaciones sincronizadas con Operations Management Suite
+  - Recuento de recopilaciones sincronizadas con Azure Log Analytics
 
   - Recuento de conectores de Upgrade Analytics
 
-  - Si el conector en la nube de Operations Management Suite está habilitado  
+  - Si el conector en la nube de Azure Log Analytics está habilitado  
 
   - ***[Nuevo]*** Recuento de puntos de distribución de incorporación de cambios con un punto de distribución en la nube como ubicación de origen  
 

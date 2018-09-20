@@ -2,7 +2,7 @@
 title: Configuración de cliente
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la configuración predeterminada y personalizada para controlar los comportamientos del cliente.
-ms.date: 07/30/2018
+ms.date: 08/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 38306efc9fbd7b38a5c5f0dad57fbd1a1b2c0557
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: ff4cdcc52e9be329fcfa0fd2127c43255c73ad65
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385412"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893879"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -90,15 +90,7 @@ Especifica con qué frecuencia descargan los siguientes clientes de Configuratio
 
 Al establecer esta opción en **Sí**y usar la [detección de usuarios](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser), los clientes reciben las aplicaciones y programas destinados al usuario que ha iniciado sesión.  
 
-El catálogo de aplicaciones recibe la lista de software disponible para los usuarios desde el servidor de sitio. Por tanto, no es necesario establecer esta opción en **Sí** para que los usuarios puedan ver y solicitar aplicaciones del catálogo de aplicaciones. Pero, si esta opción se establece en **No**, los comportamientos siguientes no funcionarán cuando los usuarios usen el catálogo de aplicaciones:  
-
--   Los usuarios no podrán instalar las aplicaciones que vean en el catálogo de aplicaciones.  
-
--   Los usuarios no verán las notificaciones sobre las solicitudes de aprobación de aplicaciones. En lugar de ello, deberán actualizar el catálogo de aplicaciones y comprobar el estado de aprobación.  
-
--   Los usuarios no reciben revisiones ni actualizaciones de las aplicaciones que se publican en el catálogo de aplicaciones. Pero sí ven los cambios de la información de las aplicaciones en el catálogo de aplicaciones.  
-
--   Si quita una implementación de aplicación después de que el cliente la instale desde el catálogo de aplicaciones, los clientes seguirán viendo que la aplicación está instalada durante al menos dos días.  
+El catálogo de aplicaciones recibe la lista de software disponible para los usuarios desde el servidor de sitio. Por tanto, no es necesario establecer esta opción en **Sí** para que los usuarios puedan ver y solicitar aplicaciones del catálogo de aplicaciones. Si esta opción es **No**, los usuarios no podrán instalar las aplicaciones que vean en el catálogo de aplicaciones.  
 
 Además, si esta opción se establece en **No**, los usuarios no recibirán las aplicaciones necesarias que implemente para ellos. Los usuarios tampoco recibirán otras tareas de administración de directivas de usuario.  
 
@@ -161,42 +153,19 @@ Para obtener más información sobre las siguientes tres configuraciones, vea [N
 
 ### <a name="default-application-catalog-website-point"></a>Punto de sitios web del catálogo de aplicaciones predeterminado
 
-Configuration Manager utiliza este valor para conectar a los usuarios al catálogo de aplicaciones desde el Centro de software. Seleccione **Sitio web** para especificar un servidor que hospede el punto de sitios web del catálogo de aplicaciones. Escriba su nombre NetBIOS o FQDN, especifique la detección automática o una dirección URL para implementaciones personalizadas. En la mayoría de los casos, la detección automática es la mejor opción, ya que ofrece las siguientes ventajas:  
+> [!Note]  
+> A partir de la versión 1806, el punto de sitios web del catálogo de aplicaciones ya no es *necesario* en la versión 1806, pero todavía es *compatible*. Para obtener más información, consulte [Configurar el centro de software](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
+> 
+> La **experiencia de usuario de Silverlight** del punto de sitios web del catálogo de aplicaciones ya no se admite. Para más información, consulte [Características en desuso y eliminadas](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
--   Si el sitio tiene un punto de sitios web del catálogo de aplicaciones, los clientes reciben automáticamente un punto de sitios web del catálogo de aplicaciones desde su sitio.  
-
--   El cliente prefiere puntos de sitios web del catálogo de aplicaciones habilitados para HTTPS en la intranet a servidores solo de HTTP. Esta funcionalidad ayuda a protegerse contra un servidor no autorizado.
-
--   El punto de administración ofrece a los clientes basados en Internet un punto de sitios web del catálogo de aplicaciones basado en Internet. El punto de administración proporciona a los clientes basados en intranet un punto de sitios web del catálogo de aplicaciones basado en intranet.  
-
-La detección automática no garantiza que los clientes reciban el punto de sitios web del catálogo de aplicaciones más próximo. Puede decidir no usar la opción **Detectar automáticamente** por los motivos siguientes:  
-
--   Quiere configurar manualmente el servidor más próximo para los clientes o asegurarse de que no se conecten a un servidor a través de una conexión de red lenta.  
-
--   Desea controlar qué clientes se conectan a qué servidor. Esta configuración podría darse por motivos de pruebas, rendimiento o empresariales.  
-
--   No quiere esperar hasta 25 horas o hasta un cambio de la red para que los clientes usen otro punto de sitios web del catálogo de aplicaciones.  
-
-Si especifica el punto de sitios web del catálogo de aplicaciones en lugar de usar la detección automática, especifique el nombre NetBIOS en lugar del FQDN de intranet. Esta configuración reduce la probabilidad de que el explorador web solicite las credenciales a los usuarios cuando accedan a un catálogo de aplicaciones basado en intranet. Para utilizar el nombre de NetBIOS, se deben cumplir las siguientes condiciones:  
-
--   Se especificó el nombre de NetBIOS en las propiedades del punto de sitios web del catálogo de aplicaciones.  
-
--   Usa WINS o todos los clientes están en el mismo dominio que el punto de sitios web del catálogo de aplicaciones.  
-
--   El punto de sitios web del catálogo de aplicaciones se configura para conexiones de cliente HTTP o el servidor se configura para HTTPS, y el certificado del servidor web tiene el nombre NetBIOS.  
-
-Normalmente, se les piden las credenciales a los usuarios si la dirección URL tiene un nombre de dominio completo, pero no si la dirección URL es un nombre NetBIOS. Espere que siempre se les solicite a los usuarios cuando se conectan desde Internet, ya que esta conexión debe utilizar el nombre completo de Internet. Cuando se usa un cliente basado en Internet y el explorador web solicita las credenciales a los usuarios, asegúrese de que el punto de sitios web del catálogo de aplicaciones se puede conectar a un controlador de dominio para la cuenta del usuario. Esta configuración permite al usuario autenticarse mediante Kerberos.  
-
-> [!NOTE]  
->  Así es como funciona la detección automática:  
->   
->  el cliente realiza una solicitud de ubicación de servicio a un punto de administración. Si hay un punto de sitios web del catálogo de aplicaciones en el mismo sitio que el cliente, se proporcionará este servidor al cliente como el servidor del catálogo de aplicaciones que debe utilizar. Si en el sitio hay disponible más de un punto de sitios web del catálogo de aplicaciones, los servidores habilitados para HTTPS tendrán prioridad sobre los que no estén habilitados para HTTPS. Después de este filtrado, se proporcionará a todos los clientes uno de los servidores para que los usen como catálogo de aplicaciones. Configuration Manager no realiza un equilibrio de carga entre varios servidores. Si el sitio del cliente no tiene ningún punto de sitios web del catálogo de aplicaciones, el punto de administración devolverá de forma no determinista uno de la jerarquía.  
->   
->  Para los clientes basados en intranet, si configura el punto de sitios web del catálogo de aplicaciones con un nombre de NetBIOS para la dirección URL del catálogo de aplicaciones, el punto de administración lo utiliza. No se usa el FQDN de la intranet. Para los clientes basados en Internet, el punto de administración solo ofrece al cliente el FQDN de Internet.  
->   
->  El cliente realiza dicha solicitud de ubicación de servicio cada 25 horas, o cada vez que detecte un cambio de la red. Por ejemplo, que un cliente se mueva desde la intranet a Internet se considera un cambio de red. Si el cliente localiza un punto de administración basado en Internet, este punto proporciona a los clientes los servidores del punto de sitios web del catálogo de aplicaciones basado en Internet.  
+Configuration Manager utiliza este valor para conectar a los usuarios al catálogo de aplicaciones desde el Centro de software. Seleccione **Sitio web** para especificar un servidor que hospede el punto de sitios web del catálogo de aplicaciones. Escriba su nombre NetBIOS o FQDN, especifique la detección automática o una dirección URL para implementaciones personalizadas. En la mayoría de los casos, la detección automática es la mejor opción.
 
 ### <a name="add-default-application-catalog-website-to-internet-explorer-trusted-sites-zone"></a>Agregar sitio web predeterminado del catálogo de aplicaciones a una zona de sitios de confianza de Internet Explorer
+
+> [!Note]  
+> A partir de la versión 1806, el punto de sitios web del catálogo de aplicaciones ya no es *necesario* en la versión 1806, pero todavía es *compatible*. Para obtener más información, consulte [Configurar el centro de software](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
+> 
+> La **experiencia de usuario de Silverlight** del punto de sitios web del catálogo de aplicaciones ya no se admite. Para más información, consulte [Características en desuso y eliminadas](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
 Si esta opción es **Sí**, el cliente agrega de forma automática la dirección URL del sitio web del catálogo de aplicaciones predeterminado actual a la zona de sitios de confianza de Internet Explorer.  
 
@@ -204,12 +173,12 @@ Este valor garantiza que no esté habilitada la configuración de Internet Explo
 
 Si esta opción se mantiene como **No**, es posible que los clientes de Configuration Manager no puedan instalar aplicaciones desde el catálogo de aplicaciones. Un método alternativo consiste en configurar estas opciones de Internet Explorer en otra zona para la dirección URL del catálogo de aplicaciones que usan los clientes.  
 
-> [!NOTE]  
->  Cada vez que Configuration Manager agrega una dirección URL del catálogo de aplicaciones predeterminado a la zona de sitios de confianza, quita cualquier dirección URL del catálogo de aplicaciones agregada anteriormente.  
->   
->  Si la dirección URL ya está especificada en una de las zonas de seguridad, Configuration Manager no puede agregarla. En este escenario, deberá quitar la dirección URL de la otra zona, o bien realizar manualmente la configuración requerida de Internet Explorer.  
-
 ### <a name="allow-silverlight-applications-to-run-in-elevated-trust-mode"></a>Permitir que las aplicaciones de Silverlight se ejecuten en modo de confianza elevado.
+
+> [!Important]  
+> A partir de la versión 1802 de Configuration Manager, el cliente no instala Silverlight de manera automática.
+> 
+> A partir de la versión 1806, la **experiencia de usuario de Silverlight** del punto de sitios web del catálogo de aplicaciones ya no se admite. Los usuarios deben utilizar el nuevo Centro de software. Para obtener más información, consulte [Configurar el centro de software](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
 
 Este valor debe ser **Sí** para que los usuarios utilicen el catálogo de aplicaciones.  
 
@@ -219,15 +188,18 @@ Para obtener más información sobre esta configuración, vea [Certificados de M
 
 ### <a name="organization-name-displayed-in-software-center"></a>Nombre de organización mostrado en el Centro de software
 
-Escriba el nombre que ven los usuarios en el Centro de software. Esta información de marca ayuda a los usuarios a identificar a esta aplicación como un origen de confianza.  
+Escriba el nombre que ven los usuarios en el Centro de software. Esta información de marca ayuda a los usuarios a identificar a esta aplicación como un origen de confianza. Para obtener más información acerca de la prioridad de esta configuración, consulte [Branding Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#branding-software-center) (Centro de software de personalización de marca).  
 
 ### <a name="use-new-software-center"></a>Usar el nuevo Centro de software
 
-Si establece esta opción en **Sí**, todos los equipos cliente usarán el Centro de software. En el Centro de software se muestran aplicaciones disponibles para el usuario a las que antes solo se podía tener acceso desde el catálogo de aplicaciones. El catálogo de aplicaciones necesita Silverlight, lo que no es un requisito previo para el Centro de software. A partir de Configuration Manager 1802, el valor predeterminado es **Sí**.  
+A partir de Configuration Manager 1802, el valor predeterminado es **Sí**.
 
-Los roles de sistema de sitio de punto de sitios web del catálogo de aplicaciones y de punto de servicio web del catálogo de aplicaciones siguen siendo necesarios para que las aplicaciones disponibles para el usuario aparezcan en el Centro de software.  
+Si establece esta opción en **Sí**, todos los equipos cliente usarán el Centro de software. En el Centro de software se muestran aplicaciones disponibles para el usuario a las que antes solo se podía tener acceso desde el catálogo de aplicaciones. El catálogo de aplicaciones necesita Silverlight, lo que no es un requisito previo para el Centro de software.   
 
-Para obtener más información, consulte [Planear y configurar la administración de aplicaciones en Configuration Manager](/sccm/apps/plan-design/plan-for-and-configure-application-management).  
+A partir de la versión 1806, los roles de punto de sitios web y punto de servicio web del catálogo de aplicaciones ya no son *necesarios*, aunque todavía son *compatibles*. Para obtener más información, consulte [Configurar el centro de software](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
+ 
+> [!Note]  
+> La **experiencia de usuario de Silverlight** del punto de sitios web del catálogo de aplicaciones ya no se admite. Para más información, consulte [Características en desuso y eliminadas](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
 ### <a name="enable-communication-with-health-attestation-service"></a>Habilitar la comunicación con el servicio de atestación de estado
 

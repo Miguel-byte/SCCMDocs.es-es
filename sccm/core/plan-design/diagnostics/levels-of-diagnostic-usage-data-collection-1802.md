@@ -10,12 +10,12 @@ ms.assetid: 29dd51b8-6576-4010-81ba-3129ed2c3421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 561fd23795d52debe0304fa16fd07234dc63e4c2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d630c5d02b6c7729e5f26ce3915f48bf20aef7e2
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344779"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893760"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1802-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de uso para diagnóstico de la versión 1802 de System Center Configuration Manager
 
@@ -223,11 +223,11 @@ Para la versión 1802 de Configuration Manager, este nivel incluye los datos sig
 
   - Recuento de servicios y aplicaciones de Azure Active Directory conectados a Configuration Manager
 
-  - Recuento de recopilaciones sincronizadas con Operations Management Suite
+  - Recuento de recopilaciones sincronizadas con Azure Log Analytics
 
   - Recuento de conectores de Upgrade Analytics
 
-  - Si el conector en la nube de Operations Management Suite está habilitado
+  - Si el conector en la nube de Azure Log Analytics está habilitado
 
 
 ### <a name="co-management"></a>Administración conjunta  
