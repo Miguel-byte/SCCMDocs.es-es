@@ -10,12 +10,12 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cdf073aa3e9ca3be6062ea0e5e0528bb97937989
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a3d4cbbf78639a135e9e36e3402f9920a6ef71ed
+ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333409"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448793"
 ---
 # <a name="co-management-dashboard-in-system-center-configuration-manager"></a>Panel de administración conjunta en System Center Configuration Manager
 *Se aplica a: System Center Configuration Manager (Rama actual)*
@@ -76,7 +76,7 @@ En el panel de administración conjunta se muestran cuatro gráficos para el ent
 ## <a name="next-steps"></a>Pasos siguientes
 
 Para obtener más información sobre la administración conjunta, vea:
- - [Administración conjunta para dispositivos Windows 10](/sccm/core/clients/manage/co-management-overview.md)
- - [Preparación de dispositivos Windows 10 para la administración conjunta](/sccm/core/clients/manage/co-management-prepare.md)
+ - [Administración conjunta para dispositivos Windows 10](/sccm/core/clients/manage/co-management-overview)
+ - [Preparación de dispositivos Windows 10 para la administración conjunta](/sccm/core/clients/manage/co-management-prepare)
 
     
