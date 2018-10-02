@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0429c62f68a111bc7f620d1c954d5c8cf944d1c1
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: 2e0f74790437b34d1c5cd5dc00767ec782a51b45
+ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590063"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229303"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot para datos en tiempo real en Configuration Manager
 
@@ -78,7 +78,7 @@ Los siguientes componentes son necesarios para usar CMPivot:
 
      - Haga clic en una de las opciones de **Entidades** para agregarla a la cadena de consulta.  
 
-     - Los vínculos de **Table Operators** (Operadores de tabla), **Aggregation Functions** (Funciones de agregación) y **Funciones escalares** abren la documentación de referencia del lenguaje en el explorador web. CMPivot utiliza el mismo lenguaje de consulta que [Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log).  
+     - Los vínculos de **Table Operators** (Operadores de tabla), **Aggregation Functions** (Funciones de agregación) y **Funciones escalares** abren la documentación de referencia del lenguaje en el explorador web. CMPivot utiliza el mismo lenguaje de consulta que [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/).  
 
 3. Mantenga la ventana CMPivot abierta para ver los resultados de los clientes. Cuando cierre la ventana CMPivot, la sesión se completará.  
 
@@ -113,7 +113,7 @@ La ventana CMPivot contiene los elementos siguientes:
 
 5. El panel de consulta es donde se crea o se escribe una consulta que se ejecuta en los clientes de la colección.  
 
-    - CMPivot utiliza un subconjunto del mismo lenguaje de consulta que [Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log).  
+    - CMPivot utiliza un subconjunto del mismo lenguaje de consulta que [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/).  
 
     - Corte, copie o pegue contenido en el panel de consulta.  
 

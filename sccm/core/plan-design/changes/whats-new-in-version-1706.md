@@ -3,18 +3,19 @@ title: Nueva versión 1706
 titleSuffix: Configuration Manager
 description: Conozca en detalle los cambios y las nuevas funciones introducidas en la versión 1706 de System Center Configuration Manager.
 ms.date: 08/11/2017
+ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b83dd71f144e49d6dd9021cfb432927019b3d4ff
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 7519971f05813edbf601c598b9281bcfdf19c83b
+ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893736"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229337"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>Novedades de la versión 1706 de System Center Configuration Manager
 

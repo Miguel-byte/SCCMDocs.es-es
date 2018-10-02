@@ -10,12 +10,12 @@ ms.assetid: 7996b3eb-5259-483b-af40-adae2943d123
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 21833d124ee998f0b943d2620370a2fcff264e28
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: ebd51b397e37c69e8f6e8d1e154fc369347bd63a
+ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591652"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229371"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1805 para System Center Configuration Manager
 
@@ -255,7 +255,7 @@ Intente completar las tareas. Y, luego, envíenos sus [comentarios](capabilities
 2. La interfaz proporciona más información sobre el uso de la herramienta. 
      - Puede especificar cadenas de consulta manualmente en la parte superior, o hacer clic en los vínculos en la documentación en línea.
      - Haga clic en una de las opciones de **Entidades** para agregarla a la cadena de consulta. 
-     - Los vínculos de **Table Operators** (Operadores de tabla), **Aggregation Functions** (Funciones de agregación) y **Funciones escalares** abren la documentación de referencia del lenguaje en el explorador web. CMPivot utiliza el mismo lenguaje de consulta que [Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log).
+     - Los vínculos de **Table Operators** (Operadores de tabla), **Aggregation Functions** (Funciones de agregación) y **Funciones escalares** abren la documentación de referencia del lenguaje en el explorador web. CMPivot utiliza el mismo lenguaje de consulta que [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/).
 
 
 
