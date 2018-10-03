@@ -146,7 +146,7 @@ Use este procedimiento para automatizar la instalación del cliente y solicitar 
 
 4.  En la carpeta de herramientas en el equipo Mac, escriba lo siguiente: **sudo ./CMEnroll -s &lt;nombre_de_servidor_proxy_de_inscripción> -ignorecertchainvalidation -u &lt;nombre de usuario'>**  
 
-    Una vez instalado del cliente, se abrirá el asistente para inscripción de equipos Mac que lo ayudará a inscribir el equipo Mac. Para inscribir el cliente mediante este método, consulte [To enroll the client by using the Mac Computer Enrollment Wizard](#BKMK_EnrollR2) en este tema.  
+    Una vez instalado del cliente, se abrirá el asistente para inscripción de equipos Mac que lo ayudará a inscribir el equipo Mac. Para inscribir el cliente mediante este método, consulte [Para inscribir el cliente mediante el Asistente para inscripción de equipos Mac](#BKMK_EnrollR2) en este tema.  
 
 5. Escriba la contraseña de la cuenta de usuario de Active Directory.  Cuando escriba este comando, se le pedirán dos contraseñas: la primera solicitud es para que la cuenta de superusuario ejecute el comando. La segunda es para la cuenta de usuario de Active Directory. Los mensajes de solicitud son idénticos, así que asegúrese de especificar las credenciales en la secuencia correcta.  
 

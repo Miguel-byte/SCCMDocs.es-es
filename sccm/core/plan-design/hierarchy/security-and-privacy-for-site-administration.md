@@ -120,7 +120,7 @@ Conceda acceso administrativo a Configuration Manager solo a los usuarios en los
 
 Audite periódicamente las asignaciones de usuarios administrativos y su nivel de autorización para comprobar los cambios necesarios.  
 
-Para obtener más información sobre cómo configurar la administración basada en roles, consulte [Configure role-based administration for System Center Configuration Manager](../../../core/servers/deploy/configure/configure-role-based-administration.md) (Configurar la administración basada en roles de System Center Configuration Manager).  
+Para obtener más información sobre cómo configurar la administración basada en roles, consulte [Configurar la administración basada en roles de System Center Configuration Manager](../../../core/servers/deploy/configure/configure-role-based-administration.md) (Configurar la administración basada en roles de System Center Configuration Manager).  
 
 **Proteja las copias de seguridad de Configuration Manager y el canal de comunicación cuando cree copias de seguridad y restauración.**  
 
@@ -301,7 +301,7 @@ Identifique y siga las prácticas recomendadas para su versión del servidor IIS
 ##  <a name="BKMK_Security_FSP"></a> Prácticas recomendadas de seguridad para el punto de estado de reserva  
  Use los siguientes procedimientos recomendados de seguridad si instala un punto de estado de reserva en Configuration Manager.  
 
- Para obtener más información sobre las consideraciones de seguridad al instalar un punto de estado de reserva, consulte [Determine Whether You Require a Fallback Status Point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#determine-if-you-need-a-fallback-status-point) (Determinar si necesita un punto de estado de reserva).  
+ Para obtener más información sobre las consideraciones de seguridad al instalar un punto de estado de reserva, consulte [Determinar si necesita un punto de estado de reserva](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#determine-if-you-need-a-fallback-status-point) (Determinar si necesita un punto de estado de reserva).  
 
 
 **No ejecute otros roles de sistema de sitio en el sistema del sitio y no instale el punto de estado de reserva en un controlador de dominio.**  
