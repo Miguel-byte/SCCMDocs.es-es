@@ -88,7 +88,7 @@ Si actualiza el sitio antes que Windows ADK, consulte [Actualización de puntos 
 
 **Revisar el estado del sitio y la jerarquía, y comprobar que no hay problemas sin resolver:** antes de actualizar un sitio, resuelva todos los problemas de funcionamiento para el servidor de sitio, el servidor de base de datos del sitio y los roles de sistema de sitio instalados en equipos remotos. Una actualización del sitio puede generar errores debido a problemas de funcionamiento existentes.
 
-Para obtener más información, consulte [Use alerts and the status system for System Center Configuration Manager](/sccm/core/servers/manage/use-alerts-and-the-status-system) (Usar alertas y el sistema de estado para System Center Configuration Manager).
+Para obtener más información, consulte [Usar alertas y el sistema de estado para System Center Configuration Manager](/sccm/core/servers/manage/use-alerts-and-the-status-system).
 
 **Revisar la replicación de datos y archivos entre sitios:**   
 Asegúrese de que la replicación de archivos y base de datos entre sitios funciona y está actualizada. Los retrasos o los trabajos pendientes pueden impedir una actualización correcta y sin problemas.
