@@ -10,12 +10,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 10dfebccd997a42f4c79e5d88bdf05e26585aebb
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: 4ba23a42acb111f4ed7d0337552b2ea90b0268d6
+ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589879"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448929"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Sitio y requisitos previos de sistema de sitio para Configuration Manager
 
@@ -73,7 +73,7 @@ Vea las secciones principales de este artículo para obtener información sobre 
 - [Punto de proxy de inscripción](#bkmk_2012EnrollProxpreq)
 - [Punto de estado de reserva](#bkmk_2012FSPpreq)
 - [Punto de administración](#bkmk_2012MPpreq)
-- [Punto de notificación](#bkmk_2012RSpoint)
+- [Punto de servicios de informes](#bkmk_2012RSpoint)
 - [Punto de conexión de servicio](#bkmk_SCPpreq)
 - [Punto de actualización de software](#bkmk_2012SUPpreq)
 - [Punto de migración de estado](#bkmk_2012SMPpreq)
@@ -452,7 +452,7 @@ Se requiere la configuración de IIS predeterminada con las siguientes adiciones
 
 
 
-##  <a name="bkmk_2012RSpoint"></a> Punto de notificación  
+##  <a name="bkmk_2012RSpoint"></a> Punto de servicios de informes  
 
 #### <a name="windows-server-roles-and-features"></a>Roles y características de Windows Server  
 

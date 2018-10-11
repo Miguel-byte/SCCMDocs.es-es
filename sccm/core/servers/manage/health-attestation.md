@@ -10,12 +10,12 @@ ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: c41a04d82edb46a234b6e5bd10d796e6544cbfad
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 27e8e3ef78947eb6623a56e670e176aaa2800f68
+ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340189"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448912"
 ---
 # <a name="health-attestation-for-system-center-configuration-manager"></a>Atestación de estado para System Center Configuration Manager
 
@@ -56,8 +56,9 @@ A partir de Configuration Manager 1702, la dirección URL del servicio de atesta
 2. Haga clic con el botón derecho en el sitio primario o secundario con el punto de administración que admite clientes de atestación de estado de dispositivo local y seleccione **Configurar componentes de sitio** > **Punto de administración**. Se abre la página **Propiedades de componente de punto de administración**.
 3. En la pestaña **Opciones avanzadas**, seleccione **Agregar** y especifique una dirección URL del servicio de atestación de estado de dispositivo local válida. Puede agregar varias direcciones URL. Si se especifican varias direcciones URL locales, los clientes reciben el conjunto completo y eligen aleatoriamente cuál desea utilizar.
 4.  En la consola de Configuration Manager, elija **Administración** > **Introducción** > **Configuración de cliente**.  Seleccione la pestaña para configurar el **agente de equipo** .  
-5.  En el cuadro de diálogo **Configuración predeterminada**, seleccione **Agente de equipo** y después desplácese hacia abajo hasta **Usar el servicio de atestación de estado local** y defina esta opción como **Sí**.
-6. Diríjase a las colecciones de dispositivos que deben notificar el estado de dispositivo con la configuración del agente cliente para habilitar los informes de atestación de estado de dispositivo.
+5.  Desplácese hacia abajo para **Habilitar comunicación con el servicio de atestación de estado** y establezca la opción en **Sí**.
+7.  Haga clic en la opción **Usar un servicio de atestación de mantenimiento local** y establézcala en **Sí**.
+8. Diríjase a las colecciones de dispositivos que deben notificar el estado de dispositivo con la configuración del agente cliente para habilitar los informes de atestación de estado de dispositivo.
 
 También puede **editar** o **quitar** direcciones URL del servicio de atestación de estado de dispositivo.
 

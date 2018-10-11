@@ -1,0 +1,27 @@
+items:
+- name: Microsoft Deployment Toolkit (MDT)
+  items:
+  - name: Notas de la versión
+    href: release-notes.md
+  - name: Uso de MDT
+    href: use-the-mdt.md
+  - name: 'Inicio rápido: instalación con interacción mínima (LTI)'
+    href: lite-touch-installation-guide.md
+  - name: 'Inicio rápido: instalación sin interacción (ZTI)'
+    href: sccm-guide.md
+  - name: 'Inicio rápido: instalación controlada por el usuario (UDI)'
+    href: user-driven-installation-guide.md
+  - name: Guía de ejemplos
+    href: samples-guide.md
+  - name: Referencia del kit de herramientas
+    href: toolkit-reference.md
+  - name: Referencia para la solución de problemas
+    href: troubleshooting-reference.md
+  - name: Guía para desarrolladores de UDI
+    href: user-driven-installation-developers-guide.md
+ms.openlocfilehash: f835d5cec0a10eadaaf29af0f685d8e4310cdd7a
+ms.sourcegitcommit: 8661f10596f565ca2b7bdb5951388b44b3b622ee
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "48817668"

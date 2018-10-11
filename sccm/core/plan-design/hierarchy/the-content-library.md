@@ -2,7 +2,7 @@
 title: La biblioteca de contenido
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la biblioteca de contenido que usa Configuration Manager para reducir el tamaño total del contenido distribuido.
-ms.date: 07/30/2018
+ms.date: 09/19/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05c49f78d24599c574828cee59118c069b7c4ee8
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 5f063034ed7cdc22a92df8d07d8be03ece12f663
+ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384960"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46533752"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>La biblioteca de contenido en Configuration Manager
 
@@ -82,7 +82,9 @@ Una biblioteca de contenido remota es un requisito previo para la [alta disponib
 > Esta acción solo mueve la biblioteca de contenido en el servidor de sitio. No afecta a la ubicación de la biblioteca de contenido en los puntos de distribución. 
 
 > [!Tip]  
-> Planee también la administración de contenido de origen del paquete, que es externo a la biblioteca de contenido. Todos los objetos de software de Configuration Manager tienen un origen del paquete en un recurso compartido de red. Considere la posibilidad de centralizar todos los orígenes en un mismo recurso compartido, pero asegúrese de que esta ubicación es redundante y de alta disponibilidad. Si mueve la biblioteca de contenido al mismo volumen de almacenamiento que los orígenes del paquete y este volumen es compatible con la desduplicación de contenido, este diseño puede guardar la cantidad de almacenamiento necesario.  
+> Planee también la administración de contenido de origen del paquete, que es externo a la biblioteca de contenido. Todos los objetos de software de Configuration Manager tienen un origen del paquete en un recurso compartido de red. Considere la posibilidad de centralizar todos los orígenes en un mismo recurso compartido, pero asegúrese de que esta ubicación es redundante y de alta disponibilidad. 
+> 
+> Si mueve la biblioteca de contenido al mismo volumen de almacenamiento que los orígenes de paquete, no puede marcar este volumen para la desduplicación de datos. Aunque la biblioteca de contenido es compatible con la desduplicación de datos, el volumen de los orígenes del paquete no lo admite. Para más información, vea [Introducción a la desduplicación de datos](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmmk_datadedup).<!--SCCMDOcs issue #831-->  
 
 
 ### <a name="prerequisites"></a>Requisitos previos  
@@ -98,6 +100,9 @@ Una biblioteca de contenido remota es un requisito previo para la [alta disponib
 ### <a name="process-to-manage-the-content-library"></a>Proceso para administrar la biblioteca de contenido
 
 1. Cree una carpeta en un recurso compartido de red como destino para la biblioteca de contenido. Por ejemplo, `\\server\share\folder`.  
+
+    > [!Warning]  
+    > No reutilice una carpeta existente con contenido. Por ejemplo, no use la misma carpeta que sus orígenes de paquete. Antes de copiar la biblioteca de contenido, Configuration Manager quita todo el contenido de la ubicación que especifique.  
 
 2. En la consola de Configuration Manager, cambie al área de trabajo **Administración**. Expanda **Configuración del sitio**, haga clic en el nodo **Sitios** y seleccione el sitio. En la pestaña **Resumen** de la parte inferior del panel de detalles, observará una nueva columna **Biblioteca de contenido**.  
 

@@ -4,17 +4,17 @@ description: Use este artículo para responder a las preguntas más frecuentes s
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 09/10/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
-ms.openlocfilehash: 3b178ce27b91701d52d5ea350de85216e1250442
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 16cb80efe5ad082d8624452c01dcd54a5eca27f2
+ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333229"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45600946"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>Preguntas más frecuentes sobre Cloud Management Gateway
 
@@ -45,6 +45,21 @@ No se requiere ningún mantenimiento. El diseño de Cloud Management Gateway usa
 ### <a name="im-already-using-ibcm-if-i-add-cmg-how-do-clients-behave"></a>Ya uso IBCM. Si agrego Cloud Management Gateway, ¿cómo se comportarán los clientes?
 
 Si ya ha implementado la [administración de clientes basada en Internet](/sccm/core/clients/manage/plan-internet-based-client-management) (IBCM), también puede implementar Cloud Management Gateway. Los clientes reciben la directiva para ambos servicios. A medida que se mueven hacia Internet, seleccionan y usan de manera aleatoria uno de estos servicios basados en Internet.
+
+
+### <a name="do-the-user-accounts-have-to-be-in-the-same-azure-subscription-as-the-subscription-that-hosts-the-cmg-cloud-service"></a>¿Las cuentas de usuario deben formar parte de la misma suscripción de Azure que la suscripción que hospeda el servicio en la nube de CMG?
+<!--SCCMDocs-pr issue #2873--> Si el entorno tiene más de una suscripción, puede implementar CMG en cualquier suscripción que pueda hospedar los servicios de nube de Azure. 
+
+Esta pregunta es habitual en los escenarios siguientes:  
+
+- Si dispone de diferentes entornos de prueba y producción de Active Directory y Azure AD, pero una única suscripción de hospedaje de Azure.  
+
+- Su uso de Azure ha crecido orgánicamente en equipos diferentes.  
+
+Si usa una implementación de Resource Manager, incorpore el inquilino de Azure AD asociado. Esta conexión permite a Configuration Manager autenticarse en Azure para crear, implementar y administrar la instancia de CMG.  
+
+Si está usando una autenticación de Azure AD para los usuarios y dispositivos administrados a través de CMG, incorpore ese inquilino de Azure AD. Para obtener más información sobre los servicios de Azure para la administración en la nube, vea [Configuración de servicios de Azure](/sccm/core/servers/deploy/configure/azure-services-wizard). Al incorporar cada inquilino de Azure AD, una sola instancia de CMG puede proporcionar autenticación de Azure AD para varios inquilinos, independientemente de la ubicación del hospedaje.
+
 
 
 ## <a name="next-steps"></a>Pasos siguientes

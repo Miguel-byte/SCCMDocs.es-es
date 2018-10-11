@@ -2,7 +2,7 @@
 title: Versiones de Technical Preview
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la rama de Technical Preview para probar nuevas funcionalidades y funcionalidades de Configuration Manager.
-ms.date: 08/17/2018
+ms.date: 09/12/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4be568e997a85acf49c3c86971f8d678d916aef0
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: e49f39f2c9a052ef583b172c1ccad7b2963d300a
+ms.sourcegitcommit: a7254f265098ae8e83b4fa1fac312e9cc3c4f897
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589532"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44961082"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview para Configuration Manager
 
@@ -124,10 +124,12 @@ Las características siguientes están disponibles con la versión de Technical 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1808"></a>Versión de Technical Preview 1808
+### <a name="technical-preview-version-1809"></a>Versión de Technical Preview 1809
 
-- [Implementación por fases de las actualizaciones de software](capabilities-in-technical-preview-1808.md#bkmk_pod) <!--1358146-->
-- [Mejoras para reparar las aplicaciones](capabilities-in-technical-preview-1808.md#bkmk_repair) <!--1357866-->
+- [Mejoras en CMPivot](capabilities-in-technical-preview-1809.md#bkmk_cmpivot) <!--1359068-->
+- [Mejora en el panel de ciclo de vida](capabilities-in-technical-preview-1809.md#bkmk_lifecycle) <!--1358702-->
+- [Mejora en el almacén de datos](capabilities-in-technical-preview-1809.md#bkmk_dataw) <!--1358870-->
+- [Mejora en las ventanas de mantenimiento para actualizaciones de software](capabilities-in-technical-preview-1809.md#bkmk_sum-mw) <!--vso2839307-->
 
 
 > [!Note]  
@@ -146,6 +148,8 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |Característica |Versión de Technical Preview |Versión de rama actual|  
  |----------------|---------------------|--------------------|
+ | Implementación por fases de las actualizaciones de software <!--1358146--> | [Tech Preview 1808](capabilities-in-technical-preview-1808.md#bkmk_pod) | ![Sin agregar](media/Red_X.gif) | 
+ | Mejoras para reparar las aplicaciones <!--1357866--> | [Tech Preview 1808](capabilities-in-technical-preview-1808.md#bkmk_repair) | ![Sin agregar](media/Red_X.gif) | 
  | Central de comunidad <!--1357766--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) | ![Sin agregar](media/Red_X.gif) | 
  | Especificación de la unidad para la instalación sin conexión de imágenes de SO <!--1358924--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_osd) | ![Sin agregar](media/Red_X.gif) | 
  | Actividad de sincronización de dispositivos administrados conjuntamente desde Intune <!--1358565--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_comgmt) | ![Sin agregar](media/Red_X.gif) | 
@@ -175,25 +179,8 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Aprovisionar los paquetes de aplicación de Windows para todos los usuarios en un dispositivo <!--1358310--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
  | Mejoras en el panel de Surface <!--1358654--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
  | Revisión de unidad predeterminada de inventario de hardware <!--514442--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Creación de una implementación por fases con fases configuradas manualmente para una secuencia de tareas <!--1358148--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Compatibilidad con puntos de distribución de nube para Azure Resource Manager <!--1322209--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Realización de acciones basadas en la información de administración <!--1357930--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Transición de la carga de trabajo de la configuración del dispositivo a Intune mediante la administración conjunta <!--1357903--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#transition-device-configuration-workload-to-intune-using-co-management)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Habilitación de los puntos de distribución para usar el control de congestión de red <!--1358112--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#enable-distribution-points-to-use-network-congestion-control)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Panel de administración en la nube <!--1358461--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-management-dashboard)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | CMPivot <!--1358456--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmpivot)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Comunicaciones de cliente seguras mejoradas <!--1356889,1358228,1358460--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improved-secure-client-communications)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Mejoras para habilitar la compatibilidad de actualización de software de terceros <!--1357605--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Mejoras en la secuencia de tareas de actualización local de Windows 10 <!--1358500--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-windows-10-in-place-upgrade-task-sequence)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Herramienta CMTrace instalada con el cliente <!--1357971--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmtrace-installed-with-client)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Mejora en la consola de Configuration Manager <!--1358202--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-the-configuration-manager-console)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Mejoras en los comentarios de la consola <!--1357542--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-console-feedback)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Mejoras en los puntos de distribución habilitados con PXE <!--1357580--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-pxe-enabled-distribution-points)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Mejora en el inventario de hardware para los valores enteros grandes <!--1357880--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-hardware-inventory-for-large-integer-values)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Mejora en el mantenimiento de WSUS <!--1357898--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-wsus-maintenance)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Mejora en la compatibilidad con certificados CNG <!--1357314--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-support-for-cng-certificates)  | [Versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
 
-  
+
 
 ## <a name="features-in-previous-technical-previews"></a>Características de las versiones de Technical Preview anteriores
 

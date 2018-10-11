@@ -2,7 +2,7 @@
 title: Novedades de la versión 1806
 titleSuffix: Configuration Manager
 description: Obtenga detalles sobre los cambios y las nuevas funciones incorporados en la versión 1806 de la rama actual de Configuration Manager.
-ms.date: 08/29/2018
+ms.date: 09/19/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13dbffd442cfbe0ced30d46b9a93dd03418202c9
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 3b5cb217b9351f5d2491070b447d0a96efe0aa29
+ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893848"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46533786"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Novedades de la versión 1806 de la rama actual de Configuration Manager
 
@@ -29,6 +29,8 @@ Revise siempre la lista de comprobación más reciente para instalar esta actual
 > En este artículo se indican todas las características importantes de esta versión. Pero no todas las secciones están vinculadas aún a contenido actualizado con información adicional sobre las nuevas características. Vuelva a esta página con regularidad en busca de actualizaciones. Los cambios se indican mediante la etiqueta ***[Actualizado]***. Esta nota se quita una vez que se termina el contenido.  
 
 Además de nuevas características, esta versión también incluye cambios adicionales como, por ejemplo, correcciones de errores. Para más información, vea [Resumen de cambios en la rama actual de System Center Configuration Manager, versión 1806](https://support.microsoft.com/help/4459701).
+
+Para más información sobre los cambios en los cmdlets de Windows PowerShell para Configuration Manager, vea [PowerShell 1806 Release Notes](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps) (Notas de la versión de PowerShell 1806).
 
 <!--
 The following additional updates to this release are also now available:
@@ -141,6 +143,13 @@ Para obtener más información, vea [Partial download support](/sccm/core/plan-d
 Para más información, vea [Opciones de grupo de límites para descargas del mismo nivel](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
 
+### <a name="improvement-to-peer-cache-source-location-status"></a>Mejora del estado de ubicación de origen de caché del mismo nivel
+<!--SCCMDocs issue 850-->
+ ***[Actualizado]*** Configuration Manager es más eficaz en determinar si un origen de caché del mismo nivel se ha movido a otra ubicación. Este comportamiento garantiza que el punto de administración lo ofrezca como un origen de contenido a los clientes en la nueva ubicación y no en la ubicación antigua. Si usa la característica de caché del mismo nivel con orígenes de caché del mismo nivel en itinerancia, después de actualizar el sitio a la versión 1806, actualice también todos los orígenes de caché del mismo nivel a la última versión de cliente. El punto de administración no incluye estos orígenes de caché del mismo nivel en la lista de ubicaciones de contenido hasta que se actualicen al menos a la versión 1806.
+
+Para más información, vea [Requisitos](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements).
+
+
 
 <!-- ## Migration  -->
 
@@ -177,9 +186,14 @@ Para obtener más información, vea [CMTrace](/sccm/core/support/cmtrace).
 
 
 ### <a name="cloud-management-dashboard"></a>Panel de administración en la nube
-<!--1358461--> El nuevo panel de administración en la nube proporciona una vista centralizada para el uso de Cloud Management Gateway (CMG). Cuando el sitio está incorporado con Azure AD, también muestra los datos sobre los usuarios en la nube y los dispositivos. En la consola de Configuration Manager, vaya al área de trabajo **Supervisión**. Seleccione el nodo **Administración en la nube** y vea los iconos del panel.  
+<!--1358461-->
+ ***[Actualizado]*** El nuevo panel de administración en la nube proporciona una vista centralizada para el uso de Cloud Management Gateway (CMG). Cuando el sitio está incorporado con Azure AD, también muestra los datos sobre los usuarios en la nube y los dispositivos.   
 
-Esta característica también incluye el **analizador de conexión de CMG** para la comprobación en tiempo real que ayuda a solucionar problemas. La utilidad en la consola comprueba el estado actual del servicio y el canal de comunicación a través del punto de conexión de CMG a todos los puntos de administración que permiten el tráfico CMG. En la consola de Configuration Manager, vaya al área de trabajo **Administración**. Expanda **Cloud Services** y seleccione **Cloud Management Gateway**. Seleccione la instancia de CMG de destino y luego haga clic en **Analizador de conexión** en la cinta de opciones.
+Esta característica también incluye el **analizador de conexión de CMG** para la comprobación en tiempo real que ayuda a solucionar problemas. La utilidad en la consola comprueba el estado actual del servicio y el canal de comunicación a través del punto de conexión de CMG a todos los puntos de administración que permiten el tráfico CMG. 
+
+Para más información, vea estas secciones del artículo [Supervisar la puerta de enlace de administración en la nube en Configuration Manager](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway):  
+- [Cloud management dashboard](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#cloud-management-dashboard) (Panel de administración en la nube)  
+- [Connection analyzer](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#connection-analyzer) (Analizador de conexión)  
 
 
 ### <a name="improvements-to-cloud-management-gateway"></a>Mejoras en Cloud Management Gateway
@@ -187,26 +201,16 @@ Esta característica también incluye el **analizador de conexión de CMG** para
 La versión 1806 incluye las mejoras siguientes en Cloud Management Gateway (CMG):
 
 #### <a name="simplified-client-bootstrap-command-line"></a>Línea de comandos de arranque de cliente simplificada
-<!--1358215--> Al instalar el cliente de Configuration Manager en Internet a través de CMG, la línea de comandos ahora necesita menos propiedades. Esta mejora reduce el tamaño de la línea de comandos usada en Microsoft Intune al prepararse para la administración conjunta. 
+<!--1358215-->
+ ***[Actualizado]*** Al instalar el cliente de Configuration Manager en Internet a través de CMG, la línea de comandos ahora necesita menos propiedades. Esta mejora reduce el tamaño de la línea de comandos usada en Microsoft Intune al prepararse para la administración conjunta. 
 
-Las siguientes propiedades de línea de comandos son necesarias en todos los escenarios:
-  - CCMHOSTNAME  
-  - SMSSITECODE  
-
-Las propiedades siguientes son necesarias al usar Azure AD para la autenticación de cliente en lugar de certificados de autenticación de cliente basada en PKI:
-  - AADCLIENTAPPID  
-  - AADRESOURCEURI  
-
-La siguiente propiedad es obligatoria si el cliente volverá a la intranet:
-  - SMSMP  
-
-En el ejemplo siguiente se incluyen todas las propiedades anteriores:   
-`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`
-
-<!--For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).-->
+Para obtener más información, vea [Preparar dispositivos de Windows 10 para la administración conjunta](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).
 
 #### <a name="download-content-from-a-cmg"></a>Descargar contenido desde un CMG
-<!--1358651--> Anteriormente, era necesario implementar un punto de distribución de nube y CMG como roles independientes. Una instancia de CMG ahora también puede servir contenido a los clientes. Esta funcionalidad reduce los certificados necesarios y el costo de máquinas virtuales de Azure. Para activar esta característica, habilite la nueva opción **Allow CMG to function as a cloud distribution point and serve content from Azure storage** (Permitir que CMG funcione como un punto de distribución de nube y servir el contenido desde el almacenamiento de Azure) en la pestaña **Settings** (Configuración) de las propiedades de CMG. 
+<!--1358651-->
+ ***[Actualizado]*** Antes, era necesario implementar un punto de distribución de nube y CMG como roles independientes. Una instancia de CMG ahora también puede servir contenido a los clientes. Esta funcionalidad reduce los certificados necesarios y el costo de máquinas virtuales de Azure. 
+
+Para obtener más información, vea [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg) (Modificar una instancia de CMG).
 
 #### <a name="trusted-root-certificate-isnt-required-with-azure-ad"></a>El certificado raíz de confianza no es necesario con Azure AD
 <!--503899--> Para crear una instancia de CMG ya no es necesario proporcionar un [certificado raíz de confianza](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients) en la página Configuración. Este certificado no es necesario cuando se usa Azure Active Directory (Azure AD) para la autenticación de cliente, pero solía ser necesario en el asistente. Si usa certificados de autenticación de cliente PKI, entonces todavía debe agregar un certificado raíz de confianza a la CMG.

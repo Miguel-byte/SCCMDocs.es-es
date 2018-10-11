@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: afb32cd827a223ca9f317f2ddc96d9b176858d2d
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: ef8bfead4bb73871f990a455aef87971413701ba
+ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385344"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601116"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Instalación de un punto de distribución de nube para Configuration Manager
 
@@ -224,17 +224,22 @@ En un ciclo de una hora, el sitio primario que supervisa el punto de distribuci�
 
 La información general sobre el punto de distribución se puede ver en el nodo **Puntos de distribución de nube** en **Cloud Services** en el área de trabajo **Administración** de la consola de Configuration Manager. Seleccione un punto de distribución y haga clic en **Propiedades** para ver más detalles.  
 
-Al modificar las propiedades de un punto de distribución de nube, se pueden editar los valores siguientes:  
+Al modificar las propiedades de un punto de distribución en la nube, las pestañas siguientes incluyen opciones de configuración que se pueden editar:  
 
-- Pestaña **Configuración**:  
+#### <a name="settings"></a>Configuración  
 
-    - **Descripción**  
+- **Descripción**  
 
-    - **Archivo de certificado**: antes de que expire el certificado de autenticación de servidor, emita un certificado nuevo con el mismo nombre común. Después, agregue aquí el certificado nuevo para que el servicio empiece a usarlo. Si el certificado expira, los clientes no confiarán ni usarán el servicio.  
+- **Archivo de certificado**: antes de que expire el certificado de autenticación de servidor, emita un certificado nuevo con el mismo nombre común. Después, agregue aquí el certificado nuevo para que el servicio empiece a usarlo. Si el certificado expira, los clientes no confiarán ni usarán el servicio.  
 
-- Pestaña **Alertas**: ajuste los umbrales de datos para las alertas de almacenamiento y transferencia mensual.  
+#### <a name="alerts"></a>Alertas
+Ajuste los umbrales de datos para las alertas de almacenamiento y transferencia mensual.  
 
-- Pestaña **Contenido**: administre el contenido igual que en un punto de distribución local.  
+#### <a name="content"></a>Contenido
+Administre el contenido igual que en un punto de distribución local.  
+
+
+### <a name="redeploy-the-service"></a>Volver a implementar el servicio
 
 Los cambios más importantes, como las configuraciones siguientes, requieren volver a implementar el servicio:
 - Método de implementación clásica en Azure Resource Manager
@@ -260,6 +265,11 @@ A partir de la versión 1806, si tiene un punto de distribución de nube existen
     2. Distribuya el contenido del paquete de software necesario para el nuevo punto de distribución de nube.  
 
     3. Elimine el punto de distribución de nube clásico.
+
+> [!Tip]  
+> Para determinar el modelo de implementación actual de un punto de distribución en la nube:<!--SCCMDocs issue #611-->  
+> 1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Cloud Services** y seleccione el nodo de **Puntos de distribución en la nube**.  
+> 2. Añada el atributo **Modelo de implementación** como una columna a la vista de lista. Para implementar Resource Manager, este atributo es **Azure Resource Manager**.  
 
 
 ### <a name="stop-or-start-the-cloud-service-on-demand"></a>Detener o iniciar el servicio de nube a petición

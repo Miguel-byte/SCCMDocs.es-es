@@ -2,7 +2,7 @@
 title: Punto de distribución de nube
 titleSuffix: Configuration Manager
 description: Planee y diseñe la distribución de contenido de software mediante Microsoft Azure con puntos de distribución de nube en Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 09/10/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c41fddef794049456529d9577275a21668717f5
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 79b17ba00274459401dc81035833163e75939be0
+ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385463"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601150"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Usar un punto de distribución de nube en Configuration Manager
 
@@ -305,6 +305,18 @@ El servicio Azure Storage admite 500 solicitudes por segundo para un único arch
 ##  <a name="bkmk_certs"></a> Certificados  
 
 Según el diseño de punto de distribución de nube, necesitará uno o más certificados digitales.  
+
+
+### <a name="general-information"></a>Información general
+<!--SCCMDocs issue #779--> Los certificados para puntos de distribución en la nube admiten las siguientes configuraciones:  
+
+- **Longitud de clave de bit 4096**`  
+
+- A partir de la versión 1710, es compatible con la **versión 3** de los certificados. Para obtener más información, consulte [Introducción a los certificados CNG](/sccm/core/plan-design/network/cng-certificates-overview).  
+
+- A partir de la versión 1802, siempre que configure Windows con la siguiente directiva: **Criptografía de sistema: uso de algoritmos que cumplan con el estándar federal de procesamiento de información para el cifrado, la síntesis del mensaje y la firma**  
+
+- A partir de la versión 1802, es compatible con **TLS 1.2**. Para más información, vea [Referencia técnica de controles criptográficos](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities).  
 
 
 ### <a name="azure-management-certificate"></a>Certificado de administración de Azure

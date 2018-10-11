@@ -3,18 +3,19 @@ title: Nueva versión 1710 | Microsoft Docs
 titleSuffix: Configuration Manager
 description: Conozca en detalle los cambios y las nuevas funciones introducidas en la versión 1710 de System Center Configuration Manager.
 ms.date: 1/08/2018
+ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e33a56a2d7fe395265d76c668db91492c410046f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 821c7f32799020948630cd873fead144ae21e39e
+ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337418"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229269"
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>Novedades de la versión 1710 de System Center Configuration Manager
 
@@ -63,8 +64,7 @@ Como en los dispositivos ahora se incluyen unidades de disco duro con tamaños e
 ## <a name="client-management"></a>Administración de cliente
 
 ### <a name="co-management-for-windows-10-devices"></a>Administración conjunta para dispositivos de Windows 10    
-<!-- 1350871 -->
-Las actualizaciones anteriores de Windows 10 ya permiten unir un dispositivo Windows 10 a Active Directory (AD) local y en la nube al mismo tiempo (Azure AD híbrido). A partir de la versión 1710 de Configuration Manager, la administración conjunta aprovecha esta mejora y permite administrar dispositivos de la versión 1709 de Windows 10 (también conocida con el nombre Fall Creators Update) de forma simultánea mediante Intune y Configuration Manager. Se trata de una solución que sirve de puente entre la administración tradicional y moderna, y proporciona un camino para realizar la transición con un enfoque por fases. Para más información, consulte [Administración conjunta para dispositivos de Windows 10](/sccm/core/clients/manage/co-management-overview).
+<!-- 1350871 --> Las actualizaciones anteriores de Windows 10 ya permiten unir un dispositivo Windows 10 a Active Directory (AD) local y en la nube al mismo tiempo (Azure AD híbrido). A partir de la versión 1710 de Configuration Manager, la administración conjunta aprovecha esta mejora y permite administrar dispositivos de la versión 1709 de Windows 10 (también conocida con el nombre Fall Creators Update) de forma simultánea mediante Intune y Configuration Manager. Se trata de una solución que sirve de puente entre la administración tradicional y moderna, y proporciona un camino para realizar la transición con un enfoque por fases. Para más información, consulte [Administración conjunta para dispositivos de Windows 10](/sccm/core/clients/manage/co-management-overview).
 
 ### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>Reinicio de equipos desde la consola de Configuration Manager <!-- 1356283 -->
 A partir de esta versión, puede usar la consola de Configuration Manager para identificar los dispositivos de cliente que requieren un reinicio y, después, usar una acción de notificación de cliente para reiniciarlos.
@@ -87,8 +87,7 @@ Estas son algunas de las mejoras:
 Para obtener más información sobre el uso de la funcionalidad de scripts de ejecución, consulte [Creación y ejecución de scripts](../../../apps/deploy-use/create-deploy-scripts.md).
 
 ### <a name="new-mobile-application-management-policy-settings"></a>Configuración de nueva directiva de administración de aplicaciones móviles
-<!-- 1324760 -->
-Las siguientes opciones se han agregado a la configuración de directiva de administración de aplicaciones móviles:
+<!-- 1324760 --> Las siguientes opciones se han agregado a la configuración de directiva de administración de aplicaciones móviles:
 - **Deshabilitar sincronización de contactos:** impide que la aplicación guarde los datos en la aplicación de contactos nativa del dispositivo.
 - **Deshabilitar la impresión:** impide que la aplicación imprima datos profesionales o educativos.
 
@@ -101,8 +100,7 @@ Para agregar un icono para su aplicación en el Centro de software, consulte el 
 
 ## <a name="operating-system-deployment"></a>Implementación de sistema operativo
  > [!TIP]   
- > <!-- 1354281 -->
- > A partir de la versión 1709 (también conocida como "Fall Creators Update") de Windows 10, Windows Media incluye varias ediciones. Al configurar una secuencia de tareas para usar un paquete de actualizaciones del sistema operativo o una imagen del sistema operativo, no olvide seleccionar una [edición que se pueda usar con Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
+ > <!-- 1354281 --> A partir de la versión 1709 (también conocida como "Fall Creators Update") de Windows 10, Windows Media incluye varias ediciones. Al configurar una secuencia de tareas para usar un paquete de actualizaciones del sistema operativo o una imagen del sistema operativo, no olvide seleccionar una [edición que se pueda usar con Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
 
 ### <a name="add-child-task-sequences-to-a-task-sequence"></a>Adición de secuencias de tareas secundarias a una secuencia de tareas
 <!-- 1261338 -->
@@ -112,8 +110,7 @@ Puede agregar un nuevo paso de secuencia de tareas que ejecute otra secuencia de
 Para obtener más información sobre la secuencia de tareas secundarias, lea la sección sobre [secuencias de tareas secundarias](/sccm/osd/understand/task-sequence-steps#child-task-sequence).
 
 ## <a name="software-center-customization"></a>Personalización de Centro de software
-<!-- 1351224 -->
-Puede agregar elementos de personalización de marca de empresa y especificar la visibilidad de las pestañas en el Centro de software. Puede agregar el nombre de compañía específico del Centro de software, establecer un tema de color para la configuración de Centro de software, establecer un logotipo de empresa y establecer las pestañas visibles para los dispositivos del cliente.
+<!-- 1351224 --> Puede agregar elementos de personalización de marca de empresa y especificar la visibilidad de las pestañas en el Centro de software. Puede agregar el nombre de compañía específico del Centro de software, establecer un tema de color para la configuración de Centro de software, establecer un logotipo de empresa y establecer las pestañas visibles para los dispositivos del cliente.
 
 Para obtener más información, consulte [Planear y configurar la administración de aplicaciones en Configuration Manager](/sccm/apps/plan-design/plan-for-and-configure-application-management).
 
@@ -201,8 +198,7 @@ También puede [crear e implementar directivas](/sccm/protect/deploy-use/create-
 También puede [crear e implementar directivas de Protección de aplicaciones de Windows Defender](/sccm/protect/deploy-use/create-deploy-application-guard-policy) con Configuration Manager Endpoint Protection.
 
 ### <a name="device-guard-policy-changes"></a>Cambios en la directiva de Device Guard
-<!-- 1355092 -->
-Se han realizado los siguientes tres cambios en relación con las directivas de Device Guard:
+<!-- 1355092 --> Se han realizado los siguientes tres cambios en relación con las directivas de Device Guard:
 
 - Las directivas de Device Guard se llaman ahora directivas de Windows Defender Application Control. Así, por ejemplo, el **Asistente para la creación de directivas de Device Guard** ahora se llama **Asistente para la creación de directivas de Windows Defender Application Control**.
 - Los dispositivos que utilizan Windows Fall Creators Update, versión 1709, para Windows no necesitan reiniciarse para aplicar las directivas de Windows Defender Application Control. Reiniciar sigue siendo la opción predeterminada, pero puede [desactivar los reinicios](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager).

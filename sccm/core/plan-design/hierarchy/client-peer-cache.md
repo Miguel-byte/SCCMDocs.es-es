@@ -2,7 +2,7 @@
 title: Caché del mismo nivel de cliente
 titleSuffix: Configuration Manager
 description: Use la caché del mismo nivel de cliente para las ubicaciones de origen al implementar contenido con Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 09/19/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c3dc6189f73b939f632581a8b50f05a72310111d
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: b1d4e2b7dca44db7ddc5976edde59a04bc3cb45e
+ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42756003"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46533769"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Caché del mismo nivel para clientes de Configuration Manager
 
@@ -59,6 +59,8 @@ Para habilitar la caché del mismo nivel, implemente la [configuración de clien
 
  -  Como es habitual, el cliente que busca el contenido selecciona un origen de la lista proporcionada. Después, el cliente intenta obtener el contenido.  
 
+A partir de la versión 1806, los grupos de límites incluyen valores de configuración adicionales para ofrecerle mayor control sobre la distribución de contenido en su entorno. Para más información, vea [Opciones de grupo de límites para descargas del mismo nivel](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).<!--1356193-->
+
 > [!NOTE]  
 > Si el cliente reserva el contenido en un grupo de límites vecino, el punto de administración no agrega los orígenes de caché del mismo nivel del grupo de límites vecino a la lista de ubicaciones de origen de contenido potenciales.  
 
@@ -98,9 +100,12 @@ Cuando el origen de caché del mismo nivel rechaza una solicitud del contenido, 
 
     - Cuando es necesario, el origen de caché del mismo nivel usa la cuenta de acceso a la red para autenticar las solicitudes de descarga de los elementos del mismo nivel. Esta cuenta solo requiere permisos de usuario de dominio para este propósito.  
 
-- El último envío de detección de latidos del cliente determina el límite actual de un origen de contenido de caché del mismo nivel. Es posible que un cliente que se desplace a otro grupo de límites siga siendo miembro de su grupo de límites anterior a efectos de la caché del mismo nivel. Este comportamiento da lugar a que se le ofrezca al cliente un origen de caché del mismo nivel que no está en su ubicación de red inmediata. No habilite los clientes móviles como origen de caché del mismo nivel.<!--SCCMDocs issue 641-->  
+- Con la versión 1802 y anteriores, el último envío de detección de latidos del cliente determina el límite actual de un origen de contenido de caché del mismo nivel. Es posible que un cliente que se desplace a otro grupo de límites siga siendo miembro de su grupo de límites anterior a efectos de la caché del mismo nivel. Este comportamiento da lugar a que se le ofrezca al cliente un origen de caché del mismo nivel que no está en su ubicación de red inmediata. No habilite los clientes móviles como origen de caché del mismo nivel.<!--SCCMDocs issue 641-->  
 
-- Antes de intentar la descarga de contenido, el cliente de caché del mismo nivel valida en primer lugar si el origen de caché del mismo nivel está en línea.<!--sms.498675--> Esta validación se produce a través del "canal rápido" para la notificación de cliente, que usa el puerto TCP 10123.<!--511673-->  
+    > [!Important]  
+    > A partir de la versión 1806, Configuration Manager es más eficaz a la hora de determinar si un origen de caché del mismo nivel se ha movido a otra ubicación. Este comportamiento garantiza que el punto de administración lo ofrezca como un origen de contenido a los clientes en la nueva ubicación y no en la ubicación antigua. Si usa la característica de caché del mismo nivel con orígenes de caché del mismo nivel en itinerancia, después de actualizar el sitio a la versión 1806, actualice también todos los orígenes de caché del mismo nivel a la última versión de cliente. El punto de administración no incluye estos orígenes de caché del mismo nivel en la lista de ubicaciones de contenido hasta que se actualicen al menos a la versión 1806.<!--SCCMDocs issue 850-->  
+
+- Antes de intentar la descarga de contenido, el punto de administración valida en primer lugar si el origen de caché del mismo nivel está en línea.<!--sms.498675--> Esta validación se produce a través del "canal rápido" para la notificación de cliente, que usa el puerto TCP 10123.<!--511673-->  
 
 > [!Note]  
 > Para aprovechar las nuevas características de Configuration Manager, primero actualice los clientes a la versión más reciente. Aunque la funcionalidad nueva aparece en la consola de Configuration Manager cuando se actualiza el sitio y la consola, la totalidad del escenario no es funcional hasta que la versión del cliente también es la más reciente.  

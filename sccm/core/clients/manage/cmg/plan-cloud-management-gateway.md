@@ -2,7 +2,7 @@
 title: Planear para Cloud Management Gateway
 titleSuffix: Configuration Manager
 description: Planee y diseñe Cloud Management Gateway (CMG) para simplificar la administración de clientes basados en Internet.
-ms.date: 07/30/2018
+ms.date: 09/10/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c60a269ade54c87c754fc9b5a3fb90deecd32f5
-ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
+ms.openlocfilehash: 9b25b7a5b7df42dc83bec18d38b44c7807e6dc1a
+ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44111168"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601133"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planificación de Cloud Management Gateway en Configuration Manager
 
@@ -56,7 +56,7 @@ Hay varios escenarios en los que CMG resulta beneficioso. Los escenarios siguien
 
 - Instalación del cliente de Configuration Manager en dispositivos Windows 10 a través de Internet. El uso de Azure AD permite que el dispositivo se autentique en CMG para el registro y la asignación de clientes. Puede instalar el cliente de forma manual o mediante otro método de distribución de software, como Microsoft Intune.  
 
-- Aprovisionamiento de dispositivos nuevos con administración conjunta. No se requiere CMG para la administración conjunta, pero ayuda a completar un escenario de un extremo a otro para dispositivos nuevos que implican Windows AutoPilot, Azure AD, Microsoft Intune y Configuration Manager.  
+- Aprovisionamiento de dispositivos nuevos con administración conjunta. No se necesita CMG para la administración conjunta, pero ayuda a completar un escenario de un extremo a otro para dispositivos nuevos que implican Windows AutoPilot, Azure AD, Microsoft Intune y Configuration Manager.  
 
 ### <a name="specific-use-cases"></a>Casos de uso específicos
 En estos escenarios podrían aplicarse los siguientes casos de uso de dispositivos específicos:
@@ -93,6 +93,8 @@ La implementación y el funcionamiento de CMG incluye los componentes siguientes
 - Los clientes basados en Internet usan **certificados PKI o Azure AD** para la identidad y la autenticación.  
 
 - Un [**punto de distribución en la nube**](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) proporciona contenido a los clientes basados en Internet según sea necesario.  
+
+    - A partir de la versión 1806, una CMG también puede servir contenido a los clientes. Esta funcionalidad reduce los certificados necesarios y el costo de máquinas virtuales de Azure. Para más información, vea [Modificar una instancia de CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).<!--1358651-->  
 
 
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
@@ -145,7 +147,7 @@ Del mismo modo, cuando los clientes de París se mueven hacia Internet, se comun
 
 - Una **suscripción de Azure** para hospedar CMG.  
 
-    - Es necesario que un **administrador de Azure** participe en la creación inicial de determinados componentes, en función del diseño. Este rol no requiere permisos en Configuration Manager.  
+    - Es necesario que un **administrador de Azure** participe en la creación inicial de determinados componentes, en función del diseño. Este rol no necesita permisos en Configuration Manager.  
 
 - Al menos un servidor local de Windows para hospedar el **punto de conexión de CMG**. Puede colocalizar este rol con otros roles de sistema de sitio de Configuration Manager.  
 
@@ -178,7 +180,7 @@ Del mismo modo, cuando los clientes de París se mueven hacia Internet, se comun
 
 - Los puntos de actualización de software que usan un equilibrador de carga de red no funcionan con CMG. <!--505311-->  
 
-- A partir de la versión 1802, las implementaciones de CMG que usan Azure Resource Model no permiten la compatibilidad con proveedores de servicios en la nube (CSP) de Azure. La implementación de CMG con Azure Resource Manager continúa usando el servicio en la nube clásico, que no es compatible con los proveedores de servicios en la nube. Para obtener más información, vea [Servicios de Azure disponibles en el programa CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+- A partir de la versión 1802, las implementaciones de CMG que usan Azure Resource Model no permiten la compatibilidad con proveedores de servicios en la nube (CSP) de Azure. La implementación de CMG con Azure Resource Manager sigue usando el servicio en la nube clásico, que no es compatible con los proveedores de servicios en la nube. Para obtener más información, vea [Servicios de Azure disponibles en el programa CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
 
 ### <a name="support-for-configuration-manager-features"></a>Compatibilidad con características de Configuration Manager
@@ -193,10 +195,10 @@ En la tabla siguiente se muestra la compatibilidad de CMG con características d
 | Estado de cliente y notificaciones     | ![Compatible.](media/green_check.png) |
 | Ejecutar scripts     | ![Compatible.](media/green_check.png) |
 | Configuración de cumplimiento     | ![Compatible.](media/green_check.png) |
-| Instalación de cliente</br>(con integración de Azure AD)     | ![Compatible.](media/green_check.png)  (1706) |
+| Instalación de cliente<br>(con integración de Azure AD)     | ![Compatible.](media/green_check.png)  (1706) |
 | Distribución de software (dirigida al dispositivo)     | ![Compatible.](media/green_check.png) |
-| Distribución de software (dirigida al usuario, obligatorio)</br>(con integración de Azure AD)     | ![Compatible.](media/green_check.png)  (1710) |
-| Distribución de software (dirigida al usuario, disponible)</br>([todos los requisitos](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Compatible.](media/green_check.png)  (1802) |
+| Distribución de software (dirigida al usuario, obligatorio)<br>(con integración de Azure AD)     | ![Compatible.](media/green_check.png)  (1710) |
+| Distribución de software (dirigida al usuario, disponible)<br>([todos los requisitos](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Compatible.](media/green_check.png)  (1802) |
 | Secuencia de tareas de actualización local de Windows 10     | ![Compatible.](media/green_check.png)  (1802) |
 | CMPivot     | ![Compatible.](media/green_check.png)  (1806) |
 | Cualquier otro escenario de secuencia de tareas     | ![No compatible](media/Red_X.png) |
@@ -268,6 +270,9 @@ CMG usa los siguientes componentes de Azure, que conllevan cargos en la cuenta d
 
 - Para obtener más información, vea el costo de la utilización de [puntos de distribución en la nube](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_cost).  
 
+- A partir de la versión 1806, una CMG también puede servir contenido a los clientes. Esta funcionalidad reduce los certificados necesarios y el costo de máquinas virtuales de Azure. Para más información, vea [Modificar una instancia de CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).<!--1358651-->  
+
+
 #### <a name="other-costs"></a>Otros costos
 
 - Todos los servicios en la nube tienen una dirección IP dinámica. Cada instancia de CMG diferente usa una nueva dirección IP dinámica. El hecho de agregar máquinas virtuales adicionales por CMG no aumenta estas direcciones.  
@@ -323,8 +328,8 @@ En esta tabla se enumeran los protocolos y los puertos de red requeridos. El *cl
 | Punto de conexión de CMG     | HTTPS | 443        | Servicio de CMG       | Reserva para crear el canal de CMG para una sola instancia de máquina virtual<sup>2</sup> |
 | Punto de conexión de CMG     |  HTTPS   | 10124-10139     | Servicio de CMG       | Reserva para crear el canal de CMG para dos o más instancias de máquina virtual<sup>3</sup> |
 | Cliente     |  HTTPS | 443         | CMG        | Comunicación de cliente general |
-| Punto de conexión de CMG      | HTTPS o HTTP | 443 o 80         | Punto de administración</br>(versión 1706 o 1710) | Para el tráfico local, el puerto depende de la configuración del punto de administración |
-| Punto de conexión de CMG      | HTTPS | 443      | Punto de administración</br>(versión 1802) | El tráfico local debe ser HTTPS |
+| Punto de conexión de CMG      | HTTPS o HTTP | 443 o 80         | Punto de administración<br>(versión 1706 o 1710) | Para el tráfico local, el puerto depende de la configuración del punto de administración |
+| Punto de conexión de CMG      | HTTPS | 443      | Punto de administración<br>(versión 1802) | El tráfico local debe ser HTTPS |
 | Punto de conexión de CMG      | HTTPS o HTTP | 443 o 80         | Punto de actualización de software | Para el tráfico local, el puerto depende de la configuración del punto de actualización de software |
 
 <sup>1</sup> El punto de conexión de CMG primero intenta establecer una conexión TCP-TLS de larga duración con cada instancia de máquina virtual de CMG. Se conecta a la primera instancia de máquina virtual en el puerto 10140. La segunda instancia de máquina virtual usa el puerto 10141, hasta la decimosexta en el puerto 10155. Una conexión TCP-TLS tiene un mejor rendimiento, pero no es compatible con un proxy de Internet. Si el punto de conexión de CMG no se puede conectar a través de TCP-TLS, recurre a HTTPS<sup>2</sup>.  
