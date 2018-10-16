@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a8f4d93c7bfa73b04ed2c760db17b27e8f1f6de2
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 5c3af900bae26262ba402ea258b8859ba07b999b
+ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385273"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48891221"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Aspectos básicos de la administración de contenido en Configuration Manager
 
@@ -146,11 +146,9 @@ Cuando un cliente necesita contenido, realiza una solicitud de ubicación de con
 1.  El punto de distribución en el mismo equipo que el cliente
 2.  Un origen del mismo nivel en la misma subred de red
 3.  Un punto de distribución en la misma subred de red
-4.  Un origen del mismo nivel en el mismo sitio de Active Directory
-5.  Un punto de distribución en el mismo sitio de Active Directory
-6.  Un origen del mismo nivel en el mismo grupo de límites
-7.  Un punto de distribución en el grupo de límites actual
-8.  Un punto de distribución en un grupo de límites próximo configurado como reserva
+4.  Un origen del mismo nivel en el mismo grupo de límites
+5.  Un punto de distribución en el grupo de límites actual
+6.  Un punto de distribución en un grupo de límites próximo configurado como reserva
 9.  Un punto de distribución en el grupo de límites del sitio predeterminado 
 10. El servicio en la nube de Windows Update
 11. Un punto de distribución accesible desde Internet
