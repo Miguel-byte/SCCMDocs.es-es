@@ -10,12 +10,12 @@ ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ba7adf52ce084d640bf53aef32678576d5828f5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 12dd7a4d806a82e3c55898e249d1caa2a6ffb508
+ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340220"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461297"
 ---
 # <a name="how-to-create-queries-in-system-center-configuration-manager"></a>Cómo crear consultas en System Center Configuration Manager
 
@@ -113,7 +113,7 @@ SMS_R_System.OperatingSystemNameandVersion like "%Workstation 6.1%"
 
 ### <a name="computers-with-a-specific-software-package-installed"></a>Equipos con un paquete de software específico instalado  
 
-Use la siguiente consulta para devolver el nombre NetBIOS y el nombre del paquete de software de todos los equipos que tienen instalado un paquete de software específico. En este ejemplo se muestran todos los equipos con una versión de Microsoft Visio instalada. Reemplace `%Visio%` por el paquete de software que quiere consultar.  
+Use la siguiente consulta para devolver el nombre NetBIOS y el nombre del paquete de software de todos los equipos que tienen instalado un paquete de software específico. En este ejemplo se muestran todos los equipos con una versión de Microsoft Visio instalada. Reemplace `Microsoft%Visio%` por el paquete de software que quiere consultar.  
 
 > [!TIP]  
 > Esta consulta busca el paquete de software con los nombres que se muestran en la lista de programas del Panel de Control de Windows.  
@@ -124,7 +124,7 @@ SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName from
 SMS_R_System inner join SMS_G_System_ADD_REMOVE_PROGRAMS on   
 SMS_G_System_ADD_REMOVE_PROGRAMS.ResourceId =   
 SMS_R_System.ResourceId where   
-SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "%Visio%"  
+SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "Microsoft%Visio%"  
 ```  
 
 ### <a name="computers-that-are-in-a-specific-active-directory-domain-services-organizational-unit"></a>Equipos que están en una unidad organizativa específica de Active Directory Domain Services
