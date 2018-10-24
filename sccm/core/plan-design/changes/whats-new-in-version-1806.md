@@ -395,7 +395,7 @@ Estas secuencias de tareas pueden ser para la implementación del sistema operat
 
 ### <a name="software-center-infrastructure-improvements"></a>Mejoras de la infraestructura del Centro de software
 <!--1358309-->
-*** [Actualizado]*** Los roles del catálogo de aplicaciones ya no son necesarios para mostrar las aplicaciones disponibles para el usuario en el Centro de software. Este cambio ayuda a reducir la infraestructura de servidor necesaria para entregar las aplicaciones a los usuarios. El Centro de software se basa ahora en el punto de administración para obtener esta información, lo que facilita el escalado de los entornos de mayor tamaño al asignarlos a [grupos de límites](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
+ ***[Actualizado]*** Los roles del catálogo de aplicaciones ya no son necesarios para mostrar las aplicaciones disponibles para el usuario en el Centro de software. Este cambio ayuda a reducir la infraestructura de servidor necesaria para entregar las aplicaciones a los usuarios. El Centro de software se basa ahora en el punto de administración para obtener esta información, lo que facilita el escalado de los entornos de mayor tamaño al asignarlos a [grupos de límites](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
 
 Para obtener más información, consulte [Configurar el centro de software](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
 

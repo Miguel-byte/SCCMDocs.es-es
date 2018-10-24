@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 939ab4b97a1a62eeae834873dd39e2f0d435527d
-ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
+ms.openlocfilehash: b31e0c84d0e3920024870361239e22bb90005ccb
+ms.sourcegitcommit: e7732dd67f19218cec576f70fe4ab44e2626b8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "42590104"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48045222"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Notas de la versión de Configuration Manager
 
@@ -82,9 +82,10 @@ Mueva el rol del punto de conexión de servicio a otro servidor.
 ## <a name="client-deployment-and-upgrade"></a>Actualizaciones e implementaciones de cliente
 
 ### <a name="azure-ad-enabled-clients-cant-communicate-with-management-point"></a>Los clientes habilitados para Azure AD no se pueden comunicar con el punto de administración
-<!--501089-->
+<!--501089-->  
 *Se aplica a: Configuration Manager, versión 1706*
-<!--also fixed in 1710 HFRU--> En el escenario [Instalación y asignación de clientes Windows 10 para Configuration Manager mediante la autenticación basada en Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure), se produce un error en la comunicación de cliente cuando el punto de administración habilitado para HTTPS usa credenciales de base de datos alternativas. 
+<!--also fixed in 1710 HFRU-->  
+En el escenario [Instalación y asignación de clientes Windows 10 para Configuration Manager mediante la autenticación basada en Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure), se produce un error en la comunicación de cliente cuando el punto de administración habilitado para HTTPS usa credenciales de base de datos alternativas. 
 
 #### <a name="workaround"></a>Solución alternativa
 Solucione este problema con una de las acciones siguientes:

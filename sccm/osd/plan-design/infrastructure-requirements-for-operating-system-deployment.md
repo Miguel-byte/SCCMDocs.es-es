@@ -2,7 +2,7 @@
 title: Requisitos de la infraestructura de OSD
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las dependencias de producto externas y los requisitos para la implementación de SO en Configuration Manager
-ms.date: 07/30/2018
+ms.date: 10/02/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4e54c6c7d8f827a17c69f4e166aeb4dccca4272f
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 03ec9c046e1b32f137777f15393b5d26b49e5520
+ms.sourcegitcommit: 265d38d55ca0db043e3a7131a56f123e1d98aa5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382925"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236164"
 ---
 # <a name="infrastructure-requirements-for-os-deployment-in-configuration-manager"></a>Requisitos de infraestructura para la implementación de SO en Configuration Manager
 
@@ -33,21 +33,6 @@ En esta sección se proporciona información sobre herramientas externas, kits d
 
 Windows Assessment and Deployment Kit (ADK) es un conjunto de herramientas y documentación que admiten la configuración e implementación de Windows. Configuration Manager usa Windows ADK para automatizar acciones como la instalación de Windows, la captura de imágenes y la migración de datos y perfiles de usuario.  
 
-Las características siguientes de Windows ADK deben estar instaladas en el servidor de sitio del sitio de nivel superior de la jerarquía, en el servidor de sitio de cada sitio primario de la jerarquía y en el servidor de sistema de sitio de proveedor de SMS:  
-
--   Herramienta de migración de estado de usuario (USMT) <sup>1</sup>  
-
--   Herramientas de implementación de Windows  
-
--   Entorno de preinstalación de Windows (Windows PE)  
-
-Para obtener una lista de las versiones de Windows 10 ADK que se pueden usar con otras versiones de Configuration Manager, vea [Compatibilidad con Windows 10](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk).
-
- <sup>1</sup> No se necesita USMT en el servidor de sistema de sitio de proveedor de SMS.  
-
-> [!NOTE]  
->  Debe instalar manualmente Windows ADK en cada servidor de sitio antes de instalar el sitio de Configuration Manager.  
-
 Vea los siguientes artículos para más información:  
 
 - [Escenarios de Windows ADK para Windows 10 para profesionales de TI](https://docs.microsoft.com/windows/deployment/windows-adk-scenarios-for-it-pros)  
@@ -55,6 +40,37 @@ Vea los siguientes artículos para más información:
 - [Descargar Windows ADK para Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install)  
 
 - [Compatibilidad con Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)  
+
+
+#### <a name="site-systems"></a>Sistemas de sitio
+Windows ADK es un requisito previo para estos servidores de sistemas de sitio:
+
+- El servidor de sitio del sitio de nivel superior en la jerarquía  
+
+- El servidor de sitio de cada sitio principal en la jerarquía  
+
+- Cada instancia del proveedor de SMS  
+
+
+> [!NOTE]  
+> Instale manualmente Windows ADK en cada servidor de sitio antes de instalar el sitio de Configuration Manager.  
+
+#### <a name="windows-adk-features"></a>Características de Windows ADK
+Instale estas características de Windows ADK:  
+
+-   Herramienta de migración de estado de usuario (USMT)  
+
+    > [!Note]  
+    > No se necesita USMT en el proveedor de SMS.
+
+-   Herramientas de implementación de Windows  
+
+-   Entorno de preinstalación de Windows (Windows PE)  
+
+    > [!Important]  
+    > A partir de Windows 10 versión 1809, Windows PE es un instalador independiente. Aparte de esto, no hay ninguna diferencia funcional.<!--SCCMDocs-pr issue 2908-->  
+
+Para obtener una lista de las versiones de Windows 10 ADK que se pueden usar con otras versiones de Configuration Manager, vea [Compatibilidad con Windows 10](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk).
 
 
 ### <a name="user-state-migration-tool-usmt"></a>Herramienta de migración de estado de usuario (USMT)  

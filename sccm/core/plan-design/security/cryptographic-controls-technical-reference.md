@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 884859f9968f6d7f72e0aef3448eab42a3751ec5
-ms.sourcegitcommit: a17be6f5e4659ba3f38c7732b43f3afafcb95171
+ms.openlocfilehash: aa92f935984b52458a3d7daf17a11077c519da84
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42906416"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862539"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Referencia técnica de controles criptográficos
 
@@ -120,7 +120,7 @@ System Center Configuration Manager usa la firma y el cifrado para ayudar a prot
  Si habilita el inventario de hardware para dispositivos móviles, Configuration Manager o Intune también hará un inventario de los certificados que están instalados en el dispositivo móvil.   
 
 ### <a name="operating-system-deployment-and-pki-certificates"></a>Implementación de sistema operativo y certificados PKI  
- Cuando usa Configuration Manager para implementar sistemas operativos y un punto de administración requiere conexiones de cliente HTTPS, el equipo cliente debe tener también un certificado para comunicarse con el punto de administración, aunque se encuentre en una fase de transición como el arranque desde medios de secuencia de tareas o un punto de administración habilitado con entorno PXE. Para que este escenario sea compatible, debe crear un certificado de autenticación del cliente PKI, exportarlo con la clave privada e importarlo en las propiedades del servidor de sitio, así como agregar el certificado de CA raíz de confianza del punto de administración.  
+ Cuando usa Configuration Manager para implementar sistemas operativos y un punto de administración requiere conexiones de cliente HTTPS, el equipo cliente debe tener también un certificado para comunicarse con el punto de administración, aunque se encuentre en una fase de transición como el arranque desde medios de secuencia de tareas o un punto de administración habilitado con entorno PXE. Para admitir este escenario, debe crear un certificado de autenticación del cliente PKI, exportarlo con la clave privada e importarlo en las propiedades del servidor de sitio, y también agregar el certificado de CA raíz de confianza del punto de administración.  
 
  Si se crea un medio de arranque, se importa el certificado de autenticación del cliente al crear el medio de arranque. Configure una contraseña en el medio de arranque para proteger la clave privada y demás información confidencial configurada en la secuencia de tareas. Todos los equipos que se arranquen desde el medio de arranque presentarán el mismo certificado al punto de administración según sea necesario para las funciones de cliente tales como la solicitud de una directiva de cliente.  
 

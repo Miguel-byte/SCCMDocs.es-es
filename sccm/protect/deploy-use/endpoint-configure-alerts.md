@@ -10,12 +10,12 @@ ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 514404119044bbf994eb88c5705bb5051281ee9f
-ms.sourcegitcommit: cea5152422a60e61601fdaeae1519300001fe6ee
+ms.openlocfilehash: 78afa39b173abc79c4ed1cadc79f41ab32150ecf
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39175228"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862369"
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Configurar alertas de Endpoint Protection en Configuration Manager
 
@@ -87,7 +87,7 @@ ms.locfileid: "39175228"
 
 ## <a name="alert-for-outdated-malware-client"></a>Alerta para clientes de malware obsoletos
 
-A partir de la versión 1702 de Configuration Manager, puede configurar una alerta para asegurarse de que los clientes de Endpoint Protection no están obsoletos. Ahora puede ver la **Versión de cliente antimalware** y el **Estado de implementación de Endpoint Protection** si va a **Activos y compatibilidad** > **Información general** > **Recopilaciones de dispositivos** > **Todos los clientes de escritorio y servidor**. Para comprobar una alerta, vea **Alertas** en el área de trabajo **Supervisión**. Si más de un 20 % de los clientes administrados ejecutan una versión expirada del software antimalware, la versión de cliente de antimalware está obsoleta y se muestra la alerta. Esta alerta no aparece en la pestaña **Supervisión** > **Información general**. Para actualizar los clientes antimalware expirados, habilite las actualizaciones de software para los clientes antimalware.
+A partir de la versión 1702 de Configuration Manager, puede configurar una alerta para asegurarse de que los clientes de Endpoint Protection no están obsoletos. Desde cualquier colección de dispositivos, ya puede agregar columnas a la lista para estos atributos: **Versión del cliente antimalware** y **Estado de la implementación de Endpoint Protection**. Por ejemplo, en la consola vaya a **Activos y compatibilidad** > **Información general** > **Recopilaciones de dispositivos** > **Todos los clientes de escritorio y servidor**. Haga clic con el botón derecho en el encabezado de columna y seleccione esas columnas para agregarlas. Para comprobar una alerta, vea **Alertas** en el área de trabajo **Supervisión**. Si más de un 20 % de los clientes administrados ejecutan una versión expirada del software antimalware, la versión de cliente de antimalware está obsoleta y se muestra la alerta. Esta alerta no aparece en la pestaña **Supervisión** > **Información general**. Para actualizar los clientes antimalware expirados, habilite las actualizaciones de software para los clientes antimalware.
 
 Para configurar el porcentaje en el que se genera la alerta, expanda **Supervisión** > **Alertas** > **Todas las alertas**, haga doble clic en **Clientes antimalware obsoletos** y modifique la opción **Generar alerta si el porcentaje de clientes administrados con una versión obsoleta del cliente antimalware es más de**.
 

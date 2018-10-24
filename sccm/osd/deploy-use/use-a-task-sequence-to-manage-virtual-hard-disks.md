@@ -10,20 +10,20 @@ ms.assetid: 0212b023-804a-4f84-b880-7a59cdb49c67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fc5af771d6ab15f4e26c22c5272abf2bb46de047
-ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
+ms.openlocfilehash: 49de1e2f94d1016f3c0139ccf534b85a718bf7e0
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448895"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862505"
 ---
 # <a name="use-a-task-sequence-to-manage-virtual-hard-disks-in-system-center-configuration-manager"></a>Utilizar una secuencia de tareas para administrar discos duros virtuales en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
-    > [!NOTE] 
-    >  Support for this feature was deprecated in version 1710. For more information, see [Removed and deprecated features for Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
+   > [!NOTE] 
+   >  La compatibilidad con esta característica está en desuso en la versión 1710. Para más información, vea [Características en desuso y eliminadas de Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
 
 En System Center Configuration Manager, puede administrar discos duros virtuales (VHD) e integrar los VHD que cree en el centro de datos desde la consola de Configuration Manager. De forma específica, puede crear y modificar un VHD, agregar aplicaciones y actualizaciones de software al VHD, y publicar el VHD en System Center Virtual Machine Manager (VMM) desde la consola de Configuration Manager.  
 

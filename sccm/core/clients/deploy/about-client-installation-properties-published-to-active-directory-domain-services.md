@@ -10,12 +10,12 @@ ms.assetid: 101d7d4d-92db-419d-b2ae-3c1c1dea68e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 585aa6ea6874ac6d6a5264b0f75d8dbcf39ddd0a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 46ede93e8366b4ae387f7e04b83dcb33ce854c5e
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334290"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862522"
 ---
 # <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>Acerca de las propiedades de instalación de cliente publicadas en Active Directory Domain Services
 
@@ -73,12 +73,13 @@ La instalación de cliente (CCMSetup) usa las propiedades publicadas en Active D
 ## <a name="client-push-installation"></a>Instalación de inserción de cliente  
  La instalación de inserción de cliente no usa Servicios de dominio de Active Directory para obtener las propiedades de instalación.  
 
- En vez de ello, puede especificar propiedades de instalación de cliente en la pestaña **Cliente** del cuadro de diálogo **Propiedades de instalación de inserción de cliente**. Estas opciones y la configuración de sitio relacionada con el cliente se almacenan en un archivo que el cliente lee durante la instalación de cliente.  
+ En vez de ello, puede especificar las propiedades de instalación de cliente en la pestaña **Propiedades de instalación** del cuadro de diálogo **Propiedades de instalación de inserción de cliente**. Estas opciones y la configuración de sitio relacionada con el cliente se almacenan en un archivo que el cliente lee durante la instalación de cliente.  
 
 > [!NOTE]  
->  No es necesario que especifique ninguna propiedad de CCMSetup para la instalación de inserción de cliente, el punto de estado de reserva o la clave raíz confiable en la pestaña **Cliente** . Estos valores se suministran automáticamente a los clientes cuando se instalan mediante la instalación de inserción de cliente.  
+>  No es necesario que especifique ninguna propiedad de CCMSetup para la instalación de inserción de cliente, el punto de estado de reserva o la clave raíz confiable en la pestaña **Propiedades de instalación**. Estos valores se suministran automáticamente a los clientes cuando se instalan mediante la instalación de inserción de cliente.
+Además de las propiedades de Client.msi, CCMSetup admite estos parámetros: forcereboot, /skipprereq, /logon, /BITSPriority, /downloadtimeout, /forceinstall
 
- Las propiedades especificadas en la pestaña **Cliente** se publican en Active Directory Domain Services si el sitio se publica ahí. Las instalaciones de cliente leen esta configuración cuando se ejecuta CCMSetup sin propiedades de instalación.  
+ Las propiedades especificadas en la pestaña **Propiedades de instalación** se publican en Active Directory Domain Services si el sitio se publica ahí. Las instalaciones de cliente leen esta configuración cuando se ejecuta CCMSetup sin propiedades de instalación.  
 
 ## <a name="software-update-point-based-installation"></a>Instalación basada en el punto de actualización de software  
  El método de instalación basada en el punto de actualización de software no es compatible con la incorporación de propiedades de instalación en la línea de comandos de CCMSetup.  

@@ -10,12 +10,12 @@ ms.assetid: 5e5d854c-9cc1-4dd8-b33f-0fcac675b395
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3750e91d96c1ca3eda1ad0ca2fc67b5f627c7a03
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2ccc918bf5f15798c201ed491dd3824bb20b2ebb
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353559"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862573"
 ---
 # <a name="device-guard-management-with-configuration-manager"></a>Administración de Device Guard con Configuration Manager
 
@@ -148,7 +148,7 @@ En esta situación, el software podría seguir teniendo permiso para ejecutarse 
 - No implemente una directiva con **Cumplimiento habilitado** y, a continuación, una directiva con **Solo auditoría** en el mismo dispositivo. Esta configuración puede provocar la ejecución de software que no es de confianza.
 - Cuando se usa Configuration Manager para habilitar Control de aplicaciones de Windows Defender en los equipos cliente, la directiva no evita que los usuarios con derechos de administrador local sorteen las directivas de Control de aplicaciones o ejecuten de otro modo software que no es de confianza. 
 - La única manera de evitar que los usuarios con derechos de administrador local deshabiliten el Control de aplicaciones consiste en implementar una directiva binaria firmada. Esta implementación es posible a través de la directiva de grupo, pero no se admite actualmente en Configuration Manager.
-- La configuración de Configuration Manager como un instalador administrado en los equipos cliente utiliza la directiva de AppLocker. AppLocker solo se usa para identificar los instaladores administrados y todo el cumplimiento tiene lugar en la aplicación. 
+- La configuración de Configuration Manager como un instalador administrado en los equipos cliente utiliza la directiva de AppLocker. AppLocker solo se usa para identificar los instaladores administrados y todo el cumplimiento tiene lugar con Control de aplicaciones de Windows Defender. 
 
 
 

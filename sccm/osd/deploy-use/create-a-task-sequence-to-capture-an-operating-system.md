@@ -10,12 +10,12 @@ ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1ef2883bfeb61df55ff045b76e9bc45a11b4da2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 34536114e6cb1be8f256da385b3d69d07c17f676
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352176"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862488"
 ---
 # <a name="create-a-task-sequence-to-capture-an-operating-system-in-system-center-configuration-manager"></a>Crear una secuencia de tareas para capturar un sistema operativo en System Center Configuration Manager
 
@@ -217,7 +217,7 @@ Cuando use una secuencia de tareas para implementar un sistema operativo en un e
 |Aplicar sistema operativo|Utilice este paso de secuencia de tareas para instalar una imagen de sistema operativo especificada en el equipo de destino. Este paso aplica todas las imágenes de volumen contenidas en el archivo WIM al volumen de disco secuencial correspondiente en el equipo de destino después de eliminar primero todos los archivos en ese volumen (con la excepción de los archivos de control específicos de Configuration Manager).|  
 |Aplicar configuraciones de Windows|Utilice este paso de secuencia de tareas para definir la información de configuración de valores de Windows para el equipo de destino.|  
 |Aplicar configuración de red|Utilice este paso de secuencia de tareas para especificar la información de configuración de red o grupo de trabajo del equipo de destino.|  
-|Aplicar controladores del dispositivo|Utilice este paso de secuencia de tareas para comparar e instalar controladores como parte de la implementación del sistema operativo. Para permitir que el Programa de instalación de Windows busque todas las categorías de controladores existentes, seleccione **Considerar controladores de todas las categorías** o, para limitar las categorías de controlador en las que busca el Programa de instalación de Windows, seleccione **Limitar la coincidencia de controladores a los controladores de las categorías seleccionadas**.<br /><br /> Este paso usa la variable de secuencia de tareas **_SMSTSMediaType** de solo lectura. Si el valor asociado no es igual a **FullMedia** , se ejecutará este paso de secuencia de tareas.|  
+|Aplicar controladores del dispositivo|Siga este paso de secuencia de tareas para comparar e instalar controladores como parte de la implementación del sistema operativo. Para permitir que el Programa de instalación de Windows busque todas las categorías de controladores existentes, seleccione **Considerar controladores de todas las categorías** o, para limitar las categorías de controlador en las que busca el Programa de instalación de Windows, seleccione **Limitar la coincidencia de controladores a los controladores de las categorías seleccionadas**.<br /><br /> Este paso usa la variable de secuencia de tareas **_SMSTSMediaType** de solo lectura. Si el valor asociado no es igual a **FullMedia** , se ejecutará este paso de secuencia de tareas.|  
 |Instalar Windows y Configuration Manager|Use este paso de secuencia de tareas para instalar el software cliente de Configuration Manager. Configuration Manager instala y registra el GUID del cliente de Configuration Manager. Puede asignar los parámetros de instalación necesarios en la ventana **Propiedades de instalación** .|  
 |Instalar actualizaciones|Utilice este paso de secuencia de tareas para especificar cómo se instalan las actualizaciones de software en el equipo de destino. No se evalúa si hay actualizaciones de software aplicables al equipo de destino hasta que se ejecuta este paso de secuencia de tareas. En ese momento, se evalúa si existen actualizaciones de software para el equipo de destino similares a las de cualquier otro cliente administrado de Configuration Manager.<br /><br /> Este paso usa la variable de secuencia de tareas **_SMSTSMediaType** de solo lectura. Si el valor asociado no es igual a **FullMedia** , se ejecutará este paso de secuencia de tareas.|  
 |Capturar el equipo de referencia **(nuevo grupo de secuencia de tareas)**|Crear otro grupo de secuencia de tareas. Este grupo contiene los pasos necesarios para preparar y capturar un equipo de referencia.|  

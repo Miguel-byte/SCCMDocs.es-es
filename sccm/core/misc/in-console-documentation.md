@@ -1,6 +1,6 @@
 ---
 title: Documentación en consola
-ms.date: 05/03/2018
+ms.date: 09/05/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -9,16 +9,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: 0535e36c2531667e93507a149339fe8d85dc1398
-ms.sourcegitcommit: 7812956f93f95c81b4364230aea363559b79ea9f
+ms.openlocfilehash: 12b10fe6c532a690dcb8fd1d3a69d742687db06c
+ms.sourcegitcommit: 5def8b0ca72daad99fe8901af232bf17f35da55d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2018
-ms.locfileid: "33673456"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793814"
 ---
 <!-- 
 feature 1357546
-This page displays in-console, under the Support workspace, Documentation node. 
+This page displays in-console, under the Community workspace, Documentation node. 
 -->
 
 
@@ -34,50 +34,52 @@ Vea los siguientes artículos para más información:
 ## <a name="recommended"></a>Recomendado 
 Lista mantenida manualmente de artículos importantes.
 
-- [Administración conjunta para dispositivos Windows 10](/sccm/core/clients/manage/co-management-overview)
+- [Administración conjunta para dispositivos Windows 10](/sccm/core/clients/manage/co-management-overview)  
+- [CMPivot](/sccm/core/servers/manage/cmpivot)  
+- [Crear y ejecutar scripts de PowerShell](/sccm/apps/deploy-use/create-deploy-scripts)  
+- [Implementaciones por fases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
+- [Administrar las actualizaciones de Office 365 ProPlus](/sccm/sum/deploy-use/manage-office-365-proplus-updates)  
 - [Aspectos básicos de la rama actual de Configuration Manager y Windows como servicio](/sccm/core/understand/configuration-manager-and-windows-as-service)
 - [Versiones de Technical Preview](/sccm/core/get-started/technical-preview)
 - [Uso de servicios en la nube para complementar la infraestructura local](/sccm/core/understand/use-cloud-services)
 - [Planificación de Cloud Management Gateway](/sccm/core/clients/manage/plan-cloud-management-gateway)
-- [Integración con Windows Update for Business en Windows 10](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)
 - [Migrar datos entre jerarquías](/sccm/core/migration/migrate-data-between-hierarchies)
-- [Preparación para la actualización](/sccm/core/clients/manage/upgrade/upgrade-analytics)
 
 
 
 ## <a name="trending"></a>Tendencias
-Los artículos más populares de abril de 2018.
+Los artículos más populares de agosto de 2018.
 
 | Vistas de página | Título | 
 | ----- | ----- | 
-| 23053 | [Nueva versión 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802) | 
-| 13785 | [Archivos de registro para la solución de problemas](/sccm/core/plan-design/hierarchy/log-files) | 
-| 8432 | [Actualizaciones y mantenimiento](/sccm/core/servers/manage/updates) | 
-| 8149 | [Nueva versión 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) | 
-| 7796 | [Compatibilidad con Windows 10](/sccm/core/plan-design/configs/support-for-windows-10) | 
-| 7312 | [Instalación de la consola](/sccm/core/servers/deploy/install/install-consoles) | 
-| 6978 | [Administrar las actualizaciones de Office 365 ProPlus](/sccm/sum/deploy-use/manage-office-365-proplus-updates) | 
-| 6160 | [Versiones de SQL Server admitidas](/sccm/core/plan-design/configs/support-for-sql-server-versions) | 
-| 6136 | [Hardware recomendado](/sccm/core/plan-design/configs/recommended-hardware) | 
-| 6110 | [Administración conjunta para dispositivos Windows 10](/sccm/core/clients/manage/co-management-overview) | 
+| 27627 | [Novedades de la versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |
+| 19364 | [Archivos de registro para la solución de problemas](/sccm/core/plan-design/hierarchy/log-files) |
+| 11113 | [Nueva versión 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802) |
+| 9419 | [Compatibilidad con Windows 10](/sccm/core/plan-design/configs/support-for-windows-10) |
+| 8688 | [Actualizaciones y mantenimiento](/sccm/core/servers/manage/updates) |
+| 8423 | [Instalación de la consola](/sccm/core/servers/deploy/install/install-consoles) |
+| 8408 | [Cómo implementar clientes en equipos Windows](/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 8271 | [Acerca de los parámetros y propiedades de instalación de cliente](/sccm/core/clients/deploy/about-client-installation-properties) |
+| 7751 | [Administrar las actualizaciones de Office 365 ProPlus](/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
+| 7705 | [Instalar y configurar puntos de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points) |
 
 
 
 ## <a name="recently-updated"></a>Actualizado recientemente
-Artículos revisados en el último mes.
+Artículos con una actualización reciente y significativa.
 
 | Últimas revisiones | Título | 
 |-----|-----|
-| 1 de mayo de 2018 | [Novedades de MDM híbrida](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) | 
-| 1 de mayo de 2018 | [Cliente de interoperabilidad extendida](/sccm/core/understand/interoperability-client) | 
-| 30 de abril de 2018 | [Búsqueda de ayuda](/sccm/core/understand/find-help) | 
-| 25 de abril de 2018 | [Versiones de Technical Preview](/sccm/core/get-started/technical-preview) | 
-| 25 de abril de 2018 | [Technical Preview 1804](/sccm/core/get-started/capabilities-in-technical-preview-1804) | 
-| 18 de abril de 2018 | [Variables integradas de secuencia de tareas](/sccm/osd/understand/task-sequence-built-in-variables) | 
-| 18 de abril de 2018 | [Notas de la versión](/sccm/core/servers/deploy/install/release-notes) | 
-| 17 de abril de 2018 | [Dispositivos y clientes compatibles](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices) | 
-| 17 de abril de 2018 | [Servidores de sistema de sitio admitidos](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers) | 
-| 12 de abril de 2018 | [Novedades del SDK](/sccm/develop/core/changes/what-s-new-in-the-system-center-configuration-manager-sdk) | 
+| 4 de septiembre de 2018 | [Versiones de Technical Preview](/sccm/core/get-started/technical-preview) |
+| 4 de septiembre de 2018 | [Technical preview 1809](/sccm/core/get-started/capabilities-in-technical-preview-1809) |
+| 30 de agosto de 2018 | [Configurar métodos de detección](/sccm/core/servers/deploy/configure/configure-discovery-methods) |
+| 29 de agosto de 2018 | [Caché del mismo nivel para clientes](/sccm/core/plan-design/hierarchy/client-peer-cache) |
+| 29 de agosto de 2018 | [Configuración de grupos de límites](/sccm/core/servers/deploy/configure/boundary-groups) |
+| 29 de agosto de 2018 | [Novedades de MDM híbrida](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) |
+| 29 de agosto de 2018 | [Novedades de la versión 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |
+| 24 de agosto de 2018 | [Sitios de copia de seguridad](/sccm/core/servers/manage/backup-and-recovery) |
+| 24 de agosto de 2018 | [Administrador de conversión de paquetes](/sccm/apps/pcm/package-conversion-manager) |
+| 23 de agosto de 2018 | [Comprobaciones de requisitos previos](/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
 
 
 
@@ -94,12 +96,13 @@ Tutoriales guiados que le ayudarán a solucionar problemas de características y
 
 
 ## <a name="new-and-updated-support-articles"></a>Artículos de soporte técnico nuevos y actualizados
-Artículos de soporte técnico que son nuevos o se han actualizado en marzo o abril de 2018.
+Artículos de soporte técnico que son nuevos o se han actualizado en septiembre de 2018.
 
-- [Los clientes de Configuration Manager no reciben datos de directiva después de recuperar un sitio primario de una CAS](https://support.microsoft.com/help/4095539)
-- [Paquete acumulativo de actualizaciones 2 de la rama actual de System Center Configuration Manager, versión 1710](https://support.microsoft.com/help/4086143)
-- [Error de inscripción automática de dispositivos administrados conjuntamente en la rama actual de System Center Configuration Manager, versión 1710](https://support.microsoft.com/help/4088970)
-- [Aviso de implementaciones de Windows 10 sobre la elección de idioma en Configuration Manager](https://support.microsoft.com/help/4088140)
+- [KB 4458169: Sugerencias para solucionar problemas de implementación de aplicaciones](https://support.microsoft.com/help/4458169)  
+- [KB 4346901: Software updates in Configuration Manager Current Branch deep dive - client operations](https://support.microsoft.com/help/4346901) [KB 4346901: Análisis detallado de las actualizaciones de software en la rama actual de Configuration Manager (operaciones de cliente)]  
+- [KB 4345216: [Corregido] Centro de software finaliza de forma inesperada en la rama actual de Configuration Manager, versión 1802](https://support.microsoft.com/help/4345216)  
+- [KB 4342419: [Corregido] El servicio de SMSExec.exe finaliza de forma inesperada al reasignar los puntos de distribución en la rama actual de Configuration Manager, versión 1802](https://support.microsoft.com/help/4342419)  
+- [KB 4339794: [Corregido] Los archivos de instalación rápida de Windows se descargan en el Administrador de configuración](https://support.microsoft.com/help/4339794)  
 
-> [!Tip]  
-> Para suscribirse a notificaciones de Atom o RSS de nuevos artículos de soporte técnico de Configuration Manager, vea [Support content updates](https://support.microsoft.com/help/4089498/) (Actualizaciones de contenido de soporte técnico) y seleccione **System Center Configuration Manager**.  
+
+Para suscribirse a notificaciones de Atom o RSS de nuevos artículos de soporte técnico de Configuration Manager, vea [Support content updates](https://support.microsoft.com/help/4089498/) (Actualizaciones de contenido de soporte técnico) y seleccione **System Center Configuration Manager**.  
