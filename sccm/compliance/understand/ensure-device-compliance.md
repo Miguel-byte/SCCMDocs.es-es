@@ -10,12 +10,12 @@ ms.assetid: 7568c9aa-b99e-4466-bfc8-0301aa376930
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 42b3925fa94ae1672e4241a3cddc66cdc1774aaf
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 081e485211e3bb5b2b0d8e6a9606c4037c29d4e3
+ms.sourcegitcommit: 2deba3d3aaba47a532273bcd377da8e60f7b1a68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333066"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169607"
 ---
 # <a name="ensure-device-compliance-with-system-center-configuration-manager"></a>Garantizar el cumplimiento de dispositivos con System Center Configuration Manager
 
@@ -44,7 +44,7 @@ La configuración de cumplimiento de System Center Configuration Manager le ofre
  [Introducción a la configuración de cumplimiento](../../compliance/get-started/get-started-with-compliance-settings.md)  
 
 ## <a name="plan-and-design"></a>Planear y diseñar  
- Antes de empezar a trabajar con la configuración de cumplimiento, asegúrese de implementar los requisitos previos necesarios que encontrará en este tema.  
+ Antes de empezar a trabajar con la configuración de cumplimiento, asegúrese de que ha implementado los requisitos previos necesarios que encontrará en este tema.  
 
  [Planear y configurar la configuración de cumplimiento](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)  
 
@@ -59,7 +59,7 @@ La configuración de cumplimiento de System Center Configuration Manager le ofre
  [Crear perfiles de conexión remota](/sccm/compliance/deploy-use/create-remote-connection-profiles)  
 
 ## <a name="user-data-and-profiles"></a>Perfiles y datos de usuario  
- El tipo de elemento de configuración contiene opciones que pueden administrar el redireccionamiento de carpetas, los archivos sin conexión y los perfiles móviles en equipos que ejecutan Windows 8 y posterior para los usuarios de la jerarquía.  
+ Este tipo de elemento de configuración contiene opciones que pueden administrar el redireccionamiento de carpetas, los archivos sin conexión y los perfiles móviles en equipos que ejecutan Windows 8 y posterior para los usuarios de la jerarquía.  
 
  [Crear elemento de configuración de perfiles y datos de usuario](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items)  
 

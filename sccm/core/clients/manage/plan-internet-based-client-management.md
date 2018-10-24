@@ -10,12 +10,12 @@ ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f31a221151239b6a72a750652731dca7e4557649
-ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
+ms.openlocfilehash: aaa033fb64c3b525eff3ca54537df6dcdf773502
+ms.sourcegitcommit: dfb2cb01c1608b848f2f2fee7c84500e7adcb7a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42584528"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49101269"
 ---
 # <a name="plan-for-internet-based-client-management-in-system-center-configuration-manager"></a>Planear la administración de cliente basada en Internet en System Center Configuration Manager
 
@@ -47,6 +47,9 @@ La administración de cliente basada en Internet (a veces denominada IBCM) le pe
  Además, la administración de cliente basada en Internet no admite la movilidad. La movilidad permite a los clientes buscar siempre los puntos de distribución más cercanos para descargar contenido. Los clientes administrados en Internet se comunican con sistemas de sitio desde su sitio asignado cuando estos sistemas de sitio están configurados para usar un FQDN de Internet y los roles de sistema de sitio permiten conexiones de cliente desde Internet. Los clientes seleccionan de manera no determinista uno de los sistemas de sitio basados en Internet, independientemente del ancho de banda o de la ubicación física.  
 
  Cuando tiene un punto de actualización de software que se ha configurado para aceptar conexiones de Internet, los clientes basados en Internet de Configuration Manager siempre realizan una búsqueda con respecto a este punto de actualización de software para determinar las actualizaciones de software que son necesarias. No obstante, cuando estos clientes se encuentran en Internet, primero intentan descargar las actualizaciones de software de Microsoft Update, en lugar de hacerlo desde un punto de distribución basado en Internet. Solo si se produce un error, intentan descargar las actualizaciones de software necesarias desde un punto de distribución basado en Internet. Los clientes que no están configurados para la administración de cliente basada en Internet nunca intentan descargar las actualizaciones de software desde Microsoft Update; siempre usan los puntos de distribución de Configuration Manager.  
+ 
+[!Tip]  
+El cliente de Configuration Manager determina automáticamente si está en la intranet o en Internet. Si el cliente se puede poner en contacto con un controlador de dominio o un punto de administración local, establece su tipo de conexión en Actualmente intranet. En caso contrario, cambia a Actualmente Internet y el cliente utiliza los puntos de administración, los puntos de actualización de software y los puntos de distribución asignados a su sitio para la comunicación.
 
 ##  <a name="considerations-for-client-communications-from-the-internet-or-untrusted-forest"></a>Consideraciones sobre las comunicaciones de cliente desde Internet o desde un bosque que no es de confianza  
  Los siguientes roles de sistema de sitio instalados en los sitios primarios admiten conexiones provenientes de clientes que se encuentran en ubicaciones que no son de confianza, como Internet o un bosque que no es de confianza (los sitios secundarios no admiten conexiones de cliente desde ubicaciones que no son de confianza):  

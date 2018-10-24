@@ -10,12 +10,12 @@ ms.assetid: 8b5b144a-0e5f-4fcc-87b2-33b9bcdb5655
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f99aeba109ed4de3ef1b88b721b59eebb4653cb6
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: dd1a3a56bac6d7917c70db731b1735a195fae3df
+ms.sourcegitcommit: dfb2cb01c1608b848f2f2fee7c84500e7adcb7a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384638"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49101252"
 ---
 # <a name="manage-microsoft-lifecycle-policy-with-configuration-manager"></a>Administrar la directiva de ciclo de vida de Microsoft con Configuration Manager
 
@@ -63,7 +63,7 @@ El panel presenta los iconos siguientes:
 
 - **Los cinco principales productos cuyo ciclo de vida ha expirado**: este icono es una vista de datos consolidados de los productos que se encuentran en su entorno cuyo ciclo de vida ha expirado. El gráfico muestra el software instalado que ha expirado en comparación con el ciclo de vida de soporte técnico para sistemas operativos y productos de SQL server.  
 
-- **Los cinco principales productos que se aproximan al final de su ciclo de vida**: este icono es una vista de datos consolidados de los productos que se encuentran en su entorno cuyo ciclo de vida finaliza en un plazo de seis meses. El gráfico muestra el software instalado al que le quedan seis meses en relación con el ciclo de vida de soporte técnico para sistemas operativos y productos de SQL server.  
+- **Los cinco principales productos que se aproximan al final de su ciclo de vida**: este icono es una vista de datos consolidados de los productos que se encuentran en su entorno cuyo ciclo de vida finaliza en un plazo de 18 meses. El gráfico muestra el software instalado al que le quedan 18 meses en relación con el ciclo de vida de soporte técnico para sistemas operativos y productos de SQL server.  
 
 - **Datos de ciclo de vida de los productos instalados**: este icono ofrece una idea general del momento en el que un producto pasa del estado con soporte técnico al estado expirado. El gráfico proporciona un desglose del número de clientes en los que está instalado el producto y el estado de disponibilidad del soporte técnico, junto con un vínculo para obtener más información acerca de los siguientes pasos que se deben realizar. En el gráfico se incluye la siguiente información:     
     - Tiempo de soporte técnico restante
