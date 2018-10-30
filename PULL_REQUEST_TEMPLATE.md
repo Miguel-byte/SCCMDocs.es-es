@@ -3,5 +3,3 @@
 Describa el cambio, específicamente *por qué* considera que es necesario.
 
 Corrige #Número_Problema (si es necesario)
-
-@Article_Author revise (mire la etiqueta de metadatos `author`)
