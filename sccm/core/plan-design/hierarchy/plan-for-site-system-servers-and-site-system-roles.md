@@ -10,12 +10,12 @@ ms.assetid: 0a7415ba-2c53-4433-983e-780e92aa662f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6805aed620ea6bd41d1ec3460c1076b44d28f67a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: f2c3052337b5c985798c15950a541086587176d1
+ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385361"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461314"
 ---
 # <a name="plan-for-site-system-servers-and-site-system-roles-in-configuration-manager"></a>Planeamiento de servidores de sistema de sitio y roles de sistema de sitio para Configuration Manager
 
@@ -60,7 +60,7 @@ Este rol identifica un sistema de sitio que ejecuta una instancia del servicio *
 El sitio asigna este rol a servidores de sistema de sitio que contienen una instancia de la base de datos del sitio. Solo se puede mover este rol a un nuevo servidor si se ejecuta el programa de instalación para modificar el sitio y configurarlo de forma que use otra instancia de SQL Server para hospedar la base de datos del sitio.  
 
 #### <a name="sms-provider"></a>Proveedor de SMS
-Asigne este rol a cada equipo que hospede una instancia del proveedor de SMS. El proveedor es la interfaz entre una consola de Configuration Manager y la base de datos del sitio. De forma predeterminada, este rol se instala automáticamente en el servidor de sitio de un sitio de administración central y sitios primarios. Puede instalar más instancias en cada sitio para proporcionar acceso a otros usuarios administrativos o para redundancia.  
+El sitio asigna este rol a cada equipo que hospede una instancia del proveedor de SMS. El proveedor es la interfaz entre una consola de Configuration Manager y la base de datos del sitio. De forma predeterminada, este rol se instala automáticamente en el servidor de sitio de un sitio de administración central y sitios primarios. Puede instalar más instancias en cada sitio para proporcionar acceso a otros usuarios administrativos o para redundancia.  
 
 Para instalar proveedores de SMS adicionales, tiene que ejecutar el programa de instalación de Configuration Manager en el servidor de sitio para [administrar el proveedor de SMS](/sccm/core/servers/manage/modify-your-infrastructure#BKMK_ManageSMSprovider). Después, puede instalar proveedores adicionales en otros equipos. Solo se puede instalar una instancia del proveedor de SMS en un equipo. Ese equipo tiene que estar en el mismo dominio que el servidor de sitio.  
 

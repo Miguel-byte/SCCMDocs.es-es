@@ -10,12 +10,12 @@ author: aczechowski
 description: Obtenga información sobre cómo configurar Windows Server Updates Services para aprobar automáticamente actualizaciones de definiciones.
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: b1c79a839ad1c83c96d7fe4583b46f6a3edbffba
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5aa857141b047fc0f9929ca72041980a8bc8b6a7
+ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349864"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461263"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-windows-server-update-services-wsus-for-configuration-manager"></a>Habilite la descarga de definiciones de malware de Endpoint Protection desde Windows Server Update Services (WSUS) para Configuration Manager.
 
@@ -37,7 +37,7 @@ ms.locfileid: "32349864"
 
     -   Para Windows 8.1 y versiones anteriores, en la pestaña **Productos** del cuadro de diálogo **Propiedades de componente de punto de actualización de software** , active la casilla **Forefront Endpoint Protection 2010** .
 
-    -   Para Windows 10 y versiones posteriores, en la pestaña **Productos** del cuadro de diálogo **Propiedades de componente de punto de actualización de software** , active las casillas **Windows Defender** y **Windows Technical Preview 2** .
+    -   Para Windows 10 y versiones posteriores, en la pestaña **Productos** del cuadro de diálogo **Propiedades de componente de punto de actualización de software**, seleccione la casilla **Windows Defender**.
 
 6.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades de componente de punto de actualización de software** .
 
@@ -51,7 +51,7 @@ ms.locfileid: "32349864"
 
     -   Para Windows 8.1 y versiones anteriores, en la pestaña **Productos** del cuadro de diálogo **Propiedades de componente de punto de actualización de software** , active la casilla **Forefront Endpoint Protection 2010** .
 
-    -   Para Windows 10 y versiones posteriores, en la pestaña **Productos** del cuadro de diálogo **Propiedades de componente de punto de actualización de software** , active las casillas **Windows Defender** y **Windows Technical Preview 2** .
+    -   Para Windows 10 y versiones posteriores, en la pestaña **Productos** del cuadro de diálogo **Propiedades de componente de punto de actualización de software**, seleccione la casilla **Windows Defender**.
 
 3.  En la pestaña **Clasificaciones** del cuadro de diálogo **Productos y clasificaciones** , active las casillas **Actualizaciones de definiciones** y **Actualizaciones** .
 

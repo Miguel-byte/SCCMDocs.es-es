@@ -5,17 +5,17 @@ description: Implementación automática de actualizaciones de software usando r
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 08/21/2018
+ms.date: 10/02/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: 6c23dc7328e2618d42b70f12bf7df8aa22fddb91
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: 01c6de94fd4cb0d05b482c1c05df2f09780db7fd
+ms.sourcegitcommit: 8827ffaea108678da968a3623f072876990c830c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589033"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411300"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Implementar actualizaciones de software automáticamente  
 
@@ -234,9 +234,9 @@ Después de crear una ADR, agregue implementaciones adicionales a la regla. Esta
      - Alertas
      - Configuración de descarga  
 
+Las implementaciones también se pueden agregar mediante programación con los cmdlets de Windows PowerShell. Para obtener una descripción completa del uso de este método, vea [New-CMSoftwareUpdateDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment).
 
 Para obtener más información sobre el proceso de implementación, consulte [Proceso de implementación de actualizaciones de software](/sccm/sum/understand/software-updates-introduction#BKMK_DeploymentProcess).
-
 
 
 ## <a name="next-steps"></a>Pasos siguientes

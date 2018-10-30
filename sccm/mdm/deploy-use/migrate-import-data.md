@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
-ms.openlocfilehash: 89db0abe9a60e6850ae36e619483e0dcdc3e5360
-ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
+ms.openlocfilehash: 655d7663a6597ce1b13fb26a5340d482be1ba7ed
+ms.sourcegitcommit: 8827ffaea108678da968a3623f072876990c830c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44111151"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411317"
 ---
 # <a name="import-configuration-manager-data-to-microsoft-intune"></a>Importación de datos de Configuration Manager en Microsoft Intune 
 
@@ -55,6 +55,7 @@ La herramienta de importación puede recopilar información sobre los siguientes
 - La herramienta tratará de proporcionar un motivo por el cual no se puede importar un objeto. En algunos casos, antes de importar objetos en Intune, puede ir a la consola de Configuration Manager, corregir el problema, iniciar de nuevo el examen de detección de objetos de Configuration Manager y, luego, importar los objetos. A veces, puede que necesite o desee volver a crear estos objetos manualmente en Intune.
 - Hay algunos perfiles que dependen de otros objetos. Si desea importar un perfil que depende de otro objeto, como uno de correo electrónico que depende de un certificado, debe importar ambos objetos al mismo tiempo a menos que haya importado previamente el otro objeto desde el mismo equipo con el mismo usuario.  
 - Después de ejecutar la herramienta, deberá realizar algunos pasos manuales más. Por ejemplo, destinar aplicaciones y directivas a grupos de AAD. 
+- Si las aplicaciones web (a veces denominadas clips de web) se han asignado a los usuarios, debe quitarlas antes de migrar los usuarios y luego volver a asignarlas una vez completada la migración. Si no se hace esto, los clips de web no se podrán administrar después de la migración.
 
 ## <a name="prerequisites"></a>Requisitos previos
 - Versión 1610 de Configuration Manager o una posterior: se recomienda especificar el sitio de nivel superior y ejecutar la herramienta con un usuario que tenga acceso a todos los objetos de la jerarquía del sitio. La herramienta solo detecta los objetos a los que puede acceder el usuario que ejecuta la herramienta. 

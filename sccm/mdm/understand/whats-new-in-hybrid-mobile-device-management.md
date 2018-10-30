@@ -2,7 +2,7 @@
 title: Novedades de la MDM híbrida
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las nuevas características de administración de dispositivos móviles disponibles para implementaciones híbridas con Configuration Manager e Intune.
-ms.date: 09/18/2018
+ms.date: 10/18/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 195fb8c4ae584b9b5ccb2401b145d9c78a0be781
-ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
+ms.openlocfilehash: 3082bb6d6cc96be8ba7a56e1e2bb5a6bcd32bc9b
+ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448878"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461280"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con Configuration Manager y Microsoft Intune
 
@@ -46,11 +46,38 @@ En cada sección de este artículo se enumeran las características híbridas or
 |**Novedades de Configuration Manager (rama actual)**| Todas las características que se enumeran en esta categoría funcionan únicamente con la versión especificada de Configuration Manager (rama actual). Si usa una versión anterior de Configuration Manager para su implementación híbrida, actualice a la versión de Configuration Manager (rama actual) que se especifica en la descripción de la característica. Para obtener más información, consulte [Actualizar a System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).|
 
 
+
+## <a name="october-2018"></a>Octubre de 2018
+
+### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune
+
+#### <a name="access-to-key-profile-properties-using-the-company-portal-app"></a>Acceso a las propiedades de perfil principales mediante la aplicación del Portal de empresa
+<!--772203-->  
+
+Los usuarios finales ahora pueden acceder a las propiedades y acciones principales de la cuenta, como el restablecimiento de contraseñas, desde la aplicación del Portal de empresa. 
+
+#### <a name="pin-prompt-when-you-change-fingerprints-or-face-id-on-an-ios-device"></a>Solicitud de PIN al cambiar las huellas digitales o Face ID en un dispositivo iOS  
+<!--2637704-->  
+
+Ahora se solicitará a los usuarios un PIN después de realizar cambios biométricos en su dispositivo iOS. Esto incluye los cambios en Face ID o huellas digitales registrados. El tiempo de la solicitud depende de la configuración del tiempo de expiración de *Volver a comprobar los requisitos de acceso después de (minutos)*.  Si no hay ningún PIN configurado, se pide al usuario que establezca uno.  
+
+Esta característica solo está disponible para iOS y requiere la participación de las aplicaciones que integran el SDK de aplicaciones de Intune para iOS, versión 8.1.1 o posteriores. La integración del SDK es necesaria para poder aplicar el comportamiento en las aplicaciones de destino. Esta integración ocurre de manera gradual y depende de los equipos de la aplicación específica. Algunas aplicaciones participantes incluyen WXP, Outlook, Managed Browser y Yammer.
+
+#### <a name="end-user-device-and-app-content-menu"></a>Menú de contenido de aplicaciones y dispositivos del usuario final 
+<!--2771453-->  
+Los usuarios finales ahora pueden usar el menú contextual del dispositivo y las aplicaciones para desencadenar acciones comunes, como cambiar el nombre de un dispositivo o comprobar el cumplimiento. 
+
+#### <a name="windows-company-portal-keyboard-shortcuts"></a>Métodos abreviados de teclado del Portal de empresa de Windows
+<!--2771518-->  
+Los usuarios finales ahora pueden desencadenar acciones de aplicación y dispositivo en el Portal de empresa de Windows mediante métodos abreviados de teclado (aceleradores).
+
+
+
 ## <a name="august-2018"></a>Agosto de 2018
 
 ### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune
 
-### <a name="new-user-experience-update-for-the-company-portal-website"></a>Nueva actualización de la experiencia de usuario para el sitio web del Portal de empresa
+#### <a name="new-user-experience-update-for-the-company-portal-website"></a>Nueva actualización de la experiencia de usuario para el sitio web del Portal de empresa
 <!--2000968--> En función de sus comentarios, hemos agregado nuevas características para el sitio web del Portal de empresa. Puede experimentar una mejora considerable en la funcionalidad y la facilidad de uso actuales de los dispositivos Android, iOS y Windows. Las áreas del sitio han adoptado un diseño nuevo, moderno y dinámico. Estas áreas incluyen los detalles del dispositivo, los comentarios, el soporte técnico y la información general del dispositivo. También verá las siguientes mejoras:
 
 - Flujos de trabajo optimizados en todas las plataformas de dispositivo
