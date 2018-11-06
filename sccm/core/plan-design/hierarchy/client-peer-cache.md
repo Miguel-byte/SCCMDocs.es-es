@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b1d4e2b7dca44db7ddc5976edde59a04bc3cb45e
-ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
+ms.openlocfilehash: e5099be5ff6b34bcbc232e78056f1937a9508c4f
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46533769"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411432"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Caché del mismo nivel para clientes de Configuration Manager
 
@@ -94,7 +94,7 @@ Cuando el origen de caché del mismo nivel rechaza una solicitud del contenido, 
 
 - Los clientes solo pueden descargar contenido desde los orígenes de caché del mismo nivel de su grupo de límites actual.  
 
-- No se necesita una [cuenta de acceso a la red](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account), con la siguiente excepción:  
+- No se necesita una [cuenta de acceso a la red](/sccm/core/plan-design/hierarchy/accounts#network-access-account), con la siguiente excepción:  
 
     - Una cuenta de acceso a la red se configura en el sitio cuando un cliente habilitado para la caché del mismo nivel ejecuta una secuencia de tareas desde el Centro de software, y se reinicia en una imagen de arranque. Cuando el dispositivo está en Windows PE, usa la cuenta de acceso a la red para obtener contenido del origen de caché del mismo nivel.  
 
