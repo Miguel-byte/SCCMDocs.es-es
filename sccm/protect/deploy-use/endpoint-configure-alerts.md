@@ -10,12 +10,12 @@ ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 78afa39b173abc79c4ed1cadc79f41ab32150ecf
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: 626c52b827e38a53ed3b8982963496f29f11acb5
+ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862369"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083775"
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Configurar alertas de Endpoint Protection en Configuration Manager
 
@@ -39,12 +39,12 @@ ms.locfileid: "48862369"
     > [!NOTE]
     >  No puede configurar alertas para recopilaciones de usuario.
 
-4.  En la pestaña **Alertas** del cuadro de diálogo *<Nombre de recopilación\>***Propiedades**, seleccione **Ver esta recopilación en el panel de Endpoint Protection** si quiere ver los detalles de las operaciones de antimalware realizadas para esta recopilación en el área de trabajo **Supervisión** de la consola de Configuration Manager.
+4.  En la pestaña **Alertas** del cuadro de diálogo **Propiedades** de _<Nombre de recopilación\>_, seleccione **View this collection in the Endpoint Protection dashboard** (Ver esta recopilación en el panel de Endpoint Protection) si quiere ver los detalles de las operaciones de antimalware realizadas para esta recopilación en el área de trabajo **Supervisión** de la consola de Configuration Manager.
 
     > [!NOTE]
     >  Esta opción no está disponible para la recopilación **Todos los sistemas** .
 
-5.  En la pestaña **Alertas** del cuadro de diálogo *Nombre de recopilación\>***Propiedades**, haga clic en **Agregar**.
+5.  En la pestaña **Alertas** del cuadro de diálogo **Propiedades** de _<Nombre de recopilación\>_, haga clic en **Agregar**.
 
 6.  En el cuadro de diálogo **Agregar nuevas alertas de recopilación**, en la sección **Generate an alert when these conditions apply** (Generar una alerta si se cumplen estas condiciones), seleccione las alertas que quiere que Configuration Manager genere cuando se produzcan los eventos de Endpoint Protection especificados y después haga clic en **Aceptar**.
 
@@ -83,7 +83,7 @@ ms.locfileid: "48862369"
 
         -   **Intervalo de detección (horas)** : indique el intervalo de detección (en horas) en que se debe producir el número de detecciones de malware. Especifique un número entre **1** y **168**.
 
-9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo *<Nombre de recopilación\>***Propiedades**.  
+9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades** de _<Nombre de recopilación\>_.  
 
 ## <a name="alert-for-outdated-malware-client"></a>Alerta para clientes de malware obsoletos
 

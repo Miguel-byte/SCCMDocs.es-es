@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: aa92f935984b52458a3d7daf17a11077c519da84
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: cc98ee85ffe4fd419ccc2a2e16bf566144f8b670
+ms.sourcegitcommit: ee434c53b3695a039b56298082b6f61f1006d9dd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862539"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49943315"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Referencia técnica de controles criptográficos
 
@@ -90,7 +90,7 @@ System Center Configuration Manager usa la firma y el cifrado para ayudar a prot
  Cuando se importan datos de configuración, Configuration Manager comprueba la firma digital de los archivos. Si los archivos no están firmados, o si la comprobación de firma digital no se completa correctamente, el sistema emitirá una advertencia, y se solicitará al usuario confirmación para continuar con la importación. Continúe con la importación de datos de configuración sólo si confía totalmente en el editor y la integridad de los archivos.  
 
 ### <a name="encryption-and-hashing-for-client-notification"></a>Cifrado y hash para notificación de cliente  
- Si utiliza la notificación de cliente, todas las comunicaciones utilizarán TLS y el nivel de cifrado más alto que puedan negociar los sistemas operativos del servidor y del cliente. Por ejemplo, un equipo cliente que ejecuta Windows 7 y un punto de administración que ejecuta Windows Server 2008 R2 pueden admitir un cifrado de AES de 128 bits; sin embargo, este mismo punto de administración con un equipo cliente que ejecuta Vista sólo podrán optar a cifrados interiores a 3DES. La misma negociación se produce para la aplicación del hash en los paquetes que se transfieren durante la notificación de cliente, que utiliza SHA-1 o SHA-2.  
+ Si utiliza la notificación de cliente, todas las comunicaciones utilizarán TLS y el nivel de cifrado más alto que puedan negociar los sistemas operativos del servidor y del cliente. Por ejemplo, un equipo cliente que ejecuta Windows 7 y un punto de administración que ejecuta Windows Server 2008 R2 pueden admitir un cifrado de AES de 128 bits, mientras que un equipo cliente que ejecuta Vista en este mismo punto de administración solo podrá optar a cifrados interiores a 3DES. La misma negociación se produce para la aplicación del hash en los paquetes que se transfieren durante la notificación de cliente, que utiliza SHA-1 o SHA-2.  
 
 ##  <a name="certificates-used-by-configuration-manager"></a>Certificados que usa Configuration Manager  
  Para obtener una lista de los certificados PKI (infraestructura de clave pública) que puede usar Configuration Manager, sus requisitos y limitaciones específicos y cómo se usan los certificados, vea [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements) (Requisitos de certificado de PKI). Esta lista incluye las longitudes de clave y los algoritmos hash admitidos. La mayoría de los certificados admiten una longitud de clave de 2048 bits y SHA-256.  

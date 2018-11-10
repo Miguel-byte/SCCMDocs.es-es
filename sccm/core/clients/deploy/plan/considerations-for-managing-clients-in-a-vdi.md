@@ -10,12 +10,12 @@ ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec8989a2e7b71d09198e03f2e263364bebc6b169
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a17bb43d91d26cf10da0e1d3da5d8f6e4a2af2a7
+ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344167"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083792"
 ---
 # <a name="considerations-for-managing-system-center-configuration-manager-clients--in-a-virtual-desktop-infrastructure-vdi"></a>Consideraciones para la administración de clientes de System Center Configuration Manager en una infraestructura de escritorio virtual (VDI)
 
@@ -42,4 +42,4 @@ System Center Configuration Manager admite la instalación del cliente de Config
 > [!NOTE]  
 >  Con la excepción de los clientes de Windows Embedded que están en modo de mantenimiento, los clientes de Configuration Manager que no se están ejecutando en entornos virtualizados también usan este retraso aleatorio. Cuando se tienen muchos clientes implementados, este comportamiento ayuda a evitar que se produzcan picos de uso del ancho de banda de red y reduce el requisito de procesamiento de la CPU en los sistemas de sitio de Configuration Manager, como el punto de administración y el servidor de sitio. El intervalo de retraso varía según la capacidad de Configuration Manager.  
 >   
->  El retraso de selección aleatoria está deshabilitada de forma predeterminada para las actualizaciones de software y las implementaciones de aplicaciones requeridas mediante la siguiente configuración de cliente: **Agente de equipo**: **Deshabilitar selección aleatoria de fecha límite**.
+>  El retraso de selección aleatoria está deshabilitado de forma predeterminada para las actualizaciones de software requeridas mediante la siguiente configuración de cliente: **Agente de equipo**: **Deshabilitar selección aleatoria de fecha límite**.

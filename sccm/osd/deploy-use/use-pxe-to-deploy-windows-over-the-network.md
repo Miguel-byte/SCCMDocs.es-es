@@ -10,12 +10,12 @@ ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4c6069f81c9a5d086ef7c3ed13312d4f878d524a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 1efd4197e63ddc12c0afc9e37b633c38d0df0f14
+ms.sourcegitcommit: a52255da16c9f8b0b60a6c299a369347c7e01bef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384098"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989151"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>Usar el entorno PXE para implementar Windows a través de la red con Configuration Manager
 
@@ -40,7 +40,8 @@ Complete los pasos de uno de los escenarios de implementación de SO y luego use
 
 Para implementar sistemas operativos en clientes de Configuration Manager que efectúan solicitudes de arranque PXE, debe configurar uno o varios puntos de distribución para que acepten las solicitudes PXE. Una vez configurado el punto de distribución, responde a las solicitudes de arranque de PXE y determina las acciones de implementación adecuadas que se van a llevar a cabo. Para obtener más información, consulte [Instalar o modificar un punto de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
 
-
+> [!NOTE]  
+>  Al configurar un único punto de distribución habilitado con PXE para admitir varias subredes, no se permite usar las opciones de DHCP. Configure aplicaciones auxiliares de IP en los enrutadores para permitir que las solicitudes PXE se reenvíen a los puntos de distribución habilitados con PXE.
 
 ## <a name="prepare-a-pxe-enabled-boot-image"></a>Preparar una imagen de arranque habilitada para PXE
 

@@ -10,12 +10,12 @@ ms.assetid: 8cc13635-85d6-4b07-a3ec-c42188bc5c74
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d82ae79ae3466eff753e92c232b2cdd40fbcb2cb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 94f0da3fa9f4aa43ce4818b7b6edf752df53d66a
+ms.sourcegitcommit: ee434c53b3695a039b56298082b6f61f1006d9dd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338489"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49943281"
 ---
 # <a name="use-the-update-registration-tool-to-import-hotfixes-to-system-center-configuration-manager"></a>Uso de la herramienta de registro de actualizaciones para importar revisiones en System Center Configuration Manager
 
@@ -57,7 +57,7 @@ Si instala una versión de un origen externo y el nombre de archivo de la actual
 
     Una vez registrada la revisión, aparece como nueva actualización en la consola en el plazo de 24 horas.  Puede acelerar el proceso:
 
-    - Abra la consola de Configuration Manager y vaya a **Administración** > **Actualizaciones y mantenimiento** y luego haga clic en **Buscar actualizaciones**. (Antes de la versión 1702, la opción Actualizaciones y mantenimiento se encontraba en **Administración** > **Cloud Services**). 
+    - Abra la consola de Configuration Manager y vaya a **Administración** > **Updates and Servicing** (Actualizaciones y mantenimiento) y, luego, haga clic en **Check for Updates** (Buscar actualizaciones). (Antes de la versión 1702, la opción Actualizaciones y mantenimiento se encontraba en **Administración** > **Cloud Services**). 
 
     La herramienta de registro de actualizaciones registra sus acciones en un archivo .log en el equipo local. El archivo de registro tiene el mismo nombre que el archivo hotfix.exe y se escribe en la carpeta **%SystemRoot%/Temp**.  
 
