@@ -1,5 +1,5 @@
 ---
-title: Implementar Windows to Go
+title: Implementación de Windows to Go
 titleSuffix: Configuration Manager
 description: Aprenda a aprovisionar Windows To Go en System Center Configuration Manager para crear un área de trabajo de Windows To Go que se arranque desde una unidad externa.
 ms.date: 10/06/2016
@@ -10,14 +10,14 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 12b7a28ff5ea0e2e1870c0c37edd8e056930b09f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: afc76b59d594c6b8f52062add480874ba5c5686d
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351894"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411500"
 ---
-# <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>Implementar Windows to Go con System Center Configuration Manager.
+# <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>Implementación de Windows to Go con System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
@@ -151,7 +151,7 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
     -   **Punto de distribución**: especifique el punto de distribución que hospeda la imagen de arranque. El asistente recupera la imagen de arranque desde el punto de distribución y la escribe en el medio.  
 
         > [!NOTE]  
-        >  El usuario administrativo debe tener permisos de **lectura** en el contenido de la imagen de arranque en el punto de distribución. Para obtener más información, consulte [Manage accounts to access content](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md) (Administrar cuentas para acceder al contenido).  
+        >  El usuario administrativo debe tener permisos de **lectura** en el contenido de la imagen de arranque en el punto de distribución. Para obtener más información, vea [Cuenta de acceso de paquetes](/sccm/core/plan-design/hierarchy/accounts#package-access-account).  
 
     -   Si seleccionó **Medio basado en sitio** en la página **Administración de medio** de este asistente, en el cuadro **Punto de administración** , especifique un punto de administración del sitio primario.  
 
@@ -166,7 +166,7 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
     -   **Punto de distribución**: especifique el punto de distribución que hospeda el paquete de imágenes de sistema operativo. El asistente recupera la imagen de sistema operativo desde el punto de distribución y la escribe en el medio.  
 
         > [!NOTE]  
-        >  El usuario administrativo debe tener permisos de **lectura** en el contenido de la imagen de sistema operativo en el punto de distribución. Para obtener más información, consulte [Manage accounts to access content](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md) (Administrar cuentas para acceder al contenido).  
+        >  El usuario administrativo debe tener permisos de **lectura** en el contenido de la imagen de sistema operativo en el punto de distribución. Para obtener más información, vea [Cuenta de acceso de paquetes](/sccm/core/plan-design/hierarchy/accounts#package-access-account).  
 
 11. En la página **Seleccionar aplicación** , especifique el contenido de aplicación que desee incluir en el archivo multimedia y, a continuación, haga clic en **Siguiente**.  
 

@@ -2,7 +2,7 @@
 title: Planeamiento de la automatización de tareas
 titleSuffix: Configuration Manager
 description: Realice un planeamiento previo a la creación de secuencias de tareas para automatizar tareas con Configuration Manager.
-ms.date: 08/17/2018
+ms.date: 10/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: fc497a8a-3c54-4529-8403-6f6171a21c64
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1ea1b104dfbdf23a080bc71da94b88cdcad31fa1
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: 608b947e75ff29cf9653b2a12497918846556f4d
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755955"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411296"
 ---
 # <a name="planning-considerations-for-automating-tasks-in-configuration-manager"></a>Consideraciones de planeamiento para la automatización de tareas en Configuration Manager
 
@@ -236,18 +236,42 @@ ms.locfileid: "42755955"
 
 ##  <a name="BKMK_TSNetworkAccessAccount"></a> Secuencias de tareas y la cuenta de acceso a la red  
 
- Aunque las secuencias de tareas se ejecutan solo en el contexto de la cuenta de sistema local, es posible que deba configurar la [cuenta de acceso a la red](/sccm/core/plan-design/hierarchy/accounts#network-access) en las siguientes circunstancias:  
+> [!Important]  
+> A partir de la versión 1806, en algunos escenarios de implementación de sistema operativo no es necesario usar la cuenta de acceso a la red. Para obtener más información, vea [HTTP mejorado](#enhanced-http).
 
- - Si la secuencia de tareas intenta tener acceso a contenido de Configuration Manager en los puntos de distribución. Configure correctamente la cuenta de acceso a la red o se producirá un error en la secuencia de tareas.   
+Aunque las secuencias de tareas se ejecutan solo en el contexto de la cuenta de sistema local, es posible que deba configurar la [cuenta de acceso a la red](/sccm/core/plan-design/hierarchy/accounts#network-access-account) en las siguientes circunstancias:  
 
- - Al utilizar una imagen de arranque para iniciar una implementación de sistema operativo. En este caso, Configuration Manager usa el entorno Windows PE, que no es un sistema operativo completo. El entorno de Windows PE utiliza un nombre aleatorio, generado automáticamente, que no pertenece a ningún dominio. Si no configura correctamente la cuenta de acceso a la red, el equipo no puede acceder al contenido necesario para la secuencia de tareas.  
+- Si la secuencia de tareas intenta tener acceso a contenido de Configuration Manager en los puntos de distribución. Configure correctamente la cuenta de acceso a la red o se producirá un error en la secuencia de tareas.   
+
+- Al utilizar una imagen de arranque para iniciar una implementación de sistema operativo. En este caso, Configuration Manager usa el entorno Windows PE, que no es un sistema operativo completo. El entorno de Windows PE utiliza un nombre aleatorio, generado automáticamente, que no pertenece a ningún dominio. Si no configura correctamente la cuenta de acceso a la red, el equipo no puede acceder al contenido necesario para la secuencia de tareas.  
+
+> [!NOTE]  
+>  La cuenta del acceso a la red no se utiliza nunca como contexto de seguridad para ejecutar programas, instalar aplicaciones, instalar actualizaciones o ejecutar secuencias de tareas. La cuenta de acceso a la red solo se usa para tener acceso a los recursos asociados en la red.  
+
+Para obtener más información sobre la cuenta de acceso a la red, consulte [Cuenta de acceso a la red](/sccm/core/plan-design/hierarchy/accounts#network-access-account).  
 
 
- > [!NOTE]  
- >  La cuenta del acceso a la red no se utiliza nunca como contexto de seguridad para ejecutar programas, instalar aplicaciones, instalar actualizaciones o ejecutar secuencias de tareas. La cuenta de acceso a la red solo se usa para tener acceso a los recursos asociados en la red.  
+### <a name="enhanced-http"></a>HTTP mejorado
+<!--1358278-->
 
+A partir de la versión 1806, al habilitar **HTTP mejorado**, en los escenarios siguientes no se necesita una cuenta de acceso a la red para descargar contenido desde un punto de distribución:
+  
+- Secuencias de tareas que se ejecutan desde un entorno PXE o medios de arranque  
+- Secuencias de tareas que se ejecutan desde el Centro de software  
 
- Para obtener más información sobre la cuenta de acceso a la red, consulte [Cuenta de acceso a la red](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#bkmk_NAA).  
+Estas secuencias de tareas pueden ser para la implementación del sistema operativo o ser personalizadas. También se admite en los equipos de grupos de trabajo.
+ 
+Para obtener más información, vea [HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http).  
+
+> [!Note]  
+> Los escenarios de implementación de sistema operativo siguientes aún requieren el uso de una cuenta de acceso a la red:
+>  
+> - La [opción de implementación](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS) de secuencia de tareas, **Acceder al contenido directamente desde un punto de distribución cuando sea necesario mediante la ejecución de la secuencia de tareas**   
+> - La opción de paso [Solicitar almacén de estado](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore), **Use la cuenta de acceso a la red si la cuenta de equipo no puede conectarse a un almacén de estado** 
+> - Al conectarse a un dominio de confianza o a través de bosques de Active Directory 
+> - La opción de paso [Aplicar imagen de sistema operativo](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyOperatingSystemImage), **Acceder al contenido directamente desde el punto de distribución** 
+> - La[configuración avanzada](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#bkmk_prop-advanced) de secuencia de tareas para **Ejecutar otro programa primero** 
+> - [Multidifusión](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network)  
 
 
 

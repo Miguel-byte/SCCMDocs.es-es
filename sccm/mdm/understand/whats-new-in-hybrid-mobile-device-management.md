@@ -2,7 +2,7 @@
 title: Novedades de la MDM híbrida
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las nuevas características de administración de dispositivos móviles disponibles para implementaciones híbridas con Configuration Manager e Intune.
-ms.date: 10/18/2018
+ms.date: 10/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3082bb6d6cc96be8ba7a56e1e2bb5a6bcd32bc9b
-ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
+ms.openlocfilehash: f51e54ede8df8c18ca8614f6a75c82c53bb7916c
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461280"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411534"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con Configuration Manager y Microsoft Intune
 
@@ -51,14 +51,23 @@ En cada sección de este artículo se enumeran las características híbridas or
 
 ### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune
 
+#### <a name="updates-for-application-transport-security"></a>Actualizaciones para Seguridad de transporte de aplicaciones 
+<!--748318--> Microsoft Intune admite la versión 1.2+ del protocolo Seguridad de la capa de transporte (TLS) para proporcionar el mejor cifrado en su clase, a fin de garantizar que Intune sea más seguro de forma predeterminada, y alinearlo con otros servicios de Microsoft, como Microsoft Office 365. Con el fin de satisfacer este requisito, en los portales de empresa de iOS y macOS se exigirán los requisitos de Seguridad de transporte de aplicaciones (ATS) actualizados de Apple que también requieren TLS 1.2+. ATS se utiliza para exigir una seguridad más estricta en todas las comunicaciones de aplicación a través de HTTPS. Este cambio afecta a los clientes de Intune que usan las aplicaciones Portal de empresa para iOS y macOS. Para obtener más información, consulte [Intune moving to TLS 1.2 for encryption](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/) (Actualización de Intune a TLS 1.2 para el cifrado).
+
+#### <a name="remove-an-email-profile-from-a-device-even-when-theres-only-one-email-profile"></a>Eliminación de un perfil de correo electrónico de un dispositivo, incluso cuando solo hay un perfil 
+<!--1818139--> Anteriormente, no se podía quitar un perfil de correo electrónico de un dispositivo si era el único perfil. Con esta actualización, se cambia este comportamiento. Ahora, puede quitar un perfil de correo electrónico, incluso si es el único en el dispositivo. 
+
+#### <a name="remove-pkcs-and-scep-certificates-from-your-devices"></a>Eliminación de certificados PKCS y SCEP de los dispositivos 
+<!--3218390--> En algunos escenarios, los certificados PKCS y SCEP se mantenían en los dispositivos, incluso al quitar una directiva de un grupo, eliminar una configuración o implementación de cumplimiento, o bien cuando un administrador actualizaba un perfil SCEP o PKCS existente. 
+
+En esta actualización se cambia el comportamiento. Hay algunos escenarios donde los certificados PKCS y SCEP se quitan de los dispositivos y otros escenarios en los que estos certificados se conservan. 
+
 #### <a name="access-to-key-profile-properties-using-the-company-portal-app"></a>Acceso a las propiedades de perfil principales mediante la aplicación del Portal de empresa
 <!--772203-->  
-
 Los usuarios finales ahora pueden acceder a las propiedades y acciones principales de la cuenta, como el restablecimiento de contraseñas, desde la aplicación del Portal de empresa. 
 
 #### <a name="pin-prompt-when-you-change-fingerprints-or-face-id-on-an-ios-device"></a>Solicitud de PIN al cambiar las huellas digitales o Face ID en un dispositivo iOS  
 <!--2637704-->  
-
 Ahora se solicitará a los usuarios un PIN después de realizar cambios biométricos en su dispositivo iOS. Esto incluye los cambios en Face ID o huellas digitales registrados. El tiempo de la solicitud depende de la configuración del tiempo de expiración de *Volver a comprobar los requisitos de acceso después de (minutos)*.  Si no hay ningún PIN configurado, se pide al usuario que establezca uno.  
 
 Esta característica solo está disponible para iOS y requiere la participación de las aplicaciones que integran el SDK de aplicaciones de Intune para iOS, versión 8.1.1 o posteriores. La integración del SDK es necesaria para poder aplicar el comportamiento en las aplicaciones de destino. Esta integración ocurre de manera gradual y depende de los equipos de la aplicación específica. Algunas aplicaciones participantes incluyen WXP, Outlook, Managed Browser y Yammer.
@@ -408,23 +417,23 @@ Solicite a los usuarios finales en Windows 10 versión 1607 o posterior que actu
   <!--1029830-->   
 
 - **Mejoras en el flujo de trabajo de configuración de dispositivos en Portal de empresa**     
-  Se ha mejorado el flujo de trabajo de instalación de dispositivos en la aplicación del Portal de empresa para Android. El lenguaje resulta más fácil de usar y es específico de su empresa. Además, hemos combinado pantallas donde era posible. Puede ver estas mejoras en la página [Novedades de la interfaz de usuario de aplicaciones](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-october-2-2017).
+  Se ha mejorado el flujo de trabajo de instalación de dispositivos en la aplicación del Portal de empresa para Android. El lenguaje resulta más fácil de usar y es específico de su empresa. Además, hemos combinado pantallas donde era posible. Puede ver estas mejoras en la página [Novedades de la interfaz de usuario de aplicaciones](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-october-2-2017).
   <!--1490692-->     
 
 - **Guía mejorada en torno a la solicitud de acceso a los contactos en dispositivos Android**     
-  La aplicación del Portal de empresa para Android requiere a menudo que el usuario final acepte el permiso de contactos. Si un usuario final rechaza este acceso, puede ver una notificación en aplicación que le avisa de que se le va a conceder acceso condicional. 
+  La aplicación del Portal de empresa para Android requiere a menudo que el usuario final acepte el permiso de contactos. Si un usuario final rechaza este acceso, verá una notificación en aplicación que le avisa de que se le va a conceder acceso condicional. 
   <!--1484985-->     
 
 - **Remedio para el inicio seguro en Android**     
-  Los usuarios finales con dispositivos Windows podrán pulsar en la razón de no compatibilidad en la aplicación Portal de empresa. Cuando sea posible, esta acción les lleva directamente a la ubicación correcta en la aplicación de configuración para solucionar el problema. 
+  Los usuarios finales con dispositivos Windows podrán pulsar en la razón de no compatibilidad en la aplicación Portal de empresa. Cuando sea posible, esta acción les lleva directamente a la ubicación correcta en la aplicación de configuración para solucionar el problema. 
   <!--1490712-->    
 
 - **Notificaciones de inserción adicionales para usuarios finales en la aplicación Portal de empresa para Android Oreo**    
-  Los usuarios finales ven notificaciones adicionales que indican cuando la aplicación Portal de empresa para Android Oreo realiza tareas en segundo plano, como recuperar directivas desde el servicio Intune. Las notificaciones aumentan la transparencia para los usuarios finales con respecto a cuándo el Portal de empresa realiza tareas administrativas en el dispositivo. Esta mejora forma parte de la [optimización general de la interfaz de usuario de Portal de empresa ](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune) para la aplicación Portal de empresa para Android Oreo. 
+  Los usuarios finales ven notificaciones adicionales que indican cuando la aplicación Portal de empresa para Android Oreo realiza tareas en segundo plano, como recuperar directivas desde el servicio Intune. Las notificaciones aumentan la transparencia para los usuarios finales con respecto a cuándo el Portal de empresa realiza tareas administrativas en el dispositivo. Esta mejora forma parte de la [optimización general de la interfaz de usuario de Portal de empresa](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune) para la aplicación Portal de empresa para Android Oreo. 
   <!--1475932 -->     
 
 - **Nuevos comportamientos para la aplicación Portal de empresa en perfiles de Android for Work**     
-  Cuando inscribe un dispositivo de Android for Work con un perfil de trabajo, es la aplicación del Portal de empresa del perfil de trabajo la que realiza las tareas de administración en el dispositivo. 
+  Cuando inscribe un dispositivo de Android for Work con un perfil de trabajo, es la aplicación del Portal de empresa del perfil de trabajo la que realiza las tareas de administración en el dispositivo. 
 
   A menos que vaya a usar una aplicación habilitada para MAM en el perfil personal, la aplicación Portal de empresa para Android ya no satisface todos los usos. Para mejorar la experiencia del perfil de trabajo, Intune oculta automáticamente la aplicación personal de Portal de empresa después de una inscripción correcta del perfil de trabajo.
 
@@ -436,7 +445,7 @@ Solicite a los usuarios finales en Windows 10 versión 1607 o posterior que actu
   <!--1428681-->    
 
 - **Bloqueo de la inscripción de los dispositivos Samsung Knox no compatibles**   
-  La aplicación del Portal de empresa solo intenta inscribir los dispositivos Samsung Knox compatibles. Para evitar errores de activación de KNOX que impidan la inscripción de MDM, solo se intenta la inscripción de dispositivos si el dispositivo aparece en la [lista de dispositivos publicados por Samsung](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Puede que algunos dispositivos Samsung tengan números de modelo que admitan KNOX y otros no. Compruebe la compatibilidad de Knox con su revendedor de dispositivos antes de su compra e implementación. Puede encontrar la lista completa de dispositivos comprobados en la [configuración de directivas de Android y Samsung KNOX Standard](https://docs.microsoft.com/intune-classic/deploy-use/android-policy-settings-in-microsoft-intune#supported-samsung-knox-standard-devices).
+  La aplicación del Portal de empresa solo intenta inscribir los dispositivos Samsung Knox compatibles. Para evitar errores de activación de KNOX que impidan la inscripción de MDM, solo se intenta la inscripción de dispositivos si el dispositivo aparece en la [lista de dispositivos publicados por Samsung](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Puede que algunos dispositivos Samsung tengan números de modelo que admitan KNOX y otros no. Compruebe la compatibilidad de Knox con su revendedor de dispositivos antes de su compra e implementación. Puede encontrar la lista completa de dispositivos comprobados en la [configuración de directivas de Android y Samsung KNOX Standard](https://docs.microsoft.com/intune-classic/deploy-use/android-policy-settings-in-microsoft-intune#supported-samsung-knox-standard-devices).
   <!-- 1490695 -->     
 
 - **Finalización del soporte técnico para Android 4.3 y versiones anteriores**     
@@ -458,7 +467,7 @@ Solicite a los usuarios finales en Windows 10 versión 1607 o posterior que actu
     <!-- 1132468 -->     
 
 - **Detalles para los usuarios finales sobre qué información del dispositivo se puede ver para iOS**   
-    Se agregó el **tipo de propiedad** en la pantalla Detalles del dispositivo en la aplicación Portal de empresa para iOS. Esta información permitirá que los usuarios obtengan más información sobre la privacidad directamente en los documentos para el usuario final de Intune. También se puede encontrar esta información en la pantalla Acerca de. 
+    Se ha agregado   **Tipo de propiedad** a la pantalla Detalles del dispositivo en la aplicación Portal de empresa para iOS. Esta información permitirá que los usuarios obtengan más información sobre la privacidad directamente en los documentos para el usuario final de Intune. También se puede encontrar esta información en la pantalla Acerca de. 
     <!--739894-->    
 
 - **Frases más fáciles de comprender en la aplicación Portal de empresa para Android**   
@@ -574,33 +583,16 @@ A partir de julio, los dispositivos inscritos en MDM con iOS 9 y el Portal de em
 Busque los dispositivos o usuarios que se vean afectados en la organización. En Intune en Azure Portal, vaya a **Dispositivos** > **Todos los dispositivos** y filtre por **SO**.  Haga clic en **Columnas** para ver detalles como la versión del SO. Solicite a los usuarios que actualicen sus dispositivos a una versión del sistema operativo compatible antes de septiembre.
 
 
-### <a name="plan-for-change-intune-moving-to-tls-12"></a>Plan de cambio: Intune se actualiza a TLS 1.2
-
-A partir del 31 de octubre de 2018, Intune admitirá la versión 1.2 del protocolo Seguridad de la capa de transporte (TLS) para proporcionar el mejor cifrado en su clase, a fin de garantizar que nuestro servicio sea más seguro de forma predeterminada y ponerlo en consonancia con otros servicios de Microsoft, como Microsoft Office 365. Office comunicó este cambio en MC128929.
-
-#### <a name="how-does-this-change-affect-me"></a>¿Cómo me afecta este cambio?
-
-A partir del 31 de octubre de 2018, Intune ya no será compatible con las versiones 1.0 o 1.1 del protocolo TLS. Todas las combinaciones de cliente/servidor y explorador/servidor deben usar la versión 1.2 de TLS para asegurarse una conexión sin problemas a Intune. Este cambio afecta a los dispositivos del usuario final que no son compatibles con Intune pero siguen recibiendo la directiva a través de Intune, y que no pueden usar la versión 1.2 de TLS. Esto incluye dispositivos como aquellos que ejecutan Android 4.3 y versiones anteriores. Para obtener una lista de los exploradores y dispositivos afectados, consulte el siguiente vínculo.
-
-Después del 31 de octubre de 2018, si experimenta un problema relacionado con el uso de una versión antigua de TLS, será necesario que actualice a TLS 1.2 o a un dispositivo que admita TLS 1.2 como parte de la resolución.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>¿Qué debo hacer para prepararme para este cambio?
-
-Se recomienda que quite proactivamente las dependencias de TLS 1.0 y 1.1 en sus entornos y deshabilite TLS 1.0 y 1.1 en el nivel de sistema operativo cuando sea posible. Comience ya a planear la migración a TLS 1.2. Consulte la entrada de blog del soporte técnico a continuación para conocer la lista de dispositivos que no son compatibles actualmente con Intune pero pueden seguir recibiendo la directiva y que no podrán comunicarse con la versión 1.2 de TLS. Es posible que deba notificar a los usuarios finales que perderán el acceso a los recursos corporativos.
-
-Para obtener más información, consulte [Intune moving to TLS 1.2 for encryption](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/) (Actualización de Intune a TLS 1.2 para el cifrado).
-
-
 ### <a name="company-portal-for-windows-81-and-windows-phone-81-moving-to-sustaining-mode"></a>El Portal de empresa para Windows 8.1 y Windows Phone 8.1 se mueve al modo de mantenimiento 
 <!--1428681-->
 *6 de octubre de 2017*   
  
-A partir de octubre de 2017, las aplicaciones Portal de empresa para Windows 8.1 y Windows Phone 8.1 pasan al modo de mantenimiento. Este modo significa que las aplicaciones y los escenarios existentes, como inscripción y cumplimiento, se seguirán admitiendo en estas plataformas. Estas aplicaciones se pueden seguir descargando en los canales de lanzamiento existentes, como Microsoft Store. 
+A partir de octubre de 2017, las aplicaciones Portal de empresa para Windows 8.1 y Windows Phone 8.1 pasan al modo de mantenimiento. Este modo significa que las aplicaciones y los escenarios existentes, como inscripción y cumplimiento, se seguirán admitiendo en estas plataformas. Estas aplicaciones se pueden seguir descargando en los canales de lanzamiento existentes, como Microsoft Store. 
 
-Una vez en el modo de mantenimiento, estas aplicaciones solo reciben actualizaciones de seguridad críticas. No habrá actualizaciones adicionales ni características para ellas. En el caso de nuevas características, se recomienda actualizar los dispositivos a Windows 10 o Windows 10 Mobile. 
+Una vez en el modo de mantenimiento, estas aplicaciones solo reciben actualizaciones de seguridad críticas. No habrá actualizaciones adicionales ni características para ellas. En el caso de nuevas características, se recomienda actualizar los dispositivos a Windows 10 o Windows 10 Mobile. 
 
 ### <a name="end-of-support-for-ios-80"></a>Finalización del soporte de iOS 8.0 
-<!---1164477---> Las aplicaciones administradas y la aplicación Portal de empresa para iOS necesitan iOS 9.0 y posterior para poder acceder a los recursos de la empresa. Los dispositivos que no estén actualizados antes de septiembre ya no podrán acceder a Portal de empresa ni a esas aplicaciones. 
+<!---1164477---> Las aplicaciones administradas y la aplicación Portal de empresa para iOS necesitan iOS 9.0 y posterior para poder acceder a los recursos de la empresa. Los dispositivos que no estén actualizados antes de septiembre ya no podrán acceder a Portal de empresa ni a esas aplicaciones. 
 
 ### <a name="platform-support-reminder-windows-phone-81-mainstream-support-ended-july-11-2017"></a>Recordatorio sobre el soporte técnico para la plataforma: el soporte técnico estándar para Windows Phone 8.1 finalizó el 11 de julio de 2017
 <!-- 1327781 -->

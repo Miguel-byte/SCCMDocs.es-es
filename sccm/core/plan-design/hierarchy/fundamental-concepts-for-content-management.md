@@ -2,7 +2,7 @@
 title: Conceptos básicos de administración de contenido
 titleSuffix: Configuration Manager
 description: Use herramientas y opciones en Configuration Manager para administrar el contenido que implemente.
-ms.date: 07/30/2018
+ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5c3af900bae26262ba402ea258b8859ba07b999b
-ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
+ms.openlocfilehash: b73ead1492b143260d327f428db5a6183f84434c
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48891221"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411347"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Aspectos básicos de la administración de contenido en Configuration Manager
 
@@ -33,15 +33,19 @@ Los temas siguientes son conceptos clave para la administración de contenido. C
 ## <a name="accounts-used-for-content-management"></a>Cuentas usadas para la administración de contenido  
  Las cuentas siguientes pueden usarse con la administración de contenido:  
 
--   **Cuenta de acceso a la red**: la usan los clientes para conectarse a un punto de distribución y tener acceso al contenido. De forma predeterminada, se intenta usar en primer lugar la cuenta de equipo.  
+#### <a name="network-access-account"></a>Cuenta de acceso a la red
+La usan los clientes para conectarse a un punto de distribución y acceder al contenido. De forma predeterminada, se intenta usar en primer lugar la cuenta de equipo.  
 
-     Esta cuenta también la usan los puntos de distribución de extracción para descargar el contenido de un punto de distribución de origen en un bosque remoto.  
+Esta cuenta también la usan los puntos de distribución de extracción para descargar el contenido de un punto de distribución de origen en un bosque remoto.  
 
--   **Cuenta de acceso de paquete**: de forma predeterminada, Configuration Manager concede acceso al contenido en un punto de distribución a los usuarios y los administradores de cuentas de acceso genéricas. Sin embargo, puede configurar permisos adicionales para restringir el acceso.   
+A partir de la versión 1806, en algunos escenarios ya no se requiere una cuenta de acceso a la red. Puede habilitar el sitio para usar HTTP mejorado con la autenticación de Azure Active Directory.<!--1358228--> 
 
--   **Cuenta de conexión de multidifusión**: se usa para implementaciones de sistema operativo.  
+Para obtener más información, vea [Cuenta de acceso a la red](/sccm/core/plan-design/hierarchy/accounts#network-access-account).
 
-Para obtener más información sobre estas cuentas, consulte [Administración de cuentas para acceder al contenido](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content).
+#### <a name="package-access-account"></a>Cuenta de acceso de paquetes
+De forma predeterminada, Configuration Manager concede acceso al contenido en un punto de distribución a los usuarios y los administradores de cuentas de acceso genéricas. Sin embargo, puede configurar permisos adicionales para restringir el acceso.   
+
+Para obtener más información, vea [Cuenta de acceso de paquetes](/sccm/core/plan-design/hierarchy/accounts#package-access-account).
 
 
 

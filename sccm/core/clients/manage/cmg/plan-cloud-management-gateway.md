@@ -2,7 +2,7 @@
 title: Planear para Cloud Management Gateway
 titleSuffix: Configuration Manager
 description: Planee y diseñe Cloud Management Gateway (CMG) para simplificar la administración de clientes basados en Internet.
-ms.date: 09/10/2018
+ms.date: 10/24/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9b25b7a5b7df42dc83bec18d38b44c7807e6dc1a
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: 0f7e598da0953a20412f6c8279b90a95c1d26581
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601133"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411483"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planificación de Cloud Management Gateway en Configuration Manager
 
@@ -103,7 +103,7 @@ La implementación y el funcionamiento de CMG incluye los componentes siguientes
 El asistente de CMG sigue ofreciendo la opción de una **implementación del servicio clásico** mediante un certificado de administración de Azure. Para simplificar la implementación y la administración de recursos, se recomienda usar el modelo de implementación de Azure Resource Manager para todas las instancias nuevas de CMG. Si es posible, vuelva a implementar las instancias existentes de CMG a través de Resource Manager. Para obtener más información, vea [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg) (Modificar una instancia de CMG).
 
 > [!IMPORTANT]  
-> Esta función no habilita la compatibilidad de los proveedores de servicios en la nube de Azure. La implementación de CMG con Azure Resource Manager continúa usando el servicio en la nube clásico, que no es compatible con los proveedores de servicios en la nube. Para obtener más información, consulte [Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services) (Servicios de Azure disponibles en los proveedores de servicios en la nube de Azure). 
+> Esta función no habilita la compatibilidad de los proveedores de servicios en la nube (CSP) de Azure. La implementación de CMG con Azure Resource Manager sigue usando el servicio en la nube clásico, que no es compatible con los proveedores de servicios en la nube. Para obtener más información, consulte [Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services) (Servicios de Azure disponibles en los proveedores de servicios en la nube de Azure). 
 
 
 ### <a name="hierarchy-design"></a>Diseño de jerarquía
@@ -153,16 +153,19 @@ Del mismo modo, cuando los clientes de París se mueven hacia Internet, se comun
 
 - El **punto de conexión del servicio** debe estar en [modo en línea](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes).   
 
-- Un [**certificado de autenticación de servidor**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate) para CMG.  
+- Un [**certificado de autenticación de servidor**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_serverauth) para CMG.  
 
-- Si recurre al método de implementación clásico de Azure, debe usar un [**certificado de administración de Azure**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#azure-management-certificate).  
+- Si recurre al método de implementación clásico de Azure, debe usar un [**certificado de administración de Azure**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_azuremgmt).  
 
     > [!TIP]  
-    > A partir de Configuration Manager versión 1802, se recomienda el uso del modelo de implementación de **Azure Resource Manager**. No requiere este certificado de administración.  
+    > A partir de la versión 1802 de Configuration Manager, Microsoft recomienda el uso del **modelo de implementación de Azure Resource Manager**. No necesita este certificado de administración.  
 
 - Podrían ser necesarios **otros certificados**, según el modelo de autenticación y la versión del sistema operativo del cliente. Para obtener más información, vea [CMG certificates](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway) (Certificados de CMG).  
 
-    - A partir de la versión 1802, debe configurar todos los [**puntos de administración compatibles con CMG para que usen HTTPS**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https).  
+    - A partir de la versión 1802, debe configurar todos los [**puntos de administración compatibles con CMG para que usen HTTPS**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
+
+    - A partir de la versión 1806, cuando se usa la opción del sitio **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**, el punto de administración puede ser HTTP. Para obtener más información, vea [HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http).  
+
 
 - Puede que sea necesaria la integración con **Azure AD** para los clientes de Windows 10. Para obtener más información, vea [Configuración de servicios de Azure](/sccm/core/servers/deploy/configure/azure-services-wizard).  
 
@@ -325,8 +328,8 @@ En esta tabla se enumeran los protocolos y los puertos de red requeridos. El *cl
 |---------|---------|---------|---------|---------|
 | Punto de conexión de servicio     | HTTPS | 443        | Azure        | Implementación de CMG |
 | Punto de conexión de CMG     |  TCP-TLS | 10140-10155        | Servicio de CMG        | Protocolo preferido para crear el canal de CMG <sup>1</sup> |
-| Punto de conexión de CMG     | HTTPS | 443        | Servicio de CMG       | Reserva para crear el canal de CMG para una sola instancia de máquina virtual<sup>2</sup> |
-| Punto de conexión de CMG     |  HTTPS   | 10124-10139     | Servicio de CMG       | Reserva para crear el canal de CMG para dos o más instancias de máquina virtual<sup>3</sup> |
+| Punto de conexión de CMG     | HTTPS | 443        | Servicio de CMG       | Protocolo de reserva para crear el canal de CMG para una sola instancia de máquina virtual<sup>2</sup> |
+| Punto de conexión de CMG     |  HTTPS   | 10124-10139     | Servicio de CMG       | Protocolo de reserva para crear el canal de CMG para dos o más instancias de máquina virtual<sup>3</sup> |
 | Cliente     |  HTTPS | 443         | CMG        | Comunicación de cliente general |
 | Punto de conexión de CMG      | HTTPS o HTTP | 443 o 80         | Punto de administración<br>(versión 1706 o 1710) | Para el tráfico local, el puerto depende de la configuración del punto de administración |
 | Punto de conexión de CMG      | HTTPS | 443      | Punto de administración<br>(versión 1802) | El tráfico local debe ser HTTPS |

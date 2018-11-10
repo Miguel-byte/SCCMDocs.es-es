@@ -1,8 +1,8 @@
 ---
 title: Configurar la seguridad
 titleSuffix: Configuration Manager
-description: Configure las opciones relacionadas con la seguridad de System Center Configuration Manager.
-ms.date: 12/30/2016
+description: Configure las opciones relacionadas con la seguridad para Configuration Manager.
+ms.date: 10/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,116 +10,152 @@ ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 165f7fc0b73e288ac1718def96a50bc91a181cc2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: dc0f57bcc06911f34da481c2e3be81c3cb0de1c2
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339084"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411415"
 ---
-# <a name="configure-security-in-system-center-configuration-manager"></a>Configurar la seguridad en System Center Configuration Manager
+# <a name="configure-security-in-configuration-manager"></a>Configuración de la seguridad en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Use la información de este artículo para configurar opciones relacionadas con la seguridad para System Center Configuration Manager.  
+Use la información de este artículo para configurar opciones relacionadas con la seguridad para Configuration Manager. Se tratan las opciones de seguridad siguientes:
+- [Comunicación de equipo cliente](#BKMK_ConfigureClientPKI) para los certificados PKI de cliente  
+- [Firma y cifrado](#BKMK_ConfigureSigningEncryption)  
+- [Administración basada en roles](#BKMK_ConfigureRBA)  
+- [Administración de cuentas](#BKMK_ManageAccounts)  
+- [Configuración de Azure Active Directory](#bkmk_azuread)  
+
+
 
 ##  <a name="BKMK_ConfigureClientPKI"></a> Configurar opciones de certificados PKI de cliente  
+
 Si desea usar certificados de infraestructura de clave pública (PKI) para conexiones de cliente a sistemas de sitio que usan Internet Information Services (IIS), use el procedimiento siguiente para configurar las opciones de estos certificados.  
 
 #### <a name="to-configure-client-pki-certificate-settings"></a>Para configurar certificados PKI de cliente  
 
-1.  En la consola de Configuration Manager, seleccione **Administración**.  
+1.  En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración del sitio** y seleccione el nodo **Sitios**. Seleccione el sitio primario que se va a configurar.  
 
-2.  En el área de trabajo **Administración**, expanda **Configuración del sitio**, haga clic en **Sitios** y después haga clic en el sitio primario que quiera configurar.  
+2.  En la cinta, haga clic en **Propiedades**. Después, cambie a la pestaña **Comunicación de equipo cliente**.  
 
-3.  En la pestaña **Inicio**, en el grupo **Propiedades**, haga clic en **Propiedades** y después haga clic en la pestaña **Comunicación de equipo cliente**.  
+    Esta pestaña está disponible solamente en un sitio primario. Si no puede ver la pestaña **Comunicación de equipo cliente**, compruebe que no esté conectado a un sitio de administración central o a un sitio secundario.  
 
-    Esta pestaña está disponible solamente en un sitio primario. Si no puede ver la pestaña **Comunicación de equipo cliente** , compruebe que no esté conectado a un sitio de administración central o a un sitio secundario.  
+3.  Seleccione la configuración para los sistemas de sitio que usen IIS.  
 
-4.  Haga clic en **HTTPS solamente** cuando quiera que los clientes asignados al sitio usen siempre un certificado PKI de cliente al conectarse a sistemas de sitio que usen IIS. O bien, haga clic en **HTTPS o HTTP** cuando no necesite que los clientes usen certificados PKI.  
+    - **Solo HTTPS**: los clientes asignados al sitio siempre usan un certificado PKI de cliente al conectarse a sistemas de sitio en los que se usa IIS.  
 
-5.  Si seleccionó **HTTPS o HTTP**, haga clic en **Usar un certificado de cliente PKI (capacidad de autenticación de cliente) cuando esté disponible** cuando quiera usar un certificado PKI de cliente para conexiones HTTP. El cliente utiliza este certificado en lugar de un certificado autofirmado para autenticarse en los sistemas de sitio. Esta opción se selecciona automáticamente si selecciona **HTTPS solamente**.  
+    - **HTTPS o HTTP**: no es necesario que los clientes usen certificados PKI.  
 
-    Cuando se detecta que los clientes están en Internet, o están configurados para la administración de clientes solo de Internet, siempre usan un certificado PKI del cliente.  
+    - **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**: para obtener más información sobre esta configuración, vea [HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http).  
 
-6.  Haga clic en **Modificar** para configurar el método de selección de cliente elegido cuando haya más de un certificado de cliente PKI disponible en un cliente y después haga clic en **Aceptar**.  
+4.  Seleccione la configuración para los equipos cliente.  
 
-    Para más información sobre el método de selección de certificados de cliente, vea [Planeación de la selección de certificados de cliente PKI](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForClientCertificateSelection).  
+    - **Usar un certificado de cliente PKI (capacidad de autenticación de cliente) cuando esté disponible**: si seleccionó la configuración de servidor de sitio **HTTPS o HTTP**, seleccione esta opción para usar un certificado PKI de cliente para las conexiones HTTP. El cliente utiliza este certificado en lugar de un certificado autofirmado para autenticarse en los sistemas de sitio. Si ha seleccionado **Solo HTTPS**, esta opción se selecciona de forma automática.  
 
-7.  Active o desactive la casilla para que los clientes comprueben la lista de revocación de certificados (CRL).  
+    Cuando haya más de un certificado de cliente PKI disponible en un cliente, haga clic en **Modificar** para configurar el método de selección de certificado de cliente.  
 
-    Para más información sobre la comprobación de la CRL de los clientes, vea [Planeación de la revocación de certificados PKI](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).  
+    Para más información sobre el método de selección de certificados de cliente, vea [Planeación de la selección de certificados de cliente PKI](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForClientCertificateSelection).  
 
-8.  Si debe especificar certificados de entidad de certificación (CA) raíz de confianza para clientes, haga clic en **Establecer**, importe los archivos de certificado de CA raíz y después haga clic en **Aceptar**.  
+    - **Los clientes comprueban la lista de revocación de certificados (CRL) para sistemas de sitio**: habilite esta opción para que los clientes comprueben los certificados revocados en la CRL de la organización.  
 
-    Para más información sobre esta opción, vea [Planeación de los certificados raíz de confianza PKI y la lista de emisores de certificados](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRootCAs).  
+    Para más información sobre la comprobación de la CRL de los clientes, vea [Planeación de la revocación de certificados PKI](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs).  
 
-9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo de propiedades del sitio.  
+5.  Para importar, ver y eliminar los certificados de entidades de certificación raíz de confianza, haga clic en **Establecer**.  
+
+    Para obtener más información, vea [Planeación de los certificados raíz de confianza PKI y la lista de emisores de certificados](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForRootCAs).  
+
 
 Repita este procedimiento para todos los sitios primarios de la jerarquía.  
 
+
+
 ##  <a name="BKMK_ConfigureSigningEncryption"></a> Configurar la firma y el cifrado  
+
 Configure las opciones de firma y cifrado más seguras para los sistemas de sitio que pueden admitir todos los clientes en el sitio. Estas opciones son especialmente importantes cuando se permite a los clientes comunicarse con sistemas de sitio mediante certificados autofirmados a través de HTTP.  
 
 #### <a name="to-configure-signing-and-encryption-for-a-site"></a>Para configurar la firma y el cifrado para un sitio  
 
-1.  En la consola de Configuration Manager, seleccione **Administración**.  
+1.  En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración del sitio** y seleccione el nodo **Sitios**. Seleccione el sitio primario que se va a configurar.  
 
-2.  En el área de trabajo **Administración**, expanda **Configuración del sitio**, haga clic en **Sitios** y después haga clic en el sitio primario que quiera configurar.  
+2.  En la cinta, haga clic en **Propiedades** y, después, cambie a la pestaña **Firma y cifrado**.  
 
-3.  En la pestaña **Inicio**, en el grupo **Propiedades**, haga clic en **Propiedades** y después haga clic en la pestaña **Firma y cifrado**.  
+    Esta pestaña está disponible solamente en un sitio primario. Si no puede ver la pestaña **Firma y cifrado**, asegúrese de que no está conectado a un sitio de administración central o a un sitio secundario.  
 
-    Esta pestaña está disponible solamente en un sitio primario. Si no puede ver la pestaña **Firma y cifrado** , compruebe que no esté conectado a un sitio de administración central o a un sitio secundario.  
+3.  Configure las opciones de firma y cifrado para que los clientes se comuniquen con el sitio.  
 
-4.  Configure las opciones de firma y cifrado que quiera y después haga clic en **Aceptar**.  
+    - **Requerir firma**: los clientes firman los datos antes de enviarlos al punto de administración.  
+
+    - **Requerir SHA-256**: los clientes usan el algoritmo SHA-256 al firmar los datos.  
 
     > [!WARNING]  
-    >  No seleccione **Requerir SHA-256** sin comprobar primero que todos los clientes que puedan estar asignados al sitio pueden admitir este algoritmo hash o que tienen un certificado de autenticación de cliente PKI válido. Puede que tenga que instalar las actualizaciones o las revisiones en los clientes para que admitan SHA-256. Por ejemplo, los equipos que ejecutan Windows Server 2003 SP2 deben instalar una revisión a la que se hace referencia en el [artículo de Knowledge Base 938397](http://go.microsoft.com/fwlink/p/?LinkId=226666).  
+    >  No use **Requerir SHA-256** sin confirmar antes que todos los clientes admiten este algoritmo hash. Estos clientes incluyen los que es posible que se asignen al sitio en el futuro.  
     >   
-    >  Si selecciona esta opción y los clientes no admiten SHA-256 y usan certificados autofirmados, Configuration Manager los rechaza. En este caso, el componente SMS_MP_CONTROL_MANAGER registra el identificador de mensaje 5443.  
+    >  Si selecciona esta opción y los clientes con certificados autofirmados no admiten SHA-256, Configuration Manager los rechaza. El componente SMS_MP_CONTROL_MANAGER registra el identificador de mensaje 5443.  
 
-5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades** del sitio.  
+    - **Usar cifrado**: los clientes cifran los mensajes de estado y datos de inventario de cliente antes de enviarlos al punto de administración. Usan el algoritmo 3DES.  
 
 Repita este procedimiento para todos los sitios primarios de la jerarquía.  
 
+
+
 ##  <a name="BKMK_ConfigureRBA"></a> Configurar la administración basada en roles  
-La administración basada en roles combina roles de seguridad, ámbitos de seguridad y recopilaciones asignadas para definir el ámbito administrativo de cada usuario administrativo. Un ámbito administrativo incluye los objetos que puede ver un usuario administrativo en la consola de Configuration Manager y las tareas relacionadas con esos objetos que el usuario administrativo tiene permiso para realizar. Las configuraciones de la administración basada en roles se aplican en cada sitio en una jerarquía.  
 
-Los siguientes vínculos llevan a las secciones correspondientes del artículo [Configurar la administración basada en roles de System Center Configuration Manager](../../../core/servers/deploy/configure/configure-role-based-administration.md):  
+La administración basada en roles combina roles de seguridad, ámbitos de seguridad y recopilaciones asignadas para definir el ámbito administrativo de cada usuario administrativo. Un ámbito incluye los objetos que un usuario puede ver en la consola y las tareas relacionadas con esos objetos que tiene permiso para realizar. Las configuraciones de la administración basada en roles se aplican en cada sitio en una jerarquía.  
 
--   [Crear roles de seguridad personalizados](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole)  
+Para obtener más información, vea [Configurar la administración basada en roles](/sccm/core/servers/deploy/configure/configure-role-based-administration). En este artículo se describen las acciones siguientes:  
 
--   [Configurar roles de seguridad](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecRole)  
+- Crear roles de seguridad personalizados  
 
--   [Configurar ámbitos de seguridad para un objeto](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope)  
+- Configurar roles de seguridad  
 
--   [Configurar recopilaciones para administrar la seguridad](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigColl)  
+- Configurar ámbitos de seguridad para un objeto  
 
--   [Crear un nuevo usuario administrativo](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_Create_AdminUser)  
+- Configurar recopilaciones para administrar la seguridad  
 
--   [Modify the administrative scope of an administrative user (Modificar el ámbito administrativo de un usuario administrativo)](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ModAdminUser)  
+- Crear un nuevo usuario administrativo  
+
+- Modificar el ámbito administrativo de un usuario administrativo  
 
 > [!IMPORTANT]  
->  Su propio ámbito administrativo define los objetos y valores que se pueden asignar al configurar la administración basada en roles para otro usuario administrativo. Para más información sobre el planeamiento de la administración basada en roles, vea [Fundamentals of role-based administration for System Center Configuration Manager (Aspectos básicos de la administración basada en roles de System Center Configuration Manager)](../../../core/understand/fundamentals-of-role-based-administration.md).  
+>  Su propio ámbito administrativo define los objetos y valores que se pueden asignar al configurar la administración basada en roles para otro usuario administrativo. Para obtener información sobre la planificación de la administración basada en roles, vea [Aspectos básicos de la administración basada en roles](/sccm/core/understand/fundamentals-of-role-based-administration).  
 
-##  <a name="BKMK_ManageAccounts"></a> Administrar las cuentas que usa Configuration Manager  
-Configuration Manager es compatible con cuentas de Windows para muchos usos y tareas diferentes.  
 
-Use el procedimiento siguiente para ver qué cuentas están configuradas para las diferentes tareas y para administrar la contraseña que usa Configuration Manager para cada cuenta.  
 
-#### <a name="to-manage-accounts-that-are-used-by-configuration-manager"></a>Para administrar las cuentas que usa Configuration Manager  
+##  <a name="BKMK_ManageAccounts"></a> Administración de las cuentas que usa Configuration Manager  
 
-1.  En la consola de Configuration Manager, seleccione **Administración**.  
+Configuration Manager es compatible con cuentas de Windows para muchos usos y tareas diferentes. Use el procedimiento siguiente para ver las cuentas que están configuradas para las diferentes tareas y administrar la contraseña que usa Configuration Manager para cada cuenta:  
 
-2.  En el área de trabajo **Administración**, expanda **Seguridad** y haga clic en **Cuentas** para ver las cuentas configuradas para Configuration Manager.  
+#### <a name="to-manage-accounts-that-configuration-manager-uses"></a>Para administrar las cuentas que usa Configuration Manager  
 
-3.  Para cambiar la contraseña de una cuenta configurada para Configuration Manager, seleccione la cuenta.  
+1.  En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Seguridad** y, después, haga clic en el nodo **Cuentas**.  
 
-4.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
+2.  Para cambiar la contraseña de una cuenta, seleccione la cuenta en la lista. Después, haga clic en **Propiedades** en la cinta.  
 
-5.  Haga clic en **Establecer** para abrir el cuadro de diálogo **Cuenta de usuario de Windows** y especifique la nueva contraseña que usará Configuration Manager para la cuenta.  
+3.  Haga clic en **Establecer** para abrir el cuadro de diálogo **Cuenta de usuario de Windows**. Especifique la contraseña nueva para que Configuration Manager la use para esta cuenta.  
 
     > [!NOTE]  
-    >  La contraseña que especifique debe coincidir con la contraseña especificada para la cuenta en Usuarios y equipos de Active Directory.  
+    >  La contraseña que especifique debe coincidir con la de esta cuenta en Active Directory.  
 
-6.  Haga clic en **Aceptar** para completar el procedimiento.  
+Para obtener más información, vea [Cuentas que se usan en Configuration Manager](/sccm/core/plan-design/hierarchy/accounts).
+
+
+
+##  <a name="bkmk_azuread"></a> Configuración de Azure Active Directory
+
+Integre Configuration Manager con Azure Active Directory (Azure AD) para simplificar y habilitar el entorno para la nube. Permita que el sitio y los clientes se autentiquen mediante Azure AD. Para obtener más información, vea el servicio **Administración en la nube** de [Configuración de servicios de Azure](/sccm/core/servers/deploy/configure/azure-services-wizard).
+
+
+
+## <a name="see-also"></a>Consulte también
+
+- [Planear la seguridad](/sccm/core/plan-design/security/plan-for-security)  
+
+- [Seguridad y privacidad para los clientes de Configuration Manager](/sccm/core/clients/deploy/plan/security-and-privacy-for-clients)  
+
+- [Comunicaciones entre puntos de conexión](/sccm/core/plan-design/hierarchy/communications-between-endpoints)  
+
+- [Referencia técnica de controles criptográficos](/sccm/core/plan-design/security/cryptographic-controls-tehnical-reference)  
+
+- [Requisitos de certificados PKI](/sccm/core/plan-design/network/pki-certificate-requirements)  

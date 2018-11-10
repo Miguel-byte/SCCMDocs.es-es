@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: d15484ef38264a5c954dc664f9885b800a078ca6
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: 9aab4273129e6a3032d7e85d2545e6abc5b616c4
+ms.sourcegitcommit: 8dd9199bfe8e27f62e9df307f1c6ac58a3b81717
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601014"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237163"
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>Preparar dispositivos de Windows 10 para la administración conjunta
 Puede habilitar la administración conjunta en los dispositivos de Windows 10 que están unidos a AD y a Azure AD y que están inscritos en Microsoft Intune y en un cliente en Configuration Manager. Para los nuevos dispositivos de Windows 10 y para los que ya estén inscritos en Intune, instale el cliente de Configuration Manager antes de administrarlos de forma conjunta. Para los dispositivos de Windows 10 que ya son clientes de Configuration Manager, puede inscribirlos en Intune y habilitar la administración conjunta en la consola de Configuration Manager.
@@ -68,7 +68,7 @@ A continuación se indican los requisitos previos generales para poder habilitar
 
 - Windows 10, versión 1709 o posteriores  
 
-- [Unidos a Azure AD híbrido](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (unidos a AD y a Azure AD).  
+- [Unido a Azure AD híbrido](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (unido a AD y Azure AD) o solo unido a Azure AD (este tipo se conoce a veces como "unido al dominio en la nube").
 
 
 ### <a name="additional-prerequisites-for-devices-without-the-configuration-manager-client"></a>Requisitos previos adicionales para los dispositivos sin el cliente de Configuration Manager

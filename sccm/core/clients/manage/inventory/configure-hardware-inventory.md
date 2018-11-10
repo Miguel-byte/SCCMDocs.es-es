@@ -10,12 +10,12 @@ ms.assetid: 0e45290e-f8f7-4335-801e-570225d12c2b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a2051088b70c721250842548f877792adc84b38f
-ms.sourcegitcommit: 59afe6f05333d4150afaf88ab0a85a979818e3fb
+ms.openlocfilehash: 1b632a9b7b7b20bc8d6653d35b267043dde6660d
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957787"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411007"
 ---
 # <a name="how-to-configure-hardware-inventory-in-system-center-configuration-manager"></a>Cómo configurar el inventario de hardware en System Center Configuration Manager
 
@@ -24,7 +24,10 @@ ms.locfileid: "36957787"
 Este procedimiento configura las opciones de cliente predeterminadas del inventario de hardware y se aplicará a todos los clientes de la jerarquía. Si quiere que esta configuración solo se aplique a algunos clientes, cree una configuración de cliente de dispositivo personalizada y asígnela a una recopilación que contenga los dispositivos que quiera usar para el inventario de hardware. Vea [Cómo configurar el cliente en System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md).  
 
 > [!NOTE]  
->  Si un dispositivo cliente recibe la configuración de inventario de hardware de varios conjuntos de configuraciones de cliente, las clases de inventario de hardware de cada conjunto de configuraciones se combinarán cuando el cliente informe del inventario de hardware.  
+>  Si un dispositivo cliente recibe la configuración de inventario de hardware de varios conjuntos de configuraciones de cliente, las clases de inventario de hardware de cada conjunto de configuraciones se combinarán cuando el cliente informe del inventario de hardware. Además, no activar una clase en una configuración de cliente personalizada con una prioridad más alta no deshabilita al cliente para realizar el inventario de esa clase. 
+
+Para deshabilitar una clase de inventario de hardware específica en la mayoría de los sistemas excepto en algunos, es necesario desactivar la clase en la configuración predeterminada del cliente. Después, se crea una configuración de cliente personalizada para habilitar la clase y se implementa en los sistemas de destino.
+
 
 ### <a name="to-configure-hardware-inventory"></a>Cómo configurar el inventario de hardware  
 
