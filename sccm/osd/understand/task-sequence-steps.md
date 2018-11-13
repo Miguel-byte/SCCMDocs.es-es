@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3e0b70a2b024555bd67f63b3a31a6408b07c273b
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: bec95b13ecba5ae5238d758ae06566042a95d939
+ms.sourcegitcommit: 303d826f45c8fd9a05d8883afc1ca645e56bd576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42756084"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269253"
 ---
 # <a name="task-sequence-steps-in-configuration-manager"></a>Pasos de secuencias de tareas en Configuration Manager
 
@@ -134,7 +134,7 @@ ms.locfileid: "42756084"
 
  Use este paso para especificar la información de configuración de red o grupo de trabajo del equipo de destino. La secuencia de tareas almacena estos valores en el archivo de respuesta adecuado. El programa de instalación de Windows usa este archivo de respuesta durante la acción **Instalar Windows y Configuration Manager**.  
 
- Este paso de secuencia de tareas se ejecuta en el sistema operativo completo o Windows PE. 
+ Este paso de secuencia de tareas solo se ejecuta en Windows PE, No se ejecuta en el sistema operativo completo. 
 
  Utilice las siguientes variables de secuencia de tareas con este paso:  
  - [OSDAdapter](/sccm/osd/understand/task-sequence-variables#OSDAdapter)  
@@ -1041,7 +1041,7 @@ ms.locfileid: "42756084"
 
  En la mayoría de circunstancias, use la configuración predeterminada para usar los resultados del análisis almacenados en caché. 
 
- La variable **SMSTSSoftwareUpdateScanTimeout** controla el tiempo de espera del análisis de actualizaciones de software durante este paso. El valor predeterminado es 30 minutos. Para obtener más información, vea [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout) (Variables de secuencia de tareas).
+ La variable **SMSTSSoftwareUpdateScanTimeout** controla el tiempo de espera del análisis de actualizaciones de software durante este paso. El valor predeterminado es 30 minutos. Para más información, vea [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout) (Variables de secuencia de tareas).
 
 
 ### <a name="options"></a>Opciones   
@@ -1052,7 +1052,7 @@ ms.locfileid: "42756084"
  Si una de las actualizaciones reinicia inesperadamente el equipo, vuelva a intentar este paso. El paso habilita esta configuración de forma predeterminada con dos reintentos. Puede especificar de uno a cinco reintentos.  
 
  > [!NOTE]  
- > Configure la variable **SMSTSWaitForSecondReboot** para especificar cuántos segundos se pausa la secuencia de tareas después de reiniciar el equipo en este escenario. Para obtener más información, vea [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSWaitForSecondReboot) (Variables de secuencia de tareas).  
+ > Configure la variable **SMSTSWaitForSecondReboot** para especificar cuántos segundos se pausa la secuencia de tareas después de reiniciar el equipo en este escenario. Para más información, vea [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSWaitForSecondReboot) (Variables de secuencia de tareas).  
 
 
 

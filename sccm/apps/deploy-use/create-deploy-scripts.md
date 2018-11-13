@@ -10,19 +10,18 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fcf3bc335efc4c7436842b29d30c67c118ceb05d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4435802ad67857ad9f79168f96aa046eae8f7097
+ms.sourcegitcommit: 471cf13bc1ff7543c3d32465df9eecff9aaaa5be
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339033"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753656"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-<!--1236459-->
-System Center Configuration Manager tiene una funcionalidad integrada para ejecutar scripts de Powershell. PowerShell tiene la ventaja de crear scripts automatizados y sofisticados que entienden y comparten una gran comunidad de usuarios. Los scripts simplifican la compilación de herramientas personalizadas para administrar software y posibilitan la realización de tareas rutinarias rápidamente, lo que permite obtener grandes resultados de forma más sencilla y coherente.  
+<!--1236459--> System Center Configuration Manager tiene una funcionalidad integrada para ejecutar scripts de Powershell. PowerShell tiene la ventaja de crear scripts automatizados y sofisticados que entienden y comparten una gran comunidad de usuarios. Los scripts simplifican la compilación de herramientas personalizadas para administrar software y posibilitan la realización de tareas rutinarias rápidamente, lo que permite obtener grandes resultados de forma más sencilla y coherente.  
 
 > [!TIP]  
 > Esta característica se introdujo por primera vez en la versión 1706 como una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1802, ya no es una característica de versión preliminar.  
@@ -95,7 +94,7 @@ Esta aprobación se utiliza principalmente para la fase de pruebas de desarrollo
 1. En la consola de Configuration Manager, haga clic en **Administración**.
 2. En el área de trabajo **Administración** , expanda **Configuración del sitio**y, a continuación, haga clic en **Sitios**.
 3. En la lista de sitios, elija el sitio y, a continuación, en la pestaña **Inicio** del grupo **Sitios**, haga clic en **Configuración de jerarquía**.
-4. En la pestaña **General** del cuadro de diálogo **Propiedades de configuración de jerarquía**, desactive la casilla **Do not allow script authors to approve their own scripts** (No permitir que los autores de scripts aprueben sus propios scripts).
+4. En la pestaña **General** del cuadro de diálogo **Propiedades de configuración de jerarquía**, desactive la casilla **Los autores necesitan un aprobador adicional del script**.
 
 >[!IMPORTANT]
 >Como práctica recomendada, no debe permitir que el autor de un script apruebe sus propios scripts. Solo se debe permitir en entornos de laboratorio. Piense en el impacto que puede implicar modificar esta configuración en un entorno de producción.
