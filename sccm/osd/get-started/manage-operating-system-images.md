@@ -10,12 +10,12 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b0931671c05604a0115c14a5e7fc5d9c6767b7c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d442955d62989d3bbc7b32e0aba122a0853a3f14
+ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350109"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223677"
 ---
 # <a name="manage-operating-system-images-with-system-center-configuration-manager"></a>Administrar imágenes de sistema operativo con System Center Configuration Manager
 
@@ -35,9 +35,9 @@ Las imágenes de sistema operativo de Configuration Manager se almacenan en el a
 
 -   **Desventajas**  
 
-    -   La instalación del sistema operativo puede tardar más tiempo porque la instalación de aplicaciones y otras configuraciones se realiza cuando finaliza la instalación del sistema operativo.  
+    -   La instalación del sistema operativo puede tardar más tiempo porque la instalación de aplicaciones y otras configuraciones se realiza cuando finaliza la instalación del sistema operativo.
 
- **Imagen capturada**  
+**Imagen capturada**  
 
  Para crear una imagen personalizada del sistema operativo, es necesario crear un equipo de referencia con el sistema operativo deseado e instalar aplicaciones, configurar opciones, etc. A continuación, se captura la imagen de sistema operativo del equipo de referencia para crear el archivo WIM. Puede generar el equipo de referencia de forma manual o utilizar una secuencia de tareas para automatizar algunos o todos los pasos de generación.   
 Si quiere conocer los pasos necesarios para crear una imagen personalizada del sistema operativo, vea [Personalizar imágenes de sistema operativo](customize-operating-system-images.md).  
@@ -48,8 +48,9 @@ Si quiere conocer los pasos necesarios para crear una imagen personalizada del s
 
 -   **Desventajas**  
 
-    -   La instalación del sistema operativo puede tardar más tiempo porque la instalación de aplicaciones y otras configuraciones se realiza cuando finaliza la instalación del sistema operativo.  
-
+    -   El tamaño de la imagen es potencialmente mayor que la imagen predeterminada.
+    
+    -   Debe crear una imagen nueva cuando se deben efectuar actualizaciones de aplicaciones y herramientas.
 
 ##  <a name="BKMK_AddOSImages"></a> Incorporación de imágenes de sistema operativo a Configuration Manager  
  Para usar una imagen de sistema operativo, primero debe agregarla un sitio de Configuration Manager. Use el procedimiento siguiente para agregar una imagen de sistema operativo a un sitio.  
@@ -109,6 +110,9 @@ Si quiere conocer los pasos necesarios para crear una imagen personalizada del s
 7.  En la página **Resumen** , compruebe la información y, a continuación, haga clic en **Siguiente**.  
 
 8.  En la página **Finalización** , compruebe que las actualizaciones de software se aplicaron correctamente a la imagen de sistema operativo.  
+
+> [!NOTE]  
+>  Para minimizar el tamaño de carga, el mantenimiento de los paquetes de actualización del sistema operativo y de imágenes del sistema operativo quita la versión anterior.  
 
 ##  <a name="BKMK_OSImageMulticast"></a> Preparación de la imagen de sistema operativo para implementaciones de multidifusión  
  Use las implementaciones de multidifusión para permitir que varios equipos descarguen una imagen de sistema operativo simultáneamente. El punto de distribución envía la imagen mediante multidifusión a los clientes en vez de enviar una copia de la imagen a cada cliente a través de una conexión independiente. Al elegir el método de implementación de sistema operativo [Usar multidifusión para implementar Windows a través de la red](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md), debe configurar el paquete de imágenes de sistema operativo para que admita la multidifusión antes de distribuir la imagen de sistema operativo a un punto de distribución habilitado para multidifusión. Utilice el siguiente procedimiento para establecer las opciones de multidifusión para un paquete de imágenes de sistema operativo existente.  

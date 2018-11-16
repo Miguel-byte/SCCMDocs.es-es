@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: a99983583aa8c21f8a987f3e20550752e7b77ba4
-ms.sourcegitcommit: 83806460b6fd88a1d08a2c97f4d72b9e36e04102
+ms.openlocfilehash: 1791217e22e2bcc6d5fd2603abee3aaced816afe
+ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39495567"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223745"
 ---
 # <a name="co-management-for-windows-10-devices"></a>Administración conjunta para dispositivos de Windows 10    
 
@@ -72,7 +72,7 @@ Uso inmediato de las siguientes características de Intune:
 
  - Los dispositivos Windows 10 deben estar unidos a Azure AD. Pueden ser cualquiera de los siguientes tipos:  
 
-     - [Azure híbrido unido a AD](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup), donde el dispositivo está unido a Azure AD y el dominio local  
+     - [Unido a Azure AD híbrido](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup), en el que el dispositivo está unido a Active Directory local y registrado con Azure Active Directory.
 
      - Solo unido a Azure AD. (Este tipo se conoce a veces como "unido al dominio en la nube")<!--SCCMDocs issue 605-->
 
