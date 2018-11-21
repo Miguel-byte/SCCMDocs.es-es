@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 91ebb0c35687b231a6f08b7bc92cccb83cf0e602
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 490e5a614a98633629df98abcd554b02cec1261a
+ms.sourcegitcommit: ae03ad403b1732a5a61dec981e3a3010a0f09188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344694"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51860253"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>Instalación y asignación de clientes Windows 10 para Configuration Manager mediante la autenticación basada en Azure AD
 
@@ -41,9 +41,7 @@ Para instalar el cliente de Configuration Manager en dispositivos Windows 10 med
 
 - Además de los [requisitos previos existentes](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012MPpreq) para el rol de sistema de sitio del punto de administración, habilite también **ASP.NET 4.5** en este servidor. Incluya las demás opciones que se seleccionen automáticamente al habilitar ASP.NET 4.5.  
 
-- Configure todos los puntos de administración para el modo HTTPS. Para obtener más información, vea [Requisitos de certificados PKI ](/sccm/core/plan-design/network/pki-certificate-requirements) e [Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
-    - Si está usando Cloud Management Gateway, solo necesitará configurar HTTPS para los puntos de administración que habilite para Cloud Management Gateway.
-    - Si va a implementar clientes en la intranet mediante la autenticación basada en tokens de Azure AD, deberá habilitar para HTTPS todos los puntos de administración con los que puedan ponerse en contacto estos clientes. 
+- Determine si su punto de administración necesita HTTPS. Para obtener más información, vea [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps) (Habilitar el punto de administración para HTTPS).  
 
 - Opcionalmente, configure una instancia de [Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) (CMG) para implementar clientes basados en Internet. Para los clientes locales que se autentican con Azure AD, no necesita CMG.  
 

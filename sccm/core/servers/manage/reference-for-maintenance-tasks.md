@@ -10,12 +10,12 @@ ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5492382afdb523846fcdd40b68d498730073eb7e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f8450308f0719903bc4b3f74d6c2ab1ca5e17c59
+ms.sourcegitcommit: e0209e4549e9828eb74089313dbee323ece1fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342450"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598621"
 ---
 # <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>Referencia de tareas de mantenimiento para System Center Configuration Manager
 
@@ -120,7 +120,7 @@ En este tema se describen los detalles de las tareas de mantenimiento del sitio 
 
 **Eliminar dispositivos inscritos antiguos**: a partir de la actualización de 1602, esta tarea está deshabilitada de forma predeterminada. Puede usar esta tarea para eliminar de la base de datos del sitio los datos antiguos sobre dispositivos móviles que no han enviado información al sitio durante un tiempo especificado.
 
-Esta tarea se aplica en dispositivos inscritos con Microsoft Intune (híbrido) o con la administración de dispositivos móviles local de Configuration Manager. Para obtener más información sobre los sistemas operativos de los dispositivos inscritos con Configuration Manager o Intune, consulte la sección [Dispositivos móviles inscritos por Microsoft Intune](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mobile-devices-enrolled-by-microsoft-intune) de [Sistemas operativos compatibles con dispositivos y clientes de System Center Configuration Manager](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
+Esta tarea se aplica en dispositivos inscritos con Microsoft Intune (híbrido) o con la administración de dispositivos móviles local de Configuration Manager. Para más información, vea [Sistemas operativos compatibles con clientes y dispositivos](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#bkmk_OnpremOS).
 
 -   Sitio de administración central: no disponible    
 -   **Sitio primario**: no habilitado    
@@ -217,7 +217,7 @@ Esta tarea solo funciona en los recursos que son clientes de Configuration Manag
 -   **Sitio primario**: no habilitado    
 -   Sitio secundario: no disponible  
 
-**Eliminar alertas obsoletas**: use esta tarea para eliminar de la base de datos las alertas expiradas almacenadas durante más tiempo del especificado. Para obtener más información, consulte [Use alerts and the status system for System Center Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md) (Usar alertas y el sistema de estado para System Center Configuration Manager).  
+**Eliminar alertas obsoletas**: use esta tarea para eliminar de la base de datos las alertas expiradas almacenadas durante más tiempo del especificado. Para obtener más información, consulte [Usar alertas y el sistema de estado para System Center Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md).  
 
 -   **Sitio de administración central**: habilitado    
 -   **Sitio primario**: habilitado    

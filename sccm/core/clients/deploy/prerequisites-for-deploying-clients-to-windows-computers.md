@@ -10,12 +10,12 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 025edee312e1c67eba9f9e4f812b03806f51dbbb
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 11474f54aaf7a9afe13d411b0dd469abb1eef963
+ms.sourcegitcommit: c2c44329f1f9a2e6c14095360b4fc4aafabc27f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384321"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694950"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>Requisitos previos para la implementación de clientes en equipos Windows con Configuration Manager
 
@@ -60,7 +60,7 @@ Si el cliente requiere estas dependencias para completar la instalación, las in
 |Microsoft Policy Platform 1.2.3514.0|Necesaria para permitir a los clientes evaluar la configuración de la conformidad.|  
 |Microsoft Silverlight 5.1.41212.0|Necesario para admitir la experiencia de usuario del sitio web del catálogo de aplicaciones. A partir de Configuration Manager 1802, el cliente no instala Silverlight de manera automática. La funcionalidad principal del Catálogo de aplicaciones ahora se incluye en el Centro de software. La compatibilidad con el sitio web del catálogo de aplicaciones finaliza en la versión 1806.<!--1356195-->|  
 |Microsoft .NET Framework versión 4.5.2.|Necesario para admitir las operaciones de cliente. Se instala automáticamente en el equipo cliente si este no tiene instalado Microsoft .NET Framework versión 4.5 o posterior. Para más información, consulte [Detalles adicionales sobre la versión 4.5.2 de Microsoft .NET Framework](#dotNet).|  
-|Componentes de Microsoft SQL Server Compact 3.5 SP2|Necesarios para almacenar información relacionada con las operaciones de cliente.|  
+|Componentes de Microsoft SQL Server Compact 4.0 SP1|Necesarios para almacenar información relacionada con las operaciones de cliente.|  
 
 
 ####  <a name="dotNet"></a> Detalles adicionales sobre la versión 4.5.2 de Microsoft .NET Framework  

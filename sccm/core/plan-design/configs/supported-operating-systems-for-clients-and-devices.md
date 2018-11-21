@@ -2,7 +2,7 @@
 title: Dispositivos y clientes compatibles
 titleSuffix: Configuration Manager
 description: Obtenga información sobre qué versiones de SO admite Configuration Manager para clientes y dispositivos.
-ms.date: 08/21/2018
+ms.date: 10/02/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8abe612272dd8a48a23ffdcb945aa7b6766afdb9
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: 82fd328d65e67df2506f31679ed3c1b3abc1262c
+ms.sourcegitcommit: e0209e4549e9828eb74089313dbee323ece1fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586409"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598604"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Versiones de SO admitidas para clientes y dispositivos de Configuration Manager
 
@@ -33,10 +33,24 @@ ms.locfileid: "42586409"
 
 ##  <a name="windows-computers"></a>Equipos Windows  
 
- Use el cliente que se incluye con Configuration Manager para administrar las siguientes versiones del sistema operativo Windows. Para obtener más información, consulte [Cómo implementar clientes en equipos Windows](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).  
+ Para administrar las siguientes versiones del sistema operativo Windows, use el cliente que se incluye con Configuration Manager. Para obtener más información, consulte [Cómo implementar clientes en equipos Windows](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).  
 
 
-### <a name="supported-os-versions"></a>Versiones de SO admitidas  
+### <a name="supported-client-os-versions"></a>Versiones compatibles del sistema operativo de cliente
+
+-   **Windows 10**  
+
+    Para obtener información más detallada, vea [Compatibilidad con Windows 10](/sccm/core/plan-design/configs/support-for-windows-10).  
+
+-   **Windows 8.1** (x86, x64): Professional, Enterprise    
+
+-   **Windows 7 con SP1** (x86, x64): Professional, Enterprise y Ultimate    
+
+
+### <a name="supported-server-os-versions"></a>Versiones compatibles del sistema operativo del servidor
+
+-  **Windows Server 2019**: Standard, Datacenter <sup>[Nota 1](#bkmk_note1)</sup>  
+    (A partir de la versión 1806 de Configuration Manager)
 
 -  **Windows Server 2016**: Standard, Datacenter <sup>[Nota 1](#bkmk_note1)</sup>  
 
@@ -56,32 +70,30 @@ ms.locfileid: "42586409"
 
 -   **Windows Server 2008 with SP2** (x86, x64): Standard, Enterprise, Datacenter <sup>[Nota 1](#bkmk_note1)</sup>    
 
--   **Windows 10**  
 
-    Para obtener más información sobre las diferentes versiones de lanzamiento de Windows 10 que admiten las diferentes versiones de Configuration Manager, consulte [Compatibilidad con Windows 10](/sccm/core/plan-design/configs/support-for-windows-10).  
+#### <a name="server-core"></a>Server Core
+Las siguientes versiones se refieren específicamente a la instalación Server Core del sistema operativo. <sup>[Nota 3](#bkmk_note3)</sup>  
 
--   **Windows 8.1** (x86, x64): Professional, Enterprise    
+Las versiones de canal semestrales de Windows Server son instalaciones Server Core, por ejemplo, Windows Server, versión 1809. Como un cliente de Configuration Manager, se admiten de la misma forma que la versión de canal semestral de Windows 10 asociada. Para más información, vea [Compatibilidad con Windows 10](/sccm/core/plan-design/configs/support-for-windows-10).
 
--   **Windows 7 con SP1** (x86, x64): Professional, Enterprise y Ultimate    
 
--   **Instalación Server Core de Windows Server versión 1709** (x64) <sup>[Nota 2](#bkmk_note2)</sup> <sup>[Nota 3](#bkmk_note3)</sup>  
-    Esta versión del sistema operativo se admite a partir de la versión 1710 de Configuration Manager.  
+-   **Windows Server 2019** (x64) <sup>[Nota 2](#bkmk_note2)</sup>  
 
--   **La instalación Server Core de Windows Server 2016** (x64) <sup>[Nota 2](#bkmk_note2)</sup> <sup>[Nota 3](#bkmk_note3)</sup>  
+-   **Windows Server 2016** (x64) <sup>[Nota 2](#bkmk_note2)</sup>   
 
--   **La instalación Server Core de Windows Server 2012 R2** (x64) <sup>[Nota 2](#bkmk_note2)</sup> <sup>[Nota 3](#bkmk_note3)</sup>    
+-   **Windows Server 2012 R2** (x64) <sup>[Nota 2](#bkmk_note2)</sup>     
 
--   **La instalación Server Core de Windows Server 2012** (x64) <sup>[Nota 2](#bkmk_note2)</sup> <sup>[Nota 3](#bkmk_note3)</sup>    
+-   **Windows Server 2012** (x64) <sup>[Nota 2](#bkmk_note2)</sup>     
 
--   **La instalación Server Core de Windows Server 2008 R2** sin Service Pack, o con SP1 (x64) <sup>[Nota 3](#bkmk_note3)</sup>    
+-   **Windows Server 2008 R2** sin ningún Service Pack o con SP1 (x64)     
 
--   **La instalación Server Core de Windows Server 2008 SP2** (x86, x64) <sup>[Nota 3](#bkmk_note3)</sup>  
+-   **Windows Server 2008 SP2** (x86, x64)   
 
 #### <a name="bkmk_note1"></a> Nota 1
- Las versiones de Datacenter son compatibles pero no están certificadas para Configuration Manager. No se ofrece soporte técnico de revisiones para problemas específicos de Windows Server Datacenter Edition.  
+ Configuration Manager prueba y admite las ediciones de Windows Server Datacenter, pero está certificado oficialmente para Windows Server. No se ofrece soporte técnico de revisiones de Configuration Manager para problemas específicos de Windows Server Datacenter Edition. Para más información sobre el programa de certificación de Windows Server, vea [Windows Server Catalog](https://www.windowsservercatalog.com/). 
 
 #### <a name="bkmk_note2"></a> Nota 2
- Para admitir la instalación de inserción de cliente, el equipo que ejecuta esta versión del sistema operativo debe ejecutar el servicio de rol Servidor de archivos para el rol de servidor Servicios de archivos y almacenamiento. Para obtener más información sobre cómo instalar características de Windows en un equipo Server Core, consulte [Install roles, role services, and features by using Windows PowerShell cmdlets](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installwps) (Instalar roles, servicios de roles y características mediante los cmdlets de Windows PowerShell).  
+ Para admitir la [instalación de inserción de cliente](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation), agregue el servicio del servidor de archivos del rol del servidor de Servicios de archivos y almacenamiento. Para más información sobre cómo instalar características de Windows en Server Core, vea [Install roles, role services, and features by using Windows PowerShell cmdlets](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installwps) (Instalar roles, servicios de roles y características mediante los cmdlets de Windows PowerShell).  
 
 #### <a name="bkmk_note3"></a> Nota 3
  No se admite la nueva aplicación de Centro de Software en ninguna versión de Windows Server Core.<!--SCCMDocs issue 683-->
@@ -107,8 +119,6 @@ ms.locfileid: "42586409"
 
 -   El catálogo de aplicaciones no es compatible con ningún dispositivo de Windows Embedded.  
 
--   Para poder supervisar malware detectado en dispositivos de Windows Embedded basados en Windows XP, debe instalar el paquete de scripting de WMI de Microsoft Windows en el dispositivo. Use Windows Embedded Target Designer para instalar este paquete. Los archivos **WBEMDISP.DLL** y **WBEMDISP.TLB** deben existir y registrarse en la carpeta **%windir%\System32\WBEM** del dispositivo incrustado para garantizar que se informa sobre el malware detectado.  
-
 
 ### <a name="supported-os-versions"></a>Versiones de SO admitidas  
 
@@ -126,21 +136,6 @@ ms.locfileid: "42586409"
 -   **Windows Embedded POSReady 7** (x86, x64)    
 
 -   **Windows Embedded Standard 7 con SP1** (x86, x64)    
-
-
-### <a name="unsupported-os-versions"></a>Versiones de SO no admitidas
-
-Las siguientes versiones de sistema operativo se basan en Windows XP Embedded. A partir de la versión 1702, no se admiten estas versiones de sistema operativo incrustadas. Para obtener más información, consulte [Sistemas operativos de cliente en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client#deprecated-client-operating-systems).  
-
--   **WEPOS 1.1 con SP3** (x86)    
-
--   **Windows Embedded POSReady 2009** (x86)    
-
--   **Windows Fundamentals para equipos heredados (WinFLP)** (x86)    
-
--   **Windows XP Embedded SP3** (x86)    
-
--   **Windows Embedded Standard 2009** (x86)  
 
 
 
@@ -328,15 +323,6 @@ Las siguientes versiones se admiten mediante el archivo .tar indicado.
 
 
 
-##  <a name="mobile-devices-enrolled-by-microsoft-intune"></a>Dispositivos móviles inscritos por Microsoft Intune  
-
- Para obtener más información sobre los equipos y dispositivos que puede administrar al integrar Microsoft Intune con Configuration Manager, vea los artículos siguientes en la biblioteca de documentación de Microsoft Intune:  
-
--   [Capacidades de administración de dispositivos móviles en Microsoft Intune](https://docs.microsoft.com/intune/get-started/choose-how-to-manage-devices)  
--   [Funciones de administración de equipos Windows en Microsoft Intune](https://docs.microsoft.com/intune/get-started/windows-pc-management-capabilities-in-microsoft-intune)  
-
-
-
 ##  <a name="bkmk_OnpremOS"></a> Administración local de dispositivos móviles  
 
  Configuration Manager tiene características integradas para administrar dispositivos locales sin instalar el software cliente. Para obtener más información, consulte [Administrar dispositivos móviles con la infraestructura local](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure).  
@@ -368,7 +354,7 @@ Las siguientes versiones se admiten mediante el archivo .tar indicado.
 
 ##  <a name="bkmk_ExSrvConOS"></a> Conector de Exchange Server  
 
-Configuration Manager admite la administración limitada de dispositivos que se conectan a Exchange Server sin instalar el cliente de Configuration Manager. Para obtener más información, consulte [Administrar dispositivos móviles mediante System Center Configuration Manager y Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
+Configuration Manager admite la administración limitada de dispositivos que se conectan a Exchange Server sin instalar el cliente de Configuration Manager. Para obtener más información, consulte [Administrar dispositivos móviles mediante System Center Configuration Manager y Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
 
 
 ### <a name="supported-versions-of-exchange-server"></a>Versiones admitidas de Exchange Server
