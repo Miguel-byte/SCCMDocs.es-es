@@ -1,6 +1,6 @@
 ---
 title: Creación e implementación de directivas de Protección de aplicaciones de Windows Defender
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: Creación e implementación de directivas de Protección de aplicaciones de Windows Defender.
 ms.date: 03/22/2018
 ms.prod: configuration-manager
@@ -10,17 +10,16 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e7f0a1ccb71abb2fec27e0430bd4195dc85aceae
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 82423914b1d1f5cae8fa4ecea3d02ef02d23703a
+ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348079"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52258917"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Creación e implementación de directivas de Protección de aplicaciones de Windows Defender 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
-<!-- 1351960 -->
-Puede crear e implementar directivas de [Protección de aplicaciones de Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) utilizando Configuration Manager Endpoint Protection. Estas directivas ayudan a proteger a los usuarios al abrir los sitios web que no sean de confianza en un contenedor aislado seguro al que no puedan tener acceso otras partes del sistema operativo.
+*Se aplica a: System Center Configuration Manager (rama actual)* 
+ <!-- 1351960 --> puede crear e implementar [Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) directivas utilizando el punto de conexión de Configuration Manager protección. Estas directivas ayudan a proteger a los usuarios al abrir los sitios web que no sean de confianza en un contenedor aislado seguro al que no puedan tener acceso otras partes del sistema operativo.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
