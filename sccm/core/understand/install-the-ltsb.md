@@ -10,12 +10,12 @@ ms.assetid: f4f9a5fd-f573-4b99-ad93-b2c76812e922
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e0a4369e9c302c687f15b29b0daafbf4329e22a5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 7d6b957ebcc19dfe8c14dd781f71678db8e160af
+ms.sourcegitcommit: 1a1bac2d5ee0f20ce565d29798ee4dd99aaca044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342314"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281913"
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>Instalar y actualizar con el medio de línea base de la versión 1606 para System Center Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "32342314"
 
 Cuando ejecute el programa de instalación del medio de línea base de la versión 1606 de Configuration Manager, puede instalar la rama de mantenimiento a largo plazo o un sitio de rama actual de System Center Configuration Manager.
 
-El medio de línea base está disponible en DVD como parte de Microsoft System Center 2016 o desde una versión de System Center Configuration Manager (Rama actual y Rama de mantenimiento a largo plazo 1606). Para obtener información sobre el medio de línea base, consulte [Versiones de actualización y línea base](/sccm/core/servers/manage/updates#baseline-and-udpate-versions).
+El medio de línea base está disponible en DVD como parte de Microsoft System Center 2016 o desde una versión de System Center Configuration Manager (Rama actual y Rama de mantenimiento a largo plazo 1606). Para obtener información sobre el medio de línea base, consulte [Versiones de actualización y línea base](../servers/manage/updates.md#bkmk_Baselines).
 
 
 Cuando use el medio de línea base de la versión 1606, el sitio que instala o al que actualiza es:
