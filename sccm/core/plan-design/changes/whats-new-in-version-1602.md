@@ -1,6 +1,6 @@
 ---
 title: Novedades de la versión 1602
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: Obtenga detalles sobre los cambios y las nuevas funciones introducidas en la versión 1602 de System Center Configuration Manager.
 ms.date: 12/30/2016
 ms.prod: configuration-manager
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: cdc8797d436e50c60f17d4c26c802465608bb26a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c6d085fd33513a32207a3b9acfdfe6fe91657a88
+ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338591"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52259053"
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>Novedades de la versión 1602 de System Center Configuration Manager
 
