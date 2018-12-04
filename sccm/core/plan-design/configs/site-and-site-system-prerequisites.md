@@ -10,12 +10,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4ba23a42acb111f4ed7d0337552b2ea90b0268d6
-ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
+ms.openlocfilehash: 00789c0c469e7de5ccd0b4dcac4130fdb14bb485
+ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448929"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52820125"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Sitio y requisitos previos de sistema de sitio para Configuration Manager
 
@@ -416,7 +416,13 @@ Para obtener más información, vea [Instalación y configuración de puntos de 
 
 
 
-##  <a name="bkmk_2012FSPpreq"></a> Punto de estado de reserva  
+##  <a name="bkmk_2012FSPpreq"></a> Punto de estado de reserva 
+
+#### <a name="windows-server-roles-and-features"></a>Roles y características de Windows Server 
+
+-   Las extensiones de servidor BITS (y las opciones seleccionadas automáticamente) o los servicios de transferencia inteligente en segundo plano (BITS) (y las opciones seleccionadas automáticamente) 
+
+#### <a name="iis-configuration"></a>Configuración de IIS 
 
 Se requiere la configuración de IIS predeterminada con las siguientes adiciones:  
 

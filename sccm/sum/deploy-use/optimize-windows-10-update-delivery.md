@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 801cd2cd35d370fbe469b16613da7f7592feff6e
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 6fb655ae6094d7c764f2c3d0b84a505e9dfda3d2
+ms.sourcegitcommit: 9f02f21fbd4324ee8cc1af2d56db67c9c2fce969
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893815"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52709940"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Optimización de la distribución de actualizaciones de Windows 10 con Configuration Manager
 
@@ -88,7 +88,7 @@ La selección de la tecnología correcta de almacenamiento en la memoria caché 
 | Compatibilidad de contenido parcial | Sí | Solo para Office 365 y las actualizaciones rápidas | Sí |
 | Control del tamaño en disco de la caché | Sí | Sí | Sí |
 | Detección de un origen del mismo nivel | Automática | Manual (configuración de agente de cliente) | Automática |
-| Detección de elemento del mismo nivel | Mediante el servicio en la nube Optimización de distribución (requiere acceso a Internet) | Mediante el punto de administración (basado en los grupos de límites del cliente) | Difusión |
+| Detección de elemento del mismo nivel | Mediante el servicio en la nube Optimización de distribución (requiere acceso a Internet) | Mediante el punto de administración (basado en los grupos de límites del cliente) | Multidifusión |
 | Generación de informes | Sí (usar Windows Analytics) | Panel de orígenes de datos de cliente de ConfigMgr | Panel de orígenes de datos de cliente de ConfigMgr |
 | Control del uso de WAN | Sí (nativo, puede controlarse mediante la configuración de la directiva de grupo) | Grupos de límites | Solo compatibilidad de subred |
 | Tipos de contenido admitidos | - Actualizaciones rápidas (mediante ConfigMgr)</br> - Actualizaciones de Windows y de seguridad</br> - Controladores</br> - Aplicaciones de la Tienda Windows</br> - Aplicaciones empresariales de la Tienda Windows | Todos los tipos de contenido de ConfigMgr, incluidas las imágenes descargadas en [Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic) | Todos los tipos de contenido de ConfigMgr, salvo las imágenes |
