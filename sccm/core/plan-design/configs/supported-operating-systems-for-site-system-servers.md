@@ -2,7 +2,7 @@
 title: Servidores de sistema de sitio admitidos
 titleSuffix: Configuration Manager
 description: Obtenga información sobre qué versiones de Windows puede usar para hospedar un sitio o rol de sistema de sitio de Configuration Manager.
-ms.date: 10/02/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3fd8e815ab57730ad2186a7e75cd51f21012383a
-ms.sourcegitcommit: 265d38d55ca0db043e3a7131a56f123e1d98aa5b
+ms.openlocfilehash: 4aba91b232a187a72bbc2ea10f32a14a377a3870
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236181"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456862"
 ---
 # <a name="supported-operating-systems-for-configuration-manager-site-system-servers"></a>Sistemas operativos compatibles con servidores de sistema de sitio de Configuration Manager
 
@@ -32,9 +32,46 @@ Use la información de este artículo con la información de los artículos sigu
 
 
 
-## <a name="bkmk_2016"></a> Windows Server 2016: Standard y Datacenter
+## <a name="bkmk_2019"></a> Windows Server 2019
 
-Con el paquete acumulativo de actualizaciones 1 para Configuration Manager versión 1606 ([KB3186654](https://support.microsoft.com/help/3186654)), se admite esta versión de sistema operativo para estos roles:
+*Se aplica a Windows Server 2019: Standard y Datacenter* 
+
+A partir de la versión 1810, se admite esta versión de sistema operativo en los siguientes roles:
+
+#### <a name="site-servers"></a>Servidores de sitio
+
+-   Sitio de administración central  
+-   Sitio primario  
+-   Sitio secundario  
+
+#### <a name="site-system-servers"></a>Servidores de sistema de sitio
+
+-   Punto de servicio web del catálogo de aplicaciones  
+-   Punto de sitios web del catálogo de aplicaciones  
+-   Punto de sincronización de Asset Intelligence  
+-   Punto de registro de certificados  
+-   Punto de conexión de Cloud Management Gateway  
+-   Punto de servicio de almacenamiento de datos  
+-   Punto de distribución <sup>[Nota 1](#bkmk_note1)</sup>  
+-   Punto de Endpoint Protection  
+-   Punto de inscripción  
+-   Punto de proxy de inscripción  
+-   Punto de estado de reserva  
+-   Punto de administración
+-   Punto de servicios de informes  
+-   Punto de conexión de servicio  
+-   Servidor de base de datos del sitio <sup>[Nota 2](#bkmk_note2)</sup>  
+-   SMS_Provider  
+-   Punto de actualización de software  
+-   Punto de migración de estado
+
+
+
+## <a name="bkmk_2016"></a> Windows Server 2016
+
+*Se aplica a Windows Server 2016: Standard y Datacenter*
+
+Esta versión de sistema operativo se admite en los siguientes roles:
 
 #### <a name="site-servers"></a>Servidores de sitio
 
@@ -73,7 +110,9 @@ Con el paquete acumulativo de actualizaciones 1 para Configuration Manager versi
 
 
 
-## <a name="bkmk_2012r2"></a> Windows Server 2012 R2 (x64): Standard y Datacenter  
+## <a name="bkmk_2012r2"></a> Windows Server 2012 R2 
+
+*Se aplica a Windows Server 2012 R2: Standard y Datacenter*
 
 #### <a name="site-servers"></a>Servidores de sitio
 
@@ -104,7 +143,9 @@ Con el paquete acumulativo de actualizaciones 1 para Configuration Manager versi
 
 
 
-## <a name="bkmk_2012"></a> Windows Server 2012 (x64): Standard y Datacenter  
+## <a name="bkmk_2012"></a> Windows Server 2012  
+
+*Se aplica a Windows Server 2012: Standard y Datacenter*
 
 #### <a name="site-servers"></a>Servidores de sitio
 
@@ -135,7 +176,9 @@ Con el paquete acumulativo de actualizaciones 1 para Configuration Manager versi
 
 
 
-## <a name="bkmk_2008r2sp1"></a> Windows Server 2008 R2 con SP1 (x64): Standard, Enterprise y Datacenter  
+## <a name="bkmk_2008r2sp1"></a> Windows Server 2008 R2 con SP1   
+
+*Se aplica a Windows Server 2008 R2 con Service Pack 1: Standard, Enterprise y Datacenter*
 
 Windows Server 2008 R2 tiene ahora soporte extendido y ya no está dentro del soporte estándar, tal y como se detalla en el [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle). Para obtener más información sobre la compatibilidad futura de estos sistemas operativos como servidores de sistema de sitio con Configuration Manager, consulte [Deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems) (Sistemas operativos de servidor en desuso).  
 
@@ -148,11 +191,13 @@ Este sistema operativo no es compatible con servidores de sitio o la mayoría de
 
 
 
-## <a name="bkmk_2008sp2"></a> Windows Server 2008 con SP2 (x86, x64): Standard, Enterprise y Datacenter  
+## <a name="bkmk_2008sp2"></a> Windows Server 2008 con SP2  
 
-Windows Server 2008 tiene ahora soporte extendido y ya no está dentro del soporte estándar, tal y como se detalla en el [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle). Para obtener más información sobre la compatibilidad futura de estos sistemas operativos como servidores de sistema de sitio con Configuration Manager, consulte [Deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems) (Sistemas operativos de servidor en desuso).  
+*Se aplica a Windows Server 2008 con Service Pack 2 (x86, x64): Standard, Enterprise y Datacenter*
 
-Este sistema operativo no se admite para servidores de sitio o roles del sistema de sitio, excepto para el punto de distribución y el punto de distribución de extracción. Siga usando este sistema operativo como un punto de distribución hasta que se anuncie que esta compatibilidad queda obsoleta, o bien expire el período extendido de soporte técnico de este sistema operativo. Para más información, vea [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095) (La instalación de System Center Configuration Manager CB y LTBS produce un error en Windows Server 2008).
+Windows Server 2008 con Service Pack 2 (SP2) tiene ahora soporte extendido y ya no está dentro del soporte estándar, tal y como se detalla en [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle). Para obtener más información sobre la compatibilidad futura de estos sistemas operativos como servidores de sistema de sitio con Configuration Manager, consulte [Deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems) (Sistemas operativos de servidor en desuso).  
+
+Este sistema operativo no se admite para servidores de sitio o roles del sistema de sitio, excepto para el punto de distribución y el punto de distribución de extracción. Siga usando este sistema operativo como un punto de distribución hasta que se anuncie que esta compatibilidad queda obsoleta, o bien expire el período extendido de soporte técnico de este sistema operativo. Para más información, vea [Installation of Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095) (La instalación de Configuration Manager CB y LTBS produce un error en Windows Server 2008).
 
 #### <a name="site-system-servers"></a>Servidores de sistema de sitio
 -   Punto de distribución <sup>[Nota 1](#bkmk_note1)</sup>  
@@ -163,88 +208,34 @@ Este sistema operativo no se admite para servidores de sitio o roles del sistema
 
 
 
-## <a name="bkmk_win10"></a> Windows 10 (x86, x64): Pro y Enterprise  
+## <a name="bkmk_client"></a> Versiones de sistema operativo del cliente
 
-#### <a name="site-system-servers"></a>Servidores de sistema de sitio
+Las siguientes versiones de sistema operativo de cliente se pueden usar como **punto de distribución** <sup>[Nota 1](#bkmk_note1)</sup>:  
 
--   Punto de distribución <sup>[Nota 1](#bkmk_note1)</sup>  
+- Windows 10 (x86, x64): Pro y Enterprise
+- Windows 8.1 (x86, x64): Professional y Enterprise
+- Windows 7 con SP1 (x86, x64): Professional, Enterprise y Ultimate
 
-    -   Los puntos de distribución de este sistema operativo no son compatibles para el entorno PXE con los Servicios de implementación de Windows predeterminados. A partir de la versión 1806, puede habilitar para el entorno PXE un punto de distribución de este sistema operativo con la opción **Habilitar un respondedor PXE sin Servicios de implementación de Windows**. Para obtener más información, vea [Instalación y configuración de puntos de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
+Esta compatibilidad tiene las siguientes limitaciones:  
 
-    -   Los puntos de distribución en esta versión del sistema operativo no son compatibles con multidifusión.  
-
-
-
-## <a name="bkmk_win81"></a> Windows 8.1 (x86, x64): Professional y Enterprise  
-
-#### <a name="site-system-servers"></a>Servidores de sistema de sitio
-
--   Punto de distribución <sup>[Nota 1](#bkmk_note1)</sup>  
-
-    -   Los puntos de distribución de este sistema operativo no son compatibles para el entorno PXE con los Servicios de implementación de Windows predeterminados. A partir de la versión 1806, puede habilitar para el entorno PXE un punto de distribución de este sistema operativo con la opción **Habilitar un respondedor PXE sin Servicios de implementación de Windows**. Para obtener más información, vea [Instalación y configuración de puntos de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
-
-    -   Los puntos de distribución en esta versión del sistema operativo no son compatibles con multidifusión.  
+- Los puntos de distribución de este sistema operativo no admiten el entorno PXE ni multidifusión con los Servicios de implementación de Windows predeterminados. A partir de la versión 1806, puede habilitar para el entorno PXE un punto de distribución de este sistema operativo con la opción **Habilitar un respondedor PXE sin Servicios de implementación de Windows**. Para obtener más información, vea [Instalación y configuración de puntos de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
 
 
 
-## <a name="bkmk_win7sp1"></a> Windows 7 con SP1 (x86, x64): Professional, Enterprise y Ultimate  
+## <a name="bkmk_core"></a> Instalaciones de Server Core
 
-#### <a name="site-system-servers"></a>Servidores de sistema de sitio
+La instalación de Server Core de las siguientes versiones de sistema operativo de servidor se puede usar como **punto de distribución**: 
 
--   Punto de distribución <sup>[Nota 1](#bkmk_note1)</sup>  
+- Windows Server, versión 1809 (a partir de la versión 1810 de Configuration Manager)  
+- Windows Server, versión 1803 (a partir de la versión 1802 de Configuration Manager)  
+- Windows Server, versión 1709 (a partir de la versión 1710 de Configuration Manager)  
+- Windows Server 2016  
+- Windows Server 2012 R2  
+- Windows Server 2012  
 
-    -   Los puntos de distribución de este sistema operativo no son compatibles para el entorno PXE con los Servicios de implementación de Windows predeterminados. A partir de la versión 1806, puede habilitar para el entorno PXE un punto de distribución de este sistema operativo con la opción **Habilitar un respondedor PXE sin Servicios de implementación de Windows**. Para obtener más información, vea [Instalación y configuración de puntos de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
+Esta compatibilidad tiene las siguientes limitaciones:  
 
-    -   Los puntos de distribución en esta versión del sistema operativo no son compatibles con multidifusión.  
-
-
-
-## <a name="bkmk_core1803"></a> Instalación básica de Windows Server, versión 1803
-<!--503702--> A partir de Configuration Manager 1802, se admite [Windows Server, versión 1803](https://docs.microsoft.com/windows-server/get-started/get-started-with-1803) como punto de distribución con las limitaciones siguientes:  
-
-  -   Solo se admite la versión de 64 bits.  
-
-  -   Los puntos de distribución de este sistema operativo no admiten el entorno PXE ni multidifusión con los Servicios de implementación de Windows predeterminados. A partir de la versión 1806, puede habilitar para el entorno PXE un punto de distribución de este sistema operativo con la opción **Habilitar un respondedor PXE sin Servicios de implementación de Windows**. Para obtener más información, vea [Instalación y configuración de puntos de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
-
-
-
-## <a name="bkmk_core1709"></a> Instalación básica de Windows Server, versión 1709
-
-A partir de Configuration Manager 1710, se admite [Windows Server, versión 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709) como punto de distribución con las limitaciones siguientes:  
-
-  -   Solo se admite la versión de 64 bits.  
-
-  -   Los puntos de distribución de este sistema operativo no admiten el entorno PXE ni multidifusión con los Servicios de implementación de Windows predeterminados. A partir de la versión 1806, puede habilitar para el entorno PXE un punto de distribución de este sistema operativo con la opción **Habilitar un respondedor PXE sin Servicios de implementación de Windows**. Para obtener más información, vea [Instalación y configuración de puntos de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
-
-
-
-## <a name="bkmk_core2016"></a> Instalación básica de Windows Server 2016
-
-Con el paquete acumulativo de actualizaciones 1 para Configuration Manager versión 1606 ([KB3186654](https://support.microsoft.com/help/3186654)), se admite esta versión de sistema operativo para usarla como un punto de distribución con estas limitaciones:  
-
-  -   Solo se admite la versión de 64 bits.  
-
-  -   Los puntos de distribución de este sistema operativo no admiten el entorno PXE ni multidifusión con los Servicios de implementación de Windows predeterminados. A partir de la versión 1806, puede habilitar para el entorno PXE un punto de distribución de este sistema operativo con la opción **Habilitar un respondedor PXE sin Servicios de implementación de Windows**. Para obtener más información, vea [Instalación y configuración de puntos de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
-
-
-
-## <a name="bkmk_core2012r2"></a> Instalación básica de Windows Server 2012 R2  
-
-La instalación de Server Core de Windows Server 2012 R2 se puede usar como punto de distribución con las limitaciones siguientes:  
-
--   Solo se admite la versión de 64 bits.
-
--   Los puntos de distribución de este sistema operativo no admiten el entorno PXE ni multidifusión con los Servicios de implementación de Windows predeterminados. A partir de la versión 1806, puede habilitar para el entorno PXE un punto de distribución de este sistema operativo con la opción **Habilitar un respondedor PXE sin Servicios de implementación de Windows**. Para obtener más información, vea [Instalación y configuración de puntos de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
-
-
-
-## <a name="bkmk_core2012"></a> Instalación básica de Windows Server 2012  
-
-La instalación de Server Core de Windows Server 2012 se puede usar como punto de distribución con las limitaciones siguientes:  
-
--   Solo se admite la versión de 64 bits.  
-
--   Los puntos de distribución de este sistema operativo no admiten el entorno PXE ni multidifusión con los Servicios de implementación de Windows predeterminados. A partir de la versión 1806, puede habilitar para el entorno PXE un punto de distribución de este sistema operativo con la opción **Habilitar un respondedor PXE sin Servicios de implementación de Windows**. Para obtener más información, vea [Instalación y configuración de puntos de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).
+- Los puntos de distribución de este sistema operativo no admiten el entorno PXE ni multidifusión con los Servicios de implementación de Windows predeterminados. A partir de la versión 1806, puede habilitar para el entorno PXE un punto de distribución de este sistema operativo con la opción **Habilitar un respondedor PXE sin Servicios de implementación de Windows**. Para obtener más información, vea [Instalación y configuración de puntos de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
 
 
 
