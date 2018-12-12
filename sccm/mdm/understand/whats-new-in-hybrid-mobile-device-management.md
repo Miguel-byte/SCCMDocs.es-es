@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c637703fc65b6d867dd1670ff40abc8214e6d234
-ms.sourcegitcommit: 4f34250aa850f13f415b7afe975a033d6a00fa9d
+ms.openlocfilehash: 6ecc3f47b908678b1849e16c2cb2053f100a655a
+ms.sourcegitcommit: 2491fbe98915b7a30c2422a371c929d0d4ebf22f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52978629"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53247533"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con Configuration Manager y Microsoft Intune
 
@@ -489,7 +489,7 @@ Solicite a los usuarios finales en Windows 10 versión 1607 o posterior que actu
     <!-- 1132468 -->     
 
 - **Detalles para los usuarios finales sobre qué información del dispositivo se puede ver para iOS**   
-    Se ha agregado   **Tipo de propiedad** a la pantalla Detalles del dispositivo en la aplicación Portal de empresa para iOS. Esta información permitirá que los usuarios obtengan más información sobre la privacidad directamente en los documentos para el usuario final de Intune. También se puede encontrar esta información en la pantalla Acerca de. 
+    Hemos agregado **el tipo de propiedad** en la pantalla de detalles del dispositivo en la aplicación de Portal de empresa para iOS. Esta información permitirá que los usuarios obtengan más información sobre la privacidad directamente en los documentos para el usuario final de Intune. También se puede encontrar esta información en la pantalla Acerca de. 
     <!--739894-->    
 
 - **Frases más fáciles de comprender en la aplicación Portal de empresa para Android**   
