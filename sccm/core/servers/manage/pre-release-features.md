@@ -2,7 +2,7 @@
 title: Características de la versión preliminar
 titleSuffix: Configuration Manager
 description: Las características de versión preliminar son características que se encuentran en la Rama actual para realizar las primeras pruebas en un entorno de producción.
-ms.date: 10/24/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e3b3b31c31725c6b9931d0c2cc67324c4b39f974
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 6fb24c3e262f3d1f3991ab549592e3f21631b32d
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411143"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456144"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Características de versión preliminar en Configuration Manager
 
@@ -75,25 +75,27 @@ Al habilitar una característica de versión preliminar, el Administrador de jer
 
 | Característica          | Agregado como versión preliminar | Agregado como característica completa |  
 |------------------|----------------------|-------------------------|
-| Sistema de sitios HTTP mejorado<!--1356889,1358228-->|[Versión 1806](/sccm/core/plan-design/hierarchy/enhanced-http)|![Todavía no](media/red_x.png)|
-| Aplicaciones móviles para dispositivos administrados conjuntamente<!--1357892-->|[Versión 1806](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune)|![Todavía no](media/red_x.png)|
-| Administrador de conversión de paquetes<!--1357861-->|[Versión 1806](/sccm/apps/pcm/package-conversion-manager)|![Todavía no](media/red_x.png)|
-| Soporte para Cisco AnyConnect 4.0.07x y versiones posteriores para iOS<!--1357393-->|[Versión 1802](/sccm/mdm/deploy-use/create-vpn-profiles)| [Versión 1802 con la actualización 4163547](/sccm/mdm/deploy-use/create-vpn-profiles) |
-| Implementaciones por fases <!--1356837-->|[Versión 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|[Versión 1806](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|
-| Ejecutar paso de secuencia de tareas <!-- 1261338 --> |  [Versión 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |[Versión 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence)|
-| Windows Defender Exploit Guard <!-- 1355468 --> |  [Versión 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |[Versión 1802](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)|
-| Evaluación de la Atestación de mantenimiento del dispositivo para las directivas de cumplimiento en el acceso condicional <!-- 1235616 --> |  [Versión 1710](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) |[Versión 1802](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)|
-| Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager <!-- 1236459 --> |  [Versión 1706](/sccm/apps/deploy-use/create-deploy-scripts)|[Versión 1802](/sccm/apps/deploy-use/create-deploy-scripts)|
-| Administración de actualizaciones de controladores de Microsoft Surface <!-- 1098490 --> |  [Versión 1706](/sccm/sum/get-started/configure-classifications-and-products) | [Versión 1710](/sccm/sum/get-started/configure-classifications-and-products)|
-| Administración de Device Guard con Configuration Manager <!-- 1319346 --> |  [Versión 1702](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|![Todavía no](media/red_x.png)|
-| Almacenamiento en caché previa de contenido de secuencias de tareas <!-- 1021244 --> |  [Versión 1702](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) | [Versión 1710](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)|
-| Comprobación de los archivos ejecutables en ejecución antes de instalar una aplicación <!-- 1284624 --> |   [Versión 1702](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) |[Versión 1706](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application)|
-| Punto de servicio de almacenamiento de datos <!-- 1277922 --> |  [Versión 1702](/sccm/core/servers/manage/data-warehouse) |[Versión 1706](/sccm/core/servers/manage/data-warehouse)|
-| Almacenamiento en caché del mismo nivel para la distribución de contenido en los clientes <!-- 1101436 --> |  [Versión 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) | [Versión 1710](/sccm/core/plan-design/hierarchy/client-peer-cache)|
-| Puerta de enlace de administración en la nube <!-- 1101764 --> |  [Versión 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |[Versión 1802](/sccm/core/clients/manage/plan-cloud-management-gateway)|
-| Conector de Log Analytics <!-- 1236739 --> | [Versión 1606](/sccm/core/clients/manage/sync-data-log-analytics) |[Versión 1802](/sccm/core/clients/manage/sync-data-log-analytics)|
-| Mantenimiento de una recopilación compatible con clústeres (dar servicio a un grupo de servidores) <!-- 1081776 --> | [Versión 1602](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_ServerGroups)|![Todavía no](media/red_x.png)|
-| Acceso condicional para equipos administrados por System Center Configuration Manager <!--  --> | [Versión 1602](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)     | [Versión 1702](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)                     |
+| API del proveedor de SMS <!--1359052--> | Versión 1810 | ![Todavía no](media/red_x.png) |
+| [Sistema de sitios HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | Versión 1806 | Versión 1810 |
+| [Aplicaciones móviles para dispositivos administrados conjuntamente](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune) <!--1357892--> | Versión 1806 | ![Todavía no](media/red_x.png) |
+| [Administrador de conversión de paquetes](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | Versión 1806 | Versión 1810 |
+| [Compatibilidad con Cisco AnyConnect 4.0.07x y versiones posteriores para iOS](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | Versión 1802 | Versión 1802 <br>con la actualización 4163547 |
+| [Implementaciones por fases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | Versión 1802 | Versión 1806 |
+| [Ejecutar paso de secuencia de tareas](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338--> |  Versión 1710 | Versión 1802 |
+| [Windows Defender Exploit Guard](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468--> | Versión 1710 | Versión 1802 |
+| [Evaluación de la Atestación de mantenimiento del dispositivo para las directivas de cumplimiento en el acceso condicional](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616--> | Versión 1710 | Versión 1802 |
+| [Crear y ejecutar scripts de Windows PowerShell](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459--> | Versión 1706 | Versión 1802 |
+| [Administración de actualizaciones de controladores de Microsoft Surface](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490--> | Versión 1706 | Versión 1710 |
+| [Administración de Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) <!--1355092 (1319346)--> | Versión 1702 | ![Todavía no](media/red_x.png) |
+| [Almacenamiento en caché previa de contenido de secuencias de tareas](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244--> | Versión 1702 | Versión 1710 |
+| [Comprobación de los archivos ejecutables en ejecución antes de instalar una aplicación](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) <!--1284624--> | Versión 1702 | Versión 1706 |
+| [Punto de servicio de almacenamiento de datos](/sccm/core/servers/manage/data-warehouse) <!--1277922--> | Versión 1702 | Versión 1706 |
+| [Almacenamiento en caché del mismo nivel para la distribución de contenido en los clientes](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436--> | Versión 1610 | Versión 1710 |
+| [Cloud Management Gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) <!--1101764--> | Versión 1610 | Versión 1802 |
+| [Conector de Log Analytics de Azure](/sccm/core/clients/manage/sync-data-log-analytics) <!--1236739--> | Versión 1606 | Versión 1802 |
+| [Mantenimiento de una recopilación compatible con clústeres (dar servicio a un grupo de servidores)](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_ServerGroups) <!--1081776--> | Versión 1602 | ![Todavía no](media/red_x.png) |
+| [Acceso condicional para equipos administrados por Configuration Manager](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--  --> | Versión 1602 | Versión 1702 |
+
 <!--Image used = ![Not yet](media/red_x.png) -->
 
 > [!Tip]  

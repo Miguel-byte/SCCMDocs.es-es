@@ -10,12 +10,12 @@ ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5d7c967ce02c009cd9659c7956f7ca79f4a34faf
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: 03b34c09a5fef63316bb1d9d1a94dbbfc3ccf69f
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755979"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456267"
 ---
 # <a name="how-to-manage-collections-in-configuration-manager"></a>Administración de recopilaciones en Configuration Manager
 
@@ -73,40 +73,11 @@ Utilice la información de introducción de este artículo como ayuda para reali
 
 
 #### <a name="client-notification"></a>Notificación de cliente
- Indique a todos los clientes de la recopilación de dispositivos seleccionada que realicen inmediatamente una de las siguientes acciones:
-
- - **Descargar directiva de equipo**: actualice la directiva de dispositivos. Para obtener más información, vea [Iniciar la recuperación de directivas para un cliente de Configuration Manager](/sccm/core/clients/manage/manage-clients#BKMK_PolicyRetrieval).  
-
- - **Descargar directiva de usuario**: actualice la directiva de usuarios.  
-
- - **Recopilar datos de detección**: desencadene clientes para enviar un registro de datos de detección (DDR). Para obtener más información, vea [Heartbeat Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutHeartbeat) (Detección de latidos).  
-
- - **Recopilar inventario de software**: desencadene clientes para ejecutar un ciclo de inventario de software. Para obtener más información, vea [Introducción al inventario de software](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).  
-
- - **Recopilar inventario de hardware**: desencadene clientes para ejecutar un ciclo de inventario de hardware. Para obtener más información, vea [Introducción al inventario de hardware](/sccm/core/clients/manage/inventory/introduction-to-hardware-inventory).  
-
- - **Evaluar implementaciones de aplicaciones**: desencadene clientes para ejecutar un ciclo de evaluación de la implementación de aplicaciones. Para obtener más información, vea [Programar la reevaluación para implementaciones](/sccm/core/clients/deploy/about-client-settings#schedule-re-evaluation-for-deployments).  
-
- - **Evaluar implementaciones de actualizaciones de software**: desencadene clientes para ejecutar un ciclo de evaluación de la implementación de actualizaciones de software. Para obtener más información, vea [Introducción a las actualizaciones de software](/sccm/sum/understand/software-updates-introduction).  
-
- - **Cambiar al siguiente punto de actualización de Software**: desencadene clientes para cambiar al siguiente punto de actualización de software disponible. Para obtener más información, vea [Cambio de punto de actualización de software](/sccm/sum/plan-design/plan-for-software-updates#BKMK_SUPSwitching).  
-
- - **Evaluar atestación de estado de dispositivo**: desencadene clientes de Windows 10 para comprobar y enviar su estado de dispositivo más reciente. Para más información, vea [Atestación de estado](/sccm/core/servers/manage/health-attestation).  
-
- - **Comprobar el cumplimiento de acceso condicional**: desencadene clientes para comprobar su cumplimiento con el acceso condicional. Para obtener más información, consulte [Administración del acceso a servicios de O365](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
+ Para obtener más información, vea [Notificación de cliente](/sccm/core/clients/manage/client-notification).
 
 
 #### <a name="endpoint-protection"></a>Endpoint Protection
- Indique a todos los clientes de la recopilación de dispositivos seleccionada que realicen inmediatamente una de las siguientes acciones:
-
- - **Análisis completo**: desencadene Endpoint Protection o Windows Defender para ejecutar un examen antimalware *completo*.  
-
- - **Análisis rápido**: desencadene Endpoint Protection o Windows Defender para ejecutar un examen antimalware *rápido*.  
-
- - **Descargar definición**: desencadene Endpoint Protection o Windows Defender para descargar las últimas definiciones de antimalware.  
-
-
- Para obtener más información, vea [Endpoint Protection en Configuration Manager](/sccm/protect/deploy-use/endpoint-protection).
+ Para obtener más información, vea [Notificación de cliente](/sccm/core/clients/manage/client-notification).
 
 
 #### <a name="export"></a>Exportar

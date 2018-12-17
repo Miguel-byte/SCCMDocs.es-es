@@ -10,12 +10,12 @@ ms.assetid: ec5b54cf-62b7-4ed1-9bb3-e8c63b9641c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c739f52553aca8680328e581e183a5ca974ffdf
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f1683f69ae065d0523719edd3d24da52d499341b
+ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337513"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52820006"
 ---
 # <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>Actualizar la rama de mantenimiento a largo plazo a la rama actual
 
@@ -46,6 +46,6 @@ Si el sitio ejecuta la LTSB, puede usar la siguiente opción de la consola de Co
 
  1. En la consola, vaya a **Administración** > **Configuración del sitio** > **Sitios** y, después, abra **Configuración de jerarquía**.  
 
- 2. Seleccione la opción para convertir a la Rama actual y, después, haga clic en **Aplicar**.  
+ 2. En **Configuración de jerarquía**, cambie a la pestaña **Licencias**. Seleccione la opción **Convertir a la rama actual** y, después, haga clic en **Aplicar**.  
 
 Después de convertir el sitio a la Rama actual, podrán usarse las funciones y características que antes no estaban disponibles.

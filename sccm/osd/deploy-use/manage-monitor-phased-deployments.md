@@ -2,7 +2,7 @@
 title: Administración y supervisión de implementaciones por fases
 titleSuffix: Configuration Manager
 description: Aprenda a administrar y supervisar las implementaciones por fases para el software en Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,18 +10,21 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1889ba3ea19d27676089f2a9a24cef812c9f526c
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 5324e00f17770feca25d40c645d8e344df797f21
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385866"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456335"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Administración y supervisión de implementaciones por fases
 
 En este artículo se describe cómo administrar y supervisar las implementaciones por fases. Las tareas de administración incluyen iniciar manualmente la siguiente fase y suspender o reanudar una fase. 
 
-En primer lugar, deberá [crear una implementación por fases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence). 
+En primer lugar, deberá crear una implementación por fases: 
+- [Aplicación](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Actualización de software](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [Secuencia de tareas](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
 
 
 
@@ -32,6 +35,13 @@ Cuando se selecciona la opción **Iniciar manualmente la segunda fase de impleme
 1. Cómo se inicia esta acción varía según el tipo de software implementado:  
 
     - **Aplicación** (solo en la versión 1806 y posteriores): vaya al área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y seleccione **Aplicaciones**.   
+
+    - **Actualización de software** (solo en la versión 1810 o en versiones posteriores): vaya al área de trabajo **Biblioteca de software** y después seleccione uno de los nodos siguientes:    
+        - Actualizaciones de software  
+            - **Todas las actualizaciones de software**  
+            - **Grupos de actualizaciones de software**   
+        - Mantenimiento de Windows 10, **Todas las actualizaciones de Windows 10**  
+        - Administración de cliente de Office 365, **Actualizaciones de Office 365**  
 
     - **Secuencia de tareas**: vaya al área de trabajo **Biblioteca de software**, expanda **Sistemas operativos** y haga clic en **Secuencias de tareas**.   
 
@@ -47,11 +57,18 @@ Cuando se selecciona la opción **Iniciar manualmente la segunda fase de impleme
 
 ## <a name="bkmk_suspend"></a> Suspender y reanudar fases 
 
-Es posible que deba suspender o reanudar manualmente una implementación por fases. Por ejemplo, usted crea una implementación por fases para una secuencia de tareas. Durante la supervisión de la fase de su grupo piloto, observa un gran número de errores. Suspende la implementación por fases para evitar que más dispositivos ejecuten la secuencia de tareas. Después de resolver el problema, reanuda la implementación por fases para continuar con la implementación. 
+Puede suspender o reanudar manualmente una implementación por fases. Por ejemplo, usted crea una implementación por fases para una secuencia de tareas. Durante la supervisión de la fase de su grupo piloto, observa un gran número de errores. Suspende la implementación por fases para evitar que más dispositivos ejecuten la secuencia de tareas. Después de resolver el problema, reanuda la implementación por fases para continuar con la implementación. 
 
 1. Cómo se inicia esta acción varía según el tipo de software implementado:  
 
     - **Aplicación** (solo en la versión 1806 y posteriores): vaya al área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y seleccione **Aplicaciones**.   
+
+    - **Actualización de software** (solo en la versión 1810 o en versiones posteriores): vaya al área de trabajo **Biblioteca de software** y después seleccione uno de los nodos siguientes:    
+        - Actualizaciones de software  
+            - **Todas las actualizaciones de software**  
+            - **Grupos de actualizaciones de software**   
+        - Mantenimiento de Windows 10, **Todas las actualizaciones de Windows 10**  
+        - Administración de cliente de Office 365, **Actualizaciones de Office 365**  
 
     - **Secuencia de tareas**: vaya al área de trabajo **Biblioteca de software**, expanda **Sistemas operativos** y haga clic en **Secuencias de tareas**. Seleccione una secuencia de tareas existente y después haga clic en **Crear implementación por fases** en la cinta.  
 
@@ -91,7 +108,8 @@ Este panel muestra la siguiente información para cada fase de la implementació
 
 Use el menú desplegable **Fase de selección** para cambiar la vista al icono **Criterios de éxito**. Este icono compara el **Objetivo de la fase** con el cumplimiento actual de la implementación. Con la configuración predeterminada, el objetivo de esta fase es 95 %. Este valor significa que la implementación necesita un cumplimiento del 95 % para pasar a la siguiente fase. 
 
-En este ejemplo, el objetivo de esta fase es el 65 %, y el cumplimiento actual es un 66,7 %. La implementación por fases se mueve automáticamente a la segunda fase, porque la primera fase cumple los criterios de éxito.
+En este ejemplo, el objetivo de esta fase es el 65 %, y el cumplimiento actual es un 66,7 %. La implementación por fases se mueve automáticamente a la segunda fase, porque la primera fase cumple los criterios de éxito.  
+
 ![Icono Criterios de éxito de ejemplo de Estado de implementación por fases](media/pod-status-success-criteria-tile.png)
 
 El objetivo de esta fase es el mismo que el **Porcentaje de éxito de la implementación** en la Configuración de fase de la *siguiente* fase. Para que la implementación por fases inicie la fase siguiente, esa segunda fase define los criterios de éxito de la primera fase. Para ver esta configuración: 

@@ -2,7 +2,7 @@
 title: Instalación de puntos de distribución de nube
 titleSuffix: Configuration Manager
 description: Siga estos pasos para configurar un punto de distribución de nube en Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ef8bfead4bb73871f990a455aef87971413701ba
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: a2d39617db7f2ea9a61e73a3c21cc2509fed2f07
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601116"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456624"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Instalación de un punto de distribución de nube para Configuration Manager
 
@@ -43,7 +43,7 @@ Use la lista de comprobación siguiente para asegurarse de que tiene la informac
 
 - El **entorno de Azure** que se va a usar. Por ejemplo, la nube pública de Azure o la nube de Azure US Government.  
 
-- A partir de la versión 1806 y como *recomendación*, si tiene previsto usar la **implementación de Azure Resource Manager**, necesita los requisitos siguientes:<!--1322209-->  
+- A partir de la versión 1806, se *recomienda* utilizar la **implementación de Azure Resource Manager**. Los requisitos son los siguientes:<!--1322209-->  
 
     - Integración con [Azure Active Directory](/sccm/core/servers/deploy/configure/azure-services-wizard) para la **administración en la nube**. La detección de usuarios de Azure AD no es necesaria.  
 
@@ -54,6 +54,8 @@ Use la lista de comprobación siguiente para asegurarse de que tiene la informac
     - Durante el asistente, debe iniciar sesión una **cuenta de administrador de suscripción**.  
 
 - Si tiene pensado usar la **implementación del servicio clásico** de Azure, necesita los requisitos siguientes:  
+    > [!Important]  
+    > A partir de la versión 1810, las implementaciones de servicio clásico de Azure estarán en desuso en Configuration Manager. Empiece a usar implementaciones de Azure Resource Manager para Cloud Management Gateway. Para obtener más información, vea [Planear para Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).  
 
     - El **Id. de suscripción** de Azure.  
 
@@ -64,7 +66,7 @@ Use la lista de comprobación siguiente para asegurarse de que tiene la informac
 - Un **nombre del servicio** único global para el punto de distribución de nube.  
 
     > [!TIP]  
-    > Antes de solicitar el certificado de autenticación de servidor que usa este nombre de servicio, confirme que el nombre de dominio de Azure deseado sea único. Por ejemplo, *WallaceFalls.CloudApp.Net*. Inicie sesión en [Microsoft Azure Portal](https://portal.azure.com). Haga clic en **Crear un recurso**, seleccione la categoría **Proceso** y haga clic en **Servicio de nube**. En el campo **Nombre DNS**, escriba el prefijo deseado, por ejemplo, *WallaceFalls*. La interfaz mostrará si el nombre de dominio está disponible o si ya está en uso por otro servicio. No cree el servicio en el portal, simplemente use este proceso para comprobar si el nombre está disponible.  
+    > Antes de solicitar el certificado de autenticación de servidor que usa este nombre de servicio, confirme que el nombre de dominio de Azure deseado sea único. Por ejemplo, *WallaceFalls.CloudApp.Net*. Inicie sesión en [Microsoft Azure Portal](https://portal.azure.com). Seleccione **Crear un recurso**, elija la categoría **Proceso** y seleccione **Servicio en la nube**. En el campo **Nombre DNS**, escriba el prefijo deseado, por ejemplo, *WallaceFalls*. La interfaz mostrará si el nombre de dominio está disponible o si ya está en uso por otro servicio. No cree el servicio en el portal, simplemente use este proceso para comprobar si el nombre está disponible.  
  
 - La **región** de Azure para esta implementación.  
 
@@ -78,15 +80,16 @@ Realice este procedimiento en el sitio para hospedar este punto de distribución
 
 2.  En la página **General** del Asistente para crear punto de distribución de nube, configure las opciones siguientes:  
 
-    a. En primer lugar, especifique el **entorno de Azure**.  
+    1. En primer lugar, especifique el **entorno de Azure**.  
 
-    b. Elija el método de implementación de Azure y, después, configure las opciones asociadas.  
+    2. A partir de la versión 1806, se *recomienda* seleccionar la **implementación de Azure Resource Manager** como método de implementación. Haga clic en **Iniciar sesión** para autenticarse con una cuenta de administrador de suscripción de Azure. El asistente rellena automáticamente los campos restantes con la información almacenada durante el requisito previo de integración de Azure AD. Si tiene varias suscripciones, seleccione el **Id. de suscripción** de la suscripción deseada que se va a usar.  
 
-       - **Implementación de Azure Resource Manager** (a partir de la versión 1806, y *recomendada*): haga clic en **Iniciar sesión** para autenticarse con una cuenta de administrador de suscripción de Azure. El asistente rellena automáticamente los campos restantes con la información almacenada durante el requisito previo de integración de Azure AD. Si tiene varias suscripciones, seleccione el **Id. de suscripción** de la suscripción deseada que se va a usar.  
+    > [!Note]  
+    > A partir de la versión 1810, las implementaciones de servicio clásico de Azure estarán en desuso en Configuration Manager. 
+    > 
+    > Si necesita usar una implementación de servicio clásico, seleccione esa opción en esta página. Primero escriba su **id. de suscripción** de Azure. Después, haga clic en **Examinar** y seleccione el archivo .PFX para el certificado de administración de Azure.  
 
-       - **Implementación de servicio clásico** (y las versiones 1802 y anteriores de Configuration Manager): escriba el **Id. de suscripción** de Azure. Después, haga clic en **Examinar** y seleccione el archivo .PFX para el certificado de administración de Azure.  
-
-3.  Haga clic en **Siguiente**. Espere mientras el sitio prueba la conexión a Azure.  
+3.  Seleccione **Siguiente**. Espere mientras el sitio prueba la conexión a Azure.  
 
 4.  En la página **Configuración**, especifique las opciones siguientes y, después, haga clic en **Siguiente**:  
 
@@ -105,7 +108,7 @@ Realice este procedimiento en el sitio para hospedar este punto de distribución
         > [!NOTE]  
         > El certificado de autenticación de servidor de punto de distribución de nube admite caracteres comodín. Si usa un certificado comodín, reemplace el asterisco (*) en el campo **FQDN de servicio** por el nombre de host deseado para el servicio.  
 
-5. En la página **Alertas**, configure cuotas de almacenamiento, cuotas de transferencia y el porcentaje de estas cuotas en el que quiere que Configuration Manager genere alertas. A continuación, haga clic en **Siguiente**.  
+5. En la página **Alertas**, configure cuotas de almacenamiento, cuotas de transferencia y el porcentaje de estas cuotas en el que quiere que Configuration Manager genere alertas. A continuación, seleccione **Siguiente**.  
 
 6. Complete el asistente.  
 

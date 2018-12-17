@@ -4,17 +4,17 @@ description: Obtenga información sobre los diferentes certificados digitales qu
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 121b3840ea4f61f4789c5d6c21ab857cb091e199
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 4ef9746b9a1eb90beeec6a477ad1d406acebbb05
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411313"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456573"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificados para Cloud Management Gateway
 
@@ -123,6 +123,9 @@ Cree un certificado SSL personalizado para CMG tal como haría para un punto de 
 ## <a name="bkmk_azuremgmt"></a> Certificado de administración de Azure
 
 *Este certificado es necesario para las implementaciones del servicio clásico. No hace falta para las implementaciones de Azure Resource Manager.*
+
+> [!Important]  
+> A partir de la versión 1810, las implementaciones de servicio clásico de Azure estarán en desuso en Configuration Manager. Empiece a usar implementaciones de Azure Resource Manager para Cloud Management Gateway. Para obtener más información, vea [Planear para Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
 
 Este certificado se proporciona en Azure Portal y al crear la instancia de CMG en la consola de Configuration Manager.
 

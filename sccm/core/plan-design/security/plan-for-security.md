@@ -2,7 +2,7 @@
 title: Planear la seguridad
 titleSuffix: Configuration Manager
 description: Obtenga los procedimientos recomendados y otra información sobre la seguridad en Configuration Manager.
-ms.date: 10/22/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e03c2b53044225eeb790d70474868e337a4cc997
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 5332fa778b343a5eaae93a08db0826823fffce42
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411466"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456386"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Planeación de la seguridad en Configuration Manager
 
@@ -40,6 +40,8 @@ En este artículo se describen los conceptos para tener en cuenta al planear la 
 - [Planeación de la administración basada en roles](#BKMK_PlanningForRBA)  
 
 - [Planeación de Azure Active Directory](#bkmk_planazuread)  
+
+- [Plan para la autenticación del proveedor de SMS](#bkmk_auth)
 
 
 
@@ -409,6 +411,25 @@ La cadena devuelta es la clave raíz confiable. Compruebe que coincide con el va
 
 
  Para obtener más información sobre Azure AD, vea la [documentación de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/).
+
+
+
+## <a name="bkmk_auth"></a> Plan para la autenticación del proveedor de SMS
+<!--1357013--> 
+
+A partir de la versión 1810, puede especificar el nivel mínimo de autenticación para que los administradores accedan a sitios de Configuration Manager. Esta característica exige que los administradores inicien sesión en Windows con el nivel requerido. Se aplica a todos los componentes que acceden al proveedor de SMS. Por ejemplo, la consola de Configuration Manager, los métodos del SDK y los cmdlets de Windows PowerShell. 
+
+Esta opción es una configuración de toda la jerarquía. Antes de cambiar esta configuración, asegúrese de que todos los administradores de Configuration Manager pueden iniciar sesión en Windows con el nivel de autenticación requerido. 
+
+Están disponibles los siguientes niveles:
+
+- **Autenticación de Windows**: requiere la autenticación con credenciales de dominio de Active Directory.   
+
+- **Autenticación de certificado**: requiere la autenticación con un certificado válido emitido por una entidad de certificación PKI de confianza.  
+
+- **Autenticación de Windows Hello para empresas**: requiere la autenticación sólida en dos fases vinculada a un dispositivo y usa biometrías o un PIN.  
+
+Para más información, vea [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth) (Planear el proveedor de SMS). 
 
 
 

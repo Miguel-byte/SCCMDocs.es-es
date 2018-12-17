@@ -2,7 +2,7 @@
 title: Implementar aplicaciones
 titleSuffix: Configuration Manager
 description: Crear o simular una implementación de una aplicación en una recopilación de dispositivo o usuario
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d23c5ee5b81264a9725c4654cd1717b30302c708
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 5b70c651186a35e0f1c5a5da8b9c7dffe0abc7da
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384827"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456590"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>Implementar aplicaciones con Configuration Manager
 
@@ -98,6 +98,8 @@ En la página **Configuración de implementación**, especifique la siguiente in
     > [!NOTE]   
     >  Al establecer la acción de implementación en **Desinstalar**, el propósito de implementación se establecerá automáticamente en **Obligatoria**. Este comportamiento no se puede cambiar.  
 
+- **Permitir que los usuarios finales intenten reparar esta aplicación**: a partir de la versión 1810, si ha creado la aplicación con una línea de comandos de reparación, habilite esta opción. Los usuarios ven una opción en el Centro de software para **reparar** la aplicación.<!--1357866-->  
+
 - **Implementar previamente el software en el dispositivo primario del usuario**: si la implementación se realiza en un usuario, seleccione esta opción para implementar la aplicación en el dispositivo principal del usuario. Esta opción no exige que el usuario inicie sesión antes de que se ejecute la implementación. Si el usuario necesita interactuar con la instalación, no seleccione esta opción. Esta opción solo está disponible cuando la implementación es **Obligatoria**.  
 
 - **Enviar paquetes de reactivación**: si la implementación es **Obligatoria**, Configuration Manager envía un paquete de reactivación a los equipos antes de que el cliente ejecute la implementación. Este paquete reactiva el equipo a la hora límite de instalación. Para poder usar esta opción, los equipos y las redes deben configurarse para Wake On LAN. Para obtener más información, vea [Planear la reactivación de clientes](/sccm/core/clients/deploy/plan/plan-wake-up-clients).  
@@ -118,25 +120,9 @@ Se mostrará una de las siguientes opciones de configuración de aprobación, se
 
 - **Solicitar aprobación del administrador si los usuarios solicitan esta aplicación**: para las versiones 1710 y anteriores, el administrador aprueba las solicitudes de la aplicación de cualquier usuario antes de poder instalarla. La opción está atenuada cuando el propósito de implementación es **Obligatorio**, o bien cuando se implementa la aplicación en una colección de dispositivos.  
 
-    Las solicitudes de aprobación de aplicación se muestran en el nodo **Solicitudes de aprobación** , en **Administración de aplicaciones** en el área de trabajo **Biblioteca de software** . Si una solicitud no se aprueba antes de 45 días, se quita. Es posible que volver a instalar el cliente cancele las solicitudes de aprobación pendientes.  
-
-    Después de aprobar una aplicación para la instalación, puede **Denegar** la solicitud en la consola de Configuration Manager. Esta acción no hace que el cliente desinstale la aplicación de los dispositivos. Impide que los usuarios instalen nuevas copias de la aplicación desde el Centro de software.  
-
 - **An administrator must approve a request for this application on the device** (Un administrador debe aprobar una solicitud para esta aplicación en el dispositivo): a partir de la versión 1802, el administrador aprueba las solicitudes de usuario para la aplicación antes de que el usuario pueda instalarla en el dispositivo solicitado. Si el administrador aprueba la solicitud, el usuario solo tiene la posibilidad de instalar la aplicación en ese dispositivo. El usuario debe enviar otra solicitud para instalar la aplicación en otro dispositivo. La opción está atenuada cuando el propósito de implementación es **Obligatorio**, o bien cuando se implementa la aplicación en una colección de dispositivos. <!--1357015-->  
 
-    Esta característica es opcional. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options). Si no habilita esta característica, verá la experiencia anterior.  
-
-    > [!Note]  
-    > Para aprovechar las nuevas características de Configuration Manager, primero actualice los clientes a la versión más reciente. Aunque la funcionalidad nueva aparece en la consola de Configuration Manager cuando se actualiza el sitio y la consola, la totalidad del escenario no es funcional hasta que la versión del cliente también es la más reciente.<!--SCCMDocs issue 646-->  
-
-    Vea **Solicitudes de aprobación** en **Administración de aplicaciones** en el área de trabajo **Biblioteca de software** de la consola de Configuration Manager. Hay una columna **Dispositivo** en la lista de cada solicitud. Al realizar acciones en la solicitud, el cuadro de diálogo Solicitud de aplicación también incluye el nombre del dispositivo desde el que el usuario envió la solicitud.  
-
-    Si una solicitud no se aprueba antes de 45 días, se quita. Es posible que volver a instalar el cliente cancele las solicitudes de aprobación pendientes.  
-
-    Después de aprobar una aplicación para la instalación, puede **Denegar** la solicitud en la consola de Configuration Manager. Esta acción no hace que el cliente desinstale la aplicación de los dispositivos. Impide que los usuarios instalen nuevas copias de la aplicación desde el Centro de software.  
-
-    > [!Important]  
-    > A partir de la versión 1806, *el comportamiento ha cambiado* al revocar la aprobación de una aplicación que se haya aprobado e instalado anteriormente. Ahora, al **Denegar** la solicitud de la aplicación, el cliente desinstala la aplicación del dispositivo del usuario.<!--1357891-->  
+Para obtener más información, vea [Aprobar aplicaciones](/sccm/apps/deploy-use/app-approval).
 
 
 #### <a name="deployment-properties-deployment-settings"></a>Configuración de **propiedades de implementación**

@@ -10,12 +10,12 @@ ms.assetid: f053fa73-c553-4522-a6b9-f885f23fe57c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7057084ba976408f189a0d4fbb96f176bc0c6656
-ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
+ms.openlocfilehash: 41dd6ad6f8a0292fdb16a0d727665b17e038f87b
+ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43297223"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52820048"
 ---
 # <a name="package-conversion-manager"></a>Administrador de conversión de paquetes
 
@@ -25,8 +25,9 @@ ms.locfileid: "43297223"
 
 A partir de la versión 1806, el Administrador de conversión de paquetes ayuda a convertir paquetes heredados de Configuration Manager en aplicaciones. Las aplicaciones tienen ventajas adicionales, como las dependencias, las reglas de requisitos, los métodos de detección y la afinidad entre usuario y dispositivo.
 
-> [!Note]  
-> En esta versión de Configuration Manager, el Administrador de conversión de paquetes es una característica de versión preliminar. Para habilitarla, vea [Características de versión preliminar](/sccm/core/servers/manage/pre-release-features).  
+> [!Tip]  
+> Esta característica se introdujo por primera vez en la versión 1806 como una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1810, ya no es una característica de versión preliminar.  
+
 
 Una aplicación de Configuration Manager contiene los archivos y programas que se implementan en dispositivos cliente. Sin embargo, a diferencia de los paquetes y programas heredados, una aplicación proporciona funciones adicionales centradas en el usuario. Por ejemplo, una aplicación podría contener tipos de implementación para una instalación local de un paquete de software, un paquete de aplicación virtual o una versión de la aplicación para dispositivos móviles.
 

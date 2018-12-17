@@ -2,7 +2,7 @@
 title: Información de administración
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la funcionalidad Información de administración disponible en la consola de Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 92f82ee7247030d19df63e50b0ac4437f250717a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 3721c4c35dd22a0d2a59d2300bd25dfbd3c75aeb
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383504"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456318"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Información de administración en Configuration Manager
 
@@ -31,11 +31,12 @@ Para ver las reglas, su cuenta debe tener el permiso **leer** en el objeto **sit
 
 1. Abra la consola de Configuration Manager.  
 
-2. Vaya al área de trabajo **Administración** y haga clic en **Información de administración**.  
+2. Vaya al área de trabajo **Administración**, expanda **Información de administración** y seleccione **Toda la información**.  
 
-3. Seleccione **Toda la información**.  
+    > [!Note]  
+    > A partir de la versión 1810, al hacer clic en el nodo **Información de administración**, se muestra el [panel de información de administración](#bkmk_insights).  
 
-4. Haga doble clic en el **Nombre del grupo de información de administración** que quiera revisar. Como alternativa, resáltelo y haga clic en **Mostrar información** en la cinta.  
+3. Abra el grupo de información de administración que quiera revisar. Haga clic en **Mostrar información** en la cinta de opciones.  
 
 Las siguientes cuatro pestañas están disponibles para su revisión: 
 
@@ -45,7 +46,7 @@ Las siguientes cuatro pestañas están disponibles para su revisión:
 
 - **En curso**: muestra las reglas en las que algunos requisitos previos están completos, pero no todos.  
 
-- **Acción necesaria**: se enumeran las reglas en las que es necesario realizar acciones. Haga clic con el botón derecho y seleccione **Más detalles** para recuperar los elementos específicos en los que se necesita una acción.  
+- **Acción necesaria**: se enumeran las reglas en las que es necesario realizar acciones. Haga clic en **Más detalles** para recuperar los elementos específicos en los que se necesita una acción.  
 
 El panel **Requisitos previos** muestra los elementos necesarios para ejecutar la regla.
 
@@ -53,7 +54,7 @@ El panel **Requisitos previos** muestra los elementos necesarios para ejecutar l
 ![Información de administración: todas las reglas y requisitos previos para el grupo de servicios en la nube](./media/Management-insights-all-cloud-rules.png)
 
 
-Seleccione una regla y haga clic en **Más detalles** para ver los detalles de la regla.
+Seleccione una regla y después haga clic en **Más detalles** para ver los detalles de la regla.
 
 
 
@@ -63,7 +64,7 @@ Las reglas de información de administración vuelven a evaluar su aplicabilidad
 
 El archivo de registro para reglas de información de administración es **SMS_DataEngine.log** en el servidor de sitio.
 
-<!--1357930--> A partir de la versión 1806, algunas reglas le permiten tomar medidas. Seleccione una regla, haga clic en **Más detalles** y después, si está disponible, haga clic en **Tomar medidas**. 
+<!--1357930--> A partir de la versión 1806, algunas reglas le permiten tomar medidas. Seleccione una regla y haga clic en **Más detalles**. Después, si está disponible, seleccione **Tomar medidas**. 
 
 En función de la regla, esta acción muestra uno de los siguientes comportamientos:  
 
@@ -73,9 +74,45 @@ En función de la regla, esta acción muestra uno de los siguientes comportamien
 
 
 
+## <a name="bkmk_insights"></a> Panel de información de administración
+<!--1357979-->
+
+A partir de la versión 1810, el nodo **Información de administración** incluye un panel gráfico. Este panel muestra información general de los estados de la regla, con lo que le resultará más fácil mostrar el progreso. 
+
+Use los siguientes filtros en la parte superior del panel para ajustar la vista:
+- Mostrar completadas
+- Opcional
+- Recomendado
+- Crítica
+
+En el panel se incluyen los iconos siguientes:  
+
+- **Índice de información de administración**: realiza un seguimiento del progreso general en las reglas de información de administración. El índice es un promedio ponderado. Las reglas críticas valen más. Este índice proporciona el menor peso a las reglas opcionales.  
+
+- **Grupos de información de administración**: muestra el porcentaje de las reglas en cada grupo, teniendo en cuenta los filtros. Seleccione un grupo para explorar en profundidad las reglas específicas de este grupo.  
+
+- **Prioridad de información de administración**: muestra el porcentaje de las reglas por prioridad, teniendo en cuenta los filtros.   
+
+- **Toda la información**: una tabla de información, incluida la prioridad y el estado. Use el campo **Filtro** situado en la parte superior de la tabla para emparejar las cadenas de cualquiera de las columnas disponibles. El panel ordena la tabla en el orden siguiente:
+    - Estado: acción necesaria, completado, desconocido  
+    - Prioridad: crítica, recomendada, opcional  
+    - Último cambio: fechas más antiguas en la parte superior   
+
+![Captura de pantalla del panel de información de administración](media/1357979-management-insights-dashboard.png)
+
+
+
 ## <a name="groups-and-rules"></a>Reglas y grupos
 
-Las reglas se organizan en diferentes grupos de información de administración. Consulte la siguiente lista de los grupos y las reglas que están actualmente disponibles:
+Las reglas se organizan en los siguientes grupos de información de administración:
+- [Aplicaciones](#applications)  
+- [Servicios en la nube](#cloud-services)  
+- [Recopilaciones](#collections)  
+- [Mantenimiento proactivo](#proactive-maintenance)  
+- [Seguridad](#security)  
+- [Administración simplificada](#simplified-management)  
+- [Centro de software](#software-center)  
+- [Windows 10](#windows-10)  
 
 
 ### <a name="applications"></a>Aplicaciones
@@ -85,7 +122,7 @@ Conclusiones de administración de la aplicación.
 - **Aplicaciones sin implementaciones**: enumera las aplicaciones del entorno sin implementaciones activas. Esta regla ayuda a encontrar y eliminar las aplicaciones sin usar para simplificar la lista de aplicaciones que se muestran en la consola. Para obtener más información, consulte [Deploy applications](/sccm/apps/deploy-use/deploy-applications) (Implementar aplicaciones).  
 
 
-### <a name="cloud-services"></a>Cloud Services
+### <a name="cloud-services"></a>Servicios en la nube
 
 Ayuda a integrar con muchos servicios en la nube, lo que permite la administración moderna de los dispositivos. 
 
@@ -119,6 +156,8 @@ Información que ayuda a simplificar la administración mediante la limpieza y r
 - **Imágenes de arranque no utilizadas**: imágenes de arranque a las que no hay ninguna referencia para el uso de la secuencia de tareas o del arranque PXE. Para más información, vea [Manage boot images (Administrar imágenes de arranque)](/sccm/osd/get-started/manage-boot-images).  
 
 - **Elementos de configuración no utilizados**: elementos de configuración que no forman parte de una línea base de configuración y tienen más de 30 días. Para obtener más información, consulte [Crear una línea base de configuración](/sccm/compliance/deploy-use/create-configuration-baselines).  
+
+- **Actualizar los orígenes de caché del mismo nivel a la versión más reciente del cliente de Configuration Manager**: identifique los clientes que actúan como origen de caché del mismo nivel pero no se han actualizado desde una versión de cliente anterior a 1806. Los clientes de la versión anterior a la 1806 no pueden usarse como un origen de caché del mismo nivel para clientes que ejecutan la versión 1806 o alguna posterior. Seleccione **Realizar acción** para abrir una vista de dispositivo que muestre la lista de clientes.<!--1358008-->  
 
 
 ### <a name="security"></a>Seguridad

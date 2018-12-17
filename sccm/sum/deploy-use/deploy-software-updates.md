@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo implementar de forma manual o auto
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: d456d7232133333bf6cd88374d5288227f6dfea1
-ms.sourcegitcommit: 2ea71b048307a93a2db7898700aea984a8f88824
+ms.openlocfilehash: f59ca099325028ccf29904a2108939d0047df745
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52304289"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52455959"
 ---
 # <a name="deploy-software-updates"></a>Implementar actualizaciones de software  
 
@@ -36,7 +36,15 @@ Después de crear la implementación, el sitio envía una directiva de actualiza
 
 Si configura una implementación de actualizaciones de software requeridas, las actualizaciones de software se instalan automáticamente en la fecha límite programada. El usuario del equipo cliente puede programar o iniciar la instalación de las actualizaciones de software antes de que se cumpla la fecha límite. Tras el intento de instalación, los equipos cliente devuelven mensajes de estado al servidor de sitio para notificar si la instalación de las actualizaciones de software se completó correctamente. Para obtener más información sobre las implementaciones de actualización de software, consulte [Software update deployment workflows](/sccm/sum/understand/software-updates-introduction#BKMK_DeploymentWorkflows) (Flujos de trabajo de implementación de actualizaciones de software).  
 
-Hay dos escenarios principales de implementación de las actualizaciones de software: la implementación manual y la implementación automática. Normalmente, primero implementa manualmente las actualizaciones de software para crear una línea de base en los clientes. A partir de ahí, administra las actualizaciones de software mediante la implementación automática.  
+Hay tres escenarios principales en cuanto a la implementación de actualizaciones de software: 
+- [Implementación manual](#BKMK_ManualDeployment)  
+- [Implementación automática](#bkmk_auto)  
+- [Implementación por fases](#bkmk_phased)  
+
+Normalmente, primero implementa manualmente las actualizaciones de software para crear una línea de base en los clientes. A partir de ahí, administra las actualizaciones de software mediante la implementación automática o por fases.  
+
+> [!Note]  
+> No se puede usar una regla de implementación automática con una implementación por fases.
 
 
 
@@ -65,7 +73,7 @@ Para obtener más información y pasos detallados, vea [Implementar actualizacio
 
 
 
-## <a name="automatically-deploy-software-updates"></a>Implementar actualizaciones de software automáticamente
+## <a name="bkmk_auto"></a> Implementar actualizaciones de software automáticamente
 
 Configure la implementación automática de las actualizaciones de software mediante una regla de implementación automática (ADR). Este método de implementación es común para actualizaciones de software mensuales (lo que suele conocerse como "Patch Tuesday") y para la administración de actualizaciones de definiciones. Defina los criterios para que una ADR automatice el proceso de implementación. En la lista siguiente se indica el flujo de trabajo general para implementar automáticamente las actualizaciones de software:  
 
@@ -100,4 +108,12 @@ Todas las implementaciones nuevas que agregue:
 
 
 Para obtener más información y pasos detallados, vea [Implementar actualizaciones de software automáticamente](automatically-deploy-software-updates.md)
+
+
+
+## <a name="bkmk_phased"></a> Implementación de actualizaciones de software por fases
+
+<!--1358146--> A partir de la versión 1810, cree implementaciones por fases de actualizaciones de software. Las Implementaciones por fases permiten organizar un lanzamiento de software coordinado y secuencial según criterios y grupos personalizables.
+
+Para más información, vea [Crear implementaciones por fases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
 

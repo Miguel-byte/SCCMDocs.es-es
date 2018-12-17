@@ -2,7 +2,7 @@
 title: Crear aplicaciones
 titleSuffix: Configuration Manager
 description: Cree aplicaciones con tipos de implementación, métodos de detección y requisitos para instalar el software.
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 848b81ee9e1d6d9ebc189a2d8cb0126648f91be0
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 947dfac82db43e5cb21d8304d31be23219bb83aa
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385191"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456658"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Crear aplicaciones en Configuration Manager
 
@@ -241,6 +241,10 @@ En la página **Contenido**, especifique la siguiente información:
 - **Programa de desinstalación**: opcionalmente, especifique el nombre del programa de desinstalación y los parámetros necesarios.  
 
     - **Inicio de desinstalación en**: opcionalmente, especifique la carpeta que contiene el programa de desinstalación para el tipo de implementación. Esta carpeta puede ser una ruta de acceso absoluta en el cliente. También puede ser una ruta de acceso relativa en un punto de distribución de la carpeta que contiene el paquete.  
+
+- **Reparar el programa**: a partir de la versión 1810, para los tipos de implementación de Windows Installer y el instalador de scripts, especifique opcionalmente el nombre del programa de reparación y los parámetros necesarios.<!--1357866-->  
+
+    - **Inicio de la reparación en**: opcionalmente, especifique la carpeta que contiene el programa de reparación para el tipo de implementación. Esta carpeta puede ser una ruta de acceso absoluta en el cliente. También puede ser una ruta de acceso relativa en un punto de distribución de la carpeta que contiene el paquete.  
 
 - **Ejecutar programa de instalación y desinstalación como proceso de 32 bits en clientes de 64 bits**: Utilice las ubicaciones del Registro y de archivos de 32 bits en equipos basados en Windows para ejecutar el programa de instalación del tipo de implementación.  
 

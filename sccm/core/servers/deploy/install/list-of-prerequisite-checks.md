@@ -2,7 +2,7 @@
 title: Comprobaciones de requisitos previos
 titleSuffix: Configuration Manager
 description: Referencia de las comprobaciones de requisitos previos específicos para las actualizaciones de Configuration Manager.
-ms.date: 08/23/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,118 +10,553 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1c66e91341a316ea9115e577d48cab8d56d1e74c
-ms.sourcegitcommit: a17be6f5e4659ba3f38c7732b43f3afafcb95171
+ms.openlocfilehash: 9f17be653d206fd453cdafa4de159804f2fca816
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42906394"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456692"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Lista de comprobaciones de requisitos previos de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-En las secciones siguientes se detallan las comprobaciones de requisitos previos disponibles.
-
-Para obtener más información, vea [Comprobador de requisitos previos](prerequisite-checker.md).  
+En este artículo se detallan las comprobaciones de requisitos previos que se ejecutan al instalar o actualizar Configuration Manager. Para obtener más información, vea [Comprobador de requisitos previos](/sccm/core/servers/deploy/install/prerequisite-checker).  
 
 
 
-##  <a name="BKMK_Security"></a> Comprobaciones de requisitos previos para los derechos de seguridad  
-
-|Comprobación realizada|Explicación|Gravedad|Sitio al que se aplica|
-|---|---|---|---|
-|**Derechos de administrador en el sitio de administración central**|Comprueba que la cuenta de usuario que ejecuta el programa de instalación de Configuration Manager tiene derechos de **administrador** en el equipo del sitio de administración central. |Error|Sitio primario|
-|**Derechos administrativos en sitios primarios de expansión**|Comprueba que la cuenta de usuario que ejecuta el programa de instalación tiene derechos de **administrador** en el sitio primario independiente que se va a expandir.|Error|Sitio de administración central|
-|**Derechos administrativos en el sistema de sitio**|Comprueba que la cuenta de usuario que ejecuta el programa de instalación de Configuration Manager tiene derechos de **administrador** en el equipo de servidor de sitio. |Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario|
-|**Derechos administrativos del equipo de CAS en el sitio primario de expansión**|Comprueba que la cuenta de equipo del sitio de administración central tiene derechos de **administrador** en el sitio primario independiente que se va a expandir.|Error|Sitio de administración central|
-|**Conexión a SQL Server en el sitio de administración central**|Comprueba que la cuenta de usuario que ejecuta el programa de instalación de Configuration Manager en el sitio primario para unirlo a una jerarquía existente tiene el rol **administrador del sistema** en la instancia de SQL Server para el sitio de administración central.|Error|Sitio primario|
-|**Derechos administrativos de la cuenta de equipo del servidor de sitio**|Comprueba que la cuenta de equipo del servidor de sitio tiene derechos de **administrador** en el equipo con SQL Server y el equipo del punto de administración.|Error|Sitio primario, <br>SQL Server|
-|**Sistema de sitio para la comunicación de SQL Server**| Comprueba que un nombre válido de entidad de seguridad de servicio (SPN) está registrado en Active Directory Domain Services para la cuenta configurada para ejecutar el servicio SQL Server para la instancia de SQL Server que hospeda la base de datos de sitio de Configuration Manager. Un SPN válido debe estar registrado en los Servicios de dominio de Active Directory para admitir la autenticación Kerberos.|Advertencia|Sitio secundario, <br>Punto de administración|
-|**Modo de seguridad de SQL Server**|Comprueba que SQL Server está configurado para la seguridad de autenticación de Windows.|Advertencia|SQL Server|
-|**Derechos de administrador del sistema de SQL Server**|Comprueba que la cuenta de usuario que ejecuta el programa de instalación de Configuration Manager tiene el rol **administrador del sistema** en la instancia de SQL Server seleccionada para la instalación de la base de datos de sitio. También se producen errores en esta comprobación cuando el programa de instalación no puede tener acceso a la instancia de SQL Server para comprobar los permisos.|Error|SQL Server|
-|**Derechos de administrador del sistema de SQL Server para el sitio de referencia**|Comprueba que la cuenta de usuario que ejecuta el programa de instalación de Configuration Manager tiene el rol **administrador del sistema** en la instancia de rol de SQL Server seleccionada como base de datos de sitio de referencia. Se requieren los permisos del rol **administrador del sistema** de SQL Server para modificar la base de datos de sitio.|Error|SQL Server|
+##  <a name="BKMK_Security"></a> Derechos de seguridad  
 
 
+### <a name="security-rights-errors"></a>Derechos de seguridad: errores
 
-##  <a name="BKMK_Dependencies"></a> Comprobaciones de requisitos previos para las dependencias de Configuration Manager
+#### <a name="administrator-rights-on-central-administration-site"></a>Derechos de administrador en el sitio de administración central 
+*Se aplica a: sitio primario*
 
-|Comprobación realizada|Explicación|Gravedad|Sitio al que se aplica|
-|---|---|---|---|
-|**Asignaciones de migración activas en el sitio primario de destino**|Comprueba que no hay ninguna asignación de migración activa en los sitios primarios.|Error|Sitio de administración central|
-|**Punto de administración de réplica activo**|Comprueba la presencia de una réplica de punto de administración activo.|Error|Sitio primario|
-|**Derechos administrativos en el punto de distribución**|Comprueba que la cuenta de usuario que ejecuta el programa de instalación tiene derechos de **administrador** en el equipo de puntos de distribución.|Advertencia|Punto de distribución|
-|**Derechos administrativos en el punto de administración**|Comprueba que la cuenta de equipo del servidor de sitio tiene derechos de **administrador** en el equipo de puntos de administración y distribución.|Advertencia|Punto de administración|
-|**Recurso compartido administrativo (sistema de sitio)**|Comprueba que los recursos compartidos administrativos necesarios se encuentran en el equipo de sistema de sitio.|Advertencia|Punto de administración|
-|**Compatibilidad de aplicaciones**|Comprueba que las aplicaciones actuales son compatibles con el esquema de la aplicación.|Advertencia|Sitio de administración central, <br>Sitio primario|
-|**BITS habilitado**|Comprueba que el Servicio de transferencia inteligente en segundo plano (BITS) está instalado en el equipo de sistemas de sitio de punto de administración. Cuando se produce algún error en esta comprobación, significa que BITS no está instalado, que el componente de compatibilidad con Instrumental de administración de Windows (WMI) de Internet Information Services (IIS) 6.0 para IIS 7.0 no está instalado en el equipo o en el host de IIS remoto, o que el programa de instalación no pudo comprobar la configuración de IIS remoto porque los componentes comunes de IIS no estaban instalados en el equipo del servidor de sitio.|Error|Punto de administración|
-|**BITS instalado**|Comprueba que BITS está instalado en IIS.|Advertencia|Punto de administración|
-|**Intercalación que no diferencia entre mayúsculas y minúsculas en SQL Server**|Comprueba que la instalación de SQL Server utiliza una intercalación que diferencia entre mayúsculas y minúsculas, como SQL_Latin1_General_CP1_CI_AS.|Error|SQL Server|
-|**Comprobar la versión y el código de sitio del sitio primario independiente existente**|Comprueba que el sitio primario que planea expandir es un sitio primario independiente cuya versión coincide con Configuration Manager, pero que tiene un código de sitio distinto al del sitio de administración central que se va a instalar.|Error|Sitio de administración central, <br>Sitio primario|
-|**Comprobar referencias a recopilaciones no compatibles**|Durante una actualización, esta comprobación verifica que las recopilaciones solo hagan referencia a otras recopilaciones del mismo tipo.|Error|Sitio de administración central|  
-|**Versión de cliente en el equipo de punto de administración**|Comprueba que se va a instalar el punto de administración en un equipo cuya versión no difiere de la del cliente instalado de Configuration Manager.|Error|Punto de administración|
-|**Configuración de uso de memoria de SQL Server**|Comprueba si SQL Server está configurado para un uso ilimitado de memoria. Debe configurar la memoria de SQL Server para que tenga un límite máximo.|Advertencia|SQL Server|
-|**Instancia de SQL Server dedicada**|Comprueba si una instancia de SQL Server dedicada está configurada para hospedar la base de datos de sitio de Configuration Manager. Si otro sitio utiliza la instancia, debe seleccionar una instancia diferente para el nuevo sitio que se va a utilizar. Como alternativa, puede desinstalar el otro sitio o mover su base de datos a una instancia diferente de SQL Server.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario|
-|**Componentes de servidor de Configuration Manager existentes en el servidor**|Comprueba que un servidor de sitio o el rol de sistema de sitio aún no están instalados en el equipo seleccionado para la instalación del sitio.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario|
-|**Excepción de firewall para SQL Server**|Comprueba si el Firewall de Windows está deshabilitado o si existe una excepción de Firewall de Windows correspondiente para SQL Server. Se debe permitir el acceso remoto a Sqlservr.exe o a los puertos TCP necesarios. De forma predeterminada, SQL Server escucha en el puerto TCP 1433 y SQL Server Service Broker (SSB) usa el puerto TCP 4022.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario, <br>Punto de administración|
-|**Excepción de firewall para SQL Server (sitio primario independiente)**|Comprueba si el Firewall de Windows está deshabilitado o si existe una excepción de Firewall de Windows correspondiente para SQL Server. Se debe permitir el acceso remoto a Sqlservr.exe o a los puertos TCP necesarios. De forma predeterminada, SQL Server escucha en el puerto TCP 1433 y SSB usa el puerto TCP 4022.|Advertencia|Sitio primario (solo independiente)|
-|**Excepción de firewall para SQL Server para el punto de administración**|Comprueba si el Firewall de Windows está deshabilitado o si existe una excepción de Firewall de Windows correspondiente para SQL Server.|Advertencia|Punto de administración|
-|**Configuración HTTPS de IIS**|Comprueba los enlaces del sitio web de IIS para el protocolo de comunicación HTTPS. Si instala roles de sitio que requieran el protocolo HTTPS, debe configurar los enlaces del sitio de IIS en el servidor especificado con un certificado PKI (infraestructura de clave pública) válido.|Advertencia|Punto de administración, <br>Punto de distribución|
-|**Ejecución del servicio IIS**|Comprueba si IIS está instalado y en ejecución en el equipo para instalar los puntos de administración o distribución.|Error|Punto de administración, <br> Punto de distribución|
-|**Hacer coincidir la intercalación del sitio primario de expansión**|Comprueba que la base de datos de sitio para el sitio primario independiente que se va a expandir tiene la misma intercalación que la base de datos de sitio en el sitio de administración central.|Error|Sitio de administración central|
-|**Biblioteca registrada de compresión diferencial remota (RDC) de Microsoft**|Comprueba que la biblioteca de RDC está registrada en el servidor de sitio de Configuration Manager.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario|
-|**Microsoft Windows Installer**|Comprueba la versión de Windows Installer. Cuando se produce un error en esta comprobación, significa que el programa de instalación no pudo comprobar la versión o que la versión instalada no cumple el requisito mínimo de Windows Installer 4.5.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario|
-|**Microsoft XML Core Services 6.0 (MSXML60)**|Comprueba que la versión MSXML 6.0, u otra posterior, está instalada en el equipo.|Advertencia|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario, <br>Consola de Configuration Manager, <br>Punto de administración, <br>Punto de distribución|
-|**Versión mínima de .NET Framework para la consola de Configuration Manager**|Comprueba si Microsoft .NET Framework 4.0 está instalado en el equipo de la consola de Configuration Manager. Puede descargar .NET Framework 4.0 desde el [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=189149).|Error|Consola de Configuration Manager|
-|**Versión mínima de .NET Framework para el servidor de sitio de Configuration Manager**|Comprueba si .NET Framework 3.5 está instalado en el servidor de sitio de Configuration Manager. Para Windows Server 2008, puede descargar Microsoft .NET Framework 3.5 del [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=185604). Para Windows Server 2008 R2, puede habilitar .NET Framework 3.5 como una característica del Administrador de servidores.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario|
-|**Versión mínima de .NET Framework para la instalación de SQL Server Express Edition para el sitio secundario de Configuration Manager**|Comprueba que .NET Framework 4.0 está instalado en los equipos de sitio secundario de Configuration Manager para instalar SQL Server Express.|Error|Sitio secundario|
-|**Intercalación de base de datos primaria/secundaria**|Comprueba que la intercalación de base de datos de sitio coincide con la intercalación de base de datos de sitio primario. Todos los sitios de una jerarquía deben utilizar la misma intercalación de base de datos.|Error|Sitio primario, <br>Sitio secundario|
-|**PowerShell 2.0 en el servidor de sitio**|Comprueba que Windows PowerShell 2.0, o una versión posterior, está instalado en el servidor de sitio para Configuration Manager Exchange Connector. Para obtener más información acerca de PowerShell 2.0, consulte el [Artículo 968930](http://go.microsoft.com/fwlink/p/?LinkId=226450) en Microsoft Knowledge Base.|Advertencia|Sitio primario|
-|**FQDN primario**|Mediante un nombre de dominio completo (FQDN), comprueba que el nombre NetBIOS del equipo coincide con el nombre de host local (primera etiqueta del FQDN) del equipo.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario, <br>SQL Server|
-|**Conexión remota con WMI en el sitio secundario**|Comprueba si el programa de instalación puede establecer una conexión remota con WMI en el servidor de sitio secundario.|Advertencia|Sitio secundario|
-|**Intercalación de SQL Server requerida**|Comprueba que la instancia de SQL Server y la base de datos de sitio de Configuration Manager, si se han instalado, estén configuradas para usar la intercalación **SQL_Latin1_General_CP1_CI_AS**, a menos que use un SO chino y requiera compatibilidad con GB18030.<br><br>Para obtener información sobre cómo cambiar las intercalaciones de base de datos y la instancia de SQL Server, vea [SQL collation and unicode support](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support) (Compatibilidad con la intercalación y Unicode de SQL). Para obtener más información sobre cómo habilitar la compatibilidad con GB18030, vea [Compatibilidad internacional](/sccm/core/plan-design/hierarchy/international-support).|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario|
-|**Carpeta del origen de la instalación**|Comprueba que la cuenta de equipo del sitio secundario tiene el permiso **Leer** para el sistema de archivos NTFS y el permiso **Leer** para el recurso compartido y la carpeta del origen de la instalación.<br><br>**NOTA**: La cuenta de equipo del sitio secundario debe ser un usuario **administrador** del equipo si se usan recursos compartidos administrativos (por ejemplo, C$ y D$).|Error|Sitio secundario|
-|**Versión de origen de programa de instalación**|Comprueba que la versión de Configuration Manager de la carpeta de origen especificada para la instalación del sitio secundario coincide con la versión de Configuration Manager del sitio primario.|Error|Sitio secundario|
-|**Código de sitio en uso**|Comprueba que el código de sitio que ha especificado aún no se usa en la jerarquía de Configuration Manager. Debe especificar un código de sitio único para este sitio.|Error|Sitio primario|
-|**El equipo del proveedor de SMS tiene el mismo dominio que el servidor de sitio**|Comprueba si un equipo que ejecuta una instancia del proveedor de SMS tiene el mismo dominio que el servidor de sitio.|Error|Proveedor de SMS|
-|**Edición de SQL Server**|Comprueba que la edición de SQL Server del sitio no es SQL Server Express.|Error|SQL Server|
-|**SQL Server Express en el sitio secundario**|Comprueba que SQL Server Express puede instalarse correctamente en el equipo de servidor de sitio para un sitio secundario.|Error|Sitio secundario|
-|**SQL Server en el equipo de sitio secundario**|Comprueba que SQL Server está instalado en el equipo de sitio secundario. No se puede instalar SQL Server en un sistema de sitio remoto.<br><br>**ADVERTENCIA**: Esta comprobación solo se aplica cuando se selecciona que el programa de instalación use una instancia existente de SQL Server.|Error|Sitio secundario|
-|**Asignación de memoria de proceso de SQL Server**|Comprueba que SQL Server reserva un mínimo de 8 GB de memoria para el sitio de administración central y el sitio primario, y un mínimo de 4 GB de memoria para el sitio secundario. Para obtener más información, vea [Cómo configurar las opciones de memoria con SQL Server Management Studio](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd).<br><br>**NOTA**: Esta comprobación no es aplicable a SQL Server Express en un sitio secundario, ya que está limitado a 1 GB de memoria reservada.|Advertencia|SQL Server|
-|**Cuenta de ejecución de servicio SQL Server**|Comprueba que la cuenta de inicio de sesión del servicio SQL Server no es una cuenta de usuario local ni SERVICIO LOCAL. Debe configurar el servicio SQL Server para utilizar una cuenta de dominio válida, SERVICIO DE RED o SISTEMA LOCAL.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario|
-|**Puerto TCP de SQL Server**|Comprueba que TCP está habilitado para la instancia de SQL Server y está configurado para usar un puerto estático.|Error|SQL Server|
-|**Versión de SQL Server**|Comprueba que una versión compatible de SQL Server está instalada en el servidor de base de datos de sitio especificado. Para obtener más información, vea [Support for SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions) (Versiones de SQL Server compatibles).|Error|SQL Server|
-|**Versión de sistema operativo del sistema de sitio no admitida para la actualización**|Durante una actualización, esta regla comprueba si los roles de sistema de sitio, excepto los puntos de distribución, se instalan en equipos que ejecutan Windows Server 2008 o una versión anterior.<br><br>**NOTA**: Dado que esta comprobación no puede resolver el estado de los roles de sistema de sitio que se instalan en Azure o para el almacenamiento en la nube usado por Microsoft Intune, al integrar Intune con Configuration Manager, puede omitir las advertencias para estos roles como falsos positivos.|Advertencia|Sitio primario, <br>Sitio secundario|
-|**Rol de sistema de sitio "Punto de sincronización de Asset Intelligence" no admitido en el sitio primario expandido**|Comprueba que el rol de sistema de sitio Punto de sincronización de Asset Intelligence no está instalado en el sitio primario independiente que se va a expandir.|Error|Sitio de administración central|
-|**Rol de sistema de sitio "Punto de Endpoint Protection" no admitido en el sitio primario expandido**|Comprueba que el rol de sistema de sitio Punto de Endpoint Protection no está instalado en el sitio primario independiente que se va a expandir.|Error|Sitio de administración central|
-|**Rol del sistema de sitio "Conector de Microsoft Intune" no admitido en el sitio primario expandido**|Comprueba que el rol del sistema de sitio Conector de Microsoft Intune no está instalado en el sitio primario independiente que se va a expandir.|Error|Sitio de administración central|
-|**La Herramienta de migración de estado de usuario (USMT) está instalada**|Comprueba si el componente Herramienta de migración de estado de usuario (USMT) de Windows Assessment and Deployment Kit (ADK) para Windows 8.1 está instalado.|Error|Sitio de administración central, <br>Sitio primario (solo independiente)|  
-|**Validar el FQDN del equipo con SQL Server**|Comprueba que el FQDN que ha especificado para el equipo con SQL Server es válido.|Error|SQL Server|
-|**Comprobar la versión del sitio de administración central**|Comprueba que el sitio de administración central tiene la misma versión que Configuration Manager.|Error|Sitio primario|
-|**Comprobar los permisos de servidor de sitio para publicar en Active Directory**|Comprueba que la cuenta de equipo del servidor de sitio tiene permisos de **Control total** en el contenedor **System Management** en el dominio de Active Directory. Para obtener más información sobre las opciones para configurar los permisos necesarios, vea [Preparar Active Directory para la publicación de sitios](/sccm/core/plan-design/network/extend-the-active-directory-schema).<br><br>**NOTA**: Puede omitir esta advertencia si ha comprobado manualmente los permisos.|Advertencia|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario|
-|**Las herramientas de implementación de Windows están instaladas**|Comprueba si el componente de herramientas de implementación de Windows ADK para Windows 10 está instalado.|Error|Proveedor de SMS|
-|**Clúster de conmutación por error de Windows**|Comprueba que los equipos que tienen un punto de administración o punto de distribución no forman parte de un clúster de Windows.|Error|Punto de administración<br>Punto de distribución|
-|**El Entorno de preinstalación de Windows está instalado**|Comprueba si el componente de entorno de preinstalación de Windows ADK para Windows 10 está instalado.|Error|Proveedor de SMS|
-|**Administración remota de Windows (WinRM) v1.1**|Comprueba que WinRM 1.1 está instalado en el servidor de sitio primario o en el equipo de la consola de Configuration Manager para ejecutar la consola de administración fuera de banda. Para obtener más información acerca de cómo descargar WinRM 1.1, consulte el [Artículo 936059](https://support.microsoft.com/en-us/kb/936059) en Microsoft Knowledge Base.|Advertencia|Sitio primario, <br>Consola de Configuration Manager|
-|**WSUS en servidor de sitio**|Comprueba que Windows Server Update Services (WSUS) 3.0 Service Pack 2 (SP2) está instalado en el servidor de sitio. Cuando se usa un punto de actualización de software en un equipo distinto al servidor del sitio, debe instalar la consola de administración de WSUS en el servidor de sitio. Para obtener más información sobre WSUS, vea [Windows Server Update Services](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).|Advertencia|Sitio de administración central, <br>Sitio primario|  
-|**Actualizaciones de directivas de elementos de configuración pendientes**|<!--SCCMDocs-pr issue 2814-->A partir de la versión 1806, puede que se le muestre esta advertencia al actualizar desde la versión 1706 o versiones posteriores si tiene varias implementaciones de aplicaciones y al menos una de estas requiere aprobación. Tiene dos opciones:<br/><br/> - Ignorar la advertencia y continuar con la actualización. Esta acción provoca un procesamiento más intensivo en el servidor del sitio durante la actualización, ya que se deberán procesar las directivas. También puede que aumente la carga del procesador en el punto de administración tras la actualización.<br/><br/> - Revisar una de las aplicaciones que no tenga ningún requisito, o bien un requisito específico del SO. Preprocese una parte de la carga del servidor del sitio en ese momento. Revise **objreplmgr.log** y, después, supervise el procesador del punto de administración. Tras completar el procesamiento, actualice el sitio. Aún deberá realizarse parte del procesamiento tras la actualización, pero este será inferior al procesamiento necesario si se ignora la advertencia.|Advertencia|Sitio primario|  
+La cuenta de usuario que ejecuta el programa de instalación de Configuration Manager tiene derechos de **administrador** en el servidor de sitio de administración central.
+
+#### <a name="administrative-rights-on-expand-primary-site"></a>Derechos administrativos en sitios primarios de expansión 
+*Se aplica a: sitio de administración central*
+
+Al expandir un sitio primario a una jerarquía, la cuenta de usuario que ejecuta el programa de instalación tiene derechos de **administrador** en el sitio primario independiente.
+
+#### <a name="administrative-rights-on-site-system"></a>Derechos administrativos en el sistema de sitio 
+*Se aplica a: sitio de administración central, sitio primario o sitio secundario*
+
+La cuenta de usuario que ejecuta el programa de instalación de Configuration Manager tiene derechos de **administrador** en el servidor de sitio.
+
+#### <a name="central-administration-site-server-administrative-rights-on-expand-primary-site"></a>Derechos de administración del servidor de sitio de administración central en el sitio primario que se va a expandir 
+*Se aplica a: sitio de administración central*
+
+Al expandir un sitio primario a una jerarquía, la cuenta de equipo del servidor de sitio de administración central tiene derechos de **administrador** en el servidor de sitio primario independiente.
+
+#### <a name="connection-to-sql-server-on-central-administration-site"></a>Conexión a SQL Server en el sitio de administración central 
+*Se aplica a: sitio primario*
+
+La cuenta de usuario que ejecuta el programa de instalación de Configuration Manager en el sitio primario para unirlo a una jerarquía existente tiene el rol **administrador del sistema** en la instancia de SQL Server para el sitio de administración central.
+
+#### <a name="site-server-computer-account-administrative-rights"></a>Derechos administrativos de la cuenta de equipo del servidor de sitio 
+*Se aplica a: sitio primario, servidor de base de datos del sitio*
+
+La cuenta de equipo del servidor de sitio tiene derechos de **administrador** en SQL Server y el punto de administración.
+
+#### <a name="sql-server-sysadmin-rights"></a>Derechos de administrador del sistema de SQL Server 
+*Se aplica a: servidor de base de datos del sitio*
+
+La cuenta de usuario que ejecuta el programa de instalación de Configuration Manager tiene el rol **administrador del sistema** en la instancia de SQL Server que ha seleccionado para la instalación de la base de datos del sitio. También se producen errores en esta comprobación cuando el programa de instalación no puede acceder a la instancia de SQL Server para comprobar los permisos.
+
+#### <a name="sql-server-sysadmin-rights-for-reference-site"></a>Derechos de administrador del sistema de SQL Server para el sitio de referencia 
+*Se aplica a: servidor de base de datos del sitio*
+
+La cuenta de usuario que ejecuta el programa de instalación de Configuration Manager tiene el rol **administrador del sistema** en la instancia de rol de SQL Server que ha seleccionado como base de datos del sitio de referencia. Se requieren los permisos del rol **administrador del sistema** de SQL Server para modificar la base de datos de sitio.
+
+
+### <a name="security-rights-warnings"></a>Derechos de seguridad: advertencias
+
+#### <a name="site-system-to-sql-server-communication"></a>Sistema de sitio para la comunicación de SQL Server  
+*Se aplica a: sitio secundario, punto de administración*
+
+La cuenta que ha configurado para ejecutar el servicio SQL Server para la instancia de base de datos del sitio tiene un nombre de entidad de seguridad de servicio (SPN) en Servicios de dominio de Active Directory. Registre un SPN válido en Active Directory para admitir la autenticación Kerberos.
+
+#### <a name="sql-server-security-mode"></a>Modo de seguridad de SQL Server 
+*Se aplica a: servidor de base de datos del sitio*
+
+SQL Server está configurado para la seguridad de autenticación de Windows.
 
 
 
-##  <a name="BKMK_Requirements"></a> Comprobaciones de requisitos previos para requisitos del sistema  
+##  <a name="BKMK_Dependencies"></a> Dependencias
 
-|Comprobación realizada|Explicación|Gravedad|Sitio al que se aplica|
-|---|---|---|---|
-|**Comprobación de nivel funcional de dominio de Active Directory**|Comprueba que el nivel funcional de dominio de Active Directory sea como mínimo Windows Server 2008 R2.|Advertencia|Sitio de administración central, <br>Sitio primario|
-|**Comprobar si el servicio de servidor se está ejecutando**|Comprueba que se ha iniciado el servicio de servidor.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario|  
-|**Pertenencia a dominio**|Comprueba que el equipo de Configuration Manager pertenece a un dominio de Windows.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario, <br>Proveedor de SMS, <br>SQL Server|
-|**Pertenencia a dominio**|Comprueba que el equipo de Configuration Manager pertenece a un dominio de Windows.|Advertencia|Punto de administración, <br>Punto de distribución|
-|**Unidad FAT en servidor de sitio**|Comprueba si la unidad de disco está formateada con el sistema de archivos FAT. Para mayor seguridad, instale los componentes de servidor de sitio en unidades de disco formateadas con el sistema de archivos NTFS.|Advertencia|Sitio primario|
-|**Espacio libre en disco en el servidor de sitio**|Para poder instalar el servidor de sitio, el equipo de servidor de sitio debe tener al menos 15 GB de espacio libre en disco. Debe contar con 1 GB de espacio libre adicional si instala el rol de sistema de sitio del proveedor de SMS en el mismo equipo.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario|
-|**Reinicio del sistema pendiente**|Comprueba si otro programa requiere que el servidor se reinicie antes de ejecutar el programa de instalación.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario, <br>Consola de Configuration Manager, <br>Proveedor de SMS, <br>SQL Server, <br>Punto de administración, <br>Punto de distribución|
-|**Controlador de dominio de solo lectura**|Los servidores de base de datos de sitio y servidores de sitio secundario no se admiten en un controlador de dominio de solo lectura (RODC). Para obtener más información, vea el artículo del Soporte técnico de Microsoft sobre los [problemas al instalar SQL Server en un controlador de dominio](https://support.microsoft.com/help/2032911).|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario|
-|**Extensiones de esquema**|Determina si se ha ampliado el esquema de Servicios de dominio de Active Directory y, si es así, la versión de las extensiones de esquema que se han utilizado. Las extensiones de esquema de Active Directory de Configuration Manager no son necesarias para la instalación del servidor de sitio, pero se recomiendan para poder usar todas las características de Configuration Manager. Para obtener más información sobre las ventajas de la extensión de esquema, vea [Preparar Active Directory para la publicación de sitios](/sccm/core/plan-design/network/extend-the-active-directory-schema).|Advertencia|Sitio de administración central, <br>Sitio primario|
-|**Longitud del FQDN del servidor de sitio**|Comprueba la longitud del FQDN del equipo de servidor de sitio.|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario|
-|**Sistema operativo de la consola de Configuration Manager no admitido**|Comprueba que la consola de Configuration Manager puede instalarse en equipos que ejecutan una versión de SO compatible. Para obtener más información, vea [Supported operating systems for the Configuration Manager console](/sccm/core/plan-design/configs/supported-operating-systems-consoles) (Sistemas operativos compatibles con la consola de Configuration Manager).|Error|Consola de Configuration Manager|
-|**Versión del sistema operativo de servidor de sitio no compatible con el programa de instalación**|Comprueba si se está ejecutando un SO compatible en el servidor. Para obtener más información, vea [Sistemas operativos compatibles con servidores de sistema de sitio de Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).|Error|Sitio de administración central, <br>Sitio primario, <br>Sitio secundario, <br>Consola de Configuration Manager, <br>Punto de administración, <br>Punto de distribución|
-|**Comprobar la coherencia de la base de datos**|A partir de la versión 1602, este proceso comprueba la coherencia de la base de datos.|Error|Sitio de administración central, <br>Sitio primario|  
+### <a name="dependencies-errors"></a>Dependencias: errores
+
+#### <a name="active-migration-mappings-on-the-target-primary-site"></a>Asignaciones de migración activas en el sitio primario de destino 
+*Se aplica a: sitio de administración central*
+
+No hay ninguna asignación de migración activa en los sitios primarios.
+
+#### <a name="active-replica-mp"></a>Punto de administración de réplica activo 
+*Se aplica a: sitio primario*
+
+Hay una réplica de punto de administración activa.
+
+#### <a name="bits-enabled"></a>BITS habilitado 
+*Se aplica a: punto de administración*
+
+El Servicio de transferencia inteligente en segundo plano (BITS) está instalado en el punto de administración. Esta comprobación puede fallar por uno de los siguientes motivos: 
+- BITS no está instalado.  
+- El componente de compatibilidad de WMI de IIS 6.0 para IIS 7.0 no está instalado en el servidor o host de IIS remoto.  
+- El programa de instalación no ha podido comprobar la configuración de IIS remoto. Los componentes comunes de IIS no están instalados en el servidor de sitio.  
+
+#### <a name="case-insensitive-collation-on-sql-server"></a>Intercalación que diferencia entre mayúsculas y minúsculas en SQL Server 
+*Se aplica a: servidor de base de datos del sitio*
+
+La instalación de SQL Server utiliza una intercalación que diferencia entre mayúsculas y minúsculas, como **SQL_Latin1_General_CP1_CI_AS**.
+
+#### <a name="check-existing-stand-alone-primary-site-for-version-and-site-code"></a>Comprobar la versión y el código del sitio primario independiente existente 
+*Se aplica a: sitio de administración central, sitio primario*
+
+El sitio primario que planea expandir es un sitio primario independiente. Tiene la misma versión de Configuration Manager, pero un código de sitio diferente que el sitio de administración central que se va a instalar.
+
+#### <a name="check-for-incompatible-collection-references"></a>Comprobar referencias a recopilaciones no compatibles 
+*Se aplica a: sitio de administración central*
+
+Durante una actualización, las recopilaciones solo hacen referencia a otras recopilaciones del mismo tipo.
+
+#### <a name="client-version-on-management-point-computer"></a>Versión de cliente en el equipo de punto de administración 
+*Se aplica a: punto de administración*
+
+Va a instalar el punto de administración en un servidor cuya versión no difiere de la del cliente instalado de Configuration Manager.
+
+#### <a name="dedicated-sql-server-instance"></a>Instancia de SQL Server dedicada 
+*Se aplica a: sitio de administración central, sitio primario o sitio secundario*
+
+Ha configurado una instancia dedicada de SQL Server para hospedar la base de datos de sitio de Configuration Manager. 
+
+Si otro sitio utiliza la instancia, debe seleccionar otra instancia para el nuevo sitio. También puede desinstalar el otro sitio o mover su base de datos a otra instancia de SQL Server.
+
+#### <a name="existing-configuration-manager-server-components-on-server"></a>Componentes de servidor de Configuration Manager existentes en el servidor 
+*Se aplica a: sitio de administración central, sitio primario o sitio secundario*
+
+Un servidor de sitio o el rol de sistema de sitio aún no están instalados en el servidor seleccionado para la instalación del sitio.
+
+#### <a name="firewall-exception-for-sql-server"></a>Excepción de firewall para SQL Server 
+*Se aplica a: sitio de administración central, sitio primario o sitio secundario, punto de administración*
+
+Firewall de Windows está deshabilitado o existe la excepción correspondiente de Firewall de Windows para SQL Server. 
+
+Permite el acceso remoto a Sqlservr.exe o a los puertos TCP necesarios. De forma predeterminada, SQL Server escucha en el puerto TCP 1433 y SQL Server Service Broker (SSB) usa el puerto TCP 4022.
+
+#### <a name="iis-service-running"></a>Ejecución del servicio IIS 
+*Se aplica a: punto de administración, punto de distribución*
+
+IIS está instalado y en ejecución en el servidor para los puntos de administración o distribución.
+
+#### <a name="match-collation-of-expand-primary-site"></a>Hacer coincidir la intercalación del sitio primario de expansión 
+*Se aplica a: sitio de administración central*
+
+Al expandir un sitio primario a una jerarquía, la base de datos de sitio para el sitio primario independiente tiene la misma intercalación que la base de datos de sitio en el sitio de administración central.
+
+#### <a name="microsoft-remote-differential-compression-rdc-library-registered"></a>Biblioteca registrada de compresión diferencial remota (RDC) de Microsoft 
+*Se aplica a: sitio de administración central, sitio primario o sitio secundario*
+
+La biblioteca de RDC está registrada en el servidor de sitio de Configuration Manager.
+
+#### <a name="microsoft-windows-installer"></a>Microsoft Windows Installer 
+*Se aplica a: sitio de administración central, sitio primario o sitio secundario*
+
+Comprueba la versión de Windows Installer. 
+
+Cuando se produce un error en esta comprobación, significa que el programa de instalación no pudo comprobar la versión o que la versión instalada no cumple el requisito mínimo de Windows Installer 4.5.
+
+#### <a name="minimum-net-framework-version-for-configuration-manager-console"></a>Versión mínima de .NET Framework para la consola de Configuration Manager 
+*Se aplica a: consola de Configuration Manager*
+
+Microsoft .NET Framework 4.0 está instalado en el equipo de la consola de Configuration Manager. 
+
+#### <a name="minimum-net-framework-version-for-configuration-manager-site-server"></a>Versión mínima de .NET Framework para el servidor de sitio de Configuration Manager 
+*Se aplica a: sitio de administración central, sitio primario o sitio secundario*
+
+.NET Framework 3.5 está instalado o habilitado en el servidor de sitio de Configuration Manager. 
+
+#### <a name="minimum-net-framework-version-for-sql-server-express-edition-installation-for-configuration-manager-secondary-site"></a>Versión mínima de .NET Framework para la instalación de SQL Server Express Edition para el sitio secundario de Configuration Manager 
+*Se aplica a: sitio secundario*
+
+.NET Framework 4.0 está instalado o habilitado en el servidor de sitio secundario de Configuration Manager. SQL Server Express requiere esta versión.
+
+#### <a name="parent-database-collation"></a>Intercalación de base de datos primaria 
+*Se aplica a: sitio primario, sitio secundario*
+
+La intercalación de base de datos de sitio coincide con la intercalación de base de datos de sitio primario. Todos los sitios de una jerarquía deben utilizar la misma intercalación de base de datos.
+
+#### <a name="primary-fqdn"></a>FQDN primario 
+*Se aplica a: sitio de administración central, sitio primario, sitio secundario, servidor de base de datos del sitio*
+
+El nombre NetBIOS del equipo coincide con el nombre de host local en el nombre de dominio completo (FQDN).
+
+#### <a name="required-sql-server-collation"></a>Intercalación de SQL Server requerida 
+*Se aplica a: sitio de administración central, sitio primario o sitio secundario*
+
+La instancia de SQL Server está configurada para usar la intercalación **SQL_Latin1_General_CP1_CI_AS**. 
+
+Si la base de datos de sitio de Configuration Manager ya está instalada, esta comprobación también se aplica a la base de datos. Para obtener información sobre cómo cambiar las intercalaciones de base de datos y la instancia de SQL Server, vea [SQL collation and unicode support](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support) (Compatibilidad con la intercalación y Unicode de SQL). 
+
+Si usa un sistema operativo chino y necesita compatibilidad con GB18030, esta comprobación no se aplica. Para obtener más información sobre cómo habilitar la compatibilidad con GB18030, vea [Compatibilidad internacional](/sccm/core/plan-design/hierarchy/international-support).
+
+#### <a name="setup-source-folder"></a>Carpeta del origen de la instalación 
+*Se aplica a: sitio secundario*
+
+La cuenta de equipo del sitio secundario tiene los siguientes permisos para el recurso compartido y la carpeta de origen del programa de instalación: 
+- Permisos de **lectura** del sistema de archivos NTFS
+- Permisos de **lectura** de los recursos compartidos 
+
+> [!Note]  
+> Si usa recursos compartidos administrativos, por ejemplo, C$ y D$, la cuenta de equipo del sitio secundario debe ser un **administrador** del servidor.  
+
+#### <a name="setup-source-version"></a>Versión de origen del programa de instalación 
+*Se aplica a: sitio secundario*
+
+La versión de Configuration Manager de la carpeta de origen especificada para la instalación del sitio secundario coincide con la versión de Configuration Manager del sitio primario.
+
+#### <a name="site-code-in-use"></a>Código de sitio en uso 
+*Se aplica a: sitio primario* El código de sitio especificado aún no se usa en la jerarquía de Configuration Manager. Especifique un código de sitio único para este sitio.
+
+#### <a name="sms-provider-in-same-domain-as-site-server"></a>El proveedor de SMS en el mismo dominio que el servidor de sitio 
+*Se aplica a: proveedor de SMS*
+
+Cualquier instancia del proveedor de SMS está en el mismo dominio que el servidor de sitio.
+
+#### <a name="sql-server-edition"></a>Edición de SQL Server 
+*Se aplica a: servidor de base de datos del sitio*
+
+SQL Server del sitio no es SQL Server Express.
+
+#### <a name="sql-server-express-on-secondary-site"></a>SQL Server Express en el sitio secundario 
+*Se aplica a: sitio secundario*
+
+SQL Server Express puede instalarse correctamente en el servidor de sitio secundario.
+
+#### <a name="sql-server-on-the-secondary-site-server"></a>SQL Server en el servidor de sitio secundario 
+*Se aplica a: sitio secundario*
+
+SQL Server está instalado en el servidor de sitio secundario. No se puede instalar SQL Server en un sistema de sitio remoto para un sitio secundario.
+
+> [!Warning]  
+> Esta comprobación solo se aplica cuando se selecciona que el programa de instalación utilice una instancia existente de SQL Server.  
+
+#### <a name="sql-server-service-running-account"></a>Cuenta de ejecución de servicio SQL Server 
+*Se aplica a: sitio de administración central, sitio primario o sitio secundario*
+
+La cuenta de inicio de sesión del servicio SQL Server no es una cuenta de usuario local ni **SERVICIO LOCAL**. 
+
+Configure el servicio SQL Server para utilizar una cuenta de dominio válida, **SERVICIO DE RED** o **SISTEMA LOCAL**.
+
+#### <a name="sql-server-tcp-port"></a>Puerto TCP de SQL Server 
+*Se aplica a: servidor de base de datos del sitio*
+
+TCP está habilitado para la instancia de SQL Server y está configurado para usar un puerto estático.
+
+#### <a name="sql-server-version"></a>Versión de SQL Server 
+*Se aplica a: servidor de base de datos del sitio*
+
+Una versión compatible de SQL Server está instalada en el servidor de base de datos de sitio especificado. 
+
+Para obtener más información, vea [Support for SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions) (Versiones de SQL Server compatibles).
+
+#### <a name="asset-intelligence-synchronization-point-on-the-expanded-primary-site"></a>Punto de sincronización de Asset Intelligence no admitido en el sitio primario expandido 
+*Se aplica a: sitio de administración central*
+
+Al expandir un sitio primario a una jerarquía, el rol del punto de sincronización de Asset Intelligence no está instalado en el sitio primario independiente.
+
+#### <a name="endpoint-protection-point-on-the-expanded-primary-site"></a>Punto de Endpoint Protection en el sitio primario expandido 
+*Se aplica a: sitio de administración central*
+
+Al expandir un sitio primario a una jerarquía, el rol del punto de Endpoint Protection no está instalado en el sitio primario independiente.
+
+#### <a name="microsoft-intune-connector-on-the-expanded-primary-site"></a>Conector de Microsoft Intune en el sitio primario expandido 
+*Se aplica a: sitio de administración central*
+
+Al expandir un sitio primario a una jerarquía, el rol de Microsoft Intune Connector no está instalado en el sitio primario independiente.
+
+#### <a name="usmt-installed"></a>USMT instalado 
+*Se aplica a: sitio de administración central, sitio primario (solo independiente)*
+
+El componente Herramienta de migración de estado de usuario (USMT) de Windows Assessment and Deployment Kit (ADK) para Windows está instalado.
+
+#### <a name="validate-fqdn-of-sql-server"></a>Validar el FQDN de SQL Server 
+*Se aplica a: servidor de base de datos del sitio*
+
+Ha especificado un FQDN válido para el equipo con SQL Server.
+
+#### <a name="verify-central-administration-site-version"></a>Comprobar la versión del sitio de administración central 
+*Se aplica a: sitio primario*
+
+El sitio de administración central tiene la misma versión que Configuration Manager.
+
+#### <a name="windows-deployment-tools-installed"></a>Las herramientas de implementación de Windows están instaladas 
+*Se aplica a: proveedor de SMS*
+
+El componente de herramientas de implementación de Windows ADK está instalado.
+
+#### <a name="windows-failover-cluster"></a>Clúster de conmutación por error de Windows 
+*Se aplica a: servidor de sitio, punto de administración, punto de distribución*
+
+El servidor con el servidor de sitio, punto de administración o los roles de punto de distribución no forma parte de un clúster de Windows.
+
+A partir de la versión 1810, el proceso de instalación de Configuration Manager ya no impide la instalación del rol de servidor de sitio en un equipo con el rol de Windows para clústeres de conmutación por error. SQL Always On requiere este rol, por lo que anteriormente no se podía colocar la base de datos del sitio en el servidor de sitio. Con este cambio, puede crear un sitio de alta disponibilidad con menos servidores usando SQL Always On y un servidor de sitio en modo pasivo. Para obtener más información, vea [High availability options](/sccm/core/servers/deploy/configure/high-availability-options) (Opciones de alta disponibilidad). <!--1359132-->  
+
+#### <a name="windows-pe-installed"></a>Windows PE instalado 
+*Se aplica a: proveedor de SMS*
+
+El componente de entorno de preinstalación de Windows (PE) del ADK de Windows está instalado.
+
+
+### <a name="dependencies-warnings"></a>Dependencias: advertencias
+
+#### <a name="administrative-rights-on-distribution-point"></a>Derechos administrativos en el punto de distribución 
+*Se aplica a: punto de distribución*
+
+La cuenta de usuario que ejecuta el programa de instalación tiene derechos de **administrador** en el punto de distribución.
+
+#### <a name="administrative-rights-on-management-point"></a>Derechos administrativos en el punto de administración 
+*Se aplica a: punto de administración, punto de distribución*
+
+La cuenta de equipo del servidor de sitio tiene derechos de **administrador** en el punto de administración y distribución.
+
+#### <a name="administrative-share-site-system"></a>Recurso compartido administrativo (sistema de sitio) 
+*Se aplica a: punto de administración*
+
+Los recursos compartidos administrativos necesarios se encuentran en el equipo de sistema de sitio.
+
+#### <a name="application-compatibility"></a>Compatibilidad de aplicaciones 
+*Se aplica a: sitio de administración central, sitio primario*
+
+Las aplicaciones actuales son compatibles con el esquema de la aplicación.
+
+#### <a name="bits-installed"></a>BITS instalado 
+*Se aplica a: punto de administración*
+
+El Servicio de transferencia inteligente en segundo plano (BITS) está instalado y habilitado en IIS.
+
+#### <a name="configuration-for-sql-server-memory-usage"></a>Configuración de uso de memoria de SQL Server 
+*Se aplica a: servidor de base de datos del sitio*
+
+SQL Server está configurado para un uso ilimitado de memoria. Configure la memoria de SQL Server para que tenga un límite máximo.
+
+#### <a name="firewall-exception-for-sql-server-standalone-primary-site"></a>Excepción de firewall para SQL Server (sitio primario independiente) 
+*Se aplica a: sitio primario (solo independiente)*
+
+Firewall de Windows está deshabilitado o existe la excepción correspondiente de Firewall de Windows para SQL Server. 
+
+Permite el acceso remoto a Sqlservr.exe o a los puertos TCP necesarios. De forma predeterminada, SQL Server escucha en el puerto TCP 1433 y Server Service Broker (SSB) usa el puerto TCP 4022.
+
+#### <a name="firewall-exception-for-sql-server-for-management-point"></a>Excepción de firewall para SQL Server para el punto de administración 
+*Se aplica a: punto de administración*
+
+Firewall de Windows está deshabilitado o existe la excepción correspondiente de Firewall de Windows para SQL Server.
+
+#### <a name="iis-https-configuration"></a>Configuración HTTPS de IIS 
+*Se aplica a: punto de administración, punto de distribución*
+
+El sitio web de IIS tiene enlaces para el protocolo de comunicación HTTPS. 
+
+Si instala roles de sitio que requieran el protocolo HTTPS, debe configurar los enlaces del sitio de IIS en el servidor especificado con un certificado PKI (infraestructura de clave pública) válido.
+
+#### <a name="microsoft-xml-core-services-60-msxml60"></a>Microsoft XML Core Services 6.0 (MSXML60) 
+*Se aplica a: sitio de administración central, sitio primario, sitio secundario, consola de Configuration Manager, punto de administración, punto de distribución*
+
+Comprueba que la versión MSXML 6.0, u otra posterior, está instalada.
+
+#### <a name="powershell-20-on-site-server"></a>PowerShell 2.0 en el servidor de sitio 
+*Se aplica a: sitio primario con el conector de Exchange*
+
+Windows PowerShell 2.0, o una versión posterior, está instalado en el servidor de sitio para Configuration Manager Exchange Connector. 
+
+#### <a name="remote-connection-to-wmi-on-secondary-site"></a>Conexión remota con WMI en el sitio secundario 
+*Se aplica a: sitio secundario*
+
+El programa de instalación puede establecer una conexión remota con WMI en el servidor de sitio secundario.
+
+#### <a name="sql-server-process-memory-allocation"></a>Asignación de memoria de proceso de SQL Server 
+*Se aplica a: servidor de base de datos del sitio* 
+
+SQL Server reserva un mínimo de 8 GB de memoria para el sitio de administración central y el sitio primario, y un mínimo de 4 GB de memoria para el sitio secundario.
+
+Para obtener más información, vea [Cómo configurar las opciones de memoria con SQL Server Management Studio](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd).
+
+> [!NOTE]  
+> Esta comprobación no se aplica a SQL Server Express en un sitio secundario. Esta edición está limitada a 1 GB de memoria reservada.  
+
+#### <a name="unsupported-site-system-os-version-for-upgrade"></a>Versión de sistema operativo del sistema de sitio no admitida para la actualización 
+*Se aplica a: sitio primario, sitio secundario*
+
+Los roles de sistema de sitio que no son puntos de distribución se instalan en servidores que ejecutan Windows Server 2012 o una versión posterior.
+
+Para obtener más información, vea [Sistemas operativos compatibles con servidores de sistema de sitio de Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).
+
+> [!NOTE]  
+> Esta comprobación no puede resolver el estado de los roles de sistema de sitio instalados en Azure o del almacenamiento en la nube usado por Microsoft Intune. Omita las advertencias para estos roles como falsos positivos.
+
+#### <a name="verify-site-server-permissions-to-publish-to-active-directory"></a>Comprobar los permisos de servidor de sitio para publicar en Active Directory 
+*Se aplica a: sitio de administración central, sitio primario o sitio secundario*
+
+La cuenta de equipo del servidor de sitio tiene permisos de **Control total** en el contenedor **System Management** en el dominio de Active Directory. 
+
+Para más información, vea [Preparar Active Directory para la publicación de sitios](/sccm/core/plan-design/network/extend-the-active-directory-schema).
+
+> [!NOTE]  
+> Si ha comprobado manualmente los permisos, puede omitir esta advertencia.
+
+#### <a name="windows-remote-management-winrm-v11"></a>Administración remota de Windows (WinRM) v1.1 
+*Se aplica a: sitio primario, consola de Configuration Manager*
+
+WinRM 1.1 está instalado en el servidor de sitio primario o en el equipo de la consola de Configuration Manager para ejecutar la consola de administración fuera de banda. 
+
+Para obtener más información sobre cómo descargar WinRM 1.1, vea el [artículo de soporte técnico 936059](https://support.microsoft.com/help/936059).
+
+#### <a name="wsus-on-site-server"></a>WSUS en servidor de sitio 
+*Se aplica a: sitio de administración central, sitio primario*
+
+Hay una versión compatible de Windows Server Update Services (WSUS) instalada en el servidor de sitio. 
+
+Cuando se utiliza un punto de actualización de software en un servidor distinto al servidor del sitio, debe instalar la consola de administración de WSUS en el servidor de sitio. Para obtener más información sobre WSUS, vea [Windows Server Update Services](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
+
+#### <a name="pending-configuration-item-policy-updates"></a>Actualizaciones de directivas de elementos de configuración pendientes 
+<!--SCCMDocs-pr issue 2814-->
+*Se aplica a: sitio primario*
+
+A partir de la versión 1806, puede que se le muestre esta advertencia al actualizar desde la versión 1706 o versiones posteriores si tiene varias implementaciones de aplicaciones y al menos una de estas requiere aprobación. 
+
+Tiene dos opciones:  
+
+- Ignorar la advertencia y continuar con la actualización. Esta acción provoca un procesamiento más intensivo en el servidor del sitio durante la actualización, ya que se deberán procesar las directivas. También puede que aumente la carga del procesador en el punto de administración tras la actualización.  
+
+- Revisar una de las aplicaciones que no tenga ningún requisito, o bien un requisito específico del SO. Preprocese una parte de la carga del servidor del sitio en ese momento. Revise **objreplmgr.log** y, después, supervise el procesador del punto de administración. Tras completar el procesamiento, actualice el sitio. Aún deberá realizarse parte del procesamiento tras la actualización, pero este será inferior al procesamiento necesario si se ignora la advertencia.  
+
+
+
+##  <a name="BKMK_Requirements"></a> Requisitos del sistema  
+
+### <a name="system-requirements-errors"></a>Requisitos del sistema: errores
+
+#### <a name="server-service-is-running"></a>El servicio de servidor se está ejecutando 
+*Se aplica a: sitio de administración central, sitio primario o sitio secundario*
+
+El servicio de servidor se ha iniciado y se está ejecutando.
+
+#### <a name="domain-membership"></a>Pertenencia a dominio 
+*Se aplica a: sitio de administración central, sitio primario, sitio secundario, proveedor de SMS, SQL Server*
+
+El equipo de Configuration Manager pertenece a un dominio de Windows.
+
+#### <a name="free-disk-space-on-site-server"></a>Espacio libre en disco en el servidor de sitio 
+*Se aplica a: sitio de administración central, sitio primario o sitio secundario*
+
+Para instalar el servidor de sitio, debe tener al menos 15 GB de espacio libre en disco. Si instala al proveedor de SMS en el mismo servidor, necesitará 1 GB de espacio libre adicional.
+
+#### <a name="pending-system-restart"></a>Reinicio del sistema pendiente 
+*Se aplica a: sitio de administración central, sitio primario, sitio secundario, consola de Configuration Manager, proveedor de SMS, SQL Server, punto de administración, punto de distribución*
+
+Antes de ejecutar el programa de instalación, otro programa requiere que el servidor se reinicie.
+
+A partir de la versión 1810, esta comprobación es más resistente. Para ver si el equipo está en un estado de reinicio pendiente, comprueba las siguientes ubicaciones del registro:<!--SCCMDocs-pr issue 3010-->  
+
+- `HKLM:Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending`  
+- `HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired`  
+- `HKLM:SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations`  
+- `HKLM:Software\Microsoft\ServerManager, CurrentRebootAttempts`  
+
+#### <a name="read-only-domain-controller"></a>Controlador de dominio de solo lectura 
+*Se aplica a: sitio de administración central, sitio primario o sitio secundario*
+
+Los servidores de base de datos de sitio y servidores de sitio secundario no se admiten en un controlador de dominio de solo lectura (RODC). 
+
+Para obtener más información, vea el artículo del Soporte técnico de Microsoft sobre los [problemas al instalar SQL Server en un controlador de dominio](https://support.microsoft.com/help/2032911).
+
+#### <a name="site-server-fqdn-length"></a>Longitud del FQDN del servidor de sitio 
+*Se aplica a: sitio de administración central, sitio primario o sitio secundario*
+
+Longitud del FQDN del servidor de sitio.
+
+#### <a name="unsupported-os-for-configuration-manager-console"></a>Sistema operativo no admitido para la consola de Configuration Manager
+*Se aplica a: consola de Configuration Manager*
+
+Instala la consola de Configuration Manager en equipos que ejecutan una versión de sistema operativo compatible. 
+
+Para obtener más información, vea [Sistemas operativos compatibles con consolas de System Center Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-consoles).
+
+#### <a name="unsupported-os-for-site-server"></a>Sistema operativo no compatible con el servidor de sitio 
+*Se aplica a: sitio de administración central, sitio primario, sitio secundario, consola de Configuration Manager, punto de administración, punto de distribución*
+
+El servidor ejecuta una versión de sistema operativo compatible. 
+
+Para obtener más información, vea [Sistemas operativos compatibles con servidores de sistema de sitio de Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).
+
+#### <a name="verify-database-consistency"></a>Comprobar la coherencia de la base de datos 
+*Se aplica a: sitio de administración central, sitio primario*
+
+Comprueba la coherencia de la base de datos del sitio en SQL Server.  
+
+
+### <a name="system-requirements-warnings"></a>Requisitos del sistema: advertencias
+
+#### <a name="active-directory-domain-functional-level"></a>Nivel funcional del dominio de Active Directory 
+*Se aplica a: sitio de administración central, sitio primario*
+
+El nivel funcional de dominio de Active Directory es como mínimo Windows Server 2008 R2.
+
+#### <a name="domain-membership"></a>Pertenencia a dominio 
+*Se aplica a: punto de administración, punto de distribución*
+
+El equipo de Configuration Manager pertenece a un dominio de Windows.
+
+#### <a name="ntfs-drive-on-site-server"></a>Unidad NTFS en servidor de sitio 
+*Se aplica a: sitio primario*
+
+La unidad de disco se debe formatear con el sistema de archivos NTFS. Para mayor seguridad, instale los componentes de servidor de sitio en unidades de disco formateadas con el sistema de archivos NTFS.
+
+#### <a name="schema-extensions"></a>Extensiones de esquema 
+*Se aplica a: sitio de administración central, sitio primario*
+
+El esquema de Active Directory se ha extendido. Si se ha extendido, la versión de las extensiones del esquema que se han usado. 
+
+Configuration Manager no requiere extensiones del esquema de Active Directory para instalar el servidor de sitio. Pero Microsoft las recomienda para el uso completo de todas las características de Configuration Manager. Para obtener más información sobre las ventajas de la extensión de esquema, vea [Preparar Active Directory para la publicación de sitios](/sccm/core/plan-design/network/extend-the-active-directory-schema).
+
+#### <a name="bkmk_changetracking"></a> Limpieza del seguimiento de cambios de SQL
+*Se aplica a: servidor de base de datos del sitio*
+
+A partir de la versión 1810, comprueba si la base de datos del sitio tiene algún trabajo pendiente de datos de seguimiento del cambio de SQL.<!--SCCMDocs-pr issue 3023-->  
+
+Haga manualmente esta comprobación ejecutando un procedimiento de diagnóstico almacenado en la base de datos. En primer lugar, cree una [conexión de diagnóstico](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) a la base de datos de sitio. El método más sencillo consiste en usar el Editor de consultas de SQL Server Management Studio y conectarse a `admin:<instance name>`. 
+
+En una ventana de consulta de conexión de administrador dedicada, ejecute los siguientes comandos:
+
+```SQL
+USE <ConfigMgr database name>
+EXEC spDiagChangeTracking
+```
+
+En función del tamaño de la base de datos y del trabajo pendiente, este procedimiento almacenado puede tardar de unos minutos a varias horas. Al completar la consulta, verá dos secciones de datos relacionados con el trabajo pendiente. Primero consulte **CT_Days_Old**. Este valor indica la antigüedad (días) de la entrada más antigua en la tabla syscommittab. El valor predeterminado de Configuration Manager es de cinco días. No cambie este valor predeterminado. En periodos de grandes volúmenes de procesamiento de datos o replicación, la entrada más antigua en syscommittab puede tener más de cinco días. Si este valor es superior a los siete días, ejecute una limpieza manual de los datos de seguimiento de los cambios.  
+
+Para limpiar los datos de seguimiento de los cambios, ejecute el siguiente comando en la conexión de administración dedicada: 
+
+```SQL
+USE <ConfigMgr database name>
+EXEC spDiagChangeTracking @CleanupChangeTracking = 1
+```
+
+Este comando inicia una limpieza de syscommittab y de todas las tablas del lado asociado. Su ejecución puede tardar de varios minutos a varias horas. Para supervisar su progreso, consulte la vista **vLogs**. Para ver el progreso actual, ejecute la consulta siguiente: 
+
+```SQL
+SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
+```
+
+<!-- #### SQL Native Client
+<!--SCCMDocs-pr issue 3094->
+*Applies to: Central administration site, primary site, secondary site*
+
+A supported version of the SQL Native Client. Starting in version 1810, the minimum version is 11.4.7001.0. 
+
+This SQL Native Client version supports TLS 1.2. For more information, see the following articles:
+- [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
+- [How to enable TLS 1.2 for Configuration Manager](https://support.microsoft.com/help/4040243/how-to-enable-tls-1-2-for-configuration-manager)  
+ -->

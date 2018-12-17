@@ -2,7 +2,7 @@
 title: Lista de informes
 titleSuffix: Configuration Manager
 description: Revise la lista de informes que se proporcionan con Configuration Manager. Los informes aparecen en varias categorías.
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9d292d85ce5a30e56d7909d74b986ac408d29346
-ms.sourcegitcommit: 849391d3985b057027cae610bd3a79fdaa708b94
+ms.openlocfilehash: 01112dac89ba0fe9e18dabe186353506d9476213
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42584827"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456777"
 ---
-# <a name="list-of-reports-in-system-center-configuration-manager"></a>Lista de informes en System Center Configuration Manager
+# <a name="list-of-reports-in-configuration-manager"></a>Lista de informes en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
@@ -28,7 +28,8 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="administrative-security"></a>Seguridad administrativa  
- Los seis informes siguientes aparecen en la categoría **Seguridad administrativa**.  
+
+Los seis informes siguientes aparecen en la categoría **Seguridad administrativa**.  
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -42,7 +43,9 @@ Los siguientes informes se incluyen con Configuration Manager. Los informes apar
 
 
 ## <a name="alerts"></a>Alertas  
+
 Los dos informes siguientes aparecen en la categoría **Alertas**.  
+
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
 |**Cuadro de mandos de alertas**|Muestra un resumen de todas las alertas pospuestas que se generaron entre la fecha de inicio y de finalización especificada.|  
@@ -51,14 +54,15 @@ Los dos informes siguientes aparecen en la categoría **Alertas**.
 
 
 ## <a name="asset-intelligence"></a>Asset Intelligence  
-Los 66 informes siguientes aparecen en la categoría **Asset Intelligence**.  
+
+Los 67 informes siguientes aparecen en la categoría **Asset Intelligence**.  
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
 |**Hardware 01A - Resumen de los equipos en una recopilación específica**|Muestra una vista de resumen de Asset Intelligence de los equipos de la recopilación especificada.|  
 |**Hardware 03A - Usuarios del equipo primario**|Muestra los usuarios y el recuento de equipos en los que son el usuario primario.|  
 |**Hardware 03B - Equipos para un usuario primario de la consola específico**|Muestra todos los equipos para los que un usuario especificado es el usuario primario de la consola.|  
-|**Hardware 04A - Equipos con varios usuarios (compartidos)**|Muestra los equipos que no tienen un usuario primario porque ningún usuario tiene un porcentaje de tiempo de inicio de sesión de consola superior al 66%.|  
+|**Hardware 04A - Equipos con varios usuarios (compartidos)**|Muestra los equipos que no tienen un usuario primario porque ningún usuario tiene un tiempo de inicio de sesión superior al 66 %.|  
 |**Hardware 05A - Usuarios de la consola en un equipo específico**|Muestra todos los usuarios de la consola en el equipo especificado.|  
 |**Hardware 06A - Equipos para los que no se pudo determinar los usuarios de la consola**|Ayuda a los usuarios administrativos a identificar los equipos que necesitan tener activado el registro de seguridad.|  
 |**Hardware 07A - Dispositivos USB por fabricante**|Muestra los dispositivos USB, agrupados por fabricante.|  
@@ -79,7 +83,7 @@ Los 66 informes siguientes aparecen en la categoría **Asset Intelligence**.
 |**Licencia 03A - Recuento de licencias por estado de licencia**|Muestra los productos, por estado de licencia, cuyas licencias se administran mediante el Servicio de licencias de software.|  
 |**Licencia 03B - Equipos con un estado de licencia específico**|Muestra los productos, con un estado de licencia especificado, cuyas licencias se administran mediante el Servicio de licencias de software.|  
 |**Licencia 04A - Recuento de productos administrados mediante el Servicio de licencias de software**|Muestra el recuento de productos cuyas licencias se administran mediante el Servicio de licencias de software.|  
-|**Licencia 04B - Equipos con un producto específico administrado mediante el Servicio de licencias de software**|Muestra los equipos administrados mediante el Servicio de licencias de software que contienen un producto determinado.|  
+|**Licencia 04B - Equipos con un producto específico administrado mediante el Servicio de licencias de software**|Muestra los equipos administrados mediante el Servicio de licencias de software que incluyen un producto determinado.|  
 |**Licencia 05A - Equipos que proporcionan el Servicio de administración de claves**|Muestra los equipos que actúan como servidores de administración de claves.|  
 |**Licencia 06A - Recuentos de procesadores para productos con licencias por procesador**|Muestra el número de procesadores en equipos que usan productos de Microsoft que admiten las licencias por procesador.|  
 |**Licencia 06B - Equipos con un producto específico que admite licencias por procesador**|Muestra una lista de los equipos donde está instalado un producto específico de Microsoft que admite las licencias por procesador.|  
@@ -97,9 +101,9 @@ Los 66 informes siguientes aparecen en la categoría **Asset Intelligence**.
 |**Software 04A - Software configurado para ejecutarse automáticamente en equipos**|Muestra una lista del software configurado para ejecutarse automáticamente en equipos.|  
 |**Software 04B - Equipos con software específico configurado para ejecutarse automáticamente**|Muestra todos los equipos con software específico configurado para ejecutarse automáticamente.|  
 |**Software 04C - Software configurado para ejecutarse automáticamente en un equipo específico**|Muestra el software configurado para ejecutarse automáticamente en un equipo específico.|  
-|**Software 05A - Objetos auxiliares de explorador**|Muestra los objetos auxiliares de explorador instalados en los equipos de una recopilación especificada.|  
-|**Software 05B - Equipos con un objeto auxiliar de explorador específico**|Muestra todos los equipos con un objeto auxiliar de explorador específico.|  
-|**Software 05C - Objetos auxiliares de explorador en un equipo específico**|Muestra todos los objetos auxiliares de explorador en un equipo específico.|  
+|**Software 05A - Objetos del asistente de explorador**|Muestra los objetos del asistente de explorador instalados en los equipos de una recopilación especificada.|  
+|**Software 05B - Equipos con un objeto del asistente de explorador específico**|Muestra todos los equipos con un objeto del asistente de explorador específico.|  
+|**Software 05C - Objetos del asistente de explorador en un equipo específico**|Muestra todos los objetos del asistente de explorador en un equipo específico.|  
 |**Software 06A - Búsqueda de software instalado**|En este informe se proporciona un resumen del software instalado. Busca en función de los criterios siguientes: nombre de producto, editor o versión.|  
 |**Software 06B - Software por nombre de producto**|Muestra un resumen del software instalado en función de un nombre de producto especificado.|  
 |**Software 07A - Programas ejecutables usados recientemente por recuento de equipos**|Muestra los programas ejecutables que los usuarios han usado recientemente. También incluye el recuento de los equipos en los que los usuarios usaron el programa. Para ver este informe, la medición de software debe estar habilitada para este sitio.|  
@@ -121,10 +125,12 @@ Los 66 informes siguientes aparecen en la categoría **Asset Intelligence**.
 |**Ciclo de vida 02A - Lista de máquinas con productos que han expirado en la organización**|Vea equipos que contienen productos expirados. Este informe se puede filtrar por nombre de producto.|
 |**Ciclo de vida 03A - Lista de productos expirados que se encontraron en la organización**|Vea los detalles de productos de su entorno cuyo ciclo de vida ha expirado.|
 |**Ciclo de vida 04A - Información general del ciclo de vida de los productos**|Vea una lista de los ciclos de vida de los productos. Filtre la lista por nombre de producto y los días para que expire.|
+|**Ciclo de vida 05A: panel de ciclo de vida del producto**|A partir de la versión 1810, este informe incluye información similar a la del panel de consola.|
 
 
 
 ## <a name="client-push"></a>Inserción de cliente  
+
 Los cuatro informes siguientes aparecen en la categoría **Inserción de cliente**.  
 
 |Nombre del informe|Descripción|  
@@ -137,6 +143,7 @@ Los cuatro informes siguientes aparecen en la categoría **Inserción de cliente
 
 
 ## <a name="client-status"></a>Estado de cliente  
+
 Los siete informes siguientes aparecen en la categoría **Estado de cliente**.  
 
 |Nombre del informe|Descripción|  
@@ -152,6 +159,7 @@ Los siete informes siguientes aparecen en la categoría **Estado de cliente**.
 
 
 ## <a name="company-resource-access"></a>Acceso a los recursos de la empresa  
+
 Los tres informes siguientes aparecen en la categoría **Acceso a los recursos de la empresa**. 
 
 |Nombre del informe|Descripción|  
@@ -163,6 +171,7 @@ Los tres informes siguientes aparecen en la categoría **Acceso a los recursos d
 
 
 ## <a name="compliance-and-settings-management"></a>Administración de compatibilidad y configuración  
+
 Los veintidós informes siguientes aparecen en la categoría **Administración de compatibilidad y configuración**. 
 
 |Nombre del informe|Descripción|  
@@ -172,7 +181,7 @@ Los veintidós informes siguientes aparecen en la categoría **Administración d
 |**Compatibilidad de acceso condicional del usuario**|Muestra la compatibilidad de acceso condicional detallado de un usuario específico.|
 |**Informe de compatibilidad de acceso condicional**|Un informe de compatibilidad de acceso condicional de cada directiva de compatibilidad de destino.|
 |**Detalles de reglas compatibles de elementos de configuración en una línea base de configuración para un activo**|Muestra información sobre las reglas evaluadas como compatibles para un elemento de configuración especificado para un dispositivo o usuario especificados.|  
-|**Detalles de reglas en conflicto de elementos de configuración en una línea base de configuración para un activo**|Muestra información sobre las reglas de un elemento de configuración implementado que entran en conflicto con otras reglas. Las demás reglas se pueden incluir en el mismo elemento de configuración implementado o en otro.|  
+|**Detalles de reglas en conflicto de elementos de configuración en una línea base de configuración para un activo**|Muestra información sobre las reglas de un elemento de configuración implementado que entran en conflicto con otras reglas. Incluye las demás reglas en el mismo elemento de configuración implementado o en otro.|  
 |**Detalles de errores de elementos de configuración en una línea base de configuración para un activo**|Muestra información sobre los errores que generó un elemento de configuración especificado para un dispositivo o un usuario especificados.|  
 |**Detalles de reglas no compatibles de elementos de configuración en una línea base de configuración para un activo**|Muestra información sobre las reglas que se evaluaron como no compatibles para un elemento de configuración especificado para un dispositivo o un usuario especificados.|  
 |**Detalles de reglas corregidas de elementos de configuración en una línea base de configuración para un activo**|Muestra información sobre las reglas que corrigió un elemento de configuración especificado para un dispositivo o un usuario especificados.|  
@@ -180,8 +189,8 @@ Los veintidós informes siguientes aparecen en la categoría **Administración d
 |**Lista de activos por estado de cumplimiento para un elemento de configuración de una línea base de configuración**|Muestra los dispositivos o los usuarios en un estado de cumplimiento especificado después de la evaluación de un elemento de configuración especificado.|  
 |**Lista de aplicaciones y dispositivos no conformes para un usuario específico**|Muestra información sobre los usuarios y los dispositivos que tienen aplicaciones instaladas que no son conformes con la directiva especificada.|  
 |**Lista de reglas en conflicto con una regla especificada para un activo**|Muestra una lista de las reglas que están en conflicto con una regla especificada para un elemento de configuración implementado.|  
-|**Lista de activos desconocidos para una línea base de configuración**|Muestra una lista de dispositivos o usuarios que todavía no notificaron datos de cumplimiento para una línea de base de configuración especificada.|  
-|**Lista de activos desconocidos para un elemento de configuración**|Muestra una lista de dispositivos o usuarios que todavía no notificaron datos de cumplimiento para un elemento de configuración especificado.|  
+|**Lista de activos desconocidos para una línea base de configuración**|Muestra una lista de dispositivos o usuarios que todavía no han notificado datos de cumplimiento para una línea de base de configuración especificada.|  
+|**Lista de activos desconocidos para un elemento de configuración**|Muestra una lista de dispositivos o usuarios que todavía no han notificado datos de cumplimiento para un elemento de configuración especificado.|  
 |**Resumen de reglas y errores de elementos de configuración en una línea base de configuración para un activo**|Muestra un resumen del estado de cumplimiento de las reglas y los errores de configuración de un elemento de configuración especificado. El elemento de configuración se debe implementar en un dispositivo o usuario.|  
 |**Resumen del cumplimiento por línea base de configuración**|Muestra un resumen del cumplimiento general de las líneas de base de configuración implementadas en la jerarquía.|  
 |**Resumen del cumplimiento por elementos de configuración para una línea base de configuración**|Muestra un resumen del cumplimiento de los elementos de configuración en una línea de base de configuración especificada.|  
@@ -190,8 +199,11 @@ Los veintidós informes siguientes aparecen en la categoría **Administración d
 |**Resumen de usuarios que tienen aplicaciones no conformes**|Muestra información sobre los usuarios que tienen aplicaciones instaladas que no son conformes con la directiva especificada.|  
 |**Aceptación de términos y condiciones**|Muestra los elementos de términos y condiciones y la versión que cada usuario ha aceptado.|  
 
+
+
 ## <a name="data-warehouse"></a>Almacenamiento de datos  
-Los 7 informes siguientes aparecen en la categoría **Almacenamiento de datos**. 
+
+Los siete informes siguientes aparecen en la categoría **Almacenamiento de datos**. 
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -204,7 +216,8 @@ Los 7 informes siguientes aparecen en la categoría **Almacenamiento de datos**.
 |**Resumen de distribución de software**|Historial: un resumen de distribución de software para un equipo y anuncio específico.|
 
 
-## <a name="device-management"></a>Administración del dispositivo  
+## <a name="device-management"></a>Administración de dispositivos  
+
 Los treinta y siete informes siguientes aparecen en la categoría **Administración del dispositivo**. 
 
 |Nombre del informe|Descripción|  
@@ -250,6 +263,7 @@ Los treinta y siete informes siguientes aparecen en la categoría **Administraci
 
 
 ## <a name="driver-management"></a>Administración de controladores  
+
 Los trece informes siguientes aparecen en la categoría **Administración de controladores**. 
 
 |Nombre del informe|Descripción|  
@@ -271,7 +285,9 @@ Los trece informes siguientes aparecen en la categoría **Administración de con
 
 
 ## <a name="endpoint-protection"></a>Endpoint Protection  
+
 Los seis informes siguientes aparecen en la categoría **Endpoint Protection**. 
+
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
 |**Informe de actividad de antimalware**|Muestra información general sobre la actividad de antimalware.|  
@@ -284,7 +300,9 @@ Los seis informes siguientes aparecen en la categoría **Endpoint Protection**.
 
 
 ## <a name="hardware---cd-rom"></a>Hardware - CD-ROM  
+
 Los cuatro informes siguientes aparecen en la categoría **Hardware - CD-ROM**. 
+
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
 |**Información de CD-ROM para un equipo específico**|Muestra información sobre las unidades de CD-ROM en un equipo especificado.|  
@@ -295,6 +313,7 @@ Los cuatro informes siguientes aparecen en la categoría **Hardware - CD-ROM**.
 
 
 ## <a name="hardware---disk"></a>Hardware - Disco  
+
 Los ocho informes siguientes aparecen en la categoría **Hardware - Disco**. 
 
 |Nombre del informe|Descripción|  
@@ -311,6 +330,7 @@ Los ocho informes siguientes aparecen en la categoría **Hardware - Disco**.
 
 
 ## <a name="hardware---general"></a>Hardware - General  
+
 Los cinco informes siguientes aparecen en la categoría **Hardware - General**.
 
 |Nombre del informe|Descripción|  
@@ -324,6 +344,7 @@ Los cinco informes siguientes aparecen en la categoría **Hardware - General**.
 
 
 ## <a name="hardware---memory"></a>Hardware - Memoria  
+
 Los cinco informes siguientes aparecen en la categoría **Hardware - Memoria**.
 
 |Nombre del informe|Descripción|  
@@ -337,6 +358,7 @@ Los cinco informes siguientes aparecen en la categoría **Hardware - Memoria**.
 
 
 ## <a name="hardware---modem"></a>Hardware - Módem  
+
 Los tres informes siguientes aparecen en la categoría **Hardware - Módem**.
 
 |Nombre del informe|Descripción|  
@@ -347,7 +369,8 @@ Los tres informes siguientes aparecen en la categoría **Hardware - Módem**.
 
 
 
-## <a name="hardware---network-adapter"></a>Hardware - Adaptador de red  
+## <a name="hardware---network-adapter"></a>Hardware: adaptador de red  
+
 Los tres informes siguientes aparecen en la categoría **Hardware - Adaptador de red**.
 
 |Nombre del informe|Descripción|  
@@ -359,6 +382,7 @@ Los tres informes siguientes aparecen en la categoría **Hardware - Adaptador de
 
 
 ## <a name="hardware---processor"></a>Hardware - Procesador  
+
 Los cinco informes siguientes aparecen en la categoría **Hardware - Procesador**.
 
 |Nombre del informe|Descripción|  
@@ -372,6 +396,7 @@ Los cinco informes siguientes aparecen en la categoría **Hardware - Procesador*
 
 
 ## <a name="hardware---scsi"></a>Hardware - SCSI  
+
 Los cinco informes siguientes aparecen en la categoría **Hardware - SCSI**.
 
 |Nombre del informe|Descripción|  
@@ -383,6 +408,7 @@ Los cinco informes siguientes aparecen en la categoría **Hardware - SCSI**.
 
 
 ## <a name="hardware---security"></a>Hardware: seguridad
+
 El siguiente informe aparece en la categoría **Hardware - Seguridad**.
 
 |Nombre del informe|Descripción|  
@@ -391,7 +417,8 @@ El siguiente informe aparece en la categoría **Hardware - Seguridad**.
 
 
 
-## <a name="hardware---sound-card"></a>Hardware - Tarjeta de sonido  
+## <a name="hardware---sound-card"></a>Hardware: tarjeta de sonido  
+
 Los tres informes siguientes aparecen en la categoría **Hardware - SCSI**.
 
 |Nombre del informe|Descripción|  
@@ -402,7 +429,8 @@ Los tres informes siguientes aparecen en la categoría **Hardware - SCSI**.
 
 
 
-## <a name="hardware---video-card"></a>Hardware - Tarjeta de vídeo  
+## <a name="hardware---video-card"></a>Hardware: tarjeta de vídeo  
+
 Los tres informes siguientes aparecen en la categoría **Hardware - Tarjeta de vídeo**.
 
 |Nombre del informe|Descripción|  
@@ -446,7 +474,6 @@ Los seis informes siguientes aparecen en la categoría **Red**.
 
 Los diez informes siguientes aparecen en la categoría **Sistema operativo**.
 
-
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
 |**Historial de versiones del sistema operativo del equipo**|Muestra el historial de inventario del sistema operativo del equipo especificado.|  
@@ -489,6 +516,7 @@ Los dieciocho informes siguientes aparecen en la categoría **Administración de
 
 
 ## <a name="replication-traffic"></a>Tráfico de replicación  
+
 Los diez informes siguientes aparecen en la categoría **Tráfico de replicación**.
 
 |Nombre del informe|Descripción|  
@@ -506,7 +534,8 @@ Los diez informes siguientes aparecen en la categoría **Tráfico de replicació
 
 
 
-## <a name="site---client-information"></a>Sitio - Información del cliente  
+## <a name="site---client-information"></a>Sitio: información del cliente  
+
 Los diecinueve informes siguientes aparecen en la categoría **Sitio - Información del cliente**.
 
 |Nombre del informe|Descripción|  
@@ -533,16 +562,17 @@ Los diecinueve informes siguientes aparecen en la categoría **Sitio - Informaci
 
 
 
-## <a name="site---discovery-and-inventory-information"></a>Sitio - Información de detección e inventario  
+## <a name="site---discovery-and-inventory-information"></a>Sitio: información de detección e inventario  
+
 Los diez informes siguientes aparecen en la categoría **Sitio - Información de detección e inventario**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
-|**Clientes que no informaron recientemente (en un número de días especificado)**|Muestra una lista de clientes que no informaron de datos de detección, inventario de hardware o inventario de software en un número de días especificado.|  
+|**Clientes que no informaron recientemente (en un número de días especificado)**|Muestra una lista de clientes que no han notificado datos de detección, inventario de hardware o inventario de software en un número de días especificado.|  
 |**Equipos detectados por un sitio específico**|Muestra una lista de todos los equipos detectados por el sitio especificado. También muestra la fecha de la detección más reciente.|  
 |**Equipos detectados recientemente por método de detección**|Muestra una lista de los equipos detectados por el sitio en el número de días especificado. También se enumeran los agentes que los detectaron. Si varios agentes detectaron un equipo, puede aparecer más de una vez en la lista.|  
 |**Equipos no detectados recientemente (en un número de días especificado)**|Muestra una lista de los equipos que el sitio no ha detectado recientemente. También muestra el número de días desde que el sitio detectó el equipo.|  
-|**Equipos no inventariados recientemente (en un número de días especificado)**|Muestra una lista de los equipos que el sitio no ha inventariado recientemente. También muestra las últimas veces que el cliente inventarió el equipo.|  
+|**Equipos no inventariados recientemente (en un número de días especificado)**|Muestra una lista de los equipos de los que el sitio no ha hecho inventario recientemente. También muestra las últimas veces que el cliente inventarió el equipo.|  
 |**Los equipos que podrían compartir el mismo identificador único de Configuration Manager**|Muestra una lista de equipos cuyos nombres cambiaron. Un cambio de nombre es una posible indicación de que un equipo comparte un identificador único de Configuration Manager con otro equipo.|  
 |**Equipos con direcciones MAC duplicadas**|Muestra los equipos que comparten la dirección MAC.|  
 |**Recuento de equipos en dominios de recursos o grupos de trabajo**|Muestra el número de equipos de cada dominio de recursos o grupo de trabajo.|  
@@ -552,6 +582,7 @@ Los diez informes siguientes aparecen en la categoría **Sitio - Información de
 
 
 ## <a name="site---general"></a>Sitio - General  
+
 Los tres informes siguientes aparecen en la categoría **Sitio - General**.
 
 |Nombre del informe|Descripción|  
@@ -562,7 +593,8 @@ Los tres informes siguientes aparecen en la categoría **Sitio - General**.
 
 
 
-## <a name="site---server-information"></a>Sitio - Información del servidor  
+## <a name="site---server-information"></a>Sitio: información del servidor  
+
 El informe siguiente aparece en la categoría **Sitio - Información del cliente**.
 
 |Nombre del informe|Descripción|  
@@ -571,7 +603,8 @@ El informe siguiente aparece en la categoría **Sitio - Información del cliente
 
 
 
-## <a name="software---companies-and-products"></a>Software - Compañías y productos  
+## <a name="software---companies-and-products"></a>Software: compañías y productos  
+
 Los quince informes siguientes aparecen en la categoría **Software - Compañías y productos**.
 
 |Nombre del informe|Descripción|  
@@ -586,7 +619,7 @@ Los quince informes siguientes aparecen en la categoría **Software - Compañía
 |**Recuento de productos y versiones inventariados para un producto específico**|Muestra una lista de las versiones inventariadas de un producto especificado, así como el número de equipos en los que está instalada cada una.|  
 |**Recuento de todas las instancias de software registradas con Agregar o quitar programas**|Muestra un resumen de todas las instancias de software instaladas y registradas con Agregar o quitar programas o Programas y características en equipos de la recopilación especificada.|  
 |**Recuento de instancias de software específico registradas con Agregar o quitar programas**|Muestra un recuento de instancias de los paquetes del software especificado instaladas y registradas con Agregar o quitar programas o Programas y características.|  
-|**Cantidad de exploradores predeterminados**|Muestra la cantidad de clientes con un explorador web específico como el predeterminado de Windows. </br>Utilice la siguiente referencia para los valores BrowserProgID más habituales:</br> - AppXq0fevzme2pys62n3e0fbqa7peapykr8v: Microsoft Edge</br> - IE.HTTP: Microsoft Internet Explorer</br> - ChromeHTML: Google Chrome</br> - OperaStable: Opera Software</br> - FirefoxURL-308046B0AF4A39CB: Mozilla Firefox</br> - Desconocido: el sistema operativo de cliente no es compatible con la consulta, la consulta no se ha ejecutado o un usuario no ha iniciado sesión|
+|**Cantidad de exploradores predeterminados**|Muestra la cantidad de clientes con un explorador web específico como el predeterminado de Windows. <br>Utilice la siguiente referencia para los valores BrowserProgID más habituales:<br> - AppXq0fevzme2pys62n3e0fbqa7peapykr8v: Microsoft Edge<br> - IE.HTTP: Microsoft Internet Explorer<br> - ChromeHTML: Google Chrome<br> - OperaStable: Opera Software<br> - FirefoxURL-308046B0AF4A39CB: Mozilla Firefox<br> - Desconocido: el sistema operativo de cliente no es compatible con la consulta, la consulta no se ha ejecutado o un usuario no ha iniciado sesión|
 |**Instalaciones de aplicaciones de Windows especificadas**|En este informe se enumeran todos los equipos con una aplicación de Windows especificada.|  
 |**Productos en un equipo específico**|Muestra un resumen de los productos de software inventariados y sus fabricantes en un equipo especificado.|  
 |**Software registrado en Agregar o quitar programas en un equipo específico**|Muestra un resumen del software instalado en el equipo especificado que se registró en Agregar o quitar programas o Programas y características.|  
@@ -595,6 +628,7 @@ Los quince informes siguientes aparecen en la categoría **Software - Compañía
 
 
 ## <a name="software---files"></a>Software - Archivos  
+
 Los cinco informes siguientes aparecen en la categoría **Software - Archivos**.
 
 |Nombre del informe|Descripción|  
@@ -607,7 +641,8 @@ Los cinco informes siguientes aparecen en la categoría **Software - Archivos**.
 
 
 
-## <a name="software-distribution---application-monitoring"></a>Distribución de software - Supervisión de aplicaciones  
+## <a name="software-distribution---application-monitoring"></a>Distribución de software: supervisión de aplicaciones  
+
 Los diez informes siguientes aparecen en la categoría **Distribución de software - Supervisión de aplicaciones**.
 
 |Nombre del informe|Descripción|  
@@ -625,7 +660,8 @@ Los diez informes siguientes aparecen en la categoría **Distribución de softwa
 
 
 
-## <a name="software-distribution---collections"></a>Distribución de software - Recopilaciones  
+## <a name="software-distribution---collections"></a>Distribución de software: recopilaciones  
+
 Los tres informes siguientes aparecen en la categoría **Distribución de software - Recopilaciones**.
 
 |Nombre del informe|Descripción|  
@@ -636,7 +672,8 @@ Los tres informes siguientes aparecen en la categoría **Distribución de softwa
 
 
 
-## <a name="software-distribution---content"></a>Distribución de software - Contenido  
+## <a name="software-distribution---content"></a>Distribución de software: contenido  
+
 Los dieciséis informes siguientes aparecen en la categoría **Distribución de software - Contenido**.
 
 |Nombre del informe|Descripción|  
@@ -648,19 +685,20 @@ Los dieciséis informes siguientes aparecen en la categoría **Distribución de 
 |**Todos los mensajes de estado para un paquete específico en un determinado punto de distribución**|Muestra todos los mensajes de estado para un paquete específico en un determinado punto de distribución.|  
 |**Estado de distribución del contenido de la aplicación**|Muestra información sobre el estado de distribución para el contenido de la aplicación.|  
 |**Aplicaciones dirigidas a un grupo de puntos de distribución**|Muestra información sobre el contenido de la aplicación que se implementó en un grupo de puntos de distribución especificado.|  
-|**Aplicaciones que no están sincronizadas en un grupo de puntos de distribución especificado**|Muestra las aplicaciones para las que no se actualizaron los archivos de contenido asociados con la última versión de un grupo de puntos de distribución especificado.|  
+|**Aplicaciones que no están sincronizadas en un grupo de puntos de distribución especificado**|Muestra las aplicaciones para las que no se han actualizado los archivos de contenido asociados con la última versión de un grupo de puntos de distribución especificado.|  
 |**Grupo de puntos de distribución**|Muestra información sobre un grupo de puntos de distribución especificado.|  
 |**Resumen de uso de los puntos de distribución**|Muestra el resumen de uso de cada punto de distribución.|  
 |**Estado de distribución del paquete especificado**|Muestra el estado de distribución para contenido de paquete especificado en cada punto de distribución.|  
 |**Paquetes dirigidos a un grupo de puntos de distribución**|Muestra información sobre los paquetes dirigidos a un grupo de puntos de distribución especificado.|  
-|**Paquetes que no están sincronizados en un grupo de puntos de distribución especificado**|Muestra los paquetes para los que no se actualizaron los archivos de contenido asociados con la última versión de un grupo de puntos de distribución especificado.|  
+|**Paquetes que no están sincronizados en un grupo de puntos de distribución especificado**|Muestra los paquetes para los que no se han actualizado los archivos de contenido asociados con la última versión de un grupo de puntos de distribución especificado.|  
 |**Rechazo del contenido de origen de la caché del mismo nivel**|Muestra el número de rechazos de origen de la caché del mismo nivel por grupo de límites.|
 |**Rechazo del contenido de origen de la caché del mismo nivel por condición**|Muestra los orígenes de la caché del mismo nivel que rechazaron servir contenido según una condición.|
 |**Detalles del rechazo del contenido de origen de la caché del mismo nivel**|Muestra el nombre del contenido que rechazó un origen del mismo nivel.|
 
 
 
-## <a name="software-distribution---package-and-program-deployment"></a>Distribución de software - Implementación de paquete y programa 
+## <a name="software-distribution---package-and-program-deployment"></a>Distribución de software: implementación de paquete y programa 
+
 Los cinco informes siguientes aparecen en la categoría **Distribución de software - Implementación de paquete y programa**.
 
 |Nombre del informe|Descripción|  
@@ -673,7 +711,8 @@ Los cinco informes siguientes aparecen en la categoría **Distribución de softw
 
 
 
-## <a name="software-distribution---package-and-program-deployment-status"></a>Distribución de software - Estado de implementación de paquete y programa  
+## <a name="software-distribution---package-and-program-deployment-status"></a>Distribución de software: estado de implementación de paquete y programa  
+
 Los cinco informes siguientes aparecen en la categoría **Distribución de software - Estado de implementación de paquete y programa**.
 
 |Nombre del informe|Descripción|  
@@ -686,13 +725,14 @@ Los cinco informes siguientes aparecen en la categoría **Distribución de softw
 
 
 
-## <a name="software-metering"></a>Medición de software  
+## <a name="software-metering"></a>Disponibilidad de software  
+
 Los trece informes siguientes aparecen en la categoría **Medición de software**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
 |**Todas las reglas de disponibilidad de software aplicadas a este sitio**|Muestra una lista de todas las reglas de disponibilidad de software del sitio.|  
-|**Equipos que tienen un programa medido instalado pero que no ejecutaron el programa desde una fecha especificada**|Muestra todos los equipos con la aplicación de uso medido especificada, pero ningún usuario ha ejecutado el programa desde la fecha especificada.|  
+|**Equipos que tienen un programa medido instalado pero que no han ejecutado el programa desde una fecha especificada**|Muestra todos los equipos con la aplicación de uso medido especificada, pero ningún usuario ha ejecutado el programa desde la fecha especificada.|  
 |**Equipos que ejecutaron un programa de software medido específico**|Muestra una lista de equipos que ejecutaron los programas que coinciden con la regla de disponibilidad de software especificada en el mes y el año especificados.|  
 |**Uso simultáneo para todos los programas de software medidos**|Muestra el número máximo de usuarios que ejecutaron simultáneamente cada programa de software medido en el mes y año especificados.|  
 |**Análisis de tendencias de uso simultáneo de un programa de software medido específico**|Muestra el número máximo de usuarios que ejecutaron simultáneamente el programa de software medido especificado en todos los meses del año pasado.|  
@@ -707,7 +747,8 @@ Los trece informes siguientes aparecen en la categoría **Medición de software*
 
 
 
-## <a name="software-updates---a-compliance"></a>Actualizaciones de software - A Cumplimiento  
+## <a name="software-updates---a-compliance"></a>Actualizaciones de software: A Cumplimiento  
+
 Los ocho informes siguientes aparecen en la categoría **Actualizaciones de software - A Cumplimiento**.
 
 |Nombre del informe|Descripción|  
@@ -723,23 +764,25 @@ Los ocho informes siguientes aparecen en la categoría **Actualizaciones de soft
 |**Cumplimiento 9: Estado general y cumplimiento**|Muestra los datos de cumplimiento y estado general de un grupo de actualizaciones de software. (A partir de la versión 1806).| 
 
 
-## <a name="software-updates---b-deployment-management"></a>Actualizaciones de software - B Administración de implementación  
+## <a name="software-updates---b-deployment-management"></a>Actualizaciones de software: B Administración de implementación  
+
 Los ocho informes siguientes aparecen en la categoría **Actualizaciones de software - B Administración de implementación**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
-|**Administración 1 - Implementaciones de un grupo de actualización**|Muestra todas las implementaciones que contienen todas las actualizaciones de software que se definen en un grupo de actualizaciones de software especificado.|  
-|**Administración 2 - Actualizaciones necesarias pero no implementadas**|Muestra todas las actualizaciones de software específicas del proveedor que los clientes detectan como necesarias pero que un administrador no implementó en una recopilación especificada.|  
+|**Administración 1 - Implementaciones de un grupo de actualización**|Muestra todas las implementaciones que incluyen todas las actualizaciones de software que se definen en un grupo de actualizaciones de software especificado.|  
+|**Administración 2 - Actualizaciones necesarias pero no implementadas**|Muestra todas las actualizaciones de software específicas del proveedor que los clientes detectan como necesarias pero que un administrador no ha implementado en una recopilación especificada.|  
 |**Administración 3 - Actualizaciones en una implementación**|Muestra las actualizaciones de software que se encuentran en una implementación especificada.|  
 |**Administración 4 - Implementaciones dirigidas a una recopilación**|Muestra todas las implementaciones de actualización de software destinadas a una recopilación especificada.|  
 |**Administración 5 - Implementaciones dirigidas a un equipo**|Muestra todas las implementaciones de actualización de software implementadas en un equipo especificado.|  
-|**Administración 6 - Implementaciones que contienen una actualización específica**|Muestra todas las implementaciones que contienen una actualización de software especificada y la recopilación de destino asociada para la implementación.|  
+|**Administración 6 - Implementaciones que contienen una actualización específica**|Muestra todas las implementaciones que incluyen una actualización de software especificada y la recopilación de destino asociada para la implementación.|  
 |**Administración 7 - Actualizaciones en una implementación a la que falta contenido**|Muestra las actualizaciones de software de una implementación especificada que no han recuperado todo el contenido asociado. Este estado impide que los clientes instalen la actualización, lo que impide que la implementación consiga un cumplimiento del 100 %.|  
 |**Administración 8 - Equipos a los que falta contenido (secundario)**|Muestra todos los equipos que requieren la actualización de software especificada, pero el contenido asociado todavía no se ha distribuido a un punto de distribución.|  
 
 
 
-## <a name="software-updates---c-deployment-states"></a>Actualizaciones de software - C Estados de implementación  
+## <a name="software-updates---c-deployment-states"></a>Actualizaciones de software: C Estados de implementación  
+
 Los seis informes siguientes aparecen en la categoría **Actualizaciones de software - C Estados de implementación**.
 
 |Nombre del informe|Descripción|  
@@ -753,7 +796,8 @@ Los seis informes siguientes aparecen en la categoría **Actualizaciones de soft
 
 
 
-## <a name="software-updates---d-scan"></a>Actualizaciones de software - D Examen  
+## <a name="software-updates---d-scan"></a>Actualizaciones de software: D Examen  
+
 Los cuatro informes siguientes aparecen en la categoría **Actualizaciones de software - D Examen**.
 
 |Nombre del informe|Descripción|  
@@ -765,7 +809,7 @@ Los cuatro informes siguientes aparecen en la categoría **Actualizaciones de so
 
 
 
-## <a name="software-updates---e-troubleshooting"></a>Actualizaciones de software - E Solución de problemas  
+## <a name="software-updates---e-troubleshooting"></a>Actualizaciones de software: E Solución de problemas  
 
 Los cuatro informes siguientes aparecen en la categoría **Actualizaciones de software - E Solución de problemas**.
 
@@ -779,6 +823,7 @@ Los cuatro informes siguientes aparecen en la categoría **Actualizaciones de so
 
 
 ## <a name="state-migration"></a>Migración de estado  
+
 Los tres informes siguientes aparecen en la categoría **Migración de estado**.
 
 |Nombre del informe|Descripción|  
@@ -790,6 +835,7 @@ Los tres informes siguientes aparecen en la categoría **Migración de estado**.
 
 
 ## <a name="status-messages"></a>Mensajes de estado  
+
 Los doce informes siguientes aparecen en la categoría **Mensajes de estado**.
 
 |Nombre del informe|Descripción|  
@@ -809,7 +855,7 @@ Los doce informes siguientes aparecen en la categoría **Mensajes de estado**.
 
 
 
-## <a name="status-messages---audit"></a>Mensajes de estado - Auditoría  
+## <a name="status-messages---audit"></a>Mensajes de estado: auditoría  
 
 Los tres informes siguientes aparecen en la categoría **Mensajes de estado - Auditoría**.
 
@@ -821,15 +867,16 @@ Los tres informes siguientes aparecen en la categoría **Mensajes de estado - Au
 
 
 
-## <a name="task-sequence---deployment-status"></a>Secuencia de tareas - Estado de implementación  
+## <a name="task-sequence---deployment-status"></a>Secuencia de tareas: estado de implementación  
+
 Los once informes siguientes aparecen en la categoría **Secuencia de tareas - Estado de implementación**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
 |**Todos los recursos de sistema para una implementación de secuencia de tareas en un estado específico**|Muestra una lista de los equipos de destino para la implementación de secuencia de tareas especificada en un estado de implementación especificado.|  
 |**Todos los recursos de sistema para una implementación de secuencia de tareas que se encuentra en un estado específico y que está disponible para equipos desconocidos**|Muestra una lista de los equipos de destino para la implementación de secuencia de tareas especificada que se encuentra en un estado de implementación especificado.|  
-|**Recuento de recursos de sistema que tienen asignadas implementaciones de secuencias de tareas aún no ejecutadas**|Muestra el número de equipos que aceptaron secuencias de tareas, pero no ejecutaron la secuencia de tareas.|  
-|**Historial de una implementación de secuencia de tareas en un equipo**|Muestra el estado de cada paso de la implementación de secuencia de tareas especificada en el equipo de destino especificado. Si no se devuelve ningún registro, significa que la secuencia de tareas no se inició en el equipo.|  
+|**Recuento de recursos de sistema que tienen asignadas implementaciones de secuencias de tareas aún no ejecutadas**|Muestra el número de equipos que han aceptado secuencias de tareas, pero no han ejecutado la secuencia de tareas.|  
+|**Historial de una implementación de secuencia de tareas en un equipo**|Muestra el estado de cada paso de la implementación de secuencia de tareas especificada en el equipo de destino especificado. Si no se devuelve ningún registro, significa que la secuencia de tareas no se ha iniciado en el equipo.|  
 |**Lista de equipos que superaron un período de tiempo especificado para ejecutar una implementación de secuencia de tareas**|Muestra la lista de equipos de destino que superaron el tiempo especificado para ejecutar una secuencia de tareas.|  
 |**Tiempo de ejecución para una implementación de secuencia de tareas específica en un determinado equipo de destino**|Muestra el tiempo total que tardó en completarse correctamente una secuencia de tareas especificada en un equipo especificado.|  
 |**Tiempo de ejecución para cada paso de una implementación de secuencia de tareas en un determinado equipo de destino**|Muestra el tiempo que se tardó en completar cada paso de la implementación de secuencia de tareas especificada en el equipo de destino especificado.|  
@@ -840,7 +887,8 @@ Los once informes siguientes aparecen en la categoría **Secuencia de tareas - E
 
 
 
-## <a name="task-sequence---deployments"></a>Secuencia de tareas - Implementaciones  
+## <a name="task-sequence---deployments"></a>Secuencia de tareas: implementaciones  
+
 Los once informes siguientes aparecen en la categoría **Secuencia de tareas - Implementaciones**.
 
 |Nombre del informe|Descripción|  
@@ -859,7 +907,8 @@ Los once informes siguientes aparecen en la categoría **Secuencia de tareas - I
 
 
 
-## <a name="task-sequence---progress"></a>Secuencia de tareas - Progreso  
+## <a name="task-sequence---progress"></a>Secuencia de tareas: progreso  
+
 Los cinco informes siguientes aparecen en la categoría **Secuencia de tareas - Progreso**.
 
 |Nombre del informe|Descripción|  
@@ -872,7 +921,8 @@ Los cinco informes siguientes aparecen en la categoría **Secuencia de tareas - 
 
 
 
-## <a name="task-sequences---references"></a>Secuencias de tareas - Referencias  
+## <a name="task-sequences---references"></a>Secuencias de tareas: referencias  
+
 El informe siguiente aparece en la categoría **Secuencia de tareas - Referencias**.
 
 |Nombre del informe|Descripción|  
@@ -902,7 +952,7 @@ The following 11 reports are listed under the **Upgrade Assessment** category.
 
 
 
-## <a name="user---device-affinity"></a>Afinidad entre usuario y dispositivo  
+## <a name="user---device-affinity"></a>Usuario: afinidad con el dispositivo  
 
 Los dos informes siguientes aparecen en la categoría **Afinidad entre usuario y dispositivo**.
 
@@ -914,6 +964,7 @@ Los dos informes siguientes aparecen en la categoría **Afinidad entre usuario y
 
 
 ## <a name="user-data-and-profiles-health"></a>Mantenimiento de perfiles y datos de usuario  
+
 Los cuatro informes siguientes aparecen en la categoría **Mantenimiento de perfiles y datos de usuario**.
 
 |Nombre del informe|Descripción|  
@@ -926,6 +977,7 @@ Los cuatro informes siguientes aparecen en la categoría **Mantenimiento de perf
 
 
 ## <a name="users"></a>Users  
+
 Los tres informes siguientes aparecen en la categoría **Usuarios**.
 
 |Nombre del informe|Descripción|  
@@ -937,6 +989,7 @@ Los tres informes siguientes aparecen en la categoría **Usuarios**.
 
 
 ## <a name="virtual-applications"></a>Aplicaciones virtuales  
+
 Los siete informes siguientes aparecen en la categoría **Aplicaciones virtuales**.
 
 |Nombre del informe|Descripción|  
@@ -951,8 +1004,9 @@ Los siete informes siguientes aparecen en la categoría **Aplicaciones virtuales
 
 
 
-## <a name="volume-purchase-programs---apple"></a>Programas de Compras por Volumen - Apple
-El siguiente informe aparece en la categoría **Programas de Compras por Volumen - Apple**.
+## <a name="volume-purchase-programs---apple"></a>Programas de compras por volumen: Apple
+
+El siguiente informe aparece en la categoría **Programas de Compras por Volumen: Apple**.
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
@@ -961,6 +1015,7 @@ El siguiente informe aparece en la categoría **Programas de Compras por Volumen
 
 
 ## <a name="vulnerability-assessment"></a>Evaluación de vulnerabilidad
+
 El siguiente informe aparece en la categoría **Evaluación de vulnerabilidad**.
 
 |Nombre del informe|Descripción|  
@@ -970,6 +1025,7 @@ El siguiente informe aparece en la categoría **Evaluación de vulnerabilidad**.
 
 
 ## <a name="wake-on-lan"></a>Wake On LAN  
+
 Los siete informes siguientes aparecen en la categoría **Wake On LAN**.
 
 |Nombre del informe|Descripción|  

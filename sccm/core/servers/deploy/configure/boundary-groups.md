@@ -2,7 +2,7 @@
 title: Configurar grupos de límites
 titleSuffix: Configuration Manager
 description: Ayude a los clientes a encontrar sistemas de sitio mediante grupos de límites para organizar de manera lógica las ubicaciones de red relacionadas denominadas límites.
-ms.date: 08/29/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 232dbaa0bca1507d3b743174be649281f46ab52d
-ms.sourcegitcommit: 52ec30245ba559596d2f88a3eff70c467b4a056f
+ms.openlocfilehash: e9b2eaaf3581bdb951b23541c96532c5b049aac1
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381023"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456369"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Configuración de grupos de límites para Configuration Manager
 
@@ -28,7 +28,7 @@ De forma predeterminada, Configuration Manager crea un grupo de límites de siti
 
 Para configurar grupos de límites, asocie límites (ubicaciones de red) y roles de sistema de sitio, como los puntos de distribución, al grupo de límites. Esta configuración ayuda a asociar clientes a servidores de sistema de sitio como puntos de distribución ubicados cerca de los clientes en la red.
 
-Para aumentar la disponibilidad de los servidores de sistema de sitio a una variedad más amplia de ubicaciones de red, asigne el mismo límite y el mismo servidor a varios grupos de límites.
+Para aumentar la disponibilidad de los servidores a una variedad más amplia de ubicaciones de red, asigne el mismo límite y el mismo servidor a más de un grupo de límites.
 
 Los clientes usan un grupo de límites para:  
 
@@ -50,15 +50,15 @@ Para cada grupo de límites de la jerarquía, puede asignar:
 
 - Uno o varios límites. El grupo de límites **actual** de un cliente es una ubicación de red que se define como un límite asignado a un grupo de límites específico. Un cliente puede tener más de un grupo de límites actual.  
 
-- Uno o varios roles de sistema de sitio. Los clientes siempre pueden usar los roles de sistema de sitio asociados con su grupo de límites actual. Dependiendo de las configuraciones adicionales, pueden ser capaces de usar los roles de sistema de sitio en grupos de límites adicionales.  
+- Uno o varios roles de sistema de sitio. Los clientes siempre pueden usar los roles asociados con su grupo de límites actual. En función de las configuraciones adicionales, pueden usar los roles en grupos de límites adicionales.  
 
-Para cada grupo de límites creados, puede configurar un vínculo de un solo uso a otro grupo de límites. Al vínculo se le denomina **relación**. Los grupos de límites vinculados se denominan grupos de límites **vecinos**. Un grupo de límites puede tener varias relaciones, cada una con un grupo de límites vecino específico.
+Para cada grupo de límites creados, puede configurar un vínculo de un solo uso a otro grupo de límites. Al vínculo se le denomina **relación**. Los grupos de límites vinculados se denominan grupos de límites **vecinos**. Un grupo de límites puede tener más de una relación, cada una con un grupo de límites vecino específico.
 
-Cuando un cliente no encuentra un servidor de sistema de sitio disponible en su grupo de límites actual, la configuración de cada relación determina cuándo empieza a buscar un grupo de límites vecino. Esta búsqueda de grupos adicionales se denomina **reserva**.
+Cuando un cliente no encuentra un sistema de sitio disponible en su grupo de límites actual, la configuración de cada relación determina cuándo empieza a buscar un grupo de límites vecino. Esta búsqueda de grupos adicionales se denomina **reserva**.
 
 Para más información, vea los siguientes procedimientos:  
-- [Creación de un grupo de límites](#bkmk_create)  
-- [Configuración de un grupo de límites](#bkmk_config)  
+- [Creación de un grupo de límites](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_create)  
+- [Configuración de un grupo de límites](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_config)  
 
 
 
@@ -66,7 +66,7 @@ Para más información, vea los siguientes procedimientos:
 
 Para evitar problemas cuando los clientes no pueden encontrar un sistema de sitio disponible en su grupo de límites actual, se definen relaciones entre los grupos de límites para el comportamiento de reserva. La reserva permite a un cliente expandir la búsqueda a grupos de límites adicionales para encontrar un sistema de sitio disponible.
 
-Las relaciones se configuran en la pestaña **Relaciones** de las propiedades de un grupo de límites. Cuando se configura una relación, se define un vínculo a un grupo de límites vecino. Para cada tipo de rol de sistema de sitio admitido, configure opciones independientes para la reserva en el grupo de límites vecino. Para más información, vea [Configuración del comportamiento de reserva](#bkmk_bg-fallback).
+Las relaciones se configuran en la pestaña **Relaciones** de las propiedades de un grupo de límites. Cuando se configura una relación, se define un vínculo a un grupo de límites vecino. Para cada tipo de rol de sistema de sitio admitido, configure opciones independientes para la reserva en el grupo de límites vecino. Para más información, vea [Configuración del comportamiento de reserva](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_bg-fallback).
 
 Por ejemplo, cuando se configura una relación con un grupo de límites concreto, se puede establecer que la reserva para los puntos de distribución se produzca después de 20 minutos. El tiempo predeterminado es de 120 minutos. Para obtener un ejemplo más extenso, vea [Ejemplo de uso de grupos de límites](#example-of-using-boundary-groups).
 
@@ -74,7 +74,7 @@ Si un cliente no puede encontrar un rol de sistema de sitio disponible en su gru
 
 Cuando un cliente no encuentra un sistema de sitio disponible, empieza a buscar en ubicaciones de los grupos de límites vecinos. Este comportamiento incrementa el grupo de sistemas de sitio disponibles. La configuración de los grupos de límites y sus relaciones define el uso del cliente de este grupo de sistemas de sitio disponibles.
 
-- Un grupo de límites puede tener más de una relación. Con varias relaciones, se puede configurar la reserva de cada tipo de sistema de sitio en los distintos vecinos para que se produzca después de otros períodos.    
+- Un grupo de límites puede tener más de una relación. Con esta configuración, se puede configurar la reserva de cada tipo de sistema de sitio en los distintos vecinos para que se produzca después de otros períodos.    
 
 - Los clientes solo usarán como reserva un grupo de límites que sea vecino directo de su actual grupo de límites.  
 
@@ -83,7 +83,7 @@ Cuando un cliente no encuentra un sistema de sitio disponible, empieza a buscar 
 
 ### <a name="the-default-site-boundary-group"></a>El grupo de límites de sitio predeterminado
 
-Además de los grupos de límites creados, cada sitio tiene un grupo de límites de sitio predeterminado creado por Configuration Manager. Este grupo se denomina **Grupo-Límites-Sitio-Predeterminado&lt;códigodesitio>**. Por ejemplo, el grupo del sitio ABC se denominaría **Grupo-Límites-Sitio-Predeterminado&lt;ABC>**.
+Puede crear sus propios grupos de límites y cada sitio tiene un grupo de límites de sitio predeterminado creado por Configuration Manager. Este grupo se denomina **Grupo-Límites-Sitio-Predeterminado&lt;códigodesitio>**. Por ejemplo, el grupo del sitio ABC se denominaría **Grupo-Límites-Sitio-Predeterminado&lt;ABC>**.
 
 Para cada grupo de límites creado, Configuration Manager crea automáticamente un vínculo implícito a cada grupo de límites de sitio predeterminado de la jerarquía.  
 
@@ -108,7 +108,7 @@ Para administrar la reserva para el grupo de límites de sitio predeterminado:
 
 -   Una vez recibida la asignación a un sitio, el cliente no la modifica al cambiar la ubicación de red. Por ejemplo, un cliente se desplaza a una nueva ubicación de red. Esta ubicación es un límite en un grupo de límites con una asignación de sitio diferente. El sitio asignado del cliente no cambia.  
 
--   Cuando la detección de sistemas de Active Directory detecta un nuevo recurso, el sitio evalúa la información de red para el recurso detectado en relación con los límites en los grupos de límites. Este proceso asocia el nuevo recurso con un sitio asignado para que use el método de instalación de inserción de cliente.  
+-   Cuando la detección de sistemas de Active Directory detecta un nuevo recurso, el sitio evalúa la información de red para el recurso en relación con los límites en los grupos de límites. Este proceso asocia el nuevo recurso con un sitio asignado para que use el método de instalación de inserción de cliente.  
 
 -   Cuando un límite es miembro de más de un grupo de límites que tienen diferentes sitios asignados, los clientes seleccionan uno de los sitios de forma aleatoria.  
 
@@ -117,8 +117,8 @@ Para administrar la reserva para el grupo de límites de sitio predeterminado:
 Para más información sobre la asignación de sitio de cliente, vea [Uso de la asignación de sitio automática para los equipos](/sccm/core/clients/deploy/assign-clients-to-a-site#BKMK_AutomaticAssignment).  
 
 Para más información sobre cómo configurar la asignación de sitio, vea los siguientes procedimientos:
-- [Configuración de la asignación de sitio y selección de los servidores de sistema de sitio](#bkmk_references)
-- [Configuración de un sitio de reserva para la asignación de sitios automática](#bkmk_site-fallback)
+- [Configuración de la asignación de sitio y selección de los servidores de sistema de sitio](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_references)
+- [Configuración de un sitio de reserva para la asignación de sitios automática](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_site-fallback)
 
 
 
@@ -130,16 +130,76 @@ Cuando un cliente solicita la ubicación de un punto de distribución, Configura
 
 -   **Durante la implementación de sistema operativo**, los clientes solicitan una ubicación para enviar o recibir su información de estado de la migración.  
 
-Durante la implementación de contenido, si un cliente solicita contenido que no está disponible desde un origen de su grupo de límites actual, el cliente continúa con la solicitud de ese contenido. El cliente prueba otros orígenes de contenido en su grupo de límites actual hasta que alcanza el período de reserva para un grupo de límites vecino o el grupo de límites de sitio predeterminado. Si el cliente aún no encuentra contenido, expande la búsqueda de los orígenes de contenido para incluir los grupos de límites vecinos.
+    - A partir de la versión 1810, los clientes obtienen el contenido en función de los comportamientos del grupo de límites. Para obtener más información, vea [Task sequence support for boundary groups](#bkmk_bgr-osd) (Compatibilidad de la secuencia de tareas con grupos de límites).  
 
-Si el contenido se distribuye a petición y no está disponible cuando lo solicita un cliente en un punto de distribución, se inicia el proceso de transferir el contenido a ese punto de distribución. Es posible que el cliente encuentre ese servidor como un origen de contenido antes de recurrir a un grupo de límites vecino.
+Durante la implementación de contenido, si un cliente solicita contenido que no está disponible desde un origen de su grupo de límites actual, el cliente continúa con la solicitud de ese contenido. El cliente prueba otros orígenes de contenido en su grupo de límites actual hasta que alcanza el período de reserva para un vecino o el grupo de límites de sitio predeterminado. Si el cliente aún no encuentra contenido, expande la búsqueda de los orígenes de contenido para incluir los grupos de límites vecinos.
+
+Si configura el contenido para distribuir a petición y no está disponible cuando lo solicita un cliente en un punto de distribución, el sitio empieza a transferir el contenido a ese punto de distribución. Es posible que el cliente encuentre ese servidor como un origen de contenido antes de recurrir a un grupo de límites vecino.
+
+
+### <a name="bkmk_ccmsetup"></a> Instalación de cliente
+<!--1358840-->
+
+Al instalar el cliente de Configuration Manager, el proceso ccmsetup contacta con el punto de administración para localizar el contenido necesario. Durante este proceso en la versión 1806 y anteriores, el punto de administración solo devuelve puntos de distribución en el grupo de límites actual del cliente. Si no hay contenido disponible, el proceso de configuración retrocede para descargar contenido del punto de administración. No existe la opción de retroceder a puntos de distribución de otros grupos de límites que puedan tener el contenido necesario. 
+
+A partir de la versión 1810, el punto de administración devuelve puntos de distribución basados en la configuración del grupo de límites. Si define las relaciones que se establecen en el grupo de límites, el punto de administración devuelve los puntos de distribución en el orden siguiente:
+1. Grupo de límites actual  
+2. Grupos de límites vecinos  
+3. Grupo de límites predeterminado del sitio  
+
+> [!Note]  
+> El proceso de configuración del cliente no usa el tiempo de retroceso. Para localizar contenido de la forma más rápida posible, retrocede inmediatamente al grupo de límites siguiente.  
+
+
+### <a name="bkmk_bgr-osd"></a> Compatibilidad de la secuencia de tareas para grupos de límites
+<!--1359025-->
+
+A partir de la versión 1810, cuando un dispositivo ejecuta una secuencia de tareas y necesita adquirir contenido, usa los comportamientos de grupos de límites similares al cliente de Configuration Manager.   
+
+Puede configurar este comportamiento mediante la siguiente configuración en la página **Puntos de distribución** de la implementación de la secuencia de tareas: 
+
+- **Cuando no haya disponible ningún punto de distribución local, usar un punto de distribución remoto**: en esta implementación, la secuencia de tareas puede recurrir a los puntos de distribución de un grupo de límites vecino.  
+
+- **Permitir a los clientes usar puntos de distribución del grupo de límites del sitio predeterminado**: en esta implementación, la secuencia de tareas puede recurrir a los puntos de distribución del grupo de límites de sitio predeterminado.  
+
+Para usar este nuevo comportamiento, asegúrese de que los clientes estén actualizados a la versión más reciente.
+
+#### <a name="location-priority"></a>Prioridad de ubicación  
+
+La secuencia de tareas intenta adquirir contenido en el orden siguiente:  
+
+1. Orígenes de caché del mismo nivel  
+
+2. Puntos de distribución en el grupo de límites *actual*  
+
+3. Puntos de distribución en el grupo de límites *vecino*  
+
+    > [!Important]  
+    > Dada la naturaleza de tiempo real del procesamiento de la secuencia de tareas, no espera el tiempo de conmutación por error en un grupo de límites vecino, sino que usa los tiempos de conmutación por error para priorizar los grupos de límites vecinos. Por ejemplo, si la secuencia de tareas no puede adquirir contenido desde un punto de distribución de su grupo de límites actual, inmediatamente prueba un punto de distribución de un grupo de límites vecino con el menor tiempo de conmutación por error. Si se produce un error durante el proceso, la conmutación por error se realiza en un punto de distribución de un grupo de límites vecino con un mayor tiempo de conmutación por error.  
+
+4. Puntos de distribución en el grupo de límites *predeterminado del sitio*  
+
+En el archivo de registro **smsts.log** de la secuencia de tareas se muestra la prioridad de los orígenes de ubicación que utiliza en función de las propiedades de implementación.
 
 
 ### <a name="bkmk_bgoptions"></a> Opciones de grupo de límites para descargas del mismo nivel
 
-<!--1356193--> A partir de la versión 1806, los grupos de límites incluyen valores de configuración adicionales para ofrecerle mayor control sobre la distribución de contenido en su entorno. Para más información, vea [Configuración de un grupo de límites](#bkmk_config).
+<!--1356193--> A partir de la versión 1806, los grupos de límites incluyen los siguientes valores de configuración adicionales para ofrecerle mayor control sobre la distribución de contenido en el entorno:  
 
-#### <a name="allow-peer-downloads-in-this-boundary-group"></a>Permitir descargas del mismo nivel en este grupo de límites
+- [Permitir descargas del mismo nivel en este grupo de límites](#bkmk_bgoptions1)  
+
+- [Usar solo elementos del mismo nivel dentro de la misma subred durante las descargas del mismo nivel](#bkmk_bgoptions2)  
+
+<!--1358749--> En la versión 1810 se incorporan las opciones siguientes:  
+
+- [Preferir puntos de distribución sobre elementos del mismo nivel con la misma subred](#bkmk_bgoptions3)  
+
+- [Preferir puntos de distribución de nube sobre puntos de distribución](#bkmk_bgoptions4)  
+
+Para obtener más información sobre cómo configurar estas opciones, vea [Configure a boundary group](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_config) (Configuración de un grupo de límites).
+
+
+#### <a name="bkmk_bgoptions1"></a> Permitir descargas del mismo nivel en este grupo de límites
 Esta opción está habilitada de forma predeterminada. El punto de administración proporciona a los clientes una lista de ubicaciones de contenido que incluye orígenes del mismo nivel. Este valor afecta también a la aplicación de los identificadores de grupo para la [optimización de entrega](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization).  
 
 Hay dos escenarios comunes en que debe considerar la deshabilitación de esta opción:  
@@ -148,8 +208,8 @@ Hay dos escenarios comunes en que debe considerar la deshabilitación de esta op
 
 - Si utiliza un único grupo de límites grande para la asignación de sitio, no hace referencia a ningún punto de distribución.  
 
-#### <a name="during-peer-downloads-only-use-peers-within-the-same-subnet"></a>Durante las descargas del mismo nivel, use solo elementos del mismo nivel dentro de la misma subred
-Esta configuración depende de la anterior. Si habilita esta opción, el punto de administración solo se incluye en los orígenes del mismo nivel de la lista de ubicaciones de contenido que se encuentran en la misma subred que el cliente.
+#### <a name="bkmk_bgoptions2"></a> Durante las descargas del mismo nivel, use solo elementos del mismo nivel dentro de la misma subred
+Esta configuración depende de la opción anterior. Si habilita esta opción, el punto de administración solo se incluye en los orígenes del mismo nivel de la lista de ubicaciones de contenido que se encuentran en la misma subred que el cliente.
 
 Escenarios comunes para habilitar esta opción:
 
@@ -157,6 +217,11 @@ Escenarios comunes para habilitar esta opción:
 
 - Tiene un único grupo de límites grande para todas las ubicaciones de oficinas remotas. Habilite esta opción, que permite que los clientes solo compartan contenido dentro de la subred en la ubicación de la oficina remota, en lugar de arriesgarse a compartir contenido entre ubicaciones.
 
+#### <a name="bkmk_bgoptions3"></a> Preferir puntos de distribución sobre elementos del mismo nivel con la misma subred
+De forma predeterminada, el punto de administración da prioridad a los orígenes de caché del mismo nivel en la parte superior de la lista de ubicaciones de contenido. Esta configuración revierte dicha prioridad para los clientes que están en la misma subred que el origen de caché del mismo nivel.  
+
+#### <a name="bkmk_bgoptions4"></a> Preferir puntos de distribución de nube sobre puntos de distribución
+Si tiene una sucursal con un vínculo de Internet más rápido, ahora puede dar prioridad al contenido de la nube.  
 
 
 
@@ -187,7 +252,6 @@ Después de ese tiempo, si el cliente no ha establecido contacto, se inicia la r
 
 ### <a name="fallback-configurations-for-software-update-points"></a>Configuraciones de reserva de los puntos de actualización de software
 
-#### <a name="beginning-with-version-1706"></a>A partir dela versión 1706   
 Puede configurar **Tiempos de reserva (en minutos)** para que los puntos de actualización de software sean inferiores a 120 minutos. Sin embargo, el cliente continúa realizando intentos para alcanzar su punto de actualización de software original durante 120 minutos. Después, amplía su búsqueda a otros servidores. Los tiempos de reserva del grupo de límites se inician la primera vez que el cliente no puede alcanzar su servidor original. Cuando el cliente amplía la búsqueda, el sitio proporciona los grupos de límites configurados para menos de 120 minutos.
 
 Para bloquear la reserva de un punto de actualización de software en un grupo de límites vecino, establezca la opción en **No usar reserva nunca**.
@@ -202,16 +266,6 @@ Configure los puntos de actualización de software en el grupo de límites *A* p
 - Después de intentar ponerse en contacto con el punto de actualización de software original durante 120 minutos, el cliente amplía su búsqueda. Agrega servidores al grupo disponible de puntos de actualización de software del grupo de límites actual del cliente y todos los grupos de límites vecinos configurados para 120 minutos o menos. Este grupo incluye los servidores del grupo de límites A que se agregaron anteriormente al grupo de servidores disponibles.  
 
 - Una vez transcurridos más de 10 minutos, el cliente amplía la búsqueda para incluir los puntos de actualización de software del grupo de límites B. Este período es un tiempo total de 130 minutos después de que el cliente tenga problemas para acceder por primera vez a su último punto de actualización de software válido conocido.  
-
-
-#### <a name="versions-1702-and-earlier"></a>Versiones 1702 y anteriores
-Con la versión 1702 y versiones anteriores, las configuraciones de reserva de los puntos de actualización de software no son compatibles con un tiempo configurable en minutos. En su lugar, el comportamiento de reserva se limita a las siguientes opciones:
-
-- **Tiempos de reserva (en minutos):** esta opción se establece en 120 minutos. No puede configurarla.  
-
-- **No usar reserva nunca:** bloquea la reserva de un punto de actualización de software en un grupo de límites vecino.  
-
-Cuando un cliente que ya tiene un punto de actualización de software no puede alcanzarlo, recurre a la reserva para encontrar otro. Cuando se usa la reserva, el cliente recibe una lista de todos los puntos de actualización de software de su grupo de límites actual. Si se produce un error al buscar un servidor disponible durante 120 minutos, recurre a la reserva de sus grupos de límites vecinos y del grupo de límites de sitio predeterminado. La reserva en ambos grupos de límites se produce al mismo tiempo. El tiempo de reserva del punto de actualización de software para los grupos vecinos se establece en 120 minutos. Este tiempo de reserva no se puede cambiar. 120 minutos también es el período predeterminado que se utiliza para la reserva del grupo de límites de sitio predeterminado. Cuando un cliente recurre a la reserva de un grupo de límites vecino y de un grupo de límites de sitio predeterminado, este trata de establecer contacto con los puntos de actualización de software del grupo de límites vecino antes de tratar de usar alguno del grupo de límites de sitio predeterminado.
 
 
 ### <a name="manually-switch-to-a-new-software-update-point"></a>Cambio manual a un nuevo punto de actualización de software
@@ -238,12 +292,14 @@ Si un cliente está en un grupo de límites sin ningún punto de administración
 
 La reserva del grupo de límites del punto de administración no cambia el comportamiento durante la instalación de cliente (ccmsetup.exe). Si la línea de comandos no especifica el punto de administración inicial mediante el parámetro /MP, el cliente nuevo recibe la lista completa de puntos de administración disponibles. Para su proceso de arranque inicial, el cliente utiliza el primer punto de administración al que pueda tener acceso. Una vez que el cliente se registre en el sitio, recibirá la lista de puntos de administración ordenada correctamente de acuerdo con este nuevo comportamiento. 
 
+Para obtener más información sobre el comportamiento del cliente para adquirir contenido durante la instalación, vea [Client installation](#bkmk_ccmsetup) (Instalación del cliente).
+
 Durante la actualización de cliente, si no se especifica el parámetro de línea de comandos /MP, el cliente consulta orígenes, como Active Directory y WMI, para conocer cualquier punto de administración disponible. La actualización de cliente no acepta la configuración del grupo de límites. <!--VSO 2841292-->  
 
 Para que los clientes usen esta función, habilite la opción siguiente: **Los clientes prefieren usar puntos de administración especificados en grupos de límites** en **Configuración de jerarquía**. 
 
 > [!Note]  
-> Los procesos de implementación de sistema operativo no operan de acuerdo con los grupos de límites.  
+> Los procesos de implementación de sistema operativo no operan de acuerdo con los grupos de límites para los puntos de administración.  
 
 
 ### <a name="troubleshooting"></a>Solución de problemas
@@ -256,7 +312,7 @@ Las nuevas entradas aparecen en **LocationServices.log**. El atributo **Localida
 
 - **2**: el punto de administración especificado está en un grupo de límites remoto o vecino. Cuando el punto de administración está simultáneamente en un grupo vecino y en un grupo de límites predeterminado del sitio, la localidad es 2.  
 
-- **3**: el punto de administración especificado está en el grupo de límites local o actual. Cuando el punto de administración está en el grupo de límites actual, así como en un grupo vecino o de límites predeterminado del sitio, la localidad es 3. Si no habilita la configuración de los puntos de administración preferidos en la configuración de jerarquía, la localidad siempre es 3, con independencia de en qué grupo de límites se encuentre el punto de administración.  
+- **3**: el punto de administración especificado está en el grupo de límites local o actual. Cuando el punto de administración está en el grupo de límites actual y en un grupo vecino o de límites predeterminado del sitio, la localidad es 3. Si no habilita la configuración de los puntos de administración preferidos en la configuración de jerarquía, la localidad siempre es 3, con independencia de en qué grupo de límites se encuentre el punto de administración.  
 
 Los clientes utilizan puntos de administración locales primero (localidad 3), luego remotos (localidad 2) y por último reserva (localidad 1). 
 
@@ -273,7 +329,7 @@ Cuando un cliente recibe cinco errores en 10 minutos y no puede comunicarse con 
 
 - Un cliente intenta usar un punto de administración preferido de su sitio asignado antes de usar otro que no está configurado como el preferido.  
 
-- Para usar esta opción, habilite **Los clientes prefieren usar puntos de administración especificados en grupos de límites** en **Configuración de jerarquía**. Después, configure los grupos de límites en sitios primarios individuales. Incluya los puntos de administración que se deben asociar con los límites asociados de ese grupo de límites. Para más información, vea [Habilitar el uso de puntos de administración preferidos](#bkmk_proc-prefer).  
+- Para usar esta opción, habilite **Los clientes prefieren usar puntos de administración especificados en grupos de límites** en **Configuración de jerarquía**. Después, configure los grupos de límites en sitios primarios individuales. Incluya los puntos de administración que se deben asociar con los límites asociados de ese grupo de límites. Para más información, vea [Habilitar el uso de puntos de administración preferidos](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_proc-prefer).  
 
 - Al configurar puntos de administración preferidos, y cuando un cliente organiza su lista de puntos de administración, el cliente coloca los puntos de administración preferidos en la parte superior de la lista. En esta lista se incluyen todos los puntos de administración del sitio asignado del cliente.  
 
@@ -387,114 +443,10 @@ Cuando un cliente busca una ubicación de origen de contenido, intenta acceder a
 
 
 
-## <a name="procedures-for-boundary-groups"></a>Procedimientos de los grupos de límites
+## <a name="see-also"></a>Consulte también
 
+- [Procedimientos de los grupos de límites](/sccm/core/servers/deploy/configure/boundary-group-procedures)  
 
-### <a name="bkmk_create"></a> Creación de un grupo de límites  
+- [Sobre los límites](/sccm/core/servers/deploy/configure/boundaries)  
 
-1.  En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración de jerarquía** y seleccione el nodo **Grupos de límites**.  
-
-2.  En la pestaña **Inicio**, en el grupo **Crear**, seleccione **Crear grupo de límites**.  
-
-3.  En el cuadro de diálogo **Crear grupo de límites**, en la pestaña **General**, especifique un **Nombre** para este grupo de límites. De forma opcional, incluya una **Descripción**.  
-
-4.  Seleccione **Aceptar** para guardar el nuevo grupo de límites o continuar con la siguiente sección para configurarlo.  
-
-
-### <a name="bkmk_config"></a> Configuración de un grupo de límites  
-
-1.  En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración de jerarquía** y seleccione el nodo **Grupos de límites**.  
-
-2.  Seleccione el grupo de límites que desea modificar y haga clic en **Propiedades** en la cinta de opciones. Esta acción abre la ventana Propiedades del grupo de límites.  
-
-Configure las siguientes opciones:  
-- [Adición o eliminación de límites](#bkmk_add)  
-- [Configuración de la asignación de sitio y selección de los servidores de sistema de sitio](#bkmk_references)  
-- [Configuración del comportamiento de reserva](#bkmk_bg-fallback)  
-- [Configuración de opciones del grupo de límites](#bkmk_options)  
-
-#### <a name="bkmk_add"></a> Adición o eliminación de límites
-
-En la ventana Propiedades del grupo de límites, use la pestaña **General** para modificar los límites que son miembros de este grupo de límites:  
-
-- Para agregar límites, seleccione **Agregar**. En la ventana Agregar límites, seleccione la casilla de uno o varios límites y luego haga clic en **Aceptar**.  
-
-- Para quitar límites, seleccione el límite en la lista y haga clic en **Quitar**.  
-
-
-#### <a name="bkmk_references"></a> Configuración de la asignación de sitio y selección de los servidores de sistema de sitio
-
-Para modificar la asignación de sitio y la configuración del servidor del sistema de sitio asociado, cambie a la pestaña **Referencias** de la ventana Propiedades del grupo de límites.  
-
-- Para habilitar este grupo de límites para que los clientes lo usen para la asignación de sitio, seleccione **Usar este grupo de límites para la asignación de sitio**. Después, seleccione un sitio en la lista desplegable **Sitio asignado**. Para más información, vea [Asignación de sitio](#site-assignment).  
-
-- Para asociar los servidores del sistema de sitio disponibles con este grupo de límites, seleccione **Agregar**. En la ventana Agregar sistemas de sitio solo se enumeran los servidores que tienen roles de sistema de sitio compatibles. Seleccione la casilla de uno o varios servidores y luego haga clic en **Aceptar**. Se agregan como servidores de sistema de sitio asociados para este grupo de límites.  
-
-    > [!NOTE]  
-    >  Puede seleccionar cualquier combinación de sistemas de sitio disponibles en cualquier sitio de la jerarquía. Los sistemas de sitio seleccionados se muestran en la pestaña **Sistemas de sitio** en las propiedades de cada límite miembro de este grupo de límites.  
-
-- Para quitar un servidor de este grupo de límites, seleccione el servidor y luego haga clic en **Quitar**.  
-
-    > [!NOTE]  
-    >  Para que este grupo de límites deje de usarse para asociar sistemas de sitio, quite todos los servidores que se enumeran como servidores de sistema de sitio asociados.  
-
-
-#### <a name="bkmk_bg-fallback"></a> Configuración del comportamiento de reserva
-
-Para configurar el comportamiento de reserva, cambie a la pestaña **Relaciones** de la ventana Propiedades del grupo de límites.  
-
-- Para crear una relación con otro grupo de límites:  
-
-    - Seleccione **Agregar**. En la ventana Grupos de límites de reserva, seleccione el grupo de límites que desea configurar.  
-
-    - Defina un tiempo de reserva para los siguientes roles de sistema de sitio:  
-        - Punto de distribución  
-        - Punto de actualización de software  
-        - Punto de administración  
-
-        > [!Note]  
-        > Por ejemplo, abra la ventana Propiedades del grupo de límites de la sucursal. En la ventana Grupos de límites de reserva, seleccione el grupo de límites de la sede principal. Defina el tiempo de reserva del punto de distribución en `20`. Al guardar esta configuración, los clientes del grupo de límites de la sucursal empezarán a buscar contenido de los puntos de distribución del grupo de límites de la sede principal después de 20 minutos.  
-
-    - Para impedir la reserva de un grupo de límites específico, seleccione el grupo de límites y luego haga clic en **No usar reserva nunca** para este tipo de rol de sistema de sitio. Esta acción puede incluir el *grupo de límites de sitio predeterminado*.  
-
-- Para modificar la configuración de una relación existente, seleccione el grupo de límites en la lista y haga clic en **Cambiar**. Esta acción abre la ventana Grupos de límites de reserva solo para este grupo de límites.  
- 
-- Para quitar una relación, seleccione el grupo de límites en la lista y luego haga clic en **Quitar**.  
-
-Para más información, vea [Reserva](#fallback). 
-
-
-#### <a name="bkmk_options"></a> Configuración de opciones del grupo de límites
-<!--1356193--> A partir de la versión 1806, para configurar opciones adicionales para los clientes de este grupo de límites, cambie a la pestaña **Opciones**. Para más información, vea [Opciones de grupo de límites para descargas del mismo nivel](#bkmk_bgoptions).
-
-- **Permitir descargas del mismo nivel en este grupo de límites**: esta opción está habilitada de forma predeterminada. El punto de administración proporciona a los clientes una lista de ubicaciones de contenido que incluye orígenes del mismo nivel.  
-
-    - **Durante las descargas del mismo nivel, solo use elementos del mismo nivel en la misma subred**: esta configuración depende de la anterior. Si habilita esta opción, el punto de administración solo se incluye en los orígenes del mismo nivel de la lista de ubicaciones de contenido que se encuentran en la misma subred que el cliente.  
-
-
-### <a name="bkmk_site-fallback"></a> Configurar un sitio de reserva para la asignación de sitios automática  
-
-Si los clientes no están en un grupo de límites con un sitio asignado, puede asignarlos a este sitio cuando se instalan.
-
-1.  En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración del sitio** y seleccione el nodo **Sitios**.  
-
-2.  En la pestaña **Inicio** de la cinta de opciones, en el grupo **Sitios**, seleccione **Configuración de jerarquía**.  
-
-3.  En la pestaña **General**, seleccione la casilla para **Usar un sitio de reserva**. Después, seleccione un sitio en la lista desplegable **Sitio de reserva**.  
-
-4.  Seleccione **Aceptar** para guardar la configuración.  
-
-Para más información, vea [Asignación de sitio](#site-assignment).
-
-
-### <a name="bkmk_proc-prefer"></a> Habilitar el uso de puntos de administración preferidos  
-
-Para más información, vea [Puntos de administración preferidos](#bkmk_preferred).
-
-1.  En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración del sitio** y seleccione el nodo **Sitios**.  
-
-2. En la pestaña **Inicio** de la cinta de opciones, en el grupo **Sitios**, seleccione **Configuración de jerarquía**.  
-
-3. En la pestaña **General**, seleccione **Los clientes prefieren usar puntos de administración especificados en grupos de límites**.  
-
-4. Seleccione **Aceptar** para guardar la configuración.  
+- [Conceptos básicos de la administración de contenido](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)  

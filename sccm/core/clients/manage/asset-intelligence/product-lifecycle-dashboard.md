@@ -2,7 +2,7 @@
 title: Panel de ciclo de vida del producto
 titleSuffix: Configuration Manager
 description: Vea la Directiva del ciclo de vida de Microsoft con el panel de ciclo de vida del producto en Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 8b5b144a-0e5f-4fcc-87b2-33b9bcdb5655
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd1a3a56bac6d7917c70db731b1735a195fae3df
-ms.sourcegitcommit: dfb2cb01c1608b848f2f2fee7c84500e7adcb7a4
+ms.openlocfilehash: bda6e266c6be8897de87a2a30fb0198a4b4c8446
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49101252"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456030"
 ---
 # <a name="manage-microsoft-lifecycle-policy-with-configuration-manager"></a>Administrar la directiva de ciclo de vida de Microsoft con Configuration Manager
 
@@ -24,6 +24,8 @@ ms.locfileid: "49101252"
 A partir de la versión 1806, puede usar el panel de ciclo de vida del producto de Configuration Manager para ver la Directiva de ciclo de vida de Microsoft. El panel muestra el estado de la Directiva de ciclo de vida de Microsoft de los productos instalados en los dispositivos administrados con Configuration Manager. Además proporciona información sobre los productos de Microsoft del entorno, el estado de compatibilidad y la fechas de finalización del soporte técnico. Use el panel para conocer la disponibilidad del soporte técnico para cada producto. Esta información le ayuda a planear cuándo actualizar los productos de Microsoft que usa antes de que llegue el fin del soporte actual.  
 
 Para más información, vea la [Directiva de ciclo de vida de Microsoft](https://support.microsoft.com/lifecycle).
+
+A partir de la versión 1810, el panel incluye información para System Center 2012 Configuration Manager y versiones posteriores.<!--1358702-->  
 
 
 
@@ -59,6 +61,13 @@ Para tener acceso al panel de ciclo de vida, en la consola de Configuration Mana
 
 ![Captura de pantalla del panel de ciclo de vida del producto en la consola](media/product-lifecycle-dashboard.png)
 
+Cambie la vista seleccionando una de las siguientes opciones de la lista **Categoría de productos**:  
+- **Todos**: ver todos los productos de forma conjunta  
+- **Cliente Windows**: ver las versiones del sistema operativo del cliente de Windows  
+- **Windows Server**: ver las versiones del sistema operativo del servidor de Windows  
+- **Base de datos**: ver las versiones de SQL Server  
+- **Configuration Manager**: ver las versiones de Configuration Manager (a partir de la versión 1810)  
+
 El panel presenta los iconos siguientes:  
 
 - **Los cinco principales productos cuyo ciclo de vida ha expirado**: este icono es una vista de datos consolidados de los productos que se encuentran en su entorno cuyo ciclo de vida ha expirado. El gráfico muestra el software instalado que ha expirado en comparación con el ciclo de vida de soporte técnico para sistemas operativos y productos de SQL server.  
@@ -79,13 +88,16 @@ El panel presenta los iconos siguientes:
 
 ## <a name="reporting"></a>Generación de informes
 
-También existen informes adicionales. En la consola de Configuration Manager, vaya al área de trabajo **Supervisión**, expanda **Informes** y expanda **Informes**. Se agregan los siguientes informes nuevos a la categoría **Ciclo de vida del producto**:  
+También existen informes adicionales. En la consola de Configuration Manager, vaya al área de trabajo **Supervisión**, expanda **Informes** y expanda **Informes**. Se agregan los siguientes informes nuevos a la categoría **Asset Intelligence**:  
 
-- **Información general del ciclo de vida de productos**: vea una lista de los ciclos de vida de los productos. Filtre la lista por nombre de producto y los días para que expire.  
+- **Ciclo de vida 01A: equipos con un producto de software específico**: vea una lista de equipos en los que se detecta un producto determinado.  
 
-- **Equipos con un producto de software específico**: vea una lista de equipos en los que se detecta un producto determinado.  
+- **Ciclo de vida 02A: lista de equipos con productos expirados de la organización**: vea equipos que contienen productos expirados. Este informe se puede filtrar por nombre de producto.
 
-- **Lista de productos expirados que se encuentran en la organización**: vea los detalles de productos de su entorno cuyo ciclo de vida ha expirado.  
+- **Ciclo de vida 03A: lista de productos expirados que se encuentran en la organización**: vea los detalles de productos de su entorno cuyo ciclo de vida ha expirado.  
 
-- **Lista de equipos con productos expirados de la organización**: vea equipos que contienen productos expirados. Este informe se puede filtrar por nombre de producto.
+- **Ciclo de vida 04A: información general del ciclo de vida de productos**: vea una lista de los ciclos de vida de los productos. Filtre la lista por nombre de producto y los días para que expire.  
 
+- **Ciclo de vida 05A: panel de ciclo de vida del producto**: a partir de la versión 1810, este informe incluye información similar a la del panel de consola. Seleccione una categoría para ver el recuento de productos en su entorno y los días de soporte técnico que le quedan.  
+
+Para obtener más información, vea [Lista de informes](/sccm/core/servers/manage/list-of-reports#asset-intelligence).<!--SCCMDocs issue 997-->  

@@ -2,7 +2,7 @@
 title: Configurar los servicios de Azure
 titleSuffix: Configuration Manager
 description: Conecte el entorno de Configuration Manager con servicios de Azure para la administración en la nube, Upgrade Readiness, Microsoft Store para Empresas y Log Analytics.
-ms.date: 03/22/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1ea47941be51d1bf38de53203aad00c02d0a11d3
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 0e1cdef0acc799fc60c622f11e4c9c7426dfc19c
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893777"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456471"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configuración de servicios de Azure para utilizarlos con Configuration Manager
 
@@ -63,19 +63,20 @@ En la tabla siguiente se muestran detalles sobre cada uno de los servicios.
 
 |Servicio  |Inquilinos  |Nubes  |Aplicación web  |Aplicación nativa  |Acciones  |
 |---------|---------|---------|---------|---------|---------|
-|Administración en la nube con</br>Detección de usuarios de Azure AD | Varios | Público | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | Importar, Crear |
+|Administración en la nube con<br>Detección de usuarios de Azure AD | Varios | Pública, Privada | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | Importar, Crear |
 |Conector de Log Analytics | Uno | Pública, Privada | ![Compatible.](media/green_check.png) | ![No compatible](media/Red_X.png) | Importar |
 |Upgrade Readiness | Uno | Público | ![Compatible.](media/green_check.png) | ![No compatible](media/Red_X.png) | Importar |
-|Microsoft Store para</br>Business | Uno | Público | ![Compatible.](media/green_check.png) | ![No compatible](media/Red_X.png) | Importar, Crear |
+|Microsoft Store para<br>Business | Uno | Público | ![Compatible.](media/green_check.png) | ![No compatible](media/Red_X.png) | Importar, Crear |
 
 
 ### <a name="about-azure-ad-apps"></a>Acerca de las aplicaciones de Azure AD
 
 Cada servicio de Azure requiere configuraciones distintas, que se establecen en Azure Portal. Además, las aplicaciones para cada servicio pueden requerir permisos distintos a los recursos de Azure.  
 
-Se puede usar una única aplicación para varios servicios. Solo hay un objeto para administrar en Configuration Manager y Azure AD. Cuando caduca la clave de seguridad en la aplicación, basta con actualizar una clave.
+Puede usar una única aplicación para más de un servicio. Solo hay un objeto para administrar en Configuration Manager y Azure AD. Cuando caduca la clave de seguridad en la aplicación, basta con actualizar una clave.
 
-La configuración más segura consiste en usar aplicaciones independientes para cada servicio. Es posible que una aplicación para un servicio requiera permisos adicionales que otro servicio no requiera. Al usar una aplicación para servicios diferentes, se le pueden proporcionar más servicios de los que requiere en otros casos. 
+<!-- The most secure configuration is using separate apps for each service. An app for one service might require additional permissions that another service doesn't require. Using one app for different services can provide the app with more permissions than it otherwise requires. 
+ --> 
 
 Al crear servicios adicionales de Azure en el asistente, Configuration Manager está diseñado para reutilizar la información que es común entre los servicios. Este comportamiento evita la necesidad de especificar varias veces la misma información. 
 
@@ -91,9 +92,15 @@ Para obtener más información sobre las aplicaciones de Azure, empiece con los 
 
 ## <a name="before-you-begin"></a>Antes de comenzar
 
-Una vez decidido el servicio al que quiere conectarse, consulte la tabla de la sección [Detalles del servicio](#service-details). En esta tabla se proporciona la información necesaria para completar el Asistente para servicios de Azure. Primero, consúltelo con el administrador de Azure AD. Decida si crear manualmente las aplicaciones de antemano en Azure Portal y después importar los detalles de la aplicación en Configuration Manager. O bien, use Configuration Manager para crear las aplicaciones directamente en Azure AD. Para recopilar los datos necesarios de Azure AD, revise la información de las demás secciones de este artículo.
+Una vez decidido el servicio al que quiere conectarse, consulte la tabla de la sección [Detalles del servicio](#service-details). En esta tabla se proporciona la información necesaria para completar el Asistente para servicios de Azure. Primero, consúltelo con el administrador de Azure AD. Decida cuál de las siguientes acciones quiere emprender: 
 
-Algunos servicios requieren que las aplicaciones de Azure AD tengan permisos específicos. Revise la información de cada servicio para determinar los permisos necesarios. Por ejemplo, para poder importar una aplicación web, un administrador de Azure debe crearla primero en [Azure Portal](https://portal.azure.com). Al configurar Upgrade Readiness o el conector de Log Analytics, tendrá que conceder permisos de *colaborador* a la aplicación web recién registrada en el grupo de recursos que contiene el área de trabajo pertinente. Este permiso permite que Configuration Manager tenga acceso a esa área de trabajo. Al asignar el permiso, busque el nombre del registro de aplicación en el área **Agregar usuarios** de Azure Portal. Este proceso es el mismo que la [concesión de permisos a Configuration Manager para acceder a Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). Un administrador de Azure debe asignar estos permisos antes de importar la aplicación en Configuration Manager.
+- Cree las aplicaciones manualmente y de antemano en Azure Portal. Después, importe los detalles de la aplicación en Configuration Manager.  
+
+- Use Configuration Manager para crear las aplicaciones directamente en Azure AD. Para recopilar los datos necesarios de Azure AD, revise la información de las demás secciones de este artículo.  
+
+Algunos servicios requieren que las aplicaciones de Azure AD tengan permisos específicos. Revise la información de cada servicio para determinar los permisos necesarios. Por ejemplo, para poder importar una aplicación web, un administrador de Azure debe crearla primero en [Azure Portal](https://portal.azure.com). 
+
+Al configurar Upgrade Readiness o el conector de Log Analytics, conceda permisos de *colaborador* a la aplicación web recién registrada en el grupo de recursos que contiene el área de trabajo pertinente. Este permiso permite que Configuration Manager tenga acceso a esa área de trabajo. Al asignar el permiso, busque el nombre del registro de aplicación en el área **Agregar usuarios** de Azure Portal. Este proceso es el mismo que la [concesión de permisos a Configuration Manager para acceder a Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). Un administrador de Azure debe asignar estos permisos antes de importar la aplicación en Configuration Manager.
 
 
 
@@ -120,10 +127,12 @@ Algunos servicios requieren que las aplicaciones de Azure AD tengan permisos esp
 En la página **Aplicación** del Asistente para servicios de Azure, primero seleccione el **Entorno de Azure** en la lista. Consulte la tabla de la sección [Detalles del servicio](#service-details) para saber qué entorno está actualmente disponible para el servicio.
 
 El resto de la página Aplicación varía en función del servicio específico. Consulte la tabla de la sección [Detalles del servicio](#service-details) para saber qué tipo de aplicación usa el servicio y qué acción se puede realizar. 
-- Si la aplicación es compatible con las acciones de importación y creación, haga clic en **Examinar**. Esta acción abre el [cuadro de diálogo Aplicación de servidor](#server-app-dialog) o el [cuadro de diálogo Aplicación cliente](#client-app-dialog).
-- Si la aplicación solo admite la acción de importación, haga clic en **Importar**. Esta acción abre el [cuadro de diálogo Importar aplicaciones (servidor)](#import-apps-dialog-server) o el [cuadro de diálogo Importar aplicaciones (cliente)](#import-apps-dialog-client).
 
-Después de especificar las aplicaciones en esta página, haga clic en **Siguiente** para continuar a la página [Configuration or Discovery](#configuration-or-discovery) (Configuración o detección) del Asistente para servicios de Azure.
+- Si la aplicación es compatible con las acciones de importación y creación, haga clic en **Examinar**. Esta acción abre el [cuadro de diálogo Aplicación de servidor](#server-app-dialog) o el [cuadro de diálogo Aplicación cliente](#client-app-dialog).  
+
+- Si la aplicación solo admite la acción de importación, seleccione **Importar**. Esta acción abre el [cuadro de diálogo Importar aplicaciones (servidor)](#import-apps-dialog-server) o el [cuadro de diálogo Importar aplicaciones (cliente)](#import-apps-dialog-client).
+
+Después de especificar las aplicaciones en esta página, haga clic en **Siguiente** para continuar a la página [Configuración o detección](#configuration-or-discovery) del Asistente para servicios de Azure.
 
 ### <a name="web-app"></a>Aplicación web
 
@@ -145,7 +154,7 @@ Después de seleccionar, importar o crear una aplicación web, haga clic en **Ac
 
 #### <a name="import-apps-dialog-server"></a>Cuadro de diálogo Importar aplicaciones (servidor)
 
-Al hacer clic en **Importar** desde el cuadro de diálogo Aplicación de servidor o la página Aplicación del Asistente para servicios de Azure, se abre el cuadro de diálogo Importar aplicaciones. Esta página permite especificar información sobre una aplicación web de Azure AD que ya se ha creado en Azure Portal. Importa metadatos sobre esa aplicación web en Configuration Manager. Especifique la información siguiente:
+Al seleccionar **Importar** desde el cuadro de diálogo Aplicación de servidor o la página Aplicación del Asistente para servicios de Azure, se abre el cuadro de diálogo Importar aplicaciones. Esta página permite especificar información sobre una aplicación web de Azure AD que ya se ha creado en Azure Portal. Importa metadatos sobre esa aplicación web en Configuration Manager. Especifique la información siguiente:
 - **Nombre de inquilino de Azure AD**
 - **Id. de inquilino de Azure AD**
 - **Nombre de la aplicación**: un nombre descriptivo para la aplicación.
@@ -162,7 +171,7 @@ Al hacer clic en **Crear** desde el cuadro de diálogo Aplicación de servidor, 
 - **Nombre de la aplicación**: un nombre descriptivo para la aplicación.
 - **Dirección URL de la página principal**: Configuration Manager no usa este valor, pero es necesario para Azure AD. De forma predeterminada, este valor es https://ConfigMgrService.  
 - **URI de id. de aplicación**: este valor debe ser único en el inquilino de Azure AD. Se encuentra en el token de acceso que usa el cliente de Configuration Manager para solicitar acceso al servicio. De forma predeterminada, este valor es https://ConfigMgrService.  
-- **Período de validez de clave secreta**: haga clic en la lista desplegable y seleccione **1 año** o **2 años**. El valor predeterminado es un año.
+- **Período de validez de clave secreta**: elija **1 año** o **2 años** en la lista desplegable. El valor predeterminado es un año.
 
 Haga clic en **Iniciar sesión** para autenticarse en Azure como un usuario administrativo. Configuration Manager no guarda estas credenciales. Este rol no requiere permisos de Configuration Manager y no tiene que ser la misma cuenta que ejecuta al Asistente para servicios de Azure. Después de autenticarse correctamente en Azure, en la página se muestra el **Nombre de inquilino de Azure AD** como referencia. 
 

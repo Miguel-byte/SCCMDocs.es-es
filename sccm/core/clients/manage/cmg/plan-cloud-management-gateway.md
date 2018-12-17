@@ -2,7 +2,7 @@
 title: Planear para Cloud Management Gateway
 titleSuffix: Configuration Manager
 description: Planee y diseñe Cloud Management Gateway (CMG) para simplificar la administración de clientes basados en Internet.
-ms.date: 10/24/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0f7e598da0953a20412f6c8279b90a95c1d26581
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: b059fd3b8511a3cbbf308ea7a3ee21a4ec9dbfaa
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411483"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456726"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planificación de Cloud Management Gateway en Configuration Manager
 
@@ -98,12 +98,15 @@ La implementación y el funcionamiento de CMG incluye los componentes siguientes
 
 
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
-<!-- 1324735 --> A partir de la versión 1802, puede crear una instancia de CMG mediante una **implementación de Azure Resource Manager**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) es una moderna plataforma para administrar todos los recursos de la solución como una única entidad, denominada [grupo de recursos](/azure/azure-resource-manager/resource-group-overview#resource-groups). Al implementar CMG con Azure Resource Manager, el sitio usa Azure Active Directory (Azure AD) para autenticar y crear los recursos necesarios en la nube. Esta implementación modernizada no requiere el certificado de administración de Azure clásico.  
+<!-- 1324735 --> A partir de la versión 1802, puede crear una instancia de CMG mediante una **implementación de Azure Resource Manager**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) es una moderna plataforma para administrar todos los recursos de la solución como una única entidad, denominada [grupo de recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). Al implementar CMG con Azure Resource Manager, el sitio usa Azure Active Directory (Azure AD) para autenticar y crear los recursos necesarios en la nube. Esta implementación modernizada no requiere el certificado de administración de Azure clásico.  
+
+> [!Note]  
+> Esta función no habilita la compatibilidad de los proveedores de servicios en la nube (CSP) de Azure. La implementación de CMG con Azure Resource Manager sigue usando el servicio en la nube clásico, que no es compatible con los proveedores de servicios en la nube. Para obtener más información, consulte [Available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services) (Servicios de Azure disponibles en los proveedores de servicios en la nube de Azure). 
 
 El asistente de CMG sigue ofreciendo la opción de una **implementación del servicio clásico** mediante un certificado de administración de Azure. Para simplificar la implementación y la administración de recursos, se recomienda usar el modelo de implementación de Azure Resource Manager para todas las instancias nuevas de CMG. Si es posible, vuelva a implementar las instancias existentes de CMG a través de Resource Manager. Para obtener más información, vea [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg) (Modificar una instancia de CMG).
 
-> [!IMPORTANT]  
-> Esta función no habilita la compatibilidad de los proveedores de servicios en la nube (CSP) de Azure. La implementación de CMG con Azure Resource Manager sigue usando el servicio en la nube clásico, que no es compatible con los proveedores de servicios en la nube. Para obtener más información, consulte [Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services) (Servicios de Azure disponibles en los proveedores de servicios en la nube de Azure). 
+> [!Important]  
+> A partir de la versión 1810, la implementación del servicio clásico de Azure ya no se usa en Configuration Manager. Esta versión es la última que admite la creación de estas implementaciones de Azure. Esta funcionalidad se retirará en la primera versión de Configuration Manager que se publique a partir del 1 de julio de 2019. Mueva los puntos de distribución en la nube y CMG a implementaciones de Azure Resource Manager antes de este momento. <!--SCCMDocs-pr issue #2993-->  
 
 
 ### <a name="hierarchy-design"></a>Diseño de jerarquía
@@ -158,7 +161,9 @@ Del mismo modo, cuando los clientes de París se mueven hacia Internet, se comun
 - Si recurre al método de implementación clásico de Azure, debe usar un [**certificado de administración de Azure**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_azuremgmt).  
 
     > [!TIP]  
-    > A partir de la versión 1802 de Configuration Manager, Microsoft recomienda el uso del **modelo de implementación de Azure Resource Manager**. No necesita este certificado de administración.  
+    > A partir de la versión 1802 de Configuration Manager, Microsoft recomienda el uso del **modelo de implementación de Azure Resource Manager**. No necesita este certificado de administración. 
+    > 
+    > El método de implementación clásico está en desuso desde la versión 1810.   
 
 - Podrían ser necesarios **otros certificados**, según el modelo de autenticación y la versión del sistema operativo del cliente. Para obtener más información, vea [CMG certificates](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway) (Certificados de CMG).  
 
@@ -183,7 +188,7 @@ Del mismo modo, cuando los clientes de París se mueven hacia Internet, se comun
 
 - Los puntos de actualización de software que usan un equilibrador de carga de red no funcionan con CMG. <!--505311-->  
 
-- A partir de la versión 1802, las implementaciones de CMG que usan Azure Resource Model no permiten la compatibilidad con proveedores de servicios en la nube (CSP) de Azure. La implementación de CMG con Azure Resource Manager sigue usando el servicio en la nube clásico, que no es compatible con los proveedores de servicios en la nube. Para obtener más información, vea [Servicios de Azure disponibles en el programa CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+- A partir de la versión 1802, las implementaciones de CMG que usan Azure Resource Model no permiten la compatibilidad con proveedores de servicios en la nube (CSP) de Azure. La implementación de CMG con Azure Resource Manager sigue usando el servicio en la nube clásico, que no es compatible con los proveedores de servicios en la nube. Para obtener más información, vea [Servicios de Azure disponibles en el programa CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
 
 ### <a name="support-for-configuration-manager-features"></a>Compatibilidad con características de Configuration Manager

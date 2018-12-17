@@ -2,7 +2,7 @@
 title: Administrar secuencias de tareas
 titleSuffix: Configuration Manager
 description: Cree, edite, implemente, importe y exporte secuencias de tareas para administrarlas y automatizar las tareas en su entorno.
-ms.date: 08/17/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a6c1fb447719a36bd3c0cb7e2c91daf6a58d85ff
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: 44cfb06c8d92568a4468c1f46b90ceeb259c3c1f
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755931"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456641"
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-configuration-manager"></a>Administración de secuencias de tareas para automatizar tareas en Configuration Manager
 
@@ -391,6 +391,9 @@ Se mostrará el siguiente mensaje de notificación cuando el usuario final abra 
     -   **Cuando no haya disponible ningún punto de distribución local, usar un punto de distribución remoto**: especifica si los clientes pueden usar puntos de distribución de grupos de límite vecino para descargar el contenido necesario para la secuencia de tareas.  
 
     - **Permitir que los clientes usen puntos de distribución del grupo de límite del sitio predeterminado**: especifica si los clientes deben descargar contenido desde un punto de distribución en el grupo de límites predeterminados del sitio, cuando el contenido no está disponible desde un punto de distribución en el grupo actual o en los grupos de límites vecinos.  
+
+        > [!Note]  
+        > A partir de la versión 1810, cuando un dispositivo ejecuta una secuencia de tareas y necesita adquirir contenido, usa los comportamientos de grupos de límites similares al cliente de Configuration Manager. Para obtener más información, vea [Task sequence support for boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgr-osd) (Compatibilidad de la secuencia de tareas con grupos de límites).<!--1359025-->  
 
 11. A partir de Configuration Manager 1802, en la pestaña **Resumen**, haga clic en **Save As Template** (Guardar como plantilla) si quiere guardar la configuración para volver a usarla. Asigne un nombre a la plantilla y seleccione la configuración que quiere guardar.  
 

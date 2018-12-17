@@ -2,7 +2,7 @@
 title: Consola de Configuration Manager
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la navegación a través de la consola de Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,111 +10,148 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f936cf1c1317940f28691863eafdb4aa883fc1cb
-ms.sourcegitcommit: aa91f0d376de03b614b70d5fc513cb384ff58db4
+ms.openlocfilehash: 073f908057d459d847cbec6b380e7a4a8683db2b
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216921"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456165"
 ---
-# <a name="using-the-system-center-configuration-manager-console"></a>Usar la consola de System Center Configuration Manager
+# <a name="using-the-configuration-manager-console"></a>Uso de la consola de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Los administradores usan la consola de System Center Configuration Manager para administrar el entorno de Configuration Manager. Este artículo trata los aspectos básicos de navegación de la consola. Las mejoras en la consola se muestran por versión al final de este artículo. 
+Los administradores usan la consola de Configuration Manager para administrar el entorno de Configuration Manager. Este artículo trata los aspectos básicos de navegación de la consola.  
 
-## <a name="connect-the-console-to-a-site-server"></a>Conecte la consola a un servidor de sitio
-La consola se conecta al servidor de sitio de administración central o a los servidores de sitio primarios. En cambio, no puede conectar una consola de Configuration Manager a un sitio secundario. Si es necesario, [instale la consola de Configuration Manager](../deploy/install/install-consoles.md). Durante la instalación, especificó el nombre de dominio completo (FQDN) del servidor de sitio al que se conecta la consola de Configuration Manager. Para conectarse a otro servidor de sitio, use las siguientes instrucciones: 
 
-1. Haga clic en la flecha situada en la parte superior de la cinta y seleccione **Conectar a un nuevo sitio**.
-    ![Conecte la consola a un nuevo sitio](media/connect-to-a-new-site.png)
+
+## <a name="connect-to-a-site-server"></a>Conexión a un servidor de sitio
+
+La consola se conecta al servidor de sitio de administración central o a los servidores de sitio primarios. No se puede conectar una consola de Configuration Manager a un sitio secundario. Puede [instalar la consola de Configuration Manager](/sccm/core/servers/deploy/install/install-consoles). Durante la instalación, especificó el nombre de dominio completo (FQDN) del servidor de sitio al que se conecta la consola. 
+
+Para conectarse a otro servidor de sitio, siga estos pasos: 
+
+1. Haga clic en la flecha situada en la parte superior de la [cinta](#ribbon) y elija **Conectar a un nuevo sitio**.  
+    ![Conecte la consola a un nuevo sitio](media/connect-to-a-new-site.png)  
+
 2. Escriba el FQDN del servidor del sitio. Si se ha conectado anteriormente al servidor de sitio, seleccione el servidor en la lista desplegable.  
-    ![Escribir el FQDN del servidor del sitio](media/site-server-fqdn.png)
-3. Haga clic en **Conectar**. 
+    ![Ventana de conexión de sitio, especifique el FQDN del servidor de sitio](media/site-server-fqdn.png)  
 
-## <a name="navigate-the-console"></a>Ir a la consola
-Algunas opciones en la consola pueden no estar visibles en función del rol de seguridad asignado. Para obtener más información sobre roles, vea [Conceptos básicos de la administración basada en roles](../../understand/fundamentals-of-role-based-administration.md). 
+3. Seleccione **Conectar**.  
+
+
+A partir de la versión 1810, puede especificar el nivel mínimo de autenticación para que los administradores accedan a sitios de Configuration Manager. Esta característica exige que los administradores inicien sesión en Windows con el nivel requerido. Para más información, vea [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth) (Planear el proveedor de SMS). <!--1357013-->  
+
+
+
+## <a name="navigation"></a>Navegación
+
+Algunas áreas de la consola pueden no estar visibles en función del rol de seguridad asignado. Para obtener más información sobre roles, vea [Conceptos básicos de la administración basada en roles](/sccm/core/understand/fundamentals-of-role-based-administration). 
+
 
 ### <a name="workspaces"></a>Áreas de trabajo
+
 La consola de Configuration Manager tiene cuatro **áreas de trabajo**: 
-   - **Activos y compatibilidad**
-   - **Biblioteca de software**
-   - **Supervisión**
-   - **Administración**
+   - **Activos y compatibilidad**  
+   - **Biblioteca de software**  
+   - **Supervisión**  
+   - **Administración**  
 
- ![Áreas de trabajo de Configuration Manager](media/configuration-manager-workspaces.png)
+![Áreas de trabajo de Configuration Manager con el menú contextual](media/configuration-manager-workspaces.png)  
 
-Cambie el orden de los botones del área de trabajo; para ello, haga clic en la flecha hacia abajo y seleccione **Opciones de Panel de navegación**. Seleccione un elemento que quiera **Subir** o **Bajar**. Haga clic en **Restablecer** para restaurar el orden de botones predeterminado. 
+Cambie el orden de los botones del área de trabajo; para ello, haga clic en la flecha hacia abajo y elija **Opciones de Panel de navegación**. Seleccione un elemento que quiera **Subir** o **Bajar**. Haga clic en **Restablecer** para restaurar el orden de botones predeterminado.  
+ ![Ventana de Opciones de Panel de navegación para cambiar el orden de las áreas de trabajo](media/navigation-pane-options.png)  
 
- ![Cambiar el orden de las áreas de trabajo de Configuration Manager](media/navigation-pane-options.png)
-
-Puede minimizar un botón del área de trabajo seleccionando **Mostrar menos botones**. La última área de trabajo en la lista del áreas de trabajo se minimiza en primer lugar. Si hace clic en un botón minimizado y selecciona **Mostrar más botones**, se restaura el botón a su tamaño original.  
-
-![Áreas de trabajo de Configuration Manager](media/workspace-buttons.png)
+Minimice un botón del área de trabajo seleccionando **Mostrar menos botones**. La última área de trabajo de la lista se minimiza primero. Seleccione un botón minimizado y elija **Mostrar más botones** para restaurar el botón a su tamaño original.   
+![Áreas de trabajo minimizadas en la consola de Configuration Manager](media/workspace-buttons.png)  
 
 
 ### <a name="nodes"></a>Nodos
-Las áreas de trabajo son una colección de **nodos**. Un ejemplo de un nodo es el nodo **Grupos de actualizaciones de software**. Una vez que se encuentran en el nodo, puede hacer clic en la flecha para minimizar el panel de navegación. 
 
-![Áreas de trabajo de Configuration Manager](media/software-update-groups-node.png)
+Las áreas de trabajo son una colección de **nodos**. Un ejemplo de un nodo es el nodo **Grupos de actualizaciones de software** en el área de trabajo **Biblioteca de software**. 
 
-Puede usar la **barra de navegación** para desplazarse por la consola cuando se minimiza el panel de navegación. 
+Una vez que se encuentran en el nodo, puede hacer clic en la flecha para minimizar el panel de navegación.  
+![Nodo de ejemplo y flecha de minimizar resaltado](media/software-update-groups-node.png)  
 
-![Configuration Manager minimizado en el panel de navegación](media/minimized-navigation-pane.png)
+Use la **barra de navegación** para desplazarse por la consola al minimizar el panel de navegación.  
+![Configuration Manager minimizado en el panel de navegación](media/minimized-navigation-pane.png)  
 
-En la consola, los nodos a veces se organizan en carpetas. Si hace clic directamente en la carpeta, suele llevarle a un **índice de navegación** o a un **panel**.
+En la consola, los nodos a veces se organizan en carpetas. Si hace clic directamente en la carpeta, suele llevarle a un **índice de navegación** o a un **panel**.  
+![Índice de navegación de las actualizaciones de software de Configuration Manager](media/software-updates-navigation-index.png)  
 
-![Índice de navegación de las actualizaciones de software de Configuration Manager](media/software-updates-navigation-index.png)
 
 ### <a name="ribbon"></a>Cinta de opciones 
-La cinta está en la parte superior de la consola de Configuration Manager. La cinta puede tener más de una pestaña y se puede minimizar usando la flecha situada a la derecha. Los botones de la cinta de opciones cambian en función del nodo. La mayoría de los botones de la cinta también están disponibles en los menús que verá al hacer clic con el botón derecho. 
- 
-![Índice de navegación de las actualizaciones de software de Configuration Manager](media/ribbon.png)
+
+La cinta está en la parte superior de la consola de Configuration Manager. La cinta puede tener más de una pestaña y se puede minimizar usando la flecha situada a la derecha. Los botones de la cinta de opciones cambian en función del nodo. La mayoría de los botones de la cinta también están disponibles en los menús que verá en los menús contextuales.  
+![Cinta de opciones de ejemplo, flecha para resaltar varias pestañas y minimizar](media/ribbon.png)   
+
 
 ### <a name="details-pane"></a>Panel de detalles
-Puede obtener información adicional sobre los elementos revisando el panel de detalles. El panel de detalles puede tener una o más pestañas. Las pestañas variarán según el nodo. 
-![Panel de detalles de Configuration Manager](media/details-pane.png)
+
+Puede obtener información adicional sobre los elementos revisando el panel de detalles. El panel de detalles puede tener una o más pestañas. Las pestañas varían según el nodo. 
+![Panel de detalles de ejemplo de Configuration Manager](media/details-pane.png)   
+
 
 ### <a name="columns"></a>Columnas 
-Puede agregar columnas, quitarlas, reordenarlas y cambiar su tamaño. Estas acciones le permiten mostrar los datos que prefiera. Las columnas disponibles variarán según el nodo. Haga clic con el botón derecho en un encabezado de columna existente y después haga clic en un elemento para agregarlo o quitarlo de la vista. Reordene las columnas arrastrando el encabezado de columna donde desee que esté ubicado. 
-![Agregar columna en Configuration Manager](media/add-columns.png)
 
-En la parte inferior del menú contextual de la columna puede ordenar o agrupar por una columna. Además, puede ordenar por una columna si hace clic en su encabezado. 
+Puede agregar columnas, quitarlas, reordenarlas y cambiar su tamaño. Estas acciones le permiten mostrar los datos que prefiera. Las columnas disponibles varían en función del nodo. Para agregar o quitar una columna de la vista, haga clic con el botón derecho en un encabezado de columna existente y seleccione un elemento. Reordene las columnas arrastrando el encabezado de columna donde desee que esté ubicado.  
+![Columna para agregar en Configuration Manager](media/add-columns.png)  
 
-![Agrupar por columna en Configuration Manager](media/column-group-by.png)
+En la parte inferior del menú contextual de la columna puede ordenar o agrupar por una columna. Además, también puede ordenar por columna seleccionando el encabezado.  
+![Agrupar por columna en Configuration Manager](media/column-group-by.png)  
 
-##<a name="console-command-line-options"></a>Opciones de línea de comandos de consola
-La consola de Microsoft System Center Configuration Manager tiene las opciones de línea de comandos siguientes.
+
+
+## <a name="command-line-options"></a>Opciones de línea de comandos
+
+La consola de Configuration Manager tiene las opciones de línea de comandos siguientes:
 
 |Opción|Descripción|  
 |------------|-----------------|  
-|**/sms:debugview=1**|Se incluye un elemento DebugView en todos los elementos ResultView que especifican una vista. DebugView muestra las propiedades sin procesar (nombres y valores).|  
-|**/sms:NamespaceView=1**|Muestra la vista de espacio de nombres en la consola de System Center Configuration Manager.|  
-|**/sms:ResetSettings**|La consola de System Center Configuration Manager omite los estados de conexión persistente del usuario y vista (el tamaño de la ventana de la consola de administración de Microsoft no se restablece).|  
-|**/sms:IgnoreExtensions**|Deshabilita las extensiones de System Center Configuration Manager.|  
-|**/sms:NoRestore**|La consola de System Center Configuration Manager ignora la navegación por los nodos persistentes anteriores.|  
+|`/sms:debugview=1`|Se incluye un elemento DebugView en todos los elementos ResultView que especifican una vista. DebugView muestra las propiedades sin procesar (nombres y valores).|  
+|`/sms:NamespaceView=1`|Muestra la vista del espacio de nombres en la consola.|  
+|`/sms:ResetSettings`|La consola pasa por alto los estados de vista y conexión seguidas por el usuario. No se restablece el tamaño de la ventana.|  
+|`/sms:IgnoreExtensions`|Deshabilita las extensiones de Configuration Manager.|  
+|`/sms:NoRestore`|La consola omite la anterior navegación por nodos persistente.|  
 
-## <a name="console-improvements-in-version-1806"></a>Mejoras en la consola en la versión 1806
-En la versión 1806 de Configuration Manager, se agregan las siguientes mejoras de la consola:
 
-- **Los usuarios primarios** están disponibles como una columna en el nodo dispositivo. <!--1357280-->
-- **Los usuarios con sesión iniciada actualmente** están disponibles como una columna en el nodo del dispositivo.<!--1358202-->
-- Se puede copiar información desde el panel **Detalles del activo** a las siguientes vistas de supervisión: <!--1357856-->
-    - Estado de distribución de contenido
-    - Estado de implementación 
 
-    ![Detalles de activos de copia de Configuration Manager](media/1810-deployment-status.PNG)
+## <a name="tips"></a>Sugerencias
 
- - Enviar comentarios desde la consola. Puede guardar una copia para enviarla más tarde si no tiene acceso a Internet. <!--1357542-->
+### <a name="send-feedback"></a>Enviar comentarios
+<!--1357542-->
+
+A partir de la versión 1806, los comentarios sobre el producto se envían desde la consola.  
    
-    - **Enviar una sonrisa**: enviar comentarios sobre lo que le gustó.
-    - **Enviar una desaprobación**: enviar comentarios sobre lo que no le gustó. 
-    - **Enviar una sugerencia**: le lleva a UserVoice para compartir sus ideas. 
+- **Enviar una sonrisa**: enviar comentarios sobre lo que le gustó.
+- **Enviar una desaprobación**: enviar comentarios sobre lo que no le gustó. 
+- **Enviar una sugerencia**: le lleva a UserVoice para compartir sus ideas. 
  
-       ![Enviar comentarios de Configuration Manager](media/1810-send-a-smile.PNG)
-![Formulario de comentarios de Configuration Manager](media/1810-feedback-form.PNG)
+Para obtener más información, vea [Comentarios sobre el producto](/sccm/core/understand/find-help#BKMK_1806Feedback).
+
+
+### <a name="assets-and-compliance-workspace"></a>Área de trabajo Activos y compatibilidad
+
+#### <a name="view-users-for-a-device"></a>Ver los usuarios de un dispositivo
+A partir de la versión 1806, las siguientes columnas están disponibles en el nodo **Dispositivos**:
+- **Usuarios primarios** <!--1357280-->  
+- **Usuario que ha iniciado sesión actualmente** <!--1358202-->  
+
+Para obtener más información sobre cómo mostrar una columna no predeterminada, vea [Columnas](#columns).
+
+
+### <a name="monitoring-workspace"></a>Área de trabajo de supervisión
+
+#### <a name="copy-details-in-monitoring-views"></a>Copiar detalles en las vistas de supervisión
+<!--1357856-->A partir de la versión 1806, se puede copiar información desde el panel **Detalles del activo** a los siguientes nodos de supervisión: 
+    - **Estado de distribución de contenido**  
+    - **Estado de implementación**  
+
+![Vista del estado de implementación, detalles del activo de copia](media/1810-deployment-status.PNG)
+
+
 
 ## <a name="next-steps"></a>Pasos siguientes
-> [!div class="nextstepaction"]
-> [Características de accesibilidad](../../understand/accessibility-features.md)
+
+[Características de accesibilidad](/sccm/core/understand/accessibility-features)
 
