@@ -79,7 +79,7 @@ Una vez instalada la actualización 1606, al instalar a continuación una actual
 
 
 ## <a name="accessibility"></a> Accesibilidad
-Para navegar entre los distintos nodos de un área de trabajo, ahora puede escribir la primera letra del nombre de un nodo. Cada presión de tecla mueve el cursor al siguiente nodo que comience con esa letra. Para los usuarios que tengan un lector de pantalla, el lector lee el nombre de ese nodo. Para obtener más información acerca de las opciones de accesibilidad, consulte [Accessibility features in System Center Configuration Manager](../../../core/understand/accessibility-features.md) (Características de accesibilidad de System Center Configuration Manager).
+Para navegar entre los distintos nodos de un área de trabajo, ahora puede escribir la primera letra del nombre de un nodo. Cada presión de tecla mueve el cursor al siguiente nodo que comience con esa letra. Para los usuarios que tengan un lector de pantalla, el lector lee el nombre de ese nodo. Para obtener más información acerca de las opciones de accesibilidad, consulte [Características de accesibilidad de System Center Configuration Manager](../../../core/understand/accessibility-features.md).
 
 ## <a name="administration"></a> Administración
 A continuación se presentan cambios en la administración de la consola de Configuration Manager:
@@ -91,7 +91,7 @@ El conector de OMS es una característica de la versión preliminar. Para habili
 
 ### <a name="support-for-cache-size-in-client-settings"></a>Configuración del tamaño de la memoria caché en Configuración de cliente
 
-Ahora puede configurar el tamaño de la carpeta de la memoria caché en los equipos cliente con **Configuración de cliente** en la consola de Configuration Manager. Anteriormente, solo podía establecer el tamaño de la caché de cliente al instalar o reinstalar el software de cliente. Ahora puede especificar el tamaño de la memoria caché como un valor del cliente (predeterminado o personalizado) y, después, hacer que ese valor se aplique con la siguiente actualización de directiva en el cliente, sin necesidad reinstalarlo. Para obtener más información, vea [Configure the Client Cache for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache).
+Ahora puede configurar el tamaño de la carpeta de la memoria caché en los equipos cliente con **Configuración de cliente** en la consola de Configuration Manager. Anteriormente, solo podía establecer el tamaño de la caché de cliente al instalar o reinstalar el software de cliente. Ahora puede especificar el tamaño de la memoria caché como un valor del cliente (predeterminado o personalizado) y, después, hacer que ese valor se aplique con la siguiente actualización de directiva en el cliente, sin necesidad reinstalarlo. Para obtener más información, vea [Configurar la caché del cliente para clientes de Configuration Manager](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache).
 
 ## <a name="on-premises-mobile-device-management"></a>Administración local de dispositivos móviles
 
@@ -112,7 +112,7 @@ Para obtener más información, consulte [Manage apps from the Windows Store for
 
 Se ha mejorado el flujo de trabajo para administrar las aplicaciones iOS adquiridas por volumen e implementarlas con Configuration Manager.
 
-Para obtener más información, consulte [Manage volume-purchased iOS apps with System Center Configuration Manager](../../../apps/deploy-use/manage-volume-purchased-ios-apps.md) (Administrar aplicaciones de iOS compradas por volumen con System Center Configuration Manager).
+Para obtener más información, consulte [Administrar aplicaciones de iOS compradas por volumen con System Center Configuration Manager](../../../apps/deploy-use/manage-volume-purchased-ios-apps.md).
 
 ### <a name="software-center-user-interface"></a>Interfaz de usuario del Centro de software
 
@@ -129,7 +129,7 @@ En las propiedades de una aplicación o paquete, ahora hay un vínculo que le ll
 ### <a name="client-setting-to-manage-the-office-365-client-agent"></a>Configuración de cliente para administrar el agente cliente de Office 365
 Ahora puede utilizar una configuración del cliente de Configuration Manager para administrar el agente cliente de Office 365. Después de configurar esta opción e implementar las actualizaciones de Office 365, el agente cliente de Configuration Manager se comunica con el de Office 365 para descargar e instalar las actualizaciones de Office 365 desde un punto de distribución.
 
-Para obtener más información, consulte [Manage Office 365 ProPlus updates with Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md) (Administración de actualizaciones ProPlus de Office 365 con Configuration Manager).
+Para obtener más información, consulte [Administración de actualizaciones ProPlus de Office 365 con Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="manually-switch-clients-to-a-new-software-update-point"></a>Cambio manual de clientes a un nuevo punto de actualización de software
 Ahora puede habilitar una opción que permite a los clientes de Configuration Manager cambiar a un nuevo punto de actualización de software cuando hay problemas con el punto de actualización de software activo. Una vez habilitada, los clientes buscarán otro punto de actualización de software en el siguiente examen.
@@ -147,19 +147,19 @@ Ahora puede ejecutar un examen de cumplimiento inmediatamente después de que un
 ## <a name="operating-system-deployment"></a>Implementación de sistema operativo
 
 ### <a name="improvements-to-the-task-sequence-step-install-software-updates"></a>Mejoras en el paso de secuencia de tareas: instalar actualizaciones de software
-Una nueva configuración, **Evaluar actualizaciones de software desde los resultados de análisis en caché**, le ofrece la opción de realizar un examen completo de actualizaciones de software, en lugar de usar los resultados del análisis almacenado en caché. Para obtener más información, consulte [Task sequence steps in System Center Configuration Manager](../../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates) (Pasos de la secuencia de tareas en System Center Configuration Manager).
+Una nueva configuración, **Evaluar actualizaciones de software desde los resultados de análisis en caché**, le ofrece la opción de realizar un examen completo de actualizaciones de software, en lugar de usar los resultados del análisis almacenado en caché. Para obtener más información, consulte [Pasos de la secuencia de tareas en System Center Configuration Manager](../../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates).
 
-Además, está disponible una nueva variable de secuencia de tareas, **SMSTSSoftwareUpdateScanTimeout**. Esta variable le permite controlar el tiempo de espera para la detección de actualizaciones de software durante el paso de la secuencia de tareas Instalar actualizaciones de software. El valor predeterminado es 30 minutos. Para obtener más información, consulte [Task sequence built-in variables in System Center Configuration Manager](../../../osd/understand/task-sequence-built-in-variables.md) (Variables integradas de secuencias de tareas en System Center Configuration Manager).
+Además, está disponible una nueva variable de secuencia de tareas, **SMSTSSoftwareUpdateScanTimeout**. Esta variable le permite controlar el tiempo de espera para la detección de actualizaciones de software durante el paso de la secuencia de tareas Instalar actualizaciones de software. El valor predeterminado es 30 minutos. Para obtener más información, consulte [Variables integradas de secuencias de tareas en System Center Configuration Manager](../../../osd/understand/task-sequence-built-in-variables.md).
 
 ### <a name="osdpreservedriveletter-task-sequence-variable-has-been-deprecated"></a>La variable de secuencia de tareas OSDPreserveDriveLetter ha dejado de usarse.
 La variable de secuencia de tareas OSDPreserveDriveLetter está en desuso. A partir de la versión 1606 de Configuration Manager, el programa de instalación de Windows determina de forma predeterminada la mejor letra de unidad para usar (normalmente C:) durante la implementación de un sistema operativo.
 
-Para obtener más información, consulte [Task sequence built-in variables in System Center Configuration Manager](../../../osd/understand/task-sequence-built-in-variables.md) (Variables integradas de secuencias de tareas en System Center Configuration Manager).
+Para obtener más información, consulte [Variables integradas de secuencias de tareas en System Center Configuration Manager](../../../osd/understand/task-sequence-built-in-variables.md).
 
 ### <a name="customize-the-ramdisk-tftp-window-size-for-pxe-enabled-distribution-points"></a>Personalización del tamaño de la ventana de TFTP de RamDisk para los puntos de distribución habilitados con PXE
 Ahora puede personalizar el tamaño de ventana de RamDisk para los puntos de distribución habilitados con PXE. Si ha personalizado su red podría provocar que se produjera un error de tiempo de espera en la descarga de la imagen de arranque porque el tamaño de la ventana es demasiado grande. La personalización del tamaño de la ventana del Protocolo trivial de transferencia de archivos (TFTP) de RamDisk le permite optimizar el tráfico de TFTP cuando está usando PXE para cumplir los requisitos de red específicos.
 
-Para obtener más información, consulte [Prepare site system roles for operating system deployments with System Center Configuration Manager](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP) (Preparación de los roles de sistema de sitio para la implementación de sistemas operativos con System Center Configuration Manager).
+Para obtener más información, consulte [Preparación de los roles de sistema de sitio para la implementación de sistemas operativos con System Center Configuration Manager](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP).
 
 ## <a name="compliance-settings"></a>Configuración de cumplimiento
 
@@ -206,7 +206,7 @@ Para obtener más información, consulte [Protección contra amenazas avanzada d
 ### <a name="device-categories"></a>Categorías de dispositivos
 Puede crear categorías de dispositivos, que se pueden usar para colocar automáticamente los dispositivos en recopilaciones de dispositivos cuando usa Configuration Manager con Microsoft Intune. Después, cuando los usuarios inscriben un dispositivo en Intune, tienen que elegir una categoría de dispositivos. Además, puede cambiar la categoría de un dispositivo desde la consola de Configuration Manager.
 
-Para obtener más detalles, consulte [How to automatically categorize devices into collections with System Center Configuration Manager](../../../core/clients/manage/collections/automatically-categorize-devices-into-collections.md) (Categorización automática de dispositivos en colecciones con System Center Configuration Manager).
+Para obtener más detalles, consulte [Categorización automática de dispositivos en colecciones con System Center Configuration Manager](../../../core/clients/manage/collections/automatically-categorize-devices-into-collections.md).
 
 ### <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>Declaración previa de dispositivos con números de serie iOS o IMEI
 
@@ -218,7 +218,7 @@ Para obtener más información, consulte [Predeclare devices with IMEI or iOS se
 
 Ahora puede habilitar la supervisión de servicios de Atestación de estado para equipos con Windows 10 usando solo infraestructura local, de manera que los equipos sin acceso a Internet puedan notificar la Atestación de estado de dispositivo (DHA).
 
-Para obtener más información, consulte [Health attestation for System Center Configuration Manager](../../../core/servers/manage/health-attestation.md#how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers) (Atestación de estado para System Center Configuration Manager).  
+Para obtener más información, consulte [Atestación de estado para System Center Configuration Manager](../../../core/servers/manage/health-attestation.md#how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers).  
 
 ## <a name="remote-control"></a>Control remoto
 Permita a los usuarios que acepten o rechacen las transferencias de archivos antes de transferir el contenido desde el portapapeles compartido en una sesión de control remoto. Los usuarios solo necesitan conceder permisos una vez por sesión, y el espectador no puede concederse permiso a sí mismo para continuar con la transferencia de archivos. Puede encontrar esta nueva configuración en el área de trabajo **Administración**. Vaya a **Configuración de cliente** y, después, en **Configuración predeterminada**, abra el panel **Herramientas remotas**.

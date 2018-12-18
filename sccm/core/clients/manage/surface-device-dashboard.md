@@ -60,7 +60,7 @@ Para obtener más información sobre los dispositivos Surface, vea:
  - El sitio web de [Surface]( https://go.microsoft.com/fwlink/?linkid=861998).
     
 Para más información sobre cómo implementar actualizaciones de firmware de Surface en Configuration Manager, vea:
- - [How to manage Surface driver updates in Configuration Manager]( https://support.microsoft.com/help/4098906) (Cómo administrar actualizaciones de controladores de Surface en Configuration Manager).
+ - [Cómo administrar actualizaciones de controladores de Surface en Configuration Manager]( https://support.microsoft.com/help/4098906).
 
 
 
