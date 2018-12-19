@@ -106,7 +106,7 @@ La administración local de dispositivos móviles (MDM) admite una nueva funció
 
 La [Tienda Windows para empresas](https://www.microsoft.com/business-store) es el lugar donde puede buscar y adquirir aplicaciones de Windows para su organización, individualmente o por volumen. Al conectar el almacén a Configuration Manager, puede sincronizar la lista de aplicaciones que haya adquirido con Configuration Manager, verlas en la consola de Configuration Manager e implementarlas como lo haría con cualquier otra aplicación.
 
-Para obtener más información, consulte [Manage apps from the Windows Store for Business with System Center Configuration Manager](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md) (Administración de aplicaciones desde la Tienda Windows para empresas con System Center Configuration Manager).
+Para obtener más información, consulte [Administración de aplicaciones desde la Tienda Windows para empresas con System Center Configuration Manager](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
 ### <a name="manage-ios-volume-purchased-apps"></a>Administración de aplicaciones iOS adquiridas por volumen
 
