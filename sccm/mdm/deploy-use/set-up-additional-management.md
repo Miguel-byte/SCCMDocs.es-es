@@ -10,16 +10,16 @@ ms.assetid: 4877d674-6bbc-4e16-810c-daad70c74daa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 58a61dffbdd9b04d3e872e23f88ddc0ac864f99d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 8c2ded7509c8097ae219aa594e56fda3f0c35ccd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346352"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417156"
 ---
 # <a name="set-up-additional-management-with-system-center-configuration-manager"></a>Configuración de administración adicional con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 (Opcional) Puede configurar administración adicional antes de que se inscriban los dispositivos. Estas soluciones de administración se pueden crear e implementar una vez que los dispositivos están inscritos, aunque muchas organizaciones prefieren implementarlas según se incorporan los dispositivos a la administración.
 
@@ -46,4 +46,4 @@ El **acceso condicional** le permite administrar el acceso a los recursos de emp
 Anteriormente, tenía que ir a la consola de Intune o a la consola de Configuration Manager para configurar inscripciones de MFA para Intune. Ahora puede iniciar sesión en [Microsoft Azure Portal](https://manage.windowsazure.com) con credenciales de Intune y configurar las opciones de MFA a través de Azure AD. Para más información, vea [Autenticación multifactor para inscripciones de dispositivos de Intune](https://aka.ms/mfa_ad).
 
 > [!div class="button"]
-[< Paso anterior](enable-platform-enrollment.md)  [Paso siguiente >](verify-mdm-configuration.md)
+> [< Paso anterior](enable-platform-enrollment.md)  [Paso siguiente >](verify-mdm-configuration.md)

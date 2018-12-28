@@ -10,16 +10,16 @@ ms.assetid: 9126d188-7780-45a4-b21d-7fcf4fad7da2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79ab2548453c84cfff7450574ed46562d7c1a005
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 6f83f26f746c54e3d1defe31df47b3c7c8a7e117
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348188"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417955"
 ---
 # <a name="apply-settings-to-android-for-work-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>Aplicación de configuración a aplicaciones Android for Work con directivas de configuración de aplicaciones en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 Puede usar directivas de configuración de aplicaciones en System Center Configuration Manager para distribuir valores de configuración que podrían ser necesarios cuando un usuario ejecuta una aplicación. Por ejemplo, una aplicación puede requerir al usuario que especifique estos detalles:
 - Un número de puerto personalizado
@@ -39,19 +39,19 @@ Para obtener más información sobre los tipos de instalación de aplicaciones, 
 1. En la consola de Configuration Manager, seleccione **Biblioteca de software** > **Administración de aplicaciones** > **Directivas de configuración de aplicaciones**.
 2. En el grupo **Directivas de configuración de aplicaciones** de la pestaña**Inicio**, seleccione **Crear directiva de configuración de aplicaciones**.
 3. En la página **General** del Asistente para crear directiva de configuración de la aplicación, especifique esta información de la directiva:
-  - **Nombre**. Especifique un nombre único para la directiva.
-  - **Descripción**. (Opcional) Para facilitar la identificación de la directiva, puede agregar una descripción.
-  -  **Seleccionar un tipo de directiva de configuración**. Especifique la plataforma a la que se dirige la directiva de configuración de aplicaciones: **Directiva de configuración para aplicaciones de Android for Work**.
-  -  **Categorías asignadas para mejorar la búsqueda y el filtrado**. (Opcional) Para crear y asignar categorías a la directiva, seleccione **Categorías**. Las categorías facilitan la ordenación y la búsqueda de elementos en la consola de Configuration Manager.
+   - **Nombre**. Especifique un nombre único para la directiva.
+   - **Descripción**. (Opcional) Para facilitar la identificación de la directiva, puede agregar una descripción.
+   -  **Seleccionar un tipo de directiva de configuración**. Especifique la plataforma de destino de la directiva de configuración de aplicación: **Directiva de configuración para Android for Work las aplicaciones**.
+   -  **Categorías asignadas para mejorar la búsqueda y el filtrado**. (Opcional) Para crear y asignar categorías a la directiva, seleccione **Categorías**. Las categorías facilitan la ordenación y la búsqueda de elementos en la consola de Configuration Manager.
 4. En la página **Directiva de Android for Work**, seleccione cómo especificar la información de la directiva de configuración:
-  - **Specify name and value pairs** (Especificar pares de nombre y valor). Puede usar esta opción para los archivos de lista de propiedades que no usan el anidamiento. Para especificar un par de nombre y valor:
+   - **Specify name and value pairs** (Especificar pares de nombre y valor). Puede usar esta opción para los archivos de lista de propiedades que no usan el anidamiento. Para especificar un par de nombre y valor:
         1. Para agregar un nuevo par JSON, seleccione **Nuevo**.
         2. En el cuadro de diálogo **Add Name/Value Pair** (Agregar par de nombre y valor), especifique la siguiente información:
             - **Tipo**. En la lista, seleccione el tipo de valor que quiere especificar.
             - **Nombre**. Escriba el nombre de la clave de la lista de propiedades para la que quiere especificar un valor.
             - **Valor**. Escriba el valor que se aplicará a la clave especificada.
 
-  - **Browse to a property list JSON file** (Examinar un archivo JSON de la lista de propiedades). Use esta opción si ya tiene un archivo JSON de configuración de aplicaciones, o para archivos más complejos que usen anidamiento. En el campo **Directiva de configuración de aplicaciones**, especifique la información de la lista de propiedades en el formato JSON correcto.
+   - **Browse to a property list JSON file** (Examinar un archivo JSON de la lista de propiedades). Use esta opción si ya tiene un archivo JSON de configuración de aplicaciones, o para archivos más complejos que usen anidamiento. En el campo **Directiva de configuración de aplicaciones**, especifique la información de la lista de propiedades en el formato JSON correcto.
 5. Para importar un archivo JSON ya creado, haga clic en **Seleccionar archivo**.
 6. Elija **Siguiente**. Si el código JSON contiene errores, corríjalos antes de continuar.
 7. Finalice los pasos que se muestran en el asistente.

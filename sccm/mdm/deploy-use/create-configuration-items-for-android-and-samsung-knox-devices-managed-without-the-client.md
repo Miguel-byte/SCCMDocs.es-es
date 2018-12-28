@@ -10,12 +10,12 @@ ms.assetid: 7b66f3c4-e3bb-4f6a-abd5-55be649ff90d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fbfcc2189e2ce06e6348936caad6c68de51f5bdb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 8a1759013902a75c26ec5004b932a81b536e303e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352074"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417003"
 ---
 # <a name="how-to-create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-system-center-configuration-manager-client"></a>Cómo crear elementos de configuración para dispositivos Android y Samsung KNOX administrados sin el cliente de System Center Configuration Manager
 
@@ -63,7 +63,7 @@ Use el elemento de configuración de **Android y Samsung KNOX** de System Center
 
 12. Finalice el asistente.  
 
- Puede ver el nuevo elemento de configuración en el nodo **Elementos de configuración** del área de trabajo **Activos y compatibilidad** .  
+    Puede ver el nuevo elemento de configuración en el nodo **Elementos de configuración** del área de trabajo **Activos y compatibilidad** .  
 
 ## <a name="android-and-samsung-knox-configuration-item-settings-reference"></a>Referencia de configuración de elementos de configuración de Android y Samsung KNOX  
 
@@ -84,17 +84,17 @@ Esta configuración se aplica a los dispositivos Android y Samsung KNOX.
 
 ### <a name="device"></a>Dispositivo   
 
-|Configuración|Detalles|  
-|------------------|-------------|  
-|**Marcación por voz**|Habilita o deshabilita la característica de marcación por voz en el dispositivo.|
-|**Asistente de voz**|Permite usar software de asistente de voz en el dispositivo.|
-|**Captura de pantalla**|Permite al usuario capturar el contenido en pantalla como una imagen.|
-|**Envío de datos de diagnóstico**|Permite enviar información de diagnóstico a Google desde el dispositivo.|
-|**Geolocalización**|Permite que el dispositivo use la información de ubicación.|
-|**Copiar y pegar**|Permite las funciones de copiar y pegar en el dispositivo.|
-|**Restablecimiento de la configuración de fábrica**|Permite que el usuario realice un restablecimiento de fábrica en el dispositivo.|  |
-|**Uso compartido del Portapapeles entre aplicaciones**|Permite que el usuario use el Portapapeles para copiar y pegar entre aplicaciones.|  |
-|**Bluetooth**|Permite usar Bluetooth en el dispositivo.|
+|                 Configuración                  |                             Detalles                             |
+|------------------------------------------|-----------------------------------------------------------------|
+|            **Marcación por voz**             |  Habilita o deshabilita la característica de marcación por voz en el dispositivo.   |
+|           **Asistente de voz**            |    Permite usar software de asistente de voz en el dispositivo.    |
+|            **Captura de pantalla**            |     Permite al usuario capturar el contenido en pantalla como una imagen.      |
+|      **Envío de datos de diagnóstico**      |    Permite enviar información de diagnóstico a Google desde el dispositivo.     |
+|             **Geolocalización**              |            Permite que el dispositivo use la información de ubicación.            |
+|            **Copiar y pegar**            |         Permite las funciones de copiar y pegar en el dispositivo.          |
+|            **Restablecimiento de la configuración de fábrica**             |      Permite que el usuario realice un restablecimiento de fábrica en el dispositivo.       |
+| **Uso compartido del Portapapeles entre aplicaciones** | Permite que el usuario use el Portapapeles para copiar y pegar entre aplicaciones. |
+|              **Bluetooth**               |           Permite usar Bluetooth en el dispositivo.            |
 
 ### <a name="store"></a>Tienda
 
@@ -163,14 +163,15 @@ No puede especificar aplicaciones compatibles y no compatibles en el mismo eleme
 
 En la página **Aplicaciones compatibles y no compatibles (Android)** , especifique la siguiente información:  
 
-|Configuración|Más información|  
-|-------------|----------------------|  
-|**Lista de aplicaciones no compatibles**|Especifica una lista de aplicaciones que se notificarán como no compatibles si los usuarios las instalan.|  
-|**Lista de aplicaciones compatibles**|Especifica una lista de aplicaciones que los usuarios pueden instalar. Cualquier otra aplicación instalada se notificará como no compatible.|  
-|**Agregar**|Agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección, opcionalmente el editor de la aplicación y la dirección URL de la aplicación en la tienda de aplicaciones.<br /><br /> Para especificar la dirección URL, en la [sección Aplicaciones de Google Play](https://play.google.com/store/apps), busque la aplicación que quiera usar.<br /><br /> Abra la página de la aplicación y copie la dirección URL en el Portapapeles. Ya puede utilizarla como dirección URL en una la lista de aplicaciones conformes o no conformes.<br /><br /> **Ejemplo:** busque **Microsoft Office Mobile**en Google Play. La dirección URL que usa será **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.|  
-|**Editarar**|Permite editar el nombre, el editor y la dirección URL de la aplicación seleccionada.|  
-|**Quitar**|Elimina la aplicación seleccionada de la lista.|  
-|**Importarar**|Importa la lista de las aplicaciones que ha especificado en un archivo de valores separados por comas. Utilice el formato, el nombre de la aplicación, el editor y la dirección URL de la aplicación en el archivo.|  
+
+|          Configuración           |                                                                                                                                                                                                                                                                                                                 Más información                                                                                                                                                                                                                                                                                                                  |
+|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Lista de aplicaciones no compatibles** |                                                                                                                                                                                                                                                                               Especifica una lista de aplicaciones que se notificarán como no compatibles si los usuarios las instalan.                                                                                                                                                                                                                                                                               |
+|  **Lista de aplicaciones compatibles**   |                                                                                                                                                                                                                                                              Especifica una lista de aplicaciones que los usuarios pueden instalar. Cualquier otra aplicación instalada se notificará como no compatible.                                                                                                                                                                                                                                                               |
+|          **Agregar**           | Agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección, opcionalmente el editor de la aplicación y la dirección URL de la aplicación en la tienda de aplicaciones.<br /><br /> Para especificar la dirección URL, en la [sección Aplicaciones de Google Play](https://play.google.com/store/apps), busque la aplicación que quiera usar.<br /><br /> Abra la página de la aplicación y copie la dirección URL en el Portapapeles. Ya puede utilizarla como dirección URL en una la lista de aplicaciones conformes o no conformes.<br /><br /> **Ejemplo:** Busque Google Play **Microsoft Office Mobile**. La dirección URL que usa será **<https://play.google.com/store/apps/details?id=com.microsoft.office.officehub>**. |
+|          **Editarar**          |                                                                                                                                                                                                                                                                                          Permite editar el nombre, el editor y la dirección URL de la aplicación seleccionada.                                                                                                                                                                                                                                                                                          |
+|         **Quitar**         |                                                                                                                                                                                                                                                                                                      Elimina la aplicación seleccionada de la lista.                                                                                                                                                                                                                                                                                                      |
+|         **Importarar**         |                                                                                                                                                                                                                                                 Importa la lista de las aplicaciones que ha especificado en un archivo de valores separados por comas. Utilice el formato, el nombre de la aplicación, el editor y la dirección URL de la aplicación en el archivo.                                                                                                                                                                                                                                                 |
 
 ## <a name="android-for-work-configuration-items"></a>Elementos de configuración para Android for Work
 Android for Work tiene dos grupos de configuración para elementos de configuración:

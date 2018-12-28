@@ -10,16 +10,16 @@ ms.assetid: f0a78038-ea22-4826-9c07-1771b7dd2e8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5d00b1efd02d3b096a0b64033b450f0da949eeb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 19b55204566c49c95e76a3eff3f88206df553e13
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349466"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416170"
 ---
 # <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>Aplicar configuración a aplicaciones iOS con directivas de configuración de aplicaciones en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 
 Puede usar directivas de configuración de aplicaciones en System Center Configuration Manager (Configuration Manager) para distribuir valores de configuración que podrían ser necesarios cuando un usuario ejecuta una aplicación. Por ejemplo, una aplicación puede requerir al usuario que especifique estos detalles:
@@ -44,11 +44,11 @@ Para obtener más información sobre los tipos de instalación de aplicaciones, 
 1. En la consola de Configuration Manager, seleccione **Biblioteca de software** > **Administración de aplicaciones** > **Directivas de configuración de aplicaciones**.
 2. En el grupo **Directivas de configuración de aplicaciones** de la pestaña**Inicio**, seleccione **Create new Application Configuration Policy** (Crear directiva de configuración de la aplicación).
 3. En la página **General** del Asistente para crear directiva de configuración de la aplicación, especifique esta información de la directiva:
-  - **Nombre**. Especifique un nombre único para la directiva.
-  - **Descripción**. (Opcional) Para facilitar la identificación de la directiva, puede agregar una descripción.
-  - **Categorías asignadas para mejorar la búsqueda y el filtrado**. (Opcional) Para crear y asignar categorías a la directiva, seleccione **Categorías**. Las categorías facilitan la ordenación y la búsqueda de elementos en la consola de Configuration Manager.
+   - **Nombre**. Especifique un nombre único para la directiva.
+   - **Descripción**. (Opcional) Para facilitar la identificación de la directiva, puede agregar una descripción.
+   - **Categorías asignadas para mejorar la búsqueda y el filtrado**. (Opcional) Para crear y asignar categorías a la directiva, seleccione **Categorías**. Las categorías facilitan la ordenación y la búsqueda de elementos en la consola de Configuration Manager.
 4. En la página **Directiva de iOS**, seleccione cómo especificar la información de la directiva de configuración:
-  - **Specify name and value pairs** (Especificar pares de nombre y valor). Puede usar esta opción para los archivos de lista de propiedades que no usan el anidamiento.
+   - **Specify name and value pairs** (Especificar pares de nombre y valor). Puede usar esta opción para los archivos de lista de propiedades que no usan el anidamiento.
 
       *Para especificar un par de nombre y valor*
         1. Para agregar un nuevo par, seleccione **Nuevo**.
@@ -57,13 +57,13 @@ Para obtener más información sobre los tipos de instalación de aplicaciones, 
             - **Nombre**. Escriba el nombre de la clave de la lista de propiedades para la que quiere especificar un valor.
             - **Valor**. Escriba el valor que se aplicará a la clave especificada.
 
-  - **Browse to a property list file** (Examinar un archivo de lista de propiedades). Use esta opción si ya tiene un archivo XML de configuración de aplicaciones, o para archivos más complejos que usen anidamiento.
+   - **Browse to a property list file** (Examinar un archivo de lista de propiedades). Use esta opción si ya tiene un archivo XML de configuración de aplicaciones, o para archivos más complejos que usen anidamiento.
 
-    *Para examinar un archivo de lista de propiedades*
+     *Para examinar un archivo de lista de propiedades*
 
-      1.  En el campo **Directiva de configuración de aplicaciones**, especifique la información de la lista de propiedades en el formato XML correcto.
+     1. En el campo **Directiva de configuración de aplicaciones**, especifique la información de la lista de propiedades en el formato XML correcto.
 
-      Para más información sobre las listas de propiedades XML, vea [Understanding XML Property Lists](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) (Descripción de las listas de propiedades XML) en la biblioteca de desarrolladores de iOS.
+        Para más información sobre las listas de propiedades XML, vea [Understanding XML Property Lists](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) (Descripción de las listas de propiedades XML) en la biblioteca de desarrolladores de iOS.
 
 El formato de la lista de propiedades XML varía según la aplicación que configure. Póngase en contacto con el proveedor de la aplicación para obtener información sobre el formato que debe usar.
 Intune admite los siguientes tipos de datos en una lista de propiedades:

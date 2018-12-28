@@ -10,16 +10,16 @@ ms.assetid: c517fe34-0130-465b-a020-bdb555878778
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f833a28a22e4b3ffd2c8fc237effec94e26e69e8
-ms.sourcegitcommit: 10b3a571e2a822bbd7b58a25840ee1e6f703a7a2
-ms.translationtype: HT
+ms.openlocfilehash: fb488ccfc186fcc56ea91c30b6c0319aead5208e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814263"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416986"
 ---
 # <a name="set-up-android-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Configurar la administración de dispositivos híbrida de Android con System Center Configuration Manager y Microsoft Intune
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 En este artículo se explica cómo habilitar la inscripción híbrida de dispositivos Android y Android for Work. Se puede usar Configuration Manager para administrar los dispositivos a través de una suscripción a Microsoft Intune configurada. Mediante Google Play, los usuarios pueden descargar la aplicación del portal de empresa de Android para inscribir dispositivos Android (incluido Samsung KNOX Standard) y Android for Work.
 
@@ -35,7 +35,7 @@ Los pasos siguientes permiten a Configuration Manager administrar dispositivos A
 3. En la pestaña **Inicio** del grupo **Suscripción**, seleccione **Configurar plataformas** > **Android**.  
 4. En el cuadro de diálogo **Propiedades de la suscripción a Microsoft Intune**, seleccione la pestaña **Android** y active el cuadro **Habilitar la inscripción de Android**. Puede elegir **Bloquear dispositivos de propiedad personal** para limitar la inscripción a [Dispositivos declarados previamente](predeclare-devices-with-hardware-id.md).
 
- Cuando esté listo, necesitará que los usuarios sepan cómo inscribir sus dispositivos. Consulte [Qué decirles a los usuarios finales sobre el uso de Microsoft Intune](/intune/end-user-educate). Esta información se aplica a Microsoft Intune y a dispositivos móviles administrados por Configuration Manager.
+   Cuando esté listo, necesitará que los usuarios sepan cómo inscribir sus dispositivos. Consulte [Qué decirles a los usuarios finales sobre el uso de Microsoft Intune](/intune/end-user-educate). Esta información se aplica a Microsoft Intune y a dispositivos móviles administrados por Configuration Manager.
 
 
 
@@ -80,4 +80,4 @@ Una vez habilitada la inscripción de Android for Work, puede realizar las sigui
 - [Borrar de forma selectiva el perfil de trabajo](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe)
 
 > [!div class="button"]
-[< Paso anterior](create-service-connection-point.md)  [Paso siguiente >](set-up-additional-management.md)
+> [< Paso anterior](create-service-connection-point.md)  [Paso siguiente >](set-up-additional-management.md)

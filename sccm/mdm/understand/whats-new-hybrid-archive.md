@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 19044a9fb7f53ca540bccd324f711b60e0ad91c4
-ms.sourcegitcommit: 9cff0702c2cc0f214173b47ec241f7e5a40f84e6
-ms.translationtype: HT
+ms.openlocfilehash: 172ca284a5a030682e01d9be63031180d7175421
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747806"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423208"
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>Características híbridas anteriores con System Center Configuration Manager y Microsoft Intune
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 En este artículo se proporciona información sobre características anteriores de administración de dispositivos móviles (MDM) disponibles para implementaciones híbridas con System Center Configuration Manager y Microsoft Intune.  
 
@@ -66,11 +66,11 @@ En este artículo se proporciona información sobre características anteriores 
 - **Nueva experiencia de usuario para la aplicación Portal de empresa para Android**  
   La interfaz de usuario de la aplicación Portal de empresa para Android tiene una apariencia más moderna. Las actualizaciones importantes son:
 
-  - Colores: los encabezados de las pestañas de Portal de empresa están coloreados con la personalización de marca definida por TI.
-  - Aplicaciones: en la pestaña **Aplicaciones**, se han actualizado los botones **Aplicaciones destacadas** y **Todas las aplicaciones**.
-  - Búsqueda: en la pestaña **Aplicaciones**, el botón **Buscar** es un botón de acción flotante.
-  - Navegar por las aplicaciones: la vista **Todas las aplicaciones** muestra una vista con las pestañas **Destacadas**, **Todas** y **Categorías** para facilitar la navegación.
-  - Soporte técnico: las pestañas **Mis dispositivos** y **Contactar con TI** se han actualizado para mejorar la legibilidad.
+  - Colores: Los encabezados de pestaña de Portal de empresa están coloreados según la personalización de marca definida por TI.
+  - Aplicaciones: En el **aplicaciones** ficha, el **aplicaciones destacadas** y **todas las aplicaciones** botones se actualizan.
+  - Búsqueda: En el **aplicaciones** ficha, el **búsqueda** botón es un botón de acción flotante.
+  - Aplicaciones de navegación: **Todas las aplicaciones** vista muestra una vista con pestañas de **destacado**, **todas**, y **categorías** para navegar más fácilmente.
+  - Soporte técnico: **Mis dispositivos** y **contactar con TI** pestañas se han actualizado para mejorar la legibilidad.
 
   Para obtener más información sobre estos cambios, consulte [Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune](https://docs.microsoft.com/intune/whats-new-app-ui).
 
@@ -207,7 +207,7 @@ También se incluyen las siguientes características adicionales híbridas en la
 
 - **La autenticación multifactor (MFA) acerca de la inscripción se está trasladando a Azure Portal**
 
-  Anteriormente, tenía que ir a la consola de Intune o a la consola de Configuration Manager para configurar inscripciones de MFA para Intune. Con esta característica actualizada, ahora puede iniciar sesión en [Microsoft Azure Portal] (https://manage.windowsazure.com)) con las credenciales de Intune y configurar las opciones de MFA a través de Azure AD. Para obtener más información, vea [Multi-factor Authentication para Microsoft Intune] (https://aka.ms/mfa_ad)).
+  Anteriormente, tenía que ir a la consola de Intune o a la consola de Configuration Manager para configurar inscripciones de MFA para Intune. Con esta característica actualizada, ahora puede iniciar sesión en el [portal de Microsoft Azure](https://manage.windowsazure.com) con sus credenciales de Intune y configurar opciones de MFA a través de Azure AD. Para más información, vea [Autenticación multifactor para inscripciones de dispositivos de Intune](https://aka.ms/mfa_ad).
 
 - **Aplicación de portal de empresa para Android ahora disponible en China**
 
@@ -291,7 +291,7 @@ Las siguientes características de Intune que se incorporaron en octubre de 2016
 
   Puede restringir el acceso a Exchange Online de forma que el acceso solo proceda de aplicaciones que admitan las directivas de administración de aplicaciones móviles de Intune, como Outlook. [Esta nueva característica](/intune/deploy-use/allow-policy-managed-apps-access-to-o365) se adapta perfectamente a las directivas de administración de aplicaciones móviles (MAM) de Intune, ya que puede bloquear el acceso a los clientes de correo integrado u otras aplicaciones que no se hayan configurado con las directivas de MAM de Intune. Esto garantiza que los usuarios accedan a los datos de la organización con aplicaciones que pueden estar protegidas mediante MAM de Intune. Puede empezar a trabajar en la administración de aplicaciones móviles de Intune mediante Azure Portal. Busque la nueva sección de acceso condicional en la hoja "Configuración".
 
--   **Herramienta de ajuste de aplicaciones Intune para Android**
+- **Herramienta de ajuste de aplicaciones Intune para Android**
 
   Puede habilitar las aplicaciones para que usen directivas de administración de aplicaciones móviles (MAM) de Intune mediante la herramienta de ajuste de aplicaciones de Intune.
 
@@ -429,7 +429,7 @@ Las siguientes características de Intune que se incorporaron en julio de 2016 f
 
   Al usar el acceso condicional, se han aclarado los pasos de inscripción para Windows 8.1, Windows 10 Desktop y Windows 10 Mobile en el sitio web del portal de empresa. Ahora, los usuarios verán los pasos **Inscripción de dispositivos** y **Unión al lugar de trabajo** por separado, lo que facilita ver el estado del dispositivo y completar el proceso si se produce un error al unirse al lugar de trabajo. El hecho de que los pasos se muestren por separado también debería simplificar el proceso de solución de problemas para los administradores de TI. Antes, cuando los usuarios finales intentaban realizar la inscripción y todos los pasos de inscripción se realizaban correctamente excepto la unión al lugar de trabajo, el dispositivo inscrito no aparecía en la lista de dispositivos para que los usuarios lo identificasen, lo que resultaba confuso.
 
- - **El borrado completo ya está disponible para dispositivos Windows 10**
+  - **El borrado completo ya está disponible para dispositivos Windows 10**
 
     Es posible realizar el borrado de los equipos y portátiles Windows 10 inscritos como dispositivos móviles para restablecer el dispositivo a la configuración de fábrica. Para obtener más información, consulte [How to protect your devices with remote wipe](/sccm/mdm/deploy-use/wipe-lock-reset) (Cómo proteger los dispositivos con el borrado remoto).
 
@@ -536,7 +536,7 @@ No se ha incorporado ninguna característica híbrida nueva en junio de 2016 par
 ### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune  
  Las siguientes características de Intune que se incorporaron en mayo de 2016 funcionan en implementaciones híbridas.
 
-- **SDK de MAM: compatibilidad con la configuración de la longitud del PIN**
+- **SDK DE MAM: Configuración de longitud de PIN de soporte técnico**
 
   Ahora puede especificar la longitud del PIN para aplicaciones MAM como si se tratara de un PIN de dispositivo. Esto requiere que los usuarios finales cumplan las nuevas restricciones que establezca. La pantalla de PIN se ha modificado ligeramente para tener en cuenta la entrada más larga. Para obtener más información, consulte [Opciones de configuración de directiva de administración de aplicaciones móviles de Android](https://docs.microsoft.com/intune/deploy-use/android-mam-policy-settings) y [Configuración de directiva de administración de aplicaciones móviles iOS](https://docs.microsoft.com/intune/deploy-use/ios-mam-policy-settings).  
 
@@ -548,11 +548,11 @@ No se ha incorporado ninguna característica híbrida nueva en junio de 2016 par
 
   Ahora, las aplicaciones de Microsoft Word, Excel y PowerPoint para Android pueden asociarse con directivas de MAM en dispositivos que no estén inscritos con Intune. Para obtener una lista completa de las aplicaciones compatibles, vaya a la galería de aplicaciones móviles de Microsoft Intune en la página de [partners de aplicaciones de Microsoft Intune](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx).  
 
-- **Aplicación de portal de empresa de Android: notificaciones del sistema de usuario final**
+- **Aplicación de portal de empresa de Android: Notificaciones del sistema de usuario final**
 
   Cuando los usuarios finales inscriben o eliminan sus dispositivos desde el portal de empresa, aparecen notificaciones del sistema de la aplicación de portal de empresa de Android.  
 
-- **Sitio web del portal de empresa: el titular de identificación del dispositivo proporcionará más información a los usuarios finales**
+- **Sitio Web del Portal de empresa: Banner de identificación de dispositivos proporcionará más información a los usuarios finales**
 
   Ahora, los usuarios finales pueden identificar más fácilmente el dispositivo que han seleccionado al usar el sitio web del portal de empresa. Si se selecciona un dispositivo erróneo, pueden seleccionar el dispositivo correcto mediante el vínculo **Pulse aquí** situado en el titular de la página principal.  
 
@@ -670,7 +670,7 @@ No se ha incorporado ninguna característica híbrida nueva en junio de 2016 par
 
 - **Aprovechar las ventajas de la administración de "Open In" de iOS para dispositivos inscritos en una solución MDM de terceros**
 
-  Puede usar su proveedor de administración de dispositivos móviles (MDM) de terceros para aprovechar las ventajas de la administración de "Open In" de iOS. Puede establecer las restricciones en los valores del perfil de configuración e implementar la aplicación con el software MDM. Cuando el usuario instala la aplicación administrada, se aplican las restricciones. Consulte todos los detalles en [Microsoft Intune mobile app management policies and iOS Open In](/intune/deploy-use/introduction-to-device-compliance-policies-in-microsoft-intune) (Directivas de administración de aplicaciones móviles de Microsoft Intune y característica Open In de iOS) en la biblioteca de Intune.  
+  Puede usar su proveedor de administración de dispositivos móviles (MDM) de terceros para aprovechar las ventajas de la administración de "Open In" de iOS. Puede establecer las restricciones en los valores del perfil de configuración e implementar la aplicación con el software MDM. Cuando el usuario instala la aplicación administrada, se aplican las restricciones. Lea los detalles: [Directivas de administración de aplicaciones móviles de Microsoft Intune y Open In de iOS](/intune/deploy-use/introduction-to-device-compliance-policies-in-microsoft-intune) en la biblioteca de Intune.  
 
 - **Aplicaciones de Microsoft que admiten MAM**
 
@@ -704,7 +704,7 @@ No se ha incorporado ninguna característica híbrida nueva en junio de 2016 par
 
 - **Administración de aplicaciones de iOS adquiridas por volumen**
 
-  En la versión 1602 de Configuration Manager (rama actual), puede implementar y administrar las aplicaciones que compró por volumen por medio del Programa de Compras por Volumen de Apple (VPP). Para ello, importe la información de licencia desde App Store y haga un seguimiento de la cantidad de licencias que se han usado. Para obtener más información, consulte [Manage volume-purchased iOS apps with System Center Configuration Manager](/sccm/apps/deploy-use/manage-volume-purchased-ios-apps) (Administrar aplicaciones de iOS compradas por volumen con System Center Configuration Manager).  
+  En la versión 1602 de Configuration Manager (rama actual), puede implementar y administrar las aplicaciones que compró por volumen por medio del Programa de Compras por Volumen de Apple (VPP). Para ello, importe la información de licencia desde App Store y haga un seguimiento de la cantidad de licencias que se han usado. Para obtener más información, consulte [Administrar aplicaciones de iOS compradas por volumen con System Center Configuration Manager](/sccm/apps/deploy-use/manage-volume-purchased-ios-apps).  
 
 - **Creación automática de aplicaciones móviles de Office**
 
@@ -731,7 +731,7 @@ No se ha incorporado ninguna característica híbrida nueva en junio de 2016 par
 
 ## <a name="notices"></a>Notificaciones
 
-### <a name="system-center-2012-configuration-sp1-and-system-center-2012-r2-configuration-manager-rtm-support-for-hybrid-mobile-device-management-ending-on-april-10-2017"></a>System Center 2012 Configuration SP1 y System Center 2012 R2 Configuration Manager (RTM): La compatibilidad con la administración de dispositivos móviles híbridos finaliza el 10 de abril de 2017
+### <a name="system-center-2012-configuration-sp1-and-system-center-2012-r2-configuration-manager-rtm-support-for-hybrid-mobile-device-management-ending-on-april-10-2017"></a>System Center 2012 Configuration SP1 y System Center 2012 R2 Configuration Manager (RTM): Soporte técnico para la administración de dispositivos móviles híbridos finaliza el 10 de abril de 2017
 *11 de enero de 2017*
 
 La compatibilidad con System Center 2012 Configuration Manager SP1 y System Center 2012 R2 Configuration Manager RTM finalizó el 12 de julio de 2016. Posteriormente, la compatibilidad con estas versiones en cuanto a la conexión con el servicio de Microsoft Intune para MDM híbrido finalizará el 10 de abril de 2017. Después de esta fecha, MDM híbrido dejará de funcionar con estas versiones. Los dispositivos administrados quedarán esencialmente sin administrar puesto que Intune Connector ya no se conectará al servicio de Intune. No habrá ningún flujo de datos ascendente de Configuration Manager (como las directivas y las aplicaciones) a Intune ni un flujo descendente de los datos del dispositivo administrado a Configuration Manager a no ser que se lleve a cabo una actualización.

@@ -10,16 +10,16 @@ ms.assetid: 61a19d95-83ff-4ad8-9a67-f304d2ba54f2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4c3dea67cd16c8efe272038894aa4f958f4ef160
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: de83706e92150a654967ec5cf38c5b18508d4e2b
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348987"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416918"
 ---
 # <a name="ios-hybrid-enrollment-using-apple-configurator-with-configuration-manager"></a>Inscripción híbrida de iOS híbrido con Apple Configurator con Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 Las compañías que compran dispositivos iOS destinados para su uso por los empleados pueden administrarlos mediante Microsoft Intune. Para preparar los dispositivos iOS corporativos para la inscripción, configure un perfil de inscripción en la consola de Configuration Manager y, después, exporte la dirección URL del perfil para que Apple Configurator la use. Prepare el dispositivo iOS para la inscripción conectándolo a un equipo Mac con un cable USB y use Apple Configurator para configurarlo. Apple Configurator restablece la configuración de fábrica del dispositivo y agrega el perfil de inscripción de manera que el dispositivo pueda inscribirse cuando el usuario lo encienda por primera vez y se desplace a través del proceso del Asistente de configuración.
 
@@ -47,9 +47,9 @@ El siguiente procedimiento está recomendado para dispositivos iOS dedicados que
 
     -   **Afinidad de usuario** : especifica cómo se inscriben los dispositivos. En la mayoría de los escenarios del Asistente de configuración, use **Solicitar afinidad de usuarios**.  
 
-        -   **Solicitar afinidad de usuario**: el dispositivo debe estar afiliado a un usuario durante la instalación inicial y, a continuación, se le puede permitir el acceso a los datos y al correo electrónico de la compañía como dicho usuario.  
+        -   **Solicitar afinidad de usuario**: El dispositivo debe estar afiliado a ningún usuario durante la instalación inicial y, a continuación, se le puede permitir tener acceso a datos de la empresa y el correo electrónico como ese usuario.  
 
-        -   **Sin afinidad de usuario**: el dispositivo no está afiliado a ningún usuario. Utilice esta afiliación para dispositivos que realizan tareas sin tener acceso a datos de usuario local. Las aplicaciones que requieren la afiliación de un usuario no funcionarán.
+        -   **Sin afinidad de usuario**: El dispositivo no está afiliado a un usuario. Utilice esta afiliación para dispositivos que realizan tareas sin tener acceso a datos de usuario local. Las aplicaciones que requieren la afiliación de un usuario no funcionarán.
 
     Haga clic en **Siguiente** para continuar.  
 
@@ -97,29 +97,29 @@ Para preparar los dispositivos iOS para la inscripción, conecte cada dispositiv
 > [!WARNING]  
 >  Apple Configurator borra y restablece los dispositivos a la configuración de fábrica.  
 
-1.  En un equipo Mac, abra **Apple Configurator 2**.  
+1. En un equipo Mac, abra **Apple Configurator 2**.  
 
-2.  En la barra de menús, haga clic en **Apple Configurator 2** > **Preferencias**.  
+2. En la barra de menús, haga clic en **Apple Configurator 2** > **Preferencias**.  
 
-2.  En el panel de preferencias, seleccione **Servers** (Servidores) y haga clic en el símbolo "+" debajo del panel izquierdo para iniciar el asistente del servidor MDM. Haga clic en **Siguiente**.  
+3. En el panel de preferencias, seleccione **Servers** (Servidores) y haga clic en el símbolo "+" debajo del panel izquierdo para iniciar el asistente del servidor MDM. Haga clic en **Siguiente**.  
 
-3.  Escriba el **Nombre** y la **URL de inscripción** que ha guardado [antes](#step-3-export-the-profile-to-deploy-to-ios-devices). Haga clic en **Siguiente**.  
+4. Escriba el **Nombre** y la **URL de inscripción** que ha guardado [antes](#step-3-export-the-profile-to-deploy-to-ios-devices). Haga clic en **Siguiente**.  
 
    > [!NOTE]
    > Si recibe una advertencia sobre los requisitos de perfil de confianza para Apple TV, puede cancelar con seguridad la opción **Trust Profile (Perfil de confianza)** haciendo clic en la "X" de color gris. También de forma segura, puede omitir cualquier advertencia de marcador de certificado.
 
    Para continuar, haga clic en **Next** (Siguiente) hasta que finalice el asistente.  
 
-4.  En el panel **Servers** (Servidores), haga clic en "Edit" (Editar) junto a perfil del nuevo servidor. Asegúrese de que la dirección URL de inscripción coincide exactamente con la dirección URL que ha especificado anteriormente. Vuelva a escribir la dirección URL si es diferente y haga clic en **Guardar**.  
+5. En el panel **Servers** (Servidores), haga clic en "Edit" (Editar) junto a perfil del nuevo servidor. Asegúrese de que la dirección URL de inscripción coincide exactamente con la dirección URL que ha especificado anteriormente. Vuelva a escribir la dirección URL si es diferente y haga clic en **Guardar**.  
 
-5.  Con un cable USB, conecte un dispositivo iOS al equipo Mac.  
+6. Con un cable USB, conecte un dispositivo iOS al equipo Mac.  
 
-  > [!WARNING]  
-  >  Este proceso restablece los dispositivos a la configuración de fábrica. Antes de conectar el dispositivo, restablezca el dispositivo y enciéndalo. Como procedimiento recomendado, en el dispositivo debe aparecer la pantalla Hello antes de continuar.  
+   > [!WARNING]  
+   >  Este proceso restablece los dispositivos a la configuración de fábrica. Antes de conectar el dispositivo, restablezca el dispositivo y enciéndalo. Como procedimiento recomendado, en el dispositivo debe aparecer la pantalla Hello antes de continuar.  
 
-6.  Haga clic en **Prepare** (Preparar). En el panel **Prepare iOS Device (Preparar dispositivo iOS)**, seleccione **Manual** y, después, haga clic en **Siguiente**.  
+7. Haga clic en **Prepare** (Preparar). En el panel **Prepare iOS Device (Preparar dispositivo iOS)**, seleccione **Manual** y, después, haga clic en **Siguiente**.  
 
-7.  En el panel **Enroll in MDM Server (Inscribir en servidor MDM)**, seleccione el nombre del servidor que ha creado y haga clic en **Siguiente**.  
+8. En el panel **Enroll in MDM Server (Inscribir en servidor MDM)**, seleccione el nombre del servidor que ha creado y haga clic en **Siguiente**.  
 
 9. En el panel **Create an Organization** (Crear una organización), elija la **organización** o cree una nueva y luego haga clic en **Next** (Siguiente).  
 

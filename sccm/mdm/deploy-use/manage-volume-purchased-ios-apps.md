@@ -10,16 +10,16 @@ ms.assetid: 7c3b9316-247b-490b-a363-8f8553821579
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f94cc80d41eb346cb1d4c2fc314d310005c7b5f2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 86d79a193f09014206b72efcf745212712a3352e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350194"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417258"
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>Administrar aplicaciones de iOS compradas por volumen con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 
 
@@ -99,19 +99,19 @@ Puede sincronizar por completo los datos mantenidos en Apple con Configuration M
 
 ## <a name="step-2---deploy-a-volume-purchased-app"></a>Paso 2: implementar una aplicación comprada por volumen  
 
-1.  En la consola de Configuration Manager, pulse **Biblioteca de software** > **Administración de aplicaciones** > **Información de licencia para las aplicaciones de la Tienda**.  
+1. En la consola de Configuration Manager, pulse **Biblioteca de software** > **Administración de aplicaciones** > **Información de licencia para las aplicaciones de la Tienda**.  
 
-3.  Seleccione la aplicación que quiere implementar y, después, en la pestaña **Inicio**, en el grupo **Crear**, pulse **Crear aplicación**.
-La aplicación de Configuration Manager que se crea contiene la aplicación Microsoft Store para Empresas. Luego puede implementar y supervisar esta aplicación como lo haría con cualquier otra aplicación de Configuration Manager.  
+2. Seleccione la aplicación que quiere implementar y, después, en la pestaña **Inicio**, en el grupo **Crear**, pulse **Crear aplicación**.
+   La aplicación de Configuration Manager que se crea contiene la aplicación Microsoft Store para Empresas. Luego puede implementar y supervisar esta aplicación como lo haría con cualquier otra aplicación de Configuration Manager.  
 
-    > [!IMPORTANT]  
-    > Debe elegir un propósito de implementación del tipo **Requerido**. Actualmente no se admiten las instalaciones disponibles.
+   > [!IMPORTANT]  
+   > Debe elegir un propósito de implementación del tipo **Requerido**. Actualmente no se admiten las instalaciones disponibles.
 
- Al implementar la aplicación, cada usuario que instala dicha aplicación usa una licencia, o bien en el caso de las instalaciones de dispositivo, cada dispositivo que instala la aplicación. Si el destino es una recopilación de dispositivos con una aplicación que admite licencias de dispositivo, se reclama una licencia de dispositivo. Si el destino es una colección de dispositivos con una aplicación que no admite licencias de dispositivo, se reclama una licencia de usuario. 
+   Al implementar la aplicación, cada usuario que instala dicha aplicación usa una licencia, o bien en el caso de las instalaciones de dispositivo, cada dispositivo que instala la aplicación. Si el destino es una recopilación de dispositivos con una aplicación que admite licencias de dispositivo, se reclama una licencia de dispositivo. Si el destino es una colección de dispositivos con una aplicación que no admite licencias de dispositivo, se reclama una licencia de usuario. 
 
- Cuando se crea una aplicación a partir del nodo **Información de licencia para las aplicaciones de la Tienda**, la aplicación está asociada con licencias del token para la aplicación que ha seleccionado. Por ejemplo, puede ver dos versiones de la misma aplicación en el nodo. Este comportamiento se debe a que cada versión de la aplicación está asociada a un token de PCV de Apple distinto. Luego puede crear aplicaciones a partir de cada token e implementarlas por separado.
+   Cuando se crea una aplicación a partir del nodo **Información de licencia para las aplicaciones de la Tienda**, la aplicación está asociada con licencias del token para la aplicación que ha seleccionado. Por ejemplo, puede ver dos versiones de la misma aplicación en el nodo. Este comportamiento se debe a que cada versión de la aplicación está asociada a un token de PCV de Apple distinto. Luego puede crear aplicaciones a partir de cada token e implementarlas por separado.
 
- Para reclamar una licencia, debe crear una nueva implementación para la aplicación con una acción de implementación de **Desinstalar**. No se puede cambiar la acción de implementación en la implementación original. La licencia se reclamará una vez que se desinstale la aplicación.  
+   Para reclamar una licencia, debe crear una nueva implementación para la aplicación con una acción de implementación de **Desinstalar**. No se puede cambiar la acción de implementación en la implementación original. La licencia se reclamará una vez que se desinstale la aplicación.  
 
 
 

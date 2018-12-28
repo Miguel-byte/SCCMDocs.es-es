@@ -10,16 +10,16 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 23cfa8f3bb69d980c43ec37355c24c29c96056fd
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
-ms.translationtype: HT
+ms.openlocfilehash: a69f849d4843ff7a0cf7df4a0b6de044a9506301
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584427"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421814"
 ---
 # <a name="set-up-hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>Configure MDM híbrida con Configuration Manager y Microsoft Intune.
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 
 Para poder administrar dispositivos iOS, Windows y Android con Configuration Manager, deben estar inscritos con Intune. Siga estos pasos para configurar la inscripción de dispositivos híbridos con Configuration Manager mediante Intune. Al completar los pasos siguientes, habilitará la inscripción "Bring Your Own Device" (BYOD) para los usuarios. Estos pasos son también requisitos previos para [inscribir dispositivos BYOD](enroll-hybrid-ios-mac.md) e [inscribir dispositivos propiedad de la empresa](enroll-company-owned-devices.md).
@@ -48,9 +48,9 @@ Para poder administrar dispositivos iOS, Windows y Android con Configuration Man
 
 Una vez completada la configuración híbrida, se pueden inscribir dispositivos en Configuration Manager de varias maneras:
 
-- **Dispositivos propiedad de la empresa (COD):** [la inscripción de dispositivos propiedad de la empresa](enroll-company-owned-devices.md) proporciona directrices sobre las diferentes formas específicas de la plataforma de inscribir dispositivos propiedad de la empresa.  
+- **Dispositivos corporativos (COD):** [Inscribir dispositivos propiedad de la empresa](enroll-company-owned-devices.md) proporciona orientación sobre las diferentes formas específicas de la plataforma para inscribir dispositivos propiedad de la empresa  
 
-- **Dispositivos propiedad del usuario (BYOD):** [la inscripción de dispositivos propiedad del usuario (BYOD)](enroll-hybrid-ios-mac.md) proporciona instrucciones sobre las formas de inscribir dispositivos propiedad del usuario.  
+- **Dispositivos propiedad del usuario (BYOD):** [Inscribir dispositivos propiedad del usuario (BYOD)](enroll-hybrid-ios-mac.md) se proporcionan instrucciones sobre cómo inscribir dispositivos propiedad del usuario  
 
 
 
@@ -58,6 +58,6 @@ Una vez completada la configuración híbrida, se pueden inscribir dispositivos 
 
 ¿Busca Intune sin Configuration Manager?
 > [!div class="button"]
-[Ver documentos de Intune >](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)
+> [Ver documentos de Intune >](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)
 
 

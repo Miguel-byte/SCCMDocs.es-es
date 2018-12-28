@@ -10,16 +10,16 @@ ms.assetid: 28115475-e563-4e16-bf30-f4c9fe704754
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e410e50d05a0f190e3dfdc87df066b5ebce92321
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 35064653fc00d63a1e5ad371ce337fea9b141684
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351173"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424755"
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>Proteger aplicaciones mediante directivas de administración de aplicaciones móviles en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 Las directivas de administración de aplicaciones de System Center Configuration Manager permiten modificar la funcionalidad de las aplicaciones que se implementen para así ayudar a armonizarlas con las directivas de cumplimiento y seguridad de la compañía. Por ejemplo, puede limitar las operaciones de cortar, copiar y pegar dentro de una aplicación restringida, o configurar una aplicación para abrir todas las direcciones URL en un explorador administrado. Las directivas de administración de aplicaciones son compatibles con:  
 
@@ -30,74 +30,74 @@ Las directivas de administración de aplicaciones de System Center Configuration
 También puede usar directivas de administración de aplicaciones móviles para proteger las aplicaciones en dispositivos que no estén administrados por Intune. Con esta nueva función, puede aplicar directivas de administración de aplicaciones móviles a aplicaciones que se conecten a los servicios de Office 365. Esto no se admite para las aplicaciones que se conectan a Exchange o SharePoint local.  
 
 Para usar esta nueva función, debe usar el Portal de vista previa de Azure. Los siguientes temas le ayudarán a empezar a trabajar:  
--   [Introducción a las directivas de administración de aplicaciones móviles en el portal de Azure](https://technet.microsoft.com/library/mt627830.aspx)  
--   [Crear e implementar directivas de administración de aplicaciones móviles con Microsoft Intune](https://technet.microsoft.com/library/mt627829.aspx)  
+- [Introducción a las directivas de administración de aplicaciones móviles en el portal de Azure](https://technet.microsoft.com/library/mt627830.aspx)  
+- [Crear e implementar directivas de administración de aplicaciones móviles con Microsoft Intune](https://technet.microsoft.com/library/mt627829.aspx)  
 
- Las directivas de administración de aplicaciones no se implementan directamente, a diferencia de los elementos de configuración y las líneas base de Configuration Manager. En su lugar, debe asociar la directiva con el tipo de implementación de aplicación que desea restringir. Cuando el tipo de implementación de aplicación se implementa y se instala en dispositivos, se aplica la configuración especificada.  
+  Las directivas de administración de aplicaciones no se implementan directamente, a diferencia de los elementos de configuración y las líneas base de Configuration Manager. En su lugar, debe asociar la directiva con el tipo de implementación de aplicación que desea restringir. Cuando el tipo de implementación de aplicación se implementa y se instala en dispositivos, se aplica la configuración especificada.  
 
 Para aplicar restricciones a una aplicación, esta debe incorporar el Kit de desarrollo de software (SDK) para aplicaciones de Microsoft Intune. Existen dos métodos de obtención de este tipo de aplicación:  
 
--   **Usar una aplicación administrada por directivas** (Android e iOS): estas aplicaciones tienen integrado el SDK de la aplicación. Para agregar este tipo de aplicación, especifique un vínculo a la aplicación desde una tienda de aplicaciones como, por ejemplo, iTunes Store o Google Play. No es necesario ningún procesamiento adicional para este tipo de aplicación. Para obtener una lista de aplicaciones administradas por directiva disponibles para dispositivos iOS y Android, consulte [Aplicaciones administradas de directivas de administración de aplicaciones móviles de Microsoft Intune](https://technet.microsoft.com/library/dn708489.aspx).  
+-   **Usar una aplicación administrada por directiva** (Android e iOS): Estas aplicaciones tienen integrado el SDK de la aplicación. Para agregar este tipo de aplicación, especifique un vínculo a la aplicación desde una tienda de aplicaciones como, por ejemplo, iTunes Store o Google Play. No es necesario ningún procesamiento adicional para este tipo de aplicación. Para obtener una lista de aplicaciones administradas por directiva disponibles para dispositivos iOS y Android, consulte [Aplicaciones administradas de directivas de administración de aplicaciones móviles de Microsoft Intune](https://technet.microsoft.com/library/dn708489.aspx).  
 
--   **Usar una aplicación "ajustada"** (Android e iOS): estas aplicaciones se vuelven a empaquetar para incluir el SDK de la aplicación mediante la **herramienta de ajuste de aplicaciones de Microsoft Intune**. Esta herramienta se usa normalmente para procesar aplicaciones de empresa que se hayan creado internamente. No se puede usar para procesar aplicaciones que se hayan descargado desde la tienda de aplicaciones. Consulte los artículos siguientes para obtener más información:
+-   **Usar una aplicación "ajustada"** (Android e iOS): Estas aplicaciones se vuelven a empaquetar para incluir el SDK para aplicaciones mediante el **Microsoft Intune App Wrapping Tool**. Esta herramienta se usa normalmente para procesar aplicaciones de empresa que se hayan creado internamente. No se puede usar para procesar aplicaciones que se hayan descargado desde la tienda de aplicaciones. Consulte los artículos siguientes para obtener más información:
     - [Preparar aplicaciones iOS para la administración de aplicaciones móviles con la Herramienta de ajuste de aplicaciones de Intune](https://technet.microsoft.com/library/dn878028.aspx)
 
     - [Preparar aplicaciones Android para la administración de aplicaciones móviles con la Herramienta de ajuste de aplicaciones de Intune](https://technet.microsoft.com/library/mt147413.aspx)  
 
 ## <a name="create-and-deploy-an-app-with-a-mobile-application-management-policy"></a>Crear e implementar una aplicación con una directiva de administración de aplicaciones móviles  
 
-##  <a name="step-1-obtain-the-link-to-a-policy-managed-app-or-create-a-wrapped-app"></a>Paso 1: obtenga el vínculo a una aplicación administrada por directiva o cree una aplicación ajustada  
+##  <a name="step-1-obtain-the-link-to-a-policy-managed-app-or-create-a-wrapped-app"></a>Paso 1: Obtenga el vínculo a una aplicación administrada por directiva o crear una aplicación ajustada  
 
--   **Para obtener un vínculo a una aplicación administrada por directiva**: desde la tienda de aplicaciones, busque y anote la dirección URL de la aplicación administrada por directiva que quiere implementar.  
+-   **Para obtener un vínculo a una directiva de aplicación administrada**: Desde la tienda de aplicaciones, busque y anote la dirección URL de la aplicación administrada por directiva que desea implementar.  
 
      Por ejemplo, la dirección URL de la aplicación Microsoft Word para iPad es **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**  
 
--   **Para crear una aplicación ajustada**: use la información de los temas [Preparar aplicaciones iOS para la administración de aplicaciones móviles con la Herramienta de ajuste de aplicaciones de Intune](https://technet.microsoft.com/library/dn878028.aspx) y [Preparar aplicaciones Android para la administración de aplicaciones móviles con la Herramienta de ajuste de aplicaciones de Intune](https://technet.microsoft.com/library/mt147413.aspx) para crear una aplicación ajustada.  
+-   **Para crear una aplicación ajustada**: Use la información de los temas [preparar aplicaciones iOS para la administración de aplicaciones móviles con Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/library/dn878028.aspx) y [preparar aplicaciones Android para la administración de aplicaciones móviles con Microsoft Intune Herramienta de ajuste de aplicaciones](https://technet.microsoft.com/library/mt147413.aspx) para crear una aplicación ajustada.  
 
      La herramienta crea una aplicación procesada y un archivo de manifiesto asociado. Usará estos archivos al crear una aplicación de Configuration Manager que contenga la aplicación.  
 
-##  <a name="step-2-create-a-configuration-manager-application-that-contains-an-app"></a>Paso 2: cree una aplicación de Configuration Manager que contenga una aplicación  
+##  <a name="step-2-create-a-configuration-manager-application-that-contains-an-app"></a>Paso 2: Crear una aplicación de Configuration Manager que contenga una aplicación  
  El procedimiento para crear la aplicación de Configuration Manager difiere en función de si usa una aplicación administrada por directiva (vínculo externo) o una aplicación creada con la herramienta de ajuste de aplicaciones de Microsoft Intune para iOS (paquete de aplicación de iOS). Use uno de los procedimientos siguientes para crear la aplicación de Configuration Manager.  
 
-1.  En la consola de Configuration Manager, elija **Biblioteca de software** > **Administración de aplicaciones** > **Aplicaciones**.  
+1. En la consola de Configuration Manager, elija **Biblioteca de software** > **Administración de aplicaciones** > **Aplicaciones**.  
 
-3.  En la pestaña **Inicio**, en el grupo **Crear**, seleccione **Crear aplicación** para abrir el **Asistente para crear aplicaciones**.  
+2. En la pestaña **Inicio**, en el grupo **Crear**, seleccione **Crear aplicación** para abrir el **Asistente para crear aplicaciones**.  
 
-4.  En la página **General** , seleccione **Detectar automáticamente la información sobre esta aplicación a partir de archivos de instalación**.  
+3. En la página **General** , seleccione **Detectar automáticamente la información sobre esta aplicación a partir de archivos de instalación**.  
 
-5.  En la lista desplegable **Tipo**, seleccione **Paquete de aplicación para iOS (\*archivo *.ipa)**.  
+4. En la lista desplegable **Tipo**, seleccione **Paquete de aplicación para iOS (\*archivo *.ipa)**.  
 
-6.  Seleccione **Examinar** para elegir el paquete de aplicación que quiera importar y, después, seleccione **Siguiente**.  
+5. Seleccione **Examinar** para elegir el paquete de aplicación que quiera importar y, después, seleccione **Siguiente**.  
 
-7.  En la página **Información general** , escriba la información de categoría y texto descriptivo que desea que los usuarios vean en el portal de la compañía.  
+6. En la página **Información general** , escriba la información de categoría y texto descriptivo que desea que los usuarios vean en el portal de la compañía.  
 
-8.  Complete el asistente.  
+7. Complete el asistente.  
 
- La nueva aplicación se muestra en el nodo **Aplicaciones** del área de trabajo **Biblioteca de software** .  
+   La nueva aplicación se muestra en el nodo **Aplicaciones** del área de trabajo **Biblioteca de software** .  
 
 ### <a name="create-an-application-that-contains-a-link-to-a-policy-managed-app"></a>Crear una aplicación que contenga un vínculo a una aplicación administrada por directiva  
 
-1.  En la consola de Configuration Manager, elija **Biblioteca de software** > **Administración de aplicaciones** > **Aplicaciones**.  
+1. En la consola de Configuration Manager, elija **Biblioteca de software** > **Administración de aplicaciones** > **Aplicaciones**.  
 
-3.  En la pestaña **Inicio**, en el grupo **Crear**, seleccione **Crear aplicación** para abrir el **Asistente para crear aplicaciones**.  
+2. En la pestaña **Inicio**, en el grupo **Crear**, seleccione **Crear aplicación** para abrir el **Asistente para crear aplicaciones**.  
 
-4.  En la página **General** , seleccione **Detectar automáticamente la información sobre esta aplicación a partir de archivos de instalación**.  
+3. En la página **General** , seleccione **Detectar automáticamente la información sobre esta aplicación a partir de archivos de instalación**.  
 
-5.  En la lista desplegable **Tipo** , seleccione una de las opciones siguientes:  
+4. En la lista desplegable **Tipo** , seleccione una de las opciones siguientes:  
 
-    -   Para iOS: **paquete de aplicaciones para iOS en la App Store**  
+   -   Para iOS: **Paquete de aplicación de iOS en App Store**  
 
-    -   Para Android: **paquete de aplicaciones para Android en Google Play**  
+   -   Para Android: **Paquete de aplicación para Android en Google Play**  
 
-6.  Escriba la dirección URL de la aplicación (del paso 1) y, después, seleccione **Siguiente**.  
+5. Escriba la dirección URL de la aplicación (del paso 1) y, después, seleccione **Siguiente**.  
 
-7.  En la página **Información general** , escriba la información de categoría y texto descriptivo que desea que los usuarios vean en el portal de la compañía.  
+6. En la página **Información general** , escriba la información de categoría y texto descriptivo que desea que los usuarios vean en el portal de la compañía.  
 
-8.  Complete el asistente.  
+7. Complete el asistente.  
 
- La nueva aplicación se muestra en el nodo **Aplicaciones** del área de trabajo **Biblioteca de software** .  
+   La nueva aplicación se muestra en el nodo **Aplicaciones** del área de trabajo **Biblioteca de software** .  
 
-##  <a name="step-3-create-an-application-management-policy"></a>Paso 3: cree una directiva de administración de aplicaciones  
+##  <a name="step-3-create-an-application-management-policy"></a>Paso 3: Crear una directiva de administración de aplicaciones  
  Después, creará una directiva de administración de aplicaciones que asociará a la aplicación. Puede crear una directiva de explorador general o administrado.  
 
 1)  En la consola de Configuration Manager, seleccione **Biblioteca de software** > **Administración de aplicaciones** > **Directivas de administración de aplicaciones**.  
@@ -108,9 +108,9 @@ Para aplicar restricciones a una aplicación, esta debe incorporar el Kit de des
 
 4)  En la página **Tipo de directiva**, seleccione la plataforma y el tipo de directiva y seleccione **Siguiente**. Los siguientes tipos de directiva están disponibles:  
 
--   **General**: el tipo de directiva "General" le permite modificar la funcionalidad de las aplicaciones que implementa para que se ajusten a los requisitos de cumplimiento y las directivas de seguridad de la empresa. Por ejemplo, puede restringir las operaciones de cortar, copiar y pegar en una aplicación restringida.  
+-   **General**: El tipo de directiva General permite modificar la funcionalidad de las aplicaciones que se implementan para ayudar a armonizarlas con sus directivas de seguridad y cumplimiento de la empresa. Por ejemplo, puede restringir las operaciones de cortar, copiar y pegar en una aplicación restringida.  
 
--   **Explorador administrado**: la directiva de explorador administrado le permite establecer si se debe permitir o no que el explorador administrado abra una lista de direcciones URL. El tipo de directiva de explorador administrado permite modificar la funcionalidad de la aplicación de explorador administrado de Intune. Se trata de un explorador web que permite administrar las acciones que pueden realizar los usuarios, incluidos los sitios que pueden visitar y cómo se abren los vínculos a contenido en el explorador. Obtenga más información sobre la  [aplicación Intune Managed Browser para iOS](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) y [la aplicación Intune Managed Browser para Android](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en).
+-   **Explorador administrado**: La directiva de explorador administrado le permite decidir si desea permitir o bloquear el explorador administrado abra una lista de direcciones URL. El tipo de directiva de explorador administrado permite modificar la funcionalidad de la aplicación de explorador administrado de Intune. Se trata de un explorador web que permite administrar las acciones que pueden realizar los usuarios, incluidos los sitios que pueden visitar y cómo se abren los vínculos a contenido en el explorador. Obtenga más información sobre la  [aplicación Intune Managed Browser para iOS](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) y [la aplicación Intune Managed Browser para Android](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en).
 
 5)  En la página **Directiva de iOS** o **Directiva de Android**, configure los valores siguientes según sea necesario y, después, seleccione **Siguiente**. Las opciones pueden diferir en función del tipo de dispositivo para el que va a configurar la directiva.  
 
@@ -139,7 +139,7 @@ Para obtener más información, consulte [Administrar el acceso a Internet media
 
  La directiva nueva se muestra en el nodo **Directivas de administración de aplicaciones** del área de trabajo **Biblioteca de software** .  
 
-##  <a name="step-4-associate-the-application-management-policy-with-a-deployment-type"></a>Paso 4: asocie la directiva de administración de aplicaciones con un tipo de implementación  
+##  <a name="step-4-associate-the-application-management-policy-with-a-deployment-type"></a>Paso 4: Asocie la directiva de administración de aplicaciones con un tipo de implementación  
 
  Cuando se crea un tipo de implementación para una aplicación que requiere una directiva de administración de aplicaciones, Configuration Manager lo reconoce y le pregunta si quiere asociar una directiva de administración de aplicaciones. Se le solicitará que asocie una directiva general y una directiva de explorador administrado para el explorador administrado. Para obtener más información, consulte [Create applications](create-applications.md) (Creación de aplicaciones).  
 
@@ -151,16 +151,16 @@ Para obtener más información, consulte [Administrar el acceso a Internet media
 >   
 >  Si se anula la inscripción del dispositivo en Configuration Manager, las directivas no se quitan de las aplicaciones. Las aplicaciones que tenían directivas aplicadas conservan la configuración de las directivas, incluso si la aplicación se desinstala y se vuelve a instalar.  
 
-##  <a name="step-5-monitor-the-app-deployment"></a>Paso 5: supervise la implementación de la aplicación  
+##  <a name="step-5-monitor-the-app-deployment"></a>Paso 5: Monitor de implementación de la aplicación  
  Cuando cree e implemente una aplicación asociada a una directiva de administración de aplicaciones móviles, puede supervisar la aplicación y resolver los conflictos de directivas.  
 
-1.  En la consola de Configuration Manager, seleccione **Biblioteca de software** > **Introducción** > **Implementaciones**.  
+1. En la consola de Configuration Manager, seleccione **Biblioteca de software** > **Introducción** > **Implementaciones**.  
 
-3.  Seleccione la implementación que ha creado. Después, en la pestaña **Inicio**, seleccione **Propiedades**.  
+2. Seleccione la implementación que ha creado. Después, en la pestaña **Inicio**, seleccione **Propiedades**.  
 
-4.  En el panel de detalles de la implementación, en **Objetos relacionados**, seleccione **Directivas de administración de aplicaciones**.  
+3. En el panel de detalles de la implementación, en **Objetos relacionados**, seleccione **Directivas de administración de aplicaciones**.  
 
- Para obtener más información sobre la supervisión de aplicaciones, consulte [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console) (Supervisar aplicaciones).  
+   Para obtener más información sobre la supervisión de aplicaciones, consulte [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console) (Supervisar aplicaciones).  
 
 ##  <a name="learn-how-policy-conflicts-are-resolved"></a>Cómo se resuelven los conflictos de directivas  
  Cuando hay un conflicto de directivas de administración de aplicaciones móviles en la primera implementación en el usuario o el dispositivo, el valor específico de la configuración en conflicto se quita de la directiva implementada en la aplicación. Después, la aplicación usa un valor de conflicto integrado.  

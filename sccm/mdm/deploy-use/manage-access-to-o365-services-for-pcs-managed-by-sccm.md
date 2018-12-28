@@ -10,19 +10,18 @@ ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7bf7114382c956dcac6302b3fc11617ad6b5eeec
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: f4e67050740b9d05dd33f2f79b7820b6dc8d9093
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350381"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415813"
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Administración del acceso a servicios de O365 para equipos administrados por System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
-<!--1191496-->
-Configure el acceso condicional a los servicios de Office 365 en equipos administrados por Configuration Manager.  
+<!--1191496--> Configurar el acceso condicional para servicios de Office 365 para equipos administrados por Configuration Manager.  
 
 > [!Note]  
 > Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para más información, vea [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
@@ -56,36 +55,36 @@ Para obtener información sobre cómo configurar el acceso condicional para disp
 
 ### <a name="prerequisites"></a>Requisitos previos  
 
--   Sincronización de ADFS y una suscripción de O365. La suscripción de Office 365 sirve para configurar Exchange Online y SharePoint Online.  
+- Sincronización de ADFS y una suscripción de O365. La suscripción de Office 365 sirve para configurar Exchange Online y SharePoint Online.  
 
--   Suscripción a Microsoft Intune. La suscripción a Microsoft Intune debe configurarse en la consola de Configuration Manager. La suscripción de Intune se utiliza para retransmitir el estado de cumplimiento de los dispositivos a Azure Active Directory y para las licencias de usuario.  
+- Suscripción a Microsoft Intune. La suscripción a Microsoft Intune debe configurarse en la consola de Configuration Manager. La suscripción de Intune se utiliza para retransmitir el estado de cumplimiento de los dispositivos a Azure Active Directory y para las licencias de usuario.  
 
- Los equipos deben cumplir los requisitos siguientes:  
+  Los equipos deben cumplir los requisitos siguientes:  
 
--   [Requisitos previos](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) para el registro automático de dispositivos con Azure Active Directory  
+- [Requisitos previos](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) para el registro automático de dispositivos con Azure Active Directory  
 
-     Puede registrar equipos con Azure AD a través de la directiva de cumplimiento.  
+   Puede registrar equipos con Azure AD a través de la directiva de cumplimiento.  
 
-    -   Para equipos con Windows 8.1 y Windows 10, puede usar una directiva de grupo de Active Directory para configurar los dispositivos a fin de que se registren automáticamente en Azure AD.  
+  -   Para equipos con Windows 8.1 y Windows 10, puede usar una directiva de grupo de Active Directory para configurar los dispositivos a fin de que se registren automáticamente en Azure AD.  
 
-    -   Para equipos con Windows 7, debe implementar el paquete de software de registro de dispositivo en el equipo con Windows 7 a través de System Center Configuration Manager. Puede encontrar más información en el artículo [Registro automático de dispositivos en Azure Active Directory para dispositivos Windows unidos a un dominio](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).  
+  -   Para equipos con Windows 7, debe implementar el paquete de software de registro de dispositivo en el equipo con Windows 7 a través de System Center Configuration Manager. Puede encontrar más información en el artículo [Registro automático de dispositivos en Azure Active Directory para dispositivos Windows unidos a un dominio](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).  
 
--   Debe usar Office 2013 u Office 2016 con la autenticación moderna [habilitada](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a).  
+- Debe usar Office 2013 u Office 2016 con la autenticación moderna [habilitada](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a).  
 
- Los pasos siguientes se aplican a Exchange Online y SharePoint Online  
+  Los pasos siguientes se aplican a Exchange Online y SharePoint Online  
 
 ### <a name="step-1-configure-compliance-policy"></a>Paso 1. Configurar directiva de cumplimiento  
  En la consola de Configuration Manager, cree una directiva de cumplimiento con las reglas siguientes:  
 
--   **Requerir registro en Azure Active Directory:** esta regla comprueba si el dispositivo del usuario está unido al lugar de trabajo en Azure AD; de lo contrario, el dispositivo se registra automáticamente en Azure AD. El registro automático solo se admite en Windows 8.1. Para equipos con Windows 7, implemente un archivo MSI para realizar el registro automático. Para más información, vea [Registro automático de dispositivos en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
+-   **Requerir registro en Azure Active Directory:** Esta regla comprueba si el dispositivo del usuario es el lugar de trabajo unido a Azure AD y, si no, el dispositivo se registra automáticamente en Azure AD. El registro automático solo se admite en Windows 8.1. Para equipos con Windows 7, implemente un archivo MSI para realizar el registro automático. Para más información, vea [Registro automático de dispositivos en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
 
--   **Se han instalado todas las actualizaciones necesarias con una fecha límite superior a un determinado número de días**: especifique el valor para el período de gracia a partir de la fecha límite de la implementación para las actualizaciones necesarias en el dispositivo del usuario. Al agregar esta regla también se instalan automáticamente todas las actualizaciones necesarias pendientes. Especifique las actualizaciones necesarias en la regla **Actualizaciones automáticas requeridas**.   
+-   **Todas las actualizaciones necesarias instaladas con una fecha límite anterior a un número determinado de días:** Especifique el valor para el período de gracia de la fecha límite de implementación para las actualizaciones necesarias en el dispositivo del usuario. Al agregar esta regla también se instalan automáticamente todas las actualizaciones necesarias pendientes. Especifique las actualizaciones necesarias en la regla **Actualizaciones automáticas requeridas**.   
 
--   **Requerir cifrado de unidad BitLocker**: esta regla comprueba si la unidad principal (por ejemplo, C:\\) del dispositivo está cifrada con BitLocker. Si el cifrado BitLocker no está habilitado en el dispositivo primario, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
+-   **Requerir cifrado de unidad BitLocker:** Esta regla comprueba si la unidad principal (por ejemplo, C:\\) en el dispositivo está cifrada con BitLocker. Si el cifrado BitLocker no está habilitado en el dispositivo primario, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
 
--   **Requerir Antimalware:** esta regla comprueba si System Center Endpoint Protection o Windows Defender está habilitado y en ejecución. Si no está habilitado, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
+-   **Requerir Antimalware:** Esta regla comprueba si System Center Endpoint Protection o Windows Defender está habilitado y ejecutándose. Si no está habilitado, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
 
--   **El servicio de atestación de estado declara que tiene un estado correcto:** esta condición incluye cuatro subreglas para comprobar el cumplimiento del dispositivo en el servicio de atestación de estado de dispositivo. Para más información, vea [Atestación de estado](/sccm/core/servers/manage/health-attestation). 
+-   **Informe del estado correcto por el servicio de atestación de estado:** Esta condición incluye cuatro subreglas para comprobar el cumplimiento del dispositivo en el servicio de atestación de estado de dispositivo. Para más información, vea [Atestación de estado](/sccm/core/servers/manage/health-attestation). 
 
     - **Debe estar habilitado BitLocker en el dispositivo**
     - **Debe estar habilitado el arranque seguro en el dispositivo** 
@@ -101,7 +100,7 @@ Para obtener información sobre cómo configurar el acceso condicional para disp
 ### <a name="step-2-evaluate-the-effect-of-conditional-access"></a>Paso 2. Evaluar el impacto del acceso condicional  
  Ejecute el **informe de compatibilidad de acceso condicional**. Se puede encontrar en el área de trabajo **Supervisión**, en **Informes** > **Administración de compatibilidad y configuración**. En este informe se muestra el estado de cumplimiento para todos los dispositivos. Se bloquea el acceso de los dispositivos registrados como no compatibles a Exchange Online y SharePoint Online.  
 
- ![Consola de Configuration Manager, área de trabajo Supervisión, Informes, Informes, Administración de compatibilidad y configuración: Informe de cumplimiento de acceso condicional](media/CA_compliance_report.png)  
+ ![Consola de Configuration Manager, área de trabajo supervisión, informes, informes, cumplimiento y administración de configuración: Informe de cumplimiento de acceso condicional](media/CA_compliance_report.png)  
 
 ### <a name="configure-active-directory-security-groups"></a>Configurar grupos de seguridad de Active Directory  
  Las directivas de acceso condicional se dirigen a grupos de usuarios en función de los tipos de directivas. Estos grupos contienen los usuarios destinatarios de la directiva o exentos de ella. Cuando un usuario es destinatario de una directiva, cada dispositivo que use debe ser conforme con el fin de obtener acceso al servicio.  

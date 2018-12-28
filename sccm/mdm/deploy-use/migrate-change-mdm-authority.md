@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: d5efcb78ad5e732691cc2f214f81db0b357e0e19
-ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
-ms.translationtype: HT
+ms.openlocfilehash: 4ded99c2084f274d519680e78fdc54825b3857cb
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44111117"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419519"
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>Cambio de la entidad de MDM a Intune independiente
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*    
+*Se aplica a: System Center Configuration Manager (rama actual)*    
 
 Puede cambiar un inquilino de Microsoft Intune existente configurado desde la consola de Configuration Manager (MDM híbrida) a Intune independiente. El cambio de entidad de MDM de inquilino a Intune es la fase final del proceso para [migrar usuarios de MDM híbrida y dispositivos a Intune independiente](migrate-hybridmdm-to-intunesa.md) en la configuración solo en la nube.    
 
@@ -48,20 +48,20 @@ Revise la información siguiente para preparar el cambio de la entidad de MDM:
 ## <a name="change-the-mdm-authority-to-intune"></a>Cambio de la entidad de MDM a Intune
 Utilice el procedimiento siguiente para cambiar la entidad de MDM de inquilino a Intune.
 
-1.  En la consola de Configuration Manager, vaya a **Administración** &gt; **Información general** &gt; **Cloud Services** &gt; **Suscripción a Microsoft Intune** y elimine la suscripción a Intune actual.
-2.  Seleccione **Cambiar entidad de MDM a Microsoft Intune** y, a continuación, haga clic en **Siguiente**.
+1. En la consola de Configuration Manager, vaya a **Administración** &gt; **Información general** &gt; **Cloud Services** &gt; **Suscripción a Microsoft Intune** y elimine la suscripción a Intune actual.
+2. Seleccione **Cambiar entidad de MDM a Microsoft Intune** y, a continuación, haga clic en **Siguiente**.
 
-    ![Cuadro de diálogo para quitar suscripción de Microsoft Intune](media/mdm-change-delete-subscription.png)
-3.  Inicie sesión en el inquilino de Intune que usó originalmente al configurar la entidad de MDM en Configuration Manager.
-4.  Haga clic en **Siguiente** y complete el asistente.
-5.  Ahora se ha restablecido la entidad de MDM. La suscripción a Intune ya no se muestra en el nodo Suscripciones a Microsoft Intune de la consola de Configuration Manager.
-6.  Inicie sesión en el [portal de Intune](https://aka.ms/IntunePortal).
-7.  En la hoja de Microsoft Intune, haga clic en **Inscripción de dispositivos**.
-8.  En la hoja de información general de inscripción de dispositivos, vea la propiedad **Entidad de MDM**.
+   ![Cuadro de diálogo para quitar suscripción de Microsoft Intune](media/mdm-change-delete-subscription.png)
+3. Inicie sesión en el inquilino de Intune que usó originalmente al configurar la entidad de MDM en Configuration Manager.
+4. Haga clic en **Siguiente** y complete el asistente.
+5. Ahora se ha restablecido la entidad de MDM. La suscripción a Intune ya no se muestra en el nodo Suscripciones a Microsoft Intune de la consola de Configuration Manager.
+6. Inicie sesión en el [portal de Intune](https://aka.ms/IntunePortal).
+7. En la hoja de Microsoft Intune, haga clic en **Inscripción de dispositivos**.
+8. En la hoja de información general de inscripción de dispositivos, vea la propiedad **Entidad de MDM**.
 
-  > [!Important]    
-  > No utilice la consola de Intune clásica. Debe iniciar sesión en Intune en Azure Portal.
-7.  Confirme que la entidad de MDM se ha cambiado a **Microsoft Intune**. 
+   > [!Important]    
+   > No utilice la consola de Intune clásica. Debe iniciar sesión en Intune en Azure Portal.
+9. Confirme que la entidad de MDM se ha cambiado a **Microsoft Intune**. 
 
 ## <a name="next-steps"></a>Pasos siguientes
 Una vez completado el cambio en la entidad de MDM, revise la siguiente información:

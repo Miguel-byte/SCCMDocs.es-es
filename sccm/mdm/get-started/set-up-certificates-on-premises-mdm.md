@@ -10,16 +10,16 @@ ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c538c3b7668cc93069f0805b98f29586c3d7c86c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 391ecbd4ff9f863f41454786e8f8232b31a112a5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351700"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418329"
 ---
 # <a name="set-up-certificates-for-trusted-communications-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Configuración de certificados para comunicaciones de confianza para la administración local de dispositivos móviles en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 La administración local de dispositivos móviles de System Center Configuration Manager requiere que los roles de sistema de sitio del punto de inscripción, el punto de proxy de inscripción, el punto de distribución y el punto de administración de dispositivos estén configurados para comunicaciones de confianza con los dispositivos administrados. Cualquier servidor de sistema de sitio que hospeda uno o varios de esos roles debe tener un certificado PKI exclusivo enlazado al servidor web en el sistema. También, un certificado con la misma raíz que el certificado de los servidores se debe almacenar en los dispositivos administrados con el fin de establecer comunicaciones de confianza con ellos.  
 
@@ -111,21 +111,21 @@ La administración local de dispositivos móviles de System Center Configuration
 ##  <a name="bkmk_requestCert"></a> Solicitar el certificado de servidor web para cada rol de sistema de sitio  
  Los dispositivos inscritos para la administración local de dispositivos móviles tienen que confiar en los puntos de conexión SSL que hospedan el punto de inscripción, el punto de proxy de inscripción, el punto de distribución y el punto de administración de dispositivos.  En los pasos siguientes se describe cómo solicitar el certificado de servidor web para IIS. Tiene que realizar este procedimiento para cada servidor (punto de conexión SSL) que hospede uno de los roles de sistema de sitio requeridos para la administración local de dispositivos móviles.  
 
-1.  En el servidor de sitio primario, abra un símbolo del sistema con permisos de administrador, escriba **MMC** y presione **Entrar**.  
+1. En el servidor de sitio primario, abra un símbolo del sistema con permisos de administrador, escriba **MMC** y presione **Entrar**.  
 
-2.  En MMC, haga clic en **Archivo** >  **Agregar o quitar complemento**.  
+2. En MMC, haga clic en **Archivo** >  **Agregar o quitar complemento**.  
 
-3.  En el complemento Certificados, seleccione **Certificados**, haga clic en **Agregar**, seleccione **Cuenta de equipo**, haga clic en **Siguiente**, haga clic en **Finalizar** y, finalmente, en **Aceptar** para salir de la ventana Agregar o quitar complemento.  
+3. En el complemento Certificados, seleccione **Certificados**, haga clic en **Agregar**, seleccione **Cuenta de equipo**, haga clic en **Siguiente**, haga clic en **Finalizar** y, finalmente, en **Aceptar** para salir de la ventana Agregar o quitar complemento.  
 
-4.  Haga clic en **Personal** y, a continuación, en **Todas las tareas** >  **Solicitar un nuevo certificado**.  
+4. Haga clic en **Personal** y, a continuación, en **Todas las tareas** >  **Solicitar un nuevo certificado**.  
 
-5.  En el asistente de Inscripción de certificados, haga clic en **Siguiente**, seleccione **Directiva de inscripción de Active Directory** y haga clic en **Siguiente**.  
+5. En el asistente de Inscripción de certificados, haga clic en **Siguiente**, seleccione **Directiva de inscripción de Active Directory** y haga clic en **Siguiente**.  
 
-6.  Seleccione la casilla al lado del certificado de servidor web (**Servidor web MDM ConfigMgr**) y, a continuación, haga clic en **Inscribir**.  
+6. Seleccione la casilla al lado del certificado de servidor web (**Servidor web MDM ConfigMgr**) y, a continuación, haga clic en **Inscribir**.  
 
-7.  Cuando el certificado esté inscrito, haga clic en **Finalizar**.  
+7. Cuando el certificado esté inscrito, haga clic en **Finalizar**.  
 
- Dado que cada servidor necesitará un certificado de servidor web único, tendrá que repetir este proceso con cada servidor que hospede uno de los roles de sistema de sitio necesarios para la administración local de dispositivos móviles.  Si un servidor hospeda todos los roles de sistema de sitio, solo será necesario solicitar un certificado de servidor web.  
+   Dado que cada servidor necesitará un certificado de servidor web único, tendrá que repetir este proceso con cada servidor que hospede uno de los roles de sistema de sitio necesarios para la administración local de dispositivos móviles.  Si un servidor hospeda todos los roles de sistema de sitio, solo será necesario solicitar un certificado de servidor web.  
 
 ##  <a name="bkmk_bindCert"></a> Enlazar el certificado al servidor web  
  Ahora, el nuevo certificado debe enlazarse al servidor web de cada servidor de sistema de sitio que hospede los roles de sistema de sitio necesarios para la administración local de dispositivos móviles. Siga estos pasos con cada servidor que hospeda los roles de sistema de sitio de punto de inscripción y punto de proxy de inscripción. Si un servidor hospeda todos los roles de sistema de sitio, solo deberá seguir estos pasos una vez. No es necesario realizar esta tarea para los roles de sistema de sitio de punto de distribución y punto de administración de dispositivos, dado que reciben automáticamente el certificado necesario durante la inscripción.  

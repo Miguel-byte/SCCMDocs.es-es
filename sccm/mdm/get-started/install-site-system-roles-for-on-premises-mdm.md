@@ -10,30 +10,30 @@ ms.assetid: c3cf9f64-c2b9-4ace-9527-2aba6d4eef04
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dc3efe5438d583bc5d850261a1bb80253a608c6c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 0a24edacba97dcce91057e2403585a0843a4b212
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348426"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424432"
 ---
 # <a name="install-site-system-roles-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Instalar roles de sistema de sitio para Administración de dispositivos móviles local en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 La Administración de dispositivos móviles local en System Center Configuration Manager requiere los siguientes roles de sistema de sitio en su infraestructura de sitio de Configuration Manager:  
 
--   Punto de inscripción  
+- Punto de inscripción  
 
--   Punto de proxy de inscripción  
+- Punto de proxy de inscripción  
 
--   Punto de distribución  
+- Punto de distribución  
 
--   Punto de administración de dispositivos  
+- Punto de administración de dispositivos  
 
--   Punto de conexión de servicio  
+- Punto de conexión de servicio  
 
- Si va a agregar la administración de dispositivos móviles local a su organización que tiene la mayoría de los equipos y dispositivos administrados con el software del cliente de Configuration Manager, es posible que tenga la mayoría de los roles de sistema de sitio ya instalados como parte de su infraestructura existente. Si no, consulte [Add site system roles for System Center Configuration Manager (Agregar roles de sistema de sitio para System Center Configuration Manager)](../../core/servers/deploy/configure/add-site-system-roles.md) para completar la información sobre cómo agregarlos al sitio.  
+  Si va a agregar la administración de dispositivos móviles local a su organización que tiene la mayoría de los equipos y dispositivos administrados con el software del cliente de Configuration Manager, es posible que tenga la mayoría de los roles de sistema de sitio ya instalados como parte de su infraestructura existente. Si no, consulte [Add site system roles for System Center Configuration Manager (Agregar roles de sistema de sitio para System Center Configuration Manager)](../../core/servers/deploy/configure/add-site-system-roles.md) para completar la información sobre cómo agregarlos al sitio.  
 
 > [!NOTE]  
 >  Si usa réplicas de base de datos con el rol de sistema de sitio del punto de administración de dispositivos, los dispositivos recién inscritos presentarán inicialmente un error al conectarse al punto de administración de dispositivos hasta que la réplica de base de datos se sincroniza con él. Este error de conexión se produce porque la réplica de base de datos no tiene la información sobre el dispositivo recién inscrito que se necesita para establecer una conexión correctamente. Las réplicas se sincronizan cada 5 minutos, por lo que no se podrán conectar durante los primeros 5 minutos tras la inscripción (normalmente 2 intentos de conexión). Una vez transcurrido este tiempo, el dispositivo se conectará correctamente.  
@@ -45,25 +45,25 @@ La Administración de dispositivos móviles local en System Center Configuration
 
 ### <a name="to-configure-site-system-roles-to-manage-modern-devices"></a>Para configurar roles de sistema de sitio para administrar dispositivos modernos:  
 
-1.  En la consola de Configuration Manager, haga clic en **Administración** > **Información general** > **Configuración de sitio** > **Servidores y roles del sistema de sitios**.  
+1. En la consola de Configuration Manager, haga clic en **Administración** > **Información general** > **Configuración de sitio** > **Servidores y roles del sistema de sitios**.  
 
-2.  Seleccione el servidor de sistema de sitio con el punto de distribución o el punto de administración de dispositivos que quiere configurar, abra las propiedades del **Sistema de sitio** y asegúrese de que tiene un FQDN especificado. Haga clic en **Aceptar**.  
+2. Seleccione el servidor de sistema de sitio con el punto de distribución o el punto de administración de dispositivos que quiere configurar, abra las propiedades del **Sistema de sitio** y asegúrese de que tiene un FQDN especificado. Haga clic en **Aceptar**.  
 
-3.  Abra las propiedad del rol de sistema de sitio de punto de distribución. En la pestaña General, asegúrese de que **HTTPS** está seleccionado y seleccione **Permitir solo conexiones de intranet**.  
+3. Abra las propiedad del rol de sistema de sitio de punto de distribución. En la pestaña General, asegúrese de que **HTTPS** está seleccionado y seleccione **Permitir solo conexiones de intranet**.  
 
-     Si también administra equipos Mac por separado con el cliente de Configuration Manager, use **Permitir conexiones de intranet e Internet** en su lugar.  
+    Si también administra equipos Mac por separado con el cliente de Configuration Manager, use **Permitir conexiones de intranet e Internet** en su lugar.  
 
-    > [!NOTE]  
-    >  Los puntos de distribución configurados para conexiones de intranet requieren que se configuren límites de sitio para ellos. La rama actual de Configuration Manager solo admite límites de intervalo IPv4 para la Administración de dispositivos móviles local. Para obtener más información sobre la configuración de límites de sitio, consulte [Definir los límites del sitio y los grupos de límites para System Center Configuration Manager](../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md).  
+   > [!NOTE]  
+   >  Los puntos de distribución configurados para conexiones de intranet requieren que se configuren límites de sitio para ellos. La rama actual de Configuration Manager solo admite límites de intervalo IPv4 para la Administración de dispositivos móviles local. Para obtener más información sobre la configuración de límites de sitio, consulte [Definir los límites del sitio y los grupos de límites para System Center Configuration Manager](../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md).  
 
-4.  Haga clic en la casilla junto a **Permitir que los dispositivos móviles se conecten a este punto de distribución** y luego haga clic en **Aceptar**.  
+4. Haga clic en la casilla junto a **Permitir que los dispositivos móviles se conecten a este punto de distribución** y luego haga clic en **Aceptar**.  
 
-5.  Abra las propiedad del rol de sistema de sitio de punto de administración. En la pestaña General, asegúrese de que **HTTPS** está seleccionado y seleccione **Permitir solo conexiones de intranet**.  
+5. Abra las propiedad del rol de sistema de sitio de punto de administración. En la pestaña General, asegúrese de que **HTTPS** está seleccionado y seleccione **Permitir solo conexiones de intranet**.  
 
-     Si también administra equipos Mac por separado con el cliente de Configuration Manager, use **Permitir conexiones de intranet e Internet** en su lugar.  
+    Si también administra equipos Mac por separado con el cliente de Configuration Manager, use **Permitir conexiones de intranet e Internet** en su lugar.  
 
-6.  Haga clic en la casilla que se encuentra junto a **Permitir a los dispositivos móviles y equipos Mac usar este punto de administración**. Haga clic en **Aceptar**.  
+6. Haga clic en la casilla que se encuentra junto a **Permitir a los dispositivos móviles y equipos Mac usar este punto de administración**. Haga clic en **Aceptar**.  
 
-     Esto convierte de manera efectiva el punto de administración en un punto de administración de dispositivos.  
+    Esto convierte de manera efectiva el punto de administración en un punto de administración de dispositivos.  
 
- Una vez que se han agregado y configurado los roles de sistema de sitio para administrar dispositivos modernos, debe configurar los servidores que hospedan los roles como puntos de conexión de confianza para inscribirse y comunicarse con los dispositivos administrados. Consulte [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager (Configurar certificados de comunicaciones de confianza para la administración de dispositivos móviles local en System Center Configuration Manager)](../../mdm/get-started/set-up-certificates-on-premises-mdm.md) para obtener más información.  
+   Una vez que se han agregado y configurado los roles de sistema de sitio para administrar dispositivos modernos, debe configurar los servidores que hospedan los roles como puntos de conexión de confianza para inscribirse y comunicarse con los dispositivos administrados. Consulte [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager (Configurar certificados de comunicaciones de confianza para la administración de dispositivos móviles local en System Center Configuration Manager)](../../mdm/get-started/set-up-certificates-on-premises-mdm.md) para obtener más información.  

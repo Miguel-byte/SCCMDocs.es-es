@@ -10,16 +10,16 @@ ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cda5f01842f08ccc3e8dfbd17078fe157954d985
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: e7f5eefe532c3a0a48bc0703365bf07028bfae71
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353477"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419638"
 ---
 # <a name="add-terms-and-conditions-with-system-center-configuration-manager"></a>Incorporación de términos y condiciones con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 Puede implementar los términos y condiciones de System Center Configuration Manager en los grupos de usuarios para explicar en qué afecta la inscripción del dispositivo, el acceso a los recursos de trabajo y el uso del portal de empresa a los dispositivos y los usuarios. Los usuarios deben aceptar los términos y las condiciones para poder usar el portal de empresa a fin de inscribirse y obtener acceso a su trabajo.  
 
@@ -28,29 +28,29 @@ Puede implementar los términos y condiciones de System Center Configuration Man
 
 ## <a name="to-create-a-terms-and-conditions"></a>Crear términos y condiciones  
 
-1.  En la consola de Administrador de configuración, vaya a **Activos y compatibilidad** > **Introducción** > **Configuración de cumplimiento** > **Términos y condiciones**.  
+1. En la consola de Administrador de configuración, vaya a **Activos y compatibilidad** > **Introducción** > **Configuración de cumplimiento** > **Términos y condiciones**.  
 
-2.  Haga clic en **Crear términos y condiciones** para crear los nuevos términos y condiciones.  
+2. Haga clic en **Crear términos y condiciones** para crear los nuevos términos y condiciones.  
 
-3.  En la página **General** , especifique la siguiente información:  
+3. En la página **General** , especifique la siguiente información:  
 
-    -   **Nombre**: nombre único que aparece en la consola de Configuration Manager  
+   - **Nombre**: nombre único que aparece en la consola de Configuration Manager  
 
-    -   **Descripción**: detalles que le ayudan a identificar los términos y condiciones en la consola de Configuration Manager  
-
-     A continuación, haga clic en **Siguiente**.  
-
-4.  En la página **Términos** , especifique la siguiente información:  
-
-    -   **Título** : título que se muestra a los usuarios en el portal de empresa  
-
-    -   **Texto para los términos** : los términos y condiciones que se muestran a los usuarios en el portal de empresa  
-
-    -   **Texto para explicar qué significa si el usuario acepta** : los usuarios de etiqueta lo ven según la aceptación. **Ejemplo**: "Acepto los términos y condiciones".  
+   - **Descripción**: detalles que le ayudan a identificar los términos y condiciones en la consola de Configuration Manager  
 
      A continuación, haga clic en **Siguiente**.  
 
-5.  Complete el asistente para crear nuevos términos y condiciones. Los nuevos términos y condiciones que se muestran en el nodo Términos y condiciones del área de trabajo Activos y compatibilidad.  
+4. En la página **Términos** , especifique la siguiente información:  
+
+   - **Título** : título que se muestra a los usuarios en el portal de empresa  
+
+   - **Texto para los términos** : los términos y condiciones que se muestran a los usuarios en el portal de empresa  
+
+   - **Texto para explicar qué significa si el usuario acepta** : los usuarios de etiqueta lo ven según la aceptación. **Ejemplo**: "Acepto los términos y condiciones".  
+
+     A continuación, haga clic en **Siguiente**.  
+
+5. Complete el asistente para crear nuevos términos y condiciones. Los nuevos términos y condiciones que se muestran en el nodo Términos y condiciones del área de trabajo Activos y compatibilidad.  
 
 ## <a name="to-deploy-a-terms-and-conditions"></a>Implementar términos y condiciones  
 
@@ -117,4 +117,4 @@ Puede implementar los términos y condiciones de System Center Configuration Man
      Se recomienda aumentar el número de versión y requerir aceptación cada vez que realice cambios importantes los términos y condiciones. Si va a corregir errores tipográficos o cambiar el formato, por ejemplo, mantenga el número de versión actual.
 
 > [!div class="button"]
-[< Paso anterior](configure-intune-subscription.md)  [Paso siguiente >](create-service-connection-point.md)
+> [< Paso anterior](configure-intune-subscription.md)  [Paso siguiente >](create-service-connection-point.md)

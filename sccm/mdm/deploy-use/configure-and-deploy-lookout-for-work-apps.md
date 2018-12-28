@@ -10,16 +10,16 @@ ms.assetid: 3f62b763-4347-453d-b0a7-1f4a0d1d4105
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 87ad7a768128cb11a1fc361c90a6eccac454a28c
-ms.sourcegitcommit: 9cff0702c2cc0f214173b47ec241f7e5a40f84e6
-ms.translationtype: HT
+ms.openlocfilehash: 00fa7e538f6156f0dacee00feeb4b767a3c83a5c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752597"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417632"
 ---
 # <a name="configure-and-deploy-lookout-for-work-apps"></a>Configurar e implementar aplicaciones Lookout for Work
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 En este artículo se explica cómo configurar e implementar la aplicación Lookout for Work para los dispositivos Android e iOS.
 
@@ -31,10 +31,10 @@ En este artículo se explica cómo configurar e implementar la aplicación Looko
 2.  En la página **General** del Asistente para implementar software, especifique la información siguiente:  
     - Tipo: seleccione **Paquete de aplicaciones para Android en Google Play**.
     - Ubicación: copie el vínculo de la aplicación de Lookout for Work desde Google Play Store y péguelo aquí
-    - Publicador: Lookout Mobile Security
+    - Publicador: Seguridad móvil de Lookout
     - Nombre: Lookout for Work
-    - Descripción: Lookout ofrece la mejor protección contra amenazas móviles para proteger el dispositivo. Cuando instala la aplicación Lookout, su dispositivo queda protegido de amenazas. Si encuentra alguna amenaza, avisa al usuario y al administrador de TI.
-    - Categoría administrativa: administración de equipos  
+    - Descripción: Lookout ofrece la mejor protección contra amenazas móviles para proteger su dispositivo. Cuando instala la aplicación Lookout, su dispositivo queda protegido de amenazas. Si encuentra alguna amenaza, avisa al usuario y al administrador de TI.
+    - Categoría administrativa: Administración de equipos  
 
     Una vez que se completa correctamente, la aplicación Lookout for Work se muestra en la lista de aplicaciones.  
 
@@ -55,7 +55,7 @@ En este artículo se explica cómo configurar e implementar la aplicación Looko
 3. Habilite la autenticación de Azure Active Directory (Azure AD) para los usuarios de iOS.
    1.  Inicie sesión en la [hoja de Azure AD de Azure Portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview) y desplácese a la página de registros de aplicaciones.  
    2.  Especifique el nombre **Aplicación iOS Lookout for Work** y seleccione **Nativa** en el tipo de aplicación.  
-  ![captura de pantalla del cuadro de diálogo Agregar aplicaciones que muestra la opción de aplicación de cliente nativo](media/aad-add-app-reg.png)
+   ![captura de pantalla del cuadro de diálogo Agregar aplicaciones que muestra la opción de aplicación de cliente nativo](media/aad-add-app-reg.png)
 
    3.  Para el URI de redirección, utilice el formato `lookoutwork://com.lookout.enterprise.<yourcompanyname>`, sustituyendo `<yourcompanyname>` por el nombre de su compañía. Por ejemplo: `lookoutwork://com.lookout.enterprise.contoso`
    4. Haga clic en **Crear** para crear la aplicación. 
@@ -78,7 +78,7 @@ En este artículo se explica cómo configurar e implementar la aplicación Looko
 
 6. Implemente la aplicación Lookout for Work para los usuarios. Para obtener más información, consulte [Deploy applications](/sccm/apps/deploy-use/deploy-applications) (Implementar aplicaciones).  
 
-  Seleccione los mismos usuarios que ha agregado en la opción Administración de la inscripción en la consola de Lookout. Elija la opción **Instalación requerida**. Esta opción exige que la aplicación Lookout se instale en el dispositivo del usuario.
+   Seleccione los mismos usuarios que ha agregado en la opción Administración de la inscripción en la consola de Lookout. Elija la opción **Instalación requerida**. Esta opción exige que la aplicación Lookout se instale en el dispositivo del usuario.
 
 
 

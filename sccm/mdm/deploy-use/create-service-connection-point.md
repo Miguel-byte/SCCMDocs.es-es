@@ -10,16 +10,16 @@ ms.assetid: 617abb22-d22f-41fb-a76b-1c4259e419d2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3dfd02a84cef31c22023b7fc4cb75931dc82160f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 12626a734138094e7558617b714b2b5acdac6450
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346469"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424330"
 ---
 # <a name="create-a-service-connection-point-with-system-center-configuration-manager-and-microsoft-intune"></a>Creación de un punto de conexión de servicio con System Center Configuration Manager y Microsoft Intune
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 Una vez creada la suscripción, puede instalar el rol de sistema de sitio del punto de conexión de servicio que le permite conectarse al servicio de Intune. Este rol de sistema de sitio insertará configuraciones y aplicaciones en el servicio de Intune.
 
@@ -37,9 +37,9 @@ Una vez creada la suscripción, puede instalar el rol de sistema de sitio del pu
 
 3.  Agregue el rol **Punto de conexión de servicio** a un servidor de sistema de sitio nuevo o existente mediante la etapa asociada:
 
-    -   Nuevo servidor de sistema de sitio: en la pestaña **Inicio** , del grupo **Crear** , haga clic en **Crear servidor del sistema de sitio** para iniciar el asistente para creación de servidor de sistema de sitio.
+    -   Nuevo servidor de sistema de sitio: En el **inicio** ficha la **crear** grupo, haga clic en **crear servidor de sistema de sitio** para iniciar el Asistente para crear servidor de sistema de sitio.
 
-    -   Servidor de sistema de sitio existente: haga clic en el servidor en el que quiere instalar el rol de punto de conexión de servicio. A continuación, en la pestaña **Inicio** , en el grupo **Servidor** , haga clic en **Agregar roles del sistema de sitio** para iniciar el Asistente para agregar roles de sistema de sitio.
+    -   Servidor de sistema de sitio existente: Haga clic en el servidor en el que desea instalar el rol de punto de conexión de servicio. A continuación, en la pestaña **Inicio** , en el grupo **Servidor** , haga clic en **Agregar roles del sistema de sitio** para iniciar el Asistente para agregar roles de sistema de sitio.
 
 4.  En la página **Selección de rol del sistema** , seleccione **Punto de conexión de servicio**y haga clic en **Siguiente**.
 ![Crear un punto de conexión de servicio](../media/mdm-service-connection-point.png)
@@ -54,4 +54,4 @@ Una vez creada la suscripción, puede instalar el rol de sistema de sitio del pu
 2.  El certificado de la etapa 1 se instala en el rol de sitio del punto de conexión de servicio, y se usa para autenticar y autorizar la comunicación posterior con el servicio de Microsoft Intune.
 
 > [!div class="button"]
-[< Paso anterior](terms-and-conditions.md)  [Paso siguiente >](enable-platform-enrollment.md)
+> [< Paso anterior](terms-and-conditions.md)  [Paso siguiente >](enable-platform-enrollment.md)

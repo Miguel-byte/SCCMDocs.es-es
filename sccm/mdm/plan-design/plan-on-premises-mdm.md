@@ -10,16 +10,16 @@ ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 10cddac80b9a7ea4bd912e2f52585cdcef7e70da
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 35170f4584f9c327c542ac35d2f63803163330ba
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351248"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422290"
 ---
 # <a name="plan-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Planear la administración de dispositivos móviles (MDM) local con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (rama actual)*
 
 Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura de Configuration Manager para tratar la administración de dispositivos móviles local.
 
@@ -52,54 +52,54 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
 ##  <a name="bkmk_roles"></a> Agregar los roles de sistema de sitio requeridos  
  La administración de dispositivos móviles local requiere, como mínimo, uno de cada uno de los siguientes roles de sistema de sitio:  
 
--   **Punto de proxy de inscripción** para admitir las solicitudes de inscripción.  
+- **Punto de proxy de inscripción** para admitir las solicitudes de inscripción.  
 
--   **Punto de inscripción** para admitir la inscripción de dispositivos.  
+- **Punto de inscripción** para admitir la inscripción de dispositivos.  
 
--   **Punto de administración de dispositivos** para la entrega de directivas. Este rol de sistema de sitio es una variación del rol de punto de administración que se ha configurado para permitir la administración de dispositivos móviles.  
+- **Punto de administración de dispositivos** para la entrega de directivas. Este rol de sistema de sitio es una variación del rol de punto de administración que se ha configurado para permitir la administración de dispositivos móviles.  
 
--   **Punto de distribución** para la entrega de contenido.  
+- **Punto de distribución** para la entrega de contenido.  
 
--   **Punto de conexión de servicio** para conectarse a Intune para notificar a los dispositivos que están fuera del firewall.  
+- **Punto de conexión de servicio** para conectarse a Intune para notificar a los dispositivos que están fuera del firewall.  
 
- Estos roles de sistema de sitio se pueden instalar en el servidor de sistema de sitio único o pueden ejecutarse por separado en servidores diferentes, según las necesidades de la organización. Cada servidor de sistema de sitio que se usa para la administración de dispositivos móviles local debe estar configurado como un extremo HTTPS para comunicarse con dispositivos de confianza. Para obtener más información, vea [Comunicaciones de confianza requeridas](#bkmk_trustedComs).  
+  Estos roles de sistema de sitio se pueden instalar en el servidor de sistema de sitio único o pueden ejecutarse por separado en servidores diferentes, según las necesidades de la organización. Cada servidor de sistema de sitio que se usa para la administración de dispositivos móviles local debe estar configurado como un extremo HTTPS para comunicarse con dispositivos de confianza. Para obtener más información, vea [Comunicaciones de confianza requeridas](#bkmk_trustedComs).  
 
- Para obtener más información sobre el planeamiento para roles de sistema de sitio, consulte [Planificar los roles de sistema de sitio y los servidores de sistema de sitio en System Center Configuration Manager](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).  
+  Para obtener más información sobre el planeamiento para roles de sistema de sitio, consulte [Planificar los roles de sistema de sitio y los servidores de sistema de sitio en System Center Configuration Manager](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).  
 
- Para obtener más información sobre cómo agregar los roles de sistema de sitio requeridos, consulte [Instalar los roles para la administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md).  
+  Para obtener más información sobre cómo agregar los roles de sistema de sitio requeridos, consulte [Instalar los roles para la administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md).  
 
 ##  <a name="bkmk_trustedComs"></a> Comunicaciones de confianza requeridas  
  La administración de dispositivos móviles local requiere que los roles de sistema de sitio se habiliten para comunicaciones HTTPS. Según sus necesidades, puede usar la entidad de certificación (CA) de la empresa para establecer las conexiones de confianza entre servidores y dispositivos o podría usar una entidad de certificación disponible públicamente para que sea la autoridad de confianza.  De cualquier modo, necesitará un certificado de servidor web configurado con IIS en los servidores de sistema de sitio que hospedan los roles de sistema de sitio requeridos. También necesitará que el certificado raíz de esa entidad de certificación esté instalado en los dispositivos que deben conectarse a esos servidores.  
 
  Si usa la entidad de certificación de su empresa para establecer comunicaciones de confianza, debe realizar las tareas siguientes:  
 
--   Crear y emitir la plantilla de certificado de servidor web en la entidad de certificación.  
+- Crear y emitir la plantilla de certificado de servidor web en la entidad de certificación.  
 
--   Solicitar un certificado de servidor web por cada servidor de sistema de sitio que hospede un rol de sistema de sitio.  
+- Solicitar un certificado de servidor web por cada servidor de sistema de sitio que hospede un rol de sistema de sitio.  
 
--   Configurar IIS en el servidor de sistema de sitio para que use el certificado de servidor web solicitado.  
+- Configurar IIS en el servidor de sistema de sitio para que use el certificado de servidor web solicitado.  
 
- Para dispositivos unidos al dominio de Active Directory corporativo, el certificado raíz de la entidad de certificación de la empresa ya está disponible en el dispositivo para las conexiones de confianza. Esto significa que los dispositivos unidos a un dominio (por ejemplo, los equipos de escritorio) automáticamente serán de confianza para las conexiones HTTPS con los servidores de sistema de sitio. Sin embargo, los dispositivos no unidos a un dominio (normalmente los dispositivos móviles) no tendrán instalado el certificado raíz requerido. En estos dispositivos, será necesario instalar manualmente el certificado raíz para que puedan comunicarse correctamente con los servidores de sistema de sitio que admiten la administración de dispositivos móviles local.  
+  Para dispositivos unidos al dominio de Active Directory corporativo, el certificado raíz de la entidad de certificación de la empresa ya está disponible en el dispositivo para las conexiones de confianza. Esto significa que los dispositivos unidos a un dominio (por ejemplo, los equipos de escritorio) automáticamente serán de confianza para las conexiones HTTPS con los servidores de sistema de sitio. Sin embargo, los dispositivos no unidos a un dominio (normalmente los dispositivos móviles) no tendrán instalado el certificado raíz requerido. En estos dispositivos, será necesario instalar manualmente el certificado raíz para que puedan comunicarse correctamente con los servidores de sistema de sitio que admiten la administración de dispositivos móviles local.  
 
- Debe exportar el certificado raíz de la entidad de certificación emisora para su uso por parte de dispositivos individuales. Para obtener el archivo del certificado raíz, puede exportarlo mediante la entidad de certificación o, como alternativa más sencilla, puede usar el certificado de servidor web emitido por la entidad de certificación para extraer la raíz y crear un archivo de certificado raíz.   A continuación, se debe enviar el certificado raíz al dispositivo.  Ejemplos de métodos de entrega:  
+  Debe exportar el certificado raíz de la entidad de certificación emisora para su uso por parte de dispositivos individuales. Para obtener el archivo del certificado raíz, puede exportarlo mediante la entidad de certificación o, como alternativa más sencilla, puede usar el certificado de servidor web emitido por la entidad de certificación para extraer la raíz y crear un archivo de certificado raíz.   A continuación, se debe enviar el certificado raíz al dispositivo.  Ejemplos de métodos de entrega:  
 
--   Sistema de archivos  
+- Sistema de archivos  
 
--   Datos adjuntos de correo electrónico  
+- Datos adjuntos de correo electrónico  
 
--   Tarjeta de memoria  
+- Tarjeta de memoria  
 
--   Dispositivo anclado a red  
+- Dispositivo anclado a red  
 
--   Almacenamiento en la nube (por ejemplo, OneDrive)  
+- Almacenamiento en la nube (por ejemplo, OneDrive)  
 
--   Conexión NFC (transmisión de datos en proximidad)  
+- Conexión NFC (transmisión de datos en proximidad)  
 
--   Escáner de códigos de barras  
+- Escáner de códigos de barras  
 
--   Paquete de aprovisionamiento de configuración rápida (OOBE)  
+- Paquete de aprovisionamiento de configuración rápida (OOBE)  
 
- Para obtener más información, consulte [Configurar certificados de comunicaciones de confianza para la administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md).  
+  Para obtener más información, consulte [Configurar certificados de comunicaciones de confianza para la administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md).  
 
 ##  <a name="bkmk_enrollment"></a> Consideraciones de inscripción  
  Para habilitar la inscripción de dispositivos para la administración de dispositivos móviles local, se debe conceder a los usuarios permiso de inscripción y, además, sus dispositivos deben ser capaces de establecer comunicaciones de confianza con los servidores de sistema de sitio que hospedan los roles de sistema de sitio necesarios.  
