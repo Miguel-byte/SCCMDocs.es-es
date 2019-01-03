@@ -10,16 +10,16 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 962029dc6bc5584e1edf0bd26d4be3fc280d6204
-ms.sourcegitcommit: 147aae8300831c722a559087c735df0f761b2041
+ms.openlocfilehash: 43093f38a2769c46d3d96a51afbf47f33ed38b51
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51645249"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423803"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Versiones de SQL Server compatibles con Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (ramificación actual)*
 
 Cada sitio de System Center Configuration Manager requiere una versión y una configuración de SQL Server compatibles para hospedar la base de datos del sitio.  
 
@@ -78,10 +78,10 @@ La compatibilidad para un Service Pack de SQL Server específico incluye actuali
 ### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017: Standard, Enterprise  
 Puede usar esta versión de SQL Server, con una [versión 2 de actualización acumulativa](https://support.microsoft.com/help/4052574) mínima, empezando por [Configuration Manager versión 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) para los sitios siguientes: 
 
--   Un sitio de administración central  
--   Un sitio primario  
--   Un sitio secundario  
-<!--SMS.498506-->
+- Un sitio de administración central  
+- Un sitio primario  
+- Un sitio secundario  
+  <!--SMS.498506-->
 
 ### <a name="sql-server-2016-sp2-standard-enterprise"></a>SQL Server 2016 SP2: Standard, Enterprise  
 <!--514985--> Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:  
@@ -208,15 +208,15 @@ Puede usar esta versión de SQL Server sin una versión de actualización acumul
 ### <a name="sql-server-memory"></a>Memoria de SQL Server  
  Reserve memoria para SQL Server con SQL Server Management Studio y configure el valor **Memoria mínima del servidor** en **Opciones de memoria del servidor**. Para obtener más información acerca de cómo configurar esta opción, consulte [Opciones de configuración de memoria del servidor](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options).  
 
--   **Para un servidor de base de datos que está instalado en el mismo equipo que el servidor de sitio**: limite la memoria para SQL Server a entre un 50 y 80 % de la memoria de sistema direccionable disponible.  
+-   **Para un servidor de bases de datos que está instalado en el mismo equipo que el servidor de sitio**: Limite la memoria para SQL Server al 50-80 % de la memoria de sistema direccionable disponible.  
 
--   **Para un servidor de base de datos dedicado (ubicación remota con respecto al servidor de sitio)**: limite la memoria para SQL Server a entre un 80 y 90 % de la memoria de sistema direccionable disponible.  
+-   **Para un servidor de bases de datos dedicado (ubicación remota con respecto al servidor de sitio)**: Limite la memoria para SQL Server al 80-90 % de la memoria de sistema direccionable disponible.  
 
 -   **Para una reserva de memoria para el grupo de búferes de cada instancia de SQL Server en uso**:  
 
-    -   Para un sitio de administración central: establezca 8 GB como mínimo.  
-    -   Para un sitio primario: establezca 8 GB como mínimo.  
-    -   Para un sitio secundario: establezca 4 GB como mínimo.  
+    -   Para un sitio de administración central: establezca un mínimo de 8 gigabytes (GB).  
+    -   Para un sitio primario: establezca un mínimo de 8 gigabytes (GB).  
+    -   Para un sitio secundario: establezca un mínimo de 4 gigabytes (GB).  
 
 ### <a name="sql-nested-triggers"></a>Desencadenadores anidados de SQL  
  Los desencadenadores anidados de SQL deben estar habilitados. Para obtener más información, consulte [Establecer la opción de configuración del servidor Desencadenadores anidados](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option). 
@@ -252,7 +252,7 @@ Para obtener información sobre cómo cambiar la cuenta que usa el servicio SQL 
 SQL Server Reporting Services se necesita para instalar un punto de servicios de informes que le permita ejecutar informes.  
 
 > [!IMPORTANT]  
-> Después de actualizar SQL Server desde una versión anterior, podría ver el siguiente error: *Report Builder Does Not Exist* (El generador de informes no existe).  
+> Después de actualizar SQL Server desde una versión anterior, podría ver el siguiente error:  *Report Builder Does Not Exist* (El generador de informes no existe).  
 > Para resolver este error, debe reinstalar el rol de sistema de sitio de punto de servicios de informes.  
 
 ### <a name="sql-server-ports"></a>Puertos de SQL Server  

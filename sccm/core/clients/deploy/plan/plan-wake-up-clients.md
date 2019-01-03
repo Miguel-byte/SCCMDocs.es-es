@@ -10,43 +10,43 @@ ms.assetid: 52ee82b2-0b91-4829-89df-80a6abc0e63a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2f36ff6c28bd8a3fa23599652aff82ef0c721cad
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: 7e2726c6264091390e85c4c8ad89d47182d94175
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "34474147"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423990"
 ---
 # <a name="plan-how-to-wake-up-clients-in-system-center-configuration-manager"></a>Planear la reactivación de clientes en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (ramificación actual)*
 
  Configuration Manager admite paquetes de reactivación tradicionales para reactivar equipos en modo de suspensión si desea instalar software requerido, como actualizaciones de software y aplicaciones.  
 
 Puede complementar el método de los paquetes de reactivación tradicionales mediante la configuración del cliente proxy de reactivación. El proxy de reactivación usa un protocolo punto a punto y equipos elegidos para comprobar si otros equipos de la subred están activados y, si no es así, reactivarlos en caso necesario. Si el sitio está configurado para Wake On LAN y los clientes están configurados para el proxy de reactivación, el proceso funciona del siguiente modo:  
 
-1.  Los equipos que tengan instalado el cliente de Configuration Manager que no estén inactivos en la subred comprueban si los demás equipos de la subred están activos. Realizan esta comprobación enviando entre sí un comando ping de TCP/IP cada cinco segundos.  
+1. Los equipos que tengan instalado el cliente de Configuration Manager que no estén inactivos en la subred comprueban si los demás equipos de la subred están activos. Realizan esta comprobación enviando entre sí un comando ping de TCP/IP cada cinco segundos.  
 
-2.  Si no hay respuesta desde los demás equipos, se asume que están en modo de suspensión. Los equipos que están activos se convierten en el *equipo administrador* de la subred.  
+2. Si no hay respuesta desde los demás equipos, se asume que están en modo de suspensión. Los equipos que están activos se convierten en el *equipo administrador* de la subred.  
 
-     Dado que es posible que un equipo no responda por un motivo distinto a estar inactivo (por ejemplo, si está apagado o fuera de la red o si ya no se aplica la configuración del cliente proxy de activación), se enviará a los equipos un paquete de reactivación cada día a las 14.00 h (hora local). Dejará de suponerse que los equipos que no responden están inactivos, y no se reactivarán mediante el proxy de reactivación.  
+    Dado que es posible que un equipo no responda por un motivo distinto a estar inactivo (por ejemplo, si está apagado o fuera de la red o si ya no se aplica la configuración del cliente proxy de activación), se enviará a los equipos un paquete de reactivación cada día a las 14.00 h (hora local). Dejará de suponerse que los equipos que no responden están inactivos, y no se reactivarán mediante el proxy de reactivación.  
 
-     Para admitir el proxy de reactivación, es necesario que al menos tres equipos estén activos para cada subred. Para conseguir este requisito, se eligen tres equipos de manera no determinista para que sean los *equipos guardianes* para la subred. Este estado significa que permanecerán activos, independientemente de la directiva de energía que tengan configurada para que entren en modo de suspensión o hibernación después de un determinado período de inactividad. Los equipos guardianes obedecen los comandos de apagado o reinicio, por ejemplo, resultantes de las tareas de mantenimiento. Si esta acción ocurre, los demás equipos guardianes activan a otros equipos de la subred para que esta siga teniendo tres equipos guardianes.  
+    Para admitir el proxy de reactivación, es necesario que al menos tres equipos estén activos para cada subred. Para conseguir este requisito, se eligen tres equipos de manera no determinista para que sean los *equipos guardianes* para la subred. Este estado significa que permanecerán activos, independientemente de la directiva de energía que tengan configurada para que entren en modo de suspensión o hibernación después de un determinado período de inactividad. Los equipos guardianes obedecen los comandos de apagado o reinicio, por ejemplo, resultantes de las tareas de mantenimiento. Si esta acción ocurre, los demás equipos guardianes activan a otros equipos de la subred para que esta siga teniendo tres equipos guardianes.  
 
-3.  Los equipos administradores piden al conmutador de la red que redirija el tráfico de red para los equipos inactivos a ellos mismos.  
+3. Los equipos administradores piden al conmutador de la red que redirija el tráfico de red para los equipos inactivos a ellos mismos.  
 
-     La redirección se consigue mediante la difusión por parte del equipo administrador de una trama Ethernet que utiliza la dirección MAC del equipo inactivo como dirección de origen. Este comportamiento hace que el conmutador de red se comporte como si el equipo inactivo se hubiera movido al mismo puerto en el que se encuentra el equipo administrador. El equipo administrador también envía paquetes ARP para que los equipos inactivos conserven la capacidad de admitir entradas en la memoria caché de ARP. El equipo administrador también responde a las solicitudes ARP en nombre del equipo inactivo y responde con la dirección MAC del equipo inactivo.  
+    La redirección se consigue mediante la difusión por parte del equipo administrador de una trama Ethernet que utiliza la dirección MAC del equipo inactivo como dirección de origen. Este comportamiento hace que el conmutador de red se comporte como si el equipo inactivo se hubiera movido al mismo puerto en el que se encuentra el equipo administrador. El equipo administrador también envía paquetes ARP para que los equipos inactivos conserven la capacidad de admitir entradas en la memoria caché de ARP. El equipo administrador también responde a las solicitudes ARP en nombre del equipo inactivo y responde con la dirección MAC del equipo inactivo.  
 
-    > [!WARNING]  
-    >  Durante este proceso, la asignación de IP a MAC del equipo inactivo seguirá siendo la misma. El proxy de reactivación funciona informando al conmutador de red de que un adaptador de red diferente utiliza el puerto que fue registrado por otro adaptador de red. Sin embargo, este comportamiento (conocido como solapa de MAC) es poco común para el funcionamiento de redes estándar. Algunas herramientas de supervisión de red buscan este comportamiento y pueden dar por hecho que algo no funciona correctamente. Por lo tanto, estas herramientas de supervisión pueden generar alertas o cerrar puertos cuando se utiliza el proxy de reactivación.  
-    >   
-    >  No utilice el proxy de reactivación si las herramientas y servicios de supervisión de su red no permiten solapas de MAC.  
+   > [!WARNING]  
+   >  Durante este proceso, la asignación de IP a MAC del equipo inactivo seguirá siendo la misma. El proxy de reactivación funciona informando al conmutador de red de que un adaptador de red diferente utiliza el puerto que fue registrado por otro adaptador de red. Sin embargo, este comportamiento (conocido como solapa de MAC) es poco común para el funcionamiento de redes estándar. Algunas herramientas de supervisión de red buscan este comportamiento y pueden dar por hecho que algo no funciona correctamente. Por lo tanto, estas herramientas de supervisión pueden generar alertas o cerrar puertos cuando se utiliza el proxy de reactivación.  
+   >   
+   >  No utilice el proxy de reactivación si las herramientas y servicios de supervisión de su red no permiten solapas de MAC.  
 
-4.  Cuando un equipo administrador ve una solicitud de conexión de TCP nueva para un equipo inactivo y la solicitud es a un puerto al que estaba escuchando el equipo inactivo antes de quedar inactivo, el equipo administrador enviará un paquete de reactivación al equipo inactivo, y dejará de redirigir tráfico a dicho equipo.  
+4. Cuando un equipo administrador ve una solicitud de conexión de TCP nueva para un equipo inactivo y la solicitud es a un puerto al que estaba escuchando el equipo inactivo antes de quedar inactivo, el equipo administrador enviará un paquete de reactivación al equipo inactivo, y dejará de redirigir tráfico a dicho equipo.  
 
-5.  El equipo inactivo recibirá el paquete de reactivación y se reactivará. El equipo remitente reintentará automáticamente la conexión y, esta vez, el equipo estará activo y podrá responder.  
+5. El equipo inactivo recibirá el paquete de reactivación y se reactivará. El equipo remitente reintentará automáticamente la conexión y, esta vez, el equipo estará activo y podrá responder.  
 
- El proxy de reactivación tiene los siguientes requisitos previos y limitaciones:  
+   El proxy de reactivación tiene los siguientes requisitos previos y limitaciones:  
 
 > [!IMPORTANT]  
 >  Si dispone de un equipo independiente que se encargue de la infraestructura de red y de los servicios de red, notifique a este equipo e inclúyalo durante su período de evaluación y pruebas. Por ejemplo, en una red que utilice el control de acceso de red 802.1X, el proxy de reactivación no funcionará y podrá interrumpir el servicio de red. Además, el proxy de reactivación podría provocar que algunas herramientas de supervisión de red generen alertas cuando las herramientas detecten el tráfico para reactivar otros equipos.  

@@ -10,16 +10,16 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7ff6d885ca635e15c62eddcdfa06abdc1a09cdf8
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 2d51774688b80faf808653cde77aa3b651ea210c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456607"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422596"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Actualizar la infraestructura local compatible con Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (ramificación actual)*
 
 Use la información de este artículo para ayudarle a actualizar la infraestructura del servidor que ejecuta Configuration Manager.  
 
@@ -55,7 +55,7 @@ Para actualizar un servidor, use los procedimientos de actualización que propor
 
 - [Upgrade and conversion options for Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths) (Opciones de actualización y conversión de Windows Server 2016)  
 
-- [Upgrade Options for Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416\(v=ws.11) (Opciones de actualización de Windows Server 2012 R2)   
+- [Upgrade Options for Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) (Opciones de actualización de Windows Server 2012 R2)   
 
 
 ### <a name="bkmk_2016-2019"></a> Actualizar Windows Server 2016 o 2019
@@ -68,7 +68,7 @@ Use los pasos que se describen en esta sección para cualquiera de los escenario
 
 
 #### <a name="before-upgrade"></a>Antes de la actualización  
-- (Windows Server 2012 o Windows Server 2012 R2): quite el cliente de System Center Endpoint Protection (SCEP). Ahora Windows Server tiene Windows Defender integrado, que reemplaza al cliente SCEP. La presencia del cliente SCEP puede impedir la actualización a Windows Server.  
+- (Windows Server 2012 o Windows Server 2012 R2): Quite el cliente de System Center Endpoint Protection (SCEP). Ahora Windows Server tiene Windows Defender integrado, que reemplaza al cliente SCEP. La presencia del cliente SCEP puede impedir la actualización a Windows Server.  
 
 - Quite el rol de WSUS del servidor si está instalado. Puede mantener el SUSDB y readjuntarlo una vez que se vuelva a instalar WSUS.  
 
@@ -128,9 +128,9 @@ Después de actualizar el servidor de sitio o una instancia del proveedor de SMS
 Al hacer la actualización de Windows Server 2008 R2 o Windows Server 2012 a Windows Server 2012 R2, se aplican las condiciones siguientes:
 
 #### <a name="before-upgrade"></a>Antes de la actualización  
-- En Windows Server 2012: quite el rol de WSUS del servidor si está instalado. Puede mantener el SUSDB y readjuntarlo una vez que se vuelva a instalar WSUS.  
+- En Windows Server 2012: Quite el rol de WSUS del servidor si está instalado. Puede mantener el SUSDB y readjuntarlo una vez que se vuelva a instalar WSUS.  
 
-- En Windows Server 2008 R2: antes de actualizar a Windows Server 2012 R2, debe desinstalar WSUS 3.2 del servidor. Puede mantener el SUSDB y readjuntarlo una vez que se vuelva a instalar WSUS. Para más información, vea [Windows Server Update Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345\(v=ws.11)#new-and-changed-functionality (Introducción a Windows Server Update Services).  
+- En Windows Server 2008 R2: Antes de actualizar a Windows Server 2012 R2, debe desinstalar WSUS 3.2 del servidor. Puede mantener el SUSDB y readjuntarlo una vez que se vuelva a instalar WSUS. Para más información, vea [Windows Server Update Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality) (Introducción a Windows Server Update Services).  
 
 #### <a name="after-upgrade"></a>Después de la actualización  
 - El proceso de actualización deshabilita los servicios de implementación de Windows. Asegúrese de que este servicio se inicia y ejecuta en los siguientes roles de sistema de sitio:  

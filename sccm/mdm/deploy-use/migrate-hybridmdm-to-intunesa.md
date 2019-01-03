@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: 1dd696ce-3e46-4dfa-a76d-592fe0f0320e
-ms.openlocfilehash: 09ea3340d8474c69e6e346fc68120b8849159374
-ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
-ms.translationtype: HT
+ms.openlocfilehash: bc8a504a8490126fb9f4d7110c041f3c8916b162
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44111049"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817926"
 ---
 # <a name="migrate-hybrid-mdm-users-and-devices-to-intune-standalone"></a>Migración de dispositivos y usuarios de MDM híbrida a Intune independiente
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*    
+*Se aplica a: System Center Configuration Manager (rama actual)*    
 
 Este artículo trata sobre la migración de MDM híbrida a una experiencia solo en la nube mediante Intune en Azure. 
 
@@ -55,7 +55,7 @@ Vea los siguientes artículos para más información:
 
     - Instalar NDES y conectores de Exchange  
 
-    Cuando complete estos pasos e inicie la migración a Intune independiente, el proceso debería ser transparente para los usuarios.   
+    Cuando complete los pasos y comenzar la migración a Intune independiente, no hay ningún impacto significativo a los usuarios.   
 
 3.  [Cambiar la entidad de MDM para usuarios específicos (entidad de MDM mixta)](migrate-mixed-authority.md)    
 

@@ -10,16 +10,16 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e88d40317fe0c1385d78ab7b5919f0f766254598
-ms.sourcegitcommit: 303d826f45c8fd9a05d8883afc1ca645e56bd576
+ms.openlocfilehash: 96f816e20d31315e2eaf63b5bf4a14376f3c9261
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269219"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417904"
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>Uso de la herramienta de conexión de servicio para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
+*Se aplica a: System Center Configuration Manager (ramificación actual)*
 
 Use la **herramienta de conexión de servicio** cuando el punto de conexión de servicio esté en modo sin conexión o cuando los servidores de sistema de sitio de Configuration Manager no estén conectados a Internet. La herramienta puede ayudarle a mantener actualizado el sitio con las últimas actualizaciones de Configuration Manager.  
 
@@ -59,7 +59,7 @@ A continuación se indican los requisitos previos y los problemas conocidos.
 
  En este procedimiento, los ejemplos de línea de comandos usan los siguientes nombres de archivo y ubicaciones de carpeta (no es necesario usar estas rutas de acceso y nombres de archivo, puede usar otros alternativos en su lugar que coincidan con su entorno y preferencias):  
 
--   La ruta de acceso a un Stick USB donde se almacenan los datos para la transferencia entre servidores: **D:\USB\\**  
+-   La ruta de acceso a un Stick USB donde se almacenan los datos para la transferencia entre servidores:  **D:\USB\\**  
 
 -   El nombre del archivo .cab que contiene los datos exportados desde su sitio: **UsageData.cab**  
 
@@ -80,7 +80,7 @@ También necesitará copiar la carpeta ServiceConnectionTool con todo su conteni
 ### <a name="overview"></a>Información general
 #### <a name="there-are-three-primary-steps-to-using-the-service-connection-tool"></a>Hay tres pasos principales para usar la herramienta de conexión de servicio  
 
-1.  **Preparar**: este paso se ejecuta en el equipo que hospeda el punto de conexión de servicio. Cuando la herramienta se ejecuta, coloca los datos de uso en un archivo .cab y lo almacena en una unidad USB (o la ubicación alternativa de transferencia que especifique).  
+1.  **Preparar:**  este paso se ejecuta en el equipo que hospeda el punto de conexión de servicio. Cuando la herramienta se ejecuta, coloca los datos de uso en un archivo .cab y lo almacena en una unidad USB (o la ubicación alternativa de transferencia que especifique).  
 
 2.  **Conectar**: para este paso, debe ejecutar la herramienta en un equipo remoto que se conecte a Internet para poder cargar datos de uso y descargar actualizaciones.  
 
@@ -121,51 +121,51 @@ Ejemplo de una línea de comandos que usa *-downloadsiteversion*:
 
 ### <a name="to-use-the-service-connection-tool"></a>Para usar la herramienta de conexión de servicio  
 
-1.  En el equipo que hospeda el punto de conexión de servicio:  
+1. En el equipo que hospeda el punto de conexión de servicio:  
 
-    -   Abra un símbolo del sistema con privilegios administrativos y, a continuación, cambie los directorios a la ubicación que contiene **serviceconnectiontool.exe**.   
+   -   Abra un símbolo del sistema con privilegios administrativos y, a continuación, cambie los directorios a la ubicación que contiene **serviceconnectiontool.exe**.   
 
-2.  Ejecute el comando siguiente para que la herramienta prepare un archivo .cab que contiene la información de uso y la copia a una ubicación que especifique:  
+2. Ejecute el comando siguiente para que la herramienta prepare un archivo .cab que contiene la información de uso y la copia a una ubicación que especifique:  
 
-    -   **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+   -   **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
 
-    Si va a cargar los archivos .cab de más de una jerarquía al mismo tiempo, cada archivo .cab de la carpeta debe tener un nombre único. Puede cambiar manualmente el nombre de los archivos que agregue a la carpeta.
+   Si va a cargar los archivos .cab de más de una jerarquía al mismo tiempo, cada archivo .cab de la carpeta debe tener un nombre único. Puede cambiar manualmente el nombre de los archivos que agregue a la carpeta.
 
-    Si desea ver la información de uso que se recopila para cargarse en el servicio en la nube de Configuration Manager, ejecute el siguiente comando para exportar los mismos datos como un archivo .csv que puede ver con una aplicación como Excel:  
+   Si desea ver la información de uso que se recopila para cargarse en el servicio en la nube de Configuration Manager, ejecute el siguiente comando para exportar los mismos datos como un archivo .csv que puede ver con una aplicación como Excel:  
 
-    -   **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
+   -   **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
 
-3.  Una vez completado el paso de preparación, mueva la unidad USB (o transfiera los datos exportados mediante otro método) a un equipo que tenga acceso a Internet.  
+3. Una vez completado el paso de preparación, mueva la unidad USB (o transfiera los datos exportados mediante otro método) a un equipo que tenga acceso a Internet.  
 
-4.  En el equipo con acceso a Internet, abra un símbolo del sistema con privilegios administrativos y, a continuación, cambie los directorios a la ubicación que contiene una copia de la herramienta  **serviceconnectiontool.exe** y los archivos adicionales de esa carpeta.  
+4. En el equipo con acceso a Internet, abra un símbolo del sistema con privilegios administrativos y, a continuación, cambie los directorios a la ubicación que contiene una copia de la herramienta  **serviceconnectiontool.exe** y los archivos adicionales de esa carpeta.  
 
-5.  Ejecute el siguiente comando para iniciar la carga de información de uso y la descarga de actualizaciones de Configuration Manager:  
+5. Ejecute el siguiente comando para iniciar la carga de información de uso y la descarga de actualizaciones de Configuration Manager:  
 
-    -   **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
+   -   **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
 
-    Para obtener más ejemplos de esta línea de comandos, consulte la sección [Opciones de línea de comandos](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd) más adelante en este tema.
+   Para obtener más ejemplos de esta línea de comandos, consulte la sección [Opciones de línea de comandos](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd) más adelante en este tema.
 
-    > [!NOTE]  
-    >  Cuando se ejecuta la línea de comandos para conectar con el servicio en la nube de Configuration Manager, podría producirse un error similar al siguiente:  
-    >   
-    >  -   Excepción no controlada: System.UnauthorizedAccessException:  
-    >   
-    >      El acceso a la ruta de acceso 'C:\  
-    >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql' se ha denegado.  
-    >   
-    > Este error puede omitirse sin problemas, puede cerrar la ventana de error y continuar.  
+   > [!NOTE]  
+   >  Cuando se ejecuta la línea de comandos para conectar con el servicio en la nube de Configuration Manager, podría producirse un error similar al siguiente:  
+   >   
+   >  -   Excepción no controlada: System.UnauthorizedAccessException:  
+   >   
+   >      El acceso a la ruta de acceso 'C:\  
+   >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql' se ha denegado.  
+   >   
+   > Este error puede omitirse sin problemas, puede cerrar la ventana de error y continuar.  
 
-6.  Cuando se complete la descarga de actualizaciones para Configuration Manager, mueva la unidad USB (o transfiera los datos exportados mediante otro método) al equipo que hospeda el punto de conexión de servicio.  
+6. Cuando se complete la descarga de actualizaciones para Configuration Manager, mueva la unidad USB (o transfiera los datos exportados mediante otro método) al equipo que hospeda el punto de conexión de servicio.  
 
-7.  En el equipo que hospeda el punto de conexión de servicio, abra un símbolo del sistema con privilegios administrativos, cambie los directorios a la ubicación que contiene **serviceconnectiontool.exe**y, a continuación, ejecute el siguiente comando:  
+7. En el equipo que hospeda el punto de conexión de servicio, abra un símbolo del sistema con privilegios administrativos, cambie los directorios a la ubicación que contiene **serviceconnectiontool.exe**y, a continuación, ejecute el siguiente comando:  
 
-    -   **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
+   -   **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
 
-8.  Una vez finalizada la importación, puede cerrar el símbolo del sistema. (Solo se importan las actualizaciones para la jerarquía aplicable).  
+8. Una vez finalizada la importación, puede cerrar el símbolo del sistema. (Solo se importan las actualizaciones para la jerarquía aplicable).  
 
 9. Abra la consola de Configuration Manager y vaya a **Administración** > **Actualizaciones y mantenimiento**. Ahora están disponibles para instalar las actualizaciones que se han importado. (Antes de la versión 1702, la opción Actualizaciones y mantenimiento se encontraba en **Administración** > **Cloud Services**).
 
- Para obtener más información sobre la instalación de actualizaciones, consulte [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) (Instalación de actualizaciones en la consola para System Center Configuration Manager).  
+   Para obtener más información sobre la instalación de actualizaciones, consulte [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) (Instalación de actualizaciones en la consola para System Center Configuration Manager).  
 
 ## <a name="bkmk_cmd"></a> Archivos de registro
 
