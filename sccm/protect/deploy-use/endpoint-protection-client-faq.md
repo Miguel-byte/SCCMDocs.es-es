@@ -10,12 +10,12 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7e86c8196cf2ff2473b066fccf741c2df20cd8f9
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 74bcd026dff0b67ae91276c63ba85597008dfd70
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353249"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422494"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Preguntas más frecuentes sobre el cliente de Endpoint Protection
 
@@ -98,13 +98,13 @@ Puede haber software malintencionado en el equipo aunque no se observe ningún s
 
  En función del nivel de alerta, puede seleccionar una de las siguientes acciones para aplicarla al elemento detectado:  
 
--   **Quitar**: esta acción quita el software del equipo de forma permanente.  
+- **Quitar**: esta acción quita el software del equipo de forma permanente.  
 
--   **Cuarentena**: esta acción pone el software en cuarentena de modo que no pueda ejecutarse. Si Windows Defender pone un software en cuarentena, lo mueve a otra ubicación del equipo y, así, evita que se ejecute hasta que usted decida restaurarlo o quitarlo del equipo.  
+- **Cuarentena**: esta acción pone el software en cuarentena de modo que no pueda ejecutarse. Si Windows Defender pone un software en cuarentena, lo mueve a otra ubicación del equipo y, así, evita que se ejecute hasta que usted decida restaurarlo o quitarlo del equipo.  
 
--   **Permitir**: esta acción agrega el software a la lista de permitidos de Windows Defender y permite que se ejecute en el equipo. Windows Defender dejará de alertar sobre los riesgos que el software pueda suponer para la privacidad o el equipo.  
+- **Permitir**: esta acción agrega el software a la lista de permitidos de Windows Defender y permite que se ejecute en el equipo. Windows Defender dejará de alertar sobre los riesgos que el software pueda suponer para la privacidad o el equipo.  
 
- Si selecciona **Permitir** para un elemento (por ejemplo, software), Windows Defender dejará de alertar sobre los riesgos que el software pueda suponer para la privacidad o el equipo. Por tanto, agregue software a la lista de permitidos únicamente si confía en él y en su publicador.  
+  Si selecciona **Permitir** para un elemento (por ejemplo, software), Windows Defender dejará de alertar sobre los riesgos que el software pueda suponer para la privacidad o el equipo. Por tanto, agregue software a la lista de permitidos únicamente si confía en él y en su publicador.  
 
 ### <a name="how-to-remove-potentially-harmful-software"></a>Cómo quitar el software potencialmente peligroso
 
@@ -203,11 +203,11 @@ Para quitar todos los elementos no deseados o potencialmente peligrosos que Wind
 
  Siempre que la protección en tiempo real detecta una amenaza real o potencial, Windows Defender muestra una notificación. Ahora puede elegir entre las siguientes opciones:  
 
--   Haga clic en **Limpiar el equipo** para quitar el elemento detectado. Windows Defender quitará automáticamente el elemento del equipo.  
+- Haga clic en **Limpiar el equipo** para quitar el elemento detectado. Windows Defender quitará automáticamente el elemento del equipo.  
 
--   Haga clic en el vínculo **Mostrar detalles** para mostrar la ventana de detalles de amenazas potenciales y luego elija la acción que va a aplicar al elemento detectado.  
+- Haga clic en el vínculo **Mostrar detalles** para mostrar la ventana de detalles de amenazas potenciales y luego elija la acción que va a aplicar al elemento detectado.  
 
- Puede elegir el software y la configuración que quiere que Windows Defender supervise, pero es conveniente activar la protección en tiempo real y habilitar todas sus opciones. En la siguiente tabla se explican las opciones disponibles.  
+  Puede elegir el software y la configuración que quiere que Windows Defender supervise, pero es conveniente activar la protección en tiempo real y habilitar todas sus opciones. En la siguiente tabla se explican las opciones disponibles.  
 
 |||  
 |-|-|  
@@ -231,9 +231,9 @@ Para quitar todos los elementos no deseados o potencialmente peligrosos que Wind
 
  Recibirá también otras notificaciones de alerta, por ejemplo, si por alguna razón se ha desactivado la protección en tiempo real, si no ha actualizado las definiciones de virus y spyware durante varios días o cuando haya actualizaciones disponibles. Windows Defender también muestra brevemente una notificación para indicar que está examinando el equipo.  
 
-> [!TIP]  
-
->Si no ve el icono de Windows Defender en el área de notificación, haga clic en la flecha del área de notificación para mostrar los iconos ocultos, incluido el icono de Windows Defender.  
+> [!TIP]
+> 
+> Si no ve el icono de Windows Defender en el área de notificación, haga clic en la flecha del área de notificación para mostrar los iconos ocultos, incluido el icono de Windows Defender.  
 
 
  Su color depende del estado actual del equipo:  

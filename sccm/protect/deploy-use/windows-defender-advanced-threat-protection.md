@@ -10,12 +10,12 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 10d746f88d0e7b869e2b73d389944f3b382d687d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: f474db6768204403978eb188c3dbd138e34035d4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348392"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422800"
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Protección contra amenazas avanzada de Windows Defender
 
@@ -46,23 +46,23 @@ Protección contra amenazas avanzada de Windows Defender es un servicio del [Cen
 
 ## <a name="onboard-devices-for-windows-defender-atp"></a>Dispositivos incorporados para Protección contra amenazas avanzada de Windows Defender  
 
-1.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Endpoint Protection** > **Directivas de Windows Defender ATP** y haga clic en **Crear directiva de Windows Defender ATP**. Se abre el Asistente para crear directiva de Protección contra amenazas avanzada de Windows Defender.  
+1. En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Endpoint Protection** > **Directivas de Windows Defender ATP** y haga clic en **Crear directiva de Windows Defender ATP**. Se abre el Asistente para crear directiva de Protección contra amenazas avanzada de Windows Defender.  
 
-2.  Escriba el **Nombre** y la **Descripción** de la directiva de Protección contra amenazas avanzada de Windows Defender y seleccione **Incorporación**. Haga clic en **Siguiente**.  
+2. Escriba el **Nombre** y la **Descripción** de la directiva de Protección contra amenazas avanzada de Windows Defender y seleccione **Incorporación**. Haga clic en **Siguiente**.  
 
-3.  **Vaya** al archivo de configuración proporcionado por el inquilino del servicio en la nube de Protección contra amenazas avanzada de Windows Defender de la organización. Haga clic en **Siguiente**.  
+3. **Vaya** al archivo de configuración proporcionado por el inquilino del servicio en la nube de Protección contra amenazas avanzada de Windows Defender de la organización. Haga clic en **Siguiente**.  
 
-4.  Especifique los ejemplos de archivos de dispositivos administrados que se recopilan y se comparten para su análisis.  
+4. Especifique los ejemplos de archivos de dispositivos administrados que se recopilan y se comparten para su análisis.  
 
-    -   **Ninguno**   
+   - **Ninguno**   
 
-    -   **Todos los tipos de archivo**  
+   - **Todos los tipos de archivo**  
 
      Haga clic en **Siguiente**.  
 
-5.  Revise el resumen y finalice el asistente.  
+5. Revise el resumen y finalice el asistente.  
 
-6.  Ahora puede hacer clic en **Implementar** para implementar la directiva de Windows Defender ATP en equipos cliente administrados.  
+6. Ahora puede hacer clic en **Implementar** para implementar la directiva de Windows Defender ATP en equipos cliente administrados.  
 
 ## <a name="monitor-windows-defender-atp"></a>Supervisión de Protección contra amenazas avanzada de Windows Defender  
 

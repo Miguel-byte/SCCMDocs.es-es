@@ -10,12 +10,12 @@ ms.assetid: ddef4d2a-f481-4020-9ddd-9cca5f9795cb
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 47c6a046dac7cd4b5d0d16f0342d7e95ba3cc2a0
-ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
-ms.translationtype: HT
+ms.openlocfilehash: 5c4dd69510134efecc730d7cc1bdb5cb2d647653
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48891153"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414538"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-a-network-share-for-configuration-manager"></a>Habilitar la descarga de definiciones de malware de Endpoint Protection desde un recurso compartido de red para Configuration Manager
 
@@ -48,7 +48,7 @@ ms.locfileid: "48891153"
 
 
 > [!div class="button"]
-[Paso siguiente >](endpoint-antimalware-policies.md)
-
+> [Paso siguiente >](endpoint-antimalware-policies.md)
+> 
 > [!div class="button"]
-[Atrás >](endpoint-configure-alerts.md)
+> [Atrás >](endpoint-configure-alerts.md)

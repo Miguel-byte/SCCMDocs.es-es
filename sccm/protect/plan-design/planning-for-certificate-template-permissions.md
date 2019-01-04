@@ -10,12 +10,12 @@ ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 44be093d079a06ac2cbc7e8fa82392fa3afd4f72
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: be8d8e70267630a048d68f1415928a7245b75368
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349371"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419417"
 ---
 # <a name="planning-for-certificate-template-permissions-for-certificate-profiles-in-system-center-configuration-manager"></a>Planificación de permisos de plantilla de certificado para perfiles de certificado en System Center Configuration Manager
 
@@ -27,15 +27,15 @@ La información siguiente le ayuda a planear la configuración de permisos de pl
 ## <a name="default-security-permissions-and-considerations"></a>Consideraciones y permisos de seguridad predeterminados  
  Los permisos de seguridad predeterminados necesarios para las plantillas de certificado que System Center Configuration Manager usará para solicitar certificados para usuarios y dispositivos son los siguientes:  
 
--   Lectura e Inscripción para la cuenta que el grupo de aplicaciones Servicio de inscripción de dispositivos de red usa  
+- Lectura e Inscripción para la cuenta que el grupo de aplicaciones Servicio de inscripción de dispositivos de red usa  
 
--   Lectura para la cuenta que ejecuta la consola de System Center Configuration Manager  
+- Lectura para la cuenta que ejecuta la consola de System Center Configuration Manager  
 
- Para más información sobre estos permisos de seguridad, vea [Infraestructura de certificados](../deploy-use/certificate-infrastructure.md).  
+  Para más información sobre estos permisos de seguridad, vea [Infraestructura de certificados](../deploy-use/certificate-infrastructure.md).  
 
- Cuando se usa esta configuración predeterminada, los usuarios y los dispositivos no pueden solicitar directamente certificados de las plantillas de certificado. El Servicio de inscripción de dispositivos de red debe iniciar todas las solicitudes. Esta restricción es sumamente importante, ya que las plantillas de certificado deben configurarse con **Proporcionado por el solicitante** para el sujeto del certificado, lo que implica un riesgo de suplantación si un usuario no autorizado o un dispositivo comprometido solicitan un certificado. En la configuración predeterminada, el Servicio de inscripción de dispositivos de red debe iniciar la solicitud. Sin embargo, el riesgo de suplantación continúa si el servicio que ejecuta el Servicio de inscripción de dispositivos de red se ve comprometido. Para evitar este riesgo, siga todas las recomendaciones de seguridad para el Servicio de inscripción de dispositivos de red y el equipo que ejecuta este servicio de rol.  
+  Cuando se usa esta configuración predeterminada, los usuarios y los dispositivos no pueden solicitar directamente certificados de las plantillas de certificado. El Servicio de inscripción de dispositivos de red debe iniciar todas las solicitudes. Esta restricción es sumamente importante, ya que las plantillas de certificado deben configurarse con **Proporcionado por el solicitante** para el sujeto del certificado, lo que implica un riesgo de suplantación si un usuario no autorizado o un dispositivo comprometido solicitan un certificado. En la configuración predeterminada, el Servicio de inscripción de dispositivos de red debe iniciar la solicitud. Sin embargo, el riesgo de suplantación continúa si el servicio que ejecuta el Servicio de inscripción de dispositivos de red se ve comprometido. Para evitar este riesgo, siga todas las recomendaciones de seguridad para el Servicio de inscripción de dispositivos de red y el equipo que ejecuta este servicio de rol.  
 
- Si los permisos de seguridad predeterminados no satisfacen sus requisitos empresariales, tiene otra opción para configurar los permisos de seguridad en las plantillas de certificado: puede agregar permisos de lectura e inscripción para usuarios y equipos.  
+  Si los permisos de seguridad predeterminados no satisfacen sus requisitos empresariales, tiene una opción adicional para configurar los permisos de seguridad en las plantillas de certificado: Puede agregar permisos de lectura e inscripción para usuarios y equipos.  
 
 ## <a name="adding-read-and-enroll-permissions-for-users-and-computers"></a>Agregar permisos de lectura e inscripción para usuarios y equipos  
  Agregar los permisos de lectura e inscripción para usuarios y equipos puede ser la opción adecuada si un equipo independiente administra el equipo de infraestructura de entidad de certificación (CA), y dicho equipo quiere que System Center Configuration Manager compruebe que los usuarios tienen una cuenta de Servicios de dominio de Active Directory válida antes de enviarles un perfil de certificado para solicitar un certificado de usuario. Para esta configuración, debe especificar uno o varios grupos de seguridad que contienen los usuarios y, a continuación, otorgar a los grupos permisos de lectura e inscripción en las plantillas de certificado. En este escenario, el administrador de CA administra el control de seguridad.  
@@ -54,6 +54,6 @@ La información siguiente le ayuda a planear la configuración de permisos de pl
 
 2.  Si una cuenta no se puede autenticar porque no hay ninguna respuesta de un controlador de dominio y desea omitir la comprobación de permisos:  
 
-    -   En el servidor del sistema de sitios que hospeda el punto de registro de certificado, cree la siguiente clave DWORD del Registro con un valor de 1: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SCCM\CRP\SkipTemplateCheckOnlyIfAccountAccessDenied  
+    -   En el servidor del sistema de sitios que hospeda el punto de registro de certificado, cree la siguiente clave DWORD del Registro con un valor de 1:  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SCCM\CRP\SkipTemplateCheckOnlyIfAccountAccessDenied  
 
 3.  En la CA emisora, en la ficha **Seguridad** en las propiedades de la plantilla de certificado, agregue uno o varios grupos de seguridad para conceder permisos de lectura e inscripción a las cuentas de usuario o dispositivo.  
