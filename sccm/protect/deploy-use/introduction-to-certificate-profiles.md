@@ -10,12 +10,12 @@ ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c4230b935b7fabc44743d57fcb2315348edb4274
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 27a615a412bca7e30ab5f5a3dc5f794961d13d2c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349694"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424500"
 ---
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>Introducción a los perfiles de certificado en System Center Configuration Manager
 
@@ -34,9 +34,9 @@ Los perfiles de certificado proporcionan las siguientes capacidades de administr
 
 -   Supervisar los certificados instalados y notificar acerca de ellos.  
 
-**Ejemplo:** Todos los empleados deben poder conectarse a puntos de conexión Wi-Fi en diversas ubicaciones corporativas. Para permitir una conexión de usuario sencilla, implemente primero los certificados necesarios para conectarse a Wi-Fi. Después, implemente los perfiles de Wi-Fi que hacen referencia al certificado.  
+**Ejemplo:** todos los empleados deben poder conectarse a puntos de conexión Wi-Fi en diversas ubicaciones corporativas. Para permitir una conexión de usuario sencilla, implemente primero los certificados necesarios para conectarse a Wi-Fi. Después, implemente los perfiles de Wi-Fi que hacen referencia al certificado.  
 
-**Ejemplo:** tiene una PKI y quiere cambiar a un método más flexible y seguro de implementar certificados. Los usuarios deben poder tener acceso a los recursos de la empresa desde sus dispositivos personales sin poner en peligro la seguridad. Configure perfiles de certificados con las opciones y los protocolos admitidos en la plataforma específica del dispositivo. Los dispositivos pueden solicitar automáticamente estos certificados desde un servidor de inscripción accesible desde Internet. Después, configure los perfiles de VPN para que usen estos certificados y que el dispositivo pueda acceder a los recursos de empresa.  
+Ejemplo: Tiene una PKI en su lugar. y quiere cambiar a un método más flexible y seguro de implementar certificados. Los usuarios deben poder tener acceso a los recursos de la empresa desde sus dispositivos personales sin poner en peligro la seguridad. Configure perfiles de certificados con las opciones y los protocolos admitidos en la plataforma específica del dispositivo. Los dispositivos pueden solicitar automáticamente estos certificados desde un servidor de inscripción accesible desde Internet. Después, configure los perfiles de VPN para que usen estos certificados y que el dispositivo pueda acceder a los recursos de empresa.  
 
 
 
@@ -100,10 +100,10 @@ Puede supervisar las implementaciones de perfil de certificado viendo los inform
 ## <a name="automatic-revocation-of-certificates"></a>Revocación automática de certificados  
  System Center Configuration Manager revoca automáticamente certificados de usuario y de equipo que se implementaron mediante perfiles de certificado en las circunstancias siguientes:  
 
--   El dispositivo se retira de la administración de System Center Configuration Manager.  
+- El dispositivo se retira de la administración de System Center Configuration Manager.  
 
--   El dispositivo se borra de forma selectiva.  
+- El dispositivo se borra de forma selectiva.  
 
--   El dispositivo se bloquea de la jerarquía de System Center Configuration Manager.  
+- El dispositivo se bloquea de la jerarquía de System Center Configuration Manager.  
 
- Para revocar los certificados, el servidor de sitio envía un comando de revocación a la entidad de certificación emisora. El motivo de la revocación es **Cese de operación**.  
+  Para revocar los certificados, el servidor de sitio envía un comando de revocación a la entidad de certificación emisora. El motivo de la revocación es **Cese de operación**.  

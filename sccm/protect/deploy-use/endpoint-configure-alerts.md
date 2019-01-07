@@ -10,12 +10,12 @@ ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 626c52b827e38a53ed3b8982963496f29f11acb5
-ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
-ms.translationtype: HT
+ms.openlocfilehash: dbebdde88a5031eec91a2383e105d06cbc7541e5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083775"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420454"
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Configurar alertas de Endpoint Protection en Configuration Manager
 
@@ -75,13 +75,13 @@ ms.locfileid: "50083775"
 
         -   **Número de veces que se ha detectado malware** : la alerta se genera cuando se detecta el mismo malware en los equipos de la recopilación más veces que las establecidas. Especifique un número entre **2** y **32**.
 
-        -   **Intervalo de detección (horas)** : indique el intervalo de detección (en horas) en que se debe producir el número de detecciones de malware. Especifique un número entre **1** y **168**.
+        -   **Intervalo de detección (horas):** indique el intervalo de detección (en horas) en que se debe producir el número de detecciones de malware. Especifique un número entre **1** y **168**.
 
     -   **Detección de varios programas de malware**: esta alerta se genera si se detectan más tipos de malware que el número de tipos especificado durante un determinado número de horas en los equipos de la recopilación que se supervisa. Especifique la siguiente información para configurar la alerta:
 
-        -   **Varios tipos de malware detectado:** la alerta se genera cuando el número establecido de tipos de software malintencionado se detecta en los equipos de la recopilación. Especifique un número entre **2** y **32**.
+        -   **Número de tipos de malware detectados:** la alerta se genera cuando el número establecido de tipos de software malintencionado se detecta en los equipos de la recopilación. Especifique un número entre **2** y **32**.
 
-        -   **Intervalo de detección (horas)** : indique el intervalo de detección (en horas) en que se debe producir el número de detecciones de malware. Especifique un número entre **1** y **168**.
+        -   **Intervalo de detección (horas):** indique el intervalo de detección (en horas) en que se debe producir el número de detecciones de malware. Especifique un número entre **1** y **168**.
 
 9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades** de _<Nombre de recopilación\>_.  
 
@@ -92,7 +92,7 @@ A partir de la versión 1702 de Configuration Manager, puede configurar una aler
 Para configurar el porcentaje en el que se genera la alerta, expanda **Supervisión** > **Alertas** > **Todas las alertas**, haga doble clic en **Clientes antimalware obsoletos** y modifique la opción **Generar alerta si el porcentaje de clientes administrados con una versión obsoleta del cliente antimalware es más de**.
 
 > [!div class="button"]
-[Paso siguiente >](endpoint-definition-updates.md)
-
+> [Paso siguiente >](endpoint-definition-updates.md)
+> 
 > [!div class="button"]
-[Atrás >](endpoint-protection-site-role.md)
+> [Atrás >](endpoint-protection-site-role.md)

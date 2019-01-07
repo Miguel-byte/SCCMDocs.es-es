@@ -10,12 +10,12 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3e8c6cb33032b0c4283f3e35cbfa7b68535751ea
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 160713fe480b0a47c2ad57376c4a1dccdbfb00b1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456114"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418958"
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
@@ -90,7 +90,7 @@ Endpoint Protection administra y supervisa el servicio Protección contra amenaz
 ## <a name="endpoint-protection-client-for-mac-computers-and-linux-servers"></a>Cliente de Endpoint Protection para equipos Mac y servidores Linux  
 
 > [!Important]  
-> El soporte técnico para System Center Endpoint Protection (SCEP) para Mac y Linux (todas las versiones) terminará el 31 de diciembre de 2018. La disponibilidad de nuevas definiciones de virus para SCEP para Mac y SCEP para Linux dejarán de publicarse después del fin del soporte técnico. Para obtener más información, vea la [entrada del blog de fin del soporte técnico](https://go.microsoft.com/fwlink/?linkid=870182).  
+> El soporte técnico para System Center Endpoint Protection (SCEP) para Mac y Linux (todas las versiones) terminará el 31 de diciembre de 2018. La disponibilidad de nuevas definiciones de virus para SCEP para Mac y SCEP para Linux puede interrumpirse tras el fin del soporte técnico. Para obtener más información, vea la [entrada del blog de fin del soporte técnico](https://go.microsoft.com/fwlink/?linkid=870182).  
 
  System Center Endpoint Protection incluye un cliente de Endpoint Protection para Linux y para equipos Mac. Estos clientes no se proporcionan con Configuration Manager. Descargue los siguientes productos desde el [Centro de servicios de licencias por volumen de Microsoft](https://www.microsoft.com/licensing/servicecenter/default.aspx):  
 
@@ -111,7 +111,7 @@ Siga estos pasos para descargar el archivo de imagen que contiene el software cl
 2. Seleccione la pestaña **Descargas y claves** de la parte superior del sitio web.
 3. Filtre por el producto **System Center Endpoint Protection (rama actual)**.
 4. Haga clic en el vínculo **Descargar**.
-5. Haga clic en **Continue**. Debería ver varios archivos, incluido uno llamado: **System Center Endpoint Protection (rama actual: versión 1606) for Linux OS and Macintosh OS Multilanguage 32/64 bit 1878 MB ISO**.
+5. Haga clic en **Continue**. Debería ver varios archivos, incluido uno denominado: **System Center Endpoint Protection (rama actual - versión 1606) para Linux OS and Macintosh OS Multilanguage 32/64 bit 1878 MB ISO**.
 6. Haga clic en el icono de flecha para descargar el archivo. El nombre del archivo es **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-3_EptProt_Lin_Mac_MLF_X21-67050.ISO**.
 
 La actualización de enero de 2018 (X21-67050) incluye las siguientes versiones:
@@ -119,4 +119,4 @@ La actualización de enero de 2018 (X21-67050) incluye las siguientes versiones:
 - System Center Endpoint Protection para Mac 4.5.32.0 (compatible con macOS 10.13 High Sierra)
 - System Center Endpoint Protection para Linux 4.5.20.0 
 
- Para más información acerca de cómo instalar y administrar los clientes de Endpoint Protection en equipos Linux y Mac, use la documentación que acompaña a estos productos. Encontrará la documentación del producto en la carpeta **Documentation** del archivo .ISO.
+  Para más información acerca de cómo instalar y administrar los clientes de Endpoint Protection en equipos Linux y Mac, use la documentación que acompaña a estos productos. Encontrará la documentación del producto en la carpeta **Documentation** del archivo .ISO.

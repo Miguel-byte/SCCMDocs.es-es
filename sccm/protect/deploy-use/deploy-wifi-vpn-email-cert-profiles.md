@@ -10,12 +10,12 @@ ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: faf8d48614bc3e27381d57d86fc24da9356aa3f0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: abae42358e6baba660841eab9443410c0b818428
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347576"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419264"
 ---
 # <a name="deploy-profiles-in-system-center-configuration-manager"></a>Implementar perfiles de VPN en System Center Configuration Manager
 
@@ -25,20 +25,19 @@ Para poder usar perfiles, deben estar implementados en una o varias recopilacion
 
  Use el cuadro de diálogo **Implementar perfil de Wi-Fi**, **Implementar perfil de VPN**, **Implementar el perfil de Exchange ActiveSync** o **Deploy Certificate Profile** (Implementar perfil de certificado) para configurar la implementación de estos perfiles. Como parte de la configuración, defina la recopilación en la que se implementará el perfil y especifique la frecuencia con la que se evaluará la compatibilidad del perfil.  
 
-> [!NOTE]  
+> [!NOTE]
 >  Si implementa varios perfiles de acceso a recursos de empresa en el mismo usuario, ocurre lo siguiente:  
->   
->  -   Si una configuración en conflicto contiene un valor opcional, no se enviará al dispositivo.  
-> -   Si una configuración en conflicto contiene un valor obligatorio, se enviará al dispositivo el valor predeterminado. Si no hay ningún valor predeterminado, se producirá un error en el perfil de acceso de recursos de toda la empresa. Por ejemplo, si implementa dos perfiles de correo electrónico en el mismo usuario y los valores especificados para **Host de Exchange ActiveSync** o **Dirección de correo electrónico** son diferentes, se producirá un error en ambos perfiles de correo electrónico ya que son parámetros obligatorios.  
-
-> -   Para implementar perfiles de certificado, primero debe configurar la infraestructura y crear perfiles de certificado. Para obtener más información, consulte los temas siguientes:  
->   
->  -   [Configuring certificate infrastructure in System Center Configuration Manager](certificate-infrastructure.md) (Configuración de infraestructura de certificados en System Center Configuration Manager)  
-> -   [How to create certificate profiles in System Center Configuration Manager](create-certificate-profiles.md) (Cómo crear perfiles de certificado en System Center Configuration Manager)    
-
-> [!IMPORTANT]  
+> 
+> - Si una configuración en conflicto contiene un valor opcional, no se enviará al dispositivo.  
+>   -   Si una configuración en conflicto contiene un valor obligatorio, se enviará al dispositivo el valor predeterminado. Si no hay ningún valor predeterminado, se producirá un error en el perfil de acceso de recursos de toda la empresa. Por ejemplo, si implementa dos perfiles de correo electrónico en el mismo usuario y los valores especificados para **Host de Exchange ActiveSync** o **Dirección de correo electrónico** son diferentes, se producirá un error en ambos perfiles de correo electrónico ya que son parámetros obligatorios.  
+> 
+> - Para implementar perfiles de certificado, primero debe configurar la infraestructura y crear perfiles de certificado. Para obtener más información, consulte los temas siguientes:  
+> 
+>   -   [Configuring certificate infrastructure in System Center Configuration Manager](certificate-infrastructure.md) (Configuración de infraestructura de certificados en System Center Configuration Manager)  
+> - [How to create certificate profiles in System Center Configuration Manager](create-certificate-profiles.md) (Cómo crear perfiles de certificado en System Center Configuration Manager)    
+> 
+> [!IMPORTANT]
 >  Si se quita una implementación de perfil de VPN, este no se quita de los dispositivos cliente. Si desea quitar el perfil de los dispositivos, deberá hacerlo manualmente
->   
 
 ## <a name="deploying--profiles"></a>Implementar perfiles  
 

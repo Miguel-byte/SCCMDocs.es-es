@@ -10,12 +10,12 @@ ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f4e1ea4cb097381467774af9c3161079419d6840
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 5de0ab2eb56ad671a43a6a40fab4e1f4dcc051a4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348776"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424402"
 ---
 # <a name="how-to-monitor-endpoint-protection-status"></a>Cómo supervisar el estado de Endpoint Protection
 
@@ -25,23 +25,23 @@ Puede supervisar Endpoint Protection en la jerarquía de Microsoft System Center
 
 ##  <a name="BKMK_1"></a> Supervisión de Endpoint Protection mediante el nodo de estado de Endpoint Protection  
 
-1.  En la consola de Configuration Manager, haga clic en **Supervisión**.  
+1. En la consola de Configuration Manager, haga clic en **Supervisión**.  
 
-2.  En el área de trabajo **Supervisión**, expanda **Seguridad** y, luego, haga clic en **Estado de Endpoint Protection**.  
+2. En el área de trabajo **Supervisión**, expanda **Seguridad** y, luego, haga clic en **Estado de Endpoint Protection**.  
 
-3.  En el **colección** seleccione la colección para la que desea ver información de estado.  
+3. En el **colección** seleccione la colección para la que desea ver información de estado.  
 
-    > [!IMPORTANT]  
-    >  Las colecciones están disponibles para la selección en los casos siguientes:  
-    >   
-    >  -   Si selecciona **Ver esta recopilación en el panel de Endpoint Protection** en la pestaña **Alertas** del cuadro de diálogo *<Nombre de recopilación\>***Propiedades**.  
-    > -   Al implementar una directiva antimalware de Endpoint Protection en la recopilación.  
-    > -   Al habilitar e implementar la configuración de cliente de Endpoint Protection en la recopilación.  
+   > [!IMPORTANT]
+   >  Las colecciones están disponibles para la selección en los casos siguientes:  
+   > 
+   > - Si selecciona la opción **Ver esta recopilación en el panel de Endpoint Protection** en la pestaña **Alerta**s del cuadro de diálogo <em><nombre de recopilación\></em>**Propiedades**.  
+   >   -   Al implementar una directiva antimalware de Endpoint Protection en la recopilación.  
+   >   -   Al habilitar e implementar la configuración de cliente de Endpoint Protection en la recopilación.  
 
-4.  Revise la información que se muestra en el **estado de seguridad** y **estado operativo** secciones. Puede hacer clic en cualquier vínculo de estado para crear una recopilación temporal en el **dispositivos** nodo en el **activos y compatibilidad** área de trabajo. La colección temporal contiene los equipos con el estado seleccionado.  
+4. Revise la información que se muestra en el **estado de seguridad** y **estado operativo** secciones. Puede hacer clic en cualquier vínculo de estado para crear una recopilación temporal en el **dispositivos** nodo en el **activos y compatibilidad** área de trabajo. La colección temporal contiene los equipos con el estado seleccionado.  
 
-    > [!IMPORTANT]  
-    >  La información que se muestra en el nodo **Estado de Endpoint Protection** se basa en los últimos datos que se resumen a partir de la base de datos de Configuration Manager y puede no estar actualizada. Si desea recuperar los datos más recientes, en la pestaña **Inicio** , haga clic en **Ejecutar resumen**, o haga clic en **Programar resumen** para ajustar el intervalo del resumen.  
+   > [!IMPORTANT]  
+   >  La información que se muestra en el nodo **Estado de Endpoint Protection** se basa en los últimos datos que se resumen a partir de la base de datos de Configuration Manager y puede no estar actualizada. Si desea recuperar los datos más recientes, en la pestaña **Inicio** , haga clic en **Ejecutar resumen**, o haga clic en **Programar resumen** para ajustar el intervalo del resumen.  
 
 ##  <a name="BKMK_2"></a> Supervisión de Endpoint Protection en el área de trabajo Activos y compatibilidad  
 
@@ -70,7 +70,7 @@ Puede supervisar Endpoint Protection en la jerarquía de Microsoft System Center
 
 |Nivel de alerta|Descripción|  
 |-----------------|-----------------|  
-|**Error**|Endpoint Protection no pudo corregir el malware. Compruebe los registros para obtener información detallada del error.<br /><br /> **Nota:** para obtener una lista de los archivos de registro de Configuration Manager y Endpoint Protection, consulte la sección C"Endpoint Protection" del tema [Log files in System Center Configuration Manager](../../core/plan-design/hierarchy/log-files.md) (Registrar archivos en System Center Configuration Manager).|  
+|**Error**|Endpoint Protection no pudo corregir el malware. Compruebe los registros para obtener información detallada del error.<br /><br /> **Nota:** Para obtener una lista de los archivos de registro de Configuration Manager y Endpoint Protection, consulte la sección "Endpoint Protection" del tema [Archivos de registro en Configuration Manager](../../core/plan-design/hierarchy/log-files.md).|  
 |**Quitado**|Endpoint Protection quitó correctamente el malware.|  
 |**En cuarentena**|Endpoint Protection trasladó el malware a una ubicación segura y evitó su ejecución hasta que lo quite o permita que se ejecute.|  
 |**Limpio**|Se ha limpiado el malware del archivo infectado.|  
