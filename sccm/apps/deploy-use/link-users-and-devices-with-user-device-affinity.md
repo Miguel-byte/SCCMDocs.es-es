@@ -10,12 +10,12 @@ ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 40bab1725b074bc549eeb9e9764ab8a1dd8b83e7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5343f10fe1e8a7b799454801c764a43619488014
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337724"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421746"
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-system-center-configuration-manager"></a>Vincular usuarios y dispositivos con afinidad entre usuario y dispositivo en System Center Configuration Manager
 
@@ -52,10 +52,10 @@ La afinidad entre usuario y dispositivo en System Center Configuration Manager (
 ## <a name="automatically-create-user-device-affinities-windows-pcs-only"></a>Crear automáticamente afinidades entre usuario y dispositivo (solo en PC con Windows)  
  Configuration Manager lee en el registro de eventos de Windows los datos sobre los inicios de sesión de usuario. Para crear automáticamente afinidades entre usuario y dispositivo, debe activar estas dos opciones en la directiva de seguridad local en los equipos cliente para almacenar los eventos de inicio de sesión en el registro de eventos de Windows:  
 
--   **Auditar eventos de inicio de sesión de cuenta**  
--   **Auditar eventos de inicio de sesión**  
+- **Auditar eventos de inicio de sesión de cuenta**  
+- **Auditar eventos de inicio de sesión**  
 
- Para configurar estas opciones, use la directiva de grupo de Windows.  
+  Para configurar estas opciones, use la directiva de grupo de Windows.  
 
 > [!IMPORTANT]  
 > Si un error hace que el registro de eventos de Windows genere un gran número de entradas, es posible que se cree un registro de eventos. Si esto ocurre, podría ser que los eventos de inicio de sesión existentes ya no estén disponibles en Configuration Manager.  
@@ -80,7 +80,7 @@ La afinidad entre usuario y dispositivo en System Center Configuration Manager (
     -   **Configurar automáticamente la afinidad de dispositivo de usuario desde los datos del usuario**. Para permitir que el sitio cree automáticamente afinidades entre usuario y dispositivo, seleccione **True** en la lista desplegable. Si selecciona **False**, debe aprobar todas las asignaciones de afinidad entre usuario y dispositivo.  
 
     > [!TIP]  
-    > **Ejemplo:** si establece **User device affinity threshold (minutes)** (Umbral de afinidad entre usuario y dispositivo (minutos)) en **60** minutos y **User device affinity threshold (days)** (Umbral de afinidad entre usuario y dispositivo (días)) en **5** días, el usuario debe usar el dispositivo durante al menos 60 minutos a lo largo de un período de 5 días para que se cree automáticamente una afinidad entre usuario y dispositivo.  
+    > **Ejemplo:** si establece **Umbral de uso de afinidad de dispositivo de usuario (minutos)** en **60** minutos y **Umbral de uso de afinidad de dispositivo de usuario (días)** en **5** días, el usuario debe usar el dispositivo durante al menos 60 minutos a lo largo de un período de 5 días para que se cree automáticamente una afinidad entre usuario y dispositivo.  
 
 Una vez creada una afinidad entre usuario y dispositivo, Configuration Manager continúa supervisando los umbrales de afinidad entre dispositivo y usuario. Si la actividad de usuario para el dispositivo es inferior a los umbrales que ha establecido, se quitará la afinidad entre usuario y dispositivo. Establezca **User device affinity threshold (days)** (Umbral de afinidad entre usuario y dispositivo (días)) en un valor de al menos **7** días para evitar situaciones en las que una afinidad entre usuario y dispositivo configurada automáticamente pueda perderse cuando el usuario no haya iniciado sesión, por ejemplo, durante un fin de semana.  
 

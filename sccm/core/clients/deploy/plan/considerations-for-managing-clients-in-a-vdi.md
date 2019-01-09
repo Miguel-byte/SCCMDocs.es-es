@@ -10,12 +10,12 @@ ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a17bb43d91d26cf10da0e1d3da5d8f6e4a2af2a7
-ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
+ms.openlocfilehash: 6733a4dc3b027efa23ddc64e06e4269260c43101
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083792"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418635"
 ---
 # <a name="considerations-for-managing-system-center-configuration-manager-clients--in-a-virtual-desktop-infrastructure-vdi"></a>Consideraciones para la administración de clientes de System Center Configuration Manager en una infraestructura de escritorio virtual (VDI)
 
@@ -23,13 +23,13 @@ ms.locfileid: "50083792"
 
 System Center Configuration Manager admite la instalación del cliente de Configuration Manager en los siguientes escenarios de infraestructura de escritorio virtual (VDI):  
 
--   **Máquinas virtuales personales**: las máquinas virtuales personales se suelen usar cuando se quiere garantizar que los datos y la configuración de usuario se mantienen en la máquina virtual entre sesiones.  
+- **Máquinas virtuales personales**: las máquinas virtuales personales se suelen usar cuando se quiere garantizar que los datos y la configuración de usuario se mantienen en la máquina virtual entre sesiones.  
 
--   **Sesiones de Servicios de Escritorio Remoto**: Servicios de Escritorio Remoto permite a un servidor hospedar varias sesiones de cliente simultáneas. Los usuarios pueden conectarse a una sesión y, a continuación, ejecutar aplicaciones en ese servidor.  
+- **Sesiones de Servicios de Escritorio Remoto**: Servicios de Escritorio Remoto permite a un servidor hospedar varias sesiones de cliente simultáneas. Los usuarios pueden conectarse a una sesión y, a continuación, ejecutar aplicaciones en ese servidor.  
 
--   **Máquinas virtuales agrupadas**: las máquinas virtuales agrupadas no se conservan entre sesiones. Cuando se cierra una sesión, se descartan todos los datos y configuraciones. Las máquinas virtuales agrupadas son útiles cuando no se puede utilizar Servicios de Escritorio Remoto debido a que una aplicación empresarial requerida no se puede ejecutar en el servidor Windows Server que hospeda las sesiones de cliente.  
+- **Máquinas virtuales agrupadas**: las máquinas virtuales agrupadas no se conservan entre sesiones. Cuando se cierra una sesión, se descartan todos los datos y configuraciones. Las máquinas virtuales agrupadas son útiles cuando no se puede utilizar Servicios de Escritorio Remoto debido a que una aplicación empresarial requerida no se puede ejecutar en el servidor Windows Server que hospeda las sesiones de cliente.  
 
- En la tabla siguiente se incluyen consideraciones para la administración del cliente de Configuration Manager en una infraestructura de escritorio virtual.  
+  En la tabla siguiente se incluyen consideraciones para la administración del cliente de Configuration Manager en una infraestructura de escritorio virtual.  
 
 |Tipo de máquina virtual|Consideraciones|  
 |--------------------------|--------------------|  

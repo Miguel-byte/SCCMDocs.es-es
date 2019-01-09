@@ -10,12 +10,12 @@ ms.assetid: ccce7cb5-e18f-4337-8adf-2018edca3c00
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d9ef1ca2dd2763cf5b96fd82031a2ef38ef64927
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3871d0ccf7bbb368e86b9d4f10a87fd25739d360
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334698"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417598"
 ---
 # <a name="configure-source-hierarchies-and-source-sites-for-migration-to-system-center-configuration-manager"></a>Configurar jerarquías de origen y sitios de origen para la migración a System Center Configuration Manager
 
@@ -41,27 +41,27 @@ Para habilitar la migración de datos al entorno de System Center Configuration 
 
 ### <a name="to-configure-a-source-hierarchy"></a>Para configurar una jerarquía de origen   
 
-1.  En la consola de Configuration Manager, haga clic en **Administración**.  
+1. En la consola de Configuration Manager, haga clic en **Administración**.  
 
-2.  En el área de trabajo **Administración** , expanda **Migración**y, a continuación, haga clic en **Jerarquía de orígenes**.  
+2. En el área de trabajo **Administración** , expanda **Migración**y, a continuación, haga clic en **Jerarquía de orígenes**.  
 
-3.  En la pestaña **Inicio** , en el grupo **Migración** , haga clic en **Especificar la jerarquía de origen**.  
+3. En la pestaña **Inicio** , en el grupo **Migración** , haga clic en **Especificar la jerarquía de origen**.  
 
-4.  En el cuadro de diálogo **Especificar la jerarquía de origen** para **Jerarquía de origen**, seleccione **Nueva jerarquía de origen**.  
+4. En el cuadro de diálogo **Especificar la jerarquía de origen** para **Jerarquía de origen**, seleccione **Nueva jerarquía de origen**.  
 
-5.  En **Servidor de sitio de Configuration Manager de nivel superior**, especifique el nombre o la dirección IP del sitio de nivel superior de una jerarquía de origen admitida.  
+5. En **Servidor de sitio de Configuration Manager de nivel superior**, especifique el nombre o la dirección IP del sitio de nivel superior de una jerarquía de origen admitida.  
 
-6.  Especifique cuentas de acceso del sitio de origen que tengan los siguientes permisos:  
+6. Especifique cuentas de acceso del sitio de origen que tengan los siguientes permisos:  
 
-    -   Cuenta de sitio de origen: permiso **Leer** del proveedor de SMS para el sitio de nivel superior especificado en la jerarquía de origen. Las actualizaciones y el uso compartido de puntos de distribución requieren los permisos **Modificar** y **Eliminar** para el sitio en la jerarquía de origen.
+   - Cuenta de sitio de origen: permiso **Leer** del proveedor de SMS para el sitio de nivel superior especificado en la jerarquía de origen. Las actualizaciones y el uso compartido de puntos de distribución requieren los permisos **Modificar** y **Eliminar** para el sitio en la jerarquía de origen.
 
-    -   Cuenta de base de datos del sitio de origen: permisos **Leer** y **Ejecutar** de la base de datos de SQL Server para el sitio de nivel superior especificado en la jerarquía de origen.  
+   - Cuenta de base de datos del sitio de origen: permisos **Leer** y **Ejecutar** de la base de datos de SQL Server para el sitio de nivel superior especificado en la jerarquía de origen.  
 
      Si especifica el uso de la cuenta de equipo, Configuration Manager usa la cuenta de equipo del sitio de nivel superior de la jerarquía de destino. Para esta opción, asegúrese de que esta cuenta sea miembro del grupo de seguridad **Usuarios COM distribuidos** en el dominio en el que reside el sitio de nivel superior de la jerarquía de origen.  
 
-7.  Para compartir puntos de distribución entre las jerarquías de origen y de destino, active la casilla **Habilitar uso compartido del punto de distribución para el servidor de sitio de origen** . Si no habilita el uso compartido del punto de distribución en este momento, podrá hacerlo mediante la edición de las credenciales del sitio de origen una vez completada la recopilación de datos.  
+7. Para compartir puntos de distribución entre las jerarquías de origen y de destino, active la casilla **Habilitar uso compartido del punto de distribución para el servidor de sitio de origen** . Si no habilita el uso compartido del punto de distribución en este momento, podrá hacerlo mediante la edición de las credenciales del sitio de origen una vez completada la recopilación de datos.  
 
-8.  Haga clic en **Aceptar** para guardar la configuración. Se abrirá el cuadro de diálogo **Estado de obtención de datos** y la recopilación de los datos se iniciará automáticamente.  
+8. Haga clic en **Aceptar** para guardar la configuración. Se abrirá el cuadro de diálogo **Estado de obtención de datos** y la recopilación de los datos se iniciará automáticamente.  
 
 9. Cuando finalice la obtención de datos, haga clic en **Cerrar** para cerrar el cuadro de diálogo **Estado de obtención de datos** y complete la configuración.  
 
@@ -88,7 +88,7 @@ Use el siguiente procedimiento para configurar sitios de origen adicionales para
 
 5.  En el cuadro de diálogo **Credenciales del sitio de origen** , para las cuentas de acceso del sitio de origen, especifique las cuentas que tengan los permisos siguientes:  
 
-    -   Cuenta de sitio de origen: permiso **Leer** del proveedor de SMS para el sitio de nivel superior especificado en la jerarquía de origen. Las actualizaciones y el uso compartido de puntos de distribución requieren los permisos **Modificar** y **Eliminar** para el sitio en la jerarquía de origen.  
+    -   Cuenta de sitio de origen: permiso **Leer** del proveedor de SMS para el sitio de nivel superior especificado en la jerarquía de origen. Las actualizaciones y el uso compartido de puntos de distribución requieren los permisos **Modificar** y **Eliminar** para el sitio en la jerarquía de origen.  
 
     -   Cuenta de base de datos del sitio de origen: permisos **Leer** y **Ejecutar** de la base de datos de SQL Server para el sitio de nivel superior especificado en la jerarquía de origen.  
 

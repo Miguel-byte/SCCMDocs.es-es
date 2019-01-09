@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 665f5720486164cc4c728d579f1a700c4fb16245
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 10b7d0c026ab7af0f5b1964539a70f74f13c079e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384678"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421542"
 ---
 # <a name="create-configuration-baselines-in-system-center-configuration-manager"></a>Crear líneas base de configuración en System Center Configuration Manager
 
@@ -34,35 +34,35 @@ Las líneas base de configuración en System Center Configuration Manager contie
 
 Para crear una línea base de configuración mediante el cuadro de diálogo **Crear línea base de configuración**, use el procedimiento siguiente:  
 
-1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad** > **Configuración de cumplimiento** > **Líneas base de configuración**.  
+1. En la consola de Configuration Manager, haga clic en **Activos y compatibilidad** > **Configuración de cumplimiento** > **Líneas base de configuración**.  
 
-2.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear línea de base de configuración**.  
+2. En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear línea de base de configuración**.  
 
-3.  En el cuadro de diálogo **Crear línea de base de configuración** , escriba un nombre único y una descripción para la línea de base de configuración. Puede usar un máximo de 255 caracteres para el nombre y 512 caracteres para la descripción.  
+3. En el cuadro de diálogo **Crear línea de base de configuración** , escriba un nombre único y una descripción para la línea de base de configuración. Puede usar un máximo de 255 caracteres para el nombre y 512 caracteres para la descripción.  
 
-4.  En la lista **Datos de configuración** se muestran todos los elementos de configuración o líneas base de configuración que se incluyen en esta línea base de configuración. Haga clic en **Agregar** para agregar un nuevo elemento de configuración o línea base de configuración a la lista. Puede elegir entre los elementos siguientes:  
+4. En la lista **Datos de configuración** se muestran todos los elementos de configuración o líneas base de configuración que se incluyen en esta línea base de configuración. Haga clic en **Agregar** para agregar un nuevo elemento de configuración o línea base de configuración a la lista. Puede elegir entre los elementos siguientes:  
 
-    -   **Elementos de configuración**  
+   - **Elementos de configuración**  
 
-    -   **Actualizaciones de software**  
+   - **Actualizaciones de software**  
 
-    -   **Líneas de base de configuración**  
-      > [!IMPORTANT]
-      > Debe limitar cada línea base de configuración a un máximo de 1000 actualizaciones de software.
-5.  Use la lista **Cambiar propósito** para especificar el comportamiento de un elemento de configuración que ha seleccionado en la lista **Datos de configuración**. Puede elegir entre los elementos siguientes:  
+   - **Líneas de base de configuración**  
+     > [!IMPORTANT]
+     > Debe limitar cada línea base de configuración a un máximo de 1000 actualizaciones de software.
+5. Use la lista **Cambiar propósito** para especificar el comportamiento de un elemento de configuración que ha seleccionado en la lista **Datos de configuración**. Puede elegir entre los elementos siguientes:  
 
-    -   **Requerido**: la línea base de configuración se evalúa como no conforme si el elemento de configuración no se detecta en un dispositivo cliente. Si se detecta, se evalúa para el cumplimiento.  
+   -   **Requerido**: la línea base de configuración se evalúa como no conforme si el elemento de configuración no se detecta en un dispositivo cliente. Si se detecta, se evalúa para el cumplimiento.  
 
-    -   **Opcional**: el elemento de configuración solo se evalúa para el cumplimiento si la aplicación a la que hace referencia se encuentra en los equipos cliente. Si no se encuentra la aplicación, la línea base de configuración no se marca como no conforme (solo es aplicable a los elementos de configuración de la aplicación).  
+   -   **Opcional**: el elemento de configuración solo se evalúa para el cumplimiento si la aplicación a la que hace referencia se encuentra en los equipos cliente. Si no se encuentra la aplicación, la línea base de configuración no se marca como no conforme (solo es aplicable a los elementos de configuración de la aplicación).  
 
-    -   **Prohibido**: la línea base de configuración se evalúa como no conforme si el elemento de configuración se detecta en los equipos cliente (solo es aplicable a los elementos de configuración de aplicación).  
+   -   **Prohibido**: la línea base de configuración se evalúa como no conforme si el elemento de configuración se detecta en los equipos cliente (solo es aplicable a los elementos de configuración de aplicación).  
 
-    > [!NOTE]
-    >  La lista **Cambio propósito** solo está disponible si se ha hecho clic en la opción **Este elemento de configuración contiene configuraciones de aplicación** en la página **General** del **Asistente para crear elemento de configuración**.  
+   > [!NOTE]
+   >  La lista **Cambio propósito** solo está disponible si se ha hecho clic en la opción **Este elemento de configuración contiene configuraciones de aplicación** en la página **General** del **Asistente para crear elemento de configuración**.  
 
-6.  Use la lista **Cambiar revisión** para seleccionar una revisión determinada o la más reciente del elemento de configuración para evaluar el cumplimiento de dispositivos cliente o seleccione **Usar siempre el más reciente** para emplear siempre la revisión más reciente. Para obtener más información sobre las revisiones de elementos de configuración, consulte [Management tasks for configuration data](../../compliance/deploy-use/management-tasks-for-configuration-data.md) (Tareas de administración para datos de configuración).  
+6. Use la lista **Cambiar revisión** para seleccionar una revisión determinada o la más reciente del elemento de configuración para evaluar el cumplimiento de dispositivos cliente o seleccione **Usar siempre el más reciente** para emplear siempre la revisión más reciente. Para obtener más información sobre las revisiones de elementos de configuración, consulte [Management tasks for configuration data](../../compliance/deploy-use/management-tasks-for-configuration-data.md) (Tareas de administración para datos de configuración).  
 
-7.  Para eliminar un elemento de configuración de la línea base de configuración, seleccione un elemento de configuración y luego haga clic en **Quitar**.  
+7. Para eliminar un elemento de configuración de la línea base de configuración, seleccione un elemento de configuración y luego haga clic en **Quitar**.  
 
 8. A partir de la versión 1806, seleccione si quiere **Aplicar siempre esta línea de base para los clientes administrados conjuntamente**. Cuando se activa, esta línea de base se aplicará incluso en los clientes que se administran mediante Intune.  Esta excepción podría utilizarse para definir la configuración que necesita su organización, pero aún no está disponible en Intune. 
 

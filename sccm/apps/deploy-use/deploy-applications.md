@@ -10,12 +10,12 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5b70c651186a35e0f1c5a5da8b9c7dffe0abc7da
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 32c1aea44fb69ba667752807e9d3f73487db7c34
+ms.sourcegitcommit: c60e057075a83f07d1ca2577c3de1c7d7c8e9cec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456590"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626453"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>Implementar aplicaciones con Configuration Manager
 
@@ -48,7 +48,7 @@ También puede simular la implementación de una aplicación. Esta simulación p
 > - [Programación](#bkmk_deploy-sched)
 > - [Experiencia del usuario](#bkmk_deploy-ux)
 > - [Alertas](#bkmk_deploy-alerts)
-> - [iOS: Directivas de configuración de aplicaciones](#bkmk_deploy-ios)
+> - [iOS: directivas de configuración de aplicaciones](#bkmk_deploy-ios)
 
 
 ### <a name="bkmk_deploy-general"></a> Información **general** sobre implementaciones 
@@ -57,16 +57,16 @@ En la página **General** del Asistente para implementar software, especifique l
 
 - **Software**: este valor muestra la aplicación que se va a implementar. Haga clic en **Examinar** para seleccionar otra aplicación.  
 
-- **Recopilación**: haga clic en **Examinar** para seleccionar la recopilación en la que se va a implementar la aplicación.  
+- **Colección**: Haga clic en **Examinar** para seleccionar la colección en la que se va a implementar la aplicación.  
 
-- **Usar grupos de puntos de distribución predeterminados asociados a esta recopilación**: almacene el contenido de la aplicación en el grupo de puntos de distribución predeterminado de la recopilación. Si no ha asociado la colección seleccionada a un grupo de puntos de distribución, esta opción estará atenuada.  
+- **Usar grupos de puntos de distribución predeterminados asociados a esta recopilación**: almacene el contenido de la aplicación en el grupo de puntos de distribución predeterminado de la colección. Si no ha asociado la colección seleccionada a un grupo de puntos de distribución, esta opción estará atenuada.  
 
 - **Distribuir contenido automáticamente para las dependencias**: si alguno de los tipos de implementación de la aplicación tiene dependencias, el sitio también enviará contenido de aplicaciones dependientes a los puntos de distribución.  
 
     >[!Note]  
     > Si actualiza la aplicación dependiente después de implementar la aplicación principal, el sitio no distribuye automáticamente ningún contenido nuevo para la dependencia.  
 
-- **Comentarios (opcional)**: si quiere, escriba una descripción para esta implementación.  
+- **Comentarios (opcional)**: Especifique, si lo desea, un nombre y una descripción para este tipo de implementación.  
 
 
 ### <a name="bkmk_deploy-content"></a> Opciones de **contenido** de implementación
@@ -89,24 +89,24 @@ En la página **Configuración de implementación**, especifique la siguiente in
 
     Después de crear la acción de una implementación, no se puede cambiar.  
 
-- **Propósito**: en la lista desplegable, elija una de las opciones que se indican a continuación.  
+- **Finalidad**: en la lista desplegable, elija una de las siguientes opciones:  
 
-    - **Disponible**: el usuario ve la aplicación en el Centro de software. Puede instalarla a petición.  
+  - **Disponible**: el usuario ve la aplicación en el Centro de software. Puede instalarla a petición.  
 
-    - **Obligatoria**: el cliente instala automáticamente la aplicación según la programación que establezca. Si la aplicación no está oculta, un usuario puede realizar el seguimiento de su estado de implementación. También puede usar el Centro de software para instalar la aplicación antes de la fecha límite.  
+  - **Obligatorio**: el cliente instala automáticamente la aplicación según la programación que establezca. Si la aplicación no está oculta, un usuario puede realizar el seguimiento de su estado de implementación. También puede usar el Centro de software para instalar la aplicación antes de la fecha límite.  
 
     > [!NOTE]   
     >  Al establecer la acción de implementación en **Desinstalar**, el propósito de implementación se establecerá automáticamente en **Obligatoria**. Este comportamiento no se puede cambiar.  
 
-- **Permitir que los usuarios finales intenten reparar esta aplicación**: a partir de la versión 1810, si ha creado la aplicación con una línea de comandos de reparación, habilite esta opción. Los usuarios ven una opción en el Centro de software para **reparar** la aplicación.<!--1357866-->  
+- **Permitir a los usuarios finales reparar esta aplicación**: a partir de la versión 1810, si ha creado la aplicación con una línea de comandos de reparación, habilite esta opción. Los usuarios ven una opción en el Centro de software para **reparar** la aplicación.<!--1357866-->  
 
-- **Implementar previamente el software en el dispositivo primario del usuario**: si la implementación se realiza en un usuario, seleccione esta opción para implementar la aplicación en el dispositivo principal del usuario. Esta opción no exige que el usuario inicie sesión antes de que se ejecute la implementación. Si el usuario necesita interactuar con la instalación, no seleccione esta opción. Esta opción solo está disponible cuando la implementación es **Obligatoria**.  
+- **Implementar previamente el software en el dispositivo primario del usuario**: si la implementación va dirigida a un usuario, seleccione esta opción para implementar la aplicación en el dispositivo primario del usuario. Esta opción no exige que el usuario inicie sesión antes de que se ejecute la implementación. Si el usuario necesita interactuar con la instalación, no seleccione esta opción. Esta opción solo está disponible cuando la implementación es **Obligatoria**.  
 
-- **Enviar paquetes de reactivación**: si la implementación es **Obligatoria**, Configuration Manager envía un paquete de reactivación a los equipos antes de que el cliente ejecute la implementación. Este paquete reactiva el equipo a la hora límite de instalación. Para poder usar esta opción, los equipos y las redes deben configurarse para Wake On LAN. Para obtener más información, vea [Planear la reactivación de clientes](/sccm/core/clients/deploy/plan/plan-wake-up-clients).  
+- **Enviar paquetes de reactivación**: si la implementación es **obligatoria**, Configuration Manager envía un paquete de reactivación a los equipos antes de que el cliente ejecute la implementación. Este paquete reactiva el equipo a la hora límite de instalación. Para poder usar esta opción, los equipos y las redes deben configurarse para Wake On LAN. Para obtener más información, vea [Planear la reactivación de clientes](/sccm/core/clients/deploy/plan/plan-wake-up-clients).  
 
-- **Permitir a los clientes de una conexión a Internet de uso medido descargar contenido una vez cumplida la fecha límite de instalación, lo cual podría suponer costes adicionales**: esta opción solo está disponible para implementaciones con un propósito **Requerido**.  
+- **Permitir a los clientes de una conexión a Internet de uso medido descargar contenido una vez cumplida la fecha límite de instalación, lo cual podría suponer costos adicionales**: Esta opción solo está disponible cuando la implementación tiene un propósito **Requerido**.  
 
-- **Actualizar automáticamente cualquier versión reemplazada de esta aplicación**: el cliente actualiza cualquier versión reemplazada de la aplicación con la aplicación nueva. 
+- **Actualizar automáticamente cualquier versión reemplazada de esta aplicación**: el cliente actualiza cualquier versión reemplazada de la aplicación con la aplicación de sustitución. 
 
     > [!Note]  
     > Esta opción siempre funciona, independientemente de la aprobación del administrador. Si un administrador ya aprobó la versión reemplazada, no necesitará aprobar también la versión que sustituye. La aprobación solo es necesaria para nuevas solicitudes, no para actualizaciones que sustituyen.<!--515824-->  
@@ -118,9 +118,12 @@ En la página **Configuración de implementación**, especifique la siguiente in
 #### <a name="bkmk_approval"></a> Configuración de aprobación
 Se mostrará una de las siguientes opciones de configuración de aprobación, según su versión de Configuration Manager:
 
-- **Solicitar aprobación del administrador si los usuarios solicitan esta aplicación**: para las versiones 1710 y anteriores, el administrador aprueba las solicitudes de la aplicación de cualquier usuario antes de poder instalarla. La opción está atenuada cuando el propósito de implementación es **Obligatorio**, o bien cuando se implementa la aplicación en una colección de dispositivos.  
+- **Solicitar aprobación del administrador si los usuarios solicitan esta aplicación**: para versiones 1710 y anteriores, el administrador aprueba las solicitudes de usuario sobre la aplicación para que el usuario pueda instalarla. La opción está atenuada cuando el propósito de implementación es **Obligatorio**, o bien cuando se implementa la aplicación en una colección de dispositivos.  
 
-- **An administrator must approve a request for this application on the device** (Un administrador debe aprobar una solicitud para esta aplicación en el dispositivo): a partir de la versión 1802, el administrador aprueba las solicitudes de usuario para la aplicación antes de que el usuario pueda instalarla en el dispositivo solicitado. Si el administrador aprueba la solicitud, el usuario solo tiene la posibilidad de instalar la aplicación en ese dispositivo. El usuario debe enviar otra solicitud para instalar la aplicación en otro dispositivo. La opción está atenuada cuando el propósito de implementación es **Obligatorio**, o bien cuando se implementa la aplicación en una colección de dispositivos. <!--1357015-->  
+- **Un administrador debe aprobar una solicitud para esta aplicación en el dispositivo**: a partir de la versión 1802, el administrador aprueba las solicitudes de usuario sobre la aplicación para que el usuario pueda instalarla en el dispositivo solicitado. Si el administrador aprueba la solicitud, el usuario solo tiene la posibilidad de instalar la aplicación en ese dispositivo. El usuario debe enviar otra solicitud para instalar la aplicación en otro dispositivo. La opción está atenuada cuando el propósito de implementación es **Obligatorio**, o bien cuando se implementa la aplicación en una colección de dispositivos.
+
+ A partir de la versión 1810, también puede definir una lista de direcciones de correo electrónico para notificar sobre la solicitud de aprobación. 
+<!--1357015-->  
 
 Para obtener más información, vea [Aprobar aplicaciones](/sccm/apps/deploy-use/app-approval).
 
@@ -159,11 +162,11 @@ Después de la fecha límite, el cliente instalará la aplicación en la primera
 
 En la página **Experiencia del usuario**, especifique información sobre cómo los usuarios pueden interactuar con la instalación de aplicaciones.
 
-- **Notificaciones de usuario**: especifique si se muestran notificaciones en el Centro de software en la hora disponible configurada. Esta opción también controla si se notifica a los usuarios en los equipos cliente. Para las implementaciones disponibles, no se puede seleccionar la opción **Ocultar en el Centro de software y ocultar todas las notificaciones**.  
+- **Notificaciones de usuario**: especifique si quiere mostrar una notificación en el Centro de software según las horas de disponibilidad configuradas. Esta opción también controla si se notifica a los usuarios en los equipos cliente. Para las implementaciones disponibles, no se puede seleccionar la opción **Ocultar en el Centro de software y ocultar todas las notificaciones**.  
 
-- **Instalación de software** y **Reinicio del sistema**: solo configure estas opciones para las implementaciones necesarias. Estas opciones especifican los comportamientos cuando la implementación alcanza la fecha límite más allá de las ventanas de mantenimiento definidas. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](/sccm/core/clients/manage/collections/use-maintenance-windows).  
+- **Instalación de software** y **Reinicio del sistema**: configure estas opciones únicamente para las implementaciones requeridas. Estas opciones especifican los comportamientos cuando la implementación alcanza la fecha límite más allá de las ventanas de mantenimiento definidas. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](/sccm/core/clients/manage/collections/use-maintenance-windows).  
 
-- **Tratamiento de filtros de escritura para dispositivos de Windows Embedded**: esta configuración controla el comportamiento de instalación en dispositivos Windows Embedded habilitados con un filtro de escritura. Elija esta opción para que los cambios se confirmen en la fecha límite de instalación o durante una ventana de mantenimiento. Al seleccionar esta opción, se necesita un reinicio y los cambios persisten en el dispositivo. De lo contrario, la aplicación se instala en la superposición temporal y se confirma más tarde.  
+- **Tratamiento de filtros de escritura para dispositivos de Windows Embedded**: esta opción controla el comportamiento de instalación en los dispositivos Windows Embedded habilitados con un filtro de escritura. Elija esta opción para que los cambios se confirmen en la fecha límite de instalación o durante una ventana de mantenimiento. Al seleccionar esta opción, se necesita un reinicio y los cambios persisten en el dispositivo. De lo contrario, la aplicación se instala en la superposición temporal y se confirma más tarde.  
 
     - Al implementar una actualización de software en un dispositivo de Windows Embedded, asegúrese de que el dispositivo sea miembro de una colección que tenga configurada una ventana de mantenimiento. Para obtener más información sobre las ventanas de mantenimiento y los dispositivos de Windows Embedded, vea [Creación de aplicaciones de Windows Embedded](/sccm/apps/get-started/creating-windows-embedded-applications).  
 
@@ -173,7 +176,7 @@ En la página **Experiencia del usuario**, especifique información sobre cómo 
 En la página **Alertas**, configure la forma en que Configuration Manager genera las alertas para esta implementación. Si también usa System Center Operations Manager, configure también sus alertas. Solo se pueden configurar algunas alertas para las implementaciones necesarias. 
 
 
-### <a name="bkmk_deploy-ios"></a> iOS: **Directivas de configuración de aplicaciones**
+### <a name="bkmk_deploy-ios"></a> iOS: **directivas de configuración de aplicaciones**
 
 Al implementar un tipo de implementación de iOS, también verá la página **Directivas de configuración de aplicaciones**. Si ya ha creado una directiva de configuración de aplicaciones de iOS, haga clic en **Nuevo** para asociar esta implementación con la directiva. Para obtener más información sobre este tipo de directiva, consulte [Configure iOS apps with app configuration policies](/sccm/apps/deploy-use/configure-ios-apps-with-app-configuration-policies) (Configurar aplicaciones iOS con directivas de configuración de aplicaciones).
 
@@ -284,7 +287,7 @@ Después de que los clientes reciban la implementación, se aplica el comportami
 
     - [Puerta de enlace de administración en la nube](/sccm/core/clients/manage/plan-cloud-management-gateway)  
 
-    - Habilitar la configuración de cliente **Habilitar solicitudes de directiva de usuario de clientes de Internet** en el grupo [Directiva de cliente](/sccm/core/clients/deploy/about-client-settings#client-policy)  
+    - Habilite la configuración de cliente: **habilite solicitudes de directiva de usuario de clientes de Internet** en el grupo [Directiva de cliente](/sccm/core/clients/deploy/about-client-settings#client-policy).  
 
 - Para admitir clientes en la intranet:  
 

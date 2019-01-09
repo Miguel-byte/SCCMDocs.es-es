@@ -10,12 +10,12 @@ ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: e6358c8e84d12c37418d7a1af459e775783efaa2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 24a0bad463dda09c7e23bbcc47ecc388735d1ca5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335837"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421831"
 ---
 # <a name="how-to-create-configuration-items-for-mac-os-x-devices-managed-with-the-system-center-configuration-manager-client"></a>Cómo crear elementos de configuración para dispositivos Mac OS X administrados con el cliente de System Center Configuration Manager
 Use el elemento de configuración de **Mac OS X (personalizado)** de System Center Configuration Manager para administrar la configuración de los dispositivos Mac OS X que administra el cliente de Configuration Manager.  
@@ -24,21 +24,21 @@ Use el elemento de configuración de **Mac OS X (personalizado)** de System Cent
   
 ### <a name="to-create-a-custom-mac-os-x-configuration-item"></a>Para crear un elemento de configuración personalizado de Mac OS X  
   
-1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
+1. En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
   
-2.  En el área de trabajo **Activos y compatibilidad** , expanda **Configuración de cumplimiento**y, a continuación, haga clic en **Elementos de configuración**.  
+2. En el área de trabajo **Activos y compatibilidad** , expanda **Configuración de cumplimiento**y, a continuación, haga clic en **Elementos de configuración**.  
   
-3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear elemento de configuración**.  
+3. En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear elemento de configuración**.  
   
-4.  En la página **General** del **Asistente para crear elemento de configuración**, escriba un nombre y, opcionalmente, una descripción para el elemento de configuración.  
+4. En la página **General** del **Asistente para crear elemento de configuración**, escriba un nombre y, opcionalmente, una descripción para el elemento de configuración.  
   
-5.  En **Especifique el tipo de elemento de configuración que desea crear**, seleccione **Mac OS X (custom)**.  
+5. En **Especifique el tipo de elemento de configuración que desea crear**, seleccione **Mac OS X (custom)**.  
   
-6.  Haga clic en **Categorías** si crea y asigna categorías para ayudarle a buscar y filtrar elementos de configuración en la consola de Configuration Manager.  
+6. Haga clic en **Categorías** si crea y asigna categorías para ayudarle a buscar y filtrar elementos de configuración en la consola de Configuration Manager.  
   
-7.  En la página **Plataformas admitidas** del asistente, seleccione las versiones de Mac OS X específicas que evaluarán el elemento de configuración.  
+7. En la página **Plataformas admitidas** del asistente, seleccione las versiones de Mac OS X específicas que evaluarán el elemento de configuración.  
   
-8.  En la página **Configuración** del asistente, agregará nuevas configuraciones cuyo cumplimiento se evaluará en equipos Mac. Haga clic en **Nuevo** para abrir el cuadro de diálogo **Crear configuración** .  
+8. En la página **Configuración** del asistente, agregará nuevas configuraciones cuyo cumplimiento se evaluará en equipos Mac. Haga clic en **Nuevo** para abrir el cuadro de diálogo **Crear configuración** .  
   
 9. En el cuadro de diálogo **Crear configuración** , escriba un nombre único y una descripción para la configuración.  
   
@@ -80,16 +80,16 @@ Use el elemento de configuración de **Mac OS X (personalizado)** de System Cent
   
 14. En el cuadro de diálogo **Crear regla** , proporcione la siguiente información:  
   
-    -   **Nombre:** Escriba un nombre para la regla de cumplimiento.  
+    -   **Nombre:** escriba un nombre para la regla de cumplimiento.  
   
-    -   **Descripción:** Escriba una descripción para la regla de cumplimiento.  
+    -   **Descripción:** escriba una descripción para la regla de cumplimiento.  
   
-    -   **Configuración seleccionada:** Haga clic en **Examinar** para abrir el **Seleccione configuración** cuadro de diálogo. Seleccione la configuración que desea definir una regla de, o haga clic en **nueva configuración**. Cuando haya terminado, haga clic en **seleccione**.  
+    -   **Configuración seleccionada:** haga clic en **Examinar** para abrir el cuadro de diálogo **Seleccionar configuración**. Seleccione la configuración que desea definir una regla de, o haga clic en **nueva configuración**. Cuando haya terminado, haga clic en **seleccione**.  
   
         > [!TIP]  
         >  También puede hacer clic en **propiedades** para ver información acerca de la configuración seleccionada actualmente.  
   
-    -   **Tipo de regla:** seleccione el tipo de regla de cumplimiento que quiere usar:  
+    -   **Tipo de regla**: seleccione el tipo de regla de cumplimiento que quiere usar:  
   
         -   **Valor:** cree una regla que compare el valor devuelto por el elemento de configuración con un valor que especifique.  
   
@@ -144,7 +144,7 @@ Use el elemento de configuración de **Mac OS X (personalizado)** de System Cent
   
             -   **La configuración no debe existir en dispositivos cliente**  
   
-        -   **Gravedad de no conformidad para los informes:** Especificar el nivel de gravedad se indica si se produce un error en esta regla de compatibilidad. Los niveles de gravedad disponibles son los siguientes:  
+        -   **Gravedad de la falta de cumplimiento de los informes:** especifique el nivel de gravedad que se indica si se produce un error en esta regla de cumplimiento. Los niveles de gravedad disponibles son los siguientes:  
   
             -   **Ninguno**: los equipos que no cumplan esta regla de compatibilidad no notificarán ninguna gravedad de error en los informes de Configuration Manager.  
   
@@ -163,9 +163,9 @@ Use el elemento de configuración de **Mac OS X (personalizado)** de System Cent
   
 15. En la página **Resumen** , confirme la configuración para el nuevo elemento de configuración y, a continuación, complete el asistente.  
   
- El nuevo elemento de configuración se muestra en el nodo **Elementos de configuración** del área de trabajo **Activos y compatibilidad** .  
+    El nuevo elemento de configuración se muestra en el nodo **Elementos de configuración** del área de trabajo **Activos y compatibilidad** .  
   
- Si desea agregar este elemento de configuración a una línea base de configuración, vea [Crear líneas base de configuración en System Center Configuration Manager](../../compliance/deploy-use/create-configuration-baselines.md).  
+    Si desea agregar este elemento de configuración a una línea base de configuración, vea [Crear líneas base de configuración en System Center Configuration Manager](../../compliance/deploy-use/create-configuration-baselines.md).  
   
 ## <a name="see-also"></a>Véase también  
  [Elementos de configuración para dispositivos administrados con el cliente de System Center Configuration Manager](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)

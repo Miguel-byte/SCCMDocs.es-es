@@ -10,12 +10,12 @@ ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a6c989b1eabe47f3360ceec660d5eba32811d60
-ms.sourcegitcommit: ee434c53b3695a039b56298082b6f61f1006d9dd
+ms.openlocfilehash: dcf12016206fe0c4296d08ad8404b163607313e1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49943298"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417173"
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>Usar una línea de comandos para instalar sitios de System Center Configuration Manager
 
@@ -26,41 +26,41 @@ ms.locfileid: "49943298"
 ## <a name="supported-tasks-for-command-line-installations"></a>Tareas admitidas para las instalaciones de línea de comandos
  Este método para ejecutar el programa de instalación es compatible con las siguientes tareas de instalación y de mantenimiento del sitio:
 
--   **Instalar un sitio de administración central o sitio primario desde un símbolo del sistema**  
+- **Instalar un sitio de administración central o sitio primario desde un símbolo del sistema**  
   Consulte [Command-line options for Setup](../../../../core/servers/deploy/install/command-line-options-for-setup.md) (Opciones de línea de comandos para el programa de instalación).
 
--  **Modificar los idiomas que se pueden usar en un sitio de administración central o sitio primario**  
-    Para modificar los idiomas que están instalados en un sitio desde un símbolo del sistema (incluidos los idiomas para dispositivos móviles), debe hacer lo siguiente:  
+- **Modificar los idiomas que se pueden usar en un sitio de administración central o sitio primario**  
+   Para modificar los idiomas que están instalados en un sitio desde un símbolo del sistema (incluidos los idiomas para dispositivos móviles), debe hacer lo siguiente:  
 
-     -   Ejecute el programa de instalación desde **&lt;ConfigMgrInstallationPath\>\Bin\X64** en el servidor de sitio.
-     -   Use la opción de la línea de comandos **/MANAGELANGS**.
-     -   Especifique un archivo de script de idioma que especifique los idiomas que quiere agregar o quitar.  
+  - Ejecute el programa de instalación desde **&lt;ConfigMgrInstallationPath\>\Bin\X64** en el servidor de sitio.
+  - Use la opción de la línea de comandos **/MANAGELANGS**.
+  - Especifique un archivo de script de idioma que especifique los idiomas que quiere agregar o quitar.  
 
     Por ejemplo, use la siguiente sintaxis de comando: **setupwpf.exe /MANAGELANGS &lt;archivo de script de idioma\>**.  
 
     Para crear el archivo de script de idioma, use la información de [Command line options to manage languages](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Lang) (Opciones de línea de comandos para administrar idiomas).  
 
--  **Usar un archivo de script de instalación para realizar instalaciones desatendidas de sitios o para recuperar sitios**  
-    Puede ejecutar el programa de instalación desde un símbolo del sistema mediante un script de instalación y ejecutar una instalación desatendida del sitio. También puede usar esta opción para recuperar un sitio.    
+- **Usar un archivo de script de instalación para realizar instalaciones desatendidas de sitios o para recuperar sitios**  
+   Puede ejecutar el programa de instalación desde un símbolo del sistema mediante un script de instalación y ejecutar una instalación desatendida del sitio. También puede usar esta opción para recuperar un sitio.    
 
-    Para usar un script con el programa de instalación, haga lo siguiente:  
+   Para usar un script con el programa de instalación, haga lo siguiente:  
 
-    -   Ejecute el programa de instalación con la opción de la línea de comandos **/SCRIPT** y especifique un archivo de script.  
+  - Ejecute el programa de instalación con la opción de la línea de comandos **/SCRIPT** y especifique un archivo de script.  
 
-    -   El archivo de script debe estar configurado con las claves y los valores necesarios.  
+  - El archivo de script debe estar configurado con las claves y los valores necesarios.  
 
     Para llevar a cabo una instalación desatendida de un sitio de administración central o un sitio primario, el archivo de script debe tener las secciones siguientes:  
 
-    -   Identificación    
-    -   Opciones    
-    -   SQLConfigOptions    
-      -   HierarchyOptions    
-    -   CloudConnectorOptions   
+  - Identificación    
+  - Opciones    
+  - SQLConfigOptions    
+    -   HierarchyOptions    
+  - CloudConnectorOptions   
 
     Para recuperar un sitio, debe incluir también las siguientes secciones del archivo de script:  
 
-    -   Identificación  
-    -   Recuperación
+  - Identificación  
+  - Recuperación
 
 Para obtener más información, consulte [Recuperación de sitio desatendida de Configuration Manager](/sccm/protect/understand/unattended-recovery).  
 

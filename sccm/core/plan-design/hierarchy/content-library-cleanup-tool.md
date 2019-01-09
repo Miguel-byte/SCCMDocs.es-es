@@ -10,12 +10,12 @@ ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e71b95642160d519f222a50a66bc8f636628d6e
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: bd347cecce0ae1317fe51a701ce67b4766fbcd10
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383530"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423191"
 ---
 # <a name="content-library-cleanup-tool"></a>Herramienta de limpieza de la biblioteca de contenido
 
@@ -93,6 +93,7 @@ Para ejecutar la herramienta:
 Use estos parámetros de línea de comandos en cualquier orden.   
 
 ### <a name="required-parameters"></a>Parámetros requeridos
+
 |Parámetro|Detalles|
 |---------|-------|
 | `/dp <distribution point FQDN>`  | Especifique el nombre de dominio completo (FQDN) del punto de distribución que se va a limpiar. |

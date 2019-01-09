@@ -10,12 +10,12 @@ ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 374a1643c5ea439a7406bbb1f6b53322caa50871
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: ec7db94635bcc03b21392db19eb668917f38de6d
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333331"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417224"
 ---
 # <a name="support-for-virtualization-environments-for-system-center-configuration-manager"></a>Compatibilidad con entornos de virtualización de System Center Configuration Manager
 
@@ -25,16 +25,18 @@ Configuration Manager admite la instalación de los roles de sistema de sitio y 
 
  Por ejemplo, si usa Microsoft Hyper-V Server 2012 para hospedar una máquina virtual que ejecuta Windows Server 2012, puede instalar los roles de sistema de sitio o cliente en la máquina virtual (Windows Server 2012), pero no en el host (Microsoft Hyper-V Server 2012).  
 
-|Entorno de virtualización|  
-|--------------------------------|  
-|Windows Server 2008 R2|  
-|Microsoft Hyper-V Server 2008 R2|  
-|Windows Server 2012|  
-|Microsoft Hyper-V Server 2012|  
-|Windows Server 2012 R2|
-|Windows Server 2016 <sup>(Ver *nota 1*)</sup>|
-|Microsoft Hyper-V Server 2016 <sup>(Ver *nota 1*)|
--  *Nota 1*: Configuration Manager no admite la [virtualización anidada](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/what-s-new-in-hyper-v-on-windows#a-namebkmknestedanested-virtualization-new), que es nueva en Windows Server 2016.
+
+|            Entorno de virtualización             |
+|---------------------------------------------------|
+|              Windows Server 2008 R2               |
+|         Microsoft Hyper-V Server 2008 R2          |
+|                Windows Server 2012                |
+|           Microsoft Hyper-V Server 2012           |
+|              Windows Server 2012 R2               |
+|   Windows Server 2016 <sup>(Ver *nota 1*)</sup>   |
+| Microsoft Hyper-V Server 2016 <sup>(Ver *nota 1*) |
+
+-  *Nota 1*: Configuration Manager no admite la [virtualización anidada](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/what-s-new-in-hyper-v-on-windows#a-namebkmknestedanested-virtualization-new), que es nueva en Windows Server 2016.
 
 
  Cada equipo virtual que use debe cumplir o superar los mismos requisitos de hardware y software que usaría para un equipo físico de Configuration Manager.  

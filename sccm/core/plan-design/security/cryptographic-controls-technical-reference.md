@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cc98ee85ffe4fd419ccc2a2e16bf566144f8b670
-ms.sourcegitcommit: ee434c53b3695a039b56298082b6f61f1006d9dd
+ms.openlocfilehash: 6d25c6a11821b73f34c8a3cd6aa95d4a78c86587
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49943315"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418410"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Referencia técnica de controles criptográficos
 
@@ -100,19 +100,19 @@ System Center Configuration Manager usa la firma y el cifrado para ayudar a prot
 
  Se requieren certificados PKI para los siguientes escenarios:  
 
--   Cuando se administran clientes de Configuration Manager en Internet.  
+- Cuando se administran clientes de Configuration Manager en Internet.  
 
--   Cuando se administran clientes de Configuration Manager en dispositivos móviles.  
+- Cuando se administran clientes de Configuration Manager en dispositivos móviles.  
 
--   Cuando se administran equipos Mac.  
+- Cuando se administran equipos Mac.  
 
--   Cuando se utilizan puntos de distribución basados en nube.  
+- Cuando se utilizan puntos de distribución basados en nube.  
 
--   Cuando se administran equipos basados en Intel AMT fuera de banda.  
+- Cuando se administran equipos basados en Intel AMT fuera de banda.  
 
- Para el resto de comunicaciones de Configuration Manager que requieren certificados para la autenticación, firma y cifrado, Configuration Manager usa automáticamente certificados PKI, si están disponibles. Si no están disponibles, Configuration Manager genera certificados autofirmados.  
+  Para el resto de comunicaciones de Configuration Manager que requieren certificados para la autenticación, firma y cifrado, Configuration Manager usa automáticamente certificados PKI, si están disponibles. Si no están disponibles, Configuration Manager genera certificados autofirmados.  
 
- Configuration Manager no usa certificados PKI cuando administra dispositivos móviles mediante el conector de Exchange Server.  
+  Configuration Manager no usa certificados PKI cuando administra dispositivos móviles mediante el conector de Exchange Server.  
 
 ### <a name="mobile-device-management-and-pki-certificates"></a>Certificados PKI y administración de dispositivos móviles  
  Si el dispositivo móvil no está bloqueado por el operador de telefonía móvil, puede usar Configuration Manager o Microsoft Intune para solicitar e instalar un certificado de cliente. Este certificado permite la autenticación mutua entre el cliente del dispositivo móvil y los sistemas de sitio de Configuration Manager o los servicios de Microsoft Intune. Si el dispositivo móvil está bloqueado, no podrá usar Configuration Manager ni Intune para implementar certificados.  
@@ -180,39 +180,39 @@ System Center Configuration Manager usa la firma y el cifrado para ayudar a prot
 
  Además de este certificado para cada servidor de sistema del sitio, Configuration Manager genera un certificado autofirmado para la mayoría de los roles de sistema de sitio. Si hay más de un rol de sistema de sitio en el mismo sitio, comparten el mismo certificado. Por ejemplo, podría tener varios puntos de administración o varios puntos de inscripción en el mismo sitio. Este certificado autofirmado también utiliza SHA-256 y tiene una longitud de clave de 2048 bits. Asimismo se copia en el almacén de usuarios de confianza de los servidores de sistema de sitio que podrían necesitar confiar en él. Los siguientes roles de sistema de sitio generan este certificado:  
 
--   Punto de servicio web del catálogo de aplicaciones  
+- Punto de servicio web del catálogo de aplicaciones  
 
--   Punto de sitios web del catálogo de aplicaciones  
+- Punto de sitios web del catálogo de aplicaciones  
 
--   Punto de sincronización de Asset Intelligence  
+- Punto de sincronización de Asset Intelligence  
 
--   Punto de registro de certificados  
+- Punto de registro de certificados  
 
--   Punto de Endpoint Protection  
+- Punto de Endpoint Protection  
 
--   Punto de inscripción  
+- Punto de inscripción  
 
--   Punto de estado de reserva  
+- Punto de estado de reserva  
 
--   Punto de administración  
+- Punto de administración  
 
--   Punto de distribución habilitado con multidifusión  
+- Punto de distribución habilitado con multidifusión  
 
--   Servidor que ejecuta Internet Information Services (IIS)  
+- Servidor que ejecuta Internet Information Services (IIS)  
 
--   Punto de servicios de informes  
+- Punto de servicios de informes  
 
--   Punto de actualización de software  
+- Punto de actualización de software  
 
--   Punto de migración de estado  
+- Punto de migración de estado  
 
--   Punto de Validador de mantenimiento del sistema  
+- Punto de Validador de mantenimiento del sistema  
 
--   Conector de Microsoft Intune  
+- Conector de Microsoft Intune  
 
- Estos certificados se administran automáticamente mediante Configuration Manager y, en caso necesario, se generan automáticamente.  
+  Estos certificados se administran automáticamente mediante Configuration Manager y, en caso necesario, se generan automáticamente.  
 
- Configuration Manager también usa un certificado de autenticación del cliente para enviar mensajes de estado desde el punto de distribución hasta el punto de administración. Cuando el punto de administración está configurado solamente para conexiones de cliente HTTPS, se debe utilizar un certificado PKI. Si el punto de administración acepta las conexiones HTTP, se puede utilizar un certificado PKI o seleccionar la opción de uso de un certificado autofirmado que tiene capacidad de autenticación de servidor, utiliza SHA-256 y tiene una longitud de clave de 2048 bits.  
+  Configuration Manager también usa un certificado de autenticación del cliente para enviar mensajes de estado desde el punto de distribución hasta el punto de administración. Cuando el punto de administración está configurado solamente para conexiones de cliente HTTPS, se debe utilizar un certificado PKI. Si el punto de administración acepta las conexiones HTTP, se puede utilizar un certificado PKI o seleccionar la opción de uso de un certificado autofirmado que tiene capacidad de autenticación de servidor, utiliza SHA-256 y tiene una longitud de clave de 2048 bits.  
 
 ### <a name="server-communication-between-sites"></a>Comunicación de servidor entre sitios  
  Configuration Manager transfiere datos entre sitios mediante el uso de replicación de base de datos y replicación basada en archivos. Para obtener más información, vea [Communications between endpoints](/sccm/core/plan-design/hierarchy/communications-between-endpoints) (Comunicaciones entre puntos de conexión).  
@@ -223,11 +223,11 @@ System Center Configuration Manager usa la firma y el cifrado para ayudar a prot
 
  La replicación de base de datos en Configuration Manager usa SQL Server Service Broker para transferir datos entre sitios mediante los siguientes mecanismos:  
 
--   Conexión de SQL Server a SQL Server: utiliza credenciales de Windows para autenticación de servidor y certificados autofirmados de 1024 bits para firmar y cifrar los datos mediante el Estándar de cifrado avanzado (AES). Se utilizarán certificados PKI con capacidad de autenticación de servidor si están disponibles. El certificado debe estar ubicado en el almacén personal del almacén de certificados del equipo.  
+- Conexión SQL Server a SQL Server: Utiliza credenciales de Windows para autenticación de servidor y certificados autofirmados de 1024 bits para firmar y cifrar los datos mediante el Estándar de cifrado avanzado (AES). Se utilizarán certificados PKI con capacidad de autenticación de servidor si están disponibles. El certificado debe estar ubicado en el almacén personal del almacén de certificados del equipo.  
 
--   SQL Service Broker: utiliza certificados autofirmados de 2048 bits para autenticación y para firmar y cifrar los datos mediante el Estándar de cifrado avanzado (AES). El certificado debe estar ubicado en la base de datos maestra de SQL Server.  
+- SQL Service Broker: Utiliza certificados autofirmados de 2048 bits para autenticación y para firmar y cifrar los datos mediante el Estándar de cifrado avanzado (AES). El certificado debe estar ubicado en la base de datos maestra de SQL Server.  
 
- La replicación basada en archivos utiliza el protocolo de Bloque de mensajes del servidor (SMB) y utiliza SHA-256 para firmar los datos que no están cifrados pero no contienen información confidencial. Si quiere cifrar los datos, puede usar IPsec y debe implementarlo independientemente de Configuration Manager.  
+  La replicación basada en archivos utiliza el protocolo de Bloque de mensajes del servidor (SMB) y utiliza SHA-256 para firmar los datos que no están cifrados pero no contienen información confidencial. Si quiere cifrar los datos, puede usar IPsec y debe implementarlo independientemente de Configuration Manager.  
 
 ##  <a name="cryptographic-controls-for-clients-that-use-https-communication-to-site-systems"></a>Controles criptográficos para los clientes que usan la comunicación HTTPS con los sistemas de sitio  
  Cuando los roles de sistema de sitio aceptan conexiones de cliente, se pueden configurar para que acepten conexiones HTTPS y HTTP, o solo conexiones HTTPS. Los roles de sistema de sitio que aceptan conexiones de Internet solo aceptan conexiones de cliente a través de HTTPS.  
@@ -240,17 +240,17 @@ System Center Configuration Manager usa la firma y el cifrado para ayudar a prot
 ### <a name="communication-that-is-unencrypted-when-clients-use-https-communication"></a>Comunicación sin cifrar cuando los clientes usan la comunicación HTTPS  
  Cuando los clientes se comunican con los sistemas de sitio mediante HTTPS, las comunicaciones se suelen cifrar mediante SSL. Sin embargo, en las siguientes situaciones, los clientes se comunican con los sistemas de sitio sin utilizar cifrado:  
 
--   El cliente no puede realizar una conexión HTTPS en la intranet y recurre al uso de HTTP cuando los sistemas de sitio permiten esta configuración  
+- El cliente no puede realizar una conexión HTTPS en la intranet y recurre al uso de HTTP cuando los sistemas de sitio permiten esta configuración  
 
--   Comunicación con los siguientes roles de sistema de sitio:  
+- Comunicación con los siguientes roles de sistema de sitio:  
 
-    -   El cliente envía mensajes de estado al punto de estado de reserva  
+  -   El cliente envía mensajes de estado al punto de estado de reserva  
 
-    -   El cliente envía solicitudes PXE a un punto de distribución habilitado con PXE  
+  -   El cliente envía solicitudes PXE a un punto de distribución habilitado con PXE  
 
-    -   El cliente envía datos de notificación a un punto de administración  
+  -   El cliente envía datos de notificación a un punto de administración  
 
- Los puntos de servicios de informes están configurados para utilizar HTTP o HTTPS independientemente del modo de comunicación del cliente.  
+  Los puntos de servicios de informes están configurados para utilizar HTTP o HTTPS independientemente del modo de comunicación del cliente.  
 
 ##  <a name="cryptographic-controls-for-clients-chat-use-http-communication-to-site-systems"></a>Controles criptográficos para los clientes que usan la comunicación HTTP con los sistemas de sitio  
  Cuando los clientes usan la comunicación HTTP con los roles de sistema de sitio, pueden usar los certificados PKI para la autenticación del cliente, o los certificados autofirmados que genera Configuration Manager. Cuando Configuration Manager genera certificados autofirmados, cuentan con un identificador personalizado de objetos para la firma y el cifrado. Estos certificados se usan para identificar al cliente de forma única. Para todos los sistemas operativos admitidos excepto Windows Server 2003, estos certificados autofirmados usan SHA-256 y tienen una longitud de clave de 2048 bits. Para Windows Server 2003, se utiliza SHA1 con una longitud de clave de 1024 bits.  
@@ -268,7 +268,7 @@ Para mejorar la seguridad de los clientes y servidores de Configuration Manager,
 
 -   Habilitar TLS 1.2
 
-    Para habilitar TLS 1.2 para Configuration Manager, consulte el siguiente artículo de Knowledge Base: [Cómo habilitar TLS 1.2 para el Administrador de configuración](https://support.microsoft.com/en-us/help/4040243/how-to-enable-tls-1-2-for-configuration-manager).
+    Para habilitar TLS 1.2 para Configuration Manager, vea el siguiente artículo de Knowledge Base: [Cómo habilitar TLS 1.2 para Configuration Manager](https://support.microsoft.com/en-us/help/4040243/how-to-enable-tls-1-2-for-configuration-manager).
 -   Deshabilitar SSL 3.0, TLS 1.0 y TLS 1.1 
 -   Volver a ordenar los conjuntos de cifrado relacionados con TLS 
 

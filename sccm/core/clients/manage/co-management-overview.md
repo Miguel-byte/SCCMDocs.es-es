@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 1791217e22e2bcc6d5fd2603abee3aaced816afe
-ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
+ms.openlocfilehash: 6434ba443cb884c7fbb5d727c5db3c80d2d88aad
+ms.sourcegitcommit: 12b71da551350c99c5916df3629e33e31040db15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223745"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53530938"
 ---
 # <a name="co-management-for-windows-10-devices"></a>Administración conjunta para dispositivos de Windows 10    
 
@@ -58,9 +58,9 @@ Uso inmediato de las siguientes características de Intune:
 
  Hay dos formas de conseguir la administración conjunta:  
 
-   - Configuration Manager proporciona administración conjunta: inscriba en Intune los dispositivos Windows 10 unidos a Azure AD que ya son clientes de Configuration Manager.  
+   - Configuration Manager aprovisiona la administración conjunta: inscriba en Intune los dispositivos Windows 10 unidos a Azure AD que ya son clientes de Configuration Manager.  
 
-   - Aprovisionados por Intune: para los dispositivos que ya están inscritos en Intune, instale el cliente de Configuration Manager para llegar a un estado de administración conjunta. 
+   - Aprovisionados por Intune: para los dispositivos que ya están inscritos en Intune, el cliente de Configuration Manager se instala para alcanzar un estado de administración conjunta. 
 
 
 ### <a name="configuration-manager"></a>Configuration Manager
@@ -72,21 +72,21 @@ Uso inmediato de las siguientes características de Intune:
 
  - Los dispositivos Windows 10 deben estar unidos a Azure AD. Pueden ser cualquiera de los siguientes tipos:  
 
-     - [Unido a Azure AD híbrido](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup), en el que el dispositivo está unido a Active Directory local y registrado con Azure Active Directory.
+     - [Unido a Azure AD híbrido](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan), en el que el dispositivo está unido a Active Directory local y registrado con Azure Active Directory.
 
-     - Solo unido a Azure AD. (Este tipo se conoce a veces como "unido al dominio en la nube")<!--SCCMDocs issue 605-->
+     - Solo [Unido a Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan). (Este tipo se conoce a veces como "unido al dominio en la nube")<!--SCCMDocs issue 605-->
 
  - [Habilite la inscripción automática de Windows 10](https://docs.microsoft.com/intune/windows-enroll).  
 
 
 ### <a name="intune"></a>Intune
 
- - [Cómo configurar la suscripción a Intune](/sccm/mdm/deploy-use/configure-intune-subscription) o [Configurar Intune](/intune/setup-steps)  
+- [Cómo configurar la suscripción a Intune](/sccm/mdm/deploy-use/configure-intune-subscription) o [Configurar Intune](/intune/setup-steps)  
 
- - [Iniciar la migración de MDM híbrida a Intune independiente](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)  
+- [Iniciar la migración de MDM híbrida a Intune independiente](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)  
 
- > [!Note]  
- > Si tiene un entorno de MDM híbrido (Intune integrado con Configuration Manager), no puede habilitar la administración conjunta. Sin embargo, puede iniciar la migración de los usuarios a Intune independiente y, después, habilitar sus dispositivos Windows 10 asociados para la administración conjunta. Si quiere saber más sobre la migración a Intune independiente, vea [Iniciar la migración de MDM híbrida a Intune independiente](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).  
+  > [!Note]  
+  > Si tiene un entorno de MDM híbrido (Intune integrado con Configuration Manager), no puede habilitar la administración conjunta. Sin embargo, puede iniciar la migración de los usuarios a Intune independiente y, después, habilitar sus dispositivos Windows 10 asociados para la administración conjunta. Si quiere saber más sobre la migración a Intune independiente, vea [Iniciar la migración de MDM híbrida a Intune independiente](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).  
 
 
 ### <a name="enable-co-management"></a>Habilitación de la administración conjunta 

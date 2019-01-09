@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5332fa778b343a5eaae93a08db0826823fffce42
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 88fa98de0f9f0a113adeef3a30536628706484ab
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456386"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424687"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Planeación de la seguridad en Configuration Manager
 
@@ -60,7 +60,7 @@ En este artículo se describen los conceptos para tener en cuenta al planear la 
 
 ### <a name="bkmk_plan-cng"></a> Certificados Cryptography: Next Generation (CNG)  
 
- Configuration Manager tiene compatibilidad limitada con los certificados Cryptography: Next Generation (CNG). Los clientes de Configuration Manager pueden usar un certificado de autenticación del cliente PKI con clave privada en el proveedor de almacenamiento de claves (KSP) de CNG. Gracias a la compatibilidad con KSP, los clientes de Configuration Manager admiten una clave privada basada en hardware, como el KSP de TPM para los certificados de autenticación de cliente PKI. Para obtener más información, consulte [Introducción a los certificados CNG](/sccm/core/plan-design/network/cng-certificates-overview).
+ Configuration Manager admite los certificados Cryptography: Next Generation (CNG). Los clientes de Configuration Manager pueden usar un certificado de autenticación del cliente PKI con clave privada en el proveedor de almacenamiento de claves (KSP) de CNG. Gracias a la compatibilidad con KSP, los clientes de Configuration Manager admiten una clave privada basada en hardware, como el KSP de TPM para los certificados de autenticación de cliente PKI. Para obtener más información, consulte [Introducción a los certificados CNG](/sccm/core/plan-design/network/cng-certificates-overview).
 
 
 ### <a name="bkmk_plan-ehttp"></a> HTTP mejorado  
@@ -154,7 +154,7 @@ Estos certificados de CA raíz importados y el certificado de CA raíz de cada p
 
 En muchos casos, la configuración y el comportamiento predeterminados son suficientes. El cliente de Configuration Manager en equipos de Windows filtra varios certificados mediante estos criterios en este orden:  
 
-1.  La lista de emisores de certificados: el certificado está vinculado a una CA raíz que es de confianza para el punto de administración.  
+1.  La lista de emisores de certificados: El certificado está vinculado a una CA raíz que es confiable para el punto de administración.  
 
 2.  El certificado se encuentra en el almacén de certificados predeterminado **Personal**.  
 
@@ -178,17 +178,17 @@ Los clientes que no tienen la lista de emisores de certificados cuando se instal
 
 En la mayoría de los casos, el cliente de Configuration Manager identifica correctamente un certificado PKI exclusivo y adecuado. Pero si este comportamiento no es así, en lugar de seleccionar el certificado en función de la capacidad de autenticación de cliente, puede configurar dos métodos de selección alternativos:  
 
--   Una coincidencia de cadena parcial del nombre de sujeto del certificado de cliente. Este método es una coincidencia que no distingue mayúsculas de minúsculas. Es adecuado si se usa el nombre de dominio completo (FQDN) de un equipo en el campo del asunto y se quiere basar la selección de certificados en el sufijo del dominio, por ejemplo **contoso.com**. Pero este método de selección se puede usar para identificar cualquier cadena de caracteres secuenciales del nombre de sujeto del certificado que permita distinguirlo de los demás en el almacén de certificados de cliente.  
+- Una coincidencia de cadena parcial del nombre de sujeto del certificado de cliente. Este método es una coincidencia que no distingue mayúsculas de minúsculas. Es adecuado si se usa el nombre de dominio completo (FQDN) de un equipo en el campo del asunto y se quiere basar la selección de certificados en el sufijo del dominio, por ejemplo **contoso.com**. Pero este método de selección se puede usar para identificar cualquier cadena de caracteres secuenciales del nombre de sujeto del certificado que permita distinguirlo de los demás en el almacén de certificados de cliente.  
 
-    > [!NOTE]  
-    >  No se puede usar la coincidencia de cadena parcial con el nombre alternativo del firmante (SAN) como configuración de sitio. Aunque se puede especificar una coincidencia de cadena parcial para el SAN mediante CCMSetup, las propiedades de sitio la sobrescribirán en los escenarios siguientes:  
-    >   
-    >  -   Los clientes recuperan información del sitio que está publicada en Active Directory Domain Services.  
-    > -   Los clientes se instalan mediante la instalación de inserción de cliente.  
-    >   
-    >  Use una coincidencia de cadena parcial del SAN solo cuando instale los clientes manualmente y cuando estos no recuperen la información del sitio desde Active Directory Domain Services. Por ejemplo, estas condiciones se aplican a los clientes solo de Internet.  
+  > [!NOTE]
+  >  No se puede usar la coincidencia de cadena parcial con el nombre alternativo del firmante (SAN) como configuración de sitio. Aunque se puede especificar una coincidencia de cadena parcial para el SAN mediante CCMSetup, las propiedades de sitio la sobrescribirán en los escenarios siguientes:  
+  > 
+  > - Los clientes recuperan información del sitio que está publicada en Active Directory Domain Services.  
+  >   -   Los clientes se instalan mediante la instalación de inserción de cliente.  
+  > 
+  >   Use una coincidencia de cadena parcial del SAN solo cuando instale los clientes manualmente y cuando estos no recuperen la información del sitio desde Active Directory Domain Services. Por ejemplo, estas condiciones se aplican a los clientes solo de Internet.  
 
--   Una coincidencia de los valores de atributo del nombre de firmante del certificado de cliente o de los valores de atributo del nombre alternativo del firmante (SAN). Este método es una coincidencia que distingue mayúsculas de minúsculas. Es adecuado si se usa un nombre distintivo X500 o identificadores de objetos (OID) equivalentes conforme a RFC 3280, y se quiere basar la selección de certificados en los valores de atributo. Puede especificar sólo los atributos, con sus valores, que necesita para identificar de manera exclusiva o validar el certificado y distinguirlo de los demás certificados del almacén de certificados de cliente.  
+- Una coincidencia de los valores de atributo del nombre de firmante del certificado de cliente o de los valores de atributo del nombre alternativo del firmante (SAN). Este método es una coincidencia que distingue mayúsculas de minúsculas. Es adecuado si se usa un nombre distintivo X500 o identificadores de objetos (OID) equivalentes conforme a RFC 3280, y se quiere basar la selección de certificados en los valores de atributo. Puede especificar sólo los atributos, con sus valores, que necesita para identificar de manera exclusiva o validar el certificado y distinguirlo de los demás certificados del almacén de certificados de cliente.  
 
 En la siguiente tabla aparecen los valores de atributo que Configuration Manager admite para los criterios de selección de certificados de cliente.  
 
@@ -212,9 +212,9 @@ En la siguiente tabla aparecen los valores de atributo que Configuration Manager
 
 Si se encuentra más de un certificado adecuado después de aplicar los criterios de selección, se puede invalidar la configuración predeterminada para seleccionar el certificado que tenga el periodo de validez más largo y, en su lugar, especificar que no se seleccione ningún certificado. En este escenario, el cliente no podrá comunicarse con los sistemas de sitio de IIS con un certificado PKI. El cliente envía un mensaje de error al punto de estado de reserva asignado para alertar acerca del error de selección de certificados de manera que se puedan cambiar o refinar los criterios de selección de certificados. El comportamiento del cliente luego dependerá de si la conexión con errores era HTTPS o HTTP:  
 
--   Si la conexión con errores era a través de HTTPS: el cliente intenta conectarse a través de HTTP y usa el certificado autofirmado del cliente.  
+-   Si la conexión con errores era HTTPS: El cliente intenta establecer una conexión a través de HTTP y usa el certificado autofirmado del cliente.  
 
--   Si la conexión con errores era a través de HTTP: el cliente intenta volver a conectarse a través de HTTP con el certificado autofirmado del cliente.  
+-   Si la conexión con errores era HTTP: El cliente intenta establecer otra conexión a través de HTTP con el certificado autofirmado del cliente.  
 
 Para que sea más fácil identificar un certificado de cliente PKI exclusivo, también puede especificar un almacén personalizado distinto al almacén predeterminado **Personal** del almacén del **Equipo**. Pero debe crear este almacén independientemente de Configuration Manager. Debe poder implementar certificados en este almacén personalizado y renovarlos antes de que expire el periodo de validez.  
 
@@ -227,37 +227,37 @@ Las opciones de configuración flexible de Configuration Manager permiten llevar
 
 Debido al número de opciones de configuración de Configuration Manager, no existe una única manera de llevar a cabo la transición de un sitio para que todos los clientes usen conexiones HTTPS. Sin embargo, puede seguir estos pasos como guía:  
 
-1.  Instale el sitio de Configuration Manager y configúrelo para que los sistemas de sitio acepten conexiones de cliente a través de HTTPS y HTTP.  
+1. Instale el sitio de Configuration Manager y configúrelo para que los sistemas de sitio acepten conexiones de cliente a través de HTTPS y HTTP.  
 
-2.  Configure la pestaña **Comunicación de equipo cliente** de las propiedades del sitio de modo que la **Configuración de sistema de sitio** sea **HTTP o HTTPS**, y seleccione **Usar un certificado de cliente PKI (capacidad de autenticación de cliente) cuando esté disponible**.  Para obtener más información, vea [Configurar opciones de certificados PKI de cliente](/sccm/core/plan-design/security/configure-security#BKMK_ConfigureClientPKI).  
+2. Configure la pestaña **Comunicación de equipo cliente** de las propiedades del sitio de modo que la **Configuración de sistema de sitio** sea **HTTP o HTTPS**, y seleccione **Usar un certificado de cliente PKI (capacidad de autenticación de cliente) cuando esté disponible**.  Para obtener más información, vea [Configurar opciones de certificados PKI de cliente](/sccm/core/plan-design/security/configure-security#BKMK_ConfigureClientPKI).  
 
-3.  Lleve a cabo una implementación de PKI para certificados de cliente. Para obtener un ejemplo de implementación, vea [Implementación del certificado de cliente para equipos Windows](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).  
+3. Lleve a cabo una implementación de PKI para certificados de cliente. Para obtener un ejemplo de implementación, vea [Implementación del certificado de cliente para equipos Windows](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).  
 
-4.  Instale los clientes mediante el método de instalación de inserción de cliente. Para obtener más información, vea [Cómo instalar clientes de Configuration Manager mediante la inserción de cliente](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).  
+4. Instale los clientes mediante el método de instalación de inserción de cliente. Para obtener más información, vea [Cómo instalar clientes de Configuration Manager mediante la inserción de cliente](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).  
 
-5.  Supervise la implementación y el estado de los clientes mediante los informes y la información de la consola de Configuration Manager.  
+5. Supervise la implementación y el estado de los clientes mediante los informes y la información de la consola de Configuration Manager.  
 
-6.  Para realizar el seguimiento del número de clientes que utilizan un certificado PKI de cliente, consulte la columna **Certificado de cliente** del área de trabajo **Activos y compatibilidad** , nodo **Dispositivos** .  
+6. Para realizar el seguimiento del número de clientes que utilizan un certificado PKI de cliente, consulte la columna **Certificado de cliente** del área de trabajo **Activos y compatibilidad** , nodo **Dispositivos** .  
 
-     También puede implementar la herramienta de evaluación de preparación de HTTPS de Configuration Manager (**cmHttpsReadiness.exe**) en los equipos. Después, use los informes para ver cuántos equipos pueden usar un certificado PKI de cliente con Configuration Manager.  
+    También puede implementar la herramienta de evaluación de preparación de HTTPS de Configuration Manager (**cmHttpsReadiness.exe**) en los equipos. Después, use los informes para ver cuántos equipos pueden usar un certificado PKI de cliente con Configuration Manager.  
 
-    > [!NOTE]  
-    >  Cuando se instala el cliente de Configuration Manager, se instala la herramienta **CMHttpsReadiness.exe** en la carpeta `%windir%\CCM`. Al ejecutar esta herramienta, dispone de las opciones de línea de comandos siguientes:  
-    >   
-    > - `/Store:<name>`: esta opción es la misma que la propiedad de client.msi **CCMCERTSTORE**  
-    > - `/Issuers:<list>`: esta opción es la misma que la propiedad de client.msi **CCMCERTISSUERS**    
-    > - `/Criteria:<criteria>`: esta opción es la misma que la propiedad de client.msi **CCMCERTSEL**    
-    > - `/SelectFirstCert`: esta opción es la misma que la propiedad de client.msi **CCMFIRSTCERT**    
-    >   
-    >  Para obtener más información, vea [Información sobre las propiedades de instalación de clientes](/sccm/core/clients/deploy/about-client-installation-properties).  
+   > [!NOTE]
+   >  Cuando se instala el cliente de Configuration Manager, se instala la herramienta **CMHttpsReadiness.exe** en la carpeta `%windir%\CCM`. Al ejecutar esta herramienta, dispone de las opciones de línea de comandos siguientes:  
+   > 
+   > - `/Store:<name>`: esta opción es la misma que la propiedad de client.msi **CCMCERTSTORE**  
+   > - `/Issuers:<list>`: esta opción es la misma que la propiedad de client.msi **CCMCERTISSUERS**    
+   > - `/Criteria:<criteria>`: esta opción es la misma que la propiedad de client.msi **CCMCERTSEL**    
+   > - `/SelectFirstCert`: esta opción es la misma que la propiedad de client.msi **CCMFIRSTCERT**    
+   > 
+   >   Para obtener más información, vea [Información sobre las propiedades de instalación de clientes](/sccm/core/clients/deploy/about-client-installation-properties).  
 
-7.  Cuando esté seguro de que un número suficiente de los clientes usa correctamente su certificado PKI de cliente para la autenticación a través de HTTP, siga estos pasos:  
+7. Cuando esté seguro de que un número suficiente de los clientes usa correctamente su certificado PKI de cliente para la autenticación a través de HTTP, siga estos pasos:  
 
-    1.  Implemente un certificado de servidor web PKI en un servidor miembro que ejecute un punto de administración adicional para el sitio, y configure ese certificado en IIS. Para obtener más información, vea [Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
+   1.  Implemente un certificado de servidor web PKI en un servidor miembro que ejecute un punto de administración adicional para el sitio, y configure ese certificado en IIS. Para obtener más información, vea [Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
 
-    2.  Instale el rol de punto de administración en este servidor y configure la opción **Conexiones de cliente** de las propiedades del punto de administración para **HTTPS**.  
+   2.  Instale el rol de punto de administración en este servidor y configure la opción **Conexiones de cliente** de las propiedades del punto de administración para **HTTPS**.  
 
-8.  Compruebe que los clientes que tienen un certificado PKI utilizan el nuevo punto de administración mediante HTTPS. Puede usar el registro de IIS o los contadores de rendimiento para comprobarlo.  
+8. Compruebe que los clientes que tienen un certificado PKI utilizan el nuevo punto de administración mediante HTTPS. Puede usar el registro de IIS o los contadores de rendimiento para comprobarlo.  
 
 9. Vuelva a configurar otros roles de sistema de sitio para utilizar conexiones de cliente HTTPS. Si quiere administrar clientes en Internet, asegúrese de que los sistemas de sitio tienen un nombre de dominio completo de Internet. Configure puntos de administración individuales y puntos de distribución para aceptar conexiones de cliente desde Internet.  
 
@@ -266,9 +266,9 @@ Debido al número de opciones de configuración de Configuration Manager, no exi
 
 10. Amplíe la implementación de certificados PKI para clientes y sistemas de sitio que ejecutan IIS. Configure los roles de sistema de sitio para las conexiones de cliente HTTPS y las conexiones a Internet, según sea necesario.  
 
-11. Para obtener la máxima seguridad: cuando esté seguro de que todos los clientes usan un certificado PKI de cliente para la autenticación y el cifrado, cambie las propiedades del sitio para que se use HTTPS solamente.  
+11. Para obtener la máxima seguridad: Cuando esté seguro de que todos los clientes usan un certificado PKI de cliente para la autenticación y el cifrado, cambie las propiedades del sitio para que se use solamente HTTPS.  
 
- Este plan presenta primero los certificados PKI para la autenticación solo a través de HTTP y, después, para la autenticación y el cifrado a través de HTTPS. Al seguir este plan para introducir gradualmente estos certificados, se reduce el riesgo de que los clientes se conviertan en no administrados. También se beneficiará de la máxima seguridad que Configuration Manager admite.  
+    Este plan presenta primero los certificados PKI para la autenticación solo a través de HTTP y, después, para la autenticación y el cifrado a través de HTTPS. Al seguir este plan para introducir gradualmente estos certificados, se reduce el riesgo de que los clientes se conviertan en no administrados. También se beneficiará de la máxima seguridad que Configuration Manager admite.  
 
 ##  <a name="BKMK_PlanningForRTK"></a> Planear la clave raíz confiable  
 
@@ -280,26 +280,26 @@ Debido al número de opciones de configuración de Configuration Manager, no exi
 
  Los clientes recuperan automáticamente la copia pública de la clave raíz confiable mediante dos mecanismos:  
 
- - Se extiende el esquema de Active Directory para Configuration Manager, y el sitio se publica en Active Directory Domain Services. Después, los clientes recuperan la información de este sitio desde un servidor de catálogo global. Para más información, vea [Preparar Active Directory para la publicación de sitios](/sccm/core/plan-design/network/extend-the-active-directory-schema).  
+- Se extiende el esquema de Active Directory para Configuration Manager, y el sitio se publica en Active Directory Domain Services. Después, los clientes recuperan la información de este sitio desde un servidor de catálogo global. Para más información, vea [Preparar Active Directory para la publicación de sitios](/sccm/core/plan-design/network/extend-the-active-directory-schema).  
 
- - Al instalar los clientes mediante el método de instalación de inserción de cliente. Para obtener más información, vea [Instalación de inserción de cliente](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation).  
+- Al instalar los clientes mediante el método de instalación de inserción de cliente. Para obtener más información, vea [Instalación de inserción de cliente](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation).  
 
- Si los clientes no pueden recuperar la clave raíz confiable mediante uno de estos mecanismos, confiarán en la clave raíz confiable proporcionada por el primer punto de administración con el que se comuniquen. En este escenario, un cliente podría ser dirigido erróneamente al punto de administración de un atacante, donde recibiría una directiva del punto de administración no autorizado. Esta acción requiere un atacante sofisticado. Este ataque se limita al breve periodo antes de que el cliente recupere la clave raíz confiable desde un punto de administración válido. Para reducir el riesgo de que un atacante dirija erróneamente a los clientes a un punto de administración no autorizado, aprovisione los clientes previamente con la clave raíz confiable.  
+  Si los clientes no pueden recuperar la clave raíz confiable mediante uno de estos mecanismos, confiarán en la clave raíz confiable proporcionada por el primer punto de administración con el que se comuniquen. En este escenario, un cliente podría ser dirigido erróneamente al punto de administración de un atacante, donde recibiría una directiva del punto de administración no autorizado. Esta acción requiere un atacante sofisticado. Este ataque se limita al breve periodo antes de que el cliente recupere la clave raíz confiable desde un punto de administración válido. Para reducir el riesgo de que un atacante dirija erróneamente a los clientes a un punto de administración no autorizado, aprovisione los clientes previamente con la clave raíz confiable.  
 
- Use los siguientes procedimientos para aprovisionar previamente un cliente de Configuration Manager y comprobar su clave raíz confiable:  
+  Use los siguientes procedimientos para aprovisionar previamente un cliente de Configuration Manager y comprobar su clave raíz confiable:  
 
- - [Aprovisionamiento previo de un cliente con la clave raíz confiable mediante un archivo](#bkmk_trk-provision-file)  
+- [Aprovisionamiento previo de un cliente con la clave raíz confiable mediante un archivo](#bkmk_trk-provision-file)  
 
- - [Aprovisionamiento previo de un cliente con la clave raíz confiable sin usar un archivo](#bkmk_trk-provision-nofile)  
+- [Aprovisionamiento previo de un cliente con la clave raíz confiable sin usar un archivo](#bkmk_trk-provision-nofile)  
 
- - [Comprobación de la clave raíz confiable de un cliente](#bkmk_trk-verify)  
+- [Comprobación de la clave raíz confiable de un cliente](#bkmk_trk-verify)  
 
- - [Eliminación o reemplazo de la clave raíz confiable](#bkmk_trk-reset)  
+- [Eliminación o reemplazo de la clave raíz confiable](#bkmk_trk-reset)  
 
- > [!NOTE]  
- > Si los clientes pueden obtener la clave raíz confiable de Active Directory Domain Services o la inserción de cliente, no tendrá que realizar el aprovisionamiento previo. 
- > 
- > Cuando los clientes usan la comunicación HTTPS con los puntos de administración, no tendrá que aprovisionar previamente la clave raíz confiable. Establecen la confianza mediante el uso de los certificados PKI.  
+  > [!NOTE]  
+  > Si los clientes pueden obtener la clave raíz confiable de Active Directory Domain Services o la inserción de cliente, no tendrá que realizar el aprovisionamiento previo. 
+  > 
+  > Cuando los clientes usan la comunicación HTTPS con los puntos de administración, no tendrá que aprovisionar previamente la clave raíz confiable. Establecen la confianza mediante el uso de los certificados PKI.  
 
 
 ### <a name="bkmk_trk-provision-file"></a> Aprovisionamiento previo de un cliente con la clave raíz confiable mediante un archivo  

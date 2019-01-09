@@ -10,12 +10,12 @@ ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d32a2997da45f02dfd4d2abaf3bf292295f88224
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b42012bdd6eb0456d25f9970ed2cf18f881a1c14
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335582"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424823"
 ---
 # <a name="revise-and-supersede-applications-in-system-center-configuration-manager"></a>Revisar y sustituir aplicaciones en System Center Configuration Manager
 
@@ -76,13 +76,13 @@ En este tema aprenderá a trabajar con versiones de aplicaciones de System Cente
 
  Puede crear una relación de sustitución que actualice la aplicación dependiente a una versión nueva.  
 
-1.  Asegúrese de que la aplicación dependiente nueva y la aplicación dependiente original están en el mismo grupo de dependencia de la aplicación principal.  
+1. Asegúrese de que la aplicación dependiente nueva y la aplicación dependiente original están en el mismo grupo de dependencia de la aplicación principal.  
 
-2.  Cree una relación de sustitución que sustituya a la aplicación dependiente original con la aplicación dependiente nueva.  
+2. Cree una relación de sustitución que sustituya a la aplicación dependiente original con la aplicación dependiente nueva.  
 
- Durante las instalaciones nuevas de la aplicación principal, se instalará la aplicación dependiente nueva. Las instalaciones existentes de la aplicación principal se actualizarán con la aplicación dependiente nueva.  
+   Durante las instalaciones nuevas de la aplicación principal, se instalará la aplicación dependiente nueva. Las instalaciones existentes de la aplicación principal se actualizarán con la aplicación dependiente nueva.  
 
- El resultado final es que todas las implementaciones de la aplicación principal usarán la aplicación dependiente nueva.  
+   El resultado final es que todas las implementaciones de la aplicación principal usarán la aplicación dependiente nueva.  
 
 ### <a name="further-considerations"></a>Otras consideraciones  
 

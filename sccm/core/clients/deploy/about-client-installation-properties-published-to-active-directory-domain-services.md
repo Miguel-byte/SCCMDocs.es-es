@@ -10,12 +10,12 @@ ms.assetid: 101d7d4d-92db-419d-b2ae-3c1c1dea68e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 46ede93e8366b4ae387f7e04b83dcb33ce854c5e
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: dccd893cc4a22fddf09598376bdcd05b091e6c2c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862522"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421559"
 ---
 # <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>Acerca de las propiedades de instalación de cliente publicadas en Active Directory Domain Services
 
@@ -35,29 +35,29 @@ Al extender el esquema de Active Directory para System Center Configuration Mana
 ## <a name="client-installation-properties-published-to-active-directory-domain-services"></a>Propiedades de instalación de cliente publicadas en Active Directory Domain Services  
 La siguiente es una lista de las propiedades de instalación de cliente. Para más información sobre cada uno de los elementos siguientes, consulte [Acerca de las propiedades de instalación de cliente en System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
--   Código de sitio de Configuration Manager.  
+- Código de sitio de Configuration Manager.  
 
--   El certificado de firma de servidor de sitio.  
+- El certificado de firma de servidor de sitio.  
 
--   La clave raíz confiable.  
+- La clave raíz confiable.  
 
--   Los puertos de comunicación de cliente para HTTP y HTTPS.  
+- Los puertos de comunicación de cliente para HTTP y HTTPS.  
 
--   El punto de estado de reserva. Si el sitio tiene varios puntos de estado de reserva, se publicará en Active Directory Domain Services solo el primero que se instaló.  
+- El punto de estado de reserva. Si el sitio tiene varios puntos de estado de reserva, se publicará en Active Directory Domain Services solo el primero que se instaló.  
 
--   Un valor para indicar que el cliente debe comunicarse solo mediante HTTPS.  
+- Un valor para indicar que el cliente debe comunicarse solo mediante HTTPS.  
 
--   Configuración relacionada con certificados PKI:  
+- Configuración relacionada con certificados PKI:  
 
-   -   Si se utiliza un certificado PKI de cliente.  
+  -   Si se utiliza un certificado PKI de cliente.  
 
-   -   Los criterios de selección para la selección de certificados. Esto puede ser necesario porque el cliente tiene más de un certificado PKI válido que se puede usar para Configuration Manager.  
+  -   Los criterios de selección para la selección de certificados. Esto puede ser necesario porque el cliente tiene más de un certificado PKI válido que se puede usar para Configuration Manager.  
 
-   -   Una opción para determinar el certificado que se va a usar si el cliente tiene varios certificados válidos después del proceso de selección de certificado.  
+  -   Una opción para determinar el certificado que se va a usar si el cliente tiene varios certificados válidos después del proceso de selección de certificado.  
 
-   -   La lista de emisores de certificados que contiene una lista de certificados de CA raíz confiables.  
+  -   La lista de emisores de certificados que contiene una lista de certificados de CA raíz confiables.  
 
--   Propiedades de instalación de client.msi especificados en la pestaña **Cliente** del cuadro de diálogo **Propiedades de instalación de inserción de cliente** .
+- Propiedades de instalación de client.msi especificados en la pestaña **Cliente** del cuadro de diálogo **Propiedades de instalación de inserción de cliente** .
 
 La instalación de cliente (CCMSetup) usa las propiedades publicadas en Active Directory Domain Services solo si no se especifican otras propiedades mediante cualquiera de los métodos siguientes:  
 

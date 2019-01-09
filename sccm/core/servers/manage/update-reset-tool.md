@@ -10,12 +10,12 @@ ms.assetid: 25fa89d6-7e47-45a6-8f4e-70b77560fba6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e6ae6ed46cc1db5f545182e4b4f6b46374b5c174
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: de5c98e45c6f5d6dca1569de812825cce80d6f70
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344095"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417350"
 ---
 # <a name="update-reset-tool"></a>Herramienta de restablecimiento de actualizaciones
 
@@ -62,14 +62,16 @@ Después de ejecutar la herramienta:
 
 **Parámetros de línea de comandos:**  
 
-| Parámetro        |Descripción                 |  
-|------------------|----------------------------|  
-|**-S &lt;nombre de dominio completo del servidor de SQL Server de su sitio de nivel superior>** | *Requerido* <br> Especifique el nombre de dominio completo del servidor de SQL Server que hospeda la base de datos de sitio de nivel superior de la jerarquía.    |  
-| **-D &lt;nombre de base de datos >**                        | *Requerido* <br> Especifique el nombre de la base de datos del sitio de nivel superior.  |  
-| **-P &lt;GUID del paquete >**                         | *Requerido* <br> Especifique el GUID del paquete de actualización que desea restablecer.   |  
-| **-I &lt;nombre de instancia de SQL Server>**             | *Opcional* <br> Identifique la instancia de SQL Server que hospeda la base de datos de sitio. |
-| **-FDELETE**                              | *Opcional* <br> Exija la eliminación de un paquete de actualización descargado correctamente. |  
- **Ejemplos:**  
- En un escenario habitual, querrá restablecer una actualización que tenga problemas de descarga. El nombre de dominio completo de los servidores de SQL Server es *server1.fabrikam.com*, la base de datos de sitio es *CM_XYZ* y el GUID del paquete es *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Ejecutará lo siguiente: ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
- En un escenario más extremo, quizá desee forzar la eliminación del paquete de actualización problemático. El nombre de dominio completo de los servidores de SQL Server es *server1.fabrikam.com*, la base de datos de sitio es *CM_XYZ* y el GUID del paquete es *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Ejecutará lo siguiente: ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***.
+|                        Parámetro                         |                                                       Descripción                                                        |
+|----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| **-S &lt;nombre de dominio completo del servidor de SQL Server de su sitio de nivel superior>** | *Requerido* <br> Especifique el nombre de dominio completo del servidor de SQL Server que hospeda la base de datos de sitio de nivel superior de la jerarquía. |
+|                **-D &lt;nombre de base de datos >**                 |                          *Requerido* <br> Especifique el nombre de la base de datos del sitio de nivel superior.                          |
+|                 **-P &lt;GUID del paquete >**                 |                        *Requerido* <br> Especifique el GUID del paquete de actualización que desea restablecer.                        |
+|           **-I &lt;nombre de instancia de SQL Server>**           |                    *Opcional* <br> Identifique la instancia de SQL Server que hospeda la base de datos de sitio.                     |
+|                       **-FDELETE**                       |                       *Opcional* <br> Exija la eliminación de un paquete de actualización descargado correctamente.                        |
+
+ **Ejemplos:**  
+ En un escenario habitual, querrá restablecer una actualización que tenga problemas de descarga. El nombre de dominio completo de los servidores de SQL Server es *server1.fabrikam.com*, la base de datos de sitio es *CM_XYZ* y el GUID del paquete es *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Ejecute lo siguiente: ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+
+ En un escenario más extremo, quizá desee forzar la eliminación del paquete de actualización problemático. El nombre de dominio completo de los servidores de SQL Server es *server1.fabrikam.com*, la base de datos de sitio es *CM_XYZ* y el GUID del paquete es *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Ejecute lo siguiente: ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***

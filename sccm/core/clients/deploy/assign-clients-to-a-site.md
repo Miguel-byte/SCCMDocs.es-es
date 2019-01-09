@@ -10,12 +10,12 @@ ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2eb75af410ae1511ae105aa7a3a56659c8ef0442
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: 0d2e3c7bc6cba90ebc24bdfdf244f54d1752d749
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862420"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420471"
 ---
 # <a name="how-to-assign-clients-to-a-site-in-system-center-configuration-manager"></a>Cómo asignar clientes a un sitio en System Center Configuration Manager
 
@@ -94,30 +94,30 @@ Si se produce un error en la asignación del cliente, el software cliente perman
 
 Configuration Manager también comprueba que se ha asignado el cliente de Configuration Manager (rama actual) a un sitio compatible. Los escenarios siguientes podrían tener lugar durante la migración desde versiones anteriores de Configuration Manager.  
 
--   Escenario: ha usado la asignación de sitio automática y los límites se superponen con los límites definidos en una versión anterior de Configuration Manager.  
+- Escenario: ha usado la asignación de sitio automática y los límites se superponen con los límites definidos en una versión anterior de Configuration Manager.  
 
-     En este caso, el cliente intenta buscar automáticamente un sitio de Configuration Manager (rama actual).  
+   En este caso, el cliente intenta buscar automáticamente un sitio de Configuration Manager (rama actual).  
 
-     El cliente comprueba en primer lugar Active Directory Domain Services y si encuentra un sitio de Configuration Manager (rama actual) publicado, la asignación de sitio se realiza correctamente. Si esto produce un error (por ejemplo, el sitio de Configuration Manager no está publicado o el equipo es un cliente de grupo de trabajo), el cliente comprobará la información de sitio desde su punto de administración asignado.  
+   El cliente comprueba en primer lugar Active Directory Domain Services y si encuentra un sitio de Configuration Manager (rama actual) publicado, la asignación de sitio se realiza correctamente. Si esto produce un error (por ejemplo, el sitio de Configuration Manager no está publicado o el equipo es un cliente de grupo de trabajo), el cliente comprobará la información de sitio desde su punto de administración asignado.  
 
-    > [!NOTE]  
-    >  Puede asignar un punto de administración al cliente durante la instalación del cliente mediante la propiedad de Client.msi **SMSMP=&lt;nombre_servidor>**.  
+  > [!NOTE]  
+  >  Puede asignar un punto de administración al cliente durante la instalación del cliente mediante la propiedad de Client.msi **SMSMP=&lt;nombre_servidor>**.  
 
-     Si no se puede utilizar ninguno de los dos métodos, no se puede llevar a cabo la asignación de sitio y se debe asignar manualmente el cliente.  
+   Si no se puede utilizar ninguno de los dos métodos, no se puede llevar a cabo la asignación de sitio y se debe asignar manualmente el cliente.  
 
--   Escenario: se ha asignado el cliente de Configuration Manager (rama actual) mediante el uso de un código de sitio específico en lugar de la asignación de sitio automática, y se especificó erróneamente un código de sitio para una versión de Configuration Manager anterior a System Center 2012 R2 Configuration Manager.  
+- Escenario: se ha asignado el cliente de Configuration Manager (rama actual) mediante el uso de un código de sitio específico en lugar de la asignación de sitio automática, y se ha especificado erróneamente un código de sitio para una versión de Configuration Manager anterior a System Center 2012 R2 Configuration Manager.  
 
-     En este caso, no se puede llevar a cabo la asignación de sitio y se debe reasignar manualmente el cliente a un sitio de Configuration Manager (rama actual).  
+   En este caso, no se puede llevar a cabo la asignación de sitio y se debe reasignar manualmente el cliente a un sitio de Configuration Manager (rama actual).  
 
- La comprobación de compatibilidad de sitio requiere el cumplimiento de una de las siguientes condiciones:  
+  La comprobación de compatibilidad de sitio requiere el cumplimiento de una de las siguientes condiciones:  
 
--   El cliente puede acceder a la información de sitio publicada en Servicios de dominio de Active Directory.  
+- El cliente puede acceder a la información de sitio publicada en Servicios de dominio de Active Directory.  
 
--   El cliente se puede comunicar con un punto de administración del sitio.  
+- El cliente se puede comunicar con un punto de administración del sitio.  
 
- Si la comprobación de compatibilidad de sitio no finaliza correctamente, no se puede realizar la asignación de sitio y el cliente permanece sin administrar hasta que la comprobación de compatibilidad de sitio finalice correctamente cuando se vuelva a ejecutar.  
+  Si la comprobación de compatibilidad de sitio no finaliza correctamente, no se puede realizar la asignación de sitio y el cliente permanece sin administrar hasta que la comprobación de compatibilidad de sitio finalice correctamente cuando se vuelva a ejecutar.  
 
- Como excepción, la comprobación de compatibilidad de sitio no se lleva a cabo cuando un cliente está configurado para un punto de administración basado en Internet. En este caso, no se realiza ninguna comprobación de compatibilidad de sitio. Si va a asignar clientes a un sitio que contiene sistemas de sitio basados en Internet y especifica un punto de administración basado en Internet, asegúrese de que asigna el cliente al sitio correcto. Si asigna erróneamente el cliente a un sitio de Configuration Manager 2007, System Center 2012 Configuration Manager o a un sitio de Configuration Manager sin roles de sistema de sitio basados en Internet, el cliente no se administrará.  
+  Como excepción, la comprobación de compatibilidad de sitio no se lleva a cabo cuando un cliente está configurado para un punto de administración basado en Internet. En este caso, no se realiza ninguna comprobación de compatibilidad de sitio. Si va a asignar clientes a un sitio que contiene sistemas de sitio basados en Internet y especifica un punto de administración basado en Internet, asegúrese de que asigna el cliente al sitio correcto. Si asigna erróneamente el cliente a un sitio de Configuration Manager 2007, System Center 2012 Configuration Manager o a un sitio de Configuration Manager sin roles de sistema de sitio basados en Internet, el cliente no se administrará.  
 
 ##  <a name="locating-management-points"></a>Búsqueda de puntos de administración  
  Un cliente, una vez asignado correctamente a un sitio, busca un punto de administración en el sitio.  

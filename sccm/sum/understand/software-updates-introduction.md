@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: d5528fc3e035cd5bed8bc92c8b65f3025d97a2d1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b59d7063cbe1a16dd023466b272d2c1ebea0e5b6
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351554"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424551"
 ---
 # <a name="introduction-to-software-updates-in-system-center-configuration-manager"></a>Introducción a las actualizaciones de software en System Center Configuration Manager
 
@@ -129,19 +129,19 @@ Para ver un escenario de ejemplo que muestra cómo podría implementar actualiza
 
  Con inclusión de la programación de exámenes, el examen de cumplimiento de las actualizaciones de software se puede iniciar de las siguientes maneras:  
 
--   **Programación de exámenes de las actualizaciones de software**: el examen de cumplimiento de las actualizaciones de software se inicia según la programación de exámenes configurada en las opciones del Agente cliente de actualizaciones de software. Para obtener más información sobre cómo configurar el cliente de actualizaciones de software, consulte la [configuración de cliente de las actualizaciones de software](../../core/clients/deploy/about-client-settings.md#software-updates).  
+-   **Programación de exploración de actualización de software**: la exploración de cumplimiento de las actualizaciones de software se inicia en la programación de exploración definida en la configuración del agente cliente de actualizaciones de software. Para obtener más información sobre cómo configurar el cliente de actualizaciones de software, consulte la [configuración de cliente de las actualizaciones de software](../../core/clients/deploy/about-client-settings.md#software-updates).  
 
 -   **Acción de Propiedades de Configuration Manager**: el usuario puede iniciar la acción **Ciclo de detecciones de actualizaciones de software** o **Ciclo de evaluación de implementación de actualizaciones de software** en la pestaña **Acción** del cuadro de diálogo **Propiedades de Configuration Manager** en el equipo cliente.  
 
--   **Programación de reevaluación de implementación**: la evaluación de la implementación y el examen de cumplimiento de las actualizaciones de software se inician según la programación de reevaluación de implementación configurada en las opciones del Agente cliente de actualizaciones de software. Para obtener más información sobre el cliente de actualizaciones de software, consulte la [configuración de cliente de las actualizaciones de software](../../core/clients/deploy/about-client-settings.md#software-updates).  
+-   **Programación de reevaluación de implementación**: La evaluación de la implementación y el examen de cumplimiento de las actualizaciones de software se inician según la programación de reevaluación de implementación configurada en las opciones del Agente cliente de actualizaciones de software. Para obtener más información sobre el cliente de actualizaciones de software, consulte la [configuración de cliente de las actualizaciones de software](../../core/clients/deploy/about-client-settings.md#software-updates).  
 
--   **Antes de descargar los archivos de actualización**: cuando un equipo cliente recibe una directiva de asignación para una nueva implementación necesaria, el Agente cliente de actualizaciones de software descarga los archivos de actualización de software en la memoria caché del cliente local. Antes de descargar los archivos de actualización de software, el agente cliente inicia un examen para comprobar que la actualización de software sigue siendo necesaria.  
+-   **Antes de descargar los archivos de actualización**: Cuando un equipo cliente recibe una directiva de asignación para una nueva implementación necesaria, el Agente cliente de actualizaciones de software descarga los archivos de actualización de software en la caché del cliente local. Antes de descargar los archivos de actualización de software, el agente cliente inicia un examen para comprobar que la actualización de software sigue siendo necesaria.  
 
--   **Antes de la instalación de las actualizaciones de software:**: justo antes de la instalación de las actualizaciones de software, el Agente cliente de actualizaciones de software inicia un examen para comprobar que las actualizaciones de software siguen siendo necesarias.  
+-   **Antes de la instalación de las actualizaciones de software**: Justo antes de la instalación de las actualizaciones de software, el Agente cliente de actualizaciones de software inicia un examen para comprobar que las actualizaciones de software siguen siendo necesarias.  
 
--   **Después de la instalación de las actualizaciones de software**: justo después de completarse la instalación de una actualización de software, el Agente cliente de actualizaciones de software inicia un examen para comprobar que las actualizaciones de software ya no son necesarias y crea un nuevo mensaje de estado que indica que la actualización de software está instalada. Si la instalación finalizó pero es necesario reiniciar el equipo, el mensaje de estado indica que el equipo cliente tiene pendiente un reinicio.  
+-   **Después de la instalación de las actualizaciones de software**: Justo después de completarse la instalación de una actualización de software, el Agente cliente de actualizaciones de software inicia un examen para comprobar que las actualizaciones de software ya no son necesarias y crea un nuevo mensaje de estado que indica que la actualización de software está instalada. Si la instalación finalizó pero es necesario reiniciar el equipo, el mensaje de estado indica que el equipo cliente tiene pendiente un reinicio.  
 
--   **Después del reinicio del sistema**: cuando un equipo cliente tiene pendiente un reinicio del sistema para que finalice la instalación de la actualización de software, el Agente cliente de actualizaciones de software inicia un examen después del reinicio para comprobar que la actualización de software ya no es necesaria y crea un mensaje de estado que indica que la actualización de software está instalada.  
+-   **Después del reinicio del sistema**: Cuando un equipo cliente tiene pendiente un reinicio del sistema para que finalice la instalación de la actualización de software, el Agente cliente de actualizaciones de software inicia un examen después del reinicio para comprobar que la actualización de software ya no es necesaria y crea un mensaje de estado que indica que la actualización de software está instalada.  
 
 #### <a name="time-to-live-value"></a>Valor de período de vida  
  El software actualiza los metadatos necesarios para que el examen de cumplimiento de las actualizaciones de software se almacene en el equipo cliente local y, de forma predeterminada, sea válido hasta 24 horas. Este valor se denomina período de vida (TTL).  
@@ -209,47 +209,47 @@ Para ver un escenario de ejemplo que muestra cómo podría implementar actualiza
 ###  <a name="BKMK_AutomaticDeployment"></a> Implementación automática de las actualizaciones de software  
  La implementación automática de las actualizaciones de software se configura mediante una regla de implementación automática (ADR). Este método de implementación se utiliza normalmente para las actualizaciones de software mensuales (que se conocen como "Patch Tuesday") y para administrar las actualizaciones de definiciones. Cuando la regla se ejecuta, se quitan las actualizaciones de software del grupo de actualizaciones de software (si se está usando un grupo existente); las actualizaciones de software que cumplan los criterios especificados (por ejemplo, todas las actualizaciones de software de seguridad publicadas en la última semana) se agregan a un grupo de actualizaciones de software; los archivos de contenido de las actualizaciones de software se descargan y copian en los puntos de distribución, y las actualizaciones de software se implementan en equipos cliente de la colección de destino. En la lista siguiente se indica el flujo de trabajo general de la implementación automática de las actualizaciones de software:  
 
-1.  Cree una ADR que especifique la configuración de implementación, por ejemplo:  
+1. Cree una ADR que especifique la configuración de implementación, por ejemplo:  
 
-    -   Recopilación de destino  
+   -   Recopilación de destino  
 
-    -   Decida si desea habilitar la implementación o notificar el cumplimiento de las actualizaciones de software para los equipos cliente de la recopilación de destino  
+   -   Decida si desea habilitar la implementación o notificar el cumplimiento de las actualizaciones de software para los equipos cliente de la recopilación de destino  
 
-    -   Criterios de actualizaciones de software  
+   -   Criterios de actualizaciones de software  
 
-    -   Programaciones de evaluación e implementación  
+   -   Programaciones de evaluación e implementación  
 
-    -   Experiencia del usuario  
+   -   Experiencia del usuario  
 
-    -   Propiedades de descarga  
+   -   Propiedades de descarga  
 
-2.  Las actualizaciones de software se agregan a un grupo de actualizaciones de software.  
+2. Las actualizaciones de software se agregan a un grupo de actualizaciones de software.  
 
-3.  El grupo de actualizaciones de software se implementa en los equipos cliente de la recopilación de destino (si se ha especificado).  
+3. El grupo de actualizaciones de software se implementa en los equipos cliente de la recopilación de destino (si se ha especificado).  
 
- Debe determinar la estrategia de implementación que se utilizará en su entorno. Por ejemplo, podría crear la ADR y seleccionar una recopilación de destino de clientes de prueba. Después de comprobar que las actualizaciones de software estén instaladas en el grupo de prueba, puede agregar una nueva implementación a la regla o cambiar la recopilación de la implementación existente por una recopilación de destino que incluya un conjunto de clientes más amplio. Los objetos de actualización de software que se crean mediante reglas ADR son interactivos.  
+   Debe determinar la estrategia de implementación que se utilizará en su entorno. Por ejemplo, podría crear la ADR y seleccionar una recopilación de destino de clientes de prueba. Después de comprobar que las actualizaciones de software estén instaladas en el grupo de prueba, puede agregar una nueva implementación a la regla o cambiar la recopilación de la implementación existente por una recopilación de destino que incluya un conjunto de clientes más amplio. Los objetos de actualización de software que se crean mediante reglas ADR son interactivos.  
 
--   Las actualizaciones de software que se implementaron mediante una ADR se implementan automáticamente en los nuevos clientes agregados a la recopilación de destino.  
+- Las actualizaciones de software que se implementaron mediante una ADR se implementan automáticamente en los nuevos clientes agregados a la recopilación de destino.  
 
--   Las nuevas actualizaciones de software que se agregan a un grupo de actualizaciones de software se implementan automáticamente en los clientes de la recopilación de destino.  
+- Las nuevas actualizaciones de software que se agregan a un grupo de actualizaciones de software se implementan automáticamente en los clientes de la recopilación de destino.  
 
--   Puede habilitar o deshabilitar las implementaciones en cualquier momento para la ADR.  
+- Puede habilitar o deshabilitar las implementaciones en cualquier momento para la ADR.  
 
- Después de crear una ADR, puede agregar implementaciones adicionales a la regla. Esto puede ayudarle a administrar la complejidad de la implementación de varias actualizaciones en diferentes recopilaciones. Cada nueva implementación ofrece todas las funcionalidades y la experiencia completa de supervisión de la implementación, y todas las implementaciones nuevas que agrega:  
+  Después de crear una ADR, puede agregar implementaciones adicionales a la regla. Esto puede ayudarle a administrar la complejidad de la implementación de varias actualizaciones en diferentes recopilaciones. Cada nueva implementación ofrece todas las funcionalidades y la experiencia completa de supervisión de la implementación, y todas las implementaciones nuevas que agrega:  
 
--   Usan el mismo grupo y paquete de actualizaciones que se creó la primera vez que se ejecutó el ADR.  
+- Usan el mismo grupo y paquete de actualizaciones que se creó la primera vez que se ejecutó el ADR.  
 
--   Pueden especificar una recopilación diferente.  
+- Pueden especificar una recopilación diferente.  
 
--   Admiten propiedades de implementación únicas, como:  
+- Admiten propiedades de implementación únicas, como:  
 
-    -   Hora de activación  
+  -   Hora de activación  
 
-    -   Fecha límite  
+  -   Fecha límite  
 
-    -   Mostrar u ocultar la experiencia del usuario final  
+  -   Mostrar u ocultar la experiencia del usuario final  
 
-    -   Alertas independientes para esta implementación  
+  -   Alertas independientes para esta implementación  
 
 ##  <a name="BKMK_DeploymentProcess"></a> Proceso de implementación de actualizaciones de software  
  Después de implementar las actualizaciones de software o cuando una regla de implementación automática se ejecuta e implementa actualizaciones de software, se agrega una directiva de asignación de implementación a la directiva de equipo del sitio. Las actualizaciones de software se descargan desde la ubicación de descarga, Internet, o la carpeta compartida de red, en el origen del paquete. Las actualizaciones de software se copian desde el origen del paquete en la biblioteca de contenido del servidor del sitio y, a continuación, se copian en la biblioteca de contenido del punto de distribución.  

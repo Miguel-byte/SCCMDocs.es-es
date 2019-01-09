@@ -10,12 +10,12 @@ ms.assetid: 7d2bb377-1005-4a55-bd1f-b80a6d0b22e1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 239cb81c975c51a98733a6f325d46c3da676784c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: ae91988f895f916b3c22b636a5c7b51f51e1a811
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334504"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420998"
 ---
 # <a name="how-to-upgrade-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>Cómo actualizar clientes para servidores Linux y UNIX en System Center Configuration Manager
 
@@ -38,27 +38,27 @@ Puede actualizar la versión del cliente para Linux y UNIX en un equipo a una ve
 
 #### <a name="to-use-a-software-deployment-to-upgrade-the-client-on-linux-and-unix-servers"></a>Uso de una implementación de software para actualizar el cliente en servidores Linux y UNIX  
 
-1.  Copie el nuevo archivo de paquete de instalación de cliente en el equipo que ejecuta el cliente de Configuration Manager que se va a actualizar.  
+1. Copie el nuevo archivo de paquete de instalación de cliente en el equipo que ejecuta el cliente de Configuration Manager que se va a actualizar.  
 
-     Por ejemplo, coloque el paquete de instalación del cliente e instale el script de actualización acumulativa 1 en la siguiente ubicación en el equipo cliente: **/tmp/PATCH**  
+    Por ejemplo, coloque el paquete de instalación del cliente e instale el script de actualización acumulativa 1 en la siguiente ubicación en el equipo cliente: **/tmp/PATCH**  
 
-2.  Cree un script para administrar la actualización del cliente de Configuration Manager. Después, coloque una copia del script en la misma carpeta del equipo cliente que los archivos de instalación del cliente del paso 1.  
+2. Cree un script para administrar la actualización del cliente de Configuration Manager. Después, coloque una copia del script en la misma carpeta del equipo cliente que los archivos de instalación del cliente del paso 1.  
 
-     El script no requiere un nombre específico, sino que debe contener líneas de comandos suficientes para usar los archivos de instalación del cliente desde una carpeta local en el equipo cliente y para instalar el paquete de instalación del cliente mediante la propiedad de línea de comandos **-keepdb**. Use la propiedad de línea de comandos **-keepdb** para mantener el identificador único del cliente actual para que pueda usarlo el nuevo cliente que está instalando.  
+    El script no requiere un nombre específico, sino que debe contener líneas de comandos suficientes para usar los archivos de instalación del cliente desde una carpeta local en el equipo cliente y para instalar el paquete de instalación del cliente mediante la propiedad de línea de comandos **-keepdb**. Use la propiedad de línea de comandos **-keepdb** para mantener el identificador único del cliente actual para que pueda usarlo el nuevo cliente que está instalando.  
 
-     Por ejemplo, cree un script denominado **upgrade.sh** que contenga las siguientes líneas:  
+    Por ejemplo, cree un script denominado **upgrade.sh** que contenga las siguientes líneas:  
 
-    ```  
-    #!/bin/sh  
-    #  
-    /tmp/PATCH/install -sitecode <code> -mp <hostname> -keepdb /tmp/PATCH/ccm-Universal-x64.<build>.tar  
+   ```  
+   #!/bin/sh  
+   #  
+   /tmp/PATCH/install -sitecode <code> -mp <hostname> -keepdb /tmp/PATCH/ccm-Universal-x64.<build>.tar  
 
-    ```  
+   ```  
 
-     Después, cópielo en la carpeta **/tmp/PATCH** en el equipo cliente.
+    Después, cópielo en la carpeta **/tmp/PATCH** en el equipo cliente.
 
-3.  Use la implementación de software para que cada cliente emplee el comando **at** integrado de los equipos para ejecutar el script **upgrade.sh** con un breve retraso antes de que se ejecute el script.  
+3. Use la implementación de software para que cada cliente emplee el comando **at** integrado de los equipos para ejecutar el script **upgrade.sh** con un breve retraso antes de que se ejecute el script.  
 
-     Por ejemplo, use la siguiente línea de comandos para ejecutar el script: **at -f /tmp/upgrade.sh -m now + 5 minutes**  
+    Por ejemplo, use la siguiente línea de comandos para ejecutar el script: **at -f /tmp/upgrade.sh -m now + 5 minutes**  
 
- Una vez que el cliente programe correctamente el script **upgrade.sh** que se va a ejecutar, el cliente enviará un mensaje de estado para indicar que la implementación de software se completó correctamente. Sin embargo, la instalación de cliente real la administra el equipo después del retraso. Una vez finalizada la actualización del cliente, revise el archivo **/var/opt/microsoft/scxcm.log** en el equipo cliente para validar la instalación. Confirme que el cliente está instalado y se comunica con el sitio. Para ello, vea los detalles del cliente en el nodo **Dispositivos** del área de trabajo **Activos y compatibilidad** en la consola de Configuration Manager.  
+   Una vez que el cliente programe correctamente el script **upgrade.sh** que se va a ejecutar, el cliente enviará un mensaje de estado para indicar que la implementación de software se completó correctamente. Sin embargo, la instalación de cliente real la administra el equipo después del retraso. Una vez finalizada la actualización del cliente, revise el archivo **/var/opt/microsoft/scxcm.log** en el equipo cliente para validar la instalación. Confirme que el cliente está instalado y se comunica con el sitio. Para ello, vea los detalles del cliente en el nodo **Dispositivos** del área de trabajo **Activos y compatibilidad** en la consola de Configuration Manager.  

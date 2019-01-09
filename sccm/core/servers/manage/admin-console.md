@@ -10,12 +10,12 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 073f908057d459d847cbec6b380e7a4a8683db2b
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 16b56d59e1cba6a36f0bd8189587794a680c3865
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456165"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422885"
 ---
 # <a name="using-the-configuration-manager-console"></a>Uso de la consola de Configuration Manager
 
@@ -32,9 +32,11 @@ La consola se conecta al servidor de sitio de administración central o a los se
 Para conectarse a otro servidor de sitio, siga estos pasos: 
 
 1. Haga clic en la flecha situada en la parte superior de la [cinta](#ribbon) y elija **Conectar a un nuevo sitio**.  
-    ![Conecte la consola a un nuevo sitio](media/connect-to-a-new-site.png)  
+
+    ![Conexión de la consola a un sitio nuevo](media/connect-to-a-new-site.png)  
 
 2. Escriba el FQDN del servidor del sitio. Si se ha conectado anteriormente al servidor de sitio, seleccione el servidor en la lista desplegable.  
+
     ![Ventana de conexión de sitio, especifique el FQDN del servidor de sitio](media/site-server-fqdn.png)  
 
 3. Seleccione **Conectar**.  
@@ -51,18 +53,24 @@ Algunas áreas de la consola pueden no estar visibles en función del rol de seg
 
 ### <a name="workspaces"></a>Áreas de trabajo
 
-La consola de Configuration Manager tiene cuatro **áreas de trabajo**: 
-   - **Activos y compatibilidad**  
-   - **Biblioteca de software**  
-   - **Supervisión**  
-   - **Administración**  
+La consola de Configuration Manager tiene cuatro **áreas de trabajo**:  
+
+- **Activos y compatibilidad**  
+
+- **Biblioteca de software**  
+
+- **Supervisión**  
+
+- **Administración**  
 
 ![Áreas de trabajo de Configuration Manager con el menú contextual](media/configuration-manager-workspaces.png)  
 
 Cambie el orden de los botones del área de trabajo; para ello, haga clic en la flecha hacia abajo y elija **Opciones de Panel de navegación**. Seleccione un elemento que quiera **Subir** o **Bajar**. Haga clic en **Restablecer** para restaurar el orden de botones predeterminado.  
- ![Ventana de Opciones de Panel de navegación para cambiar el orden de las áreas de trabajo](media/navigation-pane-options.png)  
+
+ ![Ventana de Opciones del Panel de navegación para cambiar el orden de las áreas de trabajo](media/navigation-pane-options.png)  
 
 Minimice un botón del área de trabajo seleccionando **Mostrar menos botones**. La última área de trabajo de la lista se minimiza primero. Seleccione un botón minimizado y elija **Mostrar más botones** para restaurar el botón a su tamaño original.   
+
 ![Áreas de trabajo minimizadas en la consola de Configuration Manager](media/workspace-buttons.png)  
 
 
@@ -71,33 +79,40 @@ Minimice un botón del área de trabajo seleccionando **Mostrar menos botones**.
 Las áreas de trabajo son una colección de **nodos**. Un ejemplo de un nodo es el nodo **Grupos de actualizaciones de software** en el área de trabajo **Biblioteca de software**. 
 
 Una vez que se encuentran en el nodo, puede hacer clic en la flecha para minimizar el panel de navegación.  
+
 ![Nodo de ejemplo y flecha de minimizar resaltado](media/software-update-groups-node.png)  
 
 Use la **barra de navegación** para desplazarse por la consola al minimizar el panel de navegación.  
+
 ![Configuration Manager minimizado en el panel de navegación](media/minimized-navigation-pane.png)  
 
 En la consola, los nodos a veces se organizan en carpetas. Si hace clic directamente en la carpeta, suele llevarle a un **índice de navegación** o a un **panel**.  
+
 ![Índice de navegación de las actualizaciones de software de Configuration Manager](media/software-updates-navigation-index.png)  
 
 
 ### <a name="ribbon"></a>Cinta de opciones 
 
 La cinta está en la parte superior de la consola de Configuration Manager. La cinta puede tener más de una pestaña y se puede minimizar usando la flecha situada a la derecha. Los botones de la cinta de opciones cambian en función del nodo. La mayoría de los botones de la cinta también están disponibles en los menús que verá en los menús contextuales.  
+
 ![Cinta de opciones de ejemplo, flecha para resaltar varias pestañas y minimizar](media/ribbon.png)   
 
 
 ### <a name="details-pane"></a>Panel de detalles
 
-Puede obtener información adicional sobre los elementos revisando el panel de detalles. El panel de detalles puede tener una o más pestañas. Las pestañas varían según el nodo. 
+Puede obtener información adicional sobre los elementos revisando el panel de detalles. El panel de detalles puede tener una o más pestañas. Las pestañas varían según el nodo.  
+
 ![Panel de detalles de ejemplo de Configuration Manager](media/details-pane.png)   
 
 
 ### <a name="columns"></a>Columnas 
 
 Puede agregar columnas, quitarlas, reordenarlas y cambiar su tamaño. Estas acciones le permiten mostrar los datos que prefiera. Las columnas disponibles varían en función del nodo. Para agregar o quitar una columna de la vista, haga clic con el botón derecho en un encabezado de columna existente y seleccione un elemento. Reordene las columnas arrastrando el encabezado de columna donde desee que esté ubicado.  
+
 ![Columna para agregar en Configuration Manager](media/add-columns.png)  
 
 En la parte inferior del menú contextual de la columna puede ordenar o agrupar por una columna. Además, también puede ordenar por columna seleccionando el encabezado.  
+
 ![Agrupar por columna en Configuration Manager](media/column-group-by.png)  
 
 
@@ -122,10 +137,12 @@ La consola de Configuration Manager tiene las opciones de línea de comandos sig
 <!--1357542-->
 
 A partir de la versión 1806, los comentarios sobre el producto se envían desde la consola.  
-   
-- **Enviar una sonrisa**: enviar comentarios sobre lo que le gustó.
-- **Enviar una desaprobación**: enviar comentarios sobre lo que no le gustó. 
-- **Enviar una sugerencia**: le lleva a UserVoice para compartir sus ideas. 
+
+- **Enviar una sonrisa**: envíe comentarios sobre lo que le ha gustado.  
+
+- **Enviar una desaprobación**: envíe comentarios sobre lo que no le ha gustado.  
+
+- **Enviar una sugerencia**: le lleva a UserVoice para compartir sus ideas.  
  
 Para obtener más información, vea [Comentarios sobre el producto](/sccm/core/understand/find-help#BKMK_1806Feedback).
 
@@ -133,8 +150,10 @@ Para obtener más información, vea [Comentarios sobre el producto](/sccm/core/u
 ### <a name="assets-and-compliance-workspace"></a>Área de trabajo Activos y compatibilidad
 
 #### <a name="view-users-for-a-device"></a>Ver los usuarios de un dispositivo
-A partir de la versión 1806, las siguientes columnas están disponibles en el nodo **Dispositivos**:
+A partir de la versión 1806, las siguientes columnas están disponibles en el nodo **Dispositivos**:  
+
 - **Usuarios primarios** <!--1357280-->  
+
 - **Usuario que ha iniciado sesión actualmente** <!--1358202-->  
 
 Para obtener más información sobre cómo mostrar una columna no predeterminada, vea [Columnas](#columns).
@@ -143,9 +162,11 @@ Para obtener más información sobre cómo mostrar una columna no predeterminada
 ### <a name="monitoring-workspace"></a>Área de trabajo de supervisión
 
 #### <a name="copy-details-in-monitoring-views"></a>Copiar detalles en las vistas de supervisión
-<!--1357856-->A partir de la versión 1806, se puede copiar información desde el panel **Detalles del activo** a los siguientes nodos de supervisión: 
-    - **Estado de distribución de contenido**  
-    - **Estado de implementación**  
+<!--1357856-->A partir de la versión 1806, se puede copiar información desde el panel **Detalles del activo** a los siguientes nodos de supervisión:  
+
+- **Estado de distribución de contenido**  
+
+- **Estado de implementación**  
 
 ![Vista del estado de implementación, detalles del activo de copia](media/1810-deployment-status.PNG)
 

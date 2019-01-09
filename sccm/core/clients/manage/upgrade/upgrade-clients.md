@@ -10,12 +10,12 @@ ms.assetid: 446c83b5-c292-4e74-ba19-0792ac6b3472
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76b6b3e1e3ee8e1cdbfbb61890b5a1f7ac5e853f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d63100e5525b24ffd8deba447a10325c8209ea00
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334021"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416697"
 ---
 # <a name="upgrade-clients-in-system-center-configuration-manager"></a>Actualizar clientes en System Center Configuration Manager
 
@@ -31,19 +31,19 @@ Puede usar varios métodos para actualizar el software cliente de System Center 
 
  **Ventajas**  
 
--   No requiere la detección previa de equipos para actualizar el cliente.  
+- No requiere la detección previa de equipos para actualizar el cliente.  
 
--   Se puede utilizar para nuevas instalaciones o actualizaciones de cliente.  
+- Se puede utilizar para nuevas instalaciones o actualizaciones de cliente.  
 
--   Los equipos pueden leer las propiedades de instalación de cliente publicadas en Servicios de dominio de Active Directory.  
+- Los equipos pueden leer las propiedades de instalación de cliente publicadas en Servicios de dominio de Active Directory.  
 
--   No requiere la configuración y el mantenimiento de una cuenta de instalación para el equipo cliente especificado.  
+- No requiere la configuración y el mantenimiento de una cuenta de instalación para el equipo cliente especificado.  
 
- **Desventajas**  
+  **Desventajas**  
 
--   Puede provocar mucho tráfico de red si está actualizando muchos clientes.  
+- Puede provocar mucho tráfico de red si está actualizando muchos clientes.  
 
--   Si el esquema de Active Directory no se extiende para Configuration Manager, debe usar la [configuración de directiva de grupo](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP) para agregar propiedades de instalación de cliente a los equipos del sitio.  
+- Si el esquema de Active Directory no se extiende para Configuration Manager, debe usar la [configuración de directiva de grupo](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP) para agregar propiedades de instalación de cliente a los equipos del sitio.  
 
 
 ## <a name="logon-script-installation"></a>Instalación de script de inicio de sesión  
@@ -51,42 +51,42 @@ Puede usar varios métodos para actualizar el software cliente de System Center 
 
  **Ventajas**  
 
--   No requiere la detección de equipos para instalar el cliente.  
+- No requiere la detección de equipos para instalar el cliente.  
 
--   Se puede utilizar para nuevas instalaciones o actualizaciones de cliente.  
+- Se puede utilizar para nuevas instalaciones o actualizaciones de cliente.  
 
--   Admite el uso de propiedades de línea de comandos para CCMSetup.  
+- Admite el uso de propiedades de línea de comandos para CCMSetup.  
 
- **Desventajas**  
+  **Desventajas**  
 
--   Puede provocar mucho tráfico de red si está actualizando muchos clientes en un corto período de tiempo.  
+- Puede provocar mucho tráfico de red si está actualizando muchos clientes en un corto período de tiempo.  
 
--   Puede tardar bastante tiempo en actualizar todos los equipos cliente si los usuarios no inician sesión en la red con frecuencia.  
+- Puede tardar bastante tiempo en actualizar todos los equipos cliente si los usuarios no inician sesión en la red con frecuencia.  
 
- Para obtener más información, consulte [Instalación de clientes de Configuration Manager mediante scripts de inicio de sesión](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientLogonScript).  
+  Para obtener más información, consulte [Instalación de clientes de Configuration Manager mediante scripts de inicio de sesión](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientLogonScript).  
 
 ## <a name="manual-installation"></a>Instalación manual  
  **Plataforma de cliente admitida:** Windows, UNIX/Linux, Mac OS X  
 
  **Ventajas**  
 
--   No requiere la detección previa de equipos para actualizar el cliente.  
+- No requiere la detección previa de equipos para actualizar el cliente.  
 
--   Puede ser útil para realizar pruebas.  
+- Puede ser útil para realizar pruebas.  
 
--   Admite el uso de propiedades de línea de comandos para CCMSetup.  
+- Admite el uso de propiedades de línea de comandos para CCMSetup.  
 
- **Desventajas**  
+  **Desventajas**  
 
--   Carece de automatización y es, por lo tanto, un proceso lento.  
+- Carece de automatización y es, por lo tanto, un proceso lento.  
 
- Para obtener más información, consulte los temas siguientes:  
+  Para obtener más información, consulte los temas siguientes:  
 
--   [Instalación manual de clientes de Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual)  
+- [Instalación manual de clientes de Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual)  
 
--   [Cómo actualizar clientes para servidores Linux y UNIX en System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)  
+- [Cómo actualizar clientes para servidores Linux y UNIX en System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)  
 
--   [Cómo actualizar clientes en equipos Mac en System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-on-mac-computers.md)  
+- [Cómo actualizar clientes en equipos Mac en System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-on-mac-computers.md)  
 
 ## <a name="upgrade-installation-application-management"></a>Instalación de la actualización (administración de aplicaciones)  
  **Plataforma de cliente admitida:** Windows  
@@ -96,15 +96,15 @@ Puede usar varios métodos para actualizar el software cliente de System Center 
 
  **Ventajas**  
 
--   Admite el uso de propiedades de línea de comandos para CCMSetup.  
+- Admite el uso de propiedades de línea de comandos para CCMSetup.  
 
- **Desventajas**  
+  **Desventajas**  
 
--   Puede causar mucho tráfico de red si distribuye el cliente en grandes recopilaciones.  
+- Puede causar mucho tráfico de red si distribuye el cliente en grandes recopilaciones.  
 
--   Solo puede utilizarse para actualizar el software cliente en equipos detectados y asignados al sitio.  
+- Solo puede utilizarse para actualizar el software cliente en equipos detectados y asignados al sitio.  
 
- Para obtener más información, consulte [Cómo instalar clientes de Configuration Manager mediante un paquete y un programa](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientApp).  
+  Para obtener más información, consulte [Cómo instalar clientes de Configuration Manager mediante un paquete y un programa](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientApp).  
 
 ## <a name="automatic-client-upgrade"></a>Actualización de cliente automática  
 
@@ -115,33 +115,33 @@ Puede usar varios métodos para actualizar el software cliente de System Center 
 
  **Ventajas**  
 
--   Se puede utilizar para mantener automáticamente la versión más reciente para los clientes en su sitio.  
+- Se puede utilizar para mantener automáticamente la versión más reciente para los clientes en su sitio.  
 
--   Requiere una administración mínima.  
+- Requiere una administración mínima.  
 
- **Desventajas**  
+  **Desventajas**  
 
--   Solo se puede utilizar para actualizar el software cliente y no se puede utilizar para instalar un nuevo cliente.  
+- Solo se puede utilizar para actualizar el software cliente y no se puede utilizar para instalar un nuevo cliente.  
 
--   No es un método adecuado para actualizar muchos clientes simultáneamente.  
+- No es un método adecuado para actualizar muchos clientes simultáneamente.  
 
--   Se aplica a todos los clientes en la jerarquía asignados a un sitio. No se puede limitar por recopilación.  
+- Se aplica a todos los clientes en la jerarquía asignados a un sitio. No se puede limitar por recopilación.  
 
--   Opciones de programación limitadas.  
+- Opciones de programación limitadas.  
 
- Para obtener más información, consulte [Actualizar clientes de equipos Windows con System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
+  Para obtener más información, consulte [Actualizar clientes de equipos Windows con System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
 ## <a name="client-testing"></a>Pruebas de cliente  
  **Plataforma de cliente admitida:** Windows  
 
  **Ventajas**  
 
--   Puede usarse para probar nuevas versiones de cliente de una recopilación de preproducción menor.  
+- Puede usarse para probar nuevas versiones de cliente de una recopilación de preproducción menor.  
 
--   Cuando se completa la prueba, los clientes de preproducción se promueven a producción y se actualizan de manera automática en el sitio de Configuration Manager.  
+- Cuando se completa la prueba, los clientes de preproducción se promueven a producción y se actualizan de manera automática en el sitio de Configuration Manager.  
 
- **Desventajas**  
+  **Desventajas**  
 
--   Solo se puede utilizar para actualizar el software cliente y no se puede utilizar para instalar un nuevo cliente.  
+- Solo se puede utilizar para actualizar el software cliente y no se puede utilizar para instalar un nuevo cliente.  
 
- [Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  
+  [Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  

@@ -10,12 +10,12 @@ ms.assetid: e327ce38-6c07-4a27-b6eb-7e5bf74ed04b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4faaae2d261837043b8b6ec208dd8b53b2a97b15
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: aceb5f032cd0a4a5c12672db625b540465e37800
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350911"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418482"
 ---
 # <a name="planning-for-operating-system-deployment-interoperability-in-system-center-configuration-manager"></a>Planeamiento de la interoperabilidad de la implementación de sistema operativo en System Center Configuration Manager
 
@@ -25,37 +25,37 @@ Si en una misma jerarquía hay varios sitios de System Center Configuration Mana
 
  Considere los siguientes puntos cuando actualice el sitio de nivel superior de la jerarquía y otros sitios de la jerarquía ejecuten Configuration Manager con una versión anterior:  
 
--   Paquete de instalación de cliente  
+- Paquete de instalación de cliente  
 
-    -   El origen del paquete de instalación de cliente predeterminado se actualiza automáticamente y todos los puntos de distribución de la jerarquía se actualizan con el paquete de instalación de cliente nuevo, incluso en aquellos puntos de distribución de sitios de la jerarquía que tienen una versión inferior.  
+  -   El origen del paquete de instalación de cliente predeterminado se actualiza automáticamente y todos los puntos de distribución de la jerarquía se actualizan con el paquete de instalación de cliente nuevo, incluso en aquellos puntos de distribución de sitios de la jerarquía que tienen una versión inferior.  
 
-    -   Los clientes que ejecutan la nueva versión no se pueden asignar a sitios que aún no se actualizaron a dicha versión. Asignación se bloquea en el punto de administración.  
+  -   Los clientes que ejecutan la nueva versión no se pueden asignar a sitios que aún no se actualizaron a dicha versión. Asignación se bloquea en el punto de administración.  
 
--   Imágenes de arranque  
+- Imágenes de arranque  
 
-    -   Si actualiza el sitio de primer nivel a la última versión de Configuration Manager, las imágenes de arranque predeterminadas (x86 y x64) se actualizan automáticamente a imágenes de arranque basadas en Windows ADK para Windows 10, que usan Windows PE 10. Los archivos asociados a las imágenes de arranque predeterminadas se actualizan con la versión de Configuration Manager más reciente de los archivos. Las imágenes de arranque personalizadas no se actualizan automáticamente. Deberá actualizar las imágenes de arranque personalizadas manualmente, incluidas las versiones anteriores de Windows PE.  
+  -   Si actualiza el sitio de primer nivel a la última versión de Configuration Manager, las imágenes de arranque predeterminadas (x86 y x64) se actualizan automáticamente a imágenes de arranque basadas en Windows ADK para Windows 10, que usan Windows PE 10. Los archivos asociados a las imágenes de arranque predeterminadas se actualizan con la versión de Configuration Manager más reciente de los archivos. Las imágenes de arranque personalizadas no se actualizan automáticamente. Deberá actualizar las imágenes de arranque personalizadas manualmente, incluidas las versiones anteriores de Windows PE.  
 
-    -   No use medios dinámicos si la jerarquía de sitio contiene sitios con versiones diferentes de Configuration Manager. En su lugar, use medios basados en el sitio para establecer contacto con un punto de administración concreto hasta que todos los sitios se actualicen a la misma versión de Configuration Manager.  
+  -   No use medios dinámicos si la jerarquía de sitio contiene sitios con versiones diferentes de Configuration Manager. En su lugar, use medios basados en el sitio para establecer contacto con un punto de administración concreto hasta que todos los sitios se actualicen a la misma versión de Configuration Manager.  
 
-    -   Compruebe que las imágenes de arranque de Configuration Manager más recientes contienen las personalizaciones pertinentes y, después, actualice todos los puntos de distribución en los sitios con la versión más reciente de Configuration Manager con las imágenes de arranque nuevas.  
+  -   Compruebe que las imágenes de arranque de Configuration Manager más recientes contienen las personalizaciones pertinentes y, después, actualice todos los puntos de distribución en los sitios con la versión más reciente de Configuration Manager con las imágenes de arranque nuevas.  
 
--   Herramienta de migración de estado de usuario (USMT)  
+- Herramienta de migración de estado de usuario (USMT)  
 
-    -   Si actualiza el sitio de primer nivel a la última versión de Configuration Manager, el paquete de USMT predeterminado también se actualizará automáticamente a esta versión. Los paquetes USMT personalizados no se actualizan automáticamente. Por tanto, tendrá que actualizarlos manualmente.  
+  -   Si actualiza el sitio de primer nivel a la última versión de Configuration Manager, el paquete de USMT predeterminado también se actualizará automáticamente a esta versión. Los paquetes USMT personalizados no se actualizan automáticamente. Por tanto, tendrá que actualizarlos manualmente.  
 
--   Nuevas etapas de la secuencia de tareas  
+- Nuevas etapas de la secuencia de tareas  
 
-    -   Periódicamente, se introducen nuevas etapas en la secuencia de tareas con las nuevas versiones de Configuration Manager. Al implementar una secuencia de tareas con una nueva etapa en clientes más antiguos, se producirá un error en la etapa de la secuencia de tareas. Antes de implementar una secuencia de tareas con una nueva etapa, asegúrese de que los clientes de la recopilación de destino están actualizados a la nueva versión.  
+  -   Periódicamente, se introducen nuevas etapas en la secuencia de tareas con las nuevas versiones de Configuration Manager. Al implementar una secuencia de tareas con una nueva etapa en clientes más antiguos, se producirá un error en la etapa de la secuencia de tareas. Antes de implementar una secuencia de tareas con una nueva etapa, asegúrese de que los clientes de la recopilación de destino están actualizados a la nueva versión.  
 
--   Medios de implementación del sistema operativo  
+- Medios de implementación del sistema operativo  
 
-    -   Siempre que el sitio se actualice a una nueva versión, todos los medios (de arranque, de captura, preconfigurados e independientes) deben actualizarse con el nuevo paquete de cliente de Configuration Manager.  
+  -   Siempre que el sitio se actualice a una nueva versión, todos los medios (de arranque, de captura, preconfigurados e independientes) deben actualizarse con el nuevo paquete de cliente de Configuration Manager.  
 
--   Extensiones de terceros para la implementación del sistema operativo  
+- Extensiones de terceros para la implementación del sistema operativo  
 
-    -   Si dispone de extensiones de terceros para la implementación del sistema operativo y tiene diferentes versiones de los sitios o clientes de Configuration Manager (es decir, una jerarquía mixta), puede haber problemas con las extensiones.  
+  -   Si dispone de extensiones de terceros para la implementación del sistema operativo y tiene diferentes versiones de los sitios o clientes de Configuration Manager (es decir, una jerarquía mixta), puede haber problemas con las extensiones.  
 
- Durante la actualización activa de sitios de la jerarquía, use las siguientes secciones para las implementaciones de sistema operativo.  
+  Durante la actualización activa de sitios de la jerarquía, use las siguientes secciones para las implementaciones de sistema operativo.  
 
 ## <a name="latest-version-of-configuration-manager-sites-in-a-mixed-hierarchy"></a>Versión más reciente de los sitios de Configuration Manager en una jerarquía mixta  
  Cuando actualiza un sitio a la versión más reciente de Configuration Manager, las secuencias de tareas que hacen referencia al paquete de instalación de cliente predeterminado se iniciarán automáticamente para implementar la versión de cliente de Configuration Manager más reciente. Las secuencias de tareas que hagan referencia a un paquete de instalación de cliente personalizado seguirán implementando la versión del cliente incluida en dicho paquete personalizado (probablemente una versión anterior del cliente de Configuration Manager). Estas secuencias de tareas deben actualizarse para evitar errores en su implementación. Si tiene una secuencia de tareas configurada para usar un paquete de instalación de cliente personalizado, debe actualizar la etapa de la secuencia de tareas para que use la versión de Configuration Manager más reciente del paquete de instalación de cliente o actualizar el paquete personalizado para que use el origen de instalación de cliente de Configuration Manager más reciente.  

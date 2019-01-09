@@ -10,12 +10,12 @@ ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 69d8db3cceff45319ed4f2fc0b2962c3bb50b0f2
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: 804b21733422bd654764f2199fe33d184d54cce4
+ms.sourcegitcommit: d021f82e4bc35a8e9b5d291bf779ce52b4f47eb8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42756179"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656482"
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>Preparar el almacenamiento en caché del mismo nivel de Windows PE para reducir el tráfico WAN en System Center Configuration Manager
 
@@ -34,19 +34,19 @@ Use las siguientes secciones para administrar Almacenamiento en caché del mismo
 ##  <a name="BKMK_PeerCacheObjects"></a> Objetos almacenados en un origen de Almacenamiento en caché del mismo nivel  
  Una secuencia de tareas configurada para usar Almacenamiento en caché del mismo nivel en Windows PE puede obtener los siguientes objetos de contenido mientras se ejecuta en Windows PE:  
 
--   Imagen de sistema operativo  
+- Imagen de sistema operativo  
 
--   Paquete de controladores  
+- Paquete de controladores  
 
--   Paquetes y programas (cuando el cliente continúa ejecutando la secuencia de tareas en el sistema operativo completo, el cliente obtiene este contenido desde un origen de la caché del mismo nivel si la secuencia de tareas se configuró originalmente para la caché del mismo nivel cuando se ejecuta en Windows PE).  
+- Paquetes y programas (cuando el cliente continúa ejecutando la secuencia de tareas en el sistema operativo completo, el cliente obtiene este contenido desde un origen de la caché del mismo nivel si la secuencia de tareas se configuró originalmente para la caché del mismo nivel cuando se ejecuta en Windows PE).  
 
--   Imágenes de arranque adicionales  
+- Imágenes de arranque adicionales  
 
- Los siguientes objetos de contenido nunca transfieren mediante almacenamiento en caché del mismo nivel. En su lugar, lo hacen desde un punto de distribución o mediante Windows BranchCache si configuró Windows BranchCache en su entorno:  
+  Los siguientes objetos de contenido nunca transfieren mediante almacenamiento en caché del mismo nivel. En su lugar, lo hacen desde un punto de distribución o mediante Windows BranchCache si configuró Windows BranchCache en su entorno:  
 
--   Aplicaciones  
+- Aplicaciones  
 
--   Actualizaciones de software  
+- Actualizaciones de software  
 
 ##  <a name="BKMK_PeerCacheWork"></a> ¿Cómo funciona Almacenamiento en caché del mismo nivel en Windows PE?  
  Considere un escenario con una sucursal que no tiene ningún punto de distribución, pero sí varios clientes habilitados para usar Almacenamiento en caché del mismo nivel en Windows PE. Implemente la secuencia de tareas configurada para usar el almacenamiento en caché del mismo nivel en varios clientes configurados como parte del origen del almacenamiento en caché del mismo nivel. El primer cliente que ejecuta la secuencia de tareas emite una solicitud para un elemento del mismo nivel con el contenido. Si no encuentra uno, obtiene el contenido desde un punto de distribución a través de la WAN. El cliente instala la nueva imagen y, a continuación, almacena el contenido en su caché de cliente de Configuration Manager, por lo que puede funcionar como origen de caché del mismo nivel para otros clientes. Cuando el cliente siguiente ejecuta la secuencia de tareas, emite una solicitud en la subred para un origen de caché del mismo nivel. El primer cliente responde y pone a disposición su contenido almacenado en caché.  
@@ -77,59 +77,59 @@ Use las siguientes secciones para administrar Almacenamiento en caché del mismo
 ##  <a name="BKMK_PeerCacheConfigure"></a> Configurar Almacenamiento en caché del mismo nivel en Windows PE  
  Puede usar los siguientes métodos para aprovisionar un cliente con contenido de la caché del mismo nivel, para que pueda servir como origen de caché del mismo nivel:  
 
--   Un cliente de caché del mismo nivel que no puede encontrar un origen de caché del mismo nivel con el contenido usará un punto de distribución para descargarlo.  Si el cliente recibe la configuración de cliente que habilita la memoria caché del mismo nivel y la secuencia de tareas está configurada para conservar el contenido almacenado en caché, el cliente se convierte en un origen de caché del mismo nivel.  
+- Un cliente de caché del mismo nivel que no puede encontrar un origen de caché del mismo nivel con el contenido usará un punto de distribución para descargarlo.  Si el cliente recibe la configuración de cliente que habilita la memoria caché del mismo nivel y la secuencia de tareas está configurada para conservar el contenido almacenado en caché, el cliente se convierte en un origen de caché del mismo nivel.  
 
--   Un cliente de caché del mismo nivel puede obtener contenido de otro cliente de caché del mismo nivel (un origen de caché del mismo nivel).  Dado que el cliente está configurado para el almacenamiento en caché del mismo nivel, cuando ejecuta la secuencia de tareas que está configurada para conservar el contenido almacenado en caché, el cliente se convierte en un origen de caché del mismo nivel.  
+- Un cliente de caché del mismo nivel puede obtener contenido de otro cliente de caché del mismo nivel (un origen de caché del mismo nivel).  Dado que el cliente está configurado para el almacenamiento en caché del mismo nivel, cuando ejecuta la secuencia de tareas que está configurada para conservar el contenido almacenado en caché, el cliente se convierte en un origen de caché del mismo nivel.  
 
--   Un cliente ejecuta una secuencia de tareas que incluye el paso opcional, [Download Package Content](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent), que se usa para preconfigurar el contenido relevante que se incluye en la secuencia de tareas Almacenamiento en caché del mismo nivel en Windows PE. Al usar este método:  
+- Un cliente ejecuta una secuencia de tareas que incluye el paso opcional, [Download Package Content](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent), que se usa para preconfigurar el contenido relevante que se incluye en la secuencia de tareas Almacenamiento en caché del mismo nivel en Windows PE. Al usar este método:  
 
-    -   El cliente no necesita instalar la imagen que se va a implementar.  
+  -   El cliente no necesita instalar la imagen que se va a implementar.  
 
-    -   Además de la opción **Descargar contenido de paquete** , la secuencia de tareas también debe usar la opción **Caché de cliente de Configuration Manager** . Usa esta opción para almacenar el contenido en la caché de los clientes, por lo que el cliente puede actuar como un origen de caché del mismo nivel para otros clientes de caché del mismo nivel.  
+  -   Además de la opción **Descargar contenido de paquete** , la secuencia de tareas también debe usar la opción **Caché de cliente de Configuration Manager** . Usa esta opción para almacenar el contenido en la caché de los clientes, por lo que el cliente puede actuar como un origen de caché del mismo nivel para otros clientes de caché del mismo nivel.  
 
- Los procedimientos siguientes le ayudarán a configurar Almacenamiento en caché del mismo nivel en Windows PE en clientes y las secuencias de tareas que admiten el almacenamiento en caché del mismo nivel.  
+  Los procedimientos siguientes le ayudarán a configurar Almacenamiento en caché del mismo nivel en Windows PE en clientes y las secuencias de tareas que admiten el almacenamiento en caché del mismo nivel.  
 
 ### <a name="to-configure-the-windows-pe-peer-cache-source-computers"></a>Para configurar los equipos de origen de Almacenamiento en caché del mismo nivel en Windows PE  
 
-1.  En la consola de Configuration Manager, vaya a **Administración** > **Configuración de cliente** y, después, cree una **Configuración de dispositivo de cliente personalizada** nueva o edite un objeto de configuración existente. También puede establecer esta configuración para el objeto **Configuración de cliente predeterminada** .  
+1. En la consola de Configuration Manager, vaya a **Administración** > **Configuración de cliente** y, después, cree una **Configuración de dispositivo de cliente personalizada** nueva o edite un objeto de configuración existente. También puede establecer esta configuración para el objeto **Configuración de cliente predeterminada** .  
 
-    > [!TIP]  
-    >  Use un objeto de configuración personalizada para administrar qué clientes deben recibir esta configuración. Por ejemplo, puede desear evitar establecer esta configuración en los equipos portátiles de los usuarios que se desplazan con frecuencia. Un sistema de alta movilidad puede ser un origen deficiente para proporcionar contenido a otros clientes de caché del mismo nivel.  
-    >   
-    >  Recuerde también que cuando se establece esta configuración como parte de la **Configuración de cliente predeterminada**, la configuración se aplica a todos los clientes de su entorno.  
+   > [!TIP]  
+   >  Use un objeto de configuración personalizada para administrar qué clientes deben recibir esta configuración. Por ejemplo, puede desear evitar establecer esta configuración en los equipos portátiles de los usuarios que se desplazan con frecuencia. Un sistema de alta movilidad puede ser un origen deficiente para proporcionar contenido a otros clientes de caché del mismo nivel.  
+   >   
+   >  Recuerde también que cuando se establece esta configuración como parte de la **Configuración de cliente predeterminada**, la configuración se aplica a todos los clientes de su entorno.  
 
-2.  En **Almacenamiento en caché del mismo nivel en Windows PE**, establezca **Habilitar el cliente Administrador de configuración en el sistema operativo completo para compartir contenido** en **Sí**.  
+2. En **Configuración de caché de cliente**, establezca **Habilitar el cliente de Configuration Manager en el sistema operativo completo para compartir contenido** en **Sí**.  
 
-    -   De forma predeterminada, solo está habilitado HTTP. Si desea que los clientes puedan descargar contenido a través de HTTPS, establezca **Enable HTTPS for client peer communication** en **Sí**.  
+   -   De forma predeterminada, solo está habilitado HTTP. Si desea que los clientes puedan descargar contenido a través de HTTPS, establezca **Enable HTTPS for client peer communication** en **Sí**.  
 
-    -   De forma predeterminada, se establece el puerto para las difusiones en 8004 y el puerto para descargas de contenido en 8003, pero puede cambiar ambos ajustes.  
+   -   De forma predeterminada, se establece el puerto para las difusiones en 8004 y el puerto para descargas de contenido en 8003, pero puede cambiar ambos ajustes.  
 
-3.  Guarde e implemente la Configuración de cliente para los clientes que seleccionó para que fueran el origen del almacenamiento en caché del mismo nivel.  
+3. Guarde e implemente la Configuración de cliente para los clientes que seleccionó para que fueran el origen del almacenamiento en caché del mismo nivel.  
 
- Después de aplicar este objeto de configuración a un objeto, el dispositivo está configurado para actuar como origen de caché del mismo nivel. Esta configuración debe implementarse en clientes potenciales de caché del mismo nivel para ajustar los protocolos y puertos necesarios.  
+   Después de aplicar este objeto de configuración a un objeto, el dispositivo está configurado para actuar como origen de caché del mismo nivel. Esta configuración debe implementarse en clientes potenciales de caché del mismo nivel para ajustar los protocolos y puertos necesarios.  
 
 ###  <a name="BKMK_PeerCacheConfigureTS"></a> Configurar una secuencia de tareas para Almacenamiento en caché del mismo nivel en Windows PE  
  Al configurar la secuencia de tareas, use las siguientes variables de secuencia de tareas como Variables de la recopilación en la recopilación en la que se implementa la secuencia de tareas:  
 
--   **SMSTSPeerDownload**  
+- **SMSTSPeerDownload**  
 
-     Valor: TRUE  
+   Valor:  TRUE  
 
-     Esto permite al cliente usar Almacenamiento en caché del mismo nivel en Windows PE.  
+   Esto permite al cliente usar Almacenamiento en caché del mismo nivel en Windows PE.  
 
--   **SMSTSPeerRequestPort**  
+- **SMSTSPeerRequestPort**  
 
-     Valor: <Número de puerto\>  
+   Valor: <Número de puerto\>  
 
-     Si no usa los puertos predeterminados configurados en Configuración de cliente (8004), debe configurar esta variable con un valor personalizado del puerto de red que se usará para la difusión inicial.  
+   Si no usa los puertos predeterminados configurados en Configuración de cliente (8004), debe configurar esta variable con un valor personalizado del puerto de red que se usará para la difusión inicial.  
 
--   **SMSTSPreserveContent**  
+- **SMSTSPreserveContent**  
 
-     Valor: TRUE  
+   Valor: TRUE  
 
-     Esta variable marca la conservación del contenido de la secuencia de tareas en la memoria caché del cliente de Configuration Manager después de la implementación. Esta acción es diferente a usar SMSTSPersisContent, que solo conserva el contenido el tiempo que dure la secuencia de tareas y usa la memoria caché de la secuencia de tareas, no la memoria caché del cliente de Configuration Manager.  
+   Esta variable marca la conservación del contenido de la secuencia de tareas en la memoria caché del cliente de Configuration Manager después de la implementación. Esta acción es diferente a usar SMSTSPersisContent, que solo conserva el contenido el tiempo que dure la secuencia de tareas y usa la memoria caché de la secuencia de tareas, no la memoria caché del cliente de Configuration Manager.  
 
- Para más información, vea [Task sequence variables](/sccm/osd/understand/task-sequence-variables) (Variables de secuencia de tareas).  
+  Para más información, vea [Task sequence variables](/sccm/osd/understand/task-sequence-variables) (Variables de secuencia de tareas).  
 
 ###  <a name="BKMK_PeerCacheValidate"></a> Validar el éxito del uso de Almacenamiento en caché del mismo nivel en Windows PE  
  Después de usar Almacenamiento en caché del mismo nivel en Windows PE para implementar e instalar una secuencia de tareas, puede confirmar que ese almacenamiento en caché del mismo nivel se empleó correctamente en el proceso observando el **smsts.log** en el cliente que ejecutó la secuencia de tareas.  

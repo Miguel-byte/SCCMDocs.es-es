@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a2d39617db7f2ea9a61e73a3c21cc2509fed2f07
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 3d6b4215615b6401a9163edfa33893d866e0c2ce
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456624"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424772"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Instalación de un punto de distribución de nube para Configuration Manager
 
@@ -106,7 +106,7 @@ Realice este procedimiento en el sitio para hospedar este punto de distribución
     - **Archivo de certificado**: haga clic en **Examinar** y seleccione el archivo .PFX para el certificado de autenticación de servidor de este punto de distribución de nube. El nombre común de este certificado rellena los campos **FQDN de servicio** y **Nombre de servicio** necesarios.  
 
         > [!NOTE]  
-        > El certificado de autenticación de servidor de punto de distribución de nube admite caracteres comodín. Si usa un certificado comodín, reemplace el asterisco (*) en el campo **FQDN de servicio** por el nombre de host deseado para el servicio.  
+        > El certificado de autenticación de servidor de punto de distribución de nube admite caracteres comodín. Si usa un certificado comodín, reemplace el asterisco (\*) en el campo **FQDN de servicio** por el nombre de host deseado para el servicio.  
 
 5. En la página **Alertas**, configure cuotas de almacenamiento, cuotas de transferencia y el porcentaje de estas cuotas en el que quiere que Configuration Manager genere alertas. A continuación, seleccione **Siguiente**.  
 
@@ -204,9 +204,9 @@ Configuration Manager comprueba periódicamente el servicio de Azure. Si el serv
 
 Configure umbrales para la cantidad de datos que quiere almacenar en el punto de distribución de nube, y para la cantidad de datos que los clientes descargan desde el punto de distribución. Use alertas para estos umbrales para ayudarle a decidir cuándo se debe detener el servicio en la nube, ajustar el contenido que se almacena en el punto de distribución de nube o modificar los clientes que pueden usar el servicio. 
 
-- **Umbral de alerta de almacenamiento**: el umbral de alerta de almacenamiento, establece un límite superior en GB para la cantidad de datos o de contenido que se quiere almacenar en el punto de distribución de nube. De forma predeterminada, este umbral es de 2.000 GB. Configuration Manager genera alertas críticas y de advertencia cuando el espacio libre restante alcanza los niveles que se hayan especificado. De forma predeterminada, estas alertas se producen en el 50 % y 90 % del umbral.  
+- **Umbral de alerta de almacenamiento**: el umbral de alerta de almacenamiento establece un límite superior en GB para la cantidad de datos o de contenido que se quiere almacenar en el punto de distribución de nube. De forma predeterminada, este umbral es de 2.000 GB. Configuration Manager genera alertas críticas y de advertencia cuando el espacio libre restante alcanza los niveles que se hayan especificado. De forma predeterminada, estas alertas se producen en el 50 % y 90 % del umbral.  
 
-- **Umbral de alerta de transferencia mensual**: el umbral de alerta de transferencia mensual ayuda a supervisar la cantidad de contenido que se transfiere desde el punto de distribución a los clientes durante un período de 30 días. De forma predeterminada, este umbral es de 10.000 GB. El sitio genera alertas críticas y de advertencia cuando las transferencias alcanzan los valores que se definen. De forma predeterminada, estas alertas se producen en el 50 % y 90 % del umbral.  
+- **Umbral de alerta de transferencia**: el umbral de alerta de transferencia mensual permite supervisar la cantidad de contenido que se transfiere desde el punto de distribución a los clientes durante un período de 30 días. De forma predeterminada, este umbral es de 10.000 GB. El sitio genera alertas críticas y de advertencia cuando las transferencias alcanzan los valores que se definen. De forma predeterminada, estas alertas se producen en el 50 % y 90 % del umbral.  
 
     > [!IMPORTANT]  
     >  Configuration Manager supervisa la transferencia de datos, pero no detiene la transferencia cuando se supera el valor establecido en el umbral de alerta de transferencia.  
@@ -238,7 +238,7 @@ Al modificar las propiedades de un punto de distribución en la nube, las pesta�
 #### <a name="alerts"></a>Alertas
 Ajuste los umbrales de datos para las alertas de almacenamiento y transferencia mensual.  
 
-#### <a name="content"></a>Contenido
+#### <a name="content"></a>Content
 Administre el contenido igual que en un punto de distribución local.  
 
 

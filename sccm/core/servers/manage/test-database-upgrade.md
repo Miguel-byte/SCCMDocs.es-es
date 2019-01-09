@@ -10,12 +10,12 @@ ms.assetid: abb696f3-a816-4f12-a9f1-0503a81e1976
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3bd64cd937bf0a90a00ea6b17664d80394dcafab
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4168b36553dacff69fab0972011a7d4c2843d787
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339319"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421950"
 ---
 # <a name="test-the-database-upgrade-when-installing-an-update"></a>Prueba de la actualización de la base de datos al instalar una actualización
 
@@ -45,21 +45,21 @@ La prueba de actualización se ejecuta en una copia de seguridad de la base de d
 Si se produce un error de instalación de una actualización, no es necesario recuperar el sitio. En su lugar, puede intentar instalar de nuevo la actualización desde la consola.
 
 ##  <a name="run-the-test-upgrade"></a>Ejecución de la actualización de prueba    
-1.  Utilice el programa de instalación de Configuration Manager y los archivos de origen de la carpeta **CD.Latest** de un sitio que ejecuta la versión a la que pretende actualizar.  
+1. Utilice el programa de instalación de Configuration Manager y los archivos de origen de la carpeta **CD.Latest** de un sitio que ejecuta la versión a la que pretende actualizar.  
 
-2.  Copie la carpeta **CD.Latest** en una ubicación de una instancia de SQL Server que vaya a usar para ejecutar la actualización de la base de datos de prueba.
+2. Copie la carpeta **CD.Latest** en una ubicación de una instancia de SQL Server que vaya a usar para ejecutar la actualización de la base de datos de prueba.
 
-3.  Cree una copia de seguridad de la base de datos de sitio cuya actualización desea probar. A continuación, restaure una copia de la base de datos de sitio en una instancia de SQL Server que no hospede un sitio de Configuration Manager. La instancia de SQL Server debe usar la misma edición de SQL Server que la base de datos de sitio.  
+3. Cree una copia de seguridad de la base de datos de sitio cuya actualización desea probar. A continuación, restaure una copia de la base de datos de sitio en una instancia de SQL Server que no hospede un sitio de Configuration Manager. La instancia de SQL Server debe usar la misma edición de SQL Server que la base de datos de sitio.  
 
-4.  Después de restaurar la copia de la base de datos, ejecute **el programa de instalación** desde la carpeta CD.Latest que contiene los archivos de origen de la versión a la que está actualizando. Cuando ejecute el programa de instalación, use la opción de línea de comandos **/TESTDBUPGRADE** . Si la instancia de SQL Server que hospeda la copia de la base de datos no es la instancia predeterminada, indique los argumentos de la línea de comandos para identificar la instancia que hospeda la copia de la base de datos del sitio.   
+4. Después de restaurar la copia de la base de datos, ejecute **el programa de instalación** desde la carpeta CD.Latest que contiene los archivos de origen de la versión a la que está actualizando. Cuando ejecute el programa de instalación, use la opción de línea de comandos **/TESTDBUPGRADE** . Si la instancia de SQL Server que hospeda la copia de la base de datos no es la instancia predeterminada, indique los argumentos de la línea de comandos para identificar la instancia que hospeda la copia de la base de datos del sitio.   
 
-  Por ejemplo, tiene una base de datos de sitio con el nombre *SMS_ABC*. Restaura una copia de esta base de datos de sitio a una instancia compatible de SQL Server con el nombre de instancia *DBTest*. Para probar una actualización de esta copia de la base de datos del sitio, use la siguiente línea de comandos: **Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**.  
+   Por ejemplo, tiene una base de datos de sitio con el nombre *SMS_ABC*. Restaura una copia de esta base de datos de sitio a una instancia compatible de SQL Server con el nombre de instancia *DBTest*. Para probar una actualización de esta copia de la base de datos del sitio, utilice la siguiente línea de comandos: **Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**.  
 
-  Puede encontrar Setup.exe en la siguiente ubicación del medio de origen de System Center Configuration Manager: **SMSSETUP\BIN\X64**.  
+   Puede encontrar Setup.exe en la ubicación siguiente del medio de origen de System Center Configuration Manager: **SMSSETUP\BIN\X64**.  
 
-5.  En la instancia de SQL Server donde se ejecuta la prueba de la actualización, supervise el archivo *ConfigMgrSetup.log* en la raíz de la unidad del sistema para ver el progreso y si se completa correctamente.  
+5. En la instancia de SQL Server donde se ejecuta la prueba de la actualización, supervise el archivo *ConfigMgrSetup.log* en la raíz de la unidad del sistema para ver el progreso y si se completa correctamente.  
 
-     En caso de que se produzca un error en la actualización de prueba, corrija los problemas relacionados con el error de actualización de la base de datos de sitio. A continuación, cree una nueva copia de seguridad de la base de datos de sitio y pruebe la actualización de la nueva copia de la base de datos.  
+    En caso de que se produzca un error en la actualización de prueba, corrija los problemas relacionados con el error de actualización de la base de datos de sitio. A continuación, cree una nueva copia de seguridad de la base de datos de sitio y pruebe la actualización de la nueva copia de la base de datos.  
 
 
 

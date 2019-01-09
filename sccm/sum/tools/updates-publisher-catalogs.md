@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: a387a7c5a466dc2f44ad114788ff7d56dd468195
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 03c325f2bd6aa6ea6c39d7994a78b900653e62a1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352200"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415451"
 ---
 # <a name="manage-software-update-catalogs-in-updates-publisher"></a>Administrar catálogos de actualizaciones de software en Updates Publisher
 
@@ -48,53 +48,53 @@ Además de agregar catálogos y visualizar información sobre catálogos suscrit
 ## <a name="manage-update-catalogs"></a>Administrar catálogos de actualizaciones
 Puede ver la lista de catálogos que ha importado en la ventana **My Software Update Catalogs** (Mis catálogos de actualizaciones de software) del **área de trabajo Catálogos**. En esta área de trabajo puede:
 
--   **Add a partner catalog** (Agregar un catálogo de partner): use una de las opciones siguientes para buscar nuevos catálogos de partner:
+-   **Agregar un catálogo de partner:** use una de las opciones siguientes para buscar nuevos catálogos de partner:
 
     -   En la consola, vaya a **Updates Workspace** (Área de trabajo Actualizaciones)  > **Introducción**. En la ventana **Introducción**, elija **Add Partner Software Updates Catalogs** (Agregar catálogos de actualizaciones de software de partner).
 
     -   En la consola, vaya a **Catalogs Workspace** (Área de trabajo Catálogos) > **Mis catálogos**. Luego, en la cinta de opciones, elija **Add Catalogs** (Agregar catálogos).
 
--   **Add a user catalog** (Agregar catálogo de usuario): en la consola, vaya a **Catalogs Workspace** (Área de trabajo Catálogos) > **Mis catálogos**. Luego, en la cinta de opciones, elija **Add Catalogs** (Agregar catálogos). Además de la ubicación del archivo .cab, debe especificar un Editor, Nombre y Descripción que identifique el catálogo.
+-   **Agregar un catálogo de usuario:** En la consola, vaya a **Catalogs Workspace** (Área de trabajo Catálogos) > **Mis catálogos**. Luego, en la cinta de opciones, elija **Add Catalogs** (Agregar catálogos). Además de la ubicación del archivo .cab, debe especificar un Editor, Nombre y Descripción que identifique el catálogo.
 
 
--   **Buscar actualizaciones a catálogos**: seleccione uno o más catálogos y luego elija **Actualizar** en la cinta de opciones.
+-   **Comprobar las actualizaciones de catálogos:** seleccione uno o más catálogos y luego haga clic en **Actualizar** en la cinta.
 
--   **Editar un catálogo de usuario**: seleccione un catalogo de *usuario* y luego elija **Editar** en la cinta de opciones. Luego puede modificar las propiedades definidas por el usuario.
+-   **Editar un catálogo de usuario:** seleccione un catálogo de *usuario* y luego haga clic en **Editar** en la cinta. Luego puede modificar las propiedades definidas por el usuario.
 
--   **Eliminar catálogos**: seleccione uno o más catálogos y luego elija **Quitar** en la cinta de opciones. Se eliminan el catálogo, la suscripción y las actualizaciones de esos catálogos del repositorio de Updates Publisher.
+-   **Eliminar catálogos:** seleccione uno o más catálogos y luego haga clic en **Quitar** en la cinta. Se eliminan el catálogo, la suscripción y las actualizaciones de esos catálogos del repositorio de Updates Publisher.
 
--   **Agregar actualizaciones de un catálogo al repositorio**: elija **Importar** en la cinta de opciones para iniciar el asistente para **importar catálogos**. Para obtener más información, vea [Importar actualizaciones](#import-updates)
+-   **Agregar actualizaciones de un catálogo al repositorio**: haga clic en **Importar** en la cinta para iniciar el asistente para **importar catálogos**. Para obtener más información, vea [Importar actualizaciones](#import-updates)
 
 ## <a name="import-updates"></a>Importar actualizaciones
 Cuando se importa un catálogo, Updates Manager agrega las actualizaciones de ese catálogo al repositorio de Updates Publisher. Una vez importadas las actualizaciones, puede publicarlas en el servidor de actualización para ponerlas a disposición de los dispositivos administrados.
 
 ### <a name="to-import-updates"></a>Para importar actualizaciones
-1.  Para iniciar el asistente para **importar catálogos**, elija **Importar** en la cinta de opciones de una de las áreas de trabajo siguientes:
+1. Para iniciar el asistente para **importar catálogos**, elija **Importar** en la cinta de opciones de una de las áreas de trabajo siguientes:
 
-    -   Área de trabajo Catálogos
+   -   Área de trabajo Catálogos
 
-    -   Área de trabajo Actualizaciones
+   -   Área de trabajo Actualizaciones
 
-2.  En la página **Tipo de importación**, seleccione uno o varios catálogos que haya agregado a Updates Publisher o especifique una ruta de acceso a un catálogo que aún no haya agregado como suscripción. Elija **Siguiente** para ver la pantalla de resumen y, cuando esté listo, elija **Siguiente** para iniciar la importación.
+2. En la página **Tipo de importación**, seleccione uno o varios catálogos que haya agregado a Updates Publisher o especifique una ruta de acceso a un catálogo que aún no haya agregado como suscripción. Elija **Siguiente** para ver la pantalla de resumen y, cuando esté listo, elija **Siguiente** para iniciar la importación.
 
-3.  En la ventana **Security Warning – Catalog Validation** (Advertencia de seguridad: validación de catálogos), revise el certificado del catálogo y, cuando esté listo, elija **Aceptar** para importar las actualizaciones.
+3. En la ventana **Security Warning – Catalog Validation** (Advertencia de seguridad: validación de catálogos), revise el certificado del catálogo y, cuando esté listo, elija **Aceptar** para importar las actualizaciones.
 
-    > [!CAUTION]    
-    > Acepto solo actualizaciones de editores en los que confíe. Las actualizaciones de software de editores que no son de confianza puede dañar los equipos cliente al buscar actualizaciones.
+   > [!CAUTION]
+   > Acepto solo actualizaciones de editores en los que confíe. Las actualizaciones de software de editores que no son de confianza puede dañar los equipos cliente al buscar actualizaciones.
+   > 
+   >  Si ya no confía en un editor, quítelo de la lista de editores de confianza. Para encontrar más información sobre la aceptación de catálogos, haga clic en **Información** en el cuadro de diálogo **Security Warning – Catalog Validation** (Advertencia de seguridad: validación de catálogos).
 
-    >  Si ya no confía en un editor, quítelo de la lista de editores de confianza. Para encontrar más información sobre la aceptación de catálogos, haga clic en **Información** en el cuadro de diálogo **Security Warning – Catalog Validation** (Advertencia de seguridad: validación de catálogos).
+   Si opta por aceptar siempre los catálogos de un editor, el editor se agrega a la [lista de publicadores de confianza](/sccm/sum/tools/updates-publisher-options#trusted-publishers). Puede revisar y modificar esta lista como opción de Updates Publisher.
 
-    Si opta por aceptar siempre los catálogos de un editor, el editor se agrega a la [lista de publicadores de confianza](/sccm/sum/tools/updates-publisher-options#trusted-publishers). Puede revisar y modificar esta lista como opción de Updates Publisher.
+4. La importación omite la importación de una actualización cuando esta se encuentra ya en el repositorio y se cumple alguna de las siguientes condiciones:
 
-4.  La importación omite la importación de una actualización cuando esta se encuentra ya en el repositorio y se cumple alguna de las siguientes condiciones:
+   -   La actualización no ha cambiado desde la última vez que se importó.
 
-    -   La actualización no ha cambiado desde la última vez que se importó.
+   -   La actualización se ha modificado y tiene un nuevo hash digital. La edición de una actualización evita que una nueva actualización sobrescriba el original, ya que, de hacerlo, sobrescribiría los cambios que se hubiesen implementado.
 
-    -   La actualización se ha modificado y tiene un nuevo hash digital. La edición de una actualización evita que una nueva actualización sobrescriba el original, ya que, de hacerlo, sobrescribiría los cambios que se hubiesen implementado.
+5. En la página **Confirmación**, revise los resultados de la importación.
 
-5.  En la página **Confirmación**, revise los resultados de la importación.
-
-6.  Haga clic en **Cerrar** para finalizar el asistente. Ahora puede ver las actualizaciones de este catálogo en el área de trabajo Actualizaciones.
+6. Haga clic en **Cerrar** para finalizar el asistente. Ahora puede ver las actualizaciones de este catálogo en el área de trabajo Actualizaciones.
 
 ## <a name="next-steps"></a>Pasos siguientes
 Entre las acciones comunes que se realizan después de importar actualizaciones, se incluyen:

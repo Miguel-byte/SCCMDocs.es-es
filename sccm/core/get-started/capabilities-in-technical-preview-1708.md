@@ -10,12 +10,12 @@ ms.assetid: 3c061ceb-3bdb-4d4f-8c60-344964bd416b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b6764acf3ecc1aaad4a19c9d56880e7bd5692464
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b751dab7ca02112959a9a7d6ed8a51b037f25b0e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334623"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422664"
 ---
 # <a name="capabilities-in-technical-preview-1708-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1708 para System Center Configuration Manager
 
@@ -30,7 +30,7 @@ En este artículo se presentan las características disponibles en Technical Pre
     Workaround details.
 -->
 **Problemas conocidos de esta Technical Preview:**
--   **Error al actualizar a la versión preliminar 1708 cuando hay un servidor de sitio en modo pasivo**. Si ejecuta la versión preliminar 1706 o 1707 y tiene un [servidor de sitio principal en modo pasivo](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), debe desinstalar el servidor de sitio en modo pasivo para poder actualizar correctamente el sitio en versión preliminar a la versión 1708. Puede volver a instalar el servidor de sitio en modo pasivo después de que el sitio ejecuta la versión 1708.
+- **Error al actualizar a la versión preliminar 1708 cuando hay un servidor de sitio en modo pasivo**. Si ejecuta la versión preliminar 1706 o 1707 y tiene un [servidor de sitio principal en modo pasivo](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), debe desinstalar el servidor de sitio en modo pasivo para poder actualizar correctamente el sitio en versión preliminar a la versión 1708. Puede volver a instalar el servidor de sitio en modo pasivo después de que el sitio ejecuta la versión 1708.
 
   Para desinstalar el servidor de sitio en modo pasivo:
   1. En la consola vaya a **Administración** > **General** > **Configuración de sitio** > **Servidores y roles del sistema de sitios** y seleccione el servidor de sitio en modo pasivo.
@@ -72,16 +72,14 @@ El asistente muestra qué parámetros son obligatorios y cuáles son opcionales.
 Cuando se ejecute la secuencia de comandos, usará los valores de parámetro que haya configurado. Si no ha configurado un parámetro obligatorio, se pedirá al usuario final que proporcione el parámetro cuando se ejecute el script.
 
 ## <a name="management-insights"></a>Información de administración
-<!-- 1353967 -->
-Ahora puede obtener información sobre el estado actual de su entorno en función del análisis de datos en la base de datos de sitio. Esta información le ayuda a entender mejor el entorno y tomar medidas en consecuencia. Revise la información de administración en la consola de Configuration Manager en **Administración** > **Management Insights** > **All Insights** (Información de administración > Toda la información). En esta versión, ahora está disponible la siguiente información:
+<!-- 1353967 --> Ahora puede obtener información sobre el estado actual del entorno en función del análisis de los datos de la base de datos del sitio. Esta información le ayuda a entender mejor el entorno y tomar medidas en consecuencia. Revise la información de administración en la consola de Configuration Manager en **Administración** > **Management Insights** > **All Insights** (Información de administración > Toda la información). En esta versión, ahora está disponible la siguiente información:
 
-- **Aplicaciones sin implementaciones**: enumera las aplicaciones en su entorno sin implementaciones activas. Esto le ayudará a encontrar y eliminar las aplicaciones sin usar para simplificar la lista de aplicaciones mostradas en la consola.
-- **Colecciones vacías**: muestra las recopilaciones de su entorno que no tienen miembros. Puede eliminar estas recopilaciones para simplificar la lista que se muestra al implementar los objetos, por ejemplo.
+- **Aplicaciones sin implementaciones**: enumera las aplicaciones del entorno sin implementaciones activas. Esto le ayudará a encontrar y eliminar las aplicaciones sin usar para simplificar la lista de aplicaciones mostradas en la consola.
+- **Colecciones vacías**: enumera las colecciones del entorno que no tienen miembros. Puede eliminar estas recopilaciones para simplificar la lista que se muestra al implementar los objetos, por ejemplo.
 
 
 ## <a name="restart-computers-from-the-configuration-manager-console"></a>Reinicio de equipos desde la consola de Configuration Manager   
-<!-- 1356283 -->
-A partir de esta versión, puede usar la consola de Configuration Manager para identificar los dispositivos de cliente que requieren un reinicio y, después, usar una acción de notificación de cliente para reiniciarlos.
+<!-- 1356283 --> A partir de esta versión, puede usar la consola de Configuration Manager para identificar los dispositivos de cliente que requieren un reinicio y, después, usar una acción de notificación de cliente para reiniciarlos.
 
 Para identificar los dispositivos que están pendiente un reinicio, vaya a **Activos y compatibilidad** > **Dispositivos** y seleccione una recopilación con dispositivos que pueden necesitar un reinicio. Después de seleccionar una recopilación, puede ver el estado de cada dispositivo en el panel de detalles en una nueva columna denominada **Reinicio pendiente**. Cada dispositivo tiene un valor de **Sí** o **No**.
 
@@ -100,16 +98,15 @@ Intente realizar las tareas siguientes y luego envíenos sus **comentarios** des
 
 
 ## <a name="software-center-customization"></a>Personalización de Centro de software
-<!-- 1351224 -->
-Puede agregar elementos de personalización de marca de empresa y especificar la visibilidad de las pestañas en el Centro de software. Puede agregar el nombre de compañía específico del Centro de software, establecer un tema de color para la configuración de Centro de software, establecer un logotipo de empresa y establecer las pestañas visibles para los dispositivos del cliente.
+<!-- 1351224 --> Puede agregar elementos de personalización de marca de empresa y especificar la visibilidad de las pestañas en el Centro de software. Puede agregar el nombre de compañía específico del Centro de software, establecer un tema de color para la configuración de Centro de software, establecer un logotipo de empresa y establecer las pestañas visibles para los dispositivos del cliente.
 
 ### <a name="customize-software-center"></a>Personalización de Centro de software
 
 Para modificar el Centro de software:
 
-1. En la consola de **Configuration Manager**, elija **Administración** > **Configuración de cliente**. Haga clic en la instancia de la configuración de cliente que desea.
-2. En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.
-3. En el cuadro de diálogo **Configuración predeterminada**, elija **Centro de software**.
+1. En la consola de **Configuration Manager**, elija  **Administración** > **Configuración de cliente**. Haga clic en la instancia de la configuración de cliente que desea.
+2. En la pestaña  **Inicio** , en el grupo  **Propiedades** , haga clic en  **Propiedades**.
+3. En el cuadro de diálogo  **Configuración predeterminada** , haga clic en  **Centro de software**.
 4. Seleccione **Sí** en **Select new settings to specify company information** (Seleccionar nueva configuración para especificar la información de la empresa) para habilitar la configuración de personalización del Centro de software.
 5. Escriba el **nombre de la empresa**.
 6. Seleccione la **combinación de colores para el Centro de software**.
@@ -125,4 +122,4 @@ Para modificar el Centro de software:
 
 ### <a name="next-steps"></a>Pasos siguientes
 
-Para más información sobre la administración de aplicaciones en Configuration Manager, consulte [Introducción a la administración de aplicaciones en System Center Configuration Manager](\sccm\apps\understand\introduction-to-application-management).
+Para más información sobre la administración de aplicaciones en Configuration Manager, consulte [Introducción a la administración de aplicaciones en System Center Configuration Manager](/sccm/apps/understand/introduction-to-application-management).

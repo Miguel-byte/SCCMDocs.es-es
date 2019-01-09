@@ -10,12 +10,12 @@ ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ed9be26417aceef3fb73f48c2a4a2f15f0ba1b52
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: de1b5343bd66cec20ba55f0aa58add9839fcb48d
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333763"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418533"
 ---
 # <a name="common-tasks-for-managing-compliance-on-devices-with-the-system-center-configuration-manager-client"></a>Tareas comunes para administrar el cumplimiento en dispositivos que tienen el cliente de System Center Configuration Manager
 
@@ -40,69 +40,69 @@ Los escenarios de este tema ofrecen una introducción al uso de la configuració
 
 ## <a name="scenarios-for-windows-10-devices-managed-with-the-configuration-manager-client"></a>Escenarios para dispositivos Windows 10 administrados con el cliente de Configuration Manager  
 
-### <a name="scenario-disable-the-use-of-bluetooth-on-windows-10-devices"></a>Escenario: deshabilitar el uso de Bluetooth en dispositivos Windows 10  
+### <a name="scenario-disable-the-use-of-bluetooth-on-windows-10-devices"></a>Escenario: deshabilitar el uso de Bluetooth en dispositivos Windows 10  
  En este escenario, el departamento de seguridad ha identificado la característica Bluetooth en los dispositivos como un medio que podría usarse para transmitir información corporativa confidencial fuera de la empresa. Recientemente ha actualizado todos los equipos a Windows 10 y ahora decide deshabilitar la característica Bluetooth en estos dispositivos.  
 
-1.  En la página **General** del Asistente para crear elemento de configuración, seleccione el tipo de elemento de configuración **Windows 10** y luego haga clic en **Siguiente**.  
+1. En la página **General** del Asistente para crear elemento de configuración, seleccione el tipo de elemento de configuración **Windows 10** y luego haga clic en **Siguiente**.  
 
-2.  En la página **Plataformas admitidas** del asistente, seleccione todas las plataformas Windows 10.  
+2. En la página **Plataformas admitidas** del asistente, seleccione todas las plataformas Windows 10.  
 
-3.  En la página **Configuración del dispositivo** , seleccione **Dispositivo**y haga clic en **Siguiente**.  
+3. En la página **Configuración del dispositivo** , seleccione **Dispositivo**y haga clic en **Siguiente**.  
 
-4.  En la página **Dispositivo** , seleccione **Prohibido** como el valor de **Bluetooth**.  
+4. En la página **Dispositivo** , seleccione **Prohibido** como el valor de **Bluetooth**.  
 
-5.  Seleccione **Corregir configuraciones no compatibles** para asegurarse de que el cambio se aplique en todos los dispositivos Windows 10.  
+5. Seleccione **Corregir configuraciones no compatibles** para asegurarse de que el cambio se aplique en todos los dispositivos Windows 10.  
 
-6.  Complete el asistente para crear el elemento de configuración.  
+6. Complete el asistente para crear el elemento de configuración.  
 
- Ahora puede usar la información del tema [Tareas comunes para crear e implementar líneas de base de configuración con System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) como ayuda para implementar la configuración que ha creado en los dispositivos.  
+   Ahora puede usar la información del tema [Tareas comunes para crear e implementar líneas de base de configuración con System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) como ayuda para implementar la configuración que ha creado en los dispositivos.  
 
 ## <a name="scenarios-for-windows-desktop-and-server-computers-managed-with-the-configuration-manager-client"></a>Escenarios para equipos de escritorio y servidores de Windows administrados con el cliente de Configuration Manager  
  En los equipos Mac que ejecutan el cliente de Configuration Manager, hay dos opciones para evaluar el cumplimiento:  
 
--   Evaluar un archivo de preferencias (.plist) de Mac OS X.  
+- Evaluar un archivo de preferencias (.plist) de Mac OS X.  
 
--   Usar un script personalizado y evaluar los resultados devueltos por la secuencia de comandos.  
+- Usar un script personalizado y evaluar los resultados devueltos por la secuencia de comandos.  
 
- Para más información, vea [How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client (Cómo crear elementos de configuración para dispositivos Mac OS X administrados con el cliente de System Center Configuration Manager)](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md).  
+  Para más información, vea [How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client (Cómo crear elementos de configuración para dispositivos Mac OS X administrados con el cliente de System Center Configuration Manager)](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md).  
 
 ### <a name="scenario-remediate-an-incorrect-registry-value-on-windows-desktop-computers"></a>Escenario: corregir un valor incorrecto del Registro en los equipos de escritorio de Windows  
  En este escenario, descubre que una aplicación de línea de negocio importante no se ejecuta correctamente en algunos equipos que usted administra y que ejecutan Windows 8.1. Después de investigar, descubre que la causa es una clave del Registro denominada **HKEY_LOCAL_MACHINE\SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1** que tiene establecido un valor de **0** en algunos equipos. Para que la aplicación de línea de negocio se ejecute correctamente, este valor debe establecerse en **1**.  
 
  En este procedimiento, creará un elemento de configuración que supervise y corrija automáticamente los valores incorrectos de clave del Registro que ha detectado.  
 
-1.  En la página **General** del Asistente para crear elemento de configuración, seleccione el tipo de elemento de configuración **Escritorios y servidores de Windows (personalizado)** y luego haga clic en **Siguiente**.  
+1. En la página **General** del Asistente para crear elemento de configuración, seleccione el tipo de elemento de configuración **Escritorios y servidores de Windows (personalizado)** y luego haga clic en **Siguiente**.  
 
-2.  En la página **Plataformas admitidas** del asistente, seleccione **Windows 8.1** (para asegurarse de que el elemento de configuración solo se aplique a los equipos afectados).  
+2. En la página **Plataformas admitidas** del asistente, seleccione **Windows 8.1** (para asegurarse de que el elemento de configuración solo se aplique a los equipos afectados).  
 
-3.  En la página **Configuración** , haga clic en **Nuevo** para crear una nueva configuración.  
+3. En la página **Configuración** , haga clic en **Nuevo** para crear una nueva configuración.  
 
-4.  En la pestaña **General** del cuadro de diálogo **Crear configuración** , configure los siguientes elementos:  
+4. En la pestaña **General** del cuadro de diálogo **Crear configuración** , configure los siguientes elementos:  
 
-    -   **Nombre** > **Configuración de ejemplo**  
+   -   **Nombre** > **Configuración de ejemplo**  
 
-    -   **Tipo de configuración** > **Valor del Registro**  
+   -   **Tipo de configuración** > **Valor del Registro**  
 
-    -   **Tipo de datos** > **Entero** (porque el valor contiene solo un número)  
+   -   **Tipo de datos** > **Entero** (porque el valor contiene solo un número)  
 
-    -   **Subárbol** > **HKEY_LOCAL_MACHINE**  
+   -   **Subárbol** > **HKEY_LOCAL_MACHINE**  
 
-    -   **Clave** > **SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1**  
+   -   **Clave** > **SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1**  
 
-    -   **Valor** > **1** (el valor necesario)  
+   -   **Valor** > **1** (el valor necesario)  
 
-5.  En la pestaña **Reglas de compatibilidad** del cuadro de diálogo **Crear configuración** , haga clic en **Nuevo**y luego, en el cuadro de diálogo **Crear regla** , configure los elementos siguientes:  
+5. En la pestaña **Reglas de compatibilidad** del cuadro de diálogo **Crear configuración** , haga clic en **Nuevo**y luego, en el cuadro de diálogo **Crear regla** , configure los elementos siguientes:  
 
-    -   **Nombre** > **Regla de ejemplo**  
+   -   **Nombre** > **Regla de ejemplo**  
 
-    -   **Configuración seleccionada** : compruebe que la configuración seleccionada sea **Configuración de ejemplo**.  
+   -   **Configuración seleccionada** : compruebe que la configuración seleccionada sea **Configuración de ejemplo**.  
 
-    -   **Tipo de regla** > **Valor**  
+   -   **Tipo de regla** > **Valor**  
 
-    -   **La configuración debe ser compatible con la regla siguiente** : compruebe que el nombre de la configuración sea correcto y configure la opción para especificar que el valor de configuración debe ser igual a **1**.  
+   -   **La configuración debe ser compatible con la regla siguiente** : compruebe que el nombre de la configuración sea correcto y configure la opción para especificar que el valor de configuración debe ser igual a **1**.  
 
-    -   **Corregir las reglas no compatibles cuando se admita**: active esta casilla para garantizar que Configuration Manager restablecerá el valor de la clave del Registro al valor correcto, si no lo era.  
+   -   **Corregir las reglas no compatibles cuando se admita**: active esta casilla para garantizar que Configuration Manager restablecerá el valor de la clave del Registro al valor correcto, si no lo era.  
 
-6.  Complete el asistente para crear el elemento de configuración.  
+6. Complete el asistente para crear el elemento de configuración.  
 
- Ahora puede usar la información del tema [Tareas comunes para crear e implementar líneas de base de configuración](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) como ayuda para implementar la configuración que ha creado en los dispositivos.  
+   Ahora puede usar la información del tema [Tareas comunes para crear e implementar líneas de base de configuración](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) como ayuda para implementar la configuración que ha creado en los dispositivos.  

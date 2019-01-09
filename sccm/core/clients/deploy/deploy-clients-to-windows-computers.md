@@ -10,12 +10,12 @@ ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6eaac644b876fa3adfa1a2c79e7c4c5810942d9f
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 187f876999f39dd1d2d4aa345a7e9037f745a0ed
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385582"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418907"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>Cómo implementar clientes en equipos Windows con Configuration Manager
 
@@ -158,7 +158,7 @@ Use los procedimientos siguientes para configurar equipos sin un cliente de Conf
 
      Ejemplo con el formato FQDN: `http://server1.contoso.com:8530`  
 
-5.  **Establecer el servidor de estadísticas de la intranet**: este valor suele ser el mismo nombre de servidor.   
+5.  **Establecer el servidor de estadísticas de la intranet**: este valor suele ser el mismo nombre del servidor.   
 
 6.  Asigne el objeto de directiva de grupo a los equipos en los que se quiere instalar el cliente y recibir actualizaciones de software.  
 
@@ -256,7 +256,7 @@ Después, ejecute uno de los siguientes comandos:
 
 En este ejemplo se instala el cliente sin propiedades ni parámetros adicionales. El cliente se configura automáticamente con las propiedades de instalación de Active Directory Domain Services, incluyendo la siguiente configuración:  
 
-- Código de sitio: esta configuración requiere que la ubicación de red del cliente se incluya en un grupo de límites configurado para la asignación de cliente.  
+- Código de sitio: este valor requiere que la ubicación de red del cliente se incluya en un grupo de límites configurado para la asignación de cliente.  
 - Punto de administración
 - Punto de estado de reserva
 - Comunicación solo mediante HTTPS  
@@ -340,7 +340,7 @@ Para el procedimiento de instalación del cliente de Configuration Manager en un
 
 2. En el editor de software de Intune, escribe los parámetros de línea de comandos. Por ejemplo, use la línea de comandos siguiente con un cliente tradicional en la intranet:  
 
-  `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<Your site code> DNSSUFFIX=<DNS Suffix of management point>"`  
+   `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<Your site code> DNSSUFFIX=<DNS Suffix of management point>"`  
 
    > [!Note]  
    > Para obtener una línea de comandos de ejemplo para usar con un cliente de Windows 10 moderno mediante autenticación de Azure AD, vea [Preparar dispositivos de Windows 10 para la administración conjunta](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).  

@@ -10,12 +10,12 @@ ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dc1fc6668c61f2eafe04f92fc6b9ea27520ddc43
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d87ef098b096f1dc04bc424a3a100955b12f6f57
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342467"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419026"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1702 para System Center Configuration Manager
 
@@ -30,9 +30,9 @@ En este artículo se presentan las características disponibles en Technical Pre
 
 Esta versión preliminar presenta nuevas opciones de comentarios en la consola de Configuration Manager. Las opciones de comentarios le permiten enviar comentarios directamente al equipo de desarrollo, mediante el sitio web de comentarios de UserVoice de Configuration Manager.  
 
->Puede encontrar la opción **Comentarios**:
--  En la cinta de opciones, en el extremo izquierdo de la pestaña Inicio de cada nodo.  
-   ![Cinta de opciones](./media/feedback-home.png)
+> Puede encontrar la opción **Comentarios**:
+> -  En la cinta de opciones, en el extremo izquierdo de la pestaña Inicio de cada nodo.  
+>    ![Cinta de opciones](./media/feedback-home.png)
 
 -  Al hacer clic con el botón derecho en cualquier objeto de la consola.   
     ![Opción de hacer clic con el botón derecho](./media/feedback-option.png)   
@@ -86,8 +86,8 @@ Después de configurar Configuration Manager para que se ejecute en Azure AD, pu
 Para cada método que use, modifique la consulta LDAP para buscar las estructuras de unidad organizativa de Azure AD en lugar de los contenedores típicos del Active Directory local. Esto requiere que dirija la consulta para buscar en Active Directory en su suscripción de Azure.  
 
 Los ejemplos siguientes usan el Azure AD *contoso.onmicrosoft.com*:
- - **Detección de sistemas**   
-Azure AD almacena los dispositivos bajo la unidad organizativa **AADDC Computers**.  Configurar lo siguiente:  
+- **Detección de sistemas**   
+  Azure AD almacena los dispositivos bajo la unidad organizativa **AADDC Computers**.  Configurar lo siguiente:  
   - *LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
 
 
@@ -174,12 +174,12 @@ Siga este procedimiento para establecer una secuencia de tareas como de alto imp
 1. En la consola de Configuration Manager, vaya a **Biblioteca de software** > **Sistemas operativos** > **Secuencias de tareas**.
 2. Seleccione la secuencia de tareas que se va editar y haga clic en **Propiedades**.
 3. En la pestaña **Notificación de usuario**, seleccione **Usar texto personalizado**.
->  [!NOTE]
->  Solo se puede establecer el texto de la notificación del usuario cuando se selecciona **Es una secuencia de tareas de alto impacto**.
+   > [!NOTE]
+   >  Solo se puede establecer el texto de la notificación del usuario cuando se selecciona **Es una secuencia de tareas de alto impacto**.
 
 4. Configure las siguientes opciones (máximo de 255 caracteres para cada cuadro de texto):
 
-   **Texto del título de la notificación de usuario**: especifica el texto azul que aparece en la notificación de usuario del Centro de software. Por ejemplo, en la notificación de usuario predeterminada, esta sección contiene algo como "Confirme que quiere actualizar el sistema operativo en este equipo".
+   **Texto del título de la notificación de usuario**: especifica el texto de color azul que aparece en la notificación de usuario del Centro de software. Por ejemplo, en la notificación de usuario predeterminada, esta sección contiene algo como "Confirme que quiere actualizar el sistema operativo en este equipo".
 
    **Texto del mensaje de notificación de usuario**: hay tres cuadros de texto que proporcionan el cuerpo de la notificación personalizada.
    - Cuadro de texto 1: especifica el cuerpo principal del texto, que normalmente contiene instrucciones para el usuario. Por ejemplo, en la notificación de usuario predeterminada, esta sección contiene algo como "La actualización del sistema operativo llevará un tiempo y es posible que el equipo se reinicie varias veces".
@@ -188,20 +188,20 @@ Siga este procedimiento para establecer una secuencia de tareas como de alto imp
 
    Supongamos que configura la siguiente notificación personalizada en las propiedades.
 
-   ![Notificación personalizada para una secuencia de tareas](.\media\user-notification.png)
+   ![Notificación personalizada para una secuencia de tareas](./media/user-notification.png)
 
    Se mostrará el siguiente mensaje de notificación cuando el usuario final abra la instalación desde el Centro de software.
 
-   ![Notificación personalizada para una secuencia de tareas](.\media\user-notification-enduser.png)
+   ![Notificación personalizada para una secuencia de tareas](./media/user-notification-enduser.png)
 
 ### <a name="configure-software-center-properties"></a>Configurar propiedades del Centro de software
 Siga este procedimiento para configurar los detalles de la secuencia de tareas que aparece en el Centro de software. Estos detalles son meramente informativos.  
 1. En la consola de Configuration Manager, vaya a **Biblioteca de software** > **Sistemas operativos** > **Secuencias de tareas**.
 2. Seleccione la secuencia de tareas que se va editar y haga clic en **Propiedades**.
 3. En la pestaña **General**, está disponible la siguiente configuración para el Centro de software:
-  - **Es necesario reiniciar**: permite al usuario saber si es necesario reiniciar durante la instalación.
-  - **Tamaño de la descarga (MB)**: especifica cuántos megabytes se muestran en el Centro de software para la secuencia de tareas.  
-  - **Tiempo de ejecución estimado (minutos)**: especifica el tiempo de ejecución estimado en minutos que se muestra en el Centro de software para la secuencia de tareas.
+   - **Es necesario reiniciar**: permite al usuario saber si es necesario reiniciar durante la instalación.
+   - **Tamaño de la descarga (MB)**: especifica cuántos megabytes se muestran en el Centro de software para la secuencia de tareas.  
+   - **Tiempo de ejecución estimado (minutos)**: especifica el tiempo de ejecución estimado en minutos que se muestra en el Centro de software para la secuencia de tareas.
 
 
 ## <a name="check-for-running-executable-files-before-installing-an-application"></a>Comprobar los archivos ejecutables en ejecución antes de instalar una aplicación
@@ -264,8 +264,7 @@ Se han agregado nuevas opciones que se pueden usar en los elementos de configura
 - **Teclados predictivos** (solo en modo supervisado)
 - **Corrección automática** (solo en modo supervisado)
 - **Revisión ortográfica de teclado** (solo en modo supervisado)
-- **Métodos abreviados de teclado** (solo en modo supervisado)
-<!--- - **Enterprise app trust settings modification** --->
+- **Métodos abreviados de teclado** (solo en modo supervisado) <!--- - **Enterprise app trust settings modification** --->
 - **Instalación de aplicaciones solo con Apple Configurator e iTunes** (solo en modo supervisado)
 - **Descargas de aplicaciones automáticas** (solo en modo supervisado)
 - **Realizar cambios en la configuración de la aplicación Buscar a mis amigos** (solo en modo supervisado)
@@ -298,17 +297,17 @@ Las secciones siguientes describen la administración de Android for Work.
 #### <a name="enable-android-for-work-management"></a>Habilitar la administración de Android for Work
 1. Cree una cuenta de Google en https://accounts.google.com/SignUp para usarla como la cuenta de administrador de Android for Work que va a estar asociada a todas las tareas de administración de Android for Work de este inquilino de Intune. Podría ser una cuenta de Google que se comparte entre los administradores que administran dispositivos Android. Se trata de la cuenta de Google que su organización usa para administrar y publicar aplicaciones en la consola de Play for Work. Usará esta cuenta para aprobar aplicaciones en la tienda de Play for Work, por lo que debe realizar el seguimiento del nombre y la contraseña de la cuenta.
 2. Habilite la inscripción de Android enlazando la cuenta de Google con el inquilino de Intune administrado en Configuration Manager:
-  1. Vaya a **Administración** > **General** > **Cloud Services** > **Suscripciones a Microsoft Intune** y seleccione la suscripción a Intune.
-  2. En la cinta, haga clic en **Configurar plataformas** > **Android** y asegúrese de que **Habilitar inscripción de Android** está activada.
-  3. En la cinta, haga clic en **Configurar plataformas** > **Android for Work**.
-  4. En el cuadro de diálogo, haga clic en **Configurar Android for Work en la consola de Intune**. Se abre la consola de Intune en el explorador web.
-  5. Use sus credenciales de administrador de Intune para iniciar sesión en el portal de Intune.
-  6. Haga clic en **Configurar** para abrir el sitio web Android for Work de Google Play.
-  7. En la página de inicio de sesión de Google, escriba las credenciales de la cuenta de Google del paso 1 y después proporcione la información de su empresa.
+   1. Vaya a **Administración** > **General** > **Cloud Services** > **Suscripciones a Microsoft Intune** y seleccione la suscripción a Intune.
+   2. En la cinta, haga clic en **Configurar plataformas** > **Android** y asegúrese de que **Habilitar inscripción de Android** está activada.
+   3. En la cinta, haga clic en **Configurar plataformas** > **Android for Work**.
+   4. En el cuadro de diálogo, haga clic en **Configurar Android for Work en la consola de Intune**. Se abre la consola de Intune en el explorador web.
+   5. Use sus credenciales de administrador de Intune para iniciar sesión en el portal de Intune.
+   6. Haga clic en **Configurar** para abrir el sitio web Android for Work de Google Play.
+   7. En la página de inicio de sesión de Google, escriba las credenciales de la cuenta de Google del paso 1 y después proporcione la información de su empresa.
 3. Cuando vuelva al portal de Intune, Android for Work está habilitado y tiene tres opciones de inscripción para dispositivos Android for Work:
-  - **Administrar todos los dispositivos como Android**: (deshabilitado) Todos los dispositivos Android se inscribirán, incluidos los dispositivos que admiten Android for Work, como dispositivos Android convencionales
-  - **Administrar dispositivos compatibles como Android for Work**: (habilitado) Todos los dispositivos que admiten Android for Work se inscriben como dispositivos Android for Work. Todo dispositivo Android que no admita Android for Work se inscribe como dispositivo Android convencional.
-  - **Administrar los dispositivos compatibles para los usuarios únicamente en estos grupos como Android for Work**: (pruebas) Le permite dirigir la administración de Android for Work a un conjunto limitado de usuarios. Solo los miembros de los grupos seleccionados que inscriben un dispositivo que admita Android for Work se inscriben como dispositivos Android for Work. Todos los demás se inscriben como dispositivos Android.
+   - **Administrar todos los dispositivos como Android**: (deshabilitado) Todos los dispositivos Android se inscribirán, incluidos los dispositivos que admiten Android for Work, como dispositivos Android convencionales
+   - **Administrar dispositivos compatibles como Android for Work**: (habilitado) Todos los dispositivos que admiten Android for Work se inscriben como dispositivos Android for Work. Todo dispositivo Android que no admita Android for Work se inscribe como dispositivo Android convencional.
+   - **Administrar los dispositivos compatibles para los usuarios únicamente en estos grupos como Android for Work**: (pruebas) Le permite dirigir la administración de Android for Work a un conjunto limitado de usuarios. Solo los miembros de los grupos seleccionados que inscriben un dispositivo que admita Android for Work se inscriben como dispositivos Android for Work. Todos los demás se inscriben como dispositivos Android.
   
 > [!NOTE]
 > Un problema conocido impide que la opción **Administrar los dispositivos compatibles para usuarios solo en estos grupos como Android for Work** funcione según lo esperado. Los dispositivos de los usuarios en los grupos de Azure AD especificados se inscribirán como Android en lugar de Android for Work. Para probar Android for Work, debe usar la opción **Manage all supported devices as Android for Work** (Administrar todos los dispositivos compatibles como Android for Work).

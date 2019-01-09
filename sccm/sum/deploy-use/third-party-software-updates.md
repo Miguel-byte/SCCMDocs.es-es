@@ -10,16 +10,16 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fbcf7a7d76146cc11dd4bb57b86fe4752c694e02
-ms.sourcegitcommit: 1e782268d6c0211bd854b5860de72cfd6c6985c6
+ms.openlocfilehash: 32aced9e14f98008dfd769564c553370d067896e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44697045"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423106"
 ---
 # <a name="enable-third-party-updates"></a>Habilitar actualizaciones de terceros 
 
-*Se aplica a: System Center Configuration Manager versión 1806*
+*Se aplica a: System Center Configuration Manager, versión 1806*
 
 A partir de la versión 1806, el nodo **Catálogos de actualizaciones de software de terceros** de la consola de Configuration Manager permite suscribirse a catálogos de terceros, publicar sus actualizaciones en el punto de actualización de software (SUP) e implementarlas posteriormente en los clientes.  <!--1357605, 1352101, 1358714-->
 
@@ -53,7 +53,7 @@ A partir de la versión 1806, el nodo **Catálogos de actualizaciones de softwar
 4. Para permitir la instalación del certificado de firma de WSUS autofirmado en los almacenes Editores de confianza y Raíz de confianza del servidor de SUP remoto:
    - La **cuenta de conexión del servidor de WSUS** debe tener permisos de administración remota en el servidor de SUP.
 
-    Si este requisito no es posible, exporte el certificado del almacén de WSUS del equipo local a los almacenes Editores de confianza y Raíz de confianza. 
+     Si este requisito no es posible, exporte el certificado del almacén de WSUS del equipo local a los almacenes Editores de confianza y Raíz de confianza. 
 
 > [!NOTE] 
 >La **cuenta de conexión del servidor de WSUS** puede identificarse en la pestaña **Configuración de cuenta y proxy** de las propiedades del rol Sistema de sitio del SUP. Si no se especifica una cuenta, se usa la cuenta de equipo del servidor de sitio.
@@ -111,7 +111,7 @@ Los *catálogos de asociados* son catálogos de proveedores de software que tien
     - **Publicador**: el nombre de la organización que publica el catálogo. 
     - **Nombre**: nombre del catálogo que se va a mostrar en la consola de Configuration Manager. 
     - **Descripción**: una descripción del catálogo. 
-    - **URL de soporte técnico** (opcional): dirección HTTPS válida de un sitio web para obtener ayuda sobre el catálogo. 
+    - **Dirección URL de soporte técnico** (opcional): dirección HTTPS válida de un sitio web para obtener ayuda sobre el catálogo. 
     - **Contacto de soporte técnico** (opcional): información de contacto para obtener ayuda sobre el catálogo. 
 2. Haga clic en **Siguiente** para revisar el resumen del catálogo y continuar con el **asistente para catálogos personalizados de actualizaciones de software de terceros** hasta su finalización.
 
@@ -122,17 +122,17 @@ Cuando se suscribe a un catálogo de terceros en la consola de Configuration Man
 1. En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software**. Expanda **Actualizaciones de software** y seleccione el nodo **Catálogos de actualizaciones de software de terceros**.  
 2. Seleccione el catálogo al que quiere suscribirse y haga clic en **Suscribirse al catálogo** en la cinta de opciones. 
     ![Agregar catálogo personalizado de actualizaciones de terceros](media/third-party-updates-subscribe.png)
-1. Revise y apruebe el certificado de catálogo.  
-    >[!NOTE]
-    
-    > Cuando se suscribe a un catálogo de actualizaciones de software de terceros, el certificado que revisa y aprueba en el asistente se agrega al sitio. Este certificado es de tipo **Catálogo de actualizaciones de software de terceros**. Se puede administrar desde el nodo **Certificados** de la sección **Seguridad** en el área de trabajo de **Administración**.  
-2. Complete el asistente. Después de la suscripción inicial, el catálogo debería empezar a descargarse en cuestión de minutos. 
+3. Revise y apruebe el certificado de catálogo.  
+   > [!NOTE]
+   > 
+   > Cuando se suscribe a un catálogo de actualizaciones de software de terceros, el certificado que revisa y aprueba en el asistente se agrega al sitio. Este certificado es de tipo **Catálogo de actualizaciones de software de terceros**. Se puede administrar desde el nodo **Certificados** de la sección **Seguridad** en el área de trabajo de **Administración**.  
+4. Complete el asistente. Después de la suscripción inicial, el catálogo debería empezar a descargarse en cuestión de minutos. 
     - El catálogo se sincroniza automáticamente cada siete días.
     - Haga clic en **Sincronizar ahora** en la cinta de opciones para forzar una sincronización.
-3. Una vez descargado el catálogo, los metadatos del producto deben sincronizarse entre la base de datos de WSUS y la base de datos de Configuration Manager. [Inicie manualmente la sincronización de actualizaciones de software](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) para sincronizar la información del producto.
-4. Una vez sincronizada la información del producto, [configure el SUP para sincronizar el producto deseado](../get-started/configure-classifications-and-products.md#to-configure-classifications-and-products-to-synchronize) en Configuration Manager.  
-5. [Inicie manualmente la sincronización de actualizaciones de software](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) para sincronizar las actualizaciones del nuevo producto en Configuration Manager.  
-6. Cuando la sincronización termina, se pueden ver las actualizaciones de terceros en el nodo **Todas las actualizaciones**. Estas actualizaciones se publican como actualizaciones de **solo metadatos** hasta que se decide publicarlas. 
+5. Una vez descargado el catálogo, los metadatos del producto deben sincronizarse entre la base de datos de WSUS y la base de datos de Configuration Manager. [Inicie manualmente la sincronización de actualizaciones de software](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) para sincronizar la información del producto.
+6. Una vez sincronizada la información del producto, [configure el SUP para sincronizar el producto deseado](../get-started/configure-classifications-and-products.md#to-configure-classifications-and-products-to-synchronize) en Configuration Manager.  
+7. [Inicie manualmente la sincronización de actualizaciones de software](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) para sincronizar las actualizaciones del nuevo producto en Configuration Manager.  
+8. Cuando la sincronización termina, se pueden ver las actualizaciones de terceros en el nodo **Todas las actualizaciones**. Estas actualizaciones se publican como actualizaciones de **solo metadatos** hasta que se decide publicarlas. 
      - El icono de la flecha azul representa una actualización de software de solo metadatos. ![Icono de actualización de software de solo metadatos](media/MetadataOnly.png)
 
 

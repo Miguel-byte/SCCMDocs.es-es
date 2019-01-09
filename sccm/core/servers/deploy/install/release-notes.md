@@ -2,7 +2,7 @@
 title: Notas de la versión
 titleSuffix: Configuration Manager
 description: Obtenga información sobre problemas urgentes que todavía no se han corregido en el producto o no se han tratado en un artículo de Knowledge Base del soporte técnico de Microsoft.
-ms.date: 11/27/2018
+ms.date: 12/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 41039ec31c11573424f044df009e9c364491b5f7
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 41b068da0524333ae25ea2228a71bf27344f4f58
+ms.sourcegitcommit: f5fa9e657350ceb963a7928497d2adca9caef3d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456352"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53748500"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Notas de la versión de Configuration Manager
 
@@ -35,7 +35,7 @@ Para obtener información sobre las características que presentan las distintas
 
 
 
-## <a name="setup-and-upgrade"></a>Instalación y actualización  
+## <a name="set-up-and-upgrade"></a>Configuración y actualización  
 
 
 ### <a name="when-using-redistributable-files-from-the-cdlatest-folder-setup-fails-with-a-manifest-verification-error"></a>Cuando se usan archivos de redistribución de la carpeta CD.Latest, se produce un error de comprobación de manifiesto en la instalación
@@ -69,7 +69,7 @@ Aunque no tiene ningún efecto en el resultado del proceso de instalación, incl
 <!--VSO 2858826, SCCMDocs issue 772-->
 *Se aplica a: Configuration Manager, versión 1806*
 
-Si el [punto de conexión de servicio](/sccm/core/servers/deploy/configure/about-the-service-connection-point) coexiste con un [servidor de sitio en modo pasivo](/sccm/core/servers/deploy/configure/site-server-high-availability), la implementación y supervisión de una instancia de [Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) no se inicia. El componente de administrador de servicio en la nube (SMS_CLOUD_SERVICES_MANAGER) está en estado detenido.
+Si el [punto de conexión de servicio](/sccm/core/servers/deploy/configure/about-the-service-connection-point) se coloca con un [servidor de sitio en modo pasivo](/sccm/core/servers/deploy/configure/site-server-high-availability), la implementación y supervisión de una instancia de [Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) no se inicia. El componente de administrador de servicio en la nube (SMS_CLOUD_SERVICES_MANAGER) está en estado detenido.
 
 #### <a name="workaround"></a>Solución alternativa
 Mueva el rol del punto de conexión de servicio a otro servidor.
@@ -88,6 +88,30 @@ Mueva el rol del punto de conexión de servicio a otro servidor.
 
 
 ## <a name="software-updates"></a>Actualizaciones de software
+
+### <a name="security-roles-are-missing-for-phased-deployments"></a>Roles de seguridad que faltan para las implementaciones por fases
+<!--3479337, SCCMDocs-pr issue 3095-->
+*Se aplica a: Configuration Manager, versión 1810*
+
+El rol de seguridad integrado **Administrador de implementaciones del sistema operativo** tiene permisos para las [implementaciones por fases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence). En los roles siguientes faltan estos permisos:  
+
+- **Administrador de aplicaciones**  
+- **Administrador de implementación de aplicaciones**  
+- **Administrador de actualizaciones de software**  
+
+El rol **Autor de la aplicación** puede parecer que tiene algunos permisos para las implementaciones por fases, pero no debería ser capaz de crear implementaciones. 
+
+Un usuario con uno de estos roles puede iniciar el asistente Crear una implementación por fases y puede ver las implementaciones por fases para una aplicación o actualización de software. No puede completar al asistente ni realizar cambios en una implementación existente.
+
+#### <a name="workaround"></a>Solución alternativa
+Cree un rol de seguridad personalizado. Copie un rol de seguridad existente y agregue los permisos siguientes a la clase de objeto **Implementación por fases**:
+- Crear  
+- Eliminar  
+- Modificar  
+- Lectura  
+
+Para obtener más información, vea [Crear roles de seguridad personalizados](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_CreateSecRole).
+
 
 ### <a name="changing-office-365-client-setting-doesnt-apply"></a>No se aplica la configuración cliente de cambios de Office 365 
 <!--511551-->

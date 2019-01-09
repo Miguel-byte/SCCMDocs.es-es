@@ -10,12 +10,12 @@ ms.assetid: 9fcbcc81-cd6f-496e-b075-ef1afa2b8ccc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: e7d1ee430ef07149b77a4e7b250bc3e19788582a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 1ddefeafdf03a64f5fe50df6a4638616552f818a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335701"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420148"
 ---
 # <a name="create-user-data-and-profiles-configuration-items-in-system-center-configuration-manager"></a>Crear elementos de configuración de perfiles y datos de usuario en System Center Configuration Manager
 
@@ -23,13 +23,13 @@ ms.locfileid: "32335701"
 
 Los elementos de configuración de perfiles y datos de usuario de System Center Configuration Manager contienen opciones que pueden administrar el redireccionamiento de carpetas, los archivos sin conexión y los perfiles móviles en equipos que ejecutan Windows 8 y versiones posteriores para los usuarios de la jerarquía. Por ejemplo, puede:  
 
--   Redirigir la carpeta de documentos de un usuario a un recurso compartido de red.  
+- Redirigir la carpeta de documentos de un usuario a un recurso compartido de red.  
 
--   Garantizar que los archivos especificados que se almacenen en la red estén disponibles en el equipo del usuario cuando la conexión de red no lo esté.  
+- Garantizar que los archivos especificados que se almacenen en la red estén disponibles en el equipo del usuario cuando la conexión de red no lo esté.  
 
--   Configurar qué archivos de un perfil de usuario móvil se sincronizan con un recurso compartido de red cuando el usuario inicia y cierra sesión.  
+- Configurar qué archivos de un perfil de usuario móvil se sincronizan con un recurso compartido de red cuando el usuario inicia y cierra sesión.  
 
- A diferencia de otros elementos de configuración de Configuration Manager, no se agregan elementos de configuración de perfiles y datos de usuario a una línea base de configuración que se implementa posteriormente. En su lugar, se implementa el elemento de configuración directamente mediante el cuadro de diálogo **Implementar elemento de configuración de perfiles y datos de usuario** .  
+  A diferencia de otros elementos de configuración de Configuration Manager, no se agregan elementos de configuración de perfiles y datos de usuario a una línea base de configuración que se implementa posteriormente. En su lugar, se implementa el elemento de configuración directamente mediante el cuadro de diálogo **Implementar elemento de configuración de perfiles y datos de usuario** .  
 
 > [!IMPORTANT]  
 >  Solo se pueden implementar elementos de configuración de perfiles y datos de usuario en recopilaciones de usuarios.  
@@ -49,40 +49,40 @@ Los elementos de configuración de perfiles y datos de usuario de System Center 
 
 ## <a name="create-a-user-data-and-profiles-configuration-item"></a>Crear un elemento de configuración de perfiles y datos de usuario  
 
-1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad** > **Configuración de cumplimiento** > **Perfiles y datos de usuario**.  
+1. En la consola de Configuration Manager, haga clic en **Activos y compatibilidad** > **Configuración de cumplimiento** > **Perfiles y datos de usuario**.  
 
-3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear elemento de configuración de perfiles y datos de usuario**.  
+2. En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear elemento de configuración de perfiles y datos de usuario**.  
 
-4.  En la página **General** del **Asistente para crear elemento de configuración de perfiles y datos de usuario**, especifique la siguiente información:  
+3. En la página **General** del **Asistente para crear elemento de configuración de perfiles y datos de usuario**, especifique la siguiente información:  
 
-    -   **Nombre:** escriba un nombre único para el elemento de configuración. Puede utilizar un máximo de 256 caracteres.  
+   -   **Nombre:** escriba un nombre único para el elemento de configuración. Puede utilizar un máximo de 256 caracteres.  
 
-    -   **Descripción:** Proporcione una descripción general de los elementos de configuración y otra información relevante que le permita para identificarlo en la consola de Configuration Manager. Puede utilizar un máximo de 256 caracteres.  
+   -   **Descripción:** proporcione una descripción general del elemento de configuración y otra información pertinente que le ayude a identificarlo en la consola de Configuration Manager. Puede utilizar un máximo de 256 caracteres.  
 
-    -   **Redirección de carpetas:** seleccione esta casilla si quiere configurar el redireccionamiento de carpetas de este elemento de configuración.  
+   -   **Redirección de carpetas:** active esta casilla si quiere configurar la redirección de carpetas de este elemento de configuración.  
 
-    -   **Archivos sin conexión:** seleccione esta casilla si quiere configurar los archivos sin conexión de este elemento de configuración.  
+   -   **Archivos sin conexión:** active esta casilla si quiere configurar los archivos sin conexión de este elemento de configuración.  
 
-    -   **Perfiles de usuario móvil:** seleccione esta casilla si quiere configurar los perfiles de usuario móvil de este elemento de configuración.  
+   -   **Perfiles de usuario móvil:** active esta casilla si quiere configurar los perfiles de usuario móvil de este elemento de configuración.  
 
-5.  En la página **Redirección de carpetas** del **Asistente para crear elemento de configuración de perfiles y datos de usuario**, especifique cómo quiere que los equipos cliente de los usuarios que reciben este elemento de configuración administren la redirección de carpetas. Puede configurar los ajustes de cualquier dispositivo en el que el usuario inicie sesión o solo los dispositivos primarios del usuario. Para más información sobre la redirección de carpetas, consulte la documentación de Windows Server.  
+4. En la página **Redirección de carpetas** del **Asistente para crear elemento de configuración de perfiles y datos de usuario**, especifique cómo quiere que los equipos cliente de los usuarios que reciben este elemento de configuración administren la redirección de carpetas. Puede configurar los ajustes de cualquier dispositivo en el que el usuario inicie sesión o solo los dispositivos primarios del usuario. Para más información sobre la redirección de carpetas, consulte la documentación de Windows Server.  
 
-    > [!NOTE]  
-    >  Esta página solo aparece si seleccionó **Redirección de carpetas** en la página **General** del asistente.  
+   > [!NOTE]  
+   >  Esta página solo aparece si seleccionó **Redirección de carpetas** en la página **General** del asistente.  
 
-6.  En la página **Archivos sin conexión** del **Asistente para crear elemento de configuración de perfiles y datos de usuario**, puede habilitar o deshabilitar el uso de archivos sin conexión de los usuarios que reciben este elemento de configuración y establecer los ajustes del comportamiento de los archivos sin conexión. También puede especificar los archivos sin conexión que siempre estarán disponibles en cualquier equipo en el que el usuario inicie sesión. Para más información sobre los archivos sin conexión, consulte la documentación de Windows Server.  
+5. En la página **Archivos sin conexión** del **Asistente para crear elemento de configuración de perfiles y datos de usuario**, puede habilitar o deshabilitar el uso de archivos sin conexión de los usuarios que reciben este elemento de configuración y establecer los ajustes del comportamiento de los archivos sin conexión. También puede especificar los archivos sin conexión que siempre estarán disponibles en cualquier equipo en el que el usuario inicie sesión. Para más información sobre los archivos sin conexión, consulte la documentación de Windows Server.  
 
-    > [!NOTE]  
-    >  Esta página solo aparece si activó la casilla **Archivos sin conexión** en la página **General** del asistente.  
+   > [!NOTE]  
+   >  Esta página solo aparece si activó la casilla **Archivos sin conexión** en la página **General** del asistente.  
 
-7.  En la página **Perfiles móviles** del **Asistente para crear elemento de configuración de perfiles y datos de usuario**, puede configurar si los perfiles móviles deben estar disponibles en equipos en los que el usuario inicie sesión y también configurar más información sobre el comportamiento de estos perfiles. Para más información sobre los perfiles móviles, consulte la documentación de Windows Server.  
+6. En la página **Perfiles móviles** del **Asistente para crear elemento de configuración de perfiles y datos de usuario**, puede configurar si los perfiles móviles deben estar disponibles en equipos en los que el usuario inicie sesión y también configurar más información sobre el comportamiento de estos perfiles. Para más información sobre los perfiles móviles, consulte la documentación de Windows Server.  
 
-    > [!NOTE]  
-    >  Esta página solo aparece si activó la casilla **Perfiles de usuario móvil** en la página **General** del asistente.  
+   > [!NOTE]  
+   >  Esta página solo aparece si activó la casilla **Perfiles de usuario móvil** en la página **General** del asistente.  
 
-8.  Complete el asistente.  
+7. Complete el asistente.  
 
- El nuevo elemento de configuración de perfiles y datos de usuario se muestra en el nodo **Perfiles y datos de usuario** del área de trabajo **Activos y compatibilidad** .  
+   El nuevo elemento de configuración de perfiles y datos de usuario se muestra en el nodo **Perfiles y datos de usuario** del área de trabajo **Activos y compatibilidad** .  
 
 ## <a name="deploy-a-user-data-and-profiles-configuration-item"></a>Implementar un elemento de configuración de perfiles y datos de usuario  
 

@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bec95b13ecba5ae5238d758ae06566042a95d939
-ms.sourcegitcommit: 303d826f45c8fd9a05d8883afc1ca645e56bd576
+ms.openlocfilehash: 5e62983f76b0f2a4277edfab08d4321da5d4a258
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269253"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416493"
 ---
 # <a name="task-sequence-steps-in-configuration-manager"></a>Pasos de secuencias de tareas en Configuration Manager
 
@@ -28,7 +28,7 @@ ms.locfileid: "51269253"
 #### <a name="properties-tab"></a>Ficha Propiedades
  - **Nombre**: el editor de secuencia de tareas requiere que se especifique un nombre corto para describir este paso. Cuando se agrega un paso nuevo, el editor de secuencia de tareas establece el nombre en Tipo de forma predeterminada. La longitud de **Nombre** no puede superar los 50 caracteres.  
 
- - **Descripción**: si quiere, especifique información más detallada sobre este paso. La longitud de **Descripción** no puede superar los 256 caracteres.  
+ - **Descripción**: opcionalmente, especifique información más detallada sobre este paso. La longitud de **Descripción** no puede superar los 256 caracteres.  
 
 
  En el resto de este artículo se describen los demás valores de la pestaña **Propiedades** para cada paso de secuencia de tareas.
@@ -37,7 +37,7 @@ ms.locfileid: "51269253"
 
  - **Deshabilitar este paso**: la secuencia de tareas omite este paso cuando se ejecuta en un equipo. El icono para este paso está atenuado en el editor de secuencia de tareas.  
 
- - **Continuar después de un error**: la secuencia de tareas continúa aunque se produzca un error durante la ejecución del paso. Para obtener información, consulte [Planeación de consideraciones para la automatización de tareas](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSGroups).   
+ - **Continuar después de un error**: si se produce un error durante la ejecución del paso, la secuencia de tareas continúa. Para obtener información, consulte [Planeación de consideraciones para la automatización de tareas](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSGroups).   
 
  - **Agregar condición**: la secuencia de tareas evalúa estas instrucciones condicionales para determinar si se ejecuta el paso. Para obtener un ejemplo del uso de una variable de secuencia de tareas como una condición, vea [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables#bkmk_access-condition) (Uso de variables de secuencia de tareas).   
 
@@ -73,13 +73,13 @@ ms.locfileid: "51269253"
 #### <a name="destination"></a>Destino  
  Configure una de las opciones siguientes:
 
- - **Siguiente partición disponible:** use la siguiente partición secuencial que no haya sido destino previo de los pasos **Aplicar el sistema operativo** o **Aplicar imagen de datos** en esta secuencia de tareas.  
+ - **Siguiente partición disponible**: use la siguiente partición secuencial que no haya sido destino previo de los pasos **Aplicar el sistema operativo** o **Aplicar imagen de datos** en esta secuencia de tareas.  
 
  - **Disco y partición específicos**: seleccione el número de **Disco** (empezando por 0) y el número de **Partición** (empezando por 1).  
 
- - **Letra de unidad lógica específica**: especifique la **Letra de unidad** que Windows PE asigna a la partición. Esta letra de unidad puede ser diferente de la que asigna el sistema operativo recién implementado.  
+ - **Letra de unidad lógica específica**: especifique la **letra de unidad** que Windows PE asigna a la partición. Esta letra de unidad puede ser diferente de la que asigna el sistema operativo recién implementado.  
 
- - **Letra de unidad lógica almacenada en una variable**: especifique la variable de secuencia de tareas que contiene la letra de unidad asignada a la partición por Windows PE. Normalmente, esta variable se establece en la sección Avanzado del cuadro de diálogo **Propiedades de la partición** del paso de la secuencia de tareas **Formatear y crear particiones en el disco**.  
+ - **Letra de unida lógica almacenada en una variable**: especifique la variable de secuencia de tareas que contiene la letra de unidad asignada a la partición por Windows PE. Normalmente, esta variable se establece en la sección Avanzado del cuadro de diálogo **Propiedades de la partición** del paso de la secuencia de tareas **Formatear y crear particiones en el disco**.  
 
 #### <a name="delete-all-content-on-the-partition-before-applying-the-image"></a>Eliminar todo el contenido en la partición antes de aplicar la imagen  
  Especifica que la secuencia de tareas elimina todos los archivos en la partición de destino antes de instalar la imagen. Si no se elimina el contenido de la partición, esta acción puede usarse para aplicar contenido adicional a una partición de destino previa.  
@@ -201,30 +201,30 @@ ms.locfileid: "51269253"
 #### <a name="os-image-actions"></a>Acciones de imagen de sistema operativo
  El paso **Aplicar imagen de sistema operativo** realiza las acciones siguientes cuando se usa una imagen de sistema operativo:  
 
- 1.  Elimina todo el contenido en el volumen de destino, excepto los archivos de la carpeta que especifica la variable **\_SMSTSUserStatePath**.  
+1. Elimina todo el contenido en el volumen de destino, excepto los archivos de la carpeta que especifica la variable **\_SMSTSUserStatePath**.  
 
- 2.  Extrae el contenido del archivo .wim especificado en la partición de destino especificada.  
+2. Extrae el contenido del archivo .wim especificado en la partición de destino especificada.  
 
- 3.  Prepara el archivo de respuesta:  
+3. Prepara el archivo de respuesta:  
 
-    1.  Crea un nuevo archivo de respuesta predeterminado de instalación de Windows (sysprep.inf o unattend.xml) para el sistema operativo implementado.  
+   1.  Crea un nuevo archivo de respuesta predeterminado de instalación de Windows (sysprep.inf o unattend.xml) para el sistema operativo implementado.  
 
-    2.  Combina los valores del archivo de respuesta proporcionado por el usuario.  
+   2.  Combina los valores del archivo de respuesta proporcionado por el usuario.  
 
- 4.  Copia los cargadores de arranque de Windows en la partición activa.  
+4. Copia los cargadores de arranque de Windows en la partición activa.  
 
- 5.  Configura el archivo boot.ini o la base de datos de la configuración de arranque (BCD) para que hagan referencia al sistema operativo que se acaba de instalar.  
+5. Configura el archivo boot.ini o la base de datos de la configuración de arranque (BCD) para que hagan referencia al sistema operativo que se acaba de instalar.  
 
 #### <a name="os-upgrade-package-actions"></a>Acciones del paquete de actualización del sistema operativo
  El paso **Aplicar imagen de sistema operativo** realiza las acciones siguientes cuando se usa un paquete de actualización del sistema operativo:  
 
- 1.  Elimina todo el contenido en el volumen de destino, excepto los archivos de la carpeta que especifica la variable **\_SMSTSUserStatePath**.  
+1. Elimina todo el contenido en el volumen de destino, excepto los archivos de la carpeta que especifica la variable **\_SMSTSUserStatePath**.  
 
- 2.  Prepara el archivo de respuesta:  
+2. Prepara el archivo de respuesta:  
 
-    1.  Cree un archivo de respuesta nuevo con los valores estándar creados por Configuration Manager.  
+   1.  Cree un archivo de respuesta nuevo con los valores estándar creados por Configuration Manager.  
 
-    2.  Combina los valores del archivo de respuesta proporcionado por el usuario.  
+   2.  Combina los valores del archivo de respuesta proporcionado por el usuario.  
 
 
 ### <a name="properties"></a>Propiedades  
@@ -248,13 +248,13 @@ ms.locfileid: "51269253"
 #### <a name="destination"></a>Destino  
  Configure una de las opciones siguientes:  
 
- - **Siguiente partición disponible:** use la siguiente partición secuencial que no haya sido destino previo de los pasos **Aplicar el sistema operativo** o **Aplicar imagen de datos** en esta secuencia de tareas.  
+ - **Siguiente partición disponible**: use la siguiente partición secuencial que no haya sido destino previo de los pasos **Aplicar el sistema operativo** o **Aplicar imagen de datos** en esta secuencia de tareas.  
 
  - **Disco y partición específicos**: seleccione el número de **Disco** (empezando por 0) y el número de **Partición** (empezando por 1).  
 
  - **Letra de unidad lógica específica**: especifique la **Letra de unidad** asignada a la partición por Windows PE. Esta letra de unidad puede ser diferente de la que asigna el sistema operativo recién implementado.  
 
- - **Letra de unidad lógica almacenada en una variable**: especifique la variable de secuencia de tareas que contiene la letra de unidad asignada a la partición por Windows PE. Normalmente, esta variable se establece en la sección Avanzado del cuadro de diálogo **Propiedades de la partición** del paso de la secuencia de tareas **Formatear y crear particiones en el disco**.  
+ - **Letra de unida lógica almacenada en una variable**: especifique la variable de secuencia de tareas que contiene la letra de unidad asignada a la partición por Windows PE. Normalmente, esta variable se establece en la sección Avanzado del cuadro de diálogo **Propiedades de la partición** del paso de la secuencia de tareas **Formatear y crear particiones en el disco**.  
 
 
 ### <a name="options"></a>Opciones  
@@ -410,7 +410,7 @@ ms.locfileid: "51269253"
  Captura la configuración del adaptador de red del equipo de destino. Captura la siguiente información: 
  - Configuración de red global  
  - Número de adaptadores  
- - La siguiente configuración de red asociada a cada adaptador: DNS, WINS, IP y filtros de puerto
+ - La configuración de red siguiente asociada a cada adaptador: DNS, WINS, IP y filtros de puertos
 
 
 
@@ -519,9 +519,9 @@ ms.locfileid: "51269253"
 #### <a name="copy-by-using-file-system-access"></a>Copiar mediante el acceso al sistema de archivos
  Habilite esta opción para especificar cualquiera de las siguientes opciones:  
 
- - **Continuar si algunos archivos no se pueden capturar**: habilite esta configuración para continuar con el proceso de migración incluso si no puede capturar algunos archivos. Si deshabilita esta opción, se produce un error en este paso si no se puede capturar un archivo. Esta opción está habilitada de forma predeterminada.  
+ - **Continuar si algunos archivos no se pueden capturar**: habilite esta opción para continuar con el proceso de migración, incluso si no puede capturar algunos archivos. Si deshabilita esta opción, se produce un error en este paso si no se puede capturar un archivo. Esta opción está habilitada de forma predeterminada.  
 
- - **Capturar localmente mediante vínculos en vez de mediante la copia de archivos**: habilite esta opción para usar vínculos físicos NTFS para capturar archivos.  
+ - **Capturar localmente mediante vínculos en vez de mediante la copia de archivos**: Habilite esta opción para usar vínculos físicos NTFS en la captura de archivos.  
 
      Para obtener más información sobre cómo migrar datos mediante vínculos físicos, consulte el tema en el que se describe el [almacén de migración de vínculos físicos](https://docs.microsoft.com/windows/deployment/usmt/usmt-hard-link-migration-store).  
 
@@ -689,7 +689,7 @@ ms.locfileid: "51269253"
 #### <a name="place-into-the-following-location"></a>Colocar en la siguiente ubicación
  Elija guardar el paquete en una de las siguientes ubicaciones:  
 
- - **Directorio de trabajo de secuencia de tareas**: esta ubicación también se conoce como memoria caché de la secuencia de tareas.  
+ - **Directorio de trabajo de secuencia de tareas**: esta ubicación también se conoce como la caché de la secuencia de tareas.  
 
  - **Caché de cliente de Configuration Manager**: use esta opción para almacenar el contenido en la caché de cliente. De forma predeterminada, esta ruta de acceso es `%WinDir%\ccmcache`.  
 
@@ -756,7 +756,7 @@ ms.locfileid: "51269253"
 
  - **TPM y clave de inicio en USB**: seleccione esta opción para usar TPM y una clave de inicio almacenada en una unidad flash USB. Si se selecciona esta opción, BitLocker bloquea el proceso de arranque normal hasta que se conecte al equipo un dispositivo USB que contenga una clave de inicio de BitLocker.  
 
- - **TPM con NIP**: seleccione esta opción para usar TPM y un número de identificación personal (NIP). Si selecciona esta opción, BitLocker bloquea el proceso de arranque normal hasta que el usuario proporcione el PIN.  
+ - **TPM con PIN**: seleccione esta opción para usar TPM y un número de identificación personal (PIN). Si selecciona esta opción, BitLocker bloquea el proceso de arranque normal hasta que el usuario proporcione el PIN.  
 
 
  Para cifrar una unidad de datos específica, que no es de sistema operativo, seleccione **Unidad específica**. A continuación, seleccione la unidad en la lista.  
@@ -878,7 +878,7 @@ ms.locfileid: "51269253"
 #### <a name="install-applications-according-to-dynamic-variable-list"></a>Instalar aplicaciones según la lista de variables dinámicas
  La secuencia de tareas instala las aplicaciones mediante este nombre variable de base. El nombre variable de base es para un conjunto de variables de secuencia de tareas definidas para una colección o equipo. Estas variables especifican las aplicaciones que la secuencia de tareas instala para esa colección o equipo. Cada nombre de variable consta de su nombre base común además de un sufijo numérico que empieza en 01. El valor de cada variable debe contener el nombre de la aplicación y nada más.  
 
- Para que la secuencia de tareas instale aplicaciones mediante una lista de variables dinámicas, habilite la siguiente configuración en la pestaña **General** de las **Propiedades** de la aplicación: **Permitir que esta aplicación se instale desde la secuencia de tareas de instalación de aplicación en vez de implementarla manualmente**.  
+ Para que la secuencia de tareas instale aplicaciones mediante una lista de variables dinámicas, se debe habilitar la opción siguiente en la pestaña **General** de las **Propiedades** de la aplicación: **Permitir que esta aplicación se instale desde la secuencia de tareas de instalación de aplicación en vez de implementarla manualmente**.  
 
  > [!NOTE]  
  >  No se pueden instalar aplicaciones mediante una lista de variables dinámicas para las implementaciones de medios independientes.  
@@ -964,7 +964,7 @@ ms.locfileid: "51269253"
 #### <a name="install-software-packages-according-to-dynamic-variable-list"></a>Instalar paquetes de software según la lista de variables dinámicas
  La secuencia de tareas instala los paquetes mediante este nombre variable de base. El nombre variable de base es para un conjunto de variables de secuencia de tareas definidas para una colección o equipo. Estas variables especifican los paquetes que la secuencia de tareas instala para esa colección o equipo. Cada nombre de variable consta de su nombre base común además de un sufijo numérico que empieza en 001. El valor de cada variable debe contener un identificador de paquete y el nombre del software separado por dos puntos.  
 
- Para que la secuencia de tareas instale software mediante una lista de variables dinámicas, habilite la opción **Permitir que este programa se instale desde la secuencia de tareas de instalación de paquete sin implementarse** en la pestaña **Avanzadas** de las **Propiedades** del paquete.  
+ Para que la secuencia de tareas instale software mediante una lista de variables dinámicas, se debe habilitar la opción siguiente en la pestaña **Avanzado** de las **Propiedades** del paquete: **Permitir que este programa se instale desde la secuencia de tareas de instalación de paquete sin implementarse**.  
 
  > [!NOTE]  
  >  No se pueden instalar paquetes de software mediante una lista de variables dinámicas para las implementaciones de medios independientes.  
@@ -1443,7 +1443,7 @@ ms.locfileid: "51269253"
 #### <a name="powershell-execution-policy"></a>Directiva de ejecución de PowerShell
  Determine qué scripts de PowerShell (si hay alguno) se permiten ejecutar en el equipo. Elija una de las siguientes directivas de ejecución:  
 
- -   **AllSigned**: solo se ejecutan scripts firmados por un editor de confianza  
+ -   **AllSigned**: solo se ejecutan los scripts firmados por un editor de confianza  
 
  -   **Undefined**: no se define ninguna directiva de ejecución  
 
@@ -1530,7 +1530,7 @@ ms.locfileid: "51269253"
 
     Especifique una o más variables que se van a establecer para una regla que se evalúa como true, o bien establezca variables sin usar una regla. Seleccione una variable existente o cree una variable personalizada.  
 
-     - **Variables de secuencia de tareas existentes**: seleccione una o más variables en una lista de variables de secuencia de tareas existentes. Las variables de matriz no están disponibles para seleccionar.  
+     - **Variables de secuencia de tareas existentes**: seleccione una o más variables de una lista de variables de secuencia de tareas existentes. Las variables de matriz no están disponibles para seleccionar.  
 
      - **Variables de secuencia de tareas personalizadas**: defina una variable de secuencia de tareas personalizada. También puede especificar una variable de secuencia de tareas existente. Este valor es útil para especificar una matriz de variables existente, como **OSDAdapter**, ya que las matrices de variables no están en la lista de variables de secuencia de tareas existentes.  
 
@@ -1590,7 +1590,7 @@ ms.locfileid: "51269253"
 
  Este paso realiza las siguientes acciones:  
 
-#### <a name="preliminaries-windows-pe"></a>Pasos preliminares: Windows°PE  
+#### <a name="preliminaries-windows-pe"></a>Pasos preliminares: Windows PE  
 
  1.  Sustituya las variables de secuencia de tareas en el archivo unattend.xml.  
 
@@ -1698,7 +1698,7 @@ ms.locfileid: "51269253"
 
  - **Paquete de controladores**: haga clic en **Examinar** y seleccione un paquete de controladores existente en la lista.  
 
- - **Contenido almacenado provisionalmente**: seleccione esta opción para especificar la ubicación del paquete de controladores. Puede especificar una carpeta local, la ruta de red o una variable de secuencia de tareas. Cuando se use una variable para la ruta de origen, establezca su valor previamente en la secuencia de tareas. Por ejemplo, mediante el paso [Descargar contenido de paquete](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent).  
+ - **Contenido almacenado provisionalmente**:  seleccione esta opción para especificar la ubicación del paquete de controladores. Puede especificar una carpeta local, la ruta de red o una variable de secuencia de tareas. Cuando se use una variable para la ruta de origen, establezca su valor previamente en la secuencia de tareas. Por ejemplo, mediante el paso [Descargar contenido de paquete](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent).  
 
 #### <a name="time-out-minutes"></a>Tiempo de espera (minutos)
  Especifique el número de minutos antes de que se produzca un error de Configuration Manager en este paso. Esta opción es útil si el programa de instalación de Windows detiene el procesamiento pero no finaliza.  

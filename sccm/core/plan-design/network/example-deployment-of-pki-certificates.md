@@ -10,14 +10,14 @@ ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 376d75a2aed5fe0b14b3af309e48a75d8f392c11
-ms.sourcegitcommit: defdaf493c1dc5a7a380541bc028fbd2b21c1047
+ms.openlocfilehash: 8e857d42654544308c0b008776110862a202a8ba
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "34153029"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417530"
 ---
-# <a name="step-by-step-example-deployment-of-the-pki-certificates-for-system-center-configuration-manager-windows-server-2008-certification-authority"></a>Ejemplo paso a paso de la implementación de los certificados PKI para System Center Configuration Manager: entidad de certificación de Windows Server 2008
+# <a name="step-by-step-example-deployment-of-the-pki-certificates-for-system-center-configuration-manager-windows-server-2008-certification-authority"></a>Ejemplo paso a paso de implementación de los certificados PKI para System Center Configuration Manager: Entidad de certificación de Windows Server 2008
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
@@ -25,11 +25,11 @@ Esta implementación de ejemplo paso a paso, que usa una entidad de certificaci�
 
  Al no haber un único método de implementación de los certificados requeridos, consulte su documentación de implementación de PKI específica para obtener información sobre los procedimientos requeridos y recomendados a la hora de implementar los certificados necesarios en un entorno de producción. Para obtener más información sobre los requisitos de certificados, vea [Requisitos de certificados PKI para System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
 
-> [!TIP]  
+> [!TIP]
 >  Puede adaptar las instrucciones de este tema para los sistemas operativos que no están documentados en la sección Requisitos de la red de prueba. Sin embargo, si se ejecuta la CA emisora en Windows Server 2012, no se le solicitará la versión de la plantilla de certificado. En su lugar, especifíquela en la pestaña **Compatibilidad** de las propiedades de la plantilla:  
->   
->  -   **Entidad de certificación**: **Windows Server 2003**  
-> -   **Destinatario del certificado**: **Windows XP / Server 2003**  
+> 
+> - **Entidad de certificación**: **Windows Server 2003**  
+>   -   **Destinatario del certificado**: **Windows XP / Server 2003**  
 
 ## <a name="in-this-section"></a>En esta sección  
  Las secciones siguientes incluyen instrucciones detalladas de ejemplo para crear e implementar los siguientes certificados que pueden usarse con System Center Configuration Manager:  
@@ -71,7 +71,7 @@ Esta implementación de ejemplo paso a paso, que usa una entidad de certificaci�
 |Requisito de certificado|Descripción del certificado|  
 |-----------------------------|-----------------------------|  
 |Certificado de servidor web para los sistemas de sitio que ejecutan IIS|Este certificado se utiliza para cifrar los datos y autenticar el servidor en los clientes. Se debe instalar externamente desde System Center Configuration Manager en servidores de sistemas de sitio que ejecutan Internet Information Services (IIS) y que están configurados en System Center Configuration Manager para usar HTTPS.<br /><br /> Para conocer los pasos para configurar e instalar este certificado, vea [Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS](#BKMK_webserver2008_cm2012) en este tema.|  
-|Certificado de servicio para clientes que se conectan a puntos de distribución basados en la nube|Para conocer los pasos para configurar e instalar este certificado, vea [Implementación del certificado de servicio para puntos de distribución basados en la nube](#BKMK_clouddp2008_cm2012) en este tema.<br /><br /> **Importante:** Este certificado se usa junto con el certificado de administración de Microsoft Azure. Para obtener más información sobre el certificado de administración, vea [Crear un certificado de administración para Windows Azure](http://go.microsoft.com/fwlink/p/?LinkId=220281) y [Agregar un certificado de administración a una suscripción de Windows Azure](http://go.microsoft.com/fwlink/?LinkId=241722) en la sección Plataforma Windows Azure de MSDN Library.|  
+|Certificado de servicio para clientes que se conectan a puntos de distribución basados en la nube|Para conocer los pasos para configurar e instalar este certificado, vea [Implementación del certificado de servicio para puntos de distribución basados en la nube](#BKMK_clouddp2008_cm2012) en este tema.<br /><br /> **Importante:** Este certificado se utiliza junto con el certificado de administración de Windows Azure. Para obtener más información sobre el certificado de administración, vea [Crear un certificado de administración para Windows Azure](http://go.microsoft.com/fwlink/p/?LinkId=220281) y [Agregar un certificado de administración a una suscripción de Windows Azure](http://go.microsoft.com/fwlink/?LinkId=241722) en la sección Plataforma Windows Azure de MSDN Library.|  
 |Certificado de cliente para equipos Windows|Este certificado se usa para autenticar equipos cliente de System Center Configuration Manager en sistemas de sitio que están configurados para usar HTTPS. También puede usarse para puntos de administración y puntos de migración de estado para supervisar su estado de funcionamiento cuando están configurados para usar HTTPS. Se debe instalar externamente en los equipos desde System Center Configuration Manager.<br /><br /> Para conocer los pasos para configurar e instalar este certificado, vea [Implementación del certificado de cliente para equipos Windows](#BKMK_client2008_cm2012) en este tema.|  
 |Certificado de cliente para puntos de distribución|Este certificado tiene dos propósitos:<br /><br /> El certificado se utiliza para autenticar el punto de distribución en un punto de administración habilitado para HTTPS antes de que el punto de distribución envíe mensajes de estado.<br /><br /> Cuando está seleccionada la opción de punto de distribución **Habilitar compatibilidad de PXE para clientes** , el certificado se envía a equipos con arranque PXE para que puedan conectarse a un punto de administración habilitado para HTTPS durante la implementación del sistema operativo.<br /><br /> Para conocer los pasos para configurar e instalar este certificado, vea [Implementación del certificado de cliente para puntos de distribución](#BKMK_clientdistributionpoint2008_cm2012) en este tema.|  
 |Certificado de inscripción para dispositivos móviles|Este certificado se usa para autenticar clientes de dispositivos móviles de System Center Configuration Manager en sistemas de sitio que están configurados para usar HTTPS. Debe instalarse como parte de la inscripción de dispositivos móviles en System Center Configuration Manager, y selecciona la plantilla de certificado configurada como un valor de cliente de dispositivo móvil.<br /><br /> Para conocer los pasos para configurar este certificado, vea [Implementación del certificado de inscripción para dispositivos móviles](#BKMK_mobiledevices2008_cm2012) en este tema.|  
@@ -176,22 +176,22 @@ Esta implementación de ejemplo paso a paso, que usa una entidad de certificaci�
 
 ##### <a name="to-set-up-iis-to-use-the-web-server-certificate"></a>Para configurar IIS para usar el certificado de servidor web  
 
-1.  En el servidor miembro que tiene IIS instalado, pulse **Inicio**, **Programas**, **Herramientas administrativas** y, después, pulse **Administrador de Internet Information Services (IIS)**.  
+1. En el servidor miembro que tiene IIS instalado, pulse **Inicio**, **Programas**, **Herramientas administrativas** y, después, pulse **Administrador de Internet Information Services (IIS)**.  
 
-2.  Expanda **Sitios**, haga clic con el botón derecho en **Sitio web predeterminado** y, después, seleccione **Modificar enlaces**.  
+2. Expanda **Sitios**, haga clic con el botón derecho en **Sitio web predeterminado** y, después, seleccione **Modificar enlaces**.  
 
-3.  Pulse la entrada **https** y, después, en **Editar**.  
+3. Pulse la entrada **https** y, después, en **Editar**.  
 
-4.  En el cuadro de diálogo **Modificar enlace de sitio**, seleccione el certificado que ha solicitado mediante la plantilla de certificados de servidor web de Configuration Manager y, después, pulse **Aceptar**.  
+4. En el cuadro de diálogo **Modificar enlace de sitio**, seleccione el certificado que ha solicitado mediante la plantilla de certificados de servidor web de Configuration Manager y, después, pulse **Aceptar**.  
 
-    > [!NOTE]  
-    >  Si no está seguro de cuál es el certificado correcto, seleccione uno y, después, pulse **Ver**. Esto le permite comparar los detalles del certificado seleccionado con los certificados del complemento Certificados. Por ejemplo, el complemento de certificado muestra la plantilla de certificado que se ha usado para solicitar el certificado. A continuación podrá comparar la huella digital del certificado que se ha solicitado con la plantilla de certificados de servidor web de Configuration Manager con la huella digital del certificado actualmente seleccionado en el cuadro de diálogo **Modificar enlace de sitio**.  
+   > [!NOTE]  
+   >  Si no está seguro de cuál es el certificado correcto, seleccione uno y, después, pulse **Ver**. Esto le permite comparar los detalles del certificado seleccionado con los certificados del complemento Certificados. Por ejemplo, el complemento de certificado muestra la plantilla de certificado que se ha usado para solicitar el certificado. A continuación podrá comparar la huella digital del certificado que se ha solicitado con la plantilla de certificados de servidor web de Configuration Manager con la huella digital del certificado actualmente seleccionado en el cuadro de diálogo **Modificar enlace de sitio**.  
 
-5.  Pulse **Aceptar** en el cuadro de diálogo **Modificar enlace de sitio** y, después, pulse **Cerrar**.  
+5. Pulse **Aceptar** en el cuadro de diálogo **Modificar enlace de sitio** y, después, pulse **Cerrar**.  
 
-6.  Cierre el **Administrador de Internet Information Services (IIS)**.  
+6. Cierre el **Administrador de Internet Information Services (IIS)**.  
 
- El servidor miembro está configurado ahora con un certificado de servidor web de System Center Configuration Manager.  
+   El servidor miembro está configurado ahora con un certificado de servidor web de System Center Configuration Manager.  
 
 > [!IMPORTANT]  
 >  Al instalar el servidor de sistema de sitio de System Center Configuration Manager en este equipo, asegúrese de especificar los mismos FQDN en las propiedades del sistema de sitio que especificó al solicitar el certificado.  
@@ -209,14 +209,14 @@ Esta implementación de certificado consta de los siguientes procedimientos:
 ###  <a name="BKMK_clouddpcreating2008"></a> Crear y emitir una plantilla de certificado de servidor web personalizado en la entidad de certificación  
  Este procedimiento crea una plantilla de certificado personalizado que se basa en la plantilla de certificado de servidor web. Se trata de un certificado para puntos de distribución basados en la nube de System Center Configuration Manager y la clave privada debe ser exportable. La plantilla de certificado, una vez creada, se agrega a la entidad de certificación.  
 
-> [!NOTE]  
+> [!NOTE]
 >  Este procedimiento usa una plantilla de certificado diferente a la plantilla de certificado de servidor web que ha creado para los sistemas de sitio que ejecutan IIS. Aunque ambos certificados necesitan la capacidad de autenticación de servidor, el certificado para los puntos de distribución basados en la nube requiere que escriba un valor definido por el usuario para el nombre de sujeto, y la clave privada debe exportarse. Como procedimiento recomendado de seguridad, no configure plantillas de certificado que permitan la exportación de la clave privada a menos que se requiera esta configuración. El punto de distribución basado en la nube requiere esta configuración porque debe importar el certificado como un archivo, en lugar de seleccionarlo en el almacén de certificados.  
->   
+> 
 >  Cuando crea una nueva plantilla de certificado para este certificado, puede restringir los equipos que pueden solicitar un certificado cuya clave privada puede exportarse. En una red de producción, también podría agregar los siguientes cambios para este certificado:  
->   
->  -   Solicitar aprobación para instalar el certificado, para mayor seguridad.  
-> -   Incrementar el periodo de validez del certificado. Como debe exportar e importar el certificado siempre antes de que expire, al incrementar el período de validez se reduce la frecuencia con la que debe repetir este procedimiento. En cambio, al incrementar el periodo de validez también se reduce la seguridad del certificado porque un atacante tendría más tiempo para descifrar la clave privada y robar el certificado.  
-> -   Utilice un valor personalizado en el Nombre alternativo del sujeto (SAN) del certificado para ayudar a distinguir este certificado de los certificados de servidor web estándar que utiliza con IIS.  
+> 
+> - Solicitar aprobación para instalar el certificado, para mayor seguridad.  
+>   -   Incrementar el periodo de validez del certificado. Como debe exportar e importar el certificado siempre antes de que expire, al incrementar el período de validez se reduce la frecuencia con la que debe repetir este procedimiento. En cambio, al incrementar el periodo de validez también se reduce la seguridad del certificado porque un atacante tendría más tiempo para descifrar la clave privada y robar el certificado.  
+>   -   Utilice un valor personalizado en el Nombre alternativo del sujeto (SAN) del certificado para ayudar a distinguir este certificado de los certificados de servidor web estándar que utiliza con IIS.  
 
 ##### <a name="to-create-and-issue-the-custom-web-server-certificate-template-on-the-certification-authority"></a>Para crear y emitir la plantilla de certificado de servidor web personalizado en la entidad de certificación  
 
@@ -299,28 +299,28 @@ Esta implementación de certificado consta de los siguientes procedimientos:
 
 ##### <a name="to-export-the-custom-web-server-certificate-for-cloud-based-distribution-points"></a>Para exportar el certificado de servidor web personalizado para puntos de distribución basados en la nube  
 
-1.  En la consola **Certificados (equipo local)**, haga clic con el botón derecho en el certificado que acaba de instalar, seleccione **Todas las tareas** y, después, pulse **Exportar**.  
+1. En la consola **Certificados (equipo local)**, haga clic con el botón derecho en el certificado que acaba de instalar, seleccione **Todas las tareas** y, después, pulse **Exportar**.  
 
-2.  En el Asistente para exportación de certificados, pulse **Siguiente**.  
+2. En el Asistente para exportación de certificados, pulse **Siguiente**.  
 
-3.  En la página **Exportar la clave privada**, seleccione **Exportar la clave privada** y, después, pulse **Siguiente**.  
+3. En la página **Exportar la clave privada**, seleccione **Exportar la clave privada** y, después, pulse **Siguiente**.  
 
-    > [!NOTE]  
-    >  Si esta opción no está disponible, significa que el certificado se creó sin la opción de exportar la clave privada. En este escenario, no se puede exportar el certificado en el formato requerido. Debe configurar la plantilla de certificado para que permita la exportación de la clave privada y, después, solicitar el certificado de nuevo.  
+   > [!NOTE]  
+   >  Si esta opción no está disponible, significa que el certificado se creó sin la opción de exportar la clave privada. En este escenario, no se puede exportar el certificado en el formato requerido. Debe configurar la plantilla de certificado para que permita la exportación de la clave privada y, después, solicitar el certificado de nuevo.  
 
-4.  En la página **Formato de archivo de exportación**, asegúrese de que está seleccionada la opción **Intercambio de información personal: PKCS #12 (.PFX)**.  
+4. En la página **Formato de archivo de exportación**, asegúrese de que está seleccionada la opción **Intercambio de información personal: PKCS #12 (.PFX)**.  
 
-5.  En la página **Contraseña**, especifique una contraseña segura para proteger el certificado exportado con su clave privada y, después, pulse **Siguiente**.  
+5. En la página **Contraseña**, especifique una contraseña segura para proteger el certificado exportado con su clave privada y, después, pulse **Siguiente**.  
 
-6.  En la página **Archivo para exportar**, especifique el nombre del archivo que quiere exportar y, después, pulse **Siguiente**.  
+6. En la página **Archivo para exportar**, especifique el nombre del archivo que quiere exportar y, después, pulse **Siguiente**.  
 
-7.  Para cerrar el Asistente, pulse **Finalizar** en la página **Asistente para exportación de certificados** y, después, pulse **Aceptar** en el cuadro de diálogo de confirmación.  
+7. Para cerrar el Asistente, pulse **Finalizar** en la página **Asistente para exportación de certificados** y, después, pulse **Aceptar** en el cuadro de diálogo de confirmación.  
 
-8.  Cierre **Certificados (equipo local)**.  
+8. Cierre **Certificados (equipo local)**.  
 
 9. Almacene el archivo de forma segura y asegúrese de que puede acceder al mismo desde la consola de System Center Configuration Manager.  
 
- El certificado ya está listo para importarse al crear un punto de distribución basado en la nube.  
+   El certificado ya está listo para importarse al crear un punto de distribución basado en la nube.  
 
 ##  <a name="BKMK_client2008_cm2012"></a> Implementación del certificado de cliente para equipos Windows  
  Esta implementación de certificado consta de los siguientes procedimientos:  
@@ -386,24 +386,24 @@ Esta implementación de certificado consta de los siguientes procedimientos:
 
 ##### <a name="to-automatically-enroll-the-workstation-authentication-certificate-and-verify-its-installation-on-the-client-computer"></a>Para inscribir automáticamente el certificado de autenticación de estación de trabajo y comprobar su instalación en el equipo cliente  
 
-1.  Reinicie el equipo de estación de trabajo, y espere unos minutos antes de iniciar sesión.  
+1. Reinicie el equipo de estación de trabajo, y espere unos minutos antes de iniciar sesión.  
 
-    > [!NOTE]  
-    >  Reiniciar un equipo es el método más fiable para realizar correctamente la inscripción automática de certificados.  
+   > [!NOTE]  
+   >  Reiniciar un equipo es el método más fiable para realizar correctamente la inscripción automática de certificados.  
 
-2.  Inicie sesión con una cuenta que tenga privilegios administrativos.  
+2. Inicie sesión con una cuenta que tenga privilegios administrativos.  
 
-3.  En el cuadro de búsqueda, escriba **mmc.exe.** y, después, presione **Entrar**.  
+3. En el cuadro de búsqueda, escriba **mmc.exe.** y, después, presione **Entrar**.  
 
-4.  En la consola de administración vacía, pulse **Archivo** y, después, pulse **Agregar o quitar complemento**.  
+4. En la consola de administración vacía, pulse **Archivo** y, después, pulse **Agregar o quitar complemento**.  
 
-5.  En el cuadro de diálogo **Agregar o quitar complementos**, seleccione **Certificados** en la lista de **Complementos disponibles** y, después, pulse **Agregar**.  
+5. En el cuadro de diálogo **Agregar o quitar complementos**, seleccione **Certificados** en la lista de **Complementos disponibles** y, después, pulse **Agregar**.  
 
-6.  En el cuadro de diálogo **Complemento de certificado**, seleccione **Cuenta de equipo** y, después, pulse **Siguiente**.  
+6. En el cuadro de diálogo **Complemento de certificado**, seleccione **Cuenta de equipo** y, después, pulse **Siguiente**.  
 
-7.  En el cuadro de diálogo **Seleccionar equipo**, asegúrese de que está seleccionado **Equipo local: (el equipo en el que se está ejecutando esta consola)** y, después, pulse **Finalizar**.  
+7. En el cuadro de diálogo **Seleccionar equipo**, asegúrese de que está seleccionado **Equipo local: (el equipo en el que se está ejecutando esta consola)** y, después, pulse **Finalizar**.  
 
-8.  En el cuadro de diálogo **Agregar o quitar complementos**, pulse **Aceptar**.  
+8. En el cuadro de diálogo **Agregar o quitar complementos**, pulse **Aceptar**.  
 
 9. En la consola, expanda **Certificados (equipo local)**, expanda **Personal** y, después, pulse **Certificados**.  
 
@@ -413,7 +413,7 @@ Esta implementación de certificado consta de los siguientes procedimientos:
 
 12. Repita los pasos del 1 al 11 para el servidor miembro para comprobar que el servidor que se va a configurar como punto de administración también tiene un certificado de cliente.  
 
- El equipo está configurado ahora con un certificado cliente de System Center Configuration Manager.  
+    El equipo está configurado ahora con un certificado cliente de System Center Configuration Manager.  
 
 ##  <a name="BKMK_clientdistributionpoint2008_cm2012"></a> Implementación del certificado de cliente para puntos de distribución  
 
@@ -431,14 +431,14 @@ Esta implementación de certificado consta de los siguientes procedimientos:
 ###  <a name="BKMK_clientdistributionpoint02008"></a> Crear y emitir una plantilla de certificado de autenticación de estación de trabajo personalizada en la entidad de certificación  
  Mediante este procedimiento crea una plantilla de certificado personalizado para puntos de distribución de System Center Configuration Manager, de manera que la clave privada pueda exportarse y agrega la plantilla de certificado a la entidad de certificación.  
 
-> [!NOTE]  
+> [!NOTE]
 >  Este procedimiento usa una plantilla de certificado diferente a la plantilla de certificado que ha creado para los equipos cliente. Aunque ambos certificados necesitan la capacidad de autenticación de cliente, el certificado de puntos de distribución necesita que la clave privada se exporte. Como procedimiento recomendado de seguridad, no configure plantillas de certificado que permitan la exportación de la clave privada a menos que se requiera esta configuración. El punto de distribución requiere esta configuración porque debe importar el certificado como un archivo, en lugar de seleccionarlo en el almacén de certificados.  
->   
+> 
 >  Cuando crea una nueva plantilla de certificado para este certificado, puede restringir los equipos que pueden solicitar un certificado cuya clave privada puede exportarse. En nuestra implementación de ejemplo, se tomará el grupo de seguridad que creó anteriormente para los servidores de sistema de sitio de System Center Configuration Manager que ejecutan IIS. En una red de producción que distribuye los roles del sistema de sitio de IIS, considere la creación de un grupo de seguridad nuevo para los servidores que ejecuten puntos de distribución; así, podrá restringir el certificado específicamente a estos servidores de sistema de sitio. También podría agregar las siguientes modificaciones para este certificado:  
->   
->  -   Solicitar aprobación para instalar el certificado, para mayor seguridad.  
-> -   Incrementar el periodo de validez del certificado. Como debe exportar e importar el certificado siempre antes de que expire, al incrementar el período de validez se reduce la frecuencia con la que debe repetir este procedimiento. En cambio, al incrementar el periodo de validez también se reduce la seguridad del certificado porque un atacante tendría más tiempo para descifrar la clave privada y robar el certificado.  
-> -   Utilice un valor personalizado en el campo Sujeto del certificado, o el nombre alternativo del sujeto (SAN, por sus siglas en inglés) para facilitar la identificación de este certificado entre los certificados de cliente estándar. Esto puede resultar especialmente útil si va a utilizar el mismo certificado para varios puntos de distribución.  
+> 
+> - Solicitar aprobación para instalar el certificado, para mayor seguridad.  
+>   -   Incrementar el periodo de validez del certificado. Como debe exportar e importar el certificado siempre antes de que expire, al incrementar el período de validez se reduce la frecuencia con la que debe repetir este procedimiento. En cambio, al incrementar el periodo de validez también se reduce la seguridad del certificado porque un atacante tendría más tiempo para descifrar la clave privada y robar el certificado.  
+>   -   Utilice un valor personalizado en el campo Sujeto del certificado, o el nombre alternativo del sujeto (SAN, por sus siglas en inglés) para facilitar la identificación de este certificado entre los certificados de cliente estándar. Esto puede resultar especialmente útil si va a utilizar el mismo certificado para varios puntos de distribución.  
 
 ##### <a name="to-create-and-issue-the-custom-workstation-authentication-certificate-template-on-the-certification-authority"></a>Para crear y emitir la plantilla de certificado de autenticación de estación de trabajo personalizada en la entidad de certificación  
 
@@ -505,28 +505,28 @@ Esta implementación de certificado consta de los siguientes procedimientos:
 
 ##### <a name="to-export-the-client-certificate-for-distribution-points"></a>Para exportar el certificado de cliente para puntos de distribución  
 
-1.  En la consola **Certificados (equipo local)**, haga clic con el botón derecho en el certificado que acaba de instalar, seleccione **Todas las tareas** y, después, pulse **Exportar**.  
+1. En la consola **Certificados (equipo local)**, haga clic con el botón derecho en el certificado que acaba de instalar, seleccione **Todas las tareas** y, después, pulse **Exportar**.  
 
-2.  En el Asistente para exportación de certificados, pulse **Siguiente**.  
+2. En el Asistente para exportación de certificados, pulse **Siguiente**.  
 
-3.  En la página **Exportar la clave privada**, seleccione **Exportar la clave privada** y, después, pulse **Siguiente**.  
+3. En la página **Exportar la clave privada**, seleccione **Exportar la clave privada** y, después, pulse **Siguiente**.  
 
-    > [!NOTE]  
-    >  Si esta opción no está disponible, significa que el certificado se creó sin la opción de exportar la clave privada. En este escenario, no se puede exportar el certificado en el formato requerido. Debe configurar la plantilla de certificado para que permita la exportación de la clave privada y, después, solicitar el certificado de nuevo.  
+   > [!NOTE]  
+   >  Si esta opción no está disponible, significa que el certificado se creó sin la opción de exportar la clave privada. En este escenario, no se puede exportar el certificado en el formato requerido. Debe configurar la plantilla de certificado para que permita la exportación de la clave privada y, después, solicitar el certificado de nuevo.  
 
-4.  En la página **Formato de archivo de exportación**, asegúrese de que está seleccionada la opción **Intercambio de información personal: PKCS #12 (.PFX)**.  
+4. En la página **Formato de archivo de exportación**, asegúrese de que está seleccionada la opción **Intercambio de información personal: PKCS #12 (.PFX)**.  
 
-5.  En la página **Contraseña**, especifique una contraseña segura para proteger el certificado exportado con su clave privada y, después, pulse **Siguiente**.  
+5. En la página **Contraseña**, especifique una contraseña segura para proteger el certificado exportado con su clave privada y, después, pulse **Siguiente**.  
 
-6.  En la página **Archivo para exportar**, especifique el nombre del archivo que quiere exportar y, después, pulse **Siguiente**.  
+6. En la página **Archivo para exportar**, especifique el nombre del archivo que quiere exportar y, después, pulse **Siguiente**.  
 
-7.  Para cerrar el Asistente, pulse **Finalizar** en la página **Asistente para exportación de certificados** y pulse **Aceptar** en el cuadro de diálogo de confirmación.  
+7. Para cerrar el Asistente, pulse **Finalizar** en la página **Asistente para exportación de certificados** y pulse **Aceptar** en el cuadro de diálogo de confirmación.  
 
-8.  Cierre **Certificados (equipo local)**.  
+8. Cierre **Certificados (equipo local)**.  
 
 9. Almacene el archivo de forma segura y asegúrese de que puede acceder al mismo desde la consola de System Center Configuration Manager.  
 
- El certificado está ahora preparado para su importación cuando configure el punto de distribución.  
+   El certificado está ahora preparado para su importación cuando configure el punto de distribución.  
 
 > [!TIP]  
 >  Puede usar el mismo archivo de certificado cuando configure imágenes de medios para una implementación de sistema operativo que no use arranque PXE, y cuya secuencia de tareas de instalación de imagen deba ponerse en contacto con un punto de administración que requiera conexiones de cliente HTTPS.  
@@ -539,24 +539,24 @@ Esta implementación de certificado consta de los siguientes procedimientos:
 
 ##### <a name="to-create-and-issue-the-enrollment-certificate-template-on-the-certification-authority"></a>Para crear y emitir la plantilla de certificado de inscripción en la entidad de certificación  
 
-1.  Cree un grupo de seguridad que tenga usuarios que inscribirán dispositivos móviles en System Center Configuration Manager.  
+1. Cree un grupo de seguridad que tenga usuarios que inscribirán dispositivos móviles en System Center Configuration Manager.  
 
-2.  En el servidor miembro que tenga Servicios de servidor de certificados instalados, en la consola de entidad de certificación, haga clic con el botón derecho en **Plantillas de certificado** y, después, pulse **Administrar** para cargar la consola de administración de las plantillas de certificado.  
+2. En el servidor miembro que tenga Servicios de servidor de certificados instalados, en la consola de entidad de certificación, haga clic con el botón derecho en **Plantillas de certificado** y, después, pulse **Administrar** para cargar la consola de administración de las plantillas de certificado.  
 
-3.  En el panel de resultados, haga clic con el botón derecho en la entrada que tiene **Sesión autenticada** en la columna **Nombre para mostrar de plantilla** y, después, pulse **Duplicar plantilla**.  
+3. En el panel de resultados, haga clic con el botón derecho en la entrada que tiene **Sesión autenticada** en la columna **Nombre para mostrar de plantilla** y, después, pulse **Duplicar plantilla**.  
 
-4.  En el cuadro de diálogo **Duplicar plantilla**, asegúrese de que se haya seleccionado **Windows 2003 Server, Enterprise Edition** y, después, pulse **Aceptar**.  
+4. En el cuadro de diálogo **Duplicar plantilla**, asegúrese de que se haya seleccionado **Windows 2003 Server, Enterprise Edition** y, después, pulse **Aceptar**.  
 
-    > [!IMPORTANT]  
-    >  No seleccione **Windows 2008 Server, Enterprise Edition**.  
+   > [!IMPORTANT]  
+   >  No seleccione **Windows 2008 Server, Enterprise Edition**.  
 
-5.  En el cuadro de diálogo **Propiedades de plantilla nueva**, en la pestaña **General**, escriba el nombre de la plantilla, como **Certificado de inscripción de dispositivos móviles de Configuration Manager** para generar los certificados de inscripción para los dispositivos móviles que va a administrar System Center Configuration Manager.  
+5. En el cuadro de diálogo **Propiedades de plantilla nueva**, en la pestaña **General**, escriba el nombre de la plantilla, como **Certificado de inscripción de dispositivos móviles de Configuration Manager** para generar los certificados de inscripción para los dispositivos móviles que va a administrar System Center Configuration Manager.  
 
-6.  Pulse la pestaña **Nombre de sujeto**, asegúrese de que está seleccionado **Construido a partir de esta información de Active Directory**, seleccione **Nombre común** para el **Formato de nombre de sujeto** y, después, desactive **Nombre principal del usuario (UPN)** en **Incluir esta información en un nombre de sujeto alternativo**.  
+6. Pulse la pestaña **Nombre de sujeto**, asegúrese de que está seleccionado **Construido a partir de esta información de Active Directory**, seleccione **Nombre común** para el **Formato de nombre de sujeto** y, después, desactive **Nombre principal del usuario (UPN)** en **Incluir esta información en un nombre de sujeto alternativo**.  
 
-7.  Pulse la pestaña **Seguridad**, seleccione el grupo de seguridad que tiene usuarios que van a inscribir dispositivos móviles y, después, seleccione el permiso adicional de **Inscribir**. No desactive **Leer**.  
+7. Pulse la pestaña **Seguridad**, seleccione el grupo de seguridad que tiene usuarios que van a inscribir dispositivos móviles y, después, seleccione el permiso adicional de **Inscribir**. No desactive **Leer**.  
 
-8.  Pulse **Aceptar** y, después, cierre la **Consola de plantillas de certificado**.  
+8. Pulse **Aceptar** y, después, cierre la **Consola de plantillas de certificado**.  
 
 9. En la consola de entidad de certificación, haga clic con el botón derecho en **Plantillas de certificado**, pulse **Nueva** y, después, en **Plantilla de certificado que se va a emitir**.  
 
@@ -564,7 +564,7 @@ Esta implementación de certificado consta de los siguientes procedimientos:
 
 11. Si no necesita crear y emitir más certificados, cierre la consola de entidad de certificación.  
 
- La plantilla de certificado de inscripción de dispositivos móviles se podrá seleccionar ahora cuando configure un perfil de inscripción de dispositivo móvil en la configuración de cliente.  
+    La plantilla de certificado de inscripción de dispositivos móviles se podrá seleccionar ahora cuando configure un perfil de inscripción de dispositivo móvil en la configuración de cliente.  
 
 ##  <a name="BKMK_AMT2008_cm2012"></a> Implementación de los certificados para AMT  
  Esta implementación de certificado consta de los siguientes procedimientos:  
@@ -576,7 +576,7 @@ Esta implementación de certificado consta de los siguientes procedimientos:
 -   Crear y emitir los certificados de autenticación del cliente para equipos basados en AMT 802.1X  
 
 ###  <a name="BKMK_AMTprovisioning2008"></a> Crear, emitir e instalar el certificado de aprovisionamiento de AMT  
- Cree el certificado de aprovisionamiento con la CA interna al configurar los equipos basados en AMT con la huella digital del certificado de la CA raíz interna. Si este no es el caso y debe usar una entidad de certificación externa, use las instrucciones de la compañía que ha emitido el certificado de aprovisionamiento de AMT, para lo que con frecuencia necesitará solicitar el certificado del sitio web público de la compañía. También puede encontrar instrucciones detalladas para la CA externa de su elección en el [Intel vPro Expert Center: Sitio web de manejabilidad de vPro de Microsoft](http://go.microsoft.com/fwlink/?LinkId=132001).  
+ Cree el certificado de aprovisionamiento con la CA interna al configurar los equipos basados en AMT con la huella digital del certificado de la CA raíz interna. Si este no es el caso y debe usar una entidad de certificación externa, use las instrucciones de la compañía que ha emitido el certificado de aprovisionamiento de AMT, para lo que con frecuencia necesitará solicitar el certificado del sitio web público de la compañía. Es posible que también encuentre instrucciones detalladas para la CA externa de su elección en el [sitio web Intel vPro Expert Center: Microsoft vPro Manageability](http://go.microsoft.com/fwlink/?LinkId=132001).  
 
 > [!IMPORTANT]  
 >  Las CA externas podrían no admitir el identificador de objetos de aprovisionamiento de Intel AMT. Cuando este sea el caso, proporcione el atributo de unidad organizativa **Certificado de configuración del cliente de Intel(R)**.  
@@ -585,34 +585,34 @@ Esta implementación de certificado consta de los siguientes procedimientos:
 
 ##### <a name="to-request-and-issue-the-amt-provisioning-certificate"></a>Para solicitar y emitir el certificado de aprovisionamiento de AMT  
 
-1.  Cree un grupo de seguridad que tenga las cuentas de equipo de los servidores de sistema de sitio que ejecutarán el punto de servicio fuera de banda.  
+1. Cree un grupo de seguridad que tenga las cuentas de equipo de los servidores de sistema de sitio que ejecutarán el punto de servicio fuera de banda.  
 
-2.  En el servidor miembro que tenga Servicios de servidor de certificados instalados, en la consola de entidad de certificación, haga clic con el botón derecho en **Plantillas de certificado** y, después, pulse **Administrar** para cargar la consola **Plantillas de certificado**.  
+2. En el servidor miembro que tenga Servicios de servidor de certificados instalados, en la consola de entidad de certificación, haga clic con el botón derecho en **Plantillas de certificado** y, después, pulse **Administrar** para cargar la consola **Plantillas de certificado**.  
 
-3.  En el panel de resultados, haga clic con el botón derecho en la entrada que tiene **Servidor web** en la columna **Nombre para mostrar de plantilla** y, después, pulse **Duplicar plantilla**.  
+3. En el panel de resultados, haga clic con el botón derecho en la entrada que tiene **Servidor web** en la columna **Nombre para mostrar de plantilla** y, después, pulse **Duplicar plantilla**.  
 
-4.  En el cuadro de diálogo **Duplicar plantilla**, asegúrese de que se haya seleccionado **Windows 2003 Server, Enterprise Edition** y, después, pulse **Aceptar**.  
+4. En el cuadro de diálogo **Duplicar plantilla**, asegúrese de que se haya seleccionado **Windows 2003 Server, Enterprise Edition** y, después, pulse **Aceptar**.  
 
-    > [!IMPORTANT]  
-    >  No seleccione **Windows 2008 Server, Enterprise Edition**.  
+   > [!IMPORTANT]  
+   >  No seleccione **Windows 2008 Server, Enterprise Edition**.  
 
-5.  En el cuadro de diálogo **Propiedades de plantilla nueva**, en la pestaña **General**, escriba el nombre de la plantilla, como **Aprovisionamiento de AMT de Configuration Manager**, de la plantilla del certificado de aprovisionamiento de AMT.  
+5. En el cuadro de diálogo **Propiedades de plantilla nueva**, en la pestaña **General**, escriba el nombre de la plantilla, como **Aprovisionamiento de AMT de Configuration Manager**, de la plantilla del certificado de aprovisionamiento de AMT.  
 
-6.  Pulse la pestaña **Nombre de sujeto**, seleccione **Construido a partir de esta información de Active Directory** y, después, pulse **Nombre común**.  
+6. Pulse la pestaña **Nombre de sujeto**, seleccione **Construido a partir de esta información de Active Directory** y, después, pulse **Nombre común**.  
 
-7.  Pulse la pestaña **Extensiones**, asegúrese de que está seleccionado **Directivas de aplicación** y, después, pulse **Editar**.  
+7. Pulse la pestaña **Extensiones**, asegúrese de que está seleccionado **Directivas de aplicación** y, después, pulse **Editar**.  
 
-8.  En el cuadro de diálogo **Editar extensión de directivas de aplicación**, pulse **Agregar**.  
+8. En el cuadro de diálogo **Editar extensión de directivas de aplicación**, pulse **Agregar**.  
 
 9. En el cuadro de diálogo **Agregar directivas de aplicación**, pulse **Nueva**.  
 
-10. En el cuadro de diálogo **Nueva directiva de aplicación**, escriba **Aprovisionamiento de AMT** en el campo **Nombre** y, después, escriba el siguiente número para el **Identificador de objetos**: **2.16.840.1.113741.1.2.3**.  
+10. En el cuadro de diálogo **Nueva directiva de aplicación**, escriba **Aprovisionamiento de AMT** en el campo **Nombre** y, después, escriba el número siguiente para el **Identificador de objetos**: **2.16.840.1.113741.1.2.3**.  
 
 11. Pulse **Aceptar** y, después, pulse **Aceptar** en el cuadro de diálogo **Agregar directivas de aplicación**.  
 
 12. Pulse **Aceptar** en el cuadro de diálogo **Editar extensión de directivas de aplicación**.  
 
-13. En el cuadro de diálogo **Propiedades de plantilla nueva**, aparece lo siguiente como la descripción de las **Directivas de aplicación**: **Autenticación del servidor** y **Aprovisionamiento de AMT**.  
+13. En el cuadro de diálogo **Propiedades de plantilla nueva**, ahora debería aparecer lo siguiente como la descripción de las **Directivas de aplicación**: **Autenticación del servidor** y **Aprovisionamiento de AMT**.  
 
 14. Pulse la pestaña **Seguridad** y, después, elimine el permiso **Inscribir** de los grupos de seguridad **Admins. del dominio** y **Administradores de empresa**.  
 
@@ -631,25 +631,25 @@ Esta implementación de certificado consta de los siguientes procedimientos:
 
 20. No cierre la **Entidad emisora de certificados**.  
 
- El certificado de aprovisionamiento de AMT de la CA interna ya está listo para instalarse en el equipo del punto de servicio fuera de banda.  
+    El certificado de aprovisionamiento de AMT de la CA interna ya está listo para instalarse en el equipo del punto de servicio fuera de banda.  
 
 ##### <a name="to-install-the-amt-provisioning-certificate"></a>Para instalar el certificado de aprovisionamiento de AMT  
 
-1.  Reinicie el servidor miembro que ejecuta IIS para asegurarse de que puede acceder a la plantilla de certificado con el permiso configurado.  
+1. Reinicie el servidor miembro que ejecuta IIS para asegurarse de que puede acceder a la plantilla de certificado con el permiso configurado.  
 
-2.  Pulse **Inicio**, **Ejecutar** y, después, escriba **mmc.exe**. En la consola vacía, pulse **Archivo** y, después, pulse **Agregar o quitar complemento**.  
+2. Pulse **Inicio**, **Ejecutar** y, después, escriba **mmc.exe**. En la consola vacía, pulse **Archivo** y, después, pulse **Agregar o quitar complemento**.  
 
-3.  En el cuadro de diálogo **Agregar o quitar complementos**, seleccione **Certificados** en la lista de **Complementos disponibles** y, después, pulse **Agregar**.  
+3. En el cuadro de diálogo **Agregar o quitar complementos**, seleccione **Certificados** en la lista de **Complementos disponibles** y, después, pulse **Agregar**.  
 
-4.  En el cuadro de diálogo **Complemento de certificado**, seleccione **Cuenta de equipo** y, después, pulse **Siguiente**.  
+4. En el cuadro de diálogo **Complemento de certificado**, seleccione **Cuenta de equipo** y, después, pulse **Siguiente**.  
 
-5.  En el cuadro de diálogo **Seleccionar equipo**, asegúrese de que está seleccionado **Equipo local: (el equipo en el que se está ejecutando esta consola)** y, después, pulse **Finalizar**.  
+5. En el cuadro de diálogo **Seleccionar equipo**, asegúrese de que está seleccionado **Equipo local: (el equipo en el que se está ejecutando esta consola)** y, después, pulse **Finalizar**.  
 
-6.  En el cuadro de diálogo **Agregar o quitar complementos**, pulse **Aceptar**.  
+6. En el cuadro de diálogo **Agregar o quitar complementos**, pulse **Aceptar**.  
 
-7.  En la consola, expanda **Certificados (equipo local)** y, después, pulse **Personal**.  
+7. En la consola, expanda **Certificados (equipo local)** y, después, pulse **Personal**.  
 
-8.  Haga clic con el botón derecho en **Certificados**, pulse **Todas las tareas** y, después, pulse **Solicitar un nuevo certificado**.  
+8. Haga clic con el botón derecho en **Certificados**, pulse **Todas las tareas** y, después, pulse **Solicitar un nuevo certificado**.  
 
 9. En la página **Antes de comenzar**, seleccione **Siguiente**.  
 
@@ -661,33 +661,33 @@ Esta implementación de certificado consta de los siguientes procedimientos:
 
 13. Cierre **Certificados (equipo local)**.  
 
- El certificado de aprovisionamiento de AMT de la CA interna ya está instalado y está listo para seleccionarse en las propiedades del punto de servicio de fuera de banda.  
+    El certificado de aprovisionamiento de AMT de la CA interna ya está instalado y está listo para seleccionarse en las propiedades del punto de servicio de fuera de banda.  
 
 ### <a name="create-and-issue-the-web-server-certificate-for-amt-based-computers"></a>Crear y emitir el certificado de servidor web para equipos basados en AMT  
  Utilice el siguiente procedimiento para preparar los certificados de servidor web para equipos basados en AMT.  
 
 ##### <a name="to-create-and-issue-the-web-server-certificate-template"></a>Para crear y emitir la plantilla de certificado de servidor web  
 
-1.  Cree un grupo de seguridad vacío que tenga las cuentas de equipo AMT que System Center Configuration Manager crea durante el aprovisionamiento de AMT.  
+1. Cree un grupo de seguridad vacío que tenga las cuentas de equipo AMT que System Center Configuration Manager crea durante el aprovisionamiento de AMT.  
 
-2.  En el servidor miembro que tenga Servicios de servidor de certificados instalados, en la consola de entidad de certificación, haga clic con el botón derecho en **Plantillas de certificado** y, después, pulse **Administrar** para cargar la consola **Plantillas de certificado**.  
+2. En el servidor miembro que tenga Servicios de servidor de certificados instalados, en la consola de entidad de certificación, haga clic con el botón derecho en **Plantillas de certificado** y, después, pulse **Administrar** para cargar la consola **Plantillas de certificado**.  
 
-3.  En el panel de resultados, haga clic con el botón derecho en la entrada que tiene **Servidor web** en la columna **Nombre para mostrar de plantilla** y, después, pulse **Duplicar plantilla**.  
+3. En el panel de resultados, haga clic con el botón derecho en la entrada que tiene **Servidor web** en la columna **Nombre para mostrar de plantilla** y, después, pulse **Duplicar plantilla**.  
 
-4.  En el cuadro de diálogo **Duplicar plantilla**, asegúrese de que se haya seleccionado **Windows 2003 Server, Enterprise Edition** y, después, pulse **Aceptar**.  
+4. En el cuadro de diálogo **Duplicar plantilla**, asegúrese de que se haya seleccionado **Windows 2003 Server, Enterprise Edition** y, después, pulse **Aceptar**.  
 
-    > [!IMPORTANT]  
-    >  No seleccione **Windows 2008 Server, Enterprise Edition.**  
+   > [!IMPORTANT]  
+   >  No seleccione **Windows 2008 Server, Enterprise Edition.**  
 
-5.  En el cuadro de diálogo **Propiedades de plantilla nueva**, en la pestaña **General**, escriba el nombre de la plantilla, como **Certificado de servidor web AMT de Configuration Manager**, para generar los certificados web que se usarán para la administración fuera de banda en los equipos AMT.  
+5. En el cuadro de diálogo **Propiedades de plantilla nueva**, en la pestaña **General**, escriba el nombre de la plantilla, como **Certificado de servidor web AMT de Configuration Manager**, para generar los certificados web que se usarán para la administración fuera de banda en los equipos AMT.  
 
-6.  Pulse la pestaña **Nombre de sujeto**, pulse **Construido a partir de esta información de Active Directory**, seleccione **Nombre común** para el **Formato de nombre de sujeto** y, después, desactive **Nombre principal del usuario (UPN)** para el nombre de sujeto alternativo.  
+6. Pulse la pestaña **Nombre de sujeto**, pulse **Construido a partir de esta información de Active Directory**, seleccione **Nombre común** para el **Formato de nombre de sujeto** y, después, desactive **Nombre principal del usuario (UPN)** para el nombre de sujeto alternativo.  
 
-7.  Pulse la pestaña **Seguridad** y, después, elimine el permiso **Inscribir** de los grupos de seguridad **Admins. del dominio** y **Administradores de empresa**.  
+7. Pulse la pestaña **Seguridad** y, después, elimine el permiso **Inscribir** de los grupos de seguridad **Admins. del dominio** y **Administradores de empresa**.  
 
-8.  Pulse **Agregar** y escriba el nombre del grupo de seguridad que ha creado para el aprovisionamiento de AMT y, después, pulse **Aceptar**.  
+8. Pulse **Agregar** y escriba el nombre del grupo de seguridad que ha creado para el aprovisionamiento de AMT y, después, pulse **Aceptar**.  
 
-9. Seleccione los siguientes permisos de **Permitir** para este grupo de seguridad: **Lectura** e **Inscribir**.  
+9. Seleccione los siguientes permisos de **Permitir** para este grupo de seguridad: **Leer** e **Inscribir**.  
 
 10. Pulse **Aceptar** y, después, cierre la consola de **Plantillas de certificado**.  
 
@@ -697,31 +697,31 @@ Esta implementación de certificado consta de los siguientes procedimientos:
 
 13. Si no tiene que crear y emitir más certificados, cierre la **Entidad de certificación**.  
 
- La plantilla de servidor web de AMT ya está lista para configurar equipos basados en AMT con certificados de servidor web. Seleccione esta plantilla de certificado en las propiedades del componente de administración fuera de banda.  
+    La plantilla de servidor web de AMT ya está lista para configurar equipos basados en AMT con certificados de servidor web. Seleccione esta plantilla de certificado en las propiedades del componente de administración fuera de banda.  
 
 ### <a name="create-and-issue-the-client-authentication-certificates-for-8021x-amt-based-computers"></a>Crear y emitir los certificados de autenticación del cliente para equipos basados en AMT 802.1X  
  Utilice el procedimiento siguiente si los equipos basados en AMT van a utilizar certificados de cliente para redes cableadas o inalámbricas con autenticación 802.1X.  
 
 ##### <a name="to-create-and-issue-the-client-authentication-certificate-template-on-the-ca"></a>Para crear y emitir la plantilla de certificado de autenticación del cliente en la CA  
 
-1.  En el servidor miembro que tenga Servicios de servidor de certificados instalados, en la consola de entidad de certificación, haga clic con el botón derecho en **Plantillas de certificado** y, después, pulse **Administrar** para cargar la consola **Plantillas de certificado**.  
+1. En el servidor miembro que tenga Servicios de servidor de certificados instalados, en la consola de entidad de certificación, haga clic con el botón derecho en **Plantillas de certificado** y, después, pulse **Administrar** para cargar la consola **Plantillas de certificado**.  
 
-2.  En el panel de resultados, haga clic con el botón derecho en la entrada que tiene **Autenticación de estación de trabajo** en la columna **Nombre para mostrar de plantilla** y, después, pulse **Duplicar plantilla**.  
+2. En el panel de resultados, haga clic con el botón derecho en la entrada que tiene **Autenticación de estación de trabajo** en la columna **Nombre para mostrar de plantilla** y, después, pulse **Duplicar plantilla**.  
 
-    > [!IMPORTANT]  
-    >  No seleccione **Windows 2008 Server, Enterprise Edition.**  
+   > [!IMPORTANT]  
+   >  No seleccione **Windows 2008 Server, Enterprise Edition.**  
 
-3.  En el cuadro de diálogo **Propiedades de plantilla nueva**, en la pestaña **General**, escriba el nombre de la plantilla, como **Certificado de autenticación del cliente 802.1X AMT de Configuration Manager**, para generar los certificados de cliente que se usarán para la administración fuera de banda en los equipos AMT.  
+3. En el cuadro de diálogo **Propiedades de plantilla nueva**, en la pestaña **General**, escriba el nombre de la plantilla, como **Certificado de autenticación del cliente 802.1X AMT de Configuration Manager**, para generar los certificados de cliente que se usarán para la administración fuera de banda en los equipos AMT.  
 
-4.  Pulse la pestaña **Nombre de sujeto**, seleccione **Construido a partir de esta información de Active Directory** y, después, pulse **Nombre común** para el **Formato de nombre del sujeto**. Desactive **Nombre DNS** para el nombre de sujeto alternativo y, después, seleccione **Nombre principal del usuario (UPN)**.  
+4. Pulse la pestaña **Nombre de sujeto**, seleccione **Construido a partir de esta información de Active Directory** y, después, pulse **Nombre común** para el **Formato de nombre del sujeto**. Desactive **Nombre DNS** para el nombre de sujeto alternativo y, después, seleccione **Nombre principal del usuario (UPN)**.  
 
-5.  Pulse la pestaña **Seguridad** y, después, elimine el permiso **Inscribir** de los grupos de seguridad **Admins. del dominio** y **Administradores de empresa**.  
+5. Pulse la pestaña **Seguridad** y, después, elimine el permiso **Inscribir** de los grupos de seguridad **Admins. del dominio** y **Administradores de empresa**.  
 
-6.  Pulse **Agregar** y escriba el nombre del grupo de seguridad que va a especificar en las propiedades del componente de administración fuera de banda para que contenga las cuentas de equipo de los equipos basados en AMT y, después, pulse **Aceptar**.  
+6. Pulse **Agregar** y escriba el nombre del grupo de seguridad que va a especificar en las propiedades del componente de administración fuera de banda para que contenga las cuentas de equipo de los equipos basados en AMT y, después, pulse **Aceptar**.  
 
-7.  Seleccione los siguientes permisos de **Permitir** para este grupo de seguridad: **Leer** e **Inscribir**.  
+7. Seleccione los siguientes permisos de **Permitir** para este grupo de seguridad: **Leer** e **Inscribir**.  
 
-8.  Pulse **Aceptar** y, después, cierre la consola de administración **Plantillas de certificado**, **certtmpl - [Plantillas de certificado]**.  
+8. Pulse **Aceptar** y, después, cierre la consola de administración **Plantillas de certificado**, **certtmpl - [Plantillas de certificado]**.  
 
 9. En la consola de administración de **Entidad de certificación**, haga clic con el botón derecho en **Plantillas de certificado**, pulse **Nueva** y, después, pulse **Plantilla de certificado que se va a emitir**.  
 
@@ -729,7 +729,7 @@ Esta implementación de certificado consta de los siguientes procedimientos:
 
 11. Si no necesita crear y emitir más certificados, cierre la **Entidad de certificación**.  
 
- La plantilla de certificado de autenticación del cliente ya está lista para emitir certificados para equipos basados en AMT que se pueden utilizar para la autenticación del cliente 802.1X. Seleccione esta plantilla de certificado en las propiedades del componente de administración fuera de banda.  
+    La plantilla de certificado de autenticación del cliente ya está lista para emitir certificados para equipos basados en AMT que se pueden utilizar para la autenticación del cliente 802.1X. Seleccione esta plantilla de certificado en las propiedades del componente de administración fuera de banda.  
 
 ##  <a name="BKMK_MacClient_SP1"></a> Implementación del certificado de cliente para equipos Mac  
 
@@ -745,24 +745,24 @@ Esta implementación de certificado consta de un único procedimiento para crear
 
 ##### <a name="to-create-and-issue-the-mac-client-certificate-template-on-the-certification-authority"></a>Para crear y emitir la plantilla de certificado de cliente Mac en la entidad de certificación  
 
-1.  Cree un grupo de seguridad que tenga cuentas de usuario para los usuarios administrativos que vayan a inscribir el certificado en el equipo Mac mediante System Center Configuration Manager.  
+1. Cree un grupo de seguridad que tenga cuentas de usuario para los usuarios administrativos que vayan a inscribir el certificado en el equipo Mac mediante System Center Configuration Manager.  
 
-2.  En el servidor miembro que ejecuta la consola de entidad de certificación, haga clic con el botón derecho en **Plantillas de certificado** y, después, pulse **Administrar** para cargar la consola de administración de las plantillas de certificado.  
+2. En el servidor miembro que ejecuta la consola de entidad de certificación, haga clic con el botón derecho en **Plantillas de certificado** y, después, pulse **Administrar** para cargar la consola de administración de las plantillas de certificado.  
 
-3.  En el panel de resultados, haga clic con el botón derecho en la entrada que muestra **Sesión autenticada** en la columna **Nombre para mostrar de plantilla** y, después, pulse **Duplicar plantilla**.  
+3. En el panel de resultados, haga clic con el botón derecho en la entrada que muestra **Sesión autenticada** en la columna **Nombre para mostrar de plantilla** y, después, pulse **Duplicar plantilla**.  
 
-4.  En el cuadro de diálogo **Duplicar plantilla**, asegúrese de que se haya seleccionado **Windows 2003 Server, Enterprise Edition** y, después, pulse **Aceptar**.  
+4. En el cuadro de diálogo **Duplicar plantilla**, asegúrese de que se haya seleccionado **Windows 2003 Server, Enterprise Edition** y, después, pulse **Aceptar**.  
 
-    > [!IMPORTANT]  
-    >  No seleccione **Windows 2008 Server, Enterprise Edition**.  
+   > [!IMPORTANT]  
+   >  No seleccione **Windows 2008 Server, Enterprise Edition**.  
 
-5.  En el cuadro de diálogo **Propiedades de plantilla nueva**, en la pestaña **General**, escriba el nombre de la plantilla, como **Certificado de cliente Mac de Configuration Manager**, para generar el certificado de cliente Mac.  
+5. En el cuadro de diálogo **Propiedades de plantilla nueva**, en la pestaña **General**, escriba el nombre de la plantilla, como **Certificado de cliente Mac de Configuration Manager**, para generar el certificado de cliente Mac.  
 
-6.  Pulse la pestaña **Nombre de sujeto**, asegúrese de que está seleccionado **Construido a partir de esta información de Active Directory**, seleccione **Nombre común** para el **Formato de nombre de sujeto** y, después, desactive **Nombre principal del usuario (UPN)** en **Incluir esta información en un nombre de sujeto alternativo**.  
+6. Pulse la pestaña **Nombre de sujeto**, asegúrese de que está seleccionado **Construido a partir de esta información de Active Directory**, seleccione **Nombre común** para el **Formato de nombre de sujeto** y, después, desactive **Nombre principal del usuario (UPN)** en **Incluir esta información en un nombre de sujeto alternativo**.  
 
-7.  Pulse la pestaña **Seguridad** y, después, elimine el permiso **Inscribir** de los grupos de seguridad **Admins. del dominio** y **Administradores de empresa**.  
+7. Pulse la pestaña **Seguridad** y, después, elimine el permiso **Inscribir** de los grupos de seguridad **Admins. del dominio** y **Administradores de empresa**.  
 
-8.  Pulse **Agregar**, especifique el grupo de seguridad que ha creado en el paso uno y, después, pulse **Aceptar**.  
+8. Pulse **Agregar**, especifique el grupo de seguridad que ha creado en el paso uno y, después, pulse **Aceptar**.  
 
 9. Seleccione el permiso **Inscribir** para este grupo y no desactive el permiso de **lectura**.  
 
@@ -774,4 +774,4 @@ Esta implementación de certificado consta de un único procedimiento para crear
 
 13. Si no tiene que crear y emitir más certificados, cierre la **Entidad de certificación**.  
 
- La plantilla de certificado de cliente Mac ya está lista para seleccionarse al configurar las opciones del cliente para la inscripción.
+    La plantilla de certificado de cliente Mac ya está lista para seleccionarse al configurar las opciones del cliente para la inscripción.

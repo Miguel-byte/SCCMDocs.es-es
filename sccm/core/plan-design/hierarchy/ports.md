@@ -10,12 +10,12 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5a5ec4f699f2c122dc435bbca5c77789ea972de7
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: b074ee02ec5e50fb5e495923538535cf8765dcdb
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601235"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420947"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Puertos usados en Configuration Manager
 
@@ -179,7 +179,7 @@ Para más información, vea [Puertos y flujo de datos de CMG](/sccm/core/clients
 
 > [!Important]  
 > Si habilita un firewall basado en host, asegúrese de que las reglas permiten que el servidor envíe y reciba en estos puertos. Al habilitar un punto de distribución del entorno de ejecución previo al arranque, Configuration Manager puede habilitar las reglas de entrada (recepción) en el Firewall de Windows. No configura las reglas de salida (envío).<!--SCCMDocs issue #744-->  
-  
+
 
 ###  <a name="BKMK_PortsClient-FSP"></a> Cliente -- > Punto de estado de reserva  
 
@@ -237,12 +237,14 @@ Configuration Manager usa estas conexiones para crear el canal de CMG. Para más
 
 #### <a name="version-1706-or-1710"></a>Versión 1706 o 1710
 El puerto concreto depende de la configuración del punto de administración. 
+
 |Descripción|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTPS|--|443|
 |HTTP|--|80|  
 
 #### <a name="version-1802"></a>Versión 1802
+
 |Descripción|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTPS|--|443|
@@ -253,6 +255,7 @@ Para más información, vea [Puertos y flujo de datos de CMG](/sccm/core/clients
 ###  <a name="bkmk_cmgcp-sup"></a> Punto de conexión de CMG -- > Punto de actualización de software  
 
 El puerto concreto depende de la configuración del punto de actualización de software. 
+
 |Descripción|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTPS|--|443|
@@ -759,7 +762,7 @@ Configure los puertos siguientes:
  - SQL a través de TCP: TCP 1433
  - SQL Server Service Broker: TCP 4022
  - Bloque de mensajes del servidor (SMB): TCP 445
- - Asignador de puntos de conexión RPC: TCP 135
+ - Asignador de extremos de RPC: TCP 135
 
 > [!WARNING]  
 >  Configuration Manager no admite los puertos dinámicos. De forma predeterminada, las instancias con nombre de SQL Server usan puertos dinámicos para las conexiones al motor de base de datos. Cuando use una instancia con nombre, configure manualmente el puerto estático para la comunicación entre sitios.  
@@ -797,7 +800,7 @@ Configuration Manager usa los siguientes puertos para la detección y la publica
  - Asignador de extremos de RPC: 135
  - RPC: puertos TCP altos asignados dinámicamente
  - TCP: 1024: 5000
- - TCP: 49152: 65535
+ - TCP:  49152: 65535
 
 
 ###  <a name="BKMK_External"></a> Conexiones externas establecidas por Configuration Manager  
@@ -836,17 +839,17 @@ Los clientes o sistemas de sitio de Configuration Manager en el entorno local pu
 
  Los puntos de administración y de distribución basados en Internet que admiten clientes basados en Internet, el punto de actualización de software y el punto de estado de reserva usan los puertos siguientes para la instalación y la reparación:  
 
--   Servidor de sitio -- > Sistema de sitio: asignador de extremos de RPC con los puertos UDP y TCP 135.  
+-   Servidor de sitio --> sistema de sitio: Asignador de extremos RPC con los puertos UDP y TCP 135.  
 
--   Servidor de sitio -- > Sistema de sitio: puertos TCP dinámicos de RPC.  
+-   Servidor de sitio --> sistema de sitio: Puertos TCP dinámicos de RPC  
 
--   Servidor de sitio &lt; --> Sistema de sitio: bloques de mensajes del servidor (SMB) con el puerto TCP 445.
+-   Servidor de sitio &lt; --> sistema de sitio: Bloques de mensajes de servidor (SMB) mediante el puerto TCP 445
 
 Las instalaciones de aplicación y paquete en puntos de distribución requieren los siguientes puertos RPC:  
 
--   Servidor de sitio -- > Punto de distribución: asignador de extremos de RPC con los puertos UDP y TCP 135.
+-   Servidor de sitio --> Punto de distribución: Asignador de extremos RPC con los puertos UDP y TCP 135
 
--   Servidor de sitio -- > Punto de distribución: puertos TCP dinámicos de RPC.  
+-   Servidor de sitio --> Punto de distribución: Puertos TCP dinámicos de RPC  
 
 Utilice IPsec para proteger el tráfico entre el servidor de sitio y los sistemas de sitio. Si debe restringir los puertos dinámicos que usa con RPC, puede usar la herramienta de configuración de RPC de Microsoft (rpccfg.exe) para configurar un conjunto limitado de puertos para estos paquetes RPC. Para obtener más información sobre la herramienta de configuración de RPC, vea [Cómo configurar RPC para usar determinados puertos y cómo asegurar esos puertos con IPsec](https://support.microsoft.com/help/908472/how-to-configure-rpc-to-use-certain-ports-and-how-to-help-secure-those).  
 

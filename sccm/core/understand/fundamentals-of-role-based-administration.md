@@ -10,12 +10,12 @@ ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b7916b386cb22f2d1869eface009bd10ff17d18
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: 1103b9e977f3bbef3e07d545b6b3762f6cf59fdd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862556"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414980"
 ---
 # <a name="fundamentals-of-role-based-administration-for-system-center-configuration-manager"></a>Conceptos básicos de la administración basada en roles de System Center Configuration Manager
 
@@ -25,13 +25,13 @@ Con System Center Configuration Manager, usa la administración basada en roles 
 
  El modelo de administración basada en roles define y administra de manera centralizada la configuración de acceso de seguridad de la totalidad de la jerarquía para todos los sitios y sus configuraciones, mediante lo siguiente:  
 
--   Los *roles de seguridad* se asignan a los usuarios administrativos para proporcionar a dichos usuarios (o grupos de usuarios) permisos de diferentes objetos de Configuration Manager. Por ejemplo, permiso para crear o cambiar la configuración del cliente.  
+- Los *roles de seguridad* se asignan a los usuarios administrativos para proporcionar a dichos usuarios (o grupos de usuarios) permisos de diferentes objetos de Configuration Manager. Por ejemplo, permiso para crear o cambiar la configuración del cliente.  
 
--   Los *ámbitos de seguridad* se usan para agrupar instancias específicas de objetos que un usuario administrativo se encarga de administrar, como una aplicación que instala Microsoft Office 2010.  
+- Los *ámbitos de seguridad* se usan para agrupar instancias específicas de objetos que un usuario administrativo se encarga de administrar, como una aplicación que instala Microsoft Office 2010.  
 
--   Las *recopilaciones* se usan para especificar grupos de recursos de usuarios y de dispositivos que el usuario administrativo puede administrar.  
+- Las *recopilaciones* se usan para especificar grupos de recursos de usuarios y de dispositivos que el usuario administrativo puede administrar.  
 
- Con la combinación de roles de seguridad, ámbitos de seguridad y recopilaciones, proporciona las asignaciones administrativas que cumplen los requisitos de su organización. Si se usan conjuntamente, definen el ámbito administrativo de un usuario, que es lo que el usuario puede ver y administrar en su implementación de Configuration Manager.  
+  Con la combinación de roles de seguridad, ámbitos de seguridad y recopilaciones, proporciona las asignaciones administrativas que cumplen los requisitos de su organización. Si se usan conjuntamente, definen el ámbito administrativo de un usuario, que es lo que el usuario puede ver y administrar en su implementación de Configuration Manager.  
 
 ## <a name="benefits-of-role-based-administration"></a>Ventajas de la administración basada en roles  
 
@@ -75,7 +75,7 @@ Al diseñar e implementar la seguridad administrativa de Configuration Manager, 
 > [!TIP]  
 >  Puede ver la lista de los roles de seguridad integrados y los roles de seguridad personalizados que crea, y sus descripciones, en la consola de Configuration Manager. Para ver los roles, en el área de trabajo **Administración**, expanda **Seguridad** y, después, seleccione **Roles de seguridad**.  
 
- Cada rol de seguridad tiene determinados permisos para distintos tipos de objetos. Por ejemplo, el rol de seguridad *Autor de aplicaciones* tiene los permisos siguientes para las aplicaciones: Aprobar, Crear, Eliminar, Modificar, Modificar carpeta, Mover objeto, Leer, Ejecutar informe y Establecer ámbito de seguridad.
+ Cada rol de seguridad tiene determinados permisos para distintos tipos de objetos. Por ejemplo, el rol de seguridad *Administrador de aplicaciones* tiene los permisos siguientes para las aplicaciones: Aprobar, Crear, Eliminar, Modificar, Modificar carpeta, Mover objeto, Leer, Ejecutar informe y Establecer ámbito de seguridad.
 
  No puede cambiar los permisos de los roles de seguridad integrados, pero puede copiar el rol, realizar cambios y, a continuación, guardar estos cambios como un nuevo rol de seguridad personalizado. También puede importar roles de seguridad que ha exportado desde otra jerarquía, por ejemplo, de una red de prueba. Revise los roles de seguridad y sus permisos para determinar si usará los roles de seguridad integrados o si debe crear sus propios roles de seguridad personalizados.  
 

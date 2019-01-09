@@ -10,16 +10,16 @@ ms.assetid: c8534a1e-57b8-4688-b6e6-299d82cfcec9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e2fb6b022526ce4bae1de21012ac996dbcea35cf
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: 329f5c2f227cbd8a51b1c9ccc21810cda9f6a2cf
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260914"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417146"
 ---
 # <a name="configuration-manager-and-windows-as-a-service"></a>Configuration Manager y Windows como servicio
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 System Center Configuration Manager proporciona un amplio control sobre las actualizaciones de características para Windows 10. Para adoptar totalmente Windows como modelo de servicio, también debe adoptar el modelo de rama actual de Configuration Manager. Para mantenerse al día con Windows 10 y obtener la mejor experiencia posible, es necesario hacerlo también con Configuration Manager. Las nuevas versiones de Configuration Manager son necesarias para aprovechar al máximo las nuevas y emocionantes características empresariales para Windows 10. Este artículo está diseñado para ser la página de destino de los artículos clave necesarios para adoptar la rama actual de Configuration Manager. La rama actual de Configuration Manager permite iniciar el camino hacia Windows como servicio.
 
@@ -39,6 +39,7 @@ System Center Configuration Manager proporciona un amplio control sobre las actu
 
 
 ## <a name="key-articles-about-adopting-windows-as-a-service"></a>Artículos clave sobre la adopción de Windows como servicio
+
 | Artículo        | Descripción          | 
 | ------------- |-------------|
 |[Administración de Windows como servicio](/sccm/osd/deploy-use/manage-windows-as-a-service)|Se explica cómo usar los planes de mantenimiento para implementar actualizaciones de características de Windows 10.|

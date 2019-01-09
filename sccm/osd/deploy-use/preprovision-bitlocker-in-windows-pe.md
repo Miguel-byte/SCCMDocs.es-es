@@ -10,12 +10,12 @@ ms.assetid: c7c94ba0-d709-4129-8077-075a8abaea1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ad4bfe99e841af5ccc4f6792fda664b8259a5369
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 10c072c89064472398c068a62079d1af120b1a11
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350534"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416561"
 ---
 # <a name="preprovision-bitlocker-in-windows-pe-with-system-center-configuration-manager"></a>Aprovisionar previamente BitLocker en Windows PE con System Center Configuration Manager
 
@@ -25,20 +25,20 @@ El paso de secuencia de tareas **Tener en servicio BitLocker** en System Center 
 
  En general, para tener en servicio BitLocker correctamente en un equipo en el que se instalará Windows 7, debe hacer lo siguiente:  
 
--   Reiniciar el equipo en Windows PE  
+- Reiniciar el equipo en Windows PE  
 
-    > [!IMPORTANT]  
-    >  Debe utilizar una imagen de arranque con Windows PE 4 o posterior para tener en servicio BitLocker. Para obtener más información sobre las versiones de Windows PE admitidas en Configuration Manager, consulte [Dependencias externas a Configuration Manager](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_ExternalDependencies).  
+  > [!IMPORTANT]  
+  >  Debe utilizar una imagen de arranque con Windows PE 4 o posterior para tener en servicio BitLocker. Para obtener más información sobre las versiones de Windows PE admitidas en Configuration Manager, consulte [Dependencias externas a Configuration Manager](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_ExternalDependencies).  
 
--   Crear particiones y formatear el disco duro  
+- Crear particiones y formatear el disco duro  
 
--   Tener en servicio BitLocker  
+- Tener en servicio BitLocker  
 
--   Instalar Windows 7 con una determinada configuración de red y de sistema operativo  
+- Instalar Windows 7 con una determinada configuración de red y de sistema operativo  
 
--   Agregar un protector de clave a BitLocker  
+- Agregar un protector de clave a BitLocker  
 
- En Configuration Manager, la manera recomendada para tener en servicio BitLocker en un disco duro e instalar Windows 7 consiste en crear una nueva secuencia de tareas y seleccionar **Instalar un paquete de imágenes existente** en la página **Crear nueva secuencia de tareas** del **Asistente para crear secuencia de tareas**. El asistente crea los pasos de secuencia de tareas que se indican en la tabla siguiente.  
+  En Configuration Manager, la manera recomendada para tener en servicio BitLocker en un disco duro e instalar Windows 7 consiste en crear una nueva secuencia de tareas y seleccionar **Instalar un paquete de imágenes existente** en la página **Crear nueva secuencia de tareas** del **Asistente para crear secuencia de tareas**. El asistente crea los pasos de secuencia de tareas que se indican en la tabla siguiente.  
 
 > [!NOTE]  
 >  La secuencia de tareas puede tener pasos adicionales según la configuración de las opciones del asistente. Por ejemplo, puede tener el paso **Capturar configuración de Windows** si seleccionó **Capturar configuración de Microsoft Windows** en la página **Migración de estado** del asistente.  
@@ -49,7 +49,7 @@ El paso de secuencia de tareas **Tener en servicio BitLocker** en System Center 
 |Reiniciar el equipo en Windows PE|Este paso reinicia el equipo en Windows PE mediante la ejecución de la imagen de arranque asignada a la secuencia de tareas. Debe utilizar una imagen de arranque con Windows PE 4 o posterior para tener en servicio BitLocker. Para obtener más información, consulte [Reiniciar equipo](../understand/task-sequence-steps.md#BKMK_RestartComputer).|  
 |Disco de partición 0 - BIOS<br /><br /> Disco de partición 0 - UEFI|Mediante estos pasos se realiza el formateo y la partición de la unidad especificada en el equipo de destino a través de BIOS o UEFI. La secuencia de tareas utiliza UEFI cuando detecta que el equipo de destino está en modo UEFI. Para obtener más información, consulte [Formatear y crear particiones en el disco](../understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk).|  
 |Tener en servicio BitLocker|Este paso habilita BitLocker en una unidad cuando se usa Windows PE. Solo se cifra el espacio utilizado de la unidad. No hay datos porque se realizó el formateo y la partición del disco duro en el paso anterior y, por lo tanto, el cifrado se completa con gran rapidez. Para obtener más información, consulte [Tener en servicio BitLocker](../understand/task-sequence-steps.md#BKMK_PreProvisionBitLocker).|  
-|Aplicar sistema operativo|En este paso se prepara el archivo de respuesta que se usa para instalar el sistema operativo en el equipo de destino, y se configura la variable de secuencia de tareas OSDTargetSystemDrive como la letra de la unidad de la partición que contiene los archivos del sistema operativo. El paso Instalar Windows y Configuration Manager usa la variable y el archivo de respuesta para instalar el sistema operativo. Para obtener más información, consulte [Aplicar imagen de sistema operativo](../understand/task-sequence-steps.md#BKMK_ApplyOperatingSystemImage).|  
+|Aplicar sistema operativo|En este paso se prepara el archivo de respuesta que se usa para instalar el sistema operativo en el equipo de destino, y se configura la variable de secuencia de tareas OSDTargetSystemDrive como la letra de la unidad de la partición que contiene los archivos del sistema operativo. El paso Instalar Windows y Configuration Manager usa la variable y el archivo de respuesta para instalar el sistema operativo. Para obtener más información, vea [Apply Operating System Image](../understand/task-sequence-steps.md#BKMK_ApplyOperatingSystemImage).|  
 |Aplicar configuraciones de Windows|En este paso se agrega la configuración de Windows al archivo de respuesta. El paso Instalar Windows y Configuration Manager usa el archivo de respuesta para instalar el sistema operativo. Para obtener más información, consulte [Aplicar configuraciones de Windows](../understand/task-sequence-steps.md#BKMK_ApplyWindowsSettings).|  
 |Aplicar configuración de red|En este paso se agrega la configuración de red al archivo de respuesta. El paso Instalar Windows y Configuration Manager usa el archivo de respuesta para instalar el sistema operativo. Para obtener más información, consulte [Paso Aplicar configuración de red](../understand/task-sequence-steps.md#BKMK_ApplyNetworkSettings).|  
 |Aplicar controladores del dispositivo|En este paso se buscan e instalan controladores como parte de la implementación de sistema operativo. Para obtener más información, consulte [Aplicar controladores automáticamente](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers).|  

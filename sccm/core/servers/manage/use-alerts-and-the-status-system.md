@@ -10,12 +10,12 @@ ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 891366f7e5fa3f4fd2b8f9a8606e823f0a48c394
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 98deb50a35bd96684bf537c1821c58d1d08ca738
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342518"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420131"
 ---
 # <a name="use-alerts-and-the-status-system-for-system-center-configuration-manager"></a>Usar alertas y el sistema de estado de System Center Configuration Manager
 
@@ -39,7 +39,7 @@ Configure alertas y use el sistema de estado integrado para mantenerse informado
 
     -   Generador de resumen de estado del sistema de sitio  
 
--   **Reglas de filtro de estado:** puede crear nuevas reglas de filtro de estado, modificar la prioridad de las reglas, deshabilitar o habilitar reglas y eliminar las reglas no usadas en cada sitio.  
+-   **Reglas de filtro de estado:** puede crear reglas de filtro de estado, modificar la prioridad de las reglas, deshabilitar o habilitar reglas y eliminar las no usadas en cada sitio.  
 
     > [!NOTE]  
     >  Las reglas de filtro de estado no son compatibles con el uso de variables de entorno para ejecutar comandos externos.  
@@ -181,15 +181,15 @@ Dado que el sistema de estado mantiene configuraciones independientes para cada 
 ##  <a name="bkmk_Alerts"></a> Alertas  
  Algunas operaciones generan alertas de Configuration Manager cuando se da una condición específica.  
 
--   Por lo general, se generan alertas cuando se produce un error que debe resolver.  
+- Por lo general, se generan alertas cuando se produce un error que debe resolver.  
 
--   Las alertas pueden generarse para advertirle de que existe una condición, para que pueda continuar con la supervisión de la situación  
+- Las alertas pueden generarse para advertirle de que existe una condición, para que pueda continuar con la supervisión de la situación  
 
--   Algunas alertas las configura el usuario, como las alertas de estado de cliente y de Endpoint Protection, mientras que otras alertas se configuran automáticamente  
+- Algunas alertas las configura el usuario, como las alertas de estado de cliente y de Endpoint Protection, mientras que otras alertas se configuran automáticamente  
 
--   Puede configurar suscripciones para las alertas, que luego pueden enviar detalles por correo electrónico, lo que aumenta la concienciación de los problemas clave  
+- Puede configurar suscripciones para las alertas, que luego pueden enviar detalles por correo electrónico, lo que aumenta la concienciación de los problemas clave  
 
- Use la tabla siguiente para buscar información sobre cómo configurar alertas y suscripciones a alertas en Configuration Manager:  
+  Use la tabla siguiente para buscar información sobre cómo configurar alertas y suscripciones a alertas en Configuration Manager:  
 
 
 |Acción|Más información|  
@@ -204,9 +204,9 @@ Dado que el sistema de estado mantiene configuraciones independientes para cada 
 
 ##### <a name="to-manage-general-alerts"></a>Para administrar alertas generales  
 
-1.  En la consola de Configuration Manager, vaya a **Supervisión** > **Alertas** y, después, seleccione una tarea de administración.  
+1. En la consola de Configuration Manager, vaya a **Supervisión** > **Alertas** y, después, seleccione una tarea de administración.  
 
-  Utilice la tabla siguiente para obtener más información acerca de las tareas de administración que pueden requerir información para poder seleccionarlas.  
+   Utilice la tabla siguiente para obtener más información acerca de las tareas de administración que pueden requerir información para poder seleccionarlas.  
 
 |Tarea de administración|Detalles|  
     |---------------------|-------------|  
@@ -255,11 +255,11 @@ Dado que el sistema de estado mantiene configuraciones independientes para cada 
 
     -   **Habilitar notificación de correo electrónico para las alertas**: active esta casilla para que Configuration Manager use un servidor SMTP para enviar alertas por correo electrónico.  
 
-    -   **FQDN o dirección IP del servidor SMTP para enviar alertas por correo electrónico**: escriba el nombre de dominio completo (FQDN) o la dirección IP y el puerto SMTP del servidor de correo electrónico que desee usar para estas alertas.  
+    -   **FQDN o dirección IP del servidor SMTP para enviar alertas por correo electrónico**: escriba el nombre de dominio completo (FQDN) o la dirección IP y el puerto SMTP del servidor de correo electrónico que quiera usar para estas alertas.  
 
     -   **Cuenta de conexión del servidor SMTP**: especifique el método de autenticación que quiere que Configuration Manager use para conectarse al servidor de correo electrónico.  
 
-    -   **Dirección de remitente para alertas por correo electrónico**: especifique la dirección de correo electrónico desde la que deben enviarse los mensajes de alerta.  
+    -   **Dirección de remitente para alertas por correo electrónico**: especifique la dirección de correo electrónico desde la que se deben enviar los mensajes de alerta.  
 
     -   **Probar servidor SMTP**: envía un mensaje de prueba a la dirección de correo electrónico especificada en **Dirección de remitente para alertas por correo electrónico**.  
 
@@ -275,9 +275,9 @@ Dado que el sistema de estado mantiene configuraciones independientes para cada 
 
     -   **Nombre**: escriba un nombre para identificar la suscripción por correo electrónico. Puede usar hasta 255 caracteres.  
 
-    -   **Dirección de correo electrónico**: escriba las direcciones de correo electrónico a las que desee enviar la alerta. Separe varias direcciones de correo electrónico con punto y coma.  
+    -   **Dirección de correo electrónico**: escriba las direcciones de correo electrónico a las que quiera enviar la alerta. Separe varias direcciones de correo electrónico con punto y coma.  
 
-    -   **Idioma de correo electrónico**: en la lista, especifique el idioma para el correo electrónico.  
+    -   **Idioma del correo electrónico**: en la lista, especifique el idioma para el correo electrónico.  
 
 4.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Nueva suscripción** y crear la suscripción de correo electrónico.  
 
@@ -287,22 +287,22 @@ Dado que el sistema de estado mantiene configuraciones independientes para cada 
 ###  <a name="BKMK_MonitorAlerts"></a> Supervisar alertas  
  Puede ver las alertas en el nodo **Alertas** del área de trabajo **Supervisión** . Las alertas tienen alguno de los siguientes estados de alerta:  
 
--   **Nunca desencadenado**: no se cumplió la condición de la alerta.  
+- **Nunca desencadenado**: no se ha cumplido la condición de la alerta.  
 
--   **Activo**: se cumple la condición de la alerta.  
+- **Activo**: se cumple la condición de la alerta.  
 
--   **Cancelado**: ya no se cumple la condición de una alerta activa. Este estado indica que la condición que provocó la alerta se ha resuelto.  
+- **Cancelada**: ya no se cumple la condición de una alerta activa. Este estado indica que la condición que provocó la alerta se ha resuelto.  
 
--   **Pospuesto**: un usuario administrativo configuró Configuration Manager para que evalúe el estado de la alerta posteriormente.  
+- **Pospuesto**: un usuario administrativo ha configurado Configuration Manager para que evalúe el estado de la alerta más adelante.  
 
--   **Deshabilitado**: un usuario administrativo deshabilitó la alerta. Si una alerta tiene este estado, Configuration Manager no la actualiza aunque el estado cambie.  
+- **Disabled**: un usuario administrativo ha deshabilitado la alerta. Si una alerta tiene este estado, Configuration Manager no la actualiza aunque el estado cambie.  
 
- Puede realizar alguna de las siguientes acciones cuando Configuration Manager genera una alerta:  
+  Puede realizar alguna de las siguientes acciones cuando Configuration Manager genera una alerta:  
 
--   Resuelva la condición que generó la alerta; por ejemplo, solucione un problema de red o un problema de configuración que generó la alerta. Después de que Configuration Manager detecte que ha desaparecido el problema, el estado de la alerta cambia a **Cancelar**.  
+- Resuelva la condición que generó la alerta; por ejemplo, solucione un problema de red o un problema de configuración que generó la alerta. Después de que Configuration Manager detecte que ha desaparecido el problema, el estado de la alerta cambia a **Cancelar**.  
 
--   Si la alerta se corresponde con un problema conocido, puede posponerla durante un tiempo determinado. En ese momento, Configuration Manager actualiza la alerta a su estado actual.  
+- Si la alerta se corresponde con un problema conocido, puede posponerla durante un tiempo determinado. En ese momento, Configuration Manager actualiza la alerta a su estado actual.  
 
-     Puede posponer una alerta sólo cuando está activa.  
+   Puede posponer una alerta sólo cuando está activa.  
 
--   Puede editar el **comentario** de una alerta para que otros usuarios administrativos puedan ver que está al corriente de la alerta. Por ejemplo, en el comentario puede identificar cómo solucionar la condición, ofrecer información acerca del estado actual de la condición o explicar por qué ha pospuesto la alerta.  
+- Puede editar el **comentario** de una alerta para que otros usuarios administrativos puedan ver que está al corriente de la alerta. Por ejemplo, en el comentario puede identificar cómo solucionar la condición, ofrecer información acerca del estado actual de la condición o explicar por qué ha pospuesto la alerta.  

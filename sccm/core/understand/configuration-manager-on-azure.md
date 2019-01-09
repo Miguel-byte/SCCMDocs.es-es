@@ -9,12 +9,12 @@ ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2b952e76fc21e3190430cdf34cb4a264918fd199
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: fa201029b81bb3e0ca8fb5e97f126c899497d503
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342603"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422936"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager en Azure - Preguntas más frecuentes
 *Se aplica a: System Center Configuration Manager (Rama actual)*
@@ -45,13 +45,13 @@ Buena pregunta, estas son las áreas más importantes a la hora de tomar esa dec
 ### <a name="what-about-networking-requirements-should-i-use-expressroute-or-an-azure-vpn-gateway"></a>¿Qué sucede con los requisitos de red? ¿Debo usar ExpressRoute o una puerta de enlace de VPN de Azure?
 La red es una decisión muy importante. Las velocidades y la latencia de la red pueden afectar a la funcionalidad entre el servidor de sitio y los sistemas de sitio remotos y cualquier comunicación de cliente hacia los sistemas de sitio. Nuestra recomendación es usar ExpressRoute, pero no hay ninguna limitación de Configuration Manager que impida usar la puerta de enlace de VPN de Azure. Debe repasar cuidadosamente los requisitos (rendimiento, revisiones, distribución de software, implementación de sistema operativo) de esta infraestructura y luego tomar una decisión. Algunos aspectos que se deben tener en cuenta para cada solución son:
 
- - **ExpressRoute** (recomendado)
+- **ExpressRoute** (recomendado)
   - Ampliación natural del centro de datos (puede unir varios centros de datos).
   - Conexiones privadas entre centros de datos de Azure y la infraestructura.
   - No pasa por la red pública de Internet.
   - Ofrece confiabilidad, velocidad, menor latencia, alta seguridad.
   - Ofrece velocidades de hasta 10 Gbps y opciones de plan de datos ilimitados.
- - **Puerta de enlace de VPN**
+- **Puerta de enlace de VPN**
   - VPN de sitio a sitio o de punto a sitio.
   - El tráfico no pasa por la red pública de Internet.
   - Usa el protocolo de seguridad de Internet (IPsec) y el intercambio de claves por red (IKE).
@@ -107,11 +107,11 @@ En las tablas siguientes se indican los recuentos de disco iniciales sugeridos p
 
 | Clientes de escritorio    |Tamaño de VM recomendado|Discos recomendados |
 |--------------------|-------------------|------------------|
-|**Hasta 25 k**       | Servidor de sitio: F4S </br>Servidor de base de datos: DS12_V2 | Servidor de sitio: 1 x P30 </br>Servidor de base de datos: 2xP30 (seccionado)  |
-|**De 25 a 50 k**      | Servidor de sitio: F4S </br>Servidor de base de datos: DS13_V2 | Servidor de sitio: 1 x P30 </br>Servidor de base de datos: 2xP30 (seccionado)   |
-|**De 50 a 100 k**     | Servidor de sitio: F8S </br>Servidor de base de datos: DS14_V2 | Servidor de sitio: 2xP30 (seccionado)   </br>Servidor de base de datos: 3xP30 (seccionado)   |
+|**Hasta 25 k**       | Servidor de sitio: F4S </br>Servidor de bases de datos: DS12_V2 | Servidor de sitio: 1xP30 </br>Servidor de bases de datos: 2xP30 (seccionado)  |
+|**De 25 a 50 k**      | Servidor de sitio: F4S </br>Servidor de bases de datos: DS13_V2 | Servidor de sitio: 1xP30 </br>Servidor de bases de datos: 2xP30 (seccionado)   |
+|**De 50 a 100 k**     | Servidor de sitio: F8S </br>Servidor de bases de datos: DS14_V2 | Servidor de sitio: 2xP30 (seccionado)   </br>Servidor de bases de datos: 3xP30 (seccionado)   |
 
-A continuación se muestra un ejemplo de la configuración de entre 50 000 y 100 000 clientes en DS14_V2 con tres discos P30 en un volumen seccionado con volúmenes lógicos independientes para los archivos de instalación y de base de datos de Configuration Manager: ![Discos de VM](media/vm_disks.png)  
+A continuación se muestra un ejemplo de la configuración de entre 50 000 y 100 000 clientes en DS14_V2 con tres discos P30 en un volumen seccionado con volúmenes lógicos independientes para los archivos de instalación y de base de datos de Configuration Manager: ![(Discos de máquina virtual)](media/vm_disks.png)  
 
 
 

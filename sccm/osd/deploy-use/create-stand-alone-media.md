@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35dd110c2566dab945bb0701e113becb3412d65c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: e2a9c4a1d2feba0c96dcbe3a2f7ee03c7c5a4555
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351959"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418703"
 ---
 # <a name="create-stand-alone-media-with-system-center-configuration-manager"></a>Crear medios independientes con System Center Configuration Manager
 
@@ -81,55 +81,55 @@ Antes de ejecutar el Asistente para crear medio de secuencia de tareas para crea
 
 ## <a name="to-create-stand-alone-media"></a>Para crear medios independientes  
 
-1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
+1. En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
 
-2.  En el área de trabajo **Biblioteca de software** , expanda **Sistemas operativos**y, a continuación, haga clic en **Secuencias de tareas**.  
+2. En el área de trabajo **Biblioteca de software** , expanda **Sistemas operativos**y, a continuación, haga clic en **Secuencias de tareas**.  
 
-3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear medio de secuencia de tareas** para iniciar el Asistente para crear medio de secuencia de tareas.  
+3. En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear medio de secuencia de tareas** para iniciar el Asistente para crear medio de secuencia de tareas.  
 
-4.  En la página **Seleccionar tipo de medio** , especifique las opciones siguientes y, a continuación, haga clic en **Siguiente**.  
+4. En la página **Seleccionar tipo de medio** , especifique las opciones siguientes y, a continuación, haga clic en **Siguiente**.  
 
-    -   Seleccione **Medio independiente**.  
+   -   Seleccione **Medio independiente**.  
 
-    -   Opcionalmente, si desea permitir que el sistema operativo se implemente sin intervención del usuario, seleccione **Permitir la implementación desatendida de sistema operativo**. Cuando se selecciona esta opción, no se solicita al usuario que brinde información de configuración de red ni que realice secuencias de tareas opcionales. Se seguirá solicitando una contraseña al usuario si el medio está configurado para la protección con contraseña.  
+   -   Opcionalmente, si desea permitir que el sistema operativo se implemente sin intervención del usuario, seleccione **Permitir la implementación desatendida de sistema operativo**. Cuando se selecciona esta opción, no se solicita al usuario que brinde información de configuración de red ni que realice secuencias de tareas opcionales. Se seguirá solicitando una contraseña al usuario si el medio está configurado para la protección con contraseña.  
 
-5.  En la página **Tipo de medios**, especifique si el medio es una unidad USB extraíble o un conjunto de CD/DVD:  
+5. En la página **Tipo de medios**, especifique si el medio es una unidad USB extraíble o un conjunto de CD/DVD:  
 
-    > [!IMPORTANT]  
-    >  De manera predeterminada, los medios independientes utilizan un sistema de archivos FAT32. No se pueden crear medios independientes en una unidad USB extraíble cuyo contenido incluya un archivo de más de 4 GB de tamaño.  
+   > [!IMPORTANT]  
+   >  De manera predeterminada, los medios independientes utilizan un sistema de archivos FAT32. No se pueden crear medios independientes en una unidad USB extraíble cuyo contenido incluya un archivo de más de 4 GB de tamaño.  
 
-    -   Si selecciona **Unidad USB extraíble**, especifique la unidad en la que quiere almacenar el contenido.  
+   - Si selecciona **Unidad USB extraíble**, especifique la unidad en la que quiere almacenar el contenido.  
 
-        - **Formatear la unidad USB extraíble (FAT32) y hacerla de arranque**: de forma predeterminada, deje que Configuration Manager prepare la unidad USB. Muchos de los nuevos dispositivos UEFI requieren una partición FAT32 de arranque. Sin embargo, este formato también limita el tamaño de los archivos y la capacidad total de la unidad. Si ya ha formateado y configurado la unidad extraíble, deshabilite esta opción. 
+     - **Formatear la unidad USB extraíble (FAT32) y hacerla de arranque** : de forma predeterminada, permita que Configuration Manager prepare la unidad USB. Muchos de los nuevos dispositivos UEFI requieren una partición FAT32 de arranque. Sin embargo, este formato también limita el tamaño de los archivos y la capacidad total de la unidad. Si ya ha formateado y configurado la unidad extraíble, deshabilite esta opción. 
 
-    -   Si selecciona **Conjunto de CD/DVD**, especifique la capacidad del medio y el nombre y la ruta de acceso de los archivos de salida. El asistente escribe los archivos de salida en esta ubicación. Por ejemplo: **\\\nombre de servidor\carpeta\archivo de salida.iso**  
+   - Si selecciona **Conjunto de CD/DVD**, especifique la capacidad del medio y el nombre y la ruta de acceso de los archivos de salida. El asistente escribe los archivos de salida en esta ubicación. Por ejemplo: **\\\nombre de servidor\carpeta\archivo de salida.iso**  
 
-         Si la capacidad de los medios es demasiado pequeña para almacenar todo el contenido, se crean varios archivos y debe almacenar el contenido en varios CD o DVD. Si se requieren varios medios, Configuration Manager agrega un número de secuencia al nombre de cada archivo de salida que crea. Además, si implementa una aplicación junto con el sistema operativo y la aplicación no cabe en un solo medio, Configuration Manager almacena la aplicación en varios medios. Cuando se ejecuta el medio independiente, Configuration Manager pide al usuario el siguiente medio en el que se almacena la aplicación.   
+      Si la capacidad de los medios es demasiado pequeña para almacenar todo el contenido, se crean varios archivos y debe almacenar el contenido en varios CD o DVD. Si se requieren varios medios, Configuration Manager agrega un número de secuencia al nombre de cada archivo de salida que crea. Además, si implementa una aplicación junto con el sistema operativo y la aplicación no cabe en un solo medio, Configuration Manager almacena la aplicación en varios medios. Cuando se ejecuta el medio independiente, Configuration Manager pide al usuario el siguiente medio en el que se almacena la aplicación.   
 
-         > [!IMPORTANT]  
-         >  Si selecciona una imagen .iso existente, el Asistente para crear medio de secuencia de tareas elimina la imagen de la unidad o el recurso compartido cuando pasa a la siguiente página del asistente. Se elimina la imagen existente incluso si, a continuación, se cancela al asistente.  
+      > [!IMPORTANT]  
+      >  Si selecciona una imagen .iso existente, el Asistente para crear medio de secuencia de tareas elimina la imagen de la unidad o el recurso compartido cuando pasa a la siguiente página del asistente. Se elimina la imagen existente incluso si, a continuación, se cancela al asistente.  
 
      Haga clic en **Siguiente**.  
 
-6.  En la página **Seguridad**, elija una de las siguientes opciones de configuración y después haga clic en **Siguiente**:
-    - **Proteger medio con contraseña**: escriba una contraseña segura para ayudar a proteger el medio. Si se especifica una contraseña, será necesaria para utilizar el medio.  
+6. En la página **Seguridad**, elija una de las siguientes opciones de configuración y después haga clic en **Siguiente**:
+   - **Proteger medio con contraseña:**: escriba una contraseña segura para ayudar a proteger el medio. Si se especifica una contraseña, será necesaria para utilizar el medio.  
 
-        > [!IMPORTANT]  
-        >  En un medio independiente, se cifran únicamente los pasos de la secuencia de tareas y sus variables. El contenido restante del medio no se cifra: no incluya información confidencial en los scripts de secuencia de tareas. Almacene e implemente la información confidencial mediante el uso de variables de secuencia de tareas.  
+       > [!IMPORTANT]  
+       >  En un medio independiente, se cifran únicamente los pasos de la secuencia de tareas y sus variables. El contenido restante del medio no se cifra: no incluya información confidencial en los scripts de secuencia de tareas. Almacene e implemente la información confidencial mediante el uso de variables de secuencia de tareas.  
 
-    - **Seleccionar el intervalo de tiempo de validez de este medio independiente** (a partir de la versión 1702): establezca las fechas de inicio y expiración opcionales en el medio. Estas opciones están deshabilitadas de forma predeterminada. Las fechas se comparan con la hora del sistema del equipo antes de que se ejecuten los medios independientes. Cuando la hora del sistema es anterior a la hora de inicio o posterior a la hora de expiración, los medios independientes no se inician. Estas opciones también están disponibles mediante el cmdlet de PowerShell New-CMStandaloneMedia.
-7.  En la página **CD/DVD independiente** , especifique la secuencia de tareas que implementa el sistema operativo y, a continuación, haga clic en **Siguiente**. Para agregar contenido a los medios independientes para las dependencias de la aplicación, elija **Detectar dependencias de aplicación asociadas y agregarlas a este medio**.
-    > [!TIP]
-    > Si no ve las dependencias de aplicación esperadas, anule la selección y luego vuelva a seleccionar la configuración **Detectar dependencias de aplicación asociadas y agregarlas a este medio** para actualizar la lista.
+   - **Seleccionar el intervalo de fechas de validez de este medio independiente** (a partir de la versión 1702): establezca fechas de inicio y expiración opcionales en los medios. Estas opciones están deshabilitadas de forma predeterminada. Las fechas se comparan con la hora del sistema del equipo antes de que se ejecuten los medios independientes. Cuando la hora del sistema es anterior a la hora de inicio o posterior a la hora de expiración, los medios independientes no se inician. Estas opciones también están disponibles mediante el cmdlet de PowerShell New-CMStandaloneMedia.
+7. En la página **CD/DVD independiente** , especifique la secuencia de tareas que implementa el sistema operativo y, a continuación, haga clic en **Siguiente**. Para agregar contenido a los medios independientes para las dependencias de la aplicación, elija **Detectar dependencias de aplicación asociadas y agregarlas a este medio**.
+   > [!TIP]
+   > Si no ve las dependencias de aplicación esperadas, anule la selección y luego vuelva a seleccionar la configuración **Detectar dependencias de aplicación asociadas y agregarlas a este medio** para actualizar la lista.
 
-    El asistente le permite seleccionar las secuencias de tareas asociadas con una imagen de arranque.  
+   El asistente le permite seleccionar las secuencias de tareas asociadas con una imagen de arranque.  
 
 8. En la página **Seleccionar aplicación** (disponible a partir de la versión 1702), especifique el contenido de la aplicación que desea incluir como parte del archivo multimedia y después haga clic en **Siguiente**.
 9. En la página **Seleccionar paquete** (disponible a partir de la versión 1702), especifique el contenido del paquete que desea incluir como parte del archivo multimedia y después haga clic en **Siguiente**.
 10. En la página **Seleccionar el paquete de controladores** (disponible a partir de la versión 1702), especifique el contenido del paquete de controladores que desea incluir como parte del archivo multimedia y después haga clic en **Siguiente**.
-11.  En la página **Puntos de distribución**, especifique los puntos que tengan el contenido necesario y luego haga clic en **Siguiente**.  
+11. En la página **Puntos de distribución**, especifique los puntos que tengan el contenido necesario y luego haga clic en **Siguiente**.  
 
-     Configuration Manager solo muestra los puntos de distribución que incluyen el contenido. Antes de continuar, distribuya todo el contenido asociado a la secuencia de tareas en al menos un punto de distribución. Después de distribuir el contenido, actualice la lista de puntos de distribución. Quite los puntos de distribución ya haya seleccionado en esta página, vaya a la página anterior y después regrese a la página **Puntos de distribución**. O bien, reinicie al asistente. Para obtener más información, consulte [Distribuir contenido al que hace referencia una secuencia de tareas](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS) y [Administración del contenido y de la infraestructura de contenido](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    Configuration Manager solo muestra los puntos de distribución que incluyen el contenido. Antes de continuar, distribuya todo el contenido asociado a la secuencia de tareas en al menos un punto de distribución. Después de distribuir el contenido, actualice la lista de puntos de distribución. Quite los puntos de distribución ya haya seleccionado en esta página, vaya a la página anterior y después regrese a la página **Puntos de distribución**. O bien, reinicie al asistente. Para obtener más información, consulte [Distribuir contenido al que hace referencia una secuencia de tareas](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS) y [Administración del contenido y de la infraestructura de contenido](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
     > [!NOTE]  
     >  Debe tener derechos de acceso de **lectura** para la biblioteca de contenido en los puntos de distribución.  
@@ -147,7 +147,7 @@ Antes de ejecutar el Asistente para crear medio de secuencia de tareas para crea
 
 13. Complete el asistente.  
 
- Los archivos de medios independientes (.iso) se crean en la carpeta de destino. Si seleccionó **CD/DVD independiente**, ahora puede copiar los archivos de salida a un conjunto de CD o DVD.  
+    Los archivos de medios independientes (.iso) se crean en la carpeta de destino. Si seleccionó **CD/DVD independiente**, ahora puede copiar los archivos de salida a un conjunto de CD o DVD.  
 
 ##  <a name="BKMK_StandAloneMediaTSExample"></a> Ejemplo de secuencia de tareas de medios independientes  
  Utilice la tabla siguiente como guía al crear una secuencia de tareas para implementar un sistema operativo mediante medios independientes. La tabla le ayuda a decidir la secuencia general de los pasos de secuencia de tareas. También ayuda a organizar y estructurar los pasos de secuencia de tareas en grupos lógicos. La secuencia de tareas que cree puede variar de este ejemplo y puede contener más o menos pasos de secuencia de tareas y grupos.  

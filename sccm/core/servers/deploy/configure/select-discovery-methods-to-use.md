@@ -10,12 +10,12 @@ ms.assetid: 127ce713-d085-430f-ac7b-2701637fe126
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: faa974fda68c9448902f2f5c8e8fcf8ef2f2d386
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0eec065c9b5d4f75e6a66260760ba08e7bb2c481
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340246"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422562"
 ---
 # <a name="select-discovery-methods-to-use-for-system-center-configuration-manager"></a>Selección de los métodos de detección que se usarán para System Center Configuration Manager
 
@@ -104,22 +104,22 @@ Habida cuenta de que la **detección de latidos** no se ejecuta en un sitio espe
 ##  <a name="bkmk_best"></a> Procedimientos recomendados para la detección  
 Para obtener mejores resultados con la detección, se recomienda lo siguiente:
 
- - **Ejecución de la detección de sistemas de Active Directory y la detección de usuarios de Active Directory antes de ejecutar la detección de grupos de Active Directory.**  
+- **Ejecución de la detección de sistemas de Active Directory y la detección de usuarios de Active Directory antes de ejecutar la detección de grupos de Active Directory.**  
 
- Cuando la detección de grupos de Active Directory identifica un usuario o equipo no detectado previamente como miembro de un grupo, trata de detectar los detalles básicos del usuario o el equipo. Habida cuenta de que la detección de grupos de Active Directory no está optimizada para este tipo de detección, este proceso puede dar lugar a que se ejecute con lentitud. Además, la detección de grupos de Active Directory identifica solo los detalles básicos sobre los usuarios y equipos que detecta, y no crea un registro de detección completo del usuario o el equipo. Al ejecutar la detección de sistemas de Active Directory y la detección de usuarios de Active Directory, se encontrarán disponibles también los atributos adicionales de Active Directory para cada tipo de objeto y, como resultado, la detección de grupos de Active Directory se ejecuta de manera más eficaz.  
+  Cuando la detección de grupos de Active Directory identifica un usuario o equipo no detectado previamente como miembro de un grupo, trata de detectar los detalles básicos del usuario o el equipo. Habida cuenta de que la detección de grupos de Active Directory no está optimizada para este tipo de detección, este proceso puede dar lugar a que se ejecute con lentitud. Además, la detección de grupos de Active Directory identifica solo los detalles básicos sobre los usuarios y equipos que detecta, y no crea un registro de detección completo del usuario o el equipo. Al ejecutar la detección de sistemas de Active Directory y la detección de usuarios de Active Directory, se encontrarán disponibles también los atributos adicionales de Active Directory para cada tipo de objeto y, como resultado, la detección de grupos de Active Directory se ejecuta de manera más eficaz.  
 
 - **Al configurar la detección de grupos de Active Directory, especifique solo los grupos que usa con Configuration Manager.**  
 
- Para controlar el uso que la detección de grupos de Active Directory hace de los recursos, especifique solo los grupos que use con Configuration Manager. Esto se debe a que la detección de grupos de Active Directory busca usuarios, equipos y grupos anidados de forma recursiva en cada grupo que detecta. La búsqueda de cada grupo anidado puede ampliar el ámbito de la detección de grupos de Active Directory y reducir el rendimiento. Además, al configurar la detección de diferencias para la detección de grupos de Active Directory, el método de detección supervisa los cambios de cada grupo. Esto reduce aún más el rendimiento cuando el método debe buscar grupos innecesarios.  
+  Para controlar el uso que la detección de grupos de Active Directory hace de los recursos, especifique solo los grupos que use con Configuration Manager. Esto se debe a que la detección de grupos de Active Directory busca usuarios, equipos y grupos anidados de forma recursiva en cada grupo que detecta. La búsqueda de cada grupo anidado puede ampliar el ámbito de la detección de grupos de Active Directory y reducir el rendimiento. Además, al configurar la detección de diferencias para la detección de grupos de Active Directory, el método de detección supervisa los cambios de cada grupo. Esto reduce aún más el rendimiento cuando el método debe buscar grupos innecesarios.  
 
 - **Configuración de métodos de detección con un intervalo más largo entre la detección completa y un período más frecuente de detección de diferencias.**  
 
- Habida cuenta de que la detección de diferencias consume menos recursos que un ciclo de detección completa, además de poder identificar recursos nuevos o modificados en Active Directory, se puede reducir la frecuencia de los ciclos de detección completa a una ejecución semanal (o incluso menos). La detección de diferencias para la detección de sistemas de Active Directory, la detección de usuarios de Active Directory y la detección de grupos de Active Directory identifica casi todos los cambios de los objetos de Active Directory y puede mantener datos de detección precisos sobre los recursos.  
+  Habida cuenta de que la detección de diferencias consume menos recursos que un ciclo de detección completa, además de poder identificar recursos nuevos o modificados en Active Directory, se puede reducir la frecuencia de los ciclos de detección completa a una ejecución semanal (o incluso menos). La detección de diferencias para la detección de sistemas de Active Directory, la detección de usuarios de Active Directory y la detección de grupos de Active Directory identifica casi todos los cambios de los objetos de Active Directory y puede mantener datos de detección precisos sobre los recursos.  
 
 - **Ejecución de métodos de detección de Active Directory en un sitio primario que tiene una ubicación de red más cercana al controlador de dominio de Active Directory.**  
 
- Para mejorar el rendimiento de la detección de Active Directory, se aconseja ejecutar la detección en un sitio primario que tenga una conexión de red rápida a los controladores de dominio. Si se ejecuta el mismo método de detección de Active Directory en varios sitios, configure cada método de detección para evitar superposiciones. A diferencia de las versiones anteriores de Configuration Manager, los datos de detección se comparten entre los sitios. Por lo tanto, no es necesario detectar la misma información en varios sitios. Para obtener más información, consulte [Los datos de detección se comparten entre los sitios](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md#bkmk_shared).  
+  Para mejorar el rendimiento de la detección de Active Directory, se aconseja ejecutar la detección en un sitio primario que tenga una conexión de red rápida a los controladores de dominio. Si se ejecuta el mismo método de detección de Active Directory en varios sitios, configure cada método de detección para evitar superposiciones. A diferencia de las versiones anteriores de Configuration Manager, los datos de detección se comparten entre los sitios. Por lo tanto, no es necesario detectar la misma información en varios sitios. Para obtener más información, consulte [Los datos de detección se comparten entre los sitios](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md#bkmk_shared).  
 
 - **Ejecución de la detección de bosques de Active Directory en un solo sitio cuando planee crear de forma automática los límites de los datos de detección.**  
 
- Si se ejecuta la detección de bosques de Active Directory en más de un sitio de una jerarquía, se aconseja habilitar solo las opciones para crear automáticamente los límites en un solo sitio. Esto se debe a que, cuando la detección de bosques de Active Directory se ejecuta en cada sitio y crea límites, Configuration Manager no puede combinar esos límites en un objeto de un solo límite. Al configurar la detección de bosques de Active Directory para crear de forma automática los límites en varios sitios, el resultado pueden ser objetos con límites duplicados en la consola de Configuration Manager.  
+  Si se ejecuta la detección de bosques de Active Directory en más de un sitio de una jerarquía, se aconseja habilitar solo las opciones para crear automáticamente los límites en un solo sitio. Esto se debe a que, cuando la detección de bosques de Active Directory se ejecuta en cada sitio y crea límites, Configuration Manager no puede combinar esos límites en un objeto de un solo límite. Al configurar la detección de bosques de Active Directory para crear de forma automática los límites en varios sitios, el resultado pueden ser objetos con límites duplicados en la consola de Configuration Manager.  

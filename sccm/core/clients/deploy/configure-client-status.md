@@ -10,12 +10,12 @@ ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8f919e647ae252731d60a98e01485a01aae10698
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 960c6c91bfc7d0b8e7db191ac2bb0ee6286884b4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343514"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420046"
 ---
 # <a name="how-to-configure-client-status-in-system-center-configuration-manager"></a>Cómo configurar el estado de cliente en System Center Configuration Manager
 
@@ -63,47 +63,47 @@ Para poder supervisar el estado de cliente de System Center Configuration Manage
 
 ##  <a name="BKMK_2"></a> Para configurar las alertas del estado de cliente  
 
-1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
+1. En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
 
-2.  En el área de trabajo **Activos y compatibilidad** , haga clic en **Recopilaciones de dispositivos**.  
+2. En el área de trabajo **Activos y compatibilidad** , haga clic en **Recopilaciones de dispositivos**.  
 
-3.  En la lista **Recopilaciones de dispositivos** , seleccione la recopilación para la que desea configurar las alertas y, a continuación, en la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
+3. En la lista **Recopilaciones de dispositivos** , seleccione la recopilación para la que desea configurar las alertas y, a continuación, en la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
 
-    > [!NOTE]  
-    >  No puede configurar alertas para recopilaciones de usuario.  
+   > [!NOTE]  
+   >  No puede configurar alertas para recopilaciones de usuario.  
 
-4.  En la pestaña **Alertas** del cuadro de diálogo *&lt;Nombre de recopilación\>***Propiedades** haga clic en **Agregar**.  
+4. En la pestaña **Alertas** del cuadro de diálogo <em>&lt;Nombre de la colección\></em>**Propiedades**, haga clic en **Agregar**.  
 
-    > [!NOTE]  
-    >  La pestaña **Alertas** solo es visible si el rol de seguridad con el que está asociado tiene permisos para alertas.  
+   > [!NOTE]  
+   >  La pestaña **Alertas** solo es visible si el rol de seguridad con el que está asociado tiene permisos para alertas.  
 
-5.  En el cuadro de diálogo **Agregar nuevas alertas de recopilación** , seleccione las alertas que desea que se generen cuando el umbral de estado de cliente cae por debajo de un determinado valor y, a continuación, haga clic en **Aceptar**.  
+5. En el cuadro de diálogo **Agregar nuevas alertas de recopilación** , seleccione las alertas que desea que se generen cuando el umbral de estado de cliente cae por debajo de un determinado valor y, a continuación, haga clic en **Aceptar**.  
 
-6.  En la lista **Condiciones** de la pestaña **Alertas** , seleccione cada alerta de estado de cliente y, a continuación, especifique la información siguiente.  
+6. En la lista **Condiciones** de la pestaña **Alertas** , seleccione cada alerta de estado de cliente y, a continuación, especifique la información siguiente.  
 
-    -   **Nombre de alerta**: acepte el nombre predeterminado o escriba un nombre nuevo para la alerta.  
+   -   **Nombre de alerta**: acepte el nombre predeterminado o escriba un nombre nuevo para la alerta.  
 
-    -   **Gravedad de alerta**: seleccione el nivel de la alerta de la lista desplegable que se mostrará en la consola de Configuration Manager.  
+   -   **Gravedad de alerta**: seleccione el nivel de la alerta de la lista desplegable que se mostrará en la consola de Configuration Manager.  
 
-    -   **Generar alerta**: especifique el porcentaje de umbral para la alerta.  
+   -   **Generar alerta**: especifique el porcentaje de umbral para la alerta.  
 
-7.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo *&lt;Nombre de recopilación\>***Propiedades**.  
+7. Haga clic en **Aceptar** para cerrar el cuadro de diálogo <em>&lt;Nombre de la colección\></em>**Propiedades**.  
 
 ##  <a name="BKMK_3"></a> Para excluir la corrección automática de equipos  
 
-1.  Abra el Editor del Registro en el equipo cliente en el que desea deshabilitar la corrección automática.  
+1. Abra el Editor del Registro en el equipo cliente en el que desea deshabilitar la corrección automática.  
 
-    > [!WARNING]  
-    >  Si utiliza incorrectamente el Editor del Registro, puede ocasionar problemas que podrían requerir la reinstalación del sistema operativo. Microsoft no puede garantizar que pueda resolver problemas ocasionados por un uso incorrecto del Editor del Registro. Utilice el Editor del Registro bajo su responsabilidad.  
+   > [!WARNING]  
+   >  Si utiliza incorrectamente el Editor del Registro, puede ocasionar problemas que podrían requerir la reinstalación del sistema operativo. Microsoft no puede garantizar que pueda resolver problemas ocasionados por un uso incorrecto del Editor del Registro. Utilice el Editor del Registro bajo su responsabilidad.  
 
-2.  Vaya a **HKEY_LOCAL_MACHINE\Software\Microsoft\CCM\CcmEval\NotifyOnly**.  
+2. Vaya a **HKEY_LOCAL_MACHINE\Software\Microsoft\CCM\CcmEval\NotifyOnly**.  
 
-3.  Escriba uno de los siguientes valores para esta clave del Registro:  
+3. Escriba uno de los siguientes valores para esta clave del Registro:  
 
-    -   **True**: el equipo cliente no corregirá automáticamente los problemas que se detecten. Sin embargo, recibirá una alerta en el área de trabajo **Supervisión** acerca de cualquier problema con este cliente.  
+   -   **True**: el equipo cliente no corregirá automáticamente los problemas que se detecten. Sin embargo, recibirá una alerta en el área de trabajo **Supervisión** acerca de cualquier problema con este cliente.  
 
-    -   **False**: el equipo cliente corregirá automáticamente los problemas al detectarlos. Se notificará en el área de trabajo **Supervisión**. Esta es la configuración predeterminada.  
+   -   **False**: el equipo cliente corregirá automáticamente los problemas al detectarlos. Se notificará en el área de trabajo **Supervisión**. Esta es la configuración predeterminada.  
 
-4.  Cierre el Editor del Registro.  
+4. Cierre el Editor del Registro.  
 
- También puede instalar clientes mediante la propiedad de instalación CCMSetup **NotifyOnly** para excluirlos de la corrección automática. Para más información sobre esta propiedad de instalación de cliente, vea [Acerca de las propiedades de instalación de cliente de Configuración Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
+   También puede instalar clientes mediante la propiedad de instalación CCMSetup **NotifyOnly** para excluirlos de la corrección automática. Para más información sobre esta propiedad de instalación de cliente, vea [Acerca de las propiedades de instalación de cliente de Configuración Manager](../../../core/clients/deploy/about-client-installation-properties.md).  

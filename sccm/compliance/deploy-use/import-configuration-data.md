@@ -10,12 +10,12 @@ ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2a779f80f42439fe6526c05d7027c22fb191e41e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 1c5f4b9cd76379d94c1cedb40ce38eda651b5845
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332117"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416765"
 ---
 # <a name="import-configuration-data-with-system-center-configuration-manager"></a>Importar datos de configuración con System Center Configuration Manager
 
@@ -23,13 +23,13 @@ ms.locfileid: "32332117"
 
 Además de crear líneas de base de configuración y elementos de configuración en la consola de System Center Configuration Manager, puede importar datos de configuración si se encuentran en formato de archivo contenedor (.cab) y se ajustan al esquema de Lenguaje de modelado de servicios (SML) compatible. Puede importar datos de configuración desde:  
 
--   Datos de configuración de procedimiento recomendado (paquetes de configuración) que se han descargado de Microsoft o de otros sitios de proveedores de software.  
+- Datos de configuración de procedimiento recomendado (paquetes de configuración) que se han descargado de Microsoft o de otros sitios de proveedores de software.  
 
--   Datos de configuración que se han exportado desde System Center 2012 Configuration Manager y versiones posteriores.  
+- Datos de configuración que se han exportado desde System Center 2012 Configuration Manager y versiones posteriores.  
 
--   Datos de configuración que se crearon externamente y que se ajustan al esquema de (SML).  
+- Datos de configuración que se crearon externamente y que se ajustan al esquema de (SML).  
 
- Para un ejemplo de paquete de configuración que le ayude a administrar el cumplimiento de los roles de servidor de sitio de System Center 2012 Configuration Manager, vea [System Center 2012 Configuration Manager Configuration Pack](http://www.microsoft.com/en-us/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all).  
+  Para un ejemplo de paquete de configuración que le ayude a administrar el cumplimiento de los roles de servidor de sitio de System Center 2012 Configuration Manager, vea [System Center 2012 Configuration Manager Configuration Pack](http://www.microsoft.com/en-us/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all).  
 
 Al importar una línea base de configuración, algunos o todos los elementos de configuración a los que se hace referencia en la línea de base de configuración pueden incluirse también en el archivo contenedor. Durante el proceso de importación, Configuration Manager comprueba que todos los elementos de configuración a los que se hace referencia en la línea de base de configuración también se incluyen en el archivo .cab o ya existen en el sitio de Configuration Manager. Se produce un error en el proceso de importación si intenta importar una línea de base de configuración que hace referencia a datos de configuración que Configuration Manager no puede encontrar.  
 

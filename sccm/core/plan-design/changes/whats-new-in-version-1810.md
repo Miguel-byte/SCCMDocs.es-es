@@ -2,7 +2,7 @@
 title: Novedades de la versión 1810
 titleSuffix: Configuration Manager
 description: Obtenga detalles sobre los cambios y las nuevas características incorporados en la versión 1810 de la rama actual de Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 12/20/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 80c4798a93d2424759b85b7d8fe106b9251714a4
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: f93b9c7e96c66fd2279d8d6e42f605a763c75025
+ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458175"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53747150"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Novedades de la versión 1810 de la rama actual de Configuration Manager
 
@@ -28,9 +28,9 @@ Revise siempre la lista de comprobación más reciente para instalar esta actual
 > [!Note]  
 > En este artículo se indican todas las características importantes de esta versión. Pero no todas las secciones están vinculadas aún a contenido actualizado con información adicional sobre las nuevas características. Vuelva a esta página con regularidad en busca de actualizaciones. Los cambios se indican mediante la etiqueta ***[Actualizado]***. Esta nota se quita una vez que se termina el contenido.  
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4459701).
+Además de nuevas características, esta versión también incluye cambios adicionales como, por ejemplo, correcciones de errores. Para obtener más información, vea [Resumen de cambios en la rama actual de Configuration Manager, versión 1810](https://support.microsoft.com/help/4482169).
 
+<!--
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1810 Release Notes](https://docs.microsoft.com/powershell/sccm/1810_release_notes?view=sccm-ps).
 
 The following additional updates to this release are also now available:
@@ -79,11 +79,11 @@ Al instalar o actualizar a la versión 1810, el programa de instalación de Conf
 
 - **Reinicio del sistema pendiente**: esta comprobación de requisitos previos ahora es más resistente. Comprueba características de Windows en otras claves del Registro. Para obtener más información, vea [Reinicio del sistema pendiente](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#pending-system-restart). <!--SCCMDocs-pr issue 3010-->  
 
-- **Limpieza del seguimiento de cambios de SQL**: nueva comprobación que verifica si la base de datos del sitio tiene algún trabajo pendiente de datos de seguimiento de cambios de SQL. Para obtener más información, incluido un procedimiento para comprobar y borrar este trabajo pendiente, vea [Limpieza del seguimiento de cambios de SQL](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#bkmk_changetracking). <!--SCCMDocs-pr issue 3023-->  
+- **Limpieza del seguimiento de cambios de SQL**: una nueva comprobación de si la base de datos del sitio tiene un trabajo pendiente de datos de seguimiento de cambios de SQL. Para obtener más información, incluido un procedimiento para comprobar y borrar este trabajo pendiente, vea [Limpieza del seguimiento de cambios de SQL](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#bkmk_changetracking). <!--SCCMDocs-pr issue 3023-->  
 
-<!-- - **SQL Native Client version**: This prerequisite check is updated for versions of SQL Native Client that support TLS 1.2. The minimum version is 11.4.7001.0. For more information, see [SQL Native Client version](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client). <!--SCCMDocs-pr issue 3094->  
- -->
-- **Sistema de sitio en nodo de clúster de Windows**: el proceso de instalación de Configuration Manager ya no evita la instalación del rol de servidor de sitio en un equipo con el rol de Windows para clústeres de conmutación por error. SQL Always On requiere este rol, por lo que anteriormente no se podía colocar la base de datos del sitio en el servidor de sitio. Con este cambio, puede crear un sitio de alta disponibilidad con menos servidores usando SQL Always On y un servidor de sitio en modo pasivo. Para obtener más información, vea [Clúster de conmutación por error de Windows](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#windows-failover-cluster). <!--1359132-->  
+- **Versión de SQL Native Client**: esta comprobación de requisitos previos se actualiza para las versiones de SQL Native Client que admiten TLS 1.2. La versión mínima es [SQL 2012 SP4](https://www.microsoft.com/download/details.aspx?id=50402). Para obtener más información, vea [Versión de SQL Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client). <!--SCCMDocs-pr issue 3094->  
+
+- **Sistema de sitio en el nodo del clúster de Windows**: El proceso de instalación de Configuration Manager ya no impide la instalación del rol de servidor de sitio en un equipo con el rol de Windows para clústeres de conmutación por error. SQL Always On requiere este rol, por lo que anteriormente no se podía colocar la base de datos del sitio en el servidor de sitio. Con este cambio, puede crear un sitio de alta disponibilidad con menos servidores usando SQL Always On y un servidor de sitio en modo pasivo. Para obtener más información, vea [Clúster de conmutación por error de Windows](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#windows-failover-cluster). <!--1359132-->  
 
 
 
@@ -104,9 +104,9 @@ Para obtener más información, vea [Notificación de cliente](/sccm/core/client
 ### <a name="new-boundary-group-options"></a>Nuevas opciones de grupo de límites
 <!--1358749--> Los grupos de límites ahora incluyen los siguientes valores de configuración adicionales para ofrecer mayor control sobre la distribución de contenido en el entorno:
 
-- **Preferir los puntos de distribución en lugar de los elementos del mismo nivel con la misma subred**: de forma predeterminada, el punto de administración da prioridad a los orígenes de caché del mismo nivel en la parte superior de la lista de ubicaciones de contenido. Esta configuración revierte dicha prioridad para los clientes que están en la misma subred que el origen de caché del mismo nivel.  
+- **Preferir puntos de distribución sobre elementos del mismo nivel dentro de la misma subred**: De forma predeterminada, el punto de administración da prioridad a los orígenes de caché del mismo nivel en la parte superior de la lista de ubicaciones de contenido. Esta configuración revierte dicha prioridad para los clientes que están en la misma subred que el origen de caché del mismo nivel.  
 
-- **Preferir los puntos de distribución de la nube en vez de los puntos de distribución**: si tiene una sucursal con un vínculo de Internet más rápido, ahora puede dar prioridad al contenido de la nube.  
+- **Preferir puntos de distribución de nube sobre puntos de distribución**: Si tiene una sucursal con un vínculo de Internet más rápido, ahora puede dar prioridad al contenido de la nube.  
 
 Para más información, vea [Opciones de grupo de límites para descargas del mismo nivel](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
@@ -213,7 +213,7 @@ Un perfil de PowerShell es un script que se ejecuta cuando se inicia PowerShell.
 ### <a name="task-sequence-support-of-windows-autopilot-for-existing-devices"></a>Compatibilidad de la secuencias de tareas de Windows Autopilot con dispositivos existentes
 <!--1358333-->
 
-[Windows Autopilot para los dispositivos existentes](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) ahora está disponible con Windows 10 Insider Preview. Esta nueva característica permite volver a crear una imagen y aprovisionar un dispositivo de Windows 7 para el [modo controlado por el usuario de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) mediante una única secuencia de tareas nativa de Configuration Manager. 
+[Windows Autopilot para los dispositivos existentes](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) ahora está disponible con Windows 10, versión 1809 o posterior. Esta nueva característica permite volver a crear una imagen y aprovisionar un dispositivo de Windows 7 para el [modo controlado por el usuario de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) mediante una única secuencia de tareas nativa de Configuration Manager. 
 
 <!--For more information, see []().--> 
 
@@ -310,11 +310,11 @@ Para obtener más información, vea [Centro de soporte técnico](/sccm/core/supp
 
 El nodo **Información de administración** ahora incluye un panel gráfico. Este panel muestra información general de los estados de la regla, con lo que le resultará más fácil mostrar el progreso. En el panel se incluyen los iconos siguientes:
 
-- **Índice de información de administración**: realiza un seguimiento del progreso general en las reglas de información de administración. El índice es un promedio ponderado. Las reglas críticas valen más. Este índice proporciona el menor peso a las reglas opcionales.  
+- **Índice de Información de administración**: realiza el seguimiento del progreso general en las reglas de información de administración. El índice es un promedio ponderado. Las reglas críticas valen más. Este índice proporciona el menor peso a las reglas opcionales.  
 
-- **Grupos de Información de administración**: muestra el porcentaje de reglas de cada grupo.  
+- **Grupos de Información de administración**: muestra el porcentaje de las reglas en cada grupo.  
 
-- **Prioridad de Información de administración**: muestra el porcentaje de reglas por prioridad.  
+- **Prioridad de Información de administración**: muestra el porcentaje de las reglas por prioridad.  
 
 - **Toda la información**: una tabla de información, incluida la prioridad y el estado.  
 

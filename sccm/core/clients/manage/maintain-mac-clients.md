@@ -10,12 +10,12 @@ ms.assetid: cf6337a2-700c-47f3-b6f8-5814f9b81e59
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 32d36f041ed42ef0afa8fe0c0e052389587a2c8f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 337df4d64b6edda589344b52a100e5a90381676c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335225"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421202"
 ---
 # <a name="maintain-mac-clients"></a>Mantenimiento de clientes Mac
 *Se aplica a: System Center Configuration Manager (Rama actual)*
@@ -44,26 +44,26 @@ A continuación se indican procedimientos para desinstalar clientes Mac y para r
 
 ###  <a name="renew-certificate-wizard"></a>Asistente para renovar certificado  
 
-1.  Configure los valores siguientes como *cadenas* en el archivo ccmclient.plist que controla la apertura del Asistente para renovar certificado:  
+1. Configure los valores siguientes como *cadenas* en el archivo ccmclient.plist que controla la apertura del Asistente para renovar certificado:  
 
- -   **RenewalPeriod1**: especifica, en segundos, el primer período de renovación en el que los usuarios pueden renovar el certificado. El valor predeterminado es 3.888.000 segundos (45 días). No configure un valor inferior a 300, ya que el período volverá al valor predeterminado. 
+   - **RenewalPeriod1**: especifica, en segundos, el primer período de renovación en el que los usuarios pueden renovar el certificado. El valor predeterminado es 3.888.000 segundos (45 días). No configure un valor inferior a 300, ya que el período volverá al valor predeterminado. 
 
- -   **RenewalPeriod2**: especifica, en segundos, el segundo período de renovación en el que los usuarios pueden renovar el certificado. El valor predeterminado es 259.200 segundos (3 días). Si este valor se configura y es mayor o igual que 300 segundos y menor o igual que **RenewalPeriod1**, se usará el valor. Si **RenewalPeriod1** es mayor que 3 días, se usará un valor de 3 días para **RenewalPeriod2**.  Si **RenewalPeriod1** es menor que 3 días, **RenewalPeriod2** se establecerá en el mismo valor que **RenewalPeriod1**.  
+   - **RenewalPeriod2**: especifica, en segundos, el segundo período de renovación en el que los usuarios pueden renovar el certificado. El valor predeterminado es 259.200 segundos (3 días). Si este valor se configura y es mayor o igual que 300 segundos y menor o igual que **RenewalPeriod1**, se usará el valor. Si **RenewalPeriod1** es mayor que 3 días, se usará un valor de 3 días para **RenewalPeriod2**.  Si **RenewalPeriod1** es menor que 3 días, **RenewalPeriod2** se establecerá en el mismo valor que **RenewalPeriod1**.  
 
- -   **RenewalReminderInterval1** - especifica, en segundos, la frecuencia con la que se mostrará el Asistente para renovación de certificados a los usuarios durante el primer período de renovación. El valor predeterminado es 86.400 segundos (1 día). Si **RenewalReminderInterval1** es mayor que 300 segundos y menor que el valor configurado para **RenewalPeriod1**, se usará el valor configurado. De lo contrario, se utilizará el valor predeterminado de 1 día.  
+   - **RenewalReminderInterval1** - especifica, en segundos, la frecuencia con la que se mostrará el Asistente para renovación de certificados a los usuarios durante el primer período de renovación. El valor predeterminado es 86.400 segundos (1 día). Si **RenewalReminderInterval1** es mayor que 300 segundos y menor que el valor configurado para **RenewalPeriod1**, se usará el valor configurado. De lo contrario, se utilizará el valor predeterminado de 1 día.  
 
- -   **RenewalReminderInterval2** - especifica, en segundos, la frecuencia con la que se mostrará el Asistente para renovación de certificados a los usuarios durante el segundo período de renovación. El valor predeterminado es 28.800 segundos (8 horas). Si **RenewalReminderInterval2** es mayor que 300 segundos y menor o igual que **RenewalReminderInterval1** , y menor o igual que **RenewalPeriod2**, se usará el valor configurado. De lo contrario, se usará un valor de 8 horas.  
+   - **RenewalReminderInterval2** - especifica, en segundos, la frecuencia con la que se mostrará el Asistente para renovación de certificados a los usuarios durante el segundo período de renovación. El valor predeterminado es 28.800 segundos (8 horas). Si **RenewalReminderInterval2** es mayor que 300 segundos y menor o igual que **RenewalReminderInterval1** , y menor o igual que **RenewalPeriod2**, se usará el valor configurado. De lo contrario, se usará un valor de 8 horas.  
 
-     **Ejemplo:** si se mantienen los valores predeterminados, 45 días antes de que expire el certificado, el asistente se abrirá cada 24 horas.  A los 3 días de que expire el certificado, el asistente se abrirá cada 8 horas.  
+     **Ejemplo:** Si los valores se dejan como los valores predeterminados, 45 días antes de que expire el certificado, el asistente se abrirá cada 24 horas.  A los 3 días de que expire el certificado, el asistente se abrirá cada 8 horas.  
 
-     **Ejemplo:** use la siguiente línea de comandos, o un script, para establecer el valor del primer período de renovación en 20 días.  
+     **Ejemplo:** utilice la siguiente línea de comandos, o un script, para establecer el primer período de renovación como 20 días.  
 
      `sudo defaults write com.microsoft.ccmclient RenewalPeriod1 1728000`  
 
-2.  Habitualmente, cuando se abre el Asistente para renovar certificado, los campos **Nombre de usuario** y **Nombre de servidor** se rellenan automáticamente y el usuario solo puede escribir la contraseña para renovar el certificado.  
+2. Habitualmente, cuando se abre el Asistente para renovar certificado, los campos **Nombre de usuario** y **Nombre de servidor** se rellenan automáticamente y el usuario solo puede escribir la contraseña para renovar el certificado.  
 
-    > [!NOTE]  
-    >  Si el asistente no se inicia, o si cierra el asistente involuntariamente, haga clic en **Renovar** en la página de preferencias de **Configuration Manager** para iniciarlo.  
+   > [!NOTE]  
+   >  Si el asistente no se inicia, o si cierra el asistente involuntariamente, haga clic en **Renovar** en la página de preferencias de **Configuration Manager** para iniciarlo.  
 
 ###  <a name="renew-certificate-manually"></a>Renovar el certificado manualmente  
  El período de validez normal de un certificado de cliente de Mac es 1 año Configuration Manager no renueva automáticamente el certificado de usuario que solicita durante la inscripción, por lo que deberá realizar el siguiente procedimiento para renovarlo manualmente.  
@@ -120,7 +120,7 @@ A continuación se indican procedimientos para desinstalar clientes Mac y para r
 
     -   **Nombre: Quitar SMSID para Mac**  
 
-    -   **Configuración seleccionada**: seleccione **Examinar** y, luego, seleccione el script de detección especificado previamente.  
+    -   **Configuración seleccionada:** haga clic en **Examinar** y seleccione el script de detección especificado previamente.  
 
     -   En el campo **los siguientes valores** escriba **El dominio/par predeterminado (com.microsoft.ccmclient, SMSID) no existe**.  
 

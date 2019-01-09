@@ -10,12 +10,12 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f063034ed7cdc22a92df8d07d8be03ece12f663
-ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
+ms.openlocfilehash: 4587549ef2f43be3dcc5e18021f60c42770f5800
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46533752"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415524"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>La biblioteca de contenido en Configuration Manager
 
@@ -45,7 +45,7 @@ Configuration Manager copia los archivos de contenido en la unidad con la priori
 Para obtener más información sobre cómo configurar la unidad para el punto de distribución, vea [Administración del contenido y de la infraestructura de contenido](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
 
 
->  [!IMPORTANT]  
+> [!IMPORTANT]
 >  Para mover la biblioteca de contenido a otra ubicación en un punto de distribución después de la instalación, use la **herramienta de transferencia de biblioteca de contenido** de las herramientas de Configuration Manager. Para obtener más información, vea [Content Library Transfer tool](/sccm/core/support/content-library-transfer) (Herramienta de transferencia de biblioteca de contenido).  
 
 
@@ -112,13 +112,13 @@ Una biblioteca de contenido remota es un requisito previo para la [alta disponib
 
 5. Observe el valor **Estado** de la columna Biblioteca de contenido en la pestaña Resumen del panel de detalles. Se actualiza para mostrar el progreso del sitio cuando se mueve la biblioteca de contenido.  
 
-    - Mientras está **En curso**, el valor **Progreso de movimiento (%)** muestra el porcentaje completado.  
+   - Mientras está **En curso**, el valor **Progreso de movimiento (%)** muestra el porcentaje completado.  
 
-    - Si se produce un estado de error, el estado muestra el error. Errores comunes incluyen **acceso denegado** o **disco lleno**.  
+   - Si se produce un estado de error, el estado muestra el error. Errores comunes incluyen **acceso denegado** o **disco lleno**.  
 
-    - Cuando finaliza, se muestra **Completado**.  
+   - Cuando finaliza, se muestra **Completado**.  
     
-    Consulte **distmgr.log** para más información. Para más información, consulte [Registros de servidor de sistema de sitio y servidor de sitio](/sccm/core/plan-design/hierarchy/log-files#BKMK_SiteSiteServerLog).  
+     Consulte **distmgr.log** para más información. Para más información, consulte [Registros de servidor de sistema de sitio y servidor de sitio](/sccm/core/plan-design/hierarchy/log-files#BKMK_SiteSiteServerLog).  
 
 Para obtener más información sobre este proceso, vea [Flowchart - Manage content library](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart) (Diagrama de flujo: administración de la biblioteca de contenido).
 
@@ -142,7 +142,7 @@ De forma predeterminada, la biblioteca de contenido se almacena en la raíz de u
 
 - La biblioteca de datos (carpeta **DataLib**): información sobre la estructura original de los paquetes.  
 
-- La biblioteca de archivos (carpeta **FileLib**): los archivos originales en el paquete. Esta carpeta suele ser la que usa la mayor parte del almacenamiento.  
+- La biblioteca de archivos (carpeta **FileLib**): archivos originales del paquete. Esta carpeta suele ser la que usa la mayor parte del almacenamiento.  
 
 ![Información general del diagrama de la biblioteca de contenido de Configuration Manager](media/content-library-overview.png)
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: f9f896cdd1c3a0459d6f85e043bc1bba137c912c
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.openlocfilehash: b49a794a4036a3f2a8d42dc3b71855b44c22f44b
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52258866"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422613"
 ---
 # <a name="surface-device-dashboard-in-system-center-configuration-manager"></a>Panel de dispositivos Surface en System Center Configuration Manager
 
@@ -32,7 +32,7 @@ Para abrir el panel de dispositivos Surface, siga estos pasos:
 3. Para cargar el panel, haga clic en **Dispositivos Surface**.
 
 **Panel de dispositivos Surface**
-![Surface device dashboard](media\Surface-device-dashboard.PNG)
+![Surface device dashboard](media/Surface-device-dashboard.PNG)
 
 
 
@@ -42,16 +42,16 @@ En el panel de dispositivos Surface se muestran tres gráficos para el entorno.
 
 - **Percent of Surface devices** (Porcentaje de dispositivos Surface): proporciona el porcentaje de los dispositivos Surface en todo el entorno.
 
-    ![Gráfico Porcentaje de dispositivos Surface](media\Percent-Surface-Devices.PNG)
+    ![Gráfico Porcentaje de dispositivos Surface](media/Percent-Surface-Devices.PNG)
 - **Modelos de Surface**: muestra el número de dispositivos por modelo de Surface. 
-    - Al mantener el puntero sobre una sección del gráfico se proporciona el porcentaje de los dispositivos Surface en el modelo seleccionado. 
+  - Al mantener el puntero sobre una sección del gráfico se proporciona el porcentaje de los dispositivos Surface en el modelo seleccionado. 
 
-         ![Gráfico Modelos de Surface](media\Surface-Models-Hover.PNG)
-    - Al hacer clic en una sección del gráfico se tiene acceso a una lista de dispositivos para el modelo. 
-        ![Lista de dispositivos del modelo de Surface](media\Surface-Model-Device-List.PNG)
+       ![Gráfico Modelos de Surface](media/Surface-Models-Hover.PNG)
+  - Al hacer clic en una sección del gráfico se tiene acceso a una lista de dispositivos para el modelo. 
+      ![Lista de dispositivos del modelo de Surface](media/Surface-Model-Device-List.PNG)
 
 - **Cinco versiones principales de firmware**: muestra un gráfico con los cinco modelos de firmware principales en el entorno. 
-    - Al mantener el puntero sobre una sección del gráfico se proporciona el porcentaje de los dispositivos Surface en la versión de firmware seleccionada. A partir de la versión 1806 de Configuration Manager, al hacer clic en una sección del gráfico muestra una lista de los dispositivos correspondientes. <!--1358654--> ![Lista de dispositivos del modelo de Surface](media\Surface-Firmware-Hover.PNG)
+  - Al mantener el puntero sobre una sección del gráfico se proporciona el porcentaje de los dispositivos Surface en la versión de firmware seleccionada. A partir de la versión 1806 de Configuration Manager, al hacer clic en una sección del gráfico muestra una lista de los dispositivos correspondientes. <!--1358654--> ![Lista de dispositivos del modelo de Surface](media/Surface-Firmware-Hover.PNG)
 
 
 ## <a name="more-information"></a>Más información

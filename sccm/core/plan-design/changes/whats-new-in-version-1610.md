@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: cb9b19c95caaf914fa1cbf040258c30ede2dc54a
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ms.openlocfilehash: f53dbbf341d3c6474c1c5dd5066b8d1f2a0fdc63
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229320"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424245"
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>Novedades de la versión 1610 de System Center Configuration Manager
 
@@ -36,7 +36,7 @@ En las secciones siguientes se proporcionan detalles sobre los cambios y las nue
 
 
 ## <a name="in-console-monitoring-of-update-installation-status"></a>Supervisión en la consola del estado de la instalación de actualización  
-A partir de la versión 1610, cuando instale un paquete de actualizaciones y supervise la instalación en la consola, hay una fase nueva: **Postinstalación**. En esta fase se incluye el estado de las tareas como el reinicio de los servicios clave y la inicialización de la supervisión de replicación. (Esta fase no está disponible en la consola hasta que el sitio se actualice a la versión 1610). Para obtener más información sobre el estado de la instalación de actualización, consulte [Install in-console updates (Instalación de actualizaciones en la consola)](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
+A partir de la versión 1610, cuando instale un paquete de actualizaciones y supervise la instalación en la consola, hay una fase nueva: **Postinstalación**. En esta fase se incluye el estado de las tareas como el reinicio de los servicios clave y la inicialización de la supervisión de replicación. (Esta fase no está disponible en la consola hasta que el sitio se actualice a la versión 1610). Para obtener más información sobre el estado de la instalación de actualización, consulte [Install in-console updates (Instalación de actualizaciones en la consola)](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
 
 
 ## <a name="exclude-clients-from-automatic-upgrade"></a>Excluir a clientes de la actualización automática
@@ -93,7 +93,7 @@ Cambios de esta versión:
 - Ahora puede modificar la clave secreta de cliente que ha obtenido de Azure Active Directory.
 - Puede eliminar una suscripción de la tienda.
 
-Para obtener más información, consulte [Manage apps from the Windows Store for Business with System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business) (Administración de aplicaciones desde la Tienda Windows para empresas con System Center Configuration Manager).
+Para obtener más información, consulte [Administración de aplicaciones desde la Tienda Windows para empresas con System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
 
 ## <a name="policy-sync-for-intune-enrolled-devices"></a>Sincronización de directivas para dispositivos inscritos en Intune
@@ -131,8 +131,8 @@ La personalización de marca del Centro de software se aplica conforme a las sig
 En algunos casos, es posible que quiera dar más tiempo a los usuarios para instalar las implementaciones de aplicaciones o las actualizaciones de software necesarias más allá de los plazos que ha establecido. Por ejemplo, esto puede resultar necesario cuando un equipo ha estado apagado durante un largo período de tiempo y tiene que instalar muchas implementaciones de aplicaciones o actualizaciones. Por ejemplo, si un usuario final acaba de volver de vacaciones, es posible que tenga que esperar bastante mientras se instalan las implementaciones de aplicaciones vencidas. Para solucionar este problema, puede definir un período de gracia de cumplimiento mediante la implementación de la configuración de cliente de Configuration Manager en una colección. 
 
 Para configurar el período de gracia, haga lo siguiente:
-1.      En la página **Agente de equipo** de la configuración de cliente, configure la nueva propiedad **Período de gracia para el cumplimiento tras la fecha límite de la implementación (horas)** con un valor entre **1** y **120** horas.
-2.      En una nueva implementación de aplicación obligatoria o en las propiedades de una implementación existente, en la página **Programación**, active la casilla **Retrasar el cumplimiento de esta implementación de acuerdo con las preferencias del usuario** hasta el período de gracia definido en la configuración del cliente. Todas las implementaciones que tengan activada esta casilla y que estén destinadas a dispositivos en los que también haya implementado la configuración de cliente usarán el período de gracia de cumplimiento.
+1. En la página **Agente de equipo** de la configuración de cliente, configure la nueva propiedad **Período de gracia para el cumplimiento tras la fecha límite de la implementación (horas)** con un valor entre **1** y **120** horas.
+2. En una nueva implementación de aplicación obligatoria o en las propiedades de una implementación existente, en la página **Programación**, active la casilla **Retrasar el cumplimiento de esta implementación de acuerdo con las preferencias del usuario** hasta el período de gracia definido en la configuración del cliente. Todas las implementaciones que tengan activada esta casilla y que estén destinadas a dispositivos en los que también haya implementado la configuración de cliente usarán el período de gracia de cumplimiento.
 
 Si configura un período de gracia de cumplimiento y activa la casilla de verificación, una vez que se llegue a la fecha límite de instalación de la aplicación, esta se instalará en la primera ventana que no sea de empresa configurada por el usuario hasta ese período de gracia. No obstante, el usuario puede abrir el Centro de software e instalar la aplicación en cualquier momento que quiera. Una vez que expira el período de gracia, el cumplimiento vuelve al comportamiento normal para implementaciones vencidas. Se han agregado opciones similares al asistente para la implementación de actualizaciones de software, al asistente para reglas de implementación automática y a las páginas de propiedades.
 
@@ -191,7 +191,7 @@ Para obtener información, consulte [Administración de actualizaciones de Offic
 ## <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Pasos de la secuencia de tareas para administrar la conversión de BIOS a UEFI
 Ahora puede personalizar una secuencia de tareas de implementación de sistema operativo con una nueva variable, TSUEFIDrive, para que el paso **Reiniciar el equipo** prepare una partición FAT32 en la unidad de disco duro para la transición a UEFI. En el procedimiento siguiente se proporciona un ejemplo de cómo crear pasos de secuencia de tareas para preparar la unidad de disco duro para la conversión de BIOS en UEFI. Para obtener más información, consulte [Pasos de la secuencia de tareas para administrar la conversión de BIOS a UEFI](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion).
 
-##  <a name="improvements-to-the-task-sequence-step-prepare-configmgr-client-for-capture"></a>Mejoras en el paso de la secuencia de tareas Preparar cliente de Configuration Manager para la captura  
+##  <a name="improvements-to-the-task-sequence-step-prepare-configmgr-client-for-capture"></a>Mejoras en el paso de secuencia de tareas: Prepare ConfigMgr Client for Capture  
 El paso Preparar el cliente de Configuration Manager quitará por completo el cliente de Configuration Manager en lugar de quitar solo la información de clave. Cuando la secuencia de tareas implementa la imagen capturada del sistema operativo, se instala un nuevo cliente de Configuration Manager cada vez. Para obtener más información, consulte [Task sequence steps (Pasos de la secuencia de tareas)](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture).
 
 

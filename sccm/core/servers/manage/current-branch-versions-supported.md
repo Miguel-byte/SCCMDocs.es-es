@@ -10,12 +10,12 @@ ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd8116bc74f855fff956d0bb201691c741a6d351
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: c5d3635ee6d1ed4e9c3819e2cffc3ee5028953f5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52455995"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422205"
 ---
 # <a name="support-for-configuration-manager-current-branch-versions"></a>Compatibilidad con versiones de la rama actual de Configuration Manager
 
@@ -23,12 +23,12 @@ ms.locfileid: "52455995"
 
 Microsoft tiene previsto publicar actualizaciones de la rama actual de Configuration Manager varias veces al año. Para las versiones de Configuration Manager anteriores a la 1710, se ofrece soporte técnico durante 12 meses. A partir de la versión 1710, cada versión de actualización sigue siendo compatible durante 18 meses a partir de la fecha de lanzamiento de disponibilidad general. Microsoft proporciona soporte técnico durante todo el período de soporte técnico. Hay dos fases de servicio distintas que dependen de la disponibilidad de la versión más reciente de la rama actual.  
 
--   Fase de servicio de **actualizaciones críticas y de seguridad**: cuando se ejecuta la versión más reciente de la rama actual de Configuration Manager, se reciben actualizaciones críticas y seguridad.  
+- Fase de servicio de **actualizaciones críticas y de seguridad**: cuando se ejecuta la versión más reciente de la rama actual de Configuration Manager, se reciben actualizaciones críticas y seguridad.  
 
--   Fase de servicio de **actualizaciones de seguridad (solo)**: después del lanzamiento de una versión nueva de la rama actual, Microsoft solo admite actualizaciones de seguridad a las versiones anteriores durante el resto del ciclo de vida de soporte técnico de esa versión (como se muestra en la Ilustración 1).  
+- Fase de servicio de **actualizaciones de seguridad (solo)**: después del lanzamiento de una versión nueva de la rama actual, Microsoft solo admite actualizaciones de seguridad a las versiones anteriores durante el resto del ciclo de vida de soporte técnico de esa versión (como se muestra en la Ilustración 1).  
 
- ![Gráfico de escala de tiempo de servicio y soporte técnico de Configuration Manager](media/CM_Servicing_support_timeline1.png)  
-Ilustración 1. Ejemplo de la superposición del ciclo de versiones del soporte técnico de mantenimiento de la rama actual. Este ejemplo sirve para ilustrar el ciclo y no representa una fecha de lanzamiento real o prevista.
+  ![Gráfico de escala de tiempo de servicio y soporte técnico de Configuration Manager](media/CM_Servicing_support_timeline1.png)  
+  Ilustración 1. Ejemplo de la superposición del ciclo de versiones del soporte técnico de mantenimiento de la rama actual. Este ejemplo sirve para ilustrar el ciclo y no representa una fecha de lanzamiento real o prevista.
 
 > [!NOTE]  
 >  La versión más reciente de la rama actual siempre se encuentra en la fase de servicio de **actualizaciones críticas y de seguridad**. Esta instrucción de compatibilidad significa que, si encuentra un defecto en el código que garantice una actualización crítica, debe tener instalada la versión más reciente de la rama actual para recibir una corrección. Las demás versiones compatibles de la rama actual solo podrán optar a recibir actualizaciones de seguridad.

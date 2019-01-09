@@ -10,21 +10,21 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 33cd99fd51bd7fabc1ae7f8379bcf2a69a5c4898
-ms.sourcegitcommit: f195190347a98b6c5be957564d33b6c4dfb610d7
+ms.openlocfilehash: 42a19d690e694ad3ca930dbf89fd0420bb5a45b5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39309381"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416816"
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>Licencias y ramas para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual), (Rama de mantenimiento a largo plazo)*
+*Se aplica a: System Center Configuration Manager (Rama actual) (Rama de mantenimiento a largo plazo)*
 
 Use este tema para obtener información sobre los requisitos de licencia de las opciones de instalación disponibles con la versión 1606 de octubre de 2016 de System Center Configuration Manager. Entre estas opciones de instalación se incluye la versión 1606 de la Rama actual, la Rama de mantenimiento a largo plazo (LTSB) y la instalación de evaluación de la versión 1606 de la Rama actual.
 
 **Introducción a las licencias:**   
-Los clientes con Software Assurance (SA) activo en licencias de System Center Configuration Manager o con derechos de suscripción equivalentes a 1 de octubre de 2016, tienen derechos para usar la versión 1606 de octubre de 2016 de System Center Configuration Manager. Los clientes con derechos para System Center Configuration Manager en o después del 1 de octubre de 2016 encontrarán dos opciones de licencia tras la instalación: la rama actual y la rama de mantenimiento a largo plazo (LTSB).
+Los clientes con Software Assurance (SA) activo en licencias de System Center Configuration Manager o con derechos de suscripción equivalentes a 1 de octubre de 2016, tienen derechos para usar la versión 1606 de octubre de 2016 de System Center Configuration Manager. Los clientes con derechos para System Center Configuration Manager el 1 de octubre de 2016 o después de esta fecha encontrarán dos opciones con licencia tras la instalación: Rama actual y Rama de mantenimiento a largo plazo (LTSB).
 
 
 **Detalles de las licencias:**  
@@ -80,7 +80,7 @@ LTSB se basa en la versión de la Rama actual 1606 y tiene las siguientes limita
 ### <a name="software-assurance-expiration-date"></a>Fecha de expiración de Software Assurance
 A partir de la versión de octubre de 2016 de los medios de línea base de la versión 1606 para System Center Configuration Manager, puede especificar la fecha de expiración de su contrato de Software Assurance. **Software Assurance expiration date** (Fecha de expiración de Software Assurance) es un valor opcional que se puede especificar como cómodo recordatorio al ejecutar el programa de instalación de Configuration Manager o más adelante desde la consola de Configuration Manager.
 
->  [!NOTE]   
+> [!NOTE]
 >  Microsoft no valida la fecha de expiración que especifique y no la usará para la validación de la licencia.  pero usted puede usarla como un recordatorio de la fecha de expiración. Esto es útil porque Configuration Manager busca de forma periódica nuevas actualizaciones de software que se ofrecen en línea y el estado de su licencia de Software Assurance debe ser actual para que pueda usar estas actualizaciones adicionales.    
 
 **Para especificar la fecha:**

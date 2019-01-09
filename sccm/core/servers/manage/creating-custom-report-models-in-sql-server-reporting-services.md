@@ -10,12 +10,12 @@ ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: fd606ff7068b7c14047e445d16ea78d20a5c12ea
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d011272c42f3347f555e4fb5322464e9c5e754da
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342654"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424704"
 ---
 # <a name="creating-custom-report-models-for-system-center-configuration-manager-in-sql-server-reporting-services"></a>Creación de modelos de informes personalizados para System Center Configuration Manager en SQL Server Reporting Services
 
@@ -136,37 +136,37 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
 ###  <a name="BKMK_DeployReportModel"></a> To deploy the custom report model to Configuration Manager  
 
-1.  Busque la carpeta en la que se creó el proyecto de modelo de informe. Por ejemplo, %*USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;Nombre del proyecto\>.*  
+1. Busque la carpeta en la que se creó el proyecto de modelo de informe. Por ejemplo, %*USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;Nombre del proyecto\>.*  
 
-2.  Copie los archivos siguientes de la carpeta del proyecto de modelo de informe en una carpeta temporal en el equipo:  
+2. Copie los archivos siguientes de la carpeta del proyecto de modelo de informe en una carpeta temporal en el equipo:  
 
-    -   *&lt;Nombre del modelo\>* **.dsv**  
+   -   *&lt;Nombre del modelo\>* **.dsv**  
 
-    -   *&lt;Nombre del modelo\>* **.smdl**  
+   -   *&lt;Nombre del modelo\>* **.smdl**  
 
-3.  Abra los archivos anteriores con un editor de texto, como el Bloc de notas.  
+3. Abra los archivos anteriores con un editor de texto, como el Bloc de notas.  
 
-4.  En el archivo *&lt;Nombre del modelo\>***.dsv**, busque la primera línea del archivo, que dice lo siguiente:  
+4. En el archivo *&lt;Nombre del modelo\>***.dsv**, busque la primera línea del archivo, que dice lo siguiente:  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
+    **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
-     Edite esta línea para que quede como sigue:  
+    Edite esta línea para que quede como sigue:  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" xmlns:xsi="RelationalDataSourceView"\>**  
+    **&lt;DataSourceView xmlns="<http://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView"\>**  
 
-5.  Copie todo el contenido del archivo en el Portapapeles de Windows.  
+5. Copie todo el contenido del archivo en el Portapapeles de Windows.  
 
-6.  Cierre el archivo *&lt;Nombre del modelo\>***.dsv**.  
+6. Cierre el archivo *&lt;Nombre del modelo\>***.dsv**.  
 
-7.  En el archivo *&lt;Nombre del modelo\>***.smdl**, busque las últimas tres líneas del archivo, que aparecen así:  
+7. En el archivo *&lt;Nombre del modelo\>***.smdl**, busque las últimas tres líneas del archivo, que aparecen así:  
 
-     `</Entity>`  
+    `</Entity>`  
 
-     `</Entities>`  
+    `</Entities>`  
 
-     `</SemanticModel>`  
+    `</SemanticModel>`  
 
-8.  Pegue el contenido del archivo *&lt;Nombre del modelo\>***.dsv** directamente antes de la última línea del archivo (**&lt;SemanticModel\>**).  
+8. Pegue el contenido del archivo *&lt;Nombre del modelo\>***.dsv** directamente antes de la última línea del archivo (**&lt;SemanticModel\>**).  
 
 9. Guarde y cierre el archivo *&lt;Nombre del modelo\>***.smdl**.  
 
@@ -178,13 +178,13 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 ##  <a name="AdvancedReportModel"></a> Pasos para crear un modelo de informe avanzado en SQL Server Reporting Services  
  Puede usar los procedimientos siguientes para crear un modelo de informe avanzado que podrán usar los usuarios de su sitio para generar informes particulares basados en modelo según los datos en varias vistas de la base de datos de Configuration Manager. Se crea un modelo de informe que presenta a su autor la información sobre los equipos cliente y el sistema operativo instalado en estos equipos. Esta información se obtiene de las vistas siguientes de la base de datos de Configuration Manager:  
 
--   **V_R_System**: contiene información sobre los equipos detectados y el cliente de Configuration Manager.  
+- **V_R_System**: contiene información sobre los equipos detectados y el cliente de Configuration Manager.  
 
--   **V_GS_OPERATING_SYSTEM**: contiene información sobre el sistema operativo instalado en el equipo cliente.  
+- **V_GS_OPERATING_SYSTEM**: contiene información sobre el sistema operativo instalado en el equipo cliente.  
 
- Los elementos seleccionados en las vistas anteriores se consolidan en una sola lista, con nombres descriptivos y, a continuación, se presentan al autor del informe en el Generador de informes para su inclusión en informes particulares.  
+  Los elementos seleccionados en las vistas anteriores se consolidan en una sola lista, con nombres descriptivos y, a continuación, se presentan al autor del informe en el Generador de informes para su inclusión en informes particulares.  
 
- En el equipo en que realice estos procedimientos, asegúrese de que tiene instalado SQL Server Business Intelligence Development Studio y de que el equipo tiene conectividad de red con el servidor de punto de servicios de informes. Para obtener información detallada acerca de SQL Server Business Intelligence Development Studio, consulte la documentación de SQL Server.  
+  En el equipo en que realice estos procedimientos, asegúrese de que tiene instalado SQL Server Business Intelligence Development Studio y de que el equipo tiene conectividad de red con el servidor de punto de servicios de informes. Para obtener información detallada acerca de SQL Server Business Intelligence Development Studio, consulte la documentación de SQL Server.  
 
 #### <a name="to-create-the-report-model-project"></a>To create the report model project  
 
@@ -234,28 +234,28 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
 #### <a name="to-define-the-data-source-view-for-the-report-model"></a>Para definir la vista del origen de datos para el modelo de informe  
 
-1.  En el **Explorador de soluciones**, haga clic con el botón secundario en **Vistas del origen de datos** para seleccionar **Agregar nueva vista del origen de datos**.  
+1. En el **Explorador de soluciones**, haga clic con el botón secundario en **Vistas del origen de datos** para seleccionar **Agregar nueva vista del origen de datos**.  
 
-2.  En la página inicial del **Asistente para orígenes de datos** , haga clic en **Siguiente**. Se mostrará la página **Seleccionar un origen de datos** .  
+2. En la página inicial del **Asistente para orígenes de datos** , haga clic en **Siguiente**. Se mostrará la página **Seleccionar un origen de datos** .  
 
-3.  En la ventana **Orígenes de datos relacionales** , compruebe que esté seleccionado el origen de datos **Advanced_Model** y, a continuación, haga clic en **Siguiente**.  
+3. En la ventana **Orígenes de datos relacionales** , compruebe que esté seleccionado el origen de datos **Advanced_Model** y, a continuación, haga clic en **Siguiente**.  
 
-4.  En la página **Seleccionar tablas y vistas** , seleccione las vistas siguientes en la lista **Objetos disponibles** para usar en el modelo de informe:  
+4. En la página **Seleccionar tablas y vistas** , seleccione las vistas siguientes en la lista **Objetos disponibles** para usar en el modelo de informe:  
 
-    -   **v_R_System (dbo)**  
+   - **v_R_System (dbo)**  
 
-    -   **v_GS_OPERATING_SYSTEM (dbo)**  
+   - **v_GS_OPERATING_SYSTEM (dbo)**  
 
      Después de seleccionar cada vista, haga clic en **>** para transferir el objeto a la lista **Objetos incluidos** .  
 
-    > [!TIP]  
-    >  Para ubicar las vistas más fácilmente en la lista **Objetos disponibles** , haga clic en el encabezado **Nombre** en la parte superior de la lista para ordenar los objetos por orden alfabético.  
+   > [!TIP]  
+   >  Para ubicar las vistas más fácilmente en la lista **Objetos disponibles** , haga clic en el encabezado **Nombre** en la parte superior de la lista para ordenar los objetos por orden alfabético.  
 
-5.  Si se muestra el cuadro de diálogo **Coincidencia de nombres** , acepte las selecciones predeterminadas y haga clic en **Siguiente**.  
+5. Si se muestra el cuadro de diálogo **Coincidencia de nombres** , acepte las selecciones predeterminadas y haga clic en **Siguiente**.  
 
-6.  Cuando haya seleccionado los objetos que necesite, haga clic en **Siguiente**y, a continuación, especifique un nombre para la vista del origen de datos. Para este ejemplo, escriba **Advanced_Model**.  
+6. Cuando haya seleccionado los objetos que necesite, haga clic en **Siguiente**y, a continuación, especifique un nombre para la vista del origen de datos. Para este ejemplo, escriba **Advanced_Model**.  
 
-7.  Haga clic en **Finalizar**. La vista del origen de datos **Advanced_Model.dsv** se mostrará en la carpeta **Vistas del origen de datos** del **Explorador de soluciones**.  
+7. Haga clic en **Finalizar**. La vista del origen de datos **Advanced_Model.dsv** se mostrará en la carpeta **Vistas del origen de datos** del **Explorador de soluciones**.  
 
 #### <a name="to-define-relationships-in-the-data-source-view"></a>Para definir las relaciones en la vista del origen de datos  
 
@@ -379,37 +379,37 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
 #### <a name="to-deploy-the-custom-report-model-to-configuration-manager"></a>To deploy the custom report model to Configuration Manager  
 
-1.  Busque la carpeta en la que se creó el proyecto de modelo de informe. Por ejemplo, %*USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;Nombre del proyecto\>.*  
+1. Busque la carpeta en la que se creó el proyecto de modelo de informe. Por ejemplo, %*USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;Nombre del proyecto\>.*  
 
-2.  Copie los archivos siguientes de la carpeta del proyecto de modelo de informe en una carpeta temporal en el equipo:  
+2. Copie los archivos siguientes de la carpeta del proyecto de modelo de informe en una carpeta temporal en el equipo:  
 
-    -   *&lt;Nombre del modelo\>* **.dsv**  
+   -   *&lt;Nombre del modelo\>* **.dsv**  
 
-    -   *&lt;Nombre del modelo\>* **.smdl**  
+   -   *&lt;Nombre del modelo\>* **.smdl**  
 
-3.  Abra los archivos anteriores con un editor de texto, como el Bloc de notas.  
+3. Abra los archivos anteriores con un editor de texto, como el Bloc de notas.  
 
-4.  En el archivo *&lt;Nombre del modelo\>***.dsv**, busque la primera línea del archivo, que dice lo siguiente:  
+4. En el archivo *&lt;Nombre del modelo\>***.dsv**, busque la primera línea del archivo, que dice lo siguiente:  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
+    **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
-     Edite esta línea para que quede como sigue:  
+    Edite esta línea para que quede como sigue:  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" xmlns:xsi="RelationalDataSourceView"\>**  
+    **&lt;DataSourceView xmlns="<http://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView"\>**  
 
-5.  Copie todo el contenido del archivo en el Portapapeles de Windows.  
+5. Copie todo el contenido del archivo en el Portapapeles de Windows.  
 
-6.  Cierre el archivo *&lt;Nombre del modelo\>***.dsv**.  
+6. Cierre el archivo *&lt;Nombre del modelo\>***.dsv**.  
 
-7.  En el archivo *&lt;Nombre del modelo\>***.smdl**, busque las últimas tres líneas del archivo, que aparecen así:  
+7. En el archivo *&lt;Nombre del modelo\>***.smdl**, busque las últimas tres líneas del archivo, que aparecen así:  
 
-     `</Entity>`  
+    `</Entity>`  
 
-     `</Entities>`  
+    `</Entities>`  
 
-     `</SemanticModel>`  
+    `</SemanticModel>`  
 
-8.  Pegue el contenido del archivo *&lt;Nombre del modelo\>***.dsv** directamente antes de la última línea del archivo (**&lt;SemanticModel\>**).  
+8. Pegue el contenido del archivo *&lt;Nombre del modelo\>***.dsv** directamente antes de la última línea del archivo (**&lt;SemanticModel\>**).  
 
 9. Guarde y cierre el archivo *&lt;Nombre del modelo\>***.smdl**.  
 

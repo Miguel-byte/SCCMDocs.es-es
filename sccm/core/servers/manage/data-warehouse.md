@@ -10,12 +10,12 @@ ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7671025b0a643063f30c98922f7da0659e2e1ab9
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 0c04ee9a62b6c629060f79df2f4b104fe78ca794
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456913"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418992"
 ---
 #  <a name="the-data-warehouse-service-point-for-configuration-manager"></a>El punto de servicio de almacenamiento de datos para Configuration Manager
 
@@ -90,21 +90,21 @@ Cuando instala el rol, Configuration Manager crea la base de datos de almacenami
 
 #### <a name="general-page"></a>Página General
 
-- **Nombre de dominio completo de SQL Server**: especifique el nombre de dominio completo (FQDN) del servidor que hospeda la base de datos del punto de servicio de almacenamiento de datos.  
+- **Nombre de dominio completo de SQL Server**: Especifique el nombre de dominio completo (FQDN) del servidor que hospeda la base de datos del punto de servicio de almacenamiento de datos.  
 
-- **Nombre de la instancia de SQL Server, si se aplica**: si no utiliza una instancia predeterminada de SQL Server, especifique una instancia con nombre.  
+- **Nombre de instancia de SQL Server, si corresponde**: Si no usa una instancia predeterminada de SQL Server, especifique la instancia con nombre.  
 
-- **Nombre de la base de datos**: especifique un nombre para la base de datos de almacenamiento de datos. Configuration Manager creará la base de datos de almacenamiento de datos con este nombre. Si especifica un nombre de base de datos que ya existe en la instancia de SQL Server, Configuration Manager usará esa base de datos.  
+- **Nombre de la base de datos**: Especifique un nombre para la base de datos de almacenamiento de datos. Configuration Manager creará la base de datos de almacenamiento de datos con este nombre. Si especifica un nombre de base de datos que ya existe en la instancia de SQL Server, Configuration Manager usará esa base de datos.  
 
-- **Puerto de SQL Server usado para la conexión**: especifique el número de puerto TCP/IP que utiliza el servidor SQL Server que hospeda la base de datos del almacenamiento de datos. El servicio de sincronización del almacenamiento de datos usa este puerto para conectarse a la base de datos de dicho almacenamiento. De forma predeterminada, usa el puerto de SQL Server **1433** para la comunicación.  
+- **Puerto de SQL Server utilizado para la conexión**: Especifique el número de puerto TCP/IP que usa el servidor SQL Server que hospeda la base de datos del almacenamiento de datos. El servicio de sincronización del almacenamiento de datos usa este puerto para conectarse a la base de datos de dicho almacenamiento. De forma predeterminada, usa el puerto de SQL Server **1433** para la comunicación.  
 
-- **Cuenta de punto de servicio de almacenamiento de datos**: a partir de la versión 1802, establezca el **nombre de usuario** que use la cuenta de SQL Server Reporting Services al conectarse a la base de datos de almacenamiento de datos.  
+- **Cuenta de punto de servicio de almacenamiento de datos**: a partir de la versión 1802, establezca el **nombre de usuario** que use la cuenta de SQL Server Reporting Services al conectarse a la base de datos de almacenamiento de datos.  
 
 
 #### <a name="synchronization-schedule-page"></a>Página Programación de sincronización
 *Se aplica a las versiones 1806 y anteriores*
 
-- **Hora de inicio**: especifique la hora a la que desea que se inicie la sincronización del almacenamiento de datos.  
+- **Hora de inicio**: Especifique la hora a la que desea que se inicie la sincronización del almacenamiento de datos.  
 
 - **Patrón de periodicidad**
 
@@ -116,12 +116,12 @@ Cuando instala el rol, Configuration Manager crea la base de datos de almacenami
 #### <a name="synchronization-settings-page"></a>Página Configuración de sincronización
 *Se aplica a la versión 1810 y posteriores*
 
-- **Configuración personalizada de la sincronización de datos**: elija la opción **Seleccionar tablas**. En la ventana Tablas de bases de datos, seleccione los nombres de tabla para sincronizar con la base de datos de almacenamiento de datos. Use el filtro para buscar por nombre o seleccione la lista desplegable para elegir grupos específicos. Haga clic en **Aceptar** cuando haya terminado, para guardar.  
+- **Configuración personalizada de sincronización de datos**: seleccione la opción para **Seleccionar tablas**. En la ventana Tablas de bases de datos, seleccione los nombres de tabla para sincronizar con la base de datos de almacenamiento de datos. Use el filtro para buscar por nombre o seleccione la lista desplegable para elegir grupos específicos. Haga clic en **Aceptar** cuando haya terminado, para guardar.  
 
     > [!Note]  
     > No se pueden quitar las tablas que el rol selecciona de forma predeterminada.  
 
-- **Hora de inicio**: especifique la hora a la que desea que se inicie la sincronización del almacenamiento de datos.  
+- **Hora de inicio**: Especifique la hora a la que desea que se inicie la sincronización del almacenamiento de datos.  
 
 - **Patrón de periodicidad**
 
@@ -142,19 +142,19 @@ Después de instalar un punto de servicio de almacenamiento de datos, varios inf
 
 El rol de sistema de sitio de almacenamiento de datos incluye los siguientes informes en la categoría **Almacenamiento de datos**:  
 
-- **Implementación de aplicaciones - Histórico**: vea los detalles de la implementación de aplicaciones para una máquina y una aplicación determinada.  
+- **Implementación de aplicaciones - Histórico**: Vea los detalles de la implementación de aplicaciones para una máquina y una aplicación determinada.  
 
-- **Endpoint Protection y compatibilidad con actualizaciones de software - Histórico**: Vea los equipos a los que les faltan actualizaciones de software.  
+- **Endpoint Protection y cumplimiento de actualizaciones de software - Historial**: Vea los equipos a los que les faltan actualizaciones de software.  
 
-- **Inventario de hardware general - Histórico**: vea todo el inventario de hardware de una máquina concreta.  
+- **Inventario de hardware general - Histórico**: Vea todo el inventario de hardware para un equipo específico.  
 
-- **Inventario de software general - Histórico**: ver todo el inventario de software de una máquina concreta.  
+- **Inventario de software general - Histórico**: Vea todo el inventario de software para un equipo específico.  
 
-- **Información general sobre el estado de la infraestructura (historial)**: muestra información general sobre el estado de la infraestructura de Configuration Manager.  
+- **Información general del mantenimiento de infraestructura - Histórico**: Muestra información general del mantenimiento de su infraestructura de Configuration Manager.  
 
-- **Lista de malware detectado (historial)**: muestra el malware que se ha detectado en la organización.  
+- **Lista de malware detectado - Histórico**:    Vea el malware que se ha detectado en la organización.  
 
-- **Resumen de distribución de software - Histórico**: un resumen de distribución de software para una máquina y anuncio específico.  
+- **Resumen de distribución de software - Histórico**: Un resumen de distribución de software para un equipo y anuncio específico.  
 
 
 

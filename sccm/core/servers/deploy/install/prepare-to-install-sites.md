@@ -10,12 +10,12 @@ ms.assetid: 9089e1b5-cba4-42bd-a2de-126ef882a3af
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f07a321ac6f10f5287a88d0df7064920f538ae5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3de7b19eb7d997ef72cc7a413eb143172c4ce40e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341702"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424364"
 ---
 # <a name="prepare-to-install-system-center-configuration-manager-sites"></a>Preparar la instalación de sitios de System Center Configuration Manager
 
@@ -35,9 +35,9 @@ Antes de instalar un sitio, asegúrese de que ha planeado la jerarquía y de que
 ### <a name="first-site"></a>Primer sitio
 El primer sitio que se instale en una jerarquía será un sitio primario independiente o un sitio de administración central.
 
-**Medios de instalación**: para instalar un sitio de administración central o un sitio primario independiente como primer sitio de una jerarquía nueva, debe [usar una versión de línea base](../../../../core/servers/manage/updates.md#bkmk_Baselines) de Configuration Manager. No instale el primer sitio de una jerarquía nueva con los archivos de origen actualizados desde la [carpeta CD.Latest](../../../../core/servers/manage/the-cd.latest-folder.md) de cualquier sitio.
+**Medios de instalación**: para instalar un sitio de administración central o un sitio primario independiente como primer sitio de una nueva jerarquía, debe [usar una versión de línea base](../../../../core/servers/manage/updates.md#bkmk_Baselines) de Configuration Manager. No instale el primer sitio de una jerarquía nueva con los archivos de origen actualizados desde la [carpeta CD.Latest](../../../../core/servers/manage/the-cd.latest-folder.md) de cualquier sitio.
 
-**Método de instalación**: puede instalar cualquier tipo de sitio mediante el [Asistente para instalación de Configuration Manager](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md). También puede configurar un script para usarlo con una [instalación de línea de comandos generada por scripts](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).
+**Método de instalación**: puede instalar cualquier tipo de sitio mediante el [Asistente para instalación de Configuration Manager](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md); también puede configurar un script para usarlo con una [instalación de línea de comandos generada por scripts](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).
 
 
 ### <a name="additional-sites"></a>Sitios adicionales
@@ -57,9 +57,9 @@ Una vez instalado el sitio inicial, puede agregar más sitios en cualquier momen
 Es necesario instalar un sitio secundario desde la consola de Configuration Manager. De este modo, los sitios secundarios siempre se instalan mediante los archivos de origen del sitio primario principal.
 
 **Método de instalación**: el método empleado para instalar sitios adicionales depende del tipo de sitio que quiera instalar.
--   **Agregar un sitio de administración central**: puede usar el Asistente para instalación de Configuration Manager o una línea de comandos generada por scripts para instalar el nuevo sitio de administración central como sitio primario en el sitio primario independiente existente. Para obtener más información, vea [Expandir un sitio primario independiente](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand).
--   **Agregar un sitio primario secundario**: puede usar el Asistente para instalación de Configuration Manager o una instalación de línea de comandos para agregar un sitio primario secundario debajo de un sitio de administración central.
--   **Agregar un sitio secundario**: use la consola de Configuration Manager para instalar un sitio secundario debajo de un sitio primario. No se admiten otros métodos para agregar sitios secundarios.
+-   **Agregar un sitio de administración central**:  puede usar el Asistente para instalación de Configuration Manager o una línea de comandos generada por scripts para instalar el nuevo sitio de administración central como sitio primario en el sitio primario independiente existente. Para obtener más información, vea [Expandir un sitio primario independiente](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand).
+-   **Agregar un sitio primario secundario**:  puede usar el Asistente para instalación de Configuration Manager o una instalación de línea de comandos para agregar un sitio primario secundario debajo de un sitio de administración central.
+-   **Agregar un sitio secundario**:  use la consola de Configuration Manager para instalar un sitio secundario debajo de un sitio primario. No se admiten otros métodos para agregar sitios secundarios.
 
 ## <a name="bkmk_tasks"></a> Tareas comunes que se deben realizar antes de iniciar una instalación
 -   **Analice la topología de la jerarquía que se usará para la implementación**    
@@ -105,11 +105,11 @@ Los códigos de sitio no se pueden usar más de una vez en una jerarquía de Con
 
 ## <a name="limits-and-restrictions-for-installed-sites"></a>Límites y restricciones de los sitios instalados
 Antes de instalar un sitio, debe comprender las siguientes limitaciones que se aplican a los sitios y las jerarquías:
--   Después de ejecutar el programa de instalación, no podrá cambiar las siguientes propiedades del sitio a menos que lo desinstale y lo vuelva a instalar con los nuevos valores:  
+- Después de ejecutar el programa de instalación, no podrá cambiar las siguientes propiedades del sitio a menos que lo desinstale y lo vuelva a instalar con los nuevos valores:  
   -   Directorio de instalación de archivos de programa  
   -   Código de sitio  
   -   Descripción del sitio  
--   Si la jerarquía incluye un sitio de administración central:  
+- Si la jerarquía incluye un sitio de administración central:  
   -   Configuration Manager no admite mover un sitio primario secundario fuera de una jerarquía para crear un sitio primario independiente o para adjuntarlo a otra jerarquía. En su lugar, desinstale el sitio primario secundario y, luego, vuelva a instalarlo como un nuevo sitio primario independiente o como un sitio secundario del sitio de administración central de otra jerarquía.  
 
 
@@ -130,7 +130,7 @@ Para identificar y corregir problemas antes de ejecutar el programa de instalaci
 **Identificar puertos opcionales**
 
 Puede identificar los puertos opcionales que los sistemas de sitio y los clientes pueden usar. A continuación encontrará información adicional:
- -  De forma predeterminada, los sistemas de sitio y los clientes usan puertos predefinidos para comunicarse.
- -  Durante la instalación, puede configurar puertos alternativos.
+- De forma predeterminada, los sistemas de sitio y los clientes usan puertos predefinidos para comunicarse.
+- Durante la instalación, puede configurar puertos alternativos.
 
- Para más información, vea [Puertos que se usan en System Center Configuration Manager](../../../../core/plan-design/hierarchy/ports.md).
+  Para más información, vea [Puertos que se usan en System Center Configuration Manager](../../../../core/plan-design/hierarchy/ports.md).

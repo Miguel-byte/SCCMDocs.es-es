@@ -10,12 +10,12 @@ ms.assetid: a1fe22d0-4695-4de0-8bf0-e3475b03cf0e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d4aa1c044c8ea68b934a6dad4f1f85cbe43ec19b
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 56b1c0cff398f0009169ab1b02801e536e1a3343
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458144"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418127"
 ---
 # <a name="how-to-configure-boundary-groups-for-configuration-manager"></a>Cómo configurar grupos de límites para Configuration Manager
 
@@ -81,17 +81,17 @@ Para configurar el comportamiento de reserva, cambie a la pestaña **Relaciones*
 
 - Para crear una relación con otro grupo de límites:  
 
-    - Seleccione **Agregar**. En la ventana Grupos de límites de reserva, seleccione el grupo de límites que desea configurar.  
+  - Seleccione **Agregar**. En la ventana Grupos de límites de reserva, seleccione el grupo de límites que desea configurar.  
 
-    - Defina un tiempo de reserva para los siguientes roles de sistema de sitio:  
-        - Punto de distribución  
-        - Punto de actualización de software  
-        - Punto de administración  
+  - Defina un tiempo de reserva para los siguientes roles de sistema de sitio:  
+    - Punto de distribución  
+    - Punto de actualización de software  
+    - Punto de administración  
 
-        > [!Note]  
-        > Por ejemplo, abra la ventana Propiedades del grupo de límites de la sucursal. En la ventana Grupos de límites de reserva, seleccione el grupo de límites de la sede principal. Defina el tiempo de reserva del punto de distribución en `20`. Al guardar esta configuración, los clientes del grupo de límites de la sucursal empezarán a buscar contenido de los puntos de distribución del grupo de límites de la sede principal después de 20 minutos.  
+      > [!Note]  
+      > Por ejemplo, abra la ventana Propiedades del grupo de límites de la sucursal. En la ventana Grupos de límites de reserva, seleccione el grupo de límites de la sede principal. Defina el tiempo de reserva del punto de distribución en `20`. Al guardar esta configuración, los clientes del grupo de límites de la sucursal empezarán a buscar contenido de los puntos de distribución del grupo de límites de la sede principal después de 20 minutos.  
 
-    - Para impedir la reserva de un grupo de límites específico, seleccione el grupo de límites y luego haga clic en **No usar reserva nunca** para este tipo de rol de sistema de sitio. Esta acción puede incluir el *grupo de límites de sitio predeterminado*.  
+  - Para impedir la reserva de un grupo de límites específico, seleccione el grupo de límites y luego haga clic en **No usar reserva nunca** para este tipo de rol de sistema de sitio. Esta acción puede incluir el *grupo de límites de sitio predeterminado*.  
 
 - Para modificar la configuración de una relación existente, seleccione el grupo de límites en la lista y haga clic en **Cambiar**. Esta acción abre la ventana Grupos de límites de reserva solo para este grupo de límites.  
  
@@ -103,9 +103,9 @@ Para más información, vea [Reserva](/sccm/core/servers/deploy/configure/bounda
 ### <a name="bkmk_options"></a> Configuración de opciones del grupo de límites
 <!--1356193--> A partir de la versión 1806, para configurar opciones adicionales para los clientes de este grupo de límites, cambie a la pestaña **Opciones**. Para más información, vea [Opciones de grupo de límites para descargas del mismo nivel](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
-- **Permitir descargas del mismo nivel en este grupo de límites**: esta opción está habilitada de forma predeterminada. El punto de administración proporciona a los clientes una lista de ubicaciones de contenido que incluye orígenes del mismo nivel.  
+- **Permitir descargas del mismo nivel en este grupo de límites**: Esta opción está habilitada de forma predeterminada. El punto de administración proporciona a los clientes una lista de ubicaciones de contenido que incluye orígenes del mismo nivel.  
 
-    - **Durante las descargas del mismo nivel, solo use elementos del mismo nivel en la misma subred**: esta configuración depende de la anterior. Si habilita esta opción, el punto de administración solo se incluye en los orígenes del mismo nivel de la lista de ubicaciones de contenido que se encuentran en la misma subred que el cliente.  
+    - **Durante las descargas del mismo nivel, use solo elementos del mismo nivel dentro de la misma subred**: Esta configuración depende de la anterior. Si habilita esta opción, el punto de administración solo se incluye en los orígenes del mismo nivel de la lista de ubicaciones de contenido que se encuentran en la misma subred que el cliente.  
 
 
 ## <a name="bkmk_site-fallback"></a> Configurar un sitio de reserva para la asignación de sitios automática  

@@ -10,12 +10,12 @@ ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7251ac6bf623236492f0843b8562a06e547c9cb1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d9d9fd940c21e0fc8d20c86c51cb3443f21a9339
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343691"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419455"
 ---
 # <a name="planning-for-client-deployment-to-linux-and-unix-computers-in-system-center-configuration-manager"></a>Planificación de la implementación del cliente en equipos Linux y UNIX con System Center Configuration Manager
 
@@ -23,19 +23,19 @@ ms.locfileid: "32343691"
 
 Puede instalar el cliente de System Center Configuration Manager en equipos que ejecutan Linux o UNIX. Este cliente está diseñado para servidores que funcionan como un equipo de grupo de trabajo, y no admite la interacción con usuarios que han iniciado sesión. Una vez que se ha instalado el software cliente y el cliente establece comunicación con el sitio de Configuration Manager, el cliente se administra mediante la consola de Configuration Manager y los informes.  
 
-> [!NOTE]  
+> [!NOTE]
 >  El cliente de Configuration Manager en los equipos UNIX y Linux no admite las siguientes capacidades de administración:  
->   
->  -   Instalación de inserción de cliente  
-> -   Implementación de sistema operativo  
-> -   Implementación de aplicaciones; en lugar de implementar software mediante paquetes y programas.  
-> -   Inventario de software  
-> -   Actualizaciones de software  
-> -   Configuración de compatibilidad  
-> -   Control remoto  
-> -   Administración de energía  
-> -   Comprobación y corrección de cliente del estado de cliente  
-> -   Administración de cliente basada en Internet  
+> 
+> - Instalación de inserción de cliente  
+>   -   Implementación de sistema operativo  
+>   -   Implementación de aplicaciones; en lugar de implementar software mediante paquetes y programas.  
+>   -   Inventario de software  
+>   -   Actualizaciones de software  
+>   -   Configuración de compatibilidad  
+>   -   Control remoto  
+>   -   Administración de energía  
+>   -   Comprobación y corrección de cliente del estado de cliente  
+>   -   Administración de cliente basada en Internet  
 
  Para obtener más información sobre las distribuciones de Linux y UNIX admitidas y el hardware necesario para admitir el cliente de Linux y UNIX, consulte [Hardware recomendado para System Center Configuration Manager](../../../../core/plan-design/configs/recommended-hardware.md).  
 
@@ -178,7 +178,7 @@ Puede instalar el cliente de System Center Configuration Manager en equipos que 
 |SysMgmtMin.openssl|Bibliotecas OpenSSL; Protocolo de comunicaciones de red seguras|A.00.09.08d.002|  
 |PAM|Módulos de autenticación conectables|En HP-UX, PAM forma parte de los principales componentes del sistema operativo. No hay otras dependencias.|  
 
- **Dependencias de Configuration Manager:** La tabla siguiente enumera los roles de sistema de sitio que admiten clientes Linux y UNIX. Para obtener más información sobre estos roles de sistema de sitio, consulte [Determinar los roles de sistema de sitio para System Center Configuration Manager](../../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md).  
+ **Dependencias de Configuration Manager:** en la tabla siguiente se enumeran los roles de sistema de sitio que admiten clientes Linux y UNIX. Para obtener más información sobre estos roles de sistema de sitio, consulte [Determinar los roles de sistema de sitio para System Center Configuration Manager](../../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md).  
 
 |Sistema de sitio de Configuration Manager|Más información|  
 |---------------------------------------|----------------------|  
@@ -186,7 +186,7 @@ Puede instalar el cliente de System Center Configuration Manager en equipos que 
 |Punto de distribución|El punto de distribución no tiene que instalar un cliente de Configuration Manager para Linux y UNIX. Sin embargo, la función de sistema de sitio es necesaria si implementa software en servidores Linux y UNIX.<br /><br /> Dado que el cliente de Configuration Manager para Linux y UNIX no es compatible con las comunicaciones que usan SMB, los puntos de distribución que se usan con el cliente deben admitir la comunicación HTTP o HTTPS.|  
 |Punto de estado de reserva|El punto de estado de reserva no tiene que instalar un cliente de Configuration Manager para Linux y UNIX. Pero el punto de estado de reserva permite a los equipos en el sitio de Configuration Manager que envíen mensajes de estado cuando no se puedan comunicar con un punto de administración. Cliente también puede enviar su estado de instalación en el punto de estado de reserva.|  
 
- **Requisitos de firewall**: Asegúrese de que los servidores de seguridad no bloquean las comunicaciones a través de los puertos que especifique como puertos de solicitud de cliente. El cliente para Linux y UNIX se comunica directamente con los puntos de administración, los puntos de distribución y los puntos de estado de reserva.  
+ **Requisitos de firewall**: asegúrese de que los firewalls no bloquean las comunicaciones a través de los puertos que especifique como puertos de solicitud de cliente. El cliente para Linux y UNIX se comunica directamente con los puntos de administración, los puntos de distribución y los puntos de estado de reserva.  
 
  Para obtener información sobre los puertos de solicitud y comunicación del cliente, consulte [Configurar al cliente para Linux y UNIX buscar puntos de administración](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigClientMP).  
 
@@ -242,7 +242,7 @@ Puede instalar el cliente de System Center Configuration Manager en equipos que 
 
  Cuando se instala el cliente de Configuration Manager para Linux y UNIX, la secuencia de comandos de instalación comprueba la versión del sistema operativo. De forma predeterminada, si la versión del sistema operativo se identifica como que se ha publicado sin una versión de OpenSSL que admita SHA-256, la instalación del cliente de Configuration Manager produce un error.  
 
- Para instalar el cliente de Configuration Manager en los sistemas operativos Linux y UNIX que no se hayan publicado con una versión de OpenSSL que admita SHA-256, debe usar el conmutador de instalación de la línea de comandos **ignoreSHA256validation**. Cuando se usa esta opción de línea de comandos en un sistema operativo Linux o UNIX aplicable, el cliente de Configuration Manager omitirá la validación de SHA-256 y, después de la instalación, el cliente no usará SHA-256 para firmar los datos que envía a los sistemas de sitio mediante HTTP. Para obtener información sobre cómo configurar los clientes de Linux y UNIX para usar certificados, consulte [Planeamiento de seguridad y certificados para servidores Linux y UNIX](#BKMK_SecurityforLnU) en este tema. Para obtener más información sobre el requisito SHA-256, consulte la sección [Configurar la firma y el cifrado](../../../../core/plan-design/security/configure-security.md#BKMK_ConfigureSigningEncryption) en el tema [Configurar la seguridad en System Center Configuration Manager](../../../../core/plan-design/security/configure-security.md).  
+ Para instalar el cliente de Configuration Manager en los sistemas operativos Linux y UNIX que no se hayan publicado con una versión de OpenSSL que admita SHA-256, debe usar el conmutador de instalación de la línea de comandos **ignoreSHA256validation**. Cuando se usa esta opción de línea de comandos en un sistema operativo Linux o UNIX aplicable, el cliente de Configuration Manager omitirá la validación de SHA-256 y, después de la instalación, el cliente no usará SHA-256 para firmar los datos que envía a los sistemas de sitio mediante HTTP. Para obtener información sobre cómo configurar los clientes de Linux y UNIX para usar certificados, consulte [Planning for Security and Certificates for Linux and UNIX Servers](#BKMK_SecurityforLnU) en este tema. Para obtener más información sobre el requisito SHA-256, consulte la sección [Configurar la firma y el cifrado](../../../../core/plan-design/security/configure-security.md#BKMK_ConfigureSigningEncryption) en el tema [Configurar la seguridad en System Center Configuration Manager](../../../../core/plan-design/security/configure-security.md).  
 
 > [!NOTE]  
 >  La opción de línea de comandos **ignoreSHA256validation** se ignora en los equipos que ejecutan una versión de Linux y UNIX que se publicaron con versiones de OpenSSL que admiten SHA-256.  

@@ -10,12 +10,12 @@ ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: fff4150d6b8b4529a6f63989447ee5acb725c92f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 70d56194d693afe6c5521efaace9f26ce92b503f
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342297"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415830"
 ---
 # <a name="operations-and-maintenance-for-reporting-in-system-center-configuration-manager"></a>Operaciones y mantenimiento de informes en System Center Configuration Manager
 
@@ -124,33 +124,33 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
 #### <a name="to-create-a-model-based-report"></a>Para crear un informe basado en modelo  
 
-1.  En la consola de Configuration Manager, haga clic en **Supervisión**.  
+1. En la consola de Configuration Manager, haga clic en **Supervisión**.  
 
-2.  En el área de trabajo **Supervisión** , expanda **Generación de informes** y, a continuación, haga clic en **Informes**.  
+2. En el área de trabajo **Supervisión** , expanda **Generación de informes** y, a continuación, haga clic en **Informes**.  
 
-3.  En la pestaña **Inicio** , en la sección **Crear** , haga clic en **Crear informe** para iniciar el **Asistente para crear informes**.  
+3. En la pestaña **Inicio** , en la sección **Crear** , haga clic en **Crear informe** para iniciar el **Asistente para crear informes**.  
 
-4.  En la página **Información** , configure las siguientes opciones:  
+4. En la página **Información** , configure las siguientes opciones:  
 
-    -   **Tipo:** seleccione **Informe basado en modelo** para crear un informe en el Generador de informes con la utilización del modelo de Reporting Services.  
+   - **Tipo**: seleccione **Informe basado en modelo** para crear un informe en el Generador de informes mediante un modelo de Reporting Services.  
 
-    -   **Nombre**: especifique un nombre para el informe.  
+   - **Nombre**: especifique un nombre para el informe.  
 
-    -   **Descripción**: especifique una descripción para el informe.  
+   - **Descripción**: especifique una descripción para el informe.  
 
-    -   **Servidor**: muestra el nombre del servidor de informes en el que va a crear este informe.  
+   - **Servidor**: muestra el nombre del servidor de informes en el que va a crear este informe.  
 
-    -   **Ruta de acceso**: haga clic en **Examinar** para especificar una carpeta en la que desea almacenar el informe.  
+   - **Ruta de acceso**: haga clic en **Examinar** para especificar una carpeta en la que quiera almacenar el informe.  
 
      Haga clic en **Siguiente**.  
 
-5.  En la página **Selección de modelo** , seleccione un modelo disponible en la lista que desee utilizar para crear este informe. Al seleccionar el modelo de informe, en la sección **Vista previa** se muestran las entidades y las vistas de SQL Server que estarán disponibles con el modelo de informe seleccionado.  
+5. En la página **Selección de modelo** , seleccione un modelo disponible en la lista que desee utilizar para crear este informe. Al seleccionar el modelo de informe, en la sección **Vista previa** se muestran las entidades y las vistas de SQL Server que estarán disponibles con el modelo de informe seleccionado.  
 
-6.  En la página **Resumen** , revise la configuración. Haga clic en **Anterior** para cambiar la configuración o haga clic en **Siguiente** para crear el informe en Configuration Manager.  
+6. En la página **Resumen** , revise la configuración. Haga clic en **Anterior** para cambiar la configuración o haga clic en **Siguiente** para crear el informe en Configuration Manager.  
 
-7.  En la página **Confirmación** , haga clic en **Cerrar** para salir del asistente y, a continuación, abra el Generador de informes para configurar las opciones del informe. Escriba la cuenta de usuario y contraseña si se le solicitan y, a continuación, haga clic en **Aceptar**. Si el Generador de informes no está instalado en el equipo, se le solicitará que lo instale. Haga clic en **Ejecutar** para instalar el Generador de informes, una aplicación que resulta necesaria para modificar y crear informes.  
+7. En la página **Confirmación** , haga clic en **Cerrar** para salir del asistente y, a continuación, abra el Generador de informes para configurar las opciones del informe. Escriba la cuenta de usuario y contraseña si se le solicitan y, a continuación, haga clic en **Aceptar**. Si el Generador de informes no está instalado en el equipo, se le solicitará que lo instale. Haga clic en **Ejecutar** para instalar el Generador de informes, una aplicación que resulta necesaria para modificar y crear informes.  
 
-8.  En el Generador de informes de Microsoft, cree el diseño del informe, seleccione los datos en las vistas de SQL Server disponibles, agregue parámetros al informe y así sucesivamente. Para obtener más información acerca de cómo utilizar el Generador de informes para crear un informe nuevo, consulte la Ayuda del Generador de informes.  
+8. En el Generador de informes de Microsoft, cree el diseño del informe, seleccione los datos en las vistas de SQL Server disponibles, agregue parámetros al informe y así sucesivamente. Para obtener más información acerca de cómo utilizar el Generador de informes para crear un informe nuevo, consulte la Ayuda del Generador de informes.  
 
 9. Haga clic en **Ejecutar** para ejecutar el informe. Compruebe que el informe proporciona la información esperada. Haga clic en **Diseño** para volver a la vista de diseño para modificar el informe, si es necesario.  
 
@@ -169,33 +169,33 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
 #### <a name="to-create-a-sql-based-report"></a>Para crear un informe basado en SQL  
 
-1.  En la consola de Configuration Manager, haga clic en **Supervisión**.  
+1. En la consola de Configuration Manager, haga clic en **Supervisión**.  
 
-2.  En el área de trabajo **Supervisión** , expanda **Generación de informes**y, a continuación, haga clic en **Informes**.  
+2. En el área de trabajo **Supervisión** , expanda **Generación de informes**y, a continuación, haga clic en **Informes**.  
 
-3.  En la pestaña **Inicio** , en la sección **Crear** , haga clic en **Crear informe** para iniciar el **Asistente para crear informes**.  
+3. En la pestaña **Inicio** , en la sección **Crear** , haga clic en **Crear informe** para iniciar el **Asistente para crear informes**.  
 
-4.  En la página **Información** , configure las siguientes opciones:  
+4. En la página **Información** , configure las siguientes opciones:  
 
-    -   **Tipo**: seleccione **Informe basado en SQL** para crear un informe en el Generador de informes con la utilización de una instrucción SQL.  
+   - **Tipo**: seleccione **Informe basado en SQL** para crear un informe en el Generador de informes mediante una instrucción SQL.  
 
-    -   **Nombre**: especifique un nombre para el informe.  
+   - **Nombre**: especifique un nombre para el informe.  
 
-    -   **Descripción**: especifique una descripción para el informe.  
+   - **Descripción**: especifique una descripción para el informe.  
 
-    -   **Servidor**: muestra el nombre del servidor de informes en el que va a crear este informe.  
+   - **Servidor**: muestra el nombre del servidor de informes en el que va a crear este informe.  
 
-    -   **Ruta de acceso**: haga clic en **Examinar** para especificar una carpeta en la que desea almacenar el informe.  
+   - **Ruta de acceso**: haga clic en **Examinar** para especificar una carpeta en la que quiera almacenar el informe.  
 
      Haga clic en **Siguiente**.  
 
-5.  En la página **Resumen** , revise la configuración. Haga clic en **Anterior** para cambiar la configuración o haga clic en **Siguiente** para crear el informe en Configuration Manager.  
+5. En la página **Resumen** , revise la configuración. Haga clic en **Anterior** para cambiar la configuración o haga clic en **Siguiente** para crear el informe en Configuration Manager.  
 
-6.  En la página **Confirmación** , haga clic en **Cerrar** para salir del asistente y, a continuación, abra el Generador de informes para configurar las opciones del informe. Escriba la cuenta de usuario y contraseña si se le solicitan y, a continuación, haga clic en **Aceptar**. Si el Generador de informes no está instalado en el equipo, se le solicitará que lo instale. Haga clic en **Ejecutar** para instalar el Generador de informes, una aplicación que resulta necesaria para modificar y crear informes.  
+6. En la página **Confirmación** , haga clic en **Cerrar** para salir del asistente y, a continuación, abra el Generador de informes para configurar las opciones del informe. Escriba la cuenta de usuario y contraseña si se le solicitan y, a continuación, haga clic en **Aceptar**. Si el Generador de informes no está instalado en el equipo, se le solicitará que lo instale. Haga clic en **Ejecutar** para instalar el Generador de informes, una aplicación que resulta necesaria para modificar y crear informes.  
 
-7.  En el Generador de informes de Microsoft, proporcione la instrucción SQL para el informe o compile la instrucción SQL con la utilización de las columnas de las vistas de SQL Server disponibles, agregue parámetros al informe y así sucesivamente.  
+7. En el Generador de informes de Microsoft, proporcione la instrucción SQL para el informe o compile la instrucción SQL con la utilización de las columnas de las vistas de SQL Server disponibles, agregue parámetros al informe y así sucesivamente.  
 
-8.  Haga clic en **Ejecutar** para ejecutar el informe. Compruebe que el informe proporciona la información esperada. Haga clic en **Diseño** para volver a la vista de diseño para modificar el informe, si es necesario.  
+8. Haga clic en **Ejecutar** para ejecutar el informe. Compruebe que el informe proporciona la información esperada. Haga clic en **Diseño** para volver a la vista de diseño para modificar el informe, si es necesario.  
 
 9. Haga clic en **Guardar** para guardar el informe en el servidor de informes. Puede ejecutar el nuevo informe en el nodo **Informes** en el área de trabajo **Supervisión** .  
 
@@ -215,73 +215,73 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
 #### <a name="to-create-a-report-subscription-to-deliver-a-report-to-a-file-share"></a>Para crear una suscripción de informe para entregar un informe a un recurso compartido de archivos  
 
-1.  En la consola de Configuration Manager, haga clic en **Supervisión**.  
+1. En la consola de Configuration Manager, haga clic en **Supervisión**.  
 
-2.  En el área de trabajo **Supervisión** , expanda **Informes** y, a continuación, haga clic en **Informes** para visualizar los informes disponibles. Puede seleccionar una carpeta de informes para mostrar solo los informes que están asociados con la carpeta.  
+2. En el área de trabajo **Supervisión** , expanda **Informes** y, a continuación, haga clic en **Informes** para visualizar los informes disponibles. Puede seleccionar una carpeta de informes para mostrar solo los informes que están asociados con la carpeta.  
 
-3.  Seleccione el informe que desee agregar a la suscripción y, a continuación, en la pestaña **Inicio** , en la sección **Grupo de informes** , haga clic en **Crear suscripción** para abrir el **Asistente para crear suscripciones**.  
+3. Seleccione el informe que desee agregar a la suscripción y, a continuación, en la pestaña **Inicio** , en la sección **Grupo de informes** , haga clic en **Crear suscripción** para abrir el **Asistente para crear suscripciones**.  
 
-4.  En la página **Entrega de suscripción** , configure las siguientes opciones:  
+4. En la página **Entrega de suscripción** , configure las siguientes opciones:  
 
-    -   Informe entregado por: Seleccione **Recurso compartido de archivos** para entregar el informe a un recurso compartido de archivos.  
+   - Informe entregado por: seleccione **Recurso compartido de archivos de Windows** para entregar el informe a un recurso compartido de archivos.  
 
-    -   **Nombre de archivo**: Especifique el nombre de archivo del informe. De forma predeterminada, el archivo de informe no incluye una extensión de nombre de archivo. Seleccione **Agregar extensión de archivo al crearse** para agregar automáticamente una extensión de nombre de archivo a este informe en función del formato de representación.  
+   - **Nombre de archivo**: Especifique el nombre de archivo del informe. De forma predeterminada, el archivo de informe no incluye una extensión de nombre de archivo. Seleccione **Agregar extensión de archivo al crearse** para agregar automáticamente una extensión de nombre de archivo a este informe en función del formato de representación.  
 
-    -   **Ruta de acceso**: especifique una ruta de acceso UNC a una carpeta existente en la que quiere que se entregue el informe \(por ejemplo, \\\\&lt;nombre de servidor\>\\&lt;nombre de recurso compartido de servidor\>\\&lt;carpeta de informes\>\).  
+   - **Ruta de acceso**: especifique una ruta de acceso UNC a una carpeta existente en la que quiere que se entregue el informe \(por ejemplo, \\\\&lt;nombre de servidor\>\\&lt;nombre de recurso compartido de servidor\>\\&lt;carpeta de informes\>\).  
 
-        > [!NOTE]  
-        >  El nombre de usuario especificado posteriormente en esta página debe tener acceso a este recurso compartido de servidor y tener permisos de escritura en la carpeta de destino.  
+     > [!NOTE]  
+     >  El nombre de usuario especificado posteriormente en esta página debe tener acceso a este recurso compartido de servidor y tener permisos de escritura en la carpeta de destino.  
 
-    -   **Formato de representación**: Seleccione uno de los formatos siguientes para el archivo de informe:  
+   - **Formato de representación**: Seleccione uno de los formatos siguientes para el archivo de informe:  
 
-        -   **Archivo XML con datos del informe**: Guarda el informe en formato de lenguaje de marcado extensible.  
+     -   **Archivo XML con datos de informe**: Guarda el informe en formato de lenguaje de marcado extensible.  
 
-        -   **CSV \(delimitado por comas\)**: Guarda el informe en formato de valores separados por comas.  
+     -   **CSV \(delimitado por comas\)**: guarda el informe en formato de valores separados por comas.  
 
-        -   **Archivo TIFF**: Guarda el informe en formato Tagged Image File.  
+     -   **Archivo TIFF**: Guarda el informe en formato Tagged Image File.  
 
-        -   **Archivo de Acrobat \(PDF\)**: Guarda el informe en formato Acrobat Portable Document.  
+     -   **Archivo de Acrobat \(PDF\)**: Guarda el informe en formato Acrobat Portable Document.  
 
-        -   **HTML 4.0**: Guarda el informe como una página web que se puede visualizar solo en exploradores que admiten HTML 4.0. Internet Explorer 5 y las versiones posteriores admiten HTML 4.0.  
+     -   **HTML 4.0**: Guarda el informe como una página web que se puede visualizar solo en exploradores que admiten HTML 4.0. Internet Explorer 5 y las versiones posteriores admiten HTML 4.0.  
 
-            > [!NOTE]  
-            >  Si tiene imágenes en el informe, el formato HTML 4.0 no las incluye en el archivo.  
+         > [!NOTE]  
+         >  Si tiene imágenes en el informe, el formato HTML 4.0 no las incluye en el archivo.  
 
-        -   **MHTML \(archivo web\)**: Guarda el informe en formato MIME HTML \(mhtml\), que se puede visualizar en muchos exploradores web.  
+     -   **MHTML \(archivo web\)**: guarda el informe en formato MIME HTML \(mhtml\) que se puede visualizar en muchos exploradores web.  
 
-        -   **Representador de RPL**: Guarda el informe en formato Report Page Layout \(RPL\).  
+     -   **Representador de RPL**: guarda el informe en formato Report Page Layout \(RPL\).  
 
-        -   **Excel**: Guarda el informe como una hoja de cálculo de Microsoft Excel.  
+     -   **Excel**: Guarda el informe como una hoja de cálculo de Microsoft Excel.  
 
-        -   **Word**: Guarda el informe como un documento de Microsoft Word.  
+     -   **Word**: Guarda el informe como un documento de Microsoft Word.  
 
-    -   **Nombre de usuario**: Especifique una cuenta de usuario de Windows con permisos para tener acceso al recurso compartido y la carpeta del servidor de destino. La cuenta de usuario debe tener acceso a este recurso compartido de servidor y tener permiso de escritura en la carpeta de destino.  
+   - **Nombre de usuario**: Especifique una cuenta de usuario de Windows con permisos para tener acceso al recurso compartido y la carpeta del servidor de destino. La cuenta de usuario debe tener acceso a este recurso compartido de servidor y tener permiso de escritura en la carpeta de destino.  
 
-    -   **Contraseña**: Especifique la contraseña de la cuenta de usuario de Windows. En **Confirmar contraseña**, vuelva a escribir la contraseña.  
+   - **Contraseña**: Especifique la contraseña de la cuenta de usuario de Windows. En **Confirmar contraseña**, vuelva a escribir la contraseña.  
 
-    -   Seleccione una de las siguientes opciones para configurar el comportamiento si ya existe un archivo con el mismo nombre en la carpeta de destino:  
+   - Seleccione una de las siguientes opciones para configurar el comportamiento si ya existe un archivo con el mismo nombre en la carpeta de destino:  
 
-        -   **Sobrescribir archivos existentes con nuevas versiones**: Especifica que si el archivo de informe ya existe, la nueva versión lo sobrescribe.  
+     -   **Sobrescribir archivos existentes con nuevas versiones**: Especifica que si el archivo de informe ya existe, la nueva versión lo sobrescribe.  
 
-        -   **No sobrescribir archivos existentes**: Especifica que si el archivo de informe ya existe, no se realiza ninguna acción.  
+     -   **No sobrescribir archivos existentes**: Especifica que si el archivo de informe ya existe, no se realiza ninguna acción.  
 
-        -   **Incrementar nombres de archivo al agregarse nuevas versiones**: Especifica que si ya existe el archivo de informe, se agrega un número al nuevo informe en el nombre de archivo para distinguirlo de otras versiones.  
+     -   **Incrementar nombres de archivo al agregarse nuevas versiones**: Especifica que si ya existe el archivo de informe, se agrega un número al nuevo informe en el nombre de archivo para distinguirlo de otras versiones.  
 
-    -   **Descripción**: Especifica la descripción de la suscripción de informe.  
+   - **Descripción**: Especifica la descripción de la suscripción de informe.  
 
      Haga clic en **Siguiente**.  
 
-5.  En la página **Programación de suscripción** , seleccione una de las siguientes opciones de programación de entrega para la suscripción de informe:  
+5. En la página **Programación de suscripción** , seleccione una de las siguientes opciones de programación de entrega para la suscripción de informe:  
 
-    -   **Usar programación compartida**: Una programación compartida es una programación definida previamente que puede ser utilizada por otras suscripciones de informes. Active esta casilla y, a continuación, seleccione una programación compartida en la lista si se ha especificado alguna.  
+   -   **Usar programación compartida**: Una programación compartida es una programación definida previamente que puede ser utilizada por otras suscripciones de informes. Active esta casilla y, a continuación, seleccione una programación compartida en la lista si se ha especificado alguna.  
 
-    -   **Crear nueva programación**: Configure la programación en la que se ejecuta este informe, incluidos el intervalo, la hora y fecha de inicio y la fecha de finalización de esta suscripción.  
+   -   **Crear nueva programación**: Configure la programación en la que se ejecuta este informe, incluidos el intervalo, la hora y fecha de inicio y la fecha de finalización de esta suscripción.  
 
-6.  En página **Parámetros de suscripción** , especifique los parámetros de este informe que se utilizan cuando se ejecuta sin supervisión. Si no hay ningún parámetro para el informe, no se muestra esta página.  
+6. En página **Parámetros de suscripción** , especifique los parámetros de este informe que se utilizan cuando se ejecuta sin supervisión. Si no hay ningún parámetro para el informe, no se muestra esta página.  
 
-7.  En la página **Resumen** , revise la configuración de la suscripción de informe. Haga clic en **Anterior** para cambiar la configuración o haga clic en **Siguiente** para crear la suscripción de informe.  
+7. En la página **Resumen** , revise la configuración de la suscripción de informe. Haga clic en **Anterior** para cambiar la configuración o haga clic en **Siguiente** para crear la suscripción de informe.  
 
-8.  En la página **Finalización** , haga clic en **Cerrar** para salir del asistente. Compruebe que la suscripción de informe se creó correctamente. Puede ver y modificar suscripciones de informes en el nodo **Suscripciones** , en **Informes** , en el área de trabajo **Supervisión** .  
+8. En la página **Finalización** , haga clic en **Cerrar** para salir del asistente. Compruebe que la suscripción de informe se creó correctamente. Puede ver y modificar suscripciones de informes en el nodo **Suscripciones** , en **Informes** , en el área de trabajo **Supervisión** .  
 
 ###  <a name="BKMK_ReportSubscriptionEmail"></a> Creación de una suscripción de informe para la entrega de un informe a través del correo electrónico  
  Cuando crea una suscripción de informe para entregar un informe mediante el correo electrónico, se envía un correo electrónico a los destinatarios configurados y el informe se incluye como datos adjuntos. El servidor de informes no valida las direcciones de correo electrónico ni obtiene direcciones de correo electrónico de un servidor de correo electrónico. Debe saber de antemano las direcciones de correo electrónico que desea usar. De forma predeterminada, puede enviar informes a través del correo electrónico a cualquier cuenta de correo electrónico válida dentro o fuera de su organización. Puede seleccionar las dos opciones de entrega de correo electrónico siguientes:  
@@ -307,7 +307,7 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
     -   **Informe entregado por**: Seleccione **Correo electrónico** para entregar el informe como datos adjuntos en un mensaje de correo electrónico.  
 
-    -   **A**: Especifique una dirección de correo electrónico válida a la que enviar este informe.  
+    -   **Para**: Especifique una dirección de correo electrónico válida a la que enviar este informe.  
 
         > [!NOTE]  
         >  Puede especificar varios destinatarios de correo electrónico mediante la separación de cada dirección de correo electrónico con un punto y coma.  
@@ -318,7 +318,7 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
     -   **Responder a**: Especifique la dirección de respuesta que se utilizará si el destinatario responde al mensaje de correo electrónico.  
 
-    -   **Tema**: Especifique una línea de tema del mensaje de correo electrónico de suscripción.  
+    -   **Asunto**: Especifique una línea de tema del mensaje de correo electrónico de suscripción.  
 
     -   **Prioridad**: Seleccione la marca de prioridad del mensaje de correo electrónico. Seleccione **Baja**, **Normal**o **Alta**. Microsoft Exchange usa la configuración de prioridad para establecer una marca que indica la importancia del mensaje de correo electrónico.  
 
@@ -328,19 +328,19 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
     -   **Incluir vínculo**: Incluye la dirección URL del informe suscrito en el cuerpo del mensaje de correo electrónico.  
 
-    -   **Incluir informe**: Especifica que el informe se adjunta al mensaje de correo electrónico. El formato en el que se adjuntará el informe se especifica en la lista **Formato de representación** .  
+    -   **Incluir informe**: especifique que el informe se adjunta al mensaje de correo electrónico. El formato en el que se adjuntará el informe se especifica en la lista **Formato de representación** .  
 
     -   **Formato de representación**: Seleccione uno de los siguientes formatos para el informe adjunto:  
 
-        -   **Archivo XML con datos del informe**: Guarda el informe en formato de lenguaje de marcado extensible.  
+        -   **Archivo XML con datos de informe**: Guarda el informe en formato de lenguaje de marcado extensible.  
 
-        -   **CSV \(delimitado por comas\)**: Guarda el informe en formato de valores separados por comas.  
+        -   **CSV \(delimitado por comas\)**: guarda el informe en formato de valores separados por comas.  
 
         -   **Archivo TIFF**: Guarda el informe en formato Tagged Image File.  
 
         -   **Archivo de Acrobat \(PDF\)**: Guarda el informe en formato Acrobat Portable Document.  
 
-        -   **MHTML \(archivo web\)**: Guarda el informe en formato MIME HTML \(mhtml\), que se puede visualizar en muchos exploradores web.  
+        -   **MHTML \(archivo web\)**: guarda el informe en formato MIME HTML \(mhtml\) que se puede visualizar en muchos exploradores web.  
 
         -   **Excel**: Guarda el informe como una hoja de cálculo de Microsoft Excel.  
 

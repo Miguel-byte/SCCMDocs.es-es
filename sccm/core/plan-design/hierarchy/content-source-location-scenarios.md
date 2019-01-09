@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: c552c58ca44943f1c5be6e2ffc9efc807c0cc41b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a50e78a65a1c41189baedf877ece24c324abad71
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340002"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423922"
 ---
 # <a name="content-source-location-scenarios-in-system-center-configuration-manager"></a>Escenarios de ubicación de orígenes de contenido en System Center Configuration Manager
 
@@ -35,9 +35,9 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 **Las siguientes tres opciones definen el comportamiento cuando los clientes solicitan contenido:**
 
--  **Permitir ubicación de origen de reserva para contenido** (habilitado o no habilitado): se trata de una opción que se puede habilitar en la pestaña **Grupos de límites** de un punto de distribución. Esto permite al cliente usar un punto de distribución configurado como ubicación de reserva cuando el contenido no está disponible en un punto de distribución preferido.  
+- **Permitir ubicación de origen de reserva para contenido** (habilitado o no habilitado): se trata de una opción que se puede habilitar en la pestaña **Grupos de límites** de un punto de distribución. Esto permite al cliente usar un punto de distribución configurado como ubicación de reserva cuando el contenido no está disponible en un punto de distribución preferido.  
 
- - **Comportamiento de implementación de la velocidad de conexión de red**: cada implementación se configura con uno de los siguientes comportamientos que se usarán cuando la conexión al punto de distribución es lenta:  
+  - **Comportamiento de implementación de la velocidad de conexión de red**: cada implementación se configura con uno de los siguientes comportamientos que se usarán cuando la conexión al punto de distribución es lenta:  
 
     -   **Descargar contenido desde el punto de distribución y ejecutar localmente**  
 
@@ -45,7 +45,7 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
     La velocidad de conexión para un punto de distribución está configurada en la pestaña **Referencias** del grupo de límites y es específica de ese grupo de límites.  
 
- -  **Distribución de paquetes a petición** (a los puntos de distribución preferidos): esta opción está habilitada cuando se selecciona la opción **Distribuir el contenido de este paquete en puntos de distribución preferidos** en la pestaña **Configuración de distribución** de las propiedades de un paquete o de una aplicación. Cuando se habilita, esta opción indica a Configuration Manager que copie automáticamente el contenido a un punto de distribución preferido que aún no tiene el contenido después de que un cliente solicita ese contenido desde ese punto de distribución.  
+  - **Distribución de paquetes a petición** (a los puntos de distribución preferidos): esta opción está habilitada cuando se selecciona la opción **Distribuir el contenido de este paquete en puntos de distribución preferidos** en la pestaña **Configuración de distribución** de las propiedades de un paquete o de una aplicación. Cuando se habilita, esta opción indica a Configuration Manager que copie automáticamente el contenido a un punto de distribución preferido que aún no tiene el contenido después de que un cliente solicita ese contenido desde ese punto de distribución.  
 
 
  **Los siguientes requisitos se aplican a todos los escenarios:**
@@ -61,9 +61,9 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **El contenido está disponible en un punto de distribución preferido**  
 
--   **Permitir reserva**: no habilitado  
+-   **Permitir reserva**: No habilitado  
 
--   **Comportamiento de implementación para una red lenta**: cualquier configuración  
+-   **Comportamiento de implementación para red lenta**: Cualquier configuración  
 
 
 **Detalles:** (la configuración para distribución de paquetes a petición no es relevante en este escenario).  
@@ -79,9 +79,9 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **El contenido está disponible en un punto de distribución preferido**  
 
--   **Permitir reserva**: habilitado  
+-   **Permitir reserva**: Habilitado  
 
--   **Comportamiento de implementación para una red lenta**: no descargar contenido  
+-   **Comportamiento de implementación para red lenta**: No descargar contenido  
 
 
 **Detalles:** (la configuración para distribución de paquetes a petición no es relevante en este escenario).  
@@ -97,9 +97,9 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **El contenido está disponible en un punto de distribución preferido**  
 
--   **Permitir reserva**: habilitado  
+-   **Permitir reserva**: Habilitado  
 
--   **Comportamiento de implementación para una red lenta**: descargar e instalar contenido  
+-   **Comportamiento de implementación para red lenta**: Descargar e instalar contenido  
 
 
 **Detalles:** (la configuración para distribución de paquetes a petición no es relevante en este escenario).  
@@ -117,9 +117,9 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **Distribuir el contenido de este paquete en puntos de distribución preferidos** no está habilitado  
 
--   **Permitir reserva**: no habilitado  
+-   **Permitir reserva**: No habilitado  
 
--   **Comportamiento de implementación para una red lenta**: cualquier configuración  
+-   **Comportamiento de implementación para red lenta**: Cualquier configuración  
 
 
 **Detalles:**  
@@ -137,9 +137,9 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **Distribuir el contenido de este paquete en puntos de distribución preferidos** no está habilitado  
 
--   **Permitir reserva**: habilitado  
+-   **Permitir reserva**: Habilitado  
 
--   **Comportamiento de implementación para una red lenta**: no descargar contenido  
+-   **Comportamiento de implementación para red lenta**: No descargar contenido  
 
 
 **Detalles:**  
@@ -157,9 +157,9 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **Distribuir el contenido de este paquete en puntos de distribución preferidos** no está habilitado  
 
--   **Permitir reserva**: habilitado  
+-   **Permitir reserva**: Habilitado  
 
--   **Comportamiento de implementación para una red lenta**: descargar e instalar contenido  
+-   **Comportamiento de implementación para red lenta**: Descargar e instalar contenido  
 
 
 **Detalles:**  
@@ -177,9 +177,9 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **Distribuir el contenido de este paquete en puntos de distribución preferidos** está habilitado  
 
--   **Permitir reserva**: no habilitado  
+-   **Permitir reserva**: No habilitado  
 
--   **Comportamiento de implementación para una red lenta**: cualquier configuración  
+-   **Comportamiento de implementación para red lenta**: Cualquier configuración  
 
 
 **Detalles:**  
@@ -205,9 +205,9 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **Distribuir el contenido de este paquete en puntos de distribución preferidos** está habilitado  
 
--   **Permitir reserva**: habilitado  
+-   **Permitir reserva**: Habilitado  
 
--   **Comportamiento de implementación para una red lenta**: no descargar contenido  
+-   **Comportamiento de implementación para red lenta**: No descargar contenido  
 
 
 **Detalles:**  
@@ -235,9 +235,9 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **Distribuir el contenido de este paquete en puntos de distribución preferidos** está habilitado  
 
--   **Permitir reserva**: habilitado  
+-   **Permitir reserva**: Habilitado  
 
--   **Comportamiento de implementación para una red lenta**: descargar e instalar contenido  
+-   **Comportamiento de implementación para red lenta**: Descargar e instalar contenido  
 
 
 **Detalles:**  

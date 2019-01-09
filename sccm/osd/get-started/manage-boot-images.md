@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6a2fe20896a781d7c897bd5a827d25a7b70390b7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b0fa269199f7f3bf4299f90faef9e55766f775d4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351520"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421338"
 ---
 # <a name="manage-boot-images-with-system-center-configuration-manager"></a>Administrar imágenes de arranque con System Center Configuration Manager
 
@@ -24,7 +24,7 @@ ms.locfileid: "32351520"
 Una imagen de arranque de Configuration Manager es una imagen de [Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) que se usa durante la implementación de un sistema operativo. Las imágenes de arranque se usan para iniciar un equipo en WinPE. Este sistema operativo mínimo contiene servicios y componentes limitados. Configuration Manager usa WinPE para preparar el equipo de destino para la instalación de Windows. Utilice las siguientes secciones para administrar imágenes de arranque:
 
 ## <a name="BKMK_BootImageDefault"></a> Imágenes de arranque predeterminadas
-Configuration Manager proporciona dos imágenes de arranque predeterminadas: una compatible con las plataformas x86 y otra compatible con las plataformas x64. Estas imágenes se almacenan en: \\\\*NombreDeServidor*>\SMS_<*códigoDeSitio*>\osd\boot\\<*x64*> o <*i386*>. Las imágenes de arranque predeterminadas se actualizan o se vuelven a generar según la acción que realice.
+Configuration Manager proporciona dos imágenes de arranque predeterminadas: Una para plataformas x86 y otra para plataformas x64. Estas imágenes se almacenan en: \\\\*NombreDeServidor*>\SMS_<*códigoDeSitio*>\osd\boot\\<*x64*> o <*i386*>. Las imágenes de arranque predeterminadas se actualizan o se vuelven a generar según la acción que realice.
 
 Tenga en cuenta los comportamientos siguientes de cualquiera de las acciones descritas para las imágenes de arranque predeterminadas:
 - Los objetos de controlador de origen deben ser válidos. Estos objetos incluyen los archivos de origen del controlador. Si los objetos no son válidos, el sitio no agrega los controladores a las imágenes de arranque.
@@ -62,51 +62,51 @@ A partir de la versión 1706 de Configuration Manager, vuelva a cargar la imagen
 
  Durante la instalación de sitio, Configuration Manager agrega automáticamente imágenes de arranque basadas en una versión de WinPE desde la versión admitida de Windows ADK. Según la versión de Configuration Manager, es posible que pueda agregar imágenes de arranque basadas en una versión de WinPE desde la versión admitida de Windows ADK. Se produce un error al intentar agregar una imagen de arranque que contiene una versión no admitida de WinPE. En la lista siguiente se muestran las versiones de Windows ADK y WinPE que se admiten actualmente: 
 
--   **Versión de Windows ADK**  
+- **Versión de Windows ADK**  
 
-     Windows ADK para Windows 10  
+   Windows ADK para Windows 10  
 
--   **Versiones de Windows PE para imágenes de arranque personalizables desde la consola de Configuration Manager**  
+- **Versiones de Windows PE para imágenes de arranque personalizables desde la consola de Configuration Manager**  
 
-     Windows PE 10  
+   Windows PE 10  
 
--   **Versiones admitidas de Windows PE para imágenes de arranque que no se pueden personalizar desde la consola de Configuration Manager**  
+- **Versiones admitidas de Windows PE para imágenes de arranque que no se pueden personalizar desde la consola de Configuration Manager**  
 
-     Windows PE 3.1<sup>1</sup> y Windows PE 5  
+   Windows PE 3.1<sup>1</sup> y Windows PE 5  
 
-     <sup>1</sup> Solo se puede agregar una imagen de arranque a Configuration Manager si se basa en Windows PE 3.1. Actualice el AIK de Windows para Windows 7 (basado en Windows PE 3.0) con el complemento de AIK de Windows para Windows 7 SP1 (basado en Windows PE 3.1). Descargue el complemento de AIK de Windows para Windows 7 SP1 en el [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=5188).  
+   <sup>1</sup> Solo se puede agregar una imagen de arranque a Configuration Manager si se basa en Windows PE 3.1. Actualice el AIK de Windows para Windows 7 (basado en Windows PE 3.0) con el complemento de AIK de Windows para Windows 7 SP1 (basado en Windows PE 3.1). Descargue el complemento de AIK de Windows para Windows 7 SP1 en el [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=5188).  
 
-     Por ejemplo, use la consola de Configuration Manager para personalizar las imágenes de arranque basadas en Windows PE 10 desde Windows ADK para Windows 10. Para una imagen de arranque basada en Windows PE 5, personalícela desde otro equipo con la versión de DISM de Windows ADK para Windows 8. Después, agregue la imagen de arranque personalizada a la consola de Configuration Manager. Para obtener más información, consulte [Customize boot images](customize-boot-images.md) (Personalización de imágenes de arranque).
+   Por ejemplo, use la consola de Configuration Manager para personalizar las imágenes de arranque basadas en Windows PE 10 desde Windows ADK para Windows 10. Para una imagen de arranque basada en Windows PE 5, personalícela desde otro equipo con la versión de DISM de Windows ADK para Windows 8. Después, agregue la imagen de arranque personalizada a la consola de Configuration Manager. Para obtener más información, consulte [Customize boot images](customize-boot-images.md) (Personalización de imágenes de arranque).
 
- Use el siguiente procedimiento para agregar una imagen de arranque manualmente.  
+  Use el siguiente procedimiento para agregar una imagen de arranque manualmente.  
 
 #### <a name="to-add-a-boot-image"></a>Para agregar una imagen de arranque  
 
-1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
+1. En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
 
-2.  En el área de trabajo **Biblioteca de software** , expanda **Sistemas operativos**y, a continuación, haga clic en **Imágenes de arranque**.  
+2. En el área de trabajo **Biblioteca de software** , expanda **Sistemas operativos**y, a continuación, haga clic en **Imágenes de arranque**.  
 
-3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Agregar imagen de arranque** para iniciar el Asistente para agregar imagen de archivo.  
+3. En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Agregar imagen de arranque** para iniciar el Asistente para agregar imagen de archivo.  
 
-4.  En la página **Origen de datos** , especifique las opciones siguientes y, a continuación, haga clic en **Siguiente**:  
+4. En la página **Origen de datos** , especifique las opciones siguientes y, a continuación, haga clic en **Siguiente**:  
 
-    -   En el cuadro **Ruta de acceso** , especifique la ruta de acceso del archivo WIM de imagen de arranque.  
+   -   En el cuadro **Ruta de acceso** , especifique la ruta de acceso del archivo WIM de imagen de arranque.  
 
-         La ruta de acceso especificada debe ser una ruta de acceso de red válida con el formato UNC. Por ejemplo: \\\\<*nombreDeServidor*\\<*nombreRecursoCompartido*>\\<*nombreImagenArranque*> WIM.  
+        La ruta de acceso especificada debe ser una ruta de acceso de red válida con el formato UNC. Por ejemplo: \\\\<*nombreDeServidor*\\<*nombreRecursoCompartido*>\\<*nombreImagenArranque*> WIM.  
 
-    -   Seleccione la imagen de arranque de la lista desplegable **Imagen de arranque** . Si el archivo WIM contiene varias imágenes de arranque, seleccione la imagen apropiada.  
+   -   Seleccione la imagen de arranque de la lista desplegable **Imagen de arranque** . Si el archivo WIM contiene varias imágenes de arranque, seleccione la imagen apropiada.  
 
-5.  En la página **General**  , especifique las opciones siguientes y, a continuación, haga clic en **Siguiente**.  
+5. En la página **General**  , especifique las opciones siguientes y, a continuación, haga clic en **Siguiente**.  
 
-    -   En el cuadro **Nombre** , especifique un nombre único para la imagen de arranque.  
+   -   En el cuadro **Nombre** , especifique un nombre único para la imagen de arranque.  
 
-    -   En el cuadro **Versión** , especifique un número de versión para la imagen de arranque.  
+   -   En el cuadro **Versión** , especifique un número de versión para la imagen de arranque.  
 
-    -   En el cuadro **Comentario** , especifique una descripción breve sobre cómo se utiliza la imagen de arranque.  
+   -   En el cuadro **Comentario** , especifique una descripción breve sobre cómo se utiliza la imagen de arranque.  
 
-6.  Complete el asistente.  
+6. Complete el asistente.  
 
- La imagen de arranque se muestra en el nodo **Imagen de arranque** de la consola de Configuration Manager. Antes de usar la imagen de arranque para implementar un sistema operativo, distribúyala a los puntos de distribución. 
+   La imagen de arranque se muestra en el nodo **Imagen de arranque** de la consola de Configuration Manager. Antes de usar la imagen de arranque para implementar un sistema operativo, distribúyala a los puntos de distribución. 
 
 > [!NOTE]  
 >  En el nodo **Imagen de arranque** de la consola, en la columna **Tamaño (KB)** se muestra el tamaño descomprimido de cada imagen de arranque. Cuando el sitio envía una imagen de arranque a través de la red, envía una copia comprimida. Esta copia normalmente es más pequeña que el tamaño que se muestra en la columna **Tamaño (KB)**.  
@@ -127,13 +127,13 @@ A partir de la versión 1706 de Configuration Manager, vuelva a cargar la imagen
 ##  <a name="BKMK_ModifyBootImages"></a> Modificación de una imagen de arranque  
  Puede agregar o quitar controladores de dispositivo para la imagen o editar las propiedades asociadas a la imagen de arranque. Los controladores de dispositivo que agregue o quite pueden incluir adaptadores de red o controladores de dispositivo de almacenamiento masivo. Tenga en cuenta los siguientes factores al modificar imágenes de arranque:  
 
--   Importe y habilite los controladores de dispositivo en el catálogo de controladores de dispositivo antes de agregarlos a la imagen de arranque.  
+- Importe y habilite los controladores de dispositivo en el catálogo de controladores de dispositivo antes de agregarlos a la imagen de arranque.  
 
--   Al modificar una imagen de arranque, dicha imagen no cambia ninguno de los paquetes asociados a los que hace referencia.  
+- Al modificar una imagen de arranque, dicha imagen no cambia ninguno de los paquetes asociados a los que hace referencia.  
 
--   Después de realizar cambios en una imagen de arranque, **actualícela** en los puntos de distribución que ya la tienen. Este proceso hace que la versión más reciente de la imagen de arranque esté disponible para los clientes. Para obtener más información, vea [Manage content you have distributed](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_manage) (Administración del contenido que ha distribuido).  
+- Después de realizar cambios en una imagen de arranque, **actualícela** en los puntos de distribución que ya la tienen. Este proceso hace que la versión más reciente de la imagen de arranque esté disponible para los clientes. Para obtener más información, vea [Manage content you have distributed](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_manage) (Administración del contenido que ha distribuido).  
 
- Use el procedimiento siguiente para modificar una imagen de arranque.  
+  Use el procedimiento siguiente para modificar una imagen de arranque.  
 
 #### <a name="to-modify-the-properties-of-a-boot-image"></a>Para modificar las propiedades de una imagen de arranque  
 
@@ -220,7 +220,7 @@ A partir de la versión 1706 de Configuration Manager, vuelva a cargar la imagen
 
         -   Haga clic en **Validar** para comprobar la integridad del paquete de imagen de arranque en el punto de distribución o el grupo de puntos de distribución seleccionado.  
 
-    -   En la pestaña **Componentes opcionales**, especifique los componentes agregados a Windows PE para su uso con Configuration Manager. Para más información acerca de los componentes opcionales disponibles, consulte [WinPE: agregar paquetes (referencia de los componentes opcionales)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
+    -   En la pestaña **Componentes opcionales**, especifique los componentes agregados a Windows PE para su uso con Configuration Manager. Para obtener más información sobre los componentes opcionales, vea [WinPE: agregar paquetes (referencia de los componentes opcionales)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
 
     -   En la pestaña **Seguridad** , seleccione un usuario administrativo y cambie las operaciones que puede realizar.  
 
@@ -249,14 +249,14 @@ A partir de la versión 1706 de Configuration Manager, vuelva a cargar la imagen
 ##  <a name="BKMK_BootImageLanguage"></a> Configuración de varios idiomas para la implementación de una imagen de arranque  
  Las imágenes de arranque son independientes del idioma. Esta funcionalidad permite usar una imagen de arranque para mostrar el texto de la secuencia de tareas en varios idiomas en WinPE. Incluya la compatibilidad de idioma adecuada de la pestaña **Componentes opcionales** de la imagen de arranque. Después, establezca la variable de secuencia de tareas correspondiente para indicar el idioma que se va a mostrar. El idioma del sistema operativo implementado es independiente del idioma de WinPE. El idioma que WinPE muestra al usuario se determina de la manera siguiente:  
 
--   Cuando un usuario ejecuta la secuencia de tareas desde un sistema operativo existente, Configuration Manager utiliza automáticamente el idioma configurado para el usuario. Cuando la secuencia de tareas se ejecuta automáticamente como resultado de una fecha límite de implementación obligatoria, Configuration Manager utiliza el idioma del sistema operativo.  
+- Cuando un usuario ejecuta la secuencia de tareas desde un sistema operativo existente, Configuration Manager utiliza automáticamente el idioma configurado para el usuario. Cuando la secuencia de tareas se ejecuta automáticamente como resultado de una fecha límite de implementación obligatoria, Configuration Manager utiliza el idioma del sistema operativo.  
 
--   Para las implementaciones de sistema operativo que usan PXE o medios, establezca el valor del identificador de idioma en la variable **SMSTSLanguageFolder** como parte de un comando de preinicio. Cuando el equipo arranca WinPE, los mensajes se muestran en el idioma que especificó en la variable. Si se produce un error al tener acceso al archivo de recursos de idioma en la carpeta especificada, o bien no se establece la variable, WinPE muestra los mensajes en el idioma predeterminado.  
+- Para las implementaciones de sistema operativo que usan PXE o medios, establezca el valor del identificador de idioma en la variable **SMSTSLanguageFolder** como parte de un comando de preinicio. Cuando el equipo arranca WinPE, los mensajes se muestran en el idioma que especificó en la variable. Si se produce un error al tener acceso al archivo de recursos de idioma en la carpeta especificada, o bien no se establece la variable, WinPE muestra los mensajes en el idioma predeterminado.  
 
-    > [!NOTE]  
-    >  Si el medio está protegido con una contraseña, el texto que solicita la contraseña al usuario siempre se muestra en el idioma de WinPE.  
+  > [!NOTE]  
+  >  Si el medio está protegido con una contraseña, el texto que solicita la contraseña al usuario siempre se muestra en el idioma de WinPE.  
 
- Use el procedimiento siguiente para establecer el idioma de WinPE de las implementaciones de sistema operativo iniciadas por un medio o por PXE.  
+  Use el procedimiento siguiente para establecer el idioma de WinPE de las implementaciones de sistema operativo iniciadas por un medio o por PXE.  
 
 #### <a name="to-set-the-windows-pe-language-for-a-pxe-or-media-initiated-operating-system-deployment"></a>Para establecer el idioma de Windows PE de una implementación de sistema operativo iniciada por un medio o por PXE  
 

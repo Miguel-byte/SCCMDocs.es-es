@@ -10,12 +10,12 @@ ms.assetid: 41cdebfe-b595-40aa-a385-32e0746255ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7fbba9bc6c56a7d4b7a4fc908bfd7fdc9ffa762
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: df7d443a9f611278296c729949d5dfb764a43e9e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458194"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420795"
 ---
 # <a name="support-center-user-interface-reference"></a>Referencia de la interfaz de usuario del Centro de soporte técnico
 
@@ -96,7 +96,7 @@ Cuando se activa la casilla de una opción, el Centro de soporte técnico recopi
 
 - **WMI de cliente**: información de configuración del cliente de WMI. El Centro de soporte técnico no recopila la directiva del cliente.  
 
-- **Solución de problemas**: datos de solución de problemas en tiempo real para ayudar a diagnosticar problemas comunes de cliente relativos a Active Directory, puntos de administración, redes, asignaciones de directiva y registro.  
+- **Solución de problemas**: datos de solución de problemas en tiempo real para ayudar a diagnosticar problemas comunes de cliente relativos a Active Directory, puntos de administración, redes, asignaciones de directivas y registro.  
 
     > [!NOTE]  
     > Este tipo de datos no se admite cuando se realiza una conexión remota a otro cliente.  
@@ -137,29 +137,29 @@ Realiza una de las siguientes acciones en el servicio de agente cliente de Confi
 #### <a name="properties"></a>Propiedades
 Al cargar los detalles del cliente, el Centro de soporte técnico muestra las siguientes propiedades:  
 
-- **Id. de cliente**: identificador único que Configuration Manager usa para identificar al cliente  
+- **Id. de cliente**: identificador único que Configuration Manager usa para identificar al cliente.  
 
-- **Id. de hardware**: identificador único que Configuration Manager usa para identificar al hardware del cliente  
+- **Id. de hardware**: identificador único que Configuration Manager usa para identificar al hardware del cliente.  
 
-- **Aprobado**: indica si el cliente se ha aprobado en Configuration Manager  
+- **Aprobado**: indica si el cliente se ha aprobado en Configuration Manager.  
 
-- **Estado de registro**: indica si el cliente está registrado con Configuration Manager  
+- **Estado de registro**: indica si el cliente está registrado con Configuration Manager.  
 
-- **Accesible desde Internet**: indica si el cliente está en Internet  
+- **Accesible desde Internet**: indica si el cliente está en Internet.  
 
-- **Versión**: número de versión del cliente de Configuration Manager instalado  
+- **Versión**: número de versión del cliente de Configuration Manager instalado.  
 
-- **Código de sitio**: código de sitio del sitio primario al que está asignado el cliente  
+- **Código de sitio**: código de sitio del sitio primario al que está asignado el cliente.  
 
-- **Punto de administración asignado**: nombre de dominio completo (FQDN) del punto de administración asignado actualmente del cliente  
+- **Punto de administración asignado**: nombre de dominio completo (FQDN) del punto de administración asignado actualmente del cliente.  
 
-- **Punto de administración residente**: FQDN del punto de administración residente  
+- **Punto de administración residente**: FQDN del punto de administración residente.  
 
-- **Punto de administración proxy**: nombre de host o FQDN del punto de administración proxy (si existe)  
+- **Punto de administración de proxy**: nombre de host o FQDN del punto de administración proxy (si existe).  
 
-- **Código de sitio de proxy**: código de sitio del sitio secundario (si existe)  
+- **Código de sitio de proxy**: Código de sitio del sitio secundario (si lo hay)  
 
-- **Estado de proxy**: estado del punto de administración proxy del cliente de Configuration Manager. Por ejemplo, **Activo** o **Pendiente**.  
+- **Estado del proxy**: estado del punto de administración proxy del cliente de Configuration Manager. Por ejemplo, **Activo** o **Pendiente**.  
 
 
 
@@ -170,7 +170,7 @@ Use las acciones de esta pestaña en lugar de la herramienta anterior [PolicySpy
 #### <a name="load-policy"></a>Cargar directiva
 Esta opción varía en función de la vista:
 
-- **Cargar directiva real**: seleccione **Real** en el grupo Vista y luego seleccione esta opción en el grupo Directiva. El Centro de soporte técnico carga la directiva de cliente que ha seleccionado.  
+- **Cargar directiva real**: haga clic en **Real** en el grupo Vista y luego seleccione esta opción en el grupo Directiva. El Centro de soporte técnico carga la directiva de cliente que ha seleccionado.  
 
 - **Cargar directiva solicitada**: haga clic en **Solicitada** en el grupo Vista y luego seleccione esta opción en el grupo Directiva. El Centro de soporte técnico carga la directiva de cliente solicitada del cliente.  
 
@@ -196,7 +196,7 @@ Seleccione la lista desplegable de la parte inferior de este botón para ver otr
 
 - **Solicitar directiva**: el Centro de soporte técnico solicita la directiva de cliente del punto de administración.  
 
-- **Evaluar directiva**: el Centro de soporte técnico evalúa la directiva de cliente en el cliente.  
+- **Evaluar la directiva**: el Centro de soporte técnico evalúa la directiva de cliente en el cliente.  
 
 - **Restablecer valores predeterminados de directiva**: el Centro de soporte técnico indica al cliente de Configuration Manager que vuelva a aplicar la directiva predeterminada. Quita todas las directivas de equipo y de usuario del cliente.  
 
@@ -228,24 +228,24 @@ Los siguientes elementos de este menú solicitan una acción de cliente relacion
 
     - **Agotar tiempo de espera de solicitudes de contenido**: si alguna solicitud de ubicación de contenido se ha estado ejecutando durante demasiado tiempo, esta acción detiene la solicitud.  
 
- - **Evaluación de implementación de aplicaciones**: inicia una tarea que evalúa las aplicaciones implementadas.  
+  - **Evaluación de implementación de aplicaciones**: inicia una tarea que evalúa las aplicaciones implementadas.  
 
- - **Evaluación de implementación de actualizaciones de software**: inicia una tarea que evalúa las actualizaciones de software implementadas.  
+  - **Evaluación de implementación de actualizaciones de software**: inicia una tarea que evalúa las actualizaciones de software implementadas.  
 
- - **Análisis de origen de actualizaciones de software**: inicia una tarea que analiza las ubicaciones de origen de las actualizaciones de software.  
+  - **Análisis de origen de actualizaciones de software**: inicia una tarea que analiza las ubicaciones de origen de las actualizaciones de software.  
 
- - **Actualización de lista de origen de Windows Installer**: inicia una tarea que actualiza la ubicación de origen de las instalaciones de Windows Installer (MSI).  
+  - **Actualización de lista de origen de Windows Installer**: inicia una tarea que actualiza la ubicación de origen de las instalaciones de Windows Installer (MSI).  
 
 #### <a name="content-view"></a>Vista de contenido
 Vea las aplicaciones, los paquetes y las actualizaciones que se han cargado en el cliente. Si selecciona una aplicación, un paquete o una actualización, puede ver detalles sobre ese contenido. En algunas aplicaciones, también puede realizar las siguientes acciones:  
 
- - **Actualizar**: actualiza la vista de detalles  
+ - **Actualizar**: actualiza la vista de detalles.  
 
- - **Verificar o descargar**: comprueba que una aplicación está disponible para su descarga  
+ - **Comprobar o descargar**: comprueba que una aplicación está disponible para la descarga.  
 
- - **Instalar**: instala la aplicación  
+ - **Instalar**: instala la aplicación.  
 
- - **Desinstalar**: desinstala la aplicación  
+ - **Desinstalar**: Desinstalar la aplicación  
 
 #### <a name="cache-view"></a>Vista Caché
 Vea la configuración de la memoria caché del cliente, así como detalles sobre el contenido de la memoria caché. Cuando se conecta el Centro de soporte técnico a un cliente local, también es posible realizar las siguientes acciones:  
@@ -262,18 +262,18 @@ En esta vista se muestran las siguientes propiedades:
  - **Id. de contenido**  
  - **Id. de caché**  
  - **Size**  
- - **Última referencia**: esta propiedad es la fecha en la que el cliente ha leído o escrito en este elemento de la memoria caché por última vez.  
+ - **Última referencia**: esta propiedad es la fecha en la que el cliente ha leído o escrito en este elemento de la caché por última vez.  
 
 #### <a name="monitoring-view"></a>Vista de supervisión
 Seleccione **Supervisar** para ver el progreso activo de las implementaciones de aplicaciones y las actualizaciones de software. Esta vista muestra los mensajes de estado generados desde la aplicación y los mensajes de WMI de eventos de actualización de software.
 
 En esta vista se muestran las siguientes propiedades de cada evento:  
 
- - **Hora**: hora a la que el cliente ha generado el evento  
- - **Tipo de tema**: tipo del mensaje de estado  
+ - **Hora**: hora a la que el cliente ha generado el evento.  
+ - **Tipo de tema**: tipo del mensaje de estado.  
  - **Id. del tema**: identificador del mensaje de estado; se usa para asignarse a eventos en los archivos de registro.  
- - **Tipo de id. del tema**: subtipo del mensaje de estado  
- - **Id. de estado**: resultado de la acción que se está supervisando  
+ - **Tipo de id. del tema**: subtipo del mensaje de estado.  
+ - **Id. de estado**: resultado de la acción que se está supervisando.  
  - **Detalles** y **Datos de evento**: más información sobre los mensajes de estado que se muestran en esta vista. Puede que Detalles del estado esté en blanco algunas veces.  
 
 
@@ -292,15 +292,15 @@ El Centro de soporte técnico carga o actualiza la lista de inventario del clien
 
 Los siguientes elementos de este menú solicitan una acción de cliente relacionada con el inventario:  
 
- - **Ciclo de recopilación de datos de detección (latido)**: desencadena la tarea de cliente que sirve para recopilar información de detección de dispositivos  
+ - **Ciclo de recopilación de datos de detección (latido)**: desencadena la tarea de cliente que sirve para recopilar información de detección de dispositivos.  
 
- - **Ciclo de recopilación de archivos**: desencadena la tarea de cliente que sirve para recopilar archivos locales  
+ - **Ciclo de recopilación de archivos**: desencadena la tarea de cliente que sirve para recopilar archivos locales.  
 
- - **Ciclo de inventario de hardware**: desencadena la tarea de cliente que sirve para recopilar datos de inventario de hardware  
+ - **Ciclo de inventario de hardware**: desencadena la tarea de cliente que sirve para recopilar datos de inventario de hardware.  
 
- - **Ciclo de recopilación de IDMIF**: desencadena la tarea de cliente que sirve para recopilar datos de IDMIF  
+ - **Ciclo de recopilación de IDMIF**: desencadena la tarea de cliente que sirve para recopilar datos de IDMIF.  
 
- - **Ciclo de inventario de software**: desencadena la tarea de cliente que sirve para recopilar datos de inventario de software  
+ - **Ciclo de inventario de software**: desencadena la tarea de cliente que sirve para recopilar datos de inventario de software.  
 
  - **Ciclo de informe de medición de software**: desencadena la tarea de cliente que sirve para elaborar un informe de medición de software y enviarlo al punto de administración. Siga el progreso de esta tarea en **SWMTRReportGen.log**.
 
@@ -314,19 +314,19 @@ Los siguientes elementos de este menú solicitan una acción de cliente relacion
 #### <a name="views"></a>Vistas
 Si una característica no está habilitada, la vista no muestra ningún dato. 
 
-- **Estado**: muestra los conjuntos de datos de inventario recopilados por el cliente  
+- **Estado**: muestra los conjuntos de datos de inventario recopilados por el cliente.  
 
-- **DDR**: información sobre los datos de detección de cliente recopilados del cliente  
+- **DDR**: información sobre los datos de detección de cliente recopilados del cliente.  
 
-- **HINV**: información sobre los datos de inventario de hardware recopilados del cliente  
+- **HINV**: información sobre los datos de inventario de hardware recopilados del cliente.  
 
-- **SINV**: información sobre los datos de inventario de software recopilados del cliente  
+- **SINV**: información sobre los datos de inventario de software recopilados del cliente.  
 
-- **Recopilación de archivos**: información sobre los archivos recopilados del cliente  
+- **Colección de archivos**: información sobre los archivos recopilados del cliente.  
 
-- **IDMIF**: información sobre los datos IDMIF y NOIDMIF recopilados del cliente  
+- **IDMIF**: información sobre los datos IDMIF y NOIDMIF recopilados del cliente.  
 
-- **Medición**: información sobre los datos de medición de software recopilados del cliente  
+- **Medición**: información sobre los datos de medición de software recopilados del cliente.  
 
 
 
@@ -348,13 +348,13 @@ Soluciona algunos de los problemas más habituales con los clientes de Configura
 #### <a name="start"></a>Inicio
 Inicia la solución de problemas en el cliente.
 
-- **Active Directory**: realiza una consulta a Active Directory para recuperar información de sitio de Configuration Manager publicada  
-- **MPCERTIFICATE**: obtiene certificados de puntos de administración  
-- **MPLIST**: obtiene una lista de puntos de administración  
-- **MPKEYINFORMATION**: obtiene información de clave criptográfica de puntos de administración  
-- **Redes**: soluciona problemas relacionados con las redes  
-- **Asignaciones de directivas**: recupera asignaciones de directivas  
-- **Registro**: comprueba que el cliente está registrado con el sitio  
+- **Active Directory**: realiza una consulta a Active Directory para recuperar información de sitio de Configuration Manager publicada.  
+- **MPCERTIFICATE**: Obtiene los certificados de los puntos de administración.  
+- **MPLIST**: Obtiene una lista de los puntos de administración.  
+- **MPKEYINFORMATION**: obtiene información de clave criptográfica de puntos de administración.  
+- **Redes**: Soluciona problemas relacionados con las redes.  
+- **Asignaciones de directiva**: Recupera las asignaciones de directiva.  
+- **Registro**: comprueba que el cliente está registrado con el sitio.  
 
 #### <a name="view-selected-log"></a>Ver registro seleccionado
 Después de seleccionar una fila en la pestaña Solución de problemas, seleccione esta acción para ver el archivo de registro.
@@ -373,9 +373,9 @@ Esta pestaña es prácticamente idéntica a la herramienta **Visor de registros*
 #### <a name="configure-client-logging"></a>Configurar registro de cliente
 
 Establece las siguientes opciones: 
-- **Nivel de registro de cliente**: tamaño de archivo y nivel de detalle de registro  
-- **Recuento máximo de archivos**: permite más de un archivo de registro de un tipo determinado  
-- **Tamaño máximo de archivo**: tamaño en bytes de cualquier archivo de registro dado antes de que el cliente cree un registro  
+- **Nivel de registro de cliente**: tamaño de archivo y nivel de detalle de registro.  
+- **Recuento máximo de archivos**: permite más de un archivo de registro de un tipo determinado.  
+- **Tamaño máximo de archivo**: tamaño en bytes de cualquier archivo de registro dado antes de que el cliente cree un registro.  
 
 > [!NOTE]  
 > Si establece estos valores en niveles demasiado bajos, es posible que el cliente no pueda registrar ninguna información útil. Si establece estos valores en niveles demasiado altos, los registros del cliente pueden usar grandes cantidades de almacenamiento.  
@@ -429,15 +429,15 @@ Cierra el visor de registros del Centro de soporte técnico
 El Centro de soporte técnico le pide que seleccione uno o más archivos de registro para abrir.
 
 Seleccione la lista desplegable de la parte inferior del botón **Abrir registros** de la cinta y seleccione una de las siguientes opciones adicionales: 
-- **Abrir registros en la vista actual**: abre los archivos de registro seleccionados en la vista actual  
-- **Abrir registros en una ventana nueva**: abre los archivos de registro seleccionados en una nueva ventana **Visor de registros**  
+- **Abrir registros en la vista actual**: abre los archivos de registro seleccionados en la vista actual.  
+- **Abrir registros en una ventana nueva**: abre los archivos de registro seleccionados en un ventana **Visor de registros** nueva.  
 
 #### <a name="close-and-clear-logs"></a>Cerrar y borrar registros
 Cierra los archivos de registro abiertos. Además, borra todas las entradas de archivo de registro mostradas en la ventana. El Centro de soporte técnico no muestra estas entradas en el futuro.
 
 Seleccione la lista desplegable de la parte inferior del botón **Cerrar y borrar registros** de la cinta y seleccione una de las siguientes opciones adicionales: 
-- **Borrar todas las entradas**: borra todas las entradas de archivo de registro mostradas en la ventana. El Centro de soporte técnico no muestra estas entradas en el futuro.  
-- **Cerrar todos los registros**: cierra los archivos de registro abiertos  
+- **Borrar todas las entradas**: Borra todas las entradas de archivo de registro que se muestren en la ventana. El Centro de soporte técnico no muestra estas entradas en el futuro.  
+- **Cerrar todos los registros**: Cierra los archivos de registro que haya abiertos.  
 
 #### <a name="find"></a>Buscar
 Abre el cuadro de diálogo **Buscar**. Escriba la cadena que quiera buscar. Para evitar coincidencias en cadenas cortas de otras cadenas, puede elegir la coincidencia de palabras completas. También puede elegir la coincidencia entre mayúsculas y minúsculas de la cadena.
@@ -452,7 +452,7 @@ Tras encontrar dos o más coincidencias de la cadena que está buscando, esta op
 
 - **Actualización dinámica**: supervisa los cambios de un archivo de registro abierto. Esta característica no funciona si hay varios archivos de registro abiertos. Esta opción está habilitada de forma predeterminada.  
 
-- **Desplazamiento automático**: si también ha elegido la opción **Actualización dinámica**, esta opción desplaza automáticamente la vista del registro para mostrar entradas recién agregadas. Esta característica no funciona si hay varios archivos de registro abiertos. Esta opción está habilitada de forma predeterminada.  
+- **Desplazamiento automático**: si también ha elegido la opción **Actualización dinámica**, esta opción desplaza de forma automática la vista del registro para mostrar las entradas recién agregadas. Esta característica no funciona si hay varios archivos de registro abiertos. Esta opción está habilitada de forma predeterminada.  
 
 - **Mostrar detalles**: si selecciona un mensaje de archivo de registro, en la parte inferior de la pestaña **Registros** se muestran los detalles del mensaje de archivo de registro. Esta opción está habilitada de forma predeterminada.  
 
@@ -460,7 +460,7 @@ Tras encontrar dos o más coincidencias de la cadena que está buscando, esta op
 
 - **Ajustar texto de registro**: ajusta mensajes largos y de varias líneas para que quepan en una sola columna. Este comportamiento facilita la lectura de estos mensajes. Esta opción está habilitada de forma predeterminada.  
 
-- **Visualización de entradas de registro sin procesar**: muestra líneas de registro sin procesar.  
+- **Visualización de la entrada de registro sin procesar**: muestra líneas de registro sin procesar.  
 
 - **Filtros avanzados**: abre el cuadro de diálogo **Filtros avanzados**. Para obtener más información, vea [Filtros de archivos de registro avanzados](#bkmk_adv-filters).  
 
@@ -499,17 +499,17 @@ En el cuadro de diálogo Filtros avanzados, puede crear conjuntos de filtros com
 
     - **Columna**: elija dónde buscar cadenas que coincidan con el filtro:  
 
-         - **Texto de registro**: busca en el texto de un archivo de registro  
+         - **Texto de registro**: busca en el texto de un archivo de registro.  
 
          - **Gravedad del registro**: busca registros con un nivel de gravedad específico. Establezca estos niveles de gravedad en el campo **Valor**.  
 
-         - **Componente**: busca un componente específico por nombre  
+         - **Componente**: busca un componente específico por nombre.  
 
-         - **Id. de subproceso**: busca mensajes de registro con un identificador de subproceso concreto  
+         - **Id. de subproceso**: busca mensajes de registro con un identificador de subproceso concreto.  
 
-         - **Archivo de origen**: busca mensajes de registro que aparezcan en un archivo de registro específico  
+         - **Archivo de origen**: busca mensajes de registro que aparezcan en un archivo de registro específico.  
 
-    - **Operador**: elija un operador para el filtro  
+    - **Operador**: elija un operador para el filtro.  
 
 4. Escriba un valor por el que filtrar en el campo **Valor**. Si el valor contiene expresiones regulares, seleccione **Habilitar coincidencia de expresiones regulares**.  
 
@@ -628,9 +628,9 @@ Abre el cuadro de diálogo Buscar, que tiene las siguientes características:
 
 - **Buscar**: escriba una cadena que quiera buscar en el conjunto de datos WMI. Admite caracteres comodín.  
 
-- **Buscar en**: elija si desea buscar en el conjunto de datos WMI para hallar una coincidencia de **nombre de instancia o clase**, **propiedad**o **valor**.  
+- **Buscar en**: elija si quiere buscar en el conjunto de datos WMI una coincidencia de **nombre de instancia o clase**, **propiedad** o **valor**.  
 
-- **Solo cadenas completas**: de forma predeterminada, el cuadro de diálogo Buscar busca cadenas que contengan la cadena que está buscando. Active esta casilla para buscar únicamente las cadenas que sean exactamente iguales que la cadena que haya especificado.  
+- **Solo cadenas completas**: de forma predeterminada, el cuadro de diálogo Buscar busca cadenas que contengan la cadena que se está buscando. Active esta casilla para buscar únicamente las cadenas que sean exactamente iguales que la cadena que haya especificado.  
 
 #### <a name="find-next"></a>Buscar siguiente
 Este botón abre la siguiente instancia de la cadena que haya especificado en el cuadro de diálogo Buscar en el conjunto de datos WMI.
@@ -651,9 +651,9 @@ Abre el cuadro de diálogo Buscar, que tiene las siguientes características:
 
 - **Buscar**: escriba una cadena que quiera buscar en el conjunto de datos WMI. Admite caracteres comodín.  
 
-- **Buscar en**: elija si desea buscar en el conjunto de datos WMI para hallar una coincidencia de **nombre de instancia o clase**, **propiedad**o **valor**.  
+- **Buscar en**: elija si quiere buscar en el conjunto de datos WMI una coincidencia de **nombre de instancia o clase**, **propiedad** o **valor**.  
 
-- **Solo cadenas completas**: de forma predeterminada, el cuadro de diálogo Buscar busca cadenas que contengan la cadena que está buscando. Active esta casilla para buscar únicamente las cadenas que sean exactamente iguales que la cadena que haya especificado.  
+- **Solo cadenas completas**: de forma predeterminada, el cuadro de diálogo Buscar busca cadenas que contengan la cadena que se está buscando. Active esta casilla para buscar únicamente las cadenas que sean exactamente iguales que la cadena que haya especificado.  
 
 #### <a name="find-next"></a>Buscar siguiente
 Este botón abre la siguiente instancia de la cadena que haya especificado en el cuadro de diálogo Buscar en el conjunto de datos WMI.
@@ -671,9 +671,9 @@ Abre el cuadro de diálogo Buscar, que tiene las siguientes características:
 
 - **Buscar**: escriba una cadena que quiera buscar en el conjunto de datos WMI. Admite caracteres comodín.  
 
-- **Buscar en**: elija si desea buscar en el conjunto de datos WMI para hallar una coincidencia de **nombre de instancia o clase**, **propiedad**o **valor**.  
+- **Buscar en**: elija si quiere buscar en el conjunto de datos WMI una coincidencia de **nombre de instancia o clase**, **propiedad** o **valor**.  
 
-- **Solo cadenas completas**: de forma predeterminada, el cuadro de diálogo Buscar busca cadenas que contengan la cadena que está buscando. Active esta casilla para buscar únicamente las cadenas que sean exactamente iguales que la cadena que haya especificado.  
+- **Solo cadenas completas**: de forma predeterminada, el cuadro de diálogo Buscar busca cadenas que contengan la cadena que se está buscando. Active esta casilla para buscar únicamente las cadenas que sean exactamente iguales que la cadena que haya especificado.  
 
 #### <a name="find-next"></a>Buscar siguiente
 Este botón abre la siguiente instancia de la cadena que haya especificado en el cuadro de diálogo Buscar en el conjunto de datos WMI.

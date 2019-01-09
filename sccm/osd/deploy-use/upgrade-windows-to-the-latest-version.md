@@ -10,12 +10,12 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fbba0306cececebeb7a0e20757e7de3b0d4d0e70
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 35312c92a20f8e3842b5ee47dd3b916631671e45
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348341"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417360"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager"></a>Actualizar Windows a la versión más reciente con System Center Configuration Manager
 
@@ -46,21 +46,21 @@ En este artículo se proporcionan los pasos de Configuration Manager para actual
 
 Revise los siguientes requisitos y limitaciones de la secuencia de tareas para actualizar un sistema operativo y asegurarse de que satisface sus necesidades:  
 
-  -   Agregue solo los pasos de secuencia de tareas que están relacionados con la tarea principal de actualización del sistema operativo. Estos pasos incluyen principalmente la instalación de paquetes, aplicaciones o actualizaciones. Use también los pasos que ejecutan líneas de comandos, PowerShell o establecen variables dinámicas.  
+- Agregue solo los pasos de secuencia de tareas que están relacionados con la tarea principal de actualización del sistema operativo. Estos pasos incluyen principalmente la instalación de paquetes, aplicaciones o actualizaciones. Use también los pasos que ejecutan líneas de comandos, PowerShell o establecen variables dinámicas.  
 
-  -   Revise los controladores y las aplicaciones que están instalados en los equipos para asegurarse de que sean compatibles con Windows 10 antes de implementar la secuencia de tareas de actualización.  
+- Revise los controladores y las aplicaciones que están instalados en los equipos para asegurarse de que sean compatibles con Windows 10 antes de implementar la secuencia de tareas de actualización.  
 
-  -   Las tareas siguientes no son compatibles con la actualización local. Requieren que se usen las implementaciones de SO tradicionales:  
+- Las tareas siguientes no son compatibles con la actualización local. Requieren que se usen las implementaciones de SO tradicionales:  
 
-     -   Cambiar la pertenencia a dominios del equipo o actualizar el grupo de administradores locales.  
+  - Cambiar la pertenencia a dominios del equipo o actualizar el grupo de administradores locales.  
 
-     -   Implementar un cambio fundamental en el equipo, como: 
-         - Cambiar las particiones de disco.
-         - Cambiar la arquitectura del sistema de x86 a x64.
-         - Implementar UEFI. (Para obtener más información sobre una opción posible, vea [Conversión de BIOS a UEFI durante una actualización local](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)).
-         - Modificar el idioma del sistema operativo base.  
+  - Implementar un cambio fundamental en el equipo, como: 
+    - Cambiar las particiones de disco.
+    - Cambiar la arquitectura del sistema de x86 a x64.
+    - Implementar UEFI. (Para obtener más información sobre una opción posible, vea [Conversión de BIOS a UEFI durante una actualización local](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)).
+    - Modificar el idioma del sistema operativo base.  
 
-     -   Tiene requisitos personalizados, como el uso de una imagen base personalizada, el uso de cifrado de disco de terceros o requerir operaciones de WinPE sin conexión.  
+  - Tiene requisitos personalizados, como el uso de una imagen base personalizada, el uso de cifrado de disco de terceros o requerir operaciones de WinPE sin conexión.  
 
 ### <a name="infrastructure-requirements"></a>Requisitos de la infraestructura  
 

@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0cb94f8d14ff525687909290085e16ecd47fa39f
-ms.sourcegitcommit: 22257e35a7d7263939a6802602050190897412a8
+ms.openlocfilehash: cf5b55dddae34ac855f21e7d70967d3b9ab1c2dc
+ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51562055"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53747167"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Preparación para usar grupos de disponibilidad AlwaysOn de SQL Server con Configuration Manager
 
@@ -24,12 +24,12 @@ ms.locfileid: "51562055"
 Use este artículo para preparar Configuration Manager para usar grupos de disponibilidad AlwaysOn de SQL Server. Esta característica proporciona una solución de alta disponibilidad y recuperación ante desastres para la base de datos.  
 
 Configuration Manager admite el uso de grupos de disponibilidad:
--     En sitos primarios y el sitio de administración central.
--     De forma local, o en Microsoft Azure.
+- En sitos primarios y el sitio de administración central.
+- De forma local, o en Microsoft Azure.
 
 Al utilizar grupos de disponibilidad en Microsoft Azure, puede aumentar aún más la disponibilidad de la base de datos de sitio mediante *conjuntos de disponibilidad de Azure*. Para más información sobre los conjuntos de disponibilidad de Azure, consulte [Administrar la disponibilidad de las máquinas virtuales](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/).
 
->  [!Important]   
+> [!Important]
 >  Antes de continuar, familiarícese con la configuración de SQL Server y los grupos de disponibilidad de SQL Server. La siguiente información hace referencia a la biblioteca de documentación y los procedimientos de SQL Server.
 
 
@@ -38,12 +38,12 @@ Al utilizar grupos de disponibilidad en Microsoft Azure, puede aumentar aún má
 
 Los siguientes escenarios son compatibles con el uso de grupos de disponibilidad con Configuration Manager. Para obtener más información y conocer los procedimientos para cada uno de ellos, consulte [Configuración de grupos de disponibilidad AlwaysOn de SQL Server para Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag).
 
--      [Crear un grupo de disponibilidad para su uso con Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group)  
--     [Configurar un sitio para utilizar un grupo de disponibilidad](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group)  
--     [Agregar o quitar a miembros de la réplica sincrónica de un grupo de disponibilidad que hospeda una base de datos de sitio](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members)  
--     [Configurar réplicas de confirmación asincrónica](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca)  
--     [Recuperar un sitio de una réplica de confirmación asincrónica](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site)  
--     [Sacar una base de datos de sitio de un grupo de disponibilidad a una instancia predeterminada o con nombre de un servidor SQL Server independiente](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)  
+- [Crear un grupo de disponibilidad para su uso con Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group)  
+- [Configurar un sitio para utilizar un grupo de disponibilidad](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group)  
+- [Agregar o quitar a miembros de la réplica sincrónica de un grupo de disponibilidad que hospeda una base de datos de sitio](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members)  
+- [Configurar réplicas de confirmación asincrónica](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca)  
+- [Recuperar un sitio de una réplica de confirmación asincrónica](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site)  
+- [Sacar una base de datos de sitio de un grupo de disponibilidad a una instancia predeterminada o con nombre de un servidor SQL Server independiente](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)  
 
 
 
@@ -95,34 +95,34 @@ Cada miembro de la réplica debe tener las siguiente configuración:
 
 - Usa la *instancia predeterminada* o una *instancia con nombre*  
 
-- La opción **Conexiones del rol principal** está establecida en **Sí**  
+- La opción **Conexiones del rol principal** está establecida en **Permitir todas las conexiones**  
 
 - La opción **Secundaria legible** está establecida en **Sí**  
 
 - Está habilitada para la **conmutación por error manual**     
 
-    >  [!TIP]  
-    >  Configuration Manager admite el uso de las réplicas sincrónicas del grupo de disponibilidad cuando se establece en **Conmutación automática por error**. Establezca la **conmutación por error manual** en estos casos:
-    >  -  Cuando se ejecuta el programa de instalación de Configuration Manager para especificar el uso de la base de datos de sitio en el grupo de disponibilidad.  
-    >  -  Instala cualquier actualización en Configuration Manager. (No solo las actualizaciones que se aplican a la base de datos de sitio).  
+  > [!TIP]
+  >  Configuration Manager admite el uso de las réplicas sincrónicas del grupo de disponibilidad cuando se establece en **Conmutación automática por error**. Establezca la **conmutación por error manual** en estos casos:
+  >  -  Cuando se ejecuta el programa de instalación de Configuration Manager para especificar el uso de la base de datos de sitio en el grupo de disponibilidad.  
+  >  -  Instala cualquier actualización en Configuration Manager. (No solo las actualizaciones que se aplican a la base de datos de sitio).  
 
 #### <a name="replica-member-location"></a>Ubicación del miembro de réplica
 Hospede todas las réplicas en un grupo de disponibilidad en el entorno local o bien en Microsoft Azure. No se admite un escenario en el que un grupo incluya un miembro en el entorno local y otro en Azure.     
 
 El programa de instalación de Configuration Manager necesita conectarse a cada réplica. Si configura un grupo de disponibilidad en Azure y el grupo está detrás de un equilibrador de carga interno o externo, abra estos puertos predeterminados:   
 
-- Asignador de puntos de conexión RPC: **TCP 135**   
+- Asignador de puntos de conexión RPC: **TCP 135**   
 
-- SQL Server Service Broker: **TCP 4022**  
+- SQL Server Service Broker: **TCP 4022**  
 
-- SQL a través de TCP: **TCP 1433**   
+- SQL a través de TCP: **TCP 1433**   
 
 
 Una vez completado el programa de instalación de Configuration Manager, los siguientes puertos deben mantenerse abiertos para Configuration Manager:  
 
-- SQL Server Service Broker: **TCP 4022**  
+- SQL Server Service Broker: **TCP 4022**  
 
-- SQL a través de TCP: **TCP 1433**  
+- SQL a través de TCP: **TCP 1433**  
 
 Puede usar puertos personalizados para estas configuraciones. Use los mismos puertos personalizados por el punto de conexión y en todas las réplicas del grupo de disponibilidad.
 
@@ -239,11 +239,11 @@ Las siguientes limitaciones se aplican a todos los escenarios.
 
 #### <a name="unsupported-sql-server-options-and-configurations"></a>Opciones y configuraciones de SQL Server que no son compatibles
 
-- **Grupos de disponibilidad básica**: introducidos con la edición SQL Server 2016 Standard, los grupos de disponibilidad básica no admiten el acceso de lectura a réplicas secundarias. La configuración requiere este acceso. Para obtener más información, consulte [Grupos de disponibilidad básica (grupos de disponibilidad AlwaysOn)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
+- **Grupos de disponibilidad básica**: introducidos con la edición SQL Server 2016 Standard, los grupos de disponibilidad básica no admiten el acceso de lectura a réplicas secundarias. La configuración requiere este acceso. Para obtener más información, consulte [Grupos de disponibilidad básica (grupos de disponibilidad AlwaysOn)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
 
 - **Instancia del clúster de conmutación por error**: las instancias del clúster de conmutación por error no son compatibles con las réplicas usadas junto con Configuration Manager. Para obtener más información, consulte [Instancias de clúster de conmutación por error de AlwaysOn (SQL Server)](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).  
 
-- **MultiSubnetFailover**: no se admite para usar un grupo de disponibilidad con Configuration Manager en una configuración de varias subredes. Tampoco puede usar la cadena de conexión de palabra clave [MutliSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover).  
+- **MultiSubnetFailover**: no se admite usar un grupo de disponibilidad con Configuration Manager en una configuración de varias subredes. Tampoco puede usar la cadena de conexión de palabra clave [MutliSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover).  
 
 #### <a name="sql-servers-that-host-additional-availability-groups"></a>Servidores SQL Server que hospedan grupos de disponibilidad adicionales
 <!--SCCMDocs issue 649--> Cuando el servidor SQL Server hospeda uno o varios grupos de disponibilidad además del grupo que usa para Configuration Manager, necesita una configuración específica en el momento de ejecutar el programa de instalación de Configuration Manager. Esta configuración también se necesita para instalar una actualización para Configuration Manager. Cada réplica de cada grupo de disponibilidad debe tener las siguientes configuraciones:
@@ -253,11 +253,11 @@ Las siguientes limitaciones se aplican a todos los escenarios.
 
 #### <a name="unsupported-database-use"></a>Uso de base de datos no admitido
 
-- **Configuration Manager admite solo la base de datos de sitio en un grupo de disponibilidad:** las bases de datos siguientes no son compatibles con Configuration Manager en un grupo de disponibilidad Always On de SQL Server :  
+- **Configuration Manager admite solo la base de datos de sitio en un grupo de disponibilidad:** Configuration Manager no admite las bases de datos siguientes en un grupo de disponibilidad de SQL Server Always On:  
     - Base de datos de informes  
     - Base de datos WSUS  
 
-- **Base de datos existente:** no puede usar la nueva base de datos que creó en la réplica. Cuando configure un grupo de disponibilidad, restaure una copia de una base de datos de Configuration Manager existente en la réplica principal.  
+- **Base de datos existente:** no puede usar la nueva base de datos que ha creado en la réplica. Cuando configure un grupo de disponibilidad, restaure una copia de una base de datos de Configuration Manager existente en la réplica principal.  
 
 #### <a name="setup-errors-in-configmgrsetuplog"></a>Errores de instalación en ConfigMgrSetup.log  
 Al ejecutar el programa de instalación de Configuration Manager para mover una base de datos de sitio a un grupo de disponibilidad, este intenta procesar los roles de la base de datos en las réplicas secundarias del grupo de disponibilidad. El archivo **ConfigMgrSetup.log** muestra el error siguiente:  

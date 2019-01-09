@@ -11,12 +11,12 @@ author: aczechowski
 robots: noindex,nofollow
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 8a805d6b7075d61b0e7669200670ac8434eccdf5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d58a780ecf6232bd8ef6e7f0d9851ead34486177
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336568"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414759"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1511 para System Center Configuration Manager
 
@@ -59,15 +59,15 @@ Cuando Microsoft publica una nueva actualización de cliente para equipos de esc
 ### <a name="try-it-out"></a>Haga la prueba  
  Intente realizar la siguiente tarea y después use la información de comentarios que se encuentra al principio de este tema para hacernos saber cómo ha funcionado:  
 
-1.  Puede sincronizar actualizaciones de Office 365 con el servidor de sitio de Configuration Manager y verlas desde la consola de Configuration Manager.  
+1. Puede sincronizar actualizaciones de Office 365 con el servidor de sitio de Configuration Manager y verlas desde la consola de Configuration Manager.  
 
-2.  Puede aprobar e implementar correctamente actualizaciones de Office 365.  
+2. Puede aprobar e implementar correctamente actualizaciones de Office 365.  
 
-3.  Puede descargar correctamente las actualizaciones de Office 365 para los clientes.  
+3. Puede descargar correctamente las actualizaciones de Office 365 para los clientes.  
 
-4.  Puede comprobar el funcionamiento de las actualizaciones de Office 365 supervisándolas o creando informes con la consola.  
+4. Puede comprobar el funcionamiento de las actualizaciones de Office 365 supervisándolas o creando informes con la consola.  
 
- Para obtener los pasos detallados, consulte [Manage Office 365 client updates with System Center Configuration Manager Technical Preview (Administrar las actualizaciones de cliente de Office 365 con System Center Configuration Manager Technical Preview)](https://technet.microsoft.com/library/mt628083.aspx).  
+   Para obtener los pasos detallados, consulte [Manage Office 365 client updates with System Center Configuration Manager Technical Preview (Administrar las actualizaciones de cliente de Office 365 con System Center Configuration Manager Technical Preview)](https://technet.microsoft.com/library/mt628083.aspx).  
 
 ##  <a name="BKMK_AlwasyOn"></a> Compatibilidad con SQL Server AlwaysOn para bases de datos de alta disponibilidad  
  Configuration Manager ahora admite el uso de grupos de disponibilidad de SQL Server AlwaysOn para hospedar la base de datos del sitio.  Cuando instale un sitio nuevo, podrá indicar al programa de instalación que use el grupo de disponibilidad en lugar de una instancia normal de SQL Server.  
@@ -131,11 +131,11 @@ Para instalar un sitio que usa un grupo de disponibilidad de SQL Server:
 
 1.  Sustituya lo siguiente cuando se lo solicite el programa de instalación de Configuration Manager:  
 
-    -   **Nombre de SQL Server**: escriba el nombre virtual para el punto de conexión que configuró al crear el grupo de disponibilidad. El nombre virtual debe ser un nombre DNS completo, como **&lt;servidorPuntodeconexión\>.fabrikam.com**.  
+    -   **Nombre de SQL Server**: Escriba el nombre virtual para el extremo que configuró al crear el grupo de disponibilidad. El nombre virtual debe ser un nombre DNS completo, como **&lt;servidorPuntodeconexión\>.fabrikam.com**.  
 
-    -   **Instancia**: este valor debe permanecer en blanco. No hay ninguna instancia en esta configuración.  
+    -   **Instancia**:  Este valor debe permanecer en blanco. No hay ninguna instancia en esta configuración.  
 
-    -   **Base de datos**: escriba el nombre de la base de datos que creó en la réplica principal del grupo de disponibilidad.  
+    -   **Base de datos**: Escriba el nombre de la base de datos que creó en la réplica principal del grupo de disponibilidad.  
 
 2.  A continuación, debe proporcionar una ubicación de red a la que puedan acceder todos los SQL Server del grupo.  
 

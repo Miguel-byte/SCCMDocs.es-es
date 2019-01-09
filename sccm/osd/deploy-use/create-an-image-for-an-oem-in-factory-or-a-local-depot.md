@@ -10,12 +10,12 @@ ms.assetid: a7d3df90-062d-4d57-9e9d-e137d3e7cd7f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c8cf0af19017f4acfd95bcd01f8226229c05a14
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f1bf3460e29375a6c5e95ad372af089548be5713
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353399"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422489"
 ---
 # <a name="create-an-image-for-an-oem-in-factory-or-a-local-depot-with-system-center-configuration-manager"></a>Crear una imagen para un OEM en fábrica o en un almacén local con System Center Configuration Manager
 
@@ -28,11 +28,11 @@ Este método de implementación puede reducir el tráfico de red porque la image
 
  Puede usar los medios preconfigurados en los siguientes escenarios de implementación de sistema operativo:  
 
--   [Instalar una nueva versión de Windows en un equipo nuevo (sin sistema operativo)](install-new-windows-version-new-computer-bare-metal.md)  
+- [Instalar una nueva versión de Windows en un equipo nuevo (sin sistema operativo)](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [Reemplazar un equipo existente y transferir la configuración](replace-an-existing-computer-and-transfer-settings.md)  
+- [Reemplazar un equipo existente y transferir la configuración](replace-an-existing-computer-and-transfer-settings.md)  
 
- Complete las etapas de uno de los escenarios de implementación de sistema operativo y luego use las secciones siguientes para preparar y crear los medios preconfigurados.  
+  Complete las etapas de uno de los escenarios de implementación de sistema operativo y luego use las secciones siguientes para preparar y crear los medios preconfigurados.  
 
 ## <a name="configure-deployment-settings"></a>Configurar la implementación  
  Cuando use un medio preconfigurado para iniciar el proceso de implementación del sistema operativo, debe configurar la implementación para que el sistema operativo esté disponible para los medios. Puede configurar esto en la página **Configuración de implementación** del Asistente para implementar Software o en la pestaña **Configuración de implementación** en las propiedades de la implementación.  Para la opción de configuración **Estar disponible para** , configure uno de los siguientes:  

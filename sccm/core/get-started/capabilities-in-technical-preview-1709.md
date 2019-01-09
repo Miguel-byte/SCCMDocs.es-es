@@ -10,12 +10,12 @@ ms.assetid: a3ef6bdc-a204-4c4c-a02f-2bd03f35183e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 74ffd06f8b9786d627dc7fd9cecb15215228313d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 79d7488e0554a36eb274bf4ef76cff92b48a71ba
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341158"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418448"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1709 para System Center Configuration Manager
 
@@ -30,7 +30,7 @@ En este artículo se presentan las características disponibles en Technical Pre
     Workaround details.
 -->
 **Problemas conocidos de esta Technical Preview:**
--   **Error al actualizar a la versión preliminar 1709 cuando hay un servidor de sitio en modo pasivo**. Si ejecuta la versión preliminar 1706, 1707 o 1708 y tiene un [servidor de sitio principal en modo pasivo](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), debe desinstalar el servidor de sitio en modo pasivo para poder actualizar correctamente el sitio en versión preliminar a la versión 1709. Puede volver a instalar el servidor de sitio en modo pasivo después de que el sitio ejecute la versión 1709.
+- **Error al actualizar a la versión preliminar 1709 cuando hay un servidor de sitio en modo pasivo**. Si ejecuta la versión preliminar 1706, 1707 o 1708 y tiene un [servidor de sitio principal en modo pasivo](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), debe desinstalar el servidor de sitio en modo pasivo para poder actualizar correctamente el sitio en versión preliminar a la versión 1709. Puede volver a instalar el servidor de sitio en modo pasivo después de que el sitio ejecute la versión 1709.
 
   Para desinstalar el servidor de sitio en modo pasivo:
   1. En la consola vaya a **Administración** > **General** > **Configuración de sitio** > **Servidores y roles del sistema de sitios** y seleccione el servidor de sitio en modo pasivo.
@@ -42,8 +42,7 @@ En este artículo se presentan las características disponibles en Technical Pre
 **Estas son las nuevas características que puede probar con esta versión.**  
 
 ## <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Experiencia mejorada del perfil VPN en la consola de Configuration Manager
-<!-- 1313282 -->
-Con esta versión hemos actualizado las páginas de propiedades y el asistente de perfiles VPN para mostrar una configuración más adecuada para la plataforma seleccionada. De manera específica:
+<!-- 1313282 --> Con esta versión, hemos actualizado las páginas de propiedades y el Asistente para perfiles de VPN con el fin de mostrar una configuración más adecuada para la plataforma seleccionada. De manera específica:
 
 - Cada plataforma tiene su propio flujo de trabajo, lo que significa que los nuevos perfiles VPN contienen únicamente la configuración compatible con la plataforma.
 - Las páginas **Plataformas admitidas** ahora aparecen después de la página **General**.  Ahora se elige primero la plataforma antes de establecer los valores de propiedad.
@@ -77,8 +76,7 @@ Cree un perfil VPN siguiendo el proceso habitual. Tenga en cuenta que la primera
 A medida que seleccione distintas plataformas, observe que solo se muestran las opciones relevantes para la plataforma seleccionada.
 
 ## <a name="co-management-for-windows-10-devices"></a>Administración conjunta para dispositivos de Windows 10    
-<!-- 1350871 -->
-Muchos clientes quieren administrar dispositivos de Windows 10 de la misma manera que administran dispositivos móviles mediante una solución simplificada, basada en la nube y de costo inferior, pero llevar a cabo la transición de la administración tradicional a una administración moderna puede resultar complicado. A partir de Windows 10, versión 1607 (también conocida como la Actualización de aniversario), puede unir un dispositivo Windows 10 a Active Directory (AD) local y a Azure AD basado en la nube al mismo tiempo (Azure AD híbrido). La administración conjunta aprovecha esta mejora y le permite administrar dispositivos Windows 10 de forma simultánea mediante Configuration Manager e Intune. Se trata de una solución que sirve de puente entre la administración tradicional y moderna, y proporciona un camino para realizar la transición con un enfoque por fases. 
+<!-- 1350871 --> Muchos clientes quieren administrar los dispositivos Windows 10 de la misma manera que administran los dispositivos móviles mediante una solución simplificada, basada en la nube y de costo inferior, pero llevar a cabo la transición de la administración tradicional a una administración moderna puede resultar complicado. A partir de Windows 10, versión 1607 (también conocida como la Actualización de aniversario), puede unir un dispositivo Windows 10 a Active Directory (AD) local y a Azure AD basado en la nube al mismo tiempo (Azure AD híbrido). La administración conjunta aprovecha esta mejora y le permite administrar dispositivos Windows 10 de forma simultánea mediante Configuration Manager e Intune. Se trata de una solución que sirve de puente entre la administración tradicional y moderna, y proporciona un camino para realizar la transición con un enfoque por fases. 
 
 ### <a name="prerequisites"></a>Requisitos previos
 Debe cumplir los siguientes requisitos previos para poder habilitar la administración conjunta. Existen requisitos previos generales y distintos requisitos previos para los clientes existentes de Configuration Manager y dispositivos que no son clientes.
@@ -161,11 +159,11 @@ Por ejemplo, si tuviera los siguientes valores:
    >Use el valor **MutualAuthPath** en la vista SQL **vProxy_Roles** para el valor **Dirección URL del punto de conexión de autenticación mutua de Cloud Management Gateway**.
 
 - **FQDN del punto de administración (MP)**: sccmmp.corp.contoso.com    
-- **CódigoSitio**: PS1    
+- **CódigoDeSitio**: PS1    
 - **Id. de inquilino de Azure AD**: 72F988BF-86F1-41AF-91AB-2D7CD011XXXX    
 - **Nombre del inquilino de Azure AD**: contoso    
 - **Id. de aplicación cliente de Azure AD**: bef323b3-042f-41a6-907a-f9faf0d1XXXX     
-- **URI del Id. de recurso de AAD**: ConfigMgrServer    
+- **URI de id. de recurso de AAD**: ConfigMgrServer    
 
   > [!Note]    
   > Use el valor **IdentifierUri** que se encuentra en la vista SQL **vSMS_AAD_Application_Ex** para el valor **URI del Id. de recurso de AAD**.
@@ -204,7 +202,7 @@ En la sección anterior ha preparado dispositivos de Windows 10 para la administ
 3. En la página de suscripción, haga clic en **Iniciar sesión**, inicie sesión con su inquilino de Intune y haga clic en **Siguiente**.   
 4. En la página de almacenamiento provisional, configure las opciones siguientes y haga clic en **Siguiente**:
     - **Grupo piloto**: el grupo piloto contiene una o varias colecciones que seleccione. Use este grupo como parte de la implementación por fases de la administración conjunta. Puede comenzar con un conjunto de prueba pequeños y, luego, agregar más colecciones al grupo piloto a medida que implemente la administración conjunta en más usuarios y dispositivos. Puede cambiar las colecciones del grupo piloto en cualquier momento desde las propiedades de la administración conjunta.
-    - **Producción**: al seleccionar esta opción, se habilitan todos los dispositivos de Windows 10 compatibles para la administración conjunta. Configure el **grupo de exclusión** con una o varias colecciones. Los dispositivos que forman parte de cualquiera de las colecciones de este grupo se excluyen del uso de la administración conjunta. 
+    - **Production**: al seleccionar esta opción, se habilitan todos los dispositivos Windows 10 compatibles para la administración conjunta. Configure el **grupo de exclusión** con una o varias colecciones. Los dispositivos que forman parte de cualquiera de las colecciones de este grupo se excluyen del uso de la administración conjunta. 
 5. En la página de habilitación, elija **Piloto** o **Todo** (en función de los valores configurados en la página de almacenamiento provisional) para habilitar la inscripción automática en Intune y, luego, haga clic en **Siguiente**. Si elige **Piloto**, solo los clientes de Configuration Manager que sean miembros del grupo piloto se inscribirán automáticamente en Intune. De esta manera podrá habilitar la administración conjunta en un subconjunto de clientes para probarla inicialmente e implementarla con un enfoque por fases. 
 6. En la página Cargas de trabajo, elija si quiere cambiar las cargas de trabajo de Configuration Manager para que las administre Intune. Luego, haga clic en **Siguiente**. Use los controles deslizantes para seleccionar si se debe cambiar la carga de trabajo al grupo piloto o para todos los clientes de Windows 10 (en función de los valores configurados en la página de almacenamiento provisional). 
 7. Para habilitar la administración conjunta, siga los pasos del asistente.  

@@ -10,12 +10,12 @@ ms.assetid: 18598eaa-1131-44ff-8f8b-6093e87ac7a1
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 894d268151f9c9dfb05ded812eb642f8025dc459
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b2a01d8ccc76315edbdf0e14085381463ec7ed7b
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338540"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424524"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>Funciones de Technical Preview 1701 para System Center Configuration Manager
 
@@ -43,24 +43,24 @@ Pero con esta vista previa, los grupos de límites para los puntos de actualizac
 
 A continuación se describe el comportamiento de los puntos de actualización de software con esta Technical Preview:  
 
--   **Los clientes nuevos usan grupos de límites para seleccionar los puntos de actualización de software.** Los clientes que se instalan después de instalar la versión 1701 seleccionan un punto de actualización de software de entre los que estén asociados al grupo de límites del cliente.
+- **Los clientes nuevos usan grupos de límites para seleccionar los puntos de actualización de software.** Los clientes que se instalan después de instalar la versión 1701 seleccionan un punto de actualización de software de entre los que estén asociados al grupo de límites del cliente.
 
   Esto sustituye el comportamiento anterior, según el cual los clientes seleccionan un punto de actualización de software aleatoriamente de una lista de puntos que comparten el bosque del cliente.   
 
--   **Los clientes instalados previamente siguen usando su punto de actualización de software actual hasta que recurren a la reserva para buscar uno nuevo.**
-Los clientes que ya estaban instalados y que tienen un punto de actualización de software seguirán usándolo hasta que recurran a la reserva. Esto incluye los puntos de actualización de software que no están asociados al grupo de límites actual del cliente. No intentarán encontrar y usar inmediatamente un punto de actualización de software de su grupo de límites actual.
+- **Los clientes instalados previamente siguen usando su punto de actualización de software actual hasta que recurren a la reserva para buscar uno nuevo.**
+  Los clientes que ya estaban instalados y que tienen un punto de actualización de software seguirán usándolo hasta que recurran a la reserva. Esto incluye los puntos de actualización de software que no están asociados al grupo de límites actual del cliente. No intentarán encontrar y usar inmediatamente un punto de actualización de software de su grupo de límites actual.
 
   Los clientes que ya tengan un punto de actualización de software empezarán a usar el comportamiento de este nuevo grupo de límites únicamente cuando el cliente no logre llegar a su punto de actualización de software actual e inicie la reserva.
-Este retraso al cambiar al nuevo comportamiento es deliberado. Se debe a que un cambio en el punto de actualización de software puede producir un gran uso del ancho de banda de red cuando el cliente sincroniza los datos con el nuevo punto de actualización de software. El retraso en la transición puede ayudar a evitar que se sature la red en caso de que todos los clientes cambien a puntos de actualización de software nuevos al mismo tiempo.
+  Este retraso al cambiar al nuevo comportamiento es deliberado. Se debe a que un cambio en el punto de actualización de software puede producir un gran uso del ancho de banda de red cuando el cliente sincroniza los datos con el nuevo punto de actualización de software. El retraso en la transición puede ayudar a evitar que se sature la red en caso de que todos los clientes cambien a puntos de actualización de software nuevos al mismo tiempo.
 
--   **Opciones de configuración del tiempo de reserva.** En esta Technical Preview no se admiten opciones de configuración para cuando los clientes inician la reserva para buscar un nuevo punto de actualización de software. Esto incluye las opciones de configuración **Fallback times (in minutes)** (Tiempos de reserva (en minutos)) y **Never fallback** (Nunca reserva), que se pueden configurar para las relaciones de diversos grupos de límites.
+- **Opciones de configuración del tiempo de reserva.** En esta Technical Preview no se admiten opciones de configuración para cuando los clientes inician la reserva para buscar un nuevo punto de actualización de software. Esto incluye las opciones de configuración **Fallback times (in minutes)** (Tiempos de reserva (en minutos)) y **Never fallback** (Nunca reserva), que se pueden configurar para las relaciones de diversos grupos de límites.
 
   En su lugar, los clientes conservan su comportamiento actual, según el cual el cliente intenta conectarse a su punto de actualización de software actual durante dos horas antes de que inicie la reserva para buscar un nuevo punto de actualización de software que pueda usar.
 
   Cuando un cliente use la reserva, usará las opciones de configuración del grupo de límites para la reserva a fin de crear un grupo de puntos de actualización de software disponibles. Este grupo contiene todos los puntos de actualización de software del *grupo de límites actual* del cliente, los *grupos de límites vecinos* y el *grupo de límites predeterminado del sitio* del cliente.
 
 - **Configuración del grupo de límites de sitio predeterminado.**  
- Considere la posibilidad de agregar un punto de actualización de software a la *Default-Site-Boundary-Group&lt;CódigoDeSitio >*. Esto garantiza que los clientes que no sean miembros de otro grupo de límites puedan recurrir a la reserva para buscar un punto de actualización de software.
+  Considere la posibilidad de agregar un punto de actualización de software a la *Default-Site-Boundary-Group&lt;CódigoDeSitio >*. Esto garantiza que los clientes que no sean miembros de otro grupo de límites puedan recurrir a la reserva para buscar un punto de actualización de software.
 
 
 Para administrar los puntos de actualización de software de grupos de límites, use los [procedimientos de la documentación de la Rama actual](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#procedures-for-boundary-groups), pero recuerde que los tiempos de reserva que puede configurar aún no se usan para los puntos de actualización de software.
@@ -72,17 +72,17 @@ Para ayudarle a determinar si un equipo se inicia en modo UEFI están disponible
 ## <a name="improvements-to-operating-system-deployment"></a>Mejoras en la implementación de sistema operativo
 Hemos realizado las siguientes mejoras en la implementación del sistema operativo, muchas de las cuales son el resultado de los comentarios de User Voice.
 - [**Compatibilidad de más aplicaciones con el paso de secuencia de tareas Instalar aplicaciones**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17062207-task-sequence-allow-more-than-9-applications-in-t): hemos aumentado el número máximo de aplicaciones que se pueden instalar a 99 en el paso de secuencia de tareas **Instalar aplicaciones**. Antes, el número máximo era de 9 aplicaciones.
-- [**Selección de varias aplicaciones en el paso de secuencia de tareas Instalar aplicación**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15459978-when-adding-items-to-an-install-application-step): ahora, al agregar aplicaciones en el paso de secuencia de tareas Instalar aplicación en el editor de secuencia de tareas, puede seleccionar varias aplicaciones en el panel **Seleccione la aplicación que desea instalar**.
-- [**Expiración de los medios independiente**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/14448564-provide-a-method-for-expiring-standalone-media): al crear medios independientes, hay nuevas opciones para establecer en los medios fechas opcionales de inicio y expiración. Estas opciones están deshabilitadas de forma predeterminada. Las fechas se comparan con la hora del sistema del equipo antes de que se ejecuten los medios independientes. Cuando la hora del sistema es anterior a la hora de inicio o posterior a la hora de expiración, los medios independientes no se inician. Estas opciones también están disponibles mediante el cmdlet de PowerShell New-CMStandaloneMedia.
-- [**Compatibilidad con contenido adicional en medios independientes**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8341257-support-installation-of-packages-apps-via-dynamic): ahora se admite contenido adicional en medios independientes. Puede seleccionar paquetes adicionales, paquetes de controladores y aplicaciones para que se realice una copia intermedia en los medios junto con el resto del contenido al que se hace referencia en la secuencia de tareas. Antes, solo se realizaba una copia intermedia en los medios independientes del contenido al que se hace referencia en la secuencia de tareas.
-- [**Tiempo de espera configurable para el paso de secuencia de tareas de aplicación automática de controladores**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17153660-auto-apply-driver-timeout): ahora hay disponibles nuevas variables de secuencia de tareas para configurar el valor del tiempo de espera en el paso de secuencia de tareas de aplicación automática de controladores cuando se realizan solicitudes del catálogo HTTP. Están disponibles las siguientes variables y valores predeterminados (en segundos):
+- [**Selección de varias aplicaciones en el paso de secuencia de tareas Instalar aplicación**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15459978-when-adding-items-to-an-install-application-step): ahora, al agregar aplicaciones en el paso de secuencia de tareas Instalar aplicación en el editor de secuencia de tareas, puede seleccionar varias aplicaciones en el panel **Select the application to install** (Seleccione la aplicación que quiere instalar).
+- [**Expiración de los medios independientes**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/14448564-provide-a-method-for-expiring-standalone-media): Al crear medios independientes, hay nuevas opciones para establecer en los medios fechas opcionales de inicio y expiración. Estas opciones están deshabilitadas de forma predeterminada. Las fechas se comparan con la hora del sistema del equipo antes de que se ejecuten los medios independientes. Cuando la hora del sistema es anterior a la hora de inicio o posterior a la hora de expiración, los medios independientes no se inician. Estas opciones también están disponibles mediante el cmdlet de PowerShell New-CMStandaloneMedia.
+- [**Compatibilidad con contenido adicional en medios independientes**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8341257-support-installation-of-packages-apps-via-dynamic): Ahora se admite contenido adicional en medios independientes. Puede seleccionar paquetes adicionales, paquetes de controladores y aplicaciones para que se realice una copia intermedia en los medios junto con el resto del contenido al que se hace referencia en la secuencia de tareas. Antes, solo se realizaba una copia intermedia en los medios independientes del contenido al que se hace referencia en la secuencia de tareas.
+- [**Tiempo de espera configurable para el paso de secuencia de tareas de aplicación automática de controladores**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17153660-auto-apply-driver-timeout): Ahora hay disponibles nuevas variables de secuencia de tareas para configurar el valor del tiempo de espera en el paso de secuencia de tareas de aplicación automática de controladores cuando se realizan solicitudes del catálogo HTTP. Están disponibles las siguientes variables y valores predeterminados (en segundos):
    - Valor predeterminado de SMSTSDriverRequestResolveTimeOut: 60
    - Valor predeterminado de SMSTSDriverRequestConnectTimeOut: 60
    - Valor predeterminado de SMSTSDriverRequestSendTimeOut: 60
    - Valor predeterminado de SMSTSDriverRequestReceiveTimeOut: 480
-- [**El identificador de paquete ahora se muestra en los pasos de secuencia de tareas**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16167430-display-packageid-when-viewing-a-task-sequence-ste): ahora, todos los pasos de secuencia de tareas que hagan referencia a un paquete, un paquete de controladores, una imagen de sistema operativo, una imagen de arranque o un paquete de actualización del sistema operativo mostrarán el identificador de paquete del objeto al que se hace referencia. Cuando un paso de secuencia de tareas haga referencia a una aplicación, mostrará el identificador de objeto.
-- **La versión de compilación realiza un seguimiento de Windows 10 ADK**: ahora, la versión de compilación realiza un seguimiento de Windows 10 ADK para garantizar una experiencia más compatible al personalizar las imágenes de arranque de Windows 10. Por ejemplo, si el sitio usa Windows ADK para Windows 10, versión 1607, solo se pueden personalizar en la consola las imágenes de arranque con la versión 10.0.14393. Para más información sobre cómo personalizar las versiones de WinPE, vea [Personalizar imágenes de arranque](/sccm/osd/get-started/customize-boot-images).
-- **Ya no se puede cambiar la ruta de acceso de origen de la imagen de arranque predeterminada**: Configuration Manager administra las imágenes de arranque predeterminadas y la ruta de acceso de origen de la imagen de arranque predeterminada ya no se puede cambiar en la consola de Configuration Manager o mediante el SDK de Configuration Manager. Puede seguir configurando una ruta de acceso de origen personalizada para las imágenes de arranque personalizadas.
+- [**El identificador de paquete ahora se muestra en los pasos de secuencia de tareas**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16167430-display-packageid-when-viewing-a-task-sequence-ste): Todos los pasos de secuencia de tareas que hagan referencia a un paquete, un paquete de controladores, una imagen de sistema operativo, una imagen de arranque o un paquete de actualización del sistema operativo mostrarán el identificador de paquete del objeto al que se hace referencia. Cuando un paso de secuencia de tareas haga referencia a una aplicación, mostrará el identificador de objeto.
+- **Seguimiento de Windows 10 ADK según la versión de compilación**: Ahora, la versión de compilación realiza un seguimiento de Windows 10 ADK para garantizar una experiencia más compatible al personalizar las imágenes de arranque de Windows 10. Por ejemplo, si el sitio usa Windows ADK para Windows 10, versión 1607, solo se pueden personalizar en la consola las imágenes de arranque con la versión 10.0.14393. Para más información sobre cómo personalizar las versiones de WinPE, vea [Personalizar imágenes de arranque](/sccm/osd/get-started/customize-boot-images).
+- **Ya no se puede cambiar la ruta de acceso al origen de la imagen de arranque predeterminada**: Configuration Manager administra las imágenes de arranque predeterminadas, y la ruta de acceso de origen de la imagen de arranque predeterminada ya no se puede cambiar en la consola de Configuration Manager o mediante el SDK de Configuration Manager. Puede seguir configurando una ruta de acceso de origen personalizada para las imágenes de arranque personalizadas.
 
 ## <a name="host-software-updates-on-cloud-based-distribution-points"></a>Hospedar actualizaciones de software en puntos de distribución basados en la nube
 A partir de esta versión de vista previa, puede usar un punto de distribución basado en la nube para hospedar un paquete de actualización de software. Pero, dado que puede configurar los clientes para que descarguen las actualizaciones de software directamente desde Microsoft Update, debe tener en cuenta los costes adicionales que puede suponer la implementación de un paquete de actualización de software en un punto de distribución basado en la nube.
@@ -104,31 +104,31 @@ Con esta Technical Preview, ahora puede usar el conector de Microsoft Operations
 Para ello, modifique un archivo de configuración de modo que apunte a la nube de Government y, después, instale el conector de OMS.
 
 ### <a name="set-up-an-oms-connector-to-microsoft-azure-government-cloud"></a>Configurar un conector de OMS para la nube de Microsoft Azure Government
-1.  En un equipo que tenga instalada la consola de Configuration Manager, edite el archivo de configuración siguiente de modo que apunte a la nube de Government: ***&lt;ruta de acceso de instalación de CM>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
+1. En un equipo que tenga instalada la consola de Configuration Manager, edite el archivo de configuración siguiente de modo que apunte a la nube de Government:  ***&lt;ruta de acceso de instalación de CM>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
 
-  **Ediciones:**
+   **Ediciones:**
 
-    Cambie el valor del nombre de la configuración *FairFaxArmResourceID* para que sea igual a "https://management.usgovcloudapi.net/".
+   Cambie el valor del nombre de la configuración *FairFaxArmResourceID* de modo que sea igual a "<https://management.usgovcloudapi.net/”>
 
    - **Original:** &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
-      &lt;value>&lt;/value>   
-      &lt;/setting>
+     &lt;value>&lt;/value>   
+     &lt;/setting>
 
    - **Editado:**     
-      &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value>https://management.usgovcloudapi.net/&lt;/value>  
-      &lt;/setting>
+     &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value><https://management.usgovcloudapi.net/&lt;/value>>  
+     &lt;/setting>
 
-  Cambie el valor del nombre de la configuración *FairFaxAuthorityResource* para que sea igual a "https://login.microsoftonline.com/".
+   Cambie el valor del nombre de la configuración *FairFaxAuthorityResource* para que sea igual a "<https://login.microsoftonline.com/>".
 
-  - **Original:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
-    &lt;value>&lt;/value>
+   - **Original:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+     &lt;value>&lt;/value>
 
-    - **Editado:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
-    &lt;value>https://login.microsoftonline.com/&lt;/value>
+   - **Editado:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+     &lt;value><https://login.microsoftonline.com/&lt;/value>>
 
-2.  Después de guardar el archivo con los dos cambios, reinicie la consola de Configuration Manager en el mismo equipo y úsela para instalar el conector de OMS. Para instalar el conector, use la información incluida en [Sincronizar datos de Configuration Manager con Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)y seleccione el **Área de trabajo de Operations Management Suite** que se encuentra en la nube de Microsoft Azure Government.
+2. Después de guardar el archivo con los dos cambios, reinicie la consola de Configuration Manager en el mismo equipo y úsela para instalar el conector de OMS. Para instalar el conector, use la información incluida en [Sincronizar datos de Configuration Manager con Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)y seleccione el **Área de trabajo de Operations Management Suite** que se encuentra en la nube de Microsoft Azure Government.
 
-3.  Cuando se haya instalado el conector de OMS, la conexión a la nube de Government estará disponible al usar cualquier consola que se conecte al sitio.
+3. Cuando se haya instalado el conector de OMS, la conexión a la nube de Government estará disponible al usar cualquier consola que se conecte al sitio.
 
 ## <a name="android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm"></a>En los asistentes para creación de MDM híbrida ya no se pueden seleccionar como destino las versiones de iOS y Android.
 

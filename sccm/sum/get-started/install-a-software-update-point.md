@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.openlocfilehash: 3b2bb1f6866bb5266f20fb94451bfbfd2ce675bb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2c6c397b7b790b2cecada7fc5a7811ff77ae2d07
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353086"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422987"
 ---
 # <a name="install-and-configure-a-software-update-point"></a>Instalar y configurar un punto de actualización de software  
 
@@ -33,7 +33,7 @@ ms.locfileid: "32353086"
 > [!IMPORTANT]  
 >  No se admite la instalación del rol de sistema de sitio del punto de actualización de software en un servidor que se ha configurado y utilizado como un servidor WSUS independiente o mediante un punto de actualización de software para administrar directamente clientes WSUS. Los servidores WSUS existentes solo se admiten como orígenes de sincronización ascendentes para el punto de actualización de software activo. Vea [Sincronizar desde una ubicación de origen de datos ascendente](#BKMK_wsussync).
 
- Puede agregar el rol de sistema de sitio de punto de actualización de software a un servidor de sistema de sitio existente o puede crear uno nuevo. En la página **Selección de rol del sistema** del **Asistente para crear servidor de sistema de sitio** o el **Asistente para agregar roles de sistema de sitio, en función de si agrega el rol de sistema de sitio a un servidor de sitio nuevo o existente, seleccione **Punto de actualización de software** y, después, configure las opciones del punto de actualización de software en el asistente. Las opciones varían según la versión de Configuration Manager que usa. Para obtener más información sobre cómo instalar roles de sistema de sitio, consulte [Install site system roles (Instalar roles de sistema de sitio)](../../core/servers/deploy/configure/install-site-system-roles.md).  
+ Puede agregar el rol de sistema de sitio de punto de actualización de software a un servidor de sistema de sitio existente o puede crear uno nuevo. En la página **Selección de rol del sistema** del **Asistente para crear servidor de sistema de sitio** o el <strong>Asistente para agregar roles de sistema de sitio, en función de si agrega el rol de sistema de sitio a un servidor de sitio nuevo o existente, seleccione **Punto de actualización de software</strong> y, después, configure las opciones del punto de actualización de software en el asistente. Las opciones varían según la versión de Configuration Manager que usa. Para obtener más información sobre cómo instalar roles de sistema de sitio, consulte [Install site system roles (Instalar roles de sistema de sitio)](../../core/servers/deploy/configure/install-site-system-roles.md).  
 
  Utilice las siguientes secciones para obtener información acerca de la configuración del punto de actualización de software en un sitio.  
 
@@ -50,7 +50,7 @@ ms.locfileid: "32353086"
         >  La opción **Usar un servidor proxy cuando se descargue contenido mediante reglas de implementación automática** está disponible pero no se utiliza para un punto de actualización de software en un sitio secundario. Solo el punto de actualización de software en el sitio de administración central y el sitio primario descarga contenido de la página de Microsoft Update.  
 
 > [!IMPORTANT]  
->  De forma predeterminada, la cuenta **Sistema local** para el servidor en el que se creó una regla de implementación automática se utiliza para conectarse a Internet y descargar actualizaciones de software cuando se ejecutan las reglas de implementación automática. Cuando esta cuenta no tiene acceso a Internet, las actualizaciones de software no se descargan y se registra la siguiente entrada en ruleengine.log: **Failed to download the update from internet (No se pudo descargar la actualización de Internet). Error = 12007**. Configure las credenciales para conectarse al servidor proxy cuando la cuenta de sistema local no tiene acceso a Internet.  
+>  De forma predeterminada, la cuenta **Sistema local** para el servidor en el que se creó una regla de implementación automática se utiliza para conectarse a Internet y descargar actualizaciones de software cuando se ejecutan las reglas de implementación automática. Cuando esta cuenta no tiene acceso a Internet, las actualizaciones de software no se descargan y se registra la siguiente entrada en ruleengine.log: **No se pudo descargar la actualización de Internet. Error = 12007**. Configure las credenciales para conectarse al servidor proxy cuando la cuenta de sistema local no tiene acceso a Internet.  
 
 
 ## <a name="wsus-settings"></a>Configuración de WSUS  
@@ -88,14 +88,14 @@ ms.locfileid: "32353086"
 
  En la lista siguiente se proporciona más información acerca de cada opción que puede utilizar como origen de la sincronización:  
 
--   **Sincronizar desde Microsoft Update**: use esta opción para sincronizar los metadatos de las actualizaciones de software desde Microsoft Update. El sitio de administración central debe tener acceso a Internet; de lo contrario, se producirá un error de sincronización. Esta opción solo está disponible cuando se configura el punto de actualización de software en el sitio de nivel superior.  
+-   **Sincronizar desde Microsoft Update**: Utilice esta opción para sincronizar los metadatos de las actualizaciones de software desde Microsoft Update. El sitio de administración central debe tener acceso a Internet; de lo contrario, se producirá un error de sincronización. Esta opción solo está disponible cuando se configura el punto de actualización de software en el sitio de nivel superior.  
 
     > [!NOTE]  
     >  Si hay un firewall entre el punto de actualización de software e Internet, tal vez sea necesario configurar el firewall para aceptar los puertos HTTP y HTTPS que se usan para el sitio web de WSUS. También es posible restringir el acceso en el firewall a dominios limitados. Para obtener más información sobre la planeación de un firewall que admita actualizaciones de software, consulte [Configurar firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls).  
 
--   **<a name="BKMK_wsussync"></a>Sincronizar desde una ubicación de origen de datos que preceden en la cadena**: use esta opción para sincronizar los metadatos de las actualizaciones de software desde el origen de sincronización de canal de subida. Los sitios primarios secundarios y los sitios secundarios se configuran automáticamente para utilizar la dirección URL del sitio primario para esta opción. Tiene la posibilidad de sincronizar las actualizaciones de software desde un servidor WSUS existente. Especifique una dirección URL, como por ejemplo https://WSUSServer:8531, donde 8531 es el puerto que se usa para conectarse al servidor WSUS.  
+-   **<a name="BKMK_wsussync"></a>Sincronizar desde una ubicación de origen de datos que preceden en la cadena**: Utilice esta opción para sincronizar los metadatos de las actualizaciones de software desde el origen de la sincronización ascendente. Los sitios primarios secundarios y los sitios secundarios se configuran automáticamente para utilizar la dirección URL del sitio primario para esta opción. Tiene la posibilidad de sincronizar las actualizaciones de software desde un servidor WSUS existente. Especifique una dirección URL, como por ejemplo https://WSUSServer:8531, donde 8531 es el puerto que se usa para conectarse al servidor WSUS.  
 
--   **No sincronizar desde Microsoft Update o desde el origen de datos ascendente**: use esta opción para sincronizar manualmente las actualizaciones de software cuando se desconecte de Internet el punto de actualización de software en el sitio de nivel superior. Para obtener más información, consulte [Synchronize software updates from a disconnected software update point (Sincronizar actualizaciones de software desde un punto de actualización de software desconectado)](synchronize-software-updates-disconnected.md).  
+-   **No sincronizar desde Microsoft Update o desde el origen de datos que preceden en la cadena**: Utilice esta opción para sincronizar manualmente las actualizaciones de software cuando se desconecte de Internet el punto de actualización de software en el sitio de nivel superior. Para obtener más información, consulte [Sincronizar actualizaciones de software desde un punto de actualización de software desconectado](synchronize-software-updates-disconnected.md).  
 
 > [!NOTE]  
 >  Si hay un firewall entre el punto de actualización de software e Internet, tal vez sea necesario configurar el firewall para aceptar los puertos HTTP y HTTPS que se usan para el sitio web de WSUS. También es posible restringir el acceso en el firewall a dominios limitados. Para obtener más información sobre la planeación de un firewall que admita actualizaciones de software, consulte [Configurar firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls).  

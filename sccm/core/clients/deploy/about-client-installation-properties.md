@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 735a8da57c0225aee533568eb997dc82d9816d6b
-ms.sourcegitcommit: db6074317d5c68ebb5fc478be5bceeb441aa0737
+ms.openlocfilehash: 61b51fcf9f624f5c2e21a99add1b55f6d6812c84
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34220435"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421372"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-system-center-configuration-manager"></a>Acerca de los parámetros y propiedades de instalación de cliente en System Center Configuration Manager
 
@@ -159,17 +159,17 @@ Ejemplo: `ccmsetup.exe /logon`
 
  Especifica la prioridad de descarga cuando se descargan los archivos de instalación del cliente mediante una conexión HTTP. Los valores posibles son:  
 
--   FOREGROUND  
+- FOREGROUND  
 
--   HIGH  
+- HIGH  
 
--   NORMAL  
+- NORMAL  
 
--   LOW  
+- LOW  
 
- El valor predeterminado es NORMAL.  
+  El valor predeterminado es NORMAL.  
 
- Ejemplo: `ccmsetup.exe /BITSPriority:HIGH`  
+  Ejemplo: `ccmsetup.exe /BITSPriority:HIGH`  
 
 ### <a name="downloadtimeoutltminutes"></a>/downloadtimeout:&lt;Minutos\>
 
@@ -286,8 +286,8 @@ Especifica el identificador de inquilino de Azure AD. Este inquilino se vincula 
 - Ejecute el comando siguiente: `dsregcmd.exe /status`.
 - En la sección Estado del dispositivo, busque el valor **TenantId**. Por ejemplo, `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`.
 
- > [!Note]
- > Un administrador de Azure también puede obtener este valor en Azure Portal. Para obtener más información, vea [Obtención del identificador de inquilino](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-tenant-id).
+  > [!Note]
+  > Un administrador de Azure también puede obtener este valor en Azure Portal. Para obtener más información, vea [Obtención del identificador de inquilino](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-tenant-id).
 
 Ejemplo: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -356,10 +356,10 @@ Ejemplo: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
  `CCMCERTSEL="SubjectAttr:OU = Computers"` busca el atributo de unidad organizativa expresado como un nombre distintivo (DN) y con el nombre de Equipos.  
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Si usa el cuadro Nombre del firmante, **Subject:** distingue mayúsculas de minúsculas y **SubjectStr:** no distingue mayúsculas de minúsculas.  
->   
->  Si usa el cuadro Nombre alternativo del firmante, **Subject:** y **SubjectStr:** no distinguen mayúsculas de minúsculas.  
+> 
+>  Si usa el cuadro Nombre alternativo del firmante, <strong>Subject:</strong> y **SubjectStr:** no distinguen mayúsculas de minúsculas.  
 
  La lista completa de atributos que puede usar para la selección de certificados está en [Valores de atributos admitidos para los criterios de selección de certificado PKI](#BKMK_attributevalues).  
 
@@ -576,19 +576,19 @@ Ejemplo: `CCMSetup.exe SMSCACHESIZE=100`
 
 Especifica la ubicación y el orden en que el instalador de Configuration Manager comprueba si hay valores de configuración. La propiedad es una cadena de uno o más caracteres, cada uno de los cuales define un origen de configuración específico. Use lo valores de caracteres R, P, M y U, solos o en combinación:  
 
--   R: comprueba los valores de configuración en el Registro.  
+- R: comprueba los valores de configuración en el Registro.  
 
-   Para obtener más información, vea la [información sobre el almacenamiento de las propiedades de instalación de cliente en el Registro](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).  
+  Para obtener más información, vea la [información sobre el almacenamiento de las propiedades de instalación de cliente en el Registro](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).  
 
--   P: comprueba los valores de configuración de las propiedades de instalación proporcionados en el símbolo del sistema.  
+- P: comprueba los valores de configuración de las propiedades de instalación proporcionados en el símbolo del sistema.  
 
--   M: comprueba la configuración existente al actualizar un cliente anterior con el software cliente de Configuration Manager.  
+- M: comprueba la configuración existente al actualizar un cliente anterior con el software cliente de Configuration Manager.  
 
--   U: actualiza el cliente instalado a una versión más reciente (y utiliza el código de sitio asignado).  
+- U: actualiza el cliente instalado a una versión más reciente (y utiliza el código de sitio asignado).  
 
- De forma predeterminada, la instalación del cliente usa `PU` para comprobar, en primer lugar, las propiedades de instalación y, a continuación, la configuración existente.  
+  De forma predeterminada, la instalación del cliente usa `PU` para comprobar, en primer lugar, las propiedades de instalación y, a continuación, la configuración existente.  
 
- Ejemplo: `CCMSetup.exe SMSCONFIGSOURCE=RP`  
+  Ejemplo: `CCMSetup.exe SMSCONFIGSOURCE=RP`  
 
 ### <a name="smsdirectorylookup"></a>SMSDIRECTORYLOOKUP
 
@@ -600,7 +600,7 @@ Especifica la ubicación y el orden en que el instalador de Configuration Manage
 
 -   NOWINS: este valor es la configuración más segura para esta propiedad e impide que los clientes puedan encontrar un punto de administración en WINS. Cuando use esta opción, los clientes deben tener un método alternativo para buscar un punto de administración en la intranet, como Servicios de dominio de Active Directory o el uso de la publicación en DNS.  
 
--   WINSSECURE (valor predeterminado): en este modo, un cliente que usa la comunicación HTTP puede usar WINS para buscar un punto de administración. Sin embargo, el cliente debe tener una copia de la clave raíz confiable antes de que pueda conectarse correctamente al punto de administración. Para obtener más información, consulte [Planeación de la clave raíz confiable](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
+-   WINSSECURE (valor predeterminado): en este modo, un cliente que utiliza la comunicación HTTP puede utilizar WINS para buscar un punto de administración. Sin embargo, el cliente debe tener una copia de la clave raíz confiable antes de que pueda conectarse correctamente al punto de administración. Para obtener más información, consulte [Planeación de la clave raíz confiable](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
 
 
  Ejemplo: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`  
@@ -627,7 +627,7 @@ Ejemplo: `CCMSetup.exe SMSMP=https://smsmp01.contoso.com`
 
  Se utiliza para volver a instalar la clave raíz confiable de Configuration Manager. Especifica el nombre y la ruta de acceso completa en un archivo que contiene la clave raíz confiable. Esta propiedad se aplica a los clientes que utilizan la comunicación de cliente HTTP y HTTPS. Para obtener más información, consulte [Planeación de la clave raíz confiable](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
 
- Ejemplo: 'CCMSetup.exe SMSROOTKEYPATH=&lt;Ruta de acceso completa y nombre de archivo\>`  
+ Ejemplo: 'CCMSetup.exe SMSROOTKEYPATH=&lt;Ruta completa y nombre de archivo\>`  
 
 ### <a name="smssigncert"></a>SMSSIGNCERT
 
@@ -635,7 +635,7 @@ Ejemplo: `CCMSetup.exe SMSMP=https://smsmp01.contoso.com`
 
  Este certificado se almacena en el almacén de certificados **SMS** ; su nombre de sujeto es **Servidor del sitio** y su nombre descriptivo es **Certificado de firma de servidor de sitio**.  
 
- Ejemplo: **CCMSetup.exe /UsePKICert SMSSIGNCERT=&lt;Ruta de acceso completa y nombre de archivo\>**  
+ Ejemplo: **CCMSetup.exe /UsePKICert SMSSIGNCERT=&lt;ruta completa y nombre de archivo\>**  
 
 ### <a name="smssitecode"></a>SMSSITECODE
 

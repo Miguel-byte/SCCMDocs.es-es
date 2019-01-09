@@ -10,12 +10,12 @@ ms.assetid: 738eddaa-52e2-467f-b453-821ef2884d47
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 4504f26f8f6288750d36028d8eb795ae0d839fbc
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: af1d2dd5b3075413cdc661ecc8d75c532443d2ce
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336228"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424857"
 ---
 # <a name="how-to-create-and-apply-power-plans-in-system-center-configuration-manager"></a>Cómo crear y aplicar planes de energía en System Center Configuration Manager
 
@@ -28,11 +28,11 @@ La administración de energía de System Center Configuration Manager le permite
 
  Si un equipo es miembro de varias recopilaciones y cada una de ellas aplica planes de energía diferentes, se realizará las siguientes acciones:  
 
--   Plan de energía: si se aplican varios valores para la configuración de energía en un equipo, se usa el valor menos restrictivo.  
+- Plan de energía: si se aplican varios valores para la configuración de energía de un equipo, se usa el valor menos restrictivo.  
 
--   Tiempo de activación: si se aplican varias horas de activación a un equipo de escritorio, se usa la hora más cercana a medianoche.  
+- Hora de reactivación: si se aplican varias horas de activación a un equipo de escritorio, se usa la hora más cercana a medianoche.  
 
- Use el informe **Equipos con varios planes de energía** para mostrar todos los equipos a los que se aplican varios planes de energía. Esto puede ayudarle a detectar los equipos que tienen conflictos de energía. Para más información sobre los informes de administración de energía, vea [Cómo supervisar y planear la administración en el Administrador de configuración de energía](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
+  Use el informe **Equipos con varios planes de energía** para mostrar todos los equipos a los que se aplican varios planes de energía. Esto puede ayudarle a detectar los equipos que tienen conflictos de energía. Para más información sobre los informes de administración de energía, vea [Cómo supervisar y planear la administración en el Administrador de configuración de energía](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
 
 > [!IMPORTANT]  
 >  Al configurar la energía con la directiva de grupo de Windows se invalidará la configuración establecida por la administración de energía de Configuration Manager.  
@@ -41,48 +41,48 @@ La administración de energía de System Center Configuration Manager le permite
 
 ### <a name="to-create-and-apply-a-power-plan"></a>Para crear y aplicar un plan de energía  
 
-1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
+1. En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
 
-2.  En el área de trabajo **Activos y compatibilidad** , haga clic en **Recopilaciones de dispositivos**.  
+2. En el área de trabajo **Activos y compatibilidad** , haga clic en **Recopilaciones de dispositivos**.  
 
-3.  En la lista **Recopilaciones de dispositivos** , haga clic en la recopilación a la que quiere aplicar la configuración de administración de energía y, a continuación, en la pestaña **Inicio** en el grupo **Propiedades** , haga clic en **Propiedades**.  
+3. En la lista **Recopilaciones de dispositivos** , haga clic en la recopilación a la que quiere aplicar la configuración de administración de energía y, a continuación, en la pestaña **Inicio** en el grupo **Propiedades** , haga clic en **Propiedades**.  
 
-4.  En la pestaña **Administración de energía** del cuadro de diálogo *<Nombre de recopilación\>***Propiedades**, seleccione **Especificar la configuración de administración de energía para esta recopilación**.  
+4. En la pestaña **Administración de energía** del cuadro de diálogo <em><Nombre de la colección>\></em>**Propiedades**, seleccione **Especificar la configuración de administración de energía para esta recopilación**.  
 
-    > [!NOTE]  
-    >  También puede hacer clic en **Examinar** y, a continuación, copiar la configuración de administración de energía de una recopilación seleccionada en la recopilación seleccionada.  
+   > [!NOTE]  
+   >  También puede hacer clic en **Examinar** y, a continuación, copiar la configuración de administración de energía de una recopilación seleccionada en la recopilación seleccionada.  
 
-5.  En los campos **Inicio** y **Fin** , especifique las horas de inicio y fin para las horas punta (o laborables).  
+5. En los campos **Inicio** y **Fin** , especifique las horas de inicio y fin para las horas punta (o laborables).  
 
-6.  Habilite **Hora de activación (equipos de escritorio)** para especificar una hora en la que un equipo de escritorio se activará desde suspensión o hibernación para instalar actualizaciones o instalaciones de software programadas.  
+6. Habilite **Hora de activación (equipos de escritorio)** para especificar una hora en la que un equipo de escritorio se activará desde suspensión o hibernación para instalar actualizaciones o instalaciones de software programadas.  
 
-    > [!IMPORTANT]  
-    >  La administración de energía usa la característica interna de hora de activación de Windows para activar los equipos en suspensión o hibernación. La configuración de la hora de activación no se aplica a los equipos portátiles para evitar escenarios en los que se activaran cuando no estuvieran enchufados. La hora de activación es aleatoria y los equipos se activarán durante un período de una hora desde la hora de activación especificada.  
+   > [!IMPORTANT]  
+   >  La administración de energía usa la característica interna de hora de activación de Windows para activar los equipos en suspensión o hibernación. La configuración de la hora de activación no se aplica a los equipos portátiles para evitar escenarios en los que se activaran cuando no estuvieran enchufados. La hora de activación es aleatoria y los equipos se activarán durante un período de una hora desde la hora de activación especificada.  
 
-7.  Si quiere configurar un plan de energía personalizado para las horas punta (o laborables), seleccione **Máximo personalizado (ConfigMgr)** en la lista desplegable **Plan para horas punta** y, a continuación, haga clic en **Editar**. Si quiere configurar un plan de energía para fuera de horas punta (o no laborables), seleccione **Fuera de horas punta personalizado (ConfigMgr)** en la lista desplegable **Plan fuera de horas punta** y, a continuación, haga clic en **Editar**.  
+7. Si quiere configurar un plan de energía personalizado para las horas punta (o laborables), seleccione **Máximo personalizado (ConfigMgr)** en la lista desplegable **Plan para horas punta** y, a continuación, haga clic en **Editar**. Si quiere configurar un plan de energía para fuera de horas punta (o no laborables), seleccione **Fuera de horas punta personalizado (ConfigMgr)** en la lista desplegable **Plan fuera de horas punta** y, a continuación, haga clic en **Editar**.  
 
-    > [!NOTE]  
-    >  Puede usar el informe **Actividad de equipo** que le ayudará a decidir las programaciones que debe usar para las horas punta y fuera de horas punta al aplicar planes de energía a recopilaciones de equipos. Para más información, vea [Cómo supervisar y planear la administración en el Administrador de configuración de energía](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
+   > [!NOTE]  
+   >  Puede usar el informe **Actividad de equipo** que le ayudará a decidir las programaciones que debe usar para las horas punta y fuera de horas punta al aplicar planes de energía a recopilaciones de equipos. Para más información, vea [Cómo supervisar y planear la administración en el Administrador de configuración de energía](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
 
-     También puede seleccionar los planes de energía integrados, **Equilibrado (ConfigMgr)**, **Alto rendimiento (ConfigMgr)** y **Ahorro de energía (ConfigMgr)** y, a continuación, hacer clic en **Ver** para mostrar las propiedades de cada plan de energía.  
+    También puede seleccionar los planes de energía integrados, **Equilibrado (ConfigMgr)**, **Alto rendimiento (ConfigMgr)** y **Ahorro de energía (ConfigMgr)** y, a continuación, hacer clic en **Ver** para mostrar las propiedades de cada plan de energía.  
 
-    > [!NOTE]  
-    >  No se pueden modificar los planes de energía integrados.  
+   > [!NOTE]  
+   >  No se pueden modificar los planes de energía integrados.  
 
-8.  En el cuadro de diálogo *<Nombre de plan de energía\>***Propiedades**, configure las opciones siguientes:  
+8. En el cuadro de diálogo <em><nombre de plan de energía\></em>**Propiedades**, configure las opciones siguientes:  
 
-    -   **Nombre:** especifique un nombre para este plan de energía o use el nombre predeterminado proporcionado.  
+   -   **Nombre:** especifique un nombre para este plan de energía o use el nombre predeterminado proporcionado.  
 
-    -   **Descripción:**  especifique una descripción para este plan de energía o use la descripción predeterminada proporcionada.  
+   -   **Descripción:**  especifique una descripción para este plan de energía o use la descripción predeterminada proporcionada.  
 
-    -   **Especificar las propiedades de este plan de energía:** configure las propiedades del plan de energía. Para deshabilitar una propiedad, desactive su casilla. Para obtener más información sobre las opciones disponibles, vea [Available power management plan settings](#BKMK_Plans) en este tema.  
+   -   **Especificar las propiedades de este plan de energía:** configure las propiedades del plan de energía. Para deshabilitar una propiedad, desactive su casilla. Para obtener más información sobre las opciones disponibles, vea [Available power management plan settings](#BKMK_Plans) en este tema.  
 
-        > [!IMPORTANT]  
-        >  La configuración habilitada se aplica a los equipos cuando se aplica el plan de energía. Si desactiva una casilla de configuración de energía, no se cambia el valor en el equipo cliente cuando se aplica el plan de energía. Al desactivar una casilla no se restaura la configuración de energía a su valor anterior antes de haber aplicado un plan de energía.  
+       > [!IMPORTANT]  
+       >  La configuración habilitada se aplica a los equipos cuando se aplica el plan de energía. Si desactiva una casilla de configuración de energía, no se cambia el valor en el equipo cliente cuando se aplica el plan de energía. Al desactivar una casilla no se restaura la configuración de energía a su valor anterior antes de haber aplicado un plan de energía.  
 
-9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo *<Nombre de plan de energía\>***Propiedades**.  
+9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo <em><nombre de plan de energía\></em>**Propiedades**.  
 
-10. Haga clic en **Aceptar** para cerrar el cuadro de diálogo *<Nombre de recopilación\>***Configuración** y aplicar el plan de energía.  
+10. Haga clic en **Aceptar** para cerrar el cuadro de diálogo <em><Nombre de la colección>\></em>**Configuración** y aplicar el plan de energía.  
 
 ##  <a name="BKMK_Plans"></a> Available power management plan settings  
  En la tabla siguiente se muestran las opciones de administración de energía disponibles en Configuration Manager. Puede definir configuraciones diferentes para cuando el equipo está conectado o funciona con batería. Según la versión de Windows que use, puede que algunas opciones no sean configurables.  

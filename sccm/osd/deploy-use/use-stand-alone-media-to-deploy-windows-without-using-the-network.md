@@ -10,12 +10,12 @@ ms.assetid: 58a0d2ae-de76-401f-b854-7a5243949033
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18e50806868955eac807645a5378aea53acdc899
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9e297842a82ac3ae39f4e3a75962aaef115e35a4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348613"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420981"
 ---
 # <a name="use-stand-alone-media-to-deploy-windows-without-using-the-network-in-system-center-configuration-manager"></a>Usar medios independientes para implementar Windows sin usar la red en System Center Configuration Manager
 
@@ -29,13 +29,13 @@ Los medios independientes de System Center Configuration Manager contienen todo 
 
 Puede usar medios independientes en los siguientes escenarios de implementación de sistema operativo:  
 
--   [Actualizar un equipo existente con una nueva versión de Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+- [Actualizar un equipo existente con una nueva versión de Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 
--   [Instalar una nueva versión de Windows en un equipo nuevo (sin sistema operativo)](install-new-windows-version-new-computer-bare-metal.md)  
+- [Instalar una nueva versión de Windows en un equipo nuevo (sin sistema operativo)](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [Actualizar Windows a la versión más reciente](upgrade-windows-to-the-latest-version.md)  
+- [Actualizar Windows a la versión más reciente](upgrade-windows-to-the-latest-version.md)  
 
- Complete los pasos de uno de los escenarios de implementación de sistema operativo y luego use las secciones siguientes para prepararse y crear los medios independientes.  
+  Complete los pasos de uno de los escenarios de implementación de sistema operativo y luego use las secciones siguientes para prepararse y crear los medios independientes.  
 
 ## <a name="task-sequence-actions-not-supported-when-using-stand-alone-media"></a>Acciones de la secuencia de tareas no admitidas si se usan medios independientes  
  Si completó los pasos de uno de los escenarios admitidos de implementación de sistema operativo, la secuencia de tareas para implementar (o actualizar) el sistema operativo se ha creado y todo el contenido asociado se ha distribuido a un punto de distribución. Cuando se usan medios independientes, no se admiten las siguientes acciones en la secuencia de tareas:  

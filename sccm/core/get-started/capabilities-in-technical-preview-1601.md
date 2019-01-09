@@ -11,12 +11,12 @@ author: aczechowski
 robots: noindex,nofollow
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f75c27ece3b9a8b490fb136a411a65ac4cbe2129
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a11abd53a83f52cbb05d2a49c3271becb4cedb64
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339475"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420199"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1601 para System Center Configuration Manager
 
@@ -79,9 +79,9 @@ En la versión Technical Preview 1601, hemos agregado compatibilidad con las sig
 
     Para usar esta opción, debe crear una directiva de cumplimiento en Configuration Manager con las reglas específicas que se describen a continuación y establecer una directiva de acceso condicional en la consola de Intune.  Además, para asegurarse de que se permita el acceso únicamente a los equipos compatibles, debe establecer el requisito de equipo Windows en la opción **Los dispositivos deben ser compatibles**. A continuación se detallan las reglas de directiva de cumplimiento que se aplican a los equipos administrados por System Center Configuration Manager.  
 
-    -   **Requiere registro en Azure Active Directory:** esta regla comprueba si el dispositivo del usuario está unido al área de trabajo en Azure AD y, si no, se registra automáticamente en Azure AD. El registro automático solo se admite en Windows 8.1. Para equipos con Windows 7, implemente un archivo MSI para realizar el registro automático. Para más información, vea [aquí](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   **Requiere registro en Azure Active Directory:** esta regla comprueba si el dispositivo del usuario está unido al área de trabajo en Azure AD y, si no, se registra automáticamente en Azure AD. El registro automático solo se admite en Windows 8.1. Para equipos con Windows 7, implemente un archivo MSI para realizar el registro automático. Para más información, vea [aquí](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
 
-    -   **Se han instalado todas las actualizaciones necesarias con una caducidad superior a X días:** esta regla comprueba si el dispositivo del usuario tiene todas las actualizaciones necesarias (especificadas en la regla **Actualizaciones automáticas requeridas**) dentro de la fecha límite y el período de gracia especificados e instala automáticamente cualquier actualización necesaria pendiente.  
+    -   **Todas las actualizaciones necesarias que se instalan con una fecha límite anterior a un número determinado de días:** esta regla comprueba si el dispositivo del usuario tiene todas las actualizaciones necesarias (especificadas en la regla **Actualizaciones automáticas requeridas**) dentro de la fecha límite y el período de gracia que usted especifique, e instala automáticamente cualquier actualización necesaria pendiente.  
 
     -   **Requerir cifrado de unidad BitLocker:** se trata de una comprobación para ver si la unidad principal (por ejemplo, C:\\) del dispositivo está cifrada con BitLocker. Si el cifrado BitLocker no está habilitado en el dispositivo primario, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
 
@@ -94,32 +94,32 @@ En la versión Technical Preview 1601, hemos agregado compatibilidad con las sig
 
     Se ha agregado una nueva regla de cumplimiento a la consola de Configuration Manager que permite especificar si debe permitir o bloquear el acceso de los dispositivos en función de su estado.  Para crear esta regla, abra el **Asistente para crear directivas de cumplimiento** y agregue una nueva regla.  Seleccione **Notificado como estado correcto por el servicio de atestación de estado** para la condición y establezca el valor en **True**.  Esto garantiza que solo los dispositivos que se notifican con un estado correcto tienen acceso a los recursos de la compañía. Para obtener detalles sobre el servicio de atestación de estado y cómo se notifica el estado de los dispositivos en Intune, vea [Device Health Attestation (Atestación de estado de un dispositivo)](#bkmk_devicehealth).  
 
--   **Nuevas opciones de directiva de cumplimiento:** las nuevas opciones de directiva de cumplimiento ayudan a mejorar la seguridad y la protección en los dispositivos que se usan para acceder a los servicios de correo electrónico y SharePoint de la empresa:  
+-   **Nuevas opciones de directiva de cumplimiento:** las nuevas opciones de directiva de cumplimiento ayudan a mejorar la seguridad y la protección en los dispositivos que se usan para obtener acceso a los servicios de correo electrónico y SharePoint de la empresa:  
 
-    -   **Requerir actualizaciones automáticas:** puede exigir que los dispositivos con Windows 8.1 o posterior permitan la instalación automática de actualizaciones y además puede especificar la clase de actualizaciones que se instalan.  Puede elegir entre instalar solo las actualizaciones marcadas como importantes o instalar todas las actualizaciones recomendadas.  
+    -   **Requerir actualizaciones automáticas:** puede exigir que los dispositivos con Windows 8.1 o posterior permitan la instalación automática de actualizaciones y, además, puede especificar la clase de actualizaciones que se instalan.  Puede elegir entre instalar solo las actualizaciones marcadas como importantes o instalar todas las actualizaciones recomendadas.  
 
          Para crear una regla de actualizaciones automáticas, abra el **Asistente para crear directivas de cumplimiento** y agregue una nueva regla.  Seleccione **Clasificación mínima de actualizaciones necesarias** como condición y establezca el valor en uno de los valores disponibles: **Ninguno**, **Recomendado** e **Importante**.  
 
         -   **Ninguno:** las actualizaciones no se instalan automáticamente.  
 
-        -   **Recomendado:** se instalan todas las actualizaciones recomendadas  
+        -   **Recomendado:** se instalan todas las actualizaciones recomendadas.  
 
         -   **Importante:** solo se instalan las actualizaciones clasificadas como importantes.  
 
-    -   **Requerir una contraseña para desbloquear dispositivos móviles:** cuando esta opción está establecida en **Sí**, los usuarios finales deben escribir una contraseña para poder acceder al dispositivo.  
+    -   **Requerir una contraseña para desbloquear dispositivos móviles:** cuando esta opción está establecida en **Sí**, los usuarios finales deben escribir una contraseña para poder tener acceso a su dispositivo.  
 
          Para crear una regla para exigir una contraseña a fin de desbloquear los dispositivos móviles, abra el **Asistente para crear directivas de cumplimiento** y agregue una nueva regla. Seleccione **Requerir contraseña para desbloquear un dispositivo inactivo** como condición y establezca el valor en **True**.  
 
-    -   **Minutos de inactividad antes de solicitar la contraseña:** especifica el tiempo de inactividad que transcurre antes de que el usuario deba volver a escribir la contraseña.  
+    -   **Minutos de inactividad antes de que se requiera la contraseña:**  Especifica el tiempo de inactividad antes de que el usuario deba volver a escribir la contraseña.  
 
-         Para crear esta regla, abra el **Asistente para crear directivas de cumplimiento** y agregue una nueva regla. Seleccione **Minutos de inactividad antes de solicitar la contraseña** como condición y establezca el valor en una de las opciones disponibles: 1 minuto, 5 minutos, 15 minutos, 30 minutos o 1 hora.  
+         Para crear esta regla, abra el **Asistente para crear directivas de cumplimiento** y agregue una nueva regla. Seleccione **Minutos de inactividad antes de solicitar la contraseña** como condición y establezca el valor en una de las opciones disponibles: 1 minuto, 5 minutos, 15 minutos, 30 minutos o 1 hora.  
 
 -   **Invalidación de la regla predeterminada: permitir siempre que los dispositivos compatibles e inscritos en Intune accedan a Exchange:**  
 
      Si se selecciona esta opción, los dispositivos inscritos en Intune y que cumplen con las directivas establecidas pueden tener acceso a Exchange local. Esta regla invalida la Regla predeterminada, lo que significa que aunque configure dicha regla y la establezca en Cuarentena o Bloquear el acceso, aquellos dispositivos inscritos y que cumplen con las directivas seguirán teniendo acceso a Exchange local.  
      Use esta opción cuando quiera que los dispositivos inscritos y conformes a las directivas siempre tengan acceso a correo electrónico a través de Exchange local.  
 
-     Se admite en las siguientes plataformas: Windows Phone 8 y versiones posteriores, iOS 6 y versiones posteriores. Android 4.0 y versiones posteriores, Samsung KNOX Standard 4.0 y versiones posteriores.  
+     Esto es compatible en las siguientes plataformas:  Dispositivos con Windows Phone 8 y versiones posteriores, e iOS 6 y versiones posteriores Android 4.0 y versiones posteriores, Samsung KNOX Standard 4.0 y versiones posteriores.  
 
      Para usar esta opción, vaya a la página **General** del **Asistente de configuración de directivas de acceso condicional** de Exchange local.  
 
@@ -144,17 +144,17 @@ Un cliente está en línea si en ese momento está conectado a un rol de sistema
 
 ### <a name="to-view-client-online-status"></a>Para ver el estado de conexión de cliente  
 
-1.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad > Información general > Dispositivos**.  
+1. En la consola de Configuration Manager, vaya a **Activos y compatibilidad > Información general > Dispositivos**.  
 
-2.  Haga clic con el botón derecho en el encabezado de columna y luego haga clic en uno de los campos de estado de conexión de cliente para agregarlo a la vista del dispositivo. Los campos son los siguientes:  
+2. Haga clic con el botón derecho en el encabezado de columna y luego haga clic en uno de los campos de estado de conexión de cliente para agregarlo a la vista del dispositivo. Los campos son los siguientes:  
 
-    -   **Estado de conexión del dispositivo** indica si el cliente está actualmente conectado o no.  
+   -   **Estado de conexión del dispositivo** indica si el cliente está actualmente conectado o no.  
 
-    -   **Hora de la última conexión** indica cuándo cambió el estado de conexión del cliente de sin conexión a en línea.  
+   -   **Hora de la última conexión** indica cuándo cambió el estado de conexión del cliente de sin conexión a en línea.  
 
-    -   **Hora de la última desconexión** indica cuándo cambió el estado de en línea a sin conexión.  
+   -   **Hora de la última desconexión** indica cuándo cambió el estado de en línea a sin conexión.  
 
- Para mostrar los cambios recientes del estado de cliente, actualice la consola.  
+   Para mostrar los cambios recientes del estado de cliente, actualice la consola.  
 
 ##  <a name="bkmk_appmgmt1601"></a> Mejoras en la administración de aplicaciones  
  En la versión Technical Preview 1601, hemos agregado compatibilidad con las siguientes características:  

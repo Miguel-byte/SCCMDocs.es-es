@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 29b0f577ad291899467d9c6fd305af9ef6b892eb
-ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
+ms.openlocfilehash: 85bd23130826c7ca23e10125efba58bf14555fb1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083809"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424228"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot para datos en tiempo real en Configuration Manager
 
@@ -131,51 +131,51 @@ La ventana CMPivot contiene los elementos siguientes:
 
 6. El panel de resultados muestra los datos devueltos por los clientes activos de la consulta.  
 
-    - Las columnas disponibles varían en función de la entidad y la consulta.  
+   - Las columnas disponibles varían en función de la entidad y la consulta.  
 
-    - Haga clic en un nombre de columna para ordenar los resultados por esa propiedad.  
+   - Haga clic en un nombre de columna para ordenar los resultados por esa propiedad.  
 
-    - Haga clic con el botón derecho en cualquier nombre de columna para agrupar los resultados por la misma información en esa columna u ordenarlos.  
+   - Haga clic con el botón derecho en cualquier nombre de columna para agrupar los resultados por la misma información en esa columna u ordenarlos.  
 
-    - Haga clic con el botón derecho en un nombre de dispositivo para realizar las siguientes acciones adicionales en el dispositivo:  
+   - Haga clic con el botón derecho en un nombre de dispositivo para realizar las siguientes acciones adicionales en el dispositivo:  
 
-       - **Pasar a**: consulte otra entidad en este dispositivo.  
+      - **Pasar a**: consulte otra entidad en este dispositivo.  
 
-       - **Ejecutar Script**: inicie el asistente Ejecuta script para ejecutar un script de PowerShell existente en este dispositivo. Para obtener más información, vea [Ejecutar un script](/sccm/apps/deploy-use/create-deploy-scripts#run-a-script).  
+      - **Ejecutar script**: inicie el Asistente para la ejecución de scripts para ejecutar un script de PowerShell existente en este dispositivo. Para obtener más información, vea [Ejecutar un script](/sccm/apps/deploy-use/create-deploy-scripts#run-a-script).  
 
-       - **Control remoto**: inicie una sesión de Control remoto de Configuration Manager en este dispositivo. Para obtener más información, vea [Cómo administrar de forma remota un equipo cliente de Windows](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer).  
+      - **Control remoto**: inicie una sesión de Control remoto de Configuration Manager en este dispositivo. Para obtener más información, vea [Cómo administrar de forma remota un equipo cliente de Windows](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer).  
 
-       - **Explorador de recursos**: inicie el Explorador de recursos de Configuration Manager para este dispositivo. Para obtener más información, vea [Ver el inventario de hardware](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory) o [Ver el inventario de software](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory).  
+      - **Explorador de recursos**: inicie el Explorador de recursos de Configuration Manager para este dispositivo. Para obtener más información, vea [Ver el inventario de hardware](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory) o [Ver el inventario de software](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory).  
 
-    - Haga clic con el botón derecho en una casilla que no sea de dispositivo para realizar las siguientes acciones adicionales:  
+   - Haga clic con el botón derecho en una casilla que no sea de dispositivo para realizar las siguientes acciones adicionales:  
 
-       - **Copiar**: copie el texto de la celda en el Portapapeles.  
+     - **Copiar**: copie el texto de la celda en el Portapapeles.  
 
-       - **Mostrar los dispositivos con**: consulte los dispositivos con este valor para esta propiedad. Por ejemplo, de los resultados de la consulta `OS`, seleccione esta opción en una celda en la fila Versión: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ > 0)`  
+     - **Mostrar los dispositivos con**: consulte los dispositivos con este valor para esta propiedad. Por ejemplo, de los resultados de la consulta `OS`, seleccione esta opción en una celda en la fila Versión: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ > 0)`  
 
-       - **Mostrar los dispositivos sin**: consulte los dispositivos sin este valor para esta propiedad. Por ejemplo, de los resultados de la consulta `OS`, seleccione esta opción en una celda en la fila Versión: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
+     - **Mostrar los dispositivos sin**: consulte los dispositivos sin este valor para esta propiedad. Por ejemplo, de los resultados de la consulta `OS`, seleccione esta opción en una celda en la fila Versión: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
 
-       - **Buscarlo con Bing**: inicie el explorador web predeterminado en www.bing.com con este valor como cadena de consulta.  
+     - **Buscarlo con Bing**: inicie el explorador web predeterminado en www.bing.com con este valor como la cadena de consulta.  
 
-    - Haga clic en cualquier texto con hipervínculo para fijar la vista en esa información específica.  
+   - Haga clic en cualquier texto con hipervínculo para fijar la vista en esa información específica.  
 
-    - El panel de resultados no muestra más de 20 000 filas. Puede ajustar la consulta para filtrar aún más los datos o reiniciar CMPivot en una colección más pequeña.  
+   - El panel de resultados no muestra más de 20 000 filas. Puede ajustar la consulta para filtrar aún más los datos o reiniciar CMPivot en una colección más pequeña.  
 
 7. La barra de estado muestra la siguiente información (de izquierda a derecha):  
 
-    - El estado de la consulta actual a la colección de destino. Este estado incluye:  
-        - El número de clientes activos que completaron la consulta (3)  
-        - El número de clientes total (5)  
-        - El número de clientes sin conexión (2)  
-        - Los clientes que devolvieron un error (0)  
+   - El estado de la consulta actual a la colección de destino. Este estado incluye:  
+     - El número de clientes activos que completaron la consulta (3)  
+     - El número de clientes total (5)  
+     - El número de clientes sin conexión (2)  
+     - Los clientes que devolvieron un error (0)  
 
-        Por ejemplo: `Query completed on 3 of 5 clients (2 clients offline and 0 failure)`  
+       Por ejemplo: `Query completed on 3 of 5 clients (2 clients offline and 0 failure)`  
 
-    - El identificador de la operación del cliente. Por ejemplo: `id(16780221)`  
+   - El identificador de la operación del cliente. Por ejemplo: `id(16780221)`  
 
-    - La colección actual. Por ejemplo: `PM_Team_Machines`  
+   - La colección actual. Por ejemplo: `PM_Team_Machines`  
 
-    - El número total de filas en el panel de resultados. Por ejemplo, `1 objects`.  
+   - El número total de filas en el panel de resultados. Por ejemplo, `1 objects`.  
 
 
 
@@ -184,7 +184,7 @@ La ventana CMPivot contiene los elementos siguientes:
 Las secciones siguientes proporcionan ejemplos de cómo puede usar CMPivot en su entorno:
 
 
-### <a name="example-1-stop-a-running-service"></a>Ejemplo 1: Detenga un servicio en ejecución
+### <a name="example-1-stop-a-running-service"></a>Ejemplo 1: Detección de un servicio en ejecución
 
 El Administrador de seguridad le pide que detenga y deshabilite el servicio Examinador de equipos tan pronto como sea posible en todos los dispositivos en el departamento de contabilidad. Inicie CMPivot en una colección de todos los dispositivos de contabilidad y seleccione **Consultar todos** en la entidad **Servicio**. 
 
@@ -203,7 +203,7 @@ Realice una selección múltiple de todos los dispositivos, haga clic con el bot
 ![Ejemplo de CMPivot para el servicio Explorador y la acción Ejecutar script](media/cmpivot-example1.png)
 
 
-### <a name="example-2-proactively-resolve-application-failures"></a>Ejemplo 2: Resolver proactivamente errores de aplicación  
+### <a name="example-2-proactively-resolve-application-failures"></a>Ejemplo 2: Resolución proactiva de errores de aplicación  
 
 Para ser proactivo con el mantenimiento, ejecute una vez por semana CMPivot en una colección de servidores que administra y seleccione **Consultar todos** en la entidad **AppCrash**. Haga clic con el botón derecho en la columna **FileName** y seleccione **Orden ascendente**. Un dispositivo devuelve siete resultados sqlsqm.exe con una marca de tiempo aproximadamente a las 3:00 cada día. Seleccione el nombre de archivo en una de las filas, haga clic con el botón derecho en él y seleccione **Buscarlo con Bing**. Examine los resultados de búsqueda en el explorador web para encontrar un artículo de soporte técnico de Microsoft para resolver este problema con más información y la resolución. 
 
@@ -215,7 +215,7 @@ Para [mitigar la ejecución especulativa de vulnerabilidades de canal lateral](h
 `Bios | summarize countif( (Version == 'LENOVO - 1140') ) by Device | where (countif_ > 0)`
 
 
-### <a name="example-4-free-disk-space"></a>Ejemplo 4: Liberar espacio en disco
+### <a name="example-4-free-disk-space"></a>Ejemplo 4: Espacio libre en disco
 
 Necesita almacenar temporalmente un archivo grande en un servidor de archivos de red, pero no está seguro de cuál de ellos tiene suficiente capacidad. Inicia CMPivot en una colección de servidores de archivos y consulta la entidad **Disco**. Modifica la consulta para que CMPivot devuelva rápidamente una lista de servidores activos con los datos de almacenamiento en tiempo real:  
 

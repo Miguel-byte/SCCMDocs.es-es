@@ -10,12 +10,12 @@ ms.assetid: dec1e0d7-5864-43a8-9f56-413923b3914e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7cdcb6306632df79fe69edd1d526afaf2321bad0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0bb7ccfb2aa516a5deb712bd2ecd82f36c4f282c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343854"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416731"
 ---
 # <a name="boundary-groups-for-system-center-configuration-manager-version-1511-1602-and-1606"></a>Grupos de límites para las versiones 1511, 1602 y 1606 de System Center Configuration Manager
 
@@ -109,15 +109,15 @@ Al configurar grupos de límites, se agregan uno o varios límites al grupo de l
 
 #### <a name="to-set-up-a-fallback-site-for-automatic-site-assignment"></a>Para configurar un sitio de reserva para la asignación de sitios automática  
 
-1.  En la consola de Configuration Manager, pulse **Administración** > **Configuración del sitio** >  **Sitios**.  
+1. En la consola de Configuration Manager, pulse **Administración** > **Configuración del sitio** >  **Sitios**.  
 
-2.  En la pestaña **Inicio**, en el grupo **Sitios**, pulse **Configuración de jerarquía**.  
+2. En la pestaña **Inicio**, en el grupo **Sitios**, pulse **Configuración de jerarquía**.  
 
-3.  En la pestaña **General**, active la casilla de **Usar un sitio de reserva** y, luego, elija un sitio en la lista desplegable **Sitio de reserva**.  
+3. En la pestaña **General**, active la casilla de **Usar un sitio de reserva** y, luego, elija un sitio en la lista desplegable **Sitio de reserva**.  
 
-4.  Elija **Aceptar** para guardar la configuración.  
+4. Elija **Aceptar** para guardar la configuración.  
 
- Las secciones siguientes proporcionan detalles adicionales sobre las configuraciones de grupos de límites.  
+   Las secciones siguientes proporcionan detalles adicionales sobre las configuraciones de grupos de límites.  
 
 ###  <a name="BKMK_BoundarySiteAssignment"></a> Información sobre la asignación de sitio  
  Puede configurar cada grupo de límites con un sitio asignado para los clientes.  

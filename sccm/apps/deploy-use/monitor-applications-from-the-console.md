@@ -10,12 +10,12 @@ ms.assetid: 784c295c-b8b8-4202-ab9f-665908d49d6d
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 4aed4ecda35fded9314ae54b6601deb6f8e07197
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 129223a111085854ede038575653655ad13884dd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343895"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423820"
 ---
 # <a name="monitor-applications-from-the-system-center-configuration-manager-console"></a>Supervisar aplicaciones desde la consola de System Center Configuration Manager
 
@@ -41,17 +41,17 @@ En System Center Configuration Manager, puede supervisar la implementación de t
 
 Puede ver información adicional para cada estado de cumplimiento, que incluye subcategorías dentro del estado de cumplimiento y la cantidad de usuarios y dispositivos en esa categoría. Por ejemplo, el estado de cumplimiento **Error** incluye las subcategorías siguientes:  
 
--   Error al evaluar los requisitos  
+- Error al evaluar los requisitos  
 
--   Errores relacionados con el contenido  
+- Errores relacionados con el contenido  
 
--   Errores de instalación  
+- Errores de instalación  
 
- Cuando se aplica más de un estado de cumplimiento para la implementación de una aplicación, puede ver el estado agregado que representa el cumplimiento más bajo. Por ejemplo:  
+  Cuando se aplica más de un estado de cumplimiento para la implementación de una aplicación, puede ver el estado agregado que representa el cumplimiento más bajo. Por ejemplo:  
 
-    -   Si un usuario inicia sesión en dos dispositivos y la aplicación se instala correctamente en uno de los dispositivos, pero produce error en el segundo, el estado agregado de implementación de la aplicación para ese usuario indicará **Error**.  
+  -   Si un usuario inicia sesión en dos dispositivos y la aplicación se instala correctamente en uno de los dispositivos, pero produce error en el segundo, el estado agregado de implementación de la aplicación para ese usuario indicará **Error**.  
 
-    -   Si se implementa una aplicación para todos los usuarios que inician sesión en un equipo, recibirá varios resultados de implementación para ese equipo. Si se produce un error en una de las implementaciones, el estado de implementación agregado para el equipo indicará **Error**.  
+  -   Si se implementa una aplicación para todos los usuarios que inician sesión en un equipo, recibirá varios resultados de implementación para ese equipo. Si se produce un error en una de las implementaciones, el estado de implementación agregado para el equipo indicará **Error**.  
 
 El estado de implementación para las implementaciones de paquete y de programa no se agrega.  
 

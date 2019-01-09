@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7635dce325a2612c144c6eaa9c733b7dffc7c251
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 1c1d83f6dc0de701176bbf6eeec8936afa081829
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456216"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420692"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Instalar actualizaciones en consola para Configuration Manager
 
@@ -101,7 +101,7 @@ De forma predeterminada, la clase **Paquetes de actualización** (SMS_CM_Updatep
 Revise los pasos siguientes antes de instalar una actualización desde la consola de Configuration Manager.  
 
 
-###  <a name="bkmk_step1"></a> Paso 1: Revisar la lista de comprobación de actualización  
+###  <a name="bkmk_step1"></a> Paso 1: revisar la lista de comprobación de actualización  
 
 Revise la lista de comprobación de actualización aplicable para las acciones que deben realizarse antes de iniciar la actualización:
 
@@ -112,7 +112,7 @@ Revise la lista de comprobación de actualización aplicable para las acciones q
 - [Lista de comprobación para la instalación de la actualización 1802](/sccm/core/servers/manage/checklist-for-installing-update-1802)
 
 
-###  <a name="bkmk_step2"></a> Paso 2: Ejecutar el comprobador de requisitos previos antes de instalar una actualización  
+###  <a name="bkmk_step2"></a> Paso 2: ejecutar el comprobador de requisitos previos antes de instalar una actualización  
 
 Antes de instalar una actualización, puede ejecutar la comprobación de requisitos previos para la actualización. Si ejecuta la comprobación de requisitos previos antes de instalar una actualización:  
 
@@ -165,18 +165,18 @@ Le recomendamos que instale la actualización fuera del horario comercial habitu
 #### <a name="1-when-the-update-installation-starts"></a>1. Cuando se inicia la instalación de la actualización  
 Verá el asistente para actualizaciones, donde se muestra una lista de las áreas de producto que se corresponden con la actualización.  
 
--   En la página **General** del asistente, puede configurar **Advertencias de requisitos previos** según sea necesario:  
+- En la página **General** del asistente, puede configurar **Advertencias de requisitos previos** según sea necesario:  
 
-    -   Los errores de requisitos previos siempre detienen la instalación de la actualización. Solucione los errores para poder reintentar la instalación de la actualización de manera satisfactoria. Para obtener más información, consulte [Reintento de la instalación de una actualización con errores](#bkmk_retry).  
+  - Los errores de requisitos previos siempre detienen la instalación de la actualización. Solucione los errores para poder reintentar la instalación de la actualización de manera satisfactoria. Para obtener más información, consulte [Reintento de la instalación de una actualización con errores](#bkmk_retry).  
 
-    -   Las advertencias de requisitos previos también pueden detener la instalación de la actualización. Solucione las advertencias antes de reintentar la instalación de la actualización. Para obtener más información, consulte [Reintento de la instalación de una actualización con errores](#bkmk_retry).  
+  - Las advertencias de requisitos previos también pueden detener la instalación de la actualización. Solucione las advertencias antes de reintentar la instalación de la actualización. Para obtener más información, consulte [Reintento de la instalación de una actualización con errores](#bkmk_retry).  
 
-    -   **Pase por alto las advertencias de las comprobaciones de requisitos previos e instale esta actualización aunque falten requisitos**: establece una condición para la instalación de actualizaciones que omite las advertencias de requisitos previos. Esta opción permite continuar con la instalación de la actualización. Si no selecciona esta opción, la instalación de actualizaciones se detiene cuando el proceso se encuentra una advertencia. A menos que ya haya ejecutado anteriormente la comprobación de requisitos previos y haya resuelto las advertencias de requisitos previos para un sitio, no le recomendamos que use esta opción.  
+  - **Pase por alto las advertencias de las comprobaciones de requisitos previos e instale esta actualización aunque falten requisitos**: establece una condición para la instalación de actualizaciones que omite las advertencias de requisitos previos. Esta opción permite continuar con la instalación de la actualización. Si no selecciona esta opción, la instalación de actualizaciones se detiene cuando el proceso se encuentra una advertencia. A menos que ya haya ejecutado anteriormente la comprobación de requisitos previos y haya resuelto las advertencias de requisitos previos para un sitio, no le recomendamos que use esta opción.  
 
-      En las áreas de trabajo **Administración** y **Supervisión**, el nodo Actualizaciones y mantenimiento tiene un botón en la cinta de opciones denominado **Omitir advertencias de requisitos previos**. Este botón está disponible cuando se produce un error al completar la instalación de un paquete de actualización debido a las advertencias de comprobación de los requisitos previos. Por ejemplo, instale una actualización sin utilizar la opción para ignorar las advertencias de requisitos previos (desde el Asistente para actualizaciones). La instalación de actualización se detiene con un estado de advertencia de requisitos previos, pero sin errores. Más tarde, haga clic en **Omitir advertencias de requisitos previos** en la cinta de opciones. Esta acción desencadena una continuación automática de esa instalación de actualizaciones que omite las advertencias de requisitos previos. Cuando se usa esta opción, la instalación de la actualización continúa automáticamente después de unos minutos.  
+    En las áreas de trabajo **Administración** y **Supervisión**, el nodo Actualizaciones y mantenimiento tiene un botón en la cinta de opciones denominado **Omitir advertencias de requisitos previos**. Este botón está disponible cuando se produce un error al completar la instalación de un paquete de actualización debido a las advertencias de comprobación de los requisitos previos. Por ejemplo, instale una actualización sin utilizar la opción para ignorar las advertencias de requisitos previos (desde el Asistente para actualizaciones). La instalación de actualización se detiene con un estado de advertencia de requisitos previos, pero sin errores. Más tarde, haga clic en **Omitir advertencias de requisitos previos** en la cinta de opciones. Esta acción desencadena una continuación automática de esa instalación de actualizaciones que omite las advertencias de requisitos previos. Cuando se usa esta opción, la instalación de la actualización continúa automáticamente después de unos minutos.  
 
 
--   Si hay una actualización válida para el cliente de Configuration Manager, pruebe la actualización de cliente con un conjunto limitado de clientes. Para obtener más información, vea [Cómo probar las actualizaciones de cliente en una recopilación de preproducción](/sccm/core/clients/manage/upgrade/test-client-upgrades).  
+- Si hay una actualización válida para el cliente de Configuration Manager, pruebe la actualización de cliente con un conjunto limitado de clientes. Para obtener más información, vea [Cómo probar las actualizaciones de cliente en una recopilación de preproducción](/sccm/core/clients/manage/upgrade/test-client-upgrades).  
 
 
 #### <a name="2-during-the-update-installation"></a>2. Durante la instalación de la actualización  
@@ -201,7 +201,7 @@ Para supervisar el progreso, siga este procedimiento:
 
     La instalación de actualizaciones se divide en varias fases para facilitar la supervisión. Por cada una de las fases siguientes, en los detalles adicionales del estado de la instalación, se indica qué archivo de registro contiene más información:  
 
-    -   **Descarga**: esta fase solo se aplica en el sitio de primer nivel con el punto de conexión de servicio.   
+    -   **Descargar**: esta fase solo se aplica en el sitio de primer nivel con el punto de conexión de servicio.   
 
     -   **replicación**   
 
@@ -209,7 +209,7 @@ Para supervisar el progreso, siga este procedimiento:
 
     -   **Instalación**    
 
-    -   **Después de la instalación**: para obtener más información, vea [Tareas posteriores a la instalación](#post-installation-tasks).  
+    -   **Después de la instalación**: Para obtener más información, vea [Tareas posteriores a la instalación](#post-installation-tasks).  
 
 -   Vea el archivo **CMUpdate.log** en `<ConfigMgr_Installation_Directory>\Logs` en el servidor de sitio.  
 
@@ -266,54 +266,54 @@ No todas las tareas se completan de inmediato. Algunas tareas no se inician hast
 
 Entre las tareas posteriores a la instalación figuran las siguientes:
 
--   **Instalación del servicio SMS_EXECUTIVE**
+- **Instalación del servicio SMS_EXECUTIVE**
   -   Servicio crítico que se ejecuta en el servidor de sitio.
   -   La reinstalación de este servicio se debe completar rápidamente.
 
 
--   **Instalación del componente SMS_DATABASE_NOTIFICATION_MONITOR**
+- **Instalación del componente SMS_DATABASE_NOTIFICATION_MONITOR**
   -   Subproceso de componente de sitio crítico del servicio SMS_EXECUTIVE.
   -   La reinstalación de este servicio se debe completar rápidamente.
 
 
--   **Instalación del componente SMS_HIERARCHY_MANAGER**
+- **Instalación del componente SMS_HIERARCHY_MANAGER**
   -   Componente de sitio crítico que se ejecuta en el servidor de sitio.
   -   Responsable de la reinstalación de los roles de sistema de sitio en los servidores de sistema de sitio. No se muestra el estado de la reinstalación del rol de sistema de sitio individual.
   -   La reinstalación de este servicio se debe completar rápidamente.
 
 
--   **Instalación del componente SMS_REPLICATION_CONFIGURATION_MONITOR**
+- **Instalación del componente SMS_REPLICATION_CONFIGURATION_MONITOR**
   -   Componente de sitio crítico que se ejecuta en el servidor de sitio.
   -   La reinstalación de este servicio se debe completar rápidamente.
 
 
--   **Instalación del componente SMS_POLICY_PROVIDER**
+- **Instalación del componente SMS_POLICY_PROVIDER**
   -   Componente de sitio crítico que se ejecuta solo en sitios primarios.
   -   La reinstalación de este servicio se debe completar rápidamente.
 
 
--   **Supervisando inicialización de replicación**   
+- **Supervisando inicialización de replicación**   
   -   Esta tarea se muestra solo en el sitio de administración central y los sitios primarios secundarios.
   -   Depende de SMS_REPLICATION_CONFIGURATION_MONITOR.
   -   Debe completarse rápidamente.
 
 
--   **Actualizando el paquete de preproducción del cliente de Configuration Manager**    
+- **Actualizando el paquete de preproducción del cliente de Configuration Manager**    
   -   Esta tarea se muestra incluso cuando la preproducción del cliente (también llamada piloto de cliente) no está habilitada para su uso.
   -   No se inicia hasta que todos los sitios de la jerarquía terminan de instalar la actualización.
 
 
--   **Actualizando la carpeta Client en el servidor de sitio**
+- **Actualizando la carpeta Client en el servidor de sitio**
   -   Esta tarea no se muestra si usa el cliente en preproducción.  
   -   Debe completarse rápidamente.
 
 
--   **Actualizando el paquete del cliente de Configuration Manager**
+- **Actualizando el paquete del cliente de Configuration Manager**
   -   Esta tarea no se muestra si usa el cliente en preproducción.  
   -   Finaliza solo después de que todos los sitios instalan la actualización.  
 
 
--   **Activación de características**
+- **Activación de características**
   -   Esta tarea se muestra únicamente en el sitio de nivel superior de la jerarquía.
   -   No se inicia hasta que todos los sitios de la jerarquía terminan de instalar la actualización.
   -   No se muestran las características individuales.

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: a6a1f8257c2a334b539499a5febbdb77729f0fb2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f0ec652a9fb7d4ef6bef881bfc96f1be2b4e297a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349922"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424347"
 ---
 # <a name="manage-publications-in-updates-publisher"></a>Administrar publicaciones en Updates Publisher
 
@@ -41,9 +41,9 @@ En el **área de trabajo Publicaciones**, puede modificar el **tipo de publicaci
 
 2. Luego, en la pestaña **Inicio**, elija una de las opciones siguientes. Las opciones disponibles varían según el tipo de publicación de las actualizaciones que haya seleccionado.
 
-  -   **Automática**
-  -   **Full Content** (Contenido completo)
-  -   **Solo metadatos**
+   -   **Automática**
+   -   **Full Content** (Contenido completo)
+   -   **Solo metadatos**
 
 Después de realizar un cambio, puede que tenga que actualizar la vista de publicación para ver los nuevos valores.
 
@@ -67,13 +67,13 @@ Para tener la posibilidad de publicar, debe configurar la opción [Servidor de a
 
 ### <a name="to-publish-a-publication"></a>Para publicar una publicación
 
-1.  Vaya al **área de trabajo Publicaciones** y seleccione una publicación que contenga el grupo de actualizaciones y agrupaciones que quiere publicar o exportar. Luego elija **Publicar** en la pestaña **Inicio** de la cinta de opciones.
+1. Vaya al **área de trabajo Publicaciones** y seleccione una publicación que contenga el grupo de actualizaciones y agrupaciones que quiere publicar o exportar. Luego elija **Publicar** en la pestaña **Inicio** de la cinta de opciones.
 
-2.  En la página **Seleccionar** del **Asistente para publicación** puede elegir firmar todas las actualizaciones con un nuevo certificado de publicación, pero no cambiar el tipo de publicación.
+2. En la página **Seleccionar** del **Asistente para publicación** puede elegir firmar todas las actualizaciones con un nuevo certificado de publicación, pero no cambiar el tipo de publicación.
 
-3.  Complete el asistente.
+3. Complete el asistente.
 
-  Si la publicación no se lleva a cabo, se le ofrece un vínculo al archivo UpdatesPublisher.log que puede proporcionar más información.
+   Si la publicación no se lleva a cabo, se le ofrece un vínculo al archivo UpdatesPublisher.log que puede proporcionar más información.
 
 ## <a name="export-a-publication"></a>Exportar una publicación
 Puede exportar una publicación desde el repositorio de Updates Publisher. Al hacerlo, exporta las actualizaciones y agrupaciones que están asignadas a esa publicación y crea un catálogo de actualizaciones. Después, puede [agregar](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs) y luego [importar](/sccm/sum/tools/updates-publisher-catalogs#mport-updates) ese catálogo a otra instancia de Updates Publisher. También puede [exportar actualizaciones](/sccm/sum/tools/manage-updates-with-updates-publisher#export-updates) que no formen parte de una publicación.

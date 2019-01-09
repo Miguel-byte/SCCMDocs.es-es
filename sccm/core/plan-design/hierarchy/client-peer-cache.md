@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5099be5ff6b34bcbc232e78056f1937a9508c4f
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 0650e1aa16f0c1005748c85423c3367a727b1b9b
+ms.sourcegitcommit: 4659946369d5352234f27c7682bce65a0e86c697
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411432"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53303897"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Caché del mismo nivel para clientes de Configuration Manager
 
@@ -34,7 +34,7 @@ Definiciones:
 
 - **Cliente de caché del mismo nivel**: cualquier cliente de Configuration Manager que descarga contenido desde el mismo nivel.  
 
-- **Origen de la caché del mismo nivel**: un cliente de Configuration Manager que se habilita para la caché del mismo nivel y que tiene contenido para compartir con otros clientes.  
+- **Origen de la caché del mismo nivel**: cliente de Configuration Manager que se habilita para la caché del mismo nivel y que tiene contenido para compartir con otros clientes.  
 
 Use la configuración de cliente para habilitar a los clientes para que sean orígenes de caché del mismo nivel. No es necesario habilitar los clientes de caché del mismo nivel. Cuando se habilitan los clientes para ser orígenes de caché del mismo nivel, el punto de administración los incluye en la lista de orígenes de ubicación de contenido.<!--510397--> Para obtener más información sobre este proceso, vea [Operaciones](#operations).  
 
@@ -64,7 +64,7 @@ A partir de la versión 1806, los grupos de límites incluyen valores de configu
 > [!NOTE]  
 > Si el cliente reserva el contenido en un grupo de límites vecino, el punto de administración no agrega los orígenes de caché del mismo nivel del grupo de límites vecino a la lista de ubicaciones de origen de contenido potenciales.  
 
-Solo se eligen los clientes más adecuados como orígenes de caché del mismo nivel. Evalúe la idoneidad del cliente en función de atributos como el tipo de chasis, el espacio en disco y la conectividad de red. Para obtener más información que pueda ayudar a seleccionar los mejores clientes para la caché del mismo nivel, vea [este blog de un consultor de Microsoft](https://blogs.technet.microsoft.com/setprice/2016/06/29/pe-peer-cache-custom-reporting-examples/).
+Solo se eligen los clientes más adecuados como orígenes de caché del mismo nivel. Evalúe la idoneidad del cliente en función de atributos como el tipo de chasis, el espacio en disco y la conectividad de red. Para obtener más información que pueda ayudar a seleccionar los mejores clientes para la caché del mismo nivel, vea [este blog de un consultor de Microsoft](https://blogs.technet.microsoft.com/askpfeplat/2018/11/21/configuration-manager-peer-cache-custom-reporting-examples/).
 
 
 ### <a name="limited-access-to-a-peer-cache-source"></a>Acceso limitado al origen de caché del mismo nivel  
@@ -197,17 +197,17 @@ Para ayudarle a entender el uso de la caché del mismo nivel, vea el panel **Or�
 
 Además, use los informes para ver el uso de la caché del mismo nivel. En la consola, vaya al área de trabajo **Supervisión**, expanda **Informes** y haga clic en el nodo **Informes**. Todos los informes siguientes tienen un tipo de **contenido de distribución de software**:  
 
-1.  **Rechazo del contenido de origen de la caché del mismo nivel**: la frecuencia con la que los orígenes de la caché del mismo nivel de un grupo de límites rechazan una solicitud de contenido.  
+1.  **Rechazo del contenido de origen de la caché del mismo nivel**: frecuencia con que los orígenes de la caché del mismo nivel de un grupo de límites rechazan una solicitud de contenido.  
 
     > [!Note]  
     > **Problema conocido**<!--486652-->: al explorar en profundidad resultados como *MaxCPULoad* o *MaxDiskIO*, es posible que reciba un error que sugiere que no se pueden encontrar el informe o los detalles. Como solución alternativa, use los otros dos informes en los que se muestran los resultados directamente.  
 
-2. **Rechazo del contenido de origen de la caché del mismo nivel por condición**: muestra los detalles de rechazo de un grupo de límites o tipo de rechazo especificado. 
+2. **Rechazo del contenido de origen de la caché del mismo nivel según la condición**: muestra los detalles de rechazo de un tipo de rechazo o grupo de límites específico. 
 
     > [!Note]  
     > **Problema conocido**<!--486652-->: no puede seleccionar entre los parámetros disponibles y, en su lugar, debe escribirlos manualmente. Escriba los valores de *Nombre del grupo de límites* y *Tipo de rechazo* tal como se muestra en el informe **Rechazo del contenido de origen de la caché del mismo nivel**. Por ejemplo, para *Tipo de rechazo* puede escribir *MaxCPULoad* o *MaxDiskIO*.  
 
-3. **Detalles del rechazo del contenido de origen de la caché del mismo nivel**: muestra el contenido que el cliente solicitaba cuando se produjo el rechazo.  
+3. **Detalles del rechazo del contenido de origen de la caché del mismo nivel**: muestra el contenido que el cliente solicitaba cuando se rechazó.  
 
     > [!Note]  
     > **Problema conocido**<!--486652-->: no puede seleccionar entre los parámetros disponibles y, en su lugar, debe escribirlos manualmente. Escriba el valor para *Tipo de rechazo* como se muestra en el informe **Rechazo del contenido de origen de la caché del mismo nivel**. Después, escriba el *Id. del recurso* para el origen de contenido sobre el que quiera obtener más información. 

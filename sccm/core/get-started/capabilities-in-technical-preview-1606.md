@@ -10,12 +10,12 @@ ms.assetid: 134a2f60-811e-4dc9-a8f5-1ce0018c5c12
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f3ee48d60c46def5daef25a2f3654e8a79a0e9e1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 14e982592491ec5e8a10cd3313f748bddac40cff
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339866"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420081"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1606 para System Center Configuration Manager
 
@@ -98,8 +98,8 @@ Lectura adicional:
 - [Device Guard certification and compliance (Certificación y cumplimiento de Device Guard)](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance)
 - [Guía de implementación de Device Guard](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
 
- ##  <a name="dmp_onprem"></a> Varios puntos de administración de dispositivos para la administración local de dispositivos móviles  
- Con Technical Preview 1606, la administración local de dispositivos móviles (MDM) admite una nueva capacidad de Windows 10 Anniversary Update que automáticamente configura un dispositivo inscrito para que tenga más de un punto de administración de dispositivos disponible. Esta capacidad permite al dispositivo retroceder a otro punto de administración de dispositivos cuando el que usa normalmente no está disponible. Esta capacidad solo funciona con equipos que tienen instalado Windows 10 Anniversary Update.  
+  ##  <a name="dmp_onprem"></a> Varios puntos de administración de dispositivos para la administración local de dispositivos móviles  
+  Con Technical Preview 1606, la administración local de dispositivos móviles (MDM) admite una nueva capacidad de Windows 10 Anniversary Update que automáticamente configura un dispositivo inscrito para que tenga más de un punto de administración de dispositivos disponible. Esta capacidad permite al dispositivo retroceder a otro punto de administración de dispositivos cuando el que usa normalmente no está disponible. Esta capacidad solo funciona con equipos que tienen instalado Windows 10 Anniversary Update.  
 
 ### <a name="try-it-out"></a>Haga la prueba  
 

@@ -10,12 +10,12 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 11474f54aaf7a9afe13d411b0dd469abb1eef963
-ms.sourcegitcommit: c2c44329f1f9a2e6c14095360b4fc4aafabc27f0
+ms.openlocfilehash: 2a830b36bec3d112c0b112d2df6887a84c837fa2
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694950"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418261"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>Requisitos previos para la implementación de clientes en equipos Windows con Configuration Manager
 
@@ -115,9 +115,9 @@ Los siguientes requisitos previos son específicos para los distintos métodos d
 
 Para usar la inserción de cliente, necesita los permisos de seguridad siguientes:  
 
-   -   Para configurar la cuenta de instalación de inserción de cliente: los permisos **Modificar** y **Leer** para el objeto **Sitio**.  
+   -   Para configurar la cuenta de instalación de inserción de cliente: Permiso **Modificar** y **Leer** para el objeto **Sitio**.  
 
-   -   Para usar la inserción de cliente para instalar el cliente en colecciones, dispositivos y consultas: los permisos **Modificar recurso** y **Leer** para el objeto **Colección**.  
+   -   Para utilizar Inserción del cliente para instalar el cliente en colecciones, dispositivos y consultas: Permiso **Modificar recurso** y **Leer** para el objeto **Recopilación**.  
 
 
 El rol de seguridad predeterminado **Administrador de infraestructura** incluye los permisos necesarios para administrar la instalación de inserción de cliente.  
@@ -222,54 +222,54 @@ Cuando se instala el cliente de Configuration Manager en dispositivos móviles y
 
 Para obtener más información, vea [Roles de sistema de sitio para clientes](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients).  
 
--   Punto de administración que se configura para las conexiones de cliente HTTPS y se habilita para dispositivos móviles  
+- Punto de administración que se configura para las conexiones de cliente HTTPS y se habilita para dispositivos móviles  
 
-     Siempre es necesario un punto de administración para instalar el cliente de Configuration Manager en dispositivos móviles. Además de los requisitos de configuración de HTTPS y la habilitación para dispositivos móviles, el punto de administración se debe configurar con un FQDN de Internet y aceptar conexiones de cliente de Internet.  
+   Siempre es necesario un punto de administración para instalar el cliente de Configuration Manager en dispositivos móviles. Además de los requisitos de configuración de HTTPS y la habilitación para dispositivos móviles, el punto de administración se debe configurar con un FQDN de Internet y aceptar conexiones de cliente de Internet.  
 
--   Punto de inscripción y punto de proxy de inscripción  
+- Punto de inscripción y punto de proxy de inscripción  
 
-     Un punto de proxy de inscripción administra solicitudes de inscripción de dispositivos móviles. El punto de inscripción completa el proceso de inscripción. El punto de inscripción debe estar en el mismo bosque de Active Directory que el servidor de sitio, pero el punto de proxy de inscripción puede estar en otro bosque.  
+   Un punto de proxy de inscripción administra solicitudes de inscripción de dispositivos móviles. El punto de inscripción completa el proceso de inscripción. El punto de inscripción debe estar en el mismo bosque de Active Directory que el servidor de sitio, pero el punto de proxy de inscripción puede estar en otro bosque.  
 
--   Configuración de cliente para la inscripción de dispositivo móvil  
+- Configuración de cliente para la inscripción de dispositivo móvil  
 
-     Configure las opciones de cliente para que los usuarios puedan inscribir dispositivos móviles y configurar como mínimo un perfil de inscripción.  
+   Configure las opciones de cliente para que los usuarios puedan inscribir dispositivos móviles y configurar como mínimo un perfil de inscripción.  
 
--   Punto de servicios de informes  
+- Punto de servicios de informes  
 
-     El punto de servicios de informes es un rol de sistema de sitio opcional pero recomendado que permite mostrar informes relacionados con la inscripción de dispositivos móviles y la administración de clientes.  
+   El punto de servicios de informes es un rol de sistema de sitio opcional pero recomendado que permite mostrar informes relacionados con la inscripción de dispositivos móviles y la administración de clientes.  
 
-     Para obtener más información, vea [Generación de informes en Configuration Manager](/sccm/core/servers/manage/reporting).  
+   Para obtener más información, vea [Generación de informes en Configuration Manager](/sccm/core/servers/manage/reporting).  
 
--   Para configurar la inscripción de dispositivos móviles, debe tener los permisos de seguridad siguientes:  
+- Para configurar la inscripción de dispositivos móviles, debe tener los permisos de seguridad siguientes:  
 
-    -   Para agregar, modificar y eliminar roles de sistema de sitio de inscripción: permiso **Modificar** en el objeto **Sitio** .  
+  - Para agregar, modificar y eliminar roles de sistema de sitio de inscripción: Permiso **Modificar** para el objeto **Sitio**.  
 
-    -   La configuración de cliente predeterminada requiere el permiso **Modificar** en el objeto **Sitio** , y la configuración de cliente personalizada requiere permisos **Agente cliente**  .  
+  - Para configurar las opciones de cliente para la inscripción: La configuración de cliente predeterminada requiere el permiso **Modificar** en el objeto **Sitio**, y la configuración de cliente personalizada requiere permisos **Agente cliente**.  
 
-     El rol de seguridad **Administrador total** predeterminado incluye los permisos necesarios para configurar los roles de sistema de sitio de inscripción.  
+    El rol de seguridad **Administrador total** predeterminado incluye los permisos necesarios para configurar los roles de sistema de sitio de inscripción.  
 
-     Para administrar dispositivos móviles inscritos, debe tener los permisos de seguridad siguientes:  
+    Para administrar dispositivos móviles inscritos, debe tener los permisos de seguridad siguientes:  
 
-    -   Para borrar o retirar un dispositivo móvil: **Eliminar recurso** para el objeto **Colección** .  
+  - Para borrar o retirar un dispositivo móvil: **Eliminar recurso** para el objeto **Recopilación**.  
 
-    -   Para cancelar un comando de borrado o retirado: **Eliminar recurso** para el objeto **Colección** .  
+  - Para cancelar un comando de borrado o retirada: **Eliminar recurso** para el objeto **Recopilación**.  
 
-    -   Para permitir y bloquear dispositivos móviles: **Modificar recurso** para el objeto **Colección** .  
+  - Para permitir y bloquear dispositivos móviles: **Modificar recurso** para el objeto **Recopilación**.  
 
-    -   Para bloquear de forma remota o restablecer el Bloqueo remoto o restablecer el código de acceso en un dispositivo móvil: **Modificar recurso** para el objeto **Colección** .  
+  - Para bloquear de forma remota o restablecer la contraseña de un dispositivo móvil: **Modificar recurso** para el objeto **Recopilación**.  
 
-     El rol de seguridad **Administrador de operaciones** predeterminado incluye los permisos necesarios para administrar dispositivos móviles.  
+    El rol de seguridad **Administrador de operaciones** predeterminado incluye los permisos necesarios para administrar dispositivos móviles.  
 
-     Para obtener más información sobre cómo configurar los permisos de seguridad, vea [Aspectos básicos de la administración basada en roles](/sccm/core/understand/fundamentals-of-role-based-administration) y [Configurar la administración basada en roles](/sccm/core/servers/deploy/configure/configure-role-based-administration).  
+    Para obtener más información sobre cómo configurar los permisos de seguridad, vea [Aspectos básicos de la administración basada en roles](/sccm/core/understand/fundamentals-of-role-based-administration) y [Configurar la administración basada en roles](/sccm/core/servers/deploy/configure/configure-role-based-administration).  
 
 
 ### <a name="firewall-requirements"></a>Requisitos de firewall  
 
 Los dispositivos de red intermedios como los enrutadores, los firewalls y, si se corresponde, Firewall de Windows, deben permitir el tráfico relacionado con la inscripción de dispositivos móviles:  
 
--   Entre los dispositivos móviles y el punto de proxy de inscripción: HTTPS (de manera predeterminada, TCP 443)  
+-   Entre los dispositivos móviles y el punto de proxy de inscripción: HTTPS (de forma predeterminada, TCP 443)  
 
--   Entre el punto de proxy de inscripción y el punto de inscripción: HTTPS (de manera predeterminada, TCP 443)  
+-   Entre el punto de proxy de inscripción y el punto de inscripción: HTTPS (de forma predeterminada, TCP 443)  
 
 
 Si usa un servidor web proxy, se debe configurar para el protocolo de túnel SSL. No se admite el protocolo de puente SSL para dispositivos móviles.  

@@ -10,12 +10,12 @@ ms.assetid: 5a352ae0-355f-4fcf-b863-fb0654f51c52
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 995c84e51ec72b385390f76fabfe08d60c2832d7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 135fc21cf122650e70eedf5e87873c93f08d4907
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335956"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417649"
 ---
 # <a name="capabilities-in-technical-preview-1801-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1801 para System Center Configuration Manager
 
@@ -33,14 +33,14 @@ Repase [Technical Preview para System Center Configuration Manager](/sccm/core/g
 **Known Issues in this Technical Preview:**
 -->
 **Problemas conocidos de esta Technical Preview:**
--   **La actualización a una nueva versión preliminar no se puede realizar cuando hay un servidor de sitio en modo pasivo**. Si tiene un [servidor de sitio primario en modo pasivo](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), debe desinstalarlo antes de actualizar a esta nueva versión preliminar. Puede volver a instalar el servidor de sitio en modo pasivo después de que el sitio finalice la actualización.
+- **La actualización a una nueva versión preliminar no se puede realizar cuando hay un servidor de sitio en modo pasivo**. Si tiene un [servidor de sitio primario en modo pasivo](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), debe desinstalarlo antes de actualizar a esta nueva versión preliminar. Puede volver a instalar el servidor de sitio en modo pasivo después de que el sitio finalice la actualización.
 
   Para desinstalar el servidor de sitio en modo pasivo:
   1. En la consola de Configuration Manager vaya a **Administración** > **General** > **Configuración de sitio** > **Servidores y roles del sistema de sitios** y seleccione el servidor de sitio en modo pasivo.
   2. En el panel **Roles del sistema de sitio**, haga clic con el botón derecho en el rol **Servidor de sitio** y después elija **Quitar rol**.
   3. Haga clic con el botón derecho en el servidor de sitio en modo pasivo y después elija **Eliminar**.
   4. Después de que el servidor de sitio se desinstala, en el servidor de sitio principal activo, reinicie el servicio **CONFIGURATION_MANAGER_UPDATE**.
-<!--sms 489412-->
+  <!--sms 489412-->
 
 
 **Estas son las nuevas características que puede probar con esta versión.**  
@@ -58,8 +58,7 @@ Repase [Technical Preview para System Center Configuration Manager](/sccm/core/g
 
 
 ## <a name="create-phased-deployments"></a>Creación de implementaciones por fases
-<!-- 1357405 -->
-Las implementaciones por fases automatizan una implementación coordinada y secuencial de software sin necesidad de crear varias implementaciones. En esta versión Technical Preview, se puede completar el Asistente para la implementación por fases para secuencias de tareas en la consola de administración. Pero las implementaciones no se crean. 
+<!-- 1357405 --> Las implementaciones por fases automatizan una implementación coordinada y secuencial de software sin necesidad de crear varias implementaciones. En esta versión Technical Preview, se puede completar el Asistente para la implementación por fases para secuencias de tareas en la consola de administración. Pero las implementaciones no se crean. 
 
 ### <a name="try-it-out"></a>Haga la prueba  
   Intente completar las tareas. Después, envíe **Comentarios** desde la pestaña **Inicio** de la cinta de opciones para hacernos saber cómo ha funcionado.
@@ -74,15 +73,14 @@ Las implementaciones por fases automatizan una implementación coordinada y secu
 7. Confirme las selecciones en la pestaña **Resumen** y después haga clic en **Siguiente** para continuar.
 
 ## <a name="co-management-reporting"></a>Informes de administración conjunta
-<!-- 1356648 -->
-Si usa las funcionalidades de [administración conjunta](/sccm/core/clients/manage/co-management-overview), ahora puede ver un panel con información sobre la administración conjunta en su entorno. En la consola de Configuration Manager, navegue hasta el área de trabajo **Supervisión**, expanda **Upgrade Readiness** y seleccione el panel **Administración conjunta**. En el panel se incluyen los iconos siguientes:
+<!-- 1356648 --> Si usa las funcionalidades de [administración conjunta](/sccm/core/clients/manage/co-management-overview), ahora puede ver un panel con información sobre la administración conjunta en el entorno. En la consola de Configuration Manager, navegue hasta el área de trabajo **Supervisión**, expanda **Upgrade Readiness** y seleccione el panel **Administración conjunta**. En el panel se incluyen los iconos siguientes:
 - **Dispositivos administrados conjuntamente**: el porcentaje de dispositivos en el entorno que se han habilitado para la administración conjunta.
 - **Distribución del sistema operativo**: el desglose de los sistemas operativos (SO) por versión. En este gráfico se usan las siguientes agrupaciones:
-   - Windows 7 y 8.x
-   - Windows 10 anterior a la versión 1709
-   - Windows 10 1709 y versiones posteriores
-  > [!NOTE] 
-  > Windows 10, versión 1709 y versiones posteriores, es un requisito previo para la administración conjunta
+  - Windows 7 y 8.x
+  - Windows 10 anterior a la versión 1709
+  - Windows 10 1709 y versiones posteriores
+    > [!NOTE] 
+    > Windows 10, versión 1709 y versiones posteriores, es un requisito previo para la administración conjunta
 - **Co-management status** (Estado de la administración conjunta): el desglose de los dispositivos que se ejecutan correctamente o con error en las siguientes categorías:
    - Se ejecuta correctamente, Unidos a Azure AD híbrido
    - Se ejecuta correctamente, Unido a Azure AD
@@ -98,8 +96,7 @@ Si usa las funcionalidades de [administración conjunta](/sccm/core/clients/mana
 
 
 ## <a name="improvements-to-automatic-deployment-rule-evaluation-schedule"></a>Mejoras en la programación de evaluación de reglas de implementación automática
-<!-- 1357133 -->
-En función de los [comentarios de UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8819518-software-update-patch-tuesday-scheduling), ahora puede programar la evaluación de reglas de implementación automática (ADR) para que se desplacen con respecto a un día base. Por ejemplo, un desplazamiento de dos días después del segundo martes del mes se evalúa como la regla del jueves. 
+<!-- 1357133 --> En función de los [comentarios de UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8819518-software-update-patch-tuesday-scheduling), ahora puede programar la evaluación de reglas de implementación automática (ADR) para que se desplacen con respecto a un día base. Por ejemplo, un desplazamiento de dos días después del segundo martes del mes se evalúa como la regla del jueves. 
 
 ### <a name="try-it-out"></a>Haga la prueba  
  Intente completar las tareas. Después, envíe **Comentarios** desde la pestaña **Inicio** de la cinta de opciones para hacernos saber cómo ha funcionado. <br/>
@@ -116,8 +113,7 @@ En función de los [comentarios de UserVoice](https://configurationmanager.userv
 
 
 ## <a name="reassign-distribution-point"></a>Reasignación del punto de distribución
-<!-- 1306937 -->
-Muchos clientes tienen grandes infraestructuras de Configuration Manager y reducen los sitios primarios o secundarios para simplificar su entorno. Tienen que conservar los puntos de distribución en las ubicaciones de las sucursales para entregar el contenido a los clientes administrados. Estos puntos de distribución a menudo contienen varios terabytes o más de contenido. Este contenido es costoso en términos de tiempo y ancho de banda de red para distribuirlo entre estos servidores remotos. 
+<!-- 1306937 --> Muchos clientes tienen grandes infraestructuras de Configuration Manager y reducen los sitios primarios o secundarios para simplificar su entorno. Tienen que conservar los puntos de distribución en las ubicaciones de las sucursales para entregar el contenido a los clientes administrados. Estos puntos de distribución a menudo contienen varios terabytes o más de contenido. Este contenido es costoso en términos de tiempo y ancho de banda de red para distribuirlo entre estos servidores remotos. 
 
 Esta característica permite volver a asignar un punto de distribución a otro sitio primario sin redistribuir el contenido. Esta acción actualiza la asignación del sistema de sitio mientras se conserva todo el contenido en el servidor. Si necesita volver a asignar varios puntos de distribución, en primer lugar realice esta acción en un único punto de distribución y, después, continúe con otros servidores de uno en uno.
 
@@ -134,8 +130,7 @@ Esta opción no es funcional con esta versión debido al límite de Technical Pr
 
 
 ## <a name="improvements-to-hardware-inventory"></a>Mejoras en el inventario de hardware
-<!-- 1357389 -->
-Para las clases recién agregadas, se pueden especificar longitudes de cadena mayores de 255 caracteres para las propiedades de inventario de hardware que no sean claves.
+<!-- 1357389 --> Para las clases recién agregadas, se pueden especificar longitudes de cadena mayores de 255 caracteres para las propiedades de inventario de hardware que no sean claves.
 
 ### <a name="try-it-out"></a>Haga la prueba  
 Intente completar las tareas. Después, envíe **Comentarios** desde la pestaña **Inicio** de la cinta de opciones para hacernos saber cómo ha funcionado.<br/>
@@ -152,8 +147,7 @@ Intente completar las tareas. Después, envíe **Comentarios** desde la pestaña
 
 
 ## <a name="improvements-to-client-settings-for-software-center"></a>Mejoras en la configuración de cliente para el Centro de software
-<!-- 1351224 & 1355146 -->
-En esta versión de Technical Preview, se han realizado mejoras para la personalización del Centro de software en la configuración del cliente. 
+<!-- 1351224 & 1355146 --> En esta versión de Technical Preview, se han realizado mejoras para la personalización del Centro de software en la configuración del cliente. 
 
 1. La configuración de cliente para el Centro de software ahora tiene un botón **Personalizar**.
 2. Se ha agregado una vista previa para mostrar el aspecto del banner del Centro de software.<!--1351224-->
@@ -171,16 +165,14 @@ En esta versión de Technical Preview, se han realizado mejoras para la personal
 
 
 ## <a name="new-settings-for-windows-defender-application-guard"></a>Nueva configuración de Protección de aplicaciones de Windows Defender
-<!-- 1356256 -->
-Para Windows 10 versión 1709 y dispositivos posteriores, hay dos nuevas opciones de interacción de host para [Protección de aplicaciones de Windows Defender](/sccm/protect/deploy-use/create-deploy-application-guard-policy). 
+<!-- 1356256 --> Para Windows 10 versión 1709 y dispositivos posteriores, hay dos nuevas opciones de interacción de host para [Protección de aplicaciones de Windows Defender](/sccm/protect/deploy-use/create-deploy-application-guard-policy). 
 1. A los sitios web se les puede conceder acceso al procesador de gráficos virtuales del host. 
 2. Los archivos descargados en el contenedor se pueden conservar en el host. </br>
 
 
 
 ## <a name="improvements-to-run-scripts"></a>Mejoras para ejecutar scripts
-<!-- 1236459 -->
-Ahora la [característica **Ejecutar scripts**](/sccm/apps/deploy-use/create-deploy-scripts) permite importar y ejecutar scripts de PowerShell firmados. 
+<!-- 1236459 --> Ahora la [característica **Ejecutar scripts**](/sccm/apps/deploy-use/create-deploy-scripts) permite importar y ejecutar scripts de PowerShell firmados. 
 - Para mantener la integridad de los scripts, los scripts firmados deben importarse en lugar de usar copiar y pegar. 
 - Los scripts firmados importados no se pueden modificar después de la importación.
     

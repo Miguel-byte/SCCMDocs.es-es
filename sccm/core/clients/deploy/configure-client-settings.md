@@ -10,12 +10,12 @@ ms.assetid: 95e9858a-bad4-4651-9e61-2e31dc5050fa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0405769d3cfc7f77c4ab639ddc0f9ed0cd561366
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 03485b4be2295676d125f3f3e28d2cd7d62728d3
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334045"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420063"
 ---
 # <a name="how-to-configure-client-settings-in-system-center-configuration-manager"></a>Cómo configurar el cliente en System Center Configuration Manager
 
@@ -30,38 +30,38 @@ Para más información sobre cada opción de cliente, vea [About client settings
 
 ##  <a name="configure-the-default-client-settings"></a>Configurar las opciones predeterminadas de cliente    
 
-1.  En la consola de Configuration Manager, elija **Administración** > **Configuración de cliente** > **Configuración de cliente predeterminada**.  
+1. En la consola de Configuration Manager, elija **Administración** > **Configuración de cliente** > **Configuración de cliente predeterminada**.  
 
-3.  En la pestaña **Inicio**, elija **Propiedades**.  
+2. En la pestaña **Inicio**, elija **Propiedades**.  
 
-4.  Vea y configure las opciones de cliente para cada grupo de opciones que presenta el panel de navegación.  
+3. Vea y configure las opciones de cliente para cada grupo de opciones que presenta el panel de navegación.  
 
- Los equipos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Initiate Policy Retrieval for a Configuration Manager Client (Iniciar la recuperación de directivas para un cliente de Configuration Manager)](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) en [How to manage clients in System Center Configuration Manager (Cómo administrar clientes en System Center Configuration Manager)](../../../core/clients/manage/manage-clients.md).  
+   Los equipos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Initiate Policy Retrieval for a Configuration Manager Client (Iniciar la recuperación de directivas para un cliente de Configuration Manager)](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) en [How to manage clients in System Center Configuration Manager (Cómo administrar clientes en System Center Configuration Manager)](../../../core/clients/manage/manage-clients.md).  
 
 ##  <a name="create-and-deploy-custom-client-settings"></a>Crear e implementar la configuración predeterminada de cliente  
 La implementación de esta configuración personalizada reemplaza la configuración de cliente personalizada. Antes de comenzar con este procedimiento, asegúrese de que tiene una recopilación que contiene los usuarios o dispositivos que requieren esta configuración de cliente personalizada.  
 
-1.  En la consola de Configuration Manager, elija **Administración** > **Configuración de cliente**.  
+1. En la consola de Configuration Manager, elija **Administración** > **Configuración de cliente**.  
 
-3.  En la pestaña **Inicio**, en el grupo **Crear**, elija **Crear configuración de cliente personalizada** y, luego, elija una de estas opciones:  
+2. En la pestaña **Inicio**, en el grupo **Crear**, elija **Crear configuración de cliente personalizada** y, luego, elija una de estas opciones:  
 
-    -   **Crear configuración de dispositivo de cliente personalizada**  
+   -   **Crear configuración de dispositivo de cliente personalizada**  
 
-    -   **Crear configuración de usuario de cliente personalizada**  
+   -   **Crear configuración de usuario de cliente personalizada**  
 
-4.  Especifique un nombre único y una descripción opcional.  
+3. Especifique un nombre único y una descripción opcional.  
 
-5.  Seleccione una o varias de las casillas que muestran un grupo de opciones.  
+4. Seleccione una o varias de las casillas que muestran un grupo de opciones.  
 
-6.  Elija cada grupo de opciones en el panel de navegación y configure los ajustes disponibles; luego, haga clic en **Aceptar**.   
+5. Elija cada grupo de opciones en el panel de navegación y configure los ajustes disponibles; luego, haga clic en **Aceptar**.   
 
-8.  Seleccione la configuración de cliente personalizada que creó. En la pestaña **Inicio**, en el grupo **Configuración de cliente**, elija **Implementar**.  
+6. Seleccione la configuración de cliente personalizada que creó. En la pestaña **Inicio**, en el grupo **Configuración de cliente**, elija **Implementar**.  
 
-9. En el cuadro de diálogo **Seleccionar colección**, seleccione la colección adecuada y, luego, elija **Aceptar**. Puede comprobar la recopilación seleccionada si hace clic en la pestaña **Implementaciones** en el panel de detalles.  
+7. En el cuadro de diálogo **Seleccionar colección**, seleccione la colección adecuada y, luego, elija **Aceptar**. Puede comprobar la recopilación seleccionada si hace clic en la pestaña **Implementaciones** en el panel de detalles.  
 
-10. Vea el orden de la configuración de cliente personalizada que ha creado. Si hay más de una configuración de cliente personalizada, se aplican en función de su número de orden. Si hay algún conflicto, la configuración que tenga el número de orden más bajo reemplaza al resto de configuraciones. Para cambiar el número de orden, en la pestaña **Inicio**, en el grupo **Configuración de cliente**, elija **Subir elemento** o en **Bajar elemento**.  
+8. Vea el orden de la configuración de cliente personalizada que ha creado. Si hay más de una configuración de cliente personalizada, se aplican en función de su número de orden. Si hay algún conflicto, la configuración que tenga el número de orden más bajo reemplaza al resto de configuraciones. Para cambiar el número de orden, en la pestaña **Inicio**, en el grupo **Configuración de cliente**, elija **Subir elemento** o en **Bajar elemento**.  
 
- Los equipos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Initiate Policy Retrieval for a Configuration Manager Client (Iniciar la recuperación de directivas para un cliente de Configuration Manager)](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) en [How to manage clients in System Center Configuration Manager (Cómo administrar clientes en System Center Configuration Manager)](../../../core/clients/manage/manage-clients.md).  
+   Los equipos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Initiate Policy Retrieval for a Configuration Manager Client (Iniciar la recuperación de directivas para un cliente de Configuration Manager)](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) en [How to manage clients in System Center Configuration Manager (Cómo administrar clientes en System Center Configuration Manager)](../../../core/clients/manage/manage-clients.md).  
 
 
 

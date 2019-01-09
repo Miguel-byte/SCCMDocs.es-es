@@ -10,12 +10,12 @@ ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ca987411775ec3a6fbe626d4b34f83313673f5b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4dd547f0126fa9e77b4d49db7c0de4ec912d2b23
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334834"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421627"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>Planeación de la implementación del cliente en dispositivos Windows Embedded en System Center Configuration Manager
 
@@ -46,60 +46,60 @@ ms.locfileid: "32334834"
 
  Configuration Manager admite la administración de los siguientes tipos de filtros de escritura:  
 
--   Filtro de escritura basado en archivo (FBWF): para obtener más información, vea [File-Based Write Filter (Filtro de escritura basado en archivo)](http://go.microsoft.com/fwlink/?LinkID=204717) en MSDN.  
+- Filtro de escritura basado en archivo (FBWF): para obtener más información, vea [File-Based Write Filter (Filtro de escritura basado en archivo)](http://go.microsoft.com/fwlink/?LinkID=204717) en MSDN.  
 
--   RAM del filtro de escritura mejorado (EWF): para obtener más información, vea [Enhanced Write Filter (Filtro de escritura mejorado)](http://go.microsoft.com/fwlink/?LinkId=204718).  
+- RAM del filtro de escritura mejorado (EWF): para obtener más información, vea [Enhanced Write Filter (Filtro de escritura mejorado)](http://go.microsoft.com/fwlink/?LinkId=204718).  
 
--   Filtro de escritura unificado (UWF): para obtener más información, vea [Unified Write Filter (Filtro de escritura unificado)](http://go.microsoft.com/fwlink/?LinkId=309236).  
+- Filtro de escritura unificado (UWF): para obtener más información, vea [Unified Write Filter (Filtro de escritura unificado)](http://go.microsoft.com/fwlink/?LinkId=309236).  
 
- Configuration Manager no admite las operaciones de filtro de escritura cuando el dispositivo de Windows Embedded está en modo EWF RAM Reg.  
+  Configuration Manager no admite las operaciones de filtro de escritura cuando el dispositivo de Windows Embedded está en modo EWF RAM Reg.  
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Si tiene la opción, use filtros de escritura basados en archivo (FBWF) con Configuration Manager para una mayor eficiencia y una mayor escalabilidad.
->
+> 
 > **Solo para dispositivos que usen FBWF:** configure las siguientes excepciones para conservar el estado del cliente y los datos de inventario entre reinicios de dispositivo:  
->   
->  -   CCMINSTALLDIR\\\*.sdf  
-> -   CCMINSTALLDIR\ServiceData  
-> -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
->   
->  Los dispositivos que ejecutan Windows Embedded 8.0 y versiones posteriores no admiten las exclusiones que contienen caracteres comodín. En estos dispositivos, debe configurar las siguientes exclusiones de forma individual:  
->   
->  -   Todos los archivos de CCMINSTALLDIR con la extensión .sdf, normalmente:  
->   
->     -   UserAffinityStore.sdf  
->     -   InventoryStore.sdf  
->     -   CcmStore.sdf  
->     -   StateMessageStore.sdf  
->     -   CertEnrollmentStore.sdf  
-> -   CCMINSTALLDIR\ServiceData  
-> -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
->   
-> **Solo para dispositivos que usan FBWF y UWF:** cuando los clientes de un grupo de trabajo usan certificados para la autenticación de los puntos de administración, debe excluir también la clave privada para asegurarse de que el cliente continúa comunicándose con el punto de administración. En estos dispositivos, configure las siguientes excepciones:  
->   
->  -   c:\Windows\System32\Microsoft\Protect  
-> -   c:\ProgramData\Microsoft\Crypto  
-> -   HKEY_LOCAL_MACHINE\Software\Microsoft\SystemCertificates\SMS\Certificates  
+> 
+> - CCMINSTALLDIR\\\*.sdf  
+>   -   CCMINSTALLDIR\ServiceData  
+>   -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
+> 
+>   Los dispositivos que ejecutan Windows Embedded 8.0 y versiones posteriores no admiten las exclusiones que contienen caracteres comodín. En estos dispositivos, debe configurar las siguientes exclusiones de forma individual:  
+> 
+> - Todos los archivos de CCMINSTALLDIR con la extensión .sdf, normalmente:  
+> 
+>   -   UserAffinityStore.sdf  
+>   -   InventoryStore.sdf  
+>   -   CcmStore.sdf  
+>   -   StateMessageStore.sdf  
+>   -   CertEnrollmentStore.sdf  
+>   -   CCMINSTALLDIR\ServiceData  
+>   -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
+> 
+> **Solo para dispositivos que usen FBWF y UWF:** Cuando los clientes de un grupo de trabajo usan certificados para la autenticación de los puntos de administración, debe excluir también la clave privada para asegurarse de que el cliente continúa comunicándose con el punto de administración. En estos dispositivos, configure las siguientes excepciones:  
+> 
+> - c:\Windows\System32\Microsoft\Protect  
+>   -   c:\ProgramData\Microsoft\Crypto  
+>   -   HKEY_LOCAL_MACHINE\Software\Microsoft\SystemCertificates\SMS\Certificates  
 
  Para ver un ejemplo de cómo implementar y administrar dispositivos de Windows Embedded con el filtro de escritura habilitado en Configuration Manager, consulte [Escenario de ejemplo para implementar y administrar clientes de Configuration Manager en dispositivos Windows Embedded](../../../../core/clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md).  
 
  Para obtener más información acerca de la creación de imágenes para dispositivos de Windows Embedded y la configuración de filtros de escritura, consulte la documentación de Windows Embedded o póngase en contacto con el OEM.  
 
-> [!NOTE]  
+> [!NOTE]
 >  Al seleccionar las plataformas aplicables para las implementaciones de software y los elementos de configuración, éstos muestran las familias de Windows Embedded en lugar de las versiones específicas. Utilice la lista siguiente para asignar la versión específica de Windows Embedded a las opciones del cuadro de lista:  
->   
->  -   **Sistemas operativos incrustados basados en Windows XP (32 bits)** incluye lo siguiente:  
->   
->      -   Windows XP Embedded  
->     -   Windows Embedded for Point of Service  
->     -   Windows Embedded Standard 2009  
->     -   Windows Embedded POSReady 2009  
-> -   **Sistemas operativos incrustados basados en Windows 7 (32 bits)** incluye lo siguiente:  
->   
->      -   Windows Embedded Standard 7 (32 bits)  
->     -   Windows Embedded POSReady 7 (32 bits)  
->     -   Windows ThinPC  
-> -   **Sistemas operativos incrustados basados en Windows 7 (64 bits)** incluye lo siguiente:  
->   
->      -   Windows Embedded Standard 7 (64 bits)  
->     -   Windows Embedded POSReady 7 (64 bits)
+> 
+> - **Sistemas operativos incrustados basados en Windows XP (32 bits)** incluye lo siguiente:  
+> 
+>   -   Windows XP Embedded  
+>   -   Windows Embedded for Point of Service  
+>   -   Windows Embedded Standard 2009  
+>   -   Windows Embedded POSReady 2009  
+>   -   **Sistemas operativos incrustados basados en Windows 7 (32 bits)** incluye lo siguiente:  
+> 
+>   -   Windows Embedded Standard 7 (32 bits)  
+>   -   Windows Embedded POSReady 7 (32 bits)  
+>   -   Windows ThinPC  
+>   -   **Sistemas operativos incrustados basados en Windows 7 (64 bits)** incluye lo siguiente:  
+> 
+>   -   Windows Embedded Standard 7 (64 bits)  
+>   -   Windows Embedded POSReady 7 (64 bits)

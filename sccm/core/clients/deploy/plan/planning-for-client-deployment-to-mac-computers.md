@@ -10,12 +10,12 @@ ms.assetid: 8d15ae3f-de42-461f-a907-c43873da22d2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05268780bd6dc3b86052b694f360065f8f70d6e6
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 396652d4fcfe2ad41aaa4dad188947d369cb0052
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332372"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418669"
 ---
 # <a name="planning-for-client-deployment-to-mac-computers-in-system-center-configuration-manager"></a>Planeamiento de la implementación de cliente en equipos Mac en System Center Configuration Manager
 
@@ -23,84 +23,84 @@ ms.locfileid: "32332372"
 
 Puede instalar el cliente de Configuration Manager en equipos Mac que ejecuten el sistema operativo Mac OS X y usen las siguientes capacidades de administración:  
 
--   **Inventario de hardware**  
+- **Inventario de hardware**  
 
-     Es posible usar el inventario de hardware de Configuration Manager para recopilar información sobre el hardware y las aplicaciones instaladas en los equipos Mac. Entonces, esta información puede verse en el explorador de recursos de la consola de Configuration Manager y usarse para crear recopilaciones, consultas e informes. Para obtener más información, consulte [Cómo usar el Explorador de recursos para ver el inventario de Hardware en Configuration Manager](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md).  
+   Es posible usar el inventario de hardware de Configuration Manager para recopilar información sobre el hardware y las aplicaciones instaladas en los equipos Mac. Entonces, esta información puede verse en el explorador de recursos de la consola de Configuration Manager y usarse para crear recopilaciones, consultas e informes. Para obtener más información, consulte [Cómo usar el Explorador de recursos para ver el inventario de Hardware en Configuration Manager](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md).  
 
-     Configuration Manager recopila la siguiente información de hardware de los equipos Mac:  
+   Configuration Manager recopila la siguiente información de hardware de los equipos Mac:  
 
-    -   Procesador  
+  -   Procesador  
 
-    -   Sistema de equipo  
+  -   Sistema de equipo  
 
-    -   Unidad de disco  
+  -   Unidad de disco  
 
-    -   Partición de disco  
+  -   Partición de disco  
 
-    -   Adaptador de red  
+  -   Adaptador de red  
 
-    -   Sistema operativo  
+  -   Sistema operativo  
 
-    -   Servicio  
+  -   Servicio  
 
-    -   Proceso  
+  -   Proceso  
 
-    -   Software instalado  
+  -   Software instalado  
 
-    -   Producto de sistema del equipo  
+  -   Producto de sistema del equipo  
 
-    -   Controladora USB  
+  -   Controladora USB  
 
-    -   Dispositivo USB  
+  -   Dispositivo USB  
 
-    -   Unidad de CD-ROM  
+  -   Unidad de CD-ROM  
 
-    -   Controladora de vídeo  
+  -   Controladora de vídeo  
 
-    -   Monitor de escritorio  
+  -   Monitor de escritorio  
 
-    -   Batería portátil  
+  -   Batería portátil  
 
-    -   Memoria física  
+  -   Memoria física  
 
-    -   Impresora  
+  -   Impresora  
 
-    > [!IMPORTANT]  
-    >  No se puede extender la información del hardware que se recopila de equipos Mac durante el inventario de hardware.  
+  > [!IMPORTANT]  
+  >  No se puede extender la información del hardware que se recopila de equipos Mac durante el inventario de hardware.  
 
--   **Configuración de cumplimiento**  
+- **Configuración de cumplimiento**  
 
-     Puede usar la configuración de cumplimiento de Configuration Manager para ver la compatibilidad y corregir la configuración de preferencias (.plist) de Mac OS X. Por ejemplo, puede aplicar la configuración para la página principal en el explorador web Safari o asegurarse de que el firewall de Apple está habilitado. También puede utilizar scripts de shell para supervisar y corregir la configuración en MAC OS X.  
+   Puede usar la configuración de cumplimiento de Configuration Manager para ver la compatibilidad y corregir la configuración de preferencias (.plist) de Mac OS X. Por ejemplo, puede aplicar la configuración para la página principal en el explorador web Safari o asegurarse de que el firewall de Apple está habilitado. También puede utilizar scripts de shell para supervisar y corregir la configuración en MAC OS X.  
 
--   **Administración de aplicaciones**  
+- **Administración de aplicaciones**  
 
-     Configuration Manager puede implementar software en equipos Mac. Es posible implementar los siguientes formatos de software en equipos Mac:  
+   Configuration Manager puede implementar software en equipos Mac. Es posible implementar los siguientes formatos de software en equipos Mac:  
 
-    -   Imagen de disco Apple (.DMG)  
+  -   Imagen de disco Apple (.DMG)  
 
-    -   Archivo de paquete Meta (.MPKG)  
+  -   Archivo de paquete Meta (.MPKG)  
 
-    -   Paquete de instalador de Mac OS X (.PKG)  
+  -   Paquete de instalador de Mac OS X (.PKG)  
 
-    -   Aplicación de Mac OSX (.APP)  
+  -   Aplicación de Mac OSX (.APP)  
 
- Al instalar el cliente de Configuration Manager en equipos Mac, no se pueden usar las siguientes capacidades de administración admitidas por el cliente de Configuration Manager en equipos basados en Windows:  
+  Al instalar el cliente de Configuration Manager en equipos Mac, no se pueden usar las siguientes capacidades de administración admitidas por el cliente de Configuration Manager en equipos basados en Windows:  
 
--   Instalación de inserción de cliente  
+- Instalación de inserción de cliente  
 
--   Implementación de sistema operativo  
+- Implementación de sistema operativo  
 
--   Actualizaciones de software  
+- Actualizaciones de software  
 
-    > [!NOTE]  
-    >  Puede usar la administración de aplicaciones de Configuration Manager para implementar las actualizaciones de software de Mac OS X necesarias en equipos Mac. Además, puede utilizar la configuración de compatibilidad para asegurarse de que los equipos tengan las actualizaciones de software necesarias.  
+  > [!NOTE]  
+  >  Puede usar la administración de aplicaciones de Configuration Manager para implementar las actualizaciones de software de Mac OS X necesarias en equipos Mac. Además, puede utilizar la configuración de compatibilidad para asegurarse de que los equipos tengan las actualizaciones de software necesarias.  
 
--   Ventanas de mantenimiento  
+- Ventanas de mantenimiento  
 
--   Control remoto  
+- Control remoto  
 
--   Administración de energía  
+- Administración de energía  
 
--   Comprobación y corrección de cliente del estado de cliente  
+- Comprobación y corrección de cliente del estado de cliente  
 
- Para obtener más información sobre cómo instalar y configurar el cliente Mac de Configuration Manager, consulte [Cómo implementar clientes en equipos Mac con System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-macs.md).
+  Para obtener más información sobre cómo instalar y configurar el cliente Mac de Configuration Manager, consulte [Cómo implementar clientes en equipos Mac con System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-macs.md).

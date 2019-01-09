@@ -10,12 +10,12 @@ ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13d9e83adcdf0e125d1596ff93fbb1a0fa67c09f
-ms.sourcegitcommit: 8827ffaea108678da968a3623f072876990c830c
+ms.openlocfilehash: 0b65f5fb8790f907699a26e36c1ffe41b7e0eb03
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411334"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418652"
 ---
 # <a name="modify-your-system-center-configuration-manager-infrastructure"></a>Modificar la infraestructura de System Center Configuration Manager
 
@@ -29,36 +29,36 @@ Después de instalar uno o varios sitios, es posible que deba modificar las conf
 
  En cada sitio de Configuration Manager, puede volver a ejecutar el programa de instalación para:  
 
--   Agregar una instancia adicional del proveedor de SMS (cada instancia adicional del proveedor de SMS debe estar en un equipo independiente).  
+- Agregar una instancia adicional del proveedor de SMS (cada instancia adicional del proveedor de SMS debe estar en un equipo independiente).  
 
--   Quitar una instancia del proveedor de SMS (para quitar el último proveedor de SMS de un sitio, debe desinstalar el sitio).  
+- Quitar una instancia del proveedor de SMS (para quitar el último proveedor de SMS de un sitio, debe desinstalar el sitio).  
 
- Para supervisar la instalación o eliminación del proveedor de SMS, consulte el archivo **ConfigMgrSetup.log** en la carpeta raíz del servidor del sitio en el que ejecuta el programa de instalación.  
+  Para supervisar la instalación o eliminación del proveedor de SMS, consulte el archivo **ConfigMgrSetup.log** en la carpeta raíz del servidor del sitio en el que ejecuta el programa de instalación.  
 
- Antes de modificar el proveedor de SMS en un sitio, familiarícese con la información en [Plan para el proveedor de SMS de System Center Configuration Manager](../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
+  Antes de modificar el proveedor de SMS en un sitio, familiarícese con la información en [Plan para el proveedor de SMS de System Center Configuration Manager](../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
 #### <a name="to-manage-the-sms-provider-configuration-for-a-site"></a>Para administrar la configuración del proveedor de SMS para un sitio  
 
-1.  Ejecute el **programa de instalación de Configuration Manager** desde la **&lt;carpeta de instalación del sitio de Configuration Manager\>\BIN\X64\setup.exe**.  
+1. Ejecute el **programa de instalación de Configuration Manager** desde la **&lt;carpeta de instalación del sitio de Configuration Manager\>\BIN\X64\setup.exe**.  
 
-2.  En la página **Primeros pasos** , seleccione **Realizar mantenimiento de sitio o restablecer este sitio**y, a continuación, haga clic en **Siguiente**.  
+2. En la página **Primeros pasos** , seleccione **Realizar mantenimiento de sitio o restablecer este sitio**y, a continuación, haga clic en **Siguiente**.  
 
-3.  En la página **Mantenimiento del sitio** , seleccione **Modificar configuración de proveedor de SMS**y, a continuación, haga clic en **Siguiente**.  
+3. En la página **Mantenimiento del sitio** , seleccione **Modificar configuración de proveedor de SMS**y, a continuación, haga clic en **Siguiente**.  
 
-4.  En la página **Administrar proveedores de SMS** , seleccione una de las siguientes opciones y complete el asistente mediante una de las opciones siguientes:  
+4. En la página **Administrar proveedores de SMS** , seleccione una de las siguientes opciones y complete el asistente mediante una de las opciones siguientes:  
 
-    -   Para agregar un proveedor de SMS adicional en este sitio:  
+   -   Para agregar un proveedor de SMS adicional en este sitio:  
 
-         seleccione **Agregar un nuevo proveedor de SMS**, especifique el FQDN para el equipo que va a hospedar el proveedor de SMS y no hospeda actualmente un proveedor de SMS y, a continuación, haga clic en **Siguiente**.  
+        seleccione **Agregar un nuevo proveedor de SMS**, especifique el FQDN para el equipo que va a hospedar el proveedor de SMS y no hospeda actualmente un proveedor de SMS y, a continuación, haga clic en **Siguiente**.  
 
-    -   Para quitar un proveedor de SMS desde un servidor:  
+   -   Para quitar un proveedor de SMS desde un servidor:  
 
-         seleccione **Desinstalar el proveedor de SMS especificado**, seleccione el nombre del equipo desde el que desea quitar el proveedor de SMS, haga clic en **Siguiente**y, a continuación, confirme la acción.  
+        seleccione **Desinstalar el proveedor de SMS especificado**, seleccione el nombre del equipo desde el que desea quitar el proveedor de SMS, haga clic en **Siguiente**y, a continuación, confirme la acción.  
 
-        > [!TIP]  
-        >  Para mover el proveedor de SMS entre dos equipos, debe instalar el proveedor de SMS en el nuevo equipo y quitar el proveedor de SMS de la ubicación original. No hay ninguna opción dedicada para mover el proveedor de SMS entre equipos en un único proceso.  
+       > [!TIP]  
+       >  Para mover el proveedor de SMS entre dos equipos, debe instalar el proveedor de SMS en el nuevo equipo y quitar el proveedor de SMS de la ubicación original. No hay ninguna opción dedicada para mover el proveedor de SMS entre equipos en un único proceso.  
 
- Cuando finalice el Asistente para instalación, se completa la configuración del proveedor de SMS. En la pestaña **General** del cuadro de diálogo **Propiedades** del sitio, puede comprobar los equipos que tienen un proveedor de SMS instalado para el sitio.  
+   Cuando finalice el Asistente para instalación, se completa la configuración del proveedor de SMS. En la pestaña **General** del cuadro de diálogo **Propiedades** del sitio, puede comprobar los equipos que tienen un proveedor de SMS instalado para el sitio.  
 
 ##  <a name="bkmk_Console"></a> Administración de la consola de Configuration Manager  
  A continuación, se indican las tareas que puede realizar para administrar la consola de Configuration Manager:  
@@ -110,11 +110,11 @@ Por ejemplo, considere un escenario donde se instala la consola de Configuration
 ##  <a name="BKMK_ConfigDCOMforRemoteConsole"></a> Configuración de permisos de DCOM para consolas remotas de Configuration Manager  
  La cuenta de usuario que ejecuta la consola de Configuration Manager requiere el permiso para obtener acceso a la base de datos del sitio mediante el proveedor de SMS. Sin embargo, un usuario administrativo que usa una consola remota de Configuration Manager también requiere permisos de DCOM de **Activación remota** en:  
 
--   El equipo de servidor de sitio  
+- El equipo de servidor de sitio  
 
--   Cada equipo que hospede una instancia del proveedor de SMS  
+- Cada equipo que hospede una instancia del proveedor de SMS  
 
- El grupo de seguridad denominado **Administradores de SMS** concede acceso al proveedor de SMS y también puede usarse para conceder los permisos de DCOM necesarios. (Este grupo es local para el equipo cuando el proveedor de SMS se ejecuta en un servidor miembro, y es un grupo local de dominio cuando el proveedor de SMS se ejecuta en un controlador de dominio).  
+  El grupo de seguridad denominado **Administradores de SMS** concede acceso al proveedor de SMS y también puede usarse para conceder los permisos de DCOM necesarios. (Este grupo es local para el equipo cuando el proveedor de SMS se ejecuta en un servidor miembro, y es un grupo local de dominio cuando el proveedor de SMS se ejecuta en un controlador de dominio).  
 
 > [!IMPORTANT]  
 >  La consola de Configuration Manager utiliza el Instrumental de administración de Windows (WMI) para conectarse con el proveedor de SMS, y WMI utiliza internamente DCOM. Por tanto, Configuration Manager requiere permisos para activar un servidor de DCOM en el equipo del proveedor de SMS si la consola de Configuration Manager se ejecuta en un equipo distinto del equipo del proveedor de SMS. De forma predeterminada, la activación remota solo se concede a los miembros del grupo de administradores integrados. Si permite que el grupo de administradores de SMS tengan el permiso de activación remota, un miembro de este grupo podría intentar ataques de DCOM contra el equipo del proveedor de SMS. Esta configuración también aumenta la superficie expuesta a ataques del equipo. Para mitigar esta amenaza, debe supervisar cuidadosamente la pertenencia al grupo de administradores de SMS.  
@@ -123,24 +123,24 @@ Por ejemplo, considere un escenario donde se instala la consola de Configuration
 
 #### <a name="to-configure-dcom-permissions-for-remote-configuration-manager-console-connections"></a>Para configurar permisos de DCOM para conexiones remotas de la consola de Configuration Manager  
 
-1.  Ejecute  **Dcomcnfg.exe** para abrir **Servicios de componentes**.  
+1. Ejecute  **Dcomcnfg.exe** para abrir **Servicios de componentes**.  
 
-2.  En **para abrir**, haga clic en **Raíz de consola** >  **para abrir** > **Equipos**y, a continuación, haga clic en **Mi PC**. En el menú **Acción** , haga clic en **Propiedades**.  
+2. En **para abrir**, haga clic en **Raíz de consola** >  **para abrir** > **Equipos**y, a continuación, haga clic en **Mi PC**. En el menú **Acción** , haga clic en **Propiedades**.  
 
-3.  En el cuadro de diálogo **Propiedades de Mi PC** , en la pestaña **Seguridad COM** , en la sección **Permisos de inicio y activación** , haga clic en **Editar límites**.  
+3. En el cuadro de diálogo **Propiedades de Mi PC** , en la pestaña **Seguridad COM** , en la sección **Permisos de inicio y activación** , haga clic en **Editar límites**.  
 
-4.  En el cuadro de diálogo **Permisos de inicio y activación** , haga clic en **Agregar**.  
+4. En el cuadro de diálogo **Permisos de inicio y activación** , haga clic en **Agregar**.  
 
-5.  En el cuadro de diálogo **Seleccionar usuario, equipos, cuentas de servicio o grupos** , en el cuadro **Escribir los nombres de objeto para seleccionar (ejemplos)** , escriba **SMS Admins**y después haga clic en **Aceptar**.  
+5. En el cuadro de diálogo **Seleccionar usuario, equipos, cuentas de servicio o grupos** , en el cuadro **Escribir los nombres de objeto para seleccionar (ejemplos)** , escriba **SMS Admins**y después haga clic en **Aceptar**.  
 
-    > [!NOTE]  
-    >  Es posible que tenga que cambiar la configuración de **Desde esta ubicación** para ubicar el grupo de administradores de SMS. Este grupo es local al equipo cuando el proveedor de SMS se ejecuta en un servidor miembro, y es un grupo local de dominio cuando el proveedor de SMS se ejecuta en un controlador de dominio.  
+   > [!NOTE]  
+   >  Es posible que tenga que cambiar la configuración de **Desde esta ubicación** para ubicar el grupo de administradores de SMS. Este grupo es local al equipo cuando el proveedor de SMS se ejecuta en un servidor miembro, y es un grupo local de dominio cuando el proveedor de SMS se ejecuta en un controlador de dominio.  
 
-6.  En la sección **Permisos para administradores de SMS** , para permitir la activación remota, active la casilla **Activación remota** .  
+6. En la sección **Permisos para administradores de SMS** , para permitir la activación remota, active la casilla **Activación remota** .  
 
-7.  Haga clic en **Aceptar** y vuelva a hacer clic en **Aceptar** y, a continuación, cierre **Administración de equipos**. El equipo ya está configurado para permitir el acceso remoto a la consola de Configuration Manager a los miembros del grupo de administradores de SMS.  
+7. Haga clic en **Aceptar** y vuelva a hacer clic en **Aceptar** y, a continuación, cierre **Administración de equipos**. El equipo ya está configurado para permitir el acceso remoto a la consola de Configuration Manager a los miembros del grupo de administradores de SMS.  
 
- Repita este procedimiento en cada equipo del proveedor de SMS que pueda admitir consolas remotas de Configuration Manager.  
+   Repita este procedimiento en cada equipo del proveedor de SMS que pueda admitir consolas remotas de Configuration Manager.  
 
 ##  <a name="bkmk_dbconfig"></a> Modificación de la configuración de la base de datos del sitio  
  Después de instalar un sitio, puede modificar la configuración de la base de datos del sitio y el servidor de la base de datos del sitio mediante la ejecución del programa de instalación en un servidor de sitio de administración central o un servidor de sitio primario. Puede mover la base de datos del sitio a una nueva instancia de SQL Server en el mismo equipo o a otro equipo que ejecute una versión compatible de SQL Server. Estos y otros cambios relacionados no se admiten para la configuración de la base de datos en sitios secundarios.  
@@ -164,9 +164,9 @@ Por ejemplo, considere un escenario donde se instala la consola de Configuration
 
 **Si mueve la base de datos del sitio, debe configurar lo siguiente:**  
 
--   **Configurar acceso:** si mueve la base de datos del sitio a un nuevo equipo, agregue la cuenta de equipo del servidor de sitio al grupo **Administradores locales** del equipo que ejecuta SQL Server. Si utiliza un clúster de SQL Server para la base de datos del sitio, debe agregar la cuenta de equipo al grupo **Administradores locales** de cada equipo de de nodo de clúster de Windows Server.  
+-   **Configurar acceso:** Si mueve la base de datos del sitio a un nuevo equipo, agregue la cuenta de equipo del servidor del sitio al grupo **Administradores locales** del equipo que ejecuta SQL Server. Si utiliza un clúster de SQL Server para la base de datos del sitio, debe agregar la cuenta de equipo al grupo **Administradores locales** de cada equipo de de nodo de clúster de Windows Server.  
 
--   **Habilitar integración con Common Language Runtime (CLR):**  si mueve la base de datos a una nueva instancia de SQL Server, o a un nuevo equipo de SQL Server, debe habilitar la integración con Common Language Runtime (CLR). Para habilitar CLR, use **SQL Server Management Studio** para conectarse a la instancia de SQL Server que hospeda la base de datos del sitio y ejecute el siguiente procedimiento almacenado como una consulta: **sp_configure 'clr enabled',1; reconfigure**.  
+-   **Habilitar la integración con Common Language Runtime (CLR):**  Al mover la base de datos a una nueva instancia de SQL Server, o a un nuevo equipo de SQL Server, debe habilitar la integración con Common Language Runtime (CLR). Para habilitar CLR, use **SQL Server Management Studio** para conectarse a la instancia de SQL Server que hospeda la base de datos del sitio y ejecute el siguiente procedimiento almacenado como una consulta: **sp_configure 'clr enabled',1; reconfigure**.  
 -  **Asegurarse de que el nuevo servidor de SQL Server tiene acceso a la ubicación de copia de seguridad:** cuando use una ruta UNC para almacenar la copia de seguridad de base de datos de su sitio, después de mover la base de datos a un nuevo servidor, incluido el movimiento a un grupo de disponibilidad AlwaysOn de SQL Server o a un clúster de SQL Server, asegúrese de que la cuenta de equipo del nuevo servidor de SQL Server tiene permisos de **escritura** en la ubicación UNC.  
 
 
@@ -182,9 +182,9 @@ Puede elegir la cuenta que ejecuta los servicios de SQL para la base de datos de
 
 La documentación de SQL Server puede ayudarle a [registrar manualmente el SPN](https://technet.microsoft.com/library/ms191153\(v=sql.120\).aspx)y proporcionar información adicional acerca de las conexiones de los SPN y Kerberos.  
 
-> [!IMPORTANT]  
->  -   Cuando se crea un SPN para SQL Server en clúster, debe especificar el nombre virtual del clúster de SQL Server como el nombre de equipo de SQL Server.  
-> -   El comando para registrar un SPN para una instancia con nombre de SQL Server es el mismo que se usa para registrar un SPN para una instancia predeterminada, excepto en que el número de puerto debe coincidir con el puerto usado por la instancia con nombre.  
+> [!IMPORTANT]
+> - Cuando se crea un SPN para SQL Server en clúster, debe especificar el nombre virtual del clúster de SQL Server como el nombre de equipo de SQL Server.  
+>   -   El comando para registrar un SPN para una instancia con nombre de SQL Server es el mismo que se usa para registrar un SPN para una instancia predeterminada, excepto en que el número de puerto debe coincidir con el puerto usado por la instancia con nombre.  
 
 Puede registrar un SPN para la cuenta de servicio SQL Server del servidor de base de datos del sitio mediante la herramienta **Setspn** . Debe ejecutar la herramienta Setspn en un equipo que reside en el dominio de SQL Server, y debe utilizar credenciales de administrador de dominio para ejecutarla.  
 
@@ -279,9 +279,9 @@ La cuenta que utiliza para realizar un restablecimiento de sitio debe tener los 
 
 -   La cuenta que utiliza para realizar un restablecimiento de sitio debe tener los permisos siguientes:  
 
-    -   **Sitio de administración central**: la cuenta que usa para ejecutar un restablecimiento de sitio en este sitio debe ser una cuenta de administrador local en el servidor de sitio de administración central y debe tener privilegios equivalentes a los del rol de seguridad de administración basada en roles **Administrador total** .  
+    -   **Sitio de administración central**: la cuenta que usa para ejecutar un restablecimiento de sitio en este sitio debe ser una cuenta de administrador local en el servidor de sitio de administración central y debe tener privilegios equivalentes a los del rol de seguridad de administración basada en roles **Administrador total**.  
 
-    -   **Sitio primario**: la cuenta que usa para ejecutar un restablecimiento de sitio en este sitio debe ser una cuenta de administrador local en el servidor de sitio primario y debe tener privilegios equivalentes a los del rol de seguridad de administración basada en roles **Administrador total** . Si el sitio primario está en una jerarquía con un sitio de administración central, esta cuenta también debe ser un administrador local en el servidor de sitio de administración central.  
+    -   **Sitio primario**: la cuenta que usa para ejecutar un restablecimiento de sitio en este sitio debe ser una cuenta de administrador local en el servidor de sitio primario y debe tener privilegios equivalentes a los del rol de seguridad de administración basada en roles **Administrador total**. Si el sitio primario está en una jerarquía con un sitio de administración central, esta cuenta también debe ser un administrador local en el servidor de sitio de administración central.  
 
 **Limitaciones para un restablecimiento del sitio**
   - A partir de la versión 1602, no puede usar un restablecimiento del sitio para cambiar los paquetes de idioma de servidor o cliente que instaló en los sitios mientras la jerarquía esté configurada para admitir la [prueba de actualizaciones de cliente en una recopilación de preproducción](/sccm/core/clients/manage/upgrade/test-client-upgrades).

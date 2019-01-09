@@ -10,12 +10,12 @@ ms.assetid: 35586a85-4af9-4c8b-925a-0e32dc8b7346
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 77615ab53f715a5d3e5b2e21cda667e6f0a2bc0c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d03b1be5c099692e5f0c03ff3302d014d9e9643d
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339373"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415609"
 ---
 # <a name="scenarios-to-streamline-your-installation-of-system-center-configuration-manager"></a>Escenarios para simplificar la instalación de System Center Configuration Manager
 
@@ -45,43 +45,43 @@ En este escenario de ejemplo, instale el primer sitio de una jerarquía mediante
 
 Siga esta secuencia:  
 
-1.  **Instale un sitio de nivel superior para su nueva jerarquía** usando los medios de línea base.  
+1. **Instale un sitio de nivel superior para su nueva jerarquía** usando los medios de línea base.  
 
-    -   Puede usar los medios de línea base únicamente para instalar el primer sitio de una nueva jerarquía.  
-    -   Por ejemplo, instale un sitio de nivel superior con la versión de línea base de 1606. Para obtener más información, consulte [Use the Setup Wizard to install sites](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites) (Usar el asistente para instalación para instalar sitios).  
+   -   Puede usar los medios de línea base únicamente para instalar el primer sitio de una nueva jerarquía.  
+   -   Por ejemplo, instale un sitio de nivel superior con la versión de línea base de 1606. Para obtener más información, consulte [Use the Setup Wizard to install sites](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites) (Usar el asistente para instalación para instalar sitios).  
 
-    Después de este paso, el sitio de nivel superior ejecuta la versión 1606.  
+   Después de este paso, el sitio de nivel superior ejecuta la versión 1606.  
 
-2.  **Use actualizaciones integradas en la consola para actualizar el sitio de nivel superior a una versión posterior.**  
+2. **Use actualizaciones integradas en la consola para actualizar el sitio de nivel superior a una versión posterior.**  
 
-    -   Antes de instalar los clientes o los sitios secundarios, actualice el sitio de nivel superior a la versión de actualización que tiene pensado usar.  
-    -   Por ejemplo, puede actualizar el sitio de nivel superior que ejecuta la versión 1606 a la versión 1610. Para más información, vea [Updates for System Center Configuration Manager (Actualizaciones para System Center Configuration Manager)](../../../../core/servers/manage/updates.md).  
+   -   Antes de instalar los clientes o los sitios secundarios, actualice el sitio de nivel superior a la versión de actualización que tiene pensado usar.  
+   -   Por ejemplo, puede actualizar el sitio de nivel superior que ejecuta la versión 1606 a la versión 1610. Para más información, vea [Updates for System Center Configuration Manager (Actualizaciones para System Center Configuration Manager)](../../../../core/servers/manage/updates.md).  
 
-    Después de este paso, el sitio de nivel superior ejecuta la versión 1610.  
+   Después de este paso, el sitio de nivel superior ejecuta la versión 1610.  
 
-3.  **Instale nuevos sitios primarios secundarios debajo de un sitio de administración central.**  
+3. **Instale nuevos sitios primarios secundarios debajo de un sitio de administración central.**  
 
-    -   Utilice los medios de instalación de la carpeta CD.Latest en el servidor de sitio de administración central para instalar sitios primarios secundarios. Para más información, vea [La carpeta CD.Latest para System Center Configuration Manager](../../../../core/servers/manage/the-cd.latest-folder.md).  
+   - Utilice los medios de instalación de la carpeta CD.Latest en el servidor de sitio de administración central para instalar sitios primarios secundarios. Para más información, vea [La carpeta CD.Latest para System Center Configuration Manager](../../../../core/servers/manage/the-cd.latest-folder.md).  
 
-      Estos medios de origen son necesarios para garantizar que los nuevos sitios secundarios coinciden con la versión del sitio de administración central.  
+     Estos medios de origen son necesarios para garantizar que los nuevos sitios secundarios coinciden con la versión del sitio de administración central.  
 
-    Después de este paso, los nuevos sitios primarios secundarios ejecutan la versión 1610.  
+   Después de este paso, los nuevos sitios primarios secundarios ejecutan la versión 1610.  
 
-4.  **En cada sitio primario, utilice la opción integrada en la consola para instalar nuevos sitios secundarios.**  
+4. **En cada sitio primario, utilice la opción integrada en la consola para instalar nuevos sitios secundarios.**  
 
-    -   Como no ha instalado sitios secundarios mientras los sitios primarios estaban en la versión 1606, no será necesario actualizar los sitios secundarios.  
-    -   En su lugar, instale nuevos sitios secundarios que ejecuten la versión 1610. Para obtener más información, consulte [Install a secondary site](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_secondary) (Instalar un sitio secundario) en el tema [Use the Setup Wizard to install sites](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites) (Uso del asistente para instalación para instalar sitios).  
+   -   Como no ha instalado sitios secundarios mientras los sitios primarios estaban en la versión 1606, no será necesario actualizar los sitios secundarios.  
+   -   En su lugar, instale nuevos sitios secundarios que ejecuten la versión 1610. Para obtener más información, consulte [Install a secondary site](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_secondary) (Instalar un sitio secundario) en el tema [Use the Setup Wizard to install sites](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites) (Uso del asistente para instalación para instalar sitios).  
 
-    Después de este paso, se instalan nuevos sitios secundarios que ejecutan la versión 1610.  
+   Después de este paso, se instalan nuevos sitios secundarios que ejecutan la versión 1610.  
 
-5.  **Instale nuevos clientes en el sitio primario.**  
+5. **Instale nuevos clientes en el sitio primario.**  
 
-    -   Como no ha instalado clientes mientras los sitios primarios estaban en la versión 1606, no será necesario actualizar los clientes de la versión 1606 a la versión 1610.  
-    -   En su lugar, instale nuevos clientes que ejecuten la versión 1610. Para obtener más información, consulte [Implementar clientes en System Center Configuration Manager](../../../clients/deploy/deploy-clients-to-windows-computers.md).  
+   -   Como no ha instalado clientes mientras los sitios primarios estaban en la versión 1606, no será necesario actualizar los clientes de la versión 1606 a la versión 1610.  
+   -   En su lugar, instale nuevos clientes que ejecuten la versión 1610. Para obtener más información, consulte [Implementar clientes en System Center Configuration Manager](../../../clients/deploy/deploy-clients-to-windows-computers.md).  
 
-    Después de este paso, se instalan nuevos clientes que ejecutan la versión 1610.  
+   Después de este paso, se instalan nuevos clientes que ejecutan la versión 1610.  
 
-## <a name="scenario-upgrade-system-center-2012-configuration-manager-to-an-update-version-of-system-center-configuration-manager-current-branch"></a>Escenario: actualización de System Center 2012 Configuration Manager a una versión de actualización de la rama actual de System Center Configuration Manager  
+## <a name="scenario-upgrade-system-center-2012-configuration-manager-to-an-update-version-of-system-center-configuration-manager-current-branch"></a>Escenario: actualización de System Center 2012 Configuration Manager a una versión de actualización de la rama actual de System Center Configuration Manager  
 En este escenario de ejemplo actualizará la infraestructura de Microsoft System Center 2012 Configuration Manager a una versión de actualización de System Center Configuration Manager, como la versión 1610.  
 
 -   El sitio de administración central y todos los sitios primarios se deben actualizar a la versión de línea base 1606 antes de instalar la actualización de la versión 1610.  
@@ -89,39 +89,39 @@ En este escenario de ejemplo actualizará la infraestructura de Microsoft System
 
 Siga esta secuencia:  
 
-1.  **Actualice el sitio de nivel superior de Microsoft System Center 2012 Configuration Manager** a una versión de línea de base de la rama actual usando los medios de origen de System Center Configuration Manager (por ejemplo, la versión 1606). Para obtener más información, consulte [Upgrade to System Center Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md) (Actualizar a System Center Configuration Manager).  
+1. **Actualice el sitio de nivel superior de Microsoft System Center 2012 Configuration Manager** a una versión de línea de base de la rama actual usando los medios de origen de System Center Configuration Manager (por ejemplo, la versión 1606). Para obtener más información, consulte [Upgrade to System Center Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md) (Actualizar a System Center Configuration Manager).  
 
-    -   Al igual que los escenarios de actualización tradicionales, actualice siempre primero el sitio de nivel superior de la jerarquía y luego los sitios secundarios.  
+   -   Al igual que los escenarios de actualización tradicionales, actualice siempre primero el sitio de nivel superior de la jerarquía y luego los sitios secundarios.  
 
-    Después de este paso, el sitio de nivel superior ejecuta la versión 1606.  
+   Después de este paso, el sitio de nivel superior ejecuta la versión 1606.  
 
-2.  **Actualice cada sitio primario secundario de la jerarquía** a esa misma versión de línea de base.  
+2. **Actualice cada sitio primario secundario de la jerarquía** a esa misma versión de línea de base.  
 
-    -   Si actualiza desde Microsoft System Center 2012 Configuration Manager, debe actualizar manualmente cada sitio primario a una versión de línea de base de la rama actual.  
-    -   En este momento, no actualizará los sitios secundarios.  
+   -   Si actualiza desde Microsoft System Center 2012 Configuration Manager, debe actualizar manualmente cada sitio primario a una versión de línea de base de la rama actual.  
+   -   En este momento, no actualizará los sitios secundarios.  
 
-    Después de este paso, cada sitio primario ejecuta la versión 1606.  
+   Después de este paso, cada sitio primario ejecuta la versión 1606.  
 
-3.  **Establezca las ventanas de mantenimiento en los sitios primarios secundarios.** Después de actualizar todos los sitios primarios a la versión de línea base, planee configurar ventanas de mantenimiento para controlar cuándo esos sitios instalarán actualizaciones de la infraestructura. Para obtener más información, consulte [How to use maintenance windows in System Center Configuration Manager](../../../../core/clients/manage/collections/use-maintenance-windows.md) (Uso de ventanas de mantenimiento en Configuration Manager).  (Las ventanas de mantenimiento se denominan *ventanas de servicio* en la versión 1606).  
+3. **Establezca las ventanas de mantenimiento en los sitios primarios secundarios.** Después de actualizar todos los sitios primarios a la versión de línea base, planee configurar ventanas de mantenimiento para controlar cuándo esos sitios instalarán actualizaciones de la infraestructura. Para obtener más información, consulte [How to use maintenance windows in System Center Configuration Manager](../../../../core/clients/manage/collections/use-maintenance-windows.md) (Uso de ventanas de mantenimiento en Configuration Manager).  (Las ventanas de mantenimiento se denominan *ventanas de servicio* en la versión 1606).  
 
-    -   Un sitio primario secundario instala automáticamente las mismas actualizaciones que se instalan en un sitio de administración central.  
-    -   Los sitios secundarios no instalan automáticamente las nuevas versiones. Debe actualizarlas manualmente desde la consola.  
+   -   Un sitio primario secundario instala automáticamente las mismas actualizaciones que se instalan en un sitio de administración central.  
+   -   Los sitios secundarios no instalan automáticamente las nuevas versiones. Debe actualizarlas manualmente desde la consola.  
 
-  Después de este paso, al instalar actualizaciones en el sitio de administración central, los sitios primarios secundarios solo instalarán esa actualización cuando así se lo permita la ventana de mantenimiento.  
+   Después de este paso, al instalar actualizaciones en el sitio de administración central, los sitios primarios secundarios solo instalarán esa actualización cuando así se lo permita la ventana de mantenimiento.  
 
-4.  **Instale la versión de actualización en el sitio de nivel superior.** De esta forma se actualiza el sitio de nivel superior. Después de que un sitio de administración central instale la versión de actualización, cada sitio primario secundario instala automáticamente la actualización a menos que una ventana de mantenimiento bloquee la instalación.  
+4. **Instale la versión de actualización en el sitio de nivel superior.** De esta forma se actualiza el sitio de nivel superior. Después de que un sitio de administración central instale la versión de actualización, cada sitio primario secundario instala automáticamente la actualización a menos que una ventana de mantenimiento bloquee la instalación.  
 
-    -   Por ejemplo, puede actualizar el sitio de nivel superior de la versión 1606 a la versión 1610. Para más información, vea [Updates for System Center Configuration Manager (Actualizaciones para System Center Configuration Manager)](../../../../core/servers/manage/updates.md).  
+   -   Por ejemplo, puede actualizar el sitio de nivel superior de la versión 1606 a la versión 1610. Para más información, vea [Updates for System Center Configuration Manager (Actualizaciones para System Center Configuration Manager)](../../../../core/servers/manage/updates.md).  
 
-    Después de este paso, el sitio de administración central y todos los sitios primarios ejecutan la versión 1610.  
+   Después de este paso, el sitio de administración central y todos los sitios primarios ejecutan la versión 1610.  
 
-5.  **Actualice los sitios secundarios.** Después de que un sitio primario instale la actualización y ejecute la versión 1610, use la opción integrada en la consola para actualizar los sitios secundarios.  
+5. **Actualice los sitios secundarios.** Después de que un sitio primario instale la actualización y ejecute la versión 1610, use la opción integrada en la consola para actualizar los sitios secundarios.  
 
-    -   De esta forma, se actualizan los sitios secundarios directamente desde Microsoft System Center 2012 Configuration Manager a la versión de actualización instalada en el sitio primario.  
-    -   Para obtener información sobre cómo actualizar un sitio secundario, consulte [Actualizar sitios](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_upgrade) en el tema [Actualizar a System Center Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).  
+   -   De esta forma, se actualizan los sitios secundarios directamente desde Microsoft System Center 2012 Configuration Manager a la versión de actualización instalada en el sitio primario.  
+   -   Para obtener información sobre cómo actualizar un sitio secundario, consulte [Actualizar sitios](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_upgrade) en el tema [Actualizar a System Center Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).  
 
-6.  **Actualice los clientes.** Para actualizar los clientes, aplique la información que se describe en [Actualizar clientes de equipos Windows con System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
+6. **Actualice los clientes.** Para actualizar los clientes, aplique la información que se describe en [Actualizar clientes de equipos Windows con System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
-    -   De esta forma, se actualizan los clientes directamente desde Microsoft System Center 2012 Configuration Manager a la versión de actualización instalada en el sitio primario.  
+   -   De esta forma, se actualizan los clientes directamente desde Microsoft System Center 2012 Configuration Manager a la versión de actualización instalada en el sitio primario.  
 
-    Después de este paso, los clientes se actualizan a la versión 1610 sin actualizarse primero a la versión 1606.
+   Después de este paso, los clientes se actualizan a la versión 1610 sin actualizarse primero a la versión 1606.

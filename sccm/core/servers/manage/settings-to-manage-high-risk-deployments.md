@@ -10,12 +10,12 @@ ms.assetid: 8d37b983-a964-402c-819d-2512ed2d463b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ab2203b948887a94577826573ccdf3376637eca2
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: a2e2817f5f3bd48e4a84e2e507597126fa10f989
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386026"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419231"
 ---
 # <a name="settings-to-manage-high-risk-deployments-for-configuration-manager"></a>Configuración para administrar implementaciones de alto riesgo en Configuration Manager
 
@@ -32,15 +32,15 @@ Por ejemplo, una secuencia de tareas con el propósito **Requerido** que impleme
 
 Para reducir el riesgo de una implementación de alto riesgo no deseada, puede configurar límites de tamaño en estas opciones de comprobación de la implementación:  
 
--   **Límites de tamaño de la recopilación**: al crear una implementación, oculte las recopilaciones con más clientes que el límite.  
+- **Límites de tamaño de la colección**: al crear una implementación, oculte las colecciones con más clientes que el límite.  
 
-     -   **Tamaño predeterminado**: al crear una implementación, esta opción oculta de forma predeterminada las recopilaciones con más clientes que este límite. Puede ver igualmente estas recopilaciones al crear la implementación, pero están ocultas de manera predeterminada. El valor predeterminado es **100**. Para omitir esta opción, escriba un valor de **0**.  
+  - **Tamaño predeterminado**: al crear una implementación, esta opción oculta de forma predeterminada las colecciones con más clientes que este límite. Puede ver igualmente estas recopilaciones al crear la implementación, pero están ocultas de manera predeterminada. El valor predeterminado es **100**. Para omitir esta opción, escriba un valor de **0**.  
 
-     -   **Tamaño máximo**: al crear una implementación, esta opción siempre oculta las recopilaciones con más clientes que este límite. El valor predeterminado es **0**, que omite esta opción. El valor del **Tamaño máximo** debe ser mayor que el valor del **Tamaño predeterminado** .  
+  - **Tamaño máximo**: al crear una implementación, esta opción siempre oculta las colecciones con más clientes que este límite. El valor predeterminado es **0**, que omite esta opción. El valor del **Tamaño máximo** debe ser mayor que el valor del **Tamaño predeterminado** .  
 
-     Por ejemplo, establezca el **Tamaño predeterminado** en 100 y el **Tamaño máximo** en 1000. Al crear una implementación de alto riesgo, en la ventana **Seleccionar recopilación** solo se muestran las recopilaciones con menos de 100 clientes. Si desactiva la opción **Hide collections with a member count greater than the site's minimum size configuration** (Ocultar recopilaciones con un número de miembros superior a la configuración de tamaño mínimo del sitio), en la ventana se muestran las recopilaciones con menos de 1000 clientes.  
+    Por ejemplo, establezca el **Tamaño predeterminado** en 100 y el **Tamaño máximo** en 1000. Al crear una implementación de alto riesgo, en la ventana **Seleccionar recopilación** solo se muestran las recopilaciones con menos de 100 clientes. Si desactiva la opción **Hide collections with a member count greater than the site's minimum size configuration** (Ocultar recopilaciones con un número de miembros superior a la configuración de tamaño mínimo del sitio), en la ventana se muestran las recopilaciones con menos de 1000 clientes.  
 
--   **Recopilaciones con servidores de sistema de sitio**: cuando la recopilación de destino contiene un equipo con un rol de sistema de sitio, bloquee las implementaciones o solicite una comprobación antes de crear la implementación. Cuando se bloquee una implementación, seleccione otra recopilación que cumpla los criterios de verificación de la implementación para seguir creando la implementación.  
+- **Colecciones con servidores del sistema de sitio:**: cuando la colección de destino contiene un equipo con un rol de sistema de sitio, bloquee las implementaciones o solicite una comprobación antes de crear la implementación. Cuando se bloquee una implementación, seleccione otra recopilación que cumpla los criterios de verificación de la implementación para seguir creando la implementación.  
 
 > [!NOTE]  
 >  Las implementaciones de alto riesgo siempre se limitan a las recopilaciones personalizadas, las recopilaciones que cree y la recopilación integrada **Equipos desconocidos** . Si crea una implementación de alto riesgo, no podrá seleccionar una recopilación integrada como **Todos los sistemas**.  

@@ -10,12 +10,12 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3981d454d0b007f5b057ccca4c8888da609dba97
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.openlocfilehash: d1a10f2381d6820d685ec8ff871c83c2a4c39bb1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52259087"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415065"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Cuentas que se usan en Configuration Manager
 
@@ -223,14 +223,14 @@ De forma predeterminada, este grupo tiene **Control total** en la carpeta siguie
 ### <a name="active-directory-group-discovery-account"></a>Cuenta de detección de grupos de Active Directory  
 
  El sitio usa la **cuenta de detección de grupos de Active Directory** para detectar los objetos siguientes desde las ubicaciones en Active Directory Domain Services que especifique:
- - Grupos de seguridad locales, globales y universales
- - La pertenencia a estos grupos
- - La pertenencia dentro de grupos de distribución
-    - Los grupos de distribución no se detectan como recursos de grupo
+- Grupos de seguridad locales, globales y universales
+- La pertenencia a estos grupos
+- La pertenencia dentro de grupos de distribución
+   - Los grupos de distribución no se detectan como recursos de grupo
 
- Esta cuenta puede ser una cuenta de equipo del servidor de sitio que ejecute la detección o una cuenta de usuario de Windows. Debe tener permiso de acceso de **Lectura** en las ubicaciones de Active Directory que se especifiquen para la detección.  
+  Esta cuenta puede ser una cuenta de equipo del servidor de sitio que ejecute la detección o una cuenta de usuario de Windows. Debe tener permiso de acceso de **Lectura** en las ubicaciones de Active Directory que se especifiquen para la detección.  
 
- Para obtener más información, vea [Detección de grupos de Active Directory](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutGroup).
+  Para obtener más información, vea [Detección de grupos de Active Directory](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutGroup).
 
 
 ### <a name="active-directory-system-discovery-account"></a>Cuenta de detección de sistemas de Active Directory  
@@ -402,17 +402,17 @@ De forma predeterminada, este grupo tiene **Control total** en la carpeta siguie
 
 2.  En el área de trabajo **Biblioteca de software**, determine el tipo de contenido para el que desea administrar cuentas de acceso y siga los pasos indicados:  
 
-    -   **Aplicaciones**: expanda **Administración de aplicaciones**, haga clic en **Aplicaciones** y, luego, seleccione las aplicaciones para las que se van a administrar cuentas de acceso.  
+    -   **Aplicación**: expanda **Administración de aplicaciones**, haga clic en **Aplicaciones** y, luego, seleccione la aplicación para la que se van a administrar cuentas de acceso.  
 
-    -   **Paquetes**: expanda **Administración de aplicaciones**, haga clic en **Paquetes** y, luego, seleccione los paquetes para los que se van a administrar cuentas de acceso.  
+    -   **Paquete**: expanda **Administración de aplicaciones**, haga clic en **Paquetes** y, luego, seleccione el paquete para el que se van a administrar cuentas de acceso.  
 
-    -   **Paquetes de implementación de actualizaciones de software**: expanda **Actualizaciones de software**, haga clic en **Paquetes de implementación** y, luego, seleccione los paquetes de implementación para los que se van a administrar cuentas de acceso.  
+    -   **Paquetes de implementación de actualizaciones de software**: expanda **Actualizaciones de software**, haga clic en **Paquetes de implementación** y, después, seleccione el paquete de implementación para el que se van a administrar cuentas de acceso.  
 
-    -   **Paquetes de controladores**: expanda **Sistemas operativos**, haga clic en **Paquetes de controladores** y, luego, seleccione los paquetes de controladores para los que se van a administrar cuentas de acceso.  
+    -   **Paquete de controladores**: expanda **Sistemas operativos**, haga clic en **Paquetes de controladores** y, luego, seleccione el paquete de controladores para el que se van a administrar cuentas de acceso.  
 
-    -   **Imagen de sistema operativo**: expanda **Sistemas operativos**, haga clic en **Imágenes de sistema operativo** y, después, seleccione las imágenes de sistema operativo para las que se van a administrar cuentas de acceso.  
+    -   **Imagen del sistema operativo**: expanda **Sistemas operativos**, haga clic en **Imágenes de sistema operativo** y, después, seleccione la imagen de sistema operativo para la que se van a administrar cuentas de acceso.  
 
-    -   **Paquete de actualización de sistema operativo**: expanda **Sistemas operativos**, haga clic en **Paquetes de actualización del sistema operativo** y, después, seleccione el paquete de actualización de sistema operativo para el que se van a administrar cuentas de acceso.  
+    -   **Paquete de actualización del sistema operativo**: expanda **Sistemas operativos**, haga clic en **Paquetes de actualización del sistema operativo** y, después, seleccione el paquete de actualización de sistema operativo para el que se van a administrar cuentas de acceso.  
 
     -   **Imagen de arranque**: expanda **Sistemas operativos**, haga clic en **Imágenes de arranque** y, luego, seleccione la imagen de arranque para la que se van a administrar cuentas de acceso.  
 

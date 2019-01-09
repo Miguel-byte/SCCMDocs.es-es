@@ -10,12 +10,12 @@ ms.assetid: b1fdaee2-2816-4447-94cd-609f6948f215
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 66099b45fb04b18c84cd9a3973c1a4d93f0e93a6
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 862555a34d638ad9c1c5c2d0d0de6f2ce1edd3f3
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335769"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419332"
 ---
 # <a name="software-metering-in-system-center-configuration-manager"></a>Medición de software en System Center Configuration Manager
 
@@ -37,21 +37,21 @@ La medición de software no tiene dependencias externas, solo dependencias dentr
 ##  <a name="configure-software-metering"></a>Configurar la medición de software
  En este procedimiento se define la configuración predeterminada de cliente para la medición de software y se aplica a todos los equipos de la jerarquía. Si quiere que esta configuración solo se aplique a algunos equipos, cree una configuración de cliente de dispositivo personalizada e impleméntela en una recopilación que contenga los equipos en los que quiere usar la medición de software. Para obtener más información sobre cómo crear configuraciones de dispositivo personalizadas, vea [Cómo establecer la configuración del cliente](../../core/clients/deploy/configure-client-settings.md).
 
-1.  En la consola de Configuration Manager, haga clic en **Administración** > **Configuración de cliente** > **Configuración de cliente predeterminada**.
+1. En la consola de Configuration Manager, haga clic en **Administración** > **Configuración de cliente** > **Configuración de cliente predeterminada**.
 
-2.  En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.
+2. En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.
 
-3.  En el cuadro de diálogo **Configuración predeterminada** , haga clic en **Disponibilidad de software**.
+3. En el cuadro de diálogo **Configuración predeterminada** , haga clic en **Disponibilidad de software**.
 
-4.  En la lista **Configuración de dispositivo** , configure lo siguiente:
+4. En la lista **Configuración de dispositivo** , configure lo siguiente:
 
-    -   **Habilitar disponibilidad de software en clientes**: seleccione **Verdadero** para habilitar la medición de software.
+   -   **Habilitar disponibilidad de software en clientes**: seleccione **Verdadero** para habilitar la medición de software.
 
-    -   **Programar la recopilación de datos**: configure con qué frecuencia se recopilan datos de medición de software de los equipos cliente. Use el valor predeterminado de cada **7 días** o haga clic en **Programación** para especificar una programación personalizada.
+   -   **Programar la recopilación de datos**: configure con qué frecuencia se recopilan datos de medición de software de los equipos cliente. Use el valor predeterminado de cada **7 días** o haga clic en **Programación** para especificar una programación personalizada.
 
-5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Configuración predeterminada** .
+5. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Configuración predeterminada** .
 
- Los equipos cliente se configuran con estas opciones la próxima vez que descargan directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Cómo administrar clientes](../../core/clients/manage/manage-clients.md).
+   Los equipos cliente se configuran con estas opciones la próxima vez que descargan directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Cómo administrar clientes](../../core/clients/manage/manage-clients.md).
 
 ##  <a name="create-software-metering-rules"></a>Crear reglas de medición de software
  Use el Asistente para crear regla de disponibilidad de software para crear una nueva regla de disponibilidad de software para su sitio de Configuration Manager.
@@ -154,15 +154,15 @@ La medición de software no tiene dependencias externas, solo dependencias dentr
 ## <a name="example-scenario-for-using-software-metering"></a>Escenario de ejemplo de uso de medición de software
  En esta sección, creará una regla de medición de software de ejemplo que puede ayudarlo a resolver los requisitos empresariales siguientes:
 
--   Determinar el número de copias de una determinada aplicación en la compañía
+- Determinar el número de copias de una determinada aplicación en la compañía
 
--   Detectar las copias de una aplicación que no se usan
+- Detectar las copias de una aplicación que no se usan
 
--   Determinar los usuarios que usan habitualmente una aplicación concreta
+- Determinar los usuarios que usan habitualmente una aplicación concreta
 
- Woodgrove Bank ha implementado Microsoft Office 2010 como su conjunto de aplicaciones de productividad de oficina estándar. Sin embargo, para admitir una aplicación heredada, es necesario que algunos equipos continúen ejecutando Microsoft Office Word 2003. El departamento de TI quiere reducir los costos de licencia y de soporte mediante la eliminación de estas copias de Word 2003 si ya no se usa la aplicación heredada. El departamento de soporte técnico también quiere identificar a los usuarios usan la aplicación heredada.
+  Woodgrove Bank ha implementado Microsoft Office 2010 como su conjunto de aplicaciones de productividad de oficina estándar. Sin embargo, para admitir una aplicación heredada, es necesario que algunos equipos continúen ejecutando Microsoft Office Word 2003. El departamento de TI quiere reducir los costos de licencia y de soporte mediante la eliminación de estas copias de Word 2003 si ya no se usa la aplicación heredada. El departamento de soporte técnico también quiere identificar a los usuarios usan la aplicación heredada.
 
- John es el administrador de sistemas de TI de Woodgrove Bank y usa la medición de software en Configuration Manager para lograr estos objetivos de la empresa. Realiza las siguientes acciones:
+  John es el administrador de sistemas de TI de Woodgrove Bank y usa la medición de software en Configuration Manager para lograr estos objetivos de la empresa. Realiza las siguientes acciones:
 
 - Juan comprueba los requisitos previos para la medición de software y confirma que el punto de servicios de informes está instalado y en funcionamiento.
 - Juan configura la configuración de cliente predeterminada para la medición de software:<br>Habilita la medición de software y usa la programación predeterminada de recopilación de datos de una vez cada siete días.<br>Configura el inventario de software para inventariar los archivos que tienen la extensión .exe mediante la configuración de la opción de cliente de inventario de software **Inventariar estos tipos de archivo**.<br>Agrega un nueva regla de medición de software, denominada **woodgrove.exe**, para supervisar la aplicación heredada.
@@ -172,4 +172,4 @@ La medición de software no tiene dependencias externas, solo dependencias dentr
 - Juan realiza algunas comprobaciones adicionales para confirmar que la aplicación heredada no es necesaria en los equipos identificados. A continuación, desinstala la aplicación heredada y la copia de Word 2003 de estos equipos.<br>Juan ejecuta el informe **Usuarios que han ejecutado un programa de software medido específico** para proporcionar al departamento de soporte técnico una lista de usuarios que siguen usando la aplicación heredada.
 - Juan sigue comprobando los informes de medición de software semanalmente y toma medidas correctivas si es necesario.
 
- Como resultado de esta estrategia, los costos del departamento de TI en materia de soporte técnico y licencias se reducen mediante la eliminación de las aplicaciones que ya no son necesarias. Además, el departamento de soporte técnico tiene ahora la lista deseada que detalla los usuarios que ejecutan la aplicación heredada.
+  Como resultado de esta estrategia, los costos del departamento de TI en materia de soporte técnico y licencias se reducen mediante la eliminación de las aplicaciones que ya no son necesarias. Además, el departamento de soporte técnico tiene ahora la lista deseada que detalla los usuarios que ejecutan la aplicación heredada.

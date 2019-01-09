@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex
-ms.openlocfilehash: ead1eef396e643930e00d3208ed1e821c73906d5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3454b56e53901668c89062f0910f8ea318f22cf2
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344184"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417666"
 ---
 # <a name="schema-extensions-for-system-center-configuration-manager"></a>Extensiones de esquema para System Center Configuration Manager
 
@@ -87,7 +87,7 @@ Antes de [extender el esquema de Active Directory](https://docs.microsoft.com/sc
 
 **Escenarios de implementación de contenido**: cuando crea contenido en un sitio y, a continuación, implementa ese contenido en otro sitio de la jerarquía, el sitio receptor debe poder verificar la firma de los datos del contenido firmado. Esto requiere acceso a la clave pública del sitio de origen en el que crea estos datos. Al extender el esquema de Active Directory para Configuration Manager, la clave pública de un sitio estará disponible para todos los sitios de la jerarquía.  
 
--   **Soluciones alternativas:** si no extiende el esquema, use la herramienta de mantenimiento de la jerarquía, **preinst.exe**, para intercambiar la información de clave segura entre sitios.  
+-   **Solución alternativa:** si no extiende el esquema, use la herramienta de mantenimiento de la jerarquía, **preinst.exe**, para intercambiar la información de clave segura entre sitios.  
 
      Por ejemplo, si tiene previsto crear contenido en un sitio primario e implementar ese contenido en un sitio secundario que esté por debajo de otro sitio primario, necesitará extender el esquema de Active Directory para permitir que el sitio secundario obtenga la clave pública del sitio primario de origen, o bien tendrá que usar preinst.exe para compartir las claves entre los dos sitios directamente.  
 
@@ -135,12 +135,12 @@ Si extiende el esquema para System Center Configuration Manager, las siguientes 
 
     -   cn=MS-SMS-Site  
 
-> [!NOTE]  
-
+> [!NOTE]
+> 
 >  En las extensiones de esquema se podrían incluir atributos y clases que provienen de versiones anteriores del producto, pero que no se usan en System Center Configuration Manager. Por ejemplo:  
-
->   
->  -   Atributo: cn=MS-SMS-Site-Boundaries  
-> -   Clase: cn=MS-SMS-Server-Locator-Point  
+> 
+> 
+> - Atributo: cn=MS-SMS-Site-Boundaries  
+>   -   Clase: cn=MS-SMS-Server-Locator-Point  
 
 Para asegurarse de que las listas anteriores están actualizadas, consulte el archivo **ConfigMgr_ad_schema.LDF** de la carpeta **\SMSSETUP\BIN\x64** del medio de instalación de System Center Configuration Manager.  

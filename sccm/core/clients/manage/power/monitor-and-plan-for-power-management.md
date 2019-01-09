@@ -10,12 +10,12 @@ ms.assetid: 507bf676-2679-4e4d-8831-3ffc9cf8557e
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 70e6f4ddfa335a08bdf7039274b388b5a468311e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c0cff0787549624ab0b987fbacdb6f5b4f9c3ec1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341770"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416221"
 ---
 # <a name="how-to-monitor-and-plan-for-power-management-in-system-center-configuration-manager"></a>Cómo supervisar y planear la administración de energía en System Center Configuration Manager
 
@@ -43,17 +43,17 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 ###  <a name="BKMK_Activity"></a> Informe actividad del equipo  
  El informe **Actividad de equipo** muestra un gráfico con la siguiente actividad para una recopilación especificada durante un período determinado:  
 
--   **Computer On** : el equipo se ha activado.  
+- **Computer On** : el equipo se ha activado.  
 
--   **Monitor On** : el monitor se ha activado.  
+- **Monitor On** : el monitor se ha activado.  
 
--   **User Active** : se ha detectado actividad del mouse del equipo, el teclado del equipo o de una conexión de Escritorio remoto con el equipo.  
+- **User Active** : se ha detectado actividad del mouse del equipo, el teclado del equipo o de una conexión de Escritorio remoto con el equipo.  
 
- Este informe se usa durante las fases de supervisión, planeamiento y aplicación para ayudarle a entender la alineación entre la actividad del equipo, la actividad del monitor y la actividad del usuario durante un período de 24 horas. Si ejecuta el informe durante varios días, los datos se agregan durante ese período. Este informe puede ayudarle a determinar las horas habituales laborables (punta) y no laborales (fuera de horas punta) para una recopilación seleccionada para ayudarle a decidir cuándo debe aplicar los planes de administración de energía configurado.  
+  Este informe se usa durante las fases de supervisión, planeamiento y aplicación para ayudarle a entender la alineación entre la actividad del equipo, la actividad del monitor y la actividad del usuario durante un período de 24 horas. Si ejecuta el informe durante varios días, los datos se agregan durante ese período. Este informe puede ayudarle a determinar las horas habituales laborables (punta) y no laborales (fuera de horas punta) para una recopilación seleccionada para ayudarle a decidir cuándo debe aplicar los planes de administración de energía configurado.  
 
- El gráfico muestra los períodos de tiempo en que un equipo puede estar encendido, pero no hay ninguna actividad de usuario. Considere la posibilidad de aplicar una configuración de energía más restrictiva en esos momentos para ahorrar en los costos de energía de los equipos que están activados, pero no se usan. Un equipo se cuenta como activo si ha habido actividad de equipo, de usuario o de monitor durante un minuto o más en la hora mostrada en el gráfico. Si un equipo no notifica datos de administración de energía, no se incluirá en el informe **Actividad de equipo** .  
+  El gráfico muestra los períodos de tiempo en que un equipo puede estar encendido, pero no hay ninguna actividad de usuario. Considere la posibilidad de aplicar una configuración de energía más restrictiva en esos momentos para ahorrar en los costos de energía de los equipos que están activados, pero no se usan. Un equipo se cuenta como activo si ha habido actividad de equipo, de usuario o de monitor durante un minuto o más en la hora mostrada en el gráfico. Si un equipo no notifica datos de administración de energía, no se incluirá en el informe **Actividad de equipo** .  
 
- Use los parámetros siguientes para configurar este informe.  
+  Use los parámetros siguientes para configurar este informe.  
 
 #### <a name="required-report-parameters"></a>Parámetros de informe necesarios  
  Deben especificarse los siguientes parámetros para ejecutar este informe.  
@@ -78,13 +78,13 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 ###  <a name="BKMK_Comp_Activity_by_computer"></a> Informe Actividad de equipo por equipo  
  El informe **Actividad de equipo por equipo** muestra un gráfico con la siguiente actividad para un equipo especificado durante una fecha determinada:  
 
--   **Computer On** : el equipo se ha activado.  
+- **Computer On** : el equipo se ha activado.  
 
--   **Monitor On** : el monitor se ha activado.  
+- **Monitor On** : el monitor se ha activado.  
 
--   **User Active** : se ha detectado actividad del mouse del equipo, el teclado del equipo o de una conexión de Escritorio remoto con el equipo.  
+- **User Active** : se ha detectado actividad del mouse del equipo, el teclado del equipo o de una conexión de Escritorio remoto con el equipo.  
 
- Este informe puede ejecutarse de forma independiente o puede llamarlo el informe **Detalles de actividad de equipo** .  
+  Este informe puede ejecutarse de forma independiente o puede llamarlo el informe **Detalles de actividad de equipo** .  
 
 > [!NOTE]  
 >  Se recopila información sobre la actividad de equipo de los equipos cliente durante el inventario de hardware. Según la hora en que se ejecuta el inventario de hardware, se puede recopilar la actividad durante un plan de energía aplicado para horas punta o para horas no punta.  
@@ -233,13 +233,13 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 ###  <a name="BKMK_Consumption"></a> Informe Consumo de energía  
  El informe **Consumo de energía** muestra la siguiente información:  
 
--   Un gráfico que muestra el consumo de energía mensual total de los equipos en kilovatios por hora (kWh) de la recopilación especificada durante el período de tiempo especificado.  
+- Un gráfico que muestra el consumo de energía mensual total de los equipos en kilovatios por hora (kWh) de la recopilación especificada durante el período de tiempo especificado.  
 
--   Un gráfico que muestra el consumo de energía promedio en kilovatios por hora (kWh) de cada equipo de la recopilación especificada durante el período de tiempo especificado.  
+- Un gráfico que muestra el consumo de energía promedio en kilovatios por hora (kWh) de cada equipo de la recopilación especificada durante el período de tiempo especificado.  
 
--   Una tabla que muestra el consumo de energía mensual total en kilovatios por hora (kWh) y el consumo de energía promedio de los equipos de la recopilación especificada durante el período de tiempo especificado.  
+- Una tabla que muestra el consumo de energía mensual total en kilovatios por hora (kWh) y el consumo de energía promedio de los equipos de la recopilación especificada durante el período de tiempo especificado.  
 
- Esta información puede usarse como ayuda para entender las tendencias de consumo de energía en el entorno. Después de aplicar un plan de energía en los equipos de la recopilación seleccionada, el consumo de energía de los equipos debe disminuir.  
+  Esta información puede usarse como ayuda para entender las tendencias de consumo de energía en el entorno. Después de aplicar un plan de energía en los equipos de la recopilación seleccionada, el consumo de energía de los equipos debe disminuir.  
 
 > [!NOTE]  
 >  Si agrega miembros a la recopilación, o los quita de ella, después de haber aplicado un plan de energía, afectará a los resultados mostrados por el informe **Consumo de energía** y podría dificultar la comparación de los resultados de la fase de supervisión y planeamiento y la fase de aplicación.  
@@ -276,13 +276,13 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 ###  <a name="BKMK_Consumption_by_Day"></a> Informe Consumo de energía por día  
  El informe **Consumo de energía por día** muestra la siguiente información:  
 
--   Un gráfico que muestra el consumo de energía diario total de los equipos en kilovatios por hora (kWh) de la recopilación especificada durante el período de tiempo especificado.  
+- Un gráfico que muestra el consumo de energía diario total de los equipos en kilovatios por hora (kWh) de la recopilación especificada durante el período de tiempo especificado.  
 
--   Un gráfico que muestra el consumo de energía diario promedio en kilovatios por hora (kWh) de cada equipo de la recopilación especificada durante los últimos 31 días.  
+- Un gráfico que muestra el consumo de energía diario promedio en kilovatios por hora (kWh) de cada equipo de la recopilación especificada durante los últimos 31 días.  
 
--   Una tabla que muestra el consumo de energía diario total en kilovatios por hora (kWh) y el consumo de energía promedio de los equipos de la recopilación especificada durante los últimos 31 días.  
+- Una tabla que muestra el consumo de energía diario total en kilovatios por hora (kWh) y el consumo de energía promedio de los equipos de la recopilación especificada durante los últimos 31 días.  
 
- Esta información puede usarse como ayuda para entender las tendencias de consumo de energía en el entorno. Después de aplicar un plan de energía en los equipos de la recopilación seleccionada, el consumo de energía de los equipos debe disminuir.  
+  Esta información puede usarse como ayuda para entender las tendencias de consumo de energía en el entorno. Después de aplicar un plan de energía en los equipos de la recopilación seleccionada, el consumo de energía de los equipos debe disminuir.  
 
 > [!NOTE]  
 >  Si agrega miembros a la recopilación, o los quita de ella, después de haber aplicado un plan de energía, afectará a los resultados mostrados por el informe **Consumo de energía** y podría dificultar la comparación de los resultados de la fase de supervisión y planeamiento y la fase de aplicación.  
@@ -317,15 +317,15 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 ###  <a name="BKMK_Cost"></a> Informe Coste de energía  
  El informe **Coste de energía** muestra la siguiente información:  
 
--   Un gráfico que muestra el coste de energía mensual total de los equipos de la recopilación especificada durante el período de tiempo especificado.  
+- Un gráfico que muestra el coste de energía mensual total de los equipos de la recopilación especificada durante el período de tiempo especificado.  
 
--   Un gráfico que muestra el coste de energía mensual promedio de cada equipo de la recopilación especificada durante el período de tiempo especificado.  
+- Un gráfico que muestra el coste de energía mensual promedio de cada equipo de la recopilación especificada durante el período de tiempo especificado.  
 
--   Una tabla que muestra el coste de energía mensual total y el coste de energía mensual promedio de los equipos de la colección especificada durante los últimos 31 días.  
+- Una tabla que muestra el coste de energía mensual total y el coste de energía mensual promedio de los equipos de la colección especificada durante los últimos 31 días.  
 
- Esta información puede usarse como ayuda para entender las tendencias de coste de energía en el entorno. Después de aplicar un plan de energía en los equipos de la recopilación seleccionada, el coste de energía de los equipos debe disminuir.  
+  Esta información puede usarse como ayuda para entender las tendencias de coste de energía en el entorno. Después de aplicar un plan de energía en los equipos de la recopilación seleccionada, el coste de energía de los equipos debe disminuir.  
 
- Use los parámetros siguientes para configurar este informe.  
+  Use los parámetros siguientes para configurar este informe.  
 
 #### <a name="required-report-parameters"></a>Parámetros de informe necesarios  
  Deben especificarse los siguientes parámetros para ejecutar este informe.  
@@ -359,15 +359,15 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 ###  <a name="BKMK_Cost_by_Day"></a> Informe Coste de energía por día  
  El informe **Coste de energía por día** muestra la siguiente información:  
 
--   Un gráfico que muestra el coste de energía diario total de los equipos de la recopilación especificada durante los últimos 31 días.  
+- Un gráfico que muestra el coste de energía diario total de los equipos de la recopilación especificada durante los últimos 31 días.  
 
--   Un gráfico que muestra el coste de energía diario promedio de cada equipo de la recopilación especificada durante los últimos 31 días.  
+- Un gráfico que muestra el coste de energía diario promedio de cada equipo de la recopilación especificada durante los últimos 31 días.  
 
--   Una tabla que muestra el coste de energía diario total y el coste de energía diario promedio de los equipos de la colección especificada durante los últimos 31 días.  
+- Una tabla que muestra el coste de energía diario total y el coste de energía diario promedio de los equipos de la colección especificada durante los últimos 31 días.  
 
- Esta información puede usarse como ayuda para entender las tendencias de coste de energía en el entorno. Después de aplicar un plan de energía en los equipos de la recopilación seleccionada, el coste de energía de los equipos debe disminuir.  
+  Esta información puede usarse como ayuda para entender las tendencias de coste de energía en el entorno. Después de aplicar un plan de energía en los equipos de la recopilación seleccionada, el coste de energía de los equipos debe disminuir.  
 
- Use los parámetros siguientes para configurar este informe.  
+  Use los parámetros siguientes para configurar este informe.  
 
 #### <a name="required-report-parameters"></a>Parámetros de informe necesarios  
  Deben especificarse los siguientes parámetros para ejecutar este informe.  
@@ -399,15 +399,15 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 ###  <a name="BKMK_Environmental_Impact"></a> Informe Impacto medioambiental  
  El informe **Impacto medioambiental** muestra la siguiente información:  
 
--   Un gráfico que muestra el CO2 mensual total generado (en toneladas) por los equipos de la recopilación especificada durante el período de tiempo especificado.  
+- Un gráfico que muestra el CO2 mensual total generado (en toneladas) por los equipos de la recopilación especificada durante el período de tiempo especificado.  
 
--   Un gráfico que muestra el CO2 mensual promedio generado (en toneladas) por los equipos de la recopilación especificada durante el período de tiempo especificado.  
+- Un gráfico que muestra el CO2 mensual promedio generado (en toneladas) por los equipos de la recopilación especificada durante el período de tiempo especificado.  
 
--   Una tabla que muestra el CO2 mensual total generado (en toneladas) y el CO2 mensual promedio generado por los equipos de la recopilación especificada durante el período de tiempo especificado.  
+- Una tabla que muestra el CO2 mensual total generado (en toneladas) y el CO2 mensual promedio generado por los equipos de la recopilación especificada durante el período de tiempo especificado.  
 
- El informe **Impacto medioambiental** calcula la cantidad de CO2 generado (en toneladas) usando el tiempo que un equipo o monitor ha estado encendido durante un período de 24 horas.  
+  El informe **Impacto medioambiental** calcula la cantidad de CO2 generado (en toneladas) usando el tiempo que un equipo o monitor ha estado encendido durante un período de 24 horas.  
 
- Use los parámetros siguientes para configurar este informe.  
+  Use los parámetros siguientes para configurar este informe.  
 
 #### <a name="required-report-parameters"></a>Parámetros de informe necesarios  
  Deben especificarse los siguientes parámetros para ejecutar este informe.  
@@ -440,13 +440,13 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 ###  <a name="BKMK_Environmental_Impact_by_Day"></a> Informe Impacto medioambiental por día  
  El informe **Impacto medioambiental por día** muestra la siguiente información:  
 
--   Un gráfico que muestra el CO2 diario total generado (en toneladas) por los equipos de la recopilación especificada durante los últimos 31 días.  
+- Un gráfico que muestra el CO2 diario total generado (en toneladas) por los equipos de la recopilación especificada durante los últimos 31 días.  
 
--   Un gráfico que muestra el CO2 diario promedio generado (en toneladas) por cada equipo de la recopilación especificada durante los últimos 31 días.  
+- Un gráfico que muestra el CO2 diario promedio generado (en toneladas) por cada equipo de la recopilación especificada durante los últimos 31 días.  
 
--   Una tabla que muestra el CO2 diario total generado y el CO2 diario promedio generado por los equipos de la recopilación especificada durante los últimos 31 días.  
+- Una tabla que muestra el CO2 diario total generado y el CO2 diario promedio generado por los equipos de la recopilación especificada durante los últimos 31 días.  
 
- El informe **Impacto medioambiental por día** calcula la cantidad de CO2 generado (en toneladas) usando el tiempo que un equipo o monitor ha estado encendido durante un período de 24 horas.  
+  El informe **Impacto medioambiental por día** calcula la cantidad de CO2 generado (en toneladas) usando el tiempo que un equipo o monitor ha estado encendido durante un período de 24 horas.  
 
 #### <a name="required-report-parameters"></a>Parámetros de informe necesarios  
  Deben especificarse los siguientes parámetros para ejecutar este informe.  
@@ -534,17 +534,17 @@ La siguiente información puede ayudarle a supervisar y planear la administraci�
 ###  <a name="BKMK_Capabilites"></a> Informe Capacidades de energía  
  El informe **Capacidades de energía** muestra las capacidades de hardware para la administración de energía de los equipos de la recopilación especificada. Este informe se usa normalmente en la fase de supervisión de la administración de energía para determinar las capacidades de administración de energía de los equipos de su organización. La información mostrada en el informe puede usarse para crear recopilaciones de equipos a las que se vayan a aplicar los planes de energía o que se vayan a excluir de la administración de energía. Las capacidades de administración de energía que muestra este informe son:  
 
--   **Con capacidad de suspensión** : indica si el equipo tiene la capacidad de entrar en suspensión si se configura para ello.  
+- **Con capacidad de suspensión** : indica si el equipo tiene la capacidad de entrar en suspensión si se configura para ello.  
 
--   **Con capacidad de hibernación** : indica si el equipo puede entrar en hibernación si se configura para ello.  
+- **Con capacidad de hibernación** : indica si el equipo puede entrar en hibernación si se configura para ello.  
 
--   **Activación desde suspensión** : indica si el equipo puede activarse desde la suspensión si se configura para ello.  
+- **Activación desde suspensión** : indica si el equipo puede activarse desde la suspensión si se configura para ello.  
 
--   **Activación desde hibernación** : indica si el equipo puede activarse desde la hibernación si se configura para ello.  
+- **Activación desde hibernación** : indica si el equipo puede activarse desde la hibernación si se configura para ello.  
 
- Los valores notificados por el informe **Capacidades de energía** indican las capacidades de suspensión e hibernación de los equipos tal como las notifica Windows. Sin embargo, los valores notificados no reflejan los casos en que la configuración de Windows o del BIOS impide el funcionamiento de estas funciones.  
+  Los valores notificados por el informe **Capacidades de energía** indican las capacidades de suspensión e hibernación de los equipos tal como las notifica Windows. Sin embargo, los valores notificados no reflejan los casos en que la configuración de Windows o del BIOS impide el funcionamiento de estas funciones.  
 
- Use los parámetros siguientes para configurar este informe.  
+  Use los parámetros siguientes para configurar este informe.  
 
 #### <a name="required-report-parameters"></a>Parámetros de informe necesarios  
  Deben especificarse los siguientes parámetros para ejecutar este informe.  

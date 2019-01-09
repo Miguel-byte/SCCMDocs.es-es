@@ -10,12 +10,12 @@ ms.assetid: 9f7142e1-c972-4384-853b-2da1568cb3e3
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 480f7a890e82b46e2b2d69180763f39504a47e0c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a08162f36c247136dd346140480e2d29be0c4017
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344490"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424806"
 ---
 # <a name="best-practices-for-power-management-in-system-center-configuration-manager"></a>Procedimientos recomendados para la administración de energía en System Center Configuration Manager
 
@@ -40,17 +40,17 @@ Use los procedimientos recomendados siguientes para la administración de energ�
 
  Entre los ejemplos de equipos que podría querer excluir de la administración de energía se incluyen:  
 
--   Los equipos que deban permanecer encendidos.  
+- Los equipos que deban permanecer encendidos.  
 
--   Los equipos a los que los usuarios deban conectarse mediante Conexión a Escritorio remoto.  
+- Los equipos a los que los usuarios deban conectarse mediante Conexión a Escritorio remoto.  
 
--   Los equipos que no puedan utilizar la administración de energía.  
+- Los equipos que no puedan utilizar la administración de energía.  
 
--   Los equipos que tengan el rol de sistema de sitio de punto de distribución.  
+- Los equipos que tengan el rol de sistema de sitio de punto de distribución.  
 
--   Los equipos públicos como los quioscos multimedia, las pantallas de información o las consolas de supervisión, donde el equipo y el monitor siempre deben estar encendidos.  
+- Los equipos públicos como los quioscos multimedia, las pantallas de información o las consolas de supervisión, donde el equipo y el monitor siempre deben estar encendidos.  
 
- Para más información, vea [Configuración de administración de energía en Configuration Manager](../../../../core/clients/manage/power/configuring-power-management.md).  
+  Para más información, vea [Configuración de administración de energía en Configuration Manager](../../../../core/clients/manage/power/configuring-power-management.md).  
 
 ## <a name="first-apply-power-plans-to-a-test-collection-of-computers"></a>En primer lugar, aplique los planes de energía a un recopilación de equipos de prueba  
  Pruebe siempre el efecto de aplicar un plan de administración de energía en un conjunto de equipos de prueba antes de aplicar el plan de energía a un gran conjunto de equipos.  
@@ -65,7 +65,7 @@ Use los procedimientos recomendados siguientes para la administración de energ�
 
  Si un equipo es miembro de varias recopilaciones y cada una de ellas aplica planes de energía diferentes, se realizará las siguientes acciones:  
 
--   Plan de energía: si se aplican varios valores para la configuración de energía en un equipo, se usa el valor menos restrictivo.  
+-   Plan de energía: si se aplican varios valores para la configuración de energía de un equipo, se usa el valor menos restrictivo.  
 
 -   Hora de reactivación: si se aplican varias horas de activación a un equipo de escritorio, se usará la hora más cercana a medianoche.  
 

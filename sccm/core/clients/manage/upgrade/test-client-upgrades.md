@@ -10,12 +10,12 @@ ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 019b275177e1f264a4bfc2926cfe45ebd0be8eae
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 94ef3ce54db0efb7be7e9d6d0709f48bb212f7e7
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334579"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416544"
 ---
 # <a name="how-to-test-client-upgrades-in-a-pre-production-collection-in-system-center-configuration-manager"></a>Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager
 
@@ -38,15 +38,15 @@ Puede probar una nueva versión de cliente de Configuration Manager en una recop
 > [!IMPORTANT]
 > La implementación de clientes de preproducción no se admite en equipos del grupo de trabajo. no pueden usar la autenticación requerida para que el punto de distribución obtenga acceso al paquete de cliente de preproducción.  Reciben el cliente más reciente cuando se promueve a cliente de producción.
 
-1. [Configure una recopilación](..\collections\create-collections.md) que contenga los equipos en los que quiere implementar el cliente de preproducción.   
+1. [Configure una recopilación](../collections/create-collections.md) que contenga los equipos en los que quiere implementar el cliente de preproducción.   
 
-1.  En la consola de Configuration Manager, abra **Administración** > **Configuración del sitio** > **Sitios** y elija **Configuración de jerarquía**.  
+2. En la consola de Configuration Manager, abra **Administración** > **Configuración del sitio** > **Sitios** y elija **Configuración de jerarquía**.  
 
-     En la pestaña **Actualización de cliente** de las **Propiedades de configuración de la jerarquía**:  
+    En la pestaña **Actualización de cliente** de las **Propiedades de configuración de la jerarquía**:  
 
-    -   Seleccione **Actualizar todos los clientes de la colección de preproducción automáticamente mediante el cliente de preproducción**.  
+   -   Seleccione **Actualizar todos los clientes de la colección de preproducción automáticamente mediante el cliente de preproducción**.  
 
-    -   Escriba el nombre de una colección para usarla como colección de preproducción.  
+   -   Escriba el nombre de una colección para usarla como colección de preproducción.  
 
 ![Probar actualizaciones de cliente](media/test-client-upgrades.png)
 

@@ -10,12 +10,12 @@ ms.assetid: 68ac8a07-8e54-4a3c-91e3-e50dc1cabf5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 831edd1d2c606253dcdc372a0a1503199734835c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 8a58e16819a9f207bea98ed799e709268c3b5d37
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331597"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423361"
 ---
 # <a name="update-and-retire-applications-with-system-center-configuration-manager"></a>Actualizar y retirar aplicaciones mediante System Center Configuration Manager
 
@@ -24,14 +24,14 @@ ms.locfileid: "32331597"
 
 Con el tiempo, es probable que quiera realizar cambios en una aplicación, desinstalar una aplicación o reemplazar una aplicación implementada por una nueva. System Center Configuration Manager ofrece las funcionalidades siguientes, que le ayudarán a actualizar y retirar aplicaciones:  
 
--   **Revisar aplicaciones**. Si realiza cambios en una aplicación o tipo de implementación, Configuration Manager mantiene un historial de esos cambios. Puede revertir la aplicación a una revisión anterior en cualquier momento. También puede ver sus propiedades, restaurar una revisión anterior de una aplicación o eliminar una revisión anterior.  
+- **Revisar aplicaciones**. Si realiza cambios en una aplicación o tipo de implementación, Configuration Manager mantiene un historial de esos cambios. Puede revertir la aplicación a una revisión anterior en cualquier momento. También puede ver sus propiedades, restaurar una revisión anterior de una aplicación o eliminar una revisión anterior.  
 
   Para obtener más información, consulte [Revisiones de la aplicación](revise-and-supersede-applications.md#application-revisions).  
 
--   **Sustituir aplicaciones**. Puede actualizar o reemplazar las aplicaciones existentes mediante una relación de sustitución. Cuando se sustituye una aplicación, puede especificar un nuevo tipo de implementación para reemplazar el tipo de implementación de la aplicación sustituida. También puede decidir si quiere actualizar o desinstalar la aplicación sustituida antes de que se instale la aplicación que la sustituye.  
+- **Sustituir aplicaciones**. Puede actualizar o reemplazar las aplicaciones existentes mediante una relación de sustitución. Cuando se sustituye una aplicación, puede especificar un nuevo tipo de implementación para reemplazar el tipo de implementación de la aplicación sustituida. También puede decidir si quiere actualizar o desinstalar la aplicación sustituida antes de que se instale la aplicación que la sustituye.  
 
   Para obtener más información, consulte [Sustitución de la aplicación](revise-and-supersede-applications.md#application-supersedence).  
 
--   **Desinstalar aplicaciones**. Configuration Manager facilita la desinstalación de una aplicación. Esto puede realizarse en modo silencioso, sin la intervención de la aplicación o del usuario del dispositivo.  
+- **Desinstalar aplicaciones**. Configuration Manager facilita la desinstalación de una aplicación. Esto puede realizarse en modo silencioso, sin la intervención de la aplicación o del usuario del dispositivo.  
 
   Para obtener más información, consulte [Desinstalar aplicaciones](uninstall-applications.md).  

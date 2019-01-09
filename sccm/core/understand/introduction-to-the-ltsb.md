@@ -10,16 +10,16 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 20151eeac8a0a430b38ce9537748e0fef019df64
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 446a5fa47cdf55060b960d8846c913cbafc78da8
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338081"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415864"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Introducción a la rama de mantenimiento a largo plazo de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama de mantenimiento a largo plazo)*
+*Se aplica a: System Center Configuration Manager (Rama de mantenimiento a largo plazo)*
 
 La rama de mantenimiento a largo plazo (LTSB) de System Center Configuration Manager es una rama distinta de Configuration Manager que se ha diseñado como opción de instalación disponible para todos los clientes. Pero se trata de la única opción para clientes que dejen caducar sus derechos de suscripción de Software Assurance (SA) o equivalente para Configuration Manager.
 
@@ -49,17 +49,17 @@ Aunque la compatibilidad con estas características no está disponible en la LT
 ## <a name="find-documentation-for-the-ltsb"></a>Buscar documentación de la LTSB
 La LTSB se basa en la versión 1606 de la rama actual. Para obtener documentación del producto, use la [documentación de la rama actual](https://docs.microsoft.com/sccm/), con advertencias y limitaciones que son específicas de la LTSB. Estas advertencias y limitaciones se identifican en los temas en línea siguientes:
 
--     [Introducción a la rama de mantenimiento a largo plazo de System Center Configuration Manager](introduction-to-the-ltsb.md) (este tema)
--     [Instalar y actualizar con el medio de línea base de la versión 1606 para System Center Configuration Manager](install-the-ltsb.md)
--     [Actualizar la rama de mantenimiento a largo plazo a la rama actual](convert-to-current-branch.md)
--     [Configuraciones admitidas para la rama de mantenimiento a largo plazo](supported-configurations-for-ltsb.md)
--   [Administrar la rama de mantenimiento a largo plazo de Configuration Manager](manage-the-ltsb.md)
+- [Introducción a la rama de mantenimiento a largo plazo](introduction-to-the-ltsb.md): (En este tema)
+- [Instalar y actualizar con el medio de línea base de la versión 1606 para System Center Configuration Manager](install-the-ltsb.md)
+- [Actualizar la rama de mantenimiento a largo plazo a la rama actual](convert-to-current-branch.md)
+- [Configuraciones admitidas para la rama de mantenimiento a largo plazo](supported-configurations-for-ltsb.md)
+- [Administrar la rama de mantenimiento a largo plazo de Configuration Manager](manage-the-ltsb.md)
 
 Cuando se hace referencia a la documentación de la rama actual sobre la LTSB, los detalles que se aplican a la versión 1606 también se aplican a la LTSB. Las características o los detalles que se presentan con la versión 1610 o versiones posteriores no se admiten en la LTSB.
 
 
 ## <a name="licensing-overview-for-the-ltsb"></a>Introducción a las licencias para la LTSB   
-Los clientes con Software Assurance (SA) activo en licencias de System Center Configuration Manager o con derechos de suscripción equivalentes el 1 de octubre de 2016, tienen derecho a usar la versión 1606 de octubre de 2016 de System Center Configuration Manager. Los clientes con derechos para System Center Configuration Manager el 1 de octubre de 2016 o después de esta fecha encontrarán dos opciones de licencia tras la instalación: la rama actual y la rama de mantenimiento a largo plazo (LTSB).
+Los clientes con Software Assurance (SA) activo en licencias de System Center Configuration Manager o con derechos de suscripción equivalentes el 1 de octubre de 2016, tienen derecho a usar la versión 1606 de octubre de 2016 de System Center Configuration Manager. Los clientes con derechos para System Center Configuration Manager el 1 de octubre de 2016 o después de esta fecha encontrarán dos opciones con licencia tras la instalación: Rama actual y Rama de mantenimiento a largo plazo (LTSB).
 
 Los clientes que tengan derechos perpetuos en System Center Configuration Manager, o que admitan que SA o la suscripción expiren después del 1 de octubre, pueden instalar la versión de LTSB de System Center Configuration Manager actual en el momento de caducidad.
 

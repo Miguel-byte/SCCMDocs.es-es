@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4673da59da7fede2f425948472c31a620d13a258
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 00c04190b954a7b19d4bea0e43b2dc6ecf9d8388
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456301"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414997"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Usar un punto de distribución de nube en Configuration Manager
 
@@ -102,7 +102,7 @@ Configuration Manager no migra los puntos de distribución de nube clásicos exi
 
 La ubicación donde creará el punto de distribución de nube depende de los clientes que necesiten acceder al contenido. A partir de la versión 1806, hay tres tipos de puntos de distribución de nube:  
 
-- Implementación clásica del servicio: cree este tipo solo en un sitio primario.  
+- Implementación de servicio clásico : cree este tipo solo en un sitio primario.  
 
 - Implementación de Azure Resource Manager: cree este tipo en un sitio primario o en el sitio de administración central.  
 
@@ -161,10 +161,10 @@ Al usar un punto de distribución de nube en su jerarquía, use esta informació
 - El punto de distribución de nube es compatible con todas las versiones de Windows que se indican en [Sistemas operativos compatibles de clientes y dispositivos](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).  
 
 - Un administrador distribuye los siguientes tipos de contenido de software admitido:  
-    - Aplicaciones
-    - Paquetes
-    - Paquetes de actualización del sistema operativo
-    - Actualizaciones de software de terceros  
+  - Aplicaciones
+  - Paquetes
+  - Paquetes de actualización del sistema operativo
+  - Actualizaciones de software de terceros  
 
     > [!Important]  
     > Cuando la consola de Configuration Manager no impide la distribución de actualizaciones de software de Microsoft en un punto de distribución de nube, pagará costos de Azure para almacenar el contenido que los clientes no usen. Los clientes basados en Internet siempre obtienen el contenido de actualización de software de Microsoft del servicio en la nube de Microsoft Update. No distribuya actualizaciones de software de Microsoft en un punto de distribución de nube.    
@@ -203,11 +203,11 @@ Configuration Manager incluye las opciones siguientes para ayudar a controlar lo
 - Puede configurar Configuration Manager para que le avise cuando los umbrales de las descargas de cliente alcancen o superen el límite mensual. Para obtener más información, vea [Alertas de umbral de transferencia de datos](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure#bkmk_alerts).   
 
 - Para reducir el número de transferencias de datos desde puntos de distribución de nube que realizan los clientes, use una de las siguientes tecnologías de caché de sistemas del mismo nivel:  
-    - Caché del mismo nivel de Configuration Manager
-    - Windows BranchCache
-    - Optimización de entrega de Windows 10  
+  - Caché del mismo nivel de Configuration Manager
+  - Windows BranchCache
+  - Optimización de entrega de Windows 10  
 
-   Para obtener más información, consulte [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management) (Conceptos fundamentales de la administración de contenido).   
+    Para obtener más información, consulte [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management) (Conceptos fundamentales de la administración de contenido).   
 
 
 ### <a name="components"></a>Componentes
@@ -276,7 +276,7 @@ Cuando un cliente usa un punto de distribución de nube como una ubicación de c
 
 2. El punto de administración responde a la solicitud de ubicación del cliente con el **FQDN del servicio** del punto de distribución de nube. Esta propiedad es la misma que el nombre común del certificado de autenticación de servidor.  
 
-    Si usa su propio nombre de dominio (por ejemplo, WallaceFalls.contoso.com), el cliente primero intentará resolver este FQDN. Necesita un alias de CNAME en la configuración DNS accesible desde Internet de dominio para que los clientes puedan resolver el nombre del servicio de Azure (por ejemplo, WallaceFalls.cloudapp.net).  
+    Si usa su propio nombre de dominio (por ejemplo, WallaceFalls.contoso.com), el cliente primero intentará resolver este FQDN. Necesita un alias de CNAME en la configuración DNS accesible desde Internet de dominio para que los clientes puedan resolver el nombre del servicio de Azure. Por ejemplo, WallaceFalls.cloudapp.net.  
 
 3. Después, el cliente resuelve el nombre del servicio de Azure (por ejemplo, WallaceFalls.cloudapp.net) a una dirección IP válida. La configuración DNS de Azure necesita procesar esta respuesta.  
 
@@ -319,7 +319,7 @@ Según el diseño de punto de distribución de nube, necesitará uno o más cert
 
 - A partir de la versión 1710, es compatible con la **versión 3** de los certificados. Para obtener más información, consulte [Introducción a los certificados CNG](/sccm/core/plan-design/network/cng-certificates-overview).  
 
-- A partir de la versión 1802, siempre que configure Windows con la siguiente directiva: **Criptografía de sistema: uso de algoritmos que cumplan con el estándar federal de procesamiento de información para el cifrado, la síntesis del mensaje y la firma**  
+- A partir de la versión 1802, al configurar Windows con la siguiente directiva: **Criptografía de sistema: usar algoritmos que cumplan la norma FIPS para cifrado, aplicación de algoritmo hash y firma**.  
 
 - A partir de la versión 1802, es compatible con **TLS 1.2**. Para más información, vea [Referencia técnica de controles criptográficos](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities).  
 

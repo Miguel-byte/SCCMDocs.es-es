@@ -10,12 +10,12 @@ ms.assetid: bceab2e8-2f05-4a17-9ac8-a7a558670fb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a72f7979c38a0a8782aa41fef66b7aa00af9bc0f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 24f1d08fedfc09a190739182d7858772745fb3fe
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342246"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423378"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1612 para System Center Configuration Manager
 
@@ -59,7 +59,7 @@ Además de instalar y configurar la base de datos de almacenamiento de datos, se
 - El equipo en el que instale el rol de sistema de sitio necesita .NET Framework 4.5.2 o versiones posteriores.
 - La cuenta de equipo del equipo en el que instale el rol de sistema de sitio debe tener permisos de administrador local en el equipo que hospedará la base de datos de almacenamiento de datos.
 - La cuenta administrativa que use para instalar el rol de sistema de sitio debe ser un propietario de la base de datos (DBO) en la instancia de SQL Server que hospedará la base de datos de almacenamiento de datos.  
--  La base de datos se admite:
+- La base de datos se admite:
   - Con SQL Server 2012 o versiones posteriores, edición Enterprise o Datacenter.
   - En una instancia con nombre o predeterminada
   - En un *clúster de SQL Server*. Aunque esta configuración debe funcionar, no se ha probado y el soporte técnico es la mejor opción.
@@ -122,21 +122,21 @@ Después de que instala un rol de sistema de sitio de almacenamiento de datos, l
 ### <a name="move-the-data-warehouse-database"></a>Mover la base de datos de almacenamiento de datos
 Use los siguientes pasos para mover la base de datos de almacenamiento de datos a un servidor de SQL Server nuevo:
 
-  1. Revise la configuración de la base de datos actual y registre los detalles de configuración, incluidos:  
+1. Revise la configuración de la base de datos actual y registre los detalles de configuración, incluidos:  
    - Los grupos de datos que sincroniza
    - Las tablas que incluye o excluye de la sincronización       
 
    Volverá a configurar estos grupos de datos y tablas después de que restaure la base de datos en un nuevo servidor y vuelva a instalar el rol de sistema de sitio.  
 
-  2. Use SQL Server Management Studio para realizar una copia de seguridad de la base de datos de almacenamiento de datos y, después, restaure esa base de datos en un servidor de SQL en el nuevo equipo que hospedará el almacenamiento de datos.
+2. Use SQL Server Management Studio para realizar una copia de seguridad de la base de datos de almacenamiento de datos y, después, restaure esa base de datos en un servidor de SQL en el nuevo equipo que hospedará el almacenamiento de datos.
 
-  Después de restaurar la base de datos en el nuevo servidor, asegúrese de que los permisos de acceso de la base de datos son los mismos en la nueva base de datos de almacenamiento de datos que en la base de datos de almacenamiento de datos original.
+   Después de restaurar la base de datos en el nuevo servidor, asegúrese de que los permisos de acceso de la base de datos son los mismos en la nueva base de datos de almacenamiento de datos que en la base de datos de almacenamiento de datos original.
 
-  3. Use la consola de Configuration Manager para quitar el rol de sistema de sitio del punto de servicio de almacenamiento de datos del servidor actual.
+3. Use la consola de Configuration Manager para quitar el rol de sistema de sitio del punto de servicio de almacenamiento de datos del servidor actual.
 
-  4. Instale un nuevo punto de servicio de almacenamiento de datos y especifique el nombre del nuevo servidor de SQL Server y la instancia que hospeda la base de datos de almacenamiento de datos que ha restaurado.
+4. Instale un nuevo punto de servicio de almacenamiento de datos y especifique el nombre del nuevo servidor de SQL Server y la instancia que hospeda la base de datos de almacenamiento de datos que ha restaurado.
 
-  5. Después de que se instale el rol de sistema de sitio, se completa el movimiento.
+5. Después de que se instale el rol de sistema de sitio, se completa el movimiento.
 
 Puede revisar los siguientes registros de Configuration Manager para confirmar que el rol de sistema de sitio se ha reinstalado correctamente:  
 - **DWSSMSI.log** y **DWSSSetup.log**: use estos registros para investigar errores al instalar el punto de servicio de almacenamiento de datos.
@@ -148,7 +148,7 @@ A partir de la versión 1612 de Technical Preview, puede usar una nueva herramie
 
 Esta herramienta solo afecta al contenido del punto de distribución que especifique cuando ejecute la herramienta y no puede quitar contenido de la biblioteca de contenido en el servidor de sitio.
 
-Después de instalar la versión 1612 de Technical Preview, puede buscar **ContentLibraryCleanup.exe** en la carpeta \*%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* del servidor de sitio de Technical Preview.
+Después de instalar la versión 1612 de Technical Preview, puede buscar **ContentLibraryCleanup.exe** en la carpeta *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* del servidor de sitio de Technical Preview.
 
 La herramienta que se incluye en esta versión de Technical Preview está diseñada para reemplazar las versiones anteriores de herramientas similares para los productos antiguos de Configuration Manager. Aunque esta versión de la herramienta dejará de funcionar después del 1 de marzo de 2017, se presentarán nuevas versiones con las futuras versiones de Technical Preview hasta que esta herramienta se presente como parte de la rama actual o como una versión extraordinaria lista para la producción.
 
@@ -158,22 +158,22 @@ La herramienta que se incluye en esta versión de Technical Preview está diseñ
 
 ### <a name="modes-of-operation"></a>Modos de operación
 La herramienta puede ejecutarse en dos modos:
-  1.    **Modo de hipótesis**:   
-      Cuando no especifica el modificador **/delete**, la herramienta se ejecuta en el modo de hipótesis e identifica el contenido que se eliminaría del punto de distribución, pero realmente no elimina ningún dato.
+1. **Modo de hipótesis**:   
+   Cuando no especifica el modificador **/delete**, la herramienta se ejecuta en el modo de hipótesis e identifica el contenido que se eliminaría del punto de distribución, pero realmente no elimina ningún dato.
 
-      - Cuando la herramienta se ejecuta en este modo, la información sobre el contenido que se eliminaría se escribe automáticamente en el archivo de registro de herramientas. No se solicita al usuario que confirme cada eliminación potencial.
-      - De manera predeterminada, el archivo de registro se escribe en la carpeta temporal de los usuarios del equipo en el que ejecuta la herramienta. En cambio, puede usar el modificador /log para redirigir el archivo de registro a otra ubicación.  
-      </br>
+   - Cuando la herramienta se ejecuta en este modo, la información sobre el contenido que se eliminaría se escribe automáticamente en el archivo de registro de herramientas. No se solicita al usuario que confirme cada eliminación potencial.
+   - De manera predeterminada, el archivo de registro se escribe en la carpeta temporal de los usuarios del equipo en el que ejecuta la herramienta. En cambio, puede usar el modificador /log para redirigir el archivo de registro a otra ubicación.  
+   </br>
 
-    Recomendamos que ejecute la herramienta en este modo y revise el archivo de registro resultante antes de ejecutar la herramienta con el modificador /delete.  
+   Recomendamos que ejecute la herramienta en este modo y revise el archivo de registro resultante antes de ejecutar la herramienta con el modificador /delete.  
 
-  2. **Modo de eliminación**: cuando ejecuta la herramienta con el modificador **/delete**, la herramienta se ejecuta en el modo de eliminación.
+2. **Modo de eliminación**: Cuando ejecuta la herramienta con el modificador **/delete**, la herramienta se ejecuta en el modo de eliminación.
 
-     - Cuando la herramienta se ejecuta en este modo, el contenido huérfano que se ha detectado en el punto de distribución especificado puede eliminarse de la biblioteca de contenido del punto de distribución.
-     -  Antes de eliminar cada archivo, se le pide al usuario su confirmación de que el archivo debe eliminarse.  Puede seleccionar **S** para sí, **N** para no o **Sí a todo** para omitir mensajes adicionales y eliminar todo el contenido huérfano.  
-     </br>
+   - Cuando la herramienta se ejecuta en este modo, el contenido huérfano que se ha detectado en el punto de distribución especificado puede eliminarse de la biblioteca de contenido del punto de distribución.
+   -  Antes de eliminar cada archivo, se le pide al usuario su confirmación de que el archivo debe eliminarse.  Puede seleccionar **S** para sí, **N** para no o **Sí a todo** para omitir mensajes adicionales y eliminar todo el contenido huérfano.  
+   </br>
 
-     Recomendamos que ejecute la herramienta en el modo de hipótesis y revise el archivo de registro resultante antes de ejecutar la herramienta con el modificador /delete.  
+   Recomendamos que ejecute la herramienta en el modo de hipótesis y revise el archivo de registro resultante antes de ejecutar la herramienta con el modificador /delete.  
 
 Cuando la herramienta de limpieza de la biblioteca de contenido se ejecuta en cualquier modo, crea automáticamente un registro con un nombre que incluye el modo en el que se ejecuta la herramienta, el nombre del punto de distribución, la fecha y la hora de la operación. El archivo de registro se abre automáticamente cuando finaliza la herramienta. De manera predeterminada, este registro se escribe en la carpeta **temporal** de los usuarios del equipo en el que ejecuta la herramienta. En cambio, puede usar un modificador de línea de comandos para redirigir el archivo de registro a otra ubicación, incluido un recurso compartido de red.   
 
@@ -186,7 +186,7 @@ Para ejecutar la herramienta:
 **Problema conocido** Cuando se ejecuta la herramienta, se podría devolver un error similar al siguiente cuando se produce cualquier error en algún paquete o implementación, o bien cuando está en progreso:
 -  *System.InvalidOperationException: esta biblioteca de contenido no puede limpiarse ahora porque el paquete <packageID> no está totalmente instalado.*
 
-**Solución:** ninguna. La herramienta no puede identificar archivos huérfanos con confianza cuando la implementación del contenido está en curso o si se ha producido algún error en dicho proceso. Por lo tanto, la herramienta no le permitirá limpiar contenido hasta que se solucione el problema.
+**Solución alternativa:** Ninguna. La herramienta no puede identificar archivos huérfanos con confianza cuando la implementación del contenido está en curso o si se ha producido algún error en dicho proceso. Por lo tanto, la herramienta no le permitirá limpiar contenido hasta que se solucione el problema.
 
 
 
@@ -197,13 +197,13 @@ Los siguientes modificadores de línea de comandos se pueden usar en cualquier o
 |---------|-------|
 |**/delete**  |**Opcional** </br> Use este modificador cuando quiera eliminar contenido del punto de distribución. Se le preguntará antes de que se elimine el contenido. </br></br> Cuando este modificador no se usa, la herramienta registra los resultados del contenido que se habría eliminado, pero no elimina ningún contenido del punto de distribución. </br></br> Ejemplo: ***ContentLibraryCleanup.exe /dp server1.contoso.com /delete*** |
 | **/q**       |**Opcional** </br> Ejecute la herramienta en el modo silencioso que suprime todos los mensajes (como los avisos cuando está eliminando contenido) y no abre automáticamente el archivo de registro. </br></br> Ejemplo: ***ContentLibraryCleanup.exe /q /dp server1.contoso.com*** |
-| **/dp &lt;FQDN del punto de distribución>**  | **Requerido** </br> Especifique el nombre de dominio completo (FQDN) del punto de distribución que quiere limpiar. </br></br> Ejemplo: ***ContentLibraryCleanup.exe /dp server1.contoso.com***|
+| **/dp &lt;FQDN del punto de distribución>**  | **Requerido** </br> Especifique el nombre de dominio completo (FQDN) del punto de distribución que quiere limpiar. </br></br> Ejemplo:  ***ContentLibraryCleanup.exe /dp server1.contoso.com***|
 | **/ps &lt;FQDN del sitio primario>**       | **Opcional** al limpiar contenido de un punto de distribución en un sitio primario.</br>**Requerido** al limpiar contenido de un punto de distribución en un sitio secundario. </br></br> Especifique el FQDN del sitio primario al que pertenece el punto de distribución, o del primario principal cuando el punto de distribución se encuentra en un sitio secundario. </br></br> Ejemplo: ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
 | **/sc &lt;código del sitio primario>**  | **Opcional** al limpiar contenido de un punto de distribución en un sitio primario.</br>**Requerido** al limpiar contenido de un punto de distribución en un sitio secundario. </br></br> Especifique el código del sitio del sitio primario al que pertenece el punto de distribución, o del sitio primario principal cuando el punto de distribución se encuentra en un sitio secundario.</br></br> Ejemplo: ***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
 | **/log <log file directory>**       |**Opcional** </br> Especifique un directorio en el que colocar los archivos de registro. Este puede ser una unidad local o un recurso compartido de red.</br></br> Cuando este modificador no se usa, los archivos de registro se colocan automáticamente en la carpeta temporal de los usuarios.</br></br> Ejemplo de unidad local: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Ejemplo de recurso compartido de red: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;recurso compartido>\&lt;carpeta>***|
 
 
-## <a name="improvements-for-in-console-search"></a>Mejoras de búsqueda en la consola
+## <a name="improvements-for-in-console-search"></a>Mejoras de búsqueda en consola
 En función de los comentarios de User Voice, hemos agregado las siguientes mejoras a la búsqueda en la consola:
  - **Ruta del objeto:**  
   Ahora muchos objetos admiten una columna nueva denominada **Ruta del objeto**.  Cuando busca e incluye esta columna en los resultados mostrados, puede ver la ruta de cada objeto. Por ejemplo, si ejecuta una búsqueda de aplicaciones en el nodo Aplicaciones y también está buscando subnodos, la columna *Ruta del objeto* del panel de resultados le mostrará la ruta de cada objeto devuelto.   

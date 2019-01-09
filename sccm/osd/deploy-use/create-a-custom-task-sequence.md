@@ -10,12 +10,12 @@ ms.assetid: b9800a66-7541-47ca-8276-da8ef6cb6d1b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5a0e6d8066fc52bf64dd4e53eba4c4dc1c84aa6
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 52a7b81b6ff0d4a0035cf913d925ac5c148b14fc
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346855"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417785"
 ---
 # <a name="create-a-custom-task-sequence-with-system-center-configuration-manager"></a>Crear una secuencia de tareas personalizada con System Center Configuration Manager
 
@@ -28,23 +28,23 @@ Cuando se crea una secuencia de tareas personalizada en System Center Configurat
 
 #### <a name="to-create-a-custom-task-sequence"></a>Para crear una secuencia de tareas personalizada  
 
-1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
+1. En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
 
-2.  En el área de trabajo **Biblioteca de software** , expanda **Sistemas operativos**y, a continuación, haga clic en **Secuencias de tareas**.  
+2. En el área de trabajo **Biblioteca de software** , expanda **Sistemas operativos**y, a continuación, haga clic en **Secuencias de tareas**.  
 
-3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear secuencia de tareas** para iniciar el Asistente para crear secuencia de tareas.  
+3. En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear secuencia de tareas** para iniciar el Asistente para crear secuencia de tareas.  
 
-4.  En la página **Crear una nueva secuencia de tareas** , seleccione **Crear una nueva secuencia de tareas personalizada**.  
+4. En la página **Crear una nueva secuencia de tareas** , seleccione **Crear una nueva secuencia de tareas personalizada**.  
 
-5.  En la página **Información de secuencia de tareas** , especifique un nombre para la secuencia de tareas, una descripción de la secuencia de tareas y una imagen de arranque opcional para que use la secuencia de tareas. A continuación, complete el asistente.  
+5. En la página **Información de secuencia de tareas** , especifique un nombre para la secuencia de tareas, una descripción de la secuencia de tareas y una imagen de arranque opcional para que use la secuencia de tareas. A continuación, complete el asistente.  
 
- Después de completar el Asistente para crear secuencia de tareas, Configuration Manager agrega la secuencia de tareas personalizada al nodo **Secuencias de tareas**. Ahora puede editar esta secuencia de tareas y agregar pasos.  
+   Después de completar el Asistente para crear secuencia de tareas, Configuration Manager agrega la secuencia de tareas personalizada al nodo **Secuencias de tareas**. Ahora puede editar esta secuencia de tareas y agregar pasos.  
 
- Para obtener una lista de los pasos de secuencia de tareas disponibles, vea [Pasos de la secuencia de tareas](../understand/task-sequence-steps.md).  
+   Para obtener una lista de los pasos de secuencia de tareas disponibles, vea [Pasos de la secuencia de tareas](../understand/task-sequence-steps.md).  
 
- Para más información sobre cómo editar una secuencia de tareas, vea [Edit a task sequence (Editar una secuencia de tareas)](manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
+   Para más información sobre cómo editar una secuencia de tareas, vea [Edit a task sequence (Editar una secuencia de tareas)](manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
 
- Con mayor frecuencia, usará secuencias de tareas para automatizar tareas de implementación de sistema operativo, pero puede crear una secuencia de tareas personalizada para automatizar diversas tareas. Para más información, vea [Crear una secuencia de tareas para implementaciones que no son de sistema operativo](create-a-task-sequence-for-non-operating-system-deployments.md).  
+   Con mayor frecuencia, usará secuencias de tareas para automatizar tareas de implementación de sistema operativo, pero puede crear una secuencia de tareas personalizada para automatizar diversas tareas. Para más información, vea [Crear una secuencia de tareas para implementaciones que no son de sistema operativo](create-a-task-sequence-for-non-operating-system-deployments.md).  
 
- ## <a name="next-steps"></a>Pasos siguientes
- [Implementar la secuencia de tareas](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)
+   ## <a name="next-steps"></a>Pasos siguientes
+   [Implementar la secuencia de tareas](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)

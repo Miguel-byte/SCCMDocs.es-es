@@ -10,12 +10,12 @@ ms.assetid: d827cf91-b18f-4ee7-b538-24ba6f003ab9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 68370a09dda49e16edd05fb545922f2e182f79a5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2fe6f2490b1ec527b7e6e09e9ce476e66342d7c9
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331913"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421168"
 ---
 # <a name="how-to-monitor-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>Cómo supervisar clientes para servidores Linux y UNIX en System Center Configuration Manager
 
@@ -25,13 +25,13 @@ La información de los servidores Linux y UNIX se puede ver en la consola de Sys
 
  La información que se puede ver incluye lo siguiente:  
 
--   Detalles de estado de los clientes, en los paneles de la consola de Configuration Manager  
+- Detalles de estado de los clientes, en los paneles de la consola de Configuration Manager  
 
--   Detalles sobre los clientes en los informes predeterminados de Configuration Manager  
+- Detalles sobre los clientes en los informes predeterminados de Configuration Manager  
 
--   Detalles de inventario en el Explorador de recursos  
+- Detalles de inventario en el Explorador de recursos  
 
- En las siguientes secciones se describe cómo obtener estos detalles del Explorador de recursos y de los informes.  
+  En las siguientes secciones se describe cómo obtener estos detalles del Explorador de recursos y de los informes.  
 
 ##  <a name="BKMK_UseResourceExpforLnU"></a> Usar el Explorador de recursos para ver el inventario de servidores Linux y UNIX  
 

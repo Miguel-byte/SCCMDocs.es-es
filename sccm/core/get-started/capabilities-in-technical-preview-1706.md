@@ -10,12 +10,12 @@ ms.assetid: ca3b4714-2a16-495e-8a17-1d87991d5556
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c6ceabc3a3f01ce541d4fbcdeaec5ae3db76c61
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 97d356ee4c9a763732b6e49ef6135a99dccf4c26
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342926"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416748"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1706 para System Center Configuration Manager
 
@@ -52,11 +52,10 @@ En este artículo se presentan las características disponibles en Technical Pre
 -->
 
 ## <a name="improved-boundary-groups-for-software-update-points"></a>Mejoras de los grupos de límites para puntos de actualización de software
-<!-- 1324591 -->
-Esta versión incluye mejoras para el modo en que los puntos de actualización de software funcionan con grupos de límites. A continuación se resume el nuevo comportamiento de la reserva:
--   La reserva para puntos de actualización de software usa ahora un tiempo configurable para aplicarse en los grupos de límites vecinos, con un tiempo mínimo de 120 minutos.
+<!-- 1324591 --> Esta versión incluye mejoras para el modo en que los puntos de actualización de software funcionan con grupos de límites. A continuación se resume el nuevo comportamiento de la reserva:
+- La reserva para puntos de actualización de software usa ahora un tiempo configurable para aplicarse en los grupos de límites vecinos, con un tiempo mínimo de 120 minutos.
 
--   Independientemente de la configuración de la reserva, un cliente intenta alcanzar el último punto de actualización de software que utilizó durante 120 minutos. Tras no conseguir alcanzar ese servidor durante 120 minutos, el cliente consulta su grupo de puntos de actualización de software disponibles para encontrar otro nuevo.
+- Independientemente de la configuración de la reserva, un cliente intenta alcanzar el último punto de actualización de software que utilizó durante 120 minutos. Tras no conseguir alcanzar ese servidor durante 120 minutos, el cliente consulta su grupo de puntos de actualización de software disponibles para encontrar otro nuevo.
 
   -   Todos los puntos de actualización de software del grupo de límites actual del cliente se agregan al grupo del cliente de inmediato.
 
@@ -64,9 +63,9 @@ Esta versión incluye mejoras para el modo en que los puntos de actualización d
 
   -   Si la reserva en un grupo vecino se configura durante el período mínimo de 120 minutos, los puntos de actualización de software de ese grupo de límites vecino formarán parte del grupo de servidores disponibles del cliente.
 
--   Transcurridas dos horas sin conseguir alcanzar su servidor original, el cliente cambia a un ciclo más corto para establecer contacto con un nuevo punto de actualización de software.
+- Transcurridas dos horas sin conseguir alcanzar su servidor original, el cliente cambia a un ciclo más corto para establecer contacto con un nuevo punto de actualización de software.
 
-    Esto significa que si un cliente no puede conectar con un nuevo servidor, selecciona rápidamente el siguiente servidor de su grupo de servidores disponibles e intenta ponerse en contacto con él.
+  Esto significa que si un cliente no puede conectar con un nuevo servidor, selecciona rápidamente el siguiente servidor de su grupo de servidores disponibles e intenta ponerse en contacto con él.
 
   -   Este ciclo continúa hasta que el cliente se conecte a un punto de actualización de software que pueda usar.
   -   Hasta el momento en que el cliente encuentre un punto de actualización de software, los servidores adicionales se agregarán al grupo de servidores disponibles cuando se cumpla el tiempo de reserva para cada grupo de límites vecino.
@@ -75,8 +74,7 @@ Para obtener más información, vea [Puntos de actualización de software](/sccm
 
 
 ## <a name="site-server-role-high-availability"></a>Alta disponibilidad del rol del servidor de sitio
-<!-- 1128774 -->
-La alta disponibilidad para el rol del servidor de sitio es una solución basada en Configuration Manager para instalar un servidor de sitio primario adicional en modo *Pasivo*. El servidor de sitio en modo pasivo se suma al servidor de sitio primario existente que está en modo *Activo*. Un servidor de sitio en modo pasivo está disponible para su uso inmediato, cuando se requiera.
+<!-- 1128774 --> La alta disponibilidad para el rol del servidor de sitio es una solución basada en Configuration Manager para instalar un servidor de sitio primario adicional en modo *Pasivo*. El servidor de sitio en modo pasivo se suma al servidor de sitio primario existente que está en modo *Activo*. Un servidor de sitio en modo pasivo está disponible para su uso inmediato, cuando se requiera.
 
 Un servidor de sitio primario en el modo pasivo:
 -   Utiliza la misma base de datos de sitio que el servidor de sitio activo.
@@ -184,8 +182,7 @@ Intente realizar las tareas siguientes y luego envíenos sus **comentarios** des
 
 
 ## <a name="include-trust-for-specific-files-and-folders-in-a-device-guard-policy"></a>Inclusión de la confianza para determinados archivos y carpetas en una directiva de Device Guard
-<!-- 1324676 -->
-En esta versión, hemos agregado más funcionalidades para la administración de directivas de [Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager).
+<!-- 1324676 --> En esta versión, hemos agregado más funcionalidades para la administración de directivas de [Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager).
 
 Ahora tiene la posibilidad de agregar confianza para determinados archivos y carpetas en una directiva de Device Guard. Esto le permite:
 
@@ -196,13 +193,12 @@ Ahora tiene la posibilidad de agregar confianza para determinados archivos y car
 ### <a name="try-it-out"></a>Haga la prueba
 
 1.  Mientras está creando una directiva de Device Guard, en la pestaña Inclusiones del Asistente para crear directiva de Device Guard, haga clic en **Agregar**.
-2.  En el cuadro de diálogo **Agregar archivo o carpeta de confianza**, especifique la información sobre el archivo o la carpeta en que desea confiar. Puede especificar una ruta de acceso de archivo o carpeta local o conectarse a un dispositivo remoto para el que tiene permiso para conectarse y especificar una ruta de acceso de archivo o carpeta en dicho dispositivo.
+2.  En el cuadro de diálogo **Agregar archivo o carpeta de confianza	**, especifique la información sobre el archivo o la carpeta en que desea confiar. Puede especificar una ruta de acceso de archivo o carpeta local o conectarse a un dispositivo remoto para el que tiene permiso para conectarse y especificar una ruta de acceso de archivo o carpeta en dicho dispositivo.
 3.  Complete el asistente.
 
 
 ## <a name="hide-task-sequence-progress"></a>Ocultación del progreso de la secuencia de tareas
-<!-- 1354291 -->
-En esta versión, puede controlar cuándo se muestra el progreso de la secuencia de tareas a los usuarios finales mediante una variable nueva. En la secuencia de tareas, use el paso **Configurar variable de secuencia de tareas** para establecer el valor de la variable **TSDisableProgressUI** a fin de ocultar o mostrar el progreso de la secuencia de tareas. Puede usar el paso Configurar variable de secuencia de tareas varias veces en una secuencia de tareas para cambiar el valor de la variable. Esto le permite ocultar o mostrar el progreso de la secuencia de tareas en secciones diferentes de la secuencia de tareas.
+<!-- 1354291 --> En esta versión, puede controlar cuándo se muestra el progreso de la secuencia de tareas a los usuarios finales mediante una variable nueva. En la secuencia de tareas, use el paso **Configurar variable de secuencia de tareas** para establecer el valor de la variable **TSDisableProgressUI** a fin de ocultar o mostrar el progreso de la secuencia de tareas. Puede usar el paso Configurar variable de secuencia de tareas varias veces en una secuencia de tareas para cambiar el valor de la variable. Esto le permite ocultar o mostrar el progreso de la secuencia de tareas en secciones diferentes de la secuencia de tareas.
 
 #### <a name="to-hide-task-sequence-progress"></a>Para ocultar el progreso de la secuencia de tareas
 En el editor de la secuencia de tareas, use el paso [Configurar variable de secuencia de tareas](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) para establecer el valor de la variable **TSDisableProgressUI** en **True** para ocultar el progreso de la secuencia de tareas.
@@ -211,8 +207,7 @@ En el editor de la secuencia de tareas, use el paso [Configurar variable de secu
 En el editor de la secuencia de tareas, use el paso [Configurar variable de secuencia de tareas](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) para establecer el valor de la variable **TSDisableProgressUI** en **False** para mostrar el progreso de la secuencia de tareas.
 
 ## <a name="specify-a-different-content-location-for-install-content-and-uninstall-content"></a>Especificación de una ubicación de contenido diferente para el contenido de instalación y el contenido de desinstalación
-<!-- 1097546 -->
-Actualmente, en Configuration Manager se especifica la ubicación de instalación que contiene los archivos de instalación de una aplicación. Al especificar una ubicación de instalación, esta se usa también como ubicación de desinstalación para el contenido de la aplicación.
+<!-- 1097546 --> Actualmente, en Configuration Manager se especifica la ubicación de instalación que contiene los archivos de instalación de una aplicación. Al especificar una ubicación de instalación, esta se usa también como ubicación de desinstalación para el contenido de la aplicación.
 Según sus comentarios, cuando se va a desinstalar una aplicación implementada y el contenido de la aplicación no está en el equipo cliente, el cliente descarga todos los archivos de instalación de la aplicación de nuevo antes de desinstalar la aplicación.
 Para solucionar este problema, ahora puede especificar tanto una ubicación para el contenido de instalación como una ubicación opcional para el contenido de desinstalación. Además, puede optar por no especificar una ubicación para el contenido de desinstalación.
 
@@ -229,8 +224,7 @@ Para solucionar este problema, ahora puede especificar tanto una ubicación para
 
 
 ## <a name="accessibility-improvements"></a>Mejoras de accesibilidad  
-<!--1253000 -->
-Esta versión preliminar incluye varias mejoras para las [características de accesibilidad](/sccm/core/understand/accessibility-features) en la consola de Configuration Manager. Entre ellos, se incluye:     
+<!--1253000 --> En esta versión preliminar se incluyen varias mejoras para las [características de accesibilidad](/sccm/core/understand/accessibility-features) en la consola de Configuration Manager. Entre ellos, se incluye:     
 
 **Nuevos métodos abreviados de teclado para desplazarse por la consola:**
 -   CTRL + M: establece el foco en el panel principal (central).
@@ -250,8 +244,7 @@ Esta versión preliminar incluye varias mejoras para las [características de ac
 
 
 ## <a name="changes-to-the-azure-services-wizard-to-support-upgrade-readiness"></a>Cambios en el Asistente para servicios de Azure para admitir Upgrade Readiness
-<!-- 1353331 -->
-A partir de esta versión, use el Asistente para servicios de Azure para configurar una conexión desde Configuration Manager en [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics). El uso del asistente simplifica la configuración del conector mediante un asistente común para los servicios de Azure relacionados.   
+<!-- 1353331 --> A partir de esta versión, use el Asistente para servicios de Azure para configurar una conexión desde Configuration Manager en [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics). El uso del asistente simplifica la configuración del conector mediante un asistente común para los servicios de Azure relacionados.   
 
 Si bien el método para configurar la conexión ha cambiado, los requisitos previos para la conexión y el modo en que se utiliza Upgrade Readiness permanecen inalterados.   
 
@@ -389,8 +382,7 @@ Después de ejecutar un script en los dispositivos cliente, siga este procedimie
 3. En la lista **Script Results** (Resultados del script) aparecen los resultados para cada script ejecutado en los dispositivos cliente. Un código de salida de script de **0** suele indicar que el script se ejecutó correctamente.
 
 ## <a name="pxe-network-boot-support-for-ipv6"></a>Compatibilidad con el arranque de red de PXE para IPv6
-<!-- 1269793 -->
-Ahora puede habilitar la compatibilidad con el arranque de red de PXE para IPv6 para iniciar una implementación de sistema operativo de la secuencia de tareas. Cuando se usa esta opción, los puntos de distribución habilitados para PXE admitirán tanto IPv4 como IPv6. Esta opción no requiere WDS y detendrá WDS si está presente.
+<!-- 1269793 --> Ahora puede habilitar la compatibilidad con el arranque de red de PXE para IPv6 para iniciar una implementación de sistema operativo de la secuencia de tareas. Cuando se usa esta opción, los puntos de distribución habilitados para PXE admitirán tanto IPv4 como IPv6. Esta opción no requiere WDS y detendrá WDS si está presente.
 
 #### <a name="to-enable-pxe-boot-support-for-ipv6"></a>Para habilitar la compatibilidad con el arranque de red de PXE para IPv6
 Utilice el siguiente procedimiento para habilitar la opción de compatibilidad con IPv6 para PXE.
@@ -399,8 +391,7 @@ Utilice el siguiente procedimiento para habilitar la opción de compatibilidad c
 2. En la pestaña **PXE**, seleccione **Support IPv6** (Compatibilidad con IPv6) para habilitar la compatibilidad de IPv6 para PXE.
 
 ## <a name="manage-microsoft-surface-driver-updates"></a>Administración de las actualizaciones de controladores de Microsoft Surface
-<!-- 1098490 -->
-Ahora puede usar Configuration Manager para administrar las actualizaciones de controladores de Microsoft Surface.
+<!-- 1098490 --> Ahora puede usar Configuration Manager para administrar las actualizaciones de controladores de Microsoft Surface.
 
 ### <a name="prerequisites"></a>Requisitos previos
 Todos los puntos de actualización de software deben ejecutar Windows Server 2016.
@@ -412,8 +403,7 @@ Intente realizar las tareas siguientes y luego envíenos sus **comentarios** des
 3. [Implemente los controladores de Microsoft Surface sincronizados](/sccm/sum/deploy-use/deploy-software-updates).
 
 ## <a name="configure-windows-update-for-business-deferral-policies"></a>Configuración de directivas de aplazamiento de Windows Update para empresas
-<!-- 1290890 -->
-Ahora puede configurar directivas de aplazamiento para actualizaciones de características de Windows 10 o actualizaciones de calidad para dispositivos con Windows 10 administradas directamente por Windows Update para empresas. Puede administrar las directivas de aplazamiento en el nuevo nodo **Directivas de Windows Update para empresas**, en **Biblioteca de Software** > **Mantenimiento de Windows 10**.
+<!-- 1290890 --> Ahora puede configurar directivas de aplazamiento para actualizaciones de características de Windows 10 o actualizaciones de calidad para dispositivos con Windows 10 administradas directamente por Windows Update para empresas. Puede administrar las directivas de aplazamiento en el nuevo nodo **Directivas de Windows Update para empresas**, en **Biblioteca de Software** > **Mantenimiento de Windows 10**.
 
 ### <a name="prerequisites"></a>Requisitos previos
 Los dispositivos con Windows 10 administrados por Windows Update para empresas deben tener conectividad a Internet.
@@ -425,12 +415,12 @@ Los dispositivos con Windows 10 administrados por Windows Update para empresas d
 4. En la página **Deferral Policies** (Directivas de aplazamiento), configure si se van a aplazar o pausar las actualizaciones de características.    
     Las actualizaciones de características son generalmente nuevas características de Windows. Después de configurar el parámetro **Nivel de preparación de la rama**, puede definir si le gustaría aplazar la recepción de actualizaciones de características después de que se pongan a disposición de los usuarios por parte de Microsoft, y por cuánto tiempo.
     - **Nivel de preparación de la rama**: configure la rama para la que el dispositivo recibirá actualizaciones de Windows (Rama actual o Rama actual para empresas).
-    - **Período de aplazamiento (días)**: especifique el número de días durante los que se aplazarán las actualizaciones de características. Puede aplazar la recepción de estas actualizaciones de características durante un período de 180 días a partir de su lanzamiento.
-    - **Pausar el inicio de las actualizaciones de características**: seleccione si desea pausar la recepción de actualizaciones de características para los dispositivos durante un período de hasta 60 días a partir del momento en que pausa las actualizaciones. Una vez que transcurra el máximo de días, la funcionalidad de pausa expirará automáticamente y el dispositivo buscará actualizaciones aplicables en Windows Update. Después de este análisis, puede pausar las actualizaciones de nuevo. Puede quitar la pausa de las actualizaciones de características desactivando la casilla.   
+    - **Período de aplazamiento (días)**:  especifique el número de días durante los que se aplazarán las actualizaciones de características. Puede aplazar la recepción de estas actualizaciones de características durante un período de 180 días a partir de su lanzamiento.
+    - **Pausar el inicio de las actualizaciones de características:**: seleccione si quiere pausar la recepción de actualizaciones de características para los dispositivos durante un período de hasta 60 días a partir del momento en que se pausen las actualizaciones. Una vez que transcurra el máximo de días, la funcionalidad de pausa expirará automáticamente y el dispositivo buscará actualizaciones aplicables en Windows Update. Después de este análisis, puede pausar las actualizaciones de nuevo. Puede quitar la pausa de las actualizaciones de características desactivando la casilla.   
 5. Elija si desea aplazar o pausar las actualizaciones de calidad.     
     Las actualizaciones de calidad suelen ser correcciones y mejoras en la funcionalidad de Windows existente y normalmente se publican el primer martes de cada mes, aunque pueden publicarse en cualquier momento por parte de Microsoft. Puede definir si desea aplazar la recepción de actualizaciones de calidad después de su lanzamiento, y por cuánto tiempo.
     - **Período de aplazamiento (días)**: especifique el número de días durante los que se aplazarán las actualizaciones de características. Puede aplazar la recepción de estas actualizaciones de características durante un período de 180 días a partir de su lanzamiento.
-    - **Pausar el inicio de las actualizaciones de calidad**: seleccione si desea pausar la recepción de actualizaciones de calidad para los dispositivos durante un período de hasta 35 días a partir del momento en que pausa las actualizaciones. Una vez que transcurra el máximo de días, la funcionalidad de pausa expirará automáticamente y el dispositivo buscará actualizaciones aplicables en Windows Update. Después de este análisis, puede pausar las actualizaciones de nuevo. Puede quitar la pausa de las actualizaciones de calidad desactivando la casilla.
+    - **Pausar el inicio de actualizaciones de calidad:**: seleccione si quiere pausar la recepción de actualizaciones de calidad para los dispositivos durante un período de hasta 35 días a partir del momento en que se pausen las actualizaciones. Una vez que transcurra el máximo de días, la funcionalidad de pausa expirará automáticamente y el dispositivo buscará actualizaciones aplicables en Windows Update. Después de este análisis, puede pausar las actualizaciones de nuevo. Puede quitar la pausa de las actualizaciones de calidad desactivando la casilla.
 6. Seleccione **Instalar actualizaciones de otros productos de Microsoft** para habilitar el parámetro de directiva de grupo que permite que la configuración de aplazamiento sea aplicable a Microsoft Update, así como a las actualizaciones de Windows Update.
 7. Seleccione **Include drivers with Windows Update** (Incluir controladores con Windows Update) para actualizar automáticamente los controladores desde las actualizaciones de Windows Update. Si desactiva esta opción, no se descargan las actualizaciones de controladores desde Windows Update.
 8. Complete el asistente para crear la nueva directiva de aplazamiento.
@@ -439,24 +429,23 @@ Los dispositivos con Windows 10 administrados por Windows Update para empresas d
 1. En **Biblioteca de Software** > **Mantenimiento de Windows 10** > **Directivas de Windows Update para empresas**
 2. En la pestaña **Inicio** del grupo **Implementación**, seleccione **Implementar la directiva de Windows Update for Business**.
 3. Configure las siguientes opciones:
-    - **Directiva de configuración que desea implementar:**: seleccione la directiva de Windows Update para empresas que desea implementar.
-    - **Recopilación**: haga clic en **Examinar** para seleccionar la recopilación en la que quiere implementar la directiva.
-    - **Corregir las reglas no compatibles cuando se admita**: seleccione esta opción para corregir automáticamente las reglas que no sean compatibles con Instrumental de administración de Windows (WMI), el Registro, los scripts y toda la configuración de los dispositivos móviles que Configuration Manager haya inscrito.
-    - **Permitir la corrección fuera de la ventana de mantenimiento**: si se ha configurado una ventana de mantenimiento para la recopilación en la que se va a implementar la directiva, habilite esta opción para permitir que la configuración de cumplimiento corrija el valor fuera de la ventana de mantenimiento. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](/sccm/core/clients/manage/collections/use-maintenance-windows).
+    - **Directiva de configuración que desea implementar**: seleccione la directiva de Windows Update para empresas que quiere implementar.
+    - **Colección**: haga clic en **Examinar** para seleccionar la colección en la que quiere implementar la directiva.
+    - **Corregir las reglas no compatibles cuando se admita**: seleccione esta opción para corregir de forma automática las reglas que no sean compatibles con Instrumental de administración de Windows (WMI), el Registro, los scripts y toda la configuración de los dispositivos móviles que Configuration Manager haya inscrito.
+    - **Permitir la corrección fuera de la ventana de mantenimiento**: si se ha configurado una ventana de mantenimiento para la colección en la que se va a implementar la directiva, habilite esta opción para permitir que la configuración de cumplimiento corrija el valor fuera de la ventana de mantenimiento. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](/sccm/core/clients/manage/collections/use-maintenance-windows).
     - **Generar una alerta**: configura una alerta que se genera si la compatibilidad de la línea base de configuración es inferior a un determinado porcentaje en una hora y fecha especificadas. También puede especificar si desea que se envíe una alerta a System Center Operations Manager.
-    - **Retraso aleatorio (horas)**: especifique una ventana de retraso lo suficientemente grande para evitar un procesamiento excesivo en el Servicio de inscripción de dispositivos de red. El valor predeterminado es 64 horas.
+    - **Retraso aleatorio (horas)**: especifica una ventana de retraso lo suficientemente grande para evitar un procesamiento excesivo en el Servicio de inscripción de dispositivos de red. El valor predeterminado es 64 horas.
     - **Programación**: especifique la programación de evaluación de cumplimiento según la cual se evalúa el perfil implementado en los equipos cliente. La programación puede ser simple o personalizada. Los equipos cliente evalúan el perfil cuando el usuario inicia sesión.
 4.  Complete el asistente para implementar el perfil.
 
 
 
 ## <a name="support-for-entrust-certification-authorities"></a>Compatibilidad con entidades de certificación de Entrust
-<!-- 1350740 -->
-Configuration Manager ahora es compatible con entidades de certificación de Entrust; esto habilita la entrega de certificados PFX a dispositivos inscritos en Microsoft Intune.
+<!-- 1350740 --> Configuration Manager ahora es compatible con entidades de certificación de Entrust; esto habilita la entrega de certificados PFX a dispositivos inscritos en Microsoft Intune.
 
 Puede configurar Entrust como entidad de certificación al agregar un rol de Punto de registro de certificados en Configuration Manager. Al agregar un nuevo perfil de certificado que emite certificados PFX, puede seleccionar una entidad de certificación de Microsoft o Entrust.
 
-**Problema conocido**: en la versión 1706 de Technical Preview, no se emiten certificados PFX para entidades de certificación de Microsoft. Esto no afecta a los certificados PFX o los perfiles de SCEP importados.
+**Problema conocido**: en la versión 1706 de Technical Preview no se emiten certificados PFX para entidades de certificación de Microsoft. Esto no afecta a los certificados PFX o los perfiles de SCEP importados.
 
 
 ## <a name="cisco-ipsec-support-for-ios-vpn-profiles"></a>Compatibilidad de Cisco (IPsec) con perfiles de VPN de iOS
@@ -503,7 +492,7 @@ Para obtener más información acerca de la configuración de cumplimiento, cons
 
 ## <a name="new-device-compliance-policy-rules"></a>Nuevas reglas de directiva de cumplimiento de dispositivos
 
-* **Tipo de contraseña requerida**. Especifica si el usuario debe crear una contraseña numérica o alfanumérica. En el caso de las contraseñas alfanuméricas, puede especificar también el número mínimo de juegos de caracteres que debe tener la contraseña. Los cuatro juegos de caracteres son: letras minúsculas, letras mayúsculas, símbolos y números.
+* **Tipo de contraseña requerida**. Especifica si el usuario debe crear una contraseña numérica o alfanumérica. En el caso de las contraseñas alfanuméricas, puede especificar también el número mínimo de juegos de caracteres que debe tener la contraseña. Los conjuntos de cuatro caracteres son los siguientes: letras minúsculas, letras mayúsculas, símbolos y números.
 
     **Compatible con:**
     * Windows Phone 8+
@@ -533,7 +522,7 @@ Vea [Crear e implementar una directiva de cumplimiento de dispositivos](https://
 ## <a name="new-mobile-application-management-policy-settings"></a>Configuración de nueva directiva de administración de aplicaciones móviles
 A partir de esta versión, puede usar tres nuevas opciones de configuración para la directiva de Administración de aplicaciones móviles:
 
-- **Bloquear captura de pantalla	(solo dispositivos Android):** especifica que las funciones de captura de pantalla del dispositivo se bloquean cuando se usa esta aplicación.
+- **Bloquear captura de pantalla (solo en dispositivos Android):** Especifica que las funciones de captura de pantalla del dispositivo se bloquean cuando se usa esta aplicación.
 
 - **Deshabilitar sincronización de contactos:** impide que la aplicación guarde los datos en la aplicación de contactos nativa del dispositivo.
 
@@ -542,8 +531,7 @@ A partir de esta versión, puede usar tres nuevas opciones de configuración par
 Vea [Proteger aplicaciones mediante directivas de administración de aplicaciones móviles en System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) para probar la nueva configuración de la directiva de protección de aplicaciones.
 
 ## <a name="android-and-ios-enrollment-restrictions"></a>Restricciones de inscripción de iOS y Android
-<!-- 1290826 -->
-A partir de esta versión, los administradores pueden especificar que los usuarios no inscriban los dispositivos personales de Android o iOS en su entorno híbrido. Esto le permite limitar los dispositivos inscritos a aquellos declarados con anterioridad que pertenezcan a la empresa o a aquellos dispositivos iOS inscritos solo con el Programa de inscripción de dispositivos.
+<!-- 1290826 --> A partir de esta versión, los administradores pueden especificar que los usuarios no inscriban dispositivos personales Android o iOS en su entorno híbrido. Esto le permite limitar los dispositivos inscritos a aquellos declarados con anterioridad que pertenezcan a la empresa o a aquellos dispositivos iOS inscritos solo con el Programa de inscripción de dispositivos.
 
 ### <a name="try-it-out"></a>Haga la prueba
 1. En la consola de Configuration Manager, en el área de trabajo **Administración** , vaya a **Servicios en la nube** > **Suscripción a Microsoft Intune**.
@@ -555,14 +543,14 @@ Hemos actualizado las descripciones de los parámetros de los elementos de confi
 
 |Antes de 1706 Technical Preview | Nuevo nombre de opción | Comportamiento|
 |-|-|-|
-|Impedir uso compartido más allá de los límites| Restricciones de uso compartido predeterminadas| Trabajo a personal: predeterminado (se espera que esté bloqueado en todas las versiones) <br>Personal a trabajo: predeterminado (permitido en 6.x+, bloqueado en 5.x)|
-|Sin restricciones|   Las aplicaciones del perfil personal pueden atender solicitudes de intercambio del perfil de trabajo| Trabajo a personal: permitido  <br>Personal a trabajo: permitido|
-|Las aplicaciones del perfil de trabajo pueden atender solicitudes de intercambio del perfil personal |Las aplicaciones del perfil de trabajo pueden atender solicitudes de intercambio del perfil personal |Trabajo a personal: predeterminado<br>Personal a trabajo: permitido<br>(Solo es útil en 5.x, donde personal a trabajo está bloqueado)|
+|Impedir uso compartido más allá de los límites| Restricciones de uso compartido predeterminadas| Trabajo a personal: predeterminado (se espera que esté bloqueado en todas las versiones). <br>Personal a trabajo: predeterminado (permitido en 6.x+, bloqueado en 5.x).|
+|Sin restricciones|   Las aplicaciones del perfil personal pueden atender solicitudes de intercambio del perfil de trabajo| Trabajo a personal: Permitido  <br>Personal a trabajo: Permitido|
+|Las aplicaciones del perfil de trabajo pueden atender solicitudes de intercambio del perfil personal |Las aplicaciones del perfil de trabajo pueden atender solicitudes de intercambio del perfil personal |Trabajo a personal: Predeterminado<br>Personal a trabajo: Permitido<br>(Solo es útil en 5.x, donde personal a trabajo está bloqueado)|
 
 Ninguna de estas opciones evita directamente el comportamiento de copiar y pegar. Hemos agregado un parámetro personalizado al servicio y la aplicación de Portal de empresa en 1704 que puede configurarse para evitar el proceso de copiar y pegar. Se puede establecer a través del URI personalizado.
 
 -   OMA-URI:  ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste
--   Tipo de valor: booleano
+-   Tipo de valor: Boolean
 
 Si se establece DisallowCrossProfileCopyPaste en true, se impide el comportamiento de copiar y pegar entre perfiles personales y profesionales de Android for Work.
 
@@ -573,8 +561,7 @@ Si se establece DisallowCrossProfileCopyPaste en true, se impide el comportamien
 4. Seleccione el valor de **Permitir uso compartido de datos entre perfiles de trabajo y perfiles personales** y luego complete el asistente.
 
 ## <a name="device-health-attestation-assessment-for-compliance-policies-for-conditional-access"></a>Evaluación de Atestación de estado de dispositivo para las directivas de cumplimiento de acceso condicional
-<!-- 1097546 -->
-A partir de esta versión, puede utilizar el estado de Atestación de estado de dispositivo como una regla de directiva de cumplimiento para el acceso condicional a los recursos de la empresa.
+<!-- 1097546 --> A partir de esta versión, puede usar el estado de Atestación de estado de dispositivo como una regla de directiva de cumplimiento para el acceso condicional a los recursos de la empresa.
 
 ### <a name="try-it-out"></a>Haga la prueba
 Seleccione una regla de Atestación de estado de dispositivo como parte de la evaluación de la directiva de cumplimiento.

@@ -10,12 +10,12 @@ ms.assetid: 4bb6afeb-d267-4f9b-ade2-26e5400c223b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bd76ecfcd4f5731e7fa078a00e79fdc6ab91ffa4
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a12d2e40007a351d3718247803d8be7856e12273
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333508"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423344"
 ---
 # <a name="common-tasks-for-creating-and-deploying-configuration-baselines-with-system-center-configuration-manager"></a>Tareas comunes para crear e implementar líneas de base de configuración con System Center Configuration Manager
 
@@ -34,49 +34,49 @@ Este tema contiene escenarios comunes para obtener información sobre cómo crea
 
 Use el procedimiento siguiente para aprender a agregar este elemento de configuración a una línea base de configuración para preparar la implementación.  
 
-1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad** > **Configuración de cumplimiento** > **Líneas base de configuración**.  
+1. En la consola de Configuration Manager, haga clic en **Activos y compatibilidad** > **Configuración de cumplimiento** > **Líneas base de configuración**.  
 
-3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear línea de base de configuración**.  
+2. En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear línea de base de configuración**.  
 
-4.  En el cuadro de diálogo **Crear línea de base de configuración**, configure lo siguiente:  
+3. En el cuadro de diálogo **Crear línea de base de configuración**, configure lo siguiente:  
 
-    -   **Nombre** : escriba **Contraseñas de Windows 10** (u otro nombre de su elección).  
+   -   **Nombre** : escriba **Contraseñas de Windows 10** (u otro nombre de su elección).  
 
-5.  Haga clic en **Agregar** > **Elementos de configuración**.  
+4. Haga clic en **Agregar** > **Elementos de configuración**.  
 
-6.  En el cuadro de diálogo **Agregar elementos de configuración** , seleccione el elemento de configuración **Windows 10 Password Enforcement** previamente creado y, a continuación, haga clic en **Agregar**.  
+5. En el cuadro de diálogo **Agregar elementos de configuración** , seleccione el elemento de configuración **Windows 10 Password Enforcement** previamente creado y, a continuación, haga clic en **Agregar**.  
 
-7.  Haga clic en Aceptar para cerrar el cuadro de diálogo **Agregar elementos de configuración** y vuelva al cuadro de diálogo **Crear línea de base de configuración**.
+6. Haga clic en Aceptar para cerrar el cuadro de diálogo **Agregar elementos de configuración** y vuelva al cuadro de diálogo **Crear línea de base de configuración**.
 
-8.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Crear línea de base de configuración** .  
+7. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Crear línea de base de configuración** .  
 
- Ahora puede ver la línea base de configuración en el nodo **Líneas de base de configuración** de la consola de Configuration Manager.  
+   Ahora puede ver la línea base de configuración en el nodo **Líneas de base de configuración** de la consola de Configuration Manager.  
 
 ## <a name="deploy-the-configuration-baseline"></a>Implementar la línea base de configuración  
  En este ejemplo, implementa la línea base de configuración que creó en el procedimiento anterior para una recopilación de equipos.  
 
-1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad** > **Configuración de cumplimiento** > **Líneas base de configuración**.  
+1. En la consola de Configuration Manager, haga clic en **Activos y compatibilidad** > **Configuración de cumplimiento** > **Líneas base de configuración**.  
 
-3.  En la lista de líneas base de configuración, seleccione **Contraseñas de Windows 10**.  
+2. En la lista de líneas base de configuración, seleccione **Contraseñas de Windows 10**.  
 
-4.  En la pestaña **Inicio** , en el grupo **Implementación** , haga clic en **Implementar**.  
+3. En la pestaña **Inicio** , en el grupo **Implementación** , haga clic en **Implementar**.  
 
-5.  En el cuadro de diálogo **Implementar líneas base de configuración**, configure lo siguiente:  
+4. En el cuadro de diálogo **Implementar líneas base de configuración**, configure lo siguiente:  
 
-    -   **Líneas de base de configuración seleccionadas** : asegúrese de que la línea base de configuración de **Contraseñas de Windows 10** se agregó automáticamente a esta lista.  
+   -   **Líneas de base de configuración seleccionadas** : asegúrese de que la línea base de configuración de **Contraseñas de Windows 10** se agregó automáticamente a esta lista.  
 
-    -   **Corregir las reglas no compatibles cuando se admita**: active esta casilla para garantizar que si la configuración correcta no está presente en los dispositivos de destino, Configuration Manager la corregirá.  
+   -   **Corregir las reglas no compatibles cuando se admita**: active esta casilla para garantizar que si la configuración correcta no está presente en los dispositivos de destino, Configuration Manager la corregirá.  
 
-    -   **Recopilación**: haga clic en **Examinar** para elegir la recopilación de equipos en la que se evaluará la línea base de configuración y se corregirá para cumplimiento. En este ejemplo, la línea base de configuración se implementó en la recopilación integrada de **Todos los clientes de escritorio y servidor** .  
+   -   **Recopilación**: haga clic en **Examinar** para elegir la recopilación de equipos en la que se evaluará la línea base de configuración y se corregirá para cumplimiento. En este ejemplo, la línea base de configuración se implementó en la recopilación integrada de **Todos los clientes de escritorio y servidor** .  
 
-        > [!TIP]  
-        >  No se preocupe si la recopilación que elige contiene equipos o dispositivos que no ejecutan Windows 10. Siempre que haya configurado plataformas admitidas en el elemento de configuración que creó, se evaluarán solo los equipos con Windows 10 para cumplimiento.  
+       > [!TIP]  
+       >  No se preocupe si la recopilación que elige contiene equipos o dispositivos que no ejecutan Windows 10. Siempre que haya configurado plataformas admitidas en el elemento de configuración que creó, se evaluarán solo los equipos con Windows 10 para cumplimiento.  
 
-    -   Si es necesario, configure la programación por la que se evaluará la línea base de configuración. De lo contrario, mantenga el valor predeterminado de **7 días**.  
+   -   Si es necesario, configure la programación por la que se evaluará la línea base de configuración. De lo contrario, mantenga el valor predeterminado de **7 días**.  
 
-7.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Implementar líneas de base de configuración** y crear la implementación.  
+5. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Implementar líneas de base de configuración** y crear la implementación.  
 
- Si quiere echar un vistazo rápido a las estadísticas de cumplimiento para esta implementación, en el área de trabajo **Supervisión** , haga clic en **Implementaciones**. En la parte inferior de la pantalla, verá un gráfico **Estadísticas de compatibilidad**.  
+   Si quiere echar un vistazo rápido a las estadísticas de cumplimiento para esta implementación, en el área de trabajo **Supervisión** , haga clic en **Implementaciones**. En la parte inferior de la pantalla, verá un gráfico **Estadísticas de compatibilidad**.  
 
 ## <a name="next-steps"></a>Pasos siguientes 
 

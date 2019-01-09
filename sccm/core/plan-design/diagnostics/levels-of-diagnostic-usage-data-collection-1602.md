@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: b399be1a0e0eeea76ac87b8724f3c9f04902d533
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.openlocfilehash: cac4e555ece110ede0ccddb59d947a6068ef38ff
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52259036"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423327"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1602-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de uso para diagnóstico para la versión 1602 de System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-La versión 1602 de System Center Configuration Manager recopila tres niveles de datos de diagnóstico y uso: **Básico**, **Mejorado** y **Completo**. De forma predeterminada, esta característica se establece en el nivel Mejorado. En las secciones siguientes se proporcionan detalles adicionales sobre los datos que recopila cada nivel.
+La versión 1602 de System Center Configuration Manager recopila tres niveles de datos de diagnóstico y uso: **Básico**, **Mejorado** y **Completo**. De forma predeterminada, esta característica se establece en el nivel Mejorado. En las secciones siguientes se proporcionan detalles adicionales sobre los datos que recopila cada nivel.
 
 Los cambios respecto de versiones anteriores se indican mediante la nota ***[Nuevo]*** o ***[Actualizado]***.
 
@@ -41,14 +41,14 @@ Los cambios respecto de versiones anteriores se indican mediante la nota ***[Nue
  A partir de System Center Configuration Manager versión 1602, este nivel incluye lo siguiente:
 
 
- -   Información sobre la instalación:
-    - Compilación, tipo de instalación, paquetes de idioma, características que ha habilitado  
+- Información sobre la instalación:
+  - Compilación, tipo de instalación, paquetes de idioma, características que ha habilitado  
 
-    - ***[Actualizado]*** Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos     
+  - ***[Actualizado]*** Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos     
 
-    - ***[Nuevo]*** Versión del script posterior a la actualización
+  - ***[Nuevo]*** Versión del script posterior a la actualización
 
-    - ***[Nuevo]*** Uso del anillo rápido de actualización
+  - ***[Nuevo]*** Uso del anillo rápido de actualización
 
 -   Métricas de rendimiento de la base de datos (información del procesamiento de replicación, los principales procedimientos almacenados de SQL Server mediante el uso de procesador y disco)
 
@@ -94,7 +94,7 @@ Se recomienda este nivel porque proporciona a Microsoft los datos mínimos que s
 
 A partir de System Center Configuration Manager versión 1602, este nivel incluye lo siguiente:
 
--   **Administración de aplicaciones:**
+- **Administración de aplicaciones:**
 
   -   ***[Actualizado]*** Información básica de uso o destino para tipos de implementación que se usan en la organización (usuario frente a dispositivo de destino, necesario frente a disponible y aplicaciones universales)  
 
@@ -118,145 +118,145 @@ A partir de System Center Configuration Manager versión 1602, este nivel incluy
 
   -  ***[Nuevo]*** Estadísticas de tamaño y la complejidad de directivas de aplicación
 
--   **Cliente:**
+- **Cliente:**
 
-    -   Lista o recuento de agentes de cliente habilitados
+  -   Lista o recuento de agentes de cliente habilitados
 
-    -   Recuento de instalaciones de cliente de cada tipo de ubicación de origen
+  -   Recuento de instalaciones de cliente de cada tipo de ubicación de origen
 
-    -   Recuento de errores de instalación de cliente
+  -   Recuento de errores de instalación de cliente
 
--   **Configuración de cumplimiento:**
+- **Configuración de cumplimiento:**
 
-    -   Recuento de elementos de configuración por tipo o
+  -   Recuento de elementos de configuración por tipo o
 
-    -   Información básica de línea de base de configuración (recuento, número de implementaciones y número de referencias)
+  -   Información básica de línea de base de configuración (recuento, número de implementaciones y número de referencias)
 
-    -   Recuento de las implementaciones que hacen referencia a valores integrados (no se captura el valor de configuración)
+  -   Recuento de las implementaciones que hacen referencia a valores integrados (no se captura el valor de configuración)
 
-    -   Recuento de reglas e implementaciones que se han creado para la configuración personalizada
+  -   Recuento de reglas e implementaciones que se han creado para la configuración personalizada
 
-    -   ***[Actualizado]*** Recuento de Protocolo de inscripción de certificados simple, VPN, Wi-Fi, certificado (.pfx) y plantillas de directiva de cumplimiento implementadas   
+  -   ***[Actualizado]*** Recuento de Protocolo de inscripción de certificados simple, VPN, Wi-Fi, certificado (.pfx) y plantillas de directiva de cumplimiento implementadas   
 
-    -  ***[Nuevo]*** Recuento de certificados de Protocolo de inscripción de certificados simple (SCEP), VPN, Wi-Fi, certificado (.pfx) y plantillas de directiva de cumplimiento por plataforma
+  -  ***[Nuevo]*** Recuento de certificados de Protocolo de inscripción de certificados simple (SCEP), VPN, Wi-Fi, certificado (.pfx) y plantillas de directiva de cumplimiento por plataforma
 
--   **Contenido:**
+- **Contenido:**
 
-    -   Recuento de límites por tipo
+  -   Recuento de límites por tipo
 
-    -   Información de grupo de límites (recuento de límites y sistemas de sitio que se han asignado a cada grupo de límites)
+  -   Información de grupo de límites (recuento de límites y sistemas de sitio que se han asignado a cada grupo de límites)
 
-    -   Información de grupo de puntos de distribución (recuento de paquetes y puntos de distribución que se han asignado a cada grupo de puntos de distribución)
+  -   Información de grupo de puntos de distribución (recuento de paquetes y puntos de distribución que se han asignado a cada grupo de puntos de distribución)
 
-    -   Información de configuración de punto de distribución (uso de BranchCache y supervisión de punto de distribución)
+  -   Información de configuración de punto de distribución (uso de BranchCache y supervisión de punto de distribución)
 
-    -   Información de configuración del administrador de distribuciones (subprocesos, intervalo de reintentos, número de reintentos y configuración de punto de distribución de extracción)
+  -   Información de configuración del administrador de distribuciones (subprocesos, intervalo de reintentos, número de reintentos y configuración de punto de distribución de extracción)
 
--   **Endpoint Protection:**
+- **Endpoint Protection:**
 
-    -   Uso de la directiva de Firewall de Windows y de antimalware de Endpoint Protection (número de directivas únicas asignadas al grupo)<br /><br />Esto no incluye ninguna información sobre la configuración que se incluye en la directiva.
+  -   Uso de la directiva de Firewall de Windows y de antimalware de Endpoint Protection (número de directivas únicas asignadas al grupo)<br /><br />Esto no incluye ninguna información sobre la configuración que se incluye en la directiva.
 
-    -   Errores de implementación de Endpoint Protection (recuento de códigos de error de implementación de directivas de Endpoint Protection)
+  -   Errores de implementación de Endpoint Protection (recuento de códigos de error de implementación de directivas de Endpoint Protection)
 
-    -   Recuento de recopilaciones que se han seleccionado para que aparezcan en el panel de Endpoint Protection
+  -   Recuento de recopilaciones que se han seleccionado para que aparezcan en el panel de Endpoint Protection
 
-    -   Recuento de alertas que se han configurado para la característica de Endpoint Protection
+  -   Recuento de alertas que se han configurado para la característica de Endpoint Protection
 
--   **Administración de aplicaciones móviles (MAM)**
+- **Administración de aplicaciones móviles (MAM)**
 
-    -   Recuento de aplicaciones Office con MAM habilitado, aplicaciones de línea de negocio y directivas por sistema operativo
+  -   Recuento de aplicaciones Office con MAM habilitado, aplicaciones de línea de negocio y directivas por sistema operativo
 
-    -   Recuento de implementaciones de directiva de aplicación MAM
+  -   Recuento de implementaciones de directiva de aplicación MAM
 
-    -   Recuento de reglas que se han creado por la configuración de MAM
+  -   Recuento de reglas que se han creado por la configuración de MAM
 
--   **Administración de dispositivos móviles (MDM)**
+- **Administración de dispositivos móviles (MDM)**
 
-    -   Recuento de acciones de dispositivo móvil emitidas: bloquear, restablecer PIN, borrar y retirar comandos
+  -   Recuento de acciones de dispositivo móvil emitidas: bloquear, restablecer PIN, borrar y retirar comandos
 
-    -   Recuento de dispositivos móviles que se administran por Configuration Manager y Microsoft Intune, así como la forma en que se inscribieron (masiva o basada en el usuario)
+  -   Recuento de dispositivos móviles que se administran por Configuration Manager y Microsoft Intune, así como la forma en que se inscribieron (masiva o basada en el usuario)
 
-    -   Duración de la comprobación de estadísticas y programación de sondeo de dispositivos móviles
+  -   Duración de la comprobación de estadísticas y programación de sondeo de dispositivos móviles
 
-    -   Recuento de directivas de dispositivos móviles
+  -   Recuento de directivas de dispositivos móviles
 
-    -   Recuento de usuarios que tienen varios dispositivos móviles inscritos
+  -   Recuento de usuarios que tienen varios dispositivos móviles inscritos
 
--   **Solución de problemas de Microsoft Intune:**
+- **Solución de problemas de Microsoft Intune:**
 
-    -   Recuento y tamaño de los mensajes de estado, condición, inventario, RDR, DDR, UDX, estado de inquilino, POL, LOG, certificado, CRP, resincronización, CFD, RDO, BEX, ISM y de cumplimiento que se han descargado de Microsoft Intune
+  -   Recuento y tamaño de los mensajes de estado, condición, inventario, RDR, DDR, UDX, estado de inquilino, POL, LOG, certificado, CRP, resincronización, CFD, RDO, BEX, ISM y de cumplimiento que se han descargado de Microsoft Intune
 
-    -   Recuento y tamaño de los mensajes de acciones de dispositivo (borrar, retirar, bloquear), telemetría y de datos que se replican en Microsoft Intune
+  -   Recuento y tamaño de los mensajes de acciones de dispositivo (borrar, retirar, bloquear), telemetría y de datos que se replican en Microsoft Intune
 
-    -   Estadísticas de sincronización de usuario completas y diferenciales para Microsoft Intune
+  -   Estadísticas de sincronización de usuario completas y diferenciales para Microsoft Intune
 
--   **Administración local de dispositivos móviles (MDM):**
+- **Administración local de dispositivos móviles (MDM):**
 
-    -   Estadísticas de implementaciones correctas o con errores para las implementaciones locales de aplicaciones MDM
+  -   Estadísticas de implementaciones correctas o con errores para las implementaciones locales de aplicaciones MDM
 
-    -   Recuento de perfiles y paquetes de inscripción masiva de Windows 10
+  -   Recuento de perfiles y paquetes de inscripción masiva de Windows 10
 
--   **Implementación de sistema operativo:**
+- **Implementación de sistema operativo:**
 
-    -   Recuento de imágenes de arranque, controladores, paquetes de controladores, puntos de distribución habilitados para multidifusión, puntos de distribución habilitados para PXE y secuencias de tareas
+  -   Recuento de imágenes de arranque, controladores, paquetes de controladores, puntos de distribución habilitados para multidifusión, puntos de distribución habilitados para PXE y secuencias de tareas
 
--   **Actualizaciones de software:**
+- **Actualizaciones de software:**
 
-    -   Número total o promedio de recopilaciones que tienen implementaciones de actualización de software y el número máximo o promedio de actualizaciones implementadas
+  -   Número total o promedio de recopilaciones que tienen implementaciones de actualización de software y el número máximo o promedio de actualizaciones implementadas
 
-    -   Número de reglas de implementación automática que están asociadas a la sincronización
+  -   Número de reglas de implementación automática que están asociadas a la sincronización
 
-    -   Número de reglas de implementación automática que crean actualizaciones nuevas o agregan otras a un grupo existente
+  -   Número de reglas de implementación automática que crean actualizaciones nuevas o agregan otras a un grupo existente
 
-    -   Diferencias disponibles y de fecha límite que se han usado en reglas de implementación automática
+  -   Diferencias disponibles y de fecha límite que se han usado en reglas de implementación automática
 
-    -   Número promedio y máximo de las asignaciones por actualización
+  -   Número promedio y máximo de las asignaciones por actualización
 
-    -   Recuento de actualizaciones que se crean e implementan con System Center Updates Publisher
+  -   Recuento de actualizaciones que se crean e implementan con System Center Updates Publisher
 
-    -   Recuento de grupos de actualizaciones y asignaciones
+  -   Recuento de grupos de actualizaciones y asignaciones
 
-    -   Recuento de paquetes de actualización y el número mínimo, máximo y promedio de puntos de distribución de destino con paquetes
+  -   Recuento de paquetes de actualización y el número mínimo, máximo y promedio de puntos de distribución de destino con paquetes
 
-    -   Número de grupos de actualizaciones y número mínimo, máximo y promedio de actualizaciones por grupo
+  -   Número de grupos de actualizaciones y número mínimo, máximo y promedio de actualizaciones por grupo
 
-    -   Número de actualizaciones y porcentaje de las actualizaciones que se han implementado, caducado, sustituido, descargado y que contienen términos de licencia
+  -   Número de actualizaciones y porcentaje de las actualizaciones que se han implementado, caducado, sustituido, descargado y que contienen términos de licencia
 
-    -   Códigos de error de búsqueda de actualizaciones y recuento de máquinas
+  -   Códigos de error de búsqueda de actualizaciones y recuento de máquinas
 
-    -   Evaluación de actualizaciones de cliente y programaciones de búsquedas
+  -   Evaluación de actualizaciones de cliente y programaciones de búsquedas
 
-    -   Programación de la sincronización del punto de actualización de software
+  -   Programación de la sincronización del punto de actualización de software
 
-    -   Número de reglas de implementación automática que tienen varias implementaciones
+  -   Número de reglas de implementación automática que tienen varias implementaciones
 
-    -   Configuraciones que se usan para planes de mantenimiento activos de Windows 10
+  -   Configuraciones que se usan para planes de mantenimiento activos de Windows 10
 
-    -   Versiones de contenido del panel de Windows 10
+  -   Versiones de contenido del panel de Windows 10
 
-    -   Recuento de clientes de Windows 10 que usan Windows Update for Business
+  -   Recuento de clientes de Windows 10 que usan Windows Update for Business
 
-    -   Estadísticas de aplicación de revisiones de clúster
+  -   Estadísticas de aplicación de revisiones de clúster
 
-    -   Recuento de actualizaciones implementadas de Office 365
+  -   Recuento de actualizaciones implementadas de Office 365
 
-    -   ***[Nuevo]*** Clasificaciones que se sincronizan por punto de actualización de software
+  -   ***[Nuevo]*** Clasificaciones que se sincronizan por punto de actualización de software
 
--   **Datos de SQL o de rendimiento:**
+- **Datos de SQL o de rendimiento:**
 
-    -   Recuento de tablas de base de datos más grandes
+  -   Recuento de tablas de base de datos más grandes
 
-    -   Información de réplicas siempre activadas de SQL
+  -   Información de réplicas siempre activadas de SQL
 
-    -   Recuento de recopilaciones por tipo
+  -   Recuento de recopilaciones por tipo
 
-    -   ***[Actualizado]*** Estadísticas de evaluación de la recopilación (tiempo de consulta, cantidades asignadas frente a cantidades sin asignar, recuentos por tipo, sustitución de identificador y uso de reglas)
+  -   ***[Actualizado]*** Estadísticas de evaluación de la recopilación (tiempo de consulta, cantidades asignadas frente a cantidades sin asignar, recuentos por tipo, sustitución de identificador y uso de reglas)
 
-    - ***[Nuevo]*** Período de retención de seguimiento de cambios de SQL
+  - ***[Nuevo]*** Período de retención de seguimiento de cambios de SQL
 
--   ***[Nuevo] Actualizaciones de sitios:***
+- ***[Nuevo] Actualizaciones de sitios:***
 
-    - ***[Nuevo]*** Versiones de revisiones instaladas de Configuration Manager
+  - ***[Nuevo]*** Versiones de revisiones instaladas de Configuration Manager
 
 ##  <a name="bkmk_level3"></a> Nivel 3: Completo
 El nivel Completo incluye todos los datos de los niveles Básico y Mejorado. También incluye información adicional sobre Endpoint Protection, porcentajes de cumplimiento de actualización e información de actualización de software. Este nivel también puede incluir información avanzada de diagnóstico como archivos del sistema e instantáneas de memoria que pueden incluir información personal que existía en los archivos de registro o de memoria en el momento de la captura.
@@ -290,6 +290,6 @@ A partir de System Center Configuration Manager versión 1602, este nivel incluy
 -   Número mínimo, máximo y promedio de horas desde la última búsqueda de actualizaciones de software
 
 -   ***[Nuevo]*** Productos de actualización de software sincronizados por punto de actualización de Software
--   ***[Nuevo]*** Configuración de cumplimiento: SCEP, VPN, Wi-Fi y detalles de configuración de plantilla de directiva de cumplimiento
+-   Configuración de cumplimiento ***[nuevo]***: SCEP, VPN, Wi-Fi y detalles de configuración de plantilla de directiva de cumplimiento
 
 -   ***[Nuevo]*** Tipo de directivas de acceso condicional de EAS (bloquear o cuarentena) para dispositivos administrados por Intune

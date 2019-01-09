@@ -10,16 +10,16 @@ ms.assetid: f4f9a5fd-f573-4b99-ad93-b2c76812e922
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d6b957ebcc19dfe8c14dd781f71678db8e160af
-ms.sourcegitcommit: 1a1bac2d5ee0f20ce565d29798ee4dd99aaca044
+ms.openlocfilehash: c4ceec8c0d5482456d3257106ee067bf3d9ec1fb
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281913"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418108"
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>Instalar y actualizar con el medio de línea base de la versión 1606 para System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual) (rama de mantenimiento a largo plazo)*
+*Se aplica a:  System Center Configuration Manager (Rama actual) (Rama de mantenimiento a largo plazo)*
 
 Cuando ejecute el programa de instalación del medio de línea base de la versión 1606 de Configuration Manager, puede instalar la rama de mantenimiento a largo plazo o un sitio de rama actual de System Center Configuration Manager.
 
@@ -71,13 +71,13 @@ El medio de línea base de la versión 1606 admite una nueva clave de archivo de
 Al usar un script desatendido para instalar una rama con licencia, debe agregar la siguiente sección, los nombres de clave y valores a la sección de opciones del script. No es necesario usar estos valores para la instalación mediante script de la edición de evaluación de la rama actual:  
 
  **SABranchOptions**
--   **Nombre de clave: SAActive**
+- **Nombre de clave: SAActive**
   - Valores: 0 o 1.  
-  - Detalles: 0 instala una edición de evaluación sin licencia de la rama actual y 1 instala una edición con licencia.   
+  - Detalles:  0 instala una edición de evaluación sin licencia de la Rama actual y 1 instala una edición con licencia.   
 
 - **CurrentBranch**
   - Valores: 0 o 1.  
-  - Detalles: 0 instala la rama de mantenimiento a largo plazo y 1 instala la rama actual.  
+  - Detalles:  0 instala la rama de mantenimiento a largo plazo y 1 instala la rama actual.  
 
 Por ejemplo, para instalar una edición de rama actual con licencia, usará:
 

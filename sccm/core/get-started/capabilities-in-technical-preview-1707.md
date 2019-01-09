@@ -10,12 +10,12 @@ ms.assetid: cb405ba0-8792-4ab7-988b-2f835f3a9550
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 375c743e1094f3b3f52090ae520ee9d8e86acbe0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5500b7458935c83207a5e54f8fd1d4d7f40dc333
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336976"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421644"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1707 para System Center Configuration Manager
 
@@ -31,7 +31,7 @@ En este artículo se presentan las características disponibles en la versión 1
 -->
 
 **Problemas conocidos de esta Technical Preview:**
--   **Error al actualizar a la versión preliminar 1707 cuando hay un servidor de sitio en modo pasivo**. Si ejecuta la versión preliminar 1706 y tiene un [servidor de sitio principal en modo pasivo](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), debe desinstalar el servidor de sitio en modo pasivo para poder actualizar correctamente el sitio en versión preliminar a la versión 1707. Puede volver a instalar el servidor de sitio en modo pasivo después de que el sitio ejecuta la versión 1707.
+- **Error al actualizar a la versión preliminar 1707 cuando hay un servidor de sitio en modo pasivo**. Si ejecuta la versión preliminar 1706 y tiene un [servidor de sitio principal en modo pasivo](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), debe desinstalar el servidor de sitio en modo pasivo para poder actualizar correctamente el sitio en versión preliminar a la versión 1707. Puede volver a instalar el servidor de sitio en modo pasivo después de que el sitio ejecuta la versión 1707.
 
   Para desinstalar el servidor de sitio en modo pasivo:
   1. En la consola vaya a **Administración** > **General** > **Configuración de sitio** > **Servidores y roles del sistema de sitios** y seleccione el servidor de sitio en modo pasivo.
@@ -54,12 +54,10 @@ En este artículo se presentan las características disponibles en la versión 1
 -->
 
 ## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>Compatibilidad con la caché del mismo nivel de cliente para archivos de instalación rápida en Windows 10 y Office 365
-<!-- 1352486 -->
-A partir de esta versión, la caché del mismo nivel de cliente admite la distribución de archivos de instalación rápida de contenido para Windows 10, así como de archivos de actualización para Office 365. No se requiere ninguna configuración adicional.
+<!-- 1352486 --> A partir de esta versión, la caché del mismo nivel de cliente admite la distribución de archivos de instalación rápida de contenido para Windows 10, así como de archivos de actualización para Office 365. No se requiere ninguna configuración adicional.
 
 ## <a name="surface-device-dashboard"></a>Panel de Surface Device
-<!--1355788-->
-El panel de Surface Device proporciona información acerca de los dispositivos Surface de su entorno. En la consola, vaya a **Supervisión**  >  **Dispositivos Surface**. Puede ver la siguiente información:
+<!--1355788--> En el panel de dispositivos Surface se proporciona información sobre los dispositivos Surface del entorno. En la consola, vaya a **Supervisión**  >  **Dispositivos Surface**. Puede ver la siguiente información:
 - El porcentaje de dispositivos Surface
 - El porcentaje de modelos Surface
 - Las cinco primeras versiones de sistema operativo

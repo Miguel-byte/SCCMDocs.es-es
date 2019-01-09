@@ -10,12 +10,12 @@ ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6abf61488a96ec3299b606b10901b0787b82edc9
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ms.openlocfilehash: bdeed74504611589b36e31eff3c1957725345b8a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229354"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421848"
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Novedades de la versión 1702 de System Center Configuration Manager
 
@@ -63,13 +63,13 @@ A continuación se presentan mejoras en el uso de la búsqueda en la consola de 
  Puede utilizar las opciones de comentario en consola para enviar comentarios directamente al equipo de desarrollo.
 
  Puede encontrar la opción **Comentarios**:
- -  En la cinta de opciones, en el extremo izquierdo de la pestaña Inicio de cada nodo.  
-    ![Cinta de opciones](./media/feedback-home.png)
+- En la cinta de opciones, en el extremo izquierdo de la pestaña Inicio de cada nodo.  
+  ![Cinta de opciones](./media/feedback-home.png)
 
- -  Al hacer clic con el botón derecho en cualquier objeto de la consola.   
-     ![Opción de hacer clic con el botón derecho](./media/feedback-option.png)   
+- Al hacer clic con el botón derecho en cualquier objeto de la consola.   
+   ![Opción de hacer clic con el botón derecho](./media/feedback-option.png)   
 
- Al hacer clic en **Comentarios** se abre el explorador en el [sitio web de comentarios de UserVoice de Configuration Manager](https://go.microsoft.com/fwlink/?linkid=617029).
+  Al hacer clic en **Comentarios** se abre el explorador en el [sitio web de comentarios de UserVoice de Configuration Manager](https://go.microsoft.com/fwlink/?linkid=617029).
 
 
 ###  <a name="changes-for-updates-and-servicing"></a>Cambios para actualizaciones y mantenimiento
@@ -200,13 +200,13 @@ Esta versión presenta las siguientes mejoras:
 ### <a name="improvements-to-the-auto-apply-driver-task-sequence"></a>Mejoras en la secuencia de tareas Aplicar controladores automáticamente
 Ahora hay disponibles nuevas variables de secuencia de tareas para configurar el valor del tiempo de espera en el paso de secuencia de tareas de aplicación automática de controladores cuando se realizan solicitudes del catálogo HTTP. Están disponibles las siguientes variables y valores predeterminados (en segundos):
    - Valor predeterminado de SMSTSDriverRequestResolveTimeOut:  
-     60
+     Predeterminado: 60
    - Valor predeterminado de SMSTSDriverRequestConnectTimeOut:  
-     60
+     Predeterminado: 60
    - Valor predeterminado de SMSTSDriverRequestSendTimeOut:  
-     60
+     Predeterminado: 60
    - Valor predeterminado de SMSTSDriverRequestReceiveTimeOut:  
-     480
+     Predeterminado: 480
 
 ### <a name="windows-10-adk-tracked-by-build-version"></a>Seguimiento de Windows 10 ADK según la versión de compilación
 Ahora, la versión de compilación realiza un seguimiento de Windows 10 ADK para garantizar una experiencia más compatible al personalizar las imágenes de arranque de Windows 10. Por ejemplo, si el sitio usa Windows ADK para Windows 10, versión 1607, solo se pueden personalizar en la consola las imágenes de arranque con la versión 10.0.14393. Para más información sobre cómo personalizar las versiones de WinPE, vea [Personalizar imágenes de arranque](/sccm/osd/get-started/customize-boot-images).

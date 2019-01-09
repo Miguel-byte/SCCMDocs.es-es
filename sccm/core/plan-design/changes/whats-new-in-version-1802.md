@@ -10,12 +10,12 @@ ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0757e7f3fac12c2945a3eab860851b0debf28fd5
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: a0e16c137604480ab23e15b52723692491d1816d
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893896"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414861"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>Novedades de la versión 1802 de System Center Configuration Manager
 
@@ -58,7 +58,7 @@ Version 1802 drops support for the following products:
 <!-- 1353704 --> A partir de esta versión, el cliente de Configuration Manager se admite en dispositivos Windows 10 ARM64. Las características de administración de cliente existentes deben funcionar con estos nuevos dispositivos. Por ejemplo, el inventario de hardware y software, las actualizaciones de software y la administración de aplicaciones. La implementación de sistema operativo no se admite actualmente. 
 
 ### <a name="improved-support-for-cng-certificates"></a>Mejora de la compatibilidad con certificados CNG
-<!-- 1357314 --> La versión 1710 de Configuration Manager (rama actual) admite [certificados Cryptography: Next Generation (CNG)](/sccm/core/plan-design/network/cng-certificates-overview). En la versión 1710 se limita la compatibilidad a certificados cliente en determinados escenarios. 
+<!-- 1357314 --> La versión 1710 de Configuration Manager (Rama actual) admite [certificados Cryptography: Next Generation (CNG)](/sccm/core/plan-design/network/cng-certificates-overview). En la versión 1710 se limita la compatibilidad a certificados cliente en determinados escenarios. 
 
 A partir de esta versión, use certificados CNG para los siguientes roles de servidor habilitados para HTTPS:
 - Punto de administración
@@ -147,7 +147,7 @@ Para obtener más información, vea el artículo [Surface dashboard](/sccm/core/
 <!-- 1357365 --> La carga de trabajo de Endpoint Protection se puede pasar a Intune después de habilitar la administración conjunta. Para realizar la transición de la carga de trabajo de Endpoint Protection, vaya a la página de propiedades de la administración conjunta y mueva la barra deslizante de Configuration Manager a **Piloto** o **Todos**. Para obtener más información sobre las cargas de trabajo, vea [Cambiar las cargas de trabajo a Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune). Para obtener más información sobre la administración conjunta, vea [Administración conjunta para dispositivos de Windows 10](/sccm/core/clients/manage/co-management-overview).
  
 ### <a name="co-management-dashboard-in-system-center-configuration-manager"></a>Panel de administración conjunta en System Center Configuration Manager
-<!--1356648--> A partir de esta versión, puede ver un panel con información sobre la administración conjunta. El panel le ayudará a revisar los equipos que se administran conjuntamente en el entorno. Los gráficos ayudan a identificar los dispositivos que podrían requerir atención. Para obtener más información, vea el artículo [Co-management dashboard](\sccm\core\clients\manage\client-management-dashboard) (Panel de administración conjunta). 
+<!--1356648--> A partir de esta versión, puede ver un panel con información sobre la administración conjunta. El panel le ayudará a revisar los equipos que se administran conjuntamente en el entorno. Los gráficos ayudan a identificar los dispositivos que podrían requerir atención. Para obtener más información, vea el artículo [Co-management dashboard](/sccm/core/clients/manage/client-management-dashboard) (Panel de administración conjunta). 
 
 
 ## <a name="compliance-settings"></a>Configuración de cumplimiento

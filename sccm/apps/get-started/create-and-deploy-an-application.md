@@ -10,12 +10,12 @@ ms.assetid: 3bd1e487-ea18-43c1-b7c3-acbd9b86d429
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3d34ec4abb712ce6797033a5ff490280611e1b02
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 18f51e43e223b13c01d0c6bde5a30fe08af64f61
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344398"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415463"
 ---
 # <a name="create-and-deploy-an-application-with-system-center-configuration-manager"></a>Crear e implementar una aplicación con System Center Configuration Manager
 
@@ -48,38 +48,38 @@ Asegúrese de revisar la información del tema [Introducción a la administraci�
 
 ### <a name="to-start-the-create-application-wizard-and-create-the-application"></a>Para iniciar el Asistente para crear aplicaciones y crear la aplicación  
 
-1.  En la consola de Configuration Manager, elija **Biblioteca de software** > **Administración de aplicaciones** > **Aplicaciones**.  
+1. En la consola de Configuration Manager, elija **Biblioteca de software** > **Administración de aplicaciones** > **Aplicaciones**.  
 
-3.  En la pestaña **Inicio**, en el grupo **Crear**, elija **Crear aplicación**.  
+2. En la pestaña **Inicio**, en el grupo **Crear**, elija **Crear aplicación**.  
 
-4.  En la página **General** del **Asistente para crear aplicaciones**, seleccione **Detectar automáticamente la información acerca de esta aplicación a partir de archivos de instalación**. Esto rellenará previamente parte de la información del asistente con la información extraída del archivo .msi de instalación. A continuación, especifique la siguiente información:  
+3. En la página **General** del **Asistente para crear aplicaciones**, seleccione **Detectar automáticamente la información acerca de esta aplicación a partir de archivos de instalación**. Esto rellenará previamente parte de la información del asistente con la información extraída del archivo .msi de instalación. A continuación, especifique la siguiente información:  
 
-    -   **Tipo**: elija **Windows Installer (archivo \*.msi)**.  
+   -   **Tipo**: elija **Windows Installer (archivo \*.msi)**.  
 
-    -   **Ubicación**: escriba la ubicación (o elija **Examinar** para seleccionar la ubicación) del archivo de instalación **Contoso.msi**. Tenga en cuenta que se debe especificar la ubicación con el formato *\\\Servidor\Recurso compartido\Archivo* para que Configuration Manager busque los archivos de instalación.  
+   -   **Ubicación**: escriba la ubicación (o elija **Examinar** para seleccionar la ubicación) del archivo de instalación **Contoso.msi**. Tenga en cuenta que se debe especificar la ubicación con el formato *\\\Servidor\Recurso compartido\Archivo* para que Configuration Manager busque los archivos de instalación.  
 
-    Terminará con algo parecido a la captura de pantalla siguiente:  
+   Terminará con algo parecido a la captura de pantalla siguiente:  
 
-    ![Página general del asistente de administración de aplicaciones](/sccm/apps/get-started/media/App-management-wizard-general-page.png)  
+   ![Página general del asistente de administración de aplicaciones](/sccm/apps/get-started/media/App-management-wizard-general-page.png)  
 
-5.  Elija **Siguiente**. En la página **Importar información**, verá información sobre la aplicación y los archivos asociados que se importaron a Configuration Manager. Cuando haya terminado, elija **Siguiente** de nuevo.  
+4. Elija **Siguiente**. En la página **Importar información**, verá información sobre la aplicación y los archivos asociados que se importaron a Configuration Manager. Cuando haya terminado, elija **Siguiente** de nuevo.  
 
-6.  En la página **Información general**, puede proporcionar más información sobre la aplicación para ordenarla y buscarla en la consola de Configuration Manager.  
+5. En la página **Información general**, puede proporcionar más información sobre la aplicación para ordenarla y buscarla en la consola de Configuration Manager.  
 
-     Además, el campo del **programa de instalación** permite especificar la línea de comandos completa que se usará para instalar la aplicación en los equipos. Puede editar esta opción para agregar sus propias propiedades (por ejemplo **/q** para una instalación desatendida).  
+    Además, el campo del **programa de instalación** permite especificar la línea de comandos completa que se usará para instalar la aplicación en los equipos. Puede editar esta opción para agregar sus propias propiedades (por ejemplo **/q** para una instalación desatendida).  
 
-    > [!TIP]  
-    >  Algunos de los campos de esta página del asistente pueden haberse rellenado automáticamente al importar los archivos de instalación de la aplicación.  
+   > [!TIP]  
+   >  Algunos de los campos de esta página del asistente pueden haberse rellenado automáticamente al importar los archivos de instalación de la aplicación.  
 
-     Al final, la pantalla será similar a la captura de pantalla siguiente:  
+    Al final, la pantalla será similar a la captura de pantalla siguiente:  
 
-     ![Página de información general del asistente de administración de aplicaciones](/sccm/apps/get-started/media/App-management-wizard-general-information-page.png)  
+    ![Página de información general del asistente de administración de aplicaciones](/sccm/apps/get-started/media/App-management-wizard-general-information-page.png)  
 
-7.  Elija **Siguiente**. En la página Resumen, puede confirmar la configuración de la aplicación y luego completar el asistente.  
+6. Elija **Siguiente**. En la página Resumen, puede confirmar la configuración de la aplicación y luego completar el asistente.  
 
- Ha terminado de crear la aplicación. Para encontrarla, en el área de trabajo **Biblioteca de software** , expanda **Administración de aplicaciones**y, a continuación, elija **Aplicaciones**. En este ejemplo, verá:  
+   Ha terminado de crear la aplicación. Para encontrarla, en el área de trabajo **Biblioteca de software** , expanda **Administración de aplicaciones**y, a continuación, elija **Aplicaciones**. En este ejemplo, verá:  
 
- ![Gráfico de la aplicación final](/sccm/apps/get-started/media/Final-app-graphic.png)  
+   ![Gráfico de la aplicación final](/sccm/apps/get-started/media/Final-app-graphic.png)  
 
 ## <a name="examine-the-properties-of-the-application-and-its-deployment-type"></a>Examinar las propiedades de la aplicación y su tipo de implementación  
 
@@ -189,9 +189,9 @@ Use los datos de la sección **Supervisar la aplicación** siguiente para ver el
 
     -   **En curso**: la aplicación no ha terminado de instalarse.  
 
-    -   **Error**: error al instalar la aplicación en los equipos indicados. También se muestra información adicional sobre el error.  
+    -   **Error**: se ha producido un error al instalar la aplicación en los equipos indicados. También se muestra información adicional sobre el error.  
 
-    -   **Requisitos no cumplidos**: no se realizó un intento de instalación en los dispositivos indicados porque estos no cumplían con los requisitos que se han configurado (en este ejemplo, porque no ejecutan Windows 10).  
+    -   **Requisitos no cumplidos**: no se ha realizado un intento de instalación en los dispositivos indicados porque estos no cumplían con los requisitos que se han configurado (en este ejemplo, porque no ejecutan Windows 10).  
 
     -   **Desconocido**: Configuration Manager no pudo notificar el estado de la implementación. Consulte de nuevo más tarde.  
 

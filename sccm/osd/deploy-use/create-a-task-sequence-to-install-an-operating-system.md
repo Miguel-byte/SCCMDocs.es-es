@@ -10,12 +10,12 @@ ms.assetid: 217c8a0e-5112-420e-a325-2a6d75326290
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 274a6c22b76c8def437e6159036ff3e82877e88f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 604cf10c660cd1f26513a6a34b370d380635504b
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350874"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421083"
 ---
 # <a name="create-a-task-sequence-to-install-an-operating-system-in-system-center-configuration-manager"></a>Crear una secuencia de tareas para instalar un sistema operativo en System Center Configuration Manager
 
@@ -40,60 +40,60 @@ Use secuencias de tareas de System Center Configuration Manager para instalar au
 
 #### <a name="to-create-a-task-sequence-that-installs-an-operating-system"></a>Para crear una secuencia de tareas que instale un sistema operativo  
 
-1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
+1. En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
 
-2.  En el área de trabajo **Biblioteca de software** , expanda **Sistemas operativos**y, a continuación, haga clic en **Secuencias de tareas**.  
+2. En el área de trabajo **Biblioteca de software** , expanda **Sistemas operativos**y, a continuación, haga clic en **Secuencias de tareas**.  
 
-3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear secuencia de tareas** para iniciar el Asistente para crear secuencia de tareas.  
+3. En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear secuencia de tareas** para iniciar el Asistente para crear secuencia de tareas.  
 
-4.  En la página **Crear nueva secuencia de tareas** , haga clic en **Instalar un paquete de imágenes existente**y, a continuación, haga clic en **Siguiente**.  
+4. En la página **Crear nueva secuencia de tareas** , haga clic en **Instalar un paquete de imágenes existente**y, a continuación, haga clic en **Siguiente**.  
 
-5.  En la página **Información de secuencia de tareas** , especifique la siguiente configuración y, a continuación, haga clic en **Siguiente**.  
+5. En la página **Información de secuencia de tareas** , especifique la siguiente configuración y, a continuación, haga clic en **Siguiente**.  
 
-    -   **Nombre de secuencia de tareas**: especifique un nombre que identifique la secuencia de tareas.  
+   -   **Nombre de la secuencia de tareas**: especifique un nombre que identifique la secuencia de tareas.  
 
-    -   **Descripción**: especifique una descripción de la tarea que se realiza mediante la secuencia de tareas.  
+   -   **Descripción**: especifique una descripción de la tarea que se realiza mediante la secuencia de tareas.  
 
-    -   **Imagen de arranque**: especifique la imagen de arranque que instala el sistema operativo en el equipo de destino. La imagen de arranque contiene una versión de Windows PE que se utiliza para instalar el sistema operativo, así como los controladores de dispositivo adicionales que son necesarios. Para más información, vea [Manage boot images (Administrar imágenes de arranque)](../get-started/manage-boot-images.md).  
+   -   **Imagen de arranque**: especifique la imagen de arranque que instala el sistema operativo en el equipo de destino. La imagen de arranque contiene una versión de Windows PE que se utiliza para instalar el sistema operativo, así como los controladores de dispositivo adicionales que son necesarios. Para más información, vea [Manage boot images (Administrar imágenes de arranque)](../get-started/manage-boot-images.md).  
 
-        > [!IMPORTANT]  
-        >  La arquitectura de la imagen de arranque debe ser compatible con la arquitectura de hardware del equipo de destino.  
+       > [!IMPORTANT]  
+       >  La arquitectura de la imagen de arranque debe ser compatible con la arquitectura de hardware del equipo de destino.  
 
-6.  En la página **Instalar Windows** , especifique la siguiente configuración y, a continuación, haga clic en **Siguiente**.  
+6. En la página **Instalar Windows** , especifique la siguiente configuración y, a continuación, haga clic en **Siguiente**.  
 
-    -   **Paquete de imágenes**: especifique el paquete que contiene la imagen de sistema operativo que desea instalar. Para más información, vea [Manage operating system images (Administrar imágenes de sistema operativo)](../get-started/manage-operating-system-images.md).  
+   -   **Paquete de imagen**: especifique el paquete que contiene la imagen de sistema operativo que desea instalar. Para obtener más información, consulte [Administrar imágenes de sistema operativo](../get-started/manage-operating-system-images.md).  
 
-    -   **Imagen**: si el paquete de imágenes de sistema operativo contiene varias imágenes, especifique el índice de la imagen de sistema operativo que desea instalar.  
+   -   **Imagen**: si el paquete de imágenes de sistema operativo contiene varias imágenes, especifique el índice de la imagen de sistema operativo que desea instalar.  
 
-    -   **Particionar y formatear el equipo de destino antes de instalar el sistema operativo**: especifique si desea que la secuencia de tareas particione y formatee el equipo de destino antes de instalar el sistema operativo.  
+   -   **Particionar y formatear el equipo de destino antes de instalar el sistema operativo**: especifique si desea que la secuencia de tareas particione y formatee el equipo de destino antes de instalar el sistema operativo.  
 
-    -   **Clave de producto**: especifique la clave de producto para el sistema operativo Windows que desea instalar. Puede especificar claves de licencia por volumen codificadas y claves de producto estándar. Si utiliza una clave de producto no codificada, cada grupo de 5 caracteres debe estar separado por un guión (-). Por ejemplo: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
+   -   **Clave de producto**: especifique la clave de producto para el sistema operativo Windows que desea instalar. Puede especificar claves de licencia por volumen codificadas y claves de producto estándar. Si utiliza una clave de producto no codificada, cada grupo de 5 caracteres debe estar separado por un guión (-). Por ejemplo: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
-    -   **Modo de licencia de servidor**: especifique que la licencia de servidor sea **Por puesto**, **Por servidor**o que no se especifica ninguna licencia. Si la licencia de servidor es **Por servidor**, especifique también el número máximo de conexiones de servidor.  
+   -   **Modo de licencia de servidor**: especifique que la licencia de servidor es **Por puesto**, **Por servidor**, o bien que no se especifica ninguna licencia. Si la licencia de servidor es **Por servidor**, especifique también el número máximo de conexiones de servidor.  
 
-    -   Especifique cómo administrar la cuenta de administrador que se utiliza cuando se implementa la imagen de sistema operativo.  
+   -   Especifique cómo administrar la cuenta de administrador que se utiliza cuando se implementa la imagen de sistema operativo.  
 
-        -   **Deshabilitar cuenta de administrador local**: especifique si la cuenta de administrador local se deshabilita cuando se implementa la imagen de sistema operativo.  
+       -   **Deshabilitar cuenta de administrador local**: especifique si la cuenta de administrador local se deshabilita cuando se implementa la imagen de sistema operativo.  
 
-        -   **Usar siempre la misma contraseña de administrador**: especifique si se utiliza la misma contraseña para la cuenta de administrador local en todos los equipos donde se implementa la imagen de sistema operativo.  
+       -   **Usar siempre la misma contraseña de administrador**: especifique si se utiliza la misma contraseña para la cuenta de administrador local en todos los equipos donde se implementa la imagen de sistema operativo.  
 
-7.  En la página **Configurar red** , especifique la siguiente configuración y, a continuación, haga clic en **Siguiente**.  
+7. En la página **Configurar red** , especifique la siguiente configuración y, a continuación, haga clic en **Siguiente**.  
 
-    -   **Unirse a un grupo de trabajo**: especifique si desea agregar el equipo de destino a un grupo de trabajo.  
+   -   **Unirse a un grupo de trabajo**: especifique si desea agregar el equipo de destino a un grupo de trabajo.  
 
-    -   **Unirse a un dominio**: especifique si desea agregar el equipo de destino a un dominio. En **Dominio**, especifique el nombre del dominio.  
+   -   **Unirse a un dominio**: especifique si desea agregar el equipo de destino a un dominio. En **Dominio**, especifique el nombre del dominio.  
 
-        > [!IMPORTANT]  
-        >  Puede examinar para localizar los dominios del bosque local, pero debe especificar el nombre de dominio para un bosque remoto.  
+       > [!IMPORTANT]  
+       >  Puede examinar para localizar los dominios del bosque local, pero debe especificar el nombre de dominio para un bosque remoto.  
 
-         También puede especificar una unidad organizativa (OU). Es una configuración opcional que especifica el nombre distintivo LDAP X.500 de la unidad organizativa en la que se va a crear la cuenta de equipo si aún no existe.  
+        También puede especificar una unidad organizativa (OU). Es una configuración opcional que especifica el nombre distintivo LDAP X.500 de la unidad organizativa en la que se va a crear la cuenta de equipo si aún no existe.  
 
-    -   **Cuenta**: especifique el nombre de usuario y la contraseña de la cuenta que tenga permisos para unirse al dominio especificado. Por ejemplo: *dominio\usuario* o *%variable%*.  
+   -   **Cuenta**: especifique el nombre de usuario y la contraseña de la cuenta que tenga permisos para unirse al dominio especificado. Por ejemplo: *dominio\usuario* o *%variable%*.  
 
-        > [!IMPORTANT]  
-        >  Debe especificar las credenciales de dominio apropiadas si planea migrar la configuración del dominio o la configuración del grupo de trabajo.  
+       > [!IMPORTANT]  
+       >  Debe especificar las credenciales de dominio apropiadas si planea migrar la configuración del dominio o la configuración del grupo de trabajo.  
 
-8.  En la página **Instalar Configuration Manager**, especifique el paquete de cliente de Configuration Manager que quiere instalar en el equipo de destino y, después, haga clic en **Siguiente**.  
+8. En la página **Instalar Configuration Manager**, especifique el paquete de cliente de Configuration Manager que quiere instalar en el equipo de destino y, después, haga clic en **Siguiente**.  
 
 9. En la página **Migración de estado** , especifique la información siguiente y, a continuación, haga clic en **Siguiente**.  
 
@@ -109,7 +109,7 @@ Use secuencias de tareas de System Center Configuration Manager para instalar au
 
 12. Complete el asistente.  
 
- Ahora puede implementar la secuencia de tareas en una recopilación de equipos.  Para obtener más información, vea [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
+    Ahora puede implementar la secuencia de tareas en una recopilación de equipos.  Para obtener más información, vea [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
 
 ##  <a name="BKMK_InstallExistingOSImageTSExample"></a> Ejemplo de secuencia de tareas para instalar la imagen de sistema operativo existente  
  Use la tabla siguiente como guía para crear una secuencia de tareas que implemente un sistema operativo mediante una imagen de sistema operativo existente. La tabla le ayudará a decidir la secuencia general de los pasos de la secuencia de tareas y cómo organizar y estructurar los pasos de la secuencia de tareas en grupos lógicos. La secuencia de tareas que cree puede variar desde este ejemplo y puede contener más o menos pasos de secuencia de tareas y grupos.  

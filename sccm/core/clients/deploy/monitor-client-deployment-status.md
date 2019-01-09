@@ -10,12 +10,12 @@ ms.assetid: 20a573b3-53cb-4ed5-bae1-7542f533ed20
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9454183b390a6ff0267ac853f514ce87530c1519
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 8dc8d91cf963b97b96ac6320bce0213d259ecded
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331757"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417819"
 ---
 # <a name="how-to-monitor-client-deployment-status-in-system-center-configuration-manager"></a>Supervisar el estado de implementación de cliente en System Center Configuration Manager
 
@@ -28,33 +28,33 @@ La implementación de clientes en el sitio lleva tiempo y algunas instalaciones 
 
  En el área de trabajo **Supervisión** de la consola, puede supervisar los siguientes estados para las implementaciones de cliente que tienen lugar dentro de una recopilación especificada:  
 
--   conforme  
+- conforme  
 
--   En curso  
+- En curso  
 
--   No conforme  
+- No conforme  
 
--   Error  
+- Error  
 
--   Desconocida  
+- Desconocida  
 
- Informes de Configuration Manager en implementaciones de clientes de producción o clientes de preproducción. La consola de Configuration Manager también proporciona un gráfico de implementaciones de cliente erróneas durante un período de tiempo especificado para ayudarle a determinar si las acciones que realiza para solucionar los problemas con las implementaciones mejoran su índice de éxito con el tiempo.  
+  Informes de Configuration Manager en implementaciones de clientes de producción o clientes de preproducción. La consola de Configuration Manager también proporciona un gráfico de implementaciones de cliente erróneas durante un período de tiempo especificado para ayudarle a determinar si las acciones que realiza para solucionar los problemas con las implementaciones mejoran su índice de éxito con el tiempo.  
 
 ## <a name="to-monitor-client-deployments"></a>Para supervisar las implementaciones de cliente  
 
--   En la consola de Configuration Manager, haga clic en **Supervisión** > **Estado de cliente**.  
+- En la consola de Configuration Manager, haga clic en **Supervisión** > **Estado de cliente**.  
 
--   Haga clic en **Implementación del cliente de producción** o **Implementación del cliente de preproducción**, según la versión de cliente que quiera supervisar.  
+- Haga clic en **Implementación del cliente de producción** o **Implementación del cliente de preproducción**, según la versión de cliente que quiera supervisar.  
 
--   Revise los gráficos de estado de implementación de cliente y error de implementación de cliente.  
+- Revise los gráficos de estado de implementación de cliente y error de implementación de cliente.  
 
--   Si quiere cambiar el ámbito del informe, haga clic en **Examinar...** y elija otra recopilación.  
+- Si quiere cambiar el ámbito del informe, haga clic en **Examinar...** y elija otra recopilación.  
 
- Para más información sobre las implementaciones de cliente de preproducción, vea [Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).
+  Para más información sobre las implementaciones de cliente de preproducción, vea [Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).
 
- > [!NOTE]
- > El estado de implementación en equipos que hospedan los roles de sistema de sitio en una recopilación de preproducción puede aparecer registrado como **No compatible** incluso cuando el cliente se ha implementado correctamente. Cuando se promueve el cliente a la producción, el estado de implementación se registrará correctamente.   
+  > [!NOTE]
+  > El estado de implementación en equipos que hospedan los roles de sistema de sitio en una recopilación de preproducción puede aparecer registrado como **No compatible** incluso cuando el cliente se ha implementado correctamente. Cuando se promueve el cliente a la producción, el estado de implementación se registrará correctamente.   
 
- Para supervisar el estado de los clientes implementados, consulte [Supervisar clientes en System Center Configuration Manager](../../../core/clients/manage/monitor-clients.md).  
+  Para supervisar el estado de los clientes implementados, consulte [Supervisar clientes en System Center Configuration Manager](../../../core/clients/manage/monitor-clients.md).  
 
- Puede usar informes de Configuration Manager para tener más información sobre el estado de los clientes en el sitio. Para más información sobre cómo ejecutar informes, consulte [Generación de informes en System Center Configuration Manager](../../../core/servers/manage/reporting.md).  
+  Puede usar informes de Configuration Manager para tener más información sobre el estado de los clientes en el sitio. Para más información sobre cómo ejecutar informes, consulte [Generación de informes en System Center Configuration Manager](../../../core/servers/manage/reporting.md).  

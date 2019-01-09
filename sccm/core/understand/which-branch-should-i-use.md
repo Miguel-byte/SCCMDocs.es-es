@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4331ec4120141ab9aa20301b9a99c3c6ebeef568
-ms.sourcegitcommit: 0305e710f634529793ae73e5aac24168ee4fe02f
+ms.openlocfilehash: 35e1675e74b0df768d143441fa4cbb2dda47affc
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042752"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418234"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>¿Qué rama de Configuration Manager debo utilizar?
 
@@ -43,11 +43,11 @@ Para instalar la rama actual como un nuevo sitio, use [medios de línea base](/s
 
 También se pueden usar los medios de línea base para instalar un nuevo sitio que sea una edición de evaluación de la rama actual. La edición de evaluación no requiere una licencia. Puede usar la edición de evaluación de 180 días. Admite la actualización a una edición con licencia de la rama actual. Para instalar únicamente una versión de evaluación, obténgala desde [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
 
->  [!NOTE]  
+> [!NOTE]
 > Use los medios de línea base para instalar sitios para una nueva jerarquía de Configuration Manager. Si ha instalado previamente una versión de línea base, use las actualizaciones en consola para actualizar los sitios a una nueva versión.  
->  
+> 
 > Los sitios que se actualizan mediante las actualizaciones en la consola dan lugar a sitios que son iguales que el nuevo sitio instalado mediante los medios de linea base.
->
+> 
 > Para más información, vea [Updates for System Center Configuration Manager (Actualizaciones para System Center Configuration Manager)](/sccm/core/servers/manage/updates).  
 
 

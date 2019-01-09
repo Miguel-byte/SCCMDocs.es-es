@@ -2,7 +2,7 @@
 title: Comprobaciones de requisitos previos
 titleSuffix: Configuration Manager
 description: Referencia de las comprobaciones de requisitos previos específicos para las actualizaciones de Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 12/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f17be653d206fd453cdafa4de159804f2fca816
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 4fdc882d63e7bf7d3189e770f230412f17ca0b63
+ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456692"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53444661"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Lista de comprobaciones de requisitos previos de Configuration Manager
 
@@ -28,7 +28,7 @@ En este artículo se detallan las comprobaciones de requisitos previos que se ej
 ##  <a name="BKMK_Security"></a> Derechos de seguridad  
 
 
-### <a name="security-rights-errors"></a>Derechos de seguridad: errores
+### <a name="security-rights-errors"></a>Derechos de seguridad: Errores
 
 #### <a name="administrator-rights-on-central-administration-site"></a>Derechos de administrador en el sitio de administración central 
 *Se aplica a: sitio primario*
@@ -71,7 +71,7 @@ La cuenta de usuario que ejecuta el programa de instalación de Configuration Ma
 La cuenta de usuario que ejecuta el programa de instalación de Configuration Manager tiene el rol **administrador del sistema** en la instancia de rol de SQL Server que ha seleccionado como base de datos del sitio de referencia. Se requieren los permisos del rol **administrador del sistema** de SQL Server para modificar la base de datos de sitio.
 
 
-### <a name="security-rights-warnings"></a>Derechos de seguridad: advertencias
+### <a name="security-rights-warnings"></a>Derechos de seguridad: Advertencias
 
 #### <a name="site-system-to-sql-server-communication"></a>Sistema de sitio para la comunicación de SQL Server  
 *Se aplica a: sitio secundario, punto de administración*
@@ -87,7 +87,7 @@ SQL Server está configurado para la seguridad de autenticación de Windows.
 
 ##  <a name="BKMK_Dependencies"></a> Dependencias
 
-### <a name="dependencies-errors"></a>Dependencias: errores
+### <a name="dependencies-errors"></a>Dependencias: Errores
 
 #### <a name="active-migration-mappings-on-the-target-primary-site"></a>Asignaciones de migración activas en el sitio primario de destino 
 *Se aplica a: sitio de administración central*
@@ -113,7 +113,7 @@ El Servicio de transferencia inteligente en segundo plano (BITS) está instalado
 La instalación de SQL Server utiliza una intercalación que diferencia entre mayúsculas y minúsculas, como **SQL_Latin1_General_CP1_CI_AS**.
 
 #### <a name="check-existing-stand-alone-primary-site-for-version-and-site-code"></a>Comprobar la versión y el código del sitio primario independiente existente 
-*Se aplica a: sitio de administración central, sitio primario*
+*Se aplica a: sitio primario, sitio de administración central*
 
 El sitio primario que planea expandir es un sitio primario independiente. Tiene la misma versión de Configuration Manager, pero un código de sitio diferente que el sitio de administración central que se va a instalar.
 
@@ -310,7 +310,7 @@ A partir de la versión 1810, el proceso de instalación de Configuration Manage
 El componente de entorno de preinstalación de Windows (PE) del ADK de Windows está instalado.
 
 
-### <a name="dependencies-warnings"></a>Dependencias: advertencias
+### <a name="dependencies-warnings"></a>Dependencias: Advertencias
 
 #### <a name="administrative-rights-on-distribution-point"></a>Derechos administrativos en el punto de distribución 
 *Se aplica a: punto de distribución*
@@ -328,7 +328,7 @@ La cuenta de equipo del servidor de sitio tiene derechos de **administrador** en
 Los recursos compartidos administrativos necesarios se encuentran en el equipo de sistema de sitio.
 
 #### <a name="application-compatibility"></a>Compatibilidad de aplicaciones 
-*Se aplica a: sitio de administración central, sitio primario*
+*Se aplica a: sitio primario, sitio de administración central*
 
 Las aplicaciones actuales son compatibles con el esquema de la aplicación.
 
@@ -414,7 +414,7 @@ WinRM 1.1 está instalado en el servidor de sitio primario o en el equipo de la 
 Para obtener más información sobre cómo descargar WinRM 1.1, vea el [artículo de soporte técnico 936059](https://support.microsoft.com/help/936059).
 
 #### <a name="wsus-on-site-server"></a>WSUS en servidor de sitio 
-*Se aplica a: sitio de administración central, sitio primario*
+*Se aplica a: sitio primario, sitio de administración central*
 
 Hay una versión compatible de Windows Server Update Services (WSUS) instalada en el servidor de sitio. 
 
@@ -436,7 +436,7 @@ Tiene dos opciones:
 
 ##  <a name="BKMK_Requirements"></a> Requisitos del sistema  
 
-### <a name="system-requirements-errors"></a>Requisitos del sistema: errores
+### <a name="system-requirements-errors"></a>Requisitos del sistema: Errores
 
 #### <a name="server-service-is-running"></a>El servicio de servidor se está ejecutando 
 *Se aplica a: sitio de administración central, sitio primario o sitio secundario*
@@ -492,15 +492,15 @@ El servidor ejecuta una versión de sistema operativo compatible.
 Para obtener más información, vea [Sistemas operativos compatibles con servidores de sistema de sitio de Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).
 
 #### <a name="verify-database-consistency"></a>Comprobar la coherencia de la base de datos 
-*Se aplica a: sitio de administración central, sitio primario*
+*Se aplica a: sitio primario, sitio de administración central*
 
 Comprueba la coherencia de la base de datos del sitio en SQL Server.  
 
 
-### <a name="system-requirements-warnings"></a>Requisitos del sistema: advertencias
+### <a name="system-requirements-warnings"></a>Requisitos del sistema: Advertencias
 
 #### <a name="active-directory-domain-functional-level"></a>Nivel funcional del dominio de Active Directory 
-*Se aplica a: sitio de administración central, sitio primario*
+*Se aplica a: sitio primario, sitio de administración central*
 
 El nivel funcional de dominio de Active Directory es como mínimo Windows Server 2008 R2.
 
@@ -515,7 +515,7 @@ El equipo de Configuration Manager pertenece a un dominio de Windows.
 La unidad de disco se debe formatear con el sistema de archivos NTFS. Para mayor seguridad, instale los componentes de servidor de sitio en unidades de disco formateadas con el sistema de archivos NTFS.
 
 #### <a name="schema-extensions"></a>Extensiones de esquema 
-*Se aplica a: sitio de administración central, sitio primario*
+*Se aplica a: sitio primario, sitio de administración central*
 
 El esquema de Active Directory se ha extendido. Si se ha extendido, la versión de las extensiones del esquema que se han usado. 
 
@@ -550,13 +550,12 @@ Este comando inicia una limpieza de syscommittab y de todas las tablas del lado 
 SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 ```
 
-<!-- #### SQL Native Client
-<!--SCCMDocs-pr issue 3094->
-*Applies to: Central administration site, primary site, secondary site*
+#### <a name="sql-native-client"></a>SQL Native Client
+<!--SCCMDocs-pr issue 3094-->
+*Se aplica a: sitio de administración central, sitio primario o sitio secundario*
 
-A supported version of the SQL Native Client. Starting in version 1810, the minimum version is 11.4.7001.0. 
+Cuando se instala un sitio nuevo, Configuration Manager instala de forma automática SQL Native Client como componente redistribuible. Configuration Manager no admite la actualización de SQL Native Client. Esta comprobación garantiza que el sitio tiene una versión compatible de SQL Native Client. A partir de la versión 1810, la versión mínima es SQL 2012 SP4 (`11.*.7001.0`). 
 
-This SQL Native Client version supports TLS 1.2. For more information, see the following articles:
-- [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
-- [How to enable TLS 1.2 for Configuration Manager](https://support.microsoft.com/help/4040243/how-to-enable-tls-1-2-for-configuration-manager)  
- -->
+Esta versión de SQL Native Client es compatible con TLS 1.2. Vea los siguientes artículos para más información:
+- [Compatibilidad con TLS 1.2 para Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
+- [Cómo habilitar TLS 1.2 para Configuration Manager](https://support.microsoft.com/help/4040243/how-to-enable-tls-1-2-for-configuration-manager)  

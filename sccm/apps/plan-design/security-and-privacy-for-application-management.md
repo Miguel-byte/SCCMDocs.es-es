@@ -10,12 +10,12 @@ ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 65e4d68f05087d24bc83e8e4a3dd67489fdbaed3
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: be4f60bbc6114abc1c4537cc83ee8c2dd0aeef42
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893590"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421933"
 ---
 # <a name="security-and-privacy-for-application-management-in-configuration-manager"></a>Seguridad y privacidad para la administración de aplicaciones en Configuration Manager
 
@@ -213,11 +213,11 @@ Si configura un tipo de implementación de aplicaciones web, use HTTPS para prot
     > [!Note]  
     > A partir de la versión 1802 de Configuration Manager, la funcionalidad principal del catálogo de aplicaciones ahora se incluye en el Centro de software. Para obtener más información, consulte [Configurar el centro de software](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
 
--  El **Centro de software** se instala automáticamente en un dispositivo al instalar el cliente de Configuration Manager. Los usuarios cambian la configuración y buscan e instalan aplicaciones desde el Centro de software.  
+- El **Centro de software** se instala automáticamente en un dispositivo al instalar el cliente de Configuration Manager. Los usuarios cambian la configuración y buscan e instalan aplicaciones desde el Centro de software.  
 
- Consulte las secciones siguientes para obtener información sobre la privacidad en la [afinidad entre usuario y dispositivo](#bkmk_privacy-uda) y [el Centro de software y el catálogo de aplicaciones](#bkmk_privacy-userex).  
+  Consulte las secciones siguientes para obtener información sobre la privacidad en la [afinidad entre usuario y dispositivo](#bkmk_privacy-uda) y [el Centro de software y el catálogo de aplicaciones](#bkmk_privacy-userex).  
 
- Para configurar la administración de aplicaciones, tenga en cuenta los requisitos de privacidad.  
+  Para configurar la administración de aplicaciones, tenga en cuenta los requisitos de privacidad.  
 
 
 ### <a name="bkmk_privacy-uda"></a> Afinidad entre usuario y dispositivo  

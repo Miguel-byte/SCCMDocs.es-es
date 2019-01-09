@@ -10,12 +10,12 @@ ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7519971f05813edbf601c598b9281bcfdf19c83b
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ms.openlocfilehash: a9fe9c0b2f779558161e7995a01863e6415838ee
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229337"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423089"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>Novedades de la versión 1706 de System Center Configuration Manager
 
@@ -130,30 +130,30 @@ Para detalles de todas las configuraciones de Windows 10, consulte [Cómo crear 
 
 ### <a name="new-device-compliance-policy-rules"></a>Nuevas reglas de directiva de cumplimiento de dispositivos
 
-* **Tipo de contraseña requerida**. Especifica si el usuario debe crear una contraseña numérica o alfanumérica. En el caso de las contraseñas alfanuméricas, puede especificar también el número mínimo de juegos de caracteres que debe tener la contraseña. Los cuatro juegos de caracteres son: letras minúsculas, letras mayúsculas, símbolos y números.
+* **Tipo de contraseña requerida**. Especifica si el usuario debe crear una contraseña numérica o alfanumérica. En el caso de las contraseñas alfanuméricas, puede especificar también el número mínimo de juegos de caracteres que debe tener la contraseña. Los conjuntos de cuatro caracteres son los siguientes: letras minúsculas, letras mayúsculas, símbolos y números.
 
- **Compatible con:**
- * Windows Phone 8+
- * Windows 8.1+
- * iOS 6+
-<br></br>
+  **Compatible con:**
+  * Windows Phone 8+
+  * Windows 8.1+
+  * iOS 6+
+  <br></br>
 * **Bloquear depuración USB en el dispositivo**. No es necesario configurar este parámetro porque la depuración USB ya está deshabilitada en los dispositivos Android for Work.
 
- **Compatible con:**
- * Android 4.0+
- * Samsung KNOX Standard 4.0+
-<br></br>
+  **Compatible con:**
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
+  <br></br>
 * **Bloquear aplicaciones de orígenes desconocidos**. Los dispositivos deben impedir la instalación de aplicaciones de orígenes desconocidos. No es necesario configurar este valor, ya que los dispositivos Android for Work siempre restringen la instalación de orígenes desconocidos.
 
   **Compatible con:**
   * Android 4.0+
   * Samsung KNOX Standard 4.0+
-<br></br>
+  <br></br>
 * **Requerir examen de amenazas en las aplicaciones**. Este valor especifica que la característica Verificar aplicaciones está habilitada en el dispositivo.
 
- **Compatible con:**
- * Android 4.2 hasta 4.4
- * Samsung KNOX Standard 4.0+
+  **Compatible con:**
+  * Android 4.2 hasta 4.4
+  * Samsung KNOX Standard 4.0+
 
 Vea [Crear e implementar una directiva de cumplimiento de dispositivos](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy) para probar las nuevas reglas de cumplimiento del dispositivo.
 
@@ -175,7 +175,7 @@ Para obtener más información, consulte [Creación y ejecución de scripts de P
 ### <a name="new-mobile-application-management-policy-settings"></a>Configuración de nueva directiva de administración de aplicaciones móviles    
 <!--1324760--> A partir de esta versión, puede usar tres nuevas opciones de configuración para la directiva de Administración de aplicaciones móviles:
 
-- **Bloquear captura de pantalla	(solo dispositivos Android):** especifica que las funciones de captura de pantalla del dispositivo se bloquean cuando se usa esta aplicación.
+- **Bloquear captura de pantalla (solo en dispositivos Android):** Especifica que las funciones de captura de pantalla del dispositivo se bloquean cuando se usa esta aplicación.
 
 Vea [Proteger aplicaciones mediante directivas de administración de aplicaciones móviles en System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) para probar la nueva configuración de la directiva de protección de aplicaciones.
 

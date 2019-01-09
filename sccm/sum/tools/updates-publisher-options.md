@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 497ff025dafcdb135e466a18f2f6661ca0f21a00
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 126ac524aaea851f5203888d414f7f9b188649c2
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349973"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424483"
 ---
 # <a name="configure-options-for-updates-publisher"></a>Configurar opciones de Updates Publisher
 
@@ -42,45 +42,45 @@ Las opciones se dividen en las siguientes categorías:
 ## <a name="update-server"></a>Servidor de actualización
 Debe configurar Updates Publisher para que funcione con un servidor de actualización como Windows Server Update Services (WSUS) para poder [publicar actualizaciones](/sccm/sum/tools/manage-updates-with-updates-publisher#publish-updates-and-bundles). Esto incluye especificar el servidor, los métodos de conexión a ese servidor cuando es remoto con respecto a la consola y un certificado que use las actualizaciones firmadas digitalmente que publique.
 
--   **Configurar un servidor de actualización**. Cuando configure un servidor de actualización, seleccione el servidor WSUS de nivel superior (servidor de actualización) de la jerarquía de Configuration Manager para que todos los sitios secundarios tengan acceso a las actualizaciones que publique.
+- **Configurar un servidor de actualización**. Cuando configure un servidor de actualización, seleccione el servidor WSUS de nivel superior (servidor de actualización) de la jerarquía de Configuration Manager para que todos los sitios secundarios tengan acceso a las actualizaciones que publique.
 
   Si el servidor de actualización es remoto con respecto al servidor de Updates Publisher, especifique el nombre de dominio completo (FQDN) del servidor e indique si se va a conectar mediante SSL. Cuando se conecta mediante SSL, el puerto predeterminado cambia de 8530 a 8531. Asegúrese de que el puerto que establece coincide con el que usa el servidor de actualización.
 
-    > [!TIP]  
-    > Si no configura un servidor de actualización, todavía puede usar Updates Publisher para crear actualizaciones de software.
+  > [!TIP]  
+  > Si no configura un servidor de actualización, todavía puede usar Updates Publisher para crear actualizaciones de software.
 
--   **Configurar el certificado de firma**. Debe configurar un servidor de actualización y conectarse correctamente al mismo para poder configurar el certificado de firma.
+- **Configurar el certificado de firma**. Debe configurar un servidor de actualización y conectarse correctamente al mismo para poder configurar el certificado de firma.
 
-    Updates Publisher usa el certificado de firma para firmar las actualizaciones de software que se publican en el servidor de actualización. La publicación no se realiza si el certificado digital no está disponible en el almacén de certificados del servidor de actualización o del equipo en donde se ejecuta Updates Publisher.
+  Updates Publisher usa el certificado de firma para firmar las actualizaciones de software que se publican en el servidor de actualización. La publicación no se realiza si el certificado digital no está disponible en el almacén de certificados del servidor de actualización o del equipo en donde se ejecuta Updates Publisher.
 
-    Para obtener más información sobre cómo agregar el certificado al almacén de certificados, Vea [Certificates and security for Updates Publisher](/sccm/sum/tools/updates-publisher-security) (Certificados y seguridad de Updates Publisher).
+  Para obtener más información sobre cómo agregar el certificado al almacén de certificados, Vea [Certificates and security for Updates Publisher](/sccm/sum/tools/updates-publisher-security) (Certificados y seguridad de Updates Publisher).
 
-    Si el servidor de actualización no detecta automáticamente un certificado digital, elija una de las siguientes opciones:
+  Si el servidor de actualización no detecta automáticamente un certificado digital, elija una de las siguientes opciones:
 
-    -   **Examinar**: esta opción solo está disponible cuando el servidor de actualización está instalado en el servidor donde se ejecuta la consola. Después de seleccionar un certificado, debe elegir **Crear** para agregar el certificado al almacén de certificados de WSUS en el servidor de actualización. Debe especificar la contraseña del archivo **.pfx** de los certificados que seleccione con este método.
+  -   **Examinar**: esta opción solo está disponible cuando el servidor de actualización está instalado en el servidor donde se ejecuta la consola. Después de seleccionar un certificado, debe elegir **Crear** para agregar el certificado al almacén de certificados de WSUS en el servidor de actualización. Debe especificar la contraseña del archivo **.pfx** de los certificados que seleccione con este método.
 
-    -   **Crear**: use esta opción para crear un certificado. Esta opción también agrega el certificado al almacén de certificados de WSUS en el servidor de actualización.
+  -   **Crear:** use esta opción para crear un certificado. Esta opción también agrega el certificado al almacén de certificados de WSUS en el servidor de actualización.
 
-    **Si crea su propio certificado**, configure lo siguiente:
+  **Si crea su propio certificado**, configure lo siguiente:
 
-    -   Habilite la opción **Permitir que se pueda exportar la clave privada**.
+  -   Habilite la opción **Permitir que se pueda exportar la clave privada**.
 
-    -   Establezca **Uso de claves** en firma digital.
+  -   Establezca **Uso de claves** en firma digital.
 
-    -   Establezca **Tamaño mínimo de clave** en un valor igual o mayor que 2048 bits.
+  -   Establezca **Tamaño mínimo de clave** en un valor igual o mayor que 2048 bits.
 
-    Use la opción **Quitar** para quitar un certificado del almacén de certificados de WSUS. Esta opción está disponible cuando el servidor de actualización es local con respecto a la consola de Updates Publisher que se use o cuando se usa **SSL** para conectarse a un servidor de actualización remoto.
+  Use la opción **Quitar** para quitar un certificado del almacén de certificados de WSUS. Esta opción está disponible cuando el servidor de actualización es local con respecto a la consola de Updates Publisher que se use o cuando se usa **SSL** para conectarse a un servidor de actualización remoto.
 
 ## <a name="configmgr-server"></a>Servidor de Configuration Manager
 Use estas opciones cuando utilice Configuration Manager con Updates Publisher.
 
 -   **Specify the Configuration Manager server** (Especificar el servidor de Configuration Manager): después de habilitar la configuración con Configuration Manager, especifique la ubicación del servidor del sitio de nivel superior de la jerarquía de Configuration Manager. Si ese servidor es remoto con respecto a la instalación de Updates Publisher, especifique el FQDN del servidor del sitio. Elija **Prueba de conexión** para asegurarse de que se puede conectar al servidor del sitio.
 
--   **Configure thresholds** (Configurar umbrales): los umbrales se usan cuando se publican actualizaciones con el tipo de actualización automático. Los valores de umbral ayudan a determinar cuando se publica el contenido completo de una actualización en lugar de solo los metadatos. Para obtener más información sobre tipos de publicación, vea [Assign updates to a publication](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication) (Asignar actualizaciones a una publicación).
+-   **Configurar umbrales:** los umbrales se usan cuando se publican actualizaciones con el tipo de actualización automático. Los valores de umbral ayudan a determinar cuando se publica el contenido completo de una actualización en lugar de solo los metadatos. Para obtener más información sobre tipos de publicación, vea [Assign updates to a publication](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication) (Asignar actualizaciones a una publicación).
 
     Puede habilitar uno de los siguientes conjuntos de reglas, o bien ambos:
 
-    -   **Requested client count threshold** (Umbral de cuenta de clientes solicitados): este umbral define cuántos clientes deben solicitar una actualización para que Updates Publisher pueda publicar automáticamente el conjunto de contenido completo para esa actualización. Hasta que el número de clientes especificado soliciten la actualización, solo se publican los metadatos de las actualizaciones.
+    -   **Requested client count threshold** (Umbral de cuenta de clientes solicitados): este umbral define cuántos clientes deben solicitar una actualización para que Updates Publisher pueda publicar de forma automática el conjunto de contenido completo para esa actualización. Hasta que el número de clientes especificado soliciten la actualización, solo se publican los metadatos de las actualizaciones.
 
     -   **Package source size threshold (MB)** [Umbral de tamaño de origen del paquete (MB]): esta opción impide la publicación automática de actualizaciones que superen el tamaño especificado. Si el tamaño de las actualizaciones supera este valor, solo se publican los metadatos. Las actualizaciones de tamaño menor que el especificado pueden tener publicado su contenido completo.
 
@@ -101,17 +101,17 @@ El contenido de editores que no son de confianza puede dañar los equipos client
 ## <a name="advanced"></a>avanzadas
 Las opciones avanzadas incluyen:
 
--   **Ubicación del repositorio**: vea y modifique la ubicación del archivo de base de datos, **scupdb.sdf**. Este archivo es el repositorio de Updates Publisher.
+-   **Ubicación del repositorio:** vea y modifique la ubicación del archivo de base de datos, **scupdb.sdf**. Este archivo es el repositorio de Updates Publisher.
 
--   **Marca de tiempo**: cuando se habilita, se agrega a las actualizaciones que firma una marca de tiempo que identifica cuándo se firmó. Una actualización que se firme mientras un certificado sea válido se puede usar después de que el certificado expire. De manera predeterminada, las actualizaciones de software no se pueden implementar después de que su certificado de firma expire.
+-   **Marca de tiempo:** cuando se habilita, se agrega a las actualizaciones que firma una marca de tiempo que identifica cuándo se han firmado. Una actualización que se firme mientras un certificado sea válido se puede usar después de que el certificado expire. De manera predeterminada, las actualizaciones de software no se pueden implementar después de que su certificado de firma expire.
 
--   **Check for updates to subscribed catalogs** (Buscar actualizaciones de catálogos suscritos): cada vez que Updates Publisher se inicia, puede buscar automáticamente actualizaciones de los catálogos a lo que se haya suscrito. Cuando se encuentra una actualización de catálogo, se ofrecen detalles como **Alertas recientes** en la ventana **Introducción** del **área de trabajo Actualizaciones**.
+-   **Check for updates to subscribed catalogs** (Buscar actualizaciones de catálogos suscritos): cada vez que se inicia Updates Publisher, puede buscar de forma automática actualizaciones de los catálogos a lo que se haya suscrito. Cuando se encuentra una actualización de catálogo, se ofrecen detalles como **Alertas recientes** en la ventana **Introducción** del **área de trabajo Actualizaciones**.
 
 -   **Revocación de certificados**: elija esta opción para habilitar comprobaciones de revocación de certificados.
 
 -   **Local source publishing** (Publicación de origen local): Updates Publisher puede usar una copia local de una actualización que publique antes de descargar esa actualización de Internet. La ubicación puede ser una carpeta en el equipo que ejecuta Updates Publisher. De manera predeterminada, esta ubicación es **Mis documentos\LocalSourcePublishing.** Úsela cuando haya descargado una o más actualizaciones anteriormente o haya realizado modificaciones a una actualización que quiera implementar.
 
--   **Software Updates Cleanup Wizard** (Asistente para la limpieza de actualizaciones de software): inicia el asistente para la limpieza de actualizaciones. El asistente hace que expiren las actualizaciones que están en el servidor de actualización pero no en el repositorio de Updates Publisher. Vea [Expire unreferenced updates](#expire-unreferenced-software-updates) (Expirar actualizaciones sin referencia) para obtener más información.
+-   **Asistente para la limpieza de actualizaciones de software:** inicia al Asistente para la limpieza de actualizaciones. El asistente hace que expiren las actualizaciones que están en el servidor de actualización pero no en el repositorio de Updates Publisher. Vea [Expire unreferenced updates](#expire-unreferenced-software-updates) (Expirar actualizaciones sin referencia) para obtener más información.
 
 ## <a name="updates"></a>Actualizaciones
  Updates Publisher puede buscar nuevas actualizaciones automáticamente cada vez que se abre. También puede optar por recibir compilaciones de vista previa de Updates Publisher.

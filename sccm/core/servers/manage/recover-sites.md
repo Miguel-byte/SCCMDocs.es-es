@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4737acb34de3aebc8560f54d77b6b341c82ebf65
-ms.sourcegitcommit: 6e0e5b4b7779ce03e2b56b3b5f68f4ace1acedd8
+ms.openlocfilehash: b56dd830e2550a14d6b1e44d2aa7fdda7c56bc9b
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467664"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420505"
 ---
 #  <a name="recover-a-configuration-manager-site"></a>Recuperar un sitio de Configuration Manager
 
@@ -102,9 +102,9 @@ Use esta opción si ya ha recuperado la base de datos de sitio de Configuration 
 
 - Configuration Manager puede recuperar la base de datos de sitio desde cualquiera de los siguientes procesos:  
 
-    - La tarea de mantenimiento de copia de seguridad de Configuration Manager  
-    - Una copia de seguridad de base de datos de sitio con Data Protection Manager (DPM)  
-    - Otro proceso de copia de seguridad   
+  - La tarea de mantenimiento de copia de seguridad de Configuration Manager  
+  - Una copia de seguridad de base de datos de sitio con Data Protection Manager (DPM)  
+  - Otro proceso de copia de seguridad   
 
     Después de restaurar la base de datos de sitio con un método ajeno a Configuration Manager, ejecute el programa de instalación y seleccione esta opción para completar la recuperación de la base de datos de sitio.  
 
@@ -121,7 +121,7 @@ Use esta opción si no se ha producido ninguna pérdida de datos en el servidor 
 
 Configuration Manager habilita el seguimiento de cambios de la base de datos de sitio de SQL Server. El seguimiento de cambios permite a Configuration Manager consultar información sobre los cambios realizados en las tablas de base de datos a partir de un punto concreto en el tiempo. El período de retención especifica cuánto tiempo se conserva la información de seguimiento de cambios. De forma predeterminada, la base de datos de sitio está configurada para tener un período de retención de cinco días. Cuando se recupera una base de datos del sitio, el proceso de recuperación variará en función de si la copia de seguridad pertenece o no al período de retención. Por ejemplo, si se produce un error en SQL Server y la última copia de seguridad se hizo hace siete días, está fuera del período de retención.
 
-Para obtener más información sobre los datos internos de seguimiento de cambios de SQL Server, vea las siguientes entradas de blog del equipo de SQL Server: [Change Tracking Cleanup - part 1](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1/) (Limpieza de seguimiento de cambios - parte 1) y [Change Tracking Cleanup - part 2](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2) (Limpieza de seguimiento de cambios - parte 2).
+Para obtener más información sobre los datos internos de seguimiento de cambios de SQL Server, vea las siguientes entradas de blog del equipo de SQL Server: [Change Tracking Cleanup - part 1](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1/) (Limpieza de seguimiento de cambios: Parte 1) y [Change Tracking Cleanup - part 2](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2) (Limpieza de seguimiento de cambios: Parte 2).
 
 
 ### <a name="reinitialization-of-site-or-global-data"></a>Reinicialización de los datos globales o del sitio
@@ -131,10 +131,10 @@ El proceso para reinicializar datos globales o del sitio reemplaza los datos exi
 - Los datos existentes para el sitio XYZ se quitan de la base de datos del sitio en el sitio ABC.
 - Los datos copiados desde el sitio XYZ se insertan en la base de datos del sitio para el sitio ABC.
 
-#### <a name="example-scenario-1-the-primary-site-reinitializes-the-global-data-from-the-central-administration-site"></a>Escenario de ejemplo 1: el sitio primario reinicializa los datos globales desde el sitio de administración central  
+#### <a name="example-scenario-1-the-primary-site-reinitializes-the-global-data-from-the-central-administration-site"></a>Escenario de ejemplo 1: El sitio primario reinicializa los datos globales desde el sitio de administración central  
 el proceso de recuperación quita los datos globales existentes para el sitio primario de la base de datos del sitio primario, y reemplaza los datos por datos globales copiados desde el sitio de administración central.
 
-#### <a name="example-scenario-2-the-central-administration-site-reinitializes-the-site-data-from-a-primary-site"></a>Escenario de ejemplo 2: el sitio de administración central reinicializa los datos del sitio desde un sitio primario 
+#### <a name="example-scenario-2-the-central-administration-site-reinitializes-the-site-data-from-a-primary-site"></a>Escenario de ejemplo 2: El sitio de administración central reinicializa los datos del sitio desde un sitio primario 
 El proceso de recuperación quita los datos existentes de sitio de ese sitio primario de la base de datos de sitio de administración central. Reemplaza los datos con los datos de sitio copiados del sitio primario. Los datos de sitio de otros sitios primarios no se ven afectados.
 
 
@@ -145,27 +145,27 @@ Una vez restaurada la base de datos de sitio a partir de una copia de seguridad,
 #### <a name="recovered-site-is-a-central-administration-site"></a>El sitio recuperado es un sitio de administración central
 - Copia de seguridad de base de datos dentro del período de retención del seguimiento de cambios  
 
-     - **Datos globales**: los cambios en los datos globales posteriores a la copia de seguridad se replican desde todos los sitios primarios.  
+     - **Datos globales**: Los cambios en los datos globales posteriores a la copia de seguridad se replican desde todos los sitios primarios.  
 
-     - **Datos de sitio**: los cambios en los datos de sitio posteriores a la copia de seguridad se replican desde todos los sitios primarios.  
+     - **Datos de sitio**: Los cambios en los datos del sitio posteriores a la copia de seguridad se replican desde todos los sitios primarios.  
 
 - Copia de seguridad de base de datos anterior al período de retención de seguimiento de cambios  
 
      - **Datos globales**: el sitio de administración central reinicializa los datos globales desde el sitio primario de referencia, si se especifica. A continuación, el resto de sitios primarios reinicializan los datos globales desde el sitio de administración central. Si no se especifica un sitio de referencia, el resto de sitios primarios reinicializan los datos globales desde el sitio de administración central. Estos datos son lo que se ha restaurado a partir de la copia de seguridad.  
 
-     - **Datos de sitio**: el sitio de administración central reinicializa los datos de sitio desde cada sitio primario.  
+     - **Datos de sitio**: El sitio de administración central reinicializa los datos del sitio desde cada sitio primario.  
 
 #### <a name="recovered-site-is-a-primary-site"></a>El sitio recuperado es un sitio primario
 - Copia de seguridad de base de datos dentro del período de retención del seguimiento de cambios  
 
-     - **Datos globales**: los cambios en los datos globales posteriores a la copia de seguridad se replican desde el sitio de administración central.  
+     - **Datos globales**: Los cambios en los datos globales posteriores a la copia de seguridad se replican desde el sitio de administración central.  
 
-     - **Datos de sitio**: el sitio de administración central reinicializa los datos de sitio desde el sitio primario. Se pierden los cambios posteriores a la copia de seguridad. Los clientes vuelven a generar la mayoría de los datos cuando envían información al sitio primario.  
+     - **Datos de sitio**: El sitio de administración central reinicializa los datos del sitio desde el sitio primario. Se pierden los cambios posteriores a la copia de seguridad. Los clientes vuelven a generar la mayoría de los datos cuando envían información al sitio primario.  
 
 - Copia de seguridad de base de datos anterior al período de retención de seguimiento de cambios  
-     - **Datos globales**: el sitio primario reinicializa los datos globales desde el sitio de administración central.  
+     - **Datos globales**: El sitio primario reinicializa los datos globales desde el sitio de administración central.  
 
-     - **Datos de sitio**: el sitio de administración central reinicializa los datos de sitio desde el sitio primario. Se pierden los cambios posteriores a la copia de seguridad. Los clientes vuelven a generar la mayoría de los datos cuando envían información al sitio primario.  
+     - **Datos de sitio**: El sitio de administración central reinicializa los datos del sitio desde el sitio primario. Se pierden los cambios posteriores a la copia de seguridad. Los clientes vuelven a generar la mayoría de los datos cuando envían información al sitio primario.  
 
 
 

@@ -10,12 +10,12 @@ ms.assetid: e2a59116-b2e5-4dd2-90eb-0b8a5eb50b56
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3cfd7131f5b6fb721fdc96c6486183d3781af9d6
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d5bc2f342ec39366a22e915dab08a7338f850dd1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342399"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415167"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1609 para System Center Configuration Manager
 
@@ -60,7 +60,7 @@ Ahora, cuando use Configuration Manager con Intune, puede crear perfiles de VPN 
 
 En esta versión, se ha actualizado la [integración de la Tienda Windows para empresas](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business) con estas nuevas características:
 
-**Actualización:** en la versión actual de la Technical Preview, la característica de sincronización inmediata no es funcional.
+**Actualización:** en la versión actual de Technical Preview, la característica de sincronización inmediata no es funcional.
 
 - Anteriormente, solo se podían implementar aplicaciones gratuitas de la Tienda Windows para empresas. Configuration Manager ahora además admite la implementación de aplicaciones con licencia en línea de pago (solo para dispositivos inscritos en Intune).
 - Ahora puede iniciar una sincronización inmediata entre la Tienda Windows para empresas y Configuration Manager.
@@ -237,38 +237,38 @@ En las secciones siguientes se detallan los cambios presentados en esta vista pr
 
 ### <a name="changes-in-ui-and-behavior-for-boundary-groups-and-content-locations"></a>Cambios en la interfaz de usuario y comportamiento de los grupos de límites y las ubicaciones de contenido
 Estos son los principales cambios realizados en los grupos de límites y en la forma en que los clientes buscan contenido. Muchos de estos conceptos y cambios funcionan conjuntamente.
--   **Se quitan las configuraciones de rápido o lento:** ya no se configuran los puntos de distribución individuales para que sean rápidos o lentos.  En su lugar, se trata igual cada sistema de sitio asociado a un grupo de límites. Debido a este cambio, la pestaña **Referencias** de las propiedades del grupo de límites ya no admite la configuración de Rápido o Lento.
--   **Nuevo grupo de límites predeterminado en cada sitio:** cada sitio primario tiene un nuevo grupo de límites predeterminado denominado ***Default-Site-Boundary-Group\<sitecode>***.  Cuando un cliente no esté en una ubicación de red asignada a un grupo de límites, ese cliente usará los sistemas de sitio asociados con el grupo predeterminado de su sitio asignado. Este grupo de límites se puede considerar un sustituto del concepto de ubicación de contenido de reserva.    
- -  **Permitir a los clientes usar una ubicación de origen de reserva para el contenido** se ha quitado: ya no se configuran puntos de distribución de forma explícita para usarse como reserva y las opciones para hacerlo se han quitado de la interfaz de usuario.
+- **Se quitan las configuraciones de Rápido o Lento:** Ya no se configuran los puntos de distribución individuales para que sean rápidos o lentos.  En su lugar, se trata igual cada sistema de sitio asociado a un grupo de límites. Debido a este cambio, la pestaña **Referencias** de las propiedades del grupo de límites ya no admite la configuración de Rápido o Lento.
+- **Nuevo grupo de límites predeterminado en cada sitio:**  Cada sitio primario tiene un nuevo grupo de límites predeterminado denominado ***Default-Site-Boundary-Group\<sitecode>***.  Cuando un cliente no esté en una ubicación de red asignada a un grupo de límites, ese cliente usará los sistemas de sitio asociados con el grupo predeterminado de su sitio asignado. Este grupo de límites se puede considerar un sustituto del concepto de ubicación de contenido de reserva.    
+  -  Se ha eliminado **Permitir a los clientes usar una ubicación de origen de reserva para el contenido**: ya no se configuran puntos de distribución de forma explícita para usarse como reserva y las opciones para hacerlo se han quitado de la interfaz de usuario.
 
-    Además, el resultado de establecer **Permitir a los clientes usar una ubicación de origen de reserva para el contenido** en un tipo de implementación para aplicaciones ha cambiado. Esta opción en un tipo de implementación ahora permite a un cliente usar el grupo de límites de sitio predeterminado como una ubicación de origen de contenido.
+  Además, el resultado de establecer **Permitir a los clientes usar una ubicación de origen de reserva para el contenido** en un tipo de implementación para aplicaciones ha cambiado. Esta opción en un tipo de implementación ahora permite a un cliente usar el grupo de límites de sitio predeterminado como una ubicación de origen de contenido.
 
- -  **Relaciones de grupos de límites:** cada grupo de límites se puede vincular a uno o más grupos de límites adicionales. Estos vínculos forman relaciones que se configuran en la nueva pestaña de propiedades de grupos de límites denominada **Relaciones**:
-    -   Cada grupo de límites asociado directamente a un cliente se denomina grupo de límites **actual**.  
-    -   Cualquier grupo de límites que un cliente pueda usar debido a una asociación entre ese grupo de límites *actual* de cliente y otro grupo se denomina grupo de límites **vecino**.
-    -  Es en la pestaña **Relaciones** donde se agregan los grupos de límites que se pueden usar como grupos de límites *vecinos*. También puede configurar un tiempo en minutos que determine cuándo empezará un cliente que no pueda encontrar contenido de un punto de distribución del grupo *actual* a buscar ubicaciones de contenido de esos grupos de límites *vecinos*.
+  -  **Relaciones de grupos de límites:** cada grupo de límites se puede vincular a uno o varios grupos de límites adicionales. Estos vínculos forman relaciones que se configuran en la nueva pestaña de propiedades de grupos de límites denominada **Relaciones**:
+  -   Cada grupo de límites asociado directamente a un cliente se denomina grupo de límites **actual**.  
+  -   Cualquier grupo de límites que un cliente pueda usar debido a una asociación entre ese grupo de límites *actual* de cliente y otro grupo se denomina grupo de límites **vecino**.
+  -  Es en la pestaña **Relaciones** donde se agregan los grupos de límites que se pueden usar como grupos de límites *vecinos*. También puede configurar un tiempo en minutos que determine cuándo empezará un cliente que no pueda encontrar contenido de un punto de distribución del grupo *actual* a buscar ubicaciones de contenido de esos grupos de límites *vecinos*.
 
-        Al agregar o cambiar la configuración de un grupo de límites, tendrá la opción de bloquear la reserva de ese grupo de límites concreto desde el grupo actual que está configurando.
+      Al agregar o cambiar la configuración de un grupo de límites, tendrá la opción de bloquear la reserva de ese grupo de límites concreto desde el grupo actual que está configurando.
 
-    Para usar la nueva configuración, defina asociaciones explícitas (vínculos) de un grupo de límites con otro y configure todos los puntos de distribución de ese grupo asociado con el mismo tiempo en minutos. El tiempo que configure determina si un cliente que no encuentra un origen de contenido de su grupo de límites *actual* puede empezar a buscar orígenes de contenido en ese grupo de límites vecino.
+  Para usar la nueva configuración, defina asociaciones explícitas (vínculos) de un grupo de límites con otro y configure todos los puntos de distribución de ese grupo asociado con el mismo tiempo en minutos. El tiempo que configure determina si un cliente que no encuentra un origen de contenido de su grupo de límites *actual* puede empezar a buscar orígenes de contenido en ese grupo de límites vecino.
 
-    Además de los grupos de límites que se configuran explícitamente, cada grupo de límites tiene un vínculo implícito al grupo de límites de sitio predeterminado. Este vínculo se activa después de 120 minutos, momento en que el grupo de límites de sitio predeterminado se convierte en un grupo de límites vecino que permite a los clientes usar los puntos de distribución asociados a ese grupo de límites como ubicaciones de origen de contenido.
+  Además de los grupos de límites que se configuran explícitamente, cada grupo de límites tiene un vínculo implícito al grupo de límites de sitio predeterminado. Este vínculo se activa después de 120 minutos, momento en que el grupo de límites de sitio predeterminado se convierte en un grupo de límites vecino que permite a los clientes usar los puntos de distribución asociados a ese grupo de límites como ubicaciones de origen de contenido.
 
-    Este comportamiento reemplaza a lo que anteriormente se conocía como reserva de contenido.  Puede anular este comportamiento predeterminado de 120 minutos si asocia explícitamente el grupo de límites de sitio predeterminado a un grupo *actual* y establece un tiempo concreto en minutos o bloquea la reserva completamente para evitar su uso.
+  Este comportamiento reemplaza a lo que anteriormente se conocía como reserva de contenido.  Puede anular este comportamiento predeterminado de 120 minutos si asocia explícitamente el grupo de límites de sitio predeterminado a un grupo *actual* y establece un tiempo concreto en minutos o bloquea la reserva completamente para evitar su uso.
 
 
--   **Los clientes intentan obtener contenido de cada punto de distribución hasta un máximo de dos minutos:** cuando un cliente busca una ubicación de origen de contenido, intenta acceder a cada punto de distribución durante dos minutos antes de intentarlo con otro punto de distribución. Esto supone un cambio con respecto a las versiones anteriores, donde los clientes intentaban conectarse a un punto de distribución hasta un máximo de dos horas.
+- **Los clientes intentan obtener contenido de cada punto de distribución hasta un máximo de dos minutos:** cuando un cliente busca una ubicación de origen de contenido, intenta acceder a cada punto de distribución durante dos minutos antes de intentarlo con otro punto de distribución. Esto supone un cambio con respecto a las versiones anteriores, donde los clientes intentaban conectarse a un punto de distribución hasta un máximo de dos horas.
 
-    - El primer punto de distribución que un cliente intenta usar se selecciona aleatoriamente en el grupo de puntos de distribución disponibles del grupo (o grupos) de límites *actual* del cliente.
+  - El primer punto de distribución que un cliente intenta usar se selecciona aleatoriamente en el grupo de puntos de distribución disponibles del grupo (o grupos) de límites *actual* del cliente.
 
-    - Después de dos minutos, si el cliente no ha encontrado el contenido, cambia a un nuevo punto de distribución e intenta obtener contenido de ese servidor. Este proceso se repite cada dos minutos hasta que el cliente encuentra el contenido o alcanza el último servidor de su grupo.
+  - Después de dos minutos, si el cliente no ha encontrado el contenido, cambia a un nuevo punto de distribución e intenta obtener contenido de ese servidor. Este proceso se repite cada dos minutos hasta que el cliente encuentra el contenido o alcanza el último servidor de su grupo.
 
-    - Si un cliente no puede encontrar una ubicación de origen de contenido válida de su grupo *actual* antes de que se alcance la reserva de un grupo de límites *vecino*, el cliente agrega los puntos de distribución de ese grupo *vecino* al final de su lista actual y luego busca en el grupo ampliado de ubicaciones de origen que incluye los puntos de distribución de ambos grupos de límites.
+  - Si un cliente no puede encontrar una ubicación de origen de contenido válida de su grupo *actual* antes de que se alcance la reserva de un grupo de límites *vecino*, el cliente agrega los puntos de distribución de ese grupo *vecino* al final de su lista actual y luego busca en el grupo ampliado de ubicaciones de origen que incluye los puntos de distribución de ambos grupos de límites.
 
-        > [!TIP]  
-        > Al crear un vínculo explícito entre el grupo de límites actual y el grupo de límites de sitio predeterminado y definir un tiempo de reserva menor que el tiempo de reserva de un vínculo a un grupo de límites vecino, los clientes empiezan a buscar ubicaciones de origen en el grupo de límites de sitio predeterminado antes de incluir el grupo vecino.
+      > [!TIP]  
+      > Al crear un vínculo explícito entre el grupo de límites actual y el grupo de límites de sitio predeterminado y definir un tiempo de reserva menor que el tiempo de reserva de un vínculo a un grupo de límites vecino, los clientes empiezan a buscar ubicaciones de origen en el grupo de límites de sitio predeterminado antes de incluir el grupo vecino.
 
-    - Cuando el cliente no puede obtener contenido del último servidor del grupo, el proceso comienza de nuevo.
+  - Cuando el cliente no puede obtener contenido del último servidor del grupo, el proceso comienza de nuevo.
 
 
 ### <a name="how-the-new-model-works"></a>Funcionamiento del nuevo modelo
@@ -318,14 +318,13 @@ Mediante la configuración de los distintos grupos vecinos para que estén dispo
 
 ### <a name="bkmk_update"></a> Actualizar grupos de límites existentes al nuevo modelo
 Al instalar la versión 1609 y actualizar el sitio, se realizan automáticamente las siguientes configuraciones. Su objetivo es garantizar que el comportamiento de reserva actual siga estando disponible hasta que configure nuevos grupos de límites y relaciones.  
--   Se agregan puntos de distribución sin proteger en un sitio al grupo de límites
-*Default-Site-Boundary-Group\<sitecode>* de ese sitio.
--   Se realiza una copia de cada grupo de límites existente que incluye un servidor de sitio configurado con una conexión lenta. El nombre del nuevo grupo es ***\<nombre original del grupo de límites>-Slow-Tmp***:  
-    -   Los sistemas de sitio con una conexión rápida se dejan en el grupo de límites original.
-    -   Se agrega una copia de los sistemas de sitio con una conexión lenta a la copia del grupo de límites. Los sistemas de sitio originales configurados como lentos permanecen en el grupo de límites original por razones de compatibilidad, pero no se usan desde ese grupo de límites.
-    -   Esta copia del grupo de límites no tiene límites asociados, pero se crea un vínculo de reserva entre el grupo original y la nueva copia del grupo de límites con un tiempo de reserva establecido en cero.
+- Se agregan puntos de distribución sin proteger en un sitio al grupo de límites*Default-Site-Boundary-Group\<sitecode&gt;* de ese sitio.
+- Se realiza una copia de cada grupo de límites existente que incluye un servidor de sitio configurado con una conexión lenta. El nombre del nuevo grupo es ***\<nombre original del grupo de límites>-Slow-Tmp***:  
+  -   Los sistemas de sitio con una conexión rápida se dejan en el grupo de límites original.
+  -   Se agrega una copia de los sistemas de sitio con una conexión lenta a la copia del grupo de límites. Los sistemas de sitio originales configurados como lentos permanecen en el grupo de límites original por razones de compatibilidad, pero no se usan desde ese grupo de límites.
+  -   Esta copia del grupo de límites no tiene límites asociados, pero se crea un vínculo de reserva entre el grupo original y la nueva copia del grupo de límites con un tiempo de reserva establecido en cero.
 
- En la siguiente tabla se identifica el nuevo comportamiento de reserva que se puede esperar de la combinación de las configuraciones de implementación originales y las configuraciones de los puntos de distribución:
+  En la siguiente tabla se identifica el nuevo comportamiento de reserva que se puede esperar de la combinación de las configuraciones de implementación originales y las configuraciones de los puntos de distribución:
 
 Configuración de implementación original “No ejecutar programa” de la red lenta  |Configuración de punto de distribución original “Permitir a los clientes usar una ubicación de origen de reserva para el contenido”  |Nuevo comportamiento de reserva  
 ---------|---------|---------

@@ -10,12 +10,12 @@ ms.assetid: f4706a58-1f11-4eab-b1eb-3d1a0da02d0f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 730d14c5985c088d964761bb83043f3a34924486
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: e8f7a8fbdbd52a8f872583cf2237a06ee8c1420e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340342"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414725"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1710 para System Center Configuration Manager
 
@@ -30,8 +30,8 @@ En este artículo se presentan las características disponibles en Technical Pre
     Workaround details.
 -->
 **Problemas conocidos de esta Technical Preview:**
--   **Compatibilidad con Windows 10, versión 1709 (también conocida como Fall Creators Update)**.  A partir de esta versión de Windows, Windows Media incluye varias ediciones. Al configurar una secuencia de tareas para usar un paquete de actualizaciones del sistema operativo o una imagen del sistema operativo, no olvide seleccionar una [edición que se pueda usar con Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
--   **La actualización a una nueva versión preliminar no se puede realizar cuando hay un servidor de sitio en modo pasivo**. Si ejecuta una versión preliminar que tiene un [servidor de sitio primario en modo pasivo](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), debe desinstalarlo para poder actualizar correctamente el sitio en versión preliminar a esta nueva versión preliminar. Puede volver a instalar el servidor de sitio en modo pasivo después de que el sitio finalice la actualización.
+- **Compatibilidad con Windows 10, versión 1709 (también conocida como Fall Creators Update)**.  A partir de esta versión de Windows, Windows Media incluye varias ediciones. Al configurar una secuencia de tareas para usar un paquete de actualizaciones del sistema operativo o una imagen del sistema operativo, no olvide seleccionar una [edición que se pueda usar con Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
+- **La actualización a una nueva versión preliminar no se puede realizar cuando hay un servidor de sitio en modo pasivo**. Si ejecuta una versión preliminar que tiene un [servidor de sitio primario en modo pasivo](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), debe desinstalarlo para poder actualizar correctamente el sitio en versión preliminar a esta nueva versión preliminar. Puede volver a instalar el servidor de sitio en modo pasivo después de que el sitio finalice la actualización.
 
   Para desinstalar el servidor de sitio en modo pasivo:
   1. En la consola vaya a **Administración** > **General** > **Configuración de sitio** > **Servidores y roles del sistema de sitios** y seleccione el servidor de sitio en modo pasivo.
@@ -86,8 +86,7 @@ Agregue un icono para su aplicación en el Centro de software. Para probarlo, co
 
 
 ## <a name="check-compliance-from-software-center-for-co-managed-devices"></a>Comprobación del cumplimiento del Centro de software en dispositivos administrados conjuntamente
-<!-- 1356374 -->
-En esta versión, los usuarios pueden usar el Centro de software para comprobar el cumplimiento de sus dispositivos Windows 10 administrados conjuntamente, incluso cuando se administra el acceso condicional mediante Intune. Para más información, consulte [Administración conjunta para dispositivos de Windows 10](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices).
+<!-- 1356374 --> En esta versión, los usuarios pueden utilizar el Centro de software para comprobar el cumplimiento de sus dispositivos Windows 10 administrados conjuntamente, incluso cuando se administra el acceso condicional mediante Intune. Para más información, consulte [Administración conjunta para dispositivos de Windows 10](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices).
 
 
 ## <a name="support-for-exploit-guard"></a>Compatibilidad con la Protección contra vulnerabilidades de seguridad
@@ -112,22 +111,21 @@ Los dispositivos administrados deben ejecutar Windows 10 1709 Fall Creators Upda
 | Protección de redes  |  Los dispositivos deben tener habilitada la [protección en tiempo real de Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard).  |
 
 ### <a name="create-an-exploit-guard-policy----1355468---"></a>Creación de una directiva de Protección contra vulnerabilidades de seguridad<!--1355468 -->
-1.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Endpoint Protection** y, a continuación, haga clic en **Protección contra vulnerabilidades de seguridad de Windows Defender**.
-2.  En la pestaña **Inicio**, en el grupo **Crear**, haga clic en **Create Exploit Policy** (Crear directiva para vulnerabilidades).
-3.  En la página **General** del **Asistente para crear elemento de configuración**, escriba un nombre y, opcionalmente, una descripción para el elemento de configuración.
-4.  A continuación, seleccione los componentes de la Protección contra vulnerabilidades de seguridad que quiere administrar con esta directiva. Para cada componente que seleccione, puede configurar detalles adicionales.
-  - **Reducción de la superficie expuesta a ataques:** configure las amenazas de Office, las amenazas de scripting y las amenazas de correo electrónico que quiere bloquear o auditar. También puede excluir determinados archivos o carpetas de esta regla.
-  - **Acceso controlado a carpetas:** configure el bloqueo o la auditoría y luego agregue las aplicaciones que pueden omitir esta directiva.  También puede especificar carpetas adicionales que no estén protegidas de forma predeterminada.
-  - **Protección contra vulnerabilidades:** especifique un archivo XML que contenga la configuración para mitigar las vulnerabilidades de las aplicaciones y los procesos del sistema. Puede exportar esta configuración desde la aplicación Centro de seguridad de Windows Defender en un dispositivo Windows 10.
-  - **Protección de redes:** configure la protección de redes para bloquear o auditar el acceso a dominios sospechosos.
-5.  Complete el Asistente para crear la directiva, que más tarde puede implementar en los dispositivos.
+1. En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Endpoint Protection** y, a continuación, haga clic en **Protección contra vulnerabilidades de seguridad de Windows Defender**.
+2. En la pestaña **Inicio**, en el grupo **Crear**, haga clic en **Create Exploit Policy** (Crear directiva para vulnerabilidades).
+3. En la página **General** del **Asistente para crear elemento de configuración**, escriba un nombre y, opcionalmente, una descripción para el elemento de configuración.
+4. A continuación, seleccione los componentes de la Protección contra vulnerabilidades de seguridad que quiere administrar con esta directiva. Para cada componente que seleccione, puede configurar detalles adicionales.
+   - **Reducción de la superficie expuesta a ataques:** configure las amenazas de Office, de scripting y de correo electrónico que quiera bloquear o auditar. También puede excluir determinados archivos o carpetas de esta regla.
+   - **Acceso controlado a carpetas:** configure el bloqueo o la auditoría, y luego agregue las aplicaciones que pueden omitir esta directiva.  También puede especificar carpetas adicionales que no estén protegidas de forma predeterminada.
+   - **Protección contra vulnerabilidades:**  especifique un archivo XML que contenga la configuración para mitigar las vulnerabilidades de las aplicaciones y los procesos del sistema. Puede exportar esta configuración desde la aplicación Centro de seguridad de Windows Defender en un dispositivo Windows 10.
+   - **Protección de red:** configure la protección de red para bloquear o auditar el acceso a dominios sospechosos.
+5. Complete el Asistente para crear la directiva, que más tarde puede implementar en los dispositivos.
 
 ### <a name="deploy-an-exploit-guard-policy"></a>Implementación de una directiva de Protección contra vulnerabilidades de seguridad     
 Después de crear directivas de Protección contra vulnerabilidades de seguridad, use al asistente correspondiente para implementarlas. Para ello, abra la consola de Configuration Manager en **Activos y compatibilidad** > **Endpoint Protection** y, a continuación, haga clic en **Deploy Exploit Guard Policy** (Implementar directiva de Protección contra vulnerabilidades de seguridad).
 
 ## <a name="limited-support-for-cng-certificates"></a>Compatibilidad limitada con certificados CNG
-<!-- 1356191 -->
-A partir de esta versión, ahora puede usar plantillas de certificado [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) en los siguientes escenarios:
+<!-- 1356191 --> A partir de esta versión, ahora se pueden usar plantillas de certificado [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) en los escenarios siguientes:
 
 - Registro de cliente y comunicación con un punto de administración de HTTPS.   
 - Distribución de software e implementación de aplicaciones con un punto de distribución de HTTPS.   
@@ -193,7 +191,7 @@ Para permitir que un dispositivo que ejecuta Windows Defender SmartScreen ejecut
 
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies----1351960---"></a>Configuración e implementación de directivas de Protección de aplicaciones de Windows Defender <!-- 1351960 -->
 
-[Protección de aplicaciones de Windows Defender](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) es una nueva característica de Windows que ayuda a proteger a los usuarios al abrir los sitios web que no sean de confianza en un contenedor aislado seguro al que no puedan tener acceso otras partes del sistema operativo. En esta versión preliminar técnica, ya se admite la configuración de esta característica mediante los parámetros de conformidad de Configuration Manager que establezca para a continuación implementarla en una recopilación. Esta característica se publicará en la versión preliminar para la versión de 64 bits de Windows 10 Creators Update (nombre de código: RS2). Para probar esta característica ahora debe estar utilizando una versión preliminar de esta actualización.
+[Protección de aplicaciones de Windows Defender](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) es una nueva característica de Windows que ayuda a proteger a los usuarios al abrir los sitios web que no sean de confianza en un contenedor aislado seguro al que no puedan tener acceso otras partes del sistema operativo. En esta versión preliminar técnica, ya se admite la configuración de esta característica mediante los parámetros de conformidad de Configuration Manager que establezca para a continuación implementarla en una recopilación. Esta característica se publicará en la versión preliminar para la versión de 64 bits de Windows 10 Creators Update (nombre de código: RS2). Para probar esta característica ahora debe estar utilizando una versión preliminar de esta actualización.
 
 ### <a name="before-you-start"></a>Antes de empezar
 Para crear e implementar directivas de Protección de aplicaciones de Windows Defender, los dispositivos de Windows 10 en los que implementa la directiva deben configurarse con una directiva de aislamiento de red. Para más información, consulte la entrada de blog a la que se hace referencia más adelante. Esta funcionalidad solo es aplicable a compilaciones de Windows 10 Insider actuales. Para probarla, los clientes deben ejecutar una compilación reciente de Windows 10 Insider.

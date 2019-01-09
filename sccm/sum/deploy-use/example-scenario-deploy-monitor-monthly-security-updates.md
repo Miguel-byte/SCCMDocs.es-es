@@ -10,12 +10,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: c32f757a-02da-43f2-b055-5cfd097d8c43
 ms.author: aaroncz
-ms.openlocfilehash: eadb7dc9f3f9fc4f4ccca1b27257d8f05cb19ebc
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 092e4a08517c183ac80e45a60a57ddfd78932140
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349820"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423871"
 ---
 # <a name="example-scenario-for-using-system-center-configuration-manager-to-deploy-and-monitor-the-security-software-updates-released-monthly-by-microsoft"></a>Escenario de ejemplo de uso de System Center Configuration Manager para implementar y supervisar las actualizaciones de software de seguridad que Microsoft publica mensualmente
 
@@ -25,13 +25,13 @@ En este tema se proporciona un escenario de ejemplo sobre cómo se pueden usar l
 
  En este escenario, Juan es el administrador de Configuration Manager en Woodgrove Bank. Necesita crear una estrategia de implementación de actualizaciones de software con las siguientes condiciones y requisitos:  
 
--   La implementación activa de actualizaciones de software se produce una semana después de que Microsoft publique las actualizaciones de software de seguridad el segundo martes de cada mes. Este evento se conoce habitualmente como Patch Tuesday (la revisión del martes).  
+- La implementación activa de actualizaciones de software se produce una semana después de que Microsoft publique las actualizaciones de software de seguridad el segundo martes de cada mes. Este evento se conoce habitualmente como Patch Tuesday (la revisión del martes).  
 
--   Las actualizaciones de software se descargan y se configuran en puntos de distribución. A continuación, Juan prueba una implementación en un subconjunto de clientes antes de implementar las actualizaciones de software en su entorno de producción.  
+- Las actualizaciones de software se descargan y se configuran en puntos de distribución. A continuación, Juan prueba una implementación en un subconjunto de clientes antes de implementar las actualizaciones de software en su entorno de producción.  
 
--   Debe ser capaz de supervisar el cumplimiento de las actualizaciones de software por mes o año.  
+- Debe ser capaz de supervisar el cumplimiento de las actualizaciones de software por mes o año.  
 
- En este escenario se supone que ya se ha implementado la infraestructura de punto de actualización de software. Use la información siguiente para planear y configurar las actualizaciones de software en Configuration Manager.  
+  En este escenario se supone que ya se ha implementado la infraestructura de punto de actualización de software. Use la información siguiente para planear y configurar las actualizaciones de software en Configuration Manager.  
 
 |Proceso|Referencia|  
 |-------------|---------------|  
@@ -46,7 +46,7 @@ En este tema se proporciona un escenario de ejemplo sobre cómo se pueden usar l
 
 |Proceso|Referencia|  
 |-------------|---------------|  
-|En el nodo **Todas las actualizaciones de software** de la consola de Configuration Manager, Juan agrega criterios para mostrar solo las actualizaciones de software de seguridad publicadas o revisadas en el año 2015 que cumplen los criterios siguientes:<br /><br /><ul><li>**Criterios**: Fecha de publicación o revisión</li><li>**Condición**: es mayor o igual que la fecha específica<br />**Valor**: 1/1/2015</li><li>**Criterio**: clasificación de actualizaciones<br />**Valor**: Actualizaciones de seguridad</li><li>**Criterios**: Expirado <br />**Valor**: No</li></ul>|No hay información adicional|
+|En el nodo **Todas las actualizaciones de software** de la consola de Configuration Manager, Juan agrega criterios para mostrar solo las actualizaciones de software de seguridad publicadas o revisadas en el año 2015 que cumplen los criterios siguientes:<br /><br /><ul><li>**Criterios**: Fecha de publicación o revisión</li><li>**Condición**: es mayor o igual que la fecha específica<br />**Valor**: 1/1/2015</li><li>**Criterios**: Clasificación de actualizaciones<br />**Valor**: Actualizaciones de seguridad</li><li>**Criterios**: Expirado <br />**Valor**: No</li></ul>|No hay información adicional|
 |Juan agrega todas las actualizaciones de software filtradas a un nuevo grupo de actualizaciones de software con los siguientes requisitos:<br /><br /><ul><li>**Nombre**: Grupo de cumplimiento: actualizaciones de seguridad de Microsoft 2015</li><li>**Descripción**: Actualizaciones de software|[Agregar actualizaciones de software a un grupo de actualizaciones](add-software-updates-to-an-update-group.md)|  
 
 ##  <a name="BKMK_Step2"></a> Paso 2: Crear una regla de implementación automática para el mes en curso  
@@ -56,7 +56,7 @@ En este tema se proporciona un escenario de ejemplo sobre cómo se pueden usar l
 |-------------|---------------|  
 |Juan crea una regla de implementación automática con los siguientes requisitos:<br /><br /><ol><li>En la pestaña **General** , Juan configura lo siguiente:<br /> <ul><li>Especifica **Actualizaciones de seguridad mensuales** como nombre.</li><li>Selecciona una recopilación de prueba con un número limitado de clientes.</li><li>Selecciona **Crear un nuevo grupo de actualizaciones de software**.</li><li>Comprueba que la opción **Habilitar la implementación después de ejecutar la regla** no está seleccionada.</li></ul></li><li>En la pestaña **Configuración de implementación** , Juan selecciona la configuración predeterminada.</li><li>En la página **Actualizaciones de software**, configura los filtros de propiedades y criterios de búsqueda siguientes:<br /><ul><li>Fecha de publicación o revisión **Último mes**.</li><li>Clasificación de actualizaciones **Actualizaciones de seguridad**.</li></ul></li><li>En la página **Evaluación**, Juan habilita la programación de la ejecución de la regla para el **segundo jueves** de cada **mes**. También comprueba que la programación de sincronización se configuró para ejecutarse el **segundo miércoles** de cada **mes**.</li><li>Utiliza la configuración predeterminada en las páginas Programación de implementación, Experiencia del usuario, Alertas y Configuración de descarga.</li><li>En la página **Paquete de implementación**, Juan especifica un nuevo paquete de implementación.</li><li>Utiliza la configuración predeterminada en las páginas Ubicación de descarga y Selección del idioma.</li></ol>|[Implementar actualizaciones de software automáticamente](automatically-deploy-software-updates.md)|  
 
-##  <a name="BKMK_Step3"></a> Paso 3: Comprobar que las actualizaciones de software están listas para su implementación  
+##  <a name="BKMK_Step3"></a> Paso 3: Comprobar que las actualizaciones de software están listas para ser implementadas  
  El segundo jueves de cada mes, Juan comprueba que las actualizaciones de software están listas para ser implementadas. Realiza el paso siguiente.  
 
 |Proceso|Referencia|  
@@ -68,7 +68,7 @@ En este tema se proporciona un escenario de ejemplo sobre cómo se pueden usar l
 
 |Proceso|Referencia|  
 |-------------|---------------|  
-|Juan crea dos implementaciones de prueba para el nuevo grupo de actualizaciones de software. Considera los siguientes entornos para cada implementación:<br /><br /> **Implementación de prueba de estación de trabajo**: Juan tiene en cuenta los siguientes aspectos para la implementación de prueba de estación de trabajo:<br /><br /><ul><li>Especifica una recopilación de implementación que contiene un subconjunto de clientes de estación de trabajo para comprobar la implementación.</li><li>Configura las opciones de implementación que son adecuadas para los clientes de estación de trabajo de su entorno.</li></ul><br />**Implementación de prueba de servidor**: Juan tiene en cuenta los siguientes aspectos para la implementación de prueba de servidor:<br /><br /><ul><li>Especifica una recopilación de implementación que contiene un subconjunto de clientes de servidor para comprobar la implementación.</li><li>Configura las opciones de implementación que son adecuadas para los clientes de servidor de su entorno.</li></ul>|[Implementar actualizaciones de software](deploy-software-updates.md)|  
+|Juan crea dos implementaciones de prueba para el nuevo grupo de actualizaciones de software. Considera los siguientes entornos para cada implementación:<br /><br /> **Implementación de prueba de estación de trabajo**: Juan tiene en cuenta lo siguiente para la implementación de prueba de estación de trabajo:<br /><br /><ul><li>Especifica una recopilación de implementación que contiene un subconjunto de clientes de estación de trabajo para comprobar la implementación.</li><li>Configura las opciones de implementación que son adecuadas para los clientes de estación de trabajo de su entorno.</li></ul><br />**Implementación de prueba de servidor**: Juan tiene en cuenta lo siguiente para la implementación de prueba de servidor:<br /><br /><ul><li>Especifica una recopilación de implementación que contiene un subconjunto de clientes de servidor para comprobar la implementación.</li><li>Configura las opciones de implementación que son adecuadas para los clientes de servidor de su entorno.</li></ul>|[Implementar actualizaciones de software](deploy-software-updates.md)|  
 |Juan comprueba que las implementaciones de prueba se han implementado correctamente.|[Estado de implementación de actualizaciones de software](monitor-software-updates.md#BKMK_SUDeployStatus)|  
 |Juan actualiza las dos implementaciones con nuevas recopilaciones que incluyen sus servidores y estaciones de trabajo de producción.|No hay información adicional|  
 

@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ad44beeb662cb0cd5cf083b18721d88a5b7360c4
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 74781a574f1c1959212a652a20e2ca4d0e620547
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351622"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420522"
 ---
 #  <a name="BKMK_ManageSUSettings"></a> Administrar la configuración de las actualizaciones de software  
 
@@ -55,9 +55,9 @@ Utilice el procedimiento siguiente para abrir las propiedades de la actualizaci�
 
 #### <a name="to-open-software-update-properties"></a>Para abrir las propiedades de la actualización de software  
 
-1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
-2.  En el área de trabajo de la biblioteca de software, expanda **Actualizaciones de software**y haga clic en **Todas las actualizaciones de software**.  
-3.  Seleccione una o varias actualizaciones de software y, a continuación, en la pestaña **Inicio** , haga clic en **Propiedades** en el grupo **Propiedades** .  
+1. En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
+2. En el área de trabajo de la biblioteca de software, expanda **Actualizaciones de software**y haga clic en **Todas las actualizaciones de software**.  
+3. Seleccione una o varias actualizaciones de software y, a continuación, en la pestaña **Inicio** , haga clic en **Propiedades** en el grupo **Propiedades** .  
 
    > [!NOTE]  
    >  En el nodo **Todas las actualizaciones de software**, Configuration Manager solo muestra las actualizaciones de software con una clasificación de **Crítico** y **Seguridad** publicadas en los últimos 30 días.  
@@ -76,7 +76,7 @@ En la pestaña **Detalles de la actualización de software** , puede ver la sigu
 
 - **Clasificación de máxima gravedad**: especifica la clasificación de gravedad definida por el proveedor para la actualización de software.  
 
-- **Descripción**: ofrece información general sobre la condición que la actualización de software arregla o mejora.  
+- **Descripción**: proporciona información general sobre la condición que arregla o mejora la actualización de software.  
 
 - **Idiomas aplicables**: muestra los idiomas para los que es aplicable la actualización de software.  
 
@@ -87,11 +87,11 @@ En la pestaña **Información de contenido** , revise la siguiente información 
 
 -   **Id. de contenido**: especifica el identificador de contenido de la actualización de software.  
 
--   **Descargados**: indica si Configuration Manager descargó los archivos de la actualización de software.  
+-   **Descargado**: indica si Configuration Manager ha descargado los archivos de la actualización de software.  
 
--   **Idioma**: especifica los idiomas de la actualización de software.  
+-   **Idiomas**: especifica los idiomas de la actualización de software.  
 
--   **Ruta de acceso de origen**: especifica la ruta de acceso de los archivos de origen de la actualización de software.  
+-   **Ruta de origen**: especifica la ruta de acceso de los archivos de origen de la actualización de software.  
 
 -   **Tamaño (MB)**: especifica el tamaño de los archivos de origen de la actualización de software.  
 

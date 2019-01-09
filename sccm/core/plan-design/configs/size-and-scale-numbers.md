@@ -10,12 +10,12 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: de8116e1fec500750e429edfb48303b8c24822f4
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 4e1ee76acca06534605e58fff27d2e7ec5e464dd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384844"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424721"
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Números de tamaño y escala de System Center Configuration Manager
 
@@ -43,11 +43,11 @@ Estos números de compatibilidad se basan en el uso del hardware recomendado par
 
 ### <a name="primary-site"></a>Sitio primario  
 
--   Cada sitio primario admite hasta 250 sitios secundarios.  
+- Cada sitio primario admite hasta 250 sitios secundarios.  
 
--   El número de sitios secundarios por cada sitio primario se basa en conexiones de red de área extensa (WAN) confiables y continuamente conectadas. Para las ubicaciones que tienen menos de 500 clientes, considere la posibilidad de un punto de distribución en lugar de un sitio secundario.  
+- El número de sitios secundarios por cada sitio primario se basa en conexiones de red de área extensa (WAN) confiables y continuamente conectadas. Para las ubicaciones que tienen menos de 500 clientes, considere la posibilidad de un punto de distribución en lugar de un sitio secundario.  
 
- Para obtener más información sobre el número de clientes y dispositivos que un sitio primario puede admitir, vea [Número de clientes para sitios y jerarquías](#bkmk_clientnumbers).  
+  Para obtener más información sobre el número de clientes y dispositivos que un sitio primario puede admitir, vea [Número de clientes para sitios y jerarquías](#bkmk_clientnumbers).  
 
 
 ### <a name="secondary-site"></a>Sitio secundario  
@@ -135,14 +135,14 @@ Para obtener más información, vea [Rendimiento y escalabilidad](/sccm/core/cli
 
 ### <a name="management-point"></a>Punto de administración  
 
--   Cada sitio primario admite hasta 15 puntos de administración.  
+- Cada sitio primario admite hasta 15 puntos de administración.  
 
-    > [!TIP]  
-    >  No instale puntos de administración en servidores que atraviesen un vínculo lento desde el servidor de sitio primario o el servidor de base de datos del sitio.  
+  > [!TIP]  
+  >  No instale puntos de administración en servidores que atraviesen un vínculo lento desde el servidor de sitio primario o el servidor de base de datos del sitio.  
 
--   Cada sitio secundario admite un solo punto de administración que se debe instalar en el servidor de sitio secundario.  
+- Cada sitio secundario admite un solo punto de administración que se debe instalar en el servidor de sitio secundario.  
 
- Para obtener más información sobre el número de clientes y dispositivos que un punto de administración puede admitir, vea la sección [Puntos de administración](#bkmk_mp).  
+  Para obtener más información sobre el número de clientes y dispositivos que un punto de administración puede admitir, vea la sección [Puntos de administración](#bkmk_mp).  
 
 
 ### <a name="software-update-point"></a>Punto de actualización de software  
@@ -160,17 +160,17 @@ Para obtener más información, vea [Rendimiento y escalabilidad](/sccm/core/cli
 ###  <a name="bkmk_cas"></a> Jerarquía con un sitio de administración central  
 Un sitio de administración central admite un número total de dispositivos que incluye el número máximo de dispositivos indicados para los tres grupos siguientes:  
 
--   700 000 equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX) Consulte también la compatibilidad con [los dispositivos con Windows Embedded](#embedded).
+- 700 000 equipos de escritorio (equipos que ejecutan Windows, Linux y UNIX) Consulte también la compatibilidad con [los dispositivos con Windows Embedded](#embedded).
 
--   25 000 dispositivos que ejecutan Mac y Windows CE 7.0  
+- 25 000 dispositivos que ejecutan Mac y Windows CE 7.0  
 
--   Uno de los siguientes, según el modo en que su implementación admita la administración de dispositivos móviles (MDM):  
+- Uno de los siguientes, según el modo en que su implementación admita la administración de dispositivos móviles (MDM):  
 
-    -   100 000 dispositivos que administra mediante MDM local  
+  -   100 000 dispositivos que administra mediante MDM local  
 
-    -   300 000 dispositivos basados en la nube  
+  -   300 000 dispositivos basados en la nube  
 
- Por ejemplo, puede admitir 700 000 equipos de escritorio, hasta 25 000 dispositivos Mac y Windows CE 7.0, y hasta 300 000 dispositivos basados en la nube al integrar Microsoft Intune. Esta jerarquía admite un total de 1 025 000 dispositivos. Si se admiten los dispositivos administrados por MDM local, el total de la jerarquía es de 825 000 dispositivos.  
+  Por ejemplo, puede admitir 700 000 equipos de escritorio, hasta 25 000 dispositivos Mac y Windows CE 7.0, y hasta 300 000 dispositivos basados en la nube al integrar Microsoft Intune. Esta jerarquía admite un total de 1 025 000 dispositivos. Si se admiten los dispositivos administrados por MDM local, el total de la jerarquía es de 825 000 dispositivos.  
 
 > [!IMPORTANT]  
 >  En una jerarquía donde el sitio de administración central usa SQL Server Standard Edition, la jerarquía admite un máximo de 50 000 equipos de escritorio y dispositivos. Para admitir más de 50 000 equipos de escritorio y dispositivos, debe usar una edición Enterprise de SQL Server. Este requisito solo se aplica a un sitio de administración central. No se aplica a un sitio primario independiente o un sitio primario secundario. La edición de SQL Server que se usa para un sitio primario no limita su capacidad para admitir el número de clientes indicado.   

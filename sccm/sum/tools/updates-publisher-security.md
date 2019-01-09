@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: b3ce22747cddc1371fb38718cc97b70cda8afcb1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3632cbf8a512ef39413685f29b769e133fbcee40
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353610"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424306"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Administrar certificados y seguridad de Updates Publisher
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Los procedimientos siguientes pueden ayudarle a configurar el almacén de certificados en el servidor e actualización, configurar un certificado autofirmado en el equipo cliente y configurar la directiva de grupo para que permita que el Agente de Windows Update en los equipos busque actualizaciones publicadas.
+Los procedimientos siguientes pueden ayudarle a configurar el almacén de certificados en el servidor de actualización, configurar un certificado autofirmado en el equipo cliente y configurar la directiva de grupo para permitir que el Agente de Windows Update en los equipos busque las actualizaciones publicadas.
 
 ## <a name="configure-the-certificate-store-on-the-update-server"></a>Configurar el almacén de certificados en el servidor de actualización
  Updates Publisher usa un certificado digital para firmar las actualizaciones en los catálogos que publica. Para poder publicar un catálogo en el servidor de actualización, ese certificado debe estar en el almacén de certificados del servidor de actualización y en el almacén de certificados del equipo de Updates Publisher si este equipo es remoto con respecto al servidor de actualización.
@@ -60,29 +60,29 @@ Puede usar varios métodos para configurar certificados en equipos cliente, al i
 El siguiente ejemplo muestra cómo configurar el certificado de firma en equipos cliente.
 
 ### <a name="to-configure-a-self-signing-certificate-on-client-computers"></a>Para configurar un certificado autofirmado en equipos cliente
-1.  En un equipo con acceso al servidor de actualización, haga clic en **Iniciar** y en **Ejecutar**, escriba **MMC** en el cuadro de texto y luego haga clic en **Aceptar** para abrir la Microsoft Management Console (MMC).
+1. En un equipo con acceso al servidor de actualización, haga clic en **Iniciar** y en **Ejecutar**, escriba **MMC** en el cuadro de texto y luego haga clic en **Aceptar** para abrir la Microsoft Management Console (MMC).
 
-2.  Haga clic en **Archivo**, en **Agregar o quitar complemento**, en **Agregar**, en **Certificados** y en **Agregar**, seleccione **Cuenta de equipo** y luego haga clic en **Siguiente**.
+2. Haga clic en **Archivo**, en **Agregar o quitar complemento**, en **Agregar**, en **Certificados** y en **Agregar**, seleccione **Cuenta de equipo** y luego haga clic en **Siguiente**.
 
-3.  Seleccione **Otro equipo** y escriba el nombre del servidor de actualización o haga clic en **Examinar** para encontrar el equipo servidor de actualización, haga clic en **Finalizar**, en **Cerrar** y luego, en **Aceptar**.
+3. Seleccione **Otro equipo** y escriba el nombre del servidor de actualización o haga clic en **Examinar** para encontrar el equipo servidor de actualización, haga clic en **Finalizar**, en **Cerrar** y luego, en **Aceptar**.
 
-4.  Expanda **Certificados (*nombre del servidor de actualización*)**, expanda **WSUS** y luego haga clic en **Certificados**.
+4. Expanda **Certificados (*nombre del servidor de actualización*)**, expanda **WSUS** y luego haga clic en **Certificados**.
 
-5.  Haga clic con el botón derecho en el certificado en el panel de resultados, haga clic en **Todas las tareas** y luego, en **Exportar**. Complete el **Asistente para exportar certificados** con la configuración predeterminada para crear un archivo de exportación de certificado con el nombre y la ubicación especificados en el asistente.
+5. Haga clic con el botón derecho en el certificado en el panel de resultados, haga clic en **Todas las tareas** y luego, en **Exportar**. Complete el **Asistente para exportar certificados** con la configuración predeterminada para crear un archivo de exportación de certificado con el nombre y la ubicación especificados en el asistente.
 
-6.  Use uno de los métodos siguientes para agregar el certificado empleado para firmar el catálogo de actualizaciones en cada equipo cliente que usará el WUA para buscar actualizaciones en el catálogo. Agregue el certificado en el equipo cliente de la manera siguiente:
+6. Use uno de los métodos siguientes para agregar el certificado empleado para firmar el catálogo de actualizaciones en cada equipo cliente que usará el WUA para buscar actualizaciones en el catálogo. Agregue el certificado en el equipo cliente de la manera siguiente:
 
-    -   Para los certificados autofirmados: agregue el certificado a los almacenes de certificados **Entidades de certificación raíz de confianza** y **Editores de confianza**.
+   -   Para los certificados autofirmados: agregue el certificado a los almacenes de certificados **Entidades de certificación raíz de confianza** y **Editores de confianza**.
 
-    -   Para los certificados emitidos por una entidad de certificación (CA): agregue el certificado al almacén de certificados **Editores de confianza**.
+   -   Para los certificados emitidos por entidades de certificación (CA): Agregue el certificado al almacén de certificados **Editores de confianza**.
 
-    > [!NOTE]
-    > El WUA también comprueba si la opción de directiva de grupo **Allow signed content from intranet Microsoft update service location** (Permitir contenido firmado procedente de la ubicación del servicio Microsoft Update de la intranet) está habilitada en el equipo local. Esta opción de directiva debe estar habilitada para que el Agente de Windows Update pueda examinar las actualizaciones que se crearon y publicaron con Updates Publisher. Para obtener más información sobre cómo habilitar esta opción de directiva de grupo, vea [Cómo configurar la directiva de grupo en los equipos cliente](https://technet.microsoft.com/library/bb530967.aspx(d=robot)).
+   > [!NOTE]
+   > El WUA también comprueba si la opción de directiva de grupo **Allow signed content from intranet Microsoft update service location** (Permitir contenido firmado procedente de la ubicación del servicio Microsoft Update de la intranet) está habilitada en el equipo local. Esta opción de directiva debe estar habilitada para que el Agente de Windows Update pueda examinar las actualizaciones que se crearon y publicaron con Updates Publisher. Para obtener más información sobre cómo habilitar esta opción de directiva de grupo, vea [Cómo configurar la directiva de grupo en los equipos cliente](<https://technet.microsoft.com/library/bb530967.aspx(d=robot>).
 
 
 
-## <a name="configuring-group-policy-to-allow-wua-on-computers-to-scan-for-published-updates"></a>Configuración de directiva de grupo para permitir que el WUA de los equipos busque actualizaciones publicadas
-Para que el Agente de Windows Update (WUA) de los equipos busque actualizaciones de software creadas y publicadas mediante Updates Publisher, debe habilitar la configuración de la directiva que permite contenido firmado procedente de la ubicación del servicio Microsoft Update de la intranet. Si la configuración de directiva está habilitada, el WUA aceptará actualizaciones recibidas a través de una ubicación en la intranet si las actualizaciones de software están firmadas en el almacén de certificados **Editores de confianza** del equipo local. Hay varios métodos para configurar la directiva de grupo en equipos del entorno.
+## <a name="configuring-group-policy-to-allow-wuaon-computers-to-scan-for-published-updates"></a>Configuración de directiva de grupo para permitir que el WUA de los equipos busque actualizaciones publicadas
+Para que el Agente de Windows Update (WUA) de los equipos busque actualizaciones de software creadas y publicadas mediante Updates Publisher, se debe habilitar una configuración de la directiva que permita contenido firmado procedente de una ubicación del servicio Microsoft Update de la intranet. Si la configuración de directiva está habilitada, el WUA aceptará actualizaciones recibidas a través de una ubicación en la intranet si las actualizaciones de software están firmadas en el almacén de certificados **Editores de confianza** del equipo local. Hay varios métodos para configurar la directiva de grupo en equipos del entorno.
 
 Para equipos que no están en el dominio, se puede configurar un valor de clave del Registro que permite contenido firmado desde una ubicación del servicio Microsoft Update de la intranet.
 

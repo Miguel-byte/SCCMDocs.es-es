@@ -10,12 +10,12 @@ ms.assetid: cc4cdb35-f0b4-42b5-9cec-6431a8c30793
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6bd134857f53157e4ea81d46ff1a36693d7366ca
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: e29042aa4c6d335189c929eef6f2a19700681246
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335191"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422273"
 ---
 # <a name="fundamentals-of-system-center-configuration-manager"></a>Aspectos básicos de System Center Configuration Manager
 
@@ -27,11 +27,11 @@ Si no está familiarizado con System Center Configuration Manager, lea los temas
 
  Al implementar Configuration Manager, implementa uno o varios sitios:  
 
--   **Si se implementan varios sitios**, los sitios establecen relaciones de elementos secundarios a elementos primarios que se denominan colectivamente jerarquía. Use una jerarquía para administrar de forma centralizada un mayor número de sitios y dispositivos.  Los datos y la información fluyen de forma descendente por la jerarquía hasta llegar a los dispositivos que administra. La información sobre dispositivos y los resultados de las solicitudes y las tareas de configuración fluyen de forma ascendente en la jerarquía.  
+- **Si se implementan varios sitios**, los sitios establecen relaciones de elementos secundarios a elementos primarios que se denominan colectivamente jerarquía. Use una jerarquía para administrar de forma centralizada un mayor número de sitios y dispositivos.  Los datos y la información fluyen de forma descendente por la jerarquía hasta llegar a los dispositivos que administra. La información sobre dispositivos y los resultados de las solicitudes y las tareas de configuración fluyen de forma ascendente en la jerarquía.  
 
--   **Si se implementa un único sitio**, también se denomina jerarquía.  
+- **Si se implementa un único sitio**, también se denomina jerarquía.  
 
- Algunas opciones y tareas de configuración se aplican a todos los sitios de una jerarquía, mientras que otras se aplican a sitios individuales.  
+  Algunas opciones y tareas de configuración se aplican a todos los sitios de una jerarquía, mientras que otras se aplican a sitios individuales.  
 
 ## <a name="fundamental-concepts-for-system-center-configuration-manager"></a>Conceptos básicos de System Center Configuration Manager
 Vea los temas siguientes para obtener información acerca de los conceptos básicos de System Center Configuration Manager:  

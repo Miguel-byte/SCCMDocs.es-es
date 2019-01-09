@@ -10,12 +10,12 @@ ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 616bf5549c80c94b1dd5d27dc15ea693c86e2ca2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a520e4e43ca2d7de080272c213c5768cbd284501
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335082"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415847"
 ---
 # <a name="choose-a-device-management-solution-for-system-center-configuration-manager"></a>Elegir una solución de administración de dispositivos para System Center Configuration Manager
 
@@ -68,7 +68,7 @@ Puede usar las soluciones de administración de dispositivos por sí solas o en 
 |Windows Phone||Sí||Sí|  
 |Windows Server|Sí|||Sí|  
 
- Para obtener una lista completa de las plataformas compatibles, vea [Supported operating systems for clients and devices for System Center Configuration Manager (Sistemas operativos compatibles con clientes y dispositivos para System Center Configuration Manager)](configs\supported-operating-systems-for-clients-and-devices.md).
+ Para obtener una lista completa de las plataformas compatibles, vea [Supported operating systems for clients and devices for System Center Configuration Manager (Sistemas operativos compatibles con clientes y dispositivos para System Center Configuration Manager)](configs/supported-operating-systems-for-clients-and-devices.md).
 
 ##  <a name="bkmk_comp2"></a> Comparar soluciones de administración de dispositivos móviles basadas en la funcionalidad de administración  
 

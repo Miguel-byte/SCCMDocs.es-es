@@ -10,12 +10,12 @@ ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: c0e94fd8669556223044403fc72216fcaaaa5e54
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 7d6bcb46650082cebc95e8300a2f6adeb119fdbf
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337707"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421882"
 ---
 # <a name="remote-connection-profiles-in-system-center-configuration-manager"></a>Perfiles de conexión remota en System Center Configuration Manager
 
@@ -86,37 +86,37 @@ Se necesita Microsoft Intune para que los usuarios se conecten a sus equipos del
 
 ## <a name="create-a-remote-connection-profile"></a>Crear un perfil de conexión remota
 
-1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad** > **Configuración de cumplimiento** > **Perfiles de conexión remota**.  
+1. En la consola de Configuration Manager, haga clic en **Activos y compatibilidad** > **Configuración de cumplimiento** > **Perfiles de conexión remota**.  
 
-3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear perfil de conexión remota**.  
+2. En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear perfil de conexión remota**.  
 
-4.  En la página **General** del **Asistente para crear perfil de conexión remota**, especifique un nombre y una descripción opcional para el perfil con un máximo de 256 caracteres para cada uno.  
+3. En la página **General** del **Asistente para crear perfil de conexión remota**, especifique un nombre y una descripción opcional para el perfil con un máximo de 256 caracteres para cada uno.  
 
-5.  En la página de configuración **Perfil**, especifique la siguiente configuración para el perfil de conexión remota:  
+4. En la página de configuración **Perfil**, especifique la siguiente configuración para el perfil de conexión remota:  
 
-    -   **Nombre completo y puerto del servidor de puerta de enlace de Escritorio remoto (opcional)** : especifique el nombre del servidor de puerta de enlace de Escritorio remoto que se va a usar para las conexiones.  
+   -   **Nombre completo y puerto del servidor de puerta de enlace de Escritorio remoto (opcional)** : especifique el nombre del servidor de puerta de enlace de Escritorio remoto que se va a usar para las conexiones.  
 
-        > [!NOTE]  
-        >  Configuration Manager no es compatible con el uso de nombres de dominio internacionalizado al especificar un servidor en este cuadro.  
-        >   
-        >  La longitud del nombre del servidor no debe ser superior a 256 caracteres, y puede contener mayúsculas, minúsculas, caracteres numéricos y los caracteres **–** y **_** , separados por puntos.  
+       > [!NOTE]  
+       >  Configuration Manager no es compatible con el uso de nombres de dominio internacionalizado al especificar un servidor en este cuadro.  
+       >   
+       >  La longitud del nombre del servidor no debe ser superior a 256 caracteres, y puede contener mayúsculas, minúsculas, caracteres numéricos y los caracteres **–** y **_** , separados por puntos.  
 
-    -   **Permitir conexiones solamente de equipos que ejecutan Escritorio remoto con Autenticación a nivel de red**  
+   -   **Permitir conexiones solamente de equipos que ejecutan Escritorio remoto con Autenticación a nivel de red**  
 
-6.  Seleccione **Habilitado** o **Deshabilitado** para las opciones de conexión siguientes:  
+5. Seleccione **Habilitado** o **Deshabilitado** para las opciones de conexión siguientes:  
 
-    -   **Permitir conexiones remotas a equipos de trabajo**  
+   -   **Permitir conexiones remotas a equipos de trabajo**  
 
-    -   **Permitir a todos los usuarios principales del equipo del trabajo conectarse remotamente**  
+   -   **Permitir a todos los usuarios principales del equipo del trabajo conectarse remotamente**  
 
-    -   **Permitir excepción de Firewall de Windows para conexiones en dominios de Windows y en redes privadas**  
+   -   **Permitir excepción de Firewall de Windows para conexiones en dominios de Windows y en redes privadas**  
 
-    > [!IMPORTANT]  
-    >  Las tres opciones deben ser iguales para poder continuar más allá de esta página del asistente.  
+   > [!IMPORTANT]  
+   >  Las tres opciones deben ser iguales para poder continuar más allá de esta página del asistente.  
 
-7.  En la página **Resumen**, revise las acciones que se realizarán y, después, complete el asistente.  
+6. En la página **Resumen**, revise las acciones que se realizarán y, después, complete el asistente.  
 
- El nuevo perfil de conexión remota se muestra en el nodo **Perfiles de conexión remota** en el área de trabajo **Activos y compatibilidad** .  
+   El nuevo perfil de conexión remota se muestra en el nodo **Perfiles de conexión remota** en el área de trabajo **Activos y compatibilidad** .  
 
 Implementar un perfil de conexión remota  
 
@@ -157,16 +157,16 @@ Implementar un perfil de conexión remota
 
      La página **Estado de implementación** contiene las siguientes pestañas:  
 
-    -   **Compatible:** muestra el cumplimiento del perfil de conexión remota en función del número de activos afectados. Puede hacer doble clic en una regla para crear un nodo temporal en el nodo **Usuarios** , en el área de trabajo **Activos y compatibilidad** . Este nodo contiene todos los dispositivos que son compatibles con el perfil de conexión remota. El panel **Detalles del activo** muestra los dispositivos que son compatibles con el perfil. Haga doble clic en un dispositivo de la lista para mostrar información adicional.  
+    -   **Conforme:** muestra la compatibilidad del perfil de conexión remota en función del número de activos afectados. Puede hacer doble clic en una regla para crear un nodo temporal en el nodo **Usuarios** , en el área de trabajo **Activos y compatibilidad** . Este nodo contiene todos los dispositivos que son compatibles con el perfil de conexión remota. El panel **Detalles del activo** muestra los dispositivos que son compatibles con el perfil. Haga doble clic en un dispositivo de la lista para mostrar información adicional.  
 
         > [!IMPORTANT]  
         >  Un perfil de conexión remota no se evalúa si no es aplicable en un dispositivo cliente. Sin embargo, se devuelve como compatible.  
 
     -   **Error:** muestra una lista de todos los errores de la implementación de perfil de conexión remota seleccionada, en función del número de activos afectados. Puede hacer doble clic en una regla para crear un nodo temporal en el nodo **Usuarios** del área de trabajo **Activos y compatibilidad** . Este nodo contiene todos los dispositivos que generaron errores con este perfil. Cuando se selecciona un dispositivo, el panel **Detalles del activo** muestra los dispositivos afectados por el problema seleccionado. Haga doble clic en un dispositivo de la lista para mostrar información adicional sobre el problema.  
 
-    -   **No compatible:** muestra una lista de todas las reglas no conformes en el perfil de conexión remota en función del número de activos afectados. Puede hacer doble clic en una regla para crear un nodo temporal en el nodo **Usuarios** del área de trabajo **Activos y compatibilidad** . El nodo contiene todos los dispositivos que no son compatibles con este perfil. Cuando se selecciona un dispositivo, el panel **Detalles del activo** muestra los dispositivos afectados por el problema seleccionado. Haga doble clic en un dispositivo de la lista para mostrar información adicional sobre el problema.  
+    -   **No compatible:** muestra una lista de todas las reglas no compatibles en el perfil de conexión remota en función del número de activos afectados. Puede hacer doble clic en una regla para crear un nodo temporal en el nodo **Usuarios** del área de trabajo **Activos y compatibilidad** . El nodo contiene todos los dispositivos que no son compatibles con este perfil. Cuando se selecciona un dispositivo, el panel **Detalles del activo** muestra los dispositivos afectados por el problema seleccionado. Haga doble clic en un dispositivo de la lista para mostrar información adicional sobre el problema.  
 
-    -   **Desconocido:** muestra una lista de todos los dispositivos que no notificaron el cumplimiento de la implementación de perfil de conexión remota seleccionada y el estado de cliente actual de los dispositivos.  
+    -   **Desconocido:** muestra una lista de todos los dispositivos que no notificaron la compatibilidad de la implementación de perfil de conexión remota seleccionada y el estado de cliente actual de los dispositivos.  
 
 5.  En la página **Estado de implementación** , puede revisar información detallada sobre la compatibilidad del perfil de conexión remota implementado. Se crea un nodo temporal en el nodo **Implementaciones** que le permite encontrar esta información rápidamente.  
 

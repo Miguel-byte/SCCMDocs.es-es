@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9fce0c0a8602b51c3d05e5181023a0f9d05ab0ca
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9fa55c29d6f67132b4d98fd12d8e249093009c67
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335150"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419553"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-system-center-configuration-manager"></a>Actualizar clientes de equipos Windows con System Center Configuration Manager
 
@@ -23,17 +23,17 @@ ms.locfileid: "32335150"
 
 Puede actualizar el cliente en equipos Windows mediante los métodos de instalación de cliente o las características de actualización de cliente automática que ofrece Configuration Manager. Los siguientes métodos de instalación de cliente son mecanismos válidos para actualizar el software cliente en equipos Windows:  
 
--   Instalación de directiva de grupo  
+- Instalación de directiva de grupo  
 
--   Instalación de script de inicio de sesión  
+- Instalación de script de inicio de sesión  
 
--   Instalación manual  
+- Instalación manual  
 
--   Instalación de actualización  
+- Instalación de actualización  
 
- Si está interesado en actualizar el cliente mediante los métodos de instalación de cliente, obtenga más información sobre el uso de tales métodos en [Implementar clientes en equipos Windows con System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md).
+  Si está interesado en actualizar el cliente mediante los métodos de instalación de cliente, obtenga más información sobre el uso de tales métodos en [Implementar clientes en equipos Windows con System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md).
 
- A partir de la versión 1610, puede excluir clientes de la actualización. Para ello, debe especificar un grupo de exclusión. Para obtener más información, consulte [How to exclude upgrading clients for Windows computers](exclude-clients-windows.md) (Cómo excluir la actualización de clientes para equipos Windows).  
+  A partir de la versión 1610, puede excluir clientes de la actualización. Para ello, debe especificar un grupo de exclusión. Para obtener más información, consulte [How to exclude upgrading clients for Windows computers](exclude-clients-windows.md) (Cómo excluir la actualización de clientes para equipos Windows).  
 
 
 > [!TIP]  

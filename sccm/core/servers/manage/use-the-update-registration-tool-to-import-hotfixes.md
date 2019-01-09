@@ -10,12 +10,12 @@ ms.assetid: 8cc13635-85d6-4b07-a3ec-c42188bc5c74
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 94f0da3fa9f4aa43ce4818b7b6edf752df53d66a
-ms.sourcegitcommit: ee434c53b3695a039b56298082b6f61f1006d9dd
+ms.openlocfilehash: 70322e01e33cdf857768db812450f27a0f17939e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49943281"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418244"
 ---
 # <a name="use-the-update-registration-tool-to-import-hotfixes-to-system-center-configuration-manager"></a>Uso de la herramienta de registro de actualizaciones para importar revisiones en System Center Configuration Manager
 
@@ -43,26 +43,26 @@ Si instala una versión de un origen externo y el nombre de archivo de la actual
 
 -   La cuenta que usa para ejecutar la herramienta debe tener permisos de **administrador local** en el equipo que hospeda el punto de conexión de servicio (donde se ejecuta la herramienta).  
 
--   La cuenta que usa para ejecutar la herramienta debe tener permisos de **escritura** en la siguiente carpeta en el equipo que hospeda el punto de conexión de servicio: **&lt;directorio de instalación de Configuration Manager\>\EasySetupPayload\offline**.  
+-   La cuenta que se usa para ejecutar la herramienta debe tener permisos de **escritura** en la siguiente carpeta del equipo que hospeda el punto de conexión de servicio:  **&lt;Directorio de instalación de Configuration Manager\>\EasySetupPayload\offline**  
 
 ### <a name="to-use-the-update-registration-tool"></a>Para usar la herramienta de registro de actualizaciones  
 
-1.  En el equipo que hospeda el punto de conexión de servicio:  
+1. En el equipo que hospeda el punto de conexión de servicio:  
 
-    -   Abra un símbolo del sistema con privilegios administrativos y, después, cambie los directorios a la ubicación que contiene **&lt;Producto\>-&lt;versión de producto\>-&lt;id. de artículo de KB\>-ConfigMgr.Update.exe**.  
+   -   Abra un símbolo del sistema con privilegios administrativos y, después, cambie los directorios a la ubicación que contiene **&lt;Producto\>-&lt;versión de producto\>-&lt;id. de artículo de KB\>-ConfigMgr.Update.exe**.  
 
-2.  Ejecute el siguiente comando para iniciar la herramienta de registro de actualizaciones:  
+2. Ejecute el siguiente comando para iniciar la herramienta de registro de actualizaciones:  
 
-    -   **&lt;Producto\>-&lt;versión de producto\>-&lt;id. de artículo de KB\>-ConfigMgr.Update.exe**  
+   -   **&lt;Producto\>-&lt;versión de producto\>-&lt;id. de artículo de KB\>-ConfigMgr.Update.exe**  
 
-    Una vez registrada la revisión, aparece como nueva actualización en la consola en el plazo de 24 horas.  Puede acelerar el proceso:
+   Una vez registrada la revisión, aparece como nueva actualización en la consola en el plazo de 24 horas.  Puede acelerar el proceso:
 
-    - Abra la consola de Configuration Manager y vaya a **Administración** > **Updates and Servicing** (Actualizaciones y mantenimiento) y, luego, haga clic en **Check for Updates** (Buscar actualizaciones). (Antes de la versión 1702, la opción Actualizaciones y mantenimiento se encontraba en **Administración** > **Cloud Services**). 
+   - Abra la consola de Configuration Manager y vaya a **Administración** > **Updates and Servicing** (Actualizaciones y mantenimiento) y, luego, haga clic en **Check for Updates** (Buscar actualizaciones). (Antes de la versión 1702, la opción Actualizaciones y mantenimiento se encontraba en **Administración** > **Cloud Services**). 
 
-    La herramienta de registro de actualizaciones registra sus acciones en un archivo .log en el equipo local. El archivo de registro tiene el mismo nombre que el archivo hotfix.exe y se escribe en la carpeta **%SystemRoot%/Temp**.  
+   La herramienta de registro de actualizaciones registra sus acciones en un archivo .log en el equipo local. El archivo de registro tiene el mismo nombre que el archivo hotfix.exe y se escribe en la carpeta **%SystemRoot%/Temp**.  
 
-     Una vez registrada la actualización, podrá cerrar la herramienta de registro de actualizaciones.  
+    Una vez registrada la actualización, podrá cerrar la herramienta de registro de actualizaciones.  
 
-3.  Abra la consola de Configuration Manager y vaya a **Administración** > **Actualizaciones y mantenimiento**. Ahora están disponibles para instalar las revisiones que se han importado. (Antes de la versión 1702, la opción Actualizaciones y mantenimiento se encontraba en **Administración** > **Cloud Services**).
+3. Abra la consola de Configuration Manager y vaya a **Administración** > **Actualizaciones y mantenimiento**. Ahora están disponibles para instalar las revisiones que se han importado. (Antes de la versión 1702, la opción Actualizaciones y mantenimiento se encontraba en **Administración** > **Cloud Services**).
 
- Para obtener más información sobre la instalación de actualizaciones, consulte [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) (Instalación de actualizaciones en la consola para System Center Configuration Manager).  
+   Para obtener más información sobre la instalación de actualizaciones, consulte [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) (Instalación de actualizaciones en la consola para System Center Configuration Manager).  

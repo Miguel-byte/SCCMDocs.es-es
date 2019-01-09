@@ -9,12 +9,12 @@ ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1cea0a54bc4c4c2d69f979bb09d83d7f5fac7706
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 00a6723dd56aa41287d34a7fcdc9f549d792d666
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342722"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417921"
 ---
 # <a name="upgrade-to-system-center-configuration-manager"></a>Actualizar a System Center Configuration Manager
 
@@ -25,25 +25,25 @@ Puede ejecutar una actualización local para actualizar a System Center Configur
  Antes de actualizar desde System Center 2012 Configuration Manager, debe preparar los sitios, lo que requiere quitar configuraciones específicas que pueden impedir la correcta actualización, y luego seguir la secuencia de actualización si existe más de un sitio implicado.  
 
  > [!TIP]
- > Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *actualizar* e *instalar* se utilizan para describir los tres conceptos independientes. Para obtener información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).
+ > Al administrar el sitio de System Center Configuration Manager y la infraestructura de la jerarquía, los términos *mejorar*, *actualizar* e *instalar* se utilizan para describir los tres conceptos independientes. Para obtener información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).
 
 ##  <a name="bkmk_path"></a> Rutas de actualización local  
 
 **Actualizar a la versión 1802**   
 Si tiene medios de base de referencia de la versión 1802, puede actualizar lo siguiente a una versión con licencia completa de System Center Configuration Manager, versión 1802:   
--     Una instalación de evaluación de System Center Configuration Manager, versión 1802
--     System Center 2012 Configuration Manager con Service Pack 1
--     System Center 2012 Configuration Manager con Service Pack 2
--     System Center 2012 R2 Configuration Manager
--     System Center 2012 R2 Configuration Manager con Service Pack 1
+- Una instalación de evaluación de System Center Configuration Manager, versión 1802
+- System Center 2012 Configuration Manager con Service Pack 1
+- System Center 2012 Configuration Manager con Service Pack 2
+- System Center 2012 R2 Configuration Manager
+- System Center 2012 R2 Configuration Manager con Service Pack 1
 
 **Actualizar a la versión 1702**   
 Si tiene el medio de línea base de la versión 1702, puede actualizar lo siguiente a una versión con licencia completa de System Center Configuration Manager versión 1702:   
--     Una instalación de evaluación de System Center Configuration Manager versión 1702
--     System Center 2012 Configuration Manager con Service Pack 1
--     System Center 2012 Configuration Manager con Service Pack 2
--     System Center 2012 R2 Configuration Manager
--     System Center 2012 R2 Configuration Manager con Service Pack 1
+- Una instalación de evaluación de System Center Configuration Manager versión 1702
+- System Center 2012 Configuration Manager con Service Pack 1
+- System Center 2012 Configuration Manager con Service Pack 2
+- System Center 2012 R2 Configuration Manager
+- System Center 2012 R2 Configuration Manager con Service Pack 1
 
 **Actualizar a la versión 1606**  
 El 15 de diciembre de 2016, se volvió a publicar el medio de línea base para la versión 1606 a fin de agregar compatibilidad con más escenarios de actualización. Esta nueva versión admite la actualización de lo siguiente a una versión con licencia completa de System Center Configuration Manager versión 1606:  
@@ -87,7 +87,7 @@ When you have version 1511 baseline media, you can upgrade the following to a fu
 
 ### <a name="before-you-upgrade"></a>Antes de realizar la actualización  
 
-**Revise el entorno de System Center 2012 Configuration Manager** y resuelva problemas como se detalla en KB4018655: [Configuration Manager clients reinstall every five hours because of a recurring retry task and may cause an inadvertent client upgrade](https://support.microsoft.com/help/4018655) (Los clientes de Configuration Manager se reinstalan cada cinco horas debido a una tarea periódica de reintento, lo que puede provocar una actualización de cliente involuntaria).
+**Revise el entorno de System Center 2012 Configuration Manager** y resuelva los problemas como se detalla en KB4018655: [Los clientes de Configuration Manager se reinstalan cada cinco horas debido a una tarea periódica de reintento y puede provocar una actualización de cliente involuntaria](https://support.microsoft.com/help/4018655).
 
 **Asegurarse de que el entorno informático cumple las configuraciones admitidas** requeridas para la actualización a System Center Configuration Manager:  
 
@@ -125,8 +125,8 @@ Configuration Manager no puede actualizar correctamente un sitio primario que ti
 -   Actualizar el sitio de producción a System Center Configuration Manager  
 
 Para obtener más información, consulte:  
--   System Center 2012 Configuration Manager: [Configurar réplicas de bases de datos para puntos de administración](https://technet.microsoft.com/library/hh846234.aspx)  
--   System Center Configuration Manager: [Réplicas de bases de datos para puntos de administración de System Center Configuration Manager](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)  
+-   System Center 2012 Configuration Manager:  [Configuración de réplicas de base de datos para puntos de administración](https://technet.microsoft.com/library/hh846234.aspx)  
+-   System Center Configuration Manager: [Database replicas for management points for System Center Configuration Manager (Réplicas de bases de datos para puntos de administración de System Center Configuration Manager)](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)  
 
 **Vuelva a configurar los puntos de actualización de software que usan NLB:**  
 Configuration Manager no puede actualizar un sitio que usa un clúster de equilibrio de carga de red (NLB) para hospedar puntos de actualización de software.  
@@ -146,14 +146,14 @@ Antes de deshabilitar una tarea, programe la tarea de forma que pueda restaurar 
 
 Para obtener más información acerca de las tareas de mantenimiento del sitio, consulte:  
 
--   System Center 2012 Configuration Manager: [Planeación de las tareas de mantenimiento de Configuration Manager](https://technet.microsoft.com/library/gg712686.aspx)  
--   System Center Configuration Manager: [Referencia de tareas de mantenimiento para System Center Configuration Manager](../../../../core/servers/manage/reference-for-maintenance-tasks.md)  
+-   System Center 2012 Configuration Manager:  [Planeación de operaciones del sitio en Configuration Manager](https://technet.microsoft.com/library/gg712686.aspx)  
+-   System Center Configuration Manager:  [Reference for maintenance tasks for System Center Configuration Manager](../../../../core/servers/manage/reference-for-maintenance-tasks.md)  
 
 **Ejecutar el comprobador de requisitos previos del programa de instalación.**:  
 Antes de actualizar un sitio, puede ejecutar el **comprobador de requisitos previos** independientemente del programa de instalación para comprobar que el sitio cumple los requisitos previos. Después, cuando actualiza el sitio, el comprobador de requisitos previos se ejecuta otra vez.  
 
 Si usa el medio de línea base para la versión 1606 de la versión de octubre de 2016, la comprobación de requisitos previos independiente evalúa el sitio para la actualización a la Rama actual y a la Rama de mantenimiento a largo plazo (LTSB) de System Center Configuration Manager. Dado que la Rama de mantenimiento a largo plazo no admite algunas características, podría ver entradas en *ConfigMgrPrereq.log* parecidas a las siguientes:
- - INFO: The site is a LTSB edition. (INFORMACIÓN: El sitio es una edición LTSB.)
+ - INFO: The site is a LTSB edition. (INFORMACIÓN: El sitio es una edición LTSB)
  - Unsupported site system role 'Asset Intelligence synchronization point' for the LTSB edition;    Error;    Configuration Manager has detected that the 'Asset Intelligence synchronization point' is installed. (Rol de sistema de sitio "Punto de sincronización de Asset Intelligence" no admitido para la edición LTSB; Error; Configuration Manager ha detectado que está instalado el "Punto de sincronización de Asset Intelligence".) Asset Intelligence no se admite en la edición LTSB. Debe desinstalar el rol de sistema de sitio del punto de sincronización de Asset Intelligence para poder continuar.
 
 Si tiene previsto actualizar a la Rama actual, puede pasar por alto sin problema los errores relacionados con la edición LTSB. Solo se aplican si tiene previsto actualizar a LTSB.
@@ -302,9 +302,9 @@ Utilice el siguiente procedimiento en cada sitio de administración central y el
 
 2.  Tras restaurar la copia de la base de datos, ejecute el programa de instalación desde los medios de origen de System Center Configuration Manager. Cuando ejecute el programa de instalación, use la opción de línea de comandos **/TESTDBUPGRADE** . Si la instancia de SQL Server que hospeda la copia de la base de datos no es la instancia predeterminada, también deberá indicar los argumentos de la línea de comandos para identificar la instancia que hospeda la copia de la base de datos del sitio.  
 
-     Por ejemplo, tiene previsto actualizar una base de datos de sitio con el nombre SMS_ABC. Restaura una copia de esta base de datos del sitio a una instancia compatible de SQL Server con el nombre de instancia DBTest. Para probar una actualización de esta copia de la base de datos del sitio, use la siguiente línea de comandos: **Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**  
+     Por ejemplo, tiene previsto actualizar una base de datos de sitio con el nombre SMS_ABC. Restaura una copia de esta base de datos del sitio a una instancia compatible de SQL Server con el nombre de instancia DBTest. Para probar una actualización de esta copia de la base de datos del sitio, utilice la siguiente línea de comandos: **Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**  
 
-     Puede encontrar Setup.exe en la siguiente ubicación del medio de origen de System Center Configuration Manager: **SMSSETUP\BIN\X64**.  
+     Puede encontrar Setup.exe en la ubicación siguiente del medio de origen de System Center Configuration Manager: **SMSSETUP\BIN\X64**.  
 
 3.  En la instancia de SQL Server donde se ejecuta la actualización de la base de datos de prueba, supervise el archivo ConfigMgrSetup.log en la raíz de la unidad del sistema para ver el progreso y el éxito:  
 
@@ -329,33 +329,33 @@ Use los procedimientos siguientes para actualizar sitios de Configuration Manage
 
 #### <a name="to-upgrade-a-central-administration-site-or-primary-site"></a>Para actualizar un sitio de administración central o sitio primario  
 
-1.  Compruebe que el usuario que ejecuta el programa de instalación tenga los siguientes derechos de seguridad:  
+1. Compruebe que el usuario que ejecuta el programa de instalación tenga los siguientes derechos de seguridad:  
 
-    -   Derechos de administrador local en el equipo del servidor de sitio.  
-    -   Derechos de administrador local en el servidor de base de datos del sitio remoto para el sitio, si es remoto.    </br></br>
+   -   Derechos de administrador local en el equipo del servidor de sitio.  
+   -   Derechos de administrador local en el servidor de base de datos del sitio remoto para el sitio, si es remoto.    </br></br>
 
-2.  En el equipo del servidor de sitio, abra el Explorador de Windows y vaya a **&lt;ConfigMgSourceMedia\>\SMSSETUP\BIN\X64**.  
+2. En el equipo del servidor de sitio, abra el Explorador de Windows y vaya a **&lt;ConfigMgSourceMedia\>\SMSSETUP\BIN\X64**.  
 
-3.  Haga doble clic en **Setup.exe**. Se abre el Asistente para instalación de Configuration Manager.  
+3. Haga doble clic en **Setup.exe**. Se abre el Asistente para instalación de Configuration Manager.  
 
-4.  En la página **Antes de empezar** , haga clic en **Siguiente**.  
+4. En la página **Antes de empezar**, haga clic en **Siguiente**.  
 
-5.  En la página **Introducción** , seleccione **Actualizar este sitio de Configuration Manager**y, a continuación, haga clic en **Siguiente**.  
+5. En la página **Introducción** , seleccione **Actualizar este sitio de Configuration Manager**y, a continuación, haga clic en **Siguiente**.  
 
-6.  En la página **Clave de producto** , haga clic en **Siguiente**.  
+6. En la página **Clave de producto** , haga clic en **Siguiente**.  
 
-     Si anteriormente ha instalado Configuration Manager Evaluation, puede seleccionar **Instalar la edición con licencia de este producto** y después escribir la clave de producto de la instalación completa de Configuration Manager para convertir el sitio en una versión completa.  
+    Si anteriormente ha instalado Configuration Manager Evaluation, puede seleccionar **Instalar la edición con licencia de este producto** y después escribir la clave de producto de la instalación completa de Configuration Manager para convertir el sitio en una versión completa.  
 
-     A partir de la versión de octubre de 2016 de los medios de línea base de la versión 1606 para System Center Configuration Manager, puede especificar la fecha de expiración de su contrato de Software Assurance. También puede especificar la **fecha de expiración de Software Assurance** de su contrato de licencia como un cómodo recordatorio de esa fecha. Si no la especifica durante la instalación, puede especificarla más tarde desde la consola de Configuration Manager.
+    A partir de la versión de octubre de 2016 de los medios de línea base de la versión 1606 para System Center Configuration Manager, puede especificar la fecha de expiración de su contrato de Software Assurance. También puede especificar la **fecha de expiración de Software Assurance** de su contrato de licencia como un cómodo recordatorio de esa fecha. Si no la especifica durante la instalación, puede especificarla más tarde desde la consola de Configuration Manager.
 
-     >  [!NOTE]   
-     >  Microsoft no valida la fecha de expiración que especifique y no la usará para la validación de la licencia.  pero usted puede usarla como un recordatorio de la fecha de expiración. Esto es útil porque Configuration Manager busca de forma periódica nuevas actualizaciones de software que se ofrecen en línea y el estado de su licencia de Software Assurance debe ser actual para que pueda usar estas actualizaciones adicionales.    
+   > [!NOTE]
+   >  Microsoft no valida la fecha de expiración que especifique y no la usará para la validación de la licencia.  pero usted puede usarla como un recordatorio de la fecha de expiración. Esto es útil porque Configuration Manager busca de forma periódica nuevas actualizaciones de software que se ofrecen en línea y el estado de su licencia de Software Assurance debe ser actual para que pueda usar estas actualizaciones adicionales.    
 
-     Para obtener más información, consulte [Licencias y ramas para System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
+    Para obtener más información, consulte [Licencias y ramas para System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
 
-7.  En la página **Términos de licencia del software de Microsoft** , lea y acepte los términos de licencia y, a continuación, haga clic en **Siguiente**.  
+7. En la página **Términos de licencia del software de Microsoft** , lea y acepte los términos de licencia y, a continuación, haga clic en **Siguiente**.  
 
-8.  En la página **Licencias de requisitos previos** , lea y acepte los términos de licencia del software necesario y haga clic en **Siguiente**. El programa de instalación descarga e instala automáticamente el software en los sistemas de sitio o los clientes cuando sea necesario. Debe activar todas las casillas antes de continuar a la página siguiente.  
+8. En la página **Licencias de requisitos previos** , lea y acepte los términos de licencia del software necesario y haga clic en **Siguiente**. El programa de instalación descarga e instala automáticamente el software en los sistemas de sitio o los clientes cuando sea necesario. Debe activar todas las casillas antes de continuar a la página siguiente.  
 
 9. En la página **Descargas de requisitos previos** , especifique las descargas del programa de instalación y los archivos redistribuibles de requisitos previos, los paquetes de idioma y las últimas actualizaciones de producto desde Internet o use archivos descargados previamente y, a continuación, haga clic en **Siguiente**. Si previamente descargó los archivos con el descargador del programa de instalación, seleccione **Usar archivos descargados anteriormente** y especifique la carpeta de descarga. Para obtener más información, consulte [Descargador del programa de instalación](/sccm/core/servers/deploy/install/setup-downloader).
 
@@ -400,6 +400,6 @@ La actualización del sitio secundario se ejecuta en segundo plano. Una vez comp
 Después de actualizar un sitio a un nuevo Service Pack, es posible que tenga que realizar tareas adicionales para finalizar la actualización o volver a configurar el sitio. Estas tareas pueden incluir: actualizar clientes de Configuration Manager o consolas de Configuration Manager, volver a habilitar réplicas de base de datos para puntos de administración o restaurar valores de configuración para funciones de Configuration Manager que use y que no permanezcan tras la actualización del Service Pack.  
 
 **Problemas conocidos de los sitios secundarios:**  
-- **Al actualizar a la versión 1511:** para asegurarse de que los clientes en sitios secundarios pueden encontrar el punto de administración desde el sitio secundario (punto de administración proxy), agregue de forma manual el punto de administración a los grupos de límites que también incluyen los puntos de distribución en el sitio secundario.  
+- **Al actualizar a la versión 1511:** Para asegurarse de que los clientes en sitios secundarios pueden encontrar el punto de administración desde el sitio secundario (punto de administración proxy), agregue de forma manual el punto de administración a los grupos de límites que también incluyen los puntos de distribución en el sitio secundario.  
 
-- **Al actualizar a la versión 1606 o posteriores:** los puntos de administración proxy se agregan de forma automática a los grupos de límites que incluyen puntos de distribución en el sitio secundario.
+- **Al actualizar a la versión 1606 o una versión posterior:** Los puntos de administración proxy se agregan de forma automática a los grupos de límites que incluyen puntos de distribución en el sitio secundario.

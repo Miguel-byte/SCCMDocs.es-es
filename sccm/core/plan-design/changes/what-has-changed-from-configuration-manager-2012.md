@@ -9,12 +9,12 @@ ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a58e5924fc34bad514ca6f01bb23aa84443705c6
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: df78f6ebfece28d01402272814e8527c3ca4a5fd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340716"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422834"
 ---
 # <a name="what39s-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>Cambios en System Center Configuration Manager respecto a System Center 2012 Configuration Manager
 
@@ -122,27 +122,27 @@ Tenga en cuenta los siguientes cambios en las actualizaciones de software:
 
 Tenga en cuenta los siguientes cambios en la configuración de cumplimiento:
 
--   System Center Configuration Manager mejora el flujo de trabajo para crear elementos de configuración. Ahora, cuando cree un elemento de configuración y seleccione las plataformas admitidas, solo están disponible las opciones relevantes para esa plataforma. Consulte [Get started with compliance settings in System Center Configuration Manager](../../../compliance/get-started/get-started-with-compliance-settings.md) (Introducción a la configuración de cumplimiento en System Center Configuration Manager).  
+- System Center Configuration Manager mejora el flujo de trabajo para crear elementos de configuración. Ahora, cuando cree un elemento de configuración y seleccione las plataformas admitidas, solo están disponible las opciones relevantes para esa plataforma. Consulte [Get started with compliance settings in System Center Configuration Manager](../../../compliance/get-started/get-started-with-compliance-settings.md) (Introducción a la configuración de cumplimiento en System Center Configuration Manager).  
 
--   El Asistente para **crear elemento de configuración** ahora facilita la elección del tipo de elemento de configuración que quiere crear. Además, hay elementos de configuración nuevos y actualizados que están disponibles para los siguientes dispositivos:  
+- El Asistente para **crear elemento de configuración** ahora facilita la elección del tipo de elemento de configuración que quiere crear. Además, hay elementos de configuración nuevos y actualizados que están disponibles para los siguientes dispositivos:  
 
-    -   Dispositivos Windows 10 administrados con el cliente de Configuration Manager.  
+  -   Dispositivos Windows 10 administrados con el cliente de Configuration Manager.  
 
-    -   Dispositivos Mac OS X administrados con el cliente de Configuration Manager.  
+  -   Dispositivos Mac OS X administrados con el cliente de Configuration Manager.  
 
-    -   Equipos de escritorio y servidores de Windows administrados con el cliente de Configuration Manager.  
+  -   Equipos de escritorio y servidores de Windows administrados con el cliente de Configuration Manager.  
 
-    -   Dispositivos Windows 8.1 y Windows 10 administrados sin el cliente de Configuration Manager.  
+  -   Dispositivos Windows 8.1 y Windows 10 administrados sin el cliente de Configuration Manager.  
 
-    -   Dispositivos Windows Phone administrados sin el cliente de Configuration Manager.  
+  -   Dispositivos Windows Phone administrados sin el cliente de Configuration Manager.  
 
-    -   Dispositivos iOS y Mac OS X administrados sin el cliente de Configuration Manager.  
+  -   Dispositivos iOS y Mac OS X administrados sin el cliente de Configuration Manager.  
 
-    -   Dispositivos Android y Samsung KNOX Standard administrados sin el cliente de Configuration Manager.  
+  -   Dispositivos Android y Samsung KNOX Standard administrados sin el cliente de Configuration Manager.  
 
- Consulte [How to create configuration items in System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-items.md) (Cómo crear elementos de configuración en System Center Configuration Manager).  
+  Consulte [How to create configuration items in System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-items.md) (Cómo crear elementos de configuración en System Center Configuration Manager).  
 
--   Compatibilidad para administrar la configuración en equipos Mac OS X que están inscritos con Microsoft Intune o administrados mediante el cliente de Configuration Manager. Consulte [How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md) (Cómo crear elementos de configuración para dispositivos iOS y Mac OS X administrados sin el cliente de System Center Configuration Manager).  
+- Compatibilidad para administrar la configuración en equipos Mac OS X que están inscritos con Microsoft Intune o administrados mediante el cliente de Configuration Manager. Consulte [How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md) (Cómo crear elementos de configuración para dispositivos iOS y Mac OS X administrados sin el cliente de System Center Configuration Manager).  
 
 ## <a name="protect-data-and-site-infrastructure"></a>Proteger los datos y la infraestructura del sitio  
 System Center Configuration Manager le permite integrarse con Windows Hello para empresas (anteriormente Microsoft Passport for Work). Windows Hello para empresas es un método alternativo de inicio de sesión que usa Active Directory, o una cuenta de Azure Active Directory, para reemplazar una contraseña, tarjeta inteligente o tarjeta inteligente virtual en dispositivos que ejecutan Windows 10. Consulte [Windows Hello for Business settings in System Center Configuration Manager](../../../protect/deploy-use/windows-hello-for-business-settings.md) (Configuración de Windows Hello para empresas en System Center Configuration Manager).

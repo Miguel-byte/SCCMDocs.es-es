@@ -10,12 +10,12 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bca3e0857ed40d2e2b3f9d739b4c0411e0213d09
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 0ab848051d5eaa85d2b515145ff64471aee81a31
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385378"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415048"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>Instalar y configurar puntos de distribución en Configuration Manager
 
@@ -247,20 +247,20 @@ En las secciones siguientes, se describen las configuraciones de puntos de distr
 
 Las opciones siguientes se encuentran en la página **Punto de distribución** del Asistente para crear servidor de sistema de sitio y en la pestaña **General** de la ventana Propiedades de punto de distribución:  
 
--   **Instalar y configurar IIS si lo requiere Configuration Manager**: si IIS aún no está instalado en el servidor, Configuration Manager lo instalará y lo configurará. Para usar Configuration Manager, es necesario instalar IIS en todos los puntos de distribución. Si no selecciona esta opción e IIS no está instalado en el servidor, primero instale IIS antes de que Configuration Manager pueda instalar correctamente el punto de distribución.  
+-   **Instalar y configurar IIS si lo requiere Configuration Manager**: si IIS todavía no está instalado en el servidor, Configuration Manager lo instala y lo configura. Para usar Configuration Manager, es necesario instalar IIS en todos los puntos de distribución. Si no selecciona esta opción e IIS no está instalado en el servidor, primero instale IIS antes de que Configuration Manager pueda instalar correctamente el punto de distribución.  
 
     > [!NOTE]  
     >  Esta opción solo se encuentra en la página **Punto de distribución** del Asistente para crear servidor de sistema de sitio. Solo está disponible al [instalar un nuevo punto de distribución](#bkmk_install-procedure).  
 
 - **Habilitar y configurar BranchCache para este punto de distribución**: elija esta opción para permitir que Configuration Manager configure Windows BranchCache en el servidor de punto de distribución. Para obtener más información, vea [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache).  
 
-- **Ajustar la velocidad de descarga para usar el ancho de banda de red sin usar (Windows LEDBAT)**<!--1358112-->: a partir de la versión 1806, habilite puntos de distribución para usar el control de congestión de la red. Para obtener más información, vea [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat). El punto de distribución tiene que ejecutarse en la versión 1709 de Windows Server. No existen requisitos previos de cliente.  
+- **Ajustar la velocidad de descarga para usar el ancho de banda de red no utilizado (Windows LEDBAT)**<!--1358112-->: a partir de la versión 1806, habilite los puntos de distribución para usar el control de congestión de red. Para obtener más información, vea [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat). El punto de distribución tiene que ejecutarse en la versión 1709 de Windows Server. No existen requisitos previos de cliente.  
 
-- **Descripción**: una descripción opcional para este rol de punto de distribución.  
+- **Descripción**: descripción opcional para este rol de punto de distribución.  
 
--   **Configurar cómo se comunican los dispositivos cliente con el punto de distribución**: existen ventajas e inconvenientes en relación con el uso de **HTTP** o **HTTPS**. Para obtener más información, consulte [Prácticas recomendadas de seguridad para la administración de contenido](/sccm/core/plan-design/hierarchy/security-and-privacy-for-content-management#BKMK_Security_ContentManagement).  
+-   **Configure cómo se comunican los dispositivos cliente con el punto de distribución**: el uso de **HTTP** o **HTTPS** presenta ventajas e inconvenientes. Para obtener más información, consulte [Prácticas recomendadas de seguridad para la administración de contenido](/sccm/core/plan-design/hierarchy/security-and-privacy-for-content-management#BKMK_Security_ContentManagement).  
 
--   **Permitir a los clientes conectarse de forma anónima**: esta opción especifica si el punto de distribución permite conexiones anónimas de los clientes de Configuration Manager con la biblioteca de contenido.  
+-   **Permitir a los clientes conectarse de forma anónima**: esta opción permite especificar si el punto de distribución permite conexiones anónimas de los clientes de Configuration Manager con la biblioteca de contenido.  
 
     > [!Important]  
     > Si no usa esta opción, aplique los cambios que se describen en el artículo de Microsoft Knowledge Base [2619572](https://support.microsoft.com/help/2619572/) en los clientes de Windows 7. De lo contrario, la reparación de las aplicaciones de Windows Installer puede producir errores.  
@@ -269,7 +269,7 @@ Las opciones siguientes se encuentran en la página **Punto de distribución** d
     >   
     >  Después de instalar la actualización en los clientes y de modificar la clave del Registro documentada, MSIExec accederá a la ruta del contenido con la cuenta del usuario que haya iniciado la sesión.  
 
--   **Crear un certificado autofirmado o importar un certificado de cliente PKI**: Configuration Manager usa este certificado con los fines siguientes:  
+-   **Crear un certificado autofirmado o importar un certificado de cliente PKI**: Configuration Manager usa este certificado para los siguientes fines:  
 
     -   Autentica el punto de distribución en un punto de administración antes de que el punto de distribución envíe mensajes de estado.  
 
@@ -290,7 +290,7 @@ Las opciones siguientes se encuentran en la página **Punto de distribución** d
 
      Para obtener un ejemplo de implementación de este certificado, vea [Implementar el certificado de cliente para puntos de distribución](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012).  
 
--   **Habilitar este punto de distribución para contenido preconfigurado**: esta opción le permite agregar contenido a servidor antes de distribuir software. Como los archivos de contenido ya se encuentran en la biblioteca de contenido, no se transfieren a través de la red al distribuir el software. Para obtener más información, vea [Contenido preconfigurado](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).  
+-   **Habilitar este punto de distribución para contenido preconfigurado**: esta opción permite agregar contenido al servidor antes de distribuir software. Como los archivos de contenido ya se encuentran en la biblioteca de contenido, no se transfieren a través de la red al distribuir el software. Para obtener más información, vea [Contenido preconfigurado](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).  
 
 
 ### <a name="bkmk_config-drive"></a> Configuración de la unidad  
@@ -336,23 +336,23 @@ Seleccione la opción **Habilitar compatibilidad de PXE para clientes** y, despu
  >   
  > Si instala WDS y DHCP en el mismo servidor, configure WDS para escuchar en otro puerto. De forma predeterminada, DHCP escucha en el mismo puerto. Para obtener más información, consulte [Considerations when you have WDS and DHCP on the same server](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment#BKMK_WDSandDHCP) (Consideraciones si se tiene WDS y DHCP en el mismo servidor).  
 
-- **Permitir que este punto de distribución responda a solicitudes de PXE entrantes**: especifique si quiere permitir que WDS responda a solicitudes de servicio de PXE. Use esta opción para habilitar o deshabilitar el servicio sin quitar la función de PXE del punto de distribución.  
+- **Permitir que este punto de distribución responda a solicitudes de PXE entrantes**: especifique si quiere habilitar WDS para responder a solicitudes de servicio PXE. Use esta opción para habilitar o deshabilitar el servicio sin quitar la función de PXE del punto de distribución.  
 
 - **Habilitar compatibilidad de equipos desconocida**: especifique si quiere habilitar la compatibilidad con equipos no administrados por Configuration Manager. Para obtener más información, consulte [Prepare for unknown computer deployments](/sccm/osd/get-started/prepare-for-unknown-computer-deployments) (Preparación para implementaciones en equipos desconocidos).  
 
-- **Habilitar un respondedor PXE sin el Servicio de implementación de Windows**: a partir de la versión 1806, esta opción habilita un respondedor PXE en el punto de distribución, para lo que no se necesita WDS. El respondedor PXE es compatible con redes IPv6. Si habilita esta opción en un punto de distribución que ya sea compatible con PXE, Configuration Manager suspenderá el servicio WDS. Si deshabilita esta opción, pero activa la opción **Habilitar compatibilidad de PXE para clientes**, el punto de distribución volverá a habilitar WDS.<!--1357580-->  
+- **Habilitar un respondedor PXE sin Servicios de implementación de Windows**: a partir de la versión 1806, esta opción habilita un respondedor PXE en el punto de distribución que no requiere WDS (Servicios de implementación de Windows). El respondedor PXE es compatible con redes IPv6. Si habilita esta opción en un punto de distribución que ya sea compatible con PXE, Configuration Manager suspenderá el servicio WDS. Si deshabilita esta opción, pero activa la opción **Habilitar compatibilidad de PXE para clientes**, el punto de distribución volverá a habilitar WDS.<!--1357580-->  
 
 - **Requerir una contraseña cuando los equipos usen PXE**: para proporcionar seguridad adicional para sus implementaciones de PXE, especifique una contraseña segura.  
 
-- **Afinidad de dispositivo del usuario**: especifique cómo desea que el punto de distribución asocie usuarios al equipo de destino para las implementaciones de PXE. Elija una de las siguientes opciones:  
+- **Afinidad entre usuario y dispositivo**: especifique cómo desea que el punto de distribución asocie usuarios al equipo de destino para las implementaciones de PXE. Elija una de las siguientes opciones:  
 
-    - **Permitir afinidad de dispositivo de usuario con autoaprobación**: elija esta opción para asociar automáticamente los usuarios al equipo de destino sin tener que esperar aprobación.  
+  - **Permitir afinidad de dispositivo de usuario con autoaprobación**: seleccione esta opción para asociar automáticamente los usuarios al equipo de destino sin tener que esperar aprobación.  
 
-    - **Permitir afinidad de dispositivo de usuario pendiente de la aprobación del administrador**: elija esta opción para esperar aprobación por parte de un usuario administrativo antes de asociar usuarios al equipo de destino.  
+  - **Permitir afinidad de dispositivo de usuario pendiente de la aprobación del administrador**: seleccione esta opción para esperar aprobación por parte de un usuario administrativo antes de asociar usuarios al equipo de destino.  
 
-    - **No permitir afinidad de dispositivo de usuario**: seleccione esta opción para especificar los usuarios que no están asociados al equipo de destino. Esta configuración es la predeterminada.  
+  - **No permitir afinidad de dispositivo de usuario**: seleccione esta opción para especificar que los usuarios no están asociados al equipo de destino. Esta configuración es la predeterminada.  
 
-     Para más información sobre la afinidad entre usuario y dispositivo, vea [Link users and devices with user device affinity (Vincular usuarios y dispositivos con afinidad entre usuario y dispositivo)](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
+    Para más información sobre la afinidad entre usuario y dispositivo, vea [Link users and devices with user device affinity (Vincular usuarios y dispositivos con afinidad entre usuario y dispositivo)](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
 
 - **Interfaces de red**: especifique que el punto de distribución responda a las solicitudes PXE desde todas las interfaces de red o desde interfaces de red específicas. Si el punto de distribución responde a interfaces de red específicas, especifique la dirección MAC de cada interfaz de red.  
 
@@ -372,19 +372,19 @@ Seleccione la opción **Habilitar multidifusión para enviar datos simultáneame
 
 - **Cuenta de conexión de multidifusión**: especifique la cuenta que se debe usar al configurar conexiones de base de datos de Configuration Manager para la multidifusión. Para obtener más información, vea [Cuenta de conexión de multidifusión](/sccm/core/plan-design/hierarchy/accounts#multicast-connection-account).  
 
-- **Configuración de dirección de multidifusión**: especifique las direcciones IP que se usan para enviar datos a los equipos de destino. De forma predeterminada, obtiene la dirección IP de un servidor DHCP habilitado para distribuir direcciones de multidifusión. Según el entorno de red, puede especificar un intervalo de direcciones IP entre 239.0.0.0 y 239.255.255.255.  
+- **Configuración de dirección de multidifusión**: especifique las direcciones IP para enviar datos a los equipos de destino. De forma predeterminada, obtiene la dirección IP de un servidor DHCP habilitado para distribuir direcciones de multidifusión. Según el entorno de red, puede especificar un intervalo de direcciones IP entre 239.0.0.0 y 239.255.255.255.  
 
     > [!IMPORTANT]  
     >  Las direcciones IP que configure tienen que ser accesibles por los equipos de destino que soliciten la imagen del SO. Asegúrese de que los enrutadores y firewalls permitan el tráfico de multidifusión entre el equipo de destino y el punto de distribución.  
 
-- **Intervalo de puertos UDP para multidifusión**: especifique el intervalo de puertos UDP usados para enviar datos a los equipos de destino.  
+- **Intervalo de puertos UDP para multidifusión**: especifique el intervalo de puertos UDP que se usan para enviar datos a los equipos de destino.  
 
     > [!IMPORTANT]  
     >  Los puertos UDP tienen que ser accesibles por los equipos de destino que soliciten la imagen del SO. Compruebe que los enrutadores y firewalls permiten tráfico de multidifusión entre el equipo de destino y el servidor del sitio.  
 
 - **Número máximo de clientes**: especifique el número máximo de equipos de destino que pueden descargar la imagen del SO desde este punto de distribución.  
 
-- **Habilitar multidifusión programada**: especifique cómo Configuration Manager controla cuándo se debe iniciar la implementación de sistemas operativos en los equipos de destino. Configure las siguientes opciones:  
+- **Habilitar multidifusión programada**: especifique de qué manera controla Configuration Manager cuándo se debe iniciar la implementación de sistemas operativos en los equipos de destino. Configure las siguientes opciones:  
 
     - **Retraso de inicio de sesión (minutos)**: especifique el número de minutos que Configuration Manager espera antes de responder a la primera solicitud de implementación.  
 
@@ -463,7 +463,7 @@ Para restringir los datos, seleccione el período de tiempo de la cuadrícula y,
 
 - **Permitir alta y media prioridad**: Configuration Manager solo envía datos de prioridad alta y media al punto de distribución.  
 
-- **Permitir solo prioridad alta**: Configuration Manager solo envía datos de alta prioridad al punto de distribución.  
+- **Permitir solo prioridad alta**: Configuration Manager solo envía datos de prioridad alta al punto de distribución.  
 
 - **Cerrado**: Configuration Manager no envía ningún dato al punto de distribución.  
 
@@ -482,7 +482,7 @@ Configure la **Prioridad de distribución** de software en la pestaña **Configu
 
 Configure los límites de frecuencia para controlar el ancho de banda de red que Configuration Manager usa para transferir contenido al punto de distribución. Elija entre las siguientes opciones:  
 
-- **Ilimitado en los envíos a este destino**: Configuration Manager envía contenido al punto de distribución sin restricciones de límite de velocidad. Esta configuración es la predeterminada.  
+- **Ilimitado en los envíos a este destino**: Configuration Manager envía contenido al punto de distribución sin restricciones de velocidad. Esta configuración es la predeterminada.  
 
 - **Modo por pulsos**: esta opción especifica el tamaño de los bloques de datos que el servidor de sitio envía al punto de distribución. También puede especificar un retraso de tiempo entre el envío de cada bloque de datos. Utilice esta opción cuando tenga que enviar datos a través de una conexión de red con un ancho de banda muy bajo al punto de distribución. Por ejemplo, tiene restricciones para enviar 1 KB de datos cada cinco segundos, independientemente de la velocidad del vínculo o de su uso en un momento específico.  
 

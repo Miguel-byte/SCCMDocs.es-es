@@ -10,12 +10,12 @@ ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 68e60611356cbaea3dc14a42776e89ecdc951008
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 561a74730b8a4d27197f0de6f3149659430cc241
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339424"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421185"
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-system-center-configuration-manager"></a>Inventario de hardware para Linux y UNIX en System Center Configuration Manager
 
@@ -23,19 +23,19 @@ ms.locfileid: "32339424"
 
 El cliente de System Center Configuration Manager para Linux y UNIX admite el inventario de hardware. Después de recopilar el inventario de hardware, puede ejecutar y ver el inventario en el Explorador de recursos o informes de Configuration Manager y usar esta información para crear consultas y recopilaciones que permiten las siguientes operaciones:  
 
--   Implementación de software  
+- Implementación de software  
 
--   Aplicar ventanas de mantenimiento  
+- Aplicar ventanas de mantenimiento  
 
--   Implementar configuraciones personalizadas de cliente  
+- Implementar configuraciones personalizadas de cliente  
 
- El inventario de hardware para servidores Linux y UNIX utiliza un servidor de Modelo de información común (CIM) basado en estándares. El servidor CIM se ejecuta como un servicio de software (o daemon) y proporciona una infraestructura de administración que se basa en estándares del grupo de trabajo de administración distribuida (DMTF). El servidor CIM proporciona una funcionalidad similar a las capacidades de CIM de la infraestructura de administración de Windows (WMI) que están disponibles en equipos basados en Windows.  
+  El inventario de hardware para servidores Linux y UNIX utiliza un servidor de Modelo de información común (CIM) basado en estándares. El servidor CIM se ejecuta como un servicio de software (o daemon) y proporciona una infraestructura de administración que se basa en estándares del grupo de trabajo de administración distribuida (DMTF). El servidor CIM proporciona una funcionalidad similar a las capacidades de CIM de la infraestructura de administración de Windows (WMI) que están disponibles en equipos basados en Windows.  
 
- A partir de la actualización acumulativa 1, el cliente para Linux y UNIX usa el código abierto **omiserver** versión 1.0.6 de **The Open Group**. (Antes de la actualización acumulativa 1, el cliente utilizaba **nanowbem** como servidor CIM).  
+  A partir de la actualización acumulativa 1, el cliente para Linux y UNIX usa el código abierto **omiserver** versión 1.0.6 de **The Open Group**. (Antes de la actualización acumulativa 1, el cliente utilizaba **nanowbem** como servidor CIM).  
 
- El servidor CIM se instala como parte del cliente para Linux y UNIX. El cliente para Linux y UNIX se comunica directamente con el servidor CIM y no utiliza la interfaz de WS-MAN del servidor CIM. El puerto de WS-MAN en el servidor CIM está deshabilitado cuando se instala el cliente. Microsoft desarrolló el servidor CIM que ahora está disponible como código abierto a través del proyecto Open Management Infrastructure (OMI). Para obtener más información sobre el proyecto Open Management Infrastructure, consulte el sitio web de [The Open Group](http://go.microsoft.com/fwlink/p/?LinkId=262317) .  
+  El servidor CIM se instala como parte del cliente para Linux y UNIX. El cliente para Linux y UNIX se comunica directamente con el servidor CIM y no utiliza la interfaz de WS-MAN del servidor CIM. El puerto de WS-MAN en el servidor CIM está deshabilitado cuando se instala el cliente. Microsoft desarrolló el servidor CIM que ahora está disponible como código abierto a través del proyecto Open Management Infrastructure (OMI). Para obtener más información sobre el proyecto Open Management Infrastructure, consulte el sitio web de [The Open Group](http://go.microsoft.com/fwlink/p/?LinkId=262317) .  
 
- El inventario de hardware en servidores Linux y UNIX funciona mediante la asignación de clases y propiedades de WMI de Win32 existentes a clases y propiedades equivalentes para servidores Linux y UNIX. Esta asignación uno a uno de clases y propiedades permite que el inventario de hardware de Linux y UNIX se integre en Configuration Manager. Los datos de inventario de servidores Linux y UNIX se muestran junto con el inventario de equipos basados en Windows en la consola y los informes de Configuration Manager. Esto proporciona una experiencia coherente de administración heterogénea.  
+  El inventario de hardware en servidores Linux y UNIX funciona mediante la asignación de clases y propiedades de WMI de Win32 existentes a clases y propiedades equivalentes para servidores Linux y UNIX. Esta asignación uno a uno de clases y propiedades permite que el inventario de hardware de Linux y UNIX se integre en Configuration Manager. Los datos de inventario de servidores Linux y UNIX se muestran junto con el inventario de equipos basados en Windows en la consola y los informes de Configuration Manager. Esto proporciona una experiencia coherente de administración heterogénea.  
 
 > [!TIP]  
 >  Puede usar el valor **Título** para la clase **Sistema operativo** a fin de identificar los diferentes sistemas operativos Linux y UNIX en consultas y recopilaciones.  
@@ -45,48 +45,48 @@ El cliente de System Center Configuration Manager para Linux y UNIX admite el in
 
  El cliente para Linux y UNIX admite las siguientes clases de inventario de hardware que están disponibles en servidores Linux y UNIX:  
 
--   Win32_BIOS  
+- Win32_BIOS  
 
--   Win32_ComputerSystem  
+- Win32_ComputerSystem  
 
--   Win32_DiskDrive  
+- Win32_DiskDrive  
 
--   Win32_DiskPartition  
+- Win32_DiskPartition  
 
--   Win32_NetworkAdapter  
+- Win32_NetworkAdapter  
 
--   Win32_NetworkAdapterConfiguration  
+- Win32_NetworkAdapterConfiguration  
 
--   Win32_OperatingSystem  
+- Win32_OperatingSystem  
 
--   Win32_Process  
+- Win32_Process  
 
--   Win32_Service  
+- Win32_Service  
 
--   Win32Reg_AddRemovePrograms  
+- Win32Reg_AddRemovePrograms  
 
--   SMS_LogicalDisk  
+- SMS_LogicalDisk  
 
--   SMS_Processor  
+- SMS_Processor  
 
- No todas las propiedades para estas clases de inventario están habilitadas para equipos UNIX y Linux en Configuration Manager.  
+  No todas las propiedades para estas clases de inventario están habilitadas para equipos UNIX y Linux en Configuration Manager.  
 
 ##  <a name="BKMK_OperationsforHardwareforLnU"></a> Operaciones del inventario de hardware  
  Después de recopilar el inventario de hardware de los servidores Linux y UNIX, puede ver y utilizar esta información de la misma manera que ve el inventario que recopila de otros equipos:  
 
--   Utilizar el Explorador de recursos para ver información detallada sobre el inventario de hardware de servidores Linux y UNIX.  
+- Utilizar el Explorador de recursos para ver información detallada sobre el inventario de hardware de servidores Linux y UNIX.  
 
--   Crear consultas basadas en configuraciones de hardware específicas.  
+- Crear consultas basadas en configuraciones de hardware específicas.  
 
--   Crear recopilaciones basadas en consultas en función de configuraciones de hardware específicas.  
+- Crear recopilaciones basadas en consultas en función de configuraciones de hardware específicas.  
 
--   Ejecutar informes que muestran detalles específicos sobre las configuraciones de hardware.  
+- Ejecutar informes que muestran detalles específicos sobre las configuraciones de hardware.  
 
- El inventario de hardware en un servidor Linux o UNIX se ejecuta según la programación configurada en la configuración del cliente. De forma predeterminada, esto sucede cada siete días. El cliente para Linux y UNIX admite tanto ciclos de inventario completo como ciclos de inventario diferencial.  
+  El inventario de hardware en un servidor Linux o UNIX se ejecuta según la programación configurada en la configuración del cliente. De forma predeterminada, esto sucede cada siete días. El cliente para Linux y UNIX admite tanto ciclos de inventario completo como ciclos de inventario diferencial.  
 
- También puede forzar al cliente en un servidor Linux o UNIX para que ejecute el inventario de hardware de inmediato. Para ejecutar el inventario de hardware, en un cliente utilice las credenciales **raíz** para ejecutar el siguiente comando para iniciar un ciclo de inventario de hardware: **/opt/microsoft/configmgr/bin/ccmexec - rs hinv**  
+  También puede forzar al cliente en un servidor Linux o UNIX para que ejecute el inventario de hardware de inmediato. Para ejecutar el inventario de hardware, en un cliente utilice las credenciales **raíz** para ejecutar el siguiente comando para iniciar un ciclo de inventario de hardware: **/opt/microsoft/configmgr/bin/ccmexec - rs hinv**  
 
- Las acciones del inventario de hardware se especifican en el archivo de registro de cliente, **scxcm.log**.  
+  Las acciones del inventario de hardware se especifican en el archivo de registro de cliente, **scxcm.log**.  
 
 ##  <a name="BKMK_CustomHINVforLinux"></a> Cómo utilizar Open Management Infrastructure para crear un inventario de hardware personalizado  
  El cliente para Linux y UNIX admite el inventario de hardware personalizado que puede crear utilizando Open Management Infrastructure (OMI). Para ello, siga los pasos a continuación:  
@@ -105,7 +105,7 @@ El cliente de System Center Configuration Manager para Linux y UNIX admite el in
 ###  <a name="BKMK_AddProvidertoLinux"></a> Configure cada equipo que ejecute Linux o UNIX con el proveedor de inventario de hardware personalizado:  
  Después de crear un proveedor de inventario personalizado, debe copiar y, a continuación, registrar el archivo de la biblioteca del proveedor en cada equipo que tiene el inventario que desea recopilar.  
 
-1.  Copie la biblioteca del proveedor en cada equipo Linux y UNIX del que desea recopilar el inventario. El nombre de la biblioteca del proveedor es similar al siguiente: **XYZ_MyProvider.so**  
+1.  Copie la biblioteca del proveedor en cada equipo Linux y UNIX del que desea recopilar el inventario. El nombre de la biblioteca del proveedor es similar al siguiente: **XYZ_MyProvider.SO**  
 
 2.  A continuación, en cada equipo Linux y UNIX, registre la biblioteca del proveedor en el servidor OMI. El servidor OMI se instala en el equipo al instalar el cliente de Configuration Manager para Linux y UNIX, pero debe registrar manualmente los proveedores personalizados. Utilice la siguiente línea de comandos para registrar el proveedor: **/opt/microsoft/omi/bin/omireg XYZ_MyProvider.so**  
 

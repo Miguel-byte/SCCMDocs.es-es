@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: da6204a78ce45c72d2b8d5586d02c8692405f295
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d3155faaa0ccad4e4f98ee72d09f67b1676dc2f4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350432"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421865"
 ---
 # <a name="synchronize-software-updates-from-a-disconnected-software-update-point"></a>Sincronizar actualizaciones de software desde un punto de actualización de software desconectado  
 
@@ -52,11 +52,11 @@ ms.locfileid: "32350432"
 
 #### <a name="to-copy-local-files-from-the-export-server-to-the-disconnected-software-update-point-server"></a>Para copiar archivos locales desde el servidor de exportación en el servidor del punto de actualización de software desconectado  
 
-1.  En el servidor de exportación, vaya a la carpeta donde se almacenan las actualizaciones de software y los términos de licencia para las actualizaciones de software. De forma predeterminada, el servidor WSUS almacena los archivos en <*UnidadInstalaciónWSUS*>\WSUS\WSUSContent\\, donde *UnidadInstalaciónWSUS* es la unidad en la que está instalado WSUS.  
+1. En el servidor de exportación, vaya a la carpeta donde se almacenan las actualizaciones de software y los términos de licencia para las actualizaciones de software. De forma predeterminada, el servidor WSUS almacena los archivos en <*UnidadInstalaciónWSUS*>\WSUS\WSUSContent\\, donde *UnidadInstalaciónWSUS* es la unidad en la que está instalado WSUS.  
 
-2.  Copie todos los archivos y carpetas desde esta ubicación a la carpeta WSUSContent en el servidor del punto de actualización de software desconectado.  
+2. Copie todos los archivos y carpetas desde esta ubicación a la carpeta WSUSContent en el servidor del punto de actualización de software desconectado.  
 
- Utilice el siguiente procedimiento para exportar los metadatos de las actualizaciones de software desde la base de datos WSUS al servidor de exportación.  
+   Utilice el siguiente procedimiento para exportar los metadatos de las actualizaciones de software desde la base de datos WSUS al servidor de exportación.  
 
 #### <a name="to-export-software-updates-metadata-from-the-wsus-database-on-the-export-server"></a>Para exportar metadatos de actualizaciones de software desde la base de datos WSUS al servidor de exportación  
 
@@ -70,7 +70,7 @@ ms.locfileid: "32350432"
 
      **wsusutil.exe export export.cab export.log**  
 
-     El formato se puede definir de la siguiente manera: WSUSutil.exe va seguido de la opción de exportación, el nombre del archivo .cab de exportación creado durante la operación de exportación y el nombre de un archivo de registro. WSUSutil.exe exporta los metadatos desde el servidor de exportación y crea un archivo de registro de la operación.  
+     El formato se puede resumir como sigue: WSUSutil.exe va seguido de la opción de exportación, el nombre del archivo .cab de exportación creado durante la operación de exportación y el nombre de un archivo de registro. WSUSutil.exe exporta los metadatos desde el servidor de exportación y crea un archivo de registro de la operación.  
 
     > [!NOTE]  
     >  Los nombres del paquete (archivo .cab) y del archivo de registro deben ser únicos en la carpeta actual.  
@@ -98,7 +98,7 @@ ms.locfileid: "32350432"
 
      **wsusutil.exe import export.cab import.log**  
 
-     El formato se puede resumir de la siguiente manera: WSUSutil.exe va seguido del comando de importación, el nombre del archivo del paquete (.cab) creado durante la operación de exportación, la ruta de acceso del archivo del paquete si se encuentra en una carpeta diferente y el nombre de un archivo de registro. WSUSutil.exe importa los metadatos desde el servidor de exportación y crea un archivo de registro de la operación.  
+     El formato se puede resumir como sigue: WSUSutil.exe va seguido del comando de importación, el nombre del archivo del paquete (.cab) creado durante la operación de exportación, la ruta de acceso del archivo del paquete si se encuentra en una carpeta diferente y el nombre de un archivo de registro. WSUSutil.exe importa los metadatos desde el servidor de exportación y crea un archivo de registro de la operación.  
 
 ## <a name="next-steps"></a>Pasos siguientes
 Después de sincronizar las actualizaciones de software por primera vez o después de que haya clasificaciones o productos nuevos, debe [configurar los productos y clasificaciones nuevos](configure-classifications-and-products.md) para sincronizar las actualizaciones de software con los nuevos criterios.

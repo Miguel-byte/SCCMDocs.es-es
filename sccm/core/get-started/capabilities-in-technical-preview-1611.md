@@ -10,12 +10,12 @@ ms.assetid: d2ad00e8-9f10-41b6-816a-d8542c23a22e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d610b9f5980376bc9859fcd1e8bb34660e068b09
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 71ad5ae8ff823d03951d5f9ae1a13e8051cba23e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335021"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416578"
 ---
 # <a name="capabilities-in-technical-preview-1611-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1611 para System Center Configuration Manager
 
@@ -26,15 +26,15 @@ ms.locfileid: "32335021"
 En este artículo se presentan las características disponibles en Technical Preview para System Center Configuration Manager, versión 1611. Puede instalar esta versión para actualizar y agregar nuevas capacidades al sitio de Technical Preview de Configuration Manager. Antes de instalar esta versión de Technical Preview, lea el tema de introducción [Technical Preview for System Center Configuration Manager (Technical Preview para System Center Configuration Manager)](../../core/get-started/technical-preview.md) para familiarizarse con los requisitos y las limitaciones generales de una Technical Preview y para saber cómo actualizar entre versiones y cómo proporcionar comentarios sobre las características de una Technical Preview.    
 
 **Problemas conocidos de esta Technical Preview:**   
-- ***Estado de los requisitos previos***: cuando instala la versión 1611, el estado general de los requisitos previos puede aparecer como superado con advertencias, pero no aparecen qué requisitos previos han provocado las advertencias. Esto puede deberse a los dos siguientes requisitos previos:
+- ***Estado de los requisitos previos***: cuando instala la versión 1611, el estado general de los requisitos previos puede aparecer como superado con advertencias, pero no aparecen qué requisitos previos han provocado las advertencias. Esto puede deberse a los dos siguientes requisitos previos:
   - Opciones Memoria para creación de índices de SQL
   - Comprobaciones de la versión de SQL Server admitida  
 
- Como estas son solo advertencias, pueden omitirse.
+  Como estas son solo advertencias, pueden omitirse.
 
 - ***PowerShell***: cuando se conecta a Windows PowerShell desde la consola de Configuration Manager, puede recibir el siguiente error: **Microsoft.ConfigurationManagement.PowerShell.Types.ps1xml no está firmado digitalmente**.  
 
-   Puede resolver este problema reemplazando determinados archivos por las versiones firmadas de la versión 1610. Copie todos los archivos con las siguientes extensiones de la carpeta **&lt;directorio de instalación>\AdminConsole\bin\** de la instalación de la versión 1610: **.psd1**, **.ps1xml** y **.psm1**. Pegue estos archivos en la carpeta **&lt;directorio de instalación>\AdminConsole\bin\** de la instalación de la versión 1611 de Technical Preview, sobrescribiendo la versión 1611 de los archivos.
+   Puede resolver este problema reemplazando determinados archivos por las versiones firmadas de la versión 1610. Copie todos los archivos con las siguientes extensiones de la carpeta **&lt;directorio de instalación>\AdminConsole\bin\\** de la instalación de la versión 1610: **.psd1**, **.ps1xml** y **.psm1**. Pegue estos archivos en la carpeta **&lt;directorio de instalación>\AdminConsole\bin\\** de la instalación de la versión 1611 de Technical Preview, sobrescribiendo la versión 1611 de los archivos.
 
 
 **Estas son las nuevas características que puede probar con esta versión.**  

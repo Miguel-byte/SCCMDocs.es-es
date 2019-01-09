@@ -10,12 +10,12 @@ ms.assetid: 948664f2-239d-47a8-92fc-f8efeebd5796
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1bafded91dcdcddacd45134ce6b52f4da9d916ac
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 67c50d43a378e2c4939aaffb9943ce4fd408f56f
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334205"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417683"
 ---
 # <a name="how-to-manage-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>Cómo administrar clientes para servidores Linux y UNIX en System Center Configuration Manager
 
@@ -26,21 +26,21 @@ Cuando se administran los servidores Linux y UNIX con System Center Configuratio
 ##  <a name="BKMK_CollectionsforLnU"></a> Colecciones de servidores Linux y UNIX  
  Use recopilaciones para administrar grupos de servidores Linux y UNIX de la misma forma que usa recopilaciones para administrar otros tipos de cliente. Las colecciones pueden ser de pertenencia directa o basadas en consultas. Estas últimas identifican los sistemas operativos cliente, las configuraciones de hardware u otros detalles sobre el cliente que se almacenan en la base de datos del sitio. Por ejemplo, puede usar colecciones que incluyan servidores Linux y UNIX para administrar la siguiente configuración:  
 
--   Configuración de cliente  
+- Configuración de cliente  
 
--   Implementaciones de software  
+- Implementaciones de software  
 
--   Aplicar ventanas de mantenimiento  
+- Aplicar ventanas de mantenimiento  
 
- Antes de poder identificar un cliente Linux o UNIX por su sistema operativo o distribución, debe recopilar el [inventario de hardware](../../../core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md) desde el cliente.  
+  Antes de poder identificar un cliente Linux o UNIX por su sistema operativo o distribución, debe recopilar el [inventario de hardware](../../../core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md) desde el cliente.  
 
- La configuración de cliente predeterminada para el inventario de hardware incluye información sobre el sistema operativo del equipo de cliente. Puede usar la propiedad **Título** de la clase **Sistema operativo** para identificar el sistema operativo de un servidor Linux o UNIX.  
+  La configuración de cliente predeterminada para el inventario de hardware incluye información sobre el sistema operativo del equipo de cliente. Puede usar la propiedad **Título** de la clase **Sistema operativo** para identificar el sistema operativo de un servidor Linux o UNIX.  
 
- Puede ver detalles sobre los equipos que ejecutan el cliente de Configuration Manager para Linux y UNIX en el nodo **Dispositivos** del área de trabajo **Activos y compatibilidad** en la consola de Configuration Manager. En el área de trabajo **Activos y compatibilidad** de la consola de Configuration Manager, puede ver el nombre del sistema operativo de cada equipo en la columna **Sistema operativo**.  
+  Puede ver detalles sobre los equipos que ejecutan el cliente de Configuration Manager para Linux y UNIX en el nodo **Dispositivos** del área de trabajo **Activos y compatibilidad** en la consola de Configuration Manager. En el área de trabajo **Activos y compatibilidad** de la consola de Configuration Manager, puede ver el nombre del sistema operativo de cada equipo en la columna **Sistema operativo**.  
 
- De forma predeterminada, los servidores Linux y UNIX son miembros de la recopilación **Todos los sistemas** . Le recomendamos crear recopilaciones personalizadas que incluyan solo servidores Linux y UNIX, o un subconjunto de ellos. Las colecciones personalizadas permiten administrar operaciones como la implementación de software o la asignación de la configuración de cliente a grupos de equipos similares, de manera que pueda medir con precisión el éxito de una implementación.   
+  De forma predeterminada, los servidores Linux y UNIX son miembros de la recopilación **Todos los sistemas** . Le recomendamos crear recopilaciones personalizadas que incluyan solo servidores Linux y UNIX, o un subconjunto de ellos. Las colecciones personalizadas permiten administrar operaciones como la implementación de software o la asignación de la configuración de cliente a grupos de equipos similares, de manera que pueda medir con precisión el éxito de una implementación.   
 
- Cuando cree una recopilación personalizada para servidores Linux y UNIX, incluya consultas de regla de pertenencia que contengan el atributo de título para el atributo de sistema operativo. Para obtener más información sobre la creación de recopilaciones, consulte [How to create collections in System Center Configuration Manager](../../../core/clients/manage/collections/create-collections.md) (Creación de recopilaciones en System Center Configuration Manager).  
+  Cuando cree una recopilación personalizada para servidores Linux y UNIX, incluya consultas de regla de pertenencia que contengan el atributo de título para el atributo de sistema operativo. Para obtener más información sobre la creación de recopilaciones, consulte [How to create collections in System Center Configuration Manager](../../../core/clients/manage/collections/create-collections.md) (Creación de recopilaciones en System Center Configuration Manager).  
 
 ##  <a name="BKMK_MaintenanceWindowsforLnU"></a> Ventanas de mantenimiento para servidores Linux y UNIX  
  El cliente de Configuration Manager para servidores de Linux y UNIX admite el uso de [ventanas de mantenimiento](../../../core/clients/manage/collections/use-maintenance-windows.md). Esta compatibilidad no se ha modificado para los clientes basados en Windows.  

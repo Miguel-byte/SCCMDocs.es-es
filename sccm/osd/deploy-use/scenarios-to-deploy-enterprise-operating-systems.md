@@ -10,12 +10,12 @@ ms.assetid: f74fdb86-c7c2-447f-91f6-b42df6370d7f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d0beb10dca04fe26fb4add22b64ab61b53154185
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0d8f5cf6b30bb465dea5ae680510f16814287daa
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349174"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419128"
 ---
 # <a name="scenarios-to-deploy-enterprise-operating-systems-with-system-center-configuration-manager"></a>Escenarios para implementar sistemas operativos de empresa con System Center Configuration Manager
 
@@ -23,9 +23,9 @@ ms.locfileid: "32349174"
 
 Los siguientes escenarios de implementación de sistema operativo están disponibles en System Center Configuration Manager:  
 
--   [Actualizar Windows a la versión más reciente con System Center Configuration Manager](upgrade-windows-to-the-latest-version.md): este escenario actualiza el sistema operativo en los equipos que actualmente ejecutan Windows 7, Windows 8, Windows 8.1 o Windows 10. El proceso de actualización conserva las aplicaciones, la configuración y los datos de usuario en el equipo. No hay dependencias externas, como Windows ADK, y este proceso es más rápido y más flexible que las implementaciones de sistema operativo tradicionales.  
+-   [Actualizar Windows a la versión más reciente](upgrade-windows-to-the-latest-version.md): este escenario actualiza el sistema operativo en equipos que ejecutan actualmente Windows 7, Windows 8, Windows 8.1 o Windows 10. El proceso de actualización conserva las aplicaciones, la configuración y los datos de usuario en el equipo. No hay dependencias externas, como Windows ADK, y este proceso es más rápido y más flexible que las implementaciones de sistema operativo tradicionales.  
 
--   [Actualizar un equipo existente con una nueva versión de Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md): este escenario efectúa particiones y formatea (borra) un equipo existente e instala un nuevo sistema operativo en el equipo. Puede migrar la configuración y los datos de usuario después de instalar el sistema operativo.  
+-   [Actualizar un equipo existente con una versión nueva de Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md): este escenario realiza la partición y formatea (borra) un equipo existente, e instala un sistema operativo nuevo en el equipo. Puede migrar la configuración y los datos de usuario después de instalar el sistema operativo.  
 
 -   [Instalar una nueva versión de Windows en un equipo nuevo (sin sistema operativo)](install-new-windows-version-new-computer-bare-metal.md): este escenario instala un sistema operativo en un equipo nuevo. Se trata de una instalación nueva del sistema operativo y no incluye los valores de configuración ni la migración de datos de usuario.  
 
@@ -51,12 +51,12 @@ Los siguientes escenarios de implementación de sistema operativo están disponi
 ## <a name="task-sequence-deployments"></a>Implementaciones de secuencia de tareas  
  La secuencia de tareas que cree puede implementar la imagen del sistema operativo en un equipo cliente de Configuration Manager de una de las formas siguientes:  
 
--   Descargar primero la imagen y su contenido en la caché del cliente de Configuration Manager desde un punto de distribución y, a continuación, instalarla.  
+- Descargar primero la imagen y su contenido en la caché del cliente de Configuration Manager desde un punto de distribución y, a continuación, instalarla.  
 
--   Instalar inmediatamente la imagen y su contenido desde el punto de distribución.  
+- Instalar inmediatamente la imagen y su contenido desde el punto de distribución.  
 
--   Instalar la imagen y su contenido a medida que sea necesario desde el punto de distribución.  
+- Instalar la imagen y su contenido a medida que sea necesario desde el punto de distribución.  
 
- De forma predeterminada, cuando crea la implementación para la secuencia de tareas, la imagen se descarga primero en la caché de cliente de Configuration Manager y luego se instala. Si elige descargar la imagen a la caché de cliente de Configuration Manager antes de ejecutar la imagen y la secuencia de tareas contiene una etapa para volver a particionar el disco duro, esta etapa produce un error porque, al particionar el disco duro, se borra el contenido de la caché de cliente de Configuration Manager. Si la secuencia de tareas debe volver a particionar el disco duro, debe ejecutar la instalación de la imagen desde el punto de distribución mediante la opción **Ejecutar programa desde el punto de distribución**  cuando implemente la secuencia de tareas.  
+  De forma predeterminada, cuando crea la implementación para la secuencia de tareas, la imagen se descarga primero en la caché de cliente de Configuration Manager y luego se instala. Si elige descargar la imagen a la caché de cliente de Configuration Manager antes de ejecutar la imagen y la secuencia de tareas contiene una etapa para volver a particionar el disco duro, esta etapa produce un error porque, al particionar el disco duro, se borra el contenido de la caché de cliente de Configuration Manager. Si la secuencia de tareas debe volver a particionar el disco duro, debe ejecutar la instalación de la imagen desde el punto de distribución mediante la opción **Ejecutar programa desde el punto de distribución**  cuando implemente la secuencia de tareas.  
 
- Para obtener más información, vea [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
+  Para obtener más información, vea [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  

@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: b9602d6641e1bb28a3af7c24c64073ba019e0f3e
-ms.sourcegitcommit: 6126dfdf5c879db7d12c3eec019a88fa44521361
+ms.openlocfilehash: a71aa0834a241332d3390e1d888d99b6e3f986f7
+ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52830513"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53444576"
 ---
 <!-- 
 - Feature 1357546
@@ -89,7 +89,7 @@ Artículos con una actualización reciente y significativa.
 ## <a name="troubleshooting-articles"></a>Artículos de solución de problemas
 Tutoriales guiados que le ayudarán a solucionar problemas de características y componentes de Configuration Manager.
 
-- [Solución de problemas de arranque PXE](https://support.microsoft.com/help/10082)
+- [Solución de problemas de arranque PXE](https://support.microsoft.com/help/4468612)
 - [Solución de problemas de sincronización de actualizaciones de software](https://support.microsoft.com/help/10059)
 - [Descripción y solución de problemas de distribución de contenido](https://support.microsoft.com/help/4000401)
 - [Descripción y solución de problemas de integración de Microsoft Store para Empresas](https://support.microsoft.com/help/4010214)
@@ -103,10 +103,10 @@ Artículos de soporte técnico que son nuevos o se han actualizado en noviembre 
 
 - [KB 4468362: Cómo implementar un paquete de idioma de Windows como una aplicación en Configuration Manager](https://support.microsoft.com/help/4468362)
 - [KB 4469580: ConfigMgr PXE no funciona porque no se ha creado un certificado autofirmado](https://support.microsoft.com/help/4469580/)
-- [KB 4471003: Cómo arrancar desde un servidor PXE que se encuentra en una red diferente](https://support.microsoft.com/help/4471003)
-- [4462978: Paquete acumulativo de la rama actual de System Center Configuration Manager, versión 1806](https://support.microsoft.com/help/4462978)
-- [KB 4471061: Un equipo cliente puede "robar" el GUID Administrador de configuración de un objeto de equipo desconocido durante la creación de imágenes](https://support.microsoft.com/help/4471061)
-- [KB 4471115: Medios dinámicos en Administrador de configuración no pueden obtener ubicaciones de punto de administración cuando se ejecuta el Asistente para la secuencia de tareas en Windows PE](https://support.microsoft.com/help/4471115)
+- [KB 4471003: Cómo arrancar desde un servidor PXE que se encuentra en otra red](https://support.microsoft.com/help/4471003)
+- [KB 4462978: Paquete acumulativo de la Rama actual de System Center Configuration Manager, versión 1806](https://support.microsoft.com/help/4462978)
+- [KB 4471061: Un equipo cliente puede "robar" el GUID de Configuration Manager de un objeto de equipo desconocido durante la creación de imágenes](https://support.microsoft.com/help/4471061)
+- [KB 4471115: Medios dinámicos en Configuration Manager no pueden obtener ubicaciones de punto de administración cuando se ejecuta el Asistente para la secuencia de tareas en Windows PE](https://support.microsoft.com/help/4471115)
 
 
 Para suscribirse a notificaciones de Atom o RSS de nuevos artículos de soporte técnico de Configuration Manager, vea [Support content updates](https://support.microsoft.com/help/4089498/) (Actualizaciones de contenido de soporte técnico) y seleccione **System Center Configuration Manager**.  

@@ -10,18 +10,18 @@ ms.assetid: eb20eb90-bcc0-41de-bfea-638ea470c0dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 658d005234469d8729b515e9deeb02e20e94c748
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b29044858bb9a9d57db1c2229c826630d0905860
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340903"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416527"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de uso para diagnóstico para la versión 1610 de System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-La versión 1610 de System Center Configuration Manager recopila tres niveles de datos de diagnóstico y uso: **Básico**, **Mejorado** y **Completo**. De forma predeterminada, esta característica se establece en el nivel Mejorado. En las secciones siguientes se proporcionan detalles adicionales sobre los datos que recopila cada nivel.
+La versión 1610 de System Center Configuration Manager recopila tres niveles de datos de diagnóstico y uso: **Básico**, **Mejorado** y **Completo**. De forma predeterminada, esta característica se establece en el nivel Mejorado. En las secciones siguientes se proporcionan detalles adicionales sobre los datos que recopila cada nivel.
 
 Los cambios respecto de versiones anteriores se indican mediante la nota ***[Nuevo]***, ***[Actualizado]***, ***[Quitado]*** o ***[Movido]***.
 
@@ -40,18 +40,18 @@ A partir de la versión 1610, cambie el nivel de recopilación de datos desde la
  Para la versión 1610 de System Center Configuration Manager, este nivel incluye lo siguiente:
 
 
--   Información sobre la instalación:
-      - Compilación, tipo de instalación, paquetes de idioma, características que ha habilitado  
+- Información sobre la instalación:
+    - Compilación, tipo de instalación, paquetes de idioma, características que ha habilitado  
 
-      - Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos    
+    - Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos    
 
-      - Versión del script posterior a la actualización
+    - Versión del script posterior a la actualización
 
-      - Uso del anillo rápido de actualización
+    - Uso del anillo rápido de actualización
 
-    - ***[Nuevo]*** Uso de versión preliminar, tipo de medio de instalación, tipo de rama
+  - ***[Nuevo]*** Uso de versión preliminar, tipo de medio de instalación, tipo de rama
 
-    - ***[Nuevo]*** Fecha de expiración de Software Assurance
+  - ***[Nuevo]*** Fecha de expiración de Software Assurance
 
 - Métricas de rendimiento de la base de datos (información del procesamiento de replicación, los principales procedimientos almacenados de SQL Server mediante el uso de procesador y disco)
 

@@ -10,12 +10,12 @@ ms.assetid: 2bafd028-1923-4463-9e3e-ee41bc0c437b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 05d87b253f2387dd8428f4b9fadea3fe5f3a48e8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4eb41ba3a55d0de026d38a673d4e5dfad8e22cd7
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342535"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416136"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1605 para System Center Configuration Manager
 
@@ -25,11 +25,11 @@ En este artículo se presentan las características disponibles en Technical Pre
 
  **Problemas conocidos de esta Technical Preview:**  
 
--   Con Technical Preview 1605, si actualiza las propiedades de un punto de administración después de que esté instalado, puede ver un error de la consola que obliga a cerrarla.  Si ocurre esto, puede desinstalar el punto de administración y luego volver a instalarlo con la configuración deseada. También puede modificar el punto de administración antes de instalar Technical Preview 1605.  
+- Con Technical Preview 1605, si actualiza las propiedades de un punto de administración después de que esté instalado, puede ver un error de la consola que obliga a cerrarla.  Si ocurre esto, puede desinstalar el punto de administración y luego volver a instalarlo con la configuración deseada. También puede modificar el punto de administración antes de instalar Technical Preview 1605.  
 
--   Si usa la característica Tienda Windows para empresas con Technical Preview 1604 y luego actualiza a Technical Preview 1605, ya no podrá ver los datos de incorporación. Las demás características siguen funcionando. Si se incorporó con Technical Preview 1604, seguirá incorporado después de instalar Technical Preview 1605 sin necesidad de hacer nada más.  
+- Si usa la característica Tienda Windows para empresas con Technical Preview 1604 y luego actualiza a Technical Preview 1605, ya no podrá ver los datos de incorporación. Las demás características siguen funcionando. Si se incorporó con Technical Preview 1604, seguirá incorporado después de instalar Technical Preview 1605 sin necesidad de hacer nada más.  
 
- **Estas son las nuevas características que puede probar con esta versión.**  
+  **Estas son las nuevas características que puede probar con esta versión.**  
 
 ##  <a name="BKMK_PerAppVPN"></a> VPN por aplicación para dispositivos Windows 10  
  En los dispositivos Windows 10 administrados con Configuration Manager con Intune, puede agregar una lista de aplicaciones que abran automáticamente una conexión VPN que haya configurado mediante la consola de administración de Configuration Manager. Tiene la opción de restringir el tráfico VPN a esas aplicaciones o puede seguir permitiendo todo el tráfico a través de la conexión VPN.  
@@ -57,15 +57,15 @@ En este artículo se presentan las características disponibles en Technical Pre
 
  Para configurar el período de gracia, haga lo siguiente:  
 
-1.  En la página **Agente de equipo** de la configuración de cliente, configure la nueva propiedad **Período de gracia para el cumplimiento tras la fecha límite de la implementación (horas)** con un valor entre **1** y **120** horas.  
+1. En la página **Agente de equipo** de la configuración de cliente, configure la nueva propiedad **Período de gracia para el cumplimiento tras la fecha límite de la implementación (horas)** con un valor entre **1** y **120** horas.  
 
-2.  En una nueva implementación de aplicación o en las propiedades de una implementación existente, en la página **Programación**, active la casilla de verificación **Retrasar el cumplimiento de esta implementación de acuerdo con las preferencias del usuario** hasta el período de gracia definido en la configuración del cliente.  
+2. En una nueva implementación de aplicación o en las propiedades de una implementación existente, en la página **Programación**, active la casilla de verificación **Retrasar el cumplimiento de esta implementación de acuerdo con las preferencias del usuario** hasta el período de gracia definido en la configuración del cliente.  
 
-     Todas las implementaciones que tienen activada esta casilla y que están destinadas a dispositivos en los que también se ha implementado la configuración de cliente usarán el período de gracia.  
+    Todas las implementaciones que tienen activada esta casilla y que están destinadas a dispositivos en los que también se ha implementado la configuración de cliente usarán el período de gracia.  
 
- En esta versión, los dispositivos cliente no usan el período de gracia que configure. Si configura un período de gracia y activa la casilla, la aplicación se instalará en la primera ventana que no sea de empresa que configure el usuario después de la fecha límite.  
+   En esta versión, los dispositivos cliente no usan el período de gracia que configure. Si configura un período de gracia y activa la casilla, la aplicación se instalará en la primera ventana que no sea de empresa que configure el usuario después de la fecha límite.  
 
- Se han agregado opciones similares al asistente para la implementación de actualizaciones de software, al asistente para reglas de implementación automática y a las páginas de propiedades, pero de momento no están implementadas en esta Technical Preview.  
+   Se han agregado opciones similares al asistente para la implementación de actualizaciones de software, al asistente para reglas de implementación automática y a las páginas de propiedades, pero de momento no están implementadas en esta Technical Preview.  
 
 ##  <a name="BKMK_Remote"></a> Nueva experiencia para acciones del dispositivo remoto  
  Se ha mejorado la experiencia para realizar acciones de dispositivo remoto desde la consola de Configuration Manager.  
@@ -75,24 +75,24 @@ Acciones comunes como **Retirar/borrar**, **Restablecer contraseña**, **Bloqueo
 
  Encontrará el estado de cada una de estas operaciones en las ubicaciones siguientes:  
 
--   En el panel de detalles al seleccionar un dispositivo desde el nodo **Dispositivos**.  
+- En el panel de detalles al seleccionar un dispositivo desde el nodo **Dispositivos**.  
 
--   En la página **Propiedades** de un dispositivo.  
+- En la página **Propiedades** de un dispositivo.  
 
--   En la página principal del nodo **Dispositivos** (no todas las columnas podrían estar visibles de forma predeterminada).  
+- En la página principal del nodo **Dispositivos** (no todas las columnas podrían estar visibles de forma predeterminada).  
 
- Para más información sobre la omisión del bloqueo de activación de iOS, vea [Ayudar a proteger dispositivos iOS con el bypass del bloqueo de activación para Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock), en particular la sección **Problemas conocidos actuales del bypass del bloqueo de activación en Configuration Manager Technical Preview**.  
+  Para más información sobre la omisión del bloqueo de activación de iOS, vea [Ayudar a proteger dispositivos iOS con el bypass del bloqueo de activación para Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock), en particular la sección **Problemas conocidos actuales del bypass del bloqueo de activación en Configuration Manager Technical Preview**.  
 
 ##  <a name="BKMK_WSFB"></a> Tienda Windows para aplicaciones empresariales  
  La [Tienda Windows para empresas](https://www.microsoft.com/business-store) es el lugar donde puede buscar y adquirir aplicaciones para su organización, individualmente o por volumen. Al conectar la tienda a Configuration Manager, puede administrar aplicaciones adquiridas por volumen desde la consola de Configuration Manager, por ejemplo:  
 
--   Puede sincronizar la lista de aplicaciones adquiridas con Configuration Manager.  
+- Puede sincronizar la lista de aplicaciones adquiridas con Configuration Manager.  
 
--   Las aplicaciones que se sincronizan aparecen en la consola de Configuration Manager y se pueden implementar igual que cualquier otra aplicación.  
+- Las aplicaciones que se sincronizan aparecen en la consola de Configuration Manager y se pueden implementar igual que cualquier otra aplicación.  
 
--   Cada 24 horas, Configuration Manager descarga información de licencia de las aplicaciones de la tienda que se puede revisar en la consola de Configuration Manager.  
+- Cada 24 horas, Configuration Manager descarga información de licencia de las aplicaciones de la tienda que se puede revisar en la consola de Configuration Manager.  
 
- En la versión 1604 de Technical Preview, puede sincronizar y ver las aplicaciones de la Tienda Windows para empresas en la consola de Configuration Manager. En esta versión, se ha agregado la posibilidad de crear e implementar aplicaciones de Configuration Manager a partir de aplicaciones sincronizadas de la tienda.  
+  En la versión 1604 de Technical Preview, puede sincronizar y ver las aplicaciones de la Tienda Windows para empresas en la consola de Configuration Manager. En esta versión, se ha agregado la posibilidad de crear e implementar aplicaciones de Configuration Manager a partir de aplicaciones sincronizadas de la tienda.  
 
 ### <a name="set-up-windows-store-for-business-synchronization"></a>Configurar la sincronización de la Tienda Windows para empresas  
 
@@ -143,11 +143,11 @@ Acciones comunes como **Retirar/borrar**, **Restablecer contraseña**, **Bloqueo
 
  Cree e implemente una aplicación de Configuration Manager a partir de una aplicación con licencia sin conexión de la Tienda Windows para empresas.  
 
-1.  En el área de trabajo **Biblioteca de software** de la consola de Configuration Manager, expanda **Administración de aplicaciones** y luego haga clic en **Información de licencia para las aplicaciones de la Tienda**.  
+1. En el área de trabajo **Biblioteca de software** de la consola de Configuration Manager, expanda **Administración de aplicaciones** y luego haga clic en **Información de licencia para las aplicaciones de la Tienda**.  
 
-2.  Elija la aplicación que quiere implementar y, luego, en la pestaña **Inicio**, en el grupo **Crear**, haga clic en **Crear aplicación**.  
+2. Elija la aplicación que quiere implementar y, luego, en la pestaña **Inicio**, en el grupo **Crear**, haga clic en **Crear aplicación**.  
 
- Se crea una aplicación de Configuration Manager que contiene la aplicación de la Tienda Windows para empresas. Luego puede implementar y supervisar esta aplicación como lo haría con cualquier otra aplicación de Configuration Manager.  
+   Se crea una aplicación de Configuration Manager que contiene la aplicación de la Tienda Windows para empresas. Luego puede implementar y supervisar esta aplicación como lo haría con cualquier otra aplicación de Configuration Manager.  
 
 > [!IMPORTANT]  
 >  Cuando se crea una aplicación de Configuration Manager con un solo tipo de implementación a partir de una aplicación con licencia sin conexión, se puede implementar en dispositivos administrados mediante MDM y también administrados con el cliente de Configuration Manager. Si intenta implementar una aplicación con varios tipos de implementación, se producirá un error en la instalación.  
@@ -231,29 +231,29 @@ En esta Technical Preview, si el Portal de empresa está abierto durante más de
 
 ### <a name="deploy-the-company-portal-application-and-configuration"></a>Implementar la aplicación Portal de empresa y la configuración  
 
-1.  Use el script de configuración incluido en la Technical Preview para preparar la implementación y la configuración del Portal de empresa:  
+1. Use el script de configuración incluido en la Technical Preview para preparar la implementación y la configuración del Portal de empresa:  
 
-    1.  Abra una ventana de comandos de PowerShell con privilegios elevados.  
+   1. Abra una ventana de comandos de PowerShell con privilegios elevados.  
 
-    2.  Ejecute **set-executionPolicy RemoteSigned**  
+   2. Ejecute **set-executionPolicy RemoteSigned**  
 
-    3.  Desde la carpeta **&lt;directorio de instalación SCCM\>\cd.latest\SMSSETUP\TOOLS\MDM**, ejecute **.\ConfigurationScript.ps1**  
+   3. Desde la carpeta **&lt;directorio de instalación SCCM\>\cd.latest\SMSSETUP\TOOLS\MDM**, ejecute **.\ConfigurationScript.ps1**  
 
-     El script de configuración hace lo siguiente:  
+      El script de configuración hace lo siguiente:  
 
-    1.  Crea una aplicación de Configuration Manager con un tipo de implementación de paquete de aplicaciones de Windows mediante **CompanyPortalOnPremisesMDM.appx** en la misma carpeta.  
+   4. Crea una aplicación de Configuration Manager con un tipo de implementación de paquete de aplicaciones de Windows mediante **CompanyPortalOnPremisesMDM.appx** en la misma carpeta.  
 
-    2.  Crea un elemento de configuración y una línea base de configuración que configura el Portal de empresa.  
+   5. Crea un elemento de configuración y una línea base de configuración que configura el Portal de empresa.  
 
-    3.  Implementa la línea base de configuración y la aplicación y agrega la aplicación a todos los puntos de distribución.  
+   6. Implementa la línea base de configuración y la aplicación y agrega la aplicación a todos los puntos de distribución.  
 
-    > [!NOTE]  
-    >  Si los roles del catálogo de aplicaciones no se encuentran en el sitio primario, haga lo siguiente:  
-    >   
-    >  -   En el área de trabajo **Activos y compatibilidad**, busque el elemento de configuración **OnPremMDM Portal Configuration CI - server urls**.  
-    > -   Cambie el valor **Reglas de compatibilidad** al nombre de dominio completo del sistema de sitio donde se encuentran los roles del catálogo de aplicaciones.  
+   > [!NOTE]
+   >  Si los roles del catálogo de aplicaciones no se encuentran en el sitio primario, haga lo siguiente:  
+   > 
+   > - En el área de trabajo **Activos y compatibilidad**, busque el elemento de configuración **OnPremMDM Portal Configuration CI - server urls**.  
+   >   -   Cambie el valor **Reglas de compatibilidad** al nombre de dominio completo del sistema de sitio donde se encuentran los roles del catálogo de aplicaciones.  
 
-2.  Una vez implementadas la aplicación Portal de empresa y su configuración, compruebe que la aplicación y la línea base de configuración son compatibles con el dispositivo en cuestión mediante la sección **Implementaciones** de la consola de Configuration Manager. El Portal de empresa aparecerá como **Portal de empresa (Technical Preview)** en el menú de inicio del dispositivo.  
+2. Una vez implementadas la aplicación Portal de empresa y su configuración, compruebe que la aplicación y la línea base de configuración son compatibles con el dispositivo en cuestión mediante la sección **Implementaciones** de la consola de Configuration Manager. El Portal de empresa aparecerá como **Portal de empresa (Technical Preview)** en el menú de inicio del dispositivo.  
 
 ### <a name="try-it-out"></a>Haga la prueba  
  Intente realizar las siguientes tareas y háganos saber cómo le ha ido mediante el formulario de comentarios de la página [Programa de comentarios de Configuration Manager](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) del sitio de Microsoft Connect:  
@@ -342,48 +342,48 @@ En esta Technical Preview, si el Portal de empresa está abierto durante más de
 ### <a name="try-it-now"></a>Haga la prueba  
  Intente realizar las siguientes tareas y háganos saber cómo le ha ido mediante el formulario de comentarios de la página [Programa de comentarios de Configuration Manager](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) del sitio de Microsoft Connect:  
 
--   Dispositivos incorporados en el servicio en línea Protección de amenazas avanzada (ATP) de Windows Defender  
+- Dispositivos incorporados en el servicio en línea Protección de amenazas avanzada (ATP) de Windows Defender  
 
--   Supervisar la implementación de Windows Defender ATP en dispositivos administrados  
+- Supervisar la implementación de Windows Defender ATP en dispositivos administrados  
 
- **Requisitos previos**  
+  **Requisitos previos**  
 
--   Suscripción al servicio en línea Protección de amenazas avanzada de Windows Defender  
+- Suscripción al servicio en línea Protección de amenazas avanzada de Windows Defender  
 
--   Clientes con Windows 10, Anniversary Edition (compilación 14328 y superiores)  
+- Clientes con Windows 10, Anniversary Edition (compilación 14328 y superiores)  
 
--   Crear un archivo de configuración de incorporación de cliente  
+- Crear un archivo de configuración de incorporación de cliente  
 
-    ##### <a name="how-to-create-an-onboarding-configuration-file"></a>Cómo crear un archivo de configuración de incorporación de cliente  
+  ##### <a name="how-to-create-an-onboarding-configuration-file"></a>Cómo crear un archivo de configuración de incorporación de cliente  
 
-    1.  Inicie sesión en el servicio en línea Windows Defender ATP.  
+  1.  Inicie sesión en el servicio en línea Windows Defender ATP.  
 
-    2.  Haga clic en el elemento de menú **Incorporación de cliente**.  
+  2.  Haga clic en el elemento de menú **Incorporación de cliente**.  
 
-    3.  Seleccione **System Center Configuration Manager** y haga clic en **Descargar paquete**.  
+  3.  Seleccione **System Center Configuration Manager** y haga clic en **Descargar paquete**.  
 
-    4.  Descargue el archivo comprimido (.zip) y extraiga el contenido.  
+  4.  Descargue el archivo comprimido (.zip) y extraiga el contenido.  
 
 
 ##### <a name="onboard-devices-for-windows-defender-atp"></a>Dispositivos incorporados para Windows Defender ATP  
 
-1.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Endpoint Protection** > **Directivas de Windows Defender ATP** y haga clic en **Crear directiva de Windows Defender ATP**. Se abre el Asistente para crear directiva de Protección contra amenazas avanzada de Windows Defender.  
+1. En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Endpoint Protection** > **Directivas de Windows Defender ATP** y haga clic en **Crear directiva de Windows Defender ATP**. Se abre el Asistente para crear directiva de Protección contra amenazas avanzada de Windows Defender.  
 
-2.  Escriba el **Nombre** y la **Descripción** de la directiva de Windows Defender ATP y seleccione **Incorporación**. Haga clic en Siguiente.  
+2. Escriba el **Nombre** y la **Descripción** de la directiva de Windows Defender ATP y seleccione **Incorporación**. Haga clic en Siguiente.  
 
-3.  **Vaya** al archivo de configuración proporcionado por el inquilino del servicio en la nube de Windows Defender ATP de la organización. Haga clic en **Siguiente**.  
+3. **Vaya** al archivo de configuración proporcionado por el inquilino del servicio en la nube de Windows Defender ATP de la organización. Haga clic en **Siguiente**.  
 
-4.  Especifique los ejemplos de archivos de dispositivos administrados que se recopilan y se comparten para su análisis.  
+4. Especifique los ejemplos de archivos de dispositivos administrados que se recopilan y se comparten para su análisis.  
 
-    -   **Ninguno**: ningún archivo de ejemplo se recopila para su análisis.  
+   - **Ninguno**: ningún archivo de ejemplo se recopila para su análisis.  
 
-    -   **Archivos portables ejecutables**: se recopilan para su análisis archivos como archivos de programa (.exe), archivos de vínculo de biblioteca dinámica (.dll), archivos de fuentes y similares que pueden aprovecharse en ciberataques.  
+   - **Archivos portables ejecutables**: se recopilan para su análisis archivos como archivos de programa (.exe), archivos de vínculo de biblioteca dinámica (.dll), archivos de fuentes y similares que pueden aprovecharse en ciberataques.  
 
      Haga clic en **Siguiente**.  
 
-5.  Revise el resumen y finalice el asistente.  
+5. Revise el resumen y finalice el asistente.  
 
-6.  Ahora puede hacer clic en **Implementar** para implementar la directiva de Windows Defender ATP en equipos cliente administrados.  
+6. Ahora puede hacer clic en **Implementar** para implementar la directiva de Windows Defender ATP en equipos cliente administrados.  
 
 ##### <a name="monitor-windows-defender-atp"></a>Supervisión de Protección contra amenazas avanzada de Windows Defender  
 
@@ -430,38 +430,38 @@ En esta Technical Preview, si el Portal de empresa está abierto durante más de
 
 ##### <a name="pre-declare-corporate-owned-devices-with-imei-or-ios-serial-number"></a>Declarar previamente dispositivos corporativos con número de serie IMEI o iOS  
 
-1.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Todos los dispositivos corporativos** > **Dispositivos declarados previamente** y, luego, haga clic en **Crear dispositivos declarados previamente**. Se abre el asistente para dispositivos declarados previamente.  
+1. En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Todos los dispositivos corporativos** > **Dispositivos declarados previamente** y, luego, haga clic en **Crear dispositivos declarados previamente**. Se abre el asistente para dispositivos declarados previamente.  
 
-2.  Especifique cómo quiere agregar la información del dispositivo:  
+2. Especifique cómo quiere agregar la información del dispositivo:  
 
-    -   **Cargar un archivo .csv que contiene los números IMEI y los detalles**: para cargar una lista de números, vea el paso 3.  
+   -   **Cargar un archivo .csv que contiene los números IMEI y los detalles**: para cargar una lista de números, vea el paso 3.  
 
-    -   **Agregar manualmente los números IMEI y los detalles**: para especificar manualmente la información, escriba el número IMEI o el número de serie iOS y los detalles de los dispositivos y luego vaya al paso 4.  
+   -   **Agregar manualmente los números IMEI y los detalles**: para especificar manualmente la información, escriba el número IMEI o el número de serie iOS y los detalles de los dispositivos y luego vaya al paso 4.  
 
-3.  En el caso de los archivos cargados, busque el archivo .csv que contiene información para declarar previamente dispositivos corporativos. El archivo debe tener el siguiente formato, excepto la fila superior (proporcionada únicamente como guía):  
+3. En el caso de los archivos cargados, busque el archivo .csv que contiene información para declarar previamente dispositivos corporativos. El archivo debe tener el siguiente formato, excepto la fila superior (proporcionada únicamente como guía):  
 
-    |**N.º IMEI**|**Serie iOS**|**SO**|**Detalles**|
-    |---|---|---|---|
-    |123456789012345||WINDOWS|Dispositivo Windows propiedad de la empresa|
-    |123456789012|A0BCD0EFGH0J|IOS|Dispositivos iOS propiedad de la empresa|
-    |123456789012346||ANDROID|Dispositivo Android propiedad de la empresa|
+   |**N.º IMEI**|**Serie iOS**|**SO**|**Detalles**|
+   |---|---|---|---|
+   |123456789012345||WINDOWS|Dispositivo Windows propiedad de la empresa|
+   |123456789012|A0BCD0EFGH0J|IOS|Dispositivos iOS propiedad de la empresa|
+   |123456789012346||ANDROID|Dispositivo Android propiedad de la empresa|
 
-     **Columnas:**  
+    **Columnas:**  
 
-    -   Columna 1: número IMEI – se necesita un número IMEI o un número de serie iOS para cada fila.  
+   - Columna 1: número IMEI (se necesita un número IMEI o un número de serie iOS para cada fila).  
 
-    -   Columna 2: número de serie iOS – solo se pueden declarar previamente los números de serie iOS. Usar número IMEI para otras plataformas de dispositivo  
+   - Columna 2: número de serie iOS – solo se pueden declarar previamente los números de serie iOS. Usar número IMEI para otras plataformas de dispositivo  
 
-    -   Columna 3: sistema operativo del dispositivo (mayúsculas y minúsculas necesarias):  
+   - Columna 3: sistema operativo del dispositivo (mayúsculas y minúsculas necesarias):  
 
-        -   iOS – todos los dispositivos iOS.  
+     -   iOS – todos los dispositivos iOS.  
 
-        -   WINDOWS – incluye Windows Phone, Windows 10 Mobile y equipos de Windows.  
+     -   WINDOWS – incluye Windows Phone, Windows 10 Mobile y equipos de Windows.  
 
-        -   ANDROID – todos los dispositivos Android.  
+     -   ANDROID – todos los dispositivos Android.  
 
-    -   Columna 4: Detalles – información adicional del dispositivo que aparece en la consola de Configuration Manager.  
+   - Columna 4: detalles (información adicional del dispositivo que aparece en la consola de Configuration Manager).  
 
      Haga clic en **Siguiente**.  
 
-4.  Revise los resultados de la importación del archivo. Los números IMEI o de serie previamente importados verán actualizados sus detalles con detalles nuevos.  Haga clic en **Siguiente** para continuar o en **Atrás** para conservar la información actualizada; luego, finalice el asistente.  
+4. Revise los resultados de la importación del archivo. Los números IMEI o de serie previamente importados verán actualizados sus detalles con detalles nuevos.  Haga clic en **Siguiente** para continuar o en **Atrás** para conservar la información actualizada; luego, finalice el asistente.  

@@ -10,12 +10,12 @@ ms.assetid: 0212b023-804a-4f84-b880-7a59cdb49c67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 49de1e2f94d1016f3c0139ccf534b85a718bf7e0
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: 675d4a4c91e9401eb05c0a72bb83af00aab0336c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862505"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419043"
 ---
 # <a name="use-a-task-sequence-to-manage-virtual-hard-disks-in-system-center-configuration-manager"></a>Utilizar una secuencia de tareas para administrar discos duros virtuales en System Center Configuration Manager
 
@@ -64,7 +64,7 @@ En System Center Configuration Manager, puede administrar discos duros virtuales
  Para crear un disco duro virtual debe crear una secuencia de tareas que contenga los pasos para crear el disco duro virtual y, a continuación, usar la secuencia de tareas en el Asistente para crear disco duro virtual para crear el disco duro virtual. Las secciones siguientes proporcionan los pasos para crear el disco duro virtual.  
 
 ###  <a name="BKMK_CreateTS"></a> Crear una secuencia de tareas para el disco duro virtual  
- Debe crear una secuencia de tareas con los pasos para crear el VHD. En el Asistente para crear secuencia de tareas, cuenta con la opción **Instalar un paquete de imagen existente en un disco duro virtual** , que crea los pasos para crear el VHD. Por ejemplo, el asistente agrega los pasos necesarios siguientes: Reiniciar en Windows PE, Formatear y crear particiones en el disco, Aplicar el sistema operativo y Apagar el equipo. No se puede crear el VHD mientras esté en el sistema operativo completo. Además, Configuration Manager debe esperar hasta que se apague la máquina virtual para poder completar el paquete. De manera predeterminada, el asistente espera 5 minutos antes del cierre de la máquina virtual. Después de crear la secuencia de tareas, puede agregar pasos adicionales en caso necesario.  
+ Debe crear una secuencia de tareas con los pasos para crear el VHD. En el Asistente para crear secuencia de tareas, cuenta con la opción **Instalar un paquete de imagen existente en un disco duro virtual** , que crea los pasos para crear el VHD. Por ejemplo, el asistente agrega los siguientes pasos necesarios: Reiniciar en Windows PE, Formatear y crear particiones en el disco, Aplicar el sistema operativo y Apagar el equipo. No se puede crear el VHD mientras esté en el sistema operativo completo. Además, Configuration Manager debe esperar hasta que se apague la máquina virtual para poder completar el paquete. De manera predeterminada, el asistente espera 5 minutos antes del cierre de la máquina virtual. Después de crear la secuencia de tareas, puede agregar pasos adicionales en caso necesario.  
 
 > [!IMPORTANT]  
 >  El proceso siguiente crea la secuencia de tareas mediante la opción **Instalar un paquete de imagen existente en un disco duro virtual** , que incluye automáticamente los pasos necesarios para crear el VHD correctamente. Si elige usar una secuencia de tareas existente o crear manualmente una secuencia de tareas nueva, asegúrese de agregar el paso Apagar el equipo al final de la secuencia. Sin este paso, no se elimina la máquina virtual temporal y no se completa el proceso de creación del VHD. Sin embargo, el asistente finaliza e indica que todo se ha realizado correctamente.  
@@ -83,7 +83,7 @@ En System Center Configuration Manager, puede administrar discos duros virtuales
 
 5.  En la página **Información de secuencia de tareas** , especifique la siguiente configuración y, a continuación, haga clic en **Siguiente**.  
 
-    -   **Nombre de secuencia de tareas**: especifique un nombre que identifique la secuencia de tareas.  
+    -   **Nombre de la secuencia de tareas**: especifique un nombre que identifique la secuencia de tareas.  
 
     -   **Descripción**: especifique una descripción de la secuencia de tareas.  
 
@@ -91,19 +91,19 @@ En System Center Configuration Manager, puede administrar discos duros virtuales
 
 6.  En la página **Instalar Windows** , especifique la siguiente configuración y, a continuación, haga clic en **Siguiente**.  
 
-    -   **Paquete de imágenes**: especifique el paquete que contiene la imagen de sistema operativo que desea instalar.  
+    -   **Paquete de imagen**: especifique el paquete que contiene la imagen de sistema operativo que desea instalar.  
 
     -   **Imagen**: si el paquete de imágenes de sistema operativo contiene varias imágenes, especifique el índice de la imagen de sistema operativo que desea instalar.  
 
-    -   **Clave de producto**: especifique la clave de producto para el sistema operativo Windows que quiere instalar. Puede especificar claves de licencia por volumen codificadas y claves de producto estándar. Si utiliza una clave de producto no codificada, cada grupo de 5 caracteres debe estar separado por un guión (-). Por ejemplo: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
+    -   **Clave de producto**: especifique la clave de producto para el sistema operativo Windows que desea instalar. Puede especificar claves de licencia por volumen codificadas y claves de producto estándar. Si utiliza una clave de producto no codificada, cada grupo de 5 caracteres debe estar separado por un guión (-). Por ejemplo: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
-    -   **Modo de licencia de servidor**: especifique que la licencia de servidor sea **Por puesto**, **Por servidor**o que no se especifica ninguna licencia. Si la licencia de servidor es **Por servidor**, especifique también el número máximo de conexiones de servidor.  
+    -   **Modo de licencia de servidor**: especifique que la licencia de servidor es **Por puesto**, **Por servidor**, o bien que no se especifica ninguna licencia. Si la licencia de servidor es **Por servidor**, especifique también el número máximo de conexiones de servidor.  
 
     -   Especifique cómo administrar la cuenta de administrador que se utiliza cuando se implementa la imagen de sistema operativo.  
 
-        -   **Generar la contraseña de administrador local aleatoriamente y deshabilitar la cuenta en todas las plataformas admitidas (recomendado)**: utilice esta opción para que el asistente cree una contraseña para la cuenta de administrador local aleatoriamente y deshabilite la cuenta cuando se implemente la imagen de sistema operativo.  
+        -   **Generar la contraseña de administrador local aleatoriamente y deshabilitar la cuenta en todas las plataformas admitidas (recomendado)**: Utilice esta opción para que el asistente cree aleatoriamente una contraseña para la cuenta de administrador local y deshabilite la cuenta cuando se implemente la imagen del sistema operativo.  
 
-        -   **Habilitar la cuenta y especificar la contraseña de administrador local**: utilice esta opción para utilizar una contraseña específica para la cuenta de administrador local en todos los equipos donde se implemente la imagen del sistema operativo.  
+        -   **Habilitar la cuenta y especificar la contraseña de administrador local**: Utilice esta opción para utilizar una contraseña específica para la cuenta de administrador local en todos los equipos donde se implemente la imagen del sistema operativo.  
 
 7.  En la página **Configurar red** , especifique la siguiente configuración y, a continuación, haga clic en **Siguiente**.  
 
@@ -134,50 +134,50 @@ En System Center Configuration Manager, puede administrar discos duros virtuales
 
 #### <a name="to-create-a-vhd"></a>Para crear un disco duro virtual  
 
-1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
+1. En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
 
-2.  En el área de trabajo **Biblioteca de software** , expanda **Sistemas operativos**y, a continuación, haga clic en **Discos duros virtuales**.  
+2. En el área de trabajo **Biblioteca de software** , expanda **Sistemas operativos**y, a continuación, haga clic en **Discos duros virtuales**.  
 
-3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear disco duro virtual** para iniciar el Asistente para crear disco duro virtual.  
+3. En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear disco duro virtual** para iniciar el Asistente para crear disco duro virtual.  
 
-    > [!NOTE]  
-    >  Hyper-V debe estar instalado en el equipo que ejecuta la consola de Configuration Manager desde el que administra los VHD o la opción **Crear disco duro virtual** no está habilitada. Para obtener más información acerca de los requisitos de Hyper-V, consulte [Hyper-V Installation Prerequisites (Requisitos previos para la instalación de Hyper-V)](http://technet.microsoft.com/library/cc731898.aspx).  
+   > [!NOTE]  
+   >  Hyper-V debe estar instalado en el equipo que ejecuta la consola de Configuration Manager desde el que administra los VHD o la opción **Crear disco duro virtual** no está habilitada. Para obtener más información acerca de los requisitos de Hyper-V, consulte [Hyper-V Installation Prerequisites (Requisitos previos para la instalación de Hyper-V)](http://technet.microsoft.com/library/cc731898.aspx).  
 
-    > [!TIP]  
-    >  Para organizar sus VHD, cree una nueva carpeta o seleccione una existente en el nodo **Discos duros virtuales** . A continuación, haga clic en **Crear disco duro virtual** desde la carpeta.  
+   > [!TIP]  
+   >  Para organizar sus VHD, cree una nueva carpeta o seleccione una existente en el nodo **Discos duros virtuales** . A continuación, haga clic en **Crear disco duro virtual** desde la carpeta.  
 
-4.  En la página **General** , especifique las opciones siguientes y, a continuación, haga clic en **Siguiente**.  
+4. En la página **General** , especifique las opciones siguientes y, a continuación, haga clic en **Siguiente**.  
 
-    -   **Nombre**: especifique un nombre exclusivo para el VHD.  
+   -   **Nombre**: especifique un nombre único para el VHD.  
 
-    -   **Versión**: especifique un número de versión para el VHD. Se trata de un parámetro opcional.  
+   -   **Versión**: especifique un número de versión para el VHD. Se trata de un parámetro opcional.  
 
-    -   **Comentario**: especifique una descripción para el VHD.  
+   -   **Comentario**: especifique una descripción para el VHD.  
 
-    -   **Ruta de acceso**: especifique la ruta de acceso y el nombre de archivo donde el asistente creará el archivo del VHD.  
+   -   **Ruta de acceso**: especifique la ruta de acceso y el nombre de archivo donde el asistente creará el archivo del VHD.  
 
-         Debe especificar una ruta de red válida en el formato UNC. Por ejemplo: **\\\nombreDeServidor\\<nombreDeRecursoCompartido\>\\<nombreDeArchivo\>.vhd**.  
+        Debe especificar una ruta de red válida en el formato UNC. Por ejemplo: **\\\nombreDeServidor\\<nombreDeRecursoCompartido\>\\<nombreDeArchivo\>.vhd**.  
 
-        > [!WARNING]  
-        >  Configuration Manager debe tener permiso de acceso de **Escritura** en la ruta de acceso especificada para crear el VHD. Cuando Configuration Manager no puede tener acceso a la ruta de acceso, registra el error asociado en el archivo distmgr.log en el servidor de sitio.  
+       > [!WARNING]  
+       >  Configuration Manager debe tener permiso de acceso de **Escritura** en la ruta de acceso especificada para crear el VHD. Cuando Configuration Manager no puede tener acceso a la ruta de acceso, registra el error asociado en el archivo distmgr.log en el servidor de sitio.  
 
-5.  En la página **Secuencia de tareas** , especifique la secuencia de tareas indicada en la sección anterior y, a continuación, haga clic en **Siguiente**.  
+5. En la página **Secuencia de tareas** , especifique la secuencia de tareas indicada en la sección anterior y, a continuación, haga clic en **Siguiente**.  
 
-6.  En la página **Puntos de distribución** , seleccione uno o varios puntos de distribución que contengan el contenido que necesita la secuencia de tareas y, a continuación, haga clic en **Siguiente**.  
+6. En la página **Puntos de distribución** , seleccione uno o varios puntos de distribución que contengan el contenido que necesita la secuencia de tareas y, a continuación, haga clic en **Siguiente**.  
 
-7.  En la página **Personalización** , haga clic en **Siguiente**. El proceso para crear el disco duro virtual omite la configuración especificada en esta página.  
+7. En la página **Personalización** , haga clic en **Siguiente**. El proceso para crear el disco duro virtual omite la configuración especificada en esta página.  
 
-8.  Compruebe la configuración y, a continuación, haga clic en **Siguiente**. El asistente crea el disco duro virtual.  
+8. Compruebe la configuración y, a continuación, haga clic en **Siguiente**. El asistente crea el disco duro virtual.  
 
-    > [!TIP]  
-    >  El tiempo para completar el proceso de creación del VHD puede variar. Aunque el asistente funciona a través de este proceso, puede supervisar los siguientes archivos de registro para realizar un seguimiento del progreso. De forma predeterminada, los registros se ubican en el equipo que ejecuta la consola de Configuration Manager en %*ProgramFiles(x86)*%\Microsoft Configuration Manager\AdminConsole\AdminUILog.  
-    >   
-    >  -   **CreateTSMedia.log**: el asistente escribe información en este archivo mientras crea el medio de la secuencia de tareas. Revise este archivo de registro para realizar un seguimiento del progreso del asistente al crear los medios independientes.  
-    > -   **DeployToVHD.log**: el asistente escribe información en este archivo mientras lleva a cabo el proceso de creación del VHD. Revise este archivo de registro para realizar un seguimiento del progreso del asistente por todos los pasos después de crear los medios independientes.  
-    >   
-    >  Asimismo, cuando se inicie la instalación del sistema operativo, podrá abrir el Administrador de Hyper-V (si instaló las herramientas de administración de Hyper-V en el equipo) y conectarse a la máquina virtual temporal creada por el asistente para ver la ejecución de la secuencia de tareas. Desde el equipo virtual, puede supervisar el archivo smsts.log para realizar un seguimiento del progreso de la secuencia de tareas. Cuando haya problemas con la finalización de un paso de la secuencia de tareas, puede utilizar este archivo de registro para ayudar a solucionar el problema. El archivo smsts.log se encuentra en x: \windows\temp\smstslog\smsts.log antes de formatear el disco duro, y en c:\\_SMSTaskSequence\Logs\Smstslog\ después de formatearlo. Una vez finalizados los pasos de la secuencia de tareas, la máquina virtual se apaga después de 5 minutos (de forma predeterminada) y se elimina.  
+   > [!TIP]
+   >  El tiempo para completar el proceso de creación del VHD puede variar. Aunque el asistente funciona a través de este proceso, puede supervisar los siguientes archivos de registro para realizar un seguimiento del progreso. De forma predeterminada, los registros se ubican en el equipo que ejecuta la consola de Configuration Manager en %*ProgramFiles(x86)*%\Microsoft Configuration Manager\AdminConsole\AdminUILog.  
+   > 
+   > - **CreateTSMedia.log**: el asistente escribe información en este archivo mientras crea el medio de la secuencia de tareas. Revise este archivo de registro para realizar un seguimiento del progreso del asistente al crear los medios independientes.  
+   >   -   **DeployToVHD.log**: el asistente escribe información en este archivo mientras recorre el proceso de crear el VHD. Revise este archivo de registro para realizar un seguimiento del progreso del asistente por todos los pasos después de crear los medios independientes.  
+   > 
+   >   Asimismo, cuando se inicie la instalación del sistema operativo, podrá abrir el Administrador de Hyper-V (si instaló las herramientas de administración de Hyper-V en el equipo) y conectarse a la máquina virtual temporal creada por el asistente para ver la ejecución de la secuencia de tareas. Desde el equipo virtual, puede supervisar el archivo smsts.log para realizar un seguimiento del progreso de la secuencia de tareas. Cuando haya problemas con la finalización de un paso de la secuencia de tareas, puede utilizar este archivo de registro para ayudar a solucionar el problema. El archivo smsts.log se encuentra en x: \windows\temp\smstslog\smsts.log antes de formatear el disco duro, y en c:\\_SMSTaskSequence\Logs\Smstslog\ después de formatearlo. Una vez finalizados los pasos de la secuencia de tareas, la máquina virtual se apaga después de 5 minutos (de forma predeterminada) y se elimina.  
 
- Después de que Configuration Manager cree el disco duro virtual, este se ubica en el nodo **Discos duros virtuales** en la consola de Configuration Manager, en el nodo **Implementación de sistema operativo** del área de trabajo **Biblioteca de software**.  
+   Después de que Configuration Manager cree el disco duro virtual, este se ubica en el nodo **Discos duros virtuales** en la consola de Configuration Manager, en el nodo **Implementación de sistema operativo** del área de trabajo **Biblioteca de software**.  
 
 > [!NOTE]  
 >  Configuration Manager recupera el tamaño del disco duro virtual mediante la conexión a la ubicación de origen del disco duro virtual. Si Configuration Manager no puede acceder al archivo de disco duro virtual, se muestra **0** en la columna **Tamaño (KB)** del disco duro virtual.  
@@ -192,25 +192,25 @@ En System Center Configuration Manager, puede administrar discos duros virtuales
 
 #### <a name="to-create-a-custom-task-sequence-to-modify-the-vhd"></a>Para crear una secuencia de tareas personalizada para modificar el disco duro virtual  
 
-1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
+1. En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
 
-2.  En el área de trabajo **Biblioteca de software** , expanda **Sistemas operativos**y, a continuación, haga clic en **Secuencias de tareas**.  
+2. En el área de trabajo **Biblioteca de software** , expanda **Sistemas operativos**y, a continuación, haga clic en **Secuencias de tareas**.  
 
-3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear secuencia de tareas** para iniciar el Asistente para crear secuencia de tareas.  
+3. En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear secuencia de tareas** para iniciar el Asistente para crear secuencia de tareas.  
 
-4.  En la página **Crear una nueva secuencia de tareas** , seleccione **Crear una nueva secuencia de tareas personalizada**y, a continuación haga clic en **Siguiente**.  
+4. En la página **Crear una nueva secuencia de tareas** , seleccione **Crear una nueva secuencia de tareas personalizada**y, a continuación haga clic en **Siguiente**.  
 
-5.  En la página **Información de secuencia de tareas** , especifique la siguiente configuración y, a continuación, haga clic en **Siguiente**.  
+5. En la página **Información de secuencia de tareas** , especifique la siguiente configuración y, a continuación, haga clic en **Siguiente**.  
 
-    -   **Nombre de secuencia de tareas**: especifique un nombre que identifique la secuencia de tareas.  
+   -   **Nombre de la secuencia de tareas**: especifique un nombre que identifique la secuencia de tareas.  
 
-    -   **Descripción**: especifique una descripción de la secuencia de tareas.  
+   -   **Descripción**: especifique una descripción de la secuencia de tareas.  
 
-    -   **Imagen de arranque**: especifique la imagen de arranque que instala el sistema operativo en el equipo de destino. Para obtener más información, consulte [Manage boot images](../get-started/manage-boot-images.md) (Administrar imágenes de arranque).  
+   -   **Imagen de arranque**: especifique la imagen de arranque que instala el sistema operativo en el equipo de destino. Para más información, vea [Manage boot images (Administrar imágenes de arranque)](../get-started/manage-boot-images.md).  
 
-6.  Complete el asistente.  
+6. Complete el asistente.  
 
- Utilice el procedimiento siguiente para agregar los pasos de secuencia de tareas a la secuencia de tareas personalizada.  
+   Utilice el procedimiento siguiente para agregar los pasos de secuencia de tareas a la secuencia de tareas personalizada.  
 
 #### <a name="to-add-task-sequence-steps-to-the-custom-task-sequence"></a>Para agregar los pasos de secuencia de tareas a la secuencia de tareas personalizada  
 
@@ -231,43 +231,43 @@ En System Center Configuration Manager, puede administrar discos duros virtuales
 
 #### <a name="to-modify-a-vhd"></a>Para modificar un disco duro virtual  
 
-1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
+1. En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
 
-2.  En el área de trabajo **Biblioteca de software** , expanda **Sistemas operativos**, haga clic en **Discos duros virtuales**y, a continuación, seleccione el disco duro virtual que desea modificar.  
+2. En el área de trabajo **Biblioteca de software** , expanda **Sistemas operativos**, haga clic en **Discos duros virtuales**y, a continuación, seleccione el disco duro virtual que desea modificar.  
 
-3.  En la pestaña **Inicio** , en el grupo **Disco duro virtual** , haga clic en **Modificar disco duro virtual** para iniciar el Asistente para modificar disco duro virtual.  
+3. En la pestaña **Inicio** , en el grupo **Disco duro virtual** , haga clic en **Modificar disco duro virtual** para iniciar el Asistente para modificar disco duro virtual.  
 
-    > [!NOTE]  
-    >  Hyper-V debe estar instalado en el equipo que ejecuta la consola de Configuration Manager desde el que administra los VHD o la opción **Modificar disco duro virtual** no está habilitada. Para obtener más información acerca de los requisitos de Hyper-V, consulte [Hyper-V Installation Prerequisites (Requisitos previos para la instalación de Hyper-V)](http://technet.microsoft.com/library/cc731898.aspx).  
+   > [!NOTE]  
+   >  Hyper-V debe estar instalado en el equipo que ejecuta la consola de Configuration Manager desde el que administra los VHD o la opción **Modificar disco duro virtual** no está habilitada. Para obtener más información acerca de los requisitos de Hyper-V, consulte [Hyper-V Installation Prerequisites (Requisitos previos para la instalación de Hyper-V)](http://technet.microsoft.com/library/cc731898.aspx).  
 
-4.  En la página **General** , confirme las opciones siguientes y, a continuación, haga clic en **Siguiente**.  
+4. En la página **General** , confirme las opciones siguientes y, a continuación, haga clic en **Siguiente**.  
 
-    -   **Nombre**: especifica el nombre exclusivo para el VHD.  
+   -   **Nombre**: especifica un nombre único para el disco duro virtual.  
 
-    -   **Versión**: especifica el número de versión del VHD. Se trata de un parámetro opcional.  
+   -   **Versión**: especifica la versión del disco duro virtual. Se trata de un parámetro opcional.  
 
-    -   **Comentario**: especifica la descripción del VHD.  
+   -   **Comentario**: especifica la descripción del disco duro virtual.  
 
-    -   **Ruta de acceso**: especifica la ruta de acceso y el nombre del archivo de la ubicación del archivo del VHD. Esta configuración no se puede modificar.  
+   -   **Ruta de acceso**: especifica el nombre del archivo y la ruta de acceso de la ubicación del disco duro virtual. Esta configuración no se puede modificar.  
 
-        > [!WARNING]  
-        >  Configuration Manager debe tener permiso de acceso de **Escritura** en la ruta de acceso especificada para crear el VHD. Cuando Configuration Manager no puede tener acceso a la ruta de acceso, registra el error asociado en el archivo distmgr.log en el servidor de sitio.  
+       > [!WARNING]  
+       >  Configuration Manager debe tener permiso de acceso de **Escritura** en la ruta de acceso especificada para crear el VHD. Cuando Configuration Manager no puede tener acceso a la ruta de acceso, registra el error asociado en el archivo distmgr.log en el servidor de sitio.  
 
-5.  En la página **Secuencia de tareas** , especifique la secuencia de tareas personalizada que se creó en la sección anterior y, a continuación, haga clic en **Siguiente**.  
+5. En la página **Secuencia de tareas** , especifique la secuencia de tareas personalizada que se creó en la sección anterior y, a continuación, haga clic en **Siguiente**.  
 
-6.  En la página **Puntos de distribución** , seleccione uno o varios puntos de distribución que contengan el contenido que necesita la secuencia de tareas y, a continuación, haga clic en **Siguiente**.  
+6. En la página **Puntos de distribución** , seleccione uno o varios puntos de distribución que contengan el contenido que necesita la secuencia de tareas y, a continuación, haga clic en **Siguiente**.  
 
-7.  En la página **Personalización** , haga clic en **Siguiente**. El proceso para modificar el disco duro virtual omite la configuración especificada en esta página.  
+7. En la página **Personalización** , haga clic en **Siguiente**. El proceso para modificar el disco duro virtual omite la configuración especificada en esta página.  
 
-8.  Compruebe la configuración y, a continuación, haga clic en **Siguiente**. El asistente crea el disco duro virtual modificado.  
+8. Compruebe la configuración y, a continuación, haga clic en **Siguiente**. El asistente crea el disco duro virtual modificado.  
 
-    > [!TIP]  
-    >  El tiempo para completar el proceso de modificación del disco duro virtual puede variar. Aunque el asistente funciona a través de este proceso, puede supervisar los siguientes archivos de registro para realizar un seguimiento del progreso. De forma predeterminada, los registros se ubican en el equipo que ejecuta la consola de Configuration Manager en %*ProgramFiles(x86)*%\Microsoft Configuration Manager\AdminConsole\AdminUILog.  
-    >   
-    >  -   **CreateTSMedia.log**: el asistente escribe información en este archivo mientras crea el medio de la secuencia de tareas. Revise este archivo de registro para realizar un seguimiento del progreso del asistente al crear los medios independientes.  
-    > -   **DeployToVHD.log**: el asistente escribe información en este archivo mientras lleva a cabo el proceso de modificación del VHD. Revise este archivo de registro para realizar un seguimiento del progreso del asistente por todos los pasos después de crear los medios independientes.  
-    >   
-    >  Además, podrá abrir el Administrador de Hyper-V (si instaló las herramientas de administración de Hyper-V en el equipo) y conectarse a la máquina virtual temporal creada por el asistente para visualizar la ejecución de la secuencia de tareas. Desde el equipo virtual, puede supervisar el archivo smsts.log para realizar un seguimiento del progreso de la secuencia de tareas. Cuando haya problemas con la finalización de un paso de la secuencia de tareas, puede utilizar este archivo de registro para ayudar a solucionar el problema. El archivo smsts.log se encuentra en x: \windows\temp\smstslog\smsts.log antes de formatear el disco duro, y en c:\\_SMSTaskSequence\Logs\Smstslog\ después de formatearlo. Una vez finalizados los pasos de la secuencia de tareas, la máquina virtual se apaga después de 5 minutos (de forma predeterminada) y se elimina.  
+   > [!TIP]
+   >  El tiempo para completar el proceso de modificación del disco duro virtual puede variar. Aunque el asistente funciona a través de este proceso, puede supervisar los siguientes archivos de registro para realizar un seguimiento del progreso. De forma predeterminada, los registros se ubican en el equipo que ejecuta la consola de Configuration Manager en %*ProgramFiles(x86)*%\Microsoft Configuration Manager\AdminConsole\AdminUILog.  
+   > 
+   > - **CreateTSMedia.log**: el asistente escribe información en este archivo mientras crea el medio de la secuencia de tareas. Revise este archivo de registro para realizar un seguimiento del progreso del asistente al crear los medios independientes.  
+   >   -   **DeployToVHD.log**: el asistente escribe información en este archivo mientras lleva a cabo el proceso de modificación del disco duro virtual. Revise este archivo de registro para realizar un seguimiento del progreso del asistente por todos los pasos después de crear los medios independientes.  
+   > 
+   >   Además, podrá abrir el Administrador de Hyper-V (si instaló las herramientas de administración de Hyper-V en el equipo) y conectarse a la máquina virtual temporal creada por el asistente para visualizar la ejecución de la secuencia de tareas. Desde el equipo virtual, puede supervisar el archivo smsts.log para realizar un seguimiento del progreso de la secuencia de tareas. Cuando haya problemas con la finalización de un paso de la secuencia de tareas, puede utilizar este archivo de registro para ayudar a solucionar el problema. El archivo smsts.log se encuentra en x: \windows\temp\smstslog\smsts.log antes de formatear el disco duro, y en c:\\_SMSTaskSequence\Logs\Smstslog\ después de formatearlo. Una vez finalizados los pasos de la secuencia de tareas, la máquina virtual se apaga después de 5 minutos (de forma predeterminada) y se elimina.  
 
 ##  <a name="BKMK_ApplyUpdates"></a> Aplicar actualizaciones de software a un disco duro virtual  
  Periódicamente, se publican nuevas actualizaciones de software que son aplicables al sistema operativo de su VHD. Puede aplicar las actualizaciones de software que sean aplicables a un VHD según una programación especificada. En la programación que especifique, Configuration Manager aplica en el VHD las actualizaciones de software que seleccione.  
@@ -295,7 +295,7 @@ En System Center Configuration Manager, puede administrar discos duros virtuales
 
 6.  En la página **Establecer programación** , especifique la siguiente configuración y, a continuación, haga clic en **Siguiente**.  
 
-    1.  **Programación**: especifique la programación para cuándo aplicar las actualizaciones de software en el VHD.  
+    1.  **Programación**: especifique la programación para aplicar las actualizaciones de software en el VHD.  
 
     2.  **Continuar después de un error**: seleccione esta opción para continuar con la aplicación de las actualizaciones de software a la imagen incluso cuando se produzca un error.  
 
@@ -321,10 +321,10 @@ En System Center Configuration Manager, puede administrar discos duros virtuales
 
 4.  En la página **General** , configure las opciones siguientes y, a continuación, haga clic en **Siguiente**.  
 
-    -   **Nombre del servidor VMM**: especifique el FQDN del equipo donde está instalado el servidor de administración de VMM. El asistente se conecta al servidor de administración de VMM para descargar los recursos compartidos de biblioteca para el servidor.  
+    -   **Nombre del servidor VMM**: especifique el FQDN del equipo en que está instalado el servidor de administración de VMM. El asistente se conecta al servidor de administración de VMM para descargar los recursos compartidos de biblioteca para el servidor.  
 
     -   **Recurso compartido de biblioteca VMM**: especifique el recurso compartido de biblioteca VMM en la lista desplegable.  
 
-    -   **Usar transferencia sin cifrar**: seleccione esta opción para transferir el archivo del VHD al servidor de administración de VMM sin el uso del cifrado.  
+    -   **Use la transferencia sin cifrar**: seleccione esta opción para transferir el archivo del VHD al servidor de administración de VMM sin el uso del cifrado.  
 
 5.  En la página Resumen, compruebe la configuración y, a continuación, complete el asistente. El tiempo que se tarda en cargar el VHD puede variar según el tamaño del archivo del VHD y el ancho de banda de red del servidor de administración de VMM.  

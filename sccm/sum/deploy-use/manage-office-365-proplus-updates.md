@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 627e476ee5824eafeb9d034b64010c8677f22a85
-ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
+ms.openlocfilehash: 1fa5646b17646258e4863b3a53960c9c15497389
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223762"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418193"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Administración de Office 365 ProPlus con Configuration Manager
 
@@ -25,13 +25,13 @@ Configuration Manager permite administrar aplicaciones de Office 365 ProPlus de 
 
 - [Panel de administración de clientes de Office 365](#office-365-client-management-dashboard): puede revisar la información de los clientes de Office 365 en el panel de administración de clientes de Office 365. A partir de Configuration Manager versión 1802, en el panel de administración de clientes de Office 365 se muestra una lista de los dispositivos correspondientes al seleccionar las secciones de un gráfico. <!--1357281 -->
 
-- [Implementar aplicaciones de Office 365](#deploy-office-365-apps): puede iniciar el Instalador de Office 365 desde el panel Administración de clientes de Office 365 para facilitar la experiencia de instalación inicial de la aplicación de Office 365. El asistente permite configurar opciones de instalación de Office 365, descargar archivos desde redes de entrega de contenido (CDN) de Office y crear e implementar una aplicación de script con el contenido.    
+- [Implementación de aplicaciones de Office 365](#deploy-office-365-apps): puede iniciar el Instalador de Office 365 desde el panel Administración de clientes de Office 365 para facilitar la experiencia de instalación inicial de la aplicación de Office 365. El asistente permite configurar opciones de instalación de Office 365, descargar archivos desde redes de entrega de contenido (CDN) de Office y crear e implementar una aplicación de script con el contenido.    
 
 - [Implementación de actualizaciones de Office 365](#deploy-office-365-updates): puede administrar las actualizaciones del cliente de Office 365 mediante el flujo de trabajo de administración de actualizaciones de software. Cuando Microsoft publica una nueva actualización de cliente de Office 365 en Content Delivery Network (CDN) de Office, Microsoft también publica un paquete de actualización para Windows Server Update Services (WSUS). Después de que Configuration Manager sincroniza la actualización de cliente de Office 365 desde el catálogo WSUS en el servidor de sitio, la actualización está disponible para implementarla en los clientes.    
 
 - [Adición de idiomas para descargar actualizaciones de Office 365](#add-languages-for-office-365-update-downloads): puede agregar compatibilidad con Configuration Manager para descargar actualizaciones de los idiomas compatibles con Office 365. Esto significa que no es necesario que Configuration Manager admita el idioma mientras lo haga Office 365. Antes de la versión 1610 de Configuration Manager, debe descargar e implementar actualizaciones en los mismos idiomas configurados en los clientes de Office 365. 
 
-- [Cambio del canal de actualización](#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager): con este fin, se puede usar una directiva de grupo para distribuir un cambio del valor de una clave del Registro en los clientes de Office 365.
+- [Cambiar el canal de actualización](#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager): puede usar una directiva de grupo para distribuir un cambio del valor de una clave del Registro en los clientes de Office 365.
 
 
 ## <a name="office-365-client-management-dashboard"></a>Panel de administración de clientes de Office 365  
@@ -139,10 +139,7 @@ Al implementar una actualización en un cliente de Office 365, el comportamiento
 
 |Versión de Configuration Manager |Experiencia del usuario final|  
 |----------------|---------------------|
-|Antes de la 1610|Se establece una marca de reinicio y la actualización se instala después de reiniciar el equipo.|
-|1610|Las aplicaciones de Office 365 se cierran sin previo aviso antes de instalar la actualización.|
-|1610 con actualización <br/>1702|Se establece una marca de reinicio y la actualización se instala después de reiniciar el equipo.|
-|1706|El cliente recibe notificaciones emergentes y en la aplicación, así como un cuadro de diálogo de cuenta atrás, antes de instalar la actualización.|
+|1706, 1710|El cliente recibe notificaciones emergentes y en la aplicación, así como un cuadro de diálogo de cuenta atrás, antes de instalar la actualización.|
 |1802| El cliente recibe notificaciones emergentes y en la aplicación, así como un cuadro de diálogo de cuenta atrás, antes de instalar la actualización. </br>Si las aplicaciones de Office 365 se ejecutan durante la aplicación de una actualización de cliente de Office 365, las aplicaciones de Office no se cerrarán forzosamente. En su lugar, se devolverá la instalación de la actualización y se requerirá el reinicio del sistema. <!--510006-->|
 
 
@@ -173,20 +170,20 @@ Siga el procedimiento de abajo en el punto de actualización de software del sit
 1. Desde el símbolo del sistema, escriba *wbemtest* como usuario administrativo para abrir la Herramienta de comprobación del instrumental de administración de Windows.
 2. Haga clic en **Conectar** y, después, escriba *root\sms\site_&lt;códigoDeSitio&gt;*.
 3. Haga clic en **Consulta** y, después, ejecute la consulta siguiente: *select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"*  
-   ![Consulta WMI](..\media\1-wmiquery.png)
+   ![Consulta WMI](../media/1-wmiquery.png)
 4. En el panel de resultados, haga doble clic en el objeto con el código de sitio del sitio de administración central o del sitio primario independiente.
 5. Seleccione la propiedad **Props**, haga clic en **Editar propiedad** y, después, haga clic en **Ver incrustado**.
-![Editor de propiedades](..\media\2-propeditor.png)
+   ![Editor de propiedades](../media/2-propeditor.png)
 6. Empiece en el primer resultado de la consulta y abra cada objeto hasta que encuentre el objeto que tenga **AdditionalUpdateLanguagesForO365** para la propiedad **PropertyName**.
 7. Seleccione **Value2** y haga clic en **Editar propiedad**.  
-![Editar la propiedad Value2](..\media\3-queryresult.png)
+   ![Editar la propiedad Value2](../media/3-queryresult.png)
 8. Agregue idiomas adicionales a la propiedad **Value2** y haga clic en **Guardar propiedad**. <br/> Por ejemplo, pt-pt (para portugués de Portugal), af-za (para afrikáans de Sudáfrica), nn-no (para noruego nynorsk de Noruega), etc. Escribiría `pt-pt,af-za,nn-no` para los idiomas de ejemplo. No use espacios entre los idiomas.
  
-   ![Agregar idiomas en el Editor de propiedades](..\media\4-props.png)  
+   ![Agregar idiomas en el Editor de propiedades](../media/4-props.png)  
 9. Haga clic en **Cerrar**, **Cerrar**, **Guardar propiedad** y **Guardar objeto** (si hace clic en **Cerrar** aquí se descartarán los valores). Haga clic en **Cerrar** y en **Salir** para salir de la Herramienta de comprobación del instrumental de administración de Windows.
 10. En la consola de Configuration Manager, vaya a **Biblioteca de software** > **Información general** > **Administración de clientes de Office 365** > **Actualizaciones de Office 365**.
 11. Ahora, las actualizaciones de Office 365 se descargarán en los idiomas seleccionados en el asistente y en los que haya configurado en este procedimiento. Para comprobar que las actualizaciones se han descargado en esos idiomas, vaya al origen del paquete de la actualización y busque los archivos con el código de idioma en el nombre de archivo.  
-![Nombres de archivo con idiomas adicionales](..\media\5-verification.png)
+    ![Nombres de archivo con idiomas adicionales](../media/5-verification.png)
 
 ## <a name="updating-office-365-during-task-sequences-when-office-365-is-installed-in-the-base-image"></a>Actualización de Office 365 durante las secuencias de tareas cuando se instala Office 365 en la imagen base
 Cuando se instala un sistema operativo en el que ya está instalado Office 365 en la imagen, es posible que el valor de la clave del Registro del canal de actualización tenga la ubicación de instalación original. En este caso, la búsqueda de actualizaciones no mostrará ninguna actualización del cliente de Office 365 según corresponda. Hay una tarea programada de actualizaciones automáticas de Office que se ejecuta varias veces por semana. Después de ejecutarse esta tarea, el canal de actualización apuntará a la URL configurada de CDN de Office y la búsqueda mostrará estas actualizaciones según corresponda. <!--510452-->

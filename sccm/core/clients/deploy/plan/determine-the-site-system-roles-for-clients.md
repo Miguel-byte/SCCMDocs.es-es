@@ -10,12 +10,12 @@ ms.assetid: 984e8d92-7327-4b08-9228-0c955e6ac778
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eac38757ed2147d664b3bdbf2f7e0eb11947dcac
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 8fdb7faee21904c504470c2bca86a674d59559cf
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334082"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419825"
 ---
 # <a name="determine-the-site-system-roles-for-system-center-configuration-manager-clients"></a>Determinar los roles de sistema de sitio para System Center Configuration Manager
 
@@ -45,15 +45,15 @@ Este tema puede ayudarle a determinar los roles del sistema de sitio que necesit
 
  Instale un punto de estado de reserva si se cumple todo lo siguiente:  
 
--   Desea que los errores de comunicación de cliente de los equipos Windows se envíen al sitio, aunque estos equipos cliente no puedan comunicarse con un punto de administración.  
+- Desea que los errores de comunicación de cliente de los equipos Windows se envíen al sitio, aunque estos equipos cliente no puedan comunicarse con un punto de administración.  
 
--   Quiere usar los informes de implementación de cliente de Configuration Manager, que muestran los datos que envía el punto de estado de reserva.  
+- Quiere usar los informes de implementación de cliente de Configuration Manager, que muestran los datos que envía el punto de estado de reserva.  
 
--   Dispone de un servidor dedicado para este rol de sistema de sitio y de medidas de seguridad adicionales para ayudar a proteger el servidor contra los ataques.  
+- Dispone de un servidor dedicado para este rol de sistema de sitio y de medidas de seguridad adicionales para ayudar a proteger el servidor contra los ataques.  
 
--   Las ventajas de utilizar un punto de estado de reserva son mayores que los riesgos de seguridad asociados con conexiones no autenticadas y transferencias de texto no cifrado sobre tráfico HTTP.  
+- Las ventajas de utilizar un punto de estado de reserva son mayores que los riesgos de seguridad asociados con conexiones no autenticadas y transferencias de texto no cifrado sobre tráfico HTTP.  
 
- No instale un punto de estado de reserva si los riesgos de seguridad de la ejecución de un sitio web con conexiones no autenticadas y transferencias de texto no cifrado superan a las ventajas de identificar problemas de comunicación de clientes.  
+  No instale un punto de estado de reserva si los riesgos de seguridad de la ejecución de un sitio web con conexiones no autenticadas y transferencias de texto no cifrado superan a las ventajas de identificar problemas de comunicación de clientes.  
 
 ##  <a name="determine-whether-you-need-a-reporting-services-point"></a>Determinar si necesita un punto de servicios de informes  
  Configuration Manager proporciona muchos informes para ayudarle a supervisar la instalación, asignación y administración de clientes en la consola de Configuration Manager. Algunos de los informes de implementación de cliente requieren que los clientes se asignen a un punto de estado de reserva.  

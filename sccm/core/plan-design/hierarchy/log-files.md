@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cf7ca86dd04d60f1ff914294a7430d9f4a7a2fb7
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 58ec927ee795624cb475b31c44d64334047f3422
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456709"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416510"
 ---
 # <a name="log-files-in-configuration-manager"></a>Archivos de registro en Configuration Manager
 
@@ -216,39 +216,39 @@ En la siguiente tabla se muestran los archivos de registro del cliente de Config
 ###  <a name="BKMK_LogFilesforLnU"></a> Cliente para Linux y UNIX  
  El cliente de Configuration Manager para Linux y UNIX registra información en los archivos de registro siguientes:  
 
-> [!TIP]  
+> [!TIP]
 >  Use CMTrace para ver los archivos de registro del cliente de UNIX y Linux.  
-
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Cuando utilice la versión de lanzamiento del cliente para Linux y UNIX y consulte la documentación de esta sección, reemplace las referencias siguientes para cada archivo o proceso:  
->   
->  -   Reemplazar **omiserver.bin** con **nwserver.bin**  
-> -   Reemplazar **omi** con **nanowbem**  
+> 
+> - Reemplazar **omiserver.bin** con **nwserver.bin**  
+>   -   Reemplazar **omi** con **nanowbem**  
 
-|Nombre del registro|Detalles|  
-|--------------|-------------|  
-|Scxcm.log|Archivo de registro para el servicio central del cliente de Configuration Manager para Linux y UNIX (ccmexec.bin). Este archivo de registro contiene información acerca de la instalación y las operaciones en curso de ccmexec.bin.<br /><br /> De forma predeterminada, este archivo de registro se encuentra en **/var/opt/microsoft/scxcm.log**<br /><br /> Para cambiar la ubicación del archivo de registro, edite **/opt/microsoft/configmgr/etc/scxcm.conf** y cambie el campo **PATH**. No es necesario reiniciar el equipo cliente o el servicio para que el cambio surta efecto.<br /><br /> Puede establecer el nivel de registro en una de cuatro opciones distintas.|  
-|Scxcmprovider.log|Archivo de registro del servicio CIM del cliente de Configuration Manager para Linux y UNIX (omiserver.bin). Este archivo de registro contiene información acerca de las operaciones en curso de nwserver.bin.<br /><br /> Este registro se encuentra en **/var/opt/microsoft/configmgr/scxcmprovider.log**<br /><br /> Para cambiar la ubicación del archivo de registro, edite **/opt/microsoft/omi/etc/scxcmprovider.conf** y cambie el campo **PATH**. No es necesario reiniciar el equipo cliente o el servicio para que el cambio surta efecto.<br /><br /> Puede establecer el nivel de registro en una de tres opciones.|  
+|     Nombre del registro      |                                                                                                                                                                                                                                                                                               Detalles                                                                                                                                                                                                                                                                                               |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     Scxcm.log     | Archivo de registro para el servicio central del cliente de Configuration Manager para Linux y UNIX (ccmexec.bin). Este archivo de registro contiene información acerca de la instalación y las operaciones en curso de ccmexec.bin.<br /><br /> De forma predeterminada, este archivo de registro se encuentra en **/var/opt/microsoft/scxcm.log**<br /><br /> Para cambiar la ubicación del archivo de registro, edite **/opt/microsoft/configmgr/etc/scxcm.conf** y cambie el campo **PATH**. No es necesario reiniciar el equipo cliente o el servicio para que el cambio surta efecto.<br /><br /> Puede establecer el nivel de registro en una de cuatro opciones distintas. |
+| Scxcmprovider.log |     Archivo de registro del servicio CIM del cliente de Configuration Manager para Linux y UNIX (omiserver.bin). Este archivo de registro contiene información acerca de las operaciones en curso de nwserver.bin.<br /><br /> Este registro se encuentra en <strong>/var/opt/microsoft/configmgr/scxcmprovider.log</strong><br /><br /> Para cambiar la ubicación del archivo de registro, edite **/opt/microsoft/omi/etc/scxcmprovider.conf** y cambie el campo **PATH**. No es necesario reiniciar el equipo cliente o el servicio para que el cambio surta efecto.<br /><br /> Puede establecer el nivel de registro en una de tres opciones.      |
 
  Ambos archivos de registro admiten varios niveles de registro:  
 
 -   **scxcm.log**. Para cambiar el nivel de registro, edite **/opt/microsoft/configmgr/etc/scxcm.conf** y cambie cada instancia de la etiqueta **MODULE** por el nivel de registro que quiera:  
 
-    -   ERROR: indica problemas que requieren atención  
+    -   ERROR: Indica problemas que requieren atención.  
 
-    -   WARNING: indica posibles problemas en las operaciones de cliente  
+    -   WARNING: Indica posibles problemas en las operaciones de cliente.  
 
-    -   INFO: registro más detallado que indica el estado de diversos eventos en el cliente  
+    -   INFO: Registro más detallado que indica el estado de varios eventos en el cliente.  
 
-    -   TRACE: registro detallado que normalmente se usa para diagnosticar problemas  
+    -   TRACE: Registro detallado que normalmente se usa para diagnosticar problemas.  
 
 -   **scxcmprovider.log**. Para cambiar el nivel de registro, edite **/opt/microsoft/omi/etc/scxcmprovider.conf** y cambie cada instancia de la etiqueta **MODULE** por el nivel de registro que quiera:  
 
-    -   ERROR: indica problemas que requieren atención  
+    -   ERROR: Indica problemas que requieren atención.  
 
-    -   WARNING: indica posibles problemas en las operaciones de cliente
+    -   WARNING: Indica posibles problemas en las operaciones de cliente.
 
-    -   INFO: registro más detallado que indica el estado de diversos eventos en el cliente  
+    -   INFO: Registro más detallado que indica el estado de varios eventos en el cliente.  
 
 En condiciones normales de funcionamiento, use el nivel de registro ERROR. Este nivel de registro crea el archivo de registro más pequeño. A medida que el nivel de registro aumenta de ERROR a WARNING, INFO y TRACE, se crea un archivo de registro mayor, ya que se escriben más datos en el archivo.  
 

@@ -10,12 +10,12 @@ ms.assetid: 435c923c-ea30-4dce-8afd-48962ed85502
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ceb8c07c111818136db7c3815eee58cc87ae75c8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9b375c7498e0b6d74c326bd51b45a50e0f9d9555
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333491"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422647"
 ---
 # <a name="configuring-power-management-in-system-center-configuration-manager"></a>Configuración de la administración de energía en System Center Configuration Manager
 
@@ -28,25 +28,25 @@ Para poder usar la administración de energía en System Center Configuration Ma
 
 #### <a name="to-enable-power-management-and-configure-client-settings"></a>Para habilitar y configurar opciones de administración de energía  
 
-1.  En la consola de Configuration Manager, haga clic en **Administración**.  
+1. En la consola de Configuration Manager, haga clic en **Administración**.  
 
-2.  En el área de trabajo **Administración** , haga clic en **Configuración de cliente**.  
+2. En el área de trabajo **Administración** , haga clic en **Configuración de cliente**.  
 
-3.  Haga clic en **Configuración de cliente predeterminada**.  
+3. Haga clic en **Configuración de cliente predeterminada**.  
 
-4.  En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
+4. En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
 
-5.  En el cuadro de diálogo **Configuración de cliente predeterminada** , haga clic en **Administración de energía**.  
+5. En el cuadro de diálogo **Configuración de cliente predeterminada** , haga clic en **Administración de energía**.  
 
-6.  Configure el siguiente valor para la configuración de cliente de administración de energía:  
+6. Configure el siguiente valor para la configuración de cliente de administración de energía:  
 
-    -   **Permitir la administración de energía de dispositivos** : en la lista desplegable, seleccione **Verdadero** para habilitar la administración de energía.  
+   -   **Permitir la administración de energía de dispositivos** : en la lista desplegable, seleccione **Verdadero** para habilitar la administración de energía.  
 
-7.  Configure las opciones de cliente que necesite. Para obtener una lista de las opciones de cliente de administración de energía que puede configurar, vea la sección [Administración de energía](../../../../core/clients/deploy/about-client-settings.md#power-management) del tema [Acerca de la configuración de cliente en Configuration Manager](../../../../core/clients/deploy/about-client-settings.md).  
+7. Configure las opciones de cliente que necesite. Para obtener una lista de las opciones de cliente de administración de energía que puede configurar, vea la sección [Administración de energía](../../../../core/clients/deploy/about-client-settings.md#power-management) del tema [Acerca de la configuración de cliente en Configuration Manager](../../../../core/clients/deploy/about-client-settings.md).  
 
-8.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Configuración de cliente predeterminada** .  
+8. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Configuración de cliente predeterminada** .  
 
- Los equipos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Cómo administrar clientes en System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
+   Los equipos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Cómo administrar clientes en System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
 
 ## <a name="exclude-computers-from-power-management"></a>Excluir equipos de la administración de energía  
  Puede impedir que las recopilaciones de equipos reciban la configuración de administración de energía. Si un equipo es miembro de alguna recopilación que se excluye de la configuración de administración de energía, ese equipo no aplica la configuración de administración de energía, incluso si es miembro de otra recopilación que aplica la configuración de administración de energía.  
@@ -71,12 +71,12 @@ Para poder usar la administración de energía en System Center Configuration Ma
 
 #### <a name="to-exclude-a-collection-of-computers-from-power-management"></a>Para excluir una recopilación de equipos de la administración de energía  
 
-1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
+1. En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
 
-2.  En el área de trabajo **Activos y compatibilidad** , haga clic en **Recopilaciones de dispositivos**.  
+2. En el área de trabajo **Activos y compatibilidad** , haga clic en **Recopilaciones de dispositivos**.  
 
-3.  En la lista **Recopilaciones de dispositivos** , seleccione la recopilación que quiere excluir de la administración de energía y, a continuación, en la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
+3. En la lista **Recopilaciones de dispositivos** , seleccione la recopilación que quiere excluir de la administración de energía y, a continuación, en la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
 
-4.  En la pestaña **Administración de energía** del cuadro de diálogo *<Nombre de recopilación\>***Propiedades**, seleccione **No aplicar nunca la configuración de administración de energía en equipos de esta recopilación**.  
+4. En la pestaña **Administración de energía** del cuadro de diálogo <em><Nombre de la colección>\></em>**Propiedades**, seleccione **No aplicar nunca la configuración de administración de energía en equipos de esta recopilación**.  
 
-5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo *<Nombre de recopilación\>***Propiedades** y guardar la configuración.  
+5. Haga clic en **Aceptar** para cerrar el cuadro de diálogo <em><Nombre de la colección>\></em>**Propiedades** y guardar la configuración.  

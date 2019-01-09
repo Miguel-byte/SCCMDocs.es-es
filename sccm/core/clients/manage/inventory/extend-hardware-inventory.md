@@ -10,12 +10,12 @@ ms.assetid: d5bfab4f-c55e-4545-877c-5c8db8bc1891
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 317a143ba80607bef46a371c0e93ad9f4027abe4
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f1fa9f1bb2e036e0208a72e744f66da5c1887593
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344286"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423310"
 ---
 # <a name="how-to-extend-hardware-inventory-in-system-center-configuration-manager"></a>Cómo ampliar el inventario de hardware en System Center Configuration Manager
 
@@ -67,33 +67,33 @@ Estos procedimientos le ayudan a configurar la configuración predeterminada par
 
 Solo se pueden agregar clases de inventario desde el servidor de nivel superior en la jerarquía modificando la configuración predeterminada del cliente. Esta opción no está disponible al crear la configuración de dispositivo personalizado.
 
-1.  En la consola de Configuration Manager, elija **Administración** > **Configuración de cliente** > **Configuración de cliente predeterminada**.  
+1. En la consola de Configuration Manager, elija **Administración** > **Configuración de cliente** > **Configuración de cliente predeterminada**.  
 
-4.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
+2. En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
 
-5.  En el cuadro de diálogo **Configuración de cliente predeterminada**, pulse **Inventario de hardware**.  
+3. En el cuadro de diálogo **Configuración de cliente predeterminada**, pulse **Inventario de hardware**.  
 
-6.  En la lista **Configuración de dispositivo**, pulse **Establecer clases**.  
+4. En la lista **Configuración de dispositivo**, pulse **Establecer clases**.  
 
-7.  En el cuadro de diálogo **Clases de inventario de hardware**, pulse **Agregar**.  
+5. En el cuadro de diálogo **Clases de inventario de hardware**, pulse **Agregar**.  
 
-8.  En el **Agregar clase de inventario de Hardware** cuadro de diálogo, haga clic en **Conectar**.  
+6. En el **Agregar clase de inventario de Hardware** cuadro de diálogo, haga clic en **Conectar**.  
 
-9. En el **Conectar a Windows Management Instrumentation (WMI)** cuadro de diálogo, especifique el nombre del equipo desde el que se recuperarán las clases WMI y el espacio de nombres WMI para recuperar las clases. Si desea recuperar todas las clases debajo del espacio de nombres WMI que especificó, haga clic en **recursiva**. Si el equipo a que se conecta no es el equipo local, proporcione las credenciales de inicio de sesión de una cuenta que tenga permiso para obtener acceso a WMI en el equipo remoto.  
+7. En el **Conectar a Windows Management Instrumentation (WMI)** cuadro de diálogo, especifique el nombre del equipo desde el que se recuperarán las clases WMI y el espacio de nombres WMI para recuperar las clases. Si desea recuperar todas las clases debajo del espacio de nombres WMI que especificó, haga clic en **recursiva**. Si el equipo a que se conecta no es el equipo local, proporcione las credenciales de inicio de sesión de una cuenta que tenga permiso para obtener acceso a WMI en el equipo remoto.  
 
-10. Pulse **Conectar**.  
+8. Pulse **Conectar**.  
 
-11. En el cuadro de diálogo **Agregar clase de inventario de hardware**, en la lista **Clases de inventario**, seleccione las clases WMI que quiera agregar al inventario de hardware de Configuration Manager.  
+9. En el cuadro de diálogo **Agregar clase de inventario de hardware**, en la lista **Clases de inventario**, seleccione las clases WMI que quiera agregar al inventario de hardware de Configuration Manager.  
 
-12. Si quiere modificar la información sobre la clase WMI seleccionada, seleccione **Editar**, y en el cuadro de diálogo **Calificadores de clase**, proporcione la siguiente información:  
+10. Si quiere modificar la información sobre la clase WMI seleccionada, seleccione **Editar**, y en el cuadro de diálogo **Calificadores de clase**, proporcione la siguiente información:  
 
-    -   **Nombre para mostrar**: este nombre se mostrará en el Explorador de recursos.  
+    - **Nombre para mostrar**: este nombre se mostrará en el Explorador de recursos.  
 
-    -   **Propiedades**: especifique las unidades en las que se mostrará cada una de las propiedades de la clase WMI.  
+    - **Propiedades**: especifique las unidades en las que se mostrará cada una de las propiedades de la clase WMI.  
 
-     También puede designar propiedades como una propiedad de clave para ayudar a identificar de forma única cada instancia de la clase. Si se ha definido ninguna clave para la clase y se informa de varias instancias de la clase de cliente, se almacena sólo la instancia más reciente que se encuentra en la base de datos.  
+      También puede designar propiedades como una propiedad de clave para ayudar a identificar de forma única cada instancia de la clase. Si se ha definido ninguna clave para la clase y se informa de varias instancias de la clase de cliente, se almacena sólo la instancia más reciente que se encuentra en la base de datos.  
 
-     Cuando haya terminado de configurar las propiedades, haga clic en **Aceptar** para cerrar el cuadro de diálogo **Calificadores de clase** y los demás cuadros de diálogo abiertos. 
+      Cuando haya terminado de configurar las propiedades, haga clic en **Aceptar** para cerrar el cuadro de diálogo **Calificadores de clase** y los demás cuadros de diálogo abiertos. 
 
 ###  <a name="BKMK_Import"></a> Cómo importar clases de inventario de hardware  
 

@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 579e9494a4f44f41a411af88bf58df7dcc5e8075
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3cdc4ef389e4d46ad1c572b8785cb8ea26d90fcd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340477"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416663"
 ---
 # <a name="introduction-to-reporting-in-system-center-configuration-manager"></a>Introducción a los informes en System Center Configuration Manager
 
@@ -28,17 +28,17 @@ Los informes de System Center Configuration Manager proporcionan un conjunto de 
 
  Configuration Manager usa SQL Server Reporting Services como solución de informes. La integración con Reporting Services proporciona las siguientes ventajas:  
 
--   Usa un sistema de informes estándar del sector para consultar la base de datos de Configuration Manager.  
+- Usa un sistema de informes estándar del sector para consultar la base de datos de Configuration Manager.  
 
--   Muestra los informes mediante el Visor de informes de Configuration Manager o mediante el Administrador de informes, que es una conexión al informe basada en web.  
+- Muestra los informes mediante el Visor de informes de Configuration Manager o mediante el Administrador de informes, que es una conexión al informe basada en web.  
 
--   Proporciona elevadas escalabilidad y disponibilidad y alto rendimiento.  
+- Proporciona elevadas escalabilidad y disponibilidad y alto rendimiento.  
 
--   Proporciona suscripciones a informes a los que pueden suscribirse los usuarios; por ejemplo, un administrador puede suscribirse para recibir automáticamente por correo electrónico un informe diario que detalle el estado de implementación de una actualización de software.  
+- Proporciona suscripciones a informes a los que pueden suscribirse los usuarios; por ejemplo, un administrador puede suscribirse para recibir automáticamente por correo electrónico un informe diario que detalle el estado de implementación de una actualización de software.  
 
--   Exporta informes que pueden seleccionar los usuarios en una gran variedad de los formatos más usados.  
+- Exporta informes que pueden seleccionar los usuarios en una gran variedad de los formatos más usados.  
 
- Para obtener más información acerca de Reporting Services, consulte [SQL Server Reporting Services](http://go.microsoft.com/fwlink/p/?LinkID=212032) en Libros en pantalla de SQL Server 2008.  
+  Para obtener más información acerca de Reporting Services, consulte [SQL Server Reporting Services](http://go.microsoft.com/fwlink/p/?LinkID=212032) en Libros en pantalla de SQL Server 2008.  
 
 ##  <a name="BKMK_ReportingServicesPoint"></a> Punto de servicios de informes  
  El punto de servicios de informes es un rol de sistema de sitio que está instalado en un servidor que ejecuta Microsoft SQL Server Reporting Services. El punto de servicios de informes copia las definiciones de informes de Configuration Manager en Reporting Services, crea carpetas de informes basadas en categorías de informes y establece una directiva de seguridad sobre los informes y las carpetas de informes que se basa en los permisos basados en roles para los usuarios administrativos de Configuration Manager. En un intervalo de 10 minutos, el punto de servicios de informes se conecta con Reporting Services para volver a aplicar la directiva de seguridad si se cambió, por ejemplo, mediante el Administrador de informes. Para obtener más información acerca de cómo planear e instalar un punto de servicios de informes, consulte la documentación siguiente:  
@@ -80,30 +80,30 @@ Los informes de System Center Configuration Manager proporcionan un conjunto de 
 
  La instalación del Generador de informes agrega compatibilidad para más de 20 idiomas. Cuando se ejecuta el Generador de informes, muestra los datos en el idioma del sistema operativo que está en ejecución en el equipo local. Si el Generador de informes no es compatible con el idioma, los datos se mostrarán en inglés. El Generador de informes es compatible con todas las funciones de SQL Server 2008 Reporting Services, que incluyen las siguientes capacidades:  
 
--   Ofrece un entorno de creación de informes intuitivo, con un aspecto similar a Microsoft Office.  
+- Ofrece un entorno de creación de informes intuitivo, con un aspecto similar a Microsoft Office.  
 
--   Ofrece el flexible diseño de informes del lenguaje RDL (Report Definition Language) de SQL Server 2008.  
+- Ofrece el flexible diseño de informes del lenguaje RDL (Report Definition Language) de SQL Server 2008.  
 
--   Proporciona diversas formas de visualización de datos, incluidos gráficos e indicadores.  
+- Proporciona diversas formas de visualización de datos, incluidos gráficos e indicadores.  
 
--   Proporciona cuadros de texto con formato enriquecido.  
+- Proporciona cuadros de texto con formato enriquecido.  
 
--   Exporta a formato de Microsoft Word.  
+- Exporta a formato de Microsoft Word.  
 
- También puede abrir el Generador de informes desde SQL Server Reporting Services.  
+  También puede abrir el Generador de informes desde SQL Server Reporting Services.  
 
 ##  <a name="BKMK_ReportModels"></a> Modelos de informes en SQL Server Reporting Services  
  SQL Reporting Services en Configuration Manager usa modelos de informes para permitir a los usuarios administrativos seleccionar elementos de la base de datos e incluirlos en informes basados en modelos. Para el usuario administrativo que genera el informe, los modelos de informes solo exponen las vistas y elementos especificados para elegir entre ellos. Para crear informes basados en modelos, al menos un modelo de informes debe estar disponible. Los modelos de informes tienen las siguientes características:  
 
--   Puede dar a los campos y las vistas de la base de datos nombres empresariales lógicos para facilitar la producción de informes. No se requieren conocimientos de estructuras de bases de datos para producir informes.  
+- Puede dar a los campos y las vistas de la base de datos nombres empresariales lógicos para facilitar la producción de informes. No se requieren conocimientos de estructuras de bases de datos para producir informes.  
 
--   Puede agrupar los elementos lógicamente.  
+- Puede agrupar los elementos lógicamente.  
 
--   Puede definir relaciones entre elementos.  
+- Puede definir relaciones entre elementos.  
 
--   Puede proteger los elementos del modelo para que los usuarios administrativos solo puedan ver los datos que tienen permiso para ver.  
+- Puede proteger los elementos del modelo para que los usuarios administrativos solo puedan ver los datos que tienen permiso para ver.  
 
- Aunque Configuration Manager proporciona modelos de informes de ejemplo, también puede definir modelos de informes para satisfacer los requisitos empresariales. Para obtener más información sobre cómo crear modelos de informes, consulte [Creación de modelos de informes personalizados para System Center Configuration Manager en SQL Server Reporting Services](creating-custom-report-models-in-sql-server-reporting-services.md).  
+  Aunque Configuration Manager proporciona modelos de informes de ejemplo, también puede definir modelos de informes para satisfacer los requisitos empresariales. Para obtener más información sobre cómo crear modelos de informes, consulte [Creación de modelos de informes personalizados para System Center Configuration Manager en SQL Server Reporting Services](creating-custom-report-models-in-sql-server-reporting-services.md).  
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Planeación de informes](planning-for-reporting.md)

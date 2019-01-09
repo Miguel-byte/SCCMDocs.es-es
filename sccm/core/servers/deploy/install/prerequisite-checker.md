@@ -10,12 +10,12 @@ ms.assetid: aaf13bb8-4ba2-4bd7-9fac-d36a9d88a1b6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 296ed6590c10adeab22fb274d5e6f44bc578a784
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c28152031a540ea3fd5f2ef7233c24fb86c8b7f7
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339968"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422035"
 ---
 # <a name="prerequisite-checker-for-system-center-configuration-manager"></a>Comprobador de requisitos previos de System Center Configuration Manager
 
@@ -77,119 +77,119 @@ Para obtener más información sobre las comprobaciones que lleva a cabo el Comp
 
 ## <a name="run-prerequisite-checker-from-a-command-prompt-to-use-options"></a>Ejecutar el Comprobador de requisitos previos desde el símbolo del sistema para usar las opciones  
 
-1.  Abra una ventana del símbolo del sistema y cambie los directorios a una de las siguientes ubicaciones:  
+1. Abra una ventana del símbolo del sistema y cambie los directorios a una de las siguientes ubicaciones:  
 
-    -   **&lt;*Medios de instalación de Configuration Manager*\>\SMSSETUP\BIN\X64**  
-    -   **&lt;*Ruta de instalación de Configuration Manager*\>\BIN\X64**  
+   -   **&lt;*Medios de instalación de Configuration Manager*\>\SMSSETUP\BIN\X64**  
+   -   **&lt;*Ruta de instalación de Configuration Manager*\>\BIN\X64**  
 
-2.  Escriba **prereqchk.exe** agregando una o varias de las siguientes opciones de línea de comandos.  
+2. Escriba **prereqchk.exe** agregando una o varias de las siguientes opciones de línea de comandos.  
 
-    Por ejemplo, para comprobar un sitio principal puede usar lo siguiente:  
+   Por ejemplo, para comprobar un sitio principal puede usar lo siguiente:  
 
-       **prereqchk.exe [/NOUI] /PRI /SQL &lt;FQDN de SQL Server\> /SDK &lt;FQDN del proveedor de SMS\> [/JOIN &lt;FQDN del sitio de administración central\>] [/MP &lt;FQDN del punto de administración\>] [/DP &lt;FQDN del punto de distribución\>]**  
+      **prereqchk.exe [/NOUI] /PRI /SQL &lt;FQDN de SQL Server\> /SDK &lt;FQDN del proveedor de SMS\> [/JOIN &lt;FQDN del sitio de administración central\>] [/MP &lt;FQDN del punto de administración\>] [/DP &lt;FQDN del punto de distribución\>]**  
 
-    **Servidor del sitio de administración central:**  
+   **Servidor del sitio de administración central:**  
 
-    -   **/NOUI**  
-
-         No es necesario. Inicia el Comprobador de requisitos previos sin mostrar la interfaz de usuario. Debe especificar esta opción antes que cualquier otra opción en la línea de comandos.  
-
-    -   **/CAS**  
-
-         Necesario. Comprueba que el equipo local cumple los requisitos para el sitio de administración central.  
-
-    -   **/SQL &lt;*FQDN de SQL Server*>**  
-
-         Necesario. Mediante el nombre de dominio completo (FQDN) se comprueba que el equipo especificado cumpla los requisitos de SQL Server para hospedar la base de datos del sitio de Configuration Manager.  
-
-    -   **/SDK &lt;*FQDN de proveedor de SMS*>**  
-
-         Necesario. Comprueba que el equipo especificado cumple los requisitos del proveedor de SMS.  
-
-    -   **/Ssbport**  
-
-         No es necesario. Comprueba que existe una excepción de firewall para permitir la comunicación en el puerto de SQL Server Service Broker (SSB). El puerto de SSB predeterminado es el 4022.  
-
-    -   **InstallDir &lt;*ruta de instalación de Configuration Manager*>**  
-
-         No es necesario. Comprueba el espacio mínimo en disco requerido para la instalación del sitio.  
-
-    **Servidor de sitio primario:**  
-
-    -   **/NOUI**  
+   -   **/NOUI**  
 
         No es necesario. Inicia el Comprobador de requisitos previos sin mostrar la interfaz de usuario. Debe especificar esta opción antes que cualquier otra opción en la línea de comandos.  
 
-    -   **/PRI**  
+   -   **/CAS**  
 
-         Necesario. Comprueba que el equipo local cumple los requisitos para el sitio primario.  
+        Necesario. Comprueba que el equipo local cumple los requisitos para el sitio de administración central.  
 
-    -   **/SQL &lt;*FQDN de SQL Server*>**  
+   -   **/SQL &lt;*FQDN de SQL Server*>**  
 
-         Necesario. Comprueba que el equipo especificado cumple los requisitos de SQL Server para hospedar la base de datos del sitio de Configuration Manager.  
+        Necesario. Mediante el nombre de dominio completo (FQDN) se comprueba que el equipo especificado cumpla los requisitos de SQL Server para hospedar la base de datos del sitio de Configuration Manager.  
 
-    -   **/SDK &lt;*FQDN de proveedor de SMS*>**  
+   -   **/SDK &lt;*FQDN de proveedor de SMS*>**  
 
-         Necesario. Comprueba que el equipo especificado cumple los requisitos del proveedor de SMS.  
+        Necesario. Comprueba que el equipo especificado cumple los requisitos del proveedor de SMS.  
 
-    -   **/JOIN &lt;*FQDN de sitio de administración central*>**  
+   -   **/Ssbport**  
 
-         No es necesario. Comprueba que el equipo local cumple los requisitos para la conexión al servidor de sitio de administración central.  
+        No es necesario. Comprueba que existe una excepción de firewall para permitir la comunicación en el puerto de SQL Server Service Broker (SSB). El puerto de SSB predeterminado es el 4022.  
 
-    -   **/MP &lt;*FQDN de punto de administración*>**  
+   -   **InstallDir &lt;*ruta de instalación de Configuration Manager*>**  
 
-         No es necesario. Comprueba que el equipo especificado cumple los requisitos para el rol de sistema de sitio de punto de administración. Esta opción solo se admite cuando se usa la opción **/PRI** .  
+        No es necesario. Comprueba el espacio mínimo en disco requerido para la instalación del sitio.  
 
-    -   **/DP &lt;*FQDN de punto de distribución*>**  
+   **Servidor de sitio primario:**  
 
-         No es necesario. Comprueba que el equipo especificado cumple los requisitos para el rol de sistema de sitio de punto de distribución. Esta opción solo se admite cuando se usa la opción **/PRI** .  
+   -   **/NOUI**  
 
-    -   **/Ssbport**  
+       No es necesario. Inicia el Comprobador de requisitos previos sin mostrar la interfaz de usuario. Debe especificar esta opción antes que cualquier otra opción en la línea de comandos.  
 
-         No es necesario. Comprueba que existe una excepción de firewall para permitir la comunicación en el puerto de SSB. El puerto de SSB predeterminado es el 4022.  
+   -   **/PRI**  
 
-    -   **InstallDir &lt;*ruta de instalación de Configuration Manager*>**  
+        Necesario. Comprueba que el equipo local cumple los requisitos para el sitio primario.  
 
-         No es necesario. Comprueba el espacio mínimo en disco requerido para la instalación del sitio.  
+   -   **/SQL &lt;*FQDN de SQL Server*>**  
 
-    **Servidor de sitio secundario:**  
+        Necesario. Comprueba que el equipo especificado cumple los requisitos de SQL Server para hospedar la base de datos del sitio de Configuration Manager.  
 
-    -   **/NOUI**  
+   -   **/SDK &lt;*FQDN de proveedor de SMS*>**  
 
-         No es necesario. Inicia el Comprobador de requisitos previos sin mostrar la interfaz de usuario. Debe especificar esta opción antes que cualquier otra opción en la línea de comandos.  
+        Necesario. Comprueba que el equipo especificado cumple los requisitos del proveedor de SMS.  
 
-    -   **/SEC &lt;*FQDN de servidor de sitio secundario*>**  
+   -   **/JOIN &lt;*FQDN de sitio de administración central*>**  
 
-         Necesario. Comprueba que el equipo especificado cumple los requisitos para el sitio secundario.  
+        No es necesario. Comprueba que el equipo local cumple los requisitos para la conexión al servidor de sitio de administración central.  
 
-    -   **/INSTALLSQLEXPRESS**  
+   -   **/MP &lt;*FQDN de punto de administración*>**  
 
-         No es necesario. Comprueba que SQL Server Express puede instalarse en el equipo especificado.  
+        No es necesario. Comprueba que el equipo especificado cumple los requisitos para el rol de sistema de sitio de punto de administración. Esta opción solo se admite cuando se usa la opción **/PRI** .  
 
-    -   **/Ssbport**  
+   -   **/DP &lt;*FQDN de punto de distribución*>**  
 
-         No es necesario. Comprueba que existe una excepción de firewall para permitir la comunicación para el puerto de SSB. El puerto de SSB predeterminado es el 4022.  
+        No es necesario. Comprueba que el equipo especificado cumple los requisitos para el rol de sistema de sitio de punto de distribución. Esta opción solo se admite cuando se usa la opción **/PRI** .  
 
-    -   **/Sqlport**  
+   -   **/Ssbport**  
 
-         No es necesario. Comprueba que existe una excepción de firewall para permitir la comunicación del puerto de servicio de SQL Server y que ninguna otra instancia con nombre de SQL Server usa el puerto. El puerto predeterminado es 1433.  
+        No es necesario. Comprueba que existe una excepción de firewall para permitir la comunicación en el puerto de SSB. El puerto de SSB predeterminado es el 4022.  
 
-    -   **InstallDir &lt;*ruta de instalación de Configuration Manager*>**  
+   -   **InstallDir &lt;*ruta de instalación de Configuration Manager*>**  
 
-         No es necesario. Comprueba el espacio mínimo en disco requerido para la instalación del sitio.  
+        No es necesario. Comprueba el espacio mínimo en disco requerido para la instalación del sitio.  
 
-    -   **/SourceDir**  
+   **Servidor de sitio secundario:**  
 
-         No es necesario. Comprueba que la cuenta de equipo del sitio secundario puede tener acceso a la carpeta que hospeda los archivos de origen del programa de instalación.  
+   -   **/NOUI**  
+
+        No es necesario. Inicia el Comprobador de requisitos previos sin mostrar la interfaz de usuario. Debe especificar esta opción antes que cualquier otra opción en la línea de comandos.  
+
+   -   **/SEC &lt;*FQDN de servidor de sitio secundario*>**  
+
+        Necesario. Comprueba que el equipo especificado cumple los requisitos para el sitio secundario.  
+
+   -   **/INSTALLSQLEXPRESS**  
+
+        No es necesario. Comprueba que SQL Server Express puede instalarse en el equipo especificado.  
+
+   -   **/Ssbport**  
+
+        No es necesario. Comprueba que existe una excepción de firewall para permitir la comunicación para el puerto de SSB. El puerto de SSB predeterminado es el 4022.  
+
+   -   **/Sqlport**  
+
+        No es necesario. Comprueba que existe una excepción de firewall para permitir la comunicación del puerto de servicio de SQL Server y que ninguna otra instancia con nombre de SQL Server usa el puerto. El puerto predeterminado es 1433.  
+
+   -   **InstallDir &lt;*ruta de instalación de Configuration Manager*>**  
+
+        No es necesario. Comprueba el espacio mínimo en disco requerido para la instalación del sitio.  
+
+   -   **/SourceDir**  
+
+        No es necesario. Comprueba que la cuenta de equipo del sitio secundario puede tener acceso a la carpeta que hospeda los archivos de origen del programa de instalación.  
 
    **Consola de Configuration Manager:**  
 
-    -   **/Adminui**  
+   -   **/Adminui**  
 
-         Necesario. Comprueba que el equipo local cumple los requisitos para instalar Configuration Manager.  
+        Necesario. Comprueba que el equipo local cumple los requisitos para instalar Configuration Manager.  
 
-3.  En la interfaz de usuario del Comprobador de requisitos previos, el Comprobador de requisitos previos crea una lista de los problemas detectados en la sección **Resultado de requisitos previos**.  
+3. En la interfaz de usuario del Comprobador de requisitos previos, el Comprobador de requisitos previos crea una lista de los problemas detectados en la sección **Resultado de requisitos previos**.  
 
-    -   Haga clic en un elemento de la lista para obtener más información acerca de cómo resolver el problema.  
-    -   Debe resolver todos los elementos de la lista que tengan un estado de **Error** antes de instalar el servidor de sitio, el sistema de sitio o la consola de Configuration Manager.  
-    -   También puede abrir el archivo **ConfigMgrPrereq.log** en la raíz de la unidad del sistema para revisar los resultados del Comprobador de requisitos previos. El archivo de registro podría contener información adicional que no se muestra en la interfaz de usuario del Comprobador de requisitos previos.  
+   -   Haga clic en un elemento de la lista para obtener más información acerca de cómo resolver el problema.  
+   -   Debe resolver todos los elementos de la lista que tengan un estado de **Error** antes de instalar el servidor de sitio, el sistema de sitio o la consola de Configuration Manager.  
+   -   También puede abrir el archivo **ConfigMgrPrereq.log** en la raíz de la unidad del sistema para revisar los resultados del Comprobador de requisitos previos. El archivo de registro podría contener información adicional que no se muestra en la interfaz de usuario del Comprobador de requisitos previos.  

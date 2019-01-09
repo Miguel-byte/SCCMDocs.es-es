@@ -10,12 +10,12 @@ ms.assetid: ff6e7267-302a-4563-815e-cdc0d1a4b60f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 61c54ad6c0224dfae03a26784f0b3f61271b172c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 97c4bde7e589e5d3d3c3ee3683055ca8e7412a03
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353069"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419842"
 ---
 # <a name="create-prestaged-media-with-system-center-configuration-manager"></a>Crear medios preconfigurados con System Center Configuration Manager
 
@@ -24,13 +24,13 @@ ms.locfileid: "32353069"
 Los medios preconfigurados de System Center Configuration Manager son un archivo Windows Imaging Format (WIM) que puede ser instalado en un equipo sin sistema operativo por el fabricante o en un centro de configuración empresarial no relacionado con el entorno de Configuration Manager.  
 Los medios preconfigurados contienen la imagen de arranque que se utiliza para iniciar el equipo de destino y la imagen de sistema operativo que se aplica al equipo de destino. También puede especificar las aplicaciones, los paquetes y los paquetes de controladores que quiere incluir como parte de los medios preconfigurados. La secuencia de tareas que implementa el sistema operativo no se incluye en el medio. Los medios preconfigurados se aplican a la unidad de disco duro de un nuevo equipo antes de enviar el equipo al usuario final. Use los medios preconfigurados para los siguientes escenarios de implementación de sistema operativo:  
 
--   [Crear una imagen para un OEM en fábrica o en un almacén local](../../osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
+- [Crear una imagen para un OEM en fábrica o en un almacén local](../../osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
 
--   [Instalar una nueva versión de Windows en un equipo nuevo (sin sistema operativo)](install-new-windows-version-new-computer-bare-metal.md)  
+- [Instalar una nueva versión de Windows en un equipo nuevo (sin sistema operativo)](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [Implementar Windows to Go](deploy-windows-to-go.md)  
+- [Implementar Windows to Go](deploy-windows-to-go.md)  
 
- Cuando el equipo se inicia por primera vez después de la aplicación del medio preconfigurado, el equipo arranca en Windows PE y se conecta a un punto de administración para encontrar la secuencia de tareas que completa el proceso de implementación de sistema operativo. Puede especificar las aplicaciones, los paquetes y los paquetes de controladores que quiere incluir como parte de los medios preconfigurados. Al implementar una secuencia de tareas que usa un medio preconfigurado, el asistente comprueba en primer lugar la presencia de contenido válido en la memoria caché local de la secuencia de tareas y, si el contenido no se encuentra o se ha revisado, el asistente lo descarga del punto de distribución.  
+  Cuando el equipo se inicia por primera vez después de la aplicación del medio preconfigurado, el equipo arranca en Windows PE y se conecta a un punto de administración para encontrar la secuencia de tareas que completa el proceso de implementación de sistema operativo. Puede especificar las aplicaciones, los paquetes y los paquetes de controladores que quiere incluir como parte de los medios preconfigurados. Al implementar una secuencia de tareas que usa un medio preconfigurado, el asistente comprueba en primer lugar la presencia de contenido válido en la memoria caché local de la secuencia de tareas y, si el contenido no se encuentra o se ha revisado, el asistente lo descarga del punto de distribución.  
 
 ##  <a name="BKMK_CreatePrestagedMedia"></a> Creación de medios preconfigurados  
  Antes de crear medios preconfigurados con el Asistente para crear medio de secuencia de tareas, asegúrese de que se cumplen las condiciones siguientes:  
@@ -69,7 +69,7 @@ Los medios preconfigurados contienen la imagen de arranque que se utiliza para i
 
 6.  En la página **Propiedades de medio**  , especifique la información siguiente y, a continuación, haga clic en **Siguiente**.  
 
-    -   **Creado por**: especifique el autor de lo medio.  
+    -   **Creado por**: especifique la persona que creó el medio.  
 
     -   **Versión**: especifique el número de versión del medio.  
 

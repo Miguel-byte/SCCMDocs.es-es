@@ -10,12 +10,12 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b9a3f4583944f0818f74930753bad99e3408a928
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0b218d665d574c74358e3d018f45dd5b173cc21c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350024"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424177"
 ---
 # <a name="customize-operating-system-images-with-system-center-configuration-manager"></a>Personalizar imágenes de sistema operativo con System Center Configuration Manager
 
@@ -32,34 +32,34 @@ Las imágenes de sistema operativo de System Center Configuration Manager son ar
 #### <a name="automated-configuration"></a>Configuración automatizada  
  **Ventajas**  
 
--   La configuración puede ser totalmente desatendida, lo que elimina la necesidad de que esté presente un administrador o usuario.  
+- La configuración puede ser totalmente desatendida, lo que elimina la necesidad de que esté presente un administrador o usuario.  
 
--   Puede volver a utilizar la secuencia de tareas para repetir la configuración de equipos de referencia adicionales con un alto nivel de confianza.  
+- Puede volver a utilizar la secuencia de tareas para repetir la configuración de equipos de referencia adicionales con un alto nivel de confianza.  
 
--   Puede modificar la secuencia de tareas para reflejar diferencias en los equipos de referencia sin tener que volver a crear la secuencia de tareas completa.  
+- Puede modificar la secuencia de tareas para reflejar diferencias en los equipos de referencia sin tener que volver a crear la secuencia de tareas completa.  
 
- **Desventajas**  
+  **Desventajas**  
 
--   La acción inicial para generar una secuencia de tareas puede tardar mucho tiempo en crearse y probarse.  
+- La acción inicial para generar una secuencia de tareas puede tardar mucho tiempo en crearse y probarse.  
 
--   Si los requisitos del equipo de referencia cambian significativamente, se tardará mucho tiempo en volver a crear y volver a probar la secuencia de tareas.  
+- Si los requisitos del equipo de referencia cambian significativamente, se tardará mucho tiempo en volver a crear y volver a probar la secuencia de tareas.  
 
 #### <a name="manual-configuration"></a>Configuración manual  
  **Ventajas**  
 
--   No es necesario crear una secuencia de tareas o dedicar tiempo a probar la secuencia de tareas y solucionar problemas de la misma.  
+- No es necesario crear una secuencia de tareas o dedicar tiempo a probar la secuencia de tareas y solucionar problemas de la misma.  
 
--   Puede instalar directamente desde CD sin poner todos los paquetes de software (incluido el propio Windows) en un paquete de Configuration Manager.  
+- Puede instalar directamente desde CD sin poner todos los paquetes de software (incluido el propio Windows) en un paquete de Configuration Manager.  
 
- **Desventajas**  
+  **Desventajas**  
 
--   La exactitud de la configuración del equipo de referencia depende del administrador o el usuario que configure el equipo.  
+- La exactitud de la configuración del equipo de referencia depende del administrador o el usuario que configure el equipo.  
 
--   Debe comprobar y probar que el equipo de referencia esté configurado correctamente.  
+- Debe comprobar y probar que el equipo de referencia esté configurado correctamente.  
 
--   No puede volver a utilizar el método de configuración.  
+- No puede volver a utilizar el método de configuración.  
 
--   Exige que una persona participe activamente en todo el proceso.  
+- Exige que una persona participe activamente en todo el proceso.  
 
 ###  <a name="BKMK_RefComputerConsiderations"></a> Consideraciones para el equipo de referencia  
  A continuación se enumeran los elementos básicos para tener en cuenta al configurar un equipo de referencia.  
@@ -113,20 +113,20 @@ Las imágenes de sistema operativo de System Center Configuration Manager son ar
 
 #### <a name="to-manually-build-the-reference-computer"></a>Para compilar el equipo de referencia manualmente  
 
-1.  Identifique el equipo que se va a utilizar como equipo de referencia.  
+1. Identifique el equipo que se va a utilizar como equipo de referencia.  
 
-2.  Configure el equipo de referencia con el sistema operativo apropiado y cualquier otro software necesario para crear la imagen del sistema operativo que va a implementar.  
+2. Configure el equipo de referencia con el sistema operativo apropiado y cualquier otro software necesario para crear la imagen del sistema operativo que va a implementar.  
 
-    > [!WARNING]  
-    >  Como mínimo, instale el sistema operativo y el Service Pack adecuados, los controladores de soporte y las actualizaciones de software necesarias.  
+   > [!WARNING]  
+   >  Como mínimo, instale el sistema operativo y el Service Pack adecuados, los controladores de soporte y las actualizaciones de software necesarias.  
 
-3.  Configure el equipo de referencia para que sea miembro de un grupo de trabajo.  
+3. Configure el equipo de referencia para que sea miembro de un grupo de trabajo.  
 
-4.  Restablezca la contraseña de administrador local en el equipo de referencia de tal manera que no se especifique ninguna.  
+4. Restablezca la contraseña de administrador local en el equipo de referencia de tal manera que no se especifique ninguna.  
 
-5.  Ejecute Sysprep con el comando:  **sysprep /quiet /generalize /reboot**. La opción /generalize indica a Sysprep que quite los datos específicos del sistema de la instalación de Windows. La información específica del sistema incluye registros de eventos, identificadores de seguridad (SID) únicos y otros datos exclusivos. Después de quitar la información exclusiva del sistema, el equipo se reinicia.  
+5. Ejecute Sysprep con el comando:  **sysprep /quiet /generalize /reboot**. La opción /generalize indica a Sysprep que quite los datos específicos del sistema de la instalación de Windows. La información específica del sistema incluye registros de eventos, identificadores de seguridad (SID) únicos y otros datos exclusivos. Después de quitar la información exclusiva del sistema, el equipo se reinicia.  
 
- Cuando el equipo de referencia esté listo, use una secuencia de tareas para capturar la imagen de sistema operativo del equipo de referencia.  Para conocer los pasos detallados, consulte [Capture an operating system image from an existing reference computer](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_CaptureExistingRefComputer) (Capturar una imagen de sistema operativo a partir de un equipo de referencia existente).  
+   Cuando el equipo de referencia esté listo, use una secuencia de tareas para capturar la imagen de sistema operativo del equipo de referencia.  Para conocer los pasos detallados, consulte [Capture an operating system image from an existing reference computer](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_CaptureExistingRefComputer) (Capturar una imagen de sistema operativo a partir de un equipo de referencia existente).  
 
 ##  <a name="BKMK_UseTSToBuildReference"></a> Usar una secuencia de tareas para compilar un equipo de referencia  
  Puede automatizar el proceso para crear un equipo de referencia usando una secuencia de tareas para implementar el sistema operativo, los controladores, las aplicaciones, etc.  Use las etapas siguientes para compilar el equipo de referencia y, después, para capturar la imagen de sistema operativo del equipo de referencia.  

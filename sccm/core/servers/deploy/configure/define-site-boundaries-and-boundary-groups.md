@@ -10,12 +10,12 @@ ms.assetid: 54aa20d5-791e-4416-9db4-5aaea472c0b7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d1f8a8a270bcefb67885d6c0ca88e61a3d6ecd72
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 85d7dbb494f1d6288ad7a45fad98e24a6ad2b393
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334851"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421151"
 ---
 # <a name="define-site-boundaries-and-boundary-groups-for-system-center-configuration-manager"></a>Definir los límites del sitio y los grupos de límites para System Center Configuration Manager
 
@@ -33,7 +33,7 @@ Los límites de System Center Configuration Manager definen ubicaciones de red d
 Los clientes de la intranet evalúan su ubicación de red actual y después usan esa información para identificar los grupos de límites a los que pertenecen.  
 
  Los clientes usan grupos de límites para lo siguiente:  
--   **Encontrar un sitio asignado:** los grupos de límites permiten a los clientes buscar un sitio principal para la asignación de cliente (asignación automática de sitio).  
+-   **Encontrar un sitio asignado:** los grupos de límites permiten a los clientes buscar un sitio primario para la asignación del cliente (asignación automática de sitios).  
 -   **Encontrar determinados roles de sistema de sitio que puedan usar:** al asociar un grupo de límites con determinados roles de sistema de sitio, el grupo de límites proporciona esa lista de sistemas de sitio a los clientes para que la usen durante la ubicación de contenido y como puntos de administración preferidos.  
 
 Los clientes que están en Internet o están configurados como clientes de Internet únicamente no usan la información de límites. Estos clientes no pueden usar la asignación automática de sitio y siempre pueden descargar contenido de cualquier punto de distribución desde su sitio asignado, si el punto de distribución se configura para permitir conexiones de cliente desde Internet.  
@@ -46,16 +46,16 @@ Los clientes que están en Internet o están configurados como clientes de Inter
 
 ##  <a name="BKMK_BoundaryBestPractices"></a> Procedimientos recomendados para límites y grupos de límites  
 
--   **Use una combinación del mínimo de límites que satisfagan sus necesidades:**  
-   Antes, se recomendaba usar ciertos tipos de límites en lugar de otros. Con los cambios introducidos para mejorar el rendimiento, ahora se recomienda usar cualquier tipo de límites que funcionen para el entorno y que permitan usar el menor número posible de límites para simplificar las tareas de administración.      
+- **Use una combinación del mínimo de límites que satisfagan sus necesidades:**  
+  Antes, se recomendaba usar ciertos tipos de límites en lugar de otros. Con los cambios introducidos para mejorar el rendimiento, ahora se recomienda usar cualquier tipo de límites que funcionen para el entorno y que permitan usar el menor número posible de límites para simplificar las tareas de administración.      
 
--   **Evite la superposición de límites en la asignación automática de sitio:**  
-     Aunque los grupos de límites admiten tanto configuraciones de asignación de sitio como configuraciones de ubicación de contenido, se recomienda crear un conjunto de grupos de límites independiente que se vaya a usar solo para la asignación de sitio. Es decir, asegúrese de que cada uno de los límites de un grupo de límites, no forme parte de otro grupo de límites con una asignación de sitio diferente. El motivo es el siguiente:  
+- **Evite la superposición de límites en la asignación automática de sitio:**  
+   Aunque los grupos de límites admiten tanto configuraciones de asignación de sitio como configuraciones de ubicación de contenido, se recomienda crear un conjunto de grupos de límites independiente que se vaya a usar solo para la asignación de sitio. Es decir, asegúrese de que cada uno de los límites de un grupo de límites, no forme parte de otro grupo de límites con una asignación de sitio diferente. El motivo es el siguiente:  
 
-    -   Un único límite puede incluirse en varios grupos de límites  
+  - Un único límite puede incluirse en varios grupos de límites  
 
-    -   Los grupos de límites pueden asociarse con un sitio principal diferente para la asignación de sitio  
+  - Los grupos de límites pueden asociarse con un sitio principal diferente para la asignación de sitio  
 
-    -   Un cliente en un límite que es miembro de dos grupos de límites diferentes con asignaciones de sitio diferentes, seleccionará un sitio al que unirse al azar, que puede no ser el sitio que determinó para el cliente.  Esta configuración se denomina superposición de límites.  
+  - Un cliente en un límite que es miembro de dos grupos de límites diferentes con asignaciones de sitio diferentes, seleccionará un sitio al que unirse al azar, que puede no ser el sitio que determinó para el cliente.  Esta configuración se denomina superposición de límites.  
 
-     La superposición de límites no es un problema para la ubicación de contenido, sino que a menudo es una configuración deseada que proporciona recursos o ubicaciones de contenido adicionales a los clientes.  
+    La superposición de límites no es un problema para la ubicación de contenido, sino que a menudo es una configuración deseada que proporciona recursos o ubicaciones de contenido adicionales a los clientes.  

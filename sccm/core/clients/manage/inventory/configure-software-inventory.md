@@ -10,12 +10,12 @@ ms.assetid: f86559de-092a-4ce8-9b43-5d7530e0b763
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 346ff3254f4c1833f49bf256cbf5ad0c489d77e0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0e3b6e1ab2962cec7891501ec6b19f081631e187
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332586"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421134"
 ---
 # <a name="how-to-configure-software-inventory-in-system-center-configuration-manager"></a>Cómo configurar el inventario de software en System Center Configuration Manager
 
@@ -25,26 +25,26 @@ Este procedimiento configura las opciones de cliente predeterminadas para el inv
 
 ## <a name="to-configure-software-inventory"></a>Cómo configurar el inventario de software  
 
-1.  En la consola de Configuration Manager, elija **Administración** > **Configuración de cliente**  **Configuración de cliente predeterminada**.  
+1. En la consola de Configuration Manager, elija **Administración** > **Configuración de cliente**  **Configuración de cliente predeterminada**.  
 
-4.  En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
+2. En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.  
 
-5.  En el cuadro de diálogo **Configuración predeterminada**, elija **Inventario de software**.  
+3. En el cuadro de diálogo **Configuración predeterminada**, elija **Inventario de software**.  
 
-6.  En la lista **Configuración de dispositivo** , configure los valores siguientes:  
+4. En la lista **Configuración de dispositivo** , configure los valores siguientes:  
 
-    -   **Habilitar inventario de software en clientes**: en la lista desplegable, seleccione **Verdadero**.  
+   -   **Habilitar inventario de software en clientes**: en la lista desplegable, seleccione **Verdadero**.  
 
-    -   **Programar inventario de software y recopilación de archivos**: configura el intervalo en el que los clientes recopilan archivos e inventario de software.   
+   -   **Programar inventario de software y recopilación de archivos**: configura el intervalo en el que los clientes recopilan archivos e inventario de software.   
 
-7.  Configure las opciones de cliente que necesite. En la sección [Inventario de software](../../../../core/clients/deploy/about-client-settings.md#software-inventory) del artículo [Acerca de la configuración de cliente en System Center Configuration Manager](../../../../core/clients/deploy/about-client-settings.md) se incluye una lista de la configuración de cliente.  
+5. Configure las opciones de cliente que necesite. En la sección [Inventario de software](../../../../core/clients/deploy/about-client-settings.md#software-inventory) del artículo [Acerca de la configuración de cliente en System Center Configuration Manager](../../../../core/clients/deploy/about-client-settings.md) se incluye una lista de la configuración de cliente.  
 
- Los equipos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Cómo administrar clientes en System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
+   Los equipos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Cómo administrar clientes en System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
 
- > [!TIP]  
-        >   El código de error 80041006 en inventoryprovider.log significa que el proveedor de WMI no tiene memoria suficiente. Es decir, se ha alcanzado el límite de cuota de memoria para un proveedor y el proveedor de inventario no puede continuar.
-En este caso, el agente de inventario crea un informe con 0 entradas, por lo que no se informa de ningún elemento de inventario. <br/>
-Una posible solución para este error sería reducir el ámbito de la recopilación de inventario de software. En los casos en los que el error se produce después de limitar el ámbito de inventario, aumentar la propiedad [MemoryPerHost](https://blogs.technet.microsoft.com/askperf/2008/09/16/memory-and-handle-quotas-in-the-wmi-provider-service/) definida en la clase [_ProviderHostQuotaConfiguration](https://msdn.microsoft.com/library/aa394671) puede proporcionar una solución.
+   > [!TIP]
+   >   El código de error 80041006 en inventoryprovider.log significa que el proveedor de WMI no tiene memoria suficiente. Es decir, se ha alcanzado el límite de cuota de memoria para un proveedor y el proveedor de inventario no puede continuar.
+   > En este caso, el agente de inventario crea un informe con 0 entradas, por lo que no se informa de ningún elemento de inventario. <br/>
+   > Una posible solución para este error sería reducir el ámbito de la recopilación de inventario de software. En los casos en los que el error se produce después de limitar el ámbito de inventario, aumentar la propiedad [MemoryPerHost](https://blogs.technet.microsoft.com/askperf/2008/09/16/memory-and-handle-quotas-in-the-wmi-provider-service/) definida en la clase [_ProviderHostQuotaConfiguration](https://msdn.microsoft.com/library/aa394671) puede proporcionar una solución.
 
 <!--SMS.480648 include WMI Out of memory tip -->
 

@@ -10,12 +10,12 @@ ms.assetid: 8b31fd3e-875a-4a31-9498-5b050aadce32
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0798deff2f4904cb1cecac79251e7bc0688e0d4e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d0d1e646795bb778e185d49f5de0796f486d2a08
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337061"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419570"
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1610 para System Center Configuration Manager
 
@@ -70,19 +70,19 @@ Technical Preview 1610 presenta una nueva opción que se puede usar para excluir
 
 ### <a name="configure-exclusion-from-automatic-upgrade"></a>Configurar la exclusión de la actualización automática
 Para configurar las exclusiones de la actualización automática:
-1.  En la consola de Configuration Manager, abra **Configuración de jerarquía** en **Administración > Configuración del sitio > Sitios** y seleccione la pestaña **Actualización de cliente**.
-2.  Active la casilla correspondiente a **excluir los clientes especificados de la actualización** y, en la **colección de exclusión**, seleccione la colección que quiere excluir. Solo puede seleccionar una colección para la exclusión.
-3.  Haga clic en **Aceptar** para cerrar y guardar la configuración. Luego, después de que los clientes actualicen la directiva, los de la colección excluida ya no instalarán automáticamente las actualizaciones del software de cliente.
+1. En la consola de Configuration Manager, abra **Configuración de jerarquía** en **Administración > Configuración del sitio > Sitios** y seleccione la pestaña **Actualización de cliente**.
+2. Active la casilla correspondiente a **excluir los clientes especificados de la actualización** y, en la **colección de exclusión**, seleccione la colección que quiere excluir. Solo puede seleccionar una colección para la exclusión.
+3. Haga clic en **Aceptar** para cerrar y guardar la configuración. Luego, después de que los clientes actualicen la directiva, los de la colección excluida ya no instalarán automáticamente las actualizaciones del software de cliente.
 
-  ![Configuración de exclusión de actualización automática](media/automatic_upgrade_exclusion.png)
+   ![Configuración de exclusión de actualización automática](media/automatic_upgrade_exclusion.png)
 
 > [!NOTE]
 > Aunque la interfaz de usuario indica que no se actualizarán los clientes mediante ningún método, hay dos que se pueden usar para invalidar esta configuración. Se pueden usar la instalación de inserción de cliente y la instalación de cliente manual para invalidar esta configuración. Para obtener más detalles, vea la siguiente sección.
 
 ### <a name="how-to-upgrade-a-client-that-is-in-an-excluded-collection"></a>Cómo actualizar un cliente que está en una colección excluida
 Siempre que una colección está configurada para ser excluida, sus miembros solo pueden actualizar el software de cliente mediante uno de dos métodos que invalidan la exclusión:
- - **Instalación de inserción de cliente**: se puede usar la instalación de inserción de cliente para actualizar un cliente que está en una colección excluida. Se permite porque se considera la intención del administrador y permite actualizar los clientes sin quitar toda la colección de la exclusión.       
- - **Instalación de cliente manual**: puede actualizar manualmente los clientes que están en una colección excluida con el siguiente modificador de la línea de comandos con ccmsetup: ***/ignoreskipupgrade***
+- **Instalación de inserción de cliente**: se puede usar la instalación de inserción de cliente para actualizar un cliente que está en una colección excluida. Se permite porque se considera la intención del administrador y permite actualizar los clientes sin quitar toda la colección de la exclusión.       
+- **Instalación de cliente manual**: puede actualizar manualmente los clientes que están en una colección excluida con el siguiente modificador de la línea de comandos con ccmsetup: ***/ignoreskipupgrade***
 
   Si intenta actualizar manualmente un cliente que es miembro de la colección excluida y no usa este modificador, el cliente no instalará el nuevo software de cliente. Para más información, vea [How to install Configuration Manager Clients Manually (Instalación manual de clientes de Configuration Manager)](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#a-namebkmkmanuala-how-to-install-configuration-manager-clients-manually).
 

@@ -10,12 +10,12 @@ ms.assetid: 79cd131a-1a24-4751-87c8-7f275e45d847
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 35ccc4944359b89bad3ccac52309a289f69933f7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 12a3bffb48cba2e3f258d06489b7511d05b7daad
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338220"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422086"
 ---
 # <a name="create-linux-and-unix-server-applications-with-system-center-configuration-manager"></a>Crear aplicaciones de servidor Linux y UNIX con System Center Configuration Manager
 
@@ -100,15 +100,15 @@ La tabla siguiente enumera las propiedades de los paquetes y programas que no so
 ### <a name="deploy-software-to-a-linux-or-unix-server"></a>Implementar software en un servidor de Linux o UNIX
  Para implementar software en un servidor Linux o UNIX mediante un paquete y un programa, puede usar el **Asistente para implementar software** de la consola de Configuration Manager. El cliente admite la mayoría de las opciones de configuración de implementación para Linux y UNIX. Sin embargo, hay varias opciones de configuración que no se admiten. Al implementar software, considere lo siguiente:  
 
--   Debe aprovisionar el paquete en, al menos, un punto de distribución que esté asociado a un grupo de límites configurado para la ubicación de contenido.  
+- Debe aprovisionar el paquete en, al menos, un punto de distribución que esté asociado a un grupo de límites configurado para la ubicación de contenido.  
 
--   El cliente para Linux y UNIX que recibe esta implementación debe poder acceder a este punto de distribución desde su ubicación de red.  
+- El cliente para Linux y UNIX que recibe esta implementación debe poder acceder a este punto de distribución desde su ubicación de red.  
 
--   El cliente para Linux y UNIX descarga el paquete desde el punto de distribución y ejecuta el programa en el equipo local.  
+- El cliente para Linux y UNIX descarga el paquete desde el punto de distribución y ejecuta el programa en el equipo local.  
 
--   El cliente para Linux y UNIX no puede descargar paquetes desde carpetas compartidas. Descarga paquetes desde puntos de distribución con IIS habilitado que admiten HTTP o HTTPS.  
+- El cliente para Linux y UNIX no puede descargar paquetes desde carpetas compartidas. Descarga paquetes desde puntos de distribución con IIS habilitado que admiten HTTP o HTTPS.  
 
- La tabla siguiente enumera las propiedades de las implementaciones que no son compatibles.  
+  La tabla siguiente enumera las propiedades de las implementaciones que no son compatibles.  
 
 |Propiedad de la implementación|Comportamiento|Más información|  
 |-------------------------|--------------|----------------------|  
@@ -131,23 +131,23 @@ La tabla siguiente enumera las propiedades de los paquetes y programas que no so
 
  Para configurar un cliente para que use controles de ancho de banda de red, puede establecer la configuración del cliente para **Transferencia inteligente en segundo plano** y después aplicar la configuración al equipo cliente. Para utilizar controles de ancho de banda, el cliente debe recibir la configuración del cliente para **Transferencia inteligente en segundo plano** con la siguiente configuración establecida en **Sí**:  
 
--   **Limitar el ancho de banda de red máximo para transferencias BITS en segundo plano**  
+- **Limitar el ancho de banda de red máximo para transferencias BITS en segundo plano**  
 
- El cliente admite las siguientes configuraciones para la transferencia inteligente en segundo plano:  
+  El cliente admite las siguientes configuraciones para la transferencia inteligente en segundo plano:  
 
-    -   **Hora de inicio de período de limitación**  
+  -   **Hora de inicio de período de limitación**  
 
-    -   **Hora de finalización del período de limitación**  
+  -   **Hora de finalización del período de limitación**  
 
-    -   **Velocidad de transferencia máxima durante el período de limitación (Kbps)**  
+  -   **Velocidad de transferencia máxima durante el período de limitación (Kbps)**  
 
-    -   **Velocidad de transferencia máxima fuera del período de limitación (Kbps)**  
+  -   **Velocidad de transferencia máxima fuera del período de limitación (Kbps)**  
 
 No se admite la siguiente configuración de transferencia inteligente en segundo plano y el cliente la omite para Linux y UNIX:  
 
--   **Permitir descargas de BITS fuera del período de limitación**  
+- **Permitir descargas de BITS fuera del período de limitación**  
 
- Si se interrumpe la descarga del software al cliente desde un punto de distribución, el cliente para Linux y UNIX no reanuda la descarga. En su lugar, reinicia la descarga de todos el paquete de software.  
+  Si se interrumpe la descarga del software al cliente desde un punto de distribución, el cliente para Linux y UNIX no reanuda la descarga. En su lugar, reinicia la descarga de todos el paquete de software.  
 
 ##  <a name="configure-operations-for-software-deployments"></a>Configurar operaciones para las implementaciones de software  
  De manera similar al cliente de Windows, el cliente de Configuration Manager para Linux y UNIX detecta las implementaciones de nuevo software al sondear y comprobar si hay nuevas directivas. La frecuencia con que el cliente comprueba si hay nuevas directivas depende de la configuración del cliente. Puede configurar ventanas de mantenimiento para controlar el momento en que se producen las implementaciones de software.  

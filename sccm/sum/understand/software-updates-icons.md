@@ -10,12 +10,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 ms.author: aaroncz
-ms.openlocfilehash: d772b4ede4c8bfe13c68597ec8fe9a1f3dccbf38
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 77c6772682c8eb6d1532c0ea38489a45d2466c30
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352940"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422868"
 ---
 # <a name="icons-used-for-software-updates-in-system-center-configuration-manager"></a>Iconos que se usan para las actualizaciones de software en System Center Configuration Manager
 
@@ -55,17 +55,17 @@ Las actualizaciones de software sincronizadas se muestran en la consola de Confi
 
  Las actualizaciones de software sustituidas se reemplazaron por versiones más recientes de la actualización de software. Por lo general, una actualización de software que sustituye a otra actualización de software realiza una o varias de las siguientes acciones:  
 
--   Mejora o agrega la revisión proporcionada por una o varias de las actualizaciones publicadas anteriormente.  
+- Mejora o agrega la revisión proporcionada por una o varias de las actualizaciones publicadas anteriormente.  
 
--   Mejora la eficacia del paquete de archivos de actualización de software, que los clientes instalan si la actualización de software se aprueba para la instalación. Por ejemplo, la actualización de software sustituida podría contener archivos que ya no son relevantes para la revisión o para los sistemas operativos que se admiten en la nueva actualización de software; por tanto, esos archivos ya no se incluyen en el paquete de archivos de sustitución de la actualización de software.  
+- Mejora la eficacia del paquete de archivos de actualización de software, que los clientes instalan si la actualización de software se aprueba para la instalación. Por ejemplo, la actualización de software sustituida podría contener archivos que ya no son relevantes para la revisión o para los sistemas operativos que se admiten en la nueva actualización de software; por tanto, esos archivos ya no se incluyen en el paquete de archivos de sustitución de la actualización de software.  
 
--   Actualiza las versiones más recientes de un producto o, en otras palabras, ya no se aplica a las versiones o configuraciones más antiguas de un producto. Las actualizaciones de software también pueden sustituir a otras actualizaciones de software si se realizaron modificaciones para ampliar la compatibilidad de idioma. Por ejemplo, una revisión posterior de la actualización de un producto para Microsoft Office puede quitar la compatibilidad para un sistema operativo más antiguo, pero podría agregar compatibilidad adicional para nuevos idiomas en la versión de actualización de software inicial.  
+- Actualiza las versiones más recientes de un producto o, en otras palabras, ya no se aplica a las versiones o configuraciones más antiguas de un producto. Las actualizaciones de software también pueden sustituir a otras actualizaciones de software si se realizaron modificaciones para ampliar la compatibilidad de idioma. Por ejemplo, una revisión posterior de la actualización de un producto para Microsoft Office puede quitar la compatibilidad para un sistema operativo más antiguo, pero podría agregar compatibilidad adicional para nuevos idiomas en la versión de actualización de software inicial.  
 
- En la ficha Reglas de sustitución en las propiedades de componente de punto de actualización de software, puede especificar cómo administrar las actualizaciones de software sustituidas. Para obtener más información, consulte [Reglas de sustitución](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
+  En la ficha Reglas de sustitución en las propiedades de componente de punto de actualización de software, puede especificar cómo administrar las actualizaciones de software sustituidas. Para obtener más información, consulte [Reglas de sustitución](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
 
- **Preocupaciones operativas:**  
+  **Preocupaciones operativas:**  
 
- Cuando sea posible, implemente la actualización de software de sustitución en los equipos cliente en lugar de la actualización de software sustituida. Puede mostrar una lista de las actualizaciones de software que sustituyen a la actualización de software en la ficha **Información de sustitución** de las propiedades de actualización de software.  
+  Cuando sea posible, implemente la actualización de software de sustitución en los equipos cliente en lugar de la actualización de software sustituida. Puede mostrar una lista de las actualizaciones de software que sustituyen a la actualización de software en la ficha **Información de sustitución** de las propiedades de actualización de software.  
 
 ### <a name="invalid-icon"></a>Icono de no válido  
  ![icono](../media/Invalid.jpg "Icono de no válido") El icono con la X de color rojo representa una actualización de software no válida.  
@@ -74,13 +74,13 @@ Las actualizaciones de software sincronizadas se muestran en la consola de Confi
 
  Las actualizaciones de software no válidas se encuentran en una implementación activa, pero por alguna razón no está disponible el contenido (archivos de actualización de software). Los siguientes son escenarios en que puede producirse este estado:  
 
--   Implementa correctamente la actualización de software, pero el archivo de actualización de software se quita del paquete de implementación y ya no está disponible.  
+- Implementa correctamente la actualización de software, pero el archivo de actualización de software se quita del paquete de implementación y ya no está disponible.  
 
--   Crea una implementación de actualizaciones de software en un sitio y el objeto de implementación se replica correctamente a un sitio secundario, pero el paquete de implementación no se replica correctamente al sitio secundario.  
+- Crea una implementación de actualizaciones de software en un sitio y el objeto de implementación se replica correctamente a un sitio secundario, pero el paquete de implementación no se replica correctamente al sitio secundario.  
 
- **Preocupaciones operativas:**  
+  **Preocupaciones operativas:**  
 
- Si falta el contenido de una actualización de software, los clientes no pueden instalar la actualización de software hasta que el contenido esté disponible en un punto de distribución. Puede redistribuir el contenido a los puntos de distribución mediante la acción **Redistribuir** . Si falta el contenido de una actualización de software en una implementación creada en un sitio primario, la actualización de software se debe replicar o redistribuir al sitio secundario. Para obtener más información sobre la redistribución de contenido, consulte [Manage the content you have distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage) (Administrar el contenido que ha distribuido).  
+  Si falta el contenido de una actualización de software, los clientes no pueden instalar la actualización de software hasta que el contenido esté disponible en un punto de distribución. Puede redistribuir el contenido a los puntos de distribución mediante la acción **Redistribuir** . Si falta el contenido de una actualización de software en una implementación creada en un sitio primario, la actualización de software se debe replicar o redistribuir al sitio secundario. Para obtener más información sobre la redistribución de contenido, consulte [Manage the content you have distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage) (Administrar el contenido que ha distribuido).  
 
 ### <a name="metadata-only-icon"></a>Icono de solo metadatos
  ![icono](../media/MetadataOnly.png "Icono de solo metadatos") El icono con la flecha azul representa una actualización de software de solo metadatos.

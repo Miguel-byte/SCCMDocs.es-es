@@ -10,12 +10,12 @@ ms.assetid: d0c6f7a0-dcae-4e6d-aa28-35d464d97ff7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 51bfe17980a7660ecdccfd13a11d6c7bcfd93e5f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: cec99ab9d4e52f2a2db4aaef0de47b5abfb794b5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344381"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417623"
 ---
 # <a name="security-and-privacy-for-asset-intelligence-in-system-center-configuration-manager"></a>Seguridad y privacidad de Asset Intelligence en System Center Configuration Manager
 
@@ -38,18 +38,18 @@ Este tema contiene información de seguridad y privacidad de Asset Intelligence 
 
  Asset Intelligence no envía información relativa a los usuarios y equipos o el uso de licencias a Microsoft. Puede optar por enviar solicitudes a System Center Online para su clasificación, lo que significa que puede etiquetar uno o más títulos de software sin clasificar y enviarlos a System Center Online para su investigación y categorización. Cuando se carga un título de software, los investigadores de Microsoft identifican, categorizan y ponen ese conocimiento a disposición de todos los clientes que usan el servicio en línea. Debe tener en cuenta las implicaciones de privacidad siguientes cuando envíe información a System Center Online:  
 
--   La carga solo corresponde a la información de título de software genérico (nombre, publicador, etc.) que decida enviar a System Center Online. No se envía información de inventario con ninguna carga.  
+- La carga solo corresponde a la información de título de software genérico (nombre, publicador, etc.) que decida enviar a System Center Online. No se envía información de inventario con ninguna carga.  
 
--   La carga nunca se produce automáticamente y el sistema no está diseñado para que se automatice dicha tarea. Debe seleccionar manualmente y aprobar la carga de cada título de software.  
+- La carga nunca se produce automáticamente y el sistema no está diseñado para que se automatice dicha tarea. Debe seleccionar manualmente y aprobar la carga de cada título de software.  
 
--   Un cuadro de diálogo muestra exactamente los datos que se van a cargar, antes de que comience el proceso de carga.  
+- Un cuadro de diálogo muestra exactamente los datos que se van a cargar, antes de que comience el proceso de carga.  
 
--   No se envía información de la licencia a Microsoft. La información de la licencia se almacena en un área distinta de la base de datos de Configuration Manager y no se puede enviar a Microsoft.  
+- No se envía información de la licencia a Microsoft. La información de la licencia se almacena en un área distinta de la base de datos de Configuration Manager y no se puede enviar a Microsoft.  
 
--   Cualquier título de software que se haya cargado se hace público, en el sentido de que el conocimiento de esa determinada aplicación y su categorización pasan a formar parte del catálogo Asset Intelligence de System Center Online, y posteriormente descargan otros consumidores del catálogo.  
+- Cualquier título de software que se haya cargado se hace público, en el sentido de que el conocimiento de esa determinada aplicación y su categorización pasan a formar parte del catálogo Asset Intelligence de System Center Online, y posteriormente descargan otros consumidores del catálogo.  
 
--   El origen del título de software no se registra en el catálogo Asset Intelligence y no estará disponible para otros clientes. Sin embargo, debe comprobar que no se cargan títulos de aplicaciones que contengan información privada.  
+- El origen del título de software no se registra en el catálogo Asset Intelligence y no estará disponible para otros clientes. Sin embargo, debe comprobar que no se cargan títulos de aplicaciones que contengan información privada.  
 
--   Los datos cargados no se pueden recuperar.  
+- Los datos cargados no se pueden recuperar.  
 
- Antes de configurar la recopilación de datos de Asset Intelligence y decidir si quiere enviar información a System Center Online, tenga en cuenta los requisitos de privacidad de su organización.  
+  Antes de configurar la recopilación de datos de Asset Intelligence y decidir si quiere enviar información a System Center Online, tenga en cuenta los requisitos de privacidad de su organización.  
