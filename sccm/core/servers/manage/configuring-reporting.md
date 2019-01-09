@@ -10,12 +10,12 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 17b0147e82e2eb9a756bdab69eed7ab86f98a1e0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d046a5fcd6602c82eda631c9d9b7d47db2470888
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344303"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418431"
 ---
 # <a name="configuring-reporting-in-system-center-configuration-manager"></a>Configuración de informes en System Center Configuration Manager
 
@@ -97,7 +97,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
     > [!NOTE]  
     >  Para más información sobre la configuración de sistemas de sitio, vea [Agregar roles de sistema de sitio para System Center Configuration Manager](../deploy/configure/add-site-system-roles.md).  
 
-    -   **Nuevo sistema de sitio**: en la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear servidor de sistema de sitio**. Se abre el **Asistente para crear servidor de sistema de sitio** .  
+    -   **Sistema de sitio nuevo**: En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear servidor del sistema de sitio**. Se abre el **Asistente para crear servidor de sistema de sitio** .  
 
     -   **Sistema de sitio existente**: haga clic en el servidor en el que desea instalar el rol de sistema de sitio del punto de servicios de informes. Al hacer clic en un servidor, se muestra en el panel de resultados una lista de los roles de sistema de sitio que ya están instalados en el servidor.  
 
@@ -109,21 +109,21 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
 6.  En la página **Punto de servicios de informes** , configure las siguientes opciones:  
 
-    -   **Nombre de servidor de base de datos del sitio**: especifique el nombre del servidor que hospeda la base de datos del sitio de Configuration Manager. Normalmente, el asistente recupera automáticamente el nombre de dominio completo (FQDN) del servidor. Para especificar una instancia de base de datos, use el formato &lt;*Nombre de servidor*>\&lt;*Nombre de instancia*>.  
+    -   **Nombre de servidor de base de datos del sitio**: especifique el nombre del servidor que hospeda la base de datos de sitio de Configuration Manager. Normalmente, el asistente recupera automáticamente el nombre de dominio completo (FQDN) del servidor. Para especificar una instancia de base de datos, use el formato &lt;*Nombre de servidor*>\&lt;*Nombre de instancia*>.  
 
-    -   **Nombre de base de datos**: especifique el nombre de base de datos del sitio de Configuration Manager y, luego, haga clic en **Comprobar** para confirmar que el asistente tiene acceso a la base de datos del sitio.  
+    -   **Nombre de la base de datos**: especifique el nombre de base de datos de sitio de Configuration Manager y, luego, haga clic en **Comprobar** para confirmar que el asistente tiene acceso a la base de datos del sitio.  
 
         > [!IMPORTANT]  
         >  La cuenta de usuario que crea el punto de servicios de informes debe tener acceso de **lectura** a la base de datos del sitio. Si se produce un error en la prueba de conexión, aparecerá un icono de advertencia rojo. Mueva el cursor sobre este icono para leer los detalles del error. Corrija el error y, a continuación, haga clic en **Prueba** otra vez.  
 
     -   **Nombre de la carpeta**: especifique el nombre de la carpeta que se crea y se usa para hospedar los informes de Configuration Manager en Reporting Services.  
 
-    -   **Instancia del servidor de Reporting Services**: seleccione en la lista la instancia de SQL Server para Reporting Services. Si hay una sola instancia, aparecerá seleccionada de forma predeterminada. Cuando no se encuentran instancias, compruebe que SQL Server Reporting Services está instalado y configurado, y que se inició el servicio de SQL Server Reporting Services en el sistema de sitio.  
+    -   **Instancia de servidor de Reporting Services**: seleccione en la lista la instancia de SQL Server para Reporting Services. Si hay una sola instancia, aparecerá seleccionada de forma predeterminada. Cuando no se encuentran instancias, compruebe que SQL Server Reporting Services está instalado y configurado, y que se inició el servicio de SQL Server Reporting Services en el sistema de sitio.  
 
         > [!IMPORTANT]  
         >  Configuration Manager hace una conexión en el contexto del usuario actual con Instrumental de administración de Windows (WMI) en el sistema de sitio seleccionado para recuperar la instancia de SQL Server para Reporting Services. El usuario actual debe tener acceso de **lectura** a WMI en el sistema de sitio; de lo contrario, no se podrán recuperar las instancias de Reporting Services.  
 
-    -   **Cuenta de punto de Reporting Services**: haga clic en **Establecer** y seleccione una cuenta que se use cuando SQL Server Reporting Services en el punto de servicios de informes se conecte con la base de datos del sitio de Configuration Manager para recuperar los datos que se muestran en un informe. Seleccione **Cuenta existente** para especificar una cuenta de usuario de Windows configurada previamente como cuenta de Configuration Manager o seleccione **Nueva cuenta** para especificar una cuenta de usuario de Windows que no esté configurada actualmente como una cuenta de Configuration Manager. Configuration Manager concede automáticamente acceso al usuario especificado a la base de datos del sitio. El usuario se muestra en la subcarpeta **Cuentas** del nodo **Seguridad** en el área de trabajo **Administración** con el nombre de cuenta **Punto de servicios de informes de ConfigMgr** .  
+    -   **Cuenta de punto de Reporting Services**: haga clic en **Establecer** y, después, seleccione una cuenta que se use cuando SQL Server Reporting Services en el punto de servicios de informes se conecte con la base de datos de sitio de Configuration Manager para recuperar los datos que se muestran en un informe. Seleccione **Cuenta existente** para especificar una cuenta de usuario de Windows configurada previamente como cuenta de Configuration Manager o seleccione **Nueva cuenta** para especificar una cuenta de usuario de Windows que no esté configurada actualmente como una cuenta de Configuration Manager. Configuration Manager concede automáticamente acceso al usuario especificado a la base de datos del sitio. El usuario se muestra en la subcarpeta **Cuentas** del nodo **Seguridad** en el área de trabajo **Administración** con el nombre de cuenta **Punto de servicios de informes de ConfigMgr** .  
 
          La cuenta que ejecuta Reporting Services debe pertenecer al grupo de seguridad local de dominio **Grupo de acceso de autorización de Windows**y tener el permiso **Lectura tokenGroupsGlobalAndUniversal** configurado como **Permitir**. Debe existir una relación de confianza bidireccional establecida para los usuarios de un dominio distinto al de la cuenta de punto de Reporting Services para la correcta ejecución de los informes.
 
@@ -147,36 +147,36 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 > [!IMPORTANT]  
 >  Las acciones incluidas en la siguiente lista se realizan mediante las credenciales de la cuenta que está configurada para el servicio SMS_Executive, que suele ser la cuenta de sistema local del servidor de sitio.  
 
--   Instala el rol de sitio del punto de servicios de informes.  
+- Instala el rol de sitio del punto de servicios de informes.  
 
--   Crea el origen de datos en Reporting Services con las credenciales almacenadas que se especificó en el asistente. Esta es la contraseña y la cuenta de usuario de Windows que utiliza Reporting Services para conectarse con la base de datos del sitio cuando ejecutan informes.  
+- Crea el origen de datos en Reporting Services con las credenciales almacenadas que se especificó en el asistente. Esta es la contraseña y la cuenta de usuario de Windows que utiliza Reporting Services para conectarse con la base de datos del sitio cuando ejecutan informes.  
 
--   Crea la carpeta raíz de Configuration Manager en Reporting Services.  
+- Crea la carpeta raíz de Configuration Manager en Reporting Services.  
 
--   Agrega los roles de seguridad **Usuarios de informes de Configuration Manager** y **Administradores de informes de Configuration Manager** en Reporting Services.  
+- Agrega los roles de seguridad **Usuarios de informes de Configuration Manager** y **Administradores de informes de Configuration Manager** en Reporting Services.  
 
--   Crea subcarpetas e implementa informes de Configuration Manager desde %ArchivosDePrograma%\SMS_SRSRP en Reporting Services.  
+- Crea subcarpetas e implementa informes de Configuration Manager desde %ArchivosDePrograma%\SMS_SRSRP en Reporting Services.  
 
--   Agrega el rol **Usuarios de informes de Configuration Manager** de Reporting Services a las carpetas raíz para todas las cuentas de usuario de Configuration Manager que tengan derechos de **lectura del sitio**.  
+- Agrega el rol **Usuarios de informes de Configuration Manager** de Reporting Services a las carpetas raíz para todas las cuentas de usuario de Configuration Manager que tengan derechos de **lectura del sitio**.  
 
--   Agrega el rol **Administradores de informes de Configuration Manager** de Reporting Services a las carpetas raíz para todas las cuentas de usuario de Configuration Manager que tengan derechos de **modificación del sitio**.  
+- Agrega el rol **Administradores de informes de Configuration Manager** de Reporting Services a las carpetas raíz para todas las cuentas de usuario de Configuration Manager que tengan derechos de **modificación del sitio**.  
 
--   Recupera la asignación entre las carpetas de informes y los tipos de objetos protegidos de Configuration Manager (que se mantienen en la base de datos del sitio de Configuration Manager).  
+- Recupera la asignación entre las carpetas de informes y los tipos de objetos protegidos de Configuration Manager (que se mantienen en la base de datos del sitio de Configuration Manager).  
 
--   Configura los siguientes derechos para los usuarios administrativos de Configuration Manager en carpetas de informes específicas de Reporting Services:  
+- Configura los siguientes derechos para los usuarios administrativos de Configuration Manager en carpetas de informes específicas de Reporting Services:  
 
-    -   Agrega usuarios y asigna el rol **Usuarios de informes de Configuration Manager** a la carpeta de informes asociada para los usuarios administrativos que tengan permisos **Ejecutar informe** para el objeto de Configuration Manager.  
+  - Agrega usuarios y asigna el rol **Usuarios de informes de Configuration Manager** a la carpeta de informes asociada para los usuarios administrativos que tengan permisos **Ejecutar informe** para el objeto de Configuration Manager.  
 
-    -   Agrega usuarios y asigna el rol **Administradores de informes de Configuration Manager** a la carpeta de informes asociada para los usuarios administrativos que tengan permisos **Modificar informe** para el objeto de Configuration Manager.  
+  - Agrega usuarios y asigna el rol **Administradores de informes de Configuration Manager** a la carpeta de informes asociada para los usuarios administrativos que tengan permisos **Modificar informe** para el objeto de Configuration Manager.  
 
-     Configuration Manager se conecta a Reporting Services y establece los permisos para los usuarios en las carpetas raíz de Configuration Manager y Reporting Services, y en carpetas de informes específicas. Tras la instalación inicial del punto de servicios de informes, Configuration Manager se conecta a Reporting Services en un intervalo de 10 minutos para comprobar que los derechos de usuario configurados en las carpetas de informes son los derechos asociados que están establecidos para los usuarios de Configuration Manager. Cuando se agregan usuarios o se modifican derechos de usuario en la carpeta de informes mediante el uso del Administrador de informes de Reporting Services, Configuration Manager sobrescribe estos cambios por medio del uso de asignaciones basadas en roles almacenadas en la base de datos del sitio. Configuration Manager también quita los usuarios que no tienen derechos de generación de informes en Configuration Manager.  
+    Configuration Manager se conecta a Reporting Services y establece los permisos para los usuarios en las carpetas raíz de Configuration Manager y Reporting Services, y en carpetas de informes específicas. Tras la instalación inicial del punto de servicios de informes, Configuration Manager se conecta a Reporting Services en un intervalo de 10 minutos para comprobar que los derechos de usuario configurados en las carpetas de informes son los derechos asociados que están establecidos para los usuarios de Configuration Manager. Cuando se agregan usuarios o se modifican derechos de usuario en la carpeta de informes mediante el uso del Administrador de informes de Reporting Services, Configuration Manager sobrescribe estos cambios por medio del uso de asignaciones basadas en roles almacenadas en la base de datos del sitio. Configuration Manager también quita los usuarios que no tienen derechos de generación de informes en Configuration Manager.  
 
 ##  <a name="BKMK_SecurityRoles"></a> Roles de seguridad de Reporting Services para Configuration Manager  
  Cuando Configuration Manager instala el punto de servicios de informes, se agregan los siguientes roles de seguridad en Reporting Services:  
 
 -   **Usuarios de informes de Configuration Manager**: los usuarios a los que se les asigna este rol de seguridad solo pueden ejecutar informes de Configuration Manager.  
 
--   **Administradores de informes de Configuration Manager**: los usuarios a los que se les asigna este rol de seguridad pueden realizar todas las tareas relacionadas con la generación de informes en Configuration Manager.  
+-   **Administradores de informes de Configuration Manager**: los usuarios a los que se les asigna este rol de seguridad pueden realizar todas las tareas relacionadas con informes en Configuration Manager.  
 
 ##  <a name="BKMK_VerifyReportingServicesPointInstallation"></a> Comprobación de la instalación del punto de Reporting Services  
  Tras agregar el rol de sitio de punto de servicios de informes, puede comprobar la instalación mediante la visualización de entradas del archivo de registro y mensajes de estado específicos. Utilice el siguiente procedimiento para comprobar que la instalación del punto de servicios de informes se realizó correctamente.  
@@ -260,14 +260,14 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
 5.  En el cuadro de diálogo **Propiedades de punto de servicios de informes** , puede modificar las siguientes opciones:  
 
-    -   **Nombre de servidor de base de datos del sitio**: especifique el nombre del servidor que hospeda la base de datos del sitio de Configuration Manager. Normalmente, el asistente recupera automáticamente el nombre de dominio completo (FQDN) del servidor. Para especificar una instancia de base de datos, use el formato &lt;*Nombre de servidor*>\&lt;*Nombre de instancia*>.  
+    -   **Nombre de servidor de base de datos del sitio**: especifique el nombre del servidor que hospeda la base de datos de sitio de Configuration Manager. Normalmente, el asistente recupera automáticamente el nombre de dominio completo (FQDN) del servidor. Para especificar una instancia de base de datos, use el formato &lt;*Nombre de servidor*>\&lt;*Nombre de instancia*>.  
 
-    -   **Nombre de base de datos**: especifique el nombre de base de datos del sitio de System Center 2012 Configuration Manager y, luego, haga clic en **Comprobar** para confirmar que el asistente tiene acceso a la base de datos del sitio.  
+    -   **Nombre de la base de datos**: especifique el nombre de la base de datos de sitio de System Center 2012 Configuration Manager y, luego, haga clic en **Comprobar** para confirmar que el asistente tiene acceso a la base de datos del sitio.  
 
         > [!IMPORTANT]  
         >  La cuenta de usuario que crea el punto de servicios de informes debe tener acceso de lectura a la base de datos del sitio. Si se produce un error en la prueba de conexión, aparecerá un icono de advertencia rojo. Mueva el cursor sobre este icono para leer los detalles del error. Corrija el error y, a continuación, haga clic en **Prueba** otra vez.  
 
-    -   **Cuenta de usuario**: haga clic en **Establecer** y luego seleccione una cuenta que se use cuando SQL Server Reporting Services en el punto de servicios de informes se conecte con la base de datos del sitio de Configuration Manager para recuperar los datos que se muestran en un informe. Seleccione **Cuenta existente** para especificar una cuenta de usuario de Windows con derechos de Configuration Manager existentes o seleccione **Nueva cuenta** para especificar una cuenta de usuario de Windows actualmente sin derechos en Configuration Manager. Configuration Manager concede automáticamente acceso a la cuenta de usuario especificada a la base de datos del sitio. La cuenta se muestra como la cuenta del **Punto de informes de SRS de Configuration Manager** en la subcarpeta **Cuentas** del nodo **Seguridad** en el área de trabajo **Administración** .  
+    -   **Cuenta de usuario**: haga clic en **Establecer** y luego seleccione una cuenta que se use cuando SQL Server Reporting Services en el punto de servicios de informes se conecte con la base de datos de sitio de Configuration Manager para recuperar los datos que se muestran en un informe. Seleccione **Cuenta existente** para especificar una cuenta de usuario de Windows con derechos de Configuration Manager existentes o seleccione **Nueva cuenta** para especificar una cuenta de usuario de Windows actualmente sin derechos en Configuration Manager. Configuration Manager concede automáticamente acceso a la cuenta de usuario especificada a la base de datos del sitio. La cuenta se muestra como la cuenta del **Punto de informes de SRS de Configuration Manager** en la subcarpeta **Cuentas** del nodo **Seguridad** en el área de trabajo **Administración** .  
 
          La cuenta de usuario de Windows especificada y la contraseña se cifran, y se almacenan en la base de datos de Reporting Services. Reporting Services recupera los datos de los informes de la base de datos del sitio mediante el uso de esta cuenta y contraseña.  
 

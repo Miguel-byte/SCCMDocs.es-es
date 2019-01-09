@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c9f3bc1b85ee9b8fbd8af47e22a826fe8d88377d
-ms.sourcegitcommit: c2c44329f1f9a2e6c14095360b4fc4aafabc27f0
+ms.openlocfilehash: 882af6e50a8619684225de53ce700fcc23923a06
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694967"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418413"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
 
@@ -113,7 +113,7 @@ Los tres roles de seguridad usados para ejecutar scripts no se crean de forma pr
 
 ### <a name="security-role-permissions"></a>Permisos de rol de seguridad  
 
-**Nombre de rol**: ejecutores de scripts  
+**Nombre de rol**: Ejecutores de scripts  
 - **Descripción**: estos permisos permiten a este rol ejecutar únicamente los scripts creados y aprobados por otros roles.  
 - **Permisos:** asegúrese de que los permisos siguientes están establecidos en **Sí**.  
 
@@ -125,9 +125,9 @@ Los tres roles de seguridad usados para ejecutar scripts no se crean de forma pr
 |Scripts SMS|Lectura|Sí|
 
 
-**Nombre de rol**: autores de scripts  
-- **Descripción**: estos permisos permiten a este rol crear scripts, pero no puede aprobarlos ni ejecutarlos.  
-- **Permisos:** asegúrese de que están establecidos los permisos siguientes.
+**Nombre de rol**: Autores de scripts  
+- **Descripción**: estos permisos permiten a este rol crear scripts, pero no aprobarlos ni ejecutarlos.  
+- **Permisos**: asegúrese de que los permisos siguientes están establecidos.
  
 |Categoría|Permiso|Estado|
 |---|---|---|
@@ -139,9 +139,9 @@ Los tres roles de seguridad usados para ejecutar scripts no se crean de forma pr
 |Scripts SMS|Modificar|Sí|
 
 
-**Nombre de rol**: aprobadores de scripts  
-- **Descripción**: estos permisos permiten a este rol aprobar scripts, pero no puede crearlos ni ejecutarlos.  
-- **Permisos:** asegúrese de que están establecidos los permisos siguientes.  
+**Nombre de rol**: Aprobadores de scripts  
+- **Descripción**: estos permisos permiten a este rol aprobar scripts, pero no crearlos ni ejecutarlos.  
+- **Permisos:** asegúrese de que los permisos siguientes están establecidos.  
 
 |Categoría|Permiso|Estado|
 |---|---|---|
@@ -172,8 +172,8 @@ Los tres roles de seguridad usados para ejecutar scripts no se crean de forma pr
 5. Complete el asistente. El nuevo script se muestra en la lista **Script** con el estado **En espera de aprobación**. Para poder ejecutar este script en los dispositivos cliente, debe aprobarlo. 
 
 > [!IMPORTANT]
-    >Evite la aplicación de scripts al reinicio de un dispositivo o de un agente de Configuration Manageral utilizar la característica Ejecutar scripts. Si lo hace, podría provocar un estado de reinicio continuo. Si es necesario, existen mejoras en la característica de notificación de clientes que permiten reiniciar dispositivos, a partir de la versión 1710 de Configuration Manager. La [columna Reinicio pendiente](/sccm/core/clients/manage/manage-clients#Restart-clients) puede ayudar a identificar los dispositivos que necesitan un reinicio. 
-<!--SMS503978  -->
+> Evite la aplicación de scripts al reinicio de un dispositivo o de un agente de Configuration Manageral utilizar la característica Ejecutar scripts. Si lo hace, podría provocar un estado de reinicio continuo. Si es necesario, existen mejoras en la característica de notificación de clientes que permiten reiniciar dispositivos, a partir de la versión 1710 de Configuration Manager. La [columna Reinicio pendiente](/sccm/core/clients/manage/manage-clients#Restart-clients) puede ayudar a identificar los dispositivos que necesitan un reinicio. 
+> <!--SMS503978  -->
 
 ## <a name="script-parameters"></a>Parámetros de script
 *(Se introdujo con la versión 1710)*  

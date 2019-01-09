@@ -10,12 +10,12 @@ ms.assetid: ab1aecdd-d943-44f5-b0a9-e8fe7439e5d6
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3cbb7281cd7dd39a32a71105fe173f868947eef9
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 1ff2b135d38c819804cc7873effa3bff5f9254e7
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338251"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422103"
 ---
 # <a name="create-mac-computer-applications-with-system-center-configuration-manager"></a>Crear aplicaciones para equipos Mac con System Center Configuration Manager
 
@@ -46,18 +46,19 @@ Tenga en cuenta las siguientes consideraciones cuando cree e implemente aplicaci
 ## <a name="steps-to-create-and-deploy-an-application"></a>Pasos para crear e implementar una aplicación  
  En la tabla siguiente se proporcionan los pasos, detalles e información para crear e implementar aplicaciones para equipos Mac.  
 
-|Paso|Detalles|  
-|----------|-------------|  
-|**Paso 1**: Preparar aplicaciones Mac para Configuration Manager|Para poder crear aplicaciones de Configuration Manager a partir de paquetes de software Mac, debe usar la herramienta **CMAppUtil** en un equipo Mac para convertir el software Mac en un archivo **.cmmac** de Configuration Manager.|  
-|**Paso 2**: Crear una aplicación de Configuration Manager que contenga el software Mac|Use el **Asistente para crear aplicaciones** para crear una aplicación para el software Mac.|  
-|**Paso 3**: Crear un tipo de implementación para la aplicación Mac|Este paso es necesario sólo si no se importó automáticamente esta información de la aplicación.|  
-|**Paso 4**: Implementar la aplicación Mac|Use el **Asistente para implementar software** para implementar la aplicación en equipos Mac.|  
-|**Paso 5**: Supervisar la implementación de la aplicación Mac|Supervise que las implementaciones de aplicaciones se han realizado correctamente en los equipos Mac.|  
+
+|                                         Paso                                          |                                                                                                             Detalles                                                                                                              |
+|---------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|            **Paso 1**: Preparar aplicaciones Mac para Configuration Manager             | Para poder crear aplicaciones de Configuration Manager a partir de paquetes de software Mac, debe usar la herramienta **CMAppUtil** en un equipo Mac para convertir el software Mac en un archivo <strong>.cmmac</strong> de Configuration Manager. |
+| **Paso 2**: Crear una aplicación de Configuration Manager que contenga el software Mac |                                                                       Use el **Asistente para crear aplicaciones** para crear una aplicación para el software Mac.                                                                       |
+|             **Paso 3**: Crear un tipo de implementación para la aplicación Mac              |                                                              Este paso es necesario sólo si no se importó automáticamente esta información de la aplicación.                                                               |
+|                        **Paso 4**: Implementar la aplicación Mac                         |                                                                          Use el **Asistente para implementar software** para implementar la aplicación en equipos Mac.                                                                          |
+|               **Paso 5**: Supervisar la implementación de la aplicación Mac               |                                                                                 Supervise que las implementaciones de aplicaciones se han realizado correctamente en los equipos Mac.                                                                                 |
 
 ## <a name="supplemental-procedures-to-create-and-deploy-applications-for-mac-computers"></a>Procedimientos adicionales para crear e implementar aplicaciones para equipos Mac  
  Use los procedimientos siguientes para crear e implementar aplicaciones para equipos Mac administrados por Configuration Manager.  
 
-###  <a name="step-1-prepare-mac-applications-for-configuration-manager"></a>Paso 1: preparar aplicaciones Mac para Configuration Manager  
+###  <a name="step-1-prepare-mac-applications-for-configuration-manager"></a>Paso 1: Preparar aplicaciones Mac para Configuration Manager  
  El proceso para crear e implementar aplicaciones de Configuration Manager en equipos Mac es similar al proceso de implementación para equipos Windows. Pero, para poder crear aplicaciones de Configuration Manager que contengan tipos de implementación para Mac, es necesario preparar las aplicaciones con la herramienta **CMAppUtil**. Esta herramienta se descarga con los archivos de instalación del cliente Mac. La herramienta **CMAppUtil** puede recopilar información acerca de la aplicación, que incluye datos de detección de los siguientes paquetes Mac:  
 
 -   Imagen de disco Apple (.dmg)  
@@ -132,7 +133,7 @@ Use el procedimiento siguiente para ayudarle a crear una aplicación para equipo
 
 11. La nueva aplicación se muestra en el nodo **Aplicaciones** de la consola de Configuration Manager.  
 
-###  <a name="step-3-create-a-deployment-type-for-the-mac-application"></a>Paso 3: crear un tipo de implementación para la aplicación Mac  
+###  <a name="step-3-create-a-deployment-type-for-the-mac-application"></a>Paso 3: Crear un tipo de implementación para la aplicación Mac  
  Use el procedimiento siguiente para ayudarle a crear un tipo de implementación para equipos Mac administrados por Configuration Manager.  
 
 > [!NOTE]  

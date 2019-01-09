@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 84705584328b09313bebd1e6c70a0063b2b0724f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 280dd3da96b0c408f7c75fb7ef0a046ae0343765
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351435"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421423"
 ---
 # <a name="manage-applicability-rules-in-updates-publisher"></a>Administrar reglas de aplicabilidad para Updates Publisher
 
@@ -50,30 +50,30 @@ Puede crear reglas de aplicabilidad en dos ubicaciones de Updates Publisher:
 ## <a name="create-applicability-rule"></a>Crear reglas de aplicabilidad
 La información siguiente es similar a la correspondiente a cómo se crean reglas desde el asistente para [crear actualizaciones](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard). Pero, a diferencia del asistente, tiene la posibilidad de guardar los conjuntos de reglas para su uso en el futuro.
 
-1.  En el **área de trabajo Reglas**, elija **Crear** para abrir el **Asistente para crear reglas**.
+1. En el **área de trabajo Reglas**, elija **Crear** para abrir el **Asistente para crear reglas**.
 
-2.  Especifique un nombre para la regla y haga clic en ![Nueva regla](media/newrule.png). Se abrirá la página **Applicability Rule** (Regla de aplicabilidad), donde puede configurar reglas.
+2. Especifique un nombre para la regla y haga clic en ![Nueva regla](media/newrule.png). Se abrirá la página **Applicability Rule** (Regla de aplicabilidad), donde puede configurar reglas.
 
-3.  Como **Tipo de regla**, seleccione uno de los siguientes. Las opciones que hay que configurar varían en función de cada tipo:
+3. Como **Tipo de regla**, seleccione uno de los siguientes. Las opciones que hay que configurar varían en función de cada tipo:
 
-    -   **Archivo**: use esta regla para exigir que un dispositivo tenga un archivo con propiedades que cumplan uno o más criterios que se especifiquen para poder aplicar esta actualización.
+   - **Archivo**: use esta regla para exigir que un dispositivo tenga un archivo con propiedades que cumplan uno o más criterios que se especifiquen para poder aplicar esta actualización.
 
-    -   **Registro**: use este tipo para especificar detalles del Registro que deben estar presentes para que un dispositivo cumpla los requisitos para instalar esta actualización.
+   - **Registro**: use este tipo para especificar detalles del Registro que deben estar presentes para que un dispositivo cumpla los requisitos para instalar esta actualización.
 
-    -   **Sistema**: esta regla usa detalles del sistema para determinar la aplicabilidad. Puede elegir entre definir una versión de Windows, un idioma de Windows o la arquitectura del procesador, o especificar una consulta WMI que identifique el sistema operativo de los dispositivos.
+   - **Sistema**: esta regla usa detalles del sistema para determinar la aplicabilidad. Puede elegir entre definir una versión de Windows, un idioma de Windows o la arquitectura del procesador, o especificar una consulta WMI que identifique el sistema operativo de los dispositivos.
 
-    -   **Windows Installer**: use este tipo de regla para determinar la aplicabilidad en función de un .MSI instalado o una revisión de Windows Installer (.MSP). También puede determinar si determinados componentes o características se instalan como parte del requisito.
+   - **Windows Installer**: use este tipo de regla para determinar la aplicabilidad en función de un .MSI instalado o una revisión de Windows Installer (.MSP). También puede determinar si determinados componentes o características se instalan como parte del requisito.
 
-       > [!IMPORTANT]   
-       > En dispositivos administrados, el nuevo Agente de Windows Update no puede detectar paquetes de instalación de Windows instalados por usuario. Cuando use este tipo de regla, configure reglas de aplicabilidad adicionales, como versiones de archivo o valores de la clave del Registro, para que el paquete de Windows Installer pueda detectarse adecuadamente independientemente del criterio, por usuario o por sistema.
+     > [!IMPORTANT]   
+     > En dispositivos administrados, el nuevo Agente de Windows Update no puede detectar paquetes de instalación de Windows instalados por usuario. Cuando use este tipo de regla, configure reglas de aplicabilidad adicionales, como versiones de archivo o valores de la clave del Registro, para que el paquete de Windows Installer pueda detectarse adecuadamente independientemente del criterio, por usuario o por sistema.
 
-    -   **Saved rule** (Regla guardada): esta opción le permite buscar y usar reglas que haya configurado y guardado anteriormente.
+   - **Saved rule** (Regla guardada): esta opción le permite buscar y usar reglas que haya configurado y guardado anteriormente.
 
-4.  Continúe agregando y configurando otras reglas que quiera.
+4. Continúe agregando y configurando otras reglas que quiera.
 
-5.  Use los botones de operaciones lógicas para ordenar y agrupar distintas reglas con el fin de crear comprobaciones de requisitos previos de mayor complejidad.
+5. Use los botones de operaciones lógicas para ordenar y agrupar distintas reglas con el fin de crear comprobaciones de requisitos previos de mayor complejidad.
 
-6.  Cuando el conjunto de reglas esté completo, haga clic en **Aceptar** para guardarlo. El conjunto de reglas aparece ahora en la lista **My saved rules** (Mis reglas guardadas).
+6. Cuando el conjunto de reglas esté completo, haga clic en **Aceptar** para guardarlo. El conjunto de reglas aparece ahora en la lista **My saved rules** (Mis reglas guardadas).
 
 ## <a name="edit-applicability-rule-sets"></a>Editar conjuntos de reglas de aplicabilidad
 Para editar una regla de aplicabilidad, seleccione una regla que se haya guardado en la lista **My saved rules** (Mis reglas guardadas) del **área de trabajo Reglas** y elija **Editar** en la cinta de opciones. Se abrirá el asistente para **editar reglas**.
