@@ -10,16 +10,16 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ff4cdcc52e9be329fcfa0fd2127c43255c73ad65
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: c4cd6c45d21c58459fcd23ee02db4b5900996939
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893879"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422001"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Administre toda la configuración de cliente en la consola de Configuration Manager desde el nodo **Configuración de cliente** del área de trabajo **Administración**. Configuration Manager incluye una configuración predeterminada. Si cambia la configuración predeterminada del cliente, esta configuración se aplicará a todos los clientes de la jerarquía. También puede establecer la configuración personalizada del cliente, que invalida la configuración predeterminada del cliente si la asigna a las recopilaciones. Para obtener más información, vea [Cómo configurar el cliente](/sccm/core/clients/deploy/configure-client-settings).
 
@@ -100,13 +100,13 @@ Esta configuración se aplica a los usuarios cuando sus equipos estén en la int
 
 Establezca esta opción en **Sí** para que los usuarios reciban la directiva de usuario en equipos basados en Internet. Los requisitos siguientes también son de aplicación:  
 
--   El cliente y el sitio están configurados para la [administración de cliente basada en Internet](/sccm/core/clients/manage/plan-internet-based-client-management) o [Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
+- El cliente y el sitio están configurados para la [administración de cliente basada en Internet](/sccm/core/clients/manage/plan-internet-based-client-management) o [Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
 
--   El valor **Habilitar directiva de usuario en clientes** es **Sí**.  
+- El valor **Habilitar directiva de usuario en clientes** es **Sí**.  
 
--   El punto de administración basado en Internet autentica correctamente al usuario mediante la autenticación de Windows (Kerberos o NTLM). Para obtener más información, vea [Consideraciones sobre las comunicaciones de cliente desde Internet](/sccm/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan).  
+- El punto de administración basado en Internet autentica correctamente al usuario mediante la autenticación de Windows (Kerberos o NTLM). Para obtener más información, vea [Consideraciones sobre las comunicaciones de cliente desde Internet](/sccm/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan).  
 
--   A partir de la versión 1710, Cloud Management Gateway autentica correctamente al usuario mediante el uso de Azure Active Directory. Para obtener más información, vea cómo [implementar aplicaciones disponibles para el usuario en dispositivos unidos a Azure AD](\sccm\apps\deploy-use\deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
+- A partir de la versión 1710, Cloud Management Gateway autentica correctamente al usuario mediante el uso de Azure Active Directory. Para obtener más información, vea cómo [implementar aplicaciones disponibles para el usuario en dispositivos unidos a Azure AD](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
 
 Si esta opción se establece en **No** (o no se cumple alguno de los requisitos anteriores), un equipo conectado a Internet solo recibirá directivas de equipo. En este escenario, los usuarios sí podrán ver, solicitar e instalar aplicaciones desde un catálogo de aplicaciones basado en Internet. Si esta opción se establece en **No**, pero la opción **Habilitar directiva de usuario en clientes** se establece en **Sí**, los usuarios no recibirán las directivas de usuario hasta que el equipo se conecte a la intranet.  
 
@@ -147,7 +147,7 @@ Seleccione **Sí** si quiere implementar elementos de configuración de [perfile
 
 Para obtener más información sobre las siguientes tres configuraciones, vea [Notificaciones de usuario para las implementaciones requeridas](/sccm/apps/deploy-use/deploy-applications#user-notifications-for-required-deployments):
 
--   **La fecha límite de la implementación es de más de 24 horas. Recordar al usuario cada (horas)**
+-    **La fecha límite de la implementación es de más de 24 horas. Recordar al usuario cada (horas)**
 -   **La fecha límite de la implementación es antes de 24 horas. Recordar al usuario cada (horas)** 
 -   **La fecha límite de la implementación es antes de 1 hora. Recordar al usuario cada (minutos)** 
 
@@ -216,11 +216,11 @@ Establezca esta opción en **Sí** para que los dispositivos usen un servicio lo
 
 Configure cómo pueden iniciar los usuarios la instalación de software, las actualizaciones de software y las secuencias de tareas:  
 
--   **Todos los usuarios**: los usuarios con cualquier permiso excepto Invitado.  
+-   **Todos los usuarios**: usuarios con cualquier permiso excepto Invitado.  
 
--   **Solo los administradores**: los usuarios deben ser miembro del grupo Administradores local.  
+-   **Solo los administradores**: los usuarios deben ser miembros del grupo de administradores local.  
 
--   **Solo administradores y usuarios primarios**: los usuarios deben ser miembro del grupo Administradores local o usuarios primarios del equipo.  
+-   **Solo administradores y usuarios primarios**: los usuarios deben ser miembros del grupo de administradores local o usuarios primarios del equipo.  
 
 -   **Ningún usuario**: ningún usuario que haya iniciado sesión en un equipo cliente podrá iniciar la instalación de software, las actualizaciones de software y las secuencias de tareas. Las implementaciones necesarias para el equipo siempre se instalan en la fecha límite. Los usuarios no pueden iniciar la instalación de software desde el catálogo de aplicaciones o el Centro de software.  
 
@@ -228,7 +228,7 @@ Configure cómo pueden iniciar los usuarios la instalación de software, las act
 
 Si los equipos requieren la indicación de PIN de BitLocker, esta opción omite el requisito de escribir un PIN cuando se reinicia el equipo después de una instalación de software.  
 
--   **Siempre**: Configuration Manager suspenderá temporalmente BitLocker después de que haya instalado software que requiere un reinicio y haya comenzado a reiniciar el equipo. Esta configuración solo se aplica a un reinicio del equipo iniciado por Configuration Manager. Esta configuración no suspende el requisito de escribir el PIN de BitLocker cuando el usuario reinicia el equipo. El requisito de indicación de PIN de BitLocker se reanuda tras el inicio de Windows.
+-   **Siempre**: Configuration Manager suspende temporalmente BitLocker después de que haya instalado software que requiere un reinicio y haya comenzado a reiniciar el equipo. Esta configuración solo se aplica a un reinicio del equipo iniciado por Configuration Manager. Esta configuración no suspende el requisito de escribir el PIN de BitLocker cuando el usuario reinicia el equipo. El requisito de indicación de PIN de BitLocker se reanuda tras el inicio de Windows.
 
 -   **Nunca**: Configuration Manager no suspende BitLocker después de instalar software que necesite un reinicio. En este escenario, la instalación del software no puede finalizar hasta que el usuario escriba el PIN para completar el proceso de inicio estándar y se cargue Windows.
 
@@ -259,7 +259,7 @@ Esta opción requiere al menos la versión 2.0 de Windows PowerShell. El valor p
 >  Si no se ejecutan los scripts sin firmar debido a esta configuración de cliente, Configuration Manager informará de este error de las siguientes maneras:  
 >   
 > -   En el área de trabajo **Supervisión** de la consola se muestra el identificador de error **0x87D00327**. También muestra la descripción **El script no se firmó**.  
-> -   Los informes muestran el tipo de error **Error de detección**. Luego muestran el código de error **0x87D00327** y la descripción **El script no se firmó**, o bien el código de error **0x87D00320** y la descripción **Aún no se ha instalado el host de script**. Un informe de ejemplo es **Detalles de errores de elementos de configuración en una línea de base de configuración para un activo**.  
+> -   Los informes muestran el tipo de error **Error de detección**. Luego muestran el código de error **0x87D00327** y la descripción **El script no se firmó**, o bien el código de error **0x87D00320** y la descripción **Aún no se ha instalado el host de script**. Un informe de ejemplo es **Detalles de errores de elementos de configuración en una línea base de configuración para un activo**.  
 > -   El archivo **DcmWmiProvider.log** muestra el mensaje **El script no se firmó (Error: 87D00327; Origen: CCM)**.  
 
 ### <a name="show-notifications-for-new-deployments"></a>Mostrar notificaciones para nuevas implementaciones
@@ -304,8 +304,8 @@ Para obtener más información sobre las ventanas de mantenimiento, consulte [C�
 
 
 ##  <a name="endpoint-protection"></a>Endpoint Protection  
->  [!Tip]   
-> Además de la información siguiente, encontrará más detalles sobre el uso de las opciones de cliente de Endpoint Protection en [Escenario de ejemplo: Uso de Endpoint Protection para proteger equipos frente a malware](/sccm/protect/deploy-use/scenarios-endpoint-protection).
+> [!Tip]
+> Además de la información siguiente, encontrará más detalles sobre el uso de las opciones de cliente de Endpoint Protection en [Escenario de ejemplo: uso de Endpoint Protection para proteger los equipos frente al malware](/sccm/protect/deploy-use/scenarios-endpoint-protection).
 
 ### <a name="manage-endpoint-protection-client-on-client-computers"></a>Administrar el cliente de Endpoint Protection en equipos cliente
 
@@ -428,7 +428,7 @@ Para que un archivo MIF sea recopilado por el inventario de hardware, debe estar
 
 Elija una de las opciones siguientes para esta configuración:  
 
--   **Permitir**: se permiten todas las comunicaciones del cliente a través de la conexión a Internet de uso medido a menos que el dispositivo cliente utilice una conexión de datos en movilidad.  
+-   **Permitir**: se permiten todas las comunicaciones del cliente a través de la conexión a Internet de uso medido, a menos que el dispositivo cliente use una conexión de datos en movilidad.  
 
 -   **Limitar**: solo se permiten las siguientes comunicaciones de cliente a través de la conexión a Internet de uso medido:  
 
@@ -470,18 +470,18 @@ Para obtener más información sobre el proxy de reactivación, vea [Planear la 
 
 Después, configure las siguientes opciones adicionales según sea necesario:
 
--   **Número de puerto de proxy de reactivación (UDP)**: el número de puerto que los clientes usan para enviar paquetes de reactivación a equipos en suspensión. Mantenga el puerto predeterminado 25536, o bien cambie el número por un valor de su elección.  
+-   **Número de puerto de proxy de reactivación (UDP)**: El número de puerto que los clientes usan para enviar paquetes de reactivación a equipos en suspensión. Mantenga el puerto predeterminado 25536, o bien cambie el número por un valor de su elección.  
 
--   **Número de puerto de Wake on LAN (UDP)**: mantenga el valor predeterminado de 9, a menos que haya cambiado el número de puerto de Wake on LAN (UDP) en la pestaña **Puertos** de las **Propiedades** del sitio.  
+-   **Número de puerto de Wake on LAN (UDP)**: Mantenga el valor predeterminado de 9, a menos que haya cambiado el número de puerto de Wake on LAN (UDP) en la pestaña **Puertos** en las **Propiedades** del sitio.  
 
     > [!IMPORTANT]  
     >  Este número debe coincidir con el número en las **Propiedades**del sitio. Si cambia este número en un lugar, este no se actualizará automáticamente en el otro lugar.  
 
--   **Excepción en Firewall de Windows Defender para el proxy de reactivación**: el cliente de Configuration Manager configura automáticamente el número de puerto de proxy de reactivación en los dispositivos que ejecutan Firewall de Windows Defender. Seleccione **Configurar** para especificar los perfiles de firewall deseados.
+-   **Excepción del Firewall de Windows Defender para el proxy de reactivación**: El cliente de Configuration Manager configura automáticamente el número de puerto del proxy de reactivación en los dispositivos que ejecutan Firewall de Windows Defender. Seleccione **Configurar** para especificar los perfiles de firewall deseados.
 
     Si los clientes ejecutan otro firewall, necesita configurarlo manualmente para permitir el **Número de puerto de proxy de reactivación (UDP)**.  
         
--   **Prefijos de IPv6 si son necesarios para DirectAccess u otros dispositivos de red que intervengan. Use una coma para especificar varias entradas**: escriba los prefijos IPv6 necesarios para que el proxy de reactivación funcione en la red.
+-   **Prefijos de IPv6 si son necesarios para DirectAccess u otros dispositivos de red que intervengan. Use una coma para especificar varias entradas**: Escriba los prefijos de IPv6 necesarios para que el proxy de reactivación funcione en la red.
 
 
 
@@ -583,11 +583,11 @@ Establezca esta opción en **Sí** para usar autenticación de nivel de red (NLA
 ### <a name="select-these-new-settings-to-specify-company-information"></a>Seleccionar la configuración nueva para especificar la información de la compañía
 Establezca esta opción en **Sí** y, después, especifique las opciones siguientes para personalizar el Centro de software para su organización:
 
-- **Nombre de la compañía**: escriba el nombre de la organización que ven los usuarios en el Centro de software.  
+- **Nombre de la empresa**: Escriba el nombre de la organización que ven los usuarios en el Centro de software.  
 
-- **Combinación de colores para el Centro de software**: haga clic en **Seleccionar color** para definir el color primario usado por el Centro de software.  
+- **Combinación de colores del Centro de software**: haga clic en **Seleccionar color** para definir el color principal que usa el Centro de software.  
 
-- **Seleccionar un logotipo para el Centro de software**: haga clic en **Examinar** para seleccionar la imagen que quiera que aparezca en el Centro de software. El logotipo debe ser un archivo JPEG, PNG o BMP de 400 x 100 píxeles, con un tamaño máximo de 750 KB. El nombre del archivo de logotipo no puede contener espacios.  
+- **Seleccionar un logotipo para el Centro de software**: haga clic en **Examinar** para seleccionar una imagen para mostrar en el Centro de software. El logotipo debe ser un archivo JPEG, PNG o BMP de 400 x 100 píxeles, con un tamaño máximo de 750 KB. El nombre del archivo de logotipo no puede contener espacios.  
          
 ### <a name="bkmk_HideUnapproved"></a> Ocultar aplicaciones no aprobadas en el Centro de software
 A partir de la versión 1802 de Configuration Manager, al habilitar esta opción, las aplicaciones disponibles para los usuarios que necesiten aprobación se ocultarán en el Centro de software.   <!--1355146-->
@@ -656,7 +656,7 @@ Si quiere especificar los tipos de archivo para incluir en el inventario, selecc
 
 -   Seleccione **Nuevo** para agregar un nuevo tipo de archivo al inventario. Después, especifique la información siguiente en el cuadro de diálogo **Propiedades de archivo inventariado**:  
 
-    -   **Nombre**: proporcione un nombre al archivo que quiere inventariar. Use un carácter comodín de asterisco (**&#42;**) para representar cualquier cadena de texto y un signo de interrogación (**?**) para representar cualquier carácter individual. Por ejemplo, si quiere hacer un inventario de todos los archivos con la extensión .doc, especifique el nombre de archivo **\*.doc**.  
+    -   **Nombre**: asigne un nombre al archivo que quiere inventariar. Use un carácter comodín de asterisco (**&#42;**) para representar cualquier cadena de texto y un signo de interrogación (**?**) para representar cualquier carácter individual. Por ejemplo, si quiere hacer un inventario de todos los archivos con la extensión .doc, especifique el nombre de archivo **\*.doc**.  
 
     -   **Ubicación**: seleccione **Establecer** para abrir el cuadro de diálogo **Propiedades de ruta de acceso**. Configure el inventario de software para buscar el archivo especificado en todos los discos duros del cliente, buscar en una ruta de acceso especificada (por ejemplo **C:\Carpeta**) o buscar una variable especificada (por ejemplo *%windir%*). También puede buscar en todas las subcarpetas de la ruta de acceso especificada.  
 
@@ -677,11 +677,11 @@ Si quiere recopilar archivos de los equipos cliente, seleccione **Archivos** y, 
 
 -   En el cuadro de diálogo **Propiedades del archivo recopilado** , proporcione la siguiente información:  
 
-    -   **Nombre**: proporcione un nombre al archivo que quiera recopilar. Use un carácter comodín de asterisco (**&#42;**) para representar cualquier cadena de texto y un signo de interrogación (**?**) para representar cualquier carácter individual.  
+    -   **Nombre**: asigne un nombre al archivo que quiera recopilar. Use un carácter comodín de asterisco (**&#42;**) para representar cualquier cadena de texto y un signo de interrogación (**?**) para representar cualquier carácter individual.  
 
     -   **Ubicación**: seleccione **Establecer** para abrir el cuadro de diálogo **Propiedades de ruta de acceso**. Configure el inventario de software para buscar el archivo que quiere recopilar en todos los discos duros del cliente, buscar en una ruta de acceso especificada (por ejemplo **C:\Carpeta**) o buscar una variable especificada (por ejemplo *%windir%*). También puede buscar en todas las subcarpetas de la ruta de acceso especificada.  
 
-    -   **Excluir archivos cifrados y comprimidos**: al seleccionar esta opción, no se recopila ningún archivo comprimido o cifrado.  
+    -   **Excluir archivos cifrados y comprimidos**: al seleccionar esta opción, no se recopila incluye ningún archivo comprimido o cifrado.  
 
     -   **Detener la recopilación de archivos cuando el tamaño total de archivos supere (KB)**: especifique el tamaño del archivo, en kilobytes (KB), después del cual el cliente detiene la recopilación de los archivos especificados.  
 
@@ -703,7 +703,7 @@ Si quiere recopilar archivos de los equipos cliente, seleccione **Archivos** y, 
 
 El agente de inventario de software recupera los nombres de fabricante y producto de la información del encabezado de archivo. Estos nombres no siempre están estandarizados en la información del encabezado de archivo. Al ver el inventario de software en el Explorador de recursos, pueden aparecer versiones diferentes del mismo nombre de fabricante o producto. Para estandarizar estos nombres para mostrar, seleccione **Establecer nombres** y, después, configure las opciones siguientes:  
 
--   **Tipo de nombre**: el inventario de software recopila información sobre los fabricantes y los productos. Seleccione si quiere configurar los nombres para mostrar de un **Fabricante** o un **Producto**.  
+-   **Tipo de nombre**: El inventario de software recopila información acerca de los fabricantes y los productos. Seleccione si quiere configurar los nombres para mostrar de un **Fabricante** o un **Producto**.  
 
 -   **Nombre para mostrar**: especifica el nombre para mostrar que quiere usar en lugar de los nombres de la lista **Nombres inventariados**. Seleccione **Nuevo** para especificar un nuevo nombre para mostrar.  
 

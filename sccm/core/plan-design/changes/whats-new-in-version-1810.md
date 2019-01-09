@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f93b9c7e96c66fd2279d8d6e42f605a763c75025
-ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
+ms.openlocfilehash: 050cf81a99f29d24cad6eb13e691e332174627c3
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53747150"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53818028"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Novedades de la versión 1810 de la rama actual de Configuration Manager
 
@@ -81,7 +81,7 @@ Al instalar o actualizar a la versión 1810, el programa de instalación de Conf
 
 - **Limpieza del seguimiento de cambios de SQL**: una nueva comprobación de si la base de datos del sitio tiene un trabajo pendiente de datos de seguimiento de cambios de SQL. Para obtener más información, incluido un procedimiento para comprobar y borrar este trabajo pendiente, vea [Limpieza del seguimiento de cambios de SQL](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#bkmk_changetracking). <!--SCCMDocs-pr issue 3023-->  
 
-- **Versión de SQL Native Client**: esta comprobación de requisitos previos se actualiza para las versiones de SQL Native Client que admiten TLS 1.2. La versión mínima es [SQL 2012 SP4](https://www.microsoft.com/download/details.aspx?id=50402). Para obtener más información, vea [Versión de SQL Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client). <!--SCCMDocs-pr issue 3094->  
+- **Versión de SQL Native Client**: esta comprobación de requisitos previos se actualiza para las versiones de SQL Native Client que admiten TLS 1.2. La versión mínima es [SQL 2012 SP4](https://www.microsoft.com/download/details.aspx?id=50402). Para obtener más información, vea [Versión de SQL Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client). <!--SCCMDocs-pr issue 3094-->  
 
 - **Sistema de sitio en el nodo del clúster de Windows**: El proceso de instalación de Configuration Manager ya no impide la instalación del rol de servidor de sitio en un equipo con el rol de Windows para clústeres de conmutación por error. SQL Always On requiere este rol, por lo que anteriormente no se podía colocar la base de datos del sitio en el servidor de sitio. Con este cambio, puede crear un sitio de alta disponibilidad con menos servidores usando SQL Always On y un servidor de sitio en modo pasivo. Para obtener más información, vea [Clúster de conmutación por error de Windows](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#windows-failover-cluster). <!--1359132-->  
 

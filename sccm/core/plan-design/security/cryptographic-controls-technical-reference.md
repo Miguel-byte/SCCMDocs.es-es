@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6d25c6a11821b73f34c8a3cd6aa95d4a78c86587
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 033f0fc3dd86c074f89804f6d9e70c173e9cf0b8
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418410"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817960"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Referencia técnica de controles criptográficos
 
@@ -108,8 +108,6 @@ System Center Configuration Manager usa la firma y el cifrado para ayudar a prot
 
 - Cuando se utilizan puntos de distribución basados en nube.  
 
-- Cuando se administran equipos basados en Intel AMT fuera de banda.  
-
   Para el resto de comunicaciones de Configuration Manager que requieren certificados para la autenticación, firma y cifrado, Configuration Manager usa automáticamente certificados PKI, si están disponibles. Si no están disponibles, Configuration Manager genera certificados autofirmados.  
 
   Configuration Manager no usa certificados PKI cuando administra dispositivos móviles mediante el conector de Exchange Server.  
@@ -162,7 +160,7 @@ System Center Configuration Manager usa la firma y el cifrado para ayudar a prot
 
  La comprobación de lista de revocación de certificados (CRL) está habilitada de forma predeterminada en IIS, por lo que si usa una CRL con la implementación de PKI, no es necesario configurar nada más en la mayoría de los sistemas de sitio de Configuration Manager que ejecutan IIS. Las actualizaciones de software constituyen una excepción, ya que se requiere un paso manual para habilitar la comprobación de CRL para comprobar las firmas en los archivos de actualización de software.  
 
- La comprobación de CRL está habilitada de forma predeterminada en los equipos cliente cuando utilizan conexiones de cliente HTTPS. La comprobación de CRL no está habilitada de forma predeterminada cuando se ejecuta la consola de administración fuera de banda para conectarse a un equipo basado en AMT, pero se puede habilitar esta opción. No se puede deshabilitar la comprobación de CRL en los clientes de equipos Mac en Configuration Manager SP1 o versiones posteriores.  
+ La comprobación de CRL está habilitada de forma predeterminada en los equipos cliente cuando utilizan conexiones de cliente HTTPS. No se puede deshabilitar la comprobación de CRL en los clientes de equipos Mac en Configuration Manager SP1 o versiones posteriores.  
 
  La comprobación de CRL no es compatible con las siguientes conexiones en Configuration Manager:  
 
