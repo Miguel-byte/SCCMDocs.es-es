@@ -10,12 +10,12 @@ ms.assetid: f5ad22d5-7df1-49c6-8a0f-db1c3f0cda19
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 41ce74ee0978f561a855c5d3952071f68568dee0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 23c3a8b379accac0e514cfb8a88197baa6463fee
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347644"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817739"
 ---
 # <a name="install-a-new-version-of-windows-on-a-new-computer-bare-metal-with-system-center-configuration-manager"></a>Instalar una nueva versión de Windows en un equipo nuevo (sin sistema operativo) con System Center Configuration Manager
 
@@ -41,7 +41,7 @@ Use las secciones siguientes para actualizar un equipo existente con una nueva v
 
     -   Para obtener más información sobre la personalización de una imagen de arranque, consulte [Customize boot images (Personalizar imágenes de arranque)](../get-started/customize-boot-images.md).  
 
-    -   Distribuya la imagen de arranque a puntos de distribución. Para obtener más información, consulte [Distribute content (Distribución del contenido)](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
+    -   Distribuya la imagen de arranque a puntos de distribución. Para obtener más información, vea [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
 2.  **Preparar una imagen de sistema operativo**  
 
@@ -49,7 +49,12 @@ Use las secciones siguientes para actualizar un equipo existente con una nueva v
 
     -   Para obtener más información sobre cómo crear una imagen de sistema operativo, consulte [Manage operating system images (Administrar imágenes de sistema operativo)](../get-started/manage-operating-system-images.md).
 
-    -   Distribuya la imagen del sistema operativo a los puntos de distribución. Para obtener más información, consulte [Distribute content (Distribución del contenido)](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
+    -   Distribuya la imagen del sistema operativo a los puntos de distribución. Para obtener más información, consulte [Distribute content (Distribución del contenido)](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
+
+    > [!NOTE]
+    > Las nuevas instalaciones de Windows también se pueden realizar desde archivos de origen de instalación a través de los paquetes de actualización del sistema operativo, pero, en su lugar, use imágenes del sistema operativo, como **install.wim**.
+    >
+    > La implementación de nuevas instalaciones de Windows a través de paquetes de actualización del sistema operativo sigue siendo compatible, pero depende de que los controladores admitan este método. Cuando se instala Windows desde un paquete de actualización del sistema operativo, los controladores se instalan en Windows PE en lugar de simplemente inyectarse en Windows PE. Algunos controladores no son compatibles con la instalación en Windows PE. Si los controladores no son compatibles con la instalación en Windows PE, en su lugar, use una imagen del sistema operativo.  
 
 3.  **Crear una secuencia de tareas para implementar sistemas operativos a través de la red**  
 

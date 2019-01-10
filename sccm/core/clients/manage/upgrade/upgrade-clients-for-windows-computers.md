@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9fa55c29d6f67132b4d98fd12d8e249093009c67
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: b9274cbe8d4e5e4e233c0abfdc09582a4d7de329
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419553"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817824"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-system-center-configuration-manager"></a>Actualizar clientes de equipos Windows con System Center Configuration Manager
 
@@ -47,7 +47,7 @@ Puede actualizar el cliente en equipos Windows mediante los métodos de instalac
 
  Un cliente puede actualizarse automáticamente en los siguientes escenarios:  
 
--   La versión del cliente es inferior a la versión que se utiliza en la jerarquía.  
+-   La versión del cliente es anterior a la que se utiliza en la jerarquía.  
 
 -   El cliente del sitio de administración central tiene instalado un paquete de idioma mientras que el cliente existente no.  
 

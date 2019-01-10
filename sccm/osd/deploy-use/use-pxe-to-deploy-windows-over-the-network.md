@@ -10,12 +10,12 @@ ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1efd4197e63ddc12c0afc9e37b633c38d0df0f14
-ms.sourcegitcommit: a52255da16c9f8b0b60a6c299a369347c7e01bef
+ms.openlocfilehash: 75e463d27475e82677e91b00bfba4c4287d463ee
+ms.sourcegitcommit: f2a1fa59fb3870a6bebca61daf15c0c157e9fdd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989151"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030995"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>Usar el entorno PXE para implementar Windows a través de la red con Configuration Manager
 
@@ -43,13 +43,16 @@ Para implementar sistemas operativos en clientes de Configuration Manager que ef
 > [!NOTE]  
 >  Al configurar un único punto de distribución habilitado con PXE para admitir varias subredes, no se permite usar las opciones de DHCP. Configure aplicaciones auxiliares de IP en los enrutadores para permitir que las solicitudes PXE se reenvíen a los puntos de distribución habilitados con PXE.
 
+> [!NOTE]  
+>  No se puede usar el respondedor del entorno PXE sin WDS en servidores que también estén ejecutando un servidor DHCP.
+
 ## <a name="prepare-a-pxe-enabled-boot-image"></a>Preparar una imagen de arranque habilitada para PXE
 
 Para usar PXE para implementar un sistema operativo, debe distribuir imágenes de arranque x86 y x64 habilitadas para PXE a uno o varios puntos de distribución habilitados para PXE. Use la información para habilitar PXE en una imagen de arranque y distribuirla a los puntos de distribución:
 
 -   Para habilitar PXE en una imagen de arranque, seleccione **Implementar esta imagen de arranque desde el punto de distribución habilitado con PXE** en la pestaña **Origen de datos** de las propiedades de la imagen de arranque.
 
--   Si cambia las propiedades de la imagen de arranque, vuelva a distribuir dicha imagen a los puntos de distribución. Para obtener más información, consulte [Distribute content (Distribución del contenido)](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
+-   Si cambia las propiedades de la imagen de arranque, actualice dicha imagen y vuelva a distribuirla a los puntos de distribución. Para obtener más información, consulte [Distribute content (Distribución del contenido)](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
 
 
 
@@ -104,7 +107,7 @@ Para usar una implementación de SO iniciada por PXE, configure la implementaci�
 
 Implemente el sistema operativo en una recopilación de destino. Para obtener más información, vea [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS). Al implementar sistemas operativos mediante PXE, puede configurar que la implementación sea necesaria o esté disponible.
 
--   **Implementación requerida**: este tipo de implementación usa PXE sin intervención del usuario. El usuario no puede omitir el arranque de PXE. Pero si el usuario cancela el arranque de PXE antes de que responda el punto de distribución, el sistema operativo no se implementa.
+-   **Implementación requerida**: las implementaciones requeridas utilizarán el entorno PXE sin intervención del usuario. El usuario no puede omitir el arranque de PXE. Pero si el usuario cancela el arranque de PXE antes de que responda el punto de distribución, el sistema operativo no se implementa.
 
 -   **Implementación disponible**: las implementaciones disponibles requieren que el usuario esté presente en el equipo de destino. El usuario debe presionar la tecla **F12** para continuar el proceso de arranque de PXE. Si el usuario no está presente para presionar **F12**, el equipo arrancará en el sistema operativo actual o desde el siguiente dispositivo de arranque disponible.
 

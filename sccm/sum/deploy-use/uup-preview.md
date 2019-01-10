@@ -2,7 +2,7 @@
 title: Versión preliminar de UUP
 titleSuffix: Configuration Manager
 description: Instrucciones para la versión preliminar de la integración de UUP
-ms.date: 12/21/2018
+ms.date: 01/04/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: d2aac5945d4b7678acf78d215c557a34aaef9c72
-ms.sourcegitcommit: f5fa9e657350ceb963a7928497d2adca9caef3d4
+ms.openlocfilehash: cfc83f4d076a05ea1847c0d073bd824ad10aa731
+ms.sourcegitcommit: 1bf26b83fa7da637d299a21e1d3bc61f2d7d8c10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53748568"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54060389"
 ---
 # <a name="uup-private-preview-instructions"></a>Instrucciones de la versión preliminar privada de UUP
 
@@ -27,13 +27,16 @@ ms.locfileid: "53748568"
 
 ### <a name="feature-updates"></a>Actualizaciones de características
 
-Las actualizaciones de características con UUP están diseñadas para solucionar varios problemas que los clientes tienen con el mantenimiento en la actualidad. Pruebe las actualizaciones de características de UUP, incluida:
+Las actualizaciones de características con la Plataforma de actualización unificada de Windows 10 (UUP) están diseñadas para solucionar varios problemas que los clientes tienen con el mantenimiento en la actualidad. Pruebe las actualizaciones de características de UUP, incluida:
 
 - Actualización directa al nivel de cumplimiento de seguridad más reciente; ya no tendrá que instalar las actualizaciones de seguridad inmediatamente después de actualizar para que sea compatible. Cada mes se publicará una nueva actualización de características para incluir la actualización de seguridad acumulativa más reciente. No tendrá que volver a descargar ni distribuir la mayoría del contenido de actualización de características cada mes, solo el componente de actualización de seguridad, que también se comparte con la actualización acumulativa.
 
-- Todos los paquetes de idioma y FOD se deben conservar y no se pierden durante el proceso de actualización.
+- Todas las características bajo demanda (FOD) y los paquetes de idioma se deben conservar y no se pierden durante el proceso de actualización.
 
 - Las actualizaciones de características con UUP admiten archivos de instalación rápida, lo que permite a los clientes reducir la cantidad de contenido que deben descargar.
+
+Para obtener más información sobre la UUP, consulte la entrada de blog de Windows [An update on our Unified Update Platform (UUP)](https://blogs.windows.com/windowsexperience/2017/03/02/an-update-on-our-unified-update-platform-uup/) (Actualización de nuestra Plataforma de actualización unificada).
+
 
 ### <a name="cumulative-updates"></a>Actualizaciones acumulativas
 
@@ -43,7 +46,7 @@ Las actualizaciones acumulativas con UUP permiten que el contenido para los paqu
 
 ## <a name="set-up-instructions"></a>Instrucciones de configuración
 
-### <a name="1-send-your-wsus-id-to-your-uup-preview-contact-at-microsoft"></a>1. Envíe el identificador de WSUS a su contacto de la versión preliminar de UUP en Microsoft
+### <a name="1-send-your-wsus-id-to-your-uup-preview-contact-at-microsoft"></a>1. Envíe el identificador de WSUS a su contacto de la versión preliminar de UUP en Microsoft.
 
 Para participar en la versión preliminar privada de UUP, debe compartir su identificador de WSUS con Microsoft para que su entorno se pueda incluir en la lista de permitidos de la versión preliminar. Sin este identificador, no podrá ver las actualizaciones de UUP hasta que la versión preliminar sea pública.
 
@@ -55,42 +58,33 @@ $config = $server.GetConfiguration()
 $config.ServerId
 ```
 
-### <a name="2-upgrade-configmgr-to-a-supported-version"></a>2. Actualice Configuration Manager a una versión compatible.
+### <a name="2-update-configmgr-to-a-supported-version"></a>2. Actualice Configuration Manager a una versión admitida.
 
-Si va a sincronizar archivos de instalación rápida en su entorno, se necesita Configuration Manager 1810 (se aceptan las compilaciones TAP, de anillo anticipado o disponibilidad general) para los entornos de producción, o bien Technical Preview 1812 para los entornos de Technical Preview.
+Si va a sincronizar archivos de instalación rápida en su entorno, necesitará la rama actual de Configuration Manager, 1810, para los entornos de producción, o bien la rama de versión preliminar técnica, 1812, para entornos de laboratorio.
 
-Si no va a sincronizar archivos de instalación rápida en su entorno, se necesita la revisión de UUP de Configuration Manager 1810 sobre la versión 1810 de disponibilidad general para los entornos de producción, o bien Technical Preview 1812 para los entornos de Technical Preview.
+De lo contario, también necesitará la revisión KB4482615 de Configuration Manager, 1810, para los entornos de producción, o bien la rama de versión preliminar técnica, 1812, para los de laboratorio.
 
 
-#### <a name="configmgr-1810-uup-hotfix-kb4482615-from-1810-ga-slow-ring"></a>Revisión de UUP de Configuration Manager 1810 (KB4482615) de la versión 1810 de disponibilidad general (Anillo aplazado)
-Si actualmente se encuentra en la versión de disponibilidad general de Configuration Manager 1810 (Anillo aplazado), tendrá que actualizar Configuration Manager al paquete acumulativo de UUP.
+#### <a name="configmgr-1810-uup-hotfix-kb4482615"></a>Revisión de ConfigMgr 1810 de la UUP (KB4482615)
 
-1. Aplicar "Revisión de Configuration Manager 1810 (KB4482615)" (GUID de paquete 86450B7D-3574-4CF7-8B11-486A2C1F62A6): esta revisión habilitará UUP para los escenarios que no son rápidos.  
+> [!Important]  
+> El siguiente proceso se aplica a los sitios de la rama actual actualizados a la versión 1810, disponible de forma general después del 19 de diciembre de 2018.
+>
+> Si optó por recibir la actualización 1810 ejecutando un script de PowerShell a finales de noviembre o principios de diciembre de 2018, la revisión aún no estará disponible. 
 
-    1. Descargar la revisión desde el Centro de descarga de Microsoft (el vínculo se proporcionará una vez publicado)  
 
-    2. Después de descargar esta revisión, vea la página web siguiente de Microsoft Docs para obtener instrucciones de instalación: [Uso de la herramienta de registro de actualizaciones para importar revisiones](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
+1. Actualización del sitio
 
-    3. Para obtener información sobre cómo descargar los archivos de soporte técnico de Microsoft, haga clic en el siguiente número de artículo para verlo en Microsoft Knowledge Base: [Obtención de archivos de soporte técnico de Microsoft desde los servicios en línea](https://support.microsoft.com/help/119591/how-to-obtain-microsoft-support-files-from-online-services)  
+    1. Descargue la revisión KB4482615 del [Centro de descarga de Microsoft]<!--(https://download.microsoft.com/download/0/9/0/09081E12-A2CF-40B6-82D8-9B8914A1C2D3/KB4482615/CM1810-KB4482615.ConfigMgr.Update.exe)-->. Esta revisión permite usar la UUP en escenarios que no sean rápidos.  
 
-2. Una vez que haya actualizado a la revisión de UUP, actualice los clientes de Configuration Manager para que coincidan. Todos los clientes a los que destine las actualizaciones de UUP se deben actualizar para evitar **la descarga innecesaria de unos 6 GB** de contenido no usado al cliente.
+    2. [Uso de la herramienta de registro de actualizaciones para importar revisiones](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
 
-#### <a name="configmgr-1810-uup-hotfix-kb4482615-from-1810-fast-ring"></a>Revisión de UUP de Configuration Manager 1810 (KB4482615) de la versión 1810 (Anillo anticipado)
-Si actualmente se encuentra en un anillo anticipado de Configuration Manager 1810, tendrá que actualizar Configuration Manager con dos actualizaciones de mantenimiento, pero aplazar la implementación de las actualizaciones de cliente hasta que haya realizado las dos. De este modo, solo tendrá que actualizar los clientes una vez.
+2. Actualice los clientes.  
 
-1. Próximamente habrá disponible una revisión para acumular hasta la versión 1810 de disponibilidad general (a principios de enero); espere hasta que la vea en Actualizaciones y mantenimiento.  
+    - Para simplificar el proceso, considere la posibilidad de usar la actualización automática del cliente. Para obtener más información, vea [Actualizar clientes](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
-2. Actualice (solo los servidores de sitio, no los clientes) a "Revisión de Configuration Manager 1810 (KB4479288)" (GUID de paquete 930FA45E-530F-4B08-B1BF-DE3F5267B03C)  
+    - Todos los clientes a los que destine las actualizaciones de UUP se deben actualizar para evitar **la descarga innecesaria de unos 6 GB** de contenido no usado al cliente.
 
-3. Vuelva a actualizar a "Revisión de Configuration Manager 1810 (KB4482615)" (GUID de paquete 86450B7D-3574-4CF7-8B11-486A2C1F62A6): esta revisión habilitará UUP para contenido no rápido.  
-
-    1. Descargar la revisión desde el Centro de descarga de Microsoft (el vínculo se proporcionará una vez publicado)  
-
-    2. Después de descargar esta revisión, vea la página web siguiente de Microsoft Docs para obtener instrucciones de instalación: [Uso de la herramienta de registro de actualizaciones para importar revisiones](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
-
-    3. Para obtener información sobre cómo descargar los archivos de soporte técnico de Microsoft, haga clic en el siguiente número de artículo para verlo en Microsoft Knowledge Base: [Obtención de archivos de soporte técnico de Microsoft desde los servicios en línea](https://support.microsoft.com/help/119591/how-to-obtain-microsoft-support-files-from-online-services)  
-
-4. Una vez que haya actualizado a la revisión de UUP, actualice los clientes de Configuration Manager para que coincidan. Todos los clientes a los que destine las actualizaciones de UUP se deben actualizar para evitar **la descarga innecesaria de unos 6 GB** de contenido no usado al cliente.
 
 #### <a name="1812-technical-preview"></a>Technical Preview 1812
 En escenarios de UUP admitidos, Technical Preview 1812 es equivalente a la revisión de UUP de Configuration Manager 1810 (KB4482615).
@@ -127,7 +121,7 @@ Para el contenido que no es rápido, se debe aplicar una revisión adicional. Es
 
 ### <a name="4-enable-express-installation-on-clients-in-client-settings"></a>4. Habilitar la instalación rápida en los clientes en la configuración de cliente
 
-Para las actualizaciones UUP, se debe establecer la configuración de cliente para habilitar la instalación rápida, con independencia de que el contenido rápido se sincronice o no. Esta configuración permite que Configuration Manager deje al WUA determinar el contenido necesario para descargar en los clientes, en lugar de que Configuration Manager tenga que descargar todo el contenido asociado a la actualización de UUP. Esta configuración es necesaria incluso para los escenarios que no son rápidos porque hay contenido opcional de FOD y paquetes de idioma, lo que genera una cantidad no significativa de datos adicionales que no son necesarios para todos los clientes asociados con la actualización.
+Para las actualizaciones UUP, se debe establecer la configuración de cliente para habilitar la instalación rápida, con independencia de que el contenido rápido se sincronice o no. Esta configuración permite que Configuration Manager deje al Agente de Windows Update (WUA) determinar el contenido necesario para descargar en los clientes, en lugar de que Configuration Manager tenga que descargar todo el contenido asociado a la actualización de UUP. Esta configuración es necesaria incluso para los escenarios que no son rápidos porque hay contenido opcional de FOD y paquetes de idioma, lo que genera una cantidad no significativa de datos adicionales que no son necesarios para todos los clientes asociados con la actualización.
 
 La habilitación de esta configuración no afectará a las descargas de contenido del servidor, solo a los comportamientos de descarga de cliente. Es importante que las versiones de cliente de Configuration Manager y Windows estén articuladas antes de habilitar esta opción si todavía no la ha habilitado, ya que esas versiones corregirán algunos problemas de compatibilidad con la aprobación de actualizaciones directamente en WSUS y permitirán que Configuration Manager use este canal para las actualizaciones de UUP incluso si el contenido rápido no se sincroniza.
 
@@ -144,7 +138,7 @@ Para habilitar la instalación rápida en los clientes:
 
 ### <a name="5-make-sure-your-adrs-are-set-as-desired"></a>5. Asegurarse de que las ADR se establecen según corresponda 
 
-Antes de habilitar la sincronización de las actualizaciones de UUP, considere las ADR y cualquier otra infraestructura de actualización que tenga instalada. Si no quiere que estas actualizaciones se implementen de forma automática como parte de las ADR existentes y los planes de mantenimiento, asegúrese de actualizar las ADR para filtrarlas. Vea [Cómo buscar actualizaciones de UUP sincronizadas](#how-to-find-synced-uup-updates). Los planes de mantenimiento existentes no implementarán UUP de forma predeterminada, pero puede actualizarlos para cambiar este comportamiento.
+Antes de habilitar la sincronización de las actualizaciones de UUP, tenga en cuenta sus reglas de implementación automática (ADR) y cualquier otra infraestructura de actualización que tenga instalada. Si no quiere que estas actualizaciones se implementen de forma automática como parte de las ADR existentes y los planes de mantenimiento, asegúrese de actualizar las ADR para filtrarlas. Vea [Cómo buscar actualizaciones de UUP sincronizadas](#how-to-find-synced-uup-updates). Los planes de mantenimiento existentes no implementarán UUP de forma predeterminada, pero puede actualizarlos para cambiar este comportamiento.
 
 Considere también si estas actualizaciones afectarán a alguno de los informes de cumplimiento u otra infraestructura; para ello, sincronícelos y realice las modificaciones deseadas con antelación. Por ejemplo, si mide el cumplimiento de todos los productos, ahora verá la actualización acumulativa de Windows 10 de UUP y no UUP como no compatible o compatible, con lo que los números estarán distorsionados.
 
@@ -160,7 +154,7 @@ Cuando esté listo para iniciar la sincronización de las actualizaciones UUP y 
 
 2. En la consola de Configuration Manager, vaya a **Administración** \ **Configuración de sitio** \ **Sitios**.  
 
-3. Seleccione el sitio de nivel superior (entidades de certificación o principal independiente)  
+3. Seleccione el sitio de nivel superior, que será un sitio de administración central (CAS) o uno primario independiente.  
 
 4. Abra **Configurar componentes de sitio** \ **Punto de actualización de software**  
 
@@ -243,7 +237,7 @@ Para la versión preliminar, pruebe con lo que usa en entornos empresariales rea
 - Optimización de distribución de Windows
 - Caché del mismo nivel de Configuration Manager
 - Windows BranchCache
-- Implementar sin tener que descargar al servidor (sin paquete de implementación) para descargar directamente desde Microsoft Update que, si lo usa, se recomienda usar junto a DO
+- Implementación sin descargas en el servidor (sin paquete de implementación) para efectuar la descarga directamente desde Microsoft Update; en este caso, se recomienda usarlo junto con la optimización de distribución
 - Proveedores de contenido alternativos de terceros
 
 Para obtener más información, vea [Optimización de la distribución de actualizaciones de Windows 10](/sccm/sum/deploy-use/optimize-windows-10-update-delivery).

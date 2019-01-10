@@ -10,12 +10,12 @@ ms.assetid: b87ac054-9b37-4725-a3f3-2340cfb10bff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: efce5242c5de148d6922144af27f47a267b3c6c3
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 6ea093b71d19c2cee35caa748ae60f76a95b078c
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458185"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817773"
 ---
 # <a name="checklist-for-installing-update-1810-for-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1810 de Configuration Manager
 
@@ -89,6 +89,9 @@ Para obtener más información, vea  [Requisitos previos de sitio y sistema de 
 La versión de Assessment and Deployment Kit (ADK) de Windows 10 debe ser compatible con la versión 1810 de Configuration Manager. Para obtener más información sobre las versiones de Windows ADK admitidas, consulte [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk). Si es necesario actualizar Windows ADK, hágalo antes de comenzar la actualización de Configuration Manager. Esto garantiza que las imágenes de arranque predeterminadas se actualicen automáticamente a la última versión de Windows PE. Actualice manualmente las imágenes de arranque personalizadas después de actualizar el sitio.
 
 Si actualiza el sitio antes que Windows ADK, vea [Actualización de puntos de distribución con la imagen](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
+
+#### <a name="review-sql-server-native-client-version"></a>Revisión de la versión de SQL Server Native Client
+Debe instalarse una versión mínima de SQL Server 2012 Native Client que incluya compatibilidad con TLS 1.2. Para obtener más información, consulte [Lista de comprobaciones de requisitos previos](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client).
 
 #### <a name="review-the-site-and-hierarchy-status-for-unresolved-issues"></a>Revisar el estado del sitio y de la jerarquía en busca de problemas sin resolver 
 Una actualización del sitio puede generar errores debido a problemas de funcionamiento existentes. Antes de actualizar un sitio, resuelva todos los problemas de funcionamiento de los siguientes sistemas:  

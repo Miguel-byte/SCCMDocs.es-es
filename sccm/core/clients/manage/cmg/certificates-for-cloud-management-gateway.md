@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 4ef9746b9a1eb90beeec6a477ad1d406acebbb05
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 60fa4176d44b530b2cab6c2b9b4b35c968fae3c1
+ms.sourcegitcommit: 32a257fafbb29aece8b4f435dd5614fcef305328
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456573"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "54005490"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificados para Cloud Management Gateway
 
@@ -45,7 +45,7 @@ Para obtener más información sobre los diferentes escenarios, vea [Plan for cl
 
 - A partir de la versión 1710, compatibilidad con proveedores de almacenamiento de claves para claves privadas de certificado. Para obtener más información, consulte [Introducción a los certificados CNG](/sccm/core/plan-design/network/cng-certificates-overview).  
 
-- A partir de la versión 1802, cuando configure Windows con la directiva siguiente: **Criptografía de sistema: usar algoritmos que cumplan FIPS para cifrado, firma y operaciones hash**  
+- A partir de la versión 1802, al configurar Windows con la siguiente directiva: **Criptografía de sistema: use algoritmos que cumplan la norma FIPS para cifrado, aplicación de algoritmo hash y firma**.  
 
 - A partir de la versión 1802, es compatible con **TLS 1.2**. Para más información, vea [Referencia técnica de controles criptográficos](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities).  
 
@@ -62,8 +62,11 @@ CMG crea un servicio HTTPS al que se conectan los clientes basados en Internet. 
  > [!TIP]
  > Este certificado requiere un nombre único global para identificar el servicio de Azure. Antes de solicitar un certificado, confirme que el nombre de dominio de Azure deseado sea único. Por ejemplo, *GraniteFalls.CloudApp.Net*. Inicie sesión en [Microsoft Azure Portal](https://portal.azure.com). Seleccione **Crear un recurso**, elija la categoría **Proceso** y seleccione **Servicio en la nube**. En el campo **Nombre DNS**, escriba el prefijo deseado, por ejemplo, *GraniteFalls*. La interfaz mostrará si el nombre de dominio está disponible o si ya está en uso por otro servicio. No cree el servicio en el portal, simplemente use este proceso para comprobar si el nombre está disponible. 
   
+ > [!TIP]
+ > Si CMG también se va a habilitar como punto de distribución en la nube, confirme que el nombre del servicio CMG que ha elegido no exista tampoco como nombre de cuenta de Azure Storage. Por ejemplo, *GraniteFalls*. Inicie sesión en [Microsoft Azure Portal] (https://portal.azure.com). Seleccione **Crear un recurso**, elija la categoría **Almacenamiento** y, después, elija **Cuenta de almacenamiento: blob, archivo, tabla, cola**. Haga clic en **Crear** y, en **Detalles de instancia**, escriba el mismo nombre elegido para el servicio CMG, por ejemplo, *GraniteFalls*. La interfaz mostrará si el nombre de la cuenta de almacenamiento está disponible o si ya lo está usando otro servicio. No cree la cuenta de almacenamiento en el portal, simplemente use este proceso para comprobar si el nombre está disponible. Si el nombre del servicio CMG en la nube no existe, pero sí el de la cuenta de Storage, el aprovisionamiento no se realizará correctamente.
+ 
  > [!NOTE]
- > A partir de la versión 1802, el certificado de autenticación de servidor CMG admite caracteres comodín. Algunas entidades de certificación emiten certificados con un carácter comodín para el nombre de host. Por ejemplo, **\*.contoso.com**. Algunas organizaciones usan certificados con caracteres comodín para simplificar sus PKI y reducir los costos de mantenimiento.<!--491233-->  
+ > A partir de la versión 1802, el certificado de autenticación de servidor de CMG admite caracteres comodín. Algunas entidades de certificación emiten certificados con un carácter comodín para el nombre de host. Por ejemplo, **\*.contoso.com**. Algunas organizaciones usan certificados con caracteres comodín para simplificar sus PKI y reducir los costos de mantenimiento.<!--491233-->  
  > 
  > Para más información sobre cómo usar un certificado comodín con una instancia de CMG, vea [Configurar una instancia de CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#set-up-a-cmg).<!--SCCMDocs issue #565-->  
 
@@ -103,7 +106,7 @@ Por ejemplo, Contoso usa **GraniteFalls.Contoso.com** como CN del certificado.
 
     - Por ejemplo, cuando Contoso crea la instancia de CMG, Configuration Manager extrae el nombre de host **GraniteFalls** desde el nombre común del certificado. Azure crea el servicio real como **GraniteFalls.CloudApp.net**.  
 
-Al crear la instancia de CMG en Configuration Manager, mientras que el certificado contiene GraniteFalls.Contoso.com, Configuration Manager solo extrae el nombre de host, por ejemplo: GraniteFalls. Este nombre de host se anexa a CloudApp.net, que Azure necesita al crear un servicio en la nube. El alias CNAME del espacio de nombres DNS para el dominio, Contoso.com, asigna estos dos FQDN conjuntamente. Configuration Manager ofrece a los clientes una directiva para acceder a esta instancia de CMG y la asignación de DNS los une, para que puedan acceder de forma segura al servicio de Azure.<!--SCCMDocs issue #565-->  
+Al crear la instancia de CMG en Configuration Manager, aunque el certificado contiene GraniteFalls.Contoso.com, Configuration Manager solo extrae el nombre de host, por ejemplo: GraniteFalls. Este nombre de host se anexa a CloudApp.net, que Azure necesita al crear un servicio en la nube. El alias CNAME del espacio de nombres DNS para el dominio, Contoso.com, asigna estos dos FQDN conjuntamente. Configuration Manager ofrece a los clientes una directiva para acceder a esta instancia de CMG y la asignación de DNS los une, para que puedan acceder de forma segura al servicio de Azure.<!--SCCMDocs issue #565-->  
 
 
 ### <a name="bkmk_serverauthpki"></a> Certificado de autenticación de servidor emitido por una PKI de empresa
@@ -225,7 +228,7 @@ Configure un punto de administración local para permitir conexiones desde la in
 <a name="bkmk_note1"></a> 
 
 > [!Note]  
-> **Nota 1**: Esta configuración requiere que el cliente tenga un [certificado de autenticación de cliente](#bkmk_clientauth) y solo es compatible con escenarios centrados en el dispositivo.  
+> **Nota 1**: Esta configuración requiere que el cliente tenga un [certificado de autenticación del cliente](#bkmk_clientauth) y solo es compatible con escenarios centrados en el dispositivo.  
 
 #### <a name="for-on-premises-clients-communicating-with-the-on-premises-management-point"></a>Para la comunicación de clientes locales con el punto de administración local
 Configure un punto de administración local con el modo de conexión de cliente siguiente:
@@ -244,13 +247,13 @@ Configure un punto de administración local con el modo de conexión de cliente 
 
 
 #### <a name="legend-of-terms"></a>Leyenda de términos
-- *Grupo de trabajo*: el dispositivo no está unido a un dominio ni a Azure AD, pero tiene un [certificado de autenticación del cliente](#bkmk_clientauth)  
-- *Unido a dominio de AD*: el dispositivo se une un dominio de Active Directory local  
-- *Unido a Azure AD*: también conocido como unido a un dominio en la nube, el dispositivo se une a un inquilino de Azure Active Directory  
-- *Unido a híbrido*: el dispositivo se une a un dominio de Active Directory y un inquilino de Azure AD  
-- *HTTP*: en las propiedades del punto de administración, las conexiones de cliente se establecen en **HTTP**  
-- *HTTPS*: en las propiedades del punto de administración, las conexiones de cliente se establecen en **HTTPS**  
-- *E-HTTP*: en las propiedades del sitio, en la pestaña Comunicación de equipo cliente, la configuración del sistema de sitio se establece en **HTTPS o HTTP**, y se habilita la opción para **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**. El punto de administración se configura para HTTP o HTTPS.  
+- *Grupo de trabajo*: el dispositivo no está unido a un dominio ni a Azure AD, pero tiene un [certificado de autenticación del cliente](#bkmk_clientauth).  
+- *Unido a dominio de AD*: el dispositivo se une un dominio de Active Directory local.  
+- *Unido a Azure AD*: también conocido como "unido a un dominio en la nube", el dispositivo se une a un inquilino de Azure Active Directory.  
+- *Unido a híbrido*: el dispositivo se une a un dominio de Active Directory y un inquilino de Azure AD.  
+- *HTTP*: en las propiedades del punto de administración, las conexiones de cliente se establecen en **HTTP**.  
+- *HTTPS*: en las propiedades del punto de administración, las conexiones de cliente se establecen en **HTTPS**.  
+- *E-HTTP*: en las propiedades del sitio, en la pestaña Comunicación de equipo cliente, la configuración del sistema de sitio se establece en **HTTPS o HTTP**, y se habilita la opción para **usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**. Configurará el punto de administración para HTTP; el punto de administración de HTTP está preparado para comunicaciones HTTP y HTTPS (escenarios de autenticación por tokens).   
 
 
 

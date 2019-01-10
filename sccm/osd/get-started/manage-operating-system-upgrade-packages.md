@@ -10,12 +10,12 @@ ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f7b8b18cbec5a3b5972a448e8a70339533dc11fb
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 46e948a215535bf57153e5a97dbdc9cad2e35e3b
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456016"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817858"
 ---
 # <a name="manage-os-upgrade-packages-with-configuration-manager"></a>Administrar paquetes de actualización del sistema operativo con Configuration Manager
 
@@ -23,6 +23,8 @@ ms.locfileid: "52456016"
 
 Un paquete de actualización del sistema operativo en Configuration Manager contiene los archivos de origen de instalación de Windows necesarios para actualizar un sistema operativo existente en un equipo. En este artículo se describe cómo agregar, distribuir y reparar un paquete de actualización de sistema operativo.
 
+>[!NOTE]
+>Los paquetes de actualización del sistema operativo también pueden utilizarse para las nuevas instalaciones de Windows. Sin embargo, dependen de que los controladores sean compatibles con este método. Al realizar nuevas instalaciones de Windows desde un paquete de actualización del sistema operativo, los controladores se instalan en Windows PE en lugar de simplemente inyectarse en Windows PE. Algunos controladores no son compatibles con la instalación en Windows PE. Si los controladores no son compatibles con la instalación en Windows PE, en su lugar, use una [imagen del sistema operativo](/sccm/osd/get-started/manage-operating-system-images), como **install.wim**.
 
 
 ##  <a name="BKMK_AddOSUpgradePkgs"></a> Agregar un paquete de actualización del sistema operativo  
@@ -47,11 +49,11 @@ Para poder usar un paquete de actualización del sistema operativo, primero debe
 
 4.  En la página **General**, especifique la siguiente información. Esta información es útil para identificar el paquete de actualización del sistema operativo cuando se tiene más de uno.  
 
-    -   **Nombre**: nombre único para el paquete de actualización del sistema operativo.  
+    -   **Nombre**: nombre único del paquete de actualización del sistema operativo.  
 
     -   **Versión**: identificador de versión opcional. Esta propiedad no tiene que ser la versión del sistema operativo del paquete de actualización. A menudo es la versión de la organización para el paquete.  
 
-    -   **Comentario**: una breve descripción opcional.  
+    -   **Comentario**: breve descripción opcional.  
 
 5.  Complete el asistente.  
 

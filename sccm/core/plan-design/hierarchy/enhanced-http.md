@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b7cb4a6a7ec6738bdf045b75bf88c8b4d8c4650
-ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
+ms.openlocfilehash: 7f2fab639082e6871e5df8dcebe0d1b3a440624c
+ms.sourcegitcommit: 1bf26b83fa7da637d299a21e1d3bc61f2d7d8c10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52820108"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54060372"
 ---
 # <a name="enhanced-http"></a>HTTP mejorado
 
@@ -46,7 +46,7 @@ En la versión 1806 de Configuration Manager se incluyen mejoras en la forma en 
 Los siguientes escenarios aprovechan estas mejoras:  
 
 
-### <a name="bkmk_scenario1"></a> Escenario 1: Cliente a punto de administración
+### <a name="bkmk_scenario1"></a> Escenario 1: Cliente a punto de administración
 <!--1356889-->
 
 [Los dispositivos unidos a Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) se pueden comunicar con un punto de administración configurado para HTTP. El servidor de sitio genera un certificado para el punto de administración para que pueda comunicarse a través de un canal seguro.   
@@ -55,7 +55,7 @@ Los siguientes escenarios aprovechan estas mejoras:
 > Este comportamiento se ha cambiado a partir de la versión 1802 de la rama actual de Configuration Manager, que requiere un punto de administración habilitado para HTTPS para los clientes unidos a Azure AD que se comunican a través de una instancia de Cloud Management Gateway. Para obtener más información, vea [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps) (Habilitar el punto de administración para HTTPS).  
 
 
-### <a name="bkmk_scenario2"></a> Escenario 2: Cliente a punto de distribución
+### <a name="bkmk_scenario2"></a> Escenario 2: Cliente a punto de distribución
 <!--1358228-->
 
 Un grupo de trabajo o un cliente unido a Azure AD se puede autenticar y descargar contenido a través de un canal seguro desde un punto de distribución configurado para HTTP. Estos tipos de dispositivos también se pueden autenticar y descargar contenido desde un punto de distribución configurado para HTTPS sin necesidad de un certificado PKI en el cliente. Agregar un certificado de autenticación de cliente a un grupo de trabajo o un cliente unido a Azure AD es un desafío.
@@ -63,7 +63,7 @@ Un grupo de trabajo o un cliente unido a Azure AD se puede autenticar y descarga
 Este comportamiento incluye escenarios de implementación de sistema operativo con una secuencia de tareas que se ejecuta desde el medios de arranque, PXE o el Centro de software. Para obtener más información, vea [Cuenta de acceso a la red](/sccm/core/plan-design/hierarchy/accounts#network-access-account).<!--1358278-->
 
 
-### <a name="bkmk_scenario3"></a> Escenario 3: Identidad de dispositivo de Azure AD 
+### <a name="bkmk_scenario3"></a> Escenario 3: Identidad del dispositivo de Azure AD 
 <!--1358460-->
 
 Un dispositivo unido a Azure AD o un [dispositivo de Azure AD híbrido](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) sin un usuario de Azure AD con sesión iniciada se puede comunicar de forma segura con su sitio asignado. La identidad del dispositivo basado en la nube ahora es suficiente para autenticarse con el punto de administración y CMG en escenarios centrados en el dispositivo. (Un token de usuario sigue siendo necesario para los escenarios centrados en el usuario).  
@@ -79,7 +79,7 @@ Un dispositivo unido a Azure AD o un [dispositivo de Azure AD híbrido](https://
 
     - Si ya se ha cumplido este requisito previo para el sitio, debe actualizar la aplicación de Azure AD. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Cloud Services** y seleccione **Inquilinos de Azure Active Directory**. Seleccione el inquilino de Azure AD, seleccione la aplicación web en el panel **Aplicaciones** y luego haga clic en **Actualizar configuración de la aplicación** en la cinta.  
 
-- *[Escenario 3](#bkmk_scenario3) solo*: un cliente con Windows 10 versión 1803 y unido a Azure AD. 
+- *Solo para el [escenario 3](#bkmk_scenario3)*: Un cliente con Windows 10 versión 1803 o posterior y unido a Azure AD. 
 
 
 

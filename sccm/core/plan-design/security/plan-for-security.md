@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 88fa98de0f9f0a113adeef3a30536628706484ab
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 5f7cb374859d2605021a3f1ec98d6a6b6081bfc4
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424687"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817909"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Planeación de la seguridad en Configuration Manager
 
@@ -109,7 +109,7 @@ Cuando se usan certificados PKI con Configuration Manager, planifique el uso de 
 
 IIS comprueba siempre la CRL de los certificados de cliente, y esta configuración no se puede cambiar en Configuration Manager. De forma predeterminada, los clientes de Configuration Manager siempre comprueban la CRL para sistemas de sitio. Para deshabilitar esta configuración, especifique una propiedad del sitio y una propiedad de CCMSetup.  
 
-Los equipos en los que se usa la comprobación de revocación de certificados pero que no pueden encontrar la CRL se comportan como si todos los certificados de la cadena de certificación estuvieran revocados. Este comportamiento se debe a que no pueden comprobar si los certificados están en la lista. En este escenario, se produce un error en todas las conexiones que requieren certificados y usan una CRL.  
+Los equipos en los que se usa la comprobación de revocación de certificados pero que no pueden encontrar la CRL se comportan como si todos los certificados de la cadena de certificación estuvieran revocados. Esto se debe a que no pueden comprobar que los certificados estén en la lista de revocación de certificados. En este escenario, se produce un error en todas las conexiones que requieren certificados e incorporan la comprobación de la CRL. Al validar que la CRL esté disponible navegando hasta su ubicación HTTP, es importante tener en cuenta que el cliente de Configuration Manager se ejecuta como sistema local. Por lo tanto, la prueba de accesibilidad de la CRL con un navegador web ejecutado en el contexto del usuario puede realizarse correctamente, aunque es posible que la cuenta del ordenador se bloquee al intentar realizar una conexión HTTP a la misma URL de CRL debido a la solución de filtrado web interna. En esta situación, puede que deba agregar la URL de la CRL a la lista de direcciones permitidas de todas las soluciones de filtrado web.
 
 La comprobación de la CRL cada vez que se usa un certificado proporciona mayor seguridad que usar un certificado que se ha revocado. Pero supone un retraso en la conexión y procesamiento adicional en el cliente. Es posible que la organización requiera esta comprobación de seguridad adicional para los clientes que están en Internet o en una red que no es de confianza.  
 
@@ -188,7 +188,7 @@ En la mayoría de los casos, el cliente de Configuration Manager identifica corr
   > 
   >   Use una coincidencia de cadena parcial del SAN solo cuando instale los clientes manualmente y cuando estos no recuperen la información del sitio desde Active Directory Domain Services. Por ejemplo, estas condiciones se aplican a los clientes solo de Internet.  
 
-- Una coincidencia de los valores de atributo del nombre de firmante del certificado de cliente o de los valores de atributo del nombre alternativo del firmante (SAN). Este método es una coincidencia que distingue mayúsculas de minúsculas. Es adecuado si se usa un nombre distintivo X500 o identificadores de objetos (OID) equivalentes conforme a RFC 3280, y se quiere basar la selección de certificados en los valores de atributo. Puede especificar sólo los atributos, con sus valores, que necesita para identificar de manera exclusiva o validar el certificado y distinguirlo de los demás certificados del almacén de certificados de cliente.  
+- Una coincidencia de los valores de atributo del nombre de firmante del certificado de cliente o de los valores de atributo del nombre alternativo del firmante (SAN). Este método es una coincidencia que distingue mayúsculas de minúsculas. Es adecuado si se usan un nombre distintivo X500 o identificadores de objetos (OID) equivalentes conforme a RFC 3280, y se quiere basar la selección de certificados en los valores de atributo. Puede especificar sólo los atributos, con sus valores, que necesita para identificar de manera exclusiva o validar el certificado y distinguirlo de los demás certificados del almacén de certificados de cliente.  
 
 En la siguiente tabla aparecen los valores de atributo que Configuration Manager admite para los criterios de selección de certificados de cliente.  
 

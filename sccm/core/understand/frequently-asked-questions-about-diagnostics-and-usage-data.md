@@ -10,12 +10,12 @@ ms.assetid: 3fe32aa2-d594-4ad0-a291-b8f5395ac50b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b4174c68d5a6ccd31355d976b7830b6d09f39d91
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 38b59e520baf9fddb09f71f459de409f38adad2b
+ms.sourcegitcommit: 32a257fafbb29aece8b4f435dd5614fcef305328
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339883"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "54005456"
 ---
 # <a name="frequently-asked-questions-about-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>Preguntas frecuentes acerca de datos de diagnóstico y uso para System Center Configuration Manager
 
@@ -50,7 +50,7 @@ La rama actual de Configuration Manager necesita actualizarse de forma periódic
  No. Los procedimientos almacenados para recopilar los datos se limitan a la base de datos del sitio.  
 
 ### <a name="bkmk_gdpr"></a> ¿Se rige Configuration Manager por el Reglamento general de protección de datos (RGPD)?
- No. Configuration Manager no se rige por la supervisión de RGPD, sino que es un producto local que el usuario implementa, administra y opera directamente. Los datos de diagnóstico y uso que Microsoft recopila mejoran la experiencia de instalación, la calidad y la seguridad de las versiones futuras. Estos datos sí se rigen por la supervisión de RGPD. No se recopila y ni transmite a Microsoft ningún tipo de información de identificación del usuario final ni identificadores seudónimos de usuario final. Para más información sobre RGPD, vaya al [Centro de confianza de Microsoft sobre RGPD](https://microsoft.com/gdpr). Para más información sobre los datos de Configuration Manager, vea [Datos de diagnóstico y uso](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).
+ No. Configuration Manager no se rige por la supervisión de RGPD, sino que es un producto local que el usuario implementa, administra y opera directamente. Los datos de diagnóstico y uso que Microsoft recopila mejoran la experiencia de instalación, la calidad y la seguridad de las versiones futuras. Estos datos de diagnóstico y uso están sujeto a la supervisión del RGPD. Sin embargo, no se recopila ni transmite a Microsoft ningún tipo de información de identificación del usuario final ni identificadores seudónimos de usuario final. Para más información sobre RGPD, vaya al [Centro de confianza de Microsoft sobre RGPD](https://microsoft.com/gdpr). Para más información sobre los datos de Configuration Manager, vea [Datos de diagnóstico y uso](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).
 
 
 ## <a name="see-also"></a>Consulte también  

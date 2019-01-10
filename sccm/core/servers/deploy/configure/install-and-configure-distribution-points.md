@@ -10,12 +10,12 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0ab848051d5eaa85d2b515145ff64471aee81a31
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 430931e8bfba3f40a8d970b7ae7b97e24d3381ec
+ms.sourcegitcommit: f2a1fa59fb3870a6bebca61daf15c0c157e9fdd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53415048"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031029"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>Instalar y configurar puntos de distribución en Configuration Manager
 
@@ -341,6 +341,9 @@ Seleccione la opción **Habilitar compatibilidad de PXE para clientes** y, despu
 - **Habilitar compatibilidad de equipos desconocida**: especifique si quiere habilitar la compatibilidad con equipos no administrados por Configuration Manager. Para obtener más información, consulte [Prepare for unknown computer deployments](/sccm/osd/get-started/prepare-for-unknown-computer-deployments) (Preparación para implementaciones en equipos desconocidos).  
 
 - **Habilitar un respondedor PXE sin Servicios de implementación de Windows**: a partir de la versión 1806, esta opción habilita un respondedor PXE en el punto de distribución que no requiere WDS (Servicios de implementación de Windows). El respondedor PXE es compatible con redes IPv6. Si habilita esta opción en un punto de distribución que ya sea compatible con PXE, Configuration Manager suspenderá el servicio WDS. Si deshabilita esta opción, pero activa la opción **Habilitar compatibilidad de PXE para clientes**, el punto de distribución volverá a habilitar WDS.<!--1357580-->  
+
+    > [!Note]
+    >No se permite usar el respondedor del entorno PXE sin WDS en servidores que también estén ejecutando un servidor DHCP.
 
 - **Requerir una contraseña cuando los equipos usen PXE**: para proporcionar seguridad adicional para sus implementaciones de PXE, especifique una contraseña segura.  
 

@@ -10,12 +10,12 @@ ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 03ec9c046e1b32f137777f15393b5d26b49e5520
-ms.sourcegitcommit: 265d38d55ca0db043e3a7131a56f123e1d98aa5b
+ms.openlocfilehash: cfaa50b941697b19f2d4d029ed7990f2d39eecbc
+ms.sourcegitcommit: f2a1fa59fb3870a6bebca61daf15c0c157e9fdd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236164"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030978"
 ---
 # <a name="infrastructure-requirements-for-os-deployment-in-configuration-manager"></a>Requisitos de infraestructura para la implementación de SO en Configuration Manager
 
@@ -186,17 +186,17 @@ Para usar informes de Configuration Manager para las implementaciones de SO, ins
 
 El rol de seguridad **Administrador de implementaciones de sistema operativo** es un rol integrado que no se puede cambiar. Sin embargo, puede copiar el rol, realizar cambios y, a continuación, guardar estos cambios como un nuevo rol de seguridad personalizado. Estos son algunos de los permisos que se aplican directamente a las implementaciones de SO:  
 
-- **Paquete de imagen de arranque**: crear, eliminar, modificar, modificar carpeta, mover objeto, leer, establecer ámbito de seguridad  
+- **Paquete de imágenes de arranque**: Crear, eliminar, modificar, modificar carpeta, mover objeto, leer, establecer ámbito de seguridad  
 
-- **Controladores de dispositivos**: crear, eliminar, modificar, modificar carpeta, modificar informe, mover objeto, leer, ejecutar informe  
+- **Controladores de dispositivo**: Crear, eliminar, modificar, modificar carpeta, modificar informe, mover objeto, leer, ejecutar informe  
 
-- **Paquete de controladores**: crear, eliminar, modificar, modificar carpeta, mover objeto, leer, establecer ámbito de seguridad  
+- **Paquete de controladores**: Crear, eliminar, modificar, modificar carpeta, mover objeto, leer, establecer ámbito de seguridad  
 
-- **Imagen de sistema operativo**: crear, eliminar, modificar, modificar carpeta, mover objeto, leer, establecer ámbito de seguridad  
+- **Imagen del sistema operativo**: Crear, eliminar, modificar, modificar carpeta, mover objeto, leer, establecer ámbito de seguridad  
 
-- **Paquete de actualización de sistema operativo**: crear, eliminar, modificar, modificar carpeta, mover objeto, leer, establecer ámbito de seguridad  
+- **Paquete de actualización del sistema operativo**: Crear, eliminar, modificar, modificar carpeta, mover objeto, leer, establecer ámbito de seguridad  
 
-- **Paquete de secuencia de tareas**: crear, crear medio de secuencia de tareas, eliminar, modificar, modificar carpeta, modificar informe, mover objeto, leer, ejecutar informe, establecer ámbito de seguridad  
+- **Paquete de secuencia de tareas**: Crear, crear medio de secuencia de tareas, eliminar, modificar, modificar carpeta, modificar informe, mover objeto, leer, ejecutar informe, establecer ámbito de seguridad  
 
 Para obtener más información, vea [Crear roles de seguridad personalizados](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_CreateSecRole).  
 
@@ -260,6 +260,8 @@ Si planea hospedar conjuntamente el punto de distribución en un servidor que ej
 
      `WDSUTIL /Set-Server /UseDHCPPorts:No /DHCPOption60:Yes`  
 
+> [!NOTE]
+> Al usar el respondedor del entorno PXE sin WDS en lugar de WDS, no se podrá ejecutar tampoco DHCP en el mismo servidor.
 
 
 ##  <a name="BKMK_SupportedOS"></a> Sistemas operativos compatibles  

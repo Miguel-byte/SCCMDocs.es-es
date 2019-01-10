@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5e62983f76b0f2a4277edfab08d4321da5d4a258
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 9d3cd85d4c0bd3a996bd6ec18fc24a02423fab62
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416493"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53818062"
 ---
 # <a name="task-sequence-steps-in-configuration-manager"></a>Pasos de secuencias de tareas en Configuration Manager
 
@@ -235,7 +235,14 @@ ms.locfileid: "53416493"
  Instala una imagen de sistema operativo que capture. Haga clic en **Examinar** para abrir el cuadro de diálogo **Seleccionar un paquete**. Después, seleccione el paquete de imagen existente que quiera instalar. Si hay varias imágenes asociadas con el **Paquete de imágenes** especificado, seleccione en la lista desplegable la imagen asociada que se va a usar para esta implementación. Para ver información básica sobre cada imagen, haga clic en ella.  
 
 #### <a name="apply-operating-system-image-from-an-original-installation-source"></a>Aplicar imagen de sistema operativo desde un origen de instalación original
- Instala un sistema operativo mediante un paquete de actualización del sistema operativo, que también es un origen de instalación original. Haga clic en **Examinar** para abrir el cuadro de diálogo **Seleccionar un paquete de instalación de sistema operativo**. Después, seleccione el paquete de actualización de sistema operativo existente que quiera usar. Puede ver información básica sobre cada origen de imagen existente haciendo clic en él. El panel de resultados de la parte inferior del cuadro de diálogo muestra las propiedades asociadas del origen de imagen. Si hay varias ediciones asociadas con el paquete especificado, use la lista desplegable para seleccionar la **Edición** que desea usar.  
+ Instala un sistema operativo mediante un paquete de actualización del sistema operativo, que también es un origen de instalación original. Haga clic en **Examinar** para abrir el cuadro de diálogo **Seleccionar un paquete de actualización del sistema operativo**. Después, seleccione el paquete de actualización de sistema operativo existente que quiera usar. Puede ver información básica sobre cada origen de imagen existente haciendo clic en él. El panel de resultados de la parte inferior del cuadro de diálogo muestra las propiedades asociadas del origen de imagen. Si hay varias ediciones asociadas con el paquete especificado, use la lista desplegable para seleccionar la **Edición** que desea usar.  
+
+>[!NOTE]
+>Los **paquetes de actualización del sistema operativo** están pensados principalmente para su uso con las actualizaciones locales, no para las nuevas instalaciones de Windows. Al implementar nuevas instalaciones de Windows, use la opción **Aplicar el sistema operativo de una imagen capturada** junto a **install.wim** desde los archivos de origen de instalación.
+>
+>La implementación de nuevas instalaciones de Windows a través de **paquetes de actualización del sistema operativo** se sigue permitiendo, pero dependerá de que los controladores sean compatibles con este método. Al instalar Windows desde un **paquete de actualización del sistema operativo**, los controladores se instalan en Windows PE, en lugar de simplemente inyectarse en Windows PE. Algunos controladores no son compatibles con la instalación en Windows PE.
+>
+>Si los controladores no son compatibles con la instalación en Windows PE, incluya el archivo **isntall.wim** de los archivos de origen de instalación originales en un **paquete de imagen del sistema operativo**. Luego, impleméntelo usando la opción **Aplicar el sistema operativo de una imagen capturada** en su lugar.
 
 #### <a name="use-an-unattended-or-sysprep-answer-file-for-a-custom-installation"></a>Usar un archivo de respuesta Sysprep o de instalación desatendida para realizar una instalación personalizada
  Use esta opción para proporcionar un archivo de respuesta del programa de instalación de Windows (**unattend.xml**, **unattend.txt**o **sysprep.inf**) según el método de instalación y la versión del sistema operativo. El archivo que especifique puede incluir cualquiera de las opciones de configuración estándar compatibles con los archivos de respuesta de Windows. Por ejemplo, puede usarlo para especificar la página principal predeterminada de Internet Explorer. Especifique el paquete que contiene el archivo de respuesta y la ruta de acceso asociada al archivo en el paquete.  
