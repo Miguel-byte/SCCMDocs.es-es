@@ -65,7 +65,7 @@ Para aplicar restricciones a una aplicación, esta debe incorporar el Kit de des
 
 3. En la página **General** , seleccione **Detectar automáticamente la información sobre esta aplicación a partir de archivos de instalación**.  
 
-4. En la lista desplegable **Tipo**, seleccione **Paquete de aplicación para iOS (\*archivo *.ipa)**.  
+4. En la lista desplegable **Tipo**, seleccione **Paquete de aplicación para iOS (\*archivo .ipa)**.  
 
 5. Seleccione **Examinar** para elegir el paquete de aplicación que quiera importar y, después, seleccione **Siguiente**.  
 
