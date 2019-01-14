@@ -1,8 +1,8 @@
 ---
 title: Configuración de Windows Hello para empresas
 titleSuffix: Configuration Manager
-description: Aprenda a integrar Windows Hello para empresas con System Center Configuration Manager.
-ms.date: 04/10/2018
+description: Aprenda a integrar Windows Hello para empresas con Configuration Manager.
+ms.date: 12/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,21 +10,23 @@ ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 60dcf98b83fb4650a10e5503d42b9f49d3aba359
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 81086b01cef3d60af6e0c93d25b2ad937252d4ba
+ms.sourcegitcommit: 94bf7d5b5beb9628cc1fdfe75451d33b5de26f8a
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350092"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152407"
 ---
-# <a name="windows-hello-for-business-settings-in-system-center-configuration-manager"></a>Configuración de Windows Hello para empresas en System Center Configuration Manager
+# <a name="windows-hello-for-business-settings-in-configuration-manager"></a>Configuración de Windows Hello para empresas en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-<!--1245704-->
-System Center Configuration Manager le permite integrarse con Windows Hello para empresas (anteriormente Microsoft Passport para Windows), que es un método de inicio de sesión alternativo para dispositivos Windows 10. Hello para empresas utiliza Active Directory o una cuenta de Azure Active Directory para reemplazar una contraseña, una tarjeta inteligente o una tarjeta inteligente virtual.  
+<!--1245704--> Configuration Manager le permite integrarse con Windows Hello para empresas (anteriormente Microsoft Passport para Windows), que es un método de inicio de sesión alternativo para dispositivos Windows 10. Hello para empresas utiliza Active Directory o una cuenta de Azure Active Directory para reemplazar una contraseña, una tarjeta inteligente o una tarjeta inteligente virtual. Hello para empresas permite usar un **gesto de usuario** para iniciar sesión en lugar de una contraseña. Un gesto de usuario podría ser un simple PIN, una autenticación biométrica o un dispositivo externo, como un lector de huellas digitales.
 
-Hello para empresas permite usar un **gesto de usuario** para iniciar sesión en lugar de una contraseña. Un gesto de usuario podría ser un simple PIN, una autenticación biométrica o un dispositivo externo, como un lector de huellas digitales.
+
+> [!Important]  
+> A partir de diciembre de 2017, Windows Hello para empresas en Configuration Manager es un [característica en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Implementación de Windows Server 2016 Active Directory Federation Services autoridad de registro (ADFS RA) es más sencillo, proporciona una mejor experiencia de usuario y tiene una experiencia de inscripción de certificados más determinista.  
+
 
 Para obtener más información, vea [Windows Hello para empresas](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification).
 
@@ -33,19 +35,24 @@ Para obtener más información, vea [Windows Hello para empresas](https://docs.m
 > Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para más información, vea [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 
- Configuration Manager se integra con Windows Hello para empresas de dos maneras:  
+Configuration Manager se integra con Windows Hello para empresas de dos maneras:  
 
--   Puede usar Configuration Manager para controlar cuáles gestos pueden emplear los usuarios para iniciar sesión y cuáles no.  
+- Puede usar Configuration Manager para controlar cuáles gestos pueden emplear los usuarios para iniciar sesión y cuáles no.  
 
--   Puede almacenar certificados de autenticación en el proveedor de almacenamiento de claves de Windows Hello para empresas. Para obtener más información, consulte [Introduction to certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md) (Introducción a perfiles de certificado en Configuration Manager).  
+- Puede almacenar certificados de autenticación en el proveedor de almacenamiento de claves de Windows Hello para empresas. Para obtener más información, consulte [Introduction to certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md) (Introducción a perfiles de certificado en Configuration Manager).  
 
-- Puede implementar directivas de Windows Hello para empresas para dispositivos de Windows 10 unidos a dominio que ejecutan el cliente de Configuration Manager. Esta configuración se describe en la sección [Configuración de Windows Hello para empresas en dispositivos unidos a dominio de Windows 10](#configure-windows-hello-for-business-on-domain-joined-windows-10-devices). Al usar Configuration Manager con Microsoft Intune (híbrido), puede configurar estas opciones en dispositivos con Windows 10 y con Windows 10 Mobile. Para más información, vea [Configure Windows Hello for Business settings (hybrid)](../../mdm/deploy-use/windows-hello-for-business-settings.md) (Configuración de Windows Hello para empresas [híbrido]).
+- Puede implementar directivas de Windows Hello para empresas para dispositivos de Windows 10 unidos a dominio que ejecutan el cliente de Configuration Manager. Esta configuración se describe en la sección [Configuración de Windows Hello para empresas en dispositivos unidos a dominio de Windows 10](#configure-windows-hello-for-business-on-domain-joined-windows-10-devices). Al usar Configuration Manager con Microsoft Intune (híbrido), puede configurar estas opciones en dispositivos con Windows 10 y con Windows 10 Mobile. Para más información, vea [Configure Windows Hello for Business settings (hybrid)](/sccm/mdm/deploy-use/windows-hello-for-business-settings) (Configuración de Windows Hello para empresas [híbrido]).
+
+
 
 ## <a name="configure-windows-hello-for-business-on-domain-joined-windows-10-devices"></a>Configuración de Windows Hello para empresas en dispositivos unidos a dominio de Windows 10
+
 Puede controlar la configuración de Windows Hello para empresas en dispositivos con Windows 10 unidos a un dominio mediante la creación e implementación de un perfil de Windows Hello para empresas. Se recomienda llevar esto a cabo.
 
 
 Si usa la autenticación basada en certificado, también debe implementar un perfil de certificado, como se describe en [Configuración de un perfil de certificado](#configure-a-certificate-profile). Si usa la autenticación basada en claves, no es necesario implementar un perfil de certificado.
+
+
 
 ## <a name="configure-a-windows-hello-for-business-profile"></a>Configuración de un perfil de Windows Hello para empresas  
 
@@ -53,8 +60,11 @@ En la consola de Configuration Manager, en **Acceso a los recursos de la compañ
 
 ![Asistente para directivas de Windows Hello para empresas con la lista de configuraciones disponibles](../media/Hello-for-Business-settings.png)
 
+
+
 ## <a name="configure-a-certificate-profile-to-enroll-the-windows-hello-for-business-enrollment-certificate-in-configuration-manager"></a>Configuración de un perfil de certificado para inscribir el certificado de inscripción de Windows Hello para empresas en Configuration Manager  
- Si quiere usar el inicio de sesión basado en certificados de Windows Hello para empresas, configure los siguientes componentes:  
+
+Si quiere usar el inicio de sesión basado en certificados de Windows Hello para empresas, configure los siguientes componentes:  
 
 -   Un perfil de certificado de Configuration Manager  
 

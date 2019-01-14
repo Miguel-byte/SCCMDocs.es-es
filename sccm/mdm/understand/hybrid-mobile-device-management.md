@@ -10,12 +10,12 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f3d25120701c12b547727259002fc58a8f8f0780
-ms.sourcegitcommit: 97083c51057e2c4e0fe12c3b1f1b512250874c6a
-ms.translationtype: HT
+ms.openlocfilehash: a84dfc33fe79f5eb4d5397505a12052b8e92aebf
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50968142"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250619"
 ---
 # <a name="hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>MDM híbrida con Configuration Manager e Intune
 
@@ -28,7 +28,7 @@ ms.locfileid: "50968142"
 > 
 > Como resultado, la mayoría de los clientes eligen Intune en Azure en lugar de MDM híbrida. El número de clientes que usan MDM híbrida sigue disminuyendo a medida que más clientes se trasladan a la nube. Por lo tanto, el 1 de septiembre de 2019 Microsoft retirará la oferta de servicio de MDM híbrida. Planee su [migración a Intune en Azure](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa) para satisfacer sus necesidades de MDM. 
 > 
-> Este cambio no afecta a Configuration Manager local ni a la [administración conjunta para dispositivos con Windows 10](/sccm/core/clients/manage/co-management-overview). Si no está seguro de si está utilizado MDM híbrida,vaya al área de trabajo **Administración** de la consola de Configuration Manager, expanda **Servicios de nube** y haga clic en **Suscripciones a Microsoft Intune**. Si tiene una suscripción a Microsoft Intune configurada, el inquilino está configurado para MDM híbrida.
+> Este cambio no afecta a Configuration Manager local ni a la [administración conjunta para dispositivos con Windows 10](/sccm/comanage/overview). Si no está seguro de si está utilizado MDM híbrida,vaya al área de trabajo **Administración** de la consola de Configuration Manager, expanda **Servicios de nube** y haga clic en **Suscripciones a Microsoft Intune**. Si tiene una suscripción a Microsoft Intune configurada, el inquilino está configurado para MDM híbrida.
 > 
 > **¿Cómo me afecta esto a mí?**
 > 
@@ -86,8 +86,8 @@ Para leer sobre las nuevas características que están disponibles para MDM híb
 
 Para integrar dispositivos en la administración híbrida, esos dispositivos deben inscribirse al servicio. La manera en que los dispositivos inscriben dispositivos depende del tipo de dispositivo, la propiedad y el nivel de administración necesario.
 
-- **"Bring Your Own Device" (BYOD)**: los usuarios inscriben sus teléfonos personales, tabletas o PC.  
+- **"Bring your own device" (BYOD)**: Los usuarios inscribir sus teléfonos personales, tabletas o equipos  
 
-- **Dispositivo de propiedad corporativa (COD)**: habilite la administración de escenarios como el borrado remoto, los dispositivos compartidos o la afinidad de usuario para un dispositivo.  
+- **Dispositivos corporativos (COD)**: Habilitar escenarios de administración como el borrado remoto, dispositivos compartidos o afinidad de usuario para un dispositivo  
 
 - Si usa [Exchange ActiveSync](/sccm/mdm/plan-design/device-enrollment-methods#mobile-device-management-with-exchange-activesync-and-configuration-manager), de manera local u hospedado en la nube, puede habilitar la administración simple de Intune sin la inscripción. Los equipos con Windows también pueden administrarse mediante el [software cliente de Intune](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune).
