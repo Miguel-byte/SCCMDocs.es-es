@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f7cb374859d2605021a3f1ec98d6a6b6081bfc4
-ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
+ms.openlocfilehash: 237a21346665af404850276b12b0f1ca32fc5f6e
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53817909"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250823"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Planeación de la seguridad en Configuration Manager
 
@@ -381,7 +381,7 @@ La cadena devuelta es la clave raíz confiable. Compruebe que coincide con el va
 
 - [Administración de los dispositivos unidos a un dominio en la nube](/sccm/core/clients/deploy/deploy-clients-cmg-azure)  
 
-- [Administración conjunta](/sccm/core/clients/manage/co-management-overview)  
+- [Administración conjunta](/sccm/comanage/overview)  
 
 - [Implementación de aplicaciones disponibles para el usuario](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)  
 

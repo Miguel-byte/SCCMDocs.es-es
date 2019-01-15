@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: a71aa0834a241332d3390e1d888d99b6e3f986f7
-ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
+ms.openlocfilehash: 151862c390518cf68450c3eb3727a777bc575c5a
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53444576"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250653"
 ---
 <!-- 
 - Feature 1357546
@@ -36,7 +36,7 @@ Vea los siguientes artículos para más información:
 ## <a name="recommended"></a>Recomendado 
 Lista mantenida manualmente de artículos importantes.
 
-- [Administración conjunta para dispositivos Windows 10](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)  
+- [Administración conjunta para dispositivos Windows 10](https://docs.microsoft.com/sccm/comanage/overview)  
 - [CMPivot](https://docs.microsoft.com/sccm/core/servers/manage/cmpivot)  
 - [Crear y ejecutar scripts de PowerShell](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts)  
 - [Implementaciones por fases](https://docs.microsoft.com/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
@@ -62,7 +62,7 @@ Los artículos más populares de noviembre de 2018.
  | 7104 | [Compatibilidad con Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) | 
  | 6957 | [Instalación de la consola](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) | 
  | 6765 | [Acerca de los parámetros y propiedades de instalación de cliente](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) | 
- | 6091 | [Administración conjunta para dispositivos Windows 10](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview) | 
+ | 6091 | [Administración conjunta para dispositivos Windows 10](https://docs.microsoft.com/sccm/comanage/overview) | 
  | 6043 | [Implementar aplicaciones](https://docs.microsoft.com/sccm/apps/deploy-use/deploy-applications) | 
  | 5833 | [Instalar y configurar puntos de distribución](https://docs.microsoft.com/sccm/core/servers/deploy/configure/install-and-configure-distribution-points) | 
 
