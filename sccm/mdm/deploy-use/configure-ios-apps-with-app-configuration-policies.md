@@ -10,16 +10,16 @@ ms.assetid: f0a78038-ea22-4826-9c07-1771b7dd2e8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 19b55204566c49c95e76a3eff3f88206df553e13
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: a0a5cb6e609912a280f1cf0608ec298f860fe2e2
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416170"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316344"
 ---
 # <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>Aplicar configuración a aplicaciones iOS con directivas de configuración de aplicaciones en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 Puede usar directivas de configuración de aplicaciones en System Center Configuration Manager (Configuration Manager) para distribuir valores de configuración que podrían ser necesarios cuando un usuario ejecuta una aplicación. Por ejemplo, una aplicación puede requerir al usuario que especifique estos detalles:
@@ -34,7 +34,7 @@ Para usar una directiva de configuración de aplicaciones en Configuration Manag
 
 Actualmente, las directivas de configuración de aplicaciones solo están disponibles en dispositivos con iOS 8 y versiones posteriores, y para estos tipos de aplicaciones:
 
-- **Paquete de aplicación para iOS (archivo *.ipa)**
+- **paquete de aplicación de iOS (\*archivo .ipa)**
 - **Paquete de aplicación de iOS en App Store**
 
 Para obtener más información sobre los tipos de instalación de aplicaciones, vea [Introducción a la administración de aplicaciones](/sccm/apps/understand/introduction-to-application-management).
