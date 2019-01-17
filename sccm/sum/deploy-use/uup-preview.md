@@ -2,7 +2,7 @@
 title: Versión preliminar de UUP
 titleSuffix: Configuration Manager
 description: Instrucciones para la versión preliminar de la integración de UUP
-ms.date: 01/04/2018
+ms.date: 01/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: cfc83f4d076a05ea1847c0d073bd824ad10aa731
-ms.sourcegitcommit: 1bf26b83fa7da637d299a21e1d3bc61f2d7d8c10
+ms.openlocfilehash: 17a9abf2f20f53ba69ad160db421be51471cc311
+ms.sourcegitcommit: 27b2594087e8c54062db6b2a30ab843bab17f8cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54060389"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54270467"
 ---
 # <a name="uup-private-preview-instructions"></a>Instrucciones de la versión preliminar privada de UUP
 
@@ -46,7 +46,7 @@ Las actualizaciones acumulativas con UUP permiten que el contenido para los paqu
 
 ## <a name="set-up-instructions"></a>Instrucciones de configuración
 
-### <a name="1-send-your-wsus-id-to-your-uup-preview-contact-at-microsoft"></a>1. Envíe el identificador de WSUS a su contacto de la versión preliminar de UUP en Microsoft.
+### <a name="1-send-your-wsus-id-to-your-uup-preview-contact-at-microsoft"></a>1. Envíe el identificador de WSUS a su contacto de la versión preliminar de UUP en Microsoft
 
 Para participar en la versión preliminar privada de UUP, debe compartir su identificador de WSUS con Microsoft para que su entorno se pueda incluir en la lista de permitidos de la versión preliminar. Sin este identificador, no podrá ver las actualizaciones de UUP hasta que la versión preliminar sea pública.
 
@@ -160,8 +160,8 @@ Cuando esté listo para iniciar la sincronización de las actualizaciones UUP y 
 
 5. En la pestaña **Productos**, una vez que el servidor WSUS se haya agregado a la versión preliminar, deberían aparecer dos productos nuevos. Estos productos contienen el contenido de la versión preliminar de UUP.  
 
-    - **Piloto UUP de Windows 10**: actualizaciones de UUP para estaciones de trabajo de Windows  
-    - **UUP de Windows Server 2016**: actualizaciones de UUP para Windows Server  
+    - **Versión preliminar de UUP de Windows 10**  
+    - **Versión preliminar de UUP de Windows Server**  
 
 6. En la pestaña **Clasificaciones**, asegúrese de seleccionar:  
 

@@ -10,12 +10,12 @@ ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a0e16c137604480ab23e15b52723692491d1816d
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 763826a1a308130415fb972f7f3dc3e577b8e573
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414861"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250738"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>Novedades de la versión 1802 de System Center Configuration Manager
 
@@ -144,7 +144,7 @@ Para obtener más información, vea el artículo [Surface dashboard](/sccm/core/
 ## <a name="co-management"></a>Administración conjunta
 
 ### <a name="transition-endpoint-protection-workload-to-intune-using-co-management"></a>Transición de la carga de trabajo de Endpoint Protection a Intune mediante la administración conjunta
-<!-- 1357365 --> La carga de trabajo de Endpoint Protection se puede pasar a Intune después de habilitar la administración conjunta. Para realizar la transición de la carga de trabajo de Endpoint Protection, vaya a la página de propiedades de la administración conjunta y mueva la barra deslizante de Configuration Manager a **Piloto** o **Todos**. Para obtener más información sobre las cargas de trabajo, vea [Cambiar las cargas de trabajo a Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune). Para obtener más información sobre la administración conjunta, vea [Administración conjunta para dispositivos de Windows 10](/sccm/core/clients/manage/co-management-overview).
+<!-- 1357365 --> La carga de trabajo de Endpoint Protection se puede pasar a Intune después de habilitar la administración conjunta. Para realizar la transición de la carga de trabajo de Endpoint Protection, vaya a la página de propiedades de la administración conjunta y mueva la barra deslizante de Configuration Manager a **Piloto** o **Todos**. Para ver detalles sobre las cargas de trabajo, consulte el artículo sobre las [cargas de trabajo de administración conjunta](/sccm/comanage/workloads). Para obtener más información sobre la administración conjunta, vea [Administración conjunta para dispositivos de Windows 10](/sccm/comanage/overview).
  
 ### <a name="co-management-dashboard-in-system-center-configuration-manager"></a>Panel de administración conjunta en System Center Configuration Manager
 <!--1356648--> A partir de esta versión, puede ver un panel con información sobre la administración conjunta. El panel le ayudará a revisar los equipos que se administran conjuntamente en el entorno. Los gráficos ayudan a identificar los dispositivos que podrían requerir atención. Para obtener más información, vea el artículo [Co-management dashboard](/sccm/core/clients/manage/client-management-dashboard) (Panel de administración conjunta). 
@@ -235,7 +235,7 @@ Esta versión incluye las siguientes mejoras para la implementación del sistema
 <!-- 1357830 --> Ahora hay un nuevo informe para mostrar la cantidad de clientes con un explorador web específico como valor predeterminado de Windows. Vea el informe **Recuentos de exploradores predeterminados** en el grupo de informes **Software - Companies and Products** (Software: compañías y productos). Para obtener más información, vea [Lista de informes](/sccm/core/servers/manage/list-of-reports#software---companies-and-products).
 
 ### <a name="report-on-windows-autopilot-device-information"></a>Información de dispositivo Windows AutoPilot
-<!-- 1351442 --> Windows AutoPilot es una solución para la incorporación y configuración de nuevos dispositivos de Windows 10 de forma moderna. Para obtener más información, vea [Resumen de Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). Un método para registrar dispositivos existentes con Windows AutoPilot es cargar la información de dispositivo a Microsoft Store para Empresas y Educación. Esta información incluye el número de serie del dispositivo, el identificador de producto de Windows y un identificador de hardware. Use Configuration Manager para recopilar y notificar esta información del dispositivo con el nuevo informe, **Información del dispositivo de Windows AutoPilot**, en el nodo de informes **Hardware: general**. Para obtener más información, vea [Nuevos dispositivos de Windows 10](/sccm/core/clients/manage/co-management-prepare#new-windows-10-devices) al prepararse para la administración conjunta.
+<!-- 1351442 --> Windows AutoPilot es una solución para la incorporación y configuración de nuevos dispositivos de Windows 10 de forma moderna. Para más información, consulte [Resumen de Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). Un método para registrar dispositivos existentes con Windows AutoPilot es cargar la información de dispositivo a Microsoft Store para Empresas y Educación. Esta información incluye el número de serie del dispositivo, el identificador de producto de Windows y un identificador de hardware. Use Configuration Manager para recopilar y notificar esta información del dispositivo con el nuevo informe, **Información del dispositivo de Windows AutoPilot**, en el nodo de informes **Hardware: general**. Para más información, consulte el artículo sobre la [preparación de dispositivos basados en Internet para la administración conjunta](/sccm/comanage/how-to-prepare-win10#windows-autopilot).
 
 ### <a name="report-on-windows-10-servicing-details-for-a-specific-collection"></a>Informe sobre los detalles de mantenimiento de Windows 10 para una recopilación específica
 <!--1357653--> En el informe **Detalles de mantenimiento de Windows 10 para una colección específica** se muestra información general sobre el mantenimiento de Windows 10 para una recopilación específica. En este informe aparecen el identificador de recurso, el nombre de NetBIOS, el nombre del sistema operativo, la compilación, la rama de sistema operativo y el estado del servicio para dispositivos Windows 10. Para obtener más información, vea [Lista de informes](/sccm/core/servers/manage/list-of-reports#operating-system).

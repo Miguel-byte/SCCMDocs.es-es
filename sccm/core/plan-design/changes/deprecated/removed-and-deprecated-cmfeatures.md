@@ -2,7 +2,7 @@
 title: Características en desuso
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las características que Configuration Manager ya no admite.
-ms.date: 11/27/2018
+ms.date: 12/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 089f1f69f8df87b1d4b30cd8df6e735f5c79f312
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 441fb520fcf3e82bd284eb20db44f14cab52224f
+ms.sourcegitcommit: 94bf7d5b5beb9628cc1fdfe75451d33b5de26f8a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52455792"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152475"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Características en desuso y eliminadas de Configuration Manager
 
@@ -34,11 +34,12 @@ Esta información está sujeta a cambios en futuras versiones. Podría no inclui
 |Implementación del servicio clásico en Azure para la puerta de enlace de administración y el punto de distribución en la nube. Para obtener más información, vea [Planificación de Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).|Noviembre de 2018|La primera versión se publicó después del 1 de julio de 2019| 
 |System Center Endpoint Protection para Mac y Linux<br>Para obtener más información, vea la [entrada del blog de fin del soporte técnico](https://go.microsoft.com/fwlink/?linkid=870182).|Octubre de 2018|31 de diciembre de 2018|
 |Administración híbrida de dispositivos móviles. Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management). <!--Intune feature 2683117-->|14 de agosto de 2018|1 de septiembre de 2019|
+|Configuración de Windows Hello para empresas en Configuration Manager<br>Para más información, vea [Configuración de Windows Hello para empresas](/sccm/protect/deploy-use/windows-hello-for-business-settings).|Diciembre de 2017|La primera versión se publicó después del 1 de noviembre de 2019|
 |La **experiencia de usuario de Silverlight** del punto de sitios web del catálogo de aplicaciones ya no se admite. Los usuarios deben utilizar el nuevo Centro de software. NOTA: Los roles Punto de sitios web y Punto de servicio web del catálogo de aplicaciones todavía son compatibles. En algunos escenarios, el nuevo Centro de software se comunica con el punto de sitio web del catálogo de aplicaciones. Para obtener más información, consulte [Configurar el centro de software](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).<!--1358309-->|11 de agosto de 2017| Versión 1806|
 |La versión anterior del Centro de software.<br><br>Para obtener más información sobre el nuevo Centro de software, vea [Planear y configurar la administración de aplicaciones](/sccm/apps/plan-design/plan-for-and-configure-application-management##bkmk_userex).|13 de diciembre de 2016|Versión 1802|
-|Administración de discos duros virtuales (VHD) con Configuration Manager. </br></br>Este desuso incluye la eliminación de opciones para crear un nuevo VHD o administrar un VHD con una secuencia de tareas, y la eliminación del nodo de discos duros virtuales de la consola de Configuration Manager. </br></br>Los VHD existentes no se eliminan, pero ya no son accesibles desde la consola de Configuration Manager.  |6 de enero de 2017 |Versión 1710|
+|Administración de discos duros virtuales (VHD) con Configuration Manager. <br><br>Este desuso incluye la eliminación de opciones para crear un nuevo VHD o administrar un VHD con una secuencia de tareas, y la eliminación del nodo de discos duros virtuales de la consola de Configuration Manager. <br><br>Los VHD existentes no se eliminan, pero ya no son accesibles desde la consola de Configuration Manager.  |6 de enero de 2017 |Versión 1710|
 |Secuencias de tareas: <br /> - Convertir el disco en dinámico <br /> - Instalar herramientas de implementación |18 de noviembre de 2016|Versión 1710|
-|Herramienta de evaluación de actualizaciones de System Center Configuration Manager. </br></br>La Herramienta de evaluación de actualizaciones depende de System Center Configuration Manager y del kit de herramientas de compatibilidad de aplicaciones (ACT) 6.x. La versión final de ACT se ha entregado en Windows 10 v1511 ADK. Como no hay más actualizaciones para ACT, se interrumpe el soporte para la Herramienta de evaluación de actualizaciones. </br></br>La Herramienta de evaluación de actualizaciones se reemplaza por la característica [Preparación de actualización](/sccm/core/clients/manage/upgrade/upgrade-analytics). El aviso de desuso se agregó a la [página de descarga de UAT](https://www.microsoft.com/download/details.aspx?id=37145) el 12 de septiembre de 2016. | 12 de septiembre de 2016  | 11 de julio de 2017 |
+|Herramienta de evaluación de actualizaciones de System Center Configuration Manager. <br><br>La Herramienta de evaluación de actualizaciones depende de System Center Configuration Manager y del kit de herramientas de compatibilidad de aplicaciones (ACT) 6.x. La versión final de ACT se ha entregado en Windows 10 v1511 ADK. Como no hay más actualizaciones para ACT, se interrumpe el soporte para la Herramienta de evaluación de actualizaciones. <br><br>La Herramienta de evaluación de actualizaciones se reemplaza por la característica [Preparación de actualización](/sccm/core/clients/manage/upgrade/upgrade-analytics). El aviso de desuso se agregó a la [página de descarga de UAT](https://www.microsoft.com/download/details.aspx?id=37145) el 12 de septiembre de 2016. | 12 de septiembre de 2016  | 11 de julio de 2017 |
 |Puntos de actualización de software con un clúster de equilibrio de carga de red (NLB) | 27 de febrero de 2016 | Versión 1702 | 
 |Secuencias de tareas: <br /> - OSDPreserveDriveLetter  <br /><br /> Ahora, durante una implementación del sistema operativo, el programa de instalación de Windows determina, de forma predeterminada, cuál es la mejor letra de unidad (normalmente C:). Si quiere especificar otra unidad, puede cambiar la ubicación en el paso de secuencia de tareas Aplicar el sistema operativo. Vaya a la opción de configuración **Seleccionar la ubicación en la que desea aplicar este sistema operativo**. Seleccione **Letra de unidad lógica específica** y elija la unidad que desee utilizar. |20 de junio de 2016 |Versión 1606 |
 |Protección de acceso a redes (NAP): como aparece en System Center 2012 Configuration Manager|10 de julio de 2015|Versión 1511|  

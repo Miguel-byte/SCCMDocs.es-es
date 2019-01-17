@@ -1,8 +1,8 @@
 ---
 title: Compatibilidad con la virtualización
 titleSuffix: Configuration Manager
-description: Obtenga los requisitos para instalar los roles de sistema de sitio y el cliente de System Center Configuration Manager en un entorno de virtualización.
-ms.date: 1/12/2017
+description: Los requisitos para instalar los roles de sistema de sitio y el cliente de Configuration Manager en un entorno de virtualización.
+ms.date: 01/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,58 +10,65 @@ ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec7db94635bcc03b21392db19eb668917f38de6d
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 792e9e34f67ad0dc2a12df0905578effaf1f79aa
+ms.sourcegitcommit: 3f791918c5dd87d8968ae9977d761dd97909398c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417224"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54196321"
 ---
-# <a name="support-for-virtualization-environments-for-system-center-configuration-manager"></a>Compatibilidad con entornos de virtualización de System Center Configuration Manager
+# <a name="support-for-virtualization-environments-with-configuration-manager"></a>Compatibilidad con entornos de virtualización con Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Configuration Manager admite la instalación de los roles de sistema de sitio y clientes en sistemas operativos compatibles que se ejecutan como una máquina virtual en los entornos de virtualización que se muestran en este artículo. Esta compatibilidad existe incluso cuando el host de máquina virtual (entorno de virtualización) no se admita como un servidor de sitio o cliente.  
+Configuration Manager admite la instalación de los roles de sistema de sitio y clientes en sistemas operativos compatibles que se ejecutan como una máquina virtual en los entornos de virtualización de este artículo. Esta compatibilidad existe incluso cuando el host de máquina virtual (entorno de virtualización) no se admita como un servidor de sitio o cliente.  
 
- Por ejemplo, si usa Microsoft Hyper-V Server 2012 para hospedar una máquina virtual que ejecuta Windows Server 2012, puede instalar los roles de sistema de sitio o cliente en la máquina virtual (Windows Server 2012), pero no en el host (Microsoft Hyper-V Server 2012).  
-
-
-|            Entorno de virtualización             |
-|---------------------------------------------------|
-|              Windows Server 2008 R2               |
-|         Microsoft Hyper-V Server 2008 R2          |
-|                Windows Server 2012                |
-|           Microsoft Hyper-V Server 2012           |
-|              Windows Server 2012 R2               |
-|   Windows Server 2016 <sup>(Ver *nota 1*)</sup>   |
-| Microsoft Hyper-V Server 2016 <sup>(Ver *nota 1*) |
-
--  *Nota 1*: Configuration Manager no admite la [virtualización anidada](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/what-s-new-in-hyper-v-on-windows#a-namebkmknestedanested-virtualization-new), que es nueva en Windows Server 2016.
+Por ejemplo, puede usar Microsoft Hyper-V Server 2012 para hospedar una máquina virtual que ejecuta Windows Server 2012. Puede instalar los roles de sistema de sitio y el cliente en la máquina virtual que ejecuta Windows Server 2012. El cliente no se puede instalar en el host que ejecuta Microsoft Hyper-V Server 2012.  
 
 
- Cada equipo virtual que use debe cumplir o superar los mismos requisitos de hardware y software que usaría para un equipo físico de Configuration Manager.  
+## <a name="virtualization-environments"></a>Entornos de virtualización
 
- Puede validar que el entorno de virtualización es compatible con Configuration Manager mediante el Programa de validación de virtualización del servidor y su Asistente para directivas de compatibilidad del programa de virtualización en línea. Para obtener más información sobre el Programa de validación de virtualización del servidor, consulte [Windows Server Virtualization Validation Program](https://www.windowsservercatalog.com/svvp.aspx) (Programa de validación de virtualización de Windows Server).  
+- Windows Server 2019  
+- Windows Server 2016 <sup>[Note 1](#bkmk_note1)</sup>  
+- Microsoft Hyper-V Server 2016 <sup>[Note 1](#bkmk_note1)</sup>  
+- Windows Server 2012 R2  
+- Microsoft Hyper-V Server 2012  
+- Windows Server 2012  
+- Microsoft Hyper-V Server 2008 R2  
+- Windows Server 2008 R2  
+
+#### <a name="bkmk_note1"></a> Nota 1: Virtualización anidada
+Configuration Manager no admite la [virtualización anidada](https://docs.microsoft.com/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#BKMK_nested), que es nueva en Windows Server 2016.
+
+
+### <a name="virtualization-environment-support"></a>Compatibilidad del entorno de virtualización
+
+Cada equipo virtual tiene los mismos o mayores requisitos de hardware y software que se usarían para un equipo de Configuration Manager físico.  
+
+Para validar que el entorno de virtualización es compatible con Configuration Manager, use el Programa de validación de virtualización del servidor. Incluye un Asistente para directivas de compatibilidad del programa de virtualización en línea. Para más información, consulte [Windows Server Virtualization Validation Program](https://www.windowsservercatalog.com/svvp.aspx) (Programa de validación de virtualización del servidor de Windows).  
 
 > [!NOTE]  
->  Configuration Manager no es compatible con sistemas operativos invitados de Virtual PC o Virtual Server que se ejecuten en equipos Mac.  
+> Configuration Manager no es compatible con sistemas operativos invitados de Virtual PC o Virtual Server que se ejecuten en equipos Mac.  
 
-Configuration Manager no puede administrar máquinas virtuales a menos que estén en línea. No se puede actualizar una imagen de máquina virtual sin conexión ni se puede recopilar un inventario mediante el cliente de Configuration Manager en el equipo host.  
+Configuration Manager no puede administrar máquinas virtuales si están sin conexión. No se puede actualizar una imagen de máquina virtual sin conexión ni se puede recopilar un inventario mediante el cliente de Configuration Manager en el equipo host.  
 
 Las máquinas virtuales no reciben ninguna consideración especial. Por ejemplo, Configuration Manager no puede determinar si una actualización se debe volver a aplicar a una imagen de máquina virtual si la máquina virtual se ha detenido y reiniciado sin guardar el estado de la máquina virtual a la que se ha aplicado la actualización.  
 
+
+
 ##  <a name="bkmk_Azure"></a> Máquinas virtuales de Microsoft Azure  
- Configuration Manager puede ejecutarse en máquinas virtuales de Azure y localmente dentro de la red corporativa física. Puede usar Configuration Manager con máquinas virtuales de Azure en los escenarios siguientes:  
 
--   **Escenario 1:** puede ejecutar Configuration Manager en una máquina virtual de Azure y usarlo para administrar clientes instalados en otras máquinas virtuales de Azure.  
+Configuration Manager puede ejecutarse en máquinas virtuales de Azure y localmente dentro del centro de datos. Puede usar Configuration Manager con máquinas virtuales de Azure en los escenarios siguientes:  
 
--   **Escenario 2:** puede ejecutar Configuration Manager en una máquina virtual de Azure y usarlo para administrar clientes que no se ejecutan en Azure.  
+- **Escenario 1**: Ejecutar Configuration Manager en una máquina virtual de Azure. Úselo para administrar clientes en otras máquinas virtuales de Azure.  
 
--   **Escenario 3:** puede ejecutar diferentes roles de sistema de sitio de Configuration Manager en máquinas virtuales de Azure mientras ejecuta otros roles en su red corporativa física (con la conectividad de red adecuada para las comunicaciones).  
+- **Escenario 2**: Ejecutar Configuration Manager en una máquina virtual de Azure. Úselo para administrar clientes que no se ejecuten en Azure.  
 
-Los mismos requisitos de System Center Configuration Manager para redes, configuraciones admitidas y requisitos de hardware que se aplican a la instalación de Configuration Manager local en su red corporativa física también se aplican a la instalación en máquinas virtuales de Azure.  
+- **Escenario 3**: Ejecutar distintos roles de sistema de sitio de Configuration Manager en máquinas virtuales de Azure. Ejecute otros roles en el centro de datos local que está conectado correctamente a Azure.  
 
-Para obtener más información, vea [Configuration Manager en Azure - Preguntas más frecuentes](/sccm/core/understand/configuration-manager-on-azure).
+Los mismos requisitos de Configuration Manager para redes, configuraciones admitidas y los requisitos de hardware que se aplican para instalarlo en el entorno local también se aplican a la instalación en máquinas virtuales de Azure.  
+
+Para más información, consulte [Configuration Manager en Azure](/sccm/core/understand/configuration-manager-on-azure).
 
 > [!IMPORTANT]  
->  Los sitios y clientes de Configuration Manager que se ejecutan en máquinas virtuales de Azure están sujetos a los mismos requisitos de licencia que las instalaciones locales.  
+> Los sitios y clientes de Configuration Manager que se ejecutan en máquinas virtuales de Azure están sujetos a los mismos requisitos de licencia que las instalaciones locales.  

@@ -10,12 +10,12 @@ ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 821c7f32799020948630cd873fead144ae21e39e
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ms.openlocfilehash: 4dcf5ce0c31f72db1e6af3ac9e024c83afe92337
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229269"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250670"
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>Novedades de la versión 1710 de System Center Configuration Manager
 
@@ -64,7 +64,7 @@ Como en los dispositivos ahora se incluyen unidades de disco duro con tamaños e
 ## <a name="client-management"></a>Administración de cliente
 
 ### <a name="co-management-for-windows-10-devices"></a>Administración conjunta para dispositivos de Windows 10    
-<!-- 1350871 --> Las actualizaciones anteriores de Windows 10 ya permiten unir un dispositivo Windows 10 a Active Directory (AD) local y en la nube al mismo tiempo (Azure AD híbrido). A partir de la versión 1710 de Configuration Manager, la administración conjunta aprovecha esta mejora y permite administrar dispositivos de la versión 1709 de Windows 10 (también conocida con el nombre Fall Creators Update) de forma simultánea mediante Intune y Configuration Manager. Se trata de una solución que sirve de puente entre la administración tradicional y moderna, y proporciona un camino para realizar la transición con un enfoque por fases. Para más información, consulte [Administración conjunta para dispositivos de Windows 10](/sccm/core/clients/manage/co-management-overview).
+<!-- 1350871 --> Las actualizaciones anteriores de Windows 10 ya permiten unir un dispositivo Windows 10 a Active Directory (AD) local y en la nube al mismo tiempo (Azure AD híbrido). A partir de la versión 1710 de Configuration Manager, la administración conjunta aprovecha esta mejora y permite administrar dispositivos de la versión 1709 de Windows 10 (también conocida con el nombre Fall Creators Update) de forma simultánea mediante Intune y Configuration Manager. Se trata de una solución que sirve de puente entre la administración tradicional y moderna, y proporciona un camino para realizar la transición con un enfoque por fases. Para más información, consulte [Administración conjunta para dispositivos de Windows 10](/sccm/comanage/overview).
 
 ### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>Reinicio de equipos desde la consola de Configuration Manager <!-- 1356283 -->
 A partir de esta versión, puede usar la consola de Configuration Manager para identificar los dispositivos de cliente que requieren un reinicio y, después, usar una acción de notificación de cliente para reiniciarlos.
@@ -88,8 +88,8 @@ Para obtener más información sobre el uso de la funcionalidad de scripts de ej
 
 ### <a name="new-mobile-application-management-policy-settings"></a>Configuración de nueva directiva de administración de aplicaciones móviles
 <!-- 1324760 --> Las siguientes opciones se han agregado a la configuración de directiva de administración de aplicaciones móviles:
-- **Deshabilitar sincronización de contactos:** impide que la aplicación guarde los datos en la aplicación de contactos nativa del dispositivo.
-- **Deshabilitar la impresión:** impide que la aplicación imprima datos profesionales o educativos.
+- **Deshabilitar sincronización de contactos**: impide que la aplicación guarde los datos en la aplicación de contactos nativa del dispositivo.
+- **Deshabilitar la impresión**: impide que la aplicación imprima datos profesionales o educativos.
 
 ### <a name="software-center-no-longer-distorts-icons-larger-than-250x250"></a>El Centro de software ya no distorsiona los iconos que tienen un tamaño superior a 250 x 250  
 <!-- 1356194 -->
@@ -179,9 +179,9 @@ Para minimizar el riesgo de compatibilidad, los perfiles VPN existentes no se mo
 
 Para obtener más información, consulte [Perfiles de VPN en dispositivos móviles en System Center Configuration Manager](../../../mdm/deploy-use/create-vpn-profiles.md).
 
-### <a name="limited-support-for-cryptography-next-generation-cng-certificates----1356191---"></a>Compatibilidad limitada con certificados Cryptography: Next Generation (CNG) <!-- 1356191 -->
+### <a name="limited-support-for-cryptography-next-generation-cng-certificates----1356191---"></a>Compatibilidad limitada con certificados de Cryptography: Certificados de Next Generation (CNG) <!-- 1356191 -->
 
-Configuration Manager tiene compatibilidad limitada con certificados Cryptography: Next Generation (CNG). Los clientes de Configuration Manager pueden usar un certificado de autenticación del cliente PKI con clave privada en el proveedor de almacenamiento de claves (KSP) de CNG. Gracias a la compatibilidad con KSP, los clientes de Configuration Manager admiten una clave privada basada en hardware, como el KSP de TPM para los certificados de autenticación de cliente PKI.
+Configuration Manager tiene compatibilidad limitada con Cryptography: Next Generation (CNG). Los clientes de Configuration Manager pueden usar un certificado de autenticación del cliente PKI con clave privada en el proveedor de almacenamiento de claves (KSP) de CNG. Gracias a la compatibilidad con KSP, los clientes de Configuration Manager admiten una clave privada basada en hardware, como el KSP de TPM para los certificados de autenticación de cliente PKI.
 
 Para obtener más información, consulte [Introducción a los certificados CNG](../network/cng-certificates-overview.md).
 

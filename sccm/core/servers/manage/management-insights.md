@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3721c4c35dd22a0d2a59d2300bd25dfbd3c75aeb
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: cd2cee9de9f876f591145a12443b50d08349a451
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456318"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250755"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Información de administración en Configuration Manager
 
@@ -42,7 +42,7 @@ Las siguientes cuatro pestañas están disponibles para su revisión:
 
 - **Todas las reglas**: proporciona la lista completa de las reglas para el grupo de información de administración elegido.  
 
-- **Completa**: enumera las reglas en las que no se necesita ninguna acción.  
+- **Completa**:  enumera las reglas en las que no se necesita ninguna acción.  
 
 - **En curso**: muestra las reglas en las que algunos requisitos previos están completos, pero no todos.  
 
@@ -87,11 +87,11 @@ Use los siguientes filtros en la parte superior del panel para ajustar la vista:
 
 En el panel se incluyen los iconos siguientes:  
 
-- **Índice de información de administración**: realiza un seguimiento del progreso general en las reglas de información de administración. El índice es un promedio ponderado. Las reglas críticas valen más. Este índice proporciona el menor peso a las reglas opcionales.  
+- **Índice de Información de administración**: realiza el seguimiento del progreso general en las reglas de información de administración. El índice es un promedio ponderado. Las reglas críticas valen más. Este índice proporciona el menor peso a las reglas opcionales.  
 
-- **Grupos de información de administración**: muestra el porcentaje de las reglas en cada grupo, teniendo en cuenta los filtros. Seleccione un grupo para explorar en profundidad las reglas específicas de este grupo.  
+- **Grupos de Información de administración**: muestra el porcentaje de las reglas en cada grupo, teniendo en cuenta los filtros. Seleccione un grupo para explorar en profundidad las reglas específicas de este grupo.  
 
-- **Prioridad de información de administración**: muestra el porcentaje de las reglas por prioridad, teniendo en cuenta los filtros.   
+- **Prioridad de Información de administración**: muestra el porcentaje de las reglas por prioridad, teniendo en cuenta los filtros.   
 
 - **Toda la información**: una tabla de información, incluida la prioridad y el estado. Use el campo **Filtro** situado en la parte superior de la tabla para emparejar las cadenas de cualquiera de las columnas disponibles. El panel ordena la tabla en el orden siguiente:
     - Estado: acción necesaria, completado, desconocido  
@@ -126,20 +126,20 @@ Conclusiones de administración de la aplicación.
 
 Ayuda a integrar con muchos servicios en la nube, lo que permite la administración moderna de los dispositivos. 
 
-- **Evaluar la disponibilidad de la coadministración**: ayuda a comprender qué pasos son necesarios para habilitar la administración conjunta. Esta regla tiene requisitos previos. Para obtener más información, vea [Información general sobre la administración conjunta](/sccm/core/clients/manage/co-management-overview).  
+- **Evaluar la preparación de la administración conjunta**: ayuda a comprender qué pasos son necesarios para habilitar la administración conjunta. Esta regla tiene requisitos previos. Para obtener más información, vea [Información general sobre la administración conjunta](/sccm/comanage/overview).  
 
-- **Configurar servicios de Azure para su uso con Configuration Manager**: esta regla le ayuda a incorporar Configuration Manager a Azure AD, que permite a los clientes autenticarse en el sitio mediante Azure AD. Para obtener más información, vea [Configuración de servicios de Azure](/sccm/core/servers/deploy/configure/azure-services-wizard).  
+- **Configuración de servicios de Azure para utilizarlos con Configuration Manager**: esta regla le ayuda a incorporar Configuration Manager a Azure AD, que permite a los clientes autenticarse en el sitio mediante Azure AD. Para obtener más información, vea [Configuración de servicios de Azure](/sccm/core/servers/deploy/configure/azure-services-wizard).  
 
-- **Habilitar dispositivos para que sean híbridos unidos a Active Directory**: los dispositivos unidos a Azure AD permiten a los usuarios iniciar sesión con sus credenciales de dominio y también asegurarse de que los dispositivos cumplen los estándares de seguridad y cumplimiento de la organización. Para obtener más información, vea [Consideraciones de diseño de identidad híbrida de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview).  
+- **Habilitar dispositivos para que sean híbridos unidos a Azure Active Directory**: los dispositivos unidos a Azure AD permiten a los usuarios iniciar sesión con sus credenciales de dominio y también asegurarse de que los dispositivos cumplen los estándares de seguridad y cumplimiento de la organización. Para obtener más información, vea [Consideraciones de diseño de identidad híbrida de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview).  
 
-- **Actualizar clientes a la última versión de Windows 10**: Windows 10, versión 1709 o superior, mejora y moderniza la experiencia informática de los usuarios. Para obtener más información, vea [Artículos clave sobre la adopción de Windows como servicio](/sccm/core/understand/configuration-manager-and-windows-as-service#key-articles-about-adopting-windows-as-a-service).  
+- **Actualización de clientes a la versión más reciente de Windows 10**: Windows 10, versión 1709 o superior, mejora y moderniza la experiencia informática de los usuarios. Para obtener más información, vea [Artículos clave sobre la adopción de Windows como servicio](/sccm/core/understand/configuration-manager-and-windows-as-service#key-articles-about-adopting-windows-as-a-service).  
 
 
 ### <a name="collections"></a>Recopilaciones
 
 Información que ayuda a simplificar la administración mediante la limpieza y reconfiguración de las colecciones.
 
-- **Colecciones vacías**: muestra las colecciones del entorno que no tienen miembros. Para obtener más información, vea [Cómo administrar colecciones](/sccm/core/clients/manage/collections/manage-collections).  
+- **Colecciones vacías**: enumera las colecciones del entorno que no tienen miembros. Para obtener más información, vea [Cómo administrar colecciones](/sccm/core/clients/manage/collections/manage-collections).  
 
 
 ### <a name="proactive-maintenance"></a>Mantenimiento proactivo
@@ -151,19 +151,19 @@ Información que ayuda a simplificar la administración mediante la limpieza y r
 
 - **Puntos de distribución que no proporcionan contenido a los clientes**: puntos de distribución que no han proporcionado contenido a los clientes en los treinta últimos días. Estos datos se basan en los informes de los clientes de su historial de descargas. Para obtener más información, vea [Instalación y configuración de puntos de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points).  
 
-- **Habilitar la limpieza de WSUS**: comprueba que haya habilitado la opción para ejecutar la limpieza WSUS en las propiedades de componente de punto de actualización de software. Esta opción ayuda a mejorar el rendimiento de WSUS. Para obtener más información, vea [Mantenimiento de las actualizaciones de software](/sccm/sum/deploy-use/software-updates-maintenance).  
+- **Habilitar la limpieza WSUS**: comprueba que haya habilitado la opción para ejecutar la limpieza WSUS en las propiedades de componente de punto de actualización de software. Esta opción ayuda a mejorar el rendimiento de WSUS. Para obtener más información, vea [Mantenimiento de las actualizaciones de software](/sccm/sum/deploy-use/software-updates-maintenance).  
 
 - **Imágenes de arranque no utilizadas**: imágenes de arranque a las que no hay ninguna referencia para el uso de la secuencia de tareas o del arranque PXE. Para más información, vea [Manage boot images (Administrar imágenes de arranque)](/sccm/osd/get-started/manage-boot-images).  
 
 - **Elementos de configuración no utilizados**: elementos de configuración que no forman parte de una línea base de configuración y tienen más de 30 días. Para obtener más información, consulte [Crear una línea base de configuración](/sccm/compliance/deploy-use/create-configuration-baselines).  
 
-- **Actualizar los orígenes de caché del mismo nivel a la versión más reciente del cliente de Configuration Manager**: identifique los clientes que actúan como origen de caché del mismo nivel pero no se han actualizado desde una versión de cliente anterior a 1806. Los clientes de la versión anterior a la 1806 no pueden usarse como un origen de caché del mismo nivel para clientes que ejecutan la versión 1806 o alguna posterior. Seleccione **Realizar acción** para abrir una vista de dispositivo que muestre la lista de clientes.<!--1358008-->  
+- **Actualizar los orígenes de caché del mismo nivel a la última versión del cliente de Configuration Manager**: indentifique a los clientes que actúan como origen de caché del mismo nivel, pero no se ha actualizado desde una versión del cliente anterior a la 1806. Los clientes de la versión anterior a la 1806 no pueden usarse como un origen de caché del mismo nivel para clientes que ejecutan la versión 1806 o alguna posterior. Seleccione **Realizar acción** para abrir una vista de dispositivo que muestre la lista de clientes.<!--1358008-->  
 
 
 ### <a name="security"></a>Seguridad
 Conclusiones para mejorar la seguridad de su infraestructura y dispositivos. 
 
-- **Versiones del cliente antimalware no admitidas**: más del 10 % de los clientes ejecutan versiones de System Center Endpoint Protection que no son compatibles. Para obtener más información, vea [Endpoint Protection](/sccm/protect/deploy-use/endpoint-protection).  
+- **Versiones del cliente antimalware no admitidas**: Más del 10 % de los clientes ejecutan versiones de System Center Endpoint Protection que no son compatibles. Para obtener más información, vea [Endpoint Protection](/sccm/protect/deploy-use/endpoint-protection).  
 
 
 ### <a name="simplified-management"></a>Administración simplificada
@@ -177,9 +177,9 @@ Conclusiones que le ayudarán a simplificar la administración diaria de su ento
 
 Conclusiones para la administración del Centro de software. 
 
-- **Dirigir a los usuarios al Centro de software en lugar de al Catálogo de aplicaciones**: compruebe si los usuarios han instalado o solicitado aplicaciones del Catálogo de aplicaciones en los últimos 14 días. La funcionalidad principal del Catálogo de aplicaciones ahora se incluye en el Centro de software. La compatibilidad con el sitio web del catálogo de aplicaciones finaliza en la versión 1806. Para más información, vea [Deprecated Features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#deprecated-features) (Características en desuso).  
+- **Dirigir a los usuarios al Centro de software en lugar de al catálogo de aplicaciones**: compruebe si los usuarios han instalado o solicitado aplicaciones del catálogo de aplicaciones en los últimos 14 días. La funcionalidad principal del Catálogo de aplicaciones ahora se incluye en el Centro de software. La compatibilidad con el sitio web del catálogo de aplicaciones finaliza en la versión 1806. Para más información, vea [Deprecated Features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#deprecated-features) (Características en desuso).  
 
-- **Utilice la nueva versión del Centro de software**: la versión anterior del Centro de software ya no se admite. Configure los clientes para que usen el nuevo Centro de software. Para ello, habilite la opción de cliente **Usar nuevo Centro de software** en el grupo **Agente de equipo**. Para más información, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#use-new-software-center).  
+- **Uso de la nueva versión del Centro de software**: La versión anterior del Centro de software ya no se admite. Configure los clientes para que usen el nuevo Centro de software. Para ello, habilite la opción de cliente **Usar nuevo Centro de software** en el grupo **Agente de equipo**. Para más información, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#use-new-software-center).  
 
 
 ### <a name="windows-10"></a>Windows 10
@@ -188,7 +188,7 @@ Conclusiones relacionadas con la implementación y el mantenimiento de Windows 1
 
 - **Configurar la telemetría de Windows y la clave de id. comercial**: para usar datos de Upgrade Readiness, configure los dispositivos con una clave de id. comercial y habilite la telemetría. Establezca los dispositivos Windows 10 en el nivel de telemetría Mejorado (limitado) o en uno superior. Para obtener más información, vea [Configuración de clientes para notificar datos a Windows Analytics](/sccm/core/clients/manage/monitor-windows-analytics#configure-clients-to-report-data-to-windows-analytics).  
 
-- **Conectar Configuration Manager con Upgrade Readiness**: aproveche Upgrade Readiness para acelerar las implementaciones de Windows 10 antes de que Windows 7 quede fuera del soporte técnico. Para obtener más información, vea [Integrar Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics).   
+- **Conexión de Configuration Manager con Upgrade Readiness**: aproveche Upgrade Readiness para agilizar sus implementaciones de Windows 10 antes de que Windows 7 se quede sin soporte. Para obtener más información, vea [Integrar Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics).   
 
 #### <a name="windows-10-management-insights-rules"></a>Reglas de información de administración de Windows 10
 ![Reglas de información de administración para Windows 10](./media/Windows-10-insights-group.png)

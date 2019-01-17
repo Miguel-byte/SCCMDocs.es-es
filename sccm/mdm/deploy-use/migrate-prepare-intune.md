@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
-ms.openlocfilehash: f7c0f0d9dc52c39e0ec33abb8df565d4918471f7
-ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
+ms.openlocfilehash: 3f7d880f7e220966a9baa71ac6ad9286a398ffaa
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53818045"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342863"
 ---
 # <a name="prepare-intune-for-user-migration"></a>Preparación de Intune para la migración de usuarios 
 
@@ -25,7 +25,7 @@ Antes de migrar los usuarios de MDM híbrida a Intune independiente, siga los pa
 ## <a name="fix-issues-found-during-data-collection-and-import"></a>Corrección de problemas encontrados durante la importación y la recopilación de datos
 Si ha usado la herramienta Intune Data Importer para [importar datos de Configuration Manager a Microsoft Intune](migrate-import-data.md), resumen los objetos no se pudo importar. Algunos de los problemas más frecuentes y pasos para corregirlos en Intune, se muestran en la tabla siguiente: 
 
-|Problema  |Corrección  |
+|Problema  |Fix  |
 |---------|---------|
 |Colecciones basadas en la pertenencia directa o complejas no se migran automáticamente.|Crear grupos de Azure Active Directory (Azure AD) en Azure para reemplazar la colección que no se ha importado. A continuación, asigne el objeto al grupo.|
 |No puede importables directivas |Vuelva a crear la directiva de Intune.|
@@ -50,7 +50,7 @@ Si se [importa datos de Configuration Manager a Microsoft Intune](migrate-import
 - [Asignación de directivas](https://docs.microsoft.com/intune/get-started-policies)  
 - [Asignación de perfiles](https://docs.microsoft.com/intune/device-profile-assign)  
     > [!NOTE]  
-    > Cuando Intune implementa el nuevo perfil de correo electrónico, los usuarios reciben un aviso para volver a escribir su contraseña.  
+    > Cuando Intune implementa el nuevo perfil de correo electrónico, los usuarios reciben un aviso para volver a escribir su contraseña. Este comportamiento se produce en los correos electrónicos que se va a redownloaded en dispositivos de los usuarios. Las modificaciones personalizadas por el usuario deberá realizarse de nuevo. 
 - [Asignación de aplicaciones](https://docs.microsoft.com/intune/get-started-apps) 
 
 ## <a name="terms-and-conditions-policy"></a>Directiva de términos y condiciones

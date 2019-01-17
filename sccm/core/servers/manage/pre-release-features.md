@@ -10,12 +10,12 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6fb24c3e262f3d1f3991ab549592e3f21631b32d
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 4d892e8d194f61fece977c91ce36ba46cf9dd53d
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456144"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250721"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Características de versión preliminar en Configuration Manager
 
@@ -77,7 +77,7 @@ Al habilitar una característica de versión preliminar, el Administrador de jer
 |------------------|----------------------|-------------------------|
 | API del proveedor de SMS <!--1359052--> | Versión 1810 | ![Todavía no](media/red_x.png) |
 | [Sistema de sitios HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | Versión 1806 | Versión 1810 |
-| [Aplicaciones móviles para dispositivos administrados conjuntamente](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune) <!--1357892--> | Versión 1806 | ![Todavía no](media/red_x.png) |
+| [Aplicaciones cliente para dispositivos administrados conjuntamente](/sccm/comanage/workloads#client-apps) <!--1357892--> | Versión 1806 | ![Todavía no](media/red_x.png) |
 | [Administrador de conversión de paquetes](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | Versión 1806 | Versión 1810 |
 | [Compatibilidad con Cisco AnyConnect 4.0.07x y versiones posteriores para iOS](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | Versión 1802 | Versión 1802 <br>con la actualización 4163547 |
 | [Implementaciones por fases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | Versión 1802 | Versión 1806 |

@@ -10,12 +10,12 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5fd7c26c190407ba5e497068582704b03c71f00
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: fe8fb2a8138433d00686530f76916a1ee4e88dac
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411517"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250806"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Novedades de la versión 1806 de la rama actual de Configuration Manager
 
@@ -134,9 +134,9 @@ Para obtener más información, vea [Partial download support](/sccm/core/plan-d
 ### <a name="boundary-group-options-for-peer-downloads"></a>Opciones de grupo de límites para descargas del mismo nivel
 <!--1356193--> Los grupos de límites ahora incluyen valores de configuración adicionales para ofrecerle mayor control sobre la distribución de contenido en su entorno. Esta versión agrega las siguientes opciones:  
 
-- **Permitir descargas del mismo nivel en este grupo de límites**: el punto de administración proporciona a los clientes una lista de ubicaciones de contenido que incluye orígenes del mismo nivel. Este valor afecta también a la aplicación de los identificadores de grupo para la optimización de entrega.  
+- **Permitir descargas del mismo nivel en este grupo de límites**: El punto de administración proporciona a los clientes una lista de ubicaciones de contenido que incluye orígenes del mismo nivel. Este valor afecta también a la aplicación de los identificadores de grupo para la optimización de entrega.  
 
-- **Durante las descargas del mismo nivel, solo use elementos del mismo nivel en la misma subred**: si habilita esta opción, el punto de administración solo se incluye en los orígenes del mismo nivel de la lista de ubicaciones de contenido que se encuentran en la misma subred que el cliente.  
+- **Durante las descargas del mismo nivel, use solo elementos del mismo nivel dentro de la misma subred**: el punto de administración solo se incluye en los orígenes del mismo nivel de la lista de ubicaciones de contenido que se encuentran en la misma subred que el cliente.  
 
 Para más información, vea [Opciones de grupo de límites para descargas del mismo nivel](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
@@ -197,7 +197,7 @@ La versión 1806 incluye las mejoras siguientes en Cloud Management Gateway (CMG
 #### <a name="simplified-client-bootstrap-command-line"></a>Línea de comandos de arranque de cliente simplificada
 <!--1358215--> Al instalar el cliente de Configuration Manager en Internet a través de CMG, la línea de comandos ahora necesita menos propiedades. Esta mejora reduce el tamaño de la línea de comandos usada en Microsoft Intune al prepararse para la administración conjunta. 
 
-Para obtener más información, vea [Preparar dispositivos de Windows 10 para la administración conjunta](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).
+Para más información, consulte [Preparación de dispositivos basados en Internet](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client).
 
 #### <a name="download-content-from-a-cmg"></a>Descargar contenido desde un CMG
 <!--1358651--> Anteriormente, era necesario implementar un punto de distribución de nube y CMG como roles independientes. Una instancia de CMG ahora también puede servir contenido a los clientes. Esta funcionalidad reduce los certificados necesarios y el costo de máquinas virtuales de Azure. 
@@ -214,13 +214,13 @@ Para obtener más información, vea [Modify a CMG](/sccm/core/clients/manage/cmg
 ### <a name="sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device"></a>Sincronizar directiva MDM desde Microsoft Intune para un dispositivo administrado conjuntamente
 <!--1357377--> Al cambiar una carga de trabajo de administración conjunta, los dispositivos administrados conjuntamente sincronizan automáticamente la directiva de MDM de Microsoft Intune. Esta sincronización también se produce al iniciar la acción **Descargar directiva de equipo** desde Notificaciones de cliente en la consola de Configuration Manager. 
 
-Para obtener más información, vea [Cambiar las cargas de trabajo de Configuration Manager a Intune](/sccm/core/clients/manage/co-management-switch-workloads).
+Para más información, consulte [Cambiar las cargas de trabajo de Configuration Manager a Intune](/sccm/comanage/how-to-switch-workloads).
 
 
 ### <a name="transition-new-workloads-to-intune-using-co-management"></a>Transición de nuevas cargas de trabajo a Intune mediante la administración conjunta
 Las siguientes cargas de trabajo ahora pueden pasar de Configuration Manager a Intune después de habilitar la administración conjunta:  
 
-- **Configuración del dispositivo**<!--1357903-->: esta carga de trabajo permite usar Intune para implementar directivas de MDM y seguir usando Configuration Manager para la implementación de aplicaciones.  
+- **Configuración del dispositivo**<!--1357903-->: esta carga de trabajo le permite usar Intune para implementar directivas de MDM y seguir utilizando Configuration Manager para la implementación de aplicaciones.  
 
 - **Office 365**<!--1357841-->: los dispositivos no instalan implementaciones de Office 365 desde Configuration Manager.  
 
@@ -228,13 +228,13 @@ Las siguientes cargas de trabajo ahora pueden pasar de Configuration Manager a I
 
 Para realizar la transición de estas cargas de trabajo, vaya a la página de propiedades de administración conjunta y mueva la barra deslizante de la carga de trabajo de Configuration Manager a **Piloto** o a **Todo**. 
 
-Para más información, vea [Administración conjunta para dispositivos de Windows 10](/sccm/core/clients/manage/co-management-overview).
+Para más información, vea [Administración conjunta para dispositivos de Windows 10](/sccm/comanage/overview).
 
 
 ### <a name="support-for-multiple-hierarchies-to-one-intune-tenant"></a>Compatibilidad con varias jerarquías para un inquilino de Intune
 <!--1357944--> Algunos clientes tienen varias jerarquías de Configuration Manager y quieren consolidar en el futuro en un único inquilino para Azure Active Directory y Microsoft Intune. Ahora la administración conjunta permite conectar más de un entorno de Configuration Manager al mismo inquilino de Intune.
 
-Para obtener más información, vea [Preparar dispositivos de Windows 10 para la administración conjunta](/sccm/core/clients/manage/co-management-prepare).
+Para más información, consulte [Requisitos de administración conjunta](/sccm/comanage/overview#prerequisites).
  
 
 
@@ -269,7 +269,7 @@ Vea los siguientes artículos para más información:
 
 
 ### <a name="provision-windows-app-packages-for-all-users-on-a-device"></a>Aprovisionar los paquetes de aplicación de Windows para todos los usuarios en un dispositivo
-<!--1358310--> Aprovisione una aplicación con un paquete de aplicación de Windows para todos los usuarios del dispositivo. Un ejemplo común de este escenario es el aprovisionamiento de una aplicación de Microsoft Store para empresas y educación —por ejemplo, Minecraft: Education Edition— en todos los dispositivos usados por los alumnos en una escuela. Anteriormente, Configuration Manager solo admitía la instalación de estas aplicaciones por usuario. Tras iniciar sesión en un dispositivo nuevo, un estudiante tendría que esperar para obtener acceso a una aplicación. Ahora, al aprovisionarse la aplicación en el dispositivo para todos los usuarios, estos pueden empezar a trabajar más rápidamente. 
+<!--1358310--> Aprovisione una aplicación con un paquete de aplicación de Windows para todos los usuarios del dispositivo. Un ejemplo común de este escenario es el aprovisionamiento de una aplicación de Microsoft Store para Empresas y Educación, como Minecraft: Education Edition, en todos los dispositivos que usan los alumnos de una escuela. Anteriormente, Configuration Manager solo admitía la instalación de estas aplicaciones por usuario. Tras iniciar sesión en un dispositivo nuevo, un estudiante tendría que esperar para obtener acceso a una aplicación. Ahora, al aprovisionarse la aplicación en el dispositivo para todos los usuarios, estos pueden empezar a trabajar más rápidamente. 
 
 Para obtener más información, vea [Creación de aplicaciones Windows](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).
 
@@ -411,7 +411,7 @@ Para obtener más información, vea [Acerca de la configuración de cliente](/sc
 
 - Contactar con TI: información sobre cómo ponerse en contacto con el departamento de TI de la organización  
 
-- Centro de soporte técnico de TI: acciones de autoservicio de TI, como buscar una base de conocimientos o abrir una incidencia de soporte técnico.  
+- Centro de soporte técnico: acciones de autoservicio de TI, como buscar una base de conocimientos o abrir una incidencia de soporte técnico.  
 
 - Documentación de usuario final: artículos para los usuarios de la organización sobre diversos temas de TI como, por ejemplo, el uso de aplicaciones o la actualización a Windows 10.  
 
