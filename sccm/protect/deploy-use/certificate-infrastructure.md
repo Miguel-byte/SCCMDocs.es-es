@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ff32a35ccfe3ca51183497197622408c1a28a99d
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 783512841b61d6fa10e3f2832100e9000576e65a
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416306"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316531"
 ---
 # <a name="configure-certificate-infrastructure"></a>Configuración de la infraestructura de certificados
 
@@ -52,7 +52,7 @@ Siga estos pasos para configurar la infraestructura de certificados SCEP o PFX.
    > [!NOTE]  
    >  Estos son los permisos de seguridad predeterminados que serán adecuados para la mayoría de los entornos. Sin embargo, puede utilizar otra configuración de seguridad. Para más información, consulte [Planificación de permisos de plantilla de certificado para perfiles de certificado en System Center Configuration Manager](../../protect/plan-design/planning-for-certificate-template-permissions.md).  
 
-3. Implemente un certificado PKI que admita la autenticación de cliente en este servidor. Es posible que ya tenga instalado en el equipo un certificado adecuado que pueda utilizar, o tal vez precise o prefiera implementar un certificado especialmente para este propósito. Para obtener más información sobre los requisitos de este certificado, vea los detalles para servidores que ejecutan el módulo de directivas de Configuration Manager con el servicio de rol Servicio de inscripción de dispositivos de red en la sección **Certificados PKI para servidores** del tema [Requisitos de certificados PKI para System Center Configuration Manager](../../core/plan-design/network/pki-certificate-requirements.md).  
+3. Implemente un certificado PKI que admita la autenticación de cliente en este servidor. Es posible que ya tenga instalado en el equipo un certificado adecuado que pueda utilizar, o tal vez precise o prefiera implementar un certificado especialmente para este propósito. Para más información sobre los requisitos de este certificado, consulte los detalles en “Servidores que ejecutan el módulo de directivas de Configuration Manager con el servicio de rol Servicio de inscripción de dispositivos de red” en la sección **Certificados PKI para servidores** en el tema [Requisitos de certificados PKI para System Center Configuration Manager](../../core/plan-design/network/pki-certificate-requirements.md).  
 
    > [!TIP]
    >  Si necesita ayuda en la implementación de este certificado, puede usar las instrucciones de [Deploying the Client Certificate for Distribution Points (Implementación del certificado de cliente para puntos de distribución)](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012), ya que los requisitos del certificado son los mismos, con una excepción:  
@@ -125,7 +125,7 @@ Debe instalar y configurar al menos un punto de registro de certificados en la j
    - Si ha seleccionado **Procesar solicitudes de certificado SCEP**, configure lo siguiente:
      -   **Nombre del sitio web**, **Número de puerto HTTPS** y **Nombre de aplicación virtual** para el punto de registro de certificado. Estos campos se rellenan automáticamente con los valores predeterminados. 
      -   **Dirección URL para el Servicio de inscripción de dispositivos de red y certificado de CA raíz**: haga clic en **Agregar** y, en el cuadro de diálogo **Agregar dirección URL y certificado de CA raíz**, especifique lo siguiente:
-         - Dirección URL para el Servicio de inscripción de dispositivos de red **: Especifique la dirección URL con el siguiente formato: https://*< fqdn_servidor >*/certsrv/mscep/mscep.dll. Por ejemplo, si el FQDN del servidor que ejecuta el Servicio de inscripción de dispositivos de red es server1.contoso.com, escriba **https://server1.contoso.com/certsrv/mscep/mscep.dll**.
+         - **Dirección URL para el Servicio de inscripción de dispositivos de red**: especifique la dirección URL en el formato siguiente: https://*<server_FQDN>*/certsrv/mscep/mscep.dll . Por ejemplo, si el FQDN del servidor que ejecuta el Servicio de inscripción de dispositivos de red es server1.contoso.com, escriba **https://server1.contoso.com/certsrv/mscep/mscep.dll**.
          - **Certificado de CA raíz**: Busque y seleccione el archivo de certificado (.cer) que creó y guardó en **Paso 1: Instalar y configurar el Servicio de inscripción de dispositivos de red y dependencias**. Este certificado de CA raíz permite al punto de registro de certificados validar el certificado de autenticación de cliente que el módulo de directivas de System Center Configuration Manager usará.  
 
    - Si seleccionó **Procesar solicitudes de certificado PFX**, configure los detalles de conexión y las credenciales de la entidad de certificación elegida.
@@ -167,7 +167,7 @@ Debe instalar y configurar al menos un punto de registro de certificados en la j
 
 ## <a name="step-3----install-the-system-center-configuration-manager-policy-module-for-scep-certificates-only"></a>Paso 3: Instalar el módulo de directivas de System Center Configuration Manager (solo para certificados SCEP).
 
-Debe instalar y configurar el módulo de directivas de System Center Configuration Manager en cada servidor que especificó en **paso 2: Instalar y configurar el punto de registro de certificado como Dirección URL para el Servicio de inscripción de dispositivos de red** en las propiedades del punto de registro de certificado.  
+Debe instalar y configurar el módulo de directivas de System Center Configuration Manager en cada servidor especificado en el **Paso 2: Instalar y configurar el punto de registro de certificados** como **Dirección URL para el Servicio de inscripción de dispositivos de red** en las propiedades del punto de registro de certificados.  
 
 ##### <a name="to-install-the-policy-module"></a>Para instalar el módulo de directivas  
 
