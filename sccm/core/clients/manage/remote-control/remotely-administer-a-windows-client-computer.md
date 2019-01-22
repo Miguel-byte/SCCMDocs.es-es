@@ -10,12 +10,12 @@ ms.assetid: 3c9648c4-645e-4e47-ae10-2da817b8c83b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4437ef8f88b18b7148eadbc3d125d8ac72fb240a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9ce6bf7c39e400a59188388ee162bc187b1683a7
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338652"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316480"
 ---
 # <a name="how-to-remotely-administer-a-windows-client-computer-by-using-system-center-configuration-manager"></a>Cómo administrar de forma remota un equipo cliente de Windows con System Center Configuration Manager
 
@@ -82,7 +82,7 @@ A continuación se indican tres formas de iniciar el visor de control remoto:
 
 ### <a name="to-start-the-remote-control-viewer-from-the-windows-command-line"></a>Puede iniciar el visor de control remoto desde la línea de comandos de Windows.  
 
--   En el símbolo del sistema de Windows, escriba *<carpeta de instalación de Configuration Manager\>***\AdminConsole\Bin\x64\CmRcViewer.exe**  
+-   En el símbolo del sistema de Windows, escriba _<carpeta de instalación de Configuration Manager\>_**\AdminConsole\Bin\x64\CmRcViewer.exe**  
 
 CmRcViewer.exe admite las siguientes opciones de línea de comandos:  
 

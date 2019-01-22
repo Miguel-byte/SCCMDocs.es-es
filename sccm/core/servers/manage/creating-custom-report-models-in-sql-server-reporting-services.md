@@ -10,12 +10,12 @@ ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d011272c42f3347f555e4fb5322464e9c5e754da
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: b28a5be9a494d2568bbdfdee29f9e757ef97f940
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424704"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316565"
 ---
 # <a name="creating-custom-report-models-for-system-center-configuration-manager-in-sql-server-reporting-services"></a>Creación de modelos de informes personalizados para System Center Configuration Manager en SQL Server Reporting Services
 
@@ -146,7 +146,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
 3. Abra los archivos anteriores con un editor de texto, como el Bloc de notas.  
 
-4. En el archivo *&lt;Nombre del modelo\>***.dsv**, busque la primera línea del archivo, que dice lo siguiente:  
+4. En el archivo _&lt;Nombre del modelo\>_**.dsv**, busque la primera línea del archivo, que dice lo siguiente:  
 
     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
@@ -156,9 +156,9 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
 5. Copie todo el contenido del archivo en el Portapapeles de Windows.  
 
-6. Cierre el archivo *&lt;Nombre del modelo\>***.dsv**.  
+6. Cierre el archivo _&lt;Nombre del modelo\>_**.dsv**.  
 
-7. En el archivo *&lt;Nombre del modelo\>***.smdl**, busque las últimas tres líneas del archivo, que aparecen así:  
+7. En el archivo _&lt;Nombre del modelo\>_**.smdl**, busque las últimas tres líneas del archivo, que muestran lo siguiente:  
 
     `</Entity>`  
 
@@ -166,11 +166,11 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
     `</SemanticModel>`  
 
-8. Pegue el contenido del archivo *&lt;Nombre del modelo\>***.dsv** directamente antes de la última línea del archivo (**&lt;SemanticModel\>**).  
+8. Pegue el contenido del archivo _&lt;Nombre del modelo\>_**.dsv** directamente antes de la última línea del archivo (**&lt;SemanticModel\>**).  
 
-9. Guarde y cierre el archivo *&lt;Nombre del modelo\>***.smdl**.  
+9. Guarde y cierre el archivo _&lt;Nombre del modelo\>_**.smdl**.  
 
-10. Copie el archivo *&lt;Nombre del modelo\>***.smdl** en la carpeta *%programfiles%* \Microsoft Configuration Manager \AdminConsole\XmlStorage\Other en el servidor de sitio de Configuration Manager.  
+10. Copie el archivo _&lt;Nombre del modelo\>_**.smdl** en la carpeta *%programfiles%* \Microsoft Configuration Manager \AdminConsole\XmlStorage\Other en el servidor de sitio de Configuration Manager.  
 
     > [!IMPORTANT]  
     >  Después de copiar el archivo de modelo de informe en el servidor de sitio de Configuration Manager, debe salir y reiniciar la consola de Configuration Manager para poder usar el modelo de informe en el **Asistente para crear informes**.  
@@ -389,7 +389,7 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
 3. Abra los archivos anteriores con un editor de texto, como el Bloc de notas.  
 
-4. En el archivo *&lt;Nombre del modelo\>***.dsv**, busque la primera línea del archivo, que dice lo siguiente:  
+4. En el archivo _&lt;Nombre del modelo\>_**.dsv**, busque la primera línea del archivo, que dice lo siguiente:  
 
     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
@@ -399,9 +399,9 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
 5. Copie todo el contenido del archivo en el Portapapeles de Windows.  
 
-6. Cierre el archivo *&lt;Nombre del modelo\>***.dsv**.  
+6. Cierre el archivo _&lt;Nombre del modelo\>_**.dsv**.  
 
-7. En el archivo *&lt;Nombre del modelo\>***.smdl**, busque las últimas tres líneas del archivo, que aparecen así:  
+7. En el archivo _&lt;Nombre del modelo\>_**.smdl**, busque las últimas tres líneas del archivo, que muestran lo siguiente:  
 
     `</Entity>`  
 
@@ -409,11 +409,11 @@ System Center Configuration Manager incluye modelos de informe de ejemplo, pero 
 
     `</SemanticModel>`  
 
-8. Pegue el contenido del archivo *&lt;Nombre del modelo\>***.dsv** directamente antes de la última línea del archivo (**&lt;SemanticModel\>**).  
+8. Pegue el contenido del archivo _&lt;Nombre del modelo\>_**.dsv** directamente antes de la última línea del archivo (**&lt;SemanticModel\>**).  
 
-9. Guarde y cierre el archivo *&lt;Nombre del modelo\>***.smdl**.  
+9. Guarde y cierre el archivo _&lt;Nombre del modelo\>_**.smdl**.  
 
-10. Copie el archivo *&lt;Nombre del modelo\>***.smdl** en la carpeta *%programfiles%* \Microsoft Configuration Manager\AdminConsole\XmlStorage\Other en el servidor de sitio de Configuration Manager.  
+10. Copie el archivo _&lt;Nombre del modelo\>_**.smdl** en la carpeta *%programfiles%* \Microsoft Configuration Manager \AdminConsole\XmlStorage\Other en el servidor de sitio de Configuration Manager.  
 
     > [!IMPORTANT]  
     >  Después de copiar el archivo de modelo de informe en el servidor de sitio de Configuration Manager, debe salir y reiniciar la consola de Configuration Manager para poder usar el modelo de informe en el **Asistente para crear informes**.  
