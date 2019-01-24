@@ -10,12 +10,12 @@ ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 54034ec94ad2a0ea2b7ce095d9da669aea02f0b3
-ms.sourcegitcommit: 702e6017b6dee4629b67bb9f3bd5d9b5a889ebee
+ms.openlocfilehash: 9f6b10706638a476242051757145f725b262a7fc
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37340233"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316446"
 ---
 # <a name="language-packs-in-configuration-manager"></a>Paquetes de idioma en Configuration Manager
 
@@ -31,9 +31,9 @@ Instale varios idiomas en cada sitio. Solo necesita instalar los idiomas que usa
 
 Cuando se instala la compatibilidad para un idioma que coincide con los siguientes componentes:  
 
-- El idioma de : tanto la consola de Configuration Manager como la interfaz de usuario del cliente que se ejecuta en dicho equipo muestran información en dicho idioma.  
+- El idioma para mostrar de un equipo: tanto la consola de Configuration Manager como la interfaz de usuario del cliente que se ejecuta en dicho equipo muestran información en dicho idioma.  
 
-- La preferencia de idioma que utiliza el explorador web de un equipo: las conexiones con información basada en web, incluido el catálogo de aplicaciones o los informes de SQL Server Reporting Services se mostrarán en dicho idioma.  
+- La preferencia de idioma que está usando el explorador web de un equipo: las conexiones con información basada en web, incluido el catálogo de aplicaciones o los informes de SQL Server Reporting Services se mostrarán en dicho idioma.  
 
 
 Cuando ejecuta el programa de instalación de Configuration Manager, descarga los archivos del paquete de idioma como parte de los archivos de requisitos previos y redistribuibles. También puede usar el [Descargador del programa de instalación](setup-downloader.md) para descargar estos archivos antes de ejecutar el programa de instalación.   
@@ -47,7 +47,6 @@ Utilice la tabla siguiente para asignar un identificador de configuración regio
 |Idioma del servidor|Identificador de configuración regional (LCID)|Código de tres letras|  
 |---------------------|------------------------|-----------------------|  
 |Inglés (predeterminado)|0409|ENU|  
-|Chino (tradicional, RAE de Hong Kong)|0c04|ZHH|  
 |Chino (simplificado)|0804|CHS|  
 |Chino (tradicional, Taiwán)|0404|CHT|  
 |Checo|0405|CSY|  
@@ -75,7 +74,6 @@ Utilice la tabla siguiente para asignar un identificador de configuración regio
 |Idioma del cliente|Identificador de configuración regional (LCID)|Código de tres letras|  
 |---------------------|------------------------|-----------------------|  
 |Inglés (predeterminado)|0409|ENG|  
-|Chino (tradicional, RAE de Hong Kong)|0c04|ZHH|  
 |Chino - Simplificado|0804|CHS|  
 |Chino (tradicional, Taiwán)|0404|CHT|  
 |Checo|0405|CSY|  

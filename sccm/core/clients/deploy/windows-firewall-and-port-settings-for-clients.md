@@ -10,12 +10,12 @@ ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 193ee803fd0a6bacf043dbabc6550ef68a4a629a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 94af249b91735a535ea4056f8a5f19d120632770
+ms.sourcegitcommit: 818f98187d377a90263d1b1c89d4c1fdbf8c908b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337401"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54398496"
 ---
 # <a name="windows-firewall-and-port-settings-for-clients-in-system-center-configuration-manager"></a>Configuración de puertos y Firewall de Windows para clientes en System Center Configuration Manager
 
@@ -45,7 +45,7 @@ Los equipos cliente en System Center Configuration Manager que ejecutan Firewall
 ### <a name="client-push-installation"></a>Instalación de inserción de cliente  
  Para usar la inserción de cliente para instalar el cliente de Configuration Manager, agregue las excepciones siguientes al Firewall de Windows:  
 
--   Entrante y saliente: **Compartir impresoras y archivos**  
+-   Entrante y saliente: **Uso compartido de archivos e impresoras**  
 
 -   Entrante: **Instrumental de administración de Windows (WMI)**  
 
@@ -55,9 +55,9 @@ Los equipos cliente en System Center Configuration Manager que ejecutan Firewall
 ### <a name="client-requests"></a>Solicitudes de cliente  
  Para que los equipos cliente se comuniquen con los sistemas de sitio de Configuration Manager, agregue las siguientes excepciones al Firewall de Windows:  
 
- Saliente: puerto TCP **80** (para la comunicación HTTP)  
+ Saliente: puerto TCP **80** (para comunicación HTTP)  
 
- Saliente: puerto TCP **443** (para la comunicación HTTPS)  
+ Saliente: puerto TCP **443** (para comunicación HTTP)  
 
 > [!IMPORTANT]  
 >  Estos son los números de puerto predeterminados que se pueden cambiar en Configuration Manager. Para obtener más información, consulte [How to configure client communication ports in System Center Configuration Manager](../../../core/clients/deploy/configure-client-communication-ports.md) (Configuración de puertos de comunicación de cliente en System Center Configuration Manager). Si se han cambiado los valores predeterminados de estos puertos, también debe configurar las excepciones correspondientes en el Firewall de Windows.  
@@ -69,9 +69,9 @@ Los equipos cliente en System Center Configuration Manager que ejecutan Firewall
 
  Si esta comunicación no se realiza correctamente, Configuration Manager revierte automáticamente al uso del puerto de comunicación de HTTP o HTTPS entre el cliente y el punto de administración existente:  
 
- Saliente: puerto TCP **80** (para la comunicación HTTP)  
+ Saliente: puerto TCP **80** (para comunicación HTTP)  
 
- Saliente: puerto TCP **443** (para la comunicación HTTPS)  
+ Saliente: puerto TCP **443** (para comunicación HTTP)  
 
 > [!IMPORTANT]  
 >  Estos son los números de puerto predeterminados que se pueden cambiar en Configuration Manager. Consulte [How to configure client communication ports in System Center Configuration Manager](../../../core/clients/deploy/configure-client-communication-ports.md) (Configuración de puertos de comunicación de cliente en System Center Configuration Manager). Si se han cambiado los valores predeterminados de estos puertos, también debe configurar las excepciones correspondientes en el Firewall de Windows.  
@@ -79,7 +79,7 @@ Los equipos cliente en System Center Configuration Manager que ejecutan Firewall
 ### <a name="remote-control"></a>Control remoto  
  Para usar el control remoto de Configuration Manager, permita el puerto siguiente:  
 
--   Entrante: puerto TCP**2701**  
+-   Entrante: puerto TCP **2701**  
 
 ### <a name="remote-assistance-and-remote-desktop"></a>Asistencia remota y Escritorio remoto  
  Para iniciar Asistencia remota desde la consola de Configuration Manager, agregue el programa personalizado **Helpsvc.exe** y el puerto personalizado de entrada TCP **135** a la lista de programas y servicios permitidos en Firewall de Windows en el equipo cliente. También debe permitir **Asistencia remota** y **Escritorio remoto**. Si inicia Asistencia remota desde el equipo cliente, Firewall de Windows configura y permite de forma automática **Asistencia remota** y **Escritorio remoto**.  
@@ -89,9 +89,9 @@ Los equipos cliente en System Center Configuration Manager que ejecutan Firewall
 
  Saliente: puerto UDP **25536**  
 
- Saliente: puerto UDP **9**  
+ Saliente: Puerto UDP **9**  
 
- Estos son los números de puerto predeterminado que se pueden cambiar en Configuration Manager mediante el uso de configuraciones de clientes de **Administración de energía** de **Número de puerto de proxy de reactivación (UDP)** y **Número de puerto de Wake On LAN (UDP)**. Si especifica la configuración de cliente **Administración de energía**: **Excepción del Firewall de Windows para proxy de reactivación** , estos puertos se configuran automáticamente en el Firewall de Windows para los clientes. Sin embargo, si los clientes ejecutan otro firewall, debe configurar manualmente las excepciones para estos números de puerto.  
+ Estos son los números de puerto predeterminado que se pueden cambiar en Configuration Manager mediante el uso de configuraciones de clientes de **Administración de energía** de **Número de puerto de proxy de reactivación (UDP)** y **Número de puerto de Wake On LAN (UDP)**. Si especifica la opción de cliente **Administración de energía**: **Excepción del Firewall de Windows para proxy de reactivación**, estos puertos se configuran automáticamente en el Firewall de Windows para los clientes. Sin embargo, si los clientes ejecutan otro firewall, debe configurar manualmente las excepciones para estos números de puerto.  
 
  Además de estos puertos, el proxy de reactivación también utiliza los mensajes de solicitud de eco del Protocolo de mensajes de control de Internet (ICMP) desde un equipo cliente a otro equipo cliente. Esta comunicación se utiliza para confirmar si el otro equipo cliente está activo en la red. ICMP se conoce a veces como comandos ping de TCP/IP.  
 

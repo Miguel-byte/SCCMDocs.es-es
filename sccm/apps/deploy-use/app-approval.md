@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 666df71b32ea0dc95411b8ffd58d18f7666d7b23
-ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
+ms.openlocfilehash: 776d0a477d56a178927fb2d09866eacf63b4895a
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53444593"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342795"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Aprobar aplicaciones en Configuration Manager
 
@@ -69,6 +69,10 @@ Después de aprobar una aplicación para la instalación, puede **Denegar** la s
 <!--1321550-->
 
 A partir de la versión 1810, configure notificaciones por correo electrónico para las solicitudes de aprobación de aplicaciones. Recibirá un correo electrónico cuando un usuario solicite una aplicación. Haga clic en los vínculos que aparecen en el correo electrónico para aprobar o denegar la solicitud, sin requerir la consola de Configuration Manager.
+
+Puede definir las direcciones de correo electrónico de los usuarios que pueden aprobar o denegar la solicitud durante la creación de una nueva implementación de la aplicación. Si necesita cambiar la lista de direcciones de correo electrónico más adelante, vaya al área de trabajo **Supervisión**, expanda **Alertas** y seleccione el nodo **Suscripciones**. Seleccione **Propiedades** desde una de las suscripciones de **Aprobar aplicación por correo electrónico** que está relacionada con la implementación de la aplicación. 
+
+Si hay más de una alerta, puede determinar qué alerta va con cada implementación. Abra las propiedades de alerta y vea la lista de **Alertas seleccionadas** en la pestaña General. La implementación está habilitada como la alerta para esta suscripción. 
 
 
 ### <a name="prerequisites"></a>Requisitos previos

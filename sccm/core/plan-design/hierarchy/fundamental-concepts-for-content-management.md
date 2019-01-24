@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b73ead1492b143260d327f428db5a6183f84434c
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 4a777ec74fb4006df056b4e69d7cbdfb380bcf72
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411347"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342761"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Aspectos básicos de la administración de contenido en Configuration Manager
 
@@ -57,7 +57,7 @@ Para obtener más información, vea [Cuenta de acceso de paquetes](/sccm/core/pl
 
 
 ## <a name="binary-differential-replication"></a>Replicación diferencial binaria  
- La replicación diferencial binaria (BDR) es un requisito previo para los puntos de distribución. También se conoce como replicación diferencial. Cuando se distribuyen actualizaciones del contenido que se ha implementado previamente en otros sitios o puntos de distribución remotos, se usa automáticamente la BDR para reducir el ancho de banda.  
+ La replicación diferencial binaria (BDR) a veces se conoce como replicación diferencial. Se usa para distribuir actualizaciones del contenido que se ha implementado previamente en otros sitios o en puntos de distribución remotos. Para admitir la reducción de uso de ancho de banda de BDR, instale la característica **Compresión diferencial remota** en los puntos de distribución. Para más información, vea [Requisitos previos de puntos de distribución](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012dppreq).
 
  La BDR minimiza el ancho de banda de red que se usa para enviar actualizaciones de contenido distribuido. Solo se vuelve a enviar el contenido nuevo o que ha cambiado en lugar del conjunto completo de archivos de origen de contenido cada vez que se cambian esos archivos.  
 
@@ -175,7 +175,7 @@ Cuando un cliente necesita contenido, realiza una solicitud de ubicación de con
 
 -   **Punto de distribución de extracción**: variación de un punto de distribución donde el punto de distribución obtiene contenido de otro punto de distribución (un punto de distribución de origen). Este proceso es similar a la manera en que los clientes descargan contenido desde los puntos de distribución. Los puntos de distribución de extracción pueden ayudarle a evitar los cuellos de botella en el ancho de banda de red que se producen cuando el servidor de sitio debe distribuir directamente el contenido a cada punto de distribución. [Usar un punto de distribución de extracción](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).
 
--   **Punto de distribución de nube**: una variación de un punto de distribución instalado en Microsoft Azure. [Obtenga información sobre cómo usar un punto de distribución de nube](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point).  
+-   **Punto de distribución de nube**: variación de un punto de distribución que se instala en Microsoft Azure. [Obtenga información sobre cómo usar un punto de distribución de nube](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point).  
 
 
 Los puntos de distribución estándar admiten una variedad de configuraciones y características:  
@@ -238,7 +238,7 @@ Para obtener más información, consulte [Boundary groups (Grupos de límites)](
 
 -   **Contenido preconfigurado**: transferencia de contenido a un punto de distribución sin distribuir el contenido a través de la red.  
 
--   **Programación y limitación**: configuraciones que ayudan a controlar el momento y la forma en que se distribuye el contenido a los puntos de distribución.  
+-   **Programación y limitación**: configuraciones con las que podrá controlar cuándo y cómo se distribuye el contenido en puntos de distribución.  
 
 Para obtener más información, consulte [Administración del ancho de banda de red](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
 

@@ -10,12 +10,12 @@ ms.assetid: 2e801f8c-d331-41ee-8f27-908448fc0951
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: aed9ec403496b309b1b556355c955743d43b2dc4
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 1a74d549c668581b076ea4775fee3aedbe9a2d01
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53420216"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316497"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1703 para System Center Configuration Manager
 
@@ -52,7 +52,7 @@ Ahora puede ofrecer a los usuarios finales un vínculo directo a una aplicación
 
 Use el siguiente formato de dirección URL para abrir el centro de software desde una aplicación determinada:
 
-**SoftwareCenter:SoftwareId=*identificador de aplicación***
+**Softwarecenter:SoftwareId=_Identificador de aplicación_**
 
 ### <a name="how-to-get-the-application-identifier-of-an-application"></a>Cómo obtener el identificador de aplicación de una aplicación.
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-ms.openlocfilehash: aae0951ddf32ce1d58a29b034acef96b55ab85a0
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 8c0752506e410f752f49795470215c30b0928e4e
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414810"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342846"
 ---
 # <a name="manually-deploy-software-updates"></a>Implementar actualizaciones de software manualmente  
 
@@ -161,7 +161,10 @@ Después de determinar las actualizaciones que quiere implementar y agregarlas a
 
    -   **Notificaciones de usuario**: especifique si quiere mostrar una notificación en el Centro de software según las **Horas de disponibilidad del software** configuradas. Esta opción también controla si se notifica a los usuarios en los equipos cliente. Para las implementaciones **disponibles**, no se puede seleccionar la opción **Ocultar en el Centro de software y ocultar todas las notificaciones**.  
 
-   -   **Comportamiento de la fecha límite**: esta opción solo es configurable para las implementaciones **Requeridas**. Especifique los comportamientos cuando la implementación de actualizaciones de software alcanza la fecha límite fuera de las ventanas de mantenimiento definidas. Las opciones incluyen la posibilidad de instalar las actualizaciones de software y de realizar un reinicio del sistema tras la instalación. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](/sccm/core/clients/manage/collections/use-maintenance-windows).  
+   -   **Comportamiento de la fecha límite**: esta opción solo es configurable para las implementaciones **Requeridas**. Especifique los comportamientos cuando la implementación de actualizaciones de software alcanza la fecha límite fuera de las ventanas de mantenimiento definidas. Las opciones incluyen la posibilidad de instalar las actualizaciones de software y de realizar un reinicio del sistema tras la instalación. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](/sccm/core/clients/manage/collections/use-maintenance-windows). 
+  
+       > [!Note]
+       > Esto se aplica únicamente cuando la ventana de mantenimiento está configurada para el dispositivo cliente. Si no hay ninguna ventana de mantenimiento definida en el dispositivo, la actualización de la instalación y el reinicio siempre se realizarán después de la fecha límite.
 
    -   **Comportamiento de reinicio de dispositivo**: esta opción solo es configurable para las implementaciones **Requeridas**. Especifique si se debe suprimir el reinicio del sistema necesario para completar la instalación de actualizaciones en servidores y estaciones de trabajo.  
 

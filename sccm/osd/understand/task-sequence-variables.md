@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cde62242fc4db99d762d670037aad22bd25d6c00
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: e7a2801b7efa513b2b15a58a7a89eee5d4727a21
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456743"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342904"
 ---
 # <a name="task-sequence-variables-in-configuration-manager"></a>Variables de secuencia de tareas en Configuration Manager
 
@@ -155,7 +155,7 @@ Para obtener más información, vea [Using task sequence variables](/sccm/osd/un
 
  - **SMS**: el cliente de Configuration Manager, como cuando un usuario lo inicia desde el Centro de Software
  - **UFD**: un medio USB heredado
- - **UFD+FORMAT**: un medio USB más reciente
+ - **UFD+FORMAT**: medio USB más reciente
  - **CD**: un CD de arranque
  - **DVD**: un DVD de arranque
  - **PXE**: arranque de red con PXE
@@ -289,7 +289,7 @@ Para obtener más información, vea [Using task sequence variables](/sccm/osd/un
 
  Especifica el tipo de la secuencia de tareas que se ejecuta actualmente. Puede tener uno de los siguientes valores:  
 
- - **1** : una secuencia de tareas genérica
+ - **1**: una secuencia de tareas genérica
  - **2**: una secuencia de tareas de implementación de SO
 
 
@@ -330,7 +330,7 @@ Para obtener más información, vea [Using task sequence variables](/sccm/osd/un
 
  La secuencia de tareas establece esta variable con el estado de la instalación de la aplicación durante el paso [Instalar aplicación](task-sequence-steps.md#BKMK_InstallApplication). Establece uno de los siguientes valores:  
 
- - **Sin definir**: no se ha ejecutado el paso Instalar aplicación.  
+ - **Undefined**: no se ha ejecutado el paso Instalar aplicación.  
 
  - **Error**: al menos una aplicación genera error durante el paso Instalar aplicación.  
 
@@ -392,9 +392,9 @@ Para obtener más información, vea [Using task sequence variables](/sccm/osd/un
 #### <a name="osdadapter0tcpipnetbiosoptions"></a>OSDAdapter0TcpipNetbiosOptions
  Opciones para NetBIOS sobre TCP/IP. Los valores posibles son:  
 
- - `0`: usar la configuración de NetBIOS del servidor DHCP  
- - `1`: habilitar NetBIOS sobre TCP/IP  
- - `2`: deshabilitar NetBIOS sobre TCP/IP  
+ - `0`: usa la configuración de NetBIOS del servidor DHCP  
+ - `1`: habilita NetBIOS sobre TCP/IP  
+ - `2`: deshabilita NetBIOS sobre TCP/IP  
 
 #### <a name="osdadapter0enablewins"></a>OSDAdapter0EnableWINS
  Establézcalo en `true` para utilizar WINS para la resolución de nombres.
@@ -483,7 +483,7 @@ Para obtener más información, vea [Using task sequence variables](/sccm/osd/un
  Si hay varios controladores de dispositivo en el catálogo de controladores que sean compatibles con un dispositivo de hardware, esta variable determina la acción del paso. 
 
  #### <a name="valid-values"></a>Valores válidos
- - `true` (valor predeterminado): instalar solo el mejor controlador de dispositivo  
+ - `true` (valor predeterminado): instala solo el mejor controlador de dispositivo  
 
  - `false`: instala todos los controladores de dispositivo compatibles y Windows elige el mejor controlador  
 
@@ -780,8 +780,8 @@ Para obtener más información, vea [Using task sequence variables](/sccm/osd/un
  Especifica si el equipo de destino se une a un dominio de Windows o a un grupo de trabajo. 
 
  #### <a name="valid-values"></a>Valores válidos
- - `0`: unir el equipo de destino a un dominio de Windows  
- - `1`: unir el equipo de destino a un grupo de trabajo  
+ - `0`: une el equipo de destino a un dominio de Windows  
+ - `1`: une el equipo de destino a un grupo de trabajo  
 
 
 ### <a name="OSDJoinWorkgroupName"></a> OSDJoinWorkgroupName
@@ -1018,8 +1018,8 @@ Para obtener más información, vea [Using task sequence variables](/sccm/osd/un
  Especifica si el equipo de destino se une a un dominio de Active Directory o a un grupo de trabajo.
 
  #### <a name="value-values"></a>Valores del parámetro
- - `0`: unirse a un dominio de Active Directory  
- - `1`: unirse a un grupo de trabajo
+ - `0`: se une a un dominio de Active Directory  
+ - `1`: Unirse a un grupo de trabajo
 
 
 ### <a name="OSDPartitions"></a> OSDPartitions
@@ -1349,8 +1349,8 @@ Use los siguientes nombres de variable para definir las propiedades de la *prime
  Especifica el número de segundos que se muestra la advertencia al usuario antes de reiniciar el equipo. 
 
  #### <a name="examples"></a>Ejemplos
- - `0` (valor predeterminado): no mostrar un mensaje de reinicio  
- - `60`: mostrar la advertencia durante un minuto  
+ - `0` (valor predeterminado): no se muestra un mensaje de reinicio  
+ - `60`: se muestra la advertencia durante un minuto  
 
 
 ### <a name="SMSTSAssignmentsDownloadInterval"></a> SMSTSAssignmentsDownloadInterval
@@ -1371,11 +1371,11 @@ Use los siguientes nombres de variable para definir las propiedades de la *prime
 
  Especifica el modo en que una secuencia de tareas asocia usuarios con el equipo de destino. Establezca la variable en uno de los siguientes valores:  
 
- - **Auto**: cuando la secuencia de tareas implementa el sistema operativo en el equipo de destino, crea una relación entre los usuarios especificados y un equipo de destino.  
+ - **Automático**: cuando la secuencia de tareas implementa el sistema operativo en el equipo de destino, crea una relación entre los usuarios especificados y un equipo de destino.  
 
  - **Pendiente**: la secuencia de tareas crea una relación entre los usuarios especificados y el equipo de destino. Un administrador debe aprobar la relación.  
 
- - **Deshabilitado**: la secuencia de tareas no asocia usuarios al equipo de destino cuando se implementa el sistema operativo.
+ - **Disabled**: la secuencia de tareas no asocia usuarios al equipo de destino cuando se implementa el sistema operativo.
 
 
 ### <a name="SMSTSDisableStatusRetry"></a> SMSTSDisableStatusRetry
@@ -1580,6 +1580,8 @@ Use los siguientes nombres de variable para definir las propiedades de la *prime
 
  Permite controlar el tiempo de espera para la detección de actualizaciones de software durante este paso. Por ejemplo, aumente el valor si espera que haya numerosas actualizaciones durante el análisis. El valor predeterminado es `1800` segundos (30 minutos). El valor de la variable se establece en segundos.
 
+> [!NOTE] 
+> A partir de la versión 1802, el valor predeterminado es `3600` segundos (60 minutos).
 
 ### <a name="SMSTSUDAUsers"></a> SMSTSUDAUsers
 
@@ -1605,9 +1607,9 @@ Por ejemplo, si establece SMSTSWaitForSecondReboot en `600`, la secuencia de tar
 ### <a name="TSDisableProgressUI"></a> TSDisableProgressUI
  <!-- 1354291 --> Use esta variable para controlar cuándo la secuencia de tareas muestra el progreso a los usuarios finales. Para ocultar o mostrar el progreso en momentos diferentes, establezca esta variable varias veces en una secuencia de tareas.  
 
- - `true`: ocultar el progreso de la secuencia de tareas  
+ - `true`: Ocultación del progreso de la secuencia de tareas  
 
- - `false`: mostrar el progreso de la secuencia de tareas  
+ - `false`: muestra el progreso de la secuencia de tareas  
 
 
 ### <a name="TSErrorOnWarning"></a> TSErrorOnWarning 
@@ -1637,11 +1639,11 @@ Por ejemplo, si establece SMSTSWaitForSecondReboot en `600`, la secuencia de tar
 
 Las siguientes variables están en desuso:
 
-- **OSDAllowUnsignedDriver**: no se utiliza al implementar Windows Vista y sistemas operativos posteriores
-- **OSDBuildStorageDriverList**: solo se aplica a Windows XP y Windows Server 2003
-- **OSDDiskpartBiosCompatibilityMode**: solo se necesita para implementar Windows XP o Windows Server 2003
-- **OSDInstallEditionIndex**: no se necesita después de Windows Vista
-- **OSDPreserveDriveLetter**: para obtener más información, consulte [OSDPreserveDriveLetter](#OSDPreserveDriveLetter)
+- **OSDAllowUnsignedDriver**: no se usa al implementar Windows Vista y sistemas operativos posteriores
+- **OSDBuildStorageDriverList**: se aplica únicamente a Windows XP y Windows Server 2003
+- **OSDDiskpartBiosCompatibilityMode**: solo se necesita al implementar Windows XP o Windows Server 2003
+- **OSDInstallEditionIndex**: no es necesario en versiones posteriores a Windows Vista
+- **OSDPreserveDriveLetter**: para más información, vea [OSDPreserveDriveLetter](#OSDPreserveDriveLetter)
 
 ### <a name="osdpreservedriveletter"></a>OSDPreserveDriveLetter
 

@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d0db075f652dd77a833f7a3a00f478bae5a5e54f
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 0a2ee528c8b38acbc18aa051dd84a7634b66713b
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53415201"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316599"
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-configuration-manager"></a>Administración de secuencias de tareas para automatizar tareas en Configuration Manager
 
@@ -120,6 +120,8 @@ Puede volver a la página anterior cuando ejecuta una secuencia de tareas y se p
 
        > [!NOTE]    
        > Si el programa seleccionado no se ejecuta en un cliente, la secuencia de tareas tampoco se ejecuta. Si el programa seleccionado se ejecuta correctamente, no se ejecutará de nuevo, incluso aunque la secuencia de tareas se vuelva a ejecutar en el mismo cliente.  
+   
+   - **Suprimir notificaciones de secuencia de tareas**: Seleccione esta opción para ocultar la notificación del sistema "Hay nuevo software disponible". En el área de notificaciones se seguirá mostrando el icono de "nuevo software" del Centro de software. De forma predeterminada, esta casilla de verificación está desactivada.  
  
    - **Deshabilitar esta secuencia de tareas en los equipos en los que se implementó**: si selecciona esta opción, Configuration Manager deshabilita temporalmente todas las implementaciones que contienen esta secuencia de tareas. También quita la secuencia de tareas de la lista de implementaciones disponibles para su ejecución. La secuencia de tareas no se ejecuta hasta que la habilite. De forma predeterminada, esta opción está deshabilitada.  
 
