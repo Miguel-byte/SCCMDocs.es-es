@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 610dfb7391347663fd92c0839d20eb7a4a703438
-ms.sourcegitcommit: c80abe7e4b7b2f80e957e45ff205f67d1b715688
+ms.openlocfilehash: 1ec1155ec578e0eab957baa991628ed18eef6c62
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226230"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898654"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con Configuration Manager y Microsoft Intune
 
@@ -592,24 +592,24 @@ A partir de diciembre, los usuarios finales que tengan dispositivos distintos de
 Para más información, vea [Inscribir un dispositivo macOS en Intune con la aplicación Portal de empresa](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp).
 
 
-### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>Plan de cambio: Soporte técnico de Intune nueva experiencia para Premier a los clientes 
+### <a name="intune-support-experience-for-premier-customers-now-in-azure-instead-of-mpo"></a>Experiencia de soporte técnico de Intune para Premier a los clientes ahora en Azure en lugar de MPO  
 <!--2828727-->
 
-actualización de 12/4/2018: Estamos intentando mejorar este proceso para usted. Creación de la solicitud de soporte técnico en MPO no deshabilitará el 3 de diciembre. Se le conoce a través del centro de mensajes y actualizar esta publicación pronto para compartir las escalas de tiempo para que este cambio.
-
-Como cliente Premier de Microsoft, puede usar actualmente la [portal Microsoft Premier Online (MPO)](https://premier.microsoft.com) y [Intune en Azure](https://portal.azure.com) para crear solicitudes de soporte técnico de Intune. A partir del 3 de diciembre de 2018, para continuar mejorando la experiencia de soporte técnico Premier, solo podrá crear solicitudes de soporte técnico en Intune en Azure.
+Se comparten en MC147649 en septiembre, se eliminaría la capacidad para crear solicitudes de soporte técnico de Intune desde el portal Microsoft Premier Online (MPO) (premier.microsoft.com) en diciembre. Ahora, tras un breve retraso, al final de enero, se le redirigirá para crear solicitudes de soporte técnico sólo en Intune en Azure.
 
 #### <a name="how-does-this-affect-me"></a>¿Cómo me afecta esto ahora?
-A partir del 3 de diciembre, no podrá crear solicitudes de soporte técnico en MPO. Si lo intenta, verá un símbolo del sistema que le indica que no puede descartar la redirección a Intune en Azure. Al crear una solicitud de soporte técnico en Azure Portal, se le dirige al Soporte técnico de Microsoft exclusivo para Intune, donde diagnosticarán y resolverán su problema de forma oportuna. Si crea una solicitud de soporte técnico en el portal de MPO, no podrá verlo en Azure Portal. Empiece solo por crear solicitudes de soporte técnico en Intune en Azure.  
+Después de finales de enero, para continuar mejorando la Premier admiten experiencia, no podrá crear solicitudes de soporte técnico en MPO. Al intentar llevar a cabo esta acción, verá un símbolo del sistema que no se puede descartar se le redirigirá a Intune en Azure. En este caso, puede crear una solicitud de soporte técnico, se enruta a dedicado en Intune con Microsoft Support. Estos compatibilidad con los ingenieros se diagnosticar y resolver el problema de manera oportuna. No se puede ver las solicitudes de soporte técnico en el portal de Azure que creó en el portal de MPO.
 
-Si usa la administración híbrida de dispositivos móviles (MDM híbrida) o la administración conjunta, siga usando MPO para crear solicitudes de soporte técnico para Configuration Manager, pero use Azure Portal para crear solicitudes de soporte técnico para Intune. Le recordamos que la MDM híbrida está en desuso y que debe plantearse cambiar a Intune en Azure tan pronto como sea posible. Para más información, vea [Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification) (Pasar de la administración híbrida de dispositivos móviles (MDM) a Intune en Azure).
+El portal de Azure tiene una nueva experiencia de soporte técnico como se anunció recientemente en MC171941. Para obtener más información, consulte [cómo obtener soporte técnico de Microsoft Intune](https://aka.ms/new_support_experience).
 
-Tenga en cuenta que solo los usuarios con roles de administrador global, administrador de servicios de Intune y administrador de soporte técnico de servicio pueden crear incidencias de soporte técnico en Azure Portal.
+Si utilizas MDM híbrida o administración conjunta, seguir usando MPO para crear solicitudes de soporte técnico de Configuration Manager. Usar el portal de Azure para crear solicitudes de soporte técnico para Intune. Le recordamos que la MDM híbrida está en desuso y que debe plantearse cambiar a Intune en Azure tan pronto como sea posible. Para más información, vea [Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification) (Pasar de la administración híbrida de dispositivos móviles (MDM) a Intune en Azure).
+
+Solo los usuarios con roles de administrador Global, Administrador de servicios de Intune y el Administrador de soporte técnico de servicio pueden crear incidencias de soporte técnico en el portal de Azure.
 
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>¿Qué debo hacer para prepararme para este cambio?
 - Deje de usar MPO para solicitudes de soporte técnico relacionadas con Intune. Use Intune en Azure para crear y administrar todas las solicitudes de soporte técnico de Intune.  
 - Informe al departamento de soporte técnico y actualice la documentación, si es necesario.  
-- Si tiene usuarios que no tienen roles de administrador global o de administrador de servicios de Intune y están creando solicitudes de soporte técnico en MPO, asígneles el rol de administrador de soporte técnico de servicio en Azure Active Directory. Los usuarios necesitan tener uno de estos roles para crear incidencias de soporte técnico en Azure Portal.  
+- Si tiene usuarios sin roles de administrador Global o administrador de servicios de Intune que se está creando solicitudes de soporte técnico en MPO, asignar el rol de administrador de soporte técnico de servicio en Azure Active Directory. Los usuarios necesitan tener uno de estos roles para crear incidencias de soporte técnico en Azure Portal.  
 
 #### <a name="additional-information"></a>Información adicional
 Para más información, vea la [entrada de blog del equipo de soporte técnico de Microsoft Intune](https://aka.ms/IntuneSupport_MPO_to_Azure).
