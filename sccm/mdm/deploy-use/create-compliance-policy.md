@@ -10,17 +10,16 @@ ms.assetid: 0fd76043-d7ee-423d-8c5f-aa7e9ed58ce0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex
-ms.openlocfilehash: 67cc82bdd114c9d525e5a9dacc1e5775d52150dd
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: b0179de8cc96f885236178c70b7e834672ee1d5b
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414929"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898586"
 ---
 # <a name="create-and-deploy-a-device-compliance-policy"></a>Crear e implementar una directiva de cumplimiento de dispositivos
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 ## <a name="create-a-compliance-policy"></a>Crear una directiva de cumplimiento
@@ -51,7 +50,7 @@ ms.locfileid: "53414929"
 
         - **Crítica**: Los dispositivos que no cumplan esta regla de compatibilidad notificarán una gravedad de error **Crítica** en los informes de Configuration Manager.  
 
-        - **Crítico con evento**: Los dispositivos que no cumplan esta regla de compatibilidad notificarán una gravedad de error **Crítica** en los informes de Configuration Manager. El nivel de gravedad **Crítico con evento** también se registra como un evento de Windows en el registro de eventos de la aplicación.  
+        - **Crítica con evento**: Los dispositivos que no cumplan esta regla de compatibilidad notificarán una gravedad de error **Crítica** en los informes de Configuration Manager. El nivel de gravedad **Crítico con evento** también se registra como un evento de Windows en el registro de eventos de la aplicación.  
 
 5. En la página **Plataformas admitidas**, elija las plataformas de dispositivo en las que se va a evaluar esta directiva de cumplimiento. También puede hacer clic en **Seleccionar todo** para elegir todas las plataformas de dispositivo. Las plataformas admitidas son: Windows 7, Windows 8.1 y Windows 10. Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 y Windows Server 2016.  
 
@@ -233,7 +232,7 @@ ms.locfileid: "53414929"
     **Compatible con**:  
     - iOS 6+  
 
-- **Perfil de correo electrónico**: Si se selecciona la opción Intune debe administrar la cuenta de correo electrónico, haga clic en **Seleccionar** para elegir el perfil de correo mediante el cual deben administrarse los dispositivos. El perfil de correo electrónico debe estar presente en el dispositivo.  
+- **Perfil de correo electrónico**: Si se selecciona la opción **Intune debe administrar la cuenta de correo electrónico**, haga clic en **Seleccionar** para elegir el perfil de correo mediante el cual deben administrarse los dispositivos. El perfil de correo electrónico debe estar presente en el dispositivo.  
 
     **Compatible con**:  
     - iOS 6+  
