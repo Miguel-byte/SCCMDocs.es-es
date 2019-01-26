@@ -10,12 +10,13 @@ ms.assetid: 7996b3eb-5259-483b-af40-adae2943d123
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ebd51b397e37c69e8f6e8d1e154fc369347bd63a
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ROBOTS: NOINDEX
+ms.openlocfilehash: 6108a6d90a18277275e50ba980a9d81099ba116a
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229371"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898501"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1805 para System Center Configuration Manager
 
@@ -68,8 +69,8 @@ Siga las instrucciones para crear una implementación por fases donde puede conf
         - **Porcentaje de éxito de la implementación**: especifique el porcentaje de dispositivos que completan correctamente la implementación para los criterios de éxito de la fase anterior.  
 
     - Condiciones para comenzar esta fase de implementación una vez que la anterior se complete correctamente  
-        - **Iniciar automáticamente esta fase tras un período de aplazamiento (en días)**: elija el número de días que se esperará antes de comenzar la siguiente fase después del éxito de la anterior. 
-        - **Empezar esta fase de la implementación manualmente**: no inicie esta fase automáticamente después del éxito de la primera.  
+        - **Iniciar automáticamente esta fase después de un período de aplazamiento (en días)**: elija el número de días que se esperará antes de comenzar la siguiente fase después del éxito de la anterior. 
+        - **Empezar esta fase de la implementación manualmente**: no inicie esta fase automáticamente después de completar correctamente la primera.  
 
     - Una vez que un dispositivo se establece como destino, instalar el software
         - **Lo antes posible**: establece la fecha límite para la instalación en el dispositivo en cuanto el dispositivo se selecciona.
@@ -275,14 +276,14 @@ Esta versión incluye mejoras en la forma en que los clientes se comunican con l
 ### <a name="bkmk_token"></a>Escenarios
 Los siguientes escenarios aprovechan estas mejoras:  
 
-#### <a name="bkmk_token1"></a> Escenario 1: Cliente a punto de administración
+#### <a name="bkmk_token1"></a> Escenario 1: Cliente a punto de administración
 <!--1356889-->
 [Los dispositivos unidos a Azure AD](/azure/active-directory/device-management-introduction#azure-ad-joined-devices) pueden comunicarse a través de una instancia de Cloud Management Gateway (CMG) con un punto de administración configurado para HTTP. El servidor de sitio genera un certificado para el punto de administración para que pueda comunicarse a través de un canal seguro.   
 
 > [!Note]  
 > Este comportamiento se cambia desde la versión de rama actual 1802 de Configuration Manager, lo que requiere un punto de administración habilitado para HTTPS para este escenario. Para obtener más información, vea [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https) (Habilitar el punto de administración para HTTPS).  
 
-#### <a name="bkmk_token2"></a> Escenario 2: Cliente a punto de distribución
+#### <a name="bkmk_token2"></a> Escenario 2: Cliente a punto de distribución
 <!--1358228--> Un grupo de trabajo o un cliente unido a Azure AD puede descargar contenido a través de un canal seguro desde un punto de distribución configurado para HTTP.   
 
 #### <a name="bkmk_token3"></a> Escenario 3: Identidad de dispositivo de Azure AD 

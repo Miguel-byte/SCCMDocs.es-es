@@ -10,12 +10,13 @@ ms.assetid: 8af43618-ec60-4c3e-a007-12399d1335b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a796c8cc23ab15e3fbeb09fca6ffa6f1dbd45bc3
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ROBOTS: NOINDEX
+ms.openlocfilehash: 80f16244c10899ed264b83f6c7a9a050fba7a224
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "34474350"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898314"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-system-center-configuration-manager"></a>Funcionalidades de la versión Technical Preview 1804 de System Center Configuration Manager
 
@@ -148,29 +149,29 @@ Las herramientas de servidor y cliente de Configuration Manager ahora se incluye
 
 #### <a name="server-tools"></a>Herramientas de servidor  
 
- - **DP Job Manager**: soluciona los problemas de los trabajos de distribución de contenido a los puntos de distribución.  
+ - **DP Job Manager**: soluciona los problemas de los trabajos de distribución de contenido a los puntos de distribución  
 
- - **Collection Evaluation Viewer**: permite ver los detalles de evaluación de la recopilación.  
+ - **Collection Evaluation Viewer**: vea detalles de la evaluación de colecciones  
 
- - **Content Library Explorer**: permite ver el contenido del almacén de instancia única de la biblioteca de contenido.  
+ - **Content Library Explorer**: permite ver el contenido del almacén de instancia única de la biblioteca de contenido  
 
- - **Content Library Transfer**: transfiere la biblioteca de contenido entre unidades.  
+ - **Content Library Transfer**: transfiere la biblioteca de contenido entre unidades  
 
  - **Content Ownership Tool**: cambia la propiedad de los paquetes huérfanos. Estos paquetes existen en el sitio sin un servidor de sitio propietario.  
 
- - **Role-based Administration and Auditing Tool**: ayuda a los administradores a auditar la configuración de los roles.  
+ - **Role-based Administration and Auditing Tool**: ayuda a los administradores a auditar la configuración de roles  
 
 #### <a name="client-tools"></a>Herramientas cliente
 
- - **CMTrace**: permite ver los registros.  
+ - **CMTrace**: vea registros  
 
- - **Deployment Monitoring Tool**: permite solucionar los problemas de aplicaciones, actualizaciones e implementaciones de línea de base.  
+ - **Deployment Monitoring Tool**: permite solucionar los problemas de aplicaciones, actualizaciones e implementaciones de línea de base  
 
- - **Policy Spy**: permite ver las asignaciones de directiva.  
+ - **Policy Spy**: vea asignaciones de directiva  
 
- - **Power Viewer Tool**: permite ver el estado de la característica de administración de energía.  
+ - **Power Viewer Tool**: permite ver el estado de la característica de administración de energía  
 
- - **Send Schedule Tool**: desencadena programaciones y evaluaciones de líneas de base de DCM.  
+ - **Send Schedule Tool**: desencadena programaciones y evaluaciones de líneas de base de DCM  
 
 > [!Important]  
 > [Support Center](#support-center) es la recomendada en la mayoría de los casos, dado que incluye la misma funcionalidad o mejorada de las siguientes herramientas:  
@@ -288,7 +289,7 @@ Después de agregar los criterios de arquitectura, la página de propiedades de 
 ## <a name="improvements-to-os-deployment"></a>Mejoras en la implementación del sistema operativo
 Se han realizado las siguientes mejoras en la implementación del sistema operativo, algunas de las cuales son el resultado de los comentarios de los usuarios en UserVoice.  
 
- - [Enmascaramiento de datos confidenciales almacenados en variables de secuencia de tareas](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): en el paso [Configurar variable de secuencia de tareas](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable), seleccione la nueva opción **Do not display this value** (No mostrar este valor). Por ejemplo, al especificar una contraseña.<!--1358330--> Cuando se habilita esta opción, se aplican los comportamientos siguientes:
+ - [Enmascaramiento de la información confidencial almacenada en variables de secuencia de tareas](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): en el paso [Configurar variable de secuencia de tareas](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable), seleccione la nueva opción **Do not display this value** (No mostrar este valor). Por ejemplo, al especificar una contraseña.<!--1358330--> Cuando se habilita esta opción, se aplican los comportamientos siguientes:
    - El valor de la variable no se muestra en el archivo smsts.log.
    - La consola de Configuration Manager y el proveedor de SMS administran este valor igual que otros secretos, como las contraseñas.
    - El valor no se incluye cuando se exporta la secuencia de tareas.
@@ -298,7 +299,7 @@ Se han realizado las siguientes mejoras en la implementación del sistema operat
    > Las variables y sus valores se guardan con la secuencia de tareas como XML y se ofuscan en la base de datos. Cuando el cliente solicita una directiva de secuencia de tareas desde el punto de administración, se cifra en tránsito y cuando se almacena en el cliente. Sin embargo, todos los valores de variables son texto sin formato en el entorno de la secuencia de tareas en memoria durante el tiempo de ejecución en el cliente. Si la secuencia de tareas incluye un paso para generar el valor de la variable de salida, esta salida está en texto sin formato. Este comportamiento requiere la acción explícita del administrador de incluir un paso de este tipo en la secuencia de tareas. 
 
 
- - [Creación del nombre del programa durante el paso Ejecutar comando de una secuencia de tareas](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): para impedir la visualización o el registro de información posiblemente confidencial, establezca la variable de secuencia de tareas **OSDDoNotLogCommand** en `TRUE`. Esta variable enmascara el nombre del programa en el archivo smsts.log durante un paso de secuencia de tareas [Ejecutar línea de comandos](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine). <!--1358493-->  
+ - [Enmascaramiento del nombre del programa durante el paso Ejecutar comando de una secuencia de tareas](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): para evitar la visualización o el registro de información posiblemente confidencial, establezca la variable de secuencia de tareas **OSDDoNotLogCommand** en `TRUE`. Esta variable enmascara el nombre del programa en el archivo smsts.log durante un paso de secuencia de tareas [Ejecutar línea de comandos](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine). <!--1358493-->  
 
 
 
