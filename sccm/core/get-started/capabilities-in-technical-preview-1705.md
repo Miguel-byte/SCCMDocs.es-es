@@ -10,12 +10,13 @@ ms.assetid: 00684289-d21a-45f8-b1e3-c5c787d73096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a9a5aeb35137a74152333a78e95781fb727eecdf
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ROBOTS: NOINDEX
+ms.openlocfilehash: cf42e357abf40593484867186c9f3753df6bb94a
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421610"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897957"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1705 para System Center Configuration Manager
 
@@ -91,9 +92,9 @@ Después de ejecutar la herramienta:
 |                       **-FDELETE**                       |                      *Opcional* <br> Utilice esta opción para forzar la eliminación de un paquete de actualización descargado correctamente.                      |
 
  **Ejemplos:**  
- En un escenario habitual, querrá restablecer una actualización que tenga problemas de descarga. El nombre de dominio completo de los servidores de SQL Server es *server1.fabrikam.com*, la base de datos de sitio es *CM_XYZ* y el GUID del paquete es *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Ejecutará lo siguiente: ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+ En un escenario habitual, querrá restablecer una actualización que tenga problemas de descarga. El nombre de dominio completo de los servidores de SQL Server es *server1.fabrikam.com*, la base de datos de sitio es *CM_XYZ* y el GUID del paquete es *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Ejecute lo siguiente: ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
- En un escenario más extremo, quizá desee forzar la eliminación del paquete de actualización problemático. El nombre de dominio completo de los servidores de SQL Server es *server1.fabrikam.com*, la base de datos de sitio es *CM_XYZ* y el GUID del paquete es *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Ejecutará lo siguiente: ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+ En un escenario más extremo, quizá desee forzar la eliminación del paquete de actualización problemático. El nombre de dominio completo de los servidores de SQL Server es *server1.fabrikam.com*, la base de datos de sitio es *CM_XYZ* y el GUID del paquete es *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Ejecute lo siguiente: ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
 ### <a name="test-the-tool-with-the-technical-preview"></a>Prueba de la herramienta con Technical Preview  
 Esta herramienta se puede utilizar a partir de la versión 1606 de Technical Preview. Se proporciona esta compatibilidad con versiones anteriores a fin de que la herramienta pueda utilizarse con un mayor número de escenarios de actualización de versiones preliminares técnicas, sin tener que esperar hasta el lanzamiento de la siguiente versión preliminar técnica.

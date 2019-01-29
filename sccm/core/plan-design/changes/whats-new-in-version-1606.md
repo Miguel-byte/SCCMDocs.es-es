@@ -10,12 +10,13 @@ ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0dcd2db7543d68a97e00244536d2aac218d440e7
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ROBOTS: NOINDEX
+ms.openlocfilehash: 0d45586267e06185752f597549f798be19d4d47b
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52259070"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897056"
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>Novedades de la versión 1606 de System Center Configuration Manager
 
@@ -146,7 +147,7 @@ Ahora puede ejecutar un examen de cumplimiento inmediatamente después de que un
 
 ## <a name="operating-system-deployment"></a>Implementación de sistema operativo
 
-### <a name="improvements-to-the-task-sequence-step-install-software-updates"></a>Mejoras en el paso de secuencia de tareas: instalar actualizaciones de software
+### <a name="improvements-to-the-task-sequence-step-install-software-updates"></a>Mejoras en el paso de secuencia de tareas: Instalar actualizaciones de software
 Una nueva configuración, **Evaluar actualizaciones de software desde los resultados de análisis en caché**, le ofrece la opción de realizar un examen completo de actualizaciones de software, en lugar de usar los resultados del análisis almacenado en caché. Para obtener más información, consulte [Pasos de la secuencia de tareas en System Center Configuration Manager](../../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates).
 
 Además, está disponible una nueva variable de secuencia de tareas, **SMSTSSoftwareUpdateScanTimeout**. Esta variable le permite controlar el tiempo de espera para la detección de actualizaciones de software durante el paso de la secuencia de tareas Instalar actualizaciones de software. El valor predeterminado es 30 minutos. Para obtener más información, consulte [Variables integradas de secuencias de tareas en System Center Configuration Manager](../../../osd/understand/task-sequence-built-in-variables.md).
