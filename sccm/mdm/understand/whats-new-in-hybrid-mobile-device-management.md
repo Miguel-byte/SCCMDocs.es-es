@@ -2,7 +2,7 @@
 title: Novedades de la MDM híbrida
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las nuevas características de administración de dispositivos móviles disponibles para implementaciones híbridas con Configuration Manager e Intune.
-ms.date: 01/10/2019
+ms.date: 01/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1ec1155ec578e0eab957baa991628ed18eef6c62
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.openlocfilehash: 84c244a959bb9a087d33410fe0605bc6ddcadfbc
+ms.sourcegitcommit: a2ecd84d93f431ee77848134386fec14031aed6a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898654"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230909"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con Configuration Manager y Microsoft Intune
 
@@ -50,6 +50,15 @@ En cada sección de este artículo se enumeran las características híbridas or
 ## <a name="january-2019"></a>Enero de 2019
 
 ### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune
+
+#### <a name="intune-app-protection-policies-ui-update"></a>Actualización de la interfaz de usuario de Intune app protection directivas 
+<!--3251427--> Hemos cambiado las etiquetas para la configuración y los botones para protección de aplicaciones de Intune para que sea más fácil comprender cada uno de ellos. Algunos de los cambios incluyen:  
+
+- Los controles se cambian de **Sí** / **ningún** controla principalmente a **bloque** / **permitir** y **deshabilitar** / **habilitar** controles. Las etiquetas también se actualizan.  
+
+- Configuración cambian, por lo que la configuración y su etiqueta están en paralelo en el control, para proporcionar una mejor navegación.   
+
+La configuración predeterminada y el número de opciones que siguen siendo los mismos, pero este cambio permite al usuario a entender, navegar y usar la configuración más fácilmente para aplicar directivas de protección de la aplicación seleccionada. Para obtener más información, consulte [configuración de iOS](https://docs.microsoft.com/intune/app-protection-policy-settings-ios#access-requirements) y [configuración de Android](https://docs.microsoft.com/intune/app-protection-policy-settings-android#access-requirements).
 
 #### <a name="tenant-status-dashboard"></a>Panel de estado de inquilino
 <!--1124854--> El nuevo [página Estado del inquilino](https://docs.microsoft.com/intune/tenant-status) proporciona una ubicación única donde puede ver el estado y los detalles relacionados para el inquilino. El panel se divide en cuatro áreas:
