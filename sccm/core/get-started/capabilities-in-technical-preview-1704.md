@@ -10,12 +10,13 @@ ms.assetid: e318e705-20f2-417d-8cde-7dfe661b2fa7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b86b1a4b8400be29f9b4c468c280fdd0a47385c3
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ROBOTS: NOINDEX
+ms.openlocfilehash: 0b47d64a350a9cf0a8838809604d1a38b55ea3b1
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343497"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896743"
 ---
 # <a name="capabilities-in-technical-preview-1704-for-system-center-configuration-manager"></a>Funciones de Technical Preview 1704 para System Center Configuration Manager
 
@@ -31,7 +32,7 @@ Puede usar directivas de configuración de aplicaciones en System Center Configu
 
 ### <a name="try-it-out"></a>Haga la prueba                 
 
-En la consola de Configuration Manager, seleccione **Biblioteca de software** > **Administración de aplicaciones** > **Directivas de configuración de aplicaciones** y elija **Crear directiva de configuración de aplicaciones**. En la página **General** del asistente, ahora puede **seleccionar un tipo de directiva de configuración**. Especifique la plataforma a la que se dirige la directiva de configuración de aplicaciones: **Directiva de configuración para aplicaciones de Android for Work**. A continuación, puede **especificar pares de nombre y valor** o **buscar un archivo JSON de la lista de propiedades**. La nueva directiva de configuración de aplicaciones se muestra en el área de trabajo **Biblioteca de software**, en el nodo **Directivas de configuración de aplicaciones**. Para asociar una directiva de configuración de aplicaciones a la implementación de una aplicación de Android for Work, implemente la aplicación del modo habitual con el procedimiento indicado en el tema [Implementar aplicaciones](/sccm/apps/deploy-use/deploy-applications).
+En la consola de Configuration Manager, seleccione **Biblioteca de software** > **Administración de aplicaciones** > **Directivas de configuración de aplicaciones** y elija **Crear directiva de configuración de aplicaciones**. En la página **General** del asistente, ahora puede **seleccionar un tipo de directiva de configuración**. Especifique la plataforma de destino de la directiva de configuración de aplicación: **Directiva de configuración para aplicaciones de Android for Work**. A continuación, puede **especificar pares de nombre y valor** o **buscar un archivo JSON de la lista de propiedades**. La nueva directiva de configuración de aplicaciones se muestra en el área de trabajo **Biblioteca de software**, en el nodo **Directivas de configuración de aplicaciones**. Para asociar una directiva de configuración de aplicaciones a la implementación de una aplicación de Android for Work, implemente la aplicación del modo habitual con el procedimiento indicado en el tema [Implementar aplicaciones](/sccm/apps/deploy-use/deploy-applications).
 
 ## <a name="hardware-inventory-collects-secure-boot-information"></a>El inventario de hardware recopila información de arranque seguro
 Ahora, el inventario de hardware recopila información sobre si el arranque seguro está habilitado en los clientes. Esta información se almacena en la clase **SMS_Firmware** (introducida en la versión 1702) y se habilita en el inventario de hardware de forma predeterminada. Para obtener más información sobre el inventario de hardware, vea [Cómo configurar el inventario de hardware](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
@@ -66,6 +67,6 @@ Al ejecutar **Actualizar puntos de distribución** en una imagen de arranque sel
 ## <a name="improvements-to-operating-system-deployment"></a>Mejoras en la implementación de sistema operativo
 Hemos realizado las siguientes mejoras en la implementación del sistema operativo, muchas de las cuales son el resultado de los comentarios de los usuarios.
 
-- [Nueva columna **Versión de SO** para las imágenes del sistema operativo](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17558407-add-a-column-to-the-operating-system-images-node-f): hemos agregado una nueva columna denominada **Versión de SO** para mostrar la versión del sistema operativo de la imagen al ver la información en los nodos **Imágenes de sistema operativo** y **Paquetes de actualización del sistema operativo**. Solo se muestra la versión del primer índice en el .WIM. Vaya a la pestaña **Detalles** de la imagen para revisar las versiones de sistema operativo para otros índices.
+- [Nueva columna **Versión de SO** para las imágenes de sistema operativo](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17558407-add-a-column-to-the-operating-system-images-node-f): hemos agregado una nueva columna denominada **Versión de SO** para mostrar la versión del sistema operativo de la imagen al ver la información en los nodos **Imágenes de sistema operativo** y **Paquetes de actualización del sistema operativo**. Solo se muestra la versión del primer índice en el .WIM. Vaya a la pestaña **Detalles** de la imagen para revisar las versiones de sistema operativo para otros índices.
 
 - [Registro más eficaz en Smsts.log](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16791919-stop-filling-smsts-log-with-useless): a partir de esta versión, se dejan de escribir entradas en el archivo smsts.log para obtener información de CCM_CIVersionInfo.PolicyID. Antes de esta versión, podría haber muchas entradas con esta información, lo que dificultaba la búsqueda de la información más pertinente en el archivo de registro.

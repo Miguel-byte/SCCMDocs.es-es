@@ -10,13 +10,12 @@ ms.assetid: 2200b02b-e76b-4aa7-a77a-6dc5e70f1333
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 3a9c7758e394118041700192a393aff98f0d9087
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2047874bb44c89e510abd52a387277e749cf65db
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347338"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896454"
 ---
 # <a name="system-center-updates-publisher"></a>Editor de actualizaciones de System Center
 
@@ -45,19 +44,19 @@ Al abrir Updates Publisher, se abre de manera predeterminada en el nodo Introduc
 Updates Publisher tiene cuatro áreas de trabajo que ayudan a organizarlo.
 
 
-**Updates Workspace** (Área de trabajo Actualizaciones): use este área de trabajo para [crear](/sccm/sum/tools/create-updates-with-updates-publisher) y [administrar](/sccm/sum/tools/manage-updates-with-updates-publisher) actualizaciones de software y agrupaciones de actualizaciones. Esto incluye asignar actualizaciones y agrupaciones a una publicación, publicarlas y exportarlas a otro repositorio de Updates Publisher.
+**Área de trabajo Actualizaciones:** use este área de trabajo para [crear](/sccm/sum/tools/create-updates-with-updates-publisher) y [administrar](/sccm/sum/tools/manage-updates-with-updates-publisher) actualizaciones de software y agrupaciones de actualizaciones. Esto incluye asignar actualizaciones y agrupaciones a una publicación, publicarlas y exportarlas a otro repositorio de Updates Publisher.
 
-**Publications Workspace** (Área de trabajo Publicaciones): aquí se [administran las publicaciones](/sccm/sum/tools/updates-publisher-publications). Una publicación es un grupo de actualizaciones que se crea para simplificar la exportación y publicación de las actualizaciones.
+**Área de trabajo Publicaciones:** aquí se [administran las publicaciones](/sccm/sum/tools/updates-publisher-publications). Una publicación es un grupo de actualizaciones que se crea para simplificar la exportación y publicación de las actualizaciones.
 
 La administración de publicaciones incluye publicar actualizaciones en un servidor para que sus clientes pueden encontrarlas e instalarlas, exportar actualizaciones y agrupaciones para su uso con otras instalaciones de Updates Publisher o modificar el contenido o los detalles de una publicación.
 
 
 
-**Rules Workspace** (Área de trabajo Reglas): aquí puede [administrar reglas de aplicabilidad](/sccm/sum/tools/updates-publisher-applicability-rules) que puede guardar y luego usar con actualizaciones que implemente. Hay dos tipos de informes:
+**Área de trabajo Reglas:** aquí puede [administrar reglas de aplicabilidad](/sccm/sum/tools/updates-publisher-applicability-rules) que puede guardar y luego usar con actualizaciones que implemente. Hay dos tipos de informes:
 
 -   Reglas instalables: estas reglas ayudan a determinar si un cliente debe instalar una actualización.
 -   Reglas instaladas: estas reglas comprueban si una actualización está ya instalada.
 
-**Catalogs Workspace** (Área de trabajo Catálogos): use este espacio de trabajo para agregar y [administrar catálogos de actualizaciones de software](/sccm/sum/tools/updates-publisher-catalogs). Esto incluye la importación de actualizaciones de software desde esos catálogos al repositorio de Updates Publisher.
+**Área de trabajo Catálogos:** use este espacio de trabajo para agregar y [administrar catálogos de actualizaciones de software](/sccm/sum/tools/updates-publisher-catalogs). Esto incluye la importación de actualizaciones de software desde esos catálogos al repositorio de Updates Publisher.
 ## <a name="first-steps"></a>Primeros pasos
 Para empezar, primero [instale](/sccm/sum/tools/install-updates-publisher) y luego [configure opciones](/sccm/sum/tools/updates-publisher-options) de Updates Publisher.

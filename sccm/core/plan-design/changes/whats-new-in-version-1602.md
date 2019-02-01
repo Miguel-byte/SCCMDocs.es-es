@@ -10,13 +10,13 @@ ms.assetid: 4021eca1-adfb-4e5a-adee-159263c29637
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: c6d085fd33513a32207a3b9acfdfe6fe91657a88
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ROBOTS: NOINDEX
+ms.openlocfilehash: 86d36921939b611fa6647d4a0bf3af6d11f27ee7
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52259053"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897634"
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>Novedades de la versión 1602 de System Center Configuration Manager
 
@@ -132,7 +132,7 @@ Encontrará estas aplicaciones en el nodo **Aplicaciones** de la consola de Conf
  Para obtener más información, consulte [Device compliance policies in System Center Configuration Manager](../../../protect/deploy-use/device-compliance-policies.md) (Directivas de cumplimiento de dispositivos en System Center Configuration Manager).  
 
 ### <a name="make-sure-enrolled-and-compliant-devices-always-have-access-to-exchange-on-premises"></a>Comprobación de que los dispositivos inscritos y conformes siempre tengan acceso a Exchange local  
- Cuando activa la siguiente opción, los dispositivos que están inscritos en Intune, y son conformes con las directivas de cumplimiento, pueden acceder a Exchange local: **Sustitución de la regla predeterminada: permitir siempre que los dispositivos inscritos y conformes de Intune tengan acceso a Exchange local:**. Esta regla está disponible en la **página General** del **Asistente de configuración de directivas de acceso condicional** para Exchange local.
+ Si se selecciona la siguiente opción, los dispositivos inscritos en Intune y que cumplen con las directivas establecidas pueden tener acceso a Exchange local: **Invalidación de la regla predeterminada: permitir siempre que los dispositivos compatibles e inscritos en Intune accedan a Exchange:** Esta regla está disponible en la **página General** del **Asistente de configuración de directivas de acceso condicional** para Exchange local.
 
  Esta regla invalida la regla predeterminada, lo que significa que aunque establezca dicha regla en Cuarentena o Bloquear el acceso, los dispositivos inscritos y conformes seguirán teniendo acceso a Exchange local. Use esta opción cuando quiera que los dispositivos inscritos y conformes a las directivas siempre tengan acceso a correo electrónico a través de Exchange local.   
 
@@ -173,13 +173,13 @@ Para obtener más información, consulte [Health attestation for System Center C
 ### <a name="improvements-to-endpoint-protection-antimalware-settings"></a>Mejoras en la configuración antimalware de Endpoint Protection  
  1602 agrega las nuevas opciones de configuración siguientes a la directiva antimalware de Endpoint Protection para Windows Defender:  
 
--   Protección en tiempo real: bloquear aplicaciones potencialmente no deseadas en la descarga, antes de la instalación.  
+-   Protección en tiempo real: bloqueo de aplicaciones potencialmente no deseadas en la descarga y antes de la instalación.  
 
--   Configuración de exploración: examinar unidades de red asignadas durante un examen completo  
+-   Configuración de exploración: examen de las unidades de red asignadas durante un examen completo.  
 
 -   Configuración de envío automático de archivos de ejemplo:  
 
-     El motor de antimalware puede solicitar ejemplos de archivo que se enviarán a Microsoft para un análisis más profundo. De forma predeterminada, siempre se le preguntará antes de enviar dichos ejemplos. Los administradores pueden administrar ahora las siguientes opciones para configurar este comportamiento:  
+     el motor de antimalware puede solicitar ejemplos de archivo que se enviarán a Microsoft para un análisis más profundo. De forma predeterminada, siempre se le preguntará antes de enviar dichos ejemplos. Los administradores pueden administrar ahora las siguientes opciones para configurar este comportamiento:  
 
     -   Avanzado: habilitar el envío automático de archivos de ejemplo para ayudar a Microsoft a averiguar si ciertos elementos encontrados son malintencionados.  
 

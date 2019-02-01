@@ -8,15 +8,15 @@ ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: e4d9e414-1346-4ed4-85d0-64d602b68731
 author: aczechowski
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 939a767820983c1fe2d575d7a745d6dabb45f25c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 970f86849572d6b360c5b92a42a3d131a38fe1d7
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335667"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896471"
 ---
 # <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1512 para System Center Configuration Manager
 
@@ -57,13 +57,13 @@ A partir de Technical Preview 1512, al integrar Configuration Manager con Micros
 ##  <a name="bkmk_EPpolicy"></a> Mejoras para la configuración de directivas de Endpoint Protection  
 En 1512 Technical Preview, hemos agregado la siguiente nueva configuración de directiva antimalware de Endpoint Protection:  
 
--   Protección en tiempo real: **Bloquear aplicaciones potencialmente no deseadas en la descarga y antes de la instalación**  
+-   Protección en tiempo real: **Bloqueo de aplicaciones potencialmente no deseadas en la descarga y antes de la instalación**  
 
     -   Aplicaciones no deseadas potenciales (PUA) es una clasificación de amenaza que se basa en la reputación y la identificación de investigación. Normalmente, se trata de aplicaciones no deseadas que instalan varios programas o sus aplicaciones empaquetadas.  
 
     -   La configuración de directiva de protección está habilitada de forma predeterminada (establecida en "Sí"). Cuando se habilita, esta configuración bloqueará las PUA en el momento de la descarga y la instalación. Sin embargo, puede excluir determinados archivos o carpetas para satisfacer las necesidades específicas de su entorno.  
 
--   Configuración de examen: **Examinar unidades de red asignadas al ejecutar un examen completo**  
+-   Configuración de exploración: **Examinar unidades de red asignadas al ejecutar un examen completo**  
 
     -   Esta configuración proporciona una mayor granularidad para que el administrador permita análisis de archivos de red a petición sin el riesgo de analizar siempre unidades de red asignadas durante un examen completo programado.  
 
@@ -75,9 +75,9 @@ En 1512 Technical Preview, hemos agregado la siguiente nueva configuración de d
 
      El motor de antimalware puede solicitar ejemplos de archivo que se enviarán a Microsoft para un análisis más profundo. De forma predeterminada, siempre se le preguntará antes de enviar dichos ejemplos. Los administradores pueden administrar ahora las siguientes opciones para configurar este comportamiento:  
 
-    -   Avanzado: **Habilitar el envío automático de archivos de muestra para ayudar a Microsoft a averiguar si ciertos elementos encontrados son malintencionados**: cambie esta opción a "Sí" para habilitar el envío automático de archivos de ejemplo. De forma predeterminada, esta configuración está establecida como "No", lo que significa que el envío automático de archivos de ejemplo está deshabilitado y se le preguntará a los usuarios antes de enviar ejemplos.   (Esta configuración se introdujo por primera vez en System Center 2012 R2 Configuration Manager SP1)  
+    -   Avanzado: **Habilitar el envío automático de archivos de ejemplo para ayudar a Microsoft a averiguar si ciertos elementos encontrados son malintencionados**:  cambie esta opción a "Sí" para habilitar el envío automático de archivos de ejemplo. De forma predeterminada, esta configuración está establecida como "No", lo que significa que el envío automático de archivos de ejemplo está deshabilitado y se le preguntará a los usuarios antes de enviar ejemplos.   (Esta configuración se introdujo por primera vez en System Center 2012 R2 Configuration Manager SP1)  
 
-    -   Avanzado: **Permitir a los usuarios modificar la configuración de envío automático de archivos de muestra**: esta opción determina si un usuario con derechos administrativos locales en un dispositivo puede cambiar la configuración de envío automático de archivos de ejemplo en la interfaz del cliente. De forma predeterminada, esta opción está establecida en "No", lo que significa que la configuración solo se puede cambiar en la consola de Configuration Manager y los administradores locales de un dispositivo no pueden cambiarla.  
+    -   Avanzado: **Permitir a los usuarios modificar la configuración de envío automático de archivos de ejemplo**: esta configuración determina si un usuario con derechos administrativos locales en un dispositivo puede cambiar la configuración de envío automático de archivos de ejemplo en la interfaz del cliente. De forma predeterminada, esta opción está establecida en "No", lo que significa que la configuración solo se puede cambiar en la consola de Configuration Manager y los administradores locales de un dispositivo no pueden cambiarla.  
 
          Por ejemplo, a continuación se muestra la configuración de Windows Defender en Windows 10 establecida por el administrador como habilitada, y el usuario no tiene permiso para modificarla:  
 

@@ -10,12 +10,13 @@ ms.assetid: bcde47a7-433e-4944-964b-539b17d15d64
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9095bdf431525a66a570267c4fff07a382a16fe4
-ms.sourcegitcommit: af4f8bd8dffe6fb05f51322ea9e94d335a2cc0c0
+ROBOTS: NOINDEX
+ms.openlocfilehash: c443f561392f95d875a681319ebb9db4ff3fb66b
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39360775"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898485"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Funcionalidades de la versión 1807 Technical Preview de Configuration Manager 
 
@@ -219,7 +220,7 @@ Intente completar las tareas. Luego envíe [comentarios](capabilities-in-technic
 
 Ahora puede ver una salida de script detallada sin formato o con formato JSON estructurado. Este formato permite leer y analizar la salida de manera más sencilla. Si el script devuelve texto válido con formato JSON, podrá ver la salida detallada como **salida JSON** o **salida sin formato**. En caso contrario, la única opción es **Salida de script**. 
 
-#### <a name="example-script-output-is-valid-json"></a>Ejemplo: La salida de script es un archivo JSON válido
+#### <a name="example-script-output-is-valid-json"></a>Ejemplo: la salida de script es un archivo JSON válido
 Comando: `$PSVersionTable.PSVersion`  
 
 Salida:  
@@ -229,7 +230,7 @@ Major  Minor  Build  Revision
 5      1      16299  551
 ```
 
-#### <a name="example-script-output-isnt-valid-json"></a>Ejemplo: La salida de script no es un archivo JSON válido
+#### <a name="example-script-output-isnt-valid-json"></a>Ejemplo: la salida de script no es un archivo JSON válido
 Comando: `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
 Salida:  

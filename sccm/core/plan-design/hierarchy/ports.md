@@ -10,12 +10,12 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b074ee02ec5e50fb5e495923538535cf8765dcdb
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 8338e08ffb6d09299123e363f27e586b650452fe
+ms.sourcegitcommit: 231111a704777789629911369f4d9593d2053fc0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53420947"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065106"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Puertos usados en Configuration Manager
 
@@ -714,6 +714,11 @@ El servicio de sistema Demonio FTP Trivial (TFTP) no necesita un nombre de usuar
 - RFC 2349: opciones de tamaño de transferencia e intervalo de tiempo de espera  
 
 TFTP está diseñado para admitir entornos de arranque sin disco. Los demonios TFTP escuchan en el puerto UDP 69 pero responden desde un puerto alto asignado dinámicamente. Por lo tanto, la habilitación de este puerto permite al servicio TFTP recibir solicitudes TFTP entrantes, pero no permite al servidor seleccionado responder a dichas solicitudes. No se puede habilitar el servidor seleccionado para que responda a solicitudes TFTP entrantes a menos que el servidor TFTP esté configurado para responder desde el puerto 69.  
+
+El punto de distribución habilitado con PXE y el cliente en Windows PE seleccionan puertos altos asignados dinámicamente para las transferencias de TFTP. Microsoft define estos puertos entre el 49152 y el 65535. Para más información, vea [Introducción al servicio y requisitos del puerto de red para Windows](https://support.microsoft.com/help/832017/service-overview-and-network-port-requirements-for-windows).
+
+Sin embargo, durante el arranque de PXE real, la tarjeta de red del dispositivo selecciona el puerto alto asignado dinámicamente que usa durante la transferencia TFTP. La tarjeta de red del dispositivo no está enlazada a los puertos altos asignados dinámicamente definidos por Microsoft. Solo está enlazada a los puertos definidos en RFC 350. Este puerto puede ser cualquiera entre el 0 y el 65535. Para más información sobre qué puertos altos asignados dinámicamente usan la tarjeta de red, póngase en contacto con el fabricante del hardware del dispositivo.
+
 
 #### <a name="bkmk_note5"></a> Nota 5: Comunicación entre el servidor de sitio y los sistemas de sitio
 De forma predeterminada, la comunicación entre el servidor de sitio y los sistemas de sitio es bidireccional. El servidor de sitio inicia la comunicación para configurar el sistema de sitio y, a continuación, la mayoría de los sistemas de sitio se conectan al servidor de sitio para enviar información de estado. Los puntos de servicios de informes y los puntos de distribución no envían información de estado. Si selecciona **Requerir al servidor de sitio iniciar conexiones a este sistema de sitio** en las propiedades del sistema de sitio después de instalarlo, el sistema de sitio no iniciará la comunicación con el servidor de sitio. En vez de ello, el servidor de sitio inicia la comunicación y usa la cuenta de instalación del sistema de sitio para la autenticación con el servidor de sistema de sitio.  

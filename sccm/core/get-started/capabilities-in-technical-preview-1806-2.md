@@ -10,12 +10,13 @@ ms.assetid: 3af2a69d-30e7-4dce-832d-82b7a1c082f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5183b30d9184f7119d1423b5773da2b692026ab7
-ms.sourcegitcommit: 64b343906afdd442189559119eea8e933642cbf8
+ROBOTS: NOINDEX
+ms.openlocfilehash: f052d4c4be1334214872ff91f16be1888850a118
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39342821"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898518"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1806.2 para System Center Configuration Manager
 
@@ -96,7 +97,7 @@ Esta versión incluye las siguientes mejoras para las [implementaciones por fase
 
 Este panel muestra la siguiente información para cada fase de la implementación:  
 
-- **Dispositivos en total**: el número de dispositivos que abarca esta fase.  
+- **Dispositivos en total**: número de dispositivos que abarca esta fase.  
 
 - **Estado**: indica el estado actual de esta fase. Cada fase puede tener uno de los siguientes estados:  
 
@@ -106,7 +107,7 @@ Este panel muestra la siguiente información para cada fase de la implementació
 
     - **Suspendida**: un administrador ha suspendido la implementación.  
 
-- **Progreso**: los estados de implementación con códigos de color de los clientes. Por ejemplo: Correcto, En curso, Error, Requisitos no cumplidos y Desconocido. 
+- **Progreso**: estados de implementación con códigos de color de los clientes. Por ejemplo: Correcto, En curso, Error, Requisitos no cumplidos y Desconocido. 
 
 
 #### <a name="known-issue"></a>Problema conocido
@@ -215,7 +216,7 @@ Vea los siguientes artículos para más información:
 ## <a name="bkmk_bgoptions"></a> Opciones de grupo de límites para descargas del mismo nivel
 <!--1356193--> Los grupos de límites ahora incluyen valores de configuración adicionales para ofrecerle mayor control sobre la distribución de contenido en su entorno. Esta versión agrega las siguientes opciones:  
 
-- **Permitir descargas del mismo nivel en este grupo de límites**: esta opción está habilitada de forma predeterminada. El punto de administración proporciona a los clientes una lista de ubicaciones de contenido que incluye orígenes del mismo nivel. <!--This setting also affects applying Group IDs for Delivery Optimization.518268-->  
+- **Permitir descargas del mismo nivel en este grupo de límites**: Esta opción está habilitada de forma predeterminada. El punto de administración proporciona a los clientes una lista de ubicaciones de contenido que incluye orígenes del mismo nivel. <!--This setting also affects applying Group IDs for Delivery Optimization.518268-->  
 
     Hay dos escenarios comunes en que debe considerar la deshabilitación de esta opción:  
 
@@ -223,7 +224,7 @@ Vea los siguientes artículos para más información:
 
     - Si utiliza un único grupo de límites grande para la asignación de sitio, no hace referencia a ningún punto de distribución.  
 
-- **Durante las descargas del mismo nivel, solo use elementos del mismo nivel en la misma subred**: esta configuración depende de la anterior. Si habilita esta opción, el punto de administración solo se incluye en los orígenes del mismo nivel de la lista de ubicaciones de contenido que se encuentran en la misma subred que el cliente.
+- **Durante las descargas del mismo nivel, use solo elementos del mismo nivel dentro de la misma subred**: Esta configuración depende de la anterior. Si habilita esta opción, el punto de administración solo se incluye en los orígenes del mismo nivel de la lista de ubicaciones de contenido que se encuentran en la misma subred que el cliente.
 
     Escenarios comunes para habilitar esta opción:
 
@@ -243,7 +244,7 @@ Si el cliente del origen del mismo nivel tiene más de una dirección IP (IPv4, 
 
 ### <a name="prerequisites"></a>Requisitos previos 
 
-- Configure las [actualizaciones de software de terceros](/sccm/core/get-started/capabilities-in-technical-preview-1806#bkmk-3pupdate). Complete la Fase 1: Habilitar y configurar la característica.   
+- Configure las [actualizaciones de software de terceros](/sccm/core/get-started/capabilities-in-technical-preview-1806#bkmk-3pupdate). Complete la fase 1: Habilitar y configurar la característica.   
 
 - Un catálogo personalizado firmado digitalmente que contenga actualizaciones de software con firma digital.  
 
@@ -264,17 +265,17 @@ Intente completar las tareas. Y, luego, envíenos sus [comentarios](capabilities
 
     - **Publicador**: el nombre de la organización que publica el catálogo.  
 
-    - **Nombre**: el nombre del catálogo para mostrar en la consola de Configuration Manager.  
+    - **Nombre**: nombre del catálogo que se va a mostrar en la consola de Configuration Manager.  
 
     - **Descripción**: una descripción del catálogo.  
 
-    - **URL de soporte técnico** (opcional): una dirección HTTPS válida de un sitio web para obtener ayuda con el catálogo.  
+    - **Dirección URL de soporte técnico** (opcional): dirección HTTPS válida de un sitio web para obtener ayuda sobre el catálogo.  
 
-    - **Contacto de soporte técnico** (opcional): póngase en contacto con información para obtener ayuda con el catálogo.  
+    - **Contacto de soporte técnico** (opcional): información de contacto para obtener ayuda sobre el catálogo.  
 
 3. Complete el asistente. El asistente agrega el nuevo catálogo en un estado de suscripción cancelada.  
 
-4. Suscríbase al catálogo personalizado con la acción existente **Suscribirse al catálogo**. Para más información, vea [Fase 2: Suscribirse a un catálogo de aplicaciones de terceros y sincronizar las actualizaciones](/sccm/core/get-started/capabilities-in-technical-preview-1806#phase-2-subscribe-to-a-third-party-catalog-and-sync-updates).  
+4. Suscríbase al catálogo personalizado con la acción existente **Suscribirse al catálogo**. Para más información, vea [Fase 2: Suscribirse a un catálogo de terceros y sincronizar las actualizaciones](/sccm/core/get-started/capabilities-in-technical-preview-1806#phase-2-subscribe-to-a-third-party-catalog-and-sync-updates).  
 
 > [!Note]  
 > No puede agregar catálogos con la misma dirección URL de descarga, y no puede editar las propiedades del catálogo. Si especifica propiedades incorrectas de un catálogo personalizado, elimine el catálogo antes de volver a agregarlo.  

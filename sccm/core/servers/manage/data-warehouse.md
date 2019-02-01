@@ -10,12 +10,12 @@ ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c04ee9a62b6c629060f79df2f4b104fe78ca794
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: a4d95495f2f200eaff39699c65cc391a2a81b009
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418992"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897566"
 ---
 #  <a name="the-data-warehouse-service-point-for-configuration-manager"></a>El punto de servicio de almacenamiento de datos para Configuration Manager
 
@@ -237,7 +237,7 @@ Siga los pasos que se indican a continuación para configurar certificados:
 
     2. Abra **Administrador de configuración de SQL Server**. En **Configuración de red de SQL Server**, haga clic con el botón derecho para seleccionar **Propiedades** en **Protocolos para MSSQLSERVER**. Cambie a la pestaña **Certificado**, seleccione **Certificado de identificación de SQL Server de almacenamiento de datos** como el certificado y luego guarde los cambios.  
 
-    3. En **Administrador de configuración de SQL Server**, en **Servicios de SQL Server**, reinicie el **Servicio SQL Server** y el **Servicio de informes**.  
+    3. En **Administrador de configuración de SQL Server**, en **Servicios de SQL Server**, reinicie el **Servicio SQL Server**. Si SQL Reporting Services también está instalado en el servidor que hospeda la base de datos de almacén de datos, reinicie también **Reporting Services**.  
 
     4. Abra Microsoft Management Console (MMC) y agregue el complemento **Certificados**. Seleccione la **cuenta de equipo** del equipo local. Expanda la carpeta **Personal** y seleccione **Certificados**. Exporte el **Certificado de identificación de SQL Server de almacenamiento de datos** como un archivo **DER binario codificado X.509 (.CER)**.  
 

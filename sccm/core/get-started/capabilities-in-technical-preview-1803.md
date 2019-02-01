@@ -10,12 +10,13 @@ ms.assetid: 56dc4b07-5aa4-43e2-9be8-d26ae5ff5613
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dc4dc88b2a8fa9ba075fee51e187e02ae55c2cce
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ROBOTS: NOINDEX
+ms.openlocfilehash: 672257141c0672a76b89ee9d78184d2a4230280f
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344524"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898365"
 ---
 # <a name="capabilities-in-technical-preview-1803-for-system-center-configuration-manager"></a>Capacidades de la versión preliminar técnica 1803 para System Center Configuration Manager
 
@@ -41,8 +42,7 @@ Revise el artículo [Technical Preview para System Center Configuration Manager]
 
  
 ## <a name="pull-distribution-points-support-cloud-distribution-points-as-source"></a>Compatibilidad de puntos de distribución de extracción con puntos de distribución de nube como orígenes  
-<!--1321554-->
-Muchos clientes usan [puntos de distribución de extracción](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point) en sucursales u oficinas remotas, que descargan contenido desde un punto de distribución de origen en la WAN. Si sus oficinas remotas tienen una mejor conexión a Internet o si quiere reducir la carga en los vínculos a WAN, ahora puede usar como origen un [punto de distribución de nube](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) en Microsoft Azure. Cuando se agrega un origen en la pestaña **Punto de distribución de extracción** de las propiedades del punto de distribución, cualquier punto de distribución de nube en el sitio aparece como un punto de distribución disponible. El comportamiento de ambos roles de sistema de sitio sigue siendo el mismo en cualquier caso. 
+<!--1321554--> Muchos clientes usan [puntos de distribución de extracción](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point) en sucursales u oficinas remotas que descargan contenido desde un punto de distribución de origen en la WAN. Si sus oficinas remotas tienen una mejor conexión a Internet o si quiere reducir la carga en los vínculos a WAN, ahora puede usar como origen un [punto de distribución de nube](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) en Microsoft Azure. Cuando se agrega un origen en la pestaña **Punto de distribución de extracción** de las propiedades del punto de distribución, cualquier punto de distribución de nube en el sitio aparece como un punto de distribución disponible. El comportamiento de ambos roles de sistema de sitio sigue siendo el mismo en cualquier caso. 
 
 ### <a name="prerequisites"></a>Requisitos previos
 - El punto de distribución de extracción necesita acceso a Internet para comunicarse con Microsoft Azure.
@@ -54,8 +54,7 @@ Muchos clientes usan [puntos de distribución de extracción](/sccm/core/plan-de
 
 
 ## <a name="partial-download-support-in-client-peer-cache-to-reduce-wan-utilization"></a>Compatibilidad de descarga parcial en la memoria caché del mismo nivel de cliente para reducir la utilización de la WAN
-<!--1357346-->
-Los orígenes de la caché del mismo nivel de cliente ahora pueden dividir el contenido en partes. Estas partes reducen al mínimo la transferencia de red para usar menos WAN. El punto de administración proporciona un seguimiento más detallado de las partes de contenido e intenta eliminar más de una descarga del mismo contenido por grupo de límites. 
+<!--1357346--> Los orígenes de la caché del mismo nivel de cliente ahora pueden dividir el contenido en partes. Estas partes reducen al mínimo la transferencia de red para usar menos WAN. El punto de administración proporciona un seguimiento más detallado de las partes de contenido e intenta eliminar más de una descarga del mismo contenido por grupo de límites. 
 
 ### <a name="example-scenario"></a>Escenario de ejemplo
 Contoso tiene un único sitio primario con dos grupos de límites: oficina central y sucursal. Hay una relación de reserva de 30 minutos entre los dos grupos de límites. El punto de administración y el punto de distribución del sitio solo están en el límite de oficina central. La ubicación de la sucursal no tiene ningún punto de distribución local. Dos de los cuatro clientes de la sucursal están configurados como orígenes de caché del mismo nivel. 
@@ -93,17 +92,15 @@ Contoso tiene un único sitio primario con dos grupos de límites: oficina centr
 
 
 ## <a name="maintenance-windows-in-software-center"></a>Ventanas de mantenimiento en el Centro de software
-<!--1358131-->
-El Centro de software ahora muestra la siguiente ventana de mantenimiento programado. En la pestaña Estado de la instalación, cambie la vista de Todas a Próximas. Muestra el intervalo de tiempo y la lista de implementaciones que están programadas. La lista está vacía si no hay ninguna ventana de mantenimiento futuro. 
+<!--1358131--> El Centro de software ahora muestra la siguiente ventana de mantenimiento programado. En la pestaña Estado de la instalación, cambie la vista de Todas a Próximas. Muestra el intervalo de tiempo y la lista de implementaciones que están programadas. La lista está vacía si no hay ninguna ventana de mantenimiento futuro. 
 
 ![El Centro de software mostrando la lista de las próximas implementaciones en la pestaña Estado de la instalación](media/1358131-software-center-maintenance-windows.png)
 
 
 ## <a name="custom-tab-for-webpage-in-software-center"></a>Pestaña personalizada de la página web en el Centro de software
-<!--1358132-->
-Ahora puede crear una pestaña personalizada para abrir una página web en el Centro de software. Esta característica permite mostrar contenido a los usuarios finales de una manera coherente y confiable. En esta lista se incluyen algunos ejemplos:
+<!--1358132--> Ahora puede crear una pestaña personalizada para abrir una página web en el Centro de software. Esta característica permite mostrar contenido a los usuarios finales de una manera coherente y confiable. En esta lista se incluyen algunos ejemplos:
 - Contactar con TI: información sobre cómo ponerse en contacto con el departamento de TI de la organización
-- Centro de soporte técnico de TI: acciones de autoservicio de TI, como buscar una base de conocimientos o abrir una incidencia de soporte técnico.
+- Centro de soporte técnico: acciones de autoservicio de TI, como buscar una base de conocimientos o abrir una incidencia de soporte técnico.
 - Documentación de usuario final: artículos para los usuarios de la organización sobre diversos temas de TI como, por ejemplo, el uso de aplicaciones o la actualización a Windows 10.
 
 

@@ -10,13 +10,12 @@ ms.assetid: ab5cda93-b67c-4aa5-904d-7b63ce790aa0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: f74d7925528e48c691ce7ca61b6dc0b5136f1df7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f97decbe40293ee45cdc75c3fb36f4c57662ac06
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349483"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896784"
 ---
 # <a name="install-updates-publisher"></a>Instalar Updates Publisher
 
@@ -44,7 +43,7 @@ Los siguientes requisitos se aplican al equipo donde se ejecuta Updates Publishe
     -   En Windows Server, instale la Consola de administración predeterminada para cumplir este requisito.
     -   En Windows 10 y Windows 8.1, instale las [Herramientas de administración remota del servidor (RSAT) para sistemas operativos Windows](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems). Esto instala la compatibilidad necesaria para usar Updates Publisher (*API y cmdlets de PowerShell* e *Interfaz de usuario de la Consola de administración*).
 -   **Permisos**:
-    -   Instalación: administrador local
+    -   Instalación: Administrador local
     -   Mayoría de las operaciones: usuario local
     -   Publicación u operaciones que implican WSUS: miembro del grupo de administradores de WSUS en el servidor WSUS.
 

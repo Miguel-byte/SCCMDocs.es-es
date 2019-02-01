@@ -10,13 +10,12 @@ ms.assetid: a70bfbd4-757a-4468-9312-1c3b373ef9fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex
-ms.openlocfilehash: 0481abfb1ed881355a489b99b0c3f7ec9c595e69
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0e77225fb378a5851dbba9718dd3810463255cf7
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342331"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898433"
 ---
 # <a name="plan-a-migration-job-strategy-in-system-center-configuration-manager"></a>Planear una estrategia de trabajo de migración en System Center Configuration Manager
 
@@ -45,11 +44,11 @@ Use trabajos de migración para configurar los datos específicos que quiera mig
 ##  <a name="Types_of_Migration"></a> Tipos de trabajos de migración  
  Configuration Manager admite los siguientes tipos de trabajos de migración. Cada tipo de trabajo está diseñado para ayudar a definir los objetos que se pueden incluir en ese trabajo.  
 
- **Migración de recopilación** (solo se admite al migrar desde Configuration Manager 2007 SP2): migre los objetos que están relacionados con las recopilaciones seleccionadas. De forma predeterminada, la migración de una recopilación incluye todos los objetos asociados a los miembros de la recopilación. Puede excluir instancias de objetos específicos al usar un trabajo de migración de recopilación.  
+ **Migración de recopilación** (solo se admite al migrar desde Configuration Manager 2007 SP2): Migre los objetos que estén relacionados con las recopilaciones que seleccione. De forma predeterminada, la migración de una recopilación incluye todos los objetos asociados a los miembros de la recopilación. Puede excluir instancias de objetos específicos al usar un trabajo de migración de recopilación.  
 
- **Migración de objeto**: migre los objetos individuales que seleccione. Seleccione solo los datos específicos que desee migrar.  
+ **Migración de objetos**: migre los objetos individuales que seleccione. Seleccione solo los datos específicos que desee migrar.  
 
- **Migración de objeto migrado anteriormente**: migre objetos que migró anteriormente cuando se hayan actualizado en la jerarquía de origen después de que se hubieran migrado por última vez.  
+ **Migración de objetos migrados anteriormente**: migre objetos que migró anteriormente, cuando se hayan actualizado en la jerarquía de origen después de que se hubieran migrado por última vez.  
 
 ###  <a name="Objects_that_can_migrate"></a> Objetos que puede migrar  
  No todos los objetos se pueden migrar con un tipo específico de trabajo de migración. La lista siguiente identifica el tipo de objetos que puede migrar con cada tipo de trabajo de migración.  

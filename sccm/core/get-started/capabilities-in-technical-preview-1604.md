@@ -8,15 +8,15 @@ ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 684a5559-9e6e-469b-86ae-e768e9f0c9ac
 author: aczechowski
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 113e22c33e9e8545c382373f3ba093dba3969939
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9aecb8f744185116b85232bd9b2893cdf20a3b6d
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340699"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897549"
 ---
 # <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1604 para System Center Configuration Manager
 
@@ -37,7 +37,7 @@ En este artículo se presentan las características disponibles en Technical Pre
 
 ### <a name="try-it-out"></a>Haga la prueba  
 
-##### <a name="scenario-1-set-up-windows-store-for-business-synchronization"></a>Escenario 1: configurar la sincronización de la Tienda Windows para empresas  
+##### <a name="scenario-1-set-up-windows-store-for-business-synchronization"></a>Escenario 1: Configurar la sincronización de la Tienda Windows para empresas  
 
 1.  En Azure Active Directory, registre Configuration Manager como una herramienta de administración "Aplicación web y/o API web". De este modo, obtendrá un identificador de cliente que necesitará más adelante.  
 
@@ -81,7 +81,7 @@ En este artículo se presentan las características disponibles en Technical Pre
 
 8.  Una vez que haya terminado, verá la cuenta configurada en la lista **Cuentas de la Tienda Windows para empresas** en la consola de Configuration Manager.  
 
-##### <a name="scenario-2-create-and-deploy-a-configuration-manager-application-from-a-windows-store-for-business-offline-licensed-app"></a>Escenario 2: crear e implementar una aplicación de Configuration Manager a partir de una aplicación con licencia sin conexión de la Tienda Windows para empresas  
+##### <a name="scenario-2-create-and-deploy-a-configuration-manager-application-from-a-windows-store-for-business-offline-licensed-app"></a>Escenario 2: Crear e implementar una aplicación de Configuration Manager a partir de una aplicación con licencia sin conexión de la Tienda Windows para empresas  
 
 1.  En el área de trabajo **Biblioteca de software** de la consola de Configuration Manager, expanda **Administración de aplicaciones** y luego haga clic en **Información de licencia para las aplicaciones de la Tienda**.  
 
