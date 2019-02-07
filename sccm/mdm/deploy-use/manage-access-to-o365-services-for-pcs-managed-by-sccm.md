@@ -10,24 +10,30 @@ ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f4e67050740b9d05dd33f2f79b7820b6dc8d9093
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 8bd926535f56e32430ae41c883623b80d142aebc
+ms.sourcegitcommit: 33e066aceaf321add1031df00e552e942c8351a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53415813"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55764436"
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Administración del acceso a servicios de O365 para equipos administrados por System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 <!--1191496--> Configurar el acceso condicional para servicios de Office 365 para equipos administrados por Configuration Manager.  
+
+> [!Important]  
+> Incluida de MDM híbrida local son de acceso condicional [características en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management). <!--Intune feature 2683117-->  
+> 
+> Si usa acceso condicional en los dispositivos administrados con el cliente de Configuration Manager, para asegurarse de que todavía están protegidos, habilitar el acceso condicional en Intune para los dispositivos antes de migrar. Habilitar la administración conjunta en Configuration Manager, mover la carga de trabajo de directiva de cumplimiento a Intune y, a continuación, complete la migración de Intune híbrido a Intune independiente. Para obtener más información, consulte [el acceso condicional con administración conjunta](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
+
+
+Para obtener información sobre cómo configurar el acceso condicional para dispositivos inscritos y administrados por Microsoft Intune, vea [Administrar el acceso a servicios en System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md). En ese artículo también se describen los dispositivos que están unidos a un dominio y no se evalúan para cumplimiento.
 
 > [!Note]  
 > Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para más información, vea [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
-
-Para obtener información sobre cómo configurar el acceso condicional para dispositivos inscritos y administrados por Microsoft Intune, vea [Administrar el acceso a servicios en System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md). En ese artículo también se describen los dispositivos que están unidos a un dominio y no se evalúan para cumplimiento.
 
 ## <a name="supported-services"></a>Servicios compatibles  
 
@@ -78,11 +84,11 @@ Para obtener información sobre cómo configurar el acceso condicional para disp
 
 -   **Requerir registro en Azure Active Directory:** Esta regla comprueba si el dispositivo del usuario es el lugar de trabajo unido a Azure AD y, si no, el dispositivo se registra automáticamente en Azure AD. El registro automático solo se admite en Windows 8.1. Para equipos con Windows 7, implemente un archivo MSI para realizar el registro automático. Para más información, vea [Registro automático de dispositivos en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
 
--   **Todas las actualizaciones necesarias instaladas con una fecha límite anterior a un número determinado de días:** Especifique el valor para el período de gracia de la fecha límite de implementación para las actualizaciones necesarias en el dispositivo del usuario. Al agregar esta regla también se instalan automáticamente todas las actualizaciones necesarias pendientes. Especifique las actualizaciones necesarias en la regla **Actualizaciones automáticas requeridas**.   
+-   **Todas las actualizaciones necesarias que se instalan con una fecha límite anterior a un número determinado de días:** Especifique el valor para el período de gracia de la fecha límite de implementación para las actualizaciones necesarias en el dispositivo del usuario. Al agregar esta regla también se instalan automáticamente todas las actualizaciones necesarias pendientes. Especifique las actualizaciones necesarias en la regla **Actualizaciones automáticas requeridas**.   
 
 -   **Requerir cifrado de unidad BitLocker:** Esta regla comprueba si la unidad principal (por ejemplo, C:\\) en el dispositivo está cifrada con BitLocker. Si el cifrado BitLocker no está habilitado en el dispositivo primario, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
 
--   **Requerir Antimalware:** Esta regla comprueba si System Center Endpoint Protection o Windows Defender está habilitado y ejecutándose. Si no está habilitado, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
+-   **Requerir antimalware:** Esta regla comprueba si System Center Endpoint Protection o Windows Defender está habilitado y ejecutándose. Si no está habilitado, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
 
 -   **Informe del estado correcto por el servicio de atestación de estado:** Esta condición incluye cuatro subreglas para comprobar el cumplimiento del dispositivo en el servicio de atestación de estado de dispositivo. Para más información, vea [Atestación de estado](/sccm/core/servers/manage/health-attestation). 
 
