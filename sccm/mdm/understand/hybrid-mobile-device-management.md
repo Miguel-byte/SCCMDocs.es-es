@@ -10,19 +10,19 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a744463aa82951d68125c0d17d88ba5e8a1f2703
-ms.sourcegitcommit: 33e066aceaf321add1031df00e552e942c8351a7
+ms.openlocfilehash: dd91d8afb092f855179edaa07163d5fcaa2ac350
+ms.sourcegitcommit: 38f56f1d5803370f4262931c2dc4a532bfcf0594
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764419"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905597"
 ---
 # <a name="hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>MDM híbrida con Configuration Manager e Intune
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
 > [!Important]  
-> Desde el 14 de agosto de 2018, la administración híbrida de dispositivos móviles es una [característica en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
+> Desde el 14 de agosto de 2018, la administración híbrida de dispositivos móviles es una [característica en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). A partir de la versión del servicio Intune 1902, que se esperaba el final de febrero de 2019, los clientes nuevos no pueden crear una nueva conexión híbrida. 
 > <!--Intune feature 2683117-->  
 > Desde que lo lanzamos en Azure hace más de un año, Intune ha agregado cientos de nuevas funcionalidades solicitadas por el cliente y que se encuentran a la vanguardia del sector. Ahora ofrece muchas más funciones que las que hay disponibles a través de la administración híbrida de dispositivos móviles (MDM). Intune en Azure proporciona una experiencia administrativa más integrada y simplificada para sus necesidades de movilidad empresarial.
 > 
@@ -36,13 +36,20 @@ ms.locfileid: "55764419"
 > 
 > - Si migra a Intune en Azure antes del final de la oferta de MDM híbrida, el usuario final no debería notar nada.  
 > 
+> - El 1 de septiembre de 2019, los dispositivos de MDM híbrida que queden ya no recibirán directivas, aplicaciones ni actualizaciones de seguridad.  
+> 
 > - Las licencias siguen siendo las mismas. Las licencias de Intune en Azure se incluyen con MDM híbrida.  
 > 
 > - La característica MDM local en Configuration Manager no está en desuso. A partir de la versión de Configuration Manager 1810, puede usar MDM local sin conexión a Intune. Para obtener más información, consulte [Intune una conexión ya no es necesario para nuevas implementaciones de MDM local](/sccm/core/plan-design/changes/whats-new-in-version-1810#bkmk_opmdm). 
 > 
-> - La característica de acceso condicional en el entorno local de Configuration Manager también está en desuso con MDM híbrida. Si usa acceso condicional en los dispositivos administrados con el cliente de Configuration Manager, para asegurarse de que todavía están protegidos, habilitar el acceso condicional en Intune para los dispositivos antes de migrar. Habilitar la administración conjunta en Configuration Manager, mover la carga de trabajo de directiva de cumplimiento a Intune y, a continuación, complete la migración de Intune híbrido a Intune independiente. Para obtener más información, consulte [el acceso condicional con administración conjunta](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
-> 
-> - El 1 de septiembre de 2019, los dispositivos de MDM híbrida que queden ya no recibirán directivas, aplicaciones ni actualizaciones de seguridad.  
+> - La característica de acceso condicional en el entorno local de Configuration Manager también está en desuso con MDM híbrida. Si usa acceso condicional en los dispositivos administrados con el cliente de Configuration Manager, asegúrese de que están protegidos antes de migrar. 
+>     1. Configurar directivas de acceso condicional en Azure
+>     2. Configurar directivas de cumplimiento en el portal de Intune 
+>     3. Finalizar la migración híbrida y establecer la entidad de MDM en Intune
+>     4. Habilitación de la administración conjunta
+>     5. Mover la carga de trabajo de administración conjunta de las directivas de cumplimiento a Intune 
+>
+>     Para obtener más información, consulte [el acceso condicional con administración conjunta](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
 > 
 > **¿Qué he de hacer para prepararme para este cambio?**
 > 
