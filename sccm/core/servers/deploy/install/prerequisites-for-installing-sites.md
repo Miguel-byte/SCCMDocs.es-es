@@ -10,12 +10,12 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a16794fbcff6f21f2240f69998c576994a57502c
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 818065f4ea3f537dc565d06c278b710b224a4031
+ms.sourcegitcommit: f0ec334a70d0cdd3f5f185ac7787b700947f82de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893634"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55303223"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>Requisitos previos para instalar sitios de Configuration Manager
 
@@ -115,7 +115,7 @@ Todos los demás roles de sistema de sitio pueden permanecer instalados en el si
 #### <a name="open-the-sql-server-service-broker-port"></a>Abra el puerto de SQL Server Service Broker
 El puerto de red debe estar abierto para SQL Server Service Broker (SBB) entre el sitio primario independiente y el servidor del sitio de administración central.  
 
-Para replicar correctamente los datos entre un sitio de administración central y un sitio primario, Configuration Manager necesita que haya un puerto abierto entre los dos sitios para que se pueda usar SSB. Al instalar un sitio de administración central y expandir un sitio primario independiente, la comprobación de requisitos previos no comprueba que el puerto especificado para SSB esté abierto en el sitio primario.  
+Para replicar correctamente los datos entre un sitio de administración central y un sitio primario, Configuration Manager necesita que haya un puerto abierto entre los dos sitios para que se pueda usar SSB. Al instalar un sitio de administración central y expandir un sitio primario independiente, la comprobación de requisitos previos no verifica que el puerto especificado para SSB esté abierto en el sitio primario.  
 
 #### <a name="known-issues-with-azure-services"></a>Problemas conocidos con servicios de Azure
 Si usa uno de los siguientes servicios de Azure con Configuration Manager, deberá eliminar y volver a crear la conexión al servicio después de la ampliación del sitio.

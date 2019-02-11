@@ -2,7 +2,7 @@
 title: Puertos usados para las conexiones
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los puertos de red necesarios y personalizables que usa Configuration Manager para las conexiones.
-ms.date: 09/10/2018
+ms.date: 01/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8338e08ffb6d09299123e363f27e586b650452fe
-ms.sourcegitcommit: 231111a704777789629911369f4d9593d2053fc0
+ms.openlocfilehash: a65b1f30815eca411a64a72b1a35acc9d7dad34c
+ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065106"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55482544"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Puertos usados en Configuration Manager
 
@@ -126,6 +126,10 @@ Además de los puertos que se enumeran en esta tabla, un proxy de reactivación 
 |-----------------|---------|---------|  
 |Wake On LAN|9 <sup>[Nota 2](#bkmk_note2) Puerto alternativo disponible</sup>|--|  
 |Proxy de reactivación|25536 <sup>[Nota 2](#bkmk_note2) Puerto alternativo disponible</sup>|--|  
+|Difusión de caché del mismo nivel de Windows PE|8004|--|  
+|Descarga de caché del mismo nivel de Windows PE|--|8003|  
+
+Para más información, consulte [Windows PE Peer Cache](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md#-requirements-for-a-client-to-use-a--windows-pe-peer-cache-source) (Caché del mismo nivel de Windows PE).
 
 
 ###  <a name="BKMK_PortsClient-PolicyModule"></a> Cliente -- > Módulo de directivas del servicio de inscripción de dispositivos de red de Configuration Manager (SCEP)   

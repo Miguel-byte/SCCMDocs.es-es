@@ -10,12 +10,12 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4d892e8d194f61fece977c91ce36ba46cf9dd53d
-ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.openlocfilehash: e1becb8cc719466edabfb55ce82f9aa5e3345e3f
+ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54250721"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55482442"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Características de versión preliminar en Configuration Manager
 
@@ -78,6 +78,7 @@ Al habilitar una característica de versión preliminar, el Administrador de jer
 | API del proveedor de SMS <!--1359052--> | Versión 1810 | ![Todavía no](media/red_x.png) |
 | [Sistema de sitios HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | Versión 1806 | Versión 1810 |
 | [Aplicaciones cliente para dispositivos administrados conjuntamente](/sccm/comanage/workloads#client-apps) <!--1357892--> | Versión 1806 | ![Todavía no](media/red_x.png) |
+| [Extensiones SCAP](/sccm/compliance/plan-design/scap/about-scap) <!--3607889--> | Versión 1806 | ![Todavía no](media/red_x.png) |
 | [Administrador de conversión de paquetes](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | Versión 1806 | Versión 1810 |
 | [Compatibilidad con Cisco AnyConnect 4.0.07x y versiones posteriores para iOS](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | Versión 1802 | Versión 1802 <br>con la actualización 4163547 |
 | [Implementaciones por fases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | Versión 1802 | Versión 1806 |

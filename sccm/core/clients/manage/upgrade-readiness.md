@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
-ms.openlocfilehash: ad084aabca6f3b0fd920fd2c9b406efff36005a1
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 0ba5a484fe11185b46125de0d8764bce153f577d
+ms.sourcegitcommit: a2ecd84d93f431ee77848134386fec14031aed6a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43995369"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230858"
 ---
 # <a name="integrate-upgrade-readiness-with-configuration-manager"></a>Integración de Upgrade Readiness con Configuration Manager
 
@@ -50,10 +50,14 @@ Configure estos valores mediante los ajustes del cliente de Configuration Manage
 
 Use el [Asistente para servicios de Azure](/sccm/core/servers/deploy/configure/azure-services-wizard) para simplificar el proceso de configuración de los servicios de Azure que se usan con Configuration Manager. Para conectar Configuration Manager con Upgrade Readiness, cree un registro de aplicación de Azure Active Directory (Azure AD) de tipo *aplicación web/API* en [Azure Portal](https://portal.azure.com). Para leer más sobre cómo crear un registro de aplicación, consulte [Register your application with your Azure AD tenant](/azure/active-directory/active-directory-app-registration) (Registro de la aplicación con su inquilino de Azure AD). 
 
-En Azure Portal, asigne permisos de *colaborador* a la aplicación web recién registrada. Establezca estos permisos en el grupo de recursos que contiene el área de trabajo de Log Analytics que hospeda los datos de Upgrade Readiness. El Asistente para servicios de Azure utiliza este registro de aplicación para permitir que Configuration Manager se comunique de manera segura con Azure AD y conecte la infraestructura a los datos de Upgrade Readiness.
+En Azure Portal, asigne los siguientes permisos a la aplicación web recién registrada:
+- Permisos de *lector* en el grupo de recursos que contiene el área de trabajo de Log Analytics con los datos de Upgrade Readiness
+- Permisos de *colaborador* para el área de trabajo de Log Analytics que hospeda los datos de Upgrade Readiness
+
+El Asistente para servicios de Azure utiliza este registro de aplicación para permitir que Configuration Manager se comunique de manera segura con Azure AD y conecte la infraestructura a los datos de Upgrade Readiness.
 
 > [!IMPORTANT]  
-> Conceda permisos de *colaborador* a la propia aplicación, no a una identidad de usuario de Azure AD. Se trata de la aplicación registrada que tiene acceso a los datos en nombre de la infraestructura de Configuration Manager. Para conceder los permisos, busque el nombre del registro de aplicación en el área **Agregar usuarios** al asignar el permiso. 
+> Conceda permisos a la propia aplicación, no a una identidad de usuario de Azure AD. Se trata de la aplicación registrada que tiene acceso a los datos en nombre de la infraestructura de Configuration Manager. Para conceder los permisos, busque el nombre del registro de aplicación en el área **Agregar usuarios** al asignar el permiso. 
 > 
 > Este proceso es el mismo que la concesión de permisos a Configuration Manager para acceder a Log Analytics. Estos pasos deben realizarse antes de que el registro de aplicación se importe en Configuration Manager con el *Asistente para servicios de Azure*.
 > 

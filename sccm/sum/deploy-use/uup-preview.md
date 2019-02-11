@@ -2,7 +2,7 @@
 title: Versión preliminar de UUP
 titleSuffix: Configuration Manager
 description: Instrucciones para la versión preliminar de la integración de UUP
-ms.date: 01/25/2019
+ms.date: 01/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 27a960758d8d3939798ae270404d5dd1afbea62d
-ms.sourcegitcommit: ad25a7bdd983c5a0e4c95bffdc61c9a1ebcbb765
+ms.openlocfilehash: fde592b02d78c0a2ab29d77f7e55273c143b09ee
+ms.sourcegitcommit: f7b2fe522134cf102a3447505841cee315d3680c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072992"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570139"
 ---
 # <a name="uup-private-preview-instructions"></a>Instrucciones de la versión preliminar privada de UUP
 
@@ -40,7 +40,9 @@ Para obtener más información sobre la UUP, consulte la entrada de blog de Wind
 
 ### <a name="cumulative-updates"></a>Actualizaciones acumulativas
 
-Las actualizaciones acumulativas con UUP permiten que el contenido para los paquetes de idioma y FOD se distribuya sin conexión para que los usuarios finales las consigan a petición sin necesidad de ir a Internet ni de que los administradores tengan que realizar tediosos esfuerzos de almacenamiento provisional.
+- Las actualizaciones acumulativas con UUP permiten que el contenido para los paquetes de idioma y FOD se distribuya sin conexión para que los usuarios finales las consigan a petición sin necesidad de ir a Internet ni de que los administradores tengan que realizar tediosos esfuerzos de almacenamiento provisional.
+
+- Las actualizaciones acumulativas con UUP incluyen actualizaciones de la pila de servicio con actualizaciones mensuales de seguridad acumulativas. Este comportamiento solucionó dificultades con la organización de estas dos actualizaciones. Se asegura de que las actualizaciones de la pila de servicio están en vigor para instalar actualizaciones acumulativas sin tener que administrar y organizar las relaciones.
 
 
 
@@ -66,9 +68,7 @@ La propiedad **MUUrl** debe ser `https://sws.update.microsoft.com`. Para cambiar
 
 ### <a name="2-update-configmgr"></a>2. Actualizar Configuration Manager
 
-Si va a sincronizar archivos de instalación rápida en su entorno, necesitará la rama actual de Configuration Manager, 1810, para los entornos de producción, o bien la rama de versión preliminar técnica, 1812, para entornos de laboratorio.
-
-De lo contario, también necesitará la revisión KB4482615 de Configuration Manager, 1810, para los entornos de producción, o bien la rama de versión preliminar técnica, 1812, para los de laboratorio.
+Realice los siguientes cambios en el sitio de Configuration Manager para admitir esta versión preliminar de UUP:
 
 
 #### <a name="diagnostics-and-usage-data-level"></a>Diagnósticos y nivel de datos de uso

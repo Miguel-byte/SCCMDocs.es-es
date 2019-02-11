@@ -2,7 +2,7 @@
 title: Support Center
 titleSuffix: Configuration Manager
 description: Solucione problemas de clientes de Configuration Manager con el Centro de soporte técnico.
-ms.date: 11/27/2018
+ms.date: 01/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6d9a4df006619278504d3a4967b813aa2989ebf7
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 828edc3c90b4dd93f4d86772b863816bbc8c9130
+ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458124"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55482425"
 ---
 # <a name="support-center-for-configuration-manager"></a>Centro de soporte técnico de Configuration Manager
 
@@ -88,6 +88,8 @@ Para evitar este problema, use los siguientes formatos de nombre de usuario para
 Al conectarse a clientes remotos mediante el cmdlet de PowerShell [New-CMMachineConnection](https://go.microsoft.com/fwlink/p/?linkid=390542), el Centro de soporte técnico crea una conexión de Bloque de mensajes del servidor (SMB) a cada cliente remoto. Conserva esas conexiones después de completar la recopilación de datos. Para evitar superar el número máximo de conexiones remotas de Windows, use el comando `net use` para ver el conjunto activo de conexiones remotas. Luego deshabilite las conexiones innecesarias mediante el comando siguiente: `net use <connection_name> /d` 
 donde `<connection_name>` es el nombre de la conexión remota.
 
+#### <a name="application-deployment-evaluation-cycle-request-isnt-sent-correctly-to-remote-machines"></a>La solicitud del ciclo de evaluación de implementación de aplicación no se envía correctamente a máquinas remotas
+<!--2849356--> En el Centro de soporte técnico, si selecciona **Application deployment evaluation** (Evaluación de implementación de aplicaciones) en la acción **Invoke trigger** (Invocar desencadenador) de la pestaña **Contenido**, esta acción inicia una tarea que se evalúa como aplicaciones implementadas. Si está conectado a un cliente local, se evalúan tanto las implementaciones de aplicaciones de máquina como de usuario. Sin embargo, si está conectado a un cliente remoto, solo se evalúan las implementaciones de aplicaciones de máquina.
 
 
 ## <a name="next-steps"></a>Pasos siguientes
