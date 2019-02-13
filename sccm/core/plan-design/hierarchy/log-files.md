@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 58ec927ee795624cb475b31c44d64334047f3422
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 96673c0b299e45111c7d9a2bedf55282de50132e
+ms.sourcegitcommit: 5e7c4d36f4cdb3390ad3b381d31a3e1e4bf3c6e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416510"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986627"
 ---
 # <a name="log-files-in-configuration-manager"></a>Archivos de registro en Configuration Manager
 
@@ -483,7 +483,7 @@ El archivo de registro SMS_DM.log en el servidor de sistema de sitio además reg
 |Nombre del registro|Descripción|Equipo con el archivo de registro|  
 |--------------|-----------------|----------------------------|  
 |Crp.log|Registra actividades de inscripción.|Punto de registro de certificados|  
-|Crpctrl.log|Registra el estado operativo del punto de registro de certificado.|Punto de registro de certificado|  
+|Crpctrl.log|Registra el estado operativo del punto de registro de certificado.|Punto de registro de certificados|  
 |Crpsetup.log|Registra detalles sobre la instalación y configuración del punto de registro de certificado.|Punto de registro de certificados|  
 |Crpmsi.log|Registra detalles sobre la instalación y configuración del punto de registro de certificado.|Punto de registro de certificados|  
 |NDESPlugin.log|Registra actividades de inscripción de certificado y verificación de desafío.|Módulo de directivas de Configuration Manager y el servicio de inscripción de dispositivos de red|  
@@ -701,7 +701,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |MP_ClientIDManager.log|Registra las respuestas de punto de administración a las solicitudes de identificador de cliente que las secuencias de tareas inician desde PXE o medios de arranque.|Servidor de sistema de sitio|  
 |MP_DriverManager.log|Registra las respuestas de puntos de administración a las solicitudes de acciones de secuencias de tareas de aplicación automática de controladores.|Servidor de sistema de sitio|  
 |OfflineServicingMgr.log|Registra detalles de los planes de mantenimiento sin conexión y de las acciones de aplicación de actualizaciones en archivos Windows Imaging Format (WIM) de sistema operativo.|Servidor de sistema de sitio|  
-|Setupact.log|Registra los detalles acerca de los registros de instalación y SysPrep de Windows.|Cliente|  
+|Setupact.log|Registra los detalles acerca de los registros de instalación y SysPrep de Windows. Para obtener más información, consulte [Archivos de registro](https://docs.microsoft.com/windows/deployment/upgrade/log-files).|Cliente|  
 |Setupapi.log|Registra los detalles acerca de los registros de instalación y SysPrep de Windows.|Cliente|  
 |Setuperr.log|Registra los detalles acerca de los registros de instalación y SysPrep de Windows.|Cliente|  
 |smpisapi.log|Registra los detalles acerca de las acciones de restauración y captura de estado de cliente, así como información sobre umbrales.|Cliente|  
@@ -808,28 +808,14 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 
 ###  <a name="BKMK_WindowsServicingLog"></a>Mantenimiento de Windows 10  
  En la tabla siguiente se incluyen los archivos de registro que contienen información relacionada con el mantenimiento de Windows 10.  
-
+El servicio utiliza la misma infraestructura y el mismo proceso que las actualizaciones de software. Para otros registros aplicables al escenario de servicio, consulte [Actualizaciones de software](#BKMK_SU_NAPLog).
 |Nombre del registro|Descripción|Equipo con el archivo de registro|  
 |--------------|-----------------|----------------------------|  
-|Ccmperf.log|Registra actividades relacionadas con el mantenimiento y la captura de datos relacionados con los contadores de rendimiento de cliente.|Cliente|  
-|CcmRepair.log|Registra las actividades de reparación del agente de cliente.|Cliente|
-|PatchDownloader.log|Registra detalles sobre el proceso de descarga de actualizaciones de software del origen de actualizaciones al destino de descarga en el servidor de sitio.|Equipo que hospeda la consola de Configuration Manager desde la que se inician las descargas|  
-|PolicyEvaluator.log|Registra los detalles acerca de la evaluación de directivas en los equipos cliente, incluidas las directivas de las actualizaciones de software.|Cliente|  
-|RebootCoordinator.log|Registra los detalles acerca de la coordinación de reinicios del sistema en los equipos cliente después de que se instalan las actualizaciones de software.|Cliente|  
-|ScanAgent.log|Registra los detalles acerca de cómo examinar las solicitudes de actualización de software, la ubicación de WSUS y acciones relacionadas.|Cliente|  
-|SdmAgent.log|Registra detalles sobre cómo realizar un seguimiento de la corrección y la compatibilidad. Pero en el archivo de registro de actualizaciones de software, UpdatesHandler.log, se proporcionan detalles más informativos sobre cómo instalar las actualizaciones de software necesarias a efectos de compatibilidad.<br /><br /> Este archivo de registro se comparte con la configuración de compatibilidad.|Cliente|  
-|ServiceWindowManager.log|Registra los detalles acerca de la evaluación de las ventanas de mantenimiento.|Cliente|  
+|CBS.log|Registra los errores de servicio relacionados con los cambios en las actualizaciones de Windows o en los roles y características.|Cliente|  
+|DISM.log|Registra todas las acciones mediante DISM. Si es necesario, DISM.log apuntará a CBS.log para obtener más detalles.|Cliente|
 |setupact.log|Archivo de registro principal para la mayoría de los errores que se producen durante el proceso de instalación de Windows. El archivo de registro se encuentra en la carpeta %windir%\$Windows.~BT\sources\panther.|Cliente|
-|SmsWusHandler.log|Registra los detalles sobre el proceso de análisis de la herramienta de inventario para Microsoft Update.|Cliente|  
-|StateMessage.log|Registra los detalles acerca de los mensajes de estado de actualizaciones de software que se crean y envían al punto de administración.|Cliente|  
-|SUPSetup.log|Registra detalles acerca de la instalación de un punto de actualización de software. Cuando se completa la instalación del punto de actualización de software, **Installation was successful** se escribe en este archivo de registro.|Servidor de sistema de sitio|  
-|UpdatesDeployment.log|Registra los detalles acerca de las implementaciones en el cliente, incluidas la activación, evaluación y aplicación de las actualizaciones de software. En el registro detallado se muestra información adicional acerca de la interacción con la interfaz de usuario del cliente.|Cliente|  
-|Updateshandler.log|Registra información sobre el análisis de compatibilidad de actualizaciones de software y la descarga e instalación de actualizaciones de software en el cliente.|Cliente|  
-|UpdatesStore.log|Registra los detalles acerca del estado de compatibilidad de las actualizaciones de software evaluadas durante el ciclo de análisis de compatibilidad.|Cliente|  
-|WCM.log|Registra detalles sobre la configuración del punto de actualización de software y las conexiones con el servidor WSUS para las clasificaciones, idiomas y categorías de actualizaciones suscritas.|Servidor de sitio|  
-|WSUSCtrl.log|Registra los detalles acerca de la configuración, la conectividad de base de datos y el estado del servidor WSUS para el sitio.|Servidor de sistema de sitio|  
-|wsyncmgr.log|Registra detalles sobre el proceso de sincronización de actualizaciones de software.|Servidor de sitio|  
-|WUAHandler.log|Registra detalles acerca del agente de Windows Update en el cliente cuando busca actualizaciones de software.|Cliente|  
+
+Para más información, consulte el artículo sobre [archivos de registro relacionados con los servicios en línea](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
 
 ###  <a name="BKMK_WULog"></a> Agente de Windows Update  
  En la tabla siguiente se incluyen los archivos de registro que contienen información relacionada con el agente de Windows Update.  
@@ -838,6 +824,8 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Registra detalles sobre la conexión del agente de Windows Update con el servidor WSUS y recupera las actualizaciones de software para evaluar el cumplimiento y determinar si hay actualizaciones de los componentes del agente.|Cliente|  
 
+Para más información, consulte el artículo sobre los [archivos de registro de Windows Update](https://docs.microsoft.com/windows/deployment/update/windows-update-logs).
+
 ###  <a name="BKMK_WSUSLog"></a> Servidor WSUS  
  En la tabla siguiente se incluyen los archivos de registro que contienen información relacionada con el servidor WSUS.  
 
@@ -845,3 +833,5 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |--------------|-----------------|----------------------------|  
 |Change.log|Registra detalles sobre la información de base de datos del servidor WSUS que ha cambiado.|Servidor WSUS|  
 |SoftwareDistribution.log|Registra detalles sobre las actualizaciones de software que se sincronizan del origen de actualizaciones configurado a la base de datos del servidor de WSUS.|Servidor WSUS|  
+
+Estos archivos de registro se encuentran en la carpeta %ProgramFiles%\Update Services\LogFiles.

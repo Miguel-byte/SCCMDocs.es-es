@@ -2,7 +2,7 @@
 title: Versiones de Technical Preview
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la rama de Technical Preview para probar nuevas funcionalidades y funcionalidades de Configuration Manager.
-ms.date: 01/23/2019
+ms.date: 02/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cf432ea32e5946a98b59e158752b3e82cf63b3b3
-ms.sourcegitcommit: b8167a60fd6f2d8387b2db723976c0e2c4198d33
+ms.openlocfilehash: 69fd77df25465910776eb413601efef5d87842aa
+ms.sourcegitcommit: 4317bd20050f582a068d0a813e71c449d655e4b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54832778"
+ms.lasthandoff: 02/09/2019
+ms.locfileid: "55971904"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview para Configuration Manager
 
@@ -69,8 +69,8 @@ La rama de Technical Preview de Configuration Manager admite los productos y las
 
 -   Solo es compatible con las versiones siguientes de **SQL Server**:  
 
-    -   SQL Server 2017 (con la actualización acumulativa 2 y versiones posteriores) a partir de la versión 1710 de Configuration Manager
-    -   SQL Server 2016 (sin ningún Service Pack, y versiones posteriores)
+    -   SQL Server 2017 (con la actualización acumulativa 2 o posterior) 
+    -   SQL Server 2016 (sin ningún Service Pack)
     -   SQL Server 2014 (con Service Pack 1, o versiones posteriores)
     -   SQL Server 2012 (con Service Pack 3, o versiones posteriores)  
 
@@ -124,30 +124,19 @@ Las características siguientes están disponibles con la versión de Technical 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1901"></a>Technical Preview, versión 1901
+### <a name="technical-preview-version-1902"></a>Technical Preview, versión 1902
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor)<!--ID-->
 
+- [Reemplazo de las notificaciones del sistema por una ventana de diálogo](/sccm/core/get-started/2019/technical-preview-1902#bkmk_impact)<!--3555947-->
+- [Estado de progreso durante la secuencia de tareas de actualización local](/sccm/core/get-started/2019/technical-preview-1902#bkmk_ipu)<!--3747129-->
+- [Redirección de carpetas conocidas de Windows a OneDrive](/sccm/core/get-started/2019/technical-preview-1902#bkmk_odfb)<!--3556021-->
+- [Visualización de la primera pantalla solo durante el control remoto](/sccm/core/get-started/2019/technical-preview-1902#bkmk_rcmulti)<!--3231732-->
+- [Edición o copia de scripts de PowerShell](/sccm/core/get-started/2019/technical-preview-1902#bkmk_psedit)<!--3705507-->
+- [Adición de una puerta de enlace de administración de la nube a los grupos de límites](/sccm/core/get-started/2019/technical-preview-1902#bkmk_cmgbg)<!--3640932-->
+- [Configuración de vistas predeterminadas en el Centro de software](/sccm/core/get-started/2019/technical-preview-1902#bkmk_swctr)<!--3612112-->
+- [Mejoras en el panel de mantenimiento del cliente](/sccm/core/get-started/2019/technical-preview-1902#bkmk_health)<!--3599209-->
 
-- [Panel de mantenimiento del cliente](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health)<!--3599209-->  
-- [Especificación de la prioridad de las actualizaciones de características en el mantenimiento de Windows 10](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo)<!--3734525-->  
-- [Supervisión dedicada para implementaciones por fases](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod)<!--3555949--> 
-- [Ejecución de CMPivot desde el sitio de administración central](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmpivot)<!--3610960-->  
-- [Mejoras del paso de secuencia de tareas Ejecutar script de PowerShell](/sccm/core/get-started/2019/technical-preview-1901#bkmk_posh)<!--3556028-->  
-- [Productos de Office en el panel de ciclo de vida](/sccm/core/get-started/2019/technical-preview-1901#bkmk_lifecycle)<!--3556026-->  
-- [Reglas de información de administración para colecciones](/sccm/core/get-started/2019/technical-preview-1901#bkmk_micoll)<!--3555752-->  
-- [Vistas de búsqueda de dispositivos mediante dirección MAC](/sccm/core/get-started/2019/technical-preview-1901#bkmk_mac)<!--3600878-->  
-- [Modo de mantenimiento del punto de distribución](/sccm/core/get-started/2019/technical-preview-1901#bkmk_dpmaint)<!--3555754-->  
-- [Servicio de imágenes optimizado](/sccm/core/get-started/2019/technical-preview-1901#bkmk_resetbase)<!--3555951-->  
-- [Importación de un índice único de una imagen de sistema operativo](/sccm/core/get-started/2019/technical-preview-1901#bkmk_index)<!--3719699--> 
-- [Uso de Azure Resource Manager para servicios en la nube](/sccm/core/get-started/2019/technical-preview-1901#bkmk_arm)<!--3605704-->  
-- [Confirmación de comentarios de la consola](/sccm/core/get-started/2019/technical-preview-1901#bkmk_feedback)<!--3556010--> 
-- [Creación de un laboratorio de Configuration Manager Technical Preview en Azure](/sccm/core/get-started/2019/technical-preview-1901#bkmk_azurevm)<!--3556017-->  
-- [Especificación de un puerto personalizado para reactivación del mismo nivel](/sccm/core/get-started/2019/technical-preview-1901#bkmk_sleep)<!--3605925-->  
-- [Consulta de las consolas conectadas recientemente](/sccm/core/get-started/2019/technical-preview-1901#bkmk_console)<!--3699367-->  
-- [Detención del servicio en la nube cuando se supera el umbral](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg)<!--3735092--> 
-- [Tiempo de espera del modo de aprovisionamiento de cliente](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov)<!--3197824-->
-- [Mejoras en la implementación del sistema operativo](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd)<!--3633146,3641475,3654172,3734270-->
 
 
 > [!Note]  
@@ -166,6 +155,25 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | Característica | Versión de Technical Preview | Versión de rama actual |  
  |---------|---------------------------|------------------------|
+ | Panel de mantenimiento del cliente <!--3599209--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health) | ![Sin agregar](media/Red_X.gif) | 
+ | Especificación de la prioridad de las actualizaciones de características en el mantenimiento de Windows 10 <!--3734525--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo) | ![Sin agregar](media/Red_X.gif) | 
+ | Supervisión dedicada para implementaciones por fases <!--3555949--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod) | ![Sin agregar](media/Red_X.gif) | 
+ | Ejecución de CMPivot desde el sitio de administración central <!--3610960--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmpivot) | ![Sin agregar](media/Red_X.gif) | 
+ | Mejoras del paso de secuencia de tareas Ejecutar script de PowerShell <!--3556028--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_posh) | ![Sin agregar](media/Red_X.gif) | 
+ | Productos de Office en el panel de ciclo de vida <!--3556026--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_lifecycle) | ![Sin agregar](media/Red_X.gif) | 
+ | Reglas de información de administración para colecciones <!--3555752--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_micoll) | ![Sin agregar](media/Red_X.gif) | 
+ | Vistas de búsqueda de dispositivos mediante dirección MAC <!--3600878--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_mac) | ![Sin agregar](media/Red_X.gif) | 
+ | Modo de mantenimiento del punto de distribución <!--3555754--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_dpmaint) | ![Sin agregar](media/Red_X.gif) | 
+ | Servicio de imágenes optimizado <!--3555951--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_resetbase) | ![Sin agregar](media/Red_X.gif) | 
+ | Importación de un índice único de una imagen de sistema operativo <!--3719699--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_index) | ![Sin agregar](media/Red_X.gif) | 
+ | Uso de Azure Resource Manager para servicios en la nube <!--3605704--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_arm) | ![Sin agregar](media/Red_X.gif) | 
+ | Confirmación de comentarios de la consola <!--3556010--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_feedback) | ![Sin agregar](media/Red_X.gif) | 
+ | Creación de un laboratorio de Configuration Manager Technical Preview en Azure <!--3556017--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_azurevm) | ![Sin agregar](media/Red_X.gif) | 
+ | Especificación de un puerto personalizado para reactivación del mismo nivel <!--3605925--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_sleep) | ![Sin agregar](media/Red_X.gif) | 
+ | Consulta de las consolas conectadas recientemente <!--3699367--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_console) | ![Sin agregar](media/Red_X.gif) | 
+ | Detención del servicio en la nube cuando se supera el umbral <!--3735092--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg) | ![Sin agregar](media/Red_X.gif) | 
+ | Tiempo de espera del modo de aprovisionamiento de cliente <!--3197824--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov) | ![Sin agregar](media/Red_X.gif) | 
+ | Mejoras en la implementación del sistema operativo <!--3633146,3641475,3654172,3734270--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd) | ![Sin agregar](media/Red_X.gif) | 
  | Mejoras del paso de secuencia de tareas Ejecutar script de PowerShell <!--3556028 fka 1359389--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_posh) | ![Sin agregar](media/Red_X.gif) | 
  | Mejoras de las aprobaciones de aplicación por correo electrónico <!--3594063--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_email) | ![Sin agregar](media/Red_X.gif) | 
  | Configurar afinidad entre usuario y dispositivo en el Centro de software <!--3485366--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_uda) | ![Sin agregar](media/Red_X.gif) | 
@@ -176,11 +184,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Notificaciones de la consola de Configuration Manager <!--1318035--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_notify) | ![Sin agregar](media/Red_X.gif) | 
  | Mejoras en la creación de medios de secuencia de tareas <!--1359388--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) | ![Sin agregar](media/Red_X.gif) | 
  | Mejora del paso de secuencia de tareas Ejecutar script de PowerShell <!--1359389--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_posh) | ![Sin agregar](media/Red_X.gif) | 
- | Mejoras en la evaluación de recopilación <!--1358981--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_colleval) | Versión 1810 | 
- | Autenticación del administrador de Configuration Manager <!--1357013--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_auth) | Versión 1810 | 
- | Regla de información detallada de administración para la versión de cliente de origen de caché del mismo nivel <!--1358008--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_insights) | Versión 1810 | 
- | Mejoras en la configuración de cliente basada en Internet <!--1359181--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_cmg) | Versión 1810 | 
- | Conversión de aplicaciones a MSIX <!--1359029--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_msix) | Versión 1810 | 
 
 
 
