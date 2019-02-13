@@ -10,16 +10,17 @@ ms.assetid: 617abb22-d22f-41fb-a76b-1c4259e419d2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 12626a734138094e7558617b714b2b5acdac6450
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d0ce47e9ade73d76e99aa5c0d4e5581c713a847a
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424330"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139034"
 ---
 # <a name="create-a-service-connection-point-with-system-center-configuration-manager-and-microsoft-intune"></a>Creación de un punto de conexión de servicio con System Center Configuration Manager y Microsoft Intune
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Una vez creada la suscripción, puede instalar el rol de sistema de sitio del punto de conexión de servicio que le permite conectarse al servicio de Intune. Este rol de sistema de sitio insertará configuraciones y aplicaciones en el servicio de Intune.
 

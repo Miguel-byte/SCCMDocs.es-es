@@ -10,16 +10,17 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 214dcdca927e515f776e99f005f968a4b98f4112
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e694b81943dda937f1d95765f75f182e072bc7da
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418839"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156913"
 ---
 # <a name="how-to-create-pfx-certificate-profiles-by-importing-certificate-details"></a>Creación de perfiles de certificado PFX mediante la importación de detalles de certificado.
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 A continuación, aprenderá a crear un perfil de certificado mediante la importación de credenciales de certificados externos.  
@@ -53,11 +54,11 @@ System Center Configuration Manager permite importar y, luego, aprovisionar arch
 
     -   **Nombre**: Escriba un nombre único para el perfil de certificado. Puede utilizar un máximo de 256 caracteres.  
 
-    -   **Descripción**: Proporcione una descripción que ofrezca información general sobre el perfil de certificado y otra información relevante que le permita para identificarlo en la consola de System Center Configuration Manager. Puede utilizar un máximo de 256 caracteres.  
+    -   **Descripción**: facilite una descripción general del perfil de certificado y cualquier otra información adicional pertinente para identificarlo en la consola de System Center Configuration Manager. Puede utilizar un máximo de 256 caracteres.  
 
-    -   **Especificar el tipo de perfil de certificado que desea crear**: Para los certificados PF, elija una de las siguientes opciones:  
+    -   **Especifique el tipo de perfil de certificado que desea crear**: Para los certificados PF, elija una de las siguientes opciones:  
 
-        -   **Configuración de PKCS #12 (PFX) de intercambio de información personal - Import**: Crea un perfil de certificado importando mediante programación información de los certificados existentes.  
+        -   **Intercambio de información personal – configuración de PKCS #12 (PFX) – importar**: Crea un perfil de certificado importando mediante programación información de los certificados existentes.  
 
         -   **Intercambio de información personal: configuración de PKCS #12 (PFX): crear**: Crea un perfil de certificado PFX mediante credenciales proporcionadas por una entidad de certificación.  Para obtener más información, consulte [Creación de perfiles de certificado PFX mediante una entidad de certificación](../../mdm/deploy-use/create-pfx-certificate-profiles.md).
 

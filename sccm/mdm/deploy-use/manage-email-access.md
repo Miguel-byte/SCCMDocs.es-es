@@ -10,16 +10,17 @@ ms.assetid: fa648e73-5fb8-4818-ab57-7466ffaf888e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f1dbe514e8beca7250b7bfa62a9af7997bf5246c
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f976b63b4580b5df9c6e609ff6b361538860c41c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417248"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137650"
 ---
 # <a name="manage-email-access-in-configuration-manager"></a>Administrar el acceso de correo electrónico en Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Use el Administrador de configuración acceso condicional para administrar el acceso al correo electrónico de Exchange según las condiciones que especifique.  
 

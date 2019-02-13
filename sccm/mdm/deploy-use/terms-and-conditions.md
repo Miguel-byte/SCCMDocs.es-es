@@ -10,16 +10,17 @@ ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e7f5eefe532c3a0a48bc0703365bf07028bfae71
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a836ec8c15e89a7959db9f10d1329c9182f3998c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419638"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156651"
 ---
 # <a name="add-terms-and-conditions-with-system-center-configuration-manager"></a>Incorporación de términos y condiciones con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede implementar los términos y condiciones de System Center Configuration Manager en los grupos de usuarios para explicar en qué afecta la inscripción del dispositivo, el acceso a los recursos de trabajo y el uso del portal de empresa a los dispositivos y los usuarios. Los usuarios deben aceptar los términos y las condiciones para poder usar el portal de empresa a fin de inscribirse y obtener acceso a su trabajo.  
 

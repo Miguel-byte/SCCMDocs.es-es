@@ -10,16 +10,17 @@ ms.assetid: 71c44250-626e-482c-8794-434c6aeb2fb1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f5a03629fdea4a8fc496db624d0b32657d9bec83
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 78c40d84b7d774d7621b983a6e2bb755b14f9563
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419111"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138371"
 ---
 # <a name="manage-skype-for-business-online-access"></a>Administrar el acceso de Skype Empresarial Online
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 Use la directiva de acceso condicional de Skype Empresarial Online para administrar el acceso a esta aplicación en función de las condiciones que especifique.  

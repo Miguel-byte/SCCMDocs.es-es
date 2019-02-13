@@ -10,16 +10,17 @@ ms.assetid: 5eae4400-58ca-4c71-804c-6a585cd3df5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1357c54b0f848374ea15727bb6265f68400f88c
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8e7baf5d26bb823f3b02efb8e71cf4d34330d899
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422375"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121216"
 ---
 # <a name="set-up-ios-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Configuración de la administración de dispositivos híbrida de iOS con System Center Configuration Manager y Microsoft Intune
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Con Configuration Manager e Intune, puede habilitar la inscripción de dispositivos iOS y macOS para proporcionar acceso al correo electrónico y a los recursos de la empresa a los usuarios de iPhone, iPad y Mac. Una vez que los usuarios instalen la aplicación del portal de empresa Intune, puede aplicar directivas a sus dispositivos. Antes de que pueda administrar dispositivos iOS y Mac, debe importar un certificado del Servicio de notificaciones push de Apple (APNs). Este certificado permite a Intune administrar dispositivos iOS y Mac mediante el establecimiento de una conexión con el servicio de administración de dispositivos de Apple.  
 
