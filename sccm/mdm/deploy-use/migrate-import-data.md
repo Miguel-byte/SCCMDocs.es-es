@@ -10,16 +10,17 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
-ms.openlocfilehash: 26d6f9b928a7acdfbeb6baac3c3ce1c29cc127d9
-ms.sourcegitcommit: d021f82e4bc35a8e9b5d291bf779ce52b4f47eb8
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 46b5034cb95193a07421fe79a445dac0f5b28503
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656465"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124268"
 ---
 # <a name="import-configuration-manager-data-to-microsoft-intune"></a>Importación de datos de Configuration Manager en Microsoft Intune 
 
-*Se aplica a: System Center Configuration Manager (rama actual)*    
+*Se aplica a: System Center Configuration Manager (Rama actual)*    
 
 El primer paso recomendado del proceso de [migrar dispositivos y usuarios de MDM híbrida a Intune independiente](migrate-hybridmdm-to-intunesa.md) en la configuración solo en la nube consiste en utilizar la herramienta Intune Data Importer. Si lo desea, puede omitir esta fase y pasar a la de [preparación de Intune para migrar usuarios](migrate-prepare-intune.md). Sin embargo, esta herramienta realiza las siguientes funciones que pueden ahorrarle mucho tiempo en la fase siguiente:  
 

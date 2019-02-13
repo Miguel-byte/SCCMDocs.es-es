@@ -10,16 +10,17 @@ ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cc1be1d602c3f9f8e65e0523d64c5b6a8e579c90
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 15ccbb201b7db02f51ccec322e5a320e143d8da3
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53415559"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141398"
 ---
 # <a name="enroll-devices-with-device-enrollment-manager-with-configuration-manager"></a>Inscribir dispositivos con el administrador de inscripción de dispositivos con Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las organizaciones pueden usar Intune para administrar un gran número de dispositivos móviles con una sola cuenta de usuario. La cuenta del *administrador de inscripción de dispositivos* (DEM) es una cuenta de usuario especial utilizada para inscribir dispositivos. Agregue usuarios existentes a la cuenta de DEM para ofrecerles funcionalidades DEM especiales. Cada dispositivo inscrito usa una sola licencia. Se recomienda que use dispositivos inscritos a través de esta cuenta como dispositivos compartidos sin afinidad de usuario, en lugar de dispositivos dedicados personales.  
 

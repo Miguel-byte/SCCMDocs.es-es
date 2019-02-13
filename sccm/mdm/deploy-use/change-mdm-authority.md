@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
-ms.openlocfilehash: 692ffb04546da4f65b2198e582999582c996fdb2
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c0420113feaaf9c9485b8d1e3d488b07878c61b5
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584814"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131972"
 ---
 # <a name="change-your-mdm-authority"></a>Cambio de la entidad de MDM
 

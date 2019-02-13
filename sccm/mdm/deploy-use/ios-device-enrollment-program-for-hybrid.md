@@ -10,16 +10,17 @@ ms.assetid: 78d44adc-9b1c-4bc6-b72d-e93873916ea6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4628dd18ed865088c68cf38810e984a18f0ba0ad
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 044ea01729b61f55dca74ac0e77b7007e05b346a
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422222"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56140973"
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>Inscripción del Programa de inscripción de dispositivos (DEP) iOS para implementaciones híbridas con Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las empresas pueden comprar dispositivos iOS mediante el Programa de inscripción de dispositivos de Apple y, después, administrarlos mediante Microsoft Intune. Para administrar los dispositivos iOS de la empresa con el Programa de inscripción de dispositivos de Apple (DEP), las empresas deben completar los pasos de Apple para participar en el programa y adquirir los dispositivos a través de este programa. Los detalles de ese proceso están disponibles en: [https://deploy.apple.com](https://deploy.apple.com). Entre las ventajas del programa se incluye la configuración manos libres de dispositivos sin USB que permite conectar cada dispositivo a un equipo.  
 

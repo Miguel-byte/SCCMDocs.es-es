@@ -10,16 +10,17 @@ ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2483a15286a2784f2fb8a4256029004374a313dc
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ede2563adbd517dbcda0a408fa5b9b166e8e3c12
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419791"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129364"
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-system-center-configuration-manager"></a>Administrar el acceso a Internet mediante directivas de explorador administrado con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En System Center Configuration Manager, puede implementar Intune Managed Browser (una aplicación de exploración web) y asociar la aplicación con una directiva de explorador administrado. La directiva de explorador administrado configura una lista de permitidos o una lista de bloqueados que restringe los sitios web a los que pueden ir los usuarios del explorador administrado.  
 

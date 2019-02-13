@@ -10,16 +10,17 @@ ms.assetid: 1e42b1c1-3d58-481f-8647-5c7ae640c5f5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 64acd3dbdafaec3dbf49e7939718100897c0976b
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 21ff4920ae8829c41dace778ac74824519c5a628
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422630"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136014"
 ---
 # <a name="set-up-a-microsoft-intune-subscription-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Configurar una suscripción de Microsoft Intune para la administración local de dispositivos móviles en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 La administración local de dispositivos móviles de System Center Configuration Manager requiere una suscripción de Microsoft Intune para realizar el seguimiento de las licencias. El servicio de Intune no se usa para administrar los dispositivos ni para almacenar información de administración. Para la administración local de dispositivos móviles, la administración de dispositivos se controla mediante la infraestructura de Configuration Manager.  
 

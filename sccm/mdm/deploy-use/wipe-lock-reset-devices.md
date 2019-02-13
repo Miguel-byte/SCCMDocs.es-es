@@ -10,12 +10,13 @@ ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 21fed8dbba8cc5c8e96218459288b57364fe350e
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ebc2b995c763aa54e1d47ee38ab2d250554f5a29
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584517"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136031"
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-configuration-manager"></a>Protección de datos mediante borrado remoto, bloqueo o restablecimiento de código de acceso con Configuration Manager
 
@@ -69,7 +70,7 @@ Emitir una **eliminación selectiva** a un dispositivo para quitar solo los dato
 |Aplicaciones y datos asociados de la empresa que se instalaron mediante Configuration Manager e Intune|Las aplicaciones se desinstalarán. Se quitarán los datos de la aplicación de empresa.|  
 |Perfiles de VPN y Wi-Fi|Quitado.|  
 |Certificados|Quitado y revocado.|  
-|Configuración|Quitado, excepto: **Permitir itinerancia de voz**, **Permitir itinerancia de datos** y **Permitir la sincronización automática durante la itinerancia**.|  
+|Configuración|Quitado, excepto: **Permitir itinerancia de voz**, **Permitir itinerancia de datos**, y **permitir la sincronización automática durante la itinerancia**.|  
 |Agente de administración|Se quitará el perfil de administración.|  
 |Perfiles de correo electrónico|Para los perfiles de correo electrónico configurados mediante Intune, se quitan la cuenta de correo electrónico y el correo electrónico.|  
 

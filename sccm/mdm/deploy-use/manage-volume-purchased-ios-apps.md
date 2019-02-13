@@ -10,16 +10,17 @@ ms.assetid: 7c3b9316-247b-490b-a363-8f8553821579
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 86d79a193f09014206b72efcf745212712a3352e
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 21d8666f6c05b540891037cc1917b755ed22fdcc
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417258"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129399"
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>Administrar aplicaciones de iOS compradas por volumen con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 
 

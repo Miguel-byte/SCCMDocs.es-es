@@ -10,12 +10,13 @@ ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8bd926535f56e32430ae41c883623b80d142aebc
-ms.sourcegitcommit: 33e066aceaf321add1031df00e552e942c8351a7
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b45e9f586616a1f620864a6e6dc8d0777a118251
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764436"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122294"
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Administración del acceso a servicios de O365 para equipos administrados por System Center Configuration Manager
 
@@ -86,7 +87,7 @@ Para obtener información sobre cómo configurar el acceso condicional para disp
 
 -   **Todas las actualizaciones necesarias que se instalan con una fecha límite anterior a un número determinado de días:** Especifique el valor para el período de gracia de la fecha límite de implementación para las actualizaciones necesarias en el dispositivo del usuario. Al agregar esta regla también se instalan automáticamente todas las actualizaciones necesarias pendientes. Especifique las actualizaciones necesarias en la regla **Actualizaciones automáticas requeridas**.   
 
--   **Requerir cifrado de unidad BitLocker:** Esta regla comprueba si la unidad principal (por ejemplo, C:\\) en el dispositivo está cifrada con BitLocker. Si el cifrado BitLocker no está habilitado en el dispositivo primario, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
+-   **Requerir cifrado de unidad BitLocker:** Esta regla comprueba si la unidad principal (por ejemplo, C:\\) en el dispositivo está cifrada con BitLocker. Si BitLocker no está habilitado el cifrado en el dispositivo primario, el acceso al correo electrónico y SharePoint services está bloqueado.  
 
 -   **Requerir antimalware:** Esta regla comprueba si System Center Endpoint Protection o Windows Defender está habilitado y ejecutándose. Si no está habilitado, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
 

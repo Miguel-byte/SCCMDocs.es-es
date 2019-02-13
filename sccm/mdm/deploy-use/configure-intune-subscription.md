@@ -10,16 +10,17 @@ ms.assetid: 99de8fe7-560e-401a-8ab2-6d87d091be17
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a009159a4bd0588f80f140f588b17911101cc72c
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9ec6756e5c180561bef10bba799e3fdba3dcc303
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418567"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137633"
 ---
 # <a name="configure-your-intune-subscription-with-system-center-configuration-manager-and-microsoft-intune"></a>Configuración de su suscripción a Intune con System Center Configuration Manager y Microsoft Intune
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 La suscripción de Intune le permite administrar dispositivos a través de Internet. Esto incluye la especificación de qué recopilación de usuarios puede inscribir dispositivos y la definición de la información que se presenta a los usuarios. Al crear la suscripción a Intune, también puede agregar personalización de marca de la compañía al portal de la compañía de Intune con el logotipo de la compañía y combinaciones de colores personalizadas.
 
@@ -58,7 +59,7 @@ La suscripción a Intune hace lo siguiente:
      > [!NOTE]
      >  Si se quita un usuario de la recopilación, el dispositivo del usuario se seguirá administrando durante 24 horas hasta que se quite el registro del usuario de la base de datos de usuarios.
 
-   - **Nombre de la compañía**: Especifique el nombre de su compañía.
+   - **Nombre de la empresa**: Especifique el nombre de su compañía.
 
    - **Dirección URL de documentación de privacidad**: Si publica la información de privacidad de su compañía en un vínculo que es accesible desde Internet, proporcione un vínculo que los usuarios puedan acceder desde el portal de empresa, por ejemplo http://www.contoso.com/CP_privacy.html. La información de privacidad puede aclarar la información que comparten los usuarios con su compañía.
 

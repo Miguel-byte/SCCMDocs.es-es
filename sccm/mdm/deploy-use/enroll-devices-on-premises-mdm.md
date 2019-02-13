@@ -10,16 +10,17 @@ ms.assetid: b58472e3-31a5-4305-8eb6-2522befebe02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d8fa4f7739ea007044d515f35f4f7ed0b0d5745f
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d27e81da4da7caa89988d78a705648c5709cc2c3
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419764"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130350"
 ---
 # <a name="enroll-devices-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Inscribir dispositivos para la administración local de dispositivos móviles en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Para administrar equipos y dispositivos con la administración de dispositivos móviles local de System Center Configuration Manager, los dispositivos deben estar inscritos para que Configuration Manager pueda comunicarse con ellos para las tareas de administración. Configuration Manager proporciona dos métodos para la inscripción de dispositivos:  
 

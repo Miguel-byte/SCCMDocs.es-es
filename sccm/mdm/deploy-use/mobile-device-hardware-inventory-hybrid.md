@@ -10,12 +10,13 @@ ms.assetid: 78a0aecc-f775-451e-aa05-56377ec91b1f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5a616d20c71b76571e34a9147d0408a98c235e97
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d1a208b3bac5d0b12a9fd395506f02d283a0b55f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350177"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125092"
 ---
 # <a name="how-to-configure-hardware-inventory-for-mobile-devices-enrolled-by-microsoft-intune-and-system-center-configuration-manager"></a>Cómo configurar el inventario de hardware en dispositivos móviles inscritos mediante Microsoft Intune y System Center Configuration Manager
 
@@ -56,7 +57,7 @@ En Configuration Manager, puede recopilar el inventario de hardware en dispositi
  **Android**  
 
 > [!NOTE]  
->  **NOTA:** las clases de inventario de Android están disponibles al utilizar la aplicación del Portal de empresa de Android.  
+>  **NOTA:** Clases de inventario de Android están disponibles cuando se usa la aplicación de Portal de empresa Android.  
 
 |Clase de inventario de hardware|Android|  
 |------------------------------|-------------|  

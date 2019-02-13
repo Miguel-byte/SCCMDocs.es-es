@@ -10,12 +10,13 @@ ms.assetid: ad8fa94d-45bb-4c94-8d86-31234c5cf21c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b6a974d1cca4f97cbcf41a0cf644f545cec4b37d
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cbd996629d3b312febd271757aff69faf5371c64
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589508"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127429"
 ---
 # <a name="set-up-actions-for-non-compliance"></a>Configuración de acciones de no cumplimiento
 
@@ -59,14 +60,14 @@ Configuration Manager proporciona plantillas de correo electrónico, pero tambi�
 
 4. Escriba la información siguiente:  
 
-    a. **Nombre**: nombre de la plantilla de correo electrónico  
+    a. **Nombre**: Nombre de la plantilla de correo electrónico  
 
     > [!Note]  
     > El campo **De** se rellena automáticamente con una dirección de correo electrónico sin respuesta de Microsoft.<!--SCCMDocs issue 652-->  
 
-    c. **Asunto**: un tema que explica la notificación de correo electrónico que se envía  
+    c. **Asunto**: Un tema que explica la notificación de correo electrónico que se envían  
 
-    d. **Cuerpo del mensaje**: más detalles sobre la notificación de correo electrónico  
+    d. **Cuerpo del mensaje**: Obtener más detalles sobre la notificación de correo electrónico  
 
     > [!TIP]  
     > También puede incluir el **encabezado de correo electrónico** con el logotipo de la empresa y el **pie de página de correo electrónico**, que puede incluir información de contacto y el nombre de la empresa. También puede modificar esta información en las propiedades de la suscripción de Intune.  
@@ -91,22 +92,22 @@ Configuration Manager proporciona plantillas de correo electrónico, pero tambi�
 
 5. En la página **Acciones de no cumplimiento**, se define lo que ocurre cuando un dispositivo no cumple una determinada directiva; para ello, haga clic en **Nuevo**.  
 
-6. Puede elegir dos opciones: **Enviar correo electrónico a usuario final** o **Marcar el dispositivo como no conforme**.  
+6. Puede elegir dos opciones: **Enviar correo electrónico al usuario final** o **marcar el dispositivo como no conforme**.  
 
 7. Si selecciona **Enviar correo electrónico a usuario final**, especifique lo siguiente:  
 
-    a. **Período de gracia (en días):** escriba un número de días entre 0 y 365  
+    a. **Período de gracia (en días):** Escriba un número de días entre 0 y 365  
 
     b. **Destinatarios adicionales (a través de correo electrónico)**  
 
-    c. **Seleccione la plantilla de mensaje:** elija una plantilla de correo electrónico predeterminada o personalizada que haya creado.  
+    c. **Seleccione la plantilla de mensaje:** Elija una plantilla de correo electrónico predeterminado o personalizado que ha creado.  
     
     > [!TIP]   
     > También puede agregar una nueva plantilla de correo electrónico al agregar la acción **Enviar correo electrónico a usuario final** haciendo clic en la opción **Nuevo:** de la página **Agregar acción**.  
 
 8. Si selecciona **Marcar el dispositivo como no conforme**, debe especificar lo siguiente:  
 
-    a. **Período de gracia (en días):** escriba un número de días entre 0 y 365  
+    a. **Período de gracia (en días):** Escriba un número de días entre 0 y 365  
 
 9. Complete el asistente.  
 

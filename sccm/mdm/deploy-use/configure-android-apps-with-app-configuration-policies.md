@@ -10,16 +10,17 @@ ms.assetid: 9126d188-7780-45a4-b21d-7fcf4fad7da2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6f83f26f746c54e3d1defe31df47b3c7c8a7e117
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7d6f8c25902be857e0eec3cd4b969d1fb5bda136
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417955"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136337"
 ---
 # <a name="apply-settings-to-android-for-work-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>Aplicación de configuración a aplicaciones Android for Work con directivas de configuración de aplicaciones en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede usar directivas de configuración de aplicaciones en System Center Configuration Manager para distribuir valores de configuración que podrían ser necesarios cuando un usuario ejecuta una aplicación. Por ejemplo, una aplicación puede requerir al usuario que especifique estos detalles:
 - Un número de puerto personalizado
@@ -41,7 +42,7 @@ Para obtener más información sobre los tipos de instalación de aplicaciones, 
 3. En la página **General** del Asistente para crear directiva de configuración de la aplicación, especifique esta información de la directiva:
    - **Nombre**. Especifique un nombre único para la directiva.
    - **Descripción**. (Opcional) Para facilitar la identificación de la directiva, puede agregar una descripción.
-   -  **Seleccionar un tipo de directiva de configuración**. Especifique la plataforma de destino de la directiva de configuración de aplicación: **Directiva de configuración para Android for Work las aplicaciones**.
+   -  **Seleccionar un tipo de directiva de configuración**. Especifique la plataforma de destino de la directiva de configuración de aplicación: **Directiva de configuración para aplicaciones de Android for Work**.
    -  **Categorías asignadas para mejorar la búsqueda y el filtrado**. (Opcional) Para crear y asignar categorías a la directiva, seleccione **Categorías**. Las categorías facilitan la ordenación y la búsqueda de elementos en la consola de Configuration Manager.
 4. En la página **Directiva de Android for Work**, seleccione cómo especificar la información de la directiva de configuración:
    - **Specify name and value pairs** (Especificar pares de nombre y valor). Puede usar esta opción para los archivos de lista de propiedades que no usan el anidamiento. Para especificar un par de nombre y valor:
