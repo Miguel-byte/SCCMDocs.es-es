@@ -10,12 +10,13 @@ ms.assetid: 5267f0af-34d3-47a0-9ab8-986c41276e6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 51d3a537fd7aa874fb2662bb6ec15fcfaa2124e5
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b773696d5967d9ed1779ee822168d7177f10f585
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "34474333"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130452"
 ---
 # <a name="recommended-hardware-for-system-center-configuration-manager"></a>Hardware recomendado para System Center Configuration Manager
 
@@ -81,7 +82,7 @@ Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas
 |----------------|------------------------|--------------------|--------------------|---------------------|---------------------|-----------------------------------------------------|  
 |Sistema operativo|Consulte las instrucciones para el sistema operativo.|Consulte las instrucciones para el sistema operativo.|Consulte las instrucciones para el sistema operativo.|Consulte las instrucciones para el sistema operativo.|Consulte las instrucciones para el sistema operativo.|Consulte las instrucciones para el sistema operativo.|  
 |Archivos de registro y de aplicación de Configuration Manager|25 GB|50 GB|100 GB|200 GB|300 GB|200 GB|  
-|Archivo .mdf de la base de datos del sitio|75 GB por cada 25.000 clientes|75 GB|150 GB|300 GB|500 GB|2 TB|  
+|Archivo .mdf de la base de datos del sitio|75 GB por cada 25.000 clientes|75 GB|150 GB|300 GB|500 GB|2 TB|  
 |Archivo .ldf de la base de datos del sitio|25 GB por cada 25.000 clientes|25 GB|50 GB|100 GB|150 GB|100 GB|  
 |Archivos temporales de la base de datos (.mdf y .ldf)|Según sea necesario|Según sea necesario|Según sea necesario|Según sea necesario|Según sea necesario|Según sea necesario|  
 |Contenido (recursos compartidos de punto de distribución)|Según sea necesario<sup>1</sup>|Según sea necesario<sup>1</sup>|Según sea necesario<sup>1</sup>|Según sea necesario<sup>1</sup>|Según sea necesario<sup>1</sup>|Según sea necesario<sup>1</sup>|  
@@ -111,7 +112,7 @@ Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas
 ### <a name="client-for-windows-computers"></a>Cliente para equipos Windows  
  A continuación se describen los requisitos mínimos para equipos basados en Windows que se administran con Configuration Manager, incluidos los sistemas operativos integrados:  
 
--   **Procesador y memoria:** consulte los requisitos de procesador y RAM para el sistema operativo del equipo.  
+-   **Procesador y memoria:** Consulte los requisitos de procesador y RAM para el sistema operativo del equipo.  
 
 -   **Espacio en disco:** 500 MB de espacio en disco disponible, con 5 GB recomendados para la memoria caché del cliente de Configuration Manager. Se requiere menos espacio en disco si se usa la configuración personalizada para instalar el cliente de Configuration Manager:  
 
@@ -130,7 +131,7 @@ Para obtener el mejor rendimiento, use las configuraciones de RAID 10 para todas
 
 -   **Implementación de sistema operativo:** 384 MB de RAM  
 
--   **Centro de software:** procesador de 500 MHz  
+-   **Centro de software:** Procesador de 500 MHz  
 
 -   **Control remoto:** Pentium 4 a 3 GHz con Hyper-Threaded (núcleo único) o CPU comparable, con al menos 1 GB de RAM para una experiencia óptima  
 
