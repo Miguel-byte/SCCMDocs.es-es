@@ -10,16 +10,17 @@ ms.assetid: 61a19d95-83ff-4ad8-9a67-f304d2ba54f2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: de83706e92150a654967ec5cf38c5b18508d4e2b
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 04b67b324927f4918ff5c0835896cb0d63a9e48c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416918"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126664"
 ---
 # <a name="ios-hybrid-enrollment-using-apple-configurator-with-configuration-manager"></a>Inscripción híbrida de iOS híbrido con Apple Configurator con Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las compañías que compran dispositivos iOS destinados para su uso por los empleados pueden administrarlos mediante Microsoft Intune. Para preparar los dispositivos iOS corporativos para la inscripción, configure un perfil de inscripción en la consola de Configuration Manager y, después, exporte la dirección URL del perfil para que Apple Configurator la use. Prepare el dispositivo iOS para la inscripción conectándolo a un equipo Mac con un cable USB y use Apple Configurator para configurarlo. Apple Configurator restablece la configuración de fábrica del dispositivo y agrega el perfil de inscripción de manera que el dispositivo pueda inscribirse cuando el usuario lo encienda por primera vez y se desplace a través del proceso del Asistente de configuración.
 

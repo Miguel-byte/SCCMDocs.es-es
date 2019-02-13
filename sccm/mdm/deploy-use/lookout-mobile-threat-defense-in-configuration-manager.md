@@ -10,18 +10,19 @@ ms.assetid: 9083c571-f4fc-4a78-adc5-8aec84dabcbd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c8e984c6eb76716e031ed793a7753840842f0ea7
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 62db216d2047ee0272c6b3fa226493b5e8af5f84
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584536"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128728"
 ---
 # <a name="manage-access-to-company-resource-based-on-device-network-and-application-risk"></a>Administrar el acceso a los recursos de la empresa según el dispositivo, la red y el riesgo de aplicación
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Controle el acceso desde dispositivos móviles a recursos corporativos en función de la evaluación de riesgos efectuada por Lookout. Lookout es una solución de protección contra amenazas de dispositivos integrada con Microsoft Intune. El riesgo se basa en los datos recopilados por el servicio de Lookout. Recopila datos de dispositivos para comprobar si hay vulnerabilidades del sistema operativo, aplicaciones malintencionadas instaladas y perfiles de red malintencionados. 
+Controle el acceso desde dispositivos móviles a recursos corporativos en función de la evaluación de riesgos efectuada por Lookout. Lookout es una solución de protección contra amenazas de dispositivos integrada con Microsoft Intune. El riesgo se basa en los datos recopilados por el servicio de Lookout. Recopila datos de dispositivos para comprobar si hay vulnerabilidades del sistema operativo, aplicaciones malintencionadas instaladas y perfiles de red malintencionados. 
 
 En función de la evaluación de riesgos notificada por Lookout y habilitada a través de las directivas de cumplimiento de Configuration Manager, se configuran las directivas de acceso condicional. Estas directivas permiten o bloquean dispositivos que Configuration Manager determina como no conformes debido a las amenazas detectadas en ellos.
 

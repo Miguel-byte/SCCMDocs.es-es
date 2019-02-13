@@ -10,12 +10,13 @@ ms.assetid: 68fe11fa-5fb2-4b81-b0f5-b6f2392fb4ad
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 77eb0b750934641ceb66b2c8aa611544c654f54f
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 24ce7609a2e3e3ec9cfd9363ebd58cba3ec4dadd
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385446"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120678"
 ---
 # <a name="create-windows-phone-applications-in-configuration-manager"></a>Crear aplicaciones Windows Phone en Configuration Manager
 

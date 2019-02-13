@@ -10,16 +10,17 @@ ms.assetid: dc1f70f5-64ab-42ab-aa91-d3858803e12f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 26529460498d10fb4ee747059ca050cd6af9db54
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7811e1ab4a323660f16b707076015d9e81bda2bb
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53415966"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121301"
 ---
 # <a name="set-up-windows-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Configurar la administración híbrida de dispositivos Windows con System Center Configuration Manager y Microsoft Intune
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 En este tema, se explica a los administradores de TI cómo pueden permitir a los usuarios que incorporen PC de Windows y dispositivos móviles en la administración mediante Configuration Manager y Microsoft Intune.
 

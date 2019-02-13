@@ -10,16 +10,17 @@ ms.assetid: 28115475-e563-4e16-bf30-f4c9fe704754
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35064653fc00d63a1e5ad371ce337fea9b141684
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d7da4767bd8ef26ebf3f56010e99bc1cbd0b0c10
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424755"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120398"
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>Proteger aplicaciones mediante directivas de administración de aplicaciones móviles en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las directivas de administración de aplicaciones de System Center Configuration Manager permiten modificar la funcionalidad de las aplicaciones que se implementen para así ayudar a armonizarlas con las directivas de cumplimiento y seguridad de la compañía. Por ejemplo, puede limitar las operaciones de cortar, copiar y pegar dentro de una aplicación restringida, o configurar una aplicación para abrir todas las direcciones URL en un explorador administrado. Las directivas de administración de aplicaciones son compatibles con:  
 

@@ -10,12 +10,13 @@ ms.assetid: 408190da-bea6-4122-9dd6-f90155040e88
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 24a066b30d6c220ecb5be8455a3150bd27936da7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cc5b38894155df35812d14397fb0d3aaea79c585
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347542"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122498"
 ---
 # <a name="monitor-mobile-threat-defense-compliance"></a>**Supervisión de cumplimiento de Mobile Threat Defense**
 
@@ -58,11 +59,11 @@ Además, en la pantalla **Dispositivos**, puede seleccionar dispositivos especí
 |-|-|-|
 |**Descripción**| Sí | Detalles sobre la amenaza proporcionados por el asociado Mobile Threat Defense. |
 |**Hora de última actualización**| Sí | La última vez que el asociado Mobile Threat Defense ha enviado a Intune detalles actualizados sobre la amenaza. |
-|**Gravedad de amenaza**| Sí | Gravedad de amenaza es la definición de una amenaza individual según la configuración del administrador en la consola del asociado Mobile Threat Defense. Tiene uno de los tres valores: **Baja**, **Media** o **Alta**. |
-|**Estado de amenaza**| Sí | El estado actual de la amenaza en el dispositivo. Estados posibles: **Activa**, **Resuelta** u **Omitida:** indica que el usuario ha ignorado la amenaza en el dispositivo, pero que esta aún existe. |
-|**Tipo de amenaza**| Sí | Tipo de amenaza según el asociado Mobile Threat Defense. Valores posibles: **Aplicación**, **Archivo** o **SO** |
+|**Gravedad de amenaza**| Sí | Gravedad de amenaza es la definición de una amenaza individual según la configuración del administrador en la consola del asociado Mobile Threat Defense. Tiene uno de los tres valores: **Baja**, **medio** o **alta** |
+|**Estado de amenaza**| Sí | El estado actual de la amenaza en el dispositivo. Estados posibles: **Active**, **resuelto** o **pasa por alto:** Indica que el usuario ha ignorado la amenaza en sus dispositivos, pero sigue estando presente la amenaza. |
+|**Tipo de amenaza**| Sí | Tipo de amenaza según el asociado Mobile Threat Defense. Valores posibles: **Aplicación**, **archivo** o **OS** |
 |**Id. de cuenta de AAD**| No | El identificador único de Azure Active Directory. |
-|**Clasificación**| Sí | Clasificación de la amenaza según el asociado Mobile Threat Defense. Valores posibles: **Habilitador de acceso a raíz, Riskware, Adware, Chargeware, Fuga de datos, Troyano, Gusano, Virus, Vulnerabilidad de seguridad, Puerta trasera, Bot, Instalador de malware de aplicaciones, Fraude por clic, Correo no deseado, Spyware, Vigilancia, Vulnerabilidad, Desconocido, Jailbreak de raíz, Conectividad, Fraude de tasas y Aplicación instalada como prueba** |
+|**Clasificación**| Sí | Clasificación de la amenaza según el asociado Mobile Threat Defense. Valores posibles: **Habilitador de raíz, Riskware, Adware, Chargeware, fuga de datos, troyano, gusano, Virus, contra vulnerabilidades de seguridad, puerta trasera, Bot, AppDropper, fraude por clic, correo no deseado, Spyware, vigilancia, vulnerabilidad, desconocido, Jailbreak, conectividad, fraude de tasas, aplicación instalada como prueba de raíz** |
 |**Id. de dispositivo**| No | El identificador de objeto de Active Directory de Azure que representa el dispositivo unido a un área de trabajo con información de amenazas. |
 |**Id. de amenaza**| No | Identificador único generado por el asociado Mobile Threat Defense para la amenaza. El identificador de amenaza se utiliza para realizar el seguimiento de la resolución. |
 |**URL de amenaza**| No | Se trata de los vínculos a la dirección URL de la amenaza, si están disponibles, que remiten a la vista de la consola de administración de esta amenaza concreta en el asociado Mobile Threat Defense. |

@@ -10,16 +10,17 @@ ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1c90525b20107cbc926e3775f10d75b7c7083cac
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d7accfe4c329b61c7791bc4b82028d48fdc81931
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424568"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122634"
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>Perfiles de VPN en dispositivos móviles en System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Use perfiles de VPN en Configuration Manager para implementar la configuración de VPN para los usuarios de dispositivos móviles de la organización. Mediante la implementación de esta configuración, se minimiza la intervención del usuario final necesaria para conectarse a los recursos de la red de la empresa.  
 
@@ -122,7 +123,7 @@ Las siguientes opciones están disponibles para todos los tipos de conexión en 
 
      - **Recordar las credenciales de usuario en cada inicio de sesión**: Se recuerdan las credenciales de usuario para que los usuarios no tengan que escribirlas cada vez que se conectan.  
 
-     - **Seleccione un certificado de cliente para la autenticación de cliente**: Seleccione el cliente que ha creado anteriormente [certificado SCEP](create-pfx-certificate-profiles.md) que se usa para autenticar la conexión VPN.   
+     - **Seleccionar un certificado de cliente para autenticación de cliente**: Seleccione el cliente que ha creado anteriormente [certificado SCEP](create-pfx-certificate-profiles.md) que se usa para autenticar la conexión VPN.   
 
        > [!NOTE]  
        >  Para dispositivos iOS, el perfil SCEP que seleccione se incrusta en el perfil de VPN. Para otras plataformas, se agrega una regla de aplicabilidad para garantizar que el perfil de VPN no se instala si el certificado no está presente o no es conforme.  

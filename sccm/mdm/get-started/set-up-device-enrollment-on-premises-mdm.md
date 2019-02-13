@@ -10,12 +10,13 @@ ms.assetid: 9ffaea91-1379-4b86-9953-b25e152f56a9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d0424b662df4baba7374685dd7631347501352c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d3b761eac32daf591789a790209e25e62f1ea81d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349089"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121489"
 ---
 # <a name="set-up-device-enrollment-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Configure la inscripción del dispositivo para Administración de dispositivos móviles local en System Center Configuration Manager
 
@@ -62,7 +63,7 @@ Para que los usuarios puedan inscribir sus dispositivos en la administración lo
     >  En la administración local de dispositivos móviles, la configuración de implementación de software solo puede usarse como configuración predeterminada del cliente. No se puede usar la configuración de implementación de software con la configuración de cliente personalizada en la rama actual de Configuration Manager.  
 
 ##  <a name="bkmk_enableUsers"></a> Permitir a los usuarios recibir el perfil de inscripción de dispositivos modernos  
- Para que los usuarios reciban la configuración de cliente modificada con el perfil de inscripción para la administración local de dispositivos móviles, debe detectarse mediante el método de detección de Active Directory. Para asegurarse de que todos los usuarios que necesiten el perfil de inscripción lo obtengan, ejecute la detección para usuarios de Active Directory. Para obtener instrucciones sobre cómo detectar usuarios, consulte [Run discovery for System Center Configuration Manager](../../core/servers/deploy/configure/run-discovery.md) (Ejecutar la detección en System Center Configuration Manager).  
+ Para que los usuarios reciban la configuración de cliente modificada con el perfil de inscripción para la administración local de dispositivos móviles, debe detectarse mediante el método de detección de Active Directory. Para asegurarse de que todos los usuarios que necesiten el perfil de inscripción lo obtengan, ejecute la detección para usuarios de Active Directory. Para obtener instrucciones sobre cómo detectar usuarios, vea [Run discovery for System Center Configuration Manager](../../core/servers/deploy/configure/run-discovery.md).  
 
 ##  <a name="bkmk_storeCert"></a> Almacenar el certificado raíz en dispositivos que se van a inscribir  
  Los usuarios con dispositivos unidos a un dominio ya tendrán probablemente el certificado raíz necesario para la comunicación de confianza con los servidores que hospedan los roles de sistema de sitio porque la raíz se emitió como parte del proceso de unión al dominio con Active Directory. Ningún equipo o dispositivo móvil unido al dominio necesitará tener instalado el certificado raíz de forma manual en el dispositivo para permitir que la inscripción tenga lugar. Estos dispositivos no tendrán el certificado raíz necesario de forma automática.  

@@ -10,16 +10,17 @@ ms.assetid: ddb4c68e-e7f7-475a-89e2-7379a86e44c4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 118e9b32d691c228857fc31b2da1e9d9b72b7b58
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 51bdfe22e70be58902dece216305d7a6f6612b06
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53415932"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121267"
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>Declaración previa de dispositivos con números de serie iOS o IMEI
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Puede identificar los dispositivos corporativos si importa sus números de identidad internacional de equipo móvil (IMEI) o los números de serie de iOS. Puede cargar un archivo de valores separados por comas (.csv) que incluya los números IMEI de los dispositivos o escribir la información de los dispositivos de forma manual.  La información importada establecerá la **propiedad** de los dispositivos que se inscriban como **Corporativo** en las listas de dispositivos. Se sigue necesitando una licencia de Intune para cada usuario que acceda al servicio.  
 
