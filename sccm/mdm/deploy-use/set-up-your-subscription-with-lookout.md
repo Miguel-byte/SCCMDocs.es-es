@@ -10,12 +10,13 @@ ms.assetid: 6087b279-ba05-4824-b5e3-3af14f3d3cfe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 85c2ae1039058f39bd96c7d0752f798504b0dd4d
-ms.sourcegitcommit: 9cff0702c2cc0f214173b47ec241f7e5a40f84e6
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6f914cba7eee44f340bf5b696aca1854128aeb8b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34746117"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141313"
 ---
 # <a name="set-up-your-subscription-for-lookout-mobile-threat-defense"></a>Configurar la suscripción con Lookout Mobile Threat Defense
 
@@ -61,8 +62,8 @@ Siga estos pasos para recopilar la información que necesita proporcionar al equ
 
    La consola de Lookout admite dos niveles de acceso:  
 
-   - **Acceso completo:** el administrador de Azure AD puede crear un grupo para usuarios que tengan acceso completo y, opcionalmente, crear un grupo de usuarios que tengan acceso restringido. Solo los usuarios de estos grupos podrán iniciar sesión en la **consola de Lookout**.
-   - **Acceso restringido:** los usuarios de este grupo no tendrán acceso a varios módulos relacionados con la inscripción y configuración de la consola de Lookout, y tendrán acceso de solo lectura al módulo **Directiva de seguridad** de la consola de Lookout.  
+   - **Acceso completo:** El Administrador de Azure AD puede crear un grupo para los usuarios que tienen acceso total y, opcionalmente, cree un grupo para los usuarios que tendrán acceso restringido. Solo los usuarios de estos grupos podrán iniciar sesión en la **consola de Lookout**.
+   - **Acceso restringido:** Los usuarios de este grupo no tendrá ningún acceso a varias configuración y los módulos relacionados con la inscripción de la consola de Lookout, y tiene acceso de solo lectura a la **directiva de seguridad** módulo de la consola de Lookout.  
 
      > [!TIP]  
      > Para obtener más información sobre los permisos, consulte [este artículo de soporte técnico de Lookout](https://personal.support.lookout.com/hc/articles/114094105653).
@@ -105,7 +106,7 @@ Siga estos pasos para recopilar la información que necesita proporcionar al equ
     >![captura de pantalla de Azure Portal, servicio de Azure Active Directory, página de propiedades](media/aad-group-display-name.png)
 
     >[!NOTE]  
-    >El procedimiento recomendado es usar el valor predeterminado de cinco minutos para el incremento de tiempo a la hora de comprobar si hay nuevos dispositivos. Existen actualmente varias restricciones, a saber: **Lookout no puede validar nombres para mostrar de grupos:** asegúrese de que el campo **NOMBRE PARA MOSTRAR** de Azure Portal coincide exactamente con el grupo de seguridad de Azure AD. **No se admite la creación de grupos anidados:** los grupos de seguridad de Azure AD utilizados en Lookout deben contener únicamente usuarios. No pueden contener otros grupos.
+    >El procedimiento recomendado es usar el valor predeterminado de cinco minutos para el incremento de tiempo a la hora de comprobar si hay nuevos dispositivos. Limitaciones actuales, **Lookout no puede validar los nombres de grupo para mostrar:** Asegúrese del **nombre para mostrar** campo en Azure portal coincide exactamente con el grupo de seguridad de Azure AD. **No se admite la creación de grupos anidados:**  Seguridad de Azure AD grupos que se usan en Lookout solo deben contener usuarios. No pueden contener otros grupos.
 
 3.  Una vez agregado el grupo, la próxima vez que un usuario abre la aplicación Lookout for Work en su dispositivo, el dispositivo se activa en Lookout.
 

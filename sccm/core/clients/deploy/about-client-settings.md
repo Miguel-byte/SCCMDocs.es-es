@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c4cd6c45d21c58459fcd23ee02db4b5900996939
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: b272a8988a3e8d2e09b4043c087207e62c59b274
+ms.sourcegitcommit: 5e7c4d36f4cdb3390ad3b381d31a3e1e4bf3c6e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422001"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986593"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -147,7 +147,7 @@ Seleccione **Sí** si quiere implementar elementos de configuración de [perfile
 
 Para obtener más información sobre las siguientes tres configuraciones, vea [Notificaciones de usuario para las implementaciones requeridas](/sccm/apps/deploy-use/deploy-applications#user-notifications-for-required-deployments):
 
--    **La fecha límite de la implementación es de más de 24 horas. Recordar al usuario cada (horas)**
+-   **La fecha límite de la implementación es de más de 24 horas. Recordar al usuario cada (horas)**
 -   **La fecha límite de la implementación es antes de 24 horas. Recordar al usuario cada (horas)** 
 -   **La fecha límite de la implementación es antes de 1 hora. Recordar al usuario cada (minutos)** 
 
@@ -624,7 +624,7 @@ Por ejemplo, si la organización no usa las directivas de cumplimiento y quiere 
 Configure una programación para cuando Configuration Manager vuelva a evaluar las reglas de requisitos para todas las implementaciones. El valor predeterminado es cada siete días.  
 
 > [!IMPORTANT]  
->  No cambie este valor por uno inferior al predeterminado. Una programación de reevaluación más agresiva afecta de forma negativa al rendimiento de los equipos cliente y de red.  
+> Esta configuración es más invasiva para el cliente local que para el servidor de red o de sitio. Una programación de reevaluación más agresiva afecta de forma negativa al rendimiento de los equipos cliente y de red. Microsoft no recomienda establecer un valor inferior al valor predeterminado. Si modifica este valor, supervise de cerca el rendimiento.  
 
 Inicie esta acción desde un cliente del modo siguiente: en el panel de control de **Configuration Manager**, en la pestaña **Acciones**, seleccione **Ciclo de evaluación de implementación de aplicaciones**.  
 
