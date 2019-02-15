@@ -10,12 +10,13 @@ ms.assetid: 321b19b2-a093-4b8f-995f-41f74b886eb5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f294bd3e6c8043149e7f5af8b07eb11288751601
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: dba1107dd8cd8d39be555b3b77ff828152513eb8
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416272"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122243"
 ---
 # <a name="create-wi-fi-profiles"></a>Crear perfiles de Wi-Fi
 
@@ -58,13 +59,13 @@ Use perfiles de Wi-Fi en System Center Configuration Manager para implementar la
 
    -   **Ninguno**: los equipos que no cumplan esta regla de compatibilidad no notificarán ninguna gravedad de error en los informes de Configuration Manager.  
 
-   -   **Información**: Los equipos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Información** en los informes de Configuration Manager.  
+   -   **Información**: los equipos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Información** en los informes de Configuration Manager.  
 
    -   **Advertencia**: los equipos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Advertencia** en los informes de Configuration Manager.  
 
-   -   **Crítica**: los equipos que no cumplan esta regla de compatibilidad notificarán una gravedad de error **Crítica** en los informes de Configuration Manager.  
+   -   **Crítico**: los equipos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Crítico** en los informes de Configuration Manager.  
 
-   -   **Crítica con evento**: los equipos que no cumplan esta regla de compatibilidad notificarán una gravedad de error **Crítica** en los informes de Configuration Manager. Este nivel de gravedad también se registra como evento de Windows en el registro de eventos de la aplicación.  
+   -   **Crítico con evento**: los equipos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Crítico** en los informes de Configuration Manager. Este nivel de gravedad también se registra como evento de Windows en el registro de eventos de la aplicación.  
 
 5. En la página **Perfil de Wi-Fi** proporcione nombre que los dispositivos mostrarán como nombre de red.  
 
@@ -78,8 +79,8 @@ Use perfiles de Wi-Fi en System Center Configuration Manager para implementar la
    > [!IMPORTANT]
    >  Si va a crear un perfil de Wi-Fi para la Administración de dispositivos móviles local, la rama actual de Configuration Manager solo admite las siguientes configuraciones de seguridad de Wi-Fi:  
    > 
-   >  Tipo de seguridad **WPA2 Enterprise** o **WPA2 Personal**  
-   > Tipo de cifrado **AES** o **TKIP**  
+   >  Tipos de seguridad: **WPA2 Enterprise** o **WPA2 Personal**  
+   > Tipos de cifrado: **AES** o **TKIP**  
    > Tipos de EAP: **tarjeta inteligente u otro certificado** o **PEAP**  
    > 
    > Para dispositivos Android no se admiten los tipos de seguridad **WPA-Personal**, **WPA2 – Personal** y **WEP** .  
@@ -102,12 +103,12 @@ Use perfiles de Wi-Fi en System Center Configuration Manager para implementar la
 13. **Solo para dispositivos iOS:**  
     configure la información de los certificados necesarios para la conexión Wi-Fi. Debe configurar el certificado de cliente y el nombre de certificado del servidor de confianza o el certificado raíz de la manera siguiente:  
 
-    - **Nombres de certificados de servidor de confianza**: si el servidor al que se conecta el dispositivo usa un certificado de autenticación de servidor para identificar el servidor y proteger el canal de comunicación, escriba el nombre o los nombres en el nombre del sujeto o nombre alternativo del sujeto del certificado. El nombre o los nombres suelen ser el nombre de dominio completo del servidor. Por ejemplo, si el certificado del servidor tiene un nombre común de srv1.contoso.com en el firmante del certificado, escriba **srv1.contoso.com**. Si el certificado del servidor tiene varios nombres especificados en el nombre alternativo del sujeto, escriba los nombres separados por un punto y coma.  
+    - **Nombres de certificado de servidor de confianza**: si el servidor al que se conecta el dispositivo usa un certificado de autenticación de servidor para identificar el servidor y proteger el canal de comunicación, escriba el nombre o los nombres en el nombre del sujeto o nombre alternativo del sujeto del certificado. El nombre o los nombres suelen ser el nombre de dominio completo del servidor. Por ejemplo, si el certificado del servidor tiene un nombre común de srv1.contoso.com en el firmante del certificado, escriba **srv1.contoso.com**. Si el certificado del servidor tiene varios nombres especificados en el nombre alternativo del sujeto, escriba los nombres separados por un punto y coma.  
 
       > [!TIP]  
       >  Si el certificado de cliente que se selecciona para EAP o autenticación de cliente para un dispositivo iOS se va a usar para realizar la autenticación en un servidor de Servicio de autenticación remota telefónica de usuario (RADIUS) como, por ejemplo, un servidor que ejecuta Servidor de directivas de redes, debe configurar el nombre alternativo del sujeto como nombre principal de usuario.  
 
-    - **Seleccionar certificados raíz para validación de servidor**: si el servidor al que se conecta el dispositivo usa un certificado de autenticación de servidor que no es de confianza para el dispositivo, seleccione el perfil de certificado que contiene el certificado raíz para el certificado del servidor, a fin de crear una cadena de confianza en el dispositivo.  
+    - **Seleccionar certificados raíz para la validación del servidor:**: si el servidor al que se conecta el dispositivo usa un certificado de autenticación de servidor en el que el dispositivo no confía, seleccione el perfil de certificado que contenga el certificado raíz para el certificado de servidor, a fin de crear una cadena de certificados de confianza en el dispositivo.  
 
     - **Seleccionar un certificado de cliente para autenticación de cliente**: si el servidor o dispositivo de red requiere un certificado de cliente para autenticar el dispositivo que se conecta, seleccione el perfil de certificado que contiene el certificado de autenticación del cliente.  
 

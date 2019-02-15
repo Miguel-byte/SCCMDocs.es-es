@@ -10,12 +10,13 @@ ms.assetid: 3b9c4027-a98b-406b-935c-ccabcfe713df
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 86452d628d025aea2b797d0ade92a3c2e2fff933
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c16487bc59a7e067aac5554213e2be750729078f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418584"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120153"
 ---
 #  <a name="using-configuration-manager-software-updates-to-deliver-definition-updates"></a>El uso de las actualizaciones de Software de Configuration Manager para entregar actualizaciones de definiciones
 
@@ -39,7 +40,7 @@ ms.locfileid: "53418584"
 
    -   **Nombre**: escriba un nombre único para la regla de implementación automática.
 
-   -   **Colección**: seleccione la recopilación de equipos cliente en la que va a implementar las actualizaciones de definiciones.
+   -   **Recopilación**: seleccione la recopilación de equipos cliente en la que va a implementar las actualizaciones de definiciones.
 
        > [!NOTE]
        >  No se pueden implementar actualizaciones de definiciones en una recopilación de usuarios.
@@ -75,11 +76,11 @@ ms.locfileid: "53418584"
 
 17. En la página **Programación de implementación** , configure las siguientes opciones:
 
-    -   **Hora basada en:** seleccione **UTC** si quiere que todos los clientes de la jerarquía instalen las definiciones más recientes a la misma hora. La hora real de la instalación variará dentro de una ventana de dos horas. Esta opción es un procedimiento recomendado.
+    -   **Hora basada en**: seleccione **UTC** si quiere que todos los clientes de la jerarquía instalen las definiciones más recientes a la misma hora. La hora real de la instalación variará dentro de una ventana de dos horas. Esta opción es un procedimiento recomendado.
 
     -   **Horas de disponibilidad del software**: especifique las horas disponibles para la implementación que se crea mediante esta regla. La hora especificada debe ser al menos una hora después de que se ejecute la regla de implementación automática. Esto ayuda a garantizar que el contenido tiene suficiente tiempo para replicarse en los puntos de distribución de la jerarquía. Es probable que algunas actualizaciones de definición también incluyan actualizaciones del motor de antimalware, que podrían tardar más tiempo en llegar a los puntos de distribución.
 
-    -   **Fecha límite de instalación**: Seleccione **tan pronto como sea posible**.
+    -   **Fecha límite de instalación**: seleccione **Lo antes posible**.
 
         > [!NOTE]
         >  Las fechas límite de actualización de software varían durante un período de dos horas para impedir que todos los clientes soliciten una actualización al mismo tiempo.
