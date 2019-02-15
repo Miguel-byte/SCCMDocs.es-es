@@ -10,12 +10,13 @@ ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5de0ab2eb56ad671a43a6a40fab4e1f4dcc051a4
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4d35ec2f02befec0221a1555be19046d3751b3b9
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424402"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131411"
 ---
 # <a name="how-to-monitor-endpoint-protection-status"></a>Cómo supervisar el estado de Endpoint Protection
 
@@ -70,7 +71,7 @@ Puede supervisar Endpoint Protection en la jerarquía de Microsoft System Center
 
 |Nivel de alerta|Descripción|  
 |-----------------|-----------------|  
-|**Error**|Endpoint Protection no pudo corregir el malware. Compruebe los registros para obtener información detallada del error.<br /><br /> **Nota:** Para obtener una lista de los archivos de registro de Configuration Manager y Endpoint Protection, consulte la sección "Endpoint Protection" del tema [Archivos de registro en Configuration Manager](../../core/plan-design/hierarchy/log-files.md).|  
+|**Error**|Endpoint Protection no pudo corregir el malware. Compruebe los registros para obtener información detallada del error.<br /><br /> **Nota:** para obtener una lista de los archivos de registro de Configuration Manager y Endpoint Protection, consulte la sección C"Endpoint Protection" del tema [Log files in System Center Configuration Manager](../../core/plan-design/hierarchy/log-files.md) (Registrar archivos en System Center Configuration Manager).|  
 |**Quitado**|Endpoint Protection quitó correctamente el malware.|  
 |**En cuarentena**|Endpoint Protection trasladó el malware a una ubicación segura y evitó su ejecución hasta que lo quite o permita que se ejecute.|  
 |**Limpio**|Se ha limpiado el malware del archivo infectado.|  

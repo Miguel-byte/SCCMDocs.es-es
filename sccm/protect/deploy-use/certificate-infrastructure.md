@@ -10,12 +10,13 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 783512841b61d6fa10e3f2832100e9000576e65a
-ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 95a5166433ef35b3c2ab7108bfc83a2d403558e0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54316531"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128177"
 ---
 # <a name="configure-certificate-infrastructure"></a>Configuración de la infraestructura de certificados
 
@@ -38,16 +39,16 @@ Siga estos pasos para configurar la infraestructura de certificados SCEP o PFX.
 
 2. Compruebe y, si es necesario, modifique los permisos de seguridad para las plantillas de certificado que está utilizando el Servicio de inscripción de dispositivos de red:  
 
-   -   Para la cuenta que ejecuta la consola de System Center Configuration Manager: el permiso **Leer**.  
+   -   Para la cuenta que ejecuta la consola de System Center Configuration Manager: permiso de **lectura**.  
 
         Este permiso es necesario para que cuando ejecute el Asistente para crear perfil de certificado, pueda examinar y seleccionar la plantilla de certificado que desee usar al crear un perfil de configuración de SCEP. Al seleccionar una plantilla de certificado, determinadas opciones del asistente se rellenarán automáticamente, por lo que deberá configurar menos opciones y la probabilidad de seleccionar opciones no compatibles con las plantillas de certificado que el Servicio de inscripción de dispositivos de red utiliza será menor.  
 
-   -   Para la cuenta de servicio SCEP que el grupo de aplicaciones del Servicio de inscripción de dispositivos de red utiliza: los permisos **Leer** e **Inscribir**.  
+   -   Para la cuenta de servicio SCEP que el grupo de aplicaciones del Servicio de inscripción de dispositivos de red utiliza: los permisos **Leer** e **Inscribir** .  
 
         Este requisito no es específico de System Center Configuration Manager, sino que es parte de la configuración del Servicio de inscripción de dispositivos de red. Para obtener más información, consulte [Network Device Enrollment Service Guidance (Guía del Servicio de inscripción de dispositivos de red)](http://go.microsoft.com/fwlink/p/?LinkId=309016) en la biblioteca de Servicios de certificados de Active Directory de TechNet.  
 
    > [!TIP]  
-   >  Para identificar las plantillas de certificado que el Servicio de inscripción de dispositivos de red utiliza, consulte la siguiente clave del Registro en el servidor que ejecuta el Servicio de inscripción de dispositivos de red: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP.  
+   >  Para identificar las plantillas de certificado que el Servicio de inscripción de dispositivos de red usa, consulte la siguiente clave del Registro en el servidor que ejecuta el Servicio de inscripción de dispositivos de red: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP.  
 
    > [!NOTE]  
    >  Estos son los permisos de seguridad predeterminados que serán adecuados para la mayoría de los entornos. Sin embargo, puede utilizar otra configuración de seguridad. Para más información, consulte [Planificación de permisos de plantilla de certificado para perfiles de certificado en System Center Configuration Manager](../../protect/plan-design/planning-for-certificate-template-permissions.md).  
@@ -189,9 +190,9 @@ Debe instalar y configurar el módulo de directivas de System Center Configurati
 
 6. Acepte el puerto predeterminado **443** o especifique otro número de puerto que use el punto de Registro de certificado. A continuación, haga clic en **Siguiente**.  
 
-7. En la página **Certificado de cliente para el módulo de directivas**, busque y especifique el certificado de autenticación de cliente implementado en el **Paso 1: Instalar y configurar el Servicio de inscripción de dispositivos de red y las dependencias** y, a continuación, haga clic en **Siguiente**.  
+7. En la página **Certificado de cliente para el módulo de directivas**, busque y especifique el certificado de autenticación de cliente implementado en el **Paso 1: Instalar y configurar el Servicio de inscripción de dispositivos de red y las dependencias**y, a continuación, haga clic en **Siguiente**.  
 
-8. En la página **Certificado del punto de registro de certificado**, haga clic en **Examinar** para seleccionar el archivo de certificado exportado para la CA raíz que encontró y guardó al final del **Paso 2: Instalar y configurar el punto de Registro de certificado**.  
+8. En la página **Certificado del punto de registro de certificado** , haga clic en **Examinar** para seleccionar el archivo de certificado exportado para la CA raíz que encontró y guardó al final del **Paso 2: Instalar y configurar el punto de registro de certificado**.  
 
    > [!NOTE]  
    >  Si no guardó anteriormente este archivo de certificado, lo encontrará en <ruta de instalación de Configuration Manager\>\inboxes\certmgr.box, en el equipo del servidor de sitio.  

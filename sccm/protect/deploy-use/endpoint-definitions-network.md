@@ -10,12 +10,13 @@ ms.assetid: ddef4d2a-f481-4020-9ddd-9cca5f9795cb
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 5c4dd69510134efecc730d7cc1bdb5cb2d647653
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2dbe2c5ecfbf58248f1bc391d39d6e0b86b86bc2
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414538"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56140463"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-a-network-share-for-configuration-manager"></a>Habilitar la descarga de definiciones de malware de Endpoint Protection desde un recurso compartido de red para Configuration Manager
 

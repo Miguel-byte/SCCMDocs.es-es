@@ -10,12 +10,13 @@ ms.assetid: 98feaa06-64b1-4e86-a122-93017c97cd4f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d061649744d7a2da37e67d55f3c8b655d18c0aa4
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 86485a1a54acb122e1b56118de9e72d840e01809
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416799"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137667"
 ---
 # <a name="how-to-monitor-certificate-profiles-in-system-center-configuration-manager"></a>Cómo supervisar perfiles de certificado en System Center Configuration Manager
 
@@ -34,16 +35,16 @@ Para supervisar el cumplimiento del certificado SCEP, no use la consola. En su l
 
     La página **Estado de implementación** contiene las siguientes pestañas:  
 
-   -   **Conforme**: muestra la compatibilidad del perfil de certificado en función del número de activos afectados. Puede hacer doble clic en una regla para crear un nodo temporal en el nodo **Usuarios** , en el área de trabajo **Activos y compatibilidad** . Este nodo contiene todos los usuarios que son compatibles con el perfil de certificado. El panel **Detalles del activo** muestra los usuarios que son compatibles con el perfil. Haga doble clic en un usuario en la lista para obtener más información.  
+   -   **Compatible**: muestra la compatibilidad del perfil de certificado en función del número de recursos afectados. Puede hacer doble clic en una regla para crear un nodo temporal en el nodo **Usuarios** , en el área de trabajo **Activos y compatibilidad** . Este nodo contiene todos los usuarios que son compatibles con el perfil de certificado. El panel **Detalles del activo** muestra los usuarios que son compatibles con el perfil. Haga doble clic en un usuario en la lista para obtener más información.  
 
        > [!IMPORTANT]  
        >  Un perfil de certificado no se evalúa si no es aplicable en un dispositivo cliente. Sin embargo, se devuelve como compatible.  
 
-   -   **Error**: muestra una lista de todos los errores de la implementación de perfil de certificado seleccionada, en función del número de activos afectados. Puede hacer doble clic en una regla para crear un nodo temporal en el nodo **Usuarios** del área de trabajo **Activos y compatibilidad** . Este nodo contiene todos los usuarios que generaron errores con este perfil. Cuando se selecciona un usuario, el panel **Detalles del activo** muestra los usuarios afectados por el problema seleccionado. Haga doble clic en un usuario en la lista para mostrar más información.  
+   -   **Error**: muestra una lista de todos los errores de la implementación de perfil de certificado seleccionada en función del número de recursos afectados. Puede hacer doble clic en una regla para crear un nodo temporal en el nodo **Usuarios** del área de trabajo **Activos y compatibilidad** . Este nodo contiene todos los usuarios que generaron errores con este perfil. Cuando se selecciona un usuario, el panel **Detalles del activo** muestra los usuarios afectados por el problema seleccionado. Haga doble clic en un usuario en la lista para mostrar más información.  
 
-   -   **No conforme**: muestra una lista de todas las reglas no compatibles en el perfil de certificado en función del número de activos afectados. Puede hacer doble clic en una regla para crear un nodo temporal en el nodo **Usuarios** del área de trabajo **Activos y compatibilidad** . El nodo contiene todos los usuarios que no son compatibles con este perfil. Cuando se selecciona un usuario, el panel **Detalles del activo** muestra los usuarios afectados por el problema seleccionado. Haga doble clic en un usuario de la lista para mostrar información adicional sobre el problema.  
+   -   **No compatible**: muestra una lista de todas las reglas no compatibles en el perfil de certificado en función del número de recursos afectados. Puede hacer doble clic en una regla para crear un nodo temporal en el nodo **Usuarios** del área de trabajo **Activos y compatibilidad** . El nodo contiene todos los usuarios que no son compatibles con este perfil. Cuando se selecciona un usuario, el panel **Detalles del activo** muestra los usuarios afectados por el problema seleccionado. Haga doble clic en un usuario de la lista para mostrar información adicional sobre el problema.  
 
-   -   **Desconocido**: muestra una lista de todos los usuarios que no notificaron la compatibilidad de la implementación de perfil de certificado seleccionada y el estado de cliente actual de los dispositivos.  
+   -   **Desconocido**: muestra una lista de todos los usuarios que no han notificado la compatibilidad de la implementación de perfil de certificado seleccionada y el estado de cliente actual de los dispositivos.  
 
 4. En la página **Estado implementación**, puede revisar información detallada sobre la compatibilidad del perfil de certificado implementado. Se crea un nodo temporal en el nodo **Implementaciones** que le permite encontrar esta información rápidamente.  
 

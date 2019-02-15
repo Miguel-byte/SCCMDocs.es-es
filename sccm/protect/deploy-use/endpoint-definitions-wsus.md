@@ -10,12 +10,13 @@ author: aczechowski
 description: Obtenga información sobre cómo configurar Windows Server Updates Services para aprobar automáticamente actualizaciones de definiciones.
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: b66c55da65f65c219b5c961949244f105885ba8f
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 74a1dc94a30f56e22b181446422a8b5f99790ffc
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424294"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127633"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-windows-server-update-services-wsus-for-configuration-manager"></a>Habilite la descarga de definiciones de malware de Endpoint Protection desde Windows Server Update Services (WSUS) para Configuration Manager.
 
@@ -74,19 +75,19 @@ ms.locfileid: "53424294"
 
 2.  En la pestaña **Reglas de actualización** , haga clic en **Nueva regla**.
 
-3.  En el **Agregar regla** cuadro de diálogo **paso 1: Seleccione propiedades**, seleccione el **cuando una actualización está en una clasificación específica** casilla de verificación.
+3.  En el cuadro de diálogo **Agregar regla** en **Paso 1: seleccionar propiedades**, active la casilla **Cuando una actualización está en una clasificación específica** .
 
 4.  En **Paso 2: editar las propiedades**, haga clic en **cualquier clasificación**.
 
 5.  Desactive todas las casillas excepto **Actualizaciones de definiciones**y haga clic en **Aceptar**.
 
-6.  En el **Agregar regla** cuadro de diálogo **paso 1: Seleccione propiedades**, seleccione el **cuando una actualización está en un producto específico** casilla de verificación.
+6.  En el cuadro de diálogo **Agregar regla** en **Paso 1: seleccionar propiedades**, active la casilla **Cuando una actualización está en un producto específico** .
 
 7.  En **Paso 2: editar las propiedades**, haga clic en **cualquier producto**.
 
 8.  Desactive todas las casillas excepto **Forefront Endpoint Protection** para Windows 8.1 y versiones anteriores o **Windows Defender** para Windows 10 y versiones posteriores y luego haga clic en **Aceptar**.
 
-9. Bajo **paso 3: En Paso 3: especificar un nombre**, escriba un nombre para la regla y haga clic en **Aceptar**.
+9. En **Paso 3: especificar un nombre**, escriba un nombre para la regla y haga clic en **Aceptar**.
 
 10. En el cuadro de diálogo **Aprobaciones automáticas** , active la casilla de la regla creada recientemente y luego haga clic en **Ejecutar regla**.
 

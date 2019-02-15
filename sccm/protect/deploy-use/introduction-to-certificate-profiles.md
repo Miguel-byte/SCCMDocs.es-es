@@ -10,12 +10,13 @@ ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 27a615a412bca7e30ab5f5a3dc5f794961d13d2c
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5872a6a8ee69e50d0abfe5840a087aaf83ab7aa5
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424500"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156617"
 ---
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>Introducción a los perfiles de certificado en System Center Configuration Manager
 
@@ -34,9 +35,9 @@ Los perfiles de certificado proporcionan las siguientes capacidades de administr
 
 -   Supervisar los certificados instalados y notificar acerca de ellos.  
 
-**Ejemplo:** todos los empleados deben poder conectarse a puntos de conexión Wi-Fi en diversas ubicaciones corporativas. Para permitir una conexión de usuario sencilla, implemente primero los certificados necesarios para conectarse a Wi-Fi. Después, implemente los perfiles de Wi-Fi que hacen referencia al certificado.  
+**Ejemplo:** Todos los empleados deben poder conectarse a puntos de conexión Wi-Fi en diversas ubicaciones corporativas. Para permitir una conexión de usuario sencilla, implemente primero los certificados necesarios para conectarse a Wi-Fi. Después, implemente los perfiles de Wi-Fi que hacen referencia al certificado.  
 
-Ejemplo: Tiene una PKI en su lugar. y quiere cambiar a un método más flexible y seguro de implementar certificados. Los usuarios deben poder tener acceso a los recursos de la empresa desde sus dispositivos personales sin poner en peligro la seguridad. Configure perfiles de certificados con las opciones y los protocolos admitidos en la plataforma específica del dispositivo. Los dispositivos pueden solicitar automáticamente estos certificados desde un servidor de inscripción accesible desde Internet. Después, configure los perfiles de VPN para que usen estos certificados y que el dispositivo pueda acceder a los recursos de empresa.  
+**Ejemplo:** tiene una PKI y quiere cambiar a un método más flexible y seguro de implementar certificados. Los usuarios deben poder tener acceso a los recursos de la empresa desde sus dispositivos personales sin poner en peligro la seguridad. Configure perfiles de certificados con las opciones y los protocolos admitidos en la plataforma específica del dispositivo. Los dispositivos pueden solicitar automáticamente estos certificados desde un servidor de inscripción accesible desde Internet. Después, configure los perfiles de VPN para que usen estos certificados y que el dispositivo pueda acceder a los recursos de empresa.  
 
 
 

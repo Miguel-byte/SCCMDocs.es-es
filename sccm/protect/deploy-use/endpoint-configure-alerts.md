@@ -10,12 +10,13 @@ ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: dbebdde88a5031eec91a2383e105d06cbc7541e5
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 26cf060d8443cefeed05c3615d5b1ecd0e862038
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53420454"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138813"
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Configurar alertas de Endpoint Protection en Configuration Manager
 
@@ -75,13 +76,13 @@ ms.locfileid: "53420454"
 
         -   **Número de veces que se ha detectado malware** : la alerta se genera cuando se detecta el mismo malware en los equipos de la recopilación más veces que las establecidas. Especifique un número entre **2** y **32**.
 
-        -   **Intervalo de detección (horas):** indique el intervalo de detección (en horas) en que se debe producir el número de detecciones de malware. Especifique un número entre **1** y **168**.
+        -   **Intervalo de detección (horas)** : indique el intervalo de detección (en horas) en que se debe producir el número de detecciones de malware. Especifique un número entre **1** y **168**.
 
     -   **Detección de varios programas de malware**: esta alerta se genera si se detectan más tipos de malware que el número de tipos especificado durante un determinado número de horas en los equipos de la recopilación que se supervisa. Especifique la siguiente información para configurar la alerta:
 
-        -   **Número de tipos de malware detectados:** la alerta se genera cuando el número establecido de tipos de software malintencionado se detecta en los equipos de la recopilación. Especifique un número entre **2** y **32**.
+        -   **Varios tipos de malware detectado:** la alerta se genera cuando el número establecido de tipos de software malintencionado se detecta en los equipos de la recopilación. Especifique un número entre **2** y **32**.
 
-        -   **Intervalo de detección (horas):** indique el intervalo de detección (en horas) en que se debe producir el número de detecciones de malware. Especifique un número entre **1** y **168**.
+        -   **Intervalo de detección (horas)** : indique el intervalo de detección (en horas) en que se debe producir el número de detecciones de malware. Especifique un número entre **1** y **168**.
 
 9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades** de _<Nombre de recopilación\>_.  
 
