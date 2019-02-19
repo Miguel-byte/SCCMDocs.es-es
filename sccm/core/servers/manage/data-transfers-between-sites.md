@@ -10,12 +10,13 @@ ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 45fb1bc31a7e888ca4caa21a710e74ec0fde422c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 39ae7c931b2d69199dc2c24cbb1bf9ae804a04b4
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341886"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123195"
 ---
 # <a name="data-transfers-between-sites-in-system-center-configuration-manager"></a>Transferencias de datos entre sitios en System Center Configuration Manager
 

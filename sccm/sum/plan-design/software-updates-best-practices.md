@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-ms.openlocfilehash: fd16b33b885786d7a613096456774fc05d70f8a4
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: feb0f086fca89aed3fc1f251901ade378b020533
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383123"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56133527"
 ---
 # <a name="best-practices-for-software-updates-in-configuration-manager"></a>Procedimientos recomendados para actualizaciones de software en Configuration Manager
 

@@ -10,12 +10,13 @@ ms.assetid: 217c8a0e-5112-420e-a325-2a6d75326290
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 604cf10c660cd1f26513a6a34b370d380635504b
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4c18d6320397281156e39624ea8dc50e6d0539ed
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421083"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139915"
 ---
 # <a name="create-a-task-sequence-to-install-an-operating-system-in-system-center-configuration-manager"></a>Crear una secuencia de tareas para instalar un sistema operativo en System Center Configuration Manager
 
@@ -128,15 +129,15 @@ Use secuencias de tareas de System Center Configuration Manager para instalar au
 |Disco de partición 0|Formatear y crear particiones en el disco|  
 |Restaurar archivos de usuario y configuración|Restaurar estado de usuario|  
 
-|Grupo o paso de secuencia de tareas|Descripción|  
+|Grupo de secuencias de tareas o paso a paso|Descripción|  
 |---------------------------------|-----------------|  
 |Capturar archivos y configuraciones - **(nuevo grupo de secuencia de tareas)**|Crear un grupo de secuencia de tareas. Un grupo de secuencia de tareas mantiene pasos similares de secuencia de tareas para una mejor organización y un control de errores.<br /><br /> Este grupo contiene los pasos necesarios para capturar archivos y configuraciones del sistema operativo de un equipo de referencia.|  
 |Capturar configuración de Windows|Utilice este paso de la secuencia de tareas para identificar la configuración de Microsoft Windows para capturar desde el equipo de referencia. Puede capturar el nombre de equipo, usuario e información de la organización y la configuración de zona horaria.|  
 |Capturar configuración de red|Utilice este paso de la secuencia de tareas para capturar a la configuración de red del equipo de referencia. Puede capturar a la pertenencia de grupo de trabajo o dominio del equipo de referencia y el adaptador de red, información de configuración.|  
-|Capturar archivos de usuario y configuraciones - **(nueva tarea subelemento grupo Sequence)**|Crear un grupo de secuencia de tareas dentro de un grupo de secuencia de tareas. Este grupo secundario contiene los pasos necesarios para capturar los datos de estado de usuario. Similar al grupo inicial que ha agregado, este subgrupo mantiene juntos los pasos similares de la secuencia de tareas para mejorar la organización y el control de errores.|  
+|Capturar archivos de usuario y configuraciones - **(nueva tarea subelemento grupo Sequence)**|Crear un grupo de secuencia de tareas dentro de un grupo de secuencia de tareas. Este grupo secundario contiene los pasos necesarios para capturar los datos de estado de usuario. Similar al grupo inicial de agregado, esta mantiene subgrupos similar pasos juntos para errores y mejor organización controlan.|  
 |Almacenamiento de información de estado de usuario de solicitud|Utilice este paso de la secuencia de tareas para solicitar acceso a un punto de migración de estado donde se almacenan los datos de estado de usuario. Puede configurar este paso de la secuencia de tareas para capturar o restaurar la información de estado de usuario.|  
-|Capturar archivos de usuario y configuración|Use este paso de la secuencia de tareas para usar la herramienta de migración de estado de usuario (USMT) para capturar el estado de usuario y la configuración del equipo de referencia que recibirá la secuencia de tareas asociada a este paso de la tarea. Puede capturar las opciones estándar o configurar las opciones que se deben capturar.|  
-|Liberar almacenamiento de estado de usuario|Utilice este paso de la secuencia de tareas para notificar el estado del punto de migración que la acción de captura o la restauración está completa.|  
+|Capturar archivos de usuario y configuración|Use este paso de la secuencia de tareas para usar la herramienta de migración de estado de usuario (USMT) para capturar el estado de usuario y la configuración del equipo de referencia que recibirá la secuencia de tareas asociada a este paso de la tarea. Puede capturar las opciones estándar o configurar las opciones de whish para capturar.|  
+|Almacenamiento de información de estado de usuario de la versión|Utilice este paso de la secuencia de tareas para notificar el estado del punto de migración que la acción de captura o la restauración está completa.|  
 |Instalar el sistema operativo: **(nuevo grupo de secuencia de tareas)**|Cree otro grupo de subsistema de secuencia de tareas. Este grupo secundario contiene los pasos necesarios para instalar y configurar el entorno Windows PE.|  
 |Reiniciar en Windows PE|Utilice este paso de la secuencia de tareas para especificar las opciones de reinicio del equipo de destino que recibe esta secuencia de tareas. Este paso mostrará un mensaje al usuario indicando que se reiniciará el equipo para que pueda continuar la instalación.<br /><br /> Este paso usa la variable de secuencia de tareas **_SMSTSInWinPE** de solo lectura. Si el valor asociado es igual a **false** sigue el paso de la secuencia de tareas.|  
 |Disco de partición 0|Este paso especifica las acciones necesarias para formatear el disco duro del equipo de destino. El número de disco predeterminado es **0**.<br /><br /> Este paso usa la variable de secuencia de tareas **_SMSTSClientCache** de solo lectura. Este paso se ejecutará si la memoria caché del cliente de Configuration Manager no existe.|  
@@ -149,6 +150,6 @@ Use secuencias de tareas de System Center Configuration Manager para instalar au
 |Instalar Windows y Configuration Manager|Use este paso de secuencia de tareas para instalar el software cliente de Configuration Manager. Configuration Manager instala y registra el GUID del cliente de Configuration Manager. Puede asignar los parámetros de instalación necesarios en la ventana **Propiedades de instalación** .|  
 |Instalar actualizaciones|Utilice este paso de secuencia de tareas para especificar cómo se instalan las actualizaciones de software en el equipo de destino. No se evalúa si hay actualizaciones de software aplicables al equipo de destino hasta que se ejecuta este paso de secuencia de tareas. En ese momento, se evalúa si existen actualizaciones de software para el equipo de destino similares a las de cualquier otro cliente administrado de Configuration Manager.<br /><br /> Este paso usa la variable de secuencia de tareas **_SMSTSMediaType** de solo lectura. Este paso de secuencia de tareas se ejecuta solo si el valor de la variable no es igual a **FullMedia**.|  
 |Restaurar archivos de usuario y configuración: **(nuevo subgrupo de secuencia de tareas)**|Cree otro grupo de subsistema de secuencia de tareas. Este grupo secundario contiene los pasos necesarios para restaurar los archivos de usuario y la configuración.|  
-|Solicitar almacenamiento de estado de usuario|Utilice este paso de la secuencia de tareas para solicitar acceso a un punto de migración de estado donde se almacenan los datos de estado de usuario.|  
+|Almacenamiento de información de estado de usuario de solicitud|Utilice este paso de la secuencia de tareas para solicitar acceso a un punto de migración de estado donde se almacenan los datos de estado de usuario.|  
 |Restaurar archivos de usuario y configuración|Utilice este paso de la secuencia de tareas para iniciar la herramienta de migración de estado de usuario (USMT) para restaurar el estado de usuario y la configuración en un equipo de destino.|  
 |Almacenamiento de información de estado de usuario de la versión|Use este paso de secuencia de tareas para notificar al punto de migración de estado que los datos de estado de usuario ya no son necesarios.|  

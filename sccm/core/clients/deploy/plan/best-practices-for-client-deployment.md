@@ -10,12 +10,13 @@ ms.assetid: a933d69c-5feb-4b2b-84e8-56b3b64d5947
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9c68a51202152e4b1418101412739b0d83f10203
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a3f5be163775e667571d97ef8a9d417ce6256b2d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333525"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122005"
 ---
 # <a name="best-practices-for-client-deployment-in-system-center-configuration-manager"></a>Procedimientos recomendados para la implementación de clientes en System Center Configuration Manager
 

@@ -10,12 +10,13 @@ ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5343f10fe1e8a7b799454801c764a43619488014
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: de833817d36ecf3d8dc7c59f4ab2bc1d0b59517f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421746"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129976"
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-system-center-configuration-manager"></a>Vincular usuarios y dispositivos con afinidad entre usuario y dispositivo en System Center Configuration Manager
 

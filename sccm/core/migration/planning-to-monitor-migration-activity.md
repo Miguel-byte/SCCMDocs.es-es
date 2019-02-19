@@ -10,12 +10,13 @@ ms.assetid: fc731d3f-edd7-4049-b17b-653d6693a564
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2dfad7c9963862ff90934861973bf3862d745b98
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5588afeb02ead302201cc99c8c2ad7558ec4b32e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333134"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56134789"
 ---
 # <a name="planning-to-monitor-migration-activity-in-system-center-configuration-manager"></a>Planear la supervisión de la actividad de migración en System Center Configuration Manager
 

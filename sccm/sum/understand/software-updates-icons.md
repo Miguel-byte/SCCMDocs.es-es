@@ -10,12 +10,13 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 ms.author: aaroncz
-ms.openlocfilehash: 77c6772682c8eb6d1532c0ea38489a45d2466c30
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 898eabbb142a5562464950812cbfd057d3d65187
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422868"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128279"
 ---
 # <a name="icons-used-for-software-updates-in-system-center-configuration-manager"></a>Iconos que se usan para las actualizaciones de software en System Center Configuration Manager
 

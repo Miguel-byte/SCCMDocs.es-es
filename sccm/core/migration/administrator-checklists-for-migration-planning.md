@@ -10,12 +10,13 @@ ms.assetid: 295fdf07-93cc-490c-acdd-ce3ee88cb36f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 06e85a0b372aea34a041f050d311178967dc18b5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3136c8add4256a646409c4a540da783a04a5b71d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336347"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128296"
 ---
 # <a name="administrator-checklists-for-migration-planning-in-system-center-configuration-manager"></a>Listas de comprobación de administrador para planear la migración en System Center Configuration Manager
 
@@ -39,7 +40,7 @@ Use las siguientes listas de comprobación de administrador como ayuda para plan
 
     Para más información, vea [Fundamentals of role-based administration for System Center Configuration Manager (Conceptos básicos de la administración basada en roles para System Center Configuration Manager)](../../core/understand/fundamentals-of-role-based-administration.md).  
 
--   **Evalúe la red y la topología de Active Directory:** revise la estructura de dominio y topología de red existentes, y tenga en cuenta su efecto en tareas de migración y diseño de jerarquía.  
+-   **Evalúe la red y la topología de Active Directory:** Revise la estructura de dominio y topología de red existentes, y tenga en cuenta su efecto en tareas de migración y diseño de jerarquía.  
 
 -   **Finalice el diseño de la jerarquía de destino:**  
 

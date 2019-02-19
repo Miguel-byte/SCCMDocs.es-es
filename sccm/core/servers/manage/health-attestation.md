@@ -10,12 +10,13 @@ ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 27e8e3ef78947eb6623a56e670e176aaa2800f68
-ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 116c12d86c097222844e76dde877b674ca7498b9
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448912"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127123"
 ---
 # <a name="health-attestation-for-system-center-configuration-manager"></a>Atestación de estado para System Center Configuration Manager
 

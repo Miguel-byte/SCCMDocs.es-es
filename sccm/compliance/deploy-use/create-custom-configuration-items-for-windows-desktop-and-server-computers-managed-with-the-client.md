@@ -10,12 +10,13 @@ ms.assetid: 1eb2fcaf-acac-4388-9b31-6cccafacaabe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fbdb2ecdd0057b52586a7fa19e22cafa0319b039
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ba02c1c3558cc7c0f7280e9517d7b67ee8e46eec
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422239"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130384"
 ---
 # <a name="how-to-create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-system-center-configuration-manager-client"></a>Cómo crear elementos de configuración personalizados para equipos de escritorio y servidores de Windows administrados con el cliente de System Center Configuration Manager
 
@@ -255,7 +256,7 @@ Use el elemento de configuración de **escritorios y servidores de Windows perso
 ##  <a name="configure-compliance-rules"></a>Configurar reglas de cumplimiento  
  Use el procedimiento siguiente para configurar reglas de cumplimiento para el elemento de configuración.  
 
- En las reglas de cumplimiento, especifique las condiciones que definen el cumplimiento de un elemento de configuración. Para poder evaluar el cumplimiento de una configuración, debe tener al menos una regla de cumplimiento. WMI, el registro y la configuración de la secuencia de comandos le permite corregir valores que se encuentran como no conforme. Puede crear nuevas reglas o busque una configuración existente en cualquier elemento de configuración para seleccionar las reglas en ella.  
+ Las reglas de cumplimiento especifican las condiciones que definen la conformidad de un elemento de configuración. Para poder evaluar el cumplimiento de una configuración, debe tener al menos una regla de cumplimiento. WMI, el registro y la configuración de la secuencia de comandos le permite corregir valores que se encuentran como no conforme. Puede crear nuevas reglas o busque una configuración existente en cualquier elemento de configuración para seleccionar las reglas en ella.  
 
 ### <a name="to-create-a-compliance-rule"></a>Para crear una regla de cumplimiento  
 

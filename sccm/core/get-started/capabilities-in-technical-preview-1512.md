@@ -11,12 +11,13 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 970f86849572d6b360c5b92a42a3d131a38fe1d7
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 33bba1b837e8336a72ff5f3588a58ca8598e5d2d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54896471"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132547"
 ---
 # <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1512 para System Center Configuration Manager
 
@@ -77,7 +78,7 @@ En 1512 Technical Preview, hemos agregado la siguiente nueva configuración de d
 
     -   Avanzado: **Habilitar el envío automático de archivos de ejemplo para ayudar a Microsoft a averiguar si ciertos elementos encontrados son malintencionados**:  cambie esta opción a "Sí" para habilitar el envío automático de archivos de ejemplo. De forma predeterminada, esta configuración está establecida como "No", lo que significa que el envío automático de archivos de ejemplo está deshabilitado y se le preguntará a los usuarios antes de enviar ejemplos.   (Esta configuración se introdujo por primera vez en System Center 2012 R2 Configuration Manager SP1)  
 
-    -   Avanzado: **Permitir a los usuarios modificar la configuración de envío automático de archivos de ejemplo**: esta configuración determina si un usuario con derechos administrativos locales en un dispositivo puede cambiar la configuración de envío automático de archivos de ejemplo en la interfaz del cliente. De forma predeterminada, esta opción está establecida en "No", lo que significa que la configuración solo se puede cambiar en la consola de Configuration Manager y los administradores locales de un dispositivo no pueden cambiarla.  
+    -   Avanzado: **Permitir a los usuarios modificar la configuración de envío automático de archivos de ejemplo**: Esta configuración determina si un usuario con derechos administrativos locales en un dispositivo puede cambiar la configuración de envío automático de archivos de ejemplo en la interfaz del cliente. De forma predeterminada, esta opción está establecida en "No", lo que significa que la configuración solo se puede cambiar en la consola de Configuration Manager y los administradores locales de un dispositivo no pueden cambiarla.  
 
          Por ejemplo, a continuación se muestra la configuración de Windows Defender en Windows 10 establecida por el administrador como habilitada, y el usuario no tiene permiso para modificarla:  
 

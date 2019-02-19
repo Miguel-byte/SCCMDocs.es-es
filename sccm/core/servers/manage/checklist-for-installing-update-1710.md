@@ -10,12 +10,13 @@ ms.assetid: 7e8ab8ca-41ef-467a-943b-a115d88cafe0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 91c16c556914a6edd97fbe2d00c469ea51173680
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 188d2ffdb3ad6f908a0ea25a6966bd0dcf5db807
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419315"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123008"
 ---
 # <a name="checklist-for-installing-update-1710-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1710 de System Center Configuration Manager
 
@@ -71,7 +72,7 @@ Este es un valor opcional que puede especificar como un recordatorio útil de la
 
 Para obtener más información, consulte [Licencias y ramas para System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
 
-**Revisar las versiones instaladas de Microsoft .NET en los servidores de sistema de sitio:**  cuando un sitio instala esta actualización, Configuration Manager instala .NET Framework 4.5.2 de forma automática en todos los equipos que hospeden alguno de los roles de sistema de sitio siguientes, si todavía no está instalado .NET Framework 4.5 o una versión posterior:
+**Revisar las versiones instaladas de Microsoft .NET en los servidores de sistema de sitio:**  cuando un sitio instala esta actualización, Configuration Manager instala .NET Framework 4.5.2 de forma automática en todos los equipos que hospeden alguno de los roles de sistema de sitio siguientes, si todavía no está instalado .NET Framework 4.5 o una versión posterior:
 
 -   Punto de proxy de inscripción
 -   Punto de inscripción
@@ -125,7 +126,7 @@ Para obtener más información, vea  [Tareas de mantenimiento para System Cente
 
 **Detención del software antivirus en los servidores de System Center Configuration Manager:** antes de actualizar un sitio, asegúrese de que ha detenido el software antivirus en los servidores de Configuration Manager. <!--SMS.503481--> 
 
-**Cree una copia de seguridad de la base de datos del sitio en el sitio de administración central y los sitios primarios:**  antes de actualizar un sitio, haga una copia de seguridad de la base de datos del sitio para asegurarse de que dispone de una copia de seguridad preparada para la recuperación ante desastres.
+**Creación de una copia de seguridad de la base de datos del sitio en el sitio de administración central y los sitios primarios:**  antes de actualizar un sitio, haga una copia de seguridad de la base de datos del sitio para asegurarse de que dispone de una copia de seguridad preparada para la recuperación ante desastres.
 
 Para obtener más información, vea  [Copia de seguridad y recuperación de System Center Configuration Manager](/sccm/protect/understand/backup-and-recovery).
 

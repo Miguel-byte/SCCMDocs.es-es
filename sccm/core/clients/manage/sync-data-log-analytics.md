@@ -10,12 +10,13 @@ ms.assetid: 33bcf8b3-a6b6-4fc9-bb59-70a9621b2b0d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b0fd4c36ed03f0e0b158fe637a045553dab31ade
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9b3ba4c5179069e5443beaf1b7f733c797cfd680
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43995370"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156532"
 ---
 #  <a name="sync-data-from-configuration-manager-to-azure-log-analytics"></a>Sincronización de datos de Configuration Manager a Azure Log Analytics
 

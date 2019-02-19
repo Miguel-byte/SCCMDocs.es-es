@@ -10,12 +10,13 @@ ms.assetid: bc2282d5-0571-465b-9528-a555855eaacd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5bf79fa360faecc6d103a2fd209c7f7e5eb9597c
-ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7a6040fd6b429eb94187026b8b6a98ea1386d5c6
+ms.sourcegitcommit: fd16fc2b681608fd6def5bad2cedffbcd1f2423a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53747099"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56405648"
 ---
 # <a name="about-the-service-connection-point-in-configuration-manager"></a>Acerca del punto de conexión de servicio en Configuration Manager
 
@@ -117,6 +118,8 @@ Para permitir la operación, el equipo que hospeda el punto de conexión de serv
 - `download.microsoft.com`  
 
 - `https://go.microsoft.com/fwlink/?LinkID=619849`  
+
+- `dl.delivery.mp.microsoft.com`  
 
 #### <a name="azure-services"></a>Servicios de Azure
 

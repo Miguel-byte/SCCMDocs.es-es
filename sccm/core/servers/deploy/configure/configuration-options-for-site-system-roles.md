@@ -10,12 +10,13 @@ ms.assetid: 0e9f0fbd-e442-4509-a021-bfdedf2d04dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 379fa3637d1634caf4797b1f1b7029e3531158cc
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 209e09ba11de851a1275211364af3cee930737d0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893532"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131547"
 ---
 # <a name="configuration-options-for-site-system-roles-in-configuration-manager"></a>Opciones de configuración de roles de sistema de sitio para Configuration Manager
 
@@ -125,7 +126,7 @@ Los puntos de inscripción se usan para instalar equipos macOS y para inscribir 
 #### <a name="allowed-connections"></a>Conexiones permitidas
  La opción HTTPS está seleccionada automáticamente y necesita un certificado PKI en el servidor para la autenticación de servidor en el punto de proxy de inscripción, para la autenticación de servidor en el punto de servicio fuera de banda y para el cifrado de datos por SSL. Para obtener más información, vea [Requisitos de certificados PKI](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
- Para ver un ejemplo de implementación del certificado de servidor y obtener información sobre cómo configurarlo en IIS, [Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
+ Para ver un ejemplo de implementación del certificado de servidor y obtener información sobre cómo configurarlo en IIS, vea [Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
 
 
 

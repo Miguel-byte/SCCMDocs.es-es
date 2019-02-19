@@ -10,12 +10,13 @@ ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 48a0788d83ffcd7a373f5f73ee675b62508a6d86
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b9b995d0abfc3f14dce35e0aec70ac25b2ca2853
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333593"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138949"
 ---
 # <a name="introduction-to-collections-in-system-center-configuration-manager"></a>Introducción a las recopilaciones en System Center Configuration Manager
 

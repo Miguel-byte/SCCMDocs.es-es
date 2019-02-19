@@ -11,12 +11,13 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: dc06edc9bea3f86187604e9b94ca0e2216df391a
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4928fe49b9bb2d9599a4d44a7930480242776d8c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54897600"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123743"
 ---
 # <a name="checklist-for-installing-update-1610-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1610 de System Center Configuration Manager
 
@@ -60,7 +61,7 @@ La primera vez que use una consola de Configuration Manager una vez que la actua
 **Asegurarse de que todos los sitios ejecutan una versión compatible de System Center Configuration Manager:**  antes de empezar la instalación de la actualización 1610, cada sitio de la jerarquía debe ejecutar la misma versión de System Center Configuration Manager, ya sea la versión 1511, 1602 o 1606.
 
 **Revisar el estado de Software Assurance o de los derechos de suscripción equivalentes:**   
-debe tener un contrato de Software Assurance (SA) activo para instalar la actualización 1610. Cuando instale la versión 1610, tendrá la opción en la pestaña **Licencias** para confirmar la **fecha de vencimiento de Software Assurance**.
+Debe tener un contrato de Software Assurance (SA) activo para instalar la actualización 1610. Cuando instale la versión 1610, tendrá la opción en la pestaña **Licencias** para confirmar la **fecha de vencimiento de Software Assurance**.
 
 Este es un valor opcional que puede especificar como recordatorio útil de la fecha de expiración de su licencia, que está visible al instalar futuras actualizaciones. Si ha instalado Configuration Manager desde los medios de línea base de la versión 1606, puede que haya especificado este valor anteriormente durante la configuración, o en la pestaña **Concesión de licencias** de la **Configuración de jerarquía** tras la instalación del sitio.
 
@@ -104,7 +105,7 @@ Si utiliza clústeres NLB para puntos de actualización de software, use Windows
 Para obtener más información, vea  [Planear actualizaciones de software en Configuration Manager](/sccm/sum/plan-design/plan-for-software-updates).
 
 **Deshabilitar todas las tareas de mantenimiento del sitio en cada sitio mientras dure la instalación de la actualización en ese sitio:**   
-antes de instalar la actualización, deshabilite cualquier tarea de mantenimiento del sitio que pueda estar en ejecución mientras el proceso de actualización esté activo. Esto incluye, entre otras cosas, lo siguiente:
+Antes de instalar la actualización, deshabilite cualquier tarea de mantenimiento del sitio que pueda estar en ejecución mientras el proceso de actualización esté activo. Esto incluye, entre otras cosas, lo siguiente:
 
 -   Copia de seguridad del servidor del sitio
 -   Eliminar operaciones cliente antiguas
@@ -151,12 +152,12 @@ Puede usar períodos para tareas administrativas para definir un período durant
 
 Esto puede ayudarle a controlar el momento en que los sitios de la jerarquía instalan la actualización. Antes de la versión 1606, los períodos para tareas administrativas se denominaban ventanas de mantenimiento. Para obtener más información, vea  [Ventanas de servicio para servidores de sitio](/sccm/core/servers/manage/service-windows).
 
-**Ejecutar el Comprobador de requisitos previos del programa de instalación** :  
+**Ejecutar el Comprobador de requisitos previos del programa de instalación:**   
 Cuando la actualización aparece en la consola como **Disponible**, puede ejecutar de manera independiente el Comprobador de requisitos previos antes de instalar la actualización. (Al instalar la actualización en el sitio, el Comprobador de requisitos previos vuelve a ejecutarse).
 
 Para ejecutar una comprobación de requisitos previos desde la consola, vaya a **Administración > Información general > Cloud Services > Actualizaciones y mantenimiento**. Luego, haga clic con el botón derecho en **Paquete de actualización 1610 de Configuration Manager** y, a continuación, elija **Ejecutar comprobación de requisitos previos**.
 
-Para obtener más información sobre cómo iniciar y supervisar la comprobación de requisitos previos, vea  **Paso 3: ejecutar el comprobador de requisitos previos antes de instalar una actualización**  en el tema [Instalar actualizaciones en consola para Configuration Manager](/sccm/core/servers/manage/install-in-console-updates).
+Para obtener más información sobre cómo iniciar y supervisar la comprobación de requisitos previos, vea  **Paso 3: Ejecutar el comprobador de requisitos previos antes de instalar una actualización**  en el tema [Instalar actualizaciones en consola para Configuration Manager](/sccm/core/servers/manage/install-in-console-updates).
 
 > [!IMPORTANT]  
 > Cuando se ejecuta el Comprobador de requisitos previos de forma independiente o como parte de la instalación de una actualización, el proceso actualiza algunos archivos de origen del producto que se utilizan para tareas de mantenimiento del sitio. Por lo tanto, después de ejecutar el Comprobador de requisitos previos, pero antes de instalar la actualización 1610, si necesita realizar una tarea de mantenimiento del sitio, ejecute  **Setupwpf.exe**  (programa de instalación de Configuration Manager) desde la carpeta CD.Latest en el servidor de sitio.

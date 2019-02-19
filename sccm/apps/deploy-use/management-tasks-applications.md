@@ -10,12 +10,13 @@ ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 4cc6c423880850b40d67d35e990982583c39e54e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d6f66eedd60c759395126363db9e672c45993d48
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334147"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123971"
 ---
 # <a name="management-tasks-for-system-center-configuration-manager-applications"></a>Tareas de administración de aplicaciones de System Center Configuration Manager
 

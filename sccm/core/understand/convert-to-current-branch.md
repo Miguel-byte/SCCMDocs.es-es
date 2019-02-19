@@ -10,16 +10,17 @@ ms.assetid: ec5b54cf-62b7-4ed1-9bb3-e8c63b9641c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f1683f69ae065d0523719edd3d24da52d499341b
-ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6efa58c2257730de0703d850b814f871684b72c6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52820006"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129041"
 ---
 # <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>Actualizar la rama de mantenimiento a largo plazo a la rama actual
 
-*Se aplica a: System Center Configuration Manager (rama de mantenimiento a largo plazo)*
+*Se aplica a: System Center Configuration Manager (Rama de mantenimiento a largo plazo)*
 
 Use este tema para aprender a actualizar (convertir) un sitio y la jerarquía que ejecuta la rama mantenimiento a largo plazo (LTSB) de Configuration Manager a la rama actual.
 

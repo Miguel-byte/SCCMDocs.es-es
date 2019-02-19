@@ -10,12 +10,13 @@ ms.assetid: 84802d55-112e-4f7f-9a48-74a80d91a0f4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2ef469260147326511f2e6f435308a941be351fd
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 52d5fd0b1d7ec9c262c1f33dd55e452e30008e68
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416935"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130986"
 ---
 # <a name="manage-drivers-in-system-center-configuration-manager"></a>Administrar controladores en System Center Configuration Manager
 
@@ -176,7 +177,7 @@ System Center Configuration Manager proporciona un catálogo de controladores qu
 
 5.  Para agregar un controlador de dispositivo, active la casilla de los paquetes de controladores a los que desee agregar el controlador de dispositivo. Para quitar un controlador de dispositivo, desactive la casilla de los paquetes de controladores de los que desee quitar el controlador de dispositivo.  
 
-     Si está agregando controladores de dispositivos asociados a paquetes de controladores, tiene la opción de crear un nuevo paquete. Para ello, haga clic en **Nuevo paquete**, que abre el cuadro de diálogo **Nuevo paquete de controladores.  
+     Si está agregando controladores de dispositivos asociados a paquetes de controladores, tiene la opción de crear un nuevo paquete. Para ello, haga clic en **Nuevo paquete**, que abre el cuadro de diálogo **Nuevo paquete de controladores**.  
 
 6.  Si el paquete ya se distribuyó a los puntos de distribución, haga clic en **Sí** en el cuadro de diálogo para actualizar las imágenes de arranque en los puntos de distribución. No puede utilizar controladores de dispositivos hasta que se distribuyen a los puntos de distribución. Si hace clic en **No**, debe ejecutar la acción **Actualizar punto de distribución** antes de que la imagen de arranque contenga los controladores actualizados. Si el paquete de controladores no se distribuyó nunca, debe hacer clic en **Distribuir contenido** en el nodo **Paquetes de controladores** . Para que los controladores estén disponibles, debe actualizar el paquete de controladores en los puntos de distribución.  
 

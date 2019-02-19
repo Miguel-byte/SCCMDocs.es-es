@@ -10,12 +10,13 @@ ms.assetid: 5ee5928f-3d72-4b00-8156-1e0d1030a96c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0e2bb7992854f8743efa45f924e3d3d0718a3efe
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8ad92f3857c1303bf3f4a7c171b0de98f75e56ee
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411398"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135177"
 ---
 # <a name="security-and-privacy-for-os-deployment-in-configuration-manager"></a>Seguridad y privacidad para la implementación de SO en Configuration Manager
 

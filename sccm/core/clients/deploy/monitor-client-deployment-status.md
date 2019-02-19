@@ -10,12 +10,13 @@ ms.assetid: 20a573b3-53cb-4ed5-bae1-7542f533ed20
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8dc8d91cf963b97b96ac6320bce0213d259ecded
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 55fea1e8453837538c5e7059dc5257037dd3eb38
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417819"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120446"
 ---
 # <a name="how-to-monitor-client-deployment-status-in-system-center-configuration-manager"></a>Supervisar el estado de implementación de cliente en System Center Configuration Manager
 

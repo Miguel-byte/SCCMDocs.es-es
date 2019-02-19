@@ -10,12 +10,13 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 882af6e50a8619684225de53ce700fcc23923a06
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6d9b65629e000814f80876747e1148d450c2080b
+ms.sourcegitcommit: fd16fc2b681608fd6def5bad2cedffbcd1f2423a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418413"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56405665"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
 
@@ -121,7 +122,6 @@ Los tres roles de seguridad usados para ejecutar scripts no se crean de forma pr
 |---|---|---|
 |Colección|Ejecutar secuencia de comandos|Sí|
 |Sitio|Lectura|Sí|
-|Scripts SMS|Crear|Sí|
 |Scripts SMS|Lectura|Sí|
 
 

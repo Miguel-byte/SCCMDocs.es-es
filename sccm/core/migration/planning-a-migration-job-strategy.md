@@ -10,12 +10,13 @@ ms.assetid: a70bfbd4-757a-4468-9312-1c3b373ef9fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0e77225fb378a5851dbba9718dd3810463255cf7
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c66ef90812e8b5ccf47063fb335c17aaeca4fa64
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898433"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122226"
 ---
 # <a name="plan-a-migration-job-strategy-in-system-center-configuration-manager"></a>Planear una estrategia de trabajo de migración en System Center Configuration Manager
 
@@ -46,7 +47,7 @@ Use trabajos de migración para configurar los datos específicos que quiera mig
 
  **Migración de recopilación** (solo se admite al migrar desde Configuration Manager 2007 SP2): Migre los objetos que estén relacionados con las recopilaciones que seleccione. De forma predeterminada, la migración de una recopilación incluye todos los objetos asociados a los miembros de la recopilación. Puede excluir instancias de objetos específicos al usar un trabajo de migración de recopilación.  
 
- **Migración de objetos**: migre los objetos individuales que seleccione. Seleccione solo los datos específicos que desee migrar.  
+ **Migración de objetos**: Migre los objetos individuales que seleccione. Seleccione solo los datos específicos que desee migrar.  
 
  **Migración de objetos migrados anteriormente**: migre objetos que migró anteriormente, cuando se hayan actualizado en la jerarquía de origen después de que se hubieran migrado por última vez.  
 

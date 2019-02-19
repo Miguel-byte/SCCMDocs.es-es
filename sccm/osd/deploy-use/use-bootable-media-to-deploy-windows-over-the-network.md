@@ -10,12 +10,13 @@ ms.assetid: 999b5409-7e72-48d2-8554-4d44427ce383
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4f7ec06d5bd5f23ac2b8afa2a288dfb8c971f950
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9ebe239687489ce14cd77c23b59ec5f01c2e6609
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346804"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128126"
 ---
 # <a name="use-bootable-media-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>Use medios de arranque para implementar Windows a través de la red con System Center Configuration Manager
 
