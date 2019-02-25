@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c16487bc59a7e067aac5554213e2be750729078f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 411811c4047cd781d0edcd5cc345ff82acc80f91
+ms.sourcegitcommit: 0a23cde6112cbb5987f433bffcf6f223b994ba72
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120153"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56667450"
 ---
 #  <a name="using-configuration-manager-software-updates-to-deliver-definition-updates"></a>El uso de las actualizaciones de Software de Configuration Manager para entregar actualizaciones de definiciones
 
@@ -49,10 +49,10 @@ ms.locfileid: "56120153"
 
 6. Asegúrese de que está activada la casilla  **Habilitar la implementación después de ejecutar la regla** y luego haga clic en **Siguiente**.
 
-7. En la página **Configuración de implementación** del asistente, en la lista **Nivel de detalle** , seleccione **Mínimo**y haga clic en **Siguiente**.
+7. En la página **Configuración de implementación** del asistente, en la lista **Nivel de detalle**, seleccione **Solo mensajes de error** y haga clic en **Siguiente**.
 
    > [!NOTE]
-   >  En la lista **Nivel de detalle**, seleccione **Mínimo** (Configuration Manager sin ningún Service Pack) o **Solo mensajes de error** (Configuration Manager). Esto reducirá el número de mensajes de estado devueltos por la implementación de la definición. Esta configuración ayuda a reducir el uso del procesamiento de la CPU en los servidores de Configuration Manager.
+   >  Seleccionar **solo mensajes de error** reducirá el número de mensajes de estado devuelto por la implementación de la definición. Esta configuración ayuda a reducir el uso del procesamiento de la CPU en los servidores de Configuration Manager.
 
 8. En la lista **Filtros de propiedad** , seleccione la casilla **Actualizar clasificación** .
 
@@ -91,18 +91,20 @@ ms.locfileid: "56120153"
 
 20. En la página **Alertas** del asistente, no es necesario configurar alertas. Endpoint Protection en Configuration Manager genera las alertas que sean necesarias. Haga clic en **Siguiente**.
 
-21. En la página **Configuración de descarga** del asistente, seleccione el comportamiento de descarga de actualizaciones de software necesario y luego haga clic en **Siguiente**.
-
-22. En la página **Paquete de implementación** del asistente, seleccione un paquete de implementación existente o cree uno nuevo que contenga los archivos de actualización de software asociados a la regla.
+21. En la página **Paquete de implementación** del asistente, seleccione un paquete de implementación existente o cree uno nuevo que contenga los archivos de actualización de software asociados a la regla.
 
     > [!NOTE]
     >  Considere la posibilidad de colocar las actualizaciones de definición en un paquete que no contenga otras actualizaciones de software. Con esta estrategia se mantiene un tamaño más pequeño de paquete de actualización de definiciones, lo que permite que se replique en los puntos de distribución más rápidamente.
 
-23. En la página **Puntos de distribución** del asistente, seleccione uno o varios puntos de distribución a los que se va a copiar el contenido de este paquete y luego haga clic en **Siguiente**.
+22. Si crea un nuevo paquete, en la página **Puntos de distribución** del asistente, seleccione uno o varios puntos de distribución a los que se va a copiar el contenido de este paquete y luego haga clic en **Siguiente**.
 
-24. En la página **Ubicación de descarga** del asistente, seleccione **Descargar actualizaciones de software de Internet**y haga clic en **Siguiente**.
+23. En la página **Ubicación de descarga** del asistente, seleccione **Descargar actualizaciones de software de Internet**y haga clic en **Siguiente**.
 
-25. En la página **Selección del idioma** del asistente, seleccione cada versión de idioma de las actualizaciones que se van a descargar y luego haga clic en **Siguiente**.
+24. En la página **Selección del idioma** del asistente, seleccione cada versión de idioma de las actualizaciones que se van a descargar y luego haga clic en **Siguiente**.
+
+25. En la página **Configuración de descarga** del asistente, seleccione el comportamiento de descarga de actualizaciones de software necesario y luego haga clic en **Siguiente**.
+
+26. En la página **Resumen** del asistente, revise la configuración y después haga clic en **Siguiente**.
 
 26. Complete el Asistente para crear regla de implementación automática.
 

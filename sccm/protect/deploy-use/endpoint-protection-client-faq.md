@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba364ce222ae5e07cc1a0e9d25eb3ae525f2cbbf
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 2f19fee37ab817670bd754d6da1ad1ebe9ccb452
+ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142398"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56589941"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Preguntas más frecuentes sobre el cliente de Endpoint Protection
 
@@ -51,16 +51,7 @@ Estas preguntas más frecuentes están dirigidas a usuarios de equipos cuyos adm
 
  Windows Defender o Endpoint Protection ofrece tres maneras de ayudar a impedir que el software malintencionado infecte el equipo:  
 
--   **Uso de protección en tiempo real**: esta protección permite que Windows Defender supervise el equipo en todo momento y envíe una alerta si algún software malintencionado, como virus, spyware u otro software potencialmente no deseado intenta instalarse o ejecutarse en el equipo. De este modo, Windows Defender suspende el software y permite que el usuario siga la recomendación respecto del software o realice una acción alternativa.  
-
-    |**Opción de protección en tiempo real** |**Finalidad** |
-
-    |-|-|  
-    |Examinar todas las descargas|Esta opción supervisa los archivos y los programas que se descargan, incluidos los archivos que se descargan automáticamente a través de Windows Internet Explorer y Microsoft Outlook® Express, como los controles ActiveX® y los programas de instalación de software. El propio explorador puede descargar, instalar o ejecutar estos archivos. El software malintencionado, como virus, spyware y otro software potencialmente no deseado, puede incluirse con estos archivos e instalarse sin su conocimiento.<br /><br /> Con la opción de protección en tiempo real, Windows Defender supervisa el equipo en todo momento y comprueba si existen archivos o programas malintencionados que se hayan descargado. Esta característica de supervisión significa que Windows Defender no necesita ralentizar su experiencia de navegación ni de correo electrónico requiriendo una comprobación de los archivos o programas que quiere descargar.|  
-    |Supervisar la actividad de archivos y programas en el equipo|Esta opción supervisa cuándo empiezan a ejecutarse archivos y programas en el equipo y luego avisa sobre las acciones que estos realizan y las acciones que se toman al respecto. Esto es importante, porque el software malintencionado puede aprovechar vulnerabilidades de los programas instalados para ejecutar software malintencionado o no deseado sin su conocimiento. Por ejemplo, el spyware puede ejecutarse en segundo plano cuando usted inicia un programa que usa con frecuencia. Windows Defender supervisa los programas y avisa si detecta actividad sospechosa.|  
-    |Habilitar supervisión del comportamiento|Esta opción supervisa las recopilaciones de comportamientos para detectar patrones sospechosos que podrían no detectarse mediante los métodos convencionales de detección antivirus.|  
-
-    |Habilitar Sistema de inspección de red|Esta opción ayuda a proteger el equipo frente a vulnerabilidades de seguridad conocidas de tipo "día cero", lo que reduce la ventana de tiempo entre el momento en que se detecta una vulnerabilidad y se aplica una actualización.|  
+-   **Uso de protección en tiempo real**: esta protección permite que Windows Defender supervise el equipo en todo momento y envíe una alerta si algún software malintencionado, como virus, spyware u otro software potencialmente no deseado intenta instalarse o ejecutarse en el equipo. De este modo, Windows Defender suspende el software y permite que el usuario siga la recomendación respecto del software o realice una acción alternativa.
 
 -   **Opciones de exploración**: puede usar Windows Defender para detectar amenazas potenciales, como virus, spyware y otro software malintencionado, que podrían poner el equipo en riesgo. También puede utilizarlo para programar exámenes con regularidad y para quitar el software malintencionado que se hubiera detectado durante el examen.  
 
@@ -216,7 +207,7 @@ Para quitar todos los elementos no deseados o potencialmente peligrosos que Wind
 |Examinar todas las descargas|Esta opción supervisa los archivos y los programas que se descargan, incluidos los archivos que se descargan automáticamente a través de Windows Internet Explorer y Microsoft Outlook® Express, como los controles ActiveX® y los programas de instalación de software. El propio explorador puede descargar, instalar o ejecutar estos archivos. El software malintencionado, como virus, spyware y otro software potencialmente no deseado, puede incluirse con estos archivos e instalarse sin su conocimiento.<br /><br /> Con la opción de protección en tiempo real, Windows Defender supervisa el equipo en todo momento y comprueba si existen archivos o programas malintencionados que se hayan descargado. Esta característica de supervisión significa que Windows Defender no necesita ralentizar su experiencia de navegación ni de correo electrónico requiriendo una comprobación de los archivos o programas que quiere descargar.|  
 |Supervisar la actividad de archivos y programas en el equipo|Esta opción supervisa cuándo comienzan a ejecutarse archivos y programas en el equipo y luego avisa sobre las acciones que estos realizan y las acciones que se toman al respecto. Esto es importante, porque el software malintencionado puede aprovechar vulnerabilidades de los programas instalados para ejecutar software malintencionado o no deseado sin su conocimiento. Por ejemplo, el spyware puede ejecutarse en segundo plano cuando usted inicia un programa que usa con frecuencia. Windows Defender supervisa los programas y avisa si detecta actividad sospechosa.|  
 |Habilitar supervisión del comportamiento|Esta opción supervisa las recopilaciones de comportamientos para detectar patrones sospechosos que podrían no detectarse mediante los métodos convencionales de detección antivirus.|  
-|Habilitar Sistema de inspección de red|Esta opción ayuda a proteger el equipo frente a vulnerabilidades de seguridad conocidas de tipo "día cero", lo que reduce la ventana de tiempo entre el momento en que se detecta una vulnerabilidad y se aplica una actualización.|  
+|Habilitar Sistema de inspección de red|Esta opción ayuda a proteger el equipo frente a vulnerabilidades de seguridad conocidas de tipo día cero, lo que reduce la ventana de tiempo entre el momento en que se detecta una vulnerabilidad y se aplica una actualización.|  
 
 ### <a name="to-turn-off-real-time-protection"></a>Para desactivar la protección en tiempo real  
 
