@@ -35,7 +35,7 @@ Para algunos productos, como Windows Server Update Services (WSUS) para el punto
 
 ## <a name="bkmk_generalprerewq"></a> Limitaciones y requisitos generales
 
-Se aplican a todos los requisitos a todos los servidores de sistema de sitio:
+Los siguientes requisitos se aplican a todos los servidores del sistema de sitio:
 
 - Cada servidor de sistema de sitio debe usar un sistema operativo de 64 bits. La única excepción es el rol de sistema de sitio de punto de distribución, que puede instalar en algunos sistemas operativos de 32 bits.  
 
