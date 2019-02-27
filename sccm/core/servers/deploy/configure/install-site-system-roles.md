@@ -10,12 +10,13 @@ ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7edfc72195b289488242adcbd1903dbacf26bfe2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8d9028077d2d8fdae624ae7c10bfb7bf307f97a2
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336483"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128331"
 ---
 # <a name="install-site-system-roles-for-system-center-configuration-manager"></a>Instalación de roles de sistema de sitio para System Center Configuration Manager
 

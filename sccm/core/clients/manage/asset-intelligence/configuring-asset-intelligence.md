@@ -10,12 +10,13 @@ ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 182006f0e4fcaf2304570ef4110527a61180c290
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3a96f9292256227da6a216a913c7a0be1be5c60d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341022"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156719"
 ---
 # <a name="configure-asset-intelligence-in-system-center-configuration-manager"></a>Configurar Asset Intelligence en System Center Configuration Manager
 
@@ -27,11 +28,11 @@ Asset Intelligence realiza el inventario y administra el uso de licencias de sof
    
 
 - **Paso 1**: Para recopilar los datos de inventario necesarios para los informes de Asset Intelligence, tiene que habilitar el agente del cliente de inventario de hardware como se describe en [Cómo ampliar el inventario de hardware en System Center Configuration Manager](../../../../core/clients/manage/inventory/extend-hardware-inventory.md).
-- **Paso 2**: [Habilitar las clases de informes de inventario de hardware de Asset Intelligence](#BKMK_EnableAssetIntelligence).  
-- **Paso 3**: [Instalar un punto de sincronización de Asset Intelligence](#BKMK_InstallAssetIntelligenceSynchronizationPoint)
-- **Paso 4**: [Habilitar la auditoría de eventos de inicio de sesión correctos](#BKMK_EnableSuccessLogonEvents)  
-- **Paso 5**: [Importar información de licencia de software](#BKMK_ImportSoftwareLicenseInformation)  
-- **Paso 6**: [Configurar tareas de mantenimiento de Asset Intelligence](#BKMK_ConfigureMaintenanceTasks) 
+- **Paso 2**: [habilitar clases de informes de inventario de hardware de Asset Intelligence](#BKMK_EnableAssetIntelligence).  
+- **Paso 3**: [instalar un punto de sincronización de Asset Intelligence](#BKMK_InstallAssetIntelligenceSynchronizationPoint)
+- **Paso 4**: [habilitar la auditoría de los eventos de inicio de sesión correctos](#BKMK_EnableSuccessLogonEvents)  
+- **Paso 5**: [importar la información de la licencia de software](#BKMK_ImportSoftwareLicenseInformation)  
+- **Paso 6**: [configurar las tareas de mantenimiento de Asset Intelligence](#BKMK_ConfigureMaintenanceTasks) 
 
 
 ###  <a name="BKMK_EnableAssetIntelligence"></a> Enable Asset Intelligence hardware inventory reporting classes  
@@ -77,12 +78,12 @@ Además de descargar la nueva información del catálogo Asset Intelligence, el 
 
 3.  Agregue el rol de sistema de sitio de punto de sincronización de Asset Intelligence a un servidor de sistema de sitio nuevo o existente:  
 
-    -  Para un **Nuevo servidor de sistema de sitio**: en la pestaña **Inicio**, en el grupo **Crear**, pulse **Crear servidor del sistema de sitio** para iniciar el Asistente.   
+    -  Para un **nuevo servidor del sistema de sitio**: en la pestaña **Inicio**, en el grupo **Crear**, seleccione **Crear servidor del sistema de sitio** para iniciar el asistente.   
 
         > [!NOTE]  
         >  De forma predeterminada, cuando Configuration Manager instala un rol de sistema de sitio, los archivos de instalación se instalan en la primera unidad de disco duro con formato NTFS disponible que tenga más espacio disponible en disco. Para evitar que Configuration Manager se instale en unidades concretas, cree un archivo vacío denominado No_sms_on_drive.sms y cópielo en la carpeta raíz de la unidad antes de instalar el servidor de sistema de sitio.  
 
-    -  Para un **Servidor de sistema de sitio existente**: seleccione el servidor en el que quiere instalar el rol de sistema de sitio de punto de sincronización de Asset Intelligence. Al seleccionar un servidor, se muestra en el panel de detalles una lista de los roles de sistema de sitio que ya están instalados en el servidor.  
+    -  **Servidor de sistema de sitio existente**: haga clic en el servidor donde quiera instalar el rol de sistema de sitio de punto de sincronización de Asset Intelligence. Al seleccionar un servidor, se muestra en el panel de detalles una lista de los roles de sistema de sitio que ya están instalados en el servidor.  
 
          En la pestaña **Inicio**, en el grupo **Servidor**, pulse **Agregar rol de sistema de sitio** para iniciar el Asistente.  
 
@@ -152,20 +153,20 @@ Además de descargar la nueva información del catálogo Asset Intelligence, el 
  Una declaración de licencia general también se puede importar en el catálogo Asset Intelligence mediante un archivo de importación de licencia creado manualmente con un formato de archivo delimitado por comas (.csv).  
 
 > [!NOTE]  
->  Aunque solo es necesario que contengan datos los campos **Nombre**, **Publicador**, **Versión**y **EffectiveQuantity** , se deben especificar todos los campos en la primera fila del archivo de importación de licencia. Todos los campos de fecha se deben mostrar en el siguiente formato: mes/día/año; por ejemplo, 08/04/2008.  
+>  Aunque solo es necesario que contengan datos los campos **Nombre**, **Publicador**, **Versión**y **EffectiveQuantity** , se deben especificar todos los campos en la primera fila del archivo de importación de licencia. Todos los campos de fecha necesitan mostrarse en el formato siguiente: día/mes/año, por ejemplo, 04/08/2008.  
 
 Asset Intelligence coincide con los productos que se especifican en la declaración de licencia general mediante el nombre y la versión del producto, pero no el nombre del publicador. Debe utilizar un nombre de producto en la declaración de licencia general que sea exactamente igual al nombre del producto almacenado en la base de datos del sitio. Asset Intelligence toma el número **EffectiveQuantity** especificado en la declaración de licencia general y lo compara con el número de productos instalados que se encuentra en el inventario de Configuration Manager.  
 
 > [!TIP]  
->  Para obtener una lista completa de los nombres de producto almacenados en la base de datos de sitio de Configuration Manager, puede ejecutar la consulta siguiente en la base de datos de sitio: SELECT ProductName0 FROM v_GS_INSTALLED_SOFTWARE.  
+>  Para obtener una lista completa de los nombres de producto almacenados en la base de datos del sitio de Configuration Manager, puede ejecutar la consulta siguiente en la base de datos del sitio: SELECT ProductName0 FROM v_GS_INSTALLED_SOFTWARE.  
 
  Puede especificar versiones exactas de un producto o especificar parte de la versión, como por ejemplo solamente la versión principal. Los ejemplos siguientes proporcionan las coincidencias de versiones resultantes de una entrada de versión de la declaración de licencia general de un producto concreto.  
 
 |Entrada de la declaración de licencia general|Entradas de la base de datos del sitio coincidentes|  
 |-------------------------------------|------------------------------------|  
-|Name: "MySoftware", ProductVersion0:"2"|ProductName0: "Mysoftware", ProductVersion0: "2.01.1234"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.02.5678"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.1234"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.5678"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.3579.000"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.10.1234"|  
-|Name: "MySoftware", Version "2.05"|ProductName0: "MySoftware", ProductVersion0: "2.05.1234"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.5678"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.3579.000"|  
-|Name: "Mysoftware", Version "2"<br /><br /> Name: "Mysoftware", Version "2.05"|Error durante la importación. Se produce un error en la importación cuando hay más de una entrada que coincide con la misma versión del producto.|  
+|Nombre: "MySoftware", ProductVersion0:"2"|ProductName0: "Mysoftware", ProductVersion0: "2.01.1234"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.02.5678"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.1234"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.5678"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.3579.000"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.10.1234"|  
+|Nombre: "MySoftware", Version "2.05"|ProductName0: "MySoftware", ProductVersion0: "2.05.1234"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.5678"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.3579.000"|  
+|Nombre: "Mysoftware", Version "2"<br /><br /> Nombre: "Mysoftware", Version "2.05"|Error durante la importación. Se produce un error en la importación cuando hay más de una entrada que coincide con la misma versión del producto.|  
   
 
 ##### <a name="to-create-a-general-license-statement-import-file-by-using-microsoft-excel"></a>Cómo crear un archivo de importación de declaración de licencia general mediante Microsoft Excel  
@@ -207,7 +208,7 @@ Asset Intelligence coincide con los productos que se especifican en la declaraci
 ###  <a name="BKMK_ConfigureMaintenanceTasks"></a> Configure Asset Intelligence maintenance tasks  
  Las tareas de mantenimiento siguientes están disponibles para Asset Intelligence.  
 
--   **Comprobar título de la aplicación con información de inventario**: comprueba que el título de software notificado en el inventario de software sea conforme con el título de software del catálogo de Asset Intelligence. De forma predeterminada, esta tarea está habilitada y programada para ejecutarse el sábado después de las 12:00 a. m. y antes de las 5:00 a. m. Esta tarea de mantenimiento solo está disponible en el sitio de nivel superior de la jerarquía de Configuration Manager.  
+-   **Comprobar título de la aplicación con información de inventario**: comprueba que el título de software indicado en el inventario de software coincide con el título de software en el catálogo Asset Intelligence. De forma predeterminada, esta tarea está habilitada y programada para ejecutarse el sábado después de las 12:00 a. m. y antes de las 5:00 a. m. Esta tarea de mantenimiento solo está disponible en el sitio de nivel superior de la jerarquía de Configuration Manager.  
 
 -   **Resumir datos de software instalado**: proporciona la información que se muestra en el área de trabajo **Activos y compatibilidad** del nodo **Software inventariado** en el nodo **Asset Intelligence**. Cuando se ejecuta la tarea, Configuration Manager realiza un recuento de todos los títulos de software inventariado en el sitio primario. De forma predeterminada, esta tarea está habilitada y programada para ejecutarse todos los días después de las 12:00 a. m. y antes de las 5:00 a. m. Esta tarea de mantenimiento solo está disponible en los sitios primarios.  
 

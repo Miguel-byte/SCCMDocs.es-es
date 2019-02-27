@@ -10,12 +10,13 @@ ms.assetid: 3359f254-dd48-42b7-9eab-c92a3417e3fb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 44041fd0eb2a71cc72d809eea0a0b8d15ba6c53e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3a465317334879e048ef9fe628a0efbdd5dbad78
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338006"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139575"
 ---
 # <a name="package-transfer-manager-in-system-center-configuration-manager"></a>Administrador de transferencia de paquetes en System Center Configuration Manager
 
@@ -36,15 +37,15 @@ Para transferir contenido a un punto de distribución estándar, el administrado
 En la información siguiente se describe cómo el administrador de transferencia de paquetes administra la transferencia de contenido a puntos de distribución estándar y a puntos de distribución configurados como puntos de distribución de extracción:
 1.  **El administrador implementa contenido en uno o varios puntos de distribución de un sitio.**  
 
-    -   **Punto de distribución estándar:** el administrador de distribución crea un trabajo de transferencia de contenido para el contenido.  
+    -   **Punto de distribución estándar:** El administrador de distribución crea un trabajo de transferencia de contenido para el contenido.  
 
-    -   **Punto de distribución de extracción:** el administrador de distribución crea un trabajo de transferencia de contenido para el contenido.  
+    -   **Punto de distribución de extracción**: El administrador de distribución crea un trabajo de transferencia de contenido para el contenido.  
 
 2.  **El Administrador de distribución ejecuta comprobaciones preliminares.**  
 
-    -   **Punto de distribución estándar:** el administrador de distribución ejecuta una comprobación básica para confirmar que cada punto de distribución está listo para recibir el contenido. Después de la comprobación, el administrador de distribución envía una notificación al administrador de transferencia de paquetes para iniciar la transferencia de contenido al punto de distribución.  
+    -   **Punto de distribución estándar:** El administrador de distribución ejecuta una comprobación básica para confirmar que cada punto de distribución está listo para recibir el contenido. Después de la comprobación, el administrador de distribución envía una notificación al administrador de transferencia de paquetes para iniciar la transferencia de contenido al punto de distribución.  
 
-    -   **Punto de distribución de extracción:** el Administrador de distribución inicia el administrador de transferencia de paquetes, que informa al punto de distribución de extracción sobre la existencia de un nuevo trabajo de transferencia de contenido. El Administrador de distribución no comprueba el estado de los puntos de distribución remotos que son puntos de distribución de extracción, ya que cada punto de distribución de extracción administra sus propias transferencias de contenido.  
+    -   **Punto de distribución de extracción**: el Administrador de distribución inicia el administrador de transferencia de paquetes, que informa al punto de distribución de extracción sobre la existencia de un nuevo trabajo de transferencia de contenido. El Administrador de distribución no comprueba el estado de los puntos de distribución remotos que son puntos de distribución de extracción, ya que cada punto de distribución de extracción administra sus propias transferencias de contenido.  
 
 3.  **El administrador de transferencia de paquetes prepara la transferencia de contenido.**  
 
@@ -53,7 +54,7 @@ En la información siguiente se describe cómo el administrador de transferencia
         > [!NOTE]  
         >  Para copiar todos los archivos de la distribución al punto de distribución (incluso si los archivos ya se incluían en el almacén de instancia única del punto de distribución), use la acción **Redistribuir** para contenido.  
 
-    -   **Punto de distribución de extracción:** por cada punto de distribución de extracción de la distribución, el administrador de transferencia de paquetes comprueba los puntos de distribución de origen de los puntos de distribución de extracción para confirmar si el contenido está disponible.  
+    -   **Punto de distribución de extracción**: para cada punto de distribución de extracción en la distribución, el administrador de transferencia de paquetes comprueba los puntos de distribución de origen de los puntos de distribución de extracción para confirmar si el contenido está disponible.  
 
         -   Si el contenido está disponible como mínimo en un punto de distribución de origen, el administrador de transferencia de paquetes envía una notificación a ese punto de distribución de extracción. La notificación dirige ese punto de distribución para iniciar el proceso de transferencia de contenido. La notificación incluye atributos, valores hash y nombres y tamaños de archivos.  
 
@@ -64,13 +65,13 @@ En la información siguiente se describe cómo el administrador de transferencia
 
 4.  **Se inicia la transferencia de contenido.**  
 
-    -   **Punto de distribución estándar:** el administrador de transferencia de paquetes copia los archivos a cada punto de distribución remoto. Durante la transferencia a un punto de distribución estándar:  
+    -   **Punto de distribución estándar:** El administrador de transferencia de paquetes copia los archivos a cada punto de distribución remoto. Durante la transferencia a un punto de distribución estándar:  
 
         -   De manera predeterminada, el administrador de transferencia de paquetes puede procesar simultáneamente tres paquetes únicos y distribuirlos en cinco puntos de distribución en paralelo. En conjunto, estos se denominan **Configuración de distribución simultánea**. Para configurar la distribución simultánea, en las **Propiedades del componente de distribución de software** de cada sitio, vaya a la pestaña **General**.  
 
         -   El administrador de transferencia de paquetes usa las configuraciones de programación y ancho de banda de red de cada punto de distribución para transferir contenido al punto de distribución correspondiente. Para configurar estas opciones, en las **Propiedades** de cada punto de distribución remoto, vaya a las pestañas **Programación** y **Límites de frecuencia**. Para obtener más información, vea [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md) (Administración del contenido y de la infraestructura de contenido en System Center Configuration Manager).  
 
-    -   **Punto de distribución de extracción:** cuando un punto de distribución de extracción recibe un archivo de notificación, el punto de distribución empieza el proceso de transferencia de contenido. El proceso de transferencia se ejecuta de forma independiente en cada punto de distribución de extracción:  
+    -   **Punto de distribución de extracción**: Cuando un punto de distribución de extracción recibe un archivo de notificación, el punto de distribución empieza el proceso de transferencia de contenido. El proceso de transferencia se ejecuta de forma independiente en cada punto de distribución de extracción:  
 
         1.   El punto de distribución de extracción identifica en la distribución de contenido los archivos que no figuran en su almacenamiento de instancia única y se prepara para descargar el contenido de uno de sus puntos de distribución de origen.  
 
@@ -83,4 +84,4 @@ En la información siguiente se describe cómo el administrador de transferencia
 
     -   **Punto de distribución estándar:** cuando el administrador de transferencia de paquetes termina de transferir archivos a todos los puntos de distribución remotos designados, comprueba el hash del contenido en el punto de distribución. Después, informa al Administrador de distribución de que se ha completado la distribución.  
 
-    -   **Puntos de distribución de extracción:** cuando el punto de distribución de extracción completa la descarga de contenido, el punto de distribución comprueba el hash del contenido. Después, envía un mensaje de estado al punto de administración del sitio para indicar que se ha completado correctamente. Si no se recibe este estado después de 60 minutos, volverá a activarse el administrador de transferencia de paquetes. Comprueba el punto de distribución de extracción para confirmar si el punto de distribución de extracción ha descargado el contenido. Si la descarga de contenido está en curso, el administrador de transferencia de paquetes se suspende durante 60 minutos antes de volver a comprobar el punto de distribución de extracción. Este ciclo continúa hasta que el punto de distribución de extracción completa la transferencia de contenido.  
+    -   **Punto de distribución de extracción**: cuando el punto de distribución de extracción completa la descarga de contenido, el punto de distribución comprueba el hash del contenido. Después, envía un mensaje de estado al punto de administración del sitio para indicar que se ha completado correctamente. Si no se recibe este estado después de 60 minutos, volverá a activarse el administrador de transferencia de paquetes. Comprueba el punto de distribución de extracción para confirmar si el punto de distribución de extracción ha descargado el contenido. Si la descarga de contenido está en curso, el administrador de transferencia de paquetes se suspende durante 60 minutos antes de volver a comprobar el punto de distribución de extracción. Este ciclo continúa hasta que el punto de distribución de extracción completa la transferencia de contenido.  

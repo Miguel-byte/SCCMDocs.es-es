@@ -10,12 +10,13 @@ ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6a2a69047a8fee5ab0c1f4f0f13197178334f05
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e27dd4479b4bb575cfc5c4a5e03c4252535f835b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342195"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136973"
 ---
 # <a name="deploy-and-manage-content-for-system-center-configuration-manager"></a>Implementar y administrar contenido para System Center Configuration Manager
 
@@ -52,21 +53,21 @@ Utilice el siguiente procedimiento para distribuir contenido en puntos de distri
 
 2.  En el área de trabajo **Biblioteca de software** , seleccione uno de los siguientes pasos para el tipo de contenido que desea distribuir:  
 
-    -   **Aplicaciones**: expanda **Administración de aplicaciones** > **Aplicaciones** y, después, seleccione las aplicaciones que quiere distribuir.  
+    -   **Aplicaciones**: expanda **Administración de aplicaciones** > **Aplicaciones** y, después, seleccione las aplicaciones que quiera distribuir.  
 
-    -   **Paquetes**: expanda **Administración de aplicaciones** >  **Paquetes** y, después, seleccione los paquetes que quiere distribuir.  
+    -   **Paquetes**: expanda **Administración de aplicaciones** >  **Paquetes** y, después, seleccione los paquetes que quiera distribuir.  
 
-    -   **Paquetes de implementación**: expanda **Actualizaciones de software** >  **Paquetes de implementación** y, después, seleccione los paquetes de implementación que quiere distribuir.  
+    -   **Paquetes de implementación**: expanda **Actualizaciones de software** >  **Paquetes de implementación** y, después, seleccione los paquetes de implementación que quiera distribuir.  
 
-    -   **Paquetes de controladores**: expanda **Sistemas operativos** >  **Paquetes de controladores** y, después, seleccione los paquetes de controladores que quiere distribuir.  
+    -   **Paquetes de controladores**: expanda **Sistemas operativos** >  **Paquetes de controladores** y, después, seleccione los paquetes de controladores que quiera distribuir.  
 
-    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos** >  **Imágenes de sistema operativo** y, después, seleccione las imágenes de sistema operativo que quiere distribuir.  
+    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos** >   **Imágenes de sistema operativo** y, después, seleccione las imágenes de sistema operativo que quiera distribuir.  
 
-    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos** > **Instaladores de sistema operativo** y, después, seleccione los instaladores de sistema operativo que quiere distribuir.  
+    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos** > **Instaladores de sistema operativo** y, después, seleccione los instaladores de sistema operativo que quiera distribuir.  
 
-    -   **Imágenes de arranque**: expanda **Sistemas operativos** >  **Imágenes de arranque** y, después, seleccione las imágenes de arranque que quiere distribuir.  
+    -   **Imágenes de arranque**: expanda **Sistemas operativos** >  **Imágenes de arranque** y, después, seleccione las imágenes de arranque que quiera distribuir.  
 
-    -   **Secuencias de tareas**: expanda **Sistemas operativos** >  **Secuencias de tareas** y, después, seleccione la secuencia de tareas que quiere distribuir. Aunque las secuencias de tareas no incluyen contenido, tienen las dependencias de contenido asociadas que se distribuyen.  
+    -   **Secuencias de tareas**: expanda **Sistemas operativos** >  **Secuencias de tareas** y, después, seleccione la secuencia de tareas que quiera distribuir. Aunque las secuencias de tareas no incluyen contenido, tienen las dependencias de contenido asociadas que se distribuyen.  
 
         > [!NOTE]  
         >  Si modifica la secuencia de tareas, deberá redistribuir el contenido.  
@@ -85,14 +86,14 @@ Utilice el siguiente procedimiento para distribuir contenido en puntos de distri
 
 6.  En la página **Destino del contenido** , haga clic en **Agregar**, elija una de las siguientes opciones y, a continuación, siga el paso asociado:  
 
-    -   **Recopilaciones**: seleccione **Recopilaciones de usuarios** o **Recopilaciones de dispositivos**, haga clic en la recopilación asociada a uno o más grupos de puntos de distribución y, a continuación, haga clic en **Aceptar**.  
+    -   **Recopilaciones**: seleccione **Recopilaciones de usuarios** o **Recopilaciones de dispositivos**, haga clic en la recopilación asociada a uno o más grupos de puntos de distribución y, después, haga clic en **Aceptar**.  
 
         > [!NOTE]  
         >  Se muestran solo las recopilaciones que están asociadas a un grupo de puntos de distribución. Para obtener más información sobre cómo asociar recopilaciones a grupos de puntos de distribución, consulte la sección [Manage distribution point groups](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage) (Administrar grupos de puntos de distribución) en el tema [Install and configure distribution points for System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) (Instalación y configuración de puntos de distribución de System Center Configuration Manager).  
 
-    -   **Punto de distribución**: Seleccione un punto de distribución existente y, a continuación, haga clic en **Aceptar**. No se muestran los puntos de distribución que recibieron previamente el contenido.  
+    -   **Punto de distribución**: seleccione un punto de distribución existente y, después, haga clic en **Aceptar**. No se muestran los puntos de distribución que recibieron previamente el contenido.  
 
-    -   **Grupo de puntos de distribución**: Seleccione un grupo de puntos de distribución existente y, a continuación, haga clic en **Aceptar**. No se muestran los grupos de puntos de distribución que recibieron previamente el contenido.  
+    -   **Grupo de puntos de distribución**: seleccione un grupo de puntos de distribución existente y, después, haga clic en **Aceptar**. No se muestran los grupos de puntos de distribución que recibieron previamente el contenido.  
 
     Cuando termine de agregar los destinos del contenido, haga clic en **Siguiente**.  
 
@@ -136,24 +137,24 @@ Consulte las siguientes secciones para preconfigurar el contenido.
 
 2.  En el área de trabajo **Biblioteca de software** , seleccione uno de los pasos siguientes para el tipo de contenido que desea preconfigurar:  
 
-    -   **Aplicaciones**: Expanda **Administración de aplicaciones**, haga clic en **Aplicaciones**y, a continuación, seleccione las aplicaciones que desea preconfigurar.  
+    -   **Aplicaciones**: expanda **Administración de aplicaciones**, haga clic en **Aplicaciones** y, después, seleccione las aplicaciones que quiera preconfigurar.  
 
-    -   **Paquetes**: Expanda **Administración de aplicaciones**, haga clic en **Paquetes**y, a continuación, seleccione los paquetes que desea preconfigurar.  
+    -   **Paquetes**: expanda **Administración de aplicaciones**, haga clic en **Paquetes** y, después, seleccione los paquetes que quiera preconfigurar.  
 
-    -   **Paquetes de controladores**: Expanda **Sistemas operativos**, haga clic en **Paquetes de controladores**y, a continuación, seleccione los paquetes de controladores que desea preconfigurar.  
+    -   **Paquetes de controladores**: expanda **Sistemas operativos**, haga clic en **Paquetes de controladores** y, después, seleccione los paquetes de controladores que quiera preconfigurar.  
 
-    -   **Imágenes de sistema operativo**: Expanda **Sistemas operativos**, haga clic en **Imágenes de sistema operativo**y, a continuación, seleccione las imágenes de sistema operativo que desea preconfigurar.  
+    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos**, haga clic en **Imágenes de sistema operativo** y, después, seleccione las imágenes de sistema operativo que quiera preconfigurar.  
 
-    -   **Instaladores de sistema operativo**: Expanda **Sistemas operativos**, haga clic en **Instaladores de sistema operativo**y, a continuación, seleccione los instaladores de sistema operativo que desea preconfigurar.  
+    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos**, haga clic en **Instaladores de sistema operativo** y, después, seleccione los instaladores de sistema operativo que quiera preconfigurar.  
 
-    -   **Imágenes de arranque**: Expanda **Sistemas operativos**, haga clic en **Imágenes de arranque**y, a continuación, seleccione las imágenes de arranque que desea preconfigurar.  
+    -   **Imágenes de arranque**: expanda **Sistemas operativos**, haga clic en **Imágenes de arranque** y, después, seleccione las imágenes de arranque que quiera preconfigurar.  
 
-    -   **Secuencias de tareas**: Expanda **Sistemas operativos**, haga clic en **Secuencias de tareas**y, a continuación, seleccione la secuencia de tareas que desea preconfigurar.  
+    -   **Secuencias de tareas**: expanda **Sistemas operativos**, haga clic en **Secuencias de tareas** y, después, seleccione la secuencia de tareas que quiera preconfigurar.  
 
 3.  En la pestaña **Inicio** , en el grupo **Implementación** , haga clic en **Crear archivo de contenido preconfigurado**. Se abre el Asistente para crear archivos de contenido preconfigurados.  
 
     > [!NOTE]  
-    >  **Para las aplicaciones:** En la pestaña **Inicio**, en el grupo **Aplicación**, haga clic en **Crear archivo de contenido preconfigurado**.  
+    >  **Para aplicaciones**: en la pestaña **Inicio**, en el grupo **Aplicación**, haga clic en **Crear archivo de contenido preconfigurado**.  
     >   
     >  **Para los paquetes:** en la pestaña **Inicio**, en el grupo &lt;*Nombre del paquete*>, haga clic en **Crear archivo de contenido preconfigurado**.  
 
@@ -190,19 +191,19 @@ Consulte las siguientes secciones para preconfigurar el contenido.
 
 2.  En el área de trabajo **Biblioteca de software** , seleccione uno de los pasos siguientes para el tipo de contenido seleccionado cuando creó el archivo de contenido preconfigurado:  
 
-    -   **Aplicaciones**: Expanda **Administración de aplicaciones**, haga clic en **Aplicaciones**y, a continuación, seleccione las aplicaciones preconfiguradas.  
+    -   **Aplicaciones**: expanda **Administración de aplicaciones**, haga clic en **Aplicaciones** y, después, seleccione las aplicaciones preconfiguradas.  
 
-    -   **Paquetes**: Expanda **Administración de aplicaciones**, haga clic en **Paquetes**y, a continuación, seleccione los paquetes preconfigurados.  
+    -   **Paquetes**: expanda **Administración de aplicaciones**, haga clic en **Paquetes** y, después, seleccione los paquetes preconfigurados.  
 
-    -   **Paquetes de implementación**: Expanda **Actualizaciones de software**, haga clic en **Paquetes de implementación**y, a continuación, seleccione los paquetes de implementación preconfigurados.  
+    -   **Paquetes de implementación**: expanda **Actualizaciones de software**, haga clic en **Paquetes de implementación** y, después, seleccione los paquetes de implementación preconfigurados.  
 
-    -   **Paquetes de controladores**: Expanda **Sistemas operativos**, haga clic en **Paquetes de controladores**y, a continuación, seleccione los paquetes de controladores preconfigurados.  
+    -   **Paquetes de controladores**: expanda **Sistemas operativos**, haga clic en **Paquetes de controladores** y, después, seleccione los paquetes de controladores preconfigurados.  
 
-    -   **Imágenes de sistema operativo**: Expanda **Sistemas operativos**, haga clic en **Imágenes de sistema operativo**y, a continuación, seleccione las imágenes de sistema operativo preconfiguradas.  
+    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos**, haga clic en **Imágenes de sistema operativo** y, después, seleccione las imágenes de sistema operativo preconfiguradas.  
 
-    -   **Instaladores de sistema operativo**: Expanda **Sistemas operativos**, haga clic en **Instaladores de sistema operativo**y, a continuación, seleccione los instaladores de sistema operativo preconfigurados.  
+    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos**, haga clic en **Instaladores de sistema operativo** y, después, seleccione los instaladores de sistema operativo preconfigurados.  
 
-    -   **Imágenes de arranque**: Expanda **Sistemas operativos**, haga clic en **Imágenes de arranque**y, a continuación, seleccione las imágenes de arranque preconfiguradas.  
+    -   **Imágenes de arranque**: expanda **Sistemas operativos**, haga clic en **Imágenes de arranque** y, después, seleccione las imágenes de arranque preconfiguradas.  
 
 3.  En la pestaña **Inicio** , en el grupo **Implementación** , haga clic en **Distribuir contenido**. Se abre el Asistente para distribuir contenido.  
 
@@ -218,14 +219,14 @@ Consulte las siguientes secciones para preconfigurar el contenido.
 
 6.  En la página **Destino del contenido** , haga clic en **Agregar**, elija una de las siguientes opciones que incluya los puntos de distribución a preconfigurar y, a continuación, siga el paso asociado:  
 
-    -   **Recopilaciones**: seleccione **Recopilaciones de usuarios** o **Recopilaciones de dispositivos**, haga clic en la recopilación asociada a uno o más grupos de puntos de distribución y, a continuación, haga clic en **Aceptar**.  
+    -   **Recopilaciones**: seleccione **Recopilaciones de usuarios** o **Recopilaciones de dispositivos**, haga clic en la recopilación asociada a uno o más grupos de puntos de distribución y, después, haga clic en **Aceptar**.  
 
         > [!NOTE]  
         >  Se muestran solo las recopilaciones que están asociadas a un grupo de puntos de distribución.  Para obtener más información, consulte [Manage distribution point groups](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage) (Administrar grupos de puntos de distribución) en el tema [Install and configure distribution points for System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) (Instalación y configuración de puntos de distribución de System Center Configuration Manager).  
 
-    -   **Punto de distribución**: Seleccione un punto de distribución existente y, a continuación, haga clic en **Aceptar**. No se muestran los puntos de distribución que recibieron previamente el contenido.  
+    -   **Punto de distribución**: seleccione un punto de distribución existente y, después, haga clic en **Aceptar**. No se muestran los puntos de distribución que recibieron previamente el contenido.  
 
-    -   **Grupo de puntos de distribución**: Seleccione un grupo de puntos de distribución existente y, a continuación, haga clic en **Aceptar**. No se muestran los grupos de puntos de distribución que recibieron previamente el contenido.  
+    -   **Grupo de puntos de distribución**: seleccione un grupo de puntos de distribución existente y, después, haga clic en **Aceptar**. No se muestran los grupos de puntos de distribución que recibieron previamente el contenido.  
 
     Cuando termine de agregar los destinos del contenido, haga clic en **Siguiente**.  
 
@@ -293,11 +294,11 @@ Consulte las siguientes secciones para preconfigurar el contenido.
 
     4.  En la pestaña **General** , compruebe que la casilla **Habilitar este punto de distribución para contenido preconfigurado** está desactivada.  
 
-2.  Cree el archivo de contenido preconfigurado mediante las indicaciones de la sección [Paso 1: crear un archivo de contenido preconfigurado](#BKMK_CreatePrestagedContentFile) de este tema.  
+2.  Cree el archivo de contenido preconfigurado mediante el [paso 1: crear un archivo de contenido preconfigurado](#BKMK_CreatePrestagedContentFile) en este tema.  
 
-3.  Asigne el contenido al punto de distribución mediante las indicaciones de la sección [Paso 2: asignar el contenido a los puntos de distribución](#BKMK_AssignContentToDistributionPoint) de este tema.  
+3.  Asigne el contenido al punto de distribución mediante el [Paso 2: asignar el contenido a puntos de distribución](#BKMK_AssignContentToDistributionPoint) en este tema.  
 
-4.  En el servidor de sitio, extraiga el contenido del archivo de contenido preconfigurado mediante las indicaciones de la sección [Paso 3: extraer el contenido del archivo de contenido preconfigurado](#BKMK_ExportContentFromPrestagedContentFile) de este tema.  
+4.  En el servidor de sitio, extraiga el contenido del archivo de contenido preconfigurado mediante el [Paso 3: extraer el contenido del archivo de contenido preconfigurado](#BKMK_ExportContentFromPrestagedContentFile) de este tema.  
 
     > [!NOTE]  
     >  Si el punto de distribución se encuentra en un sitio secundario, espere como mínimo 10 minutos y, después, use una consola de Configuration Manager conectada al sitio primario principal para asignar el contenido al punto de distribución en el sitio secundario.  
@@ -324,19 +325,19 @@ Cuando la ubicación del archivo de origen de una implementación se actualiza a
 
 2.  En el área de trabajo **Biblioteca de software** , seleccione uno de los siguientes pasos para el tipo de contenido que desea distribuir:  
 
-    -   **Aplicaciones**: expanda **Administración de aplicaciones** > **Aplicaciones** y, después, seleccione las aplicaciones que quiere distribuir. Haga clic en la pestaña **Tipos de implementación** y, a continuación, seleccione el tipo de implementación que desea actualizar.  
+    -   **Aplicaciones**: expanda **Administración de aplicaciones** > **Aplicaciones** y, después, seleccione las aplicaciones que quiera distribuir. Haga clic en la pestaña **Tipos de implementación** y, a continuación, seleccione el tipo de implementación que desea actualizar.  
 
-    -   **Paquetes**: expanda **Administración de aplicaciones** > **Paquetes** y, después, seleccione los paquetes que quiere actualizar.  
+    -   **Paquetes**: expanda **Administración de aplicaciones** > **Paquetes** y, después, seleccione los paquetes que quiera actualizar.  
 
-    -   **Paquetes de implementación**: expanda **Actualizaciones de software** > **Paquetes de implementación** y, después, seleccione los paquetes de implementación que quiere actualizar.  
+    -   **Paquetes de implementación**: expanda **Actualizaciones de software** > **Paquetes de implementación** y, después, seleccione los paquetes de implementación que quiera actualizar.  
 
-    -   **Paquetes de controladores**: expanda **Sistemas operativos** > **Paquetes de controladores** y, después, seleccione los paquetes de controladores que quiere actualizar.  
+    -   **Paquetes de controladores**: expanda **Sistemas operativos** > **Paquetes de controladores** y, después, seleccione los paquetes de controladores que quiera actualizar.  
 
-    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos** > **Imágenes de sistema operativo** y, después, seleccione las imágenes de sistema operativo que quiere actualizar.  
+    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos** > **Imágenes de sistema operativo** y, después, seleccione las imágenes de sistema operativo que quiera actualizar.  
 
-    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos** > **Instaladores de sistema operativo** y, después, seleccione los instaladores de sistema operativo que quiere actualizar.  
+    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos** > **Instaladores de sistema operativo** y, después, seleccione los instaladores de sistema operativo que quiera actualizar.  
 
-    -   **Imágenes de arranque**: expanda **Sistemas operativos** >  **Imágenes de arranque** y, después, seleccione las imágenes de arranque que quiere actualizar.  
+    -   **Imágenes de arranque**: expanda **Sistemas operativos** >  **Imágenes de arranque** y, después, seleccione las imágenes de arranque que quiera actualizar.  
 
 3.  En la pestaña **Inicio** , en el grupo **Implementación** , haga clic en **Actualizar puntos de distribución**y, a continuación, haga clic en **Aceptar** para confirmar que desea actualizar el contenido.  
 
@@ -362,19 +363,19 @@ Puede redistribuir un paquete para copiar todos los archivos de contenido del pa
 
 2.  En el área de trabajo **Biblioteca de software** , seleccione uno de los siguientes pasos para el tipo de contenido que desea distribuir:  
 
-    -   **Aplicaciones**: expanda **Administración de aplicaciones** >  **Aplicaciones** y, después, seleccione la aplicación que quiere distribuir.  
+    -   **Aplicaciones**: expanda **Administración de aplicaciones** >  **Aplicaciones** y, después, seleccione la aplicación que quiera redistribuir.  
 
-    -   **Paquetes**: expanda **Administración de aplicaciones** > **Paquetes** y, después, seleccione el paquete que quiere redistribuir.  
+    -   **Paquetes**: expanda **Administración de aplicaciones** > **Paquetes** y, después, seleccione el paquete que quiera redistribuir.  
 
-    -   **Paquetes de implementación**: expanda **Actualizaciones de software** >  **Paquetes de implementación** y, después, seleccione el paquete de implementación que quiere redistribuir.  
+    -   **Paquetes de implementación**: expanda **Actualizaciones de software** >  **Paquetes de implementación** y, después, seleccione el paquete de implementación que quiera redistribuir.  
 
-    -   **Paquetes de controladores**: expanda **Sistemas operativos** > **Paquetes de controladores** y, después, seleccione el paquete de controladores que quiere redistribuir.  
+    -   **Paquetes de controladores**: expanda **Sistemas operativos** > **Paquetes de controladores** y, después, seleccione el paquete de controladores que quiera redistribuir.  
 
-    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos** > **Imágenes de sistema operativo** y, después, seleccione la imagen de sistema operativo que quiere redistribuir.  
+    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos** > **Imágenes de sistema operativo** y, después, seleccione la imagen de sistema operativo que quiera redistribuir.  
 
-    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos** > **Instaladores de sistema operativo** y, después, seleccione el instalador de sistema operativo que quiere redistribuir.  
+    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos** > **Instaladores de sistema operativo** y, después, seleccione el instalador de sistema operativo que quiera redistribuir.  
 
-    -   **Imágenes de arranque**: expanda **Sistemas operativos** >  **Imágenes de arranque** y, después, seleccione la imagen de arranque que quiere redistribuir.  
+    -   **Imágenes de arranque**: expanda **Sistemas operativos** >  **Imágenes de arranque** y, después, seleccione la imagen de arranque que quiera redistribuir.  
 
 3.  En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
 
@@ -426,19 +427,19 @@ Sin embargo, cuando el contenido está asociado a otro paquete que se distribuy�
 
 2.  En el área de trabajo **Biblioteca de software** , seleccione uno de los pasos siguientes para el tipo de contenido que desea eliminar:  
 
-    -   **Aplicaciones**: expanda **Administración de aplicaciones** > **Aplicaciones** y, después, seleccione la aplicación que quiere quitar.  
+    -   **Aplicaciones**: expanda **Administración de aplicaciones** > **Aplicaciones** y, después, seleccione la aplicación que quiera quitar.  
 
-    -   **Paquetes**: expanda **Administración de aplicaciones** > **Paquetes** y, después, seleccione el paquete que quiere quitar.  
+    -   **Paquetes**: expanda **Administración de aplicaciones** > **Paquetes** y, después, seleccione el paquete que quiera quitar.  
 
-    -   **Paquetes de implementación**: expanda **Actualizaciones de software** > **Paquetes de implementación** y, después, seleccione el paquete de implementación que quiere quitar.  
+    -   **Paquetes de implementación**: expanda **Actualizaciones de software** > **Paquetes de implementación** y, después, seleccione el paquete de implementación que quiera quitar.  
 
-    -   **Paquetes de controladores**: expanda **Sistemas operativos** > **Paquetes de controladores** y, después, seleccione el paquete de controladores que quiere quitar.  
+    -   **Paquetes de controladores**: expanda **Sistemas operativos** > **Paquetes de controladores** y, después, seleccione el paquete de controladores que quiera quitar.  
 
-    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos** > **Imágenes de sistema operativo** y, después, seleccione la imagen de sistema operativo que quiere quitar.  
+    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos** > **Imágenes de sistema operativo** y, después, seleccione la imagen de sistema operativo que quiera quitar.  
 
-    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos** > **Instaladores de sistema operativo** y, después, seleccione el instalador de sistema operativo que quiere quitar.  
+    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos** > **Instaladores de sistema operativo** y, después, seleccione el instalador de sistema operativo que quiera quitar.  
 
-    -   **Imágenes de arranque**: expanda **Sistemas operativos** > **Imágenes de arranque** y, después, seleccione la imagen de arranque que quiere quitar.  
+    -   **Imágenes de arranque**: expanda **Sistemas operativos** > **Imágenes de arranque** y, después, seleccione la imagen de arranque que quiera quitar.  
 
 3.  En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
 
@@ -491,19 +492,19 @@ El proceso de validación de contenido comprueba la integridad de los archivos d
 
 2.  En el área de trabajo **Biblioteca de software** , seleccione uno de los pasos siguientes para el tipo de contenido que desea validar:  
 
-    -   **Aplicaciones**: expanda **Administración de aplicaciones** > **Aplicaciones** y, después, seleccione la aplicación que quiere validar.  
+    -   **Aplicaciones**: expanda **Administración de aplicaciones** > **Aplicaciones** y, después, seleccione la aplicación que quiera validar.  
 
-    -   **Paquetes**: expanda **Administración de aplicaciones** > **Paquetes** y, después, seleccione el paquete que quiere validar.  
+    -   **Paquetes**: expanda **Administración de aplicaciones** > **Paquetes** y, después, seleccione el paquete que quiera validar.  
 
-    -   **Paquetes de implementación**: expanda **Actualizaciones de software** > **Paquetes de implementación** y, después, seleccione el paquete de implementación que quiere validar.  
+    -   **Paquetes de implementación**: expanda **Actualizaciones de software** > **Paquetes de implementación** y, después, seleccione el paquete de implementación que quiera validar.  
 
-    -   **Paquetes de controladores**: expanda **Sistemas operativos** > **Paquetes de controladores** y, después, seleccione el paquete de controladores que quiere validar.  
+    -   **Paquetes de controladores**: expanda **Sistemas operativos** > **Paquetes de controladores** y, después, seleccione el paquete de controladores que quiera validar.  
 
-    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos** > **Imágenes de sistema operativo** y, después, seleccione la imagen de sistema operativo que quiere validar.  
+    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos** > **Imágenes de sistema operativo** y, después, seleccione la imagen de sistema operativo que quiera validar.  
 
-    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos** >  **Instaladores de sistema operativo** y, después, seleccione el instalador de sistema operativo que quiere validar.  
+    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos** >  **Instaladores de sistema operativo** y, después, seleccione el instalador de sistema operativo que quiera validar.  
 
-    -   **Imágenes de arranque**: expanda **Sistemas operativos** > **Imágenes de arranque** y, después, seleccione la imagen de arranque que quiere preconfigurar.  
+    -   **Imágenes de arranque**: expanda **Sistemas operativos** > **Imágenes de arranque** y, después, seleccione la imagen de arranque que quiera preconfigurar.  
 
 3.  En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
 

@@ -10,16 +10,17 @@ ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df936f3ab5567840560497edd60a32f3bbb9c74d
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 62d750a6ff711afc06ddbcec9b9ad98ecfab758e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893608"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124162"
 ---
 # <a name="plan-for-and-configure-application-management-in-configuration-manager"></a>Planificar y configurar la administración de aplicaciones en Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama actual)*
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Use la información de este artículo como ayuda para implementar las dependencias necesarias para la implementación de aplicaciones en Configuration Manager.  
 
@@ -228,7 +229,7 @@ Vea los siguientes artículos para más información:
 > - [Dependencias de Configuration Manager](#configuration-manager-dependencies)
 
 
-### <a name="step-1-web-server-certificate-for-https"></a>Paso 1: Certificado de servidor web para HTTPS
+### <a name="step-1-web-server-certificate-for-https"></a>Paso 1: certificado de servidor web para HTTPS
 
 Si usa conexiones HTTPS, implemente un certificado de servidor web en los servidores de sistema de sitio para el punto de sitios web del catálogo de aplicaciones y el punto de servicio web del catálogo de aplicaciones. 
 
@@ -266,16 +267,16 @@ Instale el catálogo de aplicaciones en un servidor de sistema de sitio nuevo o 
 
 #### <a name="verify-the-installation-of-these-site-system-roles"></a>Comprobación de la instalación de estos roles de sistema de sitio  
 
-- Mensajes de estado: Utilice los componentes **SMS_PORTALWEB_CONTROL_MANAGER** y **SMS_AWEBSVC_CONTROL_MANAGER**.  
+- Mensajes de estado: use los componentes **SMS_PORTALWEB_CONTROL_MANAGER** y **SMS_AWEBSVC_CONTROL_MANAGER**.  
 
     Por ejemplo, el identificador de estado **1015** para **SMS_PORTALWEB_CONTROL_MANAGER** confirma que el Administrador de componentes de sitio ha instalado correctamente el punto de sitios web del catálogo de aplicaciones.  
 
-- Archivos de registro: Busque **SMSAWEBSVCSetup.log** y **SMSPORTALWEBSetup.log**.  
+- Archivos de registro: busque **SMSAWEBSVCSetup.log** y **SMSPORTALWEBSetup.log**.  
 
     Para más información, busque los archivos de registro **awebsvcMSI.log** y **portlwebMSI.log**.  
 
 
-### <a name="step-4-configure-client-settings"></a>Paso 4: configuración del cliente
+### <a name="step-4-configure-client-settings"></a>Paso 4: Configuración del cliente
 
 Configure las opciones de cliente predeterminadas si desea que todos los usuarios tengan la misma configuración. De lo contrario, configure opciones de cliente personalizadas para recopilaciones específicas.
 
@@ -291,7 +292,7 @@ Vea los siguientes artículos para más información:
 El cliente de Configuration Manager configura dispositivos con estos ajustes la siguiente vez que descargue la directiva de cliente. Para desencadenar la recuperación de directivas para un solo cliente, vea [Cómo administrar clientes](/sccm/core/clients/manage/manage-clients).
 
 
-### <a name="step-5-verify-that-the-application-catalog-is-operational"></a>Paso 5: comprobar si funciona el catálogo de aplicaciones
+### <a name="step-5-verify-that-the-application-catalog-is-operational"></a>Paso 5: comprobar que el catálogo de aplicaciones esté operativo.
 
 Utilice los procedimientos siguientes para comprobar que el catálogo de aplicaciones esté funcionando. 
 
@@ -301,7 +302,7 @@ Utilice los procedimientos siguientes para comprobar que el catálogo de aplicac
 > [!TIP]  
 >  La falta de cumplimiento de los requisitos previos está entre uno de los motivos más frecuentes por los que el catálogo de aplicaciones no funciona correctamente después de su instalación. Confirme que se cumplen los requisitos previos del rol de sistema de sitio para los roles de sistema de sitio del catálogo de aplicaciones. Para obtener más información, consulte [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) (Requisitos previos de sitio y sistema de sitio).  
 
-En un explorador, escriba la dirección del sitio web del catálogo de aplicaciones. Compruebe que la página web se muestra con las tres pestañas: **Catálogo de aplicaciones**, **Mis solicitudes de aplicación** y **Mis dispositivos**.  
+En un explorador, escriba la dirección del sitio web del catálogo de aplicaciones. Confirme que en la página web se muestran las tres pestañas: **Catálogo de aplicaciones**, **Mis solicitudes de aplicación** y **Mis dispositivos**.  
 
 Use la dirección adecuada de las que se muestran en la siguiente lista para el catálogo de aplicaciones, donde &lt;servidor&gt; es el nombre del equipo, el FQDN de la intranet o el FQDN de Internet:  
 

@@ -10,12 +10,13 @@ ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7caffbbccfa53ef4e502685263cb0d81c6e83535
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a94cb1338e010bfbd9ed1e2ecf7bdb5ba2418390
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336646"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120698"
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-system-center-configuration-manager"></a>Implementar clientes en servidores UNIX y Linux con System Center Configuration Manager
 
@@ -27,7 +28,7 @@ Para poder administrar un servidor Linux o UNIX con System Center Configuration 
 
  El script de instalación del cliente de Configuration Manager para Linux y UNIX admite propiedades de línea de comandos. Algunas propiedades de línea de comandos son necesarios, mientras que otros son opcionales. Por ejemplo, cuando se instala el cliente, debe especificar un punto de administración del sitio que usa el servidor Linux o UNIX para su contacto inicial con el sitio. Para obtener una lista completa de propiedades de línea de comandos, consulte [Propiedades de línea de comandos para la instalación del cliente en servidores Linux y UNIX](#BKMK_CmdLineInstallLnUClient).  
 
- Después de instalar el cliente, se especifican las opciones de cliente en la consola de Configuration Manager para configurar el agente cliente de la misma manera que lo haría con clientes basados en Windows. Para obtener más información, consulte [Configuración de cliente para servidores Linux y UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU) (Configuración de cliente para servidores Linux y UNIX).  
+ Después de instalar el cliente, se especifican las opciones de cliente en la consola de Configuration Manager para configurar el agente cliente de la misma manera que lo haría con clientes basados en Windows. Para obtener más información, consulte [Client settings for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU) (Configuración de cliente para servidores Linux y UNIX).  
 
 ##  <a name="BKMK_AboutInstallPackages"></a> Acerca de los paquetes de instalación de cliente y el agente Universal  
  Para instalar el cliente para Linux y UNIX en una plataforma concreta, debe usar el paquete de instalación de cliente aplicable para el equipo donde se instala el cliente. Los paquetes de instalación de cliente aplicables se incluyen como parte de la descarga de cada cliente desde el [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkID=525184). Además de los paquetes de instalación de cliente, la descarga de cliente incluye el script de **install** que administra la instalación del cliente en cada equipo.  
@@ -145,7 +146,7 @@ Cada paquete de instalación de cliente contiene todos los archivos necesarios p
 
      Si no utiliza esta propiedad para especificar un certificado PKI, el cliente utiliza un certificado autofirmado y todas las comunicaciones con sistemas de sitio son sobre HTTP.  
 
-     Si especifica un certificado no válido en el cliente instale la línea de comandos, no se devuelven errores. Esto es porque la validación de certificados se produce después de que el cliente se instala. Cuando el cliente se inicia, se validan los certificados con el punto de administración y si un certificado se produce un error de validación aparece el siguiente mensaje de **scxcm.log**, el archivo de registro de cliente de Unix y Linux Configuration Manager: **No se pudo validar el certificado de punto de administración**. La ubicación del archivo de registro predeterminado es:  **/var/opt/microsoft/scxcm.log**.  
+     Si especifica un certificado no válido en el cliente instale la línea de comandos, no se devuelven errores. Esto es porque la validación de certificados se produce después de que el cliente se instala. Cuando el cliente se inicia, se validan los certificados con el punto de administración y, si un certificado produce un error de validación, se muestra el mensaje siguiente en **scxcm.log**, el archivo de registro de cliente de Unix y Linux Configuration Manager: **No se puede validar el certificado de punto de administración**. La ubicación del archivo de registro predeterminado es:  **/var/opt/microsoft/scxcm.log**.  
 
     > [!NOTE]  
     >  Debe especificar esta propiedad cuando instale un cliente y use la propiedad **-mp** para especificar un punto de administración configurado para aceptar únicamente conexiones de cliente HTTPS.  

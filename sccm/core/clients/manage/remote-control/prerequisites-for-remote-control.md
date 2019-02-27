@@ -10,12 +10,13 @@ ms.assetid: c1b2057e-b74f-43fa-a293-763a8f866d3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 117ad9a087151db51c4cf33112ab662f53b9134e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 72478fc0b8853cbf9767adfa3949f96b29f2668a
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332022"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120364"
 ---
 # <a name="prerequisites-for-remote-control-in-system-center-configuration-manager"></a>Requisitos previos del control remoto en System Center Configuration Manager
 
@@ -45,4 +46,4 @@ El Visor de control remoto se admite en todos los sistemas operativos compatible
 |----------------|----------------------|  
 |El control remoto debe habilitarse para los clientes|De forma predeterminada, el control remoto no está habilitado cuando se instala Configuration Manager. Para obtener información sobre cómo habilitar y configurar el control remoto, consulte [Configuración del control remoto en System Center Configuration Manager](../../../../core/clients/manage/remote-control/configuring-remote-control.md).|  
 |Punto de servicios de informes|El rol de sistema de sitio de punto de servicios de informes debe instalarse antes de poder ejecutar informes para el control remoto. Para obtener más información, consulte [Reporting in System Center Configuration Manager](../../../../core/servers/manage/reporting.md) (Generación de informes en System Center Configuration Manager).|  
-|Permisos de seguridad para administrar el control remoto|Para acceder a recursos de la colección e iniciar una sesión de control remoto desde la consola de Configuration Manager: permiso **Leer**, **Leer recurso** y **Control remoto** para el objeto **Recopilación**.<br /><br /> El rol de seguridad **Operador de herramientas remotas** incluye estos permisos, que son necesarios para administrar el control remoto en Configuration Manager.<br /><br /> Para obtener más información, consulte [Configurar la administración basada en roles de System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-role-based-administration.md).<br /><br /> Además, es necesario conceder permisos a los visores permitidos para usar el control remoto mediante la adición de estos usuarios a la lista **Visores permitidos de control remoto y asistencia remota** de la configuración del cliente **Herramientas remotas**.
+|Permisos de seguridad para administrar el control remoto|Para acceder a los recursos de la recopilación e iniciar una sesión de control remoto desde la consola de Configuration Manager: permisos **Leer**, **Leer recurso** y **Control remoto** en el objeto **Collection**.<br /><br /> El rol de seguridad **Operador de herramientas remotas** incluye estos permisos, que son necesarios para administrar el control remoto en Configuration Manager.<br /><br /> Para obtener más información, consulte [Configurar la administración basada en roles de System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-role-based-administration.md).<br /><br /> Además, es necesario conceder permisos a los visores permitidos para usar el control remoto mediante la adición de estos usuarios a la lista **Visores permitidos de control remoto y asistencia remota** de la configuración del cliente **Herramientas remotas**.

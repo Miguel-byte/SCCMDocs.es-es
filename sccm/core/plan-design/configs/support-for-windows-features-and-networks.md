@@ -10,12 +10,13 @@ ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 915a8ac1d20ca288b2b830791c8a3b79c65ffbce
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ae1ac3262acff35e23de4faa1e80c796f5ee4e4b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383657"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156702"
 ---
 # <a name="support-for-windows-features-and-networks-in-configuration-manager"></a>Compatibilidad con las características y redes de Windows en Configuration Manager
 
@@ -151,7 +152,7 @@ Los roles del servidor de sitio requieren NTFS, para que Configuration Manager p
 
 ### <a name="support-considerations"></a>Consideraciones sobre la compatibilidad
 
-- **Red de área de almacenamiento**: se admite una red de área de almacenamiento (SAN) cuando un servidor basado en Windows compatible está asociado directamente al volumen hospedado en la SAN.  
+- **Red de área de almacenamiento**: una red de área de almacenamiento (SAN) se admite cuando un servidor basado en Windows compatible se conecta directamente al volumen que se hospeda en la SAN.  
 
 - **Almacenamiento de instancia única**: Configuration Manager no admite la configuración de paquetes de puntos de distribución y carpetas de firmas en un volumen habilitado para el Almacenamiento de instancia única (SIS).  
 

@@ -10,12 +10,13 @@ ms.assetid: 1012ec24-27d9-4193-8236-918d283c7448
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 66a9949723e6555ddb72ebfdb845a523fb29bfe5
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 740dda5c41c28e1648eb24e75fe24a2e22784f3b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385996"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129111"
 ---
 # <a name="policy-spy"></a>Policy Spy
 
@@ -47,19 +48,19 @@ Esta opción en modo silencioso exporta la directiva del equipo local o remoto. 
 
 Las acciones siguientes están disponibles en el menú **Herramientas**:  
 
-- **Open Remote**(Abrir remoto): se conecta a la directiva de cliente de Configuration Manager en un equipo remoto. Utilice el cuadro de diálogo Conectar para recuperar el nombre del equipo remoto y las credenciales de usuario opcionales. Si la conexión no se establece, muestra información de error en el panel de información del cliente. Si el error de conexión persiste, intente conectarse seleccionando **Actualizar** en el menú **Edición** o presionando F5.  
+- **Abrir remoto**: se conecta a la directiva de cliente de Configuration Manager en un equipo remoto. Utilice el cuadro de diálogo Conectar para recuperar el nombre del equipo remoto y las credenciales de usuario opcionales. Si la conexión no se establece, muestra información de error en el panel de información del cliente. Si el error de conexión persiste, intente conectarse seleccionando **Actualizar** en el menú **Edición** o presionando F5.  
 
 - **Abrir archivo**: abre un archivo de exportación de directiva (XML) creado por la opción **Exportar directiva**. La herramienta muestra la directiva exportada exactamente igual que una directiva activa. Deshabilita algunas características que solo se aplican al conectarse a un cliente real.  
 
-- **Request Machine Assignments** (Solicitar asignaciones de máquina): desencadena una solicitud de asignaciones de directiva de equipo en el equipo de destino. Esta característica se deshabilita al visualizar una directiva exportada.  
+- **Solicitar asignaciones de equipos**: desencadena una solicitud para asignaciones de directivas de equipo en el equipo de destino. Esta característica se deshabilita al visualizar una directiva exportada.  
 
-- **Evaluate Machine Policy** (Evaluar la directiva de equipo): desencadena la evaluación de una directiva de equipo en el equipo de destino. Esta característica se deshabilita al visualizar una directiva exportada.  
+- **Evaluar las directivas de equipo**: desencadena una evaluación de la directiva del equipo en el equipo de destino. Esta característica se deshabilita al visualizar una directiva exportada.  
 
-- **Request User Assignments** (Solicitar asignaciones de usuario): desencadena una solicitud de asignaciones de directiva de usuario del usuario con sesión iniciada actualmente. Esta característica solo está disponible al visualizar una directiva en el equipo local.  
+- **Solicitar asignaciones de usuario**: desencadena una solicitud de asignaciones de directivas de usuario del usuario con sesión iniciada actualmente. Esta característica solo está disponible al visualizar una directiva en el equipo local.  
 
-- **Evaluate User Policy** (Evaluar la directiva de usuario): desencadena la evaluación de una directiva de usuario para el usuario con sesión iniciada actualmente. Esta característica solo está disponible al visualizar una directiva en el equipo local.  
+- **Evaluar la directiva de usuario**: desencadena la evaluación de una directiva de usuario para el usuario con sesión iniciada actualmente. Esta característica solo está disponible al visualizar una directiva en el equipo local.  
 
-- **Reset Policy** (Restablecer directiva): quita todas las directivas no predeterminadas y restablece las cookies de la directiva para el sitio. Luego desencadena una solicitud de asignaciones de directiva de equipo. Esta característica se deshabilita al visualizar una directiva exportada.  
+- **Restablecer directiva**: quita todas las directivas no predeterminadas y restablece las cookies de la directiva para el sitio. Luego desencadena una solicitud de asignaciones de directiva de equipo. Esta característica se deshabilita al visualizar una directiva exportada.  
 
 - **Exportar directiva**: exporta la directiva del equipo de destino a un archivo XML. Vea este archivo en cualquier equipo con Policy Spy. Para abrir el archivo de exportación, seleccione **Abrir archivo** en el menú **Herramientas**. Esta característica se deshabilita al visualizar una directiva exportada.  
 

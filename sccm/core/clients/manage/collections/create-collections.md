@@ -10,12 +10,13 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c314cba909929ee49355eab59dfc813aab7e393e
-ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6235f3f58d8688d9ceee11e1b4be05a2df21a509
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42584478"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141126"
 ---
 # <a name="how-to-create-collections-in-system-center-configuration-manager"></a>Cómo crear recopilaciones en System Center Configuration Manager
 
@@ -54,9 +55,9 @@ Las recopilaciones son grupos de usuarios o dispositivos. Use las recopilaciones
 
 1.  En la página **Buscar recursos** del **Asistente para crear reglas de pertenencia directa**, especifique la información siguiente:  
 
--   **Clase de recurso**: seleccione el tipo de recurso que quiere buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso del sistema** para buscar datos de inventario devueltos de equipos cliente o **Equipo desconocido** para seleccionar entre los valores devueltos por equipos desconocidos.  
+-   **Clase de recurso:** seleccione el tipo de recurso que quiera buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso del sistema** para buscar datos de inventario devueltos de equipos cliente o **Equipo desconocido** para seleccionar entre los valores devueltos por equipos desconocidos.  
 
--   **Nombre de atributo**: seleccione el atributo asociado a la clase de recurso seleccionado que quiere buscar. Por ejemplo, si quiere seleccionar equipos por su nombre NETBIOS, seleccione **Recurso del sistema** en la lista **Clase de recurso** y **Nombre NETBIOS** en la lista **Nombre de atributo** .  
+-   **Nombre de atributo**: seleccione el atributo asociado a la clase de recurso seleccionado que quiera buscar. Por ejemplo, si quiere seleccionar equipos por su nombre NETBIOS, seleccione **Recurso del sistema** en la lista **Clase de recurso** y **Nombre NETBIOS** en la lista **Nombre de atributo** .  
 
 -   **Excluir recursos marcados como obsoletos**: si un equipo cliente está marcado como obsoleto, no incluya este valor en los resultados de la búsqueda.  
 
@@ -71,11 +72,11 @@ Las recopilaciones son grupos de usuarios o dispositivos. Use las recopilaciones
 
 1.  En el cuadro de diálogo **Propiedades de regla de consulta** , especifique la siguiente información:  
 
--   **Nombre**: especifique un nombre exclusivo.  
+-   **Nombre**: especifique un nombre único.  
 
 -   **Importar instrucción de consulta**: abre el cuadro de diálogo **Examinar consulta** donde puede seleccionar una [consulta de Configuration Manager](../../../../core/servers/manage/create-queries.md) para usarla como la regla de consulta de la recopilación.   
 
--   **Clase de recurso:** seleccione el tipo de recurso que quiere buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso del sistema** para buscar datos de inventario devueltos de equipos cliente o **Equipo desconocido** para seleccionar entre los valores devueltos por equipos desconocidos.  
+-   **Clase de recurso:** seleccione el tipo de recurso que quiera buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso del sistema** para buscar datos de inventario devueltos de equipos cliente o **Equipo desconocido** para seleccionar entre los valores devueltos por equipos desconocidos.  
 
 -   **Editar instrucción de consulta**: abre el cuadro de diálogo **Propiedades de instrucción de consulta** donde puede crear una consulta para usarla como regla de la recopilación. Para obtener más información sobre consultas, consulte [Queries technical reference for System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md) (Referencia técnica de consultas para System Center Configuration Manager).  
 
@@ -131,11 +132,11 @@ En el cuadro de diálogo **Seleccionar recopilaciones**, seleccione las recopila
 
 1.  En la página **Buscar recursos** del **Asistente para crear reglas de pertenencia directa**, especifique:  
 
--   **Clase de recurso**: seleccione el tipo de recurso que quiere buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso de usuario** para buscar información de usuario recopilada por Configuration Manager o **Recurso de grupo de usuarios** para buscar información de grupo de usuarios recopilada por Configuration Manager.  
+-   **Clase de recurso:** seleccione el tipo de recurso que quiera buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso de usuario** para buscar información de usuario recopilada por Configuration Manager o **Recurso de grupo de usuarios** para buscar información de grupo de usuarios recopilada por Configuration Manager.  
 
--   **Nombre de atributo**: seleccione el atributo asociado a la clase de recurso que quiere buscar. Por ejemplo, si quiere seleccionar equipos por su nombre de unidad organizativa (UO), seleccione **Recurso de usuario** en la lista **Clase de recurso** y **Nombre de UO de usuario** en la lista **Nombre de atributo** .  
+-   **Nombre de atributo**: seleccione el atributo asociado a la clase de recurso que quiera buscar. Por ejemplo, si quiere seleccionar equipos por su nombre de unidad organizativa (UO), seleccione **Recurso de usuario** en la lista **Clase de recurso** y **Nombre de UO de usuario** en la lista **Nombre de atributo** .  
 
--   **Valor:** escriba el valor por el que quiere buscar. Puede utilizar el carácter de porcentaje **%** como carácter comodín. Por ejemplo, para buscar usuarios en la UO de Contoso, escriba **Contoso** en este campo.  
+-   **Valor:** escriba el valor por el que quiera buscar. Puede utilizar el carácter de porcentaje **%** como carácter comodín. Por ejemplo, para buscar usuarios en la UO de Contoso, escriba **Contoso** en este campo.  
 
 2.  En la página **Seleccionar recursos**, seleccione los recursos que quiere agregar a la recopilación en la lista **Recursos**.  
 
@@ -143,11 +144,11 @@ En el cuadro de diálogo **Seleccionar recopilaciones**, seleccione las recopila
 
 1.  En el cuadro de diálogo **Propiedades de regla de consulta**, proporcione lo siguiente:  
 
--   **Nombre**: un nombre único.  
+-   **Nombre**: nombre único.  
 
 -   **Importar instrucción de consulta**: abre el cuadro de diálogo **Examinar consulta** donde puede seleccionar una [consulta de Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md) para usarla como la regla de consulta de la recopilación.  
 
--   **Clase de recurso**: seleccione el tipo de recurso que quiere buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso de usuario** para buscar información de usuario recopilada por Configuration Manager o **Recurso de grupo de usuarios** para buscar información de grupo de usuarios recopilada por Configuration Manager.  
+-   **Clase de recurso:** seleccione el tipo de recurso que quiera buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso de usuario** para buscar información de usuario recopilada por Configuration Manager o **Recurso de grupo de usuarios** para buscar información de grupo de usuarios recopilada por Configuration Manager.  
 
 -   **Editar instrucción de consulta**: abre el cuadro de diálogo **Propiedades de instrucción de consulta** donde puede [crear una consulta](../../../../core/servers/manage/queries-technical-reference.md) para usarla como regla para la recopilación.  
 

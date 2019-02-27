@@ -10,12 +10,13 @@ ms.assetid: 395403dc-6997-4415-93fd-6b1eeb6ba31a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fd23bd523eb64f7d00f71c38c79a180c4e2e569a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1479524f08f17aa59f6e7dc771253a4fb6720189
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386546"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131139"
 ---
 # <a name="configuration-manager-tools"></a>Herramientas de Configuration Manager
 
@@ -35,15 +36,15 @@ Todos los sistemas operativos Windows que se indican como clientes compatibles e
 
 - [CMTrace](/sccm/core/support/cmtrace): sirve para ver, supervisar y analizar archivos de registro de Configuration Manager  
 
-- [Cliente Spy](/sccm/core/support/clispy): soluciona problemas relacionados con la distribución de software, el inventario y la medición
+- [Client Spy](/sccm/core/support/clispy): soluciona problemas relacionados con la distribución de software, el inventario y la medición.
 
-- [Deployment Monitoring Tool](/sccm/core/support/deployment-monitoring-tool): permite solucionar los problemas de aplicaciones, actualizaciones e implementaciones de línea de base.  
+- [Deployment Monitoring Tool](/sccm/core/support/deployment-monitoring-tool): permite solucionar los problemas de aplicaciones, actualizaciones e implementaciones de línea de base  
 
-- [Policy Spy](/sccm/core/support/policy-spy): permite ver las asignaciones de directiva.  
+- [Policy Spy](/sccm/core/support/policy-spy): vea asignaciones de directiva  
 
-- [Power Viewer Tool](/sccm/core/support/power-viewer-tool): permite ver el estado de la característica de administración de energía.  
+- [Power Viewer Tool](/sccm/core/support/power-viewer-tool): permite ver el estado de la característica de administración de energía  
 
-- [Send Schedule Tool](/sccm/core/support/send-schedule-tool): desencadena programaciones y evaluaciones de líneas de base de configuración  
+- [Send Schedule Tool](/sccm/core/support/send-schedule-tool): desencadena programaciones y evaluaciones de líneas base de configuración.  
 
 > [!Note]  
 > La carpeta ClientTools también incluye el archivo Microsoft.Diagnostics.Tracing.EventSource.dll. Varias herramientas de cliente necesitan esta biblioteca. No se puede usar directamente.  
@@ -53,17 +54,17 @@ Todos los sistemas operativos Windows que se indican como clientes compatibles e
 
 - [DP Job Queue Manager](/sccm/core/support/dp-job-manager): soluciona los problemas de los trabajos de distribución de contenido a los puntos de distribución  
 
-- [Collection Evaluation Viewer](/sccm/core/support/ceviewer): permite ver los detalles de evaluación de la recopilación.  
+- [Collection Evaluation Viewer](/sccm/core/support/ceviewer): vea detalles de la evaluación de colecciones  
 
-- [Content Library Explorer](/sccm/core/support/content-library-explorer): permite ver el contenido del almacén de instancia única de la biblioteca de contenido.  
+- [Content Library Explorer](/sccm/core/support/content-library-explorer): permite ver el contenido del almacén de instancia única de la biblioteca de contenido  
 
-- [Content Library Transfer](/sccm/core/support/content-library-transfer): transfiere la biblioteca de contenido entre unidades.  
+- [Content Library Transfer](/sccm/core/support/content-library-transfer): transfiere la biblioteca de contenido entre unidades  
 
 - [Content Ownership Tool](/sccm/core/support/content-ownership-tool): cambia la propiedad de los paquetes huérfanos. Estos paquetes existen en el sitio sin un servidor de sitio propietario.  
 
-- [Role-based Administration and Auditing Tool](/sccm/core/support/rbaviewer): ayuda a los administradores a auditar la configuración de los roles.  
+- [Role-based Administration and Auditing Tool](/sccm/core/support/rbaviewer): ayuda a los administradores a auditar la configuración de roles  
 
-- [Run Meter Summarization Tool](/sccm/core/support/run-meter-summ): Ejecuta la tarea de resumen de medición y analiza los datos de medición
+- [Herramienta Run Meter Summarization](/sccm/core/support/run-meter-summ): ejecuta una tarea de resumen de medición y analiza los datos de medición.
 
 > [!Note]  
 > La carpeta ServerTools también incluye los siguientes archivos 
@@ -77,10 +78,10 @@ Todos los sistemas operativos Windows que se indican como clientes compatibles e
 
 ## <a name="other-tools"></a>Otras herramientas
 
-- [Content library cleanup tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool): use **ContentLibraryCleanup.exe** en `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` para quitar contenido huérfano de un punto de distribución.  
+- [Content Library Cleanup Tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool): use **ContentLibraryCleanup.exe** en `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` para quitar contenido huérfano desde un punto de distribución.  
 
 - [Hierarchy Maintenance Tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe): use **Preinst.exe** en la carpeta compartida `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` del servidor de sitio para pasar comandos al componente Administrador de jerarquía.  
 
-- [Update reset tool](/sccm/core/servers/manage/update-reset-tool): use **CMUpdateReset.exe** en `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` para solucionar los problemas de descarga o replicación de las actualizaciones en la consola.  
+- [Herramienta de restablecimiento de actualizaciones](/sccm/core/servers/manage/update-reset-tool): use **CMUpdateReset.exe** en `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` para corregir los problemas de descarga o replicación de las actualizaciones en la consola.  
 
-- [Service Connection Tool](/sccm/core/servers/manage/use-the-service-connection-tool): use **ServiceConnectionTool.exe** en `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` para mantener actualizado el sitio cuando el punto de conexión de servicio está sin conexión.  
+- [Herramienta de conexión de servicio](/sccm/core/servers/manage/use-the-service-connection-tool): use **ServiceConnectionTool.exe** en `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` para mantener actualizado el sitio cuando el punto de conexión de servicio esté sin conexión.  

@@ -10,12 +10,13 @@ ms.assetid: 3fab4d67-8d2a-45ce-8b06-471280102cf6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 04faf92545f84fdf53c522ad9aa0c74bbd5c4aa1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d7a9fcf06630c76fc3e1123fa56861c4de224521
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342280"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129381"
 ---
 # <a name="monitor-hierarchy-and-replication-infrastructure-in-system-center-configuration-manager"></a>Supervisar la infraestructura de la jerarquía y replicación de System Center Configuration Manager
 
@@ -194,7 +195,7 @@ La replicación de bases de datos entre sitios implica la replicación de varios
 
 Puede ejecutar Replication Link Analyzer en la consola de Configuration Manager o en un símbolo del sistema:  
 
--   Para ejecutar la ejecución en la consola de Configuration Manager: en el área de trabajo **Supervisión**, haga clic en el nodo **Replicación de base de datos**, seleccione el vínculo de replicación que desea analizar y, a continuación, en el grupo **Replicación de base de datos** de la pestaña **Inicio**, seleccione **Replication Link Analyzer**.  
+-   Para ejecutar en la consola de Configuration Manager: en el área de trabajo **Supervisión**, haga clic en el nodo **Replicación de base de datos**, seleccione el vínculo de replicación que quiera analizar y, después, en el grupo **Replicación de base de datos** de la pestaña **Inicio**, seleccione **Replication Link Analyzer**.  
 
 -   Para realizar la ejecución en un símbolo del sistema, escriba el siguiente comando: **%path%\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe &lt;FQDN del servidor de sitio de origen\> &lt;FQDN del servidor de sitio de destino\>**  
 

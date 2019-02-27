@@ -10,12 +10,13 @@ ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 03b34c09a5fef63316bb1d9d1a94dbbfc3ccf69f
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 93a502e9c77e05eedba1c2989cbae69e4080832f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456267"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56133738"
 ---
 # <a name="how-to-manage-collections-in-configuration-manager"></a>Administración de recopilaciones en Configuration Manager
 
@@ -40,9 +41,9 @@ Utilice la información de introducción de este artículo como ayuda para reali
 #### <a name="add-selected-items"></a>Agregar los elementos seleccionados
  Se muestran las opciones siguientes: 
 
- - **Agregar elementos seleccionados a la recopilación de dispositivos existente**: abre el cuadro de diálogo **Seleccionar recopilación**. Seleccione la recopilación a la que desea agregar los miembros de la recopilación seleccionada. La recopilación seleccionada se incluye en esta recopilación mediante una regla de pertenencia **Incluir recopilaciones** .  
+ - **Agregar elementos seleccionados a la recopilación de dispositivos existente**: Abre el cuadro de diálogo **Seleccionar recopilación** . Seleccione la recopilación a la que desea agregar los miembros de la recopilación seleccionada. La recopilación seleccionada se incluye en esta recopilación mediante una regla de pertenencia **Incluir recopilaciones** .  
 
- - **Agregar elementos seleccionados a la nueva recopilación de dispositivos**: abre el **Asistente para crear recopilación de dispositivos**, donde puede crear una nueva recopilación. La recopilación seleccionada se incluye en esta recopilación mediante una regla de pertenencia **Incluir recopilaciones** .  
+ - **Agregar elementos seleccionados a la nueva recopilación de dispositivos**: abre el **Asistente para crear recopilación de dispositivos**, donde puede crear una recopilación. La recopilación seleccionada se incluye en esta recopilación mediante una regla de pertenencia **Incluir recopilaciones** .  
 
 
  Para obtener más información, vea [Creación de recopilaciones](/sccm/core/clients/manage/collections/create-collections).
@@ -109,7 +110,7 @@ Utilice la información de introducción de este artículo como ayuda para reali
 
  - **Programa**: abre el **Asistente para implementar software**. Seleccione y configure una implementación de paquete y programa en la recopilación seleccionada. Para obtener más información, consulte [Paquetes y programas](/sccm/apps/deploy-use/packages-and-programs).  
 
- - **Línea base de configuración**: se abre el cuadro de diálogo **Implementar líneas de base de configuración**. Configure la implementación de una o varias líneas base de configuración en la recopilación seleccionada. Para más información, vea [Cómo implementar líneas base de configuración](/sccm/compliance/deploy-use/deploy-configuration-baselines).  
+ - **Línea de base de configuración**: abre el cuadro de diálogo **Implementar líneas de base de configuración**. Configure la implementación de una o varias líneas base de configuración en la recopilación seleccionada. Para más información, vea [Cómo implementar líneas base de configuración](/sccm/compliance/deploy-use/deploy-configuration-baselines).  
 
  - **Secuencia de tareas**: abre el **Asistente para implementar software**. Seleccione y configure una implementación de secuencia de tareas en la recopilación seleccionada. Para obtener más información, vea [Manage task sequences to automate tasks](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS) (Administración de secuencias de tareas para automatizar tareas).  
 

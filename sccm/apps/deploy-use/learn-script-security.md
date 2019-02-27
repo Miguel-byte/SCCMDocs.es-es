@@ -10,12 +10,13 @@ ms.assetid: a0bd093d-67a5-4f74-bf79-dd604889f5ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b5f7ac3125b099a764604b3338a92f3f45b10afe
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5adc8809edc0a069269dfce71f302452a0e01b45
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52258985"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124036"
 ---
 # <a name="learn-more-about-powershell-script-security"></a>Más información sobre la seguridad del script de PowerShell
 
@@ -59,12 +60,12 @@ Pasar parámetros es una manera de disponer de flexibilidad con los scripts y de
 
 - Permitir únicamente el uso de parámetros predefinidos.
 - Usar la característica de expresión regular para validar los parámetros que se permiten.
-    - Ejemplo: si solo se permite un intervalo determinado de valores, use una expresión regular para comprobar únicamente los caracteres o valores que pueden formar el intervalo.
+    - Ejemplo: Si solo se permite un intervalo determinado de valores, use una expresión regular para comprobar únicamente los caracteres o valores que pueden formar el intervalo.
     - La validación de parámetros puede ayudar a evitar que los usuarios intenten usar determinados caracteres que se pueden escapar, como las comillas. Tenga en cuenta que puede haber varios tipos de comillas, por lo que el uso de expresiones regulares para validar los caracteres que se han elegido como permitidos a menudo es más fácil que intentar definir todas las entradas que no se permiten.
 - Aprovechar el módulo de PowerShell ["injection hunter"](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) (cazador de inserciones) de la Galería de PowerShell.
     - Puede haber falsos positivos, por lo que cuando algo se marque como sospechoso, busque la intención para determinar si se trata de un problema real o no. 
 - Microsoft Visual Studio tiene un analizador de scripts, que puede ayudar con la comprobación de la sintaxis de PowerShell.
-- En este vídeo titulado "DEF CON 25 - Lee Holmes - Get $pwnd: Attacking Battle Hardened Windows Server" (DEF CON 25: Lee Holmes - Get $pwnd: ataques a Windows Server, curtido en mil batallas), se proporciona información general de los tipos de problemas contra los que se puede proteger (especialmente la sección de 12:20 a 17:50):     <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+- En este vídeo, titulado “DEF CON 25 - Lee Holmes - Get $pwned: Attacking Battle Hardened Windows Server” (atacar una instancia de Windows Server preparada para la batalla), se proporciona información general sobre los tipos de problemas para los que puede protegerse (especialmente, la sección de 12:20 a 17:50):     <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## <a name="environment-recommendations"></a>Recomendaciones de entorno
 Recomendaciones generales para los administradores de PowerShell.

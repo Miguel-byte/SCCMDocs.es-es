@@ -10,12 +10,13 @@ ms.assetid: 99222dc8-0e1e-4513-8302-7a1acf671e9b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 071c8cc45d81ceeee0ac97934a747c2fcc79821b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5b260a9e3deeb8668d736c3ed5ec2c2519e3ed50
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335055"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138983"
 ---
 # <a name="determine-whether-to-migrate-data-to-system-center-configuration-manager"></a>Determinar si se migrarán datos a System Center Configuration Manager
 
@@ -62,7 +63,7 @@ Estas modificaciones no afectan a los datos de la base de datos del sitio de ori
 
 -   Límites  
 
--   Recopilaciones: para migrar recopilaciones de una versión compatible de System Center 2012 Configuration Manager o System Center Configuration Manager, use un trabajo de migración de objeto.  
+-   Recopilaciones: para migrar recopilaciones desde una versión compatible de System Center 2012 Configuration Manager o System Center Configuration Manager, use un trabajo de migración de objeto.  
 
 -   Configuración de cumplimiento:  
 
@@ -116,7 +117,7 @@ Estas modificaciones no afectan a los datos de la base de datos del sitio de ori
 
 -   Límites  
 
--   Recopilaciones: puede migrar recopilaciones desde una versión compatible de Configuration Manager 2007 con un trabajo de migración de recopilación.  
+-   Recopilaciones: puede migrar recopilaciones desde una versión compatible de Configuration Manager 2007 con un trabajo de migración de recopilaciones.  
 
 -   Configuración de compatibilidad (llamada administración de configuración deseada en Configuration Manager 2007):  
 
@@ -138,7 +139,7 @@ Estas modificaciones no afectan a los datos de la base de datos del sitio de ori
 
     -   Secuencias de tareas  
 
--   Resultados de la búsqueda: carpetas de búsqueda  
+-   Resultados de la búsqueda: Carpetas de búsqueda  
 
 -   Actualizaciones de software:  
 

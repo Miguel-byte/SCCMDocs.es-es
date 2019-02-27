@@ -10,12 +10,13 @@ ms.assetid: 60575413-44fe-43bb-bcfb-39ec5ed5055b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e798c11bbbd6c6d69ea8455ecb7b0252a408659d
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b90628e4f1e4a1405c90d17fc43628df00070978
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385936"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123389"
 ---
 # <a name="client-spy"></a>Cliente Spy
 
@@ -188,15 +189,15 @@ Es una lista de anuncios que existen en el cliente que no tienen ningún program
 
 Solo hay una ficha que contiene información de inventario. El árbol principal contiene los siguientes cinco elementos:  
 
-- **Inventario de software**: contiene la fecha en que se inició el último ciclo, la fecha del último informe y las versiones secundarias y principales del último informe.  
+- **Inventario de software**: contiene la fecha en que se ha iniciado el último ciclo, la fecha del último informe y las versiones secundarias y principales del último informe.  
 
-- **Inventario de archivos**: contiene la fecha en que se inició el último ciclo, la fecha del último informe y las versiones secundarias y principales del último informe.  
+- **Recopilación de archivos**: contiene la fecha en que se ha iniciado el último ciclo, la fecha del último informe y las versiones secundarias y principales del último informe.  
 
-- **Inventario de hardware**: contiene la fecha en que se inició el último ciclo, la fecha del último informe y las versiones secundarias y principales del último informe.  
+- **Inventario de hardware**: contiene la fecha en que se ha iniciado el último ciclo, la fecha del último informe y las versiones secundarias y principales del último informe.  
 
-- **Inventario de IDMIF**: contiene la fecha en que se inició el último ciclo, la fecha del último informe y las versiones secundarias y principales del último informe.  
+- **Colección de IDMIF**: contiene la fecha en que se ha iniciado el último ciclo, la fecha del último informe y las versiones secundarias y principales del último informe.  
 
-- **DDR**: contiene la fecha en que se inició el último ciclo, la fecha del último informe y las versiones secundarias y principales del último informe. La información de DDR también se muestra en un subárbol.
+- **DDR**: contiene la fecha en que se ha iniciado el último ciclo, la fecha del último informe y las versiones secundarias y principales del último informe. La información de DDR también se muestra en un subárbol.
 
 
 

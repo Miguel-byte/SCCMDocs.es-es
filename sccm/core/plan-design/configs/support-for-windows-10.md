@@ -10,12 +10,13 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a02f904614e245a61e533164d25c0280e3a4d486
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7e09453086d2ce8ff02e566188e5ae4a20228820
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456147"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135946"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Compatibilidad con Windows 10 en Configuration Manager  
 
@@ -65,7 +66,7 @@ En la tabla siguiente se enumeran las versiones de Windows 10 que puede usar com
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
 > [!Note]  
-> La compatibilidad con versiones de canal semestrales de Windows 10 incluye las siguientes ediciones: Enterprise, Pro, Education y Pro Education.   
+> En la compatibilidad para las versiones del Canal semianual de Windows 10, se incluyen las ediciones siguientes: Enterprise, Pro, Education y Pro Education.   
 
 | Clave |
 |--|

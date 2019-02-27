@@ -2,7 +2,7 @@
 title: Archivos de registro para la solución de problemas
 titleSuffix: Configuration Manager
 description: Use los archivos de registro para solucionar problemas con los clientes y sistemas de sitio de Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 02/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 96673c0b299e45111c7d9a2bedf55282de50132e
-ms.sourcegitcommit: 5e7c4d36f4cdb3390ad3b381d31a3e1e4bf3c6e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a5c6cee6422d3fc8777f54bd42716748410c9323
+ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "55986627"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265077"
 ---
 # <a name="log-files-in-configuration-manager"></a>Archivos de registro en Configuration Manager
 
@@ -809,9 +810,10 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 ###  <a name="BKMK_WindowsServicingLog"></a>Mantenimiento de Windows 10  
  En la tabla siguiente se incluyen los archivos de registro que contienen información relacionada con el mantenimiento de Windows 10.  
 El servicio utiliza la misma infraestructura y el mismo proceso que las actualizaciones de software. Para otros registros aplicables al escenario de servicio, consulte [Actualizaciones de software](#BKMK_SU_NAPLog).
+
 |Nombre del registro|Descripción|Equipo con el archivo de registro|  
 |--------------|-----------------|----------------------------|  
-|CBS.log|Registra los errores de servicio relacionados con los cambios en las actualizaciones de Windows o en los roles y características.|Cliente|  
+|CBS.log|Registra los errores de servicio relacionados con los cambios en las actualizaciones de Windows o en los roles y características.|Cliente|
 |DISM.log|Registra todas las acciones mediante DISM. Si es necesario, DISM.log apuntará a CBS.log para obtener más detalles.|Cliente|
 |setupact.log|Archivo de registro principal para la mayoría de los errores que se producen durante el proceso de instalación de Windows. El archivo de registro se encuentra en la carpeta %windir%\$Windows.~BT\sources\panther.|Cliente|
 

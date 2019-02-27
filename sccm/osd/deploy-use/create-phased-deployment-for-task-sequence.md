@@ -10,12 +10,13 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d103f7f7b92003605d92d34d6294ed06009118c
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9107e3bf851ddbcec061eeeac064f31e7392ee9f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456522"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142449"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Crear implementaciones por fases con Configuration Manager
 
@@ -43,9 +44,9 @@ Las implementaciones creadas por las implementaciones por fases no son visibles 
 #### <a name="distribute-content"></a>Distribuir contenido
 Antes de crear una implementación por fases, distribuya el contenido asociado a un punto de distribución.<!--518293-->  
 
-- **Aplicación**: seleccione la aplicación de destino en la consola y utilice la acción **Distribuir contenido** en la cinta de opciones. Para obtener más información, vea [Implementar y administrar contenido](/sccm/core/servers/deploy/configure/deploy-and-manage-content).   
+- **Aplicación**: seleccione la aplicación de destino en la consola y use la acción **Distribuir contenido** en la cinta de opciones. Para obtener más información, vea [Implementar y administrar contenido](/sccm/core/servers/deploy/configure/deploy-and-manage-content).   
 
-- **Secuencia de tareas**: tiene que crear objetos a los que se hace referencia como el paquete de actualización de sistema operativo antes de crear la secuencia de tareas. Distribuya estos objetos antes de crear una implementación. Use la acción **Distribuir contenido** en cada objeto o la secuencia de tareas. Para ver el estado del contenido de todo el contenido al que se hace referencia, seleccione la secuencia de tareas y cambie a la pestaña **Referencias** en el panel de detalles. Para obtener más información, vea el tipo de objeto en [Preparar para la implementación del sistema operativo](/sccm/osd/get-started/prepare-for-operating-system-deployment).   
+- **Secuencia de tareas**: tiene que crear objetos a los que se hace referencia, como el paquete de actualización de sistema operativo, antes de crear la secuencia de tareas. Distribuya estos objetos antes de crear una implementación. Use la acción **Distribuir contenido** en cada objeto o la secuencia de tareas. Para ver el estado del contenido de todo el contenido al que se hace referencia, seleccione la secuencia de tareas y cambie a la pestaña **Referencias** en el panel de detalles. Para obtener más información, vea el tipo de objeto en [Preparar para la implementación del sistema operativo](/sccm/osd/get-started/prepare-for-operating-system-deployment).   
 
 - **Actualización de software**: cree el paquete de implementación y distribúyalo. Use el Asistente para descargar actualizaciones de software. Para obtener más información, vea [Descargar actualizaciones de software](/sccm/sum/deploy-use/download-software-updates).  
 
@@ -63,9 +64,9 @@ Estos valores son únicos para las implementaciones por fases. Configure estas o
 
 #### <a name="conditions-for-beginning-second-phase-of-deployment-after-success-of-the-first-phase"></a>Condiciones para comenzar la segunda fase de implementación una vez que la primera se complete correctamente  
 
-- **Iniciar automáticamente esta fase tras un período de aplazamiento (en días)**: elija el número de días que se esperará antes de comenzar la segunda fase después del éxito de la primera. De forma predeterminada, este valor es un día.  
+- **Iniciar automáticamente esta fase después de un período de aplazamiento (en días)**: seleccione el número de días que se esperará antes de empezar la siguiente fase después del éxito de la anterior. De forma predeterminada, este valor es un día.  
 
-- **Iniciar manualmente la segunda fase de implementación**: el sitio no iniciará automáticamente la segunda fase después de que la primera fase se realice correctamente. Esta opción requiere que inicie manualmente la segunda fase. Para obtener más información, consulte [Pasar a la siguiente fase](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_move).  
+- **Empezar manualmente la implementación de la segunda fase**: el sitio no inicia automáticamente la segunda fase después de completarse correctamente la primera fase. Esta opción requiere que inicie manualmente la segunda fase. Para obtener más información, consulte [Pasar a la siguiente fase](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_move).  
 
     > [!Note]  
     > Esta opción no está disponible para las implementaciones por fases de las aplicaciones.  
@@ -77,9 +78,9 @@ Estos valores son únicos para las implementaciones por fases. Configure estas o
 
 #### <a name="configure-the-deadline-behavior-relative-to-when-the-software-is-made-available"></a>Configurar el comportamiento de fecha límite relativo a la disponibilidad del software  
 
-- **La instalación se requiere lo antes posible**: establezca la fecha límite para la instalación en el dispositivo en cuanto el dispositivo se selecciona.  
+- **La instalación se necesita cuanto antes**: establece la fecha límite para la instalación en el dispositivo en cuanto el dispositivo se selecciona.  
 
-- **Es necesario instalar después de este período de tiempo**: establezca una fecha límite para la instalación un número determinado de días después de que el dispositivo se establezca como objetivo. De forma predeterminada, este valor es siete días.   
+- **Es necesario instalar después de este período de tiempo**: establece la fecha límite para la instalación en un número determinado de días después de que se seleccione el dispositivo. De forma predeterminada, este valor es siete días.   
 
 
 <!--### Examples
@@ -92,9 +93,9 @@ Include a timeline diagram
 
 1. Inicie el asistente Crear implementaciones por fases en la consola de Configuration Manager. Esta acción varía según el tipo de software que se va a implementar:  
 
-    - **Aplicación** (solo en la versión 1806 y posteriores): vaya al área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y seleccione **Aplicaciones**. Seleccione una aplicación existente y después haga clic en **Crear implementación por fases** en la cinta.  
+    - **Aplicación** (solo en la versión 1806 o posteriores): vaya a la **Biblioteca de software**, expanda **Administración de aplicaciones** y seleccione **Aplicaciones**. Seleccione una aplicación existente y después haga clic en **Crear implementación por fases** en la cinta.  
 
-    - **Actualización de software** (solo en la versión 1810 o en versiones posteriores): vaya a **Biblioteca de software**, expanda **Actualizaciones de software** y seleccione **Todas las actualizaciones de software**. Seleccione una actualización o más y después haga clic en **Crear una implementación por fases** en la cinta de opciones.  
+    - **Actualización de software** (solo en la versión 1810 o posteriores): vaya a la **Biblioteca de software**, expanda **Actualizaciones de software** y seleccione **Todas las actualizaciones de software**. Seleccione una actualización o más y después haga clic en **Crear una implementación por fases** en la cinta de opciones.  
 
         Esta acción está disponible para las actualizaciones de software desde los nodos siguientes:  
         - Actualizaciones de software  
@@ -103,7 +104,7 @@ Include a timeline diagram
         - Mantenimiento de Windows 10, **Todas las actualizaciones de Windows 10**  
         - Administración de cliente de Office 365, **Actualizaciones de Office 365**  
 
-    - **Secuencia de tareas**: vaya al área de trabajo **Biblioteca de software**, expanda **Sistemas operativos** y haga clic en **Secuencias de tareas**. Seleccione una secuencia de tareas existente y después haga clic en **Crear implementación por fases** en la cinta.  
+    - **Secuencia de tareas**: En el área de trabajo **Biblioteca de software**, expanda **Sistemas operativos** y seleccione **Secuencias de tareas**. Seleccione una secuencia de tareas existente y después haga clic en **Crear implementación por fases** en la cinta.  
 
 2. En la página **General** asigne un **nombre** y una **descripción** (opcional) a la implementación por fases y seleccione **Crear automáticamente una implementación de dos fases predeterminada**.  
 
@@ -160,7 +161,7 @@ A partir de la versión 1806, puede crear una implementación por fases con fase
        > [!Warning]  
        > No hay ninguna confirmación y no se puede deshacer esta acción.  
 
-    - **Subir** o **Bajar**: el asistente ordena las fases en el orden en que las agrega. La fase agregada más recientemente es la última en la lista. Para cambiar el orden, seleccione una fase y después use uno de estos botones para mover la ubicación de la fase en la lista.  
+    - **Subir** o **Bajar**: el asistente ordena las fases según el orden en que las haya agregado. La fase agregada más recientemente es la última en la lista. Para cambiar el orden, seleccione una fase y después use uno de estos botones para mover la ubicación de la fase en la lista.  
 
        > [!Important]  
        > Revise la configuración de la fase después de cambiar el orden. Asegúrese de que la siguiente configuración sigue siendo coherente con los requisitos para esta implementación por fases:  

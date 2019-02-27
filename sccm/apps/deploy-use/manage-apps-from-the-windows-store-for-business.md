@@ -10,12 +10,13 @@ ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ae137cae29d49413ca11668ff0cc744168e91e21
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d0a32357001f37f537f13fe85e71a41f9cb658ac
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383684"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122447"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-with-configuration-manager"></a>Administración de aplicaciones desde Microsoft Store para Empresas con Configuration Manager
 
@@ -26,7 +27,7 @@ ms.locfileid: "39383684"
 
 Microsoft Store para Empresas admite dos tipos de aplicaciones:
 
-- **En línea**: este tipo de licencia requiere que los usuarios y dispositivos se conecten a la tienda para obtener una aplicación y su licencia. Los dispositivos Windows 10 deben estar unidos a un dominio de Azure Active Directory (Azure AD).  
+- **En línea**: este tipo de licencia necesita que los usuarios y dispositivos se conecten a la tienda para obtener una aplicación y su licencia. Los dispositivos Windows 10 deben estar unidos a un dominio de Azure Active Directory (Azure AD).  
 
 - **Sin conexión**: este tipo permite almacenar las aplicaciones y licencias en caché para implementarlas directamente en la red local. No es necesario que los dispositivos se conecten a la tienda o tengan una conexión a Internet.
 
@@ -82,7 +83,7 @@ Después, se producen los comportamientos siguientes:
 
 - El usuario debe completar la instalación desde la tienda.  
 
-- En la consola de Configuration Manager, el estado de implementación de la aplicación se notifica con el error "La aplicación de Microsoft Store se abrió en el equipo cliente y está esperando a que el usuario complete la instalación".  
+- En la consola de Configuration Manager, se muestra el siguiente error en los informes de estado de implementación de aplicaciones: “La aplicación de la Tienda Windows se abrió en el equipo cliente y está esperando a que el usuario complete la instalación”.  
 
 En el siguiente ciclo de evaluación de la aplicación:  
 
@@ -124,9 +125,9 @@ En la página **Aplicación** del Asistente para servicios de Azure, configure e
 
 En la página **Configuraciones** del Asistente para servicios de Azure, especifique la información siguiente:  
 
-- **Ruta de acceso al almacenamiento de contenido de aplicaciones de Microsoft Store para Empresas**: especifique una ruta de acceso de red compartida, incluida una carpeta. Por ejemplo, `\\server\share\folder`. Cuando el servidor de sitio se sincronice con la tienda, almacena en caché el contenido en esta ubicación. Al crear una aplicación en Configuration Manager, el servidor de sitio copia el contenido de la aplicación de esta caché local a la biblioteca de contenido del sitio.  
+- **Ruta de acceso al almacenamiento de contenido de aplicaciones de Microsoft Store para Empresas**: especifique una ruta de red compartida, incluida la carpeta. Por ejemplo, `\\server\share\folder`. Cuando el servidor de sitio se sincronice con la tienda, almacena en caché el contenido en esta ubicación. Al crear una aplicación en Configuration Manager, el servidor de sitio copia el contenido de la aplicación de esta caché local a la biblioteca de contenido del sitio.  
 
-- **Idiomas seleccionados**: seleccione los idiomas que se van a sincronizar desde la tienda y se van a mostrar a los usuarios en el Centro de software. Por ejemplo, si el usuario configura Windows para el alemán, en el Centro de software se muestran cadenas en alemán para la aplicación de la tienda. Este comportamiento requiere que ese idioma se sincronice y exista para la aplicación específica.    
+- **Idiomas seleccionados**: seleccione los idiomas que se van a sincronizar desde la tienda y se mostrarán a los usuarios en el Centro de software. Por ejemplo, si el usuario configura Windows para el alemán, en el Centro de software se muestran cadenas en alemán para la aplicación de la tienda. Este comportamiento requiere que ese idioma se sincronice y exista para la aplicación específica.    
 
 - **Idioma predeterminado**: si el idioma del usuario no está disponible, seleccione el idioma predeterminado que se va a usar.  
 

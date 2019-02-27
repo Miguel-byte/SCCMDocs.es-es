@@ -10,12 +10,13 @@ ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 008da23a6fedf1666a29754dc41a47c61f8bfbda
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a5336db0bd16d4845650bae775f2eff895e617fb
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384239"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142279"
 ---
 # <a name="use-a-pull-distribution-point-with-configuration-manager"></a>Usar un punto de distribución de extracción con Configuration Manager
 
@@ -73,13 +74,13 @@ Cuando use un punto de distribución de extracción, revise y configure las sigu
 
     -   **Número de reintentos**: número de veces que el administrador de transferencia de paquetes intenta notificar al punto de distribución de extracción que descargue el contenido. Después de intentarlo este número de veces, el Administrador de transferencia de paquetes cancela la transferencia. Este valor es 30 de forma predeterminada.  
 
-    -   **Retraso antes del reintento (minutos):** número de minutos que el Administrador de transferencia de paquetes espera entre los intentos. Este valor es 20 de forma predeterminada.  
+    -   **Retraso antes de cada reintento (minutos)**: número de minutos que el administrador de transferencia de paquetes espera entre cada intento. Este valor es 20 de forma predeterminada.  
 
 5.  En la lista **Configuración del sondeo de estado**, revise los valores siguientes:  
 
-    -   **Number of polls** (Número de sondeos): número de veces que el Administrador de transferencia de paquetes se pone en contacto con el punto de distribución de extracción para recuperar el estado del trabajo. Si intenta este número de veces antes de que se complete el trabajo, el Administrador de transferencia de paquetes cancela la transferencia. Este valor es 72 de forma predeterminada.   
+    -   **Número de sondeos**: número de veces que el Administrador de transferencia de paquetes establece el contacto con el punto de distribución de extracción para recuperar el estado del trabajo. Si intenta este número de veces antes de que se complete el trabajo, el Administrador de transferencia de paquetes cancela la transferencia. Este valor es 72 de forma predeterminada.   
 
-    -   **Retraso antes del reintento (minutos):** número de minutos que el Administrador de transferencia de paquetes espera entre los intentos. Este valor es 60 de forma predeterminada.   
+    -   **Retraso antes de cada reintento (minutos)**: número de minutos que el administrador de transferencia de paquetes espera entre cada intento. Este valor es 60 de forma predeterminada.   
     
     > [!NOTE]  
     >  Cuando el Administrador de transferencia de paquetes cancela un trabajo porque supera el número de reintentos de sondeo, el punto de distribución de extracción continúa con la descarga del contenido. Cuando termina, el punto de distribución de extracción envía el mensaje de estado adecuado y el estado nuevo se refleja en la consola.  

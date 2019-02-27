@@ -10,12 +10,13 @@ ms.assetid: 68fe0e7e-351e-4222-853a-877475adb589
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ce3353d9cc139da53a655f50144c3816b1a4a355
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5ebe37bb97c4a1e231bfaf94f420f7f0471f30f6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411381"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141966"
 ---
 # <a name="communications-between-endpoints-in-configuration-manager"></a>Comunicaciones entre puntos de conexión en Configuration Manager
 
@@ -83,7 +84,7 @@ Cuando se implementa un rol de sistema de sitio que usa Internet Information Ser
 
 Existen dos fases cuando un cliente se comunica con un punto de administración: autenticación (transporte) y autorización (mensaje). Este proceso varía en función de los factores siguientes: 
 - Configuración del sitio: HTTP, HTTPS o HTTP mejorado
-- Configuración de punto de administración: Solo HTTPS, o bien permite HTTP o HTTPS
+- Configuración del punto de administración: solo HTTPS, o bien permite HTTP o HTTPS
 - Identidad de dispositivo para escenarios centrados en el dispositivo
 - Identidad de usuario para escenarios centrados en el usuario
 
@@ -91,8 +92,8 @@ Use la tabla siguiente para obtener información sobre cómo funciona este proce
 
 | Tipo de PA  | Autenticación de cliente  | Autorización de cliente<br>Identidad del dispositivo  | Autorización de cliente<br>Identidad del usuario  |
 |----------|---------|---------|---------|
-| HTTP     | Anónima<br>Con HTTP mejorado, el sitio comprueba el token de *usuario* o *dispositivo* de Azure AD. | Solicitud de ubicación: anónima<br>Paquete de cliente: anónimo<br>Registro, mediante uno de los métodos siguientes para demostrar la identidad del dispositivo:<br> - Anónimo (aprobación manual)<br> - Autenticación integrada en Windows<br> - Token de *dispositivo* de Azure AD (HTTP mejorado)<br>Después del registro, el cliente usa la firma de mensajes para demostrar la identidad del dispositivo | Para los escenarios centrados en el usuario, mediante uno de los métodos siguientes para demostrar la identidad del usuario:<br> - Autenticación integrada en Windows<br> - Token de *usuario* de Azure AD (HTTP mejorado) |
-| HTTPS    | Mediante uno de los métodos siguientes:<br> - Certificado PKI<br> - Autenticación integrada en Windows<br> - Token de *usuario* o *dispositivo* de Azure AD | Solicitud de ubicación: anónima<br>Paquete de cliente: anónimo<br>Registro, mediante uno de los métodos siguientes para demostrar la identidad del dispositivo:<br> - Anónimo (aprobación manual)<br> - Autenticación integrada en Windows<br> - Certificado PKI<br> - Token de *usuario* o *dispositivo* de Azure AD<br>Después del registro, el cliente usa la firma de mensajes para demostrar la identidad del dispositivo | Para los escenarios centrados en el usuario, mediante uno de los métodos siguientes para demostrar la identidad del usuario:<br> - Autenticación integrada en Windows<br> - Token de *usuario* de Azure AD |
+| HTTP     | Anónima<br>Con HTTP mejorado, el sitio comprueba el token de *usuario* o *dispositivo* de Azure AD. | Solicitud de ubicación: Anónima<br>Paquete de cliente: Anónima<br>Registro, mediante uno de los métodos siguientes para demostrar la identidad del dispositivo:<br> - Anónimo (aprobación manual)<br> - Autenticación integrada en Windows<br> - Token de *dispositivo* de Azure AD (HTTP mejorado)<br>Después del registro, el cliente usa la firma de mensajes para demostrar la identidad del dispositivo | Para los escenarios centrados en el usuario, mediante uno de los métodos siguientes para demostrar la identidad del usuario:<br> - Autenticación integrada en Windows<br> - Token de *usuario* de Azure AD (HTTP mejorado) |
+| HTTPS    | Mediante uno de los métodos siguientes:<br> - Certificado PKI<br> - Autenticación integrada en Windows<br> - Token de *usuario* o *dispositivo* de Azure AD | Solicitud de ubicación: Anónima<br>Paquete de cliente: Anónima<br>Registro, mediante uno de los métodos siguientes para demostrar la identidad del dispositivo:<br> - Anónimo (aprobación manual)<br> - Autenticación integrada en Windows<br> - Certificado PKI<br> - Token de *usuario* o *dispositivo* de Azure AD<br>Después del registro, el cliente usa la firma de mensajes para demostrar la identidad del dispositivo | Para los escenarios centrados en el usuario, mediante uno de los métodos siguientes para demostrar la identidad del usuario:<br> - Autenticación integrada en Windows<br> - Token de *usuario* de Azure AD |
 
 > [!Tip]  
 > Para obtener más información sobre la configuración del punto de administración para otros tipos de identidad de dispositivo y con la puerta de enlace de administración en la nube, vea [Habilitar un punto de administración para HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
@@ -224,7 +225,7 @@ También se establecen las configuraciones siguientes:
 
 -   Para instalar un sitio o un rol de sistema de sitio, debe especificar una cuenta que tenga permisos de administrador local en el equipo especificado.  
 
-#### <a name="scenario-2-communication-in-a-site-that-spans-forests"></a>Escenario 2: Comunicación en un sitio que abarca bosques  
+#### <a name="scenario-2-communication-in-a-site-that-spans-forests"></a>Escenario 2: La comunicación en un sitio que abarca bosques  
 Este escenario no requiere una confianza de bosque bidireccional.  
 
 Los sitios primarios admiten la instalación de roles de sistema de sitio en equipos de bosques remotos.  
@@ -265,9 +266,9 @@ Es posible que tenga que configurar el acceso del punto de administración y pun
 
 Si configura una cuenta de usuario de dominio para que sea la cuenta de conexión para estos roles de sistema de sitio, asegúrese de que la cuenta de usuario de dominio tenga acceso adecuado a la base de datos de SQL Server en ese sitio:  
 
--   Punto de administración: **Cuenta de conexión a la base de datos del punto de administración**  
+-   Punto de administración: **cuenta de conexión a la base de datos del punto de administración**  
 
--   Punto de inscripción: **Cuenta de conexión de punto de inscripción**  
+-   Punto de inscripción: **cuenta de conexión de punto de inscripción**  
 
 Tenga en cuenta la siguiente información adicional cuando planee roles de sistema de sitio en otros bosques:  
 
@@ -275,7 +276,7 @@ Tenga en cuenta la siguiente información adicional cuando planee roles de siste
 
 -   Cuando el punto de administración basado en Internet confía en el bosque que contiene las cuentas de usuario, se admiten las directivas de usuario. Cuando no existe confianza, solo se admiten las directivas de equipo.  
 
-#### <a name="scenario-3-communication-between-clients-and-site-system-roles-when-the-clients-arent-in-the-same-active-directory-forest-as-their-site-server"></a>Escenario 3: Comunicación entre clientes y roles de sistema de sitio cuando los clientes no están en el mismo bosque de Active Directory que su servidor de sitio  
+#### <a name="scenario-3-communication-between-clients-and-site-system-roles-when-the-clients-arent-in-the-same-active-directory-forest-as-their-site-server"></a>Escenario 3: comunicación entre clientes y roles de sistema de sitio cuando los clientes no están en el mismo bosque de Active Directory que su servidor de sitio  
 Configuration Manager admite los escenarios siguientes para los clientes que no están en el mismo bosque que el servidor de sitio de su sitio:  
 
 -   Hay una confianza de bosque bidireccional entre el bosque del cliente y el bosque del servidor de sitio.  

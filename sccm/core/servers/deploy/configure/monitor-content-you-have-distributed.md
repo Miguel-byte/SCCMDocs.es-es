@@ -10,12 +10,13 @@ ms.assetid: 82e8a693-9adf-4ca3-8484-7e101c34c7c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 44ddf230d33759787636e88f6edcdd79744fd7b2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f6bc81a1aa6d8464094195c33faeecfeaf2d46f0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338931"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123937"
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>Supervisión del contenido que se ha distribuido con System Center Configuration Manager
 
@@ -157,11 +158,11 @@ A partir de la versión 1610, puede usar el panel **Orígenes de datos de client
 En la consola, vaya a **Supervisión** > **Estado de distribución** > **Orígenes de datos de cliente**. Aquí puede seleccionar un período de tiempo que se aplicará al panel. A continuación, en la pantalla, puede seleccionar el grupo de límites o el paquete para el que desea ver información. Al ver la información, puede mantener el puntero sobre la superficie para ver más detalles sobre los distintos orígenes de contenido o directiva.
 
 Entre los detalles se incluye lo siguiente:  
-- **Orígenes de contenido de cliente**: muestra el origen desde el que los clientes obtuvieron el contenido.
-- **Puntos de distribución**: muestra el número de puntos de distribución que forman parte del grupo de límites seleccionado.
-- **Clientes que utilizan un punto de distribución**: del número de clientes que están en el grupo de límites seleccionado, muestra cuántos usaron un punto de distribución para obtener el contenido.
-- **Orígenes de almacenamiento en caché del mismo nivel**: para el grupo de límites seleccionado, muestra cuántos orígenes de almacenamiento caché del mismo nivel han informado del historial de descargas.
-- **Clientes que utilizan almacenamiento caché del mismo nivel**: del número de clientes que están en el grupo de límites seleccionado, muestra cuántos usaron un origen de almacenamiento caché del mismo nivel para obtener el contenido.
+- **Orígenes de contenido de cliente**: muestra el origen desde el que obtienen contenido los clientes.
+- **Puntos de distribución:** muestra el número de puntos de distribución que forman parte del grupo de límites seleccionado.
+- **Clientes que utilizan un punto de distribución**: del número de clientes que están en el grupo de límites seleccionado, muestra cuántos han usado un punto de distribución para obtener el contenido.
+- **Orígenes de almacenamiento en caché del mismo nivel**: para el grupo de límites seleccionado, muestra cuántos orígenes de caché del mismo nivel han informado del historial de descargas.
+- **Clientes que usan un elemento del mismo nivel**: del número de clientes que están en el grupo de límites seleccionado, muestra cuántos han usado un origen de caché del mismo nivel para obtener el contenido.
 
 
 

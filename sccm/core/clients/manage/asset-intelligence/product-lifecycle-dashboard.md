@@ -10,12 +10,13 @@ ms.assetid: 8b5b144a-0e5f-4fcc-87b2-33b9bcdb5655
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bda6e266c6be8897de87a2a30fb0198a4b4c8446
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 716c5218eafaf6297292fdd852589b7327e2ecaa
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456030"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120035"
 ---
 # <a name="manage-microsoft-lifecycle-policy-with-configuration-manager"></a>Administrar la directiva de ciclo de vida de Microsoft con Configuration Manager
 
@@ -62,19 +63,19 @@ Para tener acceso al panel de ciclo de vida, en la consola de Configuration Mana
 ![Captura de pantalla del panel de ciclo de vida del producto en la consola](media/product-lifecycle-dashboard.png)
 
 Cambie la vista seleccionando una de las siguientes opciones de la lista **Categoría de productos**:  
-- **Todos**: ver todos los productos de forma conjunta  
-- **Cliente Windows**: ver las versiones del sistema operativo del cliente de Windows  
-- **Windows Server**: ver las versiones del sistema operativo del servidor de Windows  
+- **Todo**: ver todos los productos de forma conjunta  
+- **Cliente de Windows**: ver las versiones del SO del cliente de Windows  
+- **Windows Server**: ver las versiones del SO de Windows Server  
 - **Base de datos**: ver las versiones de SQL Server  
-- **Configuration Manager**: ver las versiones de Configuration Manager (a partir de la versión 1810)  
+- **Configuration Manager**: a partir de la versión 1810, ver las versiones de Configuration Manager  
 
 El panel presenta los iconos siguientes:  
 
-- **Los cinco principales productos cuyo ciclo de vida ha expirado**: este icono es una vista de datos consolidados de los productos que se encuentran en su entorno cuyo ciclo de vida ha expirado. El gráfico muestra el software instalado que ha expirado en comparación con el ciclo de vida de soporte técnico para sistemas operativos y productos de SQL server.  
+- **Cinco principales productos que han superado el fin de su ciclo de vida**: este icono es una vista de datos consolidados de productos que se encuentran en su entorno y cuyo fin de ciclo de vida se ha superado. El gráfico muestra el software instalado que ha expirado en comparación con el ciclo de vida de soporte técnico para sistemas operativos y productos de SQL server.  
 
-- **Los cinco principales productos que se aproximan al final de su ciclo de vida**: este icono es una vista de datos consolidados de los productos que se encuentran en su entorno cuyo ciclo de vida finaliza en un plazo de 18 meses. El gráfico muestra el software instalado al que le quedan 18 meses en relación con el ciclo de vida de soporte técnico para sistemas operativos y productos de SQL server.  
+- **Cinco principales productos que se aproximan al final de su ciclo de vida**: este icono es una vista de datos consolidados de productos que se encuentran en su entorno cuyo ciclo de vida finaliza en un plazo de 18 meses. El gráfico muestra el software instalado al que le quedan 18 meses en relación con el ciclo de vida de soporte técnico para sistemas operativos y productos de SQL server.  
 
-- **Datos de ciclo de vida de los productos instalados**: este icono ofrece una idea general del momento en el que un producto pasa del estado con soporte técnico al estado expirado. El gráfico proporciona un desglose del número de clientes en los que está instalado el producto y el estado de disponibilidad del soporte técnico, junto con un vínculo para obtener más información acerca de los siguientes pasos que se deben realizar. En el gráfico se incluye la siguiente información:     
+- **Datos del ciclo de vida de los productos instalados:** este icono proporciona una idea general de cuándo un producto cambia del estado admitido al estado expirado. El gráfico proporciona un desglose del número de clientes en los que está instalado el producto y el estado de disponibilidad del soporte técnico, junto con un vínculo para obtener más información acerca de los siguientes pasos que se deben realizar. En el gráfico se incluye la siguiente información:     
     - Tiempo de soporte técnico restante
     - Número en el entorno 
     - Fecha de finalización del soporte técnico estándar
@@ -90,14 +91,14 @@ El panel presenta los iconos siguientes:
 
 También existen informes adicionales. En la consola de Configuration Manager, vaya al área de trabajo **Supervisión**, expanda **Informes** y expanda **Informes**. Se agregan los siguientes informes nuevos a la categoría **Asset Intelligence**:  
 
-- **Ciclo de vida 01A: equipos con un producto de software específico**: vea una lista de equipos en los que se detecta un producto determinado.  
+- **Ciclo de vida 01A (equipos con un producto de software específico)**: Vea una lista de equipos en los que se detecta un producto especificado.  
 
-- **Ciclo de vida 02A: lista de equipos con productos expirados de la organización**: vea equipos que contienen productos expirados. Este informe se puede filtrar por nombre de producto.
+- **Ciclo de vida 02A (lista de equipos con productos que han expirado en la organización)**: Vea equipos que contienen productos expirados. Este informe se puede filtrar por nombre de producto.
 
-- **Ciclo de vida 03A: lista de productos expirados que se encuentran en la organización**: vea los detalles de productos de su entorno cuyo ciclo de vida ha expirado.  
+- **Ciclo de vida 03A (lista de productos expirados que se han encontrado en la organización)**: Vea los detalles de productos de su entorno cuyo ciclo de vida ha expirado.  
 
-- **Ciclo de vida 04A: información general del ciclo de vida de productos**: vea una lista de los ciclos de vida de los productos. Filtre la lista por nombre de producto y los días para que expire.  
+- **Ciclo de vida 04A (información general del ciclo de vida de los productos)**: Vea una lista de los ciclos de vida de los productos. Filtre la lista por nombre de producto y los días para que expire.  
 
-- **Ciclo de vida 05A: panel de ciclo de vida del producto**: a partir de la versión 1810, este informe incluye información similar a la del panel de consola. Seleccione una categoría para ver el recuento de productos en su entorno y los días de soporte técnico que le quedan.  
+- **Ciclo de vida 05A (panel de ciclo de vida del producto)**: A partir de la versión 1810, este informe incluye información similar a la del panel de consola. Seleccione una categoría para ver el recuento de productos en su entorno y los días de soporte técnico que le quedan.  
 
 Para obtener más información, vea [Lista de informes](/sccm/core/servers/manage/list-of-reports#asset-intelligence).<!--SCCMDocs issue 997-->  

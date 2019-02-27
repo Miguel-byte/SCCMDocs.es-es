@@ -10,12 +10,13 @@ ms.assetid: 29dd51b8-6576-4010-81ba-3129ed2c3421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d630c5d02b6c7729e5f26ce3915f48bf20aef7e2
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 0925a4cc4e4db0a178a4ccf1c7e959a76910f6e8
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893760"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142177"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1802-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de uso para diagnóstico de la versión 1802 de System Center Configuration Manager
 
@@ -43,7 +44,7 @@ El nivel Básico incluye datos sobre la jerarquía, datos que son necesarios par
 
 Para la versión 1802 de Configuration Manager, este nivel incluye los datos siguientes:
 
-- Estadísticas sobre las conexiones de consola de Configuration Manager: versión de SO, idioma, SKU y arquitectura, memoria del sistema, número de procesadores lógicos, identificador de sitio de conexión, versiones instaladas de .NET y paquetes de idioma de la consola.
+- Estadísticas sobre las conexiones de la consola de Configuration Manager: versión de SO, idioma, SKU y arquitectura; memoria del sistema, número de procesadores lógicos, identificador de sitio de conexión, versiones instaladas de .NET y paquetes de idioma de la consola
 
 - Recuentos básicos de aplicación y tipo de implementación: aplicaciones totales, aplicaciones totales con varios tipos de implementación, aplicaciones totales con dependencias, aplicaciones totales reemplazadas y recuento de tecnologías de implementación en uso.
 
@@ -272,7 +273,7 @@ Para la versión 1802 de Configuration Manager, este nivel incluye los datos sig
   - Directiva de Windows Hello para empresas (creada, implementada).
 
 
-### <a name="content"></a>Contenido  
+### <a name="content"></a>Content  
 
   - ***[Actualizado]*** Estadísticas de grupo de límites: cuántas rápidas, cuántas lentas, cantidad por grupo y relaciones de reserva.
 

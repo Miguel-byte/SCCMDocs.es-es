@@ -10,12 +10,13 @@ ms.assetid: 27261853-1641-4826-98c6-afbb73a1209d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bb3bcd0e7301ff2ef7baeff29de038cbd8476525
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 58a3c69e6206aa651e55f96286f98f64f748de70
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383286"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137143"
 ---
 # <a name="troubleshoot-the-scap-extensions-for-configuration-manager"></a>Solucionar problemas de extensiones SCAP para Configuration Manager
 
@@ -68,7 +69,7 @@ Aquí encontrará algunos problemas y soluciones comunes para ayudarle a solucio
 
      - Es más probable que la nueva configuración no haya surtido efecto todavía. De forma predeterminada, los clientes de Active Directory comprueban las actualizaciones de directiva de grupo cada 90 minutos. Este ciclo puede ser uno de los motivos por los que parece que la configuración no se ha aplicado, aunque haya configurado correctamente las directivas.  
 
-     - Muchas configuraciones de equipo requieren un reinicio para que surtan efecto. Por ejemplo, el valor para **Criptografía de sistema: usar algoritmos que cumplan FIPS para cifrado, firma y operaciones hash** requiere reiniciar el equipo para que Windows pueda usar los algoritmos de cifrado especificados. Omita el intervalo de actualización de directiva de grupo escribiendo el siguiente comando en un símbolo del sistema con privilegios de administrador: `gpupdate /force`. Una vez completada la actualización de la directiva de grupo, reinicie el equipo para asegurarse de que toda la configuración surta efecto. Para obtener más información, vea [Descripción de la utilidad para actualizar Directiva de grupo](https://support.microsoft.com/help/298444).
+     - Muchas configuraciones de equipo requieren un reinicio para que surtan efecto. Por ejemplo, la configuración denominada **Criptografía de sistema: usar algoritmos que cumplan FIPS para cifrado, firma y operaciones hash** necesita reiniciar el equipo para que Windows pueda usar los algoritmos de cifrado especificados. Omita el intervalo de actualización de directiva de grupo escribiendo el siguiente comando en un símbolo del sistema con privilegios de administrador: `gpupdate /force`. Una vez completada la actualización de la directiva de grupo, reinicie el equipo para asegurarse de que toda la configuración surta efecto. Para obtener más información, vea [Descripción de la utilidad para actualizar Directiva de grupo](https://support.microsoft.com/help/298444).
 
 - Tengo problemas para proporcionar la conexión de base de datos con la información de la organización.  
 

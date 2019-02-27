@@ -10,12 +10,13 @@ ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 515385c6c6855e63dc32b522edff9cd2047331bd
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a41b2c0931fc3deb72ff92d8b12b433ef5651aa1
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343041"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129602"
 ---
 # <a name="security-and-privacy-for-site-administration-in-system-center-configuration-manager"></a>Seguridad y privacidad para la administración de sitios en System Center Configuration Manager
 
@@ -98,7 +99,7 @@ El aislamiento de cada rol de sistema de sitio en un servidor diferente reduce l
 
 El Asistente para configuración de seguridad (SCW) le ayuda a crear una directiva de seguridad que se puede aplicar a cualquier servidor de la red. Después de instalar la plantilla de System Center Configuration Manager, SCW reconoce las aplicaciones, puertos, servicios y roles de sistema de sitio de Configuration Manager. Después, permite la comunicación que se requiere para Configuration Manager y bloquea las comunicaciones que no son necesarias.  
 
-El Asistente para configuración de seguridad se incluye con el kit de herramientas de System Center 2012 Configuration Manager, que puede descargar del Centro de descarga de Microsoft: [System Center 2012 - Configuration Manager Component Add-ons and Extensions](http://go.microsoft.com/fwlink/p/?LinkId=251931) (System Center 2012: complementos y extensiones de componentes de Configuration Manager).  
+El Asistente para configuración de seguridad se incluye con el kit de herramientas de System Center 2012 Configuration Manager, que puede descargar desde el Centro de descarga de Microsoft: [System Center 2012 — Configuration Manager Component Add-ons and Extensions (System Center 2012: complementos y extensiones de componente de Configuration Manager)](http://go.microsoft.com/fwlink/p/?LinkId=251931).  
 
 **Configure direcciones IP estáticas para los sistemas de sitio.**  
 

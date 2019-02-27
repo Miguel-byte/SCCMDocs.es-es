@@ -10,12 +10,13 @@ ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3dfb749695ffb7a8ecdeab5e4fbed764023eb6e2
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9671ccad42fc9135193cf41e058b472b52a412e1
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385599"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142313"
 ---
 # <a name="security-and-privacy-for-configuration-manager-clients"></a>Seguridad y privacidad para los clientes de Configuration Manager
 
@@ -201,27 +202,27 @@ Para los dispositivos móviles basados en Internet que inscriba con Configuratio
 
 #### <a name="configure-the-password-settings-to-help-protect-mobile-devices-from-unauthorized-access"></a>Configure la contraseña para facilitar la protección de los dispositivos móviles contra el acceso no autorizado  
 
-*Para dispositivos móviles inscritos con Configuration Manager*: use un elemento de configuración de dispositivo móvil para configurar la complejidad de contraseña como el PIN. Especifique al menos la longitud mínima de la contraseña predeterminada.  
+*Para dispositivos móviles inscritos por Configuration Manager*: use un elemento de configuración de dispositivos móviles para configurar la complejidad de contraseñas como el PIN. Especifique al menos la longitud mínima de la contraseña predeterminada.  
 
-*Para dispositivos móviles que no tienen instalado el cliente de Configuration Manager, pero están administrados con el conector de Exchange Server*: configure las **opciones de contraseña** para el conector de Exchange Server de forma que la complejidad de contraseña sea el PIN. Especifique al menos la longitud mínima de la contraseña predeterminada.  
+*Para dispositivos móviles que no tienen instalado el cliente de Configuration Manager, pero que se administran mediante el conector de Exchange Server*: configure las **Opciones de contraseña** para el conector de Exchange Server, como que la complejidad de contraseñas sea el PIN. Especifique al menos la longitud mínima de la contraseña predeterminada.  
 
 
 #### <a name="only-allow-applications-to-run-that-are-signed-by-companies-that-you-trust"></a>Solo permitir la ejecución de aplicaciones firmadas por compañías en las que confíe  
 
 Ayuda a impedir la manipulación de información de inventario e información de estado al permitir que las aplicaciones solo se ejecuten cuando estén firmadas por compañías en la se confíe. No permita que los dispositivos instalen archivos no firmados.  
 
-*Para dispositivos móviles inscritos con Configuration Manager*: use un elemento de configuración de dispositivo móvil para establecer la opción de seguridad **Aplicaciones sin firmar** en **Prohibido**. Configure las **Instalaciones de archivos sin firmar** para que sean un origen de confianza.  
+*Para dispositivos móviles inscritos por Configuration Manager*: use un elemento de configuración de dispositivos móviles para establecer la opción de seguridad **Aplicaciones sin firmar** en **Prohibido**. Configure las **Instalaciones de archivos sin firmar** para que sean un origen de confianza.  
 
-*Para dispositivos móviles que no tienen instalado el cliente de Configuration Manager, pero están administrados con el conector de Exchange Server*: establezca la **Configuración de aplicación** del conector de Exchange Server de forma que la **Instalación de archivos sin firmar** y las **Aplicaciones sin firmar** estén **Prohibidas**.  
+*Para dispositivos móviles que no tienen instalado el cliente de Configuration Manager, pero que se administran mediante el conector de Exchange Server*: en la **Configuración de la aplicación** del conector de Exchange Server, establezca **Instalación de archivos sin firmar** y **Aplicaciones sin firmar** como **Prohibido**.  
 
 
 #### <a name="lock-mobile-devices-when-not-in-use"></a>Bloquear los dispositivos móviles cuando no estén en uso  
 
 Ayuda a impedir los ataques de elevación de privilegios al bloquear el dispositivo móvil cuando no esté en uso.
 
-*Para dispositivos móviles inscritos con Configuration Manager*: use un elemento de configuración de dispositivo móvil para configurar la opción de contraseña **Tiempo de inactividad en minutos antes de que se bloquee el dispositivo móvil**.  
+*Para dispositivos móviles inscritos por Configuration Manager*: use un elemento de configuración de dispositivo móvil para configurar la opción de contraseña **Tiempo de inactividad en minutos antes de que se bloquee el dispositivo móvil**.  
 
-*Para dispositivos móviles que no tienen instalado el cliente de Configuration Manager, pero están administrados con el conector de Exchange Server*: configure las **opciones de contraseña** para el conector de Exchange Server de forma que se establezca el **Tiempo de inactividad en minutos antes de que se bloquee el dispositivo móvil**.  
+*Para dispositivos móviles que no tienen instalado el cliente de Configuration Manager, pero que se administran mediante el conector de Exchange Server*: configure la **Configuración de contraseña** del conector de Exchange Server para establecer el **Tiempo de inactividad en minutos antes de que se bloquee el dispositivo móvil**.  
 
 
 #### <a name="restrict-the-users-who-can-enroll-their-mobile-devices"></a>Restringir los usuarios que pueden inscribir sus dispositivos móviles  

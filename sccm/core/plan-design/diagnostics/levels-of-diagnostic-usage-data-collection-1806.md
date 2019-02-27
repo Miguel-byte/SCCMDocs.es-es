@@ -10,18 +10,19 @@ ms.assetid: a0287beb-70a9-4b57-a627-e7bfba27fd3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d964295134538cf281af214830a5bc416484be51
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4bfd2a4cef78b6674e6f288483190ca7c48542fe
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893678"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131921"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1806"></a>Niveles de recopilación de datos de utilización para diagnóstico en la versión 1806
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-La versión 1806 de Configuration Manager recopila tres niveles de datos de diagnóstico y utilización: **Básico**, **Mejorado** y **Completo**. De forma predeterminada, esta característica se establece en el nivel Mejorado. En las secciones siguientes se proporcionan detalles adicionales sobre los datos que se recopilan en cada nivel.
+La versión 1806 de Configuration Manager recopila tres niveles de datos de diagnóstico y uso: **Básico**, **Mejorado** y **Completo**. De forma predeterminada, esta característica se establece en el nivel Mejorado. En las secciones siguientes se proporcionan detalles adicionales sobre los datos que se recopilan en cada nivel.
 
 Los cambios respecto de versiones anteriores se indican mediante la nota ***[Nuevo]***, ***[Actualizado]***, ***[Quitado]*** o ***[Movido]***.
 
@@ -43,7 +44,7 @@ El nivel Básico incluye datos sobre la jerarquía, datos que son necesarios par
 
 Para la versión 1806 de Configuration Manager, este nivel incluye los datos siguientes:
 
-- Estadísticas sobre las conexiones de consola de Configuration Manager: versión de SO, idioma, SKU y arquitectura, memoria del sistema, número de procesadores lógicos, identificador de sitio de conexión, versiones instaladas de .NET y paquetes de idioma de la consola.
+- Estadísticas sobre las conexiones de la consola de Configuration Manager: versión de SO, idioma, SKU y arquitectura; memoria del sistema, número de procesadores lógicos, identificador de sitio de conexión, versiones instaladas de .NET y paquetes de idioma de la consola
 
 - Recuentos básicos de aplicación y tipo de implementación: aplicaciones totales, aplicaciones totales con varios tipos de implementación, aplicaciones totales con dependencias, aplicaciones totales reemplazadas y recuento de tecnologías de implementación en uso.
 
@@ -307,7 +308,7 @@ Para la versión 1806 de Configuration Manager, este nivel incluye los datos sig
   - ***[Nuevo]*** Recuento de directivas del explorador Microsoft Edge implementadas  
 
 
-### <a name="content"></a>Contenido  
+### <a name="content"></a>Content  
 
   - Estadísticas de grupo de límites: cuántas rápidas, cuántas lentas, recuento por grupo y relaciones de reserva
 

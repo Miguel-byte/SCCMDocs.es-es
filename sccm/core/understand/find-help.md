@@ -10,12 +10,13 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e6be541a1b26961684f0577f2540132b81f50b7a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f9c4b9bdbd67e26962a4de3ff66643f071339795
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385480"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139483"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>Buscar ayuda para usar Configuration Manager
 
@@ -51,9 +52,9 @@ Para obtener sugerencias sobre cómo buscar, proporcionar comentarios y obtener 
 
 A partir de la versión 1806 de Configuration Manager, puede enviar comentarios sobre el producto directamente desde la consola. Si tiene que adjuntar registros, use [Concentrador de comentarios](#BKMK_FeedbackHub). Puede hacer lo siguiente: <!--1357542-->
 
-  - **Enviar una sonrisa**: enviar comentarios sobre lo que le gustó.
-  - **Enviar una desaprobación**: enviar comentarios sobre lo que no le gustó.
-  - **Enviar una sugerencia**: le lleva al [sitio web de UserVoice](https://configurationmanager.uservoice.com/) para compartir sus ideas.
+  - **Enviar una sonrisa**: envíe comentarios sobre lo que le ha gustado.
+  - **Enviar una desaprobación**: envíe comentarios sobre lo que no le ha gustado.
+  - **Enviar una sugerencia**: se abre el [Sitio web de UserVoice](https://configurationmanager.uservoice.com/) para que pueda compartir su idea.
 
 ![Enviar comentarios en Configuration Manager 1806](media/1806-send-a-smile.png)
 
@@ -133,7 +134,7 @@ Los siguientes vínculos proporcionan información sobre las opciones de soporte
 
 -   [Soporte técnico de Microsoft](https://aka.ms/cmcbsupport)  
 
--   [Configuration Manager Community: System Center Configuration Manager (Current Branch) Survival Guide](https://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx ) (Comunidad de Configuration Manager: Guía de supervivencia de System Center Configuration Manager [rama actual])  
+-   [Comunidad de Configuration Manager: guía de supervivencia de System Center Configuration Manager (rama actual)](https://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx )  
 
 -   [Página de foros de Configuration Manager](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)  
     <!-- NOTE: the above URL requires "en-US" for the category to work -->

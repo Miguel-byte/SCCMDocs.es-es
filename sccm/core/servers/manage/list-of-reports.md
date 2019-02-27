@@ -10,12 +10,13 @@ ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 01112dac89ba0fe9e18dabe186353506d9476213
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cb208bdb360f726a59585d567c239074717acf66
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456777"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120017"
 ---
 # <a name="list-of-reports-in-configuration-manager"></a>Lista de informes en Configuration Manager
 
@@ -207,13 +208,13 @@ Los siete informes siguientes aparecen en la categoría **Almacenamiento de dato
 
 |Nombre del informe|Descripción|  
 |-----------------|-----------------|  
-|**Implementación de aplicaciones**|Historial: vea los detalles de la implementación de aplicaciones para una máquina y una aplicación determinada.|
-|**Cumplimiento de las actualizaciones de software y Endpoint Protection**|Historial: vea los equipos a los que les faltan actualizaciones de software.|
-|**Inventario de hardware general**|Historial: vea todo el inventario de hardware para un equipo específico.|
-|**Inventario de software general**|Historial: vea todo el inventario de software para un equipo específico.|
-|**Información general del mantenimiento de infraestructura**|Historial: muestra información general del mantenimiento de su infraestructura de Configuration Manager.|
-|**Lista de malware detectado**|Historial: vea el malware que se ha detectado en la organización.|
-|**Resumen de distribución de software**|Historial: un resumen de distribución de software para un equipo y anuncio específico.|
+|**Implementación de aplicaciones**|Historial: Vea los detalles de la implementación de aplicaciones para una máquina y una aplicación determinada.|
+|**Cumplimiento de las actualizaciones de software y Endpoint Protection**|Historial: Vea los equipos a los que les faltan actualizaciones de software.|
+|**Inventario de hardware general**|Historial: Vea todo el inventario de hardware para un equipo específico.|
+|**Inventario de software general**|Historial: Vea todo el inventario de software para un equipo específico.|
+|**Información general del mantenimiento de infraestructura**|Historial: Muestra información general del mantenimiento de su infraestructura de Configuration Manager.|
+|**Lista de malware detectado**|Historial: Vea el malware que se ha detectado en la organización.|
+|**Resumen de distribución de software**|Historial: Un resumen de distribución de software para un equipo y anuncio específico.|
 
 
 ## <a name="device-management"></a>Administración de dispositivos  

@@ -10,12 +10,13 @@ ms.assetid: f053fa73-c553-4522-a6b9-f885f23fe57c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 41dd6ad6f8a0292fdb16a0d727665b17e038f87b
-ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ba73d215b9a672f4843c2f1e4a63dfc6bd13ea74
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52820048"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132891"
 ---
 # <a name="package-conversion-manager"></a>Administrador de conversión de paquetes
 
@@ -63,7 +64,7 @@ En esta sección se describen dos planes de conversión de paquetes de ejemplo:
 
 - [Un entorno de prueba de muchos recursos](#bkmk_define-high): tiene un entorno de prueba con los recursos, permisos y arquitectura para replicar por completo el entorno de producción.  
 
-- [Un entorno de prueba de recursos limitados](#bkmk_define-limited): no tiene un entorno de prueba para replicar por completo el entorno de producción.  
+- [Un entorno de prueba con recursos limitados](#bkmk_define-limited): no tiene un entorno de prueba que replique por completo el entorno de producción.  
 
 Ajuste estos planes según sea necesario para otros problemas específicos de su entorno.
 

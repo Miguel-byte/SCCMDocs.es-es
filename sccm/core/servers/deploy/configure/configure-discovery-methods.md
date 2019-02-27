@@ -10,12 +10,13 @@ ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e232875aab086dea04261abc4d83df8d5d03e6c8
-ms.sourcegitcommit: aca62bd3d267b1dbea46d4db6f32d797c5f6263c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6524fb7715c9bc3040996a16b4204464e0505123
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347977"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139194"
 ---
 # <a name="configure-discovery-methods-for-configuration-manager"></a>Configurar métodos de detección para Configuration Manager
 
@@ -173,9 +174,9 @@ Después, utilice la información de las siguientes secciones para configurar lo
 
     2.  Especifique las opciones que modifican el comportamiento de búsqueda:  
 
-        - **Detectar objetos dentro de grupos de Active Directory**: el sitio también examina la pertenencia a grupos en esta ruta de acceso.  
+        - **Detectar objetos dentro de grupos de Active Directory**: el sitio también busca las pertenencias de grupos en esta ruta de acceso.  
 
-        - **Buscar recursivamente contenedores secundarios de Active Directory**: si habilita esta opción, el sitio busca los contenedores o las unidades organizativas adicionales dentro de la ruta de acceso anterior. Si deshabilita esta opción, el sitio solo busca recursos en la ruta de acceso específica.  
+        - **Buscar recursivamente contenedores secundarios de Active Directory**: si habilita esta opción, el sitio buscará contenedores adicionales o unidades organizativas en la ruta de acceso anterior. Si deshabilita esta opción, el sitio solo busca recursos en la ruta de acceso específica.  
 
             A partir de la versión 1806, seleccione los subcontenedores que se excluirán de esta búsqueda recursiva. Esta opción ayuda a reducir el número de objetos detectados. Seleccione **Agregar** para elegir los contenedores en la ruta de acceso anterior. En el cuadro de diálogo Seleccionar nuevo contenedor, seleccione un contenedor secundario para excluir. Seleccione **Aceptar** para cerrar el cuadro de diálogo Seleccionar nuevo contenedor.<!--1358143-->
 
@@ -496,7 +497,7 @@ La Detección de redes no crea mensajes para avisarle cuando haya finalizado. Us
 
     -   Componente: **SMS_NETWORK_DISCOVERY**  
 
-    -   Descripción: **Este componente se detuvo**  
+    -   Descripción: **Este componente se ha detenido**  
 
     Si este mensaje de estado no aparece, Detección de redes no ha terminado.  
 
@@ -506,6 +507,6 @@ La Detección de redes no crea mensajes para avisarle cuando haya finalizado. Us
 
     -   Componente: **SMS_NETWORK_DISCOVERY**  
 
-    -   Descripción: **Este componente se inició**  
+    -   Descripción: **Este componente se ha iniciado**  
 
     Esta información comprueba el inicio de la detección de redes. Si esta información no aparece, vuelva a programar Detección de redes.  

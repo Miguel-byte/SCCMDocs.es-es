@@ -10,12 +10,13 @@ ms.assetid: 2e27b0b7-7bd3-45cd-bc99-9c991606c637
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a67fb2d070c971004418ba47c9eb56b6b0de3e5a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 088f300e475e7299ae0f589790c6c9bfabea3544
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335871"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132566"
 ---
 # <a name="plan-a-client-migration-strategy-in-system-center-configuration-manager"></a>Planear una estrategia de migración de clientes en System Center Configuration Manager
 
@@ -34,9 +35,9 @@ Para migrar clientes de la jerarquía de origen a una jerarquía de destino de S
 ##  <a name="Planning_for_Client_Agent_Migration"></a> Planear la migración de clientes a la jerarquía de destino  
  Cuando se migran clientes de una jerarquía de origen, se actualiza el software cliente en el equipo cliente para coincidir con la versión del producto de la jerarquía de destino.  
 
--   **Una jerarquía de origen de Configuration Manager 2007:** cuando se migran clientes desde una jerarquía de origen que ejecute una versión compatible de Configuration Manager, el software cliente se actualiza a la versión de cliente para la jerarquía de destino.  
+-   **Una jerarquía de origen de Configuration Manager 2007:** cuando migre clientes desde una jerarquía de origen que ejecute una versión compatible de Configuration Manager, el software cliente se actualizará a la versión del cliente para la jerarquía de destino.  
 
--   **Una jerarquía de origen de System Center 2012 Configuration Manager o versiones posteriores:** cuando se migran clientes entre jerarquías con la misma versión del producto, el software cliente no cambia ni se actualiza. En su lugar, el cliente se reasignará desde la jerarquía de origen a un sitio en la jerarquía de destino.  
+-   **Una jerarquía de origen de System Center 2012 Configuration Manager o posteriores:** Cuando se migran clientes entre jerarquías con la misma versión del producto, el software cliente no cambia ni se actualiza. En su lugar, el cliente se reasignará desde la jerarquía de origen a un sitio en la jerarquía de destino.  
 
     > [!NOTE]  
     >  Si no se admite la migración de la versión del producto de una jerarquía a la jerarquía de destino, actualice todos los sitios y los clientes de la jerarquía de origen a una versión del producto admitida. Después de actualizar la jerarquía de origen a una versión admitida del producto, puede realizar la migración entre jerarquías. Para más información, vea la sección [Versiones de Configuration Manager admitidas para la migración](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions) en [Requisitos previos para la migración en System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  

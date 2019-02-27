@@ -10,12 +10,13 @@ ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 9920bd48ad7b953469261602c21a6664580143a2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 07b766db6b80f92eba8d401b3c751ca1d4766b38
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335786"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130867"
 ---
 # <a name="monitor-compliance-settings-in-system-center-configuration-manager"></a>Supervisión de la configuración de cumplimiento en System Center Configuration Manager
 
@@ -39,16 +40,16 @@ Después de haber implementado líneas base de configuración de System Center C
 
      La página **Estado de implementación** contiene las siguientes pestañas:  
 
-    -   **Compatible**: muestra el cumplimiento de la línea base de configuración en función del número de activos afectados. Puede hacer clic en una regla para crear un nodo temporal en el nodo **Usuarios** o **Dispositivos** en el área de trabajo **Activos y compatibilidad** , que contiene todos los usuarios o dispositivos compatibles con esta regla. El panel **Detalles del activo** muestra los usuarios o dispositivos que son conformes a la línea base de configuración. Haga doble clic en un usuario o dispositivo de la lista para mostrar información adicional.  
+    -   **Conforme**: muestra el cumplimiento de la línea de base de configuración según el número de activos afectados. Puede hacer clic en una regla para crear un nodo temporal en el nodo **Usuarios** o **Dispositivos** en el área de trabajo **Activos y compatibilidad** , que contiene todos los usuarios o dispositivos compatibles con esta regla. El panel **Detalles del activo** muestra los usuarios o dispositivos que son conformes a la línea base de configuración. Haga doble clic en un usuario o dispositivo de la lista para mostrar información adicional.  
 
         > [!IMPORTANT]  
         >  Una regla de elemento de configuración no se evalúa si no se detecta o no es aplicable en un dispositivo cliente; sin embargo, la regla se devuelve como conforme.  
 
-    -   **Error**: muestra una lista de todos los errores de la implementación de línea base de configuración seleccionada, en función del número de activos afectados. Puede hacer clic en una regla para crear un nodo temporal en el nodo **Usuarios** o **Dispositivos** , en el área de trabajo **Activos y compatibilidad** , que contiene todos los usuarios o dispositivos que generaron errores con esta regla. Cuando se selecciona un usuario o dispositivo, el panel **Detalles del activo** muestra los usuarios o dispositivos afectados por el problema seleccionado. Haga doble clic en un dispositivo o usuario de la lista para mostrar información adicional sobre el problema.  
+    -   **Error**: muestra una lista de todos los errores de la implementación de línea de base de configuración seleccionada, según el número de activos afectados. Puede hacer clic en una regla para crear un nodo temporal en el nodo **Usuarios** o **Dispositivos** , en el área de trabajo **Activos y compatibilidad** , que contiene todos los usuarios o dispositivos que generaron errores con esta regla. Cuando se selecciona un usuario o dispositivo, el panel **Detalles del activo** muestra los usuarios o dispositivos afectados por el problema seleccionado. Haga doble clic en un dispositivo o usuario de la lista para mostrar información adicional sobre el problema.  
 
-    -   **No compatible**: muestra una lista de todas las reglas no conformes en la línea base en función del número de activos afectados. Puede hacer clic en una regla para crear un nodo temporal en el nodo **Usuarios** o **Dispositivos** en el área de trabajo **Activos y compatibilidad** , que contiene todos los usuarios o dispositivos no compatibles con esta regla. Cuando se selecciona un usuario o dispositivo, el panel **Detalles del activo** muestra los usuarios o dispositivos afectados por el problema seleccionado. Haga doble clic en un usuario o dispositivo de la lista para mostrar información adicional sobre el problema.  
+    -   **No conforme**: muestra una lista de todas las reglas no conformes en la línea base de configuración según el número de activos afectados. Puede hacer clic en una regla para crear un nodo temporal en el nodo **Usuarios** o **Dispositivos** en el área de trabajo **Activos y compatibilidad** , que contiene todos los usuarios o dispositivos no compatibles con esta regla. Cuando se selecciona un usuario o dispositivo, el panel **Detalles del activo** muestra los usuarios o dispositivos afectados por el problema seleccionado. Haga doble clic en un usuario o dispositivo de la lista para mostrar información adicional sobre el problema.  
 
-    -   **Desconocido**: muestra una lista de todos los usuarios y dispositivos que no notificaron el incumplimiento de la implementación de línea base de configuración seleccionada y el estado de cliente actual de los dispositivos.  
+    -   **Desconocido**: muestra una lista de todos los usuarios y dispositivos que no han notificado del incumplimiento de la implementación de línea de base de configuración seleccionada y el estado de cliente actual de los dispositivos.  
 
 5.  En la página **Estado de implementación** , puede revisar la información detallada sobre el cumplimiento de la línea base de configuración implementada. Se crea un nodo temporal en el nodo **Implementaciones** que le permite encontrar esta información rápidamente.  
 
@@ -74,11 +75,11 @@ Después de haber implementado líneas base de configuración de System Center C
     > [!IMPORTANT]  
     >  Los resultados de la evaluación se almacenan en caché en el cliente durante 15 minutos. Si inicia una nueva evaluación dentro del período de 15 minutos, se devuelven los resultados de cumplimiento de esta memoria caché en lugar de una nueva evaluación. Por lo tanto, si realiza un cambio en el cliente que podría afectar a los resultados de la evaluación de cumplimiento, espere hasta que hayan transcurrido los 15 minutos antes de iniciar una nueva evaluación.  
 
-    -   **Compatible**: el equipo cliente es conforme a la línea base de la configuración evaluada.  
+    -   **Conforme**: el equipo cliente cumple con la línea de base de configuración evaluada.  
 
-    -   **No compatible**: el equipo cliente no es conforme a la línea base de la configuración evaluada.  
+    -   **No conforme**: el equipo cliente no cumple con la línea de base de configuración evaluada.  
 
-    -   **Desconocido**: el equipo cliente todavía no ha evaluado la línea base de evaluación. Si quiere iniciar una evaluación fuera de la programación de evaluación de cumplimiento, seleccione las líneas base de configuración para evaluar y, a continuación, haga clic en **Evaluar**.  
+    -   **Desconocido**: el equipo cliente todavía no ha evaluado la línea de base de configuración. Si quiere iniciar una evaluación fuera de la programación de evaluación de cumplimiento, seleccione las líneas base de configuración para evaluar y, a continuación, haga clic en **Evaluar**.  
 
         > [!NOTE]  
         >  Si tiene credenciales de administrador local en el equipo cliente, puede ver detalles de cada línea base de configuración evaluada para determinar qué elemento de configuración está informando de un estado no conforme. Para ello, seleccione la línea base de configuración y, a continuación, haga clic en **Ver informe**.  

@@ -10,12 +10,13 @@ ms.assetid: cb616925-bb94-4b7c-a867-b3d95aef4d5e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fdcd31ec5a2fc5fbba12145115b46b2fbe8d4edd
-ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e586990d049119c3cb00a61c56a1b84763104309
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43297224"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137905"
 ---
 # <a name="troubleshoot-package-conversion-manager"></a>Solución de problemas del Administrador de conversión de paquetes
 
@@ -37,7 +38,7 @@ Si el proveedor de SMS no funciona correctamente, la consola de Configuration Ma
 
 ## <a name="package-readiness"></a>Preparación del paquete
 
-Antes de convertir un paquete en una aplicación, analice el paquete con la función **Analizar** del Administrador de conversión de paquetes. Después del análisis, agregue la columna **Preparación** en el nodo **Paquetes** de la consola de Configuration Manager. La lista de paquetes muestra uno de los siguientes estados de preparación del paquete analizado:
+Antes de convertir un paquete en una aplicación, analice el paquete con la función  **Analizar** del Administrador de conversiones de paquetes. Después del análisis, agregue la columna **Preparación** en el nodo **Paquetes** de la consola de Configuration Manager. La lista de paquetes muestra uno de los siguientes estados de preparación del paquete analizado:
 
  - **Automático**: el paquete se puede convertir directamente con la función **Convertir**.      
 
@@ -46,7 +47,7 @@ Antes de convertir un paquete en una aplicación, analice el paquete con la func
 
  - **Manual**: el paquete necesita algunas adiciones o cambios para poderlo convertir con la función **Corregir y convertir**.  
 
- - **No aplicable**: el paquete no es apto para la conversión. Corrija cualquier problema con el paquete o siga implementándolo como un paquete.  
+ - **No aplicable**: el paquete no es adecuado para la conversión. Corrija cualquier problema con el paquete o siga implementándolo como un paquete.  
 
  - **Error**: el paquete contiene errores. Corrija estos errores manualmente para poder analizarlo y convertirlo.  
 

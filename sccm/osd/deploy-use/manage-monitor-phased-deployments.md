@@ -10,12 +10,13 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5324e00f17770feca25d40c645d8e344df797f21
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5ebf89e46b33649f12ea5770d6e771e811a66094
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456335"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125738"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Administración y supervisión de implementaciones por fases
 
@@ -34,16 +35,16 @@ Cuando se selecciona la opción **Iniciar manualmente la segunda fase de impleme
 
 1. Cómo se inicia esta acción varía según el tipo de software implementado:  
 
-    - **Aplicación** (solo en la versión 1806 y posteriores): vaya al área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y seleccione **Aplicaciones**.   
+    - **Aplicación** (solo en la versión 1806 o posteriores): vaya al área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y seleccione el nodo **Aplicaciones**.   
 
-    - **Actualización de software** (solo en la versión 1810 o en versiones posteriores): vaya al área de trabajo **Biblioteca de software** y después seleccione uno de los nodos siguientes:    
+    - **Actualización de software** (solo en la versión 1810 o posteriores): vaya al área de trabajo **Biblioteca de software** y, después, seleccione uno de los nodos siguientes:    
         - Actualizaciones de software  
             - **Todas las actualizaciones de software**  
             - **Grupos de actualizaciones de software**   
         - Mantenimiento de Windows 10, **Todas las actualizaciones de Windows 10**  
         - Administración de cliente de Office 365, **Actualizaciones de Office 365**  
 
-    - **Secuencia de tareas**: vaya al área de trabajo **Biblioteca de software**, expanda **Sistemas operativos** y haga clic en **Secuencias de tareas**.   
+    - **Secuencia de tareas**: En el área de trabajo **Biblioteca de software**, expanda **Sistemas operativos** y seleccione **Secuencias de tareas**.   
 
 2. Seleccione el software con la implementación por fases.  
 
@@ -61,16 +62,16 @@ Puede suspender o reanudar manualmente una implementación por fases. Por ejempl
 
 1. Cómo se inicia esta acción varía según el tipo de software implementado:  
 
-    - **Aplicación** (solo en la versión 1806 y posteriores): vaya al área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y seleccione **Aplicaciones**.   
+    - **Aplicación** (solo en la versión 1806 o posteriores): vaya al área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y seleccione el nodo **Aplicaciones**.   
 
-    - **Actualización de software** (solo en la versión 1810 o en versiones posteriores): vaya al área de trabajo **Biblioteca de software** y después seleccione uno de los nodos siguientes:    
+    - **Actualización de software** (solo en la versión 1810 o posteriores): vaya al área de trabajo **Biblioteca de software** y, después, seleccione uno de los nodos siguientes:    
         - Actualizaciones de software  
             - **Todas las actualizaciones de software**  
             - **Grupos de actualizaciones de software**   
         - Mantenimiento de Windows 10, **Todas las actualizaciones de Windows 10**  
         - Administración de cliente de Office 365, **Actualizaciones de Office 365**  
 
-    - **Secuencia de tareas**: vaya al área de trabajo **Biblioteca de software**, expanda **Sistemas operativos** y haga clic en **Secuencias de tareas**. Seleccione una secuencia de tareas existente y después haga clic en **Crear implementación por fases** en la cinta.  
+    - **Secuencia de tareas**: En el área de trabajo **Biblioteca de software**, expanda **Sistemas operativos** y seleccione **Secuencias de tareas**. Seleccione una secuencia de tareas existente y después haga clic en **Crear implementación por fases** en la cinta.  
 
 2. Seleccione el software con la implementación por fases.  
 
@@ -92,7 +93,7 @@ A partir de la versión 1806, las implementaciones por fases ahora tienen una ex
 
 Este panel muestra la siguiente información para cada fase de la implementación:  
 
-- **Dispositivos en total**: el número de dispositivos que abarca esta fase.  
+- **Dispositivos en total**: número de dispositivos que abarca esta fase.  
 
 - **Estado**: indica el estado actual de esta fase. Cada fase puede tener uno de los siguientes estados:  
 
@@ -102,7 +103,7 @@ Este panel muestra la siguiente información para cada fase de la implementació
 
     - **Suspendida**: un administrador ha suspendido la implementación.  
 
-- **Progreso**: los estados de implementación con códigos de color de los clientes. Por ejemplo: Correcto, En curso, Error, Requisitos no cumplidos y Desconocido. 
+- **Progreso**: estados de implementación con códigos de color de los clientes. Por ejemplo: Correcto, En curso, Error, Requisitos no cumplidos y Desconocido. 
 
 #### <a name="success-criteria-tile"></a>Icono Criterios de éxito
 

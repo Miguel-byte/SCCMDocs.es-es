@@ -10,12 +10,13 @@ ms.assetid: e80d1151-91db-4a27-8411-a957297b67d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d8587c0640d831a723b9ff7c3a6402d47ee2405
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 03d85a55e51125e40e1df766382b0a074d865a51
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337248"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141626"
 ---
 # <a name="manage-network-bandwidth-for-content"></a>Administración del ancho de banda de red para contenido
 Para ayudarle a administrar el ancho de banda de red que se usa para el proceso de administración de contenido de System Center Configuration Manager, puede usar los controles integrados para la programación y el límite. También puede usar contenido preconfigurado. En las secciones siguientes se describen estas opciones con más detalle.
@@ -59,11 +60,11 @@ Opcionalmente puede configurar el punto de distribución como **preconfigurado**
 
     Las opciones siguientes están disponibles en las propiedades de una aplicación, paquete, paquete de controladores, imagen de arranque, instalador de sistema operativo e imagen. Esta configuración le permite seleccionar cómo se administra la distribución de contenido en los puntos de distribución remotos identificados como preconfigurados:  
 
-    -   **Descargar contenido automáticamente cuando los paquetes se asignen a puntos de distribución**: use esta opción cuando haya paquetes de menor tamaño y la configuración de programación y límite proporcione un control suficiente para la distribución de contenido.  
+    -   **Descargar contenido automáticamente cuando los paquetes se asignen a puntos de distribución**: use esta opción cuando haya paquetes más pequeños, y la configuración de programación y limitación proporcione control suficiente para la distribución de contenido.  
 
-    -   **Descargar solo los cambios de contenido en el punto de distribución**: use esta opción si espera que las actualizaciones futuras en el contenido del paquete tengan, por lo general, un tamaño inferior al paquete inicial. Por ejemplo, puede preconfigurar una aplicación como Microsoft Office, ya que el tamaño del paquete inicial es superior a 700 MB y es demasiado grande para enviarlo por la red. Pero las actualizaciones de contenido de este paquete pueden ser inferiores a 10 MB y se pueden distribuir por la red. Otro ejemplo podrían ser paquetes de controladores, donde el tamaño del paquete inicial es grande, pero las adiciones incrementales de controladores al paquete podrían ser reducidas.  
+    -   **Descargar solo los cambios de contenido en el punto de distribución**: use esta opción cuando espere que las actualizaciones futuras del contenido sean en general más pequeñas que el paquete inicial. Por ejemplo, puede preconfigurar una aplicación como Microsoft Office, ya que el tamaño del paquete inicial es superior a 700 MB y es demasiado grande para enviarlo por la red. Pero las actualizaciones de contenido de este paquete pueden ser inferiores a 10 MB y se pueden distribuir por la red. Otro ejemplo podrían ser paquetes de controladores, donde el tamaño del paquete inicial es grande, pero las adiciones incrementales de controladores al paquete podrían ser reducidas.  
 
-    -   **Copiar manualmente el contenido de este paquete en el punto de distribución**: use esta opción cuando tenga paquetes grandes (por ejemplo, que contengan un sistema operativo) y no quiera usar la red para distribuir el contenido al punto de distribución. Al seleccionar esta opción, debe preconfigurar el contenido del punto de distribución.  
+    -   **Copiar manualmente el contenido de este paquete en el punto de distribución**: use esta opción cuando tenga paquetes de gran tamaño (por ejemplo, un sistema operativo) y no quiera usar la red para distribuir el contenido al punto de distribución. Al seleccionar esta opción, debe preconfigurar el contenido del punto de distribución.  
 
     > [!IMPORTANT]  
     >  Las opciones anteriores se pueden aplicar por paquete y solo se usan cuando un punto de distribución esté identificado como preconfigurado. Los puntos de distribución que no se han identificado como preconfigurados omiten esta configuración. En ese caso, el contenido siempre se distribuye a través de la red desde el servidor de sitio a los puntos de distribución.  

@@ -10,12 +10,13 @@ ms.assetid: caad2d93-087c-4dc0-a2a7-6a2fd808b4c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6c052979ad310273669d5a7897213bffd9f7e213
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 054676d5583dbc4468f1d2716d895100f3a5471a
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386576"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56134306"
 ---
 # <a name="collection-evaluation-viewer"></a>Collection Evaluation Viewer
 
@@ -41,13 +42,13 @@ La herramienta muestra la siguiente información:
 
 El proceso de evaluación de colecciones se ejecuta mediante la evaluación de las reglas de pertenencia de una colección para actualizar sus miembros. El sitio coloca una colección que se está evaluando en una de cuatro colas diferentes:  
 
-- **Cola manual**: para las colecciones que un administrador ha seleccionado manualmente para evaluar desde la consola  
+- **Cola manual**: para las recopilaciones que un administrador ha seleccionado manualmente para evaluar desde la consola.  
 
-- **Nueva cola**: para las colecciones recién creadas  
+- **Nueva cola**: para nuevas recopilaciones.  
 
-- **Cola completa**: para aquellas colecciones a las que se va a realizar una evaluación completa  
+- **Cola completa**: para aquellas recopilaciones a las que se va a realizar una evaluación completa.  
 
-- **Cola incremental**: para las colecciones con evaluación incremental  
+- **Cola incremental**: para recopilaciones con una evaluación incremental.  
 
 Hay cuatro subprocesos que se ejecutan para evaluar las colecciones de las colas anteriores. Cada cola incluye una serie de matrices y cada matriz incluye las colecciones que se van a evaluar. El subproceso que se está ejecutando para la cola selecciona una colección de la matriz y ejecuta la evaluación. La longitud de la cola indica el número de matrices de la cola.
 
@@ -67,21 +68,21 @@ Hay cuatro subprocesos que se ejecutan para evaluar las colecciones de las colas
 
 Ejecute **CEViewer.exe**. El menú principal de la herramienta contiene las siguientes pestañas: 
 
-- [Conectar](#bkmk_connect): establece la conexión inicial con el servidor de sitio primario y SQL Server  
+- [Conectar](#bkmk_connect): establece la conexión inicial con el servidor de sitio primario y SQL Server.  
 
-- [Evaluación completa](#bkmk_full-eval): muestra información detallada sobre todas las evaluaciones completas anteriores   
+- [Evaluación completa](#bkmk_full-eval): muestra información detallada sobre todas las evaluaciones completas anteriores.   
 
-- [Evaluación incremental](#bkmk_incremental-eval): muestra información detallada sobre todas las evaluaciones incrementales anteriores  
+- [Evaluación incremental](#bkmk_incremental-eval): muestra información detallada sobre todas las evaluaciones incrementales anteriores.  
 
-- [Todas las colas](#bkmk_all-q): resume las evaluaciones de colecciones actuales de las cuatro colas  
+- [Todas las colas](#bkmk_all-q): resume las evaluaciones de recopilaciones actuales de las cuatro colas.  
 
-- [Cola manual](#bkmk_manual-q): muestra información detallada sobre la evaluación de colecciones actual de la cola manual  
+- [Cola manual](#bkmk_manual-q): muestra información detallada sobre la evaluación de recopilación actual de la cola manual.  
 
-- [Nueva cola](#bkmk_new-q): muestra información detallada sobre la evaluación de colecciones actual de la nueva cola  
+- [Nueva cola](#bkmk_new-q): muestra información detallada sobre la evaluación de recopilación actual de la nueva cola.  
 
-- [Cola completa](#bkmk_full-q): muestra información detallada sobre la evaluación de colecciones actual de la cola completa  
+- [Cola completa](#bkmk_full-q): muestra información detallada sobre la evaluación de recopilación actual de la cola completa.  
 
-- [Cola incremental](#bkmk_incremental-q): muestra información detallada sobre la evaluación de colecciones actual de la cola incremental  
+- [Cola incremental](#bkmk_incremental-q): muestra información detallada sobre la evaluación de recopilación actual de la cola incremental.  
 
 
 ### <a name="bkmk_connect"></a> Pestaña Conectar
@@ -97,109 +98,109 @@ Una vez que la herramienta establece correctamente una conexión, se ve una noti
 
 Muestra información detallada sobre las evaluaciones de colecciones completas anteriores. Hay ocho columnas:  
 
-- **Nombre de la colección**: nombre de la colección  
+- **Nombre de recopilación**: nombre de la recopilación.  
 
-- **Id. de sitio**: id. de sitio de la colección   
+- **Identificador de sitio**: identificador de sitio de la recopilación.   
 
-- **Tiempo de ejecución**: tiempo que ha tardado en ejecutarse la última evaluación de colecciones, en segundos  
+- **Tiempo de ejecución**: tiempo que ha tardado en ejecutarse la última evaluación de recopilación, en segundos.  
 
-- **Hora de finalización de la última evaluación**: hora a la que finalizó la última evaluación de colecciones  
+- **Hora de finalización de la última evaluación**: cuándo se ha completado la última evaluación de recopilación.  
 
-- **Hora de la próxima evaluación**: hora a la que se inicia la siguiente evaluación completa  
+- **Hora de la próxima evaluación**: cuándo se inicia la próxima evaluación completa.  
 
-- **Cambios de miembros**: cambios de miembros en la última evaluación de colecciones. Estos cambios son más (miembros agregados) o menos (miembros quitados).  
+- **Cambios de miembros**: cambios de miembros en la última evaluación de recopilación. Estos cambios son más (miembros agregados) o menos (miembros quitados).  
 
-- **Hora del último cambio de miembro**: hora más reciente en que se ha producido un cambio de pertenencia en la evaluación de colecciones  
+- **Hora del último cambio de miembro**: hora más reciente en que se ha producido un cambio de pertenencia en la evaluación de recopilación.  
 
-- **Porcentaje**: porcentaje de tiempo de evaluación de esta colección con respecto al tiempo de evaluación total (todas las colecciones)  
+- **Porcentaje**: porcentaje de tiempo de evaluación de esta recopilación en relación con el tiempo de evaluación total (todas las recopilaciones).  
 
 
 ### <a name="bkmk_incremental-eval"></a> Pestaña Evaluación incremental
 
 Muestra información detallada sobre las evaluaciones de colecciones incrementales anteriores. Hay siete columnas:  
 
-- **Nombre de la colección**: nombre de la colección  
+- **Nombre de recopilación**: nombre de la recopilación.  
 
-- **Id. de sitio**: id. de sitio de la colección   
+- **Identificador de sitio**: identificador de sitio de la recopilación.   
 
-- **Tiempo de ejecución**: tiempo que ha tardado en ejecutarse la última evaluación de colecciones, en segundos  
+- **Tiempo de ejecución**: tiempo que ha tardado en ejecutarse la última evaluación de recopilación, en segundos.  
 
-- **Hora de finalización de la última evaluación**: hora a la que finalizó la última evaluación de colecciones  
+- **Hora de finalización de la última evaluación**: cuándo se ha completado la última evaluación de recopilación.  
 
-- **Cambios de miembros**: cambios de miembros en la última evaluación de colecciones. Estos cambios son más (miembros agregados) o menos (miembros quitados).  
+- **Cambios de miembros**: cambios de miembros en la última evaluación de recopilación. Estos cambios son más (miembros agregados) o menos (miembros quitados).  
 
-- **Hora del último cambio de miembro**: hora más reciente en que se ha producido un cambio de pertenencia en la evaluación de colecciones  
+- **Hora del último cambio de miembro**: hora más reciente en que se ha producido un cambio de pertenencia en la evaluación de recopilación.  
 
-- **Porcentaje**: porcentaje de tiempo de evaluación de esta colección con respecto al tiempo de evaluación total (todas las colecciones)  
+- **Porcentaje**: porcentaje de tiempo de evaluación de esta recopilación en relación con el tiempo de evaluación total (todas las recopilaciones).  
 
 
 ### <a name="bkmk_all-q"></a> Pestaña Todas las colas
 
 Resume las evaluaciones de colecciones actuales de las cuatro colas. Hay seis secciones:  
 
-- **Resumen**: muestra el número total de colecciones y la longitud de la cola de todas las colecciones de las cuatro colas  
+- **Resumen**: muestra el número total de recopilaciones y la longitud de la cola de todas las recopilaciones de las cuatro colas.  
 
-- **Evaluación en ejecución**: indica qué colección se está evaluando en cada cola y cuánto tiempo lleva haciéndolo  
+- **Evaluación en ejecución**: indica qué recopilación se está evaluando en cada cola y cuánto tiempo se ha ejecutado.  
 
-- **Actualización manual**: muestra un breve resumen de las colecciones que se están evaluando, la hora de finalización estimada y el orden de la evaluación de la cola manual  
+- **Actualización manual**: muestra un breve resumen de las recopilaciones que se están evaluando, la hora de finalización estimada y el orden de la evaluación de la cola manual.  
 
-- **Nueva colección**: muestra un breve resumen de las colecciones que se están evaluando, la hora de finalización estimada y el orden de la evaluación de la cola de la nueva colección  
+- **Nueva recopilación**: muestra un breve resumen de las recopilaciones que se están evaluando, la hora de finalización estimada y el orden de la evaluación de la cola de la nueva recopilación.  
 
-- **Evaluación completa**: muestra un breve resumen de las colecciones que se están evaluando, la hora de finalización estimada y el orden de la evaluación de la cola de evaluación completa  
+- **Evaluación completa**: muestra un breve resumen de las recopilaciones que se están evaluando, la hora de finalización estimada y el orden de la evaluación de la cola de evaluación completa.  
 
-- **Evaluación incremental**: muestra un breve resumen de las colecciones que se están evaluando, la hora de finalización estimada y el orden de la evaluación de la cola de evaluación incremental  
+- **Evaluación incremental**: muestra un breve resumen de las recopilaciones que se están evaluando, la hora de finalización estimada y el orden de la evaluación de la cola de evaluación incremental.  
 
 
 ### <a name="bkmk_manual-q"></a> Pestaña Cola manual
 
 Muestra información sobre la evaluación de colecciones manual que se está evaluando. El orden en la lista es el orden en el que se va a evaluar la colección. Hay cuatro columnas:  
 
-- **Nombre de la colección**: nombre de la colección  
+- **Nombre de recopilación**: nombre de la recopilación.  
 
-- **Id. de sitio**: id. de sitio de la colección   
+- **Identificador de sitio**: identificador de sitio de la recopilación.   
 
-- **Hora de finalización estimada**: hora estimada de finalización de la evaluación  
+- **Hora de finalización estimada**: cuándo se estima que se complete la evaluación.  
 
-- **Tiempo de ejecución estimado**: duración estimada de ejecución de la evaluación en formato día:hora:minuto:segundo  
+- **Tiempo de ejecución estimado**: duración estimada de ejecución de la evaluación en formato día:hora:minuto:segundo.  
 
 
 ### <a name="bkmk_new-q"></a> Pestaña Nueva cola
 
 Muestra información actual sobre la nueva evaluación de colecciones que se está evaluando. El orden en la lista es el orden en el que se va a evaluar la colección. Hay cuatro columnas:  
 
-- **Nombre de la colección**: nombre de la colección  
+- **Nombre de recopilación**: nombre de la recopilación.  
 
-- **Id. de sitio**: id. de sitio de la colección   
+- **Identificador de sitio**: identificador de sitio de la recopilación.   
 
-- **Hora de finalización estimada**: hora estimada de finalización de la evaluación  
+- **Hora de finalización estimada**: cuándo se estima que se complete la evaluación.  
 
-- **Tiempo de ejecución estimado**: duración estimada de ejecución de la evaluación en formato día:hora:minuto:segundo  
+- **Tiempo de ejecución estimado**: duración estimada de ejecución de la evaluación en formato día:hora:minuto:segundo.  
 
 
 ### <a name="bkmk_full-q"></a> Pestaña Cola completa
 
 Muestra información sobre la evaluación de colecciones completa que se está evaluando. El orden en la lista es el orden en el que se va a evaluar la colección. Hay cuatro columnas:  
 
-- **Nombre de la colección**: nombre de la colección  
+- **Nombre de recopilación**: nombre de la recopilación.  
 
-- **Id. de sitio**: id. de sitio de la colección   
+- **Identificador de sitio**: identificador de sitio de la recopilación.   
 
-- **Hora de finalización estimada**: hora estimada de finalización de la evaluación  
+- **Hora de finalización estimada**: cuándo se estima que se complete la evaluación.  
 
-- **Tiempo de ejecución estimado**: duración estimada de ejecución de la evaluación en formato día:hora:minuto:segundo  
+- **Tiempo de ejecución estimado**: duración estimada de ejecución de la evaluación en formato día:hora:minuto:segundo.  
 
 
 ### <a name="bkmk_incremental-q"></a> Pestaña Cola incremental
 
 Muestra información sobre la evaluación de colecciones incremental que se está evaluando. El orden en la lista es el orden en el que se va a evaluar la colección. Hay cuatro columnas:  
 
-- **Nombre de la colección**: nombre de la colección  
+- **Nombre de recopilación**: nombre de la recopilación.  
 
-- **Id. de sitio**: id. de sitio de la colección   
+- **Identificador de sitio**: identificador de sitio de la recopilación.   
 
-- **Hora de finalización estimada**: hora estimada de finalización de la evaluación  
+- **Hora de finalización estimada**: cuándo se estima que se complete la evaluación.  
 
-- **Tiempo de ejecución estimado**: duración estimada de ejecución de la evaluación en formato día:hora:minuto:segundo  
+- **Tiempo de ejecución estimado**: duración estimada de ejecución de la evaluación en formato día:hora:minuto:segundo.  
 
 
 

@@ -10,12 +10,13 @@ ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0d4e83cbcb1c95303719b1d86ffc9a8969c16998
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3e71a94a4e4769d5a8fe7e2a7957eeb9e46f79be
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893913"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126208"
 ---
 # <a name="introduction-to-application-management-in-configuration-manager"></a>Introducción a la administración de aplicaciones en Configuration Manager
 
@@ -24,7 +25,7 @@ ms.locfileid: "43893913"
 En este artículo, aprenderá los conceptos básicos antes de empezar a trabajar con aplicaciones de Configuration Manager.  
 
 > [!TIP]  
->  Si ya está familiarizado con la forma de administrar aplicaciones en Configuration Manager, omita este artículo. Pase a la creación de una aplicación de ejemplo: [Crear e implementar una aplicación](/sccm/apps/get-started/create-and-deploy-an-application).  
+>  Si ya está familiarizado con la forma de administrar aplicaciones en Configuration Manager, omita este artículo. Continúe con la creación de una aplicación de ejemplo: [Crear e implementar una aplicación](/sccm/apps/get-started/create-and-deploy-an-application).  
 
 
 

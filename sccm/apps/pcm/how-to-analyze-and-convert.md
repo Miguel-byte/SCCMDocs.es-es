@@ -10,12 +10,13 @@ ms.assetid: f3bf1737-827d-48fa-8bb1-f48fe71afe0c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9c58e12d906606acc0015d38e543616570d61520
-ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 50ec232c9f5b007ef7a139cbe7894c333b6eed63
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43297168"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137888"
 ---
 # <a name="how-to-analyze-and-convert-packages-with-package-conversion-manager"></a>Cómo analizar y convertir paquetes con el Administrador de conversión de paquetes
 
@@ -43,11 +44,11 @@ Para poder convertir un paquete, primero analícelo. Según los resultados del a
 
 3. Para ver el estado de preparación del paquete, agregue la columna **Preparación** a la lista de paquetes. El estado de preparación del paquete determina la acción siguiente:  
 
-    - **Automático**: [Cómo convertir paquetes](#bkmk_convert)  
+    - **Automático**: [procedimiento para convertir los paquetes](#bkmk_convert)  
 
         Para adjunta también colecciones y crear condiciones globales con un estado de preparación **Automático**, vea [Cómo corregir y convertir paquetes](#bkmk_fix).  
 
-    - **Manual**: [Cómo corregir y convertir paquetes](#bkmk_fix)
+    - **Manual**: [procedimiento para corregir y convertir los paquetes](#bkmk_fix)
 
     - **No aplicable**: a este paquete le falta contenido necesario o un programa. Agregue cualquier contenido o los programas que faltan y vuelva a intentar el análisis. O bien déjelo en un estado sin convertir y siga implementándolo como paquete.  
 

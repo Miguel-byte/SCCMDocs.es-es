@@ -10,12 +10,13 @@ ms.assetid: 6dcef836-c0d1-40af-ad30-cd8d864b09a9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 912bdb93db05091ff756c51ee9f951a17a76ff5d
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: be12cfe29ff470f2f577bab2c685695ae5770bae
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385976"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131428"
 ---
 # <a name="site-server-high-availability-in-configuration-manager"></a>Alta disponibilidad de servidor de sitio en Configuration Manager
 
@@ -119,11 +120,11 @@ Para más información sobre el proceso general de la adición de roles, vea [In
 
      - Elija una de las siguientes opciones:  
 
-         - **Copy installation source files over the network from the site server in active mode** (Copiar los archivos de origen de instalación a través de la red desde el servidor de sitio en modo activo): esta opción crea un paquete comprimido y lo envía al nuevo servidor de sitio.  
+         - **Copiar archivos de origen de la instalación mediante la red desde el servidor de sitio en modo activo**: esta opción crea un paquete comprimido y lo envía al nuevo servidor de sitio.  
 
-         - **Use the source files at the following location on the site server in passive mode** (Usar los archivos de origen en la siguiente ubicación del servidor de sitio en modo pasivo): por ejemplo, una ruta de acceso local en la que ya ha copiado los archivos de origen. Asegúrese de que este contenido tiene la misma versión que el servidor de sitio en modo activo.  
+         - **Usar archivos de origen de la ubicación siguiente en el servidor de sitio en modo pasivo**: por ejemplo, una ruta de acceso local donde ya haya copiado los archivos de origen. Asegúrese de que este contenido tiene la misma versión que el servidor de sitio en modo activo.  
 
-         - (*Recomendado*) **Use the source files at the following network location** (usar los archivos de origen en la siguiente ubicación de red): especifique la ruta de acceso directamente al contenido de la carpeta **CD.Latest** del servidor de sitio en modo activo. Por ejemplo, `\\Server\SMS_ABC\CD.Latest`, donde "*Server*" es el nombre del servidor de sitio en modo activo y "*ABC*" es el código de sitio.  
+         - (*Recomendado*) **Usar los archivos de origen de la siguiente ubicación de red**: especifique la ruta de acceso directo al contenido de la carpeta **CD.Latest** desde el servidor del sitio en el modo activo. Por ejemplo, `\\Server\SMS_ABC\CD.Latest`, donde "*Server*" es el nombre del servidor de sitio en modo activo y "*ABC*" es el código de sitio.  
 
      - Especifique la ruta de acceso local en el nuevo servidor de sitio donde se va a instalar Configuration Manager. Por ejemplo: `C:\Program Files\Configuration Manager`  
 

@@ -10,16 +10,17 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2da1ff9f8a45ba33f6546dcab8df423d9064e650
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e185244bda88c317e0157618f066056a817a1a82
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344643"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141898"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Configuraciones admitidas de la rama de mantenimiento a largo plazo de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama de mantenimiento a largo plazo)*
+*Se aplica a: System Center Configuration Manager (Rama de mantenimiento a largo plazo)*
 
 Use la información de este tema para comprender qué sistemas operativos y dependencias de productos son compatibles con la rama de mantenimiento a largo plazo (LTSB) de Configuration Manager.
 Si no se indica lo contrario en este tema o en los temas específicos de la LTSB, se aplican a la LTSB las mismas configuraciones y limitaciones que se aplican a la versión 1606 de la rama actual.  Cuando se produzcan conflictos, use la información que se aplica a la edición que use. Normalmente, la LTSB es más limitada que la rama actual.
@@ -48,15 +49,15 @@ La LTSB admite el uso de los siguientes sistemas operativos de equipo Windows co
 - Windows Server 2012 R2 (x64): Standard, Datacenter
 - Windows Server 2012 (x64): Standard, Datacenter
 - Windows Server 2008 R2 con SP1 (x64): Standard, Enterprise, Datacenter
-- Windows Server 2008 con SP2 (x86, x64): Standard, Enterprise, Datacenter  *(Vea la nota 1)*
+- Windows Server 2008 con SP2 (x86, x64): Standard, Enterprise, Datacenter *(vea la nota 1)*
 - Windows 10 Enterprise 2015 LTSB (x86, x64)
 - Windows 10 Enterprise 2016 LTSB (x86, x64)
-- Windows 8.1 (x86, x64): Professional, Enterprise
-- Windows 7 con SP1 (x86, x64): Professional, Enterprise, Ultimate
+- Windows 8.1 (x86, x64): Professional y Enterprise
+- Windows 7 con SP1 (x86, x64): Professional, Enterprise y Ultimate
 - La instalación Server Core de Windows Server 2012
 - La instalación Server Core de Windows Server 2012 R2    
 
-*Nota 1*: No se admite este sistema operativo para servidores de sitio o roles de sistema de sitio con la excepción del punto de distribución y el punto de distribución de extracción. Puede seguir usando este sistema operativo como un punto de distribución hasta que se anuncie que esta compatibilidad queda obsoleta o expire el período extendido de soporte técnico de este sistema operativo. Para más información, vea [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095) (La instalación de System Center Configuration Manager CB y LTBS produce un error en Windows Server 2008).
+*Nota 1*: No se admite este sistema operativo para servidores de sitio o roles de sistema de sitio con la excepción del punto de distribución y el punto de distribución de extracción. Puede seguir usando este sistema operativo como un punto de distribución hasta que se anuncie que esta compatibilidad queda obsoleta o expire el período extendido de soporte técnico de este sistema operativo. Para más información, vea [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095) (La instalación de System Center Configuration Manager CB y LTBS produce un error en Windows Server 2008).
 
 ## <a name="client-management"></a>Administración de cliente
 En las secciones siguientes se identifican los sistemas operativos cliente que puede administrar con la LTSB. La LTSB no admite la adición de nuevos sistemas operativos como clientes admitidos.
@@ -66,17 +67,17 @@ Puede usar la LTSB para administrar los siguientes sistemas operativos de equipo
 
 **Sistemas operativos compatibles:**
 - Windows Server 2016
-- Windows Server 2012 R2 (x64): Standard, Datacenter (Nota 1)
-- Windows Server 2012 (x64): Standard, Datacenter (Nota 1)
+- Windows Server 2012 R2 (x64): Standard, Datacenter (nota 1)
+- Windows Server 2012 (x64): Standard, Datacenter (nota 1)
 - Windows Storage Server 2012 R2 (x64)
 - Windows Storage Server 2012 (x64)
-- Windows Server 2008 R2 con SP1 (x64): Standard, Enterprise, Datacenter (Nota 1)
+- Windows Server 2008 R2 con SP1 (x64): Standard, Enterprise, Datacenter (nota 1)
 - Windows Storage Server 2008 R2 (x86, x64): Workgroup, Standard, Enterprise
-- Windows Server 2008 con SP2 (x86, x64): Standard, Enterprise, Datacenter (Nota 1)
+- Windows Server 2008 con SP2 (x86, x64): Standard, Enterprise, Datacenter (nota 1)
 - Windows 10 Enterprise 2015 LTSB (x86, x64)
 - Windows 10 Enterprise 2016 LTSB (x86, x64)
-- Windows 8.1 (x86, x64): Professional, Enterprise
-- Windows 7 con SP1 (x86, x64): Professional, Enterprise, Ultimate
+- Windows 8.1 (x86, x64): Professional y Enterprise
+- Windows 7 con SP1 (x86, x64): Professional, Enterprise y Ultimate
 - La instalación Server Core de Windows Server 2012 R2 (x64) (Nota 2)
 - La instalación Server Core de Windows Server 2012 (x64) (Nota 2)
 - La instalación Server Core de Windows Server 2008 R2 SP1 (x64)
@@ -293,8 +294,8 @@ La LTSB es compatible con los siguientes sistemas operativos para ejecutar la co
 - Windows Server 2008 con SP2 (x86, x64): Standard, Enterprise, Datacenter
 - Windows 10 Enterprise 2016 LTSB (x86, x64)
 - Windows 10 Enterprise 2015 LTSB (x86, x64)
-- Windows 8.1 (x86, x64): Professional, Enterprise
-- Windows 7 con SP1 (x86, x64): Professional, Enterprise, Ultimate
+- Windows 8.1 (x86, x64): Professional y Enterprise
+- Windows 7 con SP1 (x86, x64): Professional, Enterprise y Ultimate
 
 
 ## <a name="sql-server-versions-supported-for-the-site-database-and-reporting-point"></a>Versiones de SQL Server compatibles con la base de datos del sitio y el punto de notificación

@@ -10,12 +10,13 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18305b26937c87cbdb4d5726bded571699416793
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3e8ebea21b735e6b93d73bf6ff5eb842243ef42d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42756267"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121869"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Uso de variables en una secuencia de tareas en Configuration Manager
 
@@ -225,11 +226,11 @@ ms.locfileid: "42756267"
 
  3. En el cuadro de diálogo **Variable de secuencia de tareas**, especifique la siguiente configuración:  
 
-    - **Variable**: el nombre de la variable. Por ejemplo, `_SMSTSInWinPE`.  
+    - **Variable**: nombre de la variable. Por ejemplo, `_SMSTSInWinPE`.  
 
-    - **Condición**: la condición para evaluar el valor de la variable. Por ejemplo, **igual a**.  
+    - **Condición**: condición para evaluar el valor variable. Por ejemplo, **igual a**.  
 
-    - **Valor**: el valor de la variable que se va a comprobar. Por ejemplo, `false`.  
+    - **Valor**: valor de la variable que se va a comprobar. Por ejemplo, `false`.  
 
 
  Los tres ejemplos anteriores conforman en conjunto una condición para comprobar si la secuencia de tareas se está ejecutando desde una imagen de arranque de Windows PE: 

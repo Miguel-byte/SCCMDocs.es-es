@@ -10,12 +10,13 @@ ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6e437709ec1b721cf9ca597bdc944bcce6da9b0f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c206a8045429551f361f640febbcda4a39ef9698
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334256"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139949"
 ---
 # <a name="client-installation-methods-in-system-center-configuration-manager"></a>Métodos de instalación de cliente en System Center Configuration Manager
 
@@ -25,7 +26,7 @@ Puede usar diferentes métodos para instalar el software cliente de Configuratio
 
 ## <a name="client-push-installation"></a>Instalación de inserción de cliente  
 
-**Plataforma de cliente admitida:** Windows  
+**Plataforma de cliente admitida**: Windows  
 
 #### <a name="advantages"></a>Ventajas  
 
@@ -55,7 +56,7 @@ Para obtener más información, vea [Cómo instalar clientes con inserción de c
 
 ## <a name="software-update-point-based-installation"></a>Instalación basada en el punto de actualización de software  
 
-**Plataforma de cliente admitida:** Windows  
+**Plataforma de cliente admitida**: Windows  
 
 #### <a name="advantages"></a>Ventajas  
 
@@ -87,7 +88,7 @@ Para obtener más información, vea [Cómo instalar clientes con la instalación
 
 ## <a name="group-policy-installation"></a>Instalación de directiva de grupo  
 
-**Plataforma de cliente admitida:** Windows  
+**Plataforma de cliente admitida**: Windows  
 
 #### <a name="advantages"></a>Ventajas  
 
@@ -111,7 +112,7 @@ Para obtener más información, vea [Cómo instalar clientes con directiva de gr
 
 ## <a name="logon-script-installation"></a>Instalación de script de inicio de sesión  
 
-**Plataforma de cliente admitida:** Windows  
+**Plataforma de cliente admitida**: Windows  
 
 #### <a name="advantages"></a>Ventajas  
 

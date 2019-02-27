@@ -10,12 +10,13 @@ ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b29fb48d8d8abc2e0c6693725b65c90a0cf1cd1
-ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: abfad38e0c02ff6c0af8d4c9c47bdeed7598e513
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42584529"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129755"
 ---
 # <a name="setup-downloader-for-system-center-configuration-manager"></a>Descargador del programa de instalación de System Center Configuration Manager
 
@@ -57,15 +58,15 @@ Tiene dos opciones para ejecutar el descargador del programa de instalación:
 
     Puede usar las siguientes opciones de línea de comandos con **Setupdl.exe**:   
 
-    -   **/VERIFY**: use esta opción para comprobar los archivos en la carpeta de descarga, que incluyen los archivos de idioma. Consulte el archivo ConfigMgrSetup.log en el directorio raíz de la unidad C para obtener una lista de archivos que no están actualizados. No se descarga ningún archivo al utilizar esta opción.  
+    -   **/VERIFY**: utilice esta opción para comprobar los archivos en la carpeta de descarga, que incluyen los archivos de idioma. Consulte el archivo ConfigMgrSetup.log en el directorio raíz de la unidad C para obtener una lista de archivos que no están actualizados. No se descarga ningún archivo al utilizar esta opción.  
 
-    -   **/VERIFYLANG**: use esta opción para comprobar los archivos de idioma en la carpeta de descarga. Consulte el archivo ConfigMgrSetup.log en el directorio raíz de la unidad C para obtener una lista de archivos de idioma que no están actualizados.
+    -   **/VERIFYLANG**: utilice esta opción para comprobar los archivos de idioma en la carpeta de descarga. Consulte el archivo ConfigMgrSetup.log en el directorio raíz de la unidad C para obtener una lista de archivos de idioma que no están actualizados.
 
-    -   **/LANG**: use esta opción para descargar solo los archivos de idioma en la carpeta de descarga.  
+    -   **/LANG**: utilice esta opción para descargar sólo los archivos de idioma en la carpeta de descarga.  
 
-    -   **/NOUI**: use esta opción para iniciar el descargador del programa de instalación sin mostrar la interfaz de usuario. Al usar esta opción, debe especificar la **ruta de acceso de la descarga** como parte del comando en el símbolo del sistema.  
+    -   **/NOUI**: utilice esta opción para iniciar el descargador del programa de instalación sin mostrar la interfaz de usuario. Al usar esta opción, debe especificar la **ruta de acceso de la descarga** como parte del comando en el símbolo del sistema.  
 
-    -   **&lt;DownloadPath\>**: puede especificar la ruta de acceso a la carpeta de descarga para iniciar el proceso de comprobación o descarga de forma automática. Debe especificar la ruta de acceso de descarga al usar la opción **/NOUI**. Si no se especifica ninguna ruta de acceso de descarga, debe especificarla cuando se abra el descargador del programa de instalación. El descargador del programa de instalación crea la carpeta en caso de que no exista.  
+    -   **&lt;DownloadPath\>**: puede especificar la ruta de acceso a la carpeta de descarga para iniciar automáticamente el proceso de comprobación o descarga. Debe especificar la ruta de acceso de descarga al usar la opción **/NOUI**. Si no se especifica ninguna ruta de acceso de descarga, debe especificarla cuando se abra el descargador del programa de instalación. El descargador del programa de instalación crea la carpeta en caso de que no exista.  
 
     Comandos de ejemplo:
 

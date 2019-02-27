@@ -10,12 +10,13 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 14251bb062423a31bcf74d2079b2e1b667f61ba9
-ms.sourcegitcommit: 06d490d526070e17d77e86bc6c200899ded911cb
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d096681c044b794b849d05c48fa17171344b8a64
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38967171"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129874"
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>Configurar el laboratorio de System Center Configuration Manager
 
@@ -30,7 +31,7 @@ Las instrucciones de este tema le permitirán configurar un laboratorio para eva
 
      Puede descargar una versión de evaluación de Windows Server 2012 R2 desde [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012).  
 
-     Considere la posibilidad de modificar o deshabilitar la configuración de seguridad mejorada de Internet Explorer para facilitar el acceso a algunas de las descargas a las que se hace referencia a lo largo de estos ejercicios. Revise [Internet Explorer: configuración de seguridad mejorada](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx) para obtener información adicional.  
+     Considere la posibilidad de modificar o deshabilitar la configuración de seguridad mejorada de Internet Explorer para facilitar el acceso a algunas de las descargas a las que se hace referencia a lo largo de estos ejercicios. Revise [Internet Explorer: configuración de seguridad mejorada](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx) para obtener más información.  
 
 -   **El entorno del laboratorio utiliza SQL Server 2012 SP2** para la base de datos.  
 
@@ -79,11 +80,11 @@ Después de instalar todos estos componentes, existen pasos adicionales que debe
 ##  <a name="BKMK_LabADPrep"></a> Preparar el contenido de Active Directory para el laboratorio  
  Para este laboratorio, creará un grupo de seguridad y después le agregará un usuario de dominio.  
 
--   Grupo de seguridad: **Evaluation**  
+-   Grupo de seguridad: **evaluación**  
 
-    -   Ámbito de grupo: **Universal**  
+    -   Ámbito del grupo: **universal**  
 
-    -   Tipo de grupo: **Security**  
+    -   Tipo de grupo: **Seguridad**  
 
 -   Usuario del dominio: **ConfigUser**  
 
@@ -201,7 +202,7 @@ Para obtener información adicional, consulte los artículos siguientes de por q
 
 -   [Tutorial de compatibilidad de aplicaciones de .NET Framework 4 RTM](https://technet.microsoft.com/library/dd889541.aspx)  
 
--   [Procedimiento: actualización de una aplicación web de ASP.NET a ASP.NET 4](https://technet.microsoft.com/library/dd483478\(VS.100\).aspx)  
+-   [Procedimiento: actualizar de una aplicación web de ASP.NET a ASP.NET 4](https://technet.microsoft.com/library/dd483478\(VS.100\).aspx)  
 
 -   [Preguntas más frecuentes sobre la directiva de ciclo de vida de soporte técnico de Microsoft .NET Framework](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
 
@@ -356,14 +357,14 @@ Antes de comenzar la instalación, inicie el [Comprobador de requisitos previos]
     |Paso en el procedimiento de instalación de sitio|Selección|  
     |-----------------------------------------|---------------|  
     |Paso 4: la página **Clave de producto**|Seleccione **Evaluación**.|  
-    |Paso 7:  **Descargas de requisitos previos**|Seleccione **Descargar los archivos requeridos** y especifique la ubicación predefinida.|  
-    |Paso 10: **Configuración de sitio e instalación**|-   **Código de sitio:LAB**<br />-   **Nombre de sitio:Evaluation**<br />-   **Carpeta de instalación:** especifique la ubicación predefinida.|  
-    |Paso 11: **Instalación de sitio primario**|Seleccione **Instalar el sitio primario como un sitio independiente**y después haga clic en **Siguiente**.|  
-    |Paso 12: **Instalación de la base de datos**|-   **Nombre de SQL Server (FQDN):** escriba su FQDN aquí.<br />-   **Nombre de instancia:** déjelo en blanco, ya que usará la instancia predeterminada de SQL que instaló anteriormente.<br />-   **Puerto de Service Broker:** deje el puerto predeterminado 4022.|  
-    |Paso 13: **Instalación de la base de datos**|Deje esta configuración como el valor predeterminado.|  
+    |Paso 7:  **descargas de requisitos previos**|Seleccione **Descargar los archivos requeridos** y especifique la ubicación predefinida.|  
+    |Paso 10: **configuración de sitio e instalación**|-   **Código de sitio:LAB**<br />-   **Nombre de sitio:Evaluation**<br />-   **Carpeta de instalación:** especifique la ubicación predefinida.|  
+    |Paso 11: **instalación de sitio primario**|Seleccione **Instalar el sitio primario como un sitio independiente**y después haga clic en **Siguiente**.|  
+    |Paso 12: **instalación de la base de datos**|-   **Nombre de SQL Server (FQDN):** escriba su FQDN aquí.<br />-   **Nombre de instancia:** déjelo en blanco, ya que usará la instancia predeterminada de SQL que instaló anteriormente.<br />-   **Puerto de Service Broker:** deje el puerto predeterminado 4022.|  
+    |Paso 13: **instalación de la base de datos**|Deje esta configuración como el valor predeterminado.|  
     |Paso 14: **Proveedor de SMS**|Deje esta configuración como el valor predeterminado.|  
-    |Paso 15: **Configuración de comunicación de cliente**|Confirme que la opción **Los roles de sistema de sitio aceptan solo comunicación HTTPS de los clientes** no está seleccionada|  
-    |Paso 16: **Roles de sistema de sitio**|Escriba su FQDN y confirme que la selección de **Los roles de sistema de sitio aceptan solo comunicación HTTPS de los clientes** sigue desactivada.|  
+    |Paso 15: **configuración de la comunicación con el cliente**|Confirme que la opción **Los roles de sistema de sitio aceptan solo comunicación HTTPS de los clientes** no está seleccionada|  
+    |Paso 16: **roles de sistema de sitio**|Escriba su FQDN y confirme que la selección de **Los roles de sistema de sitio aceptan solo comunicación HTTPS de los clientes** sigue desactivada.|  
 
 ##  <a name="BKMK_EnablePubLab"></a> Habilitar la publicación para el sitio de Configuration Manager  
 Cada sitio de Configuration Manager publica su propia información específica del sitio en el contenedor System Management dentro de su partición de dominio en el esquema de Active Directory. Los canales bidireccionales para la comunicación entre Active Directory y Configuration Manager deben estar abiertos para controlar este tráfico. También habilitará la detección de bosques para determinar varios componentes de la infraestructura de red y de Active Directory.  

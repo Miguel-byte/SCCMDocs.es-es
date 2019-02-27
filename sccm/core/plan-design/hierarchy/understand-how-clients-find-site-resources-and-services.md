@@ -10,12 +10,13 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ae82e17f5a0e7d32c3f5838edc3dfbf00b6f396b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9cf206bfb0774ee1d45c70e2a0c890a2f157ad65
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342110"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127191"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>Más información sobre cómo los clientes buscan servicios y recursos de sitio para System Center Configuration Manager
 
@@ -99,7 +100,7 @@ Los clientes organizan su lista de puntos de administración mediante las siguie
     -   Los puntos de administración locales suelen ser un subconjunto de puntos de administración asignados de un cliente, a menos que el cliente esté en una ubicación de red asociada a otro sitio con puntos de administración que mantienen sus grupos de límites.   
 
 
--   **Asignado**: cualquier punto de administración que sea un sistema de sitio del sitio asignado del cliente.  
+-   **Asignados**: cualquier punto de administración que sea un sistema de sitio del sitio asignado del cliente.  
 
 Puede usar puntos de administración preferidos. Los puntos de administración en un sitio que no se asocien a un grupo de límites, o que no estén en un grupo de límites asociado a la ubicación de red actual del cliente, no se consideran preferidos. Se utilizarán cuando el cliente no puede identificar un punto de administración preferido disponible.  
 
@@ -183,14 +184,14 @@ Configuration Manager es compatible con RFC 2782 para registros de ubicación de
 
 Para publicar un punto de administración en Configuration Manager, especifique los valores siguientes:  
 
--   **_Servicio**: escriba **_mssms_mp**_&lt;código de sitio\>, donde &lt;código de sitio\> es el código de sitio del punto de administración.  
+-   **_Service**: escriba **_mssms_mp**_&lt;código de sitio\>, donde &lt;código de sitio\> es el código del sitio del punto de administración.  
 -   **._Proto**: especifique **._tcp**.  
--   **.Nombre**: escriba el sufijo DNS del punto de administración, por ejemplo **contoso.com**.  
+-   **.Name**: escriba el sufijo DNS del punto de administración, por ejemplo, **contoso.com**.  
 -   **TTL**: escriba **14400**, que es cuatro horas.  
--   **Clase**: especifique **IN** (de acuerdo con RFC 1035).  
+-   **Clase**: especifique **IN** (de conformidad con RFC 1035).  
 -   **Prioridad**: Configuration Manager no usa este campo.
--   **Peso**: Configuration Manager no usa este campo.  
--   **Puerto**: escriba el número de puerto que el punto de administración usa, por ejemplo, **80** para HTTP y **443** para HTTPS.  
+-   **Frecuencia**: Configuration Manager no usa este campo.  
+-   **Puerto**: escriba el número de puerto que usa el punto de administración (por ejemplo, **80** para HTTP y **443** para HTTPS).  
 
     > [!NOTE]  
     >  El puerto del registro SRV debe coincidir con el puerto de comunicación que use el punto de administración. De forma predeterminada, es **80** para la comunicación HTTP y **443** para la comunicación HTTPS.  
@@ -225,17 +226,17 @@ Si utiliza DNS de Windows Server, puede utilizar el siguiente procedimiento para
 
 4.  Con la opción **Otros registros nuevos**, elija **Ubicación de servicio (SRV)** en el cuadro de diálogo **Tipo de registro del recurso**, elija **Crear registro**, escriba la información siguiente y luego elija **Listo**:  
 
-    -   **Dominio**: si es necesario, escriba el sufijo DNS del punto de administración, por ejemplo **contoso.com**.  
-    -   **Servicio**: escriba **_mssms_mp**_&lt;código de sitio\>, donde &lt;código de sitio\> es el código de sitio del punto de administración.  
+    -   **Dominio**: si es necesario, escriba el sufijo DNS del punto de administración (por ejemplo, **contoso.com**).  
+    -   **Servicio**: escriba **_mssms_mp**_&lt;código de sitio\>, donde &lt;código de sitio\> es el código del sitio del punto de administración.  
     -   **Protocolo**: escriba **_tcp**.  
     -   **Prioridad**: Configuration Manager no usa este campo.  
-    -   **Peso**: Configuration Manager no usa este campo.  
-    -   **Puerto**: escriba el número de puerto que el punto de administración usa, por ejemplo, **80** para HTTP y **443** para HTTPS.  
+    -   **Frecuencia**: Configuration Manager no usa este campo.  
+    -   **Puerto**: escriba el número de puerto que usa el punto de administración (por ejemplo, **80** para HTTP y **443** para HTTPS).  
 
         > [!NOTE]  
         >  El puerto del registro SRV debe coincidir con el puerto de comunicación que use el punto de administración. De forma predeterminada, es **80** para la comunicación HTTP y **443** para la comunicación HTTPS.  
 
-    -   **Host que ofrece este servicio**: escriba el FQDN de intranet especificado para el sistema de sitio que está configurado con el rol de sitio de punto de administración.  
+    -   **Host que ofrece este servicio**: escriba el FQDN de la intranet especificado para el sistema de sitio que está configurado con el rol de sitio de punto de administración.  
 
 Repita estos pasos por cada punto de administración de la intranet que desee publicar en DNS.  
 

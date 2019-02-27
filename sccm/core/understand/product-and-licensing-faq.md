@@ -10,16 +10,17 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9e58e11bec9441f73bff021c8a6a24d150777cbe
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 57770c35b3a824aa285185e3031ed2fc9b9dd82d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385548"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135462"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Preguntas más frecuentes sobre las licencias y ramas de Configuration Manager
 
- *Se aplica a: System Center Configuration Manager (Rama actual), System Center Configuration Manager (Rama de mantenimiento a largo plazo)*
+ *Se aplica a: System Center Configuration Manager (rama actual), System Center Configuration Manager (rama de mantenimiento a largo plazo)*
 
 ## <a name="summary"></a>Resumen
 Estas preguntas más frecuentes tratan las preguntas comunes sobre licencias de la Rama actual de System Center Configuration Manager y las versiones de la Rama de mantenimiento a largo plazo (LSTB), disponibles a través de los programas de Licencias por Volumen de Microsoft. Este artículo solo tiene fines informativos. No reemplaza ni sustituye ninguna documentación que trate sobre las licencias de System Center Configuration Manager. Para más información, consulte las licencias de producto para [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> y los [términos del producto](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). En las condiciones del producto se describen los términos de uso de todos los productos de Microsoft en las licencias por volumen.
@@ -41,11 +42,11 @@ La rama de mantenimiento a largo plazo es la compilación lista para producción
 
 ### <a name="bkmk_licensing-acronyms"></a> He visto que SA y L&SA se han usado en el contenido sobre licencias. ¿Qué significan estos acrónimos con respecto a System Center Configuration Manager?    
 Tanto SA (Software Assurance) como L&SA (Licencia y Software Assurance) son opciones de licencia que conceden derechos para usar System Center Configuration Manager. SA es una opción para un cliente que está renovando la cobertura de SA de un contrato anterior. L&SA es una opción para un cliente que compra una licencia nueva y cobertura de SA.
-  - **Software Assurance (SA)**: los clientes deben tener SA activo en las licencias de System Center Configuration Manager, o derechos de suscripción equivalentes, para instalar y usar la opción de rama actual de System Center Configuration Manager.    
+  - **Software Assurance (SA)**: los clientes necesitan tener SA activo en las licencias de System Center Configuration Manager, o derechos de suscripción equivalentes, para instalar y usar la opción de rama actual de System Center Configuration Manager.    
 
     - Aunque SA es opcional para algunos productos de Microsoft, la única manera de obtener derechos para usar la Rama actual de System Center Configuration Manager es con SA *(o derechos de suscripción equivalentes)*. Para obtener más información, vea [Preguntas más frecuentes sobre Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx).<!--this link doesn't work without some language code-->
 
-  - **Licencia y Software Assurance (L&SA) de Microsoft**: los clientes que compran licencias nuevas para System Center Configuration Manager deben adquirir L&SA (la licencia y la cobertura de SA).   
+  - **Licencia y Software Assurance (L&SA) de Microsoft:** Los clientes que compran licencias nuevas para System Center Configuration Manager necesitan comprar L&SA (la licencia y la cobertura de SA).   
 
     - SA concede derechos para usar la Rama actual.
 

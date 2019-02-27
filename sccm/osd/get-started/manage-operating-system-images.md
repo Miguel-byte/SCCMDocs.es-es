@@ -10,12 +10,13 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 700a9d8f88c64e11449349ace8c431b4ad6611cf
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ea320b42bfb08ec0023598d010375042d143c220
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456182"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124077"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>Administración de imágenes del sistema operativo con Configuration Manager
 
@@ -68,11 +69,11 @@ Para poder usar una imagen de sistema operativo, primero debe agregarla a su sit
 
 4.  En la página **General**, especifique la siguiente información. Esta información es útil para identificar la imagen de sistema operativo cuando se tiene más de una.  
 
-    -   **Nombre**: nombre único para la imagen. De forma predeterminada, el nombre se toma del nombre del archivo WIM.  
+    -   **Nombre**: nombre único de la imagen. De forma predeterminada, el nombre se toma del nombre del archivo WIM.  
 
     -   **Versión**: identificador de versión opcional. Esta propiedad no tiene que ser la versión del sistema operativo de la imagen. A menudo es la versión de la organización para el paquete.   
 
-    -   **Comentario**: una breve descripción opcional.  
+    -   **Comentario**: breve descripción opcional.  
 
 5.  Complete el asistente.  
 
@@ -103,7 +104,7 @@ Use las implementaciones de multidifusión para permitir que más de un equipo d
 
 4.  Cambie a la pestaña **Configuración de distribución** y configure las siguientes opciones:  
 
-    -   **Permitir que este paquete se transfiera mediante multidifusión (solo WinPE)**: seleccione esta opción para que Configuration Manager implemente imágenes del sistema operativo simultáneamente mediante la multidifusión.  
+    -   **Permitir que este paquete se transfiera mediante multidifusión (solo WinPE)**: seleccione esta opción para que Configuration Manager implemente de forma simultánea imágenes de SO mediante multidifusión.  
 
     -   **Cifrar paquetes de multidifusión**: especifique si el sitio cifra la imagen antes de enviarse al punto de distribución. Use esta opción si la imagen contiene información confidencial. Si la imagen no está cifrada, su contenido está visible en texto no cifrado en la red. En este caso, un usuario no autorizado podría interceptar y ver el contenido de la imagen.  
 

@@ -10,12 +10,13 @@ ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d1aaf6db583d9749dda3be14cfd06acbff19b093
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4d58f8566f80efa2700f5947f4144623b10eb6ad
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456097"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56140599"
 ---
 # <a name="configure-security-in-configuration-manager"></a>Configuración de la seguridad en Configuration Manager
 
@@ -49,17 +50,17 @@ Si desea usar certificados de infraestructura de clave pública (PKI) para conex
 
     - **HTTPS o HTTP**: no es necesario que los clientes usen certificados PKI.  
 
-    - **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**: para obtener más información sobre esta configuración, vea [HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http).  
+    - **Use los certificados generados por Configuration Manager en sistemas de sitios HTTP**: Para obtener más información sobre esta opción, vea [HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http).  
 
 4.  Seleccione la configuración para los equipos cliente.  
 
-    - **Usar un certificado de cliente PKI (capacidad de autenticación de cliente) cuando esté disponible**: si seleccionó la configuración de servidor de sitio **HTTPS o HTTP**, seleccione esta opción para usar un certificado PKI de cliente para las conexiones HTTP. El cliente utiliza este certificado en lugar de un certificado autofirmado para autenticarse en los sistemas de sitio. Si ha seleccionado **Solo HTTPS**, esta opción se selecciona de forma automática.  
+    - **Usar un certificado PKI de cliente (función de autenticación de cliente) cuando esté disponible**: si elige la configuración del servidor de sitio **HTTPS o HTTP**, seleccione esta opción para usar un certificado PKI de cliente para las conexiones HTTP. El cliente utiliza este certificado en lugar de un certificado autofirmado para autenticarse en los sistemas de sitio. Si ha seleccionado **Solo HTTPS**, esta opción se selecciona de forma automática.  
 
     Cuando haya más de un certificado de cliente PKI disponible en un cliente, haga clic en **Modificar** para configurar el método de selección de certificado de cliente.  
 
     Para más información sobre el método de selección de certificados de cliente, vea [Planeación de la selección de certificados de cliente PKI](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForClientCertificateSelection).  
 
-    - **Los clientes comprueban la lista de revocación de certificados (CRL) para sistemas de sitio**: habilite esta opción para que los clientes comprueben los certificados revocados en la CRL de la organización.  
+    - **Los clientes comprueban la lista de revocación de certificados (CRL) para sistemas de sitio**: habilite esta opción para que los clientes comprueben si hay certificados revocados por la CRL de la organización.  
 
     Para más información sobre la comprobación de la CRL de los clientes, vea [Planeación de la revocación de certificados PKI](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs).  
 

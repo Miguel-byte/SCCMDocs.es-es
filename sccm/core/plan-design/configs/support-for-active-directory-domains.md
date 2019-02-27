@@ -10,12 +10,13 @@ ms.assetid: 8c5a13f8-42d5-4898-b7b6-e594dae8b335
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dcb0f5e82d0ef53524e9abfdb974605e3ae73db3
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2babdf726d468d27d0fe2ab37ad99a101adbb74c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333960"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129568"
 ---
 # <a name="supported-active-directory-domains-for-system-center-configuration-manager"></a>Compatibilidad con los dominios de Active Directory para System Center Configuration Manager
 
@@ -78,6 +79,6 @@ En la tabla siguiente se identifican los escenarios admitidos para un espacio de
 
 -   El dominio de una sola etiqueta en Active Directory Domain Services se debe configurar con un espacio de nombres DNS separado que tenga un dominio de nivel superior válido.  
 
-     **Por ejemplo:** el dominio de una sola etiqueta de Contoso está configurado para tener un espacio de nombres no contiguo en el DNS de contoso.com. Por tanto, al especificar el sufijo DNS en Configuration Manager para un equipo en el dominio Contoso, especifique "Contoso.com" y no "Contoso".  
+     **Por ejemplo:** El dominio de una sola etiqueta de Contoso está configurado para tener un espacio de nombres separado en DNS de contoso.com. Por tanto, al especificar el sufijo DNS en Configuration Manager para un equipo en el dominio Contoso, especifique "Contoso.com" y no "Contoso".  
 
 -   Las conexiones de Modelo de objetos componentes distribuido (DCOM) entre los servidores de sitio en el contexto del sistema deben ser correctas mediante el uso de la autenticación Kerberos.  

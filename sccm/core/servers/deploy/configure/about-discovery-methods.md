@@ -10,12 +10,13 @@ ms.assetid: ed931751-18f2-4230-a09e-a0a329fbfa1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 51823b2e424450352d55402f16a8c05211eb77c5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 59376c5b9846e32cc8b63666956424a11211f1c0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342127"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130799"
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>Acerca de los métodos de detección para System Center Configuration Manager
 
@@ -28,7 +29,7 @@ Los métodos de detección de Configuration Manager pueden encontrar otros dispo
 ##  <a name="bkmk_aboutForest"></a> Detección de bosques de Active Directory  
  **Configurable:** Sí  
 
- **Habilitado de forma predeterminada:** No  
+ **Habilitado de manera predeterminada:** No  
 
  **Cuentas** que se pueden usar para ejecutar este método:  
 
@@ -50,9 +51,9 @@ Use la detección de bosques de Active Directory para:
 
 Puede administrar la detección de bosques de Active Directory en la consola de Configuration Manager. Vaya al área de trabajo **Administración** y expanda **Configuración de jerarquía**.   
 
--   **Métodos de detección**: habilite la detección de bosques de Active Directory para que se ejecute en el sitio de nivel superior de la jerarquía. También puede especificar una programación simple para ejecutar la detección. Configúrelo para crear automáticamente los límites de las subredes IP y los sitios de Active Directory que detecte. No se puede ejecutar la detección de bosques de Active Directory en un sitio primario secundario ni en un sitio secundario.  
+-   **Métodos de detección**: aquí puede habilitar la detección de bosques de Active Directory para que se ejecute en el sitio de primer nivel de la jerarquía. También puede especificar una programación simple para ejecutar la detección. Configúrelo para crear automáticamente los límites de las subredes IP y los sitios de Active Directory que detecte. No se puede ejecutar la detección de bosques de Active Directory en un sitio primario secundario ni en un sitio secundario.  
 
--   **Bosque de Active Directory**: configure los bosques adicionales que se van a detectar, especifique cada cuenta de bosque de Active Directory y configure la publicación en cada bosque. Supervise el proceso de detección. Agregue subredes IP y sitios de Active Directory como límites de Configuration Manager y miembros de grupos de límites.  
+-   **Bosques de Active Directory**: configure los bosques adicionales que se van a detectar, especifique cada cuenta de bosque de Active Directory y configure la publicación en cada bosque. Supervise el proceso de detección. Agregue subredes IP y sitios de Active Directory como límites de Configuration Manager y miembros de grupos de límites.  
 
 Para configurar la publicación de bosques de Active Directory para cada sitio de la jerarquía, conecte la consola de Configuration Manager al sitio de nivel superior de la jerarquía. En la pestaña **Publicación** del cuadro de diálogo **Propiedades** del sitio de Active Directory solo se puede mostrar el sitio actual y sus sitios secundarios. Cuando la publicación está habilitada para un bosque y el esquema de ese bosque se extiende para Configuration Manager, se publica la información siguiente de cada sitio habilitado para publicar en ese bosque de Active Directory:  
 
@@ -83,7 +84,7 @@ Para obtener más información sobre cómo configurar este método de detección
 ##  <a name="bkmk_aboutGroup"></a> Detección de grupos de Active Directory  
 **Configurable:** Sí  
 
-**Habilitado de forma predeterminada:** No  
+**Habilitado de manera predeterminada:** No  
 
 **Cuentas** que se pueden usar para ejecutar este método:  
 
@@ -127,7 +128,7 @@ Para obtener más información sobre cómo configurar este método de detección
 ##  <a name="bkmk_aboutSystem"></a> Detección de sistemas de Active Directory  
 **Configurable:** Sí  
 
-**Habilitado de forma predeterminada:** No  
+**Habilitado de manera predeterminada:** No  
 
 **Cuentas** que se pueden usar para ejecutar este método:  
 
@@ -167,7 +168,7 @@ Para obtener más información sobre cómo configurar este método de detección
 ##  <a name="bkmk_aboutUser"></a> Detección de usuario de Active Directory  
 **Configurable:** Sí  
 
-**Habilitado de forma predeterminada:** No  
+**Habilitado de manera predeterminada:** No  
 
 **Cuentas** que se pueden usar para ejecutar este método:  
 
@@ -217,7 +218,7 @@ Para configurar la detección de usuarios de Azure AD, vea [Configuración de se
 ##  <a name="bkmk_aboutHeartbeat"></a> Detección de latidos  
 **Configurable:** Sí  
 
-**Habilitado de forma predeterminada:** Sí  
+**Habilitado de manera predeterminada:** Sí  
 
 **Cuentas** que se pueden usar para ejecutar este método:  
 
@@ -257,7 +258,7 @@ Para obtener más información sobre cómo configurar este método de detección
 ##  <a name="bkmk_aboutNetwork"></a> Detección de redes  
 **Configurable:** Sí  
 
-**Habilitado de forma predeterminada:** No  
+**Habilitado de manera predeterminada:** No  
 
 **Cuentas** que se pueden usar para ejecutar este método:  
 
@@ -273,9 +274,9 @@ Para usar la detección de redes, debe especificar el *nivel* de detección que 
 
 Para que este método detecte correctamente un recurso, la detección de redes necesita identificar la dirección IP y la máscara de subred del recurso. Se usan los siguientes métodos para identificar la máscara de subred de un objeto:  
 
--   **Caché ARP del enrutador:** la detección de redes consulta a la caché ARP de un enrutador para buscar información de subred. Normalmente, los datos de una caché ARP del enrutador tienen un corto período de vida. Por lo tanto, cuando la detección de redes consulta la caché ARP, puede que esta ya no contenga información sobre el objeto solicitado.  
+-   **Caché ARP del enrutador:** La detección de redes consulta la caché ARP de un enrutador para buscar información de subred. Normalmente, los datos de una caché ARP del enrutador tienen un corto período de vida. Por lo tanto, cuando la detección de redes consulta la caché ARP, puede que esta ya no contenga información sobre el objeto solicitado.  
 
--   **DHCP:** la detección de redes consulta a cada servidor DHCP especificado para detectar los dispositivos para los que el servidor DHCP ha proporcionado una concesión. La detección de redes sólo admite servidores DHCP en que se ejecuta la implementación de DHCP de Microsoft.  
+-   **DHCP:** La detección de redes consulta cada servidor DHCP especificado para detectar los dispositivos para los que el servidor DHCP ha proporcionado una concesión. La detección de redes sólo admite servidores DHCP en que se ejecuta la implementación de DHCP de Microsoft.  
 
 -   **Dispositivo SNMP:** la detección de redes puede consultar directamente un dispositivo SNMP. Para que la detección de redes consulte un dispositivo, este último debe tener instalado un agente SNMP local. Configure también la detección de redes para usar el nombre de la comunidad que usa el agente SNMP.  
 

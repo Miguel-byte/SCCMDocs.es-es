@@ -10,12 +10,13 @@ ms.assetid: 9edc214f-f405-456d-80df-8adcc2a5428d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 67a052fffcaf6ad105f417649aa9f3826922ce80
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2188ce295f999b392166c99133822ad8fc1e441e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385896"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125245"
 ---
 # <a name="deployment-monitoring-tool"></a>Deployment Monitoring Tool
 
@@ -52,13 +53,13 @@ Para copiar datos en cualquier vista, seleccione una celda y presione **CTRL** +
 
 Las acciones siguientes están disponibles en el menú **Acciones**:  
 
-- **Conectar al equipo remoto**: seleccione un equipo al que conectarse. Cuando no se especifica un nombre de usuario y contraseña, utilice las credenciales actuales. Haga clic en **Guardar** para conectarse a un equipo remoto.  
+- **Conectarse a equipo remoto**: seleccione un equipo al que quiera conectarse. Cuando no se especifica un nombre de usuario y contraseña, utilice las credenciales actuales. Haga clic en **Guardar** para conectarse a un equipo remoto.  
 
-- **Exportar datos**: seleccione el archivo en el que quiere escribir los datos y haga clic en **Guardar**. Use el archivo XML exportado para solucionar problemas de forma remota en un equipo diferente.  
+- **Exportar datos**: seleccione el archivo en el que quiera escribir los datos y haga clic en **Guardar**. Use el archivo XML exportado para solucionar problemas de forma remota en un equipo diferente.  
 
 - **Importar datos**: seleccione un archivo para importarlo a la herramienta.  
 
-- **Ver registro**: se abre un archivo de registro asociado, en función de la vista:  
+- **Ver registro**: se abre un archivo de registro asociado, según la vista:  
     - Propiedades del cliente: `\\<hostname>\c$\Windows\CCM\Logs\PolicyAgent.log`
     - Implementaciones: `\\<hostname>\c$\Windows\CCM\Logs\PolicyAgent.log`
     - Todas las actualizaciones: `C:\Windows\WindowsUpdate.log`

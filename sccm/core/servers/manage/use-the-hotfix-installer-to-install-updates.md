@@ -10,12 +10,13 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5c90889861db55a27da897e709b16b66edece08a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 67d2fc976b08e438c6f19a7fecca03761bb099f6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342433"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124737"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>Uso del instalador de revisiones para instalar actualizaciones para System Center Configuration Manager
 
@@ -161,7 +162,7 @@ Una vez que la agrupación de actualizaciones esté instalada en un servidor de 
 
 4.  Reinicie los servicios que se detuvieron en pasos anteriores.  
 
-5.  Cuando se instala la agrupación de actualizaciones, extrae **update.sql** en la siguiente ubicación en el servidor de sitio: **\\\\&lt;Nombre de servidor\>\SMS_&lt;Código de sitio\>\Revisión\\&lt;Número de KB\>\update.sql**.  
+5.  Cuando se instala la agrupación de actualizaciones, extrae **update.sql** en la siguiente ubicación en el servidor de sitio:  **\\\\&lt;Nombre de servidor\>\SMS_&lt;Código de sitio\>\Hotfix\\&lt;Número de KB\>\update.sql**  
 
 ####  <a name="bkmk_provider"></a> Actualizar un equipo que ejecuta el proveedor de SMS  
  Después de instalar una agrupación de actualizaciones que incluye actualizaciones para el proveedor de SMS, debe implementar la actualización en cada equipo que ejecuta el proveedor de SMS. La única excepción es la instancia del proveedor de SMS que se instaló previamente en el servidor de sitio en el que se instala la agrupación de actualizaciones. La instancia local del proveedor de SMS en el servidor de sitio se actualiza cuando se instala la agrupación de actualizaciones.  
@@ -202,7 +203,7 @@ Por ejemplo, puede usar la siguiente línea de comandos para actualizar una cons
 ###  <a name="BKMK_DeploySCUP"></a> Usar Updates Publisher 2011 para instalar actualizaciones  
  Cuando se instala la agrupación de actualizaciones en un servidor de sitio, el Asistente para instalación crea un archivo de catálogo para Updates Publisher que puede usar para implementar las actualizaciones en los equipos correspondientes. El asistente siempre crea este catálogo, incluso cuando la opción **Use package and program to deploy this update**.  
 
- El catálogo de Updates Publisher se denomina **SCUPCatalog.cab** y se encuentra en la ubicación siguiente del equipo en el que se ejecuta la agrupación de actualizaciones: **\\\\&lt;NombreDeServidor\>\SMS_&lt;Código de sitio\>\Revisión\\&lt;Número de KB\>\SCUP\SCUPCatalog.cab**.  
+ El catálogo de Updates Publisher se llama **SCUPCatalog.cab** y se encuentra en la ubicación siguiente en el equipo donde se ejecute la agrupación de actualizaciones: **\\\\&lt;Nombre de servidor\>\SMS_&lt;Código de sitio\>\Hotfix\\&lt;Número de KB\>\SCUP\SCUPCatalog.cab**  
 
 > [!IMPORTANT]  
 >  Ya que el archivo SCUPCatalog.cab se crea mediante rutas de acceso específicas del servidor de sitio en el que se instala la agrupación de actualizaciones, no se puede usar en otros servidores de sitio.  

@@ -4,12 +4,12 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 11/27/2018
-ms.openlocfilehash: c91cf0abb8cb79fe92e34b6b234a4c8264af75ab
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: f6e46f8b0bf985eae87cd5157f8a82af5fa0b849
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456947"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142585"
 ---
 ##  <a name="BKMK_OSImagesApplyUpdates"></a> Aplicar las actualizaciones de software a una imagen  
 
@@ -43,9 +43,9 @@ La base de datos del sitio almacena información sobre la imagen, incluyendo las
 
     a.  **Programación**: especifique la programación para cuando el sitio aplique las actualizaciones de software a la imagen.  
 
-    b.  **Continuar después de un error**: seleccione esta opción para continuar con la aplicación de las actualizaciones de software a la imagen incluso cuando se produzca un error.  
+    b.  **Continuar después de un error**:  seleccione esta opción para continuar con la aplicación de las actualizaciones de software a la imagen, incluso cuando se produzca un error.  
 
-    c.  **Actualizar los puntos de distribución con la imagen**: seleccione esta opción para actualizar la imagen en los puntos de distribución después de que el sitio aplique las actualizaciones de software.  
+    c.  **Actualizar puntos de distribución con la imagen:** seleccione esta opción para actualizar la imagen en puntos de distribución después de que el sitio aplique las actualizaciones de software.  
 
 6.  Finalice el asistente para programar actualizaciones.  
 
@@ -56,8 +56,8 @@ La base de datos del sitio almacena información sobre la imagen, incluyendo las
 ### <a name="servicing-operations"></a>Operaciones de mantenimiento
 
 En el nodo **Imágenes de sistema operativo** o **Paquetes de actualización del sistema operativo** de la consola de Configuration Manager, agregue las siguientes columnas a la vista:
-- **Fecha de actualizaciones programada**: esta propiedad muestra la siguiente programación que haya definido.  
-- **Estado de las actualizaciones programadas**: esta propiedad muestra el estado. Por ejemplo, **Correcto** o **En proceso**.  
+- **Fecha de actualizaciones programadas**: esta propiedad muestra la siguiente programación que haya definido.  
+- **Estado de actualizaciones programadas**: esta propiedad muestra el estado. Por ejemplo, **Correcto** o **En proceso**.  
 
 Seleccione un objeto de imagen específico y después cambie a la pestaña **Estado de actualización** en el panel de detalles. En esta pestaña se muestra la lista de actualizaciones de la imagen. 
 
@@ -82,4 +82,5 @@ De manera predeterminada, esta configuración es **Automática**. Con este valor
 Si selecciona una unidad que no existe en el servidor de sitio, Configuration Manager se comportará igual que si selecciona **Automática**. 
 
 Durante la instalación sin conexión, Configuration Manager almacena los archivos temporales en la carpeta, `<drive>:\ConfigMgr_OfflineImageServicing`. También monta la imagen del SO en esta carpeta. 
+
 

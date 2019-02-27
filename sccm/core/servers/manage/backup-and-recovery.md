@@ -10,12 +10,13 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 85ce1c4b5201c29ffa3543357f50a379c1b11e7f
-ms.sourcegitcommit: 84afecee44200e27d1d5bb5ed2d54fd6a8c51617
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e876e34929479654240ff220c3cad91043da0f83
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43053888"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123144"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Hacer una copia de seguridad de un sitio de Configuration Manager
 
@@ -29,7 +30,7 @@ Las secciones de este artículo pueden ayudarle a realizar copias de seguridad d
 
 ## <a name="considerations-before-creating-a-backup"></a>Aspectos que debe tener en cuenta antes de crear una copia de seguridad  
 
--   Si usa un grupo de disponibilidad Always On de SQL Server para hospedar la base de datos de sitio: modifique los planes de recuperación y copia de seguridad, como se explica en [Prepararse para usar SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#changes-for-site-backup).  
+-   Si usa un grupo de disponibilidad Always On de SQL Server para hospedar la base de datos del sitio: modifique los planes de copia de seguridad y recuperación, como se describe en [Preparación para usar grupos de disponibilidad AlwaysOn de SQL Server](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#changes-for-site-backup).  
 
 -   Configuration Manager puede recuperar la base de datos de sitio desde la tarea de copia de seguridad de Configuration Manager. También puede usar una copia de seguridad de la base de datos de sitio creada con otro proceso.   
 
@@ -83,11 +84,11 @@ La información del estado de copia de seguridad del sitio se escribe en el arch
     > [!IMPORTANT]  
     >  Con el fin de evitar la manipulación de los archivos de copia de seguridad, almacene los archivos en una ubicación segura. La ruta de acceso de copia de seguridad más segura es una unidad local, donde puede establecer los permisos de archivos NTFS en la carpeta. Configuration Manager no cifra los datos de copia de seguridad que se almacenan en la ruta de acceso de copia de seguridad.  
 
-    -   **Unidad local en servidor de sitio para los datos y la base de datos de sitio**: especifica que la tarea almacena los archivos de copia de seguridad del sitio y de la base de datos de sitio en la ruta de acceso especificada en la unidad de disco local del servidor de sitio. Cree la carpeta local antes de que se ejecute la tarea de copia de seguridad. La cuenta Sistema local del servidor de sitio debe tener permisos de archivos NTFS de **escritura** en la carpeta local para la copia de seguridad del servidor de sitio. La cuenta Sistema local del equipo con SQL Server debe tener permisos NTFS de **escritura** en la carpeta para la copia de seguridad de la base de datos de sitio.  
+    -   **Unidad local en servidor de sitio para los datos y la base de datos del sitio**: especifica que la tarea almacene los archivos de copia de seguridad para el sitio y la base de datos del sitio en la ruta especificada en la unidad de disco local del servidor de sitio. Cree la carpeta local antes de que se ejecute la tarea de copia de seguridad. La cuenta Sistema local del servidor de sitio debe tener permisos de archivos NTFS de **escritura** en la carpeta local para la copia de seguridad del servidor de sitio. La cuenta Sistema local del equipo con SQL Server debe tener permisos NTFS de **escritura** en la carpeta para la copia de seguridad de la base de datos de sitio.  
 
-    -   **Ruta de acceso de red (nombre UNC) para los datos y la base de datos de sitio**: especifica que la tarea almacena los archivos de copia de seguridad del sitio y de la base de datos de sitio en la ruta de acceso de red especificada. Cree el recurso compartido antes de que se ejecute la tarea de copia de seguridad. La cuenta de equipo del servidor de sitio debe tener permisos NTFS y de uso compartido de **escritura** en la carpeta de red compartida. Si SQL Server está instalado en otro equipo, la cuenta de equipo de SQL Server debe tener los mismos permisos.  
+    -   **Ruta de acceso de red (nombre UNC) para los datos y la base de datos del sitio**: especifica que la tarea almacene los archivos de copia de seguridad del sitio y de la base de datos del sitio en la ruta de red especificada. Cree el recurso compartido antes de que se ejecute la tarea de copia de seguridad. La cuenta de equipo del servidor de sitio debe tener permisos NTFS y de uso compartido de **escritura** en la carpeta de red compartida. Si SQL Server está instalado en otro equipo, la cuenta de equipo de SQL Server debe tener los mismos permisos.  
 
-    -   **Unidades locales en servidor de sitio y SQL Server**: especifica que la tarea almacena los archivos de copia de seguridad del sitio en la ruta de acceso especificada en la unidad local del servidor de sitio. La tarea almacena los archivos de copia de seguridad para la base de datos de sitio en la ruta de acceso especificada en la unidad local del servidor de base de datos de sitio. Cree las carpetas locales antes de que se ejecute la tarea de copia de seguridad. La cuenta de equipo del servidor de sitio debe tener permisos de NTFS de **escritura** en la carpeta que se crea en el servidor de sitio. La cuenta de equipo del servidor de SQL Server debe tener permisos de NTFS de **escritura** en la carpeta que se crea en el servidor de la base de datos del sitio. Esta opción solo está disponible cuando la base de datos de sitio no está instalada en el servidor de sitio.  
+    -   **Unidades locales en el servidor de sitio y SQL Server**: la tarea almacena los archivos de copia de seguridad para la base de datos de sitio en la ruta especificada en la unidad local del servidor de sitio. La tarea almacena los archivos de copia de seguridad para la base de datos de sitio en la ruta de acceso especificada en la unidad local del servidor de base de datos de sitio. Cree las carpetas locales antes de que se ejecute la tarea de copia de seguridad. La cuenta de equipo del servidor de sitio debe tener permisos de NTFS de **escritura** en la carpeta que se crea en el servidor de sitio. La cuenta de equipo del servidor de SQL Server debe tener permisos de NTFS de **escritura** en la carpeta que se crea en el servidor de la base de datos del sitio. Esta opción solo está disponible cuando la base de datos de sitio no está instalada en el servidor de sitio.  
 
     > [!NOTE]  
     >   La opción de desplazarse al destino de copia de seguridad solo está disponible si se especifica la ruta de acceso de red del destino de copia de seguridad.  

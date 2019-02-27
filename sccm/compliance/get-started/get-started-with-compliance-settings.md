@@ -10,12 +10,13 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec350bdb6b3b421d95bf13eafc562919bccc3c38
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f4e85b6886947fe0ac720f5840dcefd91a441d3e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335616"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130952"
 ---
 # <a name="get-started-with-compliance-settings-in-system-center-configuration-manager"></a>Introducción a la configuración de cumplimiento en System Center Configuration Manager
 
@@ -109,8 +110,7 @@ Para obtener más información, vea [Actualizar dispositivos de Windows con la d
 
 
 ## <a name="microsoft-edge-browser-profiles"></a>Perfiles del explorador Microsoft Edge
-<!-- 1357310 -->
-A partir de la versión 1802, para los clientes que usan el explorador web [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) en los clientes de Windows 10, cree una directiva de configuración de cumplimiento para configurar varias opciones de Microsoft Edge. 
+<!-- 1357310 --> A partir de la versión 1802, para los clientes que usan el explorador web [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) en los clientes de Windows 10, cree una directiva de configuración de cumplimiento para configurar varias opciones de Microsoft Edge. 
 
 Para obtener más información, vea [Microsoft Edge browser profiles](/sccm/compliance/deploy-use/browser-profiles) (Perfiles del explorador Microsoft Edge).
 

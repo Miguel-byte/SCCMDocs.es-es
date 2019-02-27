@@ -10,12 +10,13 @@ ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 597ce060dc1fb37f1cc827da3e1c059958a91163
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6f094e2e6eab0067f51cb7fcd193a4acc914fc5c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332736"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56134959"
 ---
 # <a name="custom-locations-for-system-center-configuration-manager-site-database-files"></a>Ubicaciones personalizadas para archivos de base de datos del sitio de System Center Configuration Manager
 
@@ -28,9 +29,9 @@ ms.locfileid: "32332736"
 
  **Durante la configuración** de un nuevo sitio principal o un sitio de administración central, puede hacer lo siguiente:  
 
--   **Especificar ubicaciones de archivo no predeterminadas para la base de datos del sitio**: el programa de instalación de Configuration Manager crea después la base de datos del sitio mediante el uso de esas ubicaciones.  
+-   **Especificar ubicaciones de archivo no predeterminadas para la base de datos del sitio**: después, el programa de instalación de Configuration Manager crea la base de datos del sitio mediante estas ubicaciones.  
 
--   **Especificar el uso de una base de datos de SQL Server creada previamente que usa ubicaciones de archivo personalizadas**: el programa de instalación de Configuration Manager usa dicha base de datos creada previamente y sus ubicaciones de archivo preconfiguradas.  
+-   **Especificar el uso de una base de datos de SQL Server existente que use ubicaciones de archivo personalizadas**:  después, el programa de instalación de Configuration Manager usa esa base de datos existente y las ubicaciones de archivo preconfiguradas.  
 
 **Después de la configuración**, puede cambiar la ubicación de los archivos de la base de datos del sitio. Para ello, es necesario detener el sitio y editar la ubicación de los archivos en SQL Server:  
 

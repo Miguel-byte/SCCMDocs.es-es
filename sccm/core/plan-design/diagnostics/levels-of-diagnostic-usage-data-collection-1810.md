@@ -10,12 +10,13 @@ ms.assetid: bce9e299-7b3a-4f51-8863-a322877daa2c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6dd50d137cdc570b7e37cd96fb310c85ba60840
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 52c13109710fc35dcd2853f76188ac42269a8058
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458174"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120068"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1810"></a>Niveles de recopilación de datos de uso y diagnóstico en la versión 1810
 
@@ -42,7 +43,7 @@ El nivel Básico incluye datos sobre la jerarquía. Es necesario para ayudar a m
 
 En el caso de la versión 1810 de Configuration Manager, este nivel incluye los datos siguientes:
 
-- Estadísticas sobre las conexiones de consola de Configuration Manager: versión de SO, idioma, SKU y arquitectura, memoria del sistema, número de procesadores lógicos, identificador de sitio de conexión, versiones instaladas de .NET y paquetes de idioma de la consola.
+- Estadísticas sobre las conexiones de la consola de Configuration Manager: versión de SO, idioma, SKU y arquitectura; memoria del sistema, número de procesadores lógicos, identificador de sitio de conexión, versiones instaladas de .NET y paquetes de idioma de la consola
 
 - Recuentos básicos de aplicación y tipo de implementación: aplicaciones totales, aplicaciones totales con varios tipos de implementación, aplicaciones totales con dependencias, aplicaciones totales reemplazadas y recuento de tecnologías de implementación en uso.
 
@@ -323,7 +324,7 @@ En el caso de la versión 1810 de Configuration Manager, este nivel incluye los 
 - Recuento de directivas del explorador Microsoft Edge implementadas  
 
 
-### <a name="content"></a>Contenido  
+### <a name="content"></a>Content  
 
 - Estadísticas de grupo de límites: cuántas rápidas, cuántas lentas, recuento por grupo y relaciones de reserva  
 

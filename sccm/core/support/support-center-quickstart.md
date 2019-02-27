@@ -10,12 +10,13 @@ ms.assetid: 5cb41e2b-4c79-4da9-a432-ff869c0870f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5a9865a591f6947447ebb088b5e5e25db1e9fa54
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 026c6e5646983f815572974d5aaa67746178c03b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458115"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156464"
 ---
 # <a name="support-center-quickstart-guide"></a>Guía de inicio rápido del Centro de soporte técnico
 
@@ -67,7 +68,7 @@ Cree un completo archivo de *paquete de solución de problemas* (.zip) que captu
 
         - Adaptadores de red  
 
-    - **Registros**: elija una o más entradas de la lista y haga clic en **Abrir**. Esta acción abre los archivos de registro seleccionados en el visor de registros. Use esta característica para buscar códigos de error y use los filtros avanzados para analizar más rápidamente archivos de registro.  
+    - **Registros**: seleccione una o más entradas de la lista y haga clic en **Abrir**. Esta acción abre los archivos de registro seleccionados en el visor de registros. Use esta característica para buscar códigos de error y use los filtros avanzados para analizar más rápidamente archivos de registro.  
 
 
 
@@ -83,7 +84,7 @@ Aparte de estas capacidades básicas, el Centro de soporte técnico también pue
 
   - **WMI de cliente**: información de configuración del cliente de WMI. El Centro de soporte técnico no recopila la directiva del cliente.  
 
-  - **Solución de problemas**: datos de solución de problemas en tiempo real para ayudar a diagnosticar problemas comunes de cliente relativos a Active Directory, puntos de administración, redes, asignaciones de directiva y registro.  
+  - **Solución de problemas**: datos de solución de problemas en tiempo real para ayudar a diagnosticar problemas comunes de cliente relativos a Active Directory, puntos de administración, redes, asignaciones de directivas y registro.  
 
   - **Volcados de depuración**: realiza el volcado de depuración del cliente y procesos relacionados. Los volcados de depuración pueden ser de gran tamaño. Habilite esta opción solo cuando solucione problemas de rendimiento del cliente.  
 

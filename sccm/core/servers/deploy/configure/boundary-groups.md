@@ -10,12 +10,13 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e9b2eaaf3581bdb951b23541c96532c5b049aac1
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a1062cd5983c3eb0d1353b6387b7d9ee507df3b4
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456369"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132646"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Configuración de grupos de límites para Configuration Manager
 
@@ -158,9 +159,9 @@ A partir de la versión 1810, cuando un dispositivo ejecuta una secuencia de tar
 
 Puede configurar este comportamiento mediante la siguiente configuración en la página **Puntos de distribución** de la implementación de la secuencia de tareas: 
 
-- **Cuando no haya disponible ningún punto de distribución local, usar un punto de distribución remoto**: en esta implementación, la secuencia de tareas puede recurrir a los puntos de distribución de un grupo de límites vecino.  
+- **Cuando no haya disponible ningún punto de distribución local, usar un punto de distribución remoto**: para esta implementación, la secuencia de tareas puede revertirse a los puntos de distribución en un grupo de límites próximo.  
 
-- **Permitir a los clientes usar puntos de distribución del grupo de límites del sitio predeterminado**: en esta implementación, la secuencia de tareas puede recurrir a los puntos de distribución del grupo de límites de sitio predeterminado.  
+- **Permitir que los clientes usen puntos de distribución del grupo de límite del sitio predeterminado**: para esta implementación, la secuencia de tareas puede revertirse a los puntos de distribución en el grupo de límites del sitio predeterminado.  
 
 Para usar este nuevo comportamiento, asegúrese de que los clientes estén actualizados a la versión más reciente.
 
@@ -296,7 +297,7 @@ Para obtener más información sobre el comportamiento del cliente para adquirir
 
 Durante la actualización de cliente, si no se especifica el parámetro de línea de comandos /MP, el cliente consulta orígenes, como Active Directory y WMI, para conocer cualquier punto de administración disponible. La actualización de cliente no acepta la configuración del grupo de límites. <!--VSO 2841292-->  
 
-Para que los clientes usen esta función, habilite la opción siguiente: **Los clientes prefieren usar puntos de administración especificados en grupos de límites** en **Configuración de jerarquía**. 
+Para los clientes que usen esta función, habilite la siguiente opción: **Los clientes prefieren usar puntos de administración especificados en grupos de límites** en **Configuración de jerarquía**. 
 
 > [!Note]  
 > Los procesos de implementación de sistema operativo no operan de acuerdo con los grupos de límites para los puntos de administración.  
@@ -306,7 +307,7 @@ Para que los clientes usen esta función, habilite la opción siguiente: **Los c
 
 Las nuevas entradas aparecen en **LocationServices.log**. El atributo **Localidad** identifica uno de los siguientes estados:
 
-- **0**: desconocido.  
+- **0**: Desconocida  
 
 - **1**: el punto de administración especificado solo está en el grupo de límites predeterminado del sitio para la reserva.  
 
@@ -381,7 +382,7 @@ Con esta configuración:
 
 - Si el cliente no puede encontrar contenido en su grupo de límites *actual* después de buscar durante 10 minutos, agrega los puntos de distribución del grupo de límites BG_B a su búsqueda. Después, continúa la búsqueda de contenido de un punto de distribución en su grupo combinado de servidores. En este grupo ahora se incluyen los servidores de los grupos de límites BG_A y BG_B. El cliente sigue poniéndose en contacto con cada punto de distribución durante dos minutos y después cambia al servidor siguiente de su grupo. El grupo de ubicaciones de origen de contenido válidas del cliente incluye DP_A1, DP_A2, DP_B1 y DP_B2.  
 
-- Después de otros 10 minutos (un total de 20), si el cliente todavía no ha encontrado un punto de distribución con contenido, amplía su grupo para incluir los servidores disponibles del segundo grupo de límites *vecino*, BG_C. Ahora el cliente tiene seis puntos de distribución para buscar (DP_A1, DP_A2, DP_B2, DP_B2, DP_C1 y DP_C2). Continúa cambiando a un punto de distribución nuevo cada dos minutos hasta que encuentra el contenido.  
+- Después de otros 10 minutos (un total de 20), si el cliente todavía no ha encontrado un punto de distribución con contenido, amplía su grupo para incluir los servidores disponibles del segundo grupo de límites *vecino*, BG_C. El cliente ahora tiene seis puntos de distribución donde buscar: DP_A1, DP_A2, DP_B2, DP_B2, DP_C1 y DP_C2. Continúa cambiando a un punto de distribución nuevo cada dos minutos hasta que encuentra el contenido.  
 
 - Si el cliente no ha encontrado contenido después de un total de 120 minutos, usa la reserva para incluir el *grupo de límites de sitio predeterminado* como parte de su búsqueda continuada. Ahora el grupo incluye todos los puntos de distribución de los tres grupos de límites configurados y el punto de distribución final ubicado en el servidor de sitio. El cliente sigue buscando contenido, cambiando de punto de distribución cada dos minutos hasta que encuentra contenido.  
 

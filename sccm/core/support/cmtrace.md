@@ -10,12 +10,13 @@ ms.assetid: 6a4a3290-5228-4871-918a-554aa1c20834
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3ad96cedf1170f8563fdafe3922f6ad2e7c67b5a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 87552016d1cd17e79abf01a9de9109195d3d2a70
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386016"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125330"
 ---
 # <a name="cmtrace"></a>CMTrace
 
@@ -65,9 +66,9 @@ Filtre la vista por archivos de los siguientes tipos:
 
 Las dos opciones siguientes no están seleccionadas de forma predeterminada:  
 
-- **Ignore existing lines** (Ignorar líneas existentes): cuando se selecciona, CMTrace omite el contenido existente del archivo de registro seleccionado y solo muestra las nuevas líneas cuando se agregan. Utilice esta opción solo para supervisar nuevas acciones cuando ya no necesite el historial completo del archivo de registro.  
+- **Omitir líneas existentes**: cuando se selecciona, CMTrace omite el contenido existente del archivo de registro seleccionado y solo muestra las nuevas líneas cuando se agregan. Utilice esta opción solo para supervisar nuevas acciones cuando ya no necesite el historial completo del archivo de registro.  
 
-- **Merge selected files** (Combinar archivos seleccionados): si habilita esta opción y selecciona más de un archivo de registro, CMTrace combina los registros seleccionados en la vista. Los muestra como si fuesen un solo archivo de registro. El registro combinado actualiza lo mismo y admite el resto de características de CMTrace como si fuera un solo archivo de registro.  
+- **Combinar archivos seleccionados**: si habilita esta opción y selecciona más de un archivo de registro, CMTrace combina los registros seleccionados en la vista. Los muestra como si fuesen un solo archivo de registro. El registro combinado actualiza lo mismo y admite el resto de características de CMTrace como si fuera un solo archivo de registro.  
 
 
 #### <a name="open-on-server"></a>Open on Server (Abrir en el servidor)
@@ -85,15 +86,15 @@ Configure las opciones de CMTrace. Están disponibles las siguientes opciones:
 
 - Pestaña**General**  
 
-     - **Update Interval** (Actualizar intervalo): controla la frecuencia con la que CMTrace comprueba si hay cambios en los archivos de registro y carga nuevas líneas. De forma predeterminada, este valor es de 500 milisegundos.  
+     - **Intervalo de actualización**: controla la frecuencia con la que CMTrace comprueba si hay cambios en los archivos de registro y carga nuevas líneas. De forma predeterminada, este valor es de 500 milisegundos.  
 
-     - **Resaltar**: establece el color que CMTrace utiliza para resaltar las líneas de registro que se elijan. De forma predeterminada, este color es amarillo básico (rojo: 255, verde: 255, azul: 0).  
+     - **Resaltar**: establece el color que CMTrace usa para resaltar las líneas del registro que seleccione. De forma predeterminada, este color es amarillo básico (rojo: 255, verde: 255, azul: 0).  
 
-     - **Columnas**: configura las columnas que están visibles en la vista del registro y el orden en que aparecen. De forma predeterminada, muestra Texto del registro, Componente, Fecha y hora y Subproceso.  
+     - **Columnas:** configura las columnas que están visibles en la vista del registro y el orden en que aparecen. De forma predeterminada, muestra Texto del registro, Componente, Fecha y hora y Subproceso.  
 
 - Pestaña **Impresión**  
 
-     - **Columnas**: configure las columnas que se usan al imprimir archivos de registro y el orden en que aparecen. De forma predeterminada, imprime las mismas columnas que muestra.  
+     - **Columnas:** configure las columnas que se usan al imprimir archivos de registro y el orden en que aparecen. De forma predeterminada, imprime las mismas columnas que muestra.  
 
      - **Orientación**: establece la orientación de impresión predeterminado al imprimir archivos de registro. Reemplace esta configuración en el cuadro de diálogo Imprimir. De forma predeterminada, utiliza orientación Vertical.  
  
@@ -146,7 +147,7 @@ Ejemplos: <!--SCCMDocs issue #603-->
 
 
 #### <a name="error-lookup"></a>Búsqueda de errores
-Escriba o pegue un código de error en formato decimal o hexadecimal para mostrar una descripción. Los orígenes de error posibles incluyen: Windows, WMI o Winhttp.
+Escriba o pegue un código de error en formato decimal o hexadecimal para mostrar una descripción. Entre los posibles orígenes de errores, se incluyen los siguientes: Windows, WMI o WinHTTP.
 
 #### <a name="pause"></a>Pausar
 Suspenda o reinicie la supervisión del registro. Los siguientes casos de uso son algunos de los posibles motivos para usar esta acción:  

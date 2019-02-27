@@ -10,12 +10,13 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 07eb6ec88a5f9b9f7985c317813b2ef7dd5534ff
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: fe4e1c83f4079e0df959563ac8209a98983b8d90
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344711"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132462"
 ---
 # <a name="use-cloud-services-with-system-center-configuration-manager"></a>Usar servicios en la nube con System Center Configuration Manager.
 
@@ -45,7 +46,7 @@ Aunque el aprovisionamiento de recursos en la nube no es algo que deba hacer ant
 
 -   **Escenario 2:** puede ejecutar Configuration Manager en una máquina virtual y usarlo para administrar clientes que no se ejecutan en Azure.  
 
--   **Escenario 3:** puede ejecutar diferentes roles de sistema de sitio de Configuration Manager en máquinas virtuales, mientras ejecuta otros roles en su red corporativa física (con la conectividad de red adecuada para las comunicaciones).  
+-   **Escenario 3:** puede ejecutar diferentes roles de sistema de sitio de Configuration Manager en máquinas virtuales mientras ejecuta otros roles en su red corporativa física (con la conectividad de red adecuada para las comunicaciones).  
 
 Los mismos requisitos para redes, sistemas operativos y requisitos de hardware que se aplican a la instalación de Configuration Manager en su red corporativa física también se aplican a la instalación de Configuration Manager en Azure.  
 
@@ -91,7 +92,7 @@ Para usar estas capacidades adicionales no es necesario tener una suscripción a
 
  Para obtener más información, consulte los detalles de los distintos escenarios de recursos basados en la nube. También puede ver los siguientes temas sobre seguridad de Azure:  
 
--   [Windows Azure: Comprensión de la administración de cuenta de seguridad en Windows Azure](http://go.microsoft.com/fwlink/p/?LinkId=262968)  
+-   [Azure: Understanding Security Account Management in Azure (Azure: información sobre la administración de cuentas de seguridad en Windows Azure)](http://go.microsoft.com/fwlink/p/?LinkId=262968)  
 
 -   [Windows Azure Security Overview](http://go.microsoft.com/fwlink/p/?LinkId=262970) (Introducción a la seguridad de Windows Azure)  
 

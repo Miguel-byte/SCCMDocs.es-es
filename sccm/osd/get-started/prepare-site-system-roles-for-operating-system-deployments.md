@@ -10,12 +10,13 @@ ms.assetid: 0ef5f3ce-b0e4-4775-b5c2-b245e45b4194
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cbfa49dddb19d588a3fe16f042b50af590cf39e8
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6c7f54ccda217ebbae543b70aeead37f6c55cf0f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383735"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125694"
 ---
 # <a name="prepare-site-system-roles-for-os-deployments-with-configuration-manager"></a>Preparar los roles de sistema de sitio para las implementaciones de sistema operativo con Configuration Manager
 
@@ -67,9 +68,9 @@ Para implementar sistemas operativos en clientes de Configuration Manager que ef
 
 Se pueden personalizar los tamaños de bloque de TFTP de RamDisk y de ventana para los puntos de distribución habilitados con PXE. Si ha personalizado la red, un tamaño de bloque o ventana grande podría provocar que se produjera un error de tiempo de espera en la descarga de la imagen de arranque. Las personalizaciones del tamaño del bloque y la ventana de TFTP de RamDisk permiten optimizar el tráfico de TFTP al usar PXE para cumplir los requisitos de red específicos. Para determinar la configuración más eficaz, pruebe la configuración personalizada en el entorno.  
 
--   **Tamaño del bloque de TFTP**: el tamaño de bloque es el tamaño de los paquetes de datos que el servidor envía al cliente que está descargando el archivo. Un tamaño de bloque mayor permite que el servidor envíe menos paquetes, por lo que habrá menos demoras por los recorridos de ida y vuelta entre el servidor y el cliente. Pero un tamaño de bloque grande genera fragmentación en los paquetes, lo que la mayoría de implementaciones de cliente de PXE no admiten.  
+-   **Tamaño del bloque TFTP**: el tamaño de bloque es el tamaño de los paquetes de datos que el servidor envía al cliente que está descargando el archivo. Un tamaño de bloque mayor permite que el servidor envíe menos paquetes, por lo que habrá menos demoras por los recorridos de ida y vuelta entre el servidor y el cliente. Pero un tamaño de bloque grande genera fragmentación en los paquetes, lo que la mayoría de implementaciones de cliente de PXE no admiten.  
 
--   **Tamaño de la ventana de TFTP**: TFTP requiere un paquete de confirmación para cada bloque de datos que se envía. El servidor no envía el siguiente bloque de la secuencia hasta que reciba el paquete de confirmación del bloque anterior. Las ventanas TFTP permiten definir cuántos bloques de datos se necesitan para llenar una ventana. El servidor envía los bloques de datos sucesivamente hasta que se completa la ventana; en ese momento, el cliente envía un paquete de confirmación. Si se aumenta este tamaño de ventana, se reduce el número de demoras por los recorridos de ida y vuelta entre el cliente y el servidor, y se disminuye el tiempo global necesario para descargar una imagen de arranque.  
+-   **Tamaño de ventana de TFTP**: TFTP requiere un paquete de confirmación para cada bloque de datos que se envía. El servidor no envía el siguiente bloque de la secuencia hasta que reciba el paquete de confirmación del bloque anterior. Las ventanas TFTP permiten definir cuántos bloques de datos se necesitan para llenar una ventana. El servidor envía los bloques de datos sucesivamente hasta que se completa la ventana; en ese momento, el cliente envía un paquete de confirmación. Si se aumenta este tamaño de ventana, se reduce el número de demoras por los recorridos de ida y vuelta entre el cliente y el servidor, y se disminuye el tiempo global necesario para descargar una imagen de arranque.  
   
 
 #### <a name="modify-the-ramdisk-tftp-window-size"></a>Modificar el tamaño de la ventana de TFTP de RamDisk  

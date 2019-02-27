@@ -10,12 +10,13 @@ ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 78694282dae7408e1f9e01fd75585f87aef41da7
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5123bd51de9678666b28ec464e811dafdd91a30d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383569"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156566"
 ---
 # <a name="proxy-server-support-in-configuration-manager"></a>Compatibilidad con servidores proxy en Configuration Manager
 
@@ -75,7 +76,7 @@ Este rol de sistema de sitio usa el proxy al conectarse a Microsoft Update para 
 Estas opciones se encuentran en la pestaña **Configuración de cuenta y proxy** de las propiedades de punto de actualización de software.  
 
 > [!NOTE]  
->  De forma predeterminada, la cuenta del **sistema** para el servidor en el que se creó una regla de implementación automática se usa para conectarse a Internet y descargar actualizaciones de software cuando se ejecutan las reglas de implementación automática. Como alternativa, configure y use la cuenta de servidor proxy del sistema de sitio. 
+>  De forma predeterminada, la cuenta **Sistema** en el servidor de sitio en el que se ha creado una regla de implementación automática se usa para conectarse a Internet y descargar actualizaciones de software cuando se ejecutan las reglas de implementación automática. Como alternativa, configure y use la cuenta de servidor proxy del sistema de sitio. 
 >   
 >  Cuando esta cuenta no puede acceder a Internet, no se pueden descargar las actualizaciones de software. La entrada siguiente se registra en **ruleengine.log**:  
 > `Failed to download the update from internet. Error = 12007.`  
@@ -90,12 +91,12 @@ Estas opciones se encuentran en la pestaña **Configuración de cuenta y proxy**
 
 3.  En las propiedades del sistema de sitio, cambie a la pestaña **Proxy**. Configure las opciones de proxy siguientes:  
 
-    - **Usar un servidor proxy al sincronizar información desde Internet**: seleccione esta opción para habilitar el servidor de sistema de sitio para que use un servidor proxy.  
+    - **Usar un servidor proxy al sincronizar información desde Internet**: seleccione esta opción para permitir que el servidor de sistema de sitio use un servidor proxy.  
 
     - **Nombre del servidor proxy**: especifique el nombre de host o FQDN del servidor proxy en el entorno.  
 
     - **Puerto**: especifique el puerto de red en el que se realiza la comunicación con el servidor proxy. De forma predeterminada, se usa el puerto **80**.  
 
-    - **Usar credenciales para conectarse al servidor proxy**: muchos servidores proxy requieren un usuario para autenticarse. De forma predeterminada, el servidor de sistema de sitio usa su cuenta de equipo para conectarse al servidor proxy. Si es necesario, habilite esta opción, haga clic en **Establecer** y, después, elija una **Cuenta existente** o especifique una **Nueva cuenta**. Estas credenciales son la **cuenta del servidor proxy de sistema de sitio**.  Para obtener más información, vea [Cuentas que se usan en Configuration Manager](/sccm/core/plan-design/hierarchy/accounts).  
+    - **Usar credenciales para conectarse al servidor proxy**: muchos servidores proxy necesitan que un usuario se autentique. De forma predeterminada, el servidor de sistema de sitio usa su cuenta de equipo para conectarse al servidor proxy. Si es necesario, habilite esta opción, haga clic en **Establecer** y, después, elija una **Cuenta existente** o especifique una **Nueva cuenta**. Estas credenciales son la **cuenta del servidor proxy de sistema de sitio**.  Para obtener más información, vea [Cuentas que se usan en Configuration Manager](/sccm/core/plan-design/hierarchy/accounts).  
 
 4.  Seleccione **Aceptar** para guardar la nueva configuración del servidor proxy.  

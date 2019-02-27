@@ -10,12 +10,13 @@ ms.assetid: 4b72922a-d11e-4aef-b309-19f5f0716f32
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5218d47ae8699ee0feb0cf59405833ec4cc49569
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1365c3951a829d92cbdb2f6a4a87c8496f9ada3c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385836"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136354"
 ---
 # <a name="dp-job-queue-manager"></a>DP Job Queue Manager
 
@@ -33,13 +34,13 @@ También obtiene información del servidor de sitio en el que el punto de distri
 
 Ejecute **DPJobMgr.exe**. El menú principal de la herramienta contiene las siguientes pestañas: 
 
-- [Conectar](#bkmk_connect): establecer la conexión inicial con el servidor de sitio primario  
+- [Conectar](#bkmk_connect): establece la conexión inicial con el servidor del sitio primario.  
 
-- [Información general](#bkmk_overview): resume en una sola vista todos los trabajos que se ejecutan en todos los puntos de distribución  
+- [Información general](#bkmk_overview): resume en una sola vista todos los trabajos que se ejecutan en todos los puntos de distribución.  
 
-- [Información de punto de distribución](#bkmk_dp-info): seleccione varios puntos de distribución para realizar su seguimiento de ellos y administrar un solo trabajo de interés  
+- [Información del punto de distribución](#bkmk_dp-info): seleccione varios puntos de distribución para realizar un seguimiento de estos y administrar un solo trabajo de interés.  
 
-- [Administrar trabajos](#bkmk_manage-jobs): muestra en una vista plana una lista de todos los trabajos y sus estados. Manipule los trabajos, muévalos hacia arriba, cancélelos o inícielos manualmente.  
+- [Administrar trabajos](#bkmk_manage-jobs): Muestra en una vista plana una lista de todos los trabajos y sus estados. Manipule los trabajos, muévalos hacia arriba, cancélelos o inícielos manualmente.  
 
 
 ### <a name="bkmk_connect"></a> Pestaña conectar
@@ -53,16 +54,16 @@ Una notificación en la parte inferior de la herramienta confirma que está cone
 
 Muestra un resumen de todos los trabajos en todos los puntos de distribución. Consulte las siguientes columnas:  
 
-- **Punto de distribución**: enumera los nombres de los puntos de distribución  
+- **Punto de distribución**: muestra una lista de los nombres de los puntos de distribución.  
 
-- **Ejecutar trabajos**: muestra el número de trabajos simultáneos que se ejecutan en un punto de distribución particular.  
+- **Trabajos en ejecución**: muestra el número de trabajos simultáneos que se ejecutan en un punto de distribución específico.  
 
     > [!Tip]  
     > El número de distribuciones de software simultáneas es una configuración de sitio. Puede modificar esta configuración en las propiedades de componente de distribución de software.  
 
-- **Número total de trabajos**: muestra el número de todos los trabajos destinados a un punto de distribución particular. Este número incluye los trabajos que se están ejecutando, reintentando o esperando para ejecutarse.  
+- **Total de trabajos**: muestra el número de todos los trabajos destinados a un punto de distribución específico. Este número incluye los trabajos que se están ejecutando, reintentando o esperando para ejecutarse.  
 
-- **Total de reintentos**: muestra el número de veces que los trabajos han reintentando un punto de distribución particular. Un número más alto puede representar un problema general con ese punto de distribución particular.  
+- **Reintentos totales**: muestra el número de veces que los trabajos han reintentado un punto de distribución específico. Un número más alto puede representar un problema general con ese punto de distribución particular.  
 
 
 > [!Tip]  
@@ -83,23 +84,23 @@ Hay ocho columnas:
 
     - **Listo**: indica que un trabajo determinado ha finalizado todos los pasos de comprobación. Está listo para agregarse a los trabajos simultáneos en ejecución. Los trabajos en este estado normalmente están en una fase de espera. Esperan a que finalicen los procesos en ejecución actuales para liberar espacio para ellos.  
 
-    - **Ejecutando**: indica que actualmente se está ejecutando un trabajo determinado en un punto de distribución. Para los trabajos de larga ejecución (los paquetes grandes), normalmente hay tiempo para obtener el progreso (%) para la finalización. Muestra este porcentaje en la columna **Progreso** en esta vista. Para los paquetes pequeños, la columna **Progreso** puede permanecer vacía. El trabajo puede estar completado en el momento en que recibe el estado del punto de distribución remoto.  
+    - **En ejecución**: indica que actualmente se está ejecutando un trabajo determinado en un punto de distribución. Para los trabajos de larga ejecución (los paquetes grandes), normalmente hay tiempo para obtener el progreso (%) para la finalización. Muestra este porcentaje en la columna **Progreso** en esta vista. Para los paquetes pequeños, la columna **Progreso** puede permanecer vacía. El trabajo puede estar completado en el momento en que recibe el estado del punto de distribución remoto.  
 
-    - **Volver a intentar**: indica que se ha producido un error en un trabajo determinado y ahora está en estado de reintento. Este trabajo se reintenta tras el intervalo de reintento. Este intervalo es configurable y se establece en 30 minutos de forma predeterminada.  
+    - **Reintentar**: indica que se ha producido un error en un trabajo determinado y ahora está en estado de reintento. Este trabajo se reintenta tras el intervalo de reintento. Este intervalo es configurable y se establece en 30 minutos de forma predeterminada.  
 
-- **Software**: nombre del paquete al que se hace destino desde un punto de distribución específico  
+- **Software**: nombre del paquete que tiene como destino un punto de distribución específico.  
 
-- **Id. de paquete**: id. del paquete al que se hace destino desde un punto de distribución específico  
+- **Identificador de paquete**: identificador del paquete que tiene como destino un punto de distribución específico.  
 
-- **Tamaño**: tamaño del paquete en KB  
+- **Tamaño**: tamaño del paquete en KB.  
 
 - **Progreso**: porcentaje de finalización del trabajo. Para obtener más información, consulte la descripción del icono de estado **Ejecutando**.  
 
-- **Hora de inicio o reinicio**: para un trabajo en ejecución, este valor es la hora de inicio (verde). Para un trabajo de reintento, este valor es el momento en que se volverá a intentar el trabajo.  
+- **Hora de inicio/reinicio**: para un trabajo en ejecución, este valor equivale a la hora de inicio (verde). Para un trabajo de reintento, este valor es el momento en que se volverá a intentar el trabajo.  
 
-- **Reintentos**: número de veces que se ha intentado ejecutar este paquete.  
+- **Reintentos**: número de veces que se ha reintentado ejecutar este paquete.  
 
-- **Nombre de punto de distribución**: el nombre de dominio completo (FQDN) del punto de distribución  
+- **Nombre del punto de distribución:** nombre de dominio completo (FQDN) del punto de distribución que se va a limpiar.  
 
 > [!Tip]  
 > - Para ordenar cada columna en esta pestaña, haga clic en el nombre de columna  
@@ -117,13 +118,13 @@ Muestra en una vista plana una lista de todos los trabajos y sus estados. Contie
 
 - **Ejecutar**: inicia un trabajo que se encuentra en cualquier estado distinto de ejecución  
 
-- **Mover al inicio**: uno o más trabajos se mueven a la parte superior de la cola. Esta acción puede tener como resultado que los trabajos se ejecuten inmediatamente. Puede pausarse un trabajo de prioridad inferior debido a esta acción.  
+- **Mover arriba**: uno o más trabajos se mueven a la parte superior de la cola. Esta acción puede tener como resultado que los trabajos se ejecuten inmediatamente. Puede pausarse un trabajo de prioridad inferior debido a esta acción.  
 
 - **Subir**: mueve un determinado trabajo a una fila superior. Puede pausarse un trabajo de prioridad inferior en ejecución debido a esta acción.  
 
 - **Bajar**: mueve un determinado trabajo a una fila inferior.  
 
-- **Mover al final**: uno o más trabajos se mueven a la parte inferior de la cola.  
+- **Mover abajo:** uno o más trabajos se mueven a la parte inferior de la cola.  
 
     > [!Tip]  
     > Arrastre y coloque trabajos en la lista para moverlos.  

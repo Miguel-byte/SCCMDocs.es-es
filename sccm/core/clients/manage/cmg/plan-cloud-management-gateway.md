@@ -10,12 +10,13 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b059fd3b8511a3cbbf308ea7a3ee21a4ec9dbfaa
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d8eff4154f5799ef0d6411b077f50753d203310e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456726"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126784"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planificación de Cloud Management Gateway en Configuration Manager
 
@@ -357,9 +358,9 @@ El sistema de sitio del punto de conexión de CMG admite el uso de un proxy web.
 
 - StorageEndpoint (core.windows.net)  
 
-- Para la recuperación del token de Azure AD mediante la consola y el cliente de Configuration Manager: ActiveDirectoryEndpoint (https://login.microsoftonline.com/)  
+- Para recuperar el token de Azure AD mediante la consola y el cliente de Configuration Manager: ActiveDirectoryEndpoint (https://login.microsoftonline.com/)  
 
-- Para la detección de usuarios de Azure AD: punto de conexión de AAD Graph (https://graph.windows.net/)  
+- Detección de usuarios de Azure AD: Punto de conexión de Graph de AAD (https://graph.windows.net/)  
 
 
 

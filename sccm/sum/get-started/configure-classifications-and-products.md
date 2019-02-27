@@ -5,17 +5,18 @@ description: Haga lo siguiente para configurar los productos y clasificaciones d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/10/2018
+ms.date: 02/15/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: a9af39cd5f57e8b2741facde269ea81bc1b10728
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f1d984598288434aa1e81c6bd2c51a315edfa551
+ms.sourcegitcommit: fd16fc2b681608fd6def5bad2cedffbcd1f2423a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350687"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56405699"
 ---
 #  <a name="configure-classifications-and-products-to-synchronize"></a>Configurar las clasificaciones y los productos que va a sincronizar  
 
@@ -40,15 +41,15 @@ ms.locfileid: "32350687"
     > [!NOTE]  
     >  Cada actualización de software se define con una clasificación de actualización que facilita la organización de los distintos tipos de actualizaciones. Durante el proceso de sincronización, se sincronizan los metadatos de las actualizaciones de software para las clasificaciones especificadas. Configuration Manager ofrece la posibilidad de sincronizar actualizaciones de software con las siguientes clasificaciones de actualización:  
     >   
-    > - **Actualizaciones críticas**: especifica una actualización de amplia distribución para un problema específico que resuelve un error crítico no relacionado con la seguridad.  
-    > - **Actualizaciones de definiciones**: especifica una actualización para un archivo de definición de virus u otros.  
-    > - **Paquetes de características**: especifica las nuevas características de producto que se distribuyen fuera de una versión del producto y que normalmente se incluyen en la siguiente versión del producto completo.  
-    > - **Actualizaciones de seguridad**: especifica una actualización de amplia distribución para un problema específico del producto relacionado con la seguridad.  
-    > - **Service Packs**: especifica un conjunto acumulativo de revisiones correspondientes a una aplicación. Estas revisiones pueden incluir actualizaciones de seguridad, actualizaciones críticas, actualizaciones de software, etc.  
-    > - **Herramientas**: especifica una utilidad o característica que ayuda a realizar una o más tareas.  
-    > - **Paquetes acumulativos de revisiones**: especifica un conjunto acumulativo de revisiones que se recopilan para facilitar la implementación. Estas revisiones pueden incluir actualizaciones de seguridad, actualizaciones críticas, actualizaciones, etc. Un paquete acumulativo de revisiones suele relacionarse, por lo general, con un área específica; por ejemplo, un componente del producto o de la seguridad.  
-    > - **Actualizaciones**: especifica una actualización para una aplicación o un archivo actualmente instalados.  
-    > - **Actualizaciones**: especifica una actualización para las características y la funcionalidad de Windows 10. Los sitios y los puntos de actualización de software tienen que ejecutar como mínimo WSUS 4.0 con la [revisión 3095113](https://support.microsoft.com/kb/3095113) para obtener la clasificación **Actualización**.    
+    > - **Actualizaciones críticas**: especifica una corrección de amplia distribución para un problema específico que permite solucionar un error crítico no relacionado con la seguridad.  
+    > - **Actualizaciones de definiciones**: especifica una actualización de software frecuente y de amplia distribución que contiene adiciones a la base de datos de definiciones de un producto.  
+    > - **Paquetes de características**: especifica las nuevas funciones de producto que se distribuyen fuera de una versión del producto y que normalmente se incluyen en la siguiente versión del producto completo.  
+    > - **Actualizaciones de seguridad**: especifica una corrección de amplia distribución para una vulnerabilidad relacionada con la seguridad de un producto específico.  
+    > - **Service Packs**: especifica un conjunto acumulativo y probado de todas las revisiones, actualizaciones de seguridad, actualizaciones críticas y actualizaciones que se aplican en un producto. Además, los Service Pack pueden contener correcciones adicionales para problemas que se han identificado internamente desde la publicación del producto.  
+    > - **Herramientas**: Especifica una utilidad o característica que ayuda a realizar una o varias tareas.  
+    > - **Paquetes acumulativos de revisiones**: especifica un conjunto acumulativo y probado de revisiones, actualizaciones de seguridad, actualizaciones críticas y actualizaciones que se incluyen en un producto de forma conjunta para facilitar su implementación. Un paquete acumulativo de actualizaciones suele relacionarse, por lo general, con un área específica (por ejemplo, un componente del producto o de la seguridad).  
+    > - **Actualizaciones**: especifica una corrección de amplia distribución para un problema específico. Una actualización proporciona una solución para un error de código no crítico y no relacionado con la seguridad.  
+    > - **Actualización**: especifica una actualización para las características y funciones de Windows 10. Los sitios y los puntos de actualización de software tienen que ejecutar como mínimo WSUS 4.0 con la [revisión 3095113](https://support.microsoft.com/kb/3095113) para obtener la clasificación **Actualización**.    
     >       
 
     > [!NOTE]    

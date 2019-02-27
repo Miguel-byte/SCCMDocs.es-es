@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
-ms.openlocfilehash: bcdc6298a7b1c429888acf2b7257cec072e9b878
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: da01c741107d4eb4a707f7f0d8ada5d82706f292
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383427"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56119898"
 ---
 # <a name="software-center-user-guide"></a>Manual del usuario del Centro de software
 
@@ -41,14 +42,14 @@ Si se desplaza al menú Inicio, busque el icono **Centro de software** en el gru
 ## <a name="applications"></a>Aplicaciones
 
 Haga clic en la pestaña **Aplicaciones** para buscar e instalar las aplicaciones que el administrador de TI implementa para usted o este equipo.
-- **Todas**: muestra todas las aplicaciones que se pueden instalar.
-- **Requerido**: el administrador de TI aplica estas aplicaciones. Si desinstala una de estas aplicaciones, el Centro de software vuelve a instalarla.
+- **Todo**: muestra todas las aplicaciones que se pueden instalar.
+- **Obligatorio**: el administrador de TI aplica estas aplicaciones. Si desinstala una de estas aplicaciones, el Centro de software vuelve a instalarla.
 - **Filtros**: el administrador de TI puede crear categorías de aplicaciones. Si está disponible, haga clic en la lista desplegable para filtrar la vista solamente a las aplicaciones de una categoría específica. Haga clic en **Todas** para mostrar todas las aplicaciones.
-- **Ordenar por**: reorganice la lista de aplicaciones. De forma predeterminada esta lista se ordena por **Más recientes**.
-- **Buscar**: ¿Todavía no encuentra lo que busca? Escriba palabras clave en el cuadro Buscar para encontrarlo.
--  **Cambiar la vista**: haga clic en los iconos para alternar entre vista de lista y vista de mosaico. De forma predeterminada la lista de aplicaciones se muestra como mosaicos gráficos. 
+- **Ordenar por**: permite reorganizar la lista de aplicaciones. De forma predeterminada esta lista se ordena por **Más recientes**.
+- **Buscar**: ¿todavía no encuentra lo que busca? Escriba palabras clave en el cuadro Buscar para encontrarlo.
+-  **Cambiar la vista**: haga clic en los iconos para cambiar entre vista de lista y vista de mosaico. De forma predeterminada la lista de aplicaciones se muestra como mosaicos gráficos. 
     - Vista de mosaico: el administrador de TI puede personalizar los iconos. Debajo de cada icono se muestra el nombre de la aplicación, el editor y la versión. 
-    - Vista de lista: en esta vista se muestra el icono de la aplicación, el nombre, el editor, la versión y el estado. 
+    - Vista de lista: en esta vista, se muestra el icono de la aplicación, el nombre, el editor, la versión y el estado. 
 
 
 ### <a name="install-multiple-applications"></a>Instalar varias aplicaciones 
@@ -70,9 +71,9 @@ Las aplicaciones se instalan como de costumbre, pero ahora de forma sucesiva.
 ## <a name="updates"></a>Actualizaciones
 
 Haga clic en la pestaña **Actualizaciones** para ver e instalar las actualizaciones de software que el administrador de TI implementa en este equipo.  
-- **Todas**: muestra todas las actualizaciones que se pueden instalar.
-- **Requerido**: el administrador de TI aplica estas actualizaciones.
-- **Ordenar por**: reorganice la lista de actualizaciones. De forma predeterminada esta lista se ordena por **Nombre de aplicación: A a Z**.
+- **Todo**: muestra todas las actualizaciones que se pueden instalar.
+- **Obligatorio**: el administrador de TI aplica estas actualizaciones.
+- **Ordenar por**: permite reorganizar la lista de actualizaciones. De forma predeterminada, esta lista se ordena por **Nombre de aplicación: A a Z**.
 
 Para instalar las actualizaciones, haga clic en **Instalar todo**.
 
@@ -83,18 +84,18 @@ Para instalar solo actualizaciones específicas, haga clic en el icono para entr
 ## <a name="operating-systems"></a>Sistemas operativos
 
 Haga clic en la pestaña **Sistemas operativos** para ver e instalar las versiones de Windows que el administrador de TI implementa en este equipo.  
-- **Todos**: muestra todas las versiones de Windows que se pueden instalar.
-- **Requerido**: el administrador de TI aplica estas actualizaciones.
-- **Ordenar por**: reorganice la lista de actualizaciones. De forma predeterminada esta lista se ordena por **Nombre de aplicación: A a Z**.
+- **Todo**: muestra todas las versiones de Windows que se pueden instalar.
+- **Obligatorio**: el administrador de TI aplica estas actualizaciones.
+- **Ordenar por**: permite reorganizar la lista de actualizaciones. De forma predeterminada, esta lista se ordena por **Nombre de aplicación: A a Z**.
 
 
 
 ## <a name="installation-status"></a>Estado de la instalación
 
 Haga clic en la pestaña **Estado de instalación** para ver el estado de las aplicaciones. Puede ver los estados siguientes:
-- **Instalado**: Centro de software ya ha instalado esta aplicación en este equipo.
-- **Descargando**: Centro de software está descargando el software para instalar en este equipo.
-- **Error**: Centro de software encontró un error al intentar instalar el software.
+- **Instalado**: el Centro de software ya ha instalado esta aplicación en este equipo.
+- **Descargando**: el Centro de software está descargando el software para instalarlo en este equipo.
+- **Error**: el Centro de software ha encontrado un error al intentar instalar el software.
 - **Programado para instalar después de**: muestra la fecha y hora de la siguiente ventana de mantenimiento del dispositivo para instalar software que se publicará próximamente. El administrador de TI define las ventanas de mantenimiento.<!--1358131-->
     - Se puede ver el estado en las pestañas **Todo** y **Próximas**. 
     - Puede instalar antes de la hora de la ventana de mantenimiento haciendo clic en el botón **Instalar ahora**. 
@@ -132,8 +133,8 @@ Para que este equipo esté exento de estas directivas, active la casilla **No ap
 ### <a name="computer-maintenance"></a>Mantenimiento del equipo
 
 Especifique el modo en que el Centro de software aplica los cambios al software antes de la fecha límite.
-- **Instalar o desinstalar automáticamente el software necesario y reiniciar el equipo sólo fuera del horario comercial especificado**: esta opción está deshabilitada de forma predeterminada.
-- **Suspender las actividades del Centro de software si el equipo está en modo Presentación**: esta opción está habilitada de forma predeterminada.
+- **Instalar o desinstalar automáticamente el software necesario y reiniciar el equipo solo fuera del horario de atención especificado**: Esta configuración está deshabilitada de manera predeterminada.
+- **Suspender las actividades del Centro de software si el equipo está en modo Presentación**: Esta opción está habilitada de forma predeterminada.
 - **Directiva de sincronización**: haga clic en este botón cuando se lo indique el administrador de TI. Este equipo comprueba cualquier novedad con los servidores, como aplicaciones, actualizaciones de software o sistemas operativos.
 
 ## <a name="custom-tab-in-software-center"></a>Pestaña personalizada en Centro de software

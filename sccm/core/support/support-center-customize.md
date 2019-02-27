@@ -10,12 +10,13 @@ ms.assetid: a6f7f6b7-9ef3-4ffa-a3cf-d877ac55983b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ca7dfce7b96747e46247cb290b4fc0d7e0df41ff
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b100daf91b8bb7c5d4dd5f041c57e7dc9dac390e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458155"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156787"
 ---
 # <a name="customize-support-center"></a>Personalizar el Centro de soporte técnico
 
@@ -25,9 +26,9 @@ La herramienta [Centro de soporte técnico](/sccm/core/support/support-center) i
 
   - [Personalizar la recopilación de datos](#bkmk_datacoll): edita los conjuntos de claves del Registro y espacios de nombres de WMI que incluye durante la recopilación de datos.  
 
-  - [Personalizar los grupos de registro](#bkmk_loggroups): define nuevos grupos de archivos de registro mediante expresiones regulares. Además agrega otros archivos de registro a grupos de registro.  
+  - [Personalizar los grupos de registros](#bkmk_loggroups): permite definir nuevos grupos de archivos de registro mediante expresiones regulares. Además agrega otros archivos de registro a grupos de registro.  
 
-  - [Recopilar otros archivos de registro mediante caracteres comodín](#bkmk_wildcards): usa búsquedas con caracteres comodín para recopilar otros archivos de registro.  
+  - [Recopilar más archivos de registro mediante caracteres comodín](#bkmk_wildcards): use búsquedas con caracteres comodín para recopilar más archivos de registro.  
 
 Para realizar estos cambios, necesita permisos administrativos locales en el cliente en el que ha instalado el Centro de soporte técnico. Realice estas personalizaciones mediante un editor de texto o XML, como el Bloc de notas o Visual Studio.
 
@@ -96,9 +97,9 @@ Para recopilar claves del Registro de los programas clásicos instalados en el d
 
 Para personalizar los archivos de registro que recopila el Centro de soporte técnico y cómo los presenta en la lista **Grupos de registro**, use elementos del elemento `<logGroups>`. Cuando se inicia el Centro de soporte técnico, analiza esta sección del archivo de configuración. Luego crea un grupo en la lista **Grupos de registro** para cada valor de atributo de clave único que se encuentre en los elementos `<add/>` incluidos en el elemento `<logGroups>`.
 
-  - **Grupo de registro de componentes**: el elemento `<componentLogGroup>` usa un atributo de clave para definir el nombre del grupo de registro que aparece en la lista. También usa un atributo de valor que contiene una expresión regular (regex). Usa esta expresión regular para recopilar un conjunto de archivos de registro relacionados.  
+  - **Grupo de registros de componente**: el elemento `<componentLogGroup>` usa un atributo clave para definir el nombre del grupo de registros que aparece en la lista. También usa un atributo de valor que contiene una expresión regular (regex). Usa esta expresión regular para recopilar un conjunto de archivos de registro relacionados.  
 
-  - **Grupo de registro estático**: el elemento `<staticLogGroup>` usa un atributo de clave para definir el nombre del grupo de registro que aparece en la lista. También usa un atributo de valor que define el nombre de un archivo de registro.  
+  - **Grupo de registros estático:** el elemento `<staticLogGroup>` usa un atributo clave para definir el nombre del grupo de registros que aparece en la lista. También usa un atributo de valor que define el nombre de un archivo de registro.  
 
 Si se usa el mismo valor de atributo de clave en un elemento `<add/>` dentro del elemento `<componentLogGroup>` y el elemento `<staticLogGroup>`, el Centro de soporte técnico crea un único grupo. Este grupo incluye los archivos de registro definidos por ambos elementos que usan la misma clave.
 
@@ -131,12 +132,12 @@ Para recopilar otros archivos de registro, use caracteres comodín en la ruta de
 
 Estos ejemplos muestran cómo usa el Centro de soporte técnico esta característica en el archivo de configuración predeterminado.
 
-#### <a name="example-1-collect-all-windows-update-log-files-in-the-windows-directory"></a>Ejemplo 1: Recopilación de todos los archivos de registro de Windows Update en el directorio de Windows
+#### <a name="example-1-collect-all-windows-update-log-files-in-the-windows-directory"></a>Ejemplo 1: recopilar todos los archivos de registro de Windows Update en el directorio de Windows
 El siguiente elemento recopila cualquier archivo denominado `WindowsUpdate.log` que haya en el directorio de Windows: 
 
 `<add key="%WINDIR%\WindowsUpdate.log" />`
 
-#### <a name="example-2-collect-all-log-files-in-the-windows-logs-directory"></a>Ejemplo 2: Recopilación de todos los archivos de registro en el directorio de registros de Windows
+#### <a name="example-2-collect-all-log-files-in-the-windows-logs-directory"></a>Ejemplo 2: recopilar todos los archivos de registro en el directorio de registros de Windows
 El siguiente elemento recopila cualquier archivo que termine en `.log` que haya en el directorio de registros de Windows: 
 
 `<add key="%WINDIR%\logs\*.log" />`
