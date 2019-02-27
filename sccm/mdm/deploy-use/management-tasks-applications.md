@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ff166d93812b07c37c31228ca395f0cfcf94de6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a57beb79bf7e4dc51e72d7254ff0f190c6ca32c4
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156964"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838963"
 ---
 # <a name="manage-applications-in-system-center-configuration-manager"></a>Administración de aplicaciones en System Center Configuration Manager
 
@@ -45,6 +45,8 @@ La implementación y supervisión de aplicaciones en System Center Configuration
 Estas son algunas consideraciones que se deben tener en cuenta durante la implementación y supervisión de aplicaciones y que son específicas de la administración de dispositivos móviles.
 
 - Los dispositivos inscritos en MDM no admiten implementaciones simuladas, la experiencia del usuario o la configuración de programación.
+
+- No agregue más de 100 idiomas a una sola aplicación. Adición de más de 100 idiomas, impide que la aplicación de la sincronización con Intune. Esta acción también evita la aplicación está instalada o que están disponibles para instalar en el dispositivo.
 
 - Puede asociar la implementación con una directiva de configuración de aplicación iOS si ya tiene una configurada. Consulte [Aplicar configuración a aplicaciones iOS con directivas de configuración de aplicaciones en System Center Configuration Manager](configure-ios-apps-with-app-configuration-policies.md).
 
