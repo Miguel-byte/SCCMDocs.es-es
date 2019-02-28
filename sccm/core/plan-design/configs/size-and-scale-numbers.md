@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 304fe88dd5ed8a37bf17dca390d95158d005bae3
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 8850d849066c97b8cb07719f229ebec1d4748403
+ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125386"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56589890"
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Números de tamaño y escala de System Center Configuration Manager
 
@@ -208,7 +208,7 @@ Por ejemplo, un sitio primario independiente que admite 150 000 equipos de escri
 
 
 ### <a name="embedded"></a> Sitios principales y dispositivos con Windows Embedded
-Los sitios principales admiten dispositivos con Windows Embedded que tienen habilitados los filtros de escritura basados en archivos (FBWF). Cuando los dispositivos insertados no tienen filtros de escritura habilitados, un sitio primario puede admitir una serie de dispositivos insertados, hasta el máximo permitido para ese sitio. Del número total de dispositivos que admite un sitio primario, un máximo de 10 000 de estos dispositivos pueden ser de Windows Embedded. Estos dispositivos se deben configurar para las excepciones enumeradas en la nota importante que se encuentra en [Planeamiento de la implementación de clientes en dispositivos de Windows Embedded](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices). Un sitio principal admite solo 3000 dispositivos con Windows Embedded que tienen habilitado EWF y que no están configurados para las excepciones.
+Los sitios principales admiten dispositivos con Windows Embedded que tienen habilitados los filtros de escritura basados en archivos (FBWF). Cuando los dispositivos insertados no tienen filtros de escritura habilitados, un sitio primario puede admitir una serie de dispositivos insertados, hasta el máximo permitido para ese sitio. Cuando los dispositivos incrustados tienen FBWF o filtros de escritura unificados (UWF) habilitados, un sitio primario puede admitir un máximo de 10 000 dispositivos incrustados de Windows. Estos dispositivos se deben configurar con las excepciones enumeradas en la nota importante que se encuentra en [Planeamiento de la implementación de clientes en dispositivos de Windows Embedded](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices). Un sitio principal admite solo 3000 dispositivos con Windows Embedded que tienen habilitado EWF y que no están configurados para las excepciones.
 
 
 ###  <a name="bkmk_sec"></a> Sitios secundarios  

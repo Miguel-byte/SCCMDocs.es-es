@@ -2,7 +2,7 @@
 title: Notas de la versión
 titleSuffix: Configuration Manager
 description: Obtenga información sobre problemas urgentes que todavía no se han corregido en el producto o no se han tratado en un artículo de Knowledge Base del soporte técnico de Microsoft.
-ms.date: 12/21/2018
+ms.date: 02/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ba088be689808139a977073dd5b111d1fa46b7b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: bc19092f1272611ea3e05d708bf89bda1a4ba3b9
+ms.sourcegitcommit: 0a23cde6112cbb5987f433bffcf6f223b994ba72
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121563"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56667467"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Notas de la versión de Configuration Manager
 
@@ -84,7 +84,16 @@ Mueva el rol del punto de conexión de servicio a otro servidor.
 
 
 
-<!-- ## Operating system deployment  -->
+## <a name="os-deployment"></a>Implementación del sistema operativo
+
+### <a name="after-passive-site-server-is-promoted-the-default-boot-image-packages-still-have-package-source-on-the-previous-active-server"></a>Tras promover el servidor de sitio pasivo, los paquetes de imágenes de arranque predeterminadas todavía tendrán el paquete de origen en el servidor activo anterior.
+<!--3453224, SCCMDocs-pr issue 3097-->
+*Se aplica a: Configuration Manager, versión 1810*
+
+Si tiene un servidor de sitio en modo pasivo (servidor B), cuando lo promueva a activo, la ubicación del contenido para las imágenes de arranque predeterminadas continuará haciendo referencia al servidor activo anterior (servidor A). Si el servidor A tiene un error de hardware, no podrá actualizar ni cambiar las imágenes de arranque predeterminadas.
+
+#### <a name="workaround"></a>Solución alternativa
+Ninguno
 
 
 

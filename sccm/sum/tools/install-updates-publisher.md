@@ -2,31 +2,32 @@
 title: Instalar Updates Publisher
 titleSuffix: Configuration Manager
 description: Instalar System Center Updates Publisher en el entorno
-ms.date: 07/03/2017
+ms.date: 02/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: ab5cda93-b67c-4aa5-904d-7b63ce790aa0
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cd48e40f594ced5a62e3a65beb43e6dc74e090b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 37a468a2b9727d66f7d3fe0cafd1aae044585b2a
+ms.sourcegitcommit: e18853c214c95e4d21b2f032aba6d17c21e97027
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122481"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443960"
 ---
 # <a name="install-updates-publisher"></a>Instalar Updates Publisher
 
 *Se aplica a: System Center Updates Publisher*
 
-La información de este tema puede ayudarle a obtener, instalar y configurar Updates Publisher para su uso con el entorno.
-
+La información que contienen estos artículos le ayuda a descargar, instalar y configurar Updates Publisher para su uso con el entorno de System Center Configuration Manager.
 
 ## <a name="prerequisites-and-limitations"></a>Requisitos previos y limitaciones
-En las secciones siguientes se detallan los requisitos para instalar y usar Updates Publisher, así como las limitaciones y los problemas conocidos para su uso.
+System Center Updates Publisher solo puede usarse con System Center Configuration Manager. No está diseñado para su uso con jerarquías de WSUS independientes.
+
+En las secciones siguientes se detallan los requisitos para instalar y usar Updates Publisher, así como las limitaciones y los problemas conocidos para su uso.  
 
 ### <a name="operating-systems"></a>Sistemas operativos
 Instale y ejecute Updates Publisher en ediciones de 64 bits de los sistemas operativos siguientes. No existen requisitos de Service Pack ni de actualización acumulativa mínima.

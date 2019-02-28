@@ -2,7 +2,7 @@
 title: Versión preliminar de UUP
 titleSuffix: Configuration Manager
 description: Instrucciones para la versión preliminar de la integración de UUP
-ms.date: 01/30/2019
+ms.date: 02/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 932f515c902e89236a1537c2f20d6be5f13a79c5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ece763244ffbd1ebaabd2c85d92697683eea8732
+ms.sourcegitcommit: e7e5ca04601270ea7af90183123d5db1d42784da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123418"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56422194"
 ---
 # <a name="uup-private-preview-instructions"></a>Instrucciones de la versión preliminar privada de UUP
 
@@ -246,3 +246,39 @@ Para la versión preliminar, pruebe con lo que usa en entornos empresariales rea
 - Proveedores de contenido alternativos de terceros
 
 Para obtener más información, vea [Optimización de la distribución de actualizaciones de Windows 10](/sccm/sum/deploy-use/optimize-windows-10-update-delivery).
+
+
+## <a name="known-issues"></a>Problemas conocidos
+
+### <a name="additional-resources-are-required-on-wsus"></a>Se requieren recursos adicionales en WSUS
+Al sincronizar actualizaciones de UUP, especialmente por primera vez, se requieren recursos adicionales en los servidores WSUS. En algunos casos, este comportamiento ha bloqueado la sincronización de actualizaciones con el servidor WSUS de nivel superior, o bien con la sincronización de la jerarquía de servidores de bajo nivel.
+
+Este problema se manifiesta como un error de sincronización de WSUS. Configuration Manager también lo muestra como un error de sincronización.
+
+#### <a name="workaround"></a>Solución alternativa
+Realice los siguientes cambios en el servidor WSUS de nivel superior o cualquier servidor WSUS principal en la jerarquía:
+1. Aumente el tiempo de espera de ServerSyncWebService. 
+
+    1. Realice una copia de seguridad de `C:\Program Files\Update Services\WebServices\serversyncwebservice\web.config` con otro nombre.  
+
+    2. Abra `C:\Program Files\Update Services\WebServices\serversyncwebservice\web.config` en el Bloc de notas.  
+
+    3. Modifique **httpRunTime** agregando un atributo **executionTimeout** como el siguiente:  
+
+        `<httpRuntime maxRequestLength="4096" executionTimeout="3600" />`  
+
+    4. Guarde el archivo web.config en una ubicación diferente. Este paso es necesario porque, normalmente, el archivo de configuración no se puede editar sin ser su propietario.  
+
+    5. Después, copie el archivo web.config modificado en el directorio `C:\Program Files\Update Services\WebServices\serversyncwebservice` y sustituya el archivo anterior.  
+
+    6. Desde un símbolo del sistema con privilegios elevados, reinicie IIS: `IISReset`  
+
+        > [!Note]  
+        > Esta acción detendrá temporalmente el servidor IIS
+
+2. Aumente la memoria del grupo de aplicaciones para el servidor WSUS:  
+
+    1. Vaya a Administrador de IIS > Grupos de aplicaciones > Seleccionar WsusPool y seleccione **Configuración avanzada** en el panel derecho.  
+
+    2. Establezca los límites de **Memoria privada** y **Memoria virtual** en `0`.
+

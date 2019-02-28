@@ -2,7 +2,7 @@
 title: Consola de Configuration Manager
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la navegación a través de la consola de Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 2/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf617a579108f58723f267a065338ab857832d8f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 30db8b061f41e8a9255b5a308df6a98ef8c0d81b
+ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134578"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56589907"
 ---
 # <a name="using-the-configuration-manager-console"></a>Uso de la consola de Configuration Manager
 
@@ -156,6 +156,8 @@ A partir de la versión 1806, las siguientes columnas están disponibles en el n
 - **Usuarios primarios** <!--1357280-->  
 
 - **Usuario que ha iniciado sesión actualmente** <!--1358202-->  
+    > [!NOTE]  
+    > Para poder ver el usuario que ha iniciado sesión actualmente, necesitará la [detección de usuarios](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adud) y la [afinidad entre usuario y dispositivo](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
 
 Para obtener más información sobre cómo mostrar una columna no predeterminada, vea [Columnas](#columns).
 

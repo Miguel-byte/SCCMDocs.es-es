@@ -2,7 +2,7 @@
 title: Novedades de la versión 1810
 titleSuffix: Configuration Manager
 description: Obtenga detalles sobre los cambios y las nuevas características incorporados en la versión 1810 de la rama actual de Configuration Manager.
-ms.date: 01/25/2019
+ms.date: 02/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f29dabe9c29ad69278ac52253a81a0172643f84
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 703b8be554f0a7ed1601703d381e4ed7c317af77
+ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142534"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56589873"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Novedades de la versión 1810 de la rama actual de Configuration Manager
 
@@ -258,7 +258,10 @@ De forma predeterminada, esta opción es **No** para mantener la coherencia con 
 
 <!--For more information, see []().-->
 
+### <a name="improvement-to-software-updates-maintenance"></a>Mejora del mantenimiento de las actualizaciones de software
+<!--2839349--> Las tareas de limpieza de WSUS ahora se ejecuta en sitios secundarios. Se ejecuta la limpieza de WSUS para actualizaciones expiradas, mientras que las actualizaciones sustituidas para sitios secundarios se rechazan.
 
+Para obtener más información, vea [WSUS cleanup behavior starting in version 1810](/sccm/sum/deploy-use/software-updates-maintenance#wsus-cleanup-behavior-starting-in-version-1810) (Comportamiento de limpieza de WSUS a partir de la versión 1810).
 
 ## <a name="bkmk_report"></a> Generación de informes
 
@@ -363,9 +366,7 @@ Las siguientes mejoras de solución de problemas y rendimiento se aplican a CMPi
 
 Además de nuevas características, esta versión también incluye cambios adicionales como, por ejemplo, correcciones de errores. Para obtener más información, vea [Resumen de cambios en la rama actual de Configuration Manager, versión 1810](https://support.microsoft.com/help/4482169).
 
-<!--
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1810 Release Notes](https://docs.microsoft.com/powershell/sccm/1810_release_notes?view=sccm-ps).
---> 
+Para obtener más información sobre los cambios en los cmdlets de Windows PowerShell para Configuration Manager, vea [las notas de la versión de PowerShell 1810](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps).
 
 El siguiente paquete acumulativo de actualizaciones (4486457) está disponible en la consola a partir del 25 de enero de 2019: [Paquete acumulativo de la rama actual de Configuration Manager, versión 1810](https://support.microsoft.com/help/4486457).
 
