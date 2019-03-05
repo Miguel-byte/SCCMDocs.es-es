@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c4f085bc418bc2a78452d54bd579cd362112e64
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: df8f8c850612d0c0f87683b9bbd17f34e97dcf47
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135027"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838895"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Novedades de la versión 1806 de la rama actual de Configuration Manager
 
@@ -276,7 +276,7 @@ Para obtener más información, consulte [Implementación de aplicaciones de Off
 ### <a name="support-for-new-windows-app-package-formats"></a>Compatibilidad con nuevos formatos de paquete de aplicaciones de Windows
 <!--1357427--> Configuration Manager admite ahora la implementación de nuevos formatos de paquete de aplicaciones (.msix) y lote de aplicaciones (.msixbundle) de Windows 10. 
 
-Para obtener más información, vea [Creación de aplicaciones Windows](/sccm/apps/get-started/creating-windows-applications#bkmk_general).
+Para obtener más información, vea [Creación de aplicaciones Windows](/sccm/apps/get-started/creating-windows-applications#bkmk_msix).
 
 
 ### <a name="uninstall-application-on-approval-revocation"></a>Desinstalación de aplicaciones al revocarse la aprobación
