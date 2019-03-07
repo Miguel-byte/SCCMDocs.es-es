@@ -1,8 +1,8 @@
 ---
-title: 'Configuración de la suscripción a Intune '
+title: Configuración de la suscripción a Intune
 titleSuffix: Configuration Manager
-description: Configure una suscripción de Intune para realizar el seguimiento de las licencias de la administración local de dispositivos móviles en System Center Configuration Manager.
-ms.date: 03/05/2017
+description: Configurar una suscripción de Intune para realizar un seguimiento de las licencias de administración de dispositivos móviles local en Configuration Manager
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,55 +11,67 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21ff4920ae8829c41dace778ac74824519c5a628
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: aff4fcc67325645387aea1e57354321769a515ca
+ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136014"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57558072"
 ---
-# <a name="set-up-a-microsoft-intune-subscription-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Configurar una suscripción de Microsoft Intune para la administración local de dispositivos móviles en System Center Configuration Manager
+# <a name="set-up-a-microsoft-intune-subscription-for-on-premises-mdm-in-configuration-manager"></a>Configurar una suscripción de Microsoft Intune para MDM local en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-La administración local de dispositivos móviles de System Center Configuration Manager requiere una suscripción de Microsoft Intune para realizar el seguimiento de las licencias. El servicio de Intune no se usa para administrar los dispositivos ni para almacenar información de administración. Para la administración local de dispositivos móviles, la administración de dispositivos se controla mediante la infraestructura de Configuration Manager.  
+Administrador de configuración local administración de dispositivos móviles (MDM) requiere una suscripción a Microsoft Intune para realizar el seguimiento de licencias. No se usa el servicio de Intune para administrar los dispositivos ni para almacenar información de administración. Por MDM local, toda la administración de dispositivos se controla mediante la infraestructura de Configuration Manager.  
 
-> [!NOTE]  
-> A partir de la versión 1610, Configuration Manager admite el uso de Microsoft Intune y la infraestructura de Configuration Manager local para administrar dispositivos móviles al mismo tiempo.   
+Antes de instalar los roles de sistema de sitio requeridos para MDM local, configure la suscripción a Intune. Esta acción minimiza el tiempo necesario para que los roles de sistema de sitio recién instalados puedan funcionar.  
 
-> [!TIP]  
->  Se recomienda que configure la suscripción a Intune para la administración local de dispositivos móviles antes de instalar los roles de sistema de sitio requeridos para minimizar el tiempo necesario para que los roles de sistema de sitio recién instalados puedan funcionar.  
+> [!Note]  
+> A partir de la versión 1810, una conexión a Intune ya no es necesaria para nuevas implementaciones de MDM local.<!--3607730, fka 1359124--> La organización sigue necesitando licencias de Intune para usar esta característica. Actualmente no se puede quitar la conexión de Intune de las implementaciones de MDM locales existentes. Para más información, vea la [entrada del blog de soporte técnico de Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).  
+
+
 
 ##  <a name="sign-up-for-microsoft-intune"></a>Suscribirse a Microsoft Intune  
- Intune es obligatorio para que la administración local de dispositivos móviles funcione. Solo tiene que [registrarse](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/) para una suscripción de prueba o de pago e ir al paso siguiente para agregar la suscripción en Configuration Manager.  
+
+Intune es necesario para que funcione en MDM local. [Registrarse](https://docs.microsoft.com/intune/free-trial-sign-up) para una suscripción de prueba o de pagada. A continuación, vaya al paso siguiente para agregar la suscripción a Configuration Manager.  
+
+
 
 ##  <a name="add-the-intune-subscription-to-configuration-manager"></a>Agregar la suscripción de Intune a Configuration Manager  
- Para agregar la suscripción a Configuration Manager, siga los mismos pasos básicos que daría al agregar la suscripción para la administración de dispositivos móviles con Intune. Lea las notas siguientes para conocer las diferencias específicas y después siga las instrucciones en [Configurar la suscripción a Intune](../deploy-use/configure-intune-subscription.md).  
+
+Para agregar la suscripción a Configuration Manager, siga los mismos pasos básicos que daría al agregar la suscripción para MDM híbrida con Intune. Lea las notas siguientes para conocer las diferencias específicas y después siga las instrucciones en [Configurar la suscripción a Intune](/sccm/mdm/deploy-use/configure-intune-subscription).  
 
 > [!NOTE]
->  Al agregar la suscripción a Intune, tenga en cuenta lo siguiente:  
+>  Al agregar la suscripción de Intune, tenga las siguientes notas en mente:  
 > 
-> - La recopilación especificada en el Asistente para agregar suscripciones de Microsoft Intune no se usa para la delegación de derechos de usuario de la administración local de dispositivos móviles. Solo se usa para la administración de dispositivos móviles con Intune. Sin embargo, debe especificar una recopilación para que el asistente continúe.  
->   -   Se omite el valor del código de sitio especificado en el asistente para la administración local de dispositivos móviles. El código de sitio que se utiliza es la que especifique en el perfil de inscripción que otorga permisos de usuario para inscribir dispositivos.  
->   -   No habilite la autenticación multifactor. No se admite en la administración local de dispositivos móviles.  
+> - La colección especificada en el Asistente para agregar suscripciones de Microsoft Intune no se usa para la delegación de derechos de usuario MDM local. Sólo se utiliza para la administración de dispositivos móviles con Intune. Sin embargo, es necesario especificar una colección para que el Asistente continuar.  
+> 
+> - Se omite el código de sitio que especifique en el Asistente para MDM local. Usa el código de sitio que especifique en la inscripción de perfil que se concede a los usuarios permisos para inscribir dispositivos.  
+> 
+> - No habilite la autenticación multifactor. No se admite en MDM local.  
 
-##  <a name="configure-the-intune-subscription-for-on-premises-mobile-device-management"></a>Configurar la suscripción a Intune para la administración local de dispositivos móviles  
 
-1. En la consola de Configuration Manager, haga clic con el botón derecho en **Suscripción a Microsoft Intune** y haga clic en **Propiedades**.  
 
-2. En el cuadro Administración de dispositivos móviles locales, seleccione una de las opciones siguientes:
+##  <a name="configure-the-intune-subscription-for-on-premises-mdm"></a>Configurar la suscripción de Intune para MDM local  
 
-   - Si planea tener solo dispositivos administrados localmente, active la casilla que aparece junto a **Only manage devices on-premises** (Solo administrar dispositivos locales) y haga clic en **Aceptar**.  
+1. En la consola de Configuration Manager, vaya a la **administración** área de trabajo, expanda **servicios en la nube**y seleccione el **suscripciones a Microsoft Intune** nodo. Seleccione la suscripción y, a continuación, elija **propiedades** en la cinta de opciones.   
 
-     > [!NOTE]  
-     >  Si hace clic en esta casilla, configurará la suscripción a Intune para que mantenga toda la información de administración de forma local y no replique los datos en la nube.  
+    1. En la sección de administración de dispositivos en entornos móviles en la parte inferior de la **General** página, elija una de las siguientes opciones:
 
-   - Si planea tener dispositivos administrados por Intune y Configuration Manager localmente, deje la casilla desactivada.
+        - Si tiene previsto tener solo dispositivos administrados de forma local, seleccione la opción de **solo administrar dispositivos locales**.  
 
-3. Si planea administrar dispositivos con Windows 10 Mobile, haga clic con el botón secundario en **Suscripción a Microsoft Intune**, haga clic en **Configurar plataformas**y, a continuación, haga clic en  **Windows Phone**.  
+            > [!NOTE]  
+            > Cuando se habilita esta opción, configure la suscripción a Intune para mantener todos los administración información en su entorno local. No hay datos de administración de dispositivos se replican en la nube.  
 
-4. Haga clic en la casilla de verificación junto a **Windows Phone 8.1 y Windows 10 Mobile**, y, a continuación, haga clic en **Aceptar**.  
+        - Si planea tener dispositivos administrados por Intune y Configuration Manager en el entorno local, no configure esta opción.  
 
-5. Si planea administrar equipos de escritorio con Windows 10, haga clic con el botón secundario en **Suscripción a Microsoft Intune**, haga clic en **Configurar plataformas**y, a continuación, haga clic en **Habilitar la inscripción de Windows**.  
+    Seleccione **Aceptar** para cerrar las propiedades de suscripción.
 
-6. Haga clic en la casilla de verificación junto a **Habilitar la inscripción de Windows**y, a continuación, haga clic en **Aceptar**.  
+2. Si planea administrar dispositivos Windows 10 Mobile, seleccione su suscripción en la lista, seleccione **configurar plataformas** en la cinta de opciones y, a continuación, seleccione **Windows Phone**.  
+
+    1. Seleccione la opción de **Windows Phone 8.1 y Windows 10 Mobile**y, a continuación, seleccione **Aceptar**.  
+
+3. Si planea administrar equipos de escritorio de Windows 10, seleccione su suscripción en la lista, seleccione **configurar plataformas** en la cinta de opciones y, a continuación, seleccione **Windows**.  
+
+    1. Seleccione la opción de **inscripción habilitar Windows**y, a continuación, seleccione **Aceptar**.  
+

@@ -5,18 +5,18 @@ description: Obtenga información sobre cómo preparar los dispositivos basados 
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 01/14/2019
+ms.date: 03/05/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbe26eee8b01c581776b1c134e1fe59cf4293e1a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 31779b3588617816df4309461ed7715b20b0abd4
+ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56755541"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57558038"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Cómo preparar los dispositivos basados en internet para la administración conjunta
 
@@ -53,6 +53,8 @@ Para obtener más información, consulte [agregar dispositivos de Microsoft Stor
 
 [Windows Autopilot para los dispositivos existentes](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) está disponible en Windows 10, versión 1809 o posterior. Esta característica le permite crear una nueva imagen y aprovisionamiento de un dispositivo de Windows 7 para [modo controlado por el usuario de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) mediante una secuencia de tareas de Configuration Manager única y nativo. 
 
+Para obtener más información, consulte [Windows Autopilot para la secuencia de tareas de dispositivos existente](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices).
+
 
 
 ## <a name="install-the-configuration-manager-client"></a>Instalar al cliente de Configuration Manager
@@ -87,6 +89,11 @@ La siguiente línea de comandos es un ejemplo: `CCMSETUPCMD="CCMHOSTNAME=contoso
     
      Para obtener más información, consulte [planeación para las CRL](/sccm/core/plan-design/security/plan-for-security#-plan-for-the-site-server-signing-certificate-self-signed)  
 
+A partir de la versión 1810, el sitio publica adicionales de Azure información de AD para cloud management gateway (CMG). Un cliente unido a Azure AD obtiene esta información de la instancia de CMG durante el proceso de ccmsetup, mediante el mismo inquilino al que está unido. Este comportamiento simplifica más la inscripción de dispositivos en la administración conjunta de un entorno con más de un inquilino de Azure AD. Ahora son las dos únicas propiedades de ccmsetup necesarias **CCMHOSTNAME** y **SMSSiteCode**.<!--3607731-->
+
+> [!Note]
+> Si ya va a implementar al cliente de Configuration Manager en Intune, actualice la aplicación de Intune con una nueva línea de comandos y el nuevo MSI. <!-- SCCMDocs-pr issue 3084 -->
+
 En el ejemplo siguiente se incluye todas estas propiedades:   
 `ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`
 
@@ -102,6 +109,9 @@ Para obtener más información, vea [Acerca de las propiedades de instalación d
 3. En **Otros**, seleccione **Aplicación de línea de negocio**.  
 
 4. Cargar el **ccmsetup.msi** archivo de paquete de aplicación. Este archivo se encuentra en la siguiente carpeta en el Administrador de configuración del servidor de sitio: `<ConfigMgr installation directory>\bin\i386`.  
+
+    > [!Tip]  
+    > Cuando se actualiza el sitio, asegúrese de que actualizar también esta aplicación en Intune.  
 
 5. Después de la aplicación se actualiza, configure la información de la aplicación con la línea de comandos que ha copiado de Configuration Manager.  
 

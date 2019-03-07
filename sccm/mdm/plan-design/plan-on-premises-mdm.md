@@ -1,8 +1,8 @@
 ---
-title: Planeamiento de MDM local
+title: Planear la MDM local
 titleSuffix: Configuration Manager
-description: Planee la administración de dispositivos móviles local para administrar dispositivos en System Center Configuration Manager.
-ms.date: 03/05/2017
+description: Planear la administración de dispositivos móviles local administrar dispositivos móviles en Configuration Manager
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,47 +11,55 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 577672a6f816eaffc88c78d4baf3feab5b8989a1
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: bb9349a8c3f107f2da139148e4476537fe6aa7ed
+ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132190"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57558089"
 ---
-# <a name="plan-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Planear la administración de dispositivos móviles (MDM) local con System Center Configuration Manager
+# <a name="plan-for-on-premises-mdm-in-configuration-manager"></a>Planear la MDM local en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura de Configuration Manager para tratar la administración de dispositivos móviles local.
+Administración local de dispositivos móviles (MDM) le permite administrar dispositivos móviles mediante las capacidades de administración integradas en el sistema operativo del dispositivo. La función de administración se basa en el estándar de administración de dispositivos (DM) Open Mobile Alliance (OMA) y muchas plataformas de dispositivo usan este estándar para permitir que se administren los dispositivos. Estos dispositivos se denominan *dispositivos modernos* en la documentación y la consola de Configuration Manager. Este término distingue de otros dispositivos que requieren el cliente de Configuration Manager administrarlos.  
 
-##  <a name="bkmk_devices"></a> Dispositivos compatibles  
- La administración de dispositivos móviles local le permite administrar dispositivos móviles mediante las funciones de administración integradas en los sistemas operativos de los dispositivos.  La función de administración se basa en el estándar de administración de dispositivos (DM) Open Mobile Alliance (OMA) y muchas plataformas de dispositivo usan este estándar para permitir que se administren los dispositivos.  Los denominamos **dispositivos modernos** (en la documentación y en la interfaz de usuario de la consola de Configuration Manager) para distinguirlos de otros dispositivos que requieren el cliente de Configuration Manager para administrarlos.  
+Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura de Configuration Manager para controlar la MDM local.
 
- > [!NOTE]  
->  La rama actual de Configuration Manager admite la inscripción en la administración local de dispositivos móviles para dispositivos con los sistemas operativos siguientes:  
->   
-> -  Windows 10 Enterprise  
-> -   Windows 10 Pro  
-> -   Windows 10 Team \(a partir de la versión 1602 de Configuration Manager\)  
-> -   Windows 10 Mobile  
-> -   Windows 10 Mobile Enterprise
-> -   Windows 10 IoT Enterprise   
 
-##  <a name="bkmk_intune"></a> Uso de la suscripción a Microsoft Intune  
- Necesitará una suscripción a Microsoft Intune para empezar a usar la administración de dispositivos móviles local. La suscripción solo es necesaria para realizar el seguimiento de las licencias de los dispositivos y no se usa para administrar ni almacenar la información de administración de los dispositivos. La totalidad de la administración se controla en la empresa de la organización a través de la infraestructura local de Configuration Manager.  
 
- > [!NOTE]  
- > A partir de la versión 1610, Configuration Manager admite la administración de dispositivos móviles mediante el uso de Microsoft Intune y la infraestructura de Configuration Manager local al mismo tiempo.   
+## <a name="bkmk_devices"></a> Dispositivos compatibles  
 
- Si el sitio tiene dispositivos con conectividad a Internet, el servicio de Intune puede usarse para notificar a los dispositivos que busquen actualizaciones de directivas en el punto de administración de dispositivos. Este uso de Intune está estrictamente destinado para la notificación de dispositivos que solo son accesibles a través de Internet. Los dispositivos sin conexión a Internet (y con los que Intune no puede establecer una comunicación) se basan en el intervalo de sondeo configurado para conectarse con roles de sistema de sitio para las funciones de administración.  
+La rama actual de Configuration Manager admite la inscripción en la administración local de dispositivos móviles para dispositivos con los sistemas operativos siguientes:  
+  
+- Windows 10 Enterprise  
+- Windows 10 Pro  
+- Windows 10 Team   
+- Windows 10 Mobile  
+- Windows 10 Mobile Enterprise
+- Windows 10 IoT Enterprise   
+
+
+
+##  <a name="bkmk_intune"></a> La suscripción a Microsoft Intune  
+
+Para empezar a usar MDM local, necesita una suscripción a Microsoft Intune. La suscripción solo es necesario para realizar el seguimiento de licencias de los dispositivos y no se usa para administrar o almacenar la información de administración de los dispositivos. Todos los datos de administración se almacena en su organización mediante la infraestructura de Configuration Manager en el entorno local.  
+
+> [!Note]  
+> A partir de la versión 1810, una conexión a Intune ya no es necesaria para nuevas implementaciones de MDM local.<!--3607730, fka 1359124--> La organización sigue necesitando licencias de Intune para usar esta característica. Actualmente no se puede quitar la conexión de Intune de las implementaciones de MDM locales existentes. Para más información, vea la [entrada del blog de soporte técnico de Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).  
+
+Si el sitio tiene dispositivos con conectividad a internet, se puede usar el servicio de Intune para notificar a los dispositivos que busquen el punto de administración de dispositivos para las actualizaciones de directiva. Este comportamiento usa Intune estrictamente para la notificación de dispositivos a través de internet. Dispositivos sin conexiones a internet y no se puede contactar con Intune se basan en el intervalo de sondeo configurado para conectarse con roles de sistema de sitio para las funciones de administración.  
 
 > [!TIP]  
->  Se recomienda configurar Intune antes de instalar los roles de sistema de sitio requeridos con el fin de minimizar el tiempo necesario para que tales roles puedan funcionar.  
+> Antes de configurar los roles de sistema de sitio requeridos, configure la suscripción a Intune. Esta acción minimiza el tiempo necesario para que los roles para que sea funcional.  
 
- Para obtener información sobre cómo configurar la suscripción a Intune, consulte [Configurar una suscripción de Microsoft Intune para la administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/set-up-intune-subscription-on-premises-mdm.md).  
+Para obtener información sobre cómo configurar la suscripción de Intune, consulte [configurar una suscripción de Microsoft Intune para MDM local](/sccm/mdm/get-started/set-up-intune-subscription-on-premises-mdm).  
 
-##  <a name="bkmk_roles"></a> Agregar los roles de sistema de sitio requeridos  
- La administración de dispositivos móviles local requiere, como mínimo, uno de cada uno de los siguientes roles de sistema de sitio:  
+
+
+##  <a name="bkmk_roles"></a> Roles de sistema de sitio  
+
+En el entorno local MDM requiere al menos uno de los siguientes roles de sistema de sitio:  
 
 - **Punto de proxy de inscripción** para admitir las solicitudes de inscripción.  
 
@@ -63,16 +71,19 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
 
 - **Punto de conexión de servicio** para conectarse a Intune para notificar a los dispositivos que están fuera del firewall.  
 
-  Estos roles de sistema de sitio se pueden instalar en el servidor de sistema de sitio único o pueden ejecutarse por separado en servidores diferentes, según las necesidades de la organización. Cada servidor de sistema de sitio que se usa para la administración de dispositivos móviles local debe estar configurado como un extremo HTTPS para comunicarse con dispositivos de confianza. Para obtener más información, vea [Comunicaciones de confianza requeridas](#bkmk_trustedComs).  
+Estos roles de sistema de sitio se pueden instalar en el servidor de sistema de sitio único o se pueden ejecutar por separado en diferentes servidores según las necesidades de su organización. Cada servidor de sistema de sitio que usa para MDM local debe configurarse como un extremo HTTPS para comunicarse con dispositivos de confianza. Para obtener más información, vea [Comunicaciones de confianza requeridas](#bkmk_trustedComs).  
 
-  Para obtener más información sobre el planeamiento para roles de sistema de sitio, consulte [Planificar los roles de sistema de sitio y los servidores de sistema de sitio en System Center Configuration Manager](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).  
+Para obtener más información sobre la planeación para roles de sistema de sitio, consulte [Plan para funciones y los servidores de sistema de sitio de Configuration Manager](/sccm/core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles).  
 
-  Para obtener más información sobre cómo agregar los roles de sistema de sitio requeridos, consulte [Instalar los roles para la administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md).  
+Para obtener más información sobre cómo agregar los roles de sistema de sitio requeridos, consulte [instalar roles de sistema de sitio para MDM local](/sccm/mdm/get-started/install-site-system-roles-for-on-premises-mdm).  
 
-##  <a name="bkmk_trustedComs"></a> Comunicaciones de confianza requeridas  
- La administración de dispositivos móviles local requiere que los roles de sistema de sitio se habiliten para comunicaciones HTTPS. Según sus necesidades, puede usar la entidad de certificación (CA) de la empresa para establecer las conexiones de confianza entre servidores y dispositivos o podría usar una entidad de certificación disponible públicamente para que sea la autoridad de confianza.  De cualquier modo, necesitará un certificado de servidor web configurado con IIS en los servidores de sistema de sitio que hospedan los roles de sistema de sitio requeridos. También necesitará que el certificado raíz de esa entidad de certificación esté instalado en los dispositivos que deben conectarse a esos servidores.  
 
- Si usa la entidad de certificación de su empresa para establecer comunicaciones de confianza, debe realizar las tareas siguientes:  
+
+##  <a name="bkmk_trustedComs"></a> Comunicaciones de confianza  
+
+MDM local requiere roles de sistema de sitio se habiliten para comunicaciones HTTPS. Según sus necesidades, puede usar para establecer las conexiones de confianza entre servidores y dispositivos de certificación de su empresa (CA). También puede usar una entidad de certificación disponible públicamente para ser la autoridad de confianza. En cualquier caso, necesita un certificado de servidor web se deben configurar en IIS en los servidores de sistema de sitio que hospeda los roles de sistema de sitio requeridos. También necesita el certificado raíz de CA instalada en los dispositivos que necesitan conectarse a esos servidores.  
+
+Si usa entidad de certificación de su empresa para establecer comunicaciones de confianza, realice las siguientes tareas:  
 
 - Crear y emitir la plantilla de certificado de servidor web en la entidad de certificación.  
 
@@ -80,9 +91,9 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
 
 - Configurar IIS en el servidor de sistema de sitio para que use el certificado de servidor web solicitado.  
 
-  Para dispositivos unidos al dominio de Active Directory corporativo, el certificado raíz de la entidad de certificación de la empresa ya está disponible en el dispositivo para las conexiones de confianza. Esto significa que los dispositivos unidos a un dominio (por ejemplo, los equipos de escritorio) automáticamente serán de confianza para las conexiones HTTPS con los servidores de sistema de sitio. Sin embargo, los dispositivos no unidos a un dominio (normalmente los dispositivos móviles) no tendrán instalado el certificado raíz requerido. En estos dispositivos, será necesario instalar manualmente el certificado raíz para que puedan comunicarse correctamente con los servidores de sistema de sitio que admiten la administración de dispositivos móviles local.  
+Para dispositivos unidos al dominio de Active Directory corporativo, el certificado raíz de la entidad de certificación de la empresa ya está disponible en el dispositivo para las conexiones de confianza. Este comportamiento significa que se confía automáticamente para las conexiones HTTPS con los servidores de sistema de sitio en dispositivos Unidos a dominio. Sin embargo, los dispositivos no unidos a dominio no obtienen automáticamente el certificado raíz necesario instalado. Para comunicarse correctamente con los servidores de sistema de sitio que admiten MDM local, los dispositivos no unidos a dominio como dispositivos móviles requieren que instale manualmente el certificado raíz en ellos.  
 
-  Debe exportar el certificado raíz de la entidad de certificación emisora para su uso por parte de dispositivos individuales. Para obtener el archivo del certificado raíz, puede exportarlo mediante la entidad de certificación o, como alternativa más sencilla, puede usar el certificado de servidor web emitido por la entidad de certificación para extraer la raíz y crear un archivo de certificado raíz.   A continuación, se debe enviar el certificado raíz al dispositivo.  Ejemplos de métodos de entrega:  
+Exporte el certificado raíz de la CA emisora para su uso por dispositivos individuales. Para obtener el archivo de certificado raíz, puede exportarlo con la entidad de certificación. Otro método es usar el certificado de servidor web emitido por la entidad de certificación para extraer la raíz y crear un archivo de certificado raíz. A continuación, el certificado raíz se debe entregar al dispositivo. Algunos métodos de entrega de ejemplo incluyen:
 
 - Sistema de archivos  
 
@@ -100,19 +111,25 @@ Tenga en cuenta los siguientes requisitos antes de preparar la infraestructura d
 
 - Paquete de aprovisionamiento de configuración rápida (OOBE)  
 
-  Para obtener más información, consulte [Configurar certificados de comunicaciones de confianza para la administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md).  
+Para obtener más información, consulte [configurar certificados para comunicaciones de confianza en MDM local](/sccm/mdm/get-started/set-up-certificates-on-premises-mdm)  
 
-##  <a name="bkmk_enrollment"></a> Consideraciones de inscripción  
- Para habilitar la inscripción de dispositivos para la administración de dispositivos móviles local, se debe conceder a los usuarios permiso de inscripción y, además, sus dispositivos deben ser capaces de establecer comunicaciones de confianza con los servidores de sistema de sitio que hospedan los roles de sistema de sitio necesarios.  
 
- La concesión de permiso de inscripción a los usuarios puede realizarse a través de la configuración de un perfil de inscripción en la configuración del cliente de Configuration Manager. Puede usar la configuración de cliente predeterminada para insertar el perfil de inscripción en todos los usuarios detectados, o bien puede configurar dicho perfil en la configuración de cliente personalizada e insertar esa configuración en una o varias recopilaciones de usuarios.  
 
- Una vez concedido el permiso de inscripción, los usuarios pueden inscribir sus dispositivos. Para realizar la inscripción, el dispositivo del usuario debe tener el certificado raíz de la entidad de certificación (CA) que emitió el certificado de servidor web. Este certificado de servidor web se usa en los servidores de sistema de sitio que hospedan los roles de sistema de sitio necesarios.  
+##  <a name="bkmk_enrollment"></a> Inscripción de dispositivos
 
- Como alternativa a la inscripción iniciada por el usuario, puede configurar un paquete de inscripción masiva que permita que el dispositivo se inscriba sin intervención del usuario. Este paquete se puede entregar al dispositivo antes del aprovisionamiento inicial para su uso o cuando el dispositivo pasa a través de su proceso de OOBE.  
+Para habilitar la inscripción de dispositivos para MDM local,
+- Los usuarios deben tener permiso para inscribir 
+- Dispositivos deben configurarse para permitir comunicaciones de confianza con los servidores de sistema de sitio que hospeda los roles necesarios  
 
- Para obtener más información sobre cómo configurar e inscribir dispositivos, vea:  
+Conceder a los usuarios permisos para inscribir dispositivos mediante la configuración de un perfil de inscripción en la configuración de cliente de Configuration Manager. Puede usar la configuración de cliente predeterminada para insertar el perfil de inscripción en todos los usuarios detectados. También puede configurar el perfil de inscripción en la configuración de cliente personalizada y la configuración de inserción en una o varias recopilaciones de usuarios.  
 
--   [Configurar la inscripción del dispositivo para la administración de dispositivos móviles local en System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
+Una vez que los usuarios tienen permiso, pueden inscribir sus dispositivos. Para realizar la inscripción, el dispositivo del usuario debe tener el certificado raíz de la entidad de certificación (CA) que emitió el certificado de servidor web utilizado en los servidores de sistema de sitio que hospeda los roles necesarios.  
 
--   [Inscribir dispositivos para la administración local de dispositivos móviles en System Center Configuration Manager](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)  
+Como alternativa a la inscripción iniciada por el usuario, puede configurar un paquete de inscripción masiva. Este paquete permite que el dispositivo se inscriba sin intervención del usuario. Puede entregar al dispositivo antes de aprovisionar para su uso o cuando el dispositivo pasa a través de su proceso de OOBE.  
+
+Para obtener más información sobre cómo configurar e inscribir dispositivos, consulte los artículos siguientes: 
+
+- [Configurar la inscripción de dispositivos para MDM local](/sccm/mdm/get-started/set-up-device-enrollment-on-premises-mdm)  
+
+- [Inscribir dispositivos en MDM local](/sccm/mdm/deploy-use/enroll-devices-on-premises-mdm)  
+
