@@ -1,8 +1,8 @@
 ---
-title: Prepararse para la implementación de sistema operativo
+title: Preparar la implementación de sistema operativo
 titleSuffix: Configuration Manager
-description: Lea estos artículos para obtener información sobre los pasos que debe seguir en Configuration Manager para preparar la implementación del sistema operativo.
-ms.date: 10/06/2016
+description: Obtenga información sobre cómo prepararse para implementaciones de sistema operativo en Configuration Manager.
+ms.date: 02/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,24 +11,24 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c26c204b391ddd41b62a80bfff6779f59baed9bd
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 7e303a7363e0641210cc7c6e436546d864fe0571
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125653"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838725"
 ---
-# <a name="prepare-for-operating-system-deployment-in-system-center-configuration-manager"></a>Prepararse para la implementación de sistema operativo en System Center Configuration Manager
+# <a name="prepare-for-os-deployment-in-configuration-manager"></a>Preparación para la implementación de SO en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Hay varias cosas que debe hacer en Configuration Manager para poder implementar sistemas operativos. Use los temas siguientes para prepararse para la implementación de sistema operativo:  
+Hay varias cosas que debe hacer en Configuration Manager para poder implementar sistemas operativos. Use los siguientes artículos para prepararse para la implementación del SO:  
 
 -   [Administrar imágenes de arranque](manage-boot-images.md)  
 
--   [Administrar imágenes de sistema operativo](manage-operating-system-images.md)  
+-   [Administración de imágenes del sistema operativo](manage-operating-system-images.md)  
 
--   [Administrar paquetes de actualización de sistema operativo](manage-operating-system-upgrade-packages.md)  
+-   [Administración de paquetes de actualización del sistema operativo](manage-operating-system-upgrade-packages.md)  
 
 -   [Administrar controladores](manage-drivers.md)  
 
@@ -37,3 +37,26 @@ Hay varias cosas que debe hacer en Configuration Manager para poder implementar 
 -   [Preparación para implementaciones en equipos desconocidos](prepare-for-unknown-computer-deployments.md)  
 
 -   [Asociar usuarios a un equipo de destino](associate-users-with-a-destination-computer.md)  
+
+
+
+### <a name="os-image-size"></a>Tamaño de imágenes del SO  
+
+Las imágenes de sistema operativo son de tamaño grande. Por ejemplo, el tamaño de la imagen de Windows 7 es 3 gigabytes o más. El tamaño de la imagen y el número de equipos en que implementa al mismo tiempo el sistema operativo afecta al rendimiento de la red y al ancho de banda disponible. Asegúrese de probar el rendimiento de red. La prueba del impacto mide mejor el efecto que podría tener la implementación de la imagen y el tiempo que lleva completar la implementación. Las actividades de Configuration Manager que afectan al rendimiento de la red incluyen la distribución de la imagen a un punto de distribución, la distribución de la imagen de un sitio a otro y la descarga de la imagen al cliente.  
+
+Asegúrese también de que planea suficiente espacio de almacenamiento en disco en los puntos de distribución que hospedan las imágenes del sistema operativo.  
+
+Para obtener más información, consulte [Consideraciones de planeación adicionales para puntos de distribución](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_AdditionalPlanning).
+
+
+### <a name="client-cache-size"></a>Tamaño de la caché de cliente  
+
+Cuando los clientes de Configuration Manager descargan contenido, usan automáticamente el servicio de transferencia inteligente en segundo plano (BITS) si está disponible. Cuando implementa una secuencia de tareas que instala un sistema operativo, puede establecer una opción en la implementación de forma que los clientes de Configuration Manager descarguen la imagen completa en una memoria caché local antes de que se ejecute la secuencia de tareas.  
+
+Cuando un cliente de Configuration Manager debe descargar una imagen de sistema operativo pero no hay suficiente espacio en la memoria caché, el cliente puede liberar espacio en su caché. Comprueba los otros paquetes en la memoria caché para determinar si la eliminación de cualquiera de los paquetes más antiguos liberará espacio suficiente para que quepa la imagen. Si la eliminación paquetes no libera suficiente espacio, el cliente no descarga la imagen y se produce un error en la implementación. Este comportamiento puede ocurrir si la memoria caché tiene un paquete grande que está configurado para conservarse en la memoria caché. Si la eliminación de paquetes libera suficiente espacio en disco en la memoria caché, el cliente los elimina y luego descarga la imagen en la caché.  
+
+El tamaño de caché predeterminado en clientes de Configuration Manager puede no ser lo suficientemente grande para la mayoría de las implementaciones de imagen de sistema operativo. Si planea descargar la imagen completa a la caché del cliente, ajuste el tamaño de la caché del cliente en los equipos de destino para acomodar el tamaño de la imagen que va a implementar.  
+
+Para obtener más información, vea [Configurar la caché del cliente](/sccm/core/clients/manage/manage-clients#BKMK_ClientCache).  
+
+

@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c42cfb2b973084efc897c8f313e58541164d3fa2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 8d83085637e971b47ee9941d76fef749660861aa
+ms.sourcegitcommit: 223549003829fce7c6dc63959ee71e8b88542417
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123491"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56951858"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Implementar actualizaciones de software automáticamente  
 
@@ -196,7 +196,7 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
     - **Sin paquete de implementación**: a partir de la versión 1806, las actualizaciones de software se implementan en los dispositivos sin antes descargar y distribuir el contenido a los puntos de distribución. Esta configuración es útil cuando se trabaja con contenido de actualización extremadamente grande. También puede usarla cuando quiera que los clientes siempre obtengan contenido desde el servicio en la nube de Microsoft Update. En este escenario, los clientes también pueden descargar el contenido desde los equipos del mismo nivel que ya tienen el contenido necesario. El cliente de Configuration Manager sigue administrando la descarga del contenido, por lo que puede usar la característica de caché del mismo nivel de Configuration Manager u otras tecnologías como, por ejemplo, Optimización de distribución. Esta característica es compatible con cualquier tipo de actualización admitida por la administración de actualizaciones de software de Configuration Manager, incluidas las actualizaciones de Windows y Office.<!--1357933-->  
 
         > [!Note]  
-        > Esta opción es solo para las nuevas reglas de implementación automática. No puede modificar las reglas existentes con esta configuración.<!--SCCMDocs issue 741-->  
+        > Una vez que seleccione esta opción y aplique la configuración, ya no podrá cambiarse. Las demás opciones están atenuadas.<!--SCCMDocs-pr issue 3003-->  
 
 12. En la página **Puntos de distribución**, especifique los puntos de distribución o los grupos de puntos de distribución que hospedan los archivos de actualización de software. Para más información sobre los puntos de distribución, vea [Distribution point configurations (Configuraciones de puntos de distribución)](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs). Esta página sólo está disponible cuando se crea un nuevo paquete de implementación de actualizaciones de software.  
   

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8eff4154f5799ef0d6411b077f50753d203310e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 0a66ba04defcea48db143487cc08bc5dc330cf2c
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126784"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838912"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planificación de Cloud Management Gateway en Configuration Manager
 
@@ -208,7 +208,8 @@ En la tabla siguiente se muestra la compatibilidad de CMG con características d
 | Distribución de software (dirigida al dispositivo)     | ![Compatible.](media/green_check.png) |
 | Distribución de software (dirigida al usuario, obligatorio)<br>(con integración de Azure AD)     | ![Compatible.](media/green_check.png)  (1710) |
 | Distribución de software (dirigida al usuario, disponible)<br>([todos los requisitos](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Compatible.](media/green_check.png)  (1802) |
-| Secuencia de tareas de actualización local de Windows 10     | ![Compatible.](media/green_check.png)  (1802) |
+| Secuencia de tareas de actualización local de Windows 10      | ![Compatible.](media/green_check.png)  (1802) |
+| Secuencias de tareas que no utilizan imágenes de arranque y se implementan con una opción: **Descargar todo el contenido localmente antes de iniciar la secuencia de tareas**      | ![Compatible.](media/green_check.png)  (1802) |
 | CMPivot     | ![Compatible.](media/green_check.png)  (1806) |
 | Cualquier otro escenario de secuencia de tareas     | ![No compatible](media/Red_X.png) |
 | Inserción de cliente     | ![No compatible](media/Red_X.png) |

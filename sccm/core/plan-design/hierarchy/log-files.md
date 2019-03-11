@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a5c6cee6422d3fc8777f54bd42716748410c9323
-ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
+ms.openlocfilehash: b3edf45c5b4eb62d5bfdd795f104c40da1ee1526
+ms.sourcegitcommit: 56ec6933cf7bfc93842f55835ad336ee3a1c6ab5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265077"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211710"
 ---
 # <a name="log-files-in-configuration-manager"></a>Archivos de registro en Configuration Manager
 
@@ -576,6 +576,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |PrestageContent.log|Registra los detalles sobre el uso de la herramienta ExtractContent.exe en un punto de distribución preconfigurado remoto. Esta herramienta extrae el contenido que ha sido exportado a un archivo.|Rol de sistema de sitio|  
 |SMSdpmon.log|Registra detalles sobre tareas programadas de supervisión de estado de punto de distribución configuradas en un punto de distribución.|Rol de sistema de sitio|  
 |smsdpprov.log|Registra detalles acerca de la extracción de archivos comprimidos recibidos de un sitio primario. El proveedor de WMI del punto de distribución remoto genera este registro.|Equipo de punto de distribución que no comparte ubicación con el servidor de sitio|  
+|smsdpusage.log|Registra los detalles sobre el smsdpusage.exe que se ejecuta y recopila datos para el informe de resumen de uso de los puntos de distribución.|Rol de sistema de sitio|  
 
 ###  <a name="BKMK_DiscoveryLog"></a> Detección  
 En la tabla siguiente se incluyen los archivos de registro que contienen información relacionada con la detección.  

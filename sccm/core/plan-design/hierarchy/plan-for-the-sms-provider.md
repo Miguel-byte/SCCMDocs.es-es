@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6eeb74e3e8e83dd0082f45583bd2eb5dbe1df4e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: aec16c4b55afd8c4baf7486794e07f29fa84aebf
+ms.sourcegitcommit: 223549003829fce7c6dc63959ee71e8b88542417
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131615"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56951841"
 ---
 # <a name="plan-for-the-sms-provider"></a>Plan para el proveedor de SMS 
 
@@ -51,7 +51,7 @@ El proveedor de SMS ayuda a reforzar la seguridad de Configuration Manager. Devu
 
  Para ser compatible con el proveedor de SMS, el servidor de destino debe cumplir los siguientes requisitos previos:  
 
--   En un dominio que tenga una relación de confianza bidireccional con el servidor de sitio y los sistemas de sitio de la base de datos del sitio.  
+-   En el mismo dominio que el servidor de sitio y los sistemas de sitio de la base de datos de sitio  
 
 -   No puede tener un rol de sistema de sitio de un sitio diferente.  
 
