@@ -2,7 +2,7 @@
 title: Alta disponibilidad
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo implementar Configuration Manager mediante el uso de opciones que mantienen un alto nivel de servicio disponible.
-ms.date: 07/30/2018
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b69fac83283963e49b01c733fb8fa3000702cfb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 424b841360efbebef96ba5980c4ea7a45995ea0a
+ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132173"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562149"
 ---
 # <a name="high-availability-options-for-configuration-manager"></a>Opciones de alta disponibilidad para Configuration Manager
 
@@ -214,6 +214,8 @@ Varios sistemas de sitio no admiten distintas instancias en un sitio o en la jer
 > Esta sección solo se aplica a las versiones 1802 y anteriores de Configuration Manager. A partir de la versión 1806, Configuration Manager proporciona una opción de alta disponibilidad para el servidor de sitio. Para obtener más información, vea [Alta disponibilidad de servidor de sitio](/sccm/core/servers/deploy/configure/site-server-high-availability).  
 
 Configuration Manager no admite la instalación del servidor de sitio para cada sitio de un clúster de Windows Server o NLB.  
+
+A partir de la versión 1810, el proceso de instalación de Configuration Manager ya no impide la instalación del rol de servidor de sitio en un equipo con el rol de Windows para clústeres de conmutación por error. SQL Always On requiere este rol, por lo que anteriormente no se podía colocar la base de datos del sitio en el servidor de sitio. Con este cambio, puede crear un sitio de alta disponibilidad con menos servidores usando SQL Always On y un servidor de sitio en modo pasivo. <!--3607761, fka 1359132-->  
 
 La información siguiente le permite prepararse para situaciones en las que se produce un error de un servidor de sitio o este no está operativo:  
 
