@@ -13,7 +13,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 56ac5353052fdba2884b6caee8f56d0835028e3e
 ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/12/2019
 ms.locfileid: "56135592"
@@ -45,7 +45,7 @@ Este método de implementación puede reducir el tráfico de red porque la image
 -   **Sólo medios y PXE (ocultos)**  
 
 ## <a name="create-the-prestaged-media"></a>Crear los medios preconfigurados  
- Cree el archivo de medios preconfigurados para enviar al OEM o al almacén local. Para más información, vea [Create prestaged media with System Center Configuration Manager (Crear medios preconfigurados con System Center Configuration Manager)](create-prestaged-media.md).  
+ Cree el archivo de medios preconfigurados para enviar al OEM o al almacén local. Para más información, vea [Crear medios preconfigurados con System Center Configuration Manager](create-prestaged-media.md).  
 
 ## <a name="send-the-prestaged-media-file-to-the-oem-or-local-depot"></a>Enviar el archivo de medios preconfigurados al OEM o al almacén local  
  Envíe los medios al OEM o al almacén local para preconfigurar los equipos. El archivo de medios preconfigurados se aplica a un disco duro formateado en el equipo.  
