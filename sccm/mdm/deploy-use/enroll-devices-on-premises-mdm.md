@@ -26,7 +26,7 @@ Para administrar equipos y dispositivos con la administración de dispositivos m
 
 - **Inscripción de usuario** : en este método, los usuarios inician el proceso de inscripción en sus dispositivos. Para que la inscripción de usuario se realice correctamente, el dispositivo debe tener un certificado raíz de confianza instalado y Configuration Manager debe aprovisionar el usuario para la inscripción.  Para inscribir el dispositivo, el usuario solo tiene que proporcionar las credenciales de trabajo y el dispositivo se inscribirá para su administración.  
 
-   Para obtener más información, consulte [How users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md) (Cómo inscriben dispositivos los usuarios mediante la administración de dispositivos móviles (MDM) local en System Center Configuration Manager).  
+   Para obtener más información, consulte [Cómo inscriben dispositivos los usuarios mediante la administración de dispositivos móviles (MDM) local en System Center Configuration Manager](../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md).  
 
 - **Inscripción masiva** : en este método, no es necesario que el usuario del dispositivo inicie la inscripción. En su lugar, se crea un paquete de inscripción masiva en Configuration Manager, que luego se coloca y se abre en el dispositivo. Una vez abierto, el paquete proporciona la información necesaria para inscribir el dispositivo.  
 
