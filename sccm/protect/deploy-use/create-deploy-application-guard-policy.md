@@ -19,8 +19,8 @@ ms.lasthandoff: 02/12/2019
 ms.locfileid: "56132428"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Creación e implementación de directivas de Protección de aplicaciones de Windows Defender 
-*Se aplica a: System Center Configuration Manager (rama actual)* 
- <!-- 1351960 --> puede crear e implementar [Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) directivas utilizando el punto de conexión de Configuration Manager protección. Estas directivas ayudan a proteger a los usuarios al abrir los sitios web que no sean de confianza en un contenedor aislado seguro al que no puedan tener acceso otras partes del sistema operativo.
+*Se aplica a: System Center Configuration Manager (rama actual)*
+<!-- 1351960 --> puede crear e implementar [Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) directivas utilizando el punto de conexión de Configuration Manager protección. Estas directivas ayudan a proteger a los usuarios al abrir los sitios web que no sean de confianza en un contenedor aislado seguro al que no puedan tener acceso otras partes del sistema operativo.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
